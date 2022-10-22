@@ -37,6 +37,12 @@ article {
         @apply text-coolGray-500;
     }
 
+    pre.astro-code {
+        @apply px-3;
+        @apply py-3;
+        @apply my-3;
+    }
+
     blockquote {
         @apply mb-6;
         @apply px-6;
