@@ -1,4 +1,4 @@
-name: Testing
+name: Astro testing
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  testing:
+  astro-testing:
     name: Astro build
     runs-on: ubuntu-20.04
 
