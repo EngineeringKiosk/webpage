@@ -3,7 +3,7 @@
 VENV_NAME?=venv
 
 venv/touchfile: requirements.txt
-	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
+	test -d $(VENV_NAME) || python3 -m venv $(VENV_NAME)
 	. $(VENV_NAME)/bin/activate; pip install -Ur requirements.txt
 	touch $(VENV_NAME)/touchfile
 
