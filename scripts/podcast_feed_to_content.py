@@ -173,17 +173,29 @@ def modify_openpodcast_up_down_voting(html_content):
     """
     Modify the HTML output added for the Thumbs Up/Thumbs Down voting by OpenPodcast.
 
-    Yep, this is super dirty, and hacky and does not scale and you should not do this at home.
-    But i am not at home. And it is Friday evening. And this works.
-    We just are not allowed to change anything on the HTML :D
-    But this is fine (dog sitting on a chair inside a house of fire).
+    example: the following HTML h3 element containing api.openpodcast.dev links
+    
+    <h3>
+    <a href="https://api.openpodcast.dev/feedback/57/upvote" rel="nofollow"><strong>👍</strong> (sehr cool)</a>
+    <a href="https://api.openpodcast.dev/feedback/18/downvote" rel="nofollow"><strong>&nbsp;</strong></a>
+    <a href="https://api.openpodcast.dev/feedback/57/downvote" rel="nofollow"><strong>👎</strong> (geht so)</a>
+    </h3>
+
+    should be converted to the following HTML by replacing h3 to p and adding a class
+
+    <p class="openpodcast-voting">
+    <a href="https://api.openpodcast.dev/feedback/57/upvote" rel="nofollow"><strong>👍</strong> (sehr cool)</a>
+    <a href="https://api.openpodcast.dev/feedback/18/downvote" rel="nofollow"><strong>&nbsp;</strong></a>
+    <a href="https://api.openpodcast.dev/feedback/57/downvote" rel="nofollow"><strong>👎</strong> (geht so)</a>
+    </p>
+
     """
-    new_html_content = html_content.replace("<h3><strong>Deine ", "<p><strong>Deine ")
-    new_html_content = new_html_content.replace("</strong></h3><h3><a href=\"https://api.openpodcast.dev", "</strong></p><p><a href=\"https://api.openpodcast.dev")
-    new_html_content = new_html_content.replace("</strong> (geht so)</a></h3>", "</strong> (geht so)</a></p>")
+
+    # dotall flag is needed to match newlines
+    # multiline flag is needed to match multiple lines
+    new_html_content = re.sub(r"<h3>(.*?api\.openpodcast\.dev/feedback.*?)</h3>", r'<p class="openpodcast-voting">\1</p>', html_content, flags=re.MULTILINE | re.DOTALL)
 
     return new_html_content
-
 
 def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, spotify_client):
     """

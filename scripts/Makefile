@@ -23,3 +23,7 @@ find-tags-that-need-descriptions-website-content: ## Checks all used tags that n
 .PHONY: find-tags-that-need-descriptions-german-tech-podcasts
 find-tags-that-need-descriptions-german-tech-podcasts: ## Checks all used tags that need SEO descriptions in external content like the german tech podcasts
 	venv/bin/python find-tags-that-need-descriptions.py german-tech-podcasts
+
+.PHONY: tests
+tests: ## Runs all tests
+	venv/bin/python -m pytest

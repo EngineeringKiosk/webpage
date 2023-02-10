@@ -1,6 +1,6 @@
 # Engineering Kiosk: Web page
 
-Built with [Astro](https://astro.build/). 
+Built with [Astro](https://astro.build/).
 
 Check it out at [engineeringkiosk.dev](https://www.engineeringkiosk.dev/)
 
@@ -15,7 +15,6 @@ $ make run
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal.
-
 
 Available `Makefile` commands:
 
@@ -33,7 +32,7 @@ update-redirects               Writes all short url redirects for Podcast episod
 Native npm commands:
 
 | Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
+| :---------------- | :------------------------------------------- |
 | `npm install`     | Installs dependencies                        |
 | `npm run dev`     | Starts local dev server at `localhost:3000`  |
 | `npm run build`   | Build your production site to `./dist/`      |
@@ -42,8 +41,8 @@ Native npm commands:
 Native python script commands:
 
 ```
-$ python3 scripts/podcast-feed-to-content.py -h
-usage: podcast-feed-to-content.py [-h] [mode]
+$ python3 scripts/podcast_feed_to_content.py -h
+usage: podcast_feed_to_content.py [-h] [mode]
 
 Automate new Podcast Episide parsing
 
@@ -111,4 +110,4 @@ We are using our own fork of [podigee/podigee-podcast-player](https://github.com
 The main differences of the fork in comparision to its origin can be found in the forks README.
 
 In combination, we downloaded a minified version of [https://github.com/embedly/player.js](https://github.com/embedly/player.js) into `public/js`.
-If we aim to upgrade *player.js*, download and replace the minified javascript file.
+If we aim to upgrade _player.js_, download and replace the minified javascript file.
