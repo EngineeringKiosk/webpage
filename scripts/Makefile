@@ -26,4 +26,4 @@ find-tags-that-need-descriptions-german-tech-podcasts: ## Checks all used tags t
 
 .PHONY: tests
 tests: ## Runs all tests
-	venv/bin/python -m pytest
+	. venv/bin/activate; python -m pytest
