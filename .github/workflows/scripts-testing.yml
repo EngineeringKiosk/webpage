@@ -25,8 +25,8 @@ jobs:
           python-version-file: 'scripts/.python-version'
           cache: 'pip'
 
-      - name: Install python dependencies
-        run: pip install -r requirements.txt
+      - name: Run make init
+        run: make init
 
       - name: Run make tests
         run: make tests
