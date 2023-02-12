@@ -127,95 +127,200 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
         </div>
       </section>
 
-      <style>
-        .review-box {
-          @apply w-full px-4 mb-8 min-w-full;
-        }
-        @media screen(sm) {
-          .review-box {
-            min-width: 380px;
-          }
-        }
-      </style>
-
-      <section class="py-20 md:py-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
+      <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
         <div class="container px-4 mx-auto">
           <div class="mb-16">
             <span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Meinungen</span>
             <h2 class="mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter">Was andere über uns sagen</h2>
           </div>
-          <div class="flex overflow-scroll -mx-4">
-            <div class="review-box">
-              <div class="flex flex-col h-full bg-white shadow-md rounded-md">
-                <h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-                  Der Engineering Kiosk Podcast ist großartig - verschiedene interessante Themen, einfach erklärt dennoch von hoher Qualität. Diese zeichnet sich u.a. aus durch tiefe Unterhaltungen, Beispiele und Erklärungen.
-                </h3>
-                <div class="flex items-center py-8 pl-4 pr-2">
-                  <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/yaniv-preiss.jpeg" alt="Yaniv Preiss" title="Yaniv Preiss">
-                  <div>
-                    <h4 class="mb-1 text-lg font-semibold">
-                      Yaniv Preiss
-                    </h4>
-                    <p class="text-lg text-coolGray-400">Head Of Engineering, NewStore</p>
-                  </div>
+          <div class="flex flex-wrap items-center justify-center lg:justify-between -mx-4">
+            <div class="w-auto px-4 order-last lg:order-first">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9999 6H3.4099L6.7099 2.71C6.8982 2.5217 7.00399 2.2663 7.00399 2C7.00399 1.7337 6.8982 1.47831 6.7099 1.29C6.52159 1.1017 6.2662 0.995911 5.9999 0.995911C5.73359 0.995911 5.4782 1.1017 5.2899 1.29L0.289896 6.29C0.198856 6.38511 0.127491 6.49725 0.0798963 6.62C-0.0201217 6.86346 -0.0201217 7.13654 0.0798963 7.38C0.127491 7.50275 0.198856 7.6149 0.289896 7.71L5.2899 12.71C5.38286 12.8037 5.49346 12.8781 5.61532 12.9289C5.73718 12.9797 5.86788 13.0058 5.9999 13.0058C6.13191 13.0058 6.26261 12.9797 6.38447 12.9289C6.50633 12.8781 6.61693 12.8037 6.7099 12.71C6.80363 12.617 6.87802 12.5064 6.92879 12.3846C6.97956 12.2627 7.00569 12.132 7.00569 12C7.00569 11.868 6.97956 11.7373 6.92879 11.6154C6.87802 11.4936 6.80363 11.383 6.7099 11.29L3.4099 8H10.9999C11.2651 8 11.5195 7.89465 11.707 7.70711C11.8945 7.51957 11.9999 7.26522 11.9999 7C11.9999 6.73479 11.8945 6.48043 11.707 6.2929C11.5195 6.10536 11.2651 6 10.9999 6Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
+              <div class="flex items-center">
+                <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/yaniv-preiss.jpeg" alt="Yaniv Preiss" title="Yaniv Preiss">
+                <div>
+                  <h3 class="mb-2 text-xl md:text-2xl font-semibold">Yaniv Preiss</h3>
+                  <span class="text-lg text-coolGray-500 font-medium">Head Of Engineering, NewStore</span>
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-              <div class="flex flex-col h-full bg-white shadow-md rounded-md">
-                <h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-                  Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.
-                </h3>
-                <div class="flex items-center py-8 pl-4 pr-2">
-                  <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/luise-haack.jpeg" alt="Luise Haack" title="Luise Haack">
-                  <div>
-                    <h4 class="mb-1 text-lg font-semibold">Luise Haack</h4>
-                    <p class="text-lg text-coolGray-400">Referatsleiterin, Uni Passau</p>
-                  </div>
+            <div class="w-full lg:w-3/6 px-4 mb-12 lg:mb-0">
+              <div class="relative pt-12 pb-6 sm:p-6">
+                <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
+                <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
+                <div class="relative">
+                  <h2 class="text-2xl font-semibold tracking-tighter">Der Engineering Kiosk Podcast ist großartig - verschiedene interessante Themen, einfach erklärt dennoch von hoher Qualität. Diese zeichnet sich u.a. aus durch tiefe Unterhaltungen, Beispiele und Erklärungen.</h2>
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-              <div class="flex flex-col h-full bg-white shadow-md rounded-md">
-                <h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-                  Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.
-                </h3>
-                <div class="flex items-center py-8 pl-4 pr-2">
-                  <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/saskia-keil.png" alt="Saskia Keil" title="Saskia Keil">
-                  <div>
-                    <h4 class="mb-1 text-lg font-semibold">Saskia Keil</h4>
-                    <p class="text-lg text-coolGray-400">Techlead, trivago</p>
-                  </div>
+            <div class="w-auto px-4 order-last">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.92 6.62C11.8724 6.49725 11.801 6.38511 11.71 6.29L6.71 1.29C6.61676 1.19676 6.50607 1.1228 6.38425 1.07234C6.26243 1.02188 6.13186 0.995911 6 0.995911C5.7337 0.995911 5.4783 1.1017 5.29 1.29C5.19676 1.38324 5.1228 1.49393 5.07234 1.61575C5.02188 1.73758 4.99591 1.86814 4.99591 2C4.99591 2.2663 5.1017 2.5217 5.29 2.71L8.59 6H1C0.734784 6 0.48043 6.10536 0.292893 6.2929C0.105357 6.48043 0 6.73479 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89465 0.734784 8 1 8H8.59L5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71C5.38296 12.8037 5.49356 12.8781 5.61542 12.9289C5.73728 12.9797 5.86799 13.0058 6 13.0058C6.13201 13.0058 6.26272 12.9797 6.38458 12.9289C6.50644 12.8781 6.61704 12.8037 6.71 12.71L11.71 7.71C11.801 7.6149 11.8724 7.50275 11.92 7.38C12.02 7.13654 12.02 6.86346 11.92 6.62Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-center lg:justify-between -mx-4">
+            <div class="w-auto px-4 order-last lg:order-first">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9999 6H3.4099L6.7099 2.71C6.8982 2.5217 7.00399 2.2663 7.00399 2C7.00399 1.7337 6.8982 1.47831 6.7099 1.29C6.52159 1.1017 6.2662 0.995911 5.9999 0.995911C5.73359 0.995911 5.4782 1.1017 5.2899 1.29L0.289896 6.29C0.198856 6.38511 0.127491 6.49725 0.0798963 6.62C-0.0201217 6.86346 -0.0201217 7.13654 0.0798963 7.38C0.127491 7.50275 0.198856 7.6149 0.289896 7.71L5.2899 12.71C5.38286 12.8037 5.49346 12.8781 5.61532 12.9289C5.73718 12.9797 5.86788 13.0058 5.9999 13.0058C6.13191 13.0058 6.26261 12.9797 6.38447 12.9289C6.50633 12.8781 6.61693 12.8037 6.7099 12.71C6.80363 12.617 6.87802 12.5064 6.92879 12.3846C6.97956 12.2627 7.00569 12.132 7.00569 12C7.00569 11.868 6.97956 11.7373 6.92879 11.6154C6.87802 11.4936 6.80363 11.383 6.7099 11.29L3.4099 8H10.9999C11.2651 8 11.5195 7.89465 11.707 7.70711C11.8945 7.51957 11.9999 7.26522 11.9999 7C11.9999 6.73479 11.8945 6.48043 11.707 6.2929C11.5195 6.10536 11.2651 6 10.9999 6Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
+              <div class="flex items-center">
+                <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/luise-haack.jpeg" alt="Luise Haack" title="Luise Haack">
+                <div>
+                  <h3 class="mb-2 text-xl md:text-2xl font-semibold">Luise Haack</h3>
+                  <span class="text-lg text-coolGray-500 font-medium">Referatsleiterin, Uni Passau</span>
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-              <div class="flex flex-col h-full bg-white shadow-md rounded-md">
-                <h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-                  Jede Woche neue Ansichten und Eindrücke in die unterschiedlichsten Engineering- und Management-Themen. In den kurzweiligen Folgen regen mich Wolfgang und Andy zum Nachdenken an und holen mich aus meiner "Blase" heraus.
-                </h3>
-                <div class="flex items-center py-8 pl-4 pr-2">
-                  <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/sebastian-hammerl.jpg" alt="Sebastian Hammerl" title="Sebastian Hammerl">
-                  <div>
-                    <h4 class="mb-1 text-lg font-semibold">Sebastian Hammerl</h4>
-                    <p class="text-lg text-coolGray-400">Leiter Software-Entwicklung, Getslash</p>
-                  </div>
+            <div class="w-full lg:w-3/6 px-4 mb-12 lg:mb-0">
+              <div class="relative pt-12 pb-6 sm:p-6">
+                <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
+                <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
+                <div class="relative">
+                  <h2 class="text-2xl font-semibold tracking-tighter">Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.</h2>
                 </div>
               </div>
             </div>
-            <div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-              <div class="flex flex-col h-full bg-white shadow-md rounded-md">
-                <h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-                  Ich bin Hörer seit Episode #1 und von der Breite sowie Tiefe der Themen positiv überrascht. Nicht nur die Theorie wird diskutiert, sondern man merkt deutlich den Einfluss praktischer Erfahrungen.
-                </h3>
-                <div class="flex items-center py-8 pl-4 pr-2">
-                  <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/pascal-landau.jpeg" alt="Pascal Landau" title="Pascal Landau">
-                  <div>
-                    <h4 class="mb-1 text-lg font-semibold">Pascal Landau</h4>
-                    <p class="text-lg text-coolGray-400">Technical Director, ABOUT YOU</p>
-                  </div>
+            <div class="w-auto px-4 order-last">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.92 6.62C11.8724 6.49725 11.801 6.38511 11.71 6.29L6.71 1.29C6.61676 1.19676 6.50607 1.1228 6.38425 1.07234C6.26243 1.02188 6.13186 0.995911 6 0.995911C5.7337 0.995911 5.4783 1.1017 5.29 1.29C5.19676 1.38324 5.1228 1.49393 5.07234 1.61575C5.02188 1.73758 4.99591 1.86814 4.99591 2C4.99591 2.2663 5.1017 2.5217 5.29 2.71L8.59 6H1C0.734784 6 0.48043 6.10536 0.292893 6.2929C0.105357 6.48043 0 6.73479 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89465 0.734784 8 1 8H8.59L5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71C5.38296 12.8037 5.49356 12.8781 5.61542 12.9289C5.73728 12.9797 5.86799 13.0058 6 13.0058C6.13201 13.0058 6.26272 12.9797 6.38458 12.9289C6.50644 12.8781 6.61704 12.8037 6.71 12.71L11.71 7.71C11.801 7.6149 11.8724 7.50275 11.92 7.38C12.02 7.13654 12.02 6.86346 11.92 6.62Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-center lg:justify-between -mx-4">
+            <div class="w-auto px-4 order-last lg:order-first">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9999 6H3.4099L6.7099 2.71C6.8982 2.5217 7.00399 2.2663 7.00399 2C7.00399 1.7337 6.8982 1.47831 6.7099 1.29C6.52159 1.1017 6.2662 0.995911 5.9999 0.995911C5.73359 0.995911 5.4782 1.1017 5.2899 1.29L0.289896 6.29C0.198856 6.38511 0.127491 6.49725 0.0798963 6.62C-0.0201217 6.86346 -0.0201217 7.13654 0.0798963 7.38C0.127491 7.50275 0.198856 7.6149 0.289896 7.71L5.2899 12.71C5.38286 12.8037 5.49346 12.8781 5.61532 12.9289C5.73718 12.9797 5.86788 13.0058 5.9999 13.0058C6.13191 13.0058 6.26261 12.9797 6.38447 12.9289C6.50633 12.8781 6.61693 12.8037 6.7099 12.71C6.80363 12.617 6.87802 12.5064 6.92879 12.3846C6.97956 12.2627 7.00569 12.132 7.00569 12C7.00569 11.868 6.97956 11.7373 6.92879 11.6154C6.87802 11.4936 6.80363 11.383 6.7099 11.29L3.4099 8H10.9999C11.2651 8 11.5195 7.89465 11.707 7.70711C11.8945 7.51957 11.9999 7.26522 11.9999 7C11.9999 6.73479 11.8945 6.48043 11.707 6.2929C11.5195 6.10536 11.2651 6 10.9999 6Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
+              <div class="flex items-center">
+                <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/saskia-keil.png" alt="Saskia Keil" title="Saskia Keil">
+                <div>
+                  <h3 class="mb-2 text-xl md:text-2xl font-semibold">Saskia Keil</h3>
+                  <span class="text-lg text-coolGray-500 font-medium">Techlead, trivago</span>
                 </div>
               </div>
+            </div>
+            <div class="w-full lg:w-3/6 px-4 mb-12 lg:mb-0">
+              <div class="relative pt-12 pb-6 sm:p-6">
+                <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
+                <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
+                <div class="relative">
+                  <h2 class="text-2xl font-semibold tracking-tighter">Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.</h2>
+                </div>
+              </div>
+            </div>
+            <div class="w-auto px-4 order-last">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.92 6.62C11.8724 6.49725 11.801 6.38511 11.71 6.29L6.71 1.29C6.61676 1.19676 6.50607 1.1228 6.38425 1.07234C6.26243 1.02188 6.13186 0.995911 6 0.995911C5.7337 0.995911 5.4783 1.1017 5.29 1.29C5.19676 1.38324 5.1228 1.49393 5.07234 1.61575C5.02188 1.73758 4.99591 1.86814 4.99591 2C4.99591 2.2663 5.1017 2.5217 5.29 2.71L8.59 6H1C0.734784 6 0.48043 6.10536 0.292893 6.2929C0.105357 6.48043 0 6.73479 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89465 0.734784 8 1 8H8.59L5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71C5.38296 12.8037 5.49356 12.8781 5.61542 12.9289C5.73728 12.9797 5.86799 13.0058 6 13.0058C6.13201 13.0058 6.26272 12.9797 6.38458 12.9289C6.50644 12.8781 6.61704 12.8037 6.71 12.71L11.71 7.71C11.801 7.6149 11.8724 7.50275 11.92 7.38C12.02 7.13654 12.02 6.86346 11.92 6.62Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-center lg:justify-between -mx-4">
+            <div class="w-auto px-4 order-last lg:order-first">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9999 6H3.4099L6.7099 2.71C6.8982 2.5217 7.00399 2.2663 7.00399 2C7.00399 1.7337 6.8982 1.47831 6.7099 1.29C6.52159 1.1017 6.2662 0.995911 5.9999 0.995911C5.73359 0.995911 5.4782 1.1017 5.2899 1.29L0.289896 6.29C0.198856 6.38511 0.127491 6.49725 0.0798963 6.62C-0.0201217 6.86346 -0.0201217 7.13654 0.0798963 7.38C0.127491 7.50275 0.198856 7.6149 0.289896 7.71L5.2899 12.71C5.38286 12.8037 5.49346 12.8781 5.61532 12.9289C5.73718 12.9797 5.86788 13.0058 5.9999 13.0058C6.13191 13.0058 6.26261 12.9797 6.38447 12.9289C6.50633 12.8781 6.61693 12.8037 6.7099 12.71C6.80363 12.617 6.87802 12.5064 6.92879 12.3846C6.97956 12.2627 7.00569 12.132 7.00569 12C7.00569 11.868 6.97956 11.7373 6.92879 11.6154C6.87802 11.4936 6.80363 11.383 6.7099 11.29L3.4099 8H10.9999C11.2651 8 11.5195 7.89465 11.707 7.70711C11.8945 7.51957 11.9999 7.26522 11.9999 7C11.9999 6.73479 11.8945 6.48043 11.707 6.2929C11.5195 6.10536 11.2651 6 10.9999 6Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
+              <div class="flex items-center">
+                <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/sebastian-hammerl.jpg" alt="Sebastian Hammerl" title="Sebastian Hammerl">
+                <div>
+                  <h3 class="mb-2 text-xl md:text-2xl font-semibold">Sebastian Hammerl</h3>
+                  <span class="text-lg text-coolGray-500 font-medium">Leiter Software-Entwicklung, Getslash</span>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-3/6 px-4 mb-12 lg:mb-0">
+              <div class="relative pt-12 pb-6 sm:p-6">
+                <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
+                <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
+                <div class="relative">
+                  <h2 class="text-2xl font-semibold tracking-tighter">Jede Woche neue Ansichten und Eindrücke in die unterschiedlichsten Engineering- und Management-Themen. In den kurzweiligen Folgen regen mich Wolfgang und Andy zum Nachdenken an und holen mich aus meiner "Blase" heraus.</h2>
+                </div>
+              </div>
+            </div>
+            <div class="w-auto px-4 order-last">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.92 6.62C11.8724 6.49725 11.801 6.38511 11.71 6.29L6.71 1.29C6.61676 1.19676 6.50607 1.1228 6.38425 1.07234C6.26243 1.02188 6.13186 0.995911 6 0.995911C5.7337 0.995911 5.4783 1.1017 5.29 1.29C5.19676 1.38324 5.1228 1.49393 5.07234 1.61575C5.02188 1.73758 4.99591 1.86814 4.99591 2C4.99591 2.2663 5.1017 2.5217 5.29 2.71L8.59 6H1C0.734784 6 0.48043 6.10536 0.292893 6.2929C0.105357 6.48043 0 6.73479 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89465 0.734784 8 1 8H8.59L5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71C5.38296 12.8037 5.49356 12.8781 5.61542 12.9289C5.73728 12.9797 5.86799 13.0058 6 13.0058C6.13201 13.0058 6.26272 12.9797 6.38458 12.9289C6.50644 12.8781 6.61704 12.8037 6.71 12.71L11.71 7.71C11.801 7.6149 11.8724 7.50275 11.92 7.38C12.02 7.13654 12.02 6.86346 11.92 6.62Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-center lg:justify-between -mx-4">
+            <div class="w-auto px-4 order-last lg:order-first">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9999 6H3.4099L6.7099 2.71C6.8982 2.5217 7.00399 2.2663 7.00399 2C7.00399 1.7337 6.8982 1.47831 6.7099 1.29C6.52159 1.1017 6.2662 0.995911 5.9999 0.995911C5.73359 0.995911 5.4782 1.1017 5.2899 1.29L0.289896 6.29C0.198856 6.38511 0.127491 6.49725 0.0798963 6.62C-0.0201217 6.86346 -0.0201217 7.13654 0.0798963 7.38C0.127491 7.50275 0.198856 7.6149 0.289896 7.71L5.2899 12.71C5.38286 12.8037 5.49346 12.8781 5.61532 12.9289C5.73718 12.9797 5.86788 13.0058 5.9999 13.0058C6.13191 13.0058 6.26261 12.9797 6.38447 12.9289C6.50633 12.8781 6.61693 12.8037 6.7099 12.71C6.80363 12.617 6.87802 12.5064 6.92879 12.3846C6.97956 12.2627 7.00569 12.132 7.00569 12C7.00569 11.868 6.97956 11.7373 6.92879 11.6154C6.87802 11.4936 6.80363 11.383 6.7099 11.29L3.4099 8H10.9999C11.2651 8 11.5195 7.89465 11.707 7.70711C11.8945 7.51957 11.9999 7.26522 11.9999 7C11.9999 6.73479 11.8945 6.48043 11.707 6.2929C11.5195 6.10536 11.2651 6 10.9999 6Z" fill="#404F65"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
+              <div class="flex items-center">
+                <img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/pascal-landau.jpeg" alt="Pascal Landau" title="Pascal Landau">
+                <div>
+                  <h3 class="mb-2 text-xl md:text-2xl font-semibold">Pascal Landau</h3>
+                  <span class="text-lg text-coolGray-500 font-medium">Technical Director, ABOUT YOU</span>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-3/6 px-4 mb-12 lg:mb-0">
+              <div class="relative pt-12 pb-6 sm:p-6">
+                <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
+                <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
+                <div class="relative">
+                  <h2 class="text-2xl font-semibold tracking-tighter">Ich bin Hörer seit Episode #1 und von der Breite sowie Tiefe der Themen positiv überrascht. Nicht nur die Theorie wird diskutiert, sondern man merkt deutlich den Einfluss praktischer Erfahrungen.</h2>
+                </div>
+              </div>
+            </div>
+            <div class="w-auto px-4 order-last">
+              <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
+                <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.92 6.62C11.8724 6.49725 11.801 6.38511 11.71 6.29L6.71 1.29C6.61676 1.19676 6.50607 1.1228 6.38425 1.07234C6.26243 1.02188 6.13186 0.995911 6 0.995911C5.7337 0.995911 5.4783 1.1017 5.29 1.29C5.19676 1.38324 5.1228 1.49393 5.07234 1.61575C5.02188 1.73758 4.99591 1.86814 4.99591 2C4.99591 2.2663 5.1017 2.5217 5.29 2.71L8.59 6H1C0.734784 6 0.48043 6.10536 0.292893 6.2929C0.105357 6.48043 0 6.73479 0 7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89465 0.734784 8 1 8H8.59L5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71C5.38296 12.8037 5.49356 12.8781 5.61542 12.9289C5.73728 12.9797 5.86799 13.0058 6 13.0058C6.13201 13.0058 6.26272 12.9797 6.38458 12.9289C6.50644 12.8781 6.61704 12.8037 6.71 12.71L11.71 7.71C11.801 7.6149 11.8724 7.50275 11.92 7.38C12.02 7.13654 12.02 6.86346 11.92 6.62Z" fill="#404F65"></path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
