@@ -1,45 +1,66 @@
 ---
 layout: ../../../layouts/blog-post.astro
-title: "SQL Injections (TODO)"
-subtitle: SQL Injections subtitle (TODO)"
-description: "tl:dr: SQL Injections description (TODO)"
+title: "Der komplette Guide rund um SQL Injections"
+subtitle: "Alles was du über SQL Injections wissen musst: Herkunft, Relevanz im Jahre 2023, Arten und mögliches Ausmaß der Sicherheitslücke, Gegenmaßnahmen und historische Hacks."
+description: "tl:dr: Seit 1998 sind SQL-Injections die Nummer 1 im Bereich Sicherheitslücken für Web-Applikationen. Allein im Jahr 2022 wurden 1789 Sicherheitslücken gefunden, die auf SQL-Injections zurückzuführen sind. Die beste Gegenmaßnahme sind weiterhin Prepared Statements. Automatische Erkennung ist noch immer, speziell bei Blind-, Time- und Second-Order-Based Attacken, nicht ausreichend. Fortschritte werden jedoch in der Forschung durch die Kombination von Fuzzing und Machine Learning gemacht."
 tags: [
     "Backend",
     "Datenbanken",
     "Sicherheit",
     "Software Engineering"
 ]
-pubDate: 2022-10-22
+pubDate: 2023-02-19
 thumbnail: /images/blog-content/eigene-website/brands.png
 headerimage: /images/blog-content/eigene-website/podcast-episode-overview.png
 ---
 import PodcastEpisodeBlogpostAd from '../../../components/PodcastEpisodeBlogpostAd.astro';
 
+## Inhaltsverzeichnis
+
+1. [Was sind SQL Injections?](#was-sind-sql-injections)
+1. [Wer hat SQL-Injections entdeckt und seit wann gibt es die Sicherheitslücke?](#wer-hat-sql-injections-entdeckt-und-seit-wann-gibt-es-die-sicherheitslücke)
+1. [Sind SQL-Injections überhaupt noch relevant?](#sind-sql-injections-überhaupt-noch-relevant)
+1. [Was sind die Gründe, warum diese Sicherheitslücke noch nicht ausgestorben ist?](#was-sind-die-gründe-warum-diese-sicherheitslücke-noch-nicht-ausgestorben-ist)
+1. [Welcher Schaden kann durch eine SQL-Injection angerichtet werden?](#welcher-schaden-kann-durch-eine-sql-injection-angerichtet-werden)
+1. [Welche Arten von SQL-Injections gibt es?](#welche-arten-von-sql-injections-gibt-es)
+1. [Was kann ich gegen SQL-Injections tun?](#was-kann-ich-gegen-sql-injections-tun)
+    1. [Prepared Statements](#prepared-statements)
+    1. [Aktuelle(re) Versionen](#aktuellere-versionen)
+    1. [Limitierte Privilegien für Datenbank-Benutzer (Prinzip der geringsten Berechtigung)](#limitierte-privilegien-für-datenbank-benutzer-prinzip-der-geringsten-berechtigung)
+    1. [Web Application Firewalls (WAF)](#web-application-firewalls-waf)
+    1. [Schulung der Mitarbeiter](#schulung-der-mitarbeiter)
+    1. [Security Testing](#security-testing)
+1. [Kann ich meine Applikation automatisch auf SQL-Injections testen?](#kann-ich-meine-applikation-automatisch-auf-sql-injections-testen)
+    1. [Statische Analyse](#statische-analyse)
+    1. [Dynamische Analyse](#dynamische-analyse)
+    1. [Fuzzing](#fuzzing)
+1. [Was sind populäre Beispiele für Hacks durch eine SQL-Injection?](#was-sind-populäre-beispiele-für-hacks-durch-eine-sql-injection)
+
 ## Was sind SQL Injections?
 
-Eine SQL Injection ist eine Sicherheitslücke in Zusammenhang mit SQL-Datenbanken.
-Im speziellen ist es ein Programmierfehler in einer Applikation, das auf die Datenbank zugreift.
-Ein Angreifer kann Datenbankbefehle einschleusen, beziehungsweise existierende Datenbankabfragen erweitern oder abändern.
-Abhängig vom Einzelfall können dadurch weitere Daten aus der Datenbank ausgelesen, Daten unberechtigt geändert oder gelöscht werden.
-Im schlimmsten Fall kann sogar die Kontrolle über den kompletten Datenbankserver übernommen werden.
+Eine SQL-Injection ist eine Angriffsart, bei der bösartiger Code über Benutzereingaben in die Datenbank einer Anwendung eingeschleust wird.
+Dabei wird eine Schwachstelle im Code der Anwendung ausgenutzt, die es einem Angreifer ermöglicht, beliebige SQL-Befehle auszuführen beziehungsweise existierende Datenbank-Abfragen zu erweitern oder zu ändern.
 
-Im Bereich der Web-Programmierung ist die SQL-Injection am häufigsten vertreten.
-Dennoch, kann jede Applikation, die mit einer SQL-Datenbank interagiert betroffen sein (unabhängig vom Web-Kontext). 
+Abhängig vom Schweregrad der Schwachstelle kann der Angreifer Daten in der Datenbank ändern, löschen oder stehlen, was schwerwiegende Folgen haben kann. Z. B. Datenschutzverletzungen, den Verlust vertraulicher Informationen und sogar die vollständige Kompromittierung des Systems. 
 
-## Wer hat SQL-Injections entdeckt und seit wann gibt es die Sicherheitslücke ?
+Speziell im Bereich der Web-Programmierung/Web-Applikationen sind SQL-Injection-Angriffe eine häufige und gefährliche Bedrohung. Grund dafür ist, dass Webanwendungen vermehrt SQL-Datenbanken zur Speicherung und Verwaltung von Daten verwenden. Dennoch kann jede Applikation, die mit einer (SQL)-Datenbank interagiert, betroffen sein (unabhängig vom Web-Kontext). 
 
-Im Jahre 1998 hat sich Jeff Forristal mit Sicherheitslücken in einem Windows NT-Server beschäftigt.
+## Wer hat SQL-Injections entdeckt und seit wann gibt es die Sicherheitslücke?
+
+Der erste bekannte Fall von SQL-Injection wurde 1998 von Jeff Forristal gemeldet.
+Im Jahre 1998 hat Jeff Forristal sich mit Sicherheitslücken in einem Windows NT-Server beschäftigt.
 Dabei ging es um Bereiche wie den [Internet Information Server v4.0 (IIS)](https://de.wikipedia.org/wiki/Microsoft_Internet_Information_Services), [FrontPage Webbots](https://www.neusob.de/projekt/workshop/webbot.htm), [Cold Fusion Application Server](https://de.wikipedia.org/wiki/ColdFusion#Application_Server) aber auch [ODBC](https://de.wikipedia.org/wiki/Open_Database_Connectivity) und den [MS SQL server v6.5](https://www.microsoft.com/de-de/sql-server/sql-server-2019).
 
-Dabei beschreibt er das erste mal die heutige bekannte SQL-Injection.
+Dabei beschreibt er das erste Mal die heutige bekannte SQL-Injection, als er entdeckte, dass es möglich war, SQL-Befehle durch Benutzereingaben in einer Webanwendung auszuführen. 
+
 Als Sicherheitsforscher hat er seine Resultate auch vor der Veröffentlichung mit Microsoft geteilt.
 Die damalige Antwort war etwas überraschend:
 
 > Er tat das einzig Richtige und informierte Microsoft, und deren Antwort war, nun ja, urkomisch.
 > Laut ihnen [Microsoft] ist das, was Sie gleich lesen werden, kein Problem, also machen Sie sich keine Sorgen, etwas dagegen zu tun.
 
-Seine Arbeit wurde von Jeff Forristal im Dezember 1998 im Hacker Zone _Phrack_ veröffentlicht.
-Der Artikel ist im Archiv von [Phrack im Issue 54 noch online verfügbar](http://www.phrack.org/archives/issues/54/8.txt).
+Seine Arbeit wurde von Jeff Forristal im Dezember 1998 im Hacker Zone _Phrack_ ([Issue 54](http://www.phrack.org/archives/issues/54/8.txt)) veröffentlicht.
+Seitdem hat die SQL-Injektion als Angriffsvektor einen steigender Popularität gewonnen. Primär gefördert durch die schnelle Entwicklung von Webanwendungen in den späten 1990er und frühen 2000er Jahren. Da Webanwendungen immer beliebter und komplexer wurden, bot dies Angreifern die Möglichkeit, die Anwendungen speziell auf die neue Schwachstelle “SQL-Injektion” zu testen und mittels speziellen Benutzereingaben auszunutzen.
 
 <PodcastEpisodeBlogpostAd episode="41" />
 
@@ -47,7 +68,7 @@ Der Artikel ist im Archiv von [Phrack im Issue 54 noch online verfügbar](http:/
 
 Die kurze Antwort: **Ja**.
 
-Auch nach 24 Jahren ist die SQL-Injection weiterhin eine der größten Sicherheitslücken im Internet, die für unzählige Datenschutzverletzungen verantwortlich ist:
+Auch nach 25 Jahren ist die SQL-Injection weiterhin eine der größten Sicherheitslücken im Internet, die für unzählige Datenschutzverletzungen und Angriffe verantwortlich ist:
 
 * **2007**: [OWASP Top 10: Platz #2 (A2 – Injection Flaws)](https://owasp.org/www-pdf-archive//OWASP_Top_10_2007.pdf)
 * **2010**: [OWASP Top 10: Platz #1 (A1 – Injection)](https://owasp.org/www-pdf-archive//OWASP_Top_10_-_2010.pdf)
@@ -55,21 +76,39 @@ Auch nach 24 Jahren ist die SQL-Injection weiterhin eine der größten Sicherhei
 * **2017**: [OWASP Top 10: Platz #1 (A1 - Injection)](https://owasp.org/www-project-top-ten/2017/Top_10)
 * **2021**: [OWASP Top 10: Platz #3 (A3 - Injection)](https://owasp.org/www-project-top-ten/)
 
-Weiterhin wurden zum aktuellen Stand (23. Oktober 2022), 1475 Sicherheitslücken, die auf SQL-Injections zurückzuführen sind, in der [offiziellen CVE-Datenbank allein für das Jahr 2022 gemeldet](https://www.cvedetails.com/vulnerability-list/year-2022/opsqli-1/sql-injection.html).
+Weiterhin wurden zum aktuellen Stand (19. Februar 2023), 1789 Sicherheitslücken, die auf SQL-Injections zurückzuführen sind, in der [offiziellen CVE-Datenbank allein für das Jahr 2022 gemeldet](https://www.cvedetails.com/vulnerability-list/year-2022/opsqli-1/sql-injection.html).
 
 ## Was sind die Gründe, warum diese Sicherheitslücke noch nicht ausgestorben ist?
 
-1. Vielen Software-Entwicklern fehlt oft eine gewisse Erfahrung im Bereich Sicherheit und Sicherheitsbewusstsein
-2. Automatisierte und effiziente Testmethoden, zur Erkennung von SQL-Injections (z.B. ohne False Positives) sind kaum vorhanden bzw. nicht verbreitet.
-3. Client-Libraries, die zum Verbindungsaufbau zur Datenbank genutzt werden, können oft immer noch missbraucht oder falsch angewendet werden und geben (unter Umständen) dem Entwickler ein falsches Gefühl von Sicherheit
-4. Fast jede Webanwendung verwendet irgendeine Form von Datenbank im Backend, was es somit zu einem lohnenswerten Angriffsziel und eine große Angriffsfläche macht.
+1. **Fehlende Wissen**: Vielen Software-Entwicklern fehlt oft das benötigte Know-How und eine gewisse Erfahrung und im Bereich Sicherheit und Sicherheitsbewusstsein
+
+2. **Legacy Code**: Viele Webanwendungen beruhen immer noch auf altem Code, der entwickelt wurde, bevor Best-Practices zur Absicherung eingeführt wurden. Entsprechende Eingabevalidierung oder andere Sicherheitsmaßnahmen, was ihn anfällig für SQL-Injection-Angriffe macht, fehlt dort.
+
+3. **Gesteigerte Komplexität**: Webanwendungen sind im Laufe der Zeit immer komplexer geworden, mit mehr Komponenten und Abstraktionsebenen. Schwachstellen zu erkennen und zu entschärfen, auch solche, die mit SQL-Injection zusammenhängen, ist dadurch deutlich erschwert.
+
+4. **Automatisiertes Testen**: Automatisierte und effiziente Testmethoden zur Erkennung von SQL-Injections (z.B. ohne False Positives) sind kaum vorhanden bzw. nicht verbreitet.
+
+5. **API-Design**: Client-Libraries, die zum Verbindungsaufbau zur Datenbank genutzt werden, können oft immer noch missbraucht oder falsch angewendet werden und geben (unter Umständen) dem Entwickler ein falsches Gefühl von Sicherheit.
+
+6. **Menschliches Versagen**: Entwickler sind auch nur Menschen und Bug-Freie Software zu schreiben ist auch noch nicht 100% möglich. So kann ein Entwickler beispielsweise vergessen, Benutzereingaben zu bereinigen, oder ein Sicherheitsteam räumt der Behebung von Sicherheitslücken nicht rechtzeitig Priorität ein.
+
+7. **Attraktives Angriffsziel und hartnäckige Angreifer**: Fast jede Webanwendung verwendet irgendeine Form von Datenbank im Backend, was es somit zu einem lohnenswerten Angriffsziel macht. Zusätzlich können Angreifer eine Vielzahl von Techniken, einschließlich automatisierter Tools, verwenden, um SQL-Injection-Schwachstellen zu erkennen und auszunutzen.
 
 ## Welcher Schaden kann durch eine SQL-Injection angerichtet werden?
 
-Der genaue Schaden bzw. die Möglichkeiten hängen von der entsprechenden Umgebung (u.a. die Datenbank) und den Sicherheitsvorkehrungen ab.
-Im Allgemeinen ist jedoch folgendes möglich:
+Der genaue Schaden bzw. die Möglichkeiten hängen von der entsprechenden Umgebung (z. B. der Datenbank selbst), dem Ausmaß der entsprechenden Lücke sowie den existierenden Sicherheitsvorkehrungen ab.
 
-* Zugriff auf Daten, die eigentlich geschützt sind. Zum Beispiel:
+Dies kann zu folgenden Szenarien führen:
+
+* Datendiebstahl: Sensible Daten wie Anmeldedaten, Kreditkartennummern und persönliche Informationen
+* Änderung von Daten: Datenverlust oder Datenbeschädigung
+* Kompromittierung von Anwendungen: Die Kontrolle über eine Webanwendung kann übernommen werden sowie Malware oder Ransomware einschleusen
+* Schädigung des Rufs: Negativer Publicity und Verlust von Kundenvertrauen und Geschäftsmöglichkeiten.
+* Verstöße gegen gesetzliche Vorschriften: HIPAA, PCI DSS oder GDPR.
+
+Technisch ist dies z.B. folgendermaßen möglich:
+
+* Zugriff auf Daten, die eigentlich geschützt sind:
 
     ```sql
     SELECT * FROM pages WHERE page_id = 5 OR (1=1 AND protected = 1)
@@ -77,16 +116,20 @@ Im Allgemeinen ist jedoch folgendes möglich:
 
 * Änderungen von Daten, die eigentlich nicht geändert werden sollten: Zum Beispiel via `INSERT`, `UPDATE`, `DELETE`-Statements
     
-    Dies kann unter anderem für das Einfügen von JavaScript in die Datenbank genutzt werden (Stichwort: [Persistent XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting#Persistent_oder_best%C3%A4ndig))
+    Dies kann u.a. für das Einfügen von JavaScript in die Datenbank genutzt werden (Stichwort: [Persistent XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting#Persistent_oder_best%C3%A4ndig))
+
 * Shell-Befehle können auf dem Server ausgeführt werden
+
 * Schreiben von lokalen Dateien auf den Server selbst (z.B. via [`SELECT INTO OUTFILE ...`](https://dev.mysql.com/doc/refman/8.0/en/select-into.html))
     ```sql
     SELECT INTO OUTFILE ...
     ```
     
     Dies kann unter anderem genutzt werden um eine [Webshell](https://en.wikipedia.org/wiki/Web_shell) zu erzeugen
+
 * Lesen von lokalen Dateien vom Server (z.B. via [`LOAD_FILE()`](https://mariadb.com/kb/en/load_file/) oder [`LOAD DATA INFILE`](https://dev.mysql.com/doc/refman/8.0/en/load-data.html))
-* [Denial of Service-Attacken (DoS)](https://de.wikipedia.org/wiki/Denial_of_Service): Zum Beispiel durch zeitbasierte Angriffe
+
+* [Denial of Service-Attacken (DoS)](https://de.wikipedia.org/wiki/Denial_of_Service): Z. B. durch zeitbasierte Angriffe
     
     ```sql
     SELECT IF( USER() LIKE 'root@%', BENCHMARK(100000,SHA1('test')), 'false');
@@ -99,26 +142,34 @@ Im Allgemeinen ist jedoch folgendes möglich:
 
 * Allgemeine Ausnutzung von [bekannten Sicherheitslücken im Datenbank-Server](https://www.cvedetails.com/vulnerability-list/vendor_id-185/product_id-316/Mysql-Mysql.html) auf Basis von alten Software-Versionen oder Nutzung von unsicheren Software-Komponenten
 
-## Welche Arten von SQL-Injections gibt es? TODO
+<PodcastEpisodeBlogpostAd episode="41" />
 
-Arten:
-Normale SQL Injection
-    Error Based SQL Injection
-Blind SQL Injections
-    Time based
-        True-False-Checks
-    Out of band
-        2 Channels / Second order SQL injection
-        Story von trivago: Screenshot vom Admin-Panel
+## Welche Arten von SQL-Injections gibt es?
+
+Es gibt verschiedene Arten von SQL-Injektionsangriffen, von denen jeder seine eigenen Methoden und Ziele hat. Einige der häufigsten Arten sind:
+
+* **Klassische SQL-Injection**: Die einfachste Art der SQL-Injektion, bei der der Angreifer bösartigen SQL-Code in ein Webformular oder ein anderes Eingabefeld einschleust. Der Code wird dann auf dem Server ausgeführt und ermöglicht es dem Angreifer, Daten zu stehlen oder zu verändern.
+
+* **Error Based SQL-Injection**: Bei dieser Art von Angriff verursacht der Angreifer absichtlich einen Fehler im SQL-Code, um Informationen über die Struktur und den Inhalt der Datenbank zu erhalten. Diese Informationen können dann für weitere Angriffe verwendet werden.
+
+* **Blind SQL-Injection**: Bei dieser Art von Angriff erhält der Angreifer keine Informationen zurück, so dass er schwerer zu entdecken ist. Der Angreifer kann verschiedene Techniken anwenden, um Informationen über die Datenbank zu erlangen, z. B. durch Timing-Angriffe, um festzustellen, ob bestimmte Bedingungen wahr oder falsch sind.
+
+* **Out-of-band SQL-Injection**: Hierbei handelt es sich um eine Variante der blinden SQL-Injektion, bei der ein anderer Kanal zur Kommunikation mit dem Angreifer verwendet wird, z. B. DNS- oder HTTP-Anfragen an einen vom Angreifer kontrollierten Server.
+
+* **Second-Order SQL-Injection**: Bei dieser Art von Angriff wird der bösartige SQL-Code in der Datenbank gespeichert und zu einem späteren Zeitpunkt ausgeführt, etwa wenn ein anderer Benutzer auf die Daten zugreift. Dies kann die Erkennung und Entschärfung des Angriffs erschweren.
+
+Das Verständnis der verschiedenen Arten von SQL-Injection-Angriffen ist entscheidend für die Entwicklung wirksamer Gegenmaßnahmen und den Schutz von Webanwendungen vor diesen zunehmend verbreiteten und ausgefeilten Angriffen.
 
 ## Was kann ich gegen SQL-Injections tun?
 
+Die beste Absicherung bietet eine Kombination von Best Practices, Tools und Techniken. Einige der wirksamsten Gegenmaßnahmen zur Verhinderung von SQL-Injections in einer Webanwendung sind:
+
 ### Prepared Statements
 
-[Prepared Statements](https://de.wikipedia.org/wiki/Prepared_Statement) ist die einzig zuverlässige Art um sich vor SQL Injections zu schützen.
+[Prepared Statements](https://de.wikipedia.org/wiki/Prepared_Statement) ist die einzig zuverlässige Art, um sich vor SQL Injections zu schützen.
 Vorausgesetzt, diese werden überall im Code angewendet.
 
-Prepared Statements sind SQL-Abfragen, die mit entsprechenden Parametern vorbereitet werden, aber erst zu einem späteren Zeitpunkt den eigentlich Wert für den Parameter zugewiesen bekommen.
+Prepared Statements sind SQL-Abfragen, die mit entsprechenden Parametern vorbereitet werden, aber erst zu einem späteren Zeitpunkt den eigentlichen Wert für den Parameter zugewiesen bekommen.
 Dabei wird der Wert des Parameters durch einen Placeholder markiert.
 Anbei ein Beispiel in Java:
 
@@ -147,7 +198,7 @@ Damit ist ein unerwünschter Ausbruch, zum Beispiel aus der Zeichenkette, nicht 
 
 #### Prepared Statements und Performance
 
-Bei mehrfacher Ausführung des selben Statements mit unterschiedlichen Variablen kann es sogar zu einem positiven Geschwindigkeits-Impact kommen.
+Bei mehrfacher Ausführung desselben Statements mit unterschiedlichen Variablen kann es sogar zu einem positiven Geschwindigkeits-Impact kommen.
 Der Grund: Der Datenbank-Server kennt die Anfrage bereits und kann daraufhin die Ausführung optimieren.
 
 Bei einer einmaligen Ausführung des Queries ist die Nutzung eines Prepared Statements im Bezug auf die [Performance minimal teurer](https://orangematter.solarwinds.com/2014/11/19/analyzing-prepared-statement-performance/) (im Vergleich zu eiem einfachen SQL Statement).
@@ -160,38 +211,37 @@ In der Praxis ist dies jedoch selten ein Problem, da:
 
 ### Aktuelle(re) Versionen
 
-Die Nutzung von aktuelle(re)n Versionen von Datenbanken oder Client-Libraries ist bevorzugt.
-
-Oft enthalten neuere Versionen notwendige Sicherheitsupdates um bekannten Sicherheitslücken vorzubeugen oder integrieren zusätzliche Features, die die Sicherheit erhöhen können.
+Die Nutzung von aktuelle(re)n Versionen von Datenbanken oder Client-Libraries ist bevorzugt. Oft enthalten neuere Versionen notwendige Sicherheitsupdates, um bekannten Sicherheitslücken vorzubeugen oder integrieren zusätzliche Features, die die Sicherheit erhöhen können.
 
 Doch Vorsicht: Auch neuere Versionen können neue Sicherheitslücken beinhalten.
-Immer der allerneusten Version hinterherzujagen ist ggf. auch nicht die beste Empfehlung.
+Immer der allerneuesten Version hinterherzujagen ist ggf. auch nicht die beste Empfehlung.
 Eine gute Orientierung bieten die Lifecycle-Angaben eurer Software:
 
-* Wie lange wird eine entsprechende Version noch supported und erhält Sicherheitsupdates?
+* Wie lange wird eine entsprechende Version noch unterstützt und erhält sie Sicherheitsupdates?
 * Gibt es eine Long-Term-Support-Version (LTS)?
 
-### Limitierte Privilegien für Datenbank-Benutzer
+### Limitierte Privilegien für Datenbank-Benutzer (Prinzip der geringsten Berechtigung)
 
-Welche Privilegien hat der von euch verwendete Datenbanknutzer?
-Kann dieser neue Benutzer anlegen?
-Ist dies eine notwendige Operation von eurer Anwendung?
+Welche Privilegien hat der von euch verwendete Datenbank Benutzer? Kann dieser neue Benutzer anlegen? Ist dies eine notwendige Operation von eurer Anwendung?
 
-Schaut euch die benötigten Datenbank-Privilegien eures Datenbank-Benutzers an und überlegt, welche notwendig sind.
-Limitiert diese auf das notwendige, um möglichen Angreifern das Leben schwerer zu machen.
+Schaut euch die benötigten Datenbank-Privilegien eures Datenbank-Benutzers an und überlegt, welche notwendig sind. Befolgt das Prinzip der geringsten Berechtigung, indem du den Benutzerzugriff auf die Ressourcen beschränkt, die er für die Ausführung seiner Aufgaben benötigt. Dies macht möglichen Angreifern das Leben schwerer.
 
 Habt Ihr mehrere Datenbank-Server im Einsatz, um Schreib- und Lese-Zugriffe zu skalieren (Stichwort: Replikation und Schreib-Source und Read-Replica)?
-Überlegt ob Ihr in eurer Applikation auch die Schreib- und Lese-Zugriffe trennt und diese über einzelne Datenbank-Benutzer ausführt.
-Somit limitiert Ihr die mögliche Angriffsfläche weiter.
+Überlegt, ob Ihr in eurer Applikation auch die Schreib- und Lese-Zugriffe trennt und diese über einzelne Datenbank-Benutzer ausführt. Somit limitiert Ihr die mögliche Angriffsfläche weiter.
+
+Das ganze kann durch Verfahren wie Datenbank-Hardening noch weitergeführt werden:
+* Entfernen ungenutzter oder unnötiger Datenbankfunktionen
+* Verschlüsseln sensibler Daten 
+* Verwendung sicherer Kommunikationskanälen
 
 Weitere Tipps liefert das [OWASP in einem Artikel zur Absicherung eines Datenbank-Servers](https://owasp.org/www-project-proactive-controls/v3/en/c3-secure-database).
 
 ### Web Application Firewalls (WAF)
 
-Habt Ihr keine Kontrolle über die Applikation oder Datenbank-Server selbst (zum Beispiel weil Ihr nur für den Betrieb zuständig seid)?
+Habt Ihr keine Kontrolle über die Applikation oder Datenbank-Server selbst?
 Überlegt eine [Web Application Firewalls (WAF)](https://de.wikipedia.org/wiki/Web_Application_Firewall) vor die Anwendung zu schalten.
 
-Eine Web Application Firewalls (WAF) überprüft die eingehende Anfrage (zB. die aufgerufene Adresse / URL) und schaut nach bekannten/gefährlichen Patterns.
+Eine Web Application Firewalls (WAF) überprüft die eingehende Anfrage (z.B. die aufgerufene Adresse / URL) und schaut nach bekannten/gefährlichen Patterns.
 Klassische Patterns wie
 
 ```sql
@@ -200,40 +250,54 @@ Klassische Patterns wie
 
 werden problemlos erkannt.
 
-Dies bietet keinen ausreichenden Schutz gegen SQL-Injections, macht es dem Angreifer jedoch schwieriger.
-Dennoch kann dies als zusätzliche Maßnahme eingebunden werden.
+Dies bietet keinen ausreichenden Schutz gegen SQL-Injections, macht es dem Angreifer jedoch schwieriger. Dennoch kann dies als zusätzliche Maßnahme eingebunden werden.
 
-## Kann ich meine Applikation automatisch auf SQL-Injections testen? TODO
+### Schulung der Mitarbeiter
 
-Static Analysis for SQL Injections
-    → Model muss auf Sprache und ggf. library angepasst werden
-Dynamic Testing for SQL Injections
-    sqlmap
-    Limits: Black box testing (deep analysis missing), second-order SQLi, blind SQLi
-    sqlmap: https://sqlmap.org/
-        MySQL, MSSQL, Oracle, PostgreSQL, …, Amazon Redshift, CockroachDB, Apache Ignite
-        boolean-based blind, time-based blind, error-based, UNION query-based, stacked queries and out-of-band
-    OWASP ZAP https://www.zaproxy.org/
-Fuzzing
-    SQLi-Fuzzer: A SQL Injection Vulnerability Discovery Framework Based on Machine Learning
+Upskilling ist immer eine gute Sache.
+Auch im Fall von SQL-Injections (oder Web-Security im Allgemeinen) können Schulungen und Trainings wahre Wunder wirken.
+
+Inhalt des Trainings könnte u.a. sein:
+Sichere Validierungs- und Programmiere- Praktiken
+Sicherheitsbewusstsein
+Verfahren zur Reaktion auf Vorfälle
+Datenbank-Konfiguration
+
+### Security Testing
+
+Scan doch mal die Webanwendung und die zugrunde liegende Datenbank regelmäßig auf Schwachstellen. Die Behebung oder Entschärfung erkannter Schwachstellen sollte entsprechende Priorität in der Entwicklung erhalten.
+
+Aber auch regelmäßig Sicherheitstests durch, z. B. Penetrationstests oder Code-Reviews, um potenzielle Schwachstellen zu ermitteln und die Wirksamkeit der vorhandenen Sicherheitskontrollen zu überprüfen, können hilfreich sein.
+
+## Kann ich meine Applikation automatisch auf SQL-Injections testen?
+
+Komplett ohne manuellen Aufwand ist es nicht möglich. Dennoch gibt es verschiedene Varianten, die dich bei der Absicherung unterstützen können:
+
+### Statische Analyse
+
+Die klassische statische Code-Analyse ist nicht auf SQL-Injections im Speziellen ausgelegt. Dennoch gibt es einige Tools, die entsprechende Unterstützung mitbringen. I.d.R. muss dennoch das Model bzw. entsprechende Tool auf die jeweilige Programmiersprache und sogar auf die verwendete Library angepasst werden. 
+
+Ein positiver Seiteneffekt: Diese Tools können auch andere Code-Qualitätsprobleme aufzeigen, die zu Sicherheitslücken führen könnten.
+
+### Dynamische Analyse
+
+Tools zur dynamischen Code-Analyse simulieren Benutzereingaben und können dadurch Injektionspunkte identifizieren.
+
+Der Platzhirsch in diesem Bereich ist [sqlmap](https://sqlmap.org/) mit support für fast alle SQL basierten Datenbanken, inklusive MySQL, MSSQL, Oracle, PostgreSQL, Amazon Redshift, CockroachDB und Apache Ignite sowie den SQL-Injection-Arten wie Boolean-Based Blind, Time-Based Blind, Error-Based, UNION Query-Based, Stacked Queries und Out-of-Band.
+
+Eine Alternative bietet [OWASP ZAP](https://www.zaproxy.org/). Nicht speziell für SQL Injections ausgelegt, bietet dennoch Unterstützung für diesen Angriffsvektor.
+
+### Fuzzing
+
+Aktuell gibt es Research im Bereich Fuzzing und wie man mit Hilfe von Machine Learning SQL Injections aufspüren kann. Das entsprechende Paper [“SQLi-Fuzzer: A SQL Injection Vulnerability Discovery Framework Based on Machine Learning”](https://ieeexplore.ieee.org/document/9657925) wurde im Jahr 2021 veröffentlicht.
+Diverse proprietäre Software-Services werben bereits damit. Im Open Source Bereich ist (unseres Wissens nach) noch nichts fertig Benutzbares veröffentlicht worden.
 
 ## Was sind populäre Beispiele für Hacks durch eine SQL-Injection?
 
-### 2007, 7-Eleven
+* **2007, 7-Eleven**: 130 Millionen Kredit- und Debitkarten-Daten wurden gestohlen. [Eine SQL-Injekction wurde als Haustür genutzt.](https://www.networkworld.com/article/2247145/miami-hacker-exploited-unlimited-database-defects.html).
 
-130 Millionen Kredit- und Debitkarten-Daten wurden gestohlen.
+* **2013, MySpace**: E-Mails, Namen und teilweise Passwörter von fast 360 Millionen Konten wurden entwendet. [Dabei gilt eine SQL-Injection als die eigentlich ausgenutzte Sicherheitslücke.](https://www.ecomsecurity.org/security-news/myspace-victim-major-data-breach-360m-accounts-potentially-affected/)
 
-[Eine SQL-Injekction wurde als Haustür genutzt.](https://www.networkworld.com/article/2247145/miami-hacker-exploited-unlimited-database-defects.html).
+* **2017, Equifax**: Die privaten Daten von 147,9 Millionen Amerikanern, 15,2 Millionen Briten und etwa 19.000 Kanadiern wurden kompromittiert. Unter anderem enthielten die Daten Namen, Sozialversicherungsnummern, Geburtsdaten und Adressen. [Teil der Strategie der Angreifer war eine SQL-Injection](https://blog.cloudflare.com/thwarting-the-tactics-of-the-equifax-attackers/).
 
-### 2013, MySpace
-
-E-Mails, Namen und teilweise Passwörter von fast 360 Millionen Konten wurden entwendet.
-
-[Dabei gilt eine SQL-Injection als die eigentlich ausgenutzte Sicherheitslücke.](https://www.ecomsecurity.org/security-news/myspace-victim-major-data-breach-360m-accounts-potentially-affected/)
-
-### 2017, Equifax 
-
-Die privaten Daten von 147,9 Millionen Amerikanern, 15,2 Millionen Briten und etwa 19.000 Kanadiern wurden kompromittiert.
-Unter anderem enthielten die Daten Namen, Sozialversicherungsnummern, Geburtsdaten und Adressen.
-
-[Teil der Strategie der Angreifer war eine SQL-Injection](https://blog.cloudflare.com/thwarting-the-tactics-of-the-equifax-attackers/).
+<PodcastEpisodeBlogpostAd episode="41" />
