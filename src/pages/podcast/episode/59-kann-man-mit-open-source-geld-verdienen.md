@@ -58,7 +58,10 @@ length_second: 3251
 pubDate: '2023-02-21'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/715h8uioolNKRzxMjzQL3E
-tags: []
+tags:
+- Open Source
+- Karriere
+- Gehalt
 title: '#59:  Kann man mit Open Source Geld verdienen?'
 
 ---
