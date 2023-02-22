@@ -66,7 +66,6 @@ pubDate: '2022-02-08'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/4TZwqBTtO2fNDt8XjQXjuR
 tags:
-- Podcast
 - Engineering Kiosk
 title: "#00 Developer fangen bei 0 an zu z\xE4hlen"
 
