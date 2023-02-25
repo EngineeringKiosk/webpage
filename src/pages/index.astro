@@ -171,8 +171,8 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
       </section>
 
       <section class="py-24 md:pb-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
-        <div class="container mx-auto flex overflow-x-scroll scroll-smooth" style="scrollbar-width: none; scroll-snap-type: x mandatory;">
-          <div id="testimonial1" class="flex-none w-full flex flex-wrap items-center justify-center lg:justify-between">
+        <div class="container mx-auto flex carousel">
+          <div id="testimonial1" class="carousel-item flex flex-wrap items-center justify-center lg:justify-between">
             <div class="w-auto px-4 order-last lg:order-first">
               <button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
                 <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +194,7 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
                 <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
                 <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
                 <div class="relative">
-                  <h2 class="text-2xl font-semibold tracking-tighter text-justify">Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.</h2>
+                  <h2 class="testimonial-content">Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.</h2>
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
               </button></a>
             </div>
           </div>
-          <div id="testimonial2" class="flex-none w-full flex flex-wrap items-center justify-center lg:justify-between">
+          <div id="testimonial2" class="carousel-item flex flex-wrap items-center justify-center lg:justify-between">
             <div class="w-auto px-4 order-last lg:order-first">
               <a href="#testimonial1"><button class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white hover:bg-coolGray-100">
                 <svg width="12" height="14" viewbox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +228,7 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
                 <img class="absolute top-0 left-0" src="/images/testimonials/quote-top-yellow.svg" alt="">
                 <img class="absolute bottom-0 right-0" src="/images/testimonials/quote-down-yellow.svg" alt="">
                 <div class="relative">
-                  <h2 class="text-2xl font-semibold tracking-tighter">Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.</h2>
+                  <h2 class="testimonial-content">Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.</h2>
                 </div>
               </div>
             </div>
@@ -442,3 +442,18 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 		</div>
 	</body>
 </html>
+
+
+<style>
+.carousel {
+  @apply overflow-x-scroll scroll-smooth;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+.carousel-item {
+  @apply flex-none w-full;
+}
+.testimonial-content {
+  @apply text-2xl font-semibold tracking-tighter text-justify;
+}
+</style>
