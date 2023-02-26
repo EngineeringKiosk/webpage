@@ -448,7 +448,11 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 .carousel {
   @apply overflow-x-scroll scroll-smooth;
   scrollbar-width: none;
+  -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 .carousel-item {
   @apply flex-none w-full;
