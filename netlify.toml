@@ -756,13 +756,20 @@ force = true
 
 [[redirects]]
 from = "/episodes/60"
-to = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sollten?pk_campaign=shortlink"
+to = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten?pk_campaign=shortlink"
 status = 301
 force = true
 
 [[redirects]]
 from = "/ep60"
-to = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sollten"
+to = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten"
+status = 301
+force = true
+
+# Legacy redirect
+[[redirects]]
+from = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sollten"
+to = "/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten"
 status = 301
 force = true
 
