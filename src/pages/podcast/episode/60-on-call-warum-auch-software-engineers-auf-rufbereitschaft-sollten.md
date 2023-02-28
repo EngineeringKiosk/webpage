@@ -66,7 +66,10 @@ length_second: 3571
 pubDate: '2023-02-28'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/1XovBj0ClZnvlVDmlxPruK
-tags: []
+tags:
+- Team
+- Backend
+- DevOps
 title: '#60 On-Call: Warum auch Software-Engineers auf Rufbereitschaft sollten'
 
 ---
