@@ -57,7 +57,7 @@ description: "On-Call bzw. Rufbereitschaft: Eine ewige Hass-Liebe? Software-Engi
   \ Bonus: Was Pager mit Tamagotchi zu tun haben und ob On-Call zu einer Handy-Phobie\
   \ f\xFChrt.  Schaut vorbei in unserer neuen Community: https://engineeringkiosk.dev/join-discord\_\
   \  Das schnelle Feedback zur Episode: \U0001F44D (top) \_\U0001F44E (geht so)"
-google_podcasts: ''
+google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGFhMTI2ZjQtNWI1MS00ODcxLTlkNDQtMmU4YWJiYzc3NDBm?sa=X&ved=0CAUQkfYCahcKEwjYjoi1z7r9AhUAAAAAHQAAAAAQAQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
 image: /images/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten.jpg
