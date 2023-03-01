@@ -1,6 +1,6 @@
 ---
 amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/825f4d9a-1e3a-434f-b918-20092b115b72/engineering-kiosk-60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten
-apple_podcasts: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft/id1603082924?i=1000601991673&uo=4
 audio: https://audio1.redcircle.com/episodes/ad760df8-9ecc-4b01-a0ec-769662d0cf12/stream.mp3
 chapter:
 - start: 00:00:00
@@ -43,7 +43,7 @@ chapter:
   title: "Volle Verantwortung f\xFCr deine Applikation"
 - start: 00:58:18
   title: Engineering-Kiosk-Community in Discord
-deezer: ''
+deezer: https://www.deezer.com/episode/483624947
 description: "On-Call bzw. Rufbereitschaft: Eine ewige Hass-Liebe? Software-Engineers\
   \ entwickeln die Applikationen. Doch wer maintained diese und bringt diese wieder\
   \ zur\xFCck ins Leben, wenn die Applikationen mal abst\xFCrzen? Im klassischen Sinne\
@@ -62,10 +62,10 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
   (gerne auch als Voice Message)
 image: /images/podcast/episode/60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten.jpg
 layout: ../../../layouts/podcast-episode.astro
-length_second: 0
+length_second: 3571
 pubDate: '2023-02-28'
 rtlplus: ''
-spotify: ''
+spotify: https://open.spotify.com/episode/1XovBj0ClZnvlVDmlxPruK
 tags:
 - Team
 - Backend
