@@ -189,7 +189,7 @@ ResultSet rs = ps.executeQuery();
 
 Doch was passiert da?
 
-1. Das Statement `SELECT user, password FROM tbl_user WHERE user = ?`an den Datenbank-Server gesendet und intern wird eine ID für das vorbereitete Statement gespeichert.
+1. Das Statement `SELECT user, password FROM tbl_user WHERE user = ?` wird an den Datenbank-Server gesendet, der die Abfrage für die aktuelle Session speichert und eine ID zurückliefert.
 2. Dem Parameter `?` (als Wert für das Feld `user`) die Zeichenkette aus der Variable `username` zugewiesen.
 3. Das Statement wird an den Datenbank-Server versendet und ausgeführt.
 
