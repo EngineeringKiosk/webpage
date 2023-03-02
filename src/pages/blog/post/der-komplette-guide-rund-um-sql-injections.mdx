@@ -222,9 +222,9 @@ Eine gute Orientierung bieten die Lifecycle-Angaben eurer Software:
 
 ### Limitierte Privilegien für Datenbank-Benutzer (Prinzip der geringsten Berechtigung)
 
-Welche Privilegien hat der von euch verwendete Datenbank Benutzer? Kann dieser neue Benutzer anlegen? Ist dies eine notwendige Operation von eurer Anwendung?
+Welche Privilegien hat der verwendete Datenbank Benutzer? Kann dieser neue Benutzer anlegen? Ist dies eine notwendige Operation der Anwendung?
 
-Schaut euch die benötigten Datenbank-Privilegien eures Datenbank-Benutzers an und überlegt, welche notwendig sind. Befolgt das Prinzip der geringsten Berechtigung, indem du den Benutzerzugriff auf die Ressourcen beschränkt, die er für die Ausführung seiner Aufgaben benötigt. Dies macht möglichen Angreifern das Leben schwerer.
+Eine Kontrolle der benötigten Datenbank-Privilegien des Datenbank-Benutzers ist stets sinnvoll. Es sollte das Prinzip der geringsten Berechtigung befolgt werden, indem der Benutzerzugriff auf die Ressourcen beschränkt wird, die für die Ausführung der Aufgaben benötigt werden. Dies macht möglichen Angreifern das Leben schwerer.
 
 Habt Ihr mehrere Datenbank-Server im Einsatz, um Schreib- und Lese-Zugriffe zu skalieren (Stichwort: Replikation und Schreib-Source und Read-Replica)?
 Überlegt, ob Ihr in eurer Applikation auch die Schreib- und Lese-Zugriffe trennt und diese über einzelne Datenbank-Benutzer ausführt. Somit limitiert Ihr die mögliche Angriffsfläche weiter.
