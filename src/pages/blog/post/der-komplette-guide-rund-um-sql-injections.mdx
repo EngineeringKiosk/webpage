@@ -191,7 +191,7 @@ Doch was passiert da?
 
 1. Das Statement `SELECT user, password FROM tbl_user WHERE user = ?` wird an den Datenbank-Server gesendet, der die Abfrage für die aktuelle Session speichert und eine ID zurückliefert.
 2. Dem Parameter `?` (als Wert für das Feld `user`) die Zeichenkette aus der Variable `username` zugewiesen.
-3. Das Statement wird an den Datenbank-Server versendet und ausgeführt.
+3. Der Client sendet die Zeichenkette und die ID der Abfrage an DB Server, der die eigentliche Abfrage erstellt und ausführt.
 
 Durch die korrekte Verwendung von Datentypen (string, int, float, ...) wird sichergestellt, dass die Werte dementsprechend escaped werden.
 Damit ist ein unerwünschter Ausbruch, zum Beispiel aus der Zeichenkette, nicht möglich.
