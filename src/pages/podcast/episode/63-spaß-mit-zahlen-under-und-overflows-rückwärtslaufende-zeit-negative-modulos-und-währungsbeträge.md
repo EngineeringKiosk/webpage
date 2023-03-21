@@ -58,7 +58,10 @@ length_second: 3667
 pubDate: '2023-03-21'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/12FA6dqjtt3wISvCbNvgDH
-tags: []
+tags:
+- Software Engineering
+- Backend
+- Datenbanken
 title: "#63 Spa\xDF mit Zahlen: Under- und Overflows, R\xFCckw\xE4rtslaufende Zeit,\
   \ Negative Modulos und W\xE4hrungsbetr\xE4ge"
 
