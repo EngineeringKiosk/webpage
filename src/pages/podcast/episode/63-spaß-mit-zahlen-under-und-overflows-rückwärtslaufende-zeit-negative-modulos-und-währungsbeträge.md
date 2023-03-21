@@ -1,6 +1,6 @@
 ---
 amazon_music: ''
-apple_podcasts: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/63-spa%C3%9F-mit-zahlen-under-und-overflows-r%C3%BCckw%C3%A4rtslaufende/id1603082924?i=1000605102917&uo=4
 audio: https://audio1.redcircle.com/episodes/b665c434-36c9-4bb8-bca9-87424d1a8779/stream.mp3
 chapter:
 - start: 00:00:00
