@@ -59,7 +59,12 @@ length_second: 3417
 pubDate: '2023-03-28'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/0Cx5pbDGBnaEe3lOfgN9QQ
-tags: []
+tags:
+- Backend
+- DevOps
+- Software Engineering
+- Sicherheit
+- Cloud
 title: '#64 Infrastruktur-Bingo: Forward-, Reverse-, SOCKS-Proxy, Load Balancing und
   gibt es einen Unterschied zwischen Load-Balancer und Reverse-Proxy?'
 
