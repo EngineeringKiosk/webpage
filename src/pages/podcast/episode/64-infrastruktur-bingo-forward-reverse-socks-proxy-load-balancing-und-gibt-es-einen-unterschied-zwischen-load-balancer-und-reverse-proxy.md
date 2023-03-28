@@ -1,5 +1,5 @@
 ---
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/1a8f2a0b-f6fc-4581-8e8a-2148be86affa/engineering-kiosk-64-infrastruktur-bingo-forward--reverse--socks-proxy-load-balancing-und-gibt-es-einen-unterschied-zwischen-load-balancer-und-reverse-proxy
 apple_podcasts: https://podcasts.apple.com/us/podcast/64-infrastruktur-bingo-forward-reverse-socks-proxy/id1603082924?i=1000606217974&uo=4
 audio: https://audio1.redcircle.com/episodes/f2d89c8e-c938-4493-854d-72630d4f0d2d/stream.mp3
 chapter:
