@@ -58,7 +58,12 @@ length_second: 3357
 pubDate: '2023-04-04'
 rtlplus: ''
 spotify: https://open.spotify.com/episode/0CfpZPaINwZLHuFaclv0M4
-tags: []
+tags:
+- Backend
+- Frontend
+- Software Engineering
+- Software Qualität
+- Produktivität
 title: '#65 Clean Code macht Software langsam'
 
 ---
