@@ -820,6 +820,18 @@ to = "/podcast/episode/64-infrastruktur-bingo-forward-reverse-socks-proxy-load-b
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/65"
+to = "/podcast/episode/65-clean-code-macht-software-langsam?pk_campaign=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep65"
+to = "/podcast/episode/65-clean-code-macht-software-langsam"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
