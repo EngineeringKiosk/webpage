@@ -56,3 +56,7 @@ init: ## Installs dependencies
 .PHONY: eslint
 eslint: ## Statically analyzes of basic JavaScript scripts
 	node_modules/.bin/eslint --config .eslintrc src/scripts
+
+.PHONY: prettier
+prettier: ## Run prettier (file formatting)
+	node_modules/.bin/prettier -w .

@@ -21,14 +21,20 @@ Available `Makefile` commands:
 
 ```
 build                          Compiles the application into static content
-clean                          Deletes the generated content
+clean                          Deletes the generated content and node_modules
 episode-check                  Checks all Podcast Episodes if all player links (Spotify, etc.) are set
+eslint                         Statically analyzes of basic JavaScript scripts
+find-tags-that-need-descriptions-content-files-dump Find all used tags in content files (blog posts and podcasts) that need SEO descriptions and dump it down to disk into tag-file
+find-tags-that-need-descriptions-content-files Checks all used tags in content files (blog posts and podcasts) that need SEO descriptions and output them on stdout
+find-tags-that-need-descriptions-german-tech-podcast-file-dump Find all used tags in the german tech podcasts that need SEO descriptions and dump it down to disk into tag-file
+find-tags-that-need-descriptions-german-tech-podcast-file Checks all used tags in the german tech podcasts that need SEO descriptions and output them on stdout
 help                           Outputs the help
 init                           Installs dependencies
+prettier                       Run prettier (file formatting)
 run                            Starts the development server
+sync-german-tech-podcasts      Syncs German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 update-content                 Pulls the latest Podcast RSS feed and updates the content
-update-redirects               Writes all short url redirects for Podcast episodes to netlify.toml
-```
+update-redirects               Writes all short url redirects for Podcast episodes to netlify.toml```
 
 Native npm commands:
 
