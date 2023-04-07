@@ -231,6 +231,12 @@ let tags = content.tags.map((element) => URLify(element));
 													<span class="text-lg m-2">&nbsp;</span>
 												</a>
 											</div>)}
+											{content.youtube && (<div class="m-2">
+												<a class="flex items-center"  href={content.youtube} title={`Engineering Kiosk ${content.title} auf YouTube`}>
+													<img class="w-12" src="/images/brands/youtube.svg" alt={`Engineering Kiosk ${content.title} auf YouTube`}>
+													<span class="text-lg m-2">YouTube</span>
+												</a>
+											</div>)}
 										</div>
 									</div>
 								</section>)}
