@@ -2,6 +2,8 @@
 import Matomo from './Matomo.astro';
 
 // Static website footer
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
@@ -125,7 +127,7 @@ import Matomo from './Matomo.astro';
     </div>
     <div class="border-b border-coolGray-100"></div>
     <p class="py-10 md:pb-16 text-sm text-coolGray-400 font-medium text-center">
-        © 2022 Engineering Kiosk. Alle Rechte vorbehalten.
+        © {year} Engineering Kiosk. Alle Rechte vorbehalten.
     </p>
 </footer>
 <Matomo />
