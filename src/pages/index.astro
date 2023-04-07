@@ -121,6 +121,11 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
                     <img class="w-12" src="/images/brands/amazonmusic.svg" alt="Amazon Music logo" title="Amazon Music logo">
                   </a>
                 </div>)}
+                {episode.frontmatter.youtube && (<div class="m-4 flex items-center">
+                  <a class="items-center" href={episode.frontmatter.youtube} title={`Engineering Kiosk Episode ${episode.frontmatter.title} auf YouTube`}>
+                    <img class="w-14" src="/images/brands/youtube.svg" alt="YouTube logo" title="YouTube logo">
+                  </a>
+                </div>)}
               </div>
             </div>
           </div>
