@@ -360,6 +360,7 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, spotify_clien
             'amazon_music': '',
             'deezer': get_episode_link_from_deezer(deezer_episodes, title),
             'rtlplus': '',
+            'youtube': '',
             'tags': [],
             'length_second': length_second,
         }
@@ -385,6 +386,7 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, spotify_clien
                     'amazon_music',
                     'deezer',
                     'rtlplus',
+                    'youtube',
                     'tags',
                     'length_second',
                 ]
