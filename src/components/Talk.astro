@@ -26,20 +26,34 @@ const { avatar, name, title, description, github, twitter, linkedin, website } =
 		</span>
 		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
 		<div class="flex items-center justify-center">
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
-				<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
-			</a>
-			<!-- if twitter is set -->
-
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
-				<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
-			</a>
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
-				<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
-			</a>
-			<a class="inline-block hover:opacity-80" href={website}>
-				<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
-			</a>
+			{
+				github && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
+						<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
+					</a>
+				)
+			}
+			{
+				twitter && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
+						<img src="/images/brands/twitter-gray.svg" alt={`${name} auf twitter`} />
+					</a>
+				)
+			}
+			{
+				linkedin && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
+						<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
+					</a>
+				)
+			}
+			{
+				website && (
+					<a class="inline-block hover:opacity-80" href={website}>
+						<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
+					</a>
+				)
+			}
 		</div>
 	</div>
 </div>
