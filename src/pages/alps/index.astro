@@ -69,7 +69,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 					<div class="flex flex-wrap justify-center -mx-4">
 						<Talk
-							avatar="/images/alps/ardit-shala.png"
+							avatar="/images/alps/ardit-shala.jpg"
 							name="Ardit Shala"
 							title="PamApp: The journey of building and scaling a system with 1M+ users"
 							description="Explaining the journey of building a backend fitness platform from scratch as a distributed system on large scale, also covering a high-level architecture of the whole system. What's the story behind and how I got involved, what where the general requirements, the launch drama and handing traffic while working with one of the biggest fitness influencers."
@@ -101,31 +101,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							We'll also send you an ics-event file, so you can add the event to your calendar.
 						</p>
 					</div>
-          <div class="mb-16 text-center">
-          <iframe src="https://embed.calendarsnack.com/embed/c1ngrv9h2ecl8jjkb5te7a3pd643pg7q1f65uo81/simplecard" height="175px" width="100%" scrolling="no" style="overflow:hidden; border: 0px;"></iframe>
-				</div>
-			</section>
-
-			<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
-				<div class="container px-4 mx-auto w-full md:w-1/2">
 					<div class="mb-16 text-center">
-						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Interested in upcoming meetups?</h3>
-						<p>
-							Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
-							No worries, we won't spam you and you can unsubscribe at any time.
-						</p>
-						<form action="https://tinyletter.com/EngineeringKioskAlps" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/EngineeringKioskAlps', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-							<div class="mt-4">
-								<input type="hidden" value="1" name="embed" />
-								<input class="px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="email" placeholder="Your email address" />
-								<input type="submit" class="py-4 px-5 leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value="Subscribe" />
-							</div>
-						</form>
+						<iframe src="https://embed.calendarsnack.com/embed/c1ngrv9h2ecl8jjkb5te7a3pd643pg7q1f65uo81/simplecard" height="175px" width="100%" scrolling="no" style="overflow:hidden; border: 0px;"></iframe>
 					</div>
 				</div>
-			</section>
-		</div>
 
-		<Footer />
+				<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+					<div class="container px-4 mx-auto w-full md:w-1/2">
+						<div class="mb-16 text-center">
+							<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Interested in upcoming meetups?</h3>
+							<p>
+								Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
+								No worries, we won't spam you and you can unsubscribe at any time.
+							</p>
+							<form action="https://tinyletter.com/EngineeringKioskAlps" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/EngineeringKioskAlps', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+								<div class="mt-4">
+									<input type="hidden" value="1" name="embed" />
+									<input class="px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="email" placeholder="Your email address" />
+									<input type="submit" class="py-4 px-5 leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value="Subscribe" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<Footer />
+		</div>
 	</body>
 </html>
