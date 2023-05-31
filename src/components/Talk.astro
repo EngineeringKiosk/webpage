@@ -1,0 +1,43 @@
+---
+export interface Props {
+	avatar: string;
+	name: string;
+	title: string;
+	description: string;
+	github: string;
+	twitter: string;
+	linkedin: string;
+	website: string;
+}
+
+const { avatar, name, title, description, github, twitter, linkedin, website } = Astro.props;
+---
+
+<div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-10 hostpreview">
+	<div class="h-full py-8 px-10 bg-white rounded-md text-center">
+		<img class="w-56 h-56 mx-auto mb-6 rounded-full" src={`/images/teams/${avatar}`} alt={name} title={name} />
+
+		<h2 class="mb-2 text-2xl md:text-3xl leading-tight font-semibold">
+			{title}
+		</h2>
+
+		<span class="inline-block mb-6 text-lg font-medium text-yellow-500">
+			{name}
+		</span>
+		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+		<div class="flex items-center justify-center">
+			<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
+				<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
+			</a>
+			<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
+				<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
+			</a>
+			<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
+				<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
+			</a>
+			<a class="inline-block hover:opacity-80" href={website}>
+				<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
+			</a>
+		</div>
+	</div>
+</div>
