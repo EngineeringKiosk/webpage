@@ -1,0 +1,16 @@
+---
+export interface Props {
+	message: string;
+	link: string;
+}
+
+const { message, link } = Astro.props;
+---
+
+<section class="py-6 bg-coolGray-900 overflow-hidden bg-opacity-75" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center; background-size: cover;">
+	<div class="container px-3 mx-auto text-center">
+		<a href={link} class="text-darkCoolGray-50 font-semibold text-xl">
+			{message}
+		</a>
+	</div>
+</section>

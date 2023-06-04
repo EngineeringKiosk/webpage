@@ -8,6 +8,7 @@ import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday } from '../scripts/date.js';
+import AnnouncmentBar from '../components/AnnouncmentBar.astro';
 
 import podcastInfo from '../data/podcast-info.json';
 
@@ -39,6 +40,8 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 	<body class="antialiased bg-body text-body font-body">
 		<div>
 			<Nav title={title} />
+
+			<AnnouncmentBar message="Engineering Kiosk Alps: Das neue Tech Meetup in Innsbruck, am 15. Juni 2023" link="/alps/" />
 
 			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
 				<div class="py-20 md:py-28">
@@ -86,8 +89,9 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 							</div>
 						</div>
 						<div class="w-full md:w-1/2 px-4">
-							<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Aktuelle Episode / <time class="date" datetime={episode.frontmatter.pubDate}>{formatDateWithoutWeekday(episode.frontmatter.pubDate)}</time></span
-							>
+							<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"
+								>Aktuelle Episode / <time class="date" datetime={episode.frontmatter.pubDate}>{formatDateWithoutWeekday(episode.frontmatter.pubDate)}</time>
+							</span>
 							{
 								currentEpisodeTags.map((element) => (
 									<a class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:text-yellow-1000 hover:bg-yellow-200" href={`/tag/${element.url}/`}>
