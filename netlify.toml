@@ -928,6 +928,16 @@ to = "/podcast/episode/73-cache-freundliches-programmieren-cpu-caches-ersetzungs
 status = 301
 force = true
 
+[[redirects]]
+from = "/meetup"
+to = "/meetup/alps"
+status = 302
+
+[[redirects]]
+from = "/alps"
+to = "/meetup/alps"
+status = 301
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
