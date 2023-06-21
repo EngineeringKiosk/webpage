@@ -1,0 +1,128 @@
+---
+import Footer from '../../../../components/Footer.astro';
+import MainHead from '../../../../components/MainHead.astro';
+import Nav from '../../../../components/Nav.astro';
+import Talk from '../../../../components/Talk.astro';
+import Organizer from '../../../../components/Organizer.astro';
+
+let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
+let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/alps/ibk.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="py-20 md:py-28">
+					<div class="container px-4 mx-auto">
+						<div class="flex flex-wrap xl:items-center -mx-4">
+							<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+								<h1>
+									<div>
+										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Innsbruck</span>
+									</div>
+									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Alps<br />Meetup Innsbruck<br />Talks Archive</span>
+								</h1>
+							</div>
+
+							<div class="w-full md:w-1/2 px-4">
+								<div class="relative mx-auto md:mr-0 max-w-max">
+									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+									<img class="relative rounded-7xl h-80" src="/images/alps/ibk.jpg" alt="View on Innsbruck" title="View on Innsbruck" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+			<div class="container px-4 mx-auto">
+				<div class="mb-16 text-center">
+					<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Awesome Community Talks</span>
+					<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Talks on June, 15th 2023</h1>
+				</div>
+
+				<div class="flex flex-wrap justify-center -mx-4">
+					<Talk
+						avatar="/images/alps/speaker/01-ardit-shala.jpg"
+						name="Ardit Shala"
+						title="PamApp: The journey of building and scaling a system with 1M+ users"
+						description="Explaining the journey of building a backend fitness platform from scratch as a distributed system on large scale, also covering a high-level architecture of the whole system. What's the story behind and how I got involved, what where the general requirements, the launch drama and handling traffic while working with one of the biggest fitness influencers."
+						github="arditshala"
+						linkedin="arditshala"
+					/>
+					<Talk
+						avatar="/images/alps/speaker/01-gerold-aschauer.jpg"
+						name="Gerold Aschauer"
+						title="500 employees and no hierarchy: agility and self-organization"
+						description="In this talk, we will explore agile methodologies and their impact on organizations. We will discuss agile structures, Scrum, stakeholder involvement, team dynamics, the 'Flowmaster' concept, working without hierarchies, and challenges in agile environments."
+						github=""
+						twitter=""
+						linkedin=""
+						website=""
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+			<div class="container px-4 mx-auto w-full md:w-1/2">
+				<div class="mb-16 text-center">
+					<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Interested in upcoming meetups?</h3>
+					<p>
+						Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
+						No worries, we won't spam you and you can unsubscribe at any time.
+					</p>
+					<form action="https://tinyletter.com/EngineeringKioskAlps" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/EngineeringKioskAlps', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+						<div class="mt-4">
+							<input type="hidden" value="1" name="embed" />
+							<input class="px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="email" placeholder="Your email address" />
+							<input type="submit" class="py-4 px-5 leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value="Subscribe" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+			<div class="container px-4 mx-auto w-full md:w-1/2">
+				<div class="mb-16 text-center">
+					<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Join the discussion</h3>
+					<p>Join our Engineering Kiosk Alps Discord channel in our Engineering Kiosk Community full of developers and tech enthusiasts.</p>
+					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="/join-discord">
+						Join <img src="/images/brands/discord-blue.svg" class="inline w-5 mx-1" alt="Discord logo" title="Discord logo" /> Discord channel
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+			<div class="container px-4 mx-auto">
+				<div class="mb-16 text-center">
+					<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">The local team in Innsbruck</span>
+					<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Team Engineering Kiosk Alps</h1>
+					<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">The organizers of Engineering Kiosk Alps Innsbruck. <br />Feel free to drop us a message.</p>
+					<a href="mailto:alps@engineeringkiosk.dev" class="text-lg md:text-xl text-yellow-500 font-medium">alps@engineeringkiosk.dev</a>
+				</div>
+
+				<div class="flex flex-wrap justify-center -mx-4">
+					<Organizer avatar="/images/teams/wolfgang-gassler-headshot.png" name="Wolfgang Gassler" subtitle="Organizer" description="" github="woolfg" twitter="schafele" linkedin="wolfganggassler" website="https://wolfgang.gassler.org/" />
+					<Organizer avatar="/images/teams/tim-hannemann-headshot.jpg" name="Tim Hannemann" subtitle="Organizer" description="" github="timhannemann" twitter="timquitesocial" linkedin="timhannemann" website="" />
+					<Organizer avatar="/images/teams/romedius-weiss-headshot.png" name="Romedius Weiss" subtitle="Organizer" description="" github="" twitter="" linkedin="romedius-weiss-20a147258" website="" />
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

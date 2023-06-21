@@ -8,6 +8,10 @@ import Organizer from '../../../components/Organizer.astro';
 let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
 let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const dateString = 'July, 13th 2023';
+const dateAndTime = `${dateString} starting at 18:30`;
+const registrationLink = 'https://pblander.calendarsnack.com/snack/invite/grey/atc4ctnkpvjae86k0n1tlb7qhpntn2f7hivio4g1';
 ---
 
 <html lang="de">
@@ -36,7 +40,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 								</p>
 								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup</h2>
 								<p class="mt-2 text-lg md:text-xl text-coolGray-500 font-medium">
-									Date: <span class="font-bold">June, 15th 2023 starting at 18:30</span>
+									Date: <span class="font-bold">{dateAndTime}</span>
 								</p>
 								<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Location: Office Open Reply, Anichstraße 13, 6020 Innsbruck, Austria</p>
 
@@ -68,30 +72,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				<div class="container px-4 mx-auto">
 					<div class="mb-16 text-center">
 						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Awesome Community Talks</span>
-						<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Talks on June, 15th 2023</h1>
+						<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Talks on {dateString}</h1>
 						<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Join the next meetup and listen to the following talks.</p>
 					</div>
 
-					<div class="flex flex-wrap justify-center -mx-4">
-						<Talk
-							avatar="/images/alps/speaker/01-ardit-shala.jpg"
-							name="Ardit Shala"
-							title="PamApp: The journey of building and scaling a system with 1M+ users"
-							description="Explaining the journey of building a backend fitness platform from scratch as a distributed system on large scale, also covering a high-level architecture of the whole system. What's the story behind and how I got involved, what where the general requirements, the launch drama and handling traffic while working with one of the biggest fitness influencers."
-							github="arditshala"
-							linkedin="arditshala"
-						/>
-						<Talk
-							avatar="/images/alps/speaker/01-gerold-aschauer.jpg"
-							name="Gerold Aschauer"
-							title="Practiced agility and self-organization"
-							description="In this talk, we will explore agile methodologies and their impact on organizations. We will discuss agile structures, Scrum, stakeholder involvement, team dynamics, the 'Flowmaster' concept, working without hierarchies, and challenges in agile environments."
-							github=""
-							twitter=""
-							linkedin=""
-							website=""
-						/>
-					</div>
+					<div class="flex flex-wrap justify-center -mx-4"><span class="text-lg md:text-xl text-yellow-500 font-medium mb-8">Coming soon...</span></div>
+					<div class="text-center mt-8 text-lg md:text-xl text-coolGray-500 font-medium">Find previous talks in the <a href="./archive/" class="text-yellow-500">Engineering Kiosk Alps Talks Achive</a></div>
 				</div>
 			</section>
 
@@ -105,12 +91,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							It is free and you can cancel your registration at any time.<br />
 							We'll also send you an ics-event file, so you can add the event to your calendar.
 							<br />
-							Next meetup: <span class="font-bold">June, 15th 2023 starting at 18:30</span>
+							Next meetup: <span class="font-bold">{dateAndTime}</span>
 						</p>
-						<a
-							class="inline-block py-5 px-7 mt-8 text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
-							href="https://pblander.calendarsnack.com/snack/invite/grey/r2a9rlakohf8f26vv75phgnq6na60qdkmsjr92g1"
-						>
+						<a class="inline-block py-5 px-7 mt-8 text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href={registrationLink}>
 							Reserve your spot
 						</a>
 					</div>
