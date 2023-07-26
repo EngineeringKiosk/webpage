@@ -473,7 +473,7 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
         episode_file = episode.removesuffix(".md")
         new_redirect_shortlink = {
             "from": f"/episodes/{episode_number}",
-            "to": f"/podcast/episode/{episode_file}?pk_campaign=shortlink",
+            "to": f"/podcast/episode/{episode_file}?pkn=shortlink",
             "status": 301,
             "force": True,
         }
