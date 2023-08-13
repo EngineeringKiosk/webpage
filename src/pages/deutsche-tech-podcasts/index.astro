@@ -37,7 +37,7 @@ germanTechPodcasts.sort(orderByName);
 
 			<section class="py-8 md:py-12 lg:pb-12 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-repeat: no-repeat; background-position: center top;">
 				<div class="container px-4 mx-auto">
-					<div class="flex flex-wrap items-center mb-12">
+					<div class="flex flex-wrap items-center mb-8">
 						<div class="w-full md:w-3/4 mb-8 md:mb-0">
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Kuratierte Podcast Liste</span>
 							<h1 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tighter">Deutschsprachige Tech Podcasts</h1>
@@ -59,7 +59,7 @@ germanTechPodcasts.sort(orderByName);
 							</div>
 						</div>
 					</div>
-					<div id="filter" class="invisible flex flex-wrap items-center">
+					<div id="filter" class="invisible flex flex-wrap items-center mb-8">
 						<div class="w-full">
 							<div class="flex justify-start items-center flex-col md:flex-row">
 								<select id="filter-last-episode" class="w-full md:w-auto p-3 text-center rounded-md text-yellow-50 font-medium bg-yellow-500 hover:bg-yellow-600 focus:ring-0 text-sm">
@@ -73,6 +73,21 @@ germanTechPodcasts.sort(orderByName);
 								</p>
 							</div>
 						</div>
+					</div>
+					<div class="flex flex-wrap items-center">
+						<p class="text-lg md:text-xl text-coolGray-500 font-medium">
+							Oder doch nur Podcasts zum Thema
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/apple-podcasts/`}>🍎 Apple</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/female-host-podcasts/`}>👩 Female host</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/softwareentwicklung-podcasts/`}>🧑‍💻 Softwareentwicklung</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/hardware-podcasts/`}>💻 Hardware</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/linux-podcasts/`}>🐧 Linux</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/cloud-podcasts/`}>☁️ Cloud</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/security-podcasts/`}>🔒 Security</a>,
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/open-source-podcasts/`}>📖 Open Source</a>,
+							<a class="inline-block ml-4 mr-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/news-podcasts/`}>📰 News</a> oder
+							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/game-development-podcasts/`}>🎮 Game Development</a>
+						</p>
 					</div>
 				</div>
 			</section>
