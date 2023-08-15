@@ -74,19 +74,34 @@ germanTechPodcasts.sort(orderByName);
 							</div>
 						</div>
 					</div>
+
+					<style>
+						ul.tag-list {
+							@apply list-none;
+						}
+						ul.tag-list li {
+							@apply inline-block;
+							@apply mr-4;
+							@apply text-lg md:text-xl text-coolGray-500 font-medium;
+							@apply leading-10;
+						}
+					</style>
+
 					<div class="flex flex-wrap items-center">
 						<p class="text-lg md:text-xl text-coolGray-500 font-medium">
-							Oder doch nur Podcasts zum Thema
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/apple-podcasts/`}>🍎 Apple</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/female-host-podcasts/`}>👩 Female host</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/softwareentwicklung-podcasts/`}>🧑‍💻 Softwareentwicklung</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/hardware-podcasts/`}>💻 Hardware</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/linux-podcasts/`}>🐧 Linux</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/cloud-podcasts/`}>☁️ Cloud</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/security-podcasts/`}>🔒 Security</a>,
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/open-source-podcasts/`}>📖 Open Source</a>,
-							<a class="inline-block ml-4 mr-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/news-podcasts/`}>📰 News</a> oder
-							<a class="inline-block ml-4 font-bold hover:underline hover:text-yellow-500" href={`/deutsche-tech-podcasts/game-development-podcasts/`}>🎮 Game Development</a>
+							Podcasts nach Thema:
+							<ul class="tag-list">
+								<li><a href={`/deutsche-tech-podcasts/apple-podcasts/`}>🍎 Apple</a></li>
+								<li><a href={`/deutsche-tech-podcasts/female-host-podcasts/`}>👩 Female host</a></li>
+								<li><a href={`/deutsche-tech-podcasts/softwareentwicklung-podcasts/`}>🧑‍💻 Softwareentwicklung</a></li>
+								<li><a href={`/deutsche-tech-podcasts/hardware-podcasts/`}>💻 Hardware</a></li>
+								<li><a href={`/deutsche-tech-podcasts/linux-podcasts/`}>🐧 Linux</a></li>
+								<li><a href={`/deutsche-tech-podcasts/cloud-podcasts/`}>☁️ Cloud</a></li>
+								<li><a href={`/deutsche-tech-podcasts/security-podcasts/`}>🔒 Security</a></li>
+								<li><a href={`/deutsche-tech-podcasts/open-source-podcasts/`}>📖 Open Source</a></li>
+								<li><a href={`/deutsche-tech-podcasts/news-podcasts/`}>📰 News</a></li>
+								<li><a href={`/deutsche-tech-podcasts/game-development-podcasts/`}>🎮 Game Development</a></li>
+							</ul>
 						</p>
 					</div>
 				</div>
