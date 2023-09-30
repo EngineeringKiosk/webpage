@@ -4,6 +4,7 @@ location:
   name: 'Txture'
   address: 'SOHO2, Rooftop, Grabenweg 68, 6020 Innsbruck, Austria'
   url: 'https://www.txture.io/'
+  logo: '/images/alps/location/txture.svg'
 talks:
   - avatar: '/images/alps/speaker/03-alex.jpg'
     name: 'Alex Lanz'
