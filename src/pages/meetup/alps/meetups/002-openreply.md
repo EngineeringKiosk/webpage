@@ -3,6 +3,8 @@ date: '2023-09-14T18:30:00+02:00'
 location:
   name: 'Open Reply'
   address: 'Anichstraße 13, 6020 Innsbruck, Austria'
+  url: 'https://www.reply.com/open-reply/de/'
+  logo: '/images/alps/location/openreply.svg'
 talks:
   - avatar: '/images/alps/speaker/03-kratzer.jpg'
     name: 'Philipp Kratzer'
