@@ -77,6 +77,7 @@ tags:
 - Tech Kultur
 - Open Source
 - Leadership
+- Interview
 title: "#86 Open Source als Herz einer Firma mit Nextcloud Gr\xFCnder Frank Karlitschek"
 youtube: https://youtu.be/K0y0lk8KULI
 

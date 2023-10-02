@@ -76,6 +76,7 @@ tags:
 - Tech Kultur
 - Open Source
 - Kommunikation
+- Interview
 title: '#90 Inner Source: Open Source Best Practices zur besseren Zusammenarbeit zwischen
   Teams mit Sebastian Spier'
 youtube: ''

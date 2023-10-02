@@ -69,6 +69,7 @@ tags:
 - Software Engineering
 - Tech Kultur
 - Cloud
+- Interview
 title: "#89 Die Klimakrise und Green IT: unser Einfluss \xFCber Hardware, Farben,\
   \ Web-Performance und Green-Hosting mit Christian Sch\xE4fer"
 youtube: https://youtu.be/q7qS6AFW7L0

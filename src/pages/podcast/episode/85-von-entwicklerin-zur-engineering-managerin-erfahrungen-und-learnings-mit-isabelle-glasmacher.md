@@ -67,6 +67,7 @@ tags:
 - Karriere
 - Kommunikation
 - Leadership
+- Interview
 title: '#85 Von Entwicklerin zur Engineering Managerin: Erfahrungen und Learnings
   mit Isabelle Glasmacher'
 youtube: https://youtu.be/qIt0QfNzPv8

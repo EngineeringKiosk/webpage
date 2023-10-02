@@ -75,6 +75,7 @@ tags:
 - Tech Kultur
 - Leadership
 - Kommunikation
+- Interview
 title: '#88 Die Personalabteilung: Freund oder Feind? mit Patrick Kuster'
 youtube: https://youtu.be/5cE514oDbbk
 

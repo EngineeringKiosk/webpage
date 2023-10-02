@@ -72,6 +72,7 @@ tags:
 - Backend
 - Frontend
 - Software Engineering
+- Interview
 title: "#84 Die Evolution von JavaScript: Vom Ducktyping zum Monopol im Browser mit\
   \ Peter Kr\xF6ner"
 youtube: https://youtu.be/UcfUJQlkNOQ

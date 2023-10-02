@@ -70,6 +70,7 @@ tags:
 - Tech Kultur
 - Open Source
 - Gehalt
+- Interview
 title: '#76 Mit Open Source 100.000$ verdienen, Sponsorware und Plattform-Risiken
   bei GitHub mit Martin Donath'
 youtube: https://youtu.be/_qIbIw0yZHU

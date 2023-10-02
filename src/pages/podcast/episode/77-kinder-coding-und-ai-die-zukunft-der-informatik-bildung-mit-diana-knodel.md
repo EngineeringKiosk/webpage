@@ -93,6 +93,7 @@ tags:
 - Tech Kultur
 - Software Engineering
 - Knowledge Sharing
+- Interview
 title: '#77 Kinder, Coding und AI: Die Zukunft der Informatik-Bildung mit Diana Knodel'
 youtube: https://youtu.be/3-cm7QXbM8c
 
