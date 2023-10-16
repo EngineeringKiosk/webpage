@@ -3,7 +3,9 @@ import Footer from '../../../../components/Footer.astro';
 import MainHead from '../../../../components/MainHead.astro';
 import MeetupListing from '../../../../components/MeetupListing.astro';
 import Nav from '../../../../components/Nav.astro';
-import Organizer from '../../../../components/Organizer.astro';
+import Discord from '../../../../components/meetup-alps/Discord.astro';
+import Newsletter from '../../../../components/meetup-alps/Newsletter.astro';
+import Team from '../../../../components/meetup-alps/Team.astro';
 
 let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
 let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
@@ -47,54 +49,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <MeetupListing numberOfItems="0" />
 
-		<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
-			<div class="container px-4 mx-auto w-full md:w-1/2">
-				<div class="mb-16 text-center">
-					<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Interested in upcoming meetups?</h3>
-					<p>
-						Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
-						No worries, we won't spam you and you can unsubscribe at any time.
-					</p>
-					<form action="https://tinyletter.com/EngineeringKioskAlps" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/EngineeringKioskAlps', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-						<div class="mt-4">
-							<input type="hidden" value="1" name="embed" />
-							<input class="px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="email" placeholder="Your email address" />
-							<input type="submit" class="py-4 px-5 leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value="Subscribe" />
-						</div>
-					</form>
-				</div>
-			</div>
-		</section>
-
-		<section class="py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
-			<div class="container px-4 mx-auto w-full md:w-1/2">
-				<div class="mb-16 text-center">
-					<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Join the discussion</h3>
-					<p>Join our Engineering Kiosk Alps Discord channel in our Engineering Kiosk Community full of developers and tech enthusiasts.</p>
-					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="/join-discord">
-						Join <img src="/images/brands/discord-blue.svg" class="inline w-5 mx-1" alt="Discord logo" title="Discord logo" /> Discord channel
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
-			<div class="container px-4 mx-auto">
-				<div class="mb-16 text-center">
-					<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">The local team in Innsbruck</span>
-					<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Team Engineering Kiosk Alps</h1>
-					<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">The organizers of Engineering Kiosk Alps Innsbruck. <br />Feel free to drop us a message.</p>
-					<a href="mailto:alps@engineeringkiosk.dev" class="text-lg md:text-xl text-yellow-500 font-medium">alps@engineeringkiosk.dev</a>
-				</div>
-
-				<div class="flex flex-wrap justify-center -mx-4">
-					<Organizer avatar="/images/teams/wolfgang-gassler-headshot.jpg" name="Wolfgang Gassler" subtitle="Organizer" description="" github="woolfg" twitter="schafele" linkedin="wolfganggassler" website="https://wolfgang.gassler.org/" />
-					<Organizer avatar="/images/teams/tim-hannemann-headshot.jpg" name="Tim Hannemann" subtitle="Organizer" description="" github="timhannemann" twitter="timquitesocial" linkedin="timhannemann" website="" />
-					<Organizer avatar="/images/teams/romedius-weiss-headshot.jpg" name="Romedius Weiss" subtitle="Organizer" description="" github="" twitter="" linkedin="romedius-weiss-20a147258" website="" />
-				</div>
-			</div>
-		</section>
-
+		<Newsletter />
+		<Discord />
+		<Team	/>
 		<Footer />
+
 	</body>
 </html>

@@ -1,0 +1,22 @@
+---
+
+import Organizer from '../Organizer.astro'
+
+---
+
+<section class="py-4 md:py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+	<div class="container px-4 mx-auto">
+		<div class="mb-16 text-center">
+			<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">The local team in Innsbruck</span>
+			<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Team Engineering Kiosk Alps</h1>
+			<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">The organizers of Engineering Kiosk Alps Innsbruck. <br />Feel free to drop us a message.</p>
+			<a href="mailto:alps@engineeringkiosk.dev" class="text-lg md:text-xl text-yellow-500 font-medium">alps@engineeringkiosk.dev</a>
+		</div>
+
+		<div class="flex flex-wrap justify-center -mx-4">
+			<Organizer avatar="/images/teams/wolfgang-gassler-headshot.jpg" name="Wolfgang Gassler" subtitle="Organizer" description="" github="woolfg" twitter="schafele" linkedin="wolfganggassler" website="https://wolfgang.gassler.org/" />
+			<Organizer avatar="/images/teams/tim-hannemann-headshot.jpg" name="Tim Hannemann" subtitle="Organizer" description="" github="timhannemann" twitter="timquitesocial" linkedin="timhannemann" website="" />
+			<Organizer avatar="/images/teams/romedius-weiss-headshot.jpg" name="Romedius Weiss" subtitle="Organizer" description="" github="" twitter="" linkedin="romedius-weiss-20a147258" website="" />
+		</div>
+	</div>
+</section>
