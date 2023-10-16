@@ -11,17 +11,13 @@ const logoURL = logo ? `/meetup/alps/images/location/${logo}` : null;
 ---
 
 {
-	url && (
+	url ? (
 		<a href={url} target="_blank">
-			{logoURL && <img src={logoURL} class="inline h-full" alt={name} title={name} />}
+			{logoURL ? (<img src={logoURL} class="inline h-full" alt={name} title={name} />) : (<span class="underline">{name}</span>)}
 		</a>
-	)
-}
-{
-	!url && (
+	) : (
 		<span>
-			{logoURL && <img src={logoURL} alt={name} title={name} />}
-			{name}
+			{logoURL ? (<img src={logoURL} class="inline h-full" alt={name} title={name} />) : name}
 		</span>
 	)
 }

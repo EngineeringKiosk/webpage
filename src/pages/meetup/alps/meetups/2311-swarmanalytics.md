@@ -3,7 +3,7 @@ date: '2023-11-12T18:30:00+01:00'
 location:
   name: 'Swarm Analytics'
   address: 'Helga-Krismer-Platz 1, 6020 Innsbruck, Austria'
-  #url: 'https://swarm-analytics.com'
+  url: 'https://swarm-analytics.com'
   #logo: 'swarm-analytics.svg'
 talks:
   - avatar: '2311-mike.jpg'
