@@ -14,6 +14,7 @@ talks:
     twitter: 'alex__lanz'
     linkedin: 'alex-lanz'
     website: 'https://aboutbits.it'
+    slides: '2310-alex-lanz.pdf'
   - avatar: '2310-richard.jpg'
     name: 'Richard Weinberger'
     bio: 'Richard is co-founder of sigma star gmbh where he offers consulting services around Linux and IT security. Upstream he maintains various subsystems of the Linux kernel such as UserModeLinux and UBIFS. Beside of low level and security aspects of computers he enjoys growing lithops.'
