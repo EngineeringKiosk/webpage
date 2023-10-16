@@ -4,16 +4,16 @@ location:
   name: 'Swarm Analytics'
   address: 'Helga-Krismer-Platz 1, 6020 Innsbruck, Austria'
   #url: 'https://swarm-analytics.com'
-  #logo: '/images/alps/location/swarm-analytics.svg'
+  #logo: 'swarm-analytics.svg'
 talks:
-  - avatar: '/images/alps/speaker/2311-mike.jpg'
+  - avatar: '2311-mike.jpg'
     name: 'Mike Brunner'
     title: 'Preparing for the European Cyber Resilience Act – Get your House in Order Before the New Legislation Hits'
     description: "The final proposal of the European Cyber Resilience Act (CRA-E) is publicly available since September 2022 and so are the results of the EU's impact assessment of the planned regulation. Considering the potentially huge implications, especially for enterprises with less mature secure development practices, achieving compliance with the CRA-E will become a challenge once the legislation will be finally enacted. During this talk I will present an overview of the regulation's essential security requirements and how these relate to standards and best practices in secure development of software-intensive systems. I'd like to use this event to discuss your view on this upcoming regulation and will showcase interesting results from the CERTAINITY Cyber Resilience Act Preparedness Survey we conducted together with the university of Innsbruck."
     bio: "As partner and founding member of CERTAINITY I’m leading our security engineering practice. I’ve been working as a security architect, business consultant and software engineer for over two decades. Currently I focus on secure software and product development, the implementation of security architectures and the establishment of associated processes - especially in areas of critical infrastructure."
     linkedin: 'michael-brunner-92690487'
     website: 'https://certainity.com'
-  - avatar: '/images/alps/speaker/2311-lukas.jpg'
+  - avatar: '2311-lukas.jpg'
     name: 'Lukas Ruetz'
     title: 'Tales from updating a software appliance over 15 years'
     description: "Updating software sounds easy, but it's not. It's ease in the beginning but gets harder over time because you always have to migrate the old system and configuration to the new system. The bigger your tech-stack gets the more components you'll need to update. A software appliance needs to update countless dependencies, migrate state and keep everything consistent. This talk starts with an overview of what it really means to update software and is also a collection of stories from 15 years of updating a software appliance."

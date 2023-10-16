@@ -6,19 +6,21 @@ export interface Props {
 }
 
 const { name, logo, url } = Astro.props;
+const logoURL = logo ? `/meetup/alps/images/location/${logo}` : null;
+
 ---
 
 {
 	url && (
 		<a href={url} target="_blank">
-			{logo && <img src={logo} class="inline h-full" alt={name} title={name} />}
+			{logoURL && <img src={logoURL} class="inline h-full" alt={name} title={name} />}
 		</a>
 	)
 }
 {
 	!url && (
 		<span>
-			{logo && <img src={logo} alt={name} title={name} />}
+			{logoURL && <img src={logoURL} alt={name} title={name} />}
 			{name}
 		</span>
 	)
