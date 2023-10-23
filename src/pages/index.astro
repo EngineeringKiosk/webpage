@@ -7,6 +7,7 @@ import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday } from '../scripts/date.js';
+import Review from '../components/Review.astro';
 
 import podcastInfo from '../data/podcast-info.json';
 
@@ -28,6 +29,43 @@ let episode = episodesToShow[0];
 let currentEpisodeTags = episode.frontmatter.tags.map((element) => URLify(element));
 // Cut description text
 let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
+
+const review_data = [
+	{
+		"name": "Yaniv Preiss",
+		"position": "Head Of Engineering, NewStore",
+		"avatar": "yaniv-preiss.jpeg",
+		"review": "Der Engineering Kiosk Podcast ist großartig - verschiedene interessante Themen, einfach erklärt dennoch von hoher Qualität. Diese zeichnet sich u.a. aus durch tiefe Unterhaltungen, Beispiele und Erklärungen."
+	},
+	{
+		name: "Luise Haack",
+		position: "Referatsleiterin, Uni Passau",
+		avatar: "luise-haack.jpeg",
+		review: "Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken."
+	},
+	{
+		name: "Sebastian Hammerl",
+		position: "Leiter Software-Entwicklung, Getslash",
+		avatar: "sebastian-hammerl.jpg",
+		review: "Jede Woche neue Ansichten und Eindrücke in die unterschiedlichsten Engineering- und Management-Themen. In den kurzweiligen Folgen regen mich Wolfgang und Andy zum Nachdenken an und holen mich aus meiner 'Blase' heraus."
+	},
+	{
+		name: "Saskia Keil",
+		position: "Techlead, trivago",
+		avatar: "saskia-keil.png",
+		review: "Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead."
+	},
+	{
+		name: "Pascal Landau",
+		position: "Technical Director, ABOUT YOU",
+		avatar: "pascal-landau.jpeg",
+		review: "Ich bin Hörer seit Episode #1 und von der Breite sowie Tiefe der Themen positiv überrascht. Nicht nur die Theorie wird diskutiert, sondern man merkt deutlich den Einfluss praktischer Erfahrungen." 
+	}
+]
+
+// shuffle reviews to show different inital ones when page is re-rendered
+const reviews = review_data.sort(() => Math.random() - 0.5);
+
 ---
 
 <html lang="de">
@@ -162,16 +200,53 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 				</div>
 			</section>
 
-			<style>
-				.review-box {
-					@apply w-full px-4 mb-8 min-w-full;
+
+			<script>
+				// JavaScript code for rotating reviews and handling navigation points
+				let currentIndex = 0;
+				const reviews = document.querySelectorAll(".review");
+				const points = document.querySelectorAll(".point");
+			
+				function showReviews(startIndex) {
+					reviews.forEach((review, index) => {
+						review.style.display = index >= startIndex && index < startIndex + 2 ? "block" : "none";
+					});
+					points.forEach((point, i) => {
+						point.classList.toggle("active", i === Math.floor(startIndex / 2));
+					});
 				}
-				@media screen(sm) {
-					.review-box {
-						min-width: 380px;
-					}
+			
+				function updateReviews(index) {
+					currentIndex = index * 2;
+					showReviews(currentIndex);
+				}
+			
+				// Initialize the first two reviews and the first point as active
+				showReviews(currentIndex);
+			
+				// Add click event listeners to navigation points
+				points.forEach((point, index) => {
+					point.addEventListener("click", () => {
+						updateReviews(index);
+					});
+				});
+			
+				// Automatically rotate reviews every few seconds (e.g., 5 seconds in this case)
+				setInterval(() => {
+					currentIndex = (currentIndex + 2) % reviews.length;
+					showReviews(currentIndex);
+				}, 5000); // Rotate every 5 seconds
+			</script>
+			
+			
+			
+
+			<style>
+				.point {
+					@apply mx-2;
 				}
 			</style>
+
 
 			<section class="py-20 md:py-28 bg-white" style="background-image: url('/images/elements/pattern-light1.svg'); background-position: center;">
 				<div class="container px-4 mx-auto">
@@ -179,74 +254,22 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Meinungen</span>
 						<h2 class="mb-4 text-4xl md:text-5xl leading-tight font-semibold tracking-tighter">Was andere über uns sagen</h2>
 					</div>
-					<div class="flex overflow-scroll -mx-4">
-						<div class="review-box">
-							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
-								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-									Der Engineering Kiosk Podcast ist großartig - verschiedene interessante Themen, einfach erklärt dennoch von hoher Qualität. Diese zeichnet sich u.a. aus durch tiefe Unterhaltungen, Beispiele und Erklärungen.
-								</h3>
-								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/yaniv-preiss.jpeg" alt="Yaniv Preiss" title="Yaniv Preiss" />
-									<div>
-										<h4 class="mb-1 text-lg font-semibold">Yaniv Preiss</h4>
-										<p class="text-lg text-coolGray-400">Head Of Engineering, NewStore</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
-								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-									Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.
-								</h3>
-								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/luise-haack.jpeg" alt="Luise Haack" title="Luise Haack" />
-									<div>
-										<h4 class="mb-1 text-lg font-semibold">Luise Haack</h4>
-										<p class="text-lg text-coolGray-400">Referatsleiterin, Uni Passau</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
-								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.</h3>
-								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/saskia-keil.png" alt="Saskia Keil" title="Saskia Keil" />
-									<div>
-										<h4 class="mb-1 text-lg font-semibold">Saskia Keil</h4>
-										<p class="text-lg text-coolGray-400">Techlead, trivago</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
-								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
-									Jede Woche neue Ansichten und Eindrücke in die unterschiedlichsten Engineering- und Management-Themen. In den kurzweiligen Folgen regen mich Wolfgang und Andy zum Nachdenken an und holen mich aus meiner "Blase" heraus.
-								</h3>
-								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/sebastian-hammerl.jpg" alt="Sebastian Hammerl" title="Sebastian Hammerl" />
-									<div>
-										<h4 class="mb-1 text-lg font-semibold">Sebastian Hammerl</h4>
-										<p class="text-lg text-coolGray-400">Leiter Software-Entwicklung, Getslash</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="w-full lg:w-1/3 px-4 mb-8 review-box">
-							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
-								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">Ich bin Hörer seit Episode #1 und von der Breite sowie Tiefe der Themen positiv überrascht. Nicht nur die Theorie wird diskutiert, sondern man merkt deutlich den Einfluss praktischer Erfahrungen.</h3>
-								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/pascal-landau.jpeg" alt="Pascal Landau" title="Pascal Landau" />
-									<div>
-										<h4 class="mb-1 text-lg font-semibold">Pascal Landau</h4>
-										<p class="text-lg text-coolGray-400">Technical Director, ABOUT YOU</p>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="flex -mx-4 flex-row flex-wrap">
+						{reviews.map((review, index) => (
+							<Review
+								name={review.name}
+								position={review.position}
+								avatar={review.avatar}
+								review={review.review}
+								index={index}
+							/>
+						))}
 					</div>
+				</div>
+				<div class="flex justify-center mt-8">
+					{reviews.map((review, index) => (
+						<div class="point">⬤</div>
+					))}					
 				</div>
 			</section>
 

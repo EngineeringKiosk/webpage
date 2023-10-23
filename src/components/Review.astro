@@ -1,0 +1,27 @@
+---
+
+export interface Props {
+	review: string;
+	name: string;
+	position: string;
+	avatar: string;
+	index: number;
+}
+
+const { review, name, position, avatar, index } = Astro.props;
+---
+
+<div class="w-full px-4 mb-8 md:w-1/2 review" id={ `review-${index}` }>
+	<div class="flex flex-col h-full bg-white shadow-md rounded-md">
+		<h3 class="mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">
+			{ review }
+		</h3>
+		<div class="flex items-center p-8 pt-0">
+			<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src=`/images/testimonials/${avatar}` alt={ name } title={ name } />
+			<div>
+				<h4 class="mb-1 text-lg font-semibold">{ name }</h4>
+				<p class="text-lg text-coolGray-400">{ position }</p>
+			</div>
+		</div>
+	</div>
+</div>
