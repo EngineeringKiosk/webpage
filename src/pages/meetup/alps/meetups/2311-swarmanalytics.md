@@ -22,4 +22,7 @@ talks:
     website: 'https://www.iacbox.com'
 registrationLink: 'https://pblander.calendarsnack.com/snack/invite/grey/becb51vrcrfg2dm8p22ijqe8l54ftjbbteg36381'
 notes: ''
+nextTalks:
+  - '2023-12-14T18:30:00+01:00'
+  - '2024-01-18T18:30:00+01:00'
 ---

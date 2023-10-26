@@ -119,6 +119,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				</div>
 			</section>
 
+			<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto w-full md:w-1/2">
+					<div class="mb-16 text-center">
+						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Save the dates</h3>
+						<div class="leading-relaxed">
+							Our team tries to plan a few months ahead, here are the next dates that we consider. But be aware - those might still be subject to change.
+						</div>
+						<div class="leading-relaxed">
+							<br/>
+								{nextMeetup.nextTalks.map((date) => (
+									<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/> 
+								))}								
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<Newsletter />
 
 			<Discord />
