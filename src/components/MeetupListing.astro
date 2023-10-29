@@ -13,6 +13,12 @@ const { numberOfItems } = Astro.props;
 
 // Build the list of Meetups
 let allMeetups = await Astro.glob('../pages/meetup/alps/meetups/*.md');
+let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date());
+upcomingMeetups.sort((a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf());
+
+let passedMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) < new Date());
+passedMeetups.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+
 allMeetups.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 
 // Default wise list all items,
@@ -21,11 +27,11 @@ let meetupsToShow, archive, headline;
 if (numberOfItems > 0) {
 	headline = 'Awesome Community Talks';
 	archive = false;
-	meetupsToShow = allMeetups.slice(0, numberOfItems);
+	meetupsToShow = upcomingMeetups.slice(0, numberOfItems);
 } else {
 	headline = 'Meetup Archive';
 	archive = true;
-	meetupsToShow = allMeetups.slice(1);
+	meetupsToShow = passedMeetups;
 }
 ---
 

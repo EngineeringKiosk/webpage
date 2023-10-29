@@ -10,10 +10,11 @@ import Team from '../../../components/meetup-alps/Team.astro';
 
 import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
 
-// Current Meetup
-let allMeetups = await Astro.glob('./meetups/*.md');
-allMeetups.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
-const { frontmatter: nextMeetup } = allMeetups[0];
+// Current Meetup 
+let allMeetups = await Astro.glob('./meetups/*.md')
+let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date());
+upcomingMeetups.sort((a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf());
+const { frontmatter: nextMeetup } = upcomingMeetups[0];
 const dateString = formatDateWithoutWeekday(nextMeetup.date, 'en-US');
 const timeString = formatTime(nextMeetup.date);
 const dateAndTime = `${dateString} - open doors at ${timeString} (talks start ~15min later)`;
