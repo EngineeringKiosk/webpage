@@ -7,7 +7,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PodcastEpisodeTranscript from '../components/PodcastEpisodeTranscript.astro';
 import { URLify } from '../scripts/urlify.js';
-import { formatDate } from '../scripts/date.js';
+import { formatDate, humanTimestampToSecondsTo } from '../scripts/date.js';
 
 import podcastInfo from '../data/podcast-info.json';
 import '../styles/podcast_episode.scss';
@@ -86,9 +86,11 @@ let tags = content.tags.map((element) => URLify(element));
 const html = (await Astro.slots.render('default'))
 	//remove all <p><br></p>
 	.replace(/<p><br><\/p>/g, '')
-	// add class to p tag of format "<p>(01:18:00)"
-	.replace(/<p>(\(\d\d:\d\d:\d\d\))/g, '<p class="timestamp">$1')
-		// remove everything between <p>Feedback and 136776</p>
+	// add class + data attribute to p tag of format "<p>(01:18:00)"
+	.replace(/<p>(\(\d\d:\d\d:\d\d\))/g, function (match, capture) {
+		return '<p class="timestamp" data-chapter-start="' + humanTimestampToSecondsTo(capture) + '">' + capture;
+	})
+	// remove everything between <p>Feedback and 136776</p>
 	.replace(/<p>Feedback[\s\S]*136776<\/p>/g, '')
 ---
 
@@ -216,6 +218,16 @@ const html = (await Astro.slots.render('default'))
 													item.classList.add('cursor-pointer');
 													item.addEventListener('click', (e) => {
 														player.setCurrentTime(item.dataset.transStart);
+														player.play()
+													});
+												}
+
+												// Click events for the chapters in the shownotes
+												const chapterElements = document.querySelectorAll('[data-chapter-start]');
+												for (let item of chapterElements) {
+													item.classList.add('cursor-pointer');
+													item.addEventListener('click', (e) => {
+														player.setCurrentTime(item.dataset.chapterStart);
 														player.play()
 													});
 												}

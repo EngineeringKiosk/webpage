@@ -56,3 +56,20 @@ export function millisecondsToHumanTimestamp(ms) {
 
 	return String(hours).padStart(2, '0') + ":" + String(minutes).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
 }
+
+/**
+ * Transforms a a human readable timestamp in the format hours:minutes:seconds
+ * into number of seconds.
+ *
+ * @param string ts
+ * @returns int
+ */
+export function humanTimestampToSecondsTo(ts) {
+	const humanTimestamp = ts.replaceAll(/[)(]/g, "");
+	const timestampParts = humanTimestamp.split(":");
+	const hourSeconds = parseInt(timestampParts[0]) * 60 * 60;
+	const minuteSeconds = parseInt(timestampParts[1]) * 60;
+	const seconds = parseInt(timestampParts[2]);
+
+	return hourSeconds + minuteSeconds + seconds;
+}
