@@ -120,13 +120,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 								formMessage.classList.remove('hidden');
 								formMessage.innerHTML = `Registering ${email}...`;
 								const formData = new FormData(form);
+								// use simple urlencoded form data instead of multipart
 								fetch(form.action, {
 									method: 'POST',
-									body: formData,
+									headers: {
+										'Content-Type': 'application/x-www-form-urlencoded',
+									},
+									body: new URLSearchParams(formData).toString(),
 								})
 								.then((response) => {
 									if (response.ok) {
-										formMessage.innerHTML = `Thank you for registering ${email}! You will receive an ics invite shortly.`;
+										formMessage.innerHTML = `${email} registered successfully!`;
 									} else {
 										formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
 									}
