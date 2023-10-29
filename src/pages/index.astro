@@ -1,14 +1,20 @@
 ---
+// Compontents
+import { Image } from 'astro:assets';
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import HostPreview from '../components/HostPreview.astro';
 import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
+
+// Libraries
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday } from '../scripts/date.js';
 
+// Data and assets
 import podcastInfo from '../data/podcast-info.json';
+import ImgAndyWolfgangLounge from '../assets/headers/andy-grunwald-wolfgang-gassler-lounge.jpg';
 
 let title = 'Engineering Kiosk - Der Software-Engineering-Podcast';
 let description = 'Der deutschsprachige Software-Engineering-Podcast mit Wolfgang Gassler und Andy Grunwald rund um die Themen Engineering-Kultur, Open Source und Technologie.';
@@ -68,7 +74,7 @@ let currentEpisodeDescription = cutText(episode.frontmatter.description, 170);
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<img class="relative rounded-7xl" src="/images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg" alt="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" title="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" />
+									<Image class="relative rounded-7xl" src={ImgAndyWolfgangLounge} alt="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" title="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" />
 								</div>
 							</div>
 						</div>
