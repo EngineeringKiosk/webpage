@@ -38,6 +38,12 @@ Used to style a single podcast episode.
 	}
 
 	p.timestamp {
-		@apply mb-0;
+		@apply mb-0 hover:text-yellow-600;
+		&:hover:after {
+			/* show svg left side of the div */
+			content: '';
+			@apply hidden md:inline-block w-6 h-6 bg-no-repeat bg-contain bg-center ml-2 -mb-1;
+			background-image: url(/images/elements/play-button.svg);			
+		}
 	}
 }
