@@ -144,6 +144,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						<form action="https://rsvp.engineeringkiosk.dev/register" method="post" onsubmit="return submitRegisterForm(this);">
 							<div class="mt-4">
 								<p class="hidden text-lg mt-8" id="formMessage"></p>
+								<input type="hidden" name="eventId" value={nextMeetup.eventId} />
 								<input class="m-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="email" placeholder="Your email address" />
 								<input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value=`Register for ${dateString}` />
 							</div>

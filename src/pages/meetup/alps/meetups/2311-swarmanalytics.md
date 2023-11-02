@@ -20,6 +20,5 @@ talks:
     bio: "Right after graduation Lukas co-founded a company that developed a software appliance for a TV playout system (digital signage) and later build two outdoor platforms which have become quite popular for several years. Ten years later Lukas joined Asteas Technologies as a software engineer because he wanted to work in a bigger team. In 2018, Lukas got the chance to lead the development team of the captive portal called IACBOX, and finally was promoted to the managing director in 2023. Lukas' tech stack usually has Linux under the hood and (too) many programming environments on top. In the past Lukas used a lot of Java/Groovy but later on more PHP, C and Perl which is now replaced with go."
     linkedin: 'lukas-ruetz-58070b'
     website: 'https://www.iacbox.com'
-registrationLink: 'https://pblander.calendarsnack.com/snack/invite/grey/becb51vrcrfg2dm8p22ijqe8l54ftjbbteg36381'
-notes: ''
+eventId: '5fphs24jn7sml0slqmmgs0dpfv'
 ---

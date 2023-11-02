@@ -18,5 +18,4 @@ talks:
     name: 'Gerold Aschauer'
     title: '500 employees and no hierarchy: agility and self-organization'
     description: "In this talk, we will explore agile methodologies and their impact on organizations. We will discuss agile structures, Scrum, stakeholder involvement, team dynamics, the 'Flowmaster' concept, working without hierarchies, and challenges in agile environments."
-notes: ''
 ---
