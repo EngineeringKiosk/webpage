@@ -29,7 +29,7 @@ let dates = upcomingMeetups.map((meetup) => meetup.frontmatter.date);
 	</div>
 	<div class="container px-4 mx-auto w-full md:w-1/2">
 		<div class="mb-16 text-center">
-			<h4 class="mb-4 text-xl md:text-xl leading-tight text-coolGray-900 font-bold tracking-tighter">Upcoming planned meetups:</h4>
+			<h4 class="mb-4 text-xl md:text-xl leading-tight text-coolGray-900 font-bold tracking-tighter">Upcoming tentative meetups:</h4>
 			<p>
 				{dates.slice(1).map((date) => 
 					<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/> 
