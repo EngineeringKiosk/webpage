@@ -13,7 +13,7 @@ const { numberOfItems } = Astro.props;
 
 // Build the list of Meetups
 let allMeetups = await Astro.glob('../pages/meetup/alps/meetups/*.md');
-let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date());
+let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date(new Date().setHours(23, 59, 59, 999)));
 upcomingMeetups.sort((a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf());
 
 let passedMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) < new Date());
