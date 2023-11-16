@@ -3,7 +3,7 @@ import { formatDateWithoutWeekday } from '../../scripts/date.js';
 
 // Build the list of Meetups
 let allMeetups = await Astro.glob('../../pages/meetup/alps/meetups/*.md');
-let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date());
+let upcomingMeetups = allMeetups.filter((meetup) => new Date(meetup.frontmatter.date) > new Date(new Date().setHours(23, 59, 59, 999)));
 upcomingMeetups.sort((a, b) => new Date(a.frontmatter.date).valueOf() - new Date(b.frontmatter.date).valueOf());
 
 let dates = upcomingMeetups.map((meetup) => meetup.frontmatter.date);
@@ -31,9 +31,9 @@ let dates = upcomingMeetups.map((meetup) => meetup.frontmatter.date);
 		<div class="mb-16 text-center">
 			<h4 class="mb-4 text-xl md:text-xl leading-tight text-coolGray-900 font-bold tracking-tighter">Upcoming tentative meetups:</h4>
 			<p>
-				{dates.slice(1).map((date) => 
-					<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/> 
-				)}	
+				{dates.slice(1).map((date) =>
+					<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/>
+				)}
 			<br/>
 				Please register to the Newsletter to get notified when the talk dates get fixed, as those are preliminary.
 			</p>
