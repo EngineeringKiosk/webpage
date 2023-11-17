@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 export interface Props {
 	podcast: any;
 }
@@ -7,7 +9,15 @@ import { URLify } from '../scripts/urlify.js';
 import { formatDate, formatUnixTimestampToDate } from '../scripts/date.js';
 
 const { podcast } = Astro.props;
-const podcast_image = podcast.image.replace(/^.*[\\\/]/, '');
+const podcastImage = podcast.image.replace(/^.*[\\\/]/, '');
+
+// The below dynamic import cannot be analyzed by Vite.
+// See https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations for supported dynamic import formats.
+// If this is intended to be left as-is, you can use the /* @vite-ignore */ comment inside the import() call to suppress this warning.
+//
+// We need to ignore this, because we don't have a file extension hardcoded,
+// but get this dynamically.
+const techPodcastImage = (await import(/* @vite-ignore */`../images/german-tech-podcasts/${podcastImage}`)).default
 
 let tags = [];
 if (podcast.tags) {
@@ -153,7 +163,7 @@ const nameId = URLify(podcast.name);
 			<div class="w-full md:w-4/12 px-4">
 				<div class="relative mx-auto md:mr-0 max-w-max">
 					<a href={podcast.website} title={`Website von ${podcast.name}`}>
-						<img class="rounded-3xl" src={`/images/german-tech-podcasts/${podcast_image}`} alt={`Podcast ${podcast.name}`} title={`Podcast ${podcast.name}`} />
+						<Image class="rounded-3xl" src={techPodcastImage} alt={`Podcast ${podcast.name}`} title={`Podcast ${podcast.name}`} />
 					</a>
 				</div>
 			</div>
