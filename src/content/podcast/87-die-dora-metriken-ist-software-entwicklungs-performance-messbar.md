@@ -54,7 +54,7 @@ description: "DORA Metriken: Die Performance-Messung deines Software Development
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MjAzNzFmZmMtNDE3YS00NTJmLTlmMjAtOGQzM2QyMTZjOGMw?sa=X&ved=2ahUKEwj-pOy13pKBAxUxnWoFHZkACc8QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/87-die-dora-metriken-ist-software-entwicklungs-performance-messbar.jpg
+image: ./87-die-dora-metriken-ist-software-entwicklungs-performance-messbar.jpg
 length_second: 3282
 pubDate: 2023-09-05 04:00:00+00:00
 rtlplus: ''

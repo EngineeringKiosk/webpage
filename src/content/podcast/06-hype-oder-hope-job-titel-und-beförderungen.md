@@ -43,7 +43,7 @@ description: "Sind Machine Learning und Artificial Intelligence nur Hypes oder s
   \ hat."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZWJkNDBlZDgtNWE5OC00OTIxLWE2YjItMWJmNmE2ODE4YjUx?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: "links::Links||erwahnte-personen::Erw\xE4hnte Personen||sprungmarken::Sprungmarken||hosts::Hosts"
-image: "/images/podcast/episode/06-hype-oder-hope-job-titel-und-bef\xF6rderungen.jpg"
+image: "./06-hype-oder-hope-job-titel-und-bef\xF6rderungen.jpg"
 length_second: 3133
 pubDate: 2022-02-15 05:00:00+00:00
 rtlplus: ''

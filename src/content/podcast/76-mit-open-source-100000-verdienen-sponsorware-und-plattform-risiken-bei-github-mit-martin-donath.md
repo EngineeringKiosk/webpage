@@ -59,7 +59,7 @@ description: "Kann man von einem Open-Source-Projekt seinen Lebensunterhalt verd
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MThmNDQzNGUtNzM1My00MDgzLTgzYTctODk2MDdlMTJjMjY2?sa=X&ved=2ahUKEwjm85OcyuL_AhUOm44IHWV9CrYQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/76-mit-open-source-100000-verdienen-sponsorware-und-plattform-risiken-bei-github-mit-martin-donath.jpg
+image: ./76-mit-open-source-100000-verdienen-sponsorware-und-plattform-risiken-bei-github-mit-martin-donath.jpg
 length_second: 4694
 pubDate: 2023-06-20 04:00:00+00:00
 rtlplus: ''

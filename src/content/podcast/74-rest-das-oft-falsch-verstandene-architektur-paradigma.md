@@ -49,7 +49,7 @@ description: "Das REST-API Architektur-Paradigma: Oft verwendet und oft nicht ko
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/Mjg5OTU5MzMtODY2Yi00ZjkyLWI4YzktNjNjNTM1Nzk0MWUy?sa=X&ved=2ahUKEwi06-DXh67_AhWtnWoFHcsIAkwQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/74-rest-das-oft-falsch-verstandene-architektur-paradigma.jpg
+image: ./74-rest-das-oft-falsch-verstandene-architektur-paradigma.jpg
 length_second: 3775
 pubDate: 2023-06-06 04:00:00+00:00
 rtlplus: ''

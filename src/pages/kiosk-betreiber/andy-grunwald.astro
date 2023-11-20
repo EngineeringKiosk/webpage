@@ -1,7 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+
+import imageAndyGrunwald from "../../images/teams/andy-grunwald-profile.jpg";
 
 let title = 'Andy Grunwald, Podcast Host - Engineering Kiosk';
 let description = 'Engineering Manager im Bereich Site Reliability Engineering und Software Engineer mit einem Fokus auf Backend-Systeme, Infrastruktur und Engineering Kultur aus Duisburg.';
@@ -51,7 +55,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="relative mx-auto md:mr-0 max-w-max">
 								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-								<img class="rounded-3xl" src="/images/teams/andy-grunwald-profile.jpg" alt="Andy Grunwald" title="Andy Grunwald" />
+								<Image class="rounded-3xl" src={imageAndyGrunwald} alt="Andy Grunwald" title="Andy Grunwald" />
 							</div>
 						</div>
 					</div>

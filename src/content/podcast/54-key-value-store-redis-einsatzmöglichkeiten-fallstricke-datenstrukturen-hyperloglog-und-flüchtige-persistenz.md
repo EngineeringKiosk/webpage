@@ -64,7 +64,7 @@ description: "Redis - Der open source, in-memory data structure server Viele Sof
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGM2NmYzYWMtYzE0NS00ZGYxLThhNzUtY2Q2ZjIzNjgwMjI5?sa=X&ved=2ahUKEwjwvLCQi878AhUaunIEHcFQDCAQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/54-key-value-store-redis-einsatzm\xF6glichkeiten-fallstricke-datenstrukturen-hyperloglog-und-fl\xFC\
+image: "./54-key-value-store-redis-einsatzm\xF6glichkeiten-fallstricke-datenstrukturen-hyperloglog-und-fl\xFC\
   chtige-persistenz.jpg"
 length_second: 3727
 pubDate: 2023-01-17 05:00:00+00:00

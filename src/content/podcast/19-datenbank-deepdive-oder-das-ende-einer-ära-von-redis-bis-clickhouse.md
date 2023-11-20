@@ -75,7 +75,7 @@ description: "Der zweite Datenbank-Deepdive im Engineering Kiosk. Indirekt kn\xF
   \ haben und warum MySQL ein besseres Adressbuch mit SQL Interface ist."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGIzZWIwNTYtMjVlMy00MWUzLTk0ZjMtZWZhNDAwOTdiNmZi?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: "/images/podcast/episode/19-datenbank-deepdive-oder-das-ende-einer-\xE4ra-von-redis-bis-clickhouse.jpg"
+image: "./19-datenbank-deepdive-oder-das-ende-einer-\xE4ra-von-redis-bis-clickhouse.jpg"
 length_second: 3842
 pubDate: 2022-05-17 04:30:00+00:00
 rtlplus: ''

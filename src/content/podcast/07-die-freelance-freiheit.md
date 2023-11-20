@@ -64,7 +64,7 @@ description: "Sein eigener Chef zu sein, sich die Projekte aussuchen k\xF6nnen u
   \ beim Krafttraining im Fitnessstudio akquiriert hat, ohne selbst Gewichte zu stemmen."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MjZiMDkyOTktY2UwMS00ZWMwLTg0MDEtZjZkOGIyMzQ2MWVk?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||anderes::Anderes||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/07-die-freelance-freiheit.jpg
+image: ./07-die-freelance-freiheit.jpg
 length_second: 3841
 pubDate: 2022-02-22 05:00:00+00:00
 rtlplus: ''

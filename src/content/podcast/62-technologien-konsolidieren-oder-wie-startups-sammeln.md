@@ -51,7 +51,7 @@ description: "Was ist der richtige Ansatz? Ein Stack f\xFCr die ganze Firma oder
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MDUzMDAxOWEtZWFlNS00OGQ2LWJjNzQtNjMyZjRhMTU2Y2Ex?sa=X&ved=2ahUKEwiEuPeMgdv9AhX4GVkFHcxFB90QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/62-technologien-konsolidieren-oder-wie-startups-sammeln.jpg
+image: ./62-technologien-konsolidieren-oder-wie-startups-sammeln.jpg
 length_second: 4100
 pubDate: 2023-03-14 05:00:00+00:00
 rtlplus: ''

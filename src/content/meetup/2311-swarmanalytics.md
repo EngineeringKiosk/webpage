@@ -1,5 +1,5 @@
 ---
-date: '2023-11-16T18:30:00+01:00'
+date: 2023-11-17T18:30:00+01:00
 location:
   name: 'MAD Ventures'
   address: 'Helga-Krismer-Platz 1, 1. Stock, 6020 Innsbruck, Austria'

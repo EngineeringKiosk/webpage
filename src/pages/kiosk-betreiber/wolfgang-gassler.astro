@@ -1,7 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+
+import imageWolfgangGassler from "../../images/teams/wolfgang-gassler-profile.jpg";
 
 let title = 'Wolfgang Gassler, Podcast Host - Engineering Kiosk';
 let description = 'Freelancer und Consultant mit einem Interesse in Menschen, Tech-Kultur, Datenbank und Skalierung, Product Entwicklung und Usability sowie Recommender Systems aus Innsbruck.';
@@ -24,7 +28,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="relative mx-auto md:ml-0 max-w-max">
 								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-								<img class="rounded-3xl" src="/images/teams/wolfgang-gassler-profile.jpg" alt="Wolfgang Gassler" title="Wolfgang Gassler" />
+								<Image class="rounded-3xl" src={imageWolfgangGassler} alt="Wolfgang Gassler" title="Wolfgang Gassler" />
 							</div>
 						</div>
 						<div class="w-full md:w-1/2 px-4">

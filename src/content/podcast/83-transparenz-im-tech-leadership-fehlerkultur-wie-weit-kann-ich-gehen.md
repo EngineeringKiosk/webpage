@@ -49,7 +49,7 @@ description: "Die Fehlerkultur im Unternehmen, Transparenz in der Kommunikation 
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NjU2MjViMmUtZmMxMy00NTNhLWI0ZDUtZGUwODE5OTExMGIw?sa=X&ved=2ahUKEwjekq2dmMyAAxXbqY4IHRVJCFsQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/83-transparenz-im-tech-leadership-fehlerkultur-wie-weit-kann-ich-gehen.jpg
+image: ./83-transparenz-im-tech-leadership-fehlerkultur-wie-weit-kann-ich-gehen.jpg
 length_second: 3864
 pubDate: 2023-08-08 04:00:00+00:00
 rtlplus: ''

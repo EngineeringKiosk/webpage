@@ -1,5 +1,5 @@
 ---
-date: '2023-12-14T18:30:00+01:00'
+date: 2023-12-14T18:30:00+01:00
 location:
   name: 'dynatrace'
   address: 'Höttinger Au 74, 6020 Innsbruck'
@@ -14,8 +14,8 @@ talks:
     linkedin: 'johannes-troppacher-683437217'
     website: 'https://joht.github.io/johtizen/index.html'
   - avatar: 'avatar.png'
-    name: '???'
+    name: 'to be announced'
     title: '???'
-    description: '???'
+    description: 'We are still searching for a speaker for december - please contact us!'
 eventId: '456r8e4uttr5dfpqkhs2bn27av'
 ---

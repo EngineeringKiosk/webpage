@@ -64,7 +64,7 @@ description: "Eine Vision und Mission f\xFCr die Firma und das Team: Notwendig o
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGNmYTMzY2ItMjExZi00YjNjLWI1MTYtYzEwZGM1YWJkNWY4?sa=X&ved=2ahUKEwiWxvbRwtL7AhVGlY4IHej2AsYQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/47-wer-visionen-hat-soll-zum-arzt.jpg
+image: ./47-wer-visionen-hat-soll-zum-arzt.jpg
 length_second: 2633
 pubDate: 2022-11-29 04:00:00+00:00
 rtlplus: ''

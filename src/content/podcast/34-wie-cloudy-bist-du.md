@@ -51,7 +51,7 @@ description: "Die Cloud Native Infrastruktur vs. ein dicker Server - Ein Dauerst
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZDMxNzY2YTUtMDhkMC00Nzk1LTgyZjctNWVhOWM2Zjk0NzY0?sa=X&ved=2ahUKEwje9pOf8O35AhUmrWoFHSSxDaEQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/34-wie-cloudy-bist-du.jpg
+image: ./34-wie-cloudy-bist-du.jpg
 length_second: 2959
 pubDate: 2022-08-30 04:00:00+00:00
 rtlplus: ''

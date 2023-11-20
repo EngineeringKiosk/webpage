@@ -171,7 +171,6 @@ def build_blog_statistics(path_md_files) -> dict:
             post_frontmatter = frontmatter.load(f)
             
             stats['number_of_blog_posts'] += 1
-            # TODO Check what information is useful from the blog frontmatter
             
     return stats
 

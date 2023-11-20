@@ -53,7 +53,7 @@ description: "Forward-Proxy, Reverse-Proxy, Bastion-Host, Load Balancer, SOCKS5-
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NmM3Yzg4ZTktMWIyYi00ZDQwLTkxNTktN2Q0ZjE3MGY3MzIw?sa=X&ved=2ahUKEwidtN6t4P39AhU6vWoFHaxxDj8QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/64-infrastruktur-bingo-forward-reverse-socks-proxy-load-balancing-und-gibt-es-einen-unterschied-zwischen-load-balancer-und-reverse-proxy.jpg
+image: ./64-infrastruktur-bingo-forward-reverse-socks-proxy-load-balancing-und-gibt-es-einen-unterschied-zwischen-load-balancer-und-reverse-proxy.jpg
 length_second: 3417
 pubDate: 2023-03-28 03:00:00+00:00
 rtlplus: ''

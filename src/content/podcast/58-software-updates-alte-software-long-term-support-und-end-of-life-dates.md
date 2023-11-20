@@ -52,7 +52,7 @@ description: "Alte Software akzeptieren oder lieber jedem Update hinterherjagen?
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/M2M4YmIxYmEtNmFjNi00ZWE5LWIzNzUtOTM1NTAxM2FjOTE4?sa=X&ved=2ahUKEwis0vGZzpT9AhW0CVkFHQrTAeoQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/58-software-updates-alte-software-long-term-support-und-end-of-life-dates.jpg
+image: ./58-software-updates-alte-software-long-term-support-und-end-of-life-dates.jpg
 length_second: 3399
 pubDate: 2023-02-14 05:00:00+00:00
 rtlplus: ''

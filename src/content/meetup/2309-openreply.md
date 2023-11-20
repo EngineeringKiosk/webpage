@@ -1,5 +1,5 @@
 ---
-date: '2023-09-14T18:30:00+02:00'
+date: 2023-09-14T18:30:00+02:00
 location:
   name: 'Open Reply'
   address: 'Anichstraße 13, 6020 Innsbruck, Austria'

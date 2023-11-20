@@ -66,7 +66,7 @@ description: "Die Analyse von Metadaten aus dem Software-Entwicklungsprozess: Ye
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/Mjg4MzE1MmQtM2RjNi00YTc3LWE0YzUtN2IzYzhlNGMyYmIz?sa=X&ved=2ahUKEwj28c2x9fX7AhWjrGoFHaLLB6MQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/49-die-zukunft-software-repository-mining.jpg
+image: ./49-die-zukunft-software-repository-mining.jpg
 length_second: 3295
 pubDate: 2022-12-13 05:00:00+00:00
 rtlplus: ''

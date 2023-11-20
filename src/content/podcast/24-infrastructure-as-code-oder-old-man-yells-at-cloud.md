@@ -55,7 +55,7 @@ description: "Old man yells at cloud - Oder: Wie managed man seine Infrastruktur
   \ Holz-Clogs tr\xE4gt und wie Deutschland mit dem 9\u20AC Ticket umgeht."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/YTA5OWNlMmUtZjY4My00MWU0LWI5M2YtNTUzZDJmNjY2ZmY0?sa=X&ved=2ahUKEwjN_tn_9b34AhXnM1kFHQKtDH8QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/24-infrastructure-as-code-oder-old-man-yells-at-cloud.jpg
+image: ./24-infrastructure-as-code-oder-old-man-yells-at-cloud.jpg
 length_second: 3712
 pubDate: 2022-06-21 04:00:00+00:00
 rtlplus: ''

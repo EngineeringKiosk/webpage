@@ -59,7 +59,7 @@ description: "Monolithen und Microservices: Ein Evergreen der Software-Industrie
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NDMzODRmYTMtNzhkNS00Yzc5LWFkNDctMDFiZmQyY2E4M2E4?sa=X&ved=2ahUKEwiI0qCll_T_AhU3m44IHcNiBlgQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/78-microservice-monolith-was-die-industrie-in-den-letzten-9-jahren-gelernt-hat.jpg
+image: ./78-microservice-monolith-was-die-industrie-in-den-letzten-9-jahren-gelernt-hat.jpg
 length_second: 3685
 pubDate: 2023-07-04 04:00:00+00:00
 rtlplus: ''

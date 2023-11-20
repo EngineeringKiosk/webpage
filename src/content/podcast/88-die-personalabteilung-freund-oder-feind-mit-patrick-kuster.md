@@ -64,7 +64,7 @@ description: "Die Personalabteilung: Dein strategischer Partner auf Augenh\xF6he
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MjhhNTAwZGUtYzQ4MC00MDQzLThmOTAtZmNkZjc2ZjJmNzRh?sa=X&ved=2ahUKEwilwdCGuKSBAxVbie4BHYZJDOoQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/88-die-personalabteilung-freund-oder-feind-mit-patrick-kuster.jpg
+image: ./88-die-personalabteilung-freund-oder-feind-mit-patrick-kuster.jpg
 length_second: 4600
 pubDate: 2023-09-12 04:00:00+00:00
 rtlplus: ''

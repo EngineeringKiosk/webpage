@@ -60,7 +60,7 @@ google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbG
 headlines: links::Links||beispiel-fragen-zur-1on1-bestandsaufnahme::Beispiel-Fragen
   zur 1on1 Bestandsaufnahme||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/61-schwierige-1-on-1-situationen-und-l\xF6sungsvorschl\xE4\
+image: "./61-schwierige-1-on-1-situationen-und-l\xF6sungsvorschl\xE4\
   ge.jpg"
 length_second: 3331
 pubDate: 2023-03-07 05:00:00+00:00

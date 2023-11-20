@@ -78,7 +78,7 @@ description: "Ist GitHub Copilot (und AI) wirklich dein fehlender Partner beim P
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/N2IzM2JiNTYtMzYyZi00NjNjLThlYzctNTcyYWQzNzlhZTdl?sa=X&ved=2ahUKEwjW5sGahqyAAxWuB0QIHe3NAyEQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/81-copilot-ai-im-dev-test-produktivit\xE4ts-boost-oder-nur-hype.jpg"
+image: "./81-copilot-ai-im-dev-test-produktivit\xE4ts-boost-oder-nur-hype.jpg"
 length_second: 4052
 pubDate: 2023-07-25 04:00:00+00:00
 rtlplus: ''

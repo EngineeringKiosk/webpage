@@ -3,7 +3,7 @@ import { z, defineCollection } from 'astro:content';
 // Schema for Podcast Episodes
 const podcastEpisodeCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		amazon_music: z.string(),
 		apple_podcasts: z.string(),
 		audio: z.string(),
@@ -17,7 +17,7 @@ const podcastEpisodeCollection = defineCollection({
 		description: z.string(),
 		google_podcasts: z.string(),
 		headlines: z.string(),
-		image: z.string(),
+		image: image(),
 		length_second: z.number(),
 		pubDate: z.date(),
 		rtlplus: z.string(),
@@ -38,19 +38,47 @@ const podcastEpisodeCollection = defineCollection({
 // Schema for Blog Entries
 const blogEntryCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		subtitle: z.string(),
 		description: z.string(),
 		tags: z.array(z.string()),
 		pubDate: z.date(),
-		thumbnail: z.string(),
-		headerimage: z.string(),
+		thumbnail: image(),
+		headerimage: image(),
 	}),
+});
+
+// Schema for Meetups
+const meetupCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    date: z.date(),
+    location: z.object({
+      name: z.string(),
+      address: z.string(),
+      url: z.string().optional(),
+      logo: z.string().optional()
+    }),
+    talks: z.array(z.object({
+        avatar: z.string().optional(),
+        name: z.string(),
+        title: z.string(),
+        description: z.string(),
+        github: z.string().optional(),
+        twitter: z.string().optional(),
+        linkedin: z.string().optional(),
+        website: z.string().optional(),
+        bio: z.string().optional(),
+        slides: z.string().optional()
+      })
+    )
+  })
 });
 
 // Export a single `collections` object to register your collection(s)
 export const collections = {
-	podcast: podcastEpisodeCollection,
-	blog: blogEntryCollection,
+  podcast: podcastEpisodeCollection,
+  blog: blogEntryCollection,
+  meetup: meetupCollection
 };

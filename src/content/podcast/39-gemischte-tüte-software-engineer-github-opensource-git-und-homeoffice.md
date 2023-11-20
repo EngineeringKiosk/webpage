@@ -31,7 +31,7 @@ description: "Ein neues Format: Die gemischte T\xFCte mit Software Engineers, Gi
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MDU0ZWY3NTAtMzVkYi00OGJkLThjYmYtZDUzMTVkMDBhNDA0?sa=X&ved=2ahUKEwif0-WG48X6AhVQrXIEHemqChQQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/39-gemischte-t\xFCte-software-engineer-github-opensource-git-und-homeoffice.jpg"
+image: "./39-gemischte-t\xFCte-software-engineer-github-opensource-git-und-homeoffice.jpg"
 length_second: 2866
 pubDate: 2022-10-04 04:00:00+00:00
 rtlplus: ''

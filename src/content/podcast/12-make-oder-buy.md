@@ -55,7 +55,7 @@ description: "Make oder Buy: Alles einkaufen oder doch lieber selber machen? Ein
   \ aus Wanne-Eickel hat und warum Wolfgang Google mehr vertraut als sich selber."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MWJiOThjNjMtZmFkYy00MzVhLWExZGYtYTExMjE5MzdkN2Ri?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/12-make-oder-buy.jpg
+image: ./12-make-oder-buy.jpg
 length_second: 3583
 pubDate: 2022-03-29 09:40:00+00:00
 rtlplus: ''

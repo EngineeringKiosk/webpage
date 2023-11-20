@@ -53,7 +53,7 @@ description: "Wie sieht eigentlich der Layer unter Docker aus? Und wie interagie
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZmUyODU1YmYtNTFiMS00NWZhLThkYWUtNDRmMTQ3MTZhNzBj?sa=X&ved=2ahUKEwjm0I7M1uT7AhVVjo4IHcWIABwQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/48-der-layer-unter-docker-containerd-kubernetes-container-runtime-interface-cri-o-und-open-container-initiative-oci.jpg
+image: ./48-der-layer-unter-docker-containerd-kubernetes-container-runtime-interface-cri-o-und-open-container-initiative-oci.jpg
 length_second: 2264
 pubDate: 2022-12-06 09:21:47+00:00
 rtlplus: ''

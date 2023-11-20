@@ -4,11 +4,13 @@ subtitle: Der Engineering Kiosk hat eine eigene Website. Warum jetzt erst, was w
 description: 'tl:dr: Der Engineering Kiosk hat nach 22 Podcast-Episoden eine eigene Website. Gebaut mit dem static site builder [Astro](https://astro.build/). Source code ist auf [GitHub:EngineeringKiosk/webpage](https://github.com/EngineeringKiosk/webpage) verfügbar.'
 tags: ['Engineering Kiosk']
 pubDate: 2022-06-20
-thumbnail: /images/blog-content/eigene-website/brands.png
-headerimage: /images/blog-content/eigene-website/podcast-episode-overview.png
+thumbnail: ./die-engineering-kiosk-website-thumbnail.png
+headerimage: ./die-engineering-kiosk-website-header.png
 ---
 
 import PodcastEpisodeBlogpostAd from '../../components/PodcastEpisodeBlogpostAd.astro';
+import { Image } from "astro:assets";
+import imageBrands from './die-engineering-kiosk-website-thumbnail.png';
 
 Nach fünf Monaten und 22 Podcast-Episoden mit insgesamt über 20 Stunden Audio-Content, launcht der Engineering Kiosk seine eigene Website.
 
@@ -72,7 +74,7 @@ Warum?
 - Astro hat trotz hoher Flexibilität einen [simplen Content und Routing Ansatz](https://docs.astro.build/en/core-concepts/routing/)
 - Astro verfolgt einen [Partial Hydration](https://docs.astro.build/en/core-concepts/partial-hydration/) Ansatz, der eine Webseite ohne JavaScript auf der Client-Seite erlaubt.
 
-![Eingesetzte Technologien: Astro, tailwind css, Netlify und GitHub](/images/blog-content/eigene-website/brands.png 'Eingesetzte Technologien: Astro, tailwind css, Netlify und GitHub')
+<Image class="w-full mb-10 mx-auto" src={imageBrands} alt="Eingesetzte Technologien: Astro, tailwind css, Netlify und GitHub" title="Eingesetzte Technologien: Astro, tailwind css, Netlify und GitHub" />
 
 Beim Hosting verlassen wir uns [Netlify](https://www.netlify.com/).
 Mit der direkten [Anbindung an GitHub](https://github.com/apps/netlify) werden sogar bei [Pull Requests Vorschau-Umgebungen automatisch erzeugt](https://github.com/EngineeringKiosk/webpage/pull/54).

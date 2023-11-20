@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from "astro:assets";
 
 export interface Props {
 	episode: CollectionEntry<'podcast'>;
@@ -21,7 +22,7 @@ let description = cutText(data.description, descriptionChars);
 
 <article class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
 	<a class="block mb-6 overflow-hidden rounded-md" href={`/podcast/episode/${episode.slug}/`}>
-		<img class="w-full" src={data.image} alt={`Details zur Podcast Episode ${data.title}`} title={`Details zur Podcast Episode ${data.title}`} />
+		<Image class="w-full" src={data.image} alt={`Details zur Podcast Episode ${data.title}`} title={`Details zur Podcast Episode ${data.title}`} />
 	</a>
 	{
 		tags.map((element) => (

@@ -53,7 +53,7 @@ description: "Remote-Work, asynchrone und parallele Arbeit und die eigene Work-L
   \ ist."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MWM3ZDY2YTYtZjg2YS00ZjdlLWJmYjktOTNhY2YyZjlkYmEz?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/14-async-und-await-asynchrones-arbeiten-im-alltag.jpg
+image: ./14-async-und-await-asynchrones-arbeiten-im-alltag.jpg
 length_second: 3389
 pubDate: 2022-04-12 04:30:00+00:00
 rtlplus: ''

@@ -47,7 +47,7 @@ description: "Statische Websites sind wieder cool und wir springen mit der eigen
   \ \xD6sterreich so gut im Marketing ist."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/N2Q5NzExODItNWEwMi00ZDU5LWExOTgtODJhZWQzZDFiZGM4?sa=X&ved=0CAUQkfYCahcKEwi4xqzSkon4AhUAAAAAHQAAAAAQAg
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/21-static-site-generators-die-webseite.jpg
+image: ./21-static-site-generators-die-webseite.jpg
 length_second: 3214
 pubDate: 2022-05-31 04:35:00+00:00
 rtlplus: ''

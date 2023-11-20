@@ -56,7 +56,7 @@ description: "Diversity: Das Thema mit hoher Relevanz - Nicht nur in der Gesells
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NjkyM2Y1NTEtMjgwMC00N2NhLTlhMzctMWRlYjU3NjEyMDEx?sa=X&ved=2ahUKEwjz-rmZz4f8AhWCIGIAHYqeCqQQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/50-dei-erh\xF6ht-innovation-und-den-finanziellen-erfolg.jpg"
+image: "./50-dei-erh\xF6ht-innovation-und-den-finanziellen-erfolg.jpg"
 length_second: 3450
 pubDate: 2022-12-20 05:00:00+00:00
 rtlplus: ''

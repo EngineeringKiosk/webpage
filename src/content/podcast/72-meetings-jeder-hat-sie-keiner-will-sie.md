@@ -47,7 +47,7 @@ description: "Meetings: Ein essentieller Teil unseres Arbeitsalltages und doch w
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MGRkOWNkMjQtNTM4Yy00MjJiLTlkZWItNTNhZjc2YTViMDNj?sa=X&ved=2ahUKEwiRm97dlZz_AhUiM1kFHYB3ACsQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/72-meetings-jeder-hat-sie-keiner-will-sie.jpg
+image: ./72-meetings-jeder-hat-sie-keiner-will-sie.jpg
 length_second: 3866
 pubDate: 2023-05-23 04:00:00+00:00
 rtlplus: ''

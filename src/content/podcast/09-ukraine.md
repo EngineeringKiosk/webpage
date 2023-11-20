@@ -55,7 +55,7 @@ description: "Es wird politisch: Der Angriffskrieg auf die Ukraine und eine m\xF
   \ wir ein Projekt, das lustige Geschichten hinter Open-Source Projekten sammelt."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/Y2QyNDRiYjEtODdmNy00MjI2LTg1MmQtY2I2ZWNkNjQ4YjRj?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/09-ukraine.jpg
+image: ./09-ukraine.jpg
 length_second: 2250
 pubDate: 2022-03-08 10:55:00+00:00
 rtlplus: ''

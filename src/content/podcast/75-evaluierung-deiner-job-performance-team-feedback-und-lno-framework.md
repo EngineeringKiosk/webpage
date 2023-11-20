@@ -57,7 +57,7 @@ description: "Woher wei\xDFt du eigentlich, ob du einen guten Job machst? Wie er
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGEwOTg3NjAtOTA4MS00NTg2LTlmOWEtZTZkOTRhOWE4ZDJj?sa=X&ved=2ahUKEwi5z5T90b__AhUrElkFHZ4qBV0QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/75-evaluierung-deiner-job-performance-team-feedback-und-lno-framework.jpg
+image: ./75-evaluierung-deiner-job-performance-team-feedback-und-lno-framework.jpg
 length_second: 3699
 pubDate: 2023-06-13 04:00:00+00:00
 rtlplus: ''

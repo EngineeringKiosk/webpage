@@ -69,7 +69,7 @@ description: "Konsistent, Verf\xFCgbar und Ausfalltolerant: W\xE4hle zwei - Das 
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/YTI5NzYxYmItYmU2Yi00MjQ2LWJjNDAtOGYxNmExODM5MWI2?sa=X&ved=2ahUKEwiEwqHggNmBAxWfA0QIHR_JC2IQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/91-konsistent-verf\xFCgbar-ausfalltolerant-oder-performant-das-cap-und-pacelc-theorem-in-verteilten-systemen.jpg"
+image: "./91-konsistent-verf\xFCgbar-ausfalltolerant-oder-performant-das-cap-und-pacelc-theorem-in-verteilten-systemen.jpg"
 length_second: 3461
 pubDate: 2023-10-03 04:00:00+00:00
 rtlplus: ''

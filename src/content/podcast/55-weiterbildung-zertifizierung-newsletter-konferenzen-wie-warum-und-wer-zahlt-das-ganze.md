@@ -43,7 +43,7 @@ description: "Wie notwendig ist Weiterbildung und welche M\xF6glichkeiten gibt e
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZmEwYWYzNTgtMGZmNC00N2VmLThhYjktN2U5OTdlNzJmNzJl?sa=X&ved=2ahUKEwiszuCc4N_8AhUXElkFHfgqCeYQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/55-weiterbildung-zertifizierung-newsletter-konferenzen-wie-warum-und-wer-zahlt-das-ganze.jpg
+image: ./55-weiterbildung-zertifizierung-newsletter-konferenzen-wie-warum-und-wer-zahlt-das-ganze.jpg
 length_second: 3621
 pubDate: 2023-01-24 05:00:00+00:00
 rtlplus: ''

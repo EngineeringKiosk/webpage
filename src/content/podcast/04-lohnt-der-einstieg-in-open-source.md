@@ -71,7 +71,7 @@ google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbG
 headlines: "sprungmarken::Sprungmarken||erwahnte-artikel::Erw\xE4hnte Artikel||erwahnte-personen::Erw\xE4\
   hnte Personen||erwahnte-projekte::Erw\xE4hnte Projekte||erwahnte-events::Erw\xE4\
   hnte Events||erwahnte-lizenzen::Erw\xE4hnte Lizenzen||hosts::Hosts"
-image: /images/podcast/episode/04-lohnt-der-einstieg-in-open-source.jpg
+image: ./04-lohnt-der-einstieg-in-open-source.jpg
 length_second: 3044
 pubDate: 2022-01-25 05:00:00+00:00
 rtlplus: ''

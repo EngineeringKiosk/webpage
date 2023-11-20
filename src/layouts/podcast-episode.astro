@@ -1,6 +1,8 @@
 ---
-import Path from 'path'
-import fs from 'fs'
+import Path from 'path';
+import fs from 'fs';
+
+import { Image } from "astro:assets";
 
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
@@ -168,8 +170,7 @@ const html = (await Astro.slots.render('default'))
 						<div class="flex flex-wrap lg:items-start mb-12 -mx-4">
 							<div class="w-full md:w-1/2 2xl:w-5/12 px-4 mb-8 md:mb-0">
 								<div class="mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
-									<!-- TODO Set max height/width of 554 - take care of other screens/devices -->
-									<img src={frontmatter.image} alt={frontmatter.title} title={frontmatter.title} />
+									<Image src={frontmatter.image} alt={`Engineering Kiosk Episode ${frontmatter.title}`} title={`Engineering Kiosk Episode ${frontmatter.title}`} />
 								</div>
 							</div>
 							<div class="w-full md:w-1/2 px-4">

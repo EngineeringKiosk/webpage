@@ -64,7 +64,7 @@ description: "Beim Programmieren ist alles ein Algorithmus. Irgendwie zumindest.
   \ zu tun haben."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NWY4ZThjMGUtYzE2ZS00YzVlLWIxMmItMTNmZGY0YjI0YTM5?sa=X&ved=0CAUQkfYCahcKEwjw8_PxqoT5AhUAAAAAHQAAAAAQAQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: "/images/podcast/episode/28-o1-olog-n-on2-ist-die-komplexit\xE4t-von-algorithmen-im-entwickler-alltag-relevant.jpg"
+image: "./28-o1-olog-n-on2-ist-die-komplexit\xE4t-von-algorithmen-im-entwickler-alltag-relevant.jpg"
 length_second: 3333
 pubDate: 2022-07-19 04:00:00+00:00
 rtlplus: ''

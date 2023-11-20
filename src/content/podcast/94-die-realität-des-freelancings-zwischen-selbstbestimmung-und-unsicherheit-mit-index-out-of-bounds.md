@@ -92,7 +92,7 @@ description: "Freelancing: Selbstverwirklichung und viel Geld oder kontinuierlic
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZTkyYjY4NzYtMTE0Yy00OWM4LWJhYzgtMjZjZGZlOGM0MWIz?sa=X&ved=2ahUKEwiHiLv3542CAxWIoI4IHXAoBf0QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/94-die-realit\xE4t-des-freelancings-zwischen-selbstbestimmung-und-unsicherheit-mit-index-out-of-bounds.jpg"
+image: "./94-die-realit\xE4t-des-freelancings-zwischen-selbstbestimmung-und-unsicherheit-mit-index-out-of-bounds.jpg"
 length_second: 5247
 pubDate: 2023-10-24 04:00:00+00:00
 rtlplus: ''

@@ -66,7 +66,7 @@ description: "Die Story von ownCloud und Nextcloud inkl. einer erfolgreichen Fir
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OTUxYWRiYTQtMDU3NS00ZDJhLTlkZjUtOTc5YjQ2ZGMwNjFl?sa=X&ved=2ahUKEwiqgoDA_4CBAxVhu44IHQ0LCZsQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/86-open-source-als-herz-einer-firma-mit-nextcloud-gr\xFC\
+image: "./86-open-source-als-herz-einer-firma-mit-nextcloud-gr\xFC\
   nder-frank-karlitschek.jpg"
 length_second: 3934
 pubDate: 2023-08-29 04:00:00+00:00

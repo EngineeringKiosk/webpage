@@ -58,7 +58,7 @@ description: "Datenbanken, besonders relationale Datenbanken und im Web ganz bes
   \ Buchautor war."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NzBjYjE3YTktNjA3ZC00ZmFlLWI4YWQtY2QxZjA2M2NhZmRh?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: "links::Links||erwahnte-personen::Erw\xE4hnte Personen||sprungmarken::Sprungmarken||hosts::Hosts"
-image: /images/podcast/episode/08-vergiss-doch-datenbanken.jpg
+image: ./08-vergiss-doch-datenbanken.jpg
 length_second: 3167
 pubDate: 2022-03-01 11:30:00+00:00
 rtlplus: ''

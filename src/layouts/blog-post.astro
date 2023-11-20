@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro-remote';
+import { Image } from "astro:assets";
 
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
@@ -57,7 +58,7 @@ let tags = content.tags.map((element) => URLify(element));
 						</p>
 					</div>
 				</div>
-				<img class="w-full mb-10 mx-auto" src={content.headerimage} alt={content.title} title={content.title} />
+				<Image class="w-full mb-10 mx-auto" src={content.headerimage} alt={content.title} title={content.title} />
 				<div class="container px-4 mx-auto">
 					<div class="md:max-w-3xl mx-auto">
 						<article class="border-b border-coolGray-100 mb-4">

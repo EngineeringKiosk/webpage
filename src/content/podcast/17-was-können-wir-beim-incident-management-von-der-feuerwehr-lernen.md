@@ -81,7 +81,7 @@ description: "Was haben die Methoden der Feuerwehr zur Bek\xE4mpfung von Gro\xDF
   fen damit zu tun haben und wieso Kaffee holen doch eine Strategie sein kann."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/YjZlMDAyYTktZTBkNC00NzM2LTkyNzMtZDljOTAxMWQzOGRj?sa=X&ved=0CAUQkfYCahcKEwi4xMSxj4L4AhUAAAAAHQAAAAAQNQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: "/images/podcast/episode/17-was-k\xF6nnen-wir-beim-incident-management-von-der-feuerwehr-lernen.jpg"
+image: "./17-was-k\xF6nnen-wir-beim-incident-management-von-der-feuerwehr-lernen.jpg"
 length_second: 4174
 pubDate: 2022-05-03 04:00:00+00:00
 rtlplus: ''

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
@@ -8,6 +9,16 @@ import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday } from '../scripts/date.js';
+
+// Testimonials images
+import testimonialLuiseHaack from "../images/testimonials/luise-haack.jpeg";
+import testimonialPascalLandau from "../images/testimonials/pascal-landau.jpeg";
+import testimonialSaskiaKeil from "../images/testimonials/saskia-keil.png";
+import testimonialSebastianHammerl from "../images/testimonials/sebastian-hammerl.jpg";
+import testimonialYanivPreiss from "../images/testimonials/yaniv-preiss.jpeg";
+
+// Header image
+import headerImageAndyWolfiLounge from "../images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg";
 
 import podcastInfo from '../data/podcast-info.json';
 
@@ -69,7 +80,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<img class="relative rounded-7xl" src="/images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg" alt="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" title="Andy Grunwald und Wolfgang Gassler am 06. Februar 2023 in Duisburg" />
+									<Image class="relative rounded-7xl" src={headerImageAndyWolfiLounge} alt="Die Podcast-Hosts Andy Grunwald und Wolfgang Gassler" title="Die Podcast-Hosts Andy Grunwald und Wolfgang Gassler" />
 								</div>
 							</div>
 						</div>
@@ -83,7 +94,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
 							<div class="relative w-2/3 md:w-full mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
 								<a href={`/podcast/episode/${episode.slug}/`} title={`Engineering Kiosk Episode ${episode.data.title}`}>
-									<img src={episode.data.image} alt={`Engineering Kiosk Episode ${episode.data.title}`} title={`Engineering Kiosk Episode ${episode.data.title}`} />
+									<Image src={episode.data.image} alt={`Engineering Kiosk Episode ${episode.data.title}`} title={`Engineering Kiosk Episode ${episode.data.title}`} />
 								</a>
 							</div>
 						</div>
@@ -187,7 +198,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 									Der Engineering Kiosk Podcast ist großartig - verschiedene interessante Themen, einfach erklärt dennoch von hoher Qualität. Diese zeichnet sich u.a. aus durch tiefe Unterhaltungen, Beispiele und Erklärungen.
 								</h3>
 								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/yaniv-preiss.jpeg" alt="Yaniv Preiss" title="Yaniv Preiss" />
+									<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialYanivPreiss} alt="Yaniv Preiss" title="Yaniv Preiss" />
 									<div>
 										<h4 class="mb-1 text-lg font-semibold">Yaniv Preiss</h4>
 										<p class="text-lg text-coolGray-400">Head Of Engineering, NewStore</p>
@@ -201,7 +212,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 									Podcast mit aktuellen und interkulturellem Witz über IT- und Führungsfragen. Was ich höre, lässt mich meine Rolle als Führungskraft reflektieren und hilft mir Ratschläge als Karrierecoach für Studierende auf ihre Relevanz abzuchecken.
 								</h3>
 								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/luise-haack.jpeg" alt="Luise Haack" title="Luise Haack" />
+									<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialLuiseHaack} alt="Luise Haack" title="Luise Haack" />
 									<div>
 										<h4 class="mb-1 text-lg font-semibold">Luise Haack</h4>
 										<p class="text-lg text-coolGray-400">Referatsleiterin, Uni Passau</p>
@@ -213,7 +224,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
 								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">Ein entspannter Podcast, der sich selber auch nicht zu ernst nimmt. Insbesondere die Erfahrung von Andy & Wolfgang ist viel Wert und hilft mir in meiner Position als noch recht junger Techlead.</h3>
 								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/saskia-keil.png" alt="Saskia Keil" title="Saskia Keil" />
+									<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialSaskiaKeil} alt="Saskia Keil" title="Saskia Keil" />
 									<div>
 										<h4 class="mb-1 text-lg font-semibold">Saskia Keil</h4>
 										<p class="text-lg text-coolGray-400">Techlead, trivago</p>
@@ -227,7 +238,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 									Jede Woche neue Ansichten und Eindrücke in die unterschiedlichsten Engineering- und Management-Themen. In den kurzweiligen Folgen regen mich Wolfgang und Andy zum Nachdenken an und holen mich aus meiner "Blase" heraus.
 								</h3>
 								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/sebastian-hammerl.jpg" alt="Sebastian Hammerl" title="Sebastian Hammerl" />
+									<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialSebastianHammerl} alt="Sebastian Hammerl" title="Sebastian Hammerl" />
 									<div>
 										<h4 class="mb-1 text-lg font-semibold">Sebastian Hammerl</h4>
 										<p class="text-lg text-coolGray-400">Leiter Software-Entwicklung, Getslash</p>
@@ -239,7 +250,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 							<div class="flex flex-col h-full bg-white shadow-md rounded-md">
 								<h3 class="pb-14 mb-auto p-8 text-xl text-coolGray-500 leading-loose font-medium">Ich bin Hörer seit Episode #1 und von der Breite sowie Tiefe der Themen positiv überrascht. Nicht nur die Theorie wird diskutiert, sondern man merkt deutlich den Einfluss praktischer Erfahrungen.</h3>
 								<div class="flex items-center py-8 pl-4 pr-2">
-									<img class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src="/images/testimonials/pascal-landau.jpeg" alt="Pascal Landau" title="Pascal Landau" />
+									<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialPascalLandau} alt="Pascal Landau" title="Pascal Landau" />
 									<div>
 										<h4 class="mb-1 text-lg font-semibold">Pascal Landau</h4>
 										<p class="text-lg text-coolGray-400">Technical Director, ABOUT YOU</p>
@@ -268,7 +279,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 
 					<div class="flex flex-wrap justify-center -mx-4">
 						<HostPreview
-							avatar="andy-grunwald-headshot.jpg"
+							avatar="andy-grunwald-headshot"
 							name="Andy Grunwald"
 							subtitle="Der aus dem Ruhrpott"
 							description="Infrastruktur-Person, Open-Source-Fanatiker, denkt zu viel, Möchtegern-Landwirt, Kaiserschmarrn nur ohne Rosinen"
@@ -280,7 +291,7 @@ let currentEpisodeDescription = cutText(episode.data.description, 170);
 						/>
 
 						<HostPreview
-							avatar="wolfgang-gassler-headshot.jpg"
+							avatar="wolfgang-gassler-headshot"
 							name="Wolfgang Gassler"
 							subtitle="Der aus den Bergen"
 							description='Informatiker (früher auch Wissenschaft), Pragmatiker, Sideproject-Domain-Käufer, Feuerwehrmann, Kaiserschmarrn <a href="https://www.youtube.com/shorts/rLAvwrMqfTk">nur mit Rosinen</a>'

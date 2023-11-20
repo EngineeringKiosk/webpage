@@ -57,7 +57,7 @@ description: "Der Einstieg in die erste Lead-Position, das Engineering Managemen
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/YWZjYWJlYzktODc4OS00YzdlLTllZmMtODlhN2ViYmQxMTFi?sa=X&ved=2ahUKEwiRmeqmsu-AAxWwOlkFHe1vDCIQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher.jpg
+image: ./85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher.jpg
 length_second: 4052
 pubDate: 2023-08-22 04:00:00+00:00
 rtlplus: ''

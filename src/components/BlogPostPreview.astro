@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from "astro:assets";
 
 export interface Props {
 	post: CollectionEntry<'blog'>;
@@ -41,7 +42,7 @@ let tags = data.tags.map((element) => URLify(element));
 
 <div class={`w-full md:w-1/2 lg:w-1/3 px-4 ${cssClass}`}>
 	<a class="block mb-6 overflow-hidden rounded-md" href={`/blog/post/${post.slug}/`}>
-		<img class="w-full" src={data.thumbnail} alt={data.title} title={data.title} />
+		<Image class="w-full" src={data.thumbnail} alt={data.title} title={data.title} />
 	</a>
 	<p class="mb-2 text-coolGray-500 font-medium">
 		<time class="date" datetime={data.pubDate}>{formatDate(data.pubDate)}</time>

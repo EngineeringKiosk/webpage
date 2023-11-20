@@ -44,7 +44,7 @@ description: "\"Open Data now\" - Dazu ruft der Turing Award Gewinner Sir Tim Be
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/OGEzN2ZkZjUtN2JlOC00NGM5LWI5ZGYtNzk5OGNhY2E0YjIz?sa=X&ved=2ahUKEwjN_fTNkPn-AhXMGGIAHUtLB-IQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/71-tim-berners-lee-was-ist-das-world-wide-web-und-was-ist-seine-zukunft.jpg
+image: ./71-tim-berners-lee-was-ist-das-world-wide-web-und-was-ist-seine-zukunft.jpg
 length_second: 3710
 pubDate: 2023-05-16 04:00:00+00:00
 rtlplus: ''

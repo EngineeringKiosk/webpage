@@ -59,7 +59,7 @@ description: "Asynchrone Verarbeitung durch Message Queues: Was ist das und wof\
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/YmQyZmVmZmUtMTdlNC00YzNhLTg1ZmItYjJhN2I5ZDlmNmU0?sa=X&ved=0CAUQkfYCahcKEwj49_v986r8AhUAAAAAHQAAAAAQAQ
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/52-asynchrone-verarbeitung-durch-message-queues-vor-und-nachteile.jpg
+image: ./52-asynchrone-verarbeitung-durch-message-queues-vor-und-nachteile.jpg
 length_second: 3409
 pubDate: 2023-01-03 05:00:00+00:00
 rtlplus: ''

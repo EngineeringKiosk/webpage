@@ -57,7 +57,7 @@ description: "Was ist eigentlich ein Senior Engineer und wie werde ich zu einem?
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MGYxMGNjMTktMDExNS00Njc4LThkYmMtOWMxYmRhYzM5MTQ2?sa=X&ved=2ahUKEwjJpJPctdf6AhUIrXIEHd9zDtgQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/40-wie-wird-man-und-frau-zum-senior-dev.jpg
+image: ./40-wie-wird-man-und-frau-zum-senior-dev.jpg
 length_second: 2983
 pubDate: 2022-10-11 04:00:00+00:00
 rtlplus: ''

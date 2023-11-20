@@ -55,7 +55,7 @@ description: "Schuftest du noch oder automatisierst du schon? Heute gehts um die
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZDY1OWIwOGUtYTgzNy00NGI0LWI4YTYtZWI2YTA2ZGFhMTAz?sa=X&ved=2ahUKEwjsjMXi7bz5AhXdnf0HHTHSB4YQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/31-ich-automatisiere-mir-die-welt-wie-sie-mir-gef\xE4\
+image: "./31-ich-automatisiere-mir-die-welt-wie-sie-mir-gef\xE4\
   llt-mit-github-actions.jpg"
 length_second: 3675
 pubDate: 2022-08-09 04:00:00+00:00

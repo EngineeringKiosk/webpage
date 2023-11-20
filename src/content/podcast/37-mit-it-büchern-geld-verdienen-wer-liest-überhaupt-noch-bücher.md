@@ -65,7 +65,7 @@ description: "Lohnt es sich ein IT-Fachbuch zu schreiben? Es gibt zu jeder Softw
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NGQxNDliMjQtYmMxNi00M2MzLWE3YTYtZWNmNWZjOThmOWUz?sa=X&ved=2ahUKEwiCtLnZz6L6AhUun3IEHSOHAdoQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: "/images/podcast/episode/37-mit-it-b\xFCchern-geld-verdienen-wer-liest-\xFC\
+image: "./37-mit-it-b\xFCchern-geld-verdienen-wer-liest-\xFC\
   berhaupt-noch-b\xFCcher.jpg"
 length_second: 3621
 pubDate: 2022-09-20 04:00:00+00:00

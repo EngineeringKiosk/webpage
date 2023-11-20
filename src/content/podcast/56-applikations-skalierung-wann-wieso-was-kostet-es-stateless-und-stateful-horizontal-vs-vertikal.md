@@ -46,7 +46,7 @@ description: "Die App muss skalieren. Das kann doch nicht so schwer sein, oder? 
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/ZjRlOWVkN2MtNTMzOC00MGZkLWE0YjItMDQwZTcyNDA3OTky?sa=X&ved=2ahUKEwjnsJ7JovH8AhVdI2IAHVs1DHkQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/56-applikations-skalierung-wann-wieso-was-kostet-es-stateless-und-stateful-horizontal-vs-vertikal.jpg
+image: ./56-applikations-skalierung-wann-wieso-was-kostet-es-stateless-und-stateful-horizontal-vs-vertikal.jpg
 length_second: 3026
 pubDate: 2023-01-31 05:00:00+00:00
 rtlplus: ''

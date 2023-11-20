@@ -1,7 +1,14 @@
 ---
+import { Image } from "astro:assets";
+import { getEntry } from 'astro:content';
+
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
+
+// Podcast Episode images
+const episode85 = await getEntry('podcast', '85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher');
+const episode86 = await getEntry('podcast', '86-open-source-als-herz-einer-firma-mit-nextcloud-gründer-frank-karlitschek');
 
 let title = 'Werbung im Engineering Kiosk Podcast';
 let description = 'Erreiche die schwer erreichbare Zielgruppe von Softwareentwicklern und technischen Entscheidern im Engineering Kiosk Podcast.';
@@ -46,16 +53,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						<div class="flex flex-wrap lg:items-center -mx-4 my-8">
 							<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 								<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
-									<a href="/podcast/episode/86-open-source-als-herz-einer-firma-mit-nextcloud-gr%C3%BCnder-frank-karlitschek/#t=907">
-										<img src="/images/podcast/episode/86-open-source-als-herz-einer-firma-mit-nextcloud-gr%C3%BCnder-frank-karlitschek.jpg" alt="Episode 86: Open Source als Herz einer Firma mit Nextcloud Gründer Frank Karlitschek" class="w-full rounded-lg shadow-lg" />
+									<a href={`/podcast/episode/${episode86.slug}/#t=907`}>
+										<Image class="w-full rounded-lg shadow-lg" src={episode86.data.image} alt={`Episode ${episode86.data.title}`} title={`Episode ${episode86.data.title}`} />
 									</a>
 								</div>
 							</div>
 							<div class="w-full md:w-4/5 px-4">
-								<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"
-									>Episode 86</span>
+								<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+									Episode 86
+								</span>
 								<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tighter">
-									<a href="/podcast/episode/86-open-source-als-herz-einer-firma-mit-nextcloud-gr%C3%BCnder-frank-karlitschek/#t=907" class="hover:underline">Open Source als Herz einer Firma mit Nextcloud Gründer Frank Karlitschek</a>
+									<a href={`/podcast/episode/${episode86.slug}/#t=907`} class="hover:underline">
+										Open Source als Herz einer Firma mit Nextcloud Gründer Frank Karlitschek
 									</a>
 								</h1>
 								<p class="mb-6 text-lg md:text-xl text-coolGray-400 font-medium">Host-gelesene Werbung von Media Lab Bayern bei Minute 15:07</p>
@@ -65,16 +74,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						<div class="flex flex-wrap lg:items-center -mx-4 my-8">
 							<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 								<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
-									<a href="/podcast/episode/85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher/#t=697">
-										<img src="/images/podcast/episode/85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher.jpg" alt="Episode 85: Von Entwicklerin zur Engineering Managerin - Erfahrungen und Learnings mit Isabelle Glasmacher" class="w-full rounded-lg shadow-lg" />
+									<a href={`/podcast/episode/${episode85.slug}/#t=697`}>
+										<Image class="w-full rounded-lg shadow-lg" src={episode85.data.image} alt={`Episode ${episode85.data.title}`} title={`Episode ${episode85.data.title}`} />
 									</a>
 								</div>
 							</div>
 							<div class="w-full md:w-4/5 px-4">
-								<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"
-									>Episode 85</span>
+								<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+									Episode 85
+								</span>
 								<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tighter">
-									<a href="/podcast/episode/85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher/#t=697" class="hover:underline">Von Entwicklerin zur Engineering Managerin - Erfahrungen und Learnings mit Isabelle Glasmacher</a>
+									<a href={`/podcast/episode/${episode85.slug}/#t=697`} class="hover:underline">
+										Von Entwicklerin zur Engineering Managerin - Erfahrungen und Learnings mit Isabelle Glasmacher
 									</a>
 								</h1>
 								<p class="mb-6 text-lg md:text-xl text-coolGray-400 font-medium">Host-gelesene Werbung von trivago bei Minute 11:37</p>

@@ -51,7 +51,7 @@ description: "Was haben Lexer, Parser und Counter-Strike gemeinsam? Richtig! Ein
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NTQwYWZkNGYtZGU5Yy00NTIzLWJlNjItZjE0ZDEyZTI0Mjdk?sa=X&ved=2ahUKEwierqGd0vr6AhVpFmIAHU0WCGYQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/42-lexer-parser-und-open-source-in-counterstrike.jpg
+image: ./42-lexer-parser-und-open-source-in-counterstrike.jpg
 length_second: 3218
 pubDate: 2022-10-25 04:00:00+00:00
 rtlplus: ''

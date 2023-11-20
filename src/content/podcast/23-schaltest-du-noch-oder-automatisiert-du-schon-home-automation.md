@@ -58,7 +58,7 @@ description: "Machst du noch selbst das Licht an oder automatisiert du schon? In
   \ durch ihre Wohnung rennen."
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/NDdiNDNmMjYtMzQ1Ni00YmMxLWIwZTAtZWMyOGE1ZWEwZmRl?sa=X&ved=2ahUKEwiKkL-Alrn4AhUXB0QIHdtQCXMQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
-image: /images/podcast/episode/23-schaltest-du-noch-oder-automatisiert-du-schon-home-automation.jpg
+image: ./23-schaltest-du-noch-oder-automatisiert-du-schon-home-automation.jpg
 length_second: 3812
 pubDate: 2022-06-14 04:00:00+00:00
 rtlplus: ''

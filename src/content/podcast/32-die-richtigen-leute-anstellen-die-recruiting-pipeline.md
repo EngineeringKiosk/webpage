@@ -48,7 +48,7 @@ description: "Recruiting: Einer der wichtigsten Aufgaben einer Firma - Doch wora
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MWVmMzEwMWMtMWYzNi00NmQ1LTg1OTQtZWYyZTM5ODFmNWEz?sa=X&ved=2ahUKEwiyvMa20sr5AhWmkGoFHRKaARkQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/32-die-richtigen-leute-anstellen-die-recruiting-pipeline.jpg
+image: ./32-die-richtigen-leute-anstellen-die-recruiting-pipeline.jpg
 length_second: 3868
 pubDate: 2022-08-16 04:00:00+00:00
 rtlplus: ''

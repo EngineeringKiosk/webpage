@@ -1,5 +1,5 @@
 ---
-date: '2023-10-12T18:30:00+02:00'
+date: 2023-10-12T18:30:00+02:00
 location:
   name: 'Txture'
   address: 'SOHO2, Rooftop, Grabenweg 68, 6020 Innsbruck, Austria'

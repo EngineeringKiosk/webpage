@@ -71,7 +71,7 @@ description: "Meetups und Konferenzen: Ein wichtiger Bestandteil der Tech-Commun
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/MzAwNzYwMGYtYjNkNS00NWRiLTg4YzItZDUwMWVmZjMyYjQx?sa=X&ved=2ahUKEwjFjIyQ75X5AhUun3IEHe8YA_kQkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/29-die-andere-seite-meetups-konferenzen-organisieren.jpg
+image: ./29-die-andere-seite-meetups-konferenzen-organisieren.jpg
 length_second: 4128
 pubDate: 2022-07-26 04:00:00+00:00
 rtlplus: ''

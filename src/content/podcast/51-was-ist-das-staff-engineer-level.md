@@ -58,7 +58,7 @@ description: "Was ist ein Staff-Engineer und wo ist der essentielle Unterschied 
 google_podcasts: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tLzBlY2ZkZmQ3LWZkYTEtNGMzZC05NTE1LTQ3NjcyN2Y5ZGY1ZQ/episode/Yjc0NTM1ODctYTBkYS00OTg5LWJmNzYtM2QyNDg0OGEyYzhh?sa=X&ved=2ahUKEwjaoeXtr5n8AhWDFmIAHeULDX0QkfYCegQIARAF
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback
   (gerne auch als Voice Message)
-image: /images/podcast/episode/51-was-ist-das-staff-engineer-level.jpg
+image: ./51-was-ist-das-staff-engineer-level.jpg
 length_second: 3101
 pubDate: 2022-12-27 05:00:00+00:00
 rtlplus: ''
