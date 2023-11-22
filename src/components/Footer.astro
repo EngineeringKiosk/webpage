@@ -1,7 +1,8 @@
 ---
 import Matomo from './Matomo.astro';
+import { Image } from "astro:assets";
 
-// Static website footer
+import engineeringKioskLogo from "../images/logos/engineering-kiosk-logo.png";
 
 const year = new Date().getFullYear();
 ---
@@ -11,7 +12,7 @@ const year = new Date().getFullYear();
 		<div class="flex flex-wrap pt-24 pb-12 -mx-4">
 			<div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-16 lg:mb-0">
 				<a class="inline-block mb-4" href="/" title="Engineering Kiosk Startseite">
-					<img class="h-8" src="/images/logos/engineering-kiosk-logo.png" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
+					<Image class="h-8" height="32" src={engineeringKioskLogo} alt="Engineering Kiosk Logo" title="Engineering Kiosk" />
 				</a>
 				<p class="text-base md:text-lg text-coolGray-500 font-medium lg:w-64">
 					Engineering Kiosk – Der deutschsprachige Software-Engineering-Podcast mit <a href="/kiosk-betreiber/wolfgang-gassler/">Wolfi Gassler</a> und <a href="/kiosk-betreiber/andy-grunwald/">Andy Grunwald</a>.

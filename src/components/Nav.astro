@@ -5,6 +5,9 @@ export interface Props {
 
 import { getCollection } from "astro:content";
 import podcastInfo from '../data/podcast-info.json';
+import { Image } from "astro:assets";
+
+import engineeringKioskLogo from "../images/logos/engineering-kiosk-logo.png";
 
 const { title } = Astro.props;
 
@@ -22,7 +25,7 @@ let episode = episodesToShow[0];
 			<div class="flex justify-between items-center w-full">
 				<div>
 					<a href="/" title="Engineering Kiosk Startseite">
-						<img class="h-8" src="/images/logos/engineering-kiosk-logo.png" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
+						<Image class="h-8" height="32" src={engineeringKioskLogo} alt="Engineering Kiosk Logo" title="Engineering Kiosk" />
 					</a>
 				</div>
 				<div class="hidden md:block">
@@ -86,7 +89,7 @@ let episode = episodesToShow[0];
 				<nav class="relative p-6 h-full overflow-y-auto">
 					<div class="flex flex-col justify-between h-full">
 						<a class="inline-block" href="/" title="Engineering Kiosk Startseite">
-							<img class="h-8" src="/images/logos/engineering-kiosk-logo.png" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
+							<Image class="h-8" height="32" src={engineeringKioskLogo} alt="Engineering Kiosk Logo" title="Engineering Kiosk" />
 						</a>
 						<ul class="py-6">
 							<li>
