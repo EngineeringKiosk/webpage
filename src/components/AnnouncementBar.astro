@@ -9,7 +9,7 @@ export interface Props {
 const { message, link, showStart, showEnd } = Astro.props;
 ---
 
-<section id="announcmentBar" class="py-6 bg-coolGray-900 overflow-hidden bg-opacity-75" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center; background-size: cover; display:none;">
+<section id="announcementBar" class="py-6 bg-coolGray-900 overflow-hidden bg-opacity-75" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center; background-size: cover; display:none;">
 	<div class="container px-3 mx-auto text-center">
 		<a href={link} class="text-darkCoolGray-50 font-semibold text-xl">
 			{message}
@@ -19,8 +19,7 @@ const { message, link, showStart, showEnd } = Astro.props;
 
 <script define:vars={{ showStart, showEnd }}>
 	const now = new Date();
-	console.log(showStart, showEnd);
 	if (now < new Date(showEnd) && now > new Date(showStart)) {
-		document.getElementById('announcmentBar').style.display = 'block';
+		document.getElementById('announcementBar').style.display = 'block';
 	}	
 </script>
