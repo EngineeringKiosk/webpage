@@ -47,7 +47,9 @@ const { headline, meetupsToShow, archive } = Astro.props
 						</div>
 					)}
 				</div>
-				<MeetupEvent event={meetup} />
+        {meetup && meetup.talks && meetup.talks[0] && meetup.talks[0].name && meetup.talks[0].title && meetup.location.name && meetup.location.address && (
+				    <MeetupEvent event={meetup} />
+        )}
 			</>
 		))
 	}

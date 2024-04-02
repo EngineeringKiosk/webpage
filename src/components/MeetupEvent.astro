@@ -5,8 +5,8 @@ export interface Props {
 
 const { event } = Astro.props;
 
-const description = `Talks: ${event.talks.map((talk) => `"${talk.title}" by ${talk.name}`).join(', ')}`;
-const performer = event.talks.map((talk) => {
+const description = `Talks: ${event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => `"${talk.title}" by ${talk.name}`).join(', ')}`;
+const performer = event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => {
   return {
     "@type": "Person",
     "name": talk.name
@@ -21,17 +21,17 @@ const endDateString = endDate.toISOString();
 const schema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": `Engineering Kiosk Alps @ ${event.location.name}`,
+  "name": `Engineering Kiosk Alps @ ${(event.location && event.location.name) || 'tba'}`,
   "startDate": startDateString,
   "endDate": endDateString,
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "Place",
-    "name": event.location.name,
+    "name": (event.location && event.location.name) || 'tba',
     "address": {
       "@type": "PostalAddress",
-      "name": event.location.address
+      "name":(event.location && event.location.address) || 'tba',
     }
   },
   "description": description,
