@@ -11,6 +11,7 @@ import { Image } from "astro:assets";
 
 import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
 import { getNextMeetup } from '../../../scripts/meetups.js';
+import Sponsors from '../../../components/meetup-alps/Sponsors.astro';
 
 // Current Meetup
 const bufferDays = 2 // wait 2 days after meetup before showing next meetup
@@ -169,6 +170,8 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 			<Newsletter />
 
 			<Discord />
+
+			<Sponsors />
 
 			<Team />
 
