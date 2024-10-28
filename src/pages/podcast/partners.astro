@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 
-import Footer from '../components/Footer.astro';
-import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
 
 let title = 'Unsere aktuellen Werbepartner';
 let description = 'Unsere aktuellen Werbepartner im Engineering Kiosk Podcast.';
@@ -28,14 +28,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="flex flex-wrap lg:items-start -mx-4 my-8">
 								<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 									<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
-										<a href="https://it-jobs.aldi-sued.de/">
+										<a href="https://jump.engineeringkiosk.dev/aldi">
 											<Image class="w-full rounded-lg shadow-lg" src={(await import(`../images/partners/aldi-sued.png`)).default} alt="ALDI SÜD" title="ALDI SÜD" />
 										</a>
 									</div>
 								</div>
 								<div class="w-full md:w-4/5 px-4">
 									<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tighter">
-										<a href="https://it-jobs.aldi-sued.de/" class="hover:underline">
+										<a href="https://jump.engineeringkiosk.dev/aldi" class="hover:underline">
 											ALDI SÜD
 										</a>
 									</h1>

@@ -1920,6 +1920,10 @@ to = "/podcast/episode/146-warum-ist-doom-so-faszinierend-für-die-software-entw
 status = 301
 force = true
 
+[[redirects]]
+from = "partner*"
+to = "/podcast/partners"
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
