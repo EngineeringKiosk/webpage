@@ -89,7 +89,6 @@ speaker:
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/02xiPxzjxOZiDKOFZkWEGO
 tags:
-- Open Source
 - Kommunikation
 - Interview
 title: '#141 Datenjournalismus - zwischen Grafik und Fakten mit Michael Kreil'

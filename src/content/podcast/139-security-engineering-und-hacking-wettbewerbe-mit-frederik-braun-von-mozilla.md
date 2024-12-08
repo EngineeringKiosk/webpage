@@ -77,7 +77,6 @@ speaker:
 spotify: https://open.spotify.com/episode/4DTxwdltWMmxxL6VBKvjHc
 tags:
 - Software Engineering
-- Open Source
 - Interview
 - Sicherheit
 title: '#139 Security Engineering und Hacking-Wettbewerbe mit Frederik Braun von Mozilla'

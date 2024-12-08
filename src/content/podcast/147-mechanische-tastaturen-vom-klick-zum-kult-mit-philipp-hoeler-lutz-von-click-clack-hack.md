@@ -89,7 +89,6 @@ speaker:
 spotify: https://open.spotify.com/episode/5Mxu1qgHVPFmKafPa2SSQE
 tags:
 - Tech Kultur
-- Open Source
 - Interview
 title: '#147 Mechanische Tastaturen: Vom Klick zum Kult mit Philipp Hoeler-Lutz von
   Click! Clack! Hack!'
