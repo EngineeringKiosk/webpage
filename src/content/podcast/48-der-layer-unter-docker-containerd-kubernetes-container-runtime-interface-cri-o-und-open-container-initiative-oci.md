@@ -67,7 +67,6 @@ spotify: https://open.spotify.com/episode/3K3nMEPuTCd6sxi4JQXIVO
 tags:
 - Backend
 - DevOps
-- Open Source
 - Cloud
 title: '#48 Der Layer unter Docker: containerd, Kubernetes, Container Runtime Interface,
   CRI-O und Open Container Initiative (OCI)'
