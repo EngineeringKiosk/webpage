@@ -83,7 +83,6 @@ spotify: https://open.spotify.com/episode/5DIzNhGilzQ7Yo1syMdzf8
 tags:
 - Tech Kultur
 - Software Engineering
-- Open Source
 - "Produktivit\xE4t"
 - Interview
 title: "#79 Font-Engineering und Schriftarten f\xFCrs Programmieren mit Philipp Acsany"
