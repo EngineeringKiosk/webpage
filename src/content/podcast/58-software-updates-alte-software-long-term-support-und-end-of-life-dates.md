@@ -66,7 +66,6 @@ speaker:
 spotify: https://open.spotify.com/episode/4Sjrlt6gqfIsDdUDdyRexi
 tags:
 - Software Engineering
-- Open Source
 - "Software Qualit\xE4t"
 title: '#58 Software-Updates, alte Software, Long Term Support und End of Life-Dates'
 transcript_raw: src/data/transcripts/58-transcript.zip

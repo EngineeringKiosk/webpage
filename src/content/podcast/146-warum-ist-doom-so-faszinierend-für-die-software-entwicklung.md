@@ -103,7 +103,6 @@ speaker:
 spotify: https://open.spotify.com/episode/2FWb4BvTAE7tYF5Tq2niim
 tags:
 - Software Engineering
-- Open Source
 title: "#146 Warum ist Doom so faszinierend f\xFCr die Software-Entwicklung?"
 transcript_raw: src/data/transcripts/146-transcript.zip
 transcript_slim: src/data/transcripts/146-transcript-slim.json
