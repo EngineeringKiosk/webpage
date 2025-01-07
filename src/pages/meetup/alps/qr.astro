@@ -1,0 +1,53 @@
+---
+import Footer from '../../../components/Footer.astro';
+import MainHead from '../../../components/MainHead.astro';
+import Nav from '../../../components/Nav.astro';
+import Team from '../../../components/meetup-alps/Team.astro';
+
+
+let title = 'Meetup Alps - Engineering Kiosk - Innsbruck - QR';
+let description = `Tech Meetup in Innsbruck: Brings together tech enthusiasts, engineers, developers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
+
+const redirectPath = '/meetup/alps/'
+Astro.redirect(redirectPath)
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/meetup/alps/images/ibk.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="py-2 md:py-28">
+					<div class="container px-4 mx-auto">
+						<div class="flex flex-wrap xl:items-center -mx-4">
+							<div class="w-full md:w-1/2 px-4 mb-2 md:mb-16 md:mb-0">
+								<h1>
+									<div>
+										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Innsbruck</span>
+									</div>
+									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">QR Placeholder</span>
+								</h1>
+								<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
+									Redirect Site to {redirectPath} ...
+								</p>
+					
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<Team />
+
+			<Footer />
+		</div>
+	</body>
+</html>
