@@ -79,7 +79,6 @@ spotify: https://open.spotify.com/episode/6NiUofGRvIYQV0arsK6QFh
 tags:
 - DevOps
 - Datenbanken
-- Open Source
 title: "#54 Key Value Store Redis: Einsatzm\xF6glichkeiten, Fallstricke, Datenstrukturen,\
   \ HyperLogLog und (fl\xFCchtige) Persistenz"
 transcript_raw: src/data/transcripts/54-transcript.zip

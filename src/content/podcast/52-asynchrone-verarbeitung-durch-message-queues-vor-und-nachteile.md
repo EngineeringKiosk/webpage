@@ -73,7 +73,6 @@ spotify: https://open.spotify.com/episode/0LmFRcBMaZGonYPSE1x15j
 tags:
 - Backend
 - Software Engineering
-- Open Source
 title: '#52 Asynchrone Verarbeitung durch Message Queues - Vor- und Nachteile'
 transcript_raw: src/data/transcripts/52-transcript.zip
 transcript_slim: src/data/transcripts/52-transcript-slim.json

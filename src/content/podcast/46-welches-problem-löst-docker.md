@@ -63,7 +63,6 @@ spotify: https://open.spotify.com/episode/73X8j3ZGWK5lU0FlWmsQgx
 tags:
 - Backend
 - DevOps
-- Open Source
 title: "#46 Welches Problem l\xF6st Docker?"
 transcript_raw: src/data/transcripts/46-transcript.zip
 transcript_slim: src/data/transcripts/46-transcript-slim.json
