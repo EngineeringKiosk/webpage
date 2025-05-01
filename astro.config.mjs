@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
@@ -12,10 +12,13 @@ export default defineConfig({
 	trailingSlash: 'always',
 
 	integrations: [
-		tailwind(),
 		sitemap({
 			filter: (page) => !exludeFromSitemap.some((path) => page.includes(path)),
 		}),
 		mdx(),
 	],
+
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
