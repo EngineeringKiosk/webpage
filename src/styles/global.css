@@ -2,26 +2,16 @@
 @import './theme.css';
 
 @layer base {
-	body {
-		font-family: 'Spectral', serif;
-		line-height: 1.4;
-	}
-
 	p {
-		line-height: 2;
+		@apply leading-loose;
 	}
 
 	img {
-		max-width: 100%;
-		height: auto;
+		@apply max-w-full h-auto;
 	}
 
 	.wrapper {
-		max-width: 60rem;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		@apply max-w-[60rem] mx-auto px-[2rem];
 	}
 
 	.hostpreview .description a {
