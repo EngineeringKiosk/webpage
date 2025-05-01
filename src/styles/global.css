@@ -1,27 +1,30 @@
-@config "./tailwind.config.cjs";
+@import 'tailwindcss';
+@import './theme.css';
 
-body {
-	font-family: 'Spectral', serif;
-	line-height: 1.4;
-}
+@layer base {
+	body {
+		font-family: 'Spectral', serif;
+		line-height: 1.4;
+	}
 
-p {
-	line-height: 2;
-}
+	p {
+		line-height: 2;
+	}
 
-img {
-	max-width: 100%;
-	height: auto;
-}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 
-.wrapper {
-	max-width: 60rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
+	.wrapper {
+		max-width: 60rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 
-.hostpreview .description a {
-	@apply text-yellow-500;
+	.hostpreview .description a {
+		@apply text-yellow-500;
+	}
 }
