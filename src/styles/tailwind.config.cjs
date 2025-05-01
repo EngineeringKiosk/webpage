@@ -291,10 +291,9 @@ module.exports = {
 			full: '100%',
 			screen: '100vh',
 		}),
-		inset: (theme, { negative }) => ({
+		inset: (theme) => ({
 			auto: 'auto',
 			...theme('spacing'),
-			...negative(theme('spacing')),
 			'1/2': '50%',
 			'1/3': '33.333333%',
 			'2/3': '66.666667%',
@@ -339,10 +338,9 @@ module.exports = {
 			disc: 'disc',
 			decimal: 'decimal',
 		},
-		margin: (theme, { negative }) => ({
+		margin: (theme) => ({
 			auto: 'auto',
 			...theme('spacing'),
-			...negative(theme('spacing')),
 		}),
 		maxHeight: {
 			full: '100%',
