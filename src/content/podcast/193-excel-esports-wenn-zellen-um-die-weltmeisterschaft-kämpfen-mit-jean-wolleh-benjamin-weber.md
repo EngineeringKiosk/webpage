@@ -106,7 +106,7 @@ tags:
 title: "#193 Excel eSports: Wenn Zellen um die Weltmeisterschaft k\xE4mpfen mit Jean\
   \ Wolleh & Benjamin Weber"
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/193-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SGFNjsG7lgQ
 
 ---
