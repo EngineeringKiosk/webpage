@@ -71,7 +71,9 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/1Zn2WYPFQPxKhIOeZdeype
 tags: []
 title: '#194 Was wurde aus MapReduce und der funktionalen Eleganz in verteilten Systemen?'

@@ -1,0 +1,857 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3614,
+  "audio_url": "https://cloud.inlupus.at/s/iEw4SLBFKTfzikS/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.92027014,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "bc3e53d0-9acb-4309-8e46-3a43d7b11efd",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "confidence": 0.93498343,
+      "end": 97296,
+      "speaker": "A",
+      "start": 3440,
+      "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk. Im Jahr zwei tausend vier war die Verarbeitung von großen Datenmengen eine richtige Herausforderung. Einige Firmen hatten dafür sogenannte Supercomputer, andere haben nur mit der Schulter gezuckt und auf das Ende ihrer Berechnung gewartet. Google war einer der Player, der zwar große Datenmengen hatte und diese auch verarbeiten wollte, jedoch keine Supercomputer zur Verfügung hatte oder besser gesagt nicht das Geld in die Hand nehmen wollte. Was macht man also, wenn man ein Problem hat? Natürlich eine Lösung suchen. Das hat Jeffrey Dean und sein Team getan. Das ein revolutionäres Paper, wie man mittels MapReduce große Datenmengen verteilt auf einfacher Commodity Hardware verarbeiten kann. In dieser Podcast Episode schauen wir uns das Ganze mal genauer an. Wir klären, was MapReduce ist, wie es funktioniert, warum MapReduce so revolutionär war, wie es mit Hardwareausfällen umgegangen ist, welche Herausforderungen es in der Praxis hatte bzw. Immer noch hat, was das Google Filesystem, Hadoop und HDFS damit zu tun haben und ordnen MapReduce im Kontext der heutigen Technologien mit Cloud Co ein. Eine weitere Episode Papers we love. Wir starten. Los geht's. Das heutige Thema wurde vom Wolfgang vorgeschlagen. Also es läuft eigentlich wie folgt irgendjemand hat eine Idee, pitcht das in unserem Chat und dann iterieren wir zwei, drei mal drüber. Wir challengen uns gegenseitig mal so ein bisschen, weil ab und zu ist der eine nicht ganz so konvinz von dem Thema und ab und zu ist der andere nicht ganz so Fan davon."
+    },
+    {
+      "confidence": 0.9551129,
+      "end": 99456,
+      "speaker": "B",
+      "start": 97328,
+      "text": "Und dann ab und zu ist gut."
+    },
+    {
+      "confidence": 0.90383345,
+      "end": 154298,
+      "speaker": "A",
+      "start": 99608,
+      "text": "Ab und zu eigentlich fast immer. Aber am Ende nach einer Aufnahme sagt dann der eine oder andere doch schon okay, war eine coole Folge. Das heutige Thema hat so ein bisschen Opa erzählt vom Krieg Vibes, denn immer wenn wir auch eine Folge vorbereiten, haben wir so ein Vorbereitungsdokument, wo wir so ein paar Stichwörter reinpacken, so eine grobe Agenda, so einen roten Faden machen. Und Wolfgang hat da ein bisschen was zusammengetackert. Und ohne jetzt zu viel irgendwie zu verraten, um was es eigentlich heute geht, fängt das Notizendokument an mit leere Wolfi Legacy verdient das Geld und Thema X wurde zwanzig Jahre alt. Drei Sätze weiter. Eigentlich ist es aber sechzig Jahre alt. Und in der kurzen Vorbesprechung, die wir vor der Aufnahme hatten, sagte Wolfgang zu meinen Zeiten hat das noch nicht gegeben. Also irgendwie ist das Thema halt so ein bisschen Opa erzählt vom Krieg. Deswegen Wolfgang, worum geht es heute?"
+    },
+    {
+      "confidence": 0.93153965,
+      "end": 194934,
+      "speaker": "B",
+      "start": 154474,
+      "text": "Wie ein Freund von mir immer gesagt hat, den wir ja auch schon mal interviewt haben in Dominik Bacher, der hat zu unseren Zeiten im Dokorat schon immer gesagt, es gibt eigentlich nur so sieben, acht Probleme in der Informatik und die wiederholen sich einfach ständig und die werden immer wieder erfunden und immer wird irgendwas neues erfunden, basierend auf den guten alten Dingen, die wir ja auch teilweise schon besprochen haben bei den Turing Award Gewinnern und so weiter. Also es ist irgendwie alles, was sich so entwickelt, basiert natürlich immer auf Erfindungen, die es meistens so in der Informatik halt einfach in den er, er und er Jahren gegeben hat. Und auch das Thema heute Map Reduce kommt eigentlich aus den er Jahren."
+    },
+    {
+      "confidence": 0.81917,
+      "end": 200250,
+      "speaker": "A",
+      "start": 194992,
+      "text": "Ich habe schon die erste Frage heißt das Map Reduce oder heißt das Map and reduce?"
+    },
+    {
+      "confidence": 0.9307757,
+      "end": 212906,
+      "speaker": "B",
+      "start": 200330,
+      "text": "Ja, das kommt jetzt darauf an, was du genau meinst. Das klassische MapReduce, was das Google Paper ist, aus zwei tausend vier, das heißt einfach MapReduce. Das haben die damals so definiert, die guten Jungs von Google."
+    },
+    {
+      "confidence": 0.95691156,
+      "end": 217066,
+      "speaker": "A",
+      "start": 213058,
+      "text": "Aber umgangssprachlich hast du auch schon mal öfter Map and Reduce gehört, oder?"
+    },
+    {
+      "confidence": 0.9015318,
+      "end": 232964,
+      "speaker": "B",
+      "start": 217138,
+      "text": "Naja, es ist ja auch immer, dass du zuerst ein Map machst und dann ein Reduce. Also kannst du ja gerne und dazwischen setzen, gar kein Problem. Sei dir gegönnt, wenn du das und gerne hättest, Andi, setz es um dazwischen. Du bist ja kein JavaScript Entwickler, sonst würdest du ja ständig eigentlich MapReduce machen."
+    },
+    {
+      "confidence": 0.95008326,
+      "end": 246724,
+      "speaker": "A",
+      "start": 233012,
+      "text": "Wir sind ja auch offen hier und wir machen den Podcast ja auch, weil wir lernen wollen. Und wir kriegen ja auch immer sehr gutes Feedback aus unserer Community. Ich bin da nur sehr genau, weil immer wenn ich Postgr sage oder Postgres, kriege ich immer von irgendwem einen auf die Mütze."
+    },
+    {
+      "confidence": 0.922885,
+      "end": 249220,
+      "speaker": "B",
+      "start": 246852,
+      "text": "Das eine ist halt einfach richtig und das andere falsch."
+    },
+    {
+      "confidence": 0.9456604,
+      "end": 257070,
+      "speaker": "A",
+      "start": 249300,
+      "text": "Das ist korrekt, aber ich kriege es halt nicht hin. Wir könnten auch darüber streiten, heißt es GIF, GIF oder JIT oder GIT oder ähnliches."
+    },
+    {
+      "confidence": 0.93835324,
+      "end": 272378,
+      "speaker": "B",
+      "start": 257490,
+      "text": "Deswegen frage ich eine richtige und eine falsche Variante. Aber MapReduce ist ja nichts anderes als zwei Funktionsnamen, die es eben in den ERN schon gegeben hat. Insofern ist es ja nur die Aneinanderreihung von zwei Funktionsnamen."
+    },
+    {
+      "confidence": 0.921134,
+      "end": 338858,
+      "speaker": "A",
+      "start": 332474,
+      "text": "Also Opa, dann fang doch mal bitte mit deinem Thema heute an. Erklär mir mal, warum du das Thema erstmal auf den Tisch gebracht hast."
+    },
+    {
+      "confidence": 0.93856305,
+      "end": 386942,
+      "speaker": "B",
+      "start": 338954,
+      "text": "Ja, nachdem ich ja auch aus der akademischen Welt komme, ist ja für mich Schönheit was ganz cooles. Also so ein schönes Konzept in der Informatik, was man immer wieder anwenden kann, was nicht so Hype Thema ist, sondern wirklich ein Grundkonzept, eine schöne Architektur, die ewig Anwendung finden wird. Auch wenn klassische Mapreduce Paper aus zwei tausend vier ist, aber es findet eigentlich immer noch Anwendung und ist immer noch ein großes Thema. Und auch Hadoop wird heutzutage sicherlich noch in neunzig Prozent der größeren Firmen irgendwo verwendet. Also es ist schon ein großes Thema und wenn man so Grundkonzepte verstanden hat, dann kann man die halt auch anwenden. In dem Fall ist es halt einfach so ein Grundkonzept, wie Verteilung funktioniert und wie man Daten verteilt und parallel verarbeitet."
+    },
+    {
+      "confidence": 0.897237,
+      "end": 401406,
+      "speaker": "A",
+      "start": 387006,
+      "text": "Du bist schon voll drin. Erzähl mir mal bitte, was ist MapReduce und erklär mir das mal bitte so, als wäre ich ein Fünfjähriger, denn du erzählst irgendwas von Verteilung, von einem groß angelegten Einsatz in vielen Firmen. Was ist das denn überhaupt?"
+    },
+    {
+      "confidence": 0.9411512,
+      "end": 434374,
+      "speaker": "B",
+      "start": 401438,
+      "text": "Das kannst jetzt auch nur du fragen, weil alle anderen, die schon JavaScript programmieren, die sagen jetzt ja klar, es gibt die Map Function, die mappt mir alle Elemente von der Liste auf irgendeine Funktion und dann gibt es die Reduce Function, wo ich ganz viele Werte auf einen Wert reduzieren kann. Und genau darum geht es eigentlich. Also das ist die Grundidee. Nur damals zwei tausend vier, wie das Google rausgebracht hat, das Paper, was wirklich Wellen geschlagen hat, ist es natürlich darum gegangen, wie kann ich große Datenmengen auf normaler Hardware möglichst einfach und schnell verarbeiten und verteilen. Darum kommt es auch aus dem Hause Google."
+    },
+    {
+      "confidence": 0.95237285,
+      "end": 441454,
+      "speaker": "A",
+      "start": 434482,
+      "text": "Hättest du den letzten Satz nicht gesagt, hätte ich gesagt, Wolfgang, streng dich mal bitte an, denn du kannst nicht MapReduce mit MapReduce beschreiben, das funktioniert so nicht."
+    },
+    {
+      "confidence": 0.926958,
+      "end": 487770,
+      "speaker": "B",
+      "start": 441542,
+      "text": "Es ist auch bisschen eigenartig, weil ich kann mich noch erinnern, wie damals zum ersten mal dieses Paper gelesen habe, das war ja wirklich revolutionär, würde ich fast sagen. Und damals war Map und Reduce eigentlich fast kein Begriff. Also damals hat es ja nur die klassische Programmierung in C und Java und so weiter gegeben und das MapReduce kam damals nicht vor. Heutzutage jetzt mit JavaScript verwendet ja wirklich jeder Map und Reduce, aber wer hat denn damals Lisp programmiert oder Haskell oder sowas, wo die Konzepte ja auch herkommen aus der funktionalen Programmierung und das ganze kam ja dann erst später mit Haskell und dass Java auch mehr funktional ist, dass das einfach in den normalen Programmieralltag, würde ich mal sagen, überhaupt reingekommen ist. Und damals war das wirklich neu, da hat man noch erklären müssen, was ist denn Map und was ist Reduce, so wie du jetzt die Frage stellst."
+    },
+    {
+      "confidence": 0.92852235,
+      "end": 513484,
+      "speaker": "A",
+      "start": 487850,
+      "text": "Jetzt muss ich dir aber trotzdem auf die Füße treten, weil du redest die ganze Zeit von JavaScript und ja, ich weiß, dass es eine Map Funktion und eine Reduce Funktion in JavaScript gibt, aber auf der anderen Seite findet das natürlich alles immer nur auf einem Computer statt und allem drum und dran und in einem Prozess. Aber du hast gerade schon gesagt, OK, verteilte Berechnung, irgendein Paper von Google und Co. Deswegen bin ich mir nicht ganz sicher, ob der Vergleich mit der Map and Reduce Funktion von JavaScript wirklich so standhält hier in diesem Podcast."
+    },
+    {
+      "confidence": 0.93159425,
+      "end": 588038,
+      "speaker": "B",
+      "start": 513612,
+      "text": "Ja, im Prinzip ist es dasselbe. Also du hast eigentlich eine Map Phase und eine Reduce Phase. Und damals bei Google war das natürlich der Klassiker. Ich habe ganz viele Webseiten, ganz viele Daten und ich möchte jetzt die Daten indexieren. Das heißt, ich möchte wissen, in welchen Dateien kommt Andi vor. Und üblicherweise muss ich da mal durch alle meine Dateien durch, durch alle meine Webseiten checken, wo steht Andi und dann mir merken, Index, in welchen Dateien kommt der Suchbegriff Andi überhaupt vor? Und da hast du genau diese zwei Schritte. Die Map Funktion, die im Prinzip alle Wörter aus einer Datei herausnimmt zum Beispiel. Und dann die reduce Funktion, die okay, bekomme jetzt von acht verschiedenen Dokumenten die Info, da kommt Andi drin vor. Das heißt, ich reduziere das auf einen Index. Das heißt, ich speichere mir dann ab, der Andi kommt in id acht, zwölf und achtzehn vor. Und genau da hast du diesen MapReduce Step und den hat Google genommen und hat den verteilt und parallelisiert. Und das so, dass man möglichst einfach solche MapReduce Jobs auf tausenden Nodes ausrollen kann und parallel rechnen kann. Also es geht wirklich um Verarbeitung von ganz großen Datenmengen auf sehr, sehr vielen Nodes."
+    },
+    {
+      "confidence": 0.94352186,
+      "end": 594038,
+      "speaker": "A",
+      "start": 588134,
+      "text": "Und warum war das zwei tausend vier so revolutionär? Warum hat jeder gesagt, boah, Hut ab?"
+    },
+    {
+      "confidence": 0.9337281,
+      "end": 679604,
+      "speaker": "B",
+      "start": 594174,
+      "text": "Weil das Konzept so einfach war. Es gab ja damals kein Konzept oder keine Tools, wo du ganz einfach irgendwas parallelisieren konntest. Es gab die Supercomputer und dann gab es so die Bewegung, die ja von Google auch ausging, dass man mit möglichst einfacher Hardware, mit normalen PCs, die man aufsetzt, da auch parallelisieren kann. Also dass man wirklich in die Breite geht bei der Parallelisierung. Und der Jeff Dean, der das damals auch entwickelt hat, hat die erste Version wirklich mit paar hundert Zeilen C Code und drei Klassen entwickelt und hat dadurch schon geschafft, das Ganze zu verteilen. Und die Grundidee und das Smarte, was damals eigentlich war, ist, dass man eben nicht irgendwie ein sehr komplexes Programm, komplexe Plattform entwickelt, die das Ganze verteilt und dann prüft, wo was stattfindet, sondern dass man ein Problem in ganz kleine Subprobleme zerteilt. Und jedes Subproblem ist unabhängig. Das ist ja der Klassiker in der funktionalen Welt. Wenn du eine Funktion aufrufst, hat die keine side Effects. Du kannst sie so oft aufrufen, wie du willst. Du kannst sie aufrufen auf verschiedenen Rechnern im Idealfall. Alles ist unabhängig voneinander. Und dieses Konzept hat Google bzw. Jeff Dean und die Autoren von dem Paper damals auf die Parallelisierung übertragen, dass man die einzelnen Jobs, die man hat, komplett unabhängig betrachtet. Und die kann man dann einfach ganz dumm auf tausende Nodes ausrollen und jeder Node rechnet einen kleinen Teil und dann kommt das Ergebnis wieder zurück über die Reduce Funktion."
+    },
+    {
+      "confidence": 0.92802477,
+      "end": 709386,
+      "speaker": "A",
+      "start": 679652,
+      "text": "Ich kann mich noch daran erinnern, dass Google ja bekannt dafür war, nicht mit teuren Dell Hardware Servern zu starten, sondern eher mit Commodity Hardware. Und das klingt ja eigentlich nur die Fortführung dessen, das was du geschrieben hast, ganz normale Hardware, wo Berechnungen drauf verteilt werden. Meine nächste Frage wäre jetzt eigentlich, okay, wo kriegen denn diese Berechnungen ihre Daten eigentlich her? Weil bei einer JavaScript Funktion, da habe ich eine Liste und mache dann Liste Map. Das bedeutet, da chain ich die zusammen. Aber wenn die ganze Sache verteilt ist."
+    },
+    {
+      "confidence": 0.9221364,
+      "end": 809524,
+      "speaker": "B",
+      "start": 709458,
+      "text": "Also auch da wieder hat man ganz simpel gesagt, okay, ich habe ganz viele Dateien und ich führe dieses Map auf eine Datei aus. Das heißt dasselbe wie in einer Liste normalen Map Aufrufe und auf jedes Element in dieser Liste wird die Funktion aufgerufen. Über Map wird in dem Fall auf jede Datei, auf jede Webseite, wenn wir wieder über Indexierung sprechen, auf jede Webseite wird einmal Map ausgeführt und dieses Map holt sich dann alle Texte aus dieser Webseite zum Beispiel heraus und schickt sie dann weiter. Also wirklich diese rudimentäre kleine Job, den man machen muss bei Map teilweise ganz dumm, das ist nichts anderes als ich zerlege die Webseite in die einzelnen Wörter und sende das dann weiter. Und das war eigentlich die smarte Idee, einfach auf möglichst kleine Jobs zu setzen, weil damit habe ich einfach viel, viel weniger Aufwand mit dem ganzen überprüfen, als wenn ich irgendwelche komplexen Dinge habe, die verwalten muss, mir merken muss, wo läuft was genau auf welcher Datei und wie und was. Also es ging wirklich darum, das möglichst einfach zu machen. Und die hatten damals wirklich bei Google die Möglichkeit, dann große speed ups zu erreichen. Also wir sprechen da ja von dem Zeitalter, da gab es eigentlich noch fast kein Gigabit Netzwerk. Die Google Cluster, die da in dem Paper erwähnt sind, arbeiten glaube ich mit ein hundert Mbit, wenn ich das richtig im Kopf habe. Das sind so Rechner gewesen, die vier GB RAM gehabt haben und so ein hundert, sechzig gb Festplatte dran. Also wir sprechen da schon von anderen Zeiten. Und die haben damals wirklich erreicht, zum Beispiel Durchsätze von dreiig Gb die Sekunde zu erreichen und das wirklich bei ein hundert Mbit Ethernet. Also das waren schon ganz extreme Werte für die damalige Zeit."
+    },
+    {
+      "confidence": 0.91298175,
+      "end": 816468,
+      "speaker": "A",
+      "start": 809612,
+      "text": "Ich muss gerade stark grinsen. Weil du beweist gerade den Opa erzählt vom Krieg Vibe. Ein hundert Mbit gigabit gab es noch nicht."
+    },
+    {
+      "confidence": 0.9328393,
+      "end": 824484,
+      "speaker": "B",
+      "start": 816604,
+      "text": "Ich war gerade kurz bei einer Veranstaltung, so mit siebzig Leuten und da war die Frage, wer kennt noch Kassar und so? Und Lime wird das Ding heißen."
+    },
+    {
+      "confidence": 0.799535,
+      "end": 825604,
+      "speaker": "A",
+      "start": 824532,
+      "text": "Zum Limewire."
+    },
+    {
+      "confidence": 0.8948396,
+      "end": 831508,
+      "speaker": "B",
+      "start": 825652,
+      "text": "Limewire, genau. Und es haben halt nur mehr fünf Leute aufgezeigt oder so. Von den siebzig haben wir gedacht, oh wow, ich bin alt."
+    },
+    {
+      "confidence": 0.9311707,
+      "end": 846920,
+      "speaker": "A",
+      "start": 831604,
+      "text": "Jetzt hattest du schon die Commodity Hardware angesprochen. Du hast gerade irgendwas gesagt von, da gab es Compute Notes mit vier GB RAM und ein hundert sechzig Gigabyte Festplatte. In den Notizen steht hier sogar IDE Festplatte. Geil, diese schönen dicken, breiten, grauen Kabel."
+    },
+    {
+      "confidence": 0.90318716,
+      "end": 849652,
+      "speaker": "B",
+      "start": 847420,
+      "text": "SSDs waren da noch nicht in zwei."
+    },
+    {
+      "confidence": 0.90774167,
+      "end": 867932,
+      "speaker": "A",
+      "start": 849676,
+      "text": "Tausend vierte, ne, da hatte noch schöne Scheiben drin. Das ist richtig. Das bedeutet auch, wir sprechen hier von einem verteilten Dateisystem, denn bei ein hundert sechzig GB Festplatte reden wir ja bei Google auch nicht mehr von Big Data. Das bedeutet also, wir hatten mehr als ein hundert sechzig GB Daten verteilt auf mehreren Compute Nodes. Ist das korrekt?"
+    },
+    {
+      "confidence": 0.9489889,
+      "end": 905416,
+      "speaker": "B",
+      "start": 867996,
+      "text": "Bei Google war es ein verteiltes Dateisystem, aber MapReduce muss an sich jetzt kein verteiltes Dateisystem haben, weil du immer auf den lokalen Daten arbeitest und immer alles lokal machst. Also das war schon die Idee, dass man sich die Daten einmal holt, sei es jetzt über verteiltes Dateisystem oder über einen zentralen Storage, was auch immer. Man holt sich die Daten einmal, processt die auf dem eigenen Node und schreibt dann das Ergebnis auch wieder lokal mal als erstes einfach nieder auf die Festplatte, komplett unabhängig. Das war eben ganz, ganz wichtig. Theoretisch kann auch das Netzwerk wegbrechen, während ein Node arbeitet und der kann gemütlich weiterarbeiten. Wenn irgendwann das Netzwerk wieder da ist, geht es weiter."
+    },
+    {
+      "confidence": 0.8991937,
+      "end": 1000424,
+      "speaker": "A",
+      "start": 905488,
+      "text": "Ich habe gerade mal kurz nachgeschaut, also auch das originale MapReduce Paper sagt, dass international das sogenannte Google File System genutzt wurde. GFS heißt das. Und dann habe ich mal ganz kurz auch weiter recherchiert. Im industriellen Sektor, in der Praxis, für Leute, die nicht bei Google arbeiten, die kennen sehr wahrscheinlich HDFS, das Hadoop Distributed File System, was eigentlich die Open Source Implementierung vom GFS, vom Google file System ist. Natürlich gibt es dann auch noch andere verteilte File Systeme wie ClusterFS, werden die Systemadministratoren sehr wahrscheinlich kennen, die sehr viel mit on premise hosten. Ich meine jetzt den letzten paar Jahren kam natürlich AWS drei Azure Blob Storage oder vielleicht auch Openstack Swift oder ähnliches auf den Markt. Die sind sehr, sehr ähnlich, doch mit einem großen Unterschied. GFS, also das Google Filesystem bzw. HDFS, also Hadoop Distributed Filesystem, also die Open Source Implementierung von Google Filesystem, haben den großen Unterschied zu S, Blob Storage oder OpenStack Swift oder vielleicht auch CEF, dass die Computation Jobs, also die Map and Reduce Computation Logik auf denselben Servern ausgeführt werden kann wie die Datenspeicherung. Das ist ja das, was der Wolfgang gerade erwähnt hat. Das geht natürlich bei klassischen Blob Storage oder Object Storage wie S oder von Azure oder OpenStack Swift natürlich nicht. Da hast du natürlich harten Netzwerk Transfer, weil das reine verteilte Storage Systeme sind und nicht Storage und Compute in einem, wie das zum Beispiel bei HDFs der Fall ist."
+    },
+    {
+      "confidence": 0.9232165,
+      "end": 1029292,
+      "speaker": "B",
+      "start": 1000512,
+      "text": "Ja, da hast du einfach noch die zusätzliche wo liegen denn die Daten wirklich, also die Kopien, auf welchen Nodes? Und wenn du die Informationen auslesen kannst, dann kannst du natürlich intelligentes Scheduling machen. Wohin werden deine Jobs verteilt und wo werden die Jobs wirklich berechnet? Weil sonst musst du ja ständig wieder was hin und her kopieren. Und nochmal, wir reden da von ein hundert Mbit Leitungen. Das dauert natürlich, wenn man da Better Byte von Daten natürlich processen will, was Google ja damals auch wirklich gemacht hat mit Map Videos."
+    },
+    {
+      "confidence": 0.90388465,
+      "end": 1088242,
+      "speaker": "A",
+      "start": 1029356,
+      "text": "Und der Unterschied zwischen dem Hadoop File System und anderen, ich sag mal Storage Arten, wie zum Beispiel einem NAS, Also Network Attached Storage oder einem SAN, also Storage Area Network, ist halt auch sehr essentiell zu verstehen, denn HDFS verfolgt eine shared Nothing architecture. Das bedeutet, das braucht wirklich nur ein Computer und Netzwerk. Und jetzt hier so NAS und so ein SAN, die verfolgen eher so eine Shared Disc Architektur. Das bedeutet, dass du bei einem NAS und bei einem SAHN eher eine zentrale Storage Appliance hast, was oft durch spezielle Hardware widergespiegelt wird. Und bei einer Shared Nothing Architektur hast du eigentlich nur einen Daemon Prozess auf der Maschine laufen, der dir Zugriff auf die auf die Node gibt. Und dann hast du irgendwo ein bis Name Nodes, die speichern dann, welche File Blöcke auf welcher Maschine gespeichert werden. Du hast keine zentrale Storage Appliance. Und das ist natürlich genau diese Komponente, die Commodity Hardware, ich sag mal enabled."
+    },
+    {
+      "confidence": 0.92170894,
+      "end": 1151682,
+      "speaker": "B",
+      "start": 1088306,
+      "text": "Und zusätzlich, was natürlich das ganze Modell auch noch interessant macht, gerade mit Commodity Hardware, ist, dass es super ausfallsicher ist, weil wenn du deine Jobs hast, die komplett unabhängig voneinander agieren können und dir bricht irgendwo ein Note weg, dann schedulest du das ganze Ding halt einfach neu. Du brauchst dir nicht merken, wo ist der Job abgebrochen. Sobald natürlich side Effects bei so einem Job wären, das heißt zum Beispiel werden irgendwelche Zwischenergebnisse in irgendeine zentrale Datenbank gespeichert oder sowas, dann hättest du side Effects und dann müsstest du dir merken, wenn irgendwo ein Job abbricht, wo ist denn der abgebrochen? Hat der vielleicht schon fünfzig Prozent berechnet? Wurde das Ergebnis schon irgendwo hingeschrieben? Dadurch du aber diese komplette abgeschlossene funktionale Herangehensweise hast, kannst du einfach sagen, wenn Job wegbricht, ich mache den einfach noch mal neu. Und sogar wenn der alte dann wieder fertig werden würde, ist komplett egal, weil wenn du zwei Funktionen ohne side Effect zweimal aufrufst, bekommst du genau denselben Output. Das ist ja die Idee von der funktionalen Welt. Und daher kannst du das auch super verteilen und hast die gesamte Ausfallsicherheit, weil du es einfach neu schedulen kannst."
+    },
+    {
+      "confidence": 0.91013455,
+      "end": 1180104,
+      "speaker": "A",
+      "start": 1151746,
+      "text": "Da redest du natürlich allein von der Computation, die dann voraussetzt, dass die Daten natürlich auch repliziert wurden. Denn wir hatten ja gerade von Data Locality gesprochen. Wir hatten ja gerade davon gesprochen, dass die Computation auf der Node selbst ausgeführt wird und deswegen wir kein Netzwerk Overhead brauchen. Doch wenn die Node jetzt wegstirbt, dann ist die Computation zwar kaputt, okay, die Computation machen wir woanders. Das bedeutet aber auch, die Daten, die auf der Node waren, weil die Node ist ja weggebrochen, müssen ja auch irgendwo repliziert worden sein, richtig?"
+    },
+    {
+      "confidence": 0.9180747,
+      "end": 1194284,
+      "speaker": "B",
+      "start": 1180152,
+      "text": "Ja, aber da hast du das GFS und es repliziert die Daten ja auf drei Nodes. Das heißt, es müssten dir klassisch die genau drei Nodes wegbrechen, dann hast du ein Problem. Aber durch das ja schon mehrfach verfügbar ist, hast du das ja woanders dann auch zur Verfügung, den Input."
+    },
+    {
+      "confidence": 0.9141404,
+      "end": 1234558,
+      "speaker": "A",
+      "start": 1194392,
+      "text": "Ja, GFS bzw. HDFS, also Hadoop File System, die können auch die Daten sehr, sehr doof einfach nur kopieren. Also nur, das ist dann halt natürlich doppelter oder dreifacher oder fünffacher Storage, also simple Kopien. Oder die machen das auch ein bisschen smarter, so ähnlich wie RAID Systeme. Da gibt es so Algorithmen wie zum Beispiel die Reed Solomon Error Correction, da werden halt Dateiblöcke über n Comp Compute Nodes verteilt und wenn eine wegbricht, kann der recht zurückgerechnet werden. Das ist natürlich dann nicht so speicherintensiv, aber ja, das ist halt super smart, muss man zugeben. Fast ähnlich wie verteilte Datenbanken eigentlich auch. So könnt ihr euch das vorstellen wie so ein Kafka oder ein Kassandra oder ähnliches."
+    },
+    {
+      "confidence": 0.9250751,
+      "end": 1287356,
+      "speaker": "B",
+      "start": 1234574,
+      "text": "Wobei eben da das Schöne und jetzt spreche ich wieder von dieser Schönheit ist, dass du eben keine Abhängigkeiten untereinander hast. Wenn du von Cassandra oder solchen klassisch verteilten Systemen sprichst, hast du immer ganz viele Abhängigkeiten. Da musst du immer genau wissen, wo waren die Nodes, welcher Node hat genau was für Daten und wo wurde was zu welcher Zeit genau repliziert? Du hast einen Master, der super viel wissen muss und MapReduce versucht eben genau den gegenteiligen Weg zu gehen, dass man möglichst wenig Informationen überhaupt braucht, die man zentral halten muss, damit man eben möglichst unabhängig das Ganze berechnen kann. Und dadurch war das Ganze auch so klein, weil die Initial Implementierung waren halt ein paar hundert Zeilen, sagt man zumindest. Geht natürlich auch nur, wenn es wirklich eine einfache Lösung ist, weil sonst würdest du es nie in ein paar hundert Zeilen unterbekommen. Wenn du da irgendwelche Leader Election Algorithmen und keine Ahnung was noch alles hast, dann wird es schon ein bisschen schwierig."
+    },
+    {
+      "confidence": 0.8950638,
+      "end": 1318180,
+      "speaker": "A",
+      "start": 1287468,
+      "text": "Jetzt erklär mir doch mal bitte, wie MapReduce funktioniert und am besten anhand des Beispiels von Access Logs. Ich habe jetzt die Access Logs von Engineering Kiosk DE, von unserer Webseite und da unser Podcast natürlich weltbekannt ist, sind die Access Logs natürlich Big Data. Ich sag mal, haben so ein Volumen von circa fünf Terabyte und ich möchte jetzt wissen, welche Seite wie viel Aufrufe hat. Wäre das ein klassischer Anwendungsfall für Map and Reduce?"
+    },
+    {
+      "confidence": 0.921562,
+      "end": 1417508,
+      "speaker": "B",
+      "start": 1318260,
+      "text": "Das ist sogar eigentlich der Anwendungsfall schlechthin. Also ist auch so ähnlich wie die Indexierung, weil du hast in deinen Log Files, da hast du ja ganz viele, weil du irgendwie pro Stunde rotierst oder keine Ahnung, alle fünfzehn Minuten oder bei einer gewissen Größe machst du ein neues File. Das heißt, du hast ganz viele Files, wo einfach Log Werte drinstehen. Das heißt, du loggst den Zugriff, Status Log vielleicht noch dazu, was für Status HTTP Code zurückgesendet wurde und du hast die URL. Und der Map Vorgang macht jetzt nichts anderes, als der liest eine Datei aus, die er da bekommt als Info und sendet dann jede Log Zeile eigentlich genau weiter. Das heißt, er nimmt nur die URL und sendet die weiter. Und über einen ganz normalen Hash Algorithmus, das heißt, über ein Hash, über diesen Key, was in dem Fall die URL ist, wird einfach Zugrei zugeordnet, welcher Reduce Job das Ganze übernehmen muss. Das heißt, es wird eigentlich nur aufgeteilt auf gut deutsch. Das heißt, es wird aufgeteilt und dann an reduce weiter gesendet bzw. Reduce holt sich alle Fragmente die dann für den jeweiligen reduce Job zuständig sind. Also wenn man da die URL hat von der Episode ein hundert, vier und achtzig, dann gibt es einen Reduce Job, der kümmert sich nur um die Zugriffe auf die Episode ein hundert, vier und achtzig, holt sich dann alle Dateien rein von der Episode ein hundert, vier und achtzig. Und der Reduce Job macht dann nichts anderes als einen Countdown. Das heißt, der bekommt ganz viele Inputs und macht einen Count über die Zeilen und der Output ist dann für die Episode ein hundert, vier und achtzig, irgendeine Zahl, Zugriffe und dann wird es wieder abgelegt. Also es wird einfach von ganz großen Datenmengen immer schrittweise kleiner und that's it."
+    },
+    {
+      "confidence": 0.9390909,
+      "end": 1428800,
+      "speaker": "A",
+      "start": 1417564,
+      "text": "Und jetzt haben wir gesagt, die Berechnung ist verteilt, weil wir haben ja fünf Terabyte Access Logs. Fangen wir vorne an. Wie wird denn die Berechnung jetzt auf mehrere nodes verteilt? Anhand von was?"
+    },
+    {
+      "confidence": 0.9336235,
+      "end": 1483074,
+      "speaker": "B",
+      "start": 1428920,
+      "text": "Anhand von den Dateien. Das heißt, du kannst jetzt davon ausgehen, fünf Terabyte an Daten, das heißt, du hast mal ein tausend Logfiles. Das heißt, du fängst dann einfach an, die Logfiles in verschiedene Map Jobs aufzuteilen. Das heißt, du hast Files, nehmen wir mal an, das heißt, du hast Map Jobs und wenn du, keine Ahnung, ein hundert Nodes hast, dann fängst du einfach an, die Jobs zu verteilen über die ein hundert Nodes. Im Idealfall natürlich, wie du gesagt hast, je nachdem, wo die Daten liegen, optimiert. Aber nehmen wir mal das ganze dumm an, dann fängst du einfach an verteilen und sendest einfach immer ein hundert Jobs an die Notes. Vielleicht können die auch parallel rechnen, dann kannst du mehrere Jobs auf einem Node ausführen, aber das ist ziemlich dumm. Und sobald du ein Result hast, kommt das ganze wieder zurück und irgendwann startest du dann mit der Reduce Phase, wenn alle Maps fertig sind oder parallel, je nachdem wie man es implementiert, kannst du dann die Reduce Jobs dementsprechend auch starten und am Ende hast du einfach ein Ergebnis."
+    },
+    {
+      "confidence": 0.9016952,
+      "end": 1500378,
+      "speaker": "A",
+      "start": 1483222,
+      "text": "Und die Map Funktion in diesem Falle ist jetzt, ich sag mal ganz doof, ein Callback, der kriegt jetzt einen String rein, weil so eine Access Log Zeile, so ein Access Log Record hat ja die URL, den Statuscode, vielleicht noch den User Agent und so weiter und so fort, was du halt alles so mitlogst."
+    },
+    {
+      "confidence": 0.9237278,
+      "end": 1518912,
+      "speaker": "B",
+      "start": 1500394,
+      "text": "Das kommt drauf an, was du alles brauchst natürlich. Wenn du jetzt nur ein ganz dummes Count willst, dann brauchst du gar nichts mitschicken. Wenn du das natürlich noch irgendwie gruppieren willst, anhand vom Statuscode zum Beispiel, dann würdest du da wieder eine neue Mapreduce bauen vielleicht am Ende, die das nochmal reduced. Anhand von den Statuscodes oder je nachdem."
+    },
+    {
+      "confidence": 0.93645185,
+      "end": 1534720,
+      "speaker": "A",
+      "start": 1518976,
+      "text": "Lass uns mal nur beim Count bleiben. Ich möchte nur wissen, okay, welche Seite hat wie viel Aufrufe? Lass uns da bleiben. Das bedeutet, die Map Funktion kriegt den String rein. Der String ist ein Access Log Eintrag und da würde ich dann die URL raus parsen und das wäre mein Ergebnis von der Map Funktion. Das wäre mein Return Value. Ist das korrekt?"
+    },
+    {
+      "confidence": 0.92586935,
+      "end": 1539812,
+      "speaker": "B",
+      "start": 1534800,
+      "text": "Genau, die URL ist dann dein Key und es wird weiter gesendet mit eins zum Beispiel."
+    },
+    {
+      "confidence": 0.90909284,
+      "end": 1546084,
+      "speaker": "A",
+      "start": 1539916,
+      "text": "Und weiter gesendet. Das macht MapReduce Framework. Das muss ich nicht machen, weil genau."
+    },
+    {
+      "confidence": 0.9200721,
+      "end": 1552276,
+      "speaker": "B",
+      "start": 1546132,
+      "text": "Das macht die Execution Engine. Ja. Genau, dann wird es in verschiedenen Dateien einfach abgelegt. Genau, anhand der Keys."
+    },
+    {
+      "confidence": 0.9298811,
+      "end": 1565556,
+      "speaker": "A",
+      "start": 1552388,
+      "text": "Das bedeutet auch, die Map Funktion hat keinen State und kennt auch nicht den Record, den die Map Funktion vorher reinbekommen hat oder nachher reinbekommt. Das bedeutet, sie kennt wirklich nur diesen einen Access Log Record."
+    },
+    {
+      "confidence": 0.9249298,
+      "end": 1600606,
+      "speaker": "B",
+      "start": 1565588,
+      "text": "Richtig, genau. Es gibt keine globalen Variablen, wie man in der funktionalen, in der wirklichen puren funktionalen Programmierung gibt es einfach keine globalen Variablen. Und das heißt, es ist komplett unabhängig. Man weiß nichts vom State, außerhalb von innerhalb der Funktion und man rödelt einfach vor sich hin. Genau, macht ein dummes Map. Und es schaut auch wirklich so aus, wenn man so Code sieht. Das ist ein c Framework, was da gebaut wurde. Und du machst da einfach eine Map Funktion, bekommst die Datei rein als Parameter und machst dann einfach deine Computation. Und am Ende machst du wieder ein Emit von einem Key und Value. That's it."
+    },
+    {
+      "confidence": 0.9496741,
+      "end": 1618382,
+      "speaker": "A",
+      "start": 1600678,
+      "text": "Und die Reduce Funktion ist ja dann meine zweite Funktion, die ich schreiben muss. Was bekommt die jetzt als Datenstruktur rein? Was habe ich in der reduce Funktion zur Verfügung? Weil in der Map kriege ich ja einen String rein und gebe dann die URL zurück mit dem value eins, weil das ist ja ein, keine Ahnung, der."
+    },
+    {
+      "confidence": 0.86559457,
+      "end": 1620926,
+      "speaker": "B",
+      "start": 1618406,
+      "text": "Counten wir einfach nur. Dann ist es eins. Genau, ganz genau."
+    },
+    {
+      "confidence": 0.8917626,
+      "end": 1629166,
+      "speaker": "A",
+      "start": 1620958,
+      "text": "Also key value eins. Okay, also Webseite und dann die root Seite und eins. Okay, und was kriege ich jetzt in der Reduce?"
+    },
+    {
+      "confidence": 0.9365045,
+      "end": 1644926,
+      "speaker": "B",
+      "start": 1629358,
+      "text": "In Reduce bekommst du einfach einen Array von Values und du machst dann die Summe drauf. Das heißt, du machst ein Sum von den ganzen Einsern, die du reinbekommst. Den Key hast du ja, weil du bist ja die Reduce Funktion für einen speziellen Key. Und dann hast du das Ergebnis."
+    },
+    {
+      "confidence": 0.9539761,
+      "end": 1658636,
+      "speaker": "A",
+      "start": 1645038,
+      "text": "Und was ist, wenn die Anzahl, wenn das Array zu groß ist für eine Maschine? Weil die Reduce Funktion weiß ja nicht, was die Map Funktion ausspuckt, weil die Map Funktion kann ja auch einen String reinbekommen und sehr viel ausspucken."
+    },
+    {
+      "confidence": 0.8905977,
+      "end": 1674640,
+      "speaker": "B",
+      "start": 1658748,
+      "text": "Also normalerweise ist es so, dass das zusammengemerged wird. Und dann ein Reducer übernimmt. Das heißt, es wird da eigentlich nicht nochmal aufgesplittet. Das heißt, es zu groß gibt es eigentlich nicht, weil es ist eine Datei. Wenn es natürlich so groß ist, dass es zu groß für deine Datei ist, dann hast du irgendwann ein Problem."
+    },
+    {
+      "confidence": 0.9191929,
+      "end": 1736724,
+      "speaker": "A",
+      "start": 1674990,
+      "text": "Okay, in unserem Access Log Beispiel summiere ich dann alle Einsen einfach auf. Genau, weil die Execution Engine anhand des Keys bereits okay alles zusammen gemerged hat. Und jetzt hattest du initial gesagt, der erste MapReduce Algorithmus wurde in C geschrieben. Wenn ich jetzt danach mal ein bisschen google, dann kommen mir aber zwei Sprachen immer auf meinen Bildschirm. Auf der einen Seite Java, weil Hadoop in Java geschrieben ist und deswegen die MapReduce Funktion da sehr wahrscheinlich in Java geschrieben werden und JavaScript. Aber jetzt nicht durch die Map und Reduce Funktion, von der du die ganze Zeit sprichst, sondern eher im Datenbankbereich bei mongodb und CoachDB. Ich weiß nicht ganz, ob man irgendwie mapreduce Funktionen in einer Datenbank lagern möchte, wie bei mongodb. Das fühlt sich für mich gerade irgendwie so ein bisschen komisch an. Natürlich gibt es dann auch bei MySQL sowas wie Trigger und Stored Procedures und die gibt es dann bei Oracle und PostgreSQL und so weiter gibt es die natürlich auch. Oder Postgres. Ne, Postgres war falsch. Postgre."
+    },
+    {
+      "confidence": 0.868535,
+      "end": 1738640,
+      "speaker": "B",
+      "start": 1736852,
+      "text": "Na, Postgres ist es."
+    },
+    {
+      "confidence": 0.8823068,
+      "end": 1758748,
+      "speaker": "A",
+      "start": 1739420,
+      "text": "Ich krieg's irgendwie nie hin. Naja, also da kann man natürlich auch irgendwie Store Procedures hinsetzen und so, weil ich finde es immer so ein bisschen schwierig als Applikationsentwickler ganz viele Businesslock in die Datenbank zu legen, denn die ist immer so unsichtbar für mich als Applikationsentwickler und deswegen Map Reduce Funktion bei MongoDB schwierig. Oder wie siehst du das?"
+    },
+    {
+      "confidence": 0.9292034,
+      "end": 1792398,
+      "speaker": "B",
+      "start": 1758844,
+      "text": "Ja, bei mongodb hast du ja kein SQL als Anfragesprache, sondern eine JavaScript ähnliche Anfragesprache. Und da ist MapReduce ein initiales Konzept, was einfach mongodb mit aufgenommen hat, damit du große Datenmengen auch da wieder im Kam natürlich alles von dem Google Paper, auch mit einem MapReduce verarbeiten kannst. Also das ist eigentlich Teil der Anfragesprache. Das heißt, du stellst da Abfragen auch mit so MapReduce teilweise da. Also wenn du komplexere Abfragen hast, dann kannst du das über MapReduce dementsprechend auch implementieren."
+    },
+    {
+      "confidence": 0.9140013,
+      "end": 1863480,
+      "speaker": "A",
+      "start": 1792574,
+      "text": "Würden wir diesen Podcast jetzt nicht machen, dann würde ich eigentlich geil, verteilte Berechnung, geschnitten Brot, muss ja superschnell sein. Jetzt ist es aber Wolfgang, wir machen diesen Podcast und das tolle ist, wenn man uns schon länger hört, kann man Episoden auch miteinander verknüpfen. Der aufmerksame Hörer und Die aufmerksame Hörerin hat also Episode ein hundert achtzig gehört, die sich nennt Skalierung. Aber zu welchem Preis? Da haben wir nämlich ein wissenschaftliches Paper untersucht, das eigentlich besagt, ab welchem Computation Aufwand lohnt es sich, ein verteiltes System zu nehmen und bis zu welchem Computation Aufwand reicht es, wenn man alles auf einer einzelnen Node oder auf einem einzelnen CPU Thread laufen lässt. Und jetzt habe ich von dir gelernt, MapReduce wird über mehrere Maschinen verteilt, Skalierbarkeit über tausende von Maschinen, automatisches Load Balancing durch kleine Jobs und so weiter und so fort. Da frage ich mich, hat die ganze Sache wirklich Performance Vorteile? Denn die ganze Sache muss natürlich auch verteilt werden und wieder zusammengerechnet werden und allem drum drum. Am Ende, auch wenn ich über Terabyte von Daten operiere, möchte ich ja trotzdem ein Ergebnis. Deswegen meine gibt es da wirklich einen Performance Vorteil?"
+    },
+    {
+      "confidence": 0.9279812,
+      "end": 2016392,
+      "speaker": "B",
+      "start": 1863640,
+      "text": "Also du hättest ja schon mal Probleme grundsätzlich ein Terabyte an Daten lokal abzulegen. Also es geht vielleicht gerade noch heutzutage, aber damals ist es auf keinen Fall gegangen. Und wir sprechen von dreiig Gigabyte pro Sekunde, oder waren es Gigabit? Vielleicht waren es Gigabit, ist aber auch egal, die MapReduce mit so einem Cluster hinbekommen hat. Jetzt wenn du das Beispiel aus dem Paper zum Beispiel nimmst, wo eins Terabyte Logs gegrabt wurden, also Wörter gezählt wurden, dann hat ein Terabyte damals ein hundert fünfzig Sekunden gebraucht in ihren Tests. Zugegebenermaßen, es waren ein tausend, sieben hundert, vier und sechzig Nodes involviert in das Ganze. Ein hundert fünfzig Sekunden. Ein Single Server mit damaliger Plattenkapazität, habe ich mir ausgerechnet, hätte ungefähr neun Stunden gebraucht für das ganze. Vor allem hat es den Grund, da damals ja auch die Festplatten viel langsamer waren. Also du hattest damals dreiig Megabyte die Sekunde bei so einer handelsüblichen Festplatte. Das ist natürlich heutzutage, wo du viel größere Daten jetzt ablegen kannst auf einer SSD in deinem Main Memory, ist es natürlich nicht mehr so wichtig. Und du hast andere Bottlenecks heutzutage. Das heißt, da kannst du natürlich ganz anders arbeiten als damals. Und das ist vielleicht auch ein Grund, warum MapReduce in der klassischen Anwendung nicht mehr so einen großen Stellenwert hat wie vor zehn Jahren, wo das wirklich absolut der Standard war. Headoop, die Open Source Variante sozusagen von so einer MapReduce Plattform, die war ja wirklich überall, die war ja gehypt. Du hast es ja selber miterlebt. Wer alle Hadoop Cluster hatte und du warst ja auch mal Admin mehr oder weniger von einem oder warst mit dabei. Das war Stand der Technik vor zehn Jahren und das ist vor allem auch durch die Hardware, die es mittlerweile gibt, einfach weniger wichtig geworden, dass du diese ganzen Bottlenecks auf der I O Seite durch so ein System ausgleichst. Aber was man da schön sieht und das ist auch jetzt wieder, was wir in Folge ein hundert achtzig besprochen haben, dass er der Overhead von dem verteilen so groß war. Jetzt wenn man da sich überlegt, auf ein tausend sieben hundert Servern hat es trotzdem nur ein hundert fünfzig Sekunden gebraucht. Heutzutage mit vielen Verteilungs Frameworks, die brauchen ja ein hundert fünfzig Sekunden, bis sie mal gebootet sind überhaupt oder irgendwas in die Wege geleitet haben. Also das ist schon sehr leichtgewichtig damals gewesen und darum hat es Google auch wirklich stark eingesetzt. Also wie das intern rausgekommen ist, das ganze, ist es sehr schnell übernommen worden und es wurden dann wirklich ganz viele Workloads von Google sofort auf dieses MapReduce Framework dann umgestellt, weil es eben so performant war damals."
+    },
+    {
+      "confidence": 0.9214931,
+      "end": 2038100,
+      "speaker": "A",
+      "start": 2016486,
+      "text": "OK, den Punkt gebe ich dir, ist aber heute nicht mehr relevant, denn du sagtest gerade, es geht vielleicht gerade eben so ein Terabyte an Daten zu speichern. Wolfgang, ich weiß nicht, welche Rechner du mit denen du da arbeitest. Allein mein Computer hier, mit dem ich den Podcast aufnehme, hat mehr Festplattenplatz als eins Terabyte. Deswegen, ich glaube, da kann man heute ein paar mehr Terabyte."
+    },
+    {
+      "confidence": 0.9139964,
+      "end": 2079056,
+      "speaker": "B",
+      "start": 2038180,
+      "text": "Darum sage ja gerade so, also wir sprechen ja damals auch von so handelsüblichen Computern und eine Terabyte Festplatte ist jetzt nicht handelsüblich noch, würde ich mal sagen, bei Commodity Hardware. Du sprichst ja da von deinem Monster Mac, der irgendwie kostet oder so, das ist natürlich was anderes, aber bei einer Commodity Hardware, die ein paar hundert Euro kostet, hast du auch heutzutage keine Terabyte und wahrscheinlich hast du halt heutzutage keine Terabytes mehr, sondern irgendwie Betabytes, die du verarbeiten musst. Also es waren ja damals schon Better Bytes bei Google, aber es war halt ein Test von diesem Terabyte Grab example, das sie da angegeben haben. Musst du mir vorstellen, vor zwanzig Jahren, was da ein Terabyte war. Also das war ja fast nicht vorstellbar."
+    },
+    {
+      "confidence": 0.9140247,
+      "end": 2098112,
+      "speaker": "A",
+      "start": 2079168,
+      "text": "Also um dir mal zu beweisen, was du eigentlich für einen Schmuck hier gerade erzählst, bin ich gerade auf Media Markt DE gegangen und ich glaube mehr Commodity als Media Markt gibt es gar nicht. Ich habe gar nicht groß recherchiert, sondern auf der Startseite bin ich in die Kategorie Laptops gegangen und habe den ersten Laptop, der glaube ich fast als günstigstes angepriesen wird, genommen."
+    },
+    {
+      "confidence": 0.98903334,
+      "end": 2099072,
+      "speaker": "B",
+      "start": 2098176,
+      "text": "Was kostet der?"
+    },
+    {
+      "confidence": 0.96852666,
+      "end": 2101760,
+      "speaker": "A",
+      "start": 2099176,
+      "text": "Vier hundert acht und achtzig. Das ist okay, oder?"
+    },
+    {
+      "confidence": 0.81708,
+      "end": 2103760,
+      "speaker": "B",
+      "start": 2101880,
+      "text": "Ja, ist okay."
+    },
+    {
+      "confidence": 0.82185453,
+      "end": 2108752,
+      "speaker": "A",
+      "start": 2103760,
+      "text": "Und er, dieser Laptop hat eine TB Festplatte, ein tausend Gigabyte."
+    },
+    {
+      "confidence": 0.83577627,
+      "end": 2113104,
+      "speaker": "B",
+      "start": 2108816,
+      "text": "Eben, da hast du jetzt nicht Platz, das Terabyte. Du hast ja auch Betriebssystem und wenn."
+    },
+    {
+      "confidence": 0.9360655,
+      "end": 2121616,
+      "speaker": "A",
+      "start": 2113112,
+      "text": "Ich jetzt mal in die Desktop Rechnung gehen würde, da kriegst du doch nichts mehr unter eins Terabyte. Warte mal, gibt es überhaupt jetzt hier noch so Gaming PCs?"
+    },
+    {
+      "confidence": 0.9198413,
+      "end": 2136373,
+      "speaker": "B",
+      "start": 2121648,
+      "text": "Sind nicht Commodity SSDs sind immer noch relativ teuer. Also die sind standardmäßig nicht mit so vielen Terabyte ausgerüstet. Was hast denn du drinnen? Du hast ja auch nur zwei Terabyte, oder wenn überhaupt, kann dir das dein Mac anzeigen oder brauchst du da wieder achtzehn Untermenüs?"
+    },
+    {
+      "confidence": 0.88087624,
+      "end": 2140649,
+      "speaker": "A",
+      "start": 2136421,
+      "text": "Ne, ich habe hier bei dem Rechner gespart und ich habe wirklich nur ein Terabyte Festplatten."
+    },
+    {
+      "confidence": 0.701695,
+      "end": 2144917,
+      "speaker": "B",
+      "start": 2143389,
+      "text": "Falsch mu den ich da erzähl."
+    },
+    {
+      "confidence": 0.9131732,
+      "end": 2175794,
+      "speaker": "A",
+      "start": 2145013,
+      "text": "Nein, du kennst ja die Apple Preise, also da muss man halt schon ein bisschen haushalten. Da holt man sich lieber so eine USB Festplatte mit vier Terabyte. Aber zurück zu dem Performance Problem. Du sagtest gerade ein hundert achtzig Sekunden hat der Job gedauert mit ein tausend fünf hundert Not. Und ich habe jetzt gerade meinem Kopf versucht mal zu verstehen, was denn jetzt eigentlich der Performance Bottleneck ist. Also das bedeutet eigentlich, dass der langsamste Mapper, nein, der langsamste Reducer doch dann den Speed eines MapReduce Shop bestimmt oder."
+    },
+    {
+      "confidence": 0.9123241,
+      "end": 2258308,
+      "speaker": "B",
+      "start": 2175882,
+      "text": "Der letzte Reduce bestimmt ist, sozusagen, der noch nicht fertig gelaufen ist oder der langsamste, wie du das auch immer siehst. Das ist auch ganz interessanter Aspekt, der im Paper erwähnt wurde. Es finde ich auch genial und auch wieder so eine pragmatische Herangehensweise, die ich super finde. Man hat sich dann nicht überlegt, wir machen Statistiken und prüfen, welche Worker wie lang brauchen und probieren dann irgendwie, wenn ein Node immer langsam ist und langsame Worker hat, dann probieren wir den Node auszuschließen aus einem Cluster und wie man das halt so machen würde, wenn man so technisch an sowas dran geht, sondern die haben einfach entschieden am Ende, wenn es in Richtung Ende von dem gesamten Job geht und nur mehr ein paar Reducer übrig sind oder bar, je nachdem in was für einem Step, dann fangen wir einfach an, alle, die noch laufen, fangen wir parallel an nochmal zu rechnen, weil die Chance ist groß, dass das vielleicht irgendwie ein Task ist, der sich verhängt hat oder wo der Not zu langsam ist oder wo es irgendwie ein Problem gibt. Das heißt, wir starten einfach alles doppelt oder mehrfach und der schnellste gewinnt. Und so haben sie noch mal insgesamt über vierzig Prozent an Zeit rausgeholt, indem sie einfach dumm am Ende Sachen dupliziert haben. Auch da wieder super pragmatische herangehensweise. Commodity hardware ist super billig. Wir starten einfach irgendwas doppelt, anstatt irgendwie komplexe berechnungen zu machen und holen noch mal vierzig prozent raus. Finde ich genial. Pragmatische herangehensweise."
+    },
+    {
+      "confidence": 0.8912393,
+      "end": 2280088,
+      "speaker": "A",
+      "start": 2258404,
+      "text": "Ich finde das schön, wie du gerade die Research irgendwie feierst. Praktisch gesehen war das ja wahrscheinlich so, ein paar Researcher mussten langsam mal ihr Projekt abschließend und die haben nur einen Shortcut gesucht, weil der Manager gesagt hat, du, du, so jetzt over engineer man nicht, sondern macht mal einfach nur. Und da haben wir gedacht, okay, komm, dann machen wir einfach hier blöd Brute Force. Also was am Ende noch so über ist, cutten wir einfach ab und starten einfach nochmal."
+    },
+    {
+      "confidence": 0.9260514,
+      "end": 2290504,
+      "speaker": "B",
+      "start": 2280184,
+      "text": "Das kann gut sein, aber nachdem das bei Google in Produktion war, glaube ich mal nicht, dass das jetzt klassisch von Wissenschaftlern getrieben war, sondern einfach von Praktikern bei Google, die probiert haben, schnell was zu lösen."
+    },
+    {
+      "confidence": 0.8860277,
+      "end": 2308292,
+      "speaker": "A",
+      "start": 2290632,
+      "text": "Jetzt. Jetzt holdigst du die funktionale Programmierung, jetzt holdigst du das ganze Konzept so, dass das so isoliert ist und keine Seiteneffekte hat. Obwohl es natürlich schon in irgendeiner Art und Weise Seiteneffekt gibt, denn Output Files werden ja schon geschrieben. Eine file Modification ist ja schon ein Seiteneffekt, muss man zugeben."
+    },
+    {
+      "confidence": 0.9271825,
+      "end": 2357934,
+      "speaker": "B",
+      "start": 2308356,
+      "text": "Naja, du hast ja, wenn du das vergleichst mit einer klassischen funktionalen Welt, mit der Funktion, da hast du einen Input von der Funktion und natürlich einen Output. Den Output muss man natürlich auch in Memory irgendwo schreiben. Aber es geht darum, dass du innerhalb von der Funktion ohne side Effects das Ganze hast. Und das ist damit eindeutig gegeben. Das heißt, du kannst eben auch das Ganze parallel rechnen und der schnellste gewinnt oder du überschreibst es einfach. Also das ist kein Problem. Du hast eben keine side Effekte, dass du auf irgendwie globale Variablen zugreifst und dann irgendwas anderes berechnest. Es ist ja auch deterministisch, du kannst es öfters berechnen. Es wirklich das schöne Konzept aus der funktionalen Welt in die Praxis, in die Parallelisierung gebracht. Und das habe ich damals auch immer so schön gefunden und finde ich immer noch schön, weil ich eben auch der Überzeugung bin, dass man ohne side Effekte auch viel flexibler dann arbeiten kann. Und das hat das Ganze halt auch bewiesen."
+    },
+    {
+      "confidence": 0.899465,
+      "end": 2385822,
+      "speaker": "A",
+      "start": 2358062,
+      "text": "Ich finde das schön. Wir sind gerade wie so ein Ehepaar. Also du hast mir ein Wort hingeworfen und jetzt kann ich die Überleitung sofort machen. Wahnsinn. Pass auf, du hast gerade Determinismus angesprochen. Das bedeutet dann aber auch, dass du innerhalb eines Map bzw. Innerhalb eines Reduce Jobs keine externen Quellen anzapfen darfst, wie zum Beispiel eine Datenbank oder sowas. Ich darf jetzt nicht innerhalb eines Map oder einem Reduce Shop ein Query machen, weil die externe Datenquelle kann sich ja verändern und das bedeutet, mein Job wäre nicht mehr deterministisch. Richtig?"
+    },
+    {
+      "confidence": 0.91388786,
+      "end": 2442268,
+      "speaker": "B",
+      "start": 2385886,
+      "text": "Genau, das war auch klassische Anwendungsfall eigentlich. Ich habe sehr viele Daten und ich will diese Daten processen. Also das war eigentlich ein Framework genau für so klassisches Batch Processing. Ich habe ganz viele Daten, ich will daraus irgendwas lernen. Kann auch Machine Learning sein, kann irgendwas auslesen sein, kann Statistiken, Logfiles war natürlich ein Riesenthema bei Google. Die haben tausende von Rechnern oder hunderttausende wahrscheinlich und müssen irgendwie Logfiles analysieren oder eben auch das Internet an sich, den Index aufbauen, auch extrem große Datenmengen. Und da geht es nie darum, irgendwie Datenbanken zwischendrin anzufragen. Also es geht wirklich um dieses Batch Processing. Aber du hast vollkommen recht, wenn du das hättest, dann hättest du einen side Effekt. Du darfst keine externen Quellen ansprechen. Außer die externen Quellen sind auch deterministisch, aber. Ja, aber das willst du ja eigentlich auch nicht, weil da hast du Netzwerk Traffic dann wieder. Also gerade damals war das natürlich kein Thema, da ging es wirklich um Hardcore Processing."
+    },
+    {
+      "confidence": 0.92918235,
+      "end": 2493248,
+      "speaker": "A",
+      "start": 2442364,
+      "text": "Jetzt habe ich eine Datenquelle und jetzt frage ich mich gerade, das sind ja nicht die praktischen Anwendungsfälle. Die praktischen Anwendungsfälle in der Industrie sind ja deutlich komplexer. Im klassischen datenbanken Bereich würde ich mich fragen, wie mache ich denn jetzt joins auf daten? Nehmen wir mal ein Beispiel. Ich habe zehn terabyte an daten rumliegen von user activity events, also user ein hundert fünf hat den button vier tausend sieben hundert elf geklickt und hat dann die URL so und so geladen. Und dann habe ich noch mal zwanzig terabyte und das ist meine User Datenbank. Da steht dann user ein hundert fünf, E mail adresse foo com und wurde ein tausend neun hundert zwei und fünfzig geboren. Also eigentlich zwei. In der Datenbank würde ich sagen, zwei Tabellen, einmal user Activity Events und einmal die User Tabelle. Meine Aufgabe ist jetzt also eigentlich, das denke ich, ist ein praktisches Beispiel, welche Seiten sind in welcher Altersgruppe populär? Wie würde man das bauen?"
+    },
+    {
+      "confidence": 0.9175136,
+      "end": 2606990,
+      "speaker": "B",
+      "start": 2493424,
+      "text": "Das ist schön, dass du mir jetzt die Überleitungs gibst, weil ich glaube, genau so sind die ganzen Produktleute gekommen. Ich will so eine Frage beantworten, das könnte doch auch mein Hadoop Cluster irgendwie lösen und keine Datenbank. Also meine Antwort wäre, du hast das falsche Tool dafür. Aber du hast vollkommen recht, in der Geschichte ist es genau wahrscheinlich so passiert. Und es haben sich dann Leute überlegt, ja, wir könnten da ja auch vielleicht so ein SQL Interface drauf bauen, so ein System, was oben drüber liegt, damit man dann eben auch möglichst einfach, ohne Code zu schreiben, weil es ist ja normalerweise Code, den du in Java bei Hadoop oder C bei dem original MapReduce Framework schreibst, dass du das den Leuten, die so Anfragen machen wollen, wie du sie jetzt gerade beschrieben hast, so ein SQL Interface in die Hand drückst. Und das kennen vielleicht viele noch. Das heißt, Hive ist damals eigentlich aufgekommen, das waren so die ersten, die haben so ein SQL Interface über Hadoop gesetzt und du hast in SQL MapReduce Job schreiben können, ohne dass du weißt, dass es MapReduce ist. Du hast SQL geschrieben und im Hintergrund wurde das ganze dann auf MapReduce umgewandelt, automatisch. War eine absolute Katastrophe meiner Meinung nach, weil SQL ist einfach komplett anderes Werkzeug, also hat eine komplett andere Funktion als eigentlich Hadoop für klassisches Patch Processing. Und das große Problem war, dass da aus simplen SQL Query, unter Anführungszeichen simplen, aber relativ kurzen SQL Query, ganz viele MapReduce Jobs hinten raus gebt sind, weil jeder Join ist wieder ein Reduce. Du musst sortieren, du musst die Daten durch die Welt schicken. Das heißt, aus einer simplen SQL Query, die irgendwie fünf Joins hat, hattest du hinten riesige MapReduce Jobs, die super lange gebraucht haben. Und meiner Meinung nach ist es komplett in die falsche Richtung damals gegangen. Das heißt, es war einfach die falsche Anwendung von einem Tool, weil wahrscheinlich so Product Leute wie du halt gern genau solche Fragen beantwortet hatten."
+    },
+    {
+      "confidence": 0.9343791,
+      "end": 2645308,
+      "speaker": "A",
+      "start": 2607070,
+      "text": "Also in der Wissenschaft würde man jetzt sagen, nur weil ich einen Weg gefunden habe, wie es nicht funktioniert, heißt das nicht, dass mein Experiment erfolglos war. Du hast mir jetzt gerade gesagt, wie man es nicht bauen würde. Deswegen würde ich jetzt sagen, okay, wie würde ich es denn jetzt in Java bauen? Denn du sagst ja auch das falsche Tool, alles gut und schön, aber ich habe gesagt, ich habe ungefähr dreiig Terabyte an Daten hier und wir reden ja von zwei tausend vier oder zwei tausend sechs oder was auch immer das bedeutet. Dreiig Terabyte in einer Datenbank war damals auch noch nicht, heutzutage vielleicht schon. Deswegen, wie würde ich diese Analyse, welche Seiten sind in welcher Altersgruppe populär, in Java bauen? Oder von mir aus in C, aber."
+    },
+    {
+      "confidence": 0.69776875,
+      "end": 2647548,
+      "speaker": "B",
+      "start": 2645444,
+      "text": "In Head Hoop und Mapidious meinst du jetzt?"
+    },
+    {
+      "confidence": 0.9243726,
+      "end": 2668796,
+      "speaker": "A",
+      "start": 2647604,
+      "text": "Ja, genau, weil ich habe das jetzt so verstanden, dass ich einen Map Job habe, wo ich die user Activity Events reinkriege und einen Map Job, wo ich die User Datenbank reinkriege, wo ich dann das Date of Birth und die user id zum Beispiel raus emitte. Denn ich muss ja die user Activity Events, da habe ich ja die user id und das ist ja mein Foreign Key, wenn du so möchtest."
+    },
+    {
+      "confidence": 0.91411316,
+      "end": 2690648,
+      "speaker": "B",
+      "start": 2668828,
+      "text": "Ja, ich würde das grundsätzlich gar nicht in MapReduce lösen, sondern möglichst probieren, das Ganze zu reducen auf eine allgemeine Form, wo es nicht darum geht, wirklich die konkrete user id oder so zu verwenden, sondern auf ein Statistikmodell und dann so allgemeine Anfragen auf dem Statistikmodell in einer klassischen Datenbank dann zu machen."
+    },
+    {
+      "confidence": 0.92884,
+      "end": 2695800,
+      "speaker": "A",
+      "start": 2690704,
+      "text": "Naja, aber du musst ja erstmal diese, also ich habe ja die ganzen Daten jetzt als Textdaten liegen in meinem HDFS."
+    },
+    {
+      "confidence": 0.88216907,
+      "end": 2699550,
+      "speaker": "B",
+      "start": 2695880,
+      "text": "Ja, du musst es natürlich irgendwann mal in eine Datenbank überführen."
+    },
+    {
+      "confidence": 0.92883635,
+      "end": 2703282,
+      "speaker": "A",
+      "start": 2699680,
+      "text": "Okay, und jetzt habe ich aber keine dreiig Terabyte Datenbank Storage."
+    },
+    {
+      "confidence": 0.94366664,
+      "end": 2706498,
+      "speaker": "B",
+      "start": 2703346,
+      "text": "Ja, aber du kannst ja eine Voraggregation machen, oder?"
+    },
+    {
+      "confidence": 0.924977,
+      "end": 2734692,
+      "speaker": "A",
+      "start": 2706634,
+      "text": "Das will ich ja im Map Reduce. Ich meine, ich muss ja irgendwie Map, kann ich in einem Map Job mehrere Daten reingeben? Mehrere verschiedene Daten, weil wie würde ich sonst Workflows bauen? Wie würde ich sagen, auf Basis von dem einen Reduce Job starte ich einen neuen Map Job? Also wie funktioniert Hive eigentlich unten drunter? Vielleicht ist das meine Frage, weil im Endeffekt, wenn du sagst, das kannst du durch Hive lösen, dann Hive macht ja nichts anderes als irgendwelche generischen Java Jobs da starten."
+    },
+    {
+      "confidence": 0.9586371,
+      "end": 2741400,
+      "speaker": "B",
+      "start": 2734836,
+      "text": "Ja, du kannst natürlich schon MapReduce verknüpfen. Also was heißt denn auf deutsch chainen."
+    },
+    {
+      "confidence": 0.82049143,
+      "end": 2746292,
+      "speaker": "A",
+      "start": 2742060,
+      "text": "Verketten, nacheinander laufen lassen, sequenziell hintereinander schalten."
+    },
+    {
+      "confidence": 0.92465293,
+      "end": 2755582,
+      "speaker": "B",
+      "start": 2746436,
+      "text": "So ein Flow bauen auf gut deutsch. Das kannst du natürlich, aber hast du natürlich programmieren müssen, oder? HIF hat dir das automatisch übersetzt."
+    },
+    {
+      "confidence": 0.92313874,
+      "end": 2767498,
+      "speaker": "A",
+      "start": 2755676,
+      "text": "Ja, aber das sehe ich schon als klassischen Map and Reduce Job, oder? Weil ich habe Big Data und habe Fragen und jetzt kannst du nicht sagen, pump alles in der Datenbank, weil sonst wäre ja sinnlos gewesen damals."
+    },
+    {
+      "confidence": 0.9255673,
+      "end": 2832910,
+      "speaker": "B",
+      "start": 2767674,
+      "text": "Ja, ist die Frage, ob du halt so konkrete Fragen dann wirklich an den Hadoop stellen solltest. Aber ja, hat natürlich funktioniert grundsätzlich sowas, irgendwelche Auswertungen zu machen, aber im Idealfall hast du natürlich irgendwie so ein Zwischenmodell, so ein aggregiertes Modell und da kannst du dann schnell solche Anfragen stellen, weil wenn du da immer eine Nacht warten musst, bis das fertig processed ist, dann ist es ja schon nicht ideal. Und das war ja eigentlich auch die große Stärke von den Systemen, die eigentlich danach kamen, die das ganze dann mehr im Hauptspeicher gemacht haben, wo es einfach da möglich war, schnell große Datenmengen zu prozessen, weil bei Map Use hattest du ja schon immer den Overhead, bis das mal angelaufen ist, bis das alles prozessed wurde und und und. Also da hängt schon viel hintendran. Und wenn du das natürlich im Hauptspeicher hast und dein real Fragen beantworten kannst, dann hat es natürlich eine ganz andere Qualität. Und das war dann eigentlich genau das, wo dann Spark zum Beispiel als großer Konkurrent eigentlich dann den Markt erobert hat, würde ich fast sagen, weil die einfach auf den Hauptspeicher gegangen sind und mit der neuen Hardware besser umgehen haben können."
+    },
+    {
+      "confidence": 0.95619285,
+      "end": 2838318,
+      "speaker": "A",
+      "start": 2833030,
+      "text": "Das bedeutet, du würdest also eigentlich schon so eine Art materialisierte Views rausbauen, wenn."
+    },
+    {
+      "confidence": 0.92823875,
+      "end": 2868460,
+      "speaker": "B",
+      "start": 2838374,
+      "text": "Es irgendwie möglich ist, natürlich schon, klar. Geht natürlich nicht immer. Und dann ist natürlich die Frage, ist Batch Job das richtige? Du wartest dann halt lang, aber ist natürlich auch möglich. Aber heutzutage, wo das möglich ist, dass du das im Hauptspeicher haltest oder vielleicht sogar streamprocessing machst, dass du so eine Anfrage hast, die dann dynamisch immer erweitert wird durch die Daten, die bei Stream reinkommen, ist natürlich die bessere Variante, als wenn du das mit Batch Processing aufwendig über achtzig verschachtelte MapReduce Shops dann machst."
+    },
+    {
+      "confidence": 0.91114354,
+      "end": 2960792,
+      "speaker": "A",
+      "start": 2868560,
+      "text": "Ja, ich glaube, das ist auch einer der Keypunkte, warum Map Reduce heute vielleicht nicht mehr so die ganz große Rolle spielt. Batch Processing versus Stream Processing. Ich kann mich noch an die Zeit erinnern, wo wir ziemlich viele Batch Jobs bei Trivago immer nachts über unseren Hadoop Cluster laufen gelassen haben. Und die haben dann im Endeffekt morgens um acht so eine Statistik e Mail vom letzten Tag rausgesendet. Und immer wenn, weiß ich nicht, zu viel Daten reinkamen oder irgendein Job nicht schnell genug war, dann hieß es immer, oh, das Management hat die E Mail nicht um acht. Und dann war immer so eine kleine incident Time, wenn du so möchtest. Und dann muss man immer in die Batch Jobs gucken, okay, wo ist jetzt was hinten rübergefallen? Und dann immer den Menschen schreiben, ja, habt ihr in zwei Stunden oder vielleicht auch in sechs, weil wir mussten die ganzen Batch Jobs neu starten. Das ist zwar alles schön und gut gewesen, aber die brauchen halt immer Zeit. Auf der anderen Seite muss man natürlich auch sagen, die Komplexität von ordentlichen Data Streaming ist auch eine andere Liga. Da hast du, so wie du das beschrieben hast, ein sehr schönes Modell, sehr einfach in der in der Basis. Du hast Dateien, die liegen irgendwo auf irgendwelchen Festplatten und du iterierst da irgendwie drüber mit einem Processing Model, der dir die Berechnung automatisch verteilt beim Streaming. Natürlich hast du dann auch alles in irgendwelchen Dateien, aber durch so ein Kafka oder durch was weiß ich nicht für ein System, wird das durchgepiped und dann hast du Consumer Offsets, dann musst du wissen, wo du angefangen hast zu lesen und dann musst du irgendwelche, irgendein State updaten und so weiter und so fort. Also es ist ein ganz anderes Level von Komplexität, was du bei Stream Processing hast."
+    },
+    {
+      "confidence": 0.9115605,
+      "end": 3023420,
+      "speaker": "B",
+      "start": 2960856,
+      "text": "Wobei natürlich das Grundkonzept von MapReduce genauso bei Stream Processing angewandt werden kann oder auch bei Hauptspeicher, bei Spark zum Beispiel oder ganz allgemein, wenn du verteilte Datenbanken hast, weil wenn du jetzt eine Select Query machst in einer verteilten Datenbank, dann musst du natürlich die einzelnen Daten zusammensuchen auf den Knoten. Das heißt, du machst da wieder einen Map Prozess, der sucht mal über eine where Class die richtigen Daten zusammen, filtert die und wenn du dann irgendwie ein Group by hast, das wäre wieder eine Reduce Funktion, zum Beispiel Group by, dann würdest du das irgendwo zentral hinsenden und würdest dann das Group by machen und Discount drauf oder so. Also dieses Grundkonzept von MapReduce wird auch garantiert in der Implementierung von irgendeinem Spark zu finden sein. Vielleicht sind wir in dieser Hardcore Variante wie in dem klassischen MapReduce Paper, aber das Grundkonzept, dass man Map Funktionen macht und Reduce Funktionen, wenn man mit Daten arbeitet, und das ist jetzt nicht nur in JavaScript so, sondern das wird man eben überall eigentlich verwenden und darum ist es auch so ein essentielles zentrales Konzept, wenn man mit Daten arbeitet."
+    },
+    {
+      "confidence": 0.8789319,
+      "end": 3037566,
+      "speaker": "A",
+      "start": 3023500,
+      "text": "Jetzt stelle ich mir natürlich die, wenn der Wolfgang aka Opa hier gerade vom Krieg erzählt hat, MapReduce bzw. Hadoop, das ist so, ich sag mal, die Anwendung in der praktischen Industrie überhaupt heutzutage noch irgendeine Relevanz?"
+    },
+    {
+      "confidence": 0.9236401,
+      "end": 3095498,
+      "speaker": "B",
+      "start": 3037668,
+      "text": "Wie gesagt, das Konzept glaube ich schon, das ist ganz wichtig, weil man das überall auch verwenden kann, auch wenn man selber in irgendeiner Form programmiert oder sich überlegt, wie man Sachen verteilt oder auch wie man nur lokal mit Daten arbeitet, ist MapReduce sicher ein großer Punkt. Hadoop an sich, glaube ich, würde man nicht mehr eigentlich jetzt einsetzen, wenn man nicht einfach noch große Legacy Systeme hat. Da sind wir wieder beim Legacy, verdient das Geld? Also ich glaube, dass es sicher noch viel herum ist und es ist auch kein schlechtes System, wenn man betroffen Processing macht, weil es eben super einfach ist und gut funktioniert. Aber wenn wir uns ehrlich sind, die meisten Firmen werden heutzutage in einem relativ überschaubaren Clustersystem ihre Daten auch gut in den Hauptspeicher bekommen, würde ich mal so sagen, der Großteil zumindest. Und da kann man einfach mittlerweile einen Spark nehmen und das in der Cloud vielleicht hochfahren und hat da dann kein Problem mit Batch Processing mehr, sondern kann das wirklich in Realtime dann verwenden."
+    },
+    {
+      "confidence": 0.89631,
+      "end": 3119792,
+      "speaker": "A",
+      "start": 3095594,
+      "text": "Ich meine, wer Hadoop eigentlich auch mal ausprobieren möchte, der muss jetzt nicht zu Hause den Cluster von Raspberry Pi aufsetzen, obwohl könnte man glaube ich schon tun. Vielleicht hat da jemand im Internet mal mit Raspberry Python ein HFS aufgesetzt, ich weiß es nicht. Aber auch Amazon hat so einen Service, nennt sich Elastic Map Reduce bzw. Er heißt AWS EMR und das stand früher für Elastic Map Reduce."
+    },
+    {
+      "confidence": 0.9331504,
+      "end": 3145044,
+      "speaker": "B",
+      "start": 3119906,
+      "text": "Das ist super, weil es ist heutzutage kein MapReduce mehr, sondern es ist Kafka. Du kannst noch irgendwie einen Hadoop auswählen, glaube ich, manuell oder optional, ging früher zumindest. Aber die klassische Engine dafür ist jetzt schon mittlerweile ein Spark, weil die einfach recht gut abwärtskompatibel ist zu dem Ganzen, weil die auf ähnlichen Daten operieren kann oder auf denselben Daten operieren kann, aber halt im Hauptspeicher alles geladen hat und dadurch einfach viel, viel schneller ist."
+    },
+    {
+      "confidence": 0.90897995,
+      "end": 3246972,
+      "speaker": "A",
+      "start": 3145132,
+      "text": "Das spricht natürlich schon irgendwie Bände. Oder wenn dann Amazon, was halt eigentlich auch bekannt dafür ist, Enterprise Kompatibilität lange zu halten, dann gut, wir haben so einen Service AWS EMR, Elastic Map Reduce stand mal für eigentlich für unser hosted Hadoop, machen wir jetzt aber nicht mehr. Da gibt es noch eine Story und zwar, ich weiß nicht, zwei tausend, siebzehn oder so bei Trivago, da hatten wir relativ großen Hadoop Cluster und haben auch ziemlich viel mit Hadoop gemacht und auch mit Hive, dieser SQL Engine, die du gerade erwähnt hast, oder Uzi, dem Workflow Manager und mit dem ganzen apache Ecosystem auf jeden Fall. Und damals haben wir auch immer vermehrt Leute in diesem Bereich gesucht. So wir haben das damals Big Data Engineers genannt, also eigentlich Leute, die sich mit Hadoop auskannten. Und irgendein Manager, ein paar Ebenen über mir, sagte dann einfach mal, ich bin mir gar nicht sicher, ob wir noch Leute finden, die mit Hadoop arbeiten wollen, weil das Feedback in den ganzen recruiting Gesprächen, das ist echt immer schwierig. Gegebenenfalls sollten wir mal drüber nachdenken, zu Big Query zu wechseln und den Hadoop Cluster abzuschalten, damit wir endlich mal wieder das Team verstärken können. Ob Trivago jemals den Hadoop Cluster abgeschafft hat, weiß ich nicht, muss ich zugeben. Aber das hat natürlich auch schon Bände gesprochen, weil damals, oder beziehungsweise die Story, die ich gerade erzählt habe, zeigt ja schon irgendwie, dass Hadoop, ich sag mal, industriemässig nicht mehr hip war, obwohl das, glaube ich, immer noch eine super Technologie ist. Und ich glaube, HDFS ist auch ein super, super Filesystem. Und da können wir uns, glaube ich, von ganz vielen anderen Technologien noch eine Scheibe abschneiden. Aber leider ist dann ja Hipster Driven Development und BigQuery kam da, glaube ich, gerade richtig hoch, halt immer noch ein Ding, auch im Recruiting."
+    },
+    {
+      "confidence": 0.9275182,
+      "end": 3319552,
+      "speaker": "B",
+      "start": 3247116,
+      "text": "Ja, man muss natürlich auch sagen, dass alles von Batch Processing weggegangen ist oder immer noch weggeht, leider, muss ich sagen, weil ganz viel kann man, glaube ich, auch wesentlich einfacher auf Batch Processing lösen. Und es muss nicht alles real time sein. Aber ich verstehe natürlich, dass heutzutage Product Leute oder das Management einfach auf die aktuellen Umsatzzahlen zugreifen will, die vor einer Stunde waren. Ist ja auch okay und das geht ja auch mittlerweile. Aber wenn es um wirklich große Datenmengen geht, dann wird es wahrscheinlich auch nicht realtime passieren, sondern halt entweder über Streaming, was aber wesentlich komplexer ist zu maintainen und Hand zu haben, oder teilweise, glaube ich, auch immer noch über Batch. Also das ist schon gutes System, wenn man einfach nicht so dringend Daten braucht und das einfach Batch mäßig dann abarbeiten kann. Weil stream mäßig muss man erst mal drauf haben, dass das sauber läuft, dass das alles in Realtime verarbeitet wird, dass da alles stabil ist. Ist dann auch nicht so leicht, einfach mal einen Batch Job nochmal neu zu starten. Das geht bei Streaming halt einfach alles schwieriger. Und auch wenn das Tooling jetzt wesentlich besser ist mit den ganzen Flink und Spark und alle, die so Streaming unterstützen, ist es doch immer noch schon viel, viel Aufwand. Und gerade im DevOps Bereich braucht man da schon auch Leute, die das dann gut handeln können."
+    },
+    {
+      "confidence": 0.9305185,
+      "end": 3364992,
+      "speaker": "A",
+      "start": 3319706,
+      "text": "Wenn ich deinen letzten Sätzen so folge, würde ich sagen, das klingt ja einfacher, als es wirklich ist. Also sorry, aber das ist von Badge auf Streaming umzustellen. Meines Erachtens nach ist auf der einen Seite die technische Herausforderung riesig, auf der anderen Seite auch der Mindset Shift bei allen Engineers, weil du denkst ganz anders. Und kleine Warnung, falls ihr bei Batch Jobs noch unterwegs seid und ihr seid happy damit, bleibt einfach dabei. Legacy verdient das Geld, ich sag's euch. Und wenn das gut genug ist, bleibt dabei, einfach nur alles auf Streaming umzustellen, weil es geht. Kann man machen, ist bestimmt ein geiles Research Projekt. Ich sag's euch, kann Jahre dauern, je nach Größe eurer Infrastruktur. Und es ist einfach unglaublich kompliziert. Wenn ihr es natürlich auf der grünen Wiese startet, ganz andere Sache, baut alles sofort auf Streaming. Da habt ihr aber ganz andere Voraussetzungen."
+    },
+    {
+      "confidence": 0.91975814,
+      "end": 3379930,
+      "speaker": "B",
+      "start": 3365056,
+      "text": "Und da kommt dann auch wieder die Episode ein hundert achtzig war es, glaube ich, oder ist es überhaupt nötig, da ein großes verteiltes System zu haben? Oder kann ich nicht einfach alles realtime in eine Datenbank rein speichern? Funktioniert nicht in der Realität auch sehr gut für wahrscheinlich ganz, ganz viele Anwendungsfälle."
+    },
+    {
+      "confidence": 0.95442283,
+      "end": 3391434,
+      "speaker": "A",
+      "start": 3380010,
+      "text": "Jetzt haben wir da über den ganzen alten Kram so viel geschwafelt. Was nehme ich denn jetzt daraus mit, dass es mal eine Zeit vor den Dinosauriern gab? Oder? Also was mache ich mit dem Wissen jetzt hier, Wolfgang?"
+    },
+    {
+      "confidence": 0.92950547,
+      "end": 3446700,
+      "speaker": "B",
+      "start": 3391482,
+      "text": "Also ich glaube, da gibt es einige Punkte, die du mitnehmen kannst. Ein ganz wichtiger Punkt, alles, was hip und neu ist, war schon mal da. In dem Fall wirklich in den ER Jahren mit Lisp und in den ERN. Und das erste Mal, wo MapReduce eigentlich so wirklich standardisiert wurde, war in den ER Jahren. Also es hat nicht Google erfunden. Alte Lösungen sind teilweise sehr, sehr schön. Also gerade so aus der funktionalen Welt. Die Einfachheit siegt, würde ich mal sagen. Der Pragmatismus, den man da an den Tag legt, da kann man wirklich schöne Lösungen bauen. Es muss nicht immer alles kompliziert sein, sondern man kann wirklich auch pragmatisch viel speed rausholen. Und ich glaube, dass man auch solche Dinge eben auch in der Zukunft noch anwenden kann, wenn man die mal verstanden hat, wie so was funktioniert, damit man auch nicht immer auf andere angewiesen ist und auf andere riesen Frameworks, sondern gerade solche einfachen Dinge vielleicht auch mal einfach selber programmieren kann und dadurch schnell eigentlich an ein Ziel kommt und schnell eine pragmatische Lösung hat."
+    },
+    {
+      "confidence": 0.923475,
+      "end": 3482402,
+      "speaker": "A",
+      "start": 3446740,
+      "text": "Unsere Herausforderung im Audio Only Format wie Podcast ist natürlich immer, okay, was kann man jetzt beschreiben und wo braucht man jetzt kein Support Bild oder ähnliches, um ein Konzept zu beschreiben? Deswegen können wir solche komplexen Konzepte, Mapreduce natürlich immer nur auf der Oberfläche behandeln. Denn wer mit dem Thema sich ein bisschen tiefer auseinandersetzen möchte, der sollte am besten mal in die Shownotes schauen. Da geht es dann mit einem Klick ins original Google Paper, was dann natürlich auch zum Beispiel über die Details wie dem Shuffle Step spricht. Also da können wir euch mal die ganze Sache wirklich ans Herz legen und mal das Google Paper als Abendlektüre nebens Bett legen."
+    },
+    {
+      "confidence": 0.92734724,
+      "end": 3507242,
+      "speaker": "B",
+      "start": 3482466,
+      "text": "Und das ist auch wirklich leicht verständlich. Also es ist kein komplexes Paper. Ich habe das schon öfters durchgelesen in meiner Karriere. Muss ich dazu sagen, aber das sind dreizehn Seiten, wo sogar bisschen Code mit dabei ist. Also das ist wirklich nichts aufwendiges und es ist wirklich ein schönes Konzept, leicht zu verstehen und das kann ich wirklich nur jeder und jedem empfehlen, einfach mal wirklich durchzulesen. Ist auch schön geschrieben."
+    },
+    {
+      "confidence": 0.9129286,
+      "end": 3666600,
+      "speaker": "A",
+      "start": 3507386,
+      "text": "Und wer jetzt ah, MapReduce mache ich doch in JavaScript den ganzen Tag. Ich weiß genau, wovon die Jungs da sprechen. Dem kann ich jetzt auch mal eine kleine Programmieraufgabe mitgeben. Und zwar Mapreduce hat nämlich auch sehr große Herausforderungen. Eine Herausforderung sind zum Beispiel Hotkeys bzw. Hotspots bzw. Sogenannte skewed workloads. Was bedeutet das? Stellt euch mal vor, ihr habt eine Celebrity, also eine populäre Person, Elon Musk, auf einem sozialen Netzwerk mit ganz vielen Followern und da wollt ihr jetzt Map und Reduce machen. Das bedeutet, der Maps Step kriegt ja immer nur einen Record rein und der Reducer kriegt natürlich dann ganz viele Records rein. Was bedeutet denn, wenn der Reducer auf einmal viel mehr Arbeit leisten muss als andere, weil ihr zum Beispiel alle Tweets von Elon Musk irgendwie im Reduce Job habt, dann habt ihr natürlich einen sogenannten Hotspot oder Hotkeys. Sowas gibt es dann zum Beispiel auch bei dynamodb und Co. Falls da irgendwer mit arbeitet, programmiert das doch mal und versuch doch mal diesen skewed Workload zu lösen. Das ist nämlich dann eine Thematik, da kommt ihr mit dem ganz einfachen Verständnis von Map Reduce nämlich sehr, sehr schnell an komplexe Algorithmen. Da gibt es natürlich Lösungen für, aber wie zum Beispiel ihr könnt natürlich vor dem Mapstep, bevor die ganze Sache überhaupt gestartet hat, könnt ihr eure Daten samplen und so weiter und dann versuchen, was hochzurechnen, um herauszufinden, bekomme ich im Reduce Step einen Hotspot und Co. Also das ist auf jeden Fall ein gutes algorithmisches Problem. Könnte gegebenenfalls auch mal eine Aufgabe werden, ich weiß es nicht. Aber sowas können wir natürlich nur begrenzt im Audio only Format besprechen. Falls du immer noch im Audiogerät bist, würde ich mich freuen, wenn du noch mal in unsere Community kommst und mir von deinen MapReduce Erfahrungen erzählst. Hast du vielleicht sogar im Hadoop Umfeld gearbeitet oder bist du gerade dabei, eine Hadoop Infrastruktur auf Streamprocessing umzubauen? Wenn ja, komm doch mal rum und teile uns deine Liebe oder vielleicht auch deinen Hass mit Hive Pick Mapreduce oder oder oder mit verteilter Computation. Wir sprechen immer sehr, sehr gerne über sogenannte War Stories und hören uns natürlich auch gerne deine Stories vom Krieg an, wo Wolfgang ist, auch in der Community. Dann könnt ihr vielleicht da zusammen bei einem Kaffee und Kuchen über alte Zeiten sprechen. Ansonsten würde es uns natürlich freuen, wenn du natürlich einfach bei der nächsten Episode dabei bist oder uns mal einen Daumen hoch hier auf der Podcast Plattform deiner Wahl lässt. Vielen Dank von meiner Seite. Vielen dank Wolfgang fürs Geschichtenerzählen. Wir hören uns bald wieder. Bis später. Tschüss, CI."
+    }
+  ],
+  "webhook_auth": false
+}
