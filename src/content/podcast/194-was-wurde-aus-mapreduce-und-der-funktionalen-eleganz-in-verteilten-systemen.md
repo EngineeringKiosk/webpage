@@ -78,7 +78,7 @@ spotify: https://open.spotify.com/episode/1Zn2WYPFQPxKhIOeZdeype
 tags: []
 title: '#194 Was wurde aus MapReduce und der funktionalen Eleganz in verteilten Systemen?'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/194-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=AtQdtUZVYbw
 
 ---
