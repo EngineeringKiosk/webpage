@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/35502cf8-40b9-4086-89d1-4f236f42088d/engineering-kiosk-194-was-wurde-aus-mapreduce-und-der-funktionalen-eleganz-in-verteilten-systemen
 apple_podcasts: https://podcasts.apple.com/us/podcast/194-was-wurde-aus-mapreduce-und-der-funktionalen-eleganz/id1603082924?i=1000706472441&uo=4
 audio: https://audio1.redcircle.com/episodes/4b20fcd3-75e4-4826-b348-b50379d7605e/stream.mp3
 chapter:
