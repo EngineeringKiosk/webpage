@@ -75,7 +75,9 @@ speaker:
 - name: Wolfi Gassler
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/1Zn2WYPFQPxKhIOeZdeype
-tags: []
+tags:
+- Software Engineering
+- Papers we love
 title: '#194 Was wurde aus MapReduce und der funktionalen Eleganz in verteilten Systemen?'
 transcript_raw: ''
 transcript_slim: src/data/transcripts/194-transcript-slim.json
