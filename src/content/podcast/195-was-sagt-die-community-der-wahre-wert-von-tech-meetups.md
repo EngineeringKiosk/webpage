@@ -73,7 +73,9 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/7lvKOGMTKDv3kgRw10bLlB
-tags: []
+tags:
+- Tech Kultur
+- Knowledge Sharing
 title: '#195 Was sagt die Community? Der wahre Wert von Tech-Meetups'
 transcript_raw: ''
 transcript_slim: ''
