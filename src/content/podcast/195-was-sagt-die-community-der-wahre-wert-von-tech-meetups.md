@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/ab93c519-62cc-47b7-bcd6-fec6882e3c7f/engineering-kiosk-195-was-sagt-die-community-der-wahre-wert-von-tech-meetups
 apple_podcasts: https://podcasts.apple.com/us/podcast/195-was-sagt-die-community-der-wahre-wert-von-tech-meetups/id1603082924?i=1000708227010&uo=4
 audio: https://audio1.redcircle.com/episodes/242e6b54-a91d-4981-ad19-ca7b5c21ac94/stream.mp3
 chapter:
