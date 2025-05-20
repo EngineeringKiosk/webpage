@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/67bad219-2ff4-40c3-8f1f-c7563db674f5/engineering-kiosk-196-star-wars-auf-github-4-5-mio-fake-sterne-entdeckt
 apple_podcasts: https://podcasts.apple.com/us/podcast/196-star-wars-auf-github-4-5-mio-fake-sterne-entdeckt/id1603082924?i=1000709086460&uo=4
 audio: https://audio1.redcircle.com/episodes/da51f9be-83b1-424b-92e0-39597f55d720/stream.mp3
 chapter:
