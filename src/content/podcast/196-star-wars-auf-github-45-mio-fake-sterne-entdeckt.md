@@ -89,7 +89,35 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Dario Tigner
+  transcriptLetter: C
+- name: Schepp Christian Schäfer
+  transcriptLetter: D
+- name: Philipp Wolfram
+  transcriptLetter: E
+- name: Moritz Kaiser
+  transcriptLetter: F
+- name: Stefan Brandt
+  transcriptLetter: G
+- name: Simon Brüggen
+  transcriptLetter: H
+- name: Melanie Patrick
+  transcriptLetter: I
+- name: Maxi Kurzawski
+  transcriptLetter: J
+- name: Stefan Bethe
+  transcriptLetter: K
+- name: Tim Glabisch
+  transcriptLetter: L
+- name: Holger Große-Plankermann
+  transcriptLetter: M
+- name: Mirjam Ziselsberger
+  transcriptLetter: N
+- name: Simon Legner
+  transcriptLetter: O
 spotify: https://open.spotify.com/episode/7mMRX6tFY7mV78I13Va4AY
 tags:
 - Tech Kultur
