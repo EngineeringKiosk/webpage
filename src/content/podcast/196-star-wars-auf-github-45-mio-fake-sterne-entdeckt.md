@@ -91,7 +91,10 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/7mMRX6tFY7mV78I13Va4AY
-tags: []
+tags:
+- Tech Kultur
+- Papers we love
+- Open Source
 title: '#196 Star Wars auf GitHub: 4,5 Mio. Fake-Sterne entdeckt'
 transcript_raw: ''
 transcript_slim: ''
