@@ -82,11 +82,11 @@ speaker:
   transcriptLetter: E
 - name: Philipp Wolfram
   transcriptLetter: F
-- name: Christian Schepp Schäfer
+- name: "Christian Schepp Sch\xE4fer"
   transcriptLetter: G
 - name: Simon Legner
   transcriptLetter: H
-- name: Simon Brüggen
+- name: "Simon Br\xFCggen"
   transcriptLetter: I
 - name: Niklas Meyer
   transcriptLetter: J
@@ -96,7 +96,7 @@ speaker:
   transcriptLetter: L
 - name: Maxi Kurzawski
   transcriptLetter: M
-- name: Holger Große-Plankermann
+- name: "Holger Gro\xDFe-Plankermann"
   transcriptLetter: N
 - name: Melanie Patrick
   transcriptLetter: O
@@ -108,7 +108,7 @@ tags:
 - Knowledge Sharing
 title: '#195 Was sagt die Community? Der wahre Wert von Tech-Meetups'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/195-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=jbRtxV9bB5c
 
 ---
