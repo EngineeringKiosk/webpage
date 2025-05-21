@@ -19,4 +19,14 @@ talks:
     bio: 'Nazmi make things you can click — or have a conversation with. He has done 3 years of mobile development and spent some memorable time with machine learning and VR. And also played around with whatever looked interesting — Ktor, Spring, PrimeFaces, Vue, Tailwind, WordPress, Astro, Eleventy, ROS, ... etc. In short: Nazmi is into building stuff — sometimes serious, sometimes ridiculous, but always fun.'
     linkedin: 'nazmiahmad9'
 eventId: '214rus0uvkku8dshtckiegmbt0'
+participants:
+  registered: 55
+  present:
+    total: 59
+    male: 50
+    female: 9
+  newParticipants: 18
+speakers:
+  female: 1
+  male: 1
 ---
