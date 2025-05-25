@@ -4,9 +4,9 @@ location:
   name: 'Cloudflight'
   address: 'Cloudflight, Bürgerstraße 1/3, 6020 Innsbruck'
   url: 'https://www.cloudflight.io'
-  logo: 'cloudflight.png'
+  logo: './images/location/cloudflight.png'
 talks:
-  - avatar: '2503-roland.jpg'
+  - avatar: './images/speaker/2503-roland.jpg'
     name: 'Roland Lezuo'
     title: 'Zephyr RTOS - embedded software leaving the stone age'
     description: The Zephyr Project, an open-source real-time operating system backed by The Linux Foundation, has spent nearly a decade evolving into a stable, reliable technology. With its liberal Apache 2.0 license and community-driven development, Zephyr has gained traction among both individual developers and companies alike. But what truly sets it apart are the technical details. This talk will inevitably touch on the frustrations of dealing with vendor-specific IDEs, while providing a brief dive into key aspects like the Hardware Abstraction Layer (HAL), Kconfig, and west. Ultimately, it will explore how Zephyr is helping embedded software finally break free from the stone age.
@@ -14,7 +14,7 @@ talks:
     linkedin: 'roland-lezuo-38861970'
     slides: 2503-roland-zephyr.pdf
     website: 'https://www.embedded-solutions.at/'
-  - avatar: '2503-katharina.jpg'
+  - avatar: './images/speaker/2503-katharina.jpg'
     name: 'Katharina Schmermbeck'
     title: 'The Makeup Robot and Beyond: Co-Designing Assistive Tech for Inclusion'
     description: People with disabilities often face discrimination and lack of access in all areas of society. While cheap and accessible assistive technologies can support participation and independence, awareness and acceptance of disability are inevitable for an inclusive society. Our initiative INNklusion strives to tackle these problems by bringing together people with disabilities, students, researchers, and associations. During different lecture formats at the university, students co-design assistive technologies with people with disabilities. You will learn about interesting projects such as a public transportation navigator and a make-up robot as well as lessons learnt after one year in practice and our vision for a more inclusive region.

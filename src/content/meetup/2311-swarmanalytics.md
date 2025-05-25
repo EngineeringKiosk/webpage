@@ -4,9 +4,9 @@ location:
   name: 'MAD Ventures'
   address: 'Helga-Krismer-Platz 1, 1. Stock, 6020 Innsbruck, Austria'
   url: 'https://www.mad.ag/'
-  logo: 'mad.svg'
+  logo: './images/location/mad.svg'
 talks:
-  - avatar: '2311-mike.jpg'
+  - avatar: './images/speaker/2311-mike.jpg'
     name: 'Mike Brunner'
     title: 'Preparing for the European Cyber Resilience Act – Get your House in Order Before the New Legislation Hits'
     description: "The final proposal of the European Cyber Resilience Act (CRA-E) is publicly available since September 2022 and so are the results of the EU's impact assessment of the planned regulation. Considering the potentially huge implications, especially for enterprises with less mature secure development practices, achieving compliance with the CRA-E will become a challenge once the legislation will be finally enacted. During this talk I will present an overview of the regulation's essential security requirements and how these relate to standards and best practices in secure development of software-intensive systems. I'd like to use this event to discuss your view on this upcoming regulation and will showcase interesting results from the CERTAINITY Cyber Resilience Act Preparedness Survey we conducted together with the university of Innsbruck."
@@ -14,7 +14,7 @@ talks:
     linkedin: 'michael-brunner-92690487'
     website: 'https://certainity.com'
     slides: '2311-mike-brunner.pdf'
-  - avatar: '2311-lukas.jpg'
+  - avatar: './images/speaker/2311-lukas.jpg'
     name: 'Lukas Ruetz'
     title: 'Tales from updating a software appliance over 15 years'
     description: "Updating software sounds easy, but it's not. It's ease in the beginning but gets harder over time because you always have to migrate the old system and configuration to the new system. The bigger your tech-stack gets the more components you'll need to update. A software appliance needs to update countless dependencies, migrate state and keep everything consistent. This talk starts with an overview of what it really means to update software and is also a collection of stories from 15 years of updating a software appliance."

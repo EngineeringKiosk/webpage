@@ -27,7 +27,7 @@ const { headline, meetupsToShow, archive } = Astro.props
 						<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">
 							{formatDateWithoutWeekday(meetup.date, 'en-GB')} @{' '}
 							<div class="inline-block h-14">
-								<CompanyLogo name={meetup.location.name} logo={meetup.location.logo} url={meetup.location.url} />
+								<CompanyLogo name={meetup.location.name} logo={meetup.location.logo} url={meetup.location.url} logoHeight="56" />
 							</div>
 						</h1>
 						{!archive && <p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Join the next meetup and listen to the following talks.</p>}

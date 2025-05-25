@@ -5,13 +5,13 @@ location:
   address: 'Innstraße 85, 6020 Innsbruck'
   url: 'http://zureiche.at/'
 talks:
-  - avatar: 'bier.jpg'
+  - avatar: './images/speaker/bier.jpg'
     name: 'Bernhard Bierbrauer'
     title: "Let's meet for a beer!"
     description: 'This time we will meet for drinks at Gastgarten zur Eiche to network. We reserved tables for for 20 people.'
     bio: ''
     website: 'https://unsplash.com/de/fotos/braune-flussigkeit-auf-klarem-glasbecher-rrvAuudnAfg'
-  - avatar: 'drinks.jpg'
+  - avatar: './images/speaker/drinks.jpg'
     name: 'Saskia Spezi'
     title: 'Join us for our yearly summer-talk-break to enjoy a drink and chat.'
     description: 'No Talks, just drinks and networking. We will meet at Gastgarten zur Eiche at around 18:30. Please register so we can adapt the reservation accordingly.'

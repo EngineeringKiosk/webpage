@@ -56,19 +56,19 @@ const blogEntryCollection = defineCollection({
 // Schema for Meetups
 const meetupCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		date: z.date(),
 		eventId: z.string().optional(),
 		location: z.object({
 			name: z.string(),
 			address: z.string(),
 			url: z.string().optional(),
-			logo: z.string().optional(),
+			logo: image().optional(),
 			note: z.string().optional(),
 		}),
 		talks: z.array(
 			z.object({
-				avatar: z.string().optional(),
+				avatar: image().optional(),
 				name: z.string(),
 				title: z.string(),
 				description: z.string(),

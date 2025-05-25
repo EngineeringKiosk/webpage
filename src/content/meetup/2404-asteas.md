@@ -5,16 +5,16 @@ location:
   address: 'Eduard-Bodem-Gasse 5, 6020 Innsbruck'
   note: ' - Large, covered main entrance at the red building. On the ground floor, straight ahead to Seminarraum 2'
   url: 'https://www.iacbox.com'
-  logo: 'asteas.png'
+  logo: './images/location/asteas.png'
 talks:
-  - avatar: '2404-matthias.jpg'
+  - avatar: './images/speaker/2404-matthias.jpg'
     name: 'Matthias Triendl'
     title: 'Bitcoin and the Energy Transition'
     description: "This talk examines the role of Bitcoin mining in accelerating and economizing the energy transition. We'll explore how integrating Bitcoin mining with renewable energy sources can reduce the environmental footprint of heating and make renewable energy more financially viable. The presentation will focus on the practical aspects of this integration, demonstrating how it can lead to more stable green energy grids and provide an economic boost to areas with renewable resources. Attendees will gain insights into the symbiotic relationship between bitcoin and sustainable energy, understanding how Bitcoin mining can support the transition to a greener economy."
     linkedin: 'matthias-triendl-42b260a8'
     website: 'https://21energy.com/'
     slides: '2404-Matthias-Triendl-Bitcoin-Energy.pdf'
-  - avatar: '2404-sigma.png'
+  - avatar: './images/speaker/2404-sigma.png'
     name: 'Richard Weinberger & David Gstir'
     title: 'What the xz backdoor can teach us about supply chain security'
     description: "The recent discovery of a backdoor in the xz-utils package vividly demonstrates that supply chain attacks are not only a reality but also pose a significant threat. In this presentation, David and Richard will provide an overview of the attack on the open-source ecosystem and discuss supply chain attacks more broadly. The objective of this talk is to offer both a technical and a non-technical overview of the attack, offering insights that may help mitigate similar incidents in the future. Additionally, David and Richard will explore the potential impact of supply chain attacks on individuals and their software projects. This discussion aims to shed light on the broader implications of these attacks and provide guidance on safeguarding against them in an increasingly interconnected digital landscape."

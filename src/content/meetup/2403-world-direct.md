@@ -4,17 +4,17 @@ location:
   name: 'World-Direct'
   address: 'Unternehmerzentrum 8a, 6071 Sistrans'
   url: 'https://www.world-direct.at'
-  logo: 'worlddirect.svg'
+  logo: './images/location/worlddirect.svg'
   note: '↣ <a href="/meetup/alps/tmp/Lageplan_WD.pdf" class="underline">Local Map</a>'
 talks:
-  - avatar: '2401-martinHaeusler.jpg'
+  - avatar: './images/speaker/2401-martinHaeusler.jpg'
     name: 'Martin Häusler'
     title: 'Working with Kotlin - double the productivity, half the bugs'
     description: "Are you fed up with Java throwing NullPointerExceptions at you in production? Did you write enough getters and setters for a whole developer lifetime? Do you wish for something better? Then this talk is for you. We'll talk about Kotlin, the programming language created by JetBrains, which has taken the world of the Java Virtual Machine by storm. From Android apps to server-side development and even build scripts, Kotlin is everywhere. The talk gives an introduction to the language and its key features as well as side-by-side comparisons with Java. Whether you're a seasoned Java veteran, or a newcomer who's just learning programming, this talk has something in store for you."
     bio: "Martin studied computer science at the University of Innsbruck. While working towards his PhD, he got in touch with the founders of Txture, the startup company he's working for today as a senior backend developer and software architect. His favorite topics include Kotlin, the Java Virtual Machine and databases. Outside of his job he's a passionate gamer, from the latest blockbusters on PC and consoles to classic tabletop dungeons and dragons."
     slides: '2403-martin-haeusler.pdf'
     linkedin: 'martin-h%C3%A4usler-052b809b'
-  - avatar: '2403-SergeiK.jpg'
+  - avatar: './images/speaker/2403-SergeiK.jpg'
     name: 'Sergei Koiushev'
     title: 'To be, or not to be'
     linkedin: 'sergei-koiushev-b71782153'
