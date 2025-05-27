@@ -77,7 +77,9 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+    transcriptLetter: B
 spotify: https://open.spotify.com/episode/4xyOleAzIvZtBzMpzEcMQw
 tags: []
 title: '#197 Gute Engineers stellen (dumme) Fragen'
