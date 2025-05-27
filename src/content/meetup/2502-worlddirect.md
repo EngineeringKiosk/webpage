@@ -4,10 +4,10 @@ location:
   name: 'World-Direct'
   address: 'Unternehmerzentrum 8a, 6071 Sistrans'
   url: 'https://www.world-direct.at'
-  logo: 'worlddirect.svg'
+  logo: './images/location/worlddirect.svg'
   note: '↣ <a href="/meetup/alps/tmp/Lageplan_WD.pdf" class="underline">Local Map</a>'
 talks:
-  - avatar: '2307-david.png'
+  - avatar: './images/speaker/2307-david.png'
     name: 'David Gstir'
     bio: "David Gstir is a security researcher and software engineer at sigma star gmbh with 15+ years of hands-on experience in designing, engineering and auditing software for various use cases. He obtained a master's degree in computer sciences from the University of Technology Graz, Austria where he specialized in IT security and cryptography."
     title: 'Hacking Android Disk Encryption for Fun and Profit'
@@ -15,7 +15,7 @@ talks:
     linkedin: 'david-g42'
     website: 'https://sigma-star.at'
     slides: '2502_david_hacking-android-disk-encryption.pdf'
-  - avatar: '2502_Gabriele_Strasser.jpg'
+  - avatar: './images/speaker/2502_Gabriele_Strasser.jpg'
     name: 'Gabriele Strasser'
     title: 'Between family and career: How shared leadership makes it possible to reconcile family and work.'
     description: 'Part-time leadership? Shared leadership? Family? Dreams? Sounds like someone trying to squeeze two lives into one. Maybe you think so too. But what if we look at it differently? What if shared leadership was not just a solution to the family-career dilemma, but a way to redefine work - more efficient, more creative, more human? What if shared leadership was also a way of achieving greater equality? When responsibility is shared, when people grow together in a team, when we open the door to flexible working models, then we are developing and living solutions for life-phase orientated work. But let me be honest: shared leadership is not a fairy tale that ends with everyone living happily ever after. It comes with challenges - such as clear communication, defined roles and trust. But with the right tools, shared responsibility becomes shared strength. This talk is for anyone who is juggling family and career, who wants to try something new and is wondering: "Is it really possible?" The answer is yes - if we rethink leadership and are prepared to share responsibility.'

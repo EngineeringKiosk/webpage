@@ -1,23 +1,24 @@
 ---
+import { Image } from "astro:assets";
+
 export interface Props {
 	name: string;
 	logo: string;
 	url: string;
+	logoHeight: number;
 }
 
-const { name, logo, url } = Astro.props;
-const logoURL = logo ? `/meetup/alps/images/location/${logo}` : null;
-
+const { name, logo, url, logoHeight } = Astro.props;
 ---
 
 {
 	url ? (
 		<a href={url} target="_blank">
-			{logoURL ? (<img src={logoURL} class="inline h-full" alt={name} title={name} />) : (<span class="underline">{name}</span>)}
+			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} />) : (<span class="underline">{name}</span>)}
 		</a>
 	) : (
 		<span>
-			{logoURL ? (<img src={logoURL} class="inline h-full" alt={name} title={name} />) : name}
+			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} />) : name}
 		</span>
 	)
 }

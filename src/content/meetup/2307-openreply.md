@@ -4,9 +4,9 @@ location:
   name: 'Open Reply'
   address: 'Anichstraße 13, 6020 Innsbruck, Austria'
   url: 'https://www.reply.com/open-reply/de/'
-  logo: 'openreply.svg'
+  logo: './images/location/openreply.svg'
 talks:
-  - avatar: '2307-david.png'
+  - avatar: './images/speaker/2307-david.png'
     name: 'David Gstir'
     bio: "David Gstir is a security researcher and software engineer at sigma star gmbh with 15+ years of hands-on experience in designing, engineering and auditing software for various use cases. He obtained a master's degree in computer sciences from the University of Technology Graz, Austria where he specialized in IT security and cryptography."
     title: 'Towards More Secure Code - Why Devs Should Make My Job Harder'
@@ -14,7 +14,7 @@ talks:
     linkedin: 'david-g42'
     website: 'https://sigma-star.at'
     slides: '2307-david.pdf'
-  - avatar: '2307-chris.jpg'
+  - avatar: './images/speaker/2307-chris.jpg'
     name: 'Christian Esswein'
     bio: 'Chris is a software engineer and development lead at Txture - a startup based in Innsbruck. Besides his work he is passionate about analyzing and visualizing outdoor sport activity data.'
     title: 'Beyond Code: Lessons Learned as a Developer turned Engineering Manager in a Startup Environment'

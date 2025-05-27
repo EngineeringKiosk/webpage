@@ -4,15 +4,15 @@ location:
   name: 'DeepOpinion & Intelligent and Interactive Systems@Uni Innsbruck'
   address: 'ICT Gebäude, EG, Seminarraum 1/2, Technikerstr 21a, 6020 Innsbruck'
   url: 'https://deepopinion.ai'
-  logo: 'deepopinion-uibk.png'
+  logo: './images/location/deepopinion-uibk.png'
 talks:
-  - avatar: '2402-maximilian.jpg'
+  - avatar: './images/speaker/2402-maximilian.jpg'
     name: 'Maximilian Schellhorn'
     title: 'From containers to Serverless Functions'
     description: 'In the evolution of cloud computing, containers have become a pivotal technology. They provide a robust way for packaging, deploying and operating applications, with Kubernetes emerging as a leading orchestrator. On the other hand, Serverless functions provide a streamlined, event-driven model that abstracts infrastructure management entirely. In this session we’ll explore the fundamental differences in architecture, scalability, and operational characteristics between these technologies. By investigating real-world scenarios and code we’ll gain insights into choosing the right approach based on workload requirements, deployment scenarios, and operations. Lastly, we’ll explore synergies between these technologies, demonstrating how they can be combined to leverage the strengths of both.'
     bio: 'Maximilian Schellhorn works as a Senior Solutions Architect at Amazon Web Services. He supports companies with designing well-architected applications and running them in the cloud. Before that he worked for more than 10 years as a Software Engineer & Architect on distributed system design and monolith-to-microservice transformations. His recent work focuses on Serverless (Java), SaaS and Event Driven Architectures.'
     slides: '2402-max-containers-vs-functions.pdf'
-  - avatar: '2402-vero.jpg'
+  - avatar: './images/speaker/2402-vero.jpg'
     name: 'Veronika Betzel'
     title: 'We need to talk… (more) about mental health at work'
     description: "“Why are you so emotional?”, “Can’t you just put your private life aside?”, “We are at work, please be professional!” Who doesn't know sentences like these? In a world captivated by progress and achievement, mental health and well-being often find themselves relegated to the shadows or not taken seriously. Embark on a transformative journey with me, redefining mental health discussions in the workplace. Visualize a setting where mental well-being is integral, fostering genuine support. Explore the tangible benefits for both employees and management, understanding how a supportive workplace elevates individual thriving and overall organizational success. Offering examples of navigating mental health challenges at work and providing guidelines, insights, and ideas for supporting others, this talk goes beyond. Regardless of whether you encounter challenges or not, valuable tips and insights into supporting mental health issues in the workplace will be shared. The question is not, “Should we talk about mental health at work?” but rather, “How can we talk about mental health at work?” This session will offer a direct answer to that question by giving examples and guidelines out of personal experiences."

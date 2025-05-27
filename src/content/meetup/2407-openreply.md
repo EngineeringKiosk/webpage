@@ -4,9 +4,9 @@ location:
   name: 'Open Reply'
   address: 'Anichstraße 13, 6020 Innsbruck, Austria'
   url: 'https://www.reply.com/open-reply/de/'
-  logo: 'openreply.svg'
+  logo: './images/location/openreply.svg'
 talks:
-  - avatar: '2405-nico.png'
+  - avatar: './images/speaker/2405-nico.png'
     name: 'Nico Riedmann'
     title: 'Peer Programming to increase "Team Quality”'
     description: 'Most engineers are familiar with pair programming. Your team may already encourage it to foster learning or as an alternative to ensuring code quality via pull-request reviews. This talk will show you the impact that collaboratively creating code has on "team quality" rather than just "code quality" - creating opportunities to build trust, increase shared ownership, and define and better understand a shared vision. And if you weren’t convinced before, we’ll end with a few practical tips on getting started with pair and mob-programming.'
@@ -14,7 +14,7 @@ talks:
     linkedin: 'nico-riedmann'
     website: 'https://riedmann.dev/'
     slides: '2407-nico-peer-prog-team-quality.pdf'
-  - avatar: 'generic-you2.jpg'
+  - avatar: './images/speaker/generic-you2.jpg'
     name: 'Lightning talks'
     title: 'Present your idea, topic, or project'
     description: "We invite you to share any tech-related topic that you're passionate about or find interesting. Whether it's a new technology, your experience with a specific tool, an idea for an open-source project, or even seeking feedback on a potential side project, we want to hear from you. In case you want to give a lightning talk, please get in touch with us via email or on site at the meetup.<br><br>

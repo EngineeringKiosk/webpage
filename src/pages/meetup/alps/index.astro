@@ -53,7 +53,7 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 									Join us at Engineering Kiosk Alps, a dynamic tech meetup happening in the heart of the Alps, in Innsbruck! This event brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and
 									technology.
 								</p>
-								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} /></div></h2>
+								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
 								<p class="mt-2 text-sm md:text-base text-coolGray-500 font-medium">
 									📅 Date <span class="font-bold">{dateAndTime}</span>
 								</p>
@@ -118,7 +118,7 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 							Next meetup:<br />
 							<span class="font-bold">📅 {dateAndTime}</span><br />
 							<div class="h-5 inline-block">
-								📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
+								📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="20" /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
 							</div>
 						</div>
 						<script>

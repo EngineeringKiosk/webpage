@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import CompanyLogo from '../CompanyLogo.astro';
+import MeetupArchiveEventTalk from './MeetupArchiveEventTalk.astro';
+import { formatDateWithoutWeekday } from '../../scripts/date.js';
+
+export interface Props {
+	meetup: CollectionEntry<'meetup'>;
+}
+
+const { meetup } = Astro.props;
+const meetupId = `meetup-${formatDateWithoutWeekday(meetup.date, 'en-GB').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`;
+
+---
+<div class="flex flex-col md:flex-row border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer bg-white hover:bg-yellow-50" onclick={`window.location.href='#${meetupId}'`}>
+  <div class="flex flex-col md:flex-row flex-grow">
+    <!-- Date & Host Column -->
+    <div class="w-full md:w-48 lg:w-64 p-4 md:border-r">
+      <div class="text-sm font-medium text-yellow-500 mb-4">
+        {formatDateWithoutWeekday(meetup.date, 'en-GB')}
+      </div>
+      <div class="h-12 md:h-10">
+        {meetup.location && meetup.location.logo && (
+          <CompanyLogo name={meetup.location.name} logo={meetup.location.logo} logoHeight="40" />
+        )}
+        {meetup.location && !meetup.location.logo && (
+          <span class="text-sm">{meetup.location.name}</span>
+        )}
+      </div>
+    </div>
+    
+    <!-- Talks Column -->
+    <div class="flex-grow p-4 flex items-center">
+
+      <ul class="space-y-2">
+        {meetup.talks && meetup.talks.map((talk) => (
+          talk.title && (
+            <MeetupArchiveEventTalk title={talk.title} speaker={talk.name} avatar={talk.avatar} />
+          )
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
