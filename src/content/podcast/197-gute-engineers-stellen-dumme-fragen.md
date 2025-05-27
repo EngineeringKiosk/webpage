@@ -79,7 +79,7 @@ speaker:
 - name: Andy Grunwald
   transcriptLetter: A
 - name: Wolfi Gassler
-    transcriptLetter: B
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/4xyOleAzIvZtBzMpzEcMQw
 tags:
 - Tech Kultur
