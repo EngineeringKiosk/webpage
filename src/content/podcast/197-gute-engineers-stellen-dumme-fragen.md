@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/ff20773e-9fde-4942-b44e-4ffcc1c6cef1/engineering-kiosk-197-gute-engineers-stellen-dumme-fragen
 apple_podcasts: https://podcasts.apple.com/us/podcast/197-gute-engineers-stellen-dumme-fragen/id1603082924?i=1000710033535&uo=4
 audio: https://audio1.redcircle.com/episodes/8431f483-414f-45f4-b9d4-cab16cf2745a/stream.mp3
 chapter:
