@@ -94,7 +94,7 @@ speaker:
   transcriptLetter: B
 - name: Dario Tigner
   transcriptLetter: C
-- name: Schepp Christian Schäfer
+- name: "Schepp Christian Sch\xE4fer"
   transcriptLetter: D
 - name: Philipp Wolfram
   transcriptLetter: E
@@ -102,7 +102,7 @@ speaker:
   transcriptLetter: F
 - name: Stefan Brandt
   transcriptLetter: G
-- name: Simon Brüggen
+- name: "Simon Br\xFCggen"
   transcriptLetter: H
 - name: Melanie Patrick
   transcriptLetter: I
@@ -112,7 +112,7 @@ speaker:
   transcriptLetter: K
 - name: Tim Glabisch
   transcriptLetter: L
-- name: Holger Große-Plankermann
+- name: "Holger Gro\xDFe-Plankermann"
   transcriptLetter: M
 - name: Mirjam Ziselsberger
   transcriptLetter: N
@@ -125,7 +125,7 @@ tags:
 - Open Source
 title: '#196 Star Wars auf GitHub: 4,5 Mio. Fake-Sterne entdeckt'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/196-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=e6nO4nT-whI
 
 ---

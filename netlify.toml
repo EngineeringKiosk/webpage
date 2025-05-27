@@ -2565,6 +2565,18 @@ to = "https://docs.google.com/forms/d/e/1FAIpQLSfDb4WWkCs6VXGT73-S-BlGydcSpvHXUv
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/197"
+to = "/podcast/episode/197-gute-engineers-stellen-dumme-fragen?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep197"
+to = "/podcast/episode/197-gute-engineers-stellen-dumme-fragen?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
