@@ -81,7 +81,10 @@ speaker:
 - name: Wolfi Gassler
     transcriptLetter: B
 spotify: https://open.spotify.com/episode/4xyOleAzIvZtBzMpzEcMQw
-tags: []
+tags:
+- Tech Kultur
+- Kommunikation
+- Knowledge Sharing
 title: '#197 Gute Engineers stellen (dumme) Fragen'
 transcript_raw: ''
 transcript_slim: ''
