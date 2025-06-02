@@ -46,7 +46,7 @@ const alpsImage = (await import('../../../../images/meetup-alps/ibk.jpg')).defau
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<Image class="relative rounded-7xl h-80" src={alpsImage} alt="View on Innsbruck" title="View on Innsbruck" />
+									<Image class="relative rounded-7xl h-80 w-80" src={alpsImage} alt="View on Innsbruck" title="View on Innsbruck" />
 								</div>
 							</div>
 						</div>
@@ -64,7 +64,7 @@ const alpsImage = (await import('../../../../images/meetup-alps/ibk.jpg')).defau
 				</div>
 
 				<div class="flex flex-col space-y-6 mb-16">
-					
+
 					<!-- Meetup Rows -->
 					{meetupArchive.map((meetup) => (
 						<MeetupArchiveEvent meetup={meetup} />
