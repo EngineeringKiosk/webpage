@@ -1,0 +1,1070 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4055,
+  "audio_url": "https://cloud.inlupus.at/s/iBQxANcaRMrs4n2/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9583462,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "fb084699-c66b-406f-b697-edc965b5c26c",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 185520,
+      "speaker": "A",
+      "start": 4000,
+      "text": "Eine neue Episode vom Engineering Kiosk. Meine erste Frage an bist du wach? Denn heute haben wir ein Thema zum Einschlafen. Wir sprechen über Authorization, im speziellen über Role based access Control. Bist du noch bei mir oder schon weggepennt? Aber Stopp, stopp, stopp, stopp, stopp. Auf den ersten Ton klingt das Thema langweilig. Wenn man aber mal genauer hinschaut, verbirgt sich da schon recht viel Komplexität. Und wir dröseln das heute mal auf. Wir starten mit der Klärung, was eigentlich Role Based Access Control ist und welches Problem es löst. Weiter geht es mit einem Deep Dive, warum Role Based Access Control nicht gleich Role Based Access Control ist und warum es pro App eigentlich unterschiedlich ist. Wir besprechen, wie Grafana, Sentry, Elastic bzw. OpenSearch oder Jäger, die tracing App, diese Art von Rechtemanagement unterstützt. Die nächste logische Frage wäre wie baue ich das ganze in mein side Project ein? Kein Problem. Da covern wir einmal über ein paar Open Source SDKs und Datenbanken, die unter anderem auf Google sansibar aufbauen und wie die Implementierung aussehen kann. Und gegen Ende kommt die Frage noch auf, ob Role Based Access Control eigentlich noch zeitgemäß ist oder ob wir dann nicht eher auf Attribute Based Access Control, Relationship Based Access Control oder auf komplette policy engines setzen sollen. Am Anfang meinte Wolfgang was ein langweiliges Thema. Am Ende rauchte ihm dann doch der Kopf. Und wer bis zum Ende dranbleibt, bekommt auch noch eine Kegelclub Story. Wir springen rein. Los geht's. Es war einmal ein kleines, aber ambitioniertes Softwarekönigreich namens Enterprisien. Dort lebten fröhliche Benutzer, die alle vollen Zugriff auf alles hatten. Jeder durfte alles sehen, ändern, löschen, selbst den Produktionsserver. Die Entwickler nannten es agil, die Auditoren nannten es die Hölle. Doch eines Tages kam ein dunkler Pull request. Er brachte Chaos. Der Praktikant Kevin aus dem Marketing, der zufällig Sudo auf dem Produktionssystem hatte, löschte die Kundendatenbank. Ich wollte nur mal gucken, was Drop table macht. Da rief der CTO den weisen Security Architekten. Dieser gebt den Menschen Rollen wie in einem mittelalterlichen Rollenspiel. Lasst Admins nur administrieren, Viewer nur viewen und den Praktikanten einfach nichts. Und so entstand das Role based Access Control. Kurz ab jeder bekam nur noch das, was er wirklich brauchte und der Praktikant durfte nur noch PowerPoint. Doch leider der Entwickler Max vergab Rollen hardcoded im Code direkt hinter dem if user Admin. Und niemand wusste mehr, wer was darf. Das System wurde unwartbar, niemand traute sich mehr, eine Zeile zu ändern. Und so starb Enterprise nicht durch einen Hacker, sondern durch schlechte Dokumentation. Und die Moral von der wer Rolle nicht sauber pflegt, wird vom Code verflucht. Und abec ohne Konzept ist wie ein Passwort, schnell eingerichtet und lange nicht sicher. Und somit herzlich willkommen zu der heutigen Episode vom Engineering Kiosk, in der wir darüber sprechen, warum Abec mehr als ein rechte Häkchen im Backend ist. Bist du eingeschlafen, Wolfgang? War das deine gute Nacht Geschichte?"
+    },
+    {
+      "end": 205630,
+      "speaker": "B",
+      "start": 185520,
+      "text": "Diese Geschichte ist sehr, sehr alt, Andi, oder? Weil alles, was du da jetzt gebracht hast, ist so alles, was wir eigentlich immer predigen, was man nicht machen sollte. Der Praktikant darf nichts. Wir haben Admins, die nur dürfen, der Rest darf nichts. Der Praktikant soll nur PowerPoint machen und vielleicht noch so ein veraltetes König Bild auch noch."
+    },
+    {
+      "end": 210030,
+      "speaker": "A",
+      "start": 205630,
+      "text": "Das ist schon eine rhetorische Frage, oder? Denn die Geschichte wurde eingeleitet mit es war einmal."
+    },
+    {
+      "end": 273150,
+      "speaker": "B",
+      "start": 270830,
+      "text": "Ich wollte es nur noch mal sicherheitshalber nachfragen."
+    },
+    {
+      "end": 280800,
+      "speaker": "A",
+      "start": 273150,
+      "text": "Und es gibt immer noch Firmen, wo der Admin, sag ich schon, wo der Praktikant gut PowerPoint macht. Ich meine, früher wurde man zum Kopierer geschickt und Kaffee holen."
+    },
+    {
+      "end": 303200,
+      "speaker": "B",
+      "start": 281840,
+      "text": "Ich war gerade vor ein paar Tagen in einer Schule mit Jährigen ungefähr so, die Informatik machen in dieser Schule, also wirklich eine informatikspezifische Schule. Die haben auch Admin als Rolle gekannt und haben das aufgebracht. Also bei denen im Kopf ist es auch schon verankert, jährigen, dass es da einen Administrator gibt, der sich darum kümmert, um die Software, dass die läuft und alles passt."
+    },
+    {
+      "end": 307890,
+      "speaker": "A",
+      "start": 303410,
+      "text": "Was denkst du, wie hoch ist die Wahrscheinlichkeit, dass in dieser Klasse jemand Kevin und jemand Max heißt?"
+    },
+    {
+      "end": 315210,
+      "speaker": "B",
+      "start": 307970,
+      "text": "Ich vermute ziemlich null, weil die kurzen Namen sind schon wieder out. Andi, jetzt wirst du richtig alt, Andi."
+    },
+    {
+      "end": 323250,
+      "speaker": "A",
+      "start": 315210,
+      "text": "Naja, du musst dich bitte vor fünfzehn Jahren in die Situation versetzen. Wie war der Stand von Kevin und Max von den Namen vor fünfzehn Jahren, als die Namen."
+    },
+    {
+      "end": 329250,
+      "speaker": "B",
+      "start": 323330,
+      "text": "Die waren da auch schon veraltet. Ich glaube, das ist schon wieder die nächste Generation. Aber ich habe nicht nach Namen gefragt."
+    },
+    {
+      "end": 337550,
+      "speaker": "A",
+      "start": 329310,
+      "text": "Naja, lass uns mal zum Thema kommen und jetzt nicht über Namensgebung sprechen, denn ich bin kein Vater, du bist kein Vater, deswegen können wir da relativ wenig."
+    },
+    {
+      "end": 342510,
+      "speaker": "B",
+      "start": 337950,
+      "text": "Wir wollen ja kein Name Shaming da betreiben. Also bitte geh mal zu deinem Thema heute."
+    },
+    {
+      "end": 382350,
+      "speaker": "A",
+      "start": 343070,
+      "text": "Wir sprechen über die Themen Authentifizierung versus Autorisierung bzw. So in dem Bereich. Worum geht es heute? Heute geht es eigentlich mal um das Thema Role Based Access Control. Als ich dem Wolfgang das Thema gepitcht habe, hieß es, das ganze Thema ist doch in zwei Sätzen zusammengefasst. So, und dann habe ich mal ein bisschen recherchiert und habe festgestellt, dieses ganze Thema ist doch deutlich mehr als zwei Sätze. Wolfgang, ich würde dich jetzt einmal bitten, das Thema Robace Access Control in zwei Sätzen und wirklich in zwei Sätzen und keine zwei große Schachtelsätze zusammenzufassen, denn das ist ja so einfach und das weiß ja jeder o Ton aus unserem Slack."
+    },
+    {
+      "end": 391520,
+      "speaker": "B",
+      "start": 382350,
+      "text": "Ja, es gibt Benutzer, die haben eine gewisse Rolle. Rollen sind Permissions zugeteilt und im Code prüfe ich, ob eine Permission vorhanden ist. War sogar ein Satz."
+    },
+    {
+      "end": 416000,
+      "speaker": "A",
+      "start": 391520,
+      "text": "Das ist alles nicht falsch. Ich hoffe nicht, dass du auf dieser Ebene deinen Studenten so etwas beibringst, sondern ich hoffe, da geht es auch ein bisschen tiefer rein. Denn das, was du beschrieben hast, könnte auch irgendwie ein Bildartikel oder Computerbildartikel gewesen sein. Wir haben aber das Niveau mindestens der CT, wenn nicht sogar der iX. Gibt es noch irgendwas? Gibt es noch ein Magazin?"
+    },
+    {
+      "end": 420280,
+      "speaker": "B",
+      "start": 416960,
+      "text": "Wir stehen drüber, ganz klar. Wir stehen über der X natürlich."
+    },
+    {
+      "end": 434520,
+      "speaker": "A",
+      "start": 420280,
+      "text": "Ja, deswegen holen wir mal zu dem ganzen Thema aus. Deswegen fangen wir mal ganz easy an. Die erste Role Based Access Control. Hast du gerade beschrieben, was es ist? Rollenbasierte Zugriffskontrolle. Ist es ein Teil der Autorisierung oder ist es ein Teil der Authentifizierung?"
+    },
+    {
+      "end": 480170,
+      "speaker": "B",
+      "start": 434520,
+      "text": "Authentifizierung prüft, ob ich die Person wirklich bin. Das heißt, das klassische Login zum Beispiel oder über OAuth, Passwort eingeben, Two Factor Authentication, was auch immer, die einfach prüft, wer ich bin als Person, als User, aber nicht sagt, was ich grundsätzlich darf. Und das ist normalerweise irgendwo zentral vorgeschalten und die Applikationen später dann entscheiden erst eben über die rollen, was ich eigentlich darf. Also die Autorisierung, ob ich auf irgendein Objekt, auf eine Datei zugreifen darf. Du bist bei Google eingeloggt, das heißt, du bist authentifiziert, aber ob du auf eine Google Datei zugreifen darfst, auf Google Docs, entscheidet dann natürlich irgendeine andere Instanz. Die Prü hast du Zugriff auf dieses Dokument? Wurde das Dokument mit dir geteilt und so weiter."
+    },
+    {
+      "end": 488970,
+      "speaker": "A",
+      "start": 480250,
+      "text": "Ganz genau. Ich mag es immer recht kurz. Authentifizierung ist wer bist du? Der Identitätsnachweis. Und die Autorisierung ist was darfst du? Rechte und Zugriff auf Ressourcen."
+    },
+    {
+      "end": 497930,
+      "speaker": "B",
+      "start": 489050,
+      "text": "Aber kannst du mir mal erklären, warum man so zwei dumme Begriffe gewählt hat? Weil die sind so leicht zu verwechseln, einfach weil sie so ähnlich klingen. Man hätte das ja wirklich anders nennen können."
+    },
+    {
+      "end": 505050,
+      "speaker": "A",
+      "start": 498010,
+      "text": "Naja gut, im Fachjargon werden sie mit out n und out z abgekürzt. Vielleicht ist das besser. Ich weiß es nicht."
+    },
+    {
+      "end": 513150,
+      "speaker": "B",
+      "start": 505370,
+      "text": "Ich bin ja fall immer verwirrt. Also ich probiere dann immer Authentifizierung herzuleiten und dann ist es das andere eben was nicht."
+    },
+    {
+      "end": 514470,
+      "speaker": "A",
+      "start": 513150,
+      "text": "Was ist denn ein merkwürdiges?"
+    },
+    {
+      "end": 526230,
+      "speaker": "B",
+      "start": 514630,
+      "text": "Gar nicht. Ich probiere mir Authentifizierung zu merken mit dem f Authentifizierung und alles andere an den anderen Wörtern, die es so gibt, ist dann eben, was irgendwas mit Access zu tun hat und nicht mit der Authentifizierung."
+    },
+    {
+      "end": 548790,
+      "speaker": "A",
+      "start": 526230,
+      "text": "Naja, was man schon sagen könnte ist Autorisierung, das R, das macht was mit Rechten. Da könnte man vielleicht was herleiten, aber ich male mir gerade auch was aus. Naja gut, wie dem auch sei, kommen wir zurück zu Robase Access Control. Robase Access Control weiß natürlich nicht, ob jemand wirklich der ist, für den er sich ausgibt. Also RBAC setz auf die Ergebnisse der Authentifizierung aus."
+    },
+    {
+      "end": 556950,
+      "speaker": "B",
+      "start": 548950,
+      "text": "Moment, was du da immer so aussprichst mit ab, das klingt so wie Airbag. Kannst du das mal buchstabieren, was du da aussprichst?"
+    },
+    {
+      "end": 612810,
+      "speaker": "A",
+      "start": 557190,
+      "text": "R sowie role, b sowie based, A sowie access und C sowie control. Also role based access control wird ABAC r, b A, C. Naja, nehmen wir mal ein Beispiel aus dem realen Leben, was ABEC eigentlich ist in Bezug auf Autorisierung und Authentifizierung. In einem Bürogebäude mit verschiedenen Bereichen empfangen, Büro, Serverraum. Mitarbeiter haben Ausweise mit Rollen, zum Beispiel Rezeptionist, Entwickler, Administrator. Ein Rezeptionist darf nur ins Foyer, um Besucher anzumelden. Entwickler kommen in die Büros und in die Labore und die Admins haben zu Zugriff auf den Serverraum. So wird klar getrennt, wohin. Jeder darf diese Rollen verhindern, dass halt jeder überall hin kann. Also habt ihr wahrscheinlich auch schon mal gehabt, wenn ihr euch irgendwo im Büro bewegt hat, oh, mit meiner Zugriffskarte komme ich nicht in diesen Raum. Oder ganz klassisch wie bei Mission Impossible, da war ich nämlich gestern im Kino, da muss man sich immer die Zugriffskarten nämlich von anderen Leuten klauen, damit man durch die Tür kann."
+    },
+    {
+      "end": 614730,
+      "speaker": "B",
+      "start": 612890,
+      "text": "Und wo wäre jetzt die Authentifizierung?"
+    },
+    {
+      "end": 624740,
+      "speaker": "A",
+      "start": 614970,
+      "text": "Sehr wahrscheinlich durch ein Foto und durch einen Name auf dem Ausweis, den du da hast. Bis der Security Typ, der ab und zu mal durchs Büro läuft, mal sagt bist du auch wirklich der Wolfgang oder hast du den Ausweis geklaut?"
+    },
+    {
+      "end": 645500,
+      "speaker": "B",
+      "start": 624740,
+      "text": "Aber das ist eigentlich ein gutes Beispiel, weil man da schon sieht, das wird nicht ständig überprüft. Oder es wird vielleicht am Eingang überprüft, ob das Foto übereinstimmt mit dir, aber dann hast du deine Karte und dann wird nochmal überprüft, was für eine Rolle du hast. Oder am Türschloss zum Beispiel. Also die Überprüfung, ob du das wirklich bist, die erfolgt beim Eingang und danach hast du andere Mechanismen."
+    },
+    {
+      "end": 652190,
+      "speaker": "A",
+      "start": 645500,
+      "text": "Und es stellt sich natürlich immer die welches Problem löst Robase Access Control denn eigentlich, Wolfgang?"
+    },
+    {
+      "end": 725120,
+      "speaker": "B",
+      "start": 652190,
+      "text": "Ja, dieses Problem, von dem du sprichst, was das ganze lösen soll. Es entsteht ja erst dadurch, wenn du ein Permission System hast, also wenn du anfängst, irgendwelche Einschränkungen zu machen in deiner Software, dass nicht jeder User alles darf, was es ja auch sehr oft gibt, dass man sagt, okay, wenn sich ein User authentifiziert hat, dann darf der einfach alles. Sobald du Permissions einführst, musst du hier zuordnen, welcher User darf was machen. Und da ist natürlich die primitivste Form, du hast Permissions read und write in der Datenbank und ordnest dann jedem User zu. Der eine darf lesen, der andere darf schreiben, der andere darf vielleicht nur einen gewissen Unterbereich schreiben, der andere darf noch die Export Funktion bedienen. Und so hast du ganz viele Permissions und ordnest jedem User die einzelnen Permissions zu. Und wenn man da natürlich eine Skalierung höher geht in einer großen Firma, wo es dann ganz viele User gibt, dann wird es irgendwann das absolute Chaos, weil du jedem User genau eine Permission zuordnen musst. Und wenn es dann irgendwo ein Problem gibt oder irgendwer zum Beispiel befördert wird, dann musst du dem wieder einzelne Permissions zuordnen und irgendwann verlierst du einfach den kompletten Überblick. Und genau da kannst du dann mit Rollen eine gewisse Ordnung mit reinbringen."
+    },
+    {
+      "end": 791810,
+      "speaker": "A",
+      "start": 725200,
+      "text": "Sehr, sehr guter Punkt, den du ansprichst. Den haben wir nämlich total vergessen zu erwähnen, dass ABEC und Gruppen, was vielleicht ein pure Men's sein könnte, nicht das gleiche ist. Was die genaue Abgrenzung ist, klären wir dann gleich noch. Aber selbst soll natürlich das übergeordnete Problem lösen, dass nicht jeder alles darf oder nicht jeder Zugriff auf alles haben sollte. Und ich glaube, damit können wir uns, glaube ich, erstmal arrangieren, oder? Auch wenn du dich sehr wahrscheinlich mit Root auf diverse Server einloggst. Aber das ist erst mal das Grundproblem von jedem Permission System, denke ich mal, dass nicht jeder alles darf. Und dann geht es natürlich in die Granularität, wie du diese Berechtigungen denn eigentlich steuerst. Und wie du schon sagtest, du kannst das auch alles ohne Abec machen. Ich kann dir, dem User, dem Account Wolfgang natürlich sagen, du darfst dieses Dokument bearbeiten oder du darfst Dokumente bearbeiten oder News in das CMS einpflegen oder ähnliches. Aber wenn ich das für jeden einzelnen User machen würde, dann geht das vielleicht bei drei Usern, aber bei zwanzig wird schon ein bisschen hakelig, aber bei zwei hundert, ich glaube, da machst du, Wolfgang, nichts mehr anderes, oder?"
+    },
+    {
+      "end": 824940,
+      "speaker": "B",
+      "start": 792370,
+      "text": "Es ist ja auch der Klassiker, wenn du jetzt ganz viele User hast und zum Beispiel eine neue Permission einführst und sagst, alle meine Team Leads dürfen jetzt auf das Geburtsdatum in der HR Software nicht mehr zugreifen. Da müsstest du jetzt alle Team Leads einzeln raussuchen und denen die Permission wegnehmen oder eben definieren, dass sie diese Permission nicht mehr haben, wie auch immer. Aber du müsstest einzeln reingehen. Wenn du natürlich eine Rolle hast, Team Lead, dann kannst du es auf einmal für alle deine Team Leads aktivieren, deaktivieren, was es dann auch immer ist."
+    },
+    {
+      "end": 882810,
+      "speaker": "A",
+      "start": 825020,
+      "text": "Das geht natürlich nur, wenn du Arbeit natürlich zentral machst, also wenn du zentrales Rechtemanagement hast. Und das natürlich kombiniert nochmal mit der Komplexität von individuellen Berechnungen, haben wir gerade gesagt, bei großen Teams und komplexen Anwendungen wird es einfach unübersichtlich. Und also ich möchte diesen Job nicht machen, das kann Kevin, der Praktikant, vielleicht machen. Das dritte Problem, was natürlich löst, ist diese ganze Konsistenz und Compliance Thematik. Denn je größer die Firma, desto mehr Regeln werden natürlich da auch auferlegt. Vielleicht, weil man größere Kunden irgendwie hat oder weil man vielleicht sensible Kunden hat. Und da dürfte natürlich nicht jeder alles sehen. Und irgendwann kommen natürlich auch externe Auditoren rein, die sagen, ja, wieso hat denn der Max jetzt hier vollen Admin Zugriff, der ist ja nur Entwickler. Und mit AbeC kannst du natürlich eine strukturierte Lösung reinsetzen, die hoffentlich im besten Fall natürlich auch Datenlecks vermeidet, weil dann einfach nur jeder User das sieht und nur das tut, was seiner Funktion entspricht."
+    },
+    {
+      "end": 925750,
+      "speaker": "B",
+      "start": 882810,
+      "text": "Also wir haben das ja auch beide damals miterlebt, wie wir einen Börsengang miterleben durften, weil da natürlich mit der Zeit dann sehr viel Rechte eingeschränkt werden haben müssen, rein rechtlich, weil wir haben ja sehr viel Zugriff gehabt auf Umsatzdaten und solche Dinge. Und die darfst du ja rein rechtlich bei einem Unternehmen, was public ist, nicht haben. Das war natürlich auch ein Riesenpunkt und hat ganz viele Änderungen impliziert, um den Leuten das wieder alles wegzunehmen. Und dann hast du natürlich Rollen definieren müssen, wer darf denn überhaupt auf welche Kennzahlen Zugriff haben und wann? Und das wird dann schon sehr komplex damit. Und da kannst du als Firma noch so offen sein oder transparent, aber wenn das Recht halt für eine Aktiengesellschaft sagt, du darfst es nicht, dann hast du halt Pech."
+    },
+    {
+      "end": 970530,
+      "speaker": "A",
+      "start": 925750,
+      "text": "Da möchte ich jetzt aber auch nur mal ganz kurz sagen, denn das war nämlich damals auch ein Punkt, als diese Rollen eingeführt wurden, haben sich ganzen Techniker gefragt, ja Moment mal, aber ich programmiere das System ja, was diese Kennzahlen anzeigt. Und da sagten die ganzen Techniker, aber ich kann ja einfach eine Backdoor einbauen oder ich kann ja, so wie der Max gerade in meiner Geschichte, einfach, wenn Username gleich Max und dann gibt dem mal die Admin Permission und so weiter. Das bedeutet, es schützt mich ja nicht komplett. Ja, natürlich, es gibt immer technische Einfallstoren und so weiter und so fort. Also ich glaube Leute, die das System betreuen, Leute, die das System schreiben, die haben natürlich in irgendeiner Art und Weise, ich sag mal eine elevated power, wo natürlich dann später beim Code Review auch das vier Augen Prinzip applyen sollte."
+    },
+    {
+      "end": 981770,
+      "speaker": "B",
+      "start": 970530,
+      "text": "Und es ist halt einfach illegal, muss man auch dazu sagen. Wir haben ja da beide damals keine Ahnung wie viel Tonnen von Dokumenten unterschrieben. Bin mir sicher, du hast sie auch alle gelesen."
+    },
+    {
+      "end": 1041440,
+      "speaker": "A",
+      "start": 981930,
+      "text": "So wie jede AGBs und Cookie Konsens Thematiken lese ich die immer. Ja, natürlich ist das illegal, aber ich meine, viele Techniker stören sich dabei an Recht nicht. Die trennen Technik und Recht. Nur weil die Möglichkeit da ist, heißt es nicht, dass sie ausgenutzt wird. Was ich aber eigentlich sagen möchte, ein Role Based Access Control System entfaltet nur dann die volle Sicherheit oder beziehungsweise den vollen Nutzen, wenn dies auch organisatorisch verankert ist. Also hier geht es in diesem Fall nicht nur um Technik, denn Achtung, um Technik, da gehen wir jetzt gleich mal drauf ein, wie wird die ganze Sache implementiert? Wie sieht das in der Praxis aus? Und so weiter. Aber da müssen auch Firmen Prozesse hintersetzen. Die sind in großen Firmen sehr wahrscheinlich komplexer als in zwanzig Mann Agenturen, aber da kommen wir gleich noch zu. Aber du sagtest gerade schon, wir durften das miterleben, als wir einen Börsengang bei Trivago mitgemacht haben. Deswegen für wen ist denn AB typischerweise interessant? Welche Firmen und welche Unternehmen brauchen denn sowas bzw. Haben in der Regel den Need?"
+    },
+    {
+      "end": 1095200,
+      "speaker": "B",
+      "start": 1041680,
+      "text": "Also man könnte da jetzt die die richtig großen Firmen anführen und Branchen, die halt wirklich mit heiklen Daten arbeiten. Das ist ganz klassisch Gesundheitswesen, Finanzsektor und Government, die drei großen. Aber eigentlich würde ich fast sagen jede Firma. Also sogar wenn du nur fünf Leute hast, auch in Startups ist es glaube ich nicht schlecht, in irgendeiner Form Rollen zu haben. Und umso früher du die einführst, umso besser. Vielleicht sind die sehr grob granular noch. Aber auch in einem kleinen Startup sollte meiner Meinung nach nicht jede Person Zugriff auf absolut alles haben, weil es einfach auch von der Unternehmensseite einfach kritisch ist, wenn jemand versehentlich irgendwas löscht, deine gesamte Datenbank löscht, dann ist auch die Frage, sollte eben der Praktikant irgendwas ausprobiert Zugriff auf alles haben. Und die kennen auch viele Firmen. Habt ihr schon öfters als Argument gehört von Firmen."
+    },
+    {
+      "end": 1099260,
+      "speaker": "A",
+      "start": 1095600,
+      "text": "Mal ganz kurz können wir die Praktikanten jetzt mal bei Namen nennen? Das war der Kevin."
+    },
+    {
+      "end": 1144580,
+      "speaker": "B",
+      "start": 1100060,
+      "text": "Wir machen kein Name Shaming habe ich dir gerade erklärt, aber ich habe das schon bei einigen Kunden erlebt, die gesagt haben, wir können keine Praktikanten aufnehmen oder wir können keine Lehrlinge aufnehmen oder irgendwelche Schüler, die ein Praktikum machen, so für zwei Monate, weil wir können das gar nicht von unserem Rechtemanagement machen. Also die hätten gerne, aber die haben gesagt, wir haben diese feingranulare Unterscheidung nicht bei uns. Bei uns haben immer alle Zugriff auf alles und das ist dann natürlich ein Problem und da hinderst du dann dein Unternehmen daran, dich weiterzuentwickeln. Also das ist wirklich meiner Meinung nach eine Grundlage und es sollte nicht erst dann der Fall sein, wenn du im Gesundheitswesen, in einem Krankenhaus irgendein System entwickelst oder so, dass du daran denkst, der."
+    },
+    {
+      "end": 1197240,
+      "speaker": "A",
+      "start": 1144580,
+      "text": "Andi in mir, der eine gute, nachhaltige, stabile Lösung anstrebt, stimmt dir zu. Der praktische Andi in mir, der einfach Sachen auf die Straße bringen möchte, schieß mal nicht mit Kanonen auf Spatzen. Denn natürlich ist es besser, wenn du neue Systeme einführst, dieses Feature von Robase Access Control mit zu berücksichtigen. Ein Startup, was aber gerade eher ums Überleben kämpft, um Product Market fit kämpft, um den ersten Kunden kämpft, sollte sich mit sowas am Anfang, denke ich, nicht beschäftigen. Das Problem, ein solches System später einzuführen, wenn man schon ein hundert Mitarbeiter hat, vielleicht schon ein paar Millionen Umsatz macht und so weiter, das Problem ist dann nicht kleiner, sondern eher größer, viel kompliziert und hält nur auf und ist teuer. Und das ist sehr viel Disruption, weil du sehr vielen Leuten natürlich Rechte wegnimmst. Aber vorher geht es ja eigentlich ums Überleben."
+    },
+    {
+      "end": 1206920,
+      "speaker": "B",
+      "start": 1197560,
+      "text": "Ich stimme dir sogar zu, ich habe das nämlich selber am eigenen Leib mal erfahren. Ich habe ein tausend, neun, hundert, neun und neunzig, glaube ich so ungefähr, ein eigenes CMS entwickelt."
+    },
+    {
+      "end": 1215760,
+      "speaker": "A",
+      "start": 1207600,
+      "text": "Ich bin außerdem der Meinung, dass jeder Programmierer mit einem eigenen CMS anfangen sollte, weil da lernt man echt viel, wieso man das nicht mehr tun sollte."
+    },
+    {
+      "end": 1289100,
+      "speaker": "B",
+      "start": 1216000,
+      "text": "Ich möchte dazu sagen, dass das neun und neunzig war und da hat es fast keine Open Source CMS gegeben und ganz viele große Enterprise CMS, mit denen wir uns natürlich messen wollten. Und mein Firmenpartner damals, der wesentlich erfahrener war als ich, war aber nicht so tief in der Technik drin. Und ich habe angefangen und habe mir überlegt, ich brauche ein ordentliches Rechtesystem, ich brauche da ganz viele Permissions auf jeden Tree, auf jedes Dokument muss ich Permissions legen können. Ich brauche Gruppen, ich brauche spezielle Rollen, die sich anhand des File Trees dann adaptieren und so weiter. Und habe mit dem begonnen, das Ganze zu programmieren. Mein Firmenpartner hat immer gesagt, warum machst du das? Das brauchen wir nicht und mach doch einfach und so weiter. Und ich hab gesagt, nein, nein, wir brauchen dieses komplexe System. Ich weiß nicht, wie lang sich die ganze Sache verzögert hat, nur wegen dem dummen Rechtemanagementsystem. Und da ich das perfekt bauen wollte und bei eigentlich ziemlich allen Kunden, wo wir das dann eingesetzt haben, hat es genau einen Administrator gegeben, der alles durfte. Also da gebe ich dir vollkommen recht. Aber zu meiner Verteidigung, warum ich heute auch anderer Meinung bin, ist, und da kommen wir dann gleich in der Technik, aber es ist heutzutage einfach so einfach das ganze zu machen oder schon mitzudenken zumindest, dass es eigentlich keine Ausrede mehr gibt, es nicht zu machen."
+    },
+    {
+      "end": 1296870,
+      "speaker": "A",
+      "start": 1289390,
+      "text": "Ich stimme dir zu, in der heutigen Zeit, wir haben gerade zwei tausend, fünf und zwanzig, ein tausend neun, hundert, neun und neunzig war sechs und zwanzig Jahre."
+    },
+    {
+      "end": 1303550,
+      "speaker": "B",
+      "start": 1296870,
+      "text": "Zurück, da hat es kein Oauth gegeben und irgendwelche Open Source Tools, die dir automatisch schon das ganze mitmanagen."
+    },
+    {
+      "end": 1323530,
+      "speaker": "A",
+      "start": 1303710,
+      "text": "Aber schließen wir mal ganz kurz das Thema ab. Welche Unternehmen brauchen ABEC? Typischerweise, ja, du hast gerade schon genannt, Gesundheitswesen, Finanzsektor, Behörden und der Staat. Aber was man auch irgendwie vergisst, also eigentlich jedes Unternehmen, was schützenswerte Daten hat, also sensible Daten, Kundendaten und Pi data, also Personal Identifiable Information, aber da hast."
+    },
+    {
+      "end": 1330250,
+      "speaker": "B",
+      "start": 1323530,
+      "text": "Du es ja schon, zeig mir mal ein Unternehmen, was keine Kundendaten hat. Es gibt es nicht, bist du kein Unternehmen."
+    },
+    {
+      "end": 1358820,
+      "speaker": "A",
+      "start": 1330490,
+      "text": "Ja, das stimmt. Aber wo es auch wirklich ganz besonders Sinn macht, ist bei IT Unternehmen bzw. Software as a Service Anbietern oder Plattformanbietern, die mehr Mandantensysteme betreiben. Denn oft sind diese typischerweise irgendwie Subcontractor oder ähnliches von größeren Firmen oder von Behörden zum Beispiel, wenn ihr irgendeine Art von Compliance habt, keine Ahnung, Sox Compliance ist zum Beispiel sehr weit verbreitet, auch im europäischen Bereich, hat übrigens nichts mit."
+    },
+    {
+      "end": 1367540,
+      "speaker": "B",
+      "start": 1358820,
+      "text": "Den Socken zu tun, sondern schreibt man mit X. Es war lange Zeit, habe ich nie das gefunden, wenn ich es gegoogelt habe, weil ich habe es nie mit X geschrieben, sondern immer irgendwie mit C oder."
+    },
+    {
+      "end": 1415040,
+      "speaker": "A",
+      "start": 1367540,
+      "text": "Mit K. Und diese Socks Compliant, die vererbt sich runter. Also zum Beispiel, wenn ihr eine Firma betreibt, die Socks Compliant sein muss und ihr benutzt GitHub, dann könnt ihr bei GitHub den die Sox Zertifizierung anfragen, dann kriegt ihr ein PDF Dokument und in diesem PDF Dokument stehen weitere Firmen drin, mit denen GitHub zusammenarbeitet und da steht dann auch deren Sox Zertifizierung drin. Also das vererbt sich dann so runter. Und das bedeutet, manche, manche audits gehen dann ziemlich weit runter und da ist dann auch Access Control ein Requirement. Eine andere Thematik ist natürlich bei internationalen Unternehmen, besonders bei US Unternehmen, die zum Beispiel, ich sag mal, mit klassifizierten Ländern arbeiten, wo ich sage mal, die Behörden oder der Staat halt nicht ganz einer Demokratie zugeordnet werden kann."
+    },
+    {
+      "end": 1416640,
+      "speaker": "B",
+      "start": 1415440,
+      "text": "Du meinst jetzt Amerika?"
+    },
+    {
+      "end": 1420840,
+      "speaker": "A",
+      "start": 1417520,
+      "text": "Das hast du gesagt. Du ich möchte nach Amerika. Ich sage nichts gegen Trump."
+    },
+    {
+      "end": 1432240,
+      "speaker": "B",
+      "start": 1420840,
+      "text": "Moment, hast du das nicht einmal gehabt, dass amerikanische Mitarbeiter nicht zugreifen durften auf die europäischen Systeme und so, wegen Datenschutz? Wenn man Government Kunden hat, ja."
+    },
+    {
+      "end": 1482730,
+      "speaker": "A",
+      "start": 1432480,
+      "text": "Bei meiner vorherigen Firma hatten wir zwei Control Planes, die komplett getrennt waren. Eine Control Plane war unter anderem auch für amerikanische amerikanische Kunden und eine Control Plane, die war komplett GDPR compliant. Das bedeutet, Mitarbeiter aus Amerika hatten gar keinen Zugriff auf die GDP Compliant Umgebung. Genau aus diesem Grund. Und da trifft natürlich ein geobasiertes Role Based Access Control in Kraft, dass du sagen kannst, okay, Leute aus einem bestimmten Land können auf Systeme nicht zugreifen. Kann man zum Beispiel sagen mit einer Rolle, okay, du bist in Amerika oder du bist in Indien oder du bist im Iran oder ähnliches. Also Länder, die, wenn ich jetzt sage, mit Sanktionen belegt sind, dann ich bin mir sicher, Amerika ist auch in irgendeiner Art und Weise mit irgendeiner Sanktion belegt."
+    },
+    {
+      "end": 1495050,
+      "speaker": "B",
+      "start": 1482810,
+      "text": "Aber das heißt, wenn ich europäische Mitarbeiterin war und in Amerika gesessen bin oder da auf einem Firmentrip war, bei irgendeiner Konferenz in Las Vegas, dann hatte ich auch keinen Zugriff."
+    },
+    {
+      "end": 1496810,
+      "speaker": "A",
+      "start": 1495050,
+      "text": "Genau, dann wurde dein Zugriff zurückgenommen."
+    },
+    {
+      "end": 1501580,
+      "speaker": "B",
+      "start": 1497260,
+      "text": "Aber es gibt, also das Ganze ist dynamisch, nicht wo ich angestellt bin, sondern wo ich gerade bin."
+    },
+    {
+      "end": 1545300,
+      "speaker": "A",
+      "start": 1501580,
+      "text": "Ganz genau. Es gibt aber dann zum Beispiel so ein paar Tricks. USA ist nicht GDPR compliant, Kanada ist GDPR compliant, Australien ist nicht GDPR compliant, Neuseeland ist aber GDPR. Das bedeutet, falls ihr eine on Call Coverage haben wollt mit europäischem Datenrecht, dann macht es Sinn, Mitarbeiter in Kanada zu haben bzw. Mitarbeiter in Neuseeland und vielleicht nicht in Australien. Vielleicht nicht, aber was ich sagen mö ab schützt natürlich nicht vor dem eigentlichen Recht. Nehmen wir mal zum Beispiel den Cloud Act in den USA. Da bietet jetzt keinen absoluten Schutz gegen behördliche Zugriffe, da hilft dann wirklich nur Verschlüsselung."
+    },
+    {
+      "end": 1547140,
+      "speaker": "B",
+      "start": 1545700,
+      "text": "Moment, was ist der Cloud Act?"
+    },
+    {
+      "end": 1757860,
+      "speaker": "A",
+      "start": 1547460,
+      "text": "Cloud Act ist eigentlich mehr oder weniger, das ist FBI oder CIA oder wie die ganzen Behörden da drüben heißen. Wenn du bei einem amerikanischen Hyperscaler deine Daten hast, dann kann es sein, dass die auf deine Server gucken können, also bei Amazon, Microsoft, Azure und so weiter. Da hilft natürlich dann nur Verschlüsselung. Die du selbst betreibst. Die andere Thematik ist natürlich auch zum Beispiel die Exportkontrollgesetze der USA. Die verlangen zum Beispiel, dass bestimmte Rüstungstechnologiedaten nur von US Personen zugänglich sind. Da kann ab helfen, indem du den einfach dann eine entsprechende Rolle gibst. Aber da möchte ich nur sagen, da ist genau das, was ich gerade sagte, das muss organisatorisch verankert werden. Das schützt vor dem eigentlichen Recht halt auch nicht. Deswegen, das ist jetzt nur so ein paar, aber lass uns mal in die Praxis gehen. Lass uns mal weg davon, von rechts und so weiter, denn wir sind alle keine Anwälte und das war auch hier alle keine Rechtsberatung. Ich habe mich mal ein bisschen auseinandergesetzt, wie Abec eigentlich in der Praxis aussieht. Der Wolfgang Abec ist ja überall gleich, sind ein paar Rollen, die werden dann irgendwelchen Gruppen und irgendwelchen Usern zugewiesen und dahinter stehen Permissions oder Aktionen, die man darf oder nicht darf. Kann dir soweit folgen und jetzt kriegst du ein Pamphlet auf den Tisch, eine Aufgabe, deine Chefin kommt zu dir und Wolfgang, du maintains eine Plattform, bring mal Abec an Start. Und du ganz einfach, ist ja überall gleich. Wenn du dich da mal ein bisschen tiefer mit beschäftigt, dann kommen nämlich diese kleinen needy greedy Details ans Licht, denn das Grundkonzept ist gleich, stimme ich dir zu, aber ich nenne das die Layer sind komplett unterschiedlich. Was meine ich mit Layer? Ich meine die Art der Ressource, die schützenswert ist innerhalb der App. Nehmen wir mal als Beispiel das System Sentry. Sentry ist eine Error Tracking Plattform. Du baust eine Library oder ein SDK in deiner App ein und immer wenn Stack Trace fliegt, immer wenn Absturz ist und so weiter, wird dieser Stack Trace mit Environment Variablen und mit allen Daten, die du brauchst, an Sentry gesendet und dann kannst du da das Error Log sehen und du kannst sehen, wie oft das getriggert wurde und so weiter, wann das gefixt wurde, wann das eine Regression ist und so weiter. Eine Error Tracking Plattform, da hast du die Layer, du hast einen User. Ein User kann in einem Team sein und ein Team kann einer Applikation zugeordnet werden. Das würde ich mal sagen, da ist die Applikation der Layer. Wenn du dir aber jetzt mal Grafana ansiehst, Grafana ist eine Visualisation Plattform für Data Sources wie MySQL oder Prometheus oder PostgreSQL. Da hast du andere Layer. Da hast du innerhalb einer Grafana Instanz hast du eine Org, eine Organisation. Innerhalb einer Organisation hast du mehrere Folder. Innerhalb eines Folders können mehrere Dashboards sein. Ein Dashboard kann mehrere Panel haben und ein Panel kann mehrere Data Sources, zum Beispiel eine lässig Search und OpenSearch, Postgreq oder Prometheus oder Kassandra Datenbank anfragen. Und das sind dann natürlich ganz andere Layer und ganz andere Ebenen, auf die du Role based Access Control machen kannst. Du kannst dann zum Beispiel theoretisch sagen, der Wolfgang darf nur auf diesen Folder zugreifen, auf diesen Ordner mit den ganzen Dashboards. Oder du kannst sagen, und jetzt kommen wir zu der untersten Ebene des Layers, der Wolfgang darf nur auf die PostgreSQL Data Sources zugreifen, aber nicht auf die Cassandra Data Source. Das könnte dazu führen, dass wenn du ein Dashboard aufmachst, was Visualisierungen, Graphen von Postgres und Kassandra hat, dass du nur die Graphen von PostgreSQL SQL, wie heißt es denn jetzt, postgresql oder Postgres? Ich kriege Postgres, ich krieg wieder einen auf der Mütze. Auf die Mütze von der Community hat."
+    },
+    {
+      "end": 1760420,
+      "speaker": "B",
+      "start": 1757860,
+      "text": "Sich das letzte Mal gar niemand mehr beschwert in unserer Discord Community."
+    },
+    {
+      "end": 1789480,
+      "speaker": "A",
+      "start": 1760420,
+      "text": "Ich glaube, die ignorieren, die sagen einfach, der Andi ist dum, vielleicht bin ich das einfach nur. Naja, dann kann das einfach sein, dass du den Graphen von der Cassandra Datenbank gar nicht siehst und da steht da Error, you don't have permission. Oder nehmen wir mal ein anderes Beispiel, Elasticsearch, OpenSearch. Da hast du Elasticsearch Instanzen, da gibt es Cluster drin. Ein Cluster hat verschiedene Indizes, wo du Logs drin speicherst. Ein Indize hat mehrere Charts und innerhalb der Charts gibt es mehrere Dokumente mit Key Value Pairs. Wir erinnern uns, Elasticsearch, OpenSearch, Document Storage."
+    },
+    {
+      "end": 1819800,
+      "speaker": "B",
+      "start": 1789560,
+      "text": "Aber wenn du jetzt unterschiedliche Objekte in den jeweiligen Software hast, ist es ja normalerweise kein Problem, weil du hast in der Authentifizierungsschicht, nenne ich es mal, zentrales Rollen Management, die Info, dass du eine gewisse Rolle hast und dann entscheidet dir die Software, welche Rolle auf welche Objekte, eben auf welchen Folder, auf welches Dashboard, welche Data Source du Zugriff hast. Also wo hast du das Problem mit den Layern? Weil jeder Layer entscheidet ja für sich selber, welche Rolle hat worauf Zugriff."
+    },
+    {
+      "end": 1928000,
+      "speaker": "A",
+      "start": 1819800,
+      "text": "Ja, das Problem ist nicht technisch. Was ich nur sagen möchte, ist, dass du nicht alles über einen Kamm scheren kannst und das innerhalb deines, ich sag mal, Konzeptes. Das bedeutet, in den Gedanken, die du vorher machen musst, auf was du hier eigentlich eingrenzen möchtest und wie fein granular du runtergehen möchtest und welche Power du auch den Usern geben möchtest, weil sonst also das entscheidet eigentlich final über deinen Arbeitsaufwand oder halt über die Freiheit der User. Denn wenn du alles jetzt auf Data Source Level bei Grafana zum Beispiel einstellst oder auf Panel Level oder auf Dashboard Level, dann kann das sein, dass du pro Tag irgendwie fünfzig IT Support Ticket kriegst. Gib mir mal diese Rolle, ich möchte dieses Dashboard haben und so weiter und so fort. Wenn du aber einfach sagst, ihr dürft alle auf diesen Folder zugreifen, dann ist es natürlich eine ganz andere Annahme des Konzeptes. Ich möchte damit sagen, du musst es eigentlich pro System durchdenken, denn, und jetzt lehne ich mich mal weit aus dem Fenster, Role Based Access Control ist nicht immer role based access control. Jetzt habe ich gerade von den Layern gesprochen, aber pro System selbst gibt es dann noch mal tiefreichendere permissions, wie zum Beispiel bei Elasticsearch kannst du sagen, es gibt sowas wie ABAC, nennt sich Attribute Based Access Control. Das ist so eine Sub Art von Role based Access Control. Da kannst du sagen, du weist einem Dokument, ich habe gesagt Document Store, verschiedene Attribute zu, wie zum Beispiel an welchem Tag das Dokument erstellt wurde, mittwochs oder so, einfach meistens ein Beispiel. Dann kannst du sagen, der Wolfgang darf nur auf Dokumente zugreifen, die an einem Mittwoch erstellt wurden. Oder vielleicht ist der Tag ein bisschen doofes Beispiel, sondern vielleicht sagst du, dieses Dokument hat Daten von Kunde A und dann darfst du nur auf Daten, auf Dokumente von Kunde A zugreifen bzw. Die Rolle oder nicht ich als User, die Rolle natürlich. Die Rolle ist dann die als User zugewiesen."
+    },
+    {
+      "end": 1931920,
+      "speaker": "B",
+      "start": 1928080,
+      "text": "Also kannst du wahrscheinlich User basiert auch machen. Oder aber du solltest das nicht machen."
+    },
+    {
+      "end": 1943080,
+      "speaker": "A",
+      "start": 1932080,
+      "text": "Kannst du auch. Du kannst sogar eine Field level security machen. Du kannst sagen, okay, innerhalb dieses Dokument, auf das du zugreifen darfst, darfst du aber nicht auf das E Mail Feld zugreifen."
+    },
+    {
+      "end": 1951480,
+      "speaker": "B",
+      "start": 1943400,
+      "text": "Oder das klassische Beispiel, was ich zuerst erwähnt habe, dass durch GDPR zum Beispiel irgendwann die Leads nicht mehr auf Geburtsdaten zugreifen haben dürfen."
+    },
+    {
+      "end": 1952040,
+      "speaker": "A",
+      "start": 1951560,
+      "text": "Genau."
+    },
+    {
+      "end": 1962840,
+      "speaker": "B",
+      "start": 1952200,
+      "text": "Hat mich persönlich übrigens sehr gestört. Ich gratuliere den Leuten. Ja, gerne. Jetzt muss man sich da die privaten Listen führen, wobei das interessant ist, darf man das dann eigentlich private Listen führen? Aber gut, das ist noch mal ein anderes Thema."
+    },
+    {
+      "end": 1971110,
+      "speaker": "A",
+      "start": 1962840,
+      "text": "Ja, wahrscheinlich darf man das nicht. Oder jeder Datenschutzbeauftragte und jedes HR Mitglied wird Wolfgang, du, du, du, du, wenn."
+    },
+    {
+      "end": 1976390,
+      "speaker": "B",
+      "start": 1971110,
+      "text": "Du den Geburtstag erfragst von der Person, ist es wahrscheinlich okay, aber du darfst natürlich nicht aus dem System nehmen."
+    },
+    {
+      "end": 2020250,
+      "speaker": "A",
+      "start": 1976390,
+      "text": "Was ich aber sagen möchte ist, jedes System hat seine Eigenheiten und jedes System hat vielleicht sogar noch fein granulare Control Mechanismen, Nebenrollen, wie zum Beispiel Attribut Base oder Field Level Security bei Open Search, Realistic Search. Eine andere Thematik, die ich auch sehr interessant fand, und zwar gibt es ein System, das nennt sich Jäger, ist ein System für Distributed Tracing. Im Endeffekt ist das, ich sag mal, primär eine UI, die hintendran verschiedene Storage Engines supportet. Also ein Trace ist eigentlich, der Request ging durch verschiedene Code pfade innerhalb deiner Applikation und das wird alles mitgeloggt, wie lang welche Funktion brauchte und so weiter und so fort. Und das wird dann abgelegt."
+    },
+    {
+      "end": 2027540,
+      "speaker": "B",
+      "start": 2020250,
+      "text": "Da haben wir übrigens eine Episode, ein hundert eins mit dem Severin Neumann über Observability, da haben wir das auch noch teilweise erklärt."
+    },
+    {
+      "end": 2031850,
+      "speaker": "A",
+      "start": 2027850,
+      "text": "Ja, aber zu tracing könnten wir eigentlich auch mal irgendwann eine richtige Folge machen."
+    },
+    {
+      "end": 2037610,
+      "speaker": "B",
+      "start": 2032010,
+      "text": "Eine richtige, ja. Also findest du jetzt unsere Observability Folge war keine richtige Episode."
+    },
+    {
+      "end": 2058710,
+      "speaker": "A",
+      "start": 2037690,
+      "text": "Ja, Observability ist ja weit mehr als Tracing, von daher. Auf jeden Fall hatte ich ja gesagt, die unterstützt verschiedene Storage engines und Jager selbst als UI sagt immer, wir machen gar keine Authentifizierung, wir machen gar keine Autorisierung, wir machen gar kein Role based Access Controller, halten wir uns fern. Unsere, setz doch einfach einen Authentication Proxy davor oder ein Sidecar."
+    },
+    {
+      "end": 2063190,
+      "speaker": "B",
+      "start": 2058870,
+      "text": "Moment, musst du das schon erklären? Was ist ein Authentication Proxy? Was ist ein Sidecar?"
+    },
+    {
+      "end": 2077670,
+      "speaker": "A",
+      "start": 2063350,
+      "text": "Ja, ein Authentification Proxy ist, bevor du auf die eigentliche UI kommst, kommst du erst auf einen Nginx, der dann irgendwelche Passwort Authentification Mechanismen checkt oder einen Key Cloak oder, oder, oder. Du machst so eine Art Endpoint Protection."
+    },
+    {
+      "end": 2086150,
+      "speaker": "B",
+      "start": 2077670,
+      "text": "Davor, also ohne, dass die Software darunter oder der Endpoint Bescheid weiß, ist komplett transparent oder der bekommt davon nichts mit."
+    },
+    {
+      "end": 2144550,
+      "speaker": "A",
+      "start": 2086390,
+      "text": "In der Regel reicht der Authentification Proxy, die Authentification Daten schon weiter. Und ob die UI dann diese Authentification Daten in dem Request übernimmt und in die Session schreibt, das obliegt dann der UI. Und da kommt es jetzt gerade, da Jäger, da die UI sagt, ich halte mich hier fern von Authentification, haben die so ein Feature eingebaut, immer wenn Authentification Daten kommen, zum Beispiel Tokens oder JVT Tokens, dann nimmt die UID und reicht die einfach weiter an die Storage Engine. Und da Elasticsearch und OpenSearch als Storage Engine für Traces verwendet werden können, und die ein role based Excel Control haben, werden diese Authentifizierung Tokens einfach an die Storage Engine weitergeleitet und die UI sagt, hör mal, lass mich doch mal in Ruhe, lass uns die Storage Engine entscheiden, was vielleicht auch der richtige Weg ist, an der Quelle den Zugriff zu steuern. Aber das finde ich, ist auch ein interessanter Ansatz, wie man sagt, mit dem kompletten Thema setze ich mich nicht auseinander, ich reiche das nur weiter an die Storage."
+    },
+    {
+      "end": 2155110,
+      "speaker": "B",
+      "start": 2144550,
+      "text": "Ja, meine erste Frage wäre, hast du da dann Probleme in der UI, dass du irgendwas anzeigst, auf was du keinen Zugriff hast, aber wenn da alles aus dem Backend kommt, müsste das eigentlich klappen."
+    },
+    {
+      "end": 2172540,
+      "speaker": "A",
+      "start": 2155110,
+      "text": "Genau, die Storage Engine entscheidet, hast du Zugriff oder nicht. Natürlich muss entsprechend reagieren mit ordentlichen Nachrichten und so weiter und so fort. Aber ich sag mal das, ich lehne mich mal aus dem Fenster und wenn ich ein Error aus der Storage Engine kriege, ist es leichter für mich, einen Fehler zu zeigen, anstatt ein komplettes AB System zu implementieren."
+    },
+    {
+      "end": 2186340,
+      "speaker": "B",
+      "start": 2172540,
+      "text": "Ja, definitiv. Und bei den meisten Applikationen ist es ja auch so, dass du sowieso serverseitig alles prüfen musst, also darfst ja nicht nur auf die UI vertrauen. Insofern, wenn du das komplett in eine Schicht schaffst zu delegieren, ist das natürlich eigentlich ein super smarter Ansatz."
+    },
+    {
+      "end": 2199230,
+      "speaker": "A",
+      "start": 2186340,
+      "text": "Also diese drei Beispiele oder vier Beispiele, Sentry, Grafana, Elasticsearch, OpenSearch und Jäger Tracing geben euch vielleicht mal so einen Einblick, wie ihr das als Applikation handhaben könnt oder warum man nicht alles über einen Kamm scheren möchte."
+    },
+    {
+      "end": 2209990,
+      "speaker": "B",
+      "start": 2199230,
+      "text": "OK, nach dieser ganzen Theorie, Andi, wenn ihr jetzt selber so was implementieren will in meiner Software, wie starte ich oder auch in meinem Stack, vielleicht habe ich ja mehrere Software Komponenten, wie wir in."
+    },
+    {
+      "end": 2218610,
+      "speaker": "A",
+      "start": 2209990,
+      "text": "Der letzten Episode gelernt haben, stelle keine Gegenfrage auf eine Frage als Antwort, ich tue es trotzdem. Wollen wir Spaß haben oder wollen wir vorankommen?"
+    },
+    {
+      "end": 2232760,
+      "speaker": "B",
+      "start": 2219160,
+      "text": "Wir hatten ja schon Spaß, wir sind jetzt in einem Startup, das hatte bisher keine Rollenkonzepte und jetzt kommt irgend so eine dumme Regulierung um die Ecke oder wir haben einen Enterprise Kunden, der unbedingt sowas haben will und jetzt müssen wir sowas implementieren."
+    },
+    {
+      "end": 2236520,
+      "speaker": "A",
+      "start": 2232840,
+      "text": "OK, also wollen wir vorankommen? Okay, dann sehe ich mal von einer Eigenentwicklung."
+    },
+    {
+      "end": 2242440,
+      "speaker": "B",
+      "start": 2236680,
+      "text": "Vorankommen wollen wir immer, aber Spaß haben, Spaß mit Rechten. Ja, OK, sei dahingestellt."
+    },
+    {
+      "end": 2343000,
+      "speaker": "A",
+      "start": 2242520,
+      "text": "Deswegen sehen wir mal von einer Eigenentwicklung ab, denn man kann natürlich sagen, es sind ja nur Rollen und es sind ja nur Rechte, deswegen ich habe jetzt keine Security Expertise, ich bin kein Authentifikation und kein Authorization Provider und auch keine Security Company, deswegen ist es nicht mein Business. Deswegen sage ich, okay, fährt man in fast allen Fällen besser, wenn man eine existierende Role based Access Control Lösung nutzt, denn ansonsten stellt man nämlich nur ein Team ab, was sich nur um interne Autorisation kümmert. Deswegen empfehle ich natürlich einer dieser zwei Arten. Auf der einen Seite kann man existierende role based access control libraries in seinen Code implementieren, auf der anderen Seite kann man so eine Art Server daneben setzen. Fangen wir mal mit den Libraries an. Da habe ich mir mal drei rausgesucht oder eigentlich vier. Die wohl bekannteste auf dem Open Source Markt ist Caspin. Caspin ist ein komplettes Authorization Framework, was auf der einen Seite Support für Access Control Lists anbietet. Was das ist und wo die Abkürzung zu ABEC ist, machen wir gleich noch. Dann supportet das Robin Access Control und dann supportet das auch Attribute based Access Control, was wir gerade zum Beispiel bei OpenSearch gesehen haben. Das konfiguriert man alles mit so einer DSL, mit so einer Art Konfigurationssprache. Sieht so ähnlich aus wie YAML. Und die haben SDKs wirklich für jede Sprache. Go, net, Java, JavaScript, PHP, Python, sogar Delphi. Also falls du ein Arbeitssystem, das habe ich schon lange gehört, Delphi oder eine andere populäre Library im JavaScript Bereich ist CASL. Der bietet dir native Integration in die großen Frameworks wie Angular, Vue oder React."
+    },
+    {
+      "end": 2363000,
+      "speaker": "B",
+      "start": 2343240,
+      "text": "Aber was machen die Libraries? Also wo helfen sie dir? Ich binde die jetzt ein im Code und dann kann ich Sachen annotieren oder wie funktioniert das dann? Also was nimmt mir das Ding ab? Weil die Authentifizierung ist davor, ich kann dort drinnen Rollen definieren und dann, wie schaut so Anwendung da aus?"
+    },
+    {
+      "end": 2391210,
+      "speaker": "A",
+      "start": 2363210,
+      "text": "Ja, also im Endeffekt sind das alles nur Definitions Libraries und dann Integration in deine Frameworks, wo du einfach so eine Funktion aufrufen kannst, okay, hier ist der User, hier sind die Rollen, hat er Zugriff und die machen dann das Heavy Listing mit der Konfliktlösung, mit den Attributen und Co. Also die machen die realen Checks, ob die Definition, die du von deinen Rollen gegeben hast, auf den User zutreffen und geben dann Daumen hoch oder Daumen runter."
+    },
+    {
+      "end": 2403700,
+      "speaker": "B",
+      "start": 2391620,
+      "text": "Also ich spare mir ganz viele Ifs und Checks, die es ständig dann überall womöglich als duplicated Code oder halt zumindest meine komplette eigene Implementierung mache, dass mir das wegabstrahiert wird."
+    },
+    {
+      "end": 2408540,
+      "speaker": "A",
+      "start": 2403780,
+      "text": "Simpel gesprochen, ja, aber wie ich ja gerade schon gesprochen habe, wie du gerade."
+    },
+    {
+      "end": 2414020,
+      "speaker": "B",
+      "start": 2408540,
+      "text": "Gesprochen hast, klingt so nach Zarathustra. Er sprach, wie er gesprochen hat, dass."
+    },
+    {
+      "end": 2438220,
+      "speaker": "A",
+      "start": 2414020,
+      "text": "Du verschiedene Layer in den Ressourcen haben kannst. Grafana hat mal gesagt, Folder, Dashboard und so weiter und so fort. Sowas kannst du sehr einfach dadurch abbilden. Das bedeutet auch die Hierarchien in den Rollen und den Ressourcen werden da in der DSL abgebildet, konfiguriert und die machen das heavy lifting für dich. Also in Java sieht das ein bisschen Enterprise aus, wenn wir zum Beispiel Spring Security nehmen, also für Spring Boot oder."
+    },
+    {
+      "end": 2442260,
+      "speaker": "B",
+      "start": 2438220,
+      "text": "Lass mich raten, es gibt Annotationen, wenn es um Spring geht und Java gibt."
+    },
+    {
+      "end": 2453290,
+      "speaker": "A",
+      "start": 2442260,
+      "text": "Es Annotationen natürlich, die baust du dann einfach an den Controller, modern View Controller oder MVVC oder was es da nicht alles gibt. Kennst du diese Patterns noch aus der Uni?"
+    },
+    {
+      "end": 2453810,
+      "speaker": "B",
+      "start": 2453290,
+      "text": "Natürlich."
+    },
+    {
+      "end": 2482990,
+      "speaker": "A",
+      "start": 2453970,
+      "text": "Keine Ahnung, wann ich das letzte Mal sowas programmiert habe, aber wie dem auch sei, da sagst du einfach eine Annotation, add roles allowed und dann, keine Ahnung, hier darf ein Admin hin und so weiter und so fort und der macht das heavy lifting. Natürlich gibt es von der apache Foundation auch noch ein Projekt, nennt sich apache Shiro, verlinken wir alles unten drunter. Jetzt habe ich aber gesagt, neben den SDKs gibt es auch noch so eine Serverart, die kannst du daneben setzen. Auf der einen Seite kannst du natürlich so ein Keycloak Server daneben setzen, das ist so ein Open source identity und Access Management Server, die mus natürlich dann."
+    },
+    {
+      "end": 2495390,
+      "speaker": "B",
+      "start": 2483070,
+      "text": "Auch anfragen, beziehungsweise da bekommst du eigentlich nur die Info über die Rollen. Also da macht jetzt, also da ist es schwierig dann irgendwie komplexere Implementierungen zu machen, weil die musst du in der Software machen."
+    },
+    {
+      "end": 2516870,
+      "speaker": "A",
+      "start": 2495630,
+      "text": "Das ist zutreffend für Keycloak, aber nicht für die nächsten drei Sachen, die ich noch gefunden habe. Und zwar gibt es ein System, was ich sag mal als heiliger Gral in dem ganzen fine grained authorization space unterwegs ist. Von wem kommt das? Wer treibt technische innovation?"
+    },
+    {
+      "end": 2533350,
+      "speaker": "B",
+      "start": 2517030,
+      "text": "Ist die frage, ob es innovativ ist oder ob es nur klassisches access management ist. Weil wenn du sagst im ganzen rechtesystem würde ich eher so denken an irgendwelche Salesforce, irgendwelche extremen Enterprise Firmen, Oracle, irgend sowas."
+    },
+    {
+      "end": 2580120,
+      "speaker": "A",
+      "start": 2533510,
+      "text": "Ja, vielleicht auch. Ich rede jetzt diesmal mal wieder vom Flaggschiff Google. Google hat nämlich ein Authorization System intern, nennt sich Google sansibar. Da denke ich mal direkt an Strand und Cocktails, muss ich zugeben. Aber Google sansibar ist einer der Role Models, hahaha, was für ein Flachwitz jetzt gerade. Einer dieser Role Models in dem ganzen Space. Und zwar gibt es davon natürlich auch Open Source Kopien und eine ist zum Beispiel spicedb. Spicedb ist eine Open Source Datenbank und da kannst du Rollen hinterlegen, da kannst du dokumenten Attribute hinterleg, da kannst du dann die Datenbank querien, hat dieser User Zugriff und so weiter und so fort. Das bedeutet, da machst du dann das Heavy Lifting nicht in deiner Applikation, sondern eigentlich ist dein Heavy Lifting eine Datenbank Query."
+    },
+    {
+      "end": 2594600,
+      "speaker": "B",
+      "start": 2580120,
+      "text": "Und nur um zu demonstrieren, wie umfangreich das Ganze ist, es wird verwendet von GitHub, Adobe, Google selber scheinbar, fastly, Red Hat, Reddit, IBM. Also das ist schon ein Ding, was ziemliches Monster ist."
+    },
+    {
+      "end": 2634350,
+      "speaker": "A",
+      "start": 2595180,
+      "text": "Ein ähnliches System ist Open FGA von Auth Zero. Auth Zero ist eine Authentification Authorization Company und die haben ihr Authorization System, ebenfalls open source, verlinken wir auch in den Shownotes, ist so ähnlich wie spicedb. Und dann gibt es natürlich noch auch ein drittes System unter der Apache, zwei License, nennt sich Orikito, ist ebenfalls von Google sansibar inspiriert und supportet ähnlich wie Caspin gerade auch schon Access Control List, Attribute Based Access Control und Role Based Access Control. Also da gibt es natürlich eine ganze Menge, was du dir anschauen kannst und wie du es implementieren kannst."
+    },
+    {
+      "end": 2660010,
+      "speaker": "B",
+      "start": 2634350,
+      "text": "Aber wenn ich jetzt so eine externe Datenbank habe, was speichere ich dann in dieser Datenbank? Sind da dann meine Objekte auch drin, die ich in meinem eigenen Modell habe? Weil diese externe Datenbank hat ja keine Informationen über meine Objekte, über die Dokumente oder so. Also stehen da dann nur Regeln drin oder eben auch nur die Rollen. Also wo zieht man da die Grenze zwischen eigenem Layer von der eigenen Software zu der externen Datenbank?"
+    },
+    {
+      "end": 2688830,
+      "speaker": "A",
+      "start": 2660010,
+      "text": "In irgendeiner Art und Weise muss natürlich das Authorisation System Ahnung von deinen Objekten haben, weil sonst kann natürlich keine Entscheidung getroffen werden. Und wenn du sagst, wo ziehe ich die Grenze, dann stelle ich mir die muss da eine Grenze sein? Natürlich architekturell sollte da natürlich eine Separation of concern da sein. Der Punkt ist aber, da wie wir gerade beschrieben haben, jedes System natürlich eine Einzigartigkeit in den Ressourcen hat, gibt es da eine gewisse Kopplung und sonst kann die Datenbank auch nicht entscheiden, ob du Zugriff hast oder nicht. Also ja, es muss also in dem."
+    },
+    {
+      "end": 2691390,
+      "speaker": "B",
+      "start": 2688830,
+      "text": "Fall kann ich Ressourcen in SpiceDB auch anlegen?"
+    },
+    {
+      "end": 2719890,
+      "speaker": "A",
+      "start": 2691470,
+      "text": "Ja, also ich meine, der große Unterschied zu SpiceDB und Caspin zum Beispiel ist natürlich, dass du Caspin als Library in deinen Code reinholst und SpiceDB natürlich ein externes System ist, was du dann auch extern konfigurierst und natürlich auch managen, hosten muss und so weiter und so fort. Ich selbst habe schon mal Caspin benutzt, war eine gute Erfahrung. Natürlich musste wie bei jeder Implementierung mal ein bisschen die Dokumentation wälzen, aber ich war sehr glücklich. Und wenn man sich mit dem Role Based Access Control und mit dem Attribute Based Access Control mal ein bisschen auseinandersetzt, dann kommt man da relativ schnell rein."
+    },
+    {
+      "end": 2723730,
+      "speaker": "B",
+      "start": 2720130,
+      "text": "Und du hast Caspin verwendet, weil du Delphi programmiert hast?"
+    },
+    {
+      "end": 2819530,
+      "speaker": "A",
+      "start": 2723890,
+      "text": "Nein, natürlich habe ich Go programmiert und soviel ich weiß, war Caspin auch einer der ersten oder das Go SDK war einer der ersten von Caspin selbst. Du kannst es so ich sehe gerade Lua sogar, meine Güte. Cloud native kubernetes ist envoy coupe sphere. Faszinierend. Naja, verlinken wir auf jeden Fall alles mal in den Shownotes. Wenn man sich aber mit dem Thema Role Based Access Control mal auseinandersetzt, dann tauchen hier und da ab und zu mal verwandte oder erweiterte Konzepte auf. Eins zum Beispiel ist Attribute based access control. Hatten wir gerade auch schon erklärt. Also es prüft eigentlich Attribute von Nutzern oder Objekten oder den Kontext. Ein Beispiel ist gebe dem Nutzer nur Zugriff, wenn er im Department Sales ist und der Datentyp ein öffentliches Dokument ist und der Wochentag gleich Montag ist. Das sind dann zum Beispiel Attribute, die du zuweisen kannst. Ist natürlich flexibel, aber auch komplexer und kann wie gesagt, die Rolle Manager dann durch zusätzliche Attribute wie zum Beispiel Clearance Level oder Uhrzeit oder so als weitere Checks hinzufügen. Da könnte man zum Beispiel Sachen einbauen wie darf der Wolfgang an einem Sonntagmittag auf dieses klassifizierte Dokument zugreifen? In Hochsicherheitsfirmen schlägt da eigentlich Alarm, wieso der Wolfgang auf ein solches Dokument zugreift, wenn er nicht arbeitet. Ein anderer Begriff, der mir in letzter Zeit häufig untergekommen ist, ist Relationship based access Control Reback. Auf audio technisch ist das, glaube ich, echt mit meiner Aussprache schwierig zu verstehen."
+    },
+    {
+      "end": 2829840,
+      "speaker": "B",
+      "start": 2820410,
+      "text": "Ich bin schon gewöhnt, dass ich nur mehr Airbag höre eigentlich und ans Auto denke. Das ist ganz normal. Ist zwar ein C, kein G, aber ich hab mich daran gewöhnt, wahrscheinlich alle Hörer innen auch schon."
+    },
+    {
+      "end": 2895970,
+      "speaker": "A",
+      "start": 2830000,
+      "text": "Das ist genau das, was es sagt, eine eins zu eins Übersetzung, eine beziehungsbasierte Zugriffskontrolle. Also zum Beispiel, wer ist Besitzer eines Datensatzes? User A darf nur auf Objekt x zugreifen, weil A Manager von B ist, der das Objekt erstellt hat. Das wäre zum Beispiel dann eine relationship based Access Control mit einer Hierarchie. Das praktischste Beispiel, was ich kenne für Relationship based Access Control ist eigentlich der Customer Support. Denn wenn du ein Kundenticket als Customer Support Mitarbeiter bearbeitest, dann darfst du nur auf die Daten von dem betroffenen Kunden zugreifen. Nehmen wir mal an, der Wolfgang hat Obi, den Baumarkt als Kunden und Hornbach und Obi hat jetzt bei Wolfgang einen Kundenticket aufgemacht und Wolfgang bearbeitet dieses Ticket von Obi. Dann bekommt Wolfgang nur für die Bearbeitung des Tickets Zugriff auf die Kundendaten von Obi und er kann dann nicht auf die Kundendaten von Hornbach zugreifen, weil er es ja nicht muss, weil er ja kein Kundenticket von Hornbach bearbeitet."
+    },
+    {
+      "end": 2900530,
+      "speaker": "B",
+      "start": 2896130,
+      "text": "Können wir Bauhaus auch noch mit reinnehmen, damit wir da fair markt fair bleiben."
+    },
+    {
+      "end": 2931070,
+      "speaker": "A",
+      "start": 2900530,
+      "text": "Wir können auch noch to mit reinnehmen und was weiß der Geier nicht. Naja, auf jeden Fall, wenn man jetzt mal überlegt, wie funktioniert das technisch, dann könnte man schon fast sagen, okay, das ist ja so eine Art Row Level Security. Das bedeutet also eigentlich, dass du innerhalb, nehmen wir mal ganz simpel eine relationale Datenbank, eine MySQL, dass du eigentlich eine row Level Security haben musst und der nur die Datensätze rausgeben kann, die dann, was habe ich gesagt, Obi bearbeitest du gerade, Hornbach nicht, Obi nur die Datensätze von Obi zurückgibt."
+    },
+    {
+      "end": 2932280,
+      "speaker": "B",
+      "start": 2931070,
+      "text": "Oder du hast Attributes."
+    },
+    {
+      "end": 2980470,
+      "speaker": "A",
+      "start": 2933710,
+      "text": "Genau, da kannst du sagen, kunde gleich Obi zum Beispiel. Das ist dann natürlich auch relationship based, also hast du die Relation, hast du die Beziehung gerade und natürlich dann auch irgendeine Art und Weise Zeit gebunden. Die Darstellung Hintendran im System ist oft ein Graph, denn Knoten sind Benutzer und Ressourcen und Kanten sind dann die Beziehung. Zum Beispiel ist Manager von oder Mitglied in oder arbeitet gerade an Customer Ticket. So kann man die ganze Thematik zum Beispiel in Graf Datenbanken darstellen. Google sansibar, habe ich ja gerade genannt, ist genau ein solches Projekt bzw. Google sansibar supported Relationship based Access control und die nutzen auch Graphen. Wir haben mal das Research Paper natürlich auch in den Shownotes verlinkt. Vielleicht könnten wir natürlich auch mal eine Papers we love Folge über das Google sansibar Paper machen."
+    },
+    {
+      "end": 3010600,
+      "speaker": "B",
+      "start": 2980470,
+      "text": "Arme brummt jetzt schon der Schädel voller rechte Managementsystem. Apropos Schädel brummen, ich denke da auch immer an die Google Cloud oder Amazon, dieses i am Management von Rollen und Permissions und für mich ist es immer nur Chaos. Also bei welchen Seiten Services man welche Rollen akzeptiert und Permissions und dann doch wieder im IAM Manager und also es ist für mich absolutes Chaos mit diesen ganzen Rollen. Aber passiert es im Hintergrund dann auf sansibar?"
+    },
+    {
+      "end": 3016400,
+      "speaker": "A",
+      "start": 3010600,
+      "text": "Ja, ob GCP selbst auf sansibar basiert, kann ich dir nicht sagen. Ich habe GCP nicht gebaut, deswegen weiß ich das nicht."
+    },
+    {
+      "end": 3020830,
+      "speaker": "B",
+      "start": 3016480,
+      "text": "Im Endeffekt, du bist normal allwissend, also dafür habe ich die hier im Podcast."
+    },
+    {
+      "end": 3024950,
+      "speaker": "A",
+      "start": 3020830,
+      "text": "Ich habe aber noch nie bei Google gearbeitet, also von daher weiß ich es nicht und ich habe auch noch nie."
+    },
+    {
+      "end": 3028990,
+      "speaker": "B",
+      "start": 3024950,
+      "text": "Falls es jemand weiß, bitte vorbeischauen in der Discord Community, würde mich interessieren."
+    },
+    {
+      "end": 3078970,
+      "speaker": "A",
+      "start": 3029230,
+      "text": "Die Konzepte sind natürlich die gleichen, also die ganzen Hyperscaler, Amazon Web Services, Microsoft Azure, Oracle Cloud, also OCI oder GCP. Das ganze IAM System ist natürlich mit den Best Practices ausgestattet. Relationship based Access Control, Attribute based Access Control. Die haben natürlich sehr viel vordefinierte Rollen. Der klassische ist so Storage Viewer, Storage Admin. Die haben natürlich auch noch ein paar erweiterte Funktionalitäten, wie zum Beispiel, dass diverse Leute, wenn du die gewissen Rollen hast, natürlich auch andere Rollen annehmen kannst. Für manche Aktionen musst du dann die Rolle wechseln. Und ich meine, Identity und Access Management in großen Cloud Umgebungen ist natürlich auch ein Großteil der Arbeit in der Einrichtung dieser Cloud Umgebungen. Und wenn du sagst, das ist Chaos, dann würde ich sagen, hör dir die Folge noch mal an, wenn du nüchtern bist und dann kannst du auch deine cloud Umgebung entsprechend absichern."
+    },
+    {
+      "end": 3086070,
+      "speaker": "B",
+      "start": 3078970,
+      "text": "Ich bin ja ein Kind, der er und im Prinzip IAM ist für mich eine Frau. Französische Hip Hop Band, aber einzig wahre Iam."
+    },
+    {
+      "end": 3181700,
+      "speaker": "A",
+      "start": 3086550,
+      "text": "Aber im Endeffekt besagt das natürlich auch, dass ABAC auch eine Herausforderung ist bei der Implementierung. Denn wenn du sagst, das ganze Cloud rechte Management System ist ja immer Chaos, dann heißt das für mich, ich höre da nur du hast keine Planung und kein Konzept gemacht. Jetzt sage ich das natürlich als Podcaster und wir wollen ja auch Wissen vermitteln. Das bedeutet, wenn ihr role based access Control implementieren wollt, macht euch ein Konzept, macht euch eine Planung, macht eine Rollenfindung und denkt mal darüber nach, welche Granularität ihr da reinbringen wollt. Nutzt man vordefinierte Rollen? Wollt ihr neue Rollen erstellen können? Welche Permissions sollten die überhaupt haben? Wie geht ihr mit Änderungen und Wachstum um, wenn neue Module oder Plugins ins System kommen? Wie geht ihr mit Edge Cases um, wie zum Beispiel mehrere Rollen, die sich gegebenenfalls aufheben? Welche Priorität hat welche? Da gibt es sowas wie separation of duties oder sogenannte constraints. Das bedeutet, gewisse Rollen dürfen nicht von derselben Person kombiniert werden. Ich hatte vorhin schon erwä man hat einen Requester und einen Approver. Und wenn der Wolfgang selbst die Anfrage stellen kann und sich selbst die Anfrage auch genehmigen kann, das ist jetzt zum Beispiel so ein Fall, da könnte das rbac System ein sogenanntes Constraint haben und eine Person darf nicht beide dieser Rollen haben, weil das führt die ganze Sache der Anfrage und der Genehmigung ad absurdum. Zum Beispiel die Tools, die wir gerade genannt haben, Caspin, Spicy b, und allem sowas, die können in der Regel alle diese Constraints und das ist unter anderem dieses Heavy lifting. Es gibt halt sehr, sehr viele Edge."
+    },
+    {
+      "end": 3193300,
+      "speaker": "B",
+      "start": 3181700,
+      "text": "Cases, wobei du das natürlich auch definieren musst. Also System ist nicht schlau genug, das selber zu wissen, sondern man muss natürlich dann irgendwelche Regeln einführen, welche Rollen dürfen nicht miteinander verwendet werden oder sowas."
+    },
+    {
+      "end": 3202310,
+      "speaker": "A",
+      "start": 3193300,
+      "text": "Ah, völlig, völlig. Für die Definition der Rollen und der Attribute und der Aktion und der Permissions und der Constraints, da bist du immer noch verantwortlich. Also das nimmt dir keiner ab."
+    },
+    {
+      "end": 3234930,
+      "speaker": "B",
+      "start": 3202630,
+      "text": "Das Problem bei mir ist ja immer bei den Hyperscalern, wenn ich dann mit so einem Konzept fertig bin, dann gehe ich zum Hyperscaler und dann sind schon wieder dreiig Rollen veraltet und dann gibt es fünf verschiedene Versionen von Rollen. Also man merkt schon, dass das dann auch sehr komplexes System ist, was man da handhaben muss. Deshalb hat man hoffentlich bei einem eigenen System weniger, weil sich da weniger ändert. Aber wenn man dann so mit einem Hyperscaler auch noch zusammenarbeitet, dann muss man quasi die Komplexität von dem Hyperscaler auch noch mit reinnehmen ins eigene Rollenkonzept."
+    },
+    {
+      "end": 3250850,
+      "speaker": "A",
+      "start": 3235010,
+      "text": "Aber auch Begriffe zu der ganzen Zugriffskontrolle, die werden ja wild gemixt und geändert. Wo ist denn der Unterschied zu Gruppen und Teams? Also wie verhält sich denn, wo grenzt sich denn Role Based Access Control zu Gruppen bzw. Teams ab, Wolfgang?"
+    },
+    {
+      "end": 3261540,
+      "speaker": "B",
+      "start": 3250930,
+      "text": "Ja, ich sehe das als zwei komplett unterschiedliche Layer, wenn man so wieder das Ganze nennen will. Also Rollen ist eine Gruppierung von Rollen."
+    },
+    {
+      "end": 3264060,
+      "speaker": "A",
+      "start": 3261540,
+      "text": "Mit dem anderen Begriff, den wir versuchen abzugrenzen."
+    },
+    {
+      "end": 3301950,
+      "speaker": "B",
+      "start": 3264940,
+      "text": "Naja, du hast im Prinzip, wenn du auf eine Rolle schaust und alle User, die dieser Rolle zugeordnet sind, die sind eine Gruppierung anhand von Permissions. Und eine Gruppe oder eben auch Team ist eine Gruppierung auf einer Business Logik. Das heißt, die arbeiten zusammen, die sind einem Projekt zugeordnet. Also es ist nochmal eine Zuordnung auf einer anderen Ebene bzw. Wenn du das Ganze in einem Graph siehst, könntest du alles zusammenpacken, aber es ist eine unterschiedliche Ebene bzw. Im Business Kontext einfach nochmal getrennt. Das eine ist rechte bezogen, das andere ist meiner Meinung nach eher organisatorisch, businessbezogen."
+    },
+    {
+      "end": 3331370,
+      "speaker": "A",
+      "start": 3302350,
+      "text": "Ein hundert Prozent. Richtig, ein hundert Gummipunkte. Also Gruppen sagen nicht zwingend etwas über die Berechtigung aus, sie dienen wirklich meist der Strukturierung von Nutzern, also Gruppen und sind wirklich organisatorische Einheiten. Also wer gehört organisatorisch zusammen? Und bei Rollen ist es so, wer darf etwas tun. In der Praxis ist es jedoch so, dass das oft gemeinsam benutzt wird. Also Benutzer ist Mitglied von Team A und hat die Rolle Editor. Deswegen muss man da vielleicht so ein bisschen abgrenzen."
+    },
+    {
+      "end": 3354730,
+      "speaker": "B",
+      "start": 3331530,
+      "text": "Die Zugehörigkeit von beiden Seiten, also Rolle und Gruppe, kann dann wieder Implikationen auf die Permissions haben. Wenn du eine Rolle Teammanager hast, dann hat der Team Manager oder der Team Lead natürlich immer nur Rechte in dem Team, wo er zuständig ist. Das heißt, die Rolle ist Team Manager, die kann aber nur kombiniert mit der Zugehörigkeit zum Team dann definieren, worauf du dann wirklich am Ende Zugriff hast."
+    },
+    {
+      "end": 3365970,
+      "speaker": "A",
+      "start": 3354730,
+      "text": "Das ist korrekt, aber wenn dann Ressourcen reinkommen, dann muss man gucken, okay, worüber sprechen wir hier? Rowbase Access Control oder Access Control List? Aus welcher Perspektive kommen die Berechtigung, dass."
+    },
+    {
+      "end": 3380480,
+      "speaker": "B",
+      "start": 3365970,
+      "text": "Es dann auch die Abgrenzung und dann hast du vielleicht noch Attribute drauf. Also am Ende hast du halt sehr komplexe Zugriffsmuster und irgendeine Engine entscheidet, ob dieses Zugriffsmuster erlaubt ist oder nicht. Und da können natürlich ganz viele Ebenen und Attribute mit reinspielen."
+    },
+    {
+      "end": 3396790,
+      "speaker": "A",
+      "start": 3380560,
+      "text": "Als hätten wir es getimt. Das Stichwort deines Satzes war Engine und da nehmen wir nämlich auch die dritte Abgrenzung zu role based access Control mal vor. Wo ist eigentlich der Unterschied von Role based Access Control und einer sogenannten policy Engine?"
+    },
+    {
+      "end": 3411700,
+      "speaker": "B",
+      "start": 3397180,
+      "text": "Ja, gute Frage. Erklär mir das mal. Oder ist überhaupt ein Unterschied? Also ich habe fast das Gefühl, das eine ist einfach eine Implementierung oder eine andere Definition von Rechten, aber weniger eine klare Trennung zwischen den zwei Systemen."
+    },
+    {
+      "end": 3479750,
+      "speaker": "A",
+      "start": 3411700,
+      "text": "Machen wir auch mal den Mix auf, weil es geht so ein bisschen auch in die Kritik an klassischen Arbeit Modellen. Denn eine policy Engine könnte ich inzwischen so beschreiben als role based access control on crack. Denn AB kommt irgendwo aus den ERN eine Kritik ist das nicht ein veraltetes Modell? Genügt das überhaupt noch den dynamischen Anforderungen, die aktuelle Systeme so haben? Da gibt es natürlich dann noch so weitere Konzepte wie Zero Trust, Just in time Privilegien und so weiter und so fort. Und die Rollen sind halt in der Regel statische Rollen. Und da ist die Kritik, dass Role based Access Control alleine oft nicht mehr ausreicht, um alle Anforderungen zu erfüllen. Und da kommt jetzt so eine policy Engine ins Spiel. Eine policy Engine ist eigentlich ein generisches Regelwerk, mit dem du komplexe dynamische Zugriffskontrollen abbilden kannst. Also du hast nicht nur statische feste Rollen, sondern wirklich ein Regelwerk, wenn das. Und so weiter und so fort. Und da kannst du beliebige Bedingungen formulieren und natürlich auch miteinander mixen, wie zum Beispiel Benutzerattribute, Ressourcenattribute, Beziehungen oder sowas wie Zeit Ort Abfragetyp und Anfrage Typ und so weiter und so fort. Also du kannst Rolle natürlich auch, also."
+    },
+    {
+      "end": 3490250,
+      "speaker": "B",
+      "start": 3479830,
+      "text": "Du wirst auch Rollen dort drinnen haben. Das ist ein. Darum meine ich, es ist, glaube ich einfach eher eine Bezeichnung von der Implementierung, wie du komplexe Sachen dann abbilden kannst."
+    },
+    {
+      "end": 3492610,
+      "speaker": "A",
+      "start": 3490250,
+      "text": "Ja, also ich glaube schon, es ist eine deutliche Erweiterung."
+    },
+    {
+      "end": 3503330,
+      "speaker": "B",
+      "start": 3493330,
+      "text": "Ja, es ist auf jeden Fall, du hast die ganzen Sachen, die wir erwähnt haben, attribute based, role based, die hast du alle dort drinnen vereint, um dann die Regeln zu definieren, um komplexe Regeln abzubilden."
+    },
+    {
+      "end": 3562320,
+      "speaker": "A",
+      "start": 3503330,
+      "text": "Genau, also in klassischen policy engines kombinierst du wirklich verschiedene Zugriffsmodelle, wie zum Beispiel Robase Access Control, Attribute Based Access Control, Relationship based access control control und eigene Modelle, die du selbst programmieren kannst. Und da gibt es natürlich ein paar policy Agenten, nennt man die alle. Und damit meine ich jetzt kein AI Agent, sondern wirklich ein policy Agent, weil da schaut nicht immer drauf, darfst du das? Hier gerade ein großes Projekt ist von der Cloud Native Computing Foundation, ist der open policy Agent. Achtung, geiler Name, zu deutsch zumindest, das ist der Opa. Der Opa sagt, du, du darfst nicht da drauf oder du, du darfst das Bier trinken. Und ein anderes Projekt ist Kiverno, da kann man Policies as Code definieren, verlinken wir auch, könnt ihr euch im Detail mal ansehen. Besonders der open policy Agent ist im ganzen Cloud Native Bereich natürlich sehr verbreitet. Kubernetes kann auch native Kubernetes ressourcen und so weiter und so fort."
+    },
+    {
+      "end": 3566800,
+      "speaker": "B",
+      "start": 3562880,
+      "text": "Klingt für mich so wie ein Buzzword, hat man wieder was neues gebraucht."
+    },
+    {
+      "end": 3604440,
+      "speaker": "A",
+      "start": 3567360,
+      "text": "Es ist ein Buzzword, aber auf der anderen Seite Robase access control, das Wort war schon vergeben. Und ich würde sagen, eine policy End Engine ist das modernere Rose Access Control. Und zum Beispiel Caspin, was ich vorhin als Library erwähnt hatte, würde ich sagen, kannst du auch schon als Policy Engine nutzen, weil es einfach mehrere Modelle unterstützt. Das Geile ist halt, du kannst halt wirklich kontextsensitive Regeln einführen, Ort, Uhrzeit, Besitz, Beziehung. Und da kannst du natürlich dann auch sowas machen wie wieso greift der Wolfgang auf sensitive Dokumente außerhalb der Arbeitszeit zu? Und was ja echt eine sinnvolle Thematik, wirklich."
+    },
+    {
+      "end": 3641950,
+      "speaker": "B",
+      "start": 3604760,
+      "text": "Jetzt haben wir so viele Themen besprochen. Abschließend, wenn wir jetzt noch mal zurückkommen zu dem kleinen Startup, wo du ja gesagt hast, okay, die sollen gar nichts verwenden, die wollen ja was auf die Straße bringen. Wenn du jetzt mit einer neuen Software beginnst oder mit einem Startup, was wären denn für dich so die Minimalkriterien, wo du sagst, okay, das sollte man eigentlich schon von Beginn an einbauen, so dass man sich keine Steine in den Weg legt, damit man dann zwei Jahre später vielleicht dann mal ein komplexeres System aufbauen kann. Also wo würdest du starten? Oder wenn du jetzt ein side Project startest, was würdest du verwenden und vielleicht was auch nicht?"
+    },
+    {
+      "end": 3652670,
+      "speaker": "A",
+      "start": 3642190,
+      "text": "Konzeptionell würde ich eigentlich zwei Rollen erstmal hardcoden, ganz brutal, einen Admin und einen normalen User, nichts anderes dazwischen."
+    },
+    {
+      "end": 3656940,
+      "speaker": "B",
+      "start": 3652750,
+      "text": "Also du setzt jetzt Authentication schon voraus, dass das gegeben ist?"
+    },
+    {
+      "end": 3696030,
+      "speaker": "A",
+      "start": 3657570,
+      "text": "Ja, wie wir gerade gelernt haben, sprechen wir über Role based Access Control. Ich habe gesagt, ich möchte zwei Rollen implementieren und das Role based Access Control natürlich dann auf Authentification aufbaut. Also ja, natürlich irgendeine Art Username und Passwort würde ich schon machen. Da würde ich dann irgendeine vorgefertigte Library nehmen, die natürlich all diese convenient Thematiken machen, wie Apple Login und Login mit Google und allem drum und dran. Aber natürlich auch ganz klassisch Username, Passwort. Das würde ich aber nicht selbst implementieren, da würde ich irgendeine fertige Library nehmen, denn Authentification nutzt man, baut man nicht selber. Vielleicht sogar, um schneller voranzukommen, würde ich sowas nehmen wie Out Zero oder Okta oder ähnliches. Für eine kleine user Anzahl ist das noch recht erschwinglich."
+    },
+    {
+      "end": 3712670,
+      "speaker": "B",
+      "start": 3696350,
+      "text": "Das heißt, wenn du dann zum Beispiel einen externen Service wie Keycloak oder sowas verwendest, dann hast du dort die Authentication und schon auch Basisfunktionalität, dass du Rollen oder so definieren kannst. Sowas kannst du ja dort schon automatisch eigentlich immer mitdenken. Und da würdest du dann zwei Rollen definieren?"
+    },
+    {
+      "end": 3733070,
+      "speaker": "A",
+      "start": 3712910,
+      "text": "Ne, das Rollensystem würde ich, also ich würde das Rollensystem nicht als Authentification System kopieren, weil das macht mir den Umzug später deutlich schwieriger. Ich würde nur die Authentification, wenn überhaupt, extern auslagern und die Rollen würde ich wirklich selbst machen, weil sonst koppel ich mich zu sehr an das System und der Umzug später wird zu teuer, wenn mein Projekt Traction kriegt."
+    },
+    {
+      "end": 3741590,
+      "speaker": "B",
+      "start": 3733070,
+      "text": "Das heißt, du musst aber intern dir eine Administration bauen, wo du in irgendeiner Form Rollen verwalten kannst, zuordnen zu User und so weiter."
+    },
+    {
+      "end": 3765580,
+      "speaker": "A",
+      "start": 3741590,
+      "text": "Nö, würde ich nicht machen. Ich würde ganz am Start einfach mit einem Admin User und einem normalen User starten. Da würde ich mir eine Klasse reinsetzen, ist Admin, ist User und wirklich hardcoden. Und später, wenn ich wirklich das Problem habe, dass ich sowas brauche, dann würde ich diese zwei Hardcode Sachen rausoperieren und würde die mit sowas wie Caspin oder Spicy Beer oder sowas ersetzen."
+    },
+    {
+      "end": 3769580,
+      "speaker": "B",
+      "start": 3765660,
+      "text": "Und wo definierst du, welcher User Admin oder Normal user ist?"
+    },
+    {
+      "end": 3800890,
+      "speaker": "A",
+      "start": 3769900,
+      "text": "Da würde ich einfach irgendeine Flag in die Datenbank setzen. Und da würde ich auch sagen, wenn ein Kunde sagt, mach diesen User bitte als Admin, dann würde ich sogar eine Update Statement fahren. Ich würde mir keine Admin UI bauen. Es kommt natürlich darauf an, wenn du jetzt zum Beispiel so ein Framework wie Laravel PHP nimmst, da gibt es fertige Bundles, nennt sich das glaube ich, oder Symphony, das klingt einfach rein und dann hast du alles. Das wird bei JavaScript auch geben, wenn du da irgendwas Node JS technisches machst oder bei Spring sehr wahrscheinlich auch, genauso wie Zahlungsanbieteranbindung und so weiter, das gibt es ja alles für, dann würde ich da sowas eher nehmen."
+    },
+    {
+      "end": 3803410,
+      "speaker": "B",
+      "start": 3800890,
+      "text": "Okay. Ich würde das Rollen Management schon auslagern."
+    },
+    {
+      "end": 3807250,
+      "speaker": "A",
+      "start": 3803810,
+      "text": "Das ist ja das tolle an Entwicklertum, kann jeder anders bauen."
+    },
+    {
+      "end": 3847390,
+      "speaker": "B",
+      "start": 3807490,
+      "text": "Also rein aus dem Grund, dann spare ich mir das intern in der Datenbank irgendwo abzuspeichern und ich bekomme das eh mit den Auth Daten, bekomme ich halt schon mit, was der für Rolle hat, der User und dann kann ich die Rolle schon mal mit verwenden. Und wie würdest du dann extenden? Also wenn du deine zwei User jetzt hast und du brauchst jetzt eine dritte Rolle, abgesehen von admin user, würdest du dann irgendwie eine Library starten, also eine externe Library verwenden für das Ganze? Also ab welchem Zeitpunkt fängst du dann an, das irgendwie hoch zu skalieren oder würdest du dann auch noch im Code bleiben? Gibt es da für dich mental irgendwo eine Grenze, ab wann du auf eine professionelle Lösung aufspringst?"
+    },
+    {
+      "end": 3851950,
+      "speaker": "A",
+      "start": 3847390,
+      "text": "Also wie ich es implementieren würde, hatte ich ja gerade gesagt, ich würde sowas wie Caspin oder Spice TV einbauen."
+    },
+    {
+      "end": 3854510,
+      "speaker": "B",
+      "start": 3851950,
+      "text": "Du würdest Caspin schon von Anfang an drinnen haben?"
+    },
+    {
+      "end": 3872380,
+      "speaker": "A",
+      "start": 3855870,
+      "text": "Ne, mit den zwei Rollen nicht. In zwei Rollen würde ich einfach hardcore, einfach brutal dreckig weitergehen. Denn ich denke, wenn ich einen Kunde habe, der Robase Access Control haben möchte, dann werde ich das so versuchen, dass dieser Kunde für dieses Feature zusätzlich mitbezahlt."
+    },
+    {
+      "end": 3874820,
+      "speaker": "B",
+      "start": 3872540,
+      "text": "Aber ab wann passt du dann das auf Caspin auf?"
+    },
+    {
+      "end": 3899800,
+      "speaker": "A",
+      "start": 3874820,
+      "text": "Ja, das ab der, sehr wahrscheinlich dann, wenn ich einen Kunde habe, der mir dieses Feature mit sponsort und mit hoher Wahrscheinlichkeit dann ab der dritten, vierten Rolle, denke ich mal. Ab der dritten Rolle, weil sonst hast du nämlich einfach, weil ab der dritten Rolle wird es halt echt dreckig mit den ganzen if Abfragen. Also auch wenn du es in einer Klasse hast, natürlich kannst du da irgendwie eine Zahl in der Datenbank speichern, eins ist admin, zwei ist user, drei ist sales oder keine Ahnung, was für Rolle du hast."
+    },
+    {
+      "end": 3901640,
+      "speaker": "B",
+      "start": 3899800,
+      "text": "Damit es noch unübersichtlicher wird."
+    },
+    {
+      "end": 3937930,
+      "speaker": "A",
+      "start": 3901720,
+      "text": "Ja genau, also bei eins und zwei würde ich sagen, OK, kriegt man vielleicht noch gerade hin, aber da sehe ich das so, ich würde das so weit nach hinten raus schieben, bis ich einen Kunde habe, der so groß ist, dass er das braucht. Und wenn der so groß ist, dass er das braucht, dann würde ich dem auch sagen, okay, sponsor mir das Feature irgendwie halb mit oder ich suche dann noch zwei, drei weitere Kunden, wo man die Feature Implementierung dann, ich sag mal kostentechnisch abdecken kann, weil dann hast du nämlich einen realen Use Case, dann weißt du, welche Aktionen du auch wirklich, welche Permissions du wirklich sein musst. So würde ich tun."
+    },
+    {
+      "end": 3948250,
+      "speaker": "B",
+      "start": 3937930,
+      "text": "Siehst du, Andy, danke jetzt für deine Erklärung, wie einfach das eigentlich ist. Man fängt damit zwei if Dingern an, da braucht man doch gar keine Episode. Es ist ja ein sehr einfaches Themenfeld."
+    },
+    {
+      "end": 4107130,
+      "speaker": "A",
+      "start": 3948410,
+      "text": "Ja, eine Stunde und fünfzehn Minuten sind wir schon drin oder eine Stunde dreiig. Also wir sprechen auch schon echt lange über dieses Thema. Wir haben manche Bereiche einfach noch gar nicht angefasst, wie zum Beispiel, was eigentlich die Kritik an dem Airbag Modell. Klar, ob das veraltet ist, haben wir gerade schon mal drüber gesprochen, aber über Themen wie Rolexplosion und Co. Haben wir noch nicht gesprochen. Dann natürlich über die möglichen Sicherheitslücken, die bei einer Misskonzeption, bei der Umsetzung irgendwie auftreten können, wie zum Beispiel Overprivilege oder sogenannte State Rolls und Permission Creep. Aber eines oder ganz vielleicht auch so wie du es gerade beschrieben hast, Komplexität ohne Nutzen, würde ich mal sagen, als Over Engineering. Aber eine Story möchte ich noch zu guten geben und zwar mal wieder eine berühmt berüchtigte Kegelclub Story. Und zwar hat ein guter Freund von mir, hat bei einer Firma gearbeitet und irgendwann hat die Firma dann irgendwann verlassen und hat dann zwischenzeitlich in anderen Firmen gearbeitet und irgendwann nach fünf oder sechs Jahren genauer Zeit rum, habe ich jetzt gar nicht im Kopf, spielt aber auch keine Rolle, ist er wieder zu dieser initialen Firma zurückgegangen und er hat dann den Willkommensbrief bekommen von der IT mit dem klassischen Standard Passwort, Username und Standard Passwort und wollte sich am ersten Tag einloggen und ruf dann die IT und sagt, ich kann mich nicht einloggen, das Passwort in diesem Brief hier funktioniert nicht und hä, kann ja gar nicht. Dann guckt die IT nach und so weiter. Was wurde festgestellt? Sein User Account von vor sechs Jahren existierte noch mit den gleichen Rollen und so weiter und sein Passwort, womit er sich heute bei seinem neuen zweiten ersten Tag anmelden sollte, war noch sein altes Passwort. Und das geht natürlich dann, das ist eine schöne Story von Permission Creep und State Roles, man könnte sie ja noch brauchen. Ist natürlich auch ein Traum für Angreifer. Das bedeutet natürlich auch, wenn Mitarbeiter die Firma verlässt oder vielleicht die Abteilung wechselt, kümmert euch mal irgendwie darum, dass die alten Rollen dann vielleicht irgendwie entzogen werden und das meinte ich auch damit. Du kannst die beste Technik davon haben. Wenn das ganze Konzept organisatorisch nicht wirklich verankert ist, dann bringt es halt auch nichts. Aber nun gut, dieses ganze Security und Rechtemanagement, das ist ja in einem Satz zusammengefasst, wie der Wolfgang initial sagte. Und deswegen konnten wir daraus keine Podcast Episode machen. Wenn, wenn ihr das also hört, schreibt dem Wolfgang mal, dass das ein bisschen komplexer ist. Und wenn ihr sogar in dem Metier arbeitet, wenn ihr sowas schon mal implementiert habt oder wenn ihr vielleicht sogar Rollen managt, dann kommt doch mal in unsere Discord Community und gebt dem Wolfgang mal einen Wasch links und rechts, damit er mal nicht so abfällig über eure Arbeit spricht und sagt, das ist ja alles ganz simpel. Wir machen Schluss, bis zur nächsten Episode. Viel Spaß. Tschüss."
+    },
+    {
+      "end": 4107930,
+      "speaker": "B",
+      "start": 4107370,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
