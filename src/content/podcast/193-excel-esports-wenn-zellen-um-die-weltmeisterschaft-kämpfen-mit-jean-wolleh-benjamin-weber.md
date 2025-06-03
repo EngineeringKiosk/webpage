@@ -98,7 +98,7 @@ speaker:
 - name: Jean Wolleh
   transcriptLetter: D
 - name: Benjamin Weber
-  transcriptLetter: C
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/2mZ90ZMiI69ewOR5bKYYRg
 tags:
 - Tech Kultur
