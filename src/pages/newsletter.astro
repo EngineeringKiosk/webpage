@@ -1,0 +1,47 @@
+---
+import Footer from '../components/Footer.astro';
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import podcastInfo from '../data/podcast-info.json';
+
+let title = 'Kontakt - Engineering Kiosk';
+let description = 'Lass uns doch einfach mal sprechen. Schreib uns und mir melden uns zurück. Wir freuen uns über deine Nachricht!';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-20 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap mb-12 lg:mb-9 justify-between items-center">
+						<div class="w-full mb-10 lg:mb-0">
+							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl"> Newsletter</span>
+							<h1 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tighter leading-tight">Wenn du mehr von uns möchtest ...</h1>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
+								Immer mal wieder erreichen uns Nachrichten, dass wir doch bitte mehr von uns geben sollen. Und das tun wir jetzt!
+							</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
+								Wir haben einen Newsletter gestartet.
+								Einmal im Monat bekommst du von uns eine E-Mail mit Links und News, die über unseren Tisch gegangen sind.
+							</p>
+						</div>
+					</div>
+
+					<div class="flex flex-wrap justify-center -mx-4">
+						<script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+						<iframe src="https://subscribe-forms.beehiiv.com/0250b21c-3fbe-4535-95f5-3afca8984d8a" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: ; height: ; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000;"></iframe>
+					</div>
+				</div>
+			</section>
+			
+			<Footer />
+		</div>
+	</body>
+</html>
