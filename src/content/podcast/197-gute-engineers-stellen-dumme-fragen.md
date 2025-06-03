@@ -87,7 +87,7 @@ tags:
 - Knowledge Sharing
 title: '#197 Gute Engineers stellen (dumme) Fragen'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/197-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CUuN8xUpXGE
 
 ---
