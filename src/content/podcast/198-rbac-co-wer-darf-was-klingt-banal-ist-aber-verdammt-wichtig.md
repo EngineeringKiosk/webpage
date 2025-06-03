@@ -88,7 +88,9 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/3rKbUpznH4ynHZqcC6MVPK
-tags: []
+tags:
+- Software Engineering
+- Sicherheit
 title: '#198 RBAC & Co: Wer darf was? Klingt banal, ist aber verdammt wichtig!'
 transcript_raw: ''
 transcript_slim: ''
