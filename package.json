@@ -10,21 +10,19 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "esbuild": "^0.25.5",
-    "postcss-nesting": "^13.0.1",
+    "@tailwindcss/vite": "^4.1.5",
+    "esbuild": "^0.25.3",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "@astrojs/tailwind": "^5.1.5",
-    "astro": "^5.9.1",
+    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.3.1",
+    "astro": "^5.7.10",
     "astro-remote": "^0.3.4",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "sass": "^1.89.1",
-    "tailwindcss": "^3.4.17"
+    "sass": "^1.87.0",
+    "tailwindcss": "^4.1.5"
   }
 }
