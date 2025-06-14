@@ -29,11 +29,11 @@ const dateString = formatDate(nextMeetup.date, 'en-US');
 			<div class="text-2xl p-4">engineeringkiosk.dev/alps</div>
 			<div class="bg-white bg-opacity-90 mt-auto p-4 relative">
 				<div class="text-2xl">
-					hosted by <Image class="h-12 inline" src={nextMeetup.location.logo} alt={nextMeetup.location.name} />
+					hosted by {nextMeetup.location.logo ? <Image class="h-12 inline" src={nextMeetup.location.logo} alt={nextMeetup.location.name} /> : nextMeetup.location.name}
 				</div>
 			{nextMeetup.talks.map((talk, j) => (
 				<div class="flex flex-row my-2 mx-4">
-					<Image class="w-32 h-32 rounded-full" src={talk.avatar} alt={talk.name} />
+					{talk.avatar ? <Image class="w-32 h-32 rounded-full" src={talk.avatar} alt={talk.name} /> : <Image class="w-32 h-32 rounded-full" src="/meetup/alps/images/speaker/avatar.png" alt={talk.name} />}
 					<h3 class="ml-4 text-2xl text-left my-auto">{talk.title}<br>by <span class="text-yellow-500">{talk.name}</span></h3>
 				</div>
 			))}
