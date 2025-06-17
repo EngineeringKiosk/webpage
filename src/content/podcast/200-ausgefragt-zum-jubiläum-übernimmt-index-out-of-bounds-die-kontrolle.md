@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/f5f04911-069f-418d-b8bb-715ca159c4c2/engineering-kiosk-200-ausgefragt-zum-jubil%C3%A4um-%C3%BCbernimmt-index-out-of-bounds-die-kontrolle
 apple_podcasts: https://podcasts.apple.com/us/podcast/200-ausgefragt-zum-jubil%C3%A4um-%C3%BCbernimmt-index-out-of/id1603082924?i=1000713189825&uo=4
 audio: https://audio1.redcircle.com/episodes/756d3dac-3566-4090-9e2e-eef48845a7eb/stream.mp3
 chapter:
