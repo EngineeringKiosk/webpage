@@ -83,7 +83,8 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/6xjqzboMcetUEb7aLO35Nj
-tags: []
+tags:
+- Engineering Kiosk
 title: "#200 Ausgefragt! Zum Jubil\xE4um \xFCbernimmt Index Out Of Bounds die Kontrolle..."
 transcript_raw: ''
 transcript_slim: ''
