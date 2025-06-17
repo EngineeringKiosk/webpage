@@ -92,7 +92,7 @@ tags:
 - Side Projects
 title: '#199 Side-Projects: Coden ist leicht. Sales ist schwer. Business ist der Endgegner!'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/199-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=xfTlX4HiXac
 
 ---
