@@ -80,8 +80,14 @@ pubDate: 2025-06-17 04:00:00+00:00
 rtlplus: ''
 six_user_needs: []
 speaker:
+- name: Christian Braun
+  transcriptLetter: B
+- name: Thomas Diroll
+  transcriptLetter: A
 - name: Andy Grunwald
+  transcriptLetter: C
 - name: Wolfi Gassler
+  transcriptLetter: D
 spotify: https://open.spotify.com/episode/6xjqzboMcetUEb7aLO35Nj
 tags:
 - Engineering Kiosk
