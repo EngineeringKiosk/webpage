@@ -78,7 +78,10 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/7b6Todoj8HHN0LdOYG7Mas
-tags: []
+tags:
+- Backend
+- Software Engineering
+- Interview
 title: '#201 Wie hart kann es sein, einen Link zu checken... mit Matthias Endler'
 transcript_raw: ''
 transcript_slim: ''
