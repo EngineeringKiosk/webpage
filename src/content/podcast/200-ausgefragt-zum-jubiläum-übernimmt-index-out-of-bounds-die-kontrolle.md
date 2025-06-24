@@ -93,7 +93,7 @@ tags:
 - Engineering Kiosk
 title: "#200 Ausgefragt! Zum Jubil\xE4um \xFCbernimmt Index Out Of Bounds die Kontrolle..."
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/200-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PRTmg6y-ry0
 
 ---
