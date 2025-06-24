@@ -1,0 +1,800 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4691,
+  "audio_url": "https://cloud.inlupus.at/s/GtcCxiejdymtGfi/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95629394,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "496c6ea8-7859-4a68-bd88-5b4cb7015fec",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 101360,
+      "speaker": "A",
+      "start": 3440,
+      "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk. Hyperlinks bilden die Basis des modernen Internets. Durch Hyperlinks erreichst du die nächste Webpage. Hast du dir eigentlich schon mal Gedanken darüber gemacht, wie oft du pro Tag einen Link im Web klickst? Wenn ich so über Links im Web nachdenke, stelle ich fest, dass es unglaublich wichtig ist, dass diese gültig sind und funktionieren. Denn wenn jeder vierte oder fünfte Link in einem vier hundert vier not found enden würde, wäre das eine sehr schlechte user experience. Wahrscheinlich würde ich sogar versuchen, die betroffenen Webseiten zu vermeiden. Und dabei rede ich nur von mir und mache das mögliche Fass für Image und Umsatzverlust von großen Webbrands noch gar nicht auf. Dass links funktionieren, ist richtig wichtig und kann einen hohen Impact haben. Wäre es also nicht eine super Sache, wenn man links auf einer Website automatisch prüfen lassen könnte und sich später eine Liste von kaputten Links ausgeben lässt, um dieses zu reparieren? Genau das dachte sich Matthias Endler und hat an einem Wochenende angefangen, einen Link Checker zu schreiben. Dabei wusste er noch nicht, dass er in ein sehr tiefes Loch von Komplexität fallen wird. Zwei Jahre später schraubt er immer noch in diesem Link Checker, der unter anderem von großen Firmen wie AWS und Kitlab verwendet wird. Wir haben mit Matthias darüber gesprochen, warum es eigentlich so schwierig ist, links im Web auf ihre Gültigkeit zu prüfen. Wir sprechen über die Erkennung von URLs, HTML parsing, Horrorgeschichten, selbst erfundene Statuscodes, die Unterschiede zwischen Head und Get Requests, wie große response Bodies Probleme bereiten, wie Hacks für YouTube und Affiliate Links eingebaut wurden, was Doi links sind und wie man ein solches Open Source Projekt eigentlich nachhaltig betreibt. Viel Spaß mit dieser Episode. Los geht's."
+    },
+    {
+      "end": 158640,
+      "speaker": "B",
+      "start": 105680,
+      "text": "Kürzlich hatten wir ja im Podcast in der Episode so ein bisschen über meine side Projects gesprochen und vor allem darüber, wie sie nicht funktioniert haben. Und heute haben wir mal ein Projekt am Start, was wirklich funktioniert hat. Also eigentlich, was so das Paradebeispiel von einem side Project ist. Und zwar ist es ein side Project von einem Freund, das ich immer sehr belächelt habe, weil vorweggenommen, es ist ein Link Checker. Also was willst du mit einem Link Check eigentlich so anfangen? Und ich hab mich fast immer darüber lustig gemacht und mittlerweile ist dieses Ding halt einfach überall in Verwendung. GitLab verwendet, Nvidia verwendet, Google verwendet, Microsoft verwendet. Also es ist überall im Einsatz. Also ich würde fast sagen, gelungenes side Project. Und wie das Ganze aussieht und ob der Matthias, der Maintainer von diesem side Project, jetzt ultrareich ist, klären wir auch gleich. Aber bevor wir in das ganze Thema mal einsteigen, Andi, darfst du unseren heutigen Gast, den Matthias vorstellen."
+    },
+    {
+      "end": 164880,
+      "speaker": "A",
+      "start": 158640,
+      "text": "Ja, ich weiß nicht, warum ich das immer tun muss, weil ich glaube, du hast mit ihm deutlich mehr in der täglichen Arbeit zu tun als ich."
+    },
+    {
+      "end": 173990,
+      "speaker": "B",
+      "start": 164880,
+      "text": "Ja, das ist ja das Problem. Ich kann ja nicht jemanden vorstellen, mit dem ich ständig zu tun habe, aus dem Matthias ja auch ständig mit ihm zu tun. Aber sei es wie es ist, Andi, weite deines Amtes."
+    },
+    {
+      "end": 180790,
+      "speaker": "A",
+      "start": 174310,
+      "text": "Also wenn man den Matthias, die Matthias Endler mal so ein bisschen im Internet beobachtet, könnte man meinen, er bräuchte gar keine Vorstellung mehr."
+    },
+    {
+      "end": 182550,
+      "speaker": "B",
+      "start": 181430,
+      "text": "Berühmt und reich."
+    },
+    {
+      "end": 280450,
+      "speaker": "A",
+      "start": 182950,
+      "text": "Berühmt und reich. Fangen wir, fangen wir ganz locker an. Er ist Rust Consultant, hat seine eigenen Rust Consultant Shop, wenn du so möchtest. Er ist selbst Podcaster mit dem Rust in Production Podcast. Er ist the most famous blogger, weil in seinen letzten drei, vier Artikeln, die hat er gepublished und keine fünf Minuten später gehen die auf Hacker News. Steil. Einer der Artikel reinvent the wheel verlinkt man natürlich auch in den Shownotes. Wurde die Tage in unserer Discord Community geteilt, ohne dass wir irgendwas gemacht haben. Er selbst war bereits schon zweimal oder glaube ich sogar dreimal bei uns im Podcast. Einmal in Episode acht und neunzig. Da ging es um die Sprache Rust. Wer hätte es gedacht? Ein Rust Consultant spricht über die Sprache. Dann hat er einen Beitrag im Adventskalender zwei tausend, vier und zwanzig geliefert über die Kuriosten Versionsnummern bekannter Softwareprojekte. Und er hat glaube ich mal Episode ein hundert oder ein hundert fünfzig oder so geleitet. Vielen Dank dafür nochmal. Also er hat schon wirklich an dem Erfolg an diesem Podcast mitgearbeitet. Finde ich super. Auf der anderen Seite und das meinte ich ganz am Anfang, dass Wolfgang eigentlich viel zu viel oder viel mehr mit ihm zu tun hat. Wolfgang und Matthias haben zusammen ein side Project Open Podcast ist eine offene Analytics Plattform für Podcast Openpodcast Dev. Und jetzt steht hier in meinem Vorbereitungsdokumenten hat der Wolfgang mir mit gelb markiert. Full Disclosure. Wir kennen uns alle schon lange und sind alle drei lange befreundet. Also mir ist das völlig egal, ob wir hier befangen sind, denn ich spreche heute über Linkchecking und nicht über meine Beziehung mit Matthias. Aber hallo, most famous Matthias Endler."
+    },
+    {
+      "end": 287250,
+      "speaker": "C",
+      "start": 280690,
+      "text": "Wer ist dieser Mann? Halbe Folge nur Einleitung. Wie kann ich dieser Einleitung jemals gerecht werden?"
+    },
+    {
+      "end": 289010,
+      "speaker": "A",
+      "start": 287410,
+      "text": "Und ich habe noch nicht mal recherchiert."
+    },
+    {
+      "end": 295650,
+      "speaker": "C",
+      "start": 289290,
+      "text": "Also ihr könnt ja die Einleitung ein bisschen kürzen. Vieles davon ist wahrscheinlich auch übertrieben, weder reich noch bekannt, aber auf jeden Fall."
+    },
+    {
+      "end": 308890,
+      "speaker": "B",
+      "start": 295650,
+      "text": "Hübsch das kann nur Bayer sagen vielleicht. Ja, dann starten wir mal in das ganze System hinein. Ich hab schon erwähnt, Linkchecker, das ganze heißt Litchi. Litchi, spreche das schon mal richtig aus, Matthias."
+    },
+    {
+      "end": 334020,
+      "speaker": "C",
+      "start": 308890,
+      "text": "Ach, da geht es ja schon los. Manche Leute sagen zum Beispiel Litchi an. Die sagen Litchi, ich sag Litchi. Naja, wahrscheinlich halt als Deutscher, aber ich glaube tatsächlich, die Amis sprechen es alle L aus und das ist ein bisschen frustrierend, weil eigentlich kommt es ja von Linkchecker und es gab früher mal ein Tool, das hieß also L I C h e und ich weiß nicht, wie man das ausspricht, aber ich fand den Namen immer ganz cool und deswegen heißt das Tool eben so, wie es heißt."
+    },
+    {
+      "end": 358550,
+      "speaker": "B",
+      "start": 334260,
+      "text": "Okay, dann führ uns mal ein, was dieses Tool eigentlich macht. Was ist ein Linkchecker? Warum braucht es den? Warum braucht die Welt einen Link Checker? Vielleicht fangen wir mal so an, weil wie ich das zum ersten Mal gehört habe, habe ich gedacht, OK, braucht die Welt jetzt einen Link Checker? Kann man da noch irgendwas reißen? Aber du warst ja voll motiviert und überzeugt. Also erklär mal, warum die Welt einen Link Checker braucht."
+    },
+    {
+      "end": 446290,
+      "speaker": "C",
+      "start": 418630,
+      "text": "Also auch ohne Litschi hätte die Welt natürlich auch Link Checker, weil es gab natürlich schon vorher welche. Es gab zwei relativ große, eben dieser Lisch oder wie auch immer der ausgesprochen gesprochen wird und ein Markdown Linkcheck. Die waren glaube ich damals die zwei bekanntesten. Einer war in Go geschrieben und der andere war glaube ich in Python geschrieben. Und da ist halt schon das Problem, die beiden waren jetzt nicht unbedingt schnell oder gut maintained, hatten halt ein paar Problemchen und ich hatte ich sehe Andis."
+    },
+    {
+      "end": 450290,
+      "speaker": "B",
+      "start": 446290,
+      "text": "Gesicht schon, wenn er hört go und es ist nicht performant. Andi, willst du irgendwas dazu sagen?"
+    },
+    {
+      "end": 464010,
+      "speaker": "A",
+      "start": 450690,
+      "text": "Ne, ich warte erst noch auf den Twist, wie die Sprache, die Implementierungssprache auf die Performance geht, weil ich denke auch mit PHP kann man einen sehr schnellen Link Checker bauen. Deswegen kommt es glaube ich darauf an, wie man die Sprache verwendet. Deswegen warte ich noch auf den Twist, den Matthias da jetzt rausbringt."
+    },
+    {
+      "end": 490320,
+      "speaker": "C",
+      "start": 464560,
+      "text": "Ich glaube, da gibt es gar keinen Twist, aber ich denke, von den ganzen Link Checkern, die damals existiert haben, war dieser in Go auf jeden Fall der schnellste. Also da muss man sagen, der war schon echt gut. Ich glaube, der war von jemandem, der dann später zu hacheicorp ging und wir hatten da auch Kontakt, weil ich den einfach nur benutzen wollte. Da gab es aber ein paar Probleme und dann hieß es, naja, ich will den eigentlich in naher Zukunft nicht maintain. Und dann dachte ich, gut, dann schreibe ich mir selber schnell ein an einem Wochenende."
+    },
+    {
+      "end": 494400,
+      "speaker": "B",
+      "start": 490640,
+      "text": "Last famous words and developer sagt an einem Wochenende."
+    },
+    {
+      "end": 506120,
+      "speaker": "C",
+      "start": 494840,
+      "text": "Genau, weil ich hatte nämlich einen YouTube Channel, der hieß hello Rust und da hatte ich eh Material gebraucht und die Aufnahme ist immer noch online, wenn es jemanden interessiert. Da hatte ich halt einfach mal schnell so eingebaut, aber dann geht es natürlich los."
+    },
+    {
+      "end": 514840,
+      "speaker": "B",
+      "start": 506280,
+      "text": "Also es war in dem Fall eher so ein dummy Project, also oder ein Demo Project für deinen Rust YouTube Channel, um einfach mal zu zeigen, wie Rust funktioniert."
+    },
+    {
+      "end": 595739,
+      "speaker": "C",
+      "start": 515080,
+      "text": "Ja, ich hatte den eigentlich auch schon benutzt. Also ich habe ein anderes Projekt, das heißt Analysis Tools und da gibt es halt ein paar hundert Tools und da war immer das Problem, dass die links immer kaputt ging. Also der war schon in Benutzung, aber halt nur von mir. Und ich hatte jetzt nicht erwartet, dass jemand anders zum Beispiel auch was braucht. Aber dann hat sich halt herausgestellt, viele sind in das Problem gelaufen, dieser andere in Go war nicht mehr wirklich maintained und der Markdown Linkcheck war relativ langsam und hatte auch extrem viele Probleme, meiner Meinung nach. Und dann kamen halt immer mehr Leute und hatten irgendwie gemeint, ja okay, Rust macht als Systemsprache dafür extrem viel Sinn. Also ich denke halt auch bei Go ist es immer so ein Ding, man kriegt relativ schnell was gebacken, aber bei Rust hat man halt einen größeren Fokus auf Korrektheit, finde ich. Und gerade wenn es um solche Sachen geht wie Parsing, ist es schon ganz, ganz nett, Rust zu benutzen. Also zum Beispiel benutzt Litchi auch einen state of the art Parser für HTML, und zwar den, der in Servo drin ist, also der von Mozilla selbst. Und das ist ja diese browser Engine, die jetzt da entwickelt wurde oder jetzt auch wieder wird. Das heißt, das ist schon mittlerweile relativ guter Parsing code. Auch zum Beispiel für Markdown Support benutzen wir Parser von Google. Und diese Robustheit kriegt man im Endeffekt for free, wenn man halt Rust benutzt."
+    },
+    {
+      "end": 630360,
+      "speaker": "B",
+      "start": 595739,
+      "text": "Vielleicht noch einen Schritt zurück, warum braucht ihr denn überhaupt einen Link Check? Also ich kann mich erinnern, den letzten Link Checker, den ich so verwendet habe, war so in den ER Jahren. Da ist dann so Microsoft Windows Fenster aufgegangen und so ein Spider hat sich dann da durchgecrawlt, war ja alles statisch und man hatte so alles statisch verlinkt. Also seitdem habe ich irgendwie nicht mehr den Need gespürt, einen Linkchecker zu verwenden überhaupt. Also wie kommt man denn an diesen Punkt, dass man sagt, okay, man braucht einen Link Checker? Heutzutage noch ist ja alles dynamisch und es gibt die ganzen HTTP Codes und ich wäre sowieso informiert, wenn irgendwo was nicht stimmt."
+    },
+    {
+      "end": 746490,
+      "speaker": "C",
+      "start": 630440,
+      "text": "Also warum Linkchecker also warum überhaupt links? Also links sind natürlich extrem hilfreich, um Dinge zu verlinken, um Informationen zu teilen und diese Informationen zu sammeln. Und das Versprechen vom World Wide Web ist ja eine Art Dokumentendatenbank, durch die man sich dann klicken kann und die ähnlich funktioniert eigentlich wie ein Gehirn mit verschiedenen Synapsen. Aber das Problem ist halt auch, dass diese Synapsen irgendwie über die Zeit halt auch relativ defekte aufweisen können, also Demenz im Endeffekt. Das Internet hat ja auch eine Art Demenz, man vergisst Dinge über die Zeit. Also zum Beispiel fünfzig Prozent aller Links in den Supreme court Urteilen sind kaputt und das sind ja schon wichtige Links, also Informationen, Referenzen auf Urteile. Oder zum Beispiel auch siebzig Prozent der Links in rechtswissenschaftlichen Journals sind betroffen. Oder vielleicht kennt noch jemand diese Million Dollar Homepage. Da gab es mal so eine Seite, wo wo man halt einen Pixel kaufen konnte, glaube ich, für einen Dollar und das waren insgesamt eine Million Pixel. Leute haben dafür Geld bezahlt, damals auf dieser Seite zu sein und davon funktionieren noch fünf und zwanzig Prozent der Links. Die anderen fünf und siebzig Prozent dieser Links sind eben kaputt oder führen irgendwie zu diesen Parking domains. Also das ist schon ein reales Problem eben, dass man einen Link Checker braucht. Da kann man sich natürlich überlegen, wer profitiert davon am meisten? Ich denke für Litchi ist auf jeden Fall der Fall, das wird häufig eingesetzt für Entwicklerdokumentation, also Google, Microsoft, die haben ja alle irgendwo ein GitHub Repo mit Markdown Dateien drin und die versuchen dann die Links aktuell zu halten. Ansonsten müssten die halt jemanden abstellen, der die alle durchprobiert und das ist natürlich viel zu teuer. Oder auch zum Beispiel GitHub Repos generell, wenn er auch für Blogs häufig benutzt und da sind auch super viele Links drin."
+    },
+    {
+      "end": 762890,
+      "speaker": "B",
+      "start": 746490,
+      "text": "Okay, das heißt, ich mache dann Curl Request, bekommen den Status zurück, funktioniert, funktioniert nicht, habe meinen Link Checker gebaut. Also warum brauche ich da jetzt irgendwie so ein Projekt, was von dir zwei Jahre lang maintained wurde und warum fliegen da jetzt alle so ab auf dein Projekt? Ist es nicht nur ein Curl Befehl?"
+    },
+    {
+      "end": 914780,
+      "speaker": "C",
+      "start": 763530,
+      "text": "Also keiner will das, denke ich, selber bauen. Es ist jetzt nichts, wo ich jetzt sagen würde, das ist jetzt was Sensationelles, was wir da gebaut haben, aber es ist halt einfach mühevoll. Aber es ist eigentlich interessant, das mal zentral an einer Stelle zu dokumentieren, wie links nicht funktionieren. Also zum Beispiel, was ist denn eigentlich ein Statuscode? Also was ist ein valider Link? Meistens wird man wahrscheinlich checken, okay, dieser Link hat einen Header, mit dem Statuscode zwei hundert und dann ist es valide. Okay, aber was ist zum Beispiel mit einem anderen Statuscode, wie zum Beispiel zwei hundert vier und zweizig ist no content. Das ist eigentlich auch ein valider Statuscode, wird halt öfter von APIs zum Beispiel benutzt. Oder dann habe ich zum Beispiel zwei hundert sechs, das ist partial content, wenn man so range query macht zum Beispiel. Also es kommt später noch was dazu zum Message Body, aber auch zwei hundert sechs ist ein valider Code. Ein Hundert ist zum Beispiel auch ein valider Code, der heißt continue. Das heißt, man kann den Request schicken und der Request ist einfach noch nicht beendet, aber der ist so groß, dass man den auf zwei Teile aufteilt. Dann kriegt man vom Server ein hundert zurück oder ein hundert drei zum Beispiel, wo der Server sagt, ich bin noch nicht fertig, aber ich kann dir jetzt schon mal sagen, das hat funktioniert. Also ich habe deine Inputs passen können und ich kann jetzt im Hintergrund eine Response für dich generieren. Und eigentlich ist alles, was ich bis jetzt gesagt habe, gültig. Sogar nicht standardisierte Codes, die jetzt momentan noch nicht existieren, aber vielleicht in Zukunft existieren könnten. Also zum Beispiel wäre auch zwei hundert neun und neunzig theoretisch gültig, alles was in dieser er Range ist. Und das ist eigentlich nur der Anfang. Dann ist zum Beispiel die Frage, okay, was ist mit dem vier hundert neun und zwanzig? Das ist, wenn man zu viele Requests schickt, das ist ja eine temporäre Ungültigkeit. Also man kann sich überlegen, ich warte jetzt zehn Stunden, probiere es dann noch mal und dann ist das Ergebnis vielleicht ein ganz anderes, eben dass der Link jetzt plötzlich funktioniert. Und ich glaube, so generell gibt es halt eine Million Edge Cases, da geht es los, welche Input Dateien unterstütze ich? HTML, ja, Markdown, ja, was ist zum Beispiel mit Markdown in HTML? Was ist mit MDX? Also das sind diese Markdown mit JavaScript Dateien, glaube ich. Und dann JSx ist eben so ähnlich, dann unterstützen wir JSON und Plaintext und so weiter. Also es hört nie auf, man kann dann immer weitergehen und man hat extrem viele Rabbit Holes. Und deswegen ist Link Checking so anspruchsvoll."
+    },
+    {
+      "end": 972240,
+      "speaker": "A",
+      "start": 915340,
+      "text": "Wenn wir jetzt aber von Statuscodes reden, dann reden wir schon von dem Server, auf den der Link zeigt eigentlich. Und dann reden wir ja auch von HTTP Statuscodes, also von HTTP links. Aber du hast ja gerade schon die fundamentale Frage aufgeworfen, was ist eigentlich ein Link? Im Internet schwirren ja weit mehr Arten von links rum als nur HTTP und HTTPs. Also mail to links gibt es, fällt mir gerade ein FTP links, dann gibt es Datauris und so weiter und so fort. Also limitieren wir uns hier gerade auf HTTP und HTTPs oder kann man mail to links auch checken, ob eine E Mail Adresse existiert? Oder wie gehst du zum Beispiel mit FTP links um? Und weiter geht die Wie ist eigentlich ein Link selbst aufgebaut? Also ab wann ist ein Link ein valider Link und gilt das dann für jedes URL Schema? Also ist ein HTTP Link, hat das die gleichen Bestandteile wie ein FTP Link zum Beispiel?"
+    },
+    {
+      "end": 1006870,
+      "speaker": "C",
+      "start": 972240,
+      "text": "Ich denke, das frustrierendste, was für einen User passieren kann, ist, wenn man false positives kriegt. Also bei einem Linter generell, und ich zähle jetzt mal Litchi zu lintern, ist eben das Problem, dass man dem Tool irgendwann nicht mehr vertraut, wenn es zu viele falsche Ergebnisse liefert. Da geht es eben schon los. Also wenn man jetzt an den Link denkt, dann denkt man ja normalerweise an sowas wie HTTP example com und dann sagt man, das ist ein Link. Natürlich, das ist ein Link, aber was ist, wenn man zum Beispiel HTTP, also dieses Schema dann weglässt, dann ist es."
+    },
+    {
+      "end": 1007110,
+      "speaker": "B",
+      "start": 1006870,
+      "text": "Ja."
+    },
+    {
+      "end": 1081120,
+      "speaker": "C",
+      "start": 1009590,
+      "text": "Übrigens eine Subdomain, ist auch nur eine Konvention, dass das Wissen auch viele nicht, aber ist eigentlich nicht wirklich standardisiert. Jedenfalls, das ist früher der Endpunkt gewesen, mit dem man HTML surft. Okay, was ist aber, wenn man WoW weglässt? Naja, Browser sind schlau genug, um zu erkennen, okay, wenn ich example com eingebe, dann meine ich wahrscheinlich HTTP example com, aber es kommt ein bisschen auf den Kontext drauf an. Also wenn man zum Beispiel in dem modernen Browser ist, dann kann es auch sein, dass man auf HTTPs dann zum Beispiel gefordert wird. Und das passiert teilweise browserseitig, teilweise serverseitig, da geht es dann eigentlich auch schon los. Und das ist eigentlich erst der Anfang, weil jeder wird wahrscheinlich verstehen, dass example an sich kein Link ist, es ist ja nur ein String. Aber es gibt zum Beispiel schon Links, die einfach nur aus einem Wort bestehen, wie zum Beispiel AI ist eine top level domain und man kann HTML Server auf top level domains hosten. Und das machen manche TLDs eben und andere glaube ich AR auch, also AR, also arabische Webseiten und eben AI. Das heißt, das macht es noch mal schwieriger, einen wirklich echten Link zu erkennen."
+    },
+    {
+      "end": 1087600,
+      "speaker": "A",
+      "start": 1081760,
+      "text": "Moment mal, Moment mal ganz kurz, wie funktioniert das jetzt mit diesem AI? Gebe ich da jetzt."
+    },
+    {
+      "end": 1122810,
+      "speaker": "C",
+      "start": 1091360,
+      "text": "Ein oder es kommt ein bisschen auf den Browser drauf an, da muss man ein bisschen rumspielen, damit man den Browser erzählt, ja, das ist wirklich die Seite, auf die ich gehen will. Es ist schon eine Zeit lang her, dass ich das getestet habe, was ich da eingeben musste, aber man kann es, glaube ich, mal probieren, zumindest mal schauen, wo man da rauskommt. Ich habe auch im Hinterkopf, dass sich da bei irgendeiner TLD auch vor kurzem mal was geändert hat. Also es kann auch sein, dass mittlerweile keinen Server mehr hat, aber theoretisch kann man auf so TLD Seiten auf jeden Fall auch eine Webseite hosten."
+    },
+    {
+      "end": 1151510,
+      "speaker": "A",
+      "start": 1122890,
+      "text": "Und wie validierst du dann, dass das einzelne Wort eine valide TLD ist? Hast du dann eine TLD Lookup List, die du dann irgendwie jeden Monat Updates oder ähnliches? Weil ich meine, es gibt ja auch sehr große Firmen, die eigene TLDs hosten, wie zum Beispiel die Schwarz Gruppe in Deutschland hat Schwarz, es gibt Aldi, es gibt BMW. Also wenn du genug Geld auf den Tisch legst, kannst du ja deine eigene TLD hosten. Und deswegen frage ich mich, ab wann oder wie erkennst du denn, dass ein einzelnes Wort eine valide TLD eben auch."
+    },
+    {
+      "end": 1238110,
+      "speaker": "C",
+      "start": 1151510,
+      "text": "Vor dem Hintergrund, dass wir relativ wenige false positives haben wollen, machen wir das eigentlich nur, wenn wir den Link wirklich eindeutig in der URL identifizieren. Also wenn das irgendwie in dem Ahref zum Beispiel vorkommt, also so dieses klassische Ahref und dann alles, was da in den Anführungszeichen dann steht, ist ein Link für uns und den prüfen wir dann auch. Bei Markdown ist es ähnlich, das ist halt dann in einem Markdown Link eben vorkommt. Bei Plaintext machen wir das nicht, es gibt nämlich auch Support für Plaintext, aber da setzen wir voraus, dass da auch irgendwo eine Möglichkeit ist, irgendwie ein Protokoll zu erkennen, ein Schema, weil wir wollen eben die false positives vermeiden. FTP und SMTP sind auch interessante Schemas. Es gibt zum Beispiel auch Slack, was auch öfter mal angefragt wird, ob wir Slack unterstützen können, aber vieles ist halt hinter Logins und da muss man ein bisschen vorsichtig sein, dass man sich vielleicht nicht zu sehr in eine Richtung bewegt. Auch URLs können beispielsweise login Daten wie Basic Auth zum Beispiel enthalten, was wir halt auch passen können und dann auch verwenden können. Eigentlich ganz spannend ist, wir unterstützen auch Mail to URLs und File URLs. Also eigentlich sind das dann UIs übrigens. Also URLs sind Resource Locators und URIs sind Resource Identifiers. Und das ist ein Unterschied."
+    },
+    {
+      "end": 1239950,
+      "speaker": "A",
+      "start": 1238590,
+      "text": "Was ist genau der Unterschied jetzt?"
+    },
+    {
+      "end": 1276310,
+      "speaker": "C",
+      "start": 1240350,
+      "text": "Eine URL ist ein spezieller Fall von einer URI und den verwendet man im Web Kontext. Und eine URI ist eigentlich alles, was am Anfang Schema hat und dann am Ende irgendwie eine Ressource, auf die man zugreifen will. Also unterschiedliche URIs haben unterschiedliche Ausprägungen. Die haben unterschiedliche Teile von der URI, man kann selber seine eigene URI definieren und das ist einfach nur universeller Identifier am Anfang, dann Doppelpunkt und dann sein eigenes Schema, das man sich selber ausdenkt. Und für das Web hat man sich halt mal HTTP und HTTPs ausgedacht."
+    },
+    {
+      "end": 1329970,
+      "speaker": "A",
+      "start": 1276310,
+      "text": "Jetzt hast du ja schon von Statuscodes gesprochen und von Servern, die etwas beantworten, aber wenn ich mir so einen Link anschaue, dann ist ja ein Element des Links auch ein Fragment, das ist diese Hash am Ende, wo du ja auch innerhalb eines Dokuments verlinken kannst. Ganz klassisch ist so eine Readme mit so einem table of Content, wo jede Überschrift dann dieses Fragment am Ende hat. Das bedeutet, du bleibst eigentlich im selben Dokument und springst im selben Dokument und machst gar keinen Request, hast also eigentlich auch gar kein Statuscode und Co. Wie validierst du denn jetzt, dass dies ein gültiger Link ist und woher weißt du denn eigentlich, dass du im selben Dokument bist, denn du machst ja dann kein Request. Musst du dann das ganze Dokument parsen und springst dann hin und her? Weil du hast ja auch vorhin gesagt, ihr nutzt Servo, den HTML Parser oder den Document Parser von Mozilla, also machst du dann da ein bisschen Servomaging und ja, diese Section oder dieses Fragment existiert in demselben Dokument."
+    },
+    {
+      "end": 1437470,
+      "speaker": "C",
+      "start": 1330450,
+      "text": "Ja, es lässt sich tatsächlich nicht vermeiden, das Dokument zu parsen. Was sich allerdings vermeiden lässt, ist, dass man das Dokument mehrmals parsed. Das heißt, wir haben so einen Fragment Cache, der während der Laufzeit von Litchi läuft. Der baut sich dann während der Laufzeit eben diesen Cache auf und der weiß, welche Ressourcen wir schon gesehen haben. Der ist auch begrenzt in der Größe, das heißt, wir speichern nicht alles für alle Ewigkeit, sondern nur eine bestimmte Anzahl von Dokumenten und darin verwenden wir eben wieder unsere Extraktoren, so nennen sich die, um eben die einzelnen Dateien zu parsen und diese Fragments dann rauszuholen. Und dann können wir einen Look machen, der sehr sehr günstig ist. Das heißt, es kommt in eine Hashmap, ist ein Lookup und alles ist gut. Es sei denn, man ist natürlich wieder unter Markdown, weil unter Markdown ist das nicht so leicht. Da kommt es nämlich darauf an, wie diese Anker Links dann berechnet werden. Also wenn man zum Beispiel auf GitHub eine Readme hostet, dann wird die unter GitHub Flavored Markdown dann gerendert und GitHub selbst passt zum Beispiel diese Header entsprechend, entfernt dann teilweise Sonderzeichen oder ersetzt die. Und dann wird es halt sehr, sehr spannend. Das heißt, wir haben unseren eigenen Parser für diese GitHub flavored Markdown Dateien. Wir haben auch einen für GitLab. Und die verhalten sich teilweise unterschiedlich. Also da kommt es beispielsweise darauf an, wie die Sonderzeichen encoden oder ob Groß und Kleinschreibung eine Rolle spielt, Leerzeichen. Wir haben auch einen Fall, wo dann Backticks vorkommen in dem Header und die werden teilweise auch unterschiedlich encodiert. Und es gibt eigentlich keinen Standard dafür. Also ich denke, wir haben den ersten Parser dafür, der Open source ist. Ja, das ist auch wieder so ein Rabbit Hole, da kannst du ganz, ganz tief gehen."
+    },
+    {
+      "end": 1470760,
+      "speaker": "B",
+      "start": 1437870,
+      "text": "Aber damit ihr das nur noch mal besser verstehen kann, also von der Architektur, ihr habt Extraktoren, die bringen euch die Links aus den Dokumenten raus, also zum Beispiel aus einem Markdown oder aus einer HTML Datei. Und dann der Check, ob das eine valide URL ist, die passiert dann in Litchi nochmal in einem eigenen Check Prozess oder habt ihr da auch Libraries, also die feststellen, ist es eine valide URL oder Jury oder was auch immer? Also verwendet ihr da euren eigenen Code oder eine Library?"
+    },
+    {
+      "end": 1546440,
+      "speaker": "C",
+      "start": 1471480,
+      "text": "Genau, also der ganze Prozess ist stream basiert. Wenn Litchi startet, dann werden diese Extraktoren eben gestartet. Nachdem wie viele Dateien wir parsen, haben wir mehrere von diesen Extraktoren. Die sind relativ einfach zu erstellen. Die verwenden eben dann den Servo, die browser Engine, also HTML ever heißt die, oder den Markdown Extractor von Google. Diese Links, die dann gefunden werden, die werden erstmal standardisiert, die werden erstmal kanonisch in ein gewisses Format gebracht. Und wenn der Prozess dann abgeschlossen ist, dann sind das unsere Requests. Und diese Requests kommen in den Channel rein. Und wir machen das deswegen in einem Channel, weil wir dieses Function Coloring Problem umgehen wollen. Also wir wollen nicht alle Funktionen in Litchi als Async markieren, sondern nur diejenigen, die auch wirklich mit IO zu tun haben. Deswegen haben wir einen Channel, den wir teilen und da können diese Extraktoren eben reinschreiben und der Rest vom Code kann eigentlich synchron sein. Nur Der Teil, der dann das Link Checking wieder übernimmt und aus diesem Channel liest, ist dann wieder asynchron. Und an der Stelle verwenden wir dann Request bzw. Eigentlich ein Pool von Request Händlern. Und Request ist eine Rust Library."
+    },
+    {
+      "end": 1563880,
+      "speaker": "B",
+      "start": 1546520,
+      "text": "Aber noch einen Schritt davor, bevor überhaupt das ganze in den Channel geschrieben werden ihr müsst überprüfen, ist es ein valider Link im Sinne von, ist es überhaupt eine sinnvolle Struktur, hat es die offizielle Schema oder keine Ahnung, was ihr alles braucht, mit Fragmenten und Co Domains. Wo passiert dieser Check?"
+    },
+    {
+      "end": 1652220,
+      "speaker": "C",
+      "start": 1563960,
+      "text": "Der passiert tatsächlich im Extractor selbst. Also alles, was den Extraktor verlässt, ist aus unserer Sicht ein valider Link. Wir versuchen so viel wie möglich die Upstream Library zu verwenden, sofern möglich, weil es halt für uns ein Maintenance Aufwand wäre, da selber noch viel zu modifizieren. Aber leider geht das nicht so ohne weiteres. Deswegen müssen wir da auch teilweise ein bisschen nachhelfen, bisschen Sachen noch mal verändern, modifizieren, tweaken und dann erst werden diese ganzen Links erstellt. Also wir haben zum Beispiel auch eine Library von Quirks, vielleicht kennt das noch der ein oder andere aus Browsern von früher, da gab es auch so einen quirks Mode und das waren im Endeffekt so Hacks oder Tricks, mit denen sich der Browser dann zu helfen wusste. Und davon haben wir auch ein paar. Also beispielsweise für Webseiten wie Twitter oder YouTube haben wir eben Rewriting von URLs, weil wir halt wissen, dass die Checks sonst nicht funktionieren würden. Also beispielsweise YouTube gibt uns eigentlich immer einen ER Statuscode zurück, auch wenn Video zum Beispiel gar nicht existiert. Und deswegen verwenden wir dafür die Thumbnail URL von YouTube und die ist korrekt. Das heißt, wenn das Thumbnail existiert, existiert auch das Video und umgekehrt. Das heißt, wir haben eigentlich bei den Extraktoren, soweit es geht, Upstream Code, eben mit ein bisschen Custom Handling drumrum und schmeißen diese Links dann in den Channel."
+    },
+    {
+      "end": 1693200,
+      "speaker": "A",
+      "start": 1652220,
+      "text": "Aber das bedeutet, ihr habt dann auch relativ viel plattformabhängigen Code. Du hattest nämlich gerade schon von GitHub Play wird Markdown gesprochen und GitLab Play wird Markdown. Und jetzt redest du gerade von YouTube. Ich denke noch an weitere große Plattformen wie LinkedIn, Twitter, die sie alle irgendwie ihre Nass Hacks haben. Ist ja schon irgendwie, weiß ich nicht, so ein endloses Loch, oder? Welche Plattform baut man ein, welche baut man nicht ein? Denn jede will ja in irgendeiner Art und Weise ihren Content schützen, besonders heutzutage. Ich weiß nicht, ob Reddit da vielleicht nicht auch schon irgendwelche AI Crawling Protektoren drin hat, dass sie da jetzt auch noch bald was einbauen müsst. Also ist ja schon Maintenance hell."
+    },
+    {
+      "end": 1743600,
+      "speaker": "C",
+      "start": 1693760,
+      "text": "Auf jeden Fall. Das Internet ist eigentlich ein riesiger Scherbenhaufen und wird eigentlich nur mit Duct Tape zusammengehalten. Es ist wirklich tragisch, aber mittlerweile sind eigentlich alle interessanten Inhalte hinter so eine Walled Garden irgendwie, also hinter irgendwie so einem Gateway. Ich weiß natürlich, dass es teilweise nicht böse gemeint ist, aber die Realität ist halt, dass das für so kleine Tools wie Litchi extrem schwierig ist, halt Dinge zu validieren. Also da geht es dann los mit GitHub, die ein extremes Rate Limiting beispielsweise haben, oder Leute wollen einfach auch ihre ganz normalen internen Links in ihren Repos beispielsweise checken. Deswegen haben wir zum Beispiel auch für GitHub spezielles Handling eingebaut, also wo wir halt dann ein Fallback machen auf die API, dann können wir mehr Requests zum Beispiel auf GitHub fahren."
+    },
+    {
+      "end": 1750560,
+      "speaker": "B",
+      "start": 1743600,
+      "text": "Aber für sowas brauche ich dann einen GitHub User oder kann ich da auch anonym auf die GitHub API zugreifen?"
+    },
+    {
+      "end": 1812770,
+      "speaker": "C",
+      "start": 1750640,
+      "text": "Man kann anonym auf die GitHub API zugreifen, aber die Anzahl der Requests, die man machen kann, ist sehr, sehr beschränkt. Am besten erstellt man sich ein GitHub Token und dann kann man viel, viel mehr Requests machen, ich glaube paar tausend dann in der Stunde. Und ja, das empfehlen wir den meisten Leuten, aber das ist eben auch Fallback Handling, was wir dann leider halt einbauen müssen. Also da führt halt kein Weg mehr drumherum. Cloudflare hat zum Beispiel auch extremes browser Fingerprinting, wo es halt auch schwierig ist, also auch teilweise für Curl zum Beispiel schwierig wird, dann auf die echte Ressource zuzugreifen. Natürlich kann Litchi auch den User Agent spoofen, das heißt, man kann den verändern, man kann ihn auf Curl setzen, wenn es hilft, aber Teil hilft das halt eben nicht. Und dieses Fingerprinting kann man schon auch teilweise umgehen. Dafür gibt es Libraries, die halt dann zum Beispiel das SSH Profil entsprechend anpassen oder dann beispielsweise auch browser Extensions dann mitliefern, um vorgaukeln zu können, dass es sich um den Browser handelt. Aber es ist natürlich sehr komplex."
+    },
+    {
+      "end": 1848590,
+      "speaker": "A",
+      "start": 1812850,
+      "text": "Ja, jetzt hattest du gerade schon gesagt, ihr baut ein Channel auf und dann habt ihr irgendwie einen Pool von Workern, der dann die Request sendet. Das bedeutet aber auch, ihr feuert aus allen Rohren. Und du hast auch gerade eigentlich von den ganzen Raid Limits schon gesprochen und von Cloudflare, die dann sagt, hör mal Kollege, ist das hier nicht ein Dinello Service Attacke? Also du hast gerade ein bisschen viel Request hier gemacht in der letzten Minute und dann gibt es ja auch Seiten, die haben einfach nichts davor geschaltet. Bedeutet das, wenn ich jetzt so eine kleine Webseite habe, die auf Hetzner oder all inclusive auf meinem fünf Euro Webspace gehostet ist, dass ihr dann da mal kurz russisch Roulette spielt, oder?"
+    },
+    {
+      "end": 1947880,
+      "speaker": "C",
+      "start": 1849150,
+      "text": "Ja, wenn man nicht aufpasst, geht das sehr, sehr schnell. Ich hatte zum Beispiel mal versucht, eine kleine Webseite zu checken von Immobilienmaklerin, der wollte ich einfach nur eine nette E Mail schicken, weil ich halt zufälligerweise einen kaputten Link gefunden habe und wollte dann einfach die ganze Webseite checken und habe dann auf die Sitemap losgelassen, dann kamen sehr, sehr viele Fehler und ich habe mich schon gefragt, was los ist mit Litchi und dann war halt einfach der Webserver down und er war halt am nächsten Tag immer noch down. Ich hatte echt ein schlechtes Gewissen, weil ich wollte eigentlich nur helfen, aber naja, die Webseite war halt dann eine ganze Zeit lang down. Und ich kann mir halt vorstellen, dass es auch vielleicht irgendwie nicht so nett ist, wenn man das rausfindet. Also hat natürlich Rate Limiting, man kann einstellen, wie viele Requests man maximal machen will, aber standardmäßig lassen wir die Netzwerkkarte aus, weil wir einfach so ein klassisches Unix Tool sind. Also wir haben relativ wenige Checks and Balances. Aber ich finde halt, das ist auch generell die richtige Herangehensweise, weil wir würden zum Beispiel rate limiting vielleicht nicht standardmäßig richtig einstellen können. Also angenommen, man hätte jetzt vor fünfzehn Jahren Litchi gebaut, dann wären vielleicht diese Anzahl der Requests, die viel, viel geringer als heutzutage gewesen. Heutzutage hätte man das vielleicht wieder speziell dann anpassen müssen für die heutigen Standards. Also viele Webseiten können sehr, sehr viele Requests ab, man läuft halt dann irgendwann in Rate Limiting. Also die wenigsten Webseiten stürzen heutzutage ab wegen zu vieler Requests. Und wir machen eigentlich auch nur Head Requests, keine Get Requests, wenn es geht. Also wir schauen uns den Body gar nicht an."
+    },
+    {
+      "end": 1991960,
+      "speaker": "A",
+      "start": 1947960,
+      "text": "Aber wenn ihr den Request macht, also ich meine, du hast ja gerade schon von User Agent gesprochen, den man da setzen kann und allem drum und dran. Die Response kann ja auch eine ganze Menge Custom Kram enthalten. Du hast von den Statuscodes schon ges aber es gibt ja auch Custom Header, besonders beim Rate Limiting. Also zum Beispiel weiß ich, dass GitHub dir die Rate Limiting Information, wie viel Request dir bleiben und wann dein Rate Limit zurückgesetzt wird, in einem speziellen X irgendwas Header zurückgibt. Und ich kann mir vorstellen, wenn GitHub das macht, dann machen das andere große Plattformen auch. Bedeutet, dass ihr habt nicht nur Custom Extractor am Anfang, sondern auch Custom Response Parser, um zu gucken, oh, gibt es da einen Custom Header oder ähnliches."
+    },
+    {
+      "end": 2169509,
+      "speaker": "C",
+      "start": 1991960,
+      "text": "Rate limiting ist schwierig im Internet, weil das macht man die meiste Zeit eigentlich nur für APIs. Es gibt einen IETF Draft, der basiert auf einem alten Draft, der heißt Polly. Da wird zum ersten Mal diese Rate Limit policy, diese Header werden da eingeführt und da wird eigentlich ganz genau spezifiziert, wie man die zu setzen hat. Leider ist dieser Draft mittlerweile selber ein toter Link, das heißt, man kann nicht mehr nachschauen, wie es funktioniert. Ein bisschen ironisch ist, aber beispielsweise gibt es verschiedene Anbieter, die unterschiedliche Dinge tun, also die unterschiedliche Rate Limit Header verwenden. Also der offizielle Standard sagt, man hat drei Header, Rate Limit Limit, Rate Limit Remaining und Rate Limit Reset. Und dann kommt Reddit und sagt, naja, ich finde das nett, aber ich benenne die mal ein bisschen um. Statt limit sage ich used und ich setze auch ein x davor, also x rate limit used. Okay. Und dann kommt GitHub und sagt, ja, ich finde das Konzept ganz nett, aber ich mache das alles lowercase bitte. Und ich nenne es wieder limit, aber mit x davor, also X Rate Limit Limit. Und mein Reset ist nicht eine Anzahl von Sekunden, sondern das ist ein Unix Timestamp. Und dann hat GitLab noch einen vierten Header dazu gepackt, die haben nämlich noch observed mit dabei, aus irgendeinem Grund, um zu sagen, okay, so viele habe ich gesehen, so viele Requests von dir, ansonsten ist dann wieder alles gleich. X geht dann her und sagt, ja okay, ich mache das so ähnlich, irgendwie eine Mischung aus euch beiden, auch mit einem Unix Timestamp als Reset. Vimeo hat dann plötzlich beim Reset einen kompletten Timestamp, also wirklich als String, also Tuesday North, also für November, zwei tausend, drei und zwanzig und dann sogar noch ein Zeitstempel dahinter. Und dann geht das halt so weiter. Und das macht es halt schwierig. Und deswegen hat Litchi auch sich mal überlegt, das mal wirklich sauber zu machen. Wir haben sogar so einen Parser dafür, für Rate Limit Header, der ist aber aktuell noch nicht im Einsatz, muss ich sagen. Aber das wäre wahrscheinlich der nächste Schritt, das zu parsen. Allerdings gilt das natürlich nur für Seiten, die dann auch irgendwann mal so ein Raid Limit zurückschicken. Und die Seiten, die es halt nicht tun, die muss man halt trotzdem handeln. Da gibt es zum Beispiel andere Algorithmen, wie zum Beispiel Token Bucket Algorithmen, die halt dann zum Beispiel eine gewisse Anzahl von Requests erlauben. Die Idee ist, man hat so eine Art Eimer und das sind Münzen drin und jedes Mal, wenn man einen Request macht, nimmt man eine Münze raus. Und diese Münzen werden mit einer gewissen Rate eben nachgefüllt. Also sagen wir mal, alle zehn Sekunden kommt eine neue Münze rein. Das heißt, man muss jetzt nicht alle Münzen dann wieder aus diesem Eimer nehmen, sondern man kann einfach nur so viele rausnehmen, wie man halt Requests machen will. Aber wenn der Eimer leer ist, muss man halt warten, bis der wieder aufgefüllt ist. Und das macht man halt für Seiten, die keine Rate Limited Header haben."
+    },
+    {
+      "end": 2196780,
+      "speaker": "B",
+      "start": 2170069,
+      "text": "Wie ist denn da die Architektur, wenn ich mir das so vorstelle, du hast Ausnahmen und für manche Domains hast du Ausnahmen und für manche Schemas du Ausnahmen und du hast mir mal erzählt, dieser berühmte Statuscode neun hundert neun und neunzig von LinkedIn, den es gibt, also wie setzt man denn da an? Ist das alles, sind es große IF Schleifen? Setzt man das dann irgendwie modular auf? Also wie handelt man denn diese Hölle an Edge Cases eigentlich?"
+    },
+    {
+      "end": 2234370,
+      "speaker": "C",
+      "start": 2197340,
+      "text": "Rust hilft da natürlich ein Stück weit, indem man sehr vieles über Trades machen kann, dass man zum Beispiel Extraktoren so definiert, dass die ein gemeinsames Interface besitzen, aber dann halt eine unterschiedliche Implementierung. Und wir versuchen eigentlich generell alles so modular wie möglich aufzubauen. Das ist, glaube ich, so ein Ziel von uns, dann nicht zu sagen, das ist jetzt der Standard, der für immer so bleibt, sondern das ist jetzt aktuell unsere Vorstellung von der Welt. Aber wir wissen, wir können zum Beispiel dieses Trade, was ähnliches wie ein Interface dann für andere Extraktoren oder für andere Teile von unserer Architektur implementieren."
+    },
+    {
+      "end": 2251770,
+      "speaker": "B",
+      "start": 2234370,
+      "text": "Aber wenn wir bei dem Beispiel von LinkedIn bleiben, der Statuscode neun hundert neun und neunzig, wo hast du diesen Code? Weil der ist ja nicht im Extraktor. Der Extraktor sagt ja nur, ich habe eine LinkedIn URL und dann geht es an den Checker über den Channel. Und wo wird dann das neun hundert neun und neunzig zum Beispiel behandelt?"
+    },
+    {
+      "end": 2277840,
+      "speaker": "C",
+      "start": 2251850,
+      "text": "Genau, es gibt noch einen Validator, der ganz am Ende sitzt, der dann die Responses entgegennimmt. Der hat dann eben solche Checks mit drin und der validiert eben, angenommen, das ist jetzt mein kompletter Kontext, das ist der Request, das ist der Response, das ist die Zeit und so weiter. Was kann ich jetzt daraus evaluieren? Also ist das jetzt gültig? Muss ich das noch mal versuchen oder ist das ungültig? Ich glaube, das gibt die drei Zustände eben."
+    },
+    {
+      "end": 2294040,
+      "speaker": "B",
+      "start": 2277840,
+      "text": "Und hast du dann so quasi wie einen Hook, der checkt, okay, ich bin jetzt verantwortlich für LinkedIn domain und Statuscode neun hundert neun und neunzig und dann kann ich irgendwie eingreifen oder halt sagen, okay, das ist eine valide Codenummer und die kann jetzt irgendwie das speziell handeln."
+    },
+    {
+      "end": 2399890,
+      "speaker": "C",
+      "start": 2294120,
+      "text": "Ja, ich wünschte jetzt, ich könnte sagen, es gibt da jetzt was extrem magisches, was richtig gut funktioniert, aber in Wirklichkeit ist es schon relativ mechanisch und teilweise auch hartgecodet an manchen Stellen. Aber es gibt zumindest eine request Chain, das ist eine Chain of Command mittlerweile, die halt dann durchgeht. Und ich glaube, viele Services benutzen sowas in der Richtung. Generell nennt man das, glaube ich, eher Middleware Express. Zum Beispiel die JavaScript Library für HTML Routing hat auch sowas ähnliches, wo man dann sagen kann, man kriegt einen Request rein, kann den beliebig modifizieren und kann dann einen Request weiterschicken. Bei uns kann man auch zum Beispiel aus einem Request dann zum Beispiel sagen, das ist jetzt der finale Request oder das ist die Response und so weiter. Und wir wollen mehr in die Richtung gehen, weil wir halt schon festgestellt haben, die Zukunft ist wahrscheinlich eher Scripting, dass man eigentlich seine eigenen Rules definiert. Also angenommen, man hat jetzt zum Beispiel eine Reisewebseite und auf dieser Reisewebseite sind sehr viele Links für Produkte auf Amazon, Affiliate Links, dann hilft es ja nicht allein einfach zu checken, ob Amazon diese URL auflösen kann, ob da ein valider Statuscode zurückkommt. Weil was ja eigentlich für diese Leute interessanter wäre, ist zu sagen, ist dieses Produkt verfügbar, ist der richtige Cookie gesetzt, damit ich da auch was dran verdiene? Wie sieht diese Webseite aus, wenn sie gerendert wird? Und da kann man dann zum Beispiel anfangen und sagen, okay, ich kriege jetzt einen Response zurück später und kann dann prüfen, wie zum Beispiel der Body aussieht und kann dann vielleicht ein Skript schreiben und dann eben meine eigenen Rules, zum Beispiel meine eigene Verification bauen. Und da geht eigentlich die Reise so ein bisschen hin. Deswegen versuchen wir das gerade ein bisschen modularer zu machen."
+    },
+    {
+      "end": 2469990,
+      "speaker": "A",
+      "start": 2400290,
+      "text": "Scheiße, du hast gerade eine komplett neue Box aufgemacht mit diesen Affiliate Links. Ja, logisch, du willst natürlich nicht nur checken, ist das ein er, sondern ist das auch mein Code oder ist das. Das ist ja Wahnsinn. Obwohl das ja eigentlich dann immer Query parameter geht. Das bedeutet, ihr habt dann, ihr checkt ja dann auch eigentlich, ihr müsst ja dann dynamische Seiten checken, ihr müsst den Request Body entgegennehmen, all das, was du gesagt hast, parsen. Da stelle ich mir zwei weitere Fragen. Wie stellt ihr sicher, dass nur der Request Body zurückkommt und dann nicht einfach zwanzig, dreiig, ein hundert MB zurückkommen? Weil man kann ja auch dann eigentlich litchi out of Memory laufen lassen, indem man einfach Daten liefert. Und wenn du eine schnelle Internetleitung hast, gehe ich mal stark davon aus, nimmt Litchi das einfach so. Und die zweite Thematik ist, es gibt ja dieses JavaScript und es gibt da diese Webseiten, die funktionieren ohne JavaScript gar nicht mehr. Und wenn ihr jetzt einen Quote on Quote, ich mache gerade Anführungszeichen, curl request macht, dann ist es ja nicht so, als dass ihr JavaScript interpretiert, was dann gegebenenfalls noch glazy loaded wird und die ganze Frontend Magie. Wie geht ihr also bei solchen Themen mit zu großen Requestbodies um und ist JavaScript überhaupt ein Problem für euch?"
+    },
+    {
+      "end": 2617360,
+      "speaker": "C",
+      "start": 2469990,
+      "text": "Also das Internet ist unverzeihlich, kann man das so sagen? Unerbittlich. Das Internet verzeiht nichts. Man muss eigentlich an alles denken. Eigentlich fliegt einem alles irgendwann um die Ohren. Deswegen, was wir machen, ist, dass wir relativ konservativ sind, was zum Beispiel Request Bodies angeht. Also wenn es geht, prüfen wir eigentlich nur Head Requests. Wenn User das wollen, machen wir natürlich auch Get Requests oder wir machen auch als Fallback Get Requests. Und wenn wir dann wirklich einen großen Body kriegen, dann haben wir eine Einstellung, die dann sagt, wir hören uns nur die ersten Soundsoviel Zeichen an. Also man kann halt wirklich dann einstellen auf Bytes genau, wie groß der Request Body dann maximal sein soll. Wir haben einen vernünftigen Default dafür. Und das andere ist, JavaScript eigentlich ist eher das Problem auf der System Design Seite. Also man könnte jetzt zum Beispiel sagen, okay, das einfachste wäre doch einfach so ein headless Chrome dann mit zu bundeln, aber der funktioniert zum Beispiel nicht auf jedem Betriebssystem, das wir unterstützen. Also Litchi läuft auf FreeBSD und auf NixOS und auf Windows. Und auf diesen ganzen Betriebssystemen ist es nicht unbedingt so, dass man einen Headless Browser zum Beispiel starten kann oder dass der irgendwie läuft oder dass man erwarten kann, dass überhaupt so was existiert. Das ist schon mal das erste. Und bundlen ist eigentlich auch ein relativ großes Sicherheitsrisiko und das wird die CLI natürlich auch relativ stark aufblasen. Was es zum Beispiel in JavaScript gibt, ist JSDOM. Das ist eine Library, mit der man JavaScript parsen kann. Wir haben tatsächlich mal überlegt, ob wir nicht vielleicht sowas in der Richtung mal bundeln können. Also es gibt ja Dino, was so eine Art JavaScript Runtime ist. Die ist zufälligerweise in Rust geschrieben und da gibt es auch ein ähnliches Tool für DOM Parsing, was aber aktuell noch nicht gut funktioniert mit WebAssembly. Aber wir haben auf jeden Fall vor, WebAssembly auch einzubauen. Es gibt auch schon den Prototypen dafür und da könnte man mit sowas mal rum experimentieren. Die Alternative wäre eben, sowas über einen Proxy zu machen, dass man sagt, okay, wir denken uns ein Format aus, relativ einfach, das ist eine JSON Datei oder so, die dann an den Server geschickt wird. Der Server gibt dann die Response zurück und das ist eben das vollkommen gepasste HTML und das können wir dann wieder verwenden und dann können wir davon die Links extrahieren."
+    },
+    {
+      "end": 2665880,
+      "speaker": "A",
+      "start": 2617360,
+      "text": "Jetzt hattest du gesagt, ihr startet mit Head Requests. Wenn Head Request nicht funktionieren, dann habt ihr Fallback auf Get Requests, weil super viele Webserver einfach sagen, Head Request, was ist das? Nehmen wir nicht entgegen. Meine Frage ist eigentlich, es gibt ja noch diese Weiterleitungen, drei hundert xx und so weiter und da gibt es ja Weiterleitung von Weiterleitung und da gibt es ja Weiterleitung von Weiterleitung von Weiterleitung und ihr wisst, wohin das führt. Sind Weiterleitungen okay? Wie viele sind okay? Wann bricht man ab? Was passiert eigentlich, wenn Redirects auf andere Domains passieren? Was passiert eigentlich, wenn eine Domain gerade umgezogen wird? Also da sind ja super viele Edge Cases, die ihr irgendwie handeln müsst, besonders wenn ihr sagt, okay, ihr habt so Validatoren, die sagen, okay, diese URL auf diese URL und so weiter, twitter com auf x com zum Beispiel."
+    },
+    {
+      "end": 2768910,
+      "speaker": "C",
+      "start": 2668390,
+      "text": "Was wir häufig sehen, was eigentlich fast immer der Fall ist, ist, dass dann irgendwann mal einfach ein GitHub Issue reinflattert, wo jemand so eine Lösung eben vorschlägt und sagt dann, ah ja, okay, redirects zum Beispiel von Twitter auf XCOM, das müssten wir hardcoden, weil das wird sich jetzt in nächster Zeit nicht ändern. Oder zum Beispiel auch irgendwie internal redirects und super viel Domänen wissen fließt in diese Issues. Und das ist ein Riesenproblem für uns, weil wir ja ein generisches allgemeines Tool bauen wollen. Da muss man öfter Leuten sagen, nein, das wollen wir nicht, weil das führt dann dazu, dass wir uns zu sehr auf eine Plattform konzentrieren. Und bei Redirects ist es so, ja natürlich kann man das konfigurieren, wir haben eine Möglichkeit zu sagen, drei Redirects sind standardmäßig OK beispielsweise, aber da geht es halt dann auch schon wieder weiter eben zu wissen, was ist denn jetzt zum Beispiel eine andere Domain, also foo google com und bar google com, die teilen sich ja nicht mal die Cookies, das sind ja eigene Domains. So funktioniert GitHub Pages auch, also dass man wirklich eine eigene URL bekommt und für Search Engines und so weiter sind das komplett eigene Webseiten. Aber für einen Menschen, wenn der auf diese Domain schaut, dann ist es irgendwie total logisch, dass irgendwie docs google com und google com irgendwie zusammenhängen. Es ist ja eigentlich auch nur eine Subdomain oder so. Nach dem Login kommt man von auth google com von mir aus dann auf docs, aber das ist nicht eigentlich implizit der Fall. Also das muss nicht unbedingt so sein. Also da gibt es eigentlich keine gute Lösung dafür."
+    },
+    {
+      "end": 2779980,
+      "speaker": "B",
+      "start": 2769070,
+      "text": "Aber die ganzen klassischen Standardsachen wie Forwarding und so weiter, die macht ihr auch gar nicht selber, oder? Das macht die Lib oder Rust. Du hast, glaube ich, gesagt, wie heißt die Funktion?"
+    },
+    {
+      "end": 2781500,
+      "speaker": "C",
+      "start": 2779980,
+      "text": "Request. Mit Request."
+    },
+    {
+      "end": 2804050,
+      "speaker": "B",
+      "start": 2783100,
+      "text": "Die macht es ja für euch, oder? Also um diese Hardcore HTTP Dinge, die wirklich im Standard drin sind, da müsst ihr euch ja selber gar nicht darum kümmern. Und für mich als User wäre ja eher, solange ich irgendwo rauskomme, wo die sinnvoll Info für mich steht, ist es ja egal, wie oft ich gefordert wurde, umgeleitet, was es dann auch immer ist. Sie will ja nur wissen, ist Content am Ende da?"
+    },
+    {
+      "end": 2875220,
+      "speaker": "C",
+      "start": 2804050,
+      "text": "Ja, nein, also was viele Leute schon zum Beispiel öfter haben wollen, ist, dass die die Anzahl der Requests, also die Redirects zum Beispiel, vermeiden wollen. Also wenn ihr zum Beispiel wissen, es gibt auf meiner Webseite einen Redirect auf das Redesign zum Beispiel von der Seite, dann will ich diesen Redirect nicht machen, sondern ich will den User direkt auf diese Seite bringen, weil alles andere ist halt ein Performance Bottleneck. Also das ist halt ein Performance Hit, wenn ich einen Redirect mache. Das kostet mich trotzdem wieder ein paar Millisekunden. Und ja, um jetzt mal kurz noch mal auf deine Frage zurückzukommen. Ja, die Library macht das tatsächlich, verwendet Request wiederum Hyper im Hintergrund. Hyper ist eine Core Library, also ist nicht in der Standard Library von Rust, aber es ist sehr, sehr nah an der Standard Library. Also viele Projekte verwenden das, unter anderem zum Beispiel auch Curl. Also Curl verwendet auch Teile von dem Code, den wir dann verwenden. Eben auch nicht unbedingt das Redirect Handling, aber zum Beispiel diese HTTP Standards in Hyper und super viel ist da schon standardisiert."
+    },
+    {
+      "end": 2917780,
+      "speaker": "B",
+      "start": 2875460,
+      "text": "Wie oft hast du dich in der Curl Dokumentation rumgetrieben, um irgendwas zu checken, wie es curl macht? Weil ich habe ja auch von euch beiden übrigens gelernt, dass Curls oder de facto standard ist. Ich bin ja sehr oft zum Beispiel auf der Fosstem in Brüssel neben euch gesessen und wenn dann Daniel Stenberg auf der Bühne war, habt ihr alle beide weiche Knie bekommen, weil es ist ja der Gott des Internets und der richtigen Requests. Und der Matthias hatte ja auch das Vergnügen, in seinem englischsprachigen Podcast in Daniel Stemberg mal zu interviewen. Also wie sehr hast du dich oder ihr an so einer Curl Implementierung orientiert? Gibt es da Informationen, die man übernimmt, oder ist das wirklich die Quelle, wo man nachschaut, wenn man so Fragen hat, wie die Hardcore Technik funktioniert von Protokoll."
+    },
+    {
+      "end": 3067270,
+      "speaker": "C",
+      "start": 2920010,
+      "text": "Tatsächlich orientiere ich mich bei Curl vor allen Dingen an einer Sache, und zwar dem User Interface. Also curl ist meiner Meinung nach deswegen so beliebt, weil es relativ intuitiv zu bedienen ist. Also viele Sachen, die da an Command Line Flex zum Beispiel definiert werden, die geben einfach Sinn. Also zum Beispiel auch, wie diese einzelnen Flags benannt sind. Und wir orientieren uns extrem daran. Also wir versuchen eigentlich, sofern es möglich ist, dieselben Benannungen für unsere Flags und unsere Argumente zu verwenden, weil dann kann man im Endeffekt Litschi mit Curl austauschen, hat statt einem Link Checker halt einen Request Loader oder wie man das auch immer nennt und umgekehrt. Und das ist eigentlich extrem nett. Eine Sache, die Curl meiner Meinung nach ein bisschen, vielleicht ein bisschen zu optimistisch gemacht hat, eine Sache, die wir dann auch übernommen haben, leider, muss ich sagen, ist davon auszugehen, dass eine Webseite HTTP als Schema hat, wenn man das Schema nicht angibt. Also wenn man bei curl zum Beispiel schreibt curl google com, dann wird daraus curl HTTP google kommen. Und das war zumindest damals, als Köln entstanden ist, schon ein sehr guter Default, glaube ich. Aber heutzutage wäre wahrscheinlich HTTPs eher ein default. Und wir haben echt tatsächlich schon überlegt, ob wir nicht vor Litchi noch mal den Standard so ändern, dass man Protokoll mit angeben muss, weil es eben so irreführend ist. Also es kann ja auch einfach einen Ordner geben, der so heiß Google com und was prüft man dann? Prüft man dann den Ordner? Weil Litchi kann auch zum Beispiel Ordnerstrukturen prüfen mit Markdown Dateien drin und HTML. Oder man prüft halt die URL google com. Und das ist eigentlich eher irreführend. Curl macht das halt eben nicht, deswegen ist es für die kein großes Problem. Aber auch da ist halt die ist HTTP heutzutage noch ein guter Standard? Es gibt zum Beispiel in Litchi auch ein Feature, wo man checken kann, ob eine URL auch als HTTPs verfügbar ist. Und wenn ja, dann wird ein Fehler geworfen. Also das heißt, angenommen man hat HTTP URL, man hat eine gleichwertige HTTPs URL, die auch funktioniert, dann ist das unter Umständen Fehler, weil man halt vielleicht nicht mehr Traffic unter HTTP surfen will. Also wir schauen uns vielleicht schon ein paar Sachen von Curl ab, aber wahrscheinlich nicht so die Implementierungsdetails. Vieles von den Quirks, die die haben, sind interessant für uns. Und das user Interface."
+    },
+    {
+      "end": 3089310,
+      "speaker": "A",
+      "start": 3067350,
+      "text": "Ja, ich wollte gerade fragen, warum habt ihr die nicht damals eingebunden? Weil ich meine, Link Parsing machen die natürlich noch und nöcher. Die haben ja auch libcurl nicht umsonst. Also Curl selbst ist ja nur das User Interface obendrauf auf Lib Curl und die ganze Magie ist, soviel ich weiß, in Libcal selbst, was ja dann eine Library ist, die ihr theoretisch in Rust einbetten könntet. Und wenn du jetzt sagst, okay, die Quirks sind für euch interessant, warum nutzt ihr da nicht die Abi von denen."
+    },
+    {
+      "end": 3156870,
+      "speaker": "C",
+      "start": 3089870,
+      "text": "Eigentlich eher, wie die das gebaut haben, war interessant. Also die Quirks, die die machen, sind vielleicht nur bedingt dann wirklich umsetzbar bei uns. Also wir haben jetzt, wir teilen uns jetzt nicht unbedingt die Quirks, die die machen. Die haben einen relativ guten HTML Parser natürlich, der interessant gewesen wäre. Den könnte man zum Beispiel auch noch als Extractor mit einbinden. Haben wir nicht. Wir wollten eigentlich ein pures Rust Tool haben, was halt auch gewisse Vorteile hat. Also vor allen Dingen, wenn man halt viel HTML passt, ist halt das Thema Sicherheit auch relativ wichtig. Also wir können halt einfach garantieren, dass es keine Segmentation Faults gibt, was extrem interessant ist für uns. Und ich glaube halt auch, wenn Curl heutzutage gebaut werden würde, wird man es wahrscheinlich eher in SIG oder in Rust machen, nicht in C unbedingt mehr. Und curl entwickelt es ja auch immer mehr zu einem Rust Tool. Also es gibt ja auch da Ansätze, wo man sagt, OK, man holt sich jetzt teilweise Rust Bibliotheken dann in Curl mit rein zum Beispiel. Also es gibt zum Beispiel ein TLS backend, ich glaube, das basiert auf Rust TLS und das ist auch zum Beispiel in Rust geschrieben."
+    },
+    {
+      "end": 3216190,
+      "speaker": "A",
+      "start": 3157029,
+      "text": "Lass uns nicht das Rabbit Hole von TLS und Co runtergehen. Ich glaube, da müssen wir mal uns eine Woche irgendwo einschließen und dann ziemlich viel über OpenSSL, Boring, SSL und Co sprechen. Aber ich bin ja eigentlich hier der Praktiker im Podcast und der Wolfgang ist ja der Theoretiker, der Akademiker, aber ich habe ab und zu mal so ein bisschen das Bedürfnis, auch mal ein bisschen Akademik in diesen Podcast reinzubringen, damit ich nicht als der dumme Andi hier rüberkomme. Deswegen, ich habe damals in meiner Bachelorarbeit gelernt, es gibt sogenannte DOI Links, Digital Object Identifier. Und in einem Kurs, wo es darum ging, wie man sich wissenschaftlich ausdrückt und wissenschaftlich schreibt, also da, wo man eigentlich lernt, richtig zu zitieren und allem drum und dran, hieß es damals, wenn ihr ein Paper zitiert, schaut doch mal am besten, ob es einen sogenannten DUI Link gibt, denn dieser Link famous last words ist immer verfügbar und ändert sich nicht. So kann man eure Zitate immer nach."
+    },
+    {
+      "end": 3223070,
+      "speaker": "B",
+      "start": 3216430,
+      "text": "Ist übrigens ein gutes Beispiel von dem eigenen Scheme, so wie HTTP. Es gibt Stopp."
+    },
+    {
+      "end": 3245040,
+      "speaker": "A",
+      "start": 3225360,
+      "text": "Und ich habe auch während des Schreibens meiner Bachelorarbeit gelernt, das ist eine Lüge hier und da, weil wir machen ja auch Papers we love Serien hier in diesem Podcast, wo wir wissenschaftliche Paper auseinandernehmen, stolpere ich immer mal wieder über einen solchen Link. Geht ihr damit auch um? Also habt ihr schon mal ein GitHub Issue dazu bekommen? Ich glaube, das ist die richtigere Frage."
+    },
+    {
+      "end": 3252900,
+      "speaker": "C",
+      "start": 3245360,
+      "text": "Ich habe erstmal noch eine Gegenfrage. Wie hast du das denn in deiner Bachelorarbeit rausbekommen, dass das eine Lüge ist, dass diese Links immer verfügbar sind?"
+    },
+    {
+      "end": 3260820,
+      "speaker": "A",
+      "start": 3253620,
+      "text": "Ich habe mir im Internet so Übersetzer gesucht und habe den versucht dann einzugeben und manchmal hat es geklappt und manchmal nicht."
+    },
+    {
+      "end": 3263540,
+      "speaker": "C",
+      "start": 3261620,
+      "text": "Übersetzer, was heißt das denn?"
+    },
+    {
+      "end": 3266500,
+      "speaker": "A",
+      "start": 3263540,
+      "text": "Ja, also ich mein, Suchmaschine meint der Andi, glaube ich."
+    },
+    {
+      "end": 3271060,
+      "speaker": "B",
+      "start": 3266500,
+      "text": "Du gibst Link ein, die Doi Nummer und bekommst einen Link dann raus."
+    },
+    {
+      "end": 3275700,
+      "speaker": "A",
+      "start": 3271220,
+      "text": "Suchmaschine, so wird man das Neudeutsch nennen. Ja, ist richtig."
+    },
+    {
+      "end": 3447840,
+      "speaker": "C",
+      "start": 3275700,
+      "text": "Ja, das immer dieses Neudeutsch. Ja, okay. Also ich habe so eine Hassliebe zu Doi Links, weil ich glaube, die Idee ist sehr gut, da hat sich mal jemand hingesetzt und hat sich gedacht, ne, so machen wir es. Also wie funktioniert das? Du hast eine Infrastruktur von Freiwilligen, das sind meistens dann Hochschulen, Universitäten, die haben ein paar Server da stehen, ist nicht so dramatisch, wenn da mal ein paar Rechenzyklen vielleicht für irgendwas Sinnvolles dann draufgehen. Und da kann man sich dann bewerben und kann sagen, okay, ich hoste jetzt mal diese Doi Links, das ist einfach nur ein Backup, was man dann bekommt und das ist einfach nur ein Blob. Und die Garantie ist halt so ein bisschen, ja, das ist was Akademisches, da ist irgendwie ein Paper dahinter oder irgendwas. Jedenfalls davor ist dann eigentlich kein Proxy und das ist eigentlich schon ein Problem. Also standardmäßig hat man halt einfach nur diese Duil Links, die auf irgendwas zeigen und jeder kann diese Schema verwenden und sagen, ich hoste eben diese Doi links. Und dann muss man eben dieser Ressource, dem Server dieser Hochschule vertrauen, dass die zuverlässig ist. Also große Verlage haben zum Beispiel auch solche Dinge. So weit, so gut. Nur das Problem ist eben, das ist nicht zentral organisiert, was auch der größte Vorteil davon ist. Jetzt, was ist die Konsequenz daraus? Wenn so ein Server von Duilinks irgendwann mal down ist oder geschlossen wird, dann gehen auf einen Schlag all diese Links kaputt und diese dann eben beim Andi in seiner Bachelorarbeit drin oder irgendwo mal in einem Buch und davor ist man nicht gewappnet. Oder, was eigentlich auch sehr häufig vorkommt, die Dinger sind falsch konfiguriert. Es gibt so einen Standardserver, irgendwie ein bisschen Config, was man machen muss. Da steht halt drin, okay, wie man zum Beispiel evaluiert, ob das ein gültiger Client ist und wie man Redirects macht und so weiter. Und teilweise werden die nicht ganz korrekt umgesetzt, was dann dazu führt, dass solche Link Checker wie Litchi eben nicht funktionieren. Also je nach Server eben, der angefuckt wird. Und ja, es gab mal ein GitHub Issue, wo jemand genau das festgestellt hat und hat gemeint, ich glaube von Edison Wesley oder so war das der Server, der dann nicht gut konfiguriert war. Ja, und er hat sich das jetzt zur Mission gemacht und das ist jetzt sein Kreuzzug. Damit geht er jetzt quasi bis zum allerletzten und schreibt dann immer Leute an, die solche Server maintainen und sagt hey, hier hast du einen Fehler und ich kann dir ganz genau sagen, wo der Fehler ist. Und das ist das Setting, was du umstellen musst, aber du musst es tun, weil ich kann es nicht selber. Ja, ist ganz interessant. Ich bin ab und zu mal so in CC drin, ist immer wieder lustig, kann man ein bisschen schmunzeln, was er dann wieder so findet. Hat er ab und zu mal wieder einen rausgekratzt. Und ja, der geht halt her und fixt halt Infrastruktur. Finde ich sehr heldenhaft. Es gibt Leute da draußen, die noch das Richtige tun. Unentgeltlich natürlich."
+    },
+    {
+      "end": 3449440,
+      "speaker": "A",
+      "start": 3447840,
+      "text": "Also erstmal großen Applaus."
+    },
+    {
+      "end": 3452240,
+      "speaker": "C",
+      "start": 3450800,
+      "text": "Der hat eine Umarmung verdient."
+    },
+    {
+      "end": 3460400,
+      "speaker": "A",
+      "start": 3452560,
+      "text": "Ja, nicht nur das. Ein Kaffee, Bier, Pizza lade ich gerne mal zum Essen ein. Vielen lieben Dank dafür. Nicht jeder Hero trägt ein Cape."
+    },
+    {
+      "end": 3466640,
+      "speaker": "B",
+      "start": 3461360,
+      "text": "Richtig, sondern arbeitet an der Universität. Hast du richtig eindeutig richtig festgestellt."
+    },
+    {
+      "end": 3475610,
+      "speaker": "A",
+      "start": 3467440,
+      "text": "Das Lustige ist eigentlich, ich habe gerade mal nachgedacht, was wir hier gerade eigentlich tun. Wir sprechen hier seit knapp fünfzig, fünf und fünfzig, sechzig Minuten über links."
+    },
+    {
+      "end": 3478770,
+      "speaker": "C",
+      "start": 3478490,
+      "text": "Und."
+    },
+    {
+      "end": 3484410,
+      "speaker": "A",
+      "start": 3478770,
+      "text": "Jeden Tag öffnen wir irgendeinen Webbrowser und geben einen Link ein und wir nehmen das alles allzu gegeben hin."
+    },
+    {
+      "end": 3486770,
+      "speaker": "C",
+      "start": 3484650,
+      "text": "Einen Link? Du gibst einen Link ein?"
+    },
+    {
+      "end": 3495930,
+      "speaker": "A",
+      "start": 3486770,
+      "text": "Ja, also eigentlich kennst du noch früher diese Software, die eigentlich mitgetrackt hat, wie viel Meter dein Mauszeiger zurückgelegt hat?"
+    },
+    {
+      "end": 3496490,
+      "speaker": "C",
+      "start": 3496010,
+      "text": "Nein."
+    },
+    {
+      "end": 3501290,
+      "speaker": "A",
+      "start": 3496730,
+      "text": "Da gab es halt mal, kannst du dir immer noch installieren. Dann trackt er halt so die Meter auf deinen."
+    },
+    {
+      "end": 3510230,
+      "speaker": "B",
+      "start": 3501850,
+      "text": "Wie viel, Matthias hatte ich auch nie. Scheinbar ist das so ein andi Ding, war wahrschein auf so einer free Shareware CD damals oben in den Werben."
+    },
+    {
+      "end": 3577860,
+      "speaker": "A",
+      "start": 3510950,
+      "text": "Ja, es tut mir leid, dass ihr beide noch nie Spaß hattet. Und ich habe so ein bisschen das Gefühl, wir nehmen Links als gegeben hin. Und ich weiß auch nicht, wie viele links ich pro Tag klicke. Das wäre auch mal ganz interessant zu wissen. Und ich würde ja am liebsten jetzt auch matthias, ich bin eigentlich durch mit dem Thema. Ich habe keine Fragen mehr, aber doch, ich habe noch viel mehr Fragen. Dieses rabbit Hole geht so runter. Zum Beispiel gibt es ja auch Links, die auf Localhost gehen oder auf irgendwelche private Class ABC Netze und so weiter und so fort. Da macht ihr auch gar nichts. Oder es gibt ja auch so dreckige Leute, die okay, ich nehme eine top level domain, mach eine subdomain home Händler dev und leite die auf, weiß ich nicht, irgendeine lokale domain in meinem Netzwerk. Also nehme eine public DNS domain und leite die auf irgendeine private IP Adresse. Was macht ihr sowas? Weil eigentlich kriegt ihr ja dann. Was kriegt ihr dann zurück? Ein Timeout, glaube ich, oder nen er kriegt ihr ja nicht, weil ihr habt ja keinen Server, der zurückantwortet. Ihr kriegt dann einen Request Timeout oder."
+    },
+    {
+      "end": 3701220,
+      "speaker": "C",
+      "start": 3578420,
+      "text": "Es kommt jetzt ein bisschen auf die URL, auf die fertige an und auf die Netzwerkkonfiguration. Also diese Loopback URLs, da kriegst du halt zurück, was eben auf dieser URL dann lauscht. Also wenn du irgendwo einen Server auf hast, dann kommt es darauf an, was der für einen Statuscode dann zurückliefert. Aber wenn du zum Beispiel in deiner ETC Host irgendwas einträgst, was wild ist, dann gehen wir halt dahin, weil wir benutzen natürlich schon die Infrastruktur von deinem Computer in erster Linie. Interessant wird es dann bei example Domains. Also viele kennen wahrscheinlich example com, aber es gibt zum Beispiel auch example Org, es gibt auch example Edu, also education. Und da gibt es auch noch einen Standard dafür. Und es gibt auch zum Beispiel local als standard und localhost. Also ich glaube nur localhost tatsächlich, aber das ist auch ein Standard, dass man sagen kann foo localhost. Und viele dieser Sachen sind teilweise sogar irgendwie vom Betriebssystem nicht richtig implementiert oder halt von den Servern generell oder von den Proxys und den Routern, die dazwischen drin sind. Also wir versuchen unser Bestes, aber am Ende des Tages exkludieren wir halt diese ganzen example Domains, soweit es möglich ist. Dann ist halt die was ist mit Subdomains von example com? Die exkutieren wir auch. Aber dann wird zum Beispiel auch interessant, weil was ist zum Beispiel irgendwie auch schon vom Parsen von solchen example Domains? Wir haben zum Beispiel schon auch in Markdown den Fall, dass man irgendwie sagt example com foo, was glaube ich auch so ein gängiges Pattern ist, was manche Leute dann verwenden. Und das ist ja auch okay. Also ein Unterstrich ist okay, zwei Unterstriche aber hintereinander wären dann eigentlich wieder unterstrichener Text, den man dann entsprechend wieder passen muss, wo man wieder aufpassen muss in Markdown Dateien. Ich glaube generell, wenn Leute zum Beispiel Dokumentation schreiben, dann denken die nicht so viel drüber nach, wie das später mal geprüft wird, weil natürlich, das ist eher ein Nachgedanke, aber hätte ich auch noch."
+    },
+    {
+      "end": 3704140,
+      "speaker": "B",
+      "start": 3701220,
+      "text": "Nie in meinem Leben, ehrlich gesagt, wenn ich Dokumentation schreibe."
+    },
+    {
+      "end": 3743250,
+      "speaker": "C",
+      "start": 3704140,
+      "text": "Ja, und viele benutzen da zum Beispiel einfach ihren Staging Server dann dann als Beispiel in der Readme oder schreiben dann halt irgendwie example one, two, three und die erwarten halt dann, dass das irgendwie verständlich ist, dass es ein example Server ist. Aber wir haben eben Unterstützung für das exkludieren von URLs. Also wir können zum Beispiel sagen, du exkodierst alles, was auf einem regex matcht und dann kannst du wiederum deine eigene Domain zum Beispiel ausklammern oder exkludieren. Wir haben auch eine litchi ignore File, wo man das halt eintragen kann, ähnlich wie eine gitignore File. Und das sind halt URL regexes, die man ausklammern kann. Also ein bisschen Infrastruktur drum haben wir schon."
+    },
+    {
+      "end": 3773190,
+      "speaker": "B",
+      "start": 3743410,
+      "text": "Es hat ja damals diesen Fall gegeben, wo diese Library den Link zu diesem AWS Bucket drin hatte, als Beispiel. Und wenn du die Library gestartet hast, haben alle sich connected zu diesem AWS Bucket und der Typ hat dann irgendwie plötzlich Rechnung bekommen, der dieses Open Source Tool maintained hat. Wie viel Prozent von diesen Requests kamen dann von Litchi? Wenn du so eine Dokumentation prüfst, dann kannst du auch ganz viel Geld da vernichten quasi."
+    },
+    {
+      "end": 3856220,
+      "speaker": "C",
+      "start": 3773590,
+      "text": "Also ich habe mittlerweile sowieso schon extrem schlechtes Gewissen, jedes Mal, wenn wir bei GitHub irgendwas ausrollen zum Beispiel, weil das halt immer gleich Repos betrifft. Also wir machen Millionen Requests pro Woche und mittlerweile ist das halt schon Teil von der Infrastruktur. Also GitHub hat vor kurzem mal Rate Limiting Header beispielsweise eingeführt, bzw. Neue Rate Limits eingeführt und wir haben das gemerkt, bevor die ausgerollt wurden, diese neuen Rate Limits, weil uns super viele User dann eben Issue erstellt haben und haben gemeint, okay, das funktioniert jetzt nicht mehr, irgendwas ist faul. Und dann kam eine Woche später das Announcement, dass die secondary rate limits verändert wurden und da laufen wir komplett rein. Das kann man nicht mit einem GitHub Token umgehen. Und ja, also solche Geschichten passieren die ganze Zeit. Vor allen Dingen auf GitHub muss man extrem vorsichtig sein. Also ich habe jetzt noch keinen Fall gehört, dass jemand eine hohe Rechnung bekommen hat. Ich glaube, wir sind noch weit hinter diesen ganzen LLM Search engines mittlerweile, die auch super viel die Infrastruktur belasten. Aber mich würde es nicht wundern, wenn da irgendwo einer sitzt und der hat einen Server und der kriegt dann jeden Tag tausende, hunderttausende Requests sein. Also höchstwahrscheinlich ist es einfach GitHub, wenn ich jetzt nachdenke. Also ich glaube schon, dass die den User Agent kennen."
+    },
+    {
+      "end": 3893700,
+      "speaker": "B",
+      "start": 3858220,
+      "text": "Jetzt hast du auch schon gerade erwähnt, Repositories verwenden Litchi, habe ich das richtig verstanden? Und ganz viele andere, wir haben es ja schon erwähnt, Nvidia, Amazon, die ganzen großen, Microsoft. Warum glaubst du, verwenden die alle Litchi? Ist es, weil ihr so viele Edge Cases abdeckt? Ist es, weil es einfach zu verwenden ist und ich kann einfach in meinem Repository eine GitHub Action hinzufügen, die automatisch diese Checks macht? Also ist es Userfreundlichkeit, ist es das Featureset? Ist es was anderes? Was ist deine Vermutung, warum so viele Leute darauf setzen?"
+    },
+    {
+      "end": 4061000,
+      "speaker": "C",
+      "start": 3894340,
+      "text": "Teilweise ist es ein Herdeneffekt, dass Leute einfach Konfiguration von anderen Repositories kopieren, so nach dem Motto, es hat für die funktioniert, dann funktioniert es auch für uns. Es hat so ein bisschen meine Perspektive auch verändert bei dem Begriff kritische Infrastruktur. Also was das im Endeffekt heißt, wenn man ein populäres Open Source Repository oder irgendein populäres Projekt maintained, das wird meistens von einer kleinen Gruppe von Menschen gemacht. Also ich bin nicht allein, der Thomas Zahner ist zum Beispiel auch noch ein Core Maintainer, aber wir sind einfach eine relativ kleine Truppe. Das ist erstens mal überraschend. Und das zweite ist, ich denke, Litschi hat ein paar Sachen richtig gemacht. Unter anderem zum Beispiel versucht, das Format von alten Link Checkern, die halt dann deprecated wurden, aufrechtzuerhalten. Das heißt, man kann mit relativ wenig Aufwand einfach umsteigen, sind zwei, drei Zeilen Code, dann funktioniert das schon. Eben über die GitHub Action wird es dann auch noch mal leichter. Und das waren ein paar Faktoren. Die andere Sache ist, viele Linkchecker funktionieren nicht so gut, also dauern sehr, sehr lang. Teilweise habe ich da schon irgendwelche Laufzeiten von Stunden gesehen, wo halt Litchi einfach in Minuten, vielleicht sogar in Sekunden fertig wird. Also so, dass ein Run dann mal so fünfzehn, zwanzig Sekunden dauert. Das ist schon eher die Ausnahme, wenn man jetzt nicht unbedingt ein riesiges Repo hat. Das liegt aber auch daran, dass GitHub einfach eine mega Infrastruktur hingestellt hat für GitHub Actions, aber an sich ist kein Blocker. Und in anderen Tools ist das schon öfter mal der Fall. Also wenn man jetzt dann mal links concurrently, also quasi nebenläufig prüft, dann kommt man da mit vielen Tools schon an die Grenzen. Und da ist halt einfach bei Litschi noch lange noch nicht Schluss. Ich denke, die andere Sache ist, glaube ich, dass die meisten größeren Projekte sich mittlerweile festgelegt haben auf einen gewissen Standard, wo Dokumentation liegt und in welchem Format die ist, sprich sprich Markdown Dateien in dem Docs Ordner und das wird halt einfach wunderbar abgebildet. Und dann gibt es halt einfach ein Feature Set, wo man einfach relativ einfach URLs dann ausblenden kann oder ausschließen kann. Und wir legen auch sehr, sehr viel Wert auf eigene Dokumentation. Also wir haben eigenen Dokumentationsserver, wo wir halt sehr, sehr viele Informationen dann sammeln. Ich glaube halt, am Ende des Tages sehen Leute dann, da ist ein Projekt, was maintained wird, wo Maintainer auch auf Issues reagieren und das auch schon länger existiert, denken eigentlich weiter gar nicht so großartig drüber nach. Also der erste große Use Case war OpenSearch und das war jemand, den ich vorher aus einem anderen Projekt kannte. Der ist jetzt mittlerweile bei AWS und macht da OpenSearch."
+    },
+    {
+      "end": 4084110,
+      "speaker": "B",
+      "start": 4061000,
+      "text": "Aber was wäre jetzt deine Empfehlung, wenn man mit so einem Projekt startet? Auf was sollte man sich fokussieren, um irgendwie Reichweite zu bekommen? Also sollte man probieren, irgendwen zu kennen und dort sich einzuschleichen in ein bekanntes Projekt oder sollte man mehr auf User Friendliness einfach sich fokussieren, wie man es überhaupt einbinden kann? Also was wäre dein Hack Nummer eins?"
+    },
+    {
+      "end": 4143060,
+      "speaker": "C",
+      "start": 4084670,
+      "text": "Ich glaube, es rentiert sich einfach nicht, wenn man nicht selber Spaß dran hat. Es ist eher ein Marathon, es ist kein Sprint. Wir machen das jetzt seit Jahren und eigentlich flog das jetzt seit Jahren unter Radar und jetzt erst wird es bekannt. Man sollte eigentlich immer seine eigenen Probleme erst mal lösen und kleine Brötchen backen. Was mich immer wieder schockiert ist, wie klein man ein Projekt machen kann und trotzdem noch was Sinnvolles dazu beitragen kann. Also diese ganzen einfachen Probleme, wie zum Beispiel parsen von einer Markdown Datei oder eben checken von dem Link oder halt ein Webserver, also irgendwas, was sehr, sehr viele Leute benutzen, das sind alles ungelöste Probleme. Und es gibt überall noch Edge Cases. Das heißt, man nimmt einfach irgendwas her, was einen interessiert, nimmt sich den interessantesten Teil davon und dann noch mal den interessantesten Teil und versucht das so gut wie möglich zu machen. Und dann fast automatisch finden Leute das und finden das interessant."
+    },
+    {
+      "end": 4161070,
+      "speaker": "B",
+      "start": 4143220,
+      "text": "Also wäre es eigentlich eher in die Richtung, sich möglichst tief mit irgendwas zu beschäftigen? Es geht wirklich darum, möglichst tief zu gehen. Und wenn man glaubt, man ist fertig und hat es abgeschlossen, noch mal tiefer zu gehen, dich reinzuhängen, und dadurch entsteht dann der Value für die Leute, etwas."
+    },
+    {
+      "end": 4185419,
+      "speaker": "C",
+      "start": 4161150,
+      "text": "Wirklich in seiner Gänze zu verstehen und zu sagen, auf dieser Ebene kenne ich mich sehr gut mit dem Problem aus und ich sehe das schon in dem breiteren Kontext eben von Web Tools, die eine Sache machen und eine Sache gut. Aber genau, dass man sich eben so eine kleine Nische aussucht und nicht versucht, das große ganze Problem zu lösen, das wäre zu komplex."
+    },
+    {
+      "end": 4198989,
+      "speaker": "B",
+      "start": 4185819,
+      "text": "Aber da stellt sich dann natürlich die wie bleibt man zwei Jahre, bist du jetzt dran, oder wie bleibt man zwei Jahre motiviert? Also vor allem, wenn man da irgendwie noch tiefer geht und noch tiefer und immer am selben arbeitet, wie bleibt man denn dann so lange motiviert?"
+    },
+    {
+      "end": 4341700,
+      "speaker": "C",
+      "start": 4199539,
+      "text": "Ja, wie macht Daniel Stenberg seit zwanzig Jahren Curl? Ich glaube, die Antwort ist, er hat halt immer wieder Input bekommen von Leuten und bei uns ist es genauso. Wir kriegen einfach Issues von Leuten und das sind einfach spannende Themen, an die man so nicht gedacht hat. Also das ist so was wie eine Inbox, wo man öfter mal eine überraschende E Mail bekommt und sich denkt, wow, an sowas hätte ich niemals gedacht. Die Lösung ist dann meistens relativ trivial oder halt auch unglaublich komplex, aber meistens sind es relativ einfache Dinge, die man tweeten kann und dann hilft man einer echten Person bei einem echten Problem. Und ich finde das eigentlich immer am spannendsten. Also man könnte jetzt auch sagen, ich habe ein Helfer Syndrom, aber ich weiß nicht, ich glaube, Open Source ist nichts, womit man reich werden kann. Sollte man vielleicht nicht machen, wenn man jetzt irgendwie Millionär werden will. Natürlich, ich habe einen Lambo und ich habe eine eigene Insel und eine Yacht, das ist klar. Aber ich glaube, die meisten Leute sollten das halt nicht tun, um jetzt irgendwie berühmt zu werden. Und trotzdem kann man Leuten helfen und man kann super viel verändern. Ich denke, die Leute sollten einfach mehr schauen auf die Probleme, die sie selber haben und versuchen, die gut zu lösen. Und ich bin zum Beispiel auch ein großer Fan davon, Dinge neu zu erfinden. Also wenn jetzt jemand zuhört und sich denkt oh, Link Checking, das würde ich auch gerne mal ausprobieren. Ja, also ich glaube, es wird mehr Konkurrenz geben im Bereich Link Checking. Oder vielleicht will jemand beitragen zu Litschi und hört sich das an und denkt sich, ja, das Projekt, das schaue ich mir mal an. Ich habe auch einen Blogpost geschrieben vor kurzem, der ging auch viral, der hieß reinvent the wheel, weil ich glaube, das ist so eine Sache, die bei uns in unserer Generation damals super häufig gefallen ist. So von wegen niemals was neu erfinden, erfindet das Rad neu. Und ich glaube, das ist so ein riesen Blocker und Leute haben dann immer im Hinterkopf, oh ja, ne, dafür muss ich eine Library benutzen, weil ich darf ja das Rad nicht neu erfinden. Das meiste habe ich gelernt, indem ich einfach Räder neu erfunden habe. Da habe ich gelernt, wie Räder funktionieren, habe vielleicht mal ein spezielles Rad gebaut. Es kann auch mal ein Rad für einen Rollstuhl sein, von jemandem, dem man helfen will. Es muss nicht immer das Autorad sein, es kann auch ein Steuerrad sein für ein Schiff oder ein kleines Boot. Aber es geht darum, dass man experimentiert und dass man sich das auch zutraut. Es ist nur Code, aber die meisten."
+    },
+    {
+      "end": 4371530,
+      "speaker": "A",
+      "start": 4341700,
+      "text": "Leute sagen, oh, ich baue jetzt einen Link Check, ich gehe erstmal auf GitHub, schau, gibt es schon einen? Oh, ich habe drei gefunden, okay, das Problem ist schon gelöst, ich ziehe weiter. Also ich meine, diese Hürde, weil es schon fünf Standards gibt, noch einen sechsten zu machen, der dann der beste Standard wird, ist natürlich schon eine große. Klar. Jetzt bist du anders gestartet, du hast gesagt, okay, ich hack das mal an einem Wochenende, zwei Jahre später sind wir jetzt hier. Weiß jetzt nicht, ob so viele Leute es da draußen gibt, die auch dieses Zeitinvestment da bringen wollen. Das darf man natürlich auch nicht vergessen."
+    },
+    {
+      "end": 4457330,
+      "speaker": "C",
+      "start": 4372480,
+      "text": "Ja, aber vergiss nicht, dass ich niemals mit der Einstellung gestartet bin, ich will jetzt einen Link Checker bauen, sondern ich wollte eben keinen Link Checker bauen, ich wollte einfach nur die Links in diesem Analysis Tools Repo checken und habe festgestellt, oh ne, die anderen Tools nerven und ich brauche jetzt wieder Content demnächst für meinen YouTube Channel. Und so ging das los. Also wenn man was findet, was funktioniert und man merkt, das löst ein Problem, dann kann man das gerne weiter benutzen. Aber die allermeiste Zeit wird so sein, man findet trotzdem Lücken. Also bei Litchi gibt es auch tausende Lücken, wie zum Beispiel, wir unterstützen kein JavaScript. Jetzt, wenn jemand hergeht und, oh ja, ich baue einen Link Checker, der JavaScript unterstützt auf der CLI. Ja, ich bin voll dafür. Ich finde das gut, dass es solche Sachen einfach gibt, aber halt auch für tausende andere Dinge eben. Also ich glaube, es geht eher so um das Mindset, von wegen, ich löse meine eigenen Probleme, ich setze mich hin, ich schaue mir zum Beispiel mal an, wie eine Blogging Engine funktioniert. Also vor kurzem hatte ich wieder das Problem, ich blog sehr viel und der Text in dem Blog ist in Markdown und die Code Beispiele sind eben diese klassischen Code fances, die es in Markdown auch gibt. Aber wie kann ich mir denn sicher sein, dass der Code wirklich funktioniert, dass der ausführbar ist. Und ja, es wäre super schön eine Blogging Engine zu haben, die das einfach nativ unterstützen."
+    },
+    {
+      "end": 4481400,
+      "speaker": "A",
+      "start": 4457800,
+      "text": "Aber dieses Problem gibt es ja. Ich meine die ganzen tech Bücher und so weiter, die sind ja genauso aufgebaut. Aber ich mein, wir driften ab, beziehungsweise du pitcht hier gerade schon wieder das nächste Open Source Projekt, nämlich einen Pluggable Source code in Markdown Tester oder ähnliches. Ich meine, wir haben da auch mal eine Folge zu gemacht, zu technische Dokumentation und ich meine, da ist ein Tool in Shownotes verlinkt, das genau das macht."
+    },
+    {
+      "end": 4482840,
+      "speaker": "C",
+      "start": 4481400,
+      "text": "Mdbook kann das glaube ich."
+    },
+    {
+      "end": 4583390,
+      "speaker": "A",
+      "start": 4483440,
+      "text": "Kann sein. Aber Matthias, das lustige ist ja eigentlich, wir könnten noch drei stunden weiter sprechen über die Komplexität von links, denn wir haben super viele Sachen einfach noch gar nicht angesprochen. Zum Beispiel in Vektordateien SVGs kann man nämlich auch Links verstecken oder es gibt natürlich auch noch links in dem Link HTML Tag, die man disablen kann oder oder. Also ich meine, wer mal wirklich eine Runde Spaß haben möchte, der geht einfach mal in die Show Notes, dann geht er einfach mal auf das Gitterprojekt von diesem Link checker litschi und geht dann einfach mal in die Issues. Da findet man zum Beispiel auch eine Emoji domain herzchenbier ws, was danach budweiser redirected. Finde ich auch ein unglaublich geiles Marketing. Ich weiß auch nicht, wie Leute auf diesen auf dieses Issue kommen, aber wer wirklich mal ein bisschen Spaß haben möchte, den empfehle ich den Issue Tracker von Litchi. Matthias, vielen lieben Dank. Ich habe gedacht, ich kannte das Internet, ich surft darin jeden Tag. Ich weiß nicht, wie viele links ich klicke und ich habe links immer als gegeben hingenommen. Ich werde es jetzt auf jeden Fall mit anderen Augen sehen, sehr wahrscheinlich nur auf die nächsten fünf Links, auf die ich klicken werde, danach werde ich es wieder vergessen. Aber ich danke dir, dass du mich in die Komplexität von Links eingeführt hast, denn ich hatte auf jeden Fall sehr viel Spaß und macht. What the fuck? What the fuck, was ist denn hier schon wieder los? Und ich kann mir schon vorstellen, weil ich glaube, der Wolfgang hat mich die Frage gestellt, wie motiviert du dich seit zwei Jahren? Ja, ich weiß wie, weil du einfach jeden Montag deinen E Mail Client aufmachst und dir das neueste Issue durchlädst. What the fuck ist das denn jetzt hier wieder?"
+    },
+    {
+      "end": 4592870,
+      "speaker": "C",
+      "start": 4584030,
+      "text": "Übrigens, ich werde dieses Jahr vierzig und ich freue mich schon auf das Merch, wo draufsteht, ich habe gedacht, ich kannte das Internet, ich finde das geil, das soll es geben."
+    },
+    {
+      "end": 4627590,
+      "speaker": "A",
+      "start": 4594870,
+      "text": "Die Bestellung ist raus an alle Leute am Audiogerät. Wenn ihr eine Sache aus diesem Podcast mitnehmt, würde ich wirklich bitten, denkt mal drüber nach, ob ihr Links wirklich als Links anseht oder ob das nicht einfach viel mehr ist. Und für alle Jungspunde, die Million Dollar Homepage, die der Matthias im Podcast erwähnt hat, die ist immer noch online. Geht mal drauf und vielleicht wollt ihr mal Litchi testen und jagt das einfach mal auf die Million Dollar Homepage und spielt dann mal ein bisschen rum. Lieber Matthias, hast du noch ein Abschlusswort an unsere Hörerinnen und Hörer?"
+    },
+    {
+      "end": 4679110,
+      "speaker": "C",
+      "start": 4627590,
+      "text": "Jeder, der zuhört, hat Interesse an Softwareentwicklung. Schaut auch, dass ihr ein bisschen open Source macht. Lasst den Faden da nicht abreißen. Baut selber eure Sachen, released eure Sachen, schreibt über eure Sachen. Das ist extrem wichtig. Das ist eine unglaublich interessante Community. Jeder darf teilnehmen, jeder ist willkommen. Findet eure kleine Nische da drin. Es gibt auch Open Source Sponsoring, wie zum Beispiel NLnet. Litschi wird auch von NLnet unterstützt. Es gibt auch viele andere. Vielleicht habt ihr eine Idee oder vielleicht wollt ihr auch einfach nur beitragen zu irgendwas, was es schon gibt oder irgendwas, was nicht mehr maintained wird. Wir alle drei sind große Open Source Verfechter und vielleicht gibt euch das jetzt noch mal den Push, da nachzuschauen und vielleicht trotzdem mal vielleicht irgendwie ein Issue zu fixen oder euer eigenes Projekt einfach zu starten."
+    },
+    {
+      "end": 4686590,
+      "speaker": "A",
+      "start": 4679110,
+      "text": "Danke, Matthias. Danke auch Wolfgang. Ich habe noch nie Danke an Wolfgang für diese Podcast gesagt. Wir hören uns nächste Woche und tschüss."
+    },
+    {
+      "end": 4691950,
+      "speaker": "B",
+      "start": 4686590,
+      "text": "Danke dir. Ciao. Warum hast du noch nie Danke gesagt? Natürlich hast du schon mal Danke gesagt."
+    },
+    {
+      "end": 4693070,
+      "speaker": "A",
+      "start": 4691950,
+      "text": "An dich glaube ich noch nie."
+    },
+    {
+      "end": 4693990,
+      "speaker": "B",
+      "start": 4693070,
+      "text": "Ah, doch, doch."
+    },
+    {
+      "end": 4694350,
+      "speaker": "C",
+      "start": 4693990,
+      "text": "Danke."
+    },
+    {
+      "end": 4695910,
+      "speaker": "B",
+      "start": 4694510,
+      "text": "So unfreundlich bist du jetzt auch wieder."
+    },
+    {
+      "end": 4702370,
+      "speaker": "C",
+      "start": 4695910,
+      "text": "Nicht für deine Präsenz. Seid ihr eigentlich immer noch nervös vor den Aufnahmen? Das würde mich auch mal interessieren."
+    },
+    {
+      "end": 4704530,
+      "speaker": "A",
+      "start": 4703250,
+      "text": "Klären wir nach der Aufnahme."
+    },
+    {
+      "end": 4707970,
+      "speaker": "B",
+      "start": 4704610,
+      "text": "Also ja, es kommt drauf an, mit wem. Mit dir weniger."
+    },
+    {
+      "end": 4713410,
+      "speaker": "A",
+      "start": 4709570,
+      "text": "Okay, der Wolfgang nimmt dir auf die leichte Schulter. Das hat Problem."
+    },
+    {
+      "end": 4727140,
+      "speaker": "C",
+      "start": 4715250,
+      "text": "Wieso fängst du eigentlich nicht du an, Andi? Ich habe das Gefühl, du bist eh viel mehr in dem Thema drin. Wolfgang versucht jetzt irgendwie gerade sein Backup irgendwie vom Zip drive zu laden. Das merkst du so richtig, die Daten."
+    },
+    {
+      "end": 4730500,
+      "speaker": "A",
+      "start": 4729700,
+      "text": "Deswegen dauert das."
+    },
+    {
+      "end": 4735060,
+      "speaker": "B",
+      "start": 4731140,
+      "text": "Werdet ihr mal so alt, dann Cold Storage. Schauen wir weiter."
+    },
+    {
+      "end": 4739620,
+      "speaker": "A",
+      "start": 4736260,
+      "text": "Hat irgendwie so Wolfgang S. Cold Storage hinten dran."
+    },
+    {
+      "end": 4743860,
+      "speaker": "C",
+      "start": 4741060,
+      "text": "Kommt direkt aus Amazon Glacier irgendwo."
+    },
+    {
+      "end": 4747940,
+      "speaker": "B",
+      "start": 4745780,
+      "text": "Ja, das Band ist langsam angekommen."
+    }
+  ],
+  "webhook_auth": false
+}
