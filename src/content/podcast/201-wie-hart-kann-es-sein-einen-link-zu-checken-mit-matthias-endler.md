@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/691cee4f-0644-48d1-ae5a-6b2f9526eba3/engineering-kiosk-201-wie-hart-kann-es-sein-einen-link-zu-checken-mit-matthias-endler
 apple_podcasts: https://podcasts.apple.com/us/podcast/201-wie-hart-kann-es-sein-einen-link-zu-checken-mit/id1603082924?i=1000714294334&uo=4
 audio: https://audio1.redcircle.com/episodes/74eb1fa2-c260-4b6d-86c2-9b72082f890e/stream.mp3
 chapter:
