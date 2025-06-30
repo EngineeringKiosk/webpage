@@ -68,7 +68,7 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 									}
 									{!nextMeetup.location.url && nextMeetup.location.name} (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>
 									{nextMeetup.location.note && (
-										<span set:html={nextMeetup.location.note} />
+										<span set:html={nextMeetup.location.note} class="text-xs" />
 									)})
 									
 								</div>
