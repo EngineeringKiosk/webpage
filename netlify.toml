@@ -2625,6 +2625,18 @@ to = "/podcast/episode/201-wie-hart-kann-es-sein-einen-link-zu-checken-mit-matth
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/202"
+to = "/podcast/episode/202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-sebastian-röhl?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep202"
+to = "/podcast/episode/202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-sebastian-röhl?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
