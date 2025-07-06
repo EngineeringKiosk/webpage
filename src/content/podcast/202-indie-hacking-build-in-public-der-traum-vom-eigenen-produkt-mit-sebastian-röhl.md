@@ -82,7 +82,11 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: C
+- name: Sebastian Röhl
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/3SXV9oLjWfXMICXNwhQINs
 tags:
 - Tech Kultur
