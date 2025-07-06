@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/8e23ba8f-85a9-4a58-b356-c171f1f454ca/engineering-kiosk-202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-sebastian-r%C3%B6hl
 apple_podcasts: https://podcasts.apple.com/us/podcast/202-indie-hacking-build-in-public-der-traum-vom-eigenen/id1603082924?i=1000715233452&uo=4
 audio: https://audio1.redcircle.com/episodes/b041b49b-42c3-4bfd-8e48-dbd422740928/stream.mp3
 chapter:
