@@ -84,7 +84,9 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/3SXV9oLjWfXMICXNwhQINs
-tags: []
+tags:
+- Tech Kultur
+- Interview
 title: "#202 Indie-Hacking, Build in Public & der Traum vom eigenen Produkt mit Sebastian\
   \ R\xF6hl"
 transcript_raw: ''
