@@ -1,5 +1,5 @@
 ---
-date: 2025-08-07T18:00:00+02:00
+date: 2025-08-07T18:30:00+02:00
 location:
   name: 'Gastgarten zur Eiche'
   address: 'Innstraße 85, 6020 Innsbruck'
