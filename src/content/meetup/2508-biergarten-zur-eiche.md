@@ -15,5 +15,5 @@ talks:
     title: 'Join us for our yearly summer-talk-break to enjoy a drink and chat.'
     description: 'No Talks, just drinks and networking. We will meet at Gastgarten zur Eiche at around 18:30. Please register so we can adapt the reservation accordingly.'
     bio: ''
-eventId: 'insertidhere'
+eventId: '43h6gdv4g9qee27dic1iceu19b'
 ---
