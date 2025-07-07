@@ -8,7 +8,7 @@ talks:
   - avatar: './images/speaker/bier.jpg'
     name: 'Bernadette Bierlein'
     title: "Let's meet for a beer!"
-    description: 'This time we will meet for drinks at Gastgarten zur Eiche to network. We reserved tables for for 30 people.'
+    description: 'This time we will meet for drinks at Gastgarten zur Eiche to network. We reserved tables for 30 people.'
     bio: ''
   - avatar: './images/speaker/drinks.jpg'
     name: 'Saskia Spezi'
