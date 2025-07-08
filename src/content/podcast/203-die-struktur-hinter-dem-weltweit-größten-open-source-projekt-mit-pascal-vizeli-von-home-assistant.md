@@ -89,7 +89,11 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Pascal Ficeli
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/3JZfoOVpeFdUq3xVgAgvKk
 tags:
 - Code mit Impact

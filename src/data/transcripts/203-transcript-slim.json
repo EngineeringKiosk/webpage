@@ -1,0 +1,944 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4891,
+  "audio_url": "https://cloud.inlupus.at/s/7Bjdm9LoBniW2Gp/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9480531,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "711392ba-e3ab-420e-85ce-c61593317b81",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 183030,
+      "speaker": "A",
+      "start": 4000,
+      "text": "Jetzt mal butter bei die fische. Dass Open Source Software einen weitreichenden einfluss hat, das muss ich euch nicht erzählen. Also ich meine jetzt nicht die tatsache, dass tausende freiwillige programme programmieren und probleme lösen und das ganze zur freien und auch zur kommerziellen Nutzung gratis zur Verfügung stellen. Allein das ist ja schon crazy. Sondern eher den Einfluss außerhalb von if conditions und for Schleifen und all den anderen Codezeilen. Einfluss in der realen Welt die Technologie, mit der ihr jeden Tag arbeitet, die ihr jeden Tag nutzt, basiert zum Großteil auf Open Source. Aber da endet ja der Einfluss nicht. Denn wenn man mal hinter den Vorhang schaut, gibt es ein Projekt, das gerade richtig aufs Gaspedal drückt, wenn es um den Impact außerhalb von Quellcode geht. Home Assistant. Die Home Automation Software ist mit über Contributern das Projekt auf GitHub mit den meisten Contributern weltweit. Hintendran wurde eine Firma gegründet, die allein das Ziel hat, Software Engineers Vollzeit für die Entwicklung an Home Assistant zu bezahlen. Dann kamen Stimmen auf, dass Home Assistant ja zu einer kommerziellen Firma gehöre. Die Gründer Hold my Beer. Und haben daraufhin eine schweizer Non Profit Foundation gegründet, um das Home Assistant Projekt selbst vor Kommerzialisierung zu schützen. Doch damit nicht genug. Die open Home Foundation schüttelt gerade den ganzen Home Automation Markt durch und macht auch vor großen Herstellern keinen Halt. Wir haben mit Pascal Ficeli gesprochen. Pascal hat das ursprüngliche Home Assistant OS programmiert und war von Anfang an dabei. Er hat Nabucasa, die Firma zur Finanzierung von Home Assistant, mitgegründet und steckt unter anderem hinter der Idee der Open Home Foundation. Wir haben mit ihm über die Geschichte und den Werdegang des Projekts gesprochen, wie sich die ganze Sache finanziert, was die Kritik aus der Community war und noch immer ist, wie die Open home Foundation große Hardwarehersteller zu offenen Standards bewegt und und was das Team noch so vorhat. Eine Episode, die mir wirklich am Herzen liegt und beeindruckend zeigt, welche Reichweite und Impact Open Source auf andere Bereiche hat. Viel Spaß beim Zuhören. Los geht's. In den über zwei hundert Folgen hier vom Engineering Kiosk Podcast haben wir, glaube ich, in jeder zweiten oder dritten Episode irgendwie über Open Source gesprochen bzw. Zumindest Open Source erwähnt. Und dass ich ein riesen Open Source Fan bin, das sollte den ständigen Hörerinnen und Hörern hier eigentlich auch kein Geheimnis mehr sein. Denn auch ich habe eine große Open Source Historie. Jetzt nicht nur im Contribution Sektor und nicht nur im Quellcode erzeugen und Quellcode nutzen Sektor, sondern manche Communities da war ich auch tiefer drin und bin teilweise sogar mit auf Snowboard Touren gefahren. Das bedeutet, Leute in der Community haben sich zusammengeschlossen und sich eine Woche irgendwo auf einem Berg zusammengefunden, um a, eine Runde im Schnee zu verbringen, Ski und Snowboard zu fahren, aber b, natürlich auch eine Runde zu coden. Das bedeutet, mich hat der Impact, den Open Source eigentlich außerhalb von Code erzeugt."
+    },
+    {
+      "end": 186950,
+      "speaker": "B",
+      "start": 183110,
+      "text": "Also du bist einfach lieber Snowboard gefahren, als sinnvollen Code zu contributen."
+    },
+    {
+      "end": 247660,
+      "speaker": "A",
+      "start": 186950,
+      "text": "Also als ich auf die erste Snowboard Tour gefahren bin, konnte ich nicht Snowboard fahren und seitdem bin ich faszinierender Wintersportler. Das ist korrekt. Also eigentlich kannst du sagen, open Source hat etwas für meine Gesundheit getan. Aber jetzt ist es natürlich so, wo findet man großen Impact von Open Source außerhalb des Codes? Ein Projekt ist da sehr, sehr federführend, meines Erachtens nach. Ein Projekt, was ich zu Hause deployed habe, ein Projekt, was der Wolfgang zu Hause deployed hat. Und wenn man den aktuellen October Report, das ist der jährliche Report von GitHub, glauben mag, ist es das Projekt mit den meisten Open Source Contributern, mit über Open Source Contribute. Dieses Projekt hat in den letzten anderthalb Jahren oder letzten zwei Jahren es sehr oft auf meinen Bildschirm geschafft mit dem Erschaffen von Impact außerhalb von Sourcecode. Und deswegen bin ich sehr, sehr stolz, dass Pascal vom Home Assistant Projekt unserer Einladung in diesem Podcast gefolgt ist. Hallo Pascal."
+    },
+    {
+      "end": 250140,
+      "speaker": "C",
+      "start": 247740,
+      "text": "Ja, hallo, danke, dass ich da sein darf."
+    },
+    {
+      "end": 309190,
+      "speaker": "A",
+      "start": 250780,
+      "text": "Wir sprechen nämlich über Home Assistant und eigentlich welchen Impact Home Assistant und die inzwischen schon fast vier Men, kann man sagen, drumherum geschaffen haben. Und deswegen stelle ich mal ganz kurz den Pascal vor. Offen gesprochen, wir haben den Pascal nicht zuerst angefragt, wir haben Paulus angefragt. Paulus hat zwei tausend dreizehn, nämlich Home Assistant gegründet. Und als ich mal ein bisschen recherchiert habe, Paulus kommt aus den Niederlanden, kommt ursprünglich relativ nah von der deutschen Grenze. Also habe ich einfach mal angefragt, hey Paulus, sprichst du vielleicht auch Deutsch? Und ich habe keine Antwort von Paulus bekommen, aber ich habe eine Antwort von Pascal bekommen, weil Paulus einfach die Anfrage an Pascal weitergeleitet hat. Und Pascal kommt aus der Schweiz. Du bist langjähriger Open Source Entwickler und bekannt für deine zentrale Rolle im Home Assistant Projekt, denn du bist Originalautor oder kann man Mitbegründer sagen, ich weiß gar nicht, was das richtige Wort ist, von Hasio has IO ist glaube ich, das heutige. Ist das das Home assistant OS?"
+    },
+    {
+      "end": 333710,
+      "speaker": "C",
+      "start": 309910,
+      "text": "Ja, diese Frage ist nicht ganz einfach zu beantworten. Wir hatten mal ein Renaming zum Home Assistant und das hat auch nicht so ganz gefittet. Dann haben wir es Home Assistant OS genannt und da gab es den Home Assistant Supervisor. Ich denke, da hätte man einen besseren Job machen können. Aber das Hasio ist das heutige Home Assistant OS und das eigentlich die offizielle Installationsart von Home Assistant."
+    },
+    {
+      "end": 400760,
+      "speaker": "A",
+      "start": 333710,
+      "text": "Neben dem, ich sag mal, Standard Docker Deployment und so weiter, ist das halt einer der Hauptinstallationsarten oder jetzt neuerdings einer der wenigen offiziell supporteten. Wurde ja vor kurzem, glaube ich, auch geändert. Verlinken wir auch in den Show Notes. Richtig, ja, erstmal vielen Dank dafür. Du hast es sehr einfach gemacht, dass ich Home Assistant deployen kann. Also danke für deine Arbeit. Du bist Co Founder und chief Financial Officer bei Nabukasa. Nabukasa ist meines Wissens nach eine Firma, die ist aus Home Assistant entstanden, bietet ein Software as a Service Tool an, um Home Assistant von außerhalb zugänglich zu machen, sicher zugänglich zu machen für dein internes Netzwerk und wird, glaube ich, auch gestartet, um ein wenig Home Assistant zu finanzieren. Da sprechen wir aber gleich noch mal drüber. Und jetzt kommt es ist nämlich auch ein großer Punkt in diesem Podcast. Du bist Mitglied des Vorstandes bzw. Des Gründungsvorstandes der Open Home Foundation und fungierst dort als Schatzmeister, auf Englisch Treasurer, glaube ich. Ich musste erst mal gucken, was das deutsche Wort für Treasure ist. Schatzmeister ist es, glaube ich. Ist das alles korrekt?"
+    },
+    {
+      "end": 404840,
+      "speaker": "C",
+      "start": 401080,
+      "text": "Das ist alles korrekt. Eines von vielen Sachen, die ich mache für das Projekt."
+    },
+    {
+      "end": 489880,
+      "speaker": "B",
+      "start": 465240,
+      "text": "Jetzt stellt sich für mich natürlich sofort die Frage, wir sind ja alle im Herzen Entwickler und du hast auch angefangen als Entwickler und jetzt liest man diese ganze Latte oder Liste an Titeln, was alle irgendwie Treasurer, CFO, alles irgendwie mit Finance zu tun hat. Und meine Erfahrung ist ja so, dass Finance ganz, ganz, ganz weit weg ist von Entwicklerinnen und nicht sehr beliebt ist. Wie geht es dir denn damit?"
+    },
+    {
+      "end": 561160,
+      "speaker": "C",
+      "start": 490040,
+      "text": "Ja, ich mache ja nicht nur Finance, ich hatte auch lange das ganze HR, also die Personalabteilung auch gemacht. Und das sind so die bisschen undankbaren Arbeiten in einer Organisation, weil meistens der Börse das Ganze. Aber ich selbst komme auf der Softwareentwicklung. Ich habe aber sieben Jahre in einer Buchhaltungsfirma gearbeitet, habe auch für Vereine Buchhaltung gemacht und ist mir immer schon sehr gut gelegen. Und sogar in meiner Familie. Mein Großvater war CFO von Feldschlösschen, das ist eine Bierbrauerei. Ich komme ein bisschen aus einer Finanzfamilie und ich liebe einfach die Zahlen. Als wir die Firma gegründet haben, Nabocasa, war Paulus, du kannst wirklich gut mit Leuten umgehen. Du machst die Öffentlichkeitsarbeit und ich mache die Finanzen, dann weiß ich, es funktioniert und wir wachsen stabil. Zumal auch Nabokasa, wir haben ja keine Investoren, wir wachsen nur so schnell, wie wir auch einnehmen. Und das hatte am Anfang natürlich bisschen, war nicht ganz einfach am Anfang, das ganze so aus dem Grund herauf zu starten."
+    },
+    {
+      "end": 565560,
+      "speaker": "B",
+      "start": 561560,
+      "text": "Also stimmt da das Vorurteil, dass die Schweizer das Geld im Blut haben?"
+    },
+    {
+      "end": 569000,
+      "speaker": "C",
+      "start": 566040,
+      "text": "Stimmt in dem Fall ja. In diesem Fall stimmt es, ja."
+    },
+    {
+      "end": 576680,
+      "speaker": "B",
+      "start": 569160,
+      "text": "Aber da gleich die codest du noch oder bist du komplett weg vom Coding? Oder machst du das noch hin und wieder oder nur mehr in irgendwelchen anderen Projekten?"
+    },
+    {
+      "end": 604010,
+      "speaker": "C",
+      "start": 577140,
+      "text": "Ich bin eigentlich ganz weg vom Coding. Es kommt vor, dass ich Schnittstellen entwickle. Da ich auch vom Vorstand her die Leitung in der Foundation, der Geschäftsstelle innehabe, helfe ich HR, also Personalabteilung und Finanzabteilung, Systeme etwas zu automatisieren. Da komme ich noch etwas in Berührung mit Schnittstellen. Aber da die strategischen Entscheidungen immer wichtiger werden, wird das Vault dort auch weniger werden."
+    },
+    {
+      "end": 639590,
+      "speaker": "B",
+      "start": 604090,
+      "text": "Also bist du eh der perfekte Ansprechpartner für uns, weil wir wollten ja eben auch die Episode eher so machen, in allen Bereichen, was so rundherum passiert, also abseits des Codings, weil es eben so ein Riesenprojekt auch geworden ist. Jetzt hast du schon gesagt, du bist sehr tief in den Zahlen drin. Kannst du uns mal so einen Rundumschlag geben, was Home Assistant eigentlich ist und auch in Zahlen, wie groß ist Home Assistant? Was macht Home Assistant? Was macht eure Organisation? Wie ist das alles aufgebaut? Für alle, die nicht schon ständig mit Home Assistant zu tun haben oder auch ich glaube es ganz viele, viele haben das irgendwie zu Hause installiert, haben aber keine Ahnung, was eigentlich da dahinter steckt für eine Organisation."
+    },
+    {
+      "end": 660710,
+      "speaker": "C",
+      "start": 640070,
+      "text": "Ja, Home Assistant ist eines der größten Open Source Projekte, sieht man auch im Octoverse. Und Home Assistant ist ja für die Smart Home Steuerung zu Hause verantwortlich, mit unserem Grund Pilar, was wir haben, Privacy Choice und das Wort, das ich nie sagen kann, Substanz, also Nachhaltigkeit."
+    },
+    {
+      "end": 680130,
+      "speaker": "B",
+      "start": 660870,
+      "text": "Das heißt, ihr seid also wirklich abseits der ganzen kommerziellen geschlossenen Systeme unterwegs. Es ist wirklich, was man sich selber installiert und klassisch eben keine irgendwie eine klassische Home Automation Cloud oder sonst irgendwas, was es sonst so ganz viel gibt von Samsung und von Thuja und anderen chinesischen Herstellern und so weiter."
+    },
+    {
+      "end": 761820,
+      "speaker": "C",
+      "start": 680130,
+      "text": "Genau, richtig. Wir sind komplett unabhängig von kommerziellen Anbietern. Darum haben wir auch die Foundation gegründet, um das sicherzustellen von den Zahlen her. Wie Andi schon sagte, wir haben über Contribution, also Freiwilligenarbeiter, die ihre Freizeit verwenden, um Dokumentationen anzupassen, um Übersetzungen zu machen, um unsere Sprachmodelle zu verbessern und vieles mehr. Da auch noch Leute, die eigentlich gar nicht in diesen Zahlen so repräsentiert sind. Home Assistant ist nur eines der Projekte, die wir an der Open Foundation haben. Ist natürlich das größte Projekt. Wir haben auch noch ESPHome, wir haben Music Assistant und ich zahle es zu Home Assistant selbst auf. Wir haben noch den Customer, also Hacks Customer Store vom Home Assistant ist auch Teil des Projektes. Und die Zahlen sind riesig. Wir haben über eine Billion Klicks im Monat auf der Webseite. Wir haben allein nur der Traffic von der Dokumentationswebseite ist über dreiig Terabyte. Und das ist eine statische Webseite. Also wir haben, wir schätzen, wir haben etwa zwei Millionen User. Der Punkt ist, wir sammeln keine Daten als ist opt in. Die Leute können freiwillig diese Daten mit uns teilen. Da ist nirgendwo etwas dahinter, dass wir genaue Zahlen sagen können."
+    },
+    {
+      "end": 765020,
+      "speaker": "B",
+      "start": 761980,
+      "text": "Aber habt ihr irgendwie Schätzungen, wie viele Installationen es gibt?"
+    },
+    {
+      "end": 768220,
+      "speaker": "C",
+      "start": 765500,
+      "text": "Die letzte Schätzung ist etwa zwei Millionen Installation."
+    },
+    {
+      "end": 781660,
+      "speaker": "B",
+      "start": 768860,
+      "text": "Ist es irgendwie regional auch, dass es irgendwie dadurch ja auch aus dem deutsch oder europäischen Raum kommt? Gibt es da irgendwie einen Schwerpunkt oder ist es mittlerweile in US genauso tief verankert?"
+    },
+    {
+      "end": 899580,
+      "speaker": "C",
+      "start": 781740,
+      "text": "Es ist eigentlich umgekehrt. Es war eigentlich sehr groß in Amerika, auch weil Paulus ist, er kommt aus den Niederlanden, ist wohnt da, brennt in Amerika, also eigentlich schon lange in Amerika. Und in Amerika war es groß. Und als ich zu Home Assistant kam, also ich habe ganz ursprünglich eigentlich mit OpenHAB angefangen und dann habe ich Home Assistant gesehen und gesehen, das ist eine komplett andere Art home Automation zu machen. Also die Software funktioniert komplett anders, wie die existierenden Lösungen, wie mit den Daten so umgegangen werden, damit automatisiert werden kann. Aber das Problem war, die deutschsprachige Integration existiert zu diesem Zeitpunkt noch nicht. Also Homematics IP zum Beispiel, was weit verbreitet ist im Dach, gab es nicht. Und bevor ich überhaupt Home Assistant zu Hause einsetzen konnte, musste ich zuerst mal sicherstellen, dass was wir in dem deutschsprachigen Raum haben, auch im Home Assistant integriert ist. Und erst dann konnte ich von openhab umsteigen zum Home Assistant. Und jetzt über die Jahre muss man sagen, ist Europa eigentlich größer geworden wie Amerika. Gerade Deutschland ist ein riesen Boom mit Home Assistant. Ich denke auch, weil es private first ist, weil alles local ist. Und Deutschland ist außerhalb Amerika einer unserer größten Markt. Ich mag das Wort nicht, weil es ja eigentlich Open source ist und wir da nicht über Märkte sprechen. Aber Deutschland ist extrem wichtig und ich bin eigentlich auch froh darum, dass ich so eingeladen werde zu Podcast. Und weil niemand sonst Deutsch spricht, kann ich wenigstens in den deutschsprachigen Raum Home Assistant und die Open Home Foundation so vertreten und sicherstellen, dass wir auch repräsentiert sind, auch wenn es etwas komisch aussieht, weil ja die Oprah Foundation aus der Schweiz kommt, dass ich der einzig eigentlich deutschsprachige Person bin, die Foundation und auch die Projekte so vertreten kann."
+    },
+    {
+      "end": 918200,
+      "speaker": "B",
+      "start": 899820,
+      "text": "Das freut uns natürlich auch besonders, weil wir haben allgemein das Problem, dass wir halt nur deutschsprachig sind und auch bewusst es so gewählt haben. Und es ist natürlich wirklich schwierig, bei coolen, großen Projekten dann irgendwen zu bekommen, der Deutsch spricht. Umso besser im größten Open Source Projekt, das es so gibt eigentlich dann dich jetzt hier zu haben, der deutsch spricht."
+    },
+    {
+      "end": 954540,
+      "speaker": "A",
+      "start": 918200,
+      "text": "Jetzt hattest du auch schon oder ich hatte, glaube ich auch schon erwähnt, Home Assistant als Open Source Projekt, Nabucasa als Firma daneben, open Home Foundation kam jetzt dazu und in dem ganzen Dunstkreis hattest du schon die Projekte wie Music Assistant Hacks, der Community Store, ESP Hope und so weiter und so fort. Kannst du einmal kurz erklären, die Zeitleiste und wie Nabucasa da jetzt reinspielt und wie dann die open home Foundation zu Nabucasa und dem Home Assistant Projekt steht? Also einmal, ich sag mal so, die."
+    },
+    {
+      "end": 1223510,
+      "speaker": "C",
+      "start": 954540,
+      "text": "Beziehung dazu nicht ganz schnell zu beantworten, aber es ist fundamental, um zu verstehen, warum braucht es die open Home Foundation und warum haben wir die Open home Foundation gemacht? Wie gesagt, wir haben alle als Entwickler angefangen. Wir hatten einen wir müssen unser Home automatisieren oder wir wollten unser Home automatisieren und wie es so ist mit Open Source. Und dann hat man die gleichen Interessen. Ich bin zum Home Assistant hinzugestoßen, das war damals schon eine Ewigkeit her. Es war relativ neu. Und ja, ich habe mit Paulus angefangen und dann hat man sich irgendwie dieselben Interessen, hat sich auch geschafft. Ich habe meine ganze Freizeit zum Leid meine Ehefrau bisschen in die Hausautomation reingesteckt, ein Hobby und es wurde immer größer und größer. Und irgendwann hatten wir das Problem, du arbeitest ein hundert Prozent, dann kommst du nach Hause, du hast Frau und Kind. Also ich habe vier Kinder, aber das Projekt ist so groß und da ist so viel am laufen, dann musst du arbeitest du auch noch die ganze Freizeit. Fast ein hundert Prozent für das Projekt, wie du gesagt hast, hast das Projekt, welches sie erstellt haben für mich und auch für meine Eltern, dass ich fähig war, meinen Kollegen und jedem Home Assistant zu geben und nicht hunderte von Raspberry Pis in meiner Freizeit auch noch updaten musste und supporten musste. So hatte ich ein System, welches Image alles gebildet habe und konnte es einfach meinen Freunden und Familien verteilen. Das war eigentlich die Grundidee vom ganzen System. Und das hat dazu geführt, auch in den Ferien, ich hatte immer mein Notebook dabei und wir hatten damals jede Woche, also all zwei Wochen Release und da gab es noch die zwischen Releases und da habe ich auch in der Ferie überall mein Notebook angeschlossen und dann bei jedem Update habe ich die Images neu gebildet und publiziert und die Updates verteilt, dass die Leute es wieder updaten konnten. Und an einem Punkt haben wir einfach, also Paulus kam zu mir und dann hey, warum machen? Versuch nicht irgendwie eine Zeit Firma zu machen und zu schauen, dass wir uns einen Lohn zahlen können. Und da können wir Vollzeit für das Projekt arbeiten und haben vielleicht dann wieder mal etwas Freizeit und etwas Zeit für unsere Familie. Und das war eine super Idee und zwar auch eigentlich nicht die Idee, uns damit irgendwie reich zu machen. Also ich fahre immer noch einen alten Seat, der meine vier Kinder füttert. Paros hat nicht mal ein Auto. Wir haben es nicht wegen Geldes gemacht, sondern wir wollten einfach. Das Projekt war an diesem Zeitpunkt ein Teil unseres Lebens und wir wollten einfach uns auf das Projekt fokussieren können und nicht immer ein hundert Prozent arbeiten und ein hundert Prozent das Projekt und aus diesem Schritt eigentlich auch wachsen. Und dann haben wir die Firma gegründet zusammen mit Ben. Also er war Cloud infrastructure Designer bei Mozilla, war ein Langzeitmitarbeiter von Mozilla, seit sie ganz klein war, bis zu ganz groß. Inzwischen ist er auch Vollzeit bei uns. Da habe ich die Firma gegründet und ich war der erste Mitarbeiter, weil Paulus damals bei Namen diese Netzwerkhersteller, whatever, ja angestellt war. Die wollten eigentlich auch etwas Smart Home machen und wollten auf Basis vom Home Assistant ihr Smart Home Produkt erstellen und haben Paulus eingestellt, um eigentlich Home Assistant bisschen zu entwickeln, aber auch Funktionen dann hinzuzufügen, die sie dann vielleicht auch nutzen konnten für ihre Oberfläche. Im Hintergrund war Home Assistant und on top war die Oberfläche, die sie entwickelt haben. Da Paulus schon bereits für Home Assistant gearbeitet hat, sagte gut, dann gehe ich all in und künd meinen Job und gehe zu Nabukasa. Und später hat DBT das Projekt. Ich meine, das Smart Home ist schwieriger Markt und sie haben zu viel Geld reingesteckt und das Projekt dann irgendwann gecancelt, weil es zu komplex war, mit all diesen Herstellern irgendwie zu dealen auf professionellem Level. Und dann haben wir Paulus angestellt und dann haben wir gesagt ja, Paulus, du brauchst jemanden fürs Frontend. Und dann habe ich einen Frontend Entwickler angestellt und dann sage ich ja, ich brauche noch jemanden für mich. Dann haben wir noch Frank eingestellt und ja, dann sind wir gewachsen, gewachsen und gewachsen und gewachsen."
+    },
+    {
+      "end": 1234590,
+      "speaker": "B",
+      "start": 1224150,
+      "text": "Kannst du mal kurz erklären, was Nabucasia wirklich macht? Also weil im Open Source Bereich ist es immer schwer Geld zu verdienen. Also wie war da eure Überlegung, wo kann man ansetzen, dass man dann wirklich Geld verdient damit?"
+    },
+    {
+      "end": 1319890,
+      "speaker": "C",
+      "start": 1234590,
+      "text": "Wir wollten eigentlich nur so viel Geld verdienen, wie wir auch brauchen, um unsere Löhne zu zahlen. Und wir haben als erstes, als ich gegründet habe, hatten wir die Home Assistant Cloud. Das ist Software as a Service und ist bisschen widersprüchlich, der Home Assistant von der Cloud weg will, aber für gewisse Provider braucht es eine Cloud für den Datenaustausch wie Alexa und Google. Die benötigen eine zentrale Anlaufstelle, dass die Services funktionieren. Und da haben wir gesagt, wir machen etwas, dass die Leute mit einem Klick diese Services verwenden können und mit dem, was sie bezahlen, können wir dann die Löhne finanzieren für die Leute, die wir als den wir Vollzeit dann anstellen, um an Home Assistant zu arbeiten. Aber es war nie die Idee, dass Home Assistant Teil von Nabuca wird. Wir haben auch nirgends auf der Webseite, außer irgendwo ganz unten ist vielleicht immer noch Nabucasa Supporter bei Nabukasa und sowas drin. Aber eigentlich die Idee war eigentlich, Nabukasa macht die Cloud und mit dem Geld können wir die Leute anstellen, die dann eigentlich für Home Assistant arbeiten. Aber Home Assistant soll nie Nabucasa gehören, das soll ein Open Source Projekt sein und wir stellen einfach die Entwickler zur Verfügung. Zumindest vielleicht ein bisschen blauäugig, aber das war ein bisschen die Idee dahinter."
+    },
+    {
+      "end": 1322170,
+      "speaker": "B",
+      "start": 1319890,
+      "text": "Und wie viele Leute habt ihr jetzt bei Nabucasa?"
+    },
+    {
+      "end": 1330490,
+      "speaker": "C",
+      "start": 1322330,
+      "text": "Wir hatten, bevor wir die Auburn Foundation gemacht hatten, waren wir fünfzig Angestellte. Also wir hatten fünfzig Angestellte."
+    },
+    {
+      "end": 1337700,
+      "speaker": "B",
+      "start": 1330970,
+      "text": "Ja, es ist sehr cool, mal fünfzig Gehälter zahlen zu können, ist schon eine Hausnummer, vor allem im Open Source Bereich schon sehr cool."
+    },
+    {
+      "end": 1383350,
+      "speaker": "A",
+      "start": 1338090,
+      "text": "Und das ist ja, ich habe mal gerade die Webseite von Nabukasa auf, also es sagt Home Assistant Cloud, also remote Connection, dass du von mobil auf deinen Home Assistant zugreifen kannst. Cloud Backup und Restore, ich glaube bis zu fünf GB oder irgendwie sowas und dann Easy Voice Assistance, Speech Processing und Better WebRTC. OK, cool. Jetzt habe ich aber das pricing mal gecheckt und das kostet sieben komma fünf null in der europäischen union sieben komma fünf null im monat und auf das ganze Jahr fünf und siebzig. Also das ist ist jetzt nicht die Welt. Also Spotify und Netflix ist teurer, sagen wir es mal so. Und damit fünfzig Gehälter zu zahlen, wenn die jetzt nicht alle gerade in Indien sitzen, wo in der Regel die Lebenshaltungskosten niedriger sind, ist schon eine Hausnummer. Hut ab."
+    },
+    {
+      "end": 1388670,
+      "speaker": "C",
+      "start": 1383350,
+      "text": "Ja, und das sind meistens auch Entwickler und als Senior Entwickler meistens dann auch."
+    },
+    {
+      "end": 1402850,
+      "speaker": "A",
+      "start": 1388670,
+      "text": "Noch okay, Home Assistant war da, Nabucasa wurde aus der Not rausgegründet, wie passt jetzt die open home Foundation zu? Weil ich habe nämlich gerade gesehen, ihr hattet vor kurzem einjähriges im April, wir hatten Abu Casa."
+    },
+    {
+      "end": 1726880,
+      "speaker": "C",
+      "start": 1402850,
+      "text": "Wir haben da auch natürlich laufend Services hinzugefügt, die Nabukasa den gleichen Gedankengut wie home assistance wir sind die gleichen Leute und darum haben alle unsere Systeme so entwickelt, dass keine Daten getrackt. Auch die End zu End Verschlüsselung war einfach das nötigste, was es gebraucht hat, um das zu realisieren und nicht mehr. Wir mussten später, weil die EU die Gesetze geändert hat und dass wir Mehrwertsteuer zahlen können in der EU, müssten wir erfassen, vor die Leute kommen, dass sie die gesetzlichen Vorgaben einhalten konnten. Bis zu diesem Zeitpunkt braucht es nur eine E Mail Adresse und mehr braucht es nicht für den Account, weil wir wollen diese Daten gar nicht haben. Wenn wir sie haben, dann geht es um das Risiko, dass wir irgendwas leaken können. Und dann habe ich alles, was sie so aufgebaut haben, war mit dem Fokus möglichst wenig Daten, möglichst einfach nur das nötigste, was zu tun ist, um diesen Service bereitzustellen. Aber mit dem Wachstum gab es bisschen das Problem, die Leute haben angefangen zu oh, Home Assistant von Nabucasa und wir haben aus der Community viele Leute eingestellt, du machst gute Arbeit, willst du nicht Vollzeit für das Projekt arbeiten? Dann bezahlen wir den Lohn und du kannst Vollzeit am Projekt arbeiten. Und ab einer Art kritische Maße hat sich die Kommunikation etwas zwischen den Entwicklern irgendwie etwas auf Nabuca verlagert, was den Leuten das Gefühl gegeben OK, Home Assistant ist ein Nabucasa Projekt. Und das war nie die Idee und das hätte es auch eigentlich nie sein sollen. Nabucas ist eine kommerzielle Firma, da gibt es Shares, also Aktien und irgendwann vielleicht, also ich Holzahlen hoffe nicht, aber kann man was passieren mit Paulus oder mit mir. Die Aktien gehen dann an die Familie und die machen dann mit dem, was ist und dann ist alles nicht am Ende nicht mehr in der Kontrolle von den Leuten, die alles mal gegründet haben. Also bei einer Firma ist immer die Möglichkeit, die Zukunft ist immer ungewiss, weil es kann immer Änderungen geben. Und dass Nabokase die Macht hat über Home Assistant, wollten wir eigentlich auch nicht haben. Und wir wollen, dass diese Projekte für immer, für alle gratis zur Verfügung stehen. Und das war auch, als sie Abukasa gegründet haben, alles, was sie für Geld angeboten haben, war genauso gratis möglich. Wir haben sogar Anleitungen bereitgestellt, wie kann ich Google und Alexa selbst einrichten, ohne dass ich Nabuca Geld bezahlen muss, weil das wollten wir nicht. Wir sind nicht die Börsen, wir sind von uns gesehen, wir sind die Guten. Und darum sagten wir immer, wenn wir etwas mit Nabuccas anbieten, dann muss es auch gratis zur Verfügung, es muss für jeder möglich sein, das gleiche auch gratis selbst machen zu können. Das war immer unser Discreto. Und dann haben wir gesagt, gut, wie stellen wir sicher, dass Home Assistant für immer gratis jedem zur Verfügung stellt und auch bleibt. Ich habe ein Jahr lang daran gearbeitet, zu schauen, ja, okay, lass uns eine Stiftung machen. Wo machen wir die Stiftung, welches Land, was hat vor und Nachteile? Aber uns war klar, wir müssen einen Rechtskörper schaffen, der diese Projekte in sich vereint und sicherstellt, dass sie auch noch existieren, wenn ich, Paulus, nicht mehr da bin, sondern für immer eigentlich die Allgemeinheit gratis zur Verfügung stellt. Auch die Forschung. Inzwischen machen wir auch Sprachsteuerung. Wir haben auch Forscher eingestellt, Mathematiker, Professoren eingestellt, die arbeiten an Algorithmen, an Datenoptimierungen und alles, was dabei herauskommt, ist auch gratis, gehört jedem. Wir stellen alles gratis zur Verfügung. Jeder kann herunterladen, jeder kann helfen. So wie letzten State of the open home, die Sprachsteuerung, dass die Universität in Island dann mithelfen konnte, zu sicherstellen, dass unsere Assistenten auch eisländisch, wie die Sprache genau heißt, verstehen kann. Und das nur möglich, weil wir die Technologie alles offen zur Verfügung stellen und jeder mithelfen kann. Und wir hoffen, dass jeder mithilft. Und wir wollten auch mehr in die Richtung mit Universitäten zusammenarbeiten. Home Assistant hat auch schon mit Stanford zusammengearbeitet in diversen Projekten, aber das wollten wir ausrollen können. Und mit einer kommerziellen Firma ist das halt nicht möglich. Nach einem Jahr Arbeit war klar, wir machen es in der Schweiz, weil dort die Stiftungen extrem stark reguliert sind. Und alles, was in der Stiftung ist, bleibt in der Stiftung. Und du kannst den Zweck der Stiftung auch nicht ändern. Und wir haben die Kontrolle nicht mehr darüber. Eine Aufsichtsbehörde, eidgenössische Stiftungsaufsichtsbehörde, kontrolliert den Vorstand. Es gibt unabhängige Revisoren, Wirtschaftsprüfer, die alles prüfen. Und wenn Paulus oder ich die Arbeit nicht gut machen werden."
+    },
+    {
+      "end": 1736520,
+      "speaker": "B",
+      "start": 1727520,
+      "text": "Und gerade zum Verständnis, Nabucasa ist aber noch eine kommerzielle Firma, die auch nicht zur Foundation gehört. Oder besitzt die Foundation jetzt Nabucasa auch?"
+    },
+    {
+      "end": 1791560,
+      "speaker": "C",
+      "start": 1736520,
+      "text": "Nein, das ist eine unabhängige Firma. Also wir haben die Stiftung gegründet, haben sichergestellt und das gar nicht so einfach. Die Frage ist eben, wem gehört ein Open Source Projekt? Kann man ja, das ist einfach. Wer immer das Open Source Projekt gemacht hat, dem gehört es, denn es ist kein Rechtskörper. Kann man stundenlang mit Anwälten diskutieren. Die IP eines Open Source Projekts, aber auch die Copyrights, das sind alles verschiedene Themen, die zusammenspielen. Die Frage Wem gehört ein Open Source Projekt? Ist gar nicht so einfach zu beantworten. Auch wenn es fast logisch wäre, wem es gehören könnte, ist es nicht der Fall. Wir wollten eigentlich eine Rechtssicherheit schaffen. Auch ein Ziel der Open Home Foundation war, dass wir eine Rechtssicherheit schaffen können für die, die Home Assistant verwenden und sicherstellen, dieses Projekt hat nun einen Rechtskörper und auch einen Rechtssitz."
+    },
+    {
+      "end": 1805500,
+      "speaker": "B",
+      "start": 1791720,
+      "text": "Das heißt, wenn ihr jetzt zum Beispiel so Forschung oder solche Dinge macht, das läuft immer dann in der Foundation ab, so grundlegende Sachen oder die jetzt nicht klassisch irgendwie cloud related sind und der Rest ist in Nabucasa, was wirklich kommerziell abläuft."
+    },
+    {
+      "end": 1843170,
+      "speaker": "C",
+      "start": 1805580,
+      "text": "Ja und nein. Nabuca ist mit, nennen sie kommerzielle Partner der Foundation. Und das bedeutet, die Produkte sind lizenziert. Also Nabucasa muss sechzig Prozent von den Einnahmen an die Foundation weitergeben. Dafür können sie Produkte erstellen, natürlich unter dem Segen der Foundation. Alles wird immer von der Foundation kontrolliert und abgesegnet. Die Foundation ist eigentlich über allem und die Produkte werden lizenziert an Nabocasa und sie können diese verkaufen müssen und entwickeln natürlich, aber müssen dafür sechzig Prozent vom Gewinn abdrücken an die Foundation."
+    },
+    {
+      "end": 1850930,
+      "speaker": "B",
+      "start": 1843730,
+      "text": "Und das habt ihr über die Lizenzen geregelt. Also ich könnte jetzt kein Konkurrenzprodukt ohne Lizenz aufbauen und das in der Cloud hosten."
+    },
+    {
+      "end": 1895370,
+      "speaker": "C",
+      "start": 1851090,
+      "text": "Home Assistant ist frei, kannst einen eigenen Hub machen, aber wenn es offiziell verkauft wird, dann muss ein Partner sein. Wir sind in Gespräche mit anderen Partnern. Es ist nicht die Idee, dass Nabokaze der einzige kommerzielle Partner ist. Das System, wie es aufgebaut ist, wir können mehrere kommerzielle Partner haben, aber die müssen die Werte der von der also sehr extrem strikt reguliert und es gelten für alle Partner dieselben Verträge. Es ist nicht so, dass Nabocasa jetzt irgendeine Sonderstellung oder irgendetwas hat. Ist auch die Idee. Und ich hoffe, bis Ende Jahr haben wir zumindest einen bis zwei weiter kommerzielle Partner, die auch Hardware in anderen Bereichen produziert, analog zu Nabucasa."
+    },
+    {
+      "end": 1926280,
+      "speaker": "A",
+      "start": 1895850,
+      "text": "Du hattest vorhin gesagt, dass bei Nabucasa fünfzig Leute waren waren. Genau das ist nämlich jetzt der Punkt. Wenn jetzt die Einnahmequelle von Nabucasa durch die Lizenzvereinbarung mit der Open Home Foundation ja geschmälert wird. Du sagst ja, wenn Nabucasa das jetzt offiziell verkauft, sechzig Prozent der Einnahmen müssen an die Open home Foundation gehen. Bedeutet das dann auch, dass ein Großteil der Softwareentwickler, die Nabocasa für die Weiterentwicklung von Home Assistant eingestellt hat, dann rüber zur open home Foundation gewandert sind, weil."
+    },
+    {
+      "end": 1938360,
+      "speaker": "C",
+      "start": 1926360,
+      "text": "Ja, richtig. Wir haben alle Entwickler, die nicht im Tagesgeschäft von Nabocasa tätig sind, die eigentlich ja schon für die Foundation sozusagen gearbeitet haben, in die Foundation verschoben."
+    },
+    {
+      "end": 1943530,
+      "speaker": "A",
+      "start": 1938600,
+      "text": "Und wie viele Leute sind dann jetzt noch bei Nabokasa? Und wie viele Leute sind in der open Home Foundation?"
+    },
+    {
+      "end": 1978010,
+      "speaker": "C",
+      "start": 1944000,
+      "text": "Wir stellen laufend neue Leute an. Im Moment sind achtzehn Leute bei Nabokasa, nach dem Split waren es siebzehn. Und in der Foundation sind im Moment zwei und vierzig Personen eingestellt. Da haben auch neue Personen eingestellt für die Foundation, für die Geschäftsstelle, Finanzen und das Ganze. Und wir werden bis Ende Jahr weitere fünf und zwanzig Job Openings machen. Also bis Ende Jahr werden weitere mindestens fünf und zwanzig Entwickler Leute, für die die Open Source Projekte arbeiten, eingestellt."
+    },
+    {
+      "end": 1981650,
+      "speaker": "B",
+      "start": 1978410,
+      "text": "Sind es Fulltime Entwickler oder also Fulltime Angestellte?"
+    },
+    {
+      "end": 1988010,
+      "speaker": "C",
+      "start": 1981650,
+      "text": "Genau, die Stiftung sollte eigentlich bis Ende Jahr zwei und sechzig Personen eingestellt haben."
+    },
+    {
+      "end": 1995280,
+      "speaker": "A",
+      "start": 1988490,
+      "text": "Was für ein Budget habt ihr jetzt da in der Stiftung? Weil die zwei und sechzig Leute, die ihr bis Ende des Jahres einstellen wollt, die werden nicht von Luft und Liebe bezahlt."
+    },
+    {
+      "end": 2007910,
+      "speaker": "C",
+      "start": 1995830,
+      "text": "Das jetzige Budget ist schweizer Franken und mit dem Update werden wir bis Ende Jahr. Es läuft alles sehr gut. Wohl ein Jahresbudget von."
+    },
+    {
+      "end": 2012790,
+      "speaker": "B",
+      "start": 2011510,
+      "text": "Fehlen bei Nullen, oder?"
+    },
+    {
+      "end": 2019510,
+      "speaker": "C",
+      "start": 2014550,
+      "text": "Richtig, das neue Budget wird zehn Millionen schweizer Franken Betrag."
+    },
+    {
+      "end": 2021510,
+      "speaker": "A",
+      "start": 2019830,
+      "text": "Woher kommt das ganze Geld?"
+    },
+    {
+      "end": 2043030,
+      "speaker": "C",
+      "start": 2021750,
+      "text": "Einerseits von lizenziertem Produkt, dann haben wir auch das work with Home Assistant, wobei man nicht unbedingt reich wird. Dann haben wir auch Spenden, also Großspenden, Leute, die zwanzig, fünf und zwanzig Dollar Franken, was eben welche Währung spenden. Und bald haben wir auch einen eigenen Merchandise Store."
+    },
+    {
+      "end": 2046070,
+      "speaker": "B",
+      "start": 2043430,
+      "text": "Was sind lizenzierte Projekte oder Produkte?"
+    },
+    {
+      "end": 2054710,
+      "speaker": "C",
+      "start": 2046310,
+      "text": "Lizenzierte Produkte sind Produkte, die über unsere Partner verkauft werden, wie die Home Assistant Cloud, Home Assistant Yellow, Home Assistant Green."
+    },
+    {
+      "end": 2059130,
+      "speaker": "B",
+      "start": 2054710,
+      "text": "Kannst du mal kurz erklären, was Home Assistant Yellow und Green ist? Sagt wahrscheinlich nicht jedem was."
+    },
+    {
+      "end": 2070610,
+      "speaker": "C",
+      "start": 2059130,
+      "text": "Home Assistant Yellow und Home Assistant Green, das sind unsere Hubs, die wir entwickelt haben, also fertig installiert mit Home Assistant daherkommen und einfach zu Hause angesteckt werden können."
+    },
+    {
+      "end": 2082090,
+      "speaker": "B",
+      "start": 2070690,
+      "text": "Also ich brauche nicht mehr meinen Raspi, den ich da irgendwie installieren muss, sondern ich kann wirklich, bekomme ein Device, was dann mein zentraler Punkt ist, mit dem ich alles steuern kann und dann Devices da dranhängen kann."
+    },
+    {
+      "end": 2087150,
+      "speaker": "C",
+      "start": 2082090,
+      "text": "Aber ganz ehrlich, wenn du eine Raspberry Pi hast, musst du kein homer Green kaufen."
+    },
+    {
+      "end": 2087630,
+      "speaker": "B",
+      "start": 2087150,
+      "text": "Klar."
+    },
+    {
+      "end": 2112830,
+      "speaker": "C",
+      "start": 2087950,
+      "text": "Und das auch wichtig, die Partner der Foundation, alle Produkte, die sie anbieten müssen, auch die gleiche Methodologie, wie wir schon hatten bei Nabucas, als wir es gegründet haben, alle Produkte müssen auch frei selbst hergestellt werden können. Das heißt, anstatt einen Home Assistant Hub zu kaufen von einem Partner, kannst du einfach einen Raspberry Pi nehmen und flashen und brauchen. Und das genau gleich gut in welchen."
+    },
+    {
+      "end": 2150630,
+      "speaker": "B",
+      "start": 2112830,
+      "text": "Größenordnungen, falls du Das weißt, weil das ist jetzt nur ein Partner, aber wie viel Stück werden da verkauft? Hast du da irgendwelche Größenordnungen in dem Bereich? Weil das ist ja so genau dieser Gap, der da geschlossen wird zwischen den, würde mal sagen Bastlern, die wir irgendwie alle sind. Wir haben eine Raspi und können damit umgehen, aber irgendwie unter Anführungszeichen normalsterbliche Leute, die eben keine Ahnung haben, was sie mit einem Raspi machen, für die ist das eine komische Platine und haben Angst da irgendwie nur das Ding anzugreifen. Die wollen vielleicht so ein Device am Ende haben. Also es geht ja dann sehr in den Consumer Bereich rein. Funktioniert das schon? Kann man da irgendwie mithalten mit den großen? Gerade wie gesagt Samsung und Co."
+    },
+    {
+      "end": 2196470,
+      "speaker": "C",
+      "start": 2151030,
+      "text": "Die Margin of Hardware ist eigentlich sehr schlecht. Also mit Hardware verdient man eigentlich nicht viel Geld. Margin, welche wir haben ist um die acht bis neun Dollar per Gerät, was am Ende übrig bleibt. Davon gehen dann sechzig Prozent zu der Foundation und vier Prozent bleiben Partner. Also Green funktioniert, ich denke es wurde bis jetzt etwa Stück produziert. Ist jetzt nicht ein riesen Scale, ist auch fein. Also die Hardware, also Nabocasa macht auch Hardware, die sonst das Risiko zu groß ist, dass es jemand anders machen würde. Zum Beispiel. Ich meine, es ist eine coole Hardware und irgendjemand muss damit anfangen."
+    },
+    {
+      "end": 2198390,
+      "speaker": "B",
+      "start": 2197430,
+      "text": "Was ist das genau?"
+    },
+    {
+      "end": 2221660,
+      "speaker": "C",
+      "start": 2198390,
+      "text": "Home Assistant Voice Preview Edition ist eigentlich unser lokaler Voice Assistant und es erlaubt eigentlich mit Technologie etwas zu spielen. Darum heißt es auch Preview Edition. Ist ein bisschen ein Experiment mit den ganzen künstlichen Intelligenz, aber auch den ganzen Sprachsteuerungen, die wir am erforschen sind zusammen mit Home Assistant."
+    },
+    {
+      "end": 2225820,
+      "speaker": "B",
+      "start": 2221900,
+      "text": "Aber läuft es dann über CPU oder ist da irgendwie so eine Mini GPU drin?"
+    },
+    {
+      "end": 2248860,
+      "speaker": "C",
+      "start": 2226220,
+      "text": "Der Voice ist nur, in Englisch heißt Satellite eine Art Satellitensystem, so der Brain, also das Hirn, alles ist Home Assistant im Hub und alle die Satelliten connecten eigentlich zum Home Assistant. So ist nicht wie eine Alexa, wo etwas mehr kann auf dem Gerät, sondern es ist eigentlich rein nur ein Mikrofon."
+    },
+    {
+      "end": 2251460,
+      "speaker": "B",
+      "start": 2250220,
+      "text": "Input Device quasi."
+    },
+    {
+      "end": 2307400,
+      "speaker": "C",
+      "start": 2251460,
+      "text": "Input Device, genau. Aber es ist die und das auch wichtig für die Partner. Das Gerät entspricht unserer Mentologie. Das heißt, jeder kann dieses Gerät nehmen, ein eigenes Gehäuse machen, das kannst du aufschrauben und auf dem Drucker. Wir haben auch Beispiele, wie auch immer das customizen. Wir haben hinten einen Port Connector, wo man auf die Platine kann und da kannst du es mit deinem eigenen basler Projekt verbinden und du bist deine Hardware und du kannst damit machen, was du willst. Und das ist eigentlich auch die Idee, wenn wir mit Partnern zusammenarbeiten, schauen wir wirklich, dass diese Partner, die Produkte lizenzieren sind von der Foundation, auch diesen Wert respektieren. Ich kenne eigentlich keine Firma oder ein Produkt, das du kaufen kannst und sagt, es ist deine Hardware. Du kannst aufschrauben, das Gehäuse verändern, du kannst es in deinen Roboter einbauen, kannst machen damit, was du willst. Ist dein Gerät, wir unterstützen es."
+    },
+    {
+      "end": 2364190,
+      "speaker": "A",
+      "start": 2307400,
+      "text": "Ich habe mich die ganze Zeit gefragt, was machen so viele Leute bei der Open Home Foundation? Wofür braucht ihr so viele Leute? Weil ihr habt ja schon enorm viel Budget zur Verfügung. Und dann habe ich einfach mal bei euch in die Jobs geguckt und da habt ihr einen Moment, ich rufe die Seite noch mal auf. Cloud Infrastruktur Engineer, E Commerce Operation Manager. Du hast gerade gesagt, ihr habt bald Merchandise. Dann gehe ich stark davon aus, dass der E Commerce Operation Manager dann da irgendwie tätig wird. Node JS Engineer. Okay, das scheint jetzt irgendwie was auch mit Home Assistant und Co. Zu tun zu haben. Digital Marketing Manager, Market Research. Also ihr geht ja da schon all in, wirklich in alle Bereiche, weil wir haben ja neben den Partnern klar die Lizenzthematiken, aber ihr habt ja auch Projekte, unter anderem dieses works with Home Assistant. Wenn ich die Webseite aufrufe, steht da ein Programm der Open Home Foundation. Was ist Work with Home Assistant?"
+    },
+    {
+      "end": 2445360,
+      "speaker": "C",
+      "start": 2364430,
+      "text": "Work with Home Assistant ist ein Zertifizierungsprogramm. Es gibt schon länger, wir haben es mehrfach überarbeitet und in der jetzigen Version bin ich sehr stolz auf dieses Programm. Und zwar ist, wenn jetzt jemand Hardware produzieren will oder produziert und sagen hey, dieses Gerät funktioniert mit Home Assistant, kann er das bei uns testen lassen. Es gibt sehr strenge Verträge und wenn alles nach unseren Vorstellungen funktioniert, dann darf er ein work with Home Assistant Batch und dieses Gerät draufdrucken. Es gibt kein Byte Labeling, wie man es bei anderen Herstellern kennt, wie Works with Google oder Works with Alexa, wo eigentlich schon reicht, wenn man die mat Zertifizierung erreicht hat oder die Zigbee Zertifizierung oder die es gibt Zigbee Bluetooth, also irgendwelche eine Zertifizierung hat und dann automatisch ja, wenn du diese Zertifizierung hast, dann bekommst du diese gratis mit dazu. Nein, es funktioniert so, die Hersteller müssen Geräte uns einschicken. Wir testen alles sehr streng nach Protokoll und es gibt dann auch Verträge mit den Herstellern, dass wenn etwas nicht funktioniert, müssen sie das reparieren. Sie müssen Firmware Updates zur Verfügung stellen und sie müssen auch unsere Werte respektieren. Das ist auch der Grund, warum wir keine cloud Produkte zertifizieren. Wir zertifizieren nur Produkte, die lokal funktionieren."
+    },
+    {
+      "end": 2543370,
+      "speaker": "A",
+      "start": 2445360,
+      "text": "Ich glaube, dieses Versprechen hat ja auch Home Assistant sehr groß gemacht. Und ich als Deutscher kann das auch sagen. Dieses Versprechen findet auch bei den datenschutzgetriebenen Deutschen sehr großen Anspruch, dass ihr ja wirklich sagt, okay, dieses ganze Home Assistant, das Betriebssystem und Die Software selbst kannst du lokal betreiben in deinem Netzwerk. Es telefoniert nicht nach Hause. Und dann natürlich, wenn du auch wirklich stark darauf achtest, welche Hardware du kaufst. Und hiervon rede ich von Glühbirnen, von Sicherheitskameras, von Temperatursensoren und allem drum und dran, die dann ohne eine eigene Hersteller App funktionieren, ohne die Cloud. Weil es gab ja auch Fälle, da wurde Hardware verkauft und irgendwann hat der Hersteller dann diese interne Cloud bei sich eingestellt und dann war eine Hardware ja gar nicht mehr nutzbar. Also deswegen, deswegen bin ich so unglaublich beeindruckt von diesem Works with Home Assistant Programm, weil eigentlich kann man ja sagen, dass die Hersteller, die da jetzt mitmachen, schon, ich sag mal, vielleicht so ein kleines Marketing for free kriegen und einen Vorteil haben. Weil wenn ich jetzt, also ich hatte letztens das Thema Videokameras, enorm großes Feld, du kannst sehr viel Geld ausgeben, aber das Riesenproblem ist, find mal eine Videokamera, die du komplett lokal steuern kannst. Steuern, also auch mit an aus lenken und allem drum und dran. Das ist gar nicht so einfach. Und auf GitHub findest du von allen Herstellern irgendwelche Leute, die irgendwas reverse engineered haben. Aber da wissen wir da alle, nach einem halben Jahr fliegt dir das um die Ohren und das funktioniert nicht mehr."
+    },
+    {
+      "end": 2635040,
+      "speaker": "C",
+      "start": 2543370,
+      "text": "Ja, also ist so, ist geschenkt. Also es kostet, wie gesagt, die sind transparent. Es kostet den Herstellern fünf hundert schweizer Franken pro Jahr am Programm dabei zu sein. Und er kann so viele Geräte zertifizieren, wie er will. Er zahlt nicht per Gerät. Das ist ein einmaliger Umkostenbeitrag von fünf hundert Franken, die sie entrichten müssen. Aber Theoband Foundation ist eine non Profit Organisation, das auch zum klarzustellen. Und das andere ist, es benefitt den User. Da ist nicht die Idee, dass wir darüber irgendwas finanzieren. Die Idee ist, dass wir in jedem Land und das Kompliz in jedem Land eigentlich für alles zumindest einen Partner haben und die Leute dann wissen, ich kann das und das und das verbauen und ich bin sicher, es funktioniert auch noch am nächsten Tag. Und da wir inzwischen sehr viele User haben, haben wir auch eine gewisse Macht bei den Herstellern und die wenden wir auch an. Also wir haben für das Programm diverse Hersteller zum Umdenken gezwungen, die gesagt ja, wir brauchen einen Account, dass man das Produkt dann mit Home Assistant verbinden kann und dann sagt nein, das zertifizieren wir nicht. Da sagt okay, wir machen ein Firmware Update, wir nehmen das raus. Sie haben diverse Produkte, die man jetzt einfach, ohne dass man ein Hersteller Login oder es mit der Cloud verbinden muss, eigentlich direkt lokal einbinden kann. Und diese macht, so mehr Leute, die wir haben, so mehr haben wir die Macht, dass wir unsere Werte auf dem Hersteller so durchdrücken können."
+    },
+    {
+      "end": 2656080,
+      "speaker": "B",
+      "start": 2635200,
+      "text": "Ja, es ist schon cool, nämlich gerade gesehen, zum Beispiel Aqara ist auch Teil des Programms, was ich mit Xiaomi schon ein wahnsinnig großer Player ist und aus China auch noch. Und der lässt sich zertifizieren bei euch. Ist schon dann sehr cool zu sehen und zeigt auch, glaube ich, was ihr bereits für den Markt macht, einfach habt in dem Umfeld."
+    },
+    {
+      "end": 2687780,
+      "speaker": "A",
+      "start": 2656080,
+      "text": "Im Endeffekt könnt ihr das ja alles nur machen, weil ihr das größte Home Automation Projekt seid, oder? Klar, OpenHab gibt es auch noch von der Eclipse Foundation, soviel ich weiß. Und am Anfang habe ich mir, bevor ich mir sowas installiert habe, auch mal angesehen, da gibt es noch Node Red und Iobroker und ich sag mal Marktbegleiter bei euch. Aber jetzt frage ich mich, wie stellt ihr das denn sicher mit dieser Hardware? Bedeutet das, ihr kriegt jetzt Beispiel wieder Videokameras, da bin ich gerade drin. Da gibt es den Hersteller Reolink, der."
+    },
+    {
+      "end": 2689860,
+      "speaker": "B",
+      "start": 2687780,
+      "text": "Ist, glaube ich auch zertifiziert ist auch."
+    },
+    {
+      "end": 2703820,
+      "speaker": "A",
+      "start": 2689860,
+      "text": "Zertifiziert ist, deswegen bin ich da auch angekommen. Bekommt ihr dann für jedes Device, was ihr zertifiziert, bekommt ihr die dann zugesendet und schaut euch die an und integriert und macht so, ich sag mal eine Standard Test Suite oder wie funktioniert das?"
+    },
+    {
+      "end": 2770450,
+      "speaker": "C",
+      "start": 2703820,
+      "text": "Richtig, genau. Also wir sind natürlich das Laufen am verbessern. Wir bekommen zwei Geräte zugeschickt über ein Zertifizierungsverfahren. Aber wir sind ja auch für Nachhaltigkeit. Ist auch einer unserer wichtigen Punkte. Sobald das Produkt getestet wurde und eigentlich als die Zertifizierung bestanden hat, dann schauen wir in die eigentlich, wer hat Interesse, das Produkt zu verwenden? Und dann geben wir das Produkt so weiter und dann können sie auch reporten, wenn etwas nicht funktioniert. So stellen wir sicher, dass wir nicht einen Haufen Elektroschrott fabrizieren, sondern dass die Produkte dann auch aktiv innerhalb der Community verwendet werden. Und das Programm sind wir am Ausbauen, so dass man sich melden kann, Produkte verteilt und dass das sichergestellt ist, da ja kommen auch die Finanzen natürlich. All diese Geräte natürlich auch ein Stück weit ein Asset sind. Genau, dass es über diesen Zeitraum, welchen wir das Gerät so haben müssen, dass das auch läuft und so weiter getestet wird."
+    },
+    {
+      "end": 2825260,
+      "speaker": "B",
+      "start": 2770530,
+      "text": "Also vielleicht auch noch mal Gratulation zu dem ganzen Programm. Auch diese fünf hundert Euro oder schweizer Franken, ist im Prinzip egal, sind ja wirklich eine sehr geringe Summe. Also weil, weil so Lizenzierungen haben ja immer auch einen sehr schlechten Beigeschmack. Die großen Firmen haben sich das dann immer rausgenommen, da sehr viel Geld zu verlangen und Zertifizierungen sind wirklich ein böses Game. Und es ist schön zu sehen, dass ihr das in einem positiven Weg macht und jetzt da nicht nur das rein als Cash Cow seht. Also das ist wirklich zu begrüßen jetzt. Das spricht auf der Seite natürlich für Qualität und Qualitätskontrolle. Wenn wir mal zum Projekt zurückgehen, habt ihr da auch irgendwie Leute im Projekt drin, also im Home Assistant Projekt, die sich um die Community kümmern, die auf Qualität im Code selbst achtgeben und da irgendwie involviert sind? Oder lasst ihr das komplett der Community über, dass die sich selbst managt in irgendeiner Form?"
+    },
+    {
+      "end": 2942830,
+      "speaker": "C",
+      "start": 2825260,
+      "text": "Wir haben Community Managerin und wir wollen, also ist noch nicht geschehen, aber die Foundation selbst ist zum Aufbau der Foundation vielleicht. Wir haben natürlich den Vorstand, dann haben wir die Geschäftsstelle, die sich eigentlich darum kümmert, dass alle Governments und alles Compliance ist, die ganze Personalabteilung, Finanzabteilung, IT intern IT und alles, was den täglichen Bedarf der Foundation, dass da die Geschäftsstelle abgearbeitet wird. Und dann haben wir das Leader Committee, das zusammengesetzt ist im Moment mit Home Assistant, also Frank am Home Assistant Department. Dann haben wir Marketing, dann Product Design, Madeleine und Marcel für Ecosystem. Und wenn alles gut läuft, sollten bald noch die Community dazukommen. Das heißt, dieses Komitee aus all diesen Projekten bestimmen eigentlich, wie die Foundation funktioniert. Der Board gibt natürlich vor, was etwa die Idee und Vision sind. Und innerhalb dieser Vision ist eigentlich das Gremium, was auch demokratisch verantwortlich, die Entscheidungen zu treffen und zu definieren, wie etwas umgesetzt wird. Und dort soll die Community auch vertreten sein. Und die Community ist auch Teil. Die Community ist das Wichtigste der open Foundation. Nebst ein Open Source Projekt ist die Community. Ohne Community wird es das alles nicht geben. Und die soll eigentlich diesem wichtigen Gremium auch vertreten sein. Das Community Department soll dann auch von. Wir haben ja diverse Community von Home Assistant, von Music Assistant, vom ESPHome. Das sind unsere drei größten Projekte, die die Community leiten, moderieren. Die sitzen dann auch in diesem Gremium und haben auch ein Mitspracherecht am Ganzen."
+    },
+    {
+      "end": 2947470,
+      "speaker": "B",
+      "start": 2942830,
+      "text": "Und alle Contributions sind immer open source und bleiben immer open source, oder? Die Regel habt ihr."
+    },
+    {
+      "end": 2947830,
+      "speaker": "A",
+      "start": 2947470,
+      "text": "Genau."
+    },
+    {
+      "end": 2956330,
+      "speaker": "C",
+      "start": 2948070,
+      "text": "Alles was die Foundation macht, ist immer open source. Niemand in der Foundation etwas, was die Foundation zahlt, als closed source machen."
+    },
+    {
+      "end": 2987990,
+      "speaker": "B",
+      "start": 2956330,
+      "text": "Weil wir hatten ja auch mal Frank Karliczek von Nextcloud in einer Episode und dem war das ja auch ganz wichtig im Nextcloud Projekt, dass es eben keine kommerziellen Teile geben darf und alles was reinkommt, bleibt eben open source. Und ich glaube, das ist halt schon fundamentaler Pfeiler, damit du überhaupt so eine große Community auch aufbauen kannst und dann irgendwie so die kommerzielle Seite oder halt alles, was mit Geld zu tun hat, irgendwie alles unter einen Hut bekommst, weil das ist ja immer das Gefährlichste. Und das hattet ihr am Anfang mit Nabukasa auch irgendwie diese Konflikte dann, die so langsam entstanden sind."
+    },
+    {
+      "end": 3066730,
+      "speaker": "C",
+      "start": 2988230,
+      "text": "Ja genau. Zeit war einfach zu groß und die Leute haben dann Home Assistant mit Nabuccasa gleichgesetzt. Das war nicht, das war nie die Idee und hätte auch nie sein sollen. Also rechtlich gesehen war es auch nicht so, aber dass die Leute dann immer sagen ja, Nabokasa möchte Geld machen und drum und dran, dann. Es ist immer lustig zu lesen, all die Kommentare und dann sagst ja, eigentlich die gleiche Leute, die das projektleitend sind, die gleichen Leute, die Nabukasa sind. Ich verstehe es, Firmen sind natürlich profitorientiert, aber Nabucasa war nie in dieser Hinsicht, vielleicht nie eine richtige Firma, die einfach auf Profit aus war. Es war eigentlich drum, Lass uns eine schöne Zeit haben, wir entwickeln Open Source. Wir wollten das alles ein bisschen umstrukturieren, um wirklich sicherzustellen, dass wir eine Struktur geschaffen haben und auch sichergestellt haben, dass diese Projekte können nie kommerzialisiert werden. Das ist unmöglich. Keine dieser Projekte kann jemals herausgehen. Also jeder, der an Music Assistant arbeitet und seine Freizeit investiert und etwas beiträgt, weiß, dieser Beitrag bleibt für immer offen. Da ist keine Firma dahinter, die etwas ändern kann, übernehmen kann. Der schweizer Staat stellt sicher, dass das Ziel der Stiftung, die wir erstellt haben, auch in zwanzig Jahren, dreiig Jahren noch genau gleich ist."
+    },
+    {
+      "end": 3084170,
+      "speaker": "B",
+      "start": 3066730,
+      "text": "Hat es da eigentlich irgendwie auch kritische Stimmen gegeben, dass das irgendwie in der Schweiz liegt? Weil gerade außerhalb der Schweiz sieht man ja die Schweiz immer so als sehr kritisch an, gerade mit den Stiftungen und wenn dann Geld im Spiel ist auch noch. Könnte man vorstellen, dass in der Community vielleicht auch irgendwie negativ gesehen wurde oder habt ihr das irgendwie abfangen können?"
+    },
+    {
+      "end": 3157440,
+      "speaker": "C",
+      "start": 3084170,
+      "text": "Ja, ich denke, die Neutralität kann man überschreiten, was Neutralität bedeutet. Aber die Neutralität hat sich dazu beigetragen, was mit Amerika passiert und allem sind wir ehrlich gesagt auch froh, dass wir diese Stiftung in der Schweiz gemacht haben. Bisschen politisch neutrales und auch ein politisch stabiles Land ist. Ja, wir haben natürlich viel gehört. Ja, das macht die nur zum Steuern zu sparen, Steuerflucht und was mir da alles noch alles mitgesagt wird. Man muss aber wissen, wir sind eine zertifizierte Non Profit Organisation, wir bezahlen gar keine Steuern, also spielt gar keine Rolle, dass wir in der Schweiz sind. Und auch wenn wir Steuern bezahlen müssen, gäbe es Länder wie Irland oder Dubai. Es gibt genug Länder, wo Steuer tiefer sind, wenn man Steuerflucht betreiben möchte. Wir haben die Schweiz WIC gewählt, weil einerseits der demokratische Ansatz, den wir auch in der ganzen Foundation Stiftung eigentlich so weitergeführt haben, aber auch weil die Schweiz, die Stiftung ist extrem stark reguliert und ist sichergestellt, dass unser Versprechen, dass diese Projekte niemals kommerzialisiert werden können, auch so einhalten können."
+    },
+    {
+      "end": 3176030,
+      "speaker": "A",
+      "start": 3157600,
+      "text": "Ich musste gerade anfangen zu lachen. Ihr gründet eine Stiftung in der Schweiz. Leute werfen euch vor, dass ihr Steuern sparen wollt und ihr sagt wisst ihr was, wir setzen noch einen drauf. Wir zahlen einfach gar keine Steuern, weil wir halt non Profit sind. Und das bringt mich so zum Lachen, weil ja, es ist ja eigentlich total wahr. Schöne Geschichte. Geschichte."
+    },
+    {
+      "end": 3277280,
+      "speaker": "C",
+      "start": 3176590,
+      "text": "Das ist das Schöne am Non Profit. Es zeigt, man bekommt nicht einfach seinen Non Profit Status, zumindest in der Schweiz nicht. Wir müssen alles darlegen, wie funktioniert alles? Wie wird das Geld eingenommen, wie ist der Geldfluss und alles das. Und wir müssen darlegen, warum gilt das als Non Profit, warum sind das keine Einnahmen? An sich war wirklich stolz darauf, dass die Steuerbehörden, auch die Rechtsabteilung gesagt haben ja nein, auch die Lizenzzahlungen, so wie wir das ganze aufgegleist haben, das sind nicht Verkäufe oder Einnahmen im konventionellen Sinn, sondern es gilt eigentlich als Art Spende, weil all diese Produkte auch gratis von jedem selbst, jeder kann ein Voice, eine Home Assistant Voice PE machen, er kann es zusammen löten, jeder kann eigene machen und er ist offen. Da ist Open Source, die Hardware macht einen eigenen Voice Assistant, verkauft den, spielt doch keine Rolle. So das bisschen die ganze Idee dahinter und damit mit dem Erhalt der Gemeinnützigkeit, also Non Profit Status und auch der Akzeptanz, wie die Stiftung finanziert wird, was ein riesen Meilenschritt, weil es gibt es bis dahin nicht. Und wir sind auch eine der ersten Stiftungen, die Open Source als Grund angeführt hat. Es ist noch gar nicht so lange her, wo eigentlich die Government, also die die schweizer Behörden gesagt ja, wir wollen, dass die ganze schweizer Behörden auf Open Source setzt und das fördert. Und das war natürlich für sie eine gute Möglichkeit, ihre Versprechen auch in Taten zu folgen."
+    },
+    {
+      "end": 3291560,
+      "speaker": "A",
+      "start": 3277280,
+      "text": "Ja gut, zum Thema public code und Public Money und Co. Lehne ich mich nicht aus dem Fenster. In Deutschland haben wir so ein paar Beispiele, wo zum Beispiel die Stadt München versucht hat, mal von Microsoft wegzukommen und auch Linux zu gehen und so. Ich sag mal so, Moment, ihr habt."
+    },
+    {
+      "end": 3295800,
+      "speaker": "B",
+      "start": 3291560,
+      "text": "Jetzt ein Bundesland, das das macht. Ja, ja, Moment, München einfach zu früh dran."
+    },
+    {
+      "end": 3319880,
+      "speaker": "A",
+      "start": 3295800,
+      "text": "Also wir haben ein Bundesland, das hat in der Presse gesagt, die machen das. Mein Kommentar dazu ist kommt Zeit, kommt Rat. Aber wenn ich auf die Webseite der Open Home Foundation noch mal gehe, dann steht da übersetzt, dass ihr in Zukunft auch eine größere Rolle als politischer Fürsprecher für den Schutz der Privatsphäre, die Wahlfreiheit und die Nachhaltigkeit von Smart Home spielen wollt. Meine nächste Frage ist, wann eröffnet ihr euer Büro in BR?"
+    },
+    {
+      "end": 3416740,
+      "speaker": "C",
+      "start": 3321140,
+      "text": "Wohl gar nicht. Nein, wir sind aktiv. Wir haben Positionspapiere erarbeitet, politische Positionspapiere. Also wir haben von eins, ich meine, die Stiftung gibt es noch nicht so lange, wir haben mehr als genug Arbeit. Wir haben ein Positionspapier verfasst, dass wir dann auch öffentlich stellen, was drum geht. Dein Gerät, deine Daten soll in diese Richtung. Es geht darum, dass wir eigentlich, wenn du ein Gerät kaufst und in deine Wohnung installiert verlierst, dass die Daten gehören dir. Die gehören nicht dem Hersteller, sondern diese Daten gehören dir und du kannst über diese Daten verfügen. Das ist eigentlich unsere erste politische Strategie, die wir so erarbeitet haben. Und wir sind eigentlich dran mit Organisationen in allen Ländern. Es ist halt schwierig als globale Stiftung überall politisch kompliziert. Jedes Land funktioniert anders. Wir können das Know how. Wir sind nicht groß genug, um das Know how für jedes Land aufzubauen, aber wir wollen mit lokalen Behörden zusammenschaffen. Wir hatten schon bereits eine Sitzung mit der Electronic Frontier Foundation, der EFF in Amerika, wo wir das Ganze auch so vorgestellt haben. Und wir wollen eigentlich, wir haben auch eine Arbeitsgruppe, eine politische Arbeitsgruppe. Wir suchen natürlich immer Leute, die mithelfen wollen. Also eine Art Aufruf, wenn jemand Interesse hat, einfach schreiben. Genau, wir wollen wirklich das Ganze aufbauen. Wir wollen Positionspapier verfassen und dann mit eigentlich lokal in den Ländern zusammen mit Institutionen, die sich auch für Konsumentenschutz einsetzen und das ganze dann hoffentlich in irgendwelche Gesetze einfließen lassen zu können."
+    },
+    {
+      "end": 3512180,
+      "speaker": "A",
+      "start": 3416740,
+      "text": "Jetzt habt ihr natürlich mit der Gründung der Open Home Foundation ja schon mega Milestone erreicht. Glückwunsch wirklich jetzt noch mal dazu. Ich meine das wirklich ernst und besonders in welcher Geschwindigkeit ihr da vorwärts geht. Hut ab. Jetzt ist es aber auf der anderen Seite so, dass ihr jetzt auch nicht die erste Foundation seid. Also einer der bekanntesten ist natürlich Linux Foundation. Ich habe gerade mal geguckt, nach amerikanischem Recht ist die Linux Foundation ebenfalls eine Non Profit Organisation, eine gemeinnützige Organisation. Und der Linux Foundation zum Beispiel, die bekommen natürlich hier und da auch mal Kritik. Und eins dieser Kritikpunkte ist zum Beispiel, da geht es auch um Geld, muss man ganz ehrlich sagen. Und die Linux Foundation mag zwar etwas größer sein als die Open Hope Foundation, aber die Kritik geht dahingehend, dass Bordsätze zum Beispiel durch hohe Mitgliedsbeiträge erkauft werden können, dass die Konzerninteressen überwiegen über Community Interessen, weil natürlich Billions Foundation mit der CNCF und Cloud Native und mit Google und Microsoft natürlich da ziemlich viel Business und Geld im Spiel ist. Und auch eine andere Kritik ist, dass die Bürokratie innerhalb der Foundation ein Großteil der Einnahmen auffrisst, einfach nur um die Organisation, um die Stiftung am Laufen zu halten. Das ist also ein self fulfilling system ist, wenn man so möchte. Ich werfe das jetzt nicht der Open Hope Foundation vor, aber wie schützt ihr euch davor? Oder wie seht ihr das? Weil ich glaube, diese Kritik, die hörst du nicht zum ersten Mal, oder beziehungsweise diese Kritik ist ja auch bekannt."
+    },
+    {
+      "end": 3618880,
+      "speaker": "C",
+      "start": 3512660,
+      "text": "Genau. Ja, ist vielleicht überraschend, aber der Begriff Foundation ist nicht, sagt eigentlich nichts aus. Und zwar in Amerika kann eine Foundation alles sein, von einer Firma hin zu einem Verein. Benutze jetzt deutsche Wörter. Es kann eigentlich alles sein. Und den Non Profit Status, den kann man beantragen, aber der ist auch nicht an irgendetwas gebunden. Amerika speziell ist weltweit in vielen Ländern auch so. Du kannst alles eine Foundation nennen. In Deutschland kannst du auch eine Foundation gründen, aber ist eigentlich ein Verein und keine Foundation. Also keine Stiftung in der Schweiz ist effektiv so das geschützt. Foundation kann nur eine Stiftung sein. Und da ist jetzt der Unterschied, eine Stiftung ist gesetzlich geregelt. Also wir können keinen Vorstandsposten verkaufen. Als Stiftung müssen wir externe Wirtschaftsberater haben, Wirtschaftsprüfer haben, die das sicherstellt. Und der Board wird überwacht von der Stiftungsaufsicht in der Schweiz. Wir sind nicht frei in was wir tun, im Gegensatz zu einer Foundation in Amerika. Du hast eine Satzung und die kannst du ändern nach Belieben, die ist nicht mal fix. Du kannst auch das Ziel der Foundation ändern. Du kannst eigentlich alles anpassen, kannst machen, was du willst. Wir können das nicht. Und es ist auch so niedergeschrieben und im Auftrag für die Stiftungsaufsicht, dass der Vorstand aus dem Open Source Bereich kommen muss und was der Vorstand genau machen muss, das als genau festgelegt. Also für uns, wenn wir das machen würden, würden wir im nächsten Jahr wohl von den Stiftungsaufsichtsbehörden einfach rausgeschmissen und andere Personen ersetzen."
+    },
+    {
+      "end": 3650180,
+      "speaker": "A",
+      "start": 3618880,
+      "text": "Habt ihr in irgendeiner Art und Weise eine Transparenzpflicht? Das bedeutet all das, was ihr an Dokumenten produziert oder veröffentlicht oder, oder, oder, müsst ihr das veröffentlichen oder, oder, oder. Wie würdest du, das ist die eine Frage und als nachfolgende Frage würde ich wie würdest du eure aktuelle Transparenz beschreiben auf einer Note von eins bis sechs, wo eins sehr gut ist und sechs ist, glaube ich, ungenügend im deutschen Schulsystem. Bin mir gerade nicht mehr sicher. Ungenügend, mangelhaft? Ich glaube ungenügend."
+    },
+    {
+      "end": 3654780,
+      "speaker": "C",
+      "start": 3650180,
+      "text": "Also nach deutschem Notensystem. Wir haben es gerade umgekehrt immer auch."
+    },
+    {
+      "end": 3656540,
+      "speaker": "B",
+      "start": 3655420,
+      "text": "Macht es wieder kompliziert."
+    },
+    {
+      "end": 3666150,
+      "speaker": "A",
+      "start": 3657100,
+      "text": "Bei uns gibt es also moment mal ganz kurz, mach ich es kompliziert. Deutschland hat zwei und achtzig Millionen Einwohner und Österreich und Schweiz machen es natürlich wieder anders."
+    },
+    {
+      "end": 3672150,
+      "speaker": "B",
+      "start": 3667910,
+      "text": "Die Schweiz dreht es um, wir haben eins bis fünf. Die Schweiz dreht es, glaube ich, um. Da ist sechs das Beste."
+    },
+    {
+      "end": 3674870,
+      "speaker": "A",
+      "start": 3673430,
+      "text": "Vielleicht einfach nur Transparenzsystem."
+    },
+    {
+      "end": 3679149,
+      "speaker": "B",
+      "start": 3675510,
+      "text": "Eins bis zehn. Macht man eins bis zehn. Eins ganz schlecht, zehn ganz gut."
+    },
+    {
+      "end": 3679910,
+      "speaker": "A",
+      "start": 3679149,
+      "text": "Ja, vielleicht."
+    },
+    {
+      "end": 3723680,
+      "speaker": "C",
+      "start": 3681030,
+      "text": "Ich kann es ehrlich gesagt nicht in Zahlen nennen, aber ich kann es in Worte fassen. Also wir sind im Moment sicher schlecht. Wir haben dort sehr viel Verbesserungspotenzial und ist nicht, dass wir nicht transparent sein wollen, ist einfach so. Im Moment arbeitet jemand an der Webseite, dass wir dann Dokumente auf die Webseite hochladen können. Das braucht einfach Zeit und wir haben so viele Webseiten. Wir haben einen, der Webseiten macht. Ist mehr eine Zeitfrage. Im Moment sind es personelle Ressourcen, aber wir wollen transparent sein und wir wollen alles publizieren, wollen einen halbjährlichen Bericht publizieren, wir wollen das Budget publizieren, wollen unsere Regulationen publizieren, auch unsere Job Openings."
+    },
+    {
+      "end": 3728080,
+      "speaker": "B",
+      "start": 3726720,
+      "text": "Verstehen die Leute hoffentlich."
+    },
+    {
+      "end": 3810980,
+      "speaker": "C",
+      "start": 3729440,
+      "text": "Unsere Job Ausschreibungen anschaust, dann siehst du die Gehälter. Wir haben eine, wir haben eine klare Gehaltsstruktur, egal welches Geschlecht. Das ist auch Teil der Steuerbefreiung für den Non Profit. Wir müssen darlegen, wie kommt das alles zustande? Da müssen wir ein System haben. Wir haben selbst entwickelt, das weltweit funktioniert. Hast du nur Stiftung in der Schweiz, ist einfach, dass du schweizer Gehälter und das ist ja in dem Sinne einfach fair zu halten. Was machst du weltweit? Wir haben Deutschland, wir haben Spanien und Spanien haben die Hälfte von dem Lohn in Deutschland zahlst du jetzt schweizer Löhne, dann ist das Pferd den Norweger gegenüber, die haben auch hohe Löhne, die können sich etwas kaufen. Aber der Spanier, der lebt einen Luxus, weil der schweizer Lohn in Spanien, das ist weit über seiner Gehaltsklasse. Wie machst du es fair, dass es weltweit für alle gleich fair ist? Da haben wir nach sehr vieler und jahrelanger Erfahrung auch mit Nabukas ein System entwickelt und den Steuerbehörden auch so vorgelegt und das wurde auch abgesegnet. Du siehst, es ist nicht ganz einfach etwas zu machen, auch als Non Profit Steuerberater freites anerkannt zu werden."
+    },
+    {
+      "end": 3845960,
+      "speaker": "A",
+      "start": 3811220,
+      "text": "Aber ich habe gerade mal die Job Ads geschaut und auch die Gehälter, die ihr veröffentlicht habt. Ich meine, ich bin jetzt in Deutschland. Deutschland ist jetzt gerade so nicht explizit aufgelistet, aber ihr habt zum Beispiel die Niederlande aufgelistet und da kenne ich ein bisschen ungefähr die Gehälter. Jetzt nicht für Central Amsterdam vielleicht, aber die Niederlande sind ja groß. Und da habt ihr jetzt für den Node JS engineer aufgerufen, was ich ein faires Gehalt finde. Also das ist jetzt kein Dumpinglohn, das ist jetzt auch nicht sechsstellig Big tech, aber finde ich völlig fair auf die erste Sichtweise."
+    },
+    {
+      "end": 3962780,
+      "speaker": "C",
+      "start": 3845960,
+      "text": "Also wir haben fünf und siebzig Prozent Regeln auf deutsch übersetzen kann. Das heißt, wir bezahlen im fünf und siebzig Prozent Market Rate die Löhne. Das heißt, wir sind im oberen Segment über die Learnzahlen. Aber für uns ist wichtig, Die Mitarbeiter sind, also ist sowieso non profit, aber auch damals bei Nabukasa, die Mitarbeiter sind kein Fleisch, das der Gewinn einbringt. Die Mitarbeiter sind als Menschen zu behandeln und sie sollen fair entlehnt werden. Es soll natürlich auch fair gegenüber der Privatwirtschaft sein, da wir gewisse Vorteile haben, wie Steuerbefreiung. Wir haben auch alle zwei Wochen den Personal Project Day, also persönlicher Projekttag. Das heißt, alle zwei Wochen am Freitag kann jeder machen, was er will auf gut Deutsch. Er kann an einem anderen Open Source Projekt arbeiten. Wir haben Leute, die auch IO Broker verwenden oder dort mithelfen und dann ist der Tag bezahlt für andere Open Source Software. Dann können sie frei investieren in ihre persönlichen Projekte, die sie auch haben. Natürlich sagen bestmöglich natürlich Open Source etwas an diesem Tag zurückgeben. Wir versuchen gute Arbeitsbedingungen zu haben und da wir non profit sind, sind die Arbeitsbedingungen halt anders. Es geht nicht darum, wie macht man mehr Geld, sondern es geht darum, was kannst du gut, dann mach das und hilf der Allgemeinheit. Mit deinen Skills kannst du der Allgemeinheit etwas zurückgeben. Wir können aber natürlich nicht mithalten mit all diesen Risikokapitalfirmen und Start ups, die können natürlich bezahlen. Also wenn jemand den fetten Gewinn des Lebens suchten, können wir leider nicht dienen. Was wir dienen können, ist ein stabiles Arbeitsumfeld, faire Löhne. Also ich finde es sind faire Löhne und das Wissen, die Passion an etwas so schönem, coolem teilzuhaben, das die ganze Welt eigentlich benefit."
+    },
+    {
+      "end": 3973660,
+      "speaker": "B",
+      "start": 3963260,
+      "text": "Jetzt hätte ich noch eine kritische Frage, wie du das siehst. Glaubst du, dass so ein Projekt wie Home Assistant auch funktionieren würde, ohne dass man so eine Foundation oder einen kommerziellen Zweig dranhängt?"
+    },
+    {
+      "end": 4124960,
+      "speaker": "C",
+      "start": 3973660,
+      "text": "Nein, das Problem ist und das hatten wir auch, der Arbeitsload ist an einem Punkt einfach zu groß. Es kann nicht mehr wachsen. Es würde dann einfach vor sich hin dampeln, wie vielleicht andere kleinere. Es ist keine Kritik, macht niemand. Alle Projekte sind toll, aber es gibt eigentlich einen Punkt, wo man kommt nicht mehr weiter. Es bleibt ein Hobbyprojekt mit der Freizeit. Wir versuchen die Leute, die ihre Freizeit daran arbeiten, wenn wir können, versuchen diese Leute anzustellen, sagen hey, du machst einen guten Job, willst du das nicht ein hundert Prozent machen? Wenn du Leute hast, die Vollzeit daran arbeiten, dann kannst du eine ganz andere Qualität von Software einfach anbieten. Anbieten kommerziell. Aber ich meine, wir haben jetzt das. Mir war ganz wichtig, als ich die Foundation erstellt habe, es ist nicht nur Home Assistant. Ich meine, Home Assistant ist das größte Projekt, es gibt die meisten Ressourcen, aber wir haben auch andere Projekte. Darum habe ich dieses Ecosystem Department erstellt, wo eigentlich die anderen Projekte auch drin sind, dass die auch vertreten sind in Leader Committee, dass die auch eine Stimme haben dort und nicht Home Assistant einfach über alles andere bestimmt, sondern die Foundation besteht aus all diesen Projekten und all diese Projekte haben auch eine Stimme innerhalb der Foundation und sollen wachsen können. Wenn wir ein Projekt aufnehmen in die Foundation, wie jetzt Music Assistant, dann nehmen das Projekt nicht einfach auf und hey, das Teil des Projekts, wir stellen Leute an, wir investieren Geld in das Projekt, sonst würden wir das Projekt gar nicht nehmen. Es wird nicht mehr lange dauern, wird auch Music Assistant einige Vollzeitangestellte haben, also Vollzeitentwickler und wir werden ganz anderen Speed in diesem Projekt hinbekommen. Wir haben ein eigenes Multiroom Protokoll entwickelt und vielleicht werden wir bald den Commercial Partner der Boxen mit dem gleichen Gedankengut Musicboxen produziert wie Nabukasa auch für Home Assistant Sachen produziert. Und das coole ist, weil wir in der Schweiz sind, sind wir fast on touchbar, weil in der Schweiz gibt das Copyright recht. In der Schweiz ist sehr moderat und wir haben keine Software Patente. Wir beugen uns auch nicht amerikanischen diesen Request."
+    },
+    {
+      "end": 4130480,
+      "speaker": "B",
+      "start": 4128320,
+      "text": "Also so Takedown Geschichten."
+    },
+    {
+      "end": 4134040,
+      "speaker": "C",
+      "start": 4130560,
+      "text": "Ja, die Takedown, die funktionieren der Schweiz auch nicht."
+    },
+    {
+      "end": 4150720,
+      "speaker": "A",
+      "start": 4134040,
+      "text": "Ja, aber ich meine im Endeffekt, also jetzt muss man glaube ich ganz stark darauf achten und achtung, ich bin kein Lawyer, bin kein Anwalt. Jetzt muss man ganz stark achten, von welcher Richtung man jetzt kommt wegen den Patenten. Wenn ich das richtig in Erinnerung habe, ist Home Assistant ja selbst unter Apache zwei Lizenz lizenziert."
+    },
+    {
+      "end": 4157920,
+      "speaker": "C",
+      "start": 4150960,
+      "text": "Genau. Also Softwarepatente und Copyright, also Lizenz Software Lizenzen sind nicht das gleiche, weil die."
+    },
+    {
+      "end": 4191500,
+      "speaker": "A",
+      "start": 4157920,
+      "text": "Apache zwei Lizenz hat ja glaube ich den Paragrafen mit drin, falls Home Assistant irgendwelche Patente in diesem Projekt hat, dass ich als Open Source, wenn ich das wegforke, dass ich dann auch die Rechte habe, diese Patente mit weiter zu nutzen und allem drum und dran. Das ist glaube ich, eines der kleinen Details, weswegen die Apache zwei einen Vorteil gegenüber der MIT Lizenz hat, zum Beispiel, weil die Patente inkludiert. Aber ich glaube, wie gesagt, ich bin kein Anwalt und ich glaube, da kommt es auch ganz darauf an, von welcher Richtung man kommt, wer das Patient hat, wer es nutzt und so weiter."
+    },
+    {
+      "end": 4201580,
+      "speaker": "B",
+      "start": 4191580,
+      "text": "Wenn du die richtig verstanden habt, du sprichst ja eher über so Sachen, die dann in der Foundation unter Umständen gemacht werden oder wenn es um irgendwelche Forschungsprojekte oder so geht. Das ist ja dann ganz unabhängig vom klassischen Coding."
+    },
+    {
+      "end": 4251790,
+      "speaker": "C",
+      "start": 4201660,
+      "text": "Genau, richtig. Es geht darum, dass Softwarepatente mit Patentrollen, was darum geht, gewisse Technologien, wenn man diese dann anwendet im Open open Source, was schwierig ist, es gibt viele Softwarepatente und man kann es programmieren und plötzlich verletzt man ein Patent, was eigentlich grundlegend ist und man gar nicht versteht, warum habe ich jetzt ein Patent deswegen verletzt. Wie zum Beispiel, wenn man Multiroom hat, muss man die Boxen synchronisieren. Da hat Sonos ein Patent drauf und da hat Google schon schmerzhaft mitbekommen, dass dort ein Patent drauf ist. Sachen wie das. Theoretisch könnte Sonos nun, wenn es eine amerikanische Foundation ist, sagen, hey, die müssten Code löschen, könnt ihr es nicht haben, dann müssen wir es löschen als schweizer Stiftung. Das Eine schweizer Hoheit ist nicht unser Problem."
+    },
+    {
+      "end": 4272350,
+      "speaker": "B",
+      "start": 4252110,
+      "text": "Ich möchte nur gerade noch mal zurückkommen auf meine Frage. Ich bin also ganz deiner Meinung, dass man kommerzielles System dahinter braucht. Vor allem, ich glaube, um Contributor in irgendeiner Form zu managen, das funktioniert glaube ich nur, wenn man kann natürlich ein benevolent dictator for life haben oder vielleicht nur ein dictator for life beim Linus oder so."
+    },
+    {
+      "end": 4278890,
+      "speaker": "A",
+      "start": 4272750,
+      "text": "Fairerweise contributor über die letzten zwölf Jahre, also die sind jetzt nicht alle gleichzeitig da am rum."
+    },
+    {
+      "end": 4309740,
+      "speaker": "B",
+      "start": 4279530,
+      "text": "Viele, viele. Also ich glaube, um ein Projekt weiterzubringen, entweder du hast eine Person, die in Ton angibt und jeden kleinsten Commit irgendwie überprüft, wie es ja in anderen Projekten auch gibt, oder du hast was Sinnvolles, so wie ihr es aufbaut. Aber ich glaube, du brauchst eine gewisse Struktur und irgendwann brauchst du auch Leute, die sich eben so um so Sachen kümmern. Wir reden da jetzt über Lizenzen und haben nur begrenzt Ahnung, aber es gibt halt dann irgendwie Leute oder wie dich, Pascal, die wirklich intensiv daran arbeiten. Und da brauchst du irgendwann professionellen Support einfach. Ich glaube, das geht ohne auch gar nicht."
+    },
+    {
+      "end": 4364140,
+      "speaker": "A",
+      "start": 4309740,
+      "text": "Mich würde aber mal was sind denn eure Pläne für das nächste Jahr, für das nächste anderthalb Jahr, für die nächsten zwei Jahre, zum Beispiel in dem ganzen Ecosystem? Das bedeutet, weil ihr habt jetzt innerhalb von relativ kurzer Zeit eine Firma gegründet, die Software Engineers anstellt, um an Home Assistant zu arbeiten mit Nabukasa. Dann habt ihr gesagt, okay, Nabukasa, irgendwie geht das hier in die falsche Richtung. Wir machen die Open Home Foundation. Also ihr habt euch ja sehr schnell weiterentwickelt und wenn ihr mit dem Speed weitermacht, frage ich mich, wie viele Firmen kommen da noch oder an welchem großen Rad dreht ihr gerade? Ihr sagt gerade Merchandise und Lizenzierung und so weiter. Also was sind eure Pläne als Foundation, um das ganze Home Assistant, Home Automation, Ecosystem. Wir entkoppeln uns mal langsam von Home Assistant, weil es ist ja weit mehr, als Home Assistant weiter in die richtige, nachhaltige, offene Richtung zu treiben."
+    },
+    {
+      "end": 4367380,
+      "speaker": "B",
+      "start": 4364140,
+      "text": "Also was Andy eigentlich fragen wollte, wie macht ihr euch unsterblich?"
+    },
+    {
+      "end": 4426770,
+      "speaker": "C",
+      "start": 4369140,
+      "text": "Das nächste große Projekt, ich hoffe, dass wir in den nächsten bis Ende Jahr vorstellen können, ist Device Database. Das ist der Codename. Ich bin nicht ganz sicher, wie es fertige Produkt heißen wird. Und zwar geht es darum, dass wir eine Datenbank haben von jedem iot Gerät. Das Ergebnis existiert mit Informationen, wie es funktioniert. Und auch es gibt natürlich verschiedene Use Case von seiner Datenbank. Aber es geht auch darum, dass man dann. Ich meine, Mozilla hat ja auch mal den Privacy IoT Blog, wo sie da vorgestellt haben, welche Geräte nicht so wirklich privacy sind und welche schon. Das gibt es leider nicht mehr. Das hat auch die Electronic Frontier Foundation gesagt und die sind auch interessiert an diesem Device. Eine Device Datenbank zusammenstellen und dann Informationen tracken. Wie ist ein Cloud Produkt, wie ist das Produkt angebunden und so weiter und so fort. Das ist eigentlich unser nächst großer Meilenstein."
+    },
+    {
+      "end": 4439050,
+      "speaker": "B",
+      "start": 4426770,
+      "text": "Könnt ihr da noch Feature Request einbauen? Ich hätte gern so eine Datenbank, wo ich dann auch den Stromverbrauch sehe. Das fehlt mir noch irgendwie bei Devices. Was haben sie für einen Stromverbrauch? Vielleicht kann man das nur mit integrieren, aber ich wollte die nicht unterbrechen."
+    },
+    {
+      "end": 4493840,
+      "speaker": "C",
+      "start": 4440740,
+      "text": "Friture Requests sind willkommen. Wir sind ja auch als eines der wenigen Open Source Projekte, haben wir eine effektive Product and Design Abteilung. Wir machen User Research und die kann man auch über Discord erreichen. Und die sind immer offen für feature Requests. Es wird immer alles aufgenommen. Und die Idee ist, open Source hat das Problem, da sind Entwickler dran, die entwickeln und die haben einen anderen View auf Sachen wie User. Und die Produktabteilung soll diesen Gap schließen und nicht nur schauen, was die Entwickler, die etwas kontributen oder etwas beisteuern können, sondern auch die Stimmen, die eine gute Idee haben, aber nicht fähig sind, etwas beizusteuern. Und die Idee ist, dass wir eigentlich vor allem das Beste zusammen machen und unsere Produkte, Projekte, was auch immer, damit benefitieren können, dass jeder eine Stimme."
+    },
+    {
+      "end": 4506560,
+      "speaker": "A",
+      "start": 4494560,
+      "text": "Das ist die falsche Herangehensweise beim Wolfgang. Den musst du jetzt und hier verhaften und sagen, Wolfgang, das Projekt ist noch nicht öffentlich, wir suchen noch einen Key Driver, der uns hier tatkräftig unterstützt."
+    },
+    {
+      "end": 4517120,
+      "speaker": "B",
+      "start": 4506880,
+      "text": "Es soll ja was weitergehen. Das ist vielleicht nicht die beste Idee, aber ich habe mir schon mal überlegt, so eine Datenbank selber zu bauen, mit den Stromwerten, irgendwie einfach eine GitHub Repo oder so zu machen."
+    },
+    {
+      "end": 4569340,
+      "speaker": "C",
+      "start": 4517920,
+      "text": "Wir haben die Datenbank und da kann man es erweitern und dann später kann man auch zurück in Home fließen. Dann weiß man, das Gerät kann das und kann dann helfen, bessere Entscheidungen zu treffen oder zu schauen, ja, wie möchte ich etwas automatisieren? Ich meine, die Use Case von so einer Datenbank sind groß, aber es ist wichtig. Es ist nicht hersteller driven device Datenbank, sondern es ist eine foundation driven Datenbank. Und uns ist wichtiger, was die User zu etwas sagen als andere Leute. Also auch, dass man Geräte bewerten kann. Gibt da diverse Ideen, aber ich denke, diese Datenbank wird sicher ein großer Meilenstein sein, auch hinsichtlich, wenn man dann anfangen kann zu sagen, dieses Gerät ist einfach Privacy Horror, kauf das lieber nicht, don't."
+    },
+    {
+      "end": 4583230,
+      "speaker": "B",
+      "start": 4569340,
+      "text": "Use it für Andis Kameras, dann, dass er schneller da einen Weg findet. Jetzt hat Andi schon ein Jahr gesagt, wenn du noch mehr in die Zukunft blickst, so visionsmässig, habt ihr da auch irgendwas, irgendwie Weltherrschaft oder sowas, was man üblicherweise hat?"
+    },
+    {
+      "end": 4591470,
+      "speaker": "C",
+      "start": 4583710,
+      "text": "Meine Vision ist, dass wir in drei Jahren eigentlich zumindest auf Platz zwei sind auf dem Markt."
+    },
+    {
+      "end": 4592990,
+      "speaker": "B",
+      "start": 4591630,
+      "text": "Wer ist jetzt auf Platz eins?"
+    },
+    {
+      "end": 4608430,
+      "speaker": "C",
+      "start": 4593710,
+      "text": "Apple HomeKit. Ich denke, es ist ein super Produkt, muss man fairerweise sagen. Vielleicht können wir es mal verdrängen, aber mit dem Budget und mit der Macht von so einer Firma ist richtig hart. Und das Produkt, muss man fair sagen, Apple Produkte funktionieren auch locker."
+    },
+    {
+      "end": 4620860,
+      "speaker": "B",
+      "start": 4611620,
+      "text": "Apple stirbt sowieso. In den nächsten drei Jahren werdet ihr sehen, es geht den Bach runter, entwickeln nichts mehr neues. Ich bin sowieso kein Apple User, dann passt es schon."
+    },
+    {
+      "end": 4622260,
+      "speaker": "A",
+      "start": 4620860,
+      "text": "Aber ihr wollt auf Platz zwei oder."
+    },
+    {
+      "end": 4623660,
+      "speaker": "B",
+      "start": 4622260,
+      "text": "Ihr seid jetzt schon auf Platz zweite?"
+    },
+    {
+      "end": 4627780,
+      "speaker": "C",
+      "start": 4623660,
+      "text": "Nein, also ich will auf Platz zweite. Das ist meine Vision, die anderen."
+    },
+    {
+      "end": 4629540,
+      "speaker": "B",
+      "start": 4628180,
+      "text": "Wo seid ihr jetzt aktuell?"
+    },
+    {
+      "end": 4633060,
+      "speaker": "C",
+      "start": 4629860,
+      "text": "Ich glaube, Verge hat uns auf Platz vier gelistet."
+    },
+    {
+      "end": 4636260,
+      "speaker": "B",
+      "start": 4633060,
+      "text": "Ah, okay, dann gibt es und was ist da noch vor euch?"
+    },
+    {
+      "end": 4639420,
+      "speaker": "C",
+      "start": 4636260,
+      "text": "Kann nach dem E nachschauen, der kann es linken."
+    },
+    {
+      "end": 4652800,
+      "speaker": "B",
+      "start": 4639420,
+      "text": "Okay, ja, verlink wir noch. Aber wundert mich. Also mir wird jetzt gar nichts einfallen, aber wahrscheinlich halt so dieses integrierte wie Apple, das hast du halt automatisch und bist du irgendwie automatisch drin. Wenn du einen Samsung Fernseher kaufst, bist du automatisch in diesem Samsung Universe drin."
+    },
+    {
+      "end": 4710580,
+      "speaker": "C",
+      "start": 4653360,
+      "text": "Das lustige ist, mein Home ist ja verkauft worden. Zuvor wollten sie uns kaufen und wir haben eigentlich sehr viele Angebote erhalten für Risikokapital. Sie in Abu Kasa gegründet haben, haben sie uns tief aus die Tür eingerannt mit Risikokapital. Wir haben immer alles abgel. Viele haben gesagt, ihr seid nicht sehr. Ich versuche jetzt mal nette Worte zu finden. Nicht sehr intelligent, dass ihr Home Assistant in die Foundation steckt und es nie wieder rausnehmen könnt. Wir hätten wahrscheinlich inzwischen eine Villa und ein Segelboot und was nicht alles. Aber es war nie unser. Wir wollten nie das große Geld damit machen. Ist immer das Projekt, das Herzblut, das zusammen, das Augensource war für uns immer an erster Stelle, auch im Abukhalsa. Drum war es manchmal etwas hart zu lesen, wenn da Leute ja, die haben nur Geld im Sinn und drum und dran. Und."
+    },
+    {
+      "end": 4724420,
+      "speaker": "B",
+      "start": 4713620,
+      "text": "Das heißt, es hat nie von der Mentalität geklappt. Also ihr hättet es grundsätzlich nicht jetzt ausgeschlossen, aber es hat einfach nie funktioniert von den Interessen und von den Zielen, die man sich jeweils gesetzt hat, auf."
+    },
+    {
+      "end": 4727540,
+      "speaker": "C",
+      "start": 4724420,
+      "text": "Der einen oder auf eurer Seite das Projekt zu verkaufen."
+    },
+    {
+      "end": 4732890,
+      "speaker": "B",
+      "start": 4728100,
+      "text": "Ja, jetzt mit Investoren oder so in irgendeiner Form das nochmal mehr zu skalieren."
+    },
+    {
+      "end": 4777310,
+      "speaker": "C",
+      "start": 4733610,
+      "text": "Investoren wollen etwas. Niemand gibt irgendetwas, ohne etwas zu wollen. Und was die wollen, ist hier in diesem Fall relativ einfach zu sagen. Sie wollen die Daten. Diese Daten sind mehr wert als Gold. Darum hat Google immer noch ihre Smart home Lösung, was eigentlich ein Witz ist, was sie alles können. Aber diese Daten sind so unheimlich viel Geld wert. Du kannst eine Summe nennen und das wird dir bezahlt. Das absolut nicht das Problem. Aber wir wollten unabhängig sein. Wir wollten unsere Interessen galt dem Projekt und nicht reich zu werden. Sind vielleicht noch eine alte Schule."
+    },
+    {
+      "end": 4827700,
+      "speaker": "B",
+      "start": 4778670,
+      "text": "Also Pascal, vielen Dank dafür, dass du jetzt am Zugersee nur mit einem Paddelboot oder mit einem Ruderboot da und nicht mit einer Segelyacht leider unterwegs sein kannst. Aber danke auf jeden Fall für die ganzen Einblicke. Es war super spannend auch mal zu sehen, was bei so einem Projekt eben alles aussenrum an Governance und an Regulatorien und Struktur aufgebaut wird. Man sieht es auch an den ganzen Job Ads, wo ihr überall hingeht und wie breit das Ganze ist, wenn man sich professionell aufstellen will am Markt und auch muss wahrscheinlich, damit ein Projekt gut funktioniert. Also ganz abseits von dem klassischen Community driven Open Source, was natürlich die Basis darstellt. Aber es ist natürlich noch viel, viel mehr dabei. Also danke für deine Einblicke. Hast du noch irgendwelche Wünsche oder wenn du jetzt das Sprachrohr hast an unsere Community, die du gern loswerden würdest, bitte."
+    },
+    {
+      "end": 4891310,
+      "speaker": "C",
+      "start": 4827700,
+      "text": "Benutzt das Projekt, so mehr Leute das Projekt benutzen und sendet auch auf freiwilliger Basis die Nutzerdaten. Also die sind anonymisiert, weil dadurch haben wir auch, wenn wir Zahlen haben, können wir auch bei den Herstellern vorbeigehen und hey, wir haben so eine große Userbasis. Euer wir können unsere Werte besser in der Industrie durchsetzen. Und wer das Projekt unterstützen will, wie gesagt, eigentlich alles, was man kaufen kann, kann man auch gratis haben. Wir sind dankbar für jeden, der hey, auch wenn ich es vielleicht nicht brauche, ich kaufe es. Das unterstützte Projekt. Wir haben bald einen Merchandise Store, wo wir hoffentlich und das war mein alleinigen für den Store transparent drauf schreiben, wenn du dieses t Shirt kaufst, dann geht zehn Franken an die Foundation für ihren Zweck. Also sobald der Merch Store verfügbar ist, schaut rein. Wenn es etwas ist, was euch gefällt und ihr das Projekt unterstützen wollt, unsere Arbeit, dann bin ich happy und bedanke mich ganz herzlich."
+    },
+    {
+      "end": 4942000,
+      "speaker": "B",
+      "start": 4891310,
+      "text": "Okay, perfekt. Super. Also verwendet alle Home Assistant. Ich habe es auf Raspberry Zero sogar laufen, funktioniert tadellos und muss bisschen herumprobieren, aber es funktioniert. Es geht wirklich auf ganz kleiner, kleiner Hardware, sondern wer sich noch gar nicht mit dem Thema beschäftigt hat, wir haben mal eine Episode, die Nummer drei und zwanzig gemacht, wo wir ganz allgemein über Home Automation sprechen, natürlich auch über Home Assistant, aber verwendet einfach mal Home Assistant. Ist super einfach zu installieren und dann kann man einfach mal loslegen und mit einem simplen Temperatursensor oder einem smarten Licht. Pascal, vielen Dank nochmal für die ganzen Informationen. Wir verlinken natürlich alle wichtigen Links und auch die Discord Community, die du erwähnt hast, natürlich in unseren Show Notes und alle Links, die du sonst verwendet hast, damit mal die Leute direkt losstarten können, wenn sie wollen. Also vielen Dank und für alle anderen, die uns zuhören, hoffentlich bis nächste Woche."
+    },
+    {
+      "end": 4942920,
+      "speaker": "A",
+      "start": 4942000,
+      "text": "Tschüss zusammen."
+    },
+    {
+      "end": 4943560,
+      "speaker": "C",
+      "start": 4943000,
+      "text": "Tschüss."
+    },
+    {
+      "end": 4944280,
+      "speaker": "B",
+      "start": 4943800,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
