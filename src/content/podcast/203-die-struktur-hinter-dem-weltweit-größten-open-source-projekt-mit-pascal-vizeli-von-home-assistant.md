@@ -91,7 +91,10 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/3JZfoOVpeFdUq3xVgAgvKk
-tags: []
+tags:
+- Code mit Impact
+- Open Source
+- Interview
 title: "#203 Die Struktur hinter dem weltweit gr\xF6\xDFten Open Source Projekt mit\
   \ Pascal Vizeli von Home Assistant"
 transcript_raw: ''
