@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/3c5a319c-fcb0-472d-acec-57c086ca8874/engineering-kiosk-203-die-struktur-hinter-dem-weltweit-gr%C3%B6%C3%9Ften-open-source-projekt-mit-pascal-vizeli-von-home-assistant
 apple_podcasts: https://podcasts.apple.com/us/podcast/203-die-struktur-hinter-dem-weltweit-gr%C3%B6%C3%9Ften-open-source/id1603082924?i=1000716269173&uo=4
 audio: https://audio1.redcircle.com/episodes/f7081461-571c-4820-a740-de1546b1cb37/stream.mp3
 chapter:
