@@ -85,7 +85,7 @@ speaker:
   transcriptLetter: A
 - name: Wolfi Gassler
   transcriptLetter: C
-- name: Sebastian Röhl
+- name: "Sebastian R\xF6hl"
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/3SXV9oLjWfXMICXNwhQINs
 tags:
@@ -94,7 +94,7 @@ tags:
 title: "#202 Indie-Hacking, Build in Public & der Traum vom eigenen Produkt mit Sebastian\
   \ R\xF6hl"
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/202-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=eF-dtCCHhw0
 
 ---
