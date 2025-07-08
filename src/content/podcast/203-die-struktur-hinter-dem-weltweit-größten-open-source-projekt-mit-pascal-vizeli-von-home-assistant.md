@@ -102,7 +102,7 @@ tags:
 title: "#203 Die Struktur hinter dem weltweit gr\xF6\xDFten Open Source Projekt mit\
   \ Pascal Vizeli von Home Assistant"
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/203-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uBt4b7rnAqQ
 
 ---
