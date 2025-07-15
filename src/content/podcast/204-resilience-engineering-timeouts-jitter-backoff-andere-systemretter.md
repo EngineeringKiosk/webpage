@@ -78,7 +78,10 @@ speaker:
 - name: Andy Grunwald
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/5Ojl9IbixJeNxRptrmAnkc
-tags: []
+tags:
+- Backend
+- Software Engineering
+- DevOps
 title: '#204 Resilience Engineering: Timeouts, Jitter, Backoff & andere Systemretter'
 transcript_raw: ''
 transcript_slim: ''
