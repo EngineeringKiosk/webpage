@@ -2649,6 +2649,18 @@ to = "/podcast/episode/203-die-struktur-hinter-dem-weltweit-größten-open-sourc
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/204"
+to = "/podcast/episode/204-resilience-engineering-timeouts-jitter-backoff-andere-systemretter?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep204"
+to = "/podcast/episode/204-resilience-engineering-timeouts-jitter-backoff-andere-systemretter?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
