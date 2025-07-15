@@ -1,0 +1,1262 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3843,
+  "audio_url": "https://cloud.inlupus.at/s/PBpQmadPwZoY7HY/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9546242,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "8f7c410c-4597-41c4-80cf-f2b1616f00a8",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 73200,
+      "speaker": "A",
+      "start": 3760,
+      "text": "Kurze Wann hast du zum letzten Mal Timeouts definiert? Genau, dachte ich mir eigentlich auch. Default Werte reichen doch leicht aus. Und dann kam der Andi um die Ecke. Die banalen Einstellungen wie Timeouts und Treatrise sind nämlich Herzstück von Resilience Engineering, von Connection Read und Idle Timeouts bis hin zu Circuit Breakern und Token Buckets. Wir besprechen, was null Komma eins Prozent Fehlertoleranz für das Design ganzer Softwarearchitekturen bedeutet. Vor allem, wenn man die berühmte Aussage von AWS CTO Werner Vogelsmith everything fails all the time. Also los geht's mit einer Episode, in der Andi mich wieder einmal überzeugt hat, dass ein einfacher Begriff wie Timeouts eine ganze Episode wert sind. So, Andy, du bist ja der Meister der Komplexisierung. Komm, ist das ein Wort, Komplexisierung von Themen komplexer zu machen, als sie offensichtlich eigentlich so sind? Also es sind ja dann immer so Themen, so wie heute Timeouts, Retries, wo ich mir so denke, ja, haben wir in drei Minuten abgehandelt. Du willst eine ganze Episode drüber machen? Warum? Und warum machst du die Themen immer so kompliziert?"
+    },
+    {
+      "end": 91470,
+      "speaker": "B",
+      "start": 73200,
+      "text": "Ich mache etwas, was man normalerweise nicht machen sollte. Eine Frage mit einer Gegenfrage beantworten. Deswegen. Wie viel Sachen in der Softwareentwicklung dauern fünf Minuten? Wolfgang, du kennst ja sehr wahrscheinlich das Wort ach komm, mach ich dir in fünf Minuten. Oder warum dauert das so lange? Es dauert doch nur fünf Minuten. Also wie viel Elemente und Aufgaben in der Softwareentwicklung dauern wirklich fünf Minuten?"
+    },
+    {
+      "end": 96590,
+      "speaker": "A",
+      "start": 91470,
+      "text": "Ja, ziemlich wenig, weil eigentlich den Copilot prompt schreibe da in zwei Minuten hin."
+    },
+    {
+      "end": 101910,
+      "speaker": "B",
+      "start": 96590,
+      "text": "Okay, und wie oft machst du dann back and forth vibe coding mit dem Fehler und schmeißt das wieder in die."
+    },
+    {
+      "end": 106270,
+      "speaker": "A",
+      "start": 101910,
+      "text": "Ei und Co Agentic Coding ist das mal gar nicht. Wipe Coding."
+    },
+    {
+      "end": 119090,
+      "speaker": "B",
+      "start": 106270,
+      "text": "Aha. Schau mal, Moment mal, komplexisierst du gerade die ganze Thematik? Du sagst nicht, du lässt das Problem von wem anders fixen. Du nennst das jetzt Agentic Coding. Okay, verstehe. Also sind wir doch wieder auf derselben Spur."
+    },
+    {
+      "end": 130690,
+      "speaker": "A",
+      "start": 119170,
+      "text": "Aber jetzt erklär mal, warum glaubst du, dass es ein wichtiges Thema ist und eine ganze Episode wert ist? Weil ein Timeout ist ein Wert irgendwo, oder das ist sogar ein Default wert. Meistens brauche ich mich doch gar nicht drum kümmern."
+    },
+    {
+      "end": 209100,
+      "speaker": "B",
+      "start": 131090,
+      "text": "Und genau aus diesem Grund, weil du diese Aussage triffst, denke ich, ist es eine Episode wert. Weil das ist schon wieder eine komplette Lüge. Also ich hoffe nicht, dass du dich in der Uni, wenn du mal in einer Gastvorlesung in Informatik hältst und sagst, ja, immer wenn ihr einen Netzwerk Call mach, seht zu, dass ihr einen Timeout nehmt. Aber wisst ihr was, da braucht ihr gar nicht drauf achten, denn es ist ein Default wert. Ich hoffe, das sagst du nicht, denn dann würden wir vielleicht nur noch zukünftige Wipe Coder erziehen oder lehren. Punkt ist aber, und jetzt kommen wir mal zu der Antwort zu deiner Frage, das ist mal wieder so ein Thema, da denken ziemlich viele Leute, die haben Licht am Fahrrad. Wenn man da aber mal tiefer reingeht, ist das wieder so eine Exploding Head Emoji, so nach dem Motto, dein Kopf ist auf, dein Gehirn kommt raus und brennt oder explodiert. Weil die ganze Sache geht nämlich viel tiefer. Und besonders, wenn wir mal in die Themen Monolith versus Microservice und Software Design und Achtung, Softwarearchitektur einsteigen, sind das Keyfragen, um hinten raus sehr teure Ausfälle zu vermeiden oder nicht? Denn so wie du deine Art von Coden inzwischen Agentic Coding nennst, habe ich auch einen Namen dafür. Heute machen wir mal einen kleinen Teil zum Thema Resilience Engineering, dann bin ich."
+    },
+    {
+      "end": 291090,
+      "speaker": "A",
+      "start": 269100,
+      "text": "Gespannt, ob mein Kopf explodiert. Ich glaube übrigens, by the way, dass Agentic Coding dir bessere Timeout setzt als ich mir selber, weil ich hatte gerade kürzlich ein Problem, dass eben kein Timeout gesetzt war und mir daher die Container immer um die Ohren geflogen sind, weil es irgendwelche Orphan Prozesse gegeben hat, die Nizauber eben wegen fehlenden Timeout nicht dann schlussendlich beende."
+    },
+    {
+      "end": 310920,
+      "speaker": "B",
+      "start": 291960,
+      "text": "Moment, an dieser Aussage gibt es schon wieder so viel zu, wie sagt man auf Englisch, zu unpacken. Nur weil du ein Timeout hast, heißt das ja nicht, dass deine Prozesse nicht Orphan sein können. Also ein Timeout sagt, ja, ich höre hier auf, aber ein Timeout sagt ja nicht, ich breche den kompletten Prozess, der da läuft, ab."
+    },
+    {
+      "end": 329770,
+      "speaker": "A",
+      "start": 311080,
+      "text": "Ja, in dem Fall war es ein Timeout von einem Sub Process Command und da bricht das Ding dann durch. Die Sub Processes aber schlussendlich, warum die stecken geblieben sind, war wieder ein klassisches Timeout auf der Netzwerkebene. Aber wie gesagt, man merkt schon, wenn man da nicht genauer drauf blickt, das sind immer ganz böse Bugs, die man da entwickelt."
+    },
+    {
+      "end": 341850,
+      "speaker": "B",
+      "start": 329770,
+      "text": "Das sind nicht nur böse Bugs, das sind schreckliche Bugs, weil A, kann man die Kacke testen, b, muss man natürlich auch mal ein bisschen darauf achten, weil man möchte mit dieser Art von Bugs natürlich nicht umgehen."
+    },
+    {
+      "end": 344730,
+      "speaker": "A",
+      "start": 342090,
+      "text": "Hast du jetzt gesagt, man kann sie testen oder man kann sie nicht testen?"
+    },
+    {
+      "end": 393510,
+      "speaker": "B",
+      "start": 344980,
+      "text": "Ja, man kann sie testen, man kann immer alles testen, nur die Frage ist nur, wie viel Geld schmeißt du drauf und wie viel Aufwand packst du da rein? Aber es ist sehr, sehr schwer zu testen. Und warum, da kommen wir gleich zu. Es ist aber auch so, dass die meisten Leute sagen, ja, ich renne immer in den Timeout. Ja, dann ist die Lösung ja, ich erhöhe den Timeout. Ja, warum das nicht der Fall ist, klären wir gleich. Aber nenn mir doch mal eine Software, die du heutzutage schreiben würdest, die ohne einen Request an ein anderes System auskommt. Und System ist hier definiert als API oder von mir aus auch lokaler Prozess auf dem Server. Also alles, was dein Quellcode selbst verlässt, das ist ein System. Welches System oder welche App, die du heutzutage programmieren würdest, kommt ohne einen Call an ein anderes System aus?"
+    },
+    {
+      "end": 409800,
+      "speaker": "A",
+      "start": 393670,
+      "text": "Ich hätte jetzt gerne gesagt, als Beispiel, Freund von mir hat so ein KI Fernglas entwickelt, das Vögel automatisch erkennt, wenn man durchblickt. Aber ich vermute, das ist zwar offline das Ding, aber ich vermute, dass da intern so viele Timeouts im Spiel sind, dass das wahrscheinlich sogar komplexer ist als jedes andere System."
+    },
+    {
+      "end": 431210,
+      "speaker": "B",
+      "start": 410280,
+      "text": "Mit hoher Wahrscheinlichkeit gibt es da einen Prozess, was dann irgendwie so Image Recognition macht und der hat das wahrscheinlich nicht in seiner eigenen Software embedded oder ähnliches. Also da fängt es ja dann schon an. Und genau das meine ich. Oder wenn du jetzt von auch einem lokalen LLM sprichst, dann wirst du ja mit hoher Wahrscheinlichkeit irgendwo Trainingsdaten haben. Du machst dann einen einen externen Syscall oder sowas."
+    },
+    {
+      "end": 441570,
+      "speaker": "A",
+      "start": 431530,
+      "text": "Ja, vor allem du hast auch in der Hardware Ebene hast du natürlich Timeouts, wenn du mit den verschiedenen Komponenten kommunizierst. Und da hast du natürlich ganz viele Protokolle auch mit Timeouts."
+    },
+    {
+      "end": 471580,
+      "speaker": "B",
+      "start": 441570,
+      "text": "Ich meine, jetzt redest du über ein Hardware Produkt, aber auch wenn ich an eine klassische mobile App spreche oder ähnliches. Oder es reicht schon, wenn du ein sqlite File auf der Festplatte liegen hast und das ist nicht in deinem Source code embedded. Das ist ja auch schon cool. Naja, aber Punkt ist, und den habe ich jetzt gerade gemacht, moderne Cloud Systeme oder moderne Systeme sind einfach voll von externen Calls und somit lassen sich da Ausfälle nicht mehr vermeiden, sondern, also Ausfälle sind nicht die Ausnahme, sondern Ausfälle sind normal. Wie einer meiner nicht Vorbilder, ich weiß."
+    },
+    {
+      "end": 473820,
+      "speaker": "A",
+      "start": 471580,
+      "text": "Es, es kommt jetzt Werner Vogels, logisch."
+    },
+    {
+      "end": 542920,
+      "speaker": "B",
+      "start": 473820,
+      "text": "Natürlich, ja, im Thema Resilience Engineering ist der CTO von AWS natürlich ganz vorne dabei mit seinem famous quote everything fails all the time. Und ja, er hat ja recht, gefühlt lesen wir jede Woche auf Hacker News, dass Google down ist, Vercel ist down, Cloudflare ist down, was weiß ich nicht alles. Und das hat natürlich in der Regel damit zu tun, dass externe Calls zu fremden Systemen fehlen. Denn was externe Systeme sind oder warum die fehlen, hat ja Gründe. Da sind Server im Spiel, Netzwerke, Load Balancer, verschiedene Software, vielleicht auch selbst geschriebene Software, irgendwelche operating Systems, vielleicht von Linux auf Windows. Wir haben also mit verschiedenen Settings zu kämpfen oder ganz simpel manuelle Fehler von System Administratoren, egal ob die dann infrastructure as Code oder Configuration Management mit Ansible und Terraform nehmen. Punkt ist, wenn da irgendwo ein Fehler drin ist, dann propagiert er sich halt automatisch auch durch. Und genau da kommen wir dann natürlich jetzt zum Thema Architektur und Design. Design ist nicht, wir machen den Button grün, sondern Architektur Design und Software Design. Das Ziel sollte halt sein, eine Architektur oder ein Design zu wählen, welche diese Art von Fehler halt reduziert. Und da sprechen wir drüber."
+    },
+    {
+      "end": 577870,
+      "speaker": "A",
+      "start": 542920,
+      "text": "Jetzt hätte da natürlich noch eine Frage, weil wir sprechen ja natürlich jetzt schon von sehr komplexen Systemen und wir gehen da jetzt auch recht tief dann natürlich rein in die Software Ecke. Wenn du mit einer Software startest, wäre deine Herangehensweise, sowas schon mitzudenken? Ich spreche jetzt nicht von irgendeinem Riesensystem, wo du mit drei hundert Leuten dann drei Monate dran arbeitest, sondern mit irgendeinem kleineren Software Projekt, das aber dann produktiv laufen soll. Würdest du da sowas schon mitdenken oder würdest du das dann eher agil schrittweise machen und wenn du dann an die Punkte kommst, vielleicht irgendwo was mitdenken oder vielleicht sogar auf die Default Werte vertrauen?"
+    },
+    {
+      "end": 588230,
+      "speaker": "B",
+      "start": 577950,
+      "text": "Meine Antwort geht in zwei Richtungen. Erstens denke ich nicht, dass wir über komplexe Systeme sprechen, sondern wir können auch hier ganz einfach schon über eine klassische Web App sprechen, die eine Connection zu einer Datenbank hat. Das reicht schon."
+    },
+    {
+      "end": 592430,
+      "speaker": "A",
+      "start": 588230,
+      "text": "Kann ja auch komplex schon sein. Wenn Datenbanken im Spiel sind, sind immer alles komplex, oder?"
+    },
+    {
+      "end": 645870,
+      "speaker": "B",
+      "start": 592830,
+      "text": "Natürlich, natürlich. Ich habe jetzt eigentlich nur komplex mit mehreren Komponenten, Microservice und serviceorientierte Architekte, blablabla. Aber es kann auch ganz einfach sein, du hast eine Webseite, die mit einer Datenbank spricht. Das reicht ja schon, weil du hast einen externen Call. Und die zweite Thematik, bedenke ich sowas von Anfang an? Ich würde sagen, die Fragestellung im Hinterkopf zu halten, ist eine gute Sache. Ich glaube, am Anfang solltest du eher dich darauf fokussieren, die ganzen Sachen zu schippen und dich auf den, zum Beispiel auf den Default Wert bei Timeouts verlassen. Und dann später kannst du dich um Resilience kümmern. Weil was ist nämlich, wenn du einfach nie ein Outage hast? Dann kannst du auch erst mal sagen, Okay, ich investiere jetzt keine zwei Wochen und teste meine Resilience Thematik hier aus, sondern du schippst einfach einfach und bewegt sich einfach noch vorwärts, bis du einen Ausfall hast und dann machst du es. Oder Achtung, falls das Backlog mal leer ist, können wir uns darum kümmern. Das wird natürlich immer passieren, dass das Backlog leer ist. Also das würde mich mal interessieren. Geht mal in unsere Discord Community. Wie oft hattet ihr schon ein leeres Backlog? Also ich glaube ich noch nie."
+    },
+    {
+      "end": 671630,
+      "speaker": "A",
+      "start": 645870,
+      "text": "Okay, also normalerweise gehen wir schon an die Sache ran, alles funktioniert und dann kommt man meistens an den Punkt, wenn man es nicht schon vorher mitgedacht hat, irgendwas funktioniert nicht oder man sieht, irgendwo gibt es Probleme und es knatscht irgendwo. Bei Connections zu anderen Microservices ist das überhaupt ein Problem, weil dann wird halt die Connection noch mal gemacht oder der Request. Heutzutage hat eh schon alles Retries eingebaut, also wo sind meine Probleme?"
+    },
+    {
+      "end": 728820,
+      "speaker": "B",
+      "start": 671710,
+      "text": "Ja genau, dieser Retry ist ja schon das Problem oder kann zu einem Problem führen. Also ich meine, ob es ein Problem ist, dass deine App zu der externen Applikation keine Connection aufbauen kann und zum Beispiel an einen Timeout rennt, das kann ich dir nicht sagen. Das kommt natürlich auf den Use Case drauf an. Ich weiß ja nicht, was du da hast, aber nehmen wir mal die klassische Web App, die connectet zu der Datenbank, die will irgendwelche Daten lesen, kann die Daten nicht lesen, dann wird mit hoher Wahrscheinlichkeit ein er vorne dem User ausgespielt. So, und jetzt sagst du, jede App hat schon retry drin. Das würde ich auch mal in Frage stellen, weil da kommen wir nämlich gleich zu. Jetzt wird der Retry sofort gemacht, ohne eine Pause dazwischen und dann wird die Datenbank gehämmert bzw. Die Datenbank kriegt ganz viele Anfragen, retourniert, wieder ein Fehler, es wird wieder versucht. Dann ist die nächste Frage, wann hören wir denn mit dem retry auf? Dann ist die nächste kann sich die Datenbank denn erholen? Also nehmen wir mal an, die Datenbank hat einen Ausfall, die Web Apps können keine Connection zur Datenbank aufbauen und zeitgleich schalten wir Werbung auf ProSieben. Prosieben, dieser Privatfernsehsender, kennst du noch?"
+    },
+    {
+      "end": 730180,
+      "speaker": "A",
+      "start": 728900,
+      "text": "Weil davon gehört ja."
+    },
+    {
+      "end": 760250,
+      "speaker": "B",
+      "start": 730260,
+      "text": "Das bedeutet, ziemlich viele Clients warten gleichzeitig auf ein Ereignis oder auf eine Ressource und das ist die Datenbank, die ist ja gerade down. Jetzt kommt die Datenbank wieder hoch, also du als Systemadministrator machst systemctl, restart my database, dann ist die Datenbank wieder verfügbar und alle Clients, alle Requests schlagen zeitgleich zu. Sowas nennt man das sundering heard problem. Das bedeutet, ganz viele Clients wollen die Ressource auf einmal haben. Was meinst du eigentlich? Wie gut deine Datenbank damit klarkommt."
+    },
+    {
+      "end": 773040,
+      "speaker": "A",
+      "start": 760250,
+      "text": "Ja, als datenbankmensch sage ich natürlich, ich habe jetzt die Connections begrenzt und dann werden einfach keine neuen Connections aufgebaut und es wird gemütlich weitergearbeitet und alle neuen Connections werden nicht mehr erstellt und die Clients werden ignoriert."
+    },
+    {
+      "end": 776960,
+      "speaker": "B",
+      "start": 773120,
+      "text": "Wir haben vor kurzem über deine side Projects gesprochen. Wie viel davon ist wirklich implementiert worden?"
+    },
+    {
+      "end": 780480,
+      "speaker": "A",
+      "start": 777120,
+      "text": "Ich glaube, es gibt einen guten Default Wert von maximale Connections."
+    },
+    {
+      "end": 836490,
+      "speaker": "B",
+      "start": 780480,
+      "text": "Naja, aber das, was ich gerade gesprochen habe, das ist die Realität. Bei Trivago hatten wir mal einen Fall. Und zwar Trivago hat eine ganze Zeit lang, und ich muss zugeben, ich weiß nicht, ob das immer noch so ist, weil ich arbeite da seit ein paar Jahren nicht mehr, aber Trivago hat eine ganze Zeit lang wirklich, wir waren abhängig von unseren Caches. Wenn alle Caches neu gestartet wurden und die Caches leer hochkamen, haben alle Clients einen cash Miss bekommen. Und wenn die cash Miss bekommen haben, sind die zur Datenbank gelaufen und haben sich versucht, den Wert zu holen, um ihn dann in den Cash zu schreiben. Und das war sehr, sehr ähnlich zu dem Thundering hört Problem, was ich gerade beschrieben habe. Die Datenbank hat dann einmal so einen riesen Traffic Burst oder so ein Traffic Spike bekommen, hat einmal gemacht und dann mussten wir Glück haben oder nicht, ob die Datenbank dann auch wieder ausatmen konnte. In der Regel hat sie es nicht geschafft. Und dann war das nämlich so ein kaskadierendes Event, dass wir mit leeren Caches hochkamen, die Datenbank abgeschossen haben und so weiter und so fort."
+    },
+    {
+      "end": 847770,
+      "speaker": "A",
+      "start": 836490,
+      "text": "Und lass mir mal raten, die Caches haben mit jedem neuen Request, das sie bekommen haben, wieder einen Request nach hinten geschickt zum Backend, oder wenn ich es lokal nicht beantworten kann, schicke ich es weiter ans Backend."
+    },
+    {
+      "end": 850730,
+      "speaker": "B",
+      "start": 847770,
+      "text": "Na natürlich, also diese Art von Problemen."
+    },
+    {
+      "end": 851530,
+      "speaker": "A",
+      "start": 850730,
+      "text": "Die ist jetzt nicht selten."
+    },
+    {
+      "end": 859670,
+      "speaker": "B",
+      "start": 851690,
+      "text": "Und besonders, wenn du mehrere Komponenten hast, dann, also ich sag mal jetzt eine microservice Architektur mit zehn oder fünf Komponenten, die dann so eine Kette bilden."
+    },
+    {
+      "end": 865430,
+      "speaker": "A",
+      "start": 859830,
+      "text": "Und was kannst du dann dagegen machen, gegen so ein Thundering Hurt Problem? Warum heißt das eigentlich Thundering Hurt Problem?"
+    },
+    {
+      "end": 911200,
+      "speaker": "B",
+      "start": 865750,
+      "text": "Sehr gute Frage. Ich habe ChatGPT einfach gefragt, weil ich es einfach nicht weiß. Das Thundering Hurt Problem heißt so, weil es bildlich an eine stampende Herde, also eine Herde von Tieren, zum Beispiel Bisons erinnert, die plötzlich alle gleichzeitig losrennen, wenn ein Auslöser, zum Beispiel ein Knall kommt, so ein Held. Aber gute Frage, was kann man damit machen? Also ich meine, da kommt genau Resilienz Engineering ins Spiel. Also dann lass uns mal ein bisschen nah reingehen und zwar fangen wir fangen wir mal mit den Basics an. Du hast eine Web App und du hast eine Datenbank und die Web App baut ein Request zur Datenbank auf. Du hast nichts konfiguriert. Aus irgendwelchen Gründen braucht die Datenbank eine Minute dreiig, um eine Antwort zu machen. Wann hast du das letzte mal eine Minute dreiig auf die Response deiner Webseite gewartet?"
+    },
+    {
+      "end": 915820,
+      "speaker": "A",
+      "start": 911440,
+      "text": "Ich hätte jetzt gar nicht gesagt gestern im Online Banking, aber sogar die sind bisschen schneller geworden mittlerweile."
+    },
+    {
+      "end": 998770,
+      "speaker": "B",
+      "start": 916140,
+      "text": "Naja, du merkst schon, also wenn man lange braucht, um eine Anfrage zu beantworten, dann ist das ja schon eine Art Failure, denn allein diese neunzig Sekunden haben ein paar Auswirkungen. Zum Beispiel die Request selbst brauchen länger bzw. Werden gar nicht beantwortet. Wenn eine App auf eine Antwort auf einen Request wartet, wird eine Ressource gehalten, nämlich eine Connection auf der Datenbankseite. Also da wird etwas reserviert. Wenn das viele machen, dann hast du ziemlich viele stehende Connections, weil jede Connection dauert ja neunzig Sekunden. Die Ressourcen, sei es Memory Threads oder Verbindungen oder teilweise auch informelle Ports, die sind halt alle auch begrenzt und dabei kommt es dann zu einer sogenannten Contention, also um ein Wettstreit um die Ressourcen. Punkt ist aber die User Experience auch mega kacke. So, wie geht man der ganzen Sache jetzt einfach vor? Und da hatten wir schon initial drüber gesprochen. Wir sprechen jetzt mal über Timeouts. Ein Timeout sagt einfach, du sagst der Web App, du gibst der einfach eine Zahl mit, wenn die eine Datenbank Connection aufmacht. Das ist zum Beispiel dreiig Sekunden. Das bedeutet, du definierst die maximale Zeitspanne, die deine Web App auf die Fertigstellung einer Anfrage wartet, also auf die Anfrage der Datenbank. Und die Timeouts können wirklich dann für alles genommen werden. Für Remote Calls und Remote calls ist in diesem Fall der Call an die Datenbank. Für System Calls, also wenn du zum Beispiel die Git executable auf deinem Linux System ausführst oder oder oder. Und da hast du ja schon gesagt, da verlässt du dich eigentlich auf den Default Wert von deiner Library. Ist das richtig?"
+    },
+    {
+      "end": 1001090,
+      "speaker": "A",
+      "start": 998770,
+      "text": "Ich verlasse mich eigentlich überall auf Default Werte."
+    },
+    {
+      "end": 1010810,
+      "speaker": "B",
+      "start": 1001090,
+      "text": "Was hast du denn für ein Timeout? Also weil Timeout ist ja leider, und jetzt kommt wieder das Exploding Head Emoji, nicht gleich Timeout, das weißt du Wolfgang, oder?"
+    },
+    {
+      "end": 1022100,
+      "speaker": "A",
+      "start": 1010810,
+      "text": "Ja, das Problem ist ja grundsätzlich mal, habe ich überhaupt einen Timeout? Also ich gehe jetzt davon aus, ich habe einen Default Timeout, aber vielleicht habe ich auch gar keinen Timeout, wie zum Beispiel bei meinem Sub Process Problem, was ich in der Intro erwähnt habe."
+    },
+    {
+      "end": 1035050,
+      "speaker": "B",
+      "start": 1022330,
+      "text": "Ja, ich meine, wenn dein Client kein Timeout hat und wir sprechen, wir nehmen jetzt einfach mal die Datenbank und nicht dein Sub Process. Die Datenbank wird mit hoher Wahrscheinlichkeit auch einen Max Connection Timeout haben, das wahrscheinlich."
+    },
+    {
+      "end": 1041450,
+      "speaker": "A",
+      "start": 1035050,
+      "text": "Sehr, sehr hoch ist bei einer Datenbank, weil kann da die Connection wahrscheinlich auch ewig oder ziemlich lange offen halten."
+    },
+    {
+      "end": 1043690,
+      "speaker": "B",
+      "start": 1041530,
+      "text": "Genau, teilweise ja auch forever."
+    },
+    {
+      "end": 1051610,
+      "speaker": "A",
+      "start": 1044570,
+      "text": "Wahrscheinlich muss sie aktiv sein in der Connection natürlich, aber grundsätzlich, ja, schönes Wort, aktiv sein."
+    },
+    {
+      "end": 1075530,
+      "speaker": "B",
+      "start": 1051610,
+      "text": "Und zwar diese Überleitung, als hätten wir sie geplant. Also ich meine, ein Timeout ist ja gleich nicht ein Timeout. Lass mal über Timeouts sprechen. Und zwar gibt es drei Arten von verschiedenen Timeouts. Es gibt einmal den Connection Timeout, es gibt einmal den Read oder den Request Timeout und es gibt einmal den Idle Timeout. Und wenn du jetzt in einer Client Library einen Wert setzt, frage ich immer, welchen Timeout setzt du da bzw. In diesem Wert, welche Timeout sind da drin?"
+    },
+    {
+      "end": 1077360,
+      "speaker": "A",
+      "start": 1075530,
+      "text": "Erklär mal diese Timeout. Warte."
+    },
+    {
+      "end": 1084070,
+      "speaker": "B",
+      "start": 1077670,
+      "text": "Ein Connection Timeout ist die maximale Zeit, die ein Client darauf wartet, eine Verbindung zu deinem externen System aufzubauen."
+    },
+    {
+      "end": 1089070,
+      "speaker": "A",
+      "start": 1084070,
+      "text": "Also das initiale Timeout oder das initialen Starten und davon das Timeout, ja, das."
+    },
+    {
+      "end": 1212470,
+      "speaker": "B",
+      "start": 1089070,
+      "text": "Connect, so nach dem Motto, das bedeutet DNS, TLS, Authentifizierung, Autorisierung, so den ganzen Kladderadatsch, der dazugehört, bis ich eine Verbindung zur Datenbank habe und jo, jetzt kann ich eine Query senden. Und da ja Netzwerk dazwischen ist und User und Passwort und Verschlüsselung und so weiter und DNS, es ist immer DNS, das Problem wissen wir, kann das natürlich auch in die Binsen gehen oder vielleicht ist die Leitung einfach nur sehr lang. Vielleicht machen wir gerade von China nach Amerika oder ähnliches. Der zweite Timeout ist der Request Timeout oder der Read Timeout. Also das ist die maximale Zeit, die ein Client wartet, nachdem die Verbindung bereits besteht, um auf eine Antwort vom Server zu warten. Das ist also eigentlich deine Datenbank Query, Select name from users und so weiter. Dann gibt es den dritten Timeout, das ist der Idle Timeout. Das ist die Zeit, die eine inaktive Verbindung offen gehalten wird, bevor sie automatisch geschlossen wird, ohne dass ein neuer Request gesendet wird. Also eigentlich kannst du ein Client macht eine Verbindung auf, da beginnt der Connection Timeout, der Verbindungsaufbau mit dem Server, also TCP, Handshake und so weiter. Dann steht die Verbindung, dann wird die Query gesendet, da beginnt der Request Timeout, dann kommt die Serverantwort zurück, dann wird die Antwort erhalten vom Client und dann beginnt der Idle Timeout. Wer schließt wann die Verbindung? Weil in der Regel hast du entweder eine persistente Verbindung vom Client zum Server oder der Server schließt die Verbindung irgendwann oder der Client schließt sie halt irgendwann. Aber ich habe da gerade von Contention gesprochen oder von Resource Contention, weil wenn du nämlich kein idle timeout hast, dann hältst du ja ganz viele Connections und Ressourcen und allem drum und dran und irgendwann sind die halt begrenzt und dann voll und somit kann die Datenbank keine neue Anfrage mehr bedienen und somit wird dann beim nächsten Call dein Connection Timeout fehlschlagen. Und jetzt die große wenn du einen Timeout definierst in einer Client Library, was inkludiert der Timeout? DNS oder TLS, Handshake, persistente Connections und so weiter und so fort. Also wie viel Client Libraries hast du schon gesehen, wo du alle drei spezifisch definieren kannst? Oder wie viel Dokumentationen hast du schon gelesen, wo explizit gesagt wird, welcher dieser Timeouts da inkludiert ist in dieser einen Zahl?"
+    },
+    {
+      "end": 1226130,
+      "speaker": "A",
+      "start": 1212630,
+      "text": "Ich habe halt ständig diese Antworten. Ich würde gern sagen, weil ich würde gerne sagen, bei Datenbanken, da kenne ich mich aus, aber sogar bei Datenbanken habe ich mich selten um diese Werte eigentlich bemüht, muss man sagen. Außer es war mal ein Problem und dann eher Serverseite."
+    },
+    {
+      "end": 1231690,
+      "speaker": "B",
+      "start": 1226130,
+      "text": "Jetzt sagst du, du verlässt dich auf die Default Werte, auf die Sane Defaults. Was ist denn guter Wert für ein Timeout?"
+    },
+    {
+      "end": 1233850,
+      "speaker": "A",
+      "start": 1231690,
+      "text": "Ja, der, der eingestellt ist, schon klar."
+    },
+    {
+      "end": 1237250,
+      "speaker": "B",
+      "start": 1233850,
+      "text": "Aber wenn man absolut. Sind dreiig Sekunden okay?"
+    },
+    {
+      "end": 1253550,
+      "speaker": "A",
+      "start": 1237250,
+      "text": "Ja, das ist voll kontextabhängig natürlich. Also je nachdem, in was für einem Umfeld ich bin und wie wichtig mir die Connection zum Beispiel ist und wie lang der User warten kann. Ist es ein Background Prozess, ist es synchron mit dem FR, mit dem User? Spielt natürlich alles mit rein."
+    },
+    {
+      "end": 1280050,
+      "speaker": "B",
+      "start": 1253550,
+      "text": "Kontext ist die eine Thematik, aber generell ist es sehr, sehr tricky, einen richtigen Wert zu finden. Denn hast du einen hohen Wert, ist es irgendwie sinnlos, einen Timeout zu setzen, denn du hältst ja die Ressourcen und du setzt ja den Timeout, um die Ressourcen nicht lange zu halten. Nutzt du niedrigen Wert, hast du sehr wahrscheinlich erhöhte Load oder ein erhöhtes Risiko für Ausfälle, weil dann die Anfrage halt nicht in Zeit bearbeitet werden kann und du deswegen einen Fehler nach oben propagiert in die Web App."
+    },
+    {
+      "end": 1287000,
+      "speaker": "A",
+      "start": 1280200,
+      "text": "Aber wie finde ich dann raus, was eine gute Werte ist? Also jetzt sagst du, okay, das ist schwierig, aber in der Realität, wie schaffe ich es dann?"
+    },
+    {
+      "end": 1292080,
+      "speaker": "B",
+      "start": 1287080,
+      "text": "Ja, sehr, sehr gute Frage. Also da habe ich jetzt nicht die Antwort, aber ich habe einen guten Startpunkt."
+    },
+    {
+      "end": 1297720,
+      "speaker": "A",
+      "start": 1292080,
+      "text": "Und zwar für was habe ich da im Podcast, du als Spezialist, du musst jetzt die einzige wahre Antwort haben."
+    },
+    {
+      "end": 1344420,
+      "speaker": "B",
+      "start": 1297720,
+      "text": "Bitte pass mal auf, du kommst jetzt gerade hier mit der independence Antwort, mein Kontext und ich muss jetzt die Antwort haben. Das geht so nicht. Deswegen darf ich also immer wenn du sagst, das kommt auf den Kontext drauf an, kann ich auch sagen, das kommt auf den Kontext drauf an. Okay? Das ist wie so ein Bucket System. Achtung, Bucketsystem haben wir gleich auch noch mal, aber naja. Die erste Frage ist, wie viel Fehler kannst du akzeptieren? Wie viel Prozent deiner Requests können failen? Und wenn ihr mit dieser Frage zu eurem Produktmanager, zu eurer Produktmanagerin geht und die sagt null, wissen wir alle, das funktioniert so nicht. So funktioniert leider die Welt nicht, denn Werner Vogel sagte was, Wolfgang, es fehlt alles und immer. Ganz genau. Deswegen kann man eigentlich als Grundregel mit folgender Zahl starten. Sagen wir mal null Komma eins Prozent deiner Anfragen können in die Binsen gehen, können fehlschlagen."
+    },
+    {
+      "end": 1349500,
+      "speaker": "A",
+      "start": 1344420,
+      "text": "Ist es deine Annahme oder ist es ein Wert, der für dich okay wäre, mit dem zu starten?"
+    },
+    {
+      "end": 1351340,
+      "speaker": "B",
+      "start": 1349820,
+      "text": "Das ist für mich jetzt erstmal OK."
+    },
+    {
+      "end": 1354500,
+      "speaker": "A",
+      "start": 1351420,
+      "text": "Weil in der Realität fehlen wahrscheinlich mehr."
+    },
+    {
+      "end": 1372350,
+      "speaker": "B",
+      "start": 1354500,
+      "text": "Als null Komma eins Prozent oder wahrscheinlich fehlen da mehr. Aber warum diese null Komma eins? Erzähle ich dir jetzt, wenn du mich mal ausreden lässt und mir zuhörst und sein muss. Wir nehmen einfach mal die Latenz, also die Tail Latency des Downstream Services. Das bedeutet in diesem Fall unsere Datenbank."
+    },
+    {
+      "end": 1374070,
+      "speaker": "A",
+      "start": 1372350,
+      "text": "Was ist denn Tail Latency?"
+    },
+    {
+      "end": 1406910,
+      "speaker": "B",
+      "start": 1374070,
+      "text": "Sage ich dir jetzt. Die Tail Latency oder die Latenz des Downstream Services beschreibt die langsamsten Antwortzeiten des Systems. Kurzum, wir messen die response Zeiten der Datenbank. Wie lang braucht die Datenbank die Antwort zu liefern? Sagen wir mal dreieinhalb Sekunden. Das ist das in Statistik, das p, das neun und neunzig Komma neun Prozent Teil der Antwortzeiten deiner Datenbank. Deswegen sagten wir auch null Komma eins Prozent der Requests können fehlen, weil neun und neunzig Komma neun plus null Komma eins sind wie viel? Ein hundert Prozent. Richtig Wolfgang?"
+    },
+    {
+      "end": 1409390,
+      "speaker": "A",
+      "start": 1406910,
+      "text": "Und was ist es bei Zentil? Kannst du das mal erklären?"
+    },
+    {
+      "end": 1416860,
+      "speaker": "B",
+      "start": 1410190,
+      "text": "Jetzt geht's hier in die Statistik. Also stell dir vor, jeden Request, jeden."
+    },
+    {
+      "end": 1419100,
+      "speaker": "A",
+      "start": 1416860,
+      "text": "Request misst du mit, was ich ja hoffentlich mach."
+    },
+    {
+      "end": 1436940,
+      "speaker": "B",
+      "start": 1419340,
+      "text": "Natürlich, wir haben alle volle Observability. Und jetzt sagst okay, wie viel deiner Anfragen werden in welcher Zeit beantwortet? Weil du willst ja sagen, OK, wie viel meiner Anfragen sind sehr langsam und wie viel meiner Anfragen sind sehr schnell?"
+    },
+    {
+      "end": 1462440,
+      "speaker": "A",
+      "start": 1437100,
+      "text": "Also wenn wir jetzt mal annehmen, wir haben ein tausend Requests und wir haben das p neun und neunzig komma neun oder neun und neunzig, wie heißt denn das mit Komma neun Perzentil? Das wird schwierig. Also p neun und neunzig Komma neun, wie viele Requests fallen dann aus unserer Messung heraus, wenn wir ein tausend Requests messen oder die wir beachten?"
+    },
+    {
+      "end": 1478300,
+      "speaker": "B",
+      "start": 1462600,
+      "text": "Das p neun und neunzig Komma neun Perzentil besagt, dass nur null Komma eins Prozent deiner Requests schlechter, also höher sind, als der Rest der Requests."
+    },
+    {
+      "end": 1487740,
+      "speaker": "A",
+      "start": 1478300,
+      "text": "Also höher im Sinne von der Request Time. Das heißt, ein einziges Request darf höher sein als der P wert."
+    },
+    {
+      "end": 1488540,
+      "speaker": "B",
+      "start": 1487820,
+      "text": "Ganz genau."
+    },
+    {
+      "end": 1490300,
+      "speaker": "A",
+      "start": 1488540,
+      "text": "Wenn wir ein tausend Request haben."
+    },
+    {
+      "end": 1493900,
+      "speaker": "B",
+      "start": 1490300,
+      "text": "Genau. P wäre der Median. Der Median überall deine Requests."
+    },
+    {
+      "end": 1497400,
+      "speaker": "A",
+      "start": 1493900,
+      "text": "Das heißt fünf hundert Requests sind schneller, fünf hundert Requests sind langsamer."
+    },
+    {
+      "end": 1533020,
+      "speaker": "B",
+      "start": 1497630,
+      "text": "Ganz genau. Das ist das p percentil oder das ist generell die Definition von percentil. Und deswegen sagen wir, nehmen einfach die latency der Datenbank für das p. Also null komma eins Prozent der Requests, die an die Datenbank gehen, dauern länger als die drei komma fünf Sekunden, die wir gerade genommen haben. Und wenn wir jetzt drei komma fünf Sekunden auf dem Client als Timeout einstellen, dann schlagen laut unseren Messungen null komma eins Prozent, also bei deinen ein tausend Requests sind das dann zehn. Eins Request schlägt dann fehl."
+    },
+    {
+      "end": 1546260,
+      "speaker": "A",
+      "start": 1533340,
+      "text": "Und das klingt jetzt vielleicht relativ wenig, aber wenn man sich überlegt, eine Million Requests, sind es schon ein tausend Requests in den null Komma eins Prozent. Also das ist dann schon gar nicht zu wenig, obwohl wir da schon in der Kommastelle drin sind."
+    },
+    {
+      "end": 1573000,
+      "speaker": "B",
+      "start": 1546260,
+      "text": "Und natürlich kannst du dann anfangen, deine Datenbank queries zu optimieren, dein Schema zu optimieren und so weiter und so fort. Und dann mit Messungen den Request Timeout natürlich weiter runterzudrehen. Denn drei Komma fünf Sekunden auf den Datenbankanspruch zu warten, ist natürlich jetzt im Webvorteil, jetzt im Web Kontext oder im App Kontext natürlich ziemlich lange. Auch LLMs, wenn du jetzt kein deep thinking machst, antworten ja schneller. Und der Grund ist, warum die, okay, die faken das so ein bisschen, weil die die Antwort raus streamen, während sie die Antwort noch produzieren, aber das ist ein anderes Thema."
+    },
+    {
+      "end": 1604060,
+      "speaker": "A",
+      "start": 1573240,
+      "text": "Aber man sieht schon auf jeden Fall, um überhaupt eine Entscheidung treffen zu können, muss man mal das Ganze messen. Und da stellt sich schon wieder die Frage, wie viele Leute messen denn wirklich ihre Request Times oder ihre Timeouts oder Fehler. Fehler lockt man vielleicht noch, aber bei der Performance geht da wahrscheinlich der Prozentsatz schon nach unten von Projekten, die das wirklich machen. Aber wie lockt man denn das ganze am einfachsten jetzt? Also ich habe eine Applikation, wie bekomme ich das mit ihr hab zwar mein Log, wo keine Ahnung, Errors drinnen sind und solche Sachen, aber wie komme ich zu diesen Performance Metriken?"
+    },
+    {
+      "end": 1657300,
+      "speaker": "B",
+      "start": 1604060,
+      "text": "Also jetzt machen wir hier ein zwei zu eins, weil ich sage, was du für ein monitoring Stack hast, aber das einfachste, was du schon mal machen kannst, strukturiertes Logging einbauen. Das bedeutet, immer wenn du einen Retri hast oder immer wenn du eine Datenbankanfrage sendest oder wenn die Datenanfrage zurückkommt, kannst du einfach ein Log database request received und dann einfach die Zeit, die es gedauert hat, in einer strukturierten Log ins File schreiben. Das kannst du dann später irgendwie mit irgendeinem GREP oder SED oder was weiß der Geier nicht parsen. Das wäre so das einfachste, ohne jetzt einen großen Monitoring mit Prometheus oder ähnliches zu haben. Natürlich kannst du die ganze Thematik auch mit Histograms oder native Histograms bei Prometheus über, ich sag mal die klassischen Standard Observability, Cloud, native Compute Foundation Tools und so weiter darstellen. Da kommt es wirklich ganz darauf an, was du da hast, was du für eine Library hast, was du für eine Applikation hast. Aber log schreiben, das bedeutet eine Datei auf die Disc ist erst mal eine super Sache."
+    },
+    {
+      "end": 1671720,
+      "speaker": "A",
+      "start": 1657460,
+      "text": "Wenn man es ganz ordentlich machen will, springt man jetzt am besten in die Episode ein hundert eins, wo wir über Opentelemetry gesprochen haben, in Severin Neumann. Der beschreibt auch, wie man ganz einfach einsteigen kann. Ganzen Monitoring Wahnsinn, würde ich fast sagen."
+    },
+    {
+      "end": 1680520,
+      "speaker": "B",
+      "start": 1671800,
+      "text": "Das gibt dir auf jeden Fall schon mal einen guten Start, wo man natürlich sagen muss, okay, Opentelemetry ist jetzt nicht Prometheus zum Beispiel, aber es muss nicht Prometheus sein. Es kann auch alles andere sein. Also gibt ja etliche Tools."
+    },
+    {
+      "end": 1684639,
+      "speaker": "A",
+      "start": 1680520,
+      "text": "Da fällt mir gerade ein, wir haben noch keine Episode zu Prometheus gemacht so richtig, oder?"
+    },
+    {
+      "end": 1693640,
+      "speaker": "B",
+      "start": 1684639,
+      "text": "Ne, wir hatten nur den Autor von Prometheus da, aber ansonsten ist okay. Julius, wo war bei uns im Podcast? Wolfgang, vielen lieben Dank, dass du dich an all unsere Episoden erinnern kannst."
+    },
+    {
+      "end": 1697220,
+      "speaker": "A",
+      "start": 1693880,
+      "text": "Das stimmt natürlich. Episode ein hundert zwei und dreiig. Ich hab grad nachgeschaut."
+    },
+    {
+      "end": 1752510,
+      "speaker": "B",
+      "start": 1697690,
+      "text": "Jetzt ist es aber so und jetzt kommt mein DevOps Thema wieder auf den Tisch. Wenn wir uns mal über Infrastruktur Gedanken machen, dann ist das so, dass die Datenbank in der Regel verteilt ist und dann hat man vor der Datenbank gegebenenfalls einen Load Balancer oder bei Postgres oft so ein PG Bouncer oder bei MySQL ist es inzwischen oft ein Vitesse oder oder oder. Punkt ist, man hat da in der Regel ein Cluster. Vielleicht hat man auch bei einer relationalen Datenbank einen Split für Read and write all sowas. Punkt ist, da sind ein paar Hardware Komponenten oder vielleicht auch Software Komponenten dazwischen. Deswegen Achtung auf falsch konfigurierte Timeouts. Wenn euer Timeout im Client, in der Web App höher ist als der Timeout von dem Load Balancer vor der Datenbank oder vor dem PG Bouncer oder Vitesse, machen wir uns nichts vor. Das bringt dann alles nichts, weil dann die zwischen Hardware einfach terminiert oder die Zwischensysteme. Somit unterhaltet euch mal mit euren Ops Leuten."
+    },
+    {
+      "end": 1756340,
+      "speaker": "A",
+      "start": 1753220,
+      "text": "Du hast aber große Anforderungen, da müssen ja Teams miteinander sprechen."
+    },
+    {
+      "end": 1771060,
+      "speaker": "B",
+      "start": 1756500,
+      "text": "Ja, Moment, und jetzt geht es ja sogar, jetzt sage ich sogar, vielleicht sogar abteilungsübergreifend Dev mit Ops. Aber wenn wir mal das Thema Kontext Deadline aufmachen, dann müssen ja noch mehr Teams miteinander sprechen. Denn weißt du, was eine Kontext Deadline ist, Wolfgang?"
+    },
+    {
+      "end": 1772820,
+      "speaker": "A",
+      "start": 1771300,
+      "text": "Du erklärst mir sicher gleich."
+    },
+    {
+      "end": 1854500,
+      "speaker": "B",
+      "start": 1772820,
+      "text": "Naja, das Problem eines Timeouts ist, dass ein Timeout in der Regel die Verbindung oder die maximale Zeit einer Verbindung zwischen zwei Prozessen definiert. Jetzt sind aber moderne Systeme und Cloud Systeme ja oft eine Verbindung von fünf Systemen, zehn Systemen. Wie viele hängen da so in der Kette mit drin? Eine ganze Menge. Und was interessiert mich der Timeout von einer Applikation zu seinem Datastorage, wenn fünf Applikationen in der Kette sind? Und da kommt die Context Deadline ins Spiel. Das ist also ein Zeitpunkt in der Zukunft, bis zu dem eine Operation, also ein Request oder eine Funktion spätestens abgeschlossen werden muss. Also du kannst das eigentlich als übergeordneter Timeout definieren. Jetzt stell dir mal vor, du bist auf Amazon com und da kommen ganz viele Produktdetails auf die Seite. Hintendran wird das eine Maße an Request sein und die Summe aller Zeiten, die die Request benötigen, ist die Antwortzeit. Wie lange wartet man jetzt also ganz vorne auf der Webseite, bis die Request alle durchgeführt werden? Jeder dieser einzelnen Subsysteme hat einen Timeout von dreieinhalb Sekunden. Wenn Amazon Com dreieinhalb Sekunden laden würde, bin ich mir sicher, würdest du da nicht einkaufen. Deswegen wird Amazon vorne maximal eine Sekunde. Und wenn innerhalb einer Sekunde die Antworten nicht da sind, dann wird kaskadieren auch unten dieser Request einfach abgebrochen."
+    },
+    {
+      "end": 1865580,
+      "speaker": "A",
+      "start": 1854980,
+      "text": "So, und jetzt habe ich mal eine Frage an dich. In wie vielen Software Komponenten, die du geschrieben hast, hast du überhaupt so einen Abbruch drinnen, dass du aktiv Sachen abbrechen kannst?"
+    },
+    {
+      "end": 1870460,
+      "speaker": "B",
+      "start": 1865660,
+      "text": "Ich finde das sehr Schön, was du gerade fragst. Wie viel Go hast du in letzter Zeit geschrieben?"
+    },
+    {
+      "end": 1872780,
+      "speaker": "A",
+      "start": 1870860,
+      "text": "Ich schreibe nie Go, machst nur du."
+    },
+    {
+      "end": 1907760,
+      "speaker": "B",
+      "start": 1873420,
+      "text": "Go hat eine tolle Komponente, nennt sich Context. Und in jedem Netzwerk Call gibst du einen Kontext mit rein. Und dieser Kontext kann auf Basis von entweder deiner eigenen Programmierung, der hat eine Methode, nennt sich Abort oder Cancel heißt sie, glaube ich. Kurzum, in der Programmiersprache Go ist genau das, was du da gerade sagst, ein sogenannter First Class Citizen. Du gibst einen Kontext mit an, einen Ressourcencall und kannst sagen, wenn dieser Timeout erreicht ist, dann cancel das automatisch. Oder wenn ich ein Error irgendwo habe, dann cancel den und den Request. Also das ist ein First Class Citizen dabei."
+    },
+    {
+      "end": 1931590,
+      "speaker": "A",
+      "start": 1907760,
+      "text": "Ja, das geht innerhalb von der Software. Aber wenn ich jetzt über HTTP APIs kommuniziere, da müsst ihr mir ja in dem Protokoll was überlegen. Wie kann ich ein Request canceln? Weil ihr habt es ja schon geschickt, ihr habt die HTTP Connection offen und muss jetzt in meinem eigenen Protokoll dem anderen Service mitteilen, ich breche jetzt ab oder keine Ahnung, das Frontend hat mir gesagt, ich muss jetzt abbrechen. Brich du den Job auch ab, den du jetzt gerade machst."
+    },
+    {
+      "end": 1933990,
+      "speaker": "B",
+      "start": 1931590,
+      "text": "Also du meinst bei kaskadierenden Anfragen?"
+    },
+    {
+      "end": 1938590,
+      "speaker": "A",
+      "start": 1934230,
+      "text": "Genau, um das kaskadieren zu machen. Das ist, glaube ich, super schwer. Ich habe das noch nie gemacht."
+    },
+    {
+      "end": 1949460,
+      "speaker": "B",
+      "start": 1938590,
+      "text": "Meines Wissens nach kann GRPC genau das. Der Punkt ist aber, jede Applikation muss sich selbst darum kümmern, die Calls, die aufgemacht werden, auch abzubrechen, wenn der Upstream Call abgebrochen wird."
+    },
+    {
+      "end": 1959300,
+      "speaker": "A",
+      "start": 1949780,
+      "text": "Ja, aber ist gar nicht so leicht zu implementieren. Also wenn die Connection wegbricht, dass du dann wirklich den Call, den internen Job abbrichst, das muss man erst mal mitdenken."
+    },
+    {
+      "end": 1982320,
+      "speaker": "B",
+      "start": 1960260,
+      "text": "Ein hundert Prozent. Aber ist das nicht genau die Antwort auf die Frage, ob wir zum Thema Timeouts, ob wir da überhaupt eine ganze Podcast Episode füllen können? Also ich weiß ja nicht, Wolfgang, ich glaube, wir quatschen jetzt schon wieder fünf und dreiig Minuten und wir sind erst bei Timeouts. Denn ein Timeout selbst ist ja eigentlich. Ist das ein Ausfall oder ist das nur ein partieller Ausfall?"
+    },
+    {
+      "end": 1990480,
+      "speaker": "A",
+      "start": 1982880,
+      "text": "Das wäre gleich meine nächste Frage gewesen. Was mache ich denn, wenn irgendwo ein Timeout stattfindet? Also ich muss ja reagieren irgendwie."
+    },
+    {
+      "end": 1993040,
+      "speaker": "B",
+      "start": 1990640,
+      "text": "Was machst du als User, wenn ein YouTube Video nicht lädt?"
+    },
+    {
+      "end": 1996800,
+      "speaker": "A",
+      "start": 1993040,
+      "text": "Ja, das ist ja schon ganz im Frontend, aber wenn jetzt hinten irgendwo im Stack irgendwo."
+    },
+    {
+      "end": 2001060,
+      "speaker": "B",
+      "start": 1997380,
+      "text": "Beantworte doch mal die, was machst du, wenn ein YouTube Video nicht lädt?"
+    },
+    {
+      "end": 2002180,
+      "speaker": "A",
+      "start": 2001460,
+      "text": "Reloade."
+    },
+    {
+      "end": 2057730,
+      "speaker": "B",
+      "start": 2002660,
+      "text": "Dankeschön. Und das ist es. Wenn du ein Timeout hast, dann ist es natürlich schwierig, schwierig zu wissen, egal ob du im Frontend bist oder hinten in irgendeinem System, ist das ein partieller Fehler oder ein transienter Fehler? Also ein partieller Fehler ist, wenn ein bestimmter Prozentsatz der Anfragen erfolgreich ist. Das bedeutet, das System ist verfügbar, aber die Anfrage, die du schickst, die ist einfach zu teuer und rennt einfach in Timeout. Deine Datenbank Query braucht einfach zu lange. Oder ist das ein transienter Fehler, wenn eine Anfrage für einen kurzen Zeitraum einfach fehlschlägt, weil zum Beispiel der Load Balancer zwischenzeitlich neu gestartet. Das sind ja unterschiedliche Fehlerklassen. Bei beiden Fehlerklassen ist zumindest eine der Lösungen ein Reload. Und das machst du ja auch. Mit dem YouTube Video haben wir gerade gesprochen. Also ein Retry. Und jetzt ist die Hältst du ein Retry für eine gute Strategie? Hältst du ein Retry für einen guten Lösungsansatz?"
+    },
+    {
+      "end": 2095870,
+      "speaker": "A",
+      "start": 2057890,
+      "text": "Ich glaube, es ist der einzige Lösungsansatz, weil um herauszufinden, ob jetzt in dem null Komma eins Prozent Fehlerfall drin bin, dann ich muss ja irgendwie noch mal probieren, um überhaupt herauszufinden, wo das Problem liegt, ob das ein Problem ist, das länger besteht oder nicht. Weil wenn ich einfach immer sofort aufhöre, kann ich natürlich auch und überlasse es dann dem User, dass er nochmal reloaded. Aber der ist wahrscheinlich noch schlimmer, weil der drückt dann einfach STRG r die ganze Zeit und sendet dann hunderte Requests, bis mal funktioniert. Also ist die Frage, wo ich das mache, aber ich glaube, Retry ist die einzige Möglichkeit, um irgendwas herauszufinden."
+    },
+    {
+      "end": 2105430,
+      "speaker": "B",
+      "start": 2095870,
+      "text": "Ja gut, die Alternative ist halt, dass du den Fehler ganz nach oben gibst und sagst okay, pass mal auf. Also wir reden jetzt hier nicht vom User Retry, wir reden jetzt hier vom systematischen Retry, einprogrammiert in deine App."
+    },
+    {
+      "end": 2116780,
+      "speaker": "A",
+      "start": 2105820,
+      "text": "Genau. Also es sind glaube ich, die zwei einzigen Möglichkeiten. Ich breche komplett ab und muss halt jemand anderes sich darum kümmern oder ich versuche es nochmal und probiere selber herauszufinden, ob es ein dauerhaftes Problem ist oder nicht."
+    },
+    {
+      "end": 2137680,
+      "speaker": "B",
+      "start": 2116860,
+      "text": "Ja, die dritte Lösung ist, wir machen den Retry smarter, aber das sagen wir jetzt, da sprechen wir gleich nochmal drüber. Also im Endeffekt ein Retry, denkt mal drüber nach. Wir gehen jetzt nicht klar. Also wir kriegen den Fehler zurück, wir sind in den Connection Timeout gesprungen, wir können keine Connection aufbauen, wir haben eine For Loop, wir hämmern da drauf. Also wir retryen sofort und aggressiv, kann man fast sagen."
+    },
+    {
+      "end": 2141360,
+      "speaker": "A",
+      "start": 2138160,
+      "text": "Also wir simulieren den User, der Steuerung R drückt die ganze Zeit."
+    },
+    {
+      "end": 2168590,
+      "speaker": "B",
+      "start": 2141360,
+      "text": "Ja, so ungefähr. Nur halt leider viel schneller, weil so schnell kann ein User nicht Steuerung r drücken. Und da habe ich eine schöne Anekdote gelesen und zwar Wiederholungen. Retries sind ja eigentlich völlig egoistisch, also sind ja selfish, wenn du so möchtest. Denn mit einem Retry betonst du die Wichtigkeit der Anfrage und du verlangst, dass ein anderer Dienst mehr seiner Ressourcen für die Bearbeitung deiner eigenen Anfrage einsetzt."
+    },
+    {
+      "end": 2170470,
+      "speaker": "A",
+      "start": 2168830,
+      "text": "Ich kann mir nur wiederholen, wir simulieren."
+    },
+    {
+      "end": 2179430,
+      "speaker": "B",
+      "start": 2170470,
+      "text": "Den User und jetzt du als Freelancer. Und das kann man fast auf alles anwenden. Wenn ein Kunde zu egoistisch ist, dann kann dies doch zu weitreichenden Problemen führen, oder?"
+    },
+    {
+      "end": 2185630,
+      "speaker": "A",
+      "start": 2179430,
+      "text": "Naja, ich würde sagen, ich schalte dann automatisch im Blocking Modus und am Server lasse ich mir dann erst recht viel Zeit."
+    },
+    {
+      "end": 2248750,
+      "speaker": "B",
+      "start": 2186190,
+      "text": "Also man könnte auch fast sagen, du betreibst ein Business wie Retry Optimierung. Aber lass uns mal ganz kurz darüber sprechen. Also das ist ganz lustig. Also mit einem Retry wird natürlich mehr Zeit vom externen Server aufgewendet, um die Erfolgschancen für deine Anfrage zu erhöhen. Man kann schon sagen, Retry ist wirklich egoistisch. Und diese ganze Thematik kann nämlich zu einem Retry Storm führen. Also wenn viele Clients naiv und gleichzeitig fehlgeschlagene Request einfach wiederholen, dann hämmerst du auf dem anderen Server rum. Das ist auch so eine Art Connection zu dem Thundering Hurt Problem, was wir gerade erwähnt haben. Jetzt stell dir vor, der ist offline, also down, also der Prozess läuft nicht und der wird dann neu gestartet und dann kommt das hoch und Clients kommen sofort, hallo, gib mir mal eine Connection. Dann macht der Server und dann schauen wir mal, ob der ausatmen kann. Also das funktioniert in der Regel halt nicht. Und dann fragen wir uns, kann denn eigentlich jeder Request überhaupt wiederholt werden? Wie oft hattest du schon ein Kontaktformular auf einer Webseite abgesendet? Du bist auf der herzlich Willkommen Seite, wir haben ihre E Mail erhalten. Du drückst strgr und was kommt dann im Browser?"
+    },
+    {
+      "end": 2250830,
+      "speaker": "A",
+      "start": 2248750,
+      "text": "Vielen Dank, wir haben deine Anfrage erhalten."
+    },
+    {
+      "end": 2254830,
+      "speaker": "B",
+      "start": 2250830,
+      "text": "Ja, sofern kein Redirect gemacht wurde. Ansonsten möchten sie dieses Formular erneut senden."
+    },
+    {
+      "end": 2258510,
+      "speaker": "A",
+      "start": 2255630,
+      "text": "Ja, oder es wird automatisch einfach neu gesendet."
+    },
+    {
+      "end": 2291350,
+      "speaker": "B",
+      "start": 2258510,
+      "text": "Genau. Und das ist natürlich ein sogenannter side Effect. Sollte man side Effects retryen, also was retriest du? Ist deine Anfrage gerade idempotent oder nicht? Das ist nämlich der unter anderem der Grund, warum ziemlich viele Formulare über die Post Methode im Web, nachdem sie bearbeitet wurden, noch ein redirect machen auf einer Erfolgsseite, damit du Str machen kannst, damit du die Anfrage nicht nochmal sendet. Und jetzt kommt's, jetzt bist du in ein Timeout gerannt bei einem Request. Wie weißt du denn, ob der Site Effekt, also das Versenden dieser E Mail oder den Eintrag in die Datenbank umgesetzt wurde? Also als Software jetzt nicht, als User."
+    },
+    {
+      "end": 2312090,
+      "speaker": "A",
+      "start": 2291750,
+      "text": "Ja, je nachdem, ob du schönes API Design hast natürlich. Also ganz oft so bei Payment Providern kennt man das, dass man vielleicht eine Reference id angeben muss und hoffentlich würde dann der Payment Gateway sagen, Moment, diese Reference id habe ich schon bearbeitet, aber das ist dann schon highly sophisticated, würde ich mal sagen. Und in der Realität sieht man das sehr selten."
+    },
+    {
+      "end": 2336860,
+      "speaker": "B",
+      "start": 2312810,
+      "text": "Und genau da kommen wir zu dem Punkt Architektur und Design. Also ich meine, du musst bei Connection Timeout für idem Potenz designen. Du sagtest jetzt gerade Referenz id bei einem Payment Provider. Du kannst natürlich auch auf die Art des Fehlers oder die Art des Timeout schon irgendwie darauf reagieren, also welchen Timeout du zurückgibt. Du hast ja die Kontrolle, über welchen Fehler du gibst. Du kannst auch Antworten zurück streamen, wobei."
+    },
+    {
+      "end": 2353900,
+      "speaker": "A",
+      "start": 2336860,
+      "text": "Du natürlich nur die Möglichkeit hast, einen Fehlercode oder eine Information zurückzugeben, wenn es kein Timeout ist. Weil wenn du natürlich nichts zurückbekommst und dann der Client timeoutet, der hat natürlich dann keine Info. Aber im Idealfall kannst du natürlich irgendwas auch submitten und eine Information geben."
+    },
+    {
+      "end": 2365820,
+      "speaker": "B",
+      "start": 2354460,
+      "text": "Alternativ kannst du natürlich auf dem zu aufzurufenden System auch die ganze Duplicate Logik fahren. Also, aber du merkst schon, da müssen auch Teams miteinander reden und so weiter."
+    },
+    {
+      "end": 2380420,
+      "speaker": "A",
+      "start": 2365820,
+      "text": "Ja, da sind wir wieder bei deinem Kontext. Du kannst ja auch beim Request zum Beispiel ein Timeout mitgeben, wenn die API das hergibt und dem Server sagen, ich warte nur so lange und gehe mir sonst eine Info, was los ist. Also es wäre ja auch möglich vom Design, aber da sind wir wieder bei dem ganzen Design."
+    },
+    {
+      "end": 2417610,
+      "speaker": "B",
+      "start": 2380740,
+      "text": "Genau. Und gutes Design verhindert halt Duplikate bei den side Effects bei einem retry. So jetzt, ich denke, und das habe ich auch gelesen und das fand ich auch sehr schön, deswegen möchte ich das gerne erwähnen, Retris ist so wie Medizin sinnvoll in der richtigen Menge, also wie Medikamente, aber bei Ausnutzung kann es halt sehr hohen Schaden verurteilen. Denn eine Downside in verteilten Systemen und fast jedes System ist ein verteiltes System inzwischen, es gibt fast keine Möglichkeit, die Anzahl der Wiederholungsversuche zwischen allen Apps und allen Clients zu koordinieren, um die richtige Anzahl zu erreichen bzw. Zu finden, weil du willst ja die Systeme downstream nicht überlassen."
+    },
+    {
+      "end": 2419330,
+      "speaker": "A",
+      "start": 2417610,
+      "text": "Okay, also was macht ihr dann dagegen?"
+    },
+    {
+      "end": 2431940,
+      "speaker": "B",
+      "start": 2419660,
+      "text": "Ja, wie gesagt, deswegen hatte ich das gerade gesagt, mach dir mal Gedanken darüber, dass Wiederholungen, also Retries, egoistisch sind. Also ist deine Anfrage, ist dein Retry wirklich so wichtig, dass du mehr Ressourcen auf dem Downstream Service reservierst oder nicht?"
+    },
+    {
+      "end": 2439900,
+      "speaker": "A",
+      "start": 2431940,
+      "text": "Okay, also dann gehen wir mal in die kommunistische Ecke. Wie sehen dann diese kommunistischen Retries aus, die Rücksicht nehmen auf die Allgemeinheit?"
+    },
+    {
+      "end": 2448940,
+      "speaker": "B",
+      "start": 2439900,
+      "text": "Naja, implementierungsmässig haben wir gerade gesagt, wir haben eine For Schleife und die For Schleife hat einen Break, wenn der Connect erfolgreich ausgeführt wurde. Das ist doch deine klassische Programmierung aktuell, oder?"
+    },
+    {
+      "end": 2458700,
+      "speaker": "A",
+      "start": 2449740,
+      "text": "Ich wollte gerade sagen, also wenn du wirklich Vorschleifen hast, aber ja, okay, man kann sich so vorstellen, ich hoffe, du hast eine Abbruchbedingung, wenigstens nach drei Retries oder so."
+    },
+    {
+      "end": 2462540,
+      "speaker": "B",
+      "start": 2459020,
+      "text": "Oh, gute Sache. Wie viele Retries machst du denn?"
+    },
+    {
+      "end": 2468140,
+      "speaker": "A",
+      "start": 2462860,
+      "text": "Das ist eine for loop mit i ist drei oder so, Max."
+    },
+    {
+      "end": 2472500,
+      "speaker": "B",
+      "start": 2468460,
+      "text": "Ja, okay, dann bist du ja schon mehr sophisticated als das. Ja, natürlich. Können wir nach."
+    },
+    {
+      "end": 2473830,
+      "speaker": "A",
+      "start": 2472500,
+      "text": "Bin ich schon kommunistisch am Weg?"
+    },
+    {
+      "end": 2546430,
+      "speaker": "B",
+      "start": 2474380,
+      "text": "Ja, bist du schon. Eine bessere Art und Weise könnte gegebenenfalls ein Backoff bzw. Ein exponentieller Backoff sein. Also was ist das? Eigentlich ist das ein regelmäßiger Retry mit einer Pause dazwischen, zum Beispiel alle fünf Sekunden. Und ein exponentieller Backoff ist, dass du keinen statischen Wartewert dazwischen hast, sondern die Wartezeit wird nach jedem Versuch exponentiell erhöht. Das kann natürlich zu langen Backoffs führen. Also das bedeutet, du machst den ersten Call, failt, wartest eine Sekunde, zweiter Call zwei Sekunden, dritter Call vier Sekunden und so weiter. Also das erhöht sich. Das kann natürlich dann zu langen Backoffzeiten führen, je nachdem, wie viele Erhöhungsschritte hast, wenn du keine Abbruchbedingungen hast. Du hattest gerade als drei als Abbruchbedingungen genannt. Du kannst aber auch sagen, okay, pass mal auf, lass uns doch einfach mal eine maximale Wartezeit einführen und sagen, wenn wir, okay, wenn wir jetzt bei sechzehn sind oder bei zwei und dreiig Sekunden oder Millisekunden oder welche Einheit wir auch immer haben, dann brechen wir das ab. Das ist eigentlich, du hast auf Basis der Anzahl der Connections abgebrochen, ich breche jetzt auf Basis der Zeit ab. Das ist so ein bisschen vorhersehbar. Und dass du, man nennt das auch predictable cap, exponential backoff, dass du halt nicht forever wartest, weil sonst wird es halt natürlich relativ schwierig."
+    },
+    {
+      "end": 2572340,
+      "speaker": "A",
+      "start": 2546510,
+      "text": "Okay, wenn du aber in die Realität schaust, dann hast du halt nicht immer diese kommunistischen Clients, ich muss mit diesem Begriff aufhören, mit den netten Clients, sondern du hast halt auch die egoistischen Clients oder du hast ganz viele nette Clients, dann sind es im Endeffekt aber auch vielleicht trotzdem viele Requests, die du bekommst. Also was mache ich denn auf der Serverseite mit diesen ganzen Requests, wenn sie mir zu viel werden? Also kann ich auf der Serverseite auch reagieren oder muss ich davon ausgehen, dass alle nett sind auf diese Welt?"
+    },
+    {
+      "end": 2621830,
+      "speaker": "B",
+      "start": 2572580,
+      "text": "Es geht ja nicht immer nur, dass es zu viel Requests sind, sondern auch, wann diese Requests ausgeführt werden. Jetzt haben wir dieses Backoff und jeder Client hat dieses Backoff. Jetzt haben wir das Problem, dass alle Clients versuchen, zu einer stabilen Rate zu connecten. Also haben wir eigentlich, alle Clients haben zwar jetzt eine Pause dazwischen, die geben dem Server natürlich Luft zum Atmen und zu recovern und zum Neustarten und allem drum und dran, aber alle knallen natürlich zur selben Zeit. Und wenn wir jetzt mal, um das Problem mal wirklich zu visualisieren, wenn wir jetzt eine Service Architektur haben und auf dem höchsten Level, machst du ein Retry mit einem exponentiellen Backoff und du hast ein fünf Layer System und du hast drei Versuche pro Layer. Und das letzte Layer ist die Datenbank. Und die Datenbank schlägt Fehler. Alle Systeme oben drüber wiederholen natürlich jetzt ihre Anfragen. Das bedeutet eigentlich, dass wir die Last auf der Datenbank um das zwei hundert drei und vierzig fache steigern."
+    },
+    {
+      "end": 2623990,
+      "speaker": "A",
+      "start": 2621830,
+      "text": "Layer eins bei wie vielen Layer dazwischen?"
+    },
+    {
+      "end": 2625190,
+      "speaker": "B",
+      "start": 2624070,
+      "text": "Bei fünf insgesamt."
+    },
+    {
+      "end": 2626390,
+      "speaker": "A",
+      "start": 2625350,
+      "text": "Bei fünf, OK."
+    },
+    {
+      "end": 2642820,
+      "speaker": "B",
+      "start": 2626390,
+      "text": "Der erste Layer macht drei Versuche. Für jeden dieser drei Versuche ruft er Layer zwei auf, das ebenfalls drei Versuche macht. Also drei mal drei. Neunte, Layer drei macht auch wieder drei Versuche. Da sind wir schon bei sieben und zwanzig. Layer vier macht auch drei Versuche, sind wir bei ein und achtzig. Und somit sind wir bei Layer fünf, der direkt vor der Datenbank ist, bei zwei hundert drei und vierzig."
+    },
+    {
+      "end": 2643780,
+      "speaker": "A",
+      "start": 2642900,
+      "text": "Drei hoch fünf."
+    },
+    {
+      "end": 2660220,
+      "speaker": "B",
+      "start": 2643940,
+      "text": "Ganz genau. Und das ist natürlich eine harte Nummer. Kurzum, bei Retrys geht die Load nach oben für das empfangende System. Und jetzt ist die Frage, was kann man denn machen? Und da gibt es zwei, eigentlich drei ganz gute Antworten. Eine Sache ist ein sogenannter Circuit Breaker."
+    },
+    {
+      "end": 2662180,
+      "speaker": "A",
+      "start": 2660220,
+      "text": "Hat aber nichts mit dem Zirkus zu tun, oder?"
+    },
+    {
+      "end": 2665700,
+      "speaker": "B",
+      "start": 2662340,
+      "text": "Nein. Sondern eher Circuit, ich glaube eher um den Rundkurs."
+    },
+    {
+      "end": 2668860,
+      "speaker": "A",
+      "start": 2666060,
+      "text": "Ja, Circuit ist der Schaltkreis, oder?"
+    },
+    {
+      "end": 2670700,
+      "speaker": "B",
+      "start": 2669020,
+      "text": "Genau, Schaltung, Kreislauf."
+    },
+    {
+      "end": 2675180,
+      "speaker": "A",
+      "start": 2671820,
+      "text": "Der Unterbrecher von dem Stromkreislauf zum Beispiel. Circuit."
+    },
+    {
+      "end": 2705990,
+      "speaker": "B",
+      "start": 2675180,
+      "text": "Und zwar macht ein Circuit Breaker, der sagt einfach, ich mache jetzt einfach gar keine Connection mehr auf, ich stoppe jetzt die Retries, wenn ich einen gewissen Schwellenwert überschritten habe. Kurzum, du versuchst es dreimal und dann wird einfach gestoppt. Dann wird gewartet zwanzig Sekunden und nach zwanzig Sekunden wird es wieder dreimal versucht, in der Hoffnung ist das System wieder da. Also kurzum, ein Circuit Breaker hat irgendwie verschiedene Zustände geschlossen, offen und halboffen. Halboffen ist genau dieser, ich versuche es wieder, ist der Service wieder da?"
+    },
+    {
+      "end": 2711990,
+      "speaker": "A",
+      "start": 2706310,
+      "text": "Und wo ist der Circuit Breaker jetzt angelegt? Ist der am Client, ist der am Server oder ist der dazwischen?"
+    },
+    {
+      "end": 2739690,
+      "speaker": "B",
+      "start": 2712230,
+      "text": "Ja, das kommt auf deine Architektur an. Also ich kenne es in der Regel so, dass er entweder im Client ist oder irgendwie als Sidecar nebenbei, zum Beispiel in der kubernetes Infrastruktur, dass dein Service ein Sidecar hat und jeden Netzwerk Call über den Circuit Breaker macht. Weil das hat natürlich den Vorteil, dass der Circuit Breaker eine eigene Komponente sein kann und nicht als Logik in deiner Software implementiert werden muss. Auf dem Server kannst du es halt nicht machen. Klar, du kannst es nach Source, IP und Port machen und so weiter, ist aber schon irgendwie schwierig."
+    },
+    {
+      "end": 2745450,
+      "speaker": "A",
+      "start": 2740330,
+      "text": "Sidecar ist ja für mich Server, also quasi sitzt beim Server dran zumindestens."
+    },
+    {
+      "end": 2804060,
+      "speaker": "B",
+      "start": 2745610,
+      "text": "Ja, genau. Also das wäre dann eine Mittelkomponente zwischen Datenbank und Webapplikation in der Hinsicht. Aber das Problem bei einem Circuit Breaker ist eigentlich, oder es gibt mehrere Probleme beim Circuit Breaker. Also auf der einen Seite, wann reicht ein simpler Timeout und wann brauche ich mehr zum Beispiel einen Circuit Breaker. Die zweite Thematik ist, ich habe ja gerade von diesen Zuständen, von wie bei einem Schaltkreis, geschlossen, offen, halboffen gesprochen. Das ist natürlich ein modales Verhalten, was natürlich unglaublich schwer zu testen ist. Also ich meine, dieses modales Verhalten, das bedeutet den Wechsel zwischen normal, es funktioniert alles, zu dem Fehlermodus, es geht nichts mehr durch, zu dem Modus halb offen. Also der Test, ob der Downstream Service wieder funktioniert, ist halt unglaublich schwierig zu testen, denn der Wechsel, wann von einem Modus in den anderen gewechselt wird, ist zeitbasiert, haben wir gerade gesagt, wegen dem Wartemodus. Der kommt unter Lastspitzen, kommt er nur auf und in bestimmten Fehlerszenarios, wenn der Downstream Service nämlich nicht da ist. Also die Simulation der ganzen Thematik ist natürlich unglaublich schwierig und auch das Testing davon."
+    },
+    {
+      "end": 2828680,
+      "speaker": "A",
+      "start": 2804140,
+      "text": "Mir ist es jetzt ja fast peinlich, aber jetzt fällt mir erst ein, was Circuit Breaker natürlich heißt. Circuit Breaker ist die Sicherung, weil du schon Lastspitze sagst, ein LS in Deutschland. Eigentlich sollte ich mich bei Strom schon dementsprechend auskennen, das ja mein Hobby ist, aber Circuit Breaker ist also schon eher so zu sehen wie eine Sicherung, die im Notfall schaltet und rausgekickt wird und nicht so der Standardfall ist, wenn der."
+    },
+    {
+      "end": 2831560,
+      "speaker": "B",
+      "start": 2828680,
+      "text": "Downstream Service nicht da ist, dann würde ich mal sagen, wir haben einen Notfall."
+    },
+    {
+      "end": 2840200,
+      "speaker": "A",
+      "start": 2831560,
+      "text": "Genau, also es sollte kein Traffic Shaping oder sowas sein. Also das ist schon eher für den Notfall gedacht und weniger für gezielte Steuerung."
+    },
+    {
+      "end": 2859080,
+      "speaker": "B",
+      "start": 2840200,
+      "text": "Jetzt kannst du dir überlegen, immer wenn etwas schwer zu testen ist und du einen Ausfall, das beim Incident Recovery auf dem Schirm zu haben und dann genau zu wissen und das Monitoring, in welchem Zustand, wann war der Circuit Breaker jetzt genau und dann die Timeline für den Postmortem zu schreiben und so weiter. Also du merkst schon, die Komplexität steigt enorm."
+    },
+    {
+      "end": 2864640,
+      "speaker": "A",
+      "start": 2859480,
+      "text": "Jetzt hast du erwähnt, du hast drei Ansätze für sowas. Circuit Breaker, was gibt es noch?"
+    },
+    {
+      "end": 2913630,
+      "speaker": "B",
+      "start": 2864640,
+      "text": "Circuit Breaker ist die eine Thematik, dann kommt da noch ein sogenanntes Bucketsystem oder ein Token Bucket Retry System. Ich glaube, das kommt von Amazon bzw. Hat jedes Amazon SDK das auf jeden Fall eingebaut. Was ganz interessant ist, stell dir vor, du hast einen Eimer mit Tokens. In jedem Eimer sind einfach zehn Tokens drin und du machst österreicher Kübel und bei jedem Connect zu einem Service, deinem ODB oder was weiß ich nicht, nimmst du einen Token aus deinem Eimer und jetzt ist der Service nicht mehr verfügbar, dann machst du ein Retry und weil du ja einen neuen Connect machst, nimmst du wieder einen Token aus dem Eimer. Du kannst aber nur so viel Retries machen, wie Tokens in dem Eimer sind. Jetzt haben wir gesagt, da sind zehn Tokens in dem Eimer, also kannst du zehn Retries machen und jetzt ist er einmal leer und du willst einen Return machen. Ist nicht. Jetzt ist es aber so, da läuft ein nebenläufiger Prozess, der dir jeden Intervall einen neuen Token in den Eimer legt."
+    },
+    {
+      "end": 2921430,
+      "speaker": "A",
+      "start": 2913630,
+      "text": "Ich lege den Token nicht zurück, wenn mein Request erfolgreich war, sondern da tröpfelt einfach immer ein Token nach dem anderen in den Eimer."
+    },
+    {
+      "end": 2933800,
+      "speaker": "B",
+      "start": 2921430,
+      "text": "Ganz genau. Vielleicht ist da noch so ein Max Cap, dass du nur max. Zehn Tokens im Eimer haben kannst oder so. Ja, das kann auch sein, aber das ist ja, das spielt jetzt keine Relevanz für dieses Problem oder diese Lösung, die wir jetzt hier besprechen."
+    },
+    {
+      "end": 2950560,
+      "speaker": "A",
+      "start": 2933800,
+      "text": "Das heißt, es ist eigentlich wie ein Kondensator, der das nochmal glättet. Also du kannst mal einmal mehr oder einmal weniger Tokens verwenden, um so leichte Spitzen drinnen zu haben, aber wenn du plötzlich kompletten Burst hast, der nach oben schießt und ganz viele retriest, dann wirst du geblockt. Also ist nochmal intelligenter als ein Circuit Breaker."
+    },
+    {
+      "end": 2972500,
+      "speaker": "B",
+      "start": 2950560,
+      "text": "Ne, ist eigentlich weniger intelligent meines erachtens nach, denn du kriegst jeden Intervall, also alle fünf Sekunden einen neuen Token. Zum Beispiel jetzt verbrennst du deine zehn Tokens, weil du eine Vorschleife hast und einfach hart neu connectest und jetzt musst du wieder fünf Sekunden warten, bis der nächste Token kommt. Es ist also eigentlich ein weicher Übergang. Also du reduzierst den Retry Traffic in einer kontrollierten Art und Weise. So eine Art Drosselung ist das."
+    },
+    {
+      "end": 2976420,
+      "speaker": "A",
+      "start": 2972740,
+      "text": "Genau. Also du erlaubst ganz kurze Spitzen, aber keine Dauerspitzen."
+    },
+    {
+      "end": 2989070,
+      "speaker": "B",
+      "start": 2976500,
+      "text": "Ganz genau. Und das muss man zugeben, ist natürlich auf der einen Seite viel leichter zu testen und auch deutlich vorhersehbarer als diese Modalwechsel zwischen offen, geschlossen und halboffen, wie so ein Circuit Breaker."
+    },
+    {
+      "end": 2991390,
+      "speaker": "A",
+      "start": 2989150,
+      "text": "OK, kommt jetzt noch was intelligentes?"
+    },
+    {
+      "end": 3100870,
+      "speaker": "B",
+      "start": 2991630,
+      "text": "Ja, jetzt kommt noch mal ein bisschen Mathe. Und zwar haben wir gesagt von Exponential Backoff, wir haben gesagt, okay, wir machen einen Retry und dann warten wir und dann zählen wir die ganze Sache exponentiell hoch. Aber jetzt haben wir dann auch gesagt, okay, wenn jetzt alle Clients exponentiell hochzählen, dann sind die immer noch zu demselben Zeit da und dann haben wir wieder diesen Retry Storm, dieses Sundering Hurt Problem und so weiter. Deswegen haben sich ganz kluge Leute einen sogenannten Jitter ausgedacht und das ist oft in Kombination, was man liest, exponential backoff mit Jitter. Du musst dir vorstellen, wenn alle fehlgeschlagenen Aufrufe zur gleichen Zeit zurückkommen, kommt es bei der Wiederholung erneut zu Konflikten und zu Überlastung. Das habe ich ja gerade erzählt. Und deswegen fügt man da so eine Art Zufälligkeit hinzu, um die Wiederholungsversuche zeitlich zu verteilen über so eine Zeitleiste, dass nicht alle Clients gleichzeitig connecten, sondern dass wenn jetzt ein hundert Client hast, dass die ein hundert Clients nicht sofort connecten, sondern dass die ein hundert Clients über fünf Sekunden gespreadet werden, was natürlich dann im Endeffekt hoffentlich weniger Ressourcen auf dem Zielserver verbrauchen muss. Also im Endeffekt ist das nicht nur sinnvoll bei Retris und bei Backoffs, sondern vielleicht auch eigentlich bei allen zeitgebenden Prozessen. Stell dir mal vor, du hast auf jedem Server deiner Serverfarm einen Cron Job, der sich von einer externen API alle IP Adressen holt oder so, oder die aktuelle IP Adressen der Datenbankserver, weil wir wissen ja, dass Cloud Infrastruktur inzwischen dynamisch ist und deswegen IP Adressen dynamisch. Wenn du jetzt also die Cron Jobs über alle Server mit einem Jitter versiehst, das bedeutet, du lässt die alle in Minute zwölf starten und jeder kriegt eine andere Zufallszahl assigned, sagen wir mal fünf oder zehn oder fünfzehn Sekunden, dann startet der eine Cronjob auf dem Server um zwölfter, fünfter Uhr, der andere um, der andere um. Das ist dann so eine Art Randomness, wie du die Last auf dem Zielserver, auf der API, die dann die IP Adressen zurückgibt, verteilen kannst."
+    },
+    {
+      "end": 3110150,
+      "speaker": "A",
+      "start": 3100870,
+      "text": "Und idealerweise wirst du das dann auch noch mal exponentiell erhöhen, damit du am Anfang nicht zu lange Zeiten hast und am Ende die Zeiten vielleicht noch höher werden."
+    },
+    {
+      "end": 3115470,
+      "speaker": "B",
+      "start": 3110150,
+      "text": "Ja, also Jitter ist in der Regel nur sinnvoll mit einem Backoff. Ganz genau, ja."
+    },
+    {
+      "end": 3138450,
+      "speaker": "A",
+      "start": 3115470,
+      "text": "Aber dass du auch den Jitter nochmal exponentiell erhöhst, weil dadurch hast du dann noch mehr Flexibilität. Weil am Anfang willst du jetzt vielleicht nicht einen Jitter von zwei Sekunden haben, weil da willst du vielleicht noch schneller retryen. Aber umso größer der eigentliche Exponential Backoff wird, umso größer wirst du vielleicht auch den Jitter wählen. Aber das sind so Spielereien und Optimierungsprobleme dann."
+    },
+    {
+      "end": 3171280,
+      "speaker": "B",
+      "start": 3138450,
+      "text": "Da kommt es halt ganz darauf an, welche jitter Strategie du wählst. Im Jitter gibt es verschiedene Strategien. Da gibt es ein Full Jitter, den Equal Jitter und den Decor Related Jitter. Jede Strategie hat da seine eigenen vor und Nachteile, mit maximaler Zufälligkeit, mit über, weniger chaotisch etc. Deswegen, also da muss man ein bisschen gucken, welche jitter Strategie man wählt. Ich würde mich mal aus dem Fenster lehnen und sagen, für die meisten Use Cases reicht eigentlich ein klassischer Full Jitter. Und ein Full Jitter ist äquivalent zu Exponential Backoff mit Jitter. Das, wenn man das googelt, jetzt klingt."
+    },
+    {
+      "end": 3199740,
+      "speaker": "A",
+      "start": 3171280,
+      "text": "Das alles sehr kompliziert, ich muss da exponential backoff einbauen, irgendwelche randomness Jitter noch dazu implementieren und eigentlich will ich ja nur irgendwie einen dummen Request senden, muss ich das alles selber programmieren? Oder du hast jetzt schon erwähnt, Amazon SDK, okay, aber wenn ich sonst unterwegs bin, was habe ich für Tools zur Verfügung? Cloud Code ist ein gutes Tool, hat mir auch gerade geholfen bei einem sehr komplexen Test von so netzwerkproblemen."
+    },
+    {
+      "end": 3272580,
+      "speaker": "B",
+      "start": 3200140,
+      "text": "Aber die Antwort ist natürlich nein. Da haben sich ein paar sehr kluge Menschen hingesetzt oder die kluge Open Source Community und hat da ein bisschen was geschrubbelt. Also im Endeffekt gibt es natürlich für jede Sprache irgendwelche Resilience oder Fault Tolerance Libraries, um jetzt mal hier ein paar zu nennen. Im Python Bereich gibt es Tennessee oder retrying. Tennessee ist ein Fork von retrying. Retrying war lange Zeit inaktiv ist jetzt wieder aktiv für die Python Leute. Dann gibt es im Java Bereich gibt es Resilienz j. Ich verstehe diesen Trend mit, dass jede Java Library j am Suffix haben muss, nicht aber. Oder dann gibt es Hysterix von Netflix. Im Net Bereich gibt es Polly. Im Go Bereich gibt es retryable HTTP von Hashicorp. Und ich gehe stark davon aus, die Programmiersprache, die ihr verwendet, die ihr es nicht gewählt habt, die hat auch irgendwelche fault tolerance libraries. Und da müsst ihr ein bisschen unten drunter gucken, was sie jetzt dann im Detail machen. Also ein Timeout und exponential backoff und retry und so weiter werden die alles haben. Jitter, da fängt es schon wieder langsam an. Und dann verschiedene Jitter Strategien oder die einzelnen Definitionen von Connection, Read und Idle, Timeout. Also da müsst ihr dann im Detail mal drunter gucken, weil auf der einen Seite versuchen diese Libraries natürlich möglichst viel abzudenken."
+    },
+    {
+      "end": 3282180,
+      "speaker": "A",
+      "start": 3274020,
+      "text": "Ist das jetzt so eine Kombination gewesen, abzudenken, also eine Mischung aus abzudecken und für einen mitdenken ist das so eine neue Wortkreation."
+    },
+    {
+      "end": 3296150,
+      "speaker": "B",
+      "start": 3282420,
+      "text": "Vielleicht war es auch nur Versprecher, aber ihr wisst, was ich meine. Es tut mir leid, ich bin hier so im Flow. Naja, aber wie gesagt, auf der einen Seite wollen die halt ziemlich viele Funktionalität anbieten und auf der anderen Seite natürlich schon ein gutes UI und API Design. Deswegen müsste man ein bisschen gucken, was man alles konfigurieren kann."
+    },
+    {
+      "end": 3317630,
+      "speaker": "A",
+      "start": 3296150,
+      "text": "Wobei man auch dazu sagen muss, es ist nicht super schwer selber zu implementieren. Also wir sprechen da oft wirklich von fünf Zeilen Code, wenn man sowas noch mit hinzufügt und ja, schreib dir eh schon dein LLM deines Vertrauens, ist normalerweise kein Problem. Sagst einfach, okay, exponential backoff und du hast nur ein paar Zeilen Code rundherum und das ist okay."
+    },
+    {
+      "end": 3364120,
+      "speaker": "B",
+      "start": 3318110,
+      "text": "Da gehe ich mit dem Wolfgang nicht mit, denn ich denke, diese ganze Thematik ist nicht einfach zu implementieren. Besonders kommt es nämlich immer ganz darauf an, mit welchen Systemen ihr sprecht. Nehmen wir mal rabbit als Beispiel. Bei Rabbit MQ machst du, ist ein Message quering System, da machst du eine Connection zum Server auf. Wenn du die Connection hast, dann machst du erstmal einen neuen Kommunikations Channel auf. Wenn du diesen Kommunikations Channel hast, dann kannst du da consumen oder producen drin. Das bedeutet, du hast nicht nur eine Connection, du hast mehrere Connections nur für deine Datenbank, die du einzeln händeln musst. Und dann kommt natürlich mit den ganzen Zeiteffekts rum und so weiter, was kannst du retryen, was kannst du nicht return. Also das ist alles nicht so einfach wie der Wolfgang das denkt."
+    },
+    {
+      "end": 3415170,
+      "speaker": "A",
+      "start": 3364120,
+      "text": "Es kommt darauf an, in was für einem Kontext du dich bewegst, wie immer. Aber es gibt auch ganz viele Fälle, da ist es super einfach, wenn du einfach nur eine API abfragst die ganze Zeit und da einfach ein Backoff drinnen hast, gar kein Problem. Wenn du eine Queue hast und einfach mit dem Backoff wartest, bis du den Request wieder in die Queue rein sendest, dass der wiederholt wird, auch relativ easy. Wenn du natürlich in komplexen Connection Umgebungen, wo persistente Connections drin sind und solche Sachen, das ist natürlich dann noch mal schwieriger. Aber ich sage nur ganz oft, wenn jetzt das Tool deiner Wahl nicht hergibt oder die Programmiersprache oder das Connection Framework, ist es oft auch relativ einfach, da was drumherum zu bauen. Aber kommt natürlich auf den Use Case drauf an, aber muss es nicht immer vorüber komplizieren. Und teilweise ist es auch schneller, vielleicht drei Zeilen Code selbst zu schreiben, als ein komplettes riesen Framework reinzunehmen, was das Ganze auch wieder komplex macht."
+    },
+    {
+      "end": 3458910,
+      "speaker": "B",
+      "start": 3415170,
+      "text": "Bei der Framework Thematik bin ich da bei dir. Ab und zu ist es leichter selbst zu schreiben, als dir eine große Dependency reinzuholen. Aber dennoch möchte ich dir jetzt hier mal offiziell danken, Wolfgang. Wegen deiner Ansicht, dass das alles so einfach ist, habe ich in den letzten zwölf Jahren einfach einen Job gehabt, weil eigentlich habe ich genau sowas ziemlich viel gemacht. In jeder Applikation hole ich solche Art von Gremlins raus, optimiere das mit graceful shutdowns und allem drum und dran. Und hey, siehe da, ich habe dadurch zwölf Jahre sehr erfolgreich meine Miete bezahlt. Also bitte habe dieses Mindset weiterhin, dass das alles sehr einfach ist. Du sicherst meinen Job, mache ich doch gern. Aber jetzt können wir natürlich ziemlich viel über Libraries und Sprachen sprechen, aber ein Tool möchte ich euch wirklich ans Herz legen und dann sind wir auch schon fast am Ende dieser Episode. Und zwar ist das Toxi Proxy."
+    },
+    {
+      "end": 3461830,
+      "speaker": "A",
+      "start": 3458910,
+      "text": "Aber nur weil es so cool klingt, oder? Oder macht es auch Sinn?"
+    },
+    {
+      "end": 3519270,
+      "speaker": "B",
+      "start": 3461830,
+      "text": "Ne, das macht auch wirklich Sinn. Toxy Proxy ist ein Tool, was du zwischen deiner Web unter einer Datenbank zum Beispiel packst und dann kannst du sagen, okay, pack mal da bitte zwei hundert Millisekunden Latency drauf oder lass nur die Hälfte der TCP Pakete ankommen und so weiter. Punkt ist, da kannst du halt dein Netzwerk failure simulieren und somit deine System Conditions, deine Retries oder Backoffice Jitter und so weiter und so fort ordentlich testen und dann kannst du natürlich auch partielle und transiente Fehler, von denen wir gerade auch besprochen haben, für die Leute, die richtig gut zuhören, testen. Wie verhält sich die ganze Thematik? Natürlich ist es jetzt kein Unit oder Integrationstest, sondern eher ein manueller Test. Natürlich kannst du auch sehr viel Arbeit da reinstecken, die ganze Sache zu automatisieren, aber da, das würde ich euch mal ans Herz legen, ist relativ schnell und relativ einfach aufgesetzt. Ist wirklich interessant, damit mal eine Runde rumzuspielen. Und dann natürlich Achtung, wenn ihr Observability auf euren Retries habt, auf eurem Backoff, auf den Jitter, auf die Timeouts P war, um das wirklich mal zu testen und zu visualisieren."
+    },
+    {
+      "end": 3571510,
+      "speaker": "A",
+      "start": 3519270,
+      "text": "Also ich glaube, weil du jetzt auch Unit Tests erwähnt hast, es sind ja zwei unterschiedliche Testarten. Ich war selber gerade überrascht, weil ich in Python entdeckt habe bzw. LLM mir geholfen hat dabei. By the way, programmiere Python nicht unbedingt freiwillig in dem Kontext, vor allem wenn es um Netzwerk Traffic geht, aber man kann da sogar in Unit Tests dann wirklich testen, funktioniert der Retry Mechanismus? Was ist, wenn ich die Retrys höher setze? Funktioniert dann mein Code richtig? Werden die Fehler richtig behandelt? Also das kann man alles mittlerweile sehr gut simulieren und testen, aber das testet halt nur meinen Code und wie der reagiert und der testet nicht die Applikation live, was der Toxiproxy natürlich schon macht, weil da kann ich dann wirklich einiges simulieren, vielleicht sogar last drauflegen und der Toxiproxy injected mir dann Probleme. Und das ist natürlich schon ein anderer Test Case, als wenn jetzt Unit Tests mache. Und im Idealfall mache ich natürlich beides."
+    },
+    {
+      "end": 3668730,
+      "speaker": "B",
+      "start": 3571510,
+      "text": "Und am Anfang der Episode saß der Wolfgang auf einem ziemlich hohen Ross. Retries Timeout ist ja ein ganz einfaches Thema, können wir da überhaupt eine Episode zu machen? So und am Ende der Episode haben wir jetzt eine Stunde oder ein bisschen mehr auf der Uhr und als ich die Episode so ein bisschen vorbereitet habe, da habe ich mich eher dazu gezwungen, Sachen wegzulassen. Also wir haben jetzt über Timeouts, Retries, Backoff, Exponential Backoff, das Amazon Token Bucket System gesprochen, über Jitter und so weiter. Wir haben Themen wie Rate limiting, Bulkhead patterns, also die Abschottung von Tile Service, um Fehler zu isolieren. Hatching, also redundante Request mit Cancel nach der ersten Antwort. Wir hatten zwar über Kontext Headline gesprochen, aber nicht über redundante Request. Load Shedding, also wenn ein System selbst erkennt, dass es überlastet ist, dass wir andere Sachen einfach abschalten können. Adaptive Throttling, also dynamisch entscheiden, welche Anfragen wir zulassen, welche wir verzögern, um auch das eigene System zu protecten. Amazon Brownouts, Blackout ein kompletter Ausfall. Brownout ist ein teilweise Ausfall und dann Deaktivierung von nicht kritischen Funktionalitäten oder sogar alternativ Strategien zu einem Retry, also fail fast queuing, Asynchronität und so weiter. Über all sowas haben wir noch gar nicht gesprochen. Also Wolfgang, theoretisch, wenn die Community es möchte und das könnt ihr uns gerne über Social Media, über E Mail oder über Discord wissen lassen, machen wir gerne noch mal eine zweite, vielleicht sogar eine dritte Episode zum Thema Resilience Engineering. Und vielleicht füllen wir auch mal eine ganze Episode einfach nur mit Rate Limiting, wie man das eigentlich in der API mal berücksichtigen kann, weil da gibt es nämlich auch ein paar schöne Beispiele in der Wildnis."
+    },
+    {
+      "end": 3712189,
+      "speaker": "A",
+      "start": 3669200,
+      "text": "Probieren wir das gleich mal zu konkretisieren. Ihr könnt jetzt in allen euren Podcast Apps, die ihr jetzt gerade verwendet, einfach runterscrollen in den Shownotes und da gibt es so ein thumbs up und Thumbs down. Für alle, wo jetzt was Neues dabei gewesen ist oder der Großteil neu war, bitte gern Thumbs up. Der Rest darf wirklich mal Thumbs down drücken, einfach wenn nicht so viel Neues dabei war, damit wir mal wirklich aus der Menge auch eine Information bekommen, wie viel Neues war eigentlich für euch dabei? Es würde uns wirklich interessieren. Und dann kann ich Andi vielleicht die Statistik auch zeigen, damit wir da mal Zahlen dahinter haben. Aber es war jetzt doch einiges für mich zumindest dabei. Andi, in dem Fall vielen dank für deine Horizonterweiterung."
+    },
+    {
+      "end": 3714470,
+      "speaker": "B",
+      "start": 3712189,
+      "text": "Bist du schon in die Show Notes gegangen und hast abgedrückt?"
+    },
+    {
+      "end": 3728430,
+      "speaker": "A",
+      "start": 3714470,
+      "text": "Fragst du jetzt mich oder? Ja, ihr müsst ja für einen Wolfi in der Zukunft sprechen. Der existierte jetzt in dem Moment noch nicht mehr. So gut ist unsere Automatisierung noch nicht, dass die Show Notes schon erstellt werden, bevor wir die Episode aufgenommen haben."
+    },
+    {
+      "end": 3741790,
+      "speaker": "B",
+      "start": 3728430,
+      "text": "Und wie immer gilt, wer sich da ein bisschen mehr einlesen möchte, kann in die Show Notes gehen. Da haben wir natürlich eine ganze Menge ordentlicher Links. Aber wer auch Bock hat, mit mir über resilience engineering zu sprechen, denn das ist einer meiner Herzensthemen, müssen wir jetzt."
+    },
+    {
+      "end": 3744030,
+      "speaker": "A",
+      "start": 3741790,
+      "text": "Ein Channel in unserer Discord community aufmachen."
+    },
+    {
+      "end": 3799220,
+      "speaker": "B",
+      "start": 3745310,
+      "text": "Ich glaube, wir haben einen Softwareentwicklungs Channel. Einfach da rein posten und ich werde das dann schon sehen. Deswegen also wer da Bock hat, ein bisschen mit mir zu drüber diskutieren. Aber ich würde gerne auch wissen, wie ihr das in eurer Firma macht? Habt ihr so eine stelle? Also gibt es Leute, die sich darum kümmern? Oder ist das Teil eures normalen Produkt Feature Entwicklungsprozesses, dass ihr über sowas nachdenkt? Oder wird das alles durch Cloud native Infrastruktur und irgendwelchen Proxys und Sidecars und sowas gelöst? Also kümmern sich da irgendwelche DevOps Leute? Und wie funktioniert eigentlich die Kommunikation zwischen den Softwareentwicklern, den DevOps Leuten und den Ops Leuten in der Timeout Abstimmung mit der Context Deadline und den Load Balancer Timeouts und so weiter und so fort? Oder habt ihr dauerhaft Ausfälle, weil ihr eure Timeouts und Retries und allem drum und dran nicht unter Kontrolle habt? Also da müssen wir keine Namen nennen, weil ich stehe nicht so auf Blaming, aber würde immer interessieren. Und machen uns nichts vor, irgendwie grinsen wir da alle so ein bisschen."
+    },
+    {
+      "end": 3811220,
+      "speaker": "A",
+      "start": 3799460,
+      "text": "Ich habe übrigens noch einen pro Tipp, wie man die Clients erziehen kann. Man kann einfach die API Calls kostenpflichtig machen und mit jedem API Call zahlst du was. Dann fangen die Clients automatisch an, sich brav zu verhalten."
+    },
+    {
+      "end": 3834940,
+      "speaker": "B",
+      "start": 3811300,
+      "text": "Ich glaube, der Wolfgang hat die aktuellen News von dem Cloudflare Content Independence Day gelesen. Aber lassen wir das mal so stehen. Wir verabschieden uns für diese Woche. Wir würden uns super freuen, wenn dir die Episode gefallen hat und du dir den Link mal schnappst und in deinem Slack Channel Microsoft Teams Brieftaube oder IRC deiner Wahl teilst. Oder vielleicht einfach per WhatsApp. Also mich würde super, wenn ich Brieftaube."
+    },
+    {
+      "end": 3844220,
+      "speaker": "A",
+      "start": 3834940,
+      "text": "Sage, fällt dir IRC ein. Aber selbst alter, selbst alter RW wird in unserer Discord Community das jetzt schon zerlegen, weiß ich schon."
+    },
+    {
+      "end": 3864270,
+      "speaker": "B",
+      "start": 3845100,
+      "text": "Einfach mal die Episode teilen, würde uns sehr freuen. Ansonsten würde ich sagen, vielen Dank, dass du bis hierhin zugehört hast, denn die flachen Witze von Wolfgang kann ich nicht mehr hören. Aber Wolfgang, damit du jetzt auch noch mal was zu lachen hast, zum Ende noch ein etwas harter Witz, oder? Komm, zwei mache ich. Der eine ist nicht so brutal als der andere."
+    },
+    {
+      "end": 3869060,
+      "speaker": "A",
+      "start": 3865220,
+      "text": "Es ist wirklich Sonntag und ich muss mit deinen Witzen herumschlagen. Es ist doppelt schlimm."
+    },
+    {
+      "end": 3872900,
+      "speaker": "B",
+      "start": 3869300,
+      "text": "Wo schwimmen Nazienten? Wo? Im dritten Teich."
+    },
+    {
+      "end": 3876740,
+      "speaker": "A",
+      "start": 3873860,
+      "text": "Okay, den finde ich sogar gut."
+    },
+    {
+      "end": 3883700,
+      "speaker": "B",
+      "start": 3877220,
+      "text": "Der zweite ist ein Tick besser, aber auch ein bisschen brutaler. Der Film Titanic kam in Amerika besser an als das Schiff."
+    },
+    {
+      "end": 3890040,
+      "speaker": "A",
+      "start": 3884580,
+      "text": "Ist auch sehr gut. Hast mal wirklich zwei gute. Gefällt mir. Bekommst du ein TH."
+    },
+    {
+      "end": 3896110,
+      "speaker": "B",
+      "start": 3890830,
+      "text": "Vielleicht machen wir in der nächsten Episode noch mal ein paar. Ich habe noch ein paar auf Lager hier. Ansonsten würde ich sagen, tschüss, bis nächste Woche. Bye. Bye, ciao."
+    }
+  ],
+  "webhook_auth": false
+}

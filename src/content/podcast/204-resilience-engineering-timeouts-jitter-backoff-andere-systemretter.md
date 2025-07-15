@@ -73,8 +73,10 @@ pubDate: 2025-07-15 03:00:04+00:00
 rtlplus: ''
 six_user_needs: []
 speaker:
-- name: Andy Grunwald
 - name: Wolfi Gassler
+  transcriptLetter: A
+- name: Andy Grunwald
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/5Ojl9IbixJeNxRptrmAnkc
 tags: []
 title: '#204 Resilience Engineering: Timeouts, Jitter, Backoff & andere Systemretter'
