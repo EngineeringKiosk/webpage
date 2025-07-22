@@ -84,7 +84,7 @@ tags:
 - DevOps
 title: '#204 Resilience Engineering: Timeouts, Jitter, Backoff & andere Systemretter'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/204-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PLKPLVww0I0
 
 ---
