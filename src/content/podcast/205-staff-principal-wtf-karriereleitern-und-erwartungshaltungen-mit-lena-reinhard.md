@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/dacb7398-1d6f-49c9-88c1-0b99d0886295/engineering-kiosk-205-staff-principal-wtf-karriereleitern-und-erwartungshaltungen-mit-lena-reinhard
 apple_podcasts: https://podcasts.apple.com/us/podcast/205-staff-principal-wtf-karriereleitern-und-erwartungshaltungen/id1603082924?i=1000718399801&uo=4
 audio: https://audio1.redcircle.com/episodes/1b4ab8f0-65e6-492f-987e-299089b9ca17/stream.mp3
 chapter:
