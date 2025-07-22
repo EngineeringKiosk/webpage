@@ -96,7 +96,11 @@ rtlplus: ''
 six_user_needs: []
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Lena Reinhardt
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/60RRkMHJV8cIKCoq6xEcZ6
 tags:
 - Karriere
