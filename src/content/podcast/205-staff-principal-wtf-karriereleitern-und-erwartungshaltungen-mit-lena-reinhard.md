@@ -98,7 +98,11 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/60RRkMHJV8cIKCoq6xEcZ6
-tags: []
+tags:
+- Karriere
+- Kommunikation
+- Leadership
+- Interview
 title: '#205 Staff, Principal, WTF? Karriereleitern und Erwartungshaltungen mit Lena
   Reinhard'
 transcript_raw: ''
