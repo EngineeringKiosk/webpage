@@ -110,7 +110,7 @@ tags:
 title: '#205 Staff, Principal, WTF? Karriereleitern und Erwartungshaltungen mit Lena
   Reinhard'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/205-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VSTon6p2GgM
 
 ---
