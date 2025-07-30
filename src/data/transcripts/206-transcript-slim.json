@@ -1,0 +1,854 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4481,
+  "audio_url": "https://cloud.inlupus.at/s/bC5pcWs2XE8DHXc/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95805347,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "ed0d2d3d-0104-4817-a77d-9f013aa2a451",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 138870,
+      "speaker": "A",
+      "start": 3200,
+      "text": "Willkommen bei einer neuen Episode vom Engineering Kiosk, deinem deutschsprachigen Lieblings Software Engineering Podcast. Ich sag's euch was ein Zungenbrecher. Wissenschaftler gehen davon aus, dass ein durchschnittlicher Erwachsener ca. Bis Entscheidungen pro Tag trifft. Neunzig Prozent davon sind unbewusste Entscheidungen. Ca. Entscheidungen treffen wir aber bewusst à la Was ziehe ich an, Wie antworte ich in einem Gespräch Oder Wie nenne ich die nächste Variable? Bei einer solch hohen Anzahl an Entscheidungen ist es kein Wunder, dass einige Personen eine Strategie anwenden, um mentale Energie zu sparen und Entscheidungsmüdigkeit zu reduzieren. Zum Beispiel indem sie immer die gleiche Kleidung tragen. Was alleine schon hart ist, ist im Team nicht einfacher. Ein typisches Softwareentwicklerteam trifft ca. Ein hundert bis fünf hundert Entscheidungen pro Tag. Zwanzig bis fünfzig Entscheidungen gehen für die Technik drauf, also Code, Design, Libraries, Tests und Co. Zehn bis dreiig Entscheidungen betreffen das Produkt und die Features. Fünf bis zehn Entscheidungen entfallen auf Prozesse, also zum Beispiel Wie organisieren wir uns, Prioritätsverteilung und Co. Der Rest wird für kommunikative und soziale Entscheidungen genutzt. Doch wie trifft man eigentlich Entscheidungen im Team? Müssen immer alle einer Meinung sein, bevor es weitergeht? Ist Diktatur im Team im Kontext bei der Entscheidungsfindung die Lösung? Wie vermeiden wir, dass Entscheidungen lange hingezogen werden, zu Tode diskutiert werden und ewig dauern? Darum gehts heute. Wir sprechen über Type eins vs. Type zwei Entscheidungen, welche Vorbereitungen getroffen werden müssen, verschiedene Frameworks wie Racie und Spade, ob Entscheidungen besser im Office oder Remote getroffen werden können, über Entscheidungsdokumentationen und und geben euch ein paar Tipps für euren Alltag. Und in dieser Episode müsst ihr nur eine Entscheidung treffen, ob ihr nun dranbleibt oder wegschaltet. Also hopp hopp, los geht's. Viel Spaß. Das, was wir da soeben gehört haben, war der sechs und zwanzigste Präsident der Vereinigten Staaten, Theodore Roosevelt or Roosevelt or wie auch immer."
+    },
+    {
+      "end": 141350,
+      "speaker": "B",
+      "start": 139510,
+      "text": "Also das war nicht die Originalaufnahme."
+    },
+    {
+      "end": 165790,
+      "speaker": "A",
+      "start": 141830,
+      "text": "Das war nicht die Originalaufnahme, das war eine originale AI Aufnahme. Was da eigentlich gesagt wurde, wortwörtlich übersetzt ist In jedem Moment der Entscheidung ist das Beste, was sie tun können, das Richtige, das Nächstbeste ist das Falsche. Und das Schlimmste, was sie tun können, ist nichts. Und ich habe mir gedacht, wir starten diese Episode mal mit etwas Philosophischem. Zum Thema Entscheidungen."
+    },
+    {
+      "end": 169430,
+      "speaker": "B",
+      "start": 165790,
+      "text": "Das heißt, was du jetzt damit sagen willst, ist, man soll Entscheidungen treffen."
+    },
+    {
+      "end": 177349,
+      "speaker": "A",
+      "start": 169430,
+      "text": "Theodore Roosevelt hat das gesagt, man sollte die Entscheidung treffen und dann ist es egal, ob es das Richtige oder das Falsche ist. Es ist besser als nichts zu treffen."
+    },
+    {
+      "end": 208650,
+      "speaker": "B",
+      "start": 177349,
+      "text": "Gut, dann gehen wir mal in die Realität. Du warst ja auch oder bist immer noch Engineering Manager. Du kennst ja diese ganzen Meetings, die Diskussionen im Team. Acht Leute sitzen an dem Tisch, es wird diskutiert, man schafft keine Entscheidung zu treffen, dann trifft man sich ein zweites Mal, macht wieder Meeting, probiert wieder neue Aspekte reinzubringen, diskutiert keine Entscheidung und am Ende landen dann genau diese Leute bei mir im Interview. Zumindest ist es so passiert, die dann eine Leadposition haben wollen und darum will ich Lead werden, damit ich nicht ständig darum diskutieren will, weil dann kann ich einfach so entscheiden als Lead."
+    },
+    {
+      "end": 213890,
+      "speaker": "A",
+      "start": 208730,
+      "text": "Und wenn die das gesagt haben, hast du dir notiert, Drei Art nehme ich."
+    },
+    {
+      "end": 216170,
+      "speaker": "B",
+      "start": 213890,
+      "text": "Genau, das war immer mein Knockout Kriterium fast."
+    },
+    {
+      "end": 243460,
+      "speaker": "A",
+      "start": 216730,
+      "text": "Ja, kenne ich. Täglich Brot heißt Analyseparalyse unter anderem. Man schmeißt sich so lange die Pro und Contra Argumente, die man schon zwanzig Mal erwähnt hat, nochmal an und keiner traut sich eine Entscheidung zu treffen oder keiner ist vielleicht sogar befähigt eine Entscheidung zu treffen oder jeder versucht irgendwie Konsensus hinzukriegen oder nennt man das Konsensus Konsens, würde ich sagen, oder deutsche Sprache, schwere Sprache."
+    },
+    {
+      "end": 255610,
+      "speaker": "B",
+      "start": 243460,
+      "text": "Auf jeden Fall sprechen wir heute mal über diese ganzen Entscheidungen, wie man zu Entscheidungen im Team kommt und was man da wirklich alles beachten muss. Aber meine Frage zuerst wäre, jetzt hast du das schön vorgelesen? Der Präsident sagt es, aber warum sollte man schnell entscheiden?"
+    },
+    {
+      "end": 287070,
+      "speaker": "A",
+      "start": 255610,
+      "text": "Naja, eine Entscheidung trifft man ja, um irgendwas nach vorne zu schieben und wenn man keine Entscheidung trifft, schiebt man auch nicht nach vorne. Und es ist total egal, was es ist, ob du jetzt Sport machen möchtest in deinem privaten Leben oder ob wir irgendwie über Architekturentscheidungen bei einer Applikationsentwicklung sprechen oder oder wenn wir nichts entscheiden, bleiben wir stehen. Deswegen ist es, glaube ich, halt wichtiger, eine Entscheidung zu treffen. Und da ist es vielleicht gar nicht so wichtig, ob es jetzt die richtige oder die falsche ist, aber dass man sich bewegt, dass man Fortschritt mach. Wenn man nämlich keine Entscheidung trifft, macht man einfach keinen Fortschritt. Da kann ich aber hier stehen bleiben."
+    },
+    {
+      "end": 292550,
+      "speaker": "B",
+      "start": 287070,
+      "text": "Ich hab mir jetzt gedacht, nachdem du so ein Fan bist von Zitaten und von Berühmtheiten, kommst du jetzt sicher mit Jeff Bezos um die Ecke."
+    },
+    {
+      "end": 297270,
+      "speaker": "A",
+      "start": 292950,
+      "text": "Kann ich auch, dann zieh ich mir mal eben einen aus dem Hut. Also ich meine Jeff Bezos ist sowieso."
+    },
+    {
+      "end": 302070,
+      "speaker": "B",
+      "start": 297270,
+      "text": "Ein großer Fan, macht ja nichts allen Leuten vor. Du liest es gerade aus unserem Talk ab."
+    },
+    {
+      "end": 381980,
+      "speaker": "A",
+      "start": 302550,
+      "text": "Ja gut, gut recherchiert. Na klar, also machen wir uns nichts vor. Jeff Bezos sitzt seit paar Jahren auf den Bühnen und entscheidet, beziehungsweise nicht entscheidet, ich habe schon jetzt hier Versprecher mit entscheidet und spricht darüber, wie Amazon Entscheidungen trifft und wie Amazon so erfolgreich ist und so weiter und so fort. Ich meine, da gibt es so Statement wie zum Beispiel er sagt, okay, die meisten entscheiden Entscheidungen sollten wahrscheinlich nur mit siebzig Prozent der Informationen für die Entscheidung getroffen werden, denn wenn du wartest, bis du neunzig Prozent der Entscheidung hast, dann bist du wahrscheinlich zu langsam. Zu langsam ist natürlich auch immer schwierig, wenn ich das dieses Zitat jetzt lese, dann denke ich mir zu langsam zu was Man ist ja immer im Vergleich. Wahrscheinlich redet er dann von seinen Marktbegleitern, von seinen Konkurrenten, um irgendein Produkt zu launchen oder so. Und da finde ich seinen Ansatz natürlich schon recht smart. Also ich meine siebzig Prozent ist über fünfzig Prozent. Das bedeutet, das erhöht die Chance, dass du richtig liegst. Neunzig Prozent ist sehr nah an den ein hundert Prozent und wir wissen ja alle Pareto Prinzip Regel, du kriegst achtzig Prozent der Informationen in zwanzig Prozent der Zeit und die restlichen zwanzig Prozent der Informationen dafür brauchst du achtzig Prozent der Zeit. Deswegen ist mit siebzig, neunzig glaube ich schon eine ganz gute Ratio getroffen, dass wenn du Entscheidungen treffen solltest und er hat halt auch das Triff eine Entscheidung, bevor du stehen bleibst."
+    },
+    {
+      "end": 479830,
+      "speaker": "B",
+      "start": 382060,
+      "text": "Ich habe auch eine interessante McKinsey Studie gefunden, die sagt in Firmen, wo die Executives schneller entscheiden und zwar haben die irgendwie ein tausend zwei hundert Executives sich genauer angeschaut, dass die Firmen dann doppelt so erfolgreich sind in Bezug auf Wachstum, Revenue und solche Dinge. Also keine Ahnung, ob man das direkt in Korrelation setzen kann. Auf jeden Fall. Gerade im Leadership Bereich ist es natürlich super wichtig auch Entscheidungen zu treffen, wobei natürlich in diesen Reports auch rauskommt, dass man schon Informationen haben sollte. Also man sollte möglichst einfachen Zugang zu Daten haben. Also man sollte nicht nur Bauchentscheidungen treffen, aber zu diesen siebzig Prozent, die du jetzt erwähnt hast von Jeff Bezos sollte man natürlich kommen. Also diese siebzig Prozent Informationen sollte man haben und wenn Firmen natürlich einfachen Zugang zu Daten bereitstellen, der Klassiker ist ja so ich habe eine BI Abteilung und alles muss durch diesen Flaschenhals durch, damit irgendwelche Antworten bekommen kann oder ich habe wirklich ein offenes System in Chatbot, der mir irgendwelche Fragen beantwortet direkt auf meiner Datenbasis. Das sind natürlich zwei unterschiedliche Herangehensweisen und umso besser der Zugang, umso besser sind natürlich dann die Entscheidungen, umso schneller kann ich die Entscheidungen auch treffen Und dann ein großer Punkt ist natürlich auch noch, dass sie wirklich befähigt bin eine Entscheidung zu treffen im Sinne von Hierarchie, dass sie das darf grundsätzlich und dann auch durchsetzen kann oder durchgesetzt wird oder auch gemacht wird. Am Ende muss gar keine Hierarchie sein, dass die Leute das halt auch wirklich umsetzen, weil nur entscheiden ohne eine Umsetzung am Ende bringt natürlich wenig. Aber der Bericht sagt auch Bauchgefühl ist definitiv auch ein Punkt und das Bauchgefühl macht halt dann die restlichen dreiig Prozent aus. Zu den ein hundert hast du diese."
+    },
+    {
+      "end": 485470,
+      "speaker": "A",
+      "start": 479830,
+      "text": "Statistik von einer Landingpage von McKinsey, wo sie zusätzlich Workshops für Entscheidungsfindungen anbieten."
+    },
+    {
+      "end": 514879,
+      "speaker": "B",
+      "start": 485960,
+      "text": "Ja das ist natürlich bei diesen Service immer so eine Frage, was wollen die eigentlich damit erreichen? Aber obvious würde ich mal sagen der Outcome. Aber trotzdem, wenn man so schwarz auf weiß sieht und wirklich probiert oder es jemand wenigstens probiert hat wissenschaftlich zu erklären, dann ist es natürlich auch immer ein gutes Packing, wenn es darum geht dann Entscheidungen schneller zu treffen Und ich glaube man muss sich einfach anfreunden. Die dreiig Prozent kommen dann einfach aus dem Bauch und man muss sich damit anfreunden, dass das okay ist. Ich glaube das ist einfach eine wichtige Entwicklung, die man durchmachen muss und für."
+    },
+    {
+      "end": 571360,
+      "speaker": "A",
+      "start": 514879,
+      "text": "Alle die jetzt aufmerksam sind und wirklich wirklich gut zuhören, denen ist aufgefallen, dass sich eine Komponente in diesen beiden Statistiken bzw. Zitaten irgendwie so angleicht. Jeff Bezos sagt okay, wenn du neunzig Prozent der Daten hast, dann bist du wahrscheinlich zu langsam, deswegen reichen siebzig Prozent und McKinsey sagt, dass Firmen die schnell entscheiden doppelt so erfolgreich, also langsam schnell. Das bedeutet, okay, die Zeit spielt auf jeden Fall eine Rolle für die Entscheidungen. Und da ist natürlich die Frage, wie viel Zeit gebe ich eigentlich einer Entscheidung? Wolfgang, jetzt kommen wir mal aus der IT raus. Du hältst ja immer die Freiwilligen Feuerwehr Flagge hier hoch und die letzten Tage mussten wir eine Podcast Aufnahme verschieben, weil du irgendeinen tschechischen LKW löschen musstest. Wie viel Zeit hattest du für Entscheidungen beim Löschen eines brennenden LKW? Hast du überhaupt die Entscheidung getroffen? Warst du überhaupt befähigt bei der Freiwilligen Feuerwehr diese Entscheidung zu treffen oder warst du nur bei FUß?"
+    },
+    {
+      "end": 658430,
+      "speaker": "B",
+      "start": 571440,
+      "text": "Also wir waren nur drei Leute, wir waren sehr selbstständig und haben den aber sehr schnell gelöscht vor der Berufsfeuerwehr. War recht nett, aber super Beispiel, das du da bringst. Und das war jetzt gar nicht vorbereitet, ehrlich gesagt, weil wir hatten kurz diskutiert, wir waren zu zweit und haben überlegt, wie wir den kleinen LKW löschen und mein Kollege hat was vorgeschlagen und immer gedacht, ich würde es anders machen, aber wir haben keine Zeit und habe gar nicht lang rumdiskutiert. Und das ist genau der Punkt. Natürlich, du hast keine Zeit darum zu diskutieren. Die andere Möglichkeit war okay, und bevor man da irgendwie da brennt ein Auto und du fängst dann irgendwie diskutieren an und dir überlegen, nehmen wir lieber einen grünen Schlauch oder den roten Schlauch. Das macht natürlich wenig Sinn. Also bei Supplizentscheidungen hast du natürlich ganz andere Requirements, als wenn du jetzt lang Zeit hast, um dir zu überlegen, was für ein Framework verwendest du Oder wenn du ein Incident hast, dann fängst du da auch nicht ewig lang diskutieren an. Also natürlich bis zum gewissen Bereich, klar machst du das. Und auch bei der Feuerwehr kann es sein, dass man natürlich gewisse Zeit hat. Und es macht auch Sinn, sich teilweise die Zeit zu nehmen und nicht im Stress zu agieren, weil du stehst vor einem brennenden Haus, überlegst dir irgendwas und vergisst aber mal um das Haus rumzugehen und zu schauen, was eigentlich hinter dem Haus ist. Also diese Zeit solltest du dir schon nehmen, bevor du irgendwelche Entscheidungen triffst. Eine gewisse Grundbasisinformation brauchst du natürlich schon und die brauchst du bei einem Incident, wenn dein Server abschmiert, wenn dein ganzes Datacenter down ist. Natürlich genauso als wie wenn du irgendwie ein LKW löscht."
+    },
+    {
+      "end": 663070,
+      "speaker": "A",
+      "start": 658510,
+      "text": "Heißt das bei euch offiziell Blitzentscheidungen oder ist das ein Begriff, den du jetzt gerade genannt hast?"
+    },
+    {
+      "end": 683760,
+      "speaker": "B",
+      "start": 663390,
+      "text": "Ich habe jetzt einfach so erfunden. Also Blitzentscheidung ist, wo man halt wenig Zeit hat, aber auch da wieder gefühlt sollte man sich eigentlich immer mehr Zeit nehmen. Also auch bei Blitzentscheidungen, die man so wirklich ad hoc fällen muss, ist es meistens schon gut, wenn man da vielleicht noch eine Minute draufsetzt zumindest oder fünf Minuten, bevor man irgendwas macht."
+    },
+    {
+      "end": 690750,
+      "speaker": "A",
+      "start": 683990,
+      "text": "Ja, okay, dass man jetzt einen Fettbrand nicht mit Wasser löschen sollte. Ich hoffe, dafür ist noch genug Zeit, um das irgendwie durchzudenken."
+    },
+    {
+      "end": 725210,
+      "speaker": "B",
+      "start": 690750,
+      "text": "Ja, der Klassiker ist so, du kommst hin, es brennt irgendwas, du fängst löschen an und übersiehst halt einfach, dass da irgendwo eine Gasflasche steht zum Beispiel, weil du halt einfach nicht mal die Runde spaziert bist oder so. Das sind halt so Grunddinge, die man schon checken sollte. Also da sind wir wieder bei den siebzig Prozent und die siebzig Prozent, die halt so ganz schnell irgendwie überschaubar eingeholt werden können, die sollte man schon auch in den Blitzentscheidungen machen. Also vielleicht stimmt die Regel schon. Wobei natürlich die siebzig Prozent im Gesamten bei so einer Blitzentscheidung weniger sind, als wenn jetzt, wie gesagt, ein Framework auswähle."
+    },
+    {
+      "end": 740390,
+      "speaker": "A",
+      "start": 725210,
+      "text": "Du hattest ja auch gesagt, bei den siebzig Prozent der Daten, dass man die richtigen Daten hat. Jetzt ist es natürlich jetzt, wenn jemand die ganze Sache auf die Goldwaage legen möchte, dann ist natürlich die Frage, was sind die richtigen Daten? Da muss natürlich den Kontext kennen, wie lösche ich etwas? Eine Gasflasche darf da nicht sein."
+    },
+    {
+      "end": 749670,
+      "speaker": "B",
+      "start": 740390,
+      "text": "Naja, darf da nicht sein, ist oft, Aber überleg mal an deinen Keller, wie viel Farben, Lacke und sonstiges Zeug du da drin stehen hast."
+    },
+    {
+      "end": 831030,
+      "speaker": "A",
+      "start": 750070,
+      "text": "Viel zu viel, als dass es mir lieb ist. Aber ja, ich meine im Endeffekt, du hast gerade schon Incident Management erwähnt. Ich meine, Incident Management bei Servern und im Applikationsbereich in der IT ist ja eigentlich nichts anderes, als wenn ich jetzt einen brennenden LKW lösche. Klar, brennender LKW hat einen Effekt für die reale Welt. Bei mir ist es nur eine Applikation, die rennt oder Konfigurations Bug oder was, weiß der Geier nicht. Aber ich meine, je nachdem in welchem Kontext man unterwegs ist, zum Beispiel im Bereich kritischer Infrastruktur, da liest man dann zum Beispiel Microsoft Azure, dass wenn in Nähe Amsterdam irgendwelche Baggerarbeiten sind, ein Baum gefällt wird, die Baumwurzel sich um Glasfaserkabel gewendet hat und dann beim Fällen des Baumes die Glasfaserkabel mit rausgerissen hat. Ist das jetzt ein Softwareinzident, ist das ein Hardwareinzident? Man weiß es nicht. Punkt ist. Aber diese Menschen müssen auch schnell reagieren. Und man muss ja auch sagen, dass die meisten Prozedere aus dem Incident Management auch wirklich aus dem Katastrophenschutz kommen. Es gibt ein Buch, das haben wir auch schon mal in einer Podcast Episode zum Thema Incident Management genannt, Das nennt sich Incident Management for Operations. Ist glaube ich von den Leuten, die inzwischen die Firma blackrock oder sowas machen. Blackrock nicht die Finanzfirma, sondern da gibt es noch eine andere Firma, die macht Incident Management und die stützen ihr Incident Management Proze, ich glaube von irgendwelchen Waldbränden in Kalifornien und so weiter."
+    },
+    {
+      "end": 837070,
+      "speaker": "B",
+      "start": 831190,
+      "text": "Genau, von der kalifornischen Feuerwehr. Die haben da vor allem mit Grossschadensereignissen damals viel gemacht."
+    },
+    {
+      "end": 985040,
+      "speaker": "A",
+      "start": 837070,
+      "text": "Das Buch verlinke ich auch in den Shownotes, ist ein guter Read, kann man so sagen. Aber in Bezug auf Zeit und Entscheidungen treffen, finde ich. Und jetzt Achtung, ich hole mal wieder Jeff Bezos raus. Der hat nämlich zwei tausend fünfzehn einen Shareholder Letter geschrieben. Wer es nicht weiß, Jeff Bezos schreibt jedes Jahr, ich weiß gar nicht, macht das Jeff Bezos aktuell immer noch, weil der ist ja kein CEO von Amazon mehr oder macht das jetzt Andy Jesse? Weiß ich jetzt auch gerade nicht. Auf jeden Fall hat Jeff Bezos jedes Jahr einen Brief an die Aktien Shareholder geschrieben und zwei tausend fünfzehn hat er damals über sogenannte Type One und Type zwei Entscheidungen getroffen. Übersetzt heißt es eigentlich den originalen Shareholder Letter verlinken wir auch unten in den Shownotes. Übersetzt wurde da geschrieben, Einige Entscheidungen sind folgenreich und unumkehrbar oder fast unumkehrbar Einbahnstraßen. Und diese Entscheidungen müssen methodisch sorgfältig, langsam, mit großer Überlegung und Beratung getroffen werden. Aber die meisten Entscheidungen sind nicht so, sie sind veränderbar, umkehrbar. Es sind Zwei Wege Entscheidungen. Entscheidungen vom Typ eins sind folgenreich und unumkehrbar oder fast unumkehrbar. Einbahnstraßen Entscheidungen des Typ zwei sind veränderbar, umkehrbar, sie sind Zwei Wege Tür. Wenn wir das Ganze jetzt mal auf Beispiele nehmen, zum Beispiel in der Softwareentwicklung, sind Typ eins Entscheidungen sowas wie die Wahl der Architekten, zum Beispiel Microservices versus Monolith. Der Umbau selbst ist ziemlich kostenintensiv, aufwendig und teilweise sogar riskant. Wer vielleicht schon mal einen Monolithen in Microservice umgebaut hat oder vice versa, weiß, wovon ich spreche. Technologie und Framework. Für die Auswahl für dein Kernsystem nutze ich Angular jetzt und wenn ich später auf React wechseln möchte, kann das Monate dauern, sofern diese Frameworks natürlich keine einheitlichen Standards haben. Oder natürlich auch das Design und Einführung einer öffentlichen API. Einmal, wenn die öffentliche API im Netz ist, wird sie genutzt, weil sobald es Kunden verwenden, ist ein Redesign wirklich nur mit Breaking Changes möglich und jeder weiß, andere Leute dazu zu bringen, wegzumigrieren, schwierig. Wohingegen Typ zwei Entscheidungen, die leicht umkehrbar und leicht korrigierbar sind, eine geringe Tragweite haben, die können schnell und gegebenenfalls sogar dezentral getroffen werden. Da sind jetzt Beispiele wie zum Beispiel das UI Design ein bisschen ändern. Die Frontendler werden mir jetzt an den Hals springen. Dass das nicht einfach ist, verstehe ich. Dann sagen wir vielleicht nicht das ganze UI Design, sondern vielleicht eine Buttonfarbe. Da kann man in Sprints iterativ."
+    },
+    {
+      "end": 992480,
+      "speaker": "B",
+      "start": 986960,
+      "text": "Sogar dein Hund hat ein Problem damit, wenn du die UI Designer da beflegelst und schlecht machst."
+    },
+    {
+      "end": 1006550,
+      "speaker": "A",
+      "start": 992480,
+      "text": "Ja, wie gesagt, UI ist auch nicht mein Steckenpferd. Deswegen, es tut mir leid, wenn UI Design vielleicht sogar eine Typ eins Entscheidung ist. Aber deswegen habe ich ja gesagt, wir limitieren uns jetzt hier auf die Buttonfarbe oder auf wie sieht das Input Feld aus."
+    },
+    {
+      "end": 1077960,
+      "speaker": "B",
+      "start": 1006550,
+      "text": "Ich glaube sowieso, dass auch ganz viele One Way Door Entscheidungen gar keine One Way Door sind, auch wenn es um Frameworks geht. Klar, wenn du jetzt in einer großen Firma bist, du hast zwei hundert Leute und stellst jetzt ein Framework um von dem Source Code, wo zwei hundert Leute dran arbeiten, dann solltest du dir das natürlich besser überlegen. Wenn du jetzt mit einem neuen Projekt startest, kann man einfach mal mit irgendeinem Framework loslegen, was Sinn macht. Und wenn man nach einer Woche merkt, okay, es macht vielleicht doch keinen Sinn, kann man das vielleicht auch wieder wechseln. Also je nachdem, wie groß die Firma ist und wie groß der Impact dann ist, impliziert es auch andere Anforderungen Natürlich. Und das muss man sich schon mal überlegen, weil Entscheidungen trifft man ja selten heute eine Entscheidung und dann macht man drei Jahre irgendwie nichts mehr oder kann nichts mehr daran ändern, sondern man ist da ja schon flexibel. Klar, wenn man jetzt ein Haus baut und die entscheid irgendwas und da fährt dann der Bagger vor, dann wird es schwieriger, was zu ändern. Aber sogar da, wenn man in die heutige Welt schaut, wenn da ein Haus gebaut wird, ich habe da jetzt aktuell zufällig Einblicke in größere Projekte, da wird auch extrem viel geändert. Da werden einfach so Hauptwasseranschlüsse geändert, dass die plötzlich woanders reinkommen. Es gibt schon Sachen, die sich auch sogar bei so einem Architekturprojekt durchaus ändern können."
+    },
+    {
+      "end": 1189960,
+      "speaker": "A",
+      "start": 1077960,
+      "text": "Ja, du hast einen Punkt. Vielleicht ist Framework jetzt nicht das beste Beispiel, was ich rausgebracht habe, obwohl ich da glaube ich, je nach Kontext auch noch mal ein bisschen gegenreden würde. Nehmen wir mal zum Beispiel die Programmiersprache, nehmen wir GitHub als Beispiel. GitHub wurde damals in Ruby bzw. Ruby on Rails geschrieben oder Shopify auch. Und wenn du einen Monolithen hast, dann ist es relativ schwierig die Hauptsprache zu ändern. Ich rede jetzt nicht von, ah, wir haben Java und da kommt jetzt Kotlin und deswegen kann ich Kotlin auch auf der JVM ausführen. Das kann man schon tun, gar keine Frage. Und man kann auch mit Shared Objects irgendwie was in Rust programmieren, als Shared Object compilen oder in Go und dann in C reinladen. Geht alles, gar keine Frage. Aber immer mit welchen Trade offs? Naja, wenn wir aber mal das UI Beispiel jetzt mal rauslassen, wo ich jetzt hier schon gechallenge wurde bei Typ zwei Entscheidungen, bei Entscheidungen die eine, dann kann man auch sagen, OK, pass auf, ob ich jetzt ein Feature Flag aktiviere oder deaktiviere. Das sind Änderungen, die man in der Regel mit wenigen Klicks machen kann. Da müssen wir jetzt nicht drei Stunden Meeting zu machen, soll ich das jetzt für fünf Minuten testen, teste es dann, hast das Ergebnis und machst wieder aus. Das ist glaube ich der Klassiker. Oder halt ein Code Refactoring ohne eine Public API Änderung, also ohne Breaking Change, so dass man halt einfach nur eine interne Optimierung macht, die man halt meist rückgängig machen kann, weil es dann ein Revert von einem von einem Pull Request ist oder ähnliches natürlich vorausgesetzt, dass du ordentliche Deployment Prozesse hast und dass dein Deployment nicht nur einmal im Quartal ist. Hatten wir ja auch schon mal drüber gesprochen. Ich glaube in der Merge Freeze Folge oder in der Code Freeze Folge, wenn du ein Operating System programmierst, wo dann dein Release Cycle einmal pro Jahr ist, dann ist es vielleicht ein bisschen was anderes, als wenn du jetzt eine Web App hast, die du fünf und zwanzig Mal am Tag schippst. Aber jetzt rede ich die ganze Zeit von diesem Typ eins, Typ zwei Entscheidung. Wie stehst du dazu, wie findest du das, was Jeff Bezos da sagt?"
+    },
+    {
+      "end": 1292360,
+      "speaker": "B",
+      "start": 1190200,
+      "text": "Ja, wie gesagt, ich glaube nicht, dass es da Typ eins und Typ zwei Entscheidungen gibt, aber es ist ein gutes Framework, Aber ich glaube, es ist eine Bandbreite und du musst dir einfach überlegen, wie agil kannst du sein, wie schnell kann man das auch wieder ändern, wie groß ist der Impact. Ganz allgemein würde das sowieso immer möglichst agil sehen und in der Softwareentwicklung ist eigentlich fast alles agil, würde ich mal sagen, weil wir bauen keine großen Häuser, wo wir Bagger vorfahren lassen, außer wir machen jetzt ein Datacenter oder kaufen neue Server oder sonst irgendwas. Sind vielleicht Entscheidungen, die man schwerer revidieren kann, würde ich mal sagen. Aber ganz allgemein würde dann agiles Vorgehen vorschlagen, möglichst schnell entscheiden und dann das Ganze aber immer auch wieder reevaluieren. Es gibt auch ein Framework, das heißt Oder Loop Framework oder der Oder Loop, also ODA, Observe, Orient, Decide, Action. Selbe wie auch bei der Feuerwehr oder bei einem Incident, was du normalerweise machst. Also du schaust mal zuerst, was passiert da eigentlich, probierst dich zu orientieren, was gibt es noch, holst die Informationen, entscheidest und setzt dann die Entscheidung auch um. Und dann, ganz wichtig bei dem Oder Loop ist immer ein Feedback dabei. Das heißt, du reevaluierst ständig, holst dir immer wieder Feedback ein und es ist eigentlich so ein Zyklus, dass du immer wieder am Anfang die Orientierung machst, checkst, ist die Entscheidung noch richtig, musst du etwas adaptieren, also so eine klassische agile Herangehensweise. Und wenn man sich diese agile Herangehensweise denkt und auch implementiert, dann ist es natürlich auch leichter Entscheidungen zu treffen, weil du ja weißt, du kannst hinten immer wieder Änderungen vornehmen, du observierst auch, du monitorst Du reevaluierst, um dann vielleicht wieder deine Entscheidung anzupassen und dann fällt es einem vielleicht auch leichter, eine Entscheidung zu treffen."
+    },
+    {
+      "end": 1299400,
+      "speaker": "A",
+      "start": 1292680,
+      "text": "Was ich immer sehr faszinierend finde, ist, dass es für alles irgendwie ein Framework gibt. Observe, Orient, Decide, Act heißt jetzt oder Loop."
+    },
+    {
+      "end": 1307700,
+      "speaker": "B",
+      "start": 1299620,
+      "text": "Ja, wenn Leute, wir haben ja auch schon unsere eigenen Abkürzungen kreiert oder du, dieses Andi Framework, ich hab schon wieder vergessen, was das Andi Framework war, müsste man jetzt nachschauen."
+    },
+    {
+      "end": 1398660,
+      "speaker": "A",
+      "start": 1307780,
+      "text": "Das Andi Framework hast du kreiert und ich glaube, es war in der Episode zur Quartalsplanung, aber ich weiß nicht, warum wir allen Kram immer Namen geben müssen. Es ist jetzt nicht so, als habe ich zum Wolfgang letzte Woche gesagt, hör mal, hast du auch das Loop Framework mal genutzt, deswegen vielleicht ein bisschen übertrieben, aber hey, es gibt Leute, die mögen Struktur. Ich mag ja auch Struktur. Das ist mir ein bisschen zu viel Struktur. Noch mal ganz kurz zu Typ eins und Typ zwei Entscheidungen. Da muss ich zugeben, das nutze ich wirklich wöchentlich. Bei super vielen Entscheidungen frage ich, okay, ist das jetzt, also ich kenne die Antwort in der Regel auf die Frage, aber ich frage oft in der Runde, ist das jetzt eine Antwort, ist das jetzt eine Entscheidung, die jetzt irgendwie maßgeblich ist oder ist das eine Entscheidung, die wir mit relativ wenig Aufwand wieder revidieren können? Dann wird gesagt, können wir relativ schnell revidieren. Okay, warum diskutieren wir darüber? Also ich nutze das wirklich sehr, sehr, sehr oft und als brutales Beispiel, man kennt mich ja, ich bin aus dem Pott, ich nehme kein Blatt vor den Mund, wie man so auf gut Deutsch sagt, für mich so eine klassische Typ eins Entscheidung, weil du hast ja gerade gesagt, ja, man kann ja inzwischen auch bei der Architektur alles ändern und Wasseranschlüsse verlegen und so. Ist richtig. Deswegen bin ich mal drastisch. Wenn du ein Kind auf die Welt bringst, würde ich das als Typ eins Entscheidung deklarieren. Du kannst es nicht mehr rückgängig machen, klar, Also du kannst das Kind töten, doch, dann hast du ganz andere Probleme. Also dann hast du es aber auch nicht rückgängig gemacht, sondern du bist auch nach vorne gegangen und hast mehr Schaden angerichtet. Alles richtig. Aber würdest du mir zustimmen, dass ein Kind auf die Welt zu bringen eine Typ eins Entscheidung ist? Jetzt sag nicht, du kannst es auch zur Adoption freibringen und blablabla."
+    },
+    {
+      "end": 1413460,
+      "speaker": "B",
+      "start": 1398660,
+      "text": "Also das ist ja Also es ist schwer zu revidieren, definitiv. Wobei die meisten Entscheidungen ja auch nicht revidiert werden in dem Sinne, sondern du gehst nach vorne und änderst etwas. Aber klar, so klassisch von revidieren, Rollback. Rollback wird schwierig. Man kann nichts zurückschieben."
+    },
+    {
+      "end": 1420790,
+      "speaker": "A",
+      "start": 1413460,
+      "text": "Ja, genau. Also auch ein Kind zur Adoption freigeben oder halt, wie gesagt, einen Mord begehen."
+    },
+    {
+      "end": 1426790,
+      "speaker": "B",
+      "start": 1421110,
+      "text": "Das meint ihr schon sehr mobile, Andi. Ja, schon die österreichischen Züge angenommen von mir."
+    },
+    {
+      "end": 1455630,
+      "speaker": "A",
+      "start": 1427110,
+      "text": "Ich hoffe nicht. Ich hoffe nicht, aber ist ein drastisches Beispiel. Nur vielleicht hat es jetzt auch jeder verstanden, obwohl Wolfgang mich bei jeder Sache challenge. Aber um eine Entscheidung zu treffen, würde ich sagen, muss erst mal eine Frage auf den Tisch geworfen werden. Was gibt es denn überhaupt zu entscheiden? Und da ist die Was brauchst du, um eine Entscheidung zu treffen? Was würdest du sagen, in einer perfekten Welt habe ich folgendes auf meinem Tisch liegen und dann kann ich eine Entscheidung treffen?"
+    },
+    {
+      "end": 1576520,
+      "speaker": "B",
+      "start": 1455630,
+      "text": "Ja, wenn du jetzt auf Blitzentscheidungen gehst und wieder im Feuerwehrwesen, dann ist natürlich schwierig, da hast du nichts am Tisch liegen, da wirst du einfach konfrontiert. Aber was du natürlich machen kannst, ganz grundsätzlich für Entscheidungen, du kannst dich vorbereiten auf Entscheidungen. Was kommen kann und das ist im Feuerwehrbereich oder auch im Incident Management ganz allgemein, sind natürlich so sops, so Standard Operation Procedures. Du kannst dir überlegen, was könnte denn auftreten für ein Problem und dann schon im Vorhinein, damit du eben später dann keine Zeit verschwenden musst, dir überlegen, wie gehst du die Sache einfach an, wenn da eine Festplatte ausfällt, was hast du für Schritte, wenn deine Datenbank plötzlich weg ist, was hast du für Schritte? Die Datenbank verliert Daten, Wie spielst du ein Backup zurück? Also solche Dinge, wenn du die in einem Runbook hast, in sops, Auto brennt, LKW brennt, was machst du grundsätzlich, was musst du checken? Checklisten. Dann kannst du dich natürlich vorbereiten auf Entscheidungen und die Entscheidungsfindung geht dann einfach schneller. Im Firmenkontext ist zum Beispiel auch noch extrem wichtig, wer ist denn verantwortlich? Wen musst du einbinden bei einer Entscheidung, auch beim Incident? Wen musst du Reports abliefern, wen musst du informieren? Irgendeinen Kundenkontakt, zum Beispiel deine Kunden an sich, den CEO, Wer muss wirklich informiert werden? Also wenn du da auch schon so Abläuf definiert hast und auch Rollen definiert hast, wer eben für was verantwortlich ist, wer Entscheidungen trifft, wer informiert werden muss, wem man vielleicht um Rat fragen kann. Also Facebook hatte ja immer die Regel, du darfst allein deployen als Developer, aber es muss mindestens eine zweite Person da sein, die dir helfen kann in einem gewissen Umfeld oder die du anrufen kannst, dass du einfach so jemanden, einen Consultant hast, den du fragen kannst in dem Fall. Und wenn du sowas im Vorhinein schon definiert hast, damit die eben bei einem Feuerwehreinsatz, wenn ein LKW brennt und da ist ein gefährlicher STO Stoff oben, dass ich eine Telefonnummer habe von irgendeinem Chemie Experten, den ich anrufen kann, was ich da am besten mache mit irgendeinem komischen gefährlichen Stoff, dann habe ich dann natürlich, wenn ich die Entscheidung trifft, dann einen großen Vorteil, weil ich einfach vorbereite."
+    },
+    {
+      "end": 1588860,
+      "speaker": "A",
+      "start": 1576760,
+      "text": "Du hattest gerade Runbooks und sops genannt. Sops steht meines Wissens nach, ich meine, Abkürzungen sind immer schwierig, sops steht aber meines Wissens nach für Standard Operational Procedure. Ist das korrekt? Ist das auch dein Verständnis?"
+    },
+    {
+      "end": 1590930,
+      "speaker": "B",
+      "start": 1589330,
+      "text": "Ich glaube, das habe ich sogar gesagt."
+    },
+    {
+      "end": 1592850,
+      "speaker": "A",
+      "start": 1591090,
+      "text": "Ich kann sein, vielleicht habe ich mal."
+    },
+    {
+      "end": 1595730,
+      "speaker": "B",
+      "start": 1592850,
+      "text": "Wieder nicht zugehört im Transkript nachlesen, lesen."
+    },
+    {
+      "end": 1626890,
+      "speaker": "A",
+      "start": 1595730,
+      "text": "Wir gleich im Transkript nach, ne? Aber ja, das haben wir auch. Ich meine, jeder der operationell irgendwie da ist, dieser Alert feuert, mach bitte das. Das ist der Klassiker. Aber eine Sache hast du gerade erwähnt, die hat mir so ein bisschen Gänsehaut bereitet. Nicht weil ich excited bin, nicht weil ich aufgeregt bin, sondern boah, ne, wirklich jetzt. Und zwar was, wer ist verantwortlich, wer darf was entscheiden und so weiter und so fort. Und da kommt mir diese RACI Matrix in den Sinn. Responsible, Accountable, consulted und informed."
+    },
+    {
+      "end": 1629690,
+      "speaker": "B",
+      "start": 1627050,
+      "text": "Es gibt schon für alles eine Abkürzung und ein Modell, oder?"
+    },
+    {
+      "end": 1784690,
+      "speaker": "A",
+      "start": 1631930,
+      "text": "Ich glaube, das erste Mal, es war eine lustige Story, ich glaube, es war bei Trivago, Trivago war zu der Zeit relativ unorganisiert und dann kamen halt irgendwelche Leute, die haben vorher in einem Konzern gearbeitet und kamen in unser Softwareteam und sagte, ja, habt ihr mal eine Racing Matrix? Ich so, was ist denn das hier, Was ist denn RACI Matrix? Vielleicht mal irgendwie im Studium gehört, aber schnell vergessen. Und dann musste ich mich mit denen da hinsetzen und diese Racing Matrix ausfüllen. Ernsthaft jetzt? Naja, jetzt wird der ein oder andere, der mir gerade zuhört, auf der einen Seite fragen, was ist das denn? Wovon redet der auf der anderen Seite, wie kannst du nur so schlecht darüber reden? Naja, klären wir erst mal, was das eigentlich ist und danach fragen wir mal den Wolfgang, wie er die ganze Sache sieht. Also RACI Matrix ist eigentlich eine simple Tabelle, die hilft Teams dabei, eine klare Verantwortlichkeit in dem Projekten zu definieren, eine Rollendefinition, wenn irgendwie Arbeitspakete verteilt werden. Also wir haben das Ding heißt RACI RACI, das R steht für responsible. Wer ist denn verantwortlich für die Umsetzung? Wer macht die eigentliche Arbeit? Also das Coden, das Testen, das Dokumentieren Und das sind in der Regel dann die Entwickler und Entwicklerinnen, die die neue API Funktion programmieren. Okay, cool. Das ist, glaube ich, relativ einfach. Das A steht für accountable, wer ist entscheidungsverantwortlich? Wer hat die Rechenschaftspflicht sozusagen? Wer trägt die endgültige Verantwortung? Weil irgendwer muss immer den Hut aufhaben. Im Endeffekt muss diese Person auch sicherstellen, dass die Arbeit auch erledigt wird. Und jetzt in unserem API Beispiel, was ich gerade genannt habe, wäre das eine Teamleiterin, die dann den API Launch verantwortet und entscheidet, wann welches Feature live geht. Das C steht für Consultant, also wer muss einbezogen werden? Wer steht beratend zur Seite? Wen fragt man um Rat oder um Expertise? Und das sind oft irgendwie Personen mit Fachwissen. In einem API Beispiel wäre das jetzt zum Beispiel ein Security Engineer, der zum Thema Authentifizierung und Autorisierung das Engineering Team für die API berät und das I steht für informed. Wer soll eigentlich auf dem Laufenden gehalten werden? Das sind dann immer diese Reporting E Mails, die immer jede Woche geschickt werden müssen. Die Leute sind da nicht wirklich aktiv beteiligt, aber die Kommunikation kann auch als einseitig ab und zu mal angesehen werden, bekommen Updates, das Reporting, zum Beispiel das C Level oder so. Oder in unserem API Beispiel könnte das zum Beispiel das Support Team sein, das informiert wird, sobald die neue API live ist, um Kundenanfragen zu beantworten. Soweit die Theorie. Was ist deine Meinung zu RACI Matrix?"
+    },
+    {
+      "end": 1917040,
+      "speaker": "B",
+      "start": 1785010,
+      "text": "Das Schöne ist ja mittlerweile, durch die ganzen LLMs kann man ja immer sowas auch reinschmeissen und das LLM spuckt dann irgendwie zwanzig andere Frameworks noch aus, die es in dem Bereich gibt, die so was ähnliches machen. Ich habe da nur Rapid gefunden, Recommend, agree, perform, input decide und Darkey oder dayc Driver, approver, contributor informed, Aber im Prinzip sagen die alle dasselbe. Und eigentlich gibt es auch immer diese vier Rollen und man kann da jetzt natürlich so ein Modell verwenden und ich glaube, es ist auch gut, sich mal Gedanken darüber zu machen. In der Theorie, in der Praxis weiß ich nicht, ob man unbedingt das Modell an sich braucht, aber die Zeit zu investieren, einfach um sich mal zu überlegen, wer ist denn am Ende verantwortlich, wer entscheidet und wen kann ich um Rat fragen und wen muss ich informieren, Das ist glaube ich schon eigentlich sinnvoll. Und jeder Projektmanager, Managerin macht es, weil du musst gewisse Stakeholder informieren, du musst den CEO vielleicht informieren, du musst die Security Abteilung fragen, ob die einverstanden ist mit dem, keine Ahnung, neuen Framework, mit dem neuen Prozess, Software, was es auch immer ist, die muss vielleicht zustimmen, weil du gewisse Compliance erfüllen musst. Also es gibt immer Stakeholder, die du informieren musst. Und wenn du dir die Stakeholder mal zusammenschreibst, wer sind die Stakeholder, ob du das jetzt in den vier Kategorien machst oder nicht, ist jetzt meiner Meinung nach nicht so wichtig, aber du musst dir überlegen, wer sind die Stakeholder und wie kommunizierst du mit den einzelnen Stakeholdern und wer ist wie verantwortlich. In dem Chaos Umfeld von Startups ist es sehr oft nicht der Fall. Da ist auch nicht klar, wer ist accountable, wer ist responsible. Das funktioniert bis zum gewissen Bereich natürlich ist einfach Chaos, aber sobald du ein bisschen mehr Struktur hast, ist es eigentlich schon empfehlenswert. Und sogar wenn du in dem Chaos Approach bist, wenn du die Leute informierst und Information ist mal key meiner Meinung nach, weil wenn du irgendwo eine Entscheidung triffst, aber niemand weiß, dass du eine Entscheidung getroffen hast, dann macht es auch wenig Sinn und dann wird deine Entscheidung vermutlich nicht umgesetzt. Also sich einfach zu überlegen, wie wird es kommuniziert, wer ist für was verantwortlich, wen kann ich fragen, macht auf jeden Fall Sinn. Und ob du da jetzt Starkey oder Rapid oder RACI drüber schreibst, ist meiner Meinung nach jetzt zweitrangig, Aber die Grundidee finde ich schon sinnvoll."
+    },
+    {
+      "end": 1924720,
+      "speaker": "A",
+      "start": 1917120,
+      "text": "Hast du es schon mal in der Praxis angewendet? Hast du schon mal eine RACI Matrix ausgearbeitet ins Wiki geschrieben und dem Team präsentiert."
+    },
+    {
+      "end": 1949390,
+      "speaker": "B",
+      "start": 1924880,
+      "text": "Dem Team in dem Sinne noch nicht, aber ich war schon in großen Projekten involviert, wo es durchaus darum gegangen ist, wer sind die Stakeholder, wer muss wie oft informiert werden, wer muss bei einem Prozess eingebunden werden, also in einem Entscheidungsprozess eingebunden werden. Das ist durchaus sinnvoll und wenn du dann in einem Projekt irgendwie zwei hundert Leute unter den Hut bringen musst, dann solltest du dir das auf jeden Fall überlegen. Wenn du in einem Team arbeitest mit vier Leuten, keine Ahnung, erwähnt es beim."
+    },
+    {
+      "end": 1991510,
+      "speaker": "A",
+      "start": 1949390,
+      "text": "Stand up und bei mir war es halt oft halt der zweite Fall, Wir sind dann irgendwie mit zehn Leuten da rumgeturnt und bevor wir überhaupt einen Anschlag gemacht haben, haben kam dann ja, wir müssen jetzt erstmal eine Racing Matrix definieren. Okay, dann haben wir die definiert, dann wurde die auf der Wikipedia abgelegt, dann hat die Wikipedia geöffnet, hat eine riesen Tabelle gesehen, hat die wieder zugemacht und da wurde die ganze Thematik wieder ignoriert. Also das klang dann oft halt so nach so einer Checkbox Exercise im Endeffekt. Das, was du gesagt hast, dass die Rollendefinition Sinn macht, ich glaube, das streitet niemand ab Oft. Ich glaube, das kommt auch aufs Umfeld an. Ist die Definition eher implizit als explizit und bei einem zwei hundert Mann Projekt, darf man das noch sagen? Zwei hundert Mann, Projekt zwei hundert Frau, Projekt zwei hundert Personen, Projekt zwei hundert."
+    },
+    {
+      "end": 1992870,
+      "speaker": "B",
+      "start": 1991510,
+      "text": "Personen, Das ist nicht so schwierig."
+    },
+    {
+      "end": 1996630,
+      "speaker": "A",
+      "start": 1992870,
+      "text": "Andi Ja, ich übe mich, ich übe mich, aber es braucht Training."
+    },
+    {
+      "end": 2041480,
+      "speaker": "B",
+      "start": 1996630,
+      "text": "Aber das ist ganz allgemein wichtig zu definieren, wie groß ist die Entscheidung und was brauchst du dafür und wie wirst du die kommunizieren oder brauchst du ein Framework oder nicht? Machst du ein ADR? Das ist ja dein Lieblingsthema. Da hatten wir schon eine ganze Episode dazu, ein hundert fünf und dreiig Design Documents und Architecture Decision Records. In ein hundert vierzig Tech Leadership haben wir auch über diese Dinge gesprochen. Also schreibe das alles nieder, damit ihr das dann auch verbreiten kann oder ist es halt einfach ein Update in einem Stand Up oder in Slack einfach um schnell irgendwas zu kommunizieren oder auch vielleicht eine Entscheidung herauszufinden mit Thumbs up, Thumbs down. Also ob ihr heute Mittagessen gehe oder wer mit Mittagessen geht, kann ich vielleicht mit Thumbs up, Thumbs down in dem Slack Channel genauso klären."
+    },
+    {
+      "end": 2044040,
+      "speaker": "A",
+      "start": 2041640,
+      "text": "Mittagessen ist aber schon eine Typ ohne Entscheidung, oder?"
+    },
+    {
+      "end": 2059720,
+      "speaker": "B",
+      "start": 2044280,
+      "text": "Ja, das stimmt. Mir hat mal einer aus meinem Team mit der Kündigung gedroht, weil ich vorgeschlagen habe, ob man nicht vegetarisches Essen machen fürs Team bei einem Team Event und der hat es nicht mal spasshalber gesagt. Aber es waren Brasilianer. Das sind andere Welten."
+    },
+    {
+      "end": 2061000,
+      "speaker": "A",
+      "start": 2059720,
+      "text": "Ist das schon Rassismus?"
+    },
+    {
+      "end": 2069250,
+      "speaker": "B",
+      "start": 2061000,
+      "text": "Ja, es war Rassismus jetzt. Das ist auf alle Brasilianer überstülpt, Aber tendenziell die Brasilianer im Team hatten immer ein ziemliches großes Problem, wenn es um vegetarisch gegangen ist."
+    },
+    {
+      "end": 2093719,
+      "speaker": "A",
+      "start": 2069799,
+      "text": "Ein Schmankerl von der letzten Kegeltour. Wir haben uns in einem Restaurant vorher angemeldet und haben uns dort ein ganzes Lamm zubereiten lassen. Waren vierzehn Kilo Lamm, war schon sehr viel. Ich gebe zu, danach auf der einen Seite, wenn du siehst, wie das zubereitet wird und danach gegessen, habe ich mir auch kurz überlegt, ob ich nicht einfach mal jetzt einen Monat oder zwei einfach Vegetarier oder Veganer werde."
+    },
+    {
+      "end": 2098849,
+      "speaker": "B",
+      "start": 2093879,
+      "text": "Das hast du mir schon so oft versprochen, dass du weniger Fleisch isst und zum Vegetarier wirst."
+    },
+    {
+      "end": 2137520,
+      "speaker": "A",
+      "start": 2099009,
+      "text": "Naja, scheint eine Typ zwei Entscheidung zu sein. Okay, aber wer muss informiert werden, wer macht die Arbeit, wer hat den finalen Hut auf und wer ist accountable und so weiter. Gute Sache. Lassen wir das Tool mal in eure Toolbox, damit ihr das auch mal gehört habt. RACI Matrix. Aber kommen wir mal wieder zu der Kommunikation. Du hast gerade von adrs geredet, Architecture Decision Records oder Decision Records Generation und teilweise auch Slack erwähnt. Woher weiß ich denn, wann ich etwas wohin schreibe? Also wann ist Slack genug? Weil Slack geht ja schon schnell, ist ja schon ein bisschen eine niedrigere Hürde, eine niedrigere Barriere als jetzt so ein Architecture Decision Record."
+    },
+    {
+      "end": 2251250,
+      "speaker": "B",
+      "start": 2137680,
+      "text": "Ja, ich glaube auch da wieder ganz klar muss ich mal mir Gedanken machen, was die Entscheidung für einen Impact hat. Wenn ich jetzt vorm brennenden Haus stehe, werde ich nicht ein Architecture Decision Record aufmachen und dann asynchron diskutieren anfangen, wie man am besten löscht. Also da muss es schnell gehen. Da ist zwar der Impact vielleicht groß, im Idealfall ist er groß, aber üblicherweise in der Softwarewelt, wenn ich einen großen Impact habe, habe ich auch eine gewisse Zeit. Und dann kann ich mir natürlich überlegen, wie groß muss das Ganze aufgeblasen werden. Also wie groß ist der Scope, wie viele Leute sind betroffen, was habe ich für Langzeitwirkung auf die Teams, auf die Firmen? Sind die Architekturen betroffen oder die Strategie? Also muss ich meine Firmenstrategie ändern, wenn ich diese Entscheidung triff, da muss ich das wahrscheinlich ganz anders angehen. Da muss ich das vielleicht in der Tiefe auch mal betrachten und vielleicht auch besser dokumentieren. Dann ist ein Architecture Decision Record wahrscheinlich sinnvoll, wo das einfach auch alles protokolliere. Aber wie gesagt, wenn wir dann wieder bei einer Entscheidung sind, wohin gehen wir essen? Dann brauche ich wahrscheinlich keinen Architecture Decision Record und dann ist auch nicht so wichtig im Nachhinein, warum habe ich mich denn damals so entschieden. Aber wenn jetzt eine neue Technologie einsetze oder vielleicht den Cloud Anbieter wechsel, dann ist es vielleicht schon sinnvoll, dass ihr da die Dokumentation habt, es wirklich mit Alternativen abkläre, Was sind die Möglichkeiten, was waren die Gründe dieser Entscheidung? Wer war eingebunden? Welche Menschen waren eingebunden? Wie wird das Ganze umgesetzt und so weiter. Also je nachdem, wie groß der Impact ist, glaube ich, sind dann andere Anforderungen auf den Entscheidungsprozess gesetzt. Das gleiche mit Risiko. Wenn großes Risiko ist, dann muss ich das vielleicht besser beurteilen, als wenn null Risiko ist. Da sind wir wieder bei den One Way und Two Way Doors. Kann ich zurück? Kann ich agil agieren oder ist es eine Entscheidung, die dann sehr lange in die Zukunft wirkt?"
+    },
+    {
+      "end": 2323450,
+      "speaker": "A",
+      "start": 2251490,
+      "text": "Vor kurzem habe ich zwei Teams von einem anderen Manager übernommen und da fehlt mir natürlich die Historie, der Kontext und so weiter und so fort und all das, was du gerade gesagt hast. Welche Entscheidung wurde getroffen? Warum? Wer war involviert? Teilweise wurden Entscheidungen dokumentiert und teilweise halt nicht. Sehr wahrscheinlich, weil sie nicht den großen Impact und nicht den großen Scope hatten, dass jemand sagt, muss ich mir nicht dokumentieren den Großteil meiner Zeit, frage ich aber haben wir sowas schon mal gemacht? Warum wird das damals so entschieden? Wer war involviert? Wer hat denn neue Informationen? Also genau die Entscheidungen, die nicht dokumentiert wurden, die machen mir die Arbeit gerade, obwohl natürlich damals wahrscheinlich zehn Minuten gebraucht worden wäre, um die ganze Sache zu dokumentieren. Und die Entscheidung, die dokumentiert sind, egal was es ist, die retten mir immer den Popo, muss ich zugeben und auf die kann ich mich ganz oft referenzieren, um das Team natürlich produktiv zu halten und so weiter. Also das Riesenproblem ist eigentlich nur, oder die Herausforderung ist zu verstehen, dass man die Vorteile von der Dokumentation erst später sieht oder vielleicht gar nicht, weil der vorherige Manager hat natürlich die ganzen Sachen dokumentiert. Der vorherige Manager ist jetzt aber nicht mehr da. Das bedeutet, der vorherige Manager weiß gar nicht, dass ich davon jetzt einen Vorteil habe, aber er hat die Arbeit."
+    },
+    {
+      "end": 2399930,
+      "speaker": "B",
+      "start": 2323450,
+      "text": "Und vor allem, wo dokumentierst du? Das ist auch immer so eine Sache, weil wenn du jetzt Architecture Decision Records hast, dann hast du da wahrscheinlich System, da kannst du es ablegen. Aber diese kleinen Entscheidungen oder sogar die Slack Entscheidung ist ja auch so ein Problem. Hast du Archiv, findest du das Archiv wieder oder hast du irgendwie so eine Datenbank für schnelle Entscheidungen, wo du nur zwei Sätze reinschreibst, wir haben entschieden, weil XY so und so war oder dieses Framework den Vorteil gegenüber den anderen hatte? Also es ist schon schwierig. Ich kenne das Problem auch von den AP Testing Frameworks oder von Data Science ganz allgemein, wenn du irgendwie Tests durchführst, wo dokumentierst du, wie das Resultat von dem Test war und warum du dann gewisse Sachen geändert hast. Also der Ort ist gar nicht so leicht zu finden. Im Code kannst du das natürlich machen. Commit Messages sind wieder schwer durchsuchbar, also es ist gar nicht so einfach. Ich hab da auch noch keine Lösung gefunden. Es gibt halt für die jeweiligen Domänen gibt es meistens Systeme in der Data Science Welt oder A B Testing hast du natürlich Frameworks, wo du genau dann diese Entscheidung abspeichern kannst, aber dann hast du halt wieder nur diese Domäne in diesem System drin und nichts Allgemeingültiges. Und wenn dann Entscheidungen einfach im Team so gemacht werden, die jetzt nicht unbedingt ein Projekt betreffen oder in der Data Science Welt stattfinden, dann ist es halt wieder schwierig, wo du das dokumentierst. Oder hast du eine gute Lösung dafür?"
+    },
+    {
+      "end": 2473190,
+      "speaker": "A",
+      "start": 2400170,
+      "text": "Hätte ich die AVELS Lösung, wäre ich glaube ich reich. Und ja, ich kann jetzt natürlich auch eine eigene Software machen, die nur für Entscheidungen oder nur zur Dokumentation von Entscheidungen da ist, aber ich halte es irgendwie so wie Dokumentation und Code. Wenn ich jetzt Architekturentscheidungen von einem Softwareprojekt habe, dann habe ich da einen Ordner im Repository, das nennt sich ADRS und da sind Markdown Files drin. Zum Beispiel. Ich bin jetzt auch involviert in einem ziemlich großen Compliance Projekt, wo es darum geht, welche Daten, also PI Data und SOC Data und all sowas, welche Systeme wie gecovert werden müssen, welche System, welche Regulatorien haben welche Systeme, welche Controls haben, aber auch Achtung Und jetzt komme ich zu dem eigentlichen Punkt, welche Systeme von welchen Controls ausgenommen sind und dann natürlich auch die Begründung. Und diese Entscheidungen sind in einem Wiki dokumentiert zu dem jeweiligen Projekt oder bzw. Zu der Domäne Compliance. Deswegen, ich glaube, es gibt keine richtige Lösung. Ich glaube, egal wie es macht, machst du es falsch. Ich glaube, so wie Roosevelt sagt, mach einfach eine Sache, weil das ist ja auch eine Typ zwei Entscheidung, die kann man ja super einfach umändern. Also ein paar Records, ein paar Seiten Dokumentation von A nach B zu schieben, sollte jetzt nicht die Welt sein."
+    },
+    {
+      "end": 2499430,
+      "speaker": "B",
+      "start": 2473190,
+      "text": "Also mein Tipp wäre auf jeden Fall, das irgendwo zu dokumentieren, wo es eine Suche gibt. Das heißt, und jetzt Slack hat zwar eine Suche, aber ich würde vielleicht trotzdem irgendwie ein internes System, sei es ein Word Dokument, wenn es in einem Dokumentenmanagement drin sitzt, irgendwie in einem Team Space zumindest, wo man irgendwie Entscheidungen ablegt. Es kann komplett unstrukturiert sein, aber ich finde sie im Zweifelsfall, wenn danach jemand sucht und Slack meiner Meinung nach ist einfach zu viel."
+    },
+    {
+      "end": 2510470,
+      "speaker": "A",
+      "start": 2499590,
+      "text": "Slack ist einfach das Schlechteste, was du nehmen kannst von der ganzen Thematik. Also ich sage auch nicht, dass die Confluence Suche oder Open Wiki geil ist. Ne, überhaupt nicht. Ich glaube, jede Suche ist schlecht."
+    },
+    {
+      "end": 2533690,
+      "speaker": "B",
+      "start": 2510550,
+      "text": "Ich glaube, der große Unterschied ist, in Slack geht einfach viel mehr durch, da hast du viel mehr Traffic und viel mehr False Positives, wenn du danach suchst. In einem Wiki hast du üblicherweise nicht so viel Änderungen im Vergleich zu einem Messaging System und dadurch hast du im Idealfall weniger Treffer, wenn du nach etwas suchst. Darum glaube ich, ist doch ein Wiki oder auch ein Confluence noch immer besser geeignet, weil du einfach weniger Traffic hast."
+    },
+    {
+      "end": 2542650,
+      "speaker": "A",
+      "start": 2533770,
+      "text": "Noch viel schlimmer. Super viele Firmen haben Retention Policies, dass auch alle Chatnachrichten nach einem Jahr automatisch gelöscht werden oder E Mails oder sowas."
+    },
+    {
+      "end": 2545440,
+      "speaker": "B",
+      "start": 2542810,
+      "text": "Oder wenn die Person die Firma verkauft, verlässt oder sowas."
+    },
+    {
+      "end": 2573910,
+      "speaker": "A",
+      "start": 2545520,
+      "text": "Aber auch Entscheidungen via E Mail zu dokumentieren, finde ich auch irgendwie schrecklich. Also so Wiki oder Code oder sowas, das ist schon gut. Klar, wenn es jetzt als Markdown hast, dann können natürlich der Produktmanager oder die Produktmanagerin, die jetzt nicht coden können, da mitmachen. Aber vielleicht gibt es da den Agent, der dann vielleicht dem Produktmanager helfen kann. Aber jetzt haben wir über ganz viel Tools und Toolboxen und Dokumentation und weiß. Wir haben jetzt gerade über die langweiligen Kraft gesprochen. So, kommen wir mal zu den Sachen."
+    },
+    {
+      "end": 2575910,
+      "speaker": "B",
+      "start": 2574150,
+      "text": "Warum man Lied werden will, oder?"
+    },
+    {
+      "end": 2615180,
+      "speaker": "A",
+      "start": 2575990,
+      "text": "Ne, wo es mal hitzig wird, wo es mal wirklich, wirklich hitzig wird. Und zwar bei jeder Entscheidung sind Menschen involviert. Menschen sind schwierig. Deswegen habe ich mir mal die Frage Gibt es eigentlich einen Unterschied, ob ich eine Entscheidung synchron oder asynchron treffe? In der heutigen Welt nicht. Viele Leute sind fünf Tage im Büro, viele Leute arbeiten halb Homeoffice, halb on site oder vielleicht sogar voll remote, vielleicht sogar über Zeitzonen hinweg. Deswegen gibt es einen Unterschied, wenn ich mich im Raum einschließe, in einem Meetingraum eine Entscheidung treffe oder ob ich das asynchron von zu Hause mache."
+    },
+    {
+      "end": 2655990,
+      "speaker": "B",
+      "start": 2615180,
+      "text": "Du hast es ja wirklich gut gemacht, Andy, weil ich war ja bis gestern eigentlich der Meinung, dass wenn man synchrone Entscheidungen trifft und sich in einem Raum trifft, das eigentlich immer besser ist oder zumindest sehr, sehr viele Vorteile hat. Und dann habe ich deine Notes gelesen zu unserer Episode heute und du hast viele negative Punkte gefunden, die irgendwie unterdrückt habe, sage ich mal. Sie war nicht unbekannt, aber ich habe sie irgendwie unterdrückt automatisch, Wenn ich an Async Sync denke, habe ich mir gedacht, Async ist viel schwieriger. Die Leute haben weniger Kommunikation bekommen Sachen mit und Sync ist immer besser. Aber erklär mal, was du für Nachteile im synchronen Prozess Leute sind eingesperrt in einem Raum gefunden, bevor ich das tue."
+    },
+    {
+      "end": 2673449,
+      "speaker": "A",
+      "start": 2655990,
+      "text": "Kennst du eigentlich den Begr. Reiche Leute sagen, Geld spielt keine Rolle Oder dass schöne Leute sagen, Schönheit spielt keine Rolle. Klar, das sagen dann auch die Leute, die ein Machtungleichgewicht in den Raum mitbringen, dass man synchron bessere Entscheidungen treffen sollte."
+    },
+    {
+      "end": 2680050,
+      "speaker": "B",
+      "start": 2673449,
+      "text": "Oder Wolfgang Ja, ich bin ja immer auf der Leadposition. Ich entscheide eh nie. Das macht ja das Team."
+    },
+    {
+      "end": 2732560,
+      "speaker": "A",
+      "start": 2680050,
+      "text": "Ja, vielleicht ist das der Grund, warum du nie individual contributor oder Software Engineer warst, sondern immer Lead. Nein, was der Wolfgang meint, ist etwas, was man eigentlich vielleicht nicht so auf dem Tisch hat. Denn wenn wir uns alle jetzt in einem Meetingraum einschließen und sagen, wir kommen mit einer Entscheidung raus, dann kann eine Dynamik entstehen, die nicht unbedingt zu den besten Entscheidungen führt. Was meine ich damit? Thema Machtungleichgewicht, was ich gerade schon gesagt habe, Die lauteste Stimme im Raum kann die Diskussion dominieren. Wer schreit hat Recht. Das ist so. Es gibt bei manchen Kegelclubs auch das Saying Wer trinkt hat recht. Stellen das mal so dahingestellt. Aber ich meine, es gibt Leute, die dominieren das Gespräch, die lassen wenig Raum für unterschiedliche Perspektiven. Deswegen ist es auch so wichtig, dass man ab und zu mal die leiseren Stimmen zu Wort kommen lässt. Ab und zu vielleicht mal, dass die Managerin sagt, hey Doreen, was hast du denn dazu zu sagen? Wie ist denn deine Meinung?"
+    },
+    {
+      "end": 2736800,
+      "speaker": "B",
+      "start": 2733440,
+      "text": "Wieder den Bias, den du hast, dass du einen weiblichen Namen jetzt ausgewählt hast."
+    },
+    {
+      "end": 2739150,
+      "speaker": "A",
+      "start": 2737550,
+      "text": "Ich könnte auch Tim und Felix sagen."
+    },
+    {
+      "end": 2758470,
+      "speaker": "B",
+      "start": 2739150,
+      "text": "Aber meiner Meinung nach muss man ja einfach alle fragen. Also ich glaube, das ist auch die Aufgabe von dem Lied von einer Moderation, wirklich jede Person zu Wort kommen lassen. Also es gibt gar nicht, es sprechen nur zwei, sondern es müssen alle sprechen, wenn es um eine Entscheidung geht, meiner Meinung nach. Und das ist eine Aufgabe für den Lead. Da bist du gefordert als Lead."
+    },
+    {
+      "end": 2760350,
+      "speaker": "A",
+      "start": 2758470,
+      "text": "Ja, muss man aber aktiv auf dem Zettel haben."
+    },
+    {
+      "end": 2761150,
+      "speaker": "B",
+      "start": 2760350,
+      "text": "Klar, klar."
+    },
+    {
+      "end": 2782970,
+      "speaker": "A",
+      "start": 2761150,
+      "text": "Eine andere Thematik ist das Gruppendenken. Also ich mein, eine persönliche Umgebung, die kann zu Konformitätsdruck führen. Vielleicht hast du schon mal gesehen, ziemlich viele Leute, die sich sehr oft miteinander umgeben, gleichen sich nach der Zeit an und das kann natürlich auch zu weniger Innovation führen oder sagen, okay, der hat immer gute Entscheidungen getroffen, machen wir das auch mal."
+    },
+    {
+      "end": 2818200,
+      "speaker": "B",
+      "start": 2783050,
+      "text": "Manchmal kann man das natürlich auch ausnutzen, muss man dazu sagen, dass man eben zu einer Entscheidung kommt, weil es dann irgendwie den Leuten auf die Nerven geht oder gewisse Gruppen sich bilden und dann ja, okay, dann wenn der andere dafür stimmt, dann mache ich das auch. Also kannst du asynchron natürlich auch haben, aber ich stimmt dir zu. Sieht man einfach in dem eingeschlossenen Setting in dem Raum deutlich öfter, kann aber meiner Meinung nach unter Umständen positiv sein, weil man schneller zu einer Entscheidung kommt. Aber die klassische Innovation kommt natürlich nur zum Vorschein, wenn wirklich alle gehört werden. Und ganz oft sind die leisen Stimmen halt auch die innovativen Stimmen. Nicht immer, aber immer öfter."
+    },
+    {
+      "end": 2881380,
+      "speaker": "A",
+      "start": 2818280,
+      "text": "Der dritte Punkt, der mir nach langem Überlegen eingefallen ist, war einer, wovon ich selbst betroffen bin. Und zwar ist das die Echtzeitform Eingenommenheit. Das bedeutet, jemand sagt was und ja, sehr guter Punkt, muss ich zugeben und lass mich sehr schnell umstimmen, wohin ich gegen ich dann aber auch persönlich später noch ein bisschen Zeit brauche. Moment mal, der Wolfgang hat jetzt diesen Punkt genannt. War der wirklich so gut? Also eine Entscheidung in einem Echtzeit Meeting zu treffen, kann auch dazu führen, dass einer sofortigen Lösung den Vorzug genannt wird, anstatt einer durchdachten Entscheidung. Besonders wenn man sagt, so Leute hat wie mich, die sich dann auch schnell auf gute Argumente umstimmen lassen vielleicht, die dann ein bisschen mehr Zeit brauchen, dann noch mal drüber nachzudenken. Ich sage nur, dass es ein Negativpunkt sein kann. Es hat aber auch den Nachteil, dass wenn wir aus dem Meeting gehen, hat man oft diesen Satz lass uns noch mal eine Nacht drüber schlafen, dass man das dann auch wirklich am nächsten Tag entscheidet und nicht wieder drei Wochen verzögert. Das ist dann natürlich der Nachteil."
+    },
+    {
+      "end": 2967250,
+      "speaker": "B",
+      "start": 2881380,
+      "text": "Es sehe eigentlich unter Umständen auch als Vorteil diese Voreingenommenheit oder diese Echtzeit Voreingenommenheit, weil man halt einfach auch wieder schneller zu einer Entscheidung kommt. Man hat ja auch viel mehr Signale in einem in einem echten Setting. Du siehst, wie die Leute reagieren, welche Meinung sie haben, wie stark sie sich einsetzen für eine andere Meinung. Also du hast natürlich viel mehr Dynamik als jetzt in einem asynchronen Prozess, wo du einfach diese Signale gar nicht hast. Und ich würde da jetzt wirklich auf einen asynchronen Prozess gehen und gar nicht auf einen Online Call. In einem Online Call hast du auch schon teilweise das ähnliche Setting. Darum würde eben asynchron und synchron eigentlich unterscheiden. Und im asynchronen Prozess siehst du halt keine Emotionen und die gehen dir dann verloren und dadurch bist du vielleicht auch langsamer in den Entscheidungen und daher hast du den Vorteil in dem Raum. Aber wie gesagt, auch da, jeder kommuniziert anders. Vor allem wenn du in einem internationalen Setting unterwegs bist, da glaubst du vielleicht, du kannst Emotionen einschätzen und nur weil jemand leise ist, heißt es noch lange nicht, dass er zustimmt. Kommt auch wieder je nach Kultur darauf an. Die einen, bei denen ist es Disagreement und bei den anderen ist es zustimmend, wenn man nichts sagt. Also da muss man dann wieder diese Komponente noch mit aufnehmen. Und gerade wenn man Leute aus verschiedenen Ländern am Tisch sitzen hat, kann das wirklich durchaus ein Problem werden, weil dann eben wieder so Welten aufeinander knallen im wahrsten Sinne des Wortes. Aber gehen wir mal auf den asynchronen Prozess. Was siehst du da? Beim asynchronen Prozess vier? Bleiben wir mal bei den Nachteilen."
+    },
+    {
+      "end": 3121450,
+      "speaker": "A",
+      "start": 2967250,
+      "text": "Ich finde, da spiegeln sich die Nachteile von, ich sag mal, generellem Remote Arbeiten wieder, denn es sind fast die gleichen fehlende Eigenverantwortung. Ich habe die Erfahrung gemacht, wenn du remote arbeitest, musst du aktiv sein, du musst der Pusher sein, du musst immer nachfragen und so weiter. Du musst wirklich sichtbar sein und aktiv sein. Und genauso ist es natürlich auch bei einer Entscheidung, die in einer Gruppe getroffen wird. Wenn niemand wirklich ausdrücklich für die Entscheidung verantwortlich ist und auch den Incentive hat, diese Entscheidung zu treffen, verlangsamt sich alles, weil dann vielleicht jeder sagt, lass uns das morgen noch mal treffen oder nicht. Das geht natürlich ähnlich auf diese RACI Matrix, die wir gerade schon genannt haben, zurück. Also wer ist jetzt für diese Entscheidung verantwortlich, wer wird accountable gehalten? Dann kann ein fehlender Prozess wirklich zu stockendem Fortschritt führen. Und das ist auch so eine Thematik, weil man schließt sich ja nicht in einem Raum ein, wo man dann mit einer Entscheidung rauskommt, so wie beim synchronen Prozess, so wie wir es gerade besprochen haben, sondern durch die asynchronen Kanäle kann die ganze Sache natürlich enorm stocken. Oh ja, ne, der eine ist jetzt gerade im Urlaub oder der macht jetzt gerade die Wäsche oder sein Kind ist krank, deswegen ist er nicht da. Das kann natürlich auch alles im synchronen Prozess in irgendeiner Art und Weise passieren. Aber wenn wir sagen, das ist der Weg, wie wir Entscheidungen treffen, dann weiß jeder, okay, wir haben eine Deadline, wir treffen ihn nach drei Tagen und so weiter und so fort. Siebzig Prozent der Information versus neunzig Prozent hatten wir gerade im Intro schon, dass man da ein bisschen Dampf drauf gibt, aber dafür muss wirklich einer wirklich den Hut aufhaben. Und der letzte Punkt, der mir zumindest eingefallen ist, ist eigentlich genau das Gegenteil von Remote Arbeiten bzw. Von einem asynchronen Setup. Und zwar ist das die übermäßige Abhängigkeit von Besprechungen. Hey Wolfgang, ich schmeiße noch mal einen Termin rein und buff, hängst du acht Stunden vorm Rechner, in acht Stunden irgendwelchen Google Meet oder Zoom Calls. Und das ist wieder zurückzuführen auf, ich sag mal, keine klaren Arbeitsabläufe, sondern man muss mal widersprechen. Was widersprechen, um eine Entscheidung zu treffen. Also ich denke, das sind ganz klassische Eigenheiten von Remote Arbeit. Fehlendes Engagement, fehlende Strukturen und so weiter. Und ich bin einer, der da eigentlich nicht so viel auf Strukturen gibt, weil ich ein sehr aktiver Mensch bin, ein sehr aktiver. Ich bin einer dieser Ich sage, lass mal jetzt machen. Deswegen brauche ich nicht so viel Struktur. Aber ich kann es verstehen, wenn du nicht ein solcher Menschentyp bist, dass du klare Strukturen brauchst, dass Regeln stattfinden, wie treffen wir Entscheidungen und so weiter. Das bedeutet aber auch, Achtung, wenn man ein Team übernimmt, dass man natürlich erstmal einen Aktenschrank voll Entscheidungen treffen muss oder einen Aktenschrank von Prozesse definieren muss. So ist es natürlich nicht. Du kannst jetzt nicht sagen, pause einen Monat und wir schließen uns jetzt mal ein und definieren jetzt jeglichen Prozess."
+    },
+    {
+      "end": 3137330,
+      "speaker": "B",
+      "start": 3122410,
+      "text": "Jetzt hast du ja in Remote, wo eher asynchron oft gelebt wird und natürlich auch synchron im Office miterlebt. Wo ist es einfacher, Entscheidungen zu treffen? Und ich will jetzt keine politische lange Antwort, sondern nur Antwort eins oder zwei Sync oder async."
+    },
+    {
+      "end": 3212830,
+      "speaker": "A",
+      "start": 3137330,
+      "text": "Wenn man aus einem Office Setup kommt und ins Remote geht, ist es einfacher, in einem Office Setup Entscheidungen zu treffen. Wenn du in einem Remote Setup mehrmals schon da reingerannt bist, dass es einen stockenden Fortschritt gibt, dass Entscheidungen erst spät getroffen werden, dann kopierst du in irgendeiner Art und Weise Verhalten aus einem Synchronen, aus einem Office Setup. Das, was ich in letzter Zeit mache, ich gebe dem Team eine Chance, eine Entscheidung zu treffen, dann wird diese nicht getroffen. Dann setze ich für nächsten Tag ein Meeting an, eine Stunde und das wird militärisch durchgezogen. Das ist dann auch kein Spaß. Und dann wird die Entscheidung getroffen. Also ich mache dann eigentlich dieses wir schließen uns jetzt hier einfach. Ich setze das meist eine Stunde ein. Oft wird es anderthalb Stunden gehen, aber das ist okay. Was ist die Entscheidung? Was sind die Vorteile, was sind die Nachteile, was sind die Risiken? Und dann wird eine Entscheidung getroffen, genau aus dem Punkt, den wir initial erwähnt Eine Entscheidung zu treffen ist besser als gar keine Entscheidung. Das war ein neues Umfeld für manche Teammitglieder, aber es hat funktioniert und bisher sind wir dadurch noch nicht auf die Mütze gefallen. Du merkst schon, es kommt darauf an, wo kommst du her, was hast du gemacht? Und dann klaut man sich von der anderen Seite ein Tool."
+    },
+    {
+      "end": 3222510,
+      "speaker": "B",
+      "start": 3213870,
+      "text": "Du bist jetzt schön an meiner Frage vorbeigeschifft, weil die wollte wissen, was leichter ist für dich persönlich. Aber okay, da ist jetzt die politische Antwort gekommen."
+    },
+    {
+      "end": 3228910,
+      "speaker": "A",
+      "start": 3224430,
+      "text": "Das kann ich dir antworten. Also Entscheidung treffen ist nie leicht, besonders nicht in der Gruppe, wo es leichter."
+    },
+    {
+      "end": 3234990,
+      "speaker": "B",
+      "start": 3228910,
+      "text": "Ist, synchron oder asynchron, beides gleich schwer zu bekommen."
+    },
+    {
+      "end": 3254090,
+      "speaker": "A",
+      "start": 3235070,
+      "text": "Nein, weil der Punkt ist, ich meine, auf was zielst du ab? Also ein hundert Prozent Zustimmung funktioniert leider nicht. Das bedeutet, bei jeder Entscheidung verliert jemand oder siehst du es anders? Also wenn du so ein homogenes Team hast, dass du ein hundert Prozent Zustimmung hast, weiß ich gar nicht, ist das positiv oder negativ? Kann positiv sein für die Geschwindigkeit der Entscheidung?"
+    },
+    {
+      "end": 3344940,
+      "speaker": "B",
+      "start": 3254170,
+      "text": "Kann negativ sein. Ich wollte nur wissen, was du persönlich einfacher findest, asynchron oder synchron, Aber ich sehe schon, ich bekomme das aus dir nicht raus. Aber weil du schon übergeleitet hast zu ein hundert Prozent Zustimmung, Stimmung. Das ist genau dieses Thema Consensus versus Consent, wie du am Anfang schon kurz erwähnt hast, wo es ja wirklich darum geht, wie komme ich eigentlich in der Entscheidung im Meeting? Weil ganz oft ist es ja so, du findest keinen Konsens, also dass alle Personen in dem Meeting einverstanden sind mit einer Entscheidung A oder B, was es auch immer ist, Go oder Rust oder C oder Rust oder keine Ahnung, was es so gibt. Also du wirst nie ein hundert oder du kannst natürlich schon das Glück haben, ein hundert Prozent Zustimmung zu haben, dann ist es easy, aber ganz oft hast du das eben nicht. Und dann kommt der Consent ins Spiel, wo man sich auf eine Lösung einigt, entscheidet aber nicht, weil man voll dahinter steckt, sondern weil einfach man sich auf ein Ding einigt. Es gibt keine zu starke Gegenwehr oder es hat jemand entschieden und man macht dieses bekannte Disagree and commit. Das heißt, man ist vielleicht nicht der Meinung in dem Team unbedingt, aber man unterstützt jetzt, damit man eben eine Entscheidung findet, weil stillstehen ist auch keine Lösung. Man entscheidet sich für etwas, evaluiert es dann danach und geht eben agil voran, damit man Entscheidung trifft und unterstützt es dann aber. Und nach außen hin kommuniziert man das dann auch als Team, dass man sich dementsprechend so geeinigt hat. Hast du sonst noch Tipps, wie man Entscheidungen beschleunigen kann oder dass man überhaupt so Entscheidungen findet?"
+    },
+    {
+      "end": 3354280,
+      "speaker": "A",
+      "start": 3344940,
+      "text": "Ja, eins hatte ich gerade schon erwähnt, das ist dieses Timeboxen, dass man sagt, okay Jungs, wir haben jetzt, da kommt schon wieder mein Bias raus, merkst du, ich habe schon wieder Jungs gesagt, ja."
+    },
+    {
+      "end": 3362840,
+      "speaker": "B",
+      "start": 3354280,
+      "text": "Die, die sich nicht einigen können, es passt schon. Die Alphatiere sind da schon eher im männlichen Bereich meistens unterwegs. Erfahrungsgemäß, sorry, will nicht verallgemeinern, aber meine."
+    },
+    {
+      "end": 3380640,
+      "speaker": "A",
+      "start": 3362840,
+      "text": "Erfahrung, ja, dass man sagt, okay, wir können jetzt noch mal eine Nacht drüber schlafen und morgen um zehn treffen eine Entscheidung gewollt oder nicht gewollt, denn es wird ja nicht besser. Das ist, glaube ich, Tool Nummer eins. Ich denke sehr viel über Type zwei Entscheidungen nach und komme oft zu dem Punkt, dass fast alle Entscheidungen schnell wieder änderbar sind."
+    },
+    {
+      "end": 3411020,
+      "speaker": "B",
+      "start": 3380960,
+      "text": "Was ihr bei dir immer sehr spannend findest und damit gewinnst du ja fast alle Entscheidungen bei uns im Engineering Kiosk, ist, dass du mir immer schreibst, wenn ich bis morgen acht uhr keine Info habe, dann mache ich es einfach so und üblicherweise habe ich halt keine Zeit und schaffe es einfach nicht. Und damit hast du dir automatisch das Go geholt. Ohne, weil große Gegenwehr kann ich dir auch nicht bringen. Also dieses Default to Action, wenn es keine Gegenwehr gibt oder bis zu einem gewissen Zeitpunkt, dann macht man es einfach. Ich glaube, das kann sehr viel bringen."
+    },
+    {
+      "end": 3459250,
+      "speaker": "A",
+      "start": 3411180,
+      "text": "Naja, also jeder Guru sagt halt, starten ist das Schwerste. Es gibt auch so einen geilen Talk, der hat so ein Diagramm, so eine XY Achse und da steht also the more you fuck around, the more you know. Und dieses the more you fuck around ist halt, okay, fang einfach an. Also jeder Start ist schwierig und dann mach's halt einfach. Und das mache ich ja nicht, um dich unter Druck zu setzen, sondern ja, okay, im Worst case sagst du, ne, finde ich doof. Ich sag, wir machen es, dann haben wir ja, dann stehen wir wieder da, haben nichts gemacht. Da kann ich lieber die ganze Sache machen und das Ergebnis von diesem Experiment oder was ich immer habe und die beweisen, dass ich wieder richtig liege oder Ja, also ich meine, oder wir warten noch einen Tag, bis du mal dazu kommst, diese Nachricht zu lesen und sagst, ja, mach mal. Und dann habe ich, verstehst du, dann sind wir auch wieder spät dran."
+    },
+    {
+      "end": 3524500,
+      "speaker": "B",
+      "start": 3459250,
+      "text": "Also es ist ja ein super Trick, weil ich denke mir, ja schaffe natürlich innerhalb zwei Tagen mir das noch anzuschauen, da schreibe ich jetzt nichts dagegen, dann vergehen diese zwei Tage und bäm, die Entscheidung sitzt und du kannst weitermachen. Also das ist schon ein guter Trick, würde ich mal sagen. Oder Tipp. Was ich sonst auch noch interessant gefunden habe, vom Jeff Bezos kommt ja ganz viel. Der hat zum Beispiel immer gesagt, er macht so Meetings vormittags, weil da die Energie höher ist und die Leute, wenn sie mehr Energie haben, eher zu Entscheidungen kommen. Das wäre jetzt bei mir selber wahrscheinlich eher kontraproduktiv, weil am Vormittag habe ich ganz wenig, wenig Energie oder mitten in der Nacht, wie es oft nennen. Aber sich zu überlegen, wann ist mein Team aktiv? Hat gute Energie? Ist es nach dem Mittagessen? Ist es macht es Sinn, irgendwie ein Entscheidungsmeeting direkt nach dem Mittagessen zu machen oder mache es dann vielleicht doch später? Es sind so kleine Dinge, die aber durchaus dann sehr viel Impact haben, wenn man sich solche Sachen überlegt. Oder auch wenn gerade irgendwie eine schwierige Entscheidung war, Anfang der Woche vielleicht schiebe das zwei Tage später, wo alle schon wieder lockerer drauf sind oder so. Also da kann man schon den Kontext gut mitdenken."
+    },
+    {
+      "end": 3551590,
+      "speaker": "A",
+      "start": 3524500,
+      "text": "Ja, das geht zurück auf die Bist du eine Eule und eine Lerche? Da gibt es ja auch diese zwei Stereotypen vom Schlaf und wann dein Energielevel ist. Mein Energielevel ist in der Regel, mein Kopf ist morgens besser da, aber wenn ich jetzt morgens zum Krafttraining gehen würde, dann weiß ich, das funktioniert nicht. Beim Krafttraining bin ich abends eher da, aber jetzt auch nicht um zwei und zwanzig, drei und zwanzig uhr, wohingegen dein Kopf, glaube ich, erst ab drei und zwanzig uhr anfängt zu arbeiten."
+    },
+    {
+      "end": 3576830,
+      "speaker": "B",
+      "start": 3551590,
+      "text": "Naja, aber ganz so schlimm ist es nicht. Ich hätte nur eine abschließende Frage für dich zur Entscheidungsfindung an sich. Wenn du so in Diskussionen sitzt und du sagst, ja, schlafen wir noch mal eine Nacht drüber oder so, Wie lang diskutiert man denn? Wann ist genug diskutiert? Hast du da irgendwie eine goldene Regel oder wie gehst du das an als Lied? Weil als Lied musst du ja dann auch irgendwann sagen, jetzt haben wir genug diskutiert, komm, wir machen jetzt eine Entscheidung oder commit and disagree?"
+    },
+    {
+      "end": 3627210,
+      "speaker": "A",
+      "start": 3577230,
+      "text": "Sehr gute Frage, sehr komplexe Frage. Ich finde, das kommt ein bisschen auf die Charaktere an, weil es gibt ja Charaktere, die wollen ihre Entscheidung durchdrücken und irgendwann haben sie keine objektiven Argumente mehr. Da werden so fadenscheinige Argumente ausgepackt, hast du vielleicht schon mal erlebt. Da schreite ich dann oftmals auch, hey, ist das wirklich ein Problem? Also da schreite ich dann ein und sage, okay, so langsam kommen wir mal zu dem Punkt hier, da haben wir alles gesagt, jetzt nehmen wir die Punkte, haben wir jetzt hier alles dokumentiert? Dann frage ich noch mal, habt ihr, stimmt das so? Dann nicken alle oder jemand sagt, nee, das hast du falsch verstanden. Und dann sage ich, okay, dann machen wir jetzt hier Schluss. Schlaf drüber. Wir haben die Punkte dokumentiert. Morgen früh wird eine Entscheidung getroffen, wenn da jetzt kein Riesenpunkt mehr kommt. Und in der Regel kommt er nicht. Aber wenn man merkt, okay, so langsam kommen die fadenscheinigen Gründe raus oder die Gründe, wo man sagt, okay, das ist jetzt hier kein Problem."
+    },
+    {
+      "end": 3664220,
+      "speaker": "B",
+      "start": 3627840,
+      "text": "Genau, wenn keine neuen wirklichen Aspekte hinzukommen, irgendwas kann man sich immer ausdenken, weil in, keine Ahnung, in drei tausend Jahren gibt es keine Lesegeräte mehr für die Festplatte. Wollen wir das wirklich so abspeichern? Aber wenn es sinnvolle Aspekte sind, dann kann man weiter diskutieren und sonst ist Schluss sehr genau. Mache ich auch immer so eigentlich. Jetzt sind wir schon ziemlich am Ende der Zeit, aber natürlich geht uns jetzt die Zeit nicht aus, Wir sind in einem Podcast, wir können länger sprechen. Aber was man ganz oft vergisst, ist, wenn man eine Entscheidung getroffen hat, was kommt nach der Entscheidung? Also genau diesen Punkt, Ich habe eine Entscheidung getroffen, Feier and forget. Oder muss ich im Nachhinein auch noch was machen?"
+    },
+    {
+      "end": 3714290,
+      "speaker": "A",
+      "start": 3664220,
+      "text": "Ja, über das ganze Dokumentationsthema, das hast du ja schon abgebetet. Schreib die Entscheidung irgendwo hin. Ob du das jetzt ADR, Architecture Decision Record, ADL, Asynchrones Decision Log oder eine Wikipedia machst, das bleibt dir überlassen. Ich habe dir gerade die Story von meinen Compliance Entscheidungen genannt, die ich immer wieder raushole. Ich bin sehr glücklich, dass sie damals dokumentiert wurden, Aber im Endeffekt, das, was ich anstrengend finde, aber notwendig ist, ist dann die Überkommunikation. Du musst diese Entscheidung dann auch kommunizieren für die Leute, die gerade krank sind, die früher raus mussten, die Urlaub haben und so weiter, Weil sonst kommt, sonst kommt jemand daher, macht irgendwas und oh, das wusste ich nicht. Oder diese klassischen unsichtbaren Entscheidungen im Remote Umfeld, ganz weit verbreitet."
+    },
+    {
+      "end": 3718690,
+      "speaker": "B",
+      "start": 3714450,
+      "text": "Moment, ihr habt es aber in diesem Channel, in diesem Public Channel von der Firma gepostet."
+    },
+    {
+      "end": 3753040,
+      "speaker": "A",
+      "start": 3719010,
+      "text": "Ganz genau. Und ich glaube, hast du das gerade erwähnt, dass im Slack irgendwie so ein hohes Volumen ist, was da durchgeht und dann hängt man eher im Meme Channel ab oder im Random Channel anstatt im Decision Channel. Wird jetzt kein Decision Channel machen, aber dann sind da vielleicht noch Bot Messages und Alerts in deinem Channel, wo auch die Entscheidung reingeschrieben wird und dann wird das alles geflohen und dann geht das wieder aus dem Screen. Vielleicht hast du es auch mal eben ganz kurz auf dem Handy gecheckt und lese ich später Flaps und auf einmal rennt dein Hund weg, weil er einen Hase gesehen hat, dann ist das wieder aus seinem Kopf. Also ja, deswegen Over Communication ist halt notwendig."
+    },
+    {
+      "end": 3768050,
+      "speaker": "B",
+      "start": 3753360,
+      "text": "Und umso weiter man in die Senior Level Richtung kommt, umso wichtiger ist es auch dein Job. Also wenn du Leads bist, dann ist genau diese Entscheidungen weitertragen eigentlich dein Job. Und wenn du Seniorentwickler bist, dann musst du auch diese Entscheidungen weitertragen. Du bist für die Kommunikation verantwortlich und."
+    },
+    {
+      "end": 3789810,
+      "speaker": "A",
+      "start": 3768050,
+      "text": "Es ist nicht so, dass die Leute alle dumm sind oder zu faul zum Lesen. Es geht einfach nur darum, die haben fünfzig solcher Projekte auf ihrem Tisch. Das bedeutet, die Entscheidung, die du da gerade kommunizierst, ist nur eine von fünfzig, die die jede Woche hinkriegen und irgendwann ist die Kapazität eines Menschen auch erreicht. Deswegen nimmt das alles nicht persönlich. Wenn das mal jemand nicht mitkriegt, passiert nicht auch."
+    },
+    {
+      "end": 3803850,
+      "speaker": "B",
+      "start": 3789810,
+      "text": "Oder es gibt so Leute, die Andis Anweisungen folgen oder Tipps folgen. Wenn es was Wichtiges ist, wird schon den Weg zu mir finden. Wenn du mit solchen Leuten zusammenarbeitest, dann musst du es ihnen halt dreimal reindrücken, dass das jetzt was Wichtiges ist. Und die Entscheidung getroffen."
+    },
+    {
+      "end": 3891480,
+      "speaker": "A",
+      "start": 3804090,
+      "text": "Das was Wolfgang sagt, so arbeite ich auch ein bisschen. Also ich habe mal in einem Interview gesagt, da wurde ich gefragt, okay, was ist denn ein negativer Punkt? Warum sollte ich die nicht? Was ist denn deine negative Seite? Dann sage ich, ja pass auf, von den ein hundert Prozent oder von den ein hundert Aufgaben du mir gibst, lasse ich dreiig vierzig sich einfach liegen. Ich lasse sie liegen und ich fasse sie nicht an. Die anderen sechzig siebzig, die mache ich aber und die mache ich mit Qualität und allem drum und dran, weil ich weiß genau, ich werde immer viel zu viel Arbeit auf meinem Tisch haben und hier und da wird von diesen dreiig Aufgaben, die ich liegen lassen habe, eine anbrennen, vielleicht auch zwei und dann muss ich mir sagen, kümmer dich mal darum. Aber von den anderen siebzig hast du gar nichts mehr gehört. Das sagt er, das ist ja kein negativer Punkt. Ja, aber doch vielleicht schon. Aber das ist ja das, was du ansprichst. Und so ist es halt bei Entscheidungen auch wenn man mal eine Entscheidung nicht mitkriegt. Ja gut, geht jetzt nicht die Welt unter. Wie gesagt, ihr habt ja siebzig Entscheidungen getroffen, ihr habt siebzig Entscheidungen befolgt und passiert. Wir sind alle Menschen, Nehmt das nicht persönlich. Jeder hat ein schwieriges Leben. Also einfach mal drüber hinwegsehen. Summa summarum würde ich mal sagen, wir beide, Wolfgang, du und ich sind nicht besser im Entscheidungen treffen. Entscheidungen treffen im Team ist immer schwierig, egal ob das jetzt die Entscheidung ist, ob wir Indisch essen gehen oder Italienisch beim Mittagessen oder ob wir Ruby, Wales oder PHP nehmen oder wie wir die Tage hatten. Go versus JavaScript, da habe ich natürlich gewonnen mit Go. Das wollte ich hier noch mal ganz kurz erwähnen und die Nase rein, Aber es wird einfach nicht leichter und wir."
+    },
+    {
+      "end": 3896040,
+      "speaker": "B",
+      "start": 3891480,
+      "text": "Hoffen, kann nicht überall für Kriege führen."
+    },
+    {
+      "end": 3898440,
+      "speaker": "A",
+      "start": 3896040,
+      "text": "Wo packt man die Energie rein? Ich habe die Energie jetzt in Go."
+    },
+    {
+      "end": 3950200,
+      "speaker": "B",
+      "start": 3898440,
+      "text": "Gesteckt, Aber bevor du da jetzt deinen Sieg feierst, da kommt ja noch was anderes, das ganz wichtig ist. Und zwar sollte man im Nachhinein ja auch immer Reviews durchführen. Waren die Entscheidungen richtig? Und da sind wir noch nicht angekommen. Übrigens, ob Gods Perfekte war, aber sei es mal dahingestellt. Ganz wichtig im Nachhinein auch immer checken, sind wir am richtigen Weg? War die Entscheidung gut? War der Prozess gut? Klassisch Postmortem machst du ja auch, Wie haben wir entschieden? Und du probierst daraus was zu lernen. Man kann das Gleiche auch in Decision Review Meetings machen, Also wirklich so Retrospectives nur für Entscheidungen, wenn man das so formal aufsetzen will. Aber wichtig ist einfach, dass man darüber nachdenkt, wie war unser Prozess? Hat es gut funktioniert? Wie sind wir zu der Entscheidung gekommen? War das korrekt? Und war die Entscheidung gut? Das kann man in einer ganz normalen Retrospective auch abbilden. Jetzt ist immer die War eine Entscheidung gut? Andy, wie würdest du das messen?"
+    },
+    {
+      "end": 4029090,
+      "speaker": "A",
+      "start": 3950760,
+      "text": "Ja, da muss ich jetzt mal Shoulder shruggen. Ich weiß es wirklich nicht. Also ich glaube, ich glaube nach einer gewissen Zeit kann man halt schon sagen, okay, wären wir den anderen Weg gegangen, wäre es besser. Dafür musste man halt die Alternativen definiert haben zuvor. Zwischen welchen Bereichen entscheiden wir uns oder zwischen welchen Alternativen entscheiden wir uns hier. Und wenn man wirklich die Retrospektive macht, dann kann man schon sagen, okay, hätten wir jetzt PRP anstatt, wäre das besser, weil Ruby on Rails jetzt eingestellt wurde. Keine Ahnung, ich konstruiere jetzt was. Ruby und Welt wurde jetzt nicht eingestellt. Aber da muss man natürlich aber auch in den Kontext nehmen, hatte man die Information zum Zeitpunkt der Entscheidung. Und wenn man sagt nein, dann kann man immer noch sagen, man hat die beste Entscheidung zu diesem Zeitpunkt unter den vorhandenen Mitteln und Constraints in der Umgebung getroffen. Und solange das gegeben ist, würde ich sagen, passt alles. Meine Frage ist eher an Wie oft hast du denn schon mal zurückgeblickt? Wie oft hast du dir die Frage gestellt im Team, war die Entscheidung richtig? Meine Erfahrung ist nämlich eine andere. Meine Erfahrung Du bist too busy, Du triffst die Entscheidung und nach der Entscheidung ist ja bereits vor der Entscheidung. Deswegen, also die nächste Entscheidung steht ja schon bald an. Also du bist so busy im Entscheidenden, dass du eigentlich kaum Zeit hast, zurück zu gucken."
+    },
+    {
+      "end": 4076330,
+      "speaker": "B",
+      "start": 4029090,
+      "text": "Also ich muss zugeben, in dem Umfeld, wo das klar strukturiert schon vorgegeben ist, ich bin jetzt wieder bei der Feuerwehr oder beim Incident Management, wo du ja klassisch Postmortem schreibst und das im Nachhinein analysierst, bei der Feuerwehr hast du irgendwie ein Debrief oder eine Einsatzbesprechung, die übrigens auch oft vergessen wird, muss man auch dazu sagen, weil jetzt ist es vorbei, es war stressig, jetzt sprechen wir da nicht auch noch mal lang darüber. Also es passiert schon dort auch. Aber wenn das in der Struktur schon vorgegeben ist in dem Prozess, dann macht man das natürlich eher darüber nachzudenken oder wenn man wirklich Retrospectives hat, dann wird hoffentlich auch was aufpoppen, wenn dieser Prozess nicht gut war oder wenn man die Leute Wie war der Prozess? Also umso strukturierter das im Prozess schon fix verankert ist, umso einfacher ist es natürlich auch und dann macht man das auch meiner Meinung nach."
+    },
+    {
+      "end": 4103030,
+      "speaker": "A",
+      "start": 4076570,
+      "text": "Aber wenn wir jetzt mal von der Entscheidung Monolith versus Microservice oder Mono Repo versus Multi Repo oder oder so, Circle CI oder GitHub Actions. Natürlich, du wirst immer irgendwelche Leute haben, die sagen, jetzt muss ich Das Tool ist mit Monorepos funktioniert jetzt nicht so und so weiter, verstehe ich. Also dieses Gemeckere, aber dieses Gemeckere ist ja keine wirklich Retrospektive. Dieses Gemeckere ist ja nicht wirklich die Frage, War das damals eine gute Entscheidung, sondern es passt jetzt gerade nicht. Das ist also oft subjektiv."
+    },
+    {
+      "end": 4176920,
+      "speaker": "B",
+      "start": 4103030,
+      "text": "Deswegen ja, teilweise würde ich auch sagen, wenn kein großer Gegendruck ist, kein großer Gegenwert, dann war es vielleicht nicht so eine schlechte Entscheidung. Wenn es ganz viel Gemeckere gibt, könnte man auch mal drüber nachdenken. Ganz allgemein ist immer die Habe ich mir damals auch ein Ziel definiert von dieser Entscheidung? Also was will ich erreichen? Und hoffentlich habe ich das jetzt irgendwie. Also wenn ich jetzt umgestellt habe auf Go von typescript, damit ich schneller bin in der Entwicklung, dann kann ich messen, bin ich auch wirklich schneller, habe dieses Ziel erreicht? Bin ich in Budget geblieben? Bin ich nicht im Budget geblieben? Dann kann ich vielleicht checken, okay, war das die Entscheidung, die mich aus dem Budget rausgeworfen hat? Stimmt meine Qualität? Ist es okay, was ich da fabriziere? Ist das Team zufrieden? Da sind wir wieder bei einem Gemeckere. Wenn ganz viele Leute meckern, ist es schon auch ein Anzeichen, dass vielleicht etwas nicht so gestimmt hat. Allgemein andere Stakeholder, sind die zufrieden? Irgendwas wollt ihr erreichen? Gibt es Gegenwehr? Ich glaube, das sind so die zwei Sachen, die man ganz gut eigentlich recht schnell erfassen kann und mit dem kann man dann schon arbeiten mit dem Mittel, auch wenn das jetzt keine harten Metriken sind in dem Sinne. Außer man hat jetzt wirklich als Ziel gehabt, schneller zu deployen, das kann ich messen. Aber alles andere ist natürlich dann schon eher so auf der Soft Seite, wie ist die Zufriedenheit? Und es ist schon schwieriger zu messen."
+    },
+    {
+      "end": 4197790,
+      "speaker": "A",
+      "start": 4177320,
+      "text": "Ja, aber wie du sagtest, wenn der Prozess es vorgibt, Incident Management post Mortem, da ist ja oft eine Timeline auch dazu und dann kann man oft sagen, okay, war diese Entscheidung die richtige oder nicht? Oder where we got lucky ist ja teilweise auch so eine Retrospektive. Aber ich gebe zu, bei vielen klassischen Entscheidungen wird oft nicht gefragt, war das jetzt die richtige?"
+    },
+    {
+      "end": 4249310,
+      "speaker": "B",
+      "start": 4198430,
+      "text": "Ganz oft ist es ja auch so, muss man sagen, man hat ewig lang diskutiert, man hat dann irgendwas entschieden und man denkt gar nicht mehr drüber nach. Das ist dann einfach so und alle sind eigentlich zufrieden und es gibt kein Gemeckere. Das war dann oft einfach so eine harte Diskussion am Anfang. Das passiert ja auch und vielleicht ist es dann god lucky, keine Ahnung. Auf jeden Fall ist man da zufrieden und ich glaube, man muss dann nicht das Fass unbedingt wieder aufmachen und den anderen Leuten reinreiben. Man war doch eh richtig in der Entscheidung oder sowas. Also aber ich glaube, man sollte das monitoren und Feedback einholen, auch währenddessen schon möglichst agil. Also aus Feedback einfach nicht vergessen. Aber man muss es jetzt nicht erzwingen und komplex noch mal aufrollen, wenn es nicht nötig ist, würde ich mal sagen. Also eine gute Balance da finden ist jetzt leichter gesagt als getan, aber dafür gibt es ja die Leads, die sich hoffentlich darum kümmern und dann die Fässer aufmachen, wo es sinnvoll ist und die anderen geschlossen lassen und in der Ecke stehen lassen."
+    },
+    {
+      "end": 4269350,
+      "speaker": "A",
+      "start": 4249310,
+      "text": "Was aber auch sehr selten passiert ist, dass Entscheidungen wirklich revidiert werden, dass sie zurückgenommen werden und dann der andere Weg eingeschlagen wird teilweise, weil es too big to fail ist, bis Lidl einmal um die Ecke kam und einfach eine fünf hundert Millionen SAP Migration gestoppt hat. Da hat jeder auch gedacht, das ist auch eigentlich too big to fail, aber die Schwarz Gruppe sagt so halbe Milliarde, hold my beer."
+    },
+    {
+      "end": 4290880,
+      "speaker": "B",
+      "start": 4269910,
+      "text": "Das ist halt immer relativ, oder es hat gerade kürzlich, wenn wir schon bei Jeff Bezos sind, irgendwer ausgerechnet, wie viel Prozent seine Hochzeit gekostet hat, die da irgendwie Millionen von Euros gekostet hat. Aber von seinem Vermögen gerechnet sind es halt irgendwie null komma null irgendwas Prozent, die die Hochzeit gekostet hat. Und wenn normale Menschen heiraten, umgerechnet wären das irgendwie dreiig Euro oder so für eine Hochzeit."
+    },
+    {
+      "end": 4316200,
+      "speaker": "A",
+      "start": 4290880,
+      "text": "Insofern, ich glaube, es waren achtzig vom deutschen Standardgehalt oder irgendwie sowas. Genau, habe ich auch gelesen, die Statistik bei der Venedig Thematik jetzt mal ein bisschen offset, habe ich mich gefragt, wen ruft man eigentlich an, wenn man halb Venedig spielt? Also wen rufst du da an? Telefonierst du da mit dem Bürgermeister von Venedig? Telefonierst du da schon mit dem Land Italien? Und dann die nächste Frage, was müssen das für Menschen sein, die den ganzen Prozess triggern?"
+    },
+    {
+      "end": 4322360,
+      "speaker": "B",
+      "start": 4316200,
+      "text": "Aber das ist Entscheidungen treffen dort in der Stadt. Ja, um wieder aufs Thema zurückzuführen, du."
+    },
+    {
+      "end": 4351500,
+      "speaker": "A",
+      "start": 4322360,
+      "text": "Driftest gerade ab da, okay, damit ich nicht zu weit abdrifte, entscheide ich mich jetzt mal dazu, den Podcast Abschluss hier zu machen. Wir haben jetzt ziemlich viel über Entscheidungen getroffen und kann natürlich alles eine sehr trockene Ange Angelegenheit sein. Deswegen seht diese ganze Thematik nicht als okay, das ist jetzt das Handbuch, wo ich vorgehen muss. Seht diese Podcast Episode bitte nicht als Standard Operational Procedure, sondern eher als Tool in eurem, in eurer Toolbox, eher als Werkzeug in eurem Werkzeugkasten."
+    },
+    {
+      "end": 4361980,
+      "speaker": "B",
+      "start": 4351500,
+      "text": "Also wir haben, sonst kann man ja mal runterscrollen in den Shownotes, da stehen dann diese acht hundert fünf und zwanzig Frameworks, die wir erwähnt haben, von Khaki bis Deki bis schon wieder alle vergessen, ne?"
+    },
+    {
+      "end": 4377840,
+      "speaker": "A",
+      "start": 4361980,
+      "text": "Khaki ist glaube ich, eine Hosenform, oder? Nee, ist eine Farbe, ist eine Farbe, Kaki ist eine Farbe. Aber mein Top Framework, One way, two way door Decisions, also type one, type two. Ist diese Entscheidung revidierbar oder nicht, Nutze."
+    },
+    {
+      "end": 4386280,
+      "speaker": "B",
+      "start": 4377840,
+      "text": "Ich fast täglich und es gibt fast keine Entscheidungen, die nicht revidierbar sind. Vielleicht noch als Nebensatz, den man sich immer vor Augen halten sollte, RACI Matrix."
+    },
+    {
+      "end": 4440190,
+      "speaker": "A",
+      "start": 4386280,
+      "text": "Responsible Accountable Consultant in Form, Wer hat eigentlich den Hut auf, wer muss informiert werden? Ist glaube ich auch eine ganz sinnvolle Thematik, obwohl ich das natürlich ein bisschen als Checkbox Exercise kritisiert habe. Dann haltet mal ein bisschen im Hinterkopf, so nach dem treffe ich die Entscheidung. Synchron oder asynchron? Da hatten wir auch ein paar negative Punkte erwähnt. Macht Ungleichgewicht in den Meetingraum, Echtzeit, Voreingenommenheit und so weiter und so fort. Aber auf der anderen Seite natürlich asynchron ist auch nicht alles fein. Fehlende Eigenverantwortung, stockender Fortschritt und so weiter. Und dann hat der Wolfgang sich zum Credo gemacht, wer schreibt, der bleibt. Dokumentiert die ganze Sache, überkommuniziert diese. Ich glaube, damit kann man nie falsch liegen. Wobei ich natürlich sagen muss, bei jeder Entscheidung verliert irgendwer ein hundert Prozent Zustimmung. Funktioniert oft nicht. Deswegen zielt es gar nicht ab, auch wenn ihr ein harmonisches Teamumfeld haben wollt. Wie sage ich immer, das Leben ist kein Ponyhof."
+    },
+    {
+      "end": 4443310,
+      "speaker": "B",
+      "start": 4440510,
+      "text": "Also Consent ist wichtig, egal wo im Leben."
+    },
+    {
+      "end": 4446950,
+      "speaker": "A",
+      "start": 4443310,
+      "text": "Ja, riesig. Wolfgang und ich leben auch in purer Harmonie hier."
+    },
+    {
+      "end": 4452630,
+      "speaker": "B",
+      "start": 4447590,
+      "text": "Wir haben Konsens, wir haben immer Konsens, aber im Allgemeinen war Consent auch ganz gut."
+    },
+    {
+      "end": 4466390,
+      "speaker": "A",
+      "start": 4452630,
+      "text": "So, das war's von mir. Ich hoffe, ihr habt heute nicht mehr so viele Entscheidungen zu treffen. Wenn doch Helm an und durch die Wand. Ansonsten denkt immer eine Entscheidung zu treffen, ist besser als gar keine. Also viel Spaß beim Entscheiden. Bis später."
+    },
+    {
+      "end": 4473540,
+      "speaker": "B",
+      "start": 4466630,
+      "text": "Und die beste Entscheidung, die du jetzt gerade getroffen hast, war, den Podcast so lange zu Ende zu hören. Viel, vielen Dank dafür und ciao."
+    }
+  ],
+  "webhook_auth": false
+}
