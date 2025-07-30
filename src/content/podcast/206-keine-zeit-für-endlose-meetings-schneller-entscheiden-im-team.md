@@ -80,7 +80,7 @@ pubDate: 2025-07-29 03:00:39+00:00
 rtlplus: ''
 six_user_needs: []
 speaker:
- - name: Andy Grunwald
+- name: Andy Grunwald
   transcriptLetter: A
 - name: Wolfi Gassler
   transcriptLetter: B
