@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/ecb400a1-15c1-492c-aaa8-2791e5fa85c2/engineering-kiosk-206-keine-zeit-f%C3%BCr-endlose-meetings-schneller-entscheiden-im-team
 apple_podcasts: https://podcasts.apple.com/us/podcast/206-keine-zeit-f%C3%BCr-endlose-meetings-schneller-entscheiden/id1603082924?i=1000719583687&uo=4
 audio: https://audio1.redcircle.com/episodes/8c413348-25c2-4fc9-84f2-2c5654f27e25/stream.mp3
 chapter:
@@ -80,8 +80,10 @@ pubDate: 2025-07-29 03:00:39+00:00
 rtlplus: ''
 six_user_needs: []
 speaker:
-- name: Andy Grunwald
+ - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/332mLoUG0G1eKrIy6FJbPa
 tags: []
 title: "#206 Keine Zeit f\xFCr endlose Meetings: Schneller entscheiden im Team"
