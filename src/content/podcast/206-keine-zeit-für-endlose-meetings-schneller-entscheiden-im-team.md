@@ -85,7 +85,10 @@ speaker:
 - name: Wolfi Gassler
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/332mLoUG0G1eKrIy6FJbPa
-tags: []
+tags:
+- Team
+- Kommunikation
+- Leadership
 title: "#206 Keine Zeit f\xFCr endlose Meetings: Schneller entscheiden im Team"
 transcript_raw: ''
 transcript_slim: ''
