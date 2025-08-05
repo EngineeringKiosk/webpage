@@ -91,7 +91,7 @@ tags:
 - Leadership
 title: "#206 Keine Zeit f\xFCr endlose Meetings: Schneller entscheiden im Team"
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/206-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8X_E8SNF_Ls
 
 ---
