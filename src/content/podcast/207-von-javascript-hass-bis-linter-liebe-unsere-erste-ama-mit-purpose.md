@@ -78,7 +78,10 @@ speaker:
 - name: Wolfi Gassler
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/4bHABVxiglN8fV3dWmlFcC
-tags: []
+tags:
+- Karriere
+- Side Projects
+- Engineering Kiosk
 title: '#207 Von JavaScript-Hass bis Linter-Liebe: Unsere erste AMA, mit Purpose!'
 transcript_raw: ''
 transcript_slim: ''
