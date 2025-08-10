@@ -8,14 +8,17 @@ location:
   logo: './images/location/asteas.png'
 talks:
   - avatar: './images/speaker/avatar.png'
-    name: ''
+    name: 'Chris Lenz'
     title: 'tba'
     description: ''
     bio: ''
   - avatar: './images/speaker/avatar.png'
-    name: ''
+    name: 'Alexandra Raichart, Matthias Krauss'
     title: 'tba'
     description: ''
     bio: ''
 eventId: '0u9tr1ur2p7e1qabrl5r4ialte'
+speakers:
+  female: 1
+  male: 2
 ---
