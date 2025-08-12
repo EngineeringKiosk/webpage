@@ -1,0 +1,950 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4234,
+  "audio_url": "https://cloud.inlupus.at/s/aZa8H5MXRFWEDfC/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.957799,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "19fe8723-8242-4d46-8553-5c1608c24863",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 59050,
+      "speaker": "A",
+      "start": 3360,
+      "text": "Eine neue Episode vom Engineering Kiosk. Herzlich willkommen. Die erfolgreichsten Sportlerinnen betreiben ihren Sport nicht immer am Maximum ihrer Leistungsfähigkeit. Die erfolgreichsten Sportlerinnen gehen sehr oft zurück zu den Basics, üben und optimieren diese. Diese Episode ist irgendwie vergleichbar damit. Wir gehen zurück zu den Basics von Security und fangen da an, wo alles beginnt bei dir. Wir sprechen über Personal Security ein hundert erste Wie deine Security Basics aussehen sollten. Dabei geht es um Passwortmanager, Multi Factor Authentifizierung, Cloud Synchronisation, Secrets in Environment, Variablen, SSH Authentifizierung und so Fragen. Wenn ich meine Multi Factor Authentifizierungscodes in meinem Passwortmanager speichere, ist dann Multi Factor Authentifizierung nicht eigentlich sinnfrei? Die Antwort gibt es in diesem Podcast. Back to the Basics, los geht's."
+    },
+    {
+      "end": 65610,
+      "speaker": "B",
+      "start": 63210,
+      "text": "Andi, weißt du, was ein Nackerbazl ist?"
+    },
+    {
+      "end": 67610,
+      "speaker": "A",
+      "start": 65690,
+      "text": "Hört sich an wie ein Nacktbad Event."
+    },
+    {
+      "end": 168500,
+      "speaker": "B",
+      "start": 67770,
+      "text": "Ja, bis knapp dran, weil ich habe ja in Episode ein hundert ein und sechzig für die ganze Welt dargelegt, was ich für ein Security Nackerbazl bin. Also wie nackt ich bin im ganzen Security Bereich. Das war diese Episode, wo ich erzählt habe, dass meine Festplatte leider nicht verschlüsselt war von dem Laptop, der mir mal geklaut wurde. Kann man gerne nachhören, wobei es da eigentlich um die Festplattenverschlüsselung geht. In dieser Episode natürlich mit David, der uns das genau erklärt hat. Aber nachdem ihr das ja immer noch in den Knochen sitzt, machen wir heute genau eine Episode, wo ich vielleicht auch mal rausfinden kann, ob du auch in manchen Security Bereichen ein Nackerbazl bist, weil du bist ja einer, der immer gern irgendwelche Keywords raushaut und was nicht so Standard ist und was man heutzutage nicht sowieso alles macht. Und wir hatten, wir hatten in der Community eine kurze Diskussion, wo es um Passwortmanager gegangen ist und du gemeint hast, es ist zwei tausend fünf und zwanzig was muss da überhaupt noch diskutiert werden? Passwortmanager sind Standard, da gibt es nichts zu diskutieren. Period. Darum werden wir heute uns mal ansehen, was wir so in der Realität, in der Praxis wirklich machen, Ob diese ganzen Sicherheitsstandards wirklich alle erfüllt werden, die ja so Standard sind zwei tausend fünf und zwanzig bei uns privat, Ob du die auch alle befolgst und da möchten wir mal ganz offen darüber sprechen, was eigentlich Standard ist, was man machen sollte, was wir so privat auch wirklich verwenden und erfüllen und was man vielleicht gar nicht erfüllen muss, kann und da auch einen offenen Dialog führen mit unserer Community, weil da gibt es immer viele gute Infos und neue Tools, die man einsetzen kann in dem ganzen Personal Security Bereich. Wie macht man sein Leben sicherer? Und ich hoffe, Andi, dass du jetzt dein Herz mal öffnest, wo deine Security Schwachstellen sind."
+    },
+    {
+      "end": 185420,
+      "speaker": "A",
+      "start": 168500,
+      "text": "Ich hatte Wolfgang diese Episode gepitcht als Personal Security ein hundert eins wer in Amerika mal studiert hat oder bzw. Sich da die Studiumskurse mal angesehen hat, der weiß, dass die Anfängerkurse immer One heißen. Deswegen schauen wir mal, wie viel Basics."
+    },
+    {
+      "end": 187220,
+      "speaker": "B",
+      "start": 185500,
+      "text": "Du selber eigentlich so machst."
+    },
+    {
+      "end": 213280,
+      "speaker": "A",
+      "start": 187220,
+      "text": "Genau, ja, ich vielleicht auch, aber warum ich sage, hey, wir haben zwei tausend fünf und zwanzig, wie du nutzt noch keinen Passwortmanager. Wolfgang, das liegt daran, ich nehme immer Gutes an. Ich nehme halt immer an, dass die Leute in unserer Community den Industrie Best Practices folgen und dass die natürlich auch einen sehr hohen Anspruch an sie sich selbst haben und deswegen denke ich, das kann ich gut annehmen, weil da sind einfach krasse Leute drin."
+    },
+    {
+      "end": 222560,
+      "speaker": "B",
+      "start": 213280,
+      "text": "Darum gibt es ja auch schon lange das Problem nicht mehr, dass zum Beispiel Keys in irgendeinem Repository auftauchen oder so, die man mal mitpusht oder so, weil man ja alle Best Practices folgt."
+    },
+    {
+      "end": 390760,
+      "speaker": "A",
+      "start": 222560,
+      "text": "Ich glaube, das ist genau der Grund, warum neunzig Prozent der Firmen GitHub Enterprise kaufen, weil die dann automatische Secret Scanning drin haben oder so. Aber lass uns mal langsam hier zur Episode kommen. Also ich meine, warum ist das immer noch ein Problem? Die Frage ist das überhaupt noch immer ein Problem mit Security und Passwortmanagern und so weiter? Und du wirst lachen. Aus irgendwelchen Gründen bekomme ich immer noch von Bekannten ab und zu mal dms über Twitter oder X, wo deren Account gefischt wurde, hier und da mal eine Phishing E Mail von deren E Mail Account und so weiter und so fort. Und ich frage mich jedes Mal ernsthaft jetzt oder vor kurzem bin ich auch wieder, ich glaube, ich habe das in irgendeiner Podcast News Episode gehört, über ein NPM Paket gestolpert, wo jemand, ich glaube, da ging es um den GitHub Token, der wurde weggefischt und somit hat dann jemanden populäres NPM Package ja nicht gehackt, sondern durch den GitHub Token neues Release gemacht, wo dann halt ein bisschen mal wieder drin war oder ähnliches. Also dieses ganze Thema von Secrets und wie man das managt, also dieses personal One on One Security ist immer noch so weit verbreitet und auch bei fähigen Software Engineers und allem drum. Und ich frage mich jedes Mal, muss das sein? Lernen wir nicht. Das ist so meine Frage. Aber jetzt müssen wir natürlich auch mal wieder ganz kurz den Disclaimer rauspacken, den Lehrer und müssen leider jetzt einmal ganz initial sagen, unabhängig davon, was wir hier jetzt sagen und unabhängig davon, ob jetzt am Ende der Episode fünf und dreiig Checkboxen gecheckt habt, weil ihr nämlich das alles macht, was wir hier sagen, Security ist leider ein bisschen schwieriger und nichts ist sicher. Also Security ist eigentlich nur die Definition darum oder es geht immer nur darum, den Aufwand für den Angreifer so zu erhöhen, dass es sich für den Angreifer nicht mehr lohnt. Das ist meines Erachtens die Definition von Security. Die zweite Thematik ist natürlich, dass Security auch ein Trade off ist. User Experience bzw. Der persönliche Eingriff ins Leben. Wie kompliziert ist eine Aktion? Über wie viel Hürden muss ich springen, um Zugriff auf irgendwas zu bekommen? Auch für sich selber muss man ja zugeben, wenn ich jetzt auf mein E Mail Postfach zugreifen möchte und ich muss dafür immer nach Hause an Schranken Zettel öffnen und da ein Passwort abschreiben, da muss ich zugeben, ist das schon sehr großer Eingriff im Leben. Da weiß ich jetzt nicht, ob ich das genauso haben möchte. Deswegen gilt halt auch bei Security so die User Experience. Wie kompliziert ist das Ganze eigentlich umzusetzen bzw. Wie oft steht es mir im Weg und wie oft nervt es mich Denn wenn es mich immer sehr viel nervt, dann deaktiviere ich diese Security Mechanismen sehr wahrscheinlich auch schnell. Also nur weil ihr die ganzen Sachen, die wir jetzt hier gleich besprechen, folgt, heißt das leider nicht, dass der Wolfgang nicht euer Vertrauen missbrauchen kann und Zugriff auf euren E Mail Account kriegen kann."
+    },
+    {
+      "end": 418300,
+      "speaker": "B",
+      "start": 390760,
+      "text": "Ich wollte schon sagen, weil du gesagt hast, wenn man die sechs und dreiig Checkboxen abdicken kann, also eigentlich geht es ja darum bei dieser Episode, dass ihr am Ende sagt, was diese sechs und dreiig Basic Checks boxen. Es gibt ja eigentlich mindestens dreiig andere, die der Andi eigentlich erfüllen sollte, die er jetzt gar nicht erwähnt hat, weil das ist ja eigentlich schon best practice. Und genau darum geht es mir mal, dass die Community dann kommt und uns erklärt, was denn sonst noch jetzt fehlt in unserer Liste und was wir so machen."
+    },
+    {
+      "end": 480740,
+      "speaker": "A",
+      "start": 478300,
+      "text": "So, dann starten wir mal los."
+    },
+    {
+      "end": 529320,
+      "speaker": "B",
+      "start": 481060,
+      "text": "Initial geht es ja mal um diesen Passwortmanager, den du ja schon erwähnt hast. Jetzt nehmen wir mal an, alle verwenden einen Passwortmanager, obwohl es definitiv nicht so ist. Auch in der Dev Welt ist es so. Aber wenn du mal zusammenfassen müsstest für jemanden, der jetzt noch keinen Passwortmanager verwendet, wir haben ja das als Techies wahrscheinlich auch oft das Problem, dass so im normalen Umkreis, im Freundeskreis irgendwie alle noch ihre klassischen Susi drei und zwanzig tausend vier hundert sechs und fünfzig habe ich lieb, Passwörter verwenden und dann hängen sie hinten nur irgendwie drei, vier und fünf, sechs dran oder so. Muss zugeben, manche Accounts habe ich auch noch, wo ich so ein altes Pattern verwende, gerade wenn es darum geht, die vielleicht irgendwann mal irgendwo eintippen müsste, aber sagen sonst neun und neunzig Prozent meiner Accounts sind auf Passwortmanager. Aber warum macht ein Passwortmanager Sinn?"
+    },
+    {
+      "end": 540240,
+      "speaker": "A",
+      "start": 529320,
+      "text": "Ich frage mich gerade, sollte ich mal eine Wortlisten Attacke bei dir auffahren mit den klassischen österreichischen Frauen Vornamen, wenn du schon Susi eins, zwei, drei sagst, aber."
+    },
+    {
+      "end": 550880,
+      "speaker": "B",
+      "start": 540400,
+      "text": "Das wäre Susi habe ich lieb. Das ist ja so auch man soll sich immer so ein Pattern ausdenken. Du kannst Nackerbaz eingeben, das ist schon schwieriger, weil da wüsste nicht mal ich, wie man es buchstabiert."
+    },
+    {
+      "end": 592080,
+      "speaker": "A",
+      "start": 550880,
+      "text": "Ja, ich wüsste auch nicht, wie man Nackerlbart schreibt, aber dieses Susi ein hundert drei und zwanzig, das hat so ein bisschen Knuddels Vibes, finde ich. Naja, wie dem auch sei, lass uns mal starten. Warum sollte man Passwortmanager nutzen? Also Grundregel Nummer eins, du benutzt mit hoher Wahrscheinlichkeit eine dreistellige Anzahl an Internet Services heutzutage davon rede ich nicht nur Facebook, Twitter und TikTok, sondern E Mails. Und dann hast du da noch einen paypal Zugang und vielleicht hast du noch einen Klarna Zugang und auf Discord bisher auch noch und so weiter und so fort. Das bedeutet, du hast eine relativ schnelle dreistellige Anzahl an digitalen Zugängen. Mein Passwortmanager hat mir gerade mal angezeigt, ich habe über ein tausend Logins dort eingespeichert da siehst du eben nur vier."
+    },
+    {
+      "end": 600120,
+      "speaker": "B",
+      "start": 592080,
+      "text": "Hundert ein und sechzig ich bin eindeutig der, der eher auf die klassische Technologie setzt und die funktioniert und nicht bei jedem Hipster Service sich anmeldet."
+    },
+    {
+      "end": 726650,
+      "speaker": "A",
+      "start": 600120,
+      "text": "Ja gut, da kommen wir gleich zu was es alles ist, denn bei mir sind es leider nicht nur Logins, sondern auch SSL Keys und Two Factor Authentication, Backup Codes und so weiter und so fort. Wie dem auch sei. Punkt ist aber verwende bitte nicht überall das gleiche Passwort, denn wenn du unterschiedliche Passwörter, unterschiedliche Services nutzt, reduzierst du das Risiko massiv, dass ein Angreifer auf mehrere deiner Konten zugreifen kann. Denn Data Leaks gibt es immer und immer und immer wieder. Denn wenn du jetzt zum Beispiel bei Facebook registriert bist, dann kannst du leider nicht bestimmen bzw. Du hast keine Transparenz, ob deine Daten wirklich verschlüsselt in der Datenbank abgelegt werden. Es kann sein, dass dein Passwort einfach in Klartext da liegt und wenn dieser Service dann gehackt wird, dann wird mit hoher Wahrscheinlichkeit nach einer gewissen Zeit diese Datenbank zum Verkauf angeboten im Darknet. Dann hat man einen sogenannten Data Leak und wenn dann steht der Wolfgang hat Zugriff auf Facebook mit dem Klartext Passwort SUSI oder vielleicht sogar mit einer schwachen Verschlüsselung, nehmen wir mal irgendwie MD oder ähnliches, wo man dann einfach Wortlisten Attacken gegenfahren kann. Dann hat der Angreifer, kauft er sich das ganze Paket, sieht ah, der Wolfgang hat da Zugriff und der Wolfgang hat zum Beispiel auch wolfgangmail com, ist aber bei Facebook registriert. Somit weiß der Angreifer, der hat sogar ein Google E Mail Konto und somit probiert dann nämlich einfach Wolfi Mail Com bei Gmail aus mit dem Passwort SUSI und flups bis zum E Mail Account. Und dann kommt das Riesenproblem eigentlich, weil du dann im E Mail Account bist, kannst du natürlich bei jedem anderen Service, wo der Wolfi registriert ist, einmal auf Passwort vergessen drücken und somit bist du eigentlich der Wolfgang im digitalen Leben. So und jetzt kommt jetzt kann man natürlich auch sagen, diese Datenleaks, kann ich denn irgendwie prüfen, ob ich schon mal Teil eines solchen Data League war? Und ja, da gibt es nämlich den australischen Security Forscher Troy Hunt, der hat mal vor Jahren eine tolle Webseite aufgebaut, nennt sich have I been pwned? Da kannst du einfach deine E Mail eingeben und der untersucht einfach keine Ahnung wie viel Data Leaks und da kannst du sehen, wann wo deine E Mail Adresse auch mal Teil war. Deswegen solltest du generell erst mal einen."
+    },
+    {
+      "end": 818040,
+      "speaker": "B",
+      "start": 726650,
+      "text": "Passwortmanager nutzen, vielleicht als kleinen Er hat vierzehn Milliarden Accounts, die gepawnt wurden, also die gehackt wurden bzw. Geleakt wurden. Also das sind schon ganz viele. Und auch Facebook ist es ja passiert. Das heißt auch wenn man glaubt, die Großen haben ja kein Problem, das passiert den Größten. Und man muss ja auch dazu sagen, man ist ja auch bei ganz vielen kleinen Services registriert. Also man hat ja auch keine Ahnung, wie groß ist das ein Team ist es vielleicht irgendwie so ein Kerl wie ich, der so nebenbei ein side Project macht und da irgendwas zusammengeklopft hat oder gewipe codet hat und dem vertraue ich jetzt mein Pattern an, wenn ich überhaupt ein Pattern hab. Vielleicht habe ich überhaupt nur ein Standard Passwort, aber sogar wenn ich ein Pattern hätte, das heißt, dass jedes Passwort leicht anders ist, kann es durchaus ein Problem sein, weil das Pattern dann erkannt wird. Also oder auch nur, wenn das zwei, drei Accounts sind, die dasselbe Passwort verwenden. Also da kann man dann sehr schnell weiterspringen und springt von Account zu Account. Und wer jetzt sagt, ja, meine Accounts sind nicht so wichtig, also jeder Techie weiß das hoffentlich, dass die Accounts durchaus wichtig sind, aber gerade in der nicht technischen Welt ist es meiner Meinung nach nicht angekommen, wie problematisch es sein kann, auch wenn man Account verliert, also seinen E Mail Account, den man seit zwanzig Jahren verwendet, der überall registriert, ist diese E Mail Adresse. Plötzlich ist diese E Mail Adresse weg und man bekommt sie auch nicht mehr zurück unter Umständen. Also das ist schon lebenseinschneidend und da kann mir dann niemand erklären, es ist ja im E Mail Postfach eh nichts drin. Da geht es dann wirklich darum, dass man eigentlich aus seiner Internet Identität fast ausgesperrt ist."
+    },
+    {
+      "end": 969370,
+      "speaker": "A",
+      "start": 818120,
+      "text": "Jetzt habe ich gerade viel zu lange erklärt, warum man eigentlich unterschiedliche Passwörter für unterschiedliche Services nutzen sollte. Das erklärt aber leider noch nicht, warum ich einen Passwortmanager nutzen sollte. Denn jetzt könnte man Facebook war mein erster Service, deswegen ist mein Passwort Susi ein tausend zwei hundert ein und dreiigste Gmail mein zweiter Service Susi ein tausend zwei hundert zwei und dreiig und so weiter und so fort. Jetzt ist es aber so sogar, dass BSI oder eigentlich jeder außer gegebenenfalls seine Oma sagt, wir sollten starke Passwörter nutzen. Was sind starke Passwörter? Möglichst lang, möglichst viele Buchstaben, groß, klein, ebenfalls noch eine Zahl dabei und Sonderzeichen und das vielleicht alles sogar ein bisschen öfter. Auf jeden Fall, auch wenn man irgendwann Pattern hat wie, weiß ich nicht, der Vorname meines Hundes, das dritte Buch von links davon, die sechste Seite, der erste Buchstaben und so weiter und so fort, kann man sich das halt irgendwann nicht mal merken. Und jetzt fragt man sich, okay, warum mache ich überhaupt starke Passwörter? OK, starke Passwörter sind eigentlich heutzutage recht essentiell. Auf der einen Seite schützen sie gegen Brute Force Attacken. Brute Force Attacken sind Attacken, wo man einfach immer wieder auf das Login Form hämmert und eigentlich dauerhaft irgendwelche Passwörter durchprobiert. Klar kann man durch Rate Limiting und IP Sperren und so weiter alles reduzieren, aber Brute Force Attacken selbst kann man eigentlich nicht verhindern. Man probiert halt einfach irgendwelche Passwörter aus. Eine andere Art von Attacken sind Wörterbuchangriffe oder moderne GPU gestützte Tools wie Hashkats. Die generieren dann die Hashes nach einer Verschlüsselung auf der GPU und schießen die dann gegen das Login Formular. Wörterbuchangriffe sind Angriffe, wo du einfach Wörter hast, die dann bereits in die Verschlüsselung umgerechnet wurden oder die orientieren sich ganz einfach an klassischen Wortlisten, wie die gängigsten Frauennamen in Österreich oder die gängigsten Passwörter eins, zwei, drei oder Test eins, zwei, drei und so weiter. Da gibt es sogar auf Wikipedia vorgefertigte Wortlisten und auf GitHub kann man sich diese Wörterbücher auch herunterladen. All die ganze Thematik wird natürlich recht problematisch in Zukunft, wenn wir nämlich mit dem Quantencomputing um die Ecke kommen, weil dann können auch von diesen Data Leaks hohe Verschlüsselungen, die heute noch als sicher gelten, recht schnell geknackt werden. So zumindest die aktuelle Theorie. Meines Wissens nach sind wir noch gar nicht so weit, was das Quantencomputing Thema angeht, aber es gibt Researcher, die kümmern sich darum, dass die Passwörter auch nach einer Post Quantum Zeit sicher bleiben. Aber das legen wir beiseite, weil da haben Wolfgang und ich relativ wenig Ahnung von."
+    },
+    {
+      "end": 1047260,
+      "speaker": "B",
+      "start": 969930,
+      "text": "Vielleicht noch zur Erklärung für alle, die jetzt vielleicht nicht so tief in der Implementierungsseite von Passwortspeicherung drin sind. Also Andi hat jetzt immer von Hashes gesprochen. Ganz kurz erklärt, der Hash ist diese Form, wie ein Passwort gespeichert wird auf der Serverseite. Also da wird in irgendeiner Form eine Encryption gemacht oder ein Hashing. Hashing kann nur in eine Seite funktionieren, das heißt, man kann von dem gehashten Wert nicht zurückrechnen auf das Passwort. Aber was man natürlich machen kann, wenn es ein einfacher Hash ist und die Daten werden jetzt geleakt, gehen nach außen, dann hat man diesen Hashcode und dann kann man sich einfach eben hinsetzen, ganz viele Passwörter durchprobieren und immer checken, kommt dieser Hash am Ende raus. Und wenn man dann das Passwort gefunden hat, weil es eben nur ein einfaches Passwort ist, dann kennt man das Passwort, weil man überprüft hat, dasselbe Hash kommt am Ende raus, wenn man diese Hash Funktion anwendet. Da gibt es natürlich intelligentere Hash Funktionen, dümmere Hash Funktionen, aber es ist eigentlich immer der gleiche Schritt bei so einer Bruce Force Brute Force Attacke. Und ein Quantencomputer könnte das natürlich noch mal schneller alles durchprobieren. Es geht ja immer um die Schnelligkeit, wie lang muss ich mich hinsetzen und Passwörter durchprobieren. Theoretisch kann man natürlich alles knacken, aber wenn ich natürlich zwei hundert Jahre Passwörter haschen muss, bis sie mal an Ziel kommen, dann würde das mal als sicher bezeichnen. Aber es kann der Quantencomputer natürlich schnell ändern."
+    },
+    {
+      "end": 1075640,
+      "speaker": "A",
+      "start": 1047260,
+      "text": "Der Wolfgang hat sich gerade bei dem Wort Brute Force ein bisschen versprochen und hatte Bruce Force gesagt Und das ist natürlich, ich weiß nicht, ein freudscher Versprecher, glaube ich, Denn wer sich so ein bisschen in der Kryptographie auskennt, kennt unter anderem Bruce Schneier. Bruce Schneier gehört unter anderem zu den Autoren von SHA drei, soviel ich weiß, einem Hash Algorithmus. Und das finde ich natürlich sehr schön, dass wenn man sich bei Brute Force mit Bruce Force verspricht, aber nun gut, das nur als random."
+    },
+    {
+      "end": 1160920,
+      "speaker": "B",
+      "start": 1075640,
+      "text": "Ich wollte dir nur diese geniale Überleitung bringen, dass du den auch noch reinbringen kannst. Was aber übrigens noch ein ganz anderer Grund ist, vor allem wenn man eben mit Nicht Techie spricht, was man ganz gut anbringen kann, was ja Leute auch stört, hat mich früher auch gestört. Du musst ja mittlerweile da irgendwie Sonderzeichen eingeben. Die Passwörter werden immer geprüft, ob das ein sicheres Passwort ist. Es wird immer noch länger und was macht man da oder was hat man früher gemacht, was habe ich früher gemacht? Man hängt halt irgendwie eine Zahl dran, man hängt da noch einen Dollar dran, wie es halt so üblich ist, an sein Standard Passwort und am Schluss hat man keine Ahnung mehr, was man für Passwort eigentlich verwendet hat, weil es war das Standard Passwort, aber hinten hat man noch was dran gehängt und man hat sich das ja nicht gemerkt. Und dann kommt immer das Problem, ja, man muss ein neues Passwort anfordern bei E Mail. Das heißt, bei jedem Login, wo man ständig sich einloggt, hat man irgendwie fünf Minuten oder noch länger, weil das E Mail kommt dann nicht an, mit dem Passwort zurücksetzen, damit man sich überhaupt mal einloggen kann. Also auch wenn ihr vielleicht mit Nicht Tech sprecht, meiner Meinung nach ist das auch ein super Argument, dass einfach die Convenience erhöht wird, dass man viel einfacher im Alltag damit umgehen kann. Wenn es noch automatisch connected wird, der Browser mit dem Passwortmanager, dann werden die Passwörter einfach eingegeben. Man muss sich sich um nichts kümmern. Es ist Lebenszeit sparend, würde ich fast sagen. Also das ist auch noch ein wichtiges Argument. Das hat mich damals auch überzeugt, auf den Passwortmanager umzusteigen vor, ich hoffe mal, es waren viele Jahre, aber ich kann mich gar nicht daran erinnern. Seit wann verwendest du einen Passwortmanager?"
+    },
+    {
+      "end": 1226530,
+      "speaker": "A",
+      "start": 1161000,
+      "text": "Um das genaue Jahr zu sagen, müsste ich dir jetzt wahrscheinlich die Rechnung von meinem Passwortmanager raussuchen, aber ich würde mal sagen zehn, elf Jahre, irgendwie sowas. Jetzt sprechen wir die ganze Zeit über komplexe Passwörter und ich kenne ja die Community. Die Community kommt nämlich nach dieser Episode um die Ecke. Und Andi, wieso hast du denn nicht die offizielle Empfehlung vom BSI mal genannt? Wir sind doch Deutsche, wir haben doch Regeln für alles bzw. Starke Empfehlungen vom Bund. Und jetzt habe ich ja gerade mal ganz kurz nachgegoogelt. Also das BSI, das ist das Bundesamt für Sicherheit in der Informationstechnik, für alle Leute, die uns zum Beispiel nicht aus Deutschland zuhören, empfiehlt, ein starkes Passwort kann kürzer und komplex oder lang und weniger komplex sein. Und dann geben die natürlich auch Empfehlungen, zum Beispiel zwanzig bis fünf und zwanzig Zeichen lang und es enthält zwei Zeichenarten, also Buchstaben und Zahlen, zum Beispiel acht bis zwölf Zeichen lang und hat vier Zeichenarten, dann ist es natürlich kürzer und komplex. Oder acht Zeichen lang, hat drei Zeichenarten und ist zusätzlich durch eine Mehrfaktor Authentifizierung abgesichert. Finde ich gar nicht mal so doof. Verlinken wir natürlich auch in den Shownotes."
+    },
+    {
+      "end": 1282560,
+      "speaker": "B",
+      "start": 1226770,
+      "text": "Was mich ja in letzter Zeit oft genervt hat, ist bei Webseiten, dass du keine so lange Passwörter überhaupt verwenden kannst. Also die haben teilweise irgendwie ein Limit von, keine Ahnung, zwölf oder so und meine Standard Passwörter sind halt irgendwie, keine Ahnung, was mein Passwortmanager so ausspuckt, meistens schätze mal so sechzehn bis achtzehn Charakter und dann hast du wieder einen extra Schritt drin, weil das Passwort irgendwie zu lange ist. Also keine Ahnung, warum Webseiten das machen. Also wenn ihr eine Webseite programmiert, erlaubt auch längere Passwörter, damit man eben, wenn man so eine lange Zeichenkette, die man sich vielleicht sogar im Kopf merken will, nicht von dem Passwortmanager kommt, wie ich habe Susi lieb und sie sitzt gerade im Garten hinter dem rechten grünen roten Apfelbaum oder so. Spätestens bei der dritten Webseite kommt man dann, glaube ich, in das Problem, dass man sich das nicht mehr merken kann. Aber sollte man sowas verwenden wollen, dann sollte die Webseite das auch unterstützen. Also vielleicht auf der Entwicklerseite auch darauf achten, wenn man nicht sowieso eine Standard Library verwendet, die das alles wegkapselt, hoffentlich."
+    },
+    {
+      "end": 1292950,
+      "speaker": "A",
+      "start": 1283030,
+      "text": "Früher habe ich immer so Ausreden gehört, ja, wir müssen Speicherplatz sparen, deswegen erlauben wir hier nur ein Varchar Dreiig und so weiter in dem Datenbankschema. Ich hoffe, aus diesen Zeiten sind wir langsam mal raus."
+    },
+    {
+      "end": 1299030,
+      "speaker": "B",
+      "start": 1293110,
+      "text": "Ja, ist eigentlich sowieso egal, weil du hasht das Ganze und der Hash ist immer gleich lang aus deiner Hash Funktion."
+    },
+    {
+      "end": 1467470,
+      "speaker": "A",
+      "start": 1299030,
+      "text": "Ja, ja, das ist richtig. Aber vielleicht hast du ja ein Legacy System, was früher vielleicht noch in Klartext gespeichert hat und dann in MD, was bei einem normalen MD, glaube ich, zwei und dreiig Zeichen sind. Und dann vielleicht ist ja irgendjemand so krass drauf und macht ein Base Encode und Decode drauf und alle. Also es gibt ja die wildesten Thematiken da draußen, Deswegen, ich hoffe, das Thema können wir hinter uns lassen. Aber jetzt hatten wir lange Passwörter und haben gesagt, okay, kann sich keiner merken. Deswegen nutzen wir Passwortmanager. Meines Erachtens nach gibt es aber noch einen essentiellen anderen Grund, weswegen man Passwortmanager nutzen sollte. Wir hatten Data Leaks da wo das Passwort für andere Services verwendet wird und dann kann man das einfach durchprobieren. Sowas nennt man im Fachjargon Credential Staffing. Dann gibt es aber auch noch sogenannte Phishing Attacken. Ich schicke dem Wolfgang eine E Mail, ich fake die so, dass die E Mail so aussieht, als kommt die von Wolfgangs Bank. Pack da einen Link in die E Mail, bitte loggen Sie sich hier ein. Wir haben eine wichtige Nachricht für Sie. Die Webseite, auf die ich leite, hat eine andere Domain, sieht aber täuschend echt aus wie Wolfgangs Bank. Er loggt sich da ein, ich habe dann seine Zugangsdaten. Sowas nennt man Phishing Attacken. Und jetzt das Tolle Im Passwortmanager kann man die URL des Logins hinterlegen und das bedeutet, man bekommt auf allen validen Webseiten direkt einen Autovorschlag mit deinen Zugangsdaten. Das bedeutet auch auf Phishing Webseiten stimmt die URL nicht überein und du bekommst automatisch diesen Vorschlag nicht. Das bedeutet, du schützt dich automatisch vor Phishing Attacken und und vor sogenannten Typoscoating oder homografischen Angriffen. Typoscotting ist zum Beispiel, wenn du auf GitHub komm gehst und du tippst so schnell, dass du das i nicht mit Tipps gehst du also auf gthub kommen und da hat jemand eine Webseite aufgebaut, die genauso aussieht wie GitHub und da gibst du einfach deine Logindaten ein und somit hast du deine Logindaten an irgendeinen Angreifer gegeben. Das bedeutet vertipper Buchstaben weglassen und so weiter und so fort. Und homografische Angriffe sind Angriffe, wo du zum Beispiel eine Domain in deiner Adresszeile hast, die sieht ganz genauso aus wie die Domain des richtigen Services, aber ein Buchstabe ist minimal vertauscht, dass das fürs Auge kaum sichtbar ist. Der Klassiker ist zum Beispiel ein großes i und ein kleines L. Sieht in der deutschen Sprache je nach Schriftart sehr gleich aus. Oder es gibt auch ein paar griechische und kyrillische Zeichen, die kommen der Form einer von deutschen Buchstaben sehr, sehr nahe. Und somit weißt du eigentlich nicht, weil du kannst es mit bloßem Auge kaum sehen, ob das jetzt die wahre Webseite ist. Oder nicht, aber weil ja der Passwortmanager dir eine Autosuggestion gibt, wenn die richtige Domain getroffen ist, schütze ich dies auch vor sogenannten homografischen Angriffen."
+    },
+    {
+      "end": 1505390,
+      "speaker": "B",
+      "start": 1467630,
+      "text": "Was du natürlich jetzt voraussetzt ist, dass der Passwortmanager mit dem Browser verknüpft ist und eine Autofill Funktion überhaupt anbietet, du die richtig installiert hast und dann als User dieses Signal, wenn da kein Passwort eingefüllt wird, dieses aufnimmst und verstehst und dir nicht denkst, die Autofill Funktion funktioniert gerade nicht. Ich mache meinen Passwortmanager manuell auf, kopiere dann das Passwort hinein und drück wieder auf Login, weil dann hast du natürlich dasselbe Problem, aber du machst den Prozess natürlich schwieriger und hoffentlich merkst du, dass da dann vielleicht die Domain anders ist oder so. Also da muss man dann natürlich schon noch selbst aufpassen. Eine wirkliche Blocking Funktion ist es in dem Sinne nicht."
+    },
+    {
+      "end": 1506910,
+      "speaker": "A",
+      "start": 1505390,
+      "text": "Du glaubst ja auch, dass die Leute dumm sind."
+    },
+    {
+      "end": 1542890,
+      "speaker": "B",
+      "start": 1506910,
+      "text": "Nein, ich glaube, dass ich dumm bin, weil mir ist es auch schon oft passiert, weil meine Connection funktioniert manchmal nicht mit dem Browser und dann mache ich einfach in Passwortmanager auf. Also ich mache das tagtäglich, weil hin und wieder irgendwas nicht erkannt wird oder das Passwort damals falsch abgespeichert wurde oder im originalen Kontext war es irgendwie Account, irgendeine Domain dot com und bei einem neuen Login, die haben was geändert im letzten Monat, dann hat sich die Domain leicht geändert, dann wird es nicht mehr gematcht. Natürlich achte ich eher darauf, aber es kann mir schon auch passieren, dass ich theoretisch eigentlich das einfach mal kopiere. Also gehe da von mir aus, muss ich zugeben."
+    },
+    {
+      "end": 1555830,
+      "speaker": "A",
+      "start": 1542890,
+      "text": "Ja, aber das fällt ja in den Bereich UX und das habe ich ja gerade am Anfang erwähnt. Diese ganze Security ist enorm gekoppelt mit der User Experience. Und wenn ich bei jedem Login was rüber kopieren muss, er kriegt einen ganz roten Kopf vor dem Computer."
+    },
+    {
+      "end": 1563500,
+      "speaker": "B",
+      "start": 1556220,
+      "text": "Ich kenne aber auf jeden Fall Entwickler innen, die gar keine automatische Browser Integration verwenden und alles kopieren."
+    },
+    {
+      "end": 1568300,
+      "speaker": "A",
+      "start": 1563740,
+      "text": "Das finde ich schade, weil dann sind die Phishing Attacken, also dann ist der Vorteil, den ich gerade erwähnt habe, ja weg."
+    },
+    {
+      "end": 1569260,
+      "speaker": "B",
+      "start": 1568300,
+      "text": "Ja, korrekt."
+    },
+    {
+      "end": 1633800,
+      "speaker": "A",
+      "start": 1569820,
+      "text": "Aber jetzt sprechen wir hier schon über Copy Paste und Browser Integration. Da gibt es noch ein paar Sachen, worauf man achten sollte, wenn man Passwortmanager auswählt. Auf der einen Seite sollte man sich natürlich die Frage okay, möchte ich einen Passwortmanager inklusive Secret Files selbst hosten und mich um die Backups kümmern? Oder nutze ich einen Service, der zum Beispiel eine Cloud Integration hat? Password ist zum Beispiel ein solcher Software as a Service und da gibt es, glaube ich, auch etliche andere. Dann die zweite Thematik ist die Unterstützung für dein Betriebssystem. Was nutzt du? Windows, Linux, Mac, welches Mobile Phone? OS nutzt du? Apple oder Android? Gibt es Windows Phone noch oder BlackBerry? BlackBerry ist, glaube ich, tot, aber naja, ihr versteht, was ich meine. Dann zum Beispiel die verfügbaren Integrationen. Wir hatten gerade ziemlich lange über den Browser gesprochen und dann welche User, welches User Interface gefällt euch? Welche User Experience wollt ihr haben? Das vielleicht so nicht eine untergeordnete Rolle, aber vielleicht wahrscheinlich schwerer zu evaluieren, bevor man irgendwie alle getestet hat. Ich denke, Self Hosted versus Cloud und US Unterstützung und Integration, das sind so die drei größten Entscheidungskriterien, worauf ihr immer achten solltet."
+    },
+    {
+      "end": 1641240,
+      "speaker": "B",
+      "start": 1633800,
+      "text": "Jetzt hast du Password erwähnt. Ich vermute mal, du verwendest Password, weil du dir nicht mal die Mühe gemacht hast, andere rauszusuchen. Bist so überzeugt."
+    },
+    {
+      "end": 1720630,
+      "speaker": "A",
+      "start": 1641540,
+      "text": "Ich hatte eine ganze Zeit lang keepass genutzt als Self Hosted, als ich damit angefangen hab. Keypass selbst ist, so viel ich weiß, ein Open Source Passwort Manager und damals wollte ich halt dafür noch kein Geld zahlen, aber dann habe ich auch irgendwie gemerkt, okay, da kommen so die Nachteile von Open Source ab und zu mal ran. Die UX war jetzt nicht so gepolished. Das war halt schon sehr rudimentär. Es hat alles wunderbar funktioniert, gar keine Frage, aber es war einfach nicht ansehnlich fürs Auge. Also ich hatte ich hatte wenig Spaß, das zu benutzen, muss ich zugeben. Du hast immer so eine leicht hässliche Applikation aufgemacht. Zugegeben, das war vor zehn, zwölf Jahren. Und irgendwann habe ich halt mal Geld in die Hand genommen und habe Password gekauft. Zugegeben, Password ist ein proprietärer Passwortmanager Software as a Service. Du konntest es sehr lange selbst hosten bzw. Das Secret File selbst hosten. Inzwischen weiß ich gar nicht mehr, ob das noch geht, aber die haben halt so eine Cloud Integration und das synchronisiert sich dann über alle Endgeräte weg und so muss man mögen. Ich verstehe auch Leute, die Ne, meine Passwörter liegen nicht in der Cloud, finde ich okay. Deswegen ich zahle dafür Geld, weil die UX UI finde ich wirklich super, sehr einfach zu benutzen, perfekte Integration in alle meine Geräte und it just works. Ich habe keine Lust viel zu frickeln."
+    },
+    {
+      "end": 1746240,
+      "speaker": "B",
+      "start": 1720870,
+      "text": "Meine Frage wäre ja eher wie kannst du einen Passwortmanager sinnvoll verwenden, ohne dass er in der Cloud ist? Weil ich will ja meine Passwörter auf allen meinen Endgeräten haben. Also bei mir kommen ständig neue Passwörter hinzuservices. Ich will ja nicht immer, wenn ich am Handy bin, dann irgendwie was synchronisieren müssen manuell oder eine Datei auf das Handy schicken, damit ich dort Passwörter habe. Also es muss ja irgendwie synchronisiert werden und synchronisieren ist für mich die Cloud, Also liegt es automatisch in der Cloud."
+    },
+    {
+      "end": 1776610,
+      "speaker": "A",
+      "start": 1746240,
+      "text": "Naja, wenn man die Cloud als ein Server von jemandem anders definiert, was es ja essentiell ist, dann kann ich sagen, okay, ich habe eine Fritzbox und da habe ich ein wireguard VPN und zu Hause habe ich eine kleine Box und darüber synchronisiert sich das über Nextcloud oder ähnliches. Also das wird halt schon relativ einfach gehen. Ist aber dann also muss man wollen, du bist ja dann ein eigener Admin, aber wenn du dein Sicherheitsfiles über Dropbox synchronisierst, dann ist es wieder ein Server von jemandem anders und dann ist es wieder die Cloud. Also das kriegt man schon ohne Cloud hin."
+    },
+    {
+      "end": 1821310,
+      "speaker": "B",
+      "start": 1776930,
+      "text": "Ja, okay. Also klar kann natürlich eine eigene Cloud sein in dem Sinne, aber wenn wir da von UX sprechen, von einer sinnvollen User Experience, dann brauche ich die Synchronisation und die kann ich natürlich relativ einfach herstellen, auch mit so Tools, die jetzt ohne klassische Cloud im Sinne von As a Service funktionieren. Das heißt, ich hab meine Passwortdatei, wo alle meine Passwörter drinstehen, die ist verschlüsselt und die kann ich dann auf Dropbox legen, auf Google Drive, auf meine eigene Nextcloud, wo ich sie dann auch immer hinlege. Und im Idealfall ist es ja in irgendeiner Form doppelt geschützt. Ich habe ein Key zum Beispiel, ich habe Master Passwort und dann kann niemand anderer mit der Datei etwas anfangen, außer es kommen die Quantencomputer um die Ecke. Aber davon würde jetzt mal nicht so."
+    },
+    {
+      "end": 1827470,
+      "speaker": "A",
+      "start": 1821310,
+      "text": "Schnell ausgehen und wir kriegen hier kein Geld von Password Ich bin da nicht irgendwie mit connected oder ähnliches, ich kann."
+    },
+    {
+      "end": 1967940,
+      "speaker": "B",
+      "start": 1827470,
+      "text": "Ja meine Ecke mal aufmachen. Also ich persönlich verwende seit jeher keypass zumindest das Format. Es hat sich ziemlich durchgesetzt als würde sagen offenes Format oder ein Format, was gerne verwendet wird von ganz vielen Passwortmanager Clients. Das ist KDBX, also wo die Daten dann wirklich gespeichert werden, Ist glaube ich ein sehr einfaches Format an sich wird encrypted, gibt es mehrere Varianten wie so was encrypted wird und dann kann ich auch mehrere Clients verwenden. Ist natürlich auch super, weil zum Beispiel keepass an sich meines Wissens zumindest nicht mobile fähig ist bzw. Früher war sehr Windows orientiert, war auch in Net oder in Mono geschrieben, mittlerweile geht es ja alles auf Linux auch besser, aber ich verwende nur dieses Format. Als Client verwende ich keepass. XC ist einfach eine andere Implementierung am Handy, verwende einen Android Client, der eben auch mit dem Format umgehen kann und das Ganze liegt dann in meiner eigenen Nextcloud verschlüsselt und wird so synchronisiert. Man kann diese Dateien runterladen, das heißt sie sind dann auch offline fähig. Das ist natürlich auch super, das heißt auch wenn du keine Internet Connection hast, hast du alles offline verfügbar und ist eigentlich meiner Meinung nach ein zukunftssicheres Format, weil auch wenn die Clients jetzt nicht mehr weiterentwickelt werden, war ja auch schon so, ich habe zum Beispiel Key Web verwendet, ist wieder ein anderer Client, der meiner Meinung nach dann nicht mehr so richtig weiterentwickelt wurde und dann bin ich eben auf XC dann umgestiegen, das heißt man kann dasselbe Format verwenden, verschiedene Clients, wenn mal ein besserer Android Client kommt, kann ich umsteigen, braucht das Passwort File an sich nicht ändern, kann meine selbe Toolchain verwenden, ohne groß was ändern zu müssen. Gibt natürlich auch andere Open Source Passwortmanager, gar keine Frage, da gibt es gibt es ziemlich viel. Passbold ist vor allem in Teams ein Klassiker, der gerne verwendet wird. Bitwarden ist auch Open Source. Von den meisten Open Source Varianten gibt es natürlich auch eine gehostete Version, die dann was kostet, wobei ehrlich gesagt, ich bin nicht bereit irgendwie fünf Euro im Monat zu zahlen für den Passwortmanager, also das finde ich einfach extrem teuer, vor allem wenn ich selber irgendwo eine Nextcloud liegen habe oder ich hätte auch persönlich kein Problem, das irgendwie in Google Drive zu speichern, weil diese Datei ist geschützt mit einem Schlüssel, den ich brauche auf jedem Endgerät plus mein Master Passwort. Also es ist eigentlich doppelt abgesichert und sauber verschlüsselt. Ich hoffe, es kommen jetzt aus der Community ganz viele Infos, dass es eigentlich nicht sicher ist, aber meiner Meinung nach für mich ist es mal ausreichend soweit."
+    },
+    {
+      "end": 1997640,
+      "speaker": "A",
+      "start": 1968170,
+      "text": "Weil wir gerade auch über die Synchronisation gesprochen haben. Bitwarden hat auch einen Server, also ist auch Open Source, aber hat noch einen Client und einen Server. Deswegen gehe ich stark davon aus, dass man auch die Clients zu seinem Bitwarden Server irgendwie connecten kann und die Synchronisation findet darüber statt. Aber du sagtest gerade, fünf im Monat sind dir zu viel, um deine digitale Identität zu schützen, weil das ist ja eigentlich das, was du sagst. Finde ich eine fragliche Aussage, aber kann ja jeder für sich selbst entscheiden."
+    },
+    {
+      "end": 2022570,
+      "speaker": "B",
+      "start": 1998200,
+      "text": "Ja, es geht um die Alternativen, weil du hast eigentlich sehr gute Alternativen und ist mir persönlich einfach das nicht wert. Und lieber habe ich die volle Kontrolle, habe ein Open Source Tool, die sind gut verwendbar, ich kann direkt meine Datei auch in Google Drive zum Beispiel speichern, wenn ich das will, brauche also keine eigene Nextcloud oder sowas. Und da sind mir die Vorteile ganz klar mehr wert, als jetzt irgendwie fünf zu zahlen."
+    },
+    {
+      "end": 2051170,
+      "speaker": "A",
+      "start": 2022570,
+      "text": "Naja, die Vorteile von Open Source, und das muss ich jetzt leider auch mal als Open Source Fan sagen, da ist ja die Annahme, okay, jeder kann die Verschlüsselung einsehen und ganz viele tausende von Augen schauen drauf. So die Theorie, wie viel Open Source wirklich dann gelesen wird und auch getestet wird und Co. Ist dann immer so ein bisschen die Frage, also wie viele Leute sind in der Lage, die Verschlüsselungsalgorithmen, die da wirklich implementiert sind, wirklich zu testen, wirklich zu reviewen. Ich traue es mir nicht zu."
+    },
+    {
+      "end": 2095040,
+      "speaker": "B",
+      "start": 2051490,
+      "text": "Ja, davon gehe ich aber aus, weil das KDPX ist ein Format, das seit über zwanzig Jahren in Verwendung ist und dementsprechend gehe ich einfach davon aus, dass das zumindest mal bei Augen beachtet haben und beobachtet haben. Es gibt ganz viele Clients, die das Ganze implementiert haben. Also das ist schon sehr sicheres Ecosystem und dem vertraue ich eigentlich mehr als irgendeiner Firma oder einen Startup, die vielleicht sechs Leute haben, weil du weißt ja gar nicht, wie groß diese Passwortmanager Firmen sind, ob die die ganzen Security Details auch implementieren und auch wirklich sauber betreiben und Fehler passieren überall. Also das kann man eigentlich gar nicht verhindern. Und es gab ja auch kürzlich einen großen Fall mit einem Passwortmanager, der Daten verloren hat. Also es kann natürlich schon immer wieder passieren."
+    },
+    {
+      "end": 2149410,
+      "speaker": "A",
+      "start": 2095600,
+      "text": "Ein Passwortmanager kann aber nicht nur deine Passwörter managen. Das bedeutet mit managen meine ich hier speichern, sondern je nachdem App oder je nach Applikation gibt es natürlich auch noch ein paar andere wirklich sinnvolle Features, wie zum Beispiel Password bietet mir das immer an. Der sagt mir, wie oft ich das gleiche Passwort nutze, wo ich schwache Passwörter habe. Dann kann man das einstellen, welche Zugänge eine Zwei Faktor Authentifizierung unterstützen, welche Zugänge Passkeys unterstützen und der kann sogar noch Hey, pass mal auf, ich kann eine Festplatte durchsuchen, ob du irgendwo Entwickler Credentials auf der Festplatte unverschlüsselt gespeichert hast oder ähnliches. Also da gibt es dann noch mal so ein paar andere nette Features, die dich dann so warnen. Und besonders bei der Zwei Faktor Authentifizierung bei den Passkeys ist natürlich sinnvoll, weil dann kannst du natürlich deinen Sicherheitsstandard für diverse Logins natürlich upgraden."
+    },
+    {
+      "end": 2261460,
+      "speaker": "B",
+      "start": 2149410,
+      "text": "Solche Features gibt es natürlich auch bei den Open Source Tools. Muss auch sagen, ich bin immer überfordert mit den ganzen Einstellungsmöglichkeiten, die es dort gibt, weil du kannst wirklich alles im Detail einstellen, wie viel Sekunden der offen sein soll, wie viel Sekunden in der Zwischenablage das Passwort gespeichert bleibt, wie die Integration funktioniert, wie oft man etwas bestätigen muss, wann der ganze Passwortmanager geschlossen wird, wie oft du das Passwort eingeben musst. Also es gibt super viele Settings und Möglichkeiten, das wirklich zu optimieren. Keine Ahnung, haben wahrscheinlich die ganzen großen Hosted Varianten genauso. Aber man sieht da schon, dass das Open Source auch sehr fortgeschritten ist und jetzt nicht mal was ist, was irgendwie in der Woche zusammengestöpselt wurde, sondern das ist schon fundamentales Ding. Und da sollte man vielleicht auch darauf achten, wenn man auf irgendeinen Passwortmanager setzt, wie offen ist der, wie alt ist der, wie groß ist die Open Source Community? Die üblichen Dinge, die man bei Open Source sowieso machen sollte und immer analysieren sollte. Aber bei einem Passwortmanager vielleicht noch mal einen Blick mehr darauf werfen, weil das ist ja dann schon die Grundlage. Und auch wenn es nur ein dummer Bug ist und meine ganzen Passwörter gelöscht werden, ist vielleicht auch große Impact, würde ich mal sagen. Jetzt hast du ja gerade vor kurzem einen Blogartikel geschrieben, wo es darum gegangen ist, was man denn so in Passwortmanagern speichern soll, weil Passwörter sind klar, Keys sind klar, aber es gibt ja auch die Multi Factor Authentication, also diesen zweiten Faktor, um sich irgendwo zu authentifizieren, der sollte über ein anderes Endgerät gesendet werden, also diese klassischen SMS, die man bekommt mit so einem Code oder man hat vielleicht sogar ein Hardware Device, wo dann eine Nummer oben steht. Gibt es ja mehrere Möglichkeiten. Jetzt hast du einen Blogpost geschrieben, dass man doch diesen zweiten Faktor auch in seinem Passwortmanager speichern soll oder zumindest den Schlüssel, um diesen zweiten Faktor zu generieren. Aber damit geht mir die ganze Sicherheit ja flöten, dass das auf einem anderen Device passiert."
+    },
+    {
+      "end": 2401550,
+      "speaker": "A",
+      "start": 2261620,
+      "text": "Ja, das war zumindest die Kernfrage, die ich mir gestellt habe. Mein Passwortmanager bietet mir pro Service an, dass der mir automatisch den zweiten Faktor auch mit generiert und Achtung, automatisch im Browser ausfüllt. Convenience Feature, cool. Und dann habe ich mir die Frage gestellt, Moment mal eben, führt das nicht irgendwie den zweiten Faktor ad absurdum? Und ich habe keine Antwort darauf gefunden. Deswegen habe ich einfach mal das Sicherheitsteam von meinem damaligen Arbeitgeber Macht das überhaupt Sinn? Und die Antwort hat mich ein bisschen überrascht, aber auch ein bisschen irgendwie nicht. Also auf der einen Seite wurde gesagt, wenn man den zweiten Faktor auch in seinem Passwortmanager neben seinem Passwort speichert, ist das natürlich etwas weniger sicher. Wenn der Angreifer Zugriff auf deinen Passwortmanager hat, dann wird der Zwei Faktor Token ad absurdum geführt, weil dann kann der Angreifer sich einloggen. Der Hauptbenefit von Zwei Faktor Authentifizierung ist aber dennoch gültig, denn du hast ja gerade von den Leuten gesprochen, die zum Beispiel keine Browser Integration haben. Diese Leute sind immer noch anfällig für Phishing. Du loggst dich jetzt auf einer Phishing Webseite ein, der hat deinen Username, der hat ein Passwort, der hat aber nicht einen zweiten Faktor, weil der Angreifer hat ja keinen Zugriff auf deinen Passwortmanager. Somit kommt er nicht in deinen Account, weil du hast ja immer noch den zweiten Faktor, den du dann auch rüber kopieren musst oder vom Handy haben muss und so weiter und so fort. Und auch wenn der zweite Faktor kompromittiert wird und dieser zweite Faktor ist time basedbasiert, ist dieser zweite Faktor nur für dreiig bis fünf und vierzig Sekunden gültig. Somit der reale Wert von Zwei Faktor Authentifizierung wird durch die Speicherung neben deinem Passwort nicht ad absurdum geführt. Aber wenn du maximale Security möchtest, speicherst du den zweiten Faktor natürlich woanders, am besten in einem Hardware Device, zum Beispiel ein yubikey, kommen wir gleich zu. Im Endeffekt geht es hier auf die Benutzerfreundlichkeit zurück, denn es ist ähnlich wie der Die beste Kamera der Welt ist die Kamera, die man immer dabei hat und somit ist es beim Passwortmanager genauso. Der beste Passwortmanager ist der, den man tatsächlich benutzt und die Benutzerfreundlichkeit macht ihn halt so wichtig. Wenn das immer wieder eine Hürde ist, dann deaktivierst du zwei Faktor Identifizierung überall und deswegen ist es halt so ein Trade off. Maximale Security, speicher es nicht in deinem Passwort Manager. Ist es immer noch gut genug gegenüber Phishing zu schützen."
+    },
+    {
+      "end": 2493980,
+      "speaker": "B",
+      "start": 2401550,
+      "text": "Ja, meine Argumentation wäre ja von der anderen Seite, weil eigentlich geht man davon aus, dass der Passwortmanager sicher ist. Also es ist eine Hypothese, die man glaube ich macht, weil sonst wo speichert man denn seine Recovery Codes vom zweiten Faktor? Üblicherweise im Passwortmanager. Das heißt, wenn man Zugriff auf den Passwortmanager hat, dann hat man auch Zugriff auf die Recovery Codes vom zweiten Faktor und kann sich den Account sowieso holen über die Recovery Codes. Das heißt, wenn man das nicht als sicher ansieht, seinen Passwortmanager, dann müsste man eigentlich einen zweiten Passwortmanager haben oder irgendwo einen Zettel in dem Safe, wo man die Recovery Codes drauf schreibt von jedem Account, wo man zwei Factor einrichtet. Und ehrlich gesagt, es macht doch niemand. Also davor würde ich einfach ausgehen, Passwortmanager ist sicher und dann kann ich auch meinen zweiten Faktor dort rein speichern. Und ich muss auch sagen, das ist wirklich ein Game Changer. Ich habe leider noch nicht alle meine Accounts so umgestellt oder eingetragen, aber es ist so angenehm, wenn man da einfach direkt den Code reinkopieren kann und nicht abtippen muss oder auf ein SMS warten muss oder auf eine Notification am Mobile Phone, das irgendwie gerade fünf Meter weiter weg liegt von seinem Schreibtisch und mal rüber laufen muss. Also diese ganzen Sachen fallen weg und so verwendet man dann auch viel viel lieber Two Factor meiner Meinung nach, weil davor habe ich mir überlegt, richte jetzt wirklich Two Factor ein, ist der Account so wichtig, weil es ist halt doch aufwendig die Einrichtung und muss ich mir das bei jedem Login dann wieder raussuchen, eingeben und so weiter. Also auch da, die UX wird meiner Meinung nach besser der Flow, wenn man das im Passwortmanager speichert."
+    },
+    {
+      "end": 2519120,
+      "speaker": "A",
+      "start": 2493980,
+      "text": "Meine Recovery Codes habe ich in der Regel auch im Passwortmanager, das stimmt, außer für zwei Accounts und zwar einmal von meinem Apple Account, von meiner Apple ID, weil da hängen alle meine Geräte dran und die von meinem Passwortmanager selbst, die habe ich ausgedruckt teilweise sogar im Hause meiner Schwiegereltern hinterlegt. Also falls mein Haus mal abbrennt oder meine Wohnung abbrennt, dann habe ich die immer noch. Also da mache ich schon Unterschied."
+    },
+    {
+      "end": 2557110,
+      "speaker": "B",
+      "start": 2519120,
+      "text": "Kleiner Nachteil bei keepass, ich habe das Ganze recherchiert, weil wir im Vorgespräch auch über die Recovery Codes gesprochen haben. Bei Keas gibt es keine Möglichkeit Recovery Codes zu haben. Also das ist wirklich der Key, der Verschlüsselungs Key und dein Master Passwort. Da gibt es keine andere Möglichkeit, um an die Daten wieder dran zu kommen. Also egal ob du Master Passwort oder den Key verlierst, deine Daten sind weg. Aber man muss ja auch sagen, heutzutage ist es ja kein Problem mehr. Man kann den Key ausdrucken im Plaintext ist nicht so schlimm, man kann ihn in den QR Code ausdrucken, man kann sich sein Masterpass wird genauso auf diesen Zettel schreiben, den man dann im Safe aufbewahrt. Also man muss es anders machen. Aber es gibt keine klassischen Recovery Codes."
+    },
+    {
+      "end": 2602480,
+      "speaker": "A",
+      "start": 2557110,
+      "text": "Jetzt haben wir schon von der Multi Factor Authentication gesprochen oder Faktor Authentification und da stellt sich natürlich die Frage, okay, warum braucht man das eigentlich? Hatten wir gerade ganz kurz schon erwähnt, nach einer Phishing Attacke ist es deutlich schwieriger Zugriff auf euren Account zu bekommen, denn viele Multi Faktor Authentifizierungen sind zeitkritisch bzw. Nur gültig für dreiig bis fünf und vierzig Sekunden oder vielleicht sogar an einen Stück Hardware gebunden, also physisch wirklich gebunden und location technisch. Jetzt gibt es verschiedene Arten von Zwei Faktor Authentifizierung und zwar gibt es nämlich einmal TOTP, Time Based One Time Password Dann gibt es einmal die Push Notifications und dann gibt es Hardware Tokens wie zum Beispiel yubikey."
+    },
+    {
+      "end": 2680320,
+      "speaker": "B",
+      "start": 2602480,
+      "text": "Was mir persönlich lange Zeit nicht bewusst war, ist, dass diese TOTP eigentlich standardisiert sind und ich kann jede App verwenden eigentlich für so ein TOTP System, weil da gibt es einfach einen Grundschlüssel und daraus wird Zeit basiert eben dann jeweils der Code, der in der aktuellen Zeit gültig ist, generiert. Also an alle, die irgendwie zwanzig verschiedene Apps verwenden für zwanzig verschiedene Services, wenn es wirklich ein TOTP ist, kann man sich das zusammenschrumpfen auf eine App. Gibt es auch Open Source Apps, die das machen oder man verwendet einen Google Authenticator, der auch für Nicht Google Services funktioniert oder Microsoft Authenticator. Der Nachteil an dem Ganzen ist, dass sich der Trend eher in Richtung Push Benachrichtigungen verschiebt, meiner Wahrnehmung nach zumindestens. Das heißt, man braucht doch wieder die eigenen Apps von GitHub zum Beispiel von Microsoft, die ja dann teilweise auch so eine Überprüfung haben, dass man den zweistelligen Code eine Zahl am Handy eingeben muss, die man am Bildschirm gerade lesen kann. Also die dann da nochmal die Sicherheit dadurch erhöhen. Aber das natürlich auch bedeutet, dass man dann eben mehrere Apps braucht und dann kann man natürlich auch im Passwortmanager das Ganze nicht mehr abspeichern, weil das dann wirklich eine andere Herangehensweise ist, wenn ich eine Push Notification sende und kein klassisches DOTP ist."
+    },
+    {
+      "end": 2733210,
+      "speaker": "A",
+      "start": 2680320,
+      "text": "Den Trend habe ich jetzt noch nicht festgestellt, aber ich habe ein paar Apps, die gehen mehr auf Push Notifications, wie zum Beispiel GitHub Mobile oder die Google Mail oder die DKB Banking App oder ähnliches. Auf der einen Seite ist natürlich sehr, sehr bequem so Push Nachrichten, du brauchst kein Code abtippen wie beim TOTP, da hast du meist einen sechsstelligen Code. Auf der anderen Seite ist halt eine Internetverbindung oder oft auch ein Mobile Netzwerk irgendwie notwendig, wo beim TOTP natürlich alles offline funktioniert, was ganz cool ist. Und ab und zu gibt es diese Push Fatigue, also zum Beispiel Google Mail oder die DKB Banking App sagt immer, warst du das hier? Und dann einfach immer, ja, wollen sie hier an irgendeinen saudischen Prinzen überweisen, ja, mach mal machen. Also das ist dann schon ein bisschen gefährlich, das stimmt schon. Wohingegen beim TOTP natürlich der Nachteil ist, wenn das Handy weg ist, sind alle Codes verloren und da hoffe ich, dass du ein Backup irgendwo hast."
+    },
+    {
+      "end": 2760729,
+      "speaker": "B",
+      "start": 2733290,
+      "text": "Da muss ich ja zugeben, ich verwende den Google Authenticator, aber diese automatische Backup Funktion ist deaktiviert bei mir. Und was ich mache, ist, dass ich hin und wieder einen manuellen Export mache von dem Ganzen. Aber da bin ich einfach kein großer Freund, das Ganze automatisch zu synchronisieren mit Google, auch wenn es wahrscheinlich sicher wäre, aber fühlt sich für mich noch irgendwie falsch an. Was verwendest du am Handy für einen TOTP Manager oder App Authenticator, whatever?"
+    },
+    {
+      "end": 2765370,
+      "speaker": "A",
+      "start": 2760810,
+      "text": "Die Frage ist, welchen verwende ich nicht, denn ich benutze prinzipiell den Authenticator."
+    },
+    {
+      "end": 2768650,
+      "speaker": "B",
+      "start": 2765770,
+      "text": "Authenticator von Apple oder Das ist eine."
+    },
+    {
+      "end": 2769770,
+      "speaker": "A",
+      "start": 2768650,
+      "text": "App im App Store."
+    },
+    {
+      "end": 2771940,
+      "speaker": "B",
+      "start": 2769770,
+      "text": "Von wem? Andi Google gerade."
+    },
+    {
+      "end": 2773820,
+      "speaker": "A",
+      "start": 2772100,
+      "text": "Ich google jetzt gerade im App Store."
+    },
+    {
+      "end": 2777940,
+      "speaker": "B",
+      "start": 2773820,
+      "text": "Hey, Google ist Synonym für suchen. Also nicht im Duden nachgelesen von einer."
+    },
+    {
+      "end": 2780260,
+      "speaker": "A",
+      "start": 2777940,
+      "text": "Firma, die nennt sich tostable."
+    },
+    {
+      "end": 2789140,
+      "speaker": "B",
+      "start": 2780500,
+      "text": "Liebe Community, hätte jetzt gern Beiträge, wie unsicher das Ganze ist und synchronisierst du das Ganze oder backup du deine Codes?"
+    },
+    {
+      "end": 2803250,
+      "speaker": "A",
+      "start": 2789220,
+      "text": "Also prinzipiell nutze ich für alle Zwei Faktor Authentifizierungen. Privat nutze ich meinen Passwortmanager. Der Passwortmanager hat immer so eine Funktionalität, weil um den Zwei Faktor irgendwie an den Start zu kriegen, musst du ja oft so ein QR Code scannen, was."
+    },
+    {
+      "end": 2807890,
+      "speaker": "B",
+      "start": 2803250,
+      "text": "Übrigens nur einfach ein ganz dummer Code ist im Hintergrund, den man auch manuell eingeben kann oder kopieren kann."
+    },
+    {
+      "end": 2830660,
+      "speaker": "A",
+      "start": 2808050,
+      "text": "Genau die Funktion habe ich bei Password noch nicht gefunden, dass man den manuell da eingeben kann. Ab und zu kann dann Password nicht den QR Code auf meinem Browser scannen, dann muss ich halt irgendwie den Authenticator nehmen. Das bedeutet, da sind halt nur drei Codes drin oder so von Services, die der nicht scannen kann. Nextcloud ist zum Beispiel einer solcher Services. Keine Ahnung, warum der es nicht kann. Ist aber auch egal jetzt gerade."
+    },
+    {
+      "end": 2837900,
+      "speaker": "B",
+      "start": 2830900,
+      "text": "Okay, aber wie synchronisierst du? Darum geht es ja. Also hast du ein Backup von dem Ganzen? Du hast ja gerade gesagt, man soll ein Backup haben."
+    },
+    {
+      "end": 2839420,
+      "speaker": "A",
+      "start": 2837900,
+      "text": "Ja, ich habe Backup von meinem Handy."
+    },
+    {
+      "end": 2842260,
+      "speaker": "B",
+      "start": 2839420,
+      "text": "Okay, das sollte ja theoretisch funktionieren."
+    },
+    {
+      "end": 2848100,
+      "speaker": "A",
+      "start": 2842740,
+      "text": "Dann gibt es leider noch diese Firma namens Microsoft, die wollen ja immer den Microsoft Authenticator haben."
+    },
+    {
+      "end": 2854480,
+      "speaker": "B",
+      "start": 2848500,
+      "text": "Jetzt sagst du gerade, du siehst den Trend nicht. Genau das ist dieser Trend, dass alle Firmen ihren eigenen Authenticator haben wollen."
+    },
+    {
+      "end": 2857270,
+      "speaker": "A",
+      "start": 2854710,
+      "text": "Nee, ich finde es hart, dass Microsoft mich darauf forst."
+    },
+    {
+      "end": 2865550,
+      "speaker": "B",
+      "start": 2857430,
+      "text": "Ja, sage ich ja, das ist genau die Push Notification Geschichte. Kannst du vielleicht auch in irgendwelchen Settings einstellen, wenn dir das der Administrator wahrscheinlich erlaubt oder so."
+    },
+    {
+      "end": 2874790,
+      "speaker": "A",
+      "start": 2865550,
+      "text": "Ne, es ist ja nicht der Push Notification. Das bedeutet, Microsoft Authenticator läuft über ein TOTP bei mir. Deswegen sehe ich ja deinen Trend nicht. Ich rede ja gerade über Authenticator bei TOTP."
+    },
+    {
+      "end": 2888530,
+      "speaker": "B",
+      "start": 2874870,
+      "text": "Also ich muss bei Microsoft komisch mit einer Push Notification bzw. Also es geht was auf. Ich muss, glaube ich, einen Code immer eingeben, den ich auch am Desktop dann sehe, den muss ich am Mobile Phone eingeben. Also es ist ein eigenes proprietäres Protokoll, was die implementiert haben."
+    },
+    {
+      "end": 2889410,
+      "speaker": "A",
+      "start": 2888530,
+      "text": "Ja, das muss ich nicht."
+    },
+    {
+      "end": 2890930,
+      "speaker": "B",
+      "start": 2890290,
+      "text": "Interessant."
+    },
+    {
+      "end": 2927680,
+      "speaker": "A",
+      "start": 2891090,
+      "text": "Aber lösen wir uns von diesem Push Notification denn und TOTP, denn wir wollen ja hier die Leute mal aufs Next Level heben. Next Level ist Hardware, Hardware only, Hardware Security. Und da gibt es sogenannte Hardware Tokens, wie zum Beispiel so einen yubikey. Das ist also ein physisches Gerät, das stecke ich per USB an meinen Rechner oder halt per NFC an mein Handy und das kommuniziert über webout N oder Fido zwei mit dem Browser und somit hast du die sichere Kommunikation und auch was da nicht abgefangen werden kann, was auch offline funktioniert und so weiter und so fort. Und das hast du dann hoffentlich am Schlüsselbund oder wo auch immer."
+    },
+    {
+      "end": 2939880,
+      "speaker": "B",
+      "start": 2928080,
+      "text": "Wenn du sagst, du willst die Leute auf das Next Level heben. Hast du dich denn schon auf das Next Level gehoben? Hast du den yubikey? Weil du hast jetzt ganz viel über die anderen Fälle gesprochen und irgendwie nie über den yubikey."
+    },
+    {
+      "end": 2942090,
+      "speaker": "A",
+      "start": 2939880,
+      "text": "Also also da ist es ja so."
+    },
+    {
+      "end": 2943850,
+      "speaker": "B",
+      "start": 2942250,
+      "text": "Jetzt kommt die Politiker Antwort."
+    },
+    {
+      "end": 2954130,
+      "speaker": "A",
+      "start": 2943850,
+      "text": "Ich sehe schon, das ist einfach brutal. Ich habe kein Privat habe ich kein yubikey. Das ist richtig. Beruflich komme ich ohne yubikeys nirgendwo mehr rein. Ich glaube, ich kann ohne yubikey meinen Laptop starten."
+    },
+    {
+      "end": 2956570,
+      "speaker": "B",
+      "start": 2954130,
+      "text": "Ja, okay. Da macht die Security ja jemand für dich."
+    },
+    {
+      "end": 2957650,
+      "speaker": "A",
+      "start": 2956650,
+      "text": "Ja, das ist korrekt."
+    },
+    {
+      "end": 2960890,
+      "speaker": "B",
+      "start": 2957650,
+      "text": "Das heißt, in deinem privaten Umfeld bist du nicht auf dem Next Level."
+    },
+    {
+      "end": 2961770,
+      "speaker": "A",
+      "start": 2960890,
+      "text": "Ja, richtig."
+    },
+    {
+      "end": 2962450,
+      "speaker": "B",
+      "start": 2962010,
+      "text": "Warum?"
+    },
+    {
+      "end": 2964210,
+      "speaker": "A",
+      "start": 2962450,
+      "text": "Man muss ja immer noch Ziele haben, Wolfgang."
+    },
+    {
+      "end": 2967800,
+      "speaker": "B",
+      "start": 2964210,
+      "text": "Ja, warum? Also diese sechzig schaffst du auch noch dir zu leisten."
+    },
+    {
+      "end": 2970990,
+      "speaker": "A",
+      "start": 2968110,
+      "text": "Ich habe nachgeguckt, es kostet fünf und zwanzig nur noch ein yubikey."
+    },
+    {
+      "end": 2972190,
+      "speaker": "B",
+      "start": 2971470,
+      "text": "Noch schlimmer."
+    },
+    {
+      "end": 2979310,
+      "speaker": "A",
+      "start": 2972190,
+      "text": "Ich habe es einfach nur nicht gemacht. Also da bin ich auch ehrlich, das müsste ich mal, kennst du diese Man müsste mal Liste, aber es ist schon."
+    },
+    {
+      "end": 2993660,
+      "speaker": "B",
+      "start": 2979310,
+      "text": "Die Einrichtung finde ich, ist schon wesentlich aufwendiger als so ein TOTP einzurichten. Also es muss mal der Service unterstützen, muss da irgendwie auf andere Devices gehen, irgendwie die Connection machen. Also es ist halt nicht dieser One Click, wie sonst oft funktioniert."
+    },
+    {
+      "end": 3038770,
+      "speaker": "A",
+      "start": 2994210,
+      "text": "Ja, in der Regel ist es halt wirklich so, du wirst beim Login aufgefordert und dann musst du es per NFC an dein Handy halten oder du musst den yubikey, wenn der per USB in deinem Laptop steckt, kurz berühren. Der hat oben so eine kleine Taste, damit aktivierst du den. Also ich meine, im Endeffekt ist er halt extrem sicher. Es ist kein Code, kein Push, kann nicht abgefangen werden. Funktioniert für viele Plattformen halt über diesen Fido zwei Standard oder mit der Browser API, Webout Name. Und Nachteil ist, kostet ein bisschen Geld, muss mitgeführt werden. Das ist auch das Problem, deswegen sage ich habe es am Schlüssel oder ähnliches. Ich hoffe, du verlierst deinen Schlüssel nicht. Aber da ist auch die Frage, okay, wenn man deinen Schlüssel verliert, wie viele Leute können wirklich was mit einem yubikey anfangen, denn die brauchen auch noch Zugriff auf dein Login."
+    },
+    {
+      "end": 3085750,
+      "speaker": "B",
+      "start": 3038770,
+      "text": "Also realistisch steckt das Ding ja schon meistens einfach im Computer drin. Also wenn ich, wenn ich so irgendwo am Reisen bin, sehe ich so viele Laptops, wo das Ding halt einfach drinsteckt. Also die wenigsten haben das wirklich am Schlüsselbund, sondern das steckt halt immer in dem Device drinnen, was das natürlich weniger sicher macht. Wobei du natürlich schon immer noch an die Hardware musst überhaupt. Also du musst mal den Laptop mit dem yubikey klauen und dann hast du ja doch noch die ganze Verschlüsselung und Login und so weiter und Passwörter. Also es macht das Ganze schon schwieriger. Also man muss meiner Meinung nach nicht immer das nur am Schlüsselbund tragen. Klar, wenn man die Sicherheit erhöhen will und sollte, macht es sicher Sinn. Also wenn man zum Beispiel den Laptop im Auto lässt und im Urlaub, so wie ich damals, macht es vielleicht Sinn, dann den yubikey auszustecken und am Schlüsselpunkt zu haben."
+    },
+    {
+      "end": 3097390,
+      "speaker": "A",
+      "start": 3085750,
+      "text": "Und da gibt es auch kleine yubikeys und große yubikeys. Also der kleine yubikey, der in meinem Laptop hängt, da brauche ich echt schon lange Fingernägel, damit ich den wieder rauskriege, muss ich zugeben. Das ist dann echt schon mal ein bisschen gefricke."
+    },
+    {
+      "end": 3100550,
+      "speaker": "B",
+      "start": 3097390,
+      "text": "Ja, die sind dann auch gemacht, damit sie stecken bleiben, oder?"
+    },
+    {
+      "end": 3154150,
+      "speaker": "A",
+      "start": 3100630,
+      "text": "Ja, genau. Was aber auch ganz interessant ist, und zwar wie so ein yubikey, so ein Hardware Token eigentlich mit dem Service, mit dem Webservice zum Beispiel kommuniziert. Auf der einen Seite gibt es den FISO Standard, der kümmert sich um die Kommunikation zwischen deinem Browser und dem Authentifizierungsgerät und der kümmert sich auch dann über eine Web API, um eine Browser API, die nennt sich webout N. Das ist die Web Authentication API, die regelt dann, wie sich Webdienste sicher im Browser authentifizieren lassen. Und diese webout N kann zum Beispiel auch über Face ID oder deinen Laptop Fingerprint Reader genutzt werden. Das bedeutet, wenn du jetzt also einen Online Service hast und da vielleicht im Login Team bis und ihr wollt Leuten die Möglichkeit geben, über ihren Fingerprint Reader im Laptop zu authentifizieren, dann könnt ihr das zum Beispiel über die webout N Browser API machen. Ganz interessant. Können wir irgendwann mal auch mal ein Deep Dive zu machen."
+    },
+    {
+      "end": 3159940,
+      "speaker": "B",
+      "start": 3154150,
+      "text": "Jetzt ist das Ganze ja eigentlich sehr basic und ich hoffe, dass ihr fast alle das in irgendeiner Form auch schon."
+    },
+    {
+      "end": 3163060,
+      "speaker": "A",
+      "start": 3159940,
+      "text": "Machen, nur wir selbst nicht mit dem yubikey. Finde ich auch gut."
+    },
+    {
+      "end": 3187740,
+      "speaker": "B",
+      "start": 3163700,
+      "text": "Also ich meine es nicht yubikey, sondern ganz allgemein Passwortmanager. Wie sieht es denn bei den ganzen anderen Schlüsseln aus, die du so verwendest? SSH Keys. Keys von irgendwelchen Services, die du in irgendwelchen Enviablen speicherst, in env Dateien. Das sind also die Sachen, die macht man halt so einfach und da liegt ja meistens irgendwie weniger Augenmerk drauf, habe ich das Gefühl, oder ist bei mir auch so, um ehrlich zu sein."
+    },
+    {
+      "end": 3201200,
+      "speaker": "A",
+      "start": 3187740,
+      "text": "Ja, also wie sieht es da aus? Fangen wir mal mit den SSH Keys an. Da habe ich eigentlich alle meine SSH Keys mit einer Verschlüsselung von ED. Das ist so der aktuelle Standard meines Wissens nach. Jeder SSH Key hat auch ein Passwort bei mir."
+    },
+    {
+      "end": 3204080,
+      "speaker": "B",
+      "start": 3201760,
+      "text": "Du hast alle SSH Keys mit Passwort."
+    },
+    {
+      "end": 3205200,
+      "speaker": "A",
+      "start": 3204160,
+      "text": "Ja, ganz genau."
+    },
+    {
+      "end": 3207400,
+      "speaker": "B",
+      "start": 3205280,
+      "text": "Wow. Da muss ich zugeben, ihr habt fast."
+    },
+    {
+      "end": 3219890,
+      "speaker": "A",
+      "start": 3207400,
+      "text": "Nirgends ein Passwort und ich habe verschiedene SSH Keys für verschiedene Services. Ich habe meine eigenen SSH Key nur für GitHub. Ich habe einen eigenen SSH Key für die Arbeit. Ich habe einen eigenen SSH für meinen Home Server. Ich habe eigene SSH Keys pro side Project."
+    },
+    {
+      "end": 3220690,
+      "speaker": "B",
+      "start": 3220210,
+      "text": "Warum?"
+    },
+    {
+      "end": 3236210,
+      "speaker": "A",
+      "start": 3220930,
+      "text": "Falls das eine kompromittiert wird oder falls man nur einen Teil von meinem Shkey kriegt, damit man nicht Zugriff auf alles hat. Und dann habe ich natürlich eine SSH Config. Also das bedeutet, es hat ja für mich keine zusätzlichen Aufwand, außer die initiale Erstellung einmal und das Passwort ist überall gleich."
+    },
+    {
+      "end": 3245470,
+      "speaker": "B",
+      "start": 3236210,
+      "text": "Nein, aber das hast du im Kopf und tippst dann ein Nein im Passwortmanager und der füllt es automatisch aus oder kopierst du das dann, weil in der Shelly oder hast du eine Shell Integration?"
+    },
+    {
+      "end": 3257150,
+      "speaker": "A",
+      "start": 3245710,
+      "text": "Es gibt die Möglichkeit, die Shell Integration zu nutzen dafür und dann den Credential Helper vom Operating System zu nutzen oder vom Passwortmanager. Das kannst du ummünzen. Du kannst sagen SSH Config, nutz bitte diesen Credential Helper."
+    },
+    {
+      "end": 3263470,
+      "speaker": "B",
+      "start": 3257310,
+      "text": "Du weichst immer von meinen persönlichen Fragen ab, ob du die Shell Integration verwendest und nicht, ob es möglich wäre."
+    },
+    {
+      "end": 3284810,
+      "speaker": "A",
+      "start": 3263550,
+      "text": "Du bist einfach nur zu ungeduldig mir zuzuhören. Ich Das gibt es. Dann bist du mir reingegrätscht und dann habe ich gesagt nein, ich nutze es nicht. Das kopiere ich noch. Aber ich sage auch, ich muss mich da nicht so lange authentifizieren, weil alle paar Tage fragt nämlich mal. Also das geht halt noch und ich bin auch nicht in jedem System jeden Tag."
+    },
+    {
+      "end": 3289490,
+      "speaker": "B",
+      "start": 3284810,
+      "text": "Da muss ich mich jetzt outen, wie funktioniert es, dass der die neu alle paar Tage fragt."
+    },
+    {
+      "end": 3292330,
+      "speaker": "A",
+      "start": 3289490,
+      "text": "Da gibt es irgendwie so eine Config, müsste ich mal raussuchen."
+    },
+    {
+      "end": 3296970,
+      "speaker": "B",
+      "start": 3292970,
+      "text": "Interessant, da bin ich sehr schwach. Ich habe eigentlich kaum irgendwo Passwort auf."
+    },
+    {
+      "end": 3306370,
+      "speaker": "A",
+      "start": 3296970,
+      "text": "Meinen SSH Key und dann auf den Systemen, wo ich SSH Login benötige, habe ich natürlich den Login über Username und Passwort auch aus, sondern über den SSH Key."
+    },
+    {
+      "end": 3318330,
+      "speaker": "B",
+      "start": 3306370,
+      "text": "Wie sieht es mit deiner Security Hygiene aus? Rotierst du die ganzen SSH Keys regelmäßig oder hast du dann auch ein Limit eingestellt, Wie lang? Keine Ahnung, der GitHub SSH Key gültig sein darf oder verwendet werden kann dasselbe."
+    },
+    {
+      "end": 3337850,
+      "speaker": "A",
+      "start": 3318570,
+      "text": "Das Tolle ist ja regelmäßig ist ja subjektiv einmal jährlich oder alle zwei Jahre ist ja auch regelmäßig. Und dann würde ich sagen, ja, ich rotiere sie regelmäßig. Ich rotiere sie aber nicht so regelmäßig, als dass ich jedes Quartal oder sowas habe. Ich glaube, ein solch großes anderes Ziel bin ich noch nicht, hoffentlich werde ich das auch nie, aber ich rotiere sie. Versuchst du alle zwei, drei Jahre mal durchzurotieren."
+    },
+    {
+      "end": 3342890,
+      "speaker": "B",
+      "start": 3337850,
+      "text": "Ja, ich mache das auch so, wenn mir der Laptop geklaut wird, dann rotiere ich meine SSH Keys."
+    },
+    {
+      "end": 3428730,
+      "speaker": "A",
+      "start": 3342890,
+      "text": "Bei den GitHub Tokens sieht es ein bisschen anders aus und da lasse ich meine Tokens alle sechs Monate expiren. GitHub Token, wenn du da einen Token anlegst, gibt er dir so vierzehn Tage, drei Monate, irgendwie so vorgefertigte Zeiträume. Ich gebe dann immer so circa sechs Monate manuell ein. Und das Tolle ist, wenn du die expiren lässt, das zwingt dich zum rotieren, weil nach den sechs Monaten schickt er dir irgendwie so zwei Wochen vorher eine E Mail, hey, deine Tokens laufen bald aus und wenn du halt innerhalb von zwei Wochen nicht reagierst dann kannst du halt irgendwann nicht mehr pushen oder nicht mehr deployen oder für was auch immer diese Tokens genutzt werden und dann fehlen halt irgendwie alle meine GitHub Actions über Zeit und dann muss ich halt mal die rotieren. Da ist aber auch ganz wichtig, dass du natürlich auch, und jetzt heben wir mal neben der GitHub Token Rotation die ganze Sache noch mal auf das nächste Level, und zwar auf das at least privilege Level. Und zwar nutze halt keine Personal Access Tokens mehr, weil Personal Access Tokens haben auf alles Zugriff, auf das dein Account Zugriff hat, sondern nutze eher fine grained Personal Access Tokens. Und dann kannst du sagen, okay, dieser Token darf nur in die Docker Registry pushen, dieser Token darf nur eine Issue erstellen und so weiter. Also wirklich ein bisschen runtergetrippt. Das Riesenproblem ist bei GitHub Tokens, nicht jeder Service, bei GitHub selbst unterstützt fine grained Personal Access Tokens. Manche Aktionen kannst du leider nur mit einem Personal Accent Token."
+    },
+    {
+      "end": 3508070,
+      "speaker": "B",
+      "start": 3428730,
+      "text": "Das ist ganz allgemeines Problem. Also ganz viele Services, da gibt es halt einen Key, teilweise kannst du nicht mal mehrere Keys kreieren, sondern es gibt einen Key und du hast einfach Zugriff auf alles und du kannst dann gar nicht fein granular arbeiten. Also das ist natürlich auch ein Problem auf der Service Seite, auch wenn man es dann gerne machen würde. Du hast es auch kurz angesprochen mit den Environment Variablen bzw. Mit den Keys, die man einfach lokal verwendet. Das ist für mich noch immer so ein Bereich, der nicht sehr zufriedenstellend ist. Also ich speichere dann die Keys, wenn ich irgendwas entwickle in meinem Projekt ab, in einer Env Datei zum Beispiel, aber dann liegen diese Keys lokal bei mir und ganz oft sind es Produktiv Keys, wenn man bei einem Service, das man extern verwendet, hat man nur einen Key zur Verfügung zum Beispiel und dann speichert man halt den lokal in so einer ENV Datei. Die ENV Datei ist nicht verschlüsselt. Klar, die Festplatte ist vielleicht verschlüsselt im Idealfall, aber da schwirren schon ganz viele Keys immer herum in den ganzen Dev Environments und das ist mir persönlich noch so ein Dorn im Auge und ich habe da leider noch keine sinnvolle Möglichkeit gefunden, weil man muss die halt irgendwo definieren. Und wenn man die nicht jedes Mal irgendwie kopieren will aus dem Passwortmanager und sie dann automatisch gelöscht werden, dann muss man sie fast irgendwo speichern. Wie handhabst du das? Hast du eine gute Lösung gefunden, die."
+    },
+    {
+      "end": 3518030,
+      "speaker": "A",
+      "start": 3508070,
+      "text": "Simple, dein Passwortmanager, der hoffentlich eine CLI Integration hat und dann kannst du den immer darauf lenken. Aber das ganze Problem ist natürlich nicht einfach."
+    },
+    {
+      "end": 3530800,
+      "speaker": "B",
+      "start": 3518030,
+      "text": "Also du hast gerade, aber wie machst du das dann konkret? Weil es gibt ja keine Frage, machst du dann Export und hast irgendwie einen Key, der dann automatisch gefüllt wird? Oder wie machst du das Ganze in der Praxis dann?"
+    },
+    {
+      "end": 3549040,
+      "speaker": "A",
+      "start": 3530800,
+      "text": "Also wenn Password hat eine CLI Integration und den kannst du dann halt immer triggern? Oder gibt es auch so einen einzelnen Befehl? Du kannst ja zum Beispiel dann sagen, wenn du ein CLI Argument hast, keine Ahnung, myapp, secret und dann kann ich sagen, okay, dann führe ich einen Stellbefehl aus, Dollar Klammer auf, Passwort CLI blablabla."
+    },
+    {
+      "end": 3556040,
+      "speaker": "B",
+      "start": 3549040,
+      "text": "Und da gibst du dann an den Schlüssel, also die ID des eigentlichen Keys, der gespeichert ist."
+    },
+    {
+      "end": 3632890,
+      "speaker": "A",
+      "start": 3556040,
+      "text": "Dafür muss natürlich dein Passwort CLI authentifiziert sein und so weiter und so fort. Und dann musst du halt in deinem Passwort Manager hast du ja verschiedene Walls, also verschiedene Tresore und innerhalb von verschiedenen Tresoren hast du dann verschiedene Zugriffsberechtigungen auf verschiedene Credentials und die Authentifizierung muss halt stimmen und dann kannst du über das Passwort CLI dann halt darauf zugreifen. Also ich meine, Punkt N, das ist so der Klassiker. Ich meine, im Endeffekt kann man da nichts machen. Das ist halt klar, kannst du da Environment Variable hinpacken wie zum Beispiel dein Date Format oder ähnliches kann man machen, aber sie halt zu, dass das End von dem gitignore ist. Dann gibt es natürlich noch Command Line Arguments. Es ist natürlich nie so richtig geil, Secrets in Command Line Arguments zu packen, denn die landen natürlich in der Shell History in der Prozessliste, gegebenenfalls in irgendwelchen Audit Logs. Stattdessen kann man natürlich okay, du liest deine Secrets über std in aus oder über Dateien, die halt entsprechende Rechte haben, wie zum Beispiel, dass nur der User Lesezugriff drauf hat, aber keine Execution, so weiter, aber keine Gruppe oder nicht jeder. Dann gibt es natürlich noch die Bash History ist natürlich leicht übersehenes Ding, aber ich kann auf jeden Server gehen, History eingeben und dann sehe ich natürlich die ganzen CLI Befehle. Und wenn du da Secrets in den Command deine Argument hast, dann tauchen die natürlich auch da auf."
+    },
+    {
+      "end": 3658570,
+      "speaker": "B",
+      "start": 3632970,
+      "text": "Wobei in Argumenten habe ich schon lang kein Passwort mehr irgendwo eingegeben eigentlich. Also mir kommt vor, das hat sich ziemlich erledigt. Die meisten Tools erlauben das gar nicht mehr. Aber jetzt nochmal zu den env Dateien. Deine CLI Integration macht dir nur Environment Variablen in deiner aktuellen Shell. Das heißt, du kannst keine env Dateien irgendwie automatisch füllen und danach wieder löschen lassen, wenn das in irgendeinem anderen Prozess ausgeführt wird oder so."
+    },
+    {
+      "end": 3676000,
+      "speaker": "A",
+      "start": 3658570,
+      "text": "Ich habe noch nie den Need gehabt, wo ich env Dateien über den Passwortmanager schreiben lassen müsste, aber ich habe auch das Gefühl, diese env Dateien kommen sehr stark, zumindest in meinem Welt, aus dem ganzen JavaScript Bereich. Denn im Go Bereich ist das irgendwie sehr selten der Fall, dass du env Dateien da rumfliegen."
+    },
+    {
+      "end": 3679680,
+      "speaker": "B",
+      "start": 3676000,
+      "text": "Aber woher bekommst du dann deine Keys? Die musst du ja irgendwie einlesen ins Programm."
+    },
+    {
+      "end": 3683520,
+      "speaker": "A",
+      "start": 3679680,
+      "text": "Ja, also das Programm selbst geht dann auf die Environment Variablen."
+    },
+    {
+      "end": 3704200,
+      "speaker": "B",
+      "start": 3683520,
+      "text": "Ja, aber das heißt, du musst es in den Environment Variablen haben. Jetzt wenn du irgendwie einen anderen Prozess hast, eine andere Shell, die im Hintergrund aufgemacht wird, wenn du irgendwie, also die nicht direkt in deiner Shell lokal startest oder irgendwie ein neues Bash aufgemacht wird, dann wird es ja normal nicht durchgepiped, vermute ich mal, oder? Weil die n Variablen leben ja nur in deiner aktuellen Shell. Wenn du eine CLI Integration hast, also."
+    },
+    {
+      "end": 3761780,
+      "speaker": "A",
+      "start": 3704200,
+      "text": "Das Management von Environment Variablen ist generell sehr kompliziert. Du kannst das natürlich auf der einen Seite auf globalem Level haben oder auf der zweiten Sache auf der Directory Ebene. Es gibt zum Beispiel so, also wenn du deine Shell lädst, dann wird ja dein Home Folder geladen und da kannst du ja Dateien reinlegen, die dann halt deine Environment Variable laden, dann sind die halt für deine komplette Session. So, dann gibt es aber noch so Thematiken wie zum Beispiel dir env. Das sind so Tools, da kannst du eine Datei in einen Ordner legen, zum Beispiel env ac und wenn du in diesen Ordner wechselst mit change directory, dann wird diese env rc geladen in deine aktuelle Session. Dann kannst du das ausführen und wenn du aus dem Folder wieder rausgehst, werden die Environment Variablen, die gesetzt wurden, wieder entladen. Das ist halt, also du scopest halt eigentlich deine Environment Variable, nennt sich dir. Ist das super sicher? Ne, ist es sicherer, weil die nicht im globalen Kontext die ganze Zeit rumspringen."
+    },
+    {
+      "end": 3773980,
+      "speaker": "B",
+      "start": 3761780,
+      "text": "Ja, aber das heißt, wenn du über ein Make File gehst, bist du wieder in einem anderen Kontext und verlierst deine env Variable. Wenn du make aufrufst, wird ja wieder eine neue Session gestartet. Also du exportest sie, dann hast du sie aber wieder global."
+    },
+    {
+      "end": 3783020,
+      "speaker": "A",
+      "start": 3774060,
+      "text": "Ja, also du lädst sie nur für den Zeitraum, in dem du da unterwegs bist, aber in dem Zeitraum sind sie dann auch wieder global. Wenn du die dann exportierst."
+    },
+    {
+      "end": 3790140,
+      "speaker": "B",
+      "start": 3783100,
+      "text": "Okay, aber okay, dann werden sie wenigstens wieder entladen und dann hast du sie nur für diesen Zeitraum, wo du entwickelst."
+    },
+    {
+      "end": 3842480,
+      "speaker": "A",
+      "start": 3790220,
+      "text": "Genau, es ist halt so eine Art von Time based, wenn du so möchtest. Aber es ist generell ein sehr schwieriges Problem, denn du hast nämlich unter anderem mögliche Attack Vektoren, wie zum Beispiel mit so Tools wie Sentry. Sentry ist ein Error Reporting Tool. Wenn du jetzt zum Beispiel ein lokales Programm hast, was ein Error schmeißt und was Sentry integriert hat, dann wird dieser Error halt an Sentry gesendet und damit der Entwickler oder die Entwicklerin Kontext über den Fehler hat, der geschmissen wurde, werden natürlich auch Metavariablen mitgegeben, wie zum Beispiel, welche Environment Variablen wurden denn da gesetzt. Und dann könnte es theoretisch sein, dass deine Environment Variablen von deinem lokalen Computer an die Error Tracking Plattform Sentry gesendet werden. Mir ist noch kein Fall bekannt bzw. Habe ich auf der Recherche keinen Public Fall davon gefunden, aber theoretisch könnte das so funktionieren. Und sehr viele Tools haben ja Telemetrie Daten inzwischen auch drin."
+    },
+    {
+      "end": 3887570,
+      "speaker": "B",
+      "start": 3842640,
+      "text": "Aber wenn unsere Community dann noch ein paar Tipps hat über coole Tools oder Workflows, würde ich mich auch sehr freuen, weil aktuell verlasse ich mich halt nur auf die Festplatten Verschlüsselung. Aber wenn wir jetzt schon bei meinen Problemen sind, die mir so am Herzen liegen, wie gehst du denn mit Passwörtern im Team um? Weil wie du ja weißt, ich habe einige side Projects auch mit anderen Leuten. Teilweise muss man da auch Secrets Keys irgendwie teilen. Es hat nicht jeder Zugriff. Du willst bei einem Service vielleicht nicht die teure Enterprise Lizenz zahlen, wo du Teams anlegen kannst und mehrere Accounts, sondern hast nur einen Account in deiner Family Beziehungen. Wie gehst du da um oder macht es dein Password eh alles automatisch, wenn wir da halt schon im Werbeblock sind fast."
+    },
+    {
+      "end": 3984300,
+      "speaker": "A",
+      "start": 3887810,
+      "text": "Ja, da unterscheide ich. Also ich habe bei Password auch die Family Subscription. Das bedeutet, weil die User Experience und die UI einfach so gut ist, kann meine Frau das einfach auch sehr gut bedienen und es hat halt Integration in ihre Geräte. Das macht es halt sehr einfach und da bin ich dann auch gerne bereit, fünf zu investieren. Bei Teams ist das ein bisschen was anderes, da kannst du natürlich diese teuren Enterprise Dinger kaufen. In der Regel, wenn du kleine Teams hast, kostet dich das auch nicht die Enterprise Thematik. Aber da ist besonders bei side Projects macht das kompliziert, weil ich habe andere Vorlieben als du. Du nutzt jetzt keypass X oder was hast du gerade gesagt? Ich benutze mein Passwort, somit sind wir schon mal nicht auf demselben Tool. Somit macht zum Beispiel ein Shared Vault, also ein Shared Tresor wenig Sinn, weil irgendeiner von uns sich dann ändern müsste. Und das führt ja immer zu Friction, wenn man so möchte. Deswegen, wir haben das zum Beispiel hier beim Engineering Kiosk so gelöst. Ich habe die Team Secrets im Password und immer wenn ich ein Login anlege, dann teile ich den einmal kurz mit dir über einen One Time Link und dann habe ich die Hoffnung und das Vertrauen, Wolfgang, dass du diese Credentials dann in deinen Passwortmanager überträgst und rotieren wir die dann durch? Seltenst, Das ist dann immer ein bisschen doof, aber ich vertraue dann eigentlich dem side Project Team. Zugegeben im side Project habe ich jetzt noch nie ein side Project mit drei, vier, fünf Leuten gemacht, deswegen kann ich da relativ wenig zu sagen. Und dann, wenn wir professionell unterwegs sind, da gibt es dann meist die Enterprise Lizenzen, wo wir Passwörter in Team Tresoren haben und da wird ein Tresor teilweise pro Jira Ticket erstellt."
+    },
+    {
+      "end": 3999470,
+      "speaker": "B",
+      "start": 3984540,
+      "text": "Okay, das ist auch eine interessante Herangehensweise. Bei Keybase heißt das ganze Datenbanken, man hat mehrere Datenbanken und da habe ich durchaus Datenbanken auch mit anderen geteilt in demselben Projekt. Fühlt sich aber auch nicht so ganz hundertprozentig perfekt an, muss ich dazu sagen."
+    },
+    {
+      "end": 4003670,
+      "speaker": "A",
+      "start": 3999470,
+      "text": "Okay, dann brauchst du also wiederum eine Cloud, um das zu sharen, Verstehe ich."
+    },
+    {
+      "end": 4010790,
+      "speaker": "B",
+      "start": 4003670,
+      "text": "Ja klar. Also Sharing brauchst du eine Cloud, ob du sie jetzt selber hostest oder eine fremde Cloud verwendest, du brauchst immer eine Cloud."
+    },
+    {
+      "end": 4030450,
+      "speaker": "A",
+      "start": 4010870,
+      "text": "Das war ja die Frage, weil wir initial gesagt haben, okay, ein Kriterium, wie du deinen Passwortmanager auswählen möchtest, ob du es selbst hosten möchtest oder nicht. Aber wenn es dann ans Sharing von Credentials geht, dann musst du entweder die Thematik machen, so wie ich, ich sende dir das rüber und vertraue dir, dass du das selbst handelst, dann haben wir aber keine Synchronisation. Oder du nutzt irgendeinen Service, der für beide öffentlich zuging."
+    },
+    {
+      "end": 4100310,
+      "speaker": "B",
+      "start": 4030450,
+      "text": "Genau, oder du schickst das File per E Mail herum, Aber ob das eine gute User Experience ist, ist eine andere Sache, aber ginge natürlich theoretisch auch. Was man natürlich auch machen kann, wenn man jetzt im professionellen Kontext arbeitet mit mehreren Teammitgliedern, ist Passport. Ist glaube ich so der Platzhirsch im Open Source Bereich. Kann man auch selber hosten, gibt es auch als Service und da kann man dann auch genau festlegen, welches Passwort, welche Gruppen, wer darf wo Zugriff haben. Ich habe mir das auch kurz angeschaut, weil es mich interessiert hat, wie sie es eigentlich machen, ist ganz klassisches Private Public Key Verfahren. Jeder User hat einen Private Key und wenn du ein Passwort teilst, dann wird es mit dem Public Key des jeweiligen Users verschlüsselt. Der Server kennt alle Public Keys und wenn du als User dann zugreifst, hast du den Private Key und kannst es entschlüsseln und kommst so an die Daten dran und so ist sicher, dass der Server Daten verschlüsseln kann, ohne dass er die Private Keys kennt. Ist also eigentlich ein sehr, sehr einfacher Ansatz. Aber der glaube ich auch sehr robust ist und den man auch sicher gut verwenden kann. Also ich kenne auch viele Teams, die Passport verwenden. Das funktioniert eigentlich ganz gut und ich war bisher ehrlich gesagt nur zu faul, um das mal aufzusetzen. Und darum schere ich halt einfach die Datenbank Files von keepass."
+    },
+    {
+      "end": 4130260,
+      "speaker": "A",
+      "start": 4100470,
+      "text": "Ich glaube, zusammenfassend können wir sagen, diese ganze Security Thematik wird halt immer und immer und immer wichtiger, speziell den Schutz deiner eigenen Online Identität. Wenn wir nämlich jetzt einmal von der Generation Z sprechen, da habe ich gestern zufällig noch auf Wikipedia rumgesurft und habe mir angesehen, ab wann man ein Boomer ist und wann nicht. Und da stand halt unter anderem, dass die Generation Z sich dadurch auszeichnet, dass es die erste Generation ist, die vollständig mit der digitalen Welt aufwächst, die mit einem Passwortmanager aufwächst."
+    },
+    {
+      "end": 4130820,
+      "speaker": "B",
+      "start": 4130260,
+      "text": "Meinst du?"
+    },
+    {
+      "end": 4185930,
+      "speaker": "A",
+      "start": 4131780,
+      "text": "Ich würde es mir wünschen, wenn sie das tun, aber das bezweifle ich halt oft. Aber da wird das immer wichtiger. Und ich hatte auch schon Bekannte, die verstorben sind. Und dann stellt sich natürlich die okay, was machen wir jetzt mit der digitalen Identität auf dem Facebook Profil und so weiter und so fort. Also Punkt ist, du hast eine digitale Identität. Punkt ist, du steuerst alles inzwischen fast online. Und da würde ich mach dir mal ein paar Gedanken darüber, wie du die ganze Sache denn auch schützt. Es ist okay, wenn du da kein Geld für ausgeben möchtest, dann tauscht du aber in der Regel Geld durch Zeit, indem du dich um die Synchronisation kümmerst und so. Das ist auch okay. Aber macht euch Gedanken. Nicht jeder muss alle sechs Monate seine SSH Keys mit Passwörtern rotieren. Ich würde es mir wünschen, wenn ihr das tun würdet, aber ich mache es ja auch nur alle zwei, drei Jahre. Von daher könnt ihr mir dieses Argument gerne an den Kopf schmeißen. Und wir machen ja auch nicht alles, wie zum Beispiel den eigenen yubikey habe ich jetzt auch noch nicht privat. Wolfgang, du glaube ich auch noch nicht."
+    },
+    {
+      "end": 4188030,
+      "speaker": "B",
+      "start": 4186250,
+      "text": "Fünf und zwanzig Euro. Ich werde mir das überlegen."
+    },
+    {
+      "end": 4242960,
+      "speaker": "A",
+      "start": 4188580,
+      "text": "Deswegen hier mal eine kleine Checkliste in einer Stunde fünfzehn vielleicht war ja der ein oder andere Tipp dabei, aber wir haben ziemlich viele Sachen noch gar nicht besprochen. Wir haben nicht gesprochen, wie Passkeys funktionieren oder was das eigentlich ist, wie man die ganze Thematik zum Beispiel in Docker verwendet, was die psychologische Komponente denn ist. Also ich glaube, dieses ganze Thema kannst du wirklich von vorne bis hinten über vielleicht sogar ein ganzes Semester strecken, wenn man da mal ein bisschen sich da rein. Das war eher so mal Personal Security ein hundert eins mit einem harten Fokus auf, ich sag mal, Entwickler Secrets und Passwörtern. Vielleicht ist da was bei und vielleicht wollt ihr dieses Jahr vielleicht noch mal was ändern. Und Achtung, ich glaube die ganzen Black Friday und Cyber Monday und so weiter, kommen die noch oder waren die schon? Auf jeden Fall, da gibt es bestimmt auch wieder irgendwelche Angebote von yubikeys, werden rausgeschmissen oder falls ihr auch wieder irgendeinen Software as a Service nutzen wollt oder."
+    },
+    {
+      "end": 4280790,
+      "speaker": "B",
+      "start": 4242960,
+      "text": "Oder damit es nicht ganz zur Werbesendung von manchen Firmen, die wir verwenden, ausartet. Wir bekommen kein Geld nochmal, wir verwenden es nur gerne. Kommt bei uns in der Community vorbei und lasst uns mal wissen, was wir jetzt alles nicht erwähnt haben, was wir verwenden sollten, was es für Tools sonst noch gibt, die Sinn machen, Egal ob jetzt im Personal Kontext oder im Team Kontext oder wenn ihr irgendwie Themenbereiche habt, wie zum Beispiel Passkeys, wenn wir da mal tiefer gehen sollen, vielleicht auch mit einem Gast, der sich da sehr tief auskennt, lasst uns das natürlich auch wissen, dann können wir da mal wirklich einen Deep Dive mit einem Interview auch planen."
+    },
+    {
+      "end": 4285830,
+      "speaker": "A",
+      "start": 4280790,
+      "text": "Das war's von uns, wir sind gespannt auf eure Security Stories. Bis bald. Bye bye."
+    },
+    {
+      "end": 4286310,
+      "speaker": "B",
+      "start": 4285830,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
