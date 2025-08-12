@@ -76,7 +76,8 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/1vogpDfg0BXFVrfZ2VvMGK
-tags: []
+tags:
+- Sicherheit
 title: "#208 Personal Security 101: Passw\xF6rter, Keys & Bequemlichkeit"
 transcript_raw: ''
 transcript_slim: ''
