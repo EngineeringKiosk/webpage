@@ -84,7 +84,7 @@ tags:
 - Engineering Kiosk
 title: '#207 Von JavaScript-Hass bis Linter-Liebe: Unsere erste AMA, mit Purpose!'
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/207-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=pNF2RFpM4_0
 
 ---

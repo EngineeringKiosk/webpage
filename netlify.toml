@@ -2817,6 +2817,18 @@ to = "/podcast/episode/207-von-javascript-hass-bis-linter-liebe-unsere-erste-ama
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/208"
+to = "/podcast/episode/208-personal-security-101-passwörter-keys-bequemlichkeit?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep208"
+to = "/podcast/episode/208-personal-security-101-passwörter-keys-bequemlichkeit?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
