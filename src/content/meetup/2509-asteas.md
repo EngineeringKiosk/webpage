@@ -7,7 +7,7 @@ location:
   url: 'https://www.iacbox.com'
   logo: './images/location/asteas.png'
 talks:
-  - avatar: './images/speaker/avatar.png'
+  - avatar: './images/speaker/2509-chris.jpg'
     name: 'Chris Lenz'
     title: 'Cultural Kaleidoscope: India, Romania, and Austria at Work!'
     description: 'This presentation, "Cultural Kaleidoscope: India, Romania, and Austria at Work!", explores how the distinct work cultures of these three nations shape communication, collaboration, and team dynamics. We''ll examine key cultural differences to provide practical insights for building effective multinational teams and leveraging diversity as a strength in a globalized workplace.'
