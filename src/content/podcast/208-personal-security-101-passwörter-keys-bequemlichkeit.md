@@ -82,7 +82,7 @@ tags:
 - Sicherheit
 title: "#208 Personal Security 101: Passw\xF6rter, Keys & Bequemlichkeit"
 transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/208-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=afPDH_m1p_o
 
 ---
