@@ -1,0 +1,1040 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 5143,
+  "audio_url": "https://cloud.inlupus.at/s/XRjJNoJTgQLJMF6/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9558736,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "06a8a3e0-1857-413b-92ba-c62ad86b77f8",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 93940,
+      "speaker": "A",
+      "start": 3360,
+      "text": "Eine neue Episode im Engineering Kiosk Podcast. Dieser Podcast deckt eine recht große Spanne an Themen ab, die aber alle irgendwie mit Software Engineering zu tun haben. Das Feld ist einfach zu groß. Somit kommt es ab und zu mal vor, dass wir dich aufgrund der Themen etwas über den Tellerrand schubsen, damit du auch mal eine andere Welt siehst. Naja, Hörst, wir kicken dich also etwas aus deiner Komfortzone. Doch wann machen wir das denn mal für uns? Wir brabbeln hier oft über internationale Unternehmen, topmoderne Cloud Infrastrukturen, modernste Softwaretechniken und Co. Doch ist dies die Realität oder einfach nur Hipstertum von überfinanzierten Start ups? In dieser Episode kicken wir uns selbst mal etwas aus der Komfortzone und schauen auf die wahre Welt. Mit Patrick Terlisten, Technik Geschäftsführer eines Kölner IT Systemhauses, schauen wir auf die Infrastruktur im deutschen Mittelstand, dort wo Rechenzentrum gesagt wird, aber die Besenkammer gemeint ist. Wir sprechen über Hardware Infrastruktur und dessen Hosting, Shadow IT und Softwareentwicklung ohne Dev Teams, wie der moderne Mittelstand IT Stack aussieht, über Legacy Software und Lifecycle Management und ob das Wort Cloud oder Software as a Service eigentlich im Mittelstand existiert. Los geht's, viel Spaß. Neben diesem Podcast habe ich noch eine andere Aktivität und zwar helfe ich hier in meinem Clou kleinen Dorf beim lokalen Förderverein mit. Und wenn da einer mit IT Wissen kommt, dann wird der erstmal direkt verhaftet mit der Aufgabe, digitalisiert auch erstmal diesen kleinen lokalen Förderverein. Und was heißt das?"
+    },
+    {
+      "end": 99100,
+      "speaker": "B",
+      "start": 93940,
+      "text": "Natürlich ist der Förderverein, ist das sowas mit viel Alkohol und Förderung des Alkoholkonsums?"
+    },
+    {
+      "end": 172910,
+      "speaker": "A",
+      "start": 99500,
+      "text": "Nee, nee, nee, der sichert schon hier die Dorfmitte, das Gemeindezentrum und Kindergarten und solche Thematiken. Also der macht schon wirklich, der macht natürlich auch ein Gemeindefest und auf dem Gemeindefest gibt es natürlich dann auch ein Bier und einen Weinstand. Aber das hat jetzt nichts mit diesem Podcast oder mit dieser Story zu tun. Wie gesagt, da kommt da jemand mit IT Wissen und der wird dann erstmal verhaftet und sagen, hey, wir müssen jetzt mal moderne Kommunikationsmittel machen und dann führ doch mal Microsoft Teams ein und so weiter und so fort. Und dann kennt man jemanden im Dorf, der hat eine Firma und die kümmert sich dann unter anderem auch um die Integration von Microsoft Office drei hundert fünf und sechzig und wie sie alle heißen. Und der hat gesagt, hey cool, da kann man doch bei Microsoft so eine Non Profit Lizenz bekommen, dann haben wir die genommen. Flups, wer wurde dann auf einmal Microsoft drei hundert fünf und sechzig Administrator? Leider ich für so ein paar Accounts. Ja, und dann fing es an, okay, dann haben wir ein paar Laptops gesponsert bekommen, dann wollte ich da Windows elf installieren und dann konnte ich das letzte Update nicht installieren wegen irgendwelchen zu alten Prozessoren, weil in Windows elf ist jetzt auch ganz viel AI drin. Und dann ging es so weiter, dann habe ich das dann irgendwann doch geschafft und dann wollte sich der Laptop nicht mehr am Office drei hundert fünfzig da anmelden, weil irgendeine Gerätezustimmung nicht ist. Und auf einmal war ich ganz tief in irgendwelchen Settings da drin. Worauf ich eigentlich hinaus möchte ist, das ist eine ganz andere Welt, mit der möchte ich eigentlich nichts zu tun haben."
+    },
+    {
+      "end": 179790,
+      "speaker": "B",
+      "start": 173470,
+      "text": "Jetzt leitest du da Teams in globale Teams sogar in einem Konzern und dann hast du ein Problem, Windows zu installieren."
+    },
+    {
+      "end": 216750,
+      "speaker": "A",
+      "start": 180430,
+      "text": "Also ich will euch sagen, Windows elf mit diesem Microsoft drei hundert fünf und sechzig, also das muss man wollen, das sage ich ganz ehrlich, wie dem auch sei, Aber ich habe jemanden gefunden, der will das und ich habe jemanden gefunden, der Podcast sogar darüber. Und diesen Menschen haben wir heute eingeladen, denn dieser Mensch ist ein treuer Hörer vom Engineering Kiosk. Für ihn ist unser Podcast eine andere Welt, wie ich gerade beschrieben habe, ist für mich seine Welt eine komplett andere Welt. Es klingt alles total hip, sagt er immer, und das sei nicht seine Realität. Ich persönlich sehe das nicht, deswegen willkommen."
+    },
+    {
+      "end": 220070,
+      "speaker": "C",
+      "start": 216750,
+      "text": "Patrick, Hallo, vielen Dank für die Einladung."
+    },
+    {
+      "end": 233890,
+      "speaker": "A",
+      "start": 220070,
+      "text": "So, jetzt habe ich gesagt, du möchtest Microsoft drei hundert fünf und sechzig und für dich ist die Software Engineering Welt eine andere. Deswegen stelle ich dich noch mal ganz kurz vor, damit die Leute auch mal ein bisschen Kontext haben, wer du eigentlich bist und was du mit dem ganzen Kladderadatsch eigentlich am Hut hast."
+    },
+    {
+      "end": 238690,
+      "speaker": "C",
+      "start": 233890,
+      "text": "Ich kenne diese Vorstellungen, ja, und ich habe da jetzt echt schon ein bisschen Angst vor, was du alles ausgegraben hast, ne?"
+    },
+    {
+      "end": 284750,
+      "speaker": "A",
+      "start": 238930,
+      "text": "Es geht jetzt gar nicht so hart rein, sondern also erstens, was mich sehr erfreut, in einem Public Profile bei dir steht, du kommst aus der Ruhr Area und dann muss ich erst mal nachschauen, woher denn wirklich? Und du kommst aus dem schönen Dortmund, das deklariere ich mal als Pott, deswegen herzlich willkommen. Du hast dann aber irgendwann gedacht, okay, vielleicht möchte ich nicht in Dortmund bleiben, sondern du wohnst jetzt in der Eifel. So für die Leute, die die Eifel nicht kennen, jetzt lernen wir mal ein bisschen was Die Eifel ist ein Mittelgebirge in Rheinland Pfalz und Nordrhein Westfalen Und jetzt ist wichtig zu betonen, dass der Patrick immer noch in Nordrhein Westfalen wohnt und das Mittelgebirge ist ganze sieben hundert sechs und vierzig Meter über Null über dem Meeresspiegel der sogenannten Normalhöhen Null. Wahnsinn."
+    },
+    {
+      "end": 286630,
+      "speaker": "B",
+      "start": 284750,
+      "text": "Moment, alles, oder? Der höchste Punkt?"
+    },
+    {
+      "end": 319170,
+      "speaker": "C",
+      "start": 286630,
+      "text": "Patrick kommt jetzt ein bisschen darauf an, was man als höchsten Punkt hier definiert, weil es gibt ja einen höchsten Punkt in Rheinland Pfalz und dann auch einen höchsten Punkt in NRW. Wenn ich hier bei mir aus dem Fenster gucke, wir sind hier exakt fünf hundert vier Meter über Normal Null. Köln Leverkusen, das ist so fünf und dreiig bis fünf und sechzig Meter. Und das heißt jedes Mal, wenn ich dann runter nach Köln fahre, ist direkt fünf Grad wärmer oder hier oben halt fünf Grad kälter. Also ich bin auch schon mit Schnee auf dem Auto in Köln angekommen und da lag gar nichts. Das ist schon echt faszinierend, was hier fünfzig Kilometer und fünf hundert Höhenmeter Unterschied ausmachen."
+    },
+    {
+      "end": 328810,
+      "speaker": "B",
+      "start": 319170,
+      "text": "Also du bist fast höher als ich. Das ist jetzt ganz knapp, dass ich noch eine Spur höher bin und das auch nur, weil ich ein Stück über Innsbruck bin. Also jetzt bin ich schockiert, dass die Eifel so hoch ist."
+    },
+    {
+      "end": 332090,
+      "speaker": "A",
+      "start": 329130,
+      "text": "Schockiert man auch mal stolz sein, dass wir auch ein Gebirge haben."
+    },
+    {
+      "end": 334650,
+      "speaker": "B",
+      "start": 332170,
+      "text": "Naja, Gebirge, okay, aber bitte red weiter."
+    },
+    {
+      "end": 347930,
+      "speaker": "A",
+      "start": 334890,
+      "text": "Aber Patrick, warum bist du hier? Du bist Geschäftsführer für den technischen Bereich bei der ML Network DV Systeme Netzwerk und Kommunikations gmbh. Und das ist genau das, so wie sich's anhört. Ein klassisches IT Systemhaus, würde ich mal sagen."
+    },
+    {
+      "end": 351230,
+      "speaker": "C",
+      "start": 348310,
+      "text": "Der Name schreit schon ER genau das."
+    },
+    {
+      "end": 352950,
+      "speaker": "B",
+      "start": 351230,
+      "text": "ML ist Machine Learning, oder?"
+    },
+    {
+      "end": 401490,
+      "speaker": "C",
+      "start": 353590,
+      "text": "Schön wär's, ne? ML sind Movas und Lorenz. Das Unternehmen wurde Ende sieben und neunzig gegründet als Joint Venture zwischen damals der sogenannten ML Holding. Das war ja damals so Ende der Ende der ER Dotcom Blase hin und her, alle wollten groß, höher, weiter, schneller. Natürlich brauchte man dann eine Unternehmensgruppe. Es gab dann die Consulting, die Systems, das waren die Developer, dann gab es Business Processing, da waren die ganzen Schlipsträger dabei und dann gab es uns die ML Network so als die Netzwerker, das Systemhaus, die Jungs, die sich auch mal die Hände schmutzig machen. Lustigerweise von dieser Gruppe sind am Ende dann die ML Consulting, die es auch heute noch gibt, übrig geblieben und die ML Network. Ja, ich habe vor zwanzig Jahren, Oktober zwei tausend vier bin ich aus Dortmund quasi losgezogen und habe dann mit dieser."
+    },
+    {
+      "end": 457680,
+      "speaker": "A",
+      "start": 401490,
+      "text": "Kölner Firma angefangen und das beweist schon, dass das für uns eine ganz andere Welt ist, weil zwanzig Jahre in modernen Start ups und Co. Ich weiß nicht, ich glaube, da wird man schon dann rausgeschmissen. Aber du hast schon gesagt, technologisch beschäftigst du dich viel mit Microsoft Produkten, Virtualisierung wie mit vmware und Co. Und natürlich auch Storage Systemen wie zum Beispiel Heavy Packard Enterprise Produkten und Co. Du redest gerne, das bedeutet, du bist prädestiniert für den Bereich Podcast. Toll, dass du hier als Gast bist. Du hast aber selbst zwei Podcast, Einmal den Wartungsfenster Podcast. Ihr beschreibt euch selbst als Podcast für Infrastruktur, egal ob im Datacenter, in der Cloud oder in der Besenkammer. Und warum kommen wir gleich noch drauf? Du bist noch beim Fax Informatiker Podcast dabei, ein Mix aus Techtalk und unterhaltsamen Geschichten direkt aus dem Leben eines Fachinformatikers. Und du bist ein sehr großer Fan von unserem Spruch Legacy verdient das Geld und du nervst ständig. Das hat der Wolfgang reingeschrieben in die Notizen, dass wir endlich damit Merge machen sollen."
+    },
+    {
+      "end": 459200,
+      "speaker": "C",
+      "start": 457680,
+      "text": "Natürlich, ich bitte darum."
+    },
+    {
+      "end": 515140,
+      "speaker": "A",
+      "start": 459520,
+      "text": "Und wenn man jetzt mal dir so ein bisschen auf den Social Media Kanälen folgt, dann merkt man schon, du bist ein relativ harter Nerd, weil auf Mastodon habe ich gefunden, du hast geschrieben born at drei hundert vierzig ppm und ich denke so, was ist das denn? So erstmal das Ding reingeschmissen. PPM heißt parts per million, also Teile pro Million und bezieht sich in diesem Zusammenhang fast immer auf den CO Gehalt in der Atmosphäre. Das bedeutet eigentlich, da der CO Gehalt in der Atmosphäre konstant steigt, kann man circa sagen, wenn du nämlich den ppm Wert deines Geburtsjahres angibst, wann du geboren bist, also nur mal so als Referenzwert. Heute zwei tausend fünf und zwanzig lief der ppm Wert bei vier hundert zwanzig also habe ich die doch mal runter rechnen lassen und somit müsstest du ein tausend neun hundert ein und achtzig geboren sein. Ist das korrekt?"
+    },
+    {
+      "end": 516020,
+      "speaker": "C",
+      "start": 515300,
+      "text": "Das ist korrekt."
+    },
+    {
+      "end": 522030,
+      "speaker": "A",
+      "start": 516180,
+      "text": "Wieder was gelernt, Einmal über die Eifel und einmal über ppms. Habe ich irgendwas vergessen?"
+    },
+    {
+      "end": 528030,
+      "speaker": "C",
+      "start": 522990,
+      "text": "Das hast du, also ich hatte ein bisschen Angst vor dieser Vorstellungsrunde, aber nein, das hast du alles wunderbar zusammengefasst. Sehr schön."
+    },
+    {
+      "end": 531150,
+      "speaker": "B",
+      "start": 528030,
+      "text": "Ist der auf der ganzen Welt immer gleich diese Welt eigentlich."
+    },
+    {
+      "end": 556330,
+      "speaker": "C",
+      "start": 531310,
+      "text": "Du fragst wieder Sachen, das weiß ich natürlich selber nicht. Also ich hätte jetzt ja fast gesagt, muss ja eigentlich bis auf einige regionale Sachen mal abgesehen, wenn jetzt bei dir ein Vulkan in der Nachbarschaft ist, Fun Fact, Eifel gibt es auch genügend Vulkane sind auch teilweise noch, zumindest sie schlummern, sie sind nicht inaktiv. Aber ich denke ja, eigentlich müsste das wahrscheinlich weltweit einigermaßen gleich verteilt sein, sonst."
+    },
+    {
+      "end": 626360,
+      "speaker": "B",
+      "start": 556330,
+      "text": "Hätte der Andi das ja wahrscheinlich auch nicht zurückrechnen können. Also es muss eigentlich schon weltweit so sein und stimmen. Aber gehen wir mal in unser heutiges Thema rein. Also Andi hat jetzt schon viel erwähnt, was du so machst, aber du machst es ja vor allem auch für ganz viele Kunden. Also ihr seid ja ein Dienstleister, der bei großen Kunden, Mittelstand und so weiter genau diese IT eigentlich übernimmt. Daher du hast wahrscheinlich viel gesehen und siehst auch viel und ich höre ja auch gerne das Wartungsfenster und für mich ist das ja auch immer so eine andere Welt. Ich habe so ein paar Kollegen, die auch in der Administration tätig sind, die immer sagen, es ist genauso genauso wie Wartungsfenster. Es ist genau in der Realität so. Und für mich ist es ja wirklich eine andere Welt, weil bei uns mietet man da irgendwo in der Cloud einen Server und der fährt irgendwo hoch und der ist super abgesichert und ISO zertifiziert und weiß was ich was. Und dann kommt man ins Wartungsfenster und dann hört man ja, bei uns sind die Datacenter mehr so Besenkammern üblicherweise oder manche Kunden sagen zu ihren Besenkammern Datacenter. Kannst du mir mal kurz erklären, von was man da spricht? Und reden wir jetzt da von einer Minifirma, reden wir da vom Mittelstand Konzern? Wo findest du denn diese Besenkammern, von denen du und deine Kollegen so gern sprechen?"
+    },
+    {
+      "end": 871390,
+      "speaker": "C",
+      "start": 686360,
+      "text": "Das Schlimme ist, das kann man wahrscheinlich an der Unternehmensgröße selber gar nicht festmachen. Wenn wir an Datacenter denken, dann denken wir auch direkt immer so an das, was Microsoft da stehen hat, was Google da stehen, was Amazon da stehen hat, diese slicken Gebäude mit ganz viel Klima obendrauf, mit Zutrittskontrolle, mit klimatisiert, mit Hohlboden und mit Racks und reihenweise Server und hin und her und Kabel ordentlich gelegt und beschriftet und blablabla. Und die Wahrheit ist, das ist in den allermeisten Firmen die totale Ausnahme. Jetzt muss man mal gucken, was heißt denn eigentlich Unternehmen, was heißt eigentlich Mittelstand? Mittelstand wird ja auch immer wieder anders definiert. Wenn wir jetzt mal so an die großen Läden denken, ob du sei es jetzt Konzerne, guck in den DAX, was weiß ich, die werden solche Datacenter haben. Teilweise würden die auch nicht mal selber betreiben, sondern lassen die betreiben. Aber der allergrößte Teil der Unternehmen, zum Beispiel jetzt in Deutschland, sind ja gar nicht Mercedes oder die Deutsche Bank oder sonst irgendwas, sondern es sind viele kleine Buden und auch die haben alle immer IT da stehen. Sei es jetzt der kleine Handwerker, der hat auch irgendwie seine Handwerkssoftware, das ist dann halt ein Server und das Ding steht auf jeden Fall nicht in dem Datacenter, sondern steht irgendwo eine Abstellkammer und wenn du Glück hast, ist da noch eine USV dran. Wenn man jetzt mal so den Mittelstand nimmt und da kommt es jetzt ein bisschen darauf an, wie man Mittelstand definiert, ob man es am Umsatz festmacht, sonst irgendwas. Aber ich sage mal so, die die Unternehmen, ich sage mal irgendwas zwischen dreiig und ein tausend Mitarbeiter, da gibt es eigentlich die komplette Bandbreite. Es kann sein, dass die ganz ordentliche Server Räume haben. Die haben vielleicht auch dann irgendwann mal den Schritt gemacht und haben sich irgendwo Fläche in richtigen Datacentern angemietet. Es kann aber auch sein, dass die irgendwelche Räume, wo dann halt irgendwann mal alle Netzwerkkabel zusammengelaufen sind, dann als Serverräume ausgebaut haben. Da liegt Teppich drin, ich habe Kunden, die haben Serverräume, da guckst du dann an die Wand und denkst, warum ist denn da eigentlich eine Wand gekachelt, weil das irgendwann mal ein Wohnraum war in diesem Gebäude oder so. Also da gibt es eine totale Bandbreite und sowas packst du typischerweise auch nicht an. Also wenn du ein Unternehmen bist und du hast irgendwann mal gebaut, dann hast du da den Stand von Baujahr drin. Und wenn du irgendwo mit deinem Unternehmen in einem gemieteten Objekt bist, dann hat dein IT Raum, dein Serverraum ungefähr den Stand von Baujahr. Das packst du halt nicht mehr an Kunden, die neu bauen. Klar, die lassen sich das mittlerweile auch Geld kosten und da gibt es ja mittlerweile auch eine ganze Menge Firmen, die sich jetzt auf solchen Rechenzentrumsbau spezialisiert haben. Und da hast du dann auch wieder vernünftige, vernünftige Umgebungen. Ich habe einen Kunden in Köln, der hat sich jetzt gerade für ein hundert zehn Millionen einen schönen Neubau hingestellt mit Laborfläche und Produktionsfläche und allem Pipapo. Und ja, da ist dann auch ein entsprechender Raum drin, der den Namen kleines Datacenter verdient, also mit einer vernünftigen Klimatisierung, mit REX, mit Kaltgang, Warmgang etc. Aber das kostet Geld und das machst du halt auch dann nur, wenn du dann halt irgendwie die Gelegenheit dazu hast. Aber ganz klar, Punstein ist, diese Besenkammer ist Realität. Also ist glaube ich total egal, bei welchem Laden du heute da rein marschierst, Wenn er eine gewisse Größe hat oder sonst irgendwas, guck dir das Gebäude an, dann kannst du ungefähr abschätzen, was da als Serverraum dient."
+    },
+    {
+      "end": 881430,
+      "speaker": "B",
+      "start": 871390,
+      "text": "Das ist so. Mit welchen Kunden habt ihr denn so zu tun? In welchen Branchen und Größenordnungen liegen denn eure Kunden Meistens zumindest oder welche Bandbreite deckt ihr ab?"
+    },
+    {
+      "end": 976220,
+      "speaker": "C",
+      "start": 881430,
+      "text": "Wir haben über die Jahre haben wir so ein bisschen Branchenfokus. Also wir haben relativ viele Kunden im Sozialwesen. Wir haben produzierende Industrie da, so Pharma, Chemie zum Beispiel, Wir haben ein paar Maschinenbauer dabei. Das ist natürlich auch schon mal eine ganz spannende Spreizung. Wenn du jetzt zum Beispiel Maschinenbau nimmst, da gibt es immer unsere sogenannten Hidden Champions in Deutschland, also Unternehmen, die keine Sau kennt, wo dann auf einmal rausfällt, die machen irgendwelche, keine Ahnung, Zulieferteile für Volkswagen und die haben schwimmen unfassbarem Geld. Ein Kunde von mir baut zum Beispiel Treppenlift. Also wer die Apotheken Umschau liest, der weiß, welcher Kunde das ist oder welche Firma das ist. Die verdienen sich komatös. Auf der anderen Seite, wenn du zum Beispiel dann die Sozialbranche nimmst, also zum Beispiel die ganzen Diakonien, Caritas und so weiter, das sind nicht zwangsläufig Unternehmen, die im Geld schwimmen, weil die finanzieren sich ja auch ganz anders. Und je nachdem, was du dann an Branche, an Unternehmen hast, haben die auch immer einen anderen Fokus auf IT. Du kannst natürlich zum Beispiel sehr IT getriebene Branchen haben, also Gerade so was wie Maschinenbau kann zum Beispiel sehr IT getrieben sein. Krankenhäuser, Radiologie ist sehr IT getrieben. Generell Sozialwirtschaft kann von bis sein. Also von IT ist halt so ein notwendiges Übel bis hin zu IT wird ganz intensiv genutzt, um, sage ich mal, Menschen zu helfen, wo es halt wirklich dann Mittel zum Zweck ist. Was die Unternehmensgrößen angeht, ist bei uns auch die komplette Spreizung. Wir haben vom Zehn Mann Handwerkerbetrieb bis hin zum Klinikkonzern mit Mitarbeitern, haben wir eigentlich alles dabei."
+    },
+    {
+      "end": 981380,
+      "speaker": "A",
+      "start": 976220,
+      "text": "Also kann man eigentlich festhalten. Digital Natives habt ihr eigentlich weniger als Kunden."
+    },
+    {
+      "end": 994930,
+      "speaker": "C",
+      "start": 981460,
+      "text": "Korrekt. So ein Laden wie jetzt Trivago ist halt bei euch häufiger gefallen im Podcast. Nein, sowas haben wir nicht. Wäre bei uns auch die totale Ausnahme. Keiner unserer Kunden hat IT als Kernkompetenz irgendwo oder als Teil des Produkts."
+    },
+    {
+      "end": 1038580,
+      "speaker": "A",
+      "start": 995080,
+      "text": "In den modernen Firmenkonstrukten zumindest aus unserer Perspektive unterteilt man eigentlich IT als Kostencenter. So, das wäre dann glaube ich bei euren Kunden so der Fall. Oder IT als Innovationstreiber und das sind dann halt die Digital Native. Jetzt stelle ich mir natürlich die Frage, wenn ich diese ganzen Storys von diesen Besenkammern höre, ich kenne das auch, ich habe auch meiner kleinen Webagentur gearbeitet, da war, als ich mir eine neue Flasche Wasser geholt habe, bin ich auch am Server vorbeigelaufen. Ja, die Kühlung war das Fenster sozusagen. Naja, auf jeden Fall, da frage ich mich natürlich, okay, jetzt muss da leider hier und da mal was Neues angeschafft werden, weiß ich nicht, ein SIN Client Server oder sowas, so der, ich weiß nicht, heißt das synclient Server, ihr wisst."
+    },
+    {
+      "end": 1040740,
+      "speaker": "B",
+      "start": 1038580,
+      "text": "In was für einem Jahrhundert lebst du, Andi, aber."
+    },
+    {
+      "end": 1046820,
+      "speaker": "A",
+      "start": 1042820,
+      "text": "Woanders. Und jetzt haben die Besenkammern ja auch nur begrenzt Platz."
+    },
+    {
+      "end": 1047380,
+      "speaker": "C",
+      "start": 1046900,
+      "text": "Exakt."
+    },
+    {
+      "end": 1056470,
+      "speaker": "A",
+      "start": 1047540,
+      "text": "Da frage ich mich, ist das nicht eigentlich prädestiniert für Software as a Service und Cloud und all den modernen Kram, von dem wir eigentlich sprechen, weil du willst ja nicht mehr in die Besenkammer stellen."
+    },
+    {
+      "end": 1208800,
+      "speaker": "C",
+      "start": 1056470,
+      "text": "Ja, das ist ein ganz interessanter Punkt. Und ich meine, ich blicke jetzt auch auf mittlerweile über fünf und zwanzig Jahre Erfahrung in der IT zurück. Fangen wir mal bei ganz vorne an. Warum bin ich eigentlich in der Infrastruktur gelandet, im Datacenter gelandet? Weil ich keinen Bock auf Anwender hatte und somit Menschen und mein Drucker geht nicht. Das fand ich schon in der Ausbildung so belastend, dass ich gesagt habe, Alter, was kannst du eigentlich machen, dass du mit solchen Leuten nichts zu tun hast. Okay, muss also ins Datacenter. Naja, es war schon immer so, dass Technologie, also Infrastruktur eigentlich immer von oben nach unten gegangen ist. Sprich also aus der Konzernumgebung, wenn Technologie etabliert wurde, wurde es halt billiger. Damit war es dann für den Mittelstand erschwinglich und dann ging es halt weiter runter. Sieht man ganz, ganz hart am Thema Virtualisierung. Ganz früher, so Anfang der ER war das ein Thema für die Konzerne einfach weil noch mehr Server ins Datacenter reinstecken, ging nicht. Also musste man halt irgendwie gucken, dass man die Workloads auf der Physik, die man hatte, irgendwie vereint bekommt. Und irgendwann ist das dann auch tatsächlich in den Mittelstand, in die kleineren Unternehmen runtergetropft. Und auf der anderen Seite gab es aber auch die gegenteilige Entwicklung bei den Mittelständern, bei den kleinen Unternehmen eben Früher hattest du diesen einen Server, der alles gemacht hat und damit, dass Virtualisierung erschwinglich wurde, fing das auch da an mit du hattest auf einmal einen Laden, der hatte nicht nur einen Server, dann kam der Technologie Refresh, es wurde virtualisiert und dann waren es fünf halt fünf WMS Dienste wurden aufgesplittet und so ging das immer weiter. Ich habe einen Kunden in Köln, den habe ich zwei tausend vier relativ am Anfang meiner Karriere bei der ML kennengelernt und da hatte der irgendwie im Rack fünf Server. Heute, zwanzig Jahre später, hat dieser Kunde dreiig WMS laufen auf drei Servern, Virtualisierung sei Dank. Und so ist das tatsächlich. Das ist so ein bisschen dieses, es kommt nicht immer mehr in die Besenkammer rein, aber es ist halt anders. Also Enterprise Technologie nimmt auch da Einzug und somit jedem Technologie Refresh. Und da sind wir dann auch wieder beim Thema Cost Center. Und warum nutzen diese Kunden nicht Cloud? Viele Mittelständler denken bei IT an Cost Center, denken okay, ich muss halt irgendwie Kohle budgetieren, dann lern ich meine Geschäftsführung halt einmal zwei hundert fünfzig drei hundert raus, dann wird da einmal Zeug hingestellt und dann muss das fünf, sechs, sieben Jahre laufen. Das ist die bittere Realität. Also tatsächlich leben wir mittlerweile in so einem Cycle, so fünf Jahre und dann wird das Ganze refreshed und dementsprechend wird das entsprechend auch so ausgestattet. Also die allermeisten Kunden, die wir betreuen, gehen halt wirklich hin damit mit dem dicken Daumen oder Wir gehen mit dem dicken Daumen hin und sagen, okay, gucken wir mal, wo könnte der, was könnte der Kunde in fünf Jahren an Wachstum haben und da wird das entsprechend designt und dementsprechend wird dann da auch wieder die Infrastruktur aufgefahren."
+    },
+    {
+      "end": 1217280,
+      "speaker": "B",
+      "start": 1208800,
+      "text": "Aber sowas wie Exchange zum Beispiel, das kannst du ja gar nicht mehr on Premium wirklich, oder? Also solche Dinge wandern ja in die Cloud."
+    },
+    {
+      "end": 1336230,
+      "speaker": "C",
+      "start": 1217520,
+      "text": "Ja, es gibt so ein paar Sachen, die wandern in die Cloud. Bleiben wir jetzt mal beim Thema Microsoft Exchange, den gibt es immer noch On Prem. Microsoft hat zwei tausend neunzehn gesagt, der Exchange zwei tausend neunzehn, das ist unser letzter Exchange für die ganz großen Kunden. April, April ist er nicht. Wir rollen jetzt gerade Exchange Subscription Edition aus, also den SE Exchange zwei tausend sechzehn, zwei tausend neunzehn sind jetzt am Lebensende. Aber das sind halt auch sehr ausgewählte Sachen. Also sowas wie, jetzt werden wir der Microsoft Welt bleiben, sowas wie Exchange, das ist so ein Service, Mail Collaboration, das kannst du ganz gut nach außen packen, was die Kunden aber immer weiter betreiben. Und das ist halt auch so ein bisschen die Realität. Jeder unserer Kunden hat ein Active Directory, da laufen mindestens zwei Domain Controller. Dann hast du das ganze Thema File Services, das ist nicht alles sharepoint und onedrive und Google Drive und hin und her. Nein, es ist ein scheiß Fileserver mit Freigaben, wo Leute Word Dokumente und Excel Tabellen drauf ablegen. Du hast das ganze Thema Drucken, Printserver, sonst irgendwas. Also plus das, was du halt dann eventuell für dein Netzwerk brauchst an Monitoring, an NAC, also Network Access Control und sonst irgendwas. Dann hast du die ganzen Sachen mit Datenbanken für deine Branchensoftware. Gerade wenn du halt in so Branchen wie wir unterwegs bist, hast du teilweise echt spezielle Branchensoftware, Gerade so Sozialwirtschaft, da hast du dann wirklich auch die Software, wo du eine kleine Entwicklerbude hast. Im Zweifel ist es ein Entwickler, der hat einmal diese Software gebaut und dann hat er die quasi in der halben Sozialwirtschaft verteilt, weil die einen ganz bestimmten Aspekt abbildet und dann bist du da am Wickel und der verdient daran und der hat dann vielleicht auch kein Interesse und auch vielleicht schon ein bisschen älter, auch keinen Bock, das Ding neu zu entwickeln und dann lebt das einfach bei dir On prem, einfach weil es diese Option Software as a Service an der Stelle gar nicht gibt. On prem ist bei unseren Kunden aktuell nicht wegzudenken, Definitiv nicht. Und ja, das sind Kosten, weil IT ist halt typischerweise Kostcenter. Das ist auch häufig das Thema, so Cloud kostet alles Geld, kriegst du regelmäßig eine Rechnung, ist so ein bisschen unpredictable, weil warum ist die Rechnung jetzt auf einmal drei hundert Euro teurer?"
+    },
+    {
+      "end": 1346960,
+      "speaker": "B",
+      "start": 1336230,
+      "text": "Aber wie siehst du die Preise? Grundsätzlich findest du auch, dass Cloud teurer ist. Also du hast ja die Praxis im Endeffekt, was es dann am Ende kostet mit allen."
+    },
+    {
+      "end": 1384770,
+      "speaker": "C",
+      "start": 1347120,
+      "text": "Genau, es ist aber diese ehrliche Rechnung, die viele IT Leiter nicht bereit sind aufzumachen. Die sagen dann Tallisten, warum soll ich denn eigentlich die Cloud gehen? Warum soll ich denn hier irgendwie bei Azure für eine VM, keine Ahnung, drei hundert im Monat zahlen? Ich habe doch hier unterm Schreibtisch mein Server stehen und was brauche ich denn mehr? Ja, du vergleichst aber gerade dann zum Beispiel auch ein Produkt, was halt in einem richtigen Datacenter läuft, wo du eine gewisse Verfügbarkeit dran schreiben kannst, wo gegebenenfalls auch noch eine Lizenz mit drin ist. Das ganze Thema Scale up von der VM ist damit erledigt und das ist dann halt ja da überall irgendwo mit eingepreist. Und diese Rechnung machen die wenigsten IT Leiter dann tatsächlich auf."
+    },
+    {
+      "end": 1412880,
+      "speaker": "A",
+      "start": 1384850,
+      "text": "Aber die meisten Subscription Prices, Prices, die meisten Subscription Preise sind ja wirklich volumenbasiert. Das bedeutet für jeden Mitarbeiter kannst du sagen, eine Active Directory Lizenz und eine Exchange Lizenz kostet jetzt fünf, das bedeutet, du kannst ja eigentlich für deine ganzen Microsoft Produkte, die du dann jetzt in der Cloud hast, kannst du ja eigentlich einen Preistag pro Mitarbeiter machen. Ist das nicht eigentlich für diese Kostencenter Thematik eine super Sache?"
+    },
+    {
+      "end": 1488330,
+      "speaker": "C",
+      "start": 1412880,
+      "text": "Eben nicht. Und zwar aus dem einfachen Grund, weil die IT Leiter, die heute sagen, boah Alter, warum soll ich denn jetzt hier eigentlich für jeden meiner Mitarbeiter so ein M E E, da ist dann Windows mit drin, da ist Office mit drin, da ist Exchange mit drin. Warum soll ich denn da jeden Monat für Mitarbeiter Geld bezahlen, wenn ich früher TM einmal Geld für eine Lizenz ausgegeben habe, die keine Ahnung, fünf, sechs, sieben Jahre genutzt habe, bis mir mein Dienstleister gesagt hat, du musst jetzt, du musst jetzt neue Software kaufen. Also dieses ganze Thema mit wiederkehrenden Kosten, das bringt den ein oder anderen Mittelständler vom IT Budget her gerade um, weil alle wechseln auf Subscription modern und das ist halt da in deren Realität halt noch nicht so wirklich angekommen. Weil natürlich hast du dann jetzt, wenn wir jetzt so bei unseren typischen Kunden sind, du hast jetzt seit ein paar Jahren dieses Thema M. Fakt ist auch, wir als Dienstleister verdienen da quasi gar nichts dran. Es gibt so ein bisschen Handling Fee, aber nicht viel. Und das ist halt jedes Jahr wiederkehrend. Und dann hast du auf der anderen Seite aber jetzt eben auch zum Beispiel Läden wie Broadcom, der Wechsel bei Broadcom auf ein Subscription Modell. Aus Sicht von Broadcom kann man das total verstehen. Alle Kunden sind auf gut Deutsch am kotzen, weil da auf einmal wahnsinnige Summen zusammenkommen."
+    },
+    {
+      "end": 1503730,
+      "speaker": "A",
+      "start": 1488650,
+      "text": "Moment mal, Moment, mit Broadcom meinst du jetzt die letzte vmware Akquisition, richtig? Korrekt, richtig, weil vmware, die Virtualisierungssoftware, die wird von Broadcom gekauft und dann haben die das Lizenzierungs und Lizenzmodell einmal komplett geändert."
+    },
+    {
+      "end": 1561490,
+      "speaker": "C",
+      "start": 1503730,
+      "text": "Richtig, einmal komplett. Früher hast du nach Sockets lizenziert, jetzt ist nach Cores lizenziert pro Jahr und so weiter und so fort. Kleinere Bundle. Das ist ja auch immer das Problem so ein bisschen, das verstehen auch viele IT Leiter nicht. Du kaufst ja bei einer Subscription nicht nur ein Stück Software, du kaufst ja in der Regel immer ein ganzes Potpourri an Produkten. Wenn du mal guckst, was in so einem M Plan drin ist, dann ist es ein bisschen unfair zu sagen, ja, aber ich brauche da ja eigentlich nur Exchange draus. Ja, du musst aber eigentlich den kompletten Blumenstrauß nutzen, damit sich das rechnet. Und das ist auch der Grund, warum wir dann vielen Kunden empfehlen, ja komm, jetzt mach nicht nur Exchange online, jetzt mach auch sharepoint, dass du deinen Fileserver da los wirst. Guck, dass du dann auch deine Windows Lizenz mit drin hast, dann muss sie nicht irgendwie alle Jahre immer wieder Windows auf deinen Clients neu lizenzieren etc. Diese Kostenbetrachtung von Cloud ist da bei vielen Unternehmen einfach noch nicht angekommen. Was sie vielleicht auch dann teilweise in deren Art und Weise, wie sie IT budgetieren, wie sie zum Beispiel auch damit Abschreibungen und so weiter umgehen, spiegelt sich da einfach noch nicht wieder."
+    },
+    {
+      "end": 1599810,
+      "speaker": "B",
+      "start": 1561730,
+      "text": "Das heißt aber, wenn ich dich richtig verstehe, dann ist auch ganz viel, was ihr nicht macht, ist diese ganzen Altlasten zu bereinigen und abzudaten nach eben diesen sieben Jahren oder so, wie du gesagt hast, oder fünf bis sieben Jahren Oder gibt es auch Clients, die irgendwie moderner am Weg sind? Oder sagst du in diesem Mittelstand, da wird immer bis zu einem gewissen Punkt gewartet, bis es nicht mehr anders geht, Weil grundsätzlich ist ja heute schon die Zeit eigentlich eine andere, auch wie schnell einfach Updates kommen, wenn du Update Zyklen vergleichst von früher und von heute und auch Security und solche Dinge, die Zeit wird ja schon viel schneller. Also siehst du da auch einen Wandel oder ist dieses alte Verhalten schon sehr eingebrannt?"
+    },
+    {
+      "end": 1756150,
+      "speaker": "C",
+      "start": 1599810,
+      "text": "Das hat häufig was mit der Kultur in den Unternehmen zu tun. Definitiv. Das fing ja eigentlich schon so mit dem Wechsel XP auf Windows sieben, da habe ich das so das erste Mal so richtig wahrgenommen, dass halt viele Unternehmen damit total gestruggelt haben und einfach nicht hinterher kamen. Also auf einmal wurde gesagt, so dann an dem Tag gibt es keine Updates mehr für XP. Oh Gott, dann müssen wir auf Windows sieben gehen, dann sah das anders aus, dann muss das anders konfiguriert werden. Dann war die Frage, wie kriegen wir das unseren Anwendern verkauft das jetzt irgendwie das Icon nicht mehr rot, sondern grün ist. Das hat sich unglaublich gezogen Und das Problem ist, und das sieht man jetzt eigentlich sehr schön, das ist so ein Effekt, die Unternehmen kommen nicht hinterher. Gefühlt würde ich sagen, haben die Unternehmen jetzt gerade erst auf Windows zehn umgestellt und sagt Microsoft im Oktober ist mit Windows zehn Feierabend, bitte updaten sie auf Windows elfte Und das hat vielleicht auch einfach damit zu tun, dass viele Kunden so kulturell halt mit ihren Anwendern immer alles customizen wollen. Die wollen immer alles recht machen und hin und her und und Microsoft denkt da aber zum Beispiel anders. Die sagen hier, du kaufst halt irgendwo beim Distributor Notebook Microsoft Autopilot, da wird dann lustige Hardware ID hochgeladen, der Anwender kriegt das Ding mit UPS, mit DPD, mit wem auch immer geschippt, der klappt das auf, der gibt da seinen Benutzernamen, sein Kennwort ein und dann wird das Ding komplett betankt und dann hat er da seine Microsoft Welt drauf mit Office, mit Run Drive, mit. Das ist die Realität, wie Microsoft sich vorstellt und die Realität, wie sie in vielen Unternehmen ist, ist aber eine andere, sondern da wird mit Images gearbeitet, da wird dann mit Software Deployment gearbeitet und die Anwender brauchen aber auch noch dieses Tool und jenes Tool und die Frau Müller Lüdenscheid aus der Buchhaltung. Wenn die jetzt einen neuen Rechner kriegt, dann dauert das erstmal einen Tag, bis das alles wieder läuft, weil da muss man ja die Drucker genau wieder so einrichten und die Icons genauso wieder auf dem Desktop ablegen und das kostet Zeit. Und wenn du dann halt irgendwie vor dir hast, dass du dann irgendwie, keine Ahnung, fünfzig, zwei hundert, drei hundert, drei tausend Clients tauschen musst, dann hast du für sowas keine Zeit. Deswegen funktioniert das in großen Läden eigentlich sehr gut, weil die haben dieses ganze IT Setup und auch das Client Rollout sehr, sehr stark vereinheitlicht. Je kleiner das Unternehmen wird, desto mehr Sonderlocken und deswegen desto länger dauert das Ganze. Plus du hast natürlich auch, gerade wenn wir jetzt dann über Branchen Lösungen reden und so weiter, auch immer wieder Software dabei, wo die Hersteller nicht hinterherkommen, wo dann halt auch die Software mal gekauft wurde, dann bestimmte Betriebssysteme unterstützt und der Hersteller sagt, ja gut, wenn du jetzt neue Server, Betriebssystem hast, neue SQL Server Version, da brauchen wir für neue Lizenzen und dann sagt, keine Ahnung, eine IT Leitung, eine Geschäftsführung schnell so nein, also das ist so ein bisschen bisschen Mischung. Aber ja, viele dieser Geschichten ergeben sich schlicht daraus, dass es so ein bisschen so ein kulturelles Problem ist."
+    },
+    {
+      "end": 1793440,
+      "speaker": "A",
+      "start": 1756550,
+      "text": "Ich habe auch mal gehört, bzw. Ich habe einen sehr, sehr guten Freund, der arbeitet in einem sehr großen Konzern namens Daimler, viele Rechner. Ich sag mal so, wenn da noch, wenn da schon Windows XP oder ähnliches läuft, dann kannst du schon mal Daumen hoch auch machen. Also ich glaube, Mercedes zahlt ordentlich zusätzliche Lizenzgebühren, dass Microsoft deren Systeme noch custom patched und so weiter, weil diese dann halt nicht geupdatet werden können. Jetzt umgibst du dich natürlich mit diesem ganzen Legacy und das ganze Legacy verdient ja gerade das Geld für diese Mittelständler, muss man ja auch mal wieder ganz kurz sagen."
+    },
+    {
+      "end": 1795040,
+      "speaker": "C",
+      "start": 1793680,
+      "text": "Das ist die traurige Wahrheit."
+    },
+    {
+      "end": 1830990,
+      "speaker": "A",
+      "start": 1796000,
+      "text": "Also du kommst dann aus der Besenkammer, nämlich gerade nach der Datacenter Tour bei deinem neuen Kunden und dann kriegst du vielleicht noch mal einen Wisch ausgedruckt vom IT Leiter, der sagt dir, wie der Stack aktuell aussieht und du kannst dir nicht mehr die Haare aus dem Kopf reißen, weil du schon alle Glatze hast. Aber dann gehst du natürlich mit diesem Wisch nach Hause Und deine Aufgabe ist es, die ganze Sache mal auf einen modernen Stack zu heben, so wie man heutzutage eigentlich mal so einen ordentlichen Mittelstand aufbaut. Wie sieht denn so ein moderner Stack einmal in einem Abwasch aus?"
+    },
+    {
+      "end": 1872620,
+      "speaker": "C",
+      "start": 1830990,
+      "text": "Genau, also was wir momentan deployen, also bis vor zwei Jahren, hätte ich noch gesagt, ist bei uns halt vmware gesetzt als Virtualisierungsprodukt. Server ist eigentlich egal, ob du da jetzt HPE oder Lenovo oder Dell kaufst, das ist total egal. Die tun es alle. Wir sind seit vielen Jahren mit HPE verbandelt. Am Ende des Tages tun es die Dinge alle. Virtualisierung machen wir seit einiger Zeit relativ viel mit Nutanix. Also grundsätzlich deployen wir nur virtualisiertes Zeug, also diesen Server, wo man direkt Betriebssim drauf klatscht. Und alle Anwendungen machen wir schon seit vielen Jahren nicht mehr. Klassische monolithische Speichersysteme. Das klassische SAN gibt es bei den allermeisten unserer Kunden auch nicht mehr. Das geht alles in Richtung HCI, Hyperconverged Infrastructure."
+    },
+    {
+      "end": 1877940,
+      "speaker": "B",
+      "start": 1872620,
+      "text": "Kannst du jetzt kurz erklären, was HCI ist? Weil für mich ist das Human Computer Interaction."
+    },
+    {
+      "end": 1932600,
+      "speaker": "C",
+      "start": 1879620,
+      "text": "Stell dir einfach vor, du hast halt nicht deinen klassischen großen Schrank mit vielen Platten irgendwo in der Besenkammer stehen, sondern du verteilst diese ganzen Platten einfach über alle Server, die du bei dir so im Rack stehen hast. Also jeder dieser Server liefert Compute, liefert Networking, liefert Storage Capacity, IO und über die Anzahl der Server wird dann entsprechend für Redundanz gesorgt. Also das einfach dann entsprechend bei drei, fünf, sieben, zehn, zwanzig Servern wird einfach so und so viel Kopien von Blöcken auf den anderen Maschinen vorgehalten, was eben dazu führt, wenn eine Platte ausfällt. Wenn ein Server ausfällt, ist das kein Problem, die Daten liegen auf den anderen Servern noch vor. Aber grundsätzlich kann halt jeder dieser Server IO und Capacity bereitstellen und damit ist die ganze Last auf diese ganzen Server verteilt und du hast nicht mehr diesen einen großen Plattenschrank, wo dann alles an."
+    },
+    {
+      "end": 1935640,
+      "speaker": "B",
+      "start": 1932600,
+      "text": "Daten drauf liegt, Also so wie eine Mini Cloud."
+    },
+    {
+      "end": 1939840,
+      "speaker": "C",
+      "start": 1936200,
+      "text": "Ja, zum Beispiel Nutanix nennt es dann halt auch ganz gerne immer so richtig."
+    },
+    {
+      "end": 1942080,
+      "speaker": "A",
+      "start": 1939840,
+      "text": "Sowas wie Proxmox, spielt gar keine Rolle."
+    },
+    {
+      "end": 1944600,
+      "speaker": "C",
+      "start": 1942080,
+      "text": "Bei uns jetzt nicht, aber so als."
+    },
+    {
+      "end": 1947080,
+      "speaker": "A",
+      "start": 1944600,
+      "text": "Potenzieller Konkurrent für vmware."
+    },
+    {
+      "end": 1955680,
+      "speaker": "B",
+      "start": 1947080,
+      "text": "Da möchte ich mich übrigens gleich bedanken für diese Episode, die ihr mir mal hattet. Kann mich leider nicht mehr an seinen Namen erinnern, aber ihr habt ja mal sehr tief über Proxmox gesprochen, war auch eine sehr interessante Folge."
+    },
+    {
+      "end": 1957600,
+      "speaker": "C",
+      "start": 1955680,
+      "text": "Ja, da gab es auch noch einen anderen Podcast, da war ich auch mit drin."
+    },
+    {
+      "end": 1964680,
+      "speaker": "B",
+      "start": 1957600,
+      "text": "Ja, und da habt ihr auch gesprochen, dass es durchaus ein guter Konkurrent sein kann für auch größere Installationen, glaube ich."
+    },
+    {
+      "end": 2082240,
+      "speaker": "C",
+      "start": 1964680,
+      "text": "Hatte ich genau richtig. Also grundsätzlich, was Virtualisierung angeht, am Ende des Tages ist es, glaube ich, total egal, ob du da vmware vsphere hast, ob du eine Trainix AHV hast, ob du ein Hyper V von Microsoft hast, ob du ein Proxmox hast, Xen, whatever. Virtualisieren tun die alle. Das heißt, wenn es einfach nur darum geht, eine VM zu betreiben, so ein bisschen ha, so ein Server fällt aus, die VM wird magisch woanders neu gestartet, vielleicht noch so ein bisschen Live Migration von vms, also damit, wo wir so Anfang der er Jahre Kunden wirklich mit eingefangen haben, das können die heute alle. Da geht es halt eher so darum, wie ist das Monitoring, wie ist das Feature Set insgesamt auch so in so ein paar Sonderlocken und so weiter. Proxmox hat für uns als Dienstleister aber momentan einen ganz anderen Punkt. Wir wollen als Dienstleister am Ende ja nie schuld sein. Das heißt, wir brauchen im Zweifelsfall immer jemanden, wo wir mit dem Finger drauf zeigen können. Das ist natürlich das Schöne, wenn du dann so vmware hast, Broadcom, da hast du dann auch entsprechend großen Support dabei, wo du dann sagen kannst, da geht was nicht. Hilfe, Hilfe. Proxmox hat das natürlich so in der Form noch nicht. Man kann natürlich Support dafür kaufen oder du hast entsprechende Dienstleister Grüße an den Falk, die sich entsprechend gut damit auskennen, plus natürlich auch der Support. Also die Hersteller, also jetzt Dell, HPE, Lenovo, was weiß ich, die gehen nicht hin und sagen, auf dem Ding läuft Proxmox. Und damit ist das auch für manche Kunden wieder so ein bisschen, kann ich da vielleicht irgendwas haben, wo irgendeiner mal gesagt hat, habe ich installiert, habe ich ausprobiert, funktioniert, Stempel drauf. Das wollen halt viele Kunden heute immer noch sehen. Und deswegen, wir haben selber Proxmox bei uns im Office für das bisschen Infrastruktur, was wir brauchen. Das tut es auch wunderbar, aber tatsächlich haben wir es nicht bei Kunden. Also unsere Kunden setzen momentan Virtualisierungslösungen ein von Nutanix, von vmware, Broadcom und von Microsoft, nämlich Hyper V. Das ist das, was wir bei unseren Kunden momentan so sehen und fahren."
+    },
+    {
+      "end": 2090820,
+      "speaker": "B",
+      "start": 2082240,
+      "text": "Und ist es dann eine hybride Cloud? Also verwendet ihr dann auch gewisse Sachen sowie Exchange denn in der Cloud, wenn du jetzt neue Setup aufsetzt und gewisse."
+    },
+    {
+      "end": 2116140,
+      "speaker": "C",
+      "start": 2090820,
+      "text": "Seiten, also kommt immer ein bisschen drauf an. Das Allermeiste bei unseren Kunden ist tatsächlich On Prem. Wir haben auch bestimmte Workloads in der Cloud, so was wie Exchange Online ist immer etwas, wo ich sage, boah Leute, betreibt doch bitte keine Exchange Server mehr. Exchange war ja auch in der Vergangenheit die letzten Jahre mehrfach Opfer von ekligen Sicherheitslücken. Deswegen, also wenn du nicht zwingend ein Exchange On Prem betreiben musst, mach bitte Exchange Online, lass Microsoft sich darum kümmern. Das funktioniert wunderbar, wunderbar."
+    },
+    {
+      "end": 2123040,
+      "speaker": "A",
+      "start": 2116700,
+      "text": "Was sind denn Gründe, damit ich ein Exchange On Prem betreibe möchte, wenn du sagst, wenn man keine guten Gründe hat."
+    },
+    {
+      "end": 2143880,
+      "speaker": "C",
+      "start": 2123040,
+      "text": "Ich habe einen Krankenhauskonzern als Kunden, da reden wir bei Usern, das sind glaube ich irgendwie Mailboxen, dann kannst du natürlich Exchange Pläne buchen oder du stellst dir einfach sieben, acht, neun, zehn fette physikalische Server in deine Datacenter und fährst ein Exchange On Prem hochverfügbar."
+    },
+    {
+      "end": 2149000,
+      "speaker": "A",
+      "start": 2144040,
+      "text": "Und welches Lizenzmodell hat Microsoft dann On Prem dafür? Also die werden ja auch nach Anzahl."
+    },
+    {
+      "end": 2194000,
+      "speaker": "C",
+      "start": 2149000,
+      "text": "Lizenzen gehen oder in der Vergangenheit war es so, du lizenziert den Server und dann entsprechend die Client Access Lizenzen, die neue Exchange Server Subscription Edition SE. Da braucht man dann wieder Cloud Pläne und das ist dann wieder ein bisschen anders lizenziert. Aber es gibt tatsächlich Gründe, warum man Exchange On Prem betreibt. Aber was ja so die Cloud angeht, da haben wir dann auf der einen Seite Exchange Online, sharepoint Online und so weiter, Teams, so Software as a Service, aber es gibt ja auch so ganz klassisch die VM, die dann bei Azure läuft. Auch das haben wir auch für bestimmte Workloads. Kann das total Sinn machen, dass vms dann halt bei Azure betreibt mit side to Side VPN Tunnel zwischen On Prem und Cloud, damit sich das alles erreicht hin und her. Auch das haben wir bei Kunden."
+    },
+    {
+      "end": 2206680,
+      "speaker": "B",
+      "start": 2194080,
+      "text": "Habt ihr Kunden, die wirklich nur in der Cloud sind, also vielleicht auch die jetzt keine extremen Produktionsstraßen haben, wo es um irgendwie Nanosekunden geht, Kommunikation, sondern wo der Großteil oder vielleicht alles sogar in der Cloud ist?"
+    },
+    {
+      "end": 2226620,
+      "speaker": "C",
+      "start": 2206680,
+      "text": "Ja, haben wir tatsächlich ist sogar, wir hatten es Eingang mit dem mit dem Dorfverein Wir haben Non Profit Kunden, die quasi ihre ganzen Maschinen in der Cloud haben. Die brauchen halt nicht, das sind dann eine Handvoll WMS und die lassen sich dann halt mit dem von Microsoft zur Verfügung gestellt Non Profit Credits betreiben und dann ist das eine sehr, sehr kostengünstige Lösung für die Unternehmen."
+    },
+    {
+      "end": 2267730,
+      "speaker": "A",
+      "start": 2226860,
+      "text": "Jetzt heißt dein Podcast oder euer Podcast, den machst du ja nicht alleine. Machst du mit der Claudia Grüße. Grüße gehen raus. Ja Wartungsfenster. Und es gab Zeiten zwei tausend zwölf, zwei tausend elf, zwei tausend zehn, so um den Dreh rum. Da habe ich auch noch in der Webagentur gearbeitet und da durfte ich hier und da auch mal ein Wartungs Wartungsfenster auf einer Webseite schalten, wenn ich das CMS dahinter geupdatet habe. Also heutzutage fasst man sich an den Kopf, wie kann man eine Webseite mit Wartungsfenster machen? Wie macht ihr das denn bei Mittelstand? Also müsst ihr am Wochenende rauskommen und dann ins Büro bei denen und wenn da keiner arbeitet und dann upgrade die alles ganz einfach Oder wie funktioniert Patch Management und all sowas?"
+    },
+    {
+      "end": 2287980,
+      "speaker": "C",
+      "start": 2268290,
+      "text": "Hängt ein bisschen vom Kunden ab. Wenn der Kunde eigene IT hat, dann machen die das in der Regel selber. Es denn sei geht, es geht dann wirklich um Infrastruktur, also zum Beispiel Firmware oder Update von Virtualisierungslösungen und so weiter. Da helfen wir dann zum Beispiel, wir haben ein paar Managed Service Kunden, für die wir das dann tatsächlich machen und nein, das machen wir nicht nachts oder am Wochenende. Warum machen wir das nicht nachts oder am Wochenende?"
+    },
+    {
+      "end": 2289420,
+      "speaker": "B",
+      "start": 2287980,
+      "text": "Weil du zur teuer bist."
+    },
+    {
+      "end": 2378050,
+      "speaker": "C",
+      "start": 2290220,
+      "text": "Ja, auch das, aber es merkt keiner, wenn es in die Hose gegangen ist. Wir haben relativ häufig den Fall, dass man mit den Kunden wirklich feste Wartungsfenster abstimmt und das ist über die Jahre auch auch sehr viel besser geworden. Also auch viele Anwender haben da durchaus Verständnis, dass dann zum Beispiel donnerstags morgens werden dann bestimmte Server gepatcht und dann kann halt auch entsprechend die Fachabteilung direkt gucken, hat da alles geklappt und so weiter. Deswegen machst du das nicht nachts oder am Wochenende, weil du willst nicht nachts irgendwelche Kisten patchen, morgens ausschlafen und dann bimmeln sie dich aus dem Bett, weil da geht irgendwas nicht. Da geht irgendwas nicht. Und du hattest natürlich als letzter die Finger an dem Server, Also bist du Wartungsfenster haben wir typischerweise wirklich zu Bürozeiten auch immer wiederkehrend so was wie Updates auf Windows Servern ausrollen. Ja, das haben wir größtenteils automatisiert. Die werden dann auch zu bestimmten Uhrzeiten gepatcht, aber dann halt auch typischerweise eher zu Bürozeiten. Die starten dann neu und so weiter. Kann man die Anwendungen testen, machen, tun. Changes werden halt abgestimmt, je nachdem, was das für ein Changes. Klar, muss auch mal am Wochenende machen oder so. Lustigerweise hat gerade das Thema Virtualisierung eigentlich dazu beigetragen, dass wir sehr viel seltener an Wochenenden oder nachts irgendwelche Sachen machen müssen. Also ich habe jetzt die letzten Tage, habe ich noch eine Visi Umgebung aktualisiert, lustig über den Tag verteilt, keine Ahnung, fünf hundert WMS hat der Kunde nicht mal mitbekommen. Also schöne neue Welt. Das war früher sehr viel, sehr viel schwieriger. Vier und zwanzig mal sieben ja, wir haben MSP Kunden. Wir haben Kunden, die auch vier und zwanzig mal sieben Serviceverträge haben."
+    },
+    {
+      "end": 2380130,
+      "speaker": "B",
+      "start": 2378530,
+      "text": "Was sind MSP Kunden?"
+    },
+    {
+      "end": 2409710,
+      "speaker": "C",
+      "start": 2380210,
+      "text": "Managed Service, also das sind Managed Service Kunden. Also wir haben zum Beispiel Kunden aus der Sozialbranche, für die wir das Datacenter, das ist deren Zeug, das ist, haben die alles gekauft, bezahlt, gemacht, getan, sagen dann aber habe ich keinen Bock drauf, ML kümmer dich bitte drum. Das hat ein befreundeter IT Leiter mal so schön umschrieben mit Ich möchte, dass ich meine Admins, meine IT mit Anwendungen und Anwendern beschäftigt und nicht die Zeit damit verdödelt zu gucken, wie kriege ich denn jetzt das letzte vcenter Update auf die Maschinen drauf."
+    },
+    {
+      "end": 2430660,
+      "speaker": "A",
+      "start": 2409710,
+      "text": "Die Story kommt mir sehr bekannt vor Entwicklern, weil das sagen nämlich ziemlich viele Engineering Manager auch. Ich möchte nicht, dass meine Entwickler sich mit Themen wie Observability oder Datenbank Updates oder ähnliches beschäftigen. Dafür haben wir dann ein Plattform Team oder ähnliches. Also ist ja so, ich sag mal die Übersetzung dafür, oder?"
+    },
+    {
+      "end": 2506030,
+      "speaker": "C",
+      "start": 2430740,
+      "text": "Ja, aber das ist ja so, ich meine Infrastruktur ist ja wirklich etwas, ja, das ist die Basis, das Fundament für alles, was da oben drauf sitzt. Aber das ist halt auch etwas, was du, wenn es einmal läuft, eigentlich relativ selten anpacken muss. Das musst du ein bisschen pflegen, da musst du ein bisschen drüber feudeln, da musst du mal die eine oder andere Sache abwischen, aber da musst du eigentlich nicht ständig dran rumpfuschen. Und wenn du dann ein relativ überschaubares IT Team hast, dann möchtest du eigentlich, dass die sich mit Fachanwendungen beschäftigen dabei und den Laden unterstützen, dass diese Anwendungen halt bestmöglich eingesetzt werden. Ich meine gerade das Sozialthema oder auch so Krankenhäuser ist immer ein schönes Beispiel. Da geht es um die Versorgung von Patienten. Am Ende muss es darum gehen, dass ein Krankenhausinformationssystem läuft, dass Laborsysteme laufen und da möchtest du eigentlich nicht, dass dein Admin sagt, ach nee, nee, da habe ich jetzt gerade keine Zeit für, ich muss hier gerade mal irgendwie diesen komischen Firmware Bug dahinter her hechten. Dafür sind wir dann da und wir haben Kunden, die machen zum Beispiel vier und zwanzig mal sieben, weil zum Beispiel auch vier und zwanzig mal sieben Produktion ist. Und deswegen kann das auch mal sein, dass dann nachts irgendwie das Telefon bimmelt und dann gesagt wird, da ist jetzt irgendwie hier einer Application Server ausgestiegen oder da hat hier irgendwie einer unserer Virtualisierungshosts ein Bäuerchen gemacht und dann müssen wir da halt auch ran."
+    },
+    {
+      "end": 2508350,
+      "speaker": "B",
+      "start": 2506110,
+      "text": "Aber ihr macht es dann remote primär, oder?"
+    },
+    {
+      "end": 2547930,
+      "speaker": "C",
+      "start": 2508430,
+      "text": "Das ist ja schön, wir gehören ja einer Zunft an die auch man Kabel anpacken muss. Wir hiren auch gerade mal Personal. Ist immer lustig, wenn die fragen, wie viel Homeoffice können wir denn machen? Ja, eigentlich genug, aber denkt daran, wir gehören einer Zunft an, die auch mal Kabel anpacken muss. Das Schöne ist, das hat Corona natürlich die Pandemie gezeigt, bei uns geht auch verdammt viel remote. Im Zweifelsfall brauchst du halt irgendwie so ein Datacenter Monkey, wo du halt sagen kannst, so jetzt gehst mal dahin, das Rec und dann guckst du mal so in Gedanken runterzählen, guck mal irgendwie so, hi, sechzehn bis achtzehn, mach dir mal das Licht an dem Server an und dann gehst du auf die Rückseite und guckst mal, ob das Kabel drinsteckt oder zieh das mal raus. Also das geht."
+    },
+    {
+      "end": 2584190,
+      "speaker": "A",
+      "start": 2548010,
+      "text": "Ich finde es sehr schön, dass du das Wort Zunft gerade gesagt hast. Ich kenne das Wort, ich kenne das Wort, wenn jemand zum Beispiel auf die Walz geht und so weiter und so fort. Da fällt das oft in dem Zusammenhang. Und da habe ich das mal ganz kurz gegoogelt und da finde ich natürlich schön, dass du auch gesagt hast, man muss auch mal Kabel anpacken, denn Google sagt, das ist eine Vereinigung von Handwerkern, Schrägstrich Händlern. Händler bist du jetzt nicht. Wenn du Kabel anfasst, würde ich mal eher sagen, du klassifizierst dann euren Job in einem IT Systemhaus, wo man auch mal Kabel anpackt, dann als Handwerk. Das finde ich natürlich schön, dass jemand mal IT, jetzt in diesem Fall mehr Infrastruktur und die Softwareentwicklung als wirkliches Handwerk."
+    },
+    {
+      "end": 2590630,
+      "speaker": "C",
+      "start": 2584190,
+      "text": "Bezeichnet, wenn du erst mal so ein ganzes Rack mit Servern ausgestattet und verkabelt hast. Und das ist Handwerk. Ja, das ist so."
+    },
+    {
+      "end": 2626280,
+      "speaker": "A",
+      "start": 2590870,
+      "text": "Also wenn ich den Subreddit Cable Porn sehe, dann stimme ich dir ein hundert Prozent zu. Für alle, die jetzt gerade uns zuhören und den Subreddit Cable Porn nicht kennen, verlinken wir in den Show Notes. Nehmt euch mal zwei Stunden Zeit, ihr werdet beeindruckt sein. Und falls ihr das jemals mal versucht habt nachzumachen, dann wisst ihr diese Arbeit zu schätzen. Ich habe es versucht. Ich habe hier unten so ein kleines Rack hängen im Keller und da habe ich so zwanzig dreiig Netzwerkkabel und so ein Page Panel und so weiter und so fort. Es sieht hundbeschissen aus. Ich habe versucht, Cable Porn zu betreiben. Nein, ich habe es aufgegeben."
+    },
+    {
+      "end": 2663340,
+      "speaker": "C",
+      "start": 2626280,
+      "text": "Also ich kann das, ich kann das leider bestätigen. Ich versuche das auch immer wieder. Auch ich lasse mir den Spaß nicht nehmen, Rack Stack zu machen, wenn da mal wieder irgendwo Zeug verbaut werden muss. Aber nein, so schön kriege ich das auch nie hin. Aber man lernt Kollegen hassen, wenn man zum Beispiel mal an Installationen ran muss, die Kollegen vielleicht vor vielen Jahren mal gemacht haben und man greift so in diesen Kabelbaum rein, weil man Kabel muss. Auf einmal zieht man die zerschnittenen Hände raus, weil die Kollegen mit Kabelbindern gearbeitet haben und dann irgendwie die überstehenden Kabelbinder schräg abgepitcht haben. Leute, immer Velcro, keine Kabelbinder, immer Velcro. Kann man schön aufmachen, Immer besser. Kratzt doch nicht an den Händen."
+    },
+    {
+      "end": 2704840,
+      "speaker": "A",
+      "start": 2663420,
+      "text": "Jetzt hattest du gesagt, ihr habt Kunden, die haben eine eigene IT, die kümmern sich dann um Fachapplikationen. Und das bedeutet natürlich auch, ihr habt Kunden, die haben keine eigene IT. Und dann frage ich, wie funktioniert das denn, wenn die Mitarbeiter dann eine Shadow IT aufbauen, sich in Excel mal mit irgendwelchen Makros verewigen, Weil ich meine, die Tools von der Stange, die kennen die halt vom Weihnachtstisch, wenn der Sohn mal wieder Dropbox bei denen installiert, damit die Fotos auch vom Handy auf dem Computer haben und so weiter, weil dann kann man das ja auch in der Firma nutzen. Also wie funktioniert all das? Habt ihr damit Probleme? Welche Herausforderungen habt ihr mit diesen Excel Makros bei einem und so weiter und so fort."
+    },
+    {
+      "end": 2708440,
+      "speaker": "B",
+      "start": 2705000,
+      "text": "Beziehungsweise wer macht denn dann die Software, wenn es keine Softwarethemen gibt?"
+    },
+    {
+      "end": 2803270,
+      "speaker": "C",
+      "start": 2708920,
+      "text": "Unterscheiden wir mal ein paar Sachverhalte. Also das eine ist ja, wir haben Unternehmen, die keine eigene ITEM haben. Wir haben Unternehmen, die keine eigene IT vor Ort haben, wo es dann aber vielleicht andersrum im Ausland IT gibt. Wir haben Kunden, die haben eigene IT. Wir haben auch Kunden, die haben auch eigene Dev Teams. Können wir gleich mal ein bisschen beleuchten, weil das ist ein bisschen was anderes, als wie ihr das vielleicht kennt. Lustigerweise sind die Kunden, die keine eigene IT haben, wo wir also auch wirklich komplett IT für die machen. Das sind mit die harmlosesten. Schlimmer sind Unternehmen, die IT haben und dann aber auch zum Beispiel noch so was haben wie Prozessleittechnik, also etwas, was sehr technisch ist, was auch mittlerweile viel mit IT zu tun hat. Da findest du dann die richtige Shadow IT. Also du hast zum Beispiel produzierende Industrie, da gibt es dann halt irgendwelche Produktionsprozesse und dann hast du da typischerweise immer so dieses ganze Thema Automatisierungstechnik, Schrägstrich OT, IT und OT, also Operational Technology. Das sind die ganzen Jungs OT. Das sind die Jungs, die dann irgendwie so das ganze Produktionsgeraffel da am Laufen haben mit ihren sps und so weiter. Die Jungs sind die Pest, weil die haben in der Regel auch Firmen an der Hand, die sehr itiner sind. Da kommst du dann irgendwie an irgendwelchen Schaltschränken vorbei und dann stehen da irgendwelche Server drin, die du nie gesehen hast, die nie einer patched, wo dann auch immer auf gar keinen Fall darfst du das Ding patchen. Das ist dann so die richtige Shadow IT. Auch da wächst jetzt so ein bisschen, auch bedingt durch Security Vorfälle in den letzten Jahren, so ein bisschen das Verständnis bei Unternehmen, dass man OT nicht sich selbst überlassen darf, sondern dass man IT und OT schon strategisch aufeinander abschließend."
+    },
+    {
+      "end": 2812700,
+      "speaker": "B",
+      "start": 2803820,
+      "text": "Vor allem, das ist ja eigentlich das Kritischere, weil wenn OT steht und die Produktion steht, dann ist es wahrscheinlich schlimmer, als wenn der Exchange Server mal kurz irgendwie eine Stunde aus ist."
+    },
+    {
+      "end": 2839760,
+      "speaker": "C",
+      "start": 2812700,
+      "text": "Exakt. Ja, richtig. Aber gerade das ganze Thema OT, da finden wir die wahre Schatten IT, so dieses Thema Excel Makros, die mal irgendeiner gebaut hat. Auch das habe ich schon erlebt in Unternehmen, wo dann irgendwelche Rechner unterm Schreibtisch standen, die dann irgendwelche Sachen automatisiert haben. Ja, das ist real. Das ist bei uns aber relativ weit weg. Und wenn sie das auch so sagen, wie das sagen Hey, das müsst ihr euch mal angucken, das ist nicht cool, das muss irgendwie weg oder so. Das können wir."
+    },
+    {
+      "end": 2843640,
+      "speaker": "B",
+      "start": 2839760,
+      "text": "Wer macht dann wirklich die Software? Weil ihr macht jetzt zum Beispiel keine Software, keine klassische."
+    },
+    {
+      "end": 2885030,
+      "speaker": "C",
+      "start": 2844120,
+      "text": "Wir ziehen typischerweise bei der Datenbank die Grenze, aber wir machen zum Beispiel keine Fachanwendung. Viele Kunden bei uns, Was ist so das Typische, was die laufen haben? Klar, da haben wir die ganzen Leute mit ihren saps, mit ihren Navisions zum Beispiel laufen. Dann gibt es natürlich auch einen Großteil von sehr branchenspezifischer Software. Aber ich habe auch Kunden, zwei Stück. Das eine ist ein Reitsport Großhandel in Köln und das andere ist ein Touristikunternehmen in Rostock. Die haben ihre ERP Systeme wirklich selber gebaut. Die haben wirklich Entwickler, die da sitzen und zum Beispiel dann mit Progress oder mit D wirklich ERP Systeme bauen, pflegen, machen, tun und weiterentwickeln."
+    },
+    {
+      "end": 2895500,
+      "speaker": "B",
+      "start": 2885030,
+      "text": "Andi, das ist nicht Postgres, das ist Progress. Ich habe das erst vor kurzem selber bei einem Kunden kennengelernt, gelernt. Es ist wirklich nicht ein Schreibtippfehler, es ist eine eigene Datenbank."
+    },
+    {
+      "end": 2912540,
+      "speaker": "A",
+      "start": 2895820,
+      "text": "Also für alle Leute, ihr hört uns ja nur, aber wir nehmen gerade auch mit Video auf. Und als der Patrick gerade Progress und D genannt hat, dann hat sich der Gesichtsausdruck von Wolfgang in was grinsend verändert. So nach dem Endlich mal jemand, der meine Sprache spricht."
+    },
+    {
+      "end": 2915980,
+      "speaker": "B",
+      "start": 2913180,
+      "text": "Genau. Andi, ich habe es dir schon fünfmal erklärt. Was heißt D?"
+    },
+    {
+      "end": 2921000,
+      "speaker": "A",
+      "start": 2916220,
+      "text": "Boah, das war irgendeine Art von Programmiersprache, wo so eine Programmierhochsprachenthematik war."
+    },
+    {
+      "end": 2923640,
+      "speaker": "B",
+      "start": 2921240,
+      "text": "Genau. Hast du mal was mitgenommen?"
+    },
+    {
+      "end": 2934280,
+      "speaker": "A",
+      "start": 2924120,
+      "text": "Ja, das bedeutet auch so mit der ganzen Welt, mit der wir uns jetzt hier täglich rumschlagen müssen, also Kubernetes und Docker und Container und sowas."
+    },
+    {
+      "end": 2935640,
+      "speaker": "B",
+      "start": 2934600,
+      "text": "Cloud Native."
+    },
+    {
+      "end": 2941920,
+      "speaker": "A",
+      "start": 2935720,
+      "text": "Ich bin mir sicher, du weißt, wie du das schreibst. Aber haben deine Kunden davon schon mal gehört oder muss das erst in der Computerbild auftauchen?"
+    },
+    {
+      "end": 2975590,
+      "speaker": "C",
+      "start": 2941920,
+      "text": "Ne, tatsächlich. Also Docker ist mittlerweile bei uns auch gang und gäbe. Wir nutzen selber an vielen Stellen für Betrieb, für Infrastrukturdienste, weil es halt einfach sehr convenient ist. Ich habe einen Kunden tatsächlich in Dortmund, die machen auch relativ viel, die haben auch eine große Entwicklertruppe da sitzen ist so ein bisschen Fluch und Segen. Also wir machen bei dem Kunden so ein bisschen Tier null, AD Security und so weiter. Und da sind die ganzen Entwickler, das ist ja unser natürlicher Erzfeind, die haben nicht umsonst einen eigenen AD Forest gekriegt, weil wenn die mit ihren Adminrechten herumfuschen, dann sollen die ihren Forest anzünden, dann müssen wir den Rest nicht neu."
+    },
+    {
+      "end": 2978060,
+      "speaker": "A",
+      "start": 2976540,
+      "text": "Was ist ein AD Forest?"
+    },
+    {
+      "end": 3020870,
+      "speaker": "C",
+      "start": 2978060,
+      "text": "Active Directory Forest? Die haben quasi ihr eigenes Active Directory Developer, weil die haben Adminrechte und das ist immer schlecht, wenn Anwender direkt Admin Rechte haben, weil wenn da mal deren Rechner Hops genommen wird, dann fackelt das ganze AD ab. Und kleiner Exkurs an der Stelle bei allen Ransomware Gruppen auf der einen Seite gibt es ja die, die dann den Initial Access bereitstellen, sprich die nehmen irgendwie dein VPN Hops oder gehen dir so lange auf den Sack, bis du dann halt mal irgendwann auf dem Telefon dann doch die Raute Taste drückst. Passiert schon. Dann werden ja diese Zugänge zu den Firmennetzen, werden im Darknet verkauft, dann kommen die Ransomware Gruppen und das erste, was die machen, ist immer dein AD Hops nehmen. Wenn ich erstmal Administrator bin, dann kann ich alles andere machen. Das ist tatsächlich so und deswegen AD immer gut schützen."
+    },
+    {
+      "end": 3059650,
+      "speaker": "A",
+      "start": 3021030,
+      "text": "Ich habe gerade mal gegoogelt, was ist ein Active Directory Forest? Ist ein Container auf der höchsten Organisationsebene einer Active Directory Konfiguration. Okay, verstehe ich. Ich verstehe auch, wenn dir als jemand, der die Infrastruktur dann maintaint, dann die Fingernägel hochrollen, wenn Entwickler rumspielen. Und ich habe mich, ich oute mich jetzt auch, ich war auch einer immer dieser Entwickler, die dann immer auch so einen AD Forest haben wollen würden, so auf höchster Ebene und allem drum und dran. Und ich habe auch mit Leuten wie dir gesprochen dann auf der anderen Seite, den dann die Fingernägel hochgerollt sind und sich natürlich mit Händen und Füßen dagegen gewehrt hat. Aber machen wir uns mal nichts vor, sonst können wir Entwickler doch nicht entwickeln."
+    },
+    {
+      "end": 3112580,
+      "speaker": "C",
+      "start": 3059970,
+      "text": "Weiß ich nicht. Es gibt immer ein paar gute Gründe, warum man lokale Adminrechte braucht, aber ursprünglich ging es ja um Kubernetes und ja, das haben auch Kunden bei uns im Einsatz, da stolpern wir auch immer wieder drüber. Wir haben auch so Krankenhauskunden und die haben dann auch zum Beispiel so Packsysteme, also wo dann so aus der Radiologie die Bilder reingehen zum angucken und so weiter. Und dann habe ich dann irgendwann auch mal mitbekommen, dass da jetzt bei einem Kunden was Neues eingeführt wird. Und dann hast du dann so eine lieblos dahin installierte Oracle Linux VM, so mit dem Kubernetes drauf und dann so ein paar Cubelets laufen, die dann dieses ganze PAX bereitstellen. Haben wir jetzt nicht ganz so viel mit zu tun, aber das fliegt bei unseren Kunden auch rum, auch Docker und auch Linux. Das allermeiste, was wir haben, ist Microsoft, aber in vielen Fällen auch dann auch Linux und so weiter. Das gibt es noch. Und plus halt noch so ein paar ganz exotische Sachen, also Dinge, die du nicht kennst, aber die der Wolfgang und ich, wir sind halt älter, die wir halt noch kennen, irgendwie Unix Hobel oder iseries."
+    },
+    {
+      "end": 3123060,
+      "speaker": "A",
+      "start": 3112580,
+      "text": "Jetzt verbünde dich mal bitte hier nicht mit dem Schluchtenscheisser da unten. Verstehst du? Ich habe jetzt hier die Intro so nett gemacht, damit die Pottler hier mal zusammenhalten, damit ich hier endlich mal nicht alleine bin."
+    },
+    {
+      "end": 3125700,
+      "speaker": "B",
+      "start": 3123060,
+      "text": "Ich möchte ja Gupta einwerfen als D Sprache."
+    },
+    {
+      "end": 3128300,
+      "speaker": "C",
+      "start": 3126540,
+      "text": "Nein, oh Gott."
+    },
+    {
+      "end": 3154550,
+      "speaker": "A",
+      "start": 3128780,
+      "text": "Aber ich finde auch schön diese Konversation verdeutlicht hier gerade wirklich so die Roots von DevOps, so nach dem Motto, du hast die bösen Devs, die haben Admin Zugriffe auf irgendeinen Ad Forest und dann hast du den Opser, der sagt, weißt du was, die kriegen da hinten ihre eigene Spielwiese, da können sie machen, was sie wollen. Ich finde das richtig schön, dieses, wie soll man sagen, man riecht die Reibung."
+    },
+    {
+      "end": 3252460,
+      "speaker": "C",
+      "start": 3154550,
+      "text": "Das ist aber durchaus auch so ein Ding heute. Definitiv. Also wie gesagt, wir haben nicht ganz so viele Kunden, die wirklich eigene Dev Teams haben. Wir haben vielleicht ein paar Entwickler da sitzen, aber ich habe einen Kunden, der wirklich ganze Dev Teams da sitzen hat, die selber wirklich deren eigene Software bauen. Und das ist schon interessant, wie eng man dann auch doch zusammenarbeiten muss teilweise. Wie gesagt, wir haben diesen Kunden in Dortmund, der hatte früher so ein großes Ad, wo alles drin war. Dann hat man sich irgendwann entschieden, das müssen wir mal aufteilen, auch so ganz klassisch in Port, Non Port, dann was für die Entwickler und so weiter. Und wenn du dann auch diesen ganzen DevOps Cycle hast mit CI, CD und da werden Sachen entwickelt, da werden sie gebaut, da müssen sie in die Prot und so weiter, dann bringt das auch das ganze Thema Security recht schnell an seine Grenzen. Gerade wenn du halt bestimmte Brandmauern nicht einreißen lassen willst, dann ist das schon eine Herausforderung. Auch das ganze Thema Security hat über die letzten Jahre extrem an Zuwachs gewonnen. Ich meine, wir lesen jeden Tag von irgendwelchen Läden, die hops genommen werden, wo dann halt irgendwelche lustigen Lösegeldforderungen rauskommen. Du kannst dich heute gegen alles Mögliche versichern und kannst Versicherungen viel Geld in den Rachen werfen. Aber Security ist halt total wichtig und Security fängt halt nicht nur oder ist halt nicht nur ganz oben, sondern das fängt halt wirklich auch in der Infrastruktur an. Einen nennenswerten Teil meines Tages oder auch den von der Claudia verbringen wir damit halt Infrastruktur auch abzusichern oder auch nachträglich zu härten, einfach damit diese Kunden ruhig schlafen können."
+    },
+    {
+      "end": 3279540,
+      "speaker": "B",
+      "start": 3252460,
+      "text": "Wie siehst du das eigentlich jetzt nochmal bei der DevOps Welle auch mit Security durch die Erweiterung eigentlich durch dieses Shift Left, dass die Entwickler immer mehr auch unter Anführungszeichen Infrastruktur machen, also mit einem Docker Container irgendwelche Libraries und Sachen managen und warten müssen, weil das klicke dann meistens nicht mehr in deinem Bereich, sondern eher auf der Developerseite. Wie blickst du da als ob Mensch drauf? Ist es für dich Segen oder Fluch? Gibt es Probleme?"
+    },
+    {
+      "end": 3280980,
+      "speaker": "A",
+      "start": 3279700,
+      "text": "Wie blickst du darauf?"
+    },
+    {
+      "end": 3353350,
+      "speaker": "C",
+      "start": 3281460,
+      "text": "Das ist wirklich etwas, was übergreifend gesehen werden muss. Also es muss in der ganzen Truppe, egal ob jetzt Dev oder OBS, muss es übereinstimmend Bewusstsein dafür geben, dass jeder seinen Teil zum Thema Security beitragen muss. Und ja, aus Security Perspektive ist nichts schlimmer als ich habe da mal schnell was hingezimmert, ich habe da mal hier und schnell da einen Container hingeschmissen, da läuft jetzt irgendwas, ups, habe ich vergessen. Weil das sind am Ende des Tages die Sachen, die dir bei so einem Security Incident zum Verhängnis werden, weil das sind halt eben Sachen, die dann halt entsprechend bei einer Aufklärung von einem Angreifer auffallen. Das sind halt ganz häufig Dinge, wo man mal schnell irgendwas gemacht hat, irgendwas gebaut hat, irgendwas vergessen hat, irgendwas nicht zurückgebaut wurde und deswegen muss man es über alle Teams hinweg ein Verständnis dafür geben, dass jeder seinen Teil zur Security beitragen muss. Und ich beschreibe das selber immer sehr gerne so. Security muss sich dem Punkt P, dass ein System unbenutzbar wird, unendlich nah annähern. Darf ich nicht erreichen, aber unendlich nah annähern. Security muss immer so ein ganz kleines bisschen wehtun. Es muss immer so ein bisschen inconvenience, wenn der Punkt erreicht ist, dann habt ihr es richtig gemacht."
+    },
+    {
+      "end": 3357870,
+      "speaker": "B",
+      "start": 3353350,
+      "text": "Wobei das kann ja sehr schnell erreicht sein. Es kommt darauf an, bei was für einem System man startet."
+    },
+    {
+      "end": 3360830,
+      "speaker": "C",
+      "start": 3358590,
+      "text": "Es kommt darauf an, wie leidensfähig jemand ist."
+    },
+    {
+      "end": 3375550,
+      "speaker": "B",
+      "start": 3362030,
+      "text": "Ja, vor allem, wenn die Security bisher daraus bestand, dass man irgendwie ein Antivirus installiert hat und vielleicht mal eine Firmware vor fünf Jahren und Passwort einmal im Monat eingeben muss, dann ist natürlich jede Änderung sehr schmerzhaft, obwohl die jetzt vielleicht noch nicht Stand der Technik ist."
+    },
+    {
+      "end": 3487350,
+      "speaker": "C",
+      "start": 3375870,
+      "text": "Ja, ich meine gut, über das Thema Antivirus müssen wir heute nicht mehr diskutieren, das Thema Firewall müssen wir heute in der Regel bei den Kunden nicht mehr diskutieren. Aber dann fängt es schon an. Also wenn es dann das ganze Thema auch zum Beispiel Detection oder Detection Response ist, also was über Antivirus hinausgeht, so dass man auch zum Beispiel auffälliges Verhalten auf Servern, auf Clients sich anguckt, entsprechend monitort, entsprechend im Zweifelsfall verhindert. Da ist dann schon auch die Frage, brauchen wir das denn ja eigentlich schon generell, dass man auch eine Firewall nicht einfach auf Durchzug stellt, sondern dass man auch ein Regelwerk drauf hat, was den Namen verdient. Auch das ganze Thema muss eigentlich jedes System ins Internet. Ich meine, so macht man ein System jetzt wirklich ergibt, sprich, es gibt wirklich keine physikalische Verbindung irgendwie nach außen. Das ist schon eine krasse Ausnahme. Aber so, dass man sagt so, boah, ob meine Tier Null Systeme, also sowas wie Domain Controller, wie Nackt Systeme, wie Authentifizierungssysteme, so ein Keycloak und so weiter, müssen die eigentlich ins Internet oder von wem oder was müssen die Systeme erreichen, dass man sich darüber Gedanken macht, das sollte schon so sein, Dass man sein Netzwerk segmentiert, halte ich für einen absoluten no Brainer. Genauso wie, dass man seine Systeme in verschiedene Tiers unterteilt und dann auch sagt, ich habe halt bestimmte Berechtigungen auf jedem Tier und ich habe nicht diesen einen User, der überall alles Mögliche darf. Dass man Back Backups immutable macht, dass man Backups auch vom Rest wirklich netzwerkseitig trennt einfach, dass man wirklich dafür sorgt, dass man für den Fall eines Falles gewappnet ist. Also wenn es ein Incident gibt, wenn mal ein Account hops genommen wird, dass ein Angreifer nicht direkt freie Bahn hat."
+    },
+    {
+      "end": 3496040,
+      "speaker": "A",
+      "start": 3487510,
+      "text": "Früher mussten wir immer die ganzen Leute überzeugen, etwas zu tun. Dafür war nie Geld da. Dann ist was passiert und dann war ganz viel Geld da."
+    },
+    {
+      "end": 3497800,
+      "speaker": "C",
+      "start": 3496360,
+      "text": "Korrekt. Das ist auch heute noch so."
+    },
+    {
+      "end": 3521160,
+      "speaker": "A",
+      "start": 3497880,
+      "text": "Und das war meine Müsst ihr heutzutage noch die Mittelständler davon überzeugen, auch wenn fast wöchentlich in der Heise Meldung steht auch dass irgendeine produzierende Maschine attackiert wurde und irgendwelche Microcontroller und was weiß ich. Also Fabriken sind ja schon gängige Ziele inzwischen. Müsst ihr da immer noch diese Art von Überzeugung Arbeit leisten?"
+    },
+    {
+      "end": 3595370,
+      "speaker": "C",
+      "start": 3521400,
+      "text": "Teilweise, ja. Teilweise kommen die Kunden selber auf uns zu, weil sie Auflagen von Versicherern bekommen haben. Wir haben Kunden, die bevor sie von uns betreut wurden, mal Opfer von so Security Incidents geworden sind. Diese Kunden sind auf einmal deutlich empfänglicher für Der Witz ist halt Pareto Prinzip, für die achtzig Prozent musst du in der Regel eigentlich kein Geld ausgeben. Also einfach nur doing. Du brauchst vielleicht ein bisschen Consulting von extern, aber du musst nicht die Unmengen an Geld in die Hand nehmen, um bestimmte Lösungen zu implementieren, um Software zu kaufen oder sonst irgendwas. Das sind so die letzten zwanzig, aber um es einem Angreifer schwer zu machen. Das geht ganz häufig schon sehr, sehr gut mit Bordmitteln und die kosten dich dann auch teilweise kein Geld, sondern die musst du einfach nur implementieren. Trotzdem habe ich auch heute noch eine Diskussion geführt. Müssen wir wirklich MFA für alle Mitarbeiter? Ja, ja, dann wollen aber Leute nicht ihr eigenes privates Handy für die Authenticator App benutzen, sondern sagen die wirklich ein Firmenhandy haben. Ich kann ja nicht irgendwie fünf hundert Firmen Handys kaufen und so weiter. Ja, dann drückst du den yubikey in die Hand, der kostet aber auch Geld. Also ja, auch diese Diskussion muss ich heute noch führen. Das ist sehr müßig, aber gehört halt mit zum Handwerk dazu. Am Ende muss der Kunde die Entscheidung treffen."
+    },
+    {
+      "end": 3615310,
+      "speaker": "B",
+      "start": 3595370,
+      "text": "Weil du gerade Keycloak erwähnt hast an Services. Jetzt kommst du ja sehr stark aus der Windows Welt und glaub Windows ist schon der Standard. Gibt es so Systeme wie Keycloak, die die aus der klassischen Linux Welt und aus anderen Bereichen da reinschwappen oder ist das eigentlich kein Thema und es muss immer die klassische Windows Software sein?"
+    },
+    {
+      "end": 3644040,
+      "speaker": "C",
+      "start": 3615710,
+      "text": "Überhaupt nicht. Wir haben natürlich ein gewisses Set an Herstellern, an Produkten, die wir einsetzen, einfach weil wir sie gut kennen. Zum Beispiel typisches NACK, was wir einsetzen, also Network Access Control oder so, wer hat Zugriff auf Netzwerk und so weiter, ist Aruba, Clearpass zum Beispiel auch da gibt es andere Produkte auch aus der Open Source Welt, die man da einsetzen kann. Je heterogener die Umgebungen bei Kunden sind, desto eher kommt zum Beispiel so was wie Keycloak auch zum Einsatz. Also einer unserer Kunden setzt Keycloak zum Beispiel ein, ein großer Kunde."
+    },
+    {
+      "end": 3649200,
+      "speaker": "B",
+      "start": 3644040,
+      "text": "Hat sich da was geändert die letzten Jahre? Also dass man irgendwie offener auch gegen Open Source ist?"
+    },
+    {
+      "end": 3682490,
+      "speaker": "C",
+      "start": 3649200,
+      "text": "Ja, definitiv, definitiv. Also viele Kunden sind da mittlerweile sehr viel empfänglicher für, dass wenn man da halt ein entsprechendes Produkt auch anregt und sagt, hey, wir können uns auch dieses, jenes Produkt machen, angucken Jetzt momentan rennen alle weg bei Citrix. Citrix Netzgelder sind ja auch in den letzten Jahren häufiger mal mit eklatanten Sicherheitslücken aufgefallen. Also viele unserer Kunden schmeißen die Dinger gerade raus, aber Citrix natürlich die Hand aufhält und B, weil das Produkt halt sehr pflegeintensiv ist. Und klar diskutierst du da mit Kunden, was ist denn eine Alternative zu Netscaler? HA Proxy zum Beispiel. Das ist durchaus, das hat durchaus an Akzeptanz gewonnen."
+    },
+    {
+      "end": 3715630,
+      "speaker": "A",
+      "start": 3682730,
+      "text": "Ich finde das lustig, weil der HA Proxy wird in den Cloud Native Umgebungen eher so als stabiles Schiff, kann alles super gut, gar keine Frage, aber schon eher eins der älteren Modelle gefahren. Meine Frage ist eigentlich, wenn du schon Open Source ins Spiel bringst, wissen die Leute, die Kunden, die Mittelständler denn mit dem Begriff Open Source wirklich was anzufangen? Also wissen die, was dahinter steckt und allem drum und dran und so dieses ganze Ecosystem, das Funding? Ihr setzt dann so eine Art professionellen Support darauf, klar, aber oder heißt es."
+    },
+    {
+      "end": 3717110,
+      "speaker": "B",
+      "start": 3715630,
+      "text": "Für die eigentlich nur gratis?"
+    },
+    {
+      "end": 3731110,
+      "speaker": "C",
+      "start": 3717430,
+      "text": "Exakt letzteres, definitiv. Also hängt auch ein bisschen vom Kunden ab, auch wie sehr der selber, sage ich mal, in dieser Welt lebt, sich auch dann vielleicht persönlich damit auseinandergesetzt hat. Aber ja, für viele Kunden ist das Thema Open Source eher so Freebier."
+    },
+    {
+      "end": 3775160,
+      "speaker": "A",
+      "start": 3731270,
+      "text": "Aber habt ihr dann nicht als. Ich mag den Begriff so sehr IT Systemhaus. Ich finde, das ist Fundament. Habt ihr dann nicht oder seht ihr euch nicht da irgendwie als als Lehrer und vielleicht dann auch irgendwie Wissensvermittlung, das hinter Open Source mehr steckt oder sagt ihr, ja gut, dann nehmen wir hier Freebier und wir nehmen uns hier ein paar Consulting Stunden mit und Abfahrt. Ein bisschen salopp gesprochen, aber ich meine, ihr seid ja eigentlich an der Quelle, um eine Veränderung anstoßen zu können. Ihr könntet ja dem Mittelständler jetzt sagen, hör mal, pass mal auf, hast du mal Lust, dass ich mal, dass wir mal so ein bisschen über Open Source sprechen und so weiter. Dann erklärt ihr das und dann bleibt vielleicht was hängen bei dem Herrn Müller und dann geht er nächste Woche zu seinem IHK Mittelstammtisch, Mittelständler Stammtisch."
+    },
+    {
+      "end": 3778720,
+      "speaker": "B",
+      "start": 3775160,
+      "text": "Was ist IHKH für die nichtdeutschen IHK."
+    },
+    {
+      "end": 3805300,
+      "speaker": "A",
+      "start": 3778720,
+      "text": "Die Industrie und Handelskammer, wo jeder Mitglied sein muss. Ja, die bringen Services. Egal, pass auf, das Thema machen wir jetzt nicht auf, dann machen wir nur eine Podcast Episode, aber dann geht er zu seinem Frühstück da mit den anderen Mittelständlern und sagt immer, der Patrick, weißt du was, der hat mir so eine tolle Story von diesen Open Source Leuten erzählt. Jungs, das müsst ihr euch mal alle ansehen. Also habt ihr nicht so das Bedürfnis, ab und zu mal so in die Schiene reinzugehen."
+    },
+    {
+      "end": 3849120,
+      "speaker": "C",
+      "start": 3805940,
+      "text": "Also bei uns geht es ja auch immer wieder noch um Verkaufen, wir sind ja alle bedürftig, wir müssen ja alle unsere großen Häuser in der Eifel finanzieren und so weiter. Am Ende des Tages geht es dann doch leider eher darum, eine Lösung für den Kunden zu finden, die dem Kunden weiterhilft und die einfach sein Problem löst an der Stelle. Und die bittere Wahrheit ist auch, dass der Herr Müller mit dem Herrn Meier beim IHK früh shoppen nicht darüber redet, dass er jetzt irgendwie einen Open Source nackt eingeführt hat, sondern der sagt einfach, hier mein IT Dienstleister, hier die ML der Listen, egal was ich den irgendwie vor die Füße werfe an Problemen, die lösen das einfach, sind super. Natürlich kann man, da kann man so ein bisschen Idealismus raushängen lassen und das hängt aber sehr stark davon ab, wie sehr sich der Kunde dafür interessiert."
+    },
+    {
+      "end": 3861450,
+      "speaker": "B",
+      "start": 3849120,
+      "text": "Aber jetzt bist du ja persönlich auch ein Linux Fan, weiß ich ja, du spielst ja auch selber warum mit Sachen und Proxmox und Co. Du könntest ja jetzt auch irgendjemanden mal irgendein Linux System einreden eigentlich."
+    },
+    {
+      "end": 3933970,
+      "speaker": "C",
+      "start": 3861610,
+      "text": "Machen wir tatsächlich, machen wir tatsächlich. Also wo wir ganz häufig Linux einsetzen, das ist eben als Backup Repository Server, zum Beispiel für Veeam, weil die sind immutable, da haben wir ganz häufig ein REL, was da läuft, aber eben auch für so andere Infrastruktur Dienste, so Logging, Monitoring. Das gute alte checkmk lebt auch bei uns wunderbar weiter. Wir machen gar nicht diesen fancy Stuff wie Prometheus oder sonst irgendwas. Nein, checkmk, Schuster, bleib bei deinen Leisten. Und da läuft dann auch immer die Distribution, die uns gerade irgendwie durch die Finger fällt. Wir machen relativ viel basiertes Zeug, Rocky Alma, wenn der Kunde es bezahlt, auch dann wirklich REL, das nutzen wir dann an der Stelle schon. Das sind aber auch häufig Systeme, die der Kunde ja so eigentlich gar nicht sieht, weil die für ihn nach außen gar nicht in Erscheinung treten. Und damit bleibt natürlich dieses Thema Open Source dann auch häufig innerhalb der IT Abteilungen auch wirklich ihr einem in einem relativ kleinen Teil vorbehalten, die dann wirklich, das ist jetzt wieder Open Source, je weiter du nach oben kommst, so Teamleitung, Abteilungsleitung, IT Leitung, da heißt ja noch, ja, da läuft halt nackt was, denn keine Ahnung, tut's halt."
+    },
+    {
+      "end": 3958480,
+      "speaker": "A",
+      "start": 3934770,
+      "text": "Ich finde das schön, dass du so ehrlich bist und ich meine, ich finde das auch gar nicht so verkehrt, dass jeder seine Miete zahlen muss und ich meine, ihr habt ja auch irgendwie ein paar Mitarbeiter und da muss halt auch Geld reinkommen, alles gut. Ich finde es halt nur schön, naja, glaube, wie jeder Open Source, wenn aus dem guten deutschen, stabilen Mittelstand, der sich teilweise dumm und dämlich verdient, wie wir es in der Intro hatten, dann wenigstens auch mal vielleicht nur ein Issue öffnet zum Danke sagen."
+    },
+    {
+      "end": 3977900,
+      "speaker": "B",
+      "start": 3958480,
+      "text": "Es ist ja auch noch mal was anderes zwischen Open Source verwenden und wirklich Open Source aktiv teilnehmen, sei es ein Issue als einfachstes oder vielleicht wirklich dann mal was contributen. Also das sind ja auch noch mal zwei Paar Schuhe, weil ganz oft, wie der Patrick das erwähnt hat, das ist halt günstiger oder überhaupt gratis, mehr oder weniger. Und dann nimmt man das halt mit."
+    },
+    {
+      "end": 3996780,
+      "speaker": "C",
+      "start": 3978140,
+      "text": "Das ist aber ein guter Punkt, weil viele Kunden wissen oder viele IT Leute wissen an der Stelle gar nicht, wie sie da irgendwie kontributen können. Wenn die da irgendwie ein Problem haben mit irgendeinem Open Source Produkt, dann machen die im Zweifel bei uns ein Ticket auf und sagen, geht nicht. Wenn sie nicht selber den Elan haben, da irgendwas zurückzugeben, beschäftigen die sich halt."
+    },
+    {
+      "end": 4016280,
+      "speaker": "B",
+      "start": 3996780,
+      "text": "Auch eher weniger damit ist ja auch schwierig. Also muss man auch ler und verstehen überhaupt und dass ein Issue vielleicht sogar hilfreich sein kann, weil sonst bezahlt man für den Support, dass für ein Issue vielleicht unter Umständen auch mal hilfreich für die Community sein kann, weil ein Bug einfach aufgeschrieben wird. Aber dafür gibt es ja euch auch als Dienstleister, muss man auch dazu sagen, als Zwischenschicht."
+    },
+    {
+      "end": 4079630,
+      "speaker": "C",
+      "start": 4016360,
+      "text": "Aber da vielleicht auch noch mal, noch mal vielleicht ein interessanter Aspekt, das ist mir jetzt beim Hiring von Leuten noch mal noch mal sehr aufgefallen. Als ich mit IT angefangen habe, da war das ja wirklich noch abgefahrenes Zeug. Da hast du ja auch dann, wenn du die Leute dann da hattest, dann waren das ja auch alles Nerds. Aber die Wahrheit ist auch, wir haben jetzt auch eine ganze Generation von Leuten in der IT, in IT Abteilungen, bei Kunden, für die ist das ein Job, die machen den zwischen acht und siebzehn uhr, die machen den auch gut, gar keine Frage, aber die brennen vielleicht nicht dafür und dann ist ihnen das vielleicht auch irgendwie gar nicht so wichtig, ob sie da jetzt irgendwas zurückgeben können, sollen, müssen oder auch nicht. Leuten wie euch jetzt oder auch bei mir oder auch anderen, die da diesen ganzen Thema vielleicht auch länger mit zu tun haben, ist das vielleicht noch mal was ganz anderes. Die kennen vielleicht auch die Hintergründe dahinter. Aber einfach, aber IT ist halt auch heute in vielen Fällen einfach ein Job wie jeder andere. Natürlich gibt es Leute, die machen es mit mehr oder weniger Herzblut, aber es ist halt nicht mehr so. Die Vollblut Nerds, die werden seltener, muss man ganz klar sagen. Auch jetzt bei der Generation, die jetzt so nachrückt."
+    },
+    {
+      "end": 4150390,
+      "speaker": "A",
+      "start": 4079630,
+      "text": "Und das finde ich auch völlig okay. Das sage ich jetzt, muss ich zugeben. Ich wurde von ein, zwei meinen ehemaligen Manager Kollegen auch schon mal sehr freundlich darauf hingewiesen, dass man diesen Drive, den wir jetzt beim Podcast und ziemlich viele meiner ehemaligen Kollegen an den Tag gelegt haben, die auch ordentliche Open Source Contributor sind und so weiter, dass man dies nicht voraussetzen kann. Das habe ich nämlich sehr lange getan. Ich habe gedacht, das wäre die Normalität und die haben mich dann teilweise sehr bestimmend mal Feedback gegeben, was mir da damals, ich sag mal, nicht weh getan hat, aber ich war erschrocken. Aber man weiß ja immer, wenn man von Feedback erschrocken ist oder oder wenn man da wirklich drüber nachdenkt, dann ist es vielleicht für einen und inzwischen sage ich okay, sowas gibt es auch nine to five. Ich habe akzeptiert, das ist leider nichts für mich, dieses klassische und dann diese IT sein lassen, so werde ich leider nie sein, aber das finde ich auch OK, weil man muss ja zugeben, hatten wir jetzt vor kurzem in unserer Ask me Anything Folge itler haben ein unglaublich privilegiertes Leben, sehr gut bezahlt in der Regel über dem deutschen Durchschnitt, wahrscheinlich auch über dem österreichischen und dem ne, über dem Schweizer Durchschnitt glaube ich nicht, aber das ist eine andere."
+    },
+    {
+      "end": 4153350,
+      "speaker": "B",
+      "start": 4150870,
+      "text": "Itler in der Schweiz sind auch über deren Durchschnitt."
+    },
+    {
+      "end": 4163870,
+      "speaker": "A",
+      "start": 4155750,
+      "text": "Auf jeden Fall ja kaum ein Berufsrisiko. Keine Ahnung, dass man sich ein Bandscheibenvorfall, obwohl Bandscheibenvorfall vom langen Sitzen schon, aber ich schweife schon wieder ab. Ihr wisst was."
+    },
+    {
+      "end": 4165750,
+      "speaker": "C",
+      "start": 4163870,
+      "text": "Hallo, weißt du eigentlich, was so ein Server wiegt?"
+    },
+    {
+      "end": 4170310,
+      "speaker": "B",
+      "start": 4167510,
+      "text": "Ja, das ist dein Handrück. Da sind wir wieder bei echten, da."
+    },
+    {
+      "end": 4172769,
+      "speaker": "A",
+      "start": 4170310,
+      "text": "Sind wir über dem Handwerk, da sind wir wieder bei der Zunge."
+    },
+    {
+      "end": 4178009,
+      "speaker": "B",
+      "start": 4172769,
+      "text": "Andi redet ja von seiner Kopfarbeit, seiner einfach Kaffee trinken, da irgendwo mit Leute quatschen."
+    },
+    {
+      "end": 4224830,
+      "speaker": "A",
+      "start": 4178009,
+      "text": "Aber Patrick, du hast ein gutes Thema angesprochen und zwar Hiring. Jetzt natürlich auch aus Sicht des klassischen IT Systemhauses, denn ich sag mal so, wir haben den größten Konkurrenten, glaube ich noch gar nicht erwähnt. Mir fällt da Bechtle ein. Inwieweit, Weil du redest ja von der Besenkammer, von den Datacentern, von der Zunft noch von Kabelstecken und so. Das erinnert mich an die klassische Fachinformatiker, Systemintegration, Ausbildung und Co. Und da hat man noch so Big Player wie Bechtle dann hier in ganz Deutschland. Habt ihr Probleme Nachwuchs zu finden? Also seid ihr dann eher auch wie der Mittelstand und schnappt euch Azubis in der Hoffnung, dass sie danach noch ein paar Jahre länger bleiben? Also wie sieht das, wie sieht das in dem Bereich aus?"
+    },
+    {
+      "end": 4409500,
+      "speaker": "C",
+      "start": 4224830,
+      "text": "Short answer Ja, wir haben extreme Probleme Nachwuchs zu finden. Längere Mein Vorstellungsgespräch bei der Firma fing damit an, dass mein jetziger Gesellschafter seit dachte, wir sind ein komischer Laden mittlerweile nach zwanzig Jahren weiß ich, was er meint. Der Punkt ist tatsächlich der, ich meine, ich bin jetzt auch schon zwanzig Jahre im Unternehmen. Viele meiner Kollegen sind genauso lange oder zumindest zweistellige Anzahl von Jahren dabei und unser Hiring war tatsächlich lange, lange, lange Zeit darauf ausgelegt, dass wir Leute, unsere Kolleginnen und Kollegen selber ausbilden und dann auch übernehmen. Warum? Infrastruktur hat immer so ein bisschen dieses Schmuddel Image, sage ich mal. Wenn du dir einfach mal anguckst, wer bildet Fachinformatiker aus, dann hast du unglaublich viele Firmen, die Fachinformatiker ausbilden in der internen IT. Die wenigsten sind wirklich bei Dienstleistern, bei größeren Dienstleistern. Ich sage jetzt mal nicht diese ein, zwei PC Schrauberbuden, sondern guck mal einfach, wie viele Auszubildende eine Bechtle hat, eine SVA, eine Cancom, was weiß ich. Das heißt, der typische Fachinformatiker ist da beim Dienstleister, beim Systemhaus ist da eher die Ausnahme. Das heißt, du hast sehr viele Leute, die halt in der Intern IT groß werden und dieser Wechsel der Schreibtischseite vom Internen zum Dienstleister, den gehen die wenigsten tatsächlich. Hat verschiedene Gründe. Dieses Dienstleister Image, dem hängt immer so ein bisschen an, so wie du es vorhin schon sagtest, Überstunden, nachts arbeiten, Wochenende arbeiten, planlose Notfalleinsätze, jeden Tag woanders etc. Und ganz wichtig, lebenslanges Lernen. Wenn du in der internen IT bei einem Maschinenbauer sitzt und Glück hast, dem geht's gut, Hidden Champion verdient seine Millionen im Jahr, dann hast du vielleicht Glück, dass du halt so immer mal wieder so alle paar Jahre musst irgendwie neues Windows erlernen und die Branchensoftware wird vielleicht mal gewechselt und der Druckertyp ändert sich mal, aber eigentlich ist dein Leben da relativ konstant. Wenn du auf die Dienstleisterseite gehst, dann hat dieses Lernen ein ganz anderes Pensum. Mir selber fallen zwei ganz große Bereiche auf der Dienstleisterseite ein, wo auch dann teilweise ältere Kollegen von mir dann auch schon ihre Grenzen kamen. Das war das Thema Virtualisierung, weil auf einmal war der Typ, der die Virtualisierungsplattform bedient hat, der musste sich mit Servern auskennen, er musste sich mit Netzwerk auskennen, er musste sich mit Storage auskennen und du saßt auf einmal wie Spinne im Netz. Und das zweite ist das ganze Thema Cloud. Auch das ist so für viele, die wirklich aus der Infrastruktur kommen, die man anpacken kann, ein totaler Paradies. Gefühlt, würde ich sagen, kommen Devs besser mit Cloud klar, als die Leute, die irgendwie wirklich Server anpacken, weil es von den ganzen Begrifflichkeiten vom Workflow und so weiter den vielleicht eher reinpasst. Aber das Problem ist, dass diesem Dienstleister Image halt immer so ein bisschen sowas anhängt. Viel Arbeit, viel Lernen, ständig Neues, ständig wechseln und das wollen halt die wenigsten. Das führt dazu, dass wir halt zum einen, wir sind ein kleiner Unternehmen."
+    },
+    {
+      "end": 4411740,
+      "speaker": "A",
+      "start": 4411500,
+      "text": "Dann."
+    },
+    {
+      "end": 4447840,
+      "speaker": "C",
+      "start": 4411740,
+      "text": "Fällt sie eh schon mal durchs Raster. Also auch bei Auszubildenden fällst du schon mal schnell durchs Raster, weil die Leute, die eine Ausbildungsstelle suchen, die kriegen eher gesagt, ja geh mal hier, geh mal Telekom, geh mal Bechtle, geh mal zu den großen, da hast du deinen Chef in dem Trockenen, geh auf gar keinen Fall irgendwie zu der kleinen zwölf fünfzehn Mann Bude, da muss am Ende noch das Auto vom Chef waschen und das führt dazu, dass wir wirklich Probleme haben, Leute zu finden. Wir haben vor vier Wochen haben wir einen Kollegen den Ruhestand verabschiedet, seinen Ersatz such wir aktuell noch. Also Disclaimer, also wer eine Ausbildungsstelle als Fachinformatiker in Köln sucht, immer her damit."
+    },
+    {
+      "end": 4463280,
+      "speaker": "B",
+      "start": 4447840,
+      "text": "Dabei seid ja ihr dann quasi das Startup, was es sonst so gibt. Also kleines Team, man muss alles machen, man muss alles können, man muss sich überall einarbeiten können. Das ist ja eigentlich wäre das ja so wie Start ups, also eigentlich müssten Leute das ja wollen."
+    },
+    {
+      "end": 4510750,
+      "speaker": "C",
+      "start": 4463280,
+      "text": "Aber wenn ich jetzt noch mal beschreibe, was uns so ausmacht. Also wir haben ein sehr, sehr, sehr, sehr, sehr großen Anteil Bestandskunden, also mit sehr langjährigen Geschäftsbeziehungen auch. Das heißt, dieses häufige Wechseln neuer Kunde kenne ich nicht, das ist bei uns schon fast die Ausnahme. Wir haben alle unser mobiles Arbeiten, Es wird keiner bei uns dazu gezwungen, irgendwie ständig ins Büro zu fahren. Wir haben den ganzen fancy Kram mit Firmenwagen und Altersvorsorge und hin und her und auch wir haben unsere Nine to five seit und wir müssen auch echt wenig Überstunden machen, weil wir wollen alle, wir haben alle Familie und so weiter. Ne, wir sind da tatsächlich, also ne, wir sind kein, wir sind kein Startup. Nee, nee, nee, nee, wir sind glaube ich so richtig, so richtig alt eingesessen. Haben wir immer schon so gemacht."
+    },
+    {
+      "end": 4522790,
+      "speaker": "A",
+      "start": 4511230,
+      "text": "Patrick, vielen lieben Dank. Das würde ich sagen, ist das Wort zum Sonntag. Was ich richtig geil fand, eigentlich mal die andere Seite zu sehen oder zu hören, besser gesagt."
+    },
+    {
+      "end": 4526150,
+      "speaker": "C",
+      "start": 4523670,
+      "text": "Von die andere Seite vom Schützengraben."
+    },
+    {
+      "end": 4573480,
+      "speaker": "A",
+      "start": 4526390,
+      "text": "Ja, vom Schützengraben. Ich bin ja auch ehrlich und ich bin mir auch bewusst, vieles von dem, was wir hier im Podcast wiedergeben, ist in irgendeiner Art Bubble und diese Welt ist ja weit größer als unsere Blase hier. Du hast uns heute mal ein bisschen auf die andere Seite gezogen und auch mal ein bisschen gezeigt, wie es da so abgeht. Sehr, sehr interessant. Ich bleibe bei meinen, bei meiner initialen Einschätzung, nicht meine Welt. Tut mir leid. Vielen Dank, dass du. Vielen Dank, dass du das alles machst. Ich denke, nicht jeder Held trägt ein Cape oder wie war das? Sowas muss es auch geben, Leute, die den Mittelstand am Leben halten oder die IT des Mittelstandes am Leben halten, weil irgendwann möchte ich die Schraube halt auch von meiner Hilti haben."
+    },
+    {
+      "end": 4577400,
+      "speaker": "C",
+      "start": 4574120,
+      "text": "Von daher so ist das ehrbares Handwerk."
+    },
+    {
+      "end": 4605500,
+      "speaker": "B",
+      "start": 4577480,
+      "text": "Und für mich seid ihr immer noch eigentlich ein Startup, weil wenn man mal reinhört in den Wartungsfenster Podcast, was ihr alles besprecht an neuen Dingen und für mich ist es auch immer eine andere Welt Und meiner Meinung nach seid ihr da eigentlich sehr weit vorne dran. Und wie du richtig sagst, man muss ständig mit Neuigkeiten, mit Updates, mit neuen Entwicklungen eigentlich umgehen. Also ich glaube, dass man da schon sehr flexibel und schnelllebig sein muss, wie in den Startup auch wenn man dann einen Firmenwagen oder so bekommt."
+    },
+    {
+      "end": 4621940,
+      "speaker": "C",
+      "start": 4605500,
+      "text": "Aber das genau wenn du dir nicht zu schade bist, ein Kabel anzupacken und halt wirklich Bock hast, auch immer wieder neues Zeug zu lernen, denk daran, Infrastruktur ist die Basis für alles, weil auch unter deiner komischen GCP VM laufen irgendwelche physikalischen Server in irgendwelchen lustigen Datacentern."
+    },
+    {
+      "end": 4639830,
+      "speaker": "A",
+      "start": 4621940,
+      "text": "Es gibt ja auch die Theorie, dass die großen Hyperscaler bzw. Die Datacenter Betreiber, also die sogenannten Remote Hands, dass die Hyperscaler all diese Leute weg und die klassischen Systemhäuser, dass niemand mehr die Zunft das Handwerk des Kabels."
+    },
+    {
+      "end": 4644590,
+      "speaker": "B",
+      "start": 4639830,
+      "text": "Ziehen kennt, beziehungsweise die, die es kennen, arbeiten nur mehr bei den Hyperscalern."
+    },
+    {
+      "end": 4647110,
+      "speaker": "A",
+      "start": 4644590,
+      "text": "Ja, ja, ganz genau. Das gibt es dann eigentlich kaum noch."
+    },
+    {
+      "end": 4700980,
+      "speaker": "C",
+      "start": 4647910,
+      "text": "Ein lustiges Fun Fact Unweit hier von Köln baut Microsoft jetzt zwei neue Datacenter, nämlich in Kerpen und in, ich glaube, Bergheim. Und ja, das ist tatsächlich ein Punkt, das habe ich auch schon mit einigen Dealern bei unseren Kunden mal besprochen. Also alle haben so ein bisschen Angst davor, dass Microsoft dann auf einmal Hey Leute, wir brauchen hier Datacenter Technicians, hab da nicht Bock bei uns zu arbeiten. Das ist so. Also wir gehen davon aus, dass wir das sehen werden, dass da Leute hinabwandern. Ich meine, jetzt muss man sich auch nicht den Kopf machen, dass diese großen Datacenter, wer weiß wie viel ein hundert Leute brauchen. Aber das ist natürlich schon, wenn du so aus der Infrastruktur Ecke kommst, dann sagen kannst, hier, ich arbeite hier bei Microsoft in Kerpen, in Bergheim, keine Ahnung, das sind zwei Datacenter mit entsprechend Abstand, das wird wahrscheinlich eine neue Azure Region werden. Durchaus möglich, dass da, dass Microsoft dann entsprechend dann auch die Leute aus der Infrastruktur Ecke absaugt."
+    },
+    {
+      "end": 4721810,
+      "speaker": "A",
+      "start": 4701220,
+      "text": "Also wer noch Lust auf die Zunft hat, kann sich gerne beim Patrick melden. Links gibt es natürlich wie immer in den Shownotes auch zu seinem Wartungsfenster Podcast oder Fax Informatiker Podcast, wer mehr solche Stories hören möchte. Patrick, vielen lieben Dank für dieses tolle Gespräch, dass du mir die andere Welt außerhalb des Engineering Kiosks gezeigt hast."
+    },
+    {
+      "end": 4730610,
+      "speaker": "B",
+      "start": 4721810,
+      "text": "Es war, glaube ich auch eine Episode oder seit langem die erste Episode, wo das Wort KI nicht gefallen ist. Das wollte ich besonders gefreut."
+    },
+    {
+      "end": 4757150,
+      "speaker": "A",
+      "start": 4731490,
+      "text": "Ich habe mir gerade die Pressemitteilung von Microsoft ganz kurz geöffnet zum Thema Datacenter in Kempen und die Überschrift heißt schon KI Rechenzentrum. Da fiel mir sofort ein, ah fuck, wir haben ja gar nicht irgendwas mit AI im Mittelstand besprochen. Aber aber ganz im Ernst, lassen wir auch weg, weil ganz im Ernst, wenn die immer noch eine Besenkammer fahren, dann kann ich mir die Antwort bereits ausdenken. Patrick, vielen lieben Dank. Wir entlassen dich in den Abend und bis bald. Tschüss."
+    },
+    {
+      "end": 4758310,
+      "speaker": "C",
+      "start": 4757150,
+      "text": "Dankeschön. Tschüss."
+    },
+    {
+      "end": 4759310,
+      "speaker": "B",
+      "start": 4758310,
+      "text": "Danke dir. Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
