@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/3aed3ce2-0873-49f7-9091-5fd935f57bb8/engineering-kiosk-209-in-der-besenkammer-jenseits-der-cloud-mittelstands-it-mit-patrick-terlisten
 apple_podcasts: https://podcasts.apple.com/us/podcast/209-in-der-besenkammer-jenseits-der-cloud-mittelstands/id1603082924?i=1000722584740&uo=4
 audio: https://audio1.redcircle.com/episodes/dce1cf03-ab43-411b-a044-989f52c704d3/stream.mp3
 chapter:
