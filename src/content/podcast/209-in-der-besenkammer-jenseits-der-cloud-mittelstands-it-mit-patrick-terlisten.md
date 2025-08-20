@@ -80,7 +80,10 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/1InICpOCtdVq4feCbRUsVA
-tags: []
+tags:
+- DevOps
+- Cloud
+- Interview
 title: '#209 In der Besenkammer jenseits der Cloud: Mittelstands-IT mit Patrick Terlisten'
 transcript_raw: ''
 transcript_slim: ''
