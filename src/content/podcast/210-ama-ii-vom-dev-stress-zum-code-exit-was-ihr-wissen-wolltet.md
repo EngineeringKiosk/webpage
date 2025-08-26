@@ -101,7 +101,10 @@ speaker:
 - name: Andy Grunwald
 - name: Wolfi Gassler
 spotify: https://open.spotify.com/episode/5UlZyo3iHkQtceP3bHNGYo
-tags: []
+tags:
+- Tech Kultur
+- Side Projects
+- Engineering Kiosk
 title: "#210 AMA II: Vom Dev-Stress zum Code-Exit \u2013 was ihr wissen wolltet!"
 transcript_raw: ''
 transcript_slim: ''
