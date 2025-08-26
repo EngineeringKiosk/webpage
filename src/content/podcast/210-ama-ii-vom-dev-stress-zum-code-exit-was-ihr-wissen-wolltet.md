@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/fcf141dc-d360-44d5-852e-b4e44e32dd9a/engineering-kiosk-210-ama-ii-vom-dev-stress-zum-code-exit-%E2%80%93-was-ihr-wissen-wolltet
 apple_podcasts: https://podcasts.apple.com/us/podcast/210-ama-ii-vom-dev-stress-zum-code-exit-was-ihr-wissen-wolltet/id1603082924?i=1000723519764&uo=4
 audio: https://audio1.redcircle.com/episodes/1a2222bc-5444-4894-b39b-749d53a5faf5/stream.mp3
 chapter:
