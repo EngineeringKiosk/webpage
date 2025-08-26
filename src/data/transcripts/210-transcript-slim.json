@@ -1,0 +1,698 @@
+{
+    "acoustic_model": "assemblyai_default",
+    "audio_duration": 3752,
+    "audio_url": "https://cloud.inlupus.at/s/Dgnd3cGTTJcqQQX/download",
+    "auto_chapters": false,
+    "auto_highlights": false,
+    "auto_highlights_result": {},
+    "confidence": 0.9592212,
+    "content_safety": false,
+    "content_safety_labels": {
+        "status": "unavailable"
+    },
+    "custom_topics": false,
+    "disfluencies": false,
+    "dual_channel": false,
+    "entity_detection": true,
+    "filter_profanity": false,
+    "format_text": false,
+    "iab_categories": true,
+    "iab_categories_result": {},
+    "id": "269b7d69-fd67-4475-a670-7ba413c53098",
+    "language_code": "de",
+    "language_detection": false,
+    "language_model": "assemblyai_default",
+    "punctuate": true,
+    "redact_pii": false,
+    "redact_pii_audio": false,
+    "sentiment_analysis": false,
+    "speaker_labels": true,
+    "speakers_expected": 2,
+    "speed_boost": false,
+    "status": "completed",
+    "summarization": false,
+    "throttled": false,
+    "utterances": [
+        {
+            "end": 140490,
+            "speaker": "A",
+            "start": 3200,
+            "text": "Herzlich willkommen zu Ask Me Anything, die zweite im Engineering Kiosk Podcast. Wir beantworten wieder eure Fragen. Diesmal geht es um Persönliches wie zum Wie hoch ist euer Kaffee bzw. Koffeinkonsum? Welche Tools nutzt ihr zur Selbstorganisation? Wie managt ihr euer Stresslevel? Ob wir das Programmier bzw. Puzzle Videospiel tis gespielt haben oder oder wie man als Vater von drei kleinen Kindern ein engagierter Softwareentwickler bleibt. Im Bereich Podcast bzw. Side Projects geht es um Fragen, wie zum Beispiel, wie sich dieser Podcast entwickelt und ob wir andere side Projects zusammen hatten. Und die finale Wie hoch nun die Summe war, die Wolfgang bei seinem Software Exit mit Codeprints Dev bekommen hat. Danke für alle Fragen. Viel Spaß bei dieser Episode. So, Ask Me Anything Episode zweite Wir haben euch gefragt, was wollt ihr wissen? Wir hatten so ein Formular, das haben wir rumgeschickt und da haben paar Leute sich kreativ geübt und haben uns Fragen zukommen lassen. Das ist die zweite Ask Me Anything Episode. Wir haben Episode zwei hundert sieben bereits schon ein bisschen darüber gesprochen, warum ich JavaScript nicht so super finde, wie wir zu Lintern stehen, wie wir die Ruhe bei den ganzen Neuigkeiten rund um das Thema LLMs und AI behalten und trotzdem nicht den Überblick oder den Anschluss verlieren, wie wir über treue Arbeitsverhältnisse nach der Ausbildung versus Job Hopping nach kurzen Projektphasen denken und so weiter und so fort. Also wer dieses Format von Ask Me Anything mag, der kann gerne auch noch mal in Episode zwei hundert sieben reinhören. Aber in der Stunde von Episode zwei hundert sieben haben wir leider natürlich nicht alle Fragen beantwortet und das werden wir leider in dieser Episode auch nicht schaffen. Aber wir haben uns mal wieder ein paar neue Fragen rausgepickt, um ich würde mal fast sagen, das Sommerloch irgendwie ein bisschen zu überbrücken. Naja, schauen wir mal. Deswegen vielleicht kommen wir zu der Frage, wie viel der Wolfgang endlich mal mit seinem Software as a Service Exit verdient hat und ob er dann jemals mit einer Antwort rauskommt. Da müsst ihr dann leider bis zum Ende warten, aber wir springen direkt rein. Eure Fragen, unsere Antworten. Wir starten mit etwas Persönlichem. Wolfgang, wir nehmen morgens auf. Wir haben kurz vor elf, deswegen passt die Frage sehr Wie hoch ist dein Kaffee bzw. Kurz Koffeinkonsum? Das will nämlich der Uli wissen."
+        },
+        {
+            "end": 147970,
+            "speaker": "B",
+            "start": 140490,
+            "text": "Kennst du dieses Meme, dass Entwicklerinnen eigentlich nur so eine Maschinerie sind, wo man oben Koffein reinschüttet und dann unten wieder."
+        },
+        {
+            "end": 154650,
+            "speaker": "A",
+            "start": 147970,
+            "text": "Code rauskommt, kenne ich, aber das habe ich sehr lange nicht mehr gesehen. Deswegen habe ich so in meinem Kopf, dass das von ein tausend neun hundert fünf und neunzig sein muss."
+        },
+        {
+            "end": 180510,
+            "speaker": "B",
+            "start": 154650,
+            "text": "Ja, das ist so diese Zeit, wo ich noch gecodet habe. Nachdem ich jetzt nicht mehr Code, könnte man ja meinen, dass ich weniger Koffein zu mir nehme. Naja, aber Kaffee sind schon natürlich, man kann uns Kaffees ja auch sponsern, insofern muss ich das ja dann auch irgendwo wieder weiterbringen, dieses Geld. Und in Cafés investieren insofern einige Kaffees pro Tag, aber ihr halt gar nichts von dem ganzen Mate Zeug und alles, was es sonst an Süße oder non zero blablabla, Koffein Getränke."
+        },
+        {
+            "end": 208970,
+            "speaker": "A",
+            "start": 180590,
+            "text": "Vor gar nicht allzu langer Zeit habe ich mal die Definition von ein Paar nachgeguckt und bin darauf gestoßen, dass ein Paar im mathematischen Sinne zwei ist. Also das bedeutet bei dir zwei Kaffee pro Tag und im sozialen Sinne spricht man da eher von, ich sag mal, im Kontext einer Gruppe und das wäre dann drei Kaffee. Also ist deine Antwort zwei bis drei Kaffee pro Tag oder sind es dann eher schon so vier bis fünf?"
+        },
+        {
+            "end": 227460,
+            "speaker": "B",
+            "start": 209050,
+            "text": "Es gibt ja diesen Spruch, wie Physiker zählen eins, zwei viele und ich bin wahrscheinlich schon in dem in dem viele Segment. Wobei ich gehe von richtigen Cafés aus, also nicht so was wie bei dir, wenn ich mal zu Besuch bin, so bekomme so diese Bottiche an Kaffee, würde ich fast sagen, diese Riesenhäfen, ein Filterkaffee."
+        },
+        {
+            "end": 236660,
+            "speaker": "A",
+            "start": 227460,
+            "text": "Mit einer normalen Frühstückstasse, jetzt nicht diese Sissi Gedecke, wie man das bei euch in Österreich so trinkt, sondern halt eine normale deutsche Frühstückstasche."
+        },
+        {
+            "end": 252070,
+            "speaker": "B",
+            "start": 236820,
+            "text": "Tasche, Tasse, natürlich Tasche, ja, ich trinke meine Kaffees in einer Espressotasse, wo der Henkel ein Feuerlöscher ist. Ganz Stil echt natürlich als Feuerwehrmann und das Ganze ist handgeblasen auch noch, aber."
+        },
+        {
+            "end": 257990,
+            "speaker": "A",
+            "start": 252070,
+            "text": "Du bist dann eher so einer, der über den Tag ein, zwei viele trinkt und nicht morgens drei und dann ist gut, oder?"
+        },
+        {
+            "end": 264830,
+            "speaker": "B",
+            "start": 257990,
+            "text": "Na, ich würde mal sagen, so Sex, Espresso, Espressi besser gesagt über den Tag verteilt werden schon sein."
+        },
+        {
+            "end": 265990,
+            "speaker": "A",
+            "start": 264830,
+            "text": "Wann trinkst du den letzten?"
+        },
+        {
+            "end": 267830,
+            "speaker": "B",
+            "start": 266150,
+            "text": "Um wie viel Uhr? Ist egal."
+        },
+        {
+            "end": 269910,
+            "speaker": "A",
+            "start": 267990,
+            "text": "Also auch teilweise um neunzehn uhr."
+        },
+        {
+            "end": 280330,
+            "speaker": "B",
+            "start": 269990,
+            "text": "Ja, kann auch um zehn sein nach einem guten Essen, wenn man gerade stilecht natürlich Beim Italiener muss man schon Espresso trinken danach, aber beim guten Essen kann Espresso danach schon auch noch kommen."
+        },
+        {
+            "end": 284730,
+            "speaker": "A",
+            "start": 280330,
+            "text": "Geht natürlich gegen jede Empfehlung bezüglich eines guten Schlafrhythmus."
+        },
+        {
+            "end": 289090,
+            "speaker": "B",
+            "start": 284730,
+            "text": "Ja, aber das ist Bier auch. Bier ist auch nicht gerade sehr gut für den Schlaf. Das trinkst du auch um zehn."
+        },
+        {
+            "end": 307090,
+            "speaker": "A",
+            "start": 289330,
+            "text": "Ja, das ist leider wahr, ne? Mein Koffeinkonsum ist höher als ich mir zugestehen möchte. Also ich trinke morgens in der Regel so zwei bis drei Tassen Filterkaffee, dann mittags nachmittags eigentlich gar nichts mehr. Es sei denn ich bin nur irgendwo mit wem Kaffee trinken, weil ich mich da treffe."
+        },
+        {
+            "end": 310430,
+            "speaker": "B",
+            "start": 307330,
+            "text": "Aber das sind ja Viertelliter Dinger, was du da TR eine Tasse."
+        },
+        {
+            "end": 334670,
+            "speaker": "A",
+            "start": 310430,
+            "text": "Ja, das ist ja schon so zwei hundert milliliter, das stimmt schon. Aber ab und zu mittags noch mal so eine so eine Mate, wenn ich mal Lust habe und ab und zu auch mal noch mal so eine Monsterdose. Also ich knall mir schon recht viel Koffein rein. Zu viel des Guten gebe ich zu. Mach das bitte nicht nach. Den Monster trinke ich oft nur irgendwie vorm Sport. Das putscht dann einmal noch mal so ein bisschen. Also ich bin schon abhängig."
+        },
+        {
+            "end": 368730,
+            "speaker": "B",
+            "start": 334670,
+            "text": "Also was ich jetzt kürzlich gerade wieder erlebt habe, ist, dass sie jemanden im Informatikbereich kennengelernt habe, der keinen Kaffee trinkt und passiert mir eigentlich jetzt immer öfter Und das Wilde ist, dass die gleich immer nachlegen. Ja, ist ganz ganz komisch. Und ich weiß in der IT und so weiter, die haben sich sofort verteidigen angefangen und dann habe ich so nachgefragt und ja, sie bekommen ständig von allen Seiten irgendwelche dummen Sprüche, wenn sie wenn sie keine Koffein zu sich nehmen sozusagen Finde ich dann auch sehr schräg, wenn das so zum fast so ein Requirement eigentlich ist, damit irgendwie in der IT arbeiten kann."
+        },
+        {
+            "end": 418160,
+            "speaker": "A",
+            "start": 368730,
+            "text": "Naja, das beweist aber auch in irgendeiner Art und Weise, dass itler dieses Stereotyp natürlich befeuern jetzt die Tage auf Instagram auch noch gesehen unsere Podcast Kollegen, die Coding Buddies Grüße gehen raus, falls sie das hören. Die haben nämlich auch Werbung für eine Kaffeemarke oder für Kaffeebohnen gemacht. Also und da ging es auch darum, den stärksten Kaffee, damit Entwickler noch mal schneller programmieren können. Also wir sind da halt schon auch irgendwie selber schuld weil wir befeuern das natürlich mit den Memes, was du gerade erwähnt hast. Also naja, Stereotypen sollen vielleicht auch leben, ich weiß es nicht. Apropos Werbung, willkommen zurück zur Episode, das war unser Werbeeinspieler. Naja gut, kommen wir mal zur nächsten Frage. Der Jörg möchte wissen, welche Tools wir zur Selbstorganisation nutzen. Also zum Beispiel für To dos, für Tickets, für Notizen, für Notes und so weiter und so fort."
+        },
+        {
+            "end": 427980,
+            "speaker": "B",
+            "start": 418400,
+            "text": "Endlich war es wieder mit Inhalt. Eine Frage, bei dem Kaffee sind jetzt eh alle rausgetroppt. Also Andi, du bist ja Organisationsspezialist, hau mal raus."
+        },
+        {
+            "end": 543860,
+            "speaker": "A",
+            "start": 427980,
+            "text": "Das Thema To dos nehme ich schon sehr, sehr ernst, weil das hatte ich schon, glaube ich, in etlichen Episoden erwähnt. Ich denke wirklich, dass wenn du dir deine To dos aufschreibst und dann wirklich Follow ups macht und wirklich organisiert bist, dass das auch von anderen wahrgenommen wird und dir auch im Job hilft, mehr Verantwortung zu übernehmen und so weiter, weil du einfach, man sagt so schön, mehrere Bälle in der Luft hast und auch organisiert rüberkommst. Das heißt nicht, du musst dir alles im Kopf behalten. Ich nutze natürlich da auch ein Tool für. Ich benutze Remember the Milk, ist ein Tool, was an der Methode Getting Things Done angelehnt ist. Haben wir auch eine Episode zu gemacht, Episode sechs und sechzig Stressbreie Produktivität in der hektischen Welt mit Getting Things. Stressbreie, Stressbreie, stressfreie. Aber ich nutze Remember the Milk. Es gibt aber auch Google Tasks, es gibt Things, es gibt To Do List, es gibt Wunderlist, es gibt also eigentlich jedes To Do Listen Tool. Die Tage habe ich auf Hacker News wieder einen Thread gesehen, da wurde die ganz klassische Textdatei auf dem Desktop gefeiert und da hat jemand sein Prozedere niedergeschrieben, wie er oder sie sich managt, hat sehr viel Zuspruch erhalten, fand ich auch sehr, sehr interessant, Kann nur auch mal verlinken in den Show Notes. Aber ja, für Tickets im privaten Leben, für Tickets. Ich habe nichts im privaten Leben, ich habe keinen privaten Backtracker oder ähnliches. Dafür nutze ich meine To do Liste. Da packe ich wirklich alles re organisiert in Listen. Auch zum Beispiel der Engineering Kiosk wird darüber primär gemanagt, mein privates Leben wird gemanagt, Handwerker werden darüber gemanagt, wirklich alles. Ich habe da sogar so Regeltermine drin, wie dass ich jeden Sonntag einfach die Pflanzen in meinem Haus gießen muss oder wann zum Beispiel ich mein meine Mülltonne rausstellen muss oder wann ich mich wieder für einen neuen Sportkurs anmelde, weil ich weiß, dass die Sportkurse jeden Samstagmorgen zum Beispiel sehr beliebt sind und deswegen recht schnell voll sind solche Thematiken drin. Also habe ich dann auch oder Wartungsarbeiten fürs Haus, wann ich mal irgendwie wieder irgendeinen Wasserfilter wechseln muss, sowas."
+        },
+        {
+            "end": 555500,
+            "speaker": "B",
+            "start": 543940,
+            "text": "Also heutzutage nimmt man da ja schon eine App oder du hast die App, um Blumen zu gießen, weil da hast du dann fein granular deine Apps drinnen, zahlst zwanzig Euro für diese App und dann kannst du deine Blumen Giesstermine verwalten."
+        },
+        {
+            "end": 636360,
+            "speaker": "A",
+            "start": 555500,
+            "text": "Ja, das ist halt meine Art, wie ich das halt mache, aber es funktioniert und alle Blumen überleben. Ich sage nicht, dass das das Beste ist, was alle Leute machen müssen. Es funktioniert nur für mich sehr gut. Aber wir sagen auch in Episode sechs und sechzig dass zum Beispiel der Wolfgang das mehrere Male versucht hat und ich auch und das erst beim zweiten und dritten Mal erst Klick gemacht hat bzw. Dass der Need so groß war oder die Schmerzen so groß waren, dass wir Todos vergessen haben, dass wir uns da wirklich zu gezwungen haben. Und wenn man den Flow einmal drin hat, dann läuft's. Bei Notizen sieht es ein bisschen anders aus. Das ist ein totales Chaos System bei mir. Ich bin nicht happy. Ich habe super viel auf lokalen Zetteln hier oder in so kleinen Büchern drin, ich habe super viel auf Google Notes oder auf Google Docs und Google Sheets. Das ist immer so ein totales Chaos. Und für den Rest, für, ich sag mal, Briefe, die man so bekommt, nutze ich in letzter Zeit Paperless. Da habe ich alles umgestellt. Das ist eigentlich ganz gut geordnet, aber Notizen ist immer so ein doofes Thema. Ich weiß, es gibt ziemlich viele Leute, die Notion oder sowas nutzen. Ich habe es mal ausprobiert. Bei Notion gebe ich zu, das hat mir zu viele Möglichkeiten, zu viele Entscheidungen muss ich da treffen. Deswegen habe ich es bisher nicht gemacht. Aber den Need hatte ich bisher noch nicht, so eine Personal Knowledge Base aufzusetzen, denn viele Notizen, die ich mache, haben nur gewisse Halbwertszeit. Wie bändigst du das Chaos der Notizen?"
+        },
+        {
+            "end": 797040,
+            "speaker": "B",
+            "start": 636360,
+            "text": "Ich habe lang Evernote verwendet, aber die sind dann auch recht strikt geworden mit den Devices, die man verwenden darf Und irgendwie war ich dann auch nicht mehr so happy mit dem ganzen, also auch von der Software Seite und ich bin dann eigentlich umgestiegen auf Markdown Files, verwalte jetzt mit Nextcloud Notes, funktioniert ganz gut. Für längere Sachen habe ich aber natürlich auch meine ganzen Google Docs irgendwo, Also es gibt dann schon zwei, drei, vier, fünf, sechs, sieben, acht, neun Orte, wo so Sachen liegen können, aber mit Markdown fühle mich zumindest ganz wohl. Ich hab auch von Evernote das einmal raus exportiert mit einem kleinen Skript, damit ich da alle Notes wieder in meiner Nextcloud habe als Markdown File. Und da sehe ich jetzt am ehesten so die Möglichkeit, das möglichst offen zu haben und jetzt nicht in irgendeinem System drinnen logged in zu sein und das auch in Zukunft weiter vielleicht in andere Tools mal importieren zu können, wenn da was Besseres kommt oder wenn man dann irgendwie Intelligenz drauflegt mit irgendwelchen Tag Systeme. Aber ich habe da auch viel ausprobiert, bin nie so richtig glücklich geworden und darum bleibe eigentlich beim klassischen einfach niederschreiben. Und ich glaube, das ist auch das Wichtige, haben wir glaube ich auch in der Folge dreizehn, da haben wir auch noch über Produktivität gesprochen, ganz allgemein, wie kann man Produktivität erhöhen und sich organisieren. Das Wichtige ist einfach, dass man irgendwie ein System hat. Getting Things Done ist ja auch eigentlich aus einer Zeit, wo es keine digitalen Systeme gegeben hat und Getting Things Done beschreibt es ja auch mit ganz klassischen Zetteln und Ordner Systemen und sowas. Und im Prinzip kann man das aufs Digitale natürlich genauso umlegen, aber wenn man irgendwie ein Inbox System hat, wo man irgendwelche Zettel reinlegt, geht es natürlich genauso. Also am Ende ist es wichtig, dass man für sich ein System findet, was funktioniert. Sonst Getting Things Done verwende ich auch in Remember the Milk. Zusammen mit dir hast du mich überzeugt, eigentlich sehr kostengünstiges Tool, Zahl auch gerne dafür, ist wirklich nicht viel, ich glaube vierzig im Jahr oder sowas. Ist halt in die Jahre gekommen, irgendwie die Oberfläche aus den ERN, aber es funktioniert, muss man sagen. Und darum bin ich da auch eigentlich immer dabei geblieben und es funktioniert für meinen Alltag, auch wenn es jetzt wenig Schnickschnack rundherum hat. Jetzt hast du ja schon angesprochen, du managst deine Blumen mit Getting Things Done. Da würde mich natürlich auch interessieren, wie du mit den Low Performern unter deinen Blumen umgehst, aber das ist ein anderes Thema. Aber der Lars hat auch eine Frage gestellt, die in die Richtung geht, ob wir in irgendeiner Form Rituale haben, automatisierte Workflows, wieder unsere Strategien aussehen und vor allem, wie man mit dem Problem umgeht, wenn man weniger schafft, als was man geplant hat. Und wenn der Tag dann zu Ende ist und man eigentlich ja mehr machen wollte oder bzw. Den Druck dann hat noch mehr zu tun, obwohl der Tag eigentlich ein Ende gefunden hat, hat halt nur vier und zwanzig Stunden."
+        },
+        {
+            "end": 801120,
+            "speaker": "A",
+            "start": 797040,
+            "text": "Ich bin mir nicht ganz sicher, ob ich die Frage richtig verstehe. Da geht es um die eigenen Ambitionen."
+        },
+        {
+            "end": 815920,
+            "speaker": "B",
+            "start": 801120,
+            "text": "Oder Ja, du planst meistens mehr ein, als was du schaffst. Wie gehst du dann damit um? Akzeptierst du das? Deine Ambitionen sind meistens höher, kenne ich bei dir ja auch. Source Control, dein Projekt, willst ständig was machen, machst aber nie was. Wie gehst du damit um?"
+        },
+        {
+            "end": 820680,
+            "speaker": "A",
+            "start": 815920,
+            "text": "Möchtest du jetzt die Coaching Mentoring Antwort oder möchtest du die brutale Realität?"
+        },
+        {
+            "end": 825560,
+            "speaker": "B",
+            "start": 821080,
+            "text": "Ja, die brutale Realität. Darum fragen die Leute ja, die wollen ja dein reales Bild."
+        },
+        {
+            "end": 949210,
+            "speaker": "A",
+            "start": 825800,
+            "text": "Also ich over committe mich jeden Tag. Am Ende des Tages fühle ich mich echt scheiße einfach dabei und denke mir, du hast mal wieder nichts geschafft und dann fühle ich mich schlecht Und dann versuche ich es zu ignorieren. Dann gehe ich in den nächsten Tag, mache mein Remember the Milk auf, sehe zwanzig Tasks, fünfzehn davon overdue und overdue wird dann sogar noch mal richtig schön mit rot markiert, dass man sich richtig schlecht fühlt. Irgendwann muss ich akzeptieren, ich habe es ja eh nicht gemacht. Dann gucke ich, hat die Welt sich weitergedreht? Dann ist die Antwort oft ja, dann schiebe ich die einfach eine Woche weiter und versuche es zu ignorieren. Also ich habe sehr hohe Ambitionen an mich, Ich overkommitte jeden Tag. Ich schaffe viel weniger von den Aufgaben, die ich mir vorgenommen habe, als ich diese wirklich schaffe. Ich weiß aber auch, am Ende des Tages habe ich fünf und zwanzig andere Dinge auch gemacht, deswegen fühle ich mich da nicht so schlecht. Ich versuche jedoch immer mal wieder und aktuell jetzt gerade, also wirklich diese Woche hatte ich das Thema wieder auf meinem Tisch. Mein Remember the Milk ist explodiert von roten Overdue Tasks und da habe ich mir gedacht, bringt doch eh nichts, ich mache die doch jetzt eh nicht diese Woche. Deswegen habe ich die einfach alle weggeschoben. Dann hatte ich nichts in meiner Liste. Dann habe ich mir zwei Aufgaben wieder hochgezogen, die habe ich gemacht. Da habe ich cool, ich habe jetzt noch eine Stunde Zeit, da haben wir zwei weitere Aufgaben wieder hochgezogen. Also da habe ich einfach einen brutalen Cut gemacht. Man muss es, glaube ich, lernen zu ignorieren, denn die Welt ist so komplex geworden, Man hat immer so viele Aufgaben und da muss man sich, glaube ich, wirklich fokussieren, was ist das Essentielle, was muss ich wirklich tun? Beispiel mit meinem Hund rausgehen, mein Job ordentlich machen, die Wohnung putzen, so was halt. Und ja, Open Source Arbeit zum Beispiel habe ich sehr viele Ambitionen, fällt dann einfach hinten runter. Und ja, ich kriege auch E Mails von hey, kannst du mal auf diesen Pull Request gucken und die ignoriere ich dann ab und zu mal weg. Das tut mir dann auch total leid, aber irgendwo hat mein Tag auch nur vier und zwanzig Stunden und meine mentale Kapazität auch und da schütze ich mich lieber mich selbst, anstatt mich da dauerhaft kaputt zu machen. Und irgendwann, wenn ich mal eine ruhige Minute habe, dann schaue ich mal in die E Mail nach. Kennst du dieses Gefühl, Wolfgang?"
+        },
+        {
+            "end": 1089410,
+            "speaker": "B",
+            "start": 949290,
+            "text": "Ständig, Ja. Und ihr habt es auch in letzter Zeit bei mir eigentlich ganz gut beobachten können, dass wenn die Liste so voll ist, dass man dann noch weniger schafft, weil man sich irgendwie bei den meisten Tasks denkt, ich schaffe es sowieso nicht und da ist jetzt so viel in dieser Liste und dann beginnt man teilweise auch gar nicht diese Liste zu bearbeiten und fängt gar nicht mal an. Also für mich zumindest ist es leichter, wenn ich wirklich nur, keine Ahnung, zum Beispiel die vier Tasks, die ich heute haben muss, wirklich in der Liste habe und dann ein Ziel habe, das sollte ich abarbeiten und dann probiert man das irgendwie noch zu schaffen, weil diese vier hat man und danach ist Leben sozusagen abseits der Tasks, was es dann auch immer ist. Und das funktioniert meistens besser, als wenn man so eine lange Liste hat. Also dieses ständig über die Listen drüber gehen und Sachen rauskicken oder verschieben ist meiner Meinung nach sehr wichtig. Und das sollte man irgendwie am Anfang vom Tag machen oder noch besser vielleicht am Vortag, damit man am nächsten Tag wirklich schön rein starten kann und wenn man weniger over commitment macht, funktioniert das zumindest für mich meistens besser. Und eine andere Regel, die ich mir auch mal vor einigen Jahren eigentlich so gesetzt habe, weil ja in meinem selbstständigen Leben ganz oft das Problem habe, dass die Arbeit zu jeder Tages und Nachtzeit irgendwo reinschiessen kann und dann priorisiert man das ja auch gerne gegenüber dem normalen Leben unter Anführungszeichen. Und da habe ich mir mal die Regel gesetzt vor vielen vielen Jahren, dass ich eigentlich private Dinge meine Freizeit immer höher priorisiere und ich früher ganz oft private Dinge abgesagt und nicht zugesagt, weil einfach gewisse Arbeiten noch ausständig waren und als Selbstständiger muss man halt irgendwie schauen, dass Geld reinkommt und macht dann vielleicht mehr. Und da habe ich jetzt einfach die Regel, wenn was Privates ist, natürlich kann man das nicht immer machen, aber eigentlich fast immer, dann wird das Private priorisiert, weil den Rest kann ich irgendwann anders auch noch machen, um einfach die gewisse Lebensqualität zu halten. Und das war auch ein hartes Learning, das ich machen habe müssen, fällt mir irgendwann auf die Schnauze, wenn man dann nur mehr im Berufsleben drinnen ist und das ist mir einfach mittlerweile sehr sehr wichtig und dann muss halt ein Kunde warten oder es gibt weniger Geld oder ich muss es dementsprechend kommunizieren, aber im Endeffekt schafft man es trotzdem irgendwie immer normalerweise. Man hat dann aber eine gute Lebensqualität und das ist mir einfach wichtig."
+        },
+        {
+            "end": 1203180,
+            "speaker": "A",
+            "start": 1089410,
+            "text": "Ich meine, da gibt es ja auch ein Konzept für, das heißt, dass man sich zuerst selbst bezahlen soll. Ich glaube dieses Konzept kommt unter anderem aus den aus dem Finanzwesen bzw. Beim Sparen. Jeder sagt immer ich habe kein Geld zum Sparen, wenn zum Beispiel jetzt an ETF Sparplan geht und da sagen ziemlich viele ja nutze nicht das Geld, was am Ende des Monats übergeblieben ist für deinen Sparplan oder ähnliches, sondern mach am Anfang, wenn das Gehalt kommt, bezahle dich zuerst und dann richtest du den Rest des Monats aus mit dem was du hast. Muss natürlich schon noch managen und so weiter. Dafür musst du deine fixen Kosten wie Miete und so weiter kennen, alles klar. Aber das schützt dich halt so ein bisschen dann davor, dass du dein verfügbares Geld und jetzt in dieser Frage deine verfügbare Freizeit eher für dich priorisierst, anstatt für andere bzw. Für den Job und so weiter. Und du hast ja auch gerade gesagt, dann gibt es teilweise weniger Geld. Das ist aber dann eine aktive Entscheidung für dich, für deine Freizeit und Co. Und das heißt jetzt nicht, dass man sich selbst zuerst bezahlen soll, dass das irgendwie egoistisch ist, sondern man hat ja ein langfristiges Ziel im Sinn. Das ist hoffentlich dann das gute Management deiner eigenen Ambition, weil ich kann mir schon vorstellen, dass das einen verrückt macht. Mich hat sehr viel verrückt gemacht. Ich habe immer sehr viel gemacht und das habe ich dann auf andere projiziert, habe ich gedacht, wieso mache ich denn so viel und die anderen nicht? Wieso habe ich so hohe Ambitionen und habe ich dann öfters mal angeeckt, habe ich ja, glaube ich schon mal erwähnt in diesem Podcast. Deswegen, ich habe immer die Ambition mehr zu tun. Mein Tag hat immer leider nur vier und zwanzig Stunden, es tut mir immer weh. Ich glaube, das ist einfach leere einfach die Liste und zieh einfach Aufgaben nach vorne, die dir wirklich wichtig sind. Das würde ich mal so sagen, lieber Lars. Aber wenn wir schon mal dabei sind, die eigenen Ambitionen zu managen. Wolfgang, wie managst du denn dein Stresslevel? Denn das möchte der Daniel denn wissen, denn ich kann mir schon vorstellen und der Daniel wahrscheinlich auch, dass so eine Podcast Aufnahme mit mir recht stressig sein kann."
+        },
+        {
+            "end": 1309210,
+            "speaker": "B",
+            "start": 1203340,
+            "text": "Ja, es gibt ja grundsätzlich diese, oder sagt man zumindest, keine Ahnung, ob das wissenschaftlich so belegt ist, aber den gesunden Stress, der dich irgendwie nach vorne bringt und dann den bösen oder den ungesunden Stress. Ich persönlich kann ja, würde ich mal sagen, mit dem Stress ganz gut umgehen. Ich würde sogar so weit gehen, dass der Stress für mich gerade in Projekten und so weiter ganz gesund ist. Ich bin auch jemand, der das eher immer rauszögert und dann unter Stress ganz gut etwas fertig machen kann. Hat vielleicht auch den Grund, da ja eher in die perfektionistische Richtung gehe und ich kann eigentlich kaum mehr aufhören, wenn ich irgendwas starte. Ich sehe immer noch ein Problem und will was perfektionieren und da ist eine Deadline ganz praktisch und da macht man einmal unter einem hohen Stresslevel, macht man das fertig und dann ist es auch fertig. Ist aber natürlich für mich persönlich und da ist jede Person natürlich anders, auch wie man mit Stress umgeht. Sonst, wenn mir der Stress zu hoch wird, sagt sich jetzt natürlich sehr leicht, aber irgendwie einen Ausstieg finden, einfach mal einen Schritt zurück machen, irgendwas ganz was anderes machen, funktioniert am besten, mache ich aber auch oft nicht. Vor allem wenn es dann stressig ist, hat man irgendwie die Zeit nicht und denkt sich, das funktioniert dann ja nicht. Ich kann es nicht eine Stunde Pause machen oder einen Tag Pause machen, irgendwas ganz was anderes machen, Sport machen oder sonst was. Aber es funktioniert meiner Erfahrung nach einfach am besten, wenn man genau das macht. Und das muss man natürlich auch irgendwo lernen, dass man die Pausen aktiv wirklich priorisiert und dann auch macht und vielleicht erkennt, dass man jetzt gerade im schlechten Stresslevel ist. Aber ich hab da auch keine Regel oder so was, was man anwenden kann. Ich glaube, da muss man möglichst auf sich selber hören und die Erfahrung machen, wie man agiert und wie viel Stress noch gesund ist für sich selbst."
+        },
+        {
+            "end": 1395860,
+            "speaker": "A",
+            "start": 1309610,
+            "text": "Die eigenen Grenzen kennen, ist glaube ich eine gute Sache. Ich glaube, wer anfällig irgendwie ist fürs Overcommitment, der rennt vielleicht dann ins Burnout oder so. Da habe ich relativ wenig Ahnung von, wie ich mein Stresslevel manage. Ist relativ einfach. Wenn ich gestresst bin, gehe ich zum Sport, ich mache High Intensive Intervalltraining und auf gut Deutsch knalle ich mich da eine Stunde da weg. Und die Workouts sind in der Regel so anstrengend, dass ich während des Workouts an nichts anderes denken kann, als an dieses Workout, um es zu überleben. Überleben im Pulsbereich Sinne nennen wir es mal. Und dann bin ich eine Stunde so raus aus meinem Stress und denke nicht über diese Probleme und den Stress oder dieses Thema nach. Da geht es mir deutlich besser. Danach bin ich oft in der Regel so müde, dass ich eine Runde pennen gehe und am nächsten Tag schauen wir mal, wie viel Stress da noch da ist. Also mein Stresslevel ist dann deutlich geringer, weil ich dann mit einem anderen Blickwinkel auf das Problem gucke. Wenn es irgendwas ist, was ich versaut habe, wo ich dann irgendwie Expectation Management machen muss oder einfach zugeben muss, hey, ich habe es versaut, dann bin ich ruhiger. Dann kann ich wenigstens sagen, okay, ich habe mich over committed, ich kriege es nicht hin. Aber pass auf, hier ist der Weg nach vorne. Das, also dann habe ich oft irgendeine Art von Lösung oder Stress. Wenn es einfach viel Arbeit ist, ja dann knallhart priorisierung aber dieses, ich glaube, das ist meine Art, wie ich einen Schritt zurückgehe. Das, was Wolfgang hat gesagt hat, ich habe meinen Sport gefunden dafür, funktioniert sehr gut. Oder einfach mal zwei Stunden mit dem Hund raus, ist für mich genau dasselbe."
+        },
+        {
+            "end": 1420130,
+            "speaker": "B",
+            "start": 1396210,
+            "text": "Jetzt bist du ja ein sehr organisierter Mensch. Hast du schon mal irgendwie solche Apps versucht, wo du irgendwas trackst und deinen aktuellen Zustand, also wie happy du bist oder wie gestresst du bist Und das dann irgendwie, also so strukturell angegangen und dann wirklich irgendwas daraus gelernt oder Regeln abgeleitet oder sowas. Gibt ja auch Leute, die das sehr strukturiert eigentlich angehen. Ich bin nicht der Typ dazu, sage ich gleich."
+        },
+        {
+            "end": 1506760,
+            "speaker": "A",
+            "start": 1420130,
+            "text": "Ich habe es schon mehrmals versucht. Ich habe mehrmals Journaling versucht am Abend nach dem Motto, da kriegst du jeden Abend die gleichen Fragen gestellt, wofür bist du dankbar und was ist Tolles passiert und so weiter. Und dann schreibst du das einfach in so ein Buch oder in so einer App, habe ich ein paar Abende gemacht, hat irgendwie nicht funktioniert. Dann habe ich auf meinem iPhone aktiviert, dass er mich jeden Abend fragt, wie ist mein Gemütszustand. So eine Art ist glaube ich auch so fest in diese Gesundheits App von Apple eingebunden, habe ich auch mal eine ganze Zeit lang gemacht. In letzter Zeit swipe ich diese Push Notification einfach weg, aber am Anfang hat mir schon doch was gebracht, weil dann konnte ich halt zurückgucken, hey, mir geht es ja irgendwie über die letzten drei Wochen immer positiv oder ähnliches. Und das hat natürlich dann eine andere Wirkung auf mein Stresslevel, weil dann sage ich, okay, das ist eine Momentaufnahme, dieser Stress und das ist kein Dauerzustand. Das hat mir dann schon in irgendeiner Art und Weise geholfen, dass ich sehe, wie sieht das eigentlich über Zeit aus? Inzwischen mache ich es nicht mehr. Aber weil ich die Sportthematik gefunden habe und weil ich vielleicht auch gelernt habe, einfach offen zuzugeben, wenn ich Fehler gemacht habe, auch im Job. Und das wird oft dankbar angenommen, wenn jemand sagt, hey, ich habe es versaut oder zu viel Stress oder ich kriege es gar nicht hin oder ich brauche Hilfe. Wenn man wirklich aktiv sagt, hey, ich brauche Hilfe, wie gesagt, zum Thema Burnout oder ähnliches, da kann ich nichts zu sagen, das ist was anderes. Dann, das ist ein Stresslevel, das habe ich noch nie erreicht. Ich hoffe, das erreicht auch keiner. Von euch, deswegen möchte ich mir da nicht anmaßen, irgendwelche Beratungen zu geben, Aber das ist so meine Art."
+        },
+        {
+            "end": 1547280,
+            "speaker": "B",
+            "start": 1507000,
+            "text": "Muss auch gar nicht unbedingt mit Stress an sich zu tun haben. Also da gibt es ja auch ganz andere Bereiche, warum Burnout entstehen kann und Bore out gibt es ja auch, also ganz ohne Stress. Also es ist dann schon noch mal ein ganz anderes Thema. Aber was Lars uns zum Beispiel auch noch gefragt hat, was da ganz gut reinpasst, ist, wie bleibt man als Vater von drei kleinen Kindern ein engagierter Softwareentwickler? Also wie kann man Open Source noch nebenbei machen? Wie kriegt man das alles unter einen Hut? Job, Meetups, Kita, Schule, In dem Fall hat er auch noch ein Kind mit besonderem Förderbedarf, also da auch noch mal mehr und dann will man vielleicht auch noch irgendwie Garten oder sonstige Freizeitpartikel machen. Und wie schafft man das, dass man da eigentlich noch das irgendwie balancieren kann?"
+        },
+        {
+            "end": 1594380,
+            "speaker": "A",
+            "start": 1547440,
+            "text": "Ja, ich glaube, da sind wir beide jetzt nicht so die richtigen Ansprechpartner. Wir beide selbst haben keinen Nachwuchs, wir haben keine Kinder, deswegen können wir da relativ wenig Tipps zu geben, weil wir einfach nicht wissen, wie das Leben mit Kindern ist. Was ich aber weiß, ist, dass diese Frage doch schon des Öfteren mal aufkam, zumindest in unserer Community. Da haben wir auch einige Eltern und diese Eltern, weil sie in unserer Community sind, hören auf den Engineering Kiosk und haben dann anscheinend ähnliche Bedürfnisse, ähnliche, ähnliche Ambitionen, dran zu bleiben und vielleicht ein bisschen mehr zu machen, weil sonst würden sie natürlich nicht den Engineering Kiosk hören. Das Thema wurde auch schon hier und da mal besprochen. Vielleicht finden sich ja ein paar Leute in der Community und die treffen sich mal zu einem Call oder sowas und tauschen sich aus. Ich weiß nicht, ob es eine Lösung zu gibt. Keine Ahnung."
+        },
+        {
+            "end": 1649790,
+            "speaker": "B",
+            "start": 1594460,
+            "text": "Ich glaube ganz allgemein, wenn man sich an dieses Problem nähert, es gibt halt nur begrenzte Zeit und ich glaube, man muss auch irgendwann akzeptieren, dass man gewisse Sachen zu einer gewissen Lebensphase einfach weniger machen kann. Und gerade Open Source eignet sich da ja ganz gut, dass man vielleicht einfach mal weniger macht. Man ist nicht verpflichtet, da irgendwas zu machen. Und es gibt einfach Lebenssituationen, da macht man mal was weniger. Hat ja auch Auswirkungen auf den Job an sich, das Leben. Es kann ja auch sein, dass man mal im Job weniger performt und idealerweise ist es für den Arbeitgeber okay, dass man einfach vielleicht mal auch ein Jahr oder zwei oder so, kennen wahrscheinlich alle, wenn man eben Familie irgendwie mehr Zeit investieren muss. Vielleicht kann man auch einen Job zurückschrauben, geht ja auch. Also ich glaube, man muss einfach akzeptieren, dass es weniger Zeit gibt und dann muss man priorisieren. Und ob da Open Source immer ganz vorne stehen sollte, würde ich mal dann bezweifeln, wenn man Familie."
+        },
+        {
+            "end": 1709430,
+            "speaker": "A",
+            "start": 1649950,
+            "text": "Die Frage ist jetzt nicht, ob so wirklich auf Open Source gemünzt, aber das ist zum Beispiel ein Bereich, den kann man einfach weglassen, kann man einfach runter priorisieren. Open Source, du bist niemand etwas schuldig. Ich weiß, dass man eigene Ambitionen hat und so weiter. Was mir bei dieser Thematik geholfen hat, auch um ein Stresslevel bezüglich Open Source zu managen, bedeutet eigentlich, warum soll ich eigentlich dauerhaft meine Zeit investieren, um die Bugs und Probleme von anderen Leuten oder von anderen Firmen zu fixen, ohne dass ich da was davon dabei habe. Und speziell wenn es dann um die eigene Familie geht, die steht natürlich an erster Stelle und deswegen kann man das halt sehr gut runterschrauben. Aber wie gesagt, springt da einfach mal in die Community. Wir haben da so ein, zwei Channels random oder Stehtisch oder Episoden Feedback, wenn man da die Frage stellt. Vielleicht findet sich eine kleine Gruppe, die sich vielleicht sogar meinem Video Call trifft. Also die Community ist ja da, um zu connecten, um Probleme zu besprechen. Wolfgang und ich haben diese Herausforderung nicht, weil wir keine Kinder haben, Deswegen können wir da vielleicht nur Leute zusammenbringen."
+        },
+        {
+            "end": 1726790,
+            "speaker": "B",
+            "start": 1709430,
+            "text": "Und sonst Podcast hören ist ja schon ein guter Anfang, weil Podcast kann man auch hören, während man andere Tätigkeiten macht. Darum finde ich Podcasts auch persönlich so cool. Und so kann man vielleicht wenigstens in irgendeiner Form noch Knowledge aufsaugen oder was in diese Richtung über Podcasts mit einfangen, während man kocht zum Beispiel."
+        },
+        {
+            "end": 1737250,
+            "speaker": "A",
+            "start": 1726790,
+            "text": "Podcasting ist ein gutes Stichwort, als hätten wir diese Überleitung geplant. Wir haben auch eine Frage bekommen von Willi, wie lange wir eigentlich diesen Podcast noch machen wollen. Also ich weiß nicht, ob Willi uns eigentlich nicht mehr hören kann."
+        },
+        {
+            "end": 1744210,
+            "speaker": "B",
+            "start": 1737810,
+            "text": "Ich wollte gerade sagen, wie war die Frage formuliert? Das war jetzt interessant geschrieben, sieht man das ja nicht."
+        },
+        {
+            "end": 1745930,
+            "speaker": "A",
+            "start": 1744370,
+            "text": "Vielleicht hat er auch Angst, dass wir aufhören."
+        },
+        {
+            "end": 1748810,
+            "speaker": "B",
+            "start": 1745930,
+            "text": "Wolfgang, wie lang wollt ihr denn denn noch machen, bitte?"
+        },
+        {
+            "end": 1764850,
+            "speaker": "A",
+            "start": 1748810,
+            "text": "Ja, oder wie lang kann ich euch noch zuhören? Das ist ja auch assume good intent. Also ich bin dann eher auf der positiven Seite du dann eher auf der negativen Seite? Also Wolfgang, wann kündigst du mir unsere Podcast Ehe? Wann reichst du die Podcast Scheidung ein?"
+        },
+        {
+            "end": 1793160,
+            "speaker": "B",
+            "start": 1764850,
+            "text": "Ja, Scheidung ist vielleicht eigentlich ganz gutes Wort dafür, weil es ist halt wie in jeder Beziehung, du kämpfst dich da durch und solange der Netto Outcome am Schluss positiv ist, also solange man ein gutes Gefühl dabei hat und was rausbekommt und man Sinn darin sieht, macht man es weiter. Und meistens weiß man das halt im Vorhinein nicht und kann es auch kaum irgendwie prophezeien. In fünf Jahren werden wir genau dort sein. Aber grundsätzlich natürlich, die Episode würde ich schon noch gerne machen."
+        },
+        {
+            "end": 1905430,
+            "speaker": "A",
+            "start": 1793160,
+            "text": "Rechnen wir das mal hoch. Wir sind gerade bei Episode zwei hundert und ein paar gequetschte zwei tausend bedeutet eigentlich mal zehn. Wir haben jetzt gerade so dreieinhalb Jahre auf der Uhr, würde ich mal sagen. Wenn Podcasting in dreiig Jahren überhaupt noch existiert, Wow. Oder wir steigen auf tägliche Episoden um, dann könnte man die ganze Thematik vielleicht so in fünf, sechs Jahren erreichen. Aber auch das ist schon hart, ne? Also ich sag mal, Prognosen sind schwierig, besonders wenn sie die Zukunft betreffen. Also ich weiß es nicht. Ich fand sehr positiv, dass der Wolfgang immer noch einen positiven Netto Outcome von diesem Projekt hier sieht. Das war auch eine neue Information für mich. Macht der Podcast Spaß im Großen und Ganzen. Ja, ist er ab und zu stressig? Ja, auf jeden Fall zoffen Wolfgang und ich uns ab und zu, bekommen uns in die Haare. Ja, aber ich glaube, das ist nur menschlich. Aber oft sagen wir dann auch, okay, jetzt hören wir mal auf uns hier anzuzicken und jetzt lass mal weitermachen, kriegen wir es irgendwie immerhin. Ja, lernen wir sehr viel. Ja, auch zwingt uns dieser Podcast immer etwas Neues zu lernen. Ja, ebenfalls ist dies gegebenenfalls das größte Projekt, was wir zusammen gemacht haben. Auch ebenfalls sehen wir noch sehr viel Potenzial in diesem Projekt. Ebenfalls, ja. Zeigt er uns unsere zeitlichen Grenzen wöchentlich auf. Ja, auch besonders, wenn man irgendwie im privaten Leben noch mal ein paar andere Sachen hat, keine Ahnung, irgendwie Stress im Beruf oder ähnliches oder Urlaub, da muss man schon sehr viel planen. Haben wir vor im August, September, Oktober aufzuhören? Ich wurde noch nicht über eine solche Nachricht informiert. Also ich glaube bis Ende fünf und zwanzig können wir schon noch sagen, OK, werden Episoden erscheinen. Aber wie gesagt, Prognosen sind schwierig. Besonders wenn sie die Zukunft betreffen. Aber wir wollen jetzt nicht sagen, dass wir jetzt die Ambitionen haben aufzuhören."
+        },
+        {
+            "end": 1915829,
+            "speaker": "B",
+            "start": 1905430,
+            "text": "Vielleicht in dem Kontext gleich noch mal die wichtigsten Infos. Ich glaube, das kann man gar nicht öfters wiederholen. Wir brauchen ungefähr sechzehn Personenstunden pro Episode im Schnitt."
+        },
+        {
+            "end": 1978480,
+            "speaker": "A",
+            "start": 1915990,
+            "text": "Und da ist noch nicht die Entwicklung des Podcasts gemeint oder des Projektes. Also da ist kein Community Management drin, da ist keine Softwareentwicklung für die Automatisierung drin, was uns das einfacher macht. Da ist jetzt noch keine Planung drin, ob der Wolfgang irgendwie nach Deutschland kommt und wir gehen zusammen auf eine Konferenz oder ähnliches. Da ist eigentlich noch keine Recherche für neue Gäste oder Themen dabei, sondern wirklich nur die Vorbereitung. Also wir haben ein Thema, bereiten das Thema vor, bringen es auf die Audiospur, editieren es, releasen es und so weiter und so fort. Das sind so eigentlich so die sechzehn Stunden. Man sagt so acht Stunden ich, acht Stunden Wolfgang und alles, was dazugehört, das kommt dann leider noch oben drauf. Und ab und zu haben wir so Burst, da haben wir vielleicht der ein oder andere mal einen Tag oder zwei mehr frei, wurde dann ziemlich viel in die Automatisierung steckt. Und ab und zu knapsen wir jetzt gerade so, okay, wir kommen jetzt gerade so durch, ab und zu haben wir gute Wochen, da produzieren wir drei, vier, fünf Folgen vor und ab und zu ernähren wir uns von der Hand in den Mund jede Woche, also diese Woche."
+        },
+        {
+            "end": 1995340,
+            "speaker": "B",
+            "start": 1978480,
+            "text": "Wo wir fünf Episoden produziert haben, die zeigst du mir. Aber hin und wieder sind wir im Vorlauf ganz gut unterwegs. Das stimmt. Und das zweite wichtige Fakt, was ich auch immer gerne erzähle, weil das ist erstaunlicherweise immer noch im Umlauf. Nein, wir bekommen von Spotify kein Geld."
+        },
+        {
+            "end": 1996380,
+            "speaker": "A",
+            "start": 1995420,
+            "text": "Wann hast du das gehört?"
+        },
+        {
+            "end": 2020260,
+            "speaker": "B",
+            "start": 1996460,
+            "text": "Es glauben immer noch ganz viele Leute, dass man von Spotify Geld bekommt. Gleich wie die Musiker, die Geld von Spotify bekommen für die Musik, wenn man sie hört. Anteilig ist zwar relativ wenig, aber immerhin ist irgendwas anteilig. Nein, Podcaster bekommen kein Geld von Spotify. Null. Außer man ist so ein Spotify Exclusiv und hat wirklich einen Vertrag, dass man für Spotify was produziert. Also die großen Podcaster."
+        },
+        {
+            "end": 2027060,
+            "speaker": "A",
+            "start": 2020340,
+            "text": "Zur Transparenz, Wir bekommen Geld beim Podcast. Wenn jemand von euch uns einen Kaffee."
+        },
+        {
+            "end": 2028980,
+            "speaker": "B",
+            "start": 2027060,
+            "text": "Spendet, vielen Dank dafür übrigens."
+        },
+        {
+            "end": 2087670,
+            "speaker": "A",
+            "start": 2029140,
+            "text": "Vielen Dank. Der Kaffee Spende Link findet ihr in den Shownotes oder Wir bekommen auch Geld, wenn sich eine Firma dazu entscheidet, bei uns Werbung zu buchen, die wir ab und zu mal ausspielen für die fleißigen Hörer. Nehmen wir mal als Beispiel das Jahr zwei tausend fünf und zwanzig, ihr habt im Januar ein bisschen Werbung gehört, ansonsten haben wir dieses Jahr keine Werbung gemacht. Das bedeutet natürlich dann auch, wir haben dieses Jahr bis auf die Kaffeespenden keine Werbedeals gemacht und somit kein Geld verdient. Und hintendran bedeutet dies, wir bezahlen das hier alles entweder aus den initialen Werbeeinnahmen, das wird dann alles refinanziert. Wir haben Kosten für die Audioaufnahme Software, ab und zu nutzen wir chatgpt die Pro Version dafür, Wir haben ab und zu mal Reparaturen oder neues Audio Equipment angeschafft, zum Beispiel für On Site Aufnahmen. Wir verschicken ab und zu Mikrofone an Gäste, damit die Audioqualität gut ist, das bedeutet Versand und allem drum und dran."
+        },
+        {
+            "end": 2129730,
+            "speaker": "B",
+            "start": 2087670,
+            "text": "Die Hosting Plattform, also wir haben schon gewisse Ausgaben, ganz wichtig auch, wir haben auch unbezahlte Werbung, gerade aktuell haben wir so eine Kooperation mit Silicon Weekly, ist ein anderer Podcast, solltet ihr übrigens unbedingt mal reinhören, den finden wir cool, sie finden uns cool, haben wir gedacht, OK, könnten wir ja mal gegenseitige Werbung machen, um einfach den jeweiligen Hörer innen das noch mitzuteilen, dass es dann anderen coolen Podcast gibt. Und das machen wir natürlich, weil wir persönlich auch überzeugt sind, dass das ein guter Podcast ist. Oder wenn wir ein anderes Projekt mal erwähnen, kann ein Open Source Projekt sein oder irgendein NGO artiges Projekt. Also da wo wir überzeugt sind, da machen wir auch gern mal unbezahlte Werbung für die jeweiligen Projekte."
+        },
+        {
+            "end": 2163470,
+            "speaker": "A",
+            "start": 2129970,
+            "text": "Kurzum, verdienen wir uns eine goldene Nase, Nein, überhaupt nicht. Zahlen wir netto sowie brutto ein hundert Prozent drauf. Ja, das ist aber so dermaßen, wir haben Spaß, ich hoffe ihr habt Spaß und falls ihr uns unterstützen wollt, indem ihr hier mal Werbung schalten wollt oder bzw. Eure Firma dafür überzeugen wollt, Werbung zu schalten, schreibt uns einfach eine E Mail, findet ihr auch in den Shownotes und dann quatschen wir zu dem Thema. Würde uns natürlich sehr freuen, weil das fördert diesen Podcast und das hält vielleicht auch diesen Podcast länger am Leben, ich weiß es nicht, weil ist halt ein Zeitprojekt, wo wir halt auch ziemlich viel."
+        },
+        {
+            "end": 2174350,
+            "speaker": "B",
+            "start": 2163630,
+            "text": "Investieren und wenn ihr ein cooles Projekt habt, könnt ihr euch auch gerne melden, wenn wir da zusammenfinden, machen wir wie gesagt auch gerne Werbung für coole Projekte, die wir unterstützen wollen."
+        },
+        {
+            "end": 2207850,
+            "speaker": "A",
+            "start": 2174350,
+            "text": "Ich habe gerade erwähnt, dass wir unter anderem Podcast Equipment auch kaufen und verschicken und der Markus würde gerne wissen, wie sich unser Podcast und Recording Equipment über die letzten Jahre entwickelt hat, vor allem aber seit unserer Podcast Equipment Folge. Die Podcast Equipment Folge haben wir am zwanzigster februar zwei tausend vier gemacht, das ist die Episode ein hundert elf, da ging es um, wie wir Wolfgang und ich den Podcast over engineeren. Da haben wir einmal uns nackt gemacht mit was wir eigentlich aufnehmen. Wolfgang, ich glaube, du bist unser Audio Engineer. Sag mal was dazu, wenn ich es."
+        },
+        {
+            "end": 2214530,
+            "speaker": "B",
+            "start": 2207850,
+            "text": "Richtig im Kopf habe. In der ER Episode haben wir vor allem über den Software Stack gesprochen, und wie wir die Automatisierung machen, ne, auch."
+        },
+        {
+            "end": 2217370,
+            "speaker": "A",
+            "start": 2214530,
+            "text": "Über den Hardware Stack, also welche Mikros wir nutzen und so weiter."
+        },
+        {
+            "end": 2338280,
+            "speaker": "B",
+            "start": 2217450,
+            "text": "Und genau da hat sich vermutlich gar nichts geändert. Und auch da kann ich auch nur immer wieder sagen, man überschätzt eigentlich die Komplexität und die Kosten, die mit dem Equipment einhergehen. Man bekommt wirklich gutes Equipment um wenig Geld, also ein gutes Mikrofon bekommt man unter ein hundert Euro und viel mehr braucht man dann eigentlich auch gar nicht. Es ist nur wichtig, dass man mal grundsätzlich überhaupt ein physikalisches, größeres Mikrofon hat. Das ist einfach automatisch immer eine bessere Qualität. Alles ist besser als irgendwelche ipods. Alleine schon die Distanz zwischen Mund und Ohr, die muss man einfach überbrücken. Wenn man ein Mikrofon vor sich hat, vor dem Mund, ist es einfach schon eine wesentlich bessere Qualität und dann erreicht man ein gewisses Minimum, würde ich mal sagen. Ganz viel kann man über Software auch steuern, da wäre bei uns sicher noch viel Luft nach oben. Ich bin kein professioneller Editor und wenn man jetzt nicht gerade das schlechteste Equipment hat, weil sonst hat man das Problem shit in, shit out, das gibt es immer. Aber sonst kann man eigentlich relativ viel mit Software machen. Und klar, wir haben uns mal mehrere Mikrofone angeschafft, dass wir es eben, wie Andi erwähnt hat, schon bei Post verschicken können an Gäste, die keine Mikros haben. Wir haben Funkmikros, die man anstecken kann, haben wir uns mal auch eingebildet, wenn wir vielleicht mit Video oder ähnliches was machen, brauchen wir aber selten und aktuell haben wir nicht immer das klassische Setup mit unseren Mikrofonen remote und da kommen wir eigentlich auf eine ganz gute Qualität. Und Markus hat eben auch gefragt, was sind unsere Ratschläge für angehende Podcaster, wenn man das von der Equipment Seite sieht, irgendein sinnvolles Mikrofon würde mal sagen fünfzig Euro plus und dann einfach losstarten und da hat man schon eine super Qualität damit und alles andere kommt mit der Zeit. Und klar kann man nach oben hin immer teurere Mikros kaufen und der Andi und ich hatten schon öfters die Diskussion, weil der Andi ist immer der Premium Mensch, der hätte gern so ein acht hundert Mikrofon. Aber ob am Ende dann der Inhalt besser ist und die Leute eher zuhören, weil man ein teures Mikrofon hat, wage ich mal zu bezweifeln. Und daher einfach möglichst schnell, möglichst einfach loslegen und immer auf den guten Content konzentrieren, ist glaube ich das Wichtigste."
+        },
+        {
+            "end": 2356280,
+            "speaker": "A",
+            "start": 2338280,
+            "text": "Ich mache es ungern, leider hat der Wolfgang aber recht. Vielleicht gehen wir mal ganz kurz zu den Fakten. Und zwar die Mikrofone, die wir versenden und mit welchem der Wolfgang auch aufnimmt, ist ein Samson QU. Das kostet aktuell bei Amazon neun und neunzig, das sind die, die wir verschicken."
+        },
+        {
+            "end": 2359720,
+            "speaker": "B",
+            "start": 2356520,
+            "text": "Ah, ist das schon wieder teurer geworden? Wir haben das mal um siebzig Euro gekauft."
+        },
+        {
+            "end": 2380980,
+            "speaker": "A",
+            "start": 2360420,
+            "text": "Siebzig oder achtzig Euro. Genau. Wenn Gäste uns hey, habt ihr eine Empfehlung? Ich wollte mir sowieso mal ein Mikro kaufen, dann empfehlen wir auch immer das Samsung QU für achtzig, neunzig Euro. Hat einen USB Anschluss, hat einen XLR Anschluss, wunderbares Mikro, kann man wirklich sehr gut kaufen für den Start, wie gesagt, und neun und neunzig Euro für ein."
+        },
+        {
+            "end": 2426250,
+            "speaker": "B",
+            "start": 2380980,
+            "text": "Gutes Mikro ist ein dynamisches Mikrofon und ist daher nicht so empfindlich auf Umgebungsgeräusche. Hingegen die Kondensatormikrofone, die gerne empfohlen werden, sind halt viel empfindlicher und wenn man da keinen Raum hat, der nicht hallt oder im Nebenraum irgendwie Lärm ist oder vielleicht wirklich, dass man in einem Studio ist, dann hat man mit einem Kondensatormikrofon eher Probleme. Also da würde ich auf jeden Fall ein dynamisches Mikrofon empfehlen. Das sind so die klassischen Bühnenmikrofone, die man so in die Hand nehmen kann, Das sind meistens dynamische Mikrofone und die Kondensator Mikrofone sind diese klassischen Podcast Mikrofone, wo man dann so einen möglichst breiten Klang hat, breites Klangbild, aber wie gesagt sind viel empfindlicher und in der Praxis eher problematisch, wenn man kein sauberes Environment hat, wo man aufnehmen kann."
+        },
+        {
+            "end": 2580990,
+            "speaker": "A",
+            "start": 2426250,
+            "text": "Ich habe zum Beispiel ein Rode NT USB, das ist ein Kondensator Mikrofon und das hört man ab und zu auch wenn ich mal weiter weg gehe, weil mein Raum nicht so super ist. Das habe ich mal geschenkt bekommen, das kriegt man aktuell für ein hundert sechzig Euro, kann ich auch sehr empfehlen, sehr gutes Mikrofon, aber wie gesagt, Kondensator versus dynamisches das was der Wolfgang gerade erzählt hat, viele professionelle Podcaster oder immer wenn ihr irgendwelche Influencer in irgendwelchen YouTube Streams seht, die haben meist ein Shure SMB, das ist ebenfalls ein dynamisches Mikrofon in einer anderen Preisklasse gibt es für knapp vier hundert, ist natürlich ein sehr sehr gutes Mikro, Braucht man das am Start? Nein, braucht man überhaupt nicht. Samson Qu für neun und neunzig tut es total und bei On Zeitaufnahmen sind wir mit einem Zoom P Podrack unterwegs, ist ein mobiler Podcast Recorder und den gibt es aktuell für ein hundert achtzig das ist es eigentlich, womit wir hardwareseitig aufnehmen. Wie hat sich das softwareseitig entwickelt? Ich meine, wir sind immer noch mit Zencaster unterwegs, wir hosten immer noch auf einer Plattform namens Red Circle, Podcast Hosting ist da auch eigentlich gratis, es sei denn, man möchte zum Beispiel so was wie Dynamic AD Injection haben, ab und zu hört ihr ja mal so Aufrufe, dass ihr uns auf Social Media folgen sollt oder uns weiterempfehlen sollt. So was injecten wir dann dynamisch, können wir immer sehen, wie oft das ausgespielt wurde und solche Thematiken. Der Software Stack hat sich gar nicht so weiterentwickelt. Wir managen unseren Podcast über YAML Dateien in einem Repository und haben uns so ein bisschen Tooling dazu geschrieben mit Automatisierung. Mal so als kleines Zu jeder Episode erstellen wir eine YAML Datei mit ein paar Metadaten, wie zum Beispiel Titel und einem Link zu einem Google Docs Sheet, da sind dann Notizen drin, dann nehmen wir die Episode auf, irgendwann schneidet der Wolfgang die der ist nämlich unser Audio Engineer, das MP File packt er auf seine Nextcloud, dann packt er einen Download Link in das YAML File, dann startet da so eine GitHub Action, die erzeugt automatisch ein Transkript, committed das wieder zurück ins Repository. Wenn das Transkript da ist, startet die GitHub Action nochmal, fragt dann OpenAI, hey, wir haben hier dieses Transkript, kann zu uns ein paar Sachen generieren, wie zum Beispiel diese Speaker Allocation, also wann, wer, wie lange spricht, sowas machen wir über AI oder welche Tags diese Episode bekommen soll. Da sind wir ein bisschen faul, aber wir haben so eine Art State Machine da gebaut und das war es eigentlich. Und da modifizieren war immer ein bisschen mehr an diesem Tooling, um versuchen unser Leben einfacher zu machen, um diese sechzehn Stunden vielleicht ein bisschen runterzukriegen. Social Media Post mache ich immer noch alles manuell, also das ziemlich viel manuelle Arbeit, aber ja, das ist es eigentlich im Großen und Ganzen."
+        },
+        {
+            "end": 2592150,
+            "speaker": "B",
+            "start": 2581350,
+            "text": "Also wenn jemand gute Tipps hat, wie wir das noch weiter automatisieren können, also Social Media Posts oder Editing in irgendeiner Form, bitte gerne schaut in Discord vorbei, wir sind froh um jeden Tipp."
+        },
+        {
+            "end": 2611970,
+            "speaker": "A",
+            "start": 2592150,
+            "text": "Wo wir schon bei side Project sind, weil ich hatte ja auch während dieser Episode erwähnt, dass dieser Podcast so eigentlich das größte side Project ist, was wir bisher gemacht haben, also auch glaube ich einzeln. Und da hat uns der Matthias gefragt, ob wir bereits ein side Project zusammen hatten, außer dem Podcast, also wenn ich."
+        },
+        {
+            "end": 2756760,
+            "speaker": "B",
+            "start": 2611970,
+            "text": "Das richtig im Kopf habe, haben wir sonst kein sinnvolles side Project bisher gemacht, zumindest was das Licht erblickt hätte. Wir hatten mal an Recursive gearbeitet, das haben wir glaube ich auch schon öfters erwähnt, mal irgendwo, wo es darum gegangen ist, dass man Spenden an Open Source Projekte verteilen kann, weil wir haben das Problem eigentlich darin gesehen, wenn Personen oder Firmen Geld an die Open Source Community spenden wollen, dann ist es sehr schwierig das Ziel zu identifizieren, also an wen spendet man eigentlich das Geld? Das passiert dann ganz oft so, dass die großen Open Source Projekte, irgendeinen React oder sonstige Library einfach viel Geld bekommt, weil das kennt man halt, das verwendet man und die ganzen kleinen Tools, die da eigentlich im Hintergrund stehen von Libraries, also man brachte nur mal in so ein Package JSON hineinschauen, was da an anderen Packages inkludiert wird, die sehen meistens von dem Geld nichts oder sehr wenig. Und unsere Idee war, das automatisiert an alle, die in diesem Stack verwendet werden, also alle Dependencies, die in irgendeiner Form eingebunden werden in das eigene Projekt, dass die alle in irgendeiner Form einen kleinen Geldbetrag bekommen. Also wenn man ein tausend Euro spenden will, dann geht unsere Software durch den ganzen Baum durch, checkt wo sind die Abhängigkeiten, welche Libraries werden verwendet und berechnet dann wie viel jedes Teilstück von meinem Stack bekommen soll. Sind wir dann am Ende gescheitert an der ganzen rechtlichen Thematik und finanziellen Thematik ist super kompliziert mit Spenden umzugehen. Es wäre ein internationales Projekt gewesen und es einfach nicht so leicht irgendwie Geld nach Afghanistan zu bringen, wenn da eine Entwicklerin zum Beispiel sitzt von irgendeinem kleinen Projekt und haben das dann ehrlicherweise aufgegeben, obwohl wir da lange daran gearbeitet haben und mit vielen Leuten aus der Branche gesprochen haben, die auch da sich sehr gut auskennen im finanziellen Bereich. Es gibt jedoch eine Seite, die so etwas ähnliches macht und die funktioniert eigentlich ganz gut, möchte ich auch erwähnen an der Stelle ist Thanks Dev, wo man genau das eigentlich machen kann und die machen ähnliches Konzept, sitzen in Australien, mit denen hatten wir auch mal Kontakt, die schaffen das irgendwie finanziell zu machen oder sie machen es einfach wo kein Kläger da kein Richter. Das haben wir nie so ganz rausgefunden, ist aber eine vertrauenswürdige Seite und funktioniert eigentlich ganz gut und ist auch jetzt gut angenommen worden in der Zwischenzeit. Das kann man durchaus verwenden, wenn man das bisschen breiter verteilen will, wenn man da eine Spende hat."
+        },
+        {
+            "end": 2863490,
+            "speaker": "A",
+            "start": 2756840,
+            "text": "Vielleicht haben wir uns ein bisschen überschätzt und vielleicht waren wir auch ein bisschen perfektionistisch unterwegs, weil in der Regel wollten wir die ganze Sache in Deutschland zum Fliegen bringen. Das bedeutet du kriegst Geld, du musst Geld in irgendeiner Art und Weise verwahren für eine gewisse Zeit und es dann an etliche Leute ausschütten und da kommt es auch schon wir brauchen von diesen etlichen Leuten natürlich dann Adresse oder irgendein Überweisungsziel. Das bedeutet diese Daten müssen erst mal ich sag mal gesammelt werden, dann verwahren wir das Geld in irgendeiner Art und Weise. Ihr merkt schon, da kommt man schon an die sind wir dann eine kleine Bank und damit ist man in Deutschland bei der bafin und bei der Bundesfinanzaufsicht und dann geht es relativ schnell das Thema kleine Banklizenz und so und dann ist die nächste Frage wie geht man denn mit dem Geld um? Was wir dann allokiert haben an irgendwelche Dependencies, die sich aber nie gemeldet haben. Was machen wir dann mit diesem Geld? Weil du kannst Geld für andere verwahren, sofern diesem einem gewissen Zweck zugeführt wird. Aber wenn die Person, an die das Geld eigentlich gehen sollte, nicht da war oder nicht sich nicht meldet oder ähnliches, dann erlischt dieser Zweck und auf einmal hast du Geld über und jeder fragt sich, was machen wir mit diesem Geld? Also in Deutschland ist das nicht ganz so einfach. Und da haben wir gedacht, was wollen wir jetzt eigentlich tun? Wollen wir jetzt eigentlich hier ein Problem für die Software Welt lösen oder wollen wir uns eine Banklizenz besorgen? Und das hat natürlich hintendran einen ganz anderen Rattenschwanz mit sich gebracht. Und immer, wir haben uns echt viel Gedanken gemacht. Wir haben auch mit sehr guten Freunden gesprochen, die zum Beispiel mit ihrer Firma eine kleine Bank Lizenz haben. Die waren wirklich in den Prozess involviert und die haben uns einfach mal so einen Einblick in das Ganze, in das ganze Thema gegeben. Und als side Project war es dann ein bisschen offen gesprochen zu viel für uns."
+        },
+        {
+            "end": 2907700,
+            "speaker": "B",
+            "start": 2863810,
+            "text": "Es hätte ja auch dann wirklich ein größeres Projekt werden können, wo man auch vielleicht mehr Zeit investiert hätte. Ein anderes Thema, was auch noch so ein Knackpunkt war, wir wollten das wirklich für Firmen zur Verfügung stellen, weil wir auch eigentlich glauben, dass die Firmen mehr spenden sollten und auch ganz viele Firmen dazu bereit sind, weil keine Ahnung, ob aus dem Privaten wirklich da so viel rumkommt. Aber das Problem ist, eine Firma will eine Rechnung, eine Firma will es absetzen und das hat dann ganz andere Implications auf den ganzen Prozess und was da nötig ist. Und auch das ist schwierig. Thanks, Dev bietet dir auch keine Rechnungen an, soweit ich weiß. Also als Firma hast du dann wieder ein ähnliches Problem und kannst es auch nicht dementsprechend gleich verwenden. Und du wirst es ja auch dann absetzen können, dass das wirklich eine Betriebsausgabe ist."
+        },
+        {
+            "end": 2987890,
+            "speaker": "A",
+            "start": 2907780,
+            "text": "Also der Wolfgang hat dieses Rechnungsproblem jetzt ganz klein beschrieben, aber das ist viel größer. Also auf der einen Seite musst du eigentlich als Vendor bzw. Als Unternehmen in großen Unternehmen registriert werden und gewistet werden. Also dieser ganze Procurement Prozess ist nicht zu unterschätzen dann auf der anderen Seite will die Firma eine Rechnung haben. Wenn wir aber sagen, okay, wir verteilen an alle Dependencies von React, dann bekommen wir oder Wir stellen ja dann etliche Gutschriften aus. Ich weiß jetzt nicht wie viel Dependencies React hat, aber ich gehe mal aus von über ein tausend, wenn man den ganzen Tree aufblättert, dann stellen wir eigentlich ein tausend Gutschriften aus. Also wir müssen dann diese ein tausend Gutschriften in irgendeiner Art und Weise durch eine Rechnung funneln und dann unsere Plattform Recursive müsste an eine Rechnung stellen und so. Das ist schon nicht einfach. Und dann musst du die ganze Sache vielleicht zeitlich limitiert machen, weil du möchtest das Geld ja nicht dauerhaft verwahren etc. Etc. Also wer dieses Problem in Deutschland, in der EU löst, Wahnsinn. Ich kann mir auch schon vorstellen, dass das genau der Grund ist, warum GitHub Sponsors nur in gewissen Ländern zur Verfügung steht und dass der Länder Rollout auch immer noch ongoing ist und dass manche Länder da einfach völlig außen vor bleiben aufgrund von Sanktionen und Co Finanzen ist auf jeden Fall immer ein hartes Thema."
+        },
+        {
+            "end": 2993330,
+            "speaker": "B",
+            "start": 2988130,
+            "text": "Aber zurück zur Frage, sonst kein side Project. Der Podcast reicht wirklich leicht aus und."
+        },
+        {
+            "end": 3057880,
+            "speaker": "A",
+            "start": 2993330,
+            "text": "Ich muss nicht noch mehr mit Wolfgang sprechen. Also ich spreche schon mehr mit ihm als mit meiner Frau. Das ist ja schon hier was meine zweite Ehe. Nun gut. Eine Frage, die wir auch bekommen haben, die ich lustigerweise auch mal vor gar nicht allzu langer Zeit in der Discord Community gestellt habe, ist zum Thema Videospiele. Denn ich hatte ein bisschen Zeit und wollte mal im Kopf mal was anderes machen, habe ich gedacht. Ich habe früher immer Counter Strike gespielt und so weiter. Hatten wir ja auch mal eine Episode zu, dass ich da auch programmiertechnisch unterwegs war und Age of Empires und so weiter und so fort. Und irgendwie bin ich aus dem ganzen Videospiel Game halt raus. Aber ich dachte mir wär mal ganz cool, wenn ich jetzt einfach mal zwei Stunden an einem Abend eine Runde spiele, mal ein bisschen Kopf aus, was spiele ich denn? Da habe ich die Steam Library aufgemacht und wurde einfach erschlagen, weil ich wollte eigentlich nur zwei Stunden Runde zocken und das Ding wieder zur Seite legen. Dann habe ich meine Discord Community gefragt, hey, was habt ihr denn da so für Spiele und so, die man so empfehlen kann? Und eine ähnliche Frage wurde von Anonym gestellt. Also diese Person hat leider keinen Namen genannt. Und zwar war die Hattet ihr Programmiervideospiele wie TIS ein hundert oder ähnliches gespielt?"
+        },
+        {
+            "end": 3062310,
+            "speaker": "B",
+            "start": 3058430,
+            "text": "So, jetzt erklär mir mal, was ist TIS ein hundert Spiele?"
+        },
+        {
+            "end": 3105360,
+            "speaker": "A",
+            "start": 3062310,
+            "text": "Nackerbatzl, Wimmi, Ich musste es auch erst googeln. Ich kannte das Spiel nicht. TIS ein hundert ist ein Programmierpuzzle Videospiel. In dem Spiel schreibt der Spieler Pseudo Assembler Code, um bestimmte Aufgaben auf einem fiktiven virtualisierten Computer aus den er Jahren zu lösen, der beschädigt wurde. Also mega geil. Die Screenshots sehen nicht so gut aus, aber ich glaube, ich teste das mal an, weil das hört sich ziemlich cool an. Und da wir anscheinend beide nicht wussten, was TIS ein hundert ist, also jetzt für diese Frage. Nein, wir haben es dann anscheinend nicht gespielt. Haben wir ähnliche Programmiervideospiele gespielt. Ich hab mal angefangen Factorio zu spielen. Kennst du Factorio, Wolfgang?"
+        },
+        {
+            "end": 3106480,
+            "speaker": "B",
+            "start": 3105599,
+            "text": "Vom Namen her?"
+        },
+        {
+            "end": 3187220,
+            "speaker": "A",
+            "start": 3106480,
+            "text": "Ja, Factorio ist ein Aufbau Computerspiel mit Echtzeit Strategieelementen in einem futuristischen Szenario. Da baust du Produktionslines und dann werden Rohstoffe von A nach B transferiert und so weiter und so fort. Und es geht halt immer weiter. Ich habe relativ schnell aufgehört, weil das sehr, sehr hartes Suchtpotenzial hat und ich bin dafür anfällig. Also ich weiß, wenn ich das beginne, dann will ich da Perfektion an den Tag legen. Und deswegen habe ich Factorio mal ganz schnell wieder aufgehört und wieder deinstalliert und seitdem wehre ich mich konstant dagegen, Factorio wieder erneut anzuspielen. Dann habe ich in der Community nachgefragt und habe mein Problem beschrieben, dass ich die Suchtpotenzial habe. Und dann hat mir jemand Shapes empfohlen. Shapes ist unter GPL V, also Open Source, was sehr schön ist. Es ist von Factorio inspiriert, aber es wird eher so als gemütlicheres Factorio bezeichnet. Ohne Zeitdruck habe ich noch nicht gespielt, hört sich aber eigentlich ganz gut an. Dann wurden noch so andere Simulationsspiele wie Sid Meiers Civilization oder Railroads empfohlen. Also anscheinend haben Programmierer innen so einen Hang zu Simulationsspielen oder so Aufbauspielen oder Umweltstrategie Spielen oder ähnlich. Ich warte eigentlich jetzt nur, dass der Wolfgang seine Monkey Island Story wieder auspackt, weil er hat mir die Tage gesagt, dass er Monkey Island wieder installiert hatte."
+        },
+        {
+            "end": 3220270,
+            "speaker": "B",
+            "start": 3187620,
+            "text": "Hatte ich auf meinem alten Laptop installiert, bevor er mir geklaut wurde. Und weißt du, wie schwierig es ist, die Steam Engine auf Linux zum Laufen zu bringen? Gar nicht so einfach. Aber ich habe es damals geschafft und haben bisschen angespielt, aber ist dann auch gleich wieder in den Hintergrund gerutscht. Weil ich habe einfach so viele side Projects und Ideen, dass das meine Spiele sind. Also wenn ich schon Coding mache oder irgendwie Zeit in Code investiere, dann mache ich das bei meinen side Projects und das ist genug Spiele. Spaß weiß ich nicht. Spaß weiß ich auch nicht, aber vielleicht so was ähnliches auf jeden Fall."
+        },
+        {
+            "end": 3229460,
+            "speaker": "A",
+            "start": 3220270,
+            "text": "Naja, ich finde es halt nicht verkehrt, besonders weil wir in dieser Podcast Episode ja auch über Stress gesprochen haben und Stressmanagement und so weiter. Deswegen, dass man ab und zu mal was ganz anderes macht."
+        },
+        {
+            "end": 3236580,
+            "speaker": "B",
+            "start": 3229460,
+            "text": "Ja, aber dann gehe lieber auf den Berg oder in die Natur oder mal Mountainbiken oder klettern, anstatt wieder irgendwas zu coden oder so."
+        },
+        {
+            "end": 3238060,
+            "speaker": "A",
+            "start": 3236660,
+            "text": "Ja, aber abends, wenn es dunkel ist."
+        },
+        {
+            "end": 3262040,
+            "speaker": "B",
+            "start": 3238060,
+            "text": "Ja, da code ich dann an meinen side Projects. Darum ist es mir ja wichtig, wie gesagt, priorisiere immer irgendwelche privaten Events. Wenn jetzt jemand sagt, gern wir klettern, bin ich eigentlich fast immer dabei, wenn es irgendwie geht, wenn jetzt keine Termine vereinbart habe, weil ich kann am Abend immer noch irgendwas machen und programmieren oder sonstige Arbeitssachen machen. Das ist der Vorteil des Selbstständigseins oder der Fluch. Man muss Zeit managen selbst übernehmen."
+        },
+        {
+            "end": 3289360,
+            "speaker": "A",
+            "start": 3262280,
+            "text": "Also die Antwort, haben wir mal Programmiervideospiele wie TIS ein hundert oder ähnliches gespielt? Die Antwort ist nein, ich suche solche Spiele, ich würde sie sehr gern spielen und jetzt nach dieser Frage werde ich TIS ein hundert doch mal ausprobieren. Falls du diese Episode hörst und falls du sagst, wieso kennen die das Spiel nicht, das ist ja wohl mega gut, kommt mal in die Community oder schreibt uns eine E Mail. Ich will Programmier ähnliche Videospiele bzw. Andi."
+        },
+        {
+            "end": 3290840,
+            "speaker": "B",
+            "start": 3289360,
+            "text": "Schreibt sie nicht und schreibt sie nicht."
+        },
+        {
+            "end": 3365300,
+            "speaker": "A",
+            "start": 3291400,
+            "text": "Ich will Spiele, wo man sagt, okay, das ist eigentlich für Programmierer oder für Softwareentwickler gemacht. Das wäre mal was da wo man mal ein bisschen nachdenken muss, ein bisschen Strategie, klar, Civilization und so weiter, aber eigentlich auch so für den Zeitvertreib am Abend. Deswegen würde mich sehr freuen, bitte einmal in die Discord Community kommen oder per E Mail kurz an mich droppen. Dankeschön. So, und jetzt kommen wir zur letzten Frage, auf die alle gewartet haben, weil wir haben sie initial angeteasert und jetzt versuchen wir mal den Wolfgang drauf festzunageln und nicht wie diese Politiker Antwort drumherum zu brabbeln, weil der wirft mir immer vor, immer wieder diese Politiker Antwort it Depends. Andy, jetzt komm mal bei den Fakten hier. Ne Wolfgang, bleib mal bei den Fakten. Wie wir alle wissen, hat der Wolfgang mal mit einem Kollegen die Plattform Code Prinzip gebaut. Verlinken wir auch in den Shownotes. Codeprints DE ist ein Service, da kannst du dein GitHub Profil angeben und du kriegst deinen GitHub Streak, diese grünen Mopeds da unten, diese Timeline und kannst du die als Poster drucken lassen oder als Tasse drucken lassen oder ähnliches. Und ich werde immer noch auf der Startseite gefeatured, sehe ich gerade, weil ich habe, glaube ich, eins der ersten Poster bekommen. Wieso habe ich da noch nie Geld für bekommen? Lustig, da hatte ich noch lange Haare."
+        },
+        {
+            "end": 3367920,
+            "speaker": "B",
+            "start": 3365300,
+            "text": "Ja, da musst du die jetzigen Besitzer fragen."
+        },
+        {
+            "end": 3443440,
+            "speaker": "A",
+            "start": 3368000,
+            "text": "Auf jeden Fall hat der Wolfgang dann irgendwann gesagt, oder mit dem Kollegen zusammen, Grüße gehen raus an den Matthias Endler, den haben wir auch schon ein, zweimal im Podcast hier. Okay, irgendwie wollen wir an diesem Projekt nicht mehr weitermachen. Lass mal gucken, ob wir wen finden, der das kauft. Und dann hat er das verkauft, das Projekt. Also da kann man ganz offiziell von einem Exit sprechen, wie man das im Startup Fachjargon nennt. So Wolfgang, und jetzt wollen wir alle wissen, wie viel Geld ist da über die Ladentheke gegangen und was kam da wirklich raus? Jetzt kommen wir nicht, wir haben das im Vertrag gesagt, dass wir das nicht nennen dürfen. Wir sind hier unter uns. Und für alle Leute, die das jetzt gerade, ich meine, ihr könnt das ja nicht sehen, ihr hört das ja nur, der Wolfgang grinst gerade sehr stark und ich glaube, er sucht gerade die initialen E Mails und guckt wirklich im Vertrag nach oder ähnliches. Der kann mir jetzt nicht sagen, dass er den Betrag nicht kennt. Also das wäre eine Lüge. Das wäre eine Lüge an unsere ganze Community und er weiß das genau. Deswegen Wolfgang, bitte Abfahrt. Was hast du verdient? Wie hoch war der Exit? Und die explizite Frage von Matthias, wie hoch war nun die Summe? Da wurde sogar das Wort nun genannt. Wie hoch war nun die Summe, die Wolfgang bei seinem Exit erhalten hat?"
+        },
+        {
+            "end": 3494430,
+            "speaker": "B",
+            "start": 3443440,
+            "text": "Also du hast mich schon in Episode ein hundert neun und neunzig gefragt und du hast da ja auch dann eine Herleitung probiert mit den Stundensätzen, weil ich ja erwähnt habe, wie viele Stunden das ungefähr waren damals und wie wir da zu einem Preis gekommen sind, was jetzt für dich natürlich schwer zu verstehen ist, aber ich habe einen gewissen Berufsethos, Andi. Also ich plauder ja nicht einfach irgendwelche Fakten aus, vor allem wenn ich nicht mit den Leuten gesprochen habe, die da beteiligt waren und die das bezahlt haben. Und daher werde ich dir natürlich keine Summe nennen, aber damit du glücklich bist, du warst mit deiner Schätzung damals in Episode ein hundert neun und neunzig ziemlich gut drauf. Und was glaubst du überhaupt, dass ich einen Vertrag nachlesen kann? Du glaubst wirklich, wir hatten dann einen Vertrag wieder Berufsethos, das war eine gute Übereinkunft. Ich glaube, wir hatten keinen Vertrag, wir hatten einfach nur eine Rechnung. Das war alles. Also pragmatisch. Danke an Hendrik dafür übrigens."
+        },
+        {
+            "end": 3498630,
+            "speaker": "A",
+            "start": 3494430,
+            "text": "Du bist also ein klassischer Kaufmann, der sagt, okay, bei einem Handschlag gilt der Deal."
+        },
+        {
+            "end": 3501830,
+            "speaker": "B",
+            "start": 3498710,
+            "text": "Wenn man die Leute so gut kennt, dann ist es durchaus in Ordnung."
+        },
+        {
+            "end": 3513180,
+            "speaker": "A",
+            "start": 3501830,
+            "text": "So, jetzt hast du einen Nachteil, Wolfgang. Ich kenne alle involvierte Parteien und nach diesem Podcast werde ich einmal kurz alle involvierten Parteien fragen und dann schauen wir mal, was da rauskommt."
+        },
+        {
+            "end": 3519900,
+            "speaker": "B",
+            "start": 3513180,
+            "text": "Das Problem ist ja, dass du einfach ein schlechtes Gedächtnis hast, weil ich glaube, ich habe dir sicher irgendwann mal erzählt, wie viel wir bekommen haben."
+        },
+        {
+            "end": 3532690,
+            "speaker": "A",
+            "start": 3519900,
+            "text": "Nein, nein, nein, sowas würde ich wissen. Es gibt Dinge, die vergesse ich sehr schnell. Es gibt Dinge, da schweigst du wie ein Gentleman Berufsethos, wie du es genannt hast, aber ich frage einfach die Parteien."
+        },
+        {
+            "end": 3535210,
+            "speaker": "B",
+            "start": 3532770,
+            "text": "Und du last nicht locker, wolltest du sagen."
+        },
+        {
+            "end": 3600690,
+            "speaker": "A",
+            "start": 3535210,
+            "text": "Naja, es ist eine Ask me anything und anything ist halt. Wie hoch war nun die Summe, die Wolfgang bei seinem Exit erhalten hat? Ich setze mich halt nur für die Interessen für Matthias ein. Matthias, danke für diese Frage, die kriegen wir schon noch raus. So, und jetzt hat der Wolfgang gesagt, okay, in Episode ein hundert neun und neunzig war ich gar nicht so schlecht dran. Ich habe gerade noch mal ins Transkript geguckt, das findet ihr auf unserer Webseite und da habe ich gesagt, okay, wir machen vier hundert fünfzig Stunden mal fünfzig, da bin ich bei einem niedrigen fünfstelligen Betrag, würde ich sagen. Jetzt hat er hier gesagt, okay, ich war recht nah dran. Niedriger fünfstelliger Betrag bedeutet niedrig fünfstellig, fünfstellig sind wir ab niedrig, ich würde mal sagen, irgendwas so zwischen fünfzehn und zwanzig ging da schon über die Ladentheke, denn Wolfgang, da geht es nicht darum, dich zu blamen oder ähnliches, da geht es darum, dass wir endlich mal bei den harten Fakten bleiben und mit unserer Community ehrlich drüber sprechen. Lohnt sich der Aufwand für ein solches side Project denn auch finanziell hintendran? Also wir sind ja auch in einer beratenden Funktion hier tätig."
+        },
+        {
+            "end": 3616970,
+            "speaker": "B",
+            "start": 3600770,
+            "text": "Ja, dann am besten Episode ein hundert neun und neunzig anhören, da haben wir viel über side Project gesprochen und ob sich das rentiert. Ich würde mal ganz allgemein sagen, es rentiert sich nicht, weil auch wenn du jetzt, keine Ahnung, damals hast du fünfzig Stundensatz angenommen, wenn man normal arbeitet, hat man wahrscheinlich besseren Stundensatz."
+        },
+        {
+            "end": 3624320,
+            "speaker": "A",
+            "start": 3617440,
+            "text": "Matthias, sei gewiss, ich bleib dran. Wenn du diese Episode hörst, frag mich einfach noch mal. Ich werde die Antwort ready haben."
+        },
+        {
+            "end": 3651970,
+            "speaker": "B",
+            "start": 3624480,
+            "text": "Wer sonst noch Fragen hat an uns, kann gerne auf Engineering Kiosk Dean mal vorbeischauen, da gibt es ein Formular und gerne Frage droppen kann alles mögliche sein. Wir sind eigentlich immer happy, wenn wir neue Fragen bekommen, außer bei solchen Fragen, wenn es um Exits geht oder ähnliches. Aber ganz allgemein, stellt uns gerne Fragen, vor allem damit Andy dann wieder irgendwelche bösen Fragen hat und sich auf Hörer rausreden kann, wenn er irgendwas wissen will."
+        },
+        {
+            "end": 3704500,
+            "speaker": "A",
+            "start": 3652130,
+            "text": "Ihr merkt, was hier gerade abgeht. Wenn der Wolfgang etwas nicht mag, generalisiert er, dass wir das nicht mögen. Ich mag diese Frage sehr. Also ihr merkt schon, der Wolfgang, der enthält euch Sachen. Also deswegen ein bisschen Sympathiepunkte. Wolfgang, du kannst hier Applaus einheimsen. Weißt du das eigentlich? Du bist einer von wenigen Leuten, die ein Projekt, man könnte sagen eine Firma hochgezogen haben mit eigenem Schweiß und Blut und diese dann verkauft hast. Wie viele Leute können das auf der Welt von sich behaupten? Normalerweise würde ich sagen, Gratulation, ich bin sehr stolz auf dich und das war eine mega Leistung. Aber wenn du jetzt hier so rum duxel, wie so ein Politiker unsere Community im Stich lässt und sagst, ask me anything, aber anything nicht. Die Fragen, die wirklich mal hier Fleisch in den Podcast bringen, weiß ich jetzt nicht."
+        },
+        {
+            "end": 3712340,
+            "speaker": "B",
+            "start": 3704500,
+            "text": "Ja, es muss ja die Spannung aufrechterhalten bleiben. Wenn du einen Krimi anschaust, dann erfährst du ja auch nicht am Anfang, wer der Mörder war."
+        },
+        {
+            "end": 3716579,
+            "speaker": "A",
+            "start": 3712420,
+            "text": "Ja, aber sorry, aber Fast and the Furious Folge zwölf bringt auch nichts."
+        },
+        {
+            "end": 3717860,
+            "speaker": "B",
+            "start": 3716900,
+            "text": "Kein Krimi."
+        },
+        {
+            "end": 3729550,
+            "speaker": "A",
+            "start": 3718020,
+            "text": "Also irgendwann muss halt auch mal das Happy End sein, denn jede gute Story hat ein Ende. Und ab und zu muss man ja auch mal sagen, okay, war gut, war eine schöne Zeit. Jetzt schauen wir nach vorne. Also Matthias, bleib stark, frag einfach noch mal, Wir finden das schon raus."
+        },
+        {
+            "end": 3731870,
+            "speaker": "B",
+            "start": 3729630,
+            "text": "Danke an alle Fragen, danke an alle."
+        },
+        {
+            "end": 3744670,
+            "speaker": "A",
+            "start": 3731870,
+            "text": "Fragen, danke an alle Fragen, Danke an alle Fragen und Fragenden. Diese Episode war mal wieder von euch geskriptet, von uns beantwortet. Vielen lieben Dank. Wir hören uns in der nächsten Woche und bis bald. Bye bye."
+        },
+        {
+            "end": 3745230,
+            "speaker": "B",
+            "start": 3744750,
+            "text": "Ciao."
+        }
+    ],
+    "webhook_auth": false
+}
