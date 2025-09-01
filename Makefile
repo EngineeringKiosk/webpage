@@ -88,9 +88,6 @@ update-missing-tag-descriptions-content-files: ## Finds all used tags in content
 update-missing-tag-descriptions-german-tech-podcast: ## Find all used tags in the german tech podcasts that need SEO descriptions and updates the tag-file
 	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py -write-file german-tech-podcasts
 
-# Python scripts that don't have a make target yet
-# - transcribe_audio_file.py
-
 .PHONY: export-metadata
 export-metadata: ## Exports all metadata (e.g. for ai pipelines) to a JSON file
 	node scripts/exportEpisodes.js > /tmp/ansager_titel_episodes.json
