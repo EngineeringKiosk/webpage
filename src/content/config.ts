@@ -21,7 +21,6 @@ const podcastEpisodeCollection = defineCollection({
 			image: image(),
 			length_second: z.number(),
 			pubDate: z.date(),
-			rtlplus: z.string(),
 			six_user_needs: z.array(z.enum(['Update me', 'Keep me on the trend', 'Give me perspective', 'Inspire me', 'Amuse/divert me', 'Educate me'])),
 			speaker: z.array(
 				z.object({

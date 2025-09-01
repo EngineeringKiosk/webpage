@@ -367,14 +367,6 @@ const html = (await Astro.slots.render('default'))
 															</a>
 														</div>
 													)}
-													{frontmatter.rtlplus && (
-														<div class="m-2">
-															<a class="flex items-center" href={frontmatter.rtlplus} title={`Engineering Kiosk ${frontmatter.title} bei RTL Plus Musik`}>
-																<img class="h-6" src="/images/brands/rtl-plus.svg" alt={`Engineering Kiosk ${frontmatter.title} auf RTL Plus Musik`} />
-																<span class="text-lg m-2">&nbsp;</span>
-															</a>
-														</div>
-													)}
 													{frontmatter.youtube && (
 														<div class="m-2">
 															<a class="flex items-center" href={frontmatter.youtube} title={`Engineering Kiosk ${frontmatter.title} auf YouTube`}>
