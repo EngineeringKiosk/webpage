@@ -55,8 +55,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./57-servant-leadership-f\xFChrungsstil-der-neuen-generation.jpg"
 length_second: 3462
 pubDate: 2023-02-07 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -68,7 +66,6 @@ tags:
 - Kommunikation
 - Leadership
 title: "#57 Servant Leadership: F\xFChrungsstil der neuen Generation?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/57-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=wo8XReZyXd0
 

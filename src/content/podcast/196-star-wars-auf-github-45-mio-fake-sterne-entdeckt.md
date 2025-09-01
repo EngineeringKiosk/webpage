@@ -85,8 +85,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./196-star-wars-auf-github-45-mio-fake-sterne-entdeckt.jpg
 length_second: 3751
 pubDate: 2025-05-20 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -124,7 +122,6 @@ tags:
 - Papers we love
 - Open Source
 title: '#196 Star Wars auf GitHub: 4,5 Mio. Fake-Sterne entdeckt'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/196-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=e6nO4nT-whI
 

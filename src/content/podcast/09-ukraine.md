@@ -58,8 +58,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./09-ukraine.jpg
 length_second: 2250
 pubDate: 2022-03-08 10:55:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -69,7 +67,6 @@ spotify: https://open.spotify.com/episode/30CdS9BlvI3GXsCgswRgm8
 tags:
 - Tech Kultur
 title: '#09 Ukraine'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/09-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ccXO7cHaGsI
 

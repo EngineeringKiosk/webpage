@@ -44,8 +44,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./112-das-engineering-manager-pendulum-zwischen-coding-und-leadership-mit-tom-bartel.jpg
 length_second: 5018
 pubDate: 2024-02-27 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -61,7 +59,6 @@ tags:
 - Interview
 title: '#112 Das Engineering Manager Pendulum: Zwischen Coding und Leadership mit
   Tom Bartel'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/112-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=7YTbx4931lU
 

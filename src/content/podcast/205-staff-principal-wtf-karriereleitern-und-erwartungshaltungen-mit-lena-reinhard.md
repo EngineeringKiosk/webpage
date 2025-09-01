@@ -92,8 +92,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./205-staff-principal-wtf-karriereleitern-und-erwartungshaltungen-mit-lena-reinhard.jpg
 length_second: 4503
 pubDate: 2025-07-22 03:00:58+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -109,7 +107,6 @@ tags:
 - Interview
 title: '#205 Staff, Principal, WTF? Karriereleitern und Erwartungshaltungen mit Lena
   Reinhard'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/205-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VSTon6p2GgM
 

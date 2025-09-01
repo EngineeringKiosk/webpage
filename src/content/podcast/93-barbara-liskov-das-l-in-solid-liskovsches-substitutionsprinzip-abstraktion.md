@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./93-barbara-liskov-das-l-in-solid-liskovsches-substitutionsprinzip-abstraktion.jpg
 length_second: 3161
 pubDate: 2023-10-17 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -61,7 +59,6 @@ tags:
 - "Software Qualit\xE4t"
 - Women in Tech
 title: '#93 Barbara Liskov - Das L in SOLID (Liskovsches Substitutionsprinzip & Abstraktion)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/93-transcript-slim.json
 youtube: https://youtu.be/2jYqADkEqFE
 

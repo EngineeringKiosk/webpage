@@ -80,8 +80,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./199-side-projects-coden-ist-leicht-sales-ist-schwer-business-ist-der-endgegner.jpg
 length_second: 4630
 pubDate: 2025-06-10 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -91,7 +89,6 @@ spotify: https://open.spotify.com/episode/15HlnVnHMG1JP2wRoC0UUv
 tags:
 - Side Projects
 title: '#199 Side-Projects: Coden ist leicht. Sales ist schwer. Business ist der Endgegner!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/199-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=xfTlX4HiXac
 

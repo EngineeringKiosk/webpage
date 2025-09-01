@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./47-wer-visionen-hat-soll-zum-arzt.jpg
 length_second: 2633
 pubDate: 2022-11-29 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -80,7 +78,6 @@ tags:
 - Kommunikation
 - Leadership
 title: '#47 Wer Visionen hat, soll zum Arzt!?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/47-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Sn9PSxd2uyg
 

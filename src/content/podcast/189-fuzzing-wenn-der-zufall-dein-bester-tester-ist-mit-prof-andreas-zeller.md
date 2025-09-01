@@ -92,8 +92,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./189-fuzzing-wenn-der-zufall-dein-bester-tester-ist-mit-prof-andreas-zeller.jpg
 length_second: 4836
 pubDate: 2025-04-01 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -107,7 +105,6 @@ tags:
 - Interview
 - "Software Qualit\xE4t"
 title: '#189 Fuzzing: Wenn der Zufall dein bester Tester ist mit Prof. Andreas Zeller'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/189-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SqSuFH4Iquc
 

@@ -64,8 +64,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./82-hinter-den-kulissen-die-informatik-doktorarbeit-und-ist-der-dr-titel-in-der-heutigen-it-welt-noch-relevant.jpg
 length_second: 4189
 pubDate: 2023-08-01 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -78,7 +76,6 @@ tags:
 - Gehalt
 title: '#82 Hinter den Kulissen: Die Informatik-Doktorarbeit und ist der Dr. Titel
   in der heutigen IT-Welt noch relevant?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/82-transcript-slim.json
 youtube: https://youtu.be/3a9JAtcorcc
 

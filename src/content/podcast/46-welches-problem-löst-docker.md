@@ -52,8 +52,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./46-welches-problem-l\xF6st-docker.jpg"
 length_second: 3305
 pubDate: 2022-11-22 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -64,7 +62,6 @@ tags:
 - Backend
 - DevOps
 title: "#46 Welches Problem l\xF6st Docker?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/46-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dkKwZ8uQFso
 

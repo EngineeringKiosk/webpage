@@ -35,8 +35,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./53-cloud-nocode-ai-chatgpt-ersetzen-unsere-jobs.jpg
 length_second: 3959
 pubDate: 2023-01-10 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -48,7 +46,6 @@ tags:
 - Automation
 - Cloud
 title: '#53 Cloud / NoCode/ AI / ChatGPT ersetzen unsere Jobs?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/53-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=6jSO8-ZJp6g
 

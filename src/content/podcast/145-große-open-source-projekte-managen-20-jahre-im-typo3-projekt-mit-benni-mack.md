@@ -76,8 +76,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./145-gro\xDFe-open-source-projekte-managen-20-jahre-im-typo3-projekt-mit-benni-mack.jpg"
 length_second: 4313
 pubDate: 2024-10-15 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -93,7 +91,6 @@ tags:
 - Interview
 title: "#145 Gro\xDFe Open Source Projekte managen: 20 Jahre im TYPO3 Projekt mit\
   \ Benni Mack"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/145-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=v9cD3lufftU
 

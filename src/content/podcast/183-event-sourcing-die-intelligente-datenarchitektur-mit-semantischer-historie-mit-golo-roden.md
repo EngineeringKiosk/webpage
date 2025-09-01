@@ -82,8 +82,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./183-event-sourcing-die-intelligente-datenarchitektur-mit-semantischer-historie-mit-golo-roden.jpg
 length_second: 5809
 pubDate: 2025-02-18 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -98,7 +96,6 @@ tags:
 - Interview
 title: "#183 Event-Sourcing: Die intelligente Datenarchitektur mit semantischer Historie\
   \ \u2013 mit Golo Roden"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/183-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=wL2Z2WqX7AE
 

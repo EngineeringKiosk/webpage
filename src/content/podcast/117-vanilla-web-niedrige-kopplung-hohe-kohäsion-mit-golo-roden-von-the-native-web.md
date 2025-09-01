@@ -56,8 +56,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./117-vanilla-web-niedrige-kopplung-hohe-koh\xE4sion-mit-golo-roden-von-the-native-web.jpg"
 length_second: 4837
 pubDate: 2024-04-02 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +70,6 @@ tags:
 - Interview
 title: "#117 Vanilla Web: Niedrige Kopplung & hohe Koh\xE4sion mit Golo Roden von\
   \ the native web"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/117-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=75J3S4lURLA
 

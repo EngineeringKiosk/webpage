@@ -57,8 +57,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./106-ci-continuous-integration-in-der-praxis-mit-michael-lihs-von-thoughtworks.jpg
 length_second: 4741
 pubDate: 2024-01-16 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -73,7 +71,6 @@ tags:
 - Software Engineering
 - Interview
 title: '#106 CI - Continuous Integration in der Praxis mit Michael Lihs von Thoughtworks'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/106-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=E5Va0uqfpcs
 

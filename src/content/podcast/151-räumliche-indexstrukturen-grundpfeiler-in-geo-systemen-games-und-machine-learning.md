@@ -66,8 +66,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./151-r\xE4umliche-indexstrukturen-grundpfeiler-in-geo-systemen-games-und-machine-learning.jpg"
 length_second: 3806
 pubDate: 2024-11-26 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -80,7 +78,6 @@ tags:
 - Backend
 title: "#151 R\xE4umliche Indexstrukturen: Grundpfeiler in Geo-Systemen, Games und\
   \ Machine Learning"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/151-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=aEI6L1eFUmc
 

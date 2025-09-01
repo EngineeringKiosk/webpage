@@ -53,8 +53,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./87-die-dora-metriken-ist-software-entwicklungs-performance-messbar.jpg
 length_second: 3282
 pubDate: 2023-09-05 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -67,7 +65,6 @@ tags:
 - Tech Kultur
 - "Software Qualit\xE4t"
 title: '#87 Die DORA-Metriken: Ist Software-Entwicklungs-Performance messbar?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/87-transcript-slim.json
 youtube: https://youtu.be/KFLZGNpmawY
 

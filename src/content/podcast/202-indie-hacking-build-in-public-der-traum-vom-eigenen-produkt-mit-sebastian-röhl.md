@@ -78,8 +78,6 @@ image: "./202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-se
   hl.jpg"
 length_second: 4482
 pubDate: 2025-07-01 04:00:06+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -93,7 +91,6 @@ tags:
 - Interview
 title: "#202 Indie-Hacking, Build in Public & der Traum vom eigenen Produkt mit Sebastian\
   \ R\xF6hl"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/202-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=eF-dtCCHhw0
 

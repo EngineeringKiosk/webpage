@@ -50,8 +50,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./36-sechs-stellige-it-geh\xE4lter-wie-was-wo-fair.jpg"
 length_second: 3255
 pubDate: 2022-09-13 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -62,7 +60,6 @@ tags:
 - Karriere
 - Gehalt
 title: "#36 Sechs-stellige IT-Geh\xE4lter? Wie? Was? Wo? Fair?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/36-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=77GSrg7tPhY
 

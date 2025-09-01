@@ -69,8 +69,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./136-als-knowledge-worker-fit-und-gesund-bleiben-mit-patrick-cole.jpg
 length_second: 4095
 pubDate: 2024-08-13 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -83,7 +81,6 @@ tags:
 - Interview
 - Karriere
 title: '#136 Als Knowledge Worker fit und gesund bleiben mit Patrick Cole'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/136-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=COQNWz6QVco
 

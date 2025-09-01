@@ -66,8 +66,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./168-beyond-learning-budgets-was-team-entwicklung-wirklich-braucht.jpg
 length_second: 3950
 pubDate: 2024-12-17 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -79,7 +77,6 @@ tags:
 - Karriere
 - Leadership
 title: '#168 Beyond Learning Budgets: Was Team-Entwicklung wirklich braucht'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/168-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CDQ70bX9PJE
 

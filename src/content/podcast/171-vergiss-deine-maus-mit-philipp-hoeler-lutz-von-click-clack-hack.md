@@ -33,8 +33,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./171-vergiss-deine-maus-mit-philipp-hoeler-lutz-von-click-clack-hack.jpg
 length_second: 336
 pubDate: 2024-12-20 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -44,7 +42,6 @@ spotify: https://open.spotify.com/episode/0UmcTKRabWlLCmnjY79rNs
 tags:
 - Tech Kultur
 title: '#171 Vergiss deine Maus mit Philipp Hoeler-Lutz von Click! Clack! Hack!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/171-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RAr31UfEM5w
 

@@ -80,8 +80,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./177-stream-processing-kafka-die-basis-moderner-datenpipelines-mit-stefan-sprenger.jpg
 length_second: 4188
 pubDate: 2025-01-07 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -96,7 +94,6 @@ tags:
 - Interview
 title: '#177 Stream Processing & Kafka: Die Basis moderner Datenpipelines mit Stefan
   Sprenger'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/177-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=vktDEQCj9p0
 

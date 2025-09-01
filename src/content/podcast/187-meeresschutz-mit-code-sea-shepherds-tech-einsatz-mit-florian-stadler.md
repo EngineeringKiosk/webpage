@@ -75,8 +75,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./187-meeresschutz-mit-code-sea-shepherds-tech-einsatz-mit-florian-stadler.jpg
 length_second: 4109
 pubDate: 2025-03-18 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -89,7 +87,6 @@ tags:
 - Code mit Impact
 - Interview
 title: "#187 Meeresschutz mit Code \u2013 Sea Shepherds Tech-Einsatz mit Florian Stadler"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/187-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=yNM4ppKNjT0
 

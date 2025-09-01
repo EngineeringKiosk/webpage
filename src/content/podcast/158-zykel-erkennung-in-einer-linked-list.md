@@ -27,8 +27,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./158-zykel-erkennung-in-einer-linked-list.jpg
 length_second: 368
 pubDate: 2024-12-07 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -38,7 +36,6 @@ spotify: https://open.spotify.com/episode/24V5Fnyht9UXGQTLSrZhvQ
 tags:
 - Software Engineering
 title: '#158 Zykel-Erkennung in einer Linked List'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/158-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RyYjgtmrAa8
 

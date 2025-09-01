@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./67-die-netz-entlastung-des-internets-content-delivery-networks-cdns.jpg
 length_second: 4002
 pubDate: 2023-04-18 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -75,7 +73,6 @@ tags:
 - Cloud
 - Software Engineering
 title: '#67 Die Netz-Entlastung des Internets: Content Delivery Networks (CDNs)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/67-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=blKVTNnJbkM
 

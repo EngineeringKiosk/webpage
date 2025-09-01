@@ -51,8 +51,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./32-die-richtigen-leute-anstellen-die-recruiting-pipeline.jpg
 length_second: 3868
 pubDate: 2022-08-16 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -63,7 +61,6 @@ tags:
 - Bewerbung
 - Team
 title: '#32 Die richtigen Leute anstellen: Die Recruiting Pipeline'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/32-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=xZOj6fTw16E
 

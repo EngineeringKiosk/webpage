@@ -41,8 +41,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./70-alan-turing-der-vater-der-heutigen-informatik-turing-complete-turing-test-halting-problem-turing-maschine-captcha.jpg
 length_second: 3419
 pubDate: 2023-05-09 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -55,7 +53,6 @@ tags:
 - Turing Award
 title: '#70 Alan Turing: Der Vater der heutigen Informatik (Turing-Complete, Turing-Test,
   Halting-Problem, Turing-Maschine, Captcha)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/70-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=_OEvB3Skcsg
 

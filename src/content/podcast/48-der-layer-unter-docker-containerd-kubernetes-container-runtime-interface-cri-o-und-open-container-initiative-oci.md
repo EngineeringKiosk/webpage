@@ -56,8 +56,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./48-der-layer-unter-docker-containerd-kubernetes-container-runtime-interface-cri-o-und-open-container-initiative-oci.jpg
 length_second: 2264
 pubDate: 2022-12-06 09:21:47+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -70,7 +68,6 @@ tags:
 - Cloud
 title: '#48 Der Layer unter Docker: containerd, Kubernetes, Container Runtime Interface,
   CRI-O und Open Container Initiative (OCI)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/48-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=U0_i4N_xyCE
 

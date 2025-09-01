@@ -56,8 +56,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./14-async-und-await-asynchrones-arbeiten-im-alltag.jpg
 length_second: 3389
 pubDate: 2022-04-12 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -71,7 +69,6 @@ tags:
 - Remote work
 - Leadership
 title: '#14 async und await: asynchrones Arbeiten im Alltag'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/14-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Pho7eauXAqU
 

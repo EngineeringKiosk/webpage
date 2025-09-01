@@ -58,8 +58,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./31-ich-automatisiere-mir-die-welt-wie-sie-mir-gef\xE4llt-mit-github-actions.jpg"
 length_second: 3675
 pubDate: 2022-08-09 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +70,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: "#31 Ich automatisiere mir die Welt wie sie mir gef\xE4llt (mit GitHub Actions)"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/31-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=hJoA3jMZQ38
 

@@ -77,8 +77,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./200-ausgefragt-zum-jubil\xE4um-\xFCbernimmt-index-out-of-bounds-die-kontrolle.jpg"
 length_second: 6575
 pubDate: 2025-06-17 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Christian Braun
   transcriptLetter: B
@@ -92,7 +90,6 @@ spotify: https://open.spotify.com/episode/6xjqzboMcetUEb7aLO35Nj
 tags:
 - Engineering Kiosk
 title: "#200 Ausgefragt! Zum Jubil\xE4um \xFCbernimmt Index Out Of Bounds die Kontrolle..."
-transcript_raw: ''
 transcript_slim: src/data/transcripts/200-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PRTmg6y-ry0
 

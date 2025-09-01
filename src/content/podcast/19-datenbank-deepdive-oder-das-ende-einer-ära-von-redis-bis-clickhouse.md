@@ -78,8 +78,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./19-datenbank-deepdive-oder-das-ende-einer-\xE4ra-von-redis-bis-clickhouse.jpg"
 length_second: 3842
 pubDate: 2022-05-17 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -89,7 +87,6 @@ spotify: https://open.spotify.com/episode/2BoVJYXWCOoK9w31nZaevF
 tags:
 - Datenbanken
 title: "#19 Datenbank-Deepdive (oder das Ende einer \xC4ra): von Redis bis ClickHouse"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/19-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=3SkD7AxatxY
 

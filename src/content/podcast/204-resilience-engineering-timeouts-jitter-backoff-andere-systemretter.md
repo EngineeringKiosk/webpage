@@ -70,8 +70,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./204-resilience-engineering-timeouts-jitter-backoff-andere-systemretter.jpg
 length_second: 3906
 pubDate: 2025-07-15 03:00:04+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -83,7 +81,6 @@ tags:
 - Software Engineering
 - DevOps
 title: '#204 Resilience Engineering: Timeouts, Jitter, Backoff & andere Systemretter'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/204-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PLKPLVww0I0
 

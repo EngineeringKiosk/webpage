@@ -61,8 +61,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./88-die-personalabteilung-freund-oder-feind-mit-patrick-kuster.jpg
 length_second: 4600
 pubDate: 2023-09-12 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -78,7 +76,6 @@ tags:
 - Kommunikation
 - Interview
 title: '#88 Die Personalabteilung: Freund oder Feind? mit Patrick Kuster'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/88-transcript-slim.json
 youtube: https://youtu.be/5cE514oDbbk
 

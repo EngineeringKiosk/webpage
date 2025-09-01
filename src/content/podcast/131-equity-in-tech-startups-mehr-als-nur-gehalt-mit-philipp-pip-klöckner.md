@@ -71,8 +71,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./131-equity-in-tech-startups-mehr-als-nur-gehalt-mit-philipp-pip-kl\xF6ckner.jpg"
 length_second: 4537
 pubDate: 2024-07-09 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -88,7 +86,6 @@ tags:
 - Interview
 title: "#131 Equity in Tech-Startups: Mehr als nur Gehalt mit Philipp \"Pip\" Kl\xF6\
   ckner"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/131-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=gFdvA-PDdEU
 

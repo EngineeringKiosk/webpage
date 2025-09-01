@@ -55,8 +55,6 @@ headlines: "sprungmarken::Sprungmarken||erwahnte-personen::Erw\xE4hnte Personen|
 image: "./01-side-projects-fluch-oder-segen-f\xFCr-die-karriere.jpg"
 length_second: 2782
 pubDate: 2022-01-03 12:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -66,7 +64,6 @@ spotify: https://open.spotify.com/episode/0uT54qYXLeoYPIerWNK6WY
 tags:
 - Side Projects
 title: "#01 Side Projects - Fluch oder Segen f\xFCr die Karriere?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/01-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=u-JSOLHD1NI
 

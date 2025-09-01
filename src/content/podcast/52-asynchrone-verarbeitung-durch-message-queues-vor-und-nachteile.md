@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./52-asynchrone-verarbeitung-durch-message-queues-vor-und-nachteile.jpg
 length_second: 3409
 pubDate: 2023-01-03 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -74,7 +72,6 @@ tags:
 - Backend
 - Software Engineering
 title: '#52 Asynchrone Verarbeitung durch Message Queues - Vor- und Nachteile'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/52-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ew9SFEmpbOg
 

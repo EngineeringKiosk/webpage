@@ -42,8 +42,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./103-plattform-engineering-und-interne-developer-plattformen-mit-puja-abbassi.jpg
 length_second: 4542
 pubDate: 2023-12-26 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -57,7 +55,6 @@ tags:
 - Software Engineering
 - Interview
 title: '#103 Plattform Engineering und Interne Developer Plattformen mit Puja Abbassi'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/103-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=_k4DTov5Cf8
 

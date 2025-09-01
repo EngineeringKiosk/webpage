@@ -27,8 +27,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./163-benevolent-dictator-for-life-bdfl.jpg
 length_second: 798
 pubDate: 2024-12-12 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -40,7 +38,6 @@ tags:
 - Open Source
 - Leadership
 title: '#163 Benevolent Dictator for Life (BDFL)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/163-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=sVYwnq9fe7Q
 

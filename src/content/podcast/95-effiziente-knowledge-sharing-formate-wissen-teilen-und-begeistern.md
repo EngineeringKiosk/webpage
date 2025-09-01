@@ -50,8 +50,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./95-effiziente-knowledge-sharing-formate-wissen-teilen-und-begeistern.jpg
 length_second: 3909
 pubDate: 2023-10-31 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -64,7 +62,6 @@ tags:
 - Knowledge Sharing
 - Kommunikation
 title: '#95 Effiziente Knowledge Sharing Formate: Wissen teilen und begeistern'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/95-transcript-slim.json
 youtube: https://youtu.be/njl1RfMcDxo
 

@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./28-o1-olog-n-on2-ist-die-komplexit\xE4t-von-algorithmen-im-entwickler-alltag-relevant.jpg"
 length_second: 3333
 pubDate: 2022-07-19 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -81,7 +79,6 @@ tags:
 - Backend
 title: "#28 O(1), O(log n), O(n^2) - Ist die Komplexit\xE4t von Algorithmen im Entwickler-Alltag\
   \ relevant?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/28-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=O8aUaliioK8
 

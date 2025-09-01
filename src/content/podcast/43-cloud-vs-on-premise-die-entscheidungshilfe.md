@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./43-cloud-vs-on-premise-die-entscheidungshilfe.jpg
 length_second: 4264
 pubDate: 2022-11-01 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -67,7 +65,6 @@ tags:
 - DevOps
 - Cloud
 title: '#43 Cloud vs. On-Premise: Die Entscheidungshilfe'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/43-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FHLf4KRRRXE
 

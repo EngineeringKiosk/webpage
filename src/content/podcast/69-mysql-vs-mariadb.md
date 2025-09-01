@@ -59,8 +59,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./69-mysql-vs-mariadb.jpg
 length_second: 4259
 pubDate: 2023-05-02 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +70,6 @@ tags:
 - Software Engineering
 - Datenbanken
 title: '#69 MySQL vs. MariaDB'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/69-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Uzt2ia_yMFE
 

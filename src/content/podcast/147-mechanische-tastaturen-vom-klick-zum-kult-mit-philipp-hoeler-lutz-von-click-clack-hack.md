@@ -77,8 +77,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./147-mechanische-tastaturen-vom-klick-zum-kult-mit-philipp-hoeler-lutz-von-click-clack-hack.jpg
 length_second: 4775
 pubDate: 2024-10-29 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -92,7 +90,6 @@ tags:
 - Interview
 title: '#147 Mechanische Tastaturen: Vom Klick zum Kult mit Philipp Hoeler-Lutz von
   Click! Clack! Hack!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/147-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=9SC-B8-_hCk
 

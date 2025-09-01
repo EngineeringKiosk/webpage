@@ -88,8 +88,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./193-excel-esports-wenn-zellen-um-die-weltmeisterschaft-k\xE4mpfen-mit-jean-wolleh-benjamin-weber.jpg"
 length_second: 4430
 pubDate: 2025-04-29 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -105,7 +103,6 @@ tags:
 - Interview
 title: "#193 Excel eSports: Wenn Zellen um die Weltmeisterschaft k\xE4mpfen mit Jean\
   \ Wolleh & Benjamin Weber"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/193-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SGFNjsG7lgQ
 

@@ -61,8 +61,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./23-schaltest-du-noch-oder-automatisiert-du-schon-home-automation.jpg
 length_second: 3812
 pubDate: 2022-06-14 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +70,6 @@ spotify: https://open.spotify.com/episode/36a2YKzzvfrrRzM3qZTHaC
 tags:
 - Automation
 title: '#23 Schaltest du noch oder automatisiert du schon: Home Automation'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/23-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RCcA2vW1PEM
 

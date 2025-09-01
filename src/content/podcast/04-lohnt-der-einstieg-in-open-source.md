@@ -75,8 +75,6 @@ headlines: "sprungmarken::Sprungmarken||erwahnte-artikel::Erw\xE4hnte Artikel||e
 image: ./04-lohnt-der-einstieg-in-open-source.jpg
 length_second: 3044
 pubDate: 2022-01-25 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -88,7 +86,6 @@ tags:
 - Software Engineering
 - Kommunikation
 title: '#04 Lohnt der Einstieg in Open Source?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/04-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=6VHDt0awHY8
 

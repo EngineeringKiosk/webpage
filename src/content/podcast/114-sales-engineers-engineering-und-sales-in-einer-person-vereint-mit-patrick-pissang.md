@@ -44,8 +44,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./114-sales-engineers-engineering-und-sales-in-einer-person-vereint-mit-patrick-pissang.jpg
 length_second: 4124
 pubDate: 2024-03-12 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -61,7 +59,6 @@ tags:
 - Interview
 title: '#114 Sales Engineers: Engineering und Sales in einer Person vereint mit Patrick
   Pissang'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/114-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=5gUIf0yUdbg
 

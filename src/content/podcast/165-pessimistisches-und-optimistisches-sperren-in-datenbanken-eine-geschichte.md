@@ -23,8 +23,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./165-pessimistisches-und-optimistisches-sperren-in-datenbanken-eine-geschichte.jpg
 length_second: 369
 pubDate: 2024-12-14 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -35,7 +33,6 @@ tags:
 - Software Engineering
 - Datenbanken
 title: '#165 Pessimistisches und Optimistisches Sperren in Datenbanken: Eine Geschichte'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/165-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=TN1-YbajYBQ
 

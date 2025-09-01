@@ -50,8 +50,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./72-meetings-jeder-hat-sie-keiner-will-sie.jpg
 length_second: 3866
 pubDate: 2023-05-23 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -64,7 +62,6 @@ tags:
 - Projektmanagement
 - Kommunikation
 title: '#72 Meetings: Jeder hat sie, keiner will sie'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/72-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=AhNw83ii0Jk
 

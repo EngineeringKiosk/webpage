@@ -68,8 +68,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./179-mlops-machine-learning-in-die-produktion-bringen-mit-michelle-golchert-und-sebastian-warnholz.jpg
 length_second: 4718
 pubDate: 2025-01-21 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -86,7 +84,6 @@ tags:
 - Interview
 title: '#179 MLOps: Machine Learning in die Produktion bringen mit Michelle Golchert
   und Sebastian Warnholz'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/179-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=doUmBLAP66Q
 

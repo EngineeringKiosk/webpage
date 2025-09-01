@@ -77,8 +77,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./16-code-reviews-n\xFCtzlich-oder-bremsen-nur-ein-gutes-team.jpg"
 length_second: 3543
 pubDate: 2022-04-26 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -92,7 +90,6 @@ tags:
 - Backend
 - Software Engineering
 title: "#16 Code Reviews: N\xFCtzlich oder bremsen nur ein gutes Team?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/16-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uvPmOmb-HsE
 

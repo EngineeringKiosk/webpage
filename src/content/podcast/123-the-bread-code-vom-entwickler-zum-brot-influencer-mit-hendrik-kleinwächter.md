@@ -74,10 +74,6 @@ image: "./123-the-bread-code-vom-entwickler-zum-brot-influencer-mit-hendrik-klei
   chter.jpg"
 length_second: 3940
 pubDate: 2024-05-14 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Inspire me
-- Amuse/divert me
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -93,7 +89,6 @@ tags:
 - Interview
 title: "#123 The Bread Code: vom Entwickler zum Brot-Influencer mit Hendrik Kleinw\xE4\
   chter"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/123-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=vsvVHN0O6vo
 

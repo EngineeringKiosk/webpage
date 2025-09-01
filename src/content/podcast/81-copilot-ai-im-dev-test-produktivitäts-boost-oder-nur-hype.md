@@ -74,8 +74,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./81-copilot-ai-im-dev-test-produktivit\xE4ts-boost-oder-nur-hype.jpg"
 length_second: 4052
 pubDate: 2023-07-25 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -88,7 +86,6 @@ tags:
 - Software Engineering
 - "Produktivit\xE4t"
 title: "#81 Copilot & AI im Dev-Test: Produktivit\xE4ts-Boost oder nur Hype?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/81-transcript-slim.json
 youtube: https://youtu.be/Ak6_hhMMq9M
 

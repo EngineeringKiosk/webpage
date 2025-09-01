@@ -71,8 +71,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./124-technische-glaubw\xFCrdigkeit-bewahren-m\xFCssen-leads-den-code-kennen.jpg"
 length_second: 2991
 pubDate: 2024-05-21 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -85,7 +83,6 @@ tags:
 - Karriere
 - Leadership
 title: "#124 Technische Glaubw\xFCrdigkeit bewahren: M\xFCssen Leads den Code kennen?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/124-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SmHYjTQFbmU
 

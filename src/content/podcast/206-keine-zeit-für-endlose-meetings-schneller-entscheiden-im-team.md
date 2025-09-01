@@ -77,8 +77,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./206-keine-zeit-f\xFCr-endlose-meetings-schneller-entscheiden-im-team.jpg"
 length_second: 4544
 pubDate: 2025-07-29 03:00:39+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -90,7 +88,6 @@ tags:
 - Kommunikation
 - Leadership
 title: "#206 Keine Zeit f\xFCr endlose Meetings: Schneller entscheiden im Team"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/206-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8X_E8SNF_Ls
 

@@ -27,8 +27,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./173-rekursion-das-ende-ist-nah.jpg
 length_second: 719
 pubDate: 2024-12-22 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -38,7 +36,6 @@ spotify: https://open.spotify.com/episode/7xd5pgeeRQByGCJEQZTJjU
 tags:
 - Software Engineering
 title: '#173 Rekursion: Das Ende ist nah!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/173-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CWIDFqZ2_Qc
 

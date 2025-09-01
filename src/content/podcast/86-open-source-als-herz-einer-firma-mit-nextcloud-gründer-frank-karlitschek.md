@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./86-open-source-als-herz-einer-firma-mit-nextcloud-gr\xFCnder-frank-karlitschek.jpg"
 length_second: 3934
 pubDate: 2023-08-29 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -83,7 +81,6 @@ tags:
 - Leadership
 - Interview
 title: "#86 Open Source als Herz einer Firma mit Nextcloud Gr\xFCnder Frank Karlitschek"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/86-transcript-slim.json
 youtube: https://youtu.be/K0y0lk8KULI
 

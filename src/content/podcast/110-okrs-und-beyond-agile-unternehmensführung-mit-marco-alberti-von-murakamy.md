@@ -54,10 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./110-okrs-und-beyond-agile-unternehmensf\xFChrung-mit-marco-alberti-von-murakamy.jpg"
 length_second: 4683
 pubDate: 2024-02-13 05:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Give me perspective
-- Educate me
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +68,6 @@ tags:
 - Kommunikation
 - Interview
 title: "#110 OKRs und Beyond: Agile Unternehmensf\xFChrung mit Marco Alberti von Murakamy"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/110-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=JshsMVFC29I
 

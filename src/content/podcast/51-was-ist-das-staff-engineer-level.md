@@ -63,8 +63,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./51-was-ist-das-staff-engineer-level.jpg
 length_second: 3101
 pubDate: 2022-12-27 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -77,7 +75,6 @@ tags:
 - Kommunikation
 - Leadership
 title: '#51 Was ist das Staff (Engineer) Level?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/51-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CAmz8WVSNu8
 

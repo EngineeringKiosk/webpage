@@ -86,8 +86,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./77-kinder-coding-und-ai-die-zukunft-der-informatik-bildung-mit-diana-knodel.jpg
 length_second: 3678
 pubDate: 2023-06-27 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -103,7 +101,6 @@ tags:
 - Interview
 - Women in Tech
 title: '#77 Kinder, Coding und AI: Die Zukunft der Informatik-Bildung mit Diana Knodel'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/77-transcript-slim.json
 youtube: https://youtu.be/3-cm7QXbM8c
 

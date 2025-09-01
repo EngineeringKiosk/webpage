@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./98-der-hype-um-rust-mit-matthias-endler.jpg
 length_second: 4425
 pubDate: 2023-11-21 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -69,7 +67,6 @@ tags:
 - Interview
 - Backend
 title: '#98 Der Hype um Rust mit Matthias Endler'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/98-transcript-slim.json
 youtube: https://youtu.be/XQ2FFjNEZTE
 

@@ -55,8 +55,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./44-der-weg-zum-hochperformanten-team.jpg
 length_second: 3380
 pubDate: 2022-11-08 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -69,7 +67,6 @@ tags:
 - Kommunikation
 - Team
 title: '#44 Der Weg zum hochperformanten Team'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/44-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=7A_y6dwaPXw
 

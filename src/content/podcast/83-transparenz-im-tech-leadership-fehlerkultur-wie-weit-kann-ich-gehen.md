@@ -53,8 +53,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./83-transparenz-im-tech-leadership-fehlerkultur-wie-weit-kann-ich-gehen.jpg
 length_second: 3864
 pubDate: 2023-08-08 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -67,7 +65,6 @@ tags:
 - Kommunikation
 - Leadership
 title: '#83 Transparenz im Tech-Leadership & Fehlerkultur: Wie weit kann ich gehen?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/83-transcript-slim.json
 youtube: https://youtu.be/Y75j_UjFb9Q
 

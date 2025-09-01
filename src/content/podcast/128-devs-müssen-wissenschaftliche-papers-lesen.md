@@ -74,8 +74,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./128-devs-m\xFCssen-wissenschaftliche-papers-lesen.jpg"
 length_second: 3662
 pubDate: 2024-06-18 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -87,7 +85,6 @@ tags:
 - Kommunikation
 - Software Engineering
 title: "#128 Devs m\xFCssen wissenschaftliche Papers lesen!?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/128-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=11VMiS9Ikr8
 

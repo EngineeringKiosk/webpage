@@ -67,8 +67,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./195-was-sagt-die-community-der-wahre-wert-von-tech-meetups.jpg
 length_second: 3611
 pubDate: 2025-05-13 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -107,7 +105,6 @@ tags:
 - Tech Kultur
 - Knowledge Sharing
 title: '#195 Was sagt die Community? Der wahre Wert von Tech-Meetups'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/195-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=jbRtxV9bB5c
 

@@ -52,8 +52,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./20-off-boarding-und-on-boarding-wie-verlasse-ich-eine-firma-richtig.jpg
 length_second: 4402
 pubDate: 2022-05-24 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -65,7 +63,6 @@ tags:
 - Team
 - Projektmanagement
 title: '#20 Off-Boarding und On-Boarding: Wie verlasse ich eine Firma richtig?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/20-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Ezn-ks0CV1Y
 

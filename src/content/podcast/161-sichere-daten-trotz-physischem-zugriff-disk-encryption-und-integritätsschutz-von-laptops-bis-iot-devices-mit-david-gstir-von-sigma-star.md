@@ -77,8 +77,6 @@ image: "./161-sichere-daten-trotz-physischem-zugriff-disk-encryption-und-integri
   tsschutz-von-laptops-bis-iot-devices-mit-david-gstir-von-sigma-star.jpg"
 length_second: 4195
 pubDate: 2024-12-10 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -92,7 +90,6 @@ tags:
 - Interview
 title: "#161 Sichere Daten trotz physischem Zugriff: Disk Encryption und Integrit\xE4\
   tsschutz von Laptops bis IoT-Devices mit David Gstir von sigma star"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/161-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=gwbRGSA2TLc
 

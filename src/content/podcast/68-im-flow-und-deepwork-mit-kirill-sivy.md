@@ -64,8 +64,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./68-im-flow-und-deepwork-mit-kirill-sivy.jpg
 length_second: 4178
 pubDate: 2023-04-25 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -80,7 +78,6 @@ tags:
 - "Produktivit\xE4t"
 - Interview
 title: '#68 Im "Flow" und Deepwork mit Kirill Sivy'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/68-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uIcKfRwfHa4
 

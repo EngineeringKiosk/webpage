@@ -74,8 +74,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./209-in-der-besenkammer-jenseits-der-cloud-mittelstands-it-mit-patrick-terlisten.jpg
 length_second: 5203
 pubDate: 2025-08-19 01:00:58+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -89,7 +87,6 @@ tags:
 - Cloud
 - Interview
 title: '#209 In der Besenkammer jenseits der Cloud: Mittelstands-IT mit Patrick Terlisten'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/209-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=7h-ldJxX_o8
 

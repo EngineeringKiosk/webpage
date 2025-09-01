@@ -75,8 +75,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./144-die-untersch\xE4tzte-macht-der-zeit-wie-ntp-und-ptp-die-welt-synchronisieren-mit-daniel-boldt-und-thomas-behn-von-meinberg.jpg"
 length_second: 4083
 pubDate: 2024-10-08 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -93,7 +91,6 @@ tags:
 - Interview
 title: "#144 Die untersch\xE4tzte Macht der Zeit: Wie NTP und PTP die Welt synchronisieren\
   \ mit Daniel Boldt und Thomas Behn von Meinberg"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/144-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=4cmPgtQAKbY
 

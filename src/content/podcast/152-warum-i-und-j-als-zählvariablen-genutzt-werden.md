@@ -23,8 +23,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./152-warum-i-und-j-als-z\xE4hlvariablen-genutzt-werden.jpg"
 length_second: 364
 pubDate: 2024-12-01 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -35,7 +33,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: "#152 Warum i und j als Z\xE4hlvariablen genutzt werden"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/152-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SG2u-ueMSHQ
 

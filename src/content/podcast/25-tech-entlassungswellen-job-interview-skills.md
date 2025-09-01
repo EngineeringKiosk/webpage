@@ -60,8 +60,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./25-tech-entlassungswellen-job-interview-skills.jpg
 length_second: 4376
 pubDate: 2022-06-28 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -72,7 +70,6 @@ tags:
 - Bewerbung
 - Karriere
 title: '#25 Tech-Entlassungswellen & Job-Interview Skills'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/25-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=aMprRZCLOqU
 

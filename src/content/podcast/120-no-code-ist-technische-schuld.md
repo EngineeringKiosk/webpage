@@ -62,10 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./120-no-code-ist-technische-schuld.jpg
 length_second: 4076
 pubDate: 2024-04-23 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Keep me on the trend
-- Give me perspective
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -77,7 +73,6 @@ tags:
 - "Software Qualit\xE4t"
 - Automation
 title: '#120 No-Code ist technische Schuld!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/120-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CRAgjmnoxEk
 

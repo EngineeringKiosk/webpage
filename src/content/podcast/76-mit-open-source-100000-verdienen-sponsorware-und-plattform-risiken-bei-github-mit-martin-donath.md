@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./76-mit-open-source-100000-verdienen-sponsorware-und-plattform-risiken-bei-github-mit-martin-donath.jpg
 length_second: 4694
 pubDate: 2023-06-20 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -80,7 +78,6 @@ tags:
 - Interview
 title: '#76 Mit Open Source 100.000$ verdienen, Sponsorware und Plattform-Risiken
   bei GitHub mit Martin Donath'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/76-transcript-slim.json
 youtube: https://youtu.be/_qIbIw0yZHU
 

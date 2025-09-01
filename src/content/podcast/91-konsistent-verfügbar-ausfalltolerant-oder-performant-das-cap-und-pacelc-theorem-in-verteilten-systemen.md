@@ -66,8 +66,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./91-konsistent-verf\xFCgbar-ausfalltolerant-oder-performant-das-cap-und-pacelc-theorem-in-verteilten-systemen.jpg"
 length_second: 3461
 pubDate: 2023-10-03 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -81,7 +79,6 @@ tags:
 - Cloud
 title: "#91 Konsistent, Verf\xFCgbar, Ausfalltolerant oder Performant: Das CAP- und\
   \ PACELC-Theorem in verteilten Systemen"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/91-transcript-slim.json
 youtube: https://youtu.be/Uk4PzoF5sAg
 

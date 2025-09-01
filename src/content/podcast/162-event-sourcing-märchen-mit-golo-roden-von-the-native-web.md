@@ -24,8 +24,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./162-event-sourcing-m\xE4rchen-mit-golo-roden-von-the-native-web.jpg"
 length_second: 578
 pubDate: 2024-12-11 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -36,7 +34,6 @@ tags:
 - Backend
 - Datenbanken
 title: "#162 Event Sourcing & M\xE4rchen mit Golo Roden von the native web"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/162-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=d22AIp1Oitw
 

@@ -66,8 +66,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./22-nosql-acid-base-ende-einer-\xE4ra-teil-2.jpg"
 length_second: 3636
 pubDate: 2022-06-07 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -77,7 +75,6 @@ spotify: https://open.spotify.com/episode/7uPMZDpC2KQ5ZMbAtAN2S7
 tags:
 - Datenbanken
 title: "#22 NoSQL: ACID, BASE, Ende einer \xC4ra Teil 2"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/22-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=0bjnqEWrn3k
 

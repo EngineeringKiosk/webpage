@@ -57,8 +57,6 @@ image: "./63-spa\xDF-mit-zahlen-under-und-overflows-r\xFCckw\xE4rtslaufende-zeit
   hrungsbetr\xE4ge.jpg"
 length_second: 3667
 pubDate: 2023-03-21 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -71,7 +69,6 @@ tags:
 - Datenbanken
 title: "#63 Spa\xDF mit Zahlen: Under- und Overflows, R\xFCckw\xE4rtslaufende Zeit,\
   \ Negative Modulos und W\xE4hrungsbetr\xE4ge"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/63-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=kp5PnKgpEgs
 

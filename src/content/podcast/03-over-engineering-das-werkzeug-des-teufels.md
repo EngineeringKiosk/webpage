@@ -66,8 +66,6 @@ headlines: sprungmarken::Sprungmarken||artikel::Artikel||konzepte::Konzepte||pro
 image: ./03-over-engineering-das-werkzeug-des-teufels.jpg
 length_second: 3079
 pubDate: 2022-01-18 10:50:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -79,7 +77,6 @@ tags:
 - Frontend
 - Backend
 title: '#03 Over-Engineering, das Werkzeug des Teufels?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/03-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Rz-6wvEHi5I
 

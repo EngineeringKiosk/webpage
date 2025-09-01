@@ -69,8 +69,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./45-datengetriebene-entscheidungen-und-der-perfekte-dashboard-stack.jpg
 length_second: 3068
 pubDate: 2022-11-15 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -82,7 +80,6 @@ tags:
 - Kommunikation
 - Knowledge Sharing
 title: '#45 Datengetriebene Entscheidungen und der perfekte Dashboard Stack'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/45-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=nrEh_J-lszA
 

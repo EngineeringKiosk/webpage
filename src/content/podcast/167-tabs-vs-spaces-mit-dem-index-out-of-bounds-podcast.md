@@ -22,8 +22,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./167-tabs-vs-spaces-mit-dem-index-out-of-bounds-podcast.jpg
 length_second: 619
 pubDate: 2024-12-16 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -36,7 +34,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: '#167 Tabs vs. Spaces mit dem Index out of bounds Podcast'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/167-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ZHiLycOYVaQ
 

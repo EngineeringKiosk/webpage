@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./71-tim-berners-lee-was-ist-das-world-wide-web-und-was-ist-seine-zukunft.jpg
 length_second: 3710
 pubDate: 2023-05-16 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -62,7 +60,6 @@ tags:
 - Cloud
 - Turing Award
 title: '#71 Tim Berners-Lee: Was ist das World Wide Web und was ist seine Zukunft?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/71-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uz_QIiAgGQY
 

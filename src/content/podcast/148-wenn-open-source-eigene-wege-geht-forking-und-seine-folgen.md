@@ -73,8 +73,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./148-wenn-open-source-eigene-wege-geht-forking-und-seine-folgen.jpg
 length_second: 4071
 pubDate: 2024-11-05 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -85,7 +83,6 @@ tags:
 - Tech Kultur
 - Open Source
 title: '#148 Wenn Open Source eigene Wege geht: Forking und seine Folgen'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/148-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uE5KkNn9t_8
 

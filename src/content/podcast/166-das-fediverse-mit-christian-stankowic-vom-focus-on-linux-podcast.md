@@ -35,8 +35,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./166-das-fediverse-mit-christian-stankowic-vom-focus-on-linux-podcast.jpg
 length_second: 667
 pubDate: 2024-12-15 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -47,7 +45,6 @@ tags:
 - Tech Kultur
 - Open Source
 title: '#166 Das Fediverse mit Christian Stankowic vom Focus on Linux Podcast'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/166-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=qKVHLw2KjvY
 

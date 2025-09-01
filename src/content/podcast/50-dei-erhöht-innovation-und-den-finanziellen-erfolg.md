@@ -59,8 +59,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./50-dei-erh\xF6ht-innovation-und-den-finanziellen-erfolg.jpg"
 length_second: 3450
 pubDate: 2022-12-20 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -74,7 +72,6 @@ tags:
 - Leadership
 - Women in Tech
 title: "#50 DEI erh\xF6ht Innovation und den finanziellen Erfolg"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/50-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=6Dz1pgBbn8g
 

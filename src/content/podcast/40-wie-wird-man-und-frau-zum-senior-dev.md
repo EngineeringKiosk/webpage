@@ -60,8 +60,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./40-wie-wird-man-und-frau-zum-senior-dev.jpg
 length_second: 2983
 pubDate: 2022-10-11 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -74,7 +72,6 @@ tags:
 - Kommunikation
 - Leadership
 title: '#40 Wie wird man und Frau zum Senior Dev?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/40-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=gRuQUM2htJA
 

@@ -70,8 +70,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./184-gpu-programmierung-von-cuda-bis-openmp-mit-peter-thoman.jpg
 length_second: 4279
 pubDate: 2025-02-25 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -85,7 +83,6 @@ tags:
 - Software Engineering
 - Interview
 title: '#184 GPU Programmierung - von CUDA bis OpenMP mit Peter Thoman'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/184-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=jyEgOn4NL3g
 

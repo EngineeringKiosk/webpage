@@ -26,8 +26,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./169-deno-die-alternative-zu-nodejs-mit-der-programmierbar.jpg
 length_second: 398
 pubDate: 2024-12-18 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -43,7 +41,6 @@ tags:
 - Software Engineering
 - Open Source
 title: '#169 Deno, die Alternative zu Node.js mit der programmier.bar'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/169-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PCl3JtKZcUw
 

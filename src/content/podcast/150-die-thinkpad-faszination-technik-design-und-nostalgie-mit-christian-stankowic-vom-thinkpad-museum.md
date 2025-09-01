@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./150-die-thinkpad-faszination-technik-design-und-nostalgie-mit-christian-stankowic-vom-thinkpad-museum.jpg
 length_second: 4669
 pubDate: 2024-11-19 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -82,7 +80,6 @@ tags:
 - Interview
 title: '#150 Die ThinkPad-Faszination: Technik, Design und Nostalgie mit Christian
   Stankowic vom ThinkPad Museum'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/150-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=U-rrFjUYF9I
 

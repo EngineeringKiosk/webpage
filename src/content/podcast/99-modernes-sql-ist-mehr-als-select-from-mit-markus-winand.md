@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./99-modernes-sql-ist-mehr-als-select-from-mit-markus-winand.jpg
 length_second: 4789
 pubDate: 2023-11-28 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -69,7 +67,6 @@ tags:
 - Interview
 - Datenbanken
 title: '#99 Modernes SQL ist mehr als SELECT * FROM - mit Markus Winand'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/99-transcript-slim.json
 youtube: https://youtu.be/okw42PNioJQ
 

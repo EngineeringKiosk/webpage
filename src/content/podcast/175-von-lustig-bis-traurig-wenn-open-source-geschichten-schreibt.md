@@ -85,8 +85,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./175-von-lustig-bis-traurig-wenn-open-source-geschichten-schreibt.jpg
 length_second: 2861
 pubDate: 2024-12-24 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -97,7 +95,6 @@ tags:
 - Tech Kultur
 - Open Source
 title: '#175 Von Lustig bis Traurig: Wenn Open Source Geschichten schreibt'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/175-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=f5JU3nwP9_U
 

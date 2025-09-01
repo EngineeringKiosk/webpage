@@ -68,8 +68,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./178-code-der-bewegt-infotainmentsysteme-auf-kreuzfahrtschiffen-mit-sebastian-hammerl.jpg
 length_second: 4187
 pubDate: 2025-01-14 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -84,7 +82,6 @@ tags:
 - Interview
 title: '#178 Code der bewegt: Infotainmentsysteme auf Kreuzfahrtschiffen mit Sebastian
   Hammerl'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/178-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=2DZWgquaPSs
 

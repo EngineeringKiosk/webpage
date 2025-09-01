@@ -25,8 +25,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./174-frontend-engineering-metriken-im-team-einf\xFChren-mit-dem-working-draft-podcast.jpg"
 length_second: 372
 pubDate: 2024-12-23 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -42,7 +40,6 @@ tags:
 - "Software Qualit\xE4t"
 title: "#174 Frontend-Engineering Metriken im Team einf\xFChren mit dem Working Draft\
   \ Podcast"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/174-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=p3mDJR_Qdeg
 

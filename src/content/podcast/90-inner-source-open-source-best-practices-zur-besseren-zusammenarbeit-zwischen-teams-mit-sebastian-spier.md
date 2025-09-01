@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./90-inner-source-open-source-best-practices-zur-besseren-zusammenarbeit-zwischen-teams-mit-sebastian-spier.jpg
 length_second: 4200
 pubDate: 2023-09-26 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -80,7 +78,6 @@ tags:
 - Interview
 title: '#90 Inner Source: Open Source Best Practices zur besseren Zusammenarbeit zwischen
   Teams mit Sebastian Spier'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/90-transcript-slim.json
 youtube: https://youtu.be/ZzXq-QUTi-4
 

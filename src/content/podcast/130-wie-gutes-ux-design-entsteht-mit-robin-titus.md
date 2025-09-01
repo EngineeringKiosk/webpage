@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./130-wie-gutes-ux-design-entsteht-mit-robin-titus.jpg
 length_second: 3796
 pubDate: 2024-07-02 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -83,7 +81,6 @@ tags:
 - Kommunikation
 - Interview
 title: '#130 Wie gutes UX-Design entsteht mit Robin Titus'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/130-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=9VhfioS6-yQ
 

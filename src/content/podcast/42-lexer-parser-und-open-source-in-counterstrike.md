@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./42-lexer-parser-und-open-source-in-counterstrike.jpg
 length_second: 3218
 pubDate: 2022-10-25 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -67,7 +65,6 @@ tags:
 - Software Engineering
 - Open Source
 title: '#42 Lexer, Parser und Open Source in Counterstrike'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/42-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=yCHvgVEkP4Y
 

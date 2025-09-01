@@ -57,8 +57,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./64-infrastruktur-bingo-forward-reverse-socks-proxy-load-balancing-und-gibt-es-einen-unterschied-zwischen-load-balancer-und-reverse-proxy.jpg
 length_second: 3417
 pubDate: 2023-03-28 03:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -73,7 +71,6 @@ tags:
 - Cloud
 title: '#64 Infrastruktur-Bingo: Forward-, Reverse-, SOCKS-Proxy, Load Balancing und
   gibt es einen Unterschied zwischen Load-Balancer und Reverse-Proxy?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/64-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=j6R512nHB4E
 

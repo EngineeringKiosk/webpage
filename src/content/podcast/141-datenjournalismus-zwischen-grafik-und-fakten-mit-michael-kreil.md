@@ -78,8 +78,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./141-datenjournalismus-zwischen-grafik-und-fakten-mit-michael-kreil.jpg
 length_second: 4105
 pubDate: 2024-09-17 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -92,7 +90,6 @@ tags:
 - Kommunikation
 - Interview
 title: '#141 Datenjournalismus - zwischen Grafik und Fakten mit Michael Kreil'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/141-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=4Mm6ubQnB8w
 

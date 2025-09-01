@@ -65,8 +65,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./139-security-engineering-und-hacking-wettbewerbe-mit-frederik-braun-von-mozilla.jpg
 length_second: 4443
 pubDate: 2024-09-03 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -80,7 +78,6 @@ tags:
 - Interview
 - Sicherheit
 title: '#139 Security Engineering und Hacking-Wettbewerbe mit Frederik Braun von Mozilla'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/139-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=TfjSQ95Rkqg
 

@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./104-pr\xE4sentieren-mit-wirkung-public-speaking-und-storytelling-mit-anna-momber.jpg"
 length_second: 4291
 pubDate: 2024-01-02 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -65,7 +63,6 @@ tags:
 - Women in Tech
 title: "#104 Pr\xE4sentieren mit Wirkung: Public Speaking und Storytelling mit Anna\
   \ Momber"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/104-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=belzrZARW7U
 

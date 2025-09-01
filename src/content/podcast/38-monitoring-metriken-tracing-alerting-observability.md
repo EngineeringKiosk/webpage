@@ -52,8 +52,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./38-monitoring-metriken-tracing-alerting-observability.jpg
 length_second: 3350
 pubDate: 2022-09-27 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -66,7 +64,6 @@ tags:
 - Software Engineering
 - Cloud
 title: '#38 Monitoring, Metriken, Tracing, Alerting, Observability'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/38-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=mnsIq8msouo
 

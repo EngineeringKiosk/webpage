@@ -69,8 +69,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./133-die-wichtige-rolle-von-1on1s-in-zeiten-der-arbeiterlosigkeit.jpg
 length_second: 4143
 pubDate: 2024-07-23 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -82,7 +80,6 @@ tags:
 - Karriere
 - Leadership
 title: '#133 Die wichtige Rolle von 1on1s in Zeiten der Arbeiterlosigkeit'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/133-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=tCwoVFyBsTY
 

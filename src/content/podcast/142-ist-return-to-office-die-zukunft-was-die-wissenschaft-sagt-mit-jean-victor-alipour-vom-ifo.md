@@ -80,8 +80,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./142-ist-return-to-office-die-zukunft-was-die-wissenschaft-sagt-mit-jean-victor-alipour-vom-ifo.jpg
 length_second: 4656
 pubDate: 2024-09-24 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -97,7 +95,6 @@ tags:
 - Interview
 title: '#142 Ist Return to Office die Zukunft? Was die Wissenschaft sagt - mit Jean-Victor
   Alipour vom IFO'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/142-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=JMendDTDCuw
 

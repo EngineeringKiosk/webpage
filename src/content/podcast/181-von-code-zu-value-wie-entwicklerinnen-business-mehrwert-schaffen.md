@@ -63,8 +63,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./181-von-code-zu-value-wie-entwicklerinnen-business-mehrwert-schaffen.jpg
 length_second: 4221
 pubDate: 2025-02-04 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -75,7 +73,6 @@ tags:
 - Karriere
 - Gehalt
 title: "#181 Von Code zu Value: Wie Entwickler\xB7innen Business-Mehrwert schaffen"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/181-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=0joWm2e0e-0
 

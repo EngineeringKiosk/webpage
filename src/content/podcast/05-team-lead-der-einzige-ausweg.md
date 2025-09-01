@@ -55,8 +55,6 @@ headlines: "erwahnte-artikel::Erw\xE4hnte Artikel||bucher-uber-das-engineering-m
 image: ./05-team-lead-der-einzige-ausweg.jpg
 length_second: 2412
 pubDate: 2022-02-01 10:05:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -67,7 +65,6 @@ tags:
 - Karriere
 - Leadership
 title: '#05 Team Lead - der einzige Ausweg'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/05-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=gek6ZsOFo0c
 

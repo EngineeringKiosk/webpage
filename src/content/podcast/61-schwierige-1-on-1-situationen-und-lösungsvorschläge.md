@@ -64,8 +64,6 @@ headlines: links::Links||beispiel-fragen-zur-1on1-bestandsaufnahme::Beispiel-Fra
 image: "./61-schwierige-1-on-1-situationen-und-l\xF6sungsvorschl\xE4ge.jpg"
 length_second: 3331
 pubDate: 2023-03-07 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -77,7 +75,6 @@ tags:
 - Leadership
 - Kommunikation
 title: "#61 Schwierige 1-on-1 Situationen und L\xF6sungsvorschl\xE4ge"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/61-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=KGB1t4634Nk
 

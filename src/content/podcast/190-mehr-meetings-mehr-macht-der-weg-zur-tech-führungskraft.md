@@ -82,8 +82,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./190-mehr-meetings-mehr-macht-der-weg-zur-tech-f\xFChrungskraft.jpg"
 length_second: 5277
 pubDate: 2025-04-08 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -96,7 +94,6 @@ tags:
 - Karriere
 - Leadership
 title: "#190 Mehr Meetings, mehr Macht? Der Weg zur Tech-F\xFChrungskraft"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/190-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=jE7iD8nUHfU
 

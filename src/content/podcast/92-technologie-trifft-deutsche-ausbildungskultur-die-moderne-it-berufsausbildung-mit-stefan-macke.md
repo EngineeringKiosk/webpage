@@ -86,8 +86,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./92-technologie-trifft-deutsche-ausbildungskultur-die-moderne-it-berufsausbildung-mit-stefan-macke.jpg
 length_second: 4747
 pubDate: 2023-10-10 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -103,7 +101,6 @@ tags:
 - Interview
 title: '#92 Technologie trifft Deutsche Ausbildungskultur: Die moderne IT-Berufsausbildung
   mit Stefan Macke'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/92-transcript-slim.json
 youtube: https://youtu.be/SNIl88owk-Y
 

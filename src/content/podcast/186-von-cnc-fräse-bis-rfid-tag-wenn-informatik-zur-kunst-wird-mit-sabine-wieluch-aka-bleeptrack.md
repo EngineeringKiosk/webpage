@@ -92,8 +92,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: "./186-von-cnc-fr\xE4se-bis-rfid-tag-wenn-informatik-zur-kunst-wird-mit-sabine-wieluch-aka-bleeptrack.jpg"
 length_second: 4667
 pubDate: 2025-03-11 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -108,7 +106,6 @@ tags:
 - Women in Tech
 title: "#186 Von CNC-Fr\xE4se bis RFID-Tag: Wenn Informatik zur Kunst wird mit Sabine\
   \ Wieluch aka Bleeptrack"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/186-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dMN_fq5aa_g
 

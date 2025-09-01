@@ -53,8 +53,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher.jpg
 length_second: 4052
 pubDate: 2023-08-22 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -71,7 +69,6 @@ tags:
 - Women in Tech
 title: '#85 Von Entwicklerin zur Engineering Managerin: Erfahrungen und Learnings
   mit Isabelle Glasmacher'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/85-transcript-slim.json
 youtube: https://youtu.be/qIt0QfNzPv8
 

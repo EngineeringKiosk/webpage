@@ -50,8 +50,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./21-static-site-generators-die-webseite.jpg
 length_second: 3214
 pubDate: 2022-05-31 04:35:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -61,7 +59,6 @@ spotify: https://open.spotify.com/episode/7FpteXc95QPAnKihOuUUpX?si=9ea7bd26f6ec
 tags:
 - Frontend
 title: '#21 Static Site Generators & DIE Webseite'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/21-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=r8i9Htz0PMM
 

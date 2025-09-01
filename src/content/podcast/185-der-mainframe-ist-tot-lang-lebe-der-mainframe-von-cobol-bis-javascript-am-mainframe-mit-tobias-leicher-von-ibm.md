@@ -83,8 +83,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./185-der-mainframe-ist-tot-lang-lebe-der-mainframe-von-cobol-bis-javascript-am-mainframe-mit-tobias-leicher-von-ibm.jpg
 length_second: 5090
 pubDate: 2025-03-04 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -99,7 +97,6 @@ tags:
 - Interview
 title: '#185 Der Mainframe ist tot, lang lebe der Mainframe! Von COBOL bis JavaScript
   am Mainframe mit Tobias Leicher von IBM'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/185-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=cLmSDE2pvNU
 

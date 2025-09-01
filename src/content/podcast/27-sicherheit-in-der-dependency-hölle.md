@@ -63,8 +63,6 @@ headlines: links::Links||weitere-nicht-behandelte-incidents::Weitere nicht behan
 image: "./27-sicherheit-in-der-dependency-h\xF6lle.jpg"
 length_second: 3378
 pubDate: 2022-07-12 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -78,7 +76,6 @@ tags:
 - Backend
 - Sicherheit
 title: "#27 Sicherheit in der Dependency H\xF6lle"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/27-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8K3ccal3BnI
 

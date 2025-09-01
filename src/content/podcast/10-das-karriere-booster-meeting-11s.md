@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./10-das-karriere-booster-meeting-11s.jpg
 length_second: 2756
 pubDate: 2022-03-15 05:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -60,7 +58,6 @@ tags:
 - Leadership
 - Kommunikation
 title: '#10 Das Karriere Booster Meeting 1:1s'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/10-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dgiPioNQ4Sk
 

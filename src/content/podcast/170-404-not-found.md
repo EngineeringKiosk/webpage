@@ -31,8 +31,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./170-404-not-found.jpg
 length_second: 696
 pubDate: 2024-12-19 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -43,7 +41,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: '#170 - 404 Not Found!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/170-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=fmt1ZvfcWEg
 

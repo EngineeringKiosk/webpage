@@ -46,8 +46,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./111-side-projects-zwei-entwickler-overengineeren-einen-podcast.jpg
 length_second: 5049
 pubDate: 2024-02-20 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -59,7 +57,6 @@ tags:
 - Automation
 - Engineering Kiosk
 title: '#111 Side-Projects: Zwei Entwickler overengineeren einen Podcast'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/111-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=rN4_d6dHgO0
 

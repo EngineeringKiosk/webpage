@@ -80,8 +80,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./127-imposter-syndrom-peter-prinzip-mit-dr-fanny-jimenez.jpg
 length_second: 3695
 pubDate: 2024-06-11 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -96,7 +94,6 @@ tags:
 - Interview
 - Women in Tech
 title: '#127 Imposter-Syndrom & Peter-Prinzip mit Dr. Fanny Jimenez'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/127-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=-CtnKVK0tJU
 

@@ -87,8 +87,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./176-der-engineering-kiosk-wird-3-jahre-alt.jpg
 length_second: 4072
 pubDate: 2024-12-31 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -98,7 +96,6 @@ spotify: https://open.spotify.com/episode/29837ghhmE46KiO1VBRqhC
 tags:
 - Engineering Kiosk
 title: '#176 Der Engineering Kiosk wird 3 Jahre alt!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/176-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dciS591L8MQ
 

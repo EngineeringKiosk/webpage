@@ -24,8 +24,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./157-agile-arbeitsmethoden-extreme-programming-mit-den-coding-buddies.jpg
 length_second: 375
 pubDate: 2024-12-06 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
@@ -38,7 +36,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: '#157 Agile Arbeitsmethoden - Extreme Programming mit den Coding Buddies'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/157-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=iZ10OgAMm5s
 

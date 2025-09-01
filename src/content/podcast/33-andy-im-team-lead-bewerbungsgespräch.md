@@ -52,8 +52,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./33-andy-im-team-lead-bewerbungsgespr\xE4ch.jpg"
 length_second: 3654
 pubDate: 2022-08-23 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -65,7 +63,6 @@ tags:
 - Karriere
 - Leadership
 title: "#33 Andy im Team Lead Bewerbungsgespr\xE4ch"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/33-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=tXlJY2PQuE4
 

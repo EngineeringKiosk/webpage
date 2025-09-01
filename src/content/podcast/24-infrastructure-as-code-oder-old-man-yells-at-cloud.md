@@ -58,8 +58,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./24-infrastructure-as-code-oder-old-man-yells-at-cloud.jpg
 length_second: 3712
 pubDate: 2022-06-21 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -72,7 +70,6 @@ tags:
 - DevOps
 - Cloud
 title: '#24 Infrastructure as Code oder old man yells at cloud'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/24-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=hmMNyZ58RlE
 

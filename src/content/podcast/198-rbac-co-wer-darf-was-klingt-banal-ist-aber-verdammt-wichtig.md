@@ -82,8 +82,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./198-rbac-co-wer-darf-was-klingt-banal-ist-aber-verdammt-wichtig.jpg
 length_second: 4104
 pubDate: 2025-06-03 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -94,7 +92,6 @@ tags:
 - Software Engineering
 - Sicherheit
 title: '#198 RBAC & Co: Wer darf was? Klingt banal, ist aber verdammt wichtig!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/198-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=cwzFqszc6j0
 

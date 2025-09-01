@@ -49,8 +49,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./66-stressfreie-produktivit\xE4t-in-der-hektischen-welt-mit-getting-things-done.jpg"
 length_second: 3660
 pubDate: 2023-04-11 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -62,7 +60,6 @@ tags:
 - "Produktivit\xE4t"
 title: "#66 Stressfreie Produktivit\xE4t in der hektischen Welt mit Getting Things\
   \ Done"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/66-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=KXtOT2CXCQM
 

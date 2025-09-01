@@ -70,8 +70,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./208-personal-security-101-passw\xF6rter-keys-bequemlichkeit.jpg"
 length_second: 4293
 pubDate: 2025-08-12 01:00:48+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -81,7 +79,6 @@ spotify: https://open.spotify.com/episode/1vogpDfg0BXFVrfZ2VvMGK
 tags:
 - Sicherheit
 title: "#208 Personal Security 101: Passw\xF6rter, Keys & Bequemlichkeit"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/208-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=afPDH_m1p_o
 

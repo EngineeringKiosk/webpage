@@ -68,8 +68,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./108-agile-multi-team-projekte-die-kunst-hunderte-leute-effektiv-zu-koordinieren-mit-stephan-strack.jpg
 length_second: 4505
 pubDate: 2024-01-30 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -85,7 +83,6 @@ tags:
 - Interview
 title: '#108 Agile Multi-Team Projekte: Die Kunst, hunderte Leute effektiv zu koordinieren
   mit Stephan Strack'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/108-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=xSQconBhqgA
 

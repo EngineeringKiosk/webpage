@@ -76,10 +76,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./119-der-jobwechsel-einblick-und-erfahrungsaustausch-mit-unmute-it.jpg
 length_second: 6982
 pubDate: 2024-04-16 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Give me perspective
-- Inspire me
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -97,7 +93,6 @@ tags:
 - Interview
 - Women in Tech
 title: '#119 Der Jobwechsel: Einblick und Erfahrungsaustausch mit UNMUTE IT'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/119-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=xLQxRzNPdFs
 

@@ -57,8 +57,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./80-junior-devs-steckt-das-wahre-potential-in-unerfahrenen-talenten.jpg
 length_second: 4077
 pubDate: 2023-07-18 07:07:16+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -71,7 +69,6 @@ tags:
 - Bewerbung
 - Leadership
 title: '#80 Junior Devs: Steckt das wahre Potential in unerfahrenen Talenten?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/80-transcript-slim.json
 youtube: https://youtu.be/IzDsvTymIxg
 

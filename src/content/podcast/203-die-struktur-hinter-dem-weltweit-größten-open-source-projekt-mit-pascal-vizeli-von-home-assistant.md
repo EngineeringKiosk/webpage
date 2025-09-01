@@ -85,8 +85,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./203-die-struktur-hinter-dem-weltweit-gr\xF6\xDFten-open-source-projekt-mit-pascal-vizeli-von-home-assistant.jpg"
 length_second: 4955
 pubDate: 2025-07-08 04:00:50+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -101,7 +99,6 @@ tags:
 - Interview
 title: "#203 Die Struktur hinter dem weltweit gr\xF6\xDFten Open Source Projekt mit\
   \ Pascal Vizeli von Home Assistant"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/203-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uBt4b7rnAqQ
 

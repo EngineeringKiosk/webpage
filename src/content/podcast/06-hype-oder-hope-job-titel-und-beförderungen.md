@@ -46,8 +46,6 @@ headlines: "links::Links||erwahnte-personen::Erw\xE4hnte Personen||sprungmarken:
 image: "./06-hype-oder-hope-job-titel-und-bef\xF6rderungen.jpg"
 length_second: 3133
 pubDate: 2022-02-15 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -57,7 +55,6 @@ spotify: https://open.spotify.com/episode/4mkmeVaXD6u8Tf9mpcBWd4
 tags:
 - Karriere
 title: "#06 Hype oder Hope: Job-Titel und Bef\xF6rderungen"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/06-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=76WMDqv-MHk
 

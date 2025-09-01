@@ -24,8 +24,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./160-grace-hopper-mit-unmute-it.jpg
 length_second: 687
 pubDate: 2024-12-09 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -39,7 +37,6 @@ tags:
 - Software Engineering
 - Women in Tech
 title: '#160 Grace Hopper mit UNMUTE IT'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/160-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Ql38PZimNZQ
 

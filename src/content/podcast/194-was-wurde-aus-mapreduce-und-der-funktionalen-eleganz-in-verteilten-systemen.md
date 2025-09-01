@@ -67,8 +67,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./194-was-wurde-aus-mapreduce-und-der-funktionalen-eleganz-in-verteilten-systemen.jpg
 length_second: 3672
 pubDate: 2025-05-06 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -79,7 +77,6 @@ tags:
 - Software Engineering
 - Papers we love
 title: '#194 Was wurde aus MapReduce und der funktionalen Eleganz in verteilten Systemen?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/194-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=AtQdtUZVYbw
 

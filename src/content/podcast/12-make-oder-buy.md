@@ -58,8 +58,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./12-make-oder-buy.jpg
 length_second: 3583
 pubDate: 2022-03-29 09:40:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -71,7 +69,6 @@ tags:
 - "Produktivit\xE4t"
 - Cloud
 title: '#12 Make oder Buy'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/12-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=6P5E-iHeMkk
 

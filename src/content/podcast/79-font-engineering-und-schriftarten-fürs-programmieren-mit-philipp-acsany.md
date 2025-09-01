@@ -70,8 +70,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./79-font-engineering-und-schriftarten-f\xFCrs-programmieren-mit-philipp-acsany.jpg"
 length_second: 4195
 pubDate: 2023-07-11 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -86,7 +84,6 @@ tags:
 - "Produktivit\xE4t"
 - Interview
 title: "#79 Font-Engineering und Schriftarten f\xFCrs Programmieren mit Philipp Acsany"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/79-transcript-slim.json
 youtube: https://youtu.be/6gQrYHGL7wo
 

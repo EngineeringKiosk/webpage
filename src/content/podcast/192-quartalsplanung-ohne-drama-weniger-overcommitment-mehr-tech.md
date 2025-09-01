@@ -82,8 +82,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./192-quartalsplanung-ohne-drama-weniger-overcommitment-mehr-tech.jpg
 length_second: 3262
 pubDate: 2025-04-22 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -95,7 +93,6 @@ tags:
 - Kommunikation
 - Projektmanagement
 title: '#192 Quartalsplanung ohne Drama: Weniger Overcommitment, mehr Tech'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/192-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=lYVm7ppri-E
 

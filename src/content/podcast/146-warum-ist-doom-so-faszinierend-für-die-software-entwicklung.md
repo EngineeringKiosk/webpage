@@ -93,8 +93,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./146-warum-ist-doom-so-faszinierend-f\xFCr-die-software-entwicklung.jpg"
 length_second: 3561
 pubDate: 2024-10-22 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -104,7 +102,6 @@ spotify: https://open.spotify.com/episode/2FWb4BvTAE7tYF5Tq2niim
 tags:
 - Software Engineering
 title: "#146 Warum ist Doom so faszinierend f\xFCr die Software-Entwicklung?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/146-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FuSY0B2OVdk
 

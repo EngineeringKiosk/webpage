@@ -67,8 +67,6 @@ headlines: links::Links||anderes::Anderes||sprungmarken::Sprungmarken||hosts::Ho
 image: ./07-die-freelance-freiheit.jpg
 length_second: 3841
 pubDate: 2022-02-22 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -79,7 +77,6 @@ tags:
 - Karriere
 - "Produktivit\xE4t"
 title: '#07 Die Freelance Freiheit'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/07-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=rdFzorKTqck
 

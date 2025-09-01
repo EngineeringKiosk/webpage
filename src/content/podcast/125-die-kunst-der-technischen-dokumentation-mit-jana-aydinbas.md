@@ -82,8 +82,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./125-die-kunst-der-technischen-dokumentation-mit-jana-aydinbas.jpg
 length_second: 3763
 pubDate: 2024-05-28 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -99,7 +97,6 @@ tags:
 - Interview
 - Women in Tech
 title: '#125 Die Kunst der technischen Dokumentation mit Jana Aydinbas'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/125-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=_aVHZ4XGivc
 

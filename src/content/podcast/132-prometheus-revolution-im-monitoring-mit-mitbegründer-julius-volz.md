@@ -64,10 +64,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./132-prometheus-revolution-im-monitoring-mit-mitbegr\xFCnder-julius-volz.jpg"
 length_second: 4611
 pubDate: 2024-07-16 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Update me
-- Educate me
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -82,7 +78,6 @@ tags:
 - Backend
 - Interview
 title: "#132 Prometheus: Revolution im Monitoring mit Mitbegr\xFCnder Julius Volz"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/132-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=J9ugvkek92o
 

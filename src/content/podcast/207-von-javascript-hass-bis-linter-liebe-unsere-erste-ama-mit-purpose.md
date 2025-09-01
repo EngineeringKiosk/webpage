@@ -70,8 +70,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./207-von-javascript-hass-bis-linter-liebe-unsere-erste-ama-mit-purpose.jpg
 length_second: 3920
 pubDate: 2025-08-05 01:00:46+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -83,7 +81,6 @@ tags:
 - Side Projects
 - Engineering Kiosk
 title: '#207 Von JavaScript-Hass bis Linter-Liebe: Unsere erste AMA, mit Purpose!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/207-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=pNF2RFpM4_0
 

@@ -95,8 +95,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./210-ama-ii-vom-dev-stress-zum-code-exit-was-ihr-wissen-wolltet.jpg
 length_second: 3808
 pubDate: 2025-08-26 01:00:59+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -108,8 +106,7 @@ tags:
 - Side Projects
 - Engineering Kiosk
 title: "#210 AMA II: Vom Dev-Stress zum Code-Exit \u2013 was ihr wissen wolltet!"
-transcript_raw: ''
-transcript_slim: ''
+transcript_slim: src/data/transcripts/210-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=fE0WL9bSEWY
 
 ---

@@ -49,8 +49,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./56-applikations-skalierung-wann-wieso-was-kostet-es-stateless-und-stateful-horizontal-vs-vertikal.jpg
 length_second: 3026
 pubDate: 2023-01-31 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -63,7 +61,6 @@ tags:
 - Cloud
 title: '#56 Applikations-Skalierung: Wann, wieso, was kostet es? Stateless und Stateful,
   Horizontal vs. Vertikal'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/56-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=fpWfjz3YjPg
 

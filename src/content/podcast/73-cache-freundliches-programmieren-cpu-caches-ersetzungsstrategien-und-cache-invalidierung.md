@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./73-cache-freundliches-programmieren-cpu-caches-ersetzungsstrategien-und-cache-invalidierung.jpg
 length_second: 3583
 pubDate: 2023-05-30 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -60,7 +58,6 @@ tags:
 - Backend
 title: '#73 Cache-freundliches Programmieren, CPU-Caches, Ersetzungsstrategien und
   Cache-Invalidierung'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/73-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=6vHAhiVTj10
 

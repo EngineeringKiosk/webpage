@@ -66,10 +66,6 @@ image: "./121-yaml-mehr-als-konfiguration-aliases-tags-und-yamlscript-mit-tina-m
   ller.jpg"
 length_second: 4039
 pubDate: 2024-04-30 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Educate me
-- Inspire me
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -85,7 +81,6 @@ tags:
 - Women in Tech
 title: "#121 YAML: Mehr als Konfiguration! Aliases, Tags und YAMLScript mit Tina M\xFC\
   ller"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/121-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=HNMb2mF2IfE
 

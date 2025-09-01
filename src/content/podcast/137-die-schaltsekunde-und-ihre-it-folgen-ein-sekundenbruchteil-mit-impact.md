@@ -73,8 +73,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./137-die-schaltsekunde-und-ihre-it-folgen-ein-sekundenbruchteil-mit-impact.jpg
 length_second: 3162
 pubDate: 2024-08-20 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -85,7 +83,6 @@ tags:
 - Software Engineering
 - Backend
 title: '#137 Die Schaltsekunde und ihre IT-Folgen: Ein Sekundenbruchteil mit Impact'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/137-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=mPlSmXSJ_F8
 

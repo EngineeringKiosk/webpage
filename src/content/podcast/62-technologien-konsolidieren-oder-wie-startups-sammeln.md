@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./62-technologien-konsolidieren-oder-wie-startups-sammeln.jpg
 length_second: 4100
 pubDate: 2023-03-14 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -68,7 +66,6 @@ tags:
 - Tech Kultur
 - Team
 title: '#62 Technologien konsolidieren, oder wie Startups sammeln?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/62-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8uLM_aC43i0
 

@@ -71,9 +71,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./122-ich-hasse-re-orgs.jpg
 length_second: 4035
 pubDate: 2024-05-07 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Give me perspective
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -86,7 +83,6 @@ tags:
 - Kommunikation
 - Leadership
 title: '#122 Ich hasse Re-Orgs'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/122-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=rIk4V40L-tA
 

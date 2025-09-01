@@ -72,8 +72,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./100-episoden-ein-tech-r\xFCckblick-auf-202223-predictions-2024-und-viel-tech-trivia.jpg"
 length_second: 5242
 pubDate: 2023-12-05 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -88,7 +86,6 @@ tags:
 - Cloud
 title: "#100 Episoden: ein Tech R\xFCckblick auf 2022/23, Predictions 2024 und viel\
   \ Tech Trivia"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/100-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FPH88dJ1UQ0
 

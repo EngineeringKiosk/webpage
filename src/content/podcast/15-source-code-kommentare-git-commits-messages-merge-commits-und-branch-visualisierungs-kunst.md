@@ -74,8 +74,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./15-source-code-kommentare-git-commits-messages-merge-commits-und-branch-visualisierungs-kunst.jpg
 length_second: 3904
 pubDate: 2022-04-19 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -87,7 +85,6 @@ tags:
 - "Software Qualit\xE4t"
 - Software Engineering
 title: '#15 Source Code Kommentare, Git Commits Messages, Merge Commits und Branch-Visualisierungs-Kunst'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/15-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8p83MdwJpUk
 

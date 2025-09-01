@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./154-architektur-diskussion-design-eines-einfachen-und-robusten-preis-scrapers.jpg
 length_second: 3487
 pubDate: 2024-12-03 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -75,7 +73,6 @@ tags:
 - Frontend
 - Software Engineering
 title: '#154 Architektur-Diskussion: Design eines einfachen und robusten Preis-Scrapers'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/154-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Fl-bG1pwhus
 

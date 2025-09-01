@@ -27,8 +27,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./153-wie-hoste-ich-ein-large-language-modell-llm-mit-kubernetes-in-5-minuten-mit-data-science-deep-dive.jpg
 length_second: 476
 pubDate: 2024-12-02 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -42,7 +40,6 @@ tags:
 - Backend
 title: '#153 Wie hoste ich ein Large Language Modell (LLM) mit Kubernetes in 5 Minuten
   mit Data Science Deep Dive'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/153-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=MAkGdePUt-U
 

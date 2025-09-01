@@ -48,8 +48,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./113-selbstmarketing-ohne-bullshit-brag-documents.jpg
 length_second: 3232
 pubDate: 2024-03-05 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -60,7 +58,6 @@ tags:
 - Karriere
 - Kommunikation
 title: '#113 Selbstmarketing ohne Bullshit: Brag Documents'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/113-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SBxYn21KRvs
 

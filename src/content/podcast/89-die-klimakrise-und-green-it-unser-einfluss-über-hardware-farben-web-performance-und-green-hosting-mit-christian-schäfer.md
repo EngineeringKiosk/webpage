@@ -60,8 +60,6 @@ image: "./89-die-klimakrise-und-green-it-unser-einfluss-\xFCber-hardware-farben-
   fer.jpg"
 length_second: 4563
 pubDate: 2023-09-19 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -77,7 +75,6 @@ tags:
 - Interview
 title: "#89 Die Klimakrise und Green IT: unser Einfluss \xFCber Hardware, Farben,\
   \ Web-Performance und Green-Hosting mit Christian Sch\xE4fer"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/89-transcript-slim.json
 youtube: https://youtu.be/q7qS6AFW7L0
 

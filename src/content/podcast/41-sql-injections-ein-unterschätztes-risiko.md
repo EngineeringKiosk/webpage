@@ -60,8 +60,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./41-sql-injections-ein-untersch\xE4tztes-risiko.jpg"
 length_second: 4117
 pubDate: 2022-10-18 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -74,7 +72,6 @@ tags:
 - Sicherheit
 - Software Engineering
 title: "#41 SQL Injections - Ein untersch\xE4tztes Risiko"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/41-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=EPfWgGvFtM4
 

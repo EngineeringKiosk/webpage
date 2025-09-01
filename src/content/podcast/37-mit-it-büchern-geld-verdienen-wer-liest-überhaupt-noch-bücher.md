@@ -68,8 +68,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./37-mit-it-b\xFCchern-geld-verdienen-wer-liest-\xFCberhaupt-noch-b\xFCcher.jpg"
 length_second: 3621
 pubDate: 2022-09-20 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -81,7 +79,6 @@ tags:
 - Kommunikation
 - Knowledge Sharing
 title: "#37 Mit IT-B\xFCchern Geld verdienen? Wer liest \xFCberhaupt noch B\xFCcher?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/37-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=De_jiPFOAYw
 

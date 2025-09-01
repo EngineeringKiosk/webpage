@@ -54,8 +54,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./34-wie-cloudy-bist-du.jpg
 length_second: 2959
 pubDate: 2022-08-30 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -67,7 +65,6 @@ tags:
 - DevOps
 - Cloud
 title: '#34 Wie cloudy bist du?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/34-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=83x2rZuMd-8
 

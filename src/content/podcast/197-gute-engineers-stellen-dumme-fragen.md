@@ -73,8 +73,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./197-gute-engineers-stellen-dumme-fragen.jpg
 length_second: 3909
 pubDate: 2025-05-27 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -86,7 +84,6 @@ tags:
 - Kommunikation
 - Knowledge Sharing
 title: '#197 Gute Engineers stellen (dumme) Fragen'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/197-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CUuN8xUpXGE
 

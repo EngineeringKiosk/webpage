@@ -64,8 +64,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./26-my-english-is-not-the-yellow-from-the-egg-arbeiten-in-internationalen-teams.jpg
 length_second: 3970
 pubDate: 2022-07-05 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -78,7 +76,6 @@ tags:
 - Kommunikation
 title: '#26 My English is not the yellow from the egg - Arbeiten in internationalen
   Teams'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/26-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Klpv8gtDbsI
 

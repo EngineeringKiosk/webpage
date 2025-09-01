@@ -76,8 +76,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./135-design-documents-rfcs-der-weg-zu-besserer-software-architektur.jpg
 length_second: 3606
 pubDate: 2024-08-06 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -90,7 +88,6 @@ tags:
 - Remote work
 - "Software Qualit\xE4t"
 title: '#135 Design Documents & RFCs: Der Weg zu besserer Software-Architektur'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/135-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ip5Z01mq2tU
 

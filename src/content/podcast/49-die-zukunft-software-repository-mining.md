@@ -69,8 +69,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./49-die-zukunft-software-repository-mining.jpg
 length_second: 3295
 pubDate: 2022-12-13 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -83,7 +81,6 @@ tags:
 - Datenbanken
 - "Produktivit\xE4t"
 title: '#49 Die Zukunft: Software Repository Mining'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/49-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dOk--EQs4pY
 

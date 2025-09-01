@@ -69,8 +69,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./140-tech-leadership-die-technische-vision-als-leitfaden-f\xFCr-teams.jpg"
 length_second: 3669
 pubDate: 2024-09-10 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -82,7 +80,6 @@ tags:
 - Kommunikation
 - Leadership
 title: "#140 Tech-Leadership: Die technische Vision als Leitfaden f\xFCr Teams"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/140-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=WCly0WvYxS8
 

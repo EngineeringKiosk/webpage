@@ -73,8 +73,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./180-skalierung-aber-zu-welchem-preis-papers-we-love.jpg
 length_second: 3598
 pubDate: 2025-01-28 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -85,7 +83,6 @@ tags:
 - Software Engineering
 - Papers we love
 title: '#180 Skalierung, aber zu welchem Preis? (Papers We Love)'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/180-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=diMlWuG24Oc
 

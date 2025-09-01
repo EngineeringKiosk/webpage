@@ -41,8 +41,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./105-cloud-ausfallsicherheit-die-realit\xE4t-von-regionen-und-availability-zones.jpg"
 length_second: 4037
 pubDate: 2024-01-09 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -54,7 +52,6 @@ tags:
 - Cloud
 title: "#105 Cloud-Ausfallsicherheit: Die Realit\xE4t von Regionen und Availability\
   \ Zones"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/105-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=--so3WiArps
 

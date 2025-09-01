@@ -74,8 +74,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./29-die-andere-seite-meetups-konferenzen-organisieren.jpg
 length_second: 4128
 pubDate: 2022-07-26 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -87,7 +85,6 @@ tags:
 - Kommunikation
 - Knowledge Sharing
 title: '#29 Die andere Seite: Meetups & Konferenzen organisieren'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/29-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=IgT00Sq8A7w
 

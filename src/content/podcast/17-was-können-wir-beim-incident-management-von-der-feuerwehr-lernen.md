@@ -84,8 +84,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./17-was-k\xF6nnen-wir-beim-incident-management-von-der-feuerwehr-lernen.jpg"
 length_second: 4174
 pubDate: 2022-05-03 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -95,7 +93,6 @@ spotify: https://open.spotify.com/episode/4FyZmHWjqNmlWn7bl7bPaP
 tags:
 - DevOps
 title: "#17 Was k\xF6nnen wir beim Incident Management von der Feuerwehr lernen?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/17-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ITZhQyCatTs
 

@@ -59,8 +59,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./101-observability-und-opentelemetry-mit-severin-neumann.jpg
 length_second: 4153
 pubDate: 2023-12-12 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -74,7 +72,6 @@ tags:
 - Software Engineering
 - Interview
 title: '#101 Observability und OpenTelemetry mit Severin Neumann'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/101-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=h8NdY4zBJIE
 

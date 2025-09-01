@@ -60,8 +60,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./75-evaluierung-deiner-job-performance-team-feedback-und-lno-framework.jpg
 length_second: 3699
 pubDate: 2023-06-13 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -74,7 +72,6 @@ tags:
 - "Produktivit\xE4t"
 - Leadership
 title: '#75 Evaluierung deiner Job-Performance, Team-Feedback und LNO Framework'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/75-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=7qkAgKo7mis
 

@@ -56,8 +56,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./58-software-updates-alte-software-long-term-support-und-end-of-life-dates.jpg
 length_second: 3399
 pubDate: 2023-02-14 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -68,7 +66,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: '#58 Software-Updates, alte Software, Long Term Support und End of Life-Dates'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/58-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=94RZcJefzR8
 

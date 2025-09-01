@@ -65,8 +65,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./18-ziele-und-performance-metriken-f\xFCr-teams-und-mich-selbst.jpg"
 length_second: 4248
 pubDate: 2022-05-10 04:30:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -77,7 +75,6 @@ tags:
 - Team
 - Karriere
 title: "#18 Ziele und Performance-Metriken f\xFCr Teams und mich selbst"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/18-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=U2Ob0SS2Yks
 

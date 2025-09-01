@@ -45,8 +45,6 @@ image: "./96-selbstgemacht-vs-fertigprodukt-ein-blick-auf-das-not-invented-here-
   nomen.jpg"
 length_second: 4163
 pubDate: 2023-11-07 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -59,7 +57,6 @@ tags:
 - "Software Qualit\xE4t"
 title: "#96 Selbstgemacht vs. Fertigprodukt: Ein Blick auf das Not-Invented-Here-Ph\xE4\
   nomen"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/96-transcript-slim.json
 youtube: https://youtu.be/-NsoXayhb34
 

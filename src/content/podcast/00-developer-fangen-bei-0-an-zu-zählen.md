@@ -62,8 +62,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: "./00-developer-fangen-bei-0-an-zu-z\xE4hlen.jpg"
 length_second: 1751
 pubDate: 2022-02-08 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -73,7 +71,6 @@ spotify: https://open.spotify.com/episode/4TZwqBTtO2fNDt8XjQXjuR
 tags:
 - Engineering Kiosk
 title: "#00 Developer fangen bei 0 an zu z\xE4hlen"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/00-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dwe_Xw1IVzU
 

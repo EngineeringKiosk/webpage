@@ -63,8 +63,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./78-microservice-monolith-was-die-industrie-in-den-letzten-9-jahren-gelernt-hat.jpg
 length_second: 3685
 pubDate: 2023-07-04 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -79,7 +77,6 @@ tags:
 - Backend
 title: '#78 Microservice & Monolith: Was die Industrie in den letzten 9 Jahren gelernt
   hat'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/78-transcript-slim.json
 youtube: https://youtu.be/JAN2qHSXUeA
 

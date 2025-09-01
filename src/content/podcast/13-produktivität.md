@@ -53,8 +53,6 @@ headlines: "links::Links||bucher::B\xFCcher||sprungmarken::Sprungmarken||hosts::
 image: "./13-produktivit\xE4t.jpg"
 length_second: 3529
 pubDate: 2022-04-05 04:25:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -65,7 +63,6 @@ tags:
 - Karriere
 - "Produktivit\xE4t"
 title: "#13 Produktivit\xE4t"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/13-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uV3FkeHeY94
 

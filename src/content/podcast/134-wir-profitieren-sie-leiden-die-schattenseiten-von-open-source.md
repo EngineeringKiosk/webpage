@@ -67,8 +67,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./134-wir-profitieren-sie-leiden-die-schattenseiten-von-open-source.jpg
 length_second: 4008
 pubDate: 2024-07-30 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -79,7 +77,6 @@ tags:
 - Tech Kultur
 - Open Source
 title: '#134 Wir profitieren, sie leiden: Die Schattenseiten von Open Source'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/134-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=9s5jSDxQxwc
 

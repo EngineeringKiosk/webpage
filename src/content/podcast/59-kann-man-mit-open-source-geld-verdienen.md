@@ -56,8 +56,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./59-kann-man-mit-open-source-geld-verdienen.jpg
 length_second: 3251
 pubDate: 2023-02-21 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -69,7 +67,6 @@ tags:
 - Karriere
 - Gehalt
 title: '#59 Kann man mit Open Source Geld verdienen?'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/59-transcript-slim.json
 youtube: https://youtu.be/UD97HUTKeIc
 

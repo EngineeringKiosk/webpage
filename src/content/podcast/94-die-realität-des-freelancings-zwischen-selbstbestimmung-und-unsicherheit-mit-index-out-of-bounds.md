@@ -90,8 +90,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./94-die-realit\xE4t-des-freelancings-zwischen-selbstbestimmung-und-unsicherheit-mit-index-out-of-bounds.jpg"
 length_second: 5247
 pubDate: 2023-10-24 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -109,7 +107,6 @@ tags:
 - Interview
 title: "#94 Die Realit\xE4t des Freelancings: Zwischen Selbstbestimmung und Unsicherheit\
   \ mit Index out of bounds"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/94-transcript-slim.json
 youtube: https://youtu.be/hJn8X5Gfico
 

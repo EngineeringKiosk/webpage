@@ -85,8 +85,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./191-graphdatenbanken-von-graphrag-bis-cypher-mit-michael-hunger-von-neo4j.jpg
 length_second: 4395
 pubDate: 2025-04-14 23:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -100,7 +98,6 @@ tags:
 - Datenbanken
 - Interview
 title: '#191 Graphdatenbanken: von GraphRAG bis Cypher mit Michael Hunger von Neo4j'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/191-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=eI8I3YBloMs
 

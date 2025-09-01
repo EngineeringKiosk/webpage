@@ -79,8 +79,6 @@ headlines: "sprungmarken::Sprungmarken||erwahnte-side-projects::Erw\xE4hnte Side
 image: ./02-technologienzoo-side-projects.jpg
 length_second: 2690
 pubDate: 2022-01-10 15:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -92,7 +90,6 @@ tags:
 - Frontend
 - Backend
 title: '#02 Technologienzoo Side Projects'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/02-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ZWlTNgopKHs
 

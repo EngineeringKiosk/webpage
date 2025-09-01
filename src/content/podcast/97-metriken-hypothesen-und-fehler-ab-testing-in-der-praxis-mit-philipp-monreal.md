@@ -53,8 +53,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./97-metriken-hypothesen-und-fehler-ab-testing-in-der-praxis-mit-philipp-monreal.jpg
 length_second: 4126
 pubDate: 2023-11-14 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -69,7 +67,6 @@ tags:
 - Interview
 title: '#97 Metriken, Hypothesen und Fehler: A/B-Testing in der Praxis mit Philipp
   Monreal'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/97-transcript-slim.json
 youtube: https://youtu.be/iAF5IAFR_hY
 

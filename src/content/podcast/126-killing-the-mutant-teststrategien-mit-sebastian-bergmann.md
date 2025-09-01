@@ -81,8 +81,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./126-killing-the-mutant-teststrategien-mit-sebastian-bergmann.jpg
 length_second: 4779
 pubDate: 2024-06-04 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -96,7 +94,6 @@ tags:
 - "Software Qualit\xE4t"
 - Interview
 title: '#126 Killing the Mutant: Teststrategien mit Sebastian Bergmann'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/126-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=dZI8Isttx4U
 

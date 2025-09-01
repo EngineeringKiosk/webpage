@@ -72,8 +72,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: ./201-wie-hart-kann-es-sein-einen-link-zu-checken-mit-matthias-endler.jpg
 length_second: 4741
 pubDate: 2025-06-24 04:00:03+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -87,7 +85,6 @@ tags:
 - Software Engineering
 - Interview
 title: '#201 Wie hart kann es sein, einen Link zu checken... mit Matthias Endler'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/201-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VuxNC1BwjTc
 

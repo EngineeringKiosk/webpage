@@ -47,8 +47,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./102-quereinstieg-in-die-software-entwicklung-mit-melanie-patrick.jpg
 length_second: 3977
 pubDate: 2023-12-19 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -64,7 +62,6 @@ tags:
 - Interview
 - Women in Tech
 title: '#102 Quereinstieg in die Software-Entwicklung mit Melanie Patrick'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/102-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=MZfM0dHkYM8
 

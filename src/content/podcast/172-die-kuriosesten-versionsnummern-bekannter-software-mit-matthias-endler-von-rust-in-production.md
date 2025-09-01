@@ -45,8 +45,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./172-die-kuriosesten-versionsnummern-bekannter-software-mit-matthias-endler-von-rust-in-production.jpg
 length_second: 556
 pubDate: 2024-12-21 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -59,7 +57,6 @@ tags:
 - Kommunikation
 title: '#172 Die kuriosesten Versionsnummern bekannter Software mit Matthias Endler
   von Rust in Production'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/172-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=y3QEFsNcr8A
 

@@ -66,8 +66,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./30-ist-ein-informatikstudium-sinnvoll-welche-ausbildung-f\xFCr-devs.jpg"
 length_second: 3936
 pubDate: 2022-08-02 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -78,7 +76,6 @@ tags:
 - Karriere
 - Bewerbung
 title: "#30 Ist ein Informatikstudium sinnvoll? Welche Ausbildung f\xFCr Devs?"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/30-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=1TYzlBwp05I
 

@@ -36,8 +36,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: ./-1-wrap-up-2022-und-1-geburtstag-learnings-statistiken-und-was-2023-geplant-ist.jpg
 length_second: 1847
 pubDate: 2023-01-05 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -48,7 +46,6 @@ tags:
 - Engineering Kiosk
 title: '#-1 Wrap Up 2022 und 1. Geburtstag: Learnings, Statistiken und was 2023 geplant
   ist'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/-1-transcript-slim.json
 youtube: https://youtu.be/AMJzKWYsHgY
 

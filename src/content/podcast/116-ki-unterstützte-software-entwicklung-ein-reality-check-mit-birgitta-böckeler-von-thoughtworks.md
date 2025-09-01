@@ -45,8 +45,6 @@ image: "./116-ki-unterst\xFCtzte-software-entwicklung-ein-reality-check-mit-birg
   ckeler-von-thoughtworks.jpg"
 length_second: 4477
 pubDate: 2024-03-26 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: C
@@ -63,7 +61,6 @@ tags:
 - Women in Tech
 title: "#116 KI unterst\xFCtzte Software Entwicklung: Ein Reality Check mit Birgitta\
   \ B\xF6ckeler von Thoughtworks"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/116-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=WnONvkRjvrg
 

@@ -97,8 +97,6 @@ headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen
 image: "./188-spieleentwicklung-die-k\xF6nigsdisziplin-der-informatik-mit-dominic-pacher.jpg"
 length_second: 5625
 pubDate: 2025-03-25 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -112,7 +110,6 @@ tags:
 - Interview
 title: "#188 Spieleentwicklung: Die K\xF6nigsdisziplin der Informatik mit Dominic\
   \ Pacher"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/188-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=fvGnX3RAfJM
 

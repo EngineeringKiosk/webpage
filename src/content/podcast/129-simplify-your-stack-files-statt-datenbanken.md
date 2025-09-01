@@ -73,10 +73,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./129-simplify-your-stack-files-statt-datenbanken.jpg
 length_second: 3555
 pubDate: 2024-06-25 04:00:00+00:00
-rtlplus: ''
-six_user_needs:
-- Educate me
-- Give me perspective
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -88,7 +84,6 @@ tags:
 - Software Engineering
 - Datenbanken
 title: '#129 Simplify Your Stack: Files statt Datenbanken!'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/129-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FVbvtm6ghuE
 

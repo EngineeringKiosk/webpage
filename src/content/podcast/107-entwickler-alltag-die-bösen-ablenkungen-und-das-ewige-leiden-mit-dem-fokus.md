@@ -37,8 +37,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./107-entwickler-alltag-die-b\xF6sen-ablenkungen-und-das-ewige-leiden-mit-dem-fokus.jpg"
 length_second: 3603
 pubDate: 2024-01-23 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -51,7 +49,6 @@ tags:
 - "Produktivit\xE4t"
 title: "#107 Entwickler-Alltag: Die \"b\xF6sen\" Ablenkungen und das ewige Leiden\
   \ mit dem Fokus"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/107-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=g9DLVervwNw
 

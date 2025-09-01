@@ -74,8 +74,6 @@ headlines: feedback::Feedback||links::Links||sprungmarken::Sprungmarken||hosts::
 image: ./182-happy-birthday-sql-50-jahre-abfragesprache.jpg
 length_second: 3995
 pubDate: 2025-02-11 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -86,7 +84,6 @@ tags:
 - Backend
 - Datenbanken
 title: '#182 Happy Birthday SQL: 50 Jahre Abfragesprache'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/182-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=kcFQgoozJiM
 

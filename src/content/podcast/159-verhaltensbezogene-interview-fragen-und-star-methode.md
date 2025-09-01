@@ -23,8 +23,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./159-verhaltensbezogene-interview-fragen-und-star-methode.jpg
 length_second: 528
 pubDate: 2024-12-08 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -36,7 +34,6 @@ tags:
 - Bewerbung
 - Kommunikation
 title: '#159 Verhaltensbezogene Interview-Fragen und STAR-Methode'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/159-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VJNZ0-kDwmE
 

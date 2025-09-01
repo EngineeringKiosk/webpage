@@ -80,8 +80,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: ./118-wie-funktioniert-eine-moderne-suche-von-indexierung-bis-ranking.jpg
 length_second: 4340
 pubDate: 2024-04-09 04:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -93,7 +91,6 @@ tags:
 - Backend
 - Datenbanken
 title: '#118 Wie funktioniert eine moderne Suche? Von Indexierung bis Ranking'
-transcript_raw: ''
 transcript_slim: src/data/transcripts/118-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ZpVGVVLfIGQ
 

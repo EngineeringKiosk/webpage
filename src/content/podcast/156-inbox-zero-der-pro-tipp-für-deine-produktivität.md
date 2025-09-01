@@ -27,8 +27,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Fee
 image: "./156-inbox-zero-der-pro-tipp-f\xFCr-deine-produktivit\xE4t.jpg"
 length_second: 657
 pubDate: 2024-12-05 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
@@ -39,7 +37,6 @@ tags:
 - Karriere
 - "Produktivit\xE4t"
 title: "#156 Inbox Zero: der Pro-Tipp f\xFCr deine Produktivit\xE4t"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/156-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=awf4pas3s0U
 

@@ -50,8 +50,6 @@ headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gern
 image: "./115-die-shift-left-philosophie-mehr-verantwortung-f\xFCr-devs.jpg"
 length_second: 3299
 pubDate: 2024-03-19 05:00:00+00:00
-rtlplus: ''
-six_user_needs: []
 speaker:
 - name: Andy Grunwald
   transcriptLetter: B
@@ -64,7 +62,6 @@ tags:
 - Software Engineering
 - "Software Qualit\xE4t"
 title: "#115 Die Shift Left Philosophie: Mehr Verantwortung f\xFCr Devs"
-transcript_raw: ''
 transcript_slim: src/data/transcripts/115-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=yofUG3LISEo
 
