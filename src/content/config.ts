@@ -31,7 +31,6 @@ const podcastEpisodeCollection = defineCollection({
 			tags: z.array(z.string()),
 			title: z.string(),
 			transcript_slim: z.string(),
-			transcript_raw: z.string(),
 			youtube: z.string(),
 		}),
 });

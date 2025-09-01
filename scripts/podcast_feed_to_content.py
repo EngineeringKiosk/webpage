@@ -19,8 +19,7 @@ from episode_finder import EpisodeFinder
 from functions import (
     build_correct_file_path,
     configure_global_logger,
-    get_podcast_episode_transcript_slim_path_by_episode_number,
-    get_podcast_episode_transcript_raw_path_by_episode_number
+    get_podcast_episode_transcript_slim_path_by_episode_number
 )
 
 from constants import (
@@ -364,7 +363,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
             'tags': [],
             'title': title,
             'transcript_slim': get_podcast_episode_transcript_slim_path_by_episode_number(episode_number),
-            'transcript_raw': get_podcast_episode_transcript_raw_path_by_episode_number(episode_number),
             'youtube': get_episode_link_from_youtube(youtube_playlist_items, title),
         }
 
