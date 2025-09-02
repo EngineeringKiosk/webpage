@@ -1,0 +1,1454 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4728,
+  "audio_url": "https://cloud.inlupus.at/s/bD5TfepMtWsRT9d/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95899093,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "a3aaa3f4-7d12-4e7c-910a-213407b437e0",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 169170,
+      "speaker": "A",
+      "start": 3280,
+      "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute mal wieder mit einem technischen Thema. Wusstest du, dass Cloudflare allein im Quartal eins zwei tausend fünf und zwanzig zwanzig komma fünf Millionen Angriffe abgewehrt hat? Das sind sechs und neunzig Prozent des gesamten Blockierungsvolumens von zwei tausend vier und zwanzig in nur drei Monaten. Bei anderen Anbietern sehen die Zahlen ähnlich aus. Bei den meisten dieser Angriffe handelt es sich dabei um Attacken mit dem Ziel, einen Service lahmzulegen. Sowas nennt man Distributed Denial of Service Attacken, kurz ddos. Das ist das Thema dieser Episode. Wir sprechen mit Stefan Bete zu diesem Thema. Stefan kümmert sich unter anderem um die Absicherung von Webseiten wie die vom Deutschen Bundestag und hat ein Buch zu diesem Thema ddos geschrieben. Im Gespräch geht es um die Motivation von diesen Angriffen, wie verschiedene Angriffe auf den unterschiedlichen Layern des ISO OSI Referenzmodells aussehen, also Network Layer, Transport Layer und Application Layer, wie man sich vor solchen Angriffen schützen kann und wie man damit auch zu Hause experimentieren kann. Wir legen los, viel Spaß. Ich würde mal sagen, in den letzten fünfzehn Jahren, so ab dem Jahr zwei tausend zehn sind mehr und mehr Leute online gekommen. Ich würde sagen, ein Großteil der Weltbevölkerung ist gerade online und das ist echt super, weil jeder hat irgendwie Zugang zum Internet, zu allen möglichen Informationen und jeder kann auch lernen. Das große Problem ist, wenn jeder Zugriff zum Internet hat, dann haben auch Bösewichte Zugriff zum Internet. Und über eine Art von Wie kann ich im Internet böse sein? Habe ich im August zwei tausend drei und zwanzig mal was gehört. Und zwar habe ich damals einen Meetup in Düsseldorf organisiert und da hat der Stefan Bethe einen Talk über Distributed Denail of Service Attacken gehalten. Sehr, sehr interessant. War Neuland für mich, hatte ich bisher nichts mit zu tun. Am sechzehnter juni habe ich dann diesen Jahres habe ich dann eine E Mail von ihm Hey Andy, ich habe hier so ein Buch released. Weißt du noch? Vor circa zwei Jahren hat habe ich mal einen Talk gehalten und jetzt habe ich gedacht, ich schreibe da mal ein Buch zu diesem Thema, zum Thema Distributed Denial of Service Attacken. Drei Tage nach dieser E Mail hat dann mein aktueller Arbeitgeber einen Blogbeitrag verfasst über die wohl grösst gemessene Distributed Denial of Service Attacke mit sieben komma drei Terabit pro Sekunde, die über fünf und vierzig Sekunden lief und all das kombiniert, habe ich dann gedacht, das müssen wir mal besprechen. Deswegen habe ich mir gedacht, antworte ich auf die Mail von Stefan. Er hat zum Glück auch geantwortet und deswegen begrüße ich mal Stefan. Guten Tag im Podcast. Hallo im Engineering Kiosk."
+    },
+    {
+      "end": 169890,
+      "speaker": "B",
+      "start": 169170,
+      "text": "Hi, guten Tag."
+    },
+    {
+      "end": 244800,
+      "speaker": "A",
+      "start": 169890,
+      "text": "Für die Leute, die dich damals im August zwei tausend drei und zwanzig nicht auf dem Meetup gesehen haben, möchte ich mal ganz kurz eine Intro für dich machen. Du bist Vice President Platform and Application und Informationssicherheitsbeauftragter bei Babil. Da bist du eigentlich verantwortlich für die Datencenter Infrastruktur, für das Netzwerk, für Distributed Nail of Service Mitigation, fürs Hosting und so weiter und so fort. In dem ganzen Bereich arbeitest du schon seit circa zwanzig Jahren und du hast größere Kunden, wie zum Beispiel den Bundestag oder Henkel. Du springst ab und zu mal auf den Bühnen dieser Welt rum, nicht nur bei uns auf dem Meetup, sondern auch auf Chaos Computer Club Kongress Events. Wenn du nichts mit Distributed Denial of Service Attacken zu tun hast, gehst du in der Regel bouldern und wandern. Du bist sogar Teil des Chaos Computer Clubs und ab und zu wirkst du beim C NOC mit. Das ist glaube ich das Network Operations Center CCC. Du hast sogar eine ganze Blogreihe zum Thema Testing ddos Tools von GitHub veröffentlicht. Das fand ich ganz interessant, wo du dir einfach mal ein Repository schnappst, testest die mal durch. Du hast, wie ich gerade schon im Intro sagte, ein Buch über Distributed Denial of Service Attacken geschrieben. Den Link findet ihr natürlich in den Shownotes. Und jetzt kommt die erste Frage an Wie oft fährst du mit dem Skateboard bzw. Mit dem Longboard noch zur Arbeit?"
+    },
+    {
+      "end": 261020,
+      "speaker": "B",
+      "start": 246000,
+      "text": "Derzeit eher seltener, weil ich einfach ziemlich viel Homeoffice mache, muss ich gestehen. Aber meistens bin ich dann doch einmal die Woche da und fahre über die schöne Trasse in Wuppertal zum Zug und hier in Düsseldorf dann auch über den Fahrradweg in die Firma."
+    },
+    {
+      "end": 284920,
+      "speaker": "A",
+      "start": 261180,
+      "text": "Fand ich sehr, sehr angenehm, dass ich diese Information auf deinem Gitterprofil gefunden habe. Normalerweise sieht man ja sowas immer auf der Personal Website, aber auf dem Gitterprofil. Lass uns mal direkt ins Thema starten. Ddos Distributiv Nail of Service, irgendein Buzzword Bingo, was ich mir von Wikipedia geklaut habe. Gibt mir mal bitte eine Einleitung. Was ist eine Denail of Service Attacke."
+    },
+    {
+      "end": 302320,
+      "speaker": "B",
+      "start": 284920,
+      "text": "Eine normale Denial of Service Attacke wäre jetzt vielleicht ein Angriff, den ich auf einen Webserver ausführen würde, der dazu führt, dass der Webserver ausfällt. Es gibt manchmal Bugs in einem Server, zum Beispiel, ich schicke da einen String hin, der zu lang ist und das Ding crasht einfach. Das wäre so eine klassische Denial of Service Attacke."
+    },
+    {
+      "end": 309430,
+      "speaker": "A",
+      "start": 302320,
+      "text": "Und jetzt gibt es ja dieses Wort distributed auf Deutsch verteilt. Was macht eine Denail of Service Attacke dann verteilt?"
+    },
+    {
+      "end": 330390,
+      "speaker": "B",
+      "start": 309670,
+      "text": "Verteilt wäre sie, wenn sie von vielen verschiedenen Systemen stammt, wenn man so an ein Botnet denkt, also infizierte Computer, die dann alle gleichzeitig ein zentrales oder ein System angreifen, was das Ziel ist. Sagen wir mal ganz klassisch, Yahoo DE wird angegriffen. Und das passiert halt eben von vielen Standorten auf der Welt aus und nicht nur von einer IP Adresse."
+    },
+    {
+      "end": 345470,
+      "speaker": "A",
+      "start": 330550,
+      "text": "Ich finde es lustig, dass du Yahoo DE erwähnt hast. Ich habe gerade in der Newsmeldung gelernt, dass AOL seine Dial in Server endlich abgeschaltet hat. AOL mit den AOL cds kennt ihr vielleicht noch alle, da könnt ihr euch leider nicht mehr einloggen. Genauso wie vor kurzem wurde ja auch ICQ abgeschaltet."
+    },
+    {
+      "end": 365330,
+      "speaker": "C",
+      "start": 345470,
+      "text": "Aber es ist ein guter Punkt, weil du Yahoo sagst, wen betrifft sowas? Betrifft es wirklich nur die großen Seiten oder ist es jetzt auch relevant, wenn ich irgendein kleines Service schreibe? Also bin ich da betroffen als Kleiner oder kann ich mich darauf verlassen, dass das sowieso irgendwie die Großen für mich regeln, wenn ich da jetzt irgendwo einen Server stehen habe, dass das davor irgendwie geschützt wird?"
+    },
+    {
+      "end": 384290,
+      "speaker": "B",
+      "start": 365330,
+      "text": "Das kann letztendlich jeden betreffen. Es kommt halt darauf an, ob du für irgendjemanden interessant bist als Ziel, wenn du jetzt eine bestimmte politische Meinung hast oder eine bestimmte sexuelle Ausrichtung und dazu eine Webseite machst, auch wenn die nur einen Besucher hat am Tag, da kann es schon vorkommen, dass jemand die als Ziel auswählt und die dann einfach abschießt."
+    },
+    {
+      "end": 401350,
+      "speaker": "C",
+      "start": 384290,
+      "text": "Aber üblicherweise sind es schon Leute, die ein Ziel verfolgen, oder kann man, also früher war das immer so, man kann auch von Script Kiddies angegriffen werden, die halt einfach random probieren, irgendwelche IP Adressen, ob es irgendwo Löcher gibt oder so. Kommt es in dem Bereich auch vor oder ist es dann schon eher meistens irgendwie ein gezielter Angriff?"
+    },
+    {
+      "end": 427810,
+      "speaker": "B",
+      "start": 401430,
+      "text": "Das ist schon gezielter in der Regel. Es gibt allerdings auch so Sachen wie Ransom ddos, wo halt einfach bei Seiten ausprobiert wird. Bei Firmen Webseiten kann man die relativ einfach zum Abstürzen bringen. Wenn ja, dann schicke ich mal eine E Mail hinterher. Wir haben gerade angegriffen, ihr seid ausgefallen, gib mir mal eine Bitcoin, dann ist wieder Ruhe im Karton. Also als Firma kann man da sehr leicht Ziel werden letztendlich. Als Privatperson ist die Wahrscheinlichkeit schon geringer, aber eben auch nicht ausgeschlossen."
+    },
+    {
+      "end": 452690,
+      "speaker": "C",
+      "start": 427810,
+      "text": "Jetzt bist du ja schon lange im Business dabei und Andi hat schon erwähnt, zwanzig Jahre. Hat sich deiner Meinung nach irgendwas verändert, so in den letzten zwanzig Jahren in dem ganzen Bereich? Haben sich die Angriffe verändert oder ist das alles gleich geblieben? Weil das Wort an sich kennt man ja schon seit Yahoo Zeiten und seit was für teilab Service war es? AOL, Also zu den Zeiten gab es das ja auch schon in gewissem Maße zumindest."
+    },
+    {
+      "end": 537990,
+      "speaker": "B",
+      "start": 513110,
+      "text": "Es hat sich schon was verändert. Es gibt auch im ddos Bereich Innovationen. Die Bandbreiten, die für Angriffe genutzt werden, werden immer größer. Auch die Menge der Bots in einem Botnet wächst immer stärker, einfach dadurch, dass es, wie Andi schon sagte, die halbe Welt ist im Internet sozusagen. Es gibt einfach viel mehr Devices heutzutage, die auch eine IP Adresse haben und sich im Internet befinden. Iot Devices wären auch so ein gutes Beispiel dafür."
+    },
+    {
+      "end": 585599,
+      "speaker": "A",
+      "start": 538070,
+      "text": "Aber du hattest jetzt auch gerade gesagt, okay, die Bandbreiten werden immer größer. Aber ist das nicht irgendwie, ich sag mal, so ein so ein Wettrüsten? Denn wenn ich mir Netzwerkinfrastruktur von vor zehn Jahren ansehe oder vor fünfzehn Jahren, dann hattest du da vielleicht eine ein hundert Mbit Nick und jetzt weiß ich nicht, kriegt man erklären, dass es ein Nick ist, ein Netzwerkinterface. Und ich glaube, wenn du dir heute einen einigermaßen modernen Laptop kaufst, dann ist da ja mindestens ein G Bit oder ein zehn gbit Nick drin. Und wenn du dir zu Hause einen kleinen Switch hinstellst, dann kriegst ja auch ohne Probleme schon für ein paar Mark zehn Gigabit. Also und ich rede jetzt noch gar nicht von der Infrastruktur von Hyperscalern oder ähnliches, von großen Netzwerken oder von Datacentern. Da wird natürlich ein Angreifer schon irgendwie gezwungen, irgendwie mehr Power draufzusetzen, damit der Angriff überhaupt irgendwie effektiv ist, oder ich."
+    },
+    {
+      "end": 619820,
+      "speaker": "B",
+      "start": 585599,
+      "text": "Hätte gesagt, es ist genau andersrum. Die Kosten sind gesunken für einen Angreifer, denn Heutzutage, wenn ich eine Leitung habe zu Hause, da kann ich ja schon symmetrisch ein Gigabit kaufen für, ich sag mal jetzt ein hundert oder sowas. Und ein normaler Firmenserver hat auch mal gerne einfach nur einen Gigabit Anschluss, schicke ich einfach Traffic hin und dann ist er schon tot. Die Kosten für Bandbreite sind eigentlich immer weiter gesunken. Früher fiel das vielleicht auch sogar mehr auf, weil dann auch schneller Kosten entstanden sind. Oder man hat besser auf seine Bandbreite geachtet tatsächlich, weil sie halt viel Geld gekostet hat."
+    },
+    {
+      "end": 641240,
+      "speaker": "A",
+      "start": 619820,
+      "text": "Du hast jetzt gerade gesagt, oder so habe ich das zumindest verstanden, eigentlich kann jeder jeden angreifen. Du hast gerade gesagt, wenn jemand irgendwie, weiß ich nicht, wenn ich sage, der Wolfgang ist blöd, dann greife ich den jetzt mit einer Distributed Denail of Service Attacke ein. Und ja, dass Organisationen wahrscheinlich das Ziel sind. Aber wer sind denn so die klassischen Angreifer? Die Stereotypen?"
+    },
+    {
+      "end": 647800,
+      "speaker": "B",
+      "start": 641240,
+      "text": "Also der absolute Stereotyp ist der jährige Schüler, der keine Lust auf Unterricht hat."
+    },
+    {
+      "end": 649840,
+      "speaker": "C",
+      "start": 647800,
+      "text": "Also es gibt sie doch noch, die Script Kiddies."
+    },
+    {
+      "end": 690040,
+      "speaker": "B",
+      "start": 649840,
+      "text": "Genau, es gibt sie doch noch. Sie werden aber in der Regel gar nicht selber aktiv, sondern mieten sich einfach für, ich sag mal zwanzig Euro einen sogenannten Booter Service. Die marketen sich gerne als Lasttest Service, aber letztendlich sind sie nichts anderes als so eine ddos Maschine, die man anonym bezahlen kann, mit Bitcoin teilweise sogar aber auch mit Kreditkarte, paypal, sonstigem und knipsen dann halt einfach zum Beispiel die Webseite der Schule aus oder die digitale Infrastruktur, damit das Internet nicht mehr verfügbar ist, damit zum Beispiel dann der Unterricht ausfällt. Das ist so ein total typisches Ding, was gerne passiert. Oder auch beim Zocken auch da wird das sehr gerne genutzt, um Konkurrenz auszuschalten."
+    },
+    {
+      "end": 694720,
+      "speaker": "A",
+      "start": 690040,
+      "text": "Einfach, okay, irgendjemand hat keine Lust auf Schule. Aber ich meine, gibt es auch irgendwas Professionelleres?"
+    },
+    {
+      "end": 746900,
+      "speaker": "B",
+      "start": 694720,
+      "text": "Ja, genau, das sieht man gerade im Ukraine Russland Konflikt. Da ist schon ziemlich deutlich geworden, dass eine starke Professionalisierung auch in diesem sogenannten Cyber Warfare Bereich, wenn man das so nennen möchte, existiert und dass auch eigene Units, zum Beispiel beim russischen GRU dafür verantwortlich sind, ddos Attacken durchzuführen, zum Beispiel diese Gruppierung Killnet oder noname in Klammern. Da geht man schon davon aus, dass ein starker Russland Bezug da herrscht oder dass das sogar tatsächlich Mitarbeiter des GRU involviert sind. Da gibt es natürlich auch eine entsprechende Professionalisierung. Dann in diesem Bereich. Es gibt aber auch andere staatliche Akteure. Schon vor zehn Jahren hat der GCHQ gegen Anonymous eine Software eingesetzt, die hieß Rolling Thunder und hat selber ddos Attacken benutzt, um Anonymous auszuschalten oder deren Infrastruktur in Teilen auszuschalten."
+    },
+    {
+      "end": 751900,
+      "speaker": "A",
+      "start": 746980,
+      "text": "Das war jetzt der englische Geheimdienst oder GCHQ, glaube ich."
+    },
+    {
+      "end": 770790,
+      "speaker": "C",
+      "start": 751900,
+      "text": "Ja, aber jetzt hast du schon erwähnt, es gibt diese Butter Services. Zwei tausend Dollar klingt jetzt nicht sehr viel. Kann man damit überhaupt dann noch Kohle machen heutzutage? Also man braucht ja dann doch viel Bandbreite und Bandbreite kann ja auch teuer sein. Also funktioniert das noch oder muss man dann schon mehr auf den Tisch legen, wenn man jetzt, keine Ahnung, zum Beispiel."
+    },
+    {
+      "end": 788610,
+      "speaker": "B",
+      "start": 770790,
+      "text": "Im Bundestag abschalten will, ja, für zwanzig kriegt man vielleicht so eine kleine Basisattacke, wenn es dann richtig ernsthaft geht gegen größere Webseiten, ich sag mal ein Versandhaus oder sowas. Die haben natürlich schon auch gewisse Schutzmaßnahmen umgesetzt, dann kann das auch schon teuer werden und in die tausenden Euros, die man da ausgeben kann."
+    },
+    {
+      "end": 834520,
+      "speaker": "A",
+      "start": 788610,
+      "text": "Ich finde das ganz interessant, du hast das als Booter Service bezeichnet und in demselben Satz hast du Load Testing Tools genannt. Jetzt komme ich aus dem Webumfeld oder beziehungsweise auch auf Hochtraffic Webseiten. Da werden die Services oft auch mal von den Engineering Teams ja selbst geloadtestet, weil da vielleicht, weiß ich nicht, Fernsehwerbung gestartet wird oder man hat irgendwie einen super Coupon Code auf fünfzig Prozent Rabatt im Shop oder ähnliches. So der Klassiker, da wo man Ansturm erwartet, weil jemand wieder was auf Instagram verteilt. Und jetzt stelle ich mir gerade die Frage, jetzt gibt es ja auch wirklich klassische Load Testing Tools, Apache jmeter, Grafana K und so weiter und so fort. Kann ich mir nicht jmeter nehmen und die Webseite unserer Podcast Marktbegleiter ddoson."
+    },
+    {
+      "end": 874180,
+      "speaker": "B",
+      "start": 835080,
+      "text": "Das könntest du schon machen. Ja, ich und wir und meine Kollegen fragen uns das auch, warum werden so schlechte Tools benutzt? Eingangs hattest du ja erwähnt, ich habe auf GitHub so ein paar Tools getestet, da fragen wir uns auch wirklich, warum wird ein schlechter Python Code benutzt? Warum hat er auf GitHub fünf hundert Sterne? Also das ist mir manchmal auch ein bisschen rätselhaft. Vielleicht hat das so was Mystisches, Man hat ein geheimes Hacker Tool da gefunden oder benutzt das so? Also ein schlauer Angreifer würde wahrscheinlich einfach ein gutes Load Testing Tool nehmen und so ein bisschen Distributed Infrastructure selber aufbauen in der Cloud zum Beispiel mit geklauten Kreditkarten und einfach ein Load Testing Tool benutzen. Das wäre wahrscheinlich eine gute Strategie."
+    },
+    {
+      "end": 883170,
+      "speaker": "A",
+      "start": 874580,
+      "text": "Zu den Details, was es für verschiedene Angriffe gibt, kommen wir gleich noch. Aber ich frage mich jetzt, wo wir gerade bei den Public Load Testing Tools sind, machen die eigentlich irgendwas anderes?"
+    },
+    {
+      "end": 921830,
+      "speaker": "B",
+      "start": 883250,
+      "text": "Im Grunde fast nicht. Also wenn du ein skriptbares Tool hast, KS glaube ich, IO ist so ein Tool, da kannst du auch beliebig Requests forten oder dir so zusammenbauen, wie du sie haben möchtest, auf ein Suchformular dynamische Sachen reinfüttern. Im Grunde könntest du das halt auch benutzen. Ich denke aber schon, dass so ein professioneller Anbieter da irgendwo selber auch Rate Limits drauf hat oder vielleicht mal guckt, fließt da sehr viel Traffic zu einer Government Seite, sind die Kreditkarten vielleicht auch geklaut, Also dass da mehr Testing auch tatsächlich stattfindet oder mehr Überprüfung stattfindet."
+    },
+    {
+      "end": 924710,
+      "speaker": "C",
+      "start": 921990,
+      "text": "Du meinst jetzt bei einem sinnvollen Anbieter."
+    },
+    {
+      "end": 929430,
+      "speaker": "B",
+      "start": 924710,
+      "text": "Professionelle Anbieter sollte die Kunden dann so ein bisschen besser untersuchen. Know your customer."
+    },
+    {
+      "end": 936440,
+      "speaker": "C",
+      "start": 929590,
+      "text": "Ganz simple Verständnisfrage noch für Warum heißt es Booter? Also wir kennen nur Bootloader und so weiter, aber warum Booter?"
+    },
+    {
+      "end": 944990,
+      "speaker": "B",
+      "start": 936830,
+      "text": "Das ist eine interessante Frage, mit der ich mich auch noch gar nicht beschäftigt habe. Vielleicht weil er dir den Boot gibt und dir in den Hintern tritt. Aber wilde Theorie, Ich habe es eigentlich."
+    },
+    {
+      "end": 954190,
+      "speaker": "C",
+      "start": 944990,
+      "text": "Auch probiert kurz zu googeln, habe aber keine Antwort gefunden. Aber das ist dann der Auftrag an unsere Community, uns das zu klären, oder der Andi fragt natürlich gerade GPT und."
+    },
+    {
+      "end": 955590,
+      "speaker": "B",
+      "start": 954270,
+      "text": "Da bin ich jetzt auch neugierig."
+    },
+    {
+      "end": 969590,
+      "speaker": "A",
+      "start": 955590,
+      "text": "Also danke, chatgpt kommt aus der Hackerszene und hat mit dem englischen Wort to boot zu tun, also hochfahren, starten, aber auch jemanden rausschmeißen. Okay. Und dann kann man ja OK, kurz gesagt, Booter ist der Dienst, der andere rausbootet, disconnected, rausschmeißt."
+    },
+    {
+      "end": 994160,
+      "speaker": "C",
+      "start": 969590,
+      "text": "Also ich mag Stefans Theorie mit dem in den Hintern treten eigentlich mehr. Aber kommen wir mal zu der ganzen Technik und gehen da ein bisschen tiefer rein. Also wir haben im Vorfeld schon diskutiert, kann man jetzt voraussetzen, dass alle dieses Layer Modell, das ISO OSI Modell kennen und die verschiedenen Layer? Ich bin selber schon daran gescheitert, zwischen Layer sieben und acht müssen wir jetzt das wiederholen oder können wir das voraussetzen?"
+    },
+    {
+      "end": 1012280,
+      "speaker": "A",
+      "start": 994160,
+      "text": "Ach komm, du als alten Akademiker mit einem Doktortitel in Informatik, also da erwarte ich jetzt schon, dass du mal ganz kurz einen Abriss über das OSI Schichtmodell abgibst Hier. Was ist das, Wozu ist das? Gut, du musst mir jetzt nicht jeden einzelnen Layer erklären, aber bring mal die Leute ganz kurz auf den Stand, weil nicht jeder hat vielleicht eine klassische Informatiker Ausbildung, so wie du."
+    },
+    {
+      "end": 1016520,
+      "speaker": "C",
+      "start": 1012280,
+      "text": "Jetzt haben wir da einen Profi sitzen. Weißt du, wie lange das her ist bei mir?"
+    },
+    {
+      "end": 1020160,
+      "speaker": "B",
+      "start": 1016520,
+      "text": "Okay, ich versuch's mal. Also ich werde jetzt nicht für jede Schicht jeden Namen."
+    },
+    {
+      "end": 1021760,
+      "speaker": "C",
+      "start": 1020320,
+      "text": "Du brauchst keine Vorlesung jetzt."
+    },
+    {
+      "end": 1058680,
+      "speaker": "B",
+      "start": 1021760,
+      "text": "Genau, keine Vorlesung. Das könnt ihr sonst auf Wikipedia nochmal durchlesen. Aber gerade bei ddos Attacken ist es schon wichtig, die Layer so zu kennen. Das passt auch nicht hundertprozentig immer. Da gibt es auch Graubereiche, aber ich versuch's mal. Also Layer eins wäre sozusagen die Kabel, die existieren, so grundlegende Protokolle, die da gesprochen werden, Frames, die ausgetauscht werden und so weiter. Layer zwei wären dann Sachen, die da drauf laufen. Also zum Beispiel in so einem lokalen Netzwerk gibt es so ARP Pakete, die Wo ist mein Gateway? Was für IP Adressen passen zu welcher Mac, also zu welcher Hardwareadresse?"
+    },
+    {
+      "end": 1063040,
+      "speaker": "C",
+      "start": 1059240,
+      "text": "Also alles, was so mit Mac Adressen zu tun hat, ist dann der Layer zwei, oder?"
+    },
+    {
+      "end": 1103459,
+      "speaker": "B",
+      "start": 1063040,
+      "text": "Genau, das sind so diese beiden unteren Bereiche. Da sind wir so im Bereich lokales Netzwerk. Wir wollen aber natürlich aus dem lokalen Netzwerk raus ins Internet und dafür brauchen wir Layer drei, nämlich IP und IP hat da im Grunde nur die Wo kommt es her und wo soll es hin? Das Paket, da ist noch gar nicht von Ports die Rede und so weiter. TCP und UDP, was man so kennt, son, das passiert erst auf Layer vier sozusagen. Da ist dann auch schon mehr Logik drin. Zum Beispiel wenn ein Paket verloren geht, wird es auch noch mal wieder zusätzlich geschickt und UDP ist halt die verbindungslose Variante. Kommen wir später auch nochmal zu."
+    },
+    {
+      "end": 1111619,
+      "speaker": "C",
+      "start": 1103539,
+      "text": "Bis hierhin hätte ich es auch noch geschafft und jetzt hätte ich so Ja, das andere ist dann so, Das kann man eigentlich vernachlässigen. Das ist dann so oben in Richtung Anwendung."
+    },
+    {
+      "end": 1123880,
+      "speaker": "B",
+      "start": 1112339,
+      "text": "Für den Netzwerker ist das, was jetzt kommt, weiter oben nur noch Müll sozusagen. Das interessiert ihn nicht. Genau, die Schichten fünf und sechs ignoriert man gerne so bei dem ddos Thema."
+    },
+    {
+      "end": 1128760,
+      "speaker": "C",
+      "start": 1123880,
+      "text": "Irgendwie ein bisschen, ja, sind die überhaupt so genau definiert? Ja, also ich habe die auch nie."
+    },
+    {
+      "end": 1129720,
+      "speaker": "B",
+      "start": 1128760,
+      "text": "So im Kopf irgendwie."
+    },
+    {
+      "end": 1131360,
+      "speaker": "C",
+      "start": 1129720,
+      "text": "Man fängt dann wieder bei Layer sieben."
+    },
+    {
+      "end": 1136160,
+      "speaker": "A",
+      "start": 1131360,
+      "text": "Eigentlich an zu diskutieren, was sind Layer fünf und sechs und warum werden die ignoriert?"
+    },
+    {
+      "end": 1156030,
+      "speaker": "B",
+      "start": 1136160,
+      "text": "Ist halt zum Beispiel so eine Session Schicht. Wenn du aber im TCPI Modell, also es gibt ja ganz viele verschiedene Modelle, um das darzustellen. Wenn du aber im TCP IP oder Internetmodell bist, gibt es da nicht so ein eins zu eins Mapping der Schichten sozusagen. Also es passt halt nicht so richtig zusammen."
+    },
+    {
+      "end": 1170270,
+      "speaker": "C",
+      "start": 1156670,
+      "text": "Das war Session und Präsentation gerade nachgeschaut, fünf und sechs und irgendwie hat das dann niemand verwendet, kommt mir zumindest so vor. Und dann hat man es einfach so auf die Seite gelegt und in anderen Referenzmodellen ist es dann auch gar nicht mehr so eigentlich dargestellt worden."
+    },
+    {
+      "end": 1198490,
+      "speaker": "A",
+      "start": 1170270,
+      "text": "Ja, ich schiele jetzt gerade mal auf den Wikipedia Artikel, den der Wolfgang auch zu dem ISO OSI Schichtmodell hat. Und ja, in der Tat, die Layer fünf, sechs und sieben werden einfach mal ratzfatz protokoll technisch zusammengefasst. XMPP läuft auf allen drei Layern, HTTPs, FTP. Okay, Layer fünf und sechs fliegen einfach mal raus. Für die fleißigen Leser haben wir jetzt eine Hausaufgabe, fragen wir dann in der nächsten Episode ab. Also machen wir bei Layer sieben weiter."
+    },
+    {
+      "end": 1220970,
+      "speaker": "B",
+      "start": 1198490,
+      "text": "Genau, bei Layer sieben geht es weiter. Das ist dann die Applikationsschicht. Das wäre zum Beispiel so ein HTTP Request, der stattfindet, ein typischer GET Request, kennen die meisten wahrscheinlich. Das wäre so ein Ding, was da passiert. Dann haben wir aber auch noch Layer acht drüber, kein offizielles Layer natürlich, sondern das wäre dann so die Business Logic, die dann da tatsächlich in der Anwendung passiert."
+    },
+    {
+      "end": 1241470,
+      "speaker": "A",
+      "start": 1221130,
+      "text": "Was ich besonders schön fand, du hast das Layer Modell direkt im Kontext der Distributed Denial of Service Attacken erklärt und wir haben gelernt, Layer fünf und sechs spielen mal für uns keine Relevanz. Fangen wir mal ganz vorne an, spielen Layer eins und Layer zwei in der ganzen Thematik irgendeine Relevanz, weil ich meine Kabel, klar, die sind da, damit Computer vernetzt sind, verstehe ich."
+    },
+    {
+      "end": 1258310,
+      "speaker": "B",
+      "start": 1241790,
+      "text": "Genau, auf der Ebene spielt das noch nicht so eine Rolle. Wir müssen da erstmal sozusagen aus dem lokalen Netzwerk rauskommen und erst ab IP, also Layer drei geht es sozusagen los. Man kann sich natürlich gegenseitig ärgern oder den Professor ärgern, aber dann wäre das noch keine Distribute Denial of Service Attacke in dem Sinne."
+    },
+    {
+      "end": 1266470,
+      "speaker": "C",
+      "start": 1258310,
+      "text": "Das heißt, wenn jetzt zum Beispiel im Guest Wifi bin oder so irgendwas oder mich wirklich anstecken kann irgendwo, dann könnt ihr da natürlich schon unter Umständen irgendwas machen."
+    },
+    {
+      "end": 1277630,
+      "speaker": "B",
+      "start": 1266470,
+      "text": "Genau, wenn sich jetzt fünf Kollegen zusammentun und den einen mobben wollen und dem ganz viel Traffic schicken, dann kann er auch nicht mehr arbeiten und ist sozusagen einer in House Distributed Denial of Service Attacke zum Opfer gefallen."
+    },
+    {
+      "end": 1291680,
+      "speaker": "A",
+      "start": 1278350,
+      "text": "Aber lass uns mal zum Fleisch kommen, Layer drei, wo dieses richtige Internetnetzwerk da irgendwie so langsam anfängt, also außerhalb der Büromauern sozusagen. Wie kann ich den Wolfgang von Duisburg nach Innsbruck jetzt lahmlegen?"
+    },
+    {
+      "end": 1321750,
+      "speaker": "B",
+      "start": 1292480,
+      "text": "Also die einfachste Variante ist, ihm einfach ganz viel Traffic zu schicken, bis sein Server überlastet ist. Sagen wir mal, der Wolfgang hat einen Server mit einem Gigabit mit so einer Anbindung, dann mietest du einfach mal kurz zwei Server bei AWS, die beide ein Gigabit haben und dann schiebst du die gesamte Zeit da einfach Traffic hin und dann ist der Server überfordert und schafft es irgendwie nicht mehr die ganzen Anfragen zu beantworten. Also er kriegt einfach, hat halt einfach auf der Netzwerkebene schon so viel Traffic, dass einige Pakete verworfen werden müssen."
+    },
+    {
+      "end": 1327910,
+      "speaker": "A",
+      "start": 1321830,
+      "text": "Also da geht es wirklich ganz brutal um, ich sag mal, die Leitung dicht machen."
+    },
+    {
+      "end": 1339750,
+      "speaker": "B",
+      "start": 1327910,
+      "text": "Genau, die Leitung ist einfach voll, so wie zu viele Leute gehen zu McDonald's zu Karneval, dann sind die auch überflutet, fünf hundert Leute stehen in der Schlange, keine Chance noch einen Burger zu kriegen."
+    },
+    {
+      "end": 1361740,
+      "speaker": "A",
+      "start": 1339750,
+      "text": "Und wie mache ich das jetzt technisch gesehen? Also ich meine, wir haben gerade gesagt, okay, Layer drei ist IP, das bedeutet, wenn ich mich recht erinnere, da ist der ganz gute ping Command auch auf dem Layer aktiv. ICMP Protokoll. Wenn ich mich recht erinnere, kann ich dann jetzt einfach eine while Schleife bauen mit ping Wolfgang Innsbruck at und gib."
+    },
+    {
+      "end": 1372740,
+      "speaker": "B",
+      "start": 1361740,
+      "text": "Ihm oder prinzipiell schon Ping hat auch den netten f Parameter für flat. Dann musst du noch schick bitte große Pakete, kannst du dir aussuchen, große oder kleine? Und dann geht es schon los."
+    },
+    {
+      "end": 1377250,
+      "speaker": "C",
+      "start": 1372980,
+      "text": "Wie kann man große Pakete schicken? Das unterstützt Bing an sich selbst schon."
+    },
+    {
+      "end": 1392450,
+      "speaker": "B",
+      "start": 1377330,
+      "text": "Genau, man kann da eine Paketgröße angeben, dann sagst du einfach ein tausend fünf hundert wenn die MTU so gesetzt ist. Jetzt wird es schon sehr technisch, aber das, was durch deine Leitung durch passt, die maximale Paketgröße wählst du dann aus und dann geht der Flut auch schon los."
+    },
+    {
+      "end": 1398610,
+      "speaker": "A",
+      "start": 1392690,
+      "text": "Wofür wird dieses Feature normalerweise genutzt? Ich bezweifle, dass Ping ein automatisches Denail of Service Attacken Feature drin hat."
+    },
+    {
+      "end": 1422300,
+      "speaker": "B",
+      "start": 1398610,
+      "text": "Ja, das ist im Grunde zum Testen steht meine Verbindung vernünftig, stabil, kann mit verschiedenen mtus rumtesten. Im Grunde zum Troubleshooting wird das normalerweise sonst genutzt, wenn ich jetzt einen DSL Anschluss habe, da ist die MTU manchmal größer, sehr technisches, kleiner, sehr technisches Ding. Dann kann man halt ausprobieren, ob Pakete von einer bestimmten Größe ungefiltert oder ob die noch durchgehen."
+    },
+    {
+      "end": 1450200,
+      "speaker": "C",
+      "start": 1422300,
+      "text": "Jetzt bist du ja schon länger dabei, darum kannst du mir das vielleicht besser beantworten. Und bei mir ist es nur so ein Gefühl, was ich erlebt habe, dass früher ICMP einfach immer gesperrt wurde. Das war so der Standard, wenn man Server gemacht hat. ICMP Ping wurde gesperrt. Jetzt mittlerweile sieht man, das kommt mir vor, immer weniger und Ping ist eigentlich irgendwie wieder überall offen. Ist das wirklich so oder ist es nur, dass ich jetzt irgendwo in Environments bin, wo andere Sicherheitsmechanismen greifen? Oder ist das allgemein weniger geworden, diese Angriffe?"
+    },
+    {
+      "end": 1470510,
+      "speaker": "B",
+      "start": 1450360,
+      "text": "Es ist schon so, dass das in vielen Security Guides einfach drinsteht, blockiere ICMP, damit kann man böse Sachen machen. In Teilen stimmte das vielleicht auch früher mal, aber ich habe auch den Eindruck, dass es immer mehr enabled wird, einfach um dieses Troubleshooting besser zu ermöglichen, was man intern im Netz hat, aber auch vielleicht um besser qualifizierte Fehlerberichte von Externern schon zu erhalten."
+    },
+    {
+      "end": 1481230,
+      "speaker": "C",
+      "start": 1470670,
+      "text": "Aber wie schützt man sich dann bei ICMP? Ist es allgemein sicherer geworden? Gibt es einfach weniger Lücken als wie früher oder gibt es diese Angriffe immer noch? Die klassischen Bing Floods oder wie man."
+    },
+    {
+      "end": 1509110,
+      "speaker": "B",
+      "start": 1481230,
+      "text": "Die auch immer nennt, die sind halt ineffizient. Deswegen wählen Angreifer üblicherweise andere Angriffsarten, wo sie einen größeren Faktor an Traffic hinbekommen. Ich habe den Eindruck, das wird vielmals gar nicht mehr ausprobiert bzw. Es ist so, dass man als Anbieter oder als Ziel andere Gegenmaßnahmen wählt, also so ein Rate Limit. Man erlaubt zum Beispiel ein hundert Ping Anfragen pro IP und danach wird der Rest gedroppt. Die beantwortet man dann nicht mehr."
+    },
+    {
+      "end": 1513830,
+      "speaker": "C",
+      "start": 1509190,
+      "text": "Und wo wird das gemacht? Am Server wirklich? Oder ist es dann meistens in Switches schon, ne?"
+    },
+    {
+      "end": 1530120,
+      "speaker": "B",
+      "start": 1513910,
+      "text": "Genau, schon vorher üblicherweise vielleicht schon im Router ganz vorne oder in irgendeinem Security Gateway, was man hat, was dann sagt, ich erlaube jetzt eine gewisse Menge von diesem Traffic zum Troubleshooten, aber so auffällige Mengen, die keinen Sinn mehr machen zum Troubleshooten, die blockiere ich dann halt."
+    },
+    {
+      "end": 1549530,
+      "speaker": "A",
+      "start": 1530120,
+      "text": "Du hast ja auch gesagt, ICMP oder PING ist ineffizient und Leute gucken, dass man irgendwie mehr Volumen hinkriegt. Und da bin ich auf das Wort Amplification gestoßen, auch in Kombination mit Ping, Ping Amplification oder ICMP Amplification. Was ist das und ist das effizienter? Ist das cool?"
+    },
+    {
+      "end": 1656490,
+      "speaker": "B",
+      "start": 1552170,
+      "text": "Wenn man Ziel davon wird, ist das nicht so cool Meistens, denn dadurch kriegt man eine viel höhere Datenrate hin. Wir sind jetzt quasi damit auf Layer vier hochgegangen sozusagen. So ein typisches Beispiel ist UDP. Es gibt im Internet ziemlich viele öffentlich erreichbare Server für DNS. Zum Beispiel Open Resolver gibt es, also nennt man die. Da kann man dann einfach nachfragen. Zum Beispiel, ich sage mal auf Wolf Heimatrouter hat er dann öffentlich erreichbar einen DNS Server, den frage ich, gib mir doch bitte die Adresse von Google Com und dann antwortet mir der Server natürlich. Jetzt mache ich aber eine Anfrage nicht für Google Com, sondern eine bestimmte Anfrage im DNS auf eine Domain, die eine sehr große Antwort zurückliefert. Das sind oft so TXT Records, da kann man ganz schön viel Inhalt hinterlegen. Ich glaube, die Defcon Org hat, glaube ich, auch irgendwie eine ziemlich große Reflection Rate an der Stelle. Die liefert halt deutlich mehr Daten zurück, als man angefragt hat. Wenn man sich jetzt guckt, ich schicke ein Paket, das hat, ich sage jetzt einfach ein hundert Byte, ich kriege eins von ein tausend Byte zurückgeschickt, dann habe ich einen Faktor von zehn schon mal erreicht. Das kann auch noch viel größer werden. Ich schicke ein Paket und die Antwort ist ein hundert mal so groß. Und wenn ich jetzt noch die Fähigkeit habe, meine Adressen zu fälschen, also Andi, du schickst ein gefälschtes Paket mit meiner Absenderadresse, weil der Router auf dem Weg, der guckt nur nach der Zieladresse, der guckt gar nicht nach der Absenderadresse in der Regel und schickst das an den Router von Wolfi und der antwortet mit einer sehr großen Antwort und die bekomme aber ich. Und dann haben wir halt sehr große Traffic Mengen, die dadurch entstehen können letztendlich."
+    },
+    {
+      "end": 1682750,
+      "speaker": "C",
+      "start": 1656650,
+      "text": "Also ich nutze dann eigentlich ein valides Gut gemeintes Service an sich und der Traffic wird dann umgeroutet sozusagen zu einer anderen Destination, weil die Source Adresse gespooft ist und dann kann ich so jemand anderen eigentlich zumüllen mit einem offiziellen, ganz normalen Service, das da draußen irgendwo ist und was auch jetzt nicht irgendwie verzeichnet ist als böses Service oder sonst irgendwas."
+    },
+    {
+      "end": 1700350,
+      "speaker": "B",
+      "start": 1682830,
+      "text": "Genau, wenn man jetzt besonders fies ist, dann kann man das auch noch, kann man auch den Google DNS benutzen, weil wer sperrt den denn schon bitte? Die Antwort würde dann von, die große Antwort kommt dann von der oder von Cloudflare. Ja, die blockiert doch keiner so ohne weiteres."
+    },
+    {
+      "end": 1712590,
+      "speaker": "A",
+      "start": 1700350,
+      "text": "Also das ist ja eigentlich so, als habe ich einen Sonnenstrahl und einen Spiegel und der Sonnenstrahl Schrift auf den Spiegel und ich blende dann irgendwen. Also ich meine, so mit einem Dreieck kann man das ja, kann man das ja eigentlich beschreiben, oder?"
+    },
+    {
+      "end": 1717950,
+      "speaker": "B",
+      "start": 1712670,
+      "text": "Genau, Angriff über Bande sozusagen könnte man auch sagen, oder im Dreieck. Genau."
+    },
+    {
+      "end": 1741530,
+      "speaker": "A",
+      "start": 1718030,
+      "text": "Und wenn ich jetzt sogar noch verschiedene Rechner habe, also ich spiele jetzt mal gerade den Bösewicht, ich habe jetzt verschiedene Rechner und ich nutze einmal den Google DNS, du hast gerade irgendeine Defcon Webseite, glaube ich, genannt, also ich nutze verschiedene Services, die mir eine größere Antwort geben als der Request, dann ist es ja noch schwieriger herauszufinden, okay, ist das jetzt valide oder ist das jetzt nicht valide."
+    },
+    {
+      "end": 1756360,
+      "speaker": "B",
+      "start": 1741530,
+      "text": "Genau, also aus Sicht des Ziels bekommt man dann halt sehr viele große Antworten auf DNS Abfragen, die man aber nie gestellt hat. Man guckt dann da wirklich in den Traffic und sieht, komisch, jemand hat irgendwie TXT Records angefragt, warum kriege ich die."
+    },
+    {
+      "end": 1771110,
+      "speaker": "A",
+      "start": 1756750,
+      "text": "Jetzt hattest du gesagt, mit diesen Amplification Attacken sind wir bereits auf Layer vier, Wenn ich mich an deine OSI ISO Schichtmodell Beschreibung erinnere, ist Layer vier ja wirklich das TCP IP Protokoll und UDP."
+    },
+    {
+      "end": 1777310,
+      "speaker": "B",
+      "start": 1771110,
+      "text": "Natürlich, es gibt noch ganz viele andere auf der Ebene, aber das sind so die üblichen, die auch freigeschaltet sind und benutzt werden."
+    },
+    {
+      "end": 1789810,
+      "speaker": "C",
+      "start": 1777390,
+      "text": "Kannst du mal kurz UDP und TCP erklären, den Unterschied? Auch wenn der Andi jetzt wahrscheinlich wieder sagen wird, das ist ja allgemein Wissen, aber ist ja vielleicht bei manchen doch schon länger her, von mir ja auch schon lange Zeit her, dass ich darüber."
+    },
+    {
+      "end": 1792450,
+      "speaker": "A",
+      "start": 1789810,
+      "text": "Philosophiert habe, Wir haben nur eine smarte Hörerschaft."
+    },
+    {
+      "end": 1796010,
+      "speaker": "C",
+      "start": 1793970,
+      "text": "Also für mich, vielleicht kannst du für mich das kurz."
+    },
+    {
+      "end": 1854870,
+      "speaker": "B",
+      "start": 1796010,
+      "text": "Ich mache einmal ganz kurz TCP verbindungsorientiertes Protokoll. Also es wird erst eine Verbindung hergestellt, danach werden die Daten übertragen und das funktioniert im sogenannten Three Way Handshake, Drei Wege Handschlag von mir aus. Derjenige, der die Verbindung aufbaut, schickt ein Paket zur Gegenseite, sagt Hallo, ich möchte die Verbindung aufbauen. Die Gegenseite antwortet mit Ist OK, mach mal. Und dann sagt der Client, schickt dann nochmal die Bestä OK, hiermit bestätige ich, die Verbindung ist aufgebaut. Das hat halt den Sinn, dass wenn eins dieser Pakete verloren geht, nicht die eine Seite denkt, dass die Verbindung besteht und die andere halt aber nicht. Also dass man sozusagen eine Synchronisation zwischen diesen beiden Seiten erreicht hat. Bei UDP ist es so, dass es ein verbindungsloses Protokoll ist. Das heißt, ich kann meine Anfrage zum DNS Server einfach so stellen, da steht schon alles drin, Gib mir bitte die IP Adresse für Google, das schicke ich dahin, dann kommt auch die Antwort. Da findet kein Session Aufbau statt."
+    },
+    {
+      "end": 1857430,
+      "speaker": "C",
+      "start": 1854870,
+      "text": "Das heißt, wenn da irgendwo ein Paket verloren geht, ist es weg."
+    },
+    {
+      "end": 1869590,
+      "speaker": "B",
+      "start": 1857430,
+      "text": "Genau, das ist weg. Dann kommt aber auch keine Antwort. Es wird nicht nochmal neu geschickt in der Regel. Es gibt natürlich Client Implementierungen, die dann nochmal das ursprüngliche Paket schicken, aber das ist technisch anders als bei TCP."
+    },
+    {
+      "end": 1902830,
+      "speaker": "A",
+      "start": 1869590,
+      "text": "Wir hatten die eine Attack Möglichkeit, wir machen einfach die Leitung dicht, Amplification und allem drum und dran. Aber wenn ich doch jetzt einen Zustand behaftetes Protokoll, das Wort muss ich mir jetzt echt ausdenken, Sateful, glaube ich, heißt auf Englisch Zustand behaftet, habe ich auch super selten genutzt, das Wort Protokoll habe, dann kann ich doch auch eigentlich ganz viele Anfragen senden und ich sage Hallo, aber unterbreche das Wort Hallo einfach in der Mitte. Also bei TCP IP wäre das dann, glaube ich, ich sende ein SYN Paket, aber niemals ein AC."
+    },
+    {
+      "end": 1928760,
+      "speaker": "B",
+      "start": 1904190,
+      "text": "Genau, also der Client sendet das SYN, die Gegenseite schickt ein SYN ACK und dann kommt von mir das AC. Und in dem Fall, den du beschreibst, schickt man tatsächlich ganz viele SYN Pakete. Die Gegenseite muss irgendwie diesen State halten, die wartet ja drauf, dass sie die letzte Antwort noch bekommt und verbraucht natürlich irgendwie Ressourcen dafür. Wenn man das halt sehr oft macht, dann sind irgendwann die Ressourcen auch alle, die der Server hat und Das bedeutet."
+    },
+    {
+      "end": 1935880,
+      "speaker": "A",
+      "start": 1928760,
+      "text": "Der Server wartet dann, dass irgendjemand mal wieder einen Akt sendet und hält das dann unendlich offen oder wie funktioniert es dann unendlich nicht?"
+    },
+    {
+      "end": 1979780,
+      "speaker": "B",
+      "start": 1935880,
+      "text": "Nach einer gewissen Dauer, die man auch beeinflussen kann, wird er dieses halboffene Socket dann auch wieder schließen. Aber er versucht mehrfach dann noch eine Rückmeldung zu bekommen. Also er schickt nochmal sein Synact Paket zurück. Es könnte ja verloren gegangen sein auf dem Weg, aber im TCP IP ist ja diese Session mit drin enthalten, deswegen versucht er immer noch mal zu schicken. Und das ist in der Regel fünfmal der Fall. Mit dem initialen Paket sind es dann sechs Pakete, die er tatsächlich rausschickt. Und da sieht man auch, man schickt ein Paket, die andere Seite muss sechs schicken und sie muss sich das auch für, ich sage jetzt einfach mal, fünf Minuten merken. Das verbraucht natürlich Ressourcen und ist irgendwann auch ein Problem für die angegriffene Seite."
+    },
+    {
+      "end": 1999390,
+      "speaker": "A",
+      "start": 1979780,
+      "text": "Ich stelle mir gerade die Ist das nicht total effizient für den Angreifer? Deutlich effizienter, als wenn ich jetzt so eine Vorschleife mit Ping Paketen sind, Weil ich kann mir vorstellen, durch eine Netzwerkleitung kann mehr Traffic durchgehen, als dass ein moderner Server oder ein halbwegs moderner Server an statischen oder an stateful Connections halten kann."
+    },
+    {
+      "end": 2022980,
+      "speaker": "B",
+      "start": 1999390,
+      "text": "Genau, das lohnt sich auf jeden Fall. Wenn man guckt, die Paketratio ist sozusagen eins zu sechs, da muss ja auch immer was geschickt werden. Die Antwort ist ungefähr, sag ich jetzt mal, genauso groß wie die gesendete Anfrage. Ich schicke da was hin mit, sagen wir mal neun hundert Mbit, ist nicht ganz das Gigabit. Die Gegenseite muss aber trotzdem dann sechsmal so viel rausschicken und das schafft sie halt auch einfach nicht."
+    },
+    {
+      "end": 2035700,
+      "speaker": "C",
+      "start": 2023380,
+      "text": "Also das sind eigentlich dann zwei Angriffsvektoren. Ich habe einerseits die Ressourcen, die gehalten werden müssen, dass der Server ein Problem hat mit den ganz vielen Ressourcen, die er intern halten muss und noch, dass die Leitung auch gefloodet wird und dann zu ist."
+    },
+    {
+      "end": 2042840,
+      "speaker": "B",
+      "start": 2035700,
+      "text": "Genau ausgehend hat er dann halt auch einfach ein Traffic Problem. Da wird dann auch Packet Los passieren und die Seiten unerreichbar."
+    },
+    {
+      "end": 2045440,
+      "speaker": "A",
+      "start": 2043160,
+      "text": "Wie nennt man das im Fachjargon, was wir gerade beschrieben haben?"
+    },
+    {
+      "end": 2049640,
+      "speaker": "B",
+      "start": 2045440,
+      "text": "Das wäre eine klassische Sündflut Attacke, eine gespoofte Sündflut Attacke."
+    },
+    {
+      "end": 2051640,
+      "speaker": "A",
+      "start": 2049640,
+      "text": "Was ist deine Lieblingsattacke auf Layer vier?"
+    },
+    {
+      "end": 2104220,
+      "speaker": "B",
+      "start": 2051640,
+      "text": "Mein Lieblings eigentlich Low Slow, weil das irgendwie eleganter ist. Da würde man auch ganz viele Verbindungen herstellen. Man würde aber die tatsächlich etablieren, also wirklich herstellen. Und solche Geräte, ich sag mal eine Cisco ASA oder solche Sachen, die haben so ein Session Tablet und das irgendwann auch voll so hardwareseitig. Oder auch ein Webserver. Apache ist so ein typisches Beispiel, da kann halt zwei hundert sechs und fünfzig Connections, glaube ich, im Default halten. Und wenn du die halt voll machst und offen hältst, weil du immer ein kleines bisschen an Daten überträgst, dann macht er auch nichts mehr. Der nimmt dann auch keine weiteren Verbindungen mehr an, Dann lässt du die einfach den gesamten Tag offen und der Verteidiger sieht dann auf dem Server komisch viele Sessions sind offen, wenn er genau guckt, aber er sieht keinen großen Traffic Spike. Er sieht nicht, dass permanent was übertragen wird, er sieht auch nicht viele Requests im Log. Also das finde ich so ein bisschen eleganter."
+    },
+    {
+      "end": 2110380,
+      "speaker": "A",
+      "start": 2104300,
+      "text": "Moment, du hältst die Session offen und dann sendest du alle zwei Minuten mal ein Byte rüber oder was passiert dann."
+    },
+    {
+      "end": 2130609,
+      "speaker": "B",
+      "start": 2110380,
+      "text": "Genau zum Beispiel, es gibt so eine klassische Low and Slow Attacke, Slow Loris nennt die sich. Und da wurden einfach immer wieder neue Header geschickt an den Apache, immer mal wieder alle, keine Ahnung, zehn Sekunden ein neuer Header dahin und der Apache wartet dann, ach noch ein Header, ach noch ein Header, ich bin immer noch in meinem Modus, ich muss ja auf die Header warten und das macht er dann auch brav."
+    },
+    {
+      "end": 2140489,
+      "speaker": "A",
+      "start": 2130609,
+      "text": "Ich finde das richtig geil. Es gibt anscheinend jetzt Pöbel Attacken und elegante Attacken. Also Slow Loris ist anscheinend elegant. Ich stelle mir gerade so eine Attacke im Anzug vor. Wahnsinn."
+    },
+    {
+      "end": 2156780,
+      "speaker": "C",
+      "start": 2140489,
+      "text": "Um jetzt schon ein bisschen vorzugreifen, Aber wie kann man sowas oder wie kann man da entgegenwirken? Also kann Apache hat da ja wahrscheinlich gar keine Möglichkeit oder allgemein die Applikation, die hat ein Connection Limit und that's it. Also kann er nicht einfach Connections zumachen oder keine Ahnung."
+    },
+    {
+      "end": 2203080,
+      "speaker": "B",
+      "start": 2156860,
+      "text": "Ja, es gibt da verschiedene Ansätze zu Bei Apache gibt es eine neue NPM, also eine neue Engine, wie mit den Verbindungen auch umgegangen wird und wie die gehandelt werden und die könnte als Beispiel die älteste Connection einfach schließen. Andere Produkte machen das so, dass sie ist in meiner Session irgendwas an Daten übertragen worden oder wie viel wurde da übertragen oder wurde da der komplette Header schon abgeschickt, um einfach diesem Angriffsvektor komplett entgegenzutreten, also kategorisch das auszuschließen, weil einmal schickt er vielleicht Host Header, der nächste schickt andere. Das kann man nicht so ohne weiteres statisch filtern, sondern man sagt einfach, es ist kein vollständiger Request durchgekommen innerhalb von sechs Sekunden, dann schließe ich doch einfach mal die Verbindung."
+    },
+    {
+      "end": 2234370,
+      "speaker": "C",
+      "start": 2203640,
+      "text": "Aber das ist ja auch immer so ein, wie nennt sich das? Maus und Katze, Katze und Maus Spiel. Genau, nicht Katze, Katz, also Katz die Katz, weil Apache ist Open Source, ich kann genau nachschauen, okay, wie ist die Logik und dann probiere ich halt genau diese Logik wieder zu umgehen und schick genau diese Header, die eben nicht ausgenommen sind, oder dass eben dieses, auf gut Deutsch, dieses if Statement wieder happy ist und meine Connection nicht schließt."
+    },
+    {
+      "end": 2265500,
+      "speaker": "B",
+      "start": 2234370,
+      "text": "Also ja, in dem Fall wäre es so, dass das beim Apache mit dieser einen NPM schon auch noch funktionieren kann, kann, soweit ich weiß. Aber man versucht halt dieses generische Problem auszuschließen. Also man könnte auch anders kaputte Header schicken. Man guckt halt dann wirklich, ist nach x Sekunden eine vollständige Anfrage angekommen, wurde die abgeschickt, bin ich sozusagen aus meinem ich warte auf Header oder dass ich einen Request krieg Modus, bin ich da wieder raus sozusagen Und dann unterbricht man halt hart und wenn die Anfrage nicht valide ist, dann schmeißt man sie halt auch einfach in die Mülltonne."
+    },
+    {
+      "end": 2317450,
+      "speaker": "A",
+      "start": 2265500,
+      "text": "Jetzt kenne ich noch die Problematik, dass damals als SSL Zertifikate noch nicht der Standard im Internet waren, hat man sich noch sehr viel Gedanken darüber gemacht, wo man SSL Zertifikate denn, wo man die Verschlüsselung denn terminiert auf dem Server, am Load Balancer und so weiter. Und weil das ja recht aufwendige Berechnungen sind, Kryptographie und Co. Kann das bei Hochtraffic Seiten natürlich auch recht teuer werden, weil das relativ viele CPU Cycles verbrauchen. Jetzt stelle ich mir gerade die, besonders wenn wir im Kontext von Attacken sprechen und eine Operation ist sehr teuer, das ist doch auch ein wunderbarer Attack Vektor, oder kann ich nicht irgendwie sagen, sowas wie die Synflood, Ich starte einfach was, ich starte einfach immer nur einen neuen Verschlüsselungs Entschlüsselungsprozess auf dem Server, weil ich eine SSL Anfrage schicke oder ähnliches."
+    },
+    {
+      "end": 2368680,
+      "speaker": "B",
+      "start": 2317530,
+      "text": "Genau, das ist auch so, dass das ganz gut funktioniert. Früher war es noch so, dass man eine Renegotiation des Schlüssels auch machen konnte bei einer etablierten Verbindung. Und das ist aber dieses Austauschen ist ja erstmal asymmetrische Verschlüsselung und danach folgt dann die symmetrische. Die symmetrische ist schnell, das kennt man. So eine asymmetrische erzeugt halt auf der Serverseite eine deutlich höhere Last als auf dem Client. Das heißt, selbst mit meinem kleinen Laptop konnte man über so eine Renegotiation, die man einfach in derselben Session immer wieder triggert, permanent erreichen, dass der Server halt eine super hohe Auslastung. Ergebnis davon eigentlich macht keiner heutzutage oder hat das Feature Renegotiation noch an Libraries haben es komplett ausgebaut, wird gar nicht mehr supported in der Regel. Da gab es ein Tool von THC, the Hackers Choice, was das auch ausgenutzt hat."
+    },
+    {
+      "end": 2369839,
+      "speaker": "A",
+      "start": 2368760,
+      "text": "Ich bin jetzt schon Fan von der."
+    },
+    {
+      "end": 2374840,
+      "speaker": "C",
+      "start": 2369839,
+      "text": "Kreativität, aber da braucht ihr dann schon auf der Client Seite auch viel Ressourcen, oder?"
+    },
+    {
+      "end": 2407050,
+      "speaker": "B",
+      "start": 2375160,
+      "text": "Ne, auf der Client Seite geht es tatsächlich relativ leicht. Die Anfragen sind nicht besonders groß, die man da stellt. So ein SSL Schlüssel hat ja auch eine gewisse Größe tatsächlich, wenn man da dann Handshakes in der Sekunde macht, da strecken die meisten Server dann schon alle vier von sich. Es kommt auch darauf an, welche Verschlüsselung man targetet. Es gibt ja ECC, Elliptic Curve Cryptography und RSA. Also RSA ist eigentlich das ältere und RSA benötigt halt deutlich mehr Ressourcen, auch beim Schlüsselaustausch."
+    },
+    {
+      "end": 2421200,
+      "speaker": "C",
+      "start": 2407600,
+      "text": "Aber wenn ich einen sauberen Handshake dann wirklich durchführe und alles aufbaue, also eine SSL Connection, dann hat der Client natürlich auch irgendwo Encryption Ressourcen, die verwendet werden müssen, oder? Also ich muss ja in beide Richtungen dann verschlüsseln."
+    },
+    {
+      "end": 2434080,
+      "speaker": "B",
+      "start": 2421280,
+      "text": "Ja, an der Stelle würde man dann aber die Verbindung einfach beenden. Man macht nur den Schlüsselaustausch und dann sage Schwupps, Verbindung ist beendet Oder ich bin sogar fies, mein böser Angriffsclient beendet die Verbindung gar nicht sauber."
+    },
+    {
+      "end": 2440640,
+      "speaker": "C",
+      "start": 2434160,
+      "text": "Also so wie beim Synth Laden mache ich eigentlich nur so eine halbe Connection und trigger den Server, dass er viel Encryption machen muss."
+    },
+    {
+      "end": 2446440,
+      "speaker": "B",
+      "start": 2440640,
+      "text": "Genau. Und dann, wenn ich fies bin, lasse ich sie einfach offen. Ich melde mich sogar nicht mal vernünftig ab und sage, dass die geschlossen wurde."
+    },
+    {
+      "end": 2477070,
+      "speaker": "A",
+      "start": 2446440,
+      "text": "Ich habe mal von einer Attacke gelesen auf ein Login Formular, wo jemand im Passwortfeld einfach drei MB Text reingepackt hat, weil ein Passwort wird ja im Klartext in das Formular gepackt, dann verschlüsselt auf dem Server und wenn man die Zeichen länge nicht begrenzt und wenn man sogar einen teuren Verschlüsselungsalgorithmus dahinter hat, teuer in Bezug auf CPU, dann wird damit auch der Server lahmgelegt, weil da halt einfach drei, fünf, sechs MB Text in dem Passwortfeld drin ist. Ist doch eigentlich genau das Gleiche, oder?"
+    },
+    {
+      "end": 2514000,
+      "speaker": "B",
+      "start": 2477230,
+      "text": "Ja, das könnte man sogar als normale Denial of Service Attacke vielleicht umsetzen. Es gibt auch andere Varianten von sowas, zum Beispiel über komplexe Hash Funktionen, die getriggert werden oder über Regular Expressions zum Beispiel. Wenn man da was sehr Komplexes da reinwirft, da gab es früher mal auf dem Chaos Computer Club einen interessanten Vortrag zu, dann kriegt man den Server auch relativ leicht auf eine höhere Load. Wenn man das dann nicht nur von einem Client macht, sondern von fünf hundert zum Beispiel, dann kann man da schon ganz schön viele Server mit abschießen tatsächlich. PHP hat deswegen ein Limit eingeführt, wie viele Variablen man an PHP übergeben darf."
+    },
+    {
+      "end": 2518870,
+      "speaker": "C",
+      "start": 2514470,
+      "text": "Aber jetzt befinden wir uns dann schon auf Layer acht oder ist es dann schon Business Logik? Solche."
+    },
+    {
+      "end": 2535990,
+      "speaker": "B",
+      "start": 2520790,
+      "text": "Passwortfeldprobleme könnte man fast schon sagen. Vielleicht ist es eine Art Logikfehler, man hat nicht drüber nachgedacht, dieses Feld zu begrenzen oder man beendet nicht die Transaktion, wenn man merkt, da kommen zu viele Daten, könnte man schon fast sagen."
+    },
+    {
+      "end": 2540220,
+      "speaker": "C",
+      "start": 2536070,
+      "text": "Businesslogik, Was wären sonst Layer acht Denial of Service Attacks?"
+    },
+    {
+      "end": 2594730,
+      "speaker": "B",
+      "start": 2541090,
+      "text": "Das typische, was ich eigentlich ganz witzig finde, ist Denial of Inventory, habe ich das mal genannt. Meine Frau bestellt gerne Sachen online, zum Beispiel in irgendeinem Store einfach und wenn man da Sachen in den Warenkorb packt, dann sind die reserviert, damit nicht der Nächste das kauft, während man dann gerade seine Kreditkartendaten eintippt. Wäre auch total ärgerlich. Schlechte Experience möchte man nicht, also wird das Item reserviert. Wenn ich dann jetzt alle Items aus dem Shop in meinem Warenkorb reinpacke und da kein Limit festgelegt habe für die Session, dann kann halt da gerade auch niemand mehr einkaufen. Vielleicht benutze ich dann auch noch, habe ich mir ein hundert vms gemietet in AWS, habe die noch genutzt, um mich so ein bisschen besser zu tarnen und dann kann man es schon hinkriegen, den ganzen Online Shop auch zu blockieren letztendlich. Und der Effekt ist derselbe, Man hat einen finanziellen Schaden Ob ich jetzt die Seite komplett abschieße oder das so blockiere, macht ja keinen Unterschied dann."
+    },
+    {
+      "end": 2596850,
+      "speaker": "C",
+      "start": 2594730,
+      "text": "Und das ist wahrscheinlich auch schwer festzustellen."
+    },
+    {
+      "end": 2624970,
+      "speaker": "B",
+      "start": 2596850,
+      "text": "Oder ist schwieriger festzustellen tatsächlich, weil es hat halt mit deiner Business Logic zu tun. Du musst das irgendwie erstmal feststellen. Du kannst ja dem Netzwerk Team nicht Hey, irgendwie alle Artikel sind in meinem Shop weg. Da brauchst du Leute, die die Applikation verstehen, die die Applikation auch entsprechend mit heißer Nadel gestrickt, vielleicht auch noch gerade während die Attacke läuft, umbauen können, um das zu verhindern. Gerade als Online Shop. Jede Stunde kostet Geld. Wenn man groß ist, wird es richtig teuer."
+    },
+    {
+      "end": 2632150,
+      "speaker": "C",
+      "start": 2624970,
+      "text": "Und vom Finanzierungsmodell wäre das dann ich erpresse den Shop und sage ich mache das jetzt auf Dauer jeden Tag, bis du mir was zahlst."
+    },
+    {
+      "end": 2643430,
+      "speaker": "B",
+      "start": 2632390,
+      "text": "Genau, zum Beispiel den Shop einfach nerven, aber vielleicht auch Tickets kaufen wollen. Sneakerbots sind auch sehr bekannt, da gibt es auch so Sneaker Drops, dann gibt es ein hundert fünfzig Stück davon."
+    },
+    {
+      "end": 2644950,
+      "speaker": "C",
+      "start": 2643510,
+      "text": "Also Sneaker wie die Schuhe."
+    },
+    {
+      "end": 2663090,
+      "speaker": "B",
+      "start": 2645030,
+      "text": "Genau wie die Schuhe. Und dann hat halt jemand Findiges einen Bot programmiert, der blockiert halt die Warenkörbe oder kauft halt alle Schuhe gleichzeitig, um sie dann halt teurer wieder zu verkaufen. Das ist so ja so ein System, was da auch tatsächlich existiert, wo auch wirklich Geld hinter steckt dann Ja, ich."
+    },
+    {
+      "end": 2667290,
+      "speaker": "A",
+      "start": 2663090,
+      "text": "Bin auch echt sauer, weil das letzte Mal, ich glaube, ich habe noch nie Taylor Swift Tickets bekommen."
+    },
+    {
+      "end": 2672890,
+      "speaker": "C",
+      "start": 2667690,
+      "text": "Ja, weil du das schon jemals probiert hast. Aber du schaffst ja nicht mal tote Hosenkarten zu checken."
+    },
+    {
+      "end": 2703940,
+      "speaker": "A",
+      "start": 2672890,
+      "text": "Da bin ich richtig gut. Da bin ich recht gut, da kriege ich eigentlich immer Karten. Aber jetzt heißt das Ding ja Distributed die Nail of Service Attacken. Und dieses Distributed, soweit ich dich verstanden habe, kommt ja aus dem Punkt, dass dass die Attacke nicht von einer Source gemacht wird, sondern von N Sourcen, zwei fünf tausend Rechnern oder Devices. Und bei der Recherche bin ich über einen Begriff gestolpert, der nennt sich Botnetz. Da hast du ja auch schon kurz erwähnt, wie funktioniert so ein Botnetz technisch."
+    },
+    {
+      "end": 2800880,
+      "speaker": "B",
+      "start": 2704020,
+      "text": "Da gibt es auch so ein paar verschiedene Varianten. Aber starten wir mal mit einer ganz einfachen Ich sag mal, der Angreifer denkt sich, ich möchte halt die Netzwerkressourcen ja nicht selber bezahlen. Irgendwie so ein AWS ist dann doch teuer, gerade beim Traffic, wenn ich ganz viel davon verursachen möchte. Ich möchte das gerne umsonst haben, also baue ich mir ein Botnet. Wie kriege ich das hin? Ich habe irgendeinen Code, den müssten Leute auf ihrem Rechner ausführen. Vielleicht habe ich ein gutes Exploit dafür, aber das haben ja auch wahrscheinlich schon andere. Ich bin jetzt wahrscheinlich nicht der Super Hacker und krieg das hin, in so viele Systeme einzubringen. Ich mache einfach eine neue Version von einem Spiel. Es gibt einen tollen Crack dafür, Minecraft. Man hat irgendeinen Vorteil dadurch und in diesen Crack packe ich halt auch noch mein Botnet Code zusätzlich mit rein. Vielleicht funktioniert der Crack sogar, wäre sogar gut. Dann ahnen die Leute nichts davon, wo sie sich eingefangen haben. Die führen das Ding aus und dieses Ding meldet sich dann zentral bei meinem Server an. Den habe ich jetzt vielleicht dann doch bei AWS mit einer geklauten Kreditkarte oder sonst wie beschafft. Man möchte, also die meisten versuchen ja schon irgendwie anonym noch zu bleiben, die Angreifer, aber da melden sich dann zukünftig alle Bots an. Die sagen dann so ganz klassisch, über so ein IRC Protokoll wird da gesprochen. Die melden sich, man ist in einem Channel drin und hat dann da seine Bots, die reinjoinen. Wenn derjenige, der betroffen ist, seinen Rechner ausmacht, gehen die wieder weg. So, dann kommen sie aber wieder, wenn er den Rechner wieder anmacht. Also man hat dann immer so einen Pool von Systemen, die verfügbar sind. Denen schickt man dann einfach Kommandos und hier bitte zack, folgende IP Adresse oder Webseite angreifen mit folgendem Angriffstypen und dann machen die das auch einfach."
+    },
+    {
+      "end": 2812520,
+      "speaker": "A",
+      "start": 2801040,
+      "text": "Ich bin auch bei der Recherche auch wirklich nostalgisch geworden und deswegen mal die In welchem IRC Netzwerk warst du früher unterwegs, Wolfgang? Warst du so ein klassischer quakenet User oder Quake?"
+    },
+    {
+      "end": 2814880,
+      "speaker": "C",
+      "start": 2812520,
+      "text": "Spinnst du nie Quake gespielt?"
+    },
+    {
+      "end": 2818400,
+      "speaker": "A",
+      "start": 2815680,
+      "text": "Du musst nicht Quake spielen, um im quakenet gewesen zu sein."
+    },
+    {
+      "end": 2820120,
+      "speaker": "B",
+      "start": 2818400,
+      "text": "Genau, da hat man einfach so rumgehangen."
+    },
+    {
+      "end": 2825970,
+      "speaker": "A",
+      "start": 2820120,
+      "text": "Bei den coolen Ich habe hier eine Non irgendwie neben mir sitzen, Also wie."
+    },
+    {
+      "end": 2828410,
+      "speaker": "C",
+      "start": 2825970,
+      "text": "Quake am Markt war, da war ich."
+    },
+    {
+      "end": 2831250,
+      "speaker": "A",
+      "start": 2828410,
+      "text": "Schon so quakenet hat nichts mit Quake zu tun."
+    },
+    {
+      "end": 2832450,
+      "speaker": "B",
+      "start": 2831410,
+      "text": "Das ist nur der Name."
+    },
+    {
+      "end": 2835410,
+      "speaker": "C",
+      "start": 2832450,
+      "text": "Meine rscs haben anders geheißen, aber ich hab keine Ahnung mehr, wie."
+    },
+    {
+      "end": 2839490,
+      "speaker": "B",
+      "start": 2835490,
+      "text": "Also ich war im Darnet früher vertreten. Wie im Darnet?"
+    },
+    {
+      "end": 2865530,
+      "speaker": "A",
+      "start": 2839970,
+      "text": "Ja, also ich glaube, der Wolfgang hat sich gerade einfach als non IRC User exposed und naja gut, also wie schnell verliert man Credibility in einem Softwareentwicklungspostcast. Aber Stefan, du sagtest gerade, die melden sich dann in einem IRC Channel und dann ist da jemand, der gibt den Bots. Das sind ja dann gekaperte Devices, wenn ich das jetzt richtig verstanden habe, dann Befehle. Ich bin auch über den Begriff Command and Control Server gestolpert."
+    },
+    {
+      "end": 2866090,
+      "speaker": "B",
+      "start": 2865530,
+      "text": "Genau."
+    },
+    {
+      "end": 2874130,
+      "speaker": "A",
+      "start": 2866490,
+      "text": "Jetzt ist es aber so, wenn ich als BKA Zugriff zum ISC Channel bekomme, bin ich dann nicht der Owner."
+    },
+    {
+      "end": 2946140,
+      "speaker": "B",
+      "start": 2874130,
+      "text": "Ach so, ja, da ist in der Regel dann natürlich schon hinterlegt, dass man irgendwie ein geheimes Passwort braucht oder sich gegenüber den Bots authentifizieren muss, damit die aktiv werden. Ja, theoretisch. Also wenn der Server beschlagnahmt wird, dann könnte man da schon was machen. Also auch wenn man den Quellcode des Bots analysiert und so weiter und dann die Kontrolle über dieses Botnet, also über den ERC Server übernimmt, dann könnte man das schon beeinflussen und dann könnte man auch sagen, manchmal gibt es eine Self Destruct Funktion, zack, bitte löscht euch alle, macht das. Machen manche Behörden auch tatsächlich ist schon vorgekommen. Und lustige ich habe selber mal in meiner Freizeit einen Bot untersucht und habe tatsächlich geschafft, den Bot Owner in einem IRC Channel zu treffen und mich mit dem zu unterhalten. Also wird auch heutzutage immer noch benutzt und ist eine relativ einfache und gern genutzte Variante. Es gibt viele fertige Bots dafür. Das ist so ein Script Kiddy Level, auf dem das passiert. Ich habe ihn gefragt, was so das Ziel von dem Botnet ist quasi, also sucht er irgendwie Informationen, was macht er damit? Und dann haben wir uns so, also haben wir uns ganz nett unterhalten. Der war natürlich sehr misstrauisch, wer kommt da hier in meinen Channel rein und."
+    },
+    {
+      "end": 2950060,
+      "speaker": "A",
+      "start": 2946140,
+      "text": "Du hattest ein Device, was gekapert wurde von ihm oder woher hattest du den Bot Code?"
+    },
+    {
+      "end": 2958340,
+      "speaker": "B",
+      "start": 2950060,
+      "text": "Ja, ich hatte über Bekanntschaft sozusagen einen IRC Bot, der auf dem System aufgefunden wurde und hab dann da quasi Incident Management gemacht."
+    },
+    {
+      "end": 2973590,
+      "speaker": "A",
+      "start": 2958340,
+      "text": "Jetzt ist es aber so, jetzt haben wir gerade den Command Control Server in dem IRC Channel besprochen und jetzt denke ich mir als Softwareentwickler, wir haben das Jahr zwei tausend fünf und zwanzig, verteilte Systeme sind überall, nehmen wir mal eine Firma, die kein Kubernetes laufen hat gefühlt."
+    },
+    {
+      "end": 2974750,
+      "speaker": "C",
+      "start": 2973830,
+      "text": "Da kenne ich viele."
+    },
+    {
+      "end": 2998530,
+      "speaker": "A",
+      "start": 2974750,
+      "text": "Ja, ich sage gefühlt. Deswegen diese Topologien in Bezug auf verteilte Systeme, RAV Protokoll und so weiter und so fort, die kann man auch super einfach dann auch in so ein Botnet einbauen, oder? Also ich meine, Botnet braucht ja keine zentrale Anlaufstelle. Botnet kann ja auch ein Peer to Peer Netzwerk sein oder ähnliches. Gibt es solche Strategien auch oder sind das alles nur Script Kiddies, die von Tuten und Blasen wenig Ahnung haben?"
+    },
+    {
+      "end": 3041920,
+      "speaker": "B",
+      "start": 2998530,
+      "text": "Also Gros der einfachen Angriffe versuchen schon sowas. Das stimmt. Es gibt aber auch deutlich ausgefeiltere Botnetze. Es gab zum Beispiel das Storm Botnet, was sehr groß war. Ich glaube über eine Million Bots, die da tatsächlich drin waren und die haben Peer to Peer auch benutzt und die haben auch aktiv eine Analyse dieses Netzwerks erschwert, wenn man versucht hat, da irgendwie beizutreten und das so ein bisschen auszuforschen. Da wurde man automatisiert durch den ddos Angriff auch attackiert sozusagen. Also die hatten da verschiedene sozusagen IDS Mechanismen, könnte man fast schon sagen. Das war schon technisch sehr ausgeklügelt, hatte aber auch seine Schwächen irgendwo und wurde letztendlich über ein paar Probleme im Protokoll dann auch in Teilen zerschlagen."
+    },
+    {
+      "end": 3045760,
+      "speaker": "A",
+      "start": 3042240,
+      "text": "Ich hasse mich selbst schon dafür, aber ich bringe das Thema jetzt einfach auf KI und AI."
+    },
+    {
+      "end": 3050530,
+      "speaker": "C",
+      "start": 3045920,
+      "text": "Ich mache jetzt eine Strichliste für KI, wann du KI ansprichst in der Episode."
+    },
+    {
+      "end": 3068920,
+      "speaker": "A",
+      "start": 3050840,
+      "text": "Bist immer du, na das stimmt nicht, lässt immer was du, aber so nach dem Motto, keine Ahnung, jetzt besonders mit dem ganzen Agentic Workflows und so weiter und so fort. Ich gebe dem ja jetzt inzwischen eine Aufgabe, dann sucht er sich den richtigen Agenten raus und der Agent legt los und allem drum und dran. Da werden ja etliche Tools getriggert und Co. Also kann das nicht einfach dafür auch missbraucht werden."
+    },
+    {
+      "end": 3084970,
+      "speaker": "B",
+      "start": 3069240,
+      "text": "Da bin ich mir nicht so sicher, wie dann die Schnittstellen da entsprechend wären und funktionieren würden oder ob nicht die öffentlich verfügbare AI dann doch was dazu sagt, wenn du sagst, sagst, bitte besorge mir fünfzig gestohlene Kreditkarten und bestell anonym irgendwie Server bei AWS."
+    },
+    {
+      "end": 3102410,
+      "speaker": "A",
+      "start": 3085930,
+      "text": "So meinte ich das nicht. Ich meinte eigentlich so, ich gebe jetzt, ich sage simplifiziert jetzt einfach mal chatgpt oder meinem lokalen Modell, mach eine Internet Recherche und dann fadet der ja auch Requests raus. Ist das auch nicht eine Art Amplifizierung."
+    },
+    {
+      "end": 3114820,
+      "speaker": "B",
+      "start": 3102490,
+      "text": "Ja, ich glaube so ein chatgpt würde dann wahrscheinlich schon irgendwo auch mal zwischen cachen, wenn jetzt alle Leute gleichzeitig auf den Knopf drücken. Okay, aber ich denke schon, dass da irgendwo die Sachen cashen würde."
+    },
+    {
+      "end": 3133220,
+      "speaker": "C",
+      "start": 3114980,
+      "text": "So schnell wie es funktioniert, würde ich mal auch sagen, dass ganz viel gecashed wird. Also teilweise hast du wirklich superschnell Antworten und du siehst aber, dass er auf gewisse Quellen geht oder gewisse Webseiten aufruft. Aber man hört natürlich schon von vielen Websitebetreibern, dass der Traffic extrem nach oben gegangen ist."
+    },
+    {
+      "end": 3144690,
+      "speaker": "B",
+      "start": 3134580,
+      "text": "Das stimmt. Ich meine mich auch zu erinnern, dass es in der Anfangszeit eine Attacke gab, die sowas ausgegangen benutzt hat. Eine gewisse Layer sieben Amplification wäre das dann ja, irgendwas klingelt da."
+    },
+    {
+      "end": 3169110,
+      "speaker": "A",
+      "start": 3144850,
+      "text": "Aber gibt es denn da in dem ganzen Sektor, in dem ganzen ddos Angriffssektor irgendwelche Buzzwords mit AI und so weiter? Weil ich mein, wenn die schon so sophisticated Engineering Praktiken wie verteilte Systeme und Co. Anwenden, dann würde ich mir denken, machen die auch vor den normalen Trends ja keinen Halt, weil das scheinen ja dann schon echt fähige Menschen zu sein, diese Software und diese Bot Sander entwickeln."
+    },
+    {
+      "end": 3221570,
+      "speaker": "B",
+      "start": 3169110,
+      "text": "Also was wahrscheinlich ein guter Angriff wäre, vielleicht gegen eine Firma, die auch selber AI Agent oder Bot hat, wäre einfach mit der eigenen AI dauernd sinnlose Fragen zu stellen. Also bitte beschäftige doch den Agenten von der anderen Seite, weil die müssen für Tokens Geld bezahlen. Das kann dann unter Umständen ja auch teuer werden, wenn meine eigenen Bots, die Bots von der Webseite die gesamte Zeit mit Nonsens vollquatschen. Also wirklich längliche Diskussionen führen ohne Sinn und verstanden. Oder wenn man einfach sehr gut ausgearbeitete Support Cases füllen würde, dann verstopft man, macht man distributed in order of service gegen das Support Personal letztendlich und erzeugt auch irre hohe Kosten, wenn du da gut gemachte Kundenanfragen reinpackst. Da hat aber der Support erstmal ganz schön viel zu tun. Also vielleicht ist da auch wieder AI, aber das kann ganz schön teuer werden."
+    },
+    {
+      "end": 3261930,
+      "speaker": "C",
+      "start": 3221570,
+      "text": "Der Andi und ich waren ja gerade auf der frostcon und da gab es einen Vortrag von Daniel Stemberg, der ja Curl entwickelt und der hat genau das erzählt, dass sie in ihrem hackerone Account, wo es darum geht, Bugs zu finden, also ein Bug Bounty, dass die ganz viel gute, aber auch schlechte KI generierte Cases reinbekommen. Und man muss sich die natürlich ansehen. Also man kann manche natürlich schnell ausschließen, aber ganz viele muss man wirklich reingehen, muss Sachen ausprobieren, ist es wirklich ein Buch? Und wenn du dann da gefloodet wirst, dann hast du natürlich extreme Probleme mit deiner Zeit, weil du einfach nur überprüfst, ist das ein echter Case oder ist es irgendein KI generierter Case?"
+    },
+    {
+      "end": 3280770,
+      "speaker": "B",
+      "start": 3261930,
+      "text": "Genau, und der sieht auch so überzeugend aus. Ich weiß nicht, wenn man jetzt sogar eine KI hätte in seinem Support, wenn man der sagen würde, überprüf mal diesen Case, da würde der wahrscheinlich als stochastischer Papagei sozusagen auch sagen, oh ja, sieht so aus, als wäre es was Wahrscheinliches, prüf das mal per Hand."
+    },
+    {
+      "end": 3301050,
+      "speaker": "A",
+      "start": 3280850,
+      "text": "Da zieht die Attacke jetzt aber natürlich nicht auf eine Resource Exhaustion ab, sondern eher auf, ich sag mal, eine Verschwendung. Jetzt sehen wir mal die AI Thematik, da flattest du die ganze ja mit Input Tokens, Input und Output Tokens, da wird es dann teuer, hast du gerade gesagt. Bei dem AI Slop Talk, den der Wolfgang gerade erwähnt hat, war es dann natürlich dann in irgendeiner Art und Weise."
+    },
+    {
+      "end": 3309920,
+      "speaker": "C",
+      "start": 3301050,
+      "text": "Engineering Power vom Daniel Schimmer. Ressourcen, die du verschwendest oder die limitiert sind, ist ja egal, ob es jetzt eine technische Ressource ist oder Zeit als Ressource."
+    },
+    {
+      "end": 3325600,
+      "speaker": "A",
+      "start": 3310240,
+      "text": "Ja, die Hörerinnen und Hörer hören das jetzt natürlich nicht, weil der Wolfgang das mit hoher Wahrscheinlichkeit rausgeschnitten hat, aber er hat mich gerade auf der Metaebene gefragt, ob wir langsam mal zur Abwehr kommen sollen. Und eigentlich ist die Antwort nein, Wolfgang, ich möchte nicht über die Abwehr sprechen, weil ich die Angriffe super kreativ und."
+    },
+    {
+      "end": 3331840,
+      "speaker": "C",
+      "start": 3325600,
+      "text": "Spannend finde, Aber es ist ja immer leicht, einfach Angriffe zu beschreiben. Aber es ist ja viel, viel schwerer, dann was dagegen zu tun."
+    },
+    {
+      "end": 3333670,
+      "speaker": "A",
+      "start": 3332000,
+      "text": "Vielleicht will ich Angriff habe ich, kannst."
+    },
+    {
+      "end": 3334390,
+      "speaker": "C",
+      "start": 3333670,
+      "text": "Du ja immer noch."
+    },
+    {
+      "end": 3353990,
+      "speaker": "A",
+      "start": 3334470,
+      "text": "Aber Stefan, jetzt ist es natürlich so, du hast gerade schon von Eleganz bei Angriffen gesprochen, was ich schon unglaublich gut finde. Jetzt haben wir gerade über ganz viele verschiedene Angriffe auf verschiedenen Layern gesprochen. Wie zur Hölle kann ich denn so einen Angriff erkennen? Kannst du mal vielleicht ein Beispiel nennen aus irgendeiner Attacke, die wir jetzt genannt haben, wie man sowas erkennen kann?"
+    },
+    {
+      "end": 3417120,
+      "speaker": "B",
+      "start": 3354070,
+      "text": "Sagen wir mal so ein Low and Slow Angriff. Jemand verbindet sich dahin und überträgt nie mach die Sessions auf und dann kommt halt einfach kein Request. Dann sehe ich in meinen Logfiles theoretisch, die prüfe ich ja nicht per Hand, aber in meinen Logfiles hätte ich dann überall invalide Anfrage. Es wurde halt nichts übertragen. Das nehme ich natürlich in irgendein Auswertungssystem, in mein SIEM, was auch immer ich da als Produkt habe und erstelle mir halt vielleicht einen Graphen dazu Oder ich habe da auch Schwellenwerte hinterlegt und hey, wenn ich jetzt eine Abweichung von der Norm habe um ein tausend Prozent, dann sollte ich mal vielleicht jemanden alerten. Könnte ja nicht nur ein Angriff sein, vielleicht ist auch meine Seite kaputt. Aber man guckt halt so nach statistischen Auffälligkeiten, nach komischen Glitches sozusagen in meinem Webseiten Traffic. Ich habe so meine Baseline, so sieht es aus. Ich habe das manchmal, ich gucke auf den Graphen drauf und dann sage ich sofort, da ist der ddos Angriff, weil ich habe das halt einfach, Man sieht das irgendwann auch einfach. Und dieses, was man sieht, das kann man in der Regel auch automatisieren."
+    },
+    {
+      "end": 3433160,
+      "speaker": "C",
+      "start": 3417200,
+      "text": "Wobei du natürlich jetzt voraussetzt, dass man die Metriken überhaupt mal aufzeichnet, weil wenn es jetzt, keine Ahnung, Apache oder so ist, dann habe ich vielleicht meine Traffic Metriken, aber dass da irgendwo in den Logs mal hin und wieder irgendwelche Warnings maximale Connection erreicht oder so steht, ist ja nochmal was anderes."
+    },
+    {
+      "end": 3452680,
+      "speaker": "B",
+      "start": 3433160,
+      "text": "Genau, man muss schon seine Anwendung oder seinen gesamten Tech Stack im Grunde sehr gut kennen. Man muss den auch in Ruhe getestet haben, denn was du nicht getestet hast, dem kannst du auch nicht wirklich vertrauen. Das wird an allen möglichen Stellen implodieren, sobald da der erste ernsthafte Angriff kommt. Sonst, also Testing, Testing, Testing wäre meine Empfehlung."
+    },
+    {
+      "end": 3468860,
+      "speaker": "A",
+      "start": 3452760,
+      "text": "Wolfgang, ich finde es eine Frechheit langsam, was du unseren Hörern anmaßt. Die Observability Folge mit Severin Neumann haben wir im Dezember drei und zwanzig deployed. Das bedeutet, wir sind jetzt im siebten Quartal danach. Jeder hat schon Observability von unseren Hörerinnen."
+    },
+    {
+      "end": 3471140,
+      "speaker": "C",
+      "start": 3468860,
+      "text": "Und Hörern, Aber du kannst ja das Falsche observen."
+    },
+    {
+      "end": 3501890,
+      "speaker": "A",
+      "start": 3471140,
+      "text": "Ja, aber sie haben jetzt Logs und die haben jetzt bestimmt auch schon mal ein bisschen Telemetrie Daten. So, und jetzt haben sie Grafana und jetzt stelle ich mir gerade die Frage, okay, du hast jetzt gerade die Slow and, wie heißt die Low and Slow, Low and Slow Attacke beschrieben, da frage ich mich gerade, okay, ich habe jetzt ein Dashboard, das Dashboard heißt Low and Slow Attacke und um einen Synflood zu entdecken, brauche ich ja andere Metriken bzw. Andere Queries. Auf den Metriken heißt das jetzt eigentlich für jede mögliche Attacke baue ich mir vorher ein Dashboard."
+    },
+    {
+      "end": 3562750,
+      "speaker": "B",
+      "start": 3502690,
+      "text": "Du versuchst halt Kategorien von Attacken zu gruppieren. Irgendwie, wenn du jetzt zum Beispiel sagst, ich habe halt sehr viele kleine Pakete, wäre irgendwie eine interessante Metrik, weil das ist nicht normal. Du hast bei deiner Webseite so ein übliches, ein bisschen Verbindungsaufbau, paar große Pakete, um deine Bilder rüber zu schieben und natürlich ein paar kleinere Pakete, weil die ja nicht immer genau die maximale Paketgröße ausfüllen. Also du kannst da schon ziemlich genau Statistiken zu haben und auf Anomalien alarmieren, aber idealerweise sollte man auch nicht alarmieren und erst dann was machen. Idealerweise hast du eine Maßnahme getroffen, die es nicht erfordert, dass du aktiv wirst. Also beispielsweise der Synflood passiert, du weißt aber, der wird abgewehrt bis zu, ich sag mal, zwei hundert Gigabit oder sowas und dann alarmierst du vielleicht bei ein hundert fünf und siebzig mal. Guck da mal drauf, ob das noch größer wird. Aber wenn du dann nur zwanzig Gigabit reinkriegst, da unternimmst du nichts, da siehst du ein Spike im Graphen und denkst, super, hat funktioniert."
+    },
+    {
+      "end": 3585940,
+      "speaker": "C",
+      "start": 3563230,
+      "text": "Aber wer monitort denn jetzt die Paketgröße? Also ich habe das noch nie irgendwo gemacht, verlasse mich dann da auf irgendwie meinen Provider Monitor, der sowas üblicherweise, um auch Angriffe zu erkennen oder müsst ihr das wirklich selber machen, weil ich glaube, dass die wenigsten, die einen Server haben, irgendwie Paketgrößen zum Beispiel monitoren oder überhaupt eine Ahnung haben, was übliche Paketgrößen sind."
+    },
+    {
+      "end": 3623750,
+      "speaker": "B",
+      "start": 3586180,
+      "text": "Das ist das übliche Make or Buy Thema. Wir haben uns irgendwann entschieden bzw. Unsere Kunden haben für uns entschieden, sie würden gerne gewisse ddos Abwehrleistungen bei uns einkaufen, Also haben wir dann angefangen, das zu bauen. Wenn man heute vom Scratch da dran gehen würde, viel zu teuer. Wenn man es kann, nimmt man irgendeinen Anbieter, so das typische, jetzt muss ich natürlich auch Cloudflare sagen, ist ein guter Anbieter dafür, wenn man da nicht Behörden hat, die sagen, amerikanische Anbieter geht nicht, wäre das auch wahrscheinlich meine Empfehlung, das zu nutzen erstmal. Da kann man mit einem kleinen Plan starten, das funktioniert auch und man muss sich nicht mit ein tausend Dingen beschäftigen."
+    },
+    {
+      "end": 3629840,
+      "speaker": "C",
+      "start": 3623990,
+      "text": "Und Andy arbeitet auch in einem anderen Team, also der ist nicht verantwortlich für ddos. Ihr könnt diese Services, ich habe davon."
+    },
+    {
+      "end": 3682060,
+      "speaker": "A",
+      "start": 3629840,
+      "text": "Muss ich zugeben, gar keine Ahnung. Es sind irgendwelche unglaublich smarten Leute, die haben weit mehr auf dem Kasten als ich. Aber das, was du gesagt hast, wer monitort eigentlich die Paketgröße? Du hast schon recht, wenn du da jetzt deine Führerscheinplattform auf irgendeiner Hetzner Kiste machst, dann monetierst, monitorst du deine Paketgröße natürlich nicht. Aber wenn du jetzt deine Netzwerkinfrastruktur selbst unter deiner Kontrolle hast, dann würde ich mal sagen, jeder moderne Switch oder Router oder irgendwas gibt dir diese Metrik mit raus und dann wirst du auch ein Dashboard da haben, weil du natürlich den Traffic Inflow, über welche nix reinkommt und wo was rausgeht und so weiter. Und da wirst du auch Perzentile haben über die verschiedenen Paketgrößen. Also ich glaube einfach nur, dass das, ich sag mal, in Leuten, die eigene Kolos betreiben, Kolos sind, ich sage mal, Räume oder Subräume in Datacentern, weil die seltensten Firmen große Datacenter betreiben, sondern sie einfach irgendwo einmieten, dass die das dann schon maintainen und auch monitoren."
+    },
+    {
+      "end": 3711520,
+      "speaker": "B",
+      "start": 3682060,
+      "text": "Genau, also so ein Anbieter guckt, aber es gibt auch viele Anbieter, die machen dann einen harten Cut irgendwo, die sagen, du hast aber Pakete in einer Sekunde auf deiner Gigabit Leitung. Rechnerisch gehen da natürlich noch mehr, aber dann sagen, das sieht irgendwie komisch und verdächtig aus, schnipp, wir schalten dich mal ab, weil wir dem Netzwerk insgesamt nicht schaden wollen. Also man muss da auch in der Regel bei so einem, in Anführungsstrichen, Billighoster dann noch was dazu kaufen. Die haben dann einen ddos Schutz als extra Leistung."
+    },
+    {
+      "end": 3717330,
+      "speaker": "C",
+      "start": 3711520,
+      "text": "Aber was macht man jetzt? Jetzt bekommst du den Alert, hast einen riesen Angriff, bist unter einer ddos Attacke. Was machst du dann?"
+    },
+    {
+      "end": 3718770,
+      "speaker": "A",
+      "start": 3717330,
+      "text": "Erstmal Bier zur Seite stellen."
+    },
+    {
+      "end": 3787050,
+      "speaker": "B",
+      "start": 3721490,
+      "text": "Das kommt sehr auf die ddos Attacke an. Und wo genau ich das gerade betreibe, wenn ich jetzt Herr meines eigenen Netzwerkes bin und ich sag mal, wirklich zweimal ein hundert Gigabit habe oder sogar noch mehr Bandbreite, dann kann ich ja schon verdammt viel ausfiltern, ohne aktiv zu werden. Die Frage ist halt immer, was genau trifft es, wenn es jetzt nehmen wir als Beispiel, meine Anwendung ist betroffen, ich habe noch Traffic frei, sagen wir mal, der Angriff macht jetzt zwanzig Gigabit, Ach, da habe ich ja nach oben noch dicke Platz. Dann muss ich halt gucken, wo hakt es denn in meiner Anwendung. Habe ich vielleicht einen Kunden, der einfach zu wenig Kapazität gekauft hat? Oder ist das ein Kunde, der hat einen Horizontal Pod Autoscaler und da fährt einfach alles hoch bis zum gewissen Limit und ist dann vielleicht meine gesamte Plattform überlastet? Der eine Kunde frisst alle Ressourcen meiner Plattform auf, auch nicht so gut. Dann müsste man gucken, was man unternehmen möchte. Möchte ich jetzt meine restlichen Kunden schützen? Wie kann ich diesen einen Kunden online halten? Woran genau liegt es jetzt? Vielleicht wird eine Suchfunktion permanent ausgeführt, die zu viel Ressourcen verursacht oder zu viel Ressourcen auffrisst? Das kann ganz unterschiedlich sein, was dann letztendlich ist."
+    },
+    {
+      "end": 3807650,
+      "speaker": "A",
+      "start": 3787210,
+      "text": "Aber das klingt ja schon irgendwie auch ein bisschen nach einer Fehlkonfiguration. Jetzt mal angenommen, du hast jetzt eine Plattform, da sind fünf Kunden drauf und du hast jetzt gerade so einen Autoscaler genannt. Dann wurde der Autoscaler für den Kunden ja falsch konfiguriert, weil dann wurde ja unter anderem gesagt, okay, der kann die ganze Plattform einnehmen, was dann wiederum in irgendeiner Art und Weise so ein noisy Neighbor Problem auf der Cloud sein könnte, oder?"
+    },
+    {
+      "end": 3814210,
+      "speaker": "B",
+      "start": 3807650,
+      "text": "Genau, genau. Da muss man natürlich aufpassen. Es gibt halt gewisse Clouds, die overcommitten. Natürlich ist ja Businessmodel."
+    },
+    {
+      "end": 3845490,
+      "speaker": "C",
+      "start": 3814290,
+      "text": "Jetzt bin ich ja so der klassische Entwickler, brauchst jetzt gar nichts sagen, Andi oder Architekturmensch im weitesten Sinne. Jetzt habe ich gehört, okay, das machen die Leute, die Netzwerk betreiben und Datacenter und so weiter. Das, das heißt, ich kann mich ja eigentlich davon wegdrehen und es machen andere dieses Problem, Ich brauche mich um nichts kümmern. Stimmt das? Kann ich mich da rausnehmen auf der Entwicklerseite? Oder gibt es Sachen, die ich als Entwickler auch beachten muss oder irgendwie positiv auch, also hoffentlich nicht negativ, sondern eben positiv beeinflussen."
+    },
+    {
+      "end": 3942680,
+      "speaker": "B",
+      "start": 3845490,
+      "text": "Kann ja leider mit dem Schlechten rechnen, was denn da kommen kann. Also wenn man Suchfunktionen baut, immer damit rechnen, dass da jede Menge Schrott gegen geworfen wird. Nicht nur ddos Attacken, sondern auch alles Mögliche an Input Validierungstests durch Angreifer, die das einfach ausnutzen wollen. Im Grunde alles so bauen, dass es nach extern irgendwie ein gewisses Rate Limit auch hat. Beispiel, Es gibt so Fälle, weil eine Firma jemanden verärgert hat, gibt es dann da plötzlich Fans, die auf ein Kontaktformular losgehen und das Kontaktformular ausfüllen. Die schreiben dann da was rein. Da habe ich meine Distributed Denial of Service Attacke, weil die da alle ein PDF anhängen oder irgendein Bild von einem Stinkefinger. Da habe ich nachher auch ein Problem letztendlich. Mit sowas muss ich halt irgendwie umgehen können. Also ich sag mal, ich habe plötzlich ungewöhnlich viele Requests auf mein Kontaktformular. Dann habe ich idealerweise in der Applikation irgendeinen Schalter drin, der Hey, ich habe jetzt in einer Minute ein tausend E Mails bekommen über das Formular, jetzt pausiere ich das mal und mache ein Exponential Backoff und schalte es immer mal wieder kurz online. Oh, es kommt immer noch so viel Schrott, dann warte ich mal länger. Oder ich baue kompliziertere Verifikationen der User ein. Vielleicht mache ich einfach Captcha, aktiviere ich, wenn da viel kommt. Oder ich aktiviere, weiß ich nicht, so was wie Anubis, was dann Prü Ist hier gerade ein AI Crawler, der irgendwas komisches macht auf meiner Webseite. Also so eine so ein wirklich Features reduzieren der Webseite würde ich als Entwickler favorisieren, einfach um meinen Backend Load gering zu halten."
+    },
+    {
+      "end": 3968570,
+      "speaker": "A",
+      "start": 3942680,
+      "text": "Du wirst jetzt lachen, Ich habe Karten für die Toten Hosen kaufen wollen. Wer schon mal sowas mitbekommen hat, das ist wirklich ein Run auf die Karten, ähnlich wie Rammstein, Parucaville und Tomorrowland und wie sie alle heißen. Und in dem Shop werden zwei Stunden vorher kannst du nicht mehr deine Bestellübersicht über vorherige Bestellungen abrufen. Dieses Feature schalten die aus, weil die schalten alles aus, was nicht zum Kaufen eines Tickets notwendig ist."
+    },
+    {
+      "end": 3988190,
+      "speaker": "B",
+      "start": 3968810,
+      "text": "Da kann man natürlich gut mit Feature Flex arbeiten, idealerweise halt dynamisch. Du kannst natürlich auch gucken, wie ist die Load in meiner Plattform, Wenn die unter einem gewissen Level ist, ermögliche ich das noch? Warum soll ich es dann nicht erlauben, könnte ich auch so argumentieren. Solange ich Ressourcen hab, liefere ich aus. Wenn sie knapper werden, dann stoppe ich damit halt eben ein."
+    },
+    {
+      "end": 4028370,
+      "speaker": "A",
+      "start": 3988740,
+      "text": "Jetzt ist es ja so, wenn du zur Primetime bei prosieben TV Werbung schaltest, dann kann da schon mal ganz schön was auf deiner Webseite los sein, weil noch echt viele Leute TV Werbung bei prosieben gucken oder vielleicht auch zukünftig bei Netflix oder ähnliches. Auf jeden Fall kommen dann auch ganz viele Anfragen von unterschiedlichen Source ips. Du weißt schon, worauf ich hinaus möchte. Wie unterscheide ich denn eine Distributed Denail of Service Attacke, wo ganz viel Traffic reinkommt von ich habe gerade Werbung zur Primetime geschaltet, wo ich einfach nur ein sehr gutes Angebot habe und ganz viel reale User kommen drauf oder schaltest du."
+    },
+    {
+      "end": 4032850,
+      "speaker": "C",
+      "start": 4028370,
+      "text": "Dann wirklich das im Vorhinein ab, die ddos Erkennung in so einem Fall, ne."
+    },
+    {
+      "end": 4111260,
+      "speaker": "B",
+      "start": 4033010,
+      "text": "Ausschalten nicht, weil es könnte sich auch irgendjemand durch den Werbespot geärgert fühlen oder da ist was Sexistisches drin. Vielleicht hat die Seite es dann auch verdient, mal abgeschossen zu werden, was beiseite, aber abschalten auf keinen Fall, weil ich habe da irgendwie einen Online Shop, Es kann ja auch ein Konkurrent da sein, der mir schaden will. In so einem Fall würde man irgendwas idealerweise auf Layer sieben in der Applikation vielleicht oder in einem vorgelagerten System von Adidas Abwehr oder sonst wie eingebaut haben, um echte User zu erkennen. Es gibt ja so verschiedene Techniken dafür. So ein Captcha ist das, was jeder natürlich kennt. Google arbeitet auch oder auch Cloudflare an Turnstyle heißt das glaube ich, dass man halt nicht mehr so wirklich Buchstaben eintippen muss, weil das nicht barrierefrei ist. Aber irgend so eine Mensch oder Bot Erkennung ist da auf jeden Fall dann immer sinnvoll. Und natürlich sämtliche Teams vorher informieren. Man kann das immer mal wieder erleben. Wenn sowas halt nicht passiert, dann ist plötzlich ein großer Traffic Spike da. Aufgeregte Leute untersuchen sehr hektisch irgendwie Dashboards und gucken, was da los, rufen einen Projektleiter an und der hat dann einfach nur vergessen Bescheid zu sagen. Sowas ist natürlich ärgerlich. Klar, das Team vorher informieren. Wenn man genau weiß, welche Minute der Werbespot hat, will man ja auch seine Ressourcen wahrscheinlich hochfahren für die Zeit."
+    },
+    {
+      "end": 4166760,
+      "speaker": "A",
+      "start": 4111260,
+      "text": "Ihr Werbespot war jetzt einfach nur das plakativste Beispiel. Während du gesprochen hast, sind mir auch noch zwei andere Beispiele eingefallen, zum Beispiel die Webseite vom Vatikan, wenn es wieder neue Papst gewählt wird. Also das ist ja ein Weltereignis, muss man ja sagen, oder was auch ein Weltereignis ist, ein neues Update von Fortnite wird ausgespielt. Also ich mein, besonders wenn man Updates durch die Leitung schiebt von so Spielen, da gehen ja schon mal ein paar Terabyte Terabit durch die Leitung. Und weil ich schon von Terabyte Terabit durch die Leitung spreche, frage ich mich gerade, inwieweit spielt denn Infrastrukturdesign oder Infrastrukturarchitektur eine Rolle? Und was kann Leute, DevOps, Cloud Engineers denn denn machen, um zum Beispiel die Amazon Rechnung gering zu halten? Ich hoffe, ihr habt alle irgendwie Budget Caps drin oder ähnliches oder Budgetalarms. Das ist so das Mindeste, was man machen kann. Aber zurück zur Infrastruktur. Was kann man auf Infrastrukturseite denn smart machen vielleicht?"
+    },
+    {
+      "end": 4254220,
+      "speaker": "B",
+      "start": 4166760,
+      "text": "Ich würde immer gucken, dass ich einen Anbieter davor habe, wo mich der Traffic nicht exorbitant viel Geld kostet. Es gibt einige Anbieter, da ist der Traffic einfach inklusive bei der ddos Abwehr. Es gibt andere Anbieter, ich glaube AW, wo man dann, selbst wenn man deren ddos Schutz einkauft, trotzdem auch noch dafür bezahlt und das kann dann halt sehr schnell sehr teuer werden. Ich persönlich kenne Fälle, also nicht bei uns in der Firma, weil wir machen ja eigentlich nichts mit Cloud, sondern nur ganz viel On Prem, aber woanders, wo dann halt sechsstellige Beträge aufschlagen für Traffic Kosten für eine relativ kurze Attacke, also dafür sorgen, dass der Traffic oder dass die Attacke an sich möglich keine Kosten hat, die dann entstehen. Anderes DNS, einfach dadurch, dass super viele Bots auf die Webseite gehen und immer wieder eine DNS Anfrage stellen und das können dann ja innerhalb von Minuten mehrere zehn Millionen, mehrere Dutzend Millionen sein. Dadurch können halt auch bei so einem Anycast Provider total krasse Kosten entstehen. Das ist ein Punkt, wo man einfach darauf achten muss, Finanzielle Absicherung deiner Dienstleistung, die du hast. Oder wenn du einen Kunden hast, der hat ddos Schutz beauftragt, irgendwo sicherstellen, dass man eine gewisse Limitierung drin hat. Oder wenn der Angriff jetzt einen Monat am Stück läuft, permanent auf vollen Touren, dass man dann noch mal über den Vertrag sprechen kann zum Beispiel. Also beide Seiten gucken, dass man vorne keine Kosten hat, aber auch gucken, dass man vielleicht, wenn welche entstehen, die nach hinten zum betroffenen Kunden weitergeben kann."
+    },
+    {
+      "end": 4296070,
+      "speaker": "A",
+      "start": 4254300,
+      "text": "Du hast gerade auch Services erwähnt, Cloudflare, Akamai und allem drum und dran. Und dann hast du auch gesagt, On Premise, wie macht ihr das denn, Weil habt ihr die komplette Sache selbst entwickelt oder gibt es auch Services, die man da einkaufen kann und on Premise hosten kann? Weil so eine ddos Protection basiert ja auch auf ganz vielen Daten, um die ganze Sache zu erkennen. Vielleicht irgendwelche, vielleicht gibt es auch eine Botnet Fingerprint, so wie so ein Browser Fingerprint in JavaScript oder ähnliches. Also Punkt ist, das sind ja eh nicht so wie Antiviren Software, die dann immer neue Updates haben und On Premise müsste man die gegebenenfalls einspielen und so weiter. Wie macht ihr das denn, wenn ihr jetzt nicht auf irgendwelche Cloud oder amerikanischen Provider zurückgreift?"
+    },
+    {
+      "end": 4451690,
+      "speaker": "B",
+      "start": 4296070,
+      "text": "Also bei uns war es so, die Story beginnt mit einem Fail, könnte man sagen. Zwei tausend fünfzehn waren wir selber Ziel von Cyber Berkut, also ein russischer Akteur und unsere Kunden, die angegriffen wurden, die wollten aber keinen Dietrichschutz beauftragen. Also es war halt einfach nicht in der Leistungsbeschreibung. Wir haben über Ausschreibungen Dinge gewonnen, Dann hat man vielleicht mal nachgefragt, wollt ihr das beauftragen? Nö, muss ja nicht sein, es gibt ja auch keine Ausfälle. Dann wird erst mal nichts gemacht. Dann kommt es zum riesengroßen Ausfall. Die Seite war dann auch einen halben Tag offline quasi, also Bundestag, DE konkret war betroffen zum Beispiel. Und dann überlegt man sich halt, was möchte man machen. Man kann dann natürlich mal kurzzeitig Cloudflare vorschalten, man kann natürlich oder Akamai oder sonst wen. Da entstehen halt dann aber auch gewisse Kosten. Und dieses Datensouveränitätsthema ist hier natürlich ein sehr großes. Das heißt, man will da niemanden vorhaben, das heißt, man muss erstmal einen größeren Invest tätigen. Wir hatten eh schon ein eigenes AS, die Planung war sowieso, dass wir selber BGP machen und dann geht man halt hin und muss gucken, wie designt man das. Zwei tausend fünfzehn als das der Fall war, waren die Attacken auch noch anders, Die waren auch in Teilen noch gar nicht so groß, sodass wir da noch einen seichteren Einstieg hatten in diese ganze Welt. Heutzutage glaube ich nicht, dass das so einfach noch machbar wäre, ohne das ganze Know how, was man mit der Zeit gesammelt hat. Also wirklich ein Prozess der kontinuierlichen Verbesserung, wenn man wirklich einen Ausfall hat durch eine Attacke, Da muss man halt gucken, kann ich das irgendwie kategorisch wegfiltern? Wofür brauche ich UDP Traffic auf meinem Webserver? Das sind dann irgendwann solche Learnings, die man da natürlich dann auch hat. Und das gesammelte Know how ergibt dann halt, also zu den ganzen verschiedenen Bereichen, zu denen man was gelernt hat, ergibt dann halt so ein ganzes verschiedene Systeme, die miteinander interagieren, miteinander sprechen Und auf allen möglichen verschiedenen Layern muss man halt auch irgendwas tun, um die Angriffe automatisiert abzuwehren. Also ganz Arbeitsintensives fällt tatsächlich auch. Heutzutage wird man wahrscheinlich gucken, dass man mit seinem Abspiel möglichst viel zusammenarbeitet, wenn man, weiß ich nicht, es gibt manche Anbieter, die haben so ein Scrubbing Center selber schon, die leiten den Traffic da transparent hin um und filtern dann da sozusagen auf ihren Servern. Die können vielleicht auch gewisse Layer sieben Abwehrgeschichten machen. Das ist halt dann wieder so eine vertragliche Sache. Ist das ein amerikanischer Anbieter? Gilt da der Cloud Act? Dürften die oder müssten die, wenn sie gezwungen werden, in den Traffic reingucken? Da ist die Antwort bei jedem amerikanischen Anbieter ja. Und wenn man die halt nicht möchte."
+    },
+    {
+      "end": 4459340,
+      "speaker": "A",
+      "start": 4451690,
+      "text": "Dann muss man selber Jetzt stelle ich mir die. Okay, es kommen immer wieder neue Protokolle auf den Markt, HTTP, Quik und allem drum und dran."
+    },
+    {
+      "end": 4462460,
+      "speaker": "C",
+      "start": 4459500,
+      "text": "Was ist denn QWIC? HTTP, sag mir noch was."
+    },
+    {
+      "end": 4465060,
+      "speaker": "A",
+      "start": 4462460,
+      "text": "Quick, wenn ich das jetzt aufmache, das."
+    },
+    {
+      "end": 4469260,
+      "speaker": "C",
+      "start": 4465060,
+      "text": "Thema, Du bist ja ein Profi, du kannst mir wohl was in einem Satz."
+    },
+    {
+      "end": 4488040,
+      "speaker": "A",
+      "start": 4469260,
+      "text": "Beschreiben, das bin ich jetzt gerade nicht in der Lage. Quik ist, glaube ich auch ein HTTP Webformat. Uno momento, Komm, jetzt machen wir mal eben hier QWIC bei Google rein. Quick UDP Internet Connection ist ein Transportprotokoll. Das wurde um die Leistung von Webanwendungen zu verbessern. So, herzlichen Glückwunsch."
+    },
+    {
+      "end": 4490280,
+      "speaker": "C",
+      "start": 4488760,
+      "text": "Schwache Vorbereitung sieht man schon."
+    },
+    {
+      "end": 4494040,
+      "speaker": "A",
+      "start": 4490280,
+      "text": "Für Leute, die nicht das Quakenet kennen, mit denen rede ich nicht."
+    },
+    {
+      "end": 4496880,
+      "speaker": "C",
+      "start": 4494680,
+      "text": "Ircnet war es übrigens, ihr habt nachgeschaut."
+    },
+    {
+      "end": 4508280,
+      "speaker": "A",
+      "start": 4496880,
+      "text": "Ich frage mich halt gerade, okay, wie sophisticated werden die Angriffe noch? Was siehst du? Wir gucken jetzt in deine Glaskugel, Stefan. Was sagst du hervor, wenn es um die Zukunft geht?"
+    },
+    {
+      "end": 4534700,
+      "speaker": "B",
+      "start": 4508280,
+      "text": "Also man sieht in den letzten Jahren schon, dass die Angriffe eine neuere Qualität haben oder bessere Qualität, auch je komplexer die Protokolle werden, wenn sowas kommt wie Quick HTTP. Aber auch bei HTTP sieht man, dass immer neue Angriffsarten kommen. Es gab zum Beispiel die Rapid Reset Attacke. Davon gibt es jetzt auch eine neuere Variante, die ein bisschen anders funktioniert. Also es werden schon Angriffsvariationen auch ausprobiert durch verschiedene Akteure."
+    },
+    {
+      "end": 4538060,
+      "speaker": "C",
+      "start": 4535180,
+      "text": "Kannst du die Rapid Reset in einem Satz erklären?"
+    },
+    {
+      "end": 4565560,
+      "speaker": "B",
+      "start": 4538060,
+      "text": "Bei HTTP zwei ist ja ein bisschen anderes Modell, wie die Connect passieren. Das wird gemultiplex. Man schickt ganz viele Anfragen dahin sozusagen in so einem Multiplex Ding und beendet die aber auch ganz ganz kurz dahinter im selben Stream. Und der Server versucht dann halt aber, ich sag mal, ein hundert Mal die dynamische Suche aufzurufen, während der Client die aber eigentlich schon beendet hat, diese Anfrage. Das erzeugt dann halt auf der Serverseite ziemlich viel Last."
+    },
+    {
+      "end": 4574680,
+      "speaker": "C",
+      "start": 4565720,
+      "text": "Also ich sehe schon dieses Pattern frühzeitig abzuschalten oder frühzeitig eine Verbindung aufzugeben, ist ein Common Pattern, was überall vorkommt."
+    },
+    {
+      "end": 4575240,
+      "speaker": "B",
+      "start": 4574760,
+      "text": "Genau."
+    },
+    {
+      "end": 4616450,
+      "speaker": "A",
+      "start": 4575560,
+      "text": "Stefan Wir sind am Ende. Wir sind nicht am Ende des Themas. Wir haben es bei weitem nicht geschafft, den kompletten Content deines Buches wiederzugeben. Das lassen wir nämlich als Hausaufgabe für die fleißigen Leserinnen und Leser und Hörerinnen und Hörer. Das Buch von Stefan findet ihr in den Shownotes, da könnt ihr das bestellen, da könnt ihr das kaufen. Lasst dem jungen Mann doch auch mal ein paar Euro da. Der hat sehr viel Arbeit in die Recherche gesteckt und ihr habt jetzt gerade so, kann man schon sagen, einen Ausschnitt bekommen, vielleicht gerade eine kleine Introduction. Stefan Ich habe sehr, sehr viel gelernt, unter anderem, dass Attacken elegant sein können. Das bleibt mir wirklich im Kopf."
+    },
+    {
+      "end": 4621330,
+      "speaker": "C",
+      "start": 4616690,
+      "text": "Auch qualitativere, wie du gesagt hast in Zukunft, sie werden qualitativer, ist immer sehr positiv."
+    },
+    {
+      "end": 4627490,
+      "speaker": "B",
+      "start": 4621410,
+      "text": "Ja, man sieht schon, dass sie sich Mühe geben, auch mal wirklich den Webserver Code lesen. Also ist schon besser geworden."
+    },
+    {
+      "end": 4631370,
+      "speaker": "A",
+      "start": 4627650,
+      "text": "Als Bonus dieser Episode nehme ich mit, der Wolfgang hat keine Ahnung von quakenet."
+    },
+    {
+      "end": 4634570,
+      "speaker": "C",
+      "start": 4631370,
+      "text": "Und von IRC im generellen ircnet war."
+    },
+    {
+      "end": 4642730,
+      "speaker": "A",
+      "start": 4634570,
+      "text": "Mein T und ja, was soll ich sagen, Was ist dein letzter Satz, dein letzter Tipp an unsere Hörerinnen und Hörer?"
+    },
+    {
+      "end": 4676760,
+      "speaker": "B",
+      "start": 4642730,
+      "text": "Stefan Mein letzter Tipp ist schamlose Eigenwerbung gibt nämlich die ddos Test kommen, wenn ihr mal selber Lust habt, ein bisschen rumzuspielen. Gebt mal eure Webseite ein und guckt mal, wie die sich so in einer Attacke machen würde. Da wird tatsächlich keine richtige Attacke ausgeführt, sondern es wird halt nach Parametern geguckt, zum Beispiel würdet ihr eine Low and Slow Attacke aushalten oder nicht und solche Dinge. Also wer sich fürs Thema interessiert, hat da vielleicht einen guten Einstiegspunkt für interessante Dinge, die er mal recherchieren sollte oder sie natürlich."
+    },
+    {
+      "end": 4686260,
+      "speaker": "C",
+      "start": 4677080,
+      "text": "So, wir probieren es jetzt gleich mal live aus. Andy, gib unsere Engineering Kiosk Webseite ein, die von Netlify gehostet ist. Wie viel grüne Häkchen und rote X bekommen wir?"
+    },
+    {
+      "end": 4706220,
+      "speaker": "A",
+      "start": 4686580,
+      "text": "Also die Low and Slow Attacke zum Beispiel, Da sind wir jetzt nicht anfällig für, weil anscheinend Netlify oder Amazon die TCP Connections nach fünf Sekunden schon mal schließt. Das passt. Das ist genauso wie stehende TCP Connections werden über HTTP GET nach dreiig Sekunden geschlossen. Das passt auch. Ist auf jeden Fall ein Haken hier in dieser."
+    },
+    {
+      "end": 4708090,
+      "speaker": "C",
+      "start": 4706220,
+      "text": "Okay, das sind aber ein paar rote X, was Sie da sehen."
+    },
+    {
+      "end": 4726320,
+      "speaker": "A",
+      "start": 4708800,
+      "text": "Ja, und zwar sagt der, dass das System Connections auf Port über ein tausend vier und zwanzig, also eine ganze Menge andere Ports sind offen, wo anscheinend Connections entgegengenommen werden. Auch privilegierte Ports unter dem Port ein tausend vier und zwanzig sind offen."
+    },
+    {
+      "end": 4744220,
+      "speaker": "B",
+      "start": 4727600,
+      "text": "Es ist die Client Seite. Dein normaler Client, den du hast, der öffnet Ports in einer bestimmten Range je nach Betriebssystem, um auf die Webseite zuzugreifen. Der Zugriff verhält sich aber nicht so wie ein normaler Client. Also ist schon auffällig und das kann man präventiv auch blockieren."
+    },
+    {
+      "end": 4749020,
+      "speaker": "A",
+      "start": 4744620,
+      "text": "Aber generell kriegen wir die Note A. Das ist, glaube ich, gar nicht so schlecht."
+    },
+    {
+      "end": 4754380,
+      "speaker": "C",
+      "start": 4749020,
+      "text": "Ich werde es mal bei Gelegenheit probieren von einem meiner Projekte, die ich selber hoste. Das wird dann schlimmer aussehen."
+    },
+    {
+      "end": 4758700,
+      "speaker": "A",
+      "start": 4754700,
+      "text": "Wer mehr zu dem Thema wissen mö Das ddos Buch vom Stefan findet ihr."
+    },
+    {
+      "end": 4761820,
+      "speaker": "B",
+      "start": 4758700,
+      "text": "Unter ddos book com."
+    },
+    {
+      "end": 4767600,
+      "speaker": "A",
+      "start": 4761980,
+      "text": "Vielen Dank, Stefan und natürlich in den Show. Ansonsten würde ich sagen, vielen lieben Dank, Stefan für deine Zeit und vielen lieben."
+    },
+    {
+      "end": 4776560,
+      "speaker": "C",
+      "start": 4767600,
+      "text": "Dank für die Einladung, weil haben vielleicht nicht alle gehört, aber wir sitzen jetzt wirklich physikalisch zusammen zu dritt und das passiert ja relativ selten hier in Düsseldorf."
+    },
+    {
+      "end": 4779440,
+      "speaker": "B",
+      "start": 4776560,
+      "text": "Ja, schön, dass das geklappt hat und vielen Dank euch auch."
+    },
+    {
+      "end": 4780960,
+      "speaker": "C",
+      "start": 4779520,
+      "text": "Bye bye. Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
