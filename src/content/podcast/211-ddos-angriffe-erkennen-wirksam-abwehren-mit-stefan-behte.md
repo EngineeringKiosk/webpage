@@ -1,7 +1,7 @@
 ---
 advertiser: ''
 amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/83ee6d02-f393-4daa-a97e-2c8d8f7e82f1/engineering-kiosk-211-ddos-angriffe-erkennen-wirksam-abwehren-mit-stefan-behte
-apple_podcasts: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/211-ddos-angriffe-erkennen-wirksam-abwehren-mit-stefan/id1603082924?i=1000724473207&uo=4
 audio: https://audio1.redcircle.com/episodes/8e35d4c5-35bb-4edc-92ce-e9a034941c5e/stream.mp3
 chapter:
 - start: 00:00:00
