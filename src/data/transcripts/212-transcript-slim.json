@@ -1,0 +1,806 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4449,
+  "audio_url": "https://cloud.inlupus.at/s/o2faBMkioAwpspJ/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95733654,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "c566e9e4-8ed3-420e-86e4-97f528d215dc",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 79320,
+      "speaker": "A",
+      "start": 3200,
+      "text": "Herzlich willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Ab und zu fällt in der Episode mal ein Satz, der mir im Kopf hängen Legacy verdient das Geld. Das ist zum Beispiel ein solcher Satz. In dieser Episode war es aber ein anderer. Multitenant Systeme sind bessere Single Tenant Systeme und darum geht es auch in der nächsten Stunde. Eine Software zu schreiben ist das eine. Eine Software für mehrere unterschiedliche Mandanten, also Kunden zu schreiben und zu betreiben, ist das andere. Jetzt kann man sich Was soll denn daran so schwer sein? Man muss doch nur an jedes Datenbankstatement ein Where Kunde kundeid hängen und der Drops ist gelutscht, oder kannst du schon so machen, ist dann aber halt kacke. Und wie deine Lösung nicht so kacke wird, erklärt uns Max Schellhorn mit einem Deep Dive zum Thema multimandanten Architekturen, also der Fähigkeit, sein System für mehrere Kunden zu betreiben und und dabei sich auf eine ordentliche Kunden bzw. Datenisolation verlassen zu können und die Themen Resilienz und Blast Radius nicht zu vernachlässigen. Das Ganze geht weit tiefer, als ich initial gedacht habe, unter anderem mit den Themen wie Shuffle, Sharding und Cell Based Architecture. Nun aber genug von mir mit dem Intro. Los geht's. Viel Spaß. Wolfgang sagt dir die Firma Salesforce, was?"
+    },
+    {
+      "end": 84410,
+      "speaker": "B",
+      "start": 80050,
+      "text": "Natürlich erste SaaS Firma auf der Welt quasi. Die haben so SaaS Business erfunden."
+    },
+    {
+      "end": 92930,
+      "speaker": "A",
+      "start": 84410,
+      "text": "OK, today I learned. Das wusste ich noch nicht. Wie viel Kunden hat denn das Key Produkt von Salesforce, deren CRM Plattform?"
+    },
+    {
+      "end": 99090,
+      "speaker": "B",
+      "start": 92930,
+      "text": "Was wir mal schätzen? Ich würde sagen, ist doch eine der größten Firmen Kunden."
+    },
+    {
+      "end": 115780,
+      "speaker": "A",
+      "start": 99170,
+      "text": "Das Problem ist jetzt, Gemini sagt, mehr als Kunden ist mehr als ein hundert fünfzig deswegen kann ich nicht sagen, ob es richtig oder falsch ist. Aber was denkst du passiert, wenn es Salesforce einen Sicherheitsleck hat, wenn da ein Hacker schafft, irgendwie reinzukommen in das CRM System?"
+    },
+    {
+      "end": 123420,
+      "speaker": "B",
+      "start": 115860,
+      "text": "Achso, wenn ein Hacker Es schafft nicht eine Hackerschaft. Ich hab schon gedacht, ist ein neues Wort. Eine Gruppe von Hacker ist eine Hackerschaft. Ja, ist blöd wahrscheinlich, oder?"
+    },
+    {
+      "end": 209390,
+      "speaker": "A",
+      "start": 123420,
+      "text": "Ja, also eigentlich würde ich mir Wieso wird dann ein Hacker Zugriff auf alle Daten haben? Aber es scheint so, als haben die ihr System nicht im Griff. Denn vor kurzem gab es eine Firma oder die gibt es immer noch, nennt sich Sales Loft. Sales Loft hat ein Produkt namens Drift und Drift ist, wie hätte es auch anders sein können, ein AI. Der wurde natürlich ganz oft in Salesforce integriert und ganz viele Kunden hatten diesen Agent, denn wie man jetzt auch gerade wieder hört, Agents ersetzen Support Mitarbeiter. Auf jeden Fall hatte dieser Agent irgendeine Art Sicherheitsloch. Auf jeden Fall haben es Hacker geschafft, Authentifizierungstokens von diesem Agent rauszubekommen und dadurch sind die dann von Höcksgen auf Stöcks gekommen und irgendwann hatten sie halt Zugriff auf ganz viele Salesforce CRM Environments und konnten da auf jeden Fall zumindest schon mal Customer Support Tickets abgreifen. Aber da habe ich mich natürlich gefragt, wie kann das sein? Wie kann da keine Isolation stattfinden? Wie kann da nicht der Blast Radius irgendwie minimiert werden? Ich komme aus der Reliability Ecke und warum schwafle ich die ganze Zeit darüber? Weil genau das dieses Thema heute ist. Wir sprechen nämlich heute über ein Thema, was sich auf Englisch Multitenant Architecture nennt und ich musste das erstmal nach Deep L in die Übersetzungsbox knallen, damit ich erstmal den deutschen Begriff."
+    },
+    {
+      "end": 211870,
+      "speaker": "B",
+      "start": 209870,
+      "text": "Jetzt bin ich gespannt, was ist das auf Deutsch?"
+    },
+    {
+      "end": 216030,
+      "speaker": "A",
+      "start": 212030,
+      "text": "Ja, ich fühle mich wie ein Steuerberater. Es ist eine mehr Mandantenarchitektur."
+    },
+    {
+      "end": 220030,
+      "speaker": "B",
+      "start": 216110,
+      "text": "Ah ja, klar, stimmt eigentlich, so heißt es ja, mehr Mandant."
+    },
+    {
+      "end": 239680,
+      "speaker": "A",
+      "start": 220030,
+      "text": "Lustigerweise haben wir ja inzwischen, beziehungsweise der Wolfgang hat das inzwischen aufgesetzt mit einem Team von fleißigen Organisatoren eine Art Recruitment Center für Podcast Interviewgäste. Das nennt sich das Engineering Kiosk Alps Meetup, wo unter anderem unser heutiger Gast, der Max, nämlich auch mal einen Vortrag gehalten hat. Hallo Max."
+    },
+    {
+      "end": 241400,
+      "speaker": "C",
+      "start": 239680,
+      "text": "Hallo, grüß euch, freut mich hier zu sein."
+    },
+    {
+      "end": 311380,
+      "speaker": "A",
+      "start": 241400,
+      "text": "Ja, du hast am zwölfter juni zwei tausend fünf und zwanzig auf dem Engineering Kiosk Alps Meetup einen Talk über mehr Mandantenarchitekturen gehalten und dann hat der Wolfgang mir irgendwie eine Slide zugespielt, habe ich mir durchgesagt. Wow. Also kurze Frage Wolfgang, aber warum hast du den noch nicht klar gemacht für den Podcast? Und das habe ich dann im Nachgang gemacht, denn man würde denken, du könntest dich mit mehr Mandantenarchitekturen auskennen, denn dein Arbeitgeber Amazon Web Services, auf kurz AWS, hat ein paar Mandanten. Auf jeden Fall verdienst du deine Brötchen dort als Solution Architekt mit einem speziellen Fokus auf Software as a Service Applikation, Serverless Applikation und Event Driven Architectures. Zuvor hast du bei einem großen Mode Fashion Online Haus gearbeitet, wenn man so möchte, bei Zalando als Software Engineer. Das bedeutet, du hast vielleicht auch schon mal ein mehr Mandantensystem selbst implementiert und du bist öfters auf den Bühnen dieser Welt als Speaker unterwegs und der Wolfgang hat mir auch eine Story erzählt in einem Vorgespräch, dass du einmal an irgendeinem Abend einen CEO am Telefon hattest, am Ohr hattest auf jeden Fall, weil du mal eine Production Database gedroppt hast. Ist das richtig?"
+    },
+    {
+      "end": 334180,
+      "speaker": "C",
+      "start": 311780,
+      "text": "Ja, gedroppt nicht, aber wir hatten damals einen Foreground Index erstellt und da wurde sämtlicher Read und Write Traffic auf der Production Datenbank geblockt und da haben wir dann zwangsläufig nach ein paar Minuten den CEO mal kennengelernt, was denn da los ist. Also ja, ist schon eine Weile her, aber irgendjemand hatte immer schon mal ein Incident mit einer prodb gehabt, nehme ich an."
+    },
+    {
+      "end": 337340,
+      "speaker": "A",
+      "start": 334500,
+      "text": "Was ist ein Foreground Index? Gibt es auch einen Background Index?"
+    },
+    {
+      "end": 361720,
+      "speaker": "C",
+      "start": 337340,
+      "text": "Ja, genau, das war zu einer gewissen mongodb Version, wenn man dann Index erstellt hat, war das per Default ein Foreground Index, das heißt, wo eben dieser ganze Read und Write Traffic dann geblockt wurde. Mittlerweile ist Default, soweit ich weiß, habe mich dann danach nicht sonderlich viel mehr damit beschäftigt, dann einen Background gemacht, dass das eben keinen Einfluss mehr oder keinen so gravierenden Einfluss auf den bestehenden Traffic hat."
+    },
+    {
+      "end": 376500,
+      "speaker": "B",
+      "start": 361720,
+      "text": "Es freut mich als Datenbankler natürlich besonders immer solche Geschichten, weil die kennt man ja, aber es ist, es ist schon mal subtiler, würde ich mal sagen, als eine klassische Delete Query, wo man irgendwie das Where Statement oder so vergisst, was eigentlich so der Klassiker ist."
+    },
+    {
+      "end": 382020,
+      "speaker": "C",
+      "start": 377220,
+      "text": "Ich habe quasi eine elegante Form gefunden, um die Production Datenbank lahmzulegen."
+    },
+    {
+      "end": 385540,
+      "speaker": "B",
+      "start": 382020,
+      "text": "Genau. Ist schon next level eigentlich. Das ist schon okay."
+    },
+    {
+      "end": 386460,
+      "speaker": "C",
+      "start": 385940,
+      "text": "Schön."
+    },
+    {
+      "end": 469160,
+      "speaker": "B",
+      "start": 446460,
+      "text": "Aber kommen wir mal zu dem Thema zurück. Der Andi hat ja schon so schön mit seiner ewig langen Geschichte da irgendwas eingeleitet und hat aber nicht erwähnt, dass es jetzt eigentlich um die Lösung für dieses Problem geht, weil er hat ja nur die zwei Dinge aufgemacht. Vielleicht, Max, kannst du mal ganz grob erklären, was multitenant, bleiben wir beim Englischen ist auch cooler. Eindeutig. Vielleicht kannst du einfach mal erklären, um was es da eigentlich geht und was das Wort bedeutet."
+    },
+    {
+      "end": 536550,
+      "speaker": "C",
+      "start": 469160,
+      "text": "Ganz genau. Also ich kann dann mal mit dem ersten Part vielleicht anfangen oder im zweiten in dem Fall mit dem Tenant. Also was ist überhaupt ein Tenant im Software Kontext? Und ein Tenant ist im Prinzip eine eigenständige Firma oder Organisation, die isoliert von anderen Tenants eine Software nutzt. Also konkretes Beispiel, die meisten von euch kennen wahrscheinlich irgendwie Confluence oder Jira und wenn eure Firma jetzt einen Confluence Zugang hat und ihr meldet euch dort an, dann seht ihr da eure Spaces, eure Projekte, eure User, eure Konfiguration. Und wenn ich mich da anmelde mit meiner Firma, meinem Firma Account, dann sehe ich dort meine Spaces, Projekte, User und Konfiguration. Also im Prinzip, wir benutzen zwar dieselbe Software, also Confluence in dem Fall, wir sind aber komplett isolierte Mandanten oder Tenants. Das heißt, wir wissen theoretisch auch gar nichts voneinander. Wir benutzen die Software komplett isoliert. Und dann gibt es noch den Provider, das ist dann der, der die Software tatsächlich baut. Also in dem Fall wäre das dann Atlassian jetzt bei Confluence oder Jira, der quasi die Software zur Verfügung stellt. Und wir sind Mandanten dieses Systems, Wobei."
+    },
+    {
+      "end": 546750,
+      "speaker": "B",
+      "start": 536550,
+      "text": "Du jetzt also schon von einem Cloud Setup sprichst, weil wenn ich jetzt lokal bei mir hoste als Firma in meinem Datacenter, dann ist es sowieso komplett unabhängig eigentlich."
+    },
+    {
+      "end": 625760,
+      "speaker": "C",
+      "start": 547950,
+      "text": "Also das Konzept eines Mandanten muss nicht zwangsläufig mit der Cloud Thematik zusammenhängen. Das sieht man besonders bei Single Tenant Anwendungen. Das heißt, wir haben jetzt eben über Software gesprochen und jetzt gibt es verschiedene Möglichkeiten und Architekturen, wie diese Software gebaut werden kann. Und vielleicht können wir das an dem konkreten Beispiel mal durchspielen. Also ich würde Andy Wolf, ich würde euch einladen, dass wir gemeinsam ein Startup heute bauen. Also Andi, du bist jetzt CEO, Wolfie, du bist der Lead Engineer, ich mache irgendwas mit Cloud und wir bauen jetzt zusammen Engineering Invoice. Also wir bauen jetzt eine Software, wo Firmen ihre Rechnungen verwalten können sozusagen. Und Single Tenant, wenn wir jetzt eine Single Tenant Anwendung bauen würde, da würde die Software so gebaut sein, dass sie nur für einen Mandanten gleichzeitig funktioniert. Und in der Praxis, das ist das, was du gerade angesprochen hast, heißt es dann auch meistens, dass jede Firma ihre eigene Anwendungsinstanz bekommen. Also ganz simpel, wir haben jetzt ein Backend und eine Datenbank, wo die Rechnungen drin sind, dann würde jede Firma ihr eigenes Backend, ihre eigene Datenbank bekommen. Und das können die jetzt natürlich selber bei sich im Rechenzentrum installieren, das können aber auch wir für sie hosten. Aber trotzdem das Modell, dadurch, dass die Software nur für einen Mandanten gleichzeitig funktioniert, würde man von einem Single Tenant Setup sprechen."
+    },
+    {
+      "end": 633360,
+      "speaker": "B",
+      "start": 625920,
+      "text": "Das heißt, man teilt sich dann gar nichts mit irgendwem anderen Also wirklich egal ob Hardware, Software, Datenbank, es ist alles irgendwie getrennt."
+    },
+    {
+      "end": 654030,
+      "speaker": "C",
+      "start": 633950,
+      "text": "Ganz genau. Also wenn wir Engineering Invoice jetzt wir haben jetzt unseren ersten Kunden, irgendwie ein Startup aus Innsbruck, dann können wir das den quasi haben die eine komplett eigene Instanz, eigene Backend, eigene Datenbank und dann kommt ein Startup aus Berlin und dann kriegen die wieder eine eigene Backend Instanz, eine eigene Datenbank. Aber die Software an sich kann immer nur einen Mandanten gleichzeitig handeln."
+    },
+    {
+      "end": 674170,
+      "speaker": "A",
+      "start": 654030,
+      "text": "Nennen wir mal einen Riesenkonzern aus Österreich. Red Bull. Red Bull. Wir bekommen Red Bull als Kunde, die wollen unsere Invoice Software nehmen. Erstmal danke dafür, dass du mich als CEO promotet hast. Dann wird der Wolfgang das erste Mal auf mich hören. Ich würde jetzt den Wolfgang nicht als Lead Engineer promoten, aber das ist eine andere Thematik."
+    },
+    {
+      "end": 719430,
+      "speaker": "B",
+      "start": 675850,
+      "text": "Lenk mal nicht ab. Wir haben sogar Red Bull als Hauptkunden jetzt gewonnen. Ich meine, das ist eine Firma, die sich zwei Formel Teams leistet, Aber nehmen wir mal an, man merkt, dass der Andi kein Unternehmer ist, sonst würde nicht alles auf einen Kunden setzen. Nehmen wir mal an, wir haben zehn Kunden und Red Bull ist ja nur ein kleiner Kunde von uns und wir haben danach noch ein paar andere große Kunden. Jetzt klassisch das, was du so erwähnt hast, das klingt für mich so nach ER Jahren. Jeder Kunde installiert das irgendwie in seiner Besenkammer und lässt es da laufen und dann kam ja irgendwann die coole Cloud in den ERN, würde ich sagen, Ende zwei tausend und alles wird jetzt gemeinsam gehostet oder in irgendeiner Form gemeinsam betrieben für alle unsere zehn oder wir sind ja coole Firma, ein hundert ein hundert Kunden zum Beispiel."
+    },
+    {
+      "end": 802500,
+      "speaker": "C",
+      "start": 719720,
+      "text": "Ja genau. Ich würde noch kurz einsteigen zu was du sagst, dass das so ER Jahre Konzept. Ich würde sagen, es gibt tatsächlich schon ein paar Szenarien oder gute Gründe, wo sich eine Single Tenant Anwendung, wo die gut passen würde. Also es gibt so ein paar Business Modelle. Angenommen, wir haben jetzt unser Engineering Invoice und wir bauen das nur für die fünf größten Schweizer Banken. Also wir machen fast individual Software. In dem Fall macht es Sinn, eine Single Tenant Anwendung zu haben, weil ich so viel customized habe pro Kunde, dass es keinen Sinn macht, das jetzt irgendwie in irgendeiner Form zu teilen, wo das auch gut funktioniert. Und ich habe selber mal Software für Skischulen gebaut, früher hier im Innsbrucker Raum. Und da hast du natürlich auch, wenn du dich jetzt zum Beispiel auf den deutschsprachigen Skischulmarkt konzentrierst, dann hast du vielleicht ein paar hundert Skischulen, aber du hast jetzt nicht morgen auf einmal ein tausend neue oder übermorgen. Das heißt, du hast einen relativ statischen Markt, wo jetzt nicht morgen irgendwie super viele neue potenzielle Kunden deiner Software hinzukommen. Da kann es auch Sinn machen, ein Single Tenant Modell, wenn du das gut unter Kontrolle operativ hast, zu betreiben. Und vielleicht der letzte gute Anwendungsfall ist, wenn du nur hoch regulierte Air Gap Customer hast, die das definitiv auch nur in ihrem Rechenzentrum irgendwie installieren wollen. Und das ist so ähnlich wie dieses Schweizer Bankenszenario. Da kann das auch Sinn, eine Single Tenant Applikation zu bauen. Also die haben durchaus auch heute ihre Daseinsberechtigung, würde ich sagen."
+    },
+    {
+      "end": 830990,
+      "speaker": "A",
+      "start": 802500,
+      "text": "Jetzt sprichst du natürlich von Skischulen und das sind ja aus unserer Rechnungsperspektive ja Business to Business BB Customer und jetzt benutze ich jeden Tag Spotify und immer mal wieder auch Netflix. Das ist ja eigentlich auch ein Multitant System, wo ich als BC Kunde ja einen Account habe und du deine Playlist bei Spotify sieht ja anders aus als meine zum Beispiel. Das wäre dann BC. Gibt es da einen relevanten Unterschied oder ist das eigentlich alles dasselbe?"
+    },
+    {
+      "end": 933010,
+      "speaker": "C",
+      "start": 830990,
+      "text": "Ne, also da gibt es eigentlich schon einen großen Unterschied. Also das Konzept eines Mandanten ist hauptsächlich in der Software Welt relevant. Also wenn wir jetzt einfach eine große E Commerce Plattform bauen, wo wir eben Produkte verkaufen, Schuhe, Artikel oder was auch immer. Hier ist das Konzept jetzt nicht sonderlich relevant, weil hier die User ja im Prinzip Produkte beziehen oder kaufen oder in deinem Fall hier die Songs oder die Playlist, aber nicht eigentlich ein Stück Software, so wie das jetzt bei Confluence oder einer Rechnungssoftware oder so der Fall ist. Und hier ist diese Mandantentrennung viel essentieller und ein wichtiger Bestandteil, wohingegen das bei so BC Plattform gar nicht der Fall ist oder nur in untergeordneter Weise eine Rolle spielt. Aber um auf deine Frage vielleicht, Wolfi, von vor zurückzukommen, was machen wir jetzt, wenn wir eben nicht, sage ich mal, nur die Skischulen haben wollen oder die fünf großen Banken und wir sagen jetzt, wir wollen jetzt Engineering Invoice, wir wollen es jetzt richtig groß machen und wir wollen jetzt nicht wir wollen jetzt ein tausend Kunden haben, wir wollen das weltweit machen. Also die erste Sache, die dann, wie du richtig erwähnt hast, die dann wahrscheinlich auch kommt, ist die operative, aber nicht nur aus unserer Sicht, sondern auch von den Kunden, weil die Kunden wahrscheinlich gar nicht mehr ein eigenes Rechenzentrum haben oder einen eigenen Server, wo sie die Anwendung jetzt installieren würden. Das heißt in in dem Moment würden wir anfangen, höchstwahrscheinlich das Hosting zu übernehmen, diese Anwendung. Und sobald wir das tun, wenn wir das für eine Single Tenant Anwendung machen, dann geht das für fünf Kunden, dann geht das auch vielleicht für ein hundert und zwei hundert, wenn das auch ein hundert oder zwei hundert bleiben. Aber in dem Moment, wo wir ein tausend zwei tausend und vielleicht jeden Tag mehrere hundert neue Kunden bekommen, ist das für uns ein operativer Albtraum, wenn wir für jeden Kunden spezifisch einen komplett eigenen Application Stack deployen müssten."
+    },
+    {
+      "end": 949710,
+      "speaker": "B",
+      "start": 934210,
+      "text": "Ich würde ja schon sagen, dass ein hundert ein Albtraum sind, also ein hundert Stacks deployen und zu maintainen, vor allem ohne Automation, mit Automation dann vielleicht besser, aber dann ist es eh schon die Frage, wenn es komplett durch Automated ist, ob das überhaupt noch single eigentlich zu bewerten ist."
+    },
+    {
+      "end": 1025910,
+      "speaker": "C",
+      "start": 949710,
+      "text": "Ja, also theoretisch kann man viel automatisieren und man kann auch so komplette Single Tenant Deployments theoretisch machen. Nur wie gesagt, was hat das für einen Einfluss auf wie schnell ich neue Features ausrollen kann, wenn ich jetzt irgendwie zwei tausend Instanzen erstmal upgraden muss und auch patchen muss und so weiter, dann ist das natürlich ein sehr hoher operativer Aufwand. Und das ist eigentlich schon der erste große Motivationspunkt für uns jetzt zu sagen für Engineering Invoice jetzt in unserem Fall ist, dass wir eventuell eine Multitenant Architektur einführen können. Und Multitenant bedeutet jetzt nichts anderes wie, dass unsere Multitenant Architektur erlaubt es uns, mehrere Mandanten mit einer einzigen Anwendungsinstanz zu unterstützen. Eine einzige Instanz ist jetzt ein bisschen zugespitzt. Also das heißt in dem Vergleich zu vorher sagen wir Backend und Datenbank könnten wir jetzt im Extremfall sagen, wir nehmen alle ein tausend Kunden nur auf die gleiche Backend Instanz und auf die gleiche Datenbank theoretisch. Das wäre dann ein Multitenant Ansatz. Das heißt, die Anwendung wird in diesem Moment auch zu einem gewissen Aspekt tenant aware. Das heißt, sie muss damit umgehen, dass sie Requests von verschiedenen Mandanten bekommt und dementsprechend auch nur die Rechnungen für diesen Mandanten dann zum Beispiel auch zurückgibt."
+    },
+    {
+      "end": 1056210,
+      "speaker": "A",
+      "start": 1026070,
+      "text": "Achtung, die er rufen gerade an. Um eine Applikation tenant aware zu machen, würde ich ja einfach einen Get Parameter dran packen, der sagt tenantid gleich fünf und Red Bull hat tenantid sechs und ich kenne jetzt keine weitere österreichische Firma. Swarovski hat dann Tenant ID sieben richtig. Und wenn ich dann da oben aus der sieben eine fünf mache, dann sagt Du hast keinen Zugriff auf diesen Tenant. Ist das jetzt Tenant aware in einer Software, in den ERN, also Tenant Awareness?"
+    },
+    {
+      "end": 1181220,
+      "speaker": "C",
+      "start": 1056210,
+      "text": "Wir können das einfache Beispiel mit der Rechnung vielleicht machen. Also angenommen, wir haben das Backend und das fragt Rechnungen jetzt von der Datenbank ab und wir sagen, alle Rechnungen liegen jetzt erstmal in einer Tabelle. Also ich spitze das jetzt mal zu, Wir kommen später vielleicht auf Security und wie man das isolieren kann. Aber theoretisch würde das heißen, dass ich nicht mehr wie vorher einfach Select Stern from Invoice mache und ich kriege alle Rechnungen, weil das ja nur für einen Mandanten war, sondern jetzt müsste ich dann theoretisch Select Stern from Invoice where Tenant ID ist gleich eins oder zwei oder drei machen. Und wichtig wird dann natürlich die Tenant Identity in diesem Schritt. Das heißt, ich muss natürlich wissen, dieser Request gehört zu diesem Tenant. Und da gibt es auch verschiedene Mechanismen, wie man das zusätzlich herausfinden kann. Wenn ich vielleicht noch einen Punkt zu der Motivation sagen kann, Ich habe jetzt das Operative in den Raum gestellt, aber es gibt noch den zweiten, sage ich mal, größten Motivationspunkt für Multitenant Architekturen und der ist nicht das Operative, sondern die Kosten. In dem Moment, wo wir als Betreiber das Hosting für den Endkunden quasi übernehmen, ist das unsere Kostenstelle. Früher, wenn der Kunde sein Rechenzentrum gehabt hat, haben wir gesagt, du brauchst drei Server, so und so viel RAM, installiere das mal. Aber jetzt müssen wir das machen. Und wenn wir das Single Tenant betreiben und angenommen, wir möchten von dem Kunden fünf hundert Euro im Monat für unsere Software, wir geben aber zwei hundert für Infrastruktur pro Kunde aus, dann ist unsere Marge, dann haben wir drei hundert Gewinn gemacht. Das heißt, wenn wir es schaffen, die Infrastruktur zu senken auf nur noch zehn pro Kunde, erhöht sich unsere Marge. Das heißt, es ist eigentlich immer im Anbieter das Interesse, so viel wie möglich zu sharen, dass ich so gering wie mögliche Infrastrukturausgaben habe. Und da hatte letztens auch ein von einer großen Firma Züge sagt, seitdem wir SaaS machen, also diese auch für den Kunden hosten dann in dem Fall und das wirklich als Service anbieten. Every dollar spent on infrastructure is lost business, weil wir wirklich sonst unsere Marge halt erhöhen können. Je mehr wir teilen können, Und das ist dann eine große intrinsische Motivation und extrinsische dann auf jeden Fall so viel wie möglich, so best wie möglich, so effizient wie möglich Ressourcen zu teilen."
+    },
+    {
+      "end": 1200650,
+      "speaker": "B",
+      "start": 1181610,
+      "text": "Eigentlich können wir die Episode jetzt beenden, oder? Multitenant ist super, rettet uns unseren Gewinn sozusagen. Wir haben weniger Operational Costs, weniger Kopfweh mit dem Ganzen und wir hängen da an die SQL Query. Eine ID ist gleich irgendwas dran, je nachdem was für ein Tenant da dran ist. Und die Sache ist gegessen."
+    },
+    {
+      "end": 1273360,
+      "speaker": "C",
+      "start": 1200650,
+      "text": "Ja, klingt gut, oder? Können wir eigentlich aufhören? Das Problem ist, dass Multi Tenant Architekturen, wir haben ja gemerkt, es klingt jetzt nach einer einfachen WHERE Clause. In der Praxis ist das aber natürlich deutlich komplexer. Ich habe es schon angedeutet. Eine Sache ist Tenant Identität. Also wie finde ich raus, dass dieser Request zu diesem Tenant überhaupt gehört? Wie stelle ich sicher? Also wie separiere ich vielleicht auch die Daten zwischen den Tenants und wie stelle ich die Security Boundary sicher? Also dass der eine Tent jetzt nicht einfach von dem anderen, wenn ich irgendwie einen falschen Parameter gesetzt habe, die Rechnung aus der Datenbank rausziehen kann. Security. Und der letzte Punkt, also ein ganz großer Punkt, ist dann natürlich auch Blast Radius. Ich umreiße das mal vielleicht ganz kurz, aber wenn ich jetzt auf einmal Kunden auf einer Instanz, auf einer Datenbank habe und wir haben ja eingangs schon gesprochen, wenn jetzt einer draufkommt, mal die Datenbank zu löschen, dann sind Kunden gleichzeitig Effekte und bei einer Single Tenant habe ich das nicht. Da ist dann halt der eine Kunde, wo ich die gelöscht habe, effektet. Das heißt, wir haben einen viel größeren Blast Radius, wenn wir Sachen teilen. Das heißt, es gibt hier Herausforderungen, es gibt zusätzlichen Aufwand, den wir betreiben müssen, um diese Multi Tenant Architektur nachhaltig und vor allem sicher zu bauen."
+    },
+    {
+      "end": 1282790,
+      "speaker": "A",
+      "start": 1273750,
+      "text": "Dann lass uns doch mal einsteigen in die Identifizierung eines Tenants. Warum reicht ein WHERE Tenant ID gleich fünf heutzutage nicht aus?"
+    },
+    {
+      "end": 1386900,
+      "speaker": "C",
+      "start": 1282950,
+      "text": "Wir müssen ja erst mal gucken, wie kommen wir denn zu der ID überhaupt? Also woher wissen wir denn, dass du jetzt, wenn du jetzt einen API Request zu unserer, sagen wir mal zu unserem Backend machst, woher weiß ich denn überhaupt, dass du jetzt Tenant ID bist? Und ich würde mal wahrscheinlich das gängigste Beispiel erwähnen. Das heißt, üblicherweise bekommst du einen Token, also du musst dich ja, bevor du mit der Applikation sprichst, überhaupt mal authentifizieren. Das heißt, du hast normalerweise ein Login, Username, Passwort. In modernen SaaS Anwendungen wird auch oft dann noch mal federated, also du wirst dann redirected auf deinen eigenen Login, auf deine eigene Login Plattform, die du vielleicht für deine Firma irgendwie verwendest. Und in dem Moment, wo du das tust, nachdem der Prozess fertig ist, bekommst du normalerweise einen Access to, das ist normalerweise zwei Access Token, JWT Token, habt ihr vielleicht schon mal gehört und das ist im Prinzip ein signierter Token. Und in diesen Tokens steht dann meistens nicht nur drin, du bist jetzt der Andi oder der Wolfi, sondern steht drin, du gehörst jetzt zu diesem Tenant dazu, also zu dieser Firma im Prinzip. Und wenn du jetzt dann den API Request machst, dann wird dieser Token mitgeschickt und dieser Token, der ist signiert. Das heißt, ich kann nicht einfach deinen Token nehmen und da statt Wolfis Firma Andis Firma reinschreiben, sondern der ist signiert. Das heißt, das Backend würde verifiziert, dass da wurde irgendwas rumgewerkelt am Token, das heißt, das ist verifiziert, dass das auch korrekt passiert ist Und das Backend nimmt dann diesen Token, guckt in den Token rein und da steht, ah, okay, das ist ein valider Token, der ist von Wolfin, Wolf gehört zu Tenant eins und dann greife ich eben nur auf die Daten zu Tenant eins zu. Also das ist erstmal zu dem Authentication Button. Woher weiß ich überhaupt, wer dieser Tenant ist? Das ist hauptsächlich so gemacht."
+    },
+    {
+      "end": 1424620,
+      "speaker": "A",
+      "start": 1386980,
+      "text": "Jetzt ist es so, JVT oder JWT hatten wir noch nicht im Podcast, nur ganz ganz kurzen Abriss und damit das klar ist, ist eine Art und Weise, wie du Authentifizierung sicherstellst. Session oder Cookie ist zum Beispiel auch eine andere, aber JVT steht für JSON Web Token. Und soweit ich mich erinnern kann, kannst du neben der Signatur, die Signatur ist ja eigentlich nur ein Hash, damit man verifizieren kann, dass der Body, also der Content eines Tokens nicht verändert wurde, kannst du auch noch zusätzliche Informationen dazufügen. Richtig. Also du kannst da eigene, ähnlich wie in so ein Cookie, so Key Value."
+    },
+    {
+      "end": 1469280,
+      "speaker": "C",
+      "start": 1424620,
+      "text": "Kannst du reinpacken, da sagt man Custom Claims genau dazu. Und normalerweise ist das in dem Moment, wo du dich registrierst, also angenommen, wir wollen jetzt irgendwie jemand möchte Engineering Invoice zum ersten Mal verwenden, dann haben die normalen Registrierungsvorgang und in dem Vorgang wird normal auch der Tenant im Backend normalerweise erstellt, dass ich weiß, aha, das ist jetzt ein neuer Kunde, da gehört jetzt der User Andy und der User Wolfi zum Beispiel dazu und dann, wenn du dich dann anmeldest, dann kriegst du quasi einen Custom Claim in deinem Token, wo drin steht, ah, okay, ihr gehört jetzt zu der und der Firma und das wird eben mit jedem Request mitgeschickt. Das heißt für jeden Request aufs Neue kann ich quasi verifizieren und gucken, zu welchem Tenant gehört das und dann die Entscheidung treffen, welchen Datentopf ich dann zum Beispiel accesse."
+    },
+    {
+      "end": 1495430,
+      "speaker": "B",
+      "start": 1469280,
+      "text": "Das heißt aber immer noch, dass eigentlich die Entwickler innen darauf achten müssen, in allen SQL Queries zum Beispiel dieses WHERE Statement dran zu haben, weil es ist zwar davor sichergestellt, dass ich jetzt in der Authentifizierung das mitbekomme, zu wem gehört dieser User, aber ich bin natürlich immer noch nicht abgesichert, wenn ich einfach mal als Programmierer jetzt irgendwo da ein WHERE Statement vergiss oder diese WHERE Clause hintendran, dass halt die ID gleich der jeweiligen ID ist."
+    },
+    {
+      "end": 1639510,
+      "speaker": "C",
+      "start": 1495430,
+      "text": "Ganz genau. Und da kommen wir dann so ein bisschen auf das Enforcement dann auch und wirklich auf die Isolation, also das wir wirklich sicherstellen, dass ein Tenant nicht auf die anderen Daten zugreifen kann. Für das Entwicklerproblem sage ich mal ganz generell, dass der Entwickler jedes Mal irgendwie tenant aware sein muss und gucken kann, oh, ich muss gucken, dass das nur für einen Tenant ist. Was wir da häufig sehen ist, dass diese Logik, wo man danach auf die Datentöpfe zugreift in der Library, sage ich mal, abstrahiert sind, dass du quasi immer nur die Library verwendest und die braucht dann schon als Input Parameter eine Tenant ID zum Beispiel. Das heißt, du kannst als Entwickler da nicht anfangen, also dass du nicht bei Accident irgendwie vergisst, die Tenant ID dranzuhängen. Aber jetzt kommen wir zum zweiten Mal, das ist nur eine, das ist mehr so als Entwickler Experience eine bessere Developer Experience. Die Developer Experience sollte aber nicht dein Security Mechanismus sein, dass wenn das jetzt einer vergisst, dass dann trotzdem alles returned wird, weil das könnte für uns als Engineering Invoice, könnte das das Ende bedeuten, wenn da einer eine falsche Query macht und dann sieht er Rechnungen von anderen Kunden. Das heißt, dann kommt es auf das Enforcement drauf an, auf die Tenant Isolation tatsächlich. Und um vielleicht ein bisschen genauer zu erklären, ich habe davor einen wichtigen Punkt weggelassen. Wir hatten ja, ich habe das zugespitzt, Single Tenant war eine Backend Instanz, eine Datenbank pro Kunde. Und dann habe ich das Beispiel gemacht, multitenant, wo ich gesagt habe, das ganze Backend ist geshared, die ganze Datenbank ist geshared, sogar die Rechnungen sind in der gleichen Tabelle. Und das muss aber nicht in der Multi Tenant Anwendung zwangsläufig so sein. Also ich kann die einzelnen Komponenten unterschiedlich partitionieren und isolieren. Das heißt, anstatt dass ich zum Beispiel alle Rechnungen in die gleiche Tabelle schreibe, könnte ich trotzdem hinten eine eigene Datenbank pro Kunde haben und nur den Compute Layer, also die Backend Instanz teilen. Das würde bedeuten, ich kann beliebig pro Komponente entscheiden, wie möchte ich die Datentöpfe quasi oder die Komponenten pro Tenant voneinander abgrenzen. Und dann gibt es verschiedene Isolierungsmechanismen, wie ich das dann auch tatsächlich enforcen kann. Und da gibt es zwei Varianten. Entweder pooled, sagt man da, das heißt, wir teilen uns alles, also zum Beispiel in der Datenbank, wir teilen uns wirklich die Tabelle. Oder es gibt Zylo, sagt man, dass du dann trotzdem noch eine dedizierte Komponente pro Tenant hast, also eine eigene logische Datenbank zum Beispiel, oder eine eigene Tabelle. Also es ist nicht auf den kleinsten gemeinsamen Nenner quasi geshared."
+    },
+    {
+      "end": 1656890,
+      "speaker": "B",
+      "start": 1639830,
+      "text": "Das heißt, du hast dann auch die Sicherheit von der Datenbankseite oder vom Datenbank Layer. Wenn du da ein eigenes Schema machst, dann kannst du den jeweiligen User unter Umständen auch noch trennen. Also dass die Applikation mit einem anderen User zugreift und der User kann dann nur auf ein Schema zugreifen."
+    },
+    {
+      "end": 1738750,
+      "speaker": "C",
+      "start": 1656890,
+      "text": "Richtig. Also das heißt, je nachdem für welches Partitionsmodell ich mich entscheide oder Isolationsmodell, habe ich unterschiedliche Security Mechanismen, um das zu enforcen. Normalerweise, je grob granularer, also je mehr ich zu Silo gehe, desto bessere oder sage ich mal noch explizitere Mechanismen habe ich das zu enforcen. Wie du gerade gesagt hast, hast mit jeder eine eigene Datenbank hat, hat auch jeder eigene Datenbank Credentials. Zum Beispiel, wenn ich jetzt weiter runtergehe auf Tabellenebene, dann mache ich das vielleicht über Rollen und wenn ich jetzt ganz runter gehe auf, sagen wir mal wirklich, wir haben eine Tabelle, wo alle Rechnungen von allen Kunden drin sind, Wir haben ja gesagt, dann muss der Entwickler auffassen, dass er die WHERE Clause nicht macht. Da gibt es schon noch mal zusätzliche Mechanismen, wie so was wie bei Postgres Row Level Security, dass ich schon von vornherein einen gewissen Kontext zu der Session mitgebe und die quasi wie eine Automat Simplifiziere jetzt eine automatische WHERE Clause dranhängt. Das heißt, du musst immer, wenn du die Session aufbaust, den Kontext mitgeben, sagen wir mal Tenant eins und wenn ich dann Select Stern from Invoice mache, kriege ich trotzdem nur die Invoices von dem ersten Tenant im Prinzip. Das heißt, es gibt auch wenn alles geschätzliche Security Mechanismen, das waren jetzt ein paar für, sage ich mal, ganz normale so Open Source Software und in der Cloud gibt es dann noch mal ganz viel feingranularere zum Beispiel, die man da verändert."
+    },
+    {
+      "end": 1761220,
+      "speaker": "A",
+      "start": 1739140,
+      "text": "Ich habe gerade mal nachgeschaut, du definierst bei postgr sogenannte Policies allgemein und die haben dann, ich sag mal, ähnlich wie Grant Statements im mysql Bereich oder ähnliches. Was ich weiß ist, dass bei Clickhouse ebenfalls so eine Row Level Security möglich ist. Gehe stark davon aus, bei, jetzt lehne ich mich mal aus dem Fenster, bei jeder relationalen Datenbank, die was auf sich hält, ist das in irgendeiner Art und."
+    },
+    {
+      "end": 1765740,
+      "speaker": "B",
+      "start": 1761220,
+      "text": "Weise meines Wissens weder mariadb noch mysql hat dieses Feature."
+    },
+    {
+      "end": 1769770,
+      "speaker": "A",
+      "start": 1765740,
+      "text": "Wenn ich aber bei Oracle, glaube ich mal anklopfe, die haben bestimmt auch in."
+    },
+    {
+      "end": 1772370,
+      "speaker": "B",
+      "start": 1769770,
+      "text": "Dem Segment bist du sicher dabei, leichter."
+    },
+    {
+      "end": 1774130,
+      "speaker": "A",
+      "start": 1772370,
+      "text": "Kopiert als selbst entwickelt."
+    },
+    {
+      "end": 1853150,
+      "speaker": "C",
+      "start": 1774130,
+      "text": "Von daher, was man dazu sagen kann, das war jetzt eben auf der Datenbankebene und da gibt es natürlich viele Möglichkeiten, wenn ich jetzt zum Beispiel in der Cloud bin, da gibt es ja meistens schon rollenbasierte Konzepte. Das heißt, wenn ich zum Beispiel auf eine, ich nehme jetzt mal dynamodb zum Beispiel, eine nosql Datenbank als Beispiel, da greife ich normalerweise zum Beispiel mit einer SDK schon von Haus aus zu, also im Prinzip greife ich dann nicht mehr normal plain JDBC wie in meiner normalen Datenbank, sondern ich habe quasi ein API Call zu dem dynamodb Service, wo ich mir dann diese Records raushole und da gibt es dann in den Clouds dann meistens schon ein Berechtigungskonzept, dass ich diesen HTTP API basierten Request quasi um die Daten rauszuholen, mit Permission so einschränken kann, dass es auch nur möglich ist, dass ich mir diese Records mit diesem Präfix zum Beispiel rausholen. Also man kennt vielleicht das Beispiel auch S, also filestorisch, dann kann ich die Rolle, die mein Service einnimmt, wenn er denn auf S zugreift, schon so einschränken, dass er auch nur aus diesem Bucket für diesen Kunden diese Files rausholen kann. Das heißt, selbst wenn irgendjemand eine Where Clause oder irgendwas vergisst, es ist einfach technisch durch die Rolleneinschränkung nicht möglich, dass ich mehr Daten, wie ich explizite Anfrage quasi rausholen kann."
+    },
+    {
+      "end": 1879830,
+      "speaker": "A",
+      "start": 1853150,
+      "text": "Wer zu dem Thema ein bisschen mehr wissen möchte, wir haben in der Episode ein hundert acht und neunzig mal sehr tief über Role Based Access Control gesprochen, was dann in diesem Fall diese Art von Policy Systeme, von der Max gerade spricht, auch sind. Und da habe ich mein Lieblings Policy System genannt, Caspin, haben wir auch sehr gutes Feedback bekommen, dass das a joy of use ist. Also wer sowas mal implementieren möchte, kann da gerne den Hasenbau runtergehen. Episode ein hundert acht und neunzig verlinkt man natürlich auch in den Shownotes."
+    },
+    {
+      "end": 1919500,
+      "speaker": "C",
+      "start": 1879990,
+      "text": "Ganz wichtig nochmal vielleicht eben Multi Talent Anwendung heißt nicht, dass alles jeder Komponente komplett geshared ist, sondern ich kann das wirklich beliebig teilen. Ich kann mir den Compute Layer teilen, die Datenbank nicht, ich kann mir den Message Layer, also wenn wir jetzt ein Kafka Cluster haben, dann kann ich den teilen. Im Kafka Cluster könnte ich dann entscheiden, möchte ich ein Topic teilen oder ein Topic pro Tenant. Das heißt, ich kann diese Modelle dieser Isolation und dieser Partition beliebig pro Komponente entscheiden, wo das Sinn macht. Also das ist noch mal ein ganz wichtiger Punkt, gerade wenn wir sagen, okay, wir möchten vielleicht die Database Records, das soll alles geshared werden, aber die Files möchten wir mit einem eigenen Encryption Key pro Kunde separat ablegen, dann kann ich das trotzdem weiterhin."
+    },
+    {
+      "end": 1943970,
+      "speaker": "A",
+      "start": 1920370,
+      "text": "Aber ich meine, du hast ja jetzt natürlich zwei Extreme beschrieben. Du hattest das eine Pool genannt, du hast ein Set von Infrastrukturen, da lässt du alle Leute drauf, noisy Neighbor und so weiter und so fort. Das ist das eine Extrem. Das andere Extrem ist ja SILO, wo du ich sag mal, jeder Tenant kriegt sein eigenes Setup in der Cloud, alles gut und aus der Politik lernt man. Also Extreme sind immer ein bisschen schwierig."
+    },
+    {
+      "end": 1945090,
+      "speaker": "C",
+      "start": 1944130,
+      "text": "Ja, richtig."
+    },
+    {
+      "end": 1952510,
+      "speaker": "A",
+      "start": 1945090,
+      "text": "Wie sieht es denn in der Praxis bei Multitenant Deployment Modellen aus? Gibt es da auch einen Mittelweg gibt es da die SPD und CDU Multideployments."
+    },
+    {
+      "end": 1959670,
+      "speaker": "B",
+      "start": 1952990,
+      "text": "Beziehungsweise wie finde ich die Balance zwischen den beiden Extremen? Also wie finde ich diese Mitte oder was ist für mich die beste Mitte?"
+    },
+    {
+      "end": 2048170,
+      "speaker": "C",
+      "start": 1959670,
+      "text": "Ja, also es ist wirklich tatsächlich eine Komponentenentscheidung. Ich hatte es vorher kurz schon umrissen, Wir können uns pro Komponente entscheiden, wie wir das machen wollen. Das heißt, wie gesagt, ich kann sagen, wir machen den Compute Layer, wo unsere Anwendungsinstanz läuft, den share ich komplett, da kommen einfach alle drauf. Dann habe ich aber vielleicht bestimmte Requirements auf der Datenbank oder eben für den Files, wo ich sage, ah, da möchte vielleicht die Kunden ihren eigenen Encryption Key mitbringen, dass ihre Files dediziert nur für sie in dem Bucket so zum Beispiel verschlüsselt sind, dann mache ich da die Entscheidung, okay, hier mache ich Zylo, dann haben wir aber vielleicht noch eine Komponente in unserem System. Ich habe das Kafka Cluster angesprochen, wenn wir das jetzt super fancy designt haben und wir haben drei Node Kafka Cluster, dann wird es relativ teuer, wenn ich jetzt jedem Kunden ein eigenes Kafka Cluster hinstelle. Das heißt, dass man, normalerweise teilt man das nicht so grob granular, aber dann kann ich entscheiden, okay, innerhalb des Kafka Clusters möchte ich jetzt wie gesagt ein Topic pro Kunde haben oder würde mein Use Case das erlauben, dass ich zum Beispiel share. Also dass man guckt sich wirklich Komponente für Komponente an und sagt, welches Partition bzw. Isolationsmodell möchten wir haben und da macht man einfach diese Trade off Entscheidung, die wir jetzt gerade besprochen haben, wo sind noisy Neighbors mehr relevant, wo nicht, wo sind die Isolationsmechanismen bessere, je nachdem wie gröber ich das Modell wähle und was sind die operativen Aspekte davon und halt dann auch die Kostenaspekte. Also man kann es wirklich pro Komponente dann entscheiden."
+    },
+    {
+      "end": 2101520,
+      "speaker": "B",
+      "start": 2048250,
+      "text": "Der Nachteil ist natürlich, dass wenn ich jetzt irgendwo splitte und teile, dass ich tendenziell natürlich mehr Ressourcen verbrauche, mehr Kosten und die will ja das eigentlich optimieren. Das heißt, ich will ja möglichst meine Ressourcen in irgendeinem Bereich möglichst ausnutzen, so dass ich meinen Kunden möglichst gute Service biete, aber immerhin meine Ressourcen auch noch so ausnütze, dass das möglichst optimiert ist. Und wenn ich jetzt kein Serverless habe, wo das vielleicht unter Anführungszeichen automatisch im Hintergrund irgendwie optimiert wird, sondern ich selber optimieren will. Wie mache ich denn dann die Aufteilung? Gerade wenn es um Noise Enabler zum Beispiel geht. Ich habe irgendeinen Client, der verrückt spielt oder wir hatten gerade kürzlich in der Episode ddos Attacken einen Client, ein Tenant wird jetzt angegriffen mit einer ddos Attacke. Wie stelle ich sicher, dass das jetzt nicht alle meine Tenants trifft, also meine ganzen ein hundert Kunden oder ein tausend Kunden, wenn ein Kunde verrückt spielt."
+    },
+    {
+      "end": 2123479,
+      "speaker": "C",
+      "start": 2101520,
+      "text": "Genau, da können wir gerne über diesen Blast Radius Effekt können wir gerne sprechen. Also du hast natürlich vollkommen recht. Also angenommen, wenn ich jetzt, wir haben gesagt davor das Extrembeispiele, alles ist komplett geshared und wir haben jetzt ein tausend Kunden zum Beispiel drauf oder sagen wir, sagen wir mal zuerst mal, dass wir schuld sind. Also es gibt jetzt noch kein noisy neighbor, aber sagen wir, wir sind schuld, wir haben Praktikant eingestellt und der, der hat jetzt die Datenbank irgendwie gelöscht, dann."
+    },
+    {
+      "end": 2127919,
+      "speaker": "B",
+      "start": 2123479,
+      "text": "Sind jetzt die so wie du das damals gemacht hast oder auch nicht mal Praktikanten."
+    },
+    {
+      "end": 2261900,
+      "speaker": "C",
+      "start": 2127919,
+      "text": "Genau, ich kann es auch selber gewesen sein in unserem Startup und ich habe jetzt die Datenbank gelöscht, dann ist jetzt natürlich blöd, weil dann haben wir Kunden, also ein hundert Prozent unserer Kunden sind quasi betroffen. Also das hat auch noch nichts damit zu tun, dass die Anwendung nicht resilient designt wurde. Also wir haben vielleicht schon ein Kubernetes Cluster, wir haben das hochreduziert, dann verfügt da, wir haben Primary, Secondary, wir haben das alles berücksichtigt, aber es gibt immer unknown unknowns, es kann immer mal was passieren und irgendwie wird die Komponente infekted. Wir haben zwar alles getestet, aber das wird einfach mal passieren, dass irgendwas nicht geht. Und wenn dann ein hundert Prozent unserer Tenants effected sind, ist das natürlich ein Problem. Wenn das dann fünfzig sind, dann ist das noch viel größeres Problem. Das heißt, eine Variante, wie das funktioniert. Ein ganz modernes Beispiel ist Cell Based Architectures. Das heißt, was wir tun können ist, anstatt ein hundert Prozent unserer Kunden auf unsere Anwendungstanz zu lassen, ist, wir erstellen wir Zellen. Das heißt wir Zelle eins ist wirklich komplett isoliertes Deployment mit unserem Backend, mit unserer Datenbank, aber da kommen jetzt fünf tausend Kunden drauf und wir haben Zelle zwei, da kommen die anderen fünf tausend Kunden drauf Und jetzt, also angenommen, ich würde jetzt die Production Database löschen, dann sage ich mal jetzt in einer Zelle, dann sind nur noch fünfzig Prozent unserer Kunden betroffen. Das heißt, ich fange eigentlich an, dass grob granular ab irgendwann erreiche ich einen Punkt, da kann ich es mir nicht leisten, dass ein Konfigurationsfelder ein hundert Prozent unserer Tenants auf. Das heißt, ich fange an, das in Buckets aufzuteilen Und das können Buckets sein, die kann ich jetzt beliebig, da können wir gleich drüber reden, was ist eine gute Zellengröße, wie groß soll das sein. Manchmal hat man, das kennt ihr vielleicht ganz natürlich, dass man sagt, ich habe Cluster oder eine Instanz für alle Kunden in USA und ich habe einen Cluster, der ist nur für die in die EU, das läuft irgendwie in Frankfurt und das andere in Asien. Das heißt, hier habe ich schon natürlich getrennte Bereiche oder Zellen, dass wenn was in Asien passiert, dann sind normalerweise die nordamerikanischen Kunden und die europäischen nicht betroffen, Aber ich kann das natürlich logisch auch innerhalb einer REG weiter aufbauen."
+    },
+    {
+      "end": 2323910,
+      "speaker": "A",
+      "start": 2261900,
+      "text": "Die Balance zu finden, wo man welchen Kunden jetzt hinpackt in welche Zelle, ist natürlich schon echt tricky. Wenn du das jetzt nicht geografisch machst, sondern ich sag mal nach Registrierungsdatum die ersten fünf tausend dahin und dann machst du irgendwann eine zweite Zelle auf und du wächst mit deinem Star. Wir wachsen, wir wachsen und wir haben jetzt Kunden, ab dem ersten Kunden machen wir eine dritte Zelle auf, dann hast du ja irgendwie dieses, boah, ich glaube es war das Dell or Taylor Swift Problem von Twitter damals, dass du einen Kunden hast, der so viel Rechnungen schreibt bei uns jetzt so viel Last macht, dass er einfach die Usage, ich sag mal, explodieren lässt im Vergleich zu den anderen, dass du vier tausend neun und neunzig schlafende Kunden hast und einen, der ist Power User, also dass du eine Imbalance hast in diesen Zellen. Was ist, wenn ich aus den fünf tausend Kunden vielleicht zweieinhalb tausend Power User habe, dann ist diese Zelle natürlich dauerhaft unter Strom und mit noisy Neighbor und so weiter, weil das noisy Neighbor Problem hast ja bei den fünf tausend Kunden."
+    },
+    {
+      "end": 2339550,
+      "speaker": "C",
+      "start": 2323910,
+      "text": "Ja immer noch, das ist immer noch da. Genau, da können wir dann noch drauf eingehen, wie wir das lösen können. Aber zu deiner Frage jetzt ein wichtiger Aspekt ist ja auch Cell Migrations dann. Also ich brauche die Flexibilität, dass ich Kunden zwischen Zellen verschieben kann zum Beispiel."
+    },
+    {
+      "end": 2340910,
+      "speaker": "A",
+      "start": 2339550,
+      "text": "Das wäre nämlich genau mein nächster Punkt."
+    },
+    {
+      "end": 2341230,
+      "speaker": "B",
+      "start": 2340910,
+      "text": "Gewesen."
+    },
+    {
+      "end": 2346680,
+      "speaker": "A",
+      "start": 2341710,
+      "text": "Wie sagst du, okay, der Kunde ist so groß geworden, ich migriere den Weg, der kriegt seine eigene Zelle."
+    },
+    {
+      "end": 2513260,
+      "speaker": "C",
+      "start": 2346680,
+      "text": "Genau, richtig. Und du hast gerade auch einen ganz wichtigen Punkt angesprochen, Multimand oder jetzt halt, sagen wir mal, in dem Fall auch dieses zellenbasierte Design, schreibt mir nicht vor, wie viele jetzt unbedingt in einer Zelle, sag ich mal, sagen. Ich könnte ja theoretisch für diesen Super Heavy Hitter, könnte ich ja theoretisch auch quasi eine eigene Zelle dann zur Verfügung stellen. Theoretisch. Also hier ist dann wichtig, wie du gesagt hast, wenn die komplett unterschiedlich ausgelastet sind, könnte ich dann im Prinzip die Tenants zwischen diesen Zellen, sage ich mal, migrieren. Ein wichtiger Aspekt dieser Zellen ist zum Beispiel, dass sie eine Maximalgröße haben, also eine Maximalgröße, wie sie, sage ich mal, von der Notize zum Beispiel sein soll. Und das gibt uns jetzt einen sehr großen Vorteil. Ihr kennt das wahrscheinlich, man sagt immer das DEP System, da kann ich jetzt nicht so gut testen, weil Prod hat jetzt viel mehr Daten zum Beispiel, also das ist überhaupt nicht der gleiche Stand, ich kann das überhaupt nicht replizieren. Wenn ich aber sage, eine Zelle geht nicht über eine bestimmte Größe hinaus, habe ich einen Mehrwert, weil ich sagen kann, ich habe ein testbares Maximalkonstrukt sozusagen. Und das kann gerade für den Test Lifecycle sehr und für, sage ich mal, Szenarien auszuprobieren, sehr hilfreich sein. Und ein anderer Aspekt, den wir jetzt vielleicht noch gar nicht eingebaut haben vorher quasi auch das jetzt auch hat noch nicht so viel mit den Zellen direkt zu tun, ist, dass es ja üblicherweise auch Tearing bei Software as a Service Anwendung. Das heißt, es kann ein Basic Tier geben, wo alle Tenants sich zum Beispiel was sharen und dann gibt es aber noch ein Premium Tier zum Beispiel und dann kann es aber auch ein Enterprise Tier geben, wo dann vielleicht wirklich dieser Enterprise Kunde seinen komplett eigenen separaten Stack zum Beispiel bekommt, aber er bezahlt auch dafür, also er bezahlt dadurch auch mehr, dass wir für den den separaten Stack deployen, aber die Multi Tenant Anwendung macht es erstmal überhaupt möglich, dass wir das können. Weil ich habe das in dem Vortrag, den du am Anfang angesprochen hast, so sage ich mal, definiert mit Multi Tenant Systems, a better Single Tenant systems, weil ich gesagt habe, wenn ich ein Multitenant System nur für einen Kunden deploye, habe ich zwar diese Single Tenant Semantics, also ich habe quasi keine noisy Navas, es ist eigenständig für diesen Kunden, kann aber trotzdem entscheiden, dass ich die Multitenant Variante in der zweiten Instanz dann nur für die Basic Kunden und die Scheren sich dann alles zur Verfügung stellen kann. Das heißt, es hat dann auch oft dieses Tiering, unterschiedliche Pricing kommt dann hinzu. Wenn du jetzt eben sagst, wir haben diesen supergroßen Kunden, der alles irgendwie super viele Requests, dann normalerweise handhaben wir den auch anders wie die anderen und würden den jetzt nicht unbedingt in die gleiche Zelle mit den Startup Kunden irgendwie reinlegen, um den Link zur Zelle wieder zurückzumachen."
+    },
+    {
+      "end": 2536040,
+      "speaker": "A",
+      "start": 2513260,
+      "text": "Aber dieses zellbasierte System erlaubt uns ja eigentlich auch, angenommen wir haben jetzt die Kunden nach Premium und Free Tier unterschieden, alle Free Tier Leute kommen in eine Zelle Premium da drüben, dass ich Konfigurationsänderungen ja erstmal nur auf dem Free Tier teste, weil wenn die mir wegrennen, dann ist es jetzt nicht so schlimm, wie als wenn der Premium Kunde mir wegrennt, oder? Also ich sag mal, böse gedacht."
+    },
+    {
+      "end": 2614580,
+      "speaker": "C",
+      "start": 2536040,
+      "text": "Ja genau. Also das ist, man kann es noch eine Stufe vorher machen. Also was ich auch sehe ist zum Beispiel, man sagt, eat your own dog food. Das heißt, wenn wir jetzt Engineering Kiosk sind, wir können ja selber Engineering Kiosk auch verwenden und dann hat man üblicherweise eine Zelle, wo nur quasi unsere Version der Software, also unsere eigene Instanz drin sind und dann kann ich mal erstmal alles erstmal zu unserer Instanz ausrollen oder sagen wir mal zu den Kunden, die uns besonders gut gesinnt sind oder die irgendwie ein Beta Agreement mit uns haben, dass sie immer die experimentellen Versionen bekommen, dann kann ich das erstmal dahin ausrollen. Das ist ein ganz wichtiger Aspekt, dieses Rollout in Waves. Ich kann sagen, ich rolle die Sache zuerst in, sage ich mal, die Devzelle zuerst, dann die Dog Fooding Zelle, dann zu den Beta Kunden, dann erstmal zu den amerikanischen Zelle, dann zur europäischen Zelle und erst dann im Prinzip fange ich an, das über alle Zellen auszuholen. Das heißt, ich habe ein viel kontrollierteres Rollout von Änderungen und habe nur, ich werde quasi immer größer, je nachdem, wenn eine Zelle vorbei ist, mache ich zwei Zellen auf einmal, vier Zellen auf einmal. Das heißt, ich gewinne quasi eine größere Kontrolle über mein Rollout. Das ist ein weiterer Vorteil, warum Zellen ein ganz tolles Konzept eigentlich sind."
+    },
+    {
+      "end": 2670560,
+      "speaker": "B",
+      "start": 2614900,
+      "text": "Ich bin ja jetzt der Älteste in der Runde und ich habe in den er Jahren auch so diese ganze Skalierungswelle so mitbekommen und da war das damals eigentlich so die einzige Möglichkeit, wie man skalieren konnte. Man hat halt einen zweiten Server aufgestellt, die Hälfte der Kunden auf den ersten Server, die andere Hälfte auf den zweiten und dann kam ja irgendwie so die Cloud und ganzen Cluster Lösungen und die hatte eine Cluster Datenbank. Das heißt, ich hatte nur mehr eine Datenbank und konnte da alle meine Kunden reinschmeissen. Was ja du jetzt eigentlich sagst mit dem ganzen Ansatz ist ja schon eher, dass man wieder zurück in diese Oldschool Skalierung geht, würde ich mal sagen, weil man da extrem viele Vorteile daraus ziehen kann. Also besseres Deployment, feingranularere Rollouts, dass sie einen kleineren Blast Radius habe und so weiter. Also dass meine Skalierung vielleicht über die klassische Cluster Variante und alles in einen großen Cluster Cluster gar nicht unbedingt die beste Variante ist, wenn ich dich richtig verstehe."
+    },
+    {
+      "end": 2721420,
+      "speaker": "C",
+      "start": 2670800,
+      "text": "Können wir natürlich diskutieren, Aber im Prinzip, wir reden immer noch von sehr sehr großen Clustern innerhalb einer Zelle normalerweise würde ich sagen. Also das heißt, ich kann ganz viele dieser Benefits mitnehmen, Resource Sharing, Cluster Redundancy und so weiter, aber irgendwann habe ich halt einfach diesen Punkt erreicht. Wie gesagt, wir haben, selbst wenn wir Redundancy im Kubernetes Cluster haben, wenn ich ein Upgrade von dem Cluster Plugin mache und das geht nicht, dann ist das ganze Cluster einfach Effekt. Das heiß ich habe zwar einen Trade off, ich bekomme zwar, ich musste mir quasi noch mal ein zweites Cluster hinstellen, das heißt, mein operational Aufwand erhöht sich, meine Komplexität erhöht sich, aber ich kriege halt dadurch die Sicherheit und einen kleineren Blast Trade. Das ist am Ende des Tages wieder eine Abwägung zwischen diesen Punkten. Aber die anderen Konzepte, die du erwähnt hast, sind innerhalb einer Zelle dadurch nicht irrelevant, Die sind trotzdem noch fundamental wichtig natürlich."
+    },
+    {
+      "end": 2801080,
+      "speaker": "B",
+      "start": 2721420,
+      "text": "Aber wenn du jetzt sagst, okay, du könntest in einer Zelle hast du, wenn du jetzt im Datenbank Jargon bleibst, du hast einen Primary Server Node, wie du es auch immer sagst, und einen Secondary, der gespiegelt ist und das parallel in mehreren Zellen nebeneinander. Das ist natürlich eine einfachere Art dann zu skalieren, als du kommst mit einem riesen Datenbank Cluster um die Ecke. Multimaster heißt dann eigentlich Multi Primary, nachdem er Master nicht mehr sagen sollte, egal, ihr wisst, was ich meine, der viel komplexer zu handeln ist. Das heißt, ich kann da natürlich auch die Komplexität reduzieren. Natürlich habe ich die Automatisierung, die noch mitspielen muss, aber die habe ich vielleicht sowieso und kann dadurch die Komplexität auf der Datenbankebene reduzieren, vielleicht sogar mehr Performance rausholen, weil das eine klassische Primary Secondary Infrastruktur ist, die wahrscheinlich schneller ist als ein Multimaster Setup und kann daher also diese klassische Skalierungsart oder diese, ich würde mal sagen, wo viele vielleicht heutzutage sagen würden, das ist doch oldschool irgendwie das zu trennen nach deinen Kunden und dann hast du die Komplexität und das macht doch heutzutage keiner mehr. Wo wir die coolen großen Clustersysteme haben, wie gesagt, dass das alte wieder vielleicht auch Mehrwert hat und in Kombination mit den neuen Technologien durchaus immer noch Sinn macht, würde ich mal sagen."
+    },
+    {
+      "end": 2851430,
+      "speaker": "C",
+      "start": 2801080,
+      "text": "Ja, es macht auf jeden Fall noch Sinn in dem Bereich auf jeden Fall, weil gerade eben, wir hatten ja gerade dieses angesprochen, dieses, sagen wir mal, wenn wir es zuspitzen, ein unlimited großer Cluster Size, wie will ich das testen? Das heißt, ich habe ja immer zwischen meiner Dev Environment oder irgendeinem anderen Environment, wo ich vielleicht was testen möchte, habe ich ja immer eine riesen Diskrepanz, wenn ich quasi eine Anwendung beliebig wachsen lasse, also unendlich wachsen lassen. Und dadurch finde ich, da finde ich dieses Zellen Design dann wieder eben interessant oder auch elegant, dass ich sagen will, ich kann gar nicht größere Clusters wie Punkt X haben. Dieser Punkt X ist aber erst natürlich wichtig herauszufinden, also wie groß möchte ich das Cluster wachsen lassen, wie ich sage, hier ist Schluss, jetzt habe ich eine neue Zelle, aber ich gewinne, wie du sagst, es wird auch einfacher dadurch, ich kann das besser testen und so weiter, ich kann bessere Rollout machen. Also auf jeden Fall."
+    },
+    {
+      "end": 2864950,
+      "speaker": "A",
+      "start": 2851510,
+      "text": "Wolfgang, ich möchte dich ganz kurz daran erinnern, du bist unser Tech Lead, wenn du sagst, du bist der Älteste, dann heißt das nicht, dass das negativ ist, sondern du hast die meiste Erfahrung. Ich möchte das als CEO nur noch mal sagen, dass das hier, das ist."
+    },
+    {
+      "end": 2866230,
+      "speaker": "B",
+      "start": 2864950,
+      "text": "Schöne Worte vom CEO."
+    },
+    {
+      "end": 2929370,
+      "speaker": "A",
+      "start": 2868760,
+      "text": "Jetzt ist es natürlich so, du verkaufst jetzt hier die Cell Based Architecture als geschnitten Brot, ist eine super Sache. Wir haben aber auch schon gesagt, das braucht enorm viel Tooling. Du musst dir sehr viel Gedanken machen über die Trade offs vorher operationell, weil eine Instanz von Engineering Invoice zu betreiben ist einfacher, weil es ist eine komplexe Microservice Architektur, das unser Tech Lead da gebaut hat und dann sehr wahrscheinlich noch auf Node und JavaScript. Deswegen brauchen wir sehr viel Ressourcen. Auf jeden Fall frage ich mich halt gerade, was gibt es denn für Situationen, in denen sich der Aufwand für das Multitenant Setup überhaupt nicht lohnt für uns als Engineering Invoice, weil wir brauchen Tooling, um Kunden umzuziehen. Wir müssen mehrere Cluster upgraden. Natürlich haben wir diese Deployment Vorteile und Blast Radius und all sowas, aber geschnitten Brot wird es nicht, sonst wäre ja jedes System von Haus aus ein Multitenant System."
+    },
+    {
+      "end": 2939770,
+      "speaker": "B",
+      "start": 2930010,
+      "text": "Die klassische Antwort, die jetzt von Max kommen muss, ist eigentlich, es ist nur ein Problem, wenn du nicht bei AWS bist, weil bei EWS bekommst du das natürlich alles automatisch out of the box, dieses ganze Tool."
+    },
+    {
+      "end": 2954280,
+      "speaker": "C",
+      "start": 2940570,
+      "text": "Es ist natürlich ein Tooling und Automatisierungsaufwand. Ich möchte jetzt hier nochmal differenzieren. Du hast jetzt gesagt, Multitenant ist jetzt nicht gleichzusetzen wie mit Multicell Architektur in dem Fall. Also wenn ich die Frage richtig verstehe, ging das jetzt eher in die Multi Cell Richtung."
+    },
+    {
+      "end": 2985190,
+      "speaker": "A",
+      "start": 2954750,
+      "text": "Ich hatte sie eigentlich gedacht in dem Multitenant Overall. Du sagtest zwar Multitenant Systeme sind bessere Single Tenant Systeme, war der Satz, glaube ich, den mag ich sehr, diesen Leitsatz. Ich bin aber auch ein sehr simplifizierter Mensch in der Hinsicht. Von daher, also prinzipiell war die Idee eigentlich nur, wann lohnt sich der Aufwand nicht, diese Multitenant Architektur, Multitenant Systematik zu implementieren. Aber ich mag deine Frage auch, wann sich die Multicell Architektur eigentlich gar nicht lohnt. Das ist auch eine sehr interessante Frage. Vielleicht starten wir damit."
+    },
+    {
+      "end": 3126080,
+      "speaker": "C",
+      "start": 2985190,
+      "text": "Genau, also ist halt wirklich, wenn, also das betrifft dann schon eine Skalierung, wo wir wirklich irgendwie von Leuten, Kunden jetzt sage ich mal, oder aufwärts, sage ich mal, sprechen, aber muss nicht unbedingt an der Nummer oder Anzahl der Kunden liegen, sondern es geht darum, wann wird das ein Problem, wann wird das vielleicht auch ein SLA Problem. Also wir geben ja als Service vielleicht auch eine gewisse, sage ich mal, Richtlinie, wie wir garantieren, wann unser Service, sage ich mal, wie hoch er verfügbar sein muss. Und wenn wir jetzt jede Woche irgendwie ein Incident in der prodb haben und das betrifft alle Kunden auf einmal, dann habe ich ja im Prinzip auch ein Problem, meine slas einzuhalten. Also das, was ich quasi den Kunden auch verspreche, die Uptime der Software und so weiter. Das heißt ich würde immer simpel anfangen. Man kann ja theoretisch mit einer deine sage ich mal die Anwendung, die jetzt noch keine Zelle hat, das kann ja deine Cell Zero sein oder deine Zell eins später mal. Das heißt du kannst dich ja schon mal vorbereiten. Du kannst ganz normal ein Cluster so wie es gebaut haben, komplett geshared alles bauen und du hast ja vorher, da haben wir jetzt noch nicht drüber gesprochen, ich muss ja irgendwo entscheiden, auf welche Zelle welcher Kunde geroutet wird und ich kann ganz simplen vor das kann ich auf dem CDN teilweise schon machen, dass ich sage hier sage ich dieser Tenant kommt auf dieses Cluster und das kann bis das kann die ersten zwei Jahre für Engineering Invoice, wo wir wachsen, das kann drei Jahre, vier Jahre, das kann die ganze Zeit dieses eine Cluster bleiben. Aber wenn wir irgendwann merken, oh, das könnte ein Problem werden werden, fahren wir im zweiten Cluster hoch und fangen an dem Routing Layer dann an die neuen Kunden zum Beispiel umzuleiten. Das heißt, es ist immer so mit dem einfachsten wie möglich anfangen. Also auch noch mal vorher zu dieser Pooled versus Silo Frage. Fang mit Pool an, wenn du denkt das funktioniert, aber halte die Flexibilität offen, dass wenn sich deine Anforderungen ändern, du einfach flexibel bleibst. Und deswegen meinte ich mit dem Multitenant System, Sabelta Single Tenant System, mit dem Multitenant System bin ich flexibel, dass ich irgendwann diese Multitenant Instanz separat für einen einzelnen Kunden zur Verfügung stelle. Das habe ich im traditionellen Single Tenant Design nicht. Da kann ich später nicht entscheiden, oh, jetzt hätte ich aber gerne, dass zwei Kunden auf diese Instanz zugreifen. Das habe ich nicht. Das heißt, ich habe einfach mit der Multitenant habe ich mehr Optionen und das meinte ich mit Beta in diesem direkten Vergleich."
+    },
+    {
+      "end": 3130240,
+      "speaker": "A",
+      "start": 3126480,
+      "text": "Max, erinnere mich bitte noch mal, was warst du noch mal im Engineering Invoice?"
+    },
+    {
+      "end": 3131460,
+      "speaker": "C",
+      "start": 3130320,
+      "text": "Ich habe irgendwas mit Cloud gemacht."
+    },
+    {
+      "end": 3201170,
+      "speaker": "A",
+      "start": 3132570,
+      "text": "Genau, du hast irgendwas mit Cloud gemacht, Du bist der Infrastrukturmensch. Genau das war das folgendermass Ich als CEO, ich habe dir sehr gerne zugehört, als du gerade eine Predigt gehalten hast. Wir starten erstmal simpel, weil simpel heißt für mich immer, wir kommen schnell an den Markt, wir kriegen schnell also wenig Aufwand, viel Return und dann hast du was gesagt. Das haben meine CEO Ohren nicht ganz verstanden. Dass wir irgendwie ganz viel investieren müssen, weil wir irgendwie eine Grundarchitektur unten drunter abändern müssen. Kannst du mir das noch mal, kannst du dich vielleicht mal mit dem Tech Lead austauschen, wie ihr als Techies mir diese ganzen komplexen Thematiken, wie man darunter, wir skalieren nicht mehr, das will ich alles gar nicht hören. Wie macht ihr mir das schmackhaft als Management? Weil ihr müsst ja jetzt alle Projekte, die ich in meinem Kopf bereits habe, wir müssen jetzt on hold legen, weil ihr jetzt von einer poolbasierten zu einer zellbasierten Struktur und wir müssen neue Tenants aufsetzen und neue Infrastruktur. Erzählt mir die ganze Zeit von irgendwas von Serverless und so. Ich möchte das alles gar nicht hören. Ich möchte Time to Market und mehr Customer so, also wie verkauft mir das? Wir sind ganz simpel gestartet. Habt ihr euren Job nicht ordentlich gemacht oder wie darf ich das jetzt verstehen?"
+    },
+    {
+      "end": 3222290,
+      "speaker": "B",
+      "start": 3201250,
+      "text": "Da merkt man wieder, dass der CEO einfach nicht zugehört hat, weil wir haben das ja initial schon mit geplant. Natürlich. Also wir hatten das ja am Anfang, darum haben wir da, obwohl wir nur einen Note haben, haben wir schon Load Balancer davor gesetzt, weil der sowieso braucht sowieso eine SSL Termine, da haben wir einen Proxy und jetzt können wir ganz einfach hinten, weil wir schon ein Ansible Skript haben, können wir einfach eine zweite Infra hochfahren."
+    },
+    {
+      "end": 3269630,
+      "speaker": "A",
+      "start": 3222290,
+      "text": "Wolfgang, es ist wie immer, ich höre euch, ich verstehe euch aber nicht mal ganz im Ernst. Welche Tipps würdest du denn Leuten wie dir als Cloud Engineer und dem Wolfgang als Tech Lead geben, damit die ihrem Vorgesetzten, ihrem Engineering Manager, ihrer Direktorin, ihrer CEO wirklich, ich sag mal, erklären können, okay, diese initiale Architektur, die wir gebaut haben, die reicht nicht mehr, Blast Radies und allem drum und dran, weil diese ganzen Überlegungen, die ganzen Fragen, die du aufgeworfen hast, also du rennst offene Türen bei mir ein, ich würde dich gerne umarmen für diese Reliability Fragen, aber oft in höheren Management Ebenen. Die wollen halt Zahlen nach oben sehen und Graphen nach oben gehen und in der Regel sind das Geldgrafen und nicht Reliability Graphen."
+    },
+    {
+      "end": 3365900,
+      "speaker": "C",
+      "start": 3270230,
+      "text": "Das stimmt, Aber ich denke, meistens ist es ja schon dann auch für den CEO ein Problem, wenn er merkt, dass die ganze Anwendung für die Kunden auf einmal nicht mehr geht. Also ich denke, dadurch kriegt das schon auch einen gewissen, sag ich mal, Layer of Urgency, warum man sich dann nochmal auf Infrastruktur damit beschäftigen sollte, die Blast Radios zu minimieren. Wie gesagt, es ist ja eine schlechte Customer Experience, wenn auf einmal wir machen einen Fehler, wir haben irgendwie neue Entwickler geonboarded irgendwie, wir haben irgendeinen Konfigurationsfehler und jetzt sind ein hundert Prozent, unser ganzes Unternehmen ist down. Also es kann de facto nicht mehr verwendet werden. Und dann ist es, glaube ich, schon auch ein Problem aus der Produktseite, dass wir uns dahingegen absichern. Und eine Sache, das ist eben nur eine Variante, wie sich abgesichert werden kann für Fehler, die wir jetzt zum Beispiel machen, sind eben diese Zellen. Aber wie gesagt, wir können simpel anfangen. Wir müssen nur, und das ist eben quasi auch, sage ich mal, meinen Ratschlag, versuchen so flexibel, flexibel wie möglich zu bleiben und keine, wir sagen bei Amazon sagen wir One Way Door Decisions. Das heißt, wenn wir die Entscheidung getroffen haben, können wir später nichts mehr dran ändern oder haben wir eine Two Way Door. Also wir haben eine Lösung geschaffen, wo wir später flexibel auf unseren neuen Markt, neue Kunden zum Beispiel reagieren können. Und das ist einfach wichtig generell bei Software. Das hat gar nichts mit Multi Tenant oder Zellen oder sonstiges zu tun. Es geht immer darum zu versuchen, mir möglichst viele Optionen offen zu halten. Aber start simple, fang mit dem einfachsten versuch ich mal an. Aber vergiss nicht die Flexibilität, die ist wichtig."
+    },
+    {
+      "end": 3368780,
+      "speaker": "A",
+      "start": 3366380,
+      "text": "Wolfgang, möchtest du die Episodenwerbung machen oder?"
+    },
+    {
+      "end": 3375180,
+      "speaker": "B",
+      "start": 3368780,
+      "text": "Ja, ihr habt nicht alle unsere Episoden auswendig im Kopf, was es für Nummer war, die Entscheidungs Episode, weißt du es auswendig?"
+    },
+    {
+      "end": 3398780,
+      "speaker": "A",
+      "start": 3375180,
+      "text": "Ich habe gerade nachgeguckt, Episode zwei hundert sechs haben wir ganz genau über diese One Way Door, Two Day Door Decisions unter anderem auch gesprochen. Und ich finde es sehr schön, weil der Wolfgang und ich, wir haben beide nicht bei Amazon gearbeitet und wir hatten auch den Shareholder Letter von Jeff Bezos damals als Root Cause für diese Sache rausgeholt Und ich finde das sehr schön, dass das jetzt eine, wie soll man sagen, eine Bestätigung ist, dass das anscheinend doch Anklang findet."
+    },
+    {
+      "end": 3432960,
+      "speaker": "B",
+      "start": 3398780,
+      "text": "Jetzt hast du davon gesprochen, den Blast Radius zu reduzieren, damit der CEO oder Andi glücklich ist, damit wir unsere slas einhalten können. Aber das Problem hast du jetzt immer noch, wenn du Mandanten in einer Zelle zum Beispiel hast, dann hast du ja immer noch das Problem, wenn einer verrückt spielt oder wenn es eine ddos Attacke gibt. Auf einen deiner Kunden, dass dir die ganze Zelle wegbricht oder deine ganzen Kundeneffekte sind. Also gibt es irgendwie eine Möglichkeit, da die SLA auch glücklich zu stimmen und den Andi oder ihm irgendwie ein Argument zu bringen, wie man das verbessern kann?"
+    },
+    {
+      "end": 3493420,
+      "speaker": "C",
+      "start": 3433510,
+      "text": "Ja, genau. Da kommen wir jetzt eben auf dieses, was wir vorher immer schon mal ganz kurz angesprochen haben, auf dieses noisy Neighbor Problem. Also wenn ein Tenant jetzt irgendwie komplett durchdreht, uns mit Requests überflutet, ddos Attacken sind natürlich auch, aber auch wenn ein Tenant irgendwie einen spezifischen Request macht und das bei uns irgendeinen Bug triggert, aber nur dieser Tenant würde trotzdem, wie du sagst, die ganze Zelle oder wenn wir keine Zelle haben, unsere ganze Anwendung auch down bringen. Und also ich meine, relativ einfacher Ansatz, den ihr wahrscheinlich alle kennt, ist, dass es üblicherweise innerhalb eines Systems oder wenn ich Software benutze, Throttling Mechanismen gibt. Also dass ich sage, der Tenant kann nur x Request, sage ich mal, pro Kunde haben, ansonsten kriegt ein Fehler zu viele Requests. Das sind so traditionelle Mechanismen. Oder man kennt das auch in Cloud Umgebung zum Beispiel gibt es so Quotas, dass ich Du kannst nicht mehr wie in unserem Beispiel ein tausend Rechnungen pro Minute anlegen. Das ist einfach natürliches Limit. Und so kann ich schon mal gewisse Szenarien abfangen."
+    },
+    {
+      "end": 3516620,
+      "speaker": "B",
+      "start": 3493420,
+      "text": "Zum Beispiel, wo wird das Ganze dann implementiert? Üblicherweise, also jetzt auch bei euch Amazon kennt man ja die Quotas, die man hat und Rate Limited und bei jeder API gibt es diese Dinge. Wo wird es am besten implementiert? Weil umso weiter hinten im Stack, umso problematischer ist es natürlich. Also wie weit kann ich das vorne implementieren in irgendeinem eingehenden Proxy Load Bal?"
+    },
+    {
+      "end": 3545870,
+      "speaker": "C",
+      "start": 3517340,
+      "text": "Ja, also du hast vollkommen recht, am besten so weit vorne wie möglich viel. Was halt bei ddos ja schon hilft, ist schon so ein CDN zum Beispiel. Und ich kann auf dem CDN kann ich dann habe ich schon ddos Protection oder kann eben verschiedene Token Bucket Algorithmen haben, um zum Beispiel Throttling Count irgendwie zu maintainen. Und also je früher, desto besser, damit diese Requests gar nicht erst hinten mein Bagger sozusagen treffen. Das ist eine Variante."
+    },
+    {
+      "end": 3566710,
+      "speaker": "B",
+      "start": 3546030,
+      "text": "Das heißt aber, dass die ganzen Stages oder Layers davor in irgendeiner Form tenant aware sein müssen, dass die wissen, das ist derselbe Tenant und da kommen so und so viele Requests von diesem Tenant rein. Also es muss dann irgendwie über die Tokens oder wie auch immer müssen die Requests klar zuordnbar sein zu einem Tenant, damit die sowas überhaupt enforcen kann."
+    },
+    {
+      "end": 3648670,
+      "speaker": "C",
+      "start": 3566710,
+      "text": "Genau, das kann dann entweder im Token drin selber diese Tenant ID zum Beispiel sein oder ein bestimmter Header zum Beispiel, wo wir das identifizieren können. Richtig. Also irgendwo muss ich diese Tenant Informationen haben. Genau, das ist jetzt so diese Basis, sage ich mal, Mechanismen, die ich verwenden kann. Was es zusätzlich natürlich gibt, ist angenommen wir haben jetzt eben unsere Anwendung besteht jetzt aus, sage ich mal, unsere ersten Server, die quasi getroffen werden würden, unsere erste Fleet, das sind jetzt, sagen wir mal, sind einfach vier Server, also das sind jetzt oder vier Anwendungsinstanzen, die wir jetzt theoretisch haben. Was es dann natürlich gibt, ist so traditionelles Sharding, dass ich sagen kann, ich habe diese vier Server, da mache ich mir zwei Charts drauf. Es gibt Server eins und zwei und dann gibt es Server drei und vier und ich assigne dann den Kunden zu einem bestimmten Chart, also dass der Kunde eins nur auf eins und zwei draufgeht und der Kunde zwei nur auf drei und vier. Das ist so traditionelles Sharding. Und somit selbst wenn du jetzt mit deinem Request ein Bug triggerst und der Server eins geht und dann machst du Retry und gehst auf deinen zweiten Server, zu dem du Zugriff hast und fährst den auch noch runter, dann hast du nicht mehr ein hundert Prozent abgeräumt, sondern hast halt fünfzig Prozent, also nur noch deinen Chart im Prinzip abgeräumt. Das ist so ganz ganz einfaches Schading, um das zu limitieren."
+    },
+    {
+      "end": 3673900,
+      "speaker": "B",
+      "start": 3648990,
+      "text": "Das heißt aber auch da ist es eigentlich wieder schlauer, wenn man nicht die volle Flexibilität hat, was man so sagt. Ich habe einen Load Balancer, der alles überall hinschickt, um möglichst flexibel zu sein und wenn irgendwas zusammenbricht, dann schicke es zum nächsten Node, weil wenn da ein Fehler getriggert wird, dann schicke das halt zum ersten, zum zweiten, zum dritten, zum vierten und dann ist alles tot, sondern dass ich da auch wirklich eine harte Zuordnung zumindest zu einem Subset meine Infos."
+    },
+    {
+      "end": 3816800,
+      "speaker": "C",
+      "start": 3673900,
+      "text": "Ganz genau. Du hast ja gerade richtig beschrieben, weil wenn ein Request von diesem Kunden auf Server eins geht und den runterfährt und dann mache ich Round Robin und beim nächsten Mal Server zwei und drei und vier, dann ist meine ganze Fliete auch wieder down. Das hat einmal eine Mandant hat das quasi dann getriggert und in dem Fall sage ich, lieber Mandant, du kannst gar nicht auf alle Server Round Robin zugreifen, sondern du kommst nur auf zwei Server und damit ich den Schaden begrenze sozusagen, Das ist einfach eine Möglichkeit, um diesen Noisy Neighbor Effekt auch noch mal oder Bad Actor sozusagen noch mal weiter abzufangen. Und wenn wir das noch weiter spielen möchten, dann gibt es noch ein Advanced Konzept, sage ich mal, das ist Shuffle Sharding. Also wir haben ja jetzt ganz einfach gesagt, wir kriegen Server eins und zwei und das ist Chart eins und dann Server drei und vier und das ist Chart zweite Das heißt, wie gesagt, du kommst auf den ersten Chart und wenn du alle Server abräumst, haben wir fünfzig Prozent Impact. Und was Shuffle Sharding dann noch macht, das ist wirklich dann Advanced Mechanismus, dass ich sage, das sind nicht statische Charts, sondern ich shuffle die. Das heißt Wolfi, wenn du jetzt Mandant bist, du kriegst Server eins und zwei und Andi kriegt Server drei und vier, da sind wir ähnlich wie davor und jetzt bin ich der dritte Tenant, ich kriege jetzt aber Server eins und drei und dann haben wir vielleicht noch einen Tenant, Anna, die kriegt eins und vier, das heißt wir kriegen nie das gleiche Subset an Servern zugeteilt wie du Wolfi. Und wenn du jetzt deinen Server eins und zwei abräumst, habe ich immer noch, ist eins bei mir affected, aber drei nicht. Das heißt ich habe immer, ich versuche quasi möglichst wenige Tenants, die gleiche Subset an Servern zuzuweisen, das heißt ich mache Random Assignments zwischen einer gewissen Anzahl an Servern und kann dadurch die Anzahl beliebig erhöhen. Das heißt, wenn ich vier Server habe, habe ich zum Beispiel sechs Kombinationen, eins und zwei, eins und drei, eins und vier, zwei und drei, zwei und vier, drei und vier zum Beispiel. Das heißt, ich habe sechs Kombinationen, um nicht in deinem Chart im Prinzip zu landen, Wenn du das mathematisch dann weiterspielst und wenn du dann noch sechs Server hast und noch mehr Server und so weiter, dann skaliert das wahnsinnig nach oben und du kriegst wahnsinnig viele Unique Combinations an Servern und kannst dadurch dein Blast Radius stark reduzieren auf Compute Ebene. Das ist jetzt hauptsächlich auf, ich habe jetzt das einfache Beispiel, das wäre jetzt mit Stateless Compute Ebene zum Beispiel durchgespielt."
+    },
+    {
+      "end": 3852130,
+      "speaker": "A",
+      "start": 3816800,
+      "text": "Weil du hast natürlich dann immer noch hinten dran die, je nachdem wie deine Datenbankarchitektur aussieht, ob du auch Read und Write machst, Patterns unterscheidest bzw. Was für eine Datenbank du hast, ob du jetzt ein Single Primary hast oder ein verteiltes System, wo jede Datenbank Node Lese und Schreibzugriffe abfangen kann und so weiter und so fort. Das bedeutet aber auch, du fährst da eine Balance in Bezug auf dieses Thema mit den Kosten, weil du musst natürlich jetzt in der Kapazitätsplanung, ich sag mal, immer ein bisschen Spare Capacity, ich sag mal, vorhalten, damit du mögliche Ausfälle bei noisy Neighbor auch abfangen kannst. Richtig, ja."
+    },
+    {
+      "end": 3883050,
+      "speaker": "C",
+      "start": 3852130,
+      "text": "Aber das hat generell damit was zu tun, wenn unhealthy wird, brauche ich irgendeinen Mechanismus, um einen neuen Server wieder hochzufahren. Das will ich jetzt gar nicht zu sehr mit dem Konstrukt, sage ich mal, verweben. Eine Sache, die du kurz auf das stateless und stateful Thema, es gibt da einen guten Blogpost, den können wir vielleicht gerne verlinken, wo Grafana Seite gab es das mal für Cortex, wo sie auch beschrieben haben, wie sie Shuffle Sharding über ihren Free Node Clusters machen, wo auch tatsächlich State dann auch betroffen ist. Also das ist noch mal interessant, dann da auch noch mal durchzulesen, wie wie die das zum Beispiel aufgeteilt haben."
+    },
+    {
+      "end": 3895450,
+      "speaker": "B",
+      "start": 3883050,
+      "text": "Du könntest es natürlich schon auf der Datenbankebene natürlich auch so machen, sofern das die Datenbank natürlich unterstützt, dass du die Charts dementsprechend aufteilst, je nachdem was es für ID sind und die Zuordnung zu den Tenants."
+    },
+    {
+      "end": 3909930,
+      "speaker": "C",
+      "start": 3895770,
+      "text": "Sie beschreiben das in dem Blogpost so, dass sie halt unter diesen drei Nodes, die für diesen Tenant ausgewählt sind, natürlich repliziert wird dann zum Beispiel. Das heißt, auf jeden dieser drei Nodes liegt der State und wenn, das kann man sich da im Detail nochmal durchlesen, ist auch ganz interessant."
+    },
+    {
+      "end": 3916490,
+      "speaker": "B",
+      "start": 3910010,
+      "text": "Also du bräuchtest eine Tenant aware Datenbank Replikation in irgendeiner Form oder Shading auf der Datenbank dementsprechend."
+    },
+    {
+      "end": 3923210,
+      "speaker": "C",
+      "start": 3916490,
+      "text": "Ja, für diesen einen Tenant. Genau. Also ich repliziere quasi immer nur auf diesen drei Node Kombinationen dann in dem Fall."
+    },
+    {
+      "end": 3940760,
+      "speaker": "B",
+      "start": 3923690,
+      "text": "Genau. Also du musst wissen, welcher Tenant wie zugreift auf welche Shards in der Datenbank und dann dementsprechend replizieren, was es natürlich komplexer macht. Oder du musst den Sharding Algorithmus muss Tenant aware machen, aber es wäre rein theoretisch natürlich schon möglich und gibt es auch sicher kann man glaube ich schon designen."
+    },
+    {
+      "end": 3990740,
+      "speaker": "A",
+      "start": 3940840,
+      "text": "Man muss auch dazu sagen, das was ihr oder das was wir jetzt in einer Drei Mann Firma, in einem Drei Mann Startup jetzt gerade besprechen, ist ein sehr großes Problem, ja, auch auf der technischen Seite, gar keine Frage. Aber wenn ich an eine Firma denke mit vier Engineering Teams, einem Operations Team und so weiter und so fort, allein da dieses Projekt zu starten und die Kommunikation hinzukriegen und das Softwareteam auch genau weiß, wie das Schading unten drunter läuft mit den Datenbanken, weil du kannst ja alles, also das, was wir gerade besprechen, das kann man ja nicht alles auf Infrastrukturbasis einfach transparent handeln. Da muss ja die Applikation schon mitspielen. Jetzt sagt der Wolfgang zwar schon, okay, wenn die Datenbank das supportet, aber da ist schon wirklich ein Zusammenspiel zwischen der wirklichen Infrastruktur und der Applikation notwendig. Und diese Kommunikation allein auf organisationeller Ebene hinzukriegen, ist gar nicht so einfach."
+    },
+    {
+      "end": 4028820,
+      "speaker": "B",
+      "start": 3990900,
+      "text": "Jetzt hatte der Max auch schon erwähnt, Kunden in einer Zelle oder also wir sind da schon in Größenordnungen, glaube ich, die mit einer Drei Mann oder mit einer Drei Personen Firma nicht mehr so zu händeln sind, würde ich mal sagen. Und auch nicht nötig. Und das ist ja auch der Klassiker, wenn du dir dann überlegst, mache ich so ein komplexes Konzept oder fahre einfach noch mal die gesamte Infrastruktur mit meinen zehn Servern noch mal hoch, dann habe ich zwanzig Server. Das wird im Endeffekt immer noch billiger sein, als ich mache so eine wirklich aufwendige Struktur, aber es kommt darauf an, was sie für Sicherheitskriterien erfüllen will und wie viele Kunden ich habe am Ende."
+    },
+    {
+      "end": 4066480,
+      "speaker": "C",
+      "start": 4029300,
+      "text": "Genau, also das noch mal klarzustellen. Wir haben ja klein angefangen mit Engineering Invoice heute, aber was wir jetzt hier zum Schluss besprechen, also Zellen, Shuffle, Sharding, solche Mechanismen, wo auch durchaus natürlich ihr auch recht gehabt, weil ich sage auch eine Komplexität, aber das braucht auch nicht jeder. Das möchte ich hier noch mal ganz klar sagen. Hier geht es nur darum, wenn du wirklich groß weltweit Software quasi multitenantfähig, das auf über mehrere Kontinente und hunderttausende von Usern skaliert, dann machst du dir über solche Dinge Gedanken, dass man einfach mal sieht, was ist die Palette an Möglichkeiten, um mit verschiedenen Problemen quasi auch umgehen zu können."
+    },
+    {
+      "end": 4088450,
+      "speaker": "A",
+      "start": 4066640,
+      "text": "Wolfgang, du hast gerade gesagt, ja, wenn man von Kunden spricht und allem drum und dran, dann spricht man auch in der Regel von größeren Firmen und da brauchen wir wir uns als Drei Mann Startup keine Gedanken darüber machen. Also erstens möchte ich mal sagen, blicke positiv in die Zukunft. Wir wollen die Welt verändern. Das ist Nummer eins mal so als CEO. Die zweite Frage wie viele Mitarbeiter hat denn Onlyfans?"
+    },
+    {
+      "end": 4090530,
+      "speaker": "B",
+      "start": 4089090,
+      "text": "Ich hoffe es sind mehr als drei."
+    },
+    {
+      "end": 4094370,
+      "speaker": "A",
+      "start": 4090530,
+      "text": "Wie viel Nutzer bzw. Content Creator touren denn auf Onlyfans rum?"
+    },
+    {
+      "end": 4096050,
+      "speaker": "B",
+      "start": 4094450,
+      "text": "Mehr als Salesforce Kunden?"
+    },
+    {
+      "end": 4120530,
+      "speaker": "A",
+      "start": 4096370,
+      "text": "Ich denke auch laut Gemini ganz kurze über vier Millionen Content Creator auf onlyfans, was ja unsere Kunden in dem Tenant Ding wären, die dann auch gesplittet werden. Über drei hundert sieben und siebzig Millionen Nutzer. Und Achtung, es gibt Quellen, die sagen und das sieht man wohl auch an den finanziellen Zahlen, dass onlyfans nur zwei und vierzig Mitarbeiter hat."
+    },
+    {
+      "end": 4123130,
+      "speaker": "B",
+      "start": 4120530,
+      "text": "Das ist aber nur, weil zwei und vierzig die Antwort auf alles ist."
+    },
+    {
+      "end": 4155260,
+      "speaker": "A",
+      "start": 4123130,
+      "text": "Also das zweite Beispiel, damit ich dich jetzt auch wirklich hier immer noch bitte positiv zu denken wusstest du wie viel Software Engineers die Plattform Steam hatte, als die schon sehr populär war? Zehn ist nämlich auch ein sehr gutes Beispiel von einer sehr hohen Kennzahl, was Umsatz pro Mitarbeiter angeht, genauso wie Onlyfans, dass die mit sehr wenig Personenpower sehr große Zahlen und sehr viele Kunden bedienen. Also mach uns bitte nicht kleiner als wir sind. Wir werden solche Probleme mit drei Mitarbeitern haben."
+    },
+    {
+      "end": 4223200,
+      "speaker": "B",
+      "start": 4155500,
+      "text": "Ich glaube auch allgemein dieser Blast Radius, den der Max da auf gebracht hat, es ist schon natürlich ein Ding, wo man sich immer Gedanken machen muss, was bedeutet das? Das kann ja auch in ganz vielen anderen Bereichen sein. Also ich denke nur dran, wenn man irgendwo einen Account hat bei irgendeiner Plattform und dann passiert irgendwas mit dem Account oder er wird gesperrt, sei es jetzt Instagram, Social Media Account, was es auch immer ist, man verliert diesen einzelnen Account und da hängt sehr viel dran an dem Account. Dann sollte man sich natürlich auch über überlegen, muss ich das irgendwie replizieren? Brauche ich mehr Accounts? Wie gehe ich damit um? Also dieser Blast Radius ist schon sehr wichtig und gerade wenn ich mit externen Ressourcen arbeite, muss ich mir das natürlich noch mehr überlegen. Also das klassische Risiko, dass sie da natürlich auch irgendwo mit reinnehmen muss. Und egal ob es jetzt intern ist bei meiner Plattform mit externen Ressourcen, ich muss halt immer schauen, dass der Blast Radius gering bleibt und auch bei der Drei Personen Personenfirma, wenn ich zwei Stacks habe, dann bin ich wahrscheinlich auch schon sicherer und deshalb die zwei Stacks aufteile und dann habe ich schon kleineren Blast Radius. Da muss ich ja noch nicht um Kundengrössenordnungen gehen."
+    },
+    {
+      "end": 4236640,
+      "speaker": "A",
+      "start": 4223200,
+      "text": "Wolfgang hast du dir schon mal die Frage gestellt, wenn du fünf und zwanzig mal Blast Radius hintereinander sagst, was dann passiert? Max Ich gehe stark davon aus, du hast damals beim Meetup, ich glaube nur dreiig oder fünf und dreiig Minuten bekommen."
+    },
+    {
+      "end": 4248690,
+      "speaker": "B",
+      "start": 4237520,
+      "text": "Zwanzig wir sind ja kurz und bündig und der Max hat da noch mehr Themen fast durchgebracht, aber da hat er keinen Andi gehabt und mich die Nachfragen."
+    },
+    {
+      "end": 4287550,
+      "speaker": "A",
+      "start": 4248690,
+      "text": "Stellen und deine Slides, all diese Modelle, wie zum Beispiel Pool Bridge und das Shuffle Sharding und so weiter, ist alles visuell in den Slides verfügbar. Das verlinken wir auch in den Shownotes. Also für alle Leute, die jetzt gerade noch zuhören, die können sich all das auch noch mal in, ich sag mal dreiig vierzig Slides durchlesen. Sehr, sehr veranschaulicht, sehr, sehr gut. Vielen da als Abschlussfrage habe ich Welche zwei, drei Tipps würdest du denn Entwicklerinnen und Entwicklern geben, die jetzt an einer Applikation arbeiten und so eine Multi Tenant Thematik? Das wäre auch mal was für uns. Ich baue mal einen Prototypen."
+    },
+    {
+      "end": 4416370,
+      "speaker": "C",
+      "start": 4287630,
+      "text": "Das Wichtigste ist einfach get your security right. Also das muss wirklich der erste Job quasi sein, dass man sich bewusst ist, dass man auch eine Verantwortung, Verantwortung in einem multimandanten System hat über die Daten der Kunden, über die Experience der Kunden und so weiter, dass wirklich auch diese Isolation gesichert ist und man nicht, sage ich mal salopp, einfach mit der Where Clause, die nicht irgendwie enforced ist, umgeht. Also wirklich Security ist das A und O, weil wenn da ein Leak oder sonstiges passiert, kann das auch das Ende des Unternehmens im Prinzip sein. Also get security right. Und das Zweite ist, das haben wir jetzt zum Schluss besprochen, wir haben schon sehr komplexe Themen natürlich besprochen, die fortgeschrittenen Stadium erst relevant werden mit ganz viel Kunden ist vielleicht wahrscheinlich viel mehr, mit denen auch die meisten irgendwie zu tun haben. Aber das Wichtige ist, man soll sich die Flexibilität erhalten. Also immer die Software bauen. Unter dem Hintergrund kann ich, wenn sich die Gegebenheiten verändern aus irgendeinem Grund, kann ich darauf flexibel später eingehen. One way door, two way doors decision, das wirklich in den Design Prozess mit einfließen, okay, vielleicht ist, ich fange jetzt einfach mal an, ich habe alles geshared, es ist nur diese eine Pro Instanz, ich brauche keine Zellen, nichts, aber ich habe vielleicht vorne den Routing Layer, der einfach ganz statisch jetzt durchroutet die ganze Zeit und vielleicht werde ich nie eine zweite Zelle brauchen, aber ich habe schon die Flexibilität, dass ich zukünftig das abhängen kann. Das hat auch nichts mit Over Engineering zu tun. Das ist jetzt erst, sage ich mal, ein Design ist einfach, bleibt versucht flexibel zu bleiben, ohne jetzt ins Over Engineering und was wäre wenn reinzukommen, aber versucht flexibel zu bleiben. Das wären glaube ich, so die zwei Key Takeaways, würde ich sagen, oder Sachen, die man sich Kopf behalten soll. Und dann, wenn die Probleme dann kommen, dann sind vielleicht die Themen, über die wir heute gesprochen haben, dann auch können gute Tools sein, um das dann umzusetzen. Aber das ist auch, was hat auch ein Kollege bei uns bei AWS gesagt, Tools not rules. Also es soll jetzt nicht eben irgendwie klingen, dass man muss Shuffle Charming, man muss sailbasiert machen, aber ihr habt vielleicht heute gesehen die Tools, die man dann verwenden kann, um mit diesen Situationen dann später, wenn sie wirklich relevant werden, umzugehen."
+    },
+    {
+      "end": 4417770,
+      "speaker": "A",
+      "start": 4416370,
+      "text": "Max, ich habe sehr viel mitgenommen."
+    },
+    {
+      "end": 4421930,
+      "speaker": "C",
+      "start": 4417770,
+      "text": "Vielen lieben Dank, unbedingt, danke auch für die Einladung, hat Spaß gemacht."
+    },
+    {
+      "end": 4452280,
+      "speaker": "A",
+      "start": 4422090,
+      "text": "Wie immer gilt, wer Feedback geben möchte, gerne via E Mail, gerne via unsere Discord Community, leiten wir natürlich alles an Max weiter und wer die ganzen Bilder zu dem Talk hier haben möchte, zu diesem Podcast haben möchte, der kann in die Show Notes gehen. Da findet ihr die Slides von Max mit ganz vielen Bildern, um das wirklich mal zu verdeutlichen, falls das alles irgendwie verwirrend war mit Pool und Bridge und Zell und allem drum und dran, da kann man das alles mal noch mal als Zusammenfassung lesen. Wolfgang, was sind deine finalen Worte?"
+    },
+    {
+      "end": 4473330,
+      "speaker": "B",
+      "start": 4452280,
+      "text": "Ja, ich glaube mir jetzt einfach von Max dieses Multitenant ist der better single tenant, weil ich finde das auch was sollte das einfach schon mitdenken und man ist danach einfach flexibler, egal wie man losstartet, kann dem nur beipflichten. Also vielen lieben Dank, Max für deine ganzen Einsichten und ich hoffe, dass in Zukunft alle nur mehr Multitenant programmieren werden, wenn sie sich irgendeine Architektur überlegen."
+    },
+    {
+      "end": 4487230,
+      "speaker": "A",
+      "start": 4474050,
+      "text": "Ich mag den Spruch auch sehr und ich beende diese Podcast Episode mit einem Flachlitz generiert bei Gemini. Warum haben Multitenant Architekturen so schlechte Manieren, weil sie die ganze Zeit die Ressourcen teilen, aber nie fragen, ob der Nachbar etwas braucht."
+    },
+    {
+      "end": 4495870,
+      "speaker": "B",
+      "start": 4491790,
+      "text": "Er muss Gemin noch üben, aber es passt zu dir, Andi. Das ist schon okay."
+    },
+    {
+      "end": 4501310,
+      "speaker": "A",
+      "start": 4496350,
+      "text": "War der erste schnelle Prompt. Ich gelobe Besserung diesmal. Das war's von uns. Tschüss, bye bye."
+    },
+    {
+      "end": 4502510,
+      "speaker": "B",
+      "start": 4501310,
+      "text": "Ciao, ciao."
+    }
+  ],
+  "webhook_auth": false
+}

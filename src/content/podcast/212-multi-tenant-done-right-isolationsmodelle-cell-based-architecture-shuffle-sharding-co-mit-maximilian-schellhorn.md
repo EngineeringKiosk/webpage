@@ -83,12 +83,18 @@ length_second: 4509
 pubDate: 2025-09-09 01:00:26+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Max Schellhorn
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/6EBkgd4IcNFzs7eQa4zhZN
-tags: []
-title: '#212 Multi-Tenant done right: Isolationsmodelle, Cell-Based-Architecture,
-  Shuffle Sharding & Co mit Maximilian Schellhorn'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Cloud
+- Interview
+title: "#212 Multi-Tenant done right: Isolationsmodelle, Cell-Based-Architecture, Shuffle Sharding & Co mit Maximilian Schellhorn"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=wpqMyXz44rg
 
 ---
