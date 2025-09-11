@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/570b87f6-d4aa-4a51-96c0-191cf4d89dd8/engineering-kiosk-212-multi-tenant-done-right-isolationsmodelle-cell-based-architecture-shuffle-sharding-co-mit-maximilian-schellhorn
 apple_podcasts: https://podcasts.apple.com/us/podcast/212-multi-tenant-done-right-isolationsmodelle-cell/id1603082924?i=1000725627642&uo=4
 audio: https://audio1.redcircle.com/episodes/091e1f11-c67b-43dc-b5c0-59ccec0024a5/stream.mp3
 chapter:
