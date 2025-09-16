@@ -93,8 +93,9 @@ tags:
 - Software Engineering
 - Cloud
 - Interview
-title: "#212 Multi-Tenant done right: Isolationsmodelle, Cell-Based-Architecture, Shuffle Sharding & Co mit Maximilian Schellhorn"
-transcript_slim: ""
+title: '#212 Multi-Tenant done right: Isolationsmodelle, Cell-Based-Architecture,
+  Shuffle Sharding & Co mit Maximilian Schellhorn'
+transcript_slim: src/data/transcripts/212-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=wpqMyXz44rg
 
 ---
