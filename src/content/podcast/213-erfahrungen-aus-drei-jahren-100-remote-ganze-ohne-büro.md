@@ -78,11 +78,16 @@ length_second: 4007
 pubDate: 2025-09-16 01:00:56+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/5npFapAp7vyMhZmCZXG3Tn
-tags: []
-title: "#213 Erfahrungen aus drei Jahren 100 % Remote ... ganze ohne B\xFCro"
-transcript_slim: ''
+tags:
+- Remote work
+- Tech Kultur
+- Software Engineering
+title: "#213 Erfahrungen aus drei Jahren 100 % Remote ... ganze ohne Büro"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=mG_vDogcBvI
 
 ---
