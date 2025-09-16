@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/0ee6e72b-3e72-4846-9a14-e2db04655dd0/engineering-kiosk-213-erfahrungen-aus-drei-jahren-100-remote-ganze-ohne-b%C3%BCro
 apple_podcasts: https://podcasts.apple.com/us/podcast/213-erfahrungen-aus-drei-jahren-100-remote-ganze-ohne-b%C3%BCro/id1603082924?i=1000726982205&uo=4
 audio: https://audio1.redcircle.com/episodes/ae9fa1cf-e672-4234-8ac1-12c00e34ad06/stream.mp3
 chapter:
