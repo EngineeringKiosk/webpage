@@ -1,0 +1,35 @@
+name: Sync awesome-software-engineering-games
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [game-list-update]
+
+jobs:
+  publishing:
+    name: Sync awesome-software-engineering-games from external repository
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v5.0.0
+      - uses: actions/setup-python@v6.0.0
+        with:
+          python-version-file: 'scripts/.python-version'
+          cache: 'pip'
+
+      - name: Install python dependencies
+        run: make init-python
+
+      - name: Run make update-awesome-software-engineering-games
+        run: make update-awesome-software-engineering-games
+
+      # Commit results back to repository
+      - uses: stefanzweifel/git-auto-commit-action@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: Update the latest data from awesome-software-engineering-games
+          branch: main
+          commit_user_name: Sync awesome-software-engineering-games workflow bot
+          commit_user_email: stehtisch@engineeringkiosk.dev
+          commit_author: Sync awesome-software-engineering-games workflow bot <stehtisch@engineeringkiosk.dev>

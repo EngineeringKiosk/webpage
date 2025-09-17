@@ -28,6 +28,14 @@ GERMAN_TECH_PODCAST_JSON_STORAGE = "src/content/germantechpodcasts/"
 GERMAN_TECH_PODCAST_IMAGE_STORAGE = "src/content/germantechpodcasts/"
 GERMAN_TECH_PODCAST_OPML_STORAGE = "public/deutsche-tech-podcasts/podcasts.opml"
 
+# awesome-software-engineering-games
+AWESOME_SOFTWARE_ENGINEERING_GAMES_GIT_REPO = "https://github.com/EngineeringKiosk/awesome-software-engineering-games.git"
+AWESOME_SOFTWARE_ENGINEERING_GAMES_GIT_REPO_NAME = "awesome-software-engineering-games"
+AWESOME_SOFTWARE_ENGINEERING_GAMES_JSON_PATH_IN_GIT_REPO = "generated"
+AWESOME_SOFTWARE_ENGINEERING_GAMES_IMAGES_PATH_IN_GIT_REPO = "generated/images"
+AWESOME_SOFTWARE_ENGINEERING_GAMES_JSON_STORAGE = "src/content/awesome-software-engineering-games/"
+AWESOME_SOFTWARE_ENGINEERING_GAMES_IMAGE_STORAGE = "src/content/awesome-software-engineering-games/"
+
 # Website redirects
 TOML_FILE = 'netlify.toml'
 REDIRECT_PREFIX = '/episodes/'
