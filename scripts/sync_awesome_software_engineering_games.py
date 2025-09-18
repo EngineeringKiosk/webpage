@@ -19,7 +19,7 @@ from constants import (
 )
 
 from git import Repo
-from PIL import Image
+# from PIL import Image
 
 def sync_awesome_software_engineering_games(json_storage_path, image_storage_path):
     tmp_dir = tempfile.gettempdir()
@@ -71,11 +71,11 @@ def sync_awesome_software_engineering_games(json_storage_path, image_storage_pat
         shutil.copy2(src, dst)
 
         # Resize images
-        image_to_resize = Image.open(dst)
-        if image_to_resize.width > 700 and image_to_resize.height > 700:
-            logging.info(f"Resizing {image_file} from {image_to_resize.width}x{image_to_resize.height} to 700x700...")
-            resized_image = image_to_resize.resize((700, 700))
-            resized_image.save(dst)
+        #image_to_resize = Image.open(dst)
+        #if image_to_resize.width > 700 and image_to_resize.height > 700:
+        #    logging.info(f"Resizing {image_file} from {image_to_resize.width}x{image_to_resize.height} to 700x700...")
+        #    resized_image = image_to_resize.resize((700, 700))
+        #    resized_image.save(dst)
 
     # Removing git clone
     logging.info(f"Removing cloned repository from merged JSON file {tmp_clone_dir}...")
