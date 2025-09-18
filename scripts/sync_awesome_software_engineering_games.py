@@ -49,6 +49,17 @@ def sync_awesome_software_engineering_games(json_storage_path, image_storage_pat
             # Modify image key to only contain the filename
             data["image"] = f"./{os.path.basename(data['image'])}"
 
+            # Replace some Genres to avoid duplicates
+            if "MMO" in data["german_content"]["genres"]:
+                data["german_content"]["genres"].remove("MMO")
+                if "Massively Multiplayer" not in data["german_content"]["genres"]:
+                    data["german_content"]["genres"].append("Massively Multiplayer")
+
+            if "Simulationen" in data["german_content"]["genres"]:
+                data["german_content"]["genres"].remove("Simulationen")
+                if "Simulation" not in data["german_content"]["genres"]:
+                    data["german_content"]["genres"].append("Simulation")
+
         # Write new file content
         with open(dst, 'w') as fp:
             json.dump(data, fp, indent=4)
