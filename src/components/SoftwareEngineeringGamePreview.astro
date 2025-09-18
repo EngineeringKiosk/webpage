@@ -57,6 +57,26 @@ const nameId = URLify(game.data.name);
 							</div>
 						)
 					}
+					{
+						game.data.website && (
+							<div class="mb-4 mt-4 mr-4">
+								<a class="flex items-center" href={game.data.website} title={`Website von ${game.data.name}`}>
+									<img class="w-8" src="/images/elements/icon-website-2.svg" alt={`Website von ${game.data.name}`} title={`Website von ${game.data.name}`} />
+									<span class="text-coolGray-500 text-lg m-2">Website</span>
+								</a>
+							</div>
+						)
+					}
+					{
+						game.data.repository && (
+							<div class="mb-4 mt-4 mr-4">
+								<a class="flex items-center" href={game.data.repository} title={`${game.data.name} auf GitHub`}>
+									<img class="w-8" src="/images/brands/github-octocat.svg" alt={`${game.data.name} auf GitHub`} title={`${game.data.name} auf GitHub`} />
+									<span class="text-coolGray-500 text-lg m-2">GitHub</span>
+								</a>
+							</div>
+						)
+					}
 				</div>
 			</div>
 			<div class="w-full md:w-4/12 px-4">
