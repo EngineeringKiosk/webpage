@@ -137,6 +137,7 @@ const awesomeSoftwareEngineeringGamesCollection = defineCollection({
 			slug: z.string(),
 			website: z.string(),
 			repository: z.string().optional(),
+			programmable: z.boolean().optional(),
 			steamID: z.number(),
 			platforms: z.object({
 				windows: z.boolean(),
