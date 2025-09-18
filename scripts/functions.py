@@ -51,8 +51,15 @@ def read_json_file(file_path):
     """
     Reads the JSON file {file_path} and returns
     the content as parsed JSON dict.
+    If the file does not exist, returns an empty dict.
     """
-    with open(file_path) as f:
-        data = json.load(f)
+    if not os.path.exists(file_path):
+        return {}
 
-    return data
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except (json.JSONDecodeError, OSError):
+        # Falls Datei korrupt oder nicht lesbar -> leeres Dict zurückgeben
+        return {}

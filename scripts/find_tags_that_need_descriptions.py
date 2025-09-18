@@ -16,12 +16,14 @@ from constants import (
     BLOGPOST_CONTENT_FILES,
     GERMAN_TECH_PODCAST_CONTENT_FILES,
     TAG_FILE_CONTENT,
-    TAG_FILE_GERMAN_TECH_PODCASTS
+    TAG_FILE_GERMAN_TECH_PODCASTS,
+    TAG_FILE_AWESOME_SOFTWARE_ENGINEERING_GAMES,
+    AWESOME_SOFTWARE_ENGINEERING_GAMES_CONTENT_FILES
 )
 
 import frontmatter
 
-def read_all_tags_from_content_files(pathes):
+def read_all_tags_from_content_files(pathes, json_key="tags"):
     """
     Reads all tags from all content files of this website.
     A content file are Markdown (md) or MDX files like
@@ -45,7 +47,7 @@ def read_all_tags_from_content_files(pathes):
 
             with open(full_file_path) as f:
                 fm = frontmatter.load(f)
-                frontmatter_tags = fm.get("tags")
+                frontmatter_tags = fm.get(json_key)
 
                 for tag in frontmatter_tags:
                     if tag in tags:
@@ -61,7 +63,12 @@ def read_all_tags_from_content_files(pathes):
 
             with open(full_file_path) as f:
                 fm = json.load(f)
-                frontmatter_tags = fm.get("tags")
+
+                json_key_parts = json_key.split(".")
+                for part in json_key_parts:
+                    frontmatter_tags = fm.get(part, {})
+                    fm = fm.get(part, {})
+
                 if frontmatter_tags is not None:
                     for tag in frontmatter_tags:
                         if tag in tags:
@@ -115,8 +122,8 @@ if __name__ == "__main__":
         default='website-content',
         const='website-content',
         nargs='?',
-        choices=['website-content', 'german-tech-podcasts'],
-        help='Mode to execute. Supported: website-content, german-tech-podcasts (default: %(default)s)')
+        choices=['website-content', 'german-tech-podcasts', 'awesome-software-engineering-games'],
+        help='Mode to execute. Supported: website-content, german-tech-podcasts, awesome-software-engineering-games (default: %(default)s)')
 
     args = cli_parser.parse_args()
 
@@ -126,6 +133,7 @@ if __name__ == "__main__":
     tags = {}
     content_pathes = []
     tag_file_path = ""
+    json_key = "tags"
     if args.mode == "website-content":
         tag_file_path = build_correct_file_path(TAG_FILE_CONTENT)
         content_pathes = [
@@ -139,7 +147,15 @@ if __name__ == "__main__":
             build_correct_file_path(GERMAN_TECH_PODCAST_CONTENT_FILES)
         ]
 
-    tags = read_all_tags_from_content_files(content_pathes)
+    if args.mode == "awesome-software-engineering-games":
+        # Those are genres, not tags
+        tag_file_path = build_correct_file_path(TAG_FILE_AWESOME_SOFTWARE_ENGINEERING_GAMES)
+        content_pathes = [
+            build_correct_file_path(AWESOME_SOFTWARE_ENGINEERING_GAMES_CONTENT_FILES)
+        ]
+        json_key = "german_content.genres"
+
+    tags = read_all_tags_from_content_files(content_pathes, json_key=json_key)
     len_content_tags = len(tags)
 
     logging.info(f"Reading existing tag descriptions from {tag_file_path} ...")
