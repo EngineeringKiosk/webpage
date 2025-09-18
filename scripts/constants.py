@@ -29,6 +29,8 @@ GERMAN_TECH_PODCAST_IMAGE_STORAGE = "src/content/germantechpodcasts/"
 GERMAN_TECH_PODCAST_OPML_STORAGE = "public/deutsche-tech-podcasts/podcasts.opml"
 
 # awesome-software-engineering-games
+AWESOME_SOFTWARE_ENGINEERING_GAMES_CONTENT_FILES = 'src/content/awesome-software-engineering-games'
+TAG_FILE_AWESOME_SOFTWARE_ENGINEERING_GAMES = 'src/data/awesome-software-engineering-games-genres.json'
 AWESOME_SOFTWARE_ENGINEERING_GAMES_GIT_REPO = "https://github.com/EngineeringKiosk/awesome-software-engineering-games.git"
 AWESOME_SOFTWARE_ENGINEERING_GAMES_GIT_REPO_NAME = "awesome-software-engineering-games"
 AWESOME_SOFTWARE_ENGINEERING_GAMES_JSON_PATH_IN_GIT_REPO = "generated"
