@@ -128,10 +128,43 @@ const germantechpodcastsCollection = defineCollection({
 		}),
 });
 
+// Schema for awesome-software-engineering-games
+const awesomeSoftwareEngineeringGamesCollection = defineCollection({
+	type: 'data',
+	schema: ({ image }) =>
+		z.object({
+			name: z.string(),
+			slug: z.string(),
+			website: z.string(),
+			steamID: z.number(),
+			platforms: z.object({
+				windows: z.boolean(),
+				mac: z.boolean(),
+				linux: z.boolean(),
+			}),
+			release_date: z.object({
+				coming_soon: z.boolean(),
+				date: z.string(),
+			}),
+			image: image(),
+			german_content: z.object({
+				short_description: z.string(),
+				categories: z.array(z.string()),
+				genres: z.array(z.string()),
+			}),
+			english_content: z.object({
+				short_description: z.string(),
+				categories: z.array(z.string()),
+				genres: z.array(z.string()),
+			}),
+		}),
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
 	podcast: podcastEpisodeCollection,
 	blog: blogEntryCollection,
 	meetup: meetupCollection,
 	germantechpodcasts: germantechpodcastsCollection,
+	"awesome-software-engineering-games": awesomeSoftwareEngineeringGamesCollection,
 };
