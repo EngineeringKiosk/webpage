@@ -72,6 +72,10 @@ update-episode-redirects: ## Writes all short url redirects for Podcast episodes
 update-german-tech-podcasts: ## Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 	. $(VENV_ACTIVATE); python ./scripts/sync_german_tech_podcasts.py
 
+.PHONY: update-awesome-software-engineering-games
+update-awesome-software-engineering-games: ## Updates the Awesome Software Engineering Games data from https://github.com/EngineeringKiosk/awesome-software-engineering-games
+	. $(VENV_ACTIVATE); python ./scripts/sync_awesome_software_engineering_games.py
+
 .PHONY: find-missing-tag-descriptions-content-files
 find-missing-tag-descriptions-content-files: ## Finds all used tags in content files that need SEO descriptions and output them on stdout
 	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py website-content
