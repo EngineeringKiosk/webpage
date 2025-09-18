@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from "astro:assets";
+import { URLify } from '../scripts/urlify.js';
+
+export interface Props {
+	game: CollectionEntry<'awesomeSoftwareEngineeringGames'>;
+}
+
+const { game } = Astro.props;
+
+let genres = [];
+if (game.data.german_content.genres) {
+	genres = game.data.german_content.genres.map((element) => URLify(element));
+}
+
+// Generate id based on the name
+const nameId = URLify(game.data.name);
+---
+
+<section
+	id={nameId.url}
+	class="game py-8 md:py-12 bg-white overflow-hidden"
+	style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;"
+>
+	<div class="container px-4 mx-auto">
+		<div class="flex flex-wrap lg:items-center -mx-4">
+			<div class="w-full md:w-8/12 px-4 mb-16 md:mb-0">
+				{
+					genres.map((element) => (
+						<a class="inline-block py-px mr-2 px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm" href={`/spiele-fuer-softwareentwickler/${element.url}-spiele/`}>
+							{element.name}
+						</a>
+					))
+				}
+
+				<h2 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">
+					<a href={game.data.website} class="hover:underline hover:text-yellow-500" title={`Website von ${game.data.name}`}>
+						{game.data.name}
+					</a>
+				</h2>
+				<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+					{game.data.german_content.short_description}
+				</p>
+				<ul class="mb-4 text-lg md:text-xl text-coolGray-500 font-medium list-disc list-inside">
+					<li class="flex flex-wrap items-center">Verfügbar auf: {game.data.platforms.windows && (<img class="w-8 ml-3" src="/images/brands/windows.svg" alt={`${game.data.name} auf Windows`} title={`${game.data.name} auf Windows`} />)} {game.data.platforms.mac && (<img class="w-8 ml-3" src="/images/brands/apple-os.svg" alt={`${game.data.name} auf Mac`} title={`${game.data.name} auf Mac`} />)} {game.data.platforms.linux && (<img class="w-8 ml-3" src="/images/brands/linux.svg" alt={`${game.data.name} auf Linux`} title={`${game.data.name} auf Linux`} />)}</li>
+				</ul>
+				
+				<div class="flex flex-wrap">
+					{
+						game.data.steamID > 0 && (
+							<div class="mb-4 mt-4 mr-4">
+								<a class="flex items-center" href={`https://store.steampowered.com/app/${game.data.steamID}`} title={`${game.data.name} auf Steam`}>
+									<img class="w-8" src="/images/brands/steam.svg" alt={`${game.data.name} auf Steam`} title={`${game.data.name} auf Steam`} />
+									<span class="text-coolGray-500 text-lg m-2">Steam</span>
+								</a>
+							</div>
+						)
+					}
+				</div>
+			</div>
+			<div class="w-full md:w-4/12 px-4">
+				<div class="relative mx-auto md:mr-0 max-w-max">
+					<a href={game.data.website} title={`Website von ${game.data.name}`}>
+						<Image class="rounded-3xl" src={game.data.image} alt={`Spiel ${game.data.name}`} title={`Spiel ${game.data.name}`} />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
