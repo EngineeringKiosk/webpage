@@ -149,12 +149,12 @@ const awesomeSoftwareEngineeringGamesCollection = defineCollection({
 			image: image(),
 			german_content: z.object({
 				short_description: z.string(),
-				categories: z.array(z.string()),
+				categories: z.array(z.string()).optional(),
 				genres: z.array(z.string()),
 			}),
 			english_content: z.object({
 				short_description: z.string(),
-				categories: z.array(z.string()),
+				categories: z.array(z.string()).optional(),
 				genres: z.array(z.string()),
 			}),
 		}),
