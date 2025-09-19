@@ -23,13 +23,11 @@ function orderByName(a, b) {
 }
 let awesomeSoftwareEngineeringGames = await getCollection("awesome-software-engineering-games");
 awesomeSoftwareEngineeringGames.sort(orderByName);
-
-// TODO: Fix header image - germen tech podcasts head is not correct here
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/headers/german-tech-podcasts-head.jpeg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/headers/awesome-software-engineering-games-head.png" {canonicalURL} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
