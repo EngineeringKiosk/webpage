@@ -86,8 +86,8 @@ tags:
 - Remote work
 - Tech Kultur
 - Software Engineering
-title: "#213 Erfahrungen aus drei Jahren 100 % Remote ... ganze ohne Büro"
-transcript_slim: ""
+title: "#213 Erfahrungen aus drei Jahren 100 % Remote ... ganze ohne B\xFCro"
+transcript_slim: src/data/transcripts/213-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=mG_vDogcBvI
 
 ---
