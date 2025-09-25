@@ -65,11 +65,16 @@ length_second: 3613
 pubDate: 2025-09-23 01:00:31+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/0FViC2rcqV3o6pQBxzaEAn
-tags: []
-title: '#214 Daten aus Spotify & Co: Architektur einer skalierbaren API-Data-Pipeline'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Backend
+- Tech Kultur
+title: "#214 Daten aus Spotify & Co: Architektur einer skalierbaren API-Data-Pipeline"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=izTX7dlDK40
 
 ---

@@ -1,0 +1,1196 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3554,
+  "audio_url": "https://cloud.inlupus.at/s/TNHKcR3TPAmK45R/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.955377,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "d974f1a5-d3a7-4162-b40b-56edef594dc7",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 67920,
+      "speaker": "A",
+      "start": 3200,
+      "text": "In unserem Job als Softwareentwickler in bekommen wir Anforderungen, Herausforderungen und Probleme, die es zu lösen gilt. Oft nutzen wir Programmierung und Code, um das zu tun, um diese Probleme zu lösen. Der Beruf selbst ist dabei ein kreativer Beruf. Das Tolle an kreativen Sachen Es gibt hunderte Wege, wie man eine Anforderung, eine Herausforderung oder ein Problem löst. Verschiedene Lösungsmöglichkeiten zu durchdenken ist eine Fähigkeit, die man mit Erfahrung lernt. Und auch Wolfgang und ich finden es immer wieder spannend, neue Wege zu lernen, um unsere Probleme zu lösen. In dieser Episode machen wir genau eine Design bzw. Architekturdiskussion. Wie würdest du bauen? Wolfgang hat eins seiner side Projects mitgebracht, welches er wirklich gebaut hat und interviewt mich Andy dazu, wie ich das Problem lösen würde. Und bevor du nun einfach diese Episode zu Ende hörst und uns danach wieder vergisst, ich würde mich sehr freuen, deinen Lösungsweg kennenzulernen. Schreib uns einfach eine E Mail oder komme in die Discord Community. Nach der Episode jetzt aber genug von mir, nun zur Diskussion. Viel Spaß."
+    },
+    {
+      "end": 107840,
+      "speaker": "B",
+      "start": 70800,
+      "text": "Nachdem ich in den ganzen letzten Episoden gesehen habe, bei unserer Redezeit, dass du viel zu viel redest und viel zu viel Fragen stellst, werden wir den Spieß mal jetzt umdrehen. Und wer vielleicht die Episode ein hundert vier und fünfzig angehört hat, da ging es um eine Architekturdiskussion, die wir geführt haben, weil der grüne Andy seinen Ölverbrauch optimieren wollte und dann Crawler schreiben wollte, einen Scraper, um den Ölpreis zu optimieren, habe ich mir gedacht, wir machen mal eine ähnliche Episode. Aber diesmal stelle ich die Fragen und interviewe den Andi, wie man die perfekte Architektur denn für ein Softwareprojekt so macht."
+    },
+    {
+      "end": 141350,
+      "speaker": "A",
+      "start": 107840,
+      "text": "Nettes Intro und jetzt ziehen wir mal die Fakten gleich. Erstens, ich Ich bezweifle ganz stark, dass du dir die Redezeit der letzten Episoden wirklich analysieren lassen hast, weil ich bin mir nicht sicher, ob du genau weißt, wie du dieses Python Skript, was wir im Repository haben, die dies errechnet, erstmal startest. Das ist die erste Baustelle. Die zweite Wer hat diese Episode hier vorgeschlagen? Du oder ich? Ich würde fast sagen, dein Intro war Fake News. Aber pass auf, es gibt ja Leute, die gönnen dir das, deswegen lasse ich das jetzt nur mal so stehen."
+    },
+    {
+      "end": 144430,
+      "speaker": "B",
+      "start": 141350,
+      "text": "Ja, das sind alles. Die Details sind nicht so wichtig."
+    },
+    {
+      "end": 150030,
+      "speaker": "A",
+      "start": 144430,
+      "text": "Details, das ist der Unterschied zwischen jemandem, der noch wirklich arbeitet und jemand, der berät."
+    },
+    {
+      "end": 169930,
+      "speaker": "B",
+      "start": 150750,
+      "text": "Von daher, genau darum kannst du mir jetzt im Detail erklären, wie du etwas bauen würdest. Und in dem Fall ist es ja sogar ein Projekt, was ich gebaut habe. Das heißt, du kannst mir jetzt erklären, was ich falsch gemacht habe dadurch auch. Ich kann gerne so erzählen, was ich glaube, was ich falsch gemacht habe am Ende, aber du wirst mir jetzt erklären, wie du das im Idealfall bauen würdest. Bist du bereit, Andi?"
+    },
+    {
+      "end": 172930,
+      "speaker": "A",
+      "start": 169930,
+      "text": "Bin immer bereit. Schauen wir mal, was es gibt. Auf was lasse ich mich denn hier."
+    },
+    {
+      "end": 216510,
+      "speaker": "B",
+      "start": 172930,
+      "text": "Ein gerade, also für alle, die die Episode ein hundert vier und fünfzig nicht gehört haben oder so, wie der Andi sich nicht mehr erinnern kann, was wir jetzt versuchen werden. Ich schildere ein Problem, und zwar das Problem von einem Softwareprojekt, in dem Fall Open Podcast, was ich mal gemacht habe. Und der Andi erklärt mir, wie er anhand der Requirements die Architektur von so einem Softwareprojekt umsetzen würde, was seine bevorzugte Architektur ist und natürlich auch, wie man zu dieser Architektur hinkommt. Also Andy wird jetzt intelligente Fragen stellen, schätze ich mal, oder hast du vor. Also stellst immer intelligente Fragen. Eigentlich kann man vorwegnehmen, um an ein sinnvolles Architekturdiagramm am Ende, wenn man das vom Whiteboard stehend erstellen würde. Dann kommen, also eigentlich spielen wir den."
+    },
+    {
+      "end": 296640,
+      "speaker": "A",
+      "start": 276510,
+      "text": "Arbeitsalltag eines Software Engineering Teams oder einer Software Engineering Person nach, weil im Endeffekt kommen ja immer Leute mit irgendwelchen Problemen. Ich will das und dann müssen wir uns überlegen, wie lösen wir dieses Problem. Und in der Regel ist Codeschreiben ein Teil der Lösung des Problems. Und das tun wir jetzt gerade. Also wie würden wir etwas bauen?"
+    },
+    {
+      "end": 558840,
+      "speaker": "B",
+      "start": 297200,
+      "text": "Genau. Und in dem Fall Open Podcast ist eigentlich ein gutes Projekt, was stellvertretend für ein ganz allgemeines Problem steht, was ich auch so ständig erlebe in der Wirtschaft, teilweise auch in meiner Konzept Consulting Tätigkeit, weil es geht ganz oft darum, ich habe irgendwelche Schnittstellen, muss mir Daten von irgendwoher holen, muss die verarbeiten und dann wieder zur Verfügung stellen. Also so eine klassische Data Pipeline, die man da verwendet. Und darum ist es eigentlich ein ideales Beispiel, weil man da abstrahieren kann auf ein Problem, was wahrscheinlich ganz viele da draußen auch tagtäglich haben. Also dann starten wir mal los und nachdem es hier um Podcast Analytics Daten geht, muss ich vielleicht mal vorab das ganze Podcast System kurz beschreiben, wie das funktioniert. Andi, du kannst es ja hoffentlich und hast dich jetzt einigermaßen damit beschäftigt. Aber vielleicht für alle, die jetzt keine Podcast selbst releasen, wie Podcasts grundsätzlich funktionieren. Also der Podcast Standard ist ja ein ganz alter RSS Feed Standard. Das heißt, es ist eigentlich nur eine RSS Feed XML Datei, die irgendwo liegt und sagt, wo liegen die MP Dateien der einzelnen Episoden. Es kann irgendein Server sein. Mittlerweile hat sich durchgesetzt, dass man da eigentlich so Hosting Plattformen verwendet. Das kann natürlich selbst gehostet sein, aber üblicherweise verwendet man da eine Hosting Plattform, die die MP Dateien zur Verfügung stellt, den RSS Feed zur Verfügung stellt, ein nettes Interface, wo man seine Episoden anlegen kann und das Ganze dann verteilt wird. Das ist mal so die Kerninfrastruktur, die im Hintergrund liegt, ist eigentlich nur ein dummer Webserver, der MP Dateien und ein RSS Feed ausliefert. Auf der Client Seite gibt es dann die Apps, die zum Beispiel auf einem Handy laufen und einfach die Informationen aus dem RSS Feed sich holen, wissen dann, wo die MP Datei liegt und die MP Datei downloaden und dann kannst du schon eine Episode anhören. Das ist die einfachste Form, wie man Podcasts anhören kann und ausliefern kann. Und jetzt gibt es natürlich die ganz großen Firmen wie Spotify und Apple, die sich so zwischendrin irgendwo reinschwindeln und dir eigentlich vorgaukeln, dass sie so ein eigenes Podcast Ecosystem anbieten, dir deine Podcasts und irgendwie was Specialiges machen, was sie eigentlich gar nicht machen, weil die machen auch nur dasselbe. Die holen sich den RSS Feed, schauen nach, wo liegt die MP Datei und dann wird die MP Datei am Ende gestreamt oder heruntergeladen und da einmal angehört, wie das auch immer dann je nach App abläuft. Das Problem an dem Ganzen, wenn Apple und Spotify dazwischen hängt, dann haben die eigentlich ein Monopol auf die Interaktionen, die bei dem User stattfinden. Also wenn du die Play Taste drückst, weiß das Spotify, weiß das Apple, aber du als Hoster. Wir als Hoster, die einfach nur eine RSS Datei anbieten, wissen natürlich nicht, ob du den Playbutton gedrückt hast und wann du den Playbutton gedrückt hast. Und jetzt kommen genau diese Analytics Daten ins Spiel, weil wir als Podcaster, wir sind natürlich interessiert, wie viele Leute haben denn den Play Button gedrückt, wie viele Leute haben den Stop Button gedrückt nach einer halben Stunde zum Beispiel. Also Wie viele Leute haben unsere Episode nur zehn Minuten gehört, nur zwanzig Minuten gehört, nur dreiig Minuten gehört. Da geht es uns natürlich jetzt nicht um konkrete Daten, welche Person hat das gemacht, sondern im Allgemeinen, wie interessant war eine Episode. Und diese Daten besitzt nur Spotify und Apple aktuell. Und genau diese Daten sind natürlich relevant für die Podcast und werden daher auch für die Podcaster angeboten in einem Dashboard. Du loggst dich bei Apple ein, du loggst dich bei Spotify ein als Hoster. Wir als Andi Wolfi loggen uns dort ein und sehen dann, wie viel Personen, wie viel Prozent aller Hörer innen haben denn die Episode ganz gehört zum Beispiel. Oder wo gibt es einen Drop, wo wird die Episode uninteressant, wo hat Andy wieder einen Flachwitz erzählt und wir sehen einen Drop von dreiig Prozent. Und was wir jetzt bauen wollen in diesem Beispiel und wozu ich jetzt Andy interviewen werde, wie er das bauen würde, ist ein System, das genau diese Daten sich holt und in einem System in einer Datenbank zusammenfasst. Das heißt, wir wollen die Daten von Apple haben, wir wollen die Daten von Spotify haben, wir wollen die Daten von unserem eigenen Hoster haben, also von diesem Webserver, der die MP Dateien anbietet. Vielleicht gibt es auch noch andere Plattformen wie Andi, du bist der Spezialist. Was gibt es da in Deutschland so diese ganzen RTL, Podimo, wo hast du unseren Podcast überall angemeldet? Ich kenne diese Plattformen alle gar nicht, ich hoffe, ich beleidige jetzt niemanden, der uns da hört auf irgend solchen Plattformen."
+    },
+    {
+      "end": 622960,
+      "speaker": "A",
+      "start": 558840,
+      "text": "Es gibt noch so was wie Deezer, ich weiß gar nicht, ob das ein deutsches Unternehmen ist, ich glaube ein französisches Podimo, RTL und so weiter so fort. Im Endeffekt ist es ja, wie der Wolf gerade schon erklärt hat, eine Art no Brainer, diesen RSS Feed einfach an alle Plattformen zu geben, denn alle Plattformen müssen sich das vom originalen Hoster ja downloaden oder ziehen oder streamen oder was weiß der Geier nicht. Deswegen sehe ich persönlich halt keinen Nachteil, diesen RSS Feed nicht einfach, ich sag mal, wie eine Gießkanne durchs Internet zu verteilen. Das ist ja nur unser Vorteil. Wir sind leider nicht so groß, dass wir irgendwelche exklusive Deals mit SWAT, Spotify oder Apple haben, wie zum Beispiel Felix Lobrecht hat oder andere große oder Joe Rogan oder andere große Podcast. Dann werden diese natürlich nicht wie eine Gießkanne verteilt, aber bei denen läuft das ganz genauso wie bei uns, dann wird der RSS Feed nur bei Spotify reingepackt und Spotify zahlt ganz viel Geld, dass dieser Podcast nur auf dieser Plattform ist. Aber ne, deswegen, wir sind auch bei RTL und bei dieser und allem drum und dran und es hat ja keinen."
+    },
+    {
+      "end": 635150,
+      "speaker": "B",
+      "start": 622960,
+      "text": "Nachteil und wir bekommen auch kein Geld von diesen Plattformen. Also die nehmen unseren Content, liefern den Content aus, auch wenn ihr für Spotify zahlt. Wir bekommen genau null Cent dafür, dass das über diese Plattformen ausgeliefert wird."
+    },
+    {
+      "end": 646950,
+      "speaker": "A",
+      "start": 635150,
+      "text": "Genau, es kann natürlich sein, dass ihr, wenn ihr diesen Podcast hier hört, Werbung von diesen Plattformen bekommt, wenn ihr da in einem Free Tier seid und zum Beispiel keine Paid Subscription habt, aber auch."
+    },
+    {
+      "end": 648430,
+      "speaker": "B",
+      "start": 646950,
+      "text": "Davon bekommen wir nichts."
+    },
+    {
+      "end": 664000,
+      "speaker": "A",
+      "start": 648510,
+      "text": "Genau, leider. Also wenn du zum Beispiel uns über Spotify hörst und nicht für Spotify zahlst, dann kommt da hier und da mal Werbung für irgendwas. Das haben wir nicht abgesegnet. Also auch wenn Werbung von Rheinmetall kommt, damit haben wir nichts am Hut. Da hat Rheinmetall dann einfach sehr viel Geld gezahlt und ich glaube, wir können das auch gar nicht beeinflussen."
+    },
+    {
+      "end": 676160,
+      "speaker": "B",
+      "start": 664000,
+      "text": "Abgesegnet haben wir schon in dem Fall, weil wir das einmal gemeldet haben, dass unser Podcast dort zur Verfügung steht und damit akzeptieren wir das natürlich auch oder müssen es akzeptieren, sonst kommst du nicht bei Spotify rein grundsätzlich."
+    },
+    {
+      "end": 681120,
+      "speaker": "A",
+      "start": 676240,
+      "text": "Wir sind aber nicht in der Lage anzuklicken. Wir wollen nur Werbung aus dem Food Bereich und nicht aus dem Waffenbereich."
+    },
+    {
+      "end": 795480,
+      "speaker": "B",
+      "start": 681120,
+      "text": "Aber man merkt schon, dass diese Plattformen sich zwischen euch als Hörer innen und uns als Podcaster schiebt und dadurch die natürlich die Macht auch haben, erstens das Ganze zu steuern, also wer darf was finden zum Beispiel oder hören Und sie haben natürlich auch die ganzen Statistik Daten, die wir unter Umständen auch verlieren, weil es kann sein, dass die gewisse Dateien zwischencashen. Das heißt, die liefern die MP Datei ein hundert mal aus an ein hundert Hörer innen und wir sehen aber nur einen Download. Kann natürlich passieren bei solchen Plattformen und daher ist es so wichtig, dass man die Daten von diesen Plattformen auch bekommt. Jetzt als Podcaster ist es natürlich super nervig, wenn man da tagtäglich sich in irgendwelchen Dashboards einloggen muss und bei Apple durch eine Two Factor Authentication durch muss, damit man da einmal diesen Graph sieht und am nächsten Tag muss man sich wieder neu einloggen und so weiter Und man hat diese Daten dann auch nicht kombiniert irgendwie gemeinsam. Das heißt, dass man vielleicht die Apple Daten und die Spotify Daten zusammensieht. Wie sind die Durchhörraten? Wann springen die Hörer innen ab? Also solche Informationen fehlen, wenn man das nicht in einem zentralen Ort gespeichert hat, alle Daten, die zur Verfügung stehen. Und genau das haben wir mit Open Podcast gelöst. Und genau um diese Architektur geht es heute. Also wie baut man so eine Data Pipeline, die alle Daten von diesen Plattformen abholt regelmäßig und dann in irgendeiner Form wieder zur Verfügung stellt? In dem Fall der Einfachheit halber einfach über eine API, da kann dann Frontend dranhängen, da kann irgendwie ein Dashboard System dranhängen. Also es kann dann alles Mögliche sein. Aber im Prinzip geht es mal um die Data Pipeline. Wie würde man sowas bauen? Und wie gesagt, es trifft man wahrscheinlich im echten Leben ganz oft an. Ihr arbeitet alle mit APIs, man muss irgendwo Daten ziehen, Daten verarbeiten, speichern ist eigentlich ein klassisches Pattern und darum eigentlich auch sehr interessant, was der Andi dazu sagt und wie er das bauen wird. Jetzt grundsätzlich mal zum Verständnis. Andi ist die Grundidee klar, was wir machen wollen."
+    },
+    {
+      "end": 853600,
+      "speaker": "A",
+      "start": 795560,
+      "text": "Also wir haben Daten auf dem Storage liegen. Wir haben eine Datei, die sagt, welche Daten findet man unter welcher URL? Das ist dein RSS Feed und diese Datei hat dann einen Episodentitel und die Datei hat einen Download URL zu der Episode selbst, zu dem MP. Diese Datei, dieses Inventory ist es ja eigentlich, wird an Services gegeben wie Spotify, Apple, RTL, Deezer, YouTube und Co. Und die crawlen diesen XML Feed regelmäßig und sagen, ist eine neue Episode. Wenn ja, laden die sich die runter und fügen diese in ihre Datenbank ein. Und ich als Enduser, ich als Engineering Kiosk Fan, greife dann immer nur auf Spotify, auf Apple, auf YouTube zu, die dann eigentlich sich als Proxy dazwischen schalten, um mir ein besseres User Interface zu geben, als unser Hoster es kann. Das ist korrekt, richtig."
+    },
+    {
+      "end": 865280,
+      "speaker": "B",
+      "start": 853600,
+      "text": "Genau so funktioniert Podcasting. Aber was wir jetzt bauen wollen, ist, dass wir die Analysedaten von diesen Plattformen bekommen. Also ist die Idee, was wir bauen wollen, soweit klar auf High Level."
+    },
+    {
+      "end": 873520,
+      "speaker": "A",
+      "start": 865360,
+      "text": "Wir wollen die Zusatzinformation, die diese Proxys haben, vereinheitlichen, weil unser Hoster diese nicht hat. Richtig, so verstehe ich das."
+    },
+    {
+      "end": 911520,
+      "speaker": "B",
+      "start": 873600,
+      "text": "Genau. Wobei unser Hoster kann eigentlich auch eine Quelle sein. Also vielleicht ist Spotify eine Quelle für Daten. Apple ist also Apple Podcasts ist eine Quelle für Daten. Unser Hoster, der die RSS Datei zur Verfügung stellt, macht ja auch Statistiken, wie oft wird die MP Datei downgeloadet zum Beispiel. Also wir wollen schon diese Statistiken auch bekommen, aber da hat man meistens einen besseren Draht zu dem eigenen Hoster, weil den zahlt man ja und im Idealfall hat er eine schöne API, die zur Verfügung steht, die man abgreifen kann. Aber im Prinzip geht es darum, ich habe mehrere APIs und möchte da die Daten abgreifen und bei mir in irgendeinem internen System zwischenspeichern."
+    },
+    {
+      "end": 982630,
+      "speaker": "A",
+      "start": 911520,
+      "text": "Aber der Hoster hat ja schon in irgendeiner Art und Weise eine spezielle Rolle, denn ja, ich als Enduser kann mir auch diesen RSS Feed in einem Browser öffnen. Also in diesem Sinne greife ich auf den Podcast zu ohne einen Proxy, weil Spotify und Apple ist ja Äpfel, wollte ich gerade sagen. Spotify und Apple ist ja so eine Art Proxy dazwischen. Wenn ich direkt auf den Hoster zugreife, dann nehme ich den Proxy heraus, was okay ist. Aber der Hoster hat in diesem Sinne einen speziellen Use Case oder beziehungsweise eine spezielle Situation, weil die Metriken des Hosters ja die Metriken der einzelnen Proxys inkludieren. Angenommen, unsere Episode wird ein tausend mal runtergeladen, somit ist die Zahl bei dem Hoster ein tausend, bei Spotify drei hundert, wenn die einen Marktanteil bei uns von dreiig Prozent haben und Apple hat einen höheren Anteil von fünfzehn Prozent und dann ist bei Apple die Zahl ein hundert fünfzig, also die drei hundert und die ein hundert fünfzig von Spotify und Apple sind ja auch in der Zahl ein tausend beim Hoster mit drin. Ist das korrekt? Somit kann ich den Hoster ja nicht als Proxy wirklich sehen und rechnen in meiner Pipeline."
+    },
+    {
+      "end": 1028750,
+      "speaker": "B",
+      "start": 982630,
+      "text": "Also wir gehen jetzt schon relativ tief in das ganze Podcast Ecosystem rein, braucht eigentlich jetzt gar kein Thema sein für die Architektur. Aber du hast natürlich recht, Hoster hat eine andere Rolle. Es stimmt nicht ganz, dass der alle Downloads sieht, weil theoretisch kann Spotify auch was zwischen cashen. Das ist je nachdem, was für einen Vertrag der Hoster mit Spotify hat, ob du selber hostest, ob du nicht selber hostest. Bei YouTube ist es noch mal ganz anders. Bei YouTube bekommst du überhaupt keine Informationen über einen Download. Also es ist ein komplexes System, was nicht so einfach ist. Du hast im Großen und Ganzen Recht, dass der Hoster übergeordnet fast alles sieht, aber eben nur fast. Aber ist für unsere Architektur jetzt auch irrelevant, was das für Daten sind. Wir wollen ja nur die Daten grundsätzlich mal bekommen. Wie wir die dann auswerten, ist ja nochmal eine andere Sache."
+    },
+    {
+      "end": 1053550,
+      "speaker": "A",
+      "start": 1028830,
+      "text": "Haben alle Proxys, also Spotify und Apple und YouTube und so weiter, eine API. Definiere API, restful, graphql, grpc, eine programmiertechnische Schnittstelle, die nicht HTML ist, mit der ich ein definiertes Format wie JSON, XML, YAML, TOML oder was auch immer zurückbekomme, die ich maschinell sehr einfach verarbeiten kann."
+    },
+    {
+      "end": 1054910,
+      "speaker": "B",
+      "start": 1053550,
+      "text": "Definiere sehr einfach."
+    },
+    {
+      "end": 1067510,
+      "speaker": "A",
+      "start": 1054990,
+      "text": "Ich mache einen HTTP Call und bekomme eine sehr strukturierte Form zurück. HTML, Achtung, ist in dieser Sache nicht wirklich strukturiert, mit einer festen Struktur, die sich nicht regelmäßig ändern kann."
+    },
+    {
+      "end": 1113850,
+      "speaker": "B",
+      "start": 1067510,
+      "text": "Also du hast bei Apple eine Schnittstelle, klassische REST Schnittstelle oder restartig würde ich es mal nennen. Auch bei Spotify ist teilweise graphql teilweise eine restartige Schnittstelle. Funktioniert soweit. Bringt ihr JSON als Antwort zurück. Aber, jetzt kommt das große Aber, es gibt keine Dokumentation, es ist keine öffentliche API. Die API liegt hinter einem Login bei Apple einen Two Factor Authentication Login, der nur vier Stunden anhält. Aber wenn du diese Hürde überspringst, dann hast du eine API, die es intern gibt für die Dashboards von Apple und Spotify. Beim Hoster können wir mal annehmen, der hat eine schöne API, weil dem zahlst du was. Der bringt dir wirklich eine Dokumentation. Da hast du einen Key, einen klassischen und kannst da Anfragen stellen."
+    },
+    {
+      "end": 1119450,
+      "speaker": "A",
+      "start": 1113850,
+      "text": "Du hast schon eine meiner nächsten Fragen beantwortet. Das bedeutet, alle Hoster haben proprietäre APIs."
+    },
+    {
+      "end": 1139830,
+      "speaker": "B",
+      "start": 1119610,
+      "text": "Proprietär, dass sie nicht dokumentiert sind. Aber nachdem wir im Web sind, kannst du natürlich jederzeit das reverse engineeren. Relativ einfach, weil du du siehst ja, was im Dashboard angezeigt wird. Du kannst nachschauen, was bringen dir die APIs, was geben dir die APIs zurück, welche JSON Informationen, was bedeutet das jeweils. Aber du musst reverse engineeren. Also du hast keine Dokumentation."
+    },
+    {
+      "end": 1145110,
+      "speaker": "A",
+      "start": 1139910,
+      "text": "Mir geht es gar nicht um die Dokumentation oder ums Reverse Engineering, mir geht es um das Stabilitätsversprechen."
+    },
+    {
+      "end": 1147990,
+      "speaker": "B",
+      "start": 1145190,
+      "text": "Ja, kann morgen umgestellt werden und passiert."
+    },
+    {
+      "end": 1157840,
+      "speaker": "A",
+      "start": 1148710,
+      "text": "Das ist mein Hintergrund, warum ich diese Frage stelle. Nicht, dass, weil wäre es eine öffentliche Dokumentation. Natürlich muss eine Firma kein Stabilitätsversprechen bringen."
+    },
+    {
+      "end": 1182380,
+      "speaker": "B",
+      "start": 1157840,
+      "text": "Aber naja, es ist schon mal der Unterschied. Du bekommst halt nicht Bescheid gegeben. Das heißt, du merkst einfach, irgendwas hat sich geändert. Und sonst bekommst du ja üblicherweise schon eine Info, wann sich was ändert oder vielleicht wenigstens einen Tag vorab. Also das wäre ja schon hilfreich, aber in dem Fall erfährst du es eigentlich immer erst im Nachhinein oder noch schlimmer, du kannst natürlich in den A B Test laufen, dass manchmal die Schnittstelle das eine zurückgibt und manchmal das andere."
+    },
+    {
+      "end": 1184060,
+      "speaker": "A",
+      "start": 1182620,
+      "text": "Muss ich das mit berücksichtigen?"
+    },
+    {
+      "end": 1187900,
+      "speaker": "B",
+      "start": 1184220,
+      "text": "Das API Testing nehmen wir mal auf, weil sonst wird es schon sehr, sehr komplex."
+    },
+    {
+      "end": 1212750,
+      "speaker": "A",
+      "start": 1187980,
+      "text": "Okay, dann lassen wir das A B Testing weg. Wollen wir ein fest definiertes Subset der Daten dieser Proxys oder wollen wir immer alle Daten, die uns alle geben? Ich nehme mal an, dass Apple uns die iOS Version mit gibt und Spotify nicht. Du wirst Datenpunkte haben, die ein Proxy dir zur Verfügung stellt, die ein anderer Proxy dir nicht zur Verfügung stellt."
+    },
+    {
+      "end": 1233070,
+      "speaker": "B",
+      "start": 1212750,
+      "text": "Also die Plattformen haben ganz unterschiedliche Metriken, teilweise auch ähnliche Metriken, die sie anders nennen und so weiter, die sie anders berechnen. Also das sind ganz unterschiedliche Daten. Jetzt zu deiner Subset Frage, die würde ich umdrehen. Würdest du alles fetchen, das du zur Verfügung hast? Oder würdest du dich jetzt irgendwie, wenn du so was baust, nur auf diese Metriken konzentrieren, die du haben willst?"
+    },
+    {
+      "end": 1250920,
+      "speaker": "A",
+      "start": 1233400,
+      "text": "Das kommt auf die Metriken an. Wenn zum Beispiel in irgendeiner Art und Weise, aus welchen Gründen auch immer Pi Daten sind oder sensible Daten, dann muss ich die natürlich ganz anders speichern und den Zugriff auf die Speicher regeln. Deswegen ist das meine Frage, was ich auch im Backend berücksichtigen muss in Bezug auf Zugriffsrechte und Co."
+    },
+    {
+      "end": 1293110,
+      "speaker": "B",
+      "start": 1251400,
+      "text": "Pi hast du sowieso keine, weil das sind alles aggregierte Daten von Apple, Spotify. Also wenn du die zur Verfügung hast, hast du natürlich keine persönlichen Daten. Die Frage ist ja eher klarerweise, wenn du da jetzt dran gehst, dann wirst du die überlegen, okay, hätte gern die Downloads, die Plays, solche Infos. Aber natürlich gibt es da ganz spezielle, sagen wir, es gibt die iOS Version noch, die du angesprochen hast, die würdest du dir jetzt im ersten Moment vielleicht sagen, eigentlich ist sie uninteressant, aber ist die Frage, fetcht man dann gleich alles mit oder nicht? Also wir sprechen da schon von, ich würde mal sagen so von zwanzig Endpoints, zwanzig verschiedenen Metriken, die auch teilweise komplexer sein können, die du zu pro Plattform zurückkriegen könntest."
+    },
+    {
+      "end": 1302550,
+      "speaker": "A",
+      "start": 1293270,
+      "text": "Moment, du hast gerade gesagt, zwanzig Endpoints, zwanzig Metriken. Kriege ich jetzt zwanzig Metriken zurück oder muss ich zwanzig Metriken über zwanzig Endpoints requesten?"
+    },
+    {
+      "end": 1328880,
+      "speaker": "B",
+      "start": 1302710,
+      "text": "Du hast schon eher so zehn bis zwanzig Endpoints und das ist für jede Plattform gleich. Ja, die heißen natürlich unterschiedlich und sind auch leicht unterschiedlich, wie sie das machen natürlich und was sie dir an Daten zur Verfügung stellen. Also bei Apple bekommst du zum Beispiel natürlich keine Informationen über das Betriebssystem, weil es ist immer iOS. Bei Spotify bekommst du sehr wohl Informationen. Wie viele Leute haben das unter Apple, wie viele Leute haben das unter Android?"
+    },
+    {
+      "end": 1346640,
+      "speaker": "A",
+      "start": 1328880,
+      "text": "Ja, OK, verstehe ich jetzt. Aber Moment, du springst jetzt gerade zwischen Metrix und Endpoint. Das bedeutet, ich kriege die Informationen für die Betriebssystemverteilung bei Spotify über Spotify COM API Betriebssysteme und die Downloadzahlen unter API COM. Spotify COM API Downloads."
+    },
+    {
+      "end": 1361440,
+      "speaker": "B",
+      "start": 1347120,
+      "text": "Es ist bunt gemischt, klassisch, das ist keine schöne API, das ist eine interne API und über manche Endpoints bekommst du acht Metriken, über andere Endpoints nur eine Metrik, die andere ist verschachtelt, die andere nicht verschachtelt. Also du hast so alle Variationen an API Möglichkeiten."
+    },
+    {
+      "end": 1370870,
+      "speaker": "A",
+      "start": 1361440,
+      "text": "Okay, dann ist aber meine Frage ja noch relevanter. Sind die Requirements, dass ich ein hartes Subset an Metriken nehme oder nehme ich alles, was wir von API Endpoints bekommen können?"
+    },
+    {
+      "end": 1372380,
+      "speaker": "B",
+      "start": 1371020,
+      "text": "Ja, wie würdest du sparen?"
+    },
+    {
+      "end": 1428980,
+      "speaker": "A",
+      "start": 1372460,
+      "text": "Da ich ja speichereffizient bin, Green Economy und auch datensparsam sollten wir alle sein, würde ich nur das nehmen, was wir brauchen. Und deswegen frage ich nach den Requirements des Produktes. Also weil wenn wir im Observability Gedanken sprechen, dann nimmt man erstmal alles, was man kriegen kann und stellt sich später die Frage, welche Frage ich einstellen möchte. Denn wenn du sagst, wir brauchen keine Verteilung auf Betriebssystem Ebene, weil du das nur von Spotify bekommst und nicht von Apple, wie du gerade gesagt hast, da gibt es ja jetzt zwei Wege, wie du das im Produkt hintendran nimmst. Du kannst ja auch sagen, Spotify hat eine vierzig prozentige Marktmacht und ich rechne diese Betriebssystemverteilung dann hoch, wenn du das machen möchtest in der Analyse. Das weiß ich nicht. Und deswegen stelle ich diese Frage, weil wenn du sagst, ich will das später machen, dann muss das Feature erst entwickelt werden und dann kannst du erst ab diesem Zeitpunkt die Analysen ja erst fahren."
+    },
+    {
+      "end": 1456420,
+      "speaker": "B",
+      "start": 1428980,
+      "text": "Also ich kann dir vorwegnehmen, nachdem wir ja ein Produkt bauen, was dann andere Leute verwenden wollen, es kommen garantiert die Leute um die Ecke und sind sie schon, die sagen, hey, ich sehe diese Metrik in meinem Apple Dashboard, warum habe ich die nicht in meiner internen Auswertung? Also die hast du ständig. Darum würde ich empfehlen, alle Endpoints zu nehmen oder alle Informationen zu speichern. Aber ist im Endeffekt auch egal, ob es jetzt zehn Endpoints sind oder zwanzig, ist ja auch schon egal. An der Gesamtarchitektur wird sich da nichts ändern."
+    },
+    {
+      "end": 1458720,
+      "speaker": "A",
+      "start": 1456420,
+      "text": "Dementsprechend, naja, du verdoppelst gerade mal eben die Request."
+    },
+    {
+      "end": 1464080,
+      "speaker": "B",
+      "start": 1459120,
+      "text": "Ja, aber die sind sowieso ein Problem. Aber da kommen wir noch drauf."
+    },
+    {
+      "end": 1475280,
+      "speaker": "A",
+      "start": 1464080,
+      "text": "Welche Granularität müssen die Daten haben? Das bedeutet, in welchem Intervall würdest du sagen, ist OK und welcher ist zu langsam? Also müssen wir ein fünf Minuten Intervall haben oder reicht einmal pro Tag?"
+    },
+    {
+      "end": 1478240,
+      "speaker": "B",
+      "start": 1475280,
+      "text": "Also die Plattformen crunchen auch ihre Daten nur einmal täglich."
+    },
+    {
+      "end": 1480480,
+      "speaker": "A",
+      "start": 1478240,
+      "text": "Kennen wir die Zeitpunkte, wann die die Daten crunchen?"
+    },
+    {
+      "end": 1495020,
+      "speaker": "B",
+      "start": 1480880,
+      "text": "Ja, kennen wir ganz gut. Meistens irgendwann so gegen Mittag rundherum, außer Spotify hat wieder mal ein Problem, dann gibt es auch drei Tage Daten oder sie kommen mal ein paar Stunden zu spät, aber so grob irgendwann so in der Mittagszeit herum."
+    },
+    {
+      "end": 1497660,
+      "speaker": "A",
+      "start": 1495100,
+      "text": "Okay, also kennen wir es nicht, sondern wir nehmen es an."
+    },
+    {
+      "end": 1499420,
+      "speaker": "B",
+      "start": 1497660,
+      "text": "Genau. Und du kannst dich nicht darauf verlassen."
+    },
+    {
+      "end": 1509660,
+      "speaker": "A",
+      "start": 1499420,
+      "text": "Okay, Ich meine im Endeffekt ist es ja dasselbe Problem. Wir machen das jetzt auf Podcast, aber so wie Check hat bei jedem Versicherungsvergleich, bei jedem Preisvergleich und so weiter."
+    },
+    {
+      "end": 1516300,
+      "speaker": "B",
+      "start": 1509660,
+      "text": "Genau. Oder Trivago mit den Hotelpreisen, alles. Darum sage ich ein sehr allgemeines Problem eigentlich."
+    },
+    {
+      "end": 1605510,
+      "speaker": "A",
+      "start": 1516560,
+      "text": "Du hast mir ja schon hingegeben mit den Metriken. Also was ich machen würde, ich würde mir, ich würde sagen, ich fokussiere mich jetzt auf vier oder fünf Services, Spotify, Apple RTL und so weiter. Die würde ich mir dann, ich würde mir ein Dokument erstellen, ich würde die APIs reverse engineeren, ich würde versuchen, die Response, die ich da bekomme, mir die Metriken aufzuschreiben und diese mit deren UI zu matchen, damit ich weiß, diese Zahl heißt Download Day in der Response. Das bedeutet, ich habe verschiedene Endpoints, über verschiedene Endpoints kriege ich verschiedene Daten und ich versuche diese mit der UI zu matchen, damit ich erst mal weiß, was das ist. Dann würde ich mir die Definition dieser Metriken mal versuchen herzuleiten, weil du hast gerade schon von Plays und so weiter gesprochen und von Downloads. Audio kann man ja aber auch streamen, weil du hast nämlich vorhin auch durchhörraten erwähnt. Meine Annahme ist, und das würde ich dann verifizieren, ist, dass das Zählverhalten von ab wann ein Play ein Play ist zwischen Spotify und Apple und den anderen drei Plattformen anders ist. Keine Ahnung, der eine macht ab drei Sekunden, der andere ab fünf, der andere ab zwanzig oder sowas. Also ich würde schon versuchen, einen einheitlichen Nenner zu bekommen, so weit wie möglich, mit einer gewissen Unschärfe. Und die gewisse Unschärfe ist, wenn Spotify sagt, ich nutze ein Play als Play nach zehn Sekunden und Apple nach zwanzig, dann würde ich das im Zuge des Produktes vielleicht als ein Play zählen. Da würde ich darauf gar nicht achten."
+    },
+    {
+      "end": 1639550,
+      "speaker": "B",
+      "start": 1605830,
+      "text": "Aber wie würdest du das jetzt von der Architektur her machen? Würdest du dann die Werte so abspeichern, wie sie über die API an dich geliefert werden oder würdest du die in dem Format speichern, wie du dann die Auswertung machst? Also wenn du jetzt sagst, es gibt die Plays und da fließen dann die Apple Plays rein, die Spotify Plays und die Downloads von dem Hoster, du speicherst es im selben Format oder würdest du sagen, hey, das sind Apple Plays, das sind Spotify Plays und du speicherst die Daten möglichst in der originalen Form, wie sie von der API geliefert werden Oder aggregierst du in einem Schritt schon?"
+    },
+    {
+      "end": 1710240,
+      "speaker": "A",
+      "start": 1639550,
+      "text": "Das kommt jetzt darauf an, wie ich es baue. Ich bin ja gerade in der Analysephase. Das bedeutet, ich habe die ganzen Plattformen analysiert, ich habe die Response analysiert, ich weiß, welche Zahl jetzt welches ist und somit erkenne ich natürlich auch, wo der kleinste gemeinsame Nenner ist. Ich weiß jetzt, ich habe da, ich habe da Downloads, ich habe da Downloads und so weiter und so fort. Ich habe jetzt zwei Möglichkeiten im Kopf. Die erste Möglichkeit ist, ich habe einen, ich habe einen Scheduler und der Scheduler hat verschiedene Adapter und der Adapter heißt Spotify Adapter und Apple Adapter und so weiter und so fort. Und der Spotify Adapter und der Apple Adapter, die kümmern sich um alles, was da drunter hängt in Bezug auf ich fade die Request aus, ich mache den Jitter, mach Login und so weiter. Das Login Problem kümmern wir uns gleich drum. So und die, jeder Adapter gibt mir ein definiertes Format zurück. So und jetzt, jetzt, jetzt kommt es gerade deswegen sage ich zwei Möglichkeiten. Entweder ich habe das definierte Format als Zwei Layer Modell, das bedeutet auf dem ersten Layer ist der kleinste gemeinsame Nenner, dass jeder Service mir sagt, okay, das sind die Downloads und so weiter. Und der zweite Layer wäre dann die Raw Response. Also ich würde mir die Roll Response immer wegspeichern."
+    },
+    {
+      "end": 1710520,
+      "speaker": "B",
+      "start": 1710240,
+      "text": "Immer."
+    },
+    {
+      "end": 1712280,
+      "speaker": "A",
+      "start": 1710600,
+      "text": "Nur ich bin mir gerade unsicher, in."
+    },
+    {
+      "end": 1732480,
+      "speaker": "B",
+      "start": 1712280,
+      "text": "Welcher Form würdest du die speichern? Also wirklich das JSON als Blob irgendwo in der Datei, die wirklich das Datum API zur Verfügung stellt, definiert oder in der Datenbank. Also was würdest du da machen? Rein jetzt vom Format? Würdest du das wirklich Raw, Raw, Raw speichern oder in irgendeiner so einer Zwischen."
+    },
+    {
+      "end": 1747890,
+      "speaker": "A",
+      "start": 1732480,
+      "text": "Raw Form, da das ja nicht dokumentierte APIs sind, die sich jedes Mal ändern können, würde ich glaube ich im ersten Schritt. Das ist schwierig. Das ist schwierig, weil auf der einen Seite, wenn ich das wirklich Raw wegspeicher, also ich würde das schon noch mit ihnen in die Datenbank speichern, aber auch."
+    },
+    {
+      "end": 1751770,
+      "speaker": "B",
+      "start": 1747890,
+      "text": "Da Raw Jason oder in Spalten, die du definiert hast."
+    },
+    {
+      "end": 1755810,
+      "speaker": "A",
+      "start": 1751770,
+      "text": "Ach so, ne, da würde ich ein Blob Feld machen, Raw Jason Feld, OK."
+    },
+    {
+      "end": 1758650,
+      "speaker": "B",
+      "start": 1755890,
+      "text": "Also wirklich die echte Response, die man zurückbekommt."
+    },
+    {
+      "end": 1809020,
+      "speaker": "A",
+      "start": 1758650,
+      "text": "Jetzt stelle ich mir aber gerade die Frage, ob ich im ersten Schritt ein eins zu eins Keymapping mache. Das bedeutet, ich bekomme jetzt Downloads underscore day zurück und mappe das auf Downloads Day. Also ob ich die Raw API, die Raw Response immer noch, ob ich die wirklich einfach nur copy rüber oder ob ich die einzelnen Keys manuell rüberschreibe, Weil wenn die Response sich nämlich über Zeit ändert, dann kopiere ich ja immer die Raw Response. Und wenn ich irgendwann mal über alle rohen Daten etablieren möchte, dann muss ich ja etliche Checks bauen, existiert dieser Key in dieser Response und so weiter, Weil die Response kann sich ja ändern mit den Keys. Und wenn ich das eins zu eins Mapping machen, dann kann ich immer dieser Key, wenn der leer ist, dann wurde der rausgenommen. Dann habe ich aber immer das Problem, ich brauche so eine Art Observability, wenn ein neuer Key hinzugefügt wird, damit ich das Mapping nachziehen kann."
+    },
+    {
+      "end": 1835750,
+      "speaker": "B",
+      "start": 1809260,
+      "text": "Ja, also du musst in irgendeiner Form irgendwo ein Mapping machen. Du kannst es natürlich zur Laufzeit machen, wenn du die Daten bekommst, du kannst es später machen. Im Prinzip brauchst du irgendwo ein Mapping. Wie würdest du es anlegen? Klar gibt es verschiedene Möglichkeiten und ist im Detailfall natürlich dann auch je nachdem zu bewerten. Aber jetzt die Infos, was du hast, wo würdest du den Mapping Layer anlegen und zu welcher Zeit würdest du den Mapping Layer starten und das Mapping dann wirklich durchführen beim Fetchen, beim Abrufen irgendwo in der Mitte."
+    },
+    {
+      "end": 1898530,
+      "speaker": "A",
+      "start": 1835750,
+      "text": "Ich glaube, ich habe mich jetzt entschieden, ich würde, der Adapter retourniert immer die Row Response und das wird in einem Message Queue gehen mit der Information, da kommt eine Message vom Adapter Spotify und dann gibt es einen Spotify Consumer, der dann die harte Arbeit macht und die harte Arbeit ist, aus der Raw Response den kleinsten gemeinsamen Nenner errechnen. Also das bedeutet also die Keys rausnehmen und der macht dann auch das Heavy Lifting in Bezug auf, oh, ist da ein neuer Key, ist da ein alter Key und so weiter. Der Grund ist warum, wenn sich die Response nämlich komplett ändert, dann kann ich da nämlich in der Message Verarbeitung einen Fehler zurückgeben und dann geht meine Message in eine Deadletter Queue, die ich dann beim Debugging verarbeiten kann. Und wenn ich den Code angepasst hab, kann ich die Message, die in der Deadletter Queue wieder re queuen und somit verliere ich keine Daten. Somit habe ich beide Vorteile. Ich habe eine Art Alerting System, wenn sich an der Response was ändert, wo ich Code adjusten muss, also wirklich anpassen muss oder ich kann bzw. Aktiv und verliere aber auch keine Daten."
+    },
+    {
+      "end": 1934400,
+      "speaker": "B",
+      "start": 1898610,
+      "text": "Jetzt hast du schon CUE erwähnt, wenn wir da mal ein bisschen in die Architektur reingehen, du würdest demnach alles mit Cues bauen, ist ja deine Lieblingsarchitektur fast. Kannst du mal erläutern, wie du das architekturmässig aufsetzen würdest, was wo liegt, welche Module, Services, was auch immer, wie du das einfach bauen würdest von der Architektur her, was du jetzt bisher erklärt hast. Vielleicht das auch noch als Zusatzinformation. Wir wollen natürlich schnell zu einem MVP kommen. Also wir sind jetzt keine Enterprise, die zwei hundert Leute zur Verfügung hat, sondern wir sind ein, zwei Personen, die möglichst schnell irgendwas an den Start bringen wollen natürlich auch. Also nur um das, um den Kontext zu geben."
+    },
+    {
+      "end": 1943200,
+      "speaker": "A",
+      "start": 1934400,
+      "text": "Okay, wir haben irgendwo in der Datenbank haben wir den Podcast mit der Podcast ID, mit den Credentials und so weiter und so fort."
+    },
+    {
+      "end": 1944800,
+      "speaker": "B",
+      "start": 1943200,
+      "text": "Von welchen Credentials redest du?"
+    },
+    {
+      "end": 1946720,
+      "speaker": "A",
+      "start": 1944800,
+      "text": "Naja, wir müssen ja authentifizieren, hast du."
+    },
+    {
+      "end": 1949160,
+      "speaker": "B",
+      "start": 1946720,
+      "text": "Gesagt, die Apple Credentials zum Beispiel."
+    },
+    {
+      "end": 1953440,
+      "speaker": "A",
+      "start": 1949560,
+      "text": "Die Credentials, die zu dem Podcast assigned."
+    },
+    {
+      "end": 1958440,
+      "speaker": "B",
+      "start": 1953440,
+      "text": "Sind, aber von einer Quelle. Du hast ja bei Spotify andere Credentials als bei Apple."
+    },
+    {
+      "end": 1977440,
+      "speaker": "A",
+      "start": 1958440,
+      "text": "Ganz dreckig haben wir eine Tabelle, eine relationale Tabelle und die heißt Podcast und die hat eine ID, die hat einen Namen und die hat dann ein Feld. Spotify Username und Spotify Passwort, Apple Username, Apple Passwort und so weiter. Nehmen wir einfach das mal an. Wenn du möchtest, können wir das auch in der Normalform machen."
+    },
+    {
+      "end": 1979360,
+      "speaker": "B",
+      "start": 1977440,
+      "text": "Das bedeutet ja, ja, es liegt in."
+    },
+    {
+      "end": 1992320,
+      "speaker": "A",
+      "start": 1979360,
+      "text": "Der Datenbank, ist okay, Dann habe ich, Achso, und in dieser Datenbank steht noch irgendwie die Crawling Time drin und die last Crawling Time oder so. Die Crawling Time ist, wann der optimal."
+    },
+    {
+      "end": 1996890,
+      "speaker": "B",
+      "start": 1992320,
+      "text": "Starten soll, die Zeit nicht, sondern wirklich allgemein."
+    },
+    {
+      "end": 2017770,
+      "speaker": "A",
+      "start": 1996890,
+      "text": "Genau, keine Ahnung, dreizehn uhr, wir gehen jetzt vom täglichen Crawling aus dreizehn, dann haben wir einen Cron Job, der guckt alle fünf Minuten in die Tabelle, so nach dem Motto, hey, muss ich jetzt gerade wieder was crawlen? Der holt sich die, gib mir alle Podcasts, die in den letzten fünf Minuten die Crawling Time erreicht haben. Dann würde ich diese Row nehmen, diese Datenbank Row und in eine Message Queue packen dahinter."
+    },
+    {
+      "end": 2020420,
+      "speaker": "B",
+      "start": 2017770,
+      "text": "Was für ein System würdest du verwenden für die Message Cues?"
+    },
+    {
+      "end": 2021610,
+      "speaker": "A",
+      "start": 2020570,
+      "text": "Heute ist gehopst wie gesprungen."
+    },
+    {
+      "end": 2023650,
+      "speaker": "B",
+      "start": 2021610,
+      "text": "Da kannst du entweder, also ich bin."
+    },
+    {
+      "end": 2027250,
+      "speaker": "A",
+      "start": 2023650,
+      "text": "Ein großer Fan von rabbitmq, du kannst aber auch Amazon SQS nehmen und dann."
+    },
+    {
+      "end": 2034690,
+      "speaker": "B",
+      "start": 2027250,
+      "text": "Über, Bleiben wir mal bei rabbitmq. Du hast rabbitmq als Messaging System. In was programmierst du da diesen Cron Job?"
+    },
+    {
+      "end": 2037730,
+      "speaker": "A",
+      "start": 2034690,
+      "text": "OK, sprachunabhängig, aber ich würde in Go."
+    },
+    {
+      "end": 2048500,
+      "speaker": "B",
+      "start": 2037730,
+      "text": "Machen und der Cron würde System Cron, also Linux Cron würde dein Go Programm einfach aufrufen, alle fünf Minuten schmeißt eine Message in die."
+    },
+    {
+      "end": 2059620,
+      "speaker": "A",
+      "start": 2049300,
+      "text": "Alternativ haben wir einen Prozess mit einem Timer, der alle fünf Minuten nachguckt, weil dann umgehen wir nämlich das Problem, dass der, wenn der Cron irgendwann mal hängen bleibt, dass er sich nach und nach immer selbst startet."
+    },
+    {
+      "end": 2071940,
+      "speaker": "B",
+      "start": 2060260,
+      "text": "Okay, der Cron wirft eine Message in die Queue. Dann nehmen wir mal an, der hat jetzt Spotify in die Queue geworfen oder wirft er Apple und Spotify rein in eine Message? Wahrscheinlich nur Spotify, oder?"
+    },
+    {
+      "end": 2084950,
+      "speaker": "A",
+      "start": 2072190,
+      "text": "Das ist eine sehr gute Frage. Wir können die ganze Rolle reinschmeissen und der Consumer, es kommt darauf an, wie wir den Consumer bauen. Bauen wir einen speziellen Consumer, der nur Apple Request macht und einen Consumer, der nur Spotify Request macht?"
+    },
+    {
+      "end": 2086270,
+      "speaker": "B",
+      "start": 2084950,
+      "text": "Ja, wie würdest du es machen?"
+    },
+    {
+      "end": 2096110,
+      "speaker": "A",
+      "start": 2086350,
+      "text": "Ich würde sagen, wir bauen einen Consumer, der Apple macht und einen Consumer, der Spotify macht, weil die Codebase für einen Consumer, der ein Twitch Case Statement dran hat und so weiter, wird schon relativ groß."
+    },
+    {
+      "end": 2114240,
+      "speaker": "B",
+      "start": 2096670,
+      "text": "Okay. Also du hättest dann Consumer, die sind wieder in Go geschrieben, vermute ich mal bei dir. Die lesen dann die Message einfach. Sind es unterschiedliche Programme? Ist es derselbe Code? Also hast du da zwei Services oder ist es ein Service, was Spotify und Apple versteht und je nachdem mit einem if dann intern das splittet?"
+    },
+    {
+      "end": 2146819,
+      "speaker": "A",
+      "start": 2114240,
+      "text": "Ich denke, dass, weil die in der Regel Funktionalität teilen und mit Funktionalität teilen, meine ich nicht die Service spezifischen Calls, sondern ich muss eine Message lesen, ich muss die Message acknowledge, ich muss den HTTP Call machen, ich muss einen Retry machen, ich muss Observability haben, ich muss Metriken rausgeben und all sowas. Ist das eine Codebase mit unterschiedlichen, ich nenne es mal Klassen oder Structs oder ähnliches. Genau, weil es ist ja immer dasselbe Pattern, wenn man Die Art und Weise, wie wir die Daten holen, ist anders, aber das ganze Drumherum ist ja dasselbe."
+    },
+    {
+      "end": 2156340,
+      "speaker": "B",
+      "start": 2146900,
+      "text": "Wie sieht es mit dem Code aus, der bei Cron angestoßen wird und dann die Message in die Queue schmeißt aus der Datenbank? Ist das dieselbe Codebase?"
+    },
+    {
+      "end": 2166460,
+      "speaker": "A",
+      "start": 2156420,
+      "text": "Ja, das kann entweder wir können das in eine Mono Repo packen oder in unterschiedlichen Repos inzwischen würde ich sagen, ich pack's in ein Monorepo mit einem zweiten."
+    },
+    {
+      "end": 2171940,
+      "speaker": "B",
+      "start": 2166460,
+      "text": "Command, aber es ist dieselbe Codebase, Also ist nur ein Flag, wie du startest, ne?"
+    },
+    {
+      "end": 2178580,
+      "speaker": "A",
+      "start": 2172500,
+      "text": "Du kannst je nach Architektur kannst du verschiedene Binaries haben, du compilest verschiedene Binaries raus."
+    },
+    {
+      "end": 2182660,
+      "speaker": "B",
+      "start": 2178660,
+      "text": "Du würdest zwei Binaries haben, also zwei Services in dem Fall."
+    },
+    {
+      "end": 2183680,
+      "speaker": "A",
+      "start": 2182660,
+      "text": "Es ist dieselbe Codebase."
+    },
+    {
+      "end": 2189870,
+      "speaker": "B",
+      "start": 2184310,
+      "text": "Ja, aber zwei Services, die laufen. Okay. Beziehungsweise die Consumer können überhaupt mehrfach laufen."
+    },
+    {
+      "end": 2213310,
+      "speaker": "A",
+      "start": 2189870,
+      "text": "Oder die Consumer können. Du kannst ein hundert Spotify Consumer starten, du kannst sie sogar, weil ich gehe stark davon aus, dass Spotify auch irgendein Rate Limiting hat und IP Adressen blockt und allem drum und dran, werde ich mit hoher Wahrscheinlichkeit, wenn wir unsere Service skalieren, die ganze Sache auch auf verschiedene Egress IP Adressen verteilen müssen und somit kannst du die etliche Male starten und die Queue kümmert sich ja um die Message Delivery. Genau."
+    },
+    {
+      "end": 2218610,
+      "speaker": "B",
+      "start": 2213310,
+      "text": "Okay. Und diese Software schreibt dann die Daten auf, wieder in die Datenbank rein oder geht es dann wieder über Messages?"
+    },
+    {
+      "end": 2224570,
+      "speaker": "A",
+      "start": 2218770,
+      "text": "Jetzt mal angenommen, ich krieg die Daten von dem Service, die würde ich wieder in eine Message packen."
+    },
+    {
+      "end": 2238570,
+      "speaker": "B",
+      "start": 2224570,
+      "text": "Genau, dann kommt auf der anderen Seite wieder irgendein Tool, was das consumed und dann, wie du schon beschrieben hast, in die Datenbank. Das Mapping und das Heavy Lifting, wie du es genannt hast, macht, ist es dann dementsprechend auch dieselbe Codebase, vermute ich."
+    },
+    {
+      "end": 2270420,
+      "speaker": "A",
+      "start": 2238570,
+      "text": "Ja, da würden wir ein Consumer Interface schreiben und das Consumer Interface, ich meine, das macht jetzt ein bisschen was anderes, aber die Message Cue Connection Reconnect ist ja, ist ja das Gleiche. Und da würde ich es jetzt erst mal wegspeichern, erstmal RAW wegspeichern und vielleicht sogar würde ich die Nachricht von einem zweiten Consumer dann auch noch mal lesen lassen, um so eine Art ETL Prozess anzustoßen. Also die Datenbank, das Wegspeichern des Raws, der Raw Response dient für spätere Re Queuing, falls ich noch mal was neu prozessen möchte."
+    },
+    {
+      "end": 2283850,
+      "speaker": "B",
+      "start": 2270890,
+      "text": "Wie machst du denn Retries, wenn noch keine Daten zur Verfügung stehen? Retries wovon, wenn noch keine Daten zur Verfügung sind? Also Spotify hat noch nicht gecrunched, du schaust da vorbei um dreizehn uhr noch keine Daten."
+    },
+    {
+      "end": 2294490,
+      "speaker": "A",
+      "start": 2283850,
+      "text": "Da bekomme ich irgendwie pro. Also weiß ich, ob Spotify die neuen Daten gecrunched haben. Habe ich da so ein Crunch Date oder sowas? Also habe ich ein Attribut, was mir."
+    },
+    {
+      "end": 2304320,
+      "speaker": "B",
+      "start": 2294490,
+      "text": "Sagt, Nicht wirklich, Aber du kannst natürlich checken, ob die Daten vom Vortag da sind. Also wenn heute jetzt der elfte Ist, kannst du schauen, sind die Daten vom zehnte Da oder nicht."
+    },
+    {
+      "end": 2318000,
+      "speaker": "A",
+      "start": 2304400,
+      "text": "Ach so, dann würde ich Das können wir auf unterschiedliche Art und Weise machen. Da ich ja gesagt habe, wir haben einen Crawl Date in der Tabelle initial, würde ich vielleicht noch einen Last Crawl Date machen oder einen Retry Flag und so weiter."
+    },
+    {
+      "end": 2326960,
+      "speaker": "B",
+      "start": 2318960,
+      "text": "Aber wer kümmert sich um die Retries, also auf welcher Seite? Weil der Consumer sagt jetzt, okay, die Daten sind noch nicht da. Was passiert dann in dem Moment?"
+    },
+    {
+      "end": 2342959,
+      "speaker": "A",
+      "start": 2327360,
+      "text": "Genau, dann würde ich eine. Da kann man jetzt also der schnelle Hack wäre, der Consumer updated die Datenbank RO im Cron Job, die Datenbankrow in der Initial. Dann müsste der Consumer aber Informationen über das Datenbankschema haben, aber der würde dann."
+    },
+    {
+      "end": 2345840,
+      "speaker": "B",
+      "start": 2342959,
+      "text": "Die Zeit um eine Stunde erhöhen, dass es nochmal in einer Stunde probiert wird."
+    },
+    {
+      "end": 2347120,
+      "speaker": "A",
+      "start": 2346640,
+      "text": "Genau."
+    },
+    {
+      "end": 2348440,
+      "speaker": "B",
+      "start": 2347200,
+      "text": "Okay."
+    },
+    {
+      "end": 2369690,
+      "speaker": "A",
+      "start": 2348440,
+      "text": "Also in einem Intervall, weil dann kommt ja alle fünf Minuten der Cronjob und schaut nach und requiet die ganze Sache wieder. Ich würde noch irgendwo einen Retry Counter einbauen, vielleicht für den Tag, aber damit man weiß, okay, wie ist mein Retry Pattern oder wird das erstmal vielleicht einfach wegloggen? Das reicht ja erstmal. Aber so hast du. Die Frage ist, was wir bei drei und zwanzig Retrys machen."
+    },
+    {
+      "end": 2380410,
+      "speaker": "B",
+      "start": 2369850,
+      "text": "Ja, irgendwann musst du manuell sowieso eingreifen oder dir überlegen, was du machst. Den Punkt wirst du sowieso immer erreichen, weil was ist, wenn Spotify drei Tage mal nichts liefert?"
+    },
+    {
+      "end": 2387360,
+      "speaker": "A",
+      "start": 2381450,
+      "text": "Da fällt die Architektur, die ich jetzt gerade beschrieben habe, auf die Mütze, weil wir natürlich davon ausgehen, dass innerhalb von vier und zwanzig Stunden die Daten kommen."
+    },
+    {
+      "end": 2393590,
+      "speaker": "B",
+      "start": 2388550,
+      "text": "Aber das ist manuell Intervention, Das ist okay. Das hast du immer, egal was für Architektur du fährst."
+    },
+    {
+      "end": 2408390,
+      "speaker": "A",
+      "start": 2394230,
+      "text": "Du kannst ja auch ein Crawlog generieren. Also du kannst ja in der Tabelle auch OK, pass mal auf, jetzt mache ich den Request für diesen Tag, für diesen Tag, für diesen Tag und dann geht der Cron Job auf dieses Crawlog. Das geht ja auch. Aber lassen wir das jetzt mal weg. Zur Komplexität dieses Podcasts hier."
+    },
+    {
+      "end": 2411870,
+      "speaker": "B",
+      "start": 2408390,
+      "text": "Welche Datenbank verwendest du gerade, damit wir das auch noch abgehackt haben?"
+    },
+    {
+      "end": 2423110,
+      "speaker": "A",
+      "start": 2411870,
+      "text": "Naja, aktuell hat das Ding eine Tabelle oder vielleicht zwei mit drei mit Normalform. Da würde ich jetzt ganz normal, Also da würde ich jetzt vielleicht erstmal eine Postgre nehmen, denke ich initial."
+    },
+    {
+      "end": 2430630,
+      "speaker": "B",
+      "start": 2423430,
+      "text": "Warum? Was würdest du sonst noch auf lange Sicht nehmen? Wir skalieren das ja auf Podcasts."
+    },
+    {
+      "end": 2483110,
+      "speaker": "A",
+      "start": 2430630,
+      "text": "Mit Podcast würde ich immer noch eine Postgre nehmen. Ab ein hundert ein hundert fünfzig oder ähnliches müssen wir gucken, wie viel Daten da reinkommen. Vielleicht würde ich dann irgendwann eine verteilte Clickhouse nehmen. Also da müssen wir schauen, wie viel Response kommt, wie viel Festplattenplatz die Datenbank dann irgendwann braucht man. Denn da kommen wir dann sehr wahrscheinlich an die Kapazitäten einer einzelnen Maschine. Natürlich kann man postgresql oder postgresql wieder auf die Mütze von der Community, wie ich die Datenbank ausspreche. Den Fehler nehme ich auch. Ich weiß, dass ich da einen Fehler habe, aber da natürlich kann man das dann auch schaden und so weiter. Aber da wäre ich dann vielleicht irgendwann vielleicht auf eine verteilte Datenbank wie Klick ausgehen oder ähnliches. Aber das ganz weit runter. Also wenn wir dieses Problem haben, haben wir auch in der Regel ein paar Engineers, die es darum kümmern können. Aber Postgres oder mysql, ich denke, die bringen uns sehr weit. Ich denke eher postgresql weil die haben die besseren JSON Funktionen. Also ich nehme an, dass ich die Row Response dann in JSON speicher."
+    },
+    {
+      "end": 2519330,
+      "speaker": "B",
+      "start": 2483190,
+      "text": "Dann gehen wir mal auf einen anderen Bereich und zwar Security. Du hast ja in dem ganzen System sehr viel mit Credentials zu tun. Das heißt, du hast die Credentials von, sagen wir, von deinen Usern, die auf die Daten zugreifen. Dann hast du Credentials von den ganzen Sources, das heißt Spotify, Apple und so weiter. Im Worst Case hast du das Passwort von deinen Kunden für ihren Apple Account, für ihren Spotify Account. Wie gesagt, in der Realität geht es anders, aber nehmen wir das mal an. Das heißt, du hast sehr viel mit Tokens und Credentials zu tun. Wie speicherst du die ab?"
+    },
+    {
+      "end": 2521170,
+      "speaker": "A",
+      "start": 2519570,
+      "text": "Das ist immer eine schwierige Thematik."
+    },
+    {
+      "end": 2525030,
+      "speaker": "B",
+      "start": 2521250,
+      "text": "Ja, ich weiß drum frage ich sie. Ja, hat mir schon schlaflose Nächte bereitet."
+    },
+    {
+      "end": 2554410,
+      "speaker": "A",
+      "start": 2525420,
+      "text": "Also das ist ja jetzt unabhängig davon, ob diese Services irgendwie Passwörter entgegennehmen oder Tokens oder ähnlich. Wir haben sensitive Daten, die sich nicht ändern. Ich kriege keine zeitbasierten Daten, die irgendwann expiren. Richtig. Also das bedeutet, ich habe eine Zugangsdaten, die dauerhaft gültig sind. Darum geht es gerade, oder? Weil wenn ich nämlich, wenn ich oh, gib mir einen Token, der nur dreiig Minuten zur Verfügung ist oder nur gültig ist, dann ist das vielleicht ein bisschen was anderes, als wenn ich dauerhafte Credentials habe."
+    },
+    {
+      "end": 2570530,
+      "speaker": "B",
+      "start": 2554410,
+      "text": "Ich wollte es gerade sagen, machen wir es einfacher. Aber nehmen wir mal die Realität. Du hast beides. Du hast Credentials, die so ein Jahr gültig sind, also nie auf ewig, sondern immer nur maximalen Jahr. Aber du hast welche, die sind auch nur zwei Stunden gültig und du musst mit einem Refresh Token wieder neue Tokens anfordern."
+    },
+    {
+      "end": 2640660,
+      "speaker": "A",
+      "start": 2570610,
+      "text": "Ja, vielleicht würde ich einfach einfach, Also das geht jetzt schon in Enterprise rein, aber da wir ja sehr wahrscheinlich auch irgendwelche Zertifizierung haben wollen und so weiter und so fort. Wir sind ja der beste Podcast Metrik Collector der Welt, würde ich jetzt Infrastruktur draufschmeissen. Ich würde sehr wahrscheinlich, wenn wir auf einem Hyperscaler sind, irgendein Passwort Credential Store von denen nehmen. Die haben nämlich sowas. Und dann würde ich den Passwort Key, also eigentlich ist so ein Passwort Storage ja nur so eine Art Key Value Datenbank, wo das Value dann das Passwort ist und der Key, unter dem ich das request und dann wie authentifiziert man sich gegenüber dem Passwort Storage, wenn man das on premise macht, würde ich da irgendwie ein Vault nehmen. Das bedeutet, ich würde die Credentials nicht in der Datenbank halten, also die Passwörter nicht in der Datenbank halten, sondern in den Passwort Storage mit Vault. Oder gibt es auch Google Cloud Secret Manager, glaube ich, oder von mir aus auch was Lokales mit sowas wie gopass, wo du dich mit einem GPG Key authentifizierst, also wo der Consumer sich dann mit einem GPG Key authentifiziert und dann kannst du dem Passwort Storage verschiedene User geben und jeder Consumer hat einen eigenen User und Authentifizierung Methode, denn irgendwo musst du ja dich authentifizieren, um an die Credentials ranzukommen."
+    },
+    {
+      "end": 2644730,
+      "speaker": "B",
+      "start": 2641130,
+      "text": "Okay, und wo speicherst du den Key, um dich zu authentifizieren?"
+    },
+    {
+      "end": 2663050,
+      "speaker": "A",
+      "start": 2644890,
+      "text": "Den würde ich mit hoher Wahrscheinlichkeit dann auf der Maschine deployen. Kann ja ein SSH Key sein, kann ein GPG Key sein. Also irgendwo musst du ja ein Secret haben. Genau, den würde ich jetzt auf die Maschine packen. Oder weiß ich jetzt nicht, wenn das eine GitHub Action ist oder Lambda oder ähnliches, würde ich da das in den Secret Store von."
+    },
+    {
+      "end": 2684100,
+      "speaker": "B",
+      "start": 2663210,
+      "text": "Okay, und wo machst du die Entschlüsselung sozusagen? Machst du die, wenn du die Message in die Queue schmeißt, machst du das auf der Consumer Seite. Wenn du die Message consumst, hey, muss Spotify crawlen, Also kennen deine Consumer diese Authentifizierung? Also haben deine Consumer den Key, um sich zu authentifizieren bei deinem Passwortmanager oder."
+    },
+    {
+      "end": 2687660,
+      "speaker": "A",
+      "start": 2684260,
+      "text": "Jeder Consumer hat einen eigenen User Account im Passwortmanager."
+    },
+    {
+      "end": 2692020,
+      "speaker": "B",
+      "start": 2687660,
+      "text": "Also du würdest möglichst spät Decryption machen."
+    },
+    {
+      "end": 2707190,
+      "speaker": "A",
+      "start": 2692020,
+      "text": "Ja, sehr kurz sogar eigentlich nur. Das bedeutet, der Consumer nimmt die Nachricht entgegen, sagt, ah, ich muss Spotify für diesen Account, dann holt er sich den und der hat dann auch nur Zugriff auf die auf die Key Präfixes und dann macht er die Autofizierung und dann loggt er sich da wieder aus."
+    },
+    {
+      "end": 2712230,
+      "speaker": "B",
+      "start": 2707670,
+      "text": "Wenn du die Keys refreshen musst, würdest du auch über den Vault einfach, dann schreibt er halt dem Vault."
+    },
+    {
+      "end": 2732160,
+      "speaker": "A",
+      "start": 2712230,
+      "text": "Genau, da wird ja nur dann der Vault geupdatet, also der Value in dem Vault. Dafür brauchst du natürlich auch Tooling, dass das refreshed wird. Aber da der Consumer ja möglichst, ich sag mal, short lived auf den Passwort Storage zugreift, sollte das natürlich kannst du dann eine Race Condition haben und die."
+    },
+    {
+      "end": 2736720,
+      "speaker": "B",
+      "start": 2732400,
+      "text": "Credentials für deine User würdest du dann auch gleich mit in dem Wort abspeichern."
+    },
+    {
+      "end": 2767010,
+      "speaker": "A",
+      "start": 2736800,
+      "text": "Ich würde zusehen, dass ich nur ein Passwort Handling habe überall, weil sonst hast du wieder so spezielle Fälle. Ja, das ist da und das ist da und das willst du ja möglichst vermeiden. Nicht, weil das technisch nicht möglich ist, sondern um die mentale Hürde für das Software Engineering möglichst gering zu halten. Ich bin aber auch schon ehrlich, das geht halt schon sehr enterprise weit. Also wenn wir sagen, wir müssen ganz schnell was auf die Straße bringen, dann wäre ich glaube ich, ganz dreckig in irgendeiner Datenbank. Aber weil so ein Vault aufsetzen, das ordentlich hinzukriegen, das ist bei weit schnell auf die Straße bringt."
+    },
+    {
+      "end": 2769410,
+      "speaker": "B",
+      "start": 2767090,
+      "text": "Aber würdest du es dann verschlüsseln in der Datenbank?"
+    },
+    {
+      "end": 2775280,
+      "speaker": "A",
+      "start": 2769570,
+      "text": "Ich glaube, das sollte man schon tun. Aber dann ist die Frage, wo stellt man den Schlüssel wieder hin?"
+    },
+    {
+      "end": 2777920,
+      "speaker": "B",
+      "start": 2777120,
+      "text": "Hast du ja immer."
+    },
+    {
+      "end": 2790320,
+      "speaker": "A",
+      "start": 2778480,
+      "text": "Ja genau. Also irgendwo muss das Ding halt da sein. Die Frage ist halt nur, wie oft rotierst du dann deine Schlüssel? Aber mit dem Vault und mit dem Passwort Storage und so weiter hast du natürlich ein schönes Audit Log. Wer hat wann wie lange darauf zugegriffen und so weiter."
+    },
+    {
+      "end": 2803750,
+      "speaker": "B",
+      "start": 2790400,
+      "text": "Falls du mal wirklich klar rotieren musst du aber trotzdem. Also die Sachen bleiben dir überall nicht erspart. Okay, gut. Noch andere Security Thema Backups, Was ist da die Frage? Ja, wie machst du Backups? Solltest du ja machen, oder schätze ich mal."
+    },
+    {
+      "end": 2834930,
+      "speaker": "A",
+      "start": 2804790,
+      "text": "Ganz klassische Datenbank Backups. Ja, wie, wie oft, wo, wie heißt diese Datenbankregel? Ein volles Backup und x inkrementelle und dann wieder nach einer Woche ein volles und dann wieder x inkrementelle. So würde ich es fahren. Die würde ich auch verschlüsseln und dann würde ich die, keine Ahnung, mit restick irgendwo hinlegen. Dann würde ich glaube einmal im Monat einen Drill machen, wo ich ein Backup Restore auf eine andere Masch. Also das ist ja, ich würde mal sagen Standard. Also da wüsste ich jetzt nicht, was darin speziell sein soll."
+    },
+    {
+      "end": 2838130,
+      "speaker": "B",
+      "start": 2835010,
+      "text": "Ja, aber welches Tooling Restick hast du erwähnt?"
+    },
+    {
+      "end": 2845010,
+      "speaker": "A",
+      "start": 2838290,
+      "text": "Ja gut, also da gibt es ja pgdump und mysql Dump und so weiter und so fort und mit Restic."
+    },
+    {
+      "end": 2847970,
+      "speaker": "B",
+      "start": 2845010,
+      "text": "Ja, aber die machen keine incremental Backups, ne?"
+    },
+    {
+      "end": 2859110,
+      "speaker": "A",
+      "start": 2848050,
+      "text": "Restic kümmert sich um Files. Das bedeutet, die inkrementellen Backups, da kümmere ich mich drum, dass die Files da liegen und dann triggere ich restick oder von mir aus auch oder irgendeine Backup Solution, die es halt da gibt."
+    },
+    {
+      "end": 2862510,
+      "speaker": "B",
+      "start": 2859110,
+      "text": "Ja, aber mysql Dump macht ja zum Beispiel keine Incremental Backups."
+    },
+    {
+      "end": 2863990,
+      "speaker": "A",
+      "start": 2862510,
+      "text": "Ich bin ja auch auf Postgre und."
+    },
+    {
+      "end": 2866030,
+      "speaker": "B",
+      "start": 2863990,
+      "text": "Pgdump macht dir Incremental Backups."
+    },
+    {
+      "end": 2882830,
+      "speaker": "A",
+      "start": 2866030,
+      "text": "Das ist eine sehr gute Frage. Moment, ich habe gedacht, ich komme da rum. Pgdump, Incremental backup, Best methods backup and restore. Es gibt einmal einen Command, der nennt sich pg base backup. Naja, du hast ja immer das Problem mit dem. Ne, nicht, Das ist eine gute Frage."
+    },
+    {
+      "end": 2888870,
+      "speaker": "B",
+      "start": 2882830,
+      "text": "Jetzt sag mal deine side Projects, wie läuft das Backup von den Datenbanken?"
+    },
+    {
+      "end": 2891310,
+      "speaker": "A",
+      "start": 2888870,
+      "text": "Ja, pass mal auf, da mache ich mal Full Backups."
+    },
+    {
+      "end": 2894910,
+      "speaker": "B",
+      "start": 2892110,
+      "text": "Wenn sie nur so klein sind, geht es ja deswegen."
+    },
+    {
+      "end": 2914970,
+      "speaker": "A",
+      "start": 2894910,
+      "text": "Also da mache ich immer Full Backups. Aber generell kannst du natürlich ziemlich viel über Wahl machen über das Log. Aber da gibt es auch mit hoher Wahrscheinlichkeit Inkremente. Also auch für mysql gibt es ja Incremental Backups Solutions. Also mysql Dump gibt es ja mysql Backup. Percona, genau, Percona gibt es ja in."
+    },
+    {
+      "end": 2918410,
+      "speaker": "B",
+      "start": 2914970,
+      "text": "Dem Bereich extra Backup. Das ist das Tool für."
+    },
+    {
+      "end": 2921050,
+      "speaker": "A",
+      "start": 2919050,
+      "text": "Da würde ich jetzt keine Sperenskis machen."
+    },
+    {
+      "end": 2923050,
+      "speaker": "B",
+      "start": 2921370,
+      "text": "Und wo schiebst du dann die Daten hin?"
+    },
+    {
+      "end": 2935940,
+      "speaker": "A",
+      "start": 2923210,
+      "text": "Einmal auf einen externen Storage weit weg, auf einen anderen Cloud Provider, Hetzner oder so. Dann einmal lokal irgendwo auf eine andere Maschine oder vielleicht sogar auf derselben auch. Ist ja egal, weil ich habe ja einen Offshore, einen Onshore. Gibt es Onshore das Wort?"
+    },
+    {
+      "end": 2940460,
+      "speaker": "B",
+      "start": 2936180,
+      "text": "Es gibt Onshore schon, aber ich glaube in dem Kontext bin ich mir nicht sicher."
+    },
+    {
+      "end": 2947860,
+      "speaker": "A",
+      "start": 2940460,
+      "text": "Eins ganz nah bei mir und eins irgendwo anders. Also da würde ich ganz klassisch. Also ich meine, das ist ein gelöstes Problem. Datenbank Backups."
+    },
+    {
+      "end": 2967440,
+      "speaker": "B",
+      "start": 2948020,
+      "text": "Okay, gut, dann hätten wir Datenbank Backups. Jetzt eigentlich dein Spezialgebiet, aber probiere dich möglichst kurz zu halten. Das ganze Infrastruktur Thema. Monitoring, CI CD, Was würdest du da für ein Stack verwenden, wenn du jetzt selbst, wie gesagt, nicht Enterprise, sondern mit zwei Personen da was auf die Straße bringen willst?"
+    },
+    {
+      "end": 2974600,
+      "speaker": "A",
+      "start": 2967440,
+      "text": "GitHub und GitHub Actions als CI CD und Deployment komplett. Hosten wir die Infrastruktur selber oder machen wir Hyperscaler?"
+    },
+    {
+      "end": 2980280,
+      "speaker": "B",
+      "start": 2974760,
+      "text": "Das ist dein Projekt, Ist deine Geldtasche oder muss ich Geldbörse sagen? Ich weiß nicht, was du dir leisten kannst."
+    },
+    {
+      "end": 3005420,
+      "speaker": "A",
+      "start": 2980680,
+      "text": "Wenn die zwei Leute mit Kubernetes vertraut sind, würde ich sagen, wir gehen einfach auf irgendeinen Managed Kubernetes irgendwo und kümmern uns nicht darum, weil dann haben wir einfach das Laufen. Wenn die es nicht sind, dann würde ich sagen, wir holen uns einfach zwei, drei Maschinen irgendwo bei Hetzner oder digitalocean und machen alles über systemd, weil das kannst du auch sehr gut über GitHub Action steuern, weil dann müssen die Leute kein Kubernetes lernen und das bringt uns sehr weit."
+    },
+    {
+      "end": 3007100,
+      "speaker": "B",
+      "start": 3006220,
+      "text": "Monitoring."
+    },
+    {
+      "end": 3028540,
+      "speaker": "A",
+      "start": 3007420,
+      "text": "Monitoring würde ich inzwischen auch ganz klassisch Prometheus Alert Manager und für Logs reicht vielleicht auch jetzt gerade erstmal einen File auf einer auf einer Kiste, wo wir drauf tailen, aber ein Alert Manager sollten wir schon haben, damit wir wenigstens eine Page kriegen, wenn die Worker offline sind oder von erstmal Chat Notification in Slack oder ähnliches, keine Ahnung."
+    },
+    {
+      "end": 3031100,
+      "speaker": "B",
+      "start": 3028540,
+      "text": "OK, skalieren wir da bis ein tausend Podcasts?"
+    },
+    {
+      "end": 3034420,
+      "speaker": "A",
+      "start": 3031100,
+      "text": "Ja, ohne Probleme, weil im Endeffekt, also."
+    },
+    {
+      "end": 3041830,
+      "speaker": "B",
+      "start": 3034420,
+      "text": "Ich meine jetzt mit der gesamten Architektur, nicht nur mit deiner Infrastruktur, die du jetzt erklärt hast oder siehst du irgendwo Probleme bei ein tausend Podcasts."
+    },
+    {
+      "end": 3066460,
+      "speaker": "A",
+      "start": 3042460,
+      "text": "Die Consumer kannst du hoch und runter schrauben, wie du möchtest, kannst auf mehrere Maschinen verteilen, das ist kein Problem. Festplattenstorage der Datenbank, kommt drauf an, wie viele Responses da kommen, aber eigentlich hast du keine Ahnung, sagen wir mal fünf Plattformen pro Podcast pro Tag, das sind fünf Rows, das sollte auch noch alles möglicherweise ganz gut gehen. Speichern wir auch Bilder und so oder sind es nur die Daten? Ich glaube, da kommt man mit ein oder zwei Maschinen schon sehr weit."
+    },
+    {
+      "end": 3076260,
+      "speaker": "B",
+      "start": 3066460,
+      "text": "OK, klingt nach einer eigentlich ganz guten Architektur. Die Cues gefallen mir auch sehr gut, vor allem das Reprocessing, das kann man sehr gut brauchen, das wirst du ein."
+    },
+    {
+      "end": 3116280,
+      "speaker": "A",
+      "start": 3076260,
+      "text": "Hundert Prozent brauchen, weil Reprocessing ist eigentlich nur ein kleines Tooling, was ein Select macht und die Daten wieder reinschmeisst oder die RAW Daten, wenn du die reprozessen möchtest, kannst du alle reprocessen mit dem Deadletter Queue. Du kannst jeden einzelnen Fehler super analysieren und das Lustige ist, dieses Tooling bringt das ja alles mit, wenn du vernünftige Message Queue nimmst. Also wenn du zum Beispiel so ein Redes Q nimmst oder sowas, dann musst du dich um die Deadletter Cues manuell kümmern und so, aber richtige Message Cues haben halt Dead Letter Cues drin. Ich glaube SQS auf Amazon hat es inzwischen auch Using Dead Letter Queues, using Amazon SQS, sowas gibt es halt auch."
+    },
+    {
+      "end": 3129100,
+      "speaker": "B",
+      "start": 3116280,
+      "text": "OK, nur zur Information, so als Skalierungsgrössen. Hausnummer, Du brauchst pro Podcast fast so Ein Gigabyte an Datenbankspeicher, relativ schnell, okay."
+    },
+    {
+      "end": 3133380,
+      "speaker": "A",
+      "start": 3129100,
+      "text": "Aber eine Note mit zwei hundert Gig Platz über welchen Zeitraum?"
+    },
+    {
+      "end": 3148220,
+      "speaker": "B",
+      "start": 3133380,
+      "text": "Ja, ist gar nicht so ausschlaggebend, weil du ja teilweise auch historische Daten mitnehmen musst, egal wie lange das Ding läuft, also die du fetchen musst aus der Vergangenheit, weil den Podcast gibt es ja vielleicht schon länger. Also nur so als grobe Hausnummer, alles was dazugehört halt."
+    },
+    {
+      "end": 3154030,
+      "speaker": "A",
+      "start": 3148220,
+      "text": "So, jetzt ist natürlich meine Frage, wenn du das jetzt hörst, du hast das Produkt ja gebaut, wie habt ihr es gebaut?"
+    },
+    {
+      "end": 3283720,
+      "speaker": "B",
+      "start": 3154190,
+      "text": "Anders, sogar sehr anders, würde ich sagen, in vielen Bereichen. In vielen Bereichen haben wir es ähnlich gebaut. Also Security haben wir verschlüsselt, aber eine eigene Verschlüsselungslösung gebaut mit einem Key macht das ganze Handling allgemein sehr schwierig, weil du ständig irgendwo verschlüsseln, entschlüsseln musst. Testing und so weiter ist einfach schwierig, wenn man mit Credentials umgehen muss, macht ein zentraler Vault vielleicht eine Spur leichter, aber im Endeffekt hast du dieses ganze Credential Handling, was einfach ein bisschen lästig ist, muss man schon dazu sagen. Datenbank und so, genauso wie du es gesagt hast, im Großen und Ganzen. Wir haben sehr stark auf ein Microservice oder Microservice, aber auf ein Services Konzept gesetzt. Das heißt, bei uns sind alles eigene Repositories, eigene Systeme, eigene Services, die Consumer oder die das Crawling machen, zum Beispiel auch einen eigenen für Spotify, eigenen für Apple. Hat aber auch den Grund, dass wir sehr viel Open Source haben und da wirklich eigene Packages haben. Also du kannst den Spotify Connector oder den Apple Connector bei uns verwenden. Downloaden sind Repositories, die frei zur Verfügung stehen, sind Python. Mittlerweile würden wir wahrscheinlich eine andere Sprache verwenden, einfach weil Python nicht sehr gut geeignet ist, aber damals ging es darum, schnell was auf die Straße zu bringen und wir hatten gewisse Teile, die wir übernehmen konnten. Darum haben wir auf Python gesetzt und darum haben wir durch den Open Source Gedanken vielleicht das auch komplexer gestaltet. Jetzt, wenn ich das frisch neu bauen würde, würde ich auch eher auf sowas setzen, wie du gesagt hast, einen Monolithen, wo alles drin ist, weil die Entwicklung einfach viel schneller läuft. Man kann auch jetzt gerade wenn man so an die LLM Zeiten denkt und Copilot, Copilot hat auch Schwierigkeiten, wenn das in acht verschiedenen Repositories verteilt ist und in Systemen und Microservices. Und was fährst du hoch bei irgendwelchen Tests? Da bist du viel schneller, wenn du in einem Mono Repo oder in den Monolithen arbeitest. Also da merkt man schon ganz klar einen Geschwindigkeitsunterschied, wie man Development betreiben kann. Wenn man drei hundert Leute sind, ist das was anderes wahrscheinlich. Aber wenn man so in einem kleinen Team ist, macht das ganze Aufsplitten schon einen großen Mehraufwand, den ich jetzt eigentlich eher verhindern würde in einem neuen Projekt."
+    },
+    {
+      "end": 3297490,
+      "speaker": "A",
+      "start": 3283880,
+      "text": "Das Problem ist auch, wenn deine verschiedenen Services alle auf eine Datenbank gehen und auch Schreib und Lesezugriffe machen, dann die Anpassung des Datenbankschemas und das gleichzeitige Deployment von diesen ganzen Services. Ich weiß nicht, wie ihr das jetzt handhabt."
+    },
+    {
+      "end": 3389240,
+      "speaker": "B",
+      "start": 3297810,
+      "text": "Wir haben das auch sauber getrennt, dass eben eine Haupt API eigentlich das Ganze mit der Datenbank macht, schreibend und die Consumer connecten sich dann über eine API. Du hast jetzt über eine Message Queue gelöst, wir haben es über eine API gelöst, dann kommt aber sowas später hinzu. Jetzt fangen an die Consumer irgendwelche Tokens zu refreshen, Das heißt, du musst doch irgendwie wieder Schreibzugriff auf die Daten Datenbank haben. Also es fängt dann zu verschwimmen an über die Zeit kommen andere Requirements dazu und dann müsstest du es entweder wieder kompliziert über APIs abbilden oder du bekommst dann eben doch Schreibzugriff. Dann hast du wieder vielleicht Security Konzepte, die du komplett über Bord werfen musst, weil die einfach nicht mehr so funktionieren, dass ein User nur mehr Lesezugriff hat in der Datenbank, weil er jetzt plötzlich ausschreiben muss und so weiter. Also historisch, wie so ein Projekt wächst, wachsen auch die Requirements und dann hast du natürlich gewisse Entscheidungen, die du in der Vergangenheit getroffen hast einfach macht es vielleicht jetzt dann teilweise etwas schwieriger. Aber ich muss auch sagen, ich würde wahrscheinlich sehr ähnlich wieder machen. Grundsätzlich sehr einfach anfangen, Annahmen treffen und man muss die halt ändern. Also wir hatten am Anfang sogar eigene Docker Container für einen Crawler, den wir einzeln hochfahren haben können für einen Podcast. Über die Environment Variablen haben wir das mitgegeben und am Anfang haben wir sogar so skaliert und haben einfach zwanzig Docker Container laufen lassen und jeder Docker Container war ein Crawler, ein unabhängiger. Das war einfach möglichst schnell was auf die Straße bringen und dann kannst du anfangen zu skalieren und das zusammenziehen und zu automatisieren. Und dieses Vorgehen würde eigentlich weiterhin wirklich so auch wieder machen."
+    },
+    {
+      "end": 3474390,
+      "speaker": "A",
+      "start": 3389240,
+      "text": "Ja, bei meiner Lösung, da könntest du super viele Shortcuts nehmen, viel war schon Enterprise und Skalierung und das und das. Aber wenn du das noch nie gemacht hast, dann ist meine Lösung sehr wahrscheinlich auch mit Kanonen auf Spatzen, gar keine Frage. Wenn du in dem Metier aber unterwegs bist, wenn du genau weißt, wie Message Queuing funktioniert, wie Exchanges funktionieren, wie Deadletter Queues funktionieren, wie du die Connection baust, dann bin ich fast schneller als mit dieser zentralen API, die du genannt hast. Aber ich gebe auch zu, dieses System, du hast es ja schon initial gesagt, ist mein Lieblingssystem. Ich muss zugeben, ich habe damit, also solche Systeme habe ich schon ein paar Mal gebaut und kenne mich deswegen da relativ gut auf und kriege die relativ schnell auf die Straße, weil ich die Ins and Outs kenne. Aber ich verstehe, dass wenn jemand sagt, hey, das ist aber, du hast da einen Nagel und versuchst den mit dem Schraubenzieher reinzuballern. Also ich verstehe das auch, wenn manche Leute sagen, das ist die falsche Architektur. Ich denke, es gibt diese, ich nenne es mal Microservice artige Architektur, die du gerade genannt hast. Bin davon auch überzeugt, dass das auch klappt. Du brauchst aber einen Message Bus irgendwo zwischendurch, damit du die Datenbank Dependencies da rauskriegst, weil sonst hast du, und damit du halt nicht immer alle Services gleichzeitig deployen musst, also brauchst irgendeine Art Backwards Kompatibilität, dann hast du natürlich mit mehreren Repositories auch immer das Problem, wann updatest du was und du, nehmen wir mal Dependency Updates, also da bist du in acht Repositories unterwegs, das ist pain."
+    },
+    {
+      "end": 3508620,
+      "speaker": "B",
+      "start": 3474710,
+      "text": "Und wie gesagt, mittlerweile hast du so einen Copilot Prompt und wenn du in der Monorepo unterwegs bist, der geht dir halt durch alle deine Teile durch und passt sich selber die APIs an und dann hast du das erledigt. Kannst du natürlich nur machen, wenn du keine externen Abhängigkeiten hast. Wenn du jetzt ein schönes Open Source Projekt hast, wo du Versionierung und so weiter hast, dann ist es natürlich schon wieder schwieriger, so Hand zu haben. Aber grundsätzlich, ich sehe das in anderen Projekten, wo halt kein Open Source oder wo wir die einzigen Anwender sind, dann geht es natürlich wesentlich schneller, wenn man da einfach mit Monolithen durchknallt Das war."
+    },
+    {
+      "end": 3543450,
+      "speaker": "A",
+      "start": 3508620,
+      "text": "Es von uns von einer weiteren mehr oder weniger Architekturdiskussion auf die erste Architektur Diskussionsfolge. Da wo wir einen Heizöl Preis Scraper gebaut haben, haben wir doch sehr viel Engagement in der Community gesehen, wo Leute uns ihre Lösung gepitcht haben. Fand ich super interessant, ich habe sehr viel gelernt und teilweise kam über andere Social Media Kanäle wie Mastodon sagen, hey, das genau haben wir gebaut, schau doch mal hier und haben uns GitHub Repo verlinkt, was ich auch super nett fand. Ich habe super gegrinst und auch ein bisschen dem Wolfgang bewiesen, dass das ein reales Problem war und kein fiktives Problem."
+    },
+    {
+      "end": 3554090,
+      "speaker": "B",
+      "start": 3543450,
+      "text": "Ich hoffe, es kommt jetzt niemand um die Ecke und ich habe das schon gebaut, diesen kompletten Podcast Analytics Stack, weil das würde mich etwas deprimieren. Aber wer Ideen hat oder Verbesserungsvorschläge gerne."
+    },
+    {
+      "end": 3577240,
+      "speaker": "A",
+      "start": 3554490,
+      "text": "Und wie der Wolfgang die ganze Sache gebaut hat, der hat auch gesagt, ziemlich viel haben die Open Source. Die GitHub Depots verlinken wir natürlich auch in den Shownotes, falls ihr da mal die Lösung sehen wollt. Uns würde aber ganz besonders interessieren, wie würdet ihr das bauen? Microservice Queue, wie würdet ihr die verschiedenen Datenstrukturen handeln? Worüber wir noch gar nicht gesprochen haben, wäre diese Factor Authentifizierung bei Apple, wovon Wolfgang da gesprochen hat."
+    },
+    {
+      "end": 3580000,
+      "speaker": "B",
+      "start": 3577240,
+      "text": "Also diese zu automatisieren ist sehr spannendes."
+    },
+    {
+      "end": 3606790,
+      "speaker": "A",
+      "start": 3580000,
+      "text": "Problem, das kriegen wir jetzt gerade leider nicht mehr hin. Kommt doch mal in die Community, in unsere Discord Community, findet ihr in den Shownotes und sagt uns doch einfach mal, wie ihr die ganze Sache lösen würdet oder wo ich zum Beispiel noch ordentliche Shortcuts mache oder wie falsch ich postgre und postgresql und co ausgesprochen habe oder wie man inkrementelle Backups mit pgdump oder mysql Dump macht. Das war's von uns, vielen lieben Dank und bis zur nächsten Woche."
+    }
+  ],
+  "webhook_auth": false
+}
