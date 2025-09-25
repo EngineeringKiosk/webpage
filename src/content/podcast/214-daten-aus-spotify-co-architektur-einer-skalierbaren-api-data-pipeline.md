@@ -1,6 +1,6 @@
 ---
-advertiser: ''
-amazon_music: ''
+advertiser: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/8df9e55c-6444-41ea-a22a-276379ba0ae4/engineering-kiosk-214-daten-aus-spotify-co-architektur-einer-skalierbaren-api-data-pipeline
 apple_podcasts: https://podcasts.apple.com/us/podcast/214-daten-aus-spotify-co-architektur-einer-skalierbaren/id1603082924?i=1000727966467&uo=4
 audio: https://audio1.redcircle.com/episodes/0137a035-16b2-48e8-a345-2a5ed21c8af3/stream.mp3
 chapter:
