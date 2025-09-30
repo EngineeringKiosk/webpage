@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/a284c362-1a19-4a49-b61a-35e4943071e4/engineering-kiosk-215-client-sdks-entwickeln-idiomatisch-robust-nativ
 apple_podcasts: https://podcasts.apple.com/us/podcast/215-client-sdks-entwickeln-idiomatisch-robust-nativ/id1603082924?i=1000729197244&uo=4
 audio: https://audio1.redcircle.com/episodes/01cc0e1b-326e-4371-864d-1f1c22457883/stream.mp3
 chapter:
