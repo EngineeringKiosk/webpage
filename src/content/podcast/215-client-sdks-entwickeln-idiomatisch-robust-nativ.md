@@ -77,11 +77,16 @@ length_second: 4058
 pubDate: 2025-09-30 01:00:40+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/0BuCE0tPWDJUcsEWxYnqgU
-tags: []
-title: '#215 Client SDKs entwickeln: Idiomatisch, robust, nativ'
-transcript_slim: ''
+tags:
+- Open Source
+- Software Engineering
+- Tech Kultur
+title: "#215 Client SDKs entwickeln: Idiomatisch, robust, nativ"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=SGj7eaMOmLc
 
 ---

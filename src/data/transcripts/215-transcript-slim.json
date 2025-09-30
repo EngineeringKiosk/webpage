@@ -1,0 +1,908 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3999,
+  "audio_url": "https://cloud.inlupus.at/s/A3Z6wngnXykb8Xz/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9591902,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "b8c6277d-2ff4-47e0-9f13-c6d68ebd5de0",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 67340,
+      "speaker": "A",
+      "start": 3360,
+      "text": "Willkommen beim Engineering Kiosk Podcast. APIs sind überall, aber Hand aufs Wer hat schon Lust, ständig selbst HTTP Requests zu basteln, Tokens zu jonglieren und Fehlercodes zu entziffern? Genau hier kommen Client SDKs ins Spiel. Sie machen aus sperrigen APIs handliche Werkzeuge, die sich wie native Funktionen in deiner Sprache anfühlen. Und das ist auch schon das Thema von Entwicklung von Client SDKs. Wir bleiben aber nicht bei den Grundlagen, sondern sprechen darüber, wie Client SDKs und Developer Experience zueinander stehen, welche Architektur, Code und Designentscheidungen bei der Entwicklung eines eigenen SDKs eine Rolle spielen, ob Client SDKs für APIs mit einer maschinell lesbaren Spezifikation vollautomatisch generiert werden können bzw. Sollten oder ob nur wahre Handarbeit zum Erfolg führt, was die Herausforderungen bei der Entwicklung von SDKs sind und wie einige SDKs zum API übergreifenden Standard wurden. Kleiner Hier geht es um S und OpenAI. Los geht's mit der Episode über Software Development Kits. Viel Spaß."
+    },
+    {
+      "end": 97320,
+      "speaker": "B",
+      "start": 70140,
+      "text": "Wer uns regelmäßig hört, hatte sicher schon mal Andis Monologe gehört, was eigentlich die Idee hinter unserem Podcast ist. Und eine Idee ist eigentlich diese Selbsttherapie. Und Andi hat mir in letzter Zeit auch immer wieder vorgejammert, wie viele Issues er in einem GitHub Open Source Projekt bekommt und das aktuell auf ihn einprasselt, weil eine große Firma wieder mal irgendwas in ihrer API geändert hat. Also Andi, jetzt ist deine Chance, mal da Luft rauszulassen. Was ist passiert?"
+    },
+    {
+      "end": 105480,
+      "speaker": "A",
+      "start": 97560,
+      "text": "Maintainer Burnout is real, Wolfgang und ich habe das Gefühl, du machst dich hier über eine reale Krankheit gerade lustig und ich habe das Potenzial, da reinzuschlittern."
+    },
+    {
+      "end": 118930,
+      "speaker": "B",
+      "start": 106040,
+      "text": "Ist es jetzt keine noch? Es ist noch nicht diagnostiziert und kategorisiert, aber es ist auf jeden Fall ein Pain, den ich anerkenne. Darum jetzt hast du ja die Chance, das allen mitzuteilen und das Mitleid einzuheimsen."
+    },
+    {
+      "end": 121530,
+      "speaker": "A",
+      "start": 118930,
+      "text": "Ich möchte kein Mitleid. Ich möchte kein Mitleid, aber du kriegst."
+    },
+    {
+      "end": 122450,
+      "speaker": "B",
+      "start": 121530,
+      "text": "Von mir schon Mitleid."
+    },
+    {
+      "end": 168440,
+      "speaker": "A",
+      "start": 123090,
+      "text": "Ich bin auch ehrlich. Die Story, die ich jetzt gleich kurz erzählen werde, die übt auch ein bisschen Druck auf mich aus. Und ich habe dann auch innerlich schon so gedacht, was mache ich jetzt? Ignoriere ich das jetzt komplett weg und lass Open Source Open Source sein, Weil ich möchte nur mal kurz erwähnen, Open Source Maintainer sind niemanden etwas schuldig Sie haben bereits einen sehr großen Teil geleistet, indem sie einfach geschriebenen Quellcode veröffentlicht haben und dies zur freien Nutzung und Weiterverbreitung und Veränderung zur Verfügung gestellt haben. Und wenn Firmen auf diesem Open Source Code aufbauen und davon abhängig sind, dann ist das deren Problem und nicht des Open Source Maintainers. Möchte ich kurz nur sagen, dass wenn ihr was veröffentlicht, dass ihr niemandem Rechenschaft schuldig seid. Aber was ist passiert? Vielleicht fange ich mal ganz vorne an. Es war einmal zwei tausend vierzehn oder."
+    },
+    {
+      "end": 178680,
+      "speaker": "B",
+      "start": 168440,
+      "text": "Zwei tausend fünfzehn, Andi hat dir niemand beigebracht, dass die ersten zehn Sekunden des Podcasts die wichtigsten sind Und jetzt kommst du da mal mit irgendeiner mit einem Märchen um die Ecke."
+    },
+    {
+      "end": 220140,
+      "speaker": "A",
+      "start": 178920,
+      "text": "Nein, machen wir die Kurzform. Also ich habe mal bei einer Firma gearbeitet und da wollte ich etwas automatisieren mit Atlassian Gyra. Atlassian Gyra, dieses Projektmanagement und Issue Tracking Tool. Jeder hat, hasst es, jeder nutzt es, wir kennen es glaube ich alle. Auf jeden Fall hat Gyra auch eine API und ich wollte halt so ein paar Sachen durchautomatisieren, bin ins Internet gegangen und habe kein ordentliches Client SDK gefunden, keine ordentliche Client Library. Was macht ein guter Entwickler? Ein guter Entwickler startet natürlich eine Client Library. Da ich ja Open Source Fanatiker bin, habe ich die auch einfach mal auf GitHub gepusht. Gut, über die Jahre ist die dann halt ein bisschen gewachsen und über die Jahre hat die ja auch ein paar Stars bekommen und über die Jahre wurde die auch ein paar Mal genutzt."
+    },
+    {
+      "end": 222780,
+      "speaker": "B",
+      "start": 220300,
+      "text": "Jetzt will ich schon ein bisschen Name Dropping hören."
+    },
+    {
+      "end": 238860,
+      "speaker": "A",
+      "start": 223180,
+      "text": "Also da sind schon wirklich Riesenfirmen bei. Ich weiß, dass Google die nutzt. Ich weiß, dass Cloudflare sie nutzt, weil ich sie im Internetrepository gefunden habe. Ich weiß, dass Nvidia sie nutzt. Ich weiß, dass Apple sie nutzt. Ich weiß, dass der Alert Manager von Prometheus Source Code davon kopiert hat."
+    },
+    {
+      "end": 244700,
+      "speaker": "B",
+      "start": 239020,
+      "text": "Moment, das heißt, du bist eigentlich mitverantwortlich an dem Milliardenkurs von Nvidia. Seht ihr es richtig?"
+    },
+    {
+      "end": 251250,
+      "speaker": "A",
+      "start": 244850,
+      "text": "Ja, jetzt vielleicht nicht im einprozentigen Stellenbereich, aber ganz ganz unten vielleicht schon irgendwo."
+    },
+    {
+      "end": 253410,
+      "speaker": "B",
+      "start": 251410,
+      "text": "Also dann vielen Dank, Andi."
+    },
+    {
+      "end": 265730,
+      "speaker": "A",
+      "start": 253410,
+      "text": "Und woher weiß ich das jetzt? Nur mal kurz, um da mal ein bisschen Insight reinzubringen. Ich kriege E Mails von diesen Leuten, die mich anschreiben, ob ich doch bitte diesen PR fixen kann und das mergen kann. Und blablabla, da sehe ich natürlich dann immer die E Mail Adresse."
+    },
+    {
+      "end": 274580,
+      "speaker": "B",
+      "start": 265970,
+      "text": "Moment, aber warum bekommst du da E Mails? Ich mein, GitHub ist ja eine Plattform, da kann man die prs online bearbeiten, kommentieren. Warum bekommst du da E Mails?"
+    },
+    {
+      "end": 339620,
+      "speaker": "A",
+      "start": 334580,
+      "text": "Ja, aber wenn man mal PA mal eine Woche oder zwei oder drei liegen lässt, denn ich habe ja gesagt, das."
+    },
+    {
+      "end": 341140,
+      "speaker": "B",
+      "start": 339620,
+      "text": "Heißt, du bekommst Beschwerden."
+    },
+    {
+      "end": 409540,
+      "speaker": "A",
+      "start": 341540,
+      "text": "Ab und zu bekomme ich Beschwerden. In der Tat, die Leute meckern auch ab und zu bekomme ich bitten mir das doch mal anzusehen und das in Mainstream zu mergen. Also man bekommt alles, also wenn man ein großes Open Source Projekt hat, was heißt groß, das Repository ein tausend fünf hundert, ein tausend sieben hundert Stars, aber und ist halt gut verwendete Library. Auf jeden Fall hat Atlassian Gyra einen API Endpoint im März, glaube ich, deprecated markiert, habe ich nicht gesehen. Irgendjemand hat zwar ein Issue aufgemacht, aber ich denke mir, habe ich sehr wahrscheinlich dann kurz gelesen, ach, da wird ja erst im September abgeschaltet, habe ich mir dann gedacht, März, September, wir kennen das ja alle, wir nehmen gerade im September auf und auf einmal wird meine Inbox geflutet mit Kommentaren auf genau diesem Issue, das besagt, dass ein spezifischer API Endpoint abgeschaltet wird. Dann ist leider das Datum eingetreten, wann die das abgeschaltet haben und dann haben die es abgeschaltet. Und das war zufällig eine sehr nützliche Funktionalität und zwar die Suchfunktionalität von Tickets, wo du Tickets nach dieser JQL suchen kannst. Du kennst dieses Jira Query Language, wo du sagen kannst, Reporter gleich Wolfgang and Project gleich Engineering, Kiosk and Type gleich."
+    },
+    {
+      "end": 411540,
+      "speaker": "B",
+      "start": 409540,
+      "text": "Feature, dieses SQL für Arme."
+    },
+    {
+      "end": 477770,
+      "speaker": "A",
+      "start": 411620,
+      "text": "Ja, ganz genau. Und der Endpoint war halt okay, den haben sie abgeschaltet und durch so einen neuen ersetzt, aufgrund von Performance Problemen auf API Seite. Und den neuen hatte ich halt noch nicht implementiert und auf einmal ist mein E Mail Inbox mal so ein bisschen explodiert und dann habe ich natürlich gefragt, ja mach doch mal PR und so weiter und so fort. Und dann sind da sechs Leute aufgestanden, haben sechs prs gemacht, aber kein PR hat wirklich funktioniert, kein PR hat wirklich das Problem behoben und dann wurde darüber iteriert und so weiter und so fort. Und irgendwann hatte ich halt mal vier, fünf Stunden Ruhe und dann habe ich es halt mal implementiert, habe den PR gemacht, habe gesagt, okay Jungs und Mädels, testet mal und da war Stille und nach fünf Tagen oder so kam noch mal der Hey Andi, danke, das funktioniert bei mir, aber vorher ist kein Witz. So im Stundentakt kamen Kommentare rein und das ist, muss ich zugeben, Ende vom Lied ist der Bug ist gefixt. Nicht in allen Ecken und Enden. Da gibt es noch zwei, drei Edge Case, die sind noch nicht gefixt, muss ich auch noch irgendwann mal machen, aber die Maße ist gefixt. Aber naja, das Dankeschön, paar Leute haben sich auch bedankt, aber bei weitem nicht so viele, wie da vorher eine Stimme erhoben haben."
+    },
+    {
+      "end": 483130,
+      "speaker": "B",
+      "start": 478330,
+      "text": "Aber hast du da wirklich was machen müssen oder hast du da nur was reingemerged, was die Leute dir geschickt haben?"
+    },
+    {
+      "end": 523600,
+      "speaker": "A",
+      "start": 483130,
+      "text": "Ne, die prs, die waren leider zum Großteil nicht zu gebrauchen, nicht wegen der Codequalität oder nicht wegen der Einrückung oder variablen Benennung. Da waren zwei prs dabei, die lassen sich noch niemals kompilieren. Also da merkst du relativ schnell, da hat jemand einen, man nennt das ja auch blind PR gemacht. Das bedeutet, man checkt den Source Code aus, öffnet den Source Code, ändert ihn und macht sofort ein PA, ohne es zu testen. Und zurück zu deinem Intro. Ich nutze die Library selbst, aber bei mir war der Endpoint noch nicht abgeschaltet. Die haben so ein Rolling Deprecation gemacht über die Cloud Instanzen bei denen und nicht alles auf einmal. Deswegen kamen immer zu unterschiedlichen Zeitpunkten auch die E Mails und bei mir hat das alles noch funktioniert, deswegen habe ich das alles nicht verstanden."
+    },
+    {
+      "end": 572570,
+      "speaker": "B",
+      "start": 523600,
+      "text": "Und was machen jetzt gute Podcaster mit so einer Geschichte, die jede Woche eine Episode releasen müssen? Genau, sie machen ein ganzes Thema draus und machen eine Episode zu Client SDKs. Jetzt hatte ich bisher ja dieses Buzzword gar nicht so richtig am Schirm, bzw. Dass man da ein Thema draus machen kann, weil für mich ist es irgendwie sowas, was man so hin und wieder verwendet, aber sich gar keine großen Gedanken macht. Irgendwann bin ich dann draufgekommen, dass ich teilweise selber so Dinger geschrieben habe, was man eigentlich unter Client SDK verkaufen könnte. Und genau darüber wollen wir heute mal sprechen, was ein Client SDK ausmacht, für wen das eigentlich da ist, wer das programmiert, wer das programmieren sollte, was es zu beachten gibt. Und da hat natürlich gerade der Andi viel Erfahrung, wie er jetzt gerade bewiesen hat, weil er ein Puzzlestück SDK vom Milliardenkurs von Nvidia geschrieben hat."
+    },
+    {
+      "end": 602590,
+      "speaker": "A",
+      "start": 572570,
+      "text": "Ich habe nicht nur einen Client SDK geschrieben, ich habe glaube ich aktuell acht Client SDKs oder ähnliches, weil wenn du eins mal schreibst und die Learning mitnimmst, dann wird das zweite auf jeden Fall besser und das dritte wird noch besser als das zweite und so weiter und so fort. Und irgendwann hast du so eine Habit raus und irgendwann bist du relativ schnell da, dr. Client SDKs zu schreiben werden Leute, die sich sehr viel mit REST APIs zum Beispiel auseinandersetzen und REST APIs schreiben und Design ähnlich haben. Wenn du eine API geschrieben hast und dein Tooling zur Hand hast, dann bist du auch sehr schnell im API Schreiben."
+    },
+    {
+      "end": 605190,
+      "speaker": "B",
+      "start": 602590,
+      "text": "Dann erklär mal, was ist ein Client SDK?"
+    },
+    {
+      "end": 636370,
+      "speaker": "A",
+      "start": 605190,
+      "text": "Ein Client SDK besagt ja schon, dass es im Client ist, also im Source Code von deiner Applikation und wir sprechen dann mit einer anderen Applikation, meist mit einer Serverapplikation oder mit einem mit einem Device oder ähnliches. SDK selbst steht für Software Development Kit und was es eigentlich ist. Es verpackt eine API, also eine Schnittstelle, mit der ich maschinell kommunizieren kann, so dass sie sich wie native Funktion in einer Sprache anfühlen. Also wenig Boilerplate, wenig Fehler, dass man schneller zum Ziel kommt."
+    },
+    {
+      "end": 646850,
+      "speaker": "B",
+      "start": 636370,
+      "text": "Ja, aber warum braucht ihr das denn jetzt? Ich habe da eine REST API, die kann ja so da schicke ich ein Get Request hin und das war's. Also was macht denn dein SDK anders?"
+    },
+    {
+      "end": 723070,
+      "speaker": "A",
+      "start": 646930,
+      "text": "Also brauchen tust du erstmal gar kein Client SDK. Was es anders macht ist, und jetzt kommt es schon auf die Details eines SDKs an, aber im Endeffekt bietet es fertige Methoden für typische Use Cases. Die Standard SDKs bilden halt in der Regel alle REST API Endpoints ab, aber Client SDKs übersetzen dann zum Beispiel noch API spezifische Fehler in sprachnative Fehler, eigene Exception Typen und so weiter und so fort. Ich sag mal, Client SDKs ermöglichen die idiomatische Nutzung von einer externen Programmierschnittstelle in deiner Sprache, ich sag mal für Python und so weiter und so fort, gegebenenfalls sogar mit Sprachfeatures wie Async, Await und so weiter. Und jetzt redest du immer noch von REST APIs, aber es gibt auch grpc APIs, es gibt XML APIs, es gibt SOAP, kennst du noch SOAP Leider, Es gibt Hardware Devices, Waschmaschinen und so weiter mit proprietären Protokollen und so weiter und so fort und all dafür. Jetzt kannst du SA bei REST APIs, wo du ein GET Request hinsendest. Du brauchst kein Client SDK, da stimme ich dir zu. Vielleicht ist das sogar over engineered. Aber wenn du jetzt einen Tasmota hast oder eine Waschmaschine mit einem proprietären Protokoll, dann ist das doch schon sehr hilfreich, wenn du Client SDK hast und dieses Heavy Lifting des Reverse Engineering des Protokolls zum Beispiel gar nicht machen."
+    },
+    {
+      "end": 748510,
+      "speaker": "B",
+      "start": 723070,
+      "text": "Zur Abgrenzung, wenn ihr jetzt ein Command Line Interface verwendet, zum Beispiel von der Google Cloud gibt es das G Cloud Command, wo ich dann ganz viele Parameter mitgeben kann und im Hintergrund werden dann die APIs dort aufgerufen. Ist das ein Client SDK oder sprichst du jetzt wirklich von Client SDKs, die in einer jeweiligen Programmiersprache angesprochen werden oder ist die Shell oder die Command Line auch eine Programmiersprache in dem Sinne?"
+    },
+    {
+      "end": 761970,
+      "speaker": "A",
+      "start": 748750,
+      "text": "Du hast jetzt das Google CLI erwähnt. Ich finde zum Beispiel das GitHub CLI ganz gut. Das GitHub CLI oder das Google CLI ist der Wrapper und unten drunter in der Implementierung von dem CLI wurde dann das GitHub SDK genutzt oder das Google SDK."
+    },
+    {
+      "end": 766370,
+      "speaker": "B",
+      "start": 762210,
+      "text": "Also das ist nochmal ein Wrapper oben drüber um das Client SDK."
+    },
+    {
+      "end": 774490,
+      "speaker": "A",
+      "start": 766450,
+      "text": "Ja, das GitHub CLI ist die eigentliche Applikation und die eigentliche Applikation embedded dann eine Library und das wäre dann das GitHub SDK."
+    },
+    {
+      "end": 783690,
+      "speaker": "B",
+      "start": 774490,
+      "text": "Und wer sind dann sonst die User von so einem Client SDK? Also zum Beispiel jetzt von deinem Atlassian SDK, Wer oder wo wird das verwendet?"
+    },
+    {
+      "end": 816910,
+      "speaker": "A",
+      "start": 783690,
+      "text": "Wo wird das verwendet? Also prinzipiell sind die User, die Enduser sind wirklich Softwareentwickler, die ein Problem haben und irgendwann mit Jira kommunizieren wollen, automatisieren wollen, automatische Tickets erstellen wollen oder ähnliches. Wo wird das verwendet? Ich kenne zum Beispiel ein Use Case. Im Cloud Native Umfeld gibt es Prometheus und im Prometheus gibt es Alert Manager. Alert Manager ist ein Tool, das sendet dir Alerts im Monitoring Bereich, wie zum Beispiel ruf dich an und so weiter und so fort, wenn irgendwo ein Fehler stattfindet. Und Alert Manager kannst du so konfigurieren, dass wenn ein Alert gefeiert wird, also wenn ein Alert losgeht, dass ein Jira."
+    },
+    {
+      "end": 822300,
+      "speaker": "B",
+      "start": 816910,
+      "text": "Ticket aufgemacht wird, ein Alert wird gefeiert bei dir? Ist das jetzt englisch gefeiert oder deutsch gefeiert?"
+    },
+    {
+      "end": 831100,
+      "speaker": "A",
+      "start": 823260,
+      "text": "Wenn ich einen Prototypen baue und den Alert Manager aufsetze, feiere ich, dass der Alert funktioniert. Ansonsten wird er gefeiert dann auf Englisch."
+    },
+    {
+      "end": 832380,
+      "speaker": "B",
+      "start": 831100,
+      "text": "Da feierst du dann weniger."
+    },
+    {
+      "end": 863100,
+      "speaker": "A",
+      "start": 833180,
+      "text": "Aber was noch, weil du gerade gefragt hast, okay, wer sind die Enduser und wo wird das eingebaut? Vielleicht ist noch mal eine Unterscheidung recht interessant für viele Leute. Wo ist eigentlich der Unterschied zwischen einem Software Development Kit, einem SEK und einem Framework? Und zwar SDKs können aus dem von dir geschriebenen Code aufgerufen werden und Frameworks rufen in der Regel den von dir geschriebenen Code auf. Also Frameworks erzwingen in der Regel eine bestimmte, oft opinionierte Code Architektur, SDKs nämlich nicht."
+    },
+    {
+      "end": 879570,
+      "speaker": "B",
+      "start": 863100,
+      "text": "Jetzt hast du schon kurz erwähnt am Anfang, dass gewisse Sachen gewrappt werden und Error Codes zum Beispiel besser verarbeitet werden. Gibt es sonst noch Features, die so ein Client SDK klassischerweise hat und das Leben des normalen Entwicklers, Entwicklerin vereinfacht?"
+    },
+    {
+      "end": 1067580,
+      "speaker": "A",
+      "start": 879650,
+      "text": "Ja, da kommt es auf die, auf Englisch würde ich sagen, Maturity ein bisschen an, auf die Erwachsenheit eines Client SDKs. Ein richtiges Client SDK bietet natürlich auch eine ganze Menge Zusatzfeatures. Also im Endeffekt kannst du sagen, dass ein SDK Komplexität unsichtbar macht und gleichzeitig aber auch Best Practices erzwingt. Nehmen wir mal als Beispiel, wir hatten ja eine Episode über Resilience Engineering, wo wir über Timeouts und Exponentiell Backup und so weiter gesprochen haben. Ein SEK kann zum Beispiel, wenn es einen externen Request macht, eine HTTP Request, diese komplette Retry Logik mit Jitter und Exponential Backup bereits implementiert haben. Oder nehmen wir das Beispiel von einem Elasticsearch Request. Elasticsearch ist eine Dokumenten Datenbank, wird oft als Suchmaschine auch genutzt, basierend auf Lucien. Und was du da machst ist, das Ding hat eine HTTP API und wenn du da ein Request gegen sendest, dann sendest du in der Regel im Body eine größere JSON Struktur mit, mit so den Feldern wie zum Beispiel gib mir alle Dokumente, die dieses Wort haben müssen und dieses Wort aber nicht dürfen und dann setze noch diesen Filter oben drauf. Also ich sag mal eine klassische Suchmaschine wie bei Google. Jetzt kannst du natürlich das JSON craften und dann per HTTP wegschicken. Oder du kannst zum Beispiel ein Fluent Interface machen, wie zum Beispiel mysearch, searchindex, Filter, Word query exclude, etc. Also du kannst das Menschen lesbar machen, was natürlich deutlich verständlicher ist als dieses JS Interface, als dieser JSON Body zum Beispiel. Eine andere Thematik ist, du kannst native Sprachfeatures wirklich sinnvoll nutzen. Nehmen wir mal als Beispiel JavaScript. Da gab es ja die ganze Zeit diese Diskussion, welche Modultypen nehmen wir jetzt Es Module, Common JS, ich weiß schon gar nicht mehr, bei welchen Modularen wir da inzwischen sind, aber da gab es ja eine ganz lange Diskussion, welche Modularten jetzt die richtigen sind oder zum Beispiel den Support von alternativen JavaScript Runtimes. Da ist dann nicht nur Node JS, da gibt es ja noch Dino, was zum Beispiel sehr viel Permission Systeme hat und so weiter und so fort. Sowas kann da alles mit eingebaut werden. Oder klassische Features bei Python oder bei JavaScript mit Async await. Bei Python ist das dann oft zum Beispiel durch eine Third Party Library, also dass du auch wirklich eine native Einfügung des Sprachsystems hast, ist die Case. Und natürlich dann auch die ganzen Default Parameter oder Konfigurationsparameter, dass man da, ich sag mal, sane Defaults nimmt, also sinnvolle Defaults. Wir hatten in der Resilience Engineering Episode ja auch ein bisschen über Timeout Parameter gesprochen und wenn du die ganzen Paramet, die man so konfigurieren kann, in so einem HTTP Request durchgeht, dann kommen da schon eine ganze Menge zusammen. Authentifizierung SSL bestimmt teilweise bis zu neun Parameter Timeouts, wann ist der Retry, welchen Timeout nehme ich dahin, Connection Timeout, Read Timeout und so weiter. In welchen Frequenzen Retry wiederhole ich also den HTTP Request. Und wenn du das alles mal aufsummierst, dann hast du bestimmt siebzehn, achtzehn, zwanzig Parameter zur Hand, die du theoretisch konfigurieren kannst. Jetzt bist du Wolfgang, natürlich der Power User, du möchtest diese zwanzig Parameter natürlich alle konfigurieren, aber es gibt sehr viele User, die wollen das nicht. Und ein SDK kann sowas natürlich automatisch mitliefern."
+    },
+    {
+      "end": 1099120,
+      "speaker": "B",
+      "start": 1067580,
+      "text": "Das heißt aber, wenn ich das selber implementiere, also wenn jetzt eine REST API, graphql API implementiere und mich einigermaßen an die Specs halte, dann baue ich mir eigentlich selber so ein Client SDK, oder wenn ich das richtig sehe, weil wenn ich die ganzen HTTP Codes korrekt verarbeite, dann gebe ich wahrscheinlich intern in meiner Applikation irgendwelche Error Codes zurück oder Error Objekte, die das dann jeweils beinhalten. Im Idealfall sogar eine Retry Logik. Das heißt, eigentlich muss ich mir sowieso immer so einen Client SDK bauen, wenn es keines gibt."
+    },
+    {
+      "end": 1142100,
+      "speaker": "A",
+      "start": 1099280,
+      "text": "Genau das machen die meisten auch dann in house, bis sie mal merken, oh, vielleicht brauche ich dann doch noch die nächsten Endpoint und den nächsten Endpoint und der nächste Endpoint hat dann nicht nur Get Request, sondern Post Requests und vielleicht gibt die dir bei einem Post Request dann keine ID zurück, sondern Achtung, er gibt dir nur ein Accepted Code zurück. Das bedeutet, die API hat dein Request entgegengenommen und dann musst du pollen und so weiter. Also du merkst schon diese KLE Einheiten und ja, viele Programmierer und Programmiererinnen starten auch damit. Ich mache jetzt einfach mal einen ganz klassischen HTTP getcall und später schieben sie das in ein eigenes File und später schieben sie das in eine eigene Klasse und dann sind das mehrere Klassen und dann haben sie noch Exception Handling und eigene Errortypen und irgendwann denken ah Mist, jetzt habe ich ja jetzt doch ein kleines SDK."
+    },
+    {
+      "end": 1177530,
+      "speaker": "B",
+      "start": 1142100,
+      "text": "Ja, man fangt immer so leicht an und dann sieht man irgendwelche ein Error occurred oder so in den Logs, keine Infos dazu, welcher Error was ist gewesen, Dann fangt man das an aufzudröseln, kategorisieren einen Error dazu, dann kommt der nächste. Aber wenn man sich so APIs ansieht, die sind schon sehr umfangreich. Also alleine wenn man, also auch die kleinen APIs, die haben schnell mal zehn, fünfzehn Error Codes und wenn wir uns ehrlich sind, also keine Ahnung, ich zumindestens, ich implementiere selten alle fünfzehn, sondern die, die für mich relevant sind und irgendeiner fehlt dann natürlich, ist klar, wie immer."
+    },
+    {
+      "end": 1238060,
+      "speaker": "A",
+      "start": 1177690,
+      "text": "Ja, jede API ist unterschiedlich und wenn du denkst, eine API ist auch konsistent in sich, dann wirst du bei der Implementierung relativ schnell feststellen, dass dies einfach nicht der Fall ist. Mal ein GitHub bietet verschiedene Error Codes, einmal auf der HTTP Status Code Ebene natürlich, aber dann auch auf In manchen Fällen liefert der dir den Error Code auch im Body der Response mit, also ist auch inkonsistent in sich. Oder ich habe die Tage einen Client SDK für Remember the Milk geschrieben. Wer uns schon länger hört, der weiß, Remember the Milk ist so ein To Do Listen Tool, womit wir Getting Things Done betreiben, so eine Produktivitätsmethode. Und was die machen, ist noch viel fieser. Die liefern einfach immer den Statuscode zwei hundert zurück, außer du übertriffst das Rate Limit, was ein Request pro Sekunde ist, dann liefern sie fünf hundert vier zurück. Aber immer wenn du einen Fehler hattest, dann ist der im Statuscode zwei hundert im Body mit drin. Also jetzt wird sich jeder Programmierer und jede Programmiererin an den Kopf fassen. Andi, das hast du jetzt nicht gesagt, das machen die nicht wirklich."
+    },
+    {
+      "end": 1271110,
+      "speaker": "B",
+      "start": 1239020,
+      "text": "Doch, ich muss ja zugeben, bei unserer internen API, bei unserem F Online Führerschein Projekt, es ist jetzt schon fünfzehn Jahre alt, aber haben wir genau das auch so gemacht. Es gibt ein Errorfeld in JSON und wenn das größer null ist, dann ist es ein Error Code und der HTTP Status ist immer zwei hundert, ja, haben wir nicht besser gewusst, beziehungsweise ich habe so das Gefühl, vielleicht war ich auch jünger, aber damals waren diese HTTP Codes gar nicht so präsent in den APIs und API an sich war schon irgendwie neu, so JSON und damals hat es alles noch Ajax geheißen."
+    },
+    {
+      "end": 1282550,
+      "speaker": "A",
+      "start": 1271110,
+      "text": "Ja, man kann auch einfach sagen, man wusste es damals nicht besser. Aber was ich nur sagen möchte, ihr habt die Wahl, nutzt ein fertiges Client SDK oder schlagt euch damit selbst rum, denn das wisst sehr viel Haare raufen oft."
+    },
+    {
+      "end": 1287550,
+      "speaker": "B",
+      "start": 1282710,
+      "text": "Jetzt hast du am Anfang erwähnt, du hast das SDK geschrieben für Jira, für."
+    },
+    {
+      "end": 1292590,
+      "speaker": "A",
+      "start": 1287550,
+      "text": "Atlassian, Gyra und ich habe noch nie für Atlassian gearbeitet. Ich habe noch nie für Atlassian gearbeitet, möchte ich kurz dazu sagen."
+    },
+    {
+      "end": 1304100,
+      "speaker": "B",
+      "start": 1292590,
+      "text": "Aber genau, warum musst du als dahergekommener Typ da aus Duisburg jetzt so ein SDK schreiben? Warum macht das Atlassian nicht selber und warum machen es andere Firmen, warum Atlassian."
+    },
+    {
+      "end": 1320540,
+      "speaker": "A",
+      "start": 1304100,
+      "text": "Sich nicht dazu entscheidet, eine SEK zu schreiben, Kann ich dir da nicht beantworten. Ich habe denen mal eine E Mail geschrieben und habe gesagt, hey, pass mal auf, ich habe hier so ein populäres Gyra SDK, wollt ihr mich nicht sponsern? Ich habe gedacht, vielleicht kriege ich mal eine Marke, weißt du was die mir geschickt haben, einen Gutschein für deren Merch Shop. Da habe ich dann auch eine kleine."
+    },
+    {
+      "end": 1323260,
+      "speaker": "B",
+      "start": 1320540,
+      "text": "Neopren Tasche bestellt, die jetzt in der."
+    },
+    {
+      "end": 1339170,
+      "speaker": "A",
+      "start": 1323260,
+      "text": "Ecke liegt, die nutze ich dann immer noch fürs Reisen, da kommen meine Kabel rein, da passt das. Aber dann waren die fünf und zwanzig Dollar auch schon wieder weg, weil das irgendwie aus Australien gechippt wurde. Naja, im Endeffekt weiß ich nicht, also es gibt Firmen, die entscheiden sich dafür, dass die ein eigenes SDK schreiben und es gibt Firmen, die machen das nicht."
+    },
+    {
+      "end": 1343890,
+      "speaker": "B",
+      "start": 1339650,
+      "text": "Aber warum machen das diese Firmen? Was bringt es den Firmen SDK zu machen?"
+    },
+    {
+      "end": 1367230,
+      "speaker": "A",
+      "start": 1343890,
+      "text": "Naja, nehmen wir mal ein paar Beispiele. Je nach Firma kann es dazu führen, dass die Produkte eine größere und eine schnellere Adoption kriegen. Ich glaube wohl das beste Beispiel, wo SDK einfach einen Unterschied gemacht hat, ist Stripe. Stripe hatte von Anfang an eine saubere REST API. Ich meine, Stripe ist dieser Online Zahlungsdienstleister."
+    },
+    {
+      "end": 1378350,
+      "speaker": "B",
+      "start": 1367230,
+      "text": "Gibt es eigentlich irgendetwas, was Stripe nicht gut gemacht hat? Immer wenn APIs fallen, wird immer Stripe als das Beispiel genannt. Egal was es ist, Dokumentation, alles was irgendwie mit APIs zu tun hat."
+    },
+    {
+      "end": 1432310,
+      "speaker": "A",
+      "start": 1378350,
+      "text": "Stripe, die Damen und Herren, machen halt auch schon sehr viel richtig, muss man zugeben. Im Reliability Engineering Uptime sind die auch sehr, sehr stark. Naja, wie dem auch sei, Stripe hatte das Ziel, wir machen das Bezahlen bzw. Die Integration von Zahlungsworkflows im Internet sehr ein. Sich damals noch erinnert, als Stripe hochkam. Denn Zahlungs Workflows sind unglaublich komplex. Tokenisierung, Payment Intents, D Secure, Webhooks und so weiter und so fort. Und was die gemacht haben, ist, die haben SDKs entwickelt, die die Abläufe in wenige klare Methoden irgendwie kapseln. Entwickler und Entwicklerinnen müssen sich somit nicht mit HTTP Signaturen identifizieren, sondern das alles übernimmt das SDK. Und das Ergebnis Du konntest die Integration eines Zahlungs Workflows von Tagen in Minuten machen und nennen wir mal heutzutage einen Online Shop, der nicht Stripe angebunden hat."
+    },
+    {
+      "end": 1465850,
+      "speaker": "B",
+      "start": 1432470,
+      "text": "Ja, es gibt sogar Berechnungen, wie viel Prozent des internationalen Geldverkehrs online von Stripe abgewickelt wird. Also jetzt gerade nachgeschaut eins komma fünf Billionen Umsatz und der globale Umsatz in E Commerce ist ungefähr sechs komma fünf Billionen. Das heißt im Prinzip gute zwanzig Prozent vom gesamten weltweiten E Commerce Umsatz geht durch Stripe durch. Also die haben eine Marktmacht, die nicht zu unterschätzen ist. Und das haben sie damit geschafft, dass sie gute Developer Experience im Prinzip geliefert haben."
+    },
+    {
+      "end": 1594530,
+      "speaker": "A",
+      "start": 1465930,
+      "text": "Ich denke, dass das SDK daran maßgeblich mit dabei war. Ein anderes Beispiel, was ich gerne erwähnen möchte, ist AWS, Amazon Web Service, der Cloud Provider. Ich meine, AWS hat wie viele Services? Viel zu viele und die APIs sind auch gigantisch und äußerst detailliert. Jeder Service hat hunderte bis dutzende Operationen, Fehlercodes und so weiter. Und das wohl meines Erachtens nach populärste SDK für AWS ist das von Python, nennt sich Boto inzwischen Boto drei und dafür gibt es ja inzwischen sogar einen Begriff, wenn du kein SDK nutzt, um Cloud Infrastruktur zu maintaining, das nennt sich ja clickops, kurzum, Cloud Provider und AWS war halt einer der ersten, werden primär über APIs bedient und jetzt kannst du die die Frage stellen, möchtest du es alles manuell machen oder nein, du nutzt mit hoher Wahrscheinlichkeit dann ein SDK Brutto jetzt für Python. Und das Lustige ist, das Boto S Paket, also für den Object Storage, ist ja mehr oder weniger Standard für Object Storage, weil jeder andere Object Storage, sei es GCS von Google, ich weiß nicht wie der bei Azure heißt, oder naja, Hetzner hat auch Object Storage im Endeffekt, die implementieren ja alle die S API. Kurzum, du kannst nicht nur für AWS das AWS SDK nehmen, sondern auch für andere Provider. Natürlich musst du ein bisschen aufpassen, ab und zu haben die mit den Signaturen und Security da so ein paar andere Sachen, aber in neunzig Prozent, fünf und neunzig Prozent der Fälle funktioniert das. Und im Endeffekt ist die Frage, die du gerade gestellt hast, wer sollte eigentlich ein Client SDK entwickeln? Sollte sich darum nicht der Softwarehersteller kümmern? Ja, ich denke, das kommt immer ganz darauf an. Also ich denke für technisch getriebene Firmen ist SDK ein Sales Feature, vielleicht genauso wichtig wie die API selbst. Auf der anderen Seite muss man zugeben, okay, was ist denn das Hauptprodukt dieser Firma? Nehmen wir mal GitHub als Beispiel. GitHub selbst hat zwar ein SDK, aber nicht für jede Sprache, denn da kommen wir gleich auch noch zu. Ein SDK haben ist ja nicht ein SDK haben. Wo hörst du auf? Machst du dann SDK auch für Haskell oder machst du nur eins für Java, weil Java eine populäre Sprache ist oder Python zum Beispiel. Das Go SDK von GitHub wird auch von Freiwilligen gemacht und nicht von GitHub selbst, obwohl GitHub ein technisches Produkt ist, würde ich mal sagen."
+    },
+    {
+      "end": 1596130,
+      "speaker": "B",
+      "start": 1594530,
+      "text": "Aber werden die irgendwie unterstützt?"
+    },
+    {
+      "end": 1598730,
+      "speaker": "A",
+      "start": 1596370,
+      "text": "Da kann ich jetzt nicht für das Go GitHub Projekt sprechen."
+    },
+    {
+      "end": 1635970,
+      "speaker": "B",
+      "start": 1598730,
+      "text": "Ich weiß nicht. Es ist natürlich schon auch schwierig, alle Sprachen abzudecken, weil du brauchst da ja auch Leute, die sich in den jeweiligen Sprachen auskennen. Das sollte ja nicht irgendwas sein, was in jeder Sprache gleich aussieht. Das ist dasselbe, wie wenn du so Multiplattform Apps baust und dann hast du auf iOS diesen Flow von Android. Du willst ja den möglichst nativen Flow von der jeweiligen Sprache oder dem Betriebssystem, was es dann auch immer ist, ja haben. Und das heißt, du brauchst auch die Leute dazu. Das ist wahrscheinlich gar nicht so einfach, wenn du jetzt intern nur Go programmierst und jetzt solltest du plötzlich ein PHP SDK oder so auf die Beine stellen. Brauchst du ja irgendwen der BHB Erfahrung."
+    },
+    {
+      "end": 1663700,
+      "speaker": "A",
+      "start": 1636130,
+      "text": "Ja. Und da sprichst du einen unglaublich wichtigen Punkt an. Du sprichst ja gerade über die Prinzipien eines SDKs. Welche Prinzipien sind denn für ein SDK entscheidend? Und idiomatic programming ist key, weil wenn sich das SDK fremd anfühlt, wirst du keinen Spaß haben, es zu nutzen. Du wirst nicht flüssig. Du bist jetzt, was bist du eigentlich? Du bist JavaScript Engineer, oder? Also als welchen Engineer Typ würdest du dich bezeichnen? Wolfgang? Inzwischen Vibecoder verstehe ich, aber was war."
+    },
+    {
+      "end": 1668060,
+      "speaker": "B",
+      "start": 1664100,
+      "text": "Ich wollte gerade sagen, ich kann gar nichts. Richtig ist schon okay."
+    },
+    {
+      "end": 1695780,
+      "speaker": "A",
+      "start": 1668060,
+      "text": "Ich bin jetzt, ich bin jetzt Golang Mensch oder Go Length darf man ja nicht mehr sagen. Die Sprache heißt ja offiziell Go, Aber man merkt, wenn eine API und ein SDK von einem Nicht Go Programmierer und von einer Nicht Go Programmiererin entworfen wird, Man merkt das beim Schreiben. Es ist nicht flüssig. Verstehst du, was ich meine? Es ist nicht idiomatisch. Die Errortypen kommen nicht in der richtigen Reihenfolge zurück. Und also du hast ja so ungeschriebene Regeln in deiner Programmiersprache, die sich über."
+    },
+    {
+      "end": 1705510,
+      "speaker": "B",
+      "start": 1695780,
+      "text": "Zeit etabliert haben, gerade so Error Handling. Wie werden Errors zurückgegeben? Wie catcht man Errors? Das sind ja so ganz typische Sprachfeatures meistens."
+    },
+    {
+      "end": 1714150,
+      "speaker": "A",
+      "start": 1705510,
+      "text": "Genau. Oder wie erstelle ich ein neues Objekt? Mache ich da eine Konstruktorfunktion? Oder habe ich da einfach das new Keyword und so weiter und so fort?"
+    },
+    {
+      "end": 1722150,
+      "speaker": "B",
+      "start": 1714390,
+      "text": "Oder gibt es überhaupt Objekte oder ordentliche Klassen? Oder sind es irgendwelche komischen Dictionaries, die einfach zurückgegeben werden?"
+    },
+    {
+      "end": 1773600,
+      "speaker": "A",
+      "start": 1722310,
+      "text": "Ja, ich glaube, jeder, der eine neue Sprache mal lernt oder gelernt hat, kennt das. Man versucht, die Pattern aus der anderen Sprache, die bereits kann, irgendwie auf die neue Sprache zu übertragen und nachzubauen, bis man mal versteht. Das ist gar nicht der Sinn dieser neuen Sprache. Aber idiomatisch zur Zielsprache sollte das SEK natürlich sein. Und jetzt kommt's. Wo fängt man an, wo hört man auf, hole ich mir den Tube Index und hol mir die Top zehn Sprachen und bau dafür SDKs. Dann brauche ich aber Topleute in Python, in Java, in Go, in Rust. Du verstehst schon, das wird relativ kompliziert und du kannst ja nicht nur eine Person haben, du musst ja mindestens zwei, weil die Person möchte auch nochmal in Urlaub gehen. Deswegen kann ich schon verstehen, warum Firmen sagen, okay, wir lassen die Finger davon, wir überlassen es der Community. Dann kann es aber natürlich ganz stark sein, dass du ganz starken Wildwuchs hast. Das geht natürlich auch. Und das ist natürlich dann, kann natürlich dann auch negativ auf die Reputation des Produktes führen, obwohl die SDKs gar nicht von der Firma kommen."
+    },
+    {
+      "end": 1782960,
+      "speaker": "B",
+      "start": 1773600,
+      "text": "Hast du mal zufällig irgendwo SDKs in mehreren Sprachen verwendet, also dieselbe Endplattform sozusagen aus unterschiedlichen Sprachen heraus?"
+    },
+    {
+      "end": 1799930,
+      "speaker": "A",
+      "start": 1783040,
+      "text": "Ja, habe ich schon. Und zwar haben wir im aktuellen Job haben wir auch Tooling in Python und das nutzt auch ein Jira SDK. Deswegen, also mit der Jira API habe ich zum Beispiel schon mindestens in drei oder vier Sprachen gearbeitet und mit der GitHub API auch. Habe ich in mehreren Sprachen schon gearbeitet."
+    },
+    {
+      "end": 1815680,
+      "speaker": "B",
+      "start": 1800010,
+      "text": "Aber merkst du dann da große Unterschiede oder schlägt sich da dann die API schon durch, weil die SDKs möglichst nahe an der API gebaut sind, Jetzt zum Beispiel wie Fehler benannt werden oder Codes womöglich durchgeschliffen werden, anstatt irgendwie Error Objekte oder solche."
+    },
+    {
+      "end": 1907150,
+      "speaker": "A",
+      "start": 1815760,
+      "text": "Ja, bei den Gyra Cases, da ging es primär darum, einen Kommentar zu erzeugen und ein Ticket zu erzeugen. Das sind dann relativ einfache APIs, deswegen kann ich die Frage gar nicht so beantworten. Aber zum Beispiel in meiner Gojara Library habe ich eine Funktion, die nennt sich paginate. Das bedeutet, du suchst etwas mit JQL, diese Query Language hat er gerade gesagt, Type gleich Bug und Status gleich Close und so weiter. Und der hat natürlich eine maximale Anzahl an Items, die der zurückgibt, zwanzig Stück, aber du kriegst fünf und vierzig Ergebnisse auf deine Suchanfrage. Dann hat zum Beispiel die Python API hat mir dann einen Zeiger zurückgegeben und in meiner Go Library gebe ich einen Iterationsobjekt zurück, wo du einfach nur drüber iterieren kannst, was dann das Pagination unten drunter macht automatisch. Das ist dann so eine wie soll man Usability Sache. Und in der Python Client Library muss ich dann das Pagination handy selbst machen, wann breche ich ab und so weiter. Also da gibt es schon Unterschiede und da kommt es wirklich auch auf die Erfahrung drauf an. Der Softwareentwickler und Softwareentwicklerin. Wie viel SDKs hast du schon geschrieben? Denn ich muss zugeben, mein erstes SDK hatte noch nicht so Sachen drin und wie viel Zeit hatte die Person auch? Das muss man auch sagen. Also die Frage ist halt, muss man sprachübergreifend konsistent sein? Ich denke nicht. Es kommt ganz darauf an, auch was die Sprache bietet. Zum Beispiel diese Paginate Funktion, die ich gerade genannt habe. Es gibt Sprachen, die geben, es gibt Sprachen, die haben ein natives Feature von einem Iterationsobjekt und es gibt Sprachen, die haben sowas gar nicht, so ein Iterator Interface, nenne ich es mal."
+    },
+    {
+      "end": 1944470,
+      "speaker": "B",
+      "start": 1907230,
+      "text": "Ich wollte gerade sagen, also ich glaube, die meisten Sprachen haben in irgendeiner Form so einen Iterator, wo man in irgendeiner Weise durchjumpen kann. Die Frage ist halt immer mit Synchron, asynchron, wie läuft es ab? Wirklich mit Webcalls, die im Hintergrund passieren. Was ist dann, wenn da ein Timeout ist und du eine Retry Logik hast, wann kommt denn dann dein Call zurück? Also wenn solche Dinge dann auch versteckt werden hinter dem Wrapper, ist dann auch nicht mehr so klar, was da eigentlich passiert und wie man damit umgeht. Und da ist dann wahrscheinlich auch sprachspezifisch nochmal ein Unterschied, ob du überhaupt asynchrone Funktionen hast oder ob alles synchron bei dir ist. Und das ist halt dann schon abhängig von der Sprache."
+    },
+    {
+      "end": 1955030,
+      "speaker": "A",
+      "start": 1944550,
+      "text": "Jetzt stellen wir uns mal vor, wir greifen jetzt die Frage, macht es denn Sinn, dass eine Person mehrere SDKs in mehreren Sprachen schreibt für ein Produkt? Also da musst du ja polyglott unterwegs sein."
+    },
+    {
+      "end": 1957310,
+      "speaker": "B",
+      "start": 1955030,
+      "text": "Wenn du gut bist in mehreren Sprachen, warum nicht?"
+    },
+    {
+      "end": 2153420,
+      "speaker": "A",
+      "start": 1957630,
+      "text": "Aber was denkst du denn, wie viel Sprachen oder wie viel SDKs, in wie viel Sprachen ein Mensch realistisch enthält kann? Zwei, würde ich sagen. Okay, ist schon hart im Kopf, muss ich zugeben. Der Context Switch und du musst die Ecosysteme auch verfolgen. Drei vielleicht mit genug Zeit, aber da weiß ich jetzt nicht. Also drei Programmiersprachen flüssig können. Und wenn du ein gutes SDK schreiben möchtest, dann kennst du eigentlich die Core Features In und Out habe ich noch nicht gesehen. Wenn ihr sowas schon mal gesehen habt, lasst uns das wissen. Aber ich meine, du hast gerade einen guten Punkt angesprochen und zwar ist das zum Beispiel Angenommen, wir geben jetzt mal ein Iterator Objekt zurück und dann werden HTTP Calls gemacht und dann hast du Sync und Async angesprochen, hast du Timeouts angesprochen und Errors und so weiter. Alles schwierig zu handeln. Natürlich kannst jemand Exception Handling einbauen. Aber was du eigentlich angesprochen hast, zumindest was ich zwischen den Zeilen gelesen habe, ist, dass das SDK auf der einen Seite für die Standard User einfache Funktionen zur Verfügung stellen muss. Klar, das ist so die Maße der Use Case und für die Power User aber genug Flexibilität zur Verfügung stellen muss, damit man dann noch genug Einfluss hat. Und ein Beispiel möchte ich jetzt mal nennen, was ich über die Zeit gelernt habe bei der Implementierung mehrerer Client SDKs ist, ich nenne das Caller Injection, nicht Dependency Injection, sondern eigentlich Caller Injection. Wir nehmen jetzt einfach an, das SEK macht immer eine Netzwerk Request, also wir kommunizieren mit einem externen Dienst, mit einem externen Service, mit einem externen irgendwas übers Netzwerk. Das bedeutet zur Einfachheit sage ich einfach mal HTTP Request. Jetzt gibt es die Möglichkeit, dass das SDK diesen HTTP Client selbst erstellt mit all den Settings, Timeout und all sowas. Was aber best practice ist, dass du als Software Implementierer die Möglichkeit haben solltest, den HTTP Client in das SDK zu injecten. Warum macht das Sinn? Am Anfang habe ich hä, ist das denn überhaupt notwendig? Kann ich in einem SDK nicht einfach den Standard HTTP Client von der Sprache nutzen aus der Standard Library? Ja, solltest du, wenn kein HTTP Client ejected wurde. Aber warum macht das Sinn? Du weißt nicht, wo dein SDK verwendet wird, teilweise hinter irgendwelchen Proxys, teilweise haben Firmen eigene Authentifizierungsmethoden, teilweise erwarten Systeme Custom HTTP Header, um in irgendeinem Engine X Bypass zu machen. Ab und zu wollen die Leute, die das SDK verwenden, irgendwelche Pre und Post Aktionen vor oder nach dem HTTP Request machen, zum Beispiel ein Logging oder vielleicht wollen die eine Trace UUID an deinen HTTP Call dranhängen oder oder oder. Also Sachen, wo du dir denkst, ja, das sollte jetzt nicht in Client SDK. Und wenn du denen die Möglichkeit gibst, den HTTP Caller, den HTTP Client zu injecten und dann nutzt du den fertigen HTTP Client, dann können die da so Roundtrips machen, dann können die da wirklich so Pre und Post Actions vor den HTTP Call setzen und so weiter. Ich entschuldige mich jetzt gerade schon mal für mein Denglisch, aber ich weiß gar nicht, wie ich das alles auf Deutsch beschreiben muss, aber ihr wisst, was ich meine. Eine Aktion, die direkt vor dem HTTP Call ausgeführt wird und wenn die Response zurückkommt, eine Aktion, die direkt danach ausgeführt wird."
+    },
+    {
+      "end": 2197600,
+      "speaker": "B",
+      "start": 2153420,
+      "text": "Ich habe kürzlich so ein Client SDK verwendet von so einer, wie beschreibt man das, so Online Suchindizierungsdienst, so eine interne Suchmaschine quasi, der man Anfragen dann schicken kann für den Kunden und der Kunde ist sehr restriktiv mit welche Domains aufgerufen werden dürfen. Und dieses Client SDK ist immer fehlgeschlagen, weil irgendeine Domain nicht zugänglich war intern. Dieses Debugging hat mich so viel Zeit gekostet, um am Ende dann irgendwo drauf zu kommen, was für eine URL da wirklich aufgerufen wird, weil das Ding hat mir das nirgends ausgespuckt. Wenn ich da so was injecten hätte können, hätte das mitlocken können, wär sofort am Ziel gewesen. Also kann ich voll und ganz nachvollziehen diesen Use Case, hätte mir da viel Zeit erspart."
+    },
+    {
+      "end": 2254260,
+      "speaker": "A",
+      "start": 2197600,
+      "text": "Aber wir haben gerade von der Caller Injection gesprochen. Du kannst natürlich dann auch noch das HTTP Response Objekt immer standardmäßig mit zurückgeben, damit der Caller, dass HTTP die originale Raw HTTP Response inspekten kann. Du kannst noch automatisches Token Renewal machen, wenn es um Authentifizierung geht und so weiter und so fort. Also in Sachen Flexibilität kannst du eine ganze Menge machen. Was ich da immer empfehle, ist, dass du dann immer zwei verschiedene Funktionen bzw. Methoden anbietest. Eine für den Power User, der das gar nicht braucht. Und wenn du diese Flexibilität brauchst, dann packst du da noch einen optionalen Parameter hinterher oder du machst noch irgendwie so ein Fluent Interface, so was wie New Client und dann with own HTTP Caller oder irgendwie sowas, dass die Leute, die die Flexibilität brauchen, dann vielleicht noch einen Zusatz dran packen, aber dass du für die Maße der User ein einfaches API."
+    },
+    {
+      "end": 2288370,
+      "speaker": "B",
+      "start": 2254260,
+      "text": "Design, also umgekehrt, der Power User soll die Möglichkeiten haben, nicht die Default Werte oder. Achso, ja genau, Wenn man sich dieses ganze Thema jetzt aber durchdenkt und du hast ja schon angeschnitten, dass man da sehr viel Personen braucht, die wollen auch auf Urlaub gehen. Das heißt, du musst viele Sprachen bedienen, du brauchst die eigentliche API, du brauchst eine Dokumentation von der eigentlichen API, du brauchst eine Dokumentation von jedem SDK. Also das ist schon wahnsinnig viel Aufwand, den du da betreiben musst, um so Client SDKs zu erstellen und dann vor allem auch zu pflegen und auch die Dokumentation up to date zu haben."
+    },
+    {
+      "end": 2305640,
+      "speaker": "A",
+      "start": 2288920,
+      "text": "Was ist das Produkt, was du sehr oft verwendest? Kann Hardware, kann Software sein, kann etwas in der realen Welt sein, was du wirklich liebst, was du Wow, damit kann ich ja nicht mehr ohne. Kann auch dein Karabiner sein oder dein Klettergurt oder irgendwas. Was sagst du? Wow. Also da bin ich echt von wirklich überzeugt."
+    },
+    {
+      "end": 2322810,
+      "speaker": "B",
+      "start": 2305800,
+      "text": "Ich muss jetzt nach einer Antwort suchen, die kein LL m ist. Moment, bin ein großer Nextbike Fan. Also dieses Stadtrat Verleihsystem, zwei Buttons, Du scannst den QR Code, ein Button, fährst los, sperrst das Rad wieder ab, wartest auf den Piepton. That's it."
+    },
+    {
+      "end": 2327210,
+      "speaker": "A",
+      "start": 2322810,
+      "text": "Denkst du, das Produkt haben die in der Nacht entworfen? Denkst du, das war wenig Arbeit?"
+    },
+    {
+      "end": 2332570,
+      "speaker": "B",
+      "start": 2327610,
+      "text": "Ich glaube, es war sehr viel Arbeit. Ich habe das auch mitverfolgt über die vielen Jahre. Es hat sich auch stark verbessert."
+    },
+    {
+      "end": 2350000,
+      "speaker": "A",
+      "start": 2332650,
+      "text": "Was ich dir sagen mö Gute Produkte ist halt harte Arbeit und wenn es leicht aussieht, dann weißt du, dass es harte Arbeit war. Also ja, es ist unglaublich viel Arbeit und es ist sogar in sehr vielen Fällen Handarbeit. Was meine ich damit? Weil man kann ja sagen Moment, wir."
+    },
+    {
+      "end": 2352320,
+      "speaker": "B",
+      "start": 2350000,
+      "text": "Haben jetzt die LLMs, die alles generieren."
+    },
+    {
+      "end": 2428580,
+      "speaker": "A",
+      "start": 2352400,
+      "text": "Sehr schönes Wort generieren. Und zwar kommen wir nämlich jetzt mal zur Entwicklung von Client SDKs. Denn man kann sich ja aus dem Fenster lehnen und sagen wieso macht ihr eigentlich eine Episode darüber? Moderne APIs haben doch komplett Open API Spezifikationen und Spezifikationen. Spezifikationen, Open API Spezifikationen. Und somit ist die ganze API natürlich in einem standardisierten, sprachunabhängigen Format verfügbar, maschinenlesbar. Und es gibt ja Generatoren. Kann ich da nicht einfach auf play drücken und dann habe ich einen kleinen SDK und die Antwort ist ja, kannst du. Und das machen auch viele. Wenn du zum Beispiel eine gut dokumentierte API hast, zum Beispiel mit dem Open API Format. Ich habe gerade gesagt, das ist ein standardisiertes sprachunabhängiges Format. Da kannst du deine API in YAML oder JSON spezifizieren, inklusive Endpunkte, Parameter und so weiter. Und dann ist das maschinenlesbar. Und dann gibt es natürlich auch einen Open API Generator, der kann dir dann SDKs für über dreiig Programmiersprachen generieren, zum Beispiel mit verschiedenen Flavors von Libraries. In Python kann das dann zum Beispiel die URL lib sein oder AI HTTP und so weiter und so fort. Also verschiedene Varianten."
+    },
+    {
+      "end": 2449410,
+      "speaker": "B",
+      "start": 2428580,
+      "text": "Aber das kann man ja auch nur irgendwie Boilerplate generieren, oder? Also diese ganzen spezifischen Dinge, die meine API ausmachen, die kann das Ding wahrscheinlich nicht automatisch generieren, oder wie zum Beispiel, ja, ich denke an irgendwelche kruden Pagination Geschichten oder Rate Limiting, die halt schon etwas komplexer sind als jetzt nur eine klassische Anfrage."
+    },
+    {
+      "end": 2486090,
+      "speaker": "A",
+      "start": 2449570,
+      "text": "Also der Open API Generator zum Beispiel kann jetzt nicht in deiner Client SDK Sache eine Methode generieren. Wenn du das Rate Limit erreichst, bitte warte und macht dann automatisch einen Call, weil das ist ja so eine Usability Funktion, die du vielleicht erwarten würdest. Was die Open API Spezifikation beschreibt ist, du hast einen Endpunkt, du hast ein Request Objekt, also Eingabedaten, du hast eine Ausgabedaten und du hast die möglichen Fehler, die dieser Endpunkt schmeißen kann. Und auf Basis dieser Daten kannst du natürlich das Client SDK generieren. Dann implementierst du aber automatisch immer nur alle Endpunkte ohne diese Usability Seite, Also."
+    },
+    {
+      "end": 2506330,
+      "speaker": "B",
+      "start": 2486090,
+      "text": "Sprich die ganzen Felder, JSON Formate, Header Fields, die es gibt wahrscheinlich auch klassische Authentifizierungsmethoden, Pagination meines Wissens auch bis zu einem gewissen Grad, aber ist immer die Frage, wie krude dann die Implementierung ist, die man sich selber ausdenkt mit der API. Aber standardisierte Sachen gehen natürlich ganz gut."
+    },
+    {
+      "end": 2587620,
+      "speaker": "A",
+      "start": 2506410,
+      "text": "Genau, dann hast du eins zu eins die Repräsentation deiner API in deiner Sprache und du merkst schon, macht das wirklich ein gutes SEK aus? Fraglich. Dann ist die zweite Thematik, diese Generatoren sind halt Maschinen. Und jetzt schau dir mal an, was die Open API Spezifikation ist. Open API basiert eigentlich auf dem JSON Schema. Du kannst ja auch mit dem JSON Schema, kannst du ja auch YAML validieren. Das Problem ist jetzt mit einer Schema Sprache, wie zum Beispiel JSON Schema, kannst du halt relativ schlecht Datenstrukturen beschreiben, weil es eine Schemasprache ist. Und Jason Schema ist eigentlich eine Validierungssprache, das sagt, ist dieses JSON valide? Das bedeutet, für komplexe APIs ist es also gar nicht so gut geeignet. Dann gibt es da noch so ein paar Detailprobleme wie anyof ist so ein Keyword, das sollte man eigentlich nicht verwenden, dann hast du gewisse Namespaces von Datentypen, die überschreiben sich, dann fallen die Maschinen auf die Mütze und so. Also man kann das machen, gar keine Frage. Und das bringt einen auch sehr weit, als ich als Softwareentwickler kann dir sagen, es macht keinen Spaß, so was zu nutzen. Und wenn du mal, habe ich nämlich die Tage wieder versucht, ich habe mir die Open API Spezifikation von Atlassian Gyra genommen, habe mir den Open API Generator genommen für Go, habe gesagt, mach mal, der kommt da gar nicht durch, also der fliegt so auf die Mütze, das funktioniert nicht."
+    },
+    {
+      "end": 2624910,
+      "speaker": "B",
+      "start": 2587620,
+      "text": "Ja, man muss halt möglichst nahe auch an standardisierten Verhalten sein. Also wenn du ganz klassisches Pagination verwendest, irgendein Cursor Based oder Pages oder sowas, kannst du sehr einfach beschreiben und das wird dann auch funktionieren. Aber wenn wir uns ehrlich sind, die meisten APIs sind halt einfach komplexer und bewegen sich halt von dem absoluten Standard auch ein bisschen nach links oder nach rechts, was ja auch oft Sinn macht, weil die Daten einfach in einer anderen Form dargestellt werden sollen und halt dementsprechend auch APIs anders funktionieren. Macht ja auch durchaus Sinn und kann ja die User Experience dann auch verbessern, wenn man nicht den absoluten Standard unter Umständen einfach."
+    },
+    {
+      "end": 2652740,
+      "speaker": "A",
+      "start": 2625220,
+      "text": "Genau, heutige Produkte sind halt einfach unglaublich komplex, dessen bedarf dann halt auch anderer Anforderungen. Das andere Extrem ist natürlich dann die Handarbeit. Das bedeutet, ich nehme die Dokumentation und implementiere jeden Endpoint selbst. Eines der größten Herausforderungen bei der Handarbeit ist neben der vielen Arbeit natürlich die API konsistent zu halten. Das bedeutet, Parameter in der richtigen Reihenfolge, Return Values in der richtigen Reihenfolge, Wording, Lower Camel Case, Upper Camel Case, Dokumentation."
+    },
+    {
+      "end": 2661440,
+      "speaker": "B",
+      "start": 2653060,
+      "text": "Oder auch mal solche E Mails, die irgendwelche Deprecation Dinge ansprechen, auch mal zu lesen und nicht ein halbes Jahr zu warten, bis sie dann um die Ohren fliegen."
+    },
+    {
+      "end": 2683200,
+      "speaker": "A",
+      "start": 2661520,
+      "text": "Ja gut, das hast du aber das hast du deinen Nebenfall, wie du es machst. Aber eine API konsistent zu halten ist natürlich unglaublich schwer. Der Riesenvorteil von Handarbeit ist natürlich, du hast die größtmögliche Flexibilität und du kannst ganz einfach starten und dann durch kleine Iterationen dich weiterentwickeln. Das bedeutet, du brauchst jetzt gerade nur drei Endpunkte von den fünfzig, dann implementiere halt nur die drei und implementiere halt den vierten. Wenn du es brauchst."
+    },
+    {
+      "end": 2689120,
+      "speaker": "B",
+      "start": 2683200,
+      "text": "Wie machst du das eigentlich mit der Visionierung, dass du konsistent bleibst zwischen APIs und Client SDKs?"
+    },
+    {
+      "end": 2699920,
+      "speaker": "A",
+      "start": 2689360,
+      "text": "Spezifiziere mal bitte, von welchen Versionen du sprichst. Sprichst du jetzt von der Server API Version oder sprichst du jetzt von der API Endpunkt Version oder sprichst du von der Version, die ich release des Client SDKs?"
+    },
+    {
+      "end": 2717030,
+      "speaker": "B",
+      "start": 2700240,
+      "text": "Das ist genau meine Frage. Also du hast ja angesprochen, du hast extrem viele Änderungen, man muss konsistent bleiben. Jetzt gibt es eine neue API Version oder die API ändert sich. Deine SDK Version muss sich dann auch ändern. Wie gehst du mit Breaking Chains Changes um? Deprecation, Also wie machst du das? Versioning?"
+    },
+    {
+      "end": 2722910,
+      "speaker": "A",
+      "start": 2717030,
+      "text": "Wir sprechen jetzt nicht über die Implementierung der API Versionen auf Serverseite. Das ist nochmal ein eigenes Thema."
+    },
+    {
+      "end": 2727230,
+      "speaker": "B",
+      "start": 2723150,
+      "text": "Die macht ja irgendein anderes Team oder die Firma im schlimmsten Fall, mit der du gar nichts zu tun hast."
+    },
+    {
+      "end": 2764000,
+      "speaker": "A",
+      "start": 2727310,
+      "text": "Ganz genau. Das ist ein Riesenproblem und das ist auch sehr herausfordernd. Was ziemlich viele Client SDKs machen, ist, du kannst konfigurieren, welche Version du nutzt. Oder du erstellst dir einen zweiten Client, der dann Version drei und nicht Version zwei nutzt. Das Riesenproblem ist, was manche Leute am Anfang versuchen und ich habe es auch versucht, dass man sich Request und Response Objekte intern über die Version teilt. Lass das sein. Lass das wirklich sein. Trennt bitte, falls ihr Version zwei von der Jira API nutzt, baut die Version zweite Und falls die Version drei dann baut alle Objekte neu."
+    },
+    {
+      "end": 2779280,
+      "speaker": "B",
+      "start": 2764000,
+      "text": "Und wie war das jetzt mit der Jira API? Kann ich meine alten Funktionen weiterhin so aufrufen und du rufst im Hintergrund nur die andere, die neue Search API auf? Oder ist es nicht möglich, da kompatibel zu bleiben, also abwärtskompatibel sozusagen?"
+    },
+    {
+      "end": 2908330,
+      "speaker": "A",
+      "start": 2779520,
+      "text": "Ja und nein. Warum Ja und nein. Jetzt kommt noch eine Ebene der Komplexität. Und zwar habe ich zwei Versionen des Client SDKs. Ich habe eine Version, die sehr alt ist und eine neuere Version. In der neueren Version habe ich die APIs für Jira On Premise und Jira Cloud getrennt. Da konnte ich einfach nur den API Endpoint ändern und es hat sich für die Leute, die die neuere Client SDK Version nutzen, nichts geändert. Da war das transparent. Die mussten einfach nur upgraden. Aber für die Leute, die das alte SDK nutzen, wo ich noch eine Library hatte, die entweder für On Premise und für Cloud funktioniert hat, konnte ich es nicht transparent machen, weil Achtung, der API Endpoint natürlich nur im Cloud Offering abgeschaltet wurde und die Leute, die an den On Premise Jira hosten, die haben natürlich den alten Endpoint noch, da wurde ja nichts abgeschaltet und deswegen konnte ich da kein Breaking Change machen. Also das ist dann nochmal eine andere Komplexität. Falls ihr ein Produkt habt oder ein Produkt anbinden wollt, was mehrere Versionen hat, GitHub, Enterprise, GitLab gibt es hier alles als On Premise und auch in der Cloud Version. Kleiner trennt das sofort in eurer Codebase, weil auch wenn ihr sagt, ja die APIs sind ja gleich, nein, sind sie nicht. In der Regel haben die Cloud Versionen andere APIs oder kleine Tweaks, die anders sind. Und was sich auch als Best Practice dann bewährt hat, wenn ihr solche Änderungen macht, zum Beispiel die Änderung von deprecated API Endpoints, überlegt euch eine ordentliche Release Strategie eures SDKs, denn da hat sich zum Beispiel auch Semantic Versioning bewährt, wo man in der Regel drei Versionszahlen hat, eine Major Miner und ich glaube eine Bugfix Version oder ähnliches. Das bedeutet, wenn man die erste Version ändert, hat man einen Breaking Change in der SDK. Wenn also Leute updaten müssen, die ihren Code anfassen. Wenn man die zweite Versionsnummer ändert, dann ist er in der Regel nur ein Feature Update und die dritte Version ist nur ein Bugfix Update. Da kann man dann, sofern ihr Semantic Versioning supportet, kann man dann wirklich sehen, ah, okay, das ist jetzt ein Update, da muss ich ein bisschen mehr Arbeit reinstecken oder da kommen nur Features und da nur Bugfixes."
+    },
+    {
+      "end": 2933740,
+      "speaker": "B",
+      "start": 2908330,
+      "text": "Da haben wir zum Beispiel bei unserem, ich nenne es jetzt mal SDK, aber zu unseren Konnektoren, wie wir in der letzten Episode gesprochen haben, wenn wir von Apple oder Spotify reverse engineerte APIs anbinden, da haben wir natürlich den Vorteil, dass sowieso nur die letzte Version gilt. Das heißt, es ist alles ein Breaking Change. Man kann einfach releasen und man braucht immer die neueste Version. Ist natürlich auch eine Herangehensweise, aber wir haben keine andere Wahl, weil wir alles reverse engineeren müssen."
+    },
+    {
+      "end": 2946980,
+      "speaker": "A",
+      "start": 2933820,
+      "text": "Ich sehe das halt fast so auch als Vorteil, weil man muss auch zugeben, etwas nach Semantik Versioning zu releasen kann auch anstrengend sein, besonders wenn man eine ganze Zeit lang nicht released hat, weil du musst immer Track halten."
+    },
+    {
+      "end": 2969720,
+      "speaker": "B",
+      "start": 2946980,
+      "text": "Ja, man sieht es ja, wenn, keine Ahnung, Microsoft irgendwelche extrem alten Dinge noch weiterhin supportet oder sich das zahlen lässt. Aber das war halt auch immer deren Stärke, dass sie einfach Sachen zehn Jahre, fünfzehn Jahre weiterhin supporten und musst du halt auch wissen, was deine Kunden wert sind und wie viel sie dementsprechend zahlen, um noch irgendwelche alten Versionen verwenden zu dürfen."
+    },
+    {
+      "end": 3004300,
+      "speaker": "A",
+      "start": 2969720,
+      "text": "Wenn wir schon von On Premise und Cloud sprechen und Semantic Versioning, dann kommt ein Thema auch noch mal zugute. Welche Versionen des Tools, was sie anbindet, supportet ihr eigentlich? Nehmen wir mal Elasticsearch. Elasticsearch wird selbst weiterentwickelt und Elasticsearch selbst supportet nur, ich glaube, die aktuellste und die vorherige Version, aber nicht drei Versionen von früher. Überlegt euch, ob euer SDK dem End of Life Zyklus des Vendors folgen soll. Das hilft euch natürlich sehr, relativ schnell alte Zöpfe abzuschneiden, weil ihr sagt, ihr folgt einfach dem Release Zyklus des Vendors."
+    },
+    {
+      "end": 3017170,
+      "speaker": "B",
+      "start": 3004610,
+      "text": "Ja, aber muss man dem nicht sowieso folgen? Weil wenn, wie gesagt jetzt bei Gyra, wenn dieses Ding deprecated ist, dann ist es ja automatisch bei dir auch deprecated oder du musst es ändern. Also du folgst ja automatisch immer dem Zyklus, ne?"
+    },
+    {
+      "end": 3021890,
+      "speaker": "A",
+      "start": 3017730,
+      "text": "Du kannst ja auch noch sagen, okay, nur weil es deprecated ist, heißt es ja nicht, dass es removed wird."
+    },
+    {
+      "end": 3025250,
+      "speaker": "B",
+      "start": 3022770,
+      "text": "Wenn es end of life ist, dann ist es ja meistens weg."
+    },
+    {
+      "end": 3047240,
+      "speaker": "A",
+      "start": 3025330,
+      "text": "Ja, aber speziell für Datenbanken zum Beispiel, die self hosted werden, weißt du, selbst in der Industrie werden noch sehr viel alte Versionen und natürlich kannst du dann auch vielleicht Enterprise Support verlangen und dir bezahlen lassen, dass du noch eine Version von ein tausend neun hundert siebzig Mainz. Also das geht auch, das stimmt natürlich."
+    },
+    {
+      "end": 3053000,
+      "speaker": "B",
+      "start": 3047320,
+      "text": "Ist auch gutes Geld. Wenn man sich den Schmerz antun will, kann man meistens sehr viel Geld dafür verlangen."
+    },
+    {
+      "end": 3100610,
+      "speaker": "A",
+      "start": 3053080,
+      "text": "Meine Erfahrung ist folgende, und zwar habe ich mehrmals E Mails bekommen, so nach dem Motto, ja, das funktioniert nicht mehr mit der alten Version von Jira und so weiter, habe ich gesagt, ja, ich folge dem End of Lifecycle von Atlassian, Jira und so, ja, aber das geht nicht und wir brauchen das unbedingt so, okay, Also du hast jetzt zwei Möglichkeiten. Entweder kannst du eine ältere Version des Client SDKs nutzen, ja, aber da hast du den Endpunkt nicht implementiert. Ich sage, ja, okay, gut. Oder ich kann dir ein Angebot schicken, ja, da kam dann nicht mehr wie viel und dann war auch Stille. Naja, aber wir waren bei dem Thema Code Generierung. Wir sind gerade ein bisschen abgedriftet. Code Generierung ist auch eine lustige Thema. Wir haben die zwei Extreme besprochen und zwar haben wir einmal gesagt, wir generieren alles und einmal Hand. Und jetzt ist die Wolfgang, sind Extreme immer gut? Ne, Extreme sind nicht immer gut, oder? Es gibt immer ein Mittel. Sollen wir mal gucken, was die SPD und die CDU jetzt hier der Code Generierung sind?"
+    },
+    {
+      "end": 3107490,
+      "speaker": "B",
+      "start": 3101010,
+      "text": "Ob das die Mitte ist, ist eine andere Frage. Aber bitte, bevor wir ins Politische abgleiten, was ist deine Mitte?"
+    },
+    {
+      "end": 3213160,
+      "speaker": "A",
+      "start": 3107970,
+      "text": "Es gibt noch zwei Mittelwege. Und zwar ist die eine Thematik ein Custom Code Generator. Zum Beispiel die Firmen Stripe, Elastic oder Twilio verfolgen diesen Ansatz. Was die haben ist, die haben oft eine eigene Art, ihre APIs zu spezifizieren. Elastic hat zum Beispiel seine API in typescript spezifiziert in irgendeinem Custom Format. Dieses typescript wird dann nach JSON kompiliert und dann haben die sich ein Tool geschrieben, womit die ihr Custom JSON Format dann wiederum in andere SDK Sprachen übersetzen. Kann man machen, muss man nicht. Ist natürlich ziemlich viel Custom Tooling zu maintainen, aber ich denke, wenn du eine Engineering Firma bist, dann kann man das schon tun, aber hat halt Trade offs. So, das war die Custom Code Generatoren, die du selbst schreibst. Und jetzt kann man sagen, hä? Gibt es da nicht schon irgendeine Firma, die so Custom Generator irgendwie selbst geschrieben hat und released hat? Die Antwort ist natürlich ja. Es gibt zwei Firmen und zwar sind das zwei Big Tech Firmen und zwar einmal Amazon und einmal Microsoft. Was die gemacht haben, die haben sich gedacht, es gibt so viele Standards, ich mache einen neuen Standard, um alle Standards zu vereinen. Was haben die so gemacht? Ein neues Tool auf den Markt geworfen und zwar hat AWS eine Spezifikation bzw. Ein Tool namens Smithy. Wie spricht man das Englisch aus? Smithy. Smithy ist eine Interface Definition Language und du definierst halt deine API in einer neuen Sprache, in der Smithy Language sozusagen. Der macht dann eine Client Code Generierung für typescript, Go, Rust, Ruby, Kotlin und so weiter. Das Coole ist, dass er natürlich auch die Server mitgeneriert, sowas wie Java und Rust. Also du hast nicht nur das SEK, sondern auch den Server."
+    },
+    {
+      "end": 3218360,
+      "speaker": "B",
+      "start": 3213160,
+      "text": "Aber wo ist jetzt da der Unterschied zu Open API ist ja nur eine andere Spezifikation und ein anderer Generator."
+    },
+    {
+      "end": 3280060,
+      "speaker": "A",
+      "start": 3218440,
+      "text": "Genau, also du definierst deine API in einer anderen Sprache. Die haben halt versucht, ein bisschen die Downsides von openapi zu umgehen. Das was ich gerade erwähnt hatte, dass du zum Beispiel mit JSON oder YAML versuchst, deine API zu spezifizieren und die dann mit JSON Schema validierst, was halt irgendwie nur so halb gut geht bei komplexen Datenstrukturen, weil das ist halt eine Schema Validierungssprache und keine Datenstruktur Definitionssprache. Und Smithy löst halt diese Probleme und sagt, okay, pass mal auf, ich baue eine Interface Definition Language mit so ein paar mehr Features. Microsoft hat so was ähnliches gemacht, nennt sich Type Spec. Da spezifizierst du die API in typescript und kannst auch Kram raus generieren. Ich meine, die Downsides ist auch schon irgendwie klar, du musst eine neue Spezifikationssprache lernen und du musst deine Spezifikation in der Regel per Hand schreiben, gehaubst wie gesprungen, nenne ich es mal. Kommt halt darauf an, was du so liebst. Aber das sind so die Möglichkeiten. Die ganzen Tools verlinken wir natürlich auch in den Shownotes, wer sich das mal ansehen möchte. Aber die AWS APIs werden zum Beispiel so generiert."
+    },
+    {
+      "end": 3303080,
+      "speaker": "B",
+      "start": 3280060,
+      "text": "Jetzt wenn du so eine Spezifikation schon hast, so was wie Type Spec zum Beispiel. Jetzt kannst du dich zurückerinnern an unsere Episode ein hundert sechs und zwanzig, wo wir mit Sebastian Bergmann über Testing gesprochen haben, wo er gemeint hat, Tests sollten noch die einzigen Dinge sein, die man selbst schreibt, alles andere kann man generieren lassen. Ist es da jetzt auch so oder können diese Dinger dann die Tests auch noch mit generieren, wenn wir dann schon die ganze Spezifikation geschrieben haben?"
+    },
+    {
+      "end": 3443350,
+      "speaker": "A",
+      "start": 3303240,
+      "text": "Das ist eine sehr gute Frage. Zugegeben, weiß ich nicht, ich habe jetzt noch nicht jeden Generator getestet, aber was ich dir sagen kann ist, Testing eines SDKs ist gar nicht so einfach. Natürlich kannst du in der Dokumentation die Response, die oft in der Dokumentation dargestellt ist, kopieren und dann als Mock nehmen. Das ist natürlich perfekt. Und somit kannst du dir in Testing einen eigenen Mock HTTP Server machen und dann dein SEK aufrufen und so weiter und so fort. Du merkst schon, das, was ich vorhin erzählt habe mit der Flexibilität, mit der Caller Injection, da wird das dann auf einmal zu deinem Vorteil, weil wenn du den Caller injecten kannst, dann kannst du dem Caller sagen, retourniere doch bitte dieses Mock Object Das bedeutet, die Flexibilität, die du den Power Usern gibst, kommt dir beim Testing wieder zugute, Aber das sind natürlich dann nur in irgendeiner Art und Weise Unit bzw. Integrationstests. Das Problem ist aber, dass du mit realen Systemen arbeitest, wo auch Software Engineers dran arbeiten, die auch Bugs schippen können und so weiter und so fort. Deswegen ist die machen hier nicht mal Integrationstests. So und jetzt kommt's. Was ist ein Integrationstest bei einem Client SDK? Natürlich arbeitest du da mit einem Stateful System und nehmen wir mal wieder das, nehmen wir mal wieder das Jira Projekt. Das bedeutet, ich möchte jetzt die Funktion Create Issue testen. Ja, im Endeffekt brauche ich dann eine funktionierende Jira Instanz und Jira hat jetzt zum Beispiel On Premise abgeschaltet und kannst du nicht mehr kaufen. Oder vielleicht, wenn du ganz viel Geld auf den Tisch legst, vielleicht schon noch, man weiß es nicht. Auf jeden Fall brauchst du dann Cloud Environment, wo du natürlich jede Nacht oder jeden Test Run ein Ticket erstellst und irgendwann läuft halt das Free Tier aus. Oder wenn du irgendeine Instanz hast, die du on Premise hosten kannst, so ein GitLab oder sowas, dann musst du natürlich auch bei deinem Integrationstest einen Docker Container hochfahren, der muss automatisch konfiguriert werden. Du musst Dummy Data beim Docker hochfahren, beim Container hochfahren mit Inserten, damit du auch schon eine Testbasis hast, damit du nämlich deine Get Request, so Get all pull Request oder Merge Request heißt es ja bei GitLab, Get all merge Request, damit du schon eine Datenbasis hast. Du merkst schon allein dieses Test Setup ist gar nicht so einfach und fordert auch echt viel Ressourcen und eine gute CI und so weiter. Und ich kann dir aus eigener Praxis sagen, das Free Tier bei GitHub Actions ist dann relativ schnell aufgebraucht, aber eigentlich."
+    },
+    {
+      "end": 3486060,
+      "speaker": "B",
+      "start": 3443350,
+      "text": "Wenn man das so holistisch, wie es so schön immer heißt, denkt, hätte man ja damit eigentlich auch schon eine gute Dokumentation. Also wenn du diese ganzen example Beispiele, was eine gute Dokumentation hat, eigentlich auch als Tests hast bzw. Vielleicht so ein komplettes Dataset machst. Wir haben ja damals bei meinem mysql Buch so eine Flughafendatenbank als Testset gehabt und haben dann alles anhand dieses Testsets gemacht. Wenn man sowas auch in Jira hätte, so ein Testset, und da kann man dann alles aufrufen und in der Dokumentation sind dann auch noch schön diese Examples hinterlegt, die man dann auch aufrufen kann. Das wäre ja holistisch eigentlich das Perfekte, was man sich so als Entwickler in eigentlich erwartet. Die perfekte Experience."
+    },
+    {
+      "end": 3492380,
+      "speaker": "A",
+      "start": 3486380,
+      "text": "Ein hundert Prozent würde ich sofort unterschreiben. Nur da ist jetzt gerade die Frage, kennst du den Begriff Yak Shaving?"
+    },
+    {
+      "end": 3493100,
+      "speaker": "B",
+      "start": 3492380,
+      "text": "Ja, natürlich."
+    },
+    {
+      "end": 3497340,
+      "speaker": "A",
+      "start": 3493420,
+      "text": "Was sagt Yak Shaving, damit du das für die Hörerschaft mal erklärst."
+    },
+    {
+      "end": 3519120,
+      "speaker": "B",
+      "start": 3497420,
+      "text": "Ich kann es dir an einem Beispiel erklären. Du hast ja jetzt gerade kürzlich unsere API verwendet bei Open Podcast, für alle, die nicht wissen, was das ist, einfach eine Episode zurückspringen und eigentlich hättest du einfach in deinem Go Code einen simplen getcall machen können und jetzt hast du ein ganzes SDK geschrieben, weil du immer weiter runter bist, es umfangreicher gemacht hast und tiefer gegangen bist."
+    },
+    {
+      "end": 3542710,
+      "speaker": "A",
+      "start": 3519120,
+      "text": "Das ist ja genau, man entwickelt eine Sache und dann denkt man, das wäre cool und dann geht man immer weiter tiefer, bis man sich um eine Sache kümmert, die gar nicht mehr dein Hauptproblem ist. Und das, was du gerade mit der Dokumentation beschreibt und das mit dem Integration Test und so weiter, geht so ein bisschen in die Richtung, ja, die Tests aus deinen Integrationstests, dass du die dann automatisch in die Dokumentation merge und blablabla, mega geil. Ich würde dafür fast sogar Geld bezahlen, würde ich sagen."
+    },
+    {
+      "end": 3550390,
+      "speaker": "B",
+      "start": 3543510,
+      "text": "Aber das ist der Unterschied, warum dann Stripe eben zwanzig Prozent des weltweiten Geldtransfers im E Commerce hat."
+    },
+    {
+      "end": 3592930,
+      "speaker": "A",
+      "start": 3550390,
+      "text": "Ja, vielleicht. Und sei denen auch gegönnt. Und das ist nämlich genau die Komplexität bei der ganzen Thematik. Du sagst gerade, nicht nur Integrationstesting von Stateful Systemen ist unglaublich schwierig, sondern auch die Dokumentation. Und eins der Best Practice, die ich wirklich mitgeben kann, packt in den Quellcode, in das Repository einen Folder, also einen Ordner, der nennt sich Examples. Und da packt ihr wirklich Beispiele rein, da packt ihr Running Code rein, wie man dieses Client SDK nutzt für die Authentifizierung, um ein Ticket zu erstellen und so weiter und so fort. Klassische Endpunkte. Und ihr glaubt gar nicht, wie sehr das die Adoption eures SDKs fördert. Das ist unglaublich, denn die Leute gucken da rein, Examples klicken, machen Copy Paste und gehen einfach weiter."
+    },
+    {
+      "end": 3604170,
+      "speaker": "B",
+      "start": 3592930,
+      "text": "Bringen wir mal kurz auf die User Seite, weil gesagt, das ist zwar die beste Developer Experience, die man haben kann, aber gibt es auch irgendeine Situation, wo es keinen Sinn macht ein SDK zu verwenden."
+    },
+    {
+      "end": 3668100,
+      "speaker": "A",
+      "start": 3604330,
+      "text": "Ah ja, natürlich. Also im Endeffekt würde ich sagen, wenn du wirklich nur einen API Call machen musst oder einen oder vielleicht zwei und wenn er vielleicht sogar noch ohne Authentifizierung ist, so anonym, weil dann brauchst du dir nicht so ein bloated SDKs reinholen. Ich meine speziell in der Zeit von Supply Chain Attacken und Co. Ist jedes Update auch ein potenzielles Risiko und und das muss natürlich auch alles kompiliert werden und pipapo. Deswegen, es gibt Fälle, da kannst du dir einfach Teile aus dem SEK kopieren und dann bei dir rübernehmen, anstatt die Dependency reinzuholen. Zum Beispiel habe ich vorhin den Alert Manager von Prometheus erwähnt, der macht das zum Beispiel, der hat nicht Go Gyro verwendet, der hat sich einfach Quellcode von uns kopiert und leicht angepasst. Und woher weiß ich das? Weil der genau dieselben Dependencies hat, Weil ich nutze eine Dependency, die sehr, ich sag mal, sehr sichtbar, sichtbar und dann merkt man sofort, okay, dieser Code was kopiert, das ist völlig okay, das ist super. Also ich freue mich, wenn wir, wenn wir Leute inspirieren können. Das ist halt so, wenn du wirklich nicht viel von der API nutzt und wenn die API nicht kompliziert ist."
+    },
+    {
+      "end": 3692790,
+      "speaker": "B",
+      "start": 3668180,
+      "text": "Ich hatte auch gerade kürzlich den Case, habe mir ein SDK angesehen und das Ding war einfach so umfangreich, obwohl ich nur eine API ansprechen wollte und alleine die Definition der ganzen Parameter war so komplex und bei mir waren die alle fix, haben sich nie geändert und das war einfach ein Get Request. Und sowas macht man natürlich einfacher ohne der ganzen Dependency. Da stimme ich dir voll und ganz zu."
+    },
+    {
+      "end": 3704750,
+      "speaker": "A",
+      "start": 3692790,
+      "text": "Ja, es gibt aber auch Fälle, da sagst du, ich mache nur einen API Call, will aber ein SDK haben, wie zum Beispiel, wenn du mit S irgendwie ein Objekt schreiben möchtest, also dem Object Storage, dann musst du deinen Request signieren und solche Thematiken."
+    },
+    {
+      "end": 3721490,
+      "speaker": "B",
+      "start": 3704750,
+      "text": "Alles klar, wenn du auch Error Handling sind wir wieder dabei, aber bei einem simplen Get Request ist es dann schon fraglich und ich sehe das ja auch immer so pragmatisch schnell implementieren. Wenn es dann weitergeht und man doch vielleicht mehr von der API verwendet, kann man immer noch auf das SDK umsteigen. Also das ist ja selten ein Problem."
+    },
+    {
+      "end": 3759310,
+      "speaker": "A",
+      "start": 3721730,
+      "text": "Klar, du hast gesagt, wir gehen mal auf die User Seite. Eine Sache, die die User natürlich auch immer evaluieren, ist das ganze Ding überhaupt noch maintained? Ist das Ding überhaupt nachhaltig. Und da muss ich aus maintainer Seite mal sagen, warum schreibst du dieses SDK und nutzt du dieses SDK eigentlich selber? Also wenn du die Third Party Software, die du gerade anbindest, nicht mehr nutzt, dann kann ich aus eigener Erfahrung sagen, dann veraltet das SDK relativ schnell, denn du hast halt keinen Anwendungsfall mehr. Natürlich kannst du das Open Source weiter treiben, aber irgendwann überholt dich das private Leben oder dein Beruf und so weiter und so fort und liegt das Open Source Projekt. Macht euch da keine schlechten Gedanken. So ist das halt im Open Source Bereich. Nachhaltige Maintenance ist immer ein schwieriges Thema."
+    },
+    {
+      "end": 3776820,
+      "speaker": "B",
+      "start": 3759310,
+      "text": "Und wenn man sich mal die Dependency reingeholt hat und dann irgendwas debuggen muss, das kann natürlich dann sehr aufwendig sein, weil man hat ja keine Ahnung, was dieses SDK macht. Du musst dann wirklich sehr tief gehen. Also das ist halt der Trade auf ganz klassisch, wie es immer ist bei die Binance ist. Aber ich kenne auch sehr viele SDKs, die halt sehr veraltet sind."
+    },
+    {
+      "end": 3785620,
+      "speaker": "A",
+      "start": 3776820,
+      "text": "Ja gut, aber du verschiebst halt nur dein Time Investment, wo du es bei der Implementierung nicht hattest, weil du das SEK reingeholt hast und super schnell warst, verschiebst du das Time Investment später auf Debugging."
+    },
+    {
+      "end": 3791900,
+      "speaker": "B",
+      "start": 3785620,
+      "text": "Ja, ich würde es nicht unterschreiben, dass es eins zu eins dieselbe Zeit ist vom Investment, aber grundsätzlich, du kannst es auch später verschieben, ganz klar."
+    },
+    {
+      "end": 3822690,
+      "speaker": "A",
+      "start": 3791900,
+      "text": "Ich hoffe natürlich, wir haben jetzt die Leute nicht abgeschreckt, keine Client SDKs zu schreiben, denn in manchen Firmen gibt es nämlich auch den professionellen Job als SDK Engineer. Also wer zum Beispiel in einem Produkt arbeitet, was eine API hat oder wo man Infrastruktur steuert, dann gibt es SDKs, nicht nur Sprach SDKs, sondern zum Beispiel, wenn du auch ein Terraform Provider schreibst, dann ist das ja auch eine Form von SDK Development. Und das ist sehr ähnlich zu der Sache, die wir beschrieben haben. Also es gibt Firmen, wo Leute professionell die SDKs bauen."
+    },
+    {
+      "end": 3856890,
+      "speaker": "B",
+      "start": 3822690,
+      "text": "Ich glaube, ich würde sogar umgekehrt sehen, es sollte Menschen viel mehr Open Sourcen, weil es schreibt ja jeder SDKs die ganze Zeit. Also wenn du eine API implementierst, schreibst du ein SDK. Bei uns hat es mit der Apple Spotify Schnittstelle genauso angefangen. Mittlerweile verwenden genug Leute unsere Konnektoren. Wir haben uns auch gedacht, es sind nur ein paar Wrapper eigentlich, die wir da geschrieben haben, aber es wird trotzdem verwendet. Leute freuen sich darüber. Das heißt, wenn man einen Wrapper mal schreibt von einer API, das ganze Open Source, auch wenn es nur ganz billig ist einfach und vielleicht wächst es mit der Zeit und dann hat man für die Open Source Community was gemacht, was."
+    },
+    {
+      "end": 3975850,
+      "speaker": "A",
+      "start": 3856890,
+      "text": "Ich euch mitgeben kann. Ich habe super viel über Code Architektur gelernt, super viel über Library Design, super viel über Use Cases von Leuten, was sie dann mit dem Tool machen. Ich kann es wirklich nur empfehlen. Ist es ab und zu stressig? Ja, ich bin ehrlich, ich bin halt jemand, der lässt sich von sowas auch stressen, wenn du, ich hoffe, du bist halt ein bisschen gelassener, aber zum Thema Klein SDK Development haben wir halt super viel Themen noch gar nicht berührt aus Zeitgründen und natürlich Komplexitätsgründen. Ich habe aber so ein paar Themen, die wir jetzt noch nicht berührt haben, wie zum Beispiel, wie hält man eigentlich die Produktentwicklung und die SDK Entwicklung in einer Firma in Sync? Oder was passiert eigentlich, wenn vorhandene SDKs gerüst werden. Ich hatte vorhin das Beispiel mit S genannt, was in der Regel die Standard API für Object Storage ist, ist bei Open nicht anders. Deepseek oder Olama oder AWS Bedrock sind API kompatibel. Also da könnt ihr das Open SDK nehmen und mit deepseak sprechen, weil die haben einfach die API kopiert. Wir haben nicht darüber gesprochen, wie der Alltag eines SEK Maintainers aussieht, also in Bezug auf Fragen beantworten, Kommunikation mit Usern, dass man up to date mit dem Sprachökosystem bleibt und so weiter und so fort. Wir haben nicht darüber gesprochen, ob LLMs zur Generierung von SDKs verwendet werden können. Wolfgang, jetzt habe ich es auch genannt, das Thema AI, es tut mir leid. Also da gibt es wirklich noch echt viel zu besprechen, auch wenn das Produkt nicht API first ist, wie geht man damit um und so weiter und so fort. Gibt es ja wahrscheinlich viele Rabbit Holes und deswegen möchte ich dich jetzt bitten, einfach mal in die Discord Community zu kommen und mir deine Lieblingsstory eines SDKs zu erzählen und vielleicht auch mal deine Horror Story, eine Sache, die dich richtig ärgert, die dir im Gewissen geblieben ist, da wo du vielleicht ein SDK genutzt hast, gedacht hast, hier spart das super viel Arbeit, Arbeit und im Endeffekt hast du drei Wochen verbrannt, weil da ein Bug ist und der Mithänger, den nicht."
+    },
+    {
+      "end": 3981770,
+      "speaker": "B",
+      "start": 3975850,
+      "text": "Gefixt hat, wie du jetzt gesagt hast, ich will von dir wissen, habe ich gedacht, du redest mit mir, aber du redest natürlich wieder nur mit unseren Hörer innen."
+    },
+    {
+      "end": 3989050,
+      "speaker": "A",
+      "start": 3981770,
+      "text": "Wolfgang, ich hatte jetzt gerade hier eine Stunde und fünfzehn nur Augen für dich. Deswegen möchte ich mich jetzt auch gerne an die Community Mitglieder wenden."
+    },
+    {
+      "end": 4010000,
+      "speaker": "B",
+      "start": 3990410,
+      "text": "Dann vielen Dank, Andy, für deine Einsichten in dein doch sehr hartes Client SDK Entwicklerleben und du bekommst von mir jetzt ein bisschen Mitleid für das, dass du so viele Anfragen und Issues bekommst und auch ein kleines Dankeschön für den Nvidia Kurs nochmal. Bist du investiert über irgendwelche etfs? Sicherlich, ja."
+    },
+    {
+      "end": 4042170,
+      "speaker": "A",
+      "start": 4011680,
+      "text": "Wie bin ich mit den vielen E Mails umgegangen? Relativ einfach. Viel habe ich davon gelöscht. In der Hoffnung habe ich eine Nacht drüber geschlafen und am nächsten Morgen habe ich schon wieder vergessen, also aus den Augen, aus dem Sinn. Aber irgendwann hatte ich dann doch mal zwei, drei Stunden, habe ich gedacht, ach komm, aber im Endeffekt stelle ich mir oft die Warum soll ich jetzt Zeit investieren, um so großen Firmen zu helfen? Weiß ich auch nicht. Naja, wenn mir wer diese doch schon sehr tiefgründige und psychologische Frage beantworten kann, da bitte ich mal um eine Therapiesitzung. Das war's von uns, wir hören uns nächste Woche. Bye bye, ciao."
+    },
+    {
+      "end": 4057650,
+      "speaker": "B",
+      "start": 4044250,
+      "text": "Und als kleiner Tipp von mir noch ganz nachgelegt, Episode ein hundert fünf und siebzig haben wir Open Source Geschichte geschrieben. Also wenn sie nicht geschrieben, wir haben sie eigentlich gelesen sozusagen. Gerne mal da reinhören, wenn ihr euch für Open Source interessiert. Und jetzt endgültig."
+    },
+    {
+      "end": 4058130,
+      "speaker": "A",
+      "start": 4057650,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
