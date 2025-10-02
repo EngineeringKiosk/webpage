@@ -168,5 +168,5 @@ export const collections = {
 	blog: blogEntryCollection,
 	meetup: meetupCollection,
 	germantechpodcasts: germantechpodcastsCollection,
-	"awesome-software-engineering-games": awesomeSoftwareEngineeringGamesCollection,
+	'awesome-software-engineering-games': awesomeSoftwareEngineeringGamesCollection,
 };
