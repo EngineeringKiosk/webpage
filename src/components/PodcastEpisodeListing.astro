@@ -7,13 +7,19 @@ export interface Props {
 	// When entered a number, it is the episode number
 	// As string, only "latest" is supported for now - Which represents the top episode
 	episodes: Array<string|number>;
+
+	headline?: string;
+
+	description?: string;
+
+	showAllButton?: boolean;
 }
 
 import { getCollection } from "astro:content";
 
 import PodcastEpisodePreview from '../components/PodcastEpisodePreview.astro';
 
-const { numberOfItems, episodes } = Astro.props;
+const { numberOfItems, episodes, headline, description, showAllButton } = Astro.props;
 
 // Build the list of Podcast Episodes
 let allEpisodes = await getCollection("podcast");
@@ -21,16 +27,14 @@ allEpisodes.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.
 
 // Default wise list all items, only limit it if requested
 let episodesToShow = allEpisodes;
-let showAllButton = false;
-let headline = 'Alle Podcast Episoden vom Engineering Kiosk';
 let mainPage = true;
 let descriptionChars = 300;
 
+let listingDescription = description || 'Jeden Dienstag gibt es eine neue Episode aus dem Kiosk rund um die Themen Engineering-Kultur, Open Source, Menschen, Technologie und verwandtes. Überall da wo es Podcasts gibt.';
+
 // if episodes are filtered
 if (episodes) {
-	headline = 'Ausgewählte Podcast Episoden für dich';
 	mainPage = false;
-	showAllButton = true;
 	episodesToShow = [];
 	descriptionChars = -1;
 
@@ -43,7 +47,7 @@ if (episodes) {
 
 	// add all remaining episodes, keep the order and prevent duplicates
 	episodes.forEach((ep) => {
-		const episodeToAdd = allEpisodes.find((episode) => episode.slug.includes(ep));
+		const episodeToAdd = allEpisodes.find((episode) => episode.slug.includes(ep) || episode.data.title.includes(ep));
 		if (episodeToAdd && !episodesToShow.includes(episodeToAdd)) {
 			episodesToShow.push(episodeToAdd);
 		}
@@ -51,12 +55,11 @@ if (episodes) {
 
 } else {
 	if (numberOfItems && numberOfItems > 0) {
-		headline = 'Die aktuellsten Podcast Episoden';
 		mainPage = false;
 		episodesToShow = allEpisodes.slice(0, numberOfItems);
-		showAllButton = true;
 	}
 }
+
 ---
 
 <section class="py-8 md:py-16 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-repeat: no-repeat; background-position: center top;">
@@ -66,7 +69,7 @@ if (episodes) {
 				<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Podcast</span>
 				{mainPage && <h1 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tighter">{headline}</h1>}
 				{!mainPage && <h2 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tighter">{headline}</h2>}
-				<p class="text-lg md:text-xl text-coolGray-500 font-medium">Jeden Dienstag gibt es eine neue Episode aus dem Kiosk rund um die Themen Engineering-Kultur, Open Source, Menschen, Technologie und verwandtes. Überall da wo es Podcasts gibt.</p>
+				<p class="text-lg md:text-xl text-coolGray-500 font-medium">{listingDescription}</p>
 			</div>
 			{
 				showAllButton && (
