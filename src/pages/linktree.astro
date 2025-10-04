@@ -5,6 +5,8 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 
+import bestOfEpisodes from '../data/episodes-best-of.json';
+
 // Header image
 import headerImageAndyWolfiLounge from "../images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg";
 
@@ -24,18 +26,16 @@ const platforms = [
 	{ "name": "RSS", "image": "/images/brands/rss.svg", "href": podcastInfo.platformLinks.rss },
 ]
 
-// List of Slugs of episodes we want to show on this linktree site
-const episodesToShow = [
-	"latest-2",
-	"131-equity-in-tech-startups-mehr-als-nur-gehalt-mit-philipp-pip-klöckner",
-	"106-ci-continuous-integration-in-der-praxis-mit-michael-lihs-von-thoughtworks",
-	"95-effiziente-knowledge-sharing-formate-wissen-teilen-und-begeistern",
-	"94-die-realität-des-freelancings-zwischen-selbstbestimmung-und-unsicherheit-mit-index-out-of-bounds",
-	"51-was-ist-das-staff-engineer-level",
-	"127-imposter-syndrom-peter-prinzip-mit-dr-fanny-jimenez",
-	"46-welches-problem-löst-docker",
-	"28-o1-olog-n-on2-ist-die-komplexität-von-algorithmen-im-entwickler-alltag-relevant"
+const bestPerformingEpisodes = [
+  ...bestOfEpisodes
+    .sort((a, b) => a.rank - b.rank) 	// Sort by rank
+    .map(item => item.title)         	// Only get the titles
 ];
+
+const latestEpisodes = [
+	"latest-3"
+];
+
 ---
 
 <html lang="de">
@@ -66,7 +66,9 @@ const episodesToShow = [
 				
 			</section>	
 
-			<PodcastEpisodeListing episodes={episodesToShow} />
+			<PodcastEpisodeListing episodes={bestPerformingEpisodes} showAllButton={true} headline="Unsere Best-Of Episoden" description="Neu hier? Unsere Best-Of-Episoden sind der perfekte Einstieg in den Engineering Kiosk – spannende Gespräche über Menschen, Technologie und Engineering-Kultur." />
+
+			<PodcastEpisodeListing episodes={latestEpisodes} showAllButton={false} headline="Unsere drei aktuellsten Episoden" description="Direkt aus dem Studio – die drei aktuellsten Folgen über Software, Teams & Technik, die du nicht verpassen solltest! Jeden Dienstag neu. Überall da wo es Podcasts gibt." />
 
 			<Footer />
 		</div>
