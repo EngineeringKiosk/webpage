@@ -48,7 +48,12 @@ const nameId = URLify(game.data.name);
 							<li class="pb-4">Programmierbar? Ja 🤖</li>
 						)
 					}
-					<li class="space-x-3">Verfügbar auf: {game.data.platforms.windows && (<img class="w-7 inline" src="/images/brands/windows.svg" alt={`${game.data.name} auf Windows`} title={`${game.data.name} auf Windows`} />)} {game.data.platforms.mac && (<img class="w-7 inline" src="/images/brands/apple-os.svg" alt={`${game.data.name} auf Mac`} title={`${game.data.name} auf Mac`} />)} {game.data.platforms.linux && (<img class="w-7 inline" src="/images/brands/linux.svg" alt={`${game.data.name} auf Linux`} title={`${game.data.name} auf Linux`} />)}</li>
+					<li class="space-x-2">Verfügbar auf:
+						{game.data.platforms.windows &&
+						(<img class="h-7 inline" src="/images/brands/windows.svg" alt={`${game.data.name} auf Windows`} title={`${game.data.name} auf Windows`} />)}
+						{game.data.platforms.mac && (<img class="h-7 inline" src="/images/brands/apple-os.svg" alt={`${game.data.name} auf Mac`} title={`${game.data.name} auf Mac`} />)}
+						{game.data.platforms.linux && (<img class="h-7 inline" src="/images/brands/linux.svg" alt={`${game.data.name} auf Linux`} title={`${game.data.name} auf Linux`} />)}
+					</li>
 				</ul>
 				
 				<div class="flex flex-wrap">
