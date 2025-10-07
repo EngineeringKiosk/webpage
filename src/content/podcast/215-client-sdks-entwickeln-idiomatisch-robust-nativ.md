@@ -85,8 +85,8 @@ tags:
 - Open Source
 - Software Engineering
 - Tech Kultur
-title: "#215 Client SDKs entwickeln: Idiomatisch, robust, nativ"
-transcript_slim: ""
+title: '#215 Client SDKs entwickeln: Idiomatisch, robust, nativ'
+transcript_slim: src/data/transcripts/215-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SGj7eaMOmLc
 
 ---
