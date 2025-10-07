@@ -80,11 +80,16 @@ length_second: 4120
 pubDate: 2025-10-07 01:00:55+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/433LzuXJsYQmspvMiAW3xj
-tags: []
-title: '#216 Konsistenz und Isolation: von Write Skew bis Dirty Reads'
-transcript_slim: ''
+tags:
+- Datenbanken
+- Software Engineering
+- Engineering Kiosk
+title: "#216 Konsistenz und Isolation: von Write Skew bis Dirty Reads"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=Iz8POuByO9Q
 
 ---

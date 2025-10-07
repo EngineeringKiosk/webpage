@@ -1,0 +1,734 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4061,
+  "audio_url": "https://cloud.inlupus.at/s/Axd9JG28NAAGJSy/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95700043,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "781aedac-b7ee-43b6-b654-43cad522d78d",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 81570,
+      "speaker": "A",
+      "start": 3120,
+      "text": "Episode zwei hundert sechzehn vom Engineering Kiosk Podcast. Wolfgang, einer der Co Hosts von diesem Podcast, hat lange Zeit in der Forschungsgruppe für Datenbanken und Informationssysteme an der Uni Innsbruck verbracht. In dieser Episode zapfen wir sein Datenbankwissen an und sprechen über Konsistenzmodelle, also darüber, warum deine Daten manchmal ein bisschen, naja, unehrlich sind. Von Dirty Reads über Right Skews bis Phantom Reads. Wir klären, was das für Phänomene sind, warum die Arbeit mit Transaktionen nicht immer ganz so einfach ist, welche Isolationslevel eine Datenbank eigentlich zur Verfügung stellt und warum du dir doch mehr Gedanken darüber machen solltest, als dir eigentlich lieb ist. Klingt kompliziert, keine Sorge. Wir bringen in der nächsten Stunde etwas Ordnung ins Chaos der Buzzwords, also Kopfhörer auf Transaktion starten und Comment nicht vergessen. Los geht's. Das heutige Thema ist so ein bisschen trocken. In vielen Blogposts sind für dieses Thema auch echt viele Zeichnungen mit ganz vielen Pfeilen und so. Deswegen haben wir uns mal besonderen Herausforderungen gestellt und sagen, okay, wir versuchen dieses komplexe Thema doch mal auf die Audio Only Spur zu kriegen. Und falls du gesagt hast, boah, gestern schon wieder drei Wein zu viel getrunken."
+    },
+    {
+      "end": 85410,
+      "speaker": "B",
+      "start": 81970,
+      "text": "Mein Schädel ist das perfekte Thema, wolltest du jetzt sagen, oder?"
+    },
+    {
+      "end": 90330,
+      "speaker": "A",
+      "start": 85570,
+      "text": "Genau, weiß ich nicht, ob genau dieses Thema das Thema ist, was du dir jetzt anhören wolltest."
+    },
+    {
+      "end": 95950,
+      "speaker": "B",
+      "start": 90330,
+      "text": "Weißt du, wie oft ich mich schon über Transaktionen unterhalten habe bei einem Bier? Das ist mein ganzes Leben."
+    },
+    {
+      "end": 125490,
+      "speaker": "A",
+      "start": 96030,
+      "text": "Bei einem Bier denkst du ja auch, du hast öfter recht, aber wenn du am nächsten Tag merkst, dass du vielleicht zu viele Bier hattest, weiß ich nicht, ob ich eine Podcast Episode zum Thema Transaktionen und Co. Hören möchte. Deswegen habe ich mir ganz klar gedacht, wir müssen mal ein bisschen locker hier rein starten, bevor wir hier mit dem harten Kram kommen. Deswegen habe ich natürlich mal wieder drei Flachwitze rausgesucht und Achtung, nach dieser Episode habe ich zum Ende noch zwei Flachwitze, die man aber erst versteht, wenn man die Episode gehört hat. Also fange ich mal an."
+    },
+    {
+      "end": 128250,
+      "speaker": "B",
+      "start": 125490,
+      "text": "Ich bin gespannt. Ich gehe mal einen Kaffee holen in der Zwischenzeit."
+    },
+    {
+      "end": 132010,
+      "speaker": "A",
+      "start": 128250,
+      "text": "Ich wollte meiner Datenbank ein Geheimnis erzählen, aber sie hat es sofort repliziert."
+    },
+    {
+      "end": 137490,
+      "speaker": "B",
+      "start": 132410,
+      "text": "OK, Wolfgang grinst ist gar nicht so schlecht. Er ist gar nicht so schlecht. OK, fangen wir mal an."
+    },
+    {
+      "end": 138170,
+      "speaker": "A",
+      "start": 137490,
+      "text": "Weiter geht's."
+    },
+    {
+      "end": 139970,
+      "speaker": "B",
+      "start": 138170,
+      "text": "Hast du die eigentlich immer aus dem Englischen übersetzt?"
+    },
+    {
+      "end": 191370,
+      "speaker": "A",
+      "start": 139970,
+      "text": "Oder das war jetzt chatgpt at its best. Was sagt eine Eventual Consistent Datenbank nach einem Streit? Wir gleichen uns schon irgendwann wieder an. Den fand ich ganz gut. Und jetzt kommt für mich wirklich der Kracher. Zwei Datenbanken, treff sich eine, ich bin konsistent, die andere gib mir ein paar Sekunden. Aber wir sind schon beim Thema Konsistenz, Replikation und so weiter. Doktor Halbprofessor Wolfgang Gassler, erklär mir doch mal bitte, was das Wort Konsistenz eigentlich bedeutet. Achtung, ich weiß nicht warum. Als du mir dieses Thema gepitcht hast und als du mir dieses Dokument, diese Vorbereitungsdokumente geschickt hast, damit ich mal gegenlese, muss ich irgendwie an Kontinenz denken und nicht an Konsistenz. Es ist was anderes. Darüber sprechen wir heute nicht."
+    },
+    {
+      "end": 196970,
+      "speaker": "B",
+      "start": 191610,
+      "text": "Du hattest, glaube ich, mal in irgendeiner Episode das falsch gesagt. Ihr habt es schon mal rausgeschnitten, wenn ihr das richtig im Kopf habt."
+    },
+    {
+      "end": 206410,
+      "speaker": "A",
+      "start": 196970,
+      "text": "Also fangen wir an, springen direkt rein. Was bedeutet eigentlich Konsistenz? Ist das der Aggregatszustand meines Puddings oder was ist es?"
+    },
+    {
+      "end": 219270,
+      "speaker": "B",
+      "start": 206410,
+      "text": "Ja, es kommt schon mal grundsätzlich darauf an, in was für einem Umfeld man sich bewegt und die Konsistenz definieren will, beziehungsweise auch die Inkonsistenz, nicht Inkontinenz, Das ist auch ein Verschreiber, den man sehr gerne hat."
+    },
+    {
+      "end": 228870,
+      "speaker": "A",
+      "start": 219350,
+      "text": "Das Problem ist, die grammatikalische Korrektur von deinem Google Docs kann ja auch, also die macht ja da nichts, weil es könnte ja auch korrekt sein, dieses Inkontinenz."
+    },
+    {
+      "end": 342870,
+      "speaker": "B",
+      "start": 229030,
+      "text": "Also man sieht schon auf der Audiospur sehr, sehr schwierig. Aber es gibt grundsätzlich mal Datenbanken, wo man das eigentlich immer so hört, die Konsistenzmodelle und eventual consistency, hast du ja schon gesagt, war ja mal dann das große Schlagwort bei den nosql Datenbanken. Aber es betrifft eigentlich nicht nur Datenbanken, sondern ganz allgemein parallele Systeme, Also ein System, wo parallel mehrere User darauf zugreifen und in verteilten Systemen, also wo mehrere Nodes miteinander sprechen und die Daten verteilen, dort gibt es natürlich diese Konsistenzmodelle und die Konsistenz an sich genauso. Also es kommt darauf an, in was für einem Bereich man sich bewegt. Und da unterscheidet sich dann der Begriff leicht. Wenn wir jetzt mal beim einfachsten starten Datenbanken, dann bedeutet das im Datenbanksinn auch, dass C in Assets, also Consistency, dass die Datenbank sich immer, und zwar immer, immer in einem gültigen Zustand befindet. Das heißt, wenn es zum Beispiel Fremdschlüssel Beziehungen gibt, also ich habe einen User und eine Rechnung dazu, dann kann es nie eine Rechnung geben ohne dem User, ohne dem Kunden zum Beispiel. Also diese Konsistenz, dass wenn was verlinkt ist zwischen zwei Tabellen eine Relation da ist, dann existieren diese Einträge zum Beispiel auch immer. Oder in den cooleren Datenbanken, mysql kann das leider immer noch nicht, kann man so Check Kriterien definieren, also gewisses Format muss immer gültig sein oder es muss gewisse Einträge in der zweiten Tabelle geben. Beispielsweise wenn man eine Rechnung schreibt, dann braucht man den Kunden, aber man braucht vielleicht auch irgendwelche Verträge, die schon unterschrieben worden sind. Dann kann man mit so Check Klauseln überprüfen, ist da ein Vertragseintrag, wurde der Vertrag A und B und C schon unterschrieben und erst dann darf ich eine Rechnung stellen zum Beispiel. Also das wird dort alles drinnen abgebildet und jedes Mal, wenn ich auf die Datenbank drauf blicke, ist es konsistent und ich kann keinen Fehler, keinen logischen Fehler in meinen Daten finden."
+    },
+    {
+      "end": 372210,
+      "speaker": "A",
+      "start": 342870,
+      "text": "Eine Zeit Frage damals in meinem Studium habe ich gelernt, wenn es geht, verlagere so viel Logik wie möglich in die Datenbank. Irgendwann später in der Praxis habe ich gemerkt, vielleicht ist das gar nicht so geil und jetzt kommst du an und sagst, solche Check Constraints kann man machen und so weiter und so fort. Und da frage ich mich gerade, ist es überhaupt klug, diese Check Constraints in der Datenbank zu haben oder sollte man die nicht lieber im Application Code haben? Wie ist da deine Meinung? Oder sind wir gerade auf Applikationen, die als PSQL in einer Oracle Datenbank laufen oder in einer msql oder ähnliches?"
+    },
+    {
+      "end": 513970,
+      "speaker": "B",
+      "start": 432370,
+      "text": "Das ist ja noch schlimmer. Aber ich bin da auch ein bisschen zwiegespalten, ab was für einem Zeitpunkt man eher in die Business Logik gehen sollte und wie lange man in der Datenbank bleiben kann. Man könnte dann ja auch Trigger oder solche Dinge noch definieren in der Datenbank. Meine Herangehensweise ist eigentlich immer, wenn die Datenbank gewisse Checks anbietet und meine Checks sehr grundlegend sind und die sehr einfach abbildbar sind. Das heißt, wenn ich jetzt eine Businesslogik habe, die sehr starr ist und sich selten ändert, die würde in der Datenbank ablegen. Wenn ihr jetzt natürlich Businesslogik habt, die sich so irgendwie im Wochentakt ändert, die würde auf jeden Fall in den Code reinsetzen. Also wenn da gewisse Verträge sich ändern, die die Kunden unterschreiben müssen und es gibt hunderte Versionen und hunderte Arten von Kunden, das würde dann irgendwie anders abgeb bilden. Aber wenn es darum geht, ein Format zu checken, zum Beispiel, dass etwas immer eine gewisse Regex zum Beispiel erfüllt oder ganz klassisch, dass keine Nullwerte drin sind. Diese ganzen Dinge, die würde ich natürlich schon auf jeden Fall in der Datenbank haben wollen, weil wenn du im Code ein Problem hast, wenn du ein Bug hast, dann hast du das immer noch in der Datenbank und die Datenbank bringt dir dann Fehler zurück. Also diese Dinge machen schon absolut Sinn in der Datenbank. Sobald es irgendwie ein Statement ist, ein if Statement oder sowas, was über fünf Zeilen geht, würde eher in die klassische Business Logik von Code, von der Applikation eigentlich rüberschieben."
+    },
+    {
+      "end": 533130,
+      "speaker": "A",
+      "start": 514050,
+      "text": "Die Herausforderung, die ich immer entdecke, wenn du Code in die Datenbank verschiebst, ist die Sichtbarkeit des Codes. Denn als Softwareentwickler und Softwareentwicklerin programmierst du da was und machst ein Insert Statement und auf Basis Insert Statements geht dann irgendeine Logik in der Datenbank los und die ist halt nicht sichtbar für dich und das kann halt dann ab und zu schlimme Konsequenzen haben."
+    },
+    {
+      "end": 563150,
+      "speaker": "B",
+      "start": 533130,
+      "text": "Ein anderer Punkt, wo es aber auch ganz wichtig ist, ist, wenn du unterschiedliche Applikationen hast, die auf dieselbe Datenbank zugreifen, auf dieselben Daten, weil dann ist natürlich die Datenbank deine Zentra Schnittstelle und die prüft dann, ob die Daten korrekt sind. Also kommt ja doch oft vor, dass irgendwie vor allem in gewachsenen Systemen, in großen Firmen greifen dann acht Applikationen auf dieselben Daten zu, auf dieselben Tabellen und dann ist es natürlich schon gut, wenn du auf der Tabellenseite diese Checks und die Constraints, Regeln, Invarianten, die immer stimmen müssen, einfach definieren kannst."
+    },
+    {
+      "end": 577820,
+      "speaker": "A",
+      "start": 563150,
+      "text": "Ja, aber Leute, die diesen Podcast ja schon länger hören, die machen das ja nicht. Also von daher, wie war das mit Legacy, verdient das Geld, Irgendwer muss die Miete zahlen. Lass uns zurück zum Begriff Konsistenz. Du hattest mir den Begriff jetzt im Kontext von Datenbanken erklärt. Wie sieht es denn bei verteilten Systemen."
+    },
+    {
+      "end": 694320,
+      "speaker": "B",
+      "start": 577820,
+      "text": "Aus, zum Beispiel bei verteilten Systemen oder man kann verteilte Datenbanken jetzt als Beispiel natürlich nehmen, aber es gilt ganz allgemein, ihr habt mehrere Knoten, mehrere Server, die in irgendeiner Form miteinander kommunizieren. Kann im selben Datacenter sein, kann weltweit verteilt sein. Gibt es natürlich alle Varianten. Da spricht man eigentlich von Konsistenz immer davon, dass die verschiedenen Knoten in meinem verteilten System den gleichen Zustand haben. Das heißt, die sind untereinander konsistent. Natürlich, die Datenbanken in sich sollten natürlich auch konsistent sein und wenn diese Check Kriterien natürlich gecheckt werden in der Datenbank, sollte das stimmen. Aber da spricht man bei Konsistenz immer davon, dass alle Knoten dieselben Daten haben. Und wenn du jetzt auf deinem ersten Server eine Select Abfrage startest, dann solltest du dieselben Ergebnisse bekommen, wie wenn du auf einen anderen Server kommst. Also wenn du auf dem amerikanischen Server kommst, bekommst du dieselben Kunden zurückgeliefert, wie wenn du in Deutschland auf deine Datenbank zugreifst und die Kunden abfräst. Und da kommt dann auch dieses Eventual Consistency ins Spiel, das man bei nosql und ganz oft auch ganz allgemein bei verteilten Datenbanken natürlich hat, dass man sagt, die Knoten haben nicht zu jeder Zeit den gleichen Stand, sondern irgendwann mal in der Zukunft. Also von deinem Flachwitz, gib mir mal eine Zeit, bis ich dann synchron bin. Das ist eventual consistency. Und man kann sich das vorstellen, wenn man jetzt zehn Server über die Welt verteilt hat, einer steht in Amerika, einer in Asien, einer in Deutschland, dann ist es natürlich schwierig zu garantieren, dass zu jedem Zeitpunkt, egal wann alle dieselben Daten haben. Das kann man natürlich schon garantieren, aber dann dauert natürlich jedes Mal, wenn irgendwelche Daten ändert, dauert es sehr lange, weil alle Knoten abgeglichen werden müssen. Und erst wenn alle Knoten gesagt ja, ich habe geschrieben, bei mir sind die Daten, dann muss man wieder ein Handshake machen danach, bis alle Daten überall verfügbar sind und auch sichtbar gemacht werden. Und das ist natürlich super kompliziert und darum macht man das bei nosql Daten eben seltener oder ganz allgemein. Also nosql im Sinne jetzt von verteilten Datenbanken."
+    },
+    {
+      "end": 700640,
+      "speaker": "A",
+      "start": 694320,
+      "text": "Inzwischen kommen ja wieder die Blogposts hoch, dass es nosql den Begriff gar nicht gibt oder dass der Hype wieder abgeflacht ist und so weiter."
+    },
+    {
+      "end": 728500,
+      "speaker": "B",
+      "start": 700640,
+      "text": "Das haben wir, glaube ich, in unserer Episode auch damals schon erwähnt. Dass nosql ja durchaus jetzt im Abflachen ist und es hat vielleicht auch so einen negativen Beigeschmack irgendwie dieses nosql, dass das so eine dumme Datenbank ist. Und ich glaube darum, auch wenn es so eine Document Based Database ist, nennt man sie lieber Document Base oder irgendwie weltweit verteilte Document Based Database, anstatt nosql zu sagen. Habe übrigens gerade nachgeschaut, unsere nosql Episode ist doch schon eine Zeit her, war die Episode zwei und zwanzig Good Old."
+    },
+    {
+      "end": 743320,
+      "speaker": "A",
+      "start": 728500,
+      "text": "Times und dann hast du initial auch noch von parallelen Systemen gesprochen. Was sind parallele Systeme und wo ist der Unterschied zu verteilten Systemen und warum sollte da Konsistenz anders behandelt werden bzw. Warum bedeutet Konsistenz was bei parallelen System anders?"
+    },
+    {
+      "end": 802500,
+      "speaker": "B",
+      "start": 743320,
+      "text": "Also ich habe die Datenbanken schon erklärt. Ich würde sagen, Datenbanken sind eine Untergruppe von parallelen Systemen. Also paralleles System heißt einfach, dass ich mehrere User habe. Ich habe diese ganze Problematik mit Race Conditions, mit paralleler Ausführung, die Leute lesen, schreiben parallel in ihren Connections auf denselben Datenbestand und Datenbank ist da natürlich eine spezielle Form dafür. Aber ich kann natürlich auch ein System haben, was einfach in den Hauptspeicher irgendwas reinschreibt oder eine Applikation. Da habe ich natürlich dasselbe Problem grundsätzlich, wenn ich, sobald ich mit Daten arbeite und die Race Conditions kennt wahrscheinlich ja eh jeder aus dem Programmieralltag, dass es diese Probleme auch gibt. Und diese Isolationsmodelle, über die wir auch sprechen werden, die gelten natürlich für Datenbanken, aber auch ganz allgemein, wenn ich Programmiere Nebenläufigkeit in meinem System habe, muss ich mir natürlich auch Gedanken machen, wie kann ich meine unterschiedlichen User isolieren, wann zeige ich welche Daten an? Also die Problematik habe ich da genauso."
+    },
+    {
+      "end": 820100,
+      "speaker": "A",
+      "start": 802580,
+      "text": "Herr Professor, hast du mal ein paar praktische Beispiele für mich? Du bist schon wieder in deinem Unimodell hier, in dem du vorne am Pult stehst und wieder irgendwelche Fachbegriffe auf den Slides runterratterst. Gib mir mal Realwelt Beispiele von Konsistenz bzw. Inkonsistenz in ein paar Computersystem."
+    },
+    {
+      "end": 911460,
+      "speaker": "B",
+      "start": 820580,
+      "text": "Also bei parallelen Systemen, wenn man mehrere User hat, die auf dieselbe Datenbank zum Beispiel zugreifen, dann sind es üblicherweise diese Beispiele, wo mehrere User auf denselben Daten operieren. Wenn jetzt die User komplett getrennt sind voneinander, wenn jetzt die, keine Ahnung, jeder spielt ein Online Game für sich im Single Mode, dann spielt jeder für sich die Daten, wenn er abgelegt ist komplett egal. Wenn da drei tausend User oder Spieler am Server sind, ist es komplett egal natürlich, weil die nicht auf dieselben Daten zugreifen. Problematisch wird es erst, wenn man wirklich dieselben Daten in irgendeiner Form braucht oder verwendet. Ganz klassisch bei parallelen Systemen ist natürlich die Bank, weil wenn man einfach Geld transferiert von einem Konto aufs andere, dann muss das natürlich einfach immer konsistent sein. Und es darf nicht sein, dass wenn ich bei Konto A Euro abbuche und bei Konto B Euro dazu buche, dass die irgendwo verloren gehen oder dass der Kontostand nicht stimmt. Das ist bei Transaktionen sowieso immer das klassische System, aber es gibt natürlich auch ganz simple Beispiele, die sind jetzt vielleicht nicht so kritisch, aber wenn natürlich in einem Online Shop irgendwo ein Lagerbestand mit dabei ist, ich bestelle jetzt etwas, sehe das ist lagernd und in der Zwischenzeit hat aber eine andere Transaktion das Ganze bestellt und schnapp mir sozusagen meine Sneakers unterm Arsch weg, dann habe ich natürlich ein Problem und ich bin jetzt vielleicht nicht, verliere jetzt keine ein tausend in dem Sinne wie bei einer Bank, wenn ich eine Transaktion mache, aber ich habe natürlich unzufriedene Kunden und das will man natürlich auch verhindern."
+    },
+    {
+      "end": 913260,
+      "speaker": "A",
+      "start": 911540,
+      "text": "Ein Klassiker, wenn ich Taylor Swift Tickets."
+    },
+    {
+      "end": 915220,
+      "speaker": "B",
+      "start": 913260,
+      "text": "Kaufen möchte, dass die die Sneakers unterm."
+    },
+    {
+      "end": 956810,
+      "speaker": "A",
+      "start": 915220,
+      "text": "Arsch weggerissen werden, ne, die Taylor Swift Tickets. Du hast aber jetzt gerade schon wieder in deiner Uni Erklärung mit etlichen Fachbegriffen um dich geschmissen. Transaktion, Du hast von das C in ACID gesprochen, du hast von nosql gesprochen und von Eventual Consistency und ja, wir haben zu allem bereits eine Episode gemacht. Aber damit man dir jetzt gleich auch mal bei den Isolationsmodellen, die du uns gleich erklären wirst, auch folgen kann, kannst du uns mal ganz kurz einen fünf Minuten Crashkurs in Datenbank Basics geben, Was ist eine Transaktion, was ist Asset und so weiter und so fort. Welche Sachen müssen wir jetzt wissen, um dir gleich folgen zu können?"
+    },
+    {
+      "end": 968270,
+      "speaker": "B",
+      "start": 956810,
+      "text": "Hast du schon mal mit deinem Spielzeug Goder, mit deiner Programmiersprache, hast du da schon mal mit mysql zum Beispiel gesprochen? Habe ich, hast du da auto commit eingeschaltet oder abgeschaltet?"
+    },
+    {
+      "end": 971510,
+      "speaker": "A",
+      "start": 968270,
+      "text": "Ich habe auf Sane Defaults vertraut, dasselbe."
+    },
+    {
+      "end": 1097170,
+      "speaker": "B",
+      "start": 971510,
+      "text": "Habe ich jetzt auch mal gemacht. Ich bin ja nicht so der Python Programmierer, muss man dazu sagen, aber Wir verwenden ja auch hin und wieder an der einen oder anderen Stelle eine Python und ich hatte das Erlebnis jetzt gerade kürzlich, dass wir hatten dann Python Tool, das hat immer nur gelesen aus der Datenbank und alles gut gegangen, war ein altes System und irgendwann hatte ich ein Insert Statement gedacht, okay, ich mache jetzt ein Insert Statement, gar kein Problem. Es war so im Umfeld von Authentifikation mit Keys und so, die rotieren und ich habe da immer Keys verloren, während ich so einen Key rotiert habe. Insert Statement wurde abgefeuert, aber es ist in der Datenbank dann nie aufgetaucht. Ist mir übrigens dann erst im Produktivsystem so richtig aufgefallen, aber das war ein anderes Problem. Und dann habe ich gemerkt, dass bei Python, bei mysql Client autocommit nicht aktiviert ist. Bei allen anderen Programmiersprachen, mit denen ich üblich so arbeite, ist autocommit aktiviert, bei Python nicht. Was hat das jetzt zur Folge? Ich hab im Andi das glaube ich auch mal erzählt, du hast als erstes gefragt, was ist Auto Commit? Das heißt sogar ich als Datenbankler habe dieses Problem da in Python gehabt und zwar ist ein Auto Commit ein automatisches Commit, nachdem man eine Anfrage an die Datenbank schickt und üblicherweise ist es eingeschalten. Das heißt, wenn ich ein Insert Statement mache, dann wird mein Insert Statement an die Datenbank geschickt und wenn das fertig ist, wird noch ein Commit nachgesendet quasi oder gleich mitgesendet. Das sagt der Datenbank, dieses Insert Statement, da kommt jetzt nichts mehr danach. Ich mache jetzt nicht noch fünf andere Inside Statements, die mit dem zu tun haben, sondern das war es jetzt. Du kannst die Daten wirklich abspeichern. Das heißt, in der Datenbank haben wir eigentlich immer Transaktionen, auch wenn wir gar nicht damit arbeiten und die wenigsten arbeiten ja damit, muss man dazu sagen, hat man so Transaktionen, nur wird halt automatisch am Ende ein Commit gefeuert. Wenn man das Commit nicht mitsendet, passiert genau das, Man schickt zwei Insert Statements, die Datenbank sagt, OK, Insert Statement ist fein, aber meld bitte mir, sobald du nichts mehr weiteres schickst, weil dann schreibe ich das wirklich auf die Platte eigentlich. Und genau das hat bei mir gefehlt und darum sind die Daten nie basistiert worden am Ende."
+    },
+    {
+      "end": 1122129,
+      "speaker": "A",
+      "start": 1097170,
+      "text": "Naja, im Normalfall sagt man ja auch am Anfang seines Statements irgendwie Start Transaction oder ähnliches und dann fährt man seine Statements und dann packt man in der Regel ja ein Commit hinter. Ab und zu gibt man sogar noch an, was bei einem On Failure oder bei einem Rollback passieren soll, also wie der Rollback aussieht, wenn man was Spezielles machen möchte. Aber deswegen kann ich schon verstehen, dass das Auto Commit dann vielleicht nicht an oder aus ist."
+    },
+    {
+      "end": 1211400,
+      "speaker": "B",
+      "start": 1122369,
+      "text": "Auf jeden Fall, was man wissen muss, ist, dass man eigentlich auch, wenn man nur eine Anfrage schickt, sei es eine Select Anfrage, eine Inside Anfrage, eigentlich immer eine Transaktion macht. Und eine Transaktion ist eigentlich dafür da, dass man mehrere Statements zusammen kopiert. Das heißt, wenn jetzt wieder im Bankwesen bin und eine Transaktion, da heißt es ja auch Transaktion durchführe, das heißt, ich überweis Geld von meinem Konto A auf Konto B, dann will ich diese ganzen Statements, die da habe ich macht da irgendwie ein Select, wie viel Gold, Gold sag ich schon, ich rede nicht von Andis Konto, sondern von Konto A und Konto B. Also wie viel Geld ist da am Konto? Kann ich da überhaupt drei hundert abziehen? Ist da genug am Konto verfügbar? Was ist da für Kontostand? Dann ließ ich einen zweiten Kontostand, wo ich das Geld hinsenden will, Was ist da oben an Geld? Dann addiere das Ganze und am Ende schreibe die neuen Kontostände ganz easy und das packe ich zusammen in eine Transaktion. Und die Datenbank garantiert mir dann eigentlich eben diesen konsistenten Zustand. Und wenn da mehrere Leute irgendwie Geld transferieren sollten zur selben Sekunde, Millisekunde, dann garantiert mir die Datenbank, dass jede Transaktion in sich konsistent ist, durchläuft. Und wenn ihr am Ende des Commits setzt und die Datenbank mir Thumbs up gibt am Ende, dann weiß ich, dass das alles passt und der Kontostand in Ordnung ist. Und genau dafür sind eigentlich diese Transaktionen, die in der Datenbank immer eigentlich zur Verfügung stehen, aber ganz selten übrigens von Entwicklerinnen auch verwendet werden. Weil wenn ich jetzt die Frage Wie viel Start Transactions hast du in deinem Code üblicherweise? Hast du es überhaupt schon mal verwendet?"
+    },
+    {
+      "end": 1219000,
+      "speaker": "A",
+      "start": 1211640,
+      "text": "Ja, ja, ja. Also ich hatte schon diverse Applikationen, da war das wirklich wichtig, aber in vielen Applikationen spielt das bei mir keine große Rolle."
+    },
+    {
+      "end": 1236010,
+      "speaker": "B",
+      "start": 1219000,
+      "text": "Man muss ja auch sagen, ich verwende es auch relativ selten, also weil bei ganz vielen Dingen braucht man es ehrlich gesagt nicht. Und dann ist auch die Frage, will man das überhaupt, diesen Aufwand in Kauf nehmen oder ist es einfach egal, wenn irgendwo ein Wert nicht ganz genau stimmt. Aber es kommt immer darauf an, in welchem Umfeld man unterwegs ist."
+    },
+    {
+      "end": 1254450,
+      "speaker": "A",
+      "start": 1236010,
+      "text": "Natürlich, ich kann mir gut vorstellen, dass Leute, die bei Krankenkassen arbeiten, also ich hoffe, dass Leute, die bei Krankenkassen arbeiten, sehr viel mit Star Transactions und Co. Arbeiten, genauso wie in irgendwelchen Versicherungen und Co. Falls du in einem solchen Feld arbeitest und du tust es nicht, lass es bitte mich niemals wissen. Danke."
+    },
+    {
+      "end": 1363190,
+      "speaker": "B",
+      "start": 1254850,
+      "text": "Und es wäre ja relativ einfach, das zu verwenden. Also man braucht dann nur eine Transaktion starten und eine Transaktion beenden. Der Rest wird von der Datenbank gemacht. Damit die Datenbank das überhaupt alles machen kann, gibt es eben diese ACID Properties, die man wahrscheinlich schon mal gehört hat. Ist eine Datenbank ACID oder nicht mal? Alle relationalen Datenbanken sind üblicherweise Atomarität, Konsistenz, Isolation und Dauerhaftigkeit. Also das ist das ACID heißt eigentlich nichts anderes. Atomarität heißt, es funktioniert eben alles oder gar nichts. Das heißt, wenn mein Geld überwiesen wird und es hat irgendwo ein Problem, schlägt fehl, dann sollte das Ganze wieder zurückgerollt werden und ich sollte nicht irgendwie das Geld halb überwiesen haben oder auf einem falschen Konto oder mein Konto wurde es abgezogen, am zweiten nicht. Solche Dinge dürfen nicht passieren. Also Atomarität, entweder es funktioniert alles oder gar nichts. Konsistenz haben wir jetzt eh schon durch besprochen, das heißt, es muss immer alles konsistent sein. Die Isolation, die Abgrenzung, die haben wir auch schon ein bisschen so besprochen, dass eben jede Transaktion in sich eigenständig ist und nicht von anderen beeinflusst werden kann. Also wenn zwischendrin noch jemand anderer Geld überweist, soll das nicht meine Geldüberweisung in irgendeiner Form beeinflussen. Das heißt, wenn ich da irgendwo minus drei hundert abziehe von dem Kontostand und in der Zwischenzeit überweist aber irgendwer Geld auf dieses Konto, dann soll da nicht irgendwie ein ungültiger Kontostand sein, dass der womöglich niedriger oder höher ist, als er eigentlich sein sollte. Also es muss wirklich die Transaktion immer isoliert angesehen werden und das D, die Dauerhaftigkeit bedeutet eigentlich, wenn ich mein Commit sende, bei dieser Transaktion ist es garantiert gespeichert, egal ob der Strom ausfällt, egal ob der Server zusammenbricht, egal ob andere User auf der Datenbank sind. Wenn ich das OK bekomme, ist es dauerhaft gespeichert, auch wenn in den nächsten Millisekunden der Strom ausfällt."
+    },
+    {
+      "end": 1401660,
+      "speaker": "A",
+      "start": 1363190,
+      "text": "Und nur zur globalen Einordnung jetzt hier, korrigiere mich bitte, wenn ich da falsch liege, aber fast jede standard relationale Datenbank ist asset kompatibel, wenn du so möchtest. Also ich rede hier von Oracle, von der msql, von der mysql und so weiter und so fort. Aber nosql, als der Hype damals hochkam, hat sich dadurch gefeiert, OK, wir sind, ich sag mal, groß skalierbar und deswegen sind wir in vielen Bereichen nicht asset kompatibel, sondern da kam dann etwas anderes zum Vorschein und das wurde mehr oder weniger Base genannt. Ist das richtig? Also basically available. Ich weiß, dass das eh für eventual consistency steht und dazwischen irgendwas mit State."
+    },
+    {
+      "end": 1529400,
+      "speaker": "B",
+      "start": 1401900,
+      "text": "Also genau, kann man sich auch näher anhören in unserer Episode zwei und zwanzig, wo wir über dieses Acid, Base und so weiter sprechen. Ich habe jetzt auch kürzlich wieder mal gelesen, dass da Eric Brewer, der diesen Begriff erfunden hat, eigentlich auch sagt, das ist eigentlich so ein bisschen, erstens ist er schlecht definiert, zweitens hat er einfach gut geklungen, man wollte halt Acid machen mit was heißt Acid auf Deutsch eigentlich Säure. Genau, also sauer und Base ist halt basisch und irgendwie hat man dann was suchen müssen für diesen Begriff und darum heißt es basically available, soft state, eventual consistent, aber eigentlich ist es nicht so richtig definiert und im Prinzip beschreibt es einfach so diese Welle, die es so mit der nosql Bewegung gegeben hat, dass man eben nicht mehr ein hundert Prozent konsistent ist, sondern eventual consistency hat und da so ein paar Abschwächungen in dem Acid hat, weil wenn du wirklich Acid in dem verteilten System hättest, dann bist du wahrscheinlich sehr, sehr langsam und hast ziemliche Probleme. Da gibt es dann auch noch dieses CAP Theorem, da will ich jetzt gar nicht so ins Detail gehen, haben wir in Episode ein und neunzig besprochen, da gehen wir wirklich tief in das CAP Theorem von verteilten Systemen. Da geht es im Prinzip darum, dass man nicht alle drei Dinge, also das C, das A des P, Consistency, availability oder partition tolerance gleichzeitig haben kann. Also man muss immer eine Seite leicht aufweichen, damit man in einem verteilten System sinnvoll arbeiten kann. Das heißt, man kann nicht Konsistenz garantieren, wenn man gleichzeitig erlaubt, dass der Cluster die verschiedenen Knoten auch mal keine Verbindung mehr miteinander haben können, dass es zum Beispiel zwei Teile in dem Cluster gibt. Weil, kann man sich ja vorstellen, wenn man so eine Split Brain Situation hat, das heißt, man hat zwei Clusterteile, die beide noch funktionieren, aber die können nicht mehr miteinander sprechen, die zwei Teile, dann kann man natürlich auch keine Konsistenz garantieren, weil die eine Seite vom Gehirn, vom Split Brain, hat plötzlich einen anderen State als die andere Seite. Also man kann nicht immer alles garantieren. Und das ist eigentlich dieses KAP Theorem. Das heißt, es ist der ganze Bereich von verteilten Systemen weniger parallele Systeme, sondern wirklich, wenn man über Netzwerk mehrere Knoten hat und die miteinander verbindet."
+    },
+    {
+      "end": 1564900,
+      "speaker": "A",
+      "start": 1529480,
+      "text": "Wer sich ein bisschen mehr mit dem KAP Theorem auseinandersetzen möchte, kann sich auch mal die Folge ein und neunzig vom Engineering Kiosk anhören. Ich glaube, da haben wir eine ganze Stunde darüber gesprochen, mit deutlich mehr Beispielen und auch wie zum Beispiel die ganze Thematik in Kafka und Kassandra gelebt wird, also in realen System. Bei dem Bayes Theorem finde ich immer so den Leitsatz ganz interessant, so merke ich mir das oft lieber irgendwann richtig, als jetzt gar nicht mehr verfügbar. Und das ist halt genau dann das Umgekehrte von deinem Asset, so nach dem Motto, wir sind immer konsistent und blablabla. Es ist sofort richtig."
+    },
+    {
+      "end": 1601680,
+      "speaker": "B",
+      "start": 1564980,
+      "text": "Gerade wenn man in dem Bereich von verteilten Systemen, weltweit verteilten Systemen spricht, also was man heute fast immer hat, wenn man weltweit operiert, dann habe ich halt einfach einen Cluster Node in Amerika stehen und einen in Deutschland zum Beispiel und da habe das automatisch dieses Problem und muss mir irgendwas überlegen, was ist, wenn die Glasfaserleitung über dem Ozean einfach mal gekappt wird oder nicht mehr funktioniert. Was ich machen kann, ich kann sagen, Amerika arbeitet nicht mehr, Deutschland arbeitet nicht mehr und ich warte, bis das Glasfaserkabel wieder mal repariert wurde eine Woche oder ich sag halt, die arbeiten beide noch parallel weiter, aber ihr habt halt dann vielleicht Inkonsistenzen in meinem System und muss dann in irgendeiner Form später aufräumen."
+    },
+    {
+      "end": 1629640,
+      "speaker": "A",
+      "start": 1601680,
+      "text": "Wenn die Glasfaserleitung nach Amerika gekappt wurde und du hast keine Verbindung, würde ich an deiner Stelle nicht über Base oder Kapptheorien oder so nachdenken, sondern eher über deinen Infrastrukturprovider, weil in der Regel liegen da zweifach bis dreifache Redundanzen. Und wenn dein Infrastrukturprovider nicht die Leitungsbetreiber bezahlt, damit er diese Redundanzen nutzen darf, dann würde ich sagen, brauchst du über all das gar nicht nachdenken. Wechsel erstmal den Provider."
+    },
+    {
+      "end": 1631320,
+      "speaker": "B",
+      "start": 1629800,
+      "text": "War das jetzt die Sales Pitch von."
+    },
+    {
+      "end": 1653470,
+      "speaker": "A",
+      "start": 1631320,
+      "text": "Deinem Arbeitgeber oder meines Wissens nach haben wir keine eigenen Unterseekabel, von daher pitche ich da gar nichts. Da musst du dich dann an die großen Hyperscaler, obwohl, ne, ich glaube es gibt gar nicht so viele Firmen, die wirklich die Unterseekabel betreiben. Es gibt zumindest, soviel ich weiß, nur zwei Schiffe oder drei Schiffe, die so Unterseekabel legen können."
+    },
+    {
+      "end": 1657630,
+      "speaker": "B",
+      "start": 1653550,
+      "text": "Google und Facebook haben auf jeden Fall sehr viele Unterseekabel meines Wissens."
+    },
+    {
+      "end": 1667150,
+      "speaker": "A",
+      "start": 1657870,
+      "text": "Die fangen jetzt an, ich glaube Meta fängt jetzt an neue zu legen oder sowas, Der Rest ist ziemlich gemietet, aber da müssen wir auch mal eine Episode drüber machen, wie die Kabel eigentlich verteilt sind und allem drum."
+    },
+    {
+      "end": 1672080,
+      "speaker": "B",
+      "start": 1667230,
+      "text": "Also wer jemanden kennt aus dem Unterseekabel Business, gerne an uns wenden."
+    },
+    {
+      "end": 1688309,
+      "speaker": "A",
+      "start": 1672390,
+      "text": "Meine Frage ist, warum erzählst du mir das eigentlich hier alles? Warum muss ich als Entwickler eigentlich so tief gehen und die Details von Konsistenz oder Isolationsmodellen kennen? Macht das nicht sowieso die Datenbank? Also ich mein, da machen sich so viel kluge Köpfe Gedanken drüber. Warum muss ich das jetzt alles wissen?"
+    },
+    {
+      "end": 1715930,
+      "speaker": "B",
+      "start": 1688390,
+      "text": "Das Problem ist, dass die Datenbank sich natürlich nur bis zu einem gewissen Grad den Kopf zerbricht über deine Probleme. Gerade wenn ich dir jetzt zum Beispiel frage, wenn du sagst, du verwendest ja Postgres und mysql, weißt du was für Isolationslevels, die standardmäßig eingeschaltet haben? Weißt du, ob du da jetzt ein Bankkontosystem drauf programmieren könntest oder wenn du eine Transaktion startest, ob dir da eine andere Transaktion irgendwie in deine Transaktion was reinschreiben kann oder ob das wirklich sauber isoliert ist."
+    },
+    {
+      "end": 1725930,
+      "speaker": "A",
+      "start": 1716090,
+      "text": "Also ob ich darauf erstmal ein Bankkontosystem programmieren kann, ist die Antwort, ja, kann ich. Ob du das dann als Kunde nutzen solltest, ist eine andere Thematik, Also das mal vorneweg."
+    },
+    {
+      "end": 1741250,
+      "speaker": "B",
+      "start": 1725930,
+      "text": "Aber was musst du machen, damit du ein Bank Bankkontosystem oder ein Banksystem entwickeln kannst dort oder ist ja egal, irgendein anderes System, wo die Daten wichtig sind, einfach wo du nicht so sagen kannst, wenn da statt fünf, acht steht, ja so schlimm ist es nicht, das ist nur ein Logging System oder so, mich."
+    },
+    {
+      "end": 1757610,
+      "speaker": "A",
+      "start": 1741250,
+      "text": "Mit hoher Wahrscheinlichkeit mit diesen Konsistenz und Isolationsleveln mal auseinandersetzen. Aber ich kann dir jetzt auch nicht sagen, wenn ich jetzt so eine Standard Distri runterlade oder etwas von meinem Hyperscaler meiner Wahl nutze oder eine Managed Datenbank, was da jetzt im Detail eingestellt ist. Ne, das kann ich dir nicht sagen."
+    },
+    {
+      "end": 1836010,
+      "speaker": "B",
+      "start": 1758000,
+      "text": "Und genau das ist eigentlich das Problem. Das heißt, man muss ja nicht im Detail verstehen, wie die Datenbank das schlussendlich macht, aber man muss verstehen, was gibt es für Isolationslevels, was ist in der Datenbank aktiviert, welches Isolationslevel, was heißt es für mich als Programmierer, Programmiererin, was muss ich bei mir machen, was übernimmt die Datenbank? Und gerade wenn man daran denkt ans Debugging, man findet jetzt irgendeinen Bug, findet raus, irgendwo stimmt in der Datenbank was nicht, dann zurückverfolgen, warum passiert es, wie wird da reingeschrieben. Im Nachhinein ist es ganz schwierig, vor allem wenn es darum geht, parallele Systeme zu handhaben. Das heißt, ein tausend User schreiben gleichzeitig auf die Datenbank und dann hast du irgendwo falsche Daten und da musst du rausfinden, warum ist es passiert. Und jedes Mal, wenn du einen Test machst, stimmen die Daten, weil du natürlich selten ein tausend User simulierst, sondern immer nur dich selber auf deiner Dev Maschine einmal probierst, da was zu schreiben. Und da ist es dann schon wichtig zu verstehen, was gibt es für Isolationslevels, in welchem Isolationslevel arbeitet die Datenbank und hat es irgendwelche Auswirkungen auf meine Transaktionen oder kann da überhaupt so eine Nebenläufigkeit, so eine Race Condition überhaupt entstehen. Und wer das kennt, auch jetzt aus dem klassischen Programmier Umfeld, eine Race Condition ist super schwer zu debuggen, leider. Und da hilft dir dann natürlich jede Information, die du über das System, über das Verhalten des Systems weißt im Vorhinein."
+    },
+    {
+      "end": 1884740,
+      "speaker": "A",
+      "start": 1836010,
+      "text": "Aber wenn ich doch jetzt so eine Datenbank habe und mir das Schema ordentlich ausdenke und bei dem Schema alles ordentlich mit Primary Keys und Foreign Keys und Foreign Key Constraints ordentlich setze und natürlich mit ganz klassischen Transaktionen arbeite, habe ich dann nicht zwei doppelte Netze, habe ich dann nicht auf der einen Seite Transaktionen, weil alle Statements innerhalb einer Transaktion sind ja konsistent und zwei mich auch vor, nennt man das Daten Unintegrität geschützt, also dass ich zum Beispiel nur eine Rechnung anlegen kann, wenn ich einen User angelegt habe und so weiter. Also wenn diese Foreign Key Einschränkungen ordentlich gesetzt werden, dann bekomme ich doch eigentlich einen Fehler von der Datenbank zurück. Geht nicht und dann mache ich ein Rollback meiner Transaktion und dann steht das wieder in irgendeinem Log und dann geht wieder irgendein Entwickler los und fix das Problem."
+    },
+    {
+      "end": 1992189,
+      "speaker": "B",
+      "start": 1884820,
+      "text": "Die Foreign Keys, die werden natürlich eingehalten üblicherweise und da merkst du das auch nicht so richtig. Schwierig wird es einfach, sobald du dann Änderungen durchführst. Das heißt, sobald du Werte in der Datenbank änderst und nicht nur du, sondern ein tausend User gleichzeitig. Das ist eigentlich so die Schwierigkeit. Da kommen dann die Feinheiten zu tragen. Wenn du jetzt nur klassisch Ich prüfe, ob für eine Rechnung auch ein User vorhanden ist, sowas wird natürlich immer gecheckt und das bekommst du auch gemeldet und es funktioniert. Wenn es jetzt aber darum geht, verschiedene User, verschiedene Transaktionen greifen auf dieselben Daten zu, zählen da eins rauf, eins runter, überweisen Geld irgendwie von Konto A nach B oder kaufen was ein und du hast einen Lagerstand, der da erhöht wird und reduziert wird, dann kommt es schon in den Bereich, der recht schwierig ist, dass man da alles isoliert. Also wir waren ja schon bei der Isolation von ACID und darum geht es natürlich auch bei den Isolationsmodellen. Wie sehr sind deine User voneinander isoliert, also wie viel sehen die voneinander? Und wenn da jetzt irgendwer einen Sneaker kauft und der Sneaker Account in deinem Webshop um eins reduziert wird und es sind jetzt nur mehr ein Sneaker Bar vorhanden oder null vielleicht sogar, sieht es eine andere Transaktion, sieht es eine andere Transaktion nicht. Da kommen dann so Feinheiten ins Spiel. Und wenn es jetzt eben nicht nur Sneaker sind, sondern Geld womöglich, dann ist es natürlich schon relevant, ob du einen Kontostand siehst, der gerade falsch ist, auf dem du dann Rechnungen anstellst. Du schaust mal nach, wie hoch ist der Kontostand vom Andi, nimmst diesen Wert, zählst dann drei hundert dazu oder ziehst was ab, dann muss der Wert natürlich stimmen, dann kann das nicht irgendwo ein Zwischenwert sein, der gerade von einer anderen Transaktion geschrieben wird und am Ende kommt irgendein falscher Kontostand raus. Und genau da machen die Datenbanken dann schon Unterschied und garantieren dir nicht automatisch alles. Und deshalb großes Problem, weil es standardmäßig natürlich nicht aktiviert ist."
+    },
+    {
+      "end": 2009260,
+      "speaker": "A",
+      "start": 1992990,
+      "text": "OK, verstanden. Das sagt aber auch, dass ordentliche Foreign Key Constraints und so weiter und so fort mich bei Deletes und bei Inserts schon mal schützen. Also das Sicherheitsnetz ist auf jeden Fall da. Dann auch im Kontext von parallelen Operationen, wenn ich dich richtig verstanden habe."
+    },
+    {
+      "end": 2037050,
+      "speaker": "B",
+      "start": 2009260,
+      "text": "Genau. Ein Klassiker zum Beispiel, du hast jetzt dein Shop System mit den Sneakern und du machst eine Select Anfrage, wie viele Sneaker hast du denn noch zur Verfügung, muss ich nachbestellen oder nicht? Jetzt kann es sein, du triggerst plötzlich eine Nachbestellung, weil du glaubst, die Sneaker sind zu niedrig, aber in der Zwischenzeit wurden da vielleicht irgendwelche Transaktionen wieder abgebrochen, es wurde was nicht bestellt und die Accounts gehen wieder nach oben. Das wirst du natürlich nicht haben. Du wirst da in konsistenten Zustand, weil es vielleicht teuer ist, wenn du jetzt ein tausend neue Sneakers bestellst für dein Lager."
+    },
+    {
+      "end": 2046450,
+      "speaker": "A",
+      "start": 2037050,
+      "text": "Aber du sagtest ja gerade, die Datenbank hat diese Funktion, diese Art von ich isoliere einfach alles voneinander. Warum ist das nicht der Standardwert? Warum ist das nicht Default an?"
+    },
+    {
+      "end": 2108080,
+      "speaker": "B",
+      "start": 2046450,
+      "text": "Ja, du springst jetzt schon in die Isolationslevels rein und wenn man da das strengste Isolationslevel nimmt, das ist Serializable, also Serialisierbarkeit und dieses Isolationslevel würde dir eigentlich die Garantie geben. Das heißt, da hast du keine Probleme. Das Problem, was du damit aber dann hast, ist, dass du eine verdammt langsame Datenbank hast. Das heißt, dann kannst du es fast schon seriell ausführen, deine User. Das heißt, wenn da irgendwer ein Geld überweist, dann blockst du die gesamte Datenbank und dann kommt der zweite User dran, wenn er was überweist oder aus deinem Webshop kauft. Das wäre natürlich nicht ideal. Klar, Banken oder sowas operieren hoffentlich in diesem Zustand und er ist schon ein bisschen schneller. Also Datenbank bemühen sich da schon, aber man hat da schon Einschnitte, würde ich mal sagen, von fünfzig Prozent ungefähr. Also wenn du da wirklich auf den härtesten Isolationsmodus schaltest, bekommst du fünfzig Prozent weniger Durchsatz in deiner Datenbank. Und das kann natürlich dann schon Probleme geben. Lesend ist ein bisschen weniger als Problem, aber gerade schreibend ist es ein Riesenproblem und da wird die Datenbank dann super langsam."
+    },
+    {
+      "end": 2122249,
+      "speaker": "A",
+      "start": 2108080,
+      "text": "Also das bedeutet, wenn ich jetzt den Sneaker kaufe und du möchtest den Sneaker auch kaufen, musst du warten, bis ich komplett den Sneaker gekauft habe und bezahlt habe und und dann kannst du erst losgehen und siehst, dass der Sneaker verkauft ist. Richtig."
+    },
+    {
+      "end": 2235930,
+      "speaker": "B",
+      "start": 2122249,
+      "text": "Also das, was du jetzt beschreibst, ist ja die dumme Welt ist kein paralleles System, sondern ist ein System, wo jeder User jede Transaktion nacheinander abgearbeitet wird. Was die Datenbank macht, die macht es schon schlauer, die macht schon parallele Abarbeitung, die garantiert dir aber eine Serialisierbarkeit. Und die Serialisierbarkeit bedeutet genau das. Die garantiert dir, dass du denselben Zustand danach hast, dasselbe Resultat wie, also wenn du das hintereinander ausgeführt hast, darum Serialisierbarkeit. Also du nimmst diese ganzen fünf tausend User, die da alle irgendwie Geld überweisen, Sachen kaufen und die Datenbank garantiert dir, der Zustand ist am Ende genau der, als wie wenn du die fünf tausend User hintereinander ausgeführt hättest und jedes Mal alles geblockt hättest, nur für einen einzigen User. Also dass du aus einem parallelen System dummes System hast, was wirklich nur hintereinander alles abarbeitet. Und das ist die Serialisierbarkeit, das härteste. Und dann gibt es im Prinzip, es gibt natürlich ganz viele Isolationsmodelle, aber die üblichsten sind eigentlich drei andere. Das ist Read Uncommitted, Read Committed und Repeatable Read. Das sind so die Klassiker, die jetzt so mysql Oracle Postgres eigentlich unterstützt. Und die vier Modelle gibt es mit kleinen Adaptionen und jeder sieht es bisschen anders, aber so im Groben und Ganzen sind es so die vier Isolationslevels, die dann auch bedeuten, wie hoch ist die Sicherheit und wie viel Overhead hat die Datenbank, also wie viel verlierst du dann vom Speed von der Datenbank. Und wenn du ein ganz normal dummes System hast, wo dir alles egal ist, dann kannst du natürlich sagen, ich will so eine grobe Sicherheit, meine foreign Keys sollen funktionieren, aber alles andere ist mir eigentlich egal. Ich will eine schnelle Datenbank haben. Es geht sogar so weit, damals die myisam Storage Engine von mysql, die kannte gar keine Transaktionen und die war trotzdem sehr beliebt, weil sie eben super schnell war und ganz oft in vielen Use Cases einfach die wesentlich schnellere Variante war und darum von Leuten durchaus verwendet wurde, obwohl es schon inutb damals gab mit Transaktionen und Asset Kompatibilität."
+    },
+    {
+      "end": 2245770,
+      "speaker": "A",
+      "start": 2236010,
+      "text": "Und wenn du jetzt sagst, ich will die schnellste Datenbank haben, trotzdem Isolationslevel, dann sagst du ja okay, sie realisable ist das Schlechteste, was du machen kannst. Welches ist denn das andere Extrem?"
+    },
+    {
+      "end": 2295180,
+      "speaker": "B",
+      "start": 2245930,
+      "text": "Das unterste ist normalerweise Read uncommitted. Das heißt, jeder sieht eigentlich auch schon Informationen, die noch gar nicht so fix geschrieben sind. Also da kann mir durchaus so einiges reinpfuschen von der Seite, aber gewisse grundlegenden eben Transaktionen und so weiter, werden mir auf jeden Fall noch garantiert. Und das klassische Problem, was man da hat, kennt man vielleicht auch so oder hat man schon mal gehört, ist eigentlich, dass man Dirty Reads hat. Das heißt, man liest Dinge, die eigentlich noch nicht fix geschrieben sind. Das heißt, wenn du einen Sneaker kaufst, steht in der Datenbank vielleicht schon, dass du jetzt einen Sneaker weniger im Lagerstand hast, obwohl diese Transaktion noch gar nicht abgeschlossen ist, obwohl der noch gar durch die Kreditkartenprozesse durch ist und den Kauf wirklich abgeschlossen hat, sehen andere schon, Sneaker wurde um eins reduziert und wenn ich."
+    },
+    {
+      "end": 2310420,
+      "speaker": "A",
+      "start": 2295180,
+      "text": "Dann den Kauf abbreche, dann ist der Sneaker ja wieder im Lager. Du denkst aber, der Sneaker ist ausverkauft und hast somit eigentlich ein Dirty Read, also einen unwahren Lesevorgang gemacht. Richtig?"
+    },
+    {
+      "end": 2351990,
+      "speaker": "B",
+      "start": 2310740,
+      "text": "Genau. Dirty Read ist überhaupt so eine Überklasse, also das ist so das größte Problem eigentlich, oder wo sich die Isolationslevels dann unterscheiden. Aber Dirty Read heißt einfach, ich lese was, was eigentlich nicht konsistent ist. Also ich bin in einem quasi inkonsistenten Zustand zwischendrin und lese Daten, die ungültig sind, weil eben der User dann vielleicht abbricht den Kauf oder vielleicht irgendwo ein Deadlock entsteht zum Beispiel kann ja auch automatisch sein, irgendwo entsteht ein Deadlock, jetzt werden Transaktionen wieder zurückgerollt, das heißt rückgängig gemacht und ich habe aber gerade ein Select Statement gemacht, lese Daten, die dann in der Zukunft nicht mehr gültig sind oder in dem Moment vielleicht gar nicht gültig waren, weil eben die Transaktionen noch nicht abgeschlossen waren."
+    },
+    {
+      "end": 2356470,
+      "speaker": "A",
+      "start": 2351990,
+      "text": "Ich habe gerade mal chatgpt gefragt, ob die mir irgendwie so einen kleinen Merksatz geben kann."
+    },
+    {
+      "end": 2357750,
+      "speaker": "B",
+      "start": 2356710,
+      "text": "Jetzt bin ich gespannt."
+    },
+    {
+      "end": 2367510,
+      "speaker": "A",
+      "start": 2357990,
+      "text": "Ja, ich muss mir immer solche Sachen merken mit Sätzen, Dirty Read ist wie ein Gerücht. Du hörst es, bevor es stimmt und am Ende war es doch falsch. Kommt eigentlich hin, oder?"
+    },
+    {
+      "end": 2397800,
+      "speaker": "B",
+      "start": 2367590,
+      "text": "Ja, kommt durchaus hin. Problem ist vor allem, wenn ich halt eben auf den Gerüchten, die da höre, irgendeine andere Aktion setze. Wenn es jetzt nur die Gerüchte sind, die dann vielleicht nicht hundertprozentig stimmen oder so, ist ja okay. Aber das Problem ist, wenn ich dann Entscheidungen treffe, basierend auf den Gerüchten und das Gerücht ist nicht wahr, dann habe ich natürlich ein Problem. Und wenn ich eine Nachbestellung auslöse von Sneakers und neuen LKW voller Sneakers, obwohl vielleicht noch genügend Sneakers in meinem Lager wären, dann habe ich natürlich ein Problem."
+    },
+    {
+      "end": 2406810,
+      "speaker": "A",
+      "start": 2397960,
+      "text": "So, und da ich ja studiert habe und du sagst, das Ding heißt Read uncommitted, gehe ich stark davon aus, es gibt ein Isolationslevel namens Read committed."
+    },
+    {
+      "end": 2433280,
+      "speaker": "B",
+      "start": 2406810,
+      "text": "Also das ist eigentlich so der Standard, den die meisten Datenbanken als default eingestellt haben. Postgres hat das mysql ist ein bisschen strenger, wobei die haben dann eine andere Definition vom Isolationslevel, Also vielleicht ist es ungefähr dasselbe, aber Read Committed sagt eigentlich genau das, was halt der Name auch aussagt. Das heißt, man kann Werte lesen, die schon committed wurden. Das heißt, alle Transaktionen, die abgeschlossen wurden, von denen kann man die Werte lesen, wenn man Abfragen macht."
+    },
+    {
+      "end": 2438360,
+      "speaker": "A",
+      "start": 2433280,
+      "text": "Gib mir mal dein Sneaker Beispiel wieder. Was heißt das? Ich kaufe den Sneaker, ich bin im Warenkorb."
+    },
+    {
+      "end": 2456170,
+      "speaker": "B",
+      "start": 2438360,
+      "text": "Genau, du schließt den Warenkorb ab, machst die Bestellung. Während du die Bestellung machst, sieht noch niemand, dass du den Sneaker gekauft hast. Wenn du den Buy Button am Schluss gedrückt hast, Kreditkartendaten eingegeben hast, alles durchgelaufen ist, dann wird es persistiert. Dann sehen alle, dass du den Sneaker gekauft hast."
+    },
+    {
+      "end": 2468410,
+      "speaker": "A",
+      "start": 2456170,
+      "text": "Das bedeutet aber auch, ich lege mir den in den Warenkorb, ich gehe in den Checkout, du siehst, der Sneaker ist noch verfügbar und kannst auch in den Checkout gehen und kriegst erst später einen Fehler. Wenn ich meine Transaktion abgeschlossen habe, ist das korrekt?"
+    },
+    {
+      "end": 2589980,
+      "speaker": "B",
+      "start": 2468410,
+      "text": "Ja, das ist ein bisschen das Problem und das ist genau was Read Committed eben nicht verhindert, weil bei Read Committed werden sogenannte Non repeatable oder Phantom Reads erlaubt bzw. Sind noch immer möglich. Das heißt, ich bekomme keine Fehlermeldung, ich merke das eigentlich gar nicht. Was aber das Problem ist bzw. Was bei stärkeren Isolationsmodels sehr wohl der Fall ist, ist, dass wenn ich einen Wert lese, das ist dieses non repeatable Ich lese jetzt, wie viel Sneaker sind vorhanden, ein Sneaker, jetzt arbeite ich mit dem Wert, ein Sneaker weiter in meiner Transaktion, mache irgendwas damit, Jetzt kommst du und kaufst den Sneaker. Jetzt solltest du eigentlich gar nicht mehr in der Lage sein, diesen Wert zu ändern von Sneaker eins, Lagerstand eins auf Lagerstand null, warum? Weil ich den ja gelesen habe und dieses Gerücht bzw. Ist kein Gerücht, es ist der richtige Wert, Sneaker Lagerstand erste Ich gehe davon aus, der stimmt jetzt und arbeite damit weiter. Jetzt änderst du den Lagerstand auf null, kaufst den Sneaker. Damit wird diese Information plötzlich ein Gerücht bzw. Ein falscher Wert für mich, weil in der Zwischenzeit sich der geändert hat. Das heißt, bei einem strengeren Isolationslevel, der kein Non repeatable Read erlaubt, darf es eigentlich nicht der Fall sein, dass wenn ich eine Information gelesen habe und ich noch immer sage, ich arbeite mit der Information, das heißt, meine Transaktion ist noch nicht abgeschlossen, darf niemand anderer den Wert ändern, weil ich ja sonst eine Information habe, die ungültig wird automatisch. Und das wird bei Read Committed nicht verhindert, sondern ist immer noch ein Problem und das nennt sich Non repeatable Read. Das heißt, wenn ich jetzt einen Wert neu lesen würde, nachdem du den Sneaker gekauft hast, bekomme ich einen anderen Wert als wie vor dreiig Sekunden, wo ich den Wert auch gelesen habe. Und eigentlich ist es ungültig, weil in einer Transaktion volle Isolation, muss ich immer den gleichen Wissensstand haben. Es kann nicht sein, dass ich, wenn ich ein Select nochmal ausführe, dass ich einen anderen Wert bekomme. Zwei Selects in einer Transaktion müssen immer denselben Wert zurückgehen."
+    },
+    {
+      "end": 2593120,
+      "speaker": "A",
+      "start": 2589980,
+      "text": "Wenn ich serialisierbar bin, nennt man das dann Repeatable Read."
+    },
+    {
+      "end": 2596870,
+      "speaker": "B",
+      "start": 2593510,
+      "text": "Was genau? Also wenn es funktioniert, ja, also wenn."
+    },
+    {
+      "end": 2599230,
+      "speaker": "A",
+      "start": 2596870,
+      "text": "Du zwei Selects in einer Transaktion hast."
+    },
+    {
+      "end": 2738100,
+      "speaker": "B",
+      "start": 2599230,
+      "text": "Und kann man vielleicht so nennen, wenn du willst, aber man nennt auf jeden Fall die nächste Isolationsstufe Repeatable Read, wo das eben genau nicht erlaubt wird, dass du bei zwei Select Anfragen unterschiedliche Werte zurückbekommst in derselben Transaktion. Also das ist genau die nächst strengere Variante und die nennt sich Repeatable Read. Was aber bei dem Isolationsmodell sehr wohl noch ein Problem ist, sind Phantom Reads. Also ich habe schon zuerst erwähnt, bei Read Committed ist das Problem, dass Non Repeatable Reads erlaubt sind und Phantom Reads oder erlaubt möglich sind grundsätzlich bei Repeatable Read natürlich keine Non Repeatable Reads mehr, aber Phantom Reads können noch auftreten, wobei es kommt auch ein bisschen darauf an, wie das implementiert ist. Da unterscheiden sich die Datenbanken leicht. Mysql ist da so ein Klassiker, der Japson, wer den kennt, das ist so ein Datenbank Transaktions Isolations Guru, würde ihn mal nennen, der auch sehr viel testet in dem Bereich und wirklich die Datenbanken probiert zu überprüfen, ob die wirklich sauber auch arbeiten. Der macht sich da immer auch lustig, weil mysql da immer so ein bisschen herumdiskutiert, ob sie jetzt Repeatable Reads sind oder nicht sind, weil du schon das Problem hast, dass sich da Datensätze durchaus ändern können, obwohl du sie gelesen hast. Also das, was wir gerade besprochen haben, funktioniert in mysql nicht so richtig bzw. Man muss dann wirklich ein höheres Isolationslevel machen oder mariadb hat dann fix für diesen Bug neuerdings, auch in der neuesten Version ist es glaube ich, default mäßig aktiviert, dass das wirklich ein sauberes Repeatable Read Isolationslevel ist und wirklich keine Non Repeatable Reads passieren. Aber wie gesagt, Phantom Reads können noch passieren. Phantom Reads, Phantom Daten sozusagen sind Daten, die eigentlich noch gar nicht da sein sollten, als sie geinsortet wurden, zum Beispiel in der Zwischenzeit. Also ich lese plötzlich irgendwelche Daten, die erst in der Zukunft eigentlich gültig sein sollten. Das heißt, ich lese zum Beispiel irgendwelche, die Anzahl der User, bekomme da drei hundert zurück, dann lese ich nochmal, bekomme plötzlich drei hundert zwei zurück, weil in der Zwischenzeit zwei User eingefügt worden sind. Also das sind so Phantom Reads, die eigentlich nicht passieren dürften, weil die eben in einer sauberen Isolation das gar nicht sehen durfte. Aber da weicht man das noch ein bisschen auf. Also es ist eigentlich so eine eine Untergruppe von Non Repeatable Reads, wo du."
+    },
+    {
+      "end": 2784930,
+      "speaker": "A",
+      "start": 2738100,
+      "text": "Gerade Jepson erwähnt hast. Ich Les, dem seine Blogposts recht häufig brauche immer sehr lange, um diese zu lesen, denn ich habe immer so eine Art Wörterbuch daneben, weil ich immer nachgucken muss, was bedeutet. Es war so ein bisschen wie früher in der CT und IX. Ich habe mir ganz oft die CT gekauft und öfter mal die iex. Die IX habe ich damals noch nicht ganz verstanden, weil da waren zu viele Fachbegriffe drin. Dann habe ich immer für das Lesen der IX deutlich länger gebraucht als für das Lesen der CT. Und so ähnlich geht es mir mit den Japson Blog Artikel. Und immer wenn ich die lese, dann kommt auch öfter mal ein Begriff vor, der nennt sich Write Skew und der steht dann oft irgendwie so im Begriff, auch so mit Phantom Reads, Dirty Reads und so weiter. Kannst du mir den kurz erklären?"
+    },
+    {
+      "end": 2873020,
+      "speaker": "B",
+      "start": 2785010,
+      "text": "Es gibt übrigens ganz viele solcher Phänomene, ich glaube so zwanzig oder so, immer im ASCII Standard, ASCII Standard sage ich schon, im ANSI Standard von SQL sind schon so Phänomene erwähnt worden. Und dann gibt es natürlich später Papers, die das auch noch erwähnt haben. Und mittlerweile referenziert man diese ganzen Phänomene, die es da gibt. Also diese Probleme bei den Isolationsleveln mit einem Buchstaben und einer Zahl. Also wer das mal sehen sollte, zum Beispiel Phantom Read ist P und P kommt aus dem ANSI Standard damals aus dem Originaldokument. Das sind die ganzen P's, die durchnummeriert sind. Dann später hat es vom CAP Theorem sowas gegeben, das ist meistens mit G, da gibt es dann irgendwie GA und so weiter und Write Queue ist zum Beispiel A B, das war dann ein späteres Paper, so ein kritisches Paper zu Isolationslevels, dass das eben alles nicht so funktioniert, wie man früher angenommen hat und dass es da Probleme gibt. Und da gibt es eben das Write Queue und das sagt eigentlich nichts anderes aus, dass zwei Transaktionen gültig sind, dass da alles passt. Aber wenn man sie hintereinander ausführt, dann gibt es einen inkonsistenten Zustand. Also in sich sind sie alle logisch, stimmen alle, aber wenn man sie dann komplett ausgeführt hat, gibt es im Nachhinein einen falschen Zustand. Und das kann man natürlich nur verhindern, indem man das im Nachhinein dann immer auch prüft. Gibt es da irgendwie Probleme, wenn diese zwei Transaktionen parallel auftreten?"
+    },
+    {
+      "end": 2909540,
+      "speaker": "A",
+      "start": 2873020,
+      "text": "Jetzt noch mal für dumme, denn wir nehmen Sonntagabend auf und das Wochenende mal wieder anstrengend. Also wenn es die Regel gibt, dass immer ein Mitarbeiter im Lager sein muss und aktuell jetzt gerade zwei Mitarbeiter im Lager sind und Mitarbeiter A auf den Dienstplan guckt und Mitarbeiter B ist ja da, deswegen gehe ich nach Hause und Mitarbeiter B in einer anderen Transaktion auch auf den Dienstplan guckt und sagt, ja Mitarbeiter A ist ja im Lager, deswegen gehe ich nach Hause, ist ja das Endresultat, dass niemand mehr im Lager ist. Ist das richtig? Wäre das ein Right Skew, weil die zwei Leute ja in zwei Transaktionen auf den Dienstplan geguckt haben und dann angenommen haben, der andere bleibt im Lager und deswegen beide gehen."
+    },
+    {
+      "end": 3027570,
+      "speaker": "B",
+      "start": 2909780,
+      "text": "Es ist immer ein bisschen schräg aus der Realität solche Beispiele zu bringen, weil wenn man auf einen Dienstplan schaut und so, das sind halt keine klassischen Transaktionen, aber im Endeffekt hast du natürlich recht, es geht darum, wenn es Abhängigkeiten gibt, die erst im Nachhinein klar werden. Also sind auch so Checks zum Beispiel, wenn man eine gewisse Maximal Anzahl erlaubt, also wenn du zum Beispiel Lebensmittelhändler nimmst und du hast eine maximale Anzahl an Artikeln, die du bestellen darfst, weil der eben nicht so viel liefern kann zum Beispiel, dann hast du da natürlich immer einen Check drin und wenn du in zwei verschiedenen Fenstern zum Beispiel irgendwie Artikel hinzufügst, dann kann es natürlich passieren, dass diese Gesamtsumme überschritten wird, obwohl bei dem einzelnen Check natürlich das immer geklappt hat. Also das sind so Sachen, die so Meta Checks eigentlich Meta Konsistenzen überprüfen kannst du, aber wenn du Repeatable Read hast, kannst du diese Inkonsistenzen verhindern bzw. Dieses Phänomen ist dann eigentlich nicht möglich. Also das geht nur, wenn du niedrigere Isolationslevels eigentlich hast, weil da ja gecheckt wird, wenn du was gelesen hast, darf sich der Wert nicht mehr ändern und das ist eigentlich der große Unterschied. Wie gesagt, bei mysql ist es nicht so so hart, da muss man teilweise Select for Update schreiben, das heißt, man muss mysql mitteilen, hey, diese Select, ich lese jetzt was, das ich später irgendwie ändern kann und dann wird es wirklich gesperrt, weil im Hintergrund geht es immer um Sperren. Was wird gesperrt und eigentlich, sobald ich was lese, müsste ich das eigentlich sperren. Und darum ist es so super komplex, da merkt man auch, dass da im Hintergrund dann wirklich viel Overhead natürlich passiert, weil man muss sich vorstellen, fünf tausend User lesen irgendwas und die muss da plötzlich Sperren im Hintergrund erstellen. Gibt es da schon Sperren? Fünf tausend Leute haben das jetzt gelesen. Was ist, wenn ich das in Zukunft ändere? Hat es gelesen, jemand in einer aktiven Transaktion. Also das wird dann schon super komplex Und genau darum ist eigentlich dieses Repeatable Read so komplex und wird standardmäßig meistens nicht aktiviert, weil es ganz viel Overhead hat und dadurch die Performance reduziert wird."
+    },
+    {
+      "end": 3041770,
+      "speaker": "A",
+      "start": 3027650,
+      "text": "Wie debuggt man oder testet man sowas denn? Weil ich kann mir vorstellen, ohne ein komplett detailliertes Audit Log, welcher Record wann wie wo geschrieben wird, vielleicht sogar Event Sourcing, kann man sowas ja kaum nachvollziehen. Also wie teste ich sowas?"
+    },
+    {
+      "end": 3244940,
+      "speaker": "B",
+      "start": 3041770,
+      "text": "Im Prinzip hast du so ein Event Sourcing, aber das ist dann eine Implementierungssache. Können wir auch noch kurz darüber sprechen, grundsätzlich, wie sowas getestet wird. Du kannst es natürlich nicht mit Unit Tests testen, weil die haben kein echtes paralleles Verhalten. Also da kannst du ja schwer testen. Feuer jetzt ein tausend parallele User auf mein System ein. Das machen Unit Tests einfach nicht. Generative Tests, also Fuzzing, was wir schon in Episode ein hundert neun und achtzig übrigens besprochen haben, wer da mal näher sich damit befassen will, also dass man randomisiert oder pseudo randomisiert oder randomisiert, aber mit einem gewissen Ziel ganz viele Testdatensätze, Test User, was es dann auch immer sind, ausführt und einfach mal schaut, gibt es irgendwo ein Problem, wenn ich da einfach tausende Sachen drauf feuer. Da findet man natürlich auch gewisse Dinge. Es gibt aber auch deterministische Simulationen, also wo man sehr genau definiert, was passiert jetzt. Und da ist Jepson, den wir jetzt schon erwähnt haben mit seiner Testsuite auch ganz vorne dabei. Der simuliert dann wirklich mehrere Clients, mehrere User und hat dann genaue Abfolgen, teilweise auch zufällige natürlich, die dann prüfen, ob eben zum Beispiel so ein Repeatable Read Phänomen auftritt. Das heißt, wenn man zwei Transaktionen hat, die unterschiedlich sich gegenseitig beeinflussen und schreiben, hat man dann vielleicht irgendwo ein Select, das dann beim zweiten Mal einen falschen Wert rausbringt oder zu viele Zeilen, zu wenige Zeilen, also ob man da irgendwo Daten hat, die eben zu diesem Zeitpunkt eigentlich nicht da sein sollten. Und Japson hat eine riesen Bibliothek natürlich an Problemfällen schon drinnen und kann die dann prüfen und ausführen und so testet er auch die ganzen Datenbanken natürlich durch. Was der auch in seiner Testsuite noch dazu hat, ist diese Fault Injection, die man ja auch so ganz klassisch vom Chaos Monkey kennt, der dann irgendwie das Netzwerk abschaltet plötzlich oder langsamer macht. Das kann Japson natürlich auch und macht Japson auch. Also man simuliert dann da Sachen, wenn was ausfällt, wenn die Festplatte ausfällt, wenn die Festplatte zu langsam ist, wenn sich die Zeit plötzlich ändert vom Betriebssystem, also hat es dann auch irgendwie Einfluss Oder wenn bei einem verteilten System sich irgendwo die Zeit ändert. Also man injected, man injiziert, damit wir das auch deutsch sagen, damit man nicht wieder Beschwerden bekommen mit zu vielen Anglizismen, man injiziert Fehler in das ganze System und schaut dann, wie verhält sich die Datenbank oder das parallele System und gibt es da Probleme. Im Nachhinein muss man natürlich auch viel verifizieren. Das heißt, man bekommt dann Resultate und verifiziert dann durch, war das wirklich alles korrekt? Also man geht dann Schritt für Schritt die Transaktionen durch, verifiziert. Es ist im Endeffekt dann das genauso, als wie wenn man jede Transaktion hintereinander ausgeführt hätte, ist da immer alles valide in den Zwischenschritten und nur dann funktioniert es. Und wenn man sich das ansieht und das ist wirklich erschreckend, also ich empfehle jedem einmal auf die Japson Webseite zu gehen, weil da alles öffentlich ist. Der hat Talks, der hat Protokolle, was er nicht alles getestet hat in den verschiedensten Datenbanksystemen, Datenbankhersteller zahlen den mittlerweile auch, dass er diese Tests durchführt, weil er eben so bekannt ist. Und es ist erschreckend, wie viel Probleme die Datenbanken haben, Also wo man sich irgendwie denkt, diese Datenbank ist ja sicher und das ist eine Datenbank, dafür habe ich eine Datenbank und dann sieht man da Listen und Probleme, die nicht funktionieren und fehlerhafte Daten und so weiter. Also es ist echt auf der einen Seite erschreckend, aber auch spannend, was man da alles rausfinden kann."
+    },
+    {
+      "end": 3296350,
+      "speaker": "A",
+      "start": 3244940,
+      "text": "Ich weiß gar nicht, ob das erschreckend sind A kochen die auch nur mit Wasser und b zeigt es eigentlich das Problem, wie komplex es eigentlich ist, Daten parallel zu verarbeiten und irgendwie konsistent zu halten. Also wenn ich dir jetzt so zuhöre mit Ridesku und Phantom Read, dann hast du immer diesen Trade off zwischen mache ich jetzt alles serialisable, also eigentlich super langsam oder sorge ich noch irgendwie dafür, dass ich ein schnelles performantes System habe, Alles unter der Prämisse, ich habe Daten, Integrität und Konsistenz am Ende. Also deswegen, ich bin nicht überrascht, dass Jepsen da Fehler findet. Ich bin eher froh drum, dass jemand so hoch intellektuell fähig ist, Software zu schreiben und wirklich deterministische Simulationen auszuführen auf den Datenbank, um diese ganzen Sachen rauszuholen."
+    },
+    {
+      "end": 3369640,
+      "speaker": "B",
+      "start": 3296350,
+      "text": "Und das Problem ist auch mit dieser Komplexität, auch wenn du jetzt deine Daten Datenbank auf serialisierbar schaltest, weil du sagst, okay, ich will einfach ein sicheres System haben, dann macht mir die Datenbank das schon automatisch. Das bedeutet aber auch, dass du zum Beispiel viel mehr Rollbacks hast am Ende. Das heißt, dass deine Transaktionen, weil man draufkommt, irgendwo gibt es ein Problem, ihr habt einen Konflikt mit einer anderen Transaktion, dann wird mir die Transaktion wieder zurückgerollt und Schätzungen gehen da ungefähr von dreiig Prozent aus. Das heißt ihr dreiig Prozent mehr Rollbacks plötzlich, wenn ich mit der Datenbank arbeite, und das betrifft mich dann als Entwickler natürlich, weil ich mache da irgendeine Transaktion und dann wird die zurückgerollt, dann muss ich in meiner Applikationslogik mir überlegen, was mache ich denn, wenn jetzt eine Transaktion zurückgerollt wurde, Starte ich einfach noch mal eine neue? Was mache ich, wenn sich jetzt Werte geändert haben? Der User hat vielleicht was anderes eingegeben oder auf einem anderen Stand operiert als den, den es jetzt gibt. Das heißt, ich muss womöglich im User Interface irgendwas anzeigen, sagen, hey, sorry User, aber es hat sich was geändert. Womöglich ist es aber nur eine Banane, hätte ich schon fast gesagt, Banalität. Aber damit muss man auch umgehen. Also es hilft auch gar nicht, das einfach zu sagen, okay, wir stellen das Isolationslevel auf serializable und dann ist alles gegessen. Also auch das funktioniert nicht."
+    },
+    {
+      "end": 3395030,
+      "speaker": "A",
+      "start": 3369640,
+      "text": "Jetzt möchte ich ja auch was lernen, auch für die zukünftige Entwicklung, dass ich natürlich als Softwareentwickler selbst besser werde, Denn was du mir jetzt mitgegeben hast, ist Klugscheißer Material schön beim Kaffeechat mal eben, hör mal, da hast du ein Ridescue droppen und dann direkt wieder weggehen. Deswegen erklären wir mal, wie die ganze Sache unter der Haube funktioniert. Wie machen die Datenbanken die ganze Thematik? Denn damit ich das vielleicht auch mal irgendwann berücksichtigen soll, also jetzt kommt eigentlich."
+    },
+    {
+      "end": 3505620,
+      "speaker": "B",
+      "start": 3395030,
+      "text": "Das klugscheisse Wissen, weil das braucht man nicht mehr unbedingt wissen, wie die Datenbank das im Hintergrund macht, aber mich interessiert sowas zumindest immer, wie das funktioniert, ist eigentlich gar nicht so super schwer, wenn man sich das so konzeptionell durchüberlegt. Also klassisch verwendet man Multiversion Concurrency Control, also MVCC, hat man vielleicht schon mal irgendwo gelesen, die ganzen klassischen Datenbanken, mysql, Postgres und so weiter, die funktionieren alle mit dem MVCC und eigentlich verfolgt das nur ein ganz einfaches System. Das heißt, jedes Mal, wenn ich etwas schreibe, hinzufüge, ändere, dann ändere ich nicht die eigentlichen Daten, sondern schreibe einen neuen Datensatz und der neue Datensatz wird einfach durchnummeriert, schreibe genau dazu, der gehört gerade aktuell zu dieser Transaktion, diese Transaktion läuft noch. Und jedes Mal, wenn ich mit der Datenbank spreche und irgendein Select Statement abfrage, muss ich mir überlegen, welche Transaktionen darf ich schon lesen, welche muss ich noch weglassen, muss irgendwelche Updates mit reinnehmen, lese ich die Originaldaten, also einfach so eine historische Datenbank eigentlich, die mehrere Versionen haben kann. Und das ist eigentlich alles. Und so kann man die verschiedenen Transaktionen abbilden. Am Ende muss man natürlich irgendwann so ein Cleanup machen, welche Transaktionen wurden schon abgeschlossen, muss ihnen Wert überschreiben, den eigentlichen Wert. Also da gibt es dann natürlich Prozesse, die relativ kompliziert sind, muss man sagen, Aber die Grundidee, dass man einfach alles mit Zeitstempeln, mit Transaktionsstempeln verseht und einfach nie einen Wert ändert, sondern immer nur was hinzufügt, ist eigentlich relativ easy. Und so kann man dann eigentlich relativ schnell so ein System bauen und dann die verschiedenen Isolationslevels und die Isolationslevels sind dann natürlich unterschiedlich implementiert, vor allem, wenn es dann darum geht, was für Sperren setze ich auf, welche Datensätze muss ich sperren, wo erlaube ich keine Reads mehr, wo habe ich keine Writes mehr und diese ganzen Dinge. Also das wird dann schon schnell komplex, vor allem wenn ich in Richtung Serialisierbarkeit gehe."
+    },
+    {
+      "end": 3523660,
+      "speaker": "A",
+      "start": 3506020,
+      "text": "Kann ich denn als Entwickler, der jetzt ganz doof das SQL Statement schreibt oder die Transaktion schreibt, dieses Isolationsmodell irgendwie anpassen. Kann ich sagen, jetzt für diese Transaktion möchte ich dieses Isolationslevel oder vielleicht sogar für die Verbindung oder wird das irgendwie Cluster global eingestellt oder Datenbank global?"
+    },
+    {
+      "end": 3585280,
+      "speaker": "B",
+      "start": 3523740,
+      "text": "Also grundsätzlich kann man das systemweit natürlich einstellen und meiner Meinung nach macht es wahrscheinlich auch Sinn, eher systemweit einzustellen, aber du kannst es auch je nach Datenbank natürlich fein granularer einstellen, pro Connection zum Beispiel, Aber man muss natürlich auch dazu sagen, ist dann natürlich auch schwierig, vor allem wenn du mehrere User hast, andere User, die vielleicht dann diese Kriterien nicht einstellen, die Isolationslevels und so weiter. Also ich würde schon eher auf System Level machen, wenn man natürlich jetzt nur ganz spezielle Bereiche hat, wo man das ganz strenge Modell Serialisierbarkeit braucht, dann kann man das natürlich auch jetzt für eine Query, für eine Connection natürlich machen. Und was natürlich da der Vorteil ist, dass ich jetzt als Programmierer das vielleicht auch machen kann, ohne dass ich den Datenbank Administrator dann frage, kannst du das System weit aktivieren? Aber da sollte man sowieso sprechen, weil wie gesagt, es hat extremen Einfluss auf die Geschwindigkeit, auf die Performance und dann sollte man vielleicht mit dem Datenbank Administrator doch sprechen, ob man das überhaupt machen sollte oder nicht. Also da vielleicht die richtige Kommunikation wählen, aber grundsätzlich ist man da flexibel."
+    },
+    {
+      "end": 3603710,
+      "speaker": "A",
+      "start": 3585760,
+      "text": "Ich bin mir gar nicht sicher, ob man das denn wirklich machen sollte, die ganze Sache pro Transaktion sogar einzustellen, weil du hast natürlich schon harten Wildwuchs. Also jetzt stell dir vor, du läufst den Datenbank Cluster auf Isolationslevel eins, in der Transaktion schaltest du mal auf Isolationslevel zwei und so weiter. Das später zu debuggen, das kriegt doch keiner mehr mit."
+    },
+    {
+      "end": 3643350,
+      "speaker": "B",
+      "start": 3603790,
+      "text": "In der realen Welt ist natürlich schon oft so, dass der Großteil deiner Daten wahrscheinlich egal ist, was du damit machst und dann hast du vielleicht so ein, zwei Sachen, eben der Kontostand oder irgend sowas, wo du dann vielleicht schon das Isolationslevel haben willst. Also ich könnte mir schon vorstellen, dass das in der Realität so gemacht wird, auch wenn man die Geschwindigkeit trotzdem hochhalten will. Aber wie gesagt, es kommt dann wirklich darauf an, wie viel User man hat und ich sehe auch deinen Punkt, dass man da halt womöglich dann echt ein Problem hat, vor allem wenn man es dann mal irgendwo vergisst, dann machst du da eine Transaktion, vergisst aber das Isolationslevel zu setzen und gehst aber davon aus, dass das Isolationslevel ein höheres ist und dann viel Spaß beim Debuggen."
+    },
+    {
+      "end": 3656420,
+      "speaker": "A",
+      "start": 3643350,
+      "text": "Ich meine, die ganze Sache ist ein hart komplexes Thema und vielleicht macht das genau den Unterschied. Ich bin Entwickler und arbeite mit einer Datenbank oder ich bin Datenbank Administrator und optimiere wirklich Schema und Consistency Modelle und allem drum und dran."
+    },
+    {
+      "end": 3713090,
+      "speaker": "B",
+      "start": 3656420,
+      "text": "Oder man muss natürlich sagen, dass die Datenbankadministratoren, also ich will jetzt niemand auf die Füße treten, aber wahrscheinlich schon eher so ein aussterbender Job Title sind, würde ich mal sagen, eine Position und das viel mehr in Richtung Development geht und die Leute, die ja selbst jetzt ihre Infrastruktur hochfahren und da in der Cloud einfach ihre Datenbank aufsetzen, vielleicht auch mehr sich damit beschäftigen müssen, was für ein Isolationslevel brauche ich wirklich, was ist ist möglich und was will ich wirklich einsetzen. Also ich glaube, dass es schon wichtiger wird für Entwickler innen, da mehr zu verstehen von der Datenbank. Und sogar wenn man da jetzt irgendeinen ORM verwendet, der das irgendwie im Hintergrund automatisiert, sogar da ist es relevant, weil da wird es vielleicht sogar noch relevanter, weil ich ganz viele Queries im Hintergrund absende und da dann noch mehr Probleme haben kann dadurch. Also auch diese Schicht nimmt mir das nicht automatisch irgendwie weg, dass ich mir Gedanken darüber mache, wie mache ich ein gutes Schema, was sind meine Constraints und wie arbeite ich, wenn ich Transaktionen aufmache und dann wirklich Daten ändere auch in der Datenbank."
+    },
+    {
+      "end": 3738350,
+      "speaker": "A",
+      "start": 3713090,
+      "text": "Du wirfst einen interessanten Punkt auf. Wer sollte sich denn mit den Transaktionslevel und mit den Isolationsmodellen und den Konsistenzmodellen, meine Güte, wie viel Passwörter hier gerade wieder durchs Mikro fliegen, wer sollte sich denn damit beschäftigen? Du sagst gerade klar, der DBA ist aussterbend, der Systemadministrator oder die OPS Person hat wahrscheinlich genug damit zu tun, die Datenbanken am Leben zu halten und zu updaten und zu skalieren und ja, aber."
+    },
+    {
+      "end": 3821150,
+      "speaker": "B",
+      "start": 3738350,
+      "text": "Es ist ja jetzt nicht so schwer. Also es gibt die vier Isolationslevels, Read, Uncommitted, Read, Committed, Repeatable, Read und Serializable. Also es ist ja nicht, dass man da zwanzig verschiedene Modelle sich ansehen muss, sondern so ein Grundverständnis, das man einfach hat und dass man weiß, wenn man mit kritischen Daten arbeitet, dass man sich mal überlegt, schreiben da mehrere User mehrere Sessions auf dieselben Daten? Gibt es da überhaupt Probleme? Und dann kann man sich ja mal den Kopf zerbrechen und sich überlegen, okay, könnten wir da Transaktionen verwenden? Müssen wir was ändern? Und dann kann man sich ja auch entweder Hilfe holen oder andere Leute, die sich besser auskennen. Also es ist ja nicht so, dass jeder bis ins kleinste Detail und verstehen muss, was Multiversion Concurrency Control ist und wie das implementiert wird und welche Sperren da gesetzt werden und ob da ein optimistisches Locking dahinter steht oder nicht. Also das sind ja Dinge, die sind zwar ganz nett und cool, wenn man sie versteht, aber die braucht es noch nicht. Dass ich einfach mal grundsätzlich weiß, welche dieser vier Isolationslevels brauche ich bzw. Es gibt sie überhaupt. Es wäre schon mal ein Grundverständnis, das man haben könnte. Und wenn man sich mit denen mal beschäftigt, mit den vieren, und sich das überlegt, ist man glaube ich auch bei einem guten Punkt. Und das würde ich sagen, ist schon eigentlich die Aufgabe von jeder Entwicklerin, sich das mal zu überlegen. Es kann ja auch sein, dass man okay, meine Daten sind eh komplett egal, ist mir alles egal, scheiß auf diese Isolationslevel, das brauche ich nicht, ist auch fair. Aber dann hat man sich wenigstens das überlegt."
+    },
+    {
+      "end": 3840010,
+      "speaker": "A",
+      "start": 3821310,
+      "text": "Während du hier das so ganz einfach simplifizierst, ja, wir haben ja nur vier Isolationsmodelle und das sollte eigentlich jeder wissen. Und wenn du das nicht weißt, so solltest du das jetzt wissen bzw. Dir jetzt mal beibringen, bin ich einfach mal auf die Webseite von Jepsen gegangen, der das natürlich dokumentiert hat und siehe da, ich habe eine Seite gefunden über Konsistenzmodelle und siehe da, ich habe mal durchgezählt."
+    },
+    {
+      "end": 3845210,
+      "speaker": "B",
+      "start": 3840010,
+      "text": "Ja, aber bitte fahr fort. Ich kenne die Seite natürlich auch, Ich."
+    },
+    {
+      "end": 3847370,
+      "speaker": "A",
+      "start": 3845210,
+      "text": "Habe sechzehn Konsistenzmodelle gefunden, die kannst du."
+    },
+    {
+      "end": 3880880,
+      "speaker": "B",
+      "start": 3847370,
+      "text": "Ja eh nicht anwenden. Also Postgres hat eigentlich überhaupt nur drei. Das ist überhaupt das Beste. Da kannst du zwar vier definieren, aber dieses eine wird gemappt aufs andere. Also es gibt nur drei. Mysql hat vier. Ist schön, wenn Jepsen die hat und die sind sehr viel in der Theorie natürlich auch und was möglich ist, aber eigentlich musst du dich mit deiner Datenbank beschäftigen. Was gibt es grob drei, vier Modelle, was brauche ich? Und zu neunzig Prozent wird man wahrscheinlich entscheiden, ich brauche keine extremen Isolationslevels und diesen Gedankenprozess, um den geht es. Du musst nicht alles verstehen, Du musst mal überlegen, gibt es wo Probleme und im Falle kannst du dann immer noch weiterspringen."
+    },
+    {
+      "end": 3977100,
+      "speaker": "A",
+      "start": 3881040,
+      "text": "Du darfst dich natürlich nicht nur auf deine zwei, drei Datenbanken da beschränken. Aber ein Punkt muss man hier lassen. Die ganze Sache ist als Graph aufgebaut. Das bedeutet zum Beispiel Read Uncommitted ist ein Kind von Reed Committed und so weiter und so fort. Also ich meine, kennt man das eine, kennt man so fast das andere oder als Sub Art. Du hast schon einen Punkt. Was ich aber damit sagen mö Schaut doch mal, falls ihr diese Episode gerade nicht im Auto hört, schaut doch mal in die Show Notes und geht doch da mal auf Consistency Model Link von Jepson. Sehr interessant. Da findet ihr auch die Phänomene wie zum Beispiel einen Aborted Read oder einen Ridescue oder ähnliches und dann mit diesen komischen Buchstaben hier, P ist ein Dirty Ride und so weiter. Interessant. Wie gesagt, kleiner Tipp, macht das nicht an einem Samstagmorgen, wenn ihr zuvor auf einem Geburtstag wart, erst um vier uhr morgens nach Hause gekommen seid. Weiß ich nicht. Wenn ihr das doch versteht, sage ich Respekt. Und wenn ihr von diesen Themen nicht genug bekommt und ihr habt uns das allererste Mal eingeschaltet, haben wir ein paar andere Folgen noch für euch, wie zum Beispiel Episode neunzehn da haben wir mal einen Datenbank Deep Dive gemacht, von Redis über Clickhouse bis ganz klassische relationale Datenbanken. In Episode zwei und zwanzig haben wir ziemlich viel über no SQL, über Asset, Base und Co. Gesprochen. In Episode ein und neunzig haben wir das KAP Theorem mal auseinandergenommen. Ein paar Datenbankfolgen hatten wir schon mal, deswegen einfach mal durch unser Podcast Episodenportfolio scrollen und da werdet ihr bestimmt fündig. Aber Wolfgang, zum Ende dieser Episode habe ich dir noch zwei Witze versprochen, die man nur versteht, wenn man dir zugehört hat."
+    },
+    {
+      "end": 3979220,
+      "speaker": "B",
+      "start": 3977100,
+      "text": "Jetzt bin ich gespannt, ob ich sie überhaupt verstehe."
+    },
+    {
+      "end": 3991780,
+      "speaker": "A",
+      "start": 3979300,
+      "text": "Warum vertrauen Entwicklerinnen Serializable mehr als Read Uncommitted? Weil Serializable keine schmutzigen Geschichten verbreitet. Ja, ich gebe zu, ich glaube, auf Englisch wäre der besser mit den Dirty Reads. Naja, schauen wir mal."
+    },
+    {
+      "end": 3995140,
+      "speaker": "B",
+      "start": 3993220,
+      "text": "Definitiv besser, oder?"
+    },
+    {
+      "end": 4012750,
+      "speaker": "A",
+      "start": 3995220,
+      "text": "Finde ich auch geil. Schön. Warum sind Base Datenbanken schlechte Freunde? Sie sind zwar verfügbar, aber du kannst ihnen nicht immer Vertrauen. Also ich fand ihn nicht schlecht, wenn man eben schnell in chatgpt generiert, muss ich zugeben. Es gab schon mal schlechtere Witze."
+    },
+    {
+      "end": 4015590,
+      "speaker": "B",
+      "start": 4012750,
+      "text": "GPT wird auch immer besser im Flachwitze generieren."
+    },
+    {
+      "end": 4046040,
+      "speaker": "A",
+      "start": 4015590,
+      "text": "Naja, also zugegeben, ich hab zur Vorbereitung schon noch ein bisschen mit der rumgespielt, weil ich bin ja auch kein Gott in diesem Thema und also da waren schon ein bisschen Prompt History dabei und ich habe mir auch paar Jepsen Sachen durchgelesen und dann kommt auf sowas. Und wenn du uns immer noch zuhörst und uns einen Gefallen tun möchtest, dann würde ich sagen, teile diese Episode mit deinem Systemadministrator, mit einer Operations Person oder oder oder. Und was mich auch interessieren würde, wo."
+    },
+    {
+      "end": 4052090,
+      "speaker": "B",
+      "start": 4046040,
+      "text": "Ich gesagt habe, dieser Job vom DB Admin stirbt aus, sagst du, die Episode soll an die weitergeleitet werden."
+    },
+    {
+      "end": 4068560,
+      "speaker": "A",
+      "start": 4052320,
+      "text": "Naja, also es gibt auch Leute, die sagen, COBOL Programmierer sterben aus und ich glaube, die haben den höchsten Stundensatz von allen Programmiererinnen. Von daher würde ich sagen, vielleicht ist das auch eine Jobempfehlung, DBA zu werden. Du darfst nicht immer nur Probleme sehen, Wolfgang. Du musst Möglichkeiten und Chancen sehen, positives Denken."
+    },
+    {
+      "end": 4076240,
+      "speaker": "B",
+      "start": 4068960,
+      "text": "Ich sehe vor allem die Chancen für Entwickler innen, wenn sie auch mehr von Datenbanken verstehen sowieso, dann wäre die Welt besser, würde ich vorstellen."
+    },
+    {
+      "end": 4112730,
+      "speaker": "A",
+      "start": 4076320,
+      "text": "Vielen Dank fürs Zuhören und falls du mal in so einen dreckigen Bug, haha, dreckigen Bug, Dirty Read gelaufen bist, komm doch mal in unsere Discord Community und teile uns den Bug mal mit. Geteiltes Leid ist halbes Leid sozusagen. Ich freue mich auf deine Story und wir hören uns nächste Woche wieder. Danke Wolfgang für diese lehrreiche Stunde. Das Problem ist, ich kann jetzt keine Datenbank mehr nutzen, ohne erstmal Konsistenzmodelle, Datenbank zu googeln und mir die Dokumentation darzulesen, wo ich es im Endeffekt wahrscheinlich nicht brauchen werde, da ich nicht bei einer Bank oder Versicherung arbeiten werde. Nun gut, trotzdem danke, wir hören uns nächstes Mal. Bis bald."
+    },
+    {
+      "end": 4113330,
+      "speaker": "B",
+      "start": 4112730,
+      "text": "Bye bye."
+    }
+  ],
+  "webhook_auth": false
+}
