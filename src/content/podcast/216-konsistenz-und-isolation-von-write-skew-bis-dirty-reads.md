@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/b4cd9e42-0689-4e55-98a6-bdfb73001ddd/engineering-kiosk-216-konsistenz-und-isolation-von-write-skew-bis-dirty-reads
 apple_podcasts: https://podcasts.apple.com/us/podcast/216-konsistenz-und-isolation-von-write-skew-bis-dirty-reads/id1603082924?i=1000730501993&uo=4
 audio: https://audio1.redcircle.com/episodes/61d6a11d-2327-4c65-b081-d2a5c3ce2ffe/stream.mp3
 chapter:
