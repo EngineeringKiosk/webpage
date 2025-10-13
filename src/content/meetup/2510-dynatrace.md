@@ -22,8 +22,8 @@ talks:
     linkedin: 'fabian-braun-joyned'
 eventId: '4hdqr78utqib9c6qtvbcuu0khs'
 speakers:
-  female: 1
-  male: 1
+  female: 0
+  male: 2
 participants:
   registered: 85
   present:
