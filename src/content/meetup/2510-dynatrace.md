@@ -20,6 +20,7 @@ talks:
     bio: 'Fabian is the founder and CEO of JOYNED, a company dedicated to building embedded network software for professional audio and real-time applications. With a background spanning embedded systems, networking, and pro audio engineering, he has been deeply involved in the development and standardization of AVB/TSN and Milan, technologies that are shaping the future of deterministic networking. Through JOYNED, Fabian works closely with manufacturers worldwide to make complex networking technologies accessible and reliable, helping create the next generation of audio and embedded devices. His passion lies in bridging the gap between cutting-edge standards and practical, real-world implementations — with a special dedication to audio applications.'
     website: 'www.joyned.at'
     linkedin: 'fabian-braun-joyned'
+    slides: '2510-fabian-ethernet.pdf'
 eventId: '4hdqr78utqib9c6qtvbcuu0khs'
 speakers:
   female: 0
