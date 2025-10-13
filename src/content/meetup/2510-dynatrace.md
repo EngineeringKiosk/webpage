@@ -21,4 +21,14 @@ talks:
     website: 'www.joyned.at'
     linkedin: 'fabian-braun-joyned'
 eventId: '4hdqr78utqib9c6qtvbcuu0khs'
+speakers:
+  female: 1
+  male: 1
+participants:
+  registered: 85
+  present:
+    total: 70
+    male: 60
+    female: 10
+  newParticipants: 39
 ---
