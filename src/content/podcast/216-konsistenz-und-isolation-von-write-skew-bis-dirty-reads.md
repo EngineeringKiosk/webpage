@@ -88,8 +88,8 @@ tags:
 - Datenbanken
 - Software Engineering
 - Engineering Kiosk
-title: "#216 Konsistenz und Isolation: von Write Skew bis Dirty Reads"
-transcript_slim: ""
+title: '#216 Konsistenz und Isolation: von Write Skew bis Dirty Reads'
+transcript_slim: src/data/transcripts/216-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Iz8POuByO9Q
 
 ---
