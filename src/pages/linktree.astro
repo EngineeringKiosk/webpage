@@ -68,7 +68,25 @@ const latestEpisodes = [
 
 			<PodcastEpisodeListing episodes={bestPerformingEpisodes} showAllButton={true} headline="Unsere Best-Of Episoden" description="Neu hier? Unsere Best-Of-Episoden sind der perfekte Einstieg in den Engineering Kiosk – spannende Gespräche über Menschen, Technologie und Engineering-Kultur." />
 
-			<PodcastEpisodeListing episodes={latestEpisodes} showAllButton={false} headline="Unsere drei aktuellsten Episoden" description="Direkt aus dem Studio – die drei aktuellsten Folgen über Software, Teams & Technik, die du nicht verpassen solltest! Jeden Dienstag neu. Überall da wo es Podcasts gibt." />
+			<section id="jetzt-folgen" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
+				<div class="container px-4 mx-auto flex flex-col items-center">
+					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tighter">Lust auf mehr?</h3>
+					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="/podcast/">
+						Alle Podcast Episoden anzeigen
+					</a>
+				</div>
+			</section>
+
+			<PodcastEpisodeListing episodes={latestEpisodes} showAllButton={true} headline="Unsere drei aktuellsten Episoden" description="Direkt aus dem Studio – die drei aktuellsten Folgen über Software, Teams & Technik, die du nicht verpassen solltest! Jeden Dienstag neu. Überall da wo es Podcasts gibt." />
+
+			<section id="jetzt-folgen" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
+				<div class="container px-4 mx-auto flex flex-col items-center">
+					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tighter">Supporte uns mit einem Kaffee ...</h3>
+					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="https://buymeacoffee.com/engineeringkiosk">
+						Buy Me A Coffee ☕
+					</a>
+				</div>
+			</section>
 
 			<Footer />
 		</div>
