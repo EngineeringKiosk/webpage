@@ -13,13 +13,15 @@ export interface Props {
 	description?: string;
 
 	showAllButton?: boolean;
+
+	descriptionChars?: number;
 }
 
 import { getCollection } from "astro:content";
 
 import PodcastEpisodePreview from '../components/PodcastEpisodePreview.astro';
 
-const { numberOfItems, episodes, headline, description, showAllButton } = Astro.props;
+const { numberOfItems, episodes, headline, description, showAllButton, descriptionChars } = Astro.props;
 
 // Build the list of Podcast Episodes
 let allEpisodes = await getCollection("podcast");
@@ -28,7 +30,6 @@ allEpisodes.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.
 // Default wise list all items, only limit it if requested
 let episodesToShow = allEpisodes;
 let mainPage = true;
-let descriptionChars = 300;
 
 let listingDescription = description || 'Jeden Dienstag gibt es eine neue Episode aus dem Kiosk rund um die Themen Engineering-Kultur, Open Source, Menschen, Technologie und verwandtes. Überall da wo es Podcasts gibt.';
 
@@ -36,7 +37,6 @@ let listingDescription = description || 'Jeden Dienstag gibt es eine neue Episod
 if (episodes) {
 	mainPage = false;
 	episodesToShow = [];
-	descriptionChars = -1;
 
 	// check if contains "latest-X" where X is the number of episodes to show
 	const latest = episodes.find((episode) => episode.startsWith('latest'));
