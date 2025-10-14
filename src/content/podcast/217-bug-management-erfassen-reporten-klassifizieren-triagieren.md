@@ -61,11 +61,16 @@ length_second: 3100
 pubDate: 2025-10-14 01:00:45+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/2khSlAkTNMFg0CGZoftlLD
-tags: []
-title: '#217 Bug Management: Erfassen, Reporten, Klassifizieren, Triagieren'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Tech Kultur
+- Engineering Kiosk
+title: "#217 Bug Management: Erfassen, Reporten, Klassifizieren, Triagieren"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=Qo1utlicyD0
 
 ---

@@ -1,0 +1,560 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3041,
+  "audio_url": "https://cloud.inlupus.at/s/93r5TorqPFkSqCt/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95786387,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "fb75afc8-8a3a-4573-854c-dcf2d95b363a",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 62670,
+      "speaker": "A",
+      "start": 3280,
+      "text": "Softwarefehler, Bugs Kennze hasse, wenn du Software schreibst, produzierst du die sogar, musst du dich auf jeden Fall mit rumschlagen, kommst du nicht drumherum. Grund genug, um das Thema Bugmanagement mal genauer anzusehen. Es geht das Finden von Bugs zum Beispiel durch Alpha und Beta Channels und Dogfooding, Bug Definitionen und das gemeinsame Verständnis, die Barrieren, einen Bug zu reporten und ticke Ping Pong, um die richtige Art, eine Bug Triage durchzuführen, bis hin zu Service Level Objectives für Bugs, aber auch den Fakt, dass Bugs eine Halbwertszeit haben, ob Bug Insolvenzen und Zero Bug Policy eigentlich Sinn machen, wie man Zeit und Raum schafft, um Bugs zu fixen, aber auch On Call Root Cause Analysen und Incident für Bugs. Und am Ende schauen wir uns auch nochmal an, ob man Bugs von vornherein verhindern kann und welche Tech Kultur vom Leadership gelebt werden muss und und dass auch für Quality und Bugfixing Arbeit Anerkannung gezeigt werden muss. Viel Content. Lass uns loslegen, viel Spaß."
+    },
+    {
+      "end": 89150,
+      "speaker": "B",
+      "start": 64750,
+      "text": "Lieber Andreas, es ist schön mal deinen Namen in voller Länge auszusprechen. Heute sprechen wir über ein Thema Bugs, das ich nicht ganz verstehe, weil ich mache ja keine Bugs. Bei mir ist ja alles bug free automatisch. Und das Einzige, wenn mal ein Bug drin ist, dann war das die KI, die den Bug introduced hat, nicht ich. Also erklär mir mal, warum wir über Bugs sprechen, weil ich persönlich kann es nicht nachvollziehen, Da du ja mit hoher."
+    },
+    {
+      "end": 123110,
+      "speaker": "A",
+      "start": 89150,
+      "text": "Wahrscheinlichkeit KI Agenten nutzt und ich da natürlich vermehrt mich auch mit beschäftige und sie auch nutze, komme ich immer wieder über den Fall, dass meine Agenten zumindest kontinuierlich so, ich habe dir die Logik jetzt programmiert, dann mache ich okay, dann schreib mal bitte noch ein paar Unittests. So, ich habe jetzt die Unittests, lass mich die ausführen, okay, dann darfst du die jetzt ausführen. Oh, da funktioniert etwas nicht, lass mich mal durchgucken und so weiter. Also du merkst halt schon, dass auch die KI Agenten etliche Male drüber iterieren müssen, wirklich etliche Male und ab und zu geben sie irgendwann auch auf."
+    },
+    {
+      "end": 127150,
+      "speaker": "B",
+      "start": 123110,
+      "text": "Ich sage ja, wenn, sind die Bugs von der KI. Ich persönlich schreibe nie Bugs."
+    },
+    {
+      "end": 132110,
+      "speaker": "A",
+      "start": 127150,
+      "text": "Weißt du, was ich immer sage? Mein Code hat keine Bugs, nur unerwartete Features mit Charakter."
+    },
+    {
+      "end": 137910,
+      "speaker": "B",
+      "start": 133230,
+      "text": "Ja, es kann ja auch nachvollziehen Charakter hat mein Code natürlich immer, Aber du."
+    },
+    {
+      "end": 185570,
+      "speaker": "A",
+      "start": 137910,
+      "text": "Hast natürlich recht, es ist ein Dauerbrenner, denn auch mit KI dieser Mythos von einer bugfreien Software, der der existiert halt nicht. Und jeder, der schon mal wirklich ein paar Jahre im Beruf ist, weiß wirklich, es ist auch nicht relevant, wie viel Zeilen Code deine Logik hat. Ob wir von drei reden oder von drei hundert auch in einer Zeile Code hatte ich teilweise schon zwei Bugs. Besonders wenn ich so versucht habe, sehr intelligent zu wirken und dann so in Python so ein super One Liner geschrieben hab. In Python kannst ja gefühlt ganze Funktionen in einer Zeile packen und ich, ich glaube, die haben teilweise mehr Bugs, als wenn ich die Logik aufdrösel. Deswegen haben wir uns mal gedacht, quatschen wir ein bisschen über das Management von Bugs. Und da kommen wir zur ersten interessanten Frage, Wolfgang. Sollten Bugs überhaupt gemanagt werden?"
+    },
+    {
+      "end": 233320,
+      "speaker": "B",
+      "start": 185570,
+      "text": "Ja, also wenn wir davon ausgehen, dass es Bugs immer geben wird und stimmt ja dann natürlich mit dir überein, Bugs wird es immer geben, zumindest vorläufig mal Und gerade die KI Bugs sind noch härter, würde ich mal sagen. Aber gehen wir mal aufs Management. Brauchen wir Management? Meine Frage wäre, was wäre die Alternative? Also wenn du natürlich nur einen Bug hast alle paar Wochen, den du super schnell fixen kannst, dann brauchst du kein Management. Aber ich vermute mal, jede Person, die irgendwie in der Softwareentwicklung unterwegs ist, kennt dieses Problem, dass sich die Liste der Bugs immer automatisch füllt und größer wird. Habe ich zumindest noch nie erlebt. Aber vielleicht habe ich immer nur in schlechten Teams gearbeitet, dass man das Problem nicht kennt, dass man zu viele Bugs hat und zu wenig Zeit. Und sobald man in dieses Stadium kommt, muss man eigentlich sinnvolles Management betreiben."
+    },
+    {
+      "end": 241000,
+      "speaker": "A",
+      "start": 233400,
+      "text": "Du triffst da eine Annahme. Warum muss man sinnvolles Management betreiben? Warum kann ich nicht einfach sagen, ich deklariere eine Bug Insolvenz und schließe einfach alle."
+    },
+    {
+      "end": 264100,
+      "speaker": "B",
+      "start": 241240,
+      "text": "Ja, das ist ja auch ein Management. Das ist, wenn du die Bugs trackst, hast du ja schon Management und dir dann irgendwann entscheidest, okay, ich werfe alle meine Bugs wieder weg, Ist es ja auch ein Management. Das nicht managen wäre Ja, ich erfasse keine Bugs und mir ist alles egal. Kann ich natürlich auch machen. Ob mein Produkt dann auf lange Sicht erfolgreich ist, ob die User happy sein werden und ob mein Job lang existieren wird, ist dann eine andere Frage."
+    },
+    {
+      "end": 295570,
+      "speaker": "A",
+      "start": 264260,
+      "text": "Du schürst ja schon wieder Angst bei den Entwicklern, ob mein Job lange existieren wird. Naja, aber bevor wir mal in das Management von Bugs einsteigen und bevor wir mal über Techniken sprechen, wie man denn der Maße an Bugs Herr wird, darf man das heute eigentlich noch sagen mit den Gendern? Herr wird, Frau wird, Keine Ahnung. Naja, wie dem auch sei, vielleicht bezieht sich das auch gar nicht auf Gender und ich habe das Sprichwort falsch verstanden. Ist aber auch egal. Wolfgang, wir starten ganz vorne. Wie findest du denn Bugs? Was ist so der Klassiker, wie Bugs zu dir kommen oder wie du Bugs feststellst?"
+    },
+    {
+      "end": 408270,
+      "speaker": "B",
+      "start": 355650,
+      "text": "Ja, fangen wir mal vielleicht ganz ganz vorne an und gehen wir mal vom Schlechtesten aus. Und das ist meiner Meinung nach, wenn der Kunde, die Kundin einen Fehler findet, warum sage ich das Schlechteste? Weil üblicherweise ist damit ja eine negative Erfahrung verknüpft. Das heißt, ich benutze irgendeine App als Benutzer, irgendein Tool, irgendwas passiert, es ist falsch. Ich bin normalerweise enttäuscht und im Idealfall melde ich das Ganze oder ruf beim Support an, was auch immer und der macht dann Ticket auf. Aber im Prinzip ist es schon ganz am Ende der Kette. Also das ist das Schlechteste, wenn ganz am Ende der Kette ein Bug auftritt oder vielleicht auch, wenn gar kein User im Spiel ist, aber irgendwas dann falsch berechnet wird. Also wenn man den Bug nicht frühzeitig erkennt, sondern erst das ganz am Ende passiert. Das würde ich mal sagen, ist so der Klassiker, wenn man keine Vorkehrungen trifft und so wie es halt früher war. Kunde ist enttäuscht, ruft an und sagt, da geht was nicht, das ist blau."
+    },
+    {
+      "end": 445250,
+      "speaker": "A",
+      "start": 408270,
+      "text": "Statt grün, da stimme ich dir zu. Aber es gibt da auch so in dem, was du sagst, ein paar Nuancen. Und zwar würde man sagen, okay, wir sind jetzt eine kleine Firma, wir sind jetzt die Wolfgang und Andi Corporation und wir entwickeln Spezial Software. Das bedeutet, wir sind eine kleine Firma und wir entwickeln Spezial Software sehr aktiv mit dem Kunden. Wir haben eine sehr starke Kundenbeziehung und das ist dann natürlich dann wiederum was anderes, wenn wir dann so eine Art, okay, wir bauen ein Feature, geben das dem Kunden sofort und der Kunde entdeckt dann, das weiß ich jetzt nicht, ob das wirklich so negativ ist, weil man dann natürlich eine sehr enge Kundenbeziehung hat, weil wir dann, wie gesagt, das Produkt mit dem Kunden bauen."
+    },
+    {
+      "end": 492710,
+      "speaker": "B",
+      "start": 445570,
+      "text": "Du klingst wie so ein CEO von einem Startup, der sich keine Tester leisten kann oder keine Leute leisten kann für die Tester, dann sagt wir entwickeln es zusammen mit dem Kunden und der Kunde hat da Mitspracherecht. Ich würde dir zustimmen, wenn es um Features geht, dass der Kunde mitsprechen kann, wenn es um Features geht, in welche Richtung entwickelt man sich? Aber dass man das Testing an die Kunden auslagert, finde ich jetzt weniger gut. Klar ist es nicht so schlimm, wenn der einen Bug findet, wenn er weiß, er verwendet ein Beta Feature oder er ist dafür da, das zu testen an sich. Aber ich würde mal sagen, trotzdem der bessere Weg ist natürlich, du findest einen Bug früher und die Kunden können sich auf das Erlebnis deiner App fokussieren, auf die User Experience und da dann das vielleicht verbessern für ihren Workflow und weniger einen klassischen Bug, wo dann irgendein Button nicht funktioniert."
+    },
+    {
+      "end": 514900,
+      "speaker": "A",
+      "start": 492980,
+      "text": "Du bist wieder sehr populistisch unterwegs, du simplifizierst ja schon fast so wie die FPÖ oder die afd, so nach dem Motto, ich kann mir keine Tester leisten, ich lasse den Kunden testen. Was ist denn, wenn ich schon ein wirklich sophisticated Testmanagement habe und der Kunde trotzdem noch eine kleine Sache findet? Also das ist ja dann schon wieder, das ist ja jetzt schon wieder nicht das simplifizierte Extrem, was du darstellst."
+    },
+    {
+      "end": 528260,
+      "speaker": "B",
+      "start": 515300,
+      "text": "Okay, dann erklär mal, wenn du so ein sophisticated Testsystem davor hast, was machst du denn oder was empfiehlst du da, wenn man jetzt keine unglücklichen Kunden haben will, sondern das perfekte User Erlebnis, also mit möglichst wenig Bugs."
+    },
+    {
+      "end": 657550,
+      "speaker": "A",
+      "start": 528580,
+      "text": "Da geht es nicht um Empfehlungen. Und ich sage ja extra, du sagst, wir können uns keine Tester leisten. Ich sage extra, ich formuliere es ein bisschen anders. Wir sind eine sehr kleine Firma, besonders wenn die sehr kleine Firma eine Steuerfachsoftware schreibt und das mit einem Steuerberater macht, dann hat die Firma gegebenenfalls nicht das komplette Domänenwissen und da werden dann mit hoher Wahrscheinlichkeit auch Steuerberechnungen mal auf Papier nachverzogen und so weiter. Also da kann ich mir schon vorstellen, dass auch ein Bug, der frühzeitig mit dem Kunden entdeckt wird, einen positiven Outcome hat. Aber du hast gerade ein schönes Keyword genannt und zwar Alpha Tester. Und da finde ich nämlich eine Art, wie man frühzeitig Bugs findet, sehr positiv und das auch für Kunden. Und zwar bieten manche Software Systeme ja Alpha oder Beta Testing Channels an, wo du als Kunde sagen kannst, okay, ich switche jetzt von dem Stabilen wollte ich gerade sagen, kennst du noch Stabilo, die natürlich die Stifte habe ich gerade so, naja, mein Gehirn auf jeden Fall. Dann können die Kunden selbst entscheiden, hey, ich wechsel jetzt auf einen Alpha oder Beta Kanal. So hast du natürlich früheren Zugriff auf neuere Features, zum Beispiel unsere To Do Listen App, Remember the Milk kann das, da bin ich auch auf dem Beta Channel und da kriege ich öfter Updates, was ziemlich cool ist. Also der Vorteil ist natürlich ganz klar, du hast frühzeitigen Zugriff auf irgendwelche Features, aber Nachteil ist da, du musst halt ab und zu mal Bugs rechnen und bei großen Firmen gibt es dann teilweise Alpha Beta Testing Programme. Ich weiß noch von der Google Cloud und von Amazon, wenn du da, ich sag mal ein bisschen viel Geld lässt, also auch über eine Million und ich sag mal heavy User eines spezifischen Services bist, dann fragen die Technical Account Manager dich öfters mal, okay, hast du Lust an unserem Alpha oder Beta Programm teilzunehmen für dieses neue Feature? Und dann fügen die dich der Gruppe hinzu und dann hat dein Google Cloud oder Amazon Account dann auch frühzeitig Zugriff auf. Da ist natürlich die Erwartungshaltung, hey Kunde, Achtung, wir haben natürlich unser Bestes geben beim Testing, aber das neue Feature kann Bugs enthalten und ist deswegen noch nicht so genannt GA General available, wobei auch."
+    },
+    {
+      "end": 695440,
+      "speaker": "B",
+      "start": 657550,
+      "text": "Da, ich möchte jetzt nicht zu lange auf diesem Thema rumreiten, aber wie du schon richtig sagst, du musst einen gewissen Level an Qualität erreichen. Also wenn du jetzt Remember the Milk, unseres Task Management App, die wir beide auch verwenden, da erwartest du dir dann schon, dass da nicht plötzlich irgendwelche Tasks verloren gehen. Also klar ist da vielleicht links und rechts irgendwo ein Bug, aber das plötzlich deine ganze Liste gelöscht ist und alle Tasks von der letzten Woche weg sind, das würdest du dir jetzt auch dort nicht erwarten und wahrscheinlich akzeptieren. Also es sind schon gut getestete Features, die dann als nächsten Schritt nach außen gehen, aber davor gibt es schon intern noch mehrere Schritte, bevor das nach außen."
+    },
+    {
+      "end": 729110,
+      "speaker": "A",
+      "start": 695440,
+      "text": "Geht, ein hundert Prozent. Und ich rede ja jetzt auch davon, dass wir ein, ich sag mal Grundsicherungsnetz haben. Ich meine Leute, die uns zuhören, die machen hoffentlich Code Reviews und mit den Code Reviews, da ist natürlich die Grundidee, dass das schon eine Art Qualitätssicherung ist. Natürlich gibt es dann immer wieder die Challenge der Wolfgang knallt mir wieder so einen KI generierten PR um die Ecke, ein tausend zwei hundert Zeilen geupdatet. Wolfgang hat natürlich alles gereviewt. Was mache ich? Natürlich schreibe ich innerhalb von zwei Minuten Looks good to me drunter Approve und merge."
+    },
+    {
+      "end": 733750,
+      "speaker": "B",
+      "start": 729110,
+      "text": "Kannst du jetzt aufhören, da unsere Interne zu verraten, wie qualitativ wir zusammenarbeiten."
+    },
+    {
+      "end": 760320,
+      "speaker": "A",
+      "start": 733750,
+      "text": "Was natürlich bei Code Reviews eine Challenge ist, ist Code Reviews richtig zu machen. Viele Leute gucken nur auf die Logik, die geändert wurde und sehr viele Leute gucken bei Code Reviews nicht auf den Code, der nicht angefasst wurde, mit der Frage, den Code, den du hinzugefügt hast, ist das überhaupt die richtige Stelle, wo das hinzugefügt wurde. Also wenn du Code Reviews nicht richtig machst, werden meines Erachtens nach auch ziemlich viele Architektur Floors in den Code reingepackt."
+    },
+    {
+      "end": 765560,
+      "speaker": "B",
+      "start": 760320,
+      "text": "Würdest du das jetzt als Bug sehen, so ein Architektur Floor, wenn du Bugs definieren müsstest?"
+    },
+    {
+      "end": 864580,
+      "speaker": "A",
+      "start": 765560,
+      "text": "Zur Bug Definition kommen wir gleich und da habe ich eine schöne Story, was ein Bug ist und was nicht. Ist ein Architektur Floor ein Bug? Ich denke nicht. Es kommt immer ganz darauf an, in welchem Kontext limitiert an Architekturflow die Skalierung des Systems und hat dein System die Anforderungen auf bestimmten Zeitevents Black Friday, Cyber Monday hochskaliert zu müssen? Dann könnte man sagen, ja, es ist schon ein Bug, aber ansonsten würde ich sagen, schwierig. Auf jeden Fall gibt es natürlich neben den Code Reviews dann noch automatisiertes Quality Assurance Testing. Da reden wir von den ganz klassischen Unit Integration und End to End Testings, aber auch ganz klassische statische Code Analyse kann sehr, sehr sinnvoll sein, um sehr subtile Bugs hervorzuheben. Beispiel. Manche Programmiersprachen definieren diverse Variablen Scopes. Du hast eine Funktion und in einer Funktion hast du eine if Condition. Da kannst du in manchen Programmiersprachen Variablen mit demselben Namen einmal im Funktions Scope und einmal im if Scope deklarieren und die haben natürlich unterschiedliche Zugriff Scopes und somit unterschiedliche Zugriffs Values, was natürlich zu sehr subtilen Bugs führen kann, wenn du denkst, du greifst auf dieselbe Variable zu. Aber im Speichermanagement sind das wirklich zwei Variablen. Und das ist natürlich dann eine schwierige Thematik, die durch statische Code Analyse sehr einfach rausgeholt werden kann. Und bei diesen ganzen Unit Integrations und speziell End to End Testing hast du natürlich die Herausforderung, dass die natürlich auch sehr flaky sein können und kann sich gegebenenfalls nicht jede Firma leisten, obwohl ich die Aussage inzwischen mit KI auch in Frage stellen würde, denn meiner Erfahrung nach ist KI sehr gut im Testschreiben."
+    },
+    {
+      "end": 937020,
+      "speaker": "B",
+      "start": 864580,
+      "text": "Jetzt hast du schon erwähnt, automatisierte Tests, Code Reviews von Menschen üblicherweise, wobei heutzutage auch nicht mehr nur Menschen vielleicht kombiniert und dann die Test User in der Testgruppe, in der Alpha Testgruppe draußen. Dazwischen gibt es meiner Meinung nach noch eine Testgruppe und zwar sind es die eigenen Mitarbeiter innen nennt sich Dogfooding, also E to your own dog food. Heißt nichts anderes als dass man selbst die Software verwendet, die man auch programmiert oder codet oder entwickelt. Ist natürlich grundsätzlich nicht immer möglich, wenn ich jetzt, keine Ahnung, Remember the Milk entwickle, Task Management Software oder Spotify oder sonst irgendeine Enduser Anwendung, ist es leichter natürlich, als wenn ich jetzt irgendeine Spezialsoftware für Boeing entwickle oder für irgendeine Maschinensteuerung, da wird es dann schwieriger, dass ich die selber verwende im Alltag. Also das ist natürlich nicht immer möglich. Aber wenn ich natürlich so eine Testgruppe habe von eigenen Mitarbeiterinnen, dann habe natürlich den Vorteil, dass die den Kontext viel besser kennen, dass die auch die Software dahinter kennen. Das heißt, die sehen wahrscheinlich sofort, wo ist das Problem, können den Bug schneller erfassen und ich habe natürlich nicht die schlechte User Experience auf der Kundenseite, wenn ihr das eine Stufe früher abfangen kann."
+    },
+    {
+      "end": 1023320,
+      "speaker": "A",
+      "start": 937020,
+      "text": "Meiner Meinung nach ist Dogfooding die Königsklasse, weil man entdeckt nicht nur logische Bugs, man entdeckt auch UI Flaws. Natürlich muss man dann immer ein bisschen differenzieren zwischen du, wenn du die Software selbst schreibst, bist du Power User versus Casual User. Ist natürlich auch eine sehr, sehr schwierige Unterscheidung, aber das ist meines Erachtens nach wirklich die Königsklasse. Und ich habe mal drei Beispiele mitgebracht. Auf der einen Seite kenne ich jemanden, der arbeitet bei Spotify, da weiß ich, dass es von Mitarbeiterinnen erwartet wird, dass man auf dem internen Spotify Release Kandidaten ist oder vielleicht sogar schon auf dem Main Branch. Und was mir da mal bei einem Gespräch angetragen wurde, ist, dass super viele Leute bei Spotify eigentlich Apple bzw. IOS User sind und deswegen der Android Client nicht so viel internes Testing bekommt, wie die iOS Version. Fand ich auch eine schöne Anekdote, aber da sieht man auch, wie schwierig die ganze Thematik eigentlich ist, um eine gute Balance zu kriegen. Dann habe ich mal gelesen, da weiß ich nicht, ob es noch stimmt. Ich weiß gar nicht, ob es die Firma noch wirklich so gibt. Und zwar war es bei Skype. Skype hat neben den freien Features natürlich auch Paid Features gehabt und Skype hat dann sogenannte Free Credits an die Mitarbeiter herausgegeben, um dann auch prä Premium Paid Features zu testen, wie zum Beispiel, man nannte das auf Englisch Landline Calls, also richtige Telefonate ins Festnetz, kann man so sagen. Und da wurde auch mehr oder weniger erwartet, dass die Leute eigentlich primär auch ihr Leben über Skype dann kommunizieren, damit das damit die eigenen Features auch getestet werden."
+    },
+    {
+      "end": 1060810,
+      "speaker": "B",
+      "start": 1023320,
+      "text": "Ich hab mir gedacht, du bist so News Junkie, dabei lebst du unter irgendeinem Stein. Skype wurde ja gerade vor kurzem abgeschaltet. Final Landline Calls. Bist du überhaupt so alt, dass du überhaupt weißt, was das ist überhaupt? Aber gut, ist eine andere Sache. Aber das wäre ja noch schöner, wenn du irgendwie quasi Tester bist für deine Software bei deiner Firma und da musst du auch noch extra irgendwie dafür zahlen. Also würde ich schon sagen, geh davon aus, dass die Firma das irgendwie dann zur Verfügung stellt oder Credits gibt, also bei den ganzen Cloud Plattformen und so, wenn ich dann auch noch da irgendwie tausende Euro zahlen müsste, um irgendwie ein Feature intern zu verwenden. Also ich hoffe mal, ihr macht es bei Cloudflare auch so, oder?"
+    },
+    {
+      "end": 1074470,
+      "speaker": "A",
+      "start": 1061210,
+      "text": "Ja, bei meinem Arbeitgeber nutzen wir unsere eigenen Produkte sehr sogar speziell natürlich diese ganze Developer Platform Features. Also wir haben so was wie AWS Lambda Funktion, nennt sich Workers. Da ist super viel interne Logik drauf."
+    },
+    {
+      "end": 1081070,
+      "speaker": "B",
+      "start": 1074470,
+      "text": "Gebaut, oder Sag mal, du musst aber auch noch durch die interne Schulung oder wenn du euer Produkt mit Produkten erklärst."
+    },
+    {
+      "end": 1146830,
+      "speaker": "A",
+      "start": 1081070,
+      "text": "Naja, also ja und nein, denn ich hatte ja auch bei der Client SDK Folge gesagt, dass manche Produkte einfach so stark sind, dass die Client SDKs einfach kompatibel sind, wie zum Beispiel bei Amazon S. Und da kommen wir jetzt auch so wir haben auch einen Objekt Storage, nennt sich R. Ich weiß auch nicht, warum die ganze Zeit immer nur ein Buchstaben eine Zahl ist. Eine andere Thematik und Punkt ist aber ja, Dog Fooding findet statt, sogar in einem unglaublich großen Umfang, speziell auch in der ddos Protection und in den Web Application Firefox Rules. Das Tolle bei so was ist natürlich, wir müssen teilweise gar nicht so viel Rate Limiting und so was einbauen, weil wir unsere Plattform einfach davor schalten können. Hilft natürlich dann auch in irgendeiner Art und Weise bezüglich des Implementierungsaufwandes. Aber man muss auch ein bisschen aufpassen, denn desto mehr man dog foodet und wenn diese Services dann Outage haben, dann kannst du deine eigenen Services ja nicht mehr nutzen, weil du Dogfotos, die ja, also das ist so ein Henne Ei Problem. Je nachdem welches Produkt du baust, musst du da ein bisschen gucken, dass du immer noch so eine sogenannte Break Glass Procedure hast, damit du den Service, den du dogfudest, auch bug fixen kannst. Aber das ist eine andere Thematik."
+    },
+    {
+      "end": 1163850,
+      "speaker": "B",
+      "start": 1146830,
+      "text": "Jetzt haben wir noch auf unserer Liste da stehen Recruiting und zwar, dass man innerhalb von Recruiting die Kandidatinnen verwendet, um Bugs zu finden. Wir hatten das bei Trivago teilweise auch so kann ich mich noch erinnern. Ich persönlich stehe dem ja sehr kritisch gegenüber. Was sagst du dazu?"
+    },
+    {
+      "end": 1227530,
+      "speaker": "A",
+      "start": 1163930,
+      "text": "Na ja, du musst ein bisschen spezifizieren. Damals bei Trivago war das so das Quality Assurance Team. Also wir hatten ein eigenes Quality Assurance Team auf Basis von manuellen Testern, explorativen Testern, automatisiertem Testing. Je nach je nach Skillset haben die sich da ein bisschen aufgeteilt. Und ich glaube eine Case da die so ähnlich wie Programmierer das natürlich auch machen, den Take Home Test, den es früher gab oder vielleicht immer noch gibt, war es bei dem Hiring für dieses QA Team auch so. Finde einen Bug auf der Webseite und ich muss zugeben, es ist a sehr arbeitsnah, es ist nicht aus der Luft geholt und dann kann man bei dieser Aufgabe natürlich auch sehr viel beobachten, wie wird dieser Bug reported, ist ein Screenshot bei, ist ein Video bei, wie ist die Bug Beschreibung und so weiter. Und als Quality Assurance Team Member sind das genau die Skills, die du haben. Von daher finde ich das einfach gar nicht so falsch. Natürlich kannst du jetzt mit der Argumentation kommen, lässt du da nicht die Arbeit von anderen Leuten machen? Ja, kann man machen, aber es wird ja nicht erwartet, dass ein Feature entwickelt wird, was dann geschippt wird und Millionen macht. Also von daher, ich glaube, da muss man mal die Kirche dort lassen für."
+    },
+    {
+      "end": 1279870,
+      "speaker": "B",
+      "start": 1227530,
+      "text": "QA, verstehe das noch. Ich weiß, dass es auch in vielen anderen Pipelines drin war als Frage. Ich habe das dann umformuliert Finde etwas, was du nicht gut findest auf der Webseite irgendwie ein Feature oder was eher in Richtung UX, je nachdem, da ist man ein bisschen offener, aber man geht natürlich schon davon aus, dass man dann ein sehr buggy Produkt hat. Wenn man die Leute fragt, finde einen Bug. Weil wenn du eine Software hast, die sehr wenig Bugs hat, dann ist es natürlich schon extrem schwierig, auch da was zu finden. Und wenn es darum geht, wie feile ich den Bug, wie definiere ich im Bug und ich habe dann eine Grundvoraussetzung, finde überhaupt einen Bug, das sehr schwierig ist, dann macht es natürlich auch wenig Sinn. Aber es war auch eine andere Zeit. Also heute würde ich das so nicht mehr framen, auch weil die Leute dann sagen, hey, ich mache für euch die Arbeit, was soll das? Und da ist man ja viel kritischer geworden. Es gibt ja auch mittlerweile einige Firmen, die dich sogar zahlen im Recruiting Prozess, wenn er länger dauert."
+    },
+    {
+      "end": 1296230,
+      "speaker": "A",
+      "start": 1279870,
+      "text": "Ja, was ich schon gut finde, ist auch die unformulierte Frage, die du gerade genannt hast, dass man so natürlich den Kandidaten dazu bewegt, sich mit dem Produkt mal auseinanderzusetzen, weil ich habe auch sehr viele Interviews schon geführt, da wussten die Leute noch niemals, was die Firma eigentlich macht und da muss ich dann zugeben, ein bisschen schwach in der heutigen Zeit."
+    },
+    {
+      "end": 1313080,
+      "speaker": "B",
+      "start": 1296230,
+      "text": "Aber lass uns mal vom Recruiting zurückkommen zu den Bugs. Jetzt hast du kurz schon angesprochen, zur Definition der Bugs kommen wir gleich. Jetzt Definitions Lexikon. Andi, bitte schieß mal los. Wie definierst du Bugs? Jetzt hast du schon erzählt, Architektur ist kein Bug. Was ist ein Bug?"
+    },
+    {
+      "end": 1398070,
+      "speaker": "A",
+      "start": 1313080,
+      "text": "Ich würde am liebsten gerne mal so eine Umfrage Innenstadt machen, Was ist ein Software Bug? Und dann kriegst du, glaube ich, sechs Meinungen, wenn du fünf Leute befragst. Ich habe jetzt auch nicht auf Wikipedia nachgeguckt, was es heißt, aber ich würde mal sehr allgemein formuliert sagen, ein Bug ist ein Fehler, der dazu führt, dass ein Softwareprodukt dich nicht korrekt verhält. Und diese Aussage, als ich mir die überlegt habe in der Vorbereitung, habe ich direkt mal Moment mal, wann habe ich eigentlich letztes Mal ein Feature gebaut, wo es überhaupt eine Beschreibung gibt, wie das korrekte Verhalten ist bzw. Sein soll? Natürlich kann man sagen, ja, es gibt eine User Story und blabliblub, die ganzen Thematiken. Aber es gibt ja auch etliche andere Kategorien von Bugs, Concurrency Bugs, Syntax Fehler, arithmetische Fehler, logische Fehler, menschliche Fehler und so weiter und so fort. Und und wenn man dann die Kategorie sogar noch ein bisschen weiter aufdröselt, dann hat man eher so High Level Bugs wie funktionale Bugs oder nicht funktionale Bugs wie zum Beispiel erhöhte Latenz einer Webseite oder eines Shops. Wir wissen ja alle, wenn ein Shop irgendwie drei hundert Millisekunden oder vier hundert Millisekunden lang lädt, dass das dann irgendwie die Conversion des Shops beeinflusst, negativ beeinflusst. Deswegen bin ich mir gar nicht so sicher, ob es immer die korrekte Beschreibung oder die Beschreibung des korrekten Verhaltens so gibt. Deswegen ist es unglaublich schwierig, eine richtige Definition zu finden. Wie siehst du das?"
+    },
+    {
+      "end": 1442820,
+      "speaker": "B",
+      "start": 1398070,
+      "text": "Also ich weiß gar nicht, ob man da eine große Definition braucht oder noch eine Beschreibung braucht, weil auch UX, wenn du sagst, es ist eine schlechte User Experience oder eine falsche, wenn du das sogar so sagen willst, dann wäre das ja vielleicht auch ein Bug. Wenn, keine Ahnung, in einem Formular der falsche Schritt zuerst kommt oder Leute etwas nicht finden, könnte man es ja auch eigentlich als Bug sehen. Und ich würde bei der Definition eher in diese Richtung gehen, sobald der User in irgendeiner Form beeinträchtigt wird, sein Ziel zu erreichen oder es zu langsam erreichen kann. Also wenn der User unglücklich ist, dann hast du eigentlich einen Bug, weil ich würde sogar so weit gehen, wenn das irgendwo versteckt ist und eine falsche Berechnung ist, die aber keinen Einfluss auf den User hat, dann ist es vielleicht auch gar kein Bug."
+    },
+    {
+      "end": 1459360,
+      "speaker": "A",
+      "start": 1442820,
+      "text": "Ja, aber deine Definition gibt auch sehr viel Raum zu sagen, okay, es ist ein fehlendes Feature. Wenn du sagst, okay, der Kunde kommt nicht zu seinem Ziel oder wird irgendwie beeinträchtigt, kann man auch sagen, ja, die Beeinträchtigung ist da, aber du kommst ja zum Ziel, verstehst du?"
+    },
+    {
+      "end": 1495650,
+      "speaker": "B",
+      "start": 1459360,
+      "text": "Also, ja, ja, ich weiß, was du meinst. Wie gesagt, ist alles schwammig, aber ich bin ja ein großer Fan von User centric, dass ich den User immer im Zentrum sehe und wenn der beeinträchtigt ist, dann haben wir ein Problem. Da kommen wir später auch noch drauf mit Triage und ähnlichen Dingen. Aber die Frage ist ja auch, wenn das nur eine ganz kleine Usergruppe betrifft, ist es dann überhaupt ein Bug? Oder wenn es nur die absoluten, keine Ahnung, irgendein Sighting ist, was ganz veraltet ist und von niemandem verwendet wird. Klar kann man ein Bug fallen, ob es dann sinnvoll ist, an dem zu arbeiten, Da kommen wir noch später drauf zu sprechen. Aber genau das ist die Definition."
+    },
+    {
+      "end": 1542590,
+      "speaker": "A",
+      "start": 1495650,
+      "text": "Dann vielleicht nehmen wir mal ein Beispiel. Du hast ein Gebäude, das ist barrierefrei zugänglich. Du hast vorne an der Haustür oder vorne an der Tür des Gebäudes hast du eine Treppe. Und dann komme ich als Rollstuhlfahrer und möchte das Gebäude betreten. Jetzt sagst du ja, wir haben eine Rollstuhlrampe, aber die ist hinter dem Gebäude. Die ist nicht vorne da wo die Treppe ist. Jetzt kannst du sagen, das beeinträchtigt den Rollstuhlfahrer, weil es tut es ja. Du musst ja extra mit dem Rollstuhl dann um das Gebäude, kommst aber barrierefrei ins Gebäude. Jetzt kannst du okay, der User kommt zum Ziel, wird aber behindert. Ist das jetzt ein Bug? Klar, die optimale Lösung wäre, dass du die Rollstuhlrampe oder so einen kleinen mobilen Rollstuhlaufzug irgendwie vorne an der Treppe hast, abhängig von dem Platz. So eine Rampe braucht halt mehr Platz als eine Treppe. Aber ist das ein Bug oder ist das ein fehlendes Feature? Weil das ist ja eigentlich genau das, was du jetzt sagst."
+    },
+    {
+      "end": 1567080,
+      "speaker": "B",
+      "start": 1542830,
+      "text": "Ja, das wird schon sehr philosophisch, aber grundsätzlich würde weder so noch so sehen, weil das, was du jetzt beschreibst, es ist auch so, wie neunzig Prozent der Menschen wahrscheinlich denken, dass das kein Bug ist, obwohl es also bei uns in Österreich zumindest sogar rechtlich vorgeschrieben ist, dass du eine Rampe hast. Schau dir die meisten Geschäfte an. Hat niemand. Gibt auch keine Folgen für die meisten. Also das ist dann eine philosophische Frage."
+    },
+    {
+      "end": 1578279,
+      "speaker": "A",
+      "start": 1567240,
+      "text": "Wenn ich dich sogar mit deinen eigenen Waffen schlagen würde. Wie viele User betrifft das denn eine Annahme, dass wir weniger Rollstuhlfahrer haben als Menschen, die jetzt keine Treppe gehen können?"
+    },
+    {
+      "end": 1642020,
+      "speaker": "B",
+      "start": 1578360,
+      "text": "Ja, rein rechtlich ist es eben kein Problem. Aber wir driften ja auch jetzt schon ein philosophisches Problem eigentlich ab, oder nicht ein philosophisches in ein rechtliches und vielleicht gesellschaftliches. Aber wenn du das jetzt auf die technische Seite schiebst und das habe ich zum Beispiel sehr oft erlebt in meiner Karriere auch diese Leute, bisschen älter sind in unserer Zuhörerschaft, die kennen ja wahrscheinlich den Internet Explorer noch. Und da war es ja immer die Frage, wie viel Prozent von deinen Usern, die diesen alten Internet Explorer haben, unterstützt du und wie weit in die Zukunft unterstützt du das alte Ding noch? Und die hatte auch Kunden, die immer gesagt haben, ich muss diesen Internet Explorer, glaub sieben war es damals oder acht, bin mir gar nicht mehr sicher, weiter unterstützen, weil alle unsere Kunden einfach dieses uralte Ding haben, klassisch in gewissen Industrien, gerade früher war es mit Updates noch nicht so oder ist immer noch nicht so weit, ganz oft. Und da muss man dann einfach entscheiden, wie wichtig ist es für uns und solche Dinge musst du dann einfach ganz klar entscheiden. Und für manche Applications mag es sinnvoll sein, auch null komma drei Prozent der Usergruppe noch weiter zu unterstützen und bei anderen nicht."
+    },
+    {
+      "end": 1666110,
+      "speaker": "A",
+      "start": 1642900,
+      "text": "Ich finde es sehr schön, weil du den Internet Explorer als Beispiel anführst, der natürlich später, also ein paar Jahre später auch die rechtliche Katsche bekommen hat. Aber nun gut, lass uns mal wieder zurück zum Thema Bugs kommen, obwohl wir beim Internet Explorer natürlich auch beim Thema Bug sind, aber das ist eine andere Thematik. Ein wichtiges Kriterium, dass ein Bug überhaupt gefixt wird, ist meines Erachtens nach die Qualität, wie er reportet wird, bzw. Bekommst."
+    },
+    {
+      "end": 1678570,
+      "speaker": "B",
+      "start": 1666110,
+      "text": "Du da ja erstmal alle Informationen, um dann so eine Triage später zu machen, eben zu entscheiden, willst du den alten Internet Explorer unterstützen oder nicht, weil diese ganzen Informationen sind dann essentiell, wie du überhaupt weiterarbeitest danach, ja, oder ob man."
+    },
+    {
+      "end": 1759890,
+      "speaker": "A",
+      "start": 1678570,
+      "text": "Weiterarbeitet, denn schlechte Bugreports produzieren einfach unglaublich viel Arbeit oder teilweise Frustration, was dann zu dem Ergebnis führt, dass diese gegebenenfalls gar nicht gefixt werden, meines Erachtens nach. Gute Reports haben nützliche Metadaten, wie zum Beispiel, welche Version der Software nutze ich, auf welchem Gerät, irgendwelche Systemmetriken bin ich auf einem Windows, auf einem Linux und so weiter oder in welchem Browser bin ich oder welche Browser Version bin ich denn dann. Relevanter Kontext. Ein Beispiel ist jetzt mal, was ich mir rausgepickt habe auf einem Mobilgerät bei Verbindungen mit einem Bluetooth Lautsprecher und schlechter Verbindung auf einem Server in dieser Region während der Mittagspause oder auf einem Debug Bild mit diesen Feature Flex aktiv und so weiter. Also wo bin ich, wie sieht das System gerade aus, unter welchen Konditionen betreibe ich diese Software und das natürlich die ganze Thematik auch einfach zu reproduzieren ist oder zumindestens Reproduktionsschritte hat, denn da würden natürlich auch Screenshots helfen, Videos vielleicht sogar, aber du merkst schon, es erfordert dann auch schon wieder mehr und mehr Aufwand von der Person, die den Report erstellt. Denn ich verfolge die these, desto besser der eigentliche Report ist, desto mehr Informationen in dem Report da sind, umso eher wird dieser gefixt bzw. Umso eher hat das Engineering Team dann auch die Motivation, diese zu fixen. Weil wenn du erst mal da bist, drei Stunden den Bug zu reproduzieren, weiß ich nicht. Also ich verliere die Motivation."
+    },
+    {
+      "end": 1781490,
+      "speaker": "B",
+      "start": 1760050,
+      "text": "Jetzt sind wir in einem lösungsorientierten Podcast, das heißt, wir wollen ja auch immer Lösungen präsentieren und du hast ja auch schon zuerst erwähnt bei Dogfooding Mitarbeiter innen zu motivieren, die Software zu verwenden. Gib einfach Credits aus, also eine Motivation, um das zu erreichen. Was wär denn die Motivation oder die Hilfe, damit du bessere Bug Reports bekommst."
+    },
+    {
+      "end": 1800180,
+      "speaker": "A",
+      "start": 1781570,
+      "text": "Damit ich bessere Bugs Report bekomme. Mir fallen spontan zwei Sachen ein. Auf der einen Seite, dass die Firma dann auch den Leuten das Tooling zur Verfügung stellt. Keine Ahnung, ich sag mal eine Video Screen Software, da gibt es sowas wie Loom oder ähnliches, wo es sehr, sehr einfach wird. Okay, ich mache ein Video Reproduktion und schicke das einfach in irgendeinen Schlack Channel, in einen Slack Channel."
+    },
+    {
+      "end": 1816820,
+      "speaker": "B",
+      "start": 1800180,
+      "text": "Du glaubst übrigens gar nicht, wie viel besser Bugreboards bei mir wurden, nachdem Microsoft ein sinnvolles Screenshot Tool eingeführt hat, wo man auch was zeichnen kann und so weiter. Seitdem bekomme ich von meinen Usern von meiner Software sinnvolle Screenshots. Früher gab es irgendwelche Beschreibungen, funktioniert nicht."
+    },
+    {
+      "end": 1918230,
+      "speaker": "A",
+      "start": 1816820,
+      "text": "Ja, und es macht einen Unterschied, wenn du deine Mitarbeiter und Mitarbeiterinnen, ich sag mal, ein bisschen lehrst, hey, ich meine auf einem Mac gibt es auch ein Screenshot und ein Video Tool und da kannst du relativ schnell Pfeile machen und so weiter. Also wenn du den Leuten das beibringst, dass das in weniger als dreiig Sekunden möglich ist, dann machen die das. Was natürlich auch machen kannst, ist, du kannst so eine Art Ich reporte einen Bug Knopf in deiner Software implementieren. Jeder Designer schreit hässlicher, hässlicher Button, stimmt schon, kannst natürlich sagen, das ist aber eine interne Mitarbeiter Version und deswegen zeigst du diesen Bug Report Button an und der nimmt dann, wenn du da drauf klickst, sofort irgendwie alle nützlichen Metainformationen mit. Den größten Effekt hat meines Erachtens nach, wenn du es sehr einfach mach, Bugs zu reporten. Ich habe gerade schon gesagt, ein Video einfach in Slack Channel packen und so weiter. Jetzt sagst du ja, das sollte aber in einem Ticketsystem sein. Sorry, aber wenn ich eine Jira aufmachen muss und dann auf New Create, New Ticket, da ist die erste Frage, in welches Projekt packe ich das? Denn in der Regel besteht eine Software aus mehreren Software Teams. Jedes Software Team hat ein eigenes Jira Projekt und so weiter. Und ich als User, als Customer Support, ich als Technical Account Manager kenne vielleicht nicht die Organisation des Engineering Teams und deswegen weiß ich gar nicht, welches Team für welche Subkomponente ist. Und ich weiß auch gar nicht, wo der Bug ist, sondern nur der Bug ist in der Software. Also dieses, was du abverlangst von dem Bug Reporter, die internen Abläufe des Engineering Teams zu kennen, finde ich ein bisschen zu viel. Deswegen kann man eher sagen, okay, man hat ein Slack Channel, da können dann die Technical Account Manager oder Sales oder wer auch immer, ist ja völlig egal. Und umso größer die Firma ist, desto komplizierter wird die ganze Thematik. Einfach reinposten und dann kümmert sich irgendwer, dass das in die richtigen Kanäle kommt. Also mach es wirklich einfach, dass die Bug Report, wie du richtig gesagt hast."
+    },
+    {
+      "end": 1994010,
+      "speaker": "B",
+      "start": 1918230,
+      "text": "Es ist auch wichtig, diese Metainformationen zu haben. Früher hat man das eher manuell gemacht. Ich habe die Versionsnummer, ich hab vielleicht den State in irgendeiner Form oder machen Screenshot. So was gibt es natürlich mittlerweile auch, dass man das automatisch einbaut. Da gibt es Libraries dafür auch im Web ein Knopf, man bekommt einen Screenshot, automatisch werden alle Metadaten hinzugefügt, wenn man das automatisch machen will. Und der große Vorteil ist, das ist auch nicht nur für die Enduser, auch die ganzen internen Entwickler innen können das ja verwenden. Das ist so ähnlich wie mit deiner Rampe für Rollstuhlfahrer. Diese Rampe ist auch ganz praktisch für Leute mit einem Kinderwagen oder wenn du dir einen Fuß gebrochen hast. Also das hilft dann mehreren Leuten. Und wenn du ein internes Tooling hast, was automatisch diese Metadaten extrahiert und vielleicht schon in Ticket steckt oder zumindest in deine Zwischenablage und du kannst es im Ticket dann direkt einfügen oder einen Dump, also den aktuellen State in dem File hast, dann hast du alle Informationen, die du gleich mit reinstecken kannst. Und das ermöglicht nicht nur deine Usern, sondern auch deinen internen Entwickler innen viel einfacher Bugs zu reporten und am Ende hast du dann vielleicht auch weniger Zeit Investment weil man denkt immer nur an die Kundinnen, aber vergiss dann oft die interne Crew, die da ja auch dann sehr teure Zeit vor allem auch sparen kann."
+    },
+    {
+      "end": 2060690,
+      "speaker": "A",
+      "start": 1994090,
+      "text": "Jetzt kann man natürlich auf die Idee kommen und GitHub zum Beispiel macht das. Man kann so ein Bug Report Template irgendwie designen. Finde ich prinzipiell eine gute Idee. In der Praxis habe ich schon sehr oft gesehen, dass es ein bisschen übertrieben wird, dass zu viele Informationen angefragt werden, dass es wirklich, ich sag mal, eine Hürde ist, ein Bug zu erstellen und das verdirbt einem dann auch irgendwie die Lust, den Bug zu reporten und dann geht man weg und sagt mir, ach so wichtig ist das doch nicht und dann verbessert man die Software nicht. Also man muss wirklich die Hürde unglaublich niedrig halten, aber auch irgendwie zusehen, dass es natürlich ein hochqualitativer Bug ist. Deswegen so Videos und so weiter finde ich irgendwie relativ cool, weil es ist eine geringe Hürde. Klar hat es dann den Hit auf der anderen Seite, auf der Engineering Seite, dass man das Video screenen muss, man muss gucken, in welcher Version ist das und so. Also ich verstehe schon, aber irgendwo muss der Aufwand ja sein. Aber da ist die Frage, nimmst du als Engineering Team lieber den Aufwand auf dich oder schiebst du den Aufwand auf die Bug Report Seite? Und da muss ich zugeben, dann nehme ich das Engineering Team lieber auf mich und kriege lieber mehr Bug Reports rein, anstatt gar keine mehr."
+    },
+    {
+      "end": 2116120,
+      "speaker": "B",
+      "start": 2060690,
+      "text": "Also ich kenne das, was du erwähnt hast mit den Templates schon auch, dass man da ein bisschen frustriert ist, Aber ich muss auch dazu sagen, bei ganz vielen Open Source Projekten, ich wollte schnell einen Bug einmelden, dann gab es dieses Template und dann habe ich es halt ausgefüllt und am Ende war der Bug Report wirklich viel besser, weil da steht dann halt drin, okay, die Versionsnummer wäre noch wichtig oder die Android Version wäre wichtig und die hätte ich wahrscheinlich sonst vergessen oder halt irgendwie nur grob spezifiziert. Also so ein bisschen Nudging oder Push in die richtige Richtung. Da hilft dir ein Template schon. Und was ich mittlerweile ganz viel mache, ist eigentlich bei Bugri Boards, dass sie die KI wieder zur Hilfe nehmen. Das heißt, ich klatsche dieses Template rein, sprich dann vielleicht in mein Mikrofon, was ich alles gefunden hab, Beschreibung und das macht mir das dann schön in reproducible steps. Klar schaue ich noch mal drüber, aber es ist meistens einfacher und schneller, wenn man das kurz im Mikro redet und das dann sauber formuliert wird, so wie man halt einen schönen Bug Report auch schreibt."
+    },
+    {
+      "end": 2135550,
+      "speaker": "A",
+      "start": 2116670,
+      "text": "Da sprichst du natürlich jetzt über eine Sache. Du als Bugreporter hast natürlich jetzt den Wert gesehen von einem gut definierten Bugreport. Du bist aber auch eine technische Person. Also deswegen, du musst dich natürlich auch in die Position einer nicht technischen Person versetzen, was sehr schwierig ist, weil du bist eine technische Person."
+    },
+    {
+      "end": 2165840,
+      "speaker": "B",
+      "start": 2136110,
+      "text": "Aber bei Open Source Projekten oder so, da werden jetzt eher technische Leute üblicherweise reporten, weil da musst du GitHub bedienen können und du bist ja auch nahe am Code und sonst musst du es eben möglichst leicht machen für deine User. Und da bietet sich halt dann wirklich so ein automatisches Tool an. Also das ist heutzutage wirklich keine Ausrede mehr. Ich hab selber ein, zwei schon mal getestet, du inkludierst die und die haben volle Funktionalität, Screenshot, alle Infos, Metadaten, die du brauchst und es wird sogar noch automatisch reported und in dein Ticketsystem reingesteckt."
+    },
+    {
+      "end": 2215200,
+      "speaker": "A",
+      "start": 2166000,
+      "text": "Du hast wieder nur die eine Brille auf bei Open Source Projekten. Sieh doch mal erfolgreiche Projekte, die vielleicht einen größeren Scope haben, die auch End User haben. Ich rede da jetzt von Home Assistant zum Beispiel. Home Assistant hat eine so große Community, dass auch sehr viel Nicht Techniker es benutzen und Home Assistant macht auch Community Management auf YouTube und auf Twitch und Streams und was weiß der Geier nicht alles. Das bedeutet, mit hoher Wahrscheinlichkeit werden die auch Bug Reports von nicht technischen Usern in YouTube Kommentaren haben und Co. Was dann natürlich auch in irgendeiner Art und Weise ernst genommen wird. Natürlich kommt es darauf an, wie stark baust du das Community Management aus, aber ich gehe mal davon aus, dass Home Assistant und Paperless und wie sie alle heißen so groß geworden sind, weil die solche Reports über andere Plattformen dann auch ernst nehmen. Deswegen würde ich bei dem Argument mit GitHub jetzt nicht mitgehen."
+    },
+    {
+      "end": 2217880,
+      "speaker": "B",
+      "start": 2215200,
+      "text": "Ja, aber dann hast du eigene Systeme üblicherweise."
+    },
+    {
+      "end": 2257060,
+      "speaker": "A",
+      "start": 2217880,
+      "text": "Dafür weiß ich jetzt nicht. Du solltest am besten eigene Systeme und eigene Strukturen dafür mal etablieren, Aber umso größer die ganze Sache wird, da kommt noch eine weitere Herausforderung, die habe ich gerade schon angeschnitten, mit dem Wissen über die interne Organisation bei Engineering Teams und zwar dem klassischen Jira Ping Pong. Ich rede jetzt nicht vom Tischtennis, sondern eigentlich von der Besonderheit in etwas größeren Organisation. Und der geht auf die Wo gehört der Bug eigentlich hin? Was war das Ticket mit den meisten Ping Pongs, was du schon mal in der Hand hattest? Wie oft wurde dieses Ticket zwischen wie viel verschiedenen Teams hin und her gepingponkt, bis einer gesagt Jo, das gehört bei."
+    },
+    {
+      "end": 2270020,
+      "speaker": "B",
+      "start": 2257060,
+      "text": "Mir in die Ecke, ich habe nie mitgezählt. Aber das kann sich auch über Jahre erstrecken. Gibt so alte Tickets, die haben so zwei Jahre History und gehen so von Team zu Team durch die ganze Firma, werden immer schön weitergereicht."
+    },
+    {
+      "end": 2323500,
+      "speaker": "A",
+      "start": 2270100,
+      "text": "Und das ist extrem problematisch, denn auf der einen Seite der Bugreporter erwartet natürlich schon irgendwie, dass der Bug gefixt werden muss. Und wenn der Bugreporter sogar ein Kunden Facing Team ist, ich sag mal Customer Support oder Technical Account Manager oder Pre oder Post Sales oder irgendwie sowas, dann kommt diese Person natürlich auch in irgendeiner Art und Weise in Bredouille. Weil wenn der Kunde ein bisschen organisiert ist, dann fragt der Kunde beim Customer Support nach Was ist denn mit meinem Bug hier? Oder beim Technik Account Manager oder ähnliches. Und wenn der dann sagt jo, du pass auf, wir schieben das hier seit drei Monaten von Team zu Team und keiner weiß, wo es hingehört. Das erzeugt, glaube ich, Frustration auf allen Ecken und Enden. Auf Engineering Seite, weil der Engineering Manager, Product Owner, Product Manager das Ticket die ganze Zeit in der Hand hat und deswegen kontinuierlich anfasst. Auf der Customer Support Sales Seite, weil das Ding nicht gefixt wird. Und auf Kundenseite, was ist das denn für ein Saftladen? Kommt aber immer wieder vor."
+    },
+    {
+      "end": 2362210,
+      "speaker": "B",
+      "start": 2323500,
+      "text": "Also ich habe das eher bei internen Tickets oft erlebt, Aber klar, kann mit Kundentickets auch sein. Und da sind wir eigentlich ja schon genau in diesem Bug Triage Thema drin. Man muss sich wirklich gut überlegen, wie wichtig ist ein Bug, wie viel Leute betrifft und was mache ich dann damit? Und in dem Fall, wenn so ein Ticket drei Monate oder vielleicht sogar zwei Jahre irgendwo im Kreis gegangen ist, dann würde ich jetzt argumentieren, dass dieser Bug vielleicht gar nicht so wichtig ist, weil wenn der Kunde so lang warten kann ohne eine Bugbehebung und es intern irgendwie die Runden geht und es kein Problem gibt, dann könnte man vielleicht den Bug auch löschen. Aber kommt natürlich jetzt immer auf den genauen Kontext drauf an, aber man muss sich genau diesen Kontext überlegen."
+    },
+    {
+      "end": 2389280,
+      "speaker": "A",
+      "start": 2362210,
+      "text": "Ja, bei welche Attribute würdest du denn mit ins Bild nehmen, um einen Bug irgendwie einzuordnen? Weil du hast gerade Backtriage gesagt, das hört sich so an. Ich glaube, es gibt bei Krisenfällen auch eine Art von Patienten Triage, wo dann jemand entscheidet, das hört sich jetzt hart an, aber wenn das Krankenhaus überflutet ist. Ich glaube, das nennt sich wirklich irgendwie Triage. Okay, diese Person behandeln wir jetzt, diese Person behandeln wir später oder für diese Person können wir nichts mehr tun. Ich glaube, sowas gibt es auch."
+    },
+    {
+      "end": 2442870,
+      "speaker": "B",
+      "start": 2389520,
+      "text": "Genau, es gibt die die Triage, die du jetzt erwähnt hast, üblicherweise ist mittlerweile so eine Dreier Triage. Das heißt, braucht sofort Hilfe, kann noch warten und braucht gar keine Hilfe. Das ist meistens, was jetzt so im Rettungswesen angewandt wird Und bei Bugs würde ich es fast ähnlich sehen. Zumindest in der ersten Triage, die man macht, muss man irgendwie sofort reagieren. Wenn man sofort reagieren muss, ist es eigentlich ein Incident und weniger ein klassischer Bug. Muss ich gar nicht reagieren oder will gar nicht reagieren oder ich muss reagieren und dann geht es in die nächste Stufe. Und um diese Sachen zu entscheiden, brauche ich mal wahrscheinlich grundsätzliche Informationen. Einfach wer den Bug natürlich reported hat, gerade wenn es jetzt um Kunden geht, die super wichtig sind. Wenn das ein ganz, ganz wichtiger großer Kunde von mir ist, dann werde ich damit anders verfahren, als wenn es irgendwie ein Open Source Projekt ist. Ich habe tausende User, die es kostenlos verwenden und halt einfach irgendwelche Bugs einmelden."
+    },
+    {
+      "end": 2451860,
+      "speaker": "A",
+      "start": 2442870,
+      "text": "Das bedeutet, du erhöhst die Priorität eines Bugs, obwohl das ein Low Priority Bug ist, anhand des Kundenreporters. Wenn der dein Triple A Kunde ist, ja nicht automatisch."
+    },
+    {
+      "end": 2489890,
+      "speaker": "B",
+      "start": 2451860,
+      "text": "Das ist halt eine Dimension. Ich habe dann sicher noch eine andere Dimension, die ich bewerte, wie den Impact ganz allgemein. Also wie viel Benutzer innen betrifft dieser Bug oder wie viel von meinen wichtigen Kundinnen betrifft dieser Bug oder mein ganz wichtiger Kunde, ist der stark betroffen? Also ist es so ein Nice to have Feature oder Bug oder was auch immer, also so eine Kleinigkeit Oder hat er jetzt wirklich ein Problem und kann nur mehr siebzig Prozent von seinen Arbeiten erledigen und dreiig Prozent ist er geblockt, Dann werde ich natürlich einen höheren Impact sehen von diesem Bug und den höher auch bewerten."
+    },
+    {
+      "end": 2492130,
+      "speaker": "A",
+      "start": 2489890,
+      "text": "Okay, du Nimmst also den User Impact."
+    },
+    {
+      "end": 2509660,
+      "speaker": "B",
+      "start": 2492290,
+      "text": "Mit rein, ganz allgemein Impact, also von einem User, von allen Usern. Wie viele User betrifft der Impact ganz allgemein, also wie viel Prozent meiner Features oder meiner Leistung, die ich erbringe als Softwareprodukt, sind in irgendeiner Form eingeschränkt."
+    },
+    {
+      "end": 2516300,
+      "speaker": "A",
+      "start": 2509660,
+      "text": "Ich würde auch noch zwei andere Attribute mit reinnehmen. Auf der einen Seite die Komplexität des Bugs und auf der zweiten wie einfach kann dieser gefixt werden?"
+    },
+    {
+      "end": 2548870,
+      "speaker": "B",
+      "start": 2516300,
+      "text": "Stimme dir vollkommen zu. Aber das ist für mich schon die nächste Dimension auf der nächsten Ebene, weil wenn ich Bugs herein bekomme, dann muss ich mal eine Triage treffen und da habe ich noch keine Informationen von den Software Teams, weil ich kann ja noch gar nicht beurteilen, zum Beispiel, wie komplex eigentlich ein Bug ist oder wie lange der braucht, um gefixt zu werden. Am Anfang muss ich mal überlegen, wer ist überhaupt zuständig, wie schlimm ist der Bug, zumindest in größeren Firmen, wo das noch mal unterschieden wird, wo es nicht vielleicht gleich der Developer bekommt. Wenn jetzt nur zwei Developer habe, dann werden die sowieso alle Bugs bekommen und das direkt entscheiden."
+    },
+    {
+      "end": 2597950,
+      "speaker": "A",
+      "start": 2548950,
+      "text": "Ja, ich würde sogar, also ich meine, du hast ja, ich sag mal so ein Level System, da kommt ein Bug rein, du sagst, okay, was hat das für ein User Impact und dann die anderen Komplexität des Bugs und wie schnell kann dieser gefixt werden, sind dann anscheinend nachgelagerte Fragen für dich. Für mich sind die aber eher auf dem ersten Level, dass man gegebenenfalls gucken kann, okay, ist das ein Fünf Minuten Ding und sind wir mal ehrlich, nichts in der Softwareentwicklung ist ein Fünf Minuten Ding, aber reden wir hier von einer halben Stunde oder reden wir hier von drei vollen Arbeitstagen? Und da muss ich zugeben, die Person, die dann die Bakteria macht, vielleicht ist es die falsche Person, wenn man da keinen groben Überblick hat. Vielleicht kann man sagen, die Leute, die Person, die Bakteriage machen muss, sollte doch schon eine gewisse Art von Systemintern haben und vielleicht ist das sogar ein Rotationsverfahren durch die Teammitglieder oder Ja, in größeren."
+    },
+    {
+      "end": 2620630,
+      "speaker": "B",
+      "start": 2597950,
+      "text": "Firmen hast du natürlich irgendwo einen Support, der das vielleicht aufnimmt und der hat natürlich nicht das technische Verständnis, hat aber ein gutes Produktverständnis, kennt die Kunden, Kundengrösse oder Kundenbetreuer, solche Funktionen. Also je nachdem, wie groß die Firma ist und wie die Strukturen sind. Aber am Ende brauchst du natürlich alle diese Dimensionen, alle diese Infos um dann zu entscheiden, was du schlussendlich machst."
+    },
+    {
+      "end": 2678540,
+      "speaker": "A",
+      "start": 2620710,
+      "text": "Okay, jetzt kriegst du aber einen Bug rein. Und ich meine, das, was du schon noch irgendwie machen musst, du musst klassifizieren, wie wichtig dieser ist. Jetzt hast du gerade ein paar Attribute genannt, User Impact und so. Ich habe dann die Komplexität des Bugs und wie schnell kann dieser gefixt werden. Aber in der Regel hat dann ein Ticket oder ein Bug ein Prioritätsfeld. Urgent, critical, high, medium, low, super low. Und warum ist das Ding hier überhaupt? In meinem Ticketsystem hast du ein internes Modell? A wie viele Prioritätsstufen es geben sollte und B Wie würdest du diese Prioritätsstufen beschreiben? Denn ich habe immer dieses mentale Modell und diese mentale Wenn ich jetzt zehn Kategorien habe, von eins bis zehn und zehn ist urgent und eins ist low, dann sage ich immer, wo ist denn jetzt wirklich der Unterschied zwischen sechs und sieben in meiner Bewertung? Also desto mehr Stufen ich habe, umso komplizierter wird die ganze Einstufung natürlich. Also bei mir ist weniger ist mehr, könnte man fast sagen. Meine Güte, heute fliegen aber wieder Sprichwörter."
+    },
+    {
+      "end": 2731190,
+      "speaker": "B",
+      "start": 2678860,
+      "text": "Darum bin ich eigentlich ein großer Fan von Triage Systemen, wo es halt üblicherweise drei Kategorien gibt und es eher so agil gelöst wird, dass man auf dem Level entscheidet, in welche Kategorie fällt es. Muss man sich sofort darum kümmern oder kann man sich später darum kümmern. Und dann gibt es vielleicht Prioritäten, die man noch mal nachgelagert draufsetzt. Aber es macht meiner Meinung nach auch keinen Sinn, mehr als drei Prioritäten zu haben, weil sonst hat man genau dieses Problem, wie du sagst, mit den sechs, sieben, acht, wo ist der Unterschied? Und dann gibt es ja üblicherweise einen Product Owner oder irgendwelche Verantwortlichen, die dann noch mal zusammen mit dem Team, üblicherweise in einem Sprint Planning, in einem wöchentlichen Meeting, wie du das auch immer nennst, dann noch mal entscheiden, okay, was gehen wir als nächstes an und vielleicht dann auch die Bugs untereinander priorisieren. Was sind die wichtigsten in Relation zu den anderen Bugs?"
+    },
+    {
+      "end": 2833400,
+      "speaker": "A",
+      "start": 2731350,
+      "text": "Ja, ich bin immer hin und hergerissen zwischen drei und vier Prioritäten und ein Modell habe ich gefunden, was durch vier Prioritäten ausgedrückt wird. Und das finde ich eigentlich recht logisch. Und zwar sagt man OK, Priorität null, das sind so in der Regel interne Ausfälle, wie zum Beispiel die Entwicklung ist blockiert und das Unternehmen kann nicht arbeiten. Warum ist das P relativ einfach, wenn du ein Incident hast und die Entwicklung ist blockiert, kannst du diesen instant nicht beheben. Und immer wenn du das System nicht weiterentwickeln kannst oder nicht anfassen kannst, dann bist du in einer ganz schlichten Situation. Deswegen ist das P. P sind dann externe Ausfälle, also dass die Plattform, die App, das System einfach gerade nicht verwendet werden kann, handelt sich oft dann irgendwie vielleicht um Backend Probleme oder ähnliches. Also ich sag mal, das sind so diese Incidents oder diese Bugs, die dann meist auf irgendeiner Status Page sichtbar sind. P wären dann Fehler, die du zwar noch in deiner Development Pipeline hast, die dann eher so Release Blocker sind, kann natürlich auch schon aus einer bereits ausgelieferten Version sein, aber Fehler, wo du sagst, okay, die müssen wir beheben, bevor wir die nächste Version schippen oder wenn diese Fehler noch nicht ausgeliefert wurden, das sind Fehler, die wir beheben müssen, bevor wir die nächste Version schippen. Und P ist dann nicht blockierende Probleme, also Fehler, die, ich sag mal, keine kritischen Auswirkungen auf das Produkt oder auf den Benutzer. Und das muss ich zugeben, das ist eine relativ klare Kategorisierung. Interne Ausfälle, externe Ausfälle, Ausfälle, ich nenne das mit P jetzt mal Release Blocker oder ähnliches, die dann sagen, okay, all hands on deck und dann P alles weitere, weil oft ist die Kategorisierung zwischen High, Middle und Low auch schon so ein bisschen schwammig."
+    },
+    {
+      "end": 2850440,
+      "speaker": "B",
+      "start": 2833400,
+      "text": "Wie du weißt, bin ich kein großer Fan von Modellen und eigentlich auch von dem wieder nicht von diesen vier Stufen, weil das eigentlich sehr einschränkt, weil wenn da jetzt zum Beispiel irgendeinen Bug betrachtet, der in der Applikation aktuell vorhanden ist und ein kleiner Teil nicht funktioniert, wo bildet dann den ab?"
+    },
+    {
+      "end": 2856400,
+      "speaker": "A",
+      "start": 2850440,
+      "text": "Ich würde ihn als P als nicht blockierendes Problem klassifizieren, als Low, er blockiert."
+    },
+    {
+      "end": 2859920,
+      "speaker": "B",
+      "start": 2856400,
+      "text": "Ja einen Teil von meiner Applikation, es funktioniert ja ein kleiner Teil nicht."
+    },
+    {
+      "end": 2891710,
+      "speaker": "A",
+      "start": 2860000,
+      "text": "Ja, dann würde ich gucken, okay, was ist der User Impact? Und dann kannst du als Bactriage Mensch entscheiden, okay, ist das jetzt einfach Blocker, den du als Release Blocker, den du fixen musst, bevor du das nächste Release schippst oder die nächste Version? Oder sagst du, das ist irgendwie ein Scrollverhalten, was fehlerhaft ist in der Hilfe Funktion, das ist ein nicht blockierendes Problem. Also im Endeffekt wirst du bei jeder Art von Priorisierung diese Art von Entscheidung treffen müssen. Es gibt immer Gründe, für die eine Kategorisierung und für die andere Kategorisierung, weil."
+    },
+    {
+      "end": 2904480,
+      "speaker": "B",
+      "start": 2891710,
+      "text": "Eigentlich ist es ja mehr eine Kategorisierung und keine Priorisierung. Also ist es ein interner Ausfall, ist es ein externer Ausfall oder die zwei wichtig, nicht wichtiger Bug. Also eigentlich habe ich da zwei Kategorien in einer."
+    },
+    {
+      "end": 2909520,
+      "speaker": "A",
+      "start": 2904800,
+      "text": "Ja, okay, aber Critical, High, Medium und Low ist ja nichts anderes."
+    },
+    {
+      "end": 2933400,
+      "speaker": "B",
+      "start": 2909840,
+      "text": "Ja, ja, aber dort werden in dem Fall waren jetzt wieder verschiedene Kategorien vermischt, weil ich zwischen intern und extern unterscheide. Interne Systeme, externe Systeme und dann noch eine Bug Kategorie. Also ihr habt irgendwie zwei Dimensionen in einer Metrik oder in einer Kategorisierung oder Priorisierung und es finde ich dann wieder unsauber. Also so ganz kann ich mit diesen nicht mitgehen, obwohl das große Firmen auch oft so machen."
+    },
+    {
+      "end": 2983460,
+      "speaker": "A",
+      "start": 2933400,
+      "text": "Ja, bei High, Medium und Low ist auch eine Summe an zwei bis drei Attributen in einem. Es ist eine Vereinfachung, dass du nicht verschiedene Elemente und Attribute einzeln aufführen musst. Der CVE Score bei Security ist nichts anderes. Du simplifizierst das mit einem CVE Score von neunter juni, neunter juni ist ja keine. Es ist zwar eine einfache Zahl, aber hintendran setzt sich dieser Score aus vier, fünf, sechs verschiedenen Sachen zusammen. Und ich meine, im Endeffekt ist das nichts anderes. Eine Priorisierung ist eine Simplifizierung von mehreren Attributen, wie zum Beispiel User Impact und Revenue Impact und wie viel Kundenreports habe ich da bekommen und so weiter. Ich verstehe dein Gedankengang mit diesen verschiedenen Dimensionen, aber das ist eine Priorität, nichts anderes. Und wenn du jetzt erwachsen wärst, würdest du sagen, Andy, du hast recht, ich habe Unrecht."
+    },
+    {
+      "end": 3003110,
+      "speaker": "B",
+      "start": 2983540,
+      "text": "Bin immer noch kein großer Fan davon, weil für mich gibt es eigentlich nur Sachen, an denen ich sofort arbeiten muss oder nicht. Aber gut, es ist eine Einstellungssache und philosophische Diskussion natürlich und da gibt es ganz viele Herangehensweisen, würde ich mal sagen. Aber umso komplexer die Kategorisierung, umso unübersichtlicher wird das ganze Feld meiner Meinung nach."
+    },
+    {
+      "end": 3012350,
+      "speaker": "A",
+      "start": 3003110,
+      "text": "Wie gesagt, ich denke, die Priorisierung, Kategorisierung, die kann nur falsch sein, weil auf Basis von aus welcher Brille du auf den Bug schaust, ist es für dich wichtiger oder nicht wichtiger."
+    },
+    {
+      "end": 3015330,
+      "speaker": "B",
+      "start": 3012990,
+      "text": "Alle Modelle sind falsch, aber manche sind hilfreich."
+    },
+    {
+      "end": 3047230,
+      "speaker": "A",
+      "start": 3015640,
+      "text": "Ja, ja, ganz genau. Und im Endeffekt kannst du auch sagen, hey, pass mal auf, wir machen mal einen guten AI Hackathon und da schreiben wir jetzt eine AI, die die Bugs priorisiert oder kategorisiert vielleicht hilft das sogar den persönlichen Bias etwas zu entfernen, weil du natürlich ein Software Team bist, was schon sehr lange Bug Tracking macht und bereits eine große Historie von kategorisierten Bugs hat. Und das ist natürlich deine Trainingsdaten für dein kleines Modell zur Kategorisierung. Also vielleicht ist das mal ein gutes AI Hackathon Projekt, was du mit deinem Team nächste Woche mal kurz hacken."
+    },
+    {
+      "end": 3065900,
+      "speaker": "B",
+      "start": 3047860,
+      "text": "So jetzt kommen wir aber mal zurück zu dem eigentlichen Problem, was ich ganz am Anfang erwähnt habe. Meine Liste an Bugs füllt sich und füllt sich und füllt sich und wird immer größer sein oder fast immer größer sein als die Zeit, die ich zur Verfügung habe. Wie gehe ich eigentlich mit dem tagtäglichen Alltagsproblem um, dass sie ganz viele Bugs fixen müsste?"
+    },
+    {
+      "end": 3094400,
+      "speaker": "A",
+      "start": 3065900,
+      "text": "Wir schauen jetzt mal hinter die Kulissen. OK, zugegeben, vielleicht haben wir uns da etwas übernommen, es war doch etwas zu viel Content für eine Stadt, deswegen machen wir in der nächsten Episode einfach weiter mit dem Thema. Da gehts dann tiefer rein in die Themen Bug Insolvenzen, Zero Bug Policy, Zeit und Raum zu schaffen um Bugs zu fixen, Root Cause Analysen und Incident für Bugs, aber auch das Thema Leadership, Anerkennung und Tech Kultur. Wenn dich all das interessiert, einfach in die nächste Episode einschalten. Danke dir, bis bald."
+    }
+  ],
+  "webhook_auth": false
+}
