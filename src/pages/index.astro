@@ -23,6 +23,7 @@ import testimonialYanivPreiss from "../images/testimonials/yaniv-preiss.jpeg";
 import headerImageAndyWolfiLounge from "../images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg";
 
 import podcastInfo from '../data/podcast-info.json';
+import bestOfEpisodes from '../data/episodes-best-of.json';
 
 let title = 'Engineering Kiosk - Der Software-Engineering-Podcast';
 let description = 'Der deutschsprachige Software-Engineering-Podcast mit Wolfgang Gassler und Andy Grunwald rund um die Themen Engineering-Kultur, Open Source und Technologie.';
@@ -60,7 +61,13 @@ if (nextMeetup && nextMeetup.date) {
 	nextMeetupDate = nextMeetup.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
 }
 
-
+let bestPerformingEpisodes = [
+  ...bestOfEpisodes
+    .sort((a, b) => a.rank - b.rank) 	// Sort by rank
+    .map(item => item.title)         	// Only get the titles
+];
+// Limit to 6 items
+bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 ---
 
 <html lang="de">
@@ -280,7 +287,9 @@ if (nextMeetup && nextMeetup.date) {
 				</div>
 			</section>
 
-			<PodcastEpisodeListing numberOfItems={6}  showAllButton={true} headline="Die aktuellsten Podcast Episoden" />
+			<PodcastEpisodeListing numberOfItems={3}  showAllButton={true} headline="Die aktuellsten Podcast Episoden" />
+
+			<PodcastEpisodeListing episodes={bestPerformingEpisodes} showAllButton={true} headline="Unsere Best-Of Episoden" description="Neu hier? Unsere Best-Of-Episoden sind der perfekte Einstieg in den Engineering Kiosk – spannende Gespräche über Menschen, Technologie und Engineering-Kultur." />
 
 			<!--
 			<BlogPostListing numberOfItems="6" />
