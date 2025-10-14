@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/513251c6-de48-40c9-916c-95d98c108465/engineering-kiosk-217-bug-management-erfassen-reporten-klassifizieren-triagieren
 apple_podcasts: https://podcasts.apple.com/us/podcast/217-bug-management-erfassen-reporten-klassifizieren/id1603082924?i=1000731724999&uo=4
 audio: https://audio1.redcircle.com/episodes/a7399e12-7b61-4ef8-b7a0-ffdd18f55eb4/stream.mp3
 chapter:
