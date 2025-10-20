@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+import imageWolfgangGassler from "../../images/teams/wolfgang-gassler-profile.jpg";
+
+let title = 'Wolfgang Gassler, Podcast Host - Engineering Kiosk';
+let description = 'Freelancer und Consultant mit einem Interesse in Menschen, Tech-Kultur, Datenbank und Skalierung, Product Entwicklung und Usability sowie Recommender Systems aus Innsbruck.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/teams/wolfgang-gassler-profile.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap lg:items-start -mx-4">
+						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+							<div class="relative mx-auto md:ml-0 max-w-max">
+								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+								<Image class="rounded-3xl" src={imageWolfgangGassler} alt="Wolfgang Gassler" title="Wolfgang Gassler" />
+							</div>
+						</div>
+						<div class="w-full md:w-1/2 px-4">
+							<div class="flex items-center mb-4">
+								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Der aus den Bergen</span>
+								<a class="inline-block mr-6 hover:opacity-80" href="https://github.com/woolfg">
+									<img src="/images/brands/github-gray.svg" alt="Wolfgang Gassler auf GitHub" />
+								</a>
+								<a class="inline-block mr-6 hover:opacity-80" href="https://twitter.com/schafele">
+									<img src="/images/brands/twitter.svg" alt="Wolfgang Gassler auf twitter" />
+								</a>
+								<a class="inline-block mr-6 hover:opacity-80" href="https://linkedin.com/in/wolfganggassler">
+									<img src="/images/brands/linkedin.svg" alt="Wolfgang Gassler auf LinkedIn" />
+								</a>
+								<a class="inline-block hover:opacity-80" href="https://wolfgang.gassler.org/">
+									<img src="/images/elements/icon-website.svg" height="33" width="33" alt="Website von Wolfgang Gassler" />
+								</a>
+							</div>
+							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Christoph Stanger</h1>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								<a href="https://gassler.org/consulting" class="underline hover:no-underline">Freelancer und Consultant</a> mit Interesse an Menschen, Tech &amp; Team-Kultur, Datenbank und Skalierung, Produkt Entwicklung und Usability sowie Recommender Systeme. Ehemals Engineering Manager bei <a
+									href="https://company.trivago.com/"
+									class="underline hover:no-underline">trivago</a
+								> und auch viele Jahre in Lehre &amp; Forschung in der <a href="https://dbis-informatik.uibk.ac.at/" class="underline hover:no-underline">Forschungsgruppe Datenbanken und Informationssysteme an der Universität Innsbruck (Österreich)</a>. Gerne unterwegs (auch weit weg von den Bergen
+								🌊 ). Ursprünglich aus Innsbruck (ganz nah an den Bergen ⛰️ ).
+							</p>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">Freiwilliger Feuerwehrmann und leidenschaftlicher Kletterer. Verbringt einen Großteil seiner Freizeit in der Natur und in Zügen, um die Welt zu sehen. Legt sehr viel Wert auf geselliges Essen.</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
+								Neben dem <a href="/">Engineering Kiosk</a> betreibt Wolfgang mit Freunden als Side Project <a href="https://www.f-online.app/" class="underline hover:no-underline">F-Online.at</a>, die größte E-Learning Plattform für die österreichische Führerscheinprüfung.
+							</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium mt-4">
+								<a href="/kiosk-betreiber/#workwithus" class="text-yellow-500">Arbeite mit uns...</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>

@@ -10,10 +10,12 @@ export interface Props {
 	twitter: string;
 	linkedin: string;
 	website: string;
+	podcastHost?: boolean;
+	meetupHost?: boolean;
 	profileLink: string;
 }
 
-const { avatar, name, subtitle, description, github, twitter, linkedin, website, profileLink } = Astro.props;
+const { avatar, name, subtitle, description, github, twitter, linkedin, website, podcastHost, meetupHost, profileLink } = Astro.props;
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 
 // TODO We might want to migrate the Hosts to a "People" Content Collection
@@ -33,19 +35,51 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 			{subtitle}
 		</span>
 		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+		<div class="mb-8 flex items-center justify-center">
+			{
+				podcastHost && (
+					<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+						Podcast Host
+					</span>
+				)
+			}
+			{
+				meetupHost && (
+					<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+						Meetup Host
+					</span>
+				)
+			}
+		</div>
 		<div class="flex items-center justify-center">
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
-				<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
-			</a>
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
-				<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
-			</a>
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
-				<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
-			</a>
-			<a class="inline-block hover:opacity-80" href={website}>
-				<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
-			</a>
+			{
+				github && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
+						<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
+					</a>
+				)
+			}
+			{
+				twitter && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
+						<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
+					</a>
+				)
+			}
+			{
+				linkedin && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
+						<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
+					</a>
+				)
+			}
+			{
+				website && (
+					<a class="inline-block hover:opacity-80" href={website}>
+						<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
+					</a>
+				)
+			}
 		</div>
 	</div>
 </div>
