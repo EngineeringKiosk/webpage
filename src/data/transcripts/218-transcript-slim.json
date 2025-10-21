@@ -1,0 +1,1124 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4073,
+  "audio_url": "https://cloud.inlupus.at/s/NWYKccJ2RXCESNq/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9584313,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "688b0735-4ebd-464d-848b-391d815e0c01",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 48500,
+      "speaker": "A",
+      "start": 3040,
+      "text": "Softwarefehler Bugs känze und weil du damit irgendwie jeden Tag zu tun hast, dachten wir, bauen wir doch gleich eine zweite Episode um das Thema. OK, zugegeben, das Thema gibt auch einfach sehr viel her. Das hier also ist Teil zwei unserer Bugmanagement Episode. In Teil eins haben wir uns um die Themen Bugs finden, zum Beispiel durch Alpha Beta Channels und Dogfooding, Reporting von Bugs und Bug Triage gekümmert. In dieser Episode, Teil zwei dreht sich alles um die Halbwertszeit von Bugs, Bug Insolvenzen und Zero Bug Policies, wie man Zeit und Raum schafft, damit die Bugs auch gefixt werden können, Root Cause Analysen und Incidents für Bugs, wie man Bugs auch in Produktion noch verhindern kann, sowie die Tech Kultur und Leadership Anerkennung, wenn es um Quality und Bug Fixing Arbeit geht. Wir legen los, viel Spaß."
+    },
+    {
+      "end": 68580,
+      "speaker": "B",
+      "start": 50340,
+      "text": "So, jetzt kommen wir aber mal zurück zu dem eigentlichen Problem, was ich ganz am Anfang erwähnt habe. Meine Liste an Bugs füllt sich und füllt sich und füllt sich und wird immer größer sein oder fast immer größer sein als die Zeit, die ich zur Verfügung habe. Wie gehe ich eigentlich mit dem tagtäglichen Alltagsproblem um, dass ich ganz viele Bugs fixen müsste?"
+    },
+    {
+      "end": 89960,
+      "speaker": "A",
+      "start": 68580,
+      "text": "Wir schauen jetzt mal hinter die Kulissen und nehmen mal deine Annahme raus und die Annahme Ich muss einen Bug fixen. Meine Frage Musst du diesen Bug fixen, denn ich denke, Bugs haben eine Halbwertszeit. Ich denke, es ist mehr Aufwand, einen Bug zu fixen, der vor einem Jahr reported wurde, als einen, der gestern reported wurde. Der Grund ist die Software ändert sich, der Kontext verschwindet."
+    },
+    {
+      "end": 97920,
+      "speaker": "B",
+      "start": 90280,
+      "text": "Ja, aber dann sagst du, dass man noch früher den Bug fixen muss. Noch mehr Druck, dass ich sofort den Bug behebe, weil er aktuell leichter zu beheben ist."
+    },
+    {
+      "end": 119080,
+      "speaker": "A",
+      "start": 97920,
+      "text": "Naja, das Optimum wäre natürlich, der Bug kommt rein und du fixt das. Aber du redest ja jetzt von einem langen Backlog, was du bereits angehäuft hast. Und da könnte man jetzt sagen, als ganz brutale Vorgehensweise, ich lösche alle Bugs und sage, was wichtig ist, kommt wieder. Oder ich kategorisiere sogar und ich lösche nur alle Low Priority Bugs. Dann habe ich hoffentlich ein deutlich leereres Backlog."
+    },
+    {
+      "end": 129000,
+      "speaker": "B",
+      "start": 119080,
+      "text": "Aber was machst du dann mit den ganzen Kunden? Du hast die ja zuerst erwähnt, irgendwer hat die reported und die sind jetzt alle ziemlich frustriert, wenn nicht mal ihre Bug Nummer mehr vorhanden ist."
+    },
+    {
+      "end": 199630,
+      "speaker": "A",
+      "start": 129000,
+      "text": "Naja, was du auch machen kannst, du kannst halt eine Analyse. Fahren die Kunden, die den Bug reported haben, sind die überhaupt noch meine Kunden oder sind die schon gechört? Also du kannst es ja weiter filtern, dass du die Kunden nicht frustrierst. Du kannst auch sagen, wann hat der Kunde das letzte Mal nachgefragt? Vielleicht hat er das einfach vor einem Jahr gereported und gar nicht mehr nachgefragt. Vielleicht hat er es gar nicht mehr auf dem Schirm. Also prinzipiell ist natürlich die Gefahr, wenn du Bugs löscht, dass du die Leute, die den Bug reported haben, dass du die frustrierst und dass sie dann am Ende der Story aufhören, Bugs überhaupt zu reporten. Du kannst auch so eine Unterform machen und sagen, du deklarierst eine Bug Insolvenz und sagst, okay, du löscht nur Bugs, die in den Sätzen der sechs Monaten keine Updates bekommen haben oder ähnliches. Kann man machen. Ich persönlich bin da kein Fan von, denn ich halte dieses Frustrationslevel für real und ich hatte das selbst schon. Ich bin auch eigentlich kein Fan davon bei GitHub, dass du so eine Automation hast, die sagt, dieses Ticket ist stale und wird deswegen automatisch geschlossen, weil das frustriert mich. Ich weiß ganz genau, hier sind mehr Tickets, als das Engineering Team behandeln kann. Es macht für mich keinen Sinn, da mehr was zu reporten. Also ich habe diese Frustration schon selbst erfahren."
+    },
+    {
+      "end": 260399,
+      "speaker": "B",
+      "start": 199790,
+      "text": "Du kannst natürlich auch einfach eine Message schreiben, hey, hier ist schon lange nichts mehr passiert, ist dieser Bug noch relevant? Also es wäre so eine abgeschwächte Variante. Und dann kann man immer noch entscheiden auf allen Seiten, also alle, die beteiligt sind, ist das überhaupt noch relevant? Üblicherweise, wenn man jetzt weggeht vom Open Source Bereich, wo ich direkt auf Repository oder auf den Bug Tracker Zugriff habe, üblicherweise ist es ja getrennt und der Kunde sieht ja nicht alle Informationen auf einem Issue von außen oder hat vielleicht überhaupt keinen Zugriff. Also der hat es irgendwann reported, hat eine E Mail bekommen und that's it. Der kann vielleicht gar nicht auf irgendein Issue gehen. Und dann hast du natürlich auch andere Möglichkeiten, weil wahrscheinlich, wenn der Kunde das ein Jahr lang nicht reportet hat oder vielleicht gar nicht mehr Kunde ist, dann löscht das Ding einfach. Und gerade im kleineren Umfeld, Startup Bereich würde ich auch sagen, weg mit dem alten Zeug. Also du bist da so agil und da hat sich schon zehnmal was geändert an der Software. Da kann man ruhig intensiv Bugs löschen und aufräumen."
+    },
+    {
+      "end": 461630,
+      "speaker": "A",
+      "start": 320399,
+      "text": "Du kannst natürlich auch eine Teamaktivität draus machen. Du kannst halt sagen, okay, du hast ein Team von vier Leuten und dann splittest du in zwei mal zwei Gruppen auf und sagst, okay, du nimmst dir zwei Stunden Zeit und gehst als Team durch das Backlog und versuchst die Bugs zu reproduzieren. Du versuchst sie nur zu reproduzieren und wenn du es geschafft hast, dann updatest du mit deinen Informationen das Bug Ticket und wenn du es nicht geschafft hast, erschließt du den Bug. Das kannst du natürlich auch machen, ist, glaube ich ein gutes Zeitinvestment, ist so ein Mittelweg und dann hast du den Kontext und vielleicht sagt jemand, hey, das ist eine dreiig Minuten Sache, bam, fixen wir direkt. Eine Sache, die mir noch wichtig ist zu erwähnen, ist die Thematik, dass Leute Bugs deklarieren und es eigentlich ein Missing Feature ist. Denn da habe ich einen schönen Vergleich in der Vorbereitung gelesen und zwar zwischen sogenannter KTL Work, also Keep the Lights On und ab und zu auch mal, ich sag mal, Bugs, die dann zu größerem Refactoring führen. Und der Vergleich war, deine Wartungsarbeiten an deinem Auto ist eher so KTLO Work, also du packst da neue Reifen drauf, du füllst das Öl nach und so weiter. Das sind ja alles keine Dinge, die etwas verbessern, sondern du verhinderst nur, dass das K, dass das K, dass das Auto kaputt geht und du verlängerst irgendwie die Lebenszeit des Autos, dass du es einfach weiter nutzen kannst. Aber du setzt da jetzt keine neuen Felgen drauf und das neue Felgen ist jetzt fürs Refactory, wohingegen Software so mehr wie Gartenarbeit ist. Gartenarbeit kannst du kein KTLO machen, weil du pflanzt die Pflanzen und du machst vielleicht die Rasenkante ein bisschen rund, du designst deinen Garten, dann kümmerst du dich natürlich irgendwie um die Pflanzen, du wässerst sie, du schneidest sie zurück. Ist das vielleicht KTLO? Ja, vielleicht so ein bisschen, aber im Endeffekt musst du dann teilweise auch mal Refaktorierungsarbeiten in deinem Garten machen, wie zum Beispiel Unkraut ziehen oder deine Wasserleitung ist geplatzt und so weiter. Also Software ist so mehr wie der Garten und weniger wie das Auto und deswegen ist halt echt irgendwie, glaube ich, schwierig und vielleicht geht es auch wieder zurück auf die Bug Definition, was ist jetzt wirklich ein Bug und was ist jetzt kein Bug? Und dass du ein einzelnes Verständnis hast, was ist wirklich notwendig, was ist KTLO, was ist notwendig, um die Software weiter am Leben zu halten und was ist mehr Gärtnerei arbeiten?"
+    },
+    {
+      "end": 509190,
+      "speaker": "B",
+      "start": 461630,
+      "text": "Wie heißt so schön jeder Vergleich hinkt oder wie war das? Also heute ist die Episode der schlechten Vergleiche meiner Meinung nach, aber ich verstehe grundsätzlich, was du meinst. Meine Herangehensweise ist eher, muss ich das überhaupt groß unterscheiden, weil am Ende habe ich meinen User im Auge und der sollte eine gute Experience haben. Und ob das jetzt ein Bug ist, der irgendwas beeinträchtigt oder ein absolut kritisches Feature, was fehlt, ist im Endeffekt eigentlich egal, Ist ähnlich wichtig meiner Meinung nach. Aber natürlich, wenn du klassisch, wir hatten das ja auch mal in einer Episode, wenn man prozentuelle Aufteilung macht, was ist KTLO Work, was ist neue Feature Work, ihr habt da irgendwie eine siebzig dreiig Regel, sechzig vierzig Regel, dann ist es vielleicht wichtig, das natürlich so zu kategorisieren. Das stimmt natürlich schon, ja, das ist."
+    },
+    {
+      "end": 523840,
+      "speaker": "A",
+      "start": 509190,
+      "text": "Fair, was du sagst und ich stimme dir auch zu, dass du den User im Auge behalten musst, aber du musst im Endeffekt eine Entscheidung treffen, besonders wenn du in der Ausgangssituation bist, die du beschrieben hast. Du hast ein super ellenlanges Backlog, da musst du eine Entscheidung treffen, was nimmst du zuerst an."
+    },
+    {
+      "end": 532160,
+      "speaker": "B",
+      "start": 523920,
+      "text": "Aber auch da kann es sein, dass ein neues Feature wichtiger ist, als einen alten Bug zu beheben, weil vielleicht das Feature mehr Impact hat als der alte Bug."
+    },
+    {
+      "end": 554430,
+      "speaker": "A",
+      "start": 532240,
+      "text": "Und da sind wir wieder auf der Definition von Impact und auf seiner Sichtweise. Wenn du der CEO bist, natürlich ist dann ein neues Feature immer wichtiger als ein Bug, denn dieser bringt natürlich mehr Geld und das bringt natürlich mehr Geld in deine Hosentasche und blablabla. Und aus Sichtweise des Entwicklerteams, was der Bug dann immer vier Stunden zusätzliche manuelle Arbeit in der Woche erzeugt, ist gegebenenfalls dann ein anderer Impact."
+    },
+    {
+      "end": 621260,
+      "speaker": "B",
+      "start": 554510,
+      "text": "Ich hatte mal das Ganze miterlebt in einer Firma, wo es wirklich darum gegangen ist, um einen kleinen Bug, der einen recht kleinen Userkreis eigentlich betroffen hat und es war, glaube ich, auch nur eine Zeitberechnung oder sowas, war auch, glaube ich, eben mit Browser, mit alten Browsern hatte das zu tun und das Ganze ist so hochgekocht, dass sich teilweise das C Level eingeschaltet hat nur für diesen einen Bug und es gab Besprechungen und Meetings, wo Quality Assurance gegen Product diskutiert hatte und Developer auch glaube ich noch mit dabei, ob das jetzt wichtig ist, diesen Bug für die null komma sechs Prozent User zu fixen oder nicht. Also es hat Stunden verbraten in Meetings. Ich glaube am Ende, wenn ich das richtig im Kopf habe, wurde entschieden QA, also Quality Assurance, hat das letzte Sagen und wenn die sagen, es ist wichtig, dann entscheiden die. Meiner Meinung nach würde eher Product wichtiger sein, Product Owner, aber muss man irgendeinen Weg finden. Aber nur um zu zeigen, wie weit oder wie groß das Ganze werden kann, wo es nur darum geht, wurde eine Zeit richtig berechnet oder nicht."
+    },
+    {
+      "end": 666740,
+      "speaker": "A",
+      "start": 621420,
+      "text": "Das ist genau mein Humor von interner Politik und irgendwie auch genau so ein Machthabere gespielt. Und meines Erachtens nach ist da eindeutig nicht klar, wer die Hoheit übers Produkt hat. Wenn du dir einfach nur mal die totalen Kosten ausrechnen würdest für diesen Bug, also auf Basis der Meetingzeit und Co. Dann würde ich auch mal die Frage stellen, war diese komische Berechnung so wichtig, dass diese, weiß ich nicht, vierstellig, fünfstellige Kosten erzeugt hat? Weil im Endeffekt sind das ja Opportunitätskosten von und das C Level Management hat vielleicht wichtigere Dinge zu tun. Okay, das Management hat in diesem Falle entschieden, dass es keine wichtigeren Dinge gibt als diesen Bug, aber da wird mir schon ein bisschen schwindelig, wenn ich diesen Geldbetrag nur mal in meinem Kopf hochrechne."
+    },
+    {
+      "end": 734370,
+      "speaker": "B",
+      "start": 666740,
+      "text": "Es war natürlich dann auch auf der technischen Seite, wenn ich es richtig im Kopf habe, ein sehr großer Aufwand, weil es um die Unterstützung von alten Browsern gegangen ist. Und da hast du natürlich, wenn du zum Beispiel Libraries verwendest, die nicht mehr die alten Browser supporten und das deprecaten, dann hast du natürlich das Problem, dass du die Library eigentlich nicht mehr verwenden kannst oder nicht updaten kannst. Und dann hat es natürlich auch extrem großen Impact auf der technischen Seite. Also darum, was du ja richtig gesagt hast, man muss auch auf der technischen Seite den Aufwand sehen und den dann auch vergleichen zu dem Impact auf der User Seite. Ab da wird es dann schon sehr komplex, was dann wichtiger ist, welche Zeit wichtiger ist. Und da ist es dann auch gut, wenn man einfach eine Struktur hat. Wer entscheidet das dann? Wir hatten ja auch eine Episode zu Entscheidungen, wo es darum ging, dass es wichtig ist, eine Struktur hierarchie zu haben, auch wenn die selten zur Anwendung kommt. Aber wenn du dann mal so kritische Bugs hast, wo das entschieden werden muss, dann muss es halt eine Position geben, die am Ende das Sagen hat und dann entscheidet, was ist wichtiger. Und meiner Meinung nach ist es eher auf der Product Seite, weil die Product Seite verantwortlich ist für das Produkt. Aber kann natürlich jede Firma entscheiden, wie sie will."
+    },
+    {
+      "end": 741010,
+      "speaker": "A",
+      "start": 734450,
+      "text": "Aber eine Möglichkeit, dieser ganze Polit Diskussion einfach aus dem Weg zu gehen, ist eine sogenannte Zero Bug Policy."
+    },
+    {
+      "end": 746120,
+      "speaker": "B",
+      "start": 741520,
+      "text": "Das ist, was ich habe, oder ich habe keine Bugs, mein Code ist bugfree."
+    },
+    {
+      "end": 768940,
+      "speaker": "A",
+      "start": 746120,
+      "text": "Hab kein Problem, du ignorierst. Das ist die Zero Ignorance. Nein, das ist die All Ignorance Bug Policy, die du betreibst. Ich rede von der Zero Bug Policy, in der es darum geht, dass Bugs sofort gefixt werden, dass sie gar nicht erst gemanagt werden müssen. Das Software Tool Linear ist so eine Art Project Management. Jira Competitor ist da sehr bekannt für, dass die sowas betreiben. Was ist deine Meinung zu diesem Thema?"
+    },
+    {
+      "end": 772180,
+      "speaker": "B",
+      "start": 768940,
+      "text": "Hast du das schon mal in der Realität erlebt, dass so was funktioniert?"
+    },
+    {
+      "end": 774700,
+      "speaker": "A",
+      "start": 772180,
+      "text": "Ich hatte immer Teams, die ein sehr großes Backlog hatten."
+    },
+    {
+      "end": 780700,
+      "speaker": "B",
+      "start": 775180,
+      "text": "Ja, eben. Also ich lese das immer wieder, aber ich frage mich immer, wie funktioniert das in der Realität?"
+    },
+    {
+      "end": 826840,
+      "speaker": "A",
+      "start": 780860,
+      "text": "Also ich glaube, die Theorie ist wundervoll und ich glaube, die Theorie ist sehr gut. Ich glaube, die Praxis ist schwierig. Ich denke, das Ganze muss wirklich in der kompletten Firma gelebt werden. Das muss von oben herabkommen, denn wenn ein einzelnes Team das bestimmt, dann hast du immer Konflikte zwischen, oh, dieses Feature ist wichtiger und dieser Deal hängt von diesem NE Feature ab und so weiter und so fort. Deswegen müssen wir das Bugfixing depriorisieren. Also ich glaube, es muss eine effektive Firmenkultur darum geschaffen werden. Das ist die eine Thematik, woran es, glaube ich, auch oft scheitert, speziell bei wachsenden Firmen. Dann die zweite Thematik. Es ist ein Unterschied. Hast du ein existierendes Produkt, eine existierende Codebase und eine lange Historie oder fängst du auf der grünen Wiese an? Und ich denke, du musst sehr gute Guidance haben, was ein Bug ist und was ein fehlendes Feature ist."
+    },
+    {
+      "end": 906830,
+      "speaker": "B",
+      "start": 827520,
+      "text": "Also es wäre jetzt interessant zu wissen, wie Linear das wirklich natürlich umsetzt. Was ich mir schon vorstellen kann und was ich an sich eine gute Herangehensweise finde, ist, dass man, wenn man neue Features programmiert, dass man sagt, diese Features müssen bug free sein in dem Sinne, dass wir keine Bugs entdeckt haben und ich spreche da jetzt nicht von dem Problem, dass man jetzt kein MVP mehr bauen könnte. Das ist ja okay, dann kann man die Features reduzieren. Aber diese Features, die man released, sollten bug free sein und und auch nicht UX bug free, weil dass man vielleicht noch was optimieren kann in der User Experience oder im Flow, das ist wieder was anderes. Aber die Features, die man released, die sollten so funktionieren, dass sie eben keinen Fehler werfen, dass sie falsche Berechnungen durchführen, also dass sie von der Seite wirklich bugfree sind. Weil wenn man Bugs akzeptiert und sagt, okay, ich release jetzt dieses Feature, es hat noch einen kleinen Bug, das finde ich wieder falsche Herangehensweise, weil da bin ich noch im Kontext, ich kann noch schnell fixen, ich kenne meine Zeilen Code, die geschrieben habe, hoffentlich, wenn es nicht die AI geschrieben hat, dann kann ich noch schnell was fixen und da bin ich normalerweise schneller. Und diese fünf Prozent mehr Zeit, die sollte man investieren. Aber wie du richtig sagst, es muss halt dann auch in der Kultur so verankert sein, dass das überhaupt funktioniert und nicht die Product Owner sagen, ja, wir müssen releasen, das können wir einen Tag später noch fixen."
+    },
+    {
+      "end": 930110,
+      "speaker": "A",
+      "start": 906830,
+      "text": "Ja, ich glaube, Mittelweg von dieser Zero Bug Policy, um es das auf ganze Produkt anzuwenden, ist jetzt okay, ich schiebe ein neues Feature und sage, die nächsten zwei Monate verfolge ich eine Zero Bug Policy auf das neue geregelte Feature. Ich glaube, das könnte ein Weg sein, wo auch Teams mit einer Software die Historie hat, langsam mit diesem Weg experimentieren können."
+    },
+    {
+      "end": 932110,
+      "speaker": "B",
+      "start": 930190,
+      "text": "Aber warum die nächsten zwei Monate?"
+    },
+    {
+      "end": 940750,
+      "speaker": "A",
+      "start": 932670,
+      "text": "Weil die Theorie ist, dass wenn ein neues Feature da ist, dass das Feature initial mehr Bugs hat, man kann es auch auf vier Monate machen."
+    },
+    {
+      "end": 951710,
+      "speaker": "B",
+      "start": 940750,
+      "text": "Würdest du dann Bugs zulassen, die schon bekannt sind? Also würdest du ein Feature releasen, obwohl du weißt, dass es Bugs hat? Weil das danach Bugs kommen, das kann ja immer passieren. Also es kann ja sowieso nicht verhindern."
+    },
+    {
+      "end": 969990,
+      "speaker": "A",
+      "start": 951710,
+      "text": "Das wäre dann schon Pflicht, dass du das Feature nicht releast, wenn du Bugs weißt. Denn im Endeffekt ist das ja die Augen zu machen vor etwas. Also wo ist der Unterschied, wenn du das Feature schippst und da kommt ein Bug rein oder du schippst das Feature mit einem Bug, den du bereits kennst. Da sehe ich keinen großen Unterschied. Wenn du die Zero Bug Policy auf neuen Features anwenden möchtest, also was du."
+    },
+    {
+      "end": 978270,
+      "speaker": "B",
+      "start": 969990,
+      "text": "Sagst, ist, dass die Priorität die nächsten zwei Monate dann automatisch hoch wäre, wenn ein Bug zu einem releaseten Feature reinkommt."
+    },
+    {
+      "end": 1026010,
+      "speaker": "A",
+      "start": 978270,
+      "text": "Zu dem neu releaseten Feature. Ganz genau, dass du eine Halbwertszeit von zwei Monaten hast und ob es jetzt vier Wochen sind oder sechs Monate, da kenne ich dein Produkt nicht, aber dass du dir selbst eine Deadline setzt, weil sonst hinderst du ja schon das komplette Feature Development. Also ich glaube, wo man ganz klar sein muss, ist, dass es nicht das eine Extrem oder das andere Extrem gibt. Das eine Extrem ist bei den Softwareentwicklerteams in der Regel, wir müssen immer alle Bugs fixen und immer Stabilität machen, immer KT Lo und so weiter. Das stößt natürlich irgendwie auf negative Stimmen dann im Management, weil du keinen neuen Produkt Value mehr lieferst und dann kommen die Produktowner Seite und die C Level Seite oder Leadership Seite immer. Wir müssen mehr Features, Features, Features machen. Wir haben keine Zeit zu Bugs. Aber wenn man sich gegenseitig in der Mitte trifft, ich glaube, dann kommt man relativ gut klar. Und wenn man sich diese Halbwertszeit, diese Deadline von zwei Monaten setzt, ich glaube, das ist so in der Mitte treffen."
+    },
+    {
+      "end": 1071990,
+      "speaker": "B",
+      "start": 1026010,
+      "text": "Es ist vor allem wichtig, wenn man so eine Fokussierung auf neue Features hat, wenn man sonst die klassische Policy hat, wir bewerten alles nach Impact, weil üblicherweise neues Feature, ein Bug hat keinen hohen Impact, weil es ja noch eine kleine Userbase gibt üblicherweise, also je nachdem, was es für ein Feature ist. Aber ganz oft fangen ja erst an meine User dieses Feature zu verwenden, das heißt, es ist nur ein kleiner Prozentsatz oder vielleicht überhaupt nur in Alpha Testgruppe oder Beta Testgruppe und dann würde natürlich mein Bug nie hoch priorisiert werden, weil ich ja immer auf Impact gehe. Das heißt, wenn man da eine zweite Dimension hineinbringt, dass man eben diese zwei Monate Fokuszeit auf dieses neue Release Feature hat, dann deckt man natürlich beide Welten ab und kann so das auch priorisieren."
+    },
+    {
+      "end": 1101440,
+      "speaker": "A",
+      "start": 1071990,
+      "text": "Ein riesen Schreibthema, was mir aber schon wirklich oft untergekommen ist, ist, wie schafft man eigentlich Zeit und Raum, um Bugs wirklich zu fixen. Denn wir kennen es alle vor dem Features nach dem Feature, Also bevor man das eigene Feature, was man jetzt schon entwickelt hat, geschippt hat, planen andere schon am nächsten Feature. Deswegen, man hat ja nie Zeit, weil man halt immer im nächsten Produkt ist. Und was war deine Strategie, als du damals vor dem Krieg ein tausend neun hundert noch Engineering Manager warst?"
+    },
+    {
+      "end": 1104040,
+      "speaker": "B",
+      "start": 1101440,
+      "text": "Was war deine Zeit ein hundert fast ein hundert?"
+    },
+    {
+      "end": 1109800,
+      "speaker": "A",
+      "start": 1104360,
+      "text": "Was war dein Weg, um deinem Team Zeit und Raum fürs Bugfixing zu geben?"
+    },
+    {
+      "end": 1113400,
+      "speaker": "B",
+      "start": 1109800,
+      "text": "Das war relativ einfach. Ich habe immer mit guten Product Ownern zusammengearbeitet."
+    },
+    {
+      "end": 1118050,
+      "speaker": "A",
+      "start": 1113730,
+      "text": "Das bedeutet, du hast die Arbeit und die Argumentation auf diese anderen Leute abgewälzt."
+    },
+    {
+      "end": 1137050,
+      "speaker": "B",
+      "start": 1118050,
+      "text": "Ja, so kann man das sehen. Also ihr habt es deutlich gesehen, dass die guten Product Owner das sehr wohl im Auge hatten und da eine gute Balance gefunden haben und die schlechteren, also ich sage jetzt mal schlechtere Product Owner, da hat es mehr Knatsch gegeben zwischen Team und Product Owner, wenn es eben diese Balance nicht gegeben hat."
+    },
+    {
+      "end": 1167470,
+      "speaker": "A",
+      "start": 1137050,
+      "text": "Okay, aber was heißt das? Ihr habt dann, ihr habt dann Continuous Bug Fixing betrieben, also ihr habt dann die Bugs on the go gefixt und der Product Owner hat dann Balancierung zwischen, okay, ich erschaffe neuen Value und ich verhindere, dass Value runtergeschraubt wird, also los Prevention oder wie darf man das sagen? Also habt ihr irgendwie so einen Scrum Sprint gehabt und da habt ihr dann immer fünf Bugs mit reingenommen oder hattet ihr da Limits oder habt ihr einfach gesagt auch, ne, jetzt machen wir einen kompletten Bug Sprint oder wie hat das funktioniert?"
+    },
+    {
+      "end": 1286580,
+      "speaker": "B",
+      "start": 1167630,
+      "text": "Das Gute ist ja, wenn man so viele Episoden hat wie wir, dass man immer auf andere referenzieren kann. Und wir hatten mal in Episode ein hundert zwei und neunzig wo es um Quartalsplanung gegangen ist, genau darüber gesprochen, dass man eine Balance finden muss zwischen KTL, Keep the Lights on neuen Features und so weiter. Bei diesen Teams mit den guten Product Ownern hat es eigentlich selten so eine genaue Spezifikation, also im Sinne von Prozenten gegeben. Die hatten das einfach ganz gut im Gefühl und hatten dann in den Sprint Plannings das einfach auch nach Impact priorisiert und dann aber immer mit hineingenommen, aber haben auch unbedingt darauf geschaut, dass das eben eine sinnvolle Balance ist. Da kommt ja auch dann das ganze Thema von technischer Schuld noch mit rein, was jetzt keine Bugs sind, aber natürlich auch irgendwas, was beachtet werden muss. Und die hatten das dann natürlich auch, je nachdem wie gerade der aktuelle Stand war, also wo befindet man sich im Quartal, ist Crunch Time oder nicht, haben das dann dementsprechend auch noch mit reingenommen und da die richtige Balance gefunden. Aber es gibt natürlich auch Möglichkeiten, dass man es einfach konkret anspricht und vor allem in Teams, wo es ganz viele Bugs gibt, also war einmal auch für ein Team verantwortlich, wo extrem viele Bugs reingekommen sind, also wo es um eine Such Engine gegangen ist und Suche kann immer nur falsch sein. Also was wird gefunden, je nachdem was ich für einen Suchbegriff eingebe. Und da sind Bugs reingeprasselt. Es kann gar nichts schlimmer sein. Ob man die als Bugs sieht, ist dann noch mal eine andere Frage. Aber da war dann Priorisierung extrem wichtig. Da hat man sich dann natürlich auch in Meetings mit dem Team zusammengesetzt und hat priorisiert, welche Bugs überhaupt lösbar sind, was das auf der technischen Seite bedeutet, was das für ein Impact auf das gesamte System hat und hat da wirklich in konzentrierten Meetings die wichtigsten Prioritäten oder die wichtigsten Bugs gemeinsam herausgefiltert aus diesem riesen Pulk von Bugs, weil da sind wirklich tagtäglich, würde man sagen, hunderte Bugs auf ein Team fast eingeprasselt."
+    },
+    {
+      "end": 1301080,
+      "speaker": "A",
+      "start": 1286580,
+      "text": "Okay, das bedeutet, ihr habt teilweise Bugs höher als Features priorisiert und ihr habt dann irgendwie so eine Art Weekly Bug Pickup gemacht. Keine Ahnung. Ihr habt dann in den Bug Meetings fünf Bugs rausgenommen, die dann als nächstes gefixt werden und dann genau, hat auch."
+    },
+    {
+      "end": 1331610,
+      "speaker": "B",
+      "start": 1301080,
+      "text": "Keine fixe Nummer jetzt gegeben, fünf Bugs, aber grundsätzlich, dass man sich zusammensetzt und über diese ganzen Probleme spricht sehr wohl. Wobei auch wenn der Product Owner natürlich auf der technischen Seite sehr gut ist, dann hat er auch einen gewissen Einblick und kann schon vorfiltern, kann vielleicht da das Team bisschen entlasten, weil wenn du mit dem Team immer irgendwie ein hundert Bugs durchgehen musst, das ist dann schon natürlich auch zeitaufreibend und bringt dann weniger. Da hast du dann im Idealfall ein Product Owner, der auch was versteht von seinem Geschäft auf der technischen Seite."
+    },
+    {
+      "end": 1338210,
+      "speaker": "A",
+      "start": 1331610,
+      "text": "Also wenn ich es richtig verstehe, hilft es natürlich oder beziehungsweise das war der Ansatz, dass man das Backlog einigermaßen stabil hält, oder?"
+    },
+    {
+      "end": 1347170,
+      "speaker": "B",
+      "start": 1338210,
+      "text": "Also du musst es dann einfach akzeptieren, dass du ganz viele hunderte offene Bugs hast. Also du wirst in so einem Team nie alle Bugs lösen können, ist einfach unmöglich."
+    },
+    {
+      "end": 1381430,
+      "speaker": "A",
+      "start": 1347170,
+      "text": "Die Grundvoraussetzung ist, dass mehr Bugs reinkommen, als man fixen kann. Meine Root Cause Analyse würde dann eher Habt ihr da nicht ein ganz anderes Grundproblem? Also entwickelt ihr die richtige Lösung? Also ist die richtige Lösung implementiert worden auf Basis der Anforderungen? Wenn man so viele Bugs hat, liegt das Grundproblem nicht an der Software selbst, sondern vielleicht an der Qualitätssicherung davor oder an der Erwartungshaltung oder an der fehlenden Definition, was die Software eigentlich tun soll und dass es keine Abgrenzung gibt. Also das muss man jetzt nicht beantworten, aber wenn so viele Bugs kontinuierlich reinkommen, sollte man vielleicht dahinter schauen."
+    },
+    {
+      "end": 1416670,
+      "speaker": "B",
+      "start": 1381430,
+      "text": "Da hast du natürlich recht. Und wenn du aus einer Software oder Plattform Perspektive kommst, dann hast du da natürlich recht. In dem Fall ist es um eine Suchmaschine gegangen. Also das ist nicht deterministisch, was dort passiert. Du könntest das auch weiterziehen in Data Science, wo du Recommender Systems oder irgendwelche Prediction Algorithmen entwickelst, weil da gibt es ja kein richtig und falsch. Da gibt es nur eine Annäherung an das Richtig und jeder Benutzer, Benutzerin hat eine andere Welt von richtig. Und wenn du eine Recommendation jetzt bekommst, dann hast du eine ganz klare Vorstellung, was da eigentlich jetzt rauskommen sollte."
+    },
+    {
+      "end": 1424430,
+      "speaker": "A",
+      "start": 1416670,
+      "text": "Wart ihr damals in der Lage, das System zu verstehen? Wart ihr in der Lage zu okay, ich habe diesen Suchbegriff eingegeben? Das ist das Resultat. Und hier ist die Erklärung warum."
+    },
+    {
+      "end": 1482500,
+      "speaker": "B",
+      "start": 1424430,
+      "text": "Teilweise ja, teilweise siehst du das natürlich, aber du hast bei Recommender Systems ja das allgemeine Problem, dass wenn du irgendwo was änderst oder in Data Science ganz allgemein, wenn du ein Gewicht änderst, zum Beispiel irgendwo oder einen Layer, wenn es jetzt um irgendwelche Algorithmen geht, dann hast du vielleicht dann ein richtigeres Ergebnis, aber an zehn anderen Ecken fliegt dir wieder was um die Ohren. Und das musst du natürlich immer balancieren. Und sobald du in so einem Umfeld unterwegs bist, ist ein Bug halt kein klarer Bug mehr, weil du hast nicht nur null und eins, weil ein Bug kann halt im Blickwinkel des Users ein Bug sein, aber für andere ist es vielleicht kein Bug. Ich glaube, in der UX Ecke hast du dasselbe Problem, weil eine gute UX ist halt für manche User ein Bug und für andere User ist vielleicht der UX Flow eh der korrekte. Das heißt, sobald so weiche Kriterien gibt, wird das Ganze natürlich noch mal schwieriger. Und da ist dann halt auch noch mehr Fingerspitzengefühl gefragt, weil man über beurteilen muss, Ist ein Bug ein Bug?"
+    },
+    {
+      "end": 1519240,
+      "speaker": "A",
+      "start": 1482500,
+      "text": "Ich finde, das ist ein sehr schönes Beispiel von Ich lebe in meiner Bubble, weil ich bin offen und ehrlich, dieses Bug Beispiel hatte ich jetzt nicht auf dem auf dem Schirm mit den recommended Systems. Ich muss auch zugeben, ich finde nicht deterministische Systeme immer sehr schwierig, weil viele nicht deterministische Systeme können einfach nicht erklärt werden, wie das System zu diesem Ergebnis kam. Und das finde ich immer sehr traurig, weil das hat auch immer so ein bisschen so einen Gedankengang wie ich weiß nicht, was das System hier macht. Und dann stellt sich die Frage, habe ich noch die volle Kontrolle über das System? Aber das geht auch schon wieder in die Philosophie ab, wie wir in dieser Episode schon ab und zu mal abgedriftet sind. Deswegen finde ich das ein sehr schönes Beispiel, hatte ich nicht auf dem Schirm."
+    },
+    {
+      "end": 1533960,
+      "speaker": "B",
+      "start": 1519240,
+      "text": "Und sogar wenn das deterministisch ist und du weißt, warum das passiert, ist es halt oft so, wenn du was änderst, knallt es an zwanzig anderen Ecken und dann ist vielleicht eine Lösung, die du siehst, halt nur eine Lösung für einen Bug und du machst aber ein hundert neue Bugs wieder damit auf."
+    },
+    {
+      "end": 1543950,
+      "speaker": "A",
+      "start": 1534200,
+      "text": "Da würde ich mich mal aus dem Fenster lehnen. Da würde ich sagen, wenn du deterministische Systeme hast und du änderst eine Sache und knallst an andere System, dann hast du einen riesen Flow in deiner Logik oder zu wenig Tests."
+    },
+    {
+      "end": 1570620,
+      "speaker": "B",
+      "start": 1544180,
+      "text": "Du hast ja schon Tests, die dann vielleicht anschlagen und sagen, hey, du hast jetzt aber bei ein hundert anderen Suchbegriffen oder Kontexten, wo du Recommendation dann ausspuckst, da hast du wieder ein schlechteres Ergebnis. Und dann musst du überlegen, der Bugfix ist ja jetzt insgesamt gut, der löst zwar diesen einen Bug, aber an ein hundert anderen Stellen ist es vielleicht wieder schlechter, wobei schlechter ja auch wieder teilweise gar nicht so genau definierbar ist."
+    },
+    {
+      "end": 1572940,
+      "speaker": "A",
+      "start": 1570620,
+      "text": "Aber versuchst du dann nicht die eierlegende Wollmilchsau zu programmieren."
+    },
+    {
+      "end": 1594640,
+      "speaker": "B",
+      "start": 1572940,
+      "text": "Aber das hast du genau in diesen Bereichen. Also du probierst ja, wenn, wenn es um unter Anführungszeichen Intelligenz geht, AI, KI, Search Results, Information Retrieval, machst du ja immer nur eine Annäherung an das beste Ergebnis. Du kannst dir nie das absolut perfekte Ergebnis erreichen und das ist die eierlegende Wollmilchsau, die du probierst zu erreichen und zwar auf ganz vielen Dimensionen."
+    },
+    {
+      "end": 1613760,
+      "speaker": "A",
+      "start": 1594720,
+      "text": "Gut, da hat die Historie gezeigt, dass dies oft nicht funktioniert. Kommen wir zurück zum Thema. Wie schaffen wir eigentlich Zeit und Raum, um Bugs zu fixen? Was hältst du von dem ganz klassischen Prinzip, dass man sagt, du gibst dem Team pro Woche, pro Monat oder pro Sprint einen gewissen prozentualen Anteil, um Bugs zu fixen. Zehn, fünfzehn, zwanzig Prozent."
+    },
+    {
+      "end": 1680660,
+      "speaker": "B",
+      "start": 1614240,
+      "text": "Das ist, glaube ich, eine sehr gute Variante. Wenn es Probleme gibt in einem gut funktionierenden Team mit einem guten PO, brauchst du das meiner Meinung nach nicht, weil da funktioniert es automatisch. Der PO kann das gut managen mit dem Team oder Projektmanager, was es auch immer ist. Sobald es da natürlich nicht mehr funktioniert und sich die Entwickler innen beschweren zum Beispiel oder irgendwie ständige Diskussion haben, dann kannst du natürlich mit so einem Modell Klarheit schaffen. Aber auch da ist dann die machst du das eben zeitlich abhängig, wovon du, wo du jetzt gerade bist. In manchen Industrien gibt es natürlich irgendwelche speziellen Events sowie Black Friday. Wenn du jetzt im E Commerce Bereich bist, dann wirst du nicht in der Woche von Black Friday jetzt sagen können, ich mache neunzig Prozent Bugfixing oder Technical Debt oder solche Dinge. Also das muss man dann natürlich auch mit einberechnen. Aber grundsätzlich, wenn es Probleme gibt, so eine Policy mal zu definieren, um so eine grobe Richtung zu haben, macht absolut Sinn. Oder vielleicht auch in Teams, die weniger erfahren sind, dass man einfach mal so eine Guideline hat, an die man sich richten kann. Das macht absolut Sinn, dass man dreiig Prozent Bugfixing macht und siebzig Prozent ist der Rest."
+    },
+    {
+      "end": 1697370,
+      "speaker": "A",
+      "start": 1680660,
+      "text": "Ja, ich glaube, das Stichwort ist grobe Guideline, denn immer wenn man sagt Engineering Power hart auf Stunden gemünzt, dann ist es immer schwierig, weil wir tracken den Erfolg unserer Softwareteams hoffentlich nicht anhand der Stunden, die wir in die Programmierung reingesteckt haben, sondern anhand der Sachen, an der wir arbeiten."
+    },
+    {
+      "end": 1712080,
+      "speaker": "B",
+      "start": 1698000,
+      "text": "Aber du kannst ja Scrum Points machen, wenn du die Punkte im Sprint Planning dann definierst, dann sagst halt so und so viele Punkte gehen an Bugs oder Problembehebungen und so und so viel an neue Features und dann hast du noch Keep the Lights on Punkte."
+    },
+    {
+      "end": 1751950,
+      "speaker": "A",
+      "start": 1712080,
+      "text": "Ja, ich bin kein Fan von Scrum. Ich bin auch kein Fan von Scrum Schätzen. Ich bin eher der Kanban Style Mensch, weil ich denke, dass Produkte und Teamverhalten und die reale Welt viel zu komplex ist, um auch fixe zwei Wochen Sprints zu machen. Ich denke, es gibt immer Arbeit, die von links und von rechts reinkommt, die wir dann in den Sprint mit reinknallen. Möchten. Ich bin eher auf der Ecke, dass ich ziemlich viele smarte Leute in den Teams habe und auch bezahle, die dann schon verantwortungsbewusst handeln. Und natürlich hat man dann einen gewissen Fokus, weil die Tickets, die im Kanban Style sind, sollten schon irgendwie eine Synergie zueinander haben. Aber ich wurde noch nie mit Scrum wirklich warm, muss ich zugeben."
+    },
+    {
+      "end": 1757950,
+      "speaker": "B",
+      "start": 1751950,
+      "text": "Ja, wobei du natürlich jetzt nie in Product Teams gearbeitet hast, sondern das ist eine Lüge."
+    },
+    {
+      "end": 1765140,
+      "speaker": "A",
+      "start": 1759140,
+      "text": "Ich habe auch Product Teams geleitet. Plattform Team ist auch ein Product Team, möchte ich nur mal ganz kurz sagen."
+    },
+    {
+      "end": 1768660,
+      "speaker": "B",
+      "start": 1765460,
+      "text": "Im Plattformbereich und da hast du natürlich weniger Planbarkeit."
+    },
+    {
+      "end": 1775460,
+      "speaker": "A",
+      "start": 1768660,
+      "text": "Ich möchte nur sagen, dass ein Plattformteam ebenfalls ein Produktteam ist, denn man chipt auch ein Produkt, nur deine Kunden natürlich."
+    },
+    {
+      "end": 1782980,
+      "speaker": "B",
+      "start": 1775540,
+      "text": "Es gibt halt Bereiche, da ist Scrum besser geeignet und bei anderen ist Kanban vielleicht besser geeignet oder überhaupt irgendeine Feuerlöschtechnik. Gibt alle Varianten."
+    },
+    {
+      "end": 1795660,
+      "speaker": "A",
+      "start": 1782980,
+      "text": "Was hältst du von dem anderen Extrem, dass man dedizierte Bug Sprints oder Bug Days hat, so Hackathon Style, wo man sagt, okay, zwei Tage nur Bugfixing oder einen ganzen Sprint von zwei Wochen machen wir nur Bugfixing oder ähnliches."
+    },
+    {
+      "end": 1834070,
+      "speaker": "B",
+      "start": 1795900,
+      "text": "Also ich bevorzuge schon die andere Variante, dass man eher so eine Aufteilung hat als so fokussierte Wochen. Habe ja auch eher so die Erfahrung gemacht, dass das oft so von Product Seite dann als Ausrede kommt. Dann machen wir halt irgendwie so zwei Tage und da machen wir dann nur das Bug Fixing oder nur Technical Depth, damit die Entwickler innen irgendwie glücklich sind und dann geben die schon die Ruhe. Wenn das natürlich irgendwo in der Kultur verankert ist und Sinn macht, ist es was anderes. Aber sonst finde ich grundsätzlich das regelmäßige Bug Fixing eigentlich die bessere Herangehensweise als immer so fokussierte Dinge, wo man dann vielleicht auch nur immer A oder B macht und nie die Abwechslung hat."
+    },
+    {
+      "end": 1913040,
+      "speaker": "A",
+      "start": 1834070,
+      "text": "Ich finde es grundsätzlich eine coole Idee. Ich nenne das immer Bugsmash und ich glaube, die internationale Industrie nennt das auch Bugsmash. Aber es hat ein paar Gefahren. Auf der einen Seite kann man sagen, ist das vielleicht ein Anti Pattern, weil irgendwie dann jeder sagen kann, ach, den Bug fixe ich jetzt, den skippe ich jetzt, weil das können wir am Back Day machen oder am Back Smash Day oder am Hackathon und dann macht man sich weniger Gedanken über Bugs. Das finde ich ein bisschen schwierig oder die Gefahr ist da dann ist die andere Thematik. Wenn man es mal ausprobiert, dann kann es eher so ein Hit und Miss sein. Also entweder es wird super gut angenommen und es funktioniert super und man wiederholt das in regelmäßigen Abständen oder man erhofft sich mehr von dem Event und wird dann am Ende enttäuscht und dann wird es nicht wiederholt. Und das finde ich dann immer so ein bisschen schwierig. Eine Methode ist mir aber bei der Recherche aufgefallen, die ich super gut fand und zwar, weil die so einen gewissen internen Druck erzeugt und relativ einfach ist und sehr klare Strukturen gibt. Und zwar Deadline für Bugs. Jeder Bug, der reinkommt, dem gibst du eine Deadline. Und die Deadline kann ja unterschiedlich sein. Die kann länger sein für Low Priority Bugs, kürzer sein für High Priority Bugs usw. Je nachdem, welche Kategorisierung man auch immer hat. Je näher die Deadline kommt, desto höher wird die Priorität automatisch gestellt. Und wenn die Deadline erreicht ist und dieser Bug nicht gefixt ist, wird dieser Bug automatisch zum Release Blocker."
+    },
+    {
+      "end": 1916160,
+      "speaker": "B",
+      "start": 1913040,
+      "text": "Klingt in der Theorie sehr nett. Hast du das mal in der Praxis so erlebt?"
+    },
+    {
+      "end": 1922840,
+      "speaker": "A",
+      "start": 1916160,
+      "text": "Ne, habe ich nur bei der Recherche gefunden und in irgendeiner Art und Weise würde ich das gerne mal ausprobieren. Ich finde das mentale Modell ist unglaublich."
+    },
+    {
+      "end": 1936300,
+      "speaker": "B",
+      "start": 1922840,
+      "text": "Einfach, finde ich auch sehr interessant. Kann ich mir in der Praxis irgendwie schwerer vorstellen. Aber wie gesagt, auch da wieder, wenn die Kultur mitspielt und das wirklich in der Kultur fest verankert ist, könnte das funktionieren."
+    },
+    {
+      "end": 1937580,
+      "speaker": "A",
+      "start": 1936460,
+      "text": "Aber was ist deine Kritik?"
+    },
+    {
+      "end": 1949780,
+      "speaker": "B",
+      "start": 1937660,
+      "text": "Eher der Alltag, weil dann heißt es halt doch, das Feature ist wichtig und warum sollen wir die fünf alten Bugs da fixen und es wird alles verzögert nur wegen fünf Bugs, die niemand braucht, schon ein Jahr herumliegen."
+    },
+    {
+      "end": 1986200,
+      "speaker": "A",
+      "start": 1949780,
+      "text": "Okay, das hast du aber bei jeder Art von Modell. Richtig. Und die Einfachheit dieses Modells ist halt, dass es jedem eine relativ klare Struktur gibt, um diese kontinuierlichen Fragen, die du ja gerade aufwirfst. Der Alltag, weil also das Problem an deinem Konzept mit dem Alltag ist einfach, dass du dich kontinuierlich immer dieselbe Frage stellst und jedes Mal neue Diskussion hast und jedes Mal neu mieten muss, um eine Leine zu haben. Und wenn du ein solches mentales Modell hast, umgehst du einfach unglaublich viele Diskussionen. Natürlich muss das supported werden von deiner Leadership Hierarchie, aber das Modell ist sehr einfach."
+    },
+    {
+      "end": 2009340,
+      "speaker": "B",
+      "start": 1986280,
+      "text": "Ja, ich finde das Modell auch super interessant. Darum würde mich interessieren, ob das wirklich so funktioniert. Also wenn ihr irgendwen kennt oder selber verwendet in eurem Team, bitte lasst uns das wissen. Schaut mal vorbei, Discord Community und schreibt uns, wenn dieses Deadline Modell bei euch im Team so funktioniert und auch von der Product Seite akzeptiert wird. Das würde mich eigentlich immer am meisten interessieren."
+    },
+    {
+      "end": 2045660,
+      "speaker": "A",
+      "start": 2009340,
+      "text": "Jetzt ist es so, Bugs kommen ja immer rein und ich frage mich gerade bei der ganzen Diskussion, wo wir hier drüber sprechen, von wem ist das eigentlich die Aufgabe? Wer kümmert sich eigentlich um die Bug Triage? Wer kümmert sich eigentlich um die Bakterie Priorisierung und Co. Ist das der Engineering Manager, Product Owner, Product Manager oder hat man vielleicht sogar eine dedizierte Person für Bugs? Also so ähnlich wie, weiß ich nicht, On Call, dass man so eine wöchentliche Rotation hat, wo man sagt, okay, du bist on Call oder du kümmerst dich jetzt um den Select Channel für die Bugs oder vielleicht hast du auch so ein Support Slack Channel oder sowas, wo Leute Fragen stellen können zu deinem Produkt."
+    },
+    {
+      "end": 2135100,
+      "speaker": "B",
+      "start": 2045660,
+      "text": "Ich würde das auch wieder abhängig machen von der Anzahl der Bugs oder der Größe der Firma. Du hast wahrscheinlich irgendwo gebündelt einen Kanal, wo die Bugs hereinkommen. Es kann ein Support Team sein, es kann Quality Assurance sein, es kann automatisiertes Formular sein von außen. Aber dass es da irgendwo eine Grund Triage schon gibt, wenn ich mir das jetzt so aus dem Feuerwehrwesen denke, gibt es eine Leitstelle, die nimmt alle Notrufe an und entscheidet dann, wer überhaupt alarmiert wird im nächsten Schritt. So sehe ich das eigentlich auch, dass man da irgendwie eine Filterfunktion hat und nachgelagert kommen dann die Entwickler innen an Zug, Product Owner, Product Manager, wer das dann auch immer ist und die entscheiden dann im weiteren Schritt, was für Priorität hat es, Wie gehen wir das an? Wann wird etwas umgesetzt? Also dass man da eine Person hat, die dediziert irgendwie nur für Bugs im Team vor allem verantwortlich ist, sehe jetzt eigentlich weniger, weil ich sehe das schon eigentlich auf Product Owner Seite, also die Person, die das entscheidet, was für neue Product Features gemacht werden, Was wird gefixt von dem aktuellen Produkt, wird eigentlich entschieden von dieser Person und das ist ein Product Owner oder Engineering Manager, wenn das mit übernommen wird, die Product Seite von dieser Rolle. Und dann kann es natürlich im Team besprochen werden und vielleicht noch mal fein granularer diskutiert werden. Aber das sind so für mich diese drei Schritte ganz nach außen zum Kunden, dann irgendeine Manager Funktion oder Product Owner Funktion und dann das Team."
+    },
+    {
+      "end": 2157420,
+      "speaker": "A",
+      "start": 2135260,
+      "text": "Bei uns im Team machen wir das genauso mit der Rotation. Also wir haben ein Jubility Runit Modell. Bei uns sind die Teammitglieder on Call in einer wöchentlichen Rotation. Und wenn jemand on Call ist, dann hat diese Person auch die Aufgabe, die Bug Triage durchzuführen, die Bug Priorisierung teilweise, dann teilweise auch das Bug Fixing, je nach Abhängigkeit der Priorität und ob es dann wirklich KTLO Bug ist oder nicht."
+    },
+    {
+      "end": 2159180,
+      "speaker": "B",
+      "start": 2157500,
+      "text": "Ihr habt aber natürlich die Kunden auch."
+    },
+    {
+      "end": 2165140,
+      "speaker": "A",
+      "start": 2159180,
+      "text": "Intern, na auch extern. Also wir kriegen auch externe Reports von externen Kunden, die dann auf unsere Plattform gehen."
+    },
+    {
+      "end": 2167900,
+      "speaker": "B",
+      "start": 2165140,
+      "text": "Die kommen aber über die Support Schiene."
+    },
+    {
+      "end": 2179340,
+      "speaker": "A",
+      "start": 2167900,
+      "text": "Herein, so die Theorie. Und dann gibt es natürlich wie in jeder Firma die ganz großen Kunden, die dann natürlich auch eine direkte Line haben in irgendeiner Art und Weise. Die gibt es halt fast in jeder Firma."
+    },
+    {
+      "end": 2182060,
+      "speaker": "B",
+      "start": 2179340,
+      "text": "Aber ihr habt auch keine Product Owner oder sowas."
+    },
+    {
+      "end": 2183820,
+      "speaker": "A",
+      "start": 2182060,
+      "text": "Doch, wir haben Product Manager und die."
+    },
+    {
+      "end": 2184740,
+      "speaker": "B",
+      "start": 2183820,
+      "text": "Kümmern sich nicht darum."
+    },
+    {
+      "end": 2185370,
+      "speaker": "A",
+      "start": 2184820,
+      "text": "Doch, auch."
+    },
+    {
+      "end": 2187640,
+      "speaker": "B",
+      "start": 2186000,
+      "text": "Okay, aber die sind nicht on Call."
+    },
+    {
+      "end": 2251960,
+      "speaker": "A",
+      "start": 2187640,
+      "text": "Nein, die sind nicht on Call. Es geht auch so, dass die Leute, die on Call sind, in der Regel sich nicht auf Projektarbeit fokussieren können, weil halt so viel immer immer irgendwie dran ist. Und dann, weil man sowieso die Context Switche hat, weil man sich sowieso nicht auf lange Zeit für die Projektarbeit fokussieren kann, kann man dann auch die Bug Triage machen. Das machen die ja nicht jeden Tag oder nicht sofort, wenn der Bug reinkommt, sondern irgendwie ein oder zweimal die Woche am Anfang und am Ende der Woche oder ähnliches. Und ich meine, die Benefits sind relativ klar. Also ich meine, man kommt relativ schnell in neue Themen rein, aka Onboarding Knowledge SH, weil man kommt mit neuen Bereichen automatisch in Kontakt. Und jetzt kommt das Gute eigentlich, wenn man Dokumentation hat, die Person, die dann die ganze Triage macht, liest natürlich die Docs, Man ärgert sich, dass diese out of date sind und dann update man diese. Also wenn man diese kontinuierliche Kultur der Verbesserung hat, dann bleiben die Docs natürlich auch up to date. Jetzt ist es natürlich so, manchmal kommen Bugs rein, die kann man jetzt nicht covern, da hat die Person ganz wenig Ahnung und die werden dann, ich nenne es mal eskaliert, dann werde ich in dem Ticket gemanagt oder die Projektmanagerin oder ähnliches und dann gucken wir da rein, aber das ist dann nur noch in fünfzehn Prozent der Fälle."
+    },
+    {
+      "end": 2266520,
+      "speaker": "B",
+      "start": 2251960,
+      "text": "Aber wenn da jetzt ein klassischer Bug reinkommt, irgendein Produkt hat ein kleines Problem, dann wird da einfach ein Ticket erstellt und dann geht es in den normalen Prozess hinein und wird dann am Montag diskutiert oder Product Manager übernimmt es dann."
+    },
+    {
+      "end": 2272040,
+      "speaker": "A",
+      "start": 2266520,
+      "text": "Ja genau, dann ist es abhängig, was es ist und ob da jetzt gerade auf diesem Produkt Fokus ist und so."
+    },
+    {
+      "end": 2281000,
+      "speaker": "B",
+      "start": 2272440,
+      "text": "Also es ist eigentlich eine Annahmestelle oder wenn es ein High Priority Bug ist oder ein Incident, würde ich es mal fast nennen, dann übernimmt die Person auch wirklich sofort."
+    },
+    {
+      "end": 2286990,
+      "speaker": "A",
+      "start": 2281470,
+      "text": "Ja genau. Also du musst halt splitten, da kommt was rein. Okay, wie wichtig ist das jetzt gerade? Müssen wir das jetzt covern oder nicht?"
+    },
+    {
+      "end": 2299070,
+      "speaker": "B",
+      "start": 2286990,
+      "text": "Und dann, also es sind eigentlich zwei Funktionen in einer Person. Einerseits das klassische On Call Incident Management oder Annahme und die Bug Annahme und da halt die Triage drauf."
+    },
+    {
+      "end": 2341020,
+      "speaker": "A",
+      "start": 2299070,
+      "text": "Ganz genau. Und dann teilweise auch die Priorisierung oder Kategorisierung, wenn man jetzt Input braucht. Also wir haben als Plattform Team mehrere, ich sag mal interne Produkte und die werden dann auch gelabelt und Komponenten hinzugefügt, all das, was man halt so braucht. Wir sprechen aber die ganze Zeit über Bugs und eine Sache nehmen wir immer an, dass Bugs einfach da sind, das Bugs vielleicht auch wiederkommen, weil wir hatten auch das Wort Regression öfter schon mal genannt und wir sprechen auch ziemlich viel über Bug Management, wie man die Bugs annimmt, was da benötigt wird und so weiter und so fort. Wir haben aber noch gar nicht darüber gesprochen, wie man Bugs eigentlich ordentlich fixed. Denkst du, das ist ein Thema, das sollten wir mal covern oder denkst du, ist ja logisch, das ist ein Softwarefehler, das ist ja klar, wie man das fixt. Man behebt einfach den Fehler."
+    },
+    {
+      "end": 2347100,
+      "speaker": "B",
+      "start": 2341020,
+      "text": "Ich würde sagen, man macht es einfach. Aber nachdem du der Mann der Modelle bist, hast du sicher Modelle, um das Ganze zu optimieren."
+    },
+    {
+      "end": 2357180,
+      "speaker": "A",
+      "start": 2347500,
+      "text": "Modelle jetzt nicht, sondern eigentlich gesund. Menschenverstand. Wie zum Beispiel, wie oft wurde denn schon mal für ein High Priority Bug bei dir ein Incident gelauncht? Kam das schon mal vor?"
+    },
+    {
+      "end": 2358940,
+      "speaker": "B",
+      "start": 2357180,
+      "text": "Das musst du mir jetzt erklären. Was meinst du damit?"
+    },
+    {
+      "end": 2365810,
+      "speaker": "A",
+      "start": 2359170,
+      "text": "Naja, also dass du einen Bug rein bekommen hast und das ist eigentlich gar nicht ein High Priority Bug, das ist wirklich ein Incident."
+    },
+    {
+      "end": 2367370,
+      "speaker": "B",
+      "start": 2366450,
+      "text": "Wo ist der Unterschied?"
+    },
+    {
+      "end": 2379650,
+      "speaker": "A",
+      "start": 2367370,
+      "text": "Der Unterschied ist relativ einfach. Einen Bug lasse ich mir jedenfalls Zeit, den zu fixen, fixe ihn ordentlich. Bei einem Incident hole ich erst mal das Gaffa Tape raus, löse das Problem erstmal und schaue dann später, wie ich das richtig nachhaltig fixe."
+    },
+    {
+      "end": 2384560,
+      "speaker": "B",
+      "start": 2379650,
+      "text": "Also Incident steht für dich von der Priorität nochmal über der höchsten Bug Priorität."
+    },
+    {
+      "end": 2399270,
+      "speaker": "A",
+      "start": 2385110,
+      "text": "Incident heißt, ich lasse alles liegen, all hands on deck und kümmere mich darauf. Incident ist, wenn ich vom Klo geholt werde und jetzt daran muss und einen hohen Bug ist gut, dann ist ein High Priority Bug, aber den fixen wir jetzt."
+    },
+    {
+      "end": 2422650,
+      "speaker": "B",
+      "start": 2399750,
+      "text": "Wo ist denn bei dir die Grenze dann zwischen High Priority Bug und Incident? Weil wenn du jetzt sagst, das ist ein Bug, der betrifft fünf und vierzig Prozent meiner User, die können die Arbeit nicht mehr verrichten und dann hast du einen anderen Bug, wo zwanzig Prozent der User ihre Arbeit nicht mehr verrichten können. Was ist jetzt ein Incident? Ab wann ist ein Bug ein Incident? Oder ist ab sieben Prozent der Userbase, die die Arbeit nicht mehr verrichten können, ein Incident?"
+    },
+    {
+      "end": 2431970,
+      "speaker": "A",
+      "start": 2422730,
+      "text": "Ne, ich glaube, dein Beispiel hat ein Floor, weil du erwartest jetzt einen direkten Schwellenwert von mir. Das ist, glaube ich, nicht das Kriterium, wo man das unterscheidet."
+    },
+    {
+      "end": 2440750,
+      "speaker": "B",
+      "start": 2431970,
+      "text": "Also wenn die Plattform ein hundert Prozent ausfällt, ist klar, ist ein Incident. Aber der ganze Bereich dazwischen. Ab wann ist denn ein High Priority Button Incident?"
+    },
+    {
+      "end": 2457300,
+      "speaker": "A",
+      "start": 2441220,
+      "text": "Ich habe falsche Rechnungen rausgeschickt, ist ein Incident. Ich weiß, dass meine Berechnungen, um Rechnungen rauszuschicken, einen Flow, einen Bug hat. Die nächste Rechnungstrigger ist aber erst in fünf und zwanzig Tagen. Das erste ist ein Incident, das zweite ist ein High Priority Bug, den ich innerhalb der nächsten fünf und zwanzig Tage fixen muss."
+    },
+    {
+      "end": 2464340,
+      "speaker": "B",
+      "start": 2457540,
+      "text": "Kann auch ein Low Priority Bug sein in meiner Firma, wenn es fünf und zwanzig Tage Zeit ist, je nachdem wie ich arbeite."
+    },
+    {
+      "end": 2467780,
+      "speaker": "A",
+      "start": 2464420,
+      "text": "Und da sind wir bei der Subjektivität. Bei mir wäre es ein High Priority Bug."
+    },
+    {
+      "end": 2472890,
+      "speaker": "B",
+      "start": 2468090,
+      "text": "Ja, aber du siehst, ist halt die Frage, ab wann ist was ein Incident?"
+    },
+    {
+      "end": 2498880,
+      "speaker": "A",
+      "start": 2472970,
+      "text": "Ja, ja, klar. Deswegen frage ich Hattest du schon mal einen Incident? Ich frage dich nicht, wie definierst du das? Ich habe frage dich wurde das schon mal bei dir so behandelt? Ich frage dich nach deinen Erfahrungen, Wolfgang, und du weichst schon wieder aus wie so ein Consultant, weil du willst natürlich wieder mehr Beratungsstunden mir verkaufen und sagen, wir sollten uns jetzt erstmal wieder zurückziehen. Und was ist ein Incident? Was ist ein Nicht Incident? Komm aus deiner Beratungsfunktion raus und erklär mal bitte aus deiner Erfahrung. Ich meine, du hast gerade von einem Bugfix gesprochen, wo das C Level Management involviert war."
+    },
+    {
+      "end": 2500920,
+      "speaker": "B",
+      "start": 2499440,
+      "text": "Das war ein Low Priority Bug."
+    },
+    {
+      "end": 2510440,
+      "speaker": "A",
+      "start": 2500920,
+      "text": "Ja, siehst du was anderes, das ist ja noch schlimmer. Aber da sind wir ja schon mehr. Da sind wir schon mehr. Weißt du, wenn das C Level schon mit da drin hängt, dann würde ich fast sagen, Low Priority."
+    },
+    {
+      "end": 2542190,
+      "speaker": "B",
+      "start": 2510440,
+      "text": "Weiß ich nicht, ob die Kategorisierung, wie du richtig gesagt hast, war eine politische Sache. Aber ich würde mal sagen, dass ganz viele Bugs dann irgendwann zu einem Incident werden, weil ganz oft wird ja was reported, dass irgendeine spezielle Funktion nicht geht und für den User ist es halt nur für den User gerade ein Teil. Und wenn man dann aber merkt, okay, das betrifft aber vielleicht alle User und einen gewissen Prozentsatz meiner User oder neunzig Prozent meiner User können jetzt einen gewissen Schritt nicht mehr machen, dann ist es wahrscheinlich ein Incident automatisch."
+    },
+    {
+      "end": 2572990,
+      "speaker": "A",
+      "start": 2542270,
+      "text": "Ich hatte halt schon etliche Bugs, die kamen als Customer Support Ticket rein, man hat sich auch darum gekümmert, da hat eine Engineer dran gearbeitet Und als dann mal klar wurde, was für ein Impact dieser Fehler eigentlich hat, also man hat dann eine Impact Analyse gemacht, dann hat man vielleicht mal eine Datenbank gemacht, wie viele Kunden haben dieses Setting denn eingeschaltet? Oh, dann merkt man, oh, das sind ja neunzig Prozent aller User, die dieses Feature nutzen und dann hat man nach drei Tagen und nach vier Tagen ein Incident gelauncht, weil man ein besseres Verständnis von diesem Bug hat."
+    },
+    {
+      "end": 2576980,
+      "speaker": "B",
+      "start": 2574500,
+      "text": "Okay, das habe ich noch nie erlebt, dass es so lange gedauert hat."
+    },
+    {
+      "end": 2584580,
+      "speaker": "A",
+      "start": 2577220,
+      "text": "Och, das kommt des Öfteren vor, besonders bei Software as a Service Companies, weil du halt erst ein besseres Verständnis von dem Bug haben musst."
+    },
+    {
+      "end": 2587140,
+      "speaker": "B",
+      "start": 2584660,
+      "text": "Aber wer entscheidet dann, ob es ein Incident ist?"
+    },
+    {
+      "end": 2600520,
+      "speaker": "A",
+      "start": 2587220,
+      "text": "In der Regel der Software Engineer, weil der Software Engineer macht ja die Analyse, der kümmert sich ja um den Bug, der kümmert sich darum und entdeckt irgendwann, oh, das Problem ist viel größer, Ich spreche mal mit meinem Manager, ich spreche mal mit meiner Produktmanagerin oder ähnliches, aber."
+    },
+    {
+      "end": 2626900,
+      "speaker": "B",
+      "start": 2600520,
+      "text": "Was hat es denn für ihn oder für sie für Folgen? Also warum muss ich ein Incident auslösen? Ist es, wenn ich zusätzliche Hilfe brauche, Support? Weil ist ja jetzt egal, ob ich gerade einen High Priority Bug fixe oder es offiziell ein Incident ist und ich auch nur alleine daran weiterarbeite. Also geht es da um Ressourcen, dass ich mehrere Leute draufsetzen darf oder kann? Also warum muss ich überhaupt auf dem Incident wechseln?"
+    },
+    {
+      "end": 2657700,
+      "speaker": "A",
+      "start": 2626900,
+      "text": "Okay, erste Annahme, wenn du ein Incident launcht, arbeitest du nicht mehr alleine dran. Wenn ein Incident von einer Person bearbeitet wird, dann ist es kein Incident, weil dann ist es nicht so wichtig. Das bedeutet, ein Incident in der Sache hat genau das zur Folge, was du auch gesagt hast. Ich hole mehr Leute an Deck, ich hole auf einmal den Customer Support an Deck, der vielleicht aktive Kommunikation an alle betroffenen Kunden macht. Ich hole Management an Deck, die vielleicht jetzt gerade irgendeinen anderen Deal abschließen wollen bezüglich dieses Features und so weiter und so fort."
+    },
+    {
+      "end": 2669440,
+      "speaker": "B",
+      "start": 2658080,
+      "text": "Aber ihr habt da keine Definition, ab welchem Impact so etwas passiert. Das ist dann schon noch, ich nenne es jetzt mal Bauchgefühl Erfahrung. Also ihr habt da jetzt keine Metrik dafür in dem Sinne, oder?"
+    },
+    {
+      "end": 2765080,
+      "speaker": "A",
+      "start": 2669680,
+      "text": "Ja, das geht halt nicht, weil es ist ähnlich wie ein Projekt. Jeder Incident ist ja im besten Falle unique. Und wenn du ein Incident hast, hast du Prevent Tickets, die den Incident dann verhindern sollen. Und somit tritt dieser natürlich nicht mehr auf, weil du natürlich ein ordentlicher Engineer bist und diese Prevent Tickets natürlich machst. Und deswegen ist jeder Incident unique und deswegen sind generelle Kriterien natürlich unglaublich schwierig. Was ich dir aber sagen möchte, ist, dass die Arbeitsweise dann zu fixen des Bugs sich ändert. Beim Incident machst du eher Gaffa Tape dran, dass du den Bug irgendwie eindämmst und kümmerst dich dann später um eine nachhaltige Lösung. Wohingegen bei einem High Priority Bug du primär an der nachhaltigen Lösung arbeitest, die natürlich schon zeitkritisch ist wegen der High Priority, aber du drehst in der Regel nicht mehrere Iterationen. Das Problem ist jetzt oder die mögliche Herausforderung und das ist abhängig von der Größe deiner Organisation und deiner Incident Kultur. Den Prozess, den ich gerade beschrieben habe, kann natürlich dazu führen, dass ab und zu inzidenzident gelauncht werden, die dann später gar kein Incident sind, weil die Einschätzung des Entwicklers oder der Entwicklerin oder von wem auch immer falsch war. Es kann natürlich auch dazu führen, dass man eine Inzident Fatigue hat, dass zu viele Incidents zu früh gelauncht werden und dass dann niemand mehr Incidents ernst nimmt. Das ist so wie, ach ja, unser CI System, das ist schon seit zwei Wochen rot. Das ist immer so. Das hast du bestimmt auch schon mal erlebt ständig. Ja, das kann natürlich auch auf Incident Seite sein. Deswegen ist es unglaublich schwierig, die Balance zu finden. Du darfst natürlich keine Leute bestrafen, die ein Incident launchen, weil die haben natürlich nur das Beste im Sinn zugegeben. Also du merkst schon schwierige Schwelle Thematik."
+    },
+    {
+      "end": 2781540,
+      "speaker": "B",
+      "start": 2765400,
+      "text": "Okay, also jetzt als Möchtegern Feuerwehrmann, Andi, du siehst ja überall nur, dass es brennt und du siehst sogar in den einfachen Bugs irgendwo Incidents. Komm mal zurück jetzt zu den Bugs. Wie löst du Bugs? Hast du auch ein Modell an der Hand? Wie kann man Bugs besser lösen oder besser bearbeiten?"
+    },
+    {
+      "end": 2792300,
+      "speaker": "A",
+      "start": 2781860,
+      "text": "Ja, habe ich. Und zwar lustigerweise auch. Also mehrere, mehrere Ideen schwirren mir im Kopf rum. Auf der einen Seite natürlich auch wieder eine sehr nahe Inzidenz und zwar Root Cause Analyse."
+    },
+    {
+      "end": 2794180,
+      "speaker": "B",
+      "start": 2792300,
+      "text": "Ich bekomme den nicht mehr weg von diesem Feuer."
+    },
+    {
+      "end": 2883760,
+      "speaker": "A",
+      "start": 2794260,
+      "text": "Naja, der Punkt ist eigentlich, du musst ja halt mal fragen, woher kommen diese Bugs eigentlich? Und ab und zu ist es ja so, dass du Bugs gruppieren kannst oder beziehungsweise eine Gruppierung von Bugs kann dabei helfen zu sagen, okay, ist das vielleicht eine globale Klasse an Bugs? Ähnlich wie beim Unittesten. Beim Unittesten hast du ja auch verschiedene Test Patterns, wie zum Beispiel Randtests, dass du Wertebereiche immer an den Rändern testest, weil da ist oft meist so ein Off by One Error. So ähnlich hast du das natürlich dann auch bei Gruppierungen von Bugs. Jetzt kommt es aber Wir hatten gerade über diese Zero Bug Policy gesprochen, die natürlich in der Theorie sich super schön anhört. Das Problem ist aber immer, wenn du einen Bug rein bekommst und den sofort fixiert, wie kannst du deine Gruppierung und eine Klassifizierung machen? Die kannst du natürlich nur retrospektiv machen. Das bedeutet, das wäre so ein negativer Punkt, warum eine Zero Bug Policy auch Nachteile haben kann, weil die die Sichtbarkeit auf die Root Cause verhindern kann. Wenn du jetzt aber deinen Fall hast, wo dein Backlog einfach super groß ist, dann kannst du ja durch die Bugs gehen und du kannst dann immer wieder Labels oder Kategorien dran packen, dass du sie gruppieren kannst. Und dann kannst du natürlich viel einfacher die Sichtbarkeit auf eine Gruppe von Bugs erstellen und dann natürlich eine komplette Gruppe von Bugs, indem du einfach zwei Schritte zurückgehst und schaust, was ist denn wirklich das Problem in deiner Suchmaschine? Könnte man Ist die Klassifizierung der Daten, Ist das Extracting oder die Semantik der Daten oder das Stemming vielleicht fehlerhaft oder oder oder. Also Das kann man schon machen."
+    },
+    {
+      "end": 2950320,
+      "speaker": "B",
+      "start": 2884320,
+      "text": "Also das habe ich eigentlich auch miterlebt, dass das natürlich dann auch sehr hilfreich ist, wenn das Team gemeinsam darauf blickt und nicht nur irgendwie ein Product Owner, weil die Teams dann natürlich auch Gemeinsamkeiten sehen. Also wenn du Entwicklerin bist von irgendeinem System und da siehst du ein paar Bugs, dann weißt du, okay, die sind zusammenhängend, die haben vielleicht sogar einen ähnlichen Root Cause, dann kannst du die zusammenfassen und sagen, hey, die nehmen wir gleich mit den Bug oder wir schauen das mal im Detail an, weil es klingt so, als wären diese fünf Bugs verbunden mit denselben Root Cause oder vielleicht mit einem neuen Codeblock oder mit einer neuen Library, die wir gerade eingeführt haben. Und da ist es dann natürlich auch wichtig, dass das Team mit eingebunden ist, weil da hat man dann einfach dieses Zusatzwissen, was man wahrscheinlich auf einer höheren Ebene, auf der Product Ebene vermutlich nicht haben kann. Und was da auch noch ganz wichtig ist, dass die Entwickler innen das wollen und das Produktverständnis haben, dass die nicht nur auf einen Bug springen und sagen, ich löse jetzt diesen einen Bug, sondern dass die eben sehr wohl im Blickfeld haben, da gibt es mehrere Bugs und das breitere Bild natürlich auch im Kopf haben und sich auch darum kümmern und nicht nur in ihrem Tunnel sind, um einen Bug zu lösen, sondern den gesamten Root Cause."
+    },
+    {
+      "end": 2960040,
+      "speaker": "A",
+      "start": 2950400,
+      "text": "Und wenn wir jetzt mal eine Root Cause Analyse machen von Bugs generell, dann ist es natürlich klar, wollen wir Bugs beheben, aber was wäre noch besser, wenn diese gar nicht auftreten, wenn wir diese."
+    },
+    {
+      "end": 2965520,
+      "speaker": "B",
+      "start": 2960040,
+      "text": "Von vornherein verhindern, Wir schaffen die Entwickler innen ab, dann haben wir auch keine Bugs mehr. Sehr gute Idee."
+    },
+    {
+      "end": 2970910,
+      "speaker": "A",
+      "start": 2965680,
+      "text": "Ja, ich glaube, die Sau wird seit zwei Jahren durchs Dorf getrieben mit AI und KI und generative AI und Co."
+    },
+    {
+      "end": 2976420,
+      "speaker": "B",
+      "start": 2971380,
+      "text": "Und siehe da, die machen ja auch Bugs. Am besten man codet nicht, dann hat man auch keine Bugs. Ich probiere das auch immer."
+    },
+    {
+      "end": 2980180,
+      "speaker": "A",
+      "start": 2976500,
+      "text": "Was kommt dir sofort in den Sinn, wenn es darum geht, Bugs von vornherein zu verhindern?"
+    },
+    {
+      "end": 2993140,
+      "speaker": "B",
+      "start": 2980180,
+      "text": "Ja, ob man sie verhindern kann, bin ich mir nicht ganz sicher, da gehen wir schon in Clean Coding und solche Dinge hinein. Aber was man schon machen kann, ist sie sehr früh zu erkennen, Also dass sie gar nie in Produktion gehen."
+    },
+    {
+      "end": 3000120,
+      "speaker": "A",
+      "start": 2993220,
+      "text": "Da bin ich anderer Meinung, weil das, was du ja sagst, ich teste die ganze Sache durch, vielleicht durch manuelles Testing."
+    },
+    {
+      "end": 3003240,
+      "speaker": "B",
+      "start": 3000120,
+      "text": "Exploratives Testing oder automatisiertes Testing."
+    },
+    {
+      "end": 3035060,
+      "speaker": "A",
+      "start": 3003320,
+      "text": "Oder automatisiertes Testing. Ich meine, das sollte man tun. Aber die Frage ist ja dann auch, wann habe ich genug getestet? Also da wieder die Balance. Muss es eine hundertprozentige Code Coverage sein? Im Endeffekt verzögere ich ja den Wert des Features. Also ich verzögere ja, bis das Feature Wert beim Kunden liefert. Natürlich kannst du Unit und Integration und End to End Testing machen. Vielleicht wenn du irgendwie in so Segmenten wie Black Friday und Cyber Monday bist und du hast einen E Commerce Shop, dann sollte das vielleicht auch Performance und Low Testing dabei sein. Aber muss es Test Driven Development sein zum Beispiel?"
+    },
+    {
+      "end": 3054340,
+      "speaker": "B",
+      "start": 3035860,
+      "text": "Muss es gar nicht. Aber Testing ist sicher kein Fehler. Und ich habe ja auch, wie du am Anfang schon erwähnt hast, zum Beispiel Code Reviews. Das ist zwar höchstwahrscheinlich, hoffentlich zumindest nach deinen automatischen Tests, die du geschrieben hast, aber da hast du ja auch noch mal eine Möglichkeit, Bugs zu finden, bevor sie wirklich produktiv gehen."
+    },
+    {
+      "end": 3069960,
+      "speaker": "A",
+      "start": 3054340,
+      "text": "Also ich glaube und ich bin auch fest davon überzeugt, dass du Tests haben solltest. Was ich aber wertvoller finde, als jetzt die Regel zu schaffen, mein Code muss achtzig Prozent Coverage zu haben, weil ich habe auch schon mal das ein oder andere Team gesehen, das ist sowieso Bullshit."
+    },
+    {
+      "end": 3071680,
+      "speaker": "B",
+      "start": 3069960,
+      "text": "Aber darüber haben wir auch schon öfters."
+    },
+    {
+      "end": 3093850,
+      "speaker": "A",
+      "start": 3071680,
+      "text": "In Testepisoden drüber gesprochen, habe ich aber immer wieder gesehen. Was ich viel wichtiger finde, ist, wenn du einen Bug hast, dass du erst den Test schreibst, dieser Test dann fehlschlägt und dann den Bug fixt. Und das sogar, wenn du das vielleicht nicht machst, sondern wenn ein Bug wiederkommt, nennt man ja Regression, dass du dann für die Regression einen Test schreibst."
+    },
+    {
+      "end": 3098570,
+      "speaker": "B",
+      "start": 3094090,
+      "text": "Jetzt sind wir da beim Bugs verhindern und du kommst wieder. Wie man Bugs richtig fixt."
+    },
+    {
+      "end": 3196180,
+      "speaker": "A",
+      "start": 3098570,
+      "text": "Ja, also ich meine, das ist der erste Teil. Und der zweite Teil ist natürlich dann, dass du die ganzen Bugs auch bei jedem, die ganzen Bugs, die ganzen Tests, bei den ganzen Pull Requests und bei jedem Deploy laufen lässt. Also Continuous Integration, Continuous Deployment, Continuous Delivery Delivery und so weiter. Denn nur du sagst ja auch, wenn du verhinderst, dass ein Großteil der Bugs in Produktion gehen, dann sind die nicht mehr so kritisch. Die Problematik ist bei diesen Tests immer, je nachdem, was das für Tests sind, können die enorm flaky sein. Wenn du sehr viele Tests hast, kann die Runtime der Test sehr hoch sein. Wenn du ein komplexes Setup hast, zum Beispiel Integrationstests mit Datenbanken, Integrationstests mit fremder Infrastruktur, nehmen wir mal Cloud Provider oder ähnliches. Stell dir mal vor, du baust einen Terraform Provider, um Infrastruktur zu steuern, diesen als Integrationstest zu laufen zu lassen. Bedeutet, du fährst Cloud Infrastruktur hoch und musst sie danach wieder zerstören. Jetzt denkst du, ja, kannst du ja machen, ist ja kein Problem. Das Problem ist aber, wenn du mit einem Cloud Provider arbeitest, hast du oft Rate Limits da drin und so weiter. Dann kannst du nicht so viele Tests auf einmal hochfahren. Die Test Runtime, bis die Cloud Node mal hochgefahren ist, dauert fünf Minuten etc. Etc. Und auch die Zeit, die Tests zu pflegen oder sogar größere Refactorings an deiner Codebase zu machen, die dann vielleicht sogar die externe API anfassen oder du hast sehr viel interne API getestet, dann kannst du die ganze Test fast wegschmeißen. Also es gibt halt auch enorme Downsides, abhängig von dem, was du testest und wie komplex seine Tests sind. Natürlich muss man auch zugeben, desto mehr Tests du hast, umso größer ist dann Sicherungsnetz."
+    },
+    {
+      "end": 3288150,
+      "speaker": "B",
+      "start": 3196180,
+      "text": "Ich sehe da aber auch jetzt gerade aktuell so den Fluch der AI, weil du da ja immer ganz viele Tests mitbekommst. Die beste Geschichte, die gerade kürzlich erlebt habe, Ich habe so ein Feature entwickeln lassen von der AI, alles schön gemacht, mehrere Iterationen und so weiter, hat mir Tests erstellt, hat dann die Tests natürlich auch ausgeführt bei mir auf der Command Line, alles grün, alles perfekt, Feature ist fertig und dann schauen wir so den Code durch, gehe auch in die Tests hinein, dann waren da ungefähr dreiig vierzig Tests, aber jeder Test war mit To Do versehen, das heißt, da war kein Code drin, das waren alles grüne Tests, aber jeder Test hat einfach immer grün zurückgegeben. Das ist die eine Seite, sollte man natürlich im Auge haben, aber die andere Seite, was viel schwieriger zu handeln ist, meiner Meinung nach, ist, dass mit jeder kleinen Änderung, die AI gerne ganz viele Tests macht und deine Testsuite so groß wird und so unübersichtlich und du wahrscheinlich auch so eine Fatigue entwickelst, jeden Test durchzuchecken, ob der wirklich stimmt, dass du am Ende so viele Tests hast und so eine unübersichtliche Situation, dass sie dir danach mehr schaden, als sie dir helfen. Und da muss man, glaube ich, auch gut aufpassen, dass man nicht zu viele Tests hat und die richtigen Tests, die sinnvollen Tests, damit es nicht flaky wird am Ende und ständig fehlschlägt und darauf muss man wahrscheinlich dann beim Code Review oder beim Reviewen von dem Code oder von anderen Personen, die mit AI das Ganze erstellt haben, schon auch ein Auge darauf werfen. Und da bin ich ganz bei dir. Zu viele Tests können auch schädlich sein."
+    },
+    {
+      "end": 3295510,
+      "speaker": "A",
+      "start": 3288230,
+      "text": "Das soll jetzt kein Aufruf sein, dass du gar keine Tests mehr schreiben sollst. Also bitte, wenn du uns zuhörst, der eine oder andere Test ist mal, glaube ich, ganz sinnvoll."
+    },
+    {
+      "end": 3314090,
+      "speaker": "B",
+      "start": 3295670,
+      "text": "Und es gibt auch einfach Tests, die falsch sind. Also AI wie beim Code auch, gibt es auch Tests, die einfach falsch sind. Die laufen da zwar grün durch, aber irgendwann änderst du eine Kleinigkeit und dann sind die rot, obwohl sie eigentlich grün sein sollten. Also da kommt teilweise auch Bullshit um die Ecke. Muss man wirklich im Detail sich ansehen."
+    },
+    {
+      "end": 3320210,
+      "speaker": "A",
+      "start": 3314170,
+      "text": "Jetzt bin ich natürlich ein riesen Fan von Testing Production und ich sage jetzt nicht, lass die ganzen Tests sein."
+    },
+    {
+      "end": 3327490,
+      "speaker": "B",
+      "start": 3320210,
+      "text": "Ich weiß, du wolltest ja schon die Tester an die Kunden auslagern bzw. Deine Kunden zu Tester machen. Also es schlägt jetzt in dieselbe Kerbe."
+    },
+    {
+      "end": 3434640,
+      "speaker": "A",
+      "start": 3327490,
+      "text": "Mach nur weiter so hast du Pessimist die ganze Sache formuliert. Das ist richtig. Aber was meine ich denn, wenn ich sage Testing in Production? Ich rede natürlich auf der einen Seite von Canary Deployments, auf der anderen Seite von Feature Flex. Also was bedeutet das? Du weißt nicht, ob deine Software Bugs hat. Deswegen deploys du die Software auf die Hälfte der Server oder wie wir in der multimandanten Episode gehört haben, für die Hälfte der Kunden oder für ein Viertel der Kunden. Danach beobachtest du deine Business Metriken. Sind die alle gesund, läuft das, Also man nennt das in der Industrie so Time. Du lässt die neue Version mal ein bisschen auf dem Produktionsserver, beobachtest das, guckst, ob irgendwie Kundentickets reinkommen, guckst, ob die Business Metriken sich positiv oder negativ verhalten, guckst, ob die Features genutzt werden. Das bedarf natürlich einer guten Observability, auch nicht nur auf technischen Metriken, sondern wirklich auf Business Metriken. Also werden Artikel noch gekauft, wird dein Service noch benutzt und so weiter. Und wenn das alles positiv aussieht, dann rollst du das Feature auf mehrere Kunden aus oder auf mehrere Server oder aus mehrere Regionen. Was für ein Attribut, nachdem du auf immer aufteilst. Und so kannst du natürlich auch sicher gehen, dass deine Software A Wert liefert, dass du B sehr gutes Produktions Feedback schnell bekommst und C, dass du natürlich den Blast Radius von deinen Bugs natürlich in Grenzen hältst. Natürlich kommt es immer auf die Nuance an, auf die Details. Wenn dein Change jetzt ganz viele Datenbankänderungen hat, dann wird es natürlich immer ein bisschen schwierig, ganz klar. Was du aber auch machen kannst als Alternative sind Feature Flags. Das bedeutet, du schiebst den neuen Code auf all deine Server und anhand eines Attributs, weiß ich nicht, Browser, Land, Sprache oder ähnliches, sagst du, nur Kunden aus Österreich bekommen dieses neue Feature."
+    },
+    {
+      "end": 3458830,
+      "speaker": "B",
+      "start": 3434880,
+      "text": "Der große Vorteil an dem ist ja auch, dass man sich Zeit erkauft, weil ich kann dieses Ding einfach wieder abschalten. Ich bekomme den Bug, deaktiviere dieses Feature Flag und habe dann Zeit zur Behebung von diesem Bug, ohne dass meine Kunden sauer werden und frustriert sind. Und da sehe ich eigentlich den größten Vorteil. Also es kann auch helfen auf der Bugbehebung Seite, dass sie einfach diese Möglichkeit haben, Feature Flag abzuschalten."
+    },
+    {
+      "end": 3513600,
+      "speaker": "A",
+      "start": 3458830,
+      "text": "Da gibt es eine riesen Herausforderung und zwar ist das nämlich die Kombinatorik. Wenn du nämlich sehr viele Feature Flags hast, dann könnte es sein, dass Feature Flag eins Feature Flag zwei beeinflusst und dann eine neue Art oder eine neue Klasse von Bugs triggert, die du so nicht auf dem Schirm hattest. Umso mehr Feature Flags du hast, desto größer natürlich die Kombinatorik. Und die zweite Thematik ist, das kann auch sehr hilfreich sein in generelle Operations, dass du sehr viele Operationen hinter einem Feature Flag hast. Das nennt sich dann auf Kill Switch, dass du sagst, okay, wenn meine Plattform unter Last ist, dass du bestimmte Features deaktivierst, um dann die Stabilität der Plattform zu erhalten, zum Beispiel teure Datenbank Queries oder so. Mal ein kleines Beispiel, Wenn du bei den Toten Hosen Konzertkarten kaufen möchtest im Onlineshop, wenn die wieder einen Vorverkauf haben, dann deaktivieren die automatisch die Übersicht deiner historischen Bestellungen, um einfach die Datenbanklast zu."
+    },
+    {
+      "end": 3524640,
+      "speaker": "B",
+      "start": 3513600,
+      "text": "Reduzieren, die weit zählen, wie oft du die Toten Hosen oder Taylor Swift Tickets Story auspackst. Ich glaube, wir hatten die im letzten Monat schon fünfmal, aber sie eignet sich natürlich, das immer sehr schön zu erklären."
+    },
+    {
+      "end": 3551410,
+      "speaker": "A",
+      "start": 3524640,
+      "text": "Ja, jetzt haben wir aber die ganze Zeit über Bugs Management, Bugs fixen, Bugs beheben, Bugs von vornherein verhindern gesprochen. Jetzt muss ich dir als datengetriebener Mensch natürlich die Frage stellen, hat sich diese Episode jetzt eigentlich gelohnt? Also ich meine Also wie schauen wir denn, ob sich der ganze Aufwand, den wir hier in den letzten zwei Stunden besprochen haben, ob der überhaupt irgendeinen positiven Impact auf mich, mein Team, meine Firma, mein Produkt hat?"
+    },
+    {
+      "end": 3570800,
+      "speaker": "B",
+      "start": 3551730,
+      "text": "Man merkt, dass du ein guter Manager bist. Du probierst jetzt das, was du gerne hättest, nämlich Metriken und Visibility auf dein Team, auf mich umzusetzen, leiten als Team Member, um eigentlich deinen Team Members mehr Visibility zu geben, was sie für tolle Arbeit geleistet haben, obwohl du eigentlich nur überwachen willst."
+    },
+    {
+      "end": 3580480,
+      "speaker": "A",
+      "start": 3570800,
+      "text": "Immer wenn du das Wort Überwachung in den Mund nimmst, muss ich sagen, also wir hatten ja mal einen Österreicher von euch, also ich weiß, okay, dann probiert es zu drehen."
+    },
+    {
+      "end": 3593240,
+      "speaker": "B",
+      "start": 3580560,
+      "text": "Was du ja überwachen willst, ist eigentlich die Kultur und die Qualitätskultur in deiner Firma. Und da eignen sich natürlich Metriken, um das auf einem höheren Level auch Sicht darauf zu haben."
+    },
+    {
+      "end": 3601800,
+      "speaker": "A",
+      "start": 3594120,
+      "text": "Was ich eigentlich machen möchte, ist, ich möchte die generelle Frage befindet sich unser Team Wolfgang, wir sind jetzt bei der Andi Wolfgang Corporation, ich weiß nicht, ob."
+    },
+    {
+      "end": 3606120,
+      "speaker": "B",
+      "start": 3601800,
+      "text": "Du das schon vergessen hast, klar, Top Team, Top Team, Best Team ever."
+    },
+    {
+      "end": 3624540,
+      "speaker": "A",
+      "start": 3607960,
+      "text": "OK, befinden wir uns auf dem richtigen Weg? Das ist die Frage, Verbessern wir uns? Das ist die Frage, die wir beantworten. Und ich denke auch, dass du Motivation schöpft, wenn du weißt, dass der Aufwand, den du betreibst, einen positiven Impact hat."
+    },
+    {
+      "end": 3627100,
+      "speaker": "B",
+      "start": 3624620,
+      "text": "Also was messen wir, Was messen wir?"
+    },
+    {
+      "end": 3628820,
+      "speaker": "A",
+      "start": 3627100,
+      "text": "Das ist die Frage. Was würdest du messen?"
+    },
+    {
+      "end": 3666390,
+      "speaker": "B",
+      "start": 3628820,
+      "text": "Ich springe zurück auf ganz den Anfang, was ich erwähnt habe. Und zwar habe ich da erwähnt, dass das Schlechteste ist, wenn der Kunde den Bug entdeckt. Und genauso würde ich auch meine Metriken zum Beispiel aufbauen. Also wo wird ein Bug entdeckt auf der Kundenseite weiter davor. Das wäre mal eine Metrik, die checken würde. Das heißt, wie viel Bugs schippen wir nach außen und wie viele Bugs entdecken wir schon frühzeitig, bevor die Bugs beim Kunden ankommen. Das wäre für mich eine wichtige Metrik, weil ich davon ausgehen muss, wenn ein Kunde einen Bug entdeckt, ist es eher schlecht, als wenn ich den früher entdecke in meiner Pipeline."
+    },
+    {
+      "end": 3684590,
+      "speaker": "A",
+      "start": 3667270,
+      "text": "Ich finde die Metrik eigentlich ziemlich smart. Woher kommt der Bug und wie viel Prozent der Bugs wurden von Kunden entdeckt? Das finde ich super smart, denn diese Metrik. Oder wenn du auch mehrere Stages sagst, okay, beim Unittest IMP, beim Code Review, das zeigt auch wirklich die Wirksamkeit dieser einzelnen Elemente, das ist natürlich super smart."
+    },
+    {
+      "end": 3727070,
+      "speaker": "B",
+      "start": 3684750,
+      "text": "Und sonst würde ich eigentlich sagen, ist das immer eine relative Metrik. Also ich würde nicht sagen, irgendwie die Anzahl der Bugs ist entscheidend, ist mehr so ein Rolling Average, habe ich da eine Verbesserung, habe ich weniger Bugs über die Zeit, mehr Bugs, dass sie einfach so eine Kontrolle im Groben habe. Wobei man dann natürlich auch immer aufpassen muss, was das wirklich bedeutet. Kann sich auch in der Struktur was verändert haben, dass man Bugs kleinteiliger erfasst oder dass in irgendeiner automatischen Pipeline automatisch Bugs erstellt werden, die man früher eher manuell erstellt haben, dann wird das natürlich auch automatisch anwachsen. Also das muss man immer im Kontext sehen. Aber grundsätzlich, um so eine grobe Metrik zu haben, geht was nach oben, geht was nach unten, ist sicher hilfreich."
+    },
+    {
+      "end": 3738550,
+      "speaker": "A",
+      "start": 3727070,
+      "text": "Also ich denke schon, weil das ist einfach standardmäßig in fast jedem Tool drin, dass man halt die offenen und die geschlossenen Bugs tracken sollte. Was ich aber auch interessant finde, wie viel Bugs wurden geschlossen ohne einen Pull Request."
+    },
+    {
+      "end": 3740550,
+      "speaker": "B",
+      "start": 3739190,
+      "text": "Was zeigt dir diese Metrik?"
+    },
+    {
+      "end": 3754790,
+      "speaker": "A",
+      "start": 3740550,
+      "text": "Naja, oft indicate, oft ein Indikator von dieser Bug war eine false positive, also ein falscher Bug Report oder jemand hat die Intention des Features nicht verstanden oder falsch wahrgenommen, nicht falsch verstanden."
+    },
+    {
+      "end": 3759810,
+      "speaker": "B",
+      "start": 3754790,
+      "text": "Bei mir wäre das auch eher eigentlich eine UX Folge, dass eigentlich die UX schlecht ist."
+    },
+    {
+      "end": 3828790,
+      "speaker": "A",
+      "start": 3759970,
+      "text": "Ja, aber es gibt dir ein Signal. Es gibt dir ein Signal, es kam ein Bug rein, da hat sich eine Softwareentwicklerin oder Softwareentwickler mit beschäftigt und es hat kein Code Change stattgefunden. Man müsste natürlich dann gucken, was sagt einem das. Aber ich finde das eine interessante Thematik. Eine andere Thematik, die ich sehr interessant finde, ist, wenn du dieses Vorgehen verfolgst, dass du jedem Bug eine Art Deadline gibst, was wir besprochen hatten. Wie oft reist du diese Deadline? Also wie viel Bugs werden nicht in der zugewiesenen Deadline behoben? Natürlich ist das jetzt kein Ko Kriterium, aber es sagt dir aus, wie ernst du diese Deadline nimmst oder wie oft du Crunch Times hast oder wie oft du dein eigenes Regelwerk, was du für dein Team und deine Struktur gesetzt hast, selbst brichst. Und das kann natürlich dann zu guten Prozessoptimierungen dann später führen, weil wenn du sagst, okay, neunzig Prozent meiner Bugs sehe ich, wo ich eine Deadline zuweisen, die breche ich und kann ich nicht halten, da sind die Deadlines vielleicht zu knapp oder du bist dauerhaft in Crunch Time oder du sagst immer, alles ist wichtiger und dann ist die Frage, okay, was bringt diese Struktur, diese Regelung hier überhaupt? Also da kann man dann, glaube ich, sehr viel simplifizieren oder verbessern."
+    },
+    {
+      "end": 3852370,
+      "speaker": "B",
+      "start": 3828870,
+      "text": "Wie immer, Metriken sind ein Datenpunkt. Man muss sich dann das sowieso immer im Kontext ansehen, weil nur weil irgendeine Rate nach oben geht, heißt es noch lange nicht, dass das Team schlecht funktioniert. Kann ja auch damit zu tun haben, dass das Team eine neue Technologie einsetzt, wo sie das Knowledge nicht hat. Also es ist ein Datenpunkt und da muss man einfach in die Tiefe gehen, um zu analysieren, woran liegt das Ganze."
+    },
+    {
+      "end": 3948740,
+      "speaker": "A",
+      "start": 3852530,
+      "text": "Ich denke, wie du die Metriken interpretierst, hat auch sehr viel mit der Kultur zu tun. Die Kultur bei diesem ganzen Bug Processing, die wir besprochen haben, ist auch sehr wichtig, weil oft ist es natürlich so, man investiert irgendwie zwei Wochen, um den Bug zu fixen und der Outcome, der Output ist vielleicht nicht so, wie man gedacht hatte oder man schafft es nicht, den Bug zu fixen oder oder dass man vielleicht nicht immer nur das Bugfixen selbst anerkennt, sondern auch den Aufwand, den jemand da reingesteckt hat und dass Qualitätsimprovements und Bugfixing halt auch Arbeit ist, die auf dem Leadership Level anerkannt wird. Also diese ganze Thematik hier. Ich bin mir nicht sicher, ob man die allein im Team vorantreiben kann, weil dann eckt man nämlich sehr oft an, also Engineering Manager, Product Manager, eckt dann sehr viel mit den Partnerteams an oder Teams, die irgendwie was von dir brauchen. Ja, wir haben keine Zeit, weil wir Bugs fixen müssen, sondern ich denke, das muss halt schon, dieses Mindset, von dem wir hier sprechen, muss halt schon im Leadership irgendwie verankert sein oder es muss halt schon ein gutes Verständnis dafür da sein, warum ihr das macht. Und dass dann natürlich die ganze Sache auch Anerkennung bekommt und dass man vielleicht sogar gar keine Erlaubnis braucht, um einen Bug zu fixen, sondern dass man einfach das Richtige tut. Das bedarf natürlich auch sehr erwachsenen und sehr seniorigen Teammitgliedern, die dann auch, wie der Wolfgang auch schon mal sagte, ein gutes Business Verständnis haben, damit die Balance auch gegeben ist, Weil nur weil ein Bug ist und man hat so ein kleineren, so ein kleines Monk Verhalten, ich bin auch so einer, ich fokussiere mich sehr viel auf Bugs, damit wir bug free sind, aber ich weiß ganz genau, okay, dieser eine Bug, der bringt uns jetzt hier nicht weiter. Also da muss man dann schon ein bisschen differenzieren."
+    },
+    {
+      "end": 4005160,
+      "speaker": "B",
+      "start": 3949060,
+      "text": "Ganz allgemein vielleicht noch, Metriken sind sowieso immer nur in der richtigen Kultur sinnvoll, weil sonst wird einfach passieren, dass alle probieren, diese Metriken irgendwie auszutricksen und dann werden halt Bugs nicht mehr so erfasst, wie sie erfasst werden sollen und dann wird halt probiert, einfach drumherum zu arbeiten. Also es muss irgendwie immer einen positiven Impact haben, wenn solche Metriken zum Beispiel fallen. Also es darf nie irgendwie Blaming Kultur angewandt werden, weil sonst wird es nie funktionieren, sei es jetzt auf Team Ebene oder von einer höheren Ebene. Noch schlimmer ist, wenn man dann Team vergleicht und sagt, hey, die lösen die Bugs aber um zwei Tage schneller als das andere Team. Das ist dann so richtig toxisch, wenn man sowas anwendet. Also da immer möglichst in einer sinnvollen Kultur mit einem Fingerspitzengefühl und immer mit einer Root Cause Analysis an solche Metriken dran gehen oder an den Folgerungen, die man aus diesen Metriken zieht. Ganz wichtig meiner Meinung nach eine philosophische."
+    },
+    {
+      "end": 4016320,
+      "speaker": "A",
+      "start": 4005160,
+      "text": "Folge und ich glaube, ich kann das Wort Bug jetzt nicht mehr sehen oder aussprechen. Kennst du das, wenn du ein Wort mal aussprichst und gar nicht mehr weißt, wie du es über wirklich richtig aussprichst oder was es bedeutet? Das Gefühl hatte ich hier drei Buchstaben."
+    },
+    {
+      "end": 4018480,
+      "speaker": "B",
+      "start": 4016320,
+      "text": "Und du weißt schon wieder nicht mal, wie man sie ausspricht."
+    },
+    {
+      "end": 4054100,
+      "speaker": "A",
+      "start": 4018480,
+      "text": "Aber ich glaube, wenn es ein paar Take Ways für diese Episode gibt, dann ist es auf der einen Seite, es gibt nicht den einen Prozess, der überall funktioniert. Experimentiere einfach mal ein bisschen mit den verschiedenen Wegen, verschiedenen Modellen, wie zum Beispiel auch, macht es Sinn, alte Bugs zu fixen oder solltest du nur die aktuellsten Probleme beheben? Also spiel mal ein bisschen rum, sprich mit deinem Team darüber, dass ihr kleine Experimente fahrt. Und ich glaube, was man aber festhalten kann, je älter der Bug ist, desto länger dauert es, diesen zu fixen, weil einfach der Kontext fehlt und natürlich, weil die Software sich weiterentwickelt, außer man schließt."
+    },
+    {
+      "end": 4060220,
+      "speaker": "B",
+      "start": 4054100,
+      "text": "Ihn dann einfach, dann ist es wieder schnell. Umso länger er offen ist, umso schneller ist er dann geschlossen, wenn man nichts."
+    },
+    {
+      "end": 4069740,
+      "speaker": "A",
+      "start": 4060220,
+      "text": "Macht, was wichtig ist, kommt wieder oder man nennt das auch Bug Insolvenz. Aber nun gut. Aber Wolfgang, um dich jetzt noch mal am Ende zum Lachen zu bringen. Ich habe noch mal einen Witz. Bist du bereit?"
+    },
+    {
+      "end": 4074260,
+      "speaker": "B",
+      "start": 4069740,
+      "text": "Also die Wahrscheinlichkeit, dass ich lache über deine Witze, ist eigentlich sehr niedrig. Aber versuch wieder mal."
+    },
+    {
+      "end": 4092860,
+      "speaker": "A",
+      "start": 4075140,
+      "text": "Die Hörerinnen und Hörer sehen das ja nicht, aber du fängst sehr oft an zu grinsen, obwohl du es nicht zugeben möchtest. Man merkt, du wehrst dich dagegen. Debugging ist wie Detektivarbeit, bei der du selbst der Mörder bist und dich nicht mehr daran erinnerst, warum Gut ist kein Witz ist, glaube ich, ein Ehrensprecher."
+    },
+    {
+      "end": 4095860,
+      "speaker": "B",
+      "start": 4092860,
+      "text": "Ich wollte gerade sagen, es ist kein Witz, aber ich stimme dir zu."
+    },
+    {
+      "end": 4105010,
+      "speaker": "A",
+      "start": 4097250,
+      "text": "Gut, man könnte auch sagen, der Tester sagt, ich habe ein hundert Bugs gefunden. Der Entwickler sagt, cool, ich habe ein hundert zwanzig Bugs behoben. Der Tester, warum habe ich ja zwei hundert vierzig Bugs?"
+    },
+    {
+      "end": 4114290,
+      "speaker": "B",
+      "start": 4105250,
+      "text": "Das ist auch der Grund, warum Entwicklerinnen weniger True Crime hören, weil die einfach tagtäglich selber mit viel True Crime zu tun haben."
+    },
+    {
+      "end": 4132440,
+      "speaker": "A",
+      "start": 4114290,
+      "text": "Wahrscheinlich. Fehler, Fehler, Fehler. Macht euch nicht nieder, damit ihr so viel Fehler habt. Das ist ganz normal. Das nächste Feature kommt bestimmt bei dem Spaß habt. Wir verabschieden uns. Bis bald. Bye bye. Tschö. Tschüss."
+    }
+  ],
+  "webhook_auth": false
+}

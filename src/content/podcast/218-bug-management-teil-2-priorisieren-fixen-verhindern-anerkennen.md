@@ -73,11 +73,16 @@ length_second: 4132
 pubDate: 2025-10-21 01:00:07+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/4EpPFYnw2Oah6xNNymXstz
-tags: []
-title: '#218 Bug Management Teil 2: Priorisieren, Fixen, Verhindern, Anerkennen'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Software Qualität
+- Tech Kultur
+title: "#218 Bug Management Teil 2: Priorisieren, Fixen, Verhindern, Anerkennen"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=Dms9sQyzKt4
 
 ---
