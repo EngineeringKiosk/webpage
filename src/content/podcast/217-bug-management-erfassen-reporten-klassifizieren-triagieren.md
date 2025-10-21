@@ -69,8 +69,8 @@ tags:
 - Software Engineering
 - Tech Kultur
 - Engineering Kiosk
-title: "#217 Bug Management: Erfassen, Reporten, Klassifizieren, Triagieren"
-transcript_slim: ""
+title: '#217 Bug Management: Erfassen, Reporten, Klassifizieren, Triagieren'
+transcript_slim: src/data/transcripts/217-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Qo1utlicyD0
 
 ---
