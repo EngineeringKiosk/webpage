@@ -1,0 +1,668 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3654,
+  "audio_url": "https://cloud.inlupus.at/s/aXSZ3Si33a5St98/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9593616,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "1b4c3653-bb06-4af7-a282-a2587d697f8c",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 30000,
+      "speaker": "A",
+      "start": 1920,
+      "text": "Code beim ersten Mal zu veröffentlichen ist, wie Schulden aufzunehmen. Ein wenig Schulden kann die Entwicklung beschleunigen, solange sie zügig mit einem Rewrite zurückgezahlt werden. Die Gefahr entsteht, wenn die Schulden nicht zurückgezahlt werden. Jede Minute, die man mit nicht ganz richtigem Code verbringt, zählt als Zins auf diese Schulden. Ganze Engineering Organisationen können unter der Schuldenlast einer unkonsolidierten Implementierung objektorientiert oder nicht zum Stillstand kommen."
+    },
+    {
+      "end": 70000,
+      "speaker": "B",
+      "start": 30640,
+      "text": "Das war Walt Cunningham, ein Programmierer aus den USA. Er prägte auch das Cunningham Gesetz, das der beste Weg im Internet, die richtige Antwort zu bekommen ist, nicht eine Frage zu stellen, sondern die falsche Antwort zu verbreiten. Ich würde sagen, es ist ein sehr weiser Mann. Ward Cunningham prägte aber auch den Begriff technische Schulden, zu englisch technical debt. Und jeder, der der schon mal Software geschrieben hat und über einen längeren Zeitraum maintained hat, kennt das Problem hier und da geht man mal eine Abkürzung, um schneller voranzukommen. Doch leider rächt sich das später. Und wie man damit umgeht, damit beschäftigen wir uns in dieser Episode Alles zum Thema technische Schulden. Ab geht's, viel Spaß."
+    },
+    {
+      "end": 97520,
+      "speaker": "A",
+      "start": 73120,
+      "text": "Die Definition von diesem guten Wort Cunningham ist ja sehr strukturiert, auch bisschen strategisch. Wenn du technische Schulden hast, Andi und Technical Debt, was hast du dann für ein Gefühl im Normalfall, so im Alltag? Ist es was Positives, ist es was Negatives, ist es was Strategisches? Heißt es. Oh mein Gott, jetzt kommt eine Diskussion. Erster Gedanke, mein super."
+    },
+    {
+      "end": 111870,
+      "speaker": "B",
+      "start": 97680,
+      "text": "Erster Gedanke ist immer aber das hängt an dem Wort Schulden, dass es negativ ist. Aber dann denke ich mir auch, okay, es gibt ja gute Schulden und es gibt schlechte Schulden, so ähnlich wie die Schufa das bewertet. Kennst du die Schufa? Habt ihr sowas in Österreich?"
+    },
+    {
+      "end": 119470,
+      "speaker": "A",
+      "start": 111870,
+      "text": "Ja, natürlich. Bonitätschecks, aber nicht so schlimm. Also wir verlieren keine Daten und so wie eure Schufa, glaube ich, hoffe ich zumindest."
+    },
+    {
+      "end": 134110,
+      "speaker": "B",
+      "start": 119630,
+      "text": "Denn Konsumschulden, ich kaufe mir jetzt einen Fernseher bei Media Markt zu drei komma sieben Prozent sind negative Schulden aufgrund des hohen Wertverlustes. Immobilienschulden werden eher als positive Schulden genannt, weil man da ja einen Asset Aufbau macht, wenn man so möchte."
+    },
+    {
+      "end": 137540,
+      "speaker": "A",
+      "start": 134270,
+      "text": "Das hat sich der Benko auch gedacht, aber will da jetzt gar nicht abschweife."
+    },
+    {
+      "end": 141850,
+      "speaker": "B",
+      "start": 137930,
+      "text": "Ja, das war ja einfach nur zocken und hebeln. Das ist vielleicht was anderes. Ich rede jetzt eher so vom Eigenheim."
+    },
+    {
+      "end": 148010,
+      "speaker": "A",
+      "start": 141850,
+      "text": "Es gilt die Unschuldsvermutung. Also jetzt müssen wir das in einem technischen Podcast auch schon sagen. Okay, weiter im Programm."
+    },
+    {
+      "end": 178590,
+      "speaker": "B",
+      "start": 148010,
+      "text": "Der erste Eindruck ist immer negativ wegen dem Wort Schulden. Dann muss ich mir kurz in Erinnerung rufen, dass es mehrere Arten von Schulden gibt. Und Fun Fact, solche Karteien wie die Schufa bewertet es positiver, wenn du bereits einen Kredit an Schulden hattest und das ordnungsgemäß zurückgezahlt hast, als wenn du noch nie einen Kredit hattest und noch nie Schulden aufgenommen hast. Das war am Anfang für mich auch sehr schwer zu verstehen. Inzwischen macht das irgendwie Sinn, weil das ist ja irgendwie so eine Art Beweis, Okay, du kannst verantwortungsvoll mit Geld umgehen und Geld zurückzahlen, aber wir schweifen ab."
+    },
+    {
+      "end": 191870,
+      "speaker": "A",
+      "start": 178670,
+      "text": "Ja, genau, weil vor allem du schweifst ab. Es ist schwierig mit dir solche Fragen zu beantworten. Du gehst schon immer in diesen Erklärmodus, in den sachlichen Modus. Probier mal dein Gefühl. Hast du ein positives oder ein negatives Gefühl, wenn das irgendwo aufs Tapet kommt."
+    },
+    {
+      "end": 202180,
+      "speaker": "B",
+      "start": 191870,
+      "text": "Wenn du hier so anfängst und du sagst, der Wort Cunningham geht da sehr strukturiert dran, weil mir fehlt, also mir fehlt bei dir ja immer die Struktur, deswegen bin ich ja der Strukturierte und muss das hier ausgleichen."
+    },
+    {
+      "end": 204660,
+      "speaker": "A",
+      "start": 202260,
+      "text": "Eben darum Gefühl, Gefühl, Gefühl."
+    },
+    {
+      "end": 222900,
+      "speaker": "B",
+      "start": 205380,
+      "text": "Heute habe ich das eine, morgen habe ich das andere. Ne, erster Gedanke negativ, dann wieder, okay, muss man ein bisschen anders betrachten. Und jetzt kommt's. Technische Schulden sind notwendig, meines Erachtens nach. Das ist mein erstes Gefühl, Kann aber auch zu einem negativen umschwenken, so dass man sich da wieder, ich sag mal, selbst begräbt."
+    },
+    {
+      "end": 271520,
+      "speaker": "A",
+      "start": 222900,
+      "text": "Also ich kann mich da ja erinnern an ein Meeting vor vielen Jahren. Keine Ahnung, ob du dich noch daran erinnern kannst. Da sind wir in einem Raum gesessen und da ist es darum gegangen, irgendein Problem zu lösen, eine Software. Und es hat geheißen, ist kompliziert, das muss man machen. Und dann ist der Andi um die Ecke gebogen und hat Hey, ich habe da irgend so irgendein Interface mal schon programmiert für einen komplett anderen Zweck. Aber im Prinzip ist es fast das gleiche. Wir können das komplett zweckentfremden, das ist eh im Prinzip dieselbe Anbindung und ich hack das einfach am Nachmittag irgendwie hin, damit es läuft. Und ich glaube, das Ding ist dann irgendwie sehr lange gelaufen oder es war irgendwas mit Kafka und irgendwelche Daten von links nach rechts zu schmeißen und du hast es von irgendeinem schwindeligen Chat, wo in Slack Messages irgendwas geschrieben wurde, das in produktiv richtig Daten von links nach rechts schieben gehebelt, würde ich fast sagen. Habe ich das richtig im Kopf?"
+    },
+    {
+      "end": 273240,
+      "speaker": "B",
+      "start": 271520,
+      "text": "Ich kann mich nicht daran erinnern, aber."
+    },
+    {
+      "end": 275560,
+      "speaker": "A",
+      "start": 274680,
+      "text": "So schlimm ist es."
+    },
+    {
+      "end": 286250,
+      "speaker": "B",
+      "start": 278370,
+      "text": "Also nichts hält so lange wie ein Provisorium. Ich glaube, das müssen wir auch mal feststellen. Aber genau das meine ich mit notwendigem Übel."
+    },
+    {
+      "end": 296130,
+      "speaker": "A",
+      "start": 286250,
+      "text": "Ich wollte da nur mal die Pflöcke einrammen, um gleich für alle Hörer innen zu erklären, wo der Andi steht, auf welcher Seite und wo ich jetzt dann stehen werde, wenn es um technische Schulden geht."
+    },
+    {
+      "end": 304450,
+      "speaker": "B",
+      "start": 296370,
+      "text": "Und da du dich an die Situation besser erinnern kannst. Meine nächste Frage haben wir das nie aufgeräumt, weil wir nie Zeit hatten oder weil es nie notwendig war?"
+    },
+    {
+      "end": 313550,
+      "speaker": "A",
+      "start": 304610,
+      "text": "Ich war zu wenig mit diesem Projekt vertraut, muss ich zugeben, aber ich habe es nur gut gefunden, weil es ist danach auf jeden Fall sehr lange gelaufen. Da bin ich mir ziemlich sicher."
+    },
+    {
+      "end": 450220,
+      "speaker": "B",
+      "start": 373550,
+      "text": "Und deswegen meine ich ja notwendiges Übel. Ich denke, technische Schulden sollten, werden sie aber nicht immer, sollten aktiv eingegangen werden und sollten auch eine aktive Entscheidung sein, mit dem anderen Trade off schneller zu shippen. Und deswegen habe ich diese lange Erklärung, wie ich das Wort Schulden sehe und dass ich mich immer wieder in Erinnerung rufen muss, dass es auch positive Schulden gibt, in einem Pamphlet hier mal erklärt. Jetzt kommen wir aber noch zu dem negativen Aspekt der technischen Schulden. Und das sind nicht die technischen Schulden selbst, sondern wie wir Entwickler und Entwicklerinnen diese sehen, nämlich immer sehr subjektiv. Und das ist mein Problem mit diesem Begriff. Es ist sehr einfach zu sagen, das ist technische Schuld. Jetzt gehe ich mal auf ein Extrem. Ich nutze React Version zweiter märz und React Version zweiter april ist draußen. Wir haben einen Version Drift, wir sind nicht auf der aktuellsten Version. Das ist eine technische Schuld. Da müssen wir jetzt ein Ticket reinpacken, oder Dieser Code folgt nicht genau diesem Design Pattern, das ich letzte Woche im Blogpost gesehen habe, das ist technische Schuld und das ist mein persönliches Problem mit der Tech Kultur und mit vielen Softwareentwickler und Softwareentwicklerinnen. Und ich schließe mich da selbst nicht aus, denn auch ich war so und bin teilweise so opinionated. Ist ja auch eine stärke, es ist."
+    },
+    {
+      "end": 518220,
+      "speaker": "A",
+      "start": 450220,
+      "text": "So eine Keule, die gern verwendet wird, da stimme ich dir vollkommen zu. Martin Fowler, den man ja kennen sollte, der sagt auch zum Beispiel, dass technische Schulden keine Anti Patterns sind. Das heißt, er geht davon aus, Anti Patterns werden sowieso nicht verwendet, werden nicht eingebaut. Und technische Schulden sind wirklich Schulden, die man bewusst eingeht, um eben schneller zu shippen meistens oder um irgendwelche anderen Trade offs zu erreichen. Und es hat nichts damit zu tun, dass man da irgendwie extrem dreckigen Code oder er nennt es MAS im Englischen, also wie übersetzt man es am besten ins Deutsche, der Tracking Code würde ich es mal nennen, dass man da schon einen Unterschied macht. Und das geht ja auch eigentlich auf das zurück, was du jetzt gesagt hast, dass man das gerne für ganz viele Sachen verwendet, obwohl es eigentlich für einen gewissen Bereich gedacht ist und so wie es Cunningham auch definiert hat, wirklich als strategisches Tool. Und sobald es ein strategisches Tool ist, wird es eigentlich auch positiver behaftet, weil man ein Werkzeug hat, das man wirklich sinnvoll einsetzen kann und mit dem man arbeiten kann. Und darüber wollen wir eigentlich in dieser Episode auch sprechen."
+    },
+    {
+      "end": 532100,
+      "speaker": "B",
+      "start": 518220,
+      "text": "Du sagtest ja jetzt schon, wie Martin Fowler technische Schulden sieht, beziehungsweise hast du ein Beispiel angeführt, was er sagt, was technische Schulden nicht sieht. Und jetzt möchte ich von dir mal wenigstens ein paar Gegenbeispiele hören. Was siehst du denn als technische Schulden?"
+    },
+    {
+      "end": 622530,
+      "speaker": "A",
+      "start": 532580,
+      "text": "Also Martin Fauler sagt ja alles, mit dem man dann schneller zum Ziel kommt. Also eigentlich, ich sehe es auch immer so als Abkürzung und wenn es eine Abkürzung ist, ist es selten schlechter Code, weil das ist ja nicht wirklich eine Abkürzung, wenn man schlechten Code schreibt. Aber eine Abkürzung kann zum Beispiel sein, dass man gewisse Softwaredokumentation noch nicht geschrieben hat oder nicht automatisch mitzieht, dass man gewisse Automatisierungen nicht rundherum noch gebaut hat, dass man gewisse Sachen einfach manuell macht, dass man gewisse Tests, ist schon schwierig, aber dass man vielleicht Tests, die man jetzt nicht unbedingt sofort braucht, vielleicht rausgeschoben hat. Dass man vielleicht hin und wieder mal irgendwo Copy Paste gemacht hat bei einem Code, anstatt es sauber in eine Architektur zu fassen und zu abstrahieren. Solche Dinge. Also wenn es dann in Richtung Code Architektur geht, wo man vielleicht das eine oder andere noch verbessern kann, gewisse Compiler Warnings, wenn ich da jetzt zum Beispiel an typescript denke, dass man da vielleicht noch irgendwo ein anytype drin hat. Solche Abkürzungen könnten technische Schulden sein. Wobei, wenn man so fein granular schon in die Code Ebene geht, würde auch argumentieren, ist es dann schon wirklich strategisch so gedacht oder ist es einfach nur Faulheit und man sagt dann technische Schuld dazu. Also das ist natürlich dann schwammig, aber ich würde mal sagen, das sind durchaus Sachen, die man verschieben kann, wo man sagt, okay, wir schippen mal was und in der nächsten Iteration mit den ersten ein, zwei Bugs räumen wir dann auch gewisse Sachen einfach mit auf im nächsten Schritt."
+    },
+    {
+      "end": 706620,
+      "speaker": "B",
+      "start": 622760,
+      "text": "Und immer genau da, wo du sagst, wenn es in die Architektur Richtung geht und Co. Da habe ich immer so ein bisschen so ein Grummeln im Magen, weil da ist es nämlich sehr schwer zu trennen. Beziehe zwischen dem Hammer, den du gerade erklärt hast, oder der Keule, hast du glaube ich gesagt. Und das sind wirkliche technische Schulden. Denn ich glaube, jeder, der schon mal Software geschrieben hat, weiß, der Code kann immer schöner sein. Und das Riesenproblem ist, wenn ich eine Code von vor einer Woche geschrieben habe, dann habe ich drei Blogposts in der Woche gelesen. In diesen drei Blogposts habe ich etwas Neues gelernt und dann schaue ich auf meinen Code, den ich vor einer Woche geschrieben habe, gesagt, das wäre jetzt der perfekte Use Case für das, was ich in den letzten drei Blogpost gelernt habe. Und somit ist das nicht mehr schön genug. Und da die Balance oder die Grenze zu finden, damit habe ich immer so ein Problem, weil das ist nämlich schwierig. Das ist schwierig zu argumentieren, das ist schwierig zu diskutieren, weil das sehr subjektiv ist. Und deswegen bin ich mir da gar nicht so sicher, ob ich generell mitgehe, dass Architekturentscheidungen grundlegend zu technischen Schulden führen. Denn wenn man sie aktiv eingegangen ist, ja, aber viele Sachen wachsen ja auch mit der Zeit und deswegen finde ich die Definition eher besser. Dass technische Schulden Kompromisse sind, die Unternehmen eingehen, um Dinge schneller und kurzfristiger zu erledigen, obwohl sie genau wissen, dass sie dafür später bezahlen müssen."
+    },
+    {
+      "end": 753740,
+      "speaker": "A",
+      "start": 706620,
+      "text": "Ja, aber du springst jetzt wieder auf die ganze abstrakte Ebene. Die Diskussion auf der Code Ebene hast du ja trotzdem noch Was bedeutet es, schneller zu sein? Und da gibt es natürlich Meinungen, die okay, auf der Code Ebene muss alles sauber sein. Und dann gibt es Meinungen, dass man vielleicht okay, ich habe jetzt da drei Klassen, die machen alle was Ähnliches und die könnt ihr eigentlich zusammenfassen und eine abstrakte Klasse daraus machen und das vielleicht sauber zusammenziehen. Das überlege ich mir vielleicht jetzt, mache es dann aber in einem späteren Schritt nächste Woche, nachdem das Ganze released worden ist oder mit dem nächsten Feature. Also das ist dann eine strategische Entscheidung auf der Code Ebene. Aber die Diskussion wirst du immer haben. Andere Leute werden sagen, das geht mir auf keinen Fall raus. So, das muss zusammengefasst sein. Es kann nicht sein, dass du da dreimal denselben Code irgendwo in der Klasse hast."
+    },
+    {
+      "end": 794400,
+      "speaker": "B",
+      "start": 753900,
+      "text": "Ich glaube, das Wort sauber passt ganz gut in diesem Kontext. Bin ich hier besenrein oder bin ich hier klinisch rein? Und ich habe oft das Gefühl, Leute mit mehr Erfahrung tendieren eher zu besen rein und Leute, die gerade damit anfangen, tendieren eher zu klinisch rein. Meine these ist, dass Leute mit mehr Erfahrung wissen, dass dieser Code entweder zwanzig Jahre hält und nie wieder angefasst wird, weil er läuft einfach oder das nächste Jahr sowieso nicht überlebt, weil er sowieso aufgrund von geänderten Anforderungen neu geschrieben wird. Und in beiden Fällen und jetzt finde ich das Schöne ist klinisch rein Zeitverschwendung. Man hat ein tolles Bauchgefühl jetzt in diesem Moment. Aber auch wenn der Code zwanzig Jahre läuft und nicht mehr angefasst wird, ist der perfekte Code Zeitverschwendung."
+    },
+    {
+      "end": 930740,
+      "speaker": "A",
+      "start": 794560,
+      "text": "Und genau darum ist ja dann das Beheben eigentlich von technischen Schulden auch so ein iterativer Prozess. Also es ist ja nicht ich behebe einmal alles oder ich mache einmal gar keine Schulden, weil das wird halt selten funktionieren. Dann wirst du gar nie was schippen. Das heißt, irgendwo ein Trade off wirst du da immer finden müssen und es ist immer ein fließender Prozess, der läuft und es kommen Sachen dazu. Software ist ja keine statische Sache, sondern das ist eine lebende Sache, die sich weiterentwickelt die sich bewegt, die man natürlich auch beeinflusst, wo neue Einflüsse reinkommen, mehrere Personen daran arbeiten. Also das ist schon was sehr Bewegliches und darum ist alles, was in Richtung Perfektion geht, sowieso selten der richtige Weg. Was ich auch noch ganz interessant finde, ist, dass wir jetzt auch schon, ohne dass wir uns da jetzt abgesprochen haben, irgendwie sofort in die Code Ebene gesprungen sind und vielleicht noch in die Architekturebene. Aber es gibt meiner Meinung nach auch technische Schulden auf anderen Ebenen. Und zwar sind da zwei Ebenen noch ganz wichtig. Das sind einmal die Prozessebenen, also neben Code und Architektur die Prozessebene und die People Ebene, weil du kannst natürlich auch da technische Schulden haben. Wenn du jetzt zum Beispiel sagst, wird ja auch ganz oft gemacht, wir releasen was und eine Person arbeitet daran und üblicherweise haben wir aber die Regel, es müssen zwei Personen daran arbeiten, es muss ein Code Review geben, dann kann es eine strategische Entscheidung sein, Wir schippen das möglichst schnell, nur eine Person weiß Bescheid, keine zweite. Du baust da bewusst einen Silo auf, einen Knowledge Silo und den musst du dann aber auch wieder auflösen. Und das ist auch eine technische Schuld. Also auf der menschlichen Seite, auf der Entwickler Innenseite von den Team Members hast du natürlich genauso technische Schulden, die du da aufbauen kannst auf der Prozessebene dasselbe. Baust du jetzt einen sauberen Prozess auf oder noch nicht, verschiebst du das auf später, gehst natürlich auch das Risiko damit ein, dass du keinen sauberen Prozess hast, könnte CI CD mit reinnehmen, Schiebe ich das jetzt einfach schnell, schieb da irgendwo das File auf den Server oder habe ich da eine neue, eine saubere Pipeline? Da wirst du mir jetzt gleich dagegen reden als großer Fan von CI CD, der die als erstes immer macht. Aber natürlich kann man sowas auch eingehen, diese technische Schuld und bewusst sagen, kümmere mich aktuell nicht darum machen wir dann zu einem späteren Zeitpunkt. In dem Wissen natürlich, dass das alles langsamer wird und dass das auf geräumt werden muss irgendwann."
+    },
+    {
+      "end": 956540,
+      "speaker": "B",
+      "start": 930740,
+      "text": "Ja, da triggerst du ja schon so ein bisschen die Frage, wie kann man eigentlich technische Schulden quantifizieren? Also die Frage ist, wie entdecke ich denn technischen Schulden? Du sprichst ja gerade davon, okay, ich bin in dem Prozess ein neues Produkt zu bauen und stell mir die Frage, muss ich mich jetzt um CI, CD kümmern oder halt auch nicht und da sagst Nein, das mache ich später aufgrund des Trade offs. Jetzt bin ich langsamer, jetzt kann ich mich erst auf das Schreiben der Applikation fokussieren. Das ist ja während des Prozesses."
+    },
+    {
+      "end": 961610,
+      "speaker": "A",
+      "start": 956540,
+      "text": "Also im Idealfall, wenn du die technische Schuld bewusst eingehst, dann kennst du sie ja."
+    },
+    {
+      "end": 977370,
+      "speaker": "B",
+      "start": 961610,
+      "text": "Ja, du alleine, aber Softwareentwicklung ist ein Teamsport. Du bist hoffentlich nicht mehr alleine. Und wenn du alleine diese technische Schuld eingehst, dann hast du die in deinem Kopf. Aber wo notierst du dir? Machst du dann ein Dokument, technische Schulden Doc und das schickst du per E Mail rum, oder?"
+    },
+    {
+      "end": 1043270,
+      "speaker": "A",
+      "start": 977370,
+      "text": "Also vielleicht, wenn man dann noch mal einen Schritt zurückgeht in die Entscheidungsfindung, Du hast es schon anklingen lassen, Die Entscheidungen werden ja im eigenen Kopf oft getroffen, vor allem, wenn es jetzt um den Code geht. Also ich kläre jetzt nicht strategisch mit meinem PO ab, ob ich jetzt da einen Code Block kopieren darf oder nicht oder den zusammenfassen muss in eine abstrakte Funktion, die dann wiederverwendet wird und so weiter. Also das sind ja ständige Entscheidungen, die man hat während dem Programmieren und das natürlich auf allen Ebenen. Klar, es gibt jetzt die Entscheidung, wer arbeitet im Team an einem Produkt, wenn es nur eine Person ist. Das ist vielleicht eher eine technische Schuld, die jeder weiß, okay, es arbeitet nur eine Person jetzt daran, also so ein People Dad. Aber wenn wir auf der Code Ebene sind, ist es schwieriger. Und da kommen dann natürlich schon Metriken ins Spiel, die man auf die Codebasis anwenden kann, auf die Architektur, um herauszufinden, ob die Codequalität jetzt vielleicht Probleme aufweist und das eine technische Schuld ist. Du bist ein großer Fan von Metriken. Hast du Code Metriken, die du regelmäßig überprüfst oder die du überhaupt erfasst?"
+    },
+    {
+      "end": 1089120,
+      "speaker": "B",
+      "start": 1043270,
+      "text": "Ich war mal sehr tief im Bereich Code Metriken unterwegs, habe da ja sogar einen Teil meiner Bachelorarbeit zu gewidmet. Aktuell schaue ich gar nicht so viel auf Code Metriken. Ich schaue auf People und Prozessmetriken, die eine Code Relevanz haben. Natürlich schaue ich auf sowas wie die klassischen DORA Metriken und so hatten wir ja auch schon ein paar Mal besprochen, irgendwie Mean Time to Restore oder Change Failure Rate und all sowas. Also wie viel Incidents habe ich auf Basis von Code Changes? Obwohl es natürlich auch gerade Kritik in der Industrie zum Thema Mean Time to restore geht MTT, aber da kümmern wir uns später drum. Es gibt aber ein paar Code Metriken, die können ein Indikator sein für technische Schulden. Das ist zum Beispiel die zyklomatische Komplexität, die besagt eigentlich aus wie komplex ist eine Methode oder eine Prozedur."
+    },
+    {
+      "end": 1097770,
+      "speaker": "A",
+      "start": 1089360,
+      "text": "Ich würde mal gerne erzählen, wie oft du diese Metrik schon ins Spiel gebracht hast im Podcast. Ich glaube, das ist deine absolute Lieblingsmetrik, aber vielleicht auch nur, weil sie so einen komplexen Namen hat."
+    },
+    {
+      "end": 1229590,
+      "speaker": "B",
+      "start": 1098080,
+      "text": "Nein, weil sie einfach sehr viel aussagt, worüber eigentlich sich auch andere Patterns drum winden. Nehmen wir mal an, dieses Clean Code. Irgendwo sagt er ja auch in diesem Clean Code Bereich, eine Methode oder eine Prozedur soll nicht so lang sein, oder? Ja, und immer wenn du prozeduralen Code schreibst, hast du Entscheidungsstrukturen, if Abfragen, Schleifen und so weiter, kommst du eigentlich nicht drumrum. Somit nehme ich an, dass eine lange Prozedur, eine lange Funktion, eine lange Methode sehr viele dieser Entscheidungen und Kontrollstrukturen hat und somit ist die zyklomatische Komplexität sehr hoch. Aka wenn du mir ankommst, ja, wir müssen hier mehr klingt tot machen, dann ja ich die Metrik darüber und wieso Die Funktion hat eine zyklomatische Komplexität von fünfzehn, passt doch alles. Das bedeutet, wo du dich auf Subjektivität und dein Gefühl verlässt, komme ich um die Ecke und so. Wie sagt der Pottler, mach dich mit Daten niederlangen. Ne? Also das ist zum Beispiel eine Art. Es gibt auch eine andere Metrik, die nennt sich CRAP, speziell im Kontext von technischen Schulden. Woher kommt der Name? Der Name kam zuerst, weil viele Leute sagen ja, der Code ist KRAB, also nicht Krebs, sondern wie Krebs, sondern CRAP, also der Code ist Kacke. Und die sagen in der Regel nicht, die zyklomatische Komplexität ist zu hoch und KRAB ist eine eine Metrik, die kommt aus der Firma Google, aus dem QR Engineering von Google und steht für Change Risk, Anti Patterns. Und im Endeffekt ist das eine High Level Zahl, die mehrere Metriken, unter anderem die zyklomatische Komplexität gibt es auch noch, die Enpass Komplexität und all sowas zusammenfasst. Auch die Code Coverage spielt eine Rolle und so weiter und so fort. Und da kann man natürlich schon argumentieren, um technische Schulden zu entdecken, kann man auf jeden Fall solche Code Metriken, ich sag mal, nutzen. Sollte man aber wie immer nicht als heiligen Gral nehmen, weil auch fünf und dreiig Methoden mit einer niedrigen zyklomatischen Komplexität oder mit einer niedrigen Crap Complexity, wenn man so möchte, besagen nicht automatisch, dass die Code Struktur dich nicht dabei hindert, Features schneller zu shippen. Also nur die Code Metering zu nehmen, ist ja wahrscheinlich auch falsch."
+    },
+    {
+      "end": 1305910,
+      "speaker": "A",
+      "start": 1229590,
+      "text": "Ja, mir persönlich sind diese Metriken eigentlich immer zu nahe am Code, also zu tief. Du kannst ja dann auch irgendwelche Code Churn Metriken, also wie oft wurde dasselbe Code angefasst verwenden, ist auch so was. Was meiner Meinung nach wenig aussagt. Also gerade wenn es um technische Schulden geht, sind mir persönlich die höheren Ebenen von Metriken, also klassische Lead Time, wie schnell komme ich zu einem Feature, wie schnell kann ich shippen oder auch, du hast schon genannt, Mean Time to Restore finde ich fast bessere Metriken, vor allem wenn ich sie über die Zeit überwach und sie werden schlechter, weil die Metrik an sich sagt mir ja wenig. Also ich kann ja eigentlich nur durch die Veränderung etwas lernen. Wenn sie nach unten geht, dann weiß ich, okay, du hast vielleicht ein Problem im Team, kann auch ganz klassisch auf der People Ebene sein, also wie glücklich ist dein Team? Und wenn das natürlich nach unten geht, kann natürlich da auch die technische Schuld in gewisser Weise darauf einzahlen. Also umso höher die Metriken, umso weiter weg sind sie natürlich, umso den Root Cause auszumachen. Aber meiner Meinung nach, gerade bei technischen Schulden, sind die etwas höheren, abstrakteren Metriken meiner Meinung nach zumindest besser geeignet oder ein Indikator dafür, dass es vielleicht auch auf der Code Ebene Probleme gibt."
+    },
+    {
+      "end": 1410930,
+      "speaker": "B",
+      "start": 1305910,
+      "text": "Ich hatte ja gerade schon erwähnt, dass in der Industrie gerade so ein bisschen Kritik geht an so Metriken wie Mean Time to Restore. Es kommt natürlich aus dem Incident Bereich, aber man kann das auch auf Bugs anwenden. Und da ist natürlich die Annahme, dass jeder Bug unique ist, weil auch du, Wolfgang, fixt natürlich einen Bug hoffentlich mit einem Unittest oder Integrationstest, um eine Regression sehr schnell zu erkennen, um natürlich um eine Regression zu verhindern. Und warum sollte man dann einen Mittelwert darüber nehmen, wie lange es dauert, ein Bug zu fixen, wenn man annimmt, dass ein Bug unique ist und deswegen nicht mehr aufkommt. Deswegen vergleichst du da eigentlich Äpfel mit Birnen und deswegen ist natürlich die Mean Time to Restore immer so eine fragliche Metrik, wie gut die ist. Was man natürlich schon mit den Code Metriken gucken kann, wenn du kontinuierliche Releases machst, sagen wir mal Versionsreleases, Version eins, zwei, drei und so weiter, dass du immer in diesen Zwischenständen natürlich die Code Metriken siehst und dann sagst, okay, wie hat sich denn die zyklomatische Komplexität oder die Crap Komplexität oder irgendwelche Code Metriken über Releases entwickelt? Hat die sich in eine negativen Trend entwickelt, positiven Trend oder ist sie ungefähr gleich geblieben? Und in solchem Kontext macht das natürlich schon Sinn, weil das dann so eine High Level Metrik ist. Wenn du die dann über Zeit nimmst, du sagst, du magst sie nicht, weil die so Code relevant ist oder Code nah ist. Aber wenn du die über Zeit nimmst und über die Arbeit eines ganzen Engineering Teams, dann kannst du halt schon gucken, okay, warum steigt denn die durchschnittliche Komplexität einer Prozedur kontinuierlich an? So mehr wir programmieren, das ist natürlich schon Qualitätsindikator. Aber ich verstehe natürlich auch, dass, wie gesagt, wenn du nur auf den Code guckst, drumherum, Prozesse ändern sich ja auch. Du hast gerade, ich glaube, den Bass Factor Knowledge Silus angesprochen und vielleicht skalierst du auch das Team. Wir kennen das neun Frauen bringen nicht in einem Monat ein Baby zur Welt. Nur weil du mehr Leute hast, heißt das nicht, dass da mehr Output ist."
+    },
+    {
+      "end": 1423900,
+      "speaker": "A",
+      "start": 1410930,
+      "text": "Ja, sogar im Gegenteil, weil die müssen sich ja dann alle einlesen. Also wie heißt es so schön, wenn man ein Team hat, was delayed ist im Prozess, wenn man neue Leute drauf wirft, wird es garantiert noch mehr delayed sein, das ganze Projekt."
+    },
+    {
+      "end": 1515130,
+      "speaker": "B",
+      "start": 1424060,
+      "text": "Was aber, was aber auch oft stattfindet, ist, dass technische Schulden falsch eingeschätzt werden. Und das geht auf meine ursprüngliche Kritik von uns als Entwickler und Entwicklerinnen wieder drauf. Und zwar hat Joel Spolski, man kennt ihn vielleicht von dem Blog Joel in Software, ist aktuell auch der Trello Founder oder war der Trello Founder. Er hat unter anderem geschrie OK, von der Natur her sind Programmierer und Programmiererinnen eigentlich Architekten und oft wollen wir mit dem Bulldozer über fremden Code drüber ballern und auf der schönen grünen Wiese starten. Und Joel denkt, wir sagen immer, der Code ist Müll, den müssen wir neu machen und sagen relativ schnell, das sind technische Schulden, weil es härter ist, Code zu lesen, als ihn zu schreiben. Kommt natürlich auch aus der Annahme, dass Code öfter gelesen wird, als geschrieben wird. Und irgendwie, wenn ich darüber nachdenke, stimme ich ihm sogar zu. Das hattest du sehr wahrscheinlich auch schon. Du hast eine Lösung gesehen, die hast du nicht sofort verstanden, weil jemand anders das Problem gelöst hat, als du es lösen würdest. Du hast aber auch gar nicht die Energie und Zeit investiert, das Problem zu verstehen, wie es gelöst wurde. Deswegen, technische Schulden müssen wir neu machen. Tut mir leid, kommt halt öfter vor, Schließe ich mich auch nicht aus, bin ich ja auch dabei. Und deswegen habe ich das Problem, okay, dass technische Schulden falsch eingeschätzt wird. Und wenn wir zur Einschätzung von technischen Schulden kommen, frage ich mich halt, sind keine technischen Schulden ein gutes Dingen? Also ist das ein guter Stand, ein guter Zustand? Und will man diesen, will man Technical debt free sein?"
+    },
+    {
+      "end": 1637630,
+      "speaker": "A",
+      "start": 1515290,
+      "text": "Ihr habt es ja am Anfang auch schon kurz erwähnt, wo ihr gesagt habt, die Perfektion ist wahrscheinlich nie die richtige Wahl. Aber es ist natürlich ein Spektrum und da gibt es noch ganz viel dazwischen. Aber auch, ich würde sagen, und ist zwar selten, aber da würde ich das aus der klassischen Wirtschaftstheorie mal übernehmen, auch mit dem ganzen Wachstumswahnsinn, was wir dann noch mit dabei haben. Aber wenn man mal davon ausgeht, man macht klassischerweise in der Wirtschaft Schulden, um dann etwas auf den Markt zu bringen, schneller zu sein, zahlt die dann zurück, hat eine gute Zinsrate und am Ende ist es ein Win Win für alle. Es ist natürlich immer die Frage, wie hoch sind die Zinsen und wie lange zahlt man die Zinsen zurück? Das ist ja auch das Problem. Umso älter Schulden sind, umso teurer werden sie. Das ist bei der Software natürlich genau dasselbe. Aber jeder in der Wirtschaft wird dir sagen, wenn du ein Produkt hast, was gut geht oder eine Idee hast, die funktioniert, dann nimm dir doch die Schulden, um schneller zu sein und den Vorteil zu haben gegenüber deiner Konkurrenz. Und das sehe ich eigentlich auf der Software Seite genauso. Wenn man sie strategisch einsetzt, machen sie absolut Sinn. Und du wirst wahrscheinlich extrem viel Zeit verlieren, wenn du versuchst, alle Schulden abzubauen. Im Vorhinein schon. Du wirst langsamer sein, klarerweise. Da wirst du dann auch Business Probleme haben, weil die Konkurrenz schläft nicht und Vielleicht sind die dann einfach schneller, das, was du angesprochen hast. Ganz oft wird Code auch wieder weggeworfen. Das passiert halt auch. Oder man merkt, dass das Feature dann gar nicht gebraucht wird. Oder es kommen fünf andere Features rein und es ändert sich ja diese Ausgangssituation wieder und dann ist plötzlich vielleicht eine technische Schuld, gar keine technische Schuld mehr, sondern nur mehr ein Code Schnipsel, den man löschen kann, weil man sowieso dann anders macht oder mit einem anderen Feature kombiniert. Also diese Kosten hättest du ja dann on top, obwohl du sie gar nicht brauchen würdest. Und darum ist mein Fazit eigentlich ganz klar, dass du immer technische Schulden haben solltest, aber kontrolliert und als strategisches Werkzeug und auch nicht als Keule gegen den PO oder Project Manager. Wir haben technische Schulden, wir brauchen mehr Zeit, wir können jetzt aktuell das Feature nicht entwickeln."
+    },
+    {
+      "end": 1678100,
+      "speaker": "B",
+      "start": 1637630,
+      "text": "Ich sage das echt selten, aber da du die wirtschaftliche Perspektive mit reingebracht hast. Danke Wolfgang, finde ich sehr schön. Ich stimme dir zu. Was soll ich sagen? Ich meine, wenn du keine technischen Schulden eingehst, kannst du machen, dann ist das genauso wie du sparst dir halt immer dein Bargeld an, bis du dir erlaubst, etwas zu kaufen. Das kann man so machen, gar keine Frage. Aber ich würde sagen, dann agiert man unter seinem Potenzial. Also du kannst schneller zum Ziel kommen, wenn du ab und zu mal Schulden aufnimmst. Aber jetzt eine Sache, die ich noch kurz darstellen mö Wir sprechen immer so negativ über technische Schulden, so als schlechten Code, Legacy Code, der schwer zu warten ist, voller Fehler oder der Achtung, jetzt kommt's, der einfach nur veraltet ist, was."
+    },
+    {
+      "end": 1686380,
+      "speaker": "A",
+      "start": 1678100,
+      "text": "Übrigens meiner Meinung nach keine technische Schuld ist, Nur weil er alt ist oder nur weil es Legacy Code ist, muss keine technische Schuld damit verbunden sein. Aber reden wir weiter."
+    },
+    {
+      "end": 1693660,
+      "speaker": "B",
+      "start": 1686460,
+      "text": "Und man muss ja auch sagen, der Code kann ja nichts dafür, dass er älter wird. Also jeder Code wird ja automatisch älter. Also die Zeit ist ja das Einzige, was wir nicht stoppen können."
+    },
+    {
+      "end": 1701510,
+      "speaker": "A",
+      "start": 1694380,
+      "text": "Also ich möchte schon wieder zustimmen an die Seltenheit, aber wir können alle nichts dafür, dass wir alternativ Stimme dir vollkommen zu."
+    },
+    {
+      "end": 1725550,
+      "speaker": "B",
+      "start": 1701510,
+      "text": "Ja, das ist richtig. Auch der Code kann da nichts für. Es ist aber auch so, dass über das, was ich jetzt spreche, ist natürlich untendrunter auch oft Code in der Moderne. Aber technische Schulden inkludieren natürlich auch veraltete Infrastruktur. Alte Server, veraltete Cloud Systeme oder vielleicht sogar Netzwerkgeräte, die einfach nicht mehr effizient sind. Also es gibt sehr wahrscheinlich noch Switches draußen, für die man ein eigenes Kohlekraftwerk braucht, um die zu betreiben. Kann man noch machen, gar keine Frage, aber wird langsam echt teuer."
+    },
+    {
+      "end": 1760290,
+      "speaker": "A",
+      "start": 1725630,
+      "text": "Langsam wirst du mir zu positiv, Andy. Jetzt haben wir da ganz viele Entwickler innen da draußen, die hoffentlich uns trotzdem noch zuhören, obwohl sie eigentlich jetzt sagen, hey, die haben erstens, keine Ahnung, ich kämpfe den ganzen Tag mit technischen Schulden und die stellen die jetzt so positiv da, diese technischen Schulden und als Werkzeug. Und ich sollte ja eh froh sein, dass ich diese technischen Schulden habe. Man muss natürlich schon sagen, dass technische Schulden auch wirklich negative Folgen haben können, vor allem, wenn man sie halt eben nicht auflöst und die Zinsen sich immer mehr ansammeln und höher werden und höher werden und das Ganze dann natürlich wirklich in so eine negative Spirale fast rein driftet."
+    },
+    {
+      "end": 1778370,
+      "speaker": "B",
+      "start": 1760290,
+      "text": "Ja, irgendwer muss die Kosten ertragen. Es ist auch eine aktive Business Entscheidung, ob man die Kosten überhaupt abbaut. Also machen wir viele, viele Länder, die nehmen aktuell immer mehr Schulden auf, anstatt diese Landesschulden eigentlich zurückzuzahlen. Also warum sollen wirtschaftliche Unternehmen das nicht so tun wie ganze Staaten?"
+    },
+    {
+      "end": 1801770,
+      "speaker": "A",
+      "start": 1778370,
+      "text": "Ja, wobei man da natürlich schon auch aufpassen muss immer mit diesem Vergleich mit Schulden, weil wir haben natürlich auch Inflation bei Geld zum Beispiel. Das heißt, Schulden werden automatisch immer weniger wert. Das hast du bei einem Code natürlich nicht. Also man muss schon aufpassen, man kann es nicht eins zu eins vergleichen, aber jeder Vergleich, der hinkt, ist gut, oder wie heißt es? Oder umgekehrt, wie auch immer. Aber es gibt auf jeden Fall Kosten, die mit technischen Schulden verbunden sind."
+    },
+    {
+      "end": 1876210,
+      "speaker": "B",
+      "start": 1802090,
+      "text": "Ich glaube, einer der Effekte von technischen Schulden oder eine Thematik, die auf das Kostenargument geht, haben wir Mitte letzten Jahres gesehen. Ich selbst besitze keine Hardware von diesem Hersteller, ich spreche aber vom Audiohersteller Sonos. Im Internet ging einmal so eine Welle durch, weil Sonos einen kompletten App Rewrite gemacht hat, Mobile App Rewrite. Und ich sage mal so, der ging ein bisschen in die Hose. Das bedeutet, die haben in dem Rewrite Features weggelassen, hat oft nicht funktioniert und so weiter und so fort. Und es gibt einen Artikel von Ars Technica, den verlinken wir auch in den Shownotes, wo sich ein Mitarbeiter von Sonos mal dazu geäußert hat, warum die diesen App Rewrite gemacht haben. Und der App Rewrite war notwendig, weil die Infrastruktur und der Quellcode von der alten App so alt war und über zwanzig Jahre akkumuliert hat, dass es einfach wirklich nicht anders ging, als die App neu zu schreiben. Und man schätzt die ganzen Kosten des und natürlich des Medienausbruchs danach und des verlorenen Kunden Trustes und so weiter auf zwanzig bis dreiig Millionen, der investiert werden muss, um das kurzfrist sich zu fixen."
+    },
+    {
+      "end": 1953390,
+      "speaker": "A",
+      "start": 1876210,
+      "text": "Vielleicht noch ein paar andere Zahlen, die man so in Reports findet. Es gibt ja wirklich tausende Reports. Wir haben auch ein paar Reports in den Shownotes noch verlinkt, die so das Ganze von der wissenschaftlichen Seite beleuchten und da irgendwelche Zahlen ausspucken. Wie richtig die sind, ist dann immer die Frage und muss man natürlich auch ins Detail schauen. Aber nur ich glaube, es zeigt auch so die Richtung, in die das Ganze geht. Und diese Reports sagen zum Beispiel, dass man heutzutage eigentlich in der modernen Softwareentwicklung zwanzig bis teilweise vierzig Prozent eigentlich einkalkulieren muss ins Beheben von technischen Schulden und alle Product Owner, wenn ihr mal überlegt, ob ihr das wirklich so einplant. Also so zwanzig Prozent kennt man ja vielleicht noch so Wartung und Behebung, aber vierzig Prozent werden, glaube ich, die wenigsten wirklich einberechnen. Und dass das schlechte Auswirkungen hat. Da kommen auch ganz viele Studien drauf, Also dass man natürlich die Bugs schwieriger behebt, dass natürlich das Ganze viel Bug Anfäll ist, also dass so schlechter Code einfach fünfzehn mal mehr Bugs zum Beispiel hat oder dass die Bugfixes dann wirklich über die doppelte Zeit eigentlich benötigen, als bei einem sinnvoll strukturierten Code Und dass da dann natürlich viel Zeit draufgeht und das Ganze sich auch noch anhäuft. Also ich würde fast sagen exponentiell."
+    },
+    {
+      "end": 1958990,
+      "speaker": "B",
+      "start": 1953470,
+      "text": "Das, was du da gerade so einfach selbstverständlich sagst, sagt ja auch, dass jeder Sichtbarkeit über die technischen Schulden haben."
+    },
+    {
+      "end": 1984210,
+      "speaker": "A",
+      "start": 1959230,
+      "text": "Naja, die Sichtbarkeit ist dann im Prinzip, dass du eben einfach doppelt so lange für eine Behebung von dem Bug brauchst. Also das wäre ja dann wieder die Metrik oder so, wie sich das Ganze äußert und an die Oberfläche kommt, dass das Ganze langsamer wird. Also das sind ja dann die Folgen und da muss man dann natürlich rückschließen Okay, das kann unter anderem natürlich aber ganz oft zu technischen Schulden zurückgeführt werden."
+    },
+    {
+      "end": 2026990,
+      "speaker": "B",
+      "start": 1984290,
+      "text": "Ich meine, du hast jetzt auch sehr viel die, ich sage mal, monetäre Komponente angesprochen. Aber was auch wichtig ist, und du hast es vorhin schon ganz kurz erwähnt, die Kosten werden jeden Tag, jeden Tag von den einzelnen Teammitgliedern getragen. Das beeinträchtigt natürlich deren Motivation und unter Umständen kann dies mittel bis langfristig sogar zu erhöhter Fluktuation führen. Es gab teilweise auch Exit Interviews, wo natürlich Leute gesagt Hör mal, sorry, aber mit dem Quellcode hier zu arbeiten macht ja echt keinen Spaß. Auch wenn ich sage Legacy verdient das Geld hier und da muss man vielleicht mal ein bisschen aufräumen, so dass es noch Spaß macht, Weil wenn du die ganze Zeit nämlich nur andere Probleme löst und um die Architektur herumarbeiten muss, anstatt dein wirkliches Problem zu lösen, ist halt auch kacke."
+    },
+    {
+      "end": 2110190,
+      "speaker": "A",
+      "start": 2026990,
+      "text": "Ja, es kommt halt immer darauf an, mit wem du sprichst. Ich glaube, Entwickler innen ist es sowieso immer klar, dass technische Schulden schlecht sind und die sind ja dann diese Leute, die dann die Bugs beheben und dann unglücklich werden. Aber ich glaube, es muss halt auch von der betriebswirtschaftlichen Seite ganz klar sein, dass das einfach höhere Kosten sind, höhere Betriebskosten, höhere Wartungskosten, höhere Personalkosten, dass dir die Leute dann kündigen womöglich. Dann hast du noch mehr Kosten, weil dann musst du wieder neue Leute onboarden, dann hast du womöglich schlechten Code und die technische Schuld, dass die Dokumentation schlecht ist. Dann hast du wieder das Problem, dass die neuen Leute, die anfangen, viel länger brauchen, um in den Code reinzukommen. Also es ist ja wirklich so ein Teufelskreis, der sich da aufbaut. Und das ist fast so ein Zinseszinseffekt, aber im negativen Sinne, dass das halt immer höher wird und noch viel schlimmer wird, umso länger man wartet. Und das muss, glaube ich, auch den Businessleuten ganz klar sein. Und wenn man mit denen argumentiert, dass man auch auf der Ebene gut argumentieren kann, dass das wirklich ein kostenfreies ist und zwar ein sehr negativer Kostenfaktor bzw. Auf der positiven Seite, wenn man damit besser umgeht, kann es ein positiver Faktor sein, dass man einfach viel schneller und günstiger wird in der Entwicklung und damit natürlich auch wieder schneller gegenüber der Konkurrenz zum Beispiel ist Jetzt, wenn wir mal annehmen, dass wir keine Metriken am Code haben, wie würdest du denn frühzeitig erkennen, dass dein Team unglücklich ist? Es ist eigentlich, wenn du erst dort anfängst, ist es eh schon fast zu spät. Aber wie würdest du das auf der People Seite feststellen?"
+    },
+    {
+      "end": 2116530,
+      "speaker": "B",
+      "start": 2110190,
+      "text": "Ich gehe mal stark davon aus, dass die einzelnen Teammitglieder über Zeit den Mund aufmachen in One on One."
+    },
+    {
+      "end": 2121170,
+      "speaker": "A",
+      "start": 2116850,
+      "text": "Also gehst du schon davon aus, dass du One on One machst Nach knapp."
+    },
+    {
+      "end": 2125450,
+      "speaker": "B",
+      "start": 2121170,
+      "text": "Zwei hundert und ein paar gequetschte Folgen sollten alle Leute, die diesen Podcast hören, davon ausgehen."
+    },
+    {
+      "end": 2131250,
+      "speaker": "A",
+      "start": 2125450,
+      "text": "Ja, ja, aber es ist ja in Firmen realistisch auch nicht so. Und das jährliche Mitarbeitergespräch reicht auch aus."
+    },
+    {
+      "end": 2178340,
+      "speaker": "B",
+      "start": 2131250,
+      "text": "Ja, aber auch ist ja völlig egal. Aber auch in der Quartalsplanung, auch in der Sprintplanung und Co. Werden Leute das ja mal fallen lassen, oder Irgendwann wird man sich auch die Frage stellen, wenn man jetzt in einem Scrum Modell oder zwei Wochen Sprint Modell ist und wieso planen wir eigentlich kontinuierlich dieselbe Anzahl von Story Points, nennt sich das glaube ich, ein und wir erreichen immer nur die Hälfte. Dann kann man natürlich schon okay, was ist denn der Effekt? Also warum werden wir langsamer? Und dann spricht man darüber vielleicht in einer Retrospektive oder ähnliches. Und dann wird das so die Annahme an die Oberfläche gebubbelt, eine Möglichkeit von vielen, weil wie du ja schon sagtest, Manager sind halt gar nicht mehr so nah am Code und da muss man halt auf die Expertinnen und Experten vertrauen, die dann halt jeden Tag damit arbeiten."
+    },
+    {
+      "end": 2242810,
+      "speaker": "A",
+      "start": 2178420,
+      "text": "Also wer glaubt, dass die ganzen Planning Meetings, Retrospectives und so weiter eigentlich nicht sehr sinnvoll sind? Genau dafür sind sie eigentlich da, um diese Sachen zu entdecken, wenn sie nicht über Metriken schon im Vorhinein entdeckt werden. Aber sind wir uns ehrlich, genauso verbreitet wie ein hundert eins sind auch Metriken zum Code. Also ich würde sagen, im Allgemeinen sehr selten und in der Realität, wenn es keine große Tech Firma ist, noch seltener. Aber lass uns mal abbiegen in den ganzen Bereich von Schulden abbauen. Also wir nehmen mal an, wir haben jetzt die Schulden erkannt, wir haben Metriken, wir haben gute Engineering Manager, die auch Retrospectives machen, die mit dem Team zusammenarbeiten, die das jetzt gemeinsam erkannt haben und die wollen etwas dagegen machen. Das heißt, wir haben das nicht schon in unserem Prozess standardmäßig drinnen, aber wir wollen jetzt mal diese Probleme mit den technischen Schulden angehen. Und zwar in einem ganzheitlichen Kontext. Also nicht einmal irgendwo eine Behebung machen von paar Zeilen Code, sondern wie bekommen wir das in den Prozess hinein der Firma, dass wir die Schulden abbauen können über die Zeit."
+    },
+    {
+      "end": 2373880,
+      "speaker": "B",
+      "start": 2243130,
+      "text": "Ja, ich möchte noch eine Thematik nennen, bevor wir in den Abbau reingehen, denn wir reden die ganze Zeit davon, dass technische Schulden immer aktiv vom Business eingegangen werden, dass wir unterhalten uns jetzt und sagen, okay, wir machen jetzt einen Shortcut. Aber oft kann auch technische Schulden entstehen durch Sachen, die außerhalb deines Entscheidungsfaktors sind oder Entscheidungsrahmen, wie zum Beispiel, dass es Teamwechsel gibt oder Reorgs oder Komponenten, die mal während eines Hackathons geschrieben wurden, die dann irgendwo in Produktion laufen, nämlich der Chatbot, der von der ganzen Firma genutzt wird, aber wo dann keiner Knownship hat und Co. Und einfach jeder dran committed. So ganz klassisch, so innersource Model. Also das muss nicht immer aktiv sein, das kann sich auch subtil einschleichen in die Org oder in manche Komponenten und teilweise außerhalb deiner Entscheidung liegen. Das fand ich noch ganz wichtig oder ganz interessant, weil das sind immer so diese subtilen Arten, wie sich das einschleicht, die man eigentlich gar nicht so auf dem Zettel hat, die man gar nicht so merkt. So und jetzt kommen wir aber zu dem Thema technische Schulden abbauen. Also ich bin ganz ehrlich, hätte ich dann eine Lösung, wäre schon längst reich, denn ich denke, da gibt es nicht die eine Thematik, wie wir es machen. Ich bin immer ein Freund von mach das Problem sichtbar und hol dir auch Commitment von oben, denn im Endeffekt ist das wieder die ganze Problematik, dass wir hier Konflikt haben, der Konflikt des Managers und der Konflikt der Softwareentwickler und Softwareentwicklerinnen, dass du zwei Extreme hast. Auf der einen Seite möchte der Manager natürlich immer ganz viel Zeit in Features stecken und so weiter. Also das bedeutet, er oder sie ist oft so ein bisschen resistent, Zeit für den Abbruch von technischen Schulden zu investieren. Auf der anderen Seite trägt das Team halt immer die Schmerzen oder die Schulden und deswegen muss man da irgendwie eine Balance finden. Also wie kann ich als Manager argumentieren, dass wir jetzt ganz viel Zeit zum Abbau von technischen Schulden investieren? Und wenn ich herausgefunden habe oder wenn wir herausgefunden haben, zusammen als Team, wie wir einen geschäftlichen Mehrwert erzielen durch den Abbau von technischen Schulden, dann hat man natürlich gewonnen, denn dann spricht man die Sprache des Managements. Wenn ich also sagen kann, okay, der Abbau von technischen Schulden, Schulden hat diesen Business Value zur Folge, dann kriegt man in der Regel auch die Sichtbarkeit im Produktmanagement und im Leadership."
+    },
+    {
+      "end": 2468940,
+      "speaker": "A",
+      "start": 2374280,
+      "text": "Ich glaube sogar, dass man das vielleicht noch eine Stufe früher machen sollte. Also wenn ich im Team jetzt zum Beispiel irgendein Planning mache und es heißt, okay, wir haben aber eine Deadline und wir gehen jetzt gemeinsam strategisch diese technische Schuld ein, dann ist es schon im Vorhinein kommuniziert, dass da eine technische Schuld aufgebaut wird. Ich kann es natürlich auch, wenn ich das im Prozess drin habe, in irgendeinem Schuldenregister aufschreiben oder so, aber das ist schon sehr formell. Aber dass das mal schon grundsätzlich diskutiert wurde, hilft mir dann später in der Diskussion wieder mit den Businessleuten, weil wir gesagt haben, okay, wir gehen diese Schuld ein, wir müssen sie jetzt aber auch wieder aufräumen und ihr habt es in der Realität schon erlebt, dass gute Product Owner sehr wohl das im Blick haben und das dann auch einkalkulieren, dass die sagen, okay, wir brauchen dann noch mal zwanzig dreiig Prozent später die nächsten Wochen und wir planen das dann auch dementsprechend mit ein oder wir hängen das an andere Features sinnvoll dran. Also wenn die Awareness da ist, ist es gut, aber umso früher sie da ist, umso besser natürlich, weil dann geht man auch gemeinsam diese Entscheidung in Richtung Technical Debt und in Kauf nehmen von diesen Schulden und kann sie dann später auch wieder gemeinsam auflösen. Also es ist weniger so ein Wir Dev Team gegen diese Business Leute, sondern wirklich gemeinsam Entscheidungen fällen, gemeinsam auflösen und wenn man will, kann man das Ganze natürlich auch wirklich schriftlich festhalten, dokumentieren. Wir haben da eine Schuld aufgenommen, Risiko hatte den und den Impact auf unsere Codebase, wir schätzen so und so viel Zeit zum Aufräumen und dann hat man auch für später das Ganze dokumentiert."
+    },
+    {
+      "end": 2560610,
+      "speaker": "B",
+      "start": 2469020,
+      "text": "Du sagst das jetzt so salopp, aber vor kurzem haben wir einen Shout Out auf LinkedIn bekommen und zwar vom Lars. Schöne Grüße gehen raus an den Lars, der hat noch mal über LinkedIn die Episode zwei und siebzig gefeiert und zwar Meetings, Jeder hat sie, keiner will sie und er schreibt und ich kleine Runden, klarer Zweck, Entscheidungen dokumentiert, fertig. Klingt Einfach ist es aber natürlich nicht. Und das, was du da gesagt hast, ist genau, das klingt einfach, ist es aber natürlich nicht. Ja, wir treffen uns jetzt, machen eine aktive Entscheidung, sprechen wir die ganze Zeit darüber und dann wird die dokumentiert und ein guter Product Owner oder ein guter Product Manager nimmt das dann später und reserviert dafür später Zeit, um dies aufzuräumen. Du hast schon von Schuldenregister gehört. Ich habe dieses Wort zum ersten Mal gehört. Keine Ahnung, was ein Schuldenregister ist, aber vielleicht auch einfach nur ein Backlog oder eine Wik Page, ist ja völlig egal. Der Punkt ist aber einfach Track zu halten, wann habe ich was gemacht und wann muss abgebaut werden. In der Praxis habe ich das noch kaum gesehen, weil die Welt dreht sich viel schneller, als einem lieb ist. In der Praxis ist es vielleicht auch gar nicht immer sinnvoll. Ich habe ja vorhin gesagt, manchen Source Code fasse ich gar nicht mehr an. Aber ja, natürlich, das ist eine Methode, die man anwenden kann. Man muss natürlich gucken, wie viel Bälle hält man denn in der Luft, weil habe ich jetzt ein Team mit zehn oder zwölf Leuten, da wird eine große Software geschrieben, da werden viele dieser Entscheidungen getroffen und wie viele Bälle halte ich in der Luft und wie viel halte ich eigentlich vor, Weil im Endeffekt reserviert man ja Kapazität schon für die nächsten drei Jahre. Relativ schnell hat man die nächsten drei Jahre voll und das akzeptiert ja kaum einer, dass in den nächsten drei Jahren nur Schulden abbezahlt werden."
+    },
+    {
+      "end": 2661460,
+      "speaker": "A",
+      "start": 2560690,
+      "text": "Ein großer Punkt ist auch, wie viel Impact diese Schulden haben. Also du kannst natürlich Schulden haben, die wirklich auf Architekturebene sind oder eben auch auf Management Ebene, auf People Ebene. Ich setze jetzt nur eine Person an den Code, habe das Risiko von Silo, von dem fehlenden Knowledge über das Team hinweg. Das sind strategische Entscheidungen, die kann man auch dokumentieren. Das ist natürlich viel leichter, sowas zu dokumentieren, als ich habe jetzt irgendwo in irgendeiner Klasse irgendwo Code kopiert und das nicht schön irgendwie wiederverwendet. Das ist natürlich viel schwieriger. Und das sind die kleinen technischen Schulden, die sich eben aufstauen, wo man dann eher in Richtung Metriken geht, dass man die beheben kann und auch sichtbar macht. Und die kann man natürlich nicht irgendwie in Backlog schreiben, weil du wirst nicht für jede Kleinigkeit irgendwo dann Backlog Eintrag natürlich machen. Also ich glaube, es gibt die zwei Ebenen großes Schuldenprojekt, würde ich es mal nennen, und kleine. Und dementsprechend hast du auch andere Möglichkeiten, das Ganze zu beheben. Und auf der kleinen Seite ist halt das klassische Refactoring oder die Boy Scout Rule ganz klassisch, dass du in der Kultur das so verankerst, dass man einfach Sachen am Weg ständig mit aufräumt, dass man einfach eine Spur mehr Zeit mit einberechnet und dann wird einfach auch aufgeräumt. Wenn man irgendwas begegnet, irgendeiner Kleinigkeit, macht man das schnell. Also das ist ja mittlerweile möglich. Und diese vielen kleinen Aufräumaktionen haben dann zur Folge, dass die vielen kleinen technischen Schulden auch aufgeräumt werden können. Also es sind nicht immer automatisch diese großen Projekte, wo du dann sagst, meine ganze Roadmap ist ja nur mehr voll von Schulden begleichen."
+    },
+    {
+      "end": 2763190,
+      "speaker": "B",
+      "start": 2661780,
+      "text": "Ich bin immer ein ganz großer Fan von Service Level Objectives. Und was du damit machen kannst ist, oder was es eigentlich in simplen Terms bedeutet, du machst deine technischen Schulden in irgendeiner Art und Weise sichtbar, irgendeiner Art und Weise messbar und dann erstellst du einen Graph dadurch. Und diesen Graphen, da hast du auf der x Achse die Zeit und auf der y Achse eine Zahl. Kann vielleicht der Crap Index sein, kann eine Code Metric sein, kann irgendwelche Jira Tickets sein, die du erstellt hast, um auf technische Schulden hinzuweisen, wo du aktive Entscheidungen gemacht hast und so weiter und so fort. Und dann definierst du drei Schwellenwerte. Du definierst einen niedrigen Schwellenwert, einen mittleren Schwellenwert und einen hohen Schwellenwert. Und der niedrige ist exzellent, der mittlere Schwellenwert ist akzeptabel. Und immer wenn deine deine Messkennzahl über den mittleren Schwellenwert geht, dann kann man okay, wir sollten minimum ein Jira Ticket im nächsten Sprint haben. Und immer wenn dein Messschwellenwert über die höhere Kennzahl geht, dann sollte mindestens eine Person dauerhaft dran arbeiten, bis der Graph wieder unter dem höheren Schwellenwert ist. Das finde ich ist ein faires Konzept für alle. Du hast mit dem Management abgestimmt Schwellenwerte oder mit dem Produktmanagement oder mit wem auch immer. Und du hast eine Kennzahl, wann du wie agieren musst. Dann kommt natürlich die okay, wie Quantifizierst du technische Schulden, ist immer schwierig, es kommt auf deine Software an, wie du es trackst und so weiter und so fort. Aber ich will nur sagen, da bin ich ein großer Freund von, weil das umgeht jede Woche die Diskussion. Natürlich kann man den Prozess in Frage stellen, aber sonst hat man die Diskussion halt immer und immer und immer wieder. Man will halt nicht die gleiche Diskussion führen, sondern man will sich ja bewegen."
+    },
+    {
+      "end": 2806000,
+      "speaker": "A",
+      "start": 2763980,
+      "text": "Ich persönlich bin ja kein großer Fan von diesen Prozessen, wo du irgendwie einen fixen Threshold hast, weil du dann auch meistens eher so die Argumentation hast, ja, aber wir arbeiten nur daran, wenn wir diesen Threshold erreichen. Business argumentiert dann auch nur so, die Devs probieren dann womöglich diesen Wert zu erreichen. Also klar, das kann einmal ein Anfang sein, aber ich bin einfach ein großer Fan davon, dass das in die Kultur reinkommen muss und ein gewisses Verständnis geschaffen werden muss, dass das bei allen ankommt und das alle auch am Schirm haben und dementsprechend dann auch gemeinsam probieren, das zu lösen, dieses ganze Problem. Und wenn man sich da einrichtet, okay, wenn wir ein neues Feature programmieren, alles was dieses neue Feature berührt, da machen wir auch ein bisschen Cleanup."
+    },
+    {
+      "end": 2868600,
+      "speaker": "B",
+      "start": 2806160,
+      "text": "Ich bin voll bei dir, aber ich sage auch, dass A, Kultur zu ändern und Kultur einzuführen ist unglaublich zeitintensiv. B man weiß nie, ob es wirklich funktioniert. C ist abhängig von Faktoren, die du nicht beeinflussen kannst, nämlich den Top Management oder die Firma wird gekauft oder die Firma wächst sehr stark und es kommen ganz viele neue Leute rein. Kurzum, was dir diese Art von SLO und diese Schwellenwerte gibt, ist erstmal eine Art von, okay, wir haben erstmal was und bewegen uns erstmal was, bevor du nämlich deine ganze Kultur änderst. Wo ich auch ein Fan von bin, das ist das Richtige zu tun, gar keine Frage. Doch, worauf ich mich fokussiere, ist, wann packen wir denn mal an, wann werden immer die Hände dreckig? Und mit diesen schnellen Werten ist es so, du kannst sofort loslegen, sie sind nicht perfekt und sie sind nie perfekt. Und ja, es gibt immer Probleme, Immer wenn du Metriken hast, werden die gegeben, alles gut, aber da kann ich genauso. Ja, aber dann ist ja die falsche Kultur, wenn du Metriken hast und jeder versucht diese Metriken zu geben, dann ist es ja die falsche Kultur. Also ist halt auch eine sehr einfache Ausrede."
+    },
+    {
+      "end": 2963990,
+      "speaker": "A",
+      "start": 2868680,
+      "text": "Ja, ich sehe eher die Ausrede auf der Metriken Seite, weil du dann eben die Ausrede hast, ja, jetzt haben wir diesen Wert nicht erreicht, jetzt brauchen wir nichts machen. Und gerade wenn es um so Boy Scout Rule geht, die sehe ich auch auf Developerseite ganz oft nicht angewandt. Also in einem privaten Projekt arbeiten jetzt nicht viele Leute daran, aber da wird zum Beispiel immer, wenn du das Programm startest, wird dir angezeigt, welche Übersetzungen fehlen, also welche Translations nicht in den Translation Dateien sind. Und seit Ewigkeiten sind da vier, fünf Translations drin, die kopierst du einmal in irgendein Chat GPT oder überhaupt ein Copilot sagt, fix diese Translations and that's it. Das kostet dich eine Sekunde, würde ich mal sagen, oder fünf Sekunden im Gesamten. Macht nie jemand, hat nie jemand gemacht. Das sind so Dinge, die verstehe ich dann persönlich auch nicht. Klar, man wird oft abgelenkt und haben wir auch schon oft darüber gesprochen, dass man sich dann gerne ablenken lässt, aber so Kleinigkeiten, wenn ich doch schon unterwegs bin im Code oder die eine oder andere Funktion mal zusammenzufassen, das kann ich wirklich machen und das ist kein großer Mehraufwand. Und sowas muss meiner Meinung nach einfach in die Kultur rein, weil es kann nicht sein, dass sie immer alles aufstauben, bis zu einem gewissen Threshold dann wieder in diesen Modus kommen. Jetzt muss ich ganz schnell diese ganzen Schulden wieder tilgen und dann komme ich wieder in meinen Relaxed Modus, jetzt ist mir alles egal, jetzt kann ich aufstauen. Klar ist jetzt eine Extreme und extrem dargestellt, aber das kann natürlich passieren. Und vor allem auf Business Seite die Argumentation, ja, wir haben ja eh diesen Threshold, dann könnt ihr ja endlich dann wieder arbeiten an euren Schulden. Aber aktuell konzentrieren wir uns mal nur an das Feature Schippen."
+    },
+    {
+      "end": 2994120,
+      "speaker": "B",
+      "start": 2963990,
+      "text": "Ja, aber du bist ja auch schon wieder in dem Extrem. Wenn wir eine Metrik haben, dann orientieren wir uns nur an dieser Metrik. Also das funktioniert halt auch nicht. Du weißt auch Ausnahmen bestätigen die Regeln. Also von daher. Und auch mit der Boy Scout Rule, ich finde die geil, super, gar keine Frage. Meine wie lange dauert das? Wenn du jetzt sagst fünf Minuten, dann sage ich nichts. Im Software Engineering dauert fünf Minuten und dann könnte man auch Ja, aber wenn er einen neuen Pull Request machen, neuen Git Work aufmachen und so weiter, neues Issue erstellen, bla, vielleicht brauchst du noch ein Second Code Review etc. Also ich."
+    },
+    {
+      "end": 3010900,
+      "speaker": "A",
+      "start": 2994120,
+      "text": "Stimme dir vollkommen zu, es dauert alles länger und man muss da aufpassen. Aber genau darum geht es meiner Meinung nach bei der Boyscard Rule, da mache ich keinen Pull Request auf, das mache ich einfach in meinem Pull Request mit bei meinem Feature, auch wenn es mich gar nicht direkt betrifft, aber dann habe ich da die Translations, die fünf Translations noch mit dabei, weil die haben einfach."
+    },
+    {
+      "end": 3034900,
+      "speaker": "B",
+      "start": 3010900,
+      "text": "Gefehlt und ich sehe schon die Leute aus unserer Community mit Feuerfackeln dich jagen. Ja, aber wenn ich doch mal ein Geht Blame mache, dann fragt sich doch jeder warum was haben denn die fünf Übersetzungen jetzt mit meinem Bugfix zu tun, der irgendwie die Berechnung des arithmetischen Mittels ändern und so weiter. Und ja du ich bin mit in dieser Fackelgruppe, weil ein Git Commit oder ein PR soll ein Problem lösen. Also du merkst ist nicht alles schwarz und weiß."
+    },
+    {
+      "end": 3049140,
+      "speaker": "A",
+      "start": 3035060,
+      "text": "Ja, das ist, weil du eben auf der Prozessseite tief drinnen bist, CI, CD und so weiter und da keine technischen Schulden akzeptierst. Das ist ja wieder eine strategische technische Schuld, um eine technische Schuld aufzulösen quasi um dann hast du natürlich das Blame Problem."
+    },
+    {
+      "end": 3053300,
+      "speaker": "B",
+      "start": 3049140,
+      "text": "Jetzt ist es schon eine harte technische Schuldspirale hier gerade die technische Schuld von."
+    },
+    {
+      "end": 3055380,
+      "speaker": "A",
+      "start": 3053300,
+      "text": "Der technischen technische Metaschuld."
+    },
+    {
+      "end": 3063760,
+      "speaker": "B",
+      "start": 3055460,
+      "text": "Also was heißt das jetzt? Ich versuche jetzt hier eine technische Schuld zu beheben und beim Beheben dieser technischen Schuld gehe ich an eine andere technische technische Schuld aktiv ein, um die vorherige technische Schuld wieder zu beheben, weil ich."
+    },
+    {
+      "end": 3069760,
+      "speaker": "A",
+      "start": 3063760,
+      "text": "Die Genau und dafür ist halt deine Git History nicht so schön und dein Blame funktioniert vielleicht in Zukunft nicht."
+    },
+    {
+      "end": 3081440,
+      "speaker": "B",
+      "start": 3069840,
+      "text": "Ja, aber da bin ich sehr pragmatisch. Es gibt ja Leute, die jagen dich auch mit Fackeln, wenn du Merch Commits drin hast und dies und das. Also ach du, da bin ich relativ locker von daher. Ich bin aber auch nicht so auf der."
+    },
+    {
+      "end": 3086960,
+      "speaker": "A",
+      "start": 3081600,
+      "text": "Ja, da bin ich schon wieder hart. Rebase muss immer sein, will eine gerade History haben, geradlinig."
+    },
+    {
+      "end": 3101900,
+      "speaker": "B",
+      "start": 3087040,
+      "text": "So und da du jetzt der Mensch bist, der mit diesen Tools, was ich jetzt anspreche, am meisten arbeitet, kommen wir dazu zum Thema Und meine Frage ist jetzt ganz ketzerisch, aber löst die AI nicht alle Probleme, weil du redest ja hier von Boyce, Goal und Co. Kann ich nicht der AI okay, ich prompte jetzt einfach mal eine Boy Scout Rule hier durch."
+    },
+    {
+      "end": 3227480,
+      "speaker": "A",
+      "start": 3102300,
+      "text": "Ich glaube für ganz Viele Dinge kann die AI durchaus hilfreich sein. Also ich denke da an irgendwelche To Dos. Also es ist ja eigentlich ein Anti Pattern, würde ich fast sagen, Aber es gibt natürlich schon gewisse Dinge, die die AI relativ schnell machen kann. Auch meine Translations zum Beispiel, also die werden auf meiner Konsole ausgespuckt, diese acht Translations fehlen. Ich kopiere die einfach eins zu eins in meinen Copil, klicke auf Submit, der checkt, okay, es fehlen Translations, wo ist dieses Translation File, übersetzt mir die automatisch dann, da kann ich währenddessen weiter programmieren, der macht es im Hintergrund, dann checke ich einmal, ist es behoben, passt, weiter geht's. Also ich glaube, dass da die AI schon unterstützen kann, weil gerade für die kleinen Tasks, die schon sehr gute Sachen ausspuckt. Auf der anderen Seite wieder Das andere Problem ist, dass die AI natürlich allgemein ganz viele technischen Schulden überhaupt mal einführt oder in deine Codebase mit reinbringt, weil wenn du keine sauberen Code Reviews hast oder irgendwie Dinge, die du vielleicht gar nicht brauchst, der Klassiker ist irgendwie, du fragst die hey, brauch eine Funktion, um irgendwie einen User zu erstellen, macht die AI ganz sauber, aber die denkt sich auch, eigentlich müsstest du einen User auch löschen können und ändern können und eigentlich wieder überprüfen können, macht irgendwie acht andere Funktionen, die du eigentlich gar nicht brauchst und wenn du die nicht wieder rauslöscht, dann hast du die mit drinnen und das ist vielleicht auch eine Art von technischer Schuld. Die werden dann nicht sauber kontrolliert und so weiter. Teilweise auch implizit eine schlechte Architektur, die wieder hineingebracht wird. Also auf der Seite ist das Ganze natürlich wieder ein Problem. Aber für das reine Beheben von technischen Schulden im kleinen Stile, also ich rede jetzt nicht von komplexen Architekturproblemen, weil da ist sie vielleicht nicht so gut, ist sie, glaube ich, sehr gut geeignet, weil üblicherweise sagt man eben, es dauert zu lang, ich will jetzt diese zehn Minuten nicht investieren, aber die AI macht es mir vielleicht in dreiig Sekunden und dann ist es akzeptabel und dann kann ich einfach Mail Boy Scout mäßig aufräumen und einfach schon mitnehmen. Was ich noch nie probiert habe, ist, dass ich sage, liebe AI, geh mal durch meine ganze Codebase, such alle Todoppelpunkt und fix die mal. Wäre auch interessant, ob das funktioniert, die."
+    },
+    {
+      "end": 3232920,
+      "speaker": "B",
+      "start": 3227480,
+      "text": "Tage auch wieder was mit der AI gepromptet in, weiß ich nicht, Windsurf, Cursor, GitHub, Copilot in einen dieser Editoren."
+    },
+    {
+      "end": 3236890,
+      "speaker": "A",
+      "start": 3233080,
+      "text": "Verwendest du jetzt schon so viele, dass du gar nicht mehr weißt, was es war? Oder willst du jetzt nur keine Werbung?"
+    },
+    {
+      "end": 3289630,
+      "speaker": "B",
+      "start": 3237440,
+      "text": "Wir sind ja ein werbefreier Podcast, was auch eine Lüge ist. Aber nun gut, es ist halt so, dass ich auf der Arbeit das eine Tool habe, privat das andere natürlich selbst bezahlt, Auf der Arbeit natürlich nicht. Deswegen kann ich dir gerade nicht mehr sagen, in welchem Kontext das jetzt war. Aber ich habe mir echt Mühe gegeben bei dem Prompt Mach mal dies und das. Da ging es irgendwie um eine Jason Transformation. Ja, und da knallt die AI mir halt einfach mal eine zweite Jason Library rein und ich habe es erst gar nicht gesehen. Und im Präsent habe ich Wieso wird denn jetzt hier die Go Module zwei angepasst? Warum wird denn hier noch eine Jason Library reingepackt, wenn doch die Standardlieb was drin hat und hä und all sowas. Und auf einmal schleicht sich halt so eine Art technische Schuld auch wieder mit rein, weil du in demselben Projekt zwei verschiedene JSON Libraries hast. Natürlich gibt es technische Gründe, wofür und weswegen man zwei Labories haben kann, aber da muss man halt auch aufpassen."
+    },
+    {
+      "end": 3296100,
+      "speaker": "A",
+      "start": 3290660,
+      "text": "Ist das jetzt AI Pro oder Contra gewesen im Sinne von technische Schuld?"
+    },
+    {
+      "end": 3302420,
+      "speaker": "B",
+      "start": 3296420,
+      "text": "Also ich nehme ja immer Gutes an, deswegen denke ich, ich war zu doof zu prompten oder hatte das falsche Modell."
+    },
+    {
+      "end": 3308820,
+      "speaker": "A",
+      "start": 3302420,
+      "text": "Drin, Wobei du jetzt keine technische Schuld behoben hast. Das war ja nur eine neue Introduce Task, oder?"
+    },
+    {
+      "end": 3323670,
+      "speaker": "B",
+      "start": 3308980,
+      "text": "Genau, eine neue Introduce. Aber was ich nur sagen möchte, auch dein AI Prompt. Und da muss es noch nicht mal sein. Es kann auch wirklich okay, du als fähige Softwareentwicklerin, du weißt, was du da tust und lässt dich nur unterstützen. Ja, aber so schnell geht es. Da muss man wirklich drüber gucken."
+    },
+    {
+      "end": 3353160,
+      "speaker": "A",
+      "start": 3323670,
+      "text": "Also gut, die Lösung wird es nicht sein für alle unsere technischen Schulden auf jeden Fall, aber die kann vielleicht dort oder kann hin und wieder vielleicht unterstützen. Die Königsklasse wäre ja, dass man die technischen Schulden überhaupt verhindert, falls das überhaupt Sinn macht. Da haben wir eh schon drüber gesprochen. Aber gibt es irgendwie eine Möglichkeit, technische Schulden zu reduzieren, bevor man sie überhaupt macht? Und zwar so, dass man trotzdem noch irgendwie schnell agieren kann und Time to Market möglichst optimiert ist?"
+    },
+    {
+      "end": 3403190,
+      "speaker": "B",
+      "start": 3353320,
+      "text": "Ja, eine Sache ist Vielleicht don't reinvent the wheel, also bau halt auf das auf, was du schon hast, auf Open Source, auf vielleicht Plattformen, die in deiner Firma existieren. Vielleicht habt ihr Plattform Teams oder Operations Teams, die sich um das Hosting kümmern, bieten dir Managed Kubernetes an, bieten dir Frameworks an. In manchen Firmen hast du Core Sprachen, also Core Programmiersprachen, wo dann Logging Libraries angebunden werden, die du einfach nutzen kannst und muss dich um den ganzen Stack da nicht kümmern. Das ist halt eine Sache. Ich denke, man sollte gar nicht so viel Arbeit reinstecken, um technische Schulden zu verhindern, denn ich denke, man kann sie sind nicht verhindern. Ich denke, die gehören dazu, genauso wie Bugs und sind einfach Teil des Prozesses. Ich meine, es ist genau, wenn ich ein Haus baue, kann ich auch entscheiden, mache ich jetzt Fusch oder hänge ich einen Monat dran im Haus."
+    },
+    {
+      "end": 3466450,
+      "speaker": "A",
+      "start": 3404220,
+      "text": "Es gibt ja so eine Matrix von Martin Fowler zu technischen Schulden, also klassische vier Quadranten, wo eine Achse bewusst und versehentlich gemachte Schulden ist und die andere Achse ist rücksichtslose Schulden und umsichtige Schulden. Und ich glaube, da kann man natürlich schon Sachen optimieren, weil wenn du versehentlich technische Schulden eingehst, da kannst du natürlich optimieren, weil im Idealfall sind technische Schulden eben immer nur bewusst technische Schulden und solche Schulden, die du dann leicht auflösen kannst, die umsichtig sind, die Sinn machen und jetzt nicht rücksichtslos irgendwie eingegangen werden, andere wieder ausbremsen oder sonst was, Also bewusste Schulden und nicht versehentlich gemachte Schulden. Und da kommt dann natürlich das Ganze rein, dass man das Wissen dazu hat, dass man vielleicht auch dementsprechend die Code Reviews hat, dass man das Knowledge von anderen Personen absaugen kann, damit man überhaupt nicht diese Fehler macht, die dann vielleicht zu technischen Schulden führen, Also wenn man sie nicht strategisch eingegangen ist. Und da kann man natürlich, glaube ich, schon was machen."
+    },
+    {
+      "end": 3505630,
+      "speaker": "B",
+      "start": 3466450,
+      "text": "Also ich glaube, wenn man eine Sache aus dieser Episode mitnimmt, dann ist das, dass es keinen heiligen Gral zum Thema technische Schulden gibt. Auf der einen Seite, wie man diese definiert, auf der anderen Seite, wie man diese bekämpft. Ich denke, falls ihr eine Möglichkeit gefunden habt, wie man technische Schulden verhindern kann oder effektiv bekämpfen kann, die für alle Teams funktionieren. Ich glaube, ihr könnt sehr schnell reich werden. Ich denke eher, freundet euch mit technischen Schulden an. Seht technische Schulden nicht immer als negatives, sondern teilweise als aktive Entscheidung und teilweise als was Positives. Denn im Endeffekt, ihr nehmt Schulden auf, um einen früheren Wert von etwas zu haben und bei technischen Schulden ist der frühere Wert halt hoffentlich frühere Time to Market."
+    },
+    {
+      "end": 3529530,
+      "speaker": "A",
+      "start": 3505790,
+      "text": "Man merkt wieder, dass du da in deiner Echo Kammer unterwegs bist, Andy. Natürlich gibt es eine offizielle Definition von technischen Schulden und du kannst in diese ISO Norm hineinschauen und in der ISO Norm ist spezifiziert, nach welchen Dimensionen man den Code klassifizieren kann bzw. Die technische Schuld und wie maintainable ein Code ist, ist alles ISO zertifiziert und natürlich alles perfekt auf null und eins."
+    },
+    {
+      "end": 3536890,
+      "speaker": "B",
+      "start": 3529930,
+      "text": "Perfekt messbar Und dann kommen die Amerikaner und ISO. Hör mal, wen interessiert das denn schon?"
+    },
+    {
+      "end": 3562660,
+      "speaker": "A",
+      "start": 3537449,
+      "text": "Ich glaube, die ISO Norm gilt in Amerika genauso, oder ist übrigens die ISO fünf und zwanzig tausend zehn, nimmt ja auch der TÜV ab nach den Dimensionen Analysierbarkeit, Modifizierbarkeit, Testbarkeit, Modularisierung, heißt das Wort so? Reusability, Wiederverwendbarkeit, so ist es auf Deutsch kann man alles bewerten. Wenn du viel Geld in die Hand nimmst, sagt dir irgendwer, wie reusable dein Code ist."
+    },
+    {
+      "end": 3572500,
+      "speaker": "B",
+      "start": 3563300,
+      "text": "Bei Zertifizierung ist das ja immer so, Zertifizierungen sind ja nichts wert. Also ich kann dir ja eine Zertifikat ausstellen, Wolfgang für den besten Tiroler, den."
+    },
+    {
+      "end": 3575060,
+      "speaker": "A",
+      "start": 3572500,
+      "text": "Ich kenne, hätte mal gern, muss zugeben."
+    },
+    {
+      "end": 3581700,
+      "speaker": "B",
+      "start": 3575060,
+      "text": "Ich kenne gar nicht so viel Tiroler. Also du hättest gute Chancen und ob diese Zertifizierung dann Wert hat, entscheide ja nicht ich."
+    },
+    {
+      "end": 3587340,
+      "speaker": "A",
+      "start": 3581860,
+      "text": "Ja, aber deine Zertifizierung hat wirklich viel Wert. Also ich würde mich freuen, mich würde."
+    },
+    {
+      "end": 3626060,
+      "speaker": "B",
+      "start": 3587340,
+      "text": "Es auch sehr freuen, wenn die Zertifizierung, die ich ausstelle, einen Wert hat. Aber so geht es mir halt auch mit der ISO Zertifizierung. Den Wert, den ich einer ISO Zertifizierung zurechne und zugegeben steigt dieser Wert nicht, wenn du sagst, wird vom TÜV verteilt. Da halte ich halt nichts von, weil ich war schon so viel in so vielen Audit Prozessen drin, mit teilweise nicht so fähigen Auditorn und mit teilweise sehr fähigen Auditorn und alle haben diese ISIS Zertifizierung am Ende bekommen. Also es hängt halt auch stark davon ab, wer prüft wen. Haben wir aber auch bei der Wirecard gesehen, da hängt es ja auch drauf ab. Also wurde auch alles geprüft und ging halt trotzdem den Bach runter. Deswegen halte ich da nicht ganz so viel von."
+    },
+    {
+      "end": 3662390,
+      "speaker": "A",
+      "start": 3626380,
+      "text": "Und genau darum glaube ich auch, dass man dieses Ding am besten an der Wurzel bekämpft, im Team möglichst Awareness zu schaffen, auf Business Seite, auf Developerseite, da gut zusammenzuarbeiten und das möglichst in die Kultur reinzubringen, niederschwellig und keinen komplexen Prozess oder einen Prozess, der ISO zertifiziert ist, noch womöglich einzuführen, der extrem komplex ist und wo dann eigentlich das Team schlussendlich womöglich sogar gebremst wird, anstatt dass man schneller weiterkommt, was ja auch die Idee ist von der technischen Schuld. Ich investiere etwas, komme schneller zum Ziel, habe einen Erfolg und räume das dann auch später dementsprechend."
+    },
+    {
+      "end": 3691540,
+      "speaker": "B",
+      "start": 3662710,
+      "text": "Was wir in dieser Episode versucht haben, ist ein meines Erachtens nach doch subjektives Thema, ein bisschen weniger subjektiv zu machen. Hoffentlich haben wir es geschafft. Uns würde mal deine Meinung zum Thema technische Schulden interessieren. Spring doch mal in unsere Discord Community und erzähl uns mal die Story über die beste oder echt vielleicht komischste technische Schuld, die du mal in deiner Software, in der du arbeitest, entdeckt hast. Das würde mich mal interessieren, weil ab und zu fehlen mir mal wieder so Software Lacher Stories und ich hoffe, die kannst du liefern."
+    },
+    {
+      "end": 3702900,
+      "speaker": "A",
+      "start": 3691540,
+      "text": "Oder wenn ihr uns sagen könnt, auf was für einem Level eure Software sich in der ISO Zertifizierung Maintainability Model Skala befindet, freuen wir uns natürlich auch."
+    },
+    {
+      "end": 3706980,
+      "speaker": "B",
+      "start": 3702900,
+      "text": "Das war's von uns. Wir hören uns nächste Woche wieder. Bis bald und tschüss."
+    },
+    {
+      "end": 3713740,
+      "speaker": "A",
+      "start": 3706980,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}

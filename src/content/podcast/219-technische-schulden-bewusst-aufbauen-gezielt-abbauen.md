@@ -79,12 +79,17 @@ image: ./219-technische-schulden-bewusst-aufbauen-gezielt-abbauen.jpg
 length_second: 3714
 pubDate: 2025-10-28 02:00:08+00:00
 speaker:
-- name: Andy Grunwald
 - name: Wolfi Gassler
+  transcriptLetter: A
+- name: Andy Grunwald
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/0y0JWHpkkDDLJM4zFM3bL1
-tags: []
-title: '#219 Technische Schulden: Bewusst aufbauen, gezielt abbauen'
-transcript_slim: ''
+tags:
+- Tech Kultur
+- Software Engineering
+- Projektmanagement
+title: "#219 Technische Schulden: Bewusst aufbauen, gezielt abbauen"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=RWP7JZvPQUI
 
 ---
