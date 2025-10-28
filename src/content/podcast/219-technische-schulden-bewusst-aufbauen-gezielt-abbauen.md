@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/c27818b4-d61f-43f0-a75f-8167e692399c/engineering-kiosk-219-technische-schulden-bewusst-aufbauen-gezielt-abbauen
 apple_podcasts: https://podcasts.apple.com/us/podcast/219-technische-schulden-bewusst-aufbauen-gezielt-abbauen/id1603082924?i=1000733798563&uo=4
 audio: https://audio1.redcircle.com/episodes/91c093b3-d0cd-4da0-9fff-f7be50225665/stream.mp3
 chapter:
