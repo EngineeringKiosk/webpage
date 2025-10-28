@@ -79,10 +79,10 @@ speaker:
 spotify: https://open.spotify.com/episode/4EpPFYnw2Oah6xNNymXstz
 tags:
 - Software Engineering
-- Software Qualität
+- "Software Qualit\xE4t"
 - Tech Kultur
-title: "#218 Bug Management Teil 2: Priorisieren, Fixen, Verhindern, Anerkennen"
-transcript_slim: ""
+title: '#218 Bug Management Teil 2: Priorisieren, Fixen, Verhindern, Anerkennen'
+transcript_slim: src/data/transcripts/218-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Dms9sQyzKt4
 
 ---
