@@ -13,9 +13,10 @@ export interface Props {
 	podcastHost?: boolean;
 	meetupHost?: boolean;
 	profileLink: string;
+	slimVersion?: boolean;
 }
 
-const { avatar, name, subtitle, description, github, twitter, linkedin, website, podcastHost, meetupHost, profileLink } = Astro.props;
+const { avatar, name, subtitle, description, github, twitter, linkedin, website, podcastHost, meetupHost, profileLink, slimVersion } = Astro.props;
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 
 // TODO We might want to migrate the Hosts to a "People" Content Collection
@@ -31,10 +32,14 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 				{name}
 			</h2>
 		</a>
-		<span class="inline-block mb-6 text-lg font-medium text-yellow-500">
-			{subtitle}
-		</span>
-		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+		{
+			!slimVersion && (
+				<span class="inline-block mb-6 text-lg font-medium text-yellow-500">
+					{subtitle}
+				</span>
+				<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+			)
+		}
 		<div class="mb-8 flex items-center justify-center">
 			{
 				podcastHost && (
