@@ -19,6 +19,7 @@ const nextMeetup = getNextMeetup(bufferDays);
 const dateString = formatDateWithoutWeekday(nextMeetup.date, 'en-US');
 const timeString = formatTime(nextMeetup.date);
 const dateAndTime = `${dateString} - open doors at ${timeString} (talks start ~30min later)`;
+const registrationClosed = nextMeetup.registrationClosed || false;
 
 
 let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
@@ -75,20 +76,39 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 
 								<div class="flex flex-wrap mt-2">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a
-											class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
-											onclick="scrollToElement('a[name=register]'); return false;"
-											href="#register"
-										>
-											Register for next meetup
-										</a>
+									{ () => { 
+										if (!registrationClosed) {
+											return(
+												<a
+													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
+													onclick="scrollToElement('a[name=register]'); return false;"
+													href="#register"
+												>
+													Register for next meetup
+												</a>
+												 <p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
+													</a>
+												</p>)
+											} else {
+											return(								
+												<a
+													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 font-medium text-center text-coolGray-500 outline-none placeholder-coolGray-500 border border-coolGray-200  rounded-md shadow-sm disabled"
+													onclick="scrollToElement('a[name=newsletter]'); return false;"
+													href="#newsletter"
+												>
+													Registration is closed (Capacity Reached)
+												</a>
+												<p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">  
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														We have reached the maximum number of registrations for this event. <span class="underline">Please do not show up if you have not registered beforehand.</span> You can subscribe to our newsletter to get an email when the next meetup is announced. See you there. 
+													</a>
+												</p>)
+											}
+									}}
 									</div>
-								</div>
-								<p class="mt-12 mb-2 md:mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
-									<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
-										<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
-									</a>
-								</p>
+								</div>	
 							</div>
 							<div class="hidden md:block w-full md:w-1/2 px-4">
 								<div class="relative mx-auto md:mr-0 max-w-max">
@@ -104,72 +124,76 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 
 			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' />
 
-			<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
-				<div class="container px-4 mx-auto w-full md:w-1/2">
-					<div class="mb-16 text-center">
-						<a name="register"></a>
-						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Please, let us know that you are coming</h3>
-						<div class="leading-relaxed">
-							Please, for better planning and organization, let us know that you are coming. <br />
-							It is free and you can cancel your registration at any time.<br />
-							We'll also send you an ics-event file, so you can add the event to your calendar.
-							If you can't make it, please cancel your registration by declining the event in your calendar.
-							<br /><br />
-							Next meetup:<br />
-							<span class="font-bold">📅 {dateAndTime}</span><br />
-							<div class="h-5 inline-block">
-								📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="20" /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
+			{ () => { 
+				if (!registrationClosed) {
+					return(
+					<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+						<div class="container px-4 mx-auto w-full md:w-1/2">
+							<div class="mb-16 text-center">
+								<a name="register"></a>
+								<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Please, let us know that you are coming</h3>
+								<div class="leading-relaxed">
+									Please, for better planning and organization, let us know that you are coming. <br />
+									It is free and you can cancel your registration at any time.<br />
+									We'll also send you an ics-event file, so you can add the event to your calendar.
+									If you can't make it, please cancel your registration by declining the event in your calendar.
+									<br /><br />
+									Next meetup:<br />
+									<span class="font-bold">📅 {dateAndTime}</span><br />
+									<div class="h-5 inline-block">
+										📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="20" /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
+									</div>
+								</div>
+								<script>
+									window.submitRegisterForm = function(form) {
+										const regId = form.regId.value; // we use regId instead of email to confuse bots
+										const formMessage = document.getElementById('formMessage');
+										formMessage.classList.remove('hidden');
+										formMessage.innerHTML = `Registering ${regId}...`;
+										const formData = new FormData(form);
+										// use simple urlencoded form data instead of multipart
+										fetch(form.action, {
+											method: 'POST',
+											headers: {
+												'Content-Type': 'application/x-www-form-urlencoded',
+											},
+											body: new URLSearchParams(formData).toString(),
+										})
+										.then((response) => {
+											if (response.ok) {
+												formMessage.innerHTML = `${regId} registered successfully!`;
+											} else {
+												formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
+											}
+										})
+										.catch((error) => {
+											formMessage.innerHTML = 'Something went wrong. Please try again later.';
+										});
+										return false;
+									}
+								</script>
+								<style>
+									.email-field {
+										display: none;
+									}
+								</style>
+								<form action="https://rsvp.engineeringkiosk.dev/register" method="post" onsubmit="return submitRegisterForm(this);">
+									<div class="mt-4">
+										<p class="hidden text-lg mt-8" id="formMessage"></p>
+										<input type="hidden" name="eventId" value={nextMeetup.eventId} />
+										<input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
+										<input class="m-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="regId" placeholder="Your email address" />
+										<input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value=`Register for ${dateString}` />
+										<br />
+										<div class="block sm:inline-block"><input type="checkbox" name="register" value="true" checked="checked" class="m-2" disabled/> Register for next meetup</div>
+										<div class="block sm:inline-block"><input type="checkbox" name="newsletter" value="true" checked="checked" class="m-2"/> Inform me about upcoming meetups</div>
+									</div>
+								</form>
 							</div>
 						</div>
-						<script>
-							window.submitRegisterForm = function(form) {
-								const regId = form.regId.value; // we use regId instead of email to confuse bots
-								const formMessage = document.getElementById('formMessage');
-								formMessage.classList.remove('hidden');
-								formMessage.innerHTML = `Registering ${regId}...`;
-								const formData = new FormData(form);
-								// use simple urlencoded form data instead of multipart
-								fetch(form.action, {
-									method: 'POST',
-									headers: {
-										'Content-Type': 'application/x-www-form-urlencoded',
-									},
-									body: new URLSearchParams(formData).toString(),
-								})
-								.then((response) => {
-									if (response.ok) {
-										formMessage.innerHTML = `${regId} registered successfully!`;
-									} else {
-										formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
-									}
-								})
-								.catch((error) => {
-									formMessage.innerHTML = 'Something went wrong. Please try again later.';
-								});
-								return false;
-							}
-						</script>
-						<style>
-							.email-field {
-								display: none;
-							}
-						</style>
-						<form action="https://rsvp.engineeringkiosk.dev/register" method="post" onsubmit="return submitRegisterForm(this);">
-							<div class="mt-4">
-								<p class="hidden text-lg mt-8" id="formMessage"></p>
-								<input type="hidden" name="eventId" value={nextMeetup.eventId} />
-								<input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
-								<input class="m-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="regId" placeholder="Your email address" />
-								<input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value=`Register for ${dateString}` />
-								<br />
-								<div class="block sm:inline-block"><input type="checkbox" name="register" value="true" checked="checked" class="m-2" disabled/> Register for next meetup</div>
-								<div class="block sm:inline-block"><input type="checkbox" name="newsletter" value="true" checked="checked" class="m-2"/> Inform me about upcoming meetups</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-
+					</section>)
+				}
+			}}
 			<Newsletter />
 
 			<Discord />

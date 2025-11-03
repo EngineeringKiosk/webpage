@@ -1,7 +1,7 @@
 ---
 date: 2025-11-06T18:30:00+01:00
 location:
-  name: '​​​​​sigma star gmbh'
+  name: '​​​​​sigma star gmbhddddd'
   address: 'Eduard-Bodem-Gasse 5, 6020 Innsbruck'
   note: ' - Large, covered main entrance at the red building. On the ground floor, straight ahead to Seminarraum 2'
   url: 'https://sigma-star.at/'
@@ -20,4 +20,5 @@ talks:
     bio: 'Georg has been working for the Tyrolean Government since 2013 as an IT all-rounder in the field of air quality monitoring. He did hist MSc in Mechatronics and Smart Technologies at the Management Center Innsbruck. He is responsible for the entire IT infrastructure of Tyrol’s air quality monitoring service and develops a wide range of software solutions — from hardware-level drivers to full-stack web applications. In addition to software development, Georg designs custom electronics and PCB layouts for air quality monitoring devices and high-definition camera systems.'
     linkedin: georg-strickner-658a9a253
 eventId: '3dk71c495gog2d76224ho6mjs1'
+registrationClosed: true
 ---
