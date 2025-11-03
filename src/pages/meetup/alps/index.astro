@@ -9,7 +9,7 @@ import Discord from '../../../components/meetup-alps/Discord.astro';
 import Team from '../../../components/meetup-alps/Team.astro';
 import { Image } from "astro:assets";
 
-import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
+import { formatDateWithoutWeekday, formatTime, formatDateCustom } from '../../../scripts/date.js';
 import { getNextMeetup } from '../../../scripts/meetups.js';
 import Sponsors from '../../../components/meetup-alps/Sponsors.astro';
 
@@ -95,14 +95,14 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 											return(								
 												<a
 													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 font-medium text-center text-coolGray-500 outline-none placeholder-coolGray-500 border border-coolGray-200  rounded-md shadow-sm disabled"
-													onclick="scrollToElement('a[name=newsletter]'); return false;"
-													href="#newsletter"
+													onclick="scrollToElement('a[name=register]'); return false;"
+													href="#register"
 												>
-													Registration is closed (Capacity Reached)
+													Registration is closed (Max. Capacity Reached)
 												</a>
 												<p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">  
 													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
-														We have reached the maximum number of registrations for this event. <span class="underline">Please do not show up if you have not registered beforehand.</span> You can subscribe to our newsletter to get an email when the next meetup is announced. See you there. 
+														We have reached the maximum number of registrations for this event. <span class="underline">Please do not show up if you have not registered beforehand</span> as the venue has limited capacity due to safety regulations. You can subscribe to our newsletter and get an email when the next meetup is announced. Hope to see you there!
 													</a>
 												</p>)
 											}
@@ -192,6 +192,22 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 							</div>
 						</div>
 					</section>)
+				} else {
+					return(
+						<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+							<div class="container px-4 mx-auto w-full md:w-1/2">
+								<div class="mb-16 text-center">
+									<a name="register"></a>
+									<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Registration is closed</h3>
+									<div class="leading-relaxed">
+										We have reached the maximum number of registrations for the event on {dateString}.<br />
+										Please do not show up if you have not registered beforehand as the venue has limited capacity due to safety regulations.<br />
+										You can subscribe to our newsletter below to get an email when the next meetup is announced. Hope to see you there!
+									</div>
+								</div>
+							</div>
+						</section>
+					)
 				}
 			}}
 			<Newsletter />
