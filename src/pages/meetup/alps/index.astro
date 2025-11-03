@@ -85,7 +85,12 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 													href="#register"
 												>
 													Register for next meetup
-												</a>)
+												</a>
+												 <p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
+													</a>
+												</p>)
 											} else {
 											return(								
 												<a
@@ -94,16 +99,16 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 													href="#newsletter"
 												>
 													Registration is closed (Capacity Reached)
-												</a>)
+												</a>
+												<p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">  
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														We have reached the maximum number or registaions for this event. <span class="underline">Please do not show up if you have not registered beforhand.</span> You can subscribe to our newsletter to get an email when the next meetup is announced. See you there. 
+													</a>
+												</p>)
 											}
 									}}
 									</div>
-								</div>
-								<p class="mt-12 mb-2 md:mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
-									<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
-										<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
-									</a>
-								</p>
+								</div>	
 							</div>
 							<div class="hidden md:block w-full md:w-1/2 px-4">
 								<div class="relative mx-auto md:mr-0 max-w-max">
