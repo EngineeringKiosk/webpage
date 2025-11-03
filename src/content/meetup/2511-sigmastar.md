@@ -1,7 +1,7 @@
 ---
 date: 2025-11-06T18:30:00+01:00
 location:
-  name: '​​​​​sigma star gmbhddddd'
+  name: '​​​​​sigma star gmbh'
   address: 'Eduard-Bodem-Gasse 5, 6020 Innsbruck'
   note: ' - Large, covered main entrance at the red building. On the ground floor, straight ahead to Seminarraum 2'
   url: 'https://sigma-star.at/'
