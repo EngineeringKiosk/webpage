@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/28d788e1-0345-47f0-9f50-b2a3c1021ae6/engineering-kiosk-220-code-reviews-als-kommunikationsnetzwerk-mit-prof-michael-dorner
 apple_podcasts: https://podcasts.apple.com/us/podcast/220-code-reviews-als-kommunikationsnetzwerk-mit-prof/id1603082924?i=1000735137313&uo=4
 audio: https://audio1.redcircle.com/episodes/28912de4-04ab-4be4-bb61-08a399031a1f/stream.mp3
 chapter:
