@@ -77,11 +77,18 @@ length_second: 4676
 pubDate: 2025-11-04 02:00:58+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Prof. Michael Dorner
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/2eLPRXzFmFeeRgTnuiRtet
-tags: []
-title: '#220 Code Reviews als Kommunikationsnetzwerk mit Prof. Michael Dorner'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Software Qualität
+- Interview
+title: "#220 Code Reviews als Kommunikationsnetzwerk mit Prof. Michael Dorner"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=r5Pq988T2Fw
 
 ---

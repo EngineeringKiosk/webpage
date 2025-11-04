@@ -1,0 +1,644 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4617,
+  "audio_url": "https://cloud.inlupus.at/s/aJTepQenXk8kqJD/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.96031433,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "87c8f695-21c7-497b-8d5f-102dcea8afd4",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 83570,
+      "speaker": "A",
+      "start": 3120,
+      "text": "Wir sind wieder im Engineering Kiosk. Kommst du rein, kannst du rausgucken. Willkommen. Wenn du regelmäßig Software Code im Team schreibst, bist du entweder die Person, die YOLO sagt und den Code direkt in den Main Branch committed oder du agierst als Vorzeigeteam Mitglied, machst einen Pull bzw. Merge Request auf und fragst dein Team um ein Code Review. Die erste Persona überspringen wir mal. Das kann man halt schon so machen, ist dann aber halt auch kacke zugegeben. Ab und zu muss das halt so sein. Das tut jetzt aber nichts zur Sache. Wir springen zur zweiten Situation, dem Code Review. Und das ist das Thema dieser Episode. Wolfgang und ich haben uns gefragt, worum geht es eigentlich bei einem Code Review? Wirklich um den Code, also die geänderten Zeilen oder eher um das große Ganze, das Problem, was zu lösen gilt und die Architektur oder steckt da vielleicht doch mehr dahinter? Vielleicht sogar was im Bereich menschlicher Interaktion? In dieser Episode sprechen wir mit Michael Dorner. Michael forscht seit Jahren zum Thema Code Reviews und ist der Meinung, dass Code Reviews ein Kommunikationsnetzwerk sind. Es geht um die Geschichte von Code Reviews, wie der soziale Prozess und die Kommunikation eigentlich aussieht, inwiefern ein Code Review wirtschaftlich ist bzw. Wie viel Zeit als Investment angemessen ist, aber auch um den Unterschied zwischen Code Reviews in Open Source und einem Firmenkontext. Wir springen rein, los gehts."
+    },
+    {
+      "end": 133510,
+      "speaker": "B",
+      "start": 86590,
+      "text": "Wenn man so an Code Reviews denkt, denkt man ja ganz oft eigentlich, dass das nur irgendwie so ein Blocker ist, bis man sein Looks good to me am Ende bekommt. Aber wenn man natürlich in größeren Teams arbeitet oder in größeren Firmen, dann ist es ja eigentlich viel mehr als ein Looks good zu me. Hoffentlich zumindest bei den meisten. Da wird ja mittlerweile auf so Plattformen diskutiert, es wird entschieden innerhalb von Code Reviews. Also da geht eigentlich ziemlich viel ab in so einer Konversation in Code Reviews und da geht so viel ab, dass mittlerweile drüber geforscht wird, was da eigentlich so abgeht. Und darum freut es uns natürlich umso mehr, dass wir heute genau so einen Forscher bei uns haben, der Code Reviews von Microsoft bis Spotify im Detail sich angesehen hat. Und darum willkommen bei uns im Engineering Kiosk, Professor Michael Dauner."
+    },
+    {
+      "end": 133910,
+      "speaker": "A",
+      "start": 133510,
+      "text": "Hi."
+    },
+    {
+      "end": 135270,
+      "speaker": "C",
+      "start": 133990,
+      "text": "Hi, grüß euch."
+    },
+    {
+      "end": 164580,
+      "speaker": "A",
+      "start": 135270,
+      "text": "Michael Wie üblich in diesem Podcast habe ich die Ehre, dich vorstellen zu dürfen. Du lebst in der Nähe von Nürnberg im schönen Bayern, im schönen Freistaat Bayern. Du hast eine akademische Bilderbuchlaufbahn hingelegt, einen klassischen Bachelor in Informatik, einen Master in Informatik. Danach hast du einen Doktor in Philosophie gemacht an einer Universität in Schweden im Department für Software Engineering. Und du hast deine Doktorarbeit über das Thema Code Review as a Communication Network geschrieben. Und inzwischen bist du."
+    },
+    {
+      "end": 171740,
+      "speaker": "B",
+      "start": 164580,
+      "text": "Moment mal, Andi, also Doktor Philosophie ist einfach ein PhD, oder Michael, wenn ich das richtig. Genau, bei Andi muss man das selber."
+    },
+    {
+      "end": 182160,
+      "speaker": "C",
+      "start": 171740,
+      "text": "Transla Im Ausland heißen die Doktoren sehr, sehr oft PhD. Und ich habe ihn tatsächlich in Schweden gemacht, Dort ist es sogar der Doktor Tech. Das hört sich besonders cool an, finde ich."
+    },
+    {
+      "end": 187320,
+      "speaker": "B",
+      "start": 182160,
+      "text": "Habe ich damals auch noch bekommen, war einer der letzten Doktor Tech, bevor es PhD dann gegeben hat."
+    },
+    {
+      "end": 310720,
+      "speaker": "A",
+      "start": 187320,
+      "text": "Ich glaube, das musst du nicht nur primär für mich übersetzen, sondern für fast alle Leute, die nicht zu Hause in der Akademik sind, denn das würde ich als today I learned abzeichnen, weil das wusste ich in der Tat vorher nicht weiter im Text. Inzwischen bist du aber Professor für Software Engineering an der Technischen Hochschule Nürnberg und das meine ich mit der Bilderbuchlaufbahn in der Akademik. Du hast diverse Veröffentlichungen im Bereich Code Reviews durchgeführt, zum Beispiel the Capability of Code Review as a Communication Network oder auch Measuring Information Diffusion in Code Reviews at Spotify. Also du beschäftigst dich mit dem Thema schon eine ganze Menge und darüber haben wir beide uns auch kennengelernt, denn damals, als ich bei Trivago gearbeitet habe, war unter anderem meine Verantwortlichkeit auch die Maintenance und die Wartung und allem drum und dran für das BitBucket System und für das GitLab System. Und irgendwann hast du mal angeklingelt und hast gesagt, ich mache mal diese Untersuchung auf Basis von Code Reviews. Und die grundsätzliche Frage war eigentlich, okay, inwieweit unterscheiden sich denn Code Review Prozesse innerhalb einer Firma mit Open Source Und hey, Trivago, habt ihr da nicht Lust mitzumachen? Und damals haben wir dir, glaube ich, auch einen etwas größeren Datensatz zukommen lassen, der dann mit in die Forschung eingeflossen ist. Das zum Disclaimer. Aber du schaust dir nicht nur Code Reviews an und schaust, ob es einen Unterschied zu Open Source und Firmenprozessen gibt, sondern auch zum Thema Steuern. Denn du hast hier nämlich die Frage gestellt, wie verhält sich das eigentlich in einer global verteilten Software Architektur mit der Text Compliance und inwieweit kann man denn kollaborative Software Engineering Aktivitäten, nenne ich es mal, versteuern und darum hast du nämlich auch ein kleines Startup gegründet, was sich Kolabri nennt. Pun intended. Abo C. Und jetzt kommen wir zum Abschluss. Als Mensch spielst du noch Piano in einer Band namens Claim. Und klar, fünf ist die Weiterentwicklung des Klaviers. Hahaha Und wird von fünf Musikern gespielt. Ich musste gestern, als ich die Vorbereitung gemacht hab, stark lachen."
+    },
+    {
+      "end": 315600,
+      "speaker": "B",
+      "start": 310800,
+      "text": "Ich glaube, Andi hast du jetzt schon mitbekommen mit so einem Flachwitz. Andi ist mit dabei am Start."
+    },
+    {
+      "end": 332400,
+      "speaker": "C",
+      "start": 315960,
+      "text": "Voll gut. Dann hatte ich es schon rentiert, das Ding Claim zu nennen. Ja, vielen Dank für die Vorstellung. Ich weiß nicht, ob es eine Bilderbuch oder Bilderbauch Karriere ist. Also tatsächlich dafür könnt ihr gerne mal nach Nürnberg kommen und sich das anschauen. Ich bin eher für die Bilderbauch Karriere. Finde ich sehr gut."
+    },
+    {
+      "end": 336600,
+      "speaker": "B",
+      "start": 332400,
+      "text": "Wie nennt ihr das in Deutschland, wenn man im Schwimmbad auf den Bauch klatscht?"
+    },
+    {
+      "end": 337720,
+      "speaker": "C",
+      "start": 336840,
+      "text": "Bauchplatscher."
+    },
+    {
+      "end": 362610,
+      "speaker": "B",
+      "start": 337720,
+      "text": "Okay, überall sind wir international. Genau, das ist mir ab sofort in den Sinn gekommen. Aber wenn wir jetzt mal in das eigentliche Thema hinein starten, was würdest du denn sagen, so ganz vorweg mal, was ist denn das größte Missverständnis oder Misskonzept, das Leute eigentlich über Code Reviews zu haben? Also was ist dir so in deiner Laufbahn untergekommen, wo Leute immer ein falsches Verständnis haben, was Code Reviews eigentlich sind?"
+    },
+    {
+      "end": 471410,
+      "speaker": "C",
+      "start": 422610,
+      "text": "Tatsächlich ist das eine spannende Frage, weil wenn wir von Code Reviews sprechen, dann hat du hast es ja in der Anleitung schon ein bisschen gesagt, jeder eine andere Vorstellung davon, was ist denn ein Code Review? Looks good to me. Ist es schon ein Code Review oder ist es einfach nur eine Prozesserfüllung? Das finde ich tatsächlich sehr, sehr spannend. Ich glaube tatsächlich, das größte Missverständnis, wenn man es so nennen möchte, ist zum einen, dass es eine binäre Entscheidung ist innerhalb einer Firma. Ja, wir machen Code Review oder machen kein Code Review. Das ist das eine. Das andere tatsächlich ist das Code Review zum Finden von Bugs da sind. Und da geht einher dann oft, dass die Seniors, die Juniors reviewen und dass Code Reviews nur für Teams oder für Leute ist, die irgendwie noch nicht genug Vertrauen haben ineinander oder in ihre Entwicklungsfähigkeiten und solche Sachen."
+    },
+    {
+      "end": 475410,
+      "speaker": "B",
+      "start": 471410,
+      "text": "Moment, du wirst jetzt mir sagen als Senior, dass ich auch noch Code Reviews machen sollte."
+    },
+    {
+      "end": 545870,
+      "speaker": "C",
+      "start": 475570,
+      "text": "Du solltest erstens Code Reviews machen und du solltest sie bekommen. Aber da können wir uns gerne im Detail noch mal unterhalten. Das Spannende ist, ich habe versucht, das Ganze in der Forschung aus einem anderen Blickwinkel zu betrachten. Also weg von diesem Bug Fixing oder Bug Detection hin zu der codiview formt ein Kommunikationsnetzwerk für die Entwickler. Das hat viel Schönes an sich. Es gibt hunderte verschiedene Kommunikationsnetzwerke innerhalb einer Firma oder eines Softwareprojekts. Aber es gibt tatsächlich nur eins, was exklusiv für Entwickler ist und das ganz nah am Code ist und das ist Code Review. Und Code Review ist dann tatsächlich die letzte Instanz. Wird noch mal drüber gesprochen, bevor der Code zur Software wird. Also sprich, vorher habe ich ein bisschen was geschrieben, zusammengehackt, was ich denke, was das Problem löst. Nach dem Code Review gibt es kein Zurück mehr. Mit paar Strings attached gibt es natürlich noch einen Weg zurück. Aber das ist die Idee dahinter. Und ich glaube, diese Misconception, dass es Wir machen das, um Bugfixing oder Bugs zu erkennen, greift glaube ich tatsächlich zu kurz und trifft nicht den Kern von Code Review. Deswegen auch der Titel meiner Dis Code Review as a Communication Network."
+    },
+    {
+      "end": 569120,
+      "speaker": "A",
+      "start": 545870,
+      "text": "Jetzt sind wir schon direkt reingesprungen. Und obwohl ich das nicht wahrhaben möchte, denke ich, es gibt Entwickler und Entwicklerinnen da draußen, die noch nie bewusst ein Code Review gemacht haben oder an einem teilgenommen haben oder vielleicht neu in der ganzen Branche sind und hä Ich bin doch hier zum Schreiben da und nicht zum Reviewen. Wenn du Code Reviews in einem Satz erklären müsstest für eine Person, die das noch nie wirklich bewusst gemacht hat und."
+    },
+    {
+      "end": 582120,
+      "speaker": "B",
+      "start": 569200,
+      "text": "Vielleicht noch nachgeschickt vielleicht eine Ist ein Bull Request gleich ein Code Review Oder gibt es da irgendwie Unterschiede? Also was ist eigentlich ein Code Review und was ist vielleicht auch ein PR Oder ist es dasselbe?"
+    },
+    {
+      "end": 616830,
+      "speaker": "C",
+      "start": 582440,
+      "text": "Mehrere Sachen. Also zum einen, ich glaube tatsächlich, dass ganz viele Code Review machen, ohne dass es ihnen bewusst ist, dass es Code Review ist, weil wir, Wolfgang, du hast es gerade schon gesagt, oft synonym verwenden. Die Begriffe Merge oder Pull Request. Wenn man bei GitLab oder bei GitHub unterwegs ist, haben die zwei verschiedene Namen. Einmal Pull Request bei GitHub und Virtual Request bei GitLab. Kleine Randnotiz. Ich finde den Begriff Pull Request tatsächlich schwierig oder nicht ganz ideal gewählt. Auch wenn man die Leute von GitHub fragt, sagen die, das hätten sie rückblickend betrachtet anders nennen sollen."
+    },
+    {
+      "end": 624590,
+      "speaker": "B",
+      "start": 616830,
+      "text": "Ich verstehe das bis heute eigentlich nicht, warum das Pull Request heißt. Also ist mir unerklärlich, weil Pull Heißt ja irgendwie ziehen und assoziiere immer was anderes eigentlich."
+    },
+    {
+      "end": 641100,
+      "speaker": "A",
+      "start": 625230,
+      "text": "Wieso? Also der Maintainer, der wird gerequestet angefragt einen Change in seinen Branch zu pullen. Also von der Hinsicht, von der Perspektive finde ich das Wording jetzt gar nicht so verkehrt. Also ich meine, warum findest du das jetzt nicht gut gewählt?"
+    },
+    {
+      "end": 821940,
+      "speaker": "C",
+      "start": 641100,
+      "text": "Ich finde tatsächlich den Begriff Merge Request einfach viel besser, weil das nicht eine aktive Rolle beschreibt, dass irgendjemand etwas aktiv machen muss, sondern es geht darum, das zusammenzubringen bekommen. Deswegen finde ich jetzt Merch Request tatsächlich ein bisschen eleganter gelöst. Aber Pull Request ist GitHub, Merge Request ist GitLab, müssen wir halt damit leben. Also es gibt tatsächlich ein sehr großes Overlap. Tatsächlich hat sich aber in der Forschung gezeigt, dass das Tooling an sich fürs Co Review absolut sekundär ist. Konnten keinen Effekt nachweisen, ob man jetzt GitLab, GitHub, BitBucket, ein eigenes geschriebenes Tool, also Microsoft verwendet oder auch Google verwenden eigengeschriebene Tools, selbstentwickelte Tools. Es hat keine Auswirkungen darauf, dass am Ende das Code Review zu einem Kommunikationsnetzwerk führt. Das ist tatsächlich zusammengefasst, was da eigentlich passiert. Wenn wir uns angucken, wo Code Review herkommt, ein bisschen vorweg springen, erklärt es ein bisschen, was Code Review eigentlich ist. Früher war Code Review, da hießen die ganzen Dinger noch wirklich lange vor unserer aller Zeit. In den er Jahren waren die ersten Ideen, da hieß das Ganze noch irgendwie Code Inspection und hatte einen sehr formalen Aspekt. Die Leute sind zusammengekommen und haben auf Wie hießen die Tageslichtprojektoren sich den Code angeguckt? Overheads. Overheads, genau. Bei IBM war die Idee und wir diskutieren den Code und finden Bugs. Das war die ursprüngliche Idee und daher auch immer noch diese starke Konnotation aus der Geschichte. Wir suchen halt Bugs und die Idee dahinter war damals absolut legitim und auch richtig. Die Idee war, möglichst frühzeitig Fehler zu finden, weil, naja, wenn man so ganz klassisch unterwegs ist, je früher wir den Fehler finden im Code, desto billiger ist es, ihn zu fixen. Gilt wahrscheinlich heute auch noch, wobei die Zyklen damals noch um einiges länger waren. Und die Idee dahinter war natürlich nachzuweisen, dass der Code soweit korrekt ist. Das Problem ist natürlich, die Entwickler mussten alle vor Ort sein, die mussten alle in den gleichen Raum. Das war sehr, sehr schwerfällig vom Prozess her. Und ein Hauptkritikpunkt ist natürlich, es musste synchron sein. Die Leute müssten wirklich am gleichen Ort zur gleichen Zeit zusammenkommen. Dann später kamen dann eben die Versionskontrolle Kontrollsysteme. Git, das ist das, was es überlebt hat, ein verteiltes Versionsverwaltungstool. Und da hat sich das natürlich dann geändert. Also wir sind jetzt in der Lage, nicht mehr synchron zu arbeiten, sondern asynchron. Jeder hat seinen eigenen, seinen eigenen, seine eigene Code Base und die wird dann eben mit Mergers zusammengeführt. Und ich denke, eine der Kernaspekte war dann eben GitHub. Wir hatten es schon gerade eben diskutiert, die eben diese extrem smarte Idee hatten, das Ding, also den Namen vielleicht nicht, aber die Idee dahinter ist genial, nämlich Git so weit zu erweitern, dass es den Pull Merge oder wie es auch immer heißt, Request zu integrieren. Und das war natürlich für das Coden in der Community mit mehreren Leuten natürlich eine geniale Sache. Jeder hat seins, aber wir versuchen es an bestimmten Stellen zusammenzulegen."
+    },
+    {
+      "end": 831220,
+      "speaker": "B",
+      "start": 821940,
+      "text": "Hat das GitHub damals wirklich erfunden, dieses Konzept, dass man auf einer Plattform irgendwie asynchron das Ganze kommentiert und den Review macht?"
+    },
+    {
+      "end": 849850,
+      "speaker": "C",
+      "start": 831220,
+      "text": "Genau, also es gab vorher natürlich auch schon, wie hieß denn die Subversion und SVN? Es gab noch andere Versionskontrolle. Ich bin mir nicht sicher, ob sie es wirklich erfunden haben. Ich würde aber argumentieren, sie haben es auf alle Fälle populär und salonfähig gemacht. Bei SWN hast du immer noch eine zentrale Instanz, die das irgendwie alles zusammenführt in einen Server, Bei Git eben nicht mehr."
+    },
+    {
+      "end": 855410,
+      "speaker": "A",
+      "start": 850570,
+      "text": "Moment, ganz kurz. Also ich habe auch noch sehr lange mit Subversion gearbeitet, sogar auch noch mit."
+    },
+    {
+      "end": 860730,
+      "speaker": "B",
+      "start": 855410,
+      "text": "Cvs, die auch, aber da hatte man keine Kommunikation dabei, oder? Meines Wissens."
+    },
+    {
+      "end": 874790,
+      "speaker": "A",
+      "start": 860810,
+      "text": "Doch, doch, natürlich. Also ich habe damals natürlich auch Pull Request gemacht und so weiter Und das hat man natürlich dann, also nicht Pull Request, aber man hat Patches rumgesendet und man konnte auch Branching machen und Branchen. Bei Subversion ist ein bisschen komplizierter, hat aber auch sehr gut funktioniert, wenn du wusstest, was du tust."
+    },
+    {
+      "end": 884070,
+      "speaker": "B",
+      "start": 874870,
+      "text": "Ja, aber hattest du wirklich eine Kommunikationsmöglichkeit so wirklich so mit Kommentare dazu hängen und irgendwie an eine Zeile zum Beispiel einen Kommentar hängen?"
+    },
+    {
+      "end": 895950,
+      "speaker": "A",
+      "start": 884310,
+      "text": "Ja, durch anderes Tooling. Also das Tooling gab es natürlich schon. Code Reviews wurden ja jetzt nicht von GitHub angeführt. Also ich meine, wie wurden sonst große CMS Systeme oder so weiter vorher entwickelt, um Gottes Willen."
+    },
+    {
+      "end": 951860,
+      "speaker": "C",
+      "start": 895950,
+      "text": "Also es gab natürlich vorher schon eine Art des Code Reviews. Also wir denken an Linux zum Beispiel auch ganz klassisches Beispiel, die machen das Ganze über Mailing Listen, die kommunizieren auch mit Patches, also DIV Dateien. Und wie soll ich das jetzt clever formulieren? Es funktioniert, Man hat sich auf E Mail geeinigt und E Mail ist das beste oder schlechteste Tool dafür. Bitte streitet euch. Aber tatsächlich, das auf eine Plattform zu vereinigen oder im Kontext von Kollaboration zu denken und in ein Tool zusammenzuführen, ich würde sagen, das war ein großer Gewinn, den wir GitHub zu verdanken haben, heißt nicht, dass es nicht anders auch möglich war. Aber dieses Zusammendenken, wie gesagt, die Tatsache, dass wenn ich mich mit Industriepartnern unterhalte, sehr sehr oft gar nicht mehr von Code Reviews gesprochen wird, sondern eher von Pull Requests und Virtual Requests, sagt schon, das ist wie das Tempo Taschentuch oder die Pampers Windel."
+    },
+    {
+      "end": 991130,
+      "speaker": "A",
+      "start": 951860,
+      "text": "Du hast ja gerade die Historie ein bisschen beschrieben, wie Leute sich von einem Overhead Projektor getroffen haben und aka Bugs Gesuch haben und ich hoffe, sie waren nicht enttäuscht, wenn da keine gefunden wurden. Aber das erinnert mich irgendwie so an diese Parallelpraktiken wie Pair Programming und Mob Programming. So, weil im Endeffekt treffen wir uns auch vor einem Beamer Projektor Screen und klar, wir programmieren, da wird zusammen ein Mob Review oder ein Pair Review gemacht, kann man es vielleicht nennen. Inwieweit sind denn Aktivitäten wie Pair Programming oder Mob Programming in Kontext zu setzen mit Code Reviews? Also sind das alternative Wege oder sind das Ergänzungen? Also ersetzt ein Pair Programm einen Code Review?"
+    },
+    {
+      "end": 1126800,
+      "speaker": "C",
+      "start": 992010,
+      "text": "Sehr spannende Frage, weil sie haben tatsächlich, oder zumindest aus meinem Verständnis heraus, haben sie ein gemeinsames Ziel. Also sie wollen, dass wir uns zusammensetzen und über eine Codeänderung diskutieren oder eine mögliche Codeänderung, eine Diskussion lostreten, die sehr nah an einem Code ist. Da treffen sich die alle grundsätzlich alle Tools fördern die Kommunikation, nehmen wir nichts weg, das passt alles. Es gibt aber zwei Dinge, die Code Review, so wie es in der modernen Art und Weise geliebt wird, nämlich in der Historie fehlt jetzt natürlich noch ein modernes tatsächlich, dass es einfach asynchron stattfindet, Tool unterstützt mit GitHub, GitLab, BitBucket, aber dass es vor allem asynchron stattfindet und dass es asynchron stattfindet, haben wir bei Pair Programming oder anderen Ideen, die es da noch gibt. Haben wir nicht, sondern beim Pair Programming zwei oder vielleicht drei Leute sitzen zusammen am Computer, diskutieren eine Lösung, müssen sie wieder zusammenkommen und zur gleichen Zeit mit dem gleichen Energielevel am gleichen Problem arbeiten. Die tauschen wirklich viel Information aus, aber wie gesagt, erstens müssen sie synchron sein, zweitens, alles was da diskutiert wird, verschwindet nach dem Gespräch. Es ist nicht aufgezeichnet, es hat keine Persistenz, wenn wir Code Review haben. Ich kann noch nachgucken, warum in Linux vor fünf Jahren irgendwie Ding ausgetauscht wurde, irgendein Modul ausgetauscht worden. Das kann ich immer noch in den Code Reviews nachlesen, was dazu geführt hat, dass die Änderung entweder eingeführt wurde oder eben nicht eingeführt wurde. Und tatsächlich ist das eine, glaube ich persönlich, eine unglaubliche Stärke von Code, die wir eben weggeben, wenn wir Pair Programming oder Mob Programming oder irgendwie sowas in der Richtung machen, dass wir die Leute eigentlich, dadurch, dass wir Leute ausschließen, die nicht physisch und zeitlich vor Ort sein können, verlieren wir was. Und jetzt denk mal an große Entwicklungsteams. Ich meine, du arbeitest in einem Unternehmen, das nicht nur in einem Land aktiv ist, dann kannst du dir vorstellen, dass du ganze Time Zones ausschließt aus dem Code View, aus der Kommunikation ausschließt. Muss man fairerweise sagen, fände ich schade. Deswegen, ja, manchmal macht Pair Programming Sinn und das ist bestimmt auch eine tolle Sache. Ich glaube aber nicht, dass es dazu geeignet ist, Code Review als solches zu ersetzen."
+    },
+    {
+      "end": 1170090,
+      "speaker": "A",
+      "start": 1127040,
+      "text": "Ganz starkes Argument mit der kontinuierlichen Dokumentation. In der Praxis ist es jedoch so, dass Firmen und auch Open Source Projekte, natürlich auch Plattformen, wechseln über die Lebenszeit einer Software. Man migriert von etwas Proprietärem wie BitBucket oder ähnliches dann zu GitLab oder später zu GitHub und so weiter. Man lässt das alte System natürlich nicht dauerhaft laufen und die Code Review Kommentare sind dann ja in der Regel in diesem System gefangen. Die sind ja nicht teilweise des Repositories. Meine Frage ist, wäre es nicht eine sinnvolle Aktivität, die Code Reviews mit in Git zu speichern als Metadata, um diese Persistenz auch systemübergreifend zu haben."
+    },
+    {
+      "end": 1173130,
+      "speaker": "C",
+      "start": 1170250,
+      "text": "Vielleicht bist du der erste und einzige Mensch, der meine Disc gelesen hat."
+    },
+    {
+      "end": 1174090,
+      "speaker": "A",
+      "start": 1173130,
+      "text": "Nein, habe ich nicht."
+    },
+    {
+      "end": 1242720,
+      "speaker": "C",
+      "start": 1174650,
+      "text": "Schade, den finde ich noch, der das getan hat. Ne, Spaß beiseite. Eine sehr, sehr gute Frage. Was wäre denn, um es ein bisschen breiter zu formulieren. Vielleicht ist es nicht Teil von Code, aber es ist auf alle Fälle ein Informationsrepository. Wir speichern da ganz viel Information über Entscheidungen, Architekturentscheidungen, Designentscheidungen speichern wir alle in diesem Code Review und dann landet es in irgendeinem Archiv. Und selbst wenn wir die Plattform nicht ändern, landet es irgendwo in irgendeinem von vielen Millionen oder vielen Milliarden Code Reviews. Wir nutzen die Information nicht weiter. Wir könnten es vielleicht nutzen, weil es noch irgendwie physisch gespeichert ist. Klar, wenn wir das System wechseln, ist es nicht mal mehr physisch gespeichert. Aber spannend ist doch, du hast einen wunden Punkt oder einen offenen Punkt angesprochen. Warum nutzen wir das nicht weiter? Tatsächlich wäre meine Hoffnung, dass wir irgendwann auf die Idee kommen, dass diese passive Dokumentation, die wir da haben, ist ja keine aktive Dokumentation, sondern jemand diskutiert und wir können diese Diskussion im Nachgang nochmal aufsuchen und Informationen rausziehen. Wäre eine sehr, sehr spannende Sache, wäre ein sehr, sehr spannendes Forschungsprojekt. Also falls jemand zuhört, ich bin offen."
+    },
+    {
+      "end": 1257599,
+      "speaker": "A",
+      "start": 1243120,
+      "text": "Machen wir mal ein Live Experiment mit diesem Podcast. Wolfgang, wann war das letzte Mal, als du dir mit einem Git Blame zwei bis drei Revisionen zurück, die Commit Messages durchgelesen hast in einem Projekt gleich drei Ebenen zurück."
+    },
+    {
+      "end": 1321950,
+      "speaker": "B",
+      "start": 1257680,
+      "text": "Bei einer Ebene hätte ich jetzt noch was bieten können, bei drei Ebenen. Puh, keine Ahnung, ob ich das jemals überhaupt gemacht habe, aber ich glaube in größeren Projekten, dass es schon durchaus gemacht wird. Ich würde auch argumentieren, dass man mittlerweile vielleicht auch schon eher erkannt hat, dass da mehr Information drin liegt in so einem System, weil früher hat man ja zum Beispiel Klassiker, wenn man den Bug Tracker oder den Issue Tracker umgezogen hat, migriert hat, da hat man sich noch Gedanken gemacht, wie bekomme ich denn diese Informationen in mein neues System, weil ich verliere viele Informationen. Bei Migrationen von GitLab zu GitHub hatte ich das noch nie gehört, muss ich zugeben. Würde jetzt es aber auch schon so einschätzen, dass mittlerweile so viel in diesen Plattformen drin ist, dass sich vielleicht Leute dann schon Gedanken machen, wie bekomme ich denn die Informationen mit raus? Das wäre natürlich das Coolste, wenn Git diese Erweiterung hätte, dass Git diese Informationen wirklich im Raw Git Repository mit reinbekommt, diese Informationen, die Kommentare, die Pull Requests, dann hätte man natürlich da automatisch eine Migrationsmöglichkeit, ohne dass man da über irgendwelche speziellen Formate gehen muss von den jeweiligen Plattformen."
+    },
+    {
+      "end": 1399120,
+      "speaker": "C",
+      "start": 1321950,
+      "text": "Also ich kann dir sagen, wo es passiert, wo man das Code Review rauszieht und für alle Ewigkeiten persistiert und alle Versionen von allen Code Reviews und alle Kommentare. Das ist tatsächlich im regulatorischen Umfeld. Also wenn du eine Firma wie Siemens Healthcare, die heißen jetzt Healthineers, aber die Computertomographen zum Beispiel herstellen, das ist ein Medizinprodukt, die müssen tatsächlich nachweisen, wer hat wann was geändert. Und es gilt auch das Zwei Augen Prinzip. Das heißt, die müssen nachweisen, dass da zwei Personen, also der Autor und noch jemand anders drauf geguckt haben, die signieren ihre Codeänderungen und ihre Code Reviews. Also ich bestätige mit meiner Siemens oder Philips oder egal welcher Medizinprodukthersteller es ist, die müssen es wirklich nachweisen. Und das ist jetzt eine Informationsquelle, wo es aus dem regulatorischen Kontext heraus erzwungen wird. Ich bin jetzt kein großer Freund von Zwang, deswegen ich bin mir auch, also ich stelle es mir als schöne Idee vor, hier auch wieder muss man ein bisschen differenzieren. Ich stelle mir das als spannendes Forschungsprojekt. Also welche Daten offen gefragt, welche Informationen, welche Daten, welche Art von Erkenntnissen könnte man aus Code Review ziehen von Diskussionen, die bereits stattgefunden haben. Es kann sein, dass da relativ wenig rauspurzelt. Es kann aber auch sein, dass da spannende Sachen rauskommen als offene Forschungsfrage."
+    },
+    {
+      "end": 1430200,
+      "speaker": "B",
+      "start": 1399440,
+      "text": "Jetzt hast du ja ganz viele Code Reviews dir angesehen in der Maße. Wir haben schon eingangs erwähnt, Microsoft, Spotify, sogar von Trivago. Ich hoffe, das war vor meiner Zeit, dass meine Looks good zu melden Reviews da nicht mit dabei waren. Was hast du denn daraus gelernt? Was kann man denn da ableiten? Kann man da irgendwas ableiten in Richtung, was sind gute Code Reviews, was sind schlechte Code Reviews? Was sind Problematiken, die dann in, keine Ahnung, irgendwelche Flame Wars führen oder endlose Diskussionen. Gibt es da irgendwas, was man, oder was hast du daraus gelernt?"
+    },
+    {
+      "end": 1776960,
+      "speaker": "C",
+      "start": 1430360,
+      "text": "Das Problem ist, wir hatten es eingangs schon, das Code View existiert wahrscheinlich nicht. Das ist eine sehr von Meinungen und von Hypes geprägte Sache. Das ist sehr, sehr spannend, sich dann anzugucken, was letztendlich dann tatsächlich in den Daten zu finden ist. Das Problem ist, Code Review passiert ja in einem Kontext und der Kontext ist nicht immer Die Firma Microsoft hat zu dem Zeitpunkt, als ich dort geforscht habe, waren es Entwickler. Das Problem ist, selbst innerhalb von diesem Kontext Microsoft ist das Code Review sehr, sehr, sehr, sehr unterschiedlich. Da ist die Forschungsabteilung dabei, genau wie Azure oder wie sie ihre Cloud Infrastruktur nennen, genauso wie Microsoft Office und Microsoft Windows und was auch immer. Selbst die große Organisation hat quasi Unterorganisationen, die vielleicht komplett unterschiedliches Verständnis von Code Review haben. Deswegen ist es sehr schwer, wenn wir diesen Kontext wegnehmen, noch von Code zu sprechen, weil wir die Praktiken dahinter nicht kennen und die tatsächlich sich beliebig klein aufgliedern lassen, vielleicht sogar auf Teamlevel. Team A macht vielleicht codeview oder steht codeview anders als Team B innerhalb von Microsoft, innerhalb von Windows, innerhalb von dem Druckertreiber oder weiß ich nicht. Deswegen haben wir den Schritt zurückgemacht und eben uns überlegt, naja, wenn doch codeview eigentlich als Kommunikation gedacht ist, dann müsste es doch eigentlich ein Kommunikationsnetzwerk erzeugen. Und genau dem sind wir nachgefolgt, diese Idee, und haben die Kommunikationsnetzwerke uns angeguckt. Wir haben also die Metadaten uns angeguckt und nicht die Code Reviews an sich, also den Text, den der Entwickler A oder B geschrieben hat, die Entwickler, sondern wir haben uns auf das Kommunikationsnetzwerk also Wolfgang reviewt einen Code von mir und im nächsten Review reviewe ich einen Code von Andy. Damit entsteht ein Netzwerk. Wolfgang ist mit mir verbunden, ich bin mit Andy verbunden und darüber können wir Informationen austauschen. Es geht nur in eine Richtung. Also Andi kann jetzt nicht über mich mit dir kommunizieren, weil die zeitliche Reihenfolge natürlich relevant und interessant ist. Aber so könnte eine Information, die ich vielleicht von dir gelernt habe, dass man das jetzt in der neuen Programmiersprache, dass man das in Java fünf und neunzig jetzt anders löst. Ich weiß nicht, wo wir gerade sind bei Java, dass man das mit einem neuen, eleganten Konstrukt anders löst. Die Information kann ich weitergeben. Und mit Simulationen haben wir eben versucht, dieses Netzwerk zu belasten. Also stellt es euch vor wie eine Netzwerksimulation, die wir haben, wenn wir Rechnernetze testen. Wir versuchen halt über einen Ping zum Beispiel oder über möglichst viel Daten in das Netzwerk zu fluten und zu sehen, wie das Netzwerk reagiert, ab wann das Netzwerk quasi zusammenbricht. Und da waren wir tatsächlich sehr überrascht, dass wir sowohl bei relativ kleinen Firmen und jetzt klein ist schon wieder sehr, sehr relativ. Trivago ist eigentlich keine kleine Firma. Ich weiß nicht, was wir Er hatte ein paar hundert Entwickler zu dem Zeitpunkt, ist keine kleine Software Klitsche, sondern auch schon eine riesen Firma. Spotify hatte zu dem Zeitpunkt irgendwie knapp zwei tausend oder bisschen über zwei tausend Entwickler und Microsoft mit sein knapp Entwicklern. Egal welche Größe wir uns angeguckt haben, die Vernetzung war tatsächlich überraschend dicht. Und das ist tatsächlich, was aus meiner Perspektive zumindest unerwartet war, dass selbst bei so großen Firmen wie Microsoft, die ja sehr unterschiedliche Sachen machen, es ein Netzwerk ergibt, wo die Leute miteinander reden, auch wenn sie unmöglich im selben Kontext arbeiten. Also die großen Cluster, die wir da gefunden haben, die sind viel größer als die Teams, die da arbeiten. Ich hätte ehrlich gesagt viel mehr erwartet, dass wir viel mehr die Teamgrenzen stoßen. Wäre jetzt meine intuitive Erwartung gewesen, dass innerhalb des Teams sehr stark gereviewt wird, aber nach außen hier und da mal. Aber tatsächlich war das unabhängig, welche Firma wir da befragt haben, war das eine Erkenntnis daraus, die wir durch diese Simulation erhalten haben, dass diese Netzwerke viel dichter, viel stabiler auch sind, als man jetzt aus Organisationsperspektive drauf gucken könnte. Und wenn wir uns natürlich dann angucken, dass es quasi jetzt eine Kommunikation gibt, die über Team oder Organisationsgrenzen hinweggeht, dann ist es aus Engineering Perspektive fantastisch. Also wir haben was, was anscheinend selbstorganisiert funktioniert. Also nicht, dass jemand okay, du musst jetzt den reviewen, weil der im gleichen Team ist oder weil wir die gleiche Mission haben, sondern tatsächlich auch sehr praktisch. Also bitte review das. Ich brauche diese Änderung in der API, Bitte guck dir das an, weil es wird auch dich betreffen. Guck dir das bitte an. Und diese Art von Kommunikation, die einfach von Entwicklern getrieben ist, ist tatsächlich eine spannende Sache. Und daher auch wieder, um wieder den Bogen zurückzuspannen. Deswegen ist es tatsächlich aus meiner Perspektive sehr, sehr wichtig, dass man Code Review nicht unbedingt jetzt als Qualitätssicherungsmassnahme, als Quality Assurance Approach sieht, Die ist es als Resultat. Aber warum es eine Qualitätssicherungsmassnahme ist, tatsächlich, liegt daran, dass die Leute miteinander reden und zwar nicht strukturiert im Sinne eines Organisationsdiagramms, sondern anscheinend danach, wo es halt Informationen gibt, die sie brauchen oder wissen, dass sie gerne anzapfen möchten, bevor sie die Änderung in die Printer API von Windows klopfen. Und das finde ich tatsächlich sehr, sehr spannend. Auch hier wieder kulturell bedingt. Die Firmen sind, haben sehr unterschiedliche Kulturen. Ein Microsoft tickt mit Sicherheit anders als ein Spotify, tickt wiederum sicher anders als ein Trivago. Und trotzdem waren sich die Entwickler innerhalb anscheinend einig, okay, es ist ein sinnvolles Tool, um Leute zu fragen, um ihre Expertise zu erfragen, damit mir der Code nicht irgendwann um die Ohren fliegt."
+    },
+    {
+      "end": 1792440,
+      "speaker": "A",
+      "start": 1776960,
+      "text": "Aber habe ich das jetzt richtig verstanden, dass bei Firmen, wo das Netzwerk größer war, also über die Teaming Grenzen hinweggeht, dass dieses Innersource Modell leben, also dass sie wirklich dann aktiv auch zu dem Code von anderen Teams kontributen?"
+    },
+    {
+      "end": 1797880,
+      "speaker": "C",
+      "start": 1793320,
+      "text": "Sehr gute Frage. Hattet ihr damals bei Trivago so was Innersource ähnliches?"
+    },
+    {
+      "end": 1832000,
+      "speaker": "A",
+      "start": 1797960,
+      "text": "Wir haben es immer versucht und es wurde von dem einen oder anderen halt besser gelebt als im globalen, Aber es ist halt eine kulturelle Änderung. Das ist so mein Code, Ich kenne mich ja in dem anderen Code nicht aus, es hat ja auch ganz andere Hürden. Aber wenn du jetzt gerade gesagt hast, oh, ich brauche diesen Change in dieser API und da habe ich jetzt zwischen den Zeilen gelesen, dass diese API von einem anderen Team ist und man selbst die Änderung gemacht hat. Das heißt ja Innersource mehr oder weniger. Und da wollte ich fragen, ist das vielleicht der Grund oder wenn nicht, was ist der Grund, dass die Netzwerke deutlich größer sind und über die Teamgrenzen hinweggehen?"
+    },
+    {
+      "end": 1836160,
+      "speaker": "C",
+      "start": 1832000,
+      "text": "Innersource hat tatsächlich ein Definitionsproblem aus meiner Perspektive."
+    },
+    {
+      "end": 1840840,
+      "speaker": "B",
+      "start": 1836160,
+      "text": "Und zwar, jetzt wollte ich dich gerade fragen, was ist eigentlich innersource? Vielleicht, wenn du das kurz erklären kannst."
+    },
+    {
+      "end": 2003690,
+      "speaker": "C",
+      "start": 1840840,
+      "text": "Das würde ich ganz kurz umreißen Also Innersource sind Best Practices, die es in Open Source gibt, aber innerhalb einer Firma angewandt. Das ist die Idee dahinter. Also wir tun jetzt so, als wären wir ein Open Source Projekt, aber wir sind immer noch innerhalb einer Firma, also wir müssen uns jetzt nicht groß um Open Source Licenses kümmern oder sowas. Das Problem ist, was sind denn Best Practices in Open Source? Ich weiß es nicht. Ich kann dir für jede noch so etwas verrückte, zum Beispiel jetzt Code Review Praxis ein Beispiel sagen, wo es ein Open Source Projekt gibt, das sogar einigermaßen erfolgreich ist. Also zum Beispiel ganz klassisch Linux als das Open Source Projekt schlechthin. Prototypisch. Ganz oben steht eine Person, Linus Torwald, der regiert da, ich will nicht sagen als König, aber doch als kleiner Herrscher und der entscheidet, was reinkommt und was nicht. Ist das wirklich die Praxis, die ich als Firma haben möchte, dass ich einen Entwickler habe, der entscheidet, was passiert und was nicht passiert. Was ist mit dem Busfaktor? Also wenn Linus Torwahl nicht mehr coden kann, aus welchen Gründen auch immer, hat das Linux Projekt auf alle Fälle ein Problem. Als Firma möchte ich genau sowas vermeiden, dass eine Person so viel macht, so viel Busfaktor. Man kann es aus verschiedenen Perspektiven beleuchten, aber dass es so konzentriert ist, deswegen bin ich bei innersource tatsächlich vorsichtig, was ich da mir wünschen würde, weil es ist am Ende dann so ein Wunschzettel. Jeder versteht auch wieder, wie bei Code Review auch, jeder versteht was anderes darunter, weil es wird immer ein Open Source Projekt geben, das einigermaßen erfolgreich ist und trotzdem eine ganz wirrde Praxis hat, die in der Firma nie funktionieren würde oder keinen Sinn machen. Und das ist das eine und wir haben uns tatsächlich nicht angeguckt, ob es wirklich, also wie die Änderung stattgefunden hat, aber offensichtlich gab es eine gewisse, nennen wir es mal Awareness, dass es Abhängigkeiten zu anderen Teams gibt und wenn ich eben nach außen was ändere, dass es eben notwendigerweise ein Code Review braucht oder ich den in einem Code Review gerne berücksichtigen möchte. Auch sehr spannend. Bei Spotify gibt es zum Beispiel keine formale Bedingung, es muss ein Code stattfinden, also auf Management Level, also ganz von oben, das irgendwo steht. Ihr müsst Code View machen, liebe Entwickler, steht nirgends und trotzdem machen sie es. Wie gesagt, auch hier kleiner Disclaimer, meine Informationen sind alle schon ein bisschen älter, es mag sein, dass es vielleicht inzwischen eingeführt ist, aber auf alle Fälle diesen starken, erzwungenen Ansatz am Coding, wie wir das zum Beispiel jetzt von Medizinproduktherstellern kennen, wie Siemens Healthcare oder General Electric oder wie sie alle heißen, den gibt es da nicht. Und trotzdem machen die Leute Co Review und andersrum auch. Also es scheint da irgendwas Spannendes zu passieren."
+    },
+    {
+      "end": 2029460,
+      "speaker": "B",
+      "start": 2003770,
+      "text": "Habt ihr das damals auswerten können, ob externe Reviewer eingebunden wurden, auch wenn zum internen Code gegangen ist, oder waren das dann immer Code Reviews, wenn man eben irgendwas contributed hat im Sinne von innersource als Contribution für ein externes Projekt in einem anderen Team? Also hole mir da Knowledge auch von außen mit rein in mein Team oder war es einfach der normale innersource Prozess, wenn man was contributed hat?"
+    },
+    {
+      "end": 2119450,
+      "speaker": "C",
+      "start": 2029540,
+      "text": "Also die Sachen, die wir uns da angeguckt haben, waren tatsächlich auf den Metadaten des Code Reviews. Das heißt, von wem die Änderung kam, konnten wir nicht nachvollziehen. Du sprichst aber, nennen wir es problematischen Punkt an. Also Software passiert in einem Kontext und diesen Kontext dürfen wir aber oft nicht genau berichten, weil es eben um Geheimhaltung geht, weil es um Vertraulichkeit geht, weil die Firmen eben nicht ihre geheimsten Sachen, die vielleicht auch juristische Auswirkungen haben, erzählen wollen. Das ist vollkommen legitim. Aber in diesem Spannungsfeld bewegen wir uns immer. Einerseits berichten wollen oder Sachen rausfinden, andererseits aber nicht wirklich Zugang zu den eigentlichen Daten haben, weil die halt in den Firmen liegen. Open Source und Closed Source quasi äquivalent zu sehen, halte ich für schwierig. Und nur als Beispiel klassische Möglichkeit, wie man normalerweise sowas rausfinden könnte. Also hilft mir, Code Review Bugs zu finden, wäre ein kontrolliertes Experiment. Ich habe aber leider noch keine Firma gefunden, die gesagt Pass auf, ich stell dir zwei Teams mit einer großen Anzahl Entwicklern zur Verfügung und die entwickeln alle das Gleiche. Die haben alle dieselbe Expertise, sonst wäre sie nicht vergleichbar. Der einzige Unterschied, den wir im Experiment haben, ist, die einen machen Code und die anderen machen es nicht. Keine Firma der Welt wird mir das erlauben. Es geht um zu viel Geld, Entwickler sind teuer und das Experiment wäre super spannend. Aber wie gesagt, ich konnte noch leider keinen dazu gewinnen, dass er mir ein Experiment mit ein paar Millionen Euro zur Verfügung stellt."
+    },
+    {
+      "end": 2193700,
+      "speaker": "A",
+      "start": 2119690,
+      "text": "Ein paar Millionen Euro, sehr gutes Stichwort. Als hätten wir es abgesprochen. Du sagtest ja schon, Code Reviews sind da, um Bugs zu finden. Dann sagtest du es ist ein Kommunikationsnetzwerk und man kann das Kommunikationsnetzwerk nachweisen. Und das Kommunikationsnetzwerk hat ja dann auch zum Positiven, dass das gegebenenfalls irgendeine Art von Wissenstransfer mit sich schwingt, aber auch zum Nachteil, dass mehr Leute an einem Code View beteiligt sind, die gegebenenfalls nicht an der Codebase jeden Tag arbeiten. Das bringt mich wiederum auf die Lohnt sich der ganze Aufwand überhaupt? Ist das eigentlich wirtschaftlich? Also gibt es einen Return on Invest? Und wo ist der Threshold, der Tipping Point, der Schwellenwert, wo es von Ja, die Investition lohnt sich bis zu Das wird mir jetzt aber hier relativ teuer und du kriegst den Value dann nicht mehr raus. Also ich will jetzt nicht so Fragen stellen wie gibt es ein Bauchgefühl oder gibt es einen Schwellenwert? Sagt jedes Team muss pro Woche vier Stunden für Code Reviews investieren, dann ist es wirtschaftlich oder ähnliches, Weil du sagtest ja auch schon, man vergleicht Äpfel mit Birnen, der Kontext ist abhängig und auch das Umfeld und allem drum. Ich lasse es einfach mal so stehen. Sind Code Reviews eigentlich wirtschaftlich? Kann man da überhaupt eine Antwort zu finden?"
+    },
+    {
+      "end": 2394620,
+      "speaker": "C",
+      "start": 2194260,
+      "text": "Also exzellente Frage und die ehrliche Antwort ist, ich weiß es nicht. Auch hier wieder verschiedene Probleme. Microsoft sagt zum Beispiel, acht Stunden spendieren wir es unseren Entwicklern und Entwicklerinnen für Code Review. Gut, ist das jetzt wirtschaftlich acht Stunden pro was? Pro Tag, pro Woche, pro Woche. Wir haben auch eine Studie gemacht mit SAP und Ericsson und anderen, da kommen wir eher so auf vier Stunden. Erstmal das auch hier wieder in der Ich will nicht desillusioniert klingen und ich will auch nicht irgendwie frustriert klingen, aber man muss sagen, wir sind noch nicht in der Forschung so weit wie in Software Engineering im Allgemeinen, meiner Meinung nach, aber im Codeview besonderen, dass wir uns so weit aus dem Fenster lehnen können, wie die Himmelsbahnen der Planeten vorherzusagen, klare Aussagen treffen zu können. Was ist das Problem? Naja, zweierlei. Zum einen ist es so, diese acht Stunden bei Microsoft sind das, was Microsoft sagt, das es ist und auch die Umfrage, die wir gemacht haben bei SAP und bei Ericsson und bei anderen ist self reported. Die Leute sagen, was sie denken, dass sie Code Review brauchen, ob das so stimmt, keine Ahnung. Vielleicht ist das, was sie sich wünschen, vielleicht haben sie auch das Gefühl, dass sie vier Stunden arbeiten, aber nebenbei haben sie noch, weiß ich nicht, Mahjong offen oder ich weiß es nicht. Und das andere ist Problem ist, was wir haben, wir haben tatsächlich einen relativ ausgeschränkten Kreis an Firmen, die überhaupt dazu publizieren oder die erlauben, dass über sie publiziert wird. Also Tivago ist eine der rühmlichen Ausnahmen. Microsoft auch, Google auch, ich war auch bei Facebook, die waren nicht so chatty oder so auskunftsfreudig. Das heißt, wir haben eine sehr eingeschränkte Sicht auf Code. Wir haben eine sehr eingeschränkte Sicht auf, wie Code Review stattfinden muss, geprägt von ein paar Playern in der Wissenschaft jetzt und vielleicht auch darüber hinaus, wie eben Codigo stattfindet und Selbst wenn jetzt Microsoft sagt, für unseren Kontext ist es sinnvoll, dass wir irgendwas zwischen vier und acht Stunden den Entwicklern spendieren, heißt das nicht, dass das grundsätzlich so gilt. Das nächste Problem ist, du sprichst den Return on Investment an. Also Return on Investment ist so Kosten und Nutzen sich gegen sich vor Augen führen. Und da wird es heikel, weil ich glaube nicht, dass das geht. Zum einen ist es so, dass der Nutzen in Dingen liegt, die sehr, sehr, sehr schwer quantifizierbar sind. In Wissensverteilung oder Wissenstransfer, in einem gemeinsamen Verständnis von Code, in einem Verantwortungsgefühl für Code. Klar kann man sich da jetzt lustige Metriken ausdenken, wie man sowas messen könnte, aber grundsätzlich ist es nicht einfach zu quantifizieren wie Lines of Code oder irgendwas Einfacheres. Selbst wenn wir uns jetzt, und da muss ich dir gerade noch mal widersprechen, ich habe nicht gesagt, dass Code wie für Bugs finden gut ist. Ich sage nur, dass es das tut. Ich bin immer noch der Überzeugung, es ist ein Kommunikationsnetzwerk, aber es findet dadurch auch Bugs, die vielleicht so nicht gefunden werden. Auch hier ist die Was ist ein gefundener Bug, ein Fehler, der gefunden ist? Was sind die Kosten davon? Wenn er doch gefunden wurde, kann man wieder kein kontrolliertes Experiment machen und komm, jetzt deployen wir mal die falsche Konfiguration in unserem Kubernetes, deployen einfach mal und gucken mal, wie viel Werbeeinnahmen bei Spotify uns entgegen ist. Schwierig zu quantifizieren und zu vergleichen, dieses."
+    },
+    {
+      "end": 2445900,
+      "speaker": "B",
+      "start": 2394620,
+      "text": "Kommunikationsnetzwerk, was du jetzt ja ein paar Mal erwähnt hast. Gibt es da irgendwie vielleicht auch einfach nur Rückmeldungen von Firmen, dass dieses Netzwerk in irgendeiner Form hilft, dass du Leute kennenlernst, weil du einfach mehr Kontakt zu mehr Leuten hast? Oder vielleicht auch, du hast mal einen Namen gelesen, du kennst das, der sich in Java ganz gut auskennt, weil der, also in Google ist es ja glaube ich auch wirklich so in der, ich würde sagen Hierarchie, aber da gibt es ja Leute, die sich sehr gut in einer Sprache auskennen. Das sind dann offiziell diese Leute, die eingebunden werden müssen, teilweise sogar in Code Reviews, weil das die Java Profis sind. Wenn ich Java programmiere, muss ich den einbinden. Also die haben das ja irgendwie auch in dieser Struktur vorgesehen, aber auch in anderen Firmen, dass man einfach Kontakte bekommt. Gibt es da in irgendeiner Form. Wissenschaftlich wird wahrscheinlich schwierig sein, da Infos zu bekommen, aber wenigstens irgendwie Rückmeldungen oder dass in Firmen das funktioniert."
+    },
+    {
+      "end": 2519340,
+      "speaker": "C",
+      "start": 2446060,
+      "text": "Dafür könnten wir sogar oder liefern wir sogar den Nachweis, zum Beispiel bei Spotify. Spotify, auch hier, ich mache ein Herz mit meinen Händen, Vielen, vielen Dank. Die haben sehr viel ermöglicht, was bei anderen Firmen nicht möglich wäre und auch immer erlauben oder erlaubt haben, dass da eben Spotify oder ganz oft erlaubt haben, dass da Spotify steht und jeder ein Verständnis dafür hat, woraus aus welchem Kontext das Ganze passiert ist. Und tatsächlich ist es so, dass du hast ja normalerweise eine Organisationsstruktur, die irgendwie an ein Organigramm gekoppelt ist. Wenn das aber über Teamgrenzen hinweg passiert, dann muss es ja eine gewisse Awareness geben, dass dieses andere Team existiert, Punkt eins. Und zweitens, dass es irgendwie in Probleme führt oder führen könnte und dass sie am besten einbezogen werden. Das können wir tatsächlich nachweisen über diese Netzwerke, dass die viel größer sind als die Teams. Und wir können auch nachweisen, dass sie wirklich über Teamgrenzen hinweg passieren. Das können wir tatsächlich nachweisen über diese Metadatenanalyse, also über das Netzwerk, das sich da spannt. Auch hier wieder, du hast natürlich vollkommen recht, es ist sehr schwierig, das wissenschaftlich auszuwerten. Die Frage ist natürlich auch, woher wissen die das? Die wissen es ja nicht aus Code Review oder vielleicht wissen sie es, können wir nicht sagen."
+    },
+    {
+      "end": 2564580,
+      "speaker": "A",
+      "start": 2519900,
+      "text": "Jetzt ist es ja so, dass ein Code Review in einem Firmenkontext natürlich auch anderen Kriterien unterliegt. Deadlines, Produktdruck, finanzielle Interessen, Time to Market und all das ist im Open Source Umfeld anders. Wenn wir vom ganz klassischen Open Source Entwickler ausgehen, dann macht diese Person was in ihrer Freizeit. Kommst du heute nicht, kommst du morgen und man wird in der Regel nicht bezahlt. Jetzt frage ich mich natürlich, gibt es einen Unterschied in der Ausführung in der Praxis, wie Code Reviews gemacht werden? Mal ganz plakativ, gibt es mehr Nitpicking im Open Source als im geschlossenen Kontext oder welche Praxis oder Praktiken lassen sich einfach übertragen und welche vielleicht nicht? Was hast du da in den Daten gesehen?"
+    },
+    {
+      "end": 2809720,
+      "speaker": "C",
+      "start": 2564580,
+      "text": "Auch hier wieder kommen wir zu einem Definitionsproblem. Open Source definiert sich ja nicht über eine Kultur und auch nicht mal über die Bezahlung. Es gibt ja Projekte, also ich weiß natürlich auch welche Projekte Andi anspielt, die von nicht bezahlten Entwicklern betrieben werden und zentraler Dreh und Angelpunkt unserer modernen Infrastruktur sind. Trotzdem gibt es natürlich auch Open Source Projekte, die sehr wohl von bezahlten Entwicklern betrieben wird. Also wir kennen sie alle, Android als Beispiel, React, das ist ganz stark von Facebook Entwicklern getrieben oder von Google Entwicklern. Visual Studio Code ganz stark von Microsoft Entwicklern getrieben. Die werden sehr wohl dafür bezahlt. Der Unterschied zwischen Closed Source und Open Source ist tatsächlich jetzt rein von der Definition her erstmal nur eine Frage der Lizenzierung. Ist es eine Open Source Lizenz oder nicht? Darf ich also den Code nehmen und verändern und unter bestimmten Bedingungen wieder weiter verbreiten? Das ist der Unterschied zwischen Closed Source und Open Source. Wenn ich diese Lizenzierung nicht habe, kann Google seinen Suchalgorithmus auf GitHub stellen. Ich darf ihn nicht verwenden, weil ich keine Nutzungsrechte habe und weil mir keine Lizenz diese Nutzungsrechte einräumt, Soweit so gut. Damit einhergeht aber logischerweise, dass ich, wenn ich möchte, dass eben möglichst viele Leute meinen Code verwenden, ich eine relativ offene Kultur pflegen muss und nicht irgendwas entscheiden kann mit fünf Leuten und dann die gesamte Entwickler Community vergraule damit, weil dann passiert ein Fork und das Projekt geht seine eigenen Wege. Deswegen muss ich möglichst transparent kommunizieren. Deswegen muss ich natürlich auch das Code Review entsprechend gestalten. Und ich glaube zum Beispiel, das wäre zum Beispiel eine Praxis, die kann sich jede Firma angucken, dass die Kommunikation asynchron funktioniert. Ich will niemanden ausschließen. Das macht auch Sinn im Firmenkontext. Dass sie asynchron funktioniert, ist spätestens seit Corona gelernt, aber eigentlich schon vorher. Wir haben global verteilte Entwicklerteams, die einen sitzen in England, in Deutschland, in Polen, in Indien und in Amerika. Es wird keinen. Also es ist Zeit, um Asynchronität zu leben. Das ist es einfach. Vor allem, weil die Tools inzwischen so convenient sind. Auch dem Einhergehen ist natürlich dann die Transparenz sehr, sehr wichtig. Auch die Tatsache, dass im Zweifel mehr Leute mehr Augen, das mehr Augenprinzip einfach mehr Fehler sehen, ist auch sicherlich nicht falsch. Ich glaube tatsächlich, dass es einen entscheidenden Unterschied gibt zwischen Open Source und Closed Source, das auch für Code Review wichtig ist. Und zwar ist es ein bisschen das Verständnis für Verantwortlichkeit in einem. Du hast es gerade schon angedeutet, Andy, in Open Source kriegst du für Go Garrett zum Beispiel, unserem deinem SDK. Für Garrett kriegst du vielleicht von einem Michael Dorner einen Put Request, der nachher nie wieder irgendwas zu deinem Projekt contributed hat. Und das ist in Firmen anders. Normalerweise habe ich, also irgendwo habe ich einen gemeinsamen Chef von der Firma. Es gibt einen, der mir am Ende eine auf den Deckel gibt, wenn ich mich an gewisse Konventionen nicht halte, wenn ich irgendwas nicht korrekt mache. Es gibt eine Verantwortung und Verantwortungsbewusstsein. In Open Source gibt es keine Garantien. Jede Open Source Lizenz schließt irgendwelche Gewährleistungen aus. Und genauso ist es bei den Codebeiträgen. Die nimmst du an oder nimmst du nicht an. Aber wenn du sie annimmst, dann musst du im Zweifel dafür geradestehen im Sinne, du musst die Verantwortung im Sinne von einer Weiterentwicklung übernehmen. Also im Zweifel bist du der neue Eigentümer in Anführungsstrichen, nicht rechtlich, aber der Verantwortliche für den Code. Und wenn du den Code nicht verstanden hast, dann hilft dir das nichts. Also zwei einmal die Governance Struktur in Open Source ist einfach anders. Es gibt keinen gemeinsamen Chef, deswegen ist dieser Vergleich nicht ganz ideal. Oder die Transferability, dass man das einfach übertragen kann, ist nicht so ganz einfach. Deswegen ist in Open Source vielleicht auch die Asynchronität und die Transparenz deutlich klarer als in Closed Source Projekten, weil da gibt es eben den gemeinsamen Chef und man weiß, dass der Kollege morgen auch wieder zur Arbeit erscheinen wird, weil er seinen nächsten Gehaltsscheck einlösen möchte."
+    },
+    {
+      "end": 2832520,
+      "speaker": "A",
+      "start": 2809800,
+      "text": "Also ich meine, solche Pull Requests, die von dir gemacht werden, du behebst einen Fehler in einem Open Source Projekt und kontrolliert danach nie wieder. Ist ja ein reales Problem in der Maintainership bei Open Source. Meine Frage ist aber, führt dies dann auch gleichmäßig zu strikteren Code Reviews, weil du ja die Maintenance Burden, nenne ich es mal, ja, transferierst."
+    },
+    {
+      "end": 2956870,
+      "speaker": "C",
+      "start": 2832840,
+      "text": "Ja, glaube ich tatsächlich sehr stark. Ich glaube tatsächlich, Leute sind große Fans von Checklisten und so gibt es auch Code Review Checklisten und ich bin kein großer Freund davon. Ich würde tatsächlich, weil wenn es eine Checkliste gibt, die man einfach abhackeln kann, dann könnte das ja eigentlich auch ein Tool vorher machen, wenn es so einfach wäre. Spannend sind die Sachen, die man nicht in der Checkbox abfrühstücken kann. Und tatsächlich glaube ich, dass Open Source genau aus dieser Burden heraus eine Stärke hat, nämlich im Zweifel musst du eben die Wartung übernehmen. Das bedeutet auch der Maintainer kann im Zweifel nicht den gemeinsamen Chef anrufen und Hey, der soll sich bitte um den Code kümmern, der war Mist oder der hat ein Problem für uns verursacht. Sondern das gibt es im Open Source nicht, sondern entweder du nimmst an oder nicht. Und das macht es insofern strikter, weil die Verantwortlichkeit eben wirklich übergeht. Es gibt keine geteilte Verantwortung, sondern die Verantwortung von diesem Code geht von mir an dich über. Und danach, Andy, musst dich entweder du selber drum kümmern oder musst jemanden finden, der sich darum kümmert, wenn da irgendein Problem auftaucht. Und das ist tatsächlich was, was ich mir jetzt auch wieder abseits von Code Review tatsächlich in der Softwareentwicklung mehr wünschen würde. Tatsächlich mehr Code Ownership heißt auf Englisch, wobei der Ownership Begriff tatsächlich vielleicht gar nicht so clever gewählt ist, weil es vielleicht auch eine rechtliche Verantwortung gibt. Aber so Accountability in diese Richtung wäre, fände ich eine starke Sache, wird aber dann oder würde dann eben durch Code Review forciert werden. Das ist das Spannende, was hier passiert, warum Code Review eben auch wieder Hier geht es gar nicht so um Bugs, sondern tatsächlich, Also bei uns geht es jetzt in der Diskussion geht es um Verständnis. Also du versuchst meinen Code zu verstehen, wenn du natürlich einen Bug dabei findest, noch besser. Aber eigentlich geht es erstmal um Verständnis. Das taucht, wenn wir uns jetzt angucken, Anzahl der gefundenen Bugs, taucht es in dieser Metrik gar nicht auf oder in der Kosten Nutzen Rechnung. Im Return on Investment würde es gar nicht auftauchen. Aber wir könnten über Code Review eine stärkere Code Ownership kultivieren, was eine schöne Sache wäre, weil genau das haben wir nämlich in Open Source."
+    },
+    {
+      "end": 2993580,
+      "speaker": "A",
+      "start": 2957190,
+      "text": "Verständnis bei Code Reviews ist ja auch ein schwieriges Feld. Denn meine Erfahrung ist, wenn der Wolfgang mir eine Pull Request schickt oder Merge Request, den ich reviewen soll, dann muss ich mich zumindest immer erneut daran erinnern, okay, ich muss jetzt nicht nur die geänderten Zeilen reviewen, ob das logisch Sinn macht, sondern ich muss eigentlich auch reviewen, was nicht im Code Review selbst sichtbar ist. Und zwar die Antwort auf die Den Code, den ich jetzt hier bekomme, ist das überhaupt die richtige Stelle, wo der Code eingefügt werden sollte oder erzeugt das ein architekturelles Problem?"
+    },
+    {
+      "end": 3005810,
+      "speaker": "B",
+      "start": 2994380,
+      "text": "Ist es eigentlich überhaupt die richtige Lösung? Ist ja die Grundsatzfrage Kann ja auch sein, dass anstatt Codezeilen hinzuzufügen, es wäre viel besser, wenn man vier weglöschen würde an anderer Stelle. Das wäre die bessere Lösung."
+    },
+    {
+      "end": 3054630,
+      "speaker": "A",
+      "start": 3006130,
+      "text": "Genau. Genau das meine ich so nach dem Motto. Meiner Erfahrung nach. Viele Leute stürzen sich nur auf die geänderten Zeilen, machen oft sogar einen syntaktischen Check, was heutzutage eigentlich für fast jede Sprache irgendwie Static Analyzer machen sollte. Oder du machst in deinem Testzyklus einfach mal, du kompilierst das und dann hast du ja eigentlich schon in der Regel den syntaktischen Check durch. Und ich habe das Gefühl, das ist bei Open Source strenger. Das wird öfter gemacht, besonders weil man Ich habe diese Änderung und das ist jetzt das zukünftige Problem der Maintainer, wohingegen in der Firma du natürlich effektiv dafür bezahlt wirst und in der Regel auch ein Team hast, die eine Software maintained. Im perfekten Open Source Projekt hast du auch ein Team. Realität sieht anders aus."
+    },
+    {
+      "end": 3161040,
+      "speaker": "C",
+      "start": 3054710,
+      "text": "Ja, also dem kann ich nur zustimmen. Im Zweifel ist es auch wieder so, dass wenn das zu architekturellen Wildwuchs führt, diese Änderung, und eigentlich wo komplett anders rein sollte. Ja, im Zweifel muss ich halt das Team anschreiben und Pass auf, ihr müsst jetzt wieder ausbauen. Und wenn das Team Nein, machen wir nicht, Dann gehe ich zu dem gemeinsamen Chef und sage, das müssen die jetzt aber machen, weil sonst fliegt uns alles um die Ohren. Und dann sagt der gemeinsame so Team, ihr baut das jetzt wieder um. Die letzte Konsequenz fehlt. Und in Open Source, wie du schon gerade eben perfekt beschrieben hast, ist die Konsequenz bei dir und es gibt keine Handhabe dagegen. Und deswegen glaube ich, ich gebe dir recht, das Code ist strikter. Tatsächlich haben wir uns auch angeguckt, wie die Netzwerke Open Source und Closed Source gegeneinander verglichen aussehen. Und sehr spannend ist tatsächlich, dass die Open Source Netzwerke tatsächlich anders aussehen. Es bedeutet letztendlich vor allem, dass die Erkenntnisse, die wir in Open Source gewinnen und Open Source ist tatsächlich eine beliebte Möglichkeit, Daten zu crawlen, zu sammeln für Forscher, weil die sind öffentlich zugänglich. Das Problem ist aber, dass eben diese Erkenntnisse eben genau aus den Diskussionen, die wir gerade hatten, nicht unbedingt auf ein Closed Source Umfeld übertragbar sind und auch die Netzwerke sehen, wie gesagt, wir haben es uns angeguckt, sehen einfach unterschiedlich aus. Wir vermuten, dass es eben genau an diesem Punkt liegt, den du, Andi, gerade angesprochen hast, dass es nämlich irgendwie so zentrale Figuren gibt, die am Ende einfach die ultimative Accountability haben. Theoretisch gibt es ein Team, aber meistens ist es dann doch irgendwie ein Typ, der es dann am Ende, der dann die unangenehmen Sachen trotzdem machen muss. Das gibt es halt in Firmen so nicht zwangsläufig. Und deswegen sind die Übertragbarkeit, die wissenschaftlichen Erkenntnisse, die wir zum Teil haben, die sind halt auf Open Source Daten basierend."
+    },
+    {
+      "end": 3179280,
+      "speaker": "A",
+      "start": 3161840,
+      "text": "Inwieweit sieht das Open Source Netzwerk anders aus? Du hattest gesagt, im proprietären Umfeld geht das Netzwerk über Team hin größen hinaus, zumindest bei größeren Firmen hatten wir jetzt ja auf Basis deiner Forschung genannt. Wie sieht das bei Open Source Netzwerken aus? Gibt es da eine Erkenntnis, die du in den Daten gesehen hast, die man teilen kann?"
+    },
+    {
+      "end": 3276120,
+      "speaker": "C",
+      "start": 3179440,
+      "text": "Tatsächlich gibt es das. Ich versuche es jetzt möglichst einfach zusammenzufassen. Es ist tatsächlich, dass sich Informationen schneller, aber weniger weit verteilen im Netzwerk ist nicht unintuitiv, weil klar, es gibt viele Leute, die einmal einen Code Review erstellen, also ein Pull Request erstellen, einmal was beitragen, die sind einmal Teil des Netzwerks und dann waren sie nie wieder gesehen. Und tatsächlich, dieses Episodic Volunteering in Open Source ist tatsächlich einfach ein Kernbestandteil von Open Source. Ich habe das Problem behoben, das mich daran hindert, Go Garrett weiterzuverwenden und damit ist die Sache für mich auch erledigt. Das ist also eine plausible Erklärung. Aber tatsächlich muss man aufpassen, auch hier wieder, wir haben uns nicht angeguckt, wer sind denn die Leute, die zentral an zentraler Stelle sind? Hoffentlich komme ich da irgendwie in der nächsten Zeit dazu, mir das genauer anzugucken. Wer sind denn die Knoten und sind die Knoten auch zum Beispiel überlastet? Das Thema hatten wir bisher noch nicht. Eigentlich haben wir es schon, du hast es schon angesprochen, dass es irgendwie so eine gewisse Überlastung von Open Source Maintainer gibt. Das liegt daran, dass sie viel reviewen müssen und viel überblicken müssen und das gewissen Bottleneck führen kann. Und das will man natürlich zum Beispiel auch nicht in der Firma haben, dass es nur, weil es einer reviewen kann und der eine ist gerade krank im Urlaub oder überlastet, die gesamte Pipeline stillsteht. Will man natürlich auch nicht. In Open Source ist es akzeptabel, weil einfach kein Geld fließt. Da gibt es keine Ansprüche in dem Sinne, auch wenn das vielleicht manche Leute gerne hätten, dass es da eine gewisse Gewährleistung gibt."
+    },
+    {
+      "end": 3287680,
+      "speaker": "B",
+      "start": 3276440,
+      "text": "Aber gibt es so Hubs in Firmen, dass es so Leute gibt, die man immer gerne einlädt? Vielleicht auch nur, weil sie immer looks good to me sagen? Also findet man da irgendwie solche Hotspots in dem Graphen?"
+    },
+    {
+      "end": 3393440,
+      "speaker": "C",
+      "start": 3287680,
+      "text": "Ja, tut man. Punkt eins Tatsächlich haben wir uns bei der Auswahl, also wann bist du Teil des Netzwerks, möglichst viel Mühe gegeben, die Hürden relativ hoch zu stecken. Also ein Daumen hoch reicht nicht, um Teil des Netzwerks zu sein, weil wir sagen, das ist keine ausreichende aktive Teilnahme als Kommunikation, weil der Daumen hoch kann auch einfach, weiß ich nicht, random sein, versehentlich geklickt. Wenn ein Text geschrieben ist, ist es was anderes. Code Kommentar entweder auf Commit Level oder auf Pull Request Level. Das ist tatsächlich, das sind die Kernpraktiken. Wir haben aber auch Leute gefunden, ich darf es erzählen, weil wir es auch im Paper geschrieben haben. Bei Microsoft gibt es Leute, die haben eine irrsinnig hohe Code Review Last, möchte man sagen. Die reviewen alle ein, zwei Minuten reviewen die und zwar Tag und Nacht, jeden Tag im Jahr. Jetzt könnte man sagen, die sind entweder richtig, richtig gut, oder es sind Bots, Oder es sind Bots, genau. Tatsächlich ist das Problem, wir haben Bots explizit ausgeschlossen. Was wir natürlich nicht ausschließen können, sind menschliche Accounts, wo hinten dran Bot läuft. Die können wir natürlich nicht. Und wir haben uns tatsächlich diese Entwickler angeguckt und haben Ja, das sind Menschen, die arbeiten und auch das Code Review sieht sehr oft stichprobenartig gut aus. Ich bin mir aber relativ sicher, dass diese Code Review Last unmöglich zu stemmen ist und dass da im Hintergrund ein Skript läuft. Achtung, wir sprechen die Daten sind alle schon ein bisschen älter, um den Firmen die Angst zu nehmen, dass wir da irgendwie sensible Daten raus. Bei Microsoft war es alles vor der Pandemie und da gab es halt auch noch keine AI Lösungen, so wie sie heute gibt. Also da hat jemand sein Code Review automatisiert."
+    },
+    {
+      "end": 3449200,
+      "speaker": "A",
+      "start": 3393680,
+      "text": "Ist natürlich schon faszinierend, weil sprichst du ein ganz klassisches Problem aus der Praxis an. Leute nutzen ihre Private Accounts, erstellen mal schnell kurz eine API Key und bauen sich dann irgendwas und die ganze Firma fängt an dran fängt dann an, sich darauf zu verlassen, auf diesen automatisierten Prozess und irgendwann ist dieser Mitarbeiter halt nicht mehr in der Firma, somit wird der Account deaktiviert und somit bricht natürlich gefühlt alles. Klassisches Offboarding oder Team Wechsel Problem. Ich meine, du hast gerade schon KI angesprochen, da frage ich mich natürlich mit dem ganzen Kram, der da jetzt hochkommt oder schon längst da ist, Agenten und Co. Es gibt GitHub Copilot, es gibt Claude Code Reviews. Inwieweit können uns denn KI gestützte Systeme bei den Code Reviews da wirklich supporten? Also ist das wirklich was Sinnvolles oder eher eine Pest? Und der halluziniert da ziemlich viel durch."
+    },
+    {
+      "end": 3452400,
+      "speaker": "B",
+      "start": 3449680,
+      "text": "Und geht uns dann unser ganzes Netzwerk flöten?"
+    },
+    {
+      "end": 3459200,
+      "speaker": "A",
+      "start": 3452640,
+      "text": "Oh ja, spannend. Was für einen Effekt hat das eigentlich mit zu long term auf Wissensverteilung und Co."
+    },
+    {
+      "end": 3469020,
+      "speaker": "B",
+      "start": 3460240,
+      "text": "Ist immer schwierig, einen Wissenschaftler über die Zukunft zu befragen, aber steck mal deine wissenschaftlichen Aspekte weg und holt die Glaskugel hervor."
+    },
+    {
+      "end": 3765080,
+      "speaker": "C",
+      "start": 3469100,
+      "text": "Sehr gut, vielen Dank. Wolfgang Weiß auch wie der Hase läuft. Als kleiner Disclaimer vorneweg, Wolfgang hat es gerade schon gesagt, ich tue mich, also es ist immer sehr retrospektiv, wir blicken immer in die Vergangenheit und versuchen daraus schlau zu werden. In die Zukunft blicken ist immer haarig. Zweiter Disclaimer. Ich persönlich bin kein großer KI Freund und es hat verschiedene Gründe, vor allem moralische Gründe. Woher kommen denn die ganzen Daten, die KI da gefüttert hat? Und die kommen aus Stack Overflow und aus GitHub. Ich habe aber persönlich nie zugestimmt, dass OpenAI ein sehr, sehr teures Produkt mit meinen Daten bauen darf. Habe ich nicht ausgeschlossen, aber ich habe es auch nie wirklich erlaubt. Also die Datenherkunft ist aus ethischer Perspektive fragwürdig, aber auch aus Qualitätsperspektive nicht jeder meiner Kommentare bei stackwar FL oder jede Antwort. So, soweit zum Disclaimer. Tatsächlich machen wir aber auch eine Studie, die eben nicht mich fragt, was die Leute erwarten, sondern wir haben die Entwickler gefragt. Wir haben verschiedene Unternehmen gefragt, wie macht ihr codeview heute und wie werdet ihr glauben, dass ihr Code Review in fünf Jahren macht? Und da haben wir verschiedene Entwickler, Entwicklerinnen aus verschiedenen Firmen gefragt, die sehr, sehr unterschiedlich sind, um keinen Bias zu bekommen. Wir haben immer dieses Problem, wenn wir Microsoft fragen, kriegen wir eine Microsoft Antwort. Oder Leute, die sehr lange im Microsoft Kontext geantwortet haben, was die denken über die Zukunft, was vielleicht überhaupt nicht nicht zutrifft für eine Bank oder für eine Versicherung oder für einen Medizinprodukthersteller. Deswegen haben wir versucht, möglichst viele verschiedene Firmen zu finden und haben die Leute gefragt. Und daraus geht hervor, dass wirklich jeder dieser Umfrage gesagt hat, KI wird Teil des Code Reviews. Jetzt tue ich mich da sehr schwer. Das Problem ist nämlich, wir haben zwei Rollen im Code Review, einmal den Autor und einmal den Reviewer. Die zwei Rollen gibt es im Code Review und die knallen da aufeinander. Jetzt ist die Was wollen wir automatisieren mit KI? Mit modernen Lösungen könnten wir die Autoren automatisieren, das Authoring. Wir könnten aber das Reviewing auch automatisieren oder warum machen wir nicht beides? Und deswegen glaube ich tatsächlich, dass das Spannungsfeld von KI als allererstes im Code Review sich kristallisiert, weil wir haben ja schon diskutiert, es geht um Verantwortlichkeit, um Verantwortung übernehmen, Accountability im rechtlichen Sinne, aber auch im kulturellen, firmenkulturellen Perspektiv. Und da kracht es irgendwann. Also wenn ich einen Code habe, den ich nicht selbst geschrieben habe oder den kein Mensch geschrieben hat und ein Mensch reviewt den, wie will ich denn sichergehen, dass ich den Code verstanden habe? Und nur wenn ich verstanden habe, was da passiert, kann ich doch Verantwortung dafür übernehmen. Andersrum, wenn ich den Code schreibe und Code Review von einem Bot gemacht wird, wer hat dann die Verantwortung? Oder wer hat dann noch mal, wer war das zweite Paar von Augen dann die andere Diskussion, die wir schon längst hatten? Ja, wenn es doch einfach so blöde Checklisten sind, warum habe ich nicht schon längst irgendwelche deterministischen Bots, die das abfrühstücken, irgendwelche Linter, irgendwelche Formate? Da gibt es Tools, die das in allen Sprachen der Welt machen können. Warum muss ich da als Cody View nochmal drüber? Also es verschwendet die Liebesmüh über irgendwelche Kommas zu diskutieren oder Strichpunkt am Ende oder Klammer, ganz ehrlich. Also weiß ich nicht, wer dafür noch Zeit hat oder warum man das tun wollen würde. Deswegen bin ich da schwierig. Und Wolfgang, du hast es genau angesprochen. Was passiert denn, wenn wir auf einmal in ein menschliches Kommunikationsnetzwerk einen nichtmenschlichen Akteur einbinden? Es passiert einmal, dass das Bottleneck bleibt der Mensch, der wird es weiterhin sein. Ich tue mich sehr schwer, weil KI Modelle auch nicht deterministisch sind, da dann Antworten abzuleiten oder Insights abzuleiten, die mir dann helfen. Und tatsächlich gibt es erste Indikationen von Forschenden aus anderen Universitäten, die gesagt Das Coding wird noisy. Also es ist viel Lärm. Ich kriege auf einmal noch mehr Informationen, weil jetzt auch noch ein Chatbot mitredet. Und in der Studie, die wir da gerade durchführen, machen wir genau das. Wir diskutieren jetzt mal zu Ende, was passiert denn, wenn wir entweder den Reviewer oder den Autor als Akteur im Code Review automatisieren? Und was passiert denn eigentlich, wenn wir beides machen? Und hier sehe ich einfach, dass es erstens krachen wird und zweitens, dass es noch nicht zu Ende gedacht ist. Und ich glaube tatsächlich, dass der Einsatz von KI in Software Engineering an der Stelle als erstes seine Sporen verdienen muss im positiven Sinne oder eben fehlschlagen wird an zweiter Stelle. Wir bauen da unglaubliche Sachen, unglaublich Schulden auf, technische Schulden, weil wir Sachen nicht mehr verstehen. Und wie wollen wir Sachen ändern in der Zukunft, wenn wir Sachen nicht mehr verstehen? Alles ist nur noch Verständnis. Jeder, jeder trainierte Affe kann Code schreiben, bei aller Liebe. Was man nicht Was ein trainierter Affe nicht kann, ist Verständnis für das System, für die Domäne, für die kompletten Auswirkungen. Das funktioniert nicht."
+    },
+    {
+      "end": 3801500,
+      "speaker": "A",
+      "start": 3765080,
+      "text": "Und zum Abschluss des Themas, bevor wir dann zum letzten Thema kommen, möchte ich gerne zwei negative und eine positive Story zum Thema Reviews teilen. Auf der einen Seite sagtest du AI Reviews sind sehr, sehr noisy. Daniel Stenberg tourt gerade über die Konferenzen zum Thema AI Slop und auch in Pull Requests und Co. Und er bestätigt genau das Gleiche. Es ist sehr lengthy, also man holt sehr viel aus. Und das hat natürlich dann auf Maintainer Seite den Punkt, dass man sehr viel lesen muss und mehr Zeit geht."
+    },
+    {
+      "end": 3910130,
+      "speaker": "C",
+      "start": 3802220,
+      "text": "Eure Hörer kennen ihn bestimmt, der Entwickler von Curl. Was ihn tatsächlich beschäftigt, ist vor allem Security Probleme, die gemeldet werden, die tatsächlich aber halluziniert sind. Die wirken alle plausibel. Aber erst nach einem sehr langwierigen Review stellst du fest, es war komplett halluziniert und es ist möglich, dass da ein Fehler ist, aber es war halt keiner. Und das macht den fertig. Tatsächlich ist das eine der Beispiele, die wir in diesem Papier anführen, dass es eben in der Firma genauso passieren wird, dass du einfach als Mensch dann irgendwann überhäuft wirst und dann ist aber der Wert von Code komplett verloren gegangen. Noch viel schlimmer ist, dass du es nicht abschätzen kannst. Es ist ja nicht so, dass diese Reviews, die der Kollege da bekommt, die sind ja nicht als Bot signiert, sondern es erscheint da ein Mensch mit einem Account, aber er hat es komplett für die Code Generierung oder für den Bug Report, in dem Fall ist es Security Issue, eine AI hergenommen. Das heißt, es ist überhaupt nicht mehr ersichtlich, mit wem rede ich eigentlich. Und in Open Source ist es tatsächlich noch viel schlimmer. In der Firma gibt es zumindest die einheitliche E Mail Adresse und okay, das gehört wirklich zu dem Typen, der irgendwie im Active Directory existiert, sondern im Open Source ist komplett verdeckt. Und das glaube ich, macht auch was mit der menschlichen Kommunikation. Wenn du eben nicht mehr weißt, also ganz ehrlich, wenn ich mit chatgpt schreibe, dann bin ich wirklich nicht freundlich. Ich kann meine meinen Hass nur schwerlich unterdrücken, wenn ich mit diesem Ding schreibe. Das würde ich mit Menschen nie machen. Wenn ich jetzt aber nicht mehr weiß, was da Mensch was Maschine ist. Ich weiß nicht, ob ich dann pauschal höflich werde, um sicherzugehen, dass ich nicht versehentlich einen Menschen persönlich angreife oder ob ich allgemein einfach ein bisschen rauer wäre und vielleicht doch das eine oder andere Danke einfach weglasse, weil im Zweifel ist es doch nur ein Bot."
+    },
+    {
+      "end": 4035790,
+      "speaker": "A",
+      "start": 3910130,
+      "text": "Wer da mehr Infos haben möchte, kann gerne mal in die Show Notes habe ich einen Talk verlinkt. Das zweite negative Ich bin die Tage über ein Tweet gestolpert, wo jemand geschrieben hat, dass er Teil einer geschlossenen Gruppe mit Kommunikation zu GitHub ist, wo mehrere High Profile Open Source Projekte aktiv sind, also wirklich mit viel Aktivität und mit vielen Stars. Und er hat mal Insights gegeben, was denn da eigentlich gefordert wird, mehr oder weniger. Diese Gruppe ist dafür da für GitHub, um Produktfeedback zu kommen zu bekommen. Und er sagte, dass es eigentlich kontinuierlich Requests gibt, GitHub Copilot Code Reviews zu deaktivieren und dass es gar keine Indikatoren und Feature Request dafür gibt, mehr AI Code Reviews einzuführen, sondern genau das Gegenteil. Das ist der zweite negative Punkt, aber sind ja positiv gestimmt. Deswegen möchte ich jetzt mal etwas aus der Praxis erzählen. Die Tage haben wir in einem Code Review in der Firma Wir experimentieren so ein bisschen mit Code Reviews von Cloud Code und die AI hat beim Review einen essentiellen Bug gefunden, der von Menschen nicht gefunden wurde, der auch wirklich wahr ist. Ich will nicht sagen, es ist alles schlecht. Ich sag, das Ding hat auch was Sinnvolles gehabt. Das war es zum Thema AI und haben wir positiv geendet. Aber zum Abschluss des Podcasts gibt es noch eine Thematik, ein Funfact, ein Funfact, um ein bisschen die Komplexität von Code Reviews darzustellen. Und zwar ist das nämlich eine Frage, die ich gar nicht wusste, dass diese existiert. Und zwar beschäftigt Michael sich unter anderem auch mit der Versteuerung von geografisch verteilten Code Reviews bzw. Wie man diese Engineering Zeit und Co. Damit versteuert, glaube ich. Michael, erklär mir mal ganz kurz, was tust du da? Warum ist das eine Frage, die wir uns stellen sollten? Und was hat die geografische Verteilung damit zu tun?"
+    },
+    {
+      "end": 4323310,
+      "speaker": "C",
+      "start": 4038110,
+      "text": "Das ist ein Thema, ich weiß nicht warum, vielleicht bin ich als Kind so oft vom Wickeltisch gefallen, aber das ist irgendwie, was ich sehr faszinierend finde. Und zwar geht es um die Versteuerung von kollaborativer Softwareentwicklung. Ganz vereinfacht ausgedrückt, jede Firma, also liebe Hörerinnen und Hörer, wenn eure Firma mehr als in einem Land Entwicklungsstandorte hat, dann seid ihr betroffen. Das ist die erste Erkenntnis, das erste Take away, das ihr gleich mal mitnehmen könnt. Das zweite Problem ist, wie internationale Versteuerung funktioniert. Es geht um die Wertschöpfung, wo der Wert einer, in unserem Fall Software, eines Produkts geschöpft wurde. Als kleines Wir können mal annehmen, dass wir einen Entwicklungsstandort in Deutschland und Entwicklung Standort in Amerika haben. Und jetzt diskutieren die zwei Finanzbehörden miteinander, wo denn der Wert der Software entstanden ist. Weil wenn er nämlich in Amerika entstanden ist, sind alle Gewinne, die aus der Wertschöpfung passieren, in Amerika steuerpflichtig. Wenn sie in Deutschland entstanden sind, sind sie in Deutschland steuerpflichtig und kommen dem Finanzamt in Deutschland zugute oder dem IRS in Amerika. Und jetzt könnt ihr euch natürlich vorstellen, dass das schwierig ist zu argumentieren für eine Firma, weil wir wissen alle, Software ist inkrementell, ist sehr kollaborativ. Also es ist nicht mehr so einfach auseinander zu klamüsern, wer hat den Wert geschaffen? Also was ist der Wert einer CI Pipeline? Wie viel Wert hat eine CI Pipeline am Endprodukt wo der Kunde, weiß ich nicht, fünfzig Euro im Monat dafür zahlt. Was ist mit mit der Login Funktionalität von Trivago? Der Wert geht wahrscheinlich gegen null, weil jedes Tooling braucht eine Authentifizierung. Also es ist nicht differenzierend, aber du brauchst es absolut essentiell, damit du das Ding betreiben kannst. Und genau in diesem Spannungsfeld hatten wir eine schöne Studie konzipiert und geschrieben, wo es darum geht, uns einmal dieses Problem anzunehmen. Und dann haben wir uns angefangen Ist das Problem denn überhaupt real? Und da haben wir uns angeguckt eben die Code Reviews, weil die Code Reviews sind ein sehr guter Indikator, wo eben kollaboriert wird. Und wir wissen ja, dass es über Teamgrenzen hinweg geht und auch über Unternehmensgrenzen, Unternehmensgrenzen, mein Tochterunternehmen innerhalb eines großen Unternehmens. Und wir hatten wieder einen sehr netten Industriepartner, der uns ermöglicht hat, eben diese Analysen zu fahren. Wir haben festgestellt, dass über die Jahre kontinuierlich gewachsen ist. Am Ende waren es zwischen zwanzig und fünf und zwanzig Prozent aller Code Reviews, die über Ländergrenzen hinweg passiert sind. Also ein Indikator, dass hier auch nicht nur Information oder Wissen ausgetauscht worden ist, sondern einfach auch IP. Und wenn es um IP geht, werden halt die Steuerbehörden sehr hellhörig. Und wir hatten das Papier war, glaube ich, schon akzeptiert, aber noch nicht veröffentlicht. Und der wunderbare Zufall war, in der Zeit wurde Microsoft für rund dreiig Milliarden Dollar verklagt. Und zwar genau wegen dem Problem, das wir damals in diesem Kontext beschrieben haben. Also die IRS, die amerikanische Steuerbehörde ist der Meinung, dass es geht konkret um Windows, dass Windows eben in Amerika steuerpflichtig ist und nicht in Irland, wie es Microsoft proklamiert. Und das ist der Kontext. Wer da mehr wissen will über diesen konkreten Rechtsstreit. Ich ich habe das Vergnügen mit zwei sehr, sehr viel intelligenteren Leuten als mit mir zusammen. Also ich habe nur mit mehr intelligenteren Leuten als mit mir zusammengearbeitet. Aber die zwei sind besonders spannend, weil sie aus dem Kontext der Verrechnungspreis der Versteuerung kommen. Da haben wir ein Papier zusammengeschrieben, das ist eben auch aus steuerlicher Steuerrechtsperspektive beleuchtet. Und der Rechtswahl ist tatsächlich sehr, sehr kompliziert. Und die Annahmen, die das IRS trifft, sind nicht ganz, also die sind nicht fundiert, sagen wir es mal so und entsprechen nicht der Praxis, wie wir Software verstehen. Und trotzdem hat Microsoft es verpasst darzulegen, warum es so ist. Und deswegen gibt es jetzt diesen Rechtsstreit. Und aus dem, warum es das Ganze gibt, ist tatsächlich Gewinnverschiebung. Also dass man zum Beispiel Windows nicht in Amerika versteuern möchte, weil dort relativ hohe Steuern fällig werden, während in Irland wir relativ dieste Steuern haben. Also es dann vielleicht trotzdem mehr Gewinn in Irland passiert als in Amerika. Das sehen die Steuerbehörden natürlich sehr, sehr ungern und regeln da sehr, sehr empfindlich. Kleine Anekdote meinerseits. Das Spannende aus Forscherperspektive ist, mit dem Thema Code Review. An sich habe ich mit vielen tollen Leuten, die mir auch zugehört haben und die verstanden haben, warum wir das erforschen wollen, gesprochen. Auf C Level habe ich aber nie gesprochen. Das Schöne ist, bei Versteuerungsthematiken oder Problematiken in dem Fall hört C Level zu."
+    },
+    {
+      "end": 4323540,
+      "speaker": "A",
+      "start": 4323310,
+      "text": "Warum?"
+    },
+    {
+      "end": 4349970,
+      "speaker": "C",
+      "start": 4324170,
+      "text": "Weil es einfach sehr viele Jurisdictions, Rechtsräume gibt, die eben im Falle eines Verstoß gegen das Steuerrecht nicht irgendjemanden, sondern den Chef, den CEO in den Knast packen. Und deswegen hatte ich die Gelegenheit, mit Leuten zu sprechen, die vielleicht so mit mir, dem kleinen Forscher, nicht gesprochen hätten. Deswegen, das ist die Geschichte dazu, zu diesem Versteuerungsthema."
+    },
+    {
+      "end": 4378390,
+      "speaker": "A",
+      "start": 4350520,
+      "text": "Ich finde es schon faszinierend, dass wir alle anscheinend gar nicht wirklich verstanden haben, was Code Reviews machen oder was Best Practices sind oder wie man wirklich Code Reviews macht als Ingenieursdisziplin. Allein die Antwort darauf ist ja schon super komplex. Und jetzt kommst du noch mal mit einem ganz anderen Problem um die Ecke, mit dem, was wir alle lieben, nämlich Steuern. Ich kenne bisher keine Person, die Geil, die Erzählsteuererklärung mache ich sofort."
+    },
+    {
+      "end": 4379510,
+      "speaker": "C",
+      "start": 4378390,
+      "text": "Jetzt kennst du eine."
+    },
+    {
+      "end": 4381910,
+      "speaker": "A",
+      "start": 4380470,
+      "text": "Michael, ich danke dir."
+    },
+    {
+      "end": 4395110,
+      "speaker": "C",
+      "start": 4384150,
+      "text": "Ganz kurz, kurz noch. Aber das heißt jetzt nicht, dass man kein Code Reviews mehr über Ländergrenzen machen soll. Nicht, dass da jetzt jemand auf dumme Ideen kommt. Das wäre nämlich die falsche Logik daraus. Man wird es nicht verhindern können."
+    },
+    {
+      "end": 4409710,
+      "speaker": "A",
+      "start": 4395350,
+      "text": "Ich sehe das eher so, Das ist entweder ein Problem vom Zukunfts Andi oder von irgendjemandem ganz weit über mir, aber nicht von Von daher. Ich werde bezahlt in der Hinsicht, um Code zu erstellen und auch fehlerhaften Code zu reviewen."
+    },
+    {
+      "end": 4414270,
+      "speaker": "B",
+      "start": 4409950,
+      "text": "Als wenn du mal Code erstellen würdest als Manager runter vom Gas."
+    },
+    {
+      "end": 4460020,
+      "speaker": "A",
+      "start": 4414590,
+      "text": "Michael vielen lieben Dank für die letzte Stunde. Was ich besonders schön fand, das zeichnet diesen Podcast ja auch aus, dass wir immer sagen, die Technik ist zwar ein schwieriges Problem, aber in der Regel ein gelöstes Problem. Die wahre Herausforderung sind die Menschen drumherum. Und wenn du mit der Aussage kommst, Code Reviews sind ein Kommunikationsnetzwerk, dann triffst du natürlich ganz genau dieses Attribut, dass die Menschen im Vordergrund stehen. Das hat mir sehr viel Spaß gemacht, dir zuzuhören, während du über deine Forschung gesprochen hast. Alle Links findet man natürlich wie immer in den Shownotes. Da findet ihr die Webseite von Michael, aber auch die Veröffentlichung von Michael. Und ich habe mal die Doktorarbeit von Michael auch ausgegraben, wo er darlegt, warum Code Reviews denn ein Kommunikations sind."
+    },
+    {
+      "end": 4462620,
+      "speaker": "B",
+      "start": 4460740,
+      "text": "Jetzt werden sie hunderte Leute lesen."
+    },
+    {
+      "end": 4464140,
+      "speaker": "C",
+      "start": 4462620,
+      "text": "Jetzt hast du gesagt, es hat gar."
+    },
+    {
+      "end": 4466180,
+      "speaker": "B",
+      "start": 4464140,
+      "text": "Niemand gelesen, jetzt kommen hunderte Leute."
+    },
+    {
+      "end": 4505740,
+      "speaker": "C",
+      "start": 4466260,
+      "text": "Ja, aber dann gebe ich noch ein paar Empfehlungen. Also ich empfehle mindestens einen guten Rotwein, eher härtere Sachen beim Lesen. Es geht tatsächlich auch um sehr philosophische Fragen, also Erkenntnistheorie. Wann wissen wir eigentlich was? Wann können wir eigentlich annehmen, dass wir jetzt aus einer Erkenntnis heraus, weil wir bei fünf Firmen oder sowas irgendwas herausgefunden haben, können wir dann wirklich daraus schließen, dass wir jetzt mehr über Code Review wissen als vorher? Also ist eher für guter Rotwein abends plus härtere Sachen gerne dann gegen Ende. Wenn es um die philosophische Ausrichtung von Software Engineering geht, weiß ich nicht, ob man sich das noch antun möchte, aber ich freue mich natürlich über jeden Leser oder einfach über Feedback."
+    },
+    {
+      "end": 4507980,
+      "speaker": "B",
+      "start": 4505740,
+      "text": "Um Gottes willen, jetzt hast du mich auch noch motiviert."
+    },
+    {
+      "end": 4517970,
+      "speaker": "A",
+      "start": 4509500,
+      "text": "Wenn es um etwas Härteres geht, empfehle ich natürlich vom Dorf sowas wie Korn Fanta oder Korn mit Ahoi Brause, aber."
+    },
+    {
+      "end": 4522650,
+      "speaker": "B",
+      "start": 4517970,
+      "text": "Bitte nicht den härtere Informationen, nicht härteren Alkohol. Du hast das falsch verstanden, Andi."
+    },
+    {
+      "end": 4524290,
+      "speaker": "C",
+      "start": 4522650,
+      "text": "Nee, nee, Andi hat es schon richtig verstanden."
+    },
+    {
+      "end": 4536530,
+      "speaker": "A",
+      "start": 4525170,
+      "text": "Das sind ja die Akademiker, die denken zu kompliziert. Ich bin ja hier der Studienabbrecher, wie dein Professor ist, sagte Wolfgang, der nur mit dem Bachelor, Deswegen denke ich eher was dramatisch. Michael vielen lieben Dank für diese Stunde."
+    },
+    {
+      "end": 4560460,
+      "speaker": "B",
+      "start": 4536770,
+      "text": "So, Andy, Moment, Moment, bevor wir da jetzt in den Abschluss gehen, lass mal Michael noch vielleicht sein ganzes Wissen teilen. Also Michael, du hast jetzt Jahre verbracht in diesem ganzen Themenbereich. Was sind Denn deine abschließenden Erkenntnisse bzw. Was würdest du jetzt Softwareentwickler in den Teams da draußen mitgeben, was sie machen könnten oder aus deiner langen Forschung lernen könnten?"
+    },
+    {
+      "end": 4589800,
+      "speaker": "C",
+      "start": 4560460,
+      "text": "Das ist die schwierigste Frage, die Forscher überhaupt beantworten können. Aber tatsächlich, wenn es darum geht, um eine Sache, die man unmittelbar ausprobieren könnte als Firma, hört auf Code Review zu machen für vier Wochen einfach aufhören. Für die Mutigen, für die weniger Mutigen mal für eine Woche einfach aufhören, nicht mehr Code Review und nachher gucken, vermisse ich was und wenn ja, was vermisse ich? Ich glaube, das würde dem Verständnis von Code Review sehr weiterhelfen."
+    },
+    {
+      "end": 4598590,
+      "speaker": "B",
+      "start": 4589800,
+      "text": "Das ist, glaube ich, vielleicht sollte man das nicht gerade machen, wenn man an der Airbus Software oder so schreibt, dass dann irgendwelche Flugzeuge abstürzen, wenn die Qualität dann runtergeht."
+    },
+    {
+      "end": 4626660,
+      "speaker": "C",
+      "start": 4598750,
+      "text": "Aber dann habe ich tatsächlich vielleicht schon die Antwort gefunden. Manchmal ist es ja vorgeschrieben, hatten wir schon diskutiert, aber in vielen Fällen ist es nicht vorgeschrieben und trotzdem macht es Sinn. Und gerade da ist es besonders schwer zu argumentieren. Warum sollte ich Code Review machen, wenn es nicht von extern aus regulatorischer Perspektive erzwungen ist. Und das andere ist, ich glaube, das Einzige, was ich glaube ich aus meiner Forschung mitnehmen würde, ist, codeview ist ein Kommunikationsnetzwerk. Ich glaube, das ist, ich glaube nicht mehr und nicht weniger."
+    },
+    {
+      "end": 4634100,
+      "speaker": "B",
+      "start": 4626820,
+      "text": "Es ist ein schönes Learning zum Ende. Kommunikation geht über alles demnach auch Vielen lieben Dank, Michael, für deine Zeit."
+    },
+    {
+      "end": 4651370,
+      "speaker": "A",
+      "start": 4634260,
+      "text": "Falls du auch noch mal eine Meinung zu Code Reviews hast und wissen möchtest, wie dein Kommunikationsnetzwerk in deiner Firma aussieht, dann würde ich sagen, komm doch mal in unsere Discord Community und sprechen wir mal eine Runde darüber. Wir sind auf jeden Fall an deiner Meinung zu Code Reviews interessiert. Das war's von uns. Bis zum nächsten Mal. Bye bye."
+    },
+    {
+      "end": 4668010,
+      "speaker": "C",
+      "start": 4651850,
+      "text": "Vielen herzlichen Dank, Wolfgang Andi, ihr wart hervorragende Hosts. Ich habe mich sehr wohl gefühlt. Vielen Dank für die Zeit und ich freue mich natürlich über Feedback oder über Kommentare oder natürlich Forschungsideen, die ihr vielleicht mit dem Professor umsetzen wollt. Ciao."
+    },
+    {
+      "end": 4670330,
+      "speaker": "B",
+      "start": 4668090,
+      "text": "Dann sehen wir uns also auf Discord. Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
