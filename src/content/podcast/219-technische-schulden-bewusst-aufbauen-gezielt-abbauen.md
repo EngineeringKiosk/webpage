@@ -88,8 +88,8 @@ tags:
 - Tech Kultur
 - Software Engineering
 - Projektmanagement
-title: "#219 Technische Schulden: Bewusst aufbauen, gezielt abbauen"
-transcript_slim: ""
+title: '#219 Technische Schulden: Bewusst aufbauen, gezielt abbauen'
+transcript_slim: src/data/transcripts/219-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RWP7JZvPQUI
 
 ---
