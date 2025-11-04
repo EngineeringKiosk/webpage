@@ -13,6 +13,7 @@ talks:
     bio: 'Lukas is a frontend developer at AboutBits in South Tyrol, Italy. Specializing in React applications and design systems, he builds fast, efficient interfaces while keeping accessibility and user experience at the heart of his work. Lukas began experimenting with the web in the early era of HTML 4 and web scripting, later diving into PHP, Macromedia Flash, jQuery, Angular, and Vue — experience that now fuels his love for crafting modern, scalable interfaces.'
     linkedin: 'lukasvice'
     twitter: 'LukasVice'
+    slides: '2510-lukas-design-systems.pdf'
   - avatar: './images/speaker/2510-fabian.png'
     name: 'Fabian Braun'
     title: 'How Ethernet Is Shaping the Future of Real-Time Applications — and What We’ve Learned in Professional Audio'
