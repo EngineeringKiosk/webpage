@@ -112,10 +112,17 @@ speakerStats.nonbinaryPercentage = Math.round((speakerStats.nonbinary / speakerS
                                         </script>
                                     )}
                                     {(meetup.participants?.newParticipants && meetup.participants.newParticipants > 0 && meetup.participants.registered) && (
-            
-                                        <br><span class="text-sm text-gray-500">({meetup.participants.newParticipants}/{(meetup.participants.newParticipants / meetup.participants.registered * 100).toFixed(0)}% new)</span>
-                          
-                                    )}                                    
+                                        <br>
+                                        <span class="text-sm text-gray-500">
+                                            ({meetup.participants.newParticipants}/{(meetup.participants.newParticipants / meetup.participants.registered * 100).toFixed(0)}% new)
+                                        </span>
+                                    )}  
+                                    {(meetup.registrationClosed ) && (
+                                        <br>
+                                        <span class="text-sm text-gray-500">
+                                            Closed Registration
+                                        </span>
+                                    )}                                  
                                 </td>
                                 <td class="px-6 py-4 border-b text-center">
                                     {meetup.participants?.present?.total || "no data"}

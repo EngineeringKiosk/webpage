@@ -21,4 +21,14 @@ talks:
     linkedin: georg-strickner-658a9a253
 eventId: '3dk71c495gog2d76224ho6mjs1'
 registrationClosed: true
+participants:
+  registered: 65
+  present:
+    total: 51
+    male: 41
+    female: 10
+  newParticipants: 6
+speakers:
+  female: 0
+  male: 2
 ---
