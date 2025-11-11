@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/81d0d757-fac6-4d04-aded-c37e2f37cad4/engineering-kiosk-221-mobile-game-entwicklung-mit-fabi-fink-von-lotum
 apple_podcasts: https://podcasts.apple.com/us/podcast/221-mobile-game-entwicklung-mit-fabi-fink-von-lotum/id1603082924?i=1000736194340&uo=4
 audio: https://audio1.redcircle.com/episodes/acb0f06e-7b24-4c35-86fe-4f75dbec099c/stream.mp3
 chapter:
