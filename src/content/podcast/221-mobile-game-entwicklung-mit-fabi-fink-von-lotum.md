@@ -89,11 +89,18 @@ length_second: 4759
 pubDate: 2025-11-11 02:00:57+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
+- name: Fabi Fink
+  transcriptLetter: B
 - name: Wolfi Gassler
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/24BlO3f1EIremlLf7FkA84
-tags: []
-title: '#221 Mobile Game Entwicklung mit Fabi Fink von Lotum'
-transcript_slim: ''
+tags:
+- Backend
+- Software Engineering
+- Interview
+title: "#221 Mobile Game Entwicklung mit Fabi Fink von Lotum"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=sAN2jfEd5hM
 
 ---

@@ -1,0 +1,758 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4700,
+  "audio_url": "https://cloud.inlupus.at/s/oxcK6PobNY4pRjJ/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9588291,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "ced3004d-f6f6-40e8-b723-4dda36eed619",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 104210,
+      "speaker": "A",
+      "start": 3280,
+      "text": "Tag beim Engineering Kiosk. Der Wolfi sagt, die Spieleentwicklung ist die Königsklasse der Softwareentwicklung aufgrund ihrer Vielseitigkeit. Doch Spieleentwicklung ist nicht gleich Spieleentwicklung. Auf der einen Seite gibt es Massive Multiplayer Online und Triple A Spiele wie GTA sechs oder World of Warcraft. Am anderen Ende der Skala Spiele, die man für eine Stunde spielt und wieder ausmacht, sowas wie Flappy Bird. Dann gibts noch den Glaubenskrieg zwischen den Konsole, Personal Computer oder Mobile. Und das ist mein Stichwort für das heutige Thema. Es geht um die Entwicklung von Mobile Games. Dazu sprechen wir mit Fabi Fink von Lotum, einem Mobile Game Studio. Mit Fabi machen wir mal einen Rundumschlag zu dem Thema. Wir besprechen das Gameplay, Spielekategorien und Plattform Besonderheiten. Zum Was sind Mobile Games heutzutage eigentlich? Sind wir da limitiert auf native Apps und oder ist ein Game auf Netflix und Reddit auch Mobile Technologie und Architektur? Was steckt eigentlich unten drunter? Von Game Engines wie Unity über native Entwicklung bis hin zu klassischen JavaScript Frameworks wie Vue JS, Backend Multiplayer und State Management. Wie handelt man Real Time Interaktion zwischen Spielern, das möchte ich gerne mal wissen. Und aber auch Monetarisierung und Analytics. Welche kpis spielen überhaupt eine Rolle hier mal ein Im Gaming Markt alleine fällt fünfzig Prozent des Umsatzes auf Mobile ab. Der Rest wird zwischen PC und Konsole aufgeteilt. Es existieren verschiedene Hyper Casual, Casual, Midcore und Hardcore. Aber auch Spiele auf Reddit und Discord sind ein Ding. Snapchat hat es aber wieder eingestampft. In der Episode gibt es natürlich noch viel mehr. Die Episode hat eine hohe Informationsdichte, also konzentrieren und los geht's."
+    },
+    {
+      "end": 104690,
+      "speaker": "B",
+      "start": 104210,
+      "text": "Viel Spaß."
+    },
+    {
+      "end": 171030,
+      "speaker": "C",
+      "start": 107650,
+      "text": "Wenn wir über Spiele sprechen und Gaming sprechen, sehe ich ja da so zwei große Kategorien eigentlich. Also es gibt einmal diese Games, wo man sich am Abend hinsetzt, spielt. Also ich hab das schon lange nicht mehr gemacht, muss ich zugeben, Aber wo man fokussiert irgendwie in dem Spiel drin ist, an der Konsole, an dem PC und länger spielt damit. Das ist so die eine Kategorie. Und dann gibt es eigentlich so die andere Kategorie, Andi, die muss ich dir jetzt erklären, weil du kennst es wahrscheinlich nicht. Du fährst ja nur immer auf deinem Traktor, auf deinem quasi Bauernhof herum. Aber wenn du mal in öffentlichen Verkehrsmitteln unterwegs bist, dann siehst du die Leute ja immer in ihr Handy starren. Und das ist einerseits Instagram oder auf der anderen Seite Games, Mobile Games. Und genau über diese Mobile Games wollen wir heute mal sprechen und was eigentlich dahinter steckt. Und nachdem wir ja da eigentlich wenig Ahnung haben, also ich bin weder User noch Programmierer in dem Bereich, haben wir uns einen Spezialisten, ich würde fast sagen, angeln können aus diesem Bereich. Und wir sind sehr glücklich, dass der Fabi heute bei uns ist. Willkommen Fabi bei uns im Engineering Kiosk."
+    },
+    {
+      "end": 172870,
+      "speaker": "B",
+      "start": 171030,
+      "text": "Hi Wolfi. Hi Andi. Freut mich da zu sein."
+    },
+    {
+      "end": 196930,
+      "speaker": "A",
+      "start": 172870,
+      "text": "Wolfgang, du hast fast recht, ich würde sehr gerne mehr mit dem Traktor rumfahren, aber mir ist es folgendermaßen mit dem öffentlichen Nahverkehr. Ich komme vom Dorf, wir haben eine Buslinie, die fängt irgendwie morgens um sechs oder so an und wenn die Bürgersteige hochgeklappt werden, das ist im Winter dann um siebzehn uhr, wenn es dunkel wird, dann hört die Buslinie auch auf. Also das bedeutet, bei mir liegt es nicht daran, dass ich nicht Bus fahren möchte. Ich werde effektiv daran gehindert, da wir kaum eine Buslinie haben."
+    },
+    {
+      "end": 204130,
+      "speaker": "C",
+      "start": 197250,
+      "text": "Musst mal richtig wählen, aber ich will jetzt gar nicht politisch werden. Andi, fang mal an mit deiner Vorstellung, damit Fabi da ins richtige Licht gerückt wird."
+    },
+    {
+      "end": 233850,
+      "speaker": "A",
+      "start": 204690,
+      "text": "Traditionsmässig stelle ich die Gäste immer vor. Hallo Fabi, auch von mir bei der Recherche hat mir ein Grinsen ins Gesicht gezaubert, denn du hast einen Bachelor in Wirtschaftsinformatik. Endlich. Hier ist so ein Running Gag. Und zwar Leute, die einen Bachelor haben, sind laut Wolfgangs Doktorvater Studienabbrecher. Das ist die erste Baustelle und Wirtschaftsinformatiker haben hier in diesem Podcast auch immer einen schweren Stand, weil wir sind keine bwler oder Volksökonomen oder ähnliches. Wir sind aber anscheinend laut Wolfgang, finde."
+    },
+    {
+      "end": 235250,
+      "speaker": "C",
+      "start": 233850,
+      "text": "Ich schon eigentlich ist schon okay, kannst."
+    },
+    {
+      "end": 320660,
+      "speaker": "A",
+      "start": 235250,
+      "text": "Du schon bwler wie kaum Informatiker. Also wir sind so, wir sind so eine Spezies dazwischen. Deswegen hat es mich sehr gefreut, dass du ebenfalls ein Bachelor in Wirtschaftsinformatik gemacht hast. Und hoffen wir mal, dass das hier alles nicht zu Enterprise wird, denn du warst mal Solution Architekt bei der Deutschen Bank im Bereich Enterprise Mobile Apps, hat mich auch sehr zum Strahlen gebracht. Da bin ich mal gespannt, ob du die eine oder andere Story auspackst. Aber was machst du denn aktuell professionell? Du bist Game Lead bei Lotum. Lotum würde ich mal so beschreiben als Mobile Game Studio mit einem Fokus auf Social Casual und Puzzle Games. Das bedeutet, ihr macht keine Auftragsarbeiten, sondern ihr entwickelt eure eigenen Spiele. Genau, Game Lead ist so ein Titel, den habe ich zuvor noch nicht gehört, beziehungsweise ich glaube, wenn du drei Game Studios fragst, kriegst du vier Meinungen. Du hast mir das erklärt, als eine Produktmanager würde man das, glaube ich extern nennen. Das machst du, du arbeitest bei so seit circa acht Jahren, hast da als Softwareentwickler angefangen, Fullstack Entwickler und ihr seid auch relativ erfolgreich mit euren Spielen. Zwei tausend fünf und zwanzig habt ihr den Meilenstein von einer Milliarde Installationen über eure Spiele geknackt. Glückwunsch. Und jetzt kommt, das finde ich immer sehr interessant, circa acht hundert fünfzig Millionen Installationen davon fallen auf vier Spiele. Jetzt bin ich gleich mal auch gespannt, wie viel Spiele ihr insgesamt produziert habt, also wo der Longtail von ein hundert fünfzig Millionen Installationen so herkommt."
+    },
+    {
+      "end": 335860,
+      "speaker": "C",
+      "start": 320660,
+      "text": "Genau darum habe ich auch gesagt, wir haben dich geangelt, weil du scheinst ein großer Fisch in dem Fall zu sein. Das heißt, die Chance, wer auf diesem Gaming Trip ist, in Bußen und Bahnen und so weiter, die Chance ist wahrscheinlich hoch, dass jemand mal schon dein Spiel gespielt hat oder eure Spiele gespielt hat."
+    },
+    {
+      "end": 355770,
+      "speaker": "B",
+      "start": 336210,
+      "text": "Denke doch. Also vier Bilder in Wort, das ja zumindest das größte von unseren Franchises ist, da hört man das häufiger mal, Ah ja, das war doch das Game, das habe ich früher immer in der Uni, Bahn oder was auch immer für Use Cases ihr nehmt, das habe ich doch immer da gezockt. So, aber das ist die einzige Einschränkung. Vier Bilder in Wort ist das einzige Spiel, an dem ich weder als Entwickler noch als Game Lead gearbeitet habe."
+    },
+    {
+      "end": 360290,
+      "speaker": "A",
+      "start": 355770,
+      "text": "Ich hoffe, das hat jetzt jeder überhört. Natürlich spielt man in der Universität keine."
+    },
+    {
+      "end": 363410,
+      "speaker": "B",
+      "start": 360290,
+      "text": "Spiele, sondern nur wir Studienabbrecher."
+    },
+    {
+      "end": 400640,
+      "speaker": "A",
+      "start": 363570,
+      "text": "Nur wir Studienabbrecher, ist richtig. Und jetzt für Leute, die viel Podcast hören, kennen deine Stimme wahrscheinlich schon. Und zwar bist du ebenfalls sehr aktiv bei der Programmierbar, ebenfalls ein deutschsprachiger Podcast mit dem Fokus auf, ich sag mal, Softwareentwicklung und Web und AI und all sowas sehr ans Herz zu legen. Falls ihr es noch nicht kennt, in den Show Notes findet ihr auch den Link und ein Fun Fact. Ihr habt eine Kategorie, nennt sich Pick of the Day, wenn ich das richtig verstanden habe, bringt dann immer, wenn ihr einen Gast habt, jeder, ich sag mal so einen Tipp, den man im Internet gefunden hat, weiß ich nicht, so ein YAML Parser oder so ein YAML what the fuck Webseite oder sowas Und dir wird nachgesagt, du bist der einzige in der Runde, der den Pick of the Day wirklich ernst nimmt. Was ist daran wahr?"
+    },
+    {
+      "end": 424410,
+      "speaker": "B",
+      "start": 401040,
+      "text": "Das ist wahr, aber muss dazu sagen, wir haben es in einem Format, wir haben das Format der Deep Dives, wo wir wirklich Technologien uns nehmen und anderthalb Stunden probieren, die zu erklären, da tief rein zu diven. Und ich war schon lange nicht mehr in diesem Format. Das heißt, ich habe schon lange nicht mehr beweisen können, dass ich immer ein Pick of the Day dabei habe. Ich bin sehr aktiv aktuell in unseren News Formaten als auch in unseren CTO Specials. Aber ich glaube am Freitag bin ich heute bei einem Deep Dive dabei. Das heißt, dem muss ich gerecht werden und ein Pick of the Day, vielleicht."
+    },
+    {
+      "end": 433770,
+      "speaker": "C",
+      "start": 424410,
+      "text": "Sollten wir ein Big of the Day mit zu uns in die Episode nehmen. Andi jetzt so spontan würde sich anbieten. Fabi, du hast noch Zeit bis zum Ende der Episode drüber nachzudenken."
+    },
+    {
+      "end": 435970,
+      "speaker": "B",
+      "start": 433770,
+      "text": "Ich find was ich finde was Wolfgang."
+    },
+    {
+      "end": 439610,
+      "speaker": "A",
+      "start": 435970,
+      "text": "Das gilt aber auch für uns. Also das bedeutet, du musst auch einen rauskramen und ich ebenfalls."
+    },
+    {
+      "end": 441490,
+      "speaker": "C",
+      "start": 439610,
+      "text": "Danke das Messer im Rücken, Andi."
+    },
+    {
+      "end": 445290,
+      "speaker": "A",
+      "start": 441490,
+      "text": "Ja, wir können das jetzt hier nicht einfach so auslagern. So, deswegen Pick of the Day am."
+    },
+    {
+      "end": 446810,
+      "speaker": "B",
+      "start": 445290,
+      "text": "Ende der Episode machen wir."
+    },
+    {
+      "end": 542680,
+      "speaker": "C",
+      "start": 506890,
+      "text": "Gut, aber starten wir mal in dieses ganze Umfeld hinein. Wir hatten schon mal in Episode ein hundert acht und achtzig über Spieleentwicklung gesprochen mit Domi Bacher, wo es aber mehr um diese, ich würde fast sagen, klassische Spieleentwicklung gegangen ist. Also diese langwierigen Strategiespiele, wo man eben am Abend vielleicht stundenlang dran sitzt, wobei es wahrscheinlich auch einige gibt, die stundenlang am Handy sitzen. Könnte mir auch gut vorstellen. Aber kannst du uns mal aufklären, wo liegt denn so der große Unterschied zwischen diesen zwei Kategorien, also dieser klassischen Gaming Welt, die es schon seit Jahrzehnten gibt und dem Mobile Gaming?"
+    },
+    {
+      "end": 626660,
+      "speaker": "B",
+      "start": 542680,
+      "text": "Ja, vielleicht können wir so ein paar Kategorien mal aufmachen. Also ich glaube, es sind gar nicht nur zwei Kategorien. Im Endeffekt kann man Games in verschiedene Kategorien einteilen. Die eine Kategorie, die wir erst mal nehmen können, ist, auf welcher Plattform läuft ein Game? Das ist ja gerade schon gemeint. Und da haben wir Mobile, PC und Konsole. Kannst du so ungefähr in drei Bereiche einteilen. Und ganz interessant ist, wenn man sich vorher auch nicht damit beschäftigt hat, Ich weiß nicht, was ihr jetzt tippen würdet, was der größte Markt der drei Plattformen sozusagen ist. Wo steckt das meiste Geld drin? Ich kann es euch mal vorwegnehmen, es ist Mobile. Also Mobile macht die Hälfte des Umsatzes aus und den Rest teilen sich PC und Konsole. Also man kann erst mal sagen, es ist einfach ein Markt, in dem ist auf jeden Fall erstmal relativ viel Geld zu holen und das auch, das natürlich auch gleichzusetzen mit Usern, die es irgendwie spielen, dadurch, dass natürlich auch die Zeit, die man jetzt irgendwie reinsteckt, ein bisschen geringer ist. Und wenn man jetzt mal PC und Konsole schaut, da ist ja zum Großteil Monetarisierungsmodell, dass ich etwas ein Spiel kaufe oder dass ich eine Form von Subscription habe, wohingegen in Mobile die Monetarisierung eher in App Purchases und teilweise App basiert ist. Und wenn man dann sich das Ganze mal anschaut, das ist jetzt sozusagen auf Plattformebene gesehen, was gibt es für Kategorien? Dann kann man eher auf diese Art, nennen wir es mal Komplexität der Games gehen. Das war die andere Kategorie, auf die du angespielt hast. Und da sagt man, in dem einfachsten Fall gibt es die Kategorie des Hypercasuals und in dem extremsten Fall mit der höchsten Komplexität nennt man Hardcore. Die vier Bereiche sind im Grunde genommen Hyper, Casual, Casual, Midcore und Hardcore."
+    },
+    {
+      "end": 628060,
+      "speaker": "C",
+      "start": 626660,
+      "text": "Hast du da irgendwie Beispiele?"
+    },
+    {
+      "end": 770430,
+      "speaker": "B",
+      "start": 628140,
+      "text": "Genau, können wir gerne mal Beispiele dafür nehmen. Also viele der Mobile Games, über die, die man wahrscheinlich dann so meint, die man mal so nebenbei in der Bus und Bahn spielt, sind so im Hyper Casual und Casual Bereich. Hyper Casual ist glaube ich das. Da sagt man, es hat einen sehr einfachen Spiele Core Loop, der sehr repetitiv ist und keine besonders große Tiefe hat. Die haben meistens auch nicht die Games, die sonderlich lange Retention haben. Größte Beispiel wäre Flappy Bird, das was jeder kennt. So Flappy Bird ist das Beispiel für ein Hyper Casual Game, einen sehr einfachen Game Loop, der einfach immer wieder von vorne anfängt. Casual Bereich kann man dann im Endeffekt sagen, ist sozusagen die nächste Evolutionsstufe, wo es eben ein längeres Gameplay gibt. Meistens dann so der Bereich, in dem wir uns zum Beispiel mit Lotum bewegen, kann man sagen, ist im Casual Bereich. Typische Beispiele dafür ist dann die inhaltliche Kategorie zum Beispiel der Puzzle Games. Ich glaube, viele da draußen spielen zum Beispiel so etwas wie Match Three Games wo man sagt Scandi Crush oder heutzutage so was wie Royal Match als großer Vertreter davon und die einfach auf jeden Fall mehr Spieltiefe bieten. Da ist dann viel auch Live Ops ein Thema, also Events, die teilweise stattfinden, dass durchlevel verschiedene Progresse, das Spiel verändert sich durch neue Mechaniken, die eingeführt werden, aber es ist immer noch eher, deswegen sagt man so Casual spielen, das heißt nebenbei, ich spiele immer mal hier und da am Tag, einen gewissen Zeitraum am Tag, immer mal nebenbei das Ganze. Die nächsten Kategorien wären dann schon Midcore und Hardcore. Midcore gibt es auch noch einige Beispiele dafür im Mobile Bereich, Hardcore ist dann schon fast, also gibt es auf jeden Fall auch ein paar im Mobile Bereich, aber das dann schon sehr diese PC und Konsolen Kategorie. Midcore wäre zum Beispiel sowas wie Supercell, die Spielefirma, die Clash of Clans und Clash Royale zum Beispiel macht, also wo man wirklich sagt, da gibt's sagen wir mal, es kommt eine sehr große strategische Tiefe noch so ein bisschen mit rein, wo ich wirklich überlegen muss, beispielsweise ein Deckbuilder Game, wo ich mir Karten zusammenstelle wie bei Clash Royale und überlege, welche Karten werte ich auf so wie stelle ich mein Deck zusammen. Das ist dann so in diesem, in diesem Mitkorb Bereich, das kann man schon fast auch schon von Hardcore sprechen, das heißt, das sind sozusagen die Komplexitätsstufen und dann die andere wäre noch, wenn man sich auf Mobile schaut, wäre so die inhaltliche Kategorie und da sind so die größten drei sind, der größte Markt ist Strategy, dazu zählt so Clash of Clans, Clash Royale, dann ist RPG, wo auch PUBG zum Beispiel dazu zählt oder ähnliches, auch die zweitgrößte Kategorie. Als drittes kommt dann schon der Puzzle Markt, wo wir so unterwegs sind. Diese drei Kategorien, das ist zwar erster, zweiter, dritter Platz, aber sind vom Umsatzvolumen relativ ähnlich."
+    },
+    {
+      "end": 810340,
+      "speaker": "C",
+      "start": 770430,
+      "text": "So jetzt wenn dieses Hyper Casual klingt ja so danach, dass es sehr einfach ist in dem Sinne, aber es ist natürlich wahrscheinlich dann noch schwieriger den Game Loop in irgendeiner Form zu treffen, also dass der User den akzeptiert und dass es einfach durchstartet. Dafür könnte ich mir vorstellen, dass man irgendwie schneller in der Entwicklung ist, als wenn man jetzt irgendwie ein riesen Strategiespiel für die Konsole aufbläst, wo man irgendwie dann schon doch sehr viel haben muss von so einem Vertical Slice, um dann überhaupt zu testen, funktioniert der Loop, stimmt diese Annahme ist man schneller beim Game Development, dass man irgendwie mehr auf den Markt bringen kann, um schneller zu testen. Ist da irgendwo ein Loop, wo die Hook da ist und es dann funktioniert."
+    },
+    {
+      "end": 892250,
+      "speaker": "B",
+      "start": 810580,
+      "text": "Es sind ganz andere Arten zu entwickeln. Also wenn man den Extremfall auf Konsole PC sieht, redet man auch von Triple A Games, also auch diese Klassifizierung, die auch Länder eingeteilt werden. Da ist natürlich über Jahre hinweg wird er entwickelt mit großen Game Studios sozusagen und dann gibt es irgendwann den einen Release und dann kommt es raus Und da ist es würde ich auch sagen eher so ein bisschen von der Entwicklungsmethode Wasserfall artiger sowie entwickelt wird. Und wenn man jetzt wirklich das Beispiel nimmt Hyper Casual, da geht es natürlich darum, das eine Spiel ist relativ schnell rausgebracht, aber die Problematik ist das eine Spiel zu finden, was funktioniert. Das heißt, da geht es im Endeffekt wirklich, dass es, wenn man es mal ganz extrem sagt, Fließband Arbeit, also da müssen ganz viele Dinge ausprobiert werden, die werden immer direkt am Markt validiert, also da wird eins nach dem anderen ausprobiert und gerade im Hyper Casual Bereich, klar man kennt irgendwie direkt direkt die Großen. Wenn man sowas wie Flappy Bird ist natürlich, wenn man mal schaut, was war die Entwicklungszeit für Flappy Bir, was war der Erfolg davon, dann wird man sagen, lohnt sich ja total, das ist ja super wenig Aufwand im Vergleich dazu, wie viele User es erreicht, was es für einen Umsatz erreicht. Aber diesen Treffer zu landen, das ist die große Schwierigkeit. Das ist auch das, warum es glaube ich schwierig ist im Games Umfeld erfolgreich zu sein, weil es natürlich auch dafür ein gewisses Budget braucht, was User Acquisition angeht. Also du musst dir diese User natürlich erstmal einkaufen. Es ist nicht mehr so, dass es im App Store Place so viel über Viralität geht, sondern man muss ein gewisses Budget haben, um User da drauf zu bringen und man braucht einen langen Atem, bis man das gefunden hat."
+    },
+    {
+      "end": 897130,
+      "speaker": "A",
+      "start": 892570,
+      "text": "Wo würdest du GTA sechs einordnen? Hyper Casual, Casual, Midcore, Hardcore?"
+    },
+    {
+      "end": 920650,
+      "speaker": "B",
+      "start": 897770,
+      "text": "Also man muss dazu sagen, meine Expertise ist wirklich im Mobile Bereich und meine PC und Konsolenzeit ist sehr viele ist jetzt schon mehr als ein Jahrzehnt vorbei, seitdem ich das wirklich aktiv spiele, aber also GTA sechs wäre trotzdem wahrscheinlich würde man es irgendwo zwischen Mid und Hardcore irgendwie einreihen, aber trotzdem sagen es ein Triple A Game, was jetzt die Qualität des Games und des Umfangs, aber die strategische Tiefe ist auf jeden Fall nicht Hardcore."
+    },
+    {
+      "end": 929940,
+      "speaker": "C",
+      "start": 920650,
+      "text": "Aber ich glaube, wir haben das auch in Episode ein hundert acht und achtzig besprochen. Wenn man mal Werbung an den Bushaltestellen sieht zu einem Game, dann kann man davon ausgehen, dass AAA ist, oder?"
+    },
+    {
+      "end": 948110,
+      "speaker": "B",
+      "start": 929940,
+      "text": "Ja, also Werbung, Bushaltestellen, definitiv Werbung dafür im echten Leben. Aber die Werbung, die man Mobile Werbung sieht man auch auf Mobile Endgeräten, Aber auch da ist mittlerweile sehr sophisticated. Also wenn man sich mal anschaut, so die großen Player wie Royal Match und so, was da für Aufwand getrieben wird, um Werbung zu schalten, das ist, das ist eine andere Kategorie."
+    },
+    {
+      "end": 1005830,
+      "speaker": "A",
+      "start": 948510,
+      "text": "Ich habe gerade mal gegoogelt, anscheinend wird es auch eine Mobile App zu GTA sechs geben. Also dann ist es doch wieder in deinem Metier. Aber ich habe auch gerade, ich weiß nicht, ob ihr es verfolgt, aber im Ruhrpott im schönen Essen findet ja jährlich hier die Brettspielemesse statt. Und da habe ich vor kurzem gelernt, es gibt ebenfalls diese Art von Kategorien Einsteigerspiele und Hardcore Brettspiele, also mit gestiegener Komplexität und Regeln und so weiter. Das nennt man wohl auch Hardcore Brettspiele. Also anscheinend ist das gar nicht so weit entfernt. Aber wenn wir uns weiter auf Mobile Games spezialisieren, dann frage ich, ist Mobile gleich Mobile? Also reden wir von Mobile immer nur von einem Mobiltelefon und da rede ich in der Regel heutzutage von einem Smartphone und nicht von einem Dumpf und nicht dein Nokia drei tausend zwei hundert zehn, wo es noch Snake war. Bei mir geht es aber jetzt gerade eher um die Frage, es gibt ja auch noch andere Plattformen. Also ich weiß nicht, wie viele Leute zum Beispiel TikTok auf dem Browser noch konsumieren, sondern wahrscheinlich eher auf dem Smartphone, vielleicht sogar Discord."
+    },
+    {
+      "end": 1006510,
+      "speaker": "B",
+      "start": 1006150,
+      "text": "A."
+    },
+    {
+      "end": 1012930,
+      "speaker": "A",
+      "start": 1006510,
+      "text": "Gibt es Games auf TikTok und Discord und B. Wenn ja, kann man diese als Mobile Games bezeichnen?"
+    },
+    {
+      "end": 1166630,
+      "speaker": "B",
+      "start": 1013170,
+      "text": "Vielleicht die einfache Antwort zuerst, auch die würde man als Mobile Game bezeichnen. Ich würde schon sagen, es ist getrieben davon, auf welchem Endgerät wird es konsumiert. Also Mobile Games sind alle Games, die ich auf meinem mobilen Endgerät konsumiere. Die Definition würde ich schon so erstmal treffen. Und dann hast du gerade angesprochen, auf welcher Plattform findet so ein Game statt? Wir sind ja nicht nur, also vier Bilder in Wort als Beispiel, ist auf mehreren Plattformen verfügbar. Die größte, wo wir die größte Userbase haben, ist, wir nennen es immer native, ist auf iOS und Android, also dass man einfach im App Store und Play Store heruntergeladen hat, wohingegen jetzt unsere anderen, zum Beispiel zwei gerade großen Franchises, Quizplanet und Wordblitz, die gibt es auch in den nativen Stores, aber die haben ihre größere Userbase auf Facebook. Das sind Facebook Instant Games. Das war sozusagen die erste Plattform, die wir bespielt haben nach Native und einen großen Erfolg hatten. Das war jetzt vor ungefähr, also ich kam gerade zu Lotum, es waren knapp unter vor siebeneinhalb Jahren ungefähr, dass wir damit angefangen haben. Und das sind sozusagen webbasierte Games, die innerhalb von Facebook laufen. Die kann man auch im Browser auf dem Desktop spielen, auch da kann man sie starten, aber dann haben sie trotzdem meistens das Format eines Mobile Games. Sie werden meistens in einem Mobile Frame gestartet, aber der Großteil der Userbase, also fünf und neunzig Prozent plus, konsumiert das Ganze auch von den mobilen Endgeräten. Und seitdem waren wir auf super vielen Plattformen auch unterwegs. Wir haben für Snapchat entwickelt, als es noch innerhalb von Snapchat Games gab, wir entwickeln gerade Reddit, wir haben für Discord entwickelt, wir waren Launch Partner der TikTok Games, die es jetzt auch mittlerweile nicht mehr gibt. Und ja, da gibt es mittlerweile, hat ja auch selbst Netflix innerhalb ihrer, innerhalb ihrer Mobile App Games. Also im Grunde genommen kann man sagen, den Trend, den man gesehen hat, Games kann man eigentlich heutzutage nicht mehr wirklich als eigene Kategorie definieren, dass man sagt, Games sind irgendwie kompetitieren untereinander, sondern im Grunde genommen ist die Kategorie, in der Games sich befinden, ist Entertainment. Und jeder, der im Bereich Entertainment ist, dazu gehört Social Media, dazu gehört Netflix, dazu gehört YouTube, sind im Endeffekt, müssen um die Aufmerksamkeit, um die Freizeit ihrer Nutzer so ein bisschen kämpfen. Das heißt am Endeffekt abends stelle ich mir nicht die Frage nur, schaue ich jetzt YouTube oder schaue ich jetzt Netflix, sondern die Frage ist, schaue ich YouTube, schaue ich Netflix oder gehe ich an meine Konsole, an mein Handy und spiele etwas. Und das ist auch genau der Move, warum diese ganzen großen Plattformen auch mittlerweile ausprobieren, Games in ihre Plattform zu integrieren, weil es im Endeffekt um die Aufmerksamkeitsökonomie geht, so dass man im Endeffekt von allem etwas bieten kann und es keinen Grund für einen Nutzer gibt, eigentlich auf eine andere Plattform zu gehen oder sich dagegen zu entscheiden. Und Games ist nun mal ein großer Teil der Freizeit, mit dem Leute ihre Freizeit verbringen. Das ist eben nicht nur Binge Watching auf Netflix."
+    },
+    {
+      "end": 1178230,
+      "speaker": "C",
+      "start": 1166630,
+      "text": "Das Eigenartigste habe ich gefunden, wie LinkedIn angefangen hat mit Games. Also ich habe die nie gespielt, aber die haben mal sehr aggressiv, keine Ahnung, ob es das immer noch gibt, mit Games geworben. Habt ihr da auch irgendwie Games zufällig auf LinkedIn?"
+    },
+    {
+      "end": 1222970,
+      "speaker": "B",
+      "start": 1178230,
+      "text": "Ne, auf LinkedIn nicht. Also wir sind mit allen immer in Verbindung und sprechen darüber, ob wir auch Games irgendwie da drauf bringen, weil natürlich auch viele Plattformen auch immer daran interessiert sind. Eines unserer großen Franchise ist ein Quiz Game und eigentlich will jede Plattform irgendwie ein Quizgame haben, weil Quizze eigentlich immer funktionieren. Aber natürlich ist für uns auch immer die Frage, also gerade bei neuen Plattformen ist die Frage, was ist der richtige Zeitpunkt, um dabei zu sein. Also zu früh bedeutet, man muss sich so viel damit einfach nur beschäftigen, irgendwie technische Probleme der Plattform zu lösen. So zu spät ist allerdings so, dann sind vielleicht schon die großen Spots für bestimmte Spielekonzepte schon belegt und natürlich immer so ein bisschen die Abwägungssache, so wann geht man auf eine Plattform, wann arbeitet man mit einer externen Firma zusammen und immer die Frage der Opportunitätskosten. Aber LinkedIn haben wir jetzt keine Games drauf, aber gibt es immer noch."
+    },
+    {
+      "end": 1272000,
+      "speaker": "A",
+      "start": 1222970,
+      "text": "Ja, ich glaube, das ist eine Frage so des First Mover Advantage oder First Mover Disadvantage, so nach dem Motto, wenn du ziemlich viel Games entwickelst oder wenn du ein Game entwickelst und bist Launch Partner und das wird danach eingestellt, du hattest gerade gesagt, Snapchat Games gab es und so weiter, dann ist das natürlich ein Aufwandsrisiko. Was mich aber interessiert, denn so die Dynamik von so einem Discord oder von einem Reddit ist ja ganz anders als von einer Native App. Kannst du mir mal ganz kurz in einem Too Long Didn't Read zusammenfassen, wie dann so ein Gameflow ist? Das bedeutet, ist das bei einem, also bei einem Facebook verstehe ich das, das ist irgendwie so eine Art iframe mit JavaScript Logik und Mobile App verstehe ich auch Native oder Flutter oder irgendwie sowas. Ist das bei Reddit Und bei Discord dann ein Textbot und der dann der postet, mit dem chattest du dann und dann postet der Bilder oder wie funktioniert der Game Flow oder haben die dann noch mal auch so eine iframe artige Integration oder ähnliches?"
+    },
+    {
+      "end": 1443660,
+      "speaker": "B",
+      "start": 1272000,
+      "text": "Im Grunde genommen kannst du bei allen sagen, sie haben, wenn man es runterbrechen will, eine iframe artige Integration. Also auf allen Plattformen, auf denen wir sind, außer in Native, ist es immer ein webbasiertes Game. Auch wenn man irgendwie was entscheiden würde, statt irgendwie eine Webtechnologie, wie wir jetzt nutzen, könnte man auch mit Unity machen, muss man ein Bild bauen, der im Browser funktioniert. Also eigentlich alle haben im Endeffekt immer die Games in einem Browser angezeigt und wie es jetzt genau integriert ist, kommt ganz auf die Plattform an. Und das ist natürlich auch für uns ein ganz großer Unterschied, wie wir Games entwickeln und was für Games wir bauen, wie wir sie bauen, auf welcher Plattform wir das Ganze, das Ganze bauen. Jetzt zum Beispiel das Beispiel Reddit ist so, dass eigentlich der Startpunkt von meistens ist, dass die Games in irgendeiner Form Posts erzeugen müssen und mit diesen Post, das sind interaktive Posts, die auf der Wall dann in den verschiedenen Subreddits sind. So mit denen kann ich noch innerhalb des Subreddits in der Timeline interagieren und an einem bestimmten Punkt gibt es einen Absprungpunkt, wo man sagt, okay, jetzt springe ich in die App rein. Zum Beispiel werden da am Beispiel quizplanet Quizze erzeugt, denn diese Kurz Quizze mit so fünf, sechs Fragen landen wirklich in diesem Subreddit. Der ist dann auch, das ist dann interaktiv, da ist auch wie eine Art kleiner iframe eingebunden in dem Feed, dann kann ich diese fünf Fragen spielen. Wenn ich dann weitermachen will, springe ich wirklich ins Game, um dann weiter in die Tiefe zu gehen. Ansonsten ist es eher wirklich die Frage der Mechaniken, wie baut man ein Game, dass es auf der Plattform funktioniert. Und Facebook zum Beispiel ist halt super interessant, weil wir da eigentlich die Vorreiter waren für so asynchrone Social Loops. Also da ist sozusagen, da spielen Leute miteinander, aber sie spielen eben nicht gleichzeitig, sondern sie spielen zu einem unterschiedlichen Zeitpunkt im Grunde genommen. Törn basiert so, also jetzt am Beispiel, wenn man jetzt Quizplanet auch wieder nimmt, wo man Fragen beantwortet, erst bin ich dran, ich beantworte Fragen, dann wird über die Plattform eine Nachricht an meinen Freund geschickt und der kann zu irgendeinem Zeitpunkt dann sozusagen seine Fragen beantworten und so eine Art Zug um Zug Spiel starten. Und da haben wir sehr viel innoviert zu den frühen Zeiten von Facebook und da einen Loop für uns gefunden, der da sehr gut auf der Plattform funktioniert. Aber das ist halt jedes Mal wieder die Frage des First Mover Advantages und Disadvantages. Wenn man sehr früh dabei ist, dann fehlen einem teilweise Funktionalitäten der Plattform. Man entwickelt vielleicht ganz andere Games, als man ein Jahr später entwickeln würde, weil es dann neue Funktionalitäten gibt. Und gerade bei diesen neuen Plattformen das zu adaptieren, mit guten Spielekonzepten zu kommen, die auch wirklich auf der Plattform funktionieren, das ist immer die große, große Herausforderung, weil man eigentlich sagen kann, dass auf allen Plattformen, außer Native, ist eigentlich die Art, wie man erfolgreich wird über Viralität. Also dadurch, dass Leute andere Leute einladen oder dass es irgendwo in Subreddits gezeigt wird, das ist eigentlich immer die Art, wie man Wachstum erzeugt. Ganz im Gegensatz zu Native Apps, wo es heute eigentlich vorherrschend ist. Fünf und neunzig Prozent der erfolgreichen Spiele sind erfolgreich, weil sie User Acquisition gut betreiben können. Einfach sagen können, sie kaufen Leute günstiger ein, als sie am Ende dann sozusagen Einnahmen generieren mit diesem einzelnen User. Und das heißt, es ist auch immer eine andere Art zu denken, wie man Games entwickelt, je nachdem auf welcher Plattform man das Ganze tut."
+    },
+    {
+      "end": 1486130,
+      "speaker": "C",
+      "start": 1443660,
+      "text": "Jetzt hast du schon erwähnt, dass die ganze Logik und die Entwicklung ja teilweise gar nicht so auf der technischen Ebene stattfindet, sondern eine Metaebene drüber. Das haben wir damals in Episode ein hundert acht und achtzig auch viel besprochen, dass da ja ganz viel dran hängt, einfach den Game Loop und das Austesten und überhaupt mal die Idee und Design und so weiter. Aber wenn wir jetzt auf die Technologie gehen und du hast ja viel Erfahrung, du bist ein Fullstack Developer, hast sogar bei der Deutschen Bank entwickelt, du kennst ja die Welt. Ist jetzt diese Entwicklung auf Mobile Games, auch wenn man viel im Browser unterwegs ist, JavaScript, du hast einiges erwähnt. Ist es jetzt näher an der Webentwicklung dran oder ist es schon näher an der klassischen Game Entwicklung mit Unity oder sonstigen Frameworks dran? Wie würdest du es sehen jetzt von der technologischen Seite?"
+    },
+    {
+      "end": 1663390,
+      "speaker": "B",
+      "start": 1487000,
+      "text": "Ja, also das würde ich sagen, am Ende kommt ganz drauf an, weil die Frage der Technologie ist ja immer eine Frage dafür, welches Produkt man am Ende entwickelt und für welche Plattform. Ich habe jetzt gerade die Einschränkung gemacht auf nicht nativen ist es eigentlich immer irgendeine Form von Web Container. Das heißt, da hat Unity schon einen gewissen Nachteil, weil es natürlich immer relativ viel, wenn man da mal ein Game bundled, da kommt relativ viel mit, was erstmal bei jedem Start eigentlich neu geladen werden muss. Das heißt so App Startzeit und sowas, hat es natürlich einen Vorteil, wenn ich jetzt einfach ein Web Framework dafür nehme oder eine Web Fokuss Game Engine. Und dann ist die Frage, was für eine Art von Spiel entwickle ich? Und ich habe ja vorhin schon gemeint, wir mit Lotum sind im Grunde genommen im Casual Puzzle Markt unterwegs und wenn man sich unsere Spiele mal anschaut, ist jetzt nicht so wie jetzt bei Hyper Casual, Flappy Bird oder sowas, dass man irgendwie eine Game Engine braucht und wir brauchen auch keine Physics für unsere Games, die wir da meistens entwickeln, sondern eigentlich, wenn man es mal runterdampft, machen wir sehr sehr interaktive Webapplikationen. So, das heißt, wenn man jetzt mal wieder als Beispiel Quizplant nehmen würde, als Quizspiel, im Grunde genommen ist der Core Loop eine Frage mit Buttons, ich muss eine Antwort auswählen. Natürlich stecken wir viel Aufwand in, dass das Ganze auch animiert ist und sich anfühlt wie ein Game, aber da haben wir sehr viel Vorteil von, weil es auch viel um Routing geht. Wir müssen irgendwie, müssen viele verschiedene Screens einfach anzeigen. Es geht viel darum, wie ist der Flow innerhalb der App, so wie funktioniert es, wenn ein User reinkommt, der andere zurückgespielt hat. Und wir müssen eigentlich viele Probleme lösen, die man auch grundsätzlich lösen muss, wenn man eine Web Applikation entwickelt. Wir haben angefangen auf Facebook zu entwickeln mit Game Engines wie Pixijs, wo wir gemerkt haben, okay, wir müssen jetzt ins Web gehen, wie machen wir das? Gut, vorher haben wir Native entwickelt, wir haben wirklich mit Swift und Kotlin entwickelt, dann sind wir ins Web gegangen, haben eigentlich erst mal eine Game Engine gewählt, aber am Ende, wir müssen so viele Probleme lösen, die eigentlich in reaktiven Frameworks, wie zum Beispiel wir setzen Vue ein, schon so viel gelöst sind. Wir müssen irgendwie eigentlich Game Engines aufbohren und irgendwie dieses ganze Screen Handling machen. Das ist alles so komplett, dass wir gemerkt haben, die Spiele, die wir eigentlich bauen wollen für Web, eigentlich sind es die ähnlichen Challenges wie bei einer Webapplikation, weshalb wir uns dann für Vue entschieden haben. Wenn man mal aufs Frontend blickt und das war wirklich für uns ein Gamechanger für die Arten von Games, die wir entwickelt haben. Wir haben auf einmal so einen Speed gewonnen und irgendwie auch, wir konnten sie sehr viel einfach polish da auch am Ende bauen, weil das Tooling sehr viel besser war und irgendwie gerade die Form von Reaktivität, was in so Game Engines teilweise ein bisschen schwieriger umzusetzen ist. Wir hatten so viele Vorteile davon. Im Grunde genommen kommt es dann ein bisschen auf das Plattform und Produkt an und bei uns zwar durch eben diesen Puzzle Casual Bereich und auch noch, es musste irgendwie in einem HTML Container leben, war dann irgendwann die Entscheidung, die war gar nicht so offensichtlich war uns für Vue zu entscheiden. Ich würde wirklich sagen, aktuell sind wir einer der Vorreiter im Gaming Umfeld, was die Spieleentwicklung mit Webtechnologien angeht. Also das ist nicht so, dass das typisch ist, dass das getan wird. Viele entwickeln trotzdem mit Unity oder Game Engines so, dass das wirklich wir im Grunde genommen View nutzen. Das ist schon besonders."
+    },
+    {
+      "end": 1674510,
+      "speaker": "A",
+      "start": 1663550,
+      "text": "Jetzt kommt wieder der alte Mann, erzählt vom Krieg. Wie hat sich die ganze Sache denn entwickelt über Zeit, also die Verwendung von Frameworks. Denn als ich noch ja was geschrieben habe, damals ein tausend neun hundert fünfzig."
+    },
+    {
+      "end": 1678870,
+      "speaker": "C",
+      "start": 1677150,
+      "text": "Fängst du schon an über den Krieg zu erzählen."
+    },
+    {
+      "end": 1693650,
+      "speaker": "A",
+      "start": 1678870,
+      "text": "Naja, da gab es halt schon echte Herausforderungen, ich sag mal, klassische Movement Animationen ruckelfrei hinzubekommen. Und auch wenn du sagst, du hast ein Puzzle Game oder ein Frage Game, dann wird trotzdem irgendwo mal eine Animation gefeuert und Konfetti Flie, irgendwas kommt von."
+    },
+    {
+      "end": 1694410,
+      "speaker": "B",
+      "start": 1693650,
+      "text": "Links rein und so weiter."
+    },
+    {
+      "end": 1734220,
+      "speaker": "A",
+      "start": 1694410,
+      "text": "Und jetzt sagst du, okay, wir machen keine Physik Engine. Das bedeutet, Unity wird vielleicht verwendet oder wurde mal vielleicht verwendet, aber nicht in dem Ausmaße, wie es zum Beispiel Unreal oder so benötigt. Inwieweit hat sich denn der Tech Stack über die Jahre verändert bzw. Die angewendeten Technologien von Native, von, ich sag mal wirklich Objective C, Swift, React, Native, View, Flutter vielleicht und auch in Bezug auf ganz klassisch ruckelfreie Animationen, weil das war immer ein Pain, Du hast es immer für andere Browser optimiert. Damals war Internet Explorer noch so ein Ding, ich weiß nicht, für die Dinosaurier, die sich noch daran erinnern. Das war der Vorreiter vor Edge. Vielleicht hat sie da mal ein bisschen was zu sagen."
+    },
+    {
+      "end": 1822520,
+      "speaker": "B",
+      "start": 1734220,
+      "text": "Also im Grunde muss man sagen, dass ich an unserem Tech Stack, also ich bin vor acht Jahren zu Lotum gekommen, damals war der Switch hin zu Facebook Instant Games und wir sind weg von Native hin zu einer Webplattform und das war damals der erste, Wir nehmen einfach mal eine Web Engine und haben uns dann für Vue entschieden und der Move hat super lange für uns gehalten, also viel von dem, was wir entwickelt haben. Ich würde sagen, über die nächsten fünf Jahre hinweg war eigentlich fast immer ausschließlich viewjs und hat auch sehr gut für uns funktioniert. Ich meine, natürlich musst du einige Performance Challenges auch lösen, so es ist nicht so, dass alles out of the box kommt, aber es hat vom Zeitpunkt her kam es in eine ganz gute Phase, dass man eigentlich sagen musste, wir mussten uns nicht komplett verbiegen, um die Performance gangbar zu machen. Und man musste schon sagen so damals, also gut, Internet Explorer und Edge und sowas war eigentlich fast kein Thema. So die die Usage ist so gering, das ist jetzt auch wiederum der Vorteil an Games, wo keiner jetzt dafür zahlt und das Game gekauft hat. Wir haben halt auch einfach beim bestimmten Support gesagt, gut, wir wollen das gar nicht so ganz supporten, dadurch haben wir eine kleinere Audience, so schließen vielleicht eher die größten Browser ein bestimmte Browserversion, wo wir sagen, okay, zu alte Geräte supporten wir einfach dann nicht, dann ist es halt da einfach broken und wir testen das gar nicht so richtig. Darauf heißt es ein bisschen leichter, wenn man Games entwickelt, einfach sagen kann, gut, notfalls haben wir eine kleinere Audience, als wenn man Apps für Berater in der Deutschen Bank entwickelt, wie es vorher getan hat, wo am Ende bei jedem User, wo es nicht funktioniert, der am Ende bei mir auf der Matte steht und sagt, das muss aber auf meinem Gerät funktionieren. Das heißt, wir konnten den Schwerpunkt natürlich ein bisschen anders setzen, was es für uns einfacher gemacht hat."
+    },
+    {
+      "end": 1826920,
+      "speaker": "C",
+      "start": 1822520,
+      "text": "Dafür darf es bei der Deutschen Bank ruckeln wahrscheinlich, da ist es nicht so schlimm, wenn es nicht flüssig läuft."
+    },
+    {
+      "end": 1980400,
+      "speaker": "B",
+      "start": 1827000,
+      "text": "Das stimmt. Obwohl ich muss sagen, ich habe iPad Apps für Berater entwickelt, da war schon, was Usability und sowas angeht, eigentlich alles, was wir gemacht haben, waren sie immer sehr froh im Vergleich zu ihren alten Webapplikationen, die sie sonst auf dem Desktop hatten. Also eigentlich haben wir immer alle relativ glücklich gemacht mit den Apps, die wir da gebaut haben und Usability war auch ganz gut. Aber als Beispiel wordblitz, eine unserer anderen drei großen Franchises, da geht es um Geschwindigkeit. Also man spielt gegen jemand anderen und muss schneller als der andere in einer gewissen Zeit neunzig Sekunden Wörter in einem vier mal vier Buchstaben Grid finden und das ist wirklich, wenn man sich da mal anschaut, wie die Leute das teilweise spielen, die Hardcore User von wordblitz, da gibt es Videoaufnahmen davon, ist unfassbar in welcher Geschwindigkeit die da über dieses Board fegen und da kam es natürlich am Ende drauf an, das muss ultra snappy sein, wenn da irgendwie es minimal ruckelt bei irgendwie den Wörtern pro Sekunde, die diese Leute da durchhalten, die bewegen ihre Finger, also keine Ahnung wie die so schnell denken können und so schnell Wörter finden können. Da war es am Ende so, den Core Loop unseres Games, den haben wir komplett ohne, also jetzt außer den Frame haben wir mit plain JavaScript entwickelt, weil es da wirklich auf das letzte Cent der Performance ankam, wo wir gemerkt haben, okay, gerade wenn wir da irgendwie das Reaktivitätsframework irgendwie oben drauf machen und irgendwie jegliche Inputs irgendwie über View laufen das hält einfach nicht mit der Performance und da haben wir wirklich gemerkt, OK, müssen wir darauf achten. Es gab immer so einzelne Stellen, aber ansonsten klar sind natürlich auch die typischen Dinge, auf die man auch achten muss, wenn man Animationen mit einer Webtechnologie macht, welche bestimmten Parameter man in CSS animiert und welche nicht sozusagen welche direkt auf der GPU laufen und welche nicht. Aber da gibt es im Endeffekt ja ein paar Best Practice, wenn man sich an die hält, muss ich sagen, kann man eigentlich sagen, für Plattformen, auf denen eh alles in einem Web Container läuft, kriegt man eine sehr gute Performance hin und deswegen waren wir auch die letzten fünf, sechs Jahre, hat es immer sehr gut funktioniert und dann kam wiederum der Switch ein bisschen zurück zu Native, mehr native Games machen und da haben wir bei manchen Games, die wir jetzt gemacht haben, die Anforderung, dass sie gar nicht im Browser irgendwann funktionieren müssen. Da ist natürlich so, du hast bestimmte Performance Limitierungen, wenn du auch, also wir haben native Apps auch in einem Web Container umgesetzt, wo wir auch View drin laufen haben und da hast du Limitierung. Du merkst einen Unterschied, ob du das Ganze dann mit Unity beispielsweise umsetzt oder komplett nativ bei bestimmten bei bestimmten Dingen. Du musst dich schon hier und da mal mehr verbiegen. Aber es war eher so, dass wir immer gesagt haben, die Performance ist mittlerweile auf fünf und neunzig Prozent der Geräte vollkommen ausreichend, so dass die minimalen vielleicht lags die du auch mal siehst und so, die das nicht ganz flüssig ist, die machen einfach keinen, haben keinen Einfluss auf die Performance deines Games, also auf die groben Key Metriken. Es ist kein messbarer Unterschied, ob du da die nächste Performance noch rausholst."
+    },
+    {
+      "end": 2034280,
+      "speaker": "A",
+      "start": 1980400,
+      "text": "Okay, was ich höre ist, dass die Hardware jetzt kein limitierender Faktor mehr ist von einem, ich will gar nicht sagen einem aktuellen iPhone oder aktuellem Android, sondern vielleicht auch mal ein, zwei Jahre zurück, zumindest für eure Spiel Use Cases. Aber was wir jetzt gerade besprechen, ist ja die Frontend Performance mehr oder weniger. Und du hast gerade schon gesagt, okay, wenn bei Word Blitz heißt das Spiel, glaube ich, Leute schnell gegeneinander zocken, dann komme ich so auf das Thema Realtime, wobei Realtime natürlich ein gefährlicher Begriff ist. Wenn ich jetzt mit dir über Realtime spreche, ist das wahrscheinlich ein anderes Realtime, als wenn wir jetzt an der Börse irgendwie Nanosekundenhandel machen und so weiter. Deswegen möchte ich die Frage ein bisschen aufs Backend lenken. Wie funktioniert das denn mit dem Backend, mit dem Multiplayer, mit dem State Management, wenn ihr sagt, okay, zwei Leute connecten sich da, zocken nebeneinander, haben die dann eine Direktverbindung zueinander oder habt ihr ihr ein zentrales Backend, über das alles läuft? Nutzt ihr da fertige Services? Also wie sieht da so ein bisschen die Architektur oder Technologielandschaft aus, um solche wordblitz Games überhaupt zu enablen?"
+    },
+    {
+      "end": 2252860,
+      "speaker": "B",
+      "start": 2034280,
+      "text": "Also da kann man eigentlich fast sagen, wir hatten und haben mal alles. Es kommt immer auf Spiel und Spielmodus an. Vielleicht noch mal so ein bisschen rauszoomen. Bei Lotum haben wir aktuell fünf Game Teams. Jedes Game Team arbeitet an einem anderen Spiel und jedes Game Team hat die komplette Hoheit über das Text. Also ob sie jetzt im Frontend View einsetzen, ob sie alle Services auf der Google Cloud Konsole auf AWS laufen lassen, ob sie irgendein Game Framework wie Nakama, können wir uns auch noch mal drüber unterhalten, nutzen, kann jedes Team für sich selbst entscheiden und auch innerhalb der Google Cloud. Ob das Ganze jetzt, ob sie jetzt mysql nutzen, ob sie Bigtable nutzen, ob sie irgendwie irgendeine nosql Datenbank nutzen, ob sie Serverless gehen, ob sie ein Kubernetes sehen. Wir haben eigentlich jeden Flavor, hatten wir irgendwann mal gehabt mittlerweile, haben sich so ein bisschen darauf geeinigt, ja, Google Cloud, it is AWS, nutzen wir eigentlich nicht mehr viel Im Grunde genommen sind so die Backend Services, wenn wir die selbstgeschriebenen sind, eigentlich, wenn dann Kubernetes oder irgendwie Cloud Run bei uns, wir haben wenig irgendwie Instanzen, die wir selbst managen und an Datenbank muss man sagen, haben wir eigentlich noch das gesamte Potpourri, also da ist irgendwie alles im Einsatz, je nach Spiel. Vielleicht können wir das Beispiel Chris Planet nehmen, da ist es so unser, ich hatte erzählt, auf Instant Game haben wir ein törnbasiertes Spiel, also da ist es so, ich spiele erst meine Frage und dann spielst du deine, weil wir eigentlich nie wirklich gleichzeitig online sind. Das heißt, da haben wir erst mal keine Anforderungen an Real, was das Core Game angeht. Aber zum Beispiel, wir hatten auch schon einige Modis, wie zum Beispiel Chris Planet Party, wo du dich wirklich mit deinen Freunden zusammensetzt, so ihr geht in einen Raum und spielt gleichzeitig das gleiche Quiz oder wir hatten sogar eine Live Show, wo weltweit immer um acht uhr der lokalen Zeit eine Live Show für alle User geschaltet wurde, wo dann teilweise fünf tausend User gleichzeitig eine fünfzehn Minuten langes Quiz gegeneinander gespielt haben, wo man immer eine gewisse Zeit hatte und wenn man eine falsche Antwort gegeben hat, rausgeflogen ist. Am Ende gab es nur ein paar, die den großen Pot dann gewonnen haben. Gab es als Prinzip auch mal von HQ Trivia, hat jemand mit Echtgeld gemacht, bei uns gab es Ingame Währung, das heißt, wir haben auf jeden Fall auch Realtime Anforderungen gehabt und haben auch in unseren Games Realtime das drin. Im Grunde genommen sind das alles Socket Verbindungen, haben dann eigenen Service auch dafür geschrieben, der nennen wir Lifelines, ist glaube ich mittlerweile der interne Name, wo wir eigentlich alle unsere Games drüber Realtime Events schicken und aber erst mal gar nichts groß Komplexes. Natürlich, wenn du so Shows hast wie jetzt irgendwie fünf tausend Leute gleichzeitig, da kommt schon ein bisschen bestimmte Fragen, die man sich stellen muss, okay, wie genau kriegst du das hin? Dadurch, dass du es dann am Ende auch irgendwie orchestrieren musst, das reicht. Du kannst ja nicht mehr eine Socket Verbindung zu nur einem Server aufbauen, sondern hast im Endeffekt ganz viele Server, die eine Socket Verbindung mit ihren einzelnen Usern haben. Und damals haben wir zum Beispiel als Synchronisierungsschicht einen Redis Cluster genutzt, worüber dann sozusagen die Events verteilt wurden und dann hat verschiedene Server, die dann wiederum Socket Verbindung mit den einzelnen Clients aufgebaut haben. Da mussten wir schon im Scale einiges, einige Probleme lösen. Aber ich sag mal eine Stufe, Komplexitätsstufe drüber im Gaming, wenn man wirklich über Real Time redet, ist dann, wenn du im Hardcore Bereich bist oder wenn du irgendwelche Shooter Games has, wirklich sagst, so Physics mäßig, wer hat wen zuerst getroffen, wenn du in Counter Strike bist beispielsweise. Und da kommen natürlich einige Komplexitäten, weil da wird es meistens so gemacht, dass es lokal vorgerechnet wird und dann gibt es einen Server, der im Endeffekt noch mal Single Source of Truth ist und gegebenenfalls irgendwie dann bestimmte Entscheidungen im Client wieder reversed werden, wenn das Backend sozusagen eine andere Entscheidung trifft. Im Endeffekt wird die ganze Physik Berechnung sowohl auf dem Server als auch auf dem Client gemacht. Aber das sind jetzt Problematiken, mit denen wir uns bisher nicht wirklich beschäftigen mussten. Also Collision Detection, das ist wirklich eine Mod, ein eigenes Feld für sich, wo auch eine ganze Komplexität drinsteckt. Aber auch bei uns, wie gesagt, also Real Timeless typischerweise eigentlich, wir haben eigentlich immer alles selbst geschrieben und dann über Socket Verbindung und dann skaliert mit Redis meistens."
+    },
+    {
+      "end": 2271970,
+      "speaker": "C",
+      "start": 2252860,
+      "text": "Und du hast Nakama schon erwähnt, wie weit können dir so Frameworks oder vielleicht ganze Plattformen auch irgend sowas abnehmen? Also es klingt ja jetzt schon kompliziert, das eigentlich selber zu machen und die ganzen State zu halten und jeder, der mal irgendwie mit State, der irgendwie schnell geschrieben wird, sich auseinandergesetzt hat, weiß, wie schwierig das eigentlich ist."
+    },
+    {
+      "end": 2345530,
+      "speaker": "B",
+      "start": 2272210,
+      "text": "Ja, da steckt auf jeden Fall einiges an Komplexität drin, vor allem, weil ich noch damals, als ich das gemeint habe, damals hat Google Cloud noch gar keine Redis Cluster supported, das heißt, wir mussten die Redis Cluster uns auch selbst aufsetzen und managen und so. Das war auf jeden Fall mit unseren kleinen Teams war ein bisschen Aufwand, der da drin gesteckt hat, ein bisschen Fehlerpotenzial. Aber jetzt das Beispiel der Live Show, da ist es so, dass einem zum Beispiel sowas wie Nakama nicht wirklich hilft, weil, weil es ist ein sehr spezifischer Use Case für uns. Nakama ist im Grunde genommen eine Game Engine, die einem viele Dinge abnimmt von Features, die Games im Allgemeinen brauchen. Also beispielsweise so was wie, man hat einfache Leaderboard Events, wo Nutzer in ein Leaderboard gepackt werden über eine gewisse Zeit irgendwelche Punkte sammeln können und da drin steigen. Oder man baut Teams auf, dass man zusammen ein Team hat, darüber Chat Funktionalitäten hat. Also diese ganzen typischen Dinge, die ein Game braucht. Da ist sowas wie Nakama superstark, weil du eben diese ganze Business Logik nicht mehr selbst schreiben brauchst, weil viele der Bausteine, die so Games haben, repetitiv sind. Das ist dann natürlich supergut. Klar, ein bisschen höhere Kosten verbunden, die Server, die man da hat, da zahlt man natürlich einen kleinen Obolus dafür, dass diese Logik für einen entwickelt wurde. Aber jetzt das Beispiel quizplanet Live Show, das hätten wir auch nicht mit Nakama umgesetzt. Also da ist es am Ende so, dass wenn wir es haben wollen, müssen wir es selbst entwickeln."
+    },
+    {
+      "end": 2359570,
+      "speaker": "C",
+      "start": 2345610,
+      "text": "Aber Nakama ist dann eine Lib für den Client an sich oder ist das eine ganze Plattform? Gibt es da Server Komponenten? Also was unterstützt das alles oder wie weit nimmt dir das die Arbeit dann theoretisch ab, wenn du so ein Leaderboard zum Beispiel machst?"
+    },
+    {
+      "end": 2427940,
+      "speaker": "B",
+      "start": 2359570,
+      "text": "Ja, also das ist in erster Linie ein Backend Service, also die Firma hinten dran heißt Heroic Labs und im Grunde genommen ist Nakama ein Backend Service, den man dann in seiner eigenen Infrastruktur hosten kann oder auch gehostet von Heroic Labs bekommt, wo man einen Server hat mit diesem Server. Du hast auch einen Client SDK, wo du diese Funktion dann ansprechen kannst. Aber dieser Server hat sozusagen, macht diese grundlegenden Features, die man als Game so braucht. Also der würde dir ein Player Management machen mit Login und Authentifizierung. Der gibt dir eine Möglichkeit, Leaderboards anzulegen, wo Leute drin sein können. Man hat sogar die Möglichkeit, darüber Push Notifications zu schicken. Theoretisch kann man bestimmte Games so umsetzen, dass man einfach alles in Nakama hat und man hat gar keinen eigenen Server mehr. Also Nakama kann man dann, also zuletzt, als ich damit entwickelt habe, mit typescript Go und ich glaube auch Lua bestimmte Extensions dafür schreiben, sodass man dann sagt, keine Ahnung, dass du noch deine eigene Business Logik drin hast in einem Leaderboard, könnte auch dann eine Connection zu deinem eigenen Server aufbauen. Also du baust dein eigenes Image für den Backend Service, kannst ihn selbst hosten oder eben in der Cloud von Nakama und kannst ihn mit eigenem Code anreichern. Aber diese Grundfunktionen sind da. Du hast einen Client SDK und du hast eine Server Komponente. Und hosten kannst du wo du willst."
+    },
+    {
+      "end": 2430940,
+      "speaker": "C",
+      "start": 2427940,
+      "text": "Im Grunde genommen, aber das habt ihr aktuell nirgends im Einsatz."
+    },
+    {
+      "end": 2445830,
+      "speaker": "B",
+      "start": 2431100,
+      "text": "Wir hatten es mal eingesetzt, als wir für Snapchat Games entwickelt haben, weil Snapchat das sozusagen als Voraussetzung gegeben hat, weil man musste es auf ihrer Infrastruktur hosten. Dadurch kam er damals in Kontakt mit Nakama und aktuell nutzen wir es für die Multiplayer Funktionalitäten in vier Bilder in Word."
+    },
+    {
+      "end": 2454590,
+      "speaker": "A",
+      "start": 2445830,
+      "text": "Jetzt bin ich vor kurzem auch bei der Recherche für diese Episode über spacetimedb gestoßen. Du nickst schon, Ich gehe davon aus dir, ne?"
+    },
+    {
+      "end": 2457270,
+      "speaker": "B",
+      "start": 2454590,
+      "text": "Ich müsste parallel googeln. Spacetimedb sagt mir nichts."
+    },
+    {
+      "end": 2464150,
+      "speaker": "C",
+      "start": 2457270,
+      "text": "OK, spacetimedb, Andi kommt immer mit Datenbanken um die Ecke, die niemand kennt, die er irgendwie auf Hacker News irgendwo gelesen hat."
+    },
+    {
+      "end": 2500290,
+      "speaker": "A",
+      "start": 2464150,
+      "text": "Nee, nee, nee, nee, nee. Also erstens, das wurde in unserer Discord Community geteilt. Vielen Dank an die Community, deswegen habe ich mir mal so ein Intro Video reingezogen. Die verkaufen natürlich die eierlegende Wollmilchsau, sagen aber im Endeffekt, okay, du kannst irgendwie das mentale Modell anwenden, dass das halt eine relationale Datenbank ist und dann halt so ein Spieleserver kombiniert, was dann auch Massive Multiplayer Online Games als Backend serven kann. Klingt so ein bisschen ähnlich wie Nah Karma halt eine Technologie, die im Backend für dich arbeitet und dann kannst du auch so Serverless Events in Rust und C und so da schreiben so Serverless."
+    },
+    {
+      "end": 2507810,
+      "speaker": "B",
+      "start": 2500290,
+      "text": "Function lerne ich sogar noch was. Ich sehe auch gerade hier, sie sponsoren Supercell, die Firma hinter Clash Royale und Clash of Clans. Ja auch einer der Investoren. Kannte ich jetzt noch nicht."
+    },
+    {
+      "end": 2551640,
+      "speaker": "A",
+      "start": 2507970,
+      "text": "Meine Frage an dich ist nämlich eine technologische Frage. Du hast jetzt gerade auch schon Redis Cluster erwähnt und pipapo. Inwieweit haben denn diese speziellen Technologien oder Datenbanken oder Tools wie Nakama wie Spacetime die? Und wenn wir noch mehr googeln, finden wir fünf weitere. Eine Daseinsberechtigung versus den doch sehr spezialisierten, wie zum Beispiel Redis als Key Value Store, mysql und mariadb und wie sie alle heißen, als relationale Datenbanken. Und dann, ich sag mal, dieses Kombinationsmodell, wir nutzen das für den einzelnen Use Case und basteln uns die Logik selber versus eine eierlegende Wollmilchsau, die dann ganz speziell auf den Spiel Use Case siehst du eine Daseinsberechtigung als als Softwareentwickler."
+    },
+    {
+      "end": 2586370,
+      "speaker": "C",
+      "start": 2551720,
+      "text": "Ich möchte da sogar noch eine dritte Ebene kurz mit drauflegen, weil es gibt ja auch diesen Zwischenbereich, sowas wie Firebase, der jetzt nicht speziell für Games entwickelt ist, aber doch irgendwie so eine Plattform anbietet, so eine Datenbank und ein bisschen mehr vielleicht Synchronisation, gerade im Mobile Bereich, wo du dann vielleicht die lokale Datenbank automatisch synchronisiert hast mit deiner Cloud Datenbank, solche Dinge, die nicht speziell für Gaming entwickelt wurden, aber vielleicht doch einen Use Case vielleicht abdecken. Also es wäre noch so ein Mittelbereich, keine Ahnung, ob ihr den verwendet oder ob der euch in irgendeiner Form auch weiterbringt."
+    },
+    {
+      "end": 2694480,
+      "speaker": "B",
+      "start": 2586370,
+      "text": "Also Firebase kann ich gerne gleich noch ein bisschen drauf eingehen. Vielleicht erstmal diese Daseinsberechtigung von den Game Plattformen an sich. Und ich würde erst mal sagen, ja, es hat auf jeden Fall eine Daseinsberechtigung, weil natürlich, wenn ich jetzt mal Nakama als Beispiel nehme, ich kenne jetzt spacetimedb nicht, aber ich denke mal vom Feature Set her werden da ähnliche Dinge drin sein. Ist es schon so, wenn man sich zum Beispiel auf den Native Markt mal konzentriert und schaut, ich habe jetzt geredet von den Mobile Games in irgendwie diesen Kategorien wie Strategy als auch Puzzle und so die Bausteine, die so ein Game hat, die Grundbausteine wie so was wie User Authentifizierung, aber Leaderboards, Live Events, A B Testing und alles dergleichen, die muss im Endeffekt jeder bauen. Und natürlich, wenn ich jetzt mit einer Kammer hochfahre und sage, hey, ich muss mir um diese ganzen Dinge, die grundlegend Dinge keine Gedanken machen, sondern ich kann mich einfach nur auf die Spezifika meines Games konzentrieren und dann am Ende sagen, ja gut, gut, wenn ich halt irgendwie bei quizplanet auch noch eine Live Show haben will, gut, die muss ich halt selbst bauen, aber Nakama kann ja auch mit meinem Backend interagieren, das ist grundsätzlich gar kein Problem und du nimmst dir erstmal einfach das Ganze weg, dass du dich um diese Grundbausteine nicht kümmern musst. Wie gesagt, Pix hat sich dafür entschieden, das Ganze zu machen. So bei unseren ganzen anderen großen Franchise, als wir das damals entwickelt haben, war Nakama gar kein Thema. Jetzt löst Nakama Dinge für uns, die wir schon selbst gelöst haben, beziehungsweise auch da ich das für Facebook entwickeln und da ein ganz anderes Mindset haben, wie Games entwickelt werden, nutzen wir gern, würden gar nicht so viele Bausteine von Nakama nutzen Aber zum Beispiel bei den Native Games, da sind viele Bausteine ähnlich und das hat auf jeden Fall eine Daseinsberechtigung. Aber die große Frage ist natürlich auch, kannst du es dir leisten, weil du zahlst Nakama im Endeffekt dafür, dass sie das Ganze gebaut haben. Und je nachdem wie groß der Scale von deinen Games ist, ist das auch nicht wenig Geld, was dich da Nakama am Ende kostet. Also im Endeffekt nur eine Frage, so was wird sich kosten, es selbst zu bauen?"
+    },
+    {
+      "end": 2698320,
+      "speaker": "C",
+      "start": 2694480,
+      "text": "Nakama sagt ja, sie sind Open Source. Ist das so ein Pseudo Open Source?"
+    },
+    {
+      "end": 2711980,
+      "speaker": "B",
+      "start": 2698320,
+      "text": "Ne, es ist Open Source, aber Open Source. Du kannst es selbst hosten, aber nicht in der skalierten Variante. War mein letzter Stand. Ich habe zuletzt vor drei Jahren, habe ich aktiv damit entwickelt. Also du kannst nicht mehrere Instanzen hochfahren, die miteinander interagieren können. Das ist dann jedenfalls."
+    },
+    {
+      "end": 2715340,
+      "speaker": "C",
+      "start": 2711980,
+      "text": "Ist ja auch fair. Ich meine, es steckt ja auch oft viel Entwicklung dahinter, ne?"
+    },
+    {
+      "end": 2735560,
+      "speaker": "B",
+      "start": 2715420,
+      "text": "Also wir haben das Ganze auch teilweise mal selbst gehostet gehabt und einfach um es auszuprobieren. Also ist Open Source, aber deswegen der richtige Use Case, Wenn du eigentlich wirklich Ambition mit dem Game hast, dann kannst du es nicht selbst hosten, Also nicht ohne sie dafür zu bezahlen. Ich glaube, du könntest sie auch dafür bezahlen, dass du es dann in der eigenen Infrastruktur komplett selbst hostess und sie geben dir den Code dann für die skalierte Variante."
+    },
+    {
+      "end": 2751320,
+      "speaker": "C",
+      "start": 2735560,
+      "text": "Aber ist ja auch immer die Frage, wie viel Personen und Wissen du im Team hast. Ihr seid sehr gut aufgestellt. Wenn du natürlich alleine bist, bist du vielleicht froh drum, wenn du nur was zahlen kannst oder musst und dafür dir das abgenommen wird, als wenn du es komplett selber programmierst als Einzelfloss."
+    },
+    {
+      "end": 2825560,
+      "speaker": "B",
+      "start": 2751560,
+      "text": "Aber deswegen so dieser, wie viele User kommen darauf und so. Ich kann bei Firebase gar nicht so aus dem Nähkästchen plaudern, aber wenn wir vor acht Jahren, wir haben auch eine eigene Podcast Folge mal damals dazu aufgenommen, Einer unserer ersten großen Rewrites war, als wir auf Facebook gegangen sind, weg von Firebase zu kommen. Diese erste App war mit Vue und Firebase gebaut, aber die Kosten sind uns komplett aus dem Ruder gelaufen. Eigentlich achten wir gar nicht so sehr immer auf unsere Infrastrukturkosten, aber Firebase war ein Beispiel, wo es uns komplett aus dem Ruder gelaufen ist. Bei der Menge an Usern, die wir da hatten und so wie wir es aufgesetzt haben, können wir vielleicht mal unsere Folge noch in die Show Notes packen. Wen es interessiert, da hat der Sebi, der das damals gebaut hat, ein bisschen aus dem Nähkästchen geplaudert. Ich weiß gar nicht genau, was wir da alles falsch gemacht hatten, aber so vielleicht auch, dass man mal eine Größenordnung hat. Damals Quizplanet hatte zu den Hochzeiten vier Millionen täglich aktive User auf der App drauf Und das heißt, wir hatten da irgendwie teilweise irgendwie fünf, sechstausend Requests die Sekunde. Und das waren dann schon Infrastruktur Themen. Da sind wir an die Grenzen gekommen, wie weit wir noch irgendwie einfach vertikal skalieren konnten. Unsere Datenbank in der Google Cloud, so die größte Datenbank war halt irgendwann ausgereizt. Diese Use Cases habe ich jetzt noch nie mit Nakama ausprobiert in diesem Scale, das mal irgendwie zu haben. Also wie gut die diesen Load wirklich handeln und ob sie wirklich sagen, ja, du kannst beruhigt schlafen und wir kümmern uns um den Rest, weiß ich nicht genau, aber ist natürlich schön, wenn die einem sowas wirklich abnehmen würden, wäre gut."
+    },
+    {
+      "end": 2844720,
+      "speaker": "C",
+      "start": 2825560,
+      "text": "So wie das klingt. Habt ihr also schon die Größe, dass ihr eher auf plain Datenbanken geht, Readys, irgendwelche Tools, die ihr nutzt und dann euch den Glue Code zwischendrin jetzt gesagt, ist natürlich wesentlich komplexer, aber ihr den selber schreibt und weniger auf so Services setzt wie Firebase oder auch Nakama?"
+    },
+    {
+      "end": 2863900,
+      "speaker": "B",
+      "start": 2845040,
+      "text": "Eigentlich fast gar nicht. Wir schreiben eigentlich, man kann wirklich sagen, eigentlich, man schreibt wir alles fast selbst, also Nakama, inpix setzen wir es ein, aber sonst in allen anderen Games und Pix hat relativ wenig, braucht relativ wenig Backend. So Quizplanet und wordpad sind viel Backend heavier, da das eben soziale Games sind und so, da ist alles eigentlich selbst geschrieben."
+    },
+    {
+      "end": 2881270,
+      "speaker": "C",
+      "start": 2864140,
+      "text": "Das Problem ist ja allgemein bei diesen Services wie Firebase, dass sie halt am Anfang eigentlich sehr kostengünstig sind, dir coole Features bringen, aber sobald du wirklich skalierst mit diesen Cloud Services, geht es dann meistens schon ordentlich ins Geld. Davon leben ja die Hyperscaler auch, dass sie mehr Geld mit dir verdienen über die Zeit."
+    },
+    {
+      "end": 2941750,
+      "speaker": "A",
+      "start": 2881510,
+      "text": "Genau, aber so wie ich dich verstehe, macht ihr ziemlich viel richtig, zumindest aus meiner Perspektive, nämlich so weit wie möglich vertikal skalieren, einfach eine größere Datenbank nehmen, einfach eine größere Box nehmen, größere Server anstatt horizontal, weil immer wenn du ans Schading gehst und Co. Sind halt in der Regel oft große Umbauten und das hat glaube ich auch mehr Probleme als ich sage mal langweilige Skalierung. Jetzt auch wenn man euren Podcast hört. Ihr probiert ja viel aus, ziemlich viel neue Frameworks, neue Technologien, ihr spielt viel rum. Du hast gerade gesagt, jedes eurer Game Teams kann selbst entscheiden, wie das Game gebaut wird. Gibt es denn Patterns, die ihr in der Firma einfach immer wieder kopiert, falls ihr neues Spiel startet, um ich sag mal ein Quickstart zu haben? Habt ihr Libraries, Komponenten da wo ihr Copy Paste macht, Die nehmen wir rein und also ich sag mal, das ist unser Bootstrap für ein neues Spiel und wenn wir den nutzen, sind wir innerhalb von einer Woche im App Store, zumindestens im Flight Case, ne? Wie heißt das Flight App?"
+    },
+    {
+      "end": 3126470,
+      "speaker": "B",
+      "start": 2941750,
+      "text": "Flight Testflight. Testflight, ja, es ist so eine Abwägungssache, aber wenn ich nur mit Ja oder Nein beantworten würde, würde ich eher sagen nein haben wir nicht. Also es ist, wir haben auch immer mal wieder drüber diskutiert, so auch bei unserer Größe so macht es Sinn zum Beispiel so was wie ein Plattformteam in der Firma zu haben, die sich um bestimmte Plattform Themen und unser Mantra bei Lotum ist ja Small Team, Big Impact. Wir probieren ja wirklich eigentlich so klein es geht zu bleiben und einfach möglichst gute Leute einzustellen und damit so weit zu kommen, wie es irgendwie geht. Wir sind aktuell knapp über fünfzig Mitarbeiter und der Vorteil natürlich auch an solchen kleinen Teams einer kleinen Firma ist, dass wir sehr viel über Kommunikation regeln können und sehr wenig über Prozess regeln müssen. Das ist erstmal ein Luxus, den wir haben durch die Größe, die wir an Firmen haben und im Grunde genommen ist dieses Plattform und Shared Resources über mehrere Teams hinweg eigentlich auch so ein Beispiel aus der technischen Welt. Sobald es hat auf jeden Fall, klar, wenn man sich darüber unterhält, wir sagen oft auch, es wäre irgendwie cool, wenn wir bestimmte Themen auch wir uns einfach keine Ahnung, so was wie nehmen wir das Redis Cluster Beispiel, Warum haben wir nicht ein Plattformteam, was einfach sich um Redis Gut, das ist mittlerweile kein Thema mehr, weil es jetzt auch in der Google Cloud ist, aber warum gibt es nicht ein Plattformteam, das das macht? Und wenn da irgendwas kaputt ist, kümmert sich das Team drum und ich muss mich gar nicht darum kümmern. Und im Grunde gibt es da ganz viele Komponenten, von denen du so drüber sprechen kannst, aber im Endeffekt nach jeder Diskussion war eigentlich immer unsere Antwort darauf, der Overhead, der da mitkommt, macht es nicht wett, den Speed und vielleicht den Fokus, den wir dadurch gewinnen. Das heißt, im Grunde genommen ist unser Vehikel auch da wieder Kommunikation, am Ende eher Copy Paste aus dem, was schon vorher funktioniert hat. Dann mache lieber am Anfang einmal aus den richtigen Stellen Copy Paste und setz dein Game so auf. Und Kommunikation zum Beispiel, wenn man bei aller Teams weg immer donnerstags eine Stunde einen Developer Cop, wo sich auch alle Entwickler über die Spiele hinweg über die neuesten Dinge unterhalten, zeigen, was sie Neues gemacht haben, sodass möglichst ein Shared Knowledge da ist, über was gerade so eingesetzt wird, was Best Practices sind. Natürlich gibt es trotzdem ein paar Services. Ich habe vorhin gesprochen von dem Service Lifelines, also einer, der einfach eine generische Socket Connection zu Clients aufbauen kann, worüber man einfach Events schicken kann. Diesen Service haben wir, Wir haben einen eigens geschriebenen Tracking Service, weil wir mittlerweile ein sehr hohes Tracking Volumen für unsere A B Tests haben, Firebase Analytics und sowas einfach zu teuer für uns werden würde. Da haben wir eigene SDKs geschrieben, die in den Games je nach Technologie gereust werden, haben einen generischen Service auch in der Cloud, an den einfach alle das Ganze schicken und wir haben so im Webbereich so eine kleine JavaScript Bibliothek, die so ein paar Convenience Funktionen, die man immer mal wieder nutzt, drin hat, aber so viel mehr als das gibt es eigentlich fast gar nicht. So der Rest ist zum Beispiel jetzt, wir haben jetzt wieder ein neues Projekt mit Unity aufgesetzt, setzen jetzt ein zweites um. Im Grunde genommen ist es eins, das zweite Team nutzt jetzt auch Unity. Wir haben uns mit den Entwicklern zusammen mal einen halben Tag hingesetzt, so in Summe und haben einfach darüber gesprochen, was hat funktioniert und was nicht, haben so ein bisschen Dokumentation dazu, für was wir uns entschieden haben Und ab da kann es potenziell einfach auseinanderlaufen. Und das Setup ist aber Copy Paste."
+    },
+    {
+      "end": 3152640,
+      "speaker": "A",
+      "start": 3126470,
+      "text": "Ja, ich glaube fünf Teams, fünfzig Leute sind schmaler Grad. Ob man sich dann ein eigenes Plattform Team leistet, da seid ihr vielleicht gerade so an der Schwelle, aber das möchte ich jetzt gar nicht so so stark eingehen. Auf der anderen Seite ist es natürlich auch, ich sag mal aus Entwicklerperspektive schon Luxus, oh, neues Projekt Greenfield und man kann experimentieren, was natürlich auch sehr attraktiv ist, natürlich auch in die Binsen gehen kann, aber finde ich ein interessanter Ansatz."
+    },
+    {
+      "end": 3156720,
+      "speaker": "B",
+      "start": 3152640,
+      "text": "Ob das jetzt der beste Weg ist. Es ist auf jeden Fall ein Weg, würde ich sagen. Und er funktioniert für uns."
+    },
+    {
+      "end": 3159000,
+      "speaker": "A",
+      "start": 3156800,
+      "text": "Eine Entscheidung zu treffen ist besser als gar keine, würde ich mal sagen."
+    },
+    {
+      "end": 3207530,
+      "speaker": "C",
+      "start": 3159000,
+      "text": "Von daher, wir haben ja eigentlich die ganze Komplexität jetzt schon besprochen im Frontend, im Backend, die Realtime Sachen. Also also es kommt schon sehr viel eigentlich dazu, vor allem im Vergleich zu einer ganz klassischen, simplen Web App, würde ich mal sagen. Es ist schon dieses Sprichwort Gaming ist so die Königsklasse, trifft vielleicht auch dann beim Mobile Gaming zu. Was wir jetzt noch gar nicht besprochen haben, ist so die ganze Monetarisierungsecke. Setzt ihr da auf In App Purchases, die sowieso dann von Android und iOS gemanagt werden? Habt ihr da dementsprechend auch noch Gateways angebunden? Wie monetarisiert ihr überhaupt? Ist es ein großes Thema? Ich könnte mir vorstellen, wenn die Monetarisierung mal nicht funktioniert, dann fehlt halt der Income Stream. Also ist doch sehr kritisch, dass das alles funktioniert. Kannst du mal da erklären, was ihr da so macht und was ihr auch technologisch einsetzt?"
+    },
+    {
+      "end": 3421740,
+      "speaker": "B",
+      "start": 3207690,
+      "text": "Ja, im Grunde genommen kann man sagen, bis vor zweieinhalb, drei Jahren war Monetarisierung für unseren Spieleentwicklungsalltag gar nicht so ein großes Thema, weil wir haben eigentlich fast ausschließlich über Werbung monetarisiert und wir haben eigentlich es ging nie wirklich darum, jetzt zu sagen, wir haben nie als KPI gehabt. Umsatzmaximierung. Im Grunde genommen ist es so, die KPI, die wir maximieren wollen, ist möglichst viele Lächeln in Gesichter zu zaubern. Das ist so intern so das, was wir als Main KPI haben, die wir maximieren wollen, was im Endeffekt, wenn man es runterbricht, wir wollen möglichst viele User erreichen und dadurch, dass das vorher unser Ziel war und unser Vehikel, das zu erreichen war Viralität. Also wir haben Games gebaut, die sich unter Leuten durch gute Mund zu Mund Propaganda oder durch gute virale Features, also durch Sharing Features im Endeffekt verbreitet haben und wir dann gesagt Hey, wenn wir es hinbekommen, genug Leute zu erreichen, dann folgt der Umsatz. Klar, wir haben Werbung mit drin. Wir haben ein Pattern dafür entwickelt, was wir an Werbelast für akzeptabel halten. Wir monitoren auch sehr genau, welche Werbung dann da bindet man natürlich externe Services, dafür ein Google admob oder auch viele andere App Lovin, Unity Ads. Und wir monitoren sehr genau was für Ads die da anzeigen und haben auch so einen eigenen Bad Ads Channel, wo jedes Mal, wenn wir irgendeine Werbung finden, die wir nicht OK finden, die auch blockieren. So also wir haben da alle eigene Lotum Guidelines, sind da relativ restriktiv, restriktiver als manch andere, was für Werbung wir überhaupt erlauben. Und dann war es eigentlich eine ganze Zeit lang nicht so wirklich für unseren Produktentwicklungsalltag ein Thema. So klar hat man immer mal wieder überlegt, es gibt im Grunde genommen zwei, drei vorherrschende Werbeformate. So das eine nennt man Interstitials, was sozusagen typischerweise nach bestimmten Runden einfach eine Werbung angezeigt wird, wie eine Art kurzer Break, weil du gespielt hast, vor der nächsten Runde musst du eine Werbung schauen. Dann gibt es Rewarded Videos, wo es sagt, hey, du kannst hier eine Art von Joker bekommen, dafür musst du aber dir ein Video angucken. Die unterscheiden sich im Grunde genommen anhand von Länge. Also Interstitial geht sowas zwischen drei bis maximal zehn Sekunden. Video sind wir bei dreiig Sekunden. Und das letzte Format sind Banner Ads. Gibt auch noch ein paar andere, aber so die drei großen vorherrschenden, also dass man einfach unten die ganze Zeit einen Banner innerhalb der App sieht. Banner Ads war für uns nie ein Thema im Grunde. Interstitials und Rewarded Videos waren die Formate, wie wir hauptsächlich unseren fünf und neunzig Prozent unseres Umsatzes von Lotum vor drei Jahren noch gemacht haben. Und im Grunde genommen war Monetarisierung eigentlich auch kein großes Thema bei uns. Natürlich, wenn was kaputt ist, haben wir uns beschäftigt. Einige Leute von denen ist das nur das Thema. Aber unser Produkt Entwicklungsalltag, seitdem wir seit drei Jahren ungefähr wieder mehr Native Games entwickeln und da die Wachstumsstrategie ROAS Positive User Acquisition ist, also Return on Ad Spend, so wir geben Geld für Ads aus und müssen mehr mit den Usern einnehmen, ist das natürlich schon mehr für uns Thema geworden, weil wir wollen weiterhin möglichst viele User erreichen und auf Native geht das nur wenn, wenn wir sie einkaufen. Das heißt und weil wir sie nur einkaufen können, müssen wir uns dann darum Gedanken machen, was verdienen wir mit einem einzelnen User, weil wir sie nur dann einkaufen können, wenn wir genug pro User verdienen. Vorher war dieses Was verdient man pro User? Hätte ich dir bei unseren Apps früher gar nicht sagen können, weil es mich gar nicht so sehr interessiert hat. Jetzt interessiert es mich, weil es meine kpis die nicht maximieren muss um mehr Leute zu erreichen und seitdem sind natürlich auch In App Purchases ein viel größeres Thema weil in der Realität rein AD basiert ROAS positive User Acquisition zu machen ist schwierig schaffen Leute da draußen aber der Großteil macht das über In App Purchases und da ist es so ja die kommen über die Plattform also da nutzen wir den Play Store, da nutzen wir den App Store die Purchase werden einfach über die abgewickelt da geben wir einen gewissen Teil davon ab und die Monetarisierung Strategien sind dann hybrid also wir machen immer noch trotzdem Werbung zu einem gewissen Teil aber bestimmte Dinge werden eben über In App Purchases monetarisiert Kannst du."
+    },
+    {
+      "end": 3429100,
+      "speaker": "C",
+      "start": 3421740,
+      "text": "Da irgendwie so einen Prozentsatz sagen ungefähr wo das liegt mit Ads versus wirklich Purchases?"
+    },
+    {
+      "end": 3522100,
+      "speaker": "B",
+      "start": 3429180,
+      "text": "Also der Großteil von dem Lotum Umsatz ist weit weiterhin Werbung also damit machen wir unser Geld Wir haben noch im Moment keinen Titel auf Native, der wirklich in sehr sehr großer Skalierung ROAS positiv ist zum Beispiel in vier Bilder ein Wort das haben wir von einem früher groß geworden durch Viralität haben wir es jetzt hinbekommen zu einem Game das hybrid monetarisiert ist Wir hatten schon immer in der Purchase drin aber minimalen Teil davon ausgemacht seit den letzten zweieinhalb Jahren machen wir das mehr Wir haben auch einige Kampagnen die ROAS positiv aber trotzdem ist es da so bei vier Bildern Wort ich weiß gar nicht den genauen Prozentsatz aber wir haben immer noch mehr nehmen wir über Ads ein als über In App Purchases einnehmen aber die großen Games im Markt die damit wirklich sehr sehr groß skalieren da ist das da wirst du wahrscheinlich am Ende irgendwie einen neunzig zehn Split haben oder einige die haben ja auch gar keine Ads drin weil sie wenn du jetzt im Match drei Bereich bist wo ja wirklich auch die high polished Werbung sozusagen sind wo irgendwie ein Jimmy Kimmel für Royal Match auf Mobile wer Werbung spricht die geben ja richtig Geld dafür aus die haben gar keine Werbung mehr drin, weil das so ein minimalster Teil wäre bei dem Umsatz den die machen aber so im Casual Bereich ist es untypisch gar keine Werbung drin zu haben und ich würde sagen die guten sind wahrscheinlich bei sowas achtzig zwanzig das Problem ist man kann nicht so richtig da reinschauen wie viel andere Spiele mit Ads machen man kann sehr gut über Data, was mittlerweile Sensor Tower ist, anschauen, wie viel, wie es der In App Purchase Umsatz, aber man weiß sehr wenig darüber, was die einzelnen Games wirklich mit Ads einnehmen. Deswegen kann ich dir gar nicht ganz genau sagen, was da draußen so der typische Split ist."
+    },
+    {
+      "end": 3554450,
+      "speaker": "A",
+      "start": 3522180,
+      "text": "Ach, da blüht mein Wirtschaftsinformatikerherz, wundervoll, vielen lieben Dank. Du hast ROAS ein paar mal erwähnt, Return on Advertising Spend. Ich habe gedacht, ich gebe mal ganz kurz ein Beispiel, wie das berechnet wird. Werbeumsatz durch Werbeartikel, Ausgaben und das Ergebnis ist ein Faktor, Das bedeutet, du gibst fünf hundert aus für Werbung und machst dadurch einen Umsatz von fünf tausend, dann ist der Faktor zehn, das ist, würde ich sagen, ein ganz guter Faktor und du kannst einfach dauerhaft mehr Geld in Werbung schießen. Danke dafür, Ja, kein Problem."
+    },
+    {
+      "end": 3587830,
+      "speaker": "B",
+      "start": 3554450,
+      "text": "Vielleicht noch als Ergänzung dazu, man nimmt auch immer, wenn man darüber redet, einen Zeitraum damit rein. Also typischerweise betrachten wir den Zeitraum von einem halben Jahr. Also wir sagen eigentlich wollen wir nach einem halben Jahr ein hundert achtzig Tagen ROAS positiv sein, das heißt ein hundert achtzig Tagen soll dieser Schwellwert von was haben wir ausgegeben zu was haben wir eingenommen überschritten werden. Das ist auch so typisch, je nachdem wie risikobereit man ist, so neunzig, ein hundert achtzig, drei hundert sechzig Tage sind so die typischen Dinge, die im Gaming Bereich sich angeschaut werden und je nachdem wie viel man auf der hohen Kante hat, um dieses Risiko einzugehen und wie risikobereit man ist, kann man diesen Zeitraum wählen."
+    },
+    {
+      "end": 3623090,
+      "speaker": "A",
+      "start": 3587910,
+      "text": "Wenn wir mal jetzt ROAS als Standard KPI wählen und gar nicht Monetarisierung in den Fokus rücken, würde ich gerne von von dir wissen, Ab wann ist ein Spiel erfolgreich? Also welche Metriken oder kpis sind für euch entscheidend, dass ihr sagt, das Spiel erfolgreich? Ist es wirklich? Weiß ich nicht, Anzahl Daily active, nennt man das User oder Player bei euch? Weiß ich nicht, oder? Naja, vielleicht kannst du uns anhand ein Beispiel durchführen, ab wann ihr sagt, okay, dieses Spiel ist an dieser KPI erfolgreich oder dann sagen wir ist erfolgreich und bei dem anderen Spiel oder wann stampft."
+    },
+    {
+      "end": 3625090,
+      "speaker": "C",
+      "start": 3623090,
+      "text": "Ihr dann Spiele auch ein oder macht ihr das überhaupt?"
+    },
+    {
+      "end": 3879520,
+      "speaker": "B",
+      "start": 3625570,
+      "text": "Ja, interessante Frage und am Ende gar nicht so leicht zu beantworten. Wir verfolgen Spiele eigentlich nur, wenn wir glauben, wir können damit mehr als zehn Millionen Euro im Jahr einnehmen, wenn wir das Potenzial dafür sehen, dass das möglich ist, nur dann verfolgen wir ein Spiel, das ist so immer so ein bisschen so der Part, okay, wenn wir da nördlich davon sind oder glauben da hinzukommen, dann würden wir es machen. Das heißt, da ist dann sogar eher der Umsatz der Faktor, den wir da irgendwie mit reinnehmen, Einfach nur so, dass man mal nach Bauchgefühl, könnte das damit möglich sein, ja oder nein? Und dann ist es so, dass wir sonst eigentlich immer von einem Product Platform Fit sprechen. Also wann haben wir das Gefühl, dass wir ein Produkt entwickelt haben, was genau auf die Plattform, auf der wir dann sind, zugeschnitten sind und wirklich in ein großes Wachstum kommen kann. Im Grunde genommen geht es uns da immer ein bisschen um das Wachstumspotenzial. Und wenn wir jetzt mal das Beispiel Beispiel Native nehmen, weil ich glaube, das ist das, was für die meisten Leute da draußen irgendwie greifbar ist, wo wir sagen, da wachsen wir über ROAS positive User Acquisition, dann sind die Erfolgsgrössen, in denen wir denken so ein bisschen nach täglichem Spend für User Acquisition, den wir ausgeben können. Wir sagen so, es gibt so die Kategorien Dollar am Tag, die wir ausgeben können, um User einzukaufen und das Ziel, was wir auf jeden Fall haben, wäre ein Titel zu bauen, der einen Spend von Plus pro Tag hat, also dass wir Dollar am Tag ausgeben können und damit ROAS positiv User einkaufen können. So das würden wir als einen sehr großen Erfolg betiteln, so zwischen und ist es trotzdem. Also jetzt kein Spiel, was wir einstampfen würden, aber so der wirklich absolute Erfolg, an dem wir auch aktuell, den wir aktuell anstreben wären so ein Spend von Plus. In wie viele User sich das übersetzt, hängt sehr stark vom Spielprinzip ab. Also wenn das ein Match Titel ist, wo wir gegen Royal Match Candy Crush ankämpfen müssen die da den UA Markt beherrschen und wird das sehr, sehr schwierig und dann auch noch US, dann bist du halt bei mehreren Euro pro User, den du ausgeben musst. Wenn du das Ganze in vielleicht ein neues Spielkonzept hast, wo der UA Markt gar nicht so umkämpft ist, dann sind das ganz andere Nutzerzahlen, die da am Ende irgendwie rauskommen, mal so im Vergleich. Das bedeutet bei sowas wie erfolgreich im, also wir probieren immer erfolgreich im US Markt zu sein, da bist du bei den erfolgreichen Titeln, die auch oben im Play Store mit drin sind, bei ungefähr so Installs pro Tag User, die deine App runterladen, allein in den USA. Das ist schon eine sehr erfolgreiche Kenngröße. Und im Endeffekt, wenn du es auf eine KPI runterdampfst, wann bist du erfolgreich? Wenn du mit einem sehr hohen UA Spend, sagen wir ein hundert ROAS positiv über ein hundert achtzig Tage bist, so was sich das in Daily Active User übersetzt, da bist du dann schon bei mehreren Millionen Daily Active User, wahrscheinlich sowas wie bei irgendwas zwischen fünf und zehn Millionen Daily Actives. So das ist ungefähr so sehr hochgegriffenes Ziel, aber dazwischen ist es sehr nuanciert und wir machen so lange an Games weiter, bis wir glauben, dass wir diese ROAS Positivität nicht mehr erreichen können. Und welche KPI da mindestens genau erreicht werden muss, hängt am Ende immer von dem Potenzial ab, was wir glauben, was in so einer App drinsteckt, was für Ideen wir auch noch haben, die kpis zu verändern. Aber es ist eine Diskussion, die wir häufiger mal führen. Was ist denn genau der Wert? Das ist schwierig zu sagen. Wenn was sehr schlecht ist, dann merkst du es sehr schnell nach den ersten Tests, so nach einem ersten MVP, was wieder einzustampfen, geht oftmals auch relativ schnell. Also in meinen ersten drei Wochen bei Lotum habe ich vier Wochen an einem Game gearbeitet, dann wurde es gelaufen und irgendwie ich war schon so richtig freudig, oh ja, mal gucken wie es läuft und gefühlt hat unser Product Owner nach zwei Tagen schon gar nicht mehr drüber geredet, weil die KPI so schlecht waren, dass wir dann irgendwie wir schon gar nicht mehr daran weitergemacht haben. Bei den Native Titeln ist das Ganze ein bisschen schwieriger. Also da sind schon die Zeitframes zum Beispiel an dem einen Game, an dem wir jetzt gerade entwickeln, entwickeln wir schon circa ein Jahr. Wir sind da auf jeden Fall noch eine ganze Ecke weit weg von ROAS positiv und wir haben bestimmt auch, ich würde sagen, der erste Zeitpunkt, wo wir vielleicht sagen, nee, das ist, ist es nicht, ist wahrscheinlich Ende des Q zwei tausend sechs und zwanzig da sehe ich also so nach anderthalb Jahren, dass wir dann vielleicht sagen, nee, aber ist auch ein sehr ambitioniertes Projekt."
+    },
+    {
+      "end": 3888560,
+      "speaker": "A",
+      "start": 3879520,
+      "text": "Wie viel Zeit investierst du in die Datenanalyse? Wie oft schaust du oder wie lange schaust du pro Tag, pro Woche auf die, auf die Statistiken?"
+    },
+    {
+      "end": 3944800,
+      "speaker": "B",
+      "start": 3888560,
+      "text": "Viel. Wir schauen da alle sehr viel rein. Also in die Daten zu schauen, ist eine tägliche Aufgabe von mir so. Also allein immer die Frage, wen du fragst, wenn du unsere Business Intelligence Ansprechpartner fragst, die hätten eigentlich am liebsten, dass wir nach dem errechneten, wann es signifikant positiven Datum ist, erst nach bestimmten Wochen überhaupt das erste Mal diese Dashboards öffnen und vorher überhaupt gar nicht rein blicken und erst dann überhaupt Entscheidungen treffen. In der Realität ist es natürlich so, dadurch, dass wir so viele User haben, kann man bestimmte Trends natürlich schon vorher erkennen, auch wenn sie vielleicht noch nicht statistisch signifikant sind. Wenn man dann sich überlegt und halt weiß, wie funktioniert die App, kann man schon auch auf statistisch nicht signifikanten Daten Hypothesen treffen, woran bestimmte Entwicklungen wohl liegen könnten Und prozentual gesehen, ich würde schon sagen, macht also mich mit den Daten zu beschäftigen, macht wahrscheinlich zwanzig Prozent meines Jobs aus. Das ist schon. Also wir gehen sehr, sehr datengetrieben vor. Wir testen ja auch alles ab. Viele der Antworten stecken in Daten."
+    },
+    {
+      "end": 3971230,
+      "speaker": "A",
+      "start": 3945040,
+      "text": "Die Anekdote zu den Business Intelligence Leuten kann ich dir zustimmen. Immer wenn ich mit dem Team arbeite, was super ist, gar keine Frage. Dann ist auch Ja, aber Moment, da musst du das mit einbeziehen und das mit einbeziehen. Ich glaube, das sind halt Mathematiker. Du sagtest auch gerade eine Hypothese. Was war denn die überraschendste Erkenntnis, die ihr durch A B Tests gewonnen habt oder durch Datenexperimente gewonnen habt? Da wo du sagst, boah, damit hätte ich ja gar nicht gerechnet. Ich war ein hundert Prozent auf der."
+    },
+    {
+      "end": 4126380,
+      "speaker": "B",
+      "start": 3971230,
+      "text": "Anderen Seite, kriegst gar nicht mehr richtig zusammen. Das genaue Beispiel aber wovon ich dann doch immer mal wieder überrascht bin, sind Tests, wenn man sie doch macht, was einfach kleinere UX Tweaks sind. Wir hatten das Spiel the Test, was wir auf Facebook laufen haben, was so ein Freundschaftstest ist, was ein auch ein Quiz ist, aber die Quizfragen sind nicht allgemein Wissensfragen, sondern Fragen über einen selbst. Du musst, Andi, du musst eine Frage über dich beantworten, was deine Lieblingsfarbe ist und Wolf, wie müsste das dann herausfinden und tippen? Das geht dann auch noch eine ganze Ecke persönlicher in Liebe und Beziehung und so. Und da wurden auch schon einige Paare haben sich darüber gefunden, später geheiratet deswegen und so. Sehr sehr interessant. Und da hatten wirklich so ein paar Tests, wo es wirklich ich müsste das Beispiel jetzt noch mal raus, aber am Ende nur die Beschriftung eines Buttons, welcher Text steht auf einem Button, einen Unterschied von irgendwie zehn Prozent gespielten Runden ausgemacht hat. Ich kriege nicht mehr ganz zusammen, was die genaue Beschriftung war, aber einfach so dieses so krass, was hat dieser eine Text da irgendwie ausgemacht. Das ist eher, was mich häufig, was mich dann sehr überrascht, so wenn es, klar, wenn es die großen Moves sind, so haust du auch mal in die Binsen. Es gab jetzt glaube ich, keine, die ein komplett negativ überrascht haben, aber natürlich viele Features, in denen du auch monatelang entwickelt hast und am Ende sie einfach wieder ausbauen musstest. Also die Live Show, was ich vorhin immer wieder als Beispiel Ich liebe diese Live Show immer noch sehr. Ich fand dieses Feature so cool, jeden Sonntag oder generell an jedem Wochentagabends um acht uhr dazusitzen und gegen vier tausend andere Deutsche dieses Quiz zu spielen. In der Realität muss man aber sagen, es hatte keinen Impact. Wir haben es einfach wieder ausgebaut. Wir haben da was technisch Hochkomplexes irgendwie hingestellt, was richtig Spaß gemacht hat zu spielen. Aber wenn man ganz ehrlich auf die kpis geblickt hat, hat es nichts gebracht. Es war schön, aber das Engagement danach ist superschnell wieder verflogen und war einfach nichts gegen unseren sozialen Loop. Es hat keinen großen Mehrwer gebracht. Oder auch dieses Party, was ich vorhin meinte, dass man sich am Abend zusammensetzt, fünf Leute in den gleichen Raum gehen und dann live miteinander irgendwie einen Quiz machen. Das hat sich total cool angefühlt, total Spaß gemacht, aber es war einfach an der Plattform und an unserer Userbase vorbei. Ich glaube, sowas hat man dann häufiger mal so die absolute Überraschung, Das hätte ich jetzt ja gar nicht gedacht und das war überhaupt nicht im Ergebnishorizont bei mir drin. Das sind dann eher so diese Kleinigkeiten, wo man glaube ich, manchmal den Impact unterschätzt. Und in großen Dingen gehört es halt einfach zum Job, dass du, wie viele Sachen ich schon weggeworfen habe. Also auch das Snapchat Beispiel vorhin, Wir haben dreiviertel Jahr eine App entwickelt, wir waren zwei Wochen vor Soft Launch und dann sehen wir die Keynote von Snapchat und die sagen einfach, sie stampfen komplett alle Games ein und denkst dir so, ja, ich war gerade im Urlaub und denkst, ja, ich habe sieben Monate für nichts entwickelt. Das ist ein sehr negatives Beispiel. Aber sonst die meisten Sachen testen wir und da musst du trotzdem damit umgehen können, es einfach wieder in die Tonne zu drücken."
+    },
+    {
+      "end": 4132340,
+      "speaker": "C",
+      "start": 4126380,
+      "text": "Du hattest eh schon das positive Beispiel mit der Beziehung. Ich hab mir gedacht, du biegst jetzt schon in die Richtung ab, dass da Beziehungen auseinandergegangen sind."
+    },
+    {
+      "end": 4138200,
+      "speaker": "B",
+      "start": 4133560,
+      "text": "Fragen bzw. Antworten, zumindest hat uns das niemand zurückgemeldet. Kann bestimmt auch sein."
+    },
+    {
+      "end": 4140800,
+      "speaker": "C",
+      "start": 4138840,
+      "text": "Geht immer in beide Richtungen üblicherweise."
+    },
+    {
+      "end": 4141480,
+      "speaker": "B",
+      "start": 4140800,
+      "text": "Definitiv."
+    },
+    {
+      "end": 4184590,
+      "speaker": "C",
+      "start": 4141880,
+      "text": "Gut, jetzt haben wir schon einen sehr guten Überblick bekommen, wie komplex auch die ganze Game Entwicklung ist. Und viele finden darum ja die Game Entwicklung auch so super interessant, weil sie so vielseitig ist. Also vom Design, vom Game Loop bis zum ganzen technischen und Technologischen, was dahintersteckt. Was würdest du denn jetzt so dem Nachwuchs empfehlen? Also ich unterrichte jetzt auch gerade wieder an der Uni und ist so ein Klassiker, alle wollen irgendwie Spiele programmieren. Wenn jetzt jemand sagt, er würde gern in diese Richtung gehen, in diese Mobile Gaming Entwicklung, was würdest du dieser Person raten, abgesehen davon auf die Lotum Job Page zu gehen und mal nachschauen, ob ihr einen Job frei habt, Was würdest du so empfehlen? Wie kommt man in dieses Thema besser hinein? Wie startet man so los?"
+    },
+    {
+      "end": 4268960,
+      "speaker": "B",
+      "start": 4184590,
+      "text": "Ich glaube, wie in so vielen Themen auch, Ich meine, das Schöne ist dadurch, dass Gaming ja einfach so super zugänglich als Thema, so ist es einfach erstmal zu sagen, legt los. Also ich meine, gerade auch, wenn man jetzt sagt, man macht native Entwicklung für Mobile und irgendwie sowas wie probiert mal Unity aus, ist es wirklich, wenn man irgendwie ein bisschen Entwicklungserfahrung hat, super zugänglich. Das Schöne ist ja, also irgendwie Game Ideen hat ja gefühlt jeder so ein bisschen so irgendwie, was könnte man ein Spiel sein irgendwie, also einfach da seine Kreativität so ein bisschen auszuleben. Und ich würde erst mal sagen, wir haben jetzt beispielsweise auch gerade wieder jemanden eingestellt, jetzt bei Lotum, eigentlich juniorig, aber hat einfach parallel zum Studium mit einem Kumpel zusammen einfach immer wieder Games entwickelt so und haben das für sich als ihr Hobby gehabt und wollte eigentlich in der Unternehmensberatungsrichtung, bis er dann gemerkt hat, ne, irgendwie hat mir dieses Hobby dann doch mehr Spaß gemacht, als jetzt hier in die Unternehmensberatung zu gehen. Und eigentlich ist echt der Part, legt mal los. Aber vielleicht auch jetzt die Brücke zu dem, was ich vorher bei der Deutschen Bank gemacht habe. Eigentlich ist das, was ich bei der Deutschen Bank gemacht habe, gar nicht so groß anders zu dem, was ich Ich mache das nur mit sehr, sehr viel weniger Prozess. Ich mache ein cooleres Produkt, aber ansonsten entwickle ich Apps, kann man sagen. So sind halt Spiele Apps, aber es ist gar nicht so eine groß andere Welt. Also wenn du irgendwie Die haben eine Begeisterung dafür, dich einfach mit Technologien zu beschäftigen und probier Dinge aus und das wäre eigentlich das, was ich mitgeben würde. Es ist gar nicht so speziell für die Games Industrie."
+    },
+    {
+      "end": 4278050,
+      "speaker": "A",
+      "start": 4269200,
+      "text": "Ich muss erst mal ganz kurz eine Lanze brechen. Und der Wolfgang Wir haben noch gar nicht das Thema AI besprochen und wir lassen das jetzt auch einfach weg."
+    },
+    {
+      "end": 4279370,
+      "speaker": "C",
+      "start": 4278050,
+      "text": "Wir haben aber gedacht, wir schaffen."
+    },
+    {
+      "end": 4301580,
+      "speaker": "A",
+      "start": 4281130,
+      "text": "Wir schaffen jetzt einfach mal eine ganze Episode ohne dieses AI KI Buzzword zu droppen, weil es ist ja heutzutage wirklich schwer, eine Podcast Episode zu finden, wo das Thema nicht vorkommt, weil theoretisch kannst du eigentlich jedes Thema mit der Frage starten, wie was hat denn eigentlich AI für einen Einfluss auf Casual Games, Puzzle Games? Generiert ihr zum Beispiel die Fragen oder die Wortblitze oder ähnliches?"
+    },
+    {
+      "end": 4305740,
+      "speaker": "B",
+      "start": 4302220,
+      "text": "Wir können gerne auch wenn ihr noch eine Stunde Zeit habt, wir können das Thema gerne noch aufmachen."
+    },
+    {
+      "end": 4329980,
+      "speaker": "A",
+      "start": 4307020,
+      "text": "Die Antwort ist ja, die Antwort ist überall ja. Aber kommen wir zu dem Punkt, wo alle Leute drauf gewartet haben auf den sogenannten Pick of the Day. Fabi, Das ist eine neue Kategorie bei uns und wir wollen sie nicht kopieren, wir wollen sie nicht stehlen. Deswegen überlasse ich dir mal ganz kurz den Too long didn't read Pitch, den ersten Satz des Wikipedia Artikels zum Thema Pick of the Day."
+    },
+    {
+      "end": 4401180,
+      "speaker": "B",
+      "start": 4329980,
+      "text": "Im Grunde genommen ist ein Pick of the Day. Es kann ein kleines Tool sein, es kann ein Newsartikel sein, es kann ein Blogbeitrag sein, irgendwas, was einem in letzter Zeit über den Weg gelaufen ist und wo man irgendwie dachte, ach, das ist doch cool, das möchte ich gerne jemandem erzählen. Im besten Fall hat es was mit dem Thema an sich zu tun, über die Podcast Folge gegangen ist, aber es kann auch gerne etwas anderes sein. Bisschen so kleine Nitpick, eine App. App ist es häufiger mal Tool oder Website oder Blog. Ich mache mal ein Beispiel und zwar habe ich gerade, weil wir AI jetzt nicht gemacht haben, aber ich habe ein kleines Nitpick und zwar immer so ein bisschen diesen ganzen Themen hinterherzukommen. So was gibt es denn da Neues in der AI Welt? Da draußen super viele Quellen, gefühlt kommt man gar nicht hinterher Und gestern kam ich noch auf einen kleinen, wie so eine Art Newsletter Zusammenfassung, der automatisch irgendwie alle möglichen Subreddits durchgeht, alle möglichen Twitter Feeds und eine echt gute Zusammenfassung liefert darüber, was so die letzten Tage passiert ist, die wir auch selbst nutzen, um unsere AI News vorzubereiten. Die heißt Newsletter. Das finde ich wirklich mega gut zusammengefasst und ich merke es immer selbst irgendwie da hinterherzukommen. So dadurch, dass AI nicht mein Hauptjob ist, finde ich immer relativ schwierig und das ist echt super gute Zusammenfassung darüber, was da draußen gerade passiert ist, fand ich, habe ich mich immer schwer mitgetan, eine gute Newsquelle dafür zu finden und die finde ich sehr gut."
+    },
+    {
+      "end": 4411140,
+      "speaker": "A",
+      "start": 4401340,
+      "text": "Stark füge ich Ihnen die Show Notes hinzu. Der Wolfgang hat währenddessen, während du gesprochen hast, schon gegoogelt und gegrübelt und so weiter. Wolfgang, brauchst du noch Zeit oder hast du noch Peak of the Day?"
+    },
+    {
+      "end": 4416060,
+      "speaker": "B",
+      "start": 4411140,
+      "text": "So läuft es bei uns übrigens auch immer teilweise den Leuten am Ende noch mal Zeit zu geben, parallel zu suchen."
+    },
+    {
+      "end": 4419300,
+      "speaker": "C",
+      "start": 4416060,
+      "text": "Ich hab ganz ganz viele, aber jetzt will ich ja mal zuerst deine, orientiere."
+    },
+    {
+      "end": 4523160,
+      "speaker": "A",
+      "start": 4419300,
+      "text": "Mich an dem, was Fabi gesagt hat. Und zwar sollten wir natürlich im besten Falle nah am Podcast Thema bleiben. Und das ist jetzt so eine so eine Art shameless Plug, aber auch wirklich Pick of the day, eine geile Sache. Und zwar kleine Backstory. Vor einiger Zeit habe ich mal in unsere Discord Community gepackt, Hey, ich will abends mal ein bisschen relaxen, will mir aber keine Konsole kaufen, habe da mal irgendwie so ein cooles Game, was ich einfach mal für zwei Stunden anmachen kann und wieder ausmachen kann, wo ich nicht so süchtig von werde. World of Warcraft hat sehr hohes Suchtpotenzial bei mir, muss ich zugeben. Und dann bin ich wieder Monate weg und da kamen wirklich coole Vorschläge. Und zwar habe ich im Speziellen Spiele für Softwareentwickler und Softwareentwicklerinnen gesucht, so was wie Factory und so weiter und so fort. Und dann habe ich ein paar Einsendungen bekommen und wir haben das auch im Podcast hier besprochen und dann noch mehr Einsendungen bekommen. Und daraus habe ich jetzt eine Liste von Spielen für Softwareentwicklerinnen gemacht und ein paar Highlights. Die Liste findet ihr in den Shownotes. Siebzehn Spiele, ein paar Highlights. Zum Beispiel musst du bei dem Spiel the Farmer was Replaced so eine Art Python Code schreiben, um wirklich Landwirtschaft zu automatisieren. Also das ist das Spiel. Es gibt Spiele wie zum Beispiel Space Traders, das hat gar keine UI, das ganze Spiel und deine ganzen Elemente kontrollierst du nur via HTTP APIs und die Community hat verschiedene UI und grafische Elemente obendrauf gesetzt und nur solche Spiele sind da. Also wer wirklich Bock hat auf Coden und auf Spielen und wirklich ganz crazy shit, kann ich euch nur empfehlen. Diese Liste haben wir auch auf der Engineering Kiosk Dev Seite Spiele für Softwareentwickler packe ich aber auch noch in die Shownotes. So und jetzt überlasse ich dem Wolfgang den Pick of the Day."
+    },
+    {
+      "end": 4612730,
+      "speaker": "C",
+      "start": 4523720,
+      "text": "Ich bin jetzt wahrscheinlich der Buhmann, weil ich komme mit einem Pick of the of the Day daher, der vielleicht ein gewisser Gegenpol zu dem ganzen Mobile Gaming ist. Und zwar haben vielleicht paar Leute mitbekommen, vor paar Tagen gab so einen Artikel auf Spiegel, bei denen am Ende vom Artikel noch dieses Snippet mit dabei war von chatgpt. Soll ich dir den Artikel journalistischer formulieren oder in einem lockeren Stil oder sowas? Es war noch unten mit dabei und ein Freund von mir hat sich dann beschwert, sollte im Spiegel natürlich nicht passieren und eben dann auch gefragt, wie viel er eigentlich Geld hat ausgibt für Qualitätsjournalismus. Er hat dann gemeint, ja eigentlich gar nichts. Und darum ist mein Big of the Day ein journalistisches Produkt Und zwar seit ein paar Tagen gibt es bei uns eine Plattform, die sich jetzt AT nennt, ist ein journalistisches Angebot, Audio First, das heißt man kann das super hören, sind ein bisschen tiefergehende Artikel zu Themen. Das Ganze ist eigentlich kopiert von dem dänischen Modell Z Land oder Z, also für eine jüngere Generation Audio First. In der App kann man tiefergehende journalistische Recherchen konsumieren und vielleicht kann man in Zukunft auch einfach einen Teil von seiner Gaming Zeit auch in so ein journalistisches Produkt investieren, auch wenn jetzt Fabi wahrscheinlich eher dagegen ist, weil der hätte ja lieber, dass wahrscheinlich mehr User die Games benutzen. Aber nachdem wir jetzt schon eine ganze Stunde über Games gesprochen haben, so ein kleiner Gegenpol zu dem Ganzen."
+    },
+    {
+      "end": 4624650,
+      "speaker": "B",
+      "start": 4613130,
+      "text": "Ich habe schon gemeint, Entertainment ist eine große Kategorie und von daher auch Journalismus gehört dazu, gegen die wir konkurrieren. Von daher gut investierte Zeit unterschreibe ich auf jeden Fall. Also auch wenn ihr dann weniger Games."
+    },
+    {
+      "end": 4632210,
+      "speaker": "C",
+      "start": 4624650,
+      "text": "Spielt, vielleicht kommt ja in Deutschland auch mal so eine Plattform. Also ich finde die Idee ganz cool an sich und halt mit wenig Artikeln und qualitativen Artikeln."
+    },
+    {
+      "end": 4671110,
+      "speaker": "A",
+      "start": 4632210,
+      "text": "Fabi, vielen lieben Dank für deine Zeit. Die letzte Stunde hatte für meinen Kopf eine sehr hohe Informationsdichte und ich schaue mir auch gleich mal noch an, welche Mobile Games ich auf meinem Telefon installiert habe und wenn ich die öffne, werde ich mit hoher Wahrscheinlichkeit an dich denken und auch mal so ein bisschen an die Sachen, die wir besprochen haben. Welche Technologie steckt dahinter, vielleicht mal irgendwie so ein Proxy dazwischen hängen, was nutzen die vielleicht Karma oder spacetimedb oder ähnliches, aber auch die Monetarisierung. Und ja, vielen Dank. Ich habe sehr viel über Mobile Games gelernt. Ist nicht mein Metier und wer hätte es gedacht, ich würde gerne auch mal eins schreiben, aber naja, man hat halt nur vier, vier und zwanzig Stunden pro Tag und schlafen muss man leider auch noch."
+    },
+    {
+      "end": 4700920,
+      "speaker": "C",
+      "start": 4671350,
+      "text": "Was ich einfach immer super spannend finde, ist, dass es technologisch einfach so vielseitig ist. Also du hast die ganze Palette von irgendeinem Metathema, von einem Game Loop, von Design, von der Geschichte bis hin zum tiefsten technologischen Thema, wo es wirklich um Realtime geht. Wie kann ich das abbilden? Also du hast alle Möglichkeiten und das ist Gaming an sich schon super interessant meiner Meinung nach. Also Technologie gesehen. Bin immer noch der Meinung, es ist schon die Königsklasse, wenn man in den Tech Themen unterwegs ist."
+    },
+    {
+      "end": 4712760,
+      "speaker": "B",
+      "start": 4700920,
+      "text": "Andi, Wolfi, vielen Dank, dass ich da sein duffel. Mir hat auch super viel Spaß gemacht. Beim nächsten Mal können wir das KI Thema vielleicht aufmachen, dann können wir die nächste Stunde füllen. Basetimedb habe ich mir direkt mal aufgeschrieben, das werde ich mal bei uns im Developer Channel teilen, mal schauen, ob es bei uns demnächst eingesetzt wird."
+    },
+    {
+      "end": 4723880,
+      "speaker": "C",
+      "start": 4712760,
+      "text": "Und wenn sonst jemand noch irgendwo Ideen, Tools oder sonstige Dinge hat zu dieser ganzen Welt, schaut vorbei bei uns im Discord Channel und droppt es mal und natürlich auch gern jegliches Feedback zu dieser Episode."
+    },
+    {
+      "end": 4743220,
+      "speaker": "A",
+      "start": 4723880,
+      "text": "Ja, und etliche Links, die wir auch erwähnt haben, findet ihr in den Shownotes, zum Beispiel die Programmiert selbst haben auch ein Discord Server, soviel ich weiß. Und falls ihr Fabi ein paar Fragen stellen wollt, schaut gerne auch den Programmierbar Discord Server, aber auch sowas wie Pixijs, Nakama, Firebase, Google admob wurde erwähnt, ROAS und natürlich auch die Pick of the."
+    },
+    {
+      "end": 4747980,
+      "speaker": "C",
+      "start": 4743220,
+      "text": "Days und das KI Thema überlassen wir euch bei der Programmierbar. Ihr seid da auch super tief drinnen."
+    },
+    {
+      "end": 4749740,
+      "speaker": "B",
+      "start": 4747980,
+      "text": "Ja, die News könnt ihr euch gerne anhören."
+    },
+    {
+      "end": 4751740,
+      "speaker": "A",
+      "start": 4749740,
+      "text": "Das war's von uns. Wir hören uns nächste Woche."
+    },
+    {
+      "end": 4753340,
+      "speaker": "B",
+      "start": 4751740,
+      "text": "Bye bye. Ciao, ciao."
+    }
+  ],
+  "webhook_auth": false
+}
