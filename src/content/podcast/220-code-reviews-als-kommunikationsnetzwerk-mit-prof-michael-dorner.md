@@ -85,10 +85,10 @@ speaker:
 spotify: https://open.spotify.com/episode/2eLPRXzFmFeeRgTnuiRtet
 tags:
 - Software Engineering
-- Software Qualität
+- "Software Qualit\xE4t"
 - Interview
-title: "#220 Code Reviews als Kommunikationsnetzwerk mit Prof. Michael Dorner"
-transcript_slim: ""
+title: '#220 Code Reviews als Kommunikationsnetzwerk mit Prof. Michael Dorner'
+transcript_slim: src/data/transcripts/220-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=r5Pq988T2Fw
 
 ---
