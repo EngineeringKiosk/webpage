@@ -12,6 +12,7 @@ import { Image } from "astro:assets";
 import { formatDateWithoutWeekday, formatTime, formatDateCustom } from '../../../scripts/date.js';
 import { getNextMeetup } from '../../../scripts/meetups.js';
 import Sponsors from '../../../components/meetup-alps/Sponsors.astro';
+import ImageSlider from '../../../components/meetup-alps/ImageSlider.astro';
 
 // Current Meetup
 const bufferDays = 2 // wait 2 days after meetup before showing next meetup
@@ -26,7 +27,17 @@ let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
 let description = `Tech Meetup in Innsbruck (Next: ${dateString}): Brings together tech enthusiasts, engineers, developers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
+// Dynamically import all images from the slider directory
+const imageModules = import.meta.glob('../../../images/meetup-alps/slider/*.{jpg,jpeg,png,webp}', { eager: true });
+
+// Prepare images array for the slider by processing the dynamic imports
+const sliderImages = await Promise.all(
+  Object.entries(imageModules).map(async ([path, module]) => ({
+    src: (module as any).default,
+    alt: "",
+    title: ""
+  }))
+);
 
 ---
 
@@ -114,7 +125,11 @@ const alpsImage = (await import('../../../images/meetup-alps/ibk.jpg')).default;
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<Image class="relative rounded-7xl" src={alpsImage} alt="View on Innsbruck" title="View on Innsbruck" />
+									<ImageSlider 
+										images={sliderImages} 
+										autoSlideInterval={2000}
+										className="relative rounded-7xl"
+									/>
 								</div>
 							</div>
 						</div>
