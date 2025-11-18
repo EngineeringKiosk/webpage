@@ -99,8 +99,8 @@ tags:
 - Backend
 - Software Engineering
 - Interview
-title: "#221 Mobile Game Entwicklung mit Fabi Fink von Lotum"
-transcript_slim: ""
+title: '#221 Mobile Game Entwicklung mit Fabi Fink von Lotum'
+transcript_slim: src/data/transcripts/221-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=sAN2jfEd5hM
 
 ---
