@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/a3454224-e5a4-4270-87ab-de954b876649/engineering-kiosk-222-solid-in-go-js-co-passt-das-noch-zur-modernen-software
 apple_podcasts: https://podcasts.apple.com/us/podcast/222-solid-in-go-js-co-passt-das-noch-zur-modernen-software/id1603082924?i=1000737179969&uo=4
 audio: https://audio1.redcircle.com/episodes/52b65913-eb65-473e-9e5c-50f89a6b4ec9/stream.mp3
 chapter:
