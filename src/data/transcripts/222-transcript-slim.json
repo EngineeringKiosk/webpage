@@ -1,0 +1,932 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4515,
+  "audio_url": "https://cloud.inlupus.at/s/DHibEW5awKiZJAJ/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9581086,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "194bf00a-062a-400a-91cb-1def4a639fe8",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 22480,
+      "speaker": "A",
+      "start": 3120,
+      "text": "Nach zwei hundert zwei und zwanzig Episoden könnte man meinen, dass uns langsam die Themen ausgehen, Doch dem ist nicht so. Wer uns schon ein bisschen länger hört, weiß, wie wir Themen auswählen. Wir haben mehrere Arten, aber eine Art ist zum Der Wolfgang pitcht mir ein Thema und da muss ich ja Nein, weil wir müssen beide irgendwie ein bisschen davon überzeugt sein."
+    },
+    {
+      "end": 26600,
+      "speaker": "B",
+      "start": 22480,
+      "text": "Das gibt es übrigens auch umgekehrt. Du darfst auch Demon pitchen, ist nicht nur meine Seite."
+    },
+    {
+      "end": 157230,
+      "speaker": "A",
+      "start": 26600,
+      "text": "Ja, das ist richtig. Und wir haben beide immer Probleme damit, weil wir entwickeln uns seit Jahren in eine andere Richtung. Manchmal holt der Wolfgang ein Thema raus, da falle ich irgendwie schon in den Schlaf oder mir fallen schon die Augen zu. Und das heutige Thema ist so eins. Als er es gepitcht hat, habe ich gedacht boah, ich bin rückwärts wieder aus dem Slack Channel gegangen. Es geht um die Solid Prinzipien. Und da habe ich mir gedacht, dass euch nicht auch die Augen zufallen. Machen wir eine etwas andere Art von Intro, nämlich die vielleicht nicht ganz offizielle Geschichte von Solid, so wie sie vermutlich nicht passiert ist, aber hätte passieren können. Also hör gut zu, Wolfgang. Es war einmal in den späten er Jahren, einer Zeit, in der Java neu war, C Entwickler noch in der Zeigerarithmetik starben und Webseiten aus Marquis Text bestanden. Da saß Robert C. Martin, auch bekannt als Uncle Bob, an seinem Schreibtisch und dachte, ich habe so viel schlechten Code gesehen, ich sollte irgendwas dagegen tun. Und so begann er, Regeln niederzuschreiben, die helfen sollten, Code lesbarer zu machen und wartbarer und testbarer und und überhaupt deutlich besser. Leider kam der Teil, an dem er etwas erfinden wollte, das niemand falsch verstehen kann, zu spät. Uncle Bob schrieb also Dinge Eine Klasse soll nur eine Verantwortung haben. Doch Entwickler hörten eine Klasse, eine Methode und alles andere ist eine Sünde. Dann schrieb Software soll offen für Erweiterungen sein, aber geschlossen für Veränderungen. Und die Entwickler perfekt. Ich schreibe jetzt sieben und vierzig Abstraktionen, damit ich eventuell in zwei tausend drei und vierzig einen neuen Zahlungsanbieter hinzufüge. Ein paar Jahre später, so zwei tausend vier kam Michael Feathers und sah die Verwirrung. Aber auch in der Verwirrung gab es eine Gelegenheit und sagte Hey, was wäre, wenn wir die fünf Prinzipien zu einem Akronym machen? Jeder liebt doch Akronyme. Und so wurde Solid geboren. Single Responsibility Open Closed Liskov Substitution, Interface Segregation und Dependency Inversion. Ein Akronym, das klingt wie ein Baustoff, der Häuser stabil macht. Die Entwicklerwelt hatte natürlich auch eine Reaktion. Die Java Entwickler Yes, endlich eine Entschuldigung. Interfaces zu schreiben. Wir lieben Interfaces hier. Ich habe schon mal fünf gemacht, bevor du den Satz zu Ende gelesen hast. DC Sharp Entwickler Kann ich das mit dem Dependency Injection kombinieren? Oh, ich kann zwölf weitere Layer."
+    },
+    {
+      "end": 157870,
+      "speaker": "B",
+      "start": 157230,
+      "text": "Juhu."
+    },
+    {
+      "end": 252430,
+      "speaker": "A",
+      "start": 157950,
+      "text": "Die Python Entwickler Wir haben Duct Taping. Jungs, wir brauchen das nicht, aber danke trotzdem. Danke für eure Mühen. Die Go Entwickler zugegeben jetzt nicht zwei tausend vier, aber heutzutage würden sie sagen, unsere Interfaces sind schon automatisch ISP konform. Wovon redet ihr hier überhaupt? In den ERN begann man Zollet an Hochschulen zu lehren und hier ist die Relation. Wolfgang als wären es die zehn Gebote. Du sollst keine Klasse mehr als dreiig Zeilen lang machen. Du sollst nie wieder ein if statt einer Factory nutzen. Du sollst keine Abhängigkeiten als new erstellen. Du Sünder. Manche entwickelten Abstraktionspyramiden, die so groß waren, dass sogar ein Architekt weinen musste. Andere machten Microservice daraus mit einem Microservice pro Verantwortung, was natürlich endete mit Ich deploy mal eben unseren User Validation Microservice. Oh, warte, das braucht vierzehn Dependencies aus dem User Validation Meta Cluster. Nach Jahren des Over Engineerings sagte die neue Generation und da sind wir heute ja, Wolfgang die neue Generation nicht so in dem alten Club der alten weißen Männer, so wie wir beide. Was ist, wenn wir einfach nicht solid übertreiben? Manche flüstern sogar Vielleicht sind Funktionen besser als Klassen. Functional Programming klopfte an die Tür und SAP das machen wir automatisch. Wir haben gar keine Klassen. LSP, lol. Und plötzlich bemerkten Huch, vielleicht ist zu viel solid gar nicht gut. Wolfgang das Thema solid. Du willst das in diesem Podcast verkaufen? Du lehrst das natürlich gerade an der Universität. Jetzt bin ich gespannt, was diese Episode wird."
+    },
+    {
+      "end": 260249,
+      "speaker": "B",
+      "start": 252430,
+      "text": "Wie lange hast du mit chatgpt für diese tolle Geschichte gebracht? Hast du da auch selber was adaptiert oder kommt die ganz von GPT der Prompt?"
+    },
+    {
+      "end": 264889,
+      "speaker": "A",
+      "start": 260409,
+      "text": "Erzähl mir etwas über die Geschichte von solid in einer lustigen und humorvollen Art."
+    },
+    {
+      "end": 274169,
+      "speaker": "B",
+      "start": 265209,
+      "text": "Also keine drei Minuten, Aber du hast da schon unsere bzw. Die Notes, die ich dir geschickt habe, schon reingefüttert, oder? Nein, Die kamen so in der Geschichte teilweise vor."
+    },
+    {
+      "end": 302630,
+      "speaker": "A",
+      "start": 274489,
+      "text": "Nein, nein, nein, unsere Notes von der Vorbereitung waren nicht dabei. Es war ein kompletter neuer Chat. Okay, zugegeben, ich habe vorher noch mal ein bisschen zu dem Thema gepromptet, um ein paar Gegenbeispiele zu bekommen und so weiter und so fort, weil in allen Programmiersprachen bin ich ja jetzt nicht so versiert. Also in Go und Java und so kann ich das alles zeigen. Aber wie das dann zum Beispiel im Detail bei typescript oder ähnliches aussieht, da habe ich mir ein paar Beispiele geben lassen in Bezug auf die Syntax."
+    },
+    {
+      "end": 389210,
+      "speaker": "B",
+      "start": 302950,
+      "text": "Das Schöne ist ja, wenn man so selber einfach so eine Intro macht, dann kann man ja auch Details weglassen. Und du hast ja eines der wichtigsten Details eigentlich weggelassen, weil wie ich das Thema gepitcht habe, habe ich ja gesagt, ich würde gerne deinen Blick auf die Dinge sehen, ob du als dreckiger Go Programmierer, der sowieso keine Struktur kennt und sich nur immer im Schlamm wälzt, ob das für dich überhaupt noch relevant ist und ob du da auch irgendwie einen Sinn drin siehst, dass man das mal macht, Weil ich habe jetzt aktuell in der Vorlesung, die ich mache, habe ich Solid aktiv mit reingenommen, mit einer bewussten Entscheidung, vielleicht auch, weil ich so ein persönliches Trauma mit Solid hatte, weil ich wurde mal in dem Interview gefragt, was soll bedeutet und ich hatte, keine Ahnung, jetzt wenn du mir sagst, es wurde erst zwei tausend zehn unterrichtet, das ist super, weil das war nach meinem Studium, wahrscheinlich wusste ich es darum nicht. Ich habe mich aber gerettet bei dieser Frage, die mir übrigens der Tom gestellt hatte in dem Interview, den wir in Episode ein hundert zwölf interviewt haben, zum Wechsel zwischen Individual Contributors und Manager Positionen, in dem er mir dann eine Zusatzfrage gestellt hat, was denn Dependency Injection ist. Und das habe ich dann wieder beantworten können, was ja ein Teil von Solid ist. Und ich glaube, das hat mich dann gerettet am Ende. Aber dieses Trauma verfolgt mich, dass ich nicht gewusst habe, was Solid ist. Und darum glaube ich, dass es immer noch ein wichtiges Konzept ist, was man verstehen muss und was heute auch noch Relevanz hat zu einem gewissen Teil natürlich und einem gewissen Bereich. Und genau darüber möchte ich mit dir mal sprechen. Muss man heutzutage noch wissen, was Solid ist und muss man das in einem Interview beantworten können, bevor wir jetzt den."
+    },
+    {
+      "end": 410640,
+      "speaker": "A",
+      "start": 389210,
+      "text": "Shitstorm hier von unserer Community ernten bzw. Du rette ich dich mal ganz kurz. Dependency Injection ist nicht Teil von Solid, Dependency Inversion ist Teil von Solid und Dependency Injection ist die Umsetzung von Dependency Inversion. Wolfgang, wenn wir einen Podcast zu dem Thema machen und wenn du das an einer Universität lehrst, wie fühlst du dich bei so einer solchen Korrektur? Klugscheißer Modus aus ihr reite nicht so."
+    },
+    {
+      "end": 418240,
+      "speaker": "B",
+      "start": 410640,
+      "text": "Auf den Begriffen rum, weil sonst könnte man Inversion of Control auch noch mit reinnehmen und so weiter. Machen wir höchstwahrscheinlich auch, aber dann erst, wenn wir über die Details sprechen."
+    },
+    {
+      "end": 501780,
+      "speaker": "A",
+      "start": 478400,
+      "text": "Aber wie wir gerade schon in der kleinen Geschichte gelernt haben, wurde Solid ja erst zwei tausend vier, also so circa zwei tausend vier, ich sag mal, erfunden, zumindest das Akronym, so wie man es heute kennt. Und jetzt sagt es, du hast bzw. Auch aus meiner Story geholt, dass es ab zwei tausend zehn gelehrt wurde, ist ja eigentlich schon relativ schnell für so eine Uni nach sechs Monaten irgendwie so einen neuen Trend aufzufassen."
+    },
+    {
+      "end": 551230,
+      "speaker": "B",
+      "start": 501780,
+      "text": "Ich glaube ja auch gar nicht, dass es zwei tausend zehn erst unterrichtet wurde. Ich glaube sogar, dass ich das im Studium hatte, muss ich zu meiner Schande zugeben. Ich vermute fast, dass das irgendwer schon erwähnt hat, weil normalerweise ist die Uni ja schon schnell in so Dingen wissenschaftlich zu übernehmen, weil es war ja auch eher im wissenschaftlichen Kontext damals. Es sind Papers veröffentlicht worden und und da gibt es dann normalerweise junge Doktorandinnen, die das dann schon schnell übernehmen und das kommt dann relativ schnell nochmal rein und ich würde sagen, das braucht keine sechs Jahre üblicherweise, damit es erst drin ist. Aber zu meiner Entschuldigung, zu Studiumszeiten hat mich das auch nüsse interessiert, muss ich zugeben. Also dieses ganze Architektur, Software Engineering, Qualitätskontrolle, blablabla, Extreme Programming, irgendwelche neuen Methodologien, das ist mir alles am allerwertesten vorbeigegangen, muss ich zugeben."
+    },
+    {
+      "end": 567950,
+      "speaker": "A",
+      "start": 551230,
+      "text": "Okay, dann lass uns mal schnell in das Thema reinspringen. Die Geschichte hatten wir ja gerade schon mal so ein bisschen gehört, die Designprinzipien und die Patterns, die wurden auch in wissenschaftlichen Papern veröffentlicht. Und ja, man sagt so circa zwei tausend vier ist so der Term Solid, wie sagt man auf Neudeutsch gecoined worden."
+    },
+    {
+      "end": 581410,
+      "speaker": "B",
+      "start": 568110,
+      "text": "Von Michael Fedders, wie du eben richtig gesagt hast. Und der Uncle Bob war ja nur die Grundprinzipien, die er da eigentlich so reingebracht hat um zwei tausend herum, was Glaubst du übrigens, wie viele Leute in meiner Vorlesung Uncle Bob gekannt haben?"
+    },
+    {
+      "end": 611500,
+      "speaker": "A",
+      "start": 581410,
+      "text": "Ich habe so zwei Extreme. Auf der einen Seite sagt mein Bauchgefühl ganz wenig, also masterstudierende Nutzer auf der anderen Seite, also ganz wenig, weil der ja oft in der heutigen Zeit ja kaum noch eine Relevanz hat. Meine persönliche Meinung, da kriege ich bestimmt jetzt auch ganz viele Kommentare zu. Auf der anderen Seite gab es ja auch irgendwie einen Shitstorm vor gar nicht allzu langer Zeit Und da denke ich schon, könnten ziemlich viele Leute was von gehört haben. Und deswegen bin ich auch auf dem anderen Extrem. Ziemlich viele haben den Namen schon mal gehört. Also ich bin mir, ich kann mich nicht entscheiden."
+    },
+    {
+      "end": 672570,
+      "speaker": "B",
+      "start": 611900,
+      "text": "Also ich war schockiert, ich glaube von den, gut, es waren nicht alle fünfzig da, aber es haben glaube ich zwei oder drei Uncle Bob mal gehört, primär Frauen und wie dann erwähnt habt, es ist ein alter weißer Mann, dem man vielleicht nicht in allen Belangen folgen sollte, weil er mit seinen sexistischen Aussagen ja nicht gerade glänzt. Und da haben dann alle brav genickt, die ihn gekannt haben. Also du hast vielleicht sogar recht, dass man mehr über diese Seite kennt. Ich glaube aber schon, dass Clean Code sein Buch noch ein absolutes Standardwerk ist und schon viel gelehrt gelesen wird, auch in der Praxis. Wir haben ja da in Episode fünf und sechzig auch darüber gesprochen, cleancode macht Software langsam, wo es diesen Streit gegeben hat zwischen Uncle Bob und Casey, glaube ich, hat er geheißen irgendwas, wo es darum gegangen ist, ob man heutzutage eben noch überhaupt diese Prinzipien anwenden sollte. Kann man sich gar nicht mal anhören. War eine super Diskussion, auch die die gehabt haben und die öffentlich geführt haben. Gibt es auch ein YouTube Video dazu zu dem Ganzen sehr zu empfehlen. Aber genau darum geht es eigentlich sind diese Prinzipien heutzutage noch relevant und sollte man das eben wissen?"
+    },
+    {
+      "end": 710540,
+      "speaker": "A",
+      "start": 672730,
+      "text": "Und ich glaube, was wichtig zu wissen ist, woher kommen die bzw. Welches Problem sollten diese Prinzipien eigentlich lösen und was war eigentlich der Background oder die Systeme, die man da zumindest in den Kontext mit reingezogen hat. Die damaligen Probleme entstanden eigentlich rund um Enterprise Software. Was damals Enterprise Software ist immer wenn ich so einen Begriff höre, denke ich an Versicherungssoftware, bei der Allianz zum Beispiel, das ist für mich ganz klassische Enterprise Software. Da ging es primär um die Problematik von Riesigen Klassen und untestbaren Systemen. Also da kommt das hin mit der Zielsetzung, wartbare, flexible und gut erweiterbare Software zu programmieren."
+    },
+    {
+      "end": 762190,
+      "speaker": "B",
+      "start": 710540,
+      "text": "Wobei man ja sagen muss, das ist ja nicht ein Problem von großen Enterprises, sondern das Problem war eigentlich von gewachsenen Strukturen, wenn der Code länger lebt. Und da damals war halt das ganze Feld sehr neu und die, die am längsten schon im großen Stile Code entwickelt haben, waren halt genau diese Versicherungen, Banken und so weiter. Also heutzutage hast du das ja eigentlich überall in allen Firmen, die irgendwie länger an Code arbeiten, wo viele Personen an dem Code arbeiten, eine große Codebase ist, da sind dann die ganzen Dinge wie dass das Ganze wartbar ist, flexibel erweiterbar, diese üblichen Properties, die man eigentlich gerne haben will, wenn man in einem Team arbeitet oder in einem größeren Team oder wenn drei hundert Leute an einer Codebase arbeiten, dann sind es natürlich schon Ziele, die man auch heutzutage erreichen will und zwar egal in welcher Software, weil sonst hast du einfach ein Problem, sobald da mehr als zwei Leute dran arbeiten und sogar bei zwei Leuten ist es vielleicht."
+    },
+    {
+      "end": 778670,
+      "speaker": "A",
+      "start": 762190,
+      "text": "Schon relevant, lass uns mal starten mit der ganzen Thematik und schauen, wo wir enden bzw. Wie wir zusammenkommen. Denn nur weil irgendwelche Leute gesagt haben, das soll man machen, heißt das nicht, dass es geht. Ist genauso wie neun Projektmanager bringen auch nicht ein. Wie heißt das mit der Projektmanagerung mit den neun Monaten?"
+    },
+    {
+      "end": 794810,
+      "speaker": "B",
+      "start": 780190,
+      "text": "Es ist schwierig. Du meinst neun Frauen können nicht ein Baby in einem Monat auf die Welt bringen, darum können neun Entwickler nicht automatisch Code in einem Monat delivern, wo ein Entwickler normalerweise neun Monate benötigt."
+    },
+    {
+      "end": 804690,
+      "speaker": "A",
+      "start": 794810,
+      "text": "Ja genau. Also man muss wissen wir nehmen an einem Sonntagvormittag auf, vielleicht ist man noch ein bisschen gedamaged vom Wochenende. Naja, lass uns loslegen. Wofür steht das?"
+    },
+    {
+      "end": 919180,
+      "speaker": "B",
+      "start": 804690,
+      "text": "S. Wolfgang Also vielleicht noch vorab kurz zur Erklärung. Das Ganze ist wirklich entstanden in der objektorientierten Zeit, wo Objektorientierung gehypt ist, wie du richtig erwähnt hast. Das heißt, die Beschreibungen beziehen sich sehr oft auf objektorientierten Code, wobei die Formulierungen dann so bisschen abstrahiert wurden, damit man da nicht ganz klar Objektorientierung erkennen kann. Also das erste ist zum Beispiel Single Responsibility Principle, was eigentlich gar nichts unbedingt mit Objektorientierung zu tun hat, sondern nur in der Definition, wenn man es mit einer Klasse beschreibt, eine Klasse, aber eben auch ein Modul und Module hast du in jeder Sprache oder eben eine Funktion kann es genauso sein. Also irgendwie ein logischer Block von Code soll genau eine Verantwortlichkeit haben und es soll eben nur einen Grund geben, den zu ändern. So wird es definiert. Das heißt immer wenn man zum Beispiel in einer Logik was ändern muss und die UI ist mit betroffen, dann könnte man das eigentlich auch in eine Klasse packen. Also so ist der Hintergrund. Es soll immer nur einen Grund geben, um etwas zu ändern zu müssen in dieser Klasse, in diesem Modul, in diesem Block. Und wenn man da ein Negativbeispiel nimmt oder wie man es eben nicht machen sollte, dann könnte man ganz klassisch diese Services mit reinnehmen. Also man kennt es ja, man hat da einen User Service zum Beispiel, das ist ja so die Lieblingsstruktur fast, würde ich sagen, die man heutzutage in irgendwelchen Softwareprojekten sieht. Man hat Services und da gibt es ein User Service und da gibt es dann eine Methode Create User, Send welcome email, Save User to database, log, Audit Events, was es auch immer ist. Und da merkt man schon, das klingt jetzt nicht nach einer Responsibility, sondern da sind sehr viele Responsibilities vereint. Und das ist ja ein klassisches Anti Pattern auch diese Services mittlerweile. Und zwar nicht, weil Services an sich schlecht sind, sondern so wie sie eingesetzt werden, weil du halt gerne alles dort rein wirfst. Das heißt so wie ein Mülleimer, Müllkübel heißt es bei euch?"
+    },
+    {
+      "end": 923540,
+      "speaker": "A",
+      "start": 919180,
+      "text": "Müllkübel, Mülleimer, Müllkübel, sagen wir nicht Österreich."
+    },
+    {
+      "end": 976830,
+      "speaker": "B",
+      "start": 923540,
+      "text": "Ja, okay, Mülleimer, dann okay, so ein Trash Bin, bleiben wir beim englischen International, wo man einfach dann alles mit reinwirft, weil man halt gerade keinen, keine guten Ort dafür findet. Und genau das ist eigentlich das Gegenteil. Und wenn man das Single Responsibility Principle anwendet, dann kommt man eben auf Module, wo nur eine Responsibility drinsteckt. Das heißt irgendeine Responsibility, um den User zu erstellen, zum Beispiel um E Mails zu versenden, weil sich eine andere Responsibility, ganze Datenbank Connection und Handling und Speichern hast du natürlich üblicherweise auch eine andere Responsibility. Irgendwelche Logging Geschichten sollten natürlich auch nicht dort drin sein. Also das würde man dann entzerren und dementsprechend splitten, damit du nur eine Responsibility hast. Und das wäre das erste Principle von Solid. Was würdest du dazu sagen? Ist das schon so was? Weil du hast ja gesagt, Solid braucht man heutzutage gar nicht, eine Responsibility pro."
+    },
+    {
+      "end": 979670,
+      "speaker": "A",
+      "start": 976830,
+      "text": "Funktion, pro Funktion oder pro Klasse ist egal."
+    },
+    {
+      "end": 985870,
+      "speaker": "B",
+      "start": 979670,
+      "text": "Klasse, Modul, Funktion wird ja nicht näher beschrieben. Eine zusammenhängende Struktur finde ich prinzipiell ganz."
+    },
+    {
+      "end": 1033440,
+      "speaker": "A",
+      "start": 985870,
+      "text": "Gut, also so von der Regel her. Aber jetzt nehmen wir mal deinen User Service mit Create User und sende Willkommens E Mail und Speicher zur Datenbank. Bedeutet das in diesem Sinne, man hat jetzt hier drei Klassen. Also wie wäre die richtige Implementierung? Weil du hast das jetzt als Negativbeispiel ausgeführt. Also hast du jetzt zum Beispiel dann eine Klasse E Mail Service und die sendet eine E Mail, wenn ein neuer User angelegt wurde und die sendet eine E Mail, wenn eine Banktransaktion durchgeführt wurde und die sendet eine E Mail, wenn du dein Passwort vergessen hast, weil dann hat sie ja auch wieder mehrere Funktionen. Sie hat zwar oder mehrere Verantwortlichkeiten. Die Verantwortlichkeit von E Mail senden ist dann vielleicht die zusammenhängende, aber der Kontext von Passwort und User und Banktransaktion ist dann ja eine andere Verantwortlichkeit. Muss ich dann da auch drei Klassen machen? Also wäre das die richtige Implementierung deiner Meinung nach?"
+    },
+    {
+      "end": 1105089,
+      "speaker": "B",
+      "start": 1033600,
+      "text": "Es gibt natürlich mehrere Möglichkeiten, wie du es aufteilen kannst. Du kannst natürlich schon mit Komposition das auch aus anderen Klassen mit reinnehmen oder delegieren, Aber das Problem ist ja grundsätzlich, dass du anhand des Namens nicht erkennen kannst, was alles dort drin ist. Und das ist ja eigentlich das Grundproblem. Du hast einen User Service, wo irgendwie alles drinsteckt und idealerweise kannst du ja am Klassennamen oder Modulnamen schon erkennen, was du dort vorfinden wirst, weil sonst musst du ja immer hineingehen, alle Methoden durchschauen, was gibt es denn da überhaupt, was kann ich da überhaupt machen? Und wenn du aber einen User E Mail Service hast, dann ist es eindeutig klar, okay, da geht es jetzt darum, die ganzen E Mails irgendwie raus zu senden und im Hintergrund gibt es dann wahrscheinlich noch ein spezielles, wenn du Service nennen willst, machst du wahrscheinlich eh nicht, aber irgendwie Ding, was das eigentliche Senden dann macht, Das heißt die Kommunikation mit dem SMTB und so weiter, das lagerst du ja dann auch noch mal aus, damit du das entkoppelt hast. Also du entzerrst es dann und umso mehr du am Namen schon erkennen kannst, umso besser. Wie gesagt, Services an sich sind ja kein Problem, aber sie werden halt gern falsch verwendet und verleiten vor allem dazu, falsch verwendet zu werden. Und dann ist das Single Responsibility Principle gestört oder nicht vorhanden."
+    },
+    {
+      "end": 1118929,
+      "speaker": "A",
+      "start": 1105089,
+      "text": "Naja, aber das Beispiel, was du jetzt für E Mail gerade genannt hast, kann ich ja auch auf User anwenden. Also ich denke Create User und Store User und finde ich schon okay in einer Klasse. Ja, aber du sagst ja, nee, das sind unterschiedliche Verantwortlichkeiten."
+    },
+    {
+      "end": 1128089,
+      "speaker": "B",
+      "start": 1119249,
+      "text": "Naja, Create User ist jetzt schon noch am ehesten an dem User Service dran, das würde ich jetzt schon sagen. Aber natürlich hast du da keine Datenbankkommunikation normal drin."
+    },
+    {
+      "end": 1135830,
+      "speaker": "A",
+      "start": 1128089,
+      "text": "Das bedeutet aber auch, dass Module wie Lib, Common Utility immer gegen dieses Single Responsibility Prinzip verstoßen."
+    },
+    {
+      "end": 1168570,
+      "speaker": "B",
+      "start": 1135830,
+      "text": "Genau darum bin ich mal ein großer Feind. Feind bin jetzt gerade nicht, aber wir hatten auch kürzlich mal die Diskussion in einem unserer Projekte, wo du irgendwie eine Utils Klasse geschrieben hast, wo ich gesagt habe, irgendwie ist Antibattern und man wirft da alles rein. Ich mache es ja auch hin und wieder, gar keine Frage, weil man fängt halt irgendwie so an und dann wird es aber so dieser Müll, Kübel, Eimer, Eimer und man wirft halt dann gerne was dazu. Oder Manager ist auch so ein kleines klassisches Wort, wenn du irgendwo Managerklassen siehst, kannst du gleich Gott Klasse hinschreiben. Das ist so ähnlich, ja, was in."
+    },
+    {
+      "end": 1179850,
+      "speaker": "A",
+      "start": 1168570,
+      "text": "Unserem Projekt, was du da gerade ansprichst, der Fall ist. Wir haben ein Modul, ein Paket Utility und darunter haben wir Date Functions und Time Functions und String Functions."
+    },
+    {
+      "end": 1222820,
+      "speaker": "B",
+      "start": 1180090,
+      "text": "Ja, das finde ich zum Beispiel vollkommen okay. Also wenn ihr Time Utils habt zum Beispiel, dann ist es klar, okay, dort sind die Utils, um irgendwelche Time Sachen zu machen. Also das finde ich dann komplett okay wieder, wenn man sowas hat. Aber wenn man natürlich nur Utils hat, dann wird es ein bisschen unübersichtlich. Und gerade bei Date, Time String ist es schon okay, Utils Klassen zu haben. Ob ich jetzt eine User Utils oder sowas haben will, das ist dann schon wieder ein anderer Punkt, weil das ist einfach so ein großer Bereich, dass ich einfach nicht mehr klar sagen kann, was lebt dort drinnen eigentlich. Also ist von außen nicht mehr schnell sichtbar. Wenn ich in meine File Struktur reinschaue in der IDE, dann will ja schnell vermuten können, wo etwas liegt. Und das ist eigentlich meiner Meinung nach eine gute Struktur."
+    },
+    {
+      "end": 1242780,
+      "speaker": "A",
+      "start": 1222820,
+      "text": "Und jetzt gehe ich mal aufs andere Extrem. Wir bleiben mal bei deinem User Service. Und jetzt drösel ich den User Service ein bisschen auf. Und zwar sage Ich habe eine Klasse, die kümmert sich nur um die Erstellung eines Users, die nenne ich jetzt User Creator Service, hänge dich nicht an dem Namen Service auf, sondern die Klasse kümmert sich nur um die Erstellung des Users."
+    },
+    {
+      "end": 1245000,
+      "speaker": "B",
+      "start": 1242780,
+      "text": "Ja, wir könnten es auch User Repository nennen."
+    },
+    {
+      "end": 1246270,
+      "speaker": "A",
+      "start": 1245150,
+      "text": "Nee, können wir nicht."
+    },
+    {
+      "end": 1249310,
+      "speaker": "B",
+      "start": 1246270,
+      "text": "Und da kommen wir das nicht, da."
+    },
+    {
+      "end": 1282730,
+      "speaker": "A",
+      "start": 1249310,
+      "text": "Kommen wir jetzt drauf. Dieser User Creator Service, der kriegt einen Validator rein. Also der braucht einen Validator. Der braucht einen Validator, um zu validieren, dass der User vollständig ist. Dann braucht er einen Sanitizer, um zu gucken, dass der Username keine Leerzeichen enthält und so weiter. Ist ja was anderes als Validation. Dann braucht er die Storage Engine und das ist unser Repository. Das bedeutet, ich habe jetzt vier Klassen. Ich habe jetzt ein User Repository, ich habe einen User Validator, ich habe einen User Sanitizer und ich habe einen User Creator Service."
+    },
+    {
+      "end": 1285410,
+      "speaker": "B",
+      "start": 1282890,
+      "text": "Okay, ich folge dir soweit, verfolge ich."
+    },
+    {
+      "end": 1295450,
+      "speaker": "A",
+      "start": 1285410,
+      "text": "Das Solid Prinzip, verfolge ich das Single Responsibility prinzipiell hier. Ich habe alles in eine Klasse ausgelagert und jede Klasse hat ja eine einzige Verantwortung."
+    },
+    {
+      "end": 1327810,
+      "speaker": "B",
+      "start": 1295610,
+      "text": "Trifft auf jeden Fall, würde ich sagen, zu. Die Frage ist, ob es verletzt wäre, wenn du es nicht so machen würdest. Und da würde ich sagen, gewisse Dinge könntest du wahrscheinlich mit reinnehmen. Kommt einfach darauf an, wie komplex es dann ist und ob du es an anderer Stelle auch noch verwenden kannst oder willst. Wenn User Sanitizer in irgendeiner anderen Form bei einer Übergabe von Parametern zum Beispiel verwendet wird, bei irgendwelchen API Calls, solche Dinge, dann macht es natürlich absolut Sinn. Wenn das jetzt die einzige Stelle ist und das ist ein Regex, dann würde ich das zum Beispiel nicht auslagern."
+    },
+    {
+      "end": 1376550,
+      "speaker": "A",
+      "start": 1327810,
+      "text": "Bei dem Sanitizer und Validator könnte man natürlich argumentieren, die erben von einer Top Sanitizer Klasse, wo dann klassische Validationsregeln drin sind und blabli. Aber worauf ich hinaus möchte, ist für mich, so wie du es nennst, in meinem dreckigen Kontext gehören diese vier Klassen zusammen. Für mich sind diese vier Klassen User Repository, Sanitizer, Validator, unnötige Abstraktion, schwer verständlich und erzeugen auch viel Boilerplate, muss man zugeben. Und sofern du jetzt keine unglaublich zwanzig Sanitizer Regeln und zwanzig Validator Regeln hast, die du wirklich über die ganze Applikation nutzt, da bin ich dabei. Dann könnte man das auslagern. Wenn man das nicht hat, würde ich sagen, alles in einem Ort, dann ist es klarer, lesbarer, einfacher und dennoch getrennte Verantwortlichkeiten auf Methoden."
+    },
+    {
+      "end": 1419420,
+      "speaker": "B",
+      "start": 1377350,
+      "text": "Einerseits hast du das ja auch auf Methodenebene dann, also das geht ja Single Responsibility Principle geht dann nach unten und es sagt ja auch, es soll nur einen Grund geben, wenn du was ändern willst. Und wenn du einen Grund hast, deine User Validierung in irgendeiner Form anzupassen, wie du User speicherst, da musst du zumindest auch checken, kann ich das noch so speichern. In der Datenbank ist alles, was rundherum um den Creation Process ist, funktioniert das auch noch alles. Also da könnte man sogar argumentieren, dass das eigentlich ein Grund ist, um eine Änderung durchzuführen. Und da hast du komplett recht, Wenn das eben an einem Ort liegt, wenn ich den Code mal anfassen muss, dann will ich alles, was ich anfassen muss, in dem Zuge an einem Ort haben. Und genau darum geht es ja."
+    },
+    {
+      "end": 1454150,
+      "speaker": "A",
+      "start": 1419420,
+      "text": "Und jetzt habe ich gerade gesagt, das möchte ich gerne einmal korrigieren. Jetzt hatte ich gerade gesagt, okay, jetzt stell dir vor, du hast fünf und zwanzig Sanitizer Regeln und zwanzig Validator Regeln, die du irgendwie über deine komplette Applikation nutzt. Und dann habe ich gesagt, vielleicht baut man dann den User Validator raus. Da fiel mir ein, ich glaube, heutzutage würde ich es nicht so machen, ich würde keine User Validator Service bauen, sondern ich würde mir die Validatoren aus meiner Lib oder Common eher als Trade reinholen. Also keine vertikale Objektorientierung, wenn du so möchtest, keine vertikale Vererbung, sondern via Trades halt über horizontal dir die Logik in deine Funktion holt."
+    },
+    {
+      "end": 1534160,
+      "speaker": "B",
+      "start": 1454150,
+      "text": "Das hat sich eigentlich jetzt in der Industrie auch ziemlich durchgesetzt, dass man eigentlich mehr Composition over Inheritance macht, also mehr kombiniert, anstatt diese klassische Vererbung macht. Das spricht ja auch das Liskov Prinzip an damals schon, dass die Vererbung nicht immer so der richtige Weg ist und auch oft ganz falsch verstanden wird und falsch angewandt wird. Und darum ist ja auch in den letzten zehn Jahren so die Vererbung an sich immer weniger geworden. Also wenn man in echte Projekte reinschaut, hat man ja viel, viel weniger Vererbung, meiner Meinung nach als früher. Also auch in klassischen objektorientierten Konzepten wird da viel mehr mit Delegation und Komposition gearbeitet, damit man sich so wie in einem Baukastensystem die einzelnen Steinchen zusammensetzt und sich immer das baut, was man gerade braucht. Und das geht dann eher in Richtung Deiner Trade Lösung oder wo du vielleicht die Validatoren irgendwo extern hast und dann holst du dir die richtigen, die du brauchst, herein und machst so eine kurze Definition. Aber die eigentliche komplexe Implementierung von den Validatoren, was jetzt, keine Ahnung, ein String Validator ist mit Länge, die Implementierung lebt woanders und du sagst nur, ich brauche jetzt einen String Validator, normale Characters, kein UTF acht drinnen und diese Länge von bis soll das Ganze haben und dann lebt es woanders, die Implementierung, klassische Delegation und du holst dir das nur rein in deinen Code."
+    },
+    {
+      "end": 1550600,
+      "speaker": "A",
+      "start": 1534160,
+      "text": "Mein Beispiel war natürlich vielleicht ein Extrem, wie man es falsch verstehen konnte, aber da wir ja in zwei tausend fünf und zwanzig sind und keine Monolithen mehr bauen, kann man das Extrem natürlich noch weiterführen. Man könnte ja auch sagen, jeder Service soll nur eine Verantwortung haben, die logische ein hundert Prozent Microservices. Wie stehst du dazu?"
+    },
+    {
+      "end": 1651870,
+      "speaker": "B",
+      "start": 1550600,
+      "text": "Ich würde fast sagen, dass es weniger aufs Single Responsibility Principle geht, sondern auf Separation of Concerns, was ja darüber gelagert ist, also eine Stufe höher. Es kommt jetzt in Solid nicht vor, aber da geht es ja dann eher darum, auf High Level, welche von meinen Microservices oder überhaupt Monolithen macht eigentlich was und habe ich da eine Separation of Concerns? Single Responsibility Principle geht ja dann einen Schritt tiefer und wirklich auf Klassenebene, auf Funktionen eigentlich runter und wendet es dann auf dieser Ebene an. Also das eine, man vergleicht es ja ganz oft wie in der Städteplanung, Separation of Concerns wäre eher so die Städteplanung und Single Responsibility Principle ist dann wirklich, wenn du das Haus entwirfst, das Einzelne und deine Microservices würde dann eher in Separation of Concerns passen, dass man das auf der Ebene abfrühstückt. Aber eigentlich ist es natürlich ein ähnliches Konzept und auch da wieder, wenn ich irgendetwas anfasse, dann soll das ein guter Grund sein, dass sie dann alles anfasse und nicht zehn andere Sachen mitdenken muss, die mich eigentlich gerade in dem Moment nicht betreffen. Das heißt, ich ändere irgendwo in Validator und muss aber fünf andere Sachen checken, die gar nichts mit meinem Validator oder womöglich mit meinem User oder dem Erstellen des Users zu tun haben, weil da eben noch die ganze E Mail Kommunikation drin ist zum Beispiel. Und ich will mich ja nicht darum kümmern oder auch prüfen müssen oder testen müssen. Jedes Mal funktioniert der ganze Rest auch noch, wenn es nur darum geht, wie erstelle ich den User, ist es ein valider User, wie schreibe ich die von mir aus noch in die Datenbank? Aber das ganze außen herum, was es da noch an Prozessen gibt, die den User betreffen, die will ich in diesem Moment nicht mitdenken müssen. Und genau darum geht eigentlich Single Responsibility Principle."
+    },
+    {
+      "end": 1681200,
+      "speaker": "A",
+      "start": 1651870,
+      "text": "Vielleicht war das Microservice Beispiel etwas an den Haaren herbeigezogen, aber ich kann mir schon vorstellen, dass das irgendwo in einem Team bestimmt genannt wurde. Was ich nur sagen möchte, ist, dass eine solche Fehler Interpretation, das Single Responsibility Prinzip kann schwerwiegende Ergebnisse haben. So ein hundert Prozent Microservice, da kommt eine ganze Schwelle an Problemen mit, die außerhalb des Codes sind. Netzwerk Latenz Komplexität, Operations Overhead, schwieriger zu testen, weil wir auf Infrastrukturebene sind und nicht auf Code Ebene. Also muss man aufpassen."
+    },
+    {
+      "end": 1778850,
+      "speaker": "B",
+      "start": 1681760,
+      "text": "Wenn wir jetzt aber zum nächsten Prinzip gehen, also das Open Closed Principle, das O in Solid, das beschreibt, dass Software Module sollen offen für Erweiterungen sein, aber geschlossen für Modifikationen. Also auf gut Deutsch, ich will eine Funktion hinzufügen können, ohne bestehenden Code ändern zu müssen, der mich jetzt gar nicht betrifft. Also das, was ich jetzt schon angesprochen habe. Und da geht es auch meistens darum, dass das Ganze gekapselt ist. Das heißt, ich habe irgendwo Funktionen, die sollen weggekapselt sein. Wenn ich was erweitern will, soll das möglich sein, ohne dass ich mir den eigentlichen Code ansehen muss. Das heißt, das wäre klassischer Verwendung von irgendeiner Klasse, von irgendeiner Methode, muss ich dort drinnen nichts ändern. Aber es soll natürlich möglich sein, das Ganze zu erweitern, sprich in der klassischen Vererbung vererbe mir das Ganze, erweitere das. Das wäre zum Beispiel eine Möglichkeit. Aber auch die Composition von verschiedenen Modulen wäre genauso eine Möglichkeit, weil das ist offen für Erweiterungen. Ich kann das sogar kombinieren, ohne dass ich den eigentlichen Code ändern muss und das Zusammenspiel soll gegeben sein. Also da spielen ganz viele Dinge mit, auch dass es keine Sachen hart verdrahtet gibt, weil sobald etwas hart verdrahtet ist, kann ich es nicht mehr modular verwenden und dann ist es nicht mehr offen für Erweiterungen. Wenn ich dann immer irgendwie eine harte Verdrahtung zur Datenbank habe und ich möchte dieses Modul eigentlich woanders verwenden, weil ich eben den Validator nicht nur in Zusammenhang mit der Datenbank verwenden will, in meinem Validator steckt, aber aus irgendeinem komischen Grund eine Connection zur Datenbank mit drin, dann ist es eben nicht offen für Erweiterungen und ich kann das nicht an anderer Stelle einsetzen. Und genau da wäre zum Beispiel Open Close Principle natürlich wieder verletzt."
+    },
+    {
+      "end": 1782690,
+      "speaker": "A",
+      "start": 1779170,
+      "text": "Theorieende. Jetzt kommen wir wieder zu der Praxis. Gib mir mal ein Beispiel."
+    },
+    {
+      "end": 1881230,
+      "speaker": "B",
+      "start": 1782690,
+      "text": "Beispiel, was man sehr gerne sieht, sind so Preisberechnungen. Man hat da irgendwie eine Funktion, berechnet Preis und irgendwie wird diese Funktion immer größer und man packt dann if Statements rein für irgendwelche Discounts, für irgendeinen Black Friday. Und wenn irgendwie ein Spezialtyp von diesem Artikel vorhanden ist oder irgendeine eins Aktion oder das Produkt irgendwie Teil einer Klasse ist, also einer Kategorie ist, die gerade vergünstigt ist, also man bläht es dann irgendwie auf und man hat eine riesenlange Funktion, die komplett unwartbar ist, die nicht flexibel einsetzbar ist. Das heißt, es ist nicht klar, dass sie die Discounts irgendwie flexibel einsetzen kann in verschiedenen Berechnungen zum Beispiel, also ich habe einen Bon eins eins Discount, dann kann ich den nicht flexibel irgendwie in meinen ganzen Berechnungen verwenden, also einerseits im Warenkorb, einerseits irgendwie dann am Ende in einer Steuerberechnung, wenn so hart verdrahtet in einer Funktion sitzt, um den Preis zu berechnen. Und das wäre so ein Klassiker. Das ist weder offen nach außen, dass man es irgendwie flexibel einsetzen kann, noch ist es irgendwie closed und gekapselt, Weil jedes Mal, wenn ich irgendwo einen Preis ändern will oder irgendeine Logik ändern will in meinem Discountsystem, zum Beispiel in dem Shop, dann muss ich dort rein in diese Horror Funktion, ändere eine Kleinigkeit und muss dann aber auch checken, ist auch der Black Friday betroffen, wenn ich gerade einen Studenten Discount eingeführt habe. Für Studenten, die zehn Prozent weniger zahlen, ist da keine Ahnung, eins plus eins Discount irgendwie betroffen, weil es einfach alles in einer Funktion lebt oder in einer super riesigen Klasse. Und das wäre eine klassische Verletzung. Und das würde man dann dementsprechend einfach auftrennen."
+    },
+    {
+      "end": 1890750,
+      "speaker": "A",
+      "start": 1881390,
+      "text": "Auftrennen bedeutet dann hier, dass jeder Discount eine eigene Klasse bekommt. Es gibt dann einen Student Discount, es gibt dann einen Black Friday Discount, es gibt dann einen Cyber Monday Discount."
+    },
+    {
+      "end": 1945130,
+      "speaker": "B",
+      "start": 1890750,
+      "text": "Also es muss ja keine Klasse in dem Sinn sein, kann auch eine Funktion sein, je nachdem in welcher Programmiersprache man lebt, Aber natürlich, man würde das einfach auftrennen. Ich habe einen eins eins Discount und dem übergebenen Artikel den übergebenen Preis, wo vielleicht dann auch Netto, Brutto, solche Dinge drin steht. Und dann kann ich eine saubere Berechnung machen, um den Preis in so einem Discount Fall zu berechnen Und dann habe ich das sauber nur für einen Discount in einer Funktion, der nur für eins eins dieses berechnet, ist natürlich viel besser testbar. Ich kann das einzeln testen, ich kann da einen Unit Test draufschreiben, das heißt, kann jeder von außen auch verwenden. Ich muss jetzt nicht automatisch verstehen, wie so ein eins eins Discount funktioniert. Ich kann ihn einfach aufrufen mit meinem Artikel, bekomme dann das Resultat, das heißt, es ist gekapselt, weggekapselt, abstrakt und ich muss mich nicht um die Implementierung kümmern, wenn ich das Ganze nur anwenden will oder auch erweitern will."
+    },
+    {
+      "end": 1953450,
+      "speaker": "A",
+      "start": 1945130,
+      "text": "Zum Beispiel bei Discounts bin ich bei dir. Das kann relativ schnell explodieren. Nehmen wir mal ein anderes Beispiel, nehmen wir mal Zahlungsanbieter."
+    },
+    {
+      "end": 1956890,
+      "speaker": "B",
+      "start": 1954090,
+      "text": "Sehr gutes Beispiel hatte ich glaube ich sogar in der Vorlesung."
+    },
+    {
+      "end": 1971010,
+      "speaker": "A",
+      "start": 1957210,
+      "text": "Da hast du paypal, da hast du Stripe, da hast du vielleicht Molly, holländische Firma und noch vielleicht. Ja, aber wir bleiben jetzt bei Molly, Stripe, paypal und wir bieten auch Bitcoin."
+    },
+    {
+      "end": 1975210,
+      "speaker": "B",
+      "start": 1971010,
+      "text": "Zahlung an Krypto nicht in meinem Shop. Aber gut, ist ein anderes Thema."
+    },
+    {
+      "end": 1976410,
+      "speaker": "A",
+      "start": 1975210,
+      "text": "Alter weißer Mann halt."
+    },
+    {
+      "end": 1979050,
+      "speaker": "B",
+      "start": 1976650,
+      "text": "Ich bin ja offen für Erweiterungen. Open Close Principle."
+    },
+    {
+      "end": 2008390,
+      "speaker": "A",
+      "start": 1979200,
+      "text": "Ja, verstehe ich. Mehr closed als offen, aber das bedeutet, wir haben jetzt vier Zahlungsanbieter. Reicht da nicht ganz einfach ein Switch Case Statement und wo wir dann die Open Close Principle auf Modulebene oder beziehungsweise auf Methodenebene anwenden? Also ich meine, ist das Open Close Prinzip, du hast gerade so gewettert gegen dieses if Statement, if type student iftype back Friday. Ist das nicht für neunzig Prozent der Fälle wirklich ausreichend, wenn du einfach ein Switch K Statement hast, weil wir jetzt nur vier Payment Anbieter anbieten?"
+    },
+    {
+      "end": 2021349,
+      "speaker": "B",
+      "start": 2008390,
+      "text": "Ja, aber würdest du jetzt zum Beispiel paypal und Stripe in einer Klasse die Anbindung machen, würdest du nicht zwei Klassen machen, einmal Paypal Payment und Stripe Payment als zweite Klasse? Würdest du alles in eine Klasse packen?"
+    },
+    {
+      "end": 2030030,
+      "speaker": "A",
+      "start": 2021349,
+      "text": "Es ist eine fiese Frage. Ich habe jetzt noch nie paypal und Stripe angebunden in einem E Commerce Shop, deswegen kann ich dir die Flows nicht wirklich sagen, aber wenn die relativ."
+    },
+    {
+      "end": 2043620,
+      "speaker": "B",
+      "start": 2030910,
+      "text": "Du bist ein Experience Developer, du kannst, du kannst mir sowas über Architektur natürlich im Blindflug beantworten. Du arbeitest bei Cloudflare, wenn du so eine Frage bekommen hast im Interview, die hättest du ja auch sicher beantworten."
+    },
+    {
+      "end": 2047140,
+      "speaker": "A",
+      "start": 2043700,
+      "text": "Wenn die Flows, die Payment Flows sehr ähnlich sind."
+    },
+    {
+      "end": 2050420,
+      "speaker": "B",
+      "start": 2047620,
+      "text": "Come on paypal und Stripe, ja, würde."
+    },
+    {
+      "end": 2052420,
+      "speaker": "A",
+      "start": 2050420,
+      "text": "Ich mal fast sagen, hat ähnliche Flows."
+    },
+    {
+      "end": 2057180,
+      "speaker": "B",
+      "start": 2052420,
+      "text": "Oder würde bezweifeln, Aber sogar wenn sie ähnliche Flows haben, würdest du sie dann."
+    },
+    {
+      "end": 2060550,
+      "speaker": "A",
+      "start": 2057180,
+      "text": "In eine Klasse packen, wenn die ähnliche Anwendung haben?"
+    },
+    {
+      "end": 2083870,
+      "speaker": "B",
+      "start": 2060550,
+      "text": "Klar, Also da würde sich für mich sofort wieder die Single Responsibility Principle Red Flag auftun, weil wenn sich bei paypal etwas ändert, müsste ich in eine Klasse gehen, wo auch Stripe implementiert ist und in einer Klasse haben Methoden einfach Abhängigkeiten voneinander und plötzlich müsste ich Stripe mitdenken, obwohl sich etwas nur bei paypal geändert hat. Und das würde ich auf keinen Fall machen."
+    },
+    {
+      "end": 2102720,
+      "speaker": "A",
+      "start": 2084030,
+      "text": "Das ist super spannend und ich bin auch ein hundert Prozent bei dir und du hast echt jetzt hier gerade Nagel getroffen. Aber erstens, warum ist die Verantwortlichkeit nicht Zahlung und warum ist die Verantwortlichkeit paypal in deinem Sinn? Also das ist die Definition der Verantwortlichkeit. Das ist eine Sache. Meine zweite Sache ist aber kennst du das Dry Prinzip?"
+    },
+    {
+      "end": 2104520,
+      "speaker": "B",
+      "start": 2102800,
+      "text": "Natürlich Don't repeat yourself."
+    },
+    {
+      "end": 2132950,
+      "speaker": "A",
+      "start": 2104520,
+      "text": "Ja, und jetzt haben wir ja die ähnlichen Flows und bedeutet, dass du kopierst die Logik der ähnlichen Flows nur um eine mögliche Änderung in in Zukunft. Denn wir sollen keine Probleme aus der Zukunft lösen, die wir jetzt noch nicht haben, dann Copy Paste machen oder oder oder baust du jetzt ein großes Architektur OP Konstrukt mit Factory und schieß mich tot auf, um dem Java Stereotypen von Enterprise Software gerecht zu werden."
+    },
+    {
+      "end": 2249310,
+      "speaker": "B",
+      "start": 2133110,
+      "text": "Also in dem Fall würde das auf jeden Fall trennen. Ich verstehe, woher du kommst. Das ist jetzt natürlich ein künstlicher Case, den wir da aufbauen. Bei paypal Stripe würde ich auf keinen Fall irgendwas, weil erstens weiß ich, dass die unterschiedliche Flows haben, andere Error Codes, andere, keine Ahnung, Authentifizierung, da hast du andere APIs, da wirst du nie dasselbe haben. Wenn du natürlich jetzt das genau selbe hast und weißt, dass sich die auch nicht anders entwickeln, was du bei zwei Firmen nie weißt, dann könnte man das natürlich irgendwie zusammennehmen. Aber auch da wieder kannst du entweder was über Vererbung machen oder wahrscheinlich eher über Composition. Das heißt, du hast dann vielleicht irgendwie einen Teil, der grundsätzlich mit API spricht, irgendwie ein REST Service oder so was vielleicht so allgemein das ganze HTTP Zeug abfrühstückt und das würdest du dann einbinden und du würdest den ganzen REST Teil, das heißt die HTTP Kommunikation delegieren an dieses REST Package, Klasse, whatever und dann die eigentliche fein granulare Implementierung dann von der API jeweils in dem eigenen Payment Prozessor zu machen. Aber du hast natürlich schon irgendwo Shared Code wahrscheinlich oder eine Ebene drüber, um grundsätzlich mal die Zahlungen zu händeln. Und was man machst du, wenn die Zahlung fehlt am Ende, also wenn sie nicht durchgeht, was machst du dann auf der UI Seite? Da hast du vielleicht einen übergeordneten Code, der für alle gleich ist, aber das würde dann wahrscheinlich auch außen irgendwo liegen oder in einem, da wo du dann eigentlich dieses if Statement hast, weil du hast natürlich schon irgendwo if Statements. Du musst dir entscheiden, ist paypal ausgewählt, ist Tribe ausgewählt und dementsprechend musst du anderen Code aufrufen. Also irgendwo lebt es IF natürlich. Die Frage ist, ob dann unter dem if die ganze Implementierung lebt oder die natürlich schon sauber gekapselt irgendwo außen ist und das ist eigentlich Open Close, dass du da halt die Kapselung machst. Und wie du die Kapselung machst auf Funktionsebene, in der funktionalen Sprache, auf Klassen, in Objektorientierung oder in Module in Rust, ist dann eigentlich egal."
+    },
+    {
+      "end": 2256750,
+      "speaker": "A",
+      "start": 2249390,
+      "text": "Was ich hier gerade nur so schön an dieser Diskussion finde, diese Art von Diskussion findet ja in Softwareentwicklung Teams täglich statt."
+    },
+    {
+      "end": 2262790,
+      "speaker": "B",
+      "start": 2256830,
+      "text": "Ja, ich hoffe nicht, dass man Stripe und paypal diskutiert noch, ob man die in ein Modul setzt, aber grundsätzlich irgendwo."
+    },
+    {
+      "end": 2337570,
+      "speaker": "A",
+      "start": 2262790,
+      "text": "Findet es statt, weil der eine kommt mit dem Solid Prinzipium und die Ecke, der andere mit dry und der dritte dann noch mit irgendwas anderem und dann werden die alle in einen Topf geschmissen und dann was ist richtig, was ist falsch. Ich denke, hier geht es eigentlich nur um viel persönliche Meinung und Präferenzen, denn ich glaube nicht, dass man alle Prinzipien auf einmal anwenden kann, ohne irgendwann in ein Extrem von Klassen und Abstraktion zu sterben bzw. Wenn man Pragmatismus favorisiert, dann kommt man glaube ich nicht drumherum, das ein oder andere Prinzip zu verletzen, sei es dry, sei es Open Close und so weiter und so fort. Und ich glaube Es kommt dann immer auf das auf den Use Case und auf den Wie extrem macht man es? Irgendwann muss man vielleicht die ganze Sache noch mal anpacken und refactoren. Aber da ist dann die nächste Frage für Wie lang hat sich getragen? Weil du sagst ja auch schon, wenn sich was ändert und so weiter. Da bin ich eher ein Freund davon. Lassen wir das aktuelle Problem lösen und nicht das zukünftige. Es kann nämlich sein, dass die API sich nie wieder ändert und dann hast du mehr Arbeit initial reingesteckt. Da reden wir jetzt von Time to Market, was in all diesen Prinzipien nie wieder gespiegelt wird, nämlich die Zeit, bis wann man fertig ist. Und das ist in der Industrie, glaube ich, schon sehr wichtig aktuell."
+    },
+    {
+      "end": 2411610,
+      "speaker": "B",
+      "start": 2337650,
+      "text": "Also dieses Time to Market immer als Gegenpol zu sehen zu irgendeiner sauberen Struktur und das auch immer als Gegenpol zu der extremen. Ich mache nur das zu sehen ist meiner Meinung nach weder eine faire Diskussion noch eine sinnvolle Diskussion, weil es sollte ja auch alles möglich sein. Aber dazu kommen wir vielleicht später noch bei der Einordnung, wie wir das grundsätzlich sehen. Und eigentlich sieht man bei den Prinzipien auch schon, dass ja da keine harte Definition, keine mathematische Definition dahintersteckt, sondern es eher Guidelines sind und die auch so zu sehen sind, auch wenn Anke Bob das vielleicht manchmal anders kommuniziert. Das ist noch mal ein anderes Thema, aber ich sehe das eher als als Guidelines. Aber damit wir weiterkommen. Der dritte Punkt ist das Liskows Liskov, schweres Wort Liskowsche Substitution Principle. Und hoffentlich wissen alle, dass Liskow eigentlich von Barbara Liskow kommt. Und zwar hat die ein tausend neun hundert sieben und achtzig das ganze Prinzip formuliert, hat unter anderem dafür auch den Turing Award gewonnen als zweite Frau überhaupt zwei tausend acht und sie war die erste Frau, die den Informatik PhD gemacht hat in Amerika."
+    },
+    {
+      "end": 2432950,
+      "speaker": "A",
+      "start": 2411610,
+      "text": "Und vor einiger Zeit hatten wir mal einen langen Plan, mal so Episoden über Turing Award Gewinner bzw. Gewinnerinnen zu machen. Haben wir dann auch geschafft, zumindest für Bara Walliskopf. Wir haben in Episode drei und neunzig über sie gesprochen. Wer da über das L in Solid mal etwas mehr lernen möchte und natürlich auch über die Person, kann sich Episode drei und neunzig noch mal anhören."
+    },
+    {
+      "end": 2508050,
+      "speaker": "B",
+      "start": 2432950,
+      "text": "Und sie hat ja auch paar andere Sachen auch noch gemacht. Also das war ja nicht nur das L insolid und sie ist auch aktuell noch aktiv. Es gibt diese Turing Vorlesung, die man immer macht, wenn man so einen Turing Preis gewinnt zwei tausend acht ist noch gar nicht so lange her, gibt es auf YouTube anzuschauen und ist wirklich ein cooler Vortrag, kann man sich gerne mal reinziehen, kann ich eigentlich nur empfehlen. Aber zum Liskov Prinzip, das besagt, dass Objekte einer Unterklasse sich immer so verhalten sollen wie die Oberklasse, die Superklasse. Das heißt, dass man die wirklich eins zu eins austauschen kann. Überall wo eine Mutterklasse verwendet wird, soll auch die Kindklasse verwendbar sein und umgekehrt. Jetzt würde man sagen, das ist ja automatisch so eigentlich bei Vererbung, darum habe ich ja überhaupt Vererbung, Aber es ist natürlich schon möglich, dass in der Vererbung eigentlich das Verhalten von der Mutter der Oberklasse gebrochen wird. Und damit hat Barbara Liskov eigentlich gezeigt, dass Vererbung teilweise gar nicht so gut ist, weil man ja davon ausgeht, dass es immer dieselbe Behavior, dasselbe Verhalten hat, wenn man eine Subklasse verwendet. Das einfachste Beispiel, was in diesem Zug immer genannt wird, ist die Vererbung von einem Rechteck zu einem, was heißt Square auf Deutsch?"
+    },
+    {
+      "end": 2509790,
+      "speaker": "A",
+      "start": 2509310,
+      "text": "Quadrat."
+    },
+    {
+      "end": 2535790,
+      "speaker": "B",
+      "start": 2509870,
+      "text": "Quadrat, genau. Danke Andi, sehr hilfreich, darum bist du mit mir im Podcast bezüglich Fortfindungsstörung. OK, vielen Dank. Rechteck und Quadrat. Das Problem ist nämlich, wenn Quadrat von Rechteck erbt, würde man ja sagen, okay, ist eine Spezialform von Rechteck. Das Problem ist, wenn du in dem Quadrat zum Beispiel eine Seite änderst, dann ändert sich ja automatisch die Länge der zweiten Seite mit. Kannst du mir noch folgen?"
+    },
+    {
+      "end": 2536510,
+      "speaker": "A",
+      "start": 2535950,
+      "text": "Gerade so?"
+    },
+    {
+      "end": 2630830,
+      "speaker": "B",
+      "start": 2536510,
+      "text": "Ja genau. Also es ändern sich beide Seiten und damit verletzt du eigentlich das Verhalten der Oberklasse Rechteck, weil ein Rechteck ist es nicht definiert. Jetzt würde man auch da sagen, ja was ist das Problem? Wird halt die andere Seite mit geändert. Wenn du jetzt aber zum Beispiel an die Oberfläche denkst, wo du diese Klassen verwendest und in der Oberfläche, wenn du eine Seite änderst, eine Seitenlänge, dann ändert sich die andere nicht automatisch mit. Jetzt hast du ein Quadrat eingebunden in deine Oberfläche und gehst als Oberfläche davon aus, wenn du eine Seitenlänge änderst, dass sich die andere nicht ändert. Jetzt ändert sich aber in der Klasse intern die andere Seitenlänge und du als Oberfläche bekommst es ja gar nicht mit. Das lebt ja gekapselt in dieser Klasse in diesem Objekt. Das heißt, du in der Oberfläche zeichnest die andere Seite nicht dann gleich lang, sondern belässt die auf den alten Wert, weil du bekommst es ja gar nicht mit von außen. Und genau das hat eigentlich Liskow gezeigt. Und wenn man dem Prinzip folgt, dann darf man eben in vererbten Subklassen das Verhalten eben nicht ändern, das erwartet wird. Und wenn man Vererbung dann so denkt, dann wird man draufkommen, dass man gar nicht so oft Vererbung verwenden kann, wenn man dem Prinzip folgt. Und darum ist es eben auch so, dass die Vererbung immer weniger wird, meiner Meinung nach, in der Programmierung, die klassische Vererbung, weil man sich da einfach auch viel ans beIN bindet. Dann hast du das auch nicht während der Laufzeit. Du kannst während der Laufzeit nichts ändern, du musst es statisch definieren, da musst du es richtig noch definieren. Also die Use Cases, wo man wirklich gut Vererbung einsetzen kann, wird eigentlich immer weniger, meiner Meinung nach."
+    },
+    {
+      "end": 2649160,
+      "speaker": "A",
+      "start": 2630830,
+      "text": "Aber jetzt hattest du gesagt, wenn ich eine Seite ändere bei einem Quadrat, ändert sich ja automatisch dann auch die andere Seite, weil man hat ja zwei gleiche Seiten. Soweit sogar verletze ich das Prinzip. Denn auch wenn ich eine Seite ändere und in der Implementierung der Quadratsklasse eine Prüfung mache, ob die andere Seite eine andere Länge hat und dann Fehler schmeiße."
+    },
+    {
+      "end": 2661760,
+      "speaker": "B",
+      "start": 2649160,
+      "text": "Nein, dann wäre es korrekt. Also wenn der Fehler natürlich die Oberklasse muss den Fehler natürlich auch in irgendeiner Form zurückwerfen, also irgendwie konnte nicht geändert werden oder sowas, dann grundsätzlich hast du das Verhalten natürlich nicht verletzt."
+    },
+    {
+      "end": 2680420,
+      "speaker": "A",
+      "start": 2662000,
+      "text": "Und ich frage mich, ist dieses Beispiel nicht sehr stark an den Haaren herbeigezogen? Denn wer würde denn ein Quadrat von einem Rechteck erben? Würde man nicht eher eine Mutterklasse bauen? Wieso heißt das eigentlich Mutterklasse, nicht Vaterklasse, Elternklasse, aber egal. Ja gut, aber der Vater vererbt ja."
+    },
+    {
+      "end": 2682340,
+      "speaker": "B",
+      "start": 2680420,
+      "text": "Auch Teil seines Genpools."
+    },
+    {
+      "end": 2692930,
+      "speaker": "A",
+      "start": 2682820,
+      "text": "Naja, würde man nicht eine Klasse ganz oben namens Form haben und von dieser Formklasse wird dann ein Rechteck und ein Quadrat rausgehen und nicht das Quadrat vom Rechteck."
+    },
+    {
+      "end": 2773320,
+      "speaker": "B",
+      "start": 2693400,
+      "text": "Es ist ja nur ein Beispiel, weil man es da sehr einfach erklären kann. Es geht ja ganz allgemein um dieses Konzept, ob man eben an der Oberklasse etwas ändern darf. Es ist ja auch so, dass zum Beispiel Protected an sich schon sehr umstritten ist, weil ja da die Kapselung gebrochen wird. Wenn du ein Protected Member hast, dann greifst du ja eigentlich schon in den Code ein, in den Member von deiner Elternklasse und das verletzt ja eigentlich die Kapselung. Also auch da ist ja heutzutage eher der Trend, dass man weggeht von dem Protected oder wenn es nicht unbedingt sein muss, damit man eben eine saubere Trennung überhaupt hat, einen sauberen Contract zwischen der eigentlichen Implementierung und dann der Vererbung. Eben Open, Closed, principle, Closed im Sinne, ich kann nicht zugreifen und bei Protected kann man aber zugreifen und Open, aber nur für Erweiterbarkeit. Und das ist dann schon ganz allgemein natürlich oft verletzt und ich glaube, man denkt auch oft gar nicht daran. Also man muss ja das Verhalten ganz genau kennen von der Oberklasse, damit man das nicht bricht in der Subklasse. Und ich glaube, das passiert dann schon relativ oft, weil man einfach gar nicht denkt. Und das kann dann aber grundsätzlich schon zu Problemen führen, weil ich will ja einen harten Contract, wenn ich als Klasse verwendet werden will, will ich einen harten Contract nach außen geben, damit der User an sich, der mich verwendet, ja immer darauf bauen kann, ich verhalte mich immer."
+    },
+    {
+      "end": 2803930,
+      "speaker": "A",
+      "start": 2773320,
+      "text": "Gleich, du bringst mich gerade wirklich zum Nachdenken, besonders bei der Wahl dieses Keywords Protected, das hat man ja schneller hingeschrieben, als man irgendwie sich über die Konsequenzen bewusst ist. Das kann natürlich aber auch übersetzt werden auf die anderen Keywords wie final, static und co. Da ist die Frage, OK, schreibt man das nicht eher schnell runter und denkt, ah, verflixt, Moment, ich habe im Engineering Kiosk gehört, immer wenn ich Protected nehme, aber wie war das nochmal mit dem Liskov Prinzip? Ich meine, wann hast du das letzte Mal Protected geschrieben und wann hast du letztes Mal beim Protected schreiben wirklich drüber nachgedacht?"
+    },
+    {
+      "end": 2868040,
+      "speaker": "B",
+      "start": 2803930,
+      "text": "Ich denke schon immer wieder drüber nach, aber eben ich verwende kaum irgendwo eine Vererbung, wenn ich mal grundsätzlich Objektorientierung programmiere, weil in der Realität die Komposition einfach viel praktischer ist. Da habe ich einen sauberen Contract, ich brauche mich gar nicht damit beschäftigen. Ich kann es vielseitig kombinieren, ich kann es vor allem während der Laufzeit kombinieren, das ist ja das Coole. Ich kann dynamisch während der Laufzeit sagen, wie kombiniere ich zwei Klassen miteinander. Also eigentlich diese multiple Vererbung, die man sich ja oft so wünscht, kann man ja durch Komposition eigentlich sehr einfach erreichen. Und das ist meiner Meinung nach der saubere Weg. Und ganz klassische Vererbung hat man eigentlich eher selten. Eher hat man irgendwie ein Interface, das man verwendet. Also solche Dinge natürlich schon damit man irgendwie einheitlich aufeinander aufbauen kann. Abstrakte Klassen ja vielleicht noch am ehesten, aber wie gesagt, ich kenne es eigentlich immer weniger und ich sehe eigentlich immer weniger Anwendungsfälle, wo ganz klassische Vererbung noch Sinn macht. Aber es gibt sicher andere Leute, die viel mehr OOP programmieren, die da andere Ansichten haben, die wir natürlich übrigens alle gern hören würden."
+    },
+    {
+      "end": 2877880,
+      "speaker": "A",
+      "start": 2868200,
+      "text": "Lass uns mal direkt zur vierten Regel oder zum vierten Prinzip hier springen, wo natürlich schon irgendwie, ich sag mal, das Herz eines Go Programmierers aufgeht."
+    },
+    {
+      "end": 2947310,
+      "speaker": "B",
+      "start": 2877880,
+      "text": "OK, da bin ich jetzt gespannt. Also das nächste ist Interface Segregation Principle, hochgestochen formuliert. Client soll nicht gezwungen sein, Methoden zu implementieren oder zu verwenden, die sie nicht benötigen. Auf gut Deutsch da wieder kleinere Interfaces, spezialisiertere Interfaces, nicht überladene Interfaces, weil ich will ja nicht, wenn ich irgendwie ein Interface implementiere, will ich ja nicht zwanzig dreiig vierzig Methoden implementieren müssen, obwohl ich vielleicht eigentlich eh nur drei brauche. Also auch da wieder Baukastenprinzip möglichst klein, weil sonst habe ich nur unnötigen Code. Leere Implementierungen, das ist so der Klassiker, was man dann bei abstrakten Klassen teilweise so sieht. Irgendwelche leeren Implementierungen macht absolut keinen Sinn. Lesbarkeit wird natürlich verschlechtert. Es ist unklar, für was diese Interfaces überhaupt da sind, wenn sie so viele Methoden haben. Also ich kann wieder anhand des Namens nicht gleich erkennen, was ist eigentlich darin enthalten Und ich finde, das ist eine allgemein gute Regel. Wenn ihr am Namen nicht klar sagen kann, was werde ich vorfinden darunter, Sei es eine Klasse, sei es ein Interface, sei es eine Methode, dann ist irgendwas falsch. Und solche Dinge kann ich leicht erreichen, ohne dass sie Time to Market gefährde. Um das gleich vorwegzunehmen, mix ruhig die."
+    },
+    {
+      "end": 2948510,
+      "speaker": "A",
+      "start": 2947310,
+      "text": "Buzzwords, gar kein Problem."
+    },
+    {
+      "end": 2955790,
+      "speaker": "B",
+      "start": 2948990,
+      "text": "Aber warum ist das jetzt für dich als Go Entwickler? Warum geht dir da das Herz auf? Habt ihr überhaupt Interfaces in Go? Könnt ihr das?"
+    },
+    {
+      "end": 2957550,
+      "speaker": "A",
+      "start": 2955790,
+      "text": "Ja, haben wir aber nicht, Ist doch."
+    },
+    {
+      "end": 2958830,
+      "speaker": "B",
+      "start": 2957550,
+      "text": "Nur so Spaghetti Code."
+    },
+    {
+      "end": 3011030,
+      "speaker": "A",
+      "start": 2958830,
+      "text": "Die Interfaces sind nicht ganz klassische Interfaces wie bei Java oder ähnliches. Also man schreibt da nicht sowas wie Implements und dann den Interface Namen hin. Das ist keine klassische OOP. Es ist eher im Ducktyping Bereich anzusehen. Also im Endeffekt kannst du sagen, okay, es gibt zum Beispiel ein Writer Interface, das Writer Interface wird eigentlich für alles genutzt, wo du irgendwas schreiben möchtest, sei es ein Bytestream, sei es eine Datei oder ähnliches und da gibt es eine Methode drin. In der Go Standard Library findest du wahrscheinlich kein Interface, was mehr als drei Funktionen definiert. Aber im Endeffekt, habe ich ja gerade schon gesagt, wird bei Go genauso wie bei Python und bei Java ja eher so ein Duct Typing Approach angewandt. Da wird ein Objekt nicht anhand seines Typs bewertet, sondern anhand der Methoden und die Eigenschaften, die es besitzt."
+    },
+    {
+      "end": 3023300,
+      "speaker": "B",
+      "start": 3011990,
+      "text": "Aber genau das ist ja eigentlich auch das Umgedrehte und genau das, was ich gesagt habe, der Name soll zusammenhängen mit den Methoden darunter. Also das eine soll zum anderen korrespondieren und wenn es nicht korrespondiert, dann ist irgendwas falsch."
+    },
+    {
+      "end": 3105120,
+      "speaker": "A",
+      "start": 3023610,
+      "text": "Ja, ganz genau. Nur es ist halt oft in vielen Sprachen so, bei Java zum Beispiel, okay, eine Klasse, die ein Interface implementiert, ist dann auch von dem Typen des Interfaces, was beim Ducktyping nicht der Fall sein muss. Ducktyping, da kommt der Name, walks like a duck and quarks like a duck. It's a duck, so nach dem Motto. Das bedeutet, wenn du dich jetzt einmal in die Knie setzt und dann den sogenannten Duck Walk machst und quaken kannst, dann könnte man sagen, der Wolfgang ist kein Mensch, sondern der Wolfgang ist eine Ente in der Hinsicht. Und ich gebe zu, ich mag diese kleinen Interfaces. Ich sage aber auch, weil sie sehr schnell zu implementieren sind. Ich sage aber auch, in meinem eigenen Code ist es super schwierig, kleine Interfaces zu bauen, weil man kommt halt sehr schnell in die Versuchung, ach ja, Moment, und die Methode brauche ich noch und die Funktion auch noch und das und das und das. Und das führt mich wieder zu dem Gedanken, die einfachsten Dinge sind unglaublich schwer umzusetzen. Und was ich auch bei der Go Programmiersprache so gut finde, die haben es irgendwie geschafft, so eine Art Balance in Bezug auf die Anzahl der Interfaces zu finden, weil der Stereotyp der Java Programmiersprache ist ja, oder der klassische Java Stil, man hat einfach zu viele Interfaces. Jede Klasse hat einfach irgendein Interface, zu viel Abstraktion. Ich habe da kaum Mehrwert drin gesehen. Ich kann mich sogar daran erinnern, dass damals in Eclipse dieser IDE, kennst du die noch?"
+    },
+    {
+      "end": 3110850,
+      "speaker": "B",
+      "start": 3105200,
+      "text": "Natürlich, ich kenne sogar Leute, die drin noch programmieren, sogar ganze große Software, dass."
+    },
+    {
+      "end": 3122050,
+      "speaker": "A",
+      "start": 3110850,
+      "text": "Es da einen Shortcut gab, immer wenn ich eine neue Klasse geschrieben habe, dass sie automatisch ein Interface dazu gesetzt hat. Und da denke ich mir, Abstraktion des Abstraktions willen und denke mir, oh, ein bisschen too much hier."
+    },
+    {
+      "end": 3256220,
+      "speaker": "B",
+      "start": 3122370,
+      "text": "Ja, das ist absoluter Bullshit und ich glaube, das hat sich jetzt mittlerweile auch herumgesprochen. Ich hoffe, dass es nicht mehr so unterrichtet wird. Ist früher auch viel unterrichtet worden. Mach doch einfach ein Interface, dann bist du danach flexibel, Weil wenn du vielleicht mal eine andere Datenbank verwendest, wenn du mal das nicht in ein File schreibst, sondern eben in die Datenbank, dann kannst du das mit dem Interface schon machen. Und das ist natürlich absoluter Bullshit, weil du kannst ja refactoren. Das heißt, du fängst an mit einem File Writer für deine Logs und sollte da mal ein Datenbank Logger dazu kommen, dann kannst du das immer noch ändern, weil du hast ja diese Implementierung nur an einer Stelle verwendet. Es gibt ja noch keine anderen Möglichkeiten, das irgendwie zu verwenden. Das heißt, du kannst es ganz schnell ändern, dieses Interface. Du änderst einfach diese Verwendung von diesem Interface, kann Search Replace, kannst du machen über deinen ganzen Code und es geht ja heutzutage intelligenter, aber sogar dann würde es gehen und dann führst du erst das Interface ein. Und dass man automatisch Interfaces einführt, obwohl es nur eine Implementierung gibt, ist meiner Meinung nach einfach grundsätzlich falsch. Außer es ist schon so klar, dass morgen die nächste Implementierung kommt oder heute Nachmittag, okay, aber sonst, wenn das nur so vielleicht irgendwie in der Zukunft könnte mal eine zweite Implementierung kommen, dann mach kein Interface. Und da gibt es schon ein paar Dinge, da gebe dir vollkommen recht, es gibt einfach viele Interfaces, klassisch in Java, auch C, wenn es dann auch mit Dependency Injection und so weiter noch was dazukommt, da muss man halt teilweise einfach, um solche Magic zu erlauben, auch viele Interfaces verwenden. Aber das ist halt dann auch, damit du diese ganze Magic bekommst und nicht automatisch von Java irgendwie so vorgegeben und noch weniger von Solid vorgegeben, weil Solid geht ja nicht ins ganz andere Lager, dass du ja einfach verständlichen Code haben sollst und nicht aufgeblähten Code und kleine Interfaces überall. Also du sollst Sachen schnell verstehen, klein aufteilen, kleine Strukturen, keine großen Abhängigkeiten. Also es geht ja eigentlich in die ganz andere Richtung insofern, dass das irgendwie vorgegeben sei von diesen eben Solid Principles oder Java an sich, das ist auch falsch. Also es hat sich halt oft so etabliert, dass man es macht, aber ich hoffe auch Und vielleicht können uns Leute, die wirklich tief in Java drin sind und großen Codebases arbeiten, erklären, ob die auch einen Rückgang diesbezüglich sehen. Ich hoffe es zumindest."
+    },
+    {
+      "end": 3275180,
+      "speaker": "A",
+      "start": 3256220,
+      "text": "Lass uns den letzten Buchstaben, das D, jetzt einmal betrachten. Ich habe dich initial korrigiert. Dependency Inversion Principle versus Dependency Injection. Ich hoffe, du lernst aus deinen Fehlern. Und um zu testen, ob du aus deinem Fehler gelernt hast, wirst du jetzt mal sagen, was ist nämlich Dependency Inversion. Sehe das als Examen hier, das hat."
+    },
+    {
+      "end": 3424920,
+      "speaker": "B",
+      "start": 3275180,
+      "text": "Mich ja Tom damals auch gefragt, also keine Ahnung, ob er Dependency Inversion gefragt hat. Inversion of Control oder Dependency Injection. So weiß ich das jetzt auch nicht mehr. Was ich auf jeden Fall immer mir gemerkt habe, und das habe ich irgendwann mal von einem Kollegen an der Uni von mir gehört, diese Definition bzw. Dieses praktische Beispiel. Er hat mir erklärt, wenn du in einem Konstruktor einen Parameter hast und dort was hineinreichst von außen, dann ist es im Prinzip Inversion of Control oder Dependency Injection. Und so habe ich das eigentlich am einfachsten verstanden. Man kann das jetzt natürlich auch groß beschreiben, dass zum Beispiel High Level Modules nicht abhängig sein sollen von Low Level Modules, so heißt auf Englisch, und sie sollen sich auf Abstraktion orientieren. Es ist wirklich meiner Meinung nach super kompliziert zu verstehen, ganz einfach ein abstrakter Code, also auf abstrakter, höherer Ebene solltest du nichts mit der Implementierung zu tun haben. Das sagt eigentlich so der Satz von dem Dependency Inversion Principle. Aber eben ich, ich persönlich verstehe es mit der Umsetzung immer am einfachsten. Reich doch von außen Dinge rein über den Konstruktor, zum Beispiel eine Datenbank Connection, wenn du User Service hast und erstelle nicht die Datenbank Connection in dem User Service, sondern reich es einfach von außen rein. Ob das jetzt automatisch passiert über irgendein Containersystem, in C ist das built in und ich habe keine Ahnung, sonst Swing oder so in Java, das ist komplett egal, wenn ich da irgendwie Magic, Auto Wiring und sonst irgendwas noch oben drüber habe, okay, das macht mein Leben vielleicht einfacher, vielleicht komplizierter, ist Ansichtssache. Aber das Wichtige ist einfach, die Klasse bekommt von außen die Information rein über eine Abhängigkeit, wie darauf zugegriffen wird. Und der große Vorteil von dem Ganzen ist, dass das einfach flexibler ist, wenn das von außen reingereicht wird, dann kann diese Außenwelt entscheiden, was dort reingereicht wird und ich kann da auch gemockte Datenbank reinreichen in einem Test, die nur immer Ja zurückgibt oder den Wert, den ich benötige, um eben einen isolierten Test zu machen von dieser Klasse. Und das ist eigentlich der Hauptgrund, dass man diese Flexibilität erhält und das dementsprechend auch in unterschiedlichen Cases einsetzen kann. Und vielleicht habe ich dann eben nicht nur eine Datenbank, sondern auch einen File Access, kann ich dann dynamisch ändern von außen und die Außenwelt entscheidet, wie das gerade eingesetzt wird. Und für mich war das eigentlich immer die leichteste Erklärung, ohne da in irgendeine Containerwelt abzutauchen, die dann ja teilweise wirklich komplett kompliziert wird."
+    },
+    {
+      "end": 3481440,
+      "speaker": "A",
+      "start": 3424920,
+      "text": "Ich würde auch fast sagen, das ist so das Prinzip, was überall gelehrt wird und einfach wirklich angewandt wird, weil ich glaube, da gibt es relativ wenig Kritik dran, weil die Vorteile wirklich fast komplett überwiegend die Dependency Injection allein fürs Testing. Du musst aka nur das Interface oder nur die Methoden implementieren und kannst dann irgendwie einen Dummy Service reinbringen, der einfach Null Operation oder no Operation macht und flups funktioniert ein Unittest wunderbar. Also ich glaube, da gibt es relativ wenig Kritik. Wenn man eine Kritik sollen suchen würde, würde ich sagen, okay, Dependency Injection bzw. Inversion of Control kann zu erhöhter Komplexität führen, wenn man es wieder übertreibt, wenn man wirklich alles abstrahiert. Also das geht dann aber schon, das hat jetzt nichts mit dem Reinreichen selbst zu tun, sondern mit der Abstraktionsebene, wie viel Sachen man reinreicht und wie granular man vorgeht."
+    },
+    {
+      "end": 3557300,
+      "speaker": "B",
+      "start": 3481440,
+      "text": "Du hast natürlich immer die Balance, die du irgendwie selber finden musst. Es ist ja eigentlich dieses, diese Beschreibung über den Konstruktor ist ja auch nur ein Beispiel, weil wenn du gar keine Klassen hast, hast du keinen Konstruktor. Es geht ja nur darum, dass du über die eigentliche Implementierung nichts wissen musst, Also dass das gekapselt in irgendeiner Form ist und wenn ich das nur verwende, dann soll es irgendwie wegabstrahiert sein und ich muss nicht wissen, wie die Implementierung auf unterster Ebene ist, sondern ich habe da ein Contract, ich habe da ein Interface, ich weiß, ich kann in eine Datei schreiben, aber ich muss nicht wissen, wie das wirklich abläuft im Hintergrund und dass da die Datei geschrieben wird oder dass vielleicht die Datenbank geschrieben wird, also dass das einfach sauber getrennt ist und diese Contracts, diese Verträge, dass ich einfach weiß, wie das Verhalten ist. Genau darauf zielen eigentlich alle Solid Principles in irgendeiner Form ab. Das heißt, ich splitte einfach oder ich ziehe einfach Schichten ein, damit ich mich nicht mit allem befassen muss. Und gerade bei großen Codebases ist es super wichtig, ich kann nicht alles wissen, was alle diese drei hundert anderen Entwickler innen machen in ihren Modulen, in ihren Libraries, in ihren Abstraktionen. Das heißt, ich brauche saubere Contracts, Interfaces und Library Contracts, kann ja alles sein, APIs, damit die Welt dann für mich als Entwickler einfach einfacher gemacht wird."
+    },
+    {
+      "end": 3613940,
+      "speaker": "A",
+      "start": 3557540,
+      "text": "Du redest jetzt die ganze Zeit von Konstruktor basierter Dependency Injection, Gibt auch noch andere Arten, wie man die Abhängigkeit reinreicht. Also Konstruktoren nutzt man meist irgendwie, wenn die Abhängigkeiten wirklich zwingend sind. Bedeutet, wenn jetzt dein E Mail Service jetzt eine SMTP Schnittstelle braucht oder REST API Calls nach Mail Gun macht, um eine E Mail zu schicken, das wäre jetzt zum Beispiel das, was du in den E Mail Service reinrechnen musst, weil sonst kann der E Mail Service keine E Mails senden. Dann gibt es natürlich noch Setter Injection, das nutzt man zum Beispiel, wenn die Abhängigkeiten optional sind. Dann gibt es noch sowas wie Attribute Injection, ähnlich wie Setter Injection, nur halt ohne Funktion drumherum gekapselt. Meines Erachtens nach ist das eher verpönt, direkt auf Attribute zuzugreifen, weil Setter und Getter natürlich schon noch Validierungslogik einbauen können und so weiter. Aber hier und da funktioniert Es gibt auch valide Use Case für eine Attribute Injection. Und dann gibt es noch die Method Injection, da übergibt man die benötigten Abhängigkeiten, die nur für diese eine Methode benötigt werden."
+    },
+    {
+      "end": 3622620,
+      "speaker": "B",
+      "start": 3614100,
+      "text": "Wie siehst du eigentlich diese ganze Magic, wenn die so passiert? Bist du ein Fan von dieser Magic und Auto Wiring und diesen ganzen Dingen oder weniger?"
+    },
+    {
+      "end": 3635060,
+      "speaker": "A",
+      "start": 3622700,
+      "text": "Ja, im PHP Umfeld machst du ja ziemlich viel mit Symphony. Ich weiß gar nicht, ob das bei Laravel auch so ist. Die haben so Dependency Injection Container mit einer super großen Konfigurationsdatei. Ich glaube in Richtung alle Hardcore Java."
+    },
+    {
+      "end": 3643300,
+      "speaker": "B",
+      "start": 3635060,
+      "text": "Leute werden dich jetzt hassen, wenn du bei Objektorientierung da mit BHB um die Ecke kommst, weil es ist ja nur Spielzeugobjektorientierung. Hört man ganz ganz oft Ja gut."
+    },
+    {
+      "end": 3649100,
+      "speaker": "A",
+      "start": 3643300,
+      "text": "Aber ich meine, große Java Frameworks werden auch so ein Dependenci Container haben dann mit ihren Annotations."
+    },
+    {
+      "end": 3651790,
+      "speaker": "B",
+      "start": 3649710,
+      "text": "Noch viel schlimmer ist es meistens in Java."
+    },
+    {
+      "end": 3732380,
+      "speaker": "A",
+      "start": 3652510,
+      "text": "Die Magie ist dasselbe. Also du schreibst nicht irgendwo zwei New Statements und reißt das eine manuell in das andere rein, sondern es geht halt durch irgendwelche komplexen Konfigurationen. Prinzipiell bin ich da kein Fan von, weil es wirklich nochmal eine Abstraktionsebene drauf packt. Ich habe es aber schon in sehr großen Applikationen gesehen, wo es wirklich vorteilhaft war, ein Bei Trivago hatten wir eine relativ große Frontend Applikation auf PHP Basis, die hatte so ein Dependency Injection Container und da ich ziemlich viel im Bereich Datenbankoptimierung und Datenbank Skalierung und so weiter dran war, konnte ich einfach neue Klassen zur mysql oder zur Redis Connection einbauen, die dann Sharding machen, die dann Round Robin machen, die dann Lese und Schreibzugriffe splitten können, ohne die Applikation überhaupt anzufassen. Also all diese Prinzipien hier und auch dieser Dependency Injection Container hat mir geholfen, wirklich durch zwei, drei Zeilen meine Klasse in allen Möglichkeiten dieser ganzen Applikation einzusetzen. Und das war schon cool, muss ich schon zugeben. Aber über meine ganze Karriere würde ich sagen, die Dinger haben mir mehr Schmerzen bereitet als Vorteile. Ich habe jetzt gerade einen positiven Case genannt. Bei sehr großen Applikationen, da reden wir wirklich von einer Million Zeilen und mehr. In fünf und neunzig Prozent der Fälle haben die Minutenschmerzen gemacht."
+    },
+    {
+      "end": 3811440,
+      "speaker": "B",
+      "start": 3732700,
+      "text": "Auch da wieder meine persönliche Meinung ist, also ich bin auch kein großer Fan von Magic an sich, aber ich habe da auch das Gefü Gefühl, dass so diese Full Magic wieder ein bisschen zurückgeht. Und klar, man hat trotzdem die Container und so weiter, aber man muss wieder ein bisschen mehr spezifizieren und es funktioniert auch weniger komplett Magic, ohne dass du was siehst am Code. Also auch wenn ich Annotationen habe, die helfen mir ja dabei, das zu verstehen, dass da im Hintergrund irgendwo Magic ist. Aber oft hast du ja Magic, die siehst du nicht im Code, die passiert irgendwo im Hintergrund, ohne dass du jetzt Du schaust diese Methode Klasse an und siehst einfach nicht, wo das passiert. Und ich glaube, das geht wieder ein bisschen zurück. Kommt mir vor, dass es wieder klarer und strukturierter wird. Und weniger versteckte Magic eigentlich passiert, sondern eher gewollte, bewusste Magic, die klarer ersichtlich ist. Aber ist auch nur so ein Anekdote Evidence, den ich da habe und keine Studie, die mir das belegen könnte. Aber man sieht eigentlich auch, dass in anderen Programmiersprachen das vielleicht sogar wieder ein bisschen abgenommen hat. Also es gab so einen extremen Hype, würde ich mal sagen, so in der Java Welt und dann auch mit C. In anderen Sprachen sieht man da wieder ein bisschen weniger. Es gibt schon Auto Wiring, das ist, glaube ich, schon mittlerweile eine Grundlage. Gibt es eigentlich überall irgendwelche Frameworks, aber es ist nicht mehr so extrem wie früher."
+    },
+    {
+      "end": 3830430,
+      "speaker": "A",
+      "start": 3811520,
+      "text": "Denkst du, es gibt eine Korrelation zwischen Leuten, die so Dependency Injection Magic Container Tools nutzen und den Leuten, die oems für Datenbank Connection nutzen? Ist das dieselbe Klasse an Leute? Harte Stereotypen Frage, ganz klar. Und wir scheren jetzt alle über einen Kamm und packen alle in eine Schublade. Sollte man durch nie tun, aber ja."
+    },
+    {
+      "end": 3858390,
+      "speaker": "B",
+      "start": 3830430,
+      "text": "Also keine Ahnung, ob ich da einen Zusammenhang sehe, aber natürlich, ich würde mal sagen, die Leute, die orms verwenden, also Object Relational Mappers zum Datenbankzugriff, die verwenden meistens auch viel Magic sonst herum, also Aspect Oriented Programming, Annotations, diese ganzen Dinge. Hat aber vielleicht einfach auch den Grund, dass zum Beispiel in der Java Welt beides sehr häufig gesehen wird. Also kann auch ein Zufall sein."
+    },
+    {
+      "end": 3918870,
+      "speaker": "A",
+      "start": 3858470,
+      "text": "Jetzt sind wir durch Solid durchgerattet und ein paar Kritiken haben wir ja schon angesprochen. Kannst du over Engineering führen? Zu viele Klassen, ab und zu zu abstrakt, vielleicht auch gar nicht so gut messbar. Ist ja jetzt keine Sache, die man durch statische Code Analyse wirklich rauszieht. Und dein Solid Score ist fünf oder so. So, dann haben wir schon mit Time to Market angesprochen, nicht immer praktikabel in der realen Welt, Zeitdruck und so weiter und so fort. Vielleicht das System auch einfach nur zu klein oder vielleicht zu Legacy, Eins der besten Kritiken, die ich eigentlich gelesen habe. Und da stimme ich auch zu. Solid selbst löst nicht grundlegende Architekturprobleme, denn ich denke, eine gute Architektur wird nicht durch Solid getrieben, sondern durch eine gute Definition von Datenfluss, der Domain Struktur und Systemgrenzen. Ich denke, Solid kann ein bisschen unterstützen, aber wenn der Datenfluss einfach krude ist, dann bringt dir Single Responsibility in irgendwelchen Methoden halt auch relativ wenig."
+    },
+    {
+      "end": 3986630,
+      "speaker": "B",
+      "start": 3919270,
+      "text": "Da stimme dir vollkommen zu. Aber ich glaube, das ist auch nicht das Ziel. Also SOLID geht schon sehr auf die Programmierecke runter und das habe ich auch erwähnt mit dem Beispiel mit der Städteplanung. Das was du jetzt meinst, der Datenfluss, das wäre dann eher die Städteplanung. Wo speicher meine Daten, wie bekomme ich sie heraus, wo fließen sie, was habe ich für Module, für Microservices, was auch immer, APIs. Und dann, wenn es wirklich darum geht, wie implementiere ich meine fünf Klassen, dann ist SOLID eigentlich so Helfer Guidelines, die mich einfach im Alltag unterstützen. Und wenn ich daran denke, es ist ja auch, wie du richtig sagst, es ist keine Metrik, sondern ist eigentlich eher so eine Mindsetfrage. Und wie es so halt bei allen Modellen ist, Es gibt Modelle sind immer falsch, aber manche sind halt hilfreich und das ist so ähnlich. Man muss das nicht dogmatisch verfolgen, was sowieso immer ein Fehler ist, Aber das mal grundsätzlich zu verstehen und auch wenn ich dann bewusst einen Schritt gehe, dass ich etwas breche und sage, ich möchte das jetzt nicht in diesem Fall und ich habe gute Gründe dafür. Das kann ich ja nur machen, wenn ich mal grundsätzlich verstanden habe, habe, was diese Principles sagen, um sie dann brechen zu können. Insofern ist es, glaube ich, immer ein guter Weg."
+    },
+    {
+      "end": 4002150,
+      "speaker": "A",
+      "start": 3986630,
+      "text": "Also sagst du eher, da geht es um andere Abstraktionsebenen, andere Flughöhen sozusagen, dass der Datenfluss auf einer höheren Architekturebene ist als das SOLID Prinzip und das SOLID Prinzip sich eher um das Detaillevel kümmert, anstatt um das High Level."
+    },
+    {
+      "end": 4043880,
+      "speaker": "B",
+      "start": 4002150,
+      "text": "Genau, also darum Single Responsibility Principle ist ja eher auf Code Ebene, während Separation of Concerns ja auf eher einem abstrakten höheren Ebenen gefahren werden kann. Muss nicht, kann natürlich auch auf Detailebene bei einer Funktion angewandt werden, aber das würde ich so eher als höheres Principal sehen und nicht SOLID, weil SOLID beschreibt keinen Datenfluss, hast du vollkommen recht. Also das löst dir keine klassischen Architekturprobleme, aber es ermöglicht dir bei der Implementierung dann deine ganzen Architekturen, Änderungen, Refactorings besser zu machen, einfach im Team an derselben Codebase zu arbeiten, weniger Abhängigkeiten drinnen zu haben, flexibler zu sein, wartbarer zu sein. Also diese Dinge wirklich auf Code Ebene."
+    },
+    {
+      "end": 4059360,
+      "speaker": "A",
+      "start": 4043880,
+      "text": "Welchen Tipp gibst du mir denn, wenn ich ein Mitglied in meinem Team habe, der die SOLID Prinzipien als striktes Gesetz sieht, so wie die Deutschen die rote Ampel nicht überfahren dürfen und wir immer in Diskussion kommen in Bezug auf Dogmatismus Das, was du gerade gesagt hast."
+    },
+    {
+      "end": 4107990,
+      "speaker": "B",
+      "start": 4059440,
+      "text": "Ja, es ist schon eine schwierige Frage. Also jeder Dogmatiker ist halt schwierig zu überzeugen. Wie überzeugst du jemanden, der sich einer Religion angeschlossen hat, wenn du glaubst, sie ist nicht gut? Also das ist sicher schwierig. Ich würde da einfach aufs Team setzen und auf die Diskussion. Und wenn man das gemeinschaftlich im Team eindeutig analysiert, dass das eben jetzt kein Fall ist oder dass das vielleicht gar kein Bruch von so einer Regel ist, vor allem weil es ja auch keine mathematische Definition dafür gibt, die man irgendwie ganz objektiv anwenden könnte, dann ist das erledigt. Und wahrscheinlich hat man dann eher auf der Teamebene, auf der sozialen Ebene ein Problem mit so einer Person und muss eigentlich auf der Ebene ansetzen und weniger auf der mathematischen oder auf der wirklichen objektiven Ebene, gleich wie man halt beim Religionskrieg auch wenig Möglichkeiten hat, wenn man da mit Fakten um die Ecke kommt."
+    },
+    {
+      "end": 4112630,
+      "speaker": "A",
+      "start": 4107990,
+      "text": "Also willst du eigentlich sagen, ich oder der Teamkollege ist das Problem einer von uns beiden?"
+    },
+    {
+      "end": 4211350,
+      "speaker": "B",
+      "start": 4113030,
+      "text": "Ja, es ist auf jeden Fall so. Aber man kann ja auch viele Sachen ändern und lösen. Aber wenn das natürlich unlösbar ist, aber dann ist es die andere Frage. Aber ganz allgemein, man sollte nie was dogmatisch sehen. Soll auch keine Ausrede sein, dass man immer, ja, es ist ja nur dogmatisch und brauche ich gar nicht beachten, sondern man soll es als hilfreiches Tool Guidelines sehen, die einem weiterhelfen. Und das sind eben so einfache Prinzipien meiner Meinung nach, die man auch so schnell einsetzen kann. Irgendwie mal kurz zu überlegen, wie strukturiere ich die zwei Klassen, mache da eine Klasse, zwei Klassen. Das hat nichts mit Time to Market zu tun, sondern die paar Sekunden, wenn ich mir die Zeit einfach nehme, weil die spare ich mir danach auf jeden Fall wieder, wenn es darum geht, dass der Code länger lebt und halt auch dementsprechend weiterleben muss und erweiterbar bleiben muss und flexibel bleiben muss und ich vielleicht einen Test auch einfacher machen kann am Ende, wenn ich dann den Bug habe. Also das ist sicher gute, gute Zeit, die man da investiert. Und wie gesagt, ich glaube nicht, dass das viel Zeit ist, weil man überlegt sich ja sowieso immer, wie man was strukturiert. Und wenn man in diese Überlegung das doch mit reinfliessen lässt, dann ist es, glaube ich, gut investiert. Und auch noch, wir haben das jetzt eh schon probiert bei allen Definitionen. Es geht nicht nur um Objektorientiertheit, weil funktionale Programmierung, das ist halt dann auf funktionaler Ebene, wobei dann noch mehr Einschränkungen habe, vor allem wenn es pur funktional ist, weil ich ja keine Seiteffekte haben will. Ich muss sowieso alles über Parameter übergeben. Ich kann keine Dependencies drinnen haben. Also da habe ich Dependency Injection automatisch mit built in bei funktionaler Programmierung. Also da sind Sachen, die natürlich vielleicht nicht eins zu eins umsetzbar sind, aber die Grundregeln und wenn man die Modularität beachtet, die kann man in jeder Programmiersprache und in jedem Paradigma einsetzen."
+    },
+    {
+      "end": 4215350,
+      "speaker": "A",
+      "start": 4211430,
+      "text": "Faszinierend. Eine Stunde später und ich bin immer noch wach bei dem Thema und bist."
+    },
+    {
+      "end": 4224590,
+      "speaker": "B",
+      "start": 4215350,
+      "text": "Du jetzt überzeugt von Solid oder sagst du bist offener gegenüber Solid oder ist es ein veraltetes Konzept von einem alten weißen Mann, hat seine Daseinsberechtigung, du hast."
+    },
+    {
+      "end": 4262650,
+      "speaker": "A",
+      "start": 4224590,
+      "text": "Ein paar gute Punkte gehabt. Ich fand es wieder gut mal als Refresher zu haben. Ich hatte es auch in meiner klassischen Berufsausbildung zum Fachinformatiker, Fachrichtung Anwendungsentwicklung, so nennt man die in Deutschland als die Berufsausbildung zum Programmierer. Ich habe es auch mal im Studium gehabt, ich glaube der Prof. Hat es mal in einer halben Stunde erwähnt, habe es wieder zur Seite gelegt, aber es ist immer mal wieder gut und das gebe ich auch selbst zu, diese mal wieder an die Oberfläche des Gehirns gebracht zu haben. Und bei den nächsten Programmierungen denke ich auch mal wieder drüber nach. Ich weiß nicht, ob ich jedes Mal drüber nachdenke oder ob man die vielleicht schon verinnerlichen kann, so dass man die automatisch macht. Weiß ich auch nicht, glaube ich schon."
+    },
+    {
+      "end": 4269010,
+      "speaker": "B",
+      "start": 4262650,
+      "text": "Meist da recht schnell dann drinnen. Man hat ja seine Grundsatzregeln und so irgendwie die Red Flags, die aufpoppen, ohne dass man lange drüber nachdenkt."
+    },
+    {
+      "end": 4284890,
+      "speaker": "A",
+      "start": 4269010,
+      "text": "Kommt mir vor bei deinem ganzen Vibe Coding und Spec Driven Development und so weiter und so fort. Hast du das Gefühl, die AI wendet sowas automatisch an oder hast du eher die Notwendigkeit, da noch mal nachzubessern in Bezug auf Solid Principles? Wenn du AI Code siehst, ja, da."
+    },
+    {
+      "end": 4305110,
+      "speaker": "B",
+      "start": 4284890,
+      "text": "Geht es eher dann in deine Richtung, dass es übertrieben angewandt wird, weil dann hast du am Ende irgendwie fünf, sechs, sieben, acht verschiedene Klassen, die dir da noch irgendwas dazu implementieren und möglichst viele Trennungen und Interfaces und so Zeug. Also es geht, mein Gefühl ist da, dass es eher in die falsche Richtung geht und man es dann wieder vereinfachen muss und einfacher und irgendwas zusammen kopieren muss, anstatt zu separieren."
+    },
+    {
+      "end": 4325170,
+      "speaker": "A",
+      "start": 4305350,
+      "text": "Das ist dann aber wahrscheinlich ein Ergebnis von dem Training Data Bias, oder? Weil ich kann mir schon vorstellen, dass super viele Leute, die das gerade in der Uni gehabt haben, irgendwie darüber geblockt haben und dann vielleicht in irgendeiner Uni irgendeine Übung gemacht haben, die auf GitHub gestellt haben und dann, dass das Modell darauf train wurde, oder?"
+    },
+    {
+      "end": 4374180,
+      "speaker": "B",
+      "start": 4325250,
+      "text": "Also ich glaube jetzt nicht, dass es ein Problem der Wissenschaft ist, sondern schon eher der Praxis, weil es wird ja anhand des Codes gelernt, der da draußen rumschwirrt und noch dazu ganz viel Open Source. Aber in größeren Projekten macht es ja alles Sinn und teilweise programmiert die AI ja so viel Zeug dazu, das du gar nicht haben willst und da macht es natürlich alles Sinn und in größeren Projekten macht es auch Sinn. Aber wenn ich alleine gerade möglichst schnell irgendwas haben will und eigentlich nur zwei Klassen haben will und jetzt kein aufgeblähtes Projekt, was für drei hundert Leute für die Zukunft gedacht ist, dann ist es halt schwierig. Vielleicht könnte man das im Prompt irgendwie mit erwähnen, bleib dreckig, bleib klein, könnte man mal ausprobieren, aber grundsätzlich meine meiste Zeit fließt eigentlich da rein, dass sie dann wieder Sachen zusammen kopiere und wieder in eine Klasse verlege aus fünf Klassen, solche Dinge. Also ist eher bei mir der Fall als umgekehrt üblicherweise."
+    },
+    {
+      "end": 4387520,
+      "speaker": "A",
+      "start": 4374340,
+      "text": "Ich musste hart lachen. Also ich bin zwar für dreckige, schnelle Programmierung, weil ich denke auch dieser Code wird nie wieder angefasst oder ähnliches, zumindest in vielen Situationen, aber einem Prompt bleibt dreckig Wände."
+    },
+    {
+      "end": 4434120,
+      "speaker": "B",
+      "start": 4389520,
+      "text": "Ich mache ja auch immer den Fehler, ich rede dann von dreckigen Code, aber es geht ja gar nicht um dreckigen Code. Der Code soll sauber sein und soll sogar Solid Principles folgen, aber er kann ja trotzdem kompakt sein und einfach zu lesen. Genau darum geht es ja auch beim Single Responsibility Principle. Um das nochmal zu sagen, Es geht darum, wenn ich einen Konzern habe, etwas zu ändern, soll alles gemeinsam verfügbar sein und die soll alles anfassen müssen. Genau dessen Zusammenhang gibt ja eigentlich das Single Responsibility Principle. Also es geht eigentlich genau in die Richtung, dass es auch kompakter sein soll, aber das ist natürlich schwierig dann irgendwie wahrscheinlich für die AI zu verstehen oder für einen selber. Und dann sagt man halt oft dreckig, obwohl es gar nicht dreckig ist. Es ist absolut sauber. Wenn man die Entscheidung macht, dann kann das absolut sauber sein und ist auch vollkommen in Ordnung."
+    },
+    {
+      "end": 4442660,
+      "speaker": "A",
+      "start": 4434200,
+      "text": "Du hast schon so einen kleinen Crush auf Single Responsibility. Also ich glaube so oft wie du das in dieser Episode erwähnt hast, ich glaube von diesen fünf Prinzipien ist das so dein Lieblingsprinzip kann das."
+    },
+    {
+      "end": 4453540,
+      "speaker": "B",
+      "start": 4442660,
+      "text": "Also Single Responsibility Principle zusammen mit Separation of Concerns sind meiner Meinung nach die wichtigsten Prinzipien. Don't repeat yourself vielleicht würde ich schon sagen."
+    },
+    {
+      "end": 4457140,
+      "speaker": "A",
+      "start": 4453540,
+      "text": "Das ist doch ein schönes Abschlusswort. Wolfgang, vielen lieben Dank für diesen Refresher."
+    },
+    {
+      "end": 4463460,
+      "speaker": "B",
+      "start": 4457219,
+      "text": "Danke für deinen Gegenpol. Ich habe ihn ja ein bisschen umpolen können. Also ich bin erfolgreich meiner Meinung nach gewesen."
+    },
+    {
+      "end": 4471180,
+      "speaker": "A",
+      "start": 4463540,
+      "text": "Ich bin sehr gespannt, was sie für Feedback kriegen, weil ich denke, zu diesem Thema haben sehr viele Leute eine Meinung und haben auch sehr viele Kommentare, Korrekturvorschläge für uns."
+    },
+    {
+      "end": 4474140,
+      "speaker": "B",
+      "start": 4471180,
+      "text": "Die wollen wir alle hören, die Korrekturvorschläge inklusive der Meinung."
+    },
+    {
+      "end": 4495820,
+      "speaker": "A",
+      "start": 4474460,
+      "text": "Ich meine das ernst. Ich denke, wir sind auch nur zwei Menschen, die Fehler machen und die auch nicht perfekt sind. Von daher, falls wir was Falsches gesagt haben oder ihr anderer Meinung seid, springt doch mal in Social Media, Mastodon, in unsere Discord Community auf LinkedIn und lasst es uns wissen oder schreibt uns einfach eine E Mail oder von mir aus auch die Spotify Kommentare könnt ihr auch nutzen. Deswegen, wir lesen gefühlt alles."
+    },
+    {
+      "end": 4503930,
+      "speaker": "B",
+      "start": 4496370,
+      "text": "Warum haben wir eigentlich keine Faxnummer? So wie die Fax Informatiker oder Urlaub im User Space, Die haben eine Faxnummer schon sehr stark."
+    },
+    {
+      "end": 4546000,
+      "speaker": "A",
+      "start": 4503930,
+      "text": "Und als ich das erste Mal gehört habe, ich musste wirklich nachfragen, ob diese Faxnummer real ist und mir wurde bestätigt, ja, du kannst da ein Fax hinsenden, Das wird zwar dann irgendwie digitalisiert, sie haben kein Faxgerät in einem Büro stehen, das fände ich noch wirklich Königsklasse, sondern die nutzen irgend so ein Digital Service, aber weiß ich nicht, ob wir das haben müssen, bin ich mir nicht sicher. Ich bin mir auch nicht sicher, ob die jemals einen Fax bekommen haben, Falls ihr nicht wisst, wovon wir reden. Der Wolfgang war vor kurzem in dem Urlaub im User Space Podcast zu einer Episode Dreiig Jahre mysql. Und dieser Podcast hat einen alternativen Weg, um Feedback zu geben. Und zwar haben die noch eine Faxnummer da könnt ihr dann Feedback hin faxen und die kriegen das. Also fand ich sehr amüsant."
+    },
+    {
+      "end": 4549960,
+      "speaker": "B",
+      "start": 4546000,
+      "text": "Wir werden es uns überlegen, ob wir das noch zu Discord hinzufügen, die Faxnummer."
+    },
+    {
+      "end": 4567870,
+      "speaker": "A",
+      "start": 4550120,
+      "text": "Das wäre geil, wenn die Faxe dann direkt in Discord Channel kommen. Das wäre mal cool. Also wer Bock auf ein side Project hat, wo man die Solid Prinzipien anwenden kann, baut doch mal ein Faxnummer zu Discord Bot. Wir würden den einbauen. Das war's von uns. Wir hören uns nächste Woche wieder und tschüss. Ciao."
+    }
+  ],
+  "webhook_auth": false
+}

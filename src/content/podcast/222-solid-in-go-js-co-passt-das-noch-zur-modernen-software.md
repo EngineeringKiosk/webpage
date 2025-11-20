@@ -81,11 +81,16 @@ length_second: 4574
 pubDate: 2025-11-18 02:00:11+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/1bytBaz67vqSFAN85AtJPc
-tags: []
-title: '#222 SOLID in Go, JS & Co: passt das noch zur modernen Software?'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Software Qualität
+- Tech Kultur
+title: "#222 SOLID in Go, JS & Co: passt das noch zur modernen Software?"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=vGVVzuKwF04
 
 ---
