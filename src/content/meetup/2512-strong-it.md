@@ -17,7 +17,7 @@ talks:
     linkedin: http://www.linkedin.com/in/daniel-hauser-77259a159
     website: https://dugi42.github.io
     github: https://github.com/dugi42
-  - avatar: './images/speaker/2512-pinguine2.png'
+  - avatar: './images/speaker/2512-alpss.png'
     name: 'Christoph Hellwig & Richard Weinberger'
     title: 'Small is Beautiful: The Value of Niche Gatherings'
     description: 'What happens when you send three dozen Linux hackers up a mountain
