@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+import imageTimHannemann from "../../images/teams/tim-hannemann-profile.jpg";
+
+let title = 'Tim Hannemann, Meetup Host - Engineering Kiosk';
+let description = 'Freelancer und Consultant mit einem Interesse in Menschen, Tech-Kultur, Datenbank und Skalierung, Product Entwicklung und Usability sowie Recommender Systems aus Innsbruck.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/teams/tim-hannemann-profile.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap lg:items-start -mx-4">
+						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+							<div class="relative mx-auto md:ml-0 max-w-max">
+								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+								<Image class="rounded-3xl" src={imageTimHannemann} alt="Tim Hannemann" title="Tim Hannemann" />
+							</div>
+						</div>
+						<div class="w-full md:w-1/2 px-4">
+							<div class="flex items-center mb-4">
+								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Timwork</span>
+								<a class="inline-block mr-6 hover:opacity-80" href="https://linkedin.com/in/timhannemann">
+									<img src="/images/brands/linkedin.svg" alt="Tim Hannemann auf LinkedIn" />
+								</a>
+							</div>
+							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Tim Hannemann</h1>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								Tim wurde in sehr jungen Jahren mit einem Snowboard nach Innsbruck gelockt und ist der dortigen Nordkette trotz wiederholten Auslandsaufenthalten stets treu geblieben. So lernte er als Android-Developer der ersten Stunde noch während seines Masterstudiums die Startup-Szene in Berlin kennen und lieben. Der Wunsch, das Internationale mit den Wurzeln zu verbinden, begleitet Tim seitdem. Bei der <a href="https://www.reply.com/open-reply-germany/de" class="underline hover:no-underline">Open Reply GmbH</a> verantwortet er unter anderem den Standortaufbau in Innsbruck.
+							</p>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								Gerne in den Bergen, renoviert mit Freunden eine Berghütte, betreibt eine <a href="https://www.f-online.at" class="underline hover:no-underline">Lernplattform für die österreichische Führerscheinprüfung</a> – mit Familie daheim in der Rushhour des Lebens kommt Tim aber aktuell gefühlt zu überhaupt nix mehr. Liebt sein Oldtimer-Rennradl und trinkt keinen Kaffee.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>
