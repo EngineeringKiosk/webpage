@@ -87,10 +87,10 @@ speaker:
 spotify: https://open.spotify.com/episode/1bytBaz67vqSFAN85AtJPc
 tags:
 - Software Engineering
-- Software Qualität
+- "Software Qualit\xE4t"
 - Tech Kultur
-title: "#222 SOLID in Go, JS & Co: passt das noch zur modernen Software?"
-transcript_slim: ""
+title: '#222 SOLID in Go, JS & Co: passt das noch zur modernen Software?'
+transcript_slim: src/data/transcripts/222-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=vGVVzuKwF04
 
 ---
