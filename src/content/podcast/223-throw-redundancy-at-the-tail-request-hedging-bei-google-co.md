@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/050ae7aa-0521-4f01-9aae-1add86891502/engineering-kiosk-223-throw-redundancy-at-the-tail-request-hedging-bei-google-co
 apple_podcasts: https://podcasts.apple.com/us/podcast/223-throw-redundancy-at-the-tail-request-hedging-bei/id1603082924?i=1000738213028&uo=4
 audio: https://audio1.redcircle.com/episodes/2898c54b-ac91-4b9b-a7f2-498f08acb627/stream.mp3
 chapter:
