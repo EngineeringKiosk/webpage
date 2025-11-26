@@ -1,0 +1,1004 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3934,
+  "audio_url": "https://cloud.inlupus.at/s/bfwH8p2ZqWNoWcJ/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.9567899,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "00b89035-d358-4e30-b442-68d86df33738",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 115730,
+      "speaker": "A",
+      "start": 3280,
+      "text": "Du bist hier wieder beim Engineering Kiosk gelandet, deinem deutschsprachigen Podcast zum Thema Software Engineering. Ich finde cool, dass du wieder eingeschaltet hast. Resilience Engineering ist ein großes Thema. In dieser Episode nerden wir mal wieder über eine ganz kleine Request Hedging. Man könnte es auch als die Kunst, doppelte Requests zu senden, beschreiben. Wir klären, warum man dies überhaupt tun sollte und welches Problem es löst, was Head und Tail Latenzen sind, sowie was die User Experience damit zu tun hat, ob Request Hedging nicht nur die Last erhöht, welche Varianten von Request Hedging existieren und wie es in der Praxis aussieht und woher das ganze Konzept eigentlich stammt. Als Nebenstrang wird noch eine Diskussion geführt, ob man seine Monitoring und Observability Systeme mit dem Produktivsystem verheiraten sollte. Na, was denkst du? Bleib dran, wir legen los. Viel Spaß. Vor gut sechs Monaten haben wir mal eine Episode zum Thema Resilience Engineering gemacht bzw. Über ein Nischenthema im Bereich Resilienz Engineering. Bei Episode zwei hundert vier haben wir über Themen wie Timeouts, also Connection Timeout, Request Timeout, Idle Timeout, Keep a Live Timeout, über Kontext, Deadlines, über Retries von Client Requests gesprochen, über Methoden wie zum Beispiel Backoff, Exponential Backoff oder Jitter, haben auch Prinzipien wie Circuit Breaker und Token Bucket Retry Systeme und so weiter erwähnt. Punkt ist wir haben ziemlich viel über die Art und Weise gesprochen, wie ein Client, ein System, ein HTTP Client oder ähnliches Request an andere Systeme sendet. Und damals habe ich diese Episode gepitcht und der Wolfgang kam, so wie er oft ist, mit so einer negativen Attitüde an den Tag. Und ganz im Ernst, kriegen wir doch überhaupt mit Timeouts überhaupt eine Episode hin."
+    },
+    {
+      "end": 127810,
+      "speaker": "B",
+      "start": 116050,
+      "text": "Es ist diese Grundeinstellung gegenüber deinen Lieblingsthemen. Das muss ich einfach immer heranziehen, diese negative Grundeinstellung, damit wir da auf einem sinnvollen, balancierten Level dann unterwegs sind."
+    },
+    {
+      "end": 141650,
+      "speaker": "A",
+      "start": 127810,
+      "text": "Ende vom Lied war dann, dass die Episode zwei hundert vier über eine Stunde geht, dass wir den Wolfgang überzeugen konnten, dass hinter dem Thema Timeout und HTTP Request deutlich mehr steckt."
+    },
+    {
+      "end": 145950,
+      "speaker": "B",
+      "start": 141650,
+      "text": "Moment, wer ist wir? Ist das schon Pluralismus, was du da machst?"
+    },
+    {
+      "end": 212040,
+      "speaker": "A",
+      "start": 146270,
+      "text": "Nein, wir sind ich und die Community. Denn das Feedback zu dieser Episode war enorm positiv. Es wurde sich sogar mehr im Bereich Resilience Engineering gewünscht, mehr einen ähnlichen Tiefgang. Und was soll ich sagen? Ich respektiere unsere Community. Euer Wunsch ist mein Befehl und ihr habt Glück, das Thema Resilienz Engineering ist ja sehr groß mit sehr vielen Facetten. Da geht es ja in der Regel nicht nur um Request Response. Aber ich dachte mir, wenn wir noch mal einen zweiten Part von Thema Resilience Engineering machen, dann lass uns doch einfach da anknüpfen, wo wir abgeschlossen haben mit der Episode zwei hundert vier denn wir bleiben nämlich bei Client Systemen und wir bleiben auch bei Wie versendet man eigentlich einen HTTP Request bzw. Was kann man denn eigentlich alles so tun, wenn man diesen HTTP Request senden möchte und vielleicht nicht die Antwort bekommt, die man haben möchte bzw. Nicht so schnell bekommt und so weiter und so fort. Und deswegen, lieber Wolfgang, bringe ich dir heute etwas über einen sogenannten Absicherungsantrag bei."
+    },
+    {
+      "end": 229080,
+      "speaker": "B",
+      "start": 212120,
+      "text": "Du folgst wirklich unserer Community, nachdem sich ja viele Leute immer beschweren, dass wir ständig englische Begriffe verwenden und zu wenig deutsche. Hast du jetzt den Absicherungsantrag mit reingebracht. Wie ich dieses englische Wort Request Hatching gelesen habe, habe ich als erstes an Hedgehog gedacht, an den Igel. Hat es was damit zu tun?"
+    },
+    {
+      "end": 244740,
+      "speaker": "A",
+      "start": 229160,
+      "text": "Habe ich auch gedacht. Ich habe keine Ahnung, wo das herkommt, aber ich habe es wirklich versucht, irgendwie ins Deutsche zu übersetzen. Absicherungsantrag ist das, was mir DeepL zurückgegeben hat. Ich gebe zu, ich habe keine Ahnung und diese Recherche habe ich jetzt nicht gemacht, woher das Wort kommt oder ähnliches."
+    },
+    {
+      "end": 256380,
+      "speaker": "B",
+      "start": 244740,
+      "text": "Ja, es ist relativ easy. Hedge ist eine Absicherung. Es gibt ja auch die Hedgefonds, die eben nicht nur darauf wetten, dass der Börsenkurs nach oben geht, sondern auch nach unten geht und sich dadurch absichern und daher Absicherungsantrag."
+    },
+    {
+      "end": 287840,
+      "speaker": "A",
+      "start": 256380,
+      "text": "Ja, aber Request Hedging wirklich was mit Absicherung zu tun hat, weiß ich nicht. Man kann das ein bisschen so drehen, aber da möchte ich jetzt nicht vorgreifen. Und da das ja sozusagen Teil zwei von Resilience Engineering ist und wir immer noch auf der Client Seite sind, lieber Wolfgang, wir stellen uns ja immer die Frage, wenn wir eine Podcast Episode aufnehmen, wenn jemand diese Episode hört, was bleibt hängen? Und ich möchte jetzt von dir Was ist dir aus der Episode zwei hundert vier Resilience Engineering zum Thema Retries, Backoff, Timeouts und Jitter hängen geblieben?"
+    },
+    {
+      "end": 291520,
+      "speaker": "B",
+      "start": 287840,
+      "text": "Dein Verwende die Defaults deiner Library, die du verwendest."
+    },
+    {
+      "end": 364420,
+      "speaker": "A",
+      "start": 291920,
+      "text": "Auch schön. Gut, dann übernehme ich mal ganz kurz deinen Lehrer Part, wenn man so möchte. Im Endeffekt ging es nur, weil ein HTTP Request fehlschlägt heißt das nicht, dass man nicht mehr an die Antwort kommt, sondern man kann ja ein Retry machen. Diesen Retry sollte man natürlich nicht in einer for Schleife machen oder in einer while Schleife und einfach auf das Subsystem hämmern mit ganz vielen Anfragen, sondern man sollte so ein bisschen das Subsystem respektieren, indem man zwischen den HTTP Anfragen zum Beispiel mal eine Sekunde wartet oder ähnliches. So, wenn das jetzt ganz viele Clients machen, dann hämmern die natürlich immer in einem vorhersehbaren Intervall auf dem Subsystem rum. Deswegen sagt man, okay, man nimmt da so eine Variable dazwischen, wie zum Beispiel ein Exponential Backup, wie zum Beispiel eine Zufallszahl, damit nicht alle Systeme gleichzeitig auf dem Subsystem rumhämmern. Oder man sagt sogar, man führt den ersten Request aus, dann wartet man zwei Sekunden, dann führt man den zweiten Request aus, dann wartet man vier Sekunden, den nächsten Request acht Sekunden und so weiter und so fort. Also man verlängert einfach die Anzahl zwischen den Request unter der Annahme, das Subsystem Probleme hat zu antworten, um ihm dann mehr Zeit zum Recovern zu geben. Und da gibt es dann natürlich ganz viele andere Methoden noch, die wir auch in der Episode beschrieben haben."
+    },
+    {
+      "end": 382180,
+      "speaker": "B",
+      "start": 364660,
+      "text": "Jetzt redest du ständig von Hämmern und eigentlich haben wir damals besprochen, wie man ein netter Client ist und das Backend schont, würde ich fast sagen, Also nicht bösartig, einfach drauflos hämmert. Und jetzt kommst du mit Request Hedging um die Ecke, wo es wieder darum geht, noch mehr Hämmer aufzubauen. Also du scheinst die Hämmer zu lieben."
+    },
+    {
+      "end": 443220,
+      "speaker": "A",
+      "start": 382180,
+      "text": "Ja und nein. Es sind unterschiedliche Sichtweisen. Wo wir gerade darüber gesprochen haben, nett zu dem Subsystem zu sein und ein toller Client zu sein und auch die freien Ressourcen und Kapazitäten zu respektieren, gehen wir jetzt auf eine andere Sichtweise und zwar sagen, was können wir auf Client Seite tun, um möglichst lange Request Zeiten zu vermeiden. Also springen wir mal rein. Was ist Request Hedging? Request Hatching kann man folgendermaßen beschreiben. Du schickst denselben Request parallel oder zeitversetzt, das kommt gleich drauf an. Erklären wir gleich warum, an mehrere Backends und verwendest die erste Antwort. Alle anderen Requests werden abgebrochen. Du fadest also aus. Stell dir vor, du hast eine Datenbank und stell dir vor, du hast diese Datenbank mehrfach repliziert. Jetzt willst du eine Antwort von dieser Datenbank und du sendest eine SQL Query an alle Replika. Wahrscheinlich kommen die Requests in unterschiedlichen Zeiten zurück. Du nimmst dir also den ersten Request und brichst die anderen Queries alle ab. Das ist Request Hedging."
+    },
+    {
+      "end": 447020,
+      "speaker": "B",
+      "start": 443220,
+      "text": "Okay, Das heißt, du machst das alles noch schlimmer. Statt einer Anfrage sendest du überall zwei."
+    },
+    {
+      "end": 570650,
+      "speaker": "A",
+      "start": 447020,
+      "text": "Anfragen, könnte man so sagen. Also du siehst das jetzt aus der negativen Seite und da kommen wir jetzt gleich zu, warum dies auch negativ sein kann. Ich sehe das aber eher mal aus der ganzen ganzen Frage, okay, warum kommt diese ganze Thematik überhaupt auf? Wieso macht man das Ganze überhaupt? Ich meine im Endeffekt bei den modernen IT Systemen und bei verteilten Systemen, da blickt ja kaum noch wer durch und Requests bleiben gelegentlich mal hängen. Und jetzt wird der Techniker fragen, was heißt denn gelegentlich bleiben die mal hängen? Jeder, der schon mal die ganze Sache gedebugt hat, der weiß ganz genau, es gibt etliche Gründe. Der Garbage Collector macht mal irgendwie so eine Stop of the World Pause, dann hast du Netzwerk Jitter, du hast ungleichmäßige CPU Loads auf den Systemen, du hast vielleicht eine Contention in irgendwelchen Storage Playern oder in irgendwelchen Datenbanken, wo mehrere Prozesse auf die gleiche, auf die gleiche Ressource zugreifen wollen und sich gegenseitig blocken. Dann hast du vielleicht irgendwelche Locking Situationen, dass irgendeine Ressource nicht verfügbar ist, du hast vielleicht ein Subsystem, was gerade einen Thundering Hört abfedern muss oder oder oder. Also im Endeffekt gibt es etliche Gründe, warum ein Request in einem groß verteilten System oder vielleicht auch in einer Microservice Architektur einfach in die Binsen gehen kann. Jetzt kannst du NAT alles immer komplett debuggen und dann hast du vielleicht den Grund gefunden, wie zum Beispiel, ja, wir hatten eine Netzwerk Jitter. Netzwerk Jitter würde man sagen, okay, das ist so die Schwankung in der Paketlaufzeit innerhalb von einem kurzen Zeitraum. Also das bedeutet, wenn zwei Pakete denselben Weg durch Netz gehen, dann kann das sein, dass die ab und zu mal unterschiedliche lang brauchen. Das liegt unter anderem an Queuing System, auf den Switchen, auf den Routern. Also es kann an Retransmissions liegen, das kann unterschiedlichen Routing Pfaden liegen und so weiter und so fort. Aber jetzt hast du festgestellt, okay, du hast das auf das Netzwerk zurückzuführen, aber jetzt wechselt es ja nicht die komplette Netzwerkinfrastruktur, nur weil es herausgefunden. Und da kommt natürlich dann jetzt das Request Hatching ins Spiel, um diese Thematik halt mal abzufedern."
+    },
+    {
+      "end": 633930,
+      "speaker": "B",
+      "start": 630650,
+      "text": "Also wie läuft die ganze Sache ab in der Praxis jetzt?"
+    },
+    {
+      "end": 663490,
+      "speaker": "A",
+      "start": 633930,
+      "text": "Ich beschreibe jetzt nur eine Art von Request Hatching. Welche Arten es gibt, kommen wir gleich zu. Aber im Endeffekt hast du einen Client, der schickt Request A an Backend Node erste Dann wartet der Request eine gewisse Zeit. Das ist halt in der Regel, ich sag mal so einen Timeout, den du definierst, den nennt man den Hatch Threshold. Und wenn der Request zu lange dauert, also länger als dein Schwellenwert ist, dann feuerst du einen zweiten Request ab. Der Request ist der gleiche Request, der geht aber in Backend Node zweite Das."
+    },
+    {
+      "end": 675460,
+      "speaker": "B",
+      "start": 663490,
+      "text": "Heißt aber, dass du nicht automatisch zwei Anfragen schickst, wie du ursprünglich erklärt hast, sondern du hast da schon irgendwie einen Abstand, in dem Fall zwischendrin durch dein Threshold. Also sendet nicht im selben Moment zwei Anfragen los."
+    },
+    {
+      "end": 698220,
+      "speaker": "A",
+      "start": 675540,
+      "text": "Die Antwort ist ja und nein. Da kommen wir gleich zu. Da hast du zwei laufende Request, der eine läuft länger als der andere und die erste Antwort, die zurückkommt, gewinnt. Und alle anderen offenen Request, die droppst du, die kanzelst du. Es handelt sich hierbei also, wenn du so möchtest, um eine Art kontrollierte Redundanz, weil ich habe ja gerade gesagt, ab und zu gehen mal Request flöten oder brauchen länger oder in ja, dann hast."
+    },
+    {
+      "end": 699300,
+      "speaker": "B",
+      "start": 698220,
+      "text": "Du den Namen ja schon erklärt."
+    },
+    {
+      "end": 716290,
+      "speaker": "A",
+      "start": 699300,
+      "text": "Hatching absichern, weiß ich jetzt nicht, ob man das absichert, deswegen. Aber jetzt ist die Frage, okay, warum macht man das und warum, warum sichert man denn eigentlich alles ab? Und zwar geht es eigentlich nur um die p Latenz. Du möchtest halt die Antwortzeiten deines Systems in irgendeiner Art und Weise kurz halten."
+    },
+    {
+      "end": 718130,
+      "speaker": "B",
+      "start": 716290,
+      "text": "Für alle, die es jetzt nicht wissen, was ist P?"
+    },
+    {
+      "end": 773120,
+      "speaker": "A",
+      "start": 718530,
+      "text": "Okay, da müssen wir jetzt aber mal ganz kurz einen anderen Gedankenstrang aufmachen und ich sag mal, wir machen jetzt mal so einen Exkurs in das Thema Latenz. Also im Endeffekt, wenn man über p, p, p spricht, dann spricht man eigent sogenannte Perzentile, die beschreiben, wie schnell oder langsam ein bestimmter Anteil deiner Request beantwortet. Nehmen wir mal als Beispiel P ist der klassische Median, nicht das arithmetische Mittel, sondern der Median der fünfzig Prozent aller Request sind schneller, fünfzig Prozent aller Requests sind langsamer. Dann sagt man zum Beispiel bei der P neun und neunzig Prozent aller Request sind schneller, nur ein Prozent sind langsamer. Und umso weiter du die Perzentile eingrenzt, neun und neunzig, neun und neunzig, neun, alle Request sind schneller. Das zeigt dann eigentlich die extremen Latenz Spikes von null komma eins Prozent der langsamsten Request deines Systems."
+    },
+    {
+      "end": 779760,
+      "speaker": "B",
+      "start": 773120,
+      "text": "Aber warum interessieren mir jetzt plötzlich ein Prozent von meinem System? Das ist ja irgendwie, wenn eh neun und neunzig Prozent passen, kannst du so."
+    },
+    {
+      "end": 827790,
+      "speaker": "A",
+      "start": 779760,
+      "text": "Sehen, Da kommt jetzt immer so ein bisschen das Gefühl der Menschen hinzu. Ich habe ja gesagt, Request Hatching machen wir dafür, um die Antwortzeiten von deinem System schnell zu halten. Im Bereich Observability und Monitoring wird eigentlich gesagt, okay, P ist wichtiger als der Durchschnitt, weil einzelne sehr langsame Requests die gesamte User Experience ruinieren können. Also nehmen wir mal an, du hast eine App und du klickst da zehn mal rum, die ersten neun Klicks werden wirklich schnell beantwortet, fünfzig Millisekunden, alles gut, der letzte Klick dauert zwei Sekunden. Dein Gefühl wird sein, die App ist sehr langsam. Scheiße. Und das ist völlig egal, ob die Daten stimmen oder nicht. In diesem Fall ist leider das Gefühl, was du hast, die Realität, die dann nicht mit den Daten übereinstimmt."
+    },
+    {
+      "end": 835070,
+      "speaker": "B",
+      "start": 827790,
+      "text": "Aber eben P würde ja heißen, dass ich ein hundert Klicks machen muss, um überhaupt mal was Langsames zu sehen. Also die Chance ist ja sehr gering."
+    },
+    {
+      "end": 845200,
+      "speaker": "A",
+      "start": 835150,
+      "text": "Hast du schon mal so ein Tool installiert, wie oft du mit der Maus irgendwo hin klickst auf deinem Computer? Oder gibt es ja auch so Spaß Tools, wie viel Kilometer du mit der Maus zurücklegst und so. Worauf ich eigentlich hinaus möchte. Denkst du, ein hundert Klicks sind viel?"
+    },
+    {
+      "end": 850880,
+      "speaker": "B",
+      "start": 845200,
+      "text": "Ja, kommt drauf an, wie viel ich natürlich mache in der jeweiligen App, aber sind schon viel. Ein hundert würde ich sagen."
+    },
+    {
+      "end": 920100,
+      "speaker": "A",
+      "start": 850880,
+      "text": "Ich denke, du hast heute alleine schon mehr als ein hundert Mal im Slack geklickt. Ich denke nicht, dass ein hundert Requests viel sind, aber um deine Frage vielleicht zu beantworten, jetzt nicht auf die Klicks, nehmen wir mal eine Microservice Architektur, die verstärkt nämlich diese ganze P Thematik, weil du hast hier einen Multiplikationseffekt. Sagen wir, ein typischer Request ruft mehrere Subservices auf, die sind nicht alle parallel, sondern auch hintereinander gestellt. Und jetzt sagen wir, ein User Request braucht zwanzig Remote Procedure Calls in deiner Microservice Architektur. Wenn nur jeder Call eine einprozentige Chance auf Langsamkeit hat, also P, dann ist die Wahrscheinlichkeit, dass mindestens ein Request langsam ist, achtzehn Prozent. Wie rechnet man das? Eins null Punkt neun und neunzig hoch zwanzig, weil du zwanzig Calls machst. Das bedeutet, fast jeder fünfte User Request ist langsam, obwohl jeder Service einzeln fast perfekt aussieht. Es muss also gar nicht zwanzig aktive Klicks von dir sein. Es reichen also eigentlich fünf Klicks in einem Microservice System, was zwanzig Remote Procedure Calls intern abfeuert."
+    },
+    {
+      "end": 961640,
+      "speaker": "B",
+      "start": 920100,
+      "text": "Und was man auch nicht vergessen darf, wenn du das auf die Gesamt Requests siehst und du hast User und nur ein Prozent sind betroffen, P, dann hast du trotzdem ein hundert unglückliche User. Und dann ist die Frage, willst du ein hundert unglückliche User akzeptieren? Auch wenn es im Gesamten natürlich nur ein Prozent ist, aber es können im Endeffekt trotzdem viel Menschen sein und viele Leute am Ende betreffen. Und wenn du jetzt davon ausgehst, dass unhappy User vielleicht das Abo kündigen von deiner SaaS Plattform, dann wäre es schlecht, wenn ein Prozent unhappy wären jeden Tag und dann vielleicht das Abo kündigen, dann hättest du ein Prozent deiner User verloren jeden Tag. Also von dem Standpunkt, wenn du es auf alle siehst, ist es natürlich auch ein großes Problem."
+    },
+    {
+      "end": 1029820,
+      "speaker": "A",
+      "start": 961640,
+      "text": "Und jetzt um die ganze Thematik vielleicht sogar ein bisschen zu vereinfachen, wir können jetzt uns die ganze Zeit darüber streiten, was ist denn jetzt der richtige Wert? P, p, p, Auf welche Metrik stürzen wir uns? Denn da hat sich die Industrie etwas ausgedacht, und zwar Abkürzungen mehr oder weniger. Und zwar redet man eigentlich auch von Head Latency und Tay Latency. Head Latency ist eigentlich die Latenz der schnellen Mehrheit aller Requests oder umgangssprachlich, wie schnell das System eigentlich oder normalerweise reagiert. Zum Beispiel beim lokalen Testen oder unter Last übersetzt würde man da eigentlich über P und P reden, so in dem Bereich. Die Tail Latency ist aber eigentlich die Latency, die man versucht zu optimieren. Das ist die Latenz der langsamen Request, also wirklich die der Spikes der Ausreißer. Und da sieht man eigentlich die seltenen, aber extrem langsamen Request. Und da redet man dann von P, P und P. Also das sind also die Spikes, die entstehen, wenn der Garbage Collector mal eine Pause macht. Contention Netzwerk Jitter und so weiter und so fort. All das, wovon ich gerade gesprochen hab."
+    },
+    {
+      "end": 1050950,
+      "speaker": "B",
+      "start": 1029820,
+      "text": "Es hängt natürlich auch davon ab, was du einfach für Anforderungen hast. Wenn du in einem Real Time System bis zum Beispiel, wo du das Licht ein und ausschaltest mit einem Schalter, dann hast du da wahrscheinlich andere Anforderungen als an ein System, was im Hintergrund asynchron irgendwelche Daten nachlädt. Und dementsprechend musst du natürlich auch anders reagieren. Also es kommt auf die Requirements natürlich auch drauf an."
+    },
+    {
+      "end": 1097610,
+      "speaker": "A",
+      "start": 1050950,
+      "text": "Ja, natürlich. Aber im Endeffekt überall, wo der Kunde auf einen synchronen Request wartet, willst du eigentlich die Tail Latency optimieren. Denn im Endeffekt kann das auch bedeuten, dass reale Workflows, also nicht nur einzelne Requests, die Sub Request auf Microservice gebremst werden, sondern auch reale Workflows. Nehmen wir mal einen E Commerce Shop, du packst das in Warenkorb, gehst in den Checkout, machst das Payment und alles ist super snappy, Wirklich zwei hundert Millisekunden, bam, bam, bam, so schnell hast du noch nie eingekauft, Wolfgang. Und dann drückst du auf Bestellen und dann dauert die ganze Sache sechs, sieben Sekunden. Im Endeffekt hängt wegen der Tail Latency, wegen dem Spike der komplette Workflow zum Einkaufen."
+    },
+    {
+      "end": 1118810,
+      "speaker": "B",
+      "start": 1097610,
+      "text": "Okay, Wenn man jetzt von einem ganzen Ausflug wieder zurückkommen und du jetzt schon die Motivation eigentlich mitgebracht hast, okay, man will die Tail Latency verringern und das funktioniert natürlich mit Request Hatching habe ich da nicht wieder ein Problem bzw. Entstehen da nicht wahnsinnig viele Kosten, wenn ich jetzt anfange, irgendwie Requests doppelt zu senden in meinem System. Also ist das Ganze nicht dann auch kontraproduktiv?"
+    },
+    {
+      "end": 1147250,
+      "speaker": "A",
+      "start": 1119050,
+      "text": "Du formulierst das gerade so, dass im Standardfall immer mehrere Request rausgehen, aber ich habe ja gerade beschrieben, das ist ja nicht der Fall wegen dem Hedging Threshold. Du kannst also sagen, jeder Call, den ich von meinem Client versende, muss innerhalb von zwei hundert Millisekunden zurückkommen. Du sendest einen Request, der Call dauert länger, zwei hundert Millisekunden sind verstrichen und dann sendest du einen neuen raus. Alle Calls, nämlich P zum Beispiel neunzig Prozent deiner Calls kommen in unter zwei hundert Millisekunden runter."
+    },
+    {
+      "end": 1147730,
+      "speaker": "B",
+      "start": 1147330,
+      "text": "Top."
+    },
+    {
+      "end": 1223740,
+      "speaker": "A",
+      "start": 1147730,
+      "text": "Dann versendest du ja keinen zweiten Request. Das bedeutet, das Hatching optimiert ja eigentlich nur die Tail Latency und nicht deine Head Latency von P bis P, die wir gerade definiert haben. Man kann aber auch sagen, und das ist nämlich der Hauptpunkt, desto größer dein System wird und desto mehr Services in deiner verteilten Architektur involviert sind, desto mehr Tail Latency hast du ja, umso mehr Request, umso größer das System, mehr Probleme treten auf und so weiter und so fort. Das bedeutet, Edge Cases, also deine Ausreißer, sind dann leider auch mit erhöhtem Traffic keine Edge Cases mehr, weil du sagtest ja gerade schon, wenn du zehn oder Besucher hast, dann ist das leider fast täglich der Fall. Und da muss man jetzt sagen, ist es wirklich teurer, doppelte Request zu senden, denn der Gedanke ist, perfekte Hardware kostet wirklich viel Geld, perfekte deterministische Software ist eigentlich unmöglich zu schreiben und einen zusätzlichen Request zu senden in ein Prozent der Fälle kostet fast nichts. Also im Endeffekt kann man sagen, es ist effizienter, ein paar Requests doppelt zu senden, als fast jede Komponente perfekt zu machen, weil in deinem Beispiel sagst du, nä dann stellen wir mal Hardware daneben, weil das wäre nämlich dann die Alternative."
+    },
+    {
+      "end": 1236340,
+      "speaker": "B",
+      "start": 1223740,
+      "text": "Und das Schöne ist, man kann es sehr gut berechnen. Also ist es mir das wert, einen Node mehr aufzusetzen oder einen Computer mehr aufzusetzen unter Umständen und damit null komma acht Prozent meiner User glücklicher zu machen, was durchaus sehr viele User sein können."
+    },
+    {
+      "end": 1267790,
+      "speaker": "A",
+      "start": 1236340,
+      "text": "Ja, das Lustige ist, ich habe vor kurzem noch eine Statistik gelesen und zwar die realen Kosten eines Software Systems oder auch eines Hardware Systems kommen nicht durch die Anschaffung oder nicht durch die Erstellung, sondern die Warenkosten kommen durch die Lifetime dieses Systems, durch die Maintenance Kosten, durch die Migrationskosten und so weiter und so fort. Das bedeutet also, wenn du jetzt sagst, ich kann das sehr toll berechnen, was mich ein neuer Server kostet, dann ist das ja fast auch schon irgendwie zu kurz gedacht, denn du klammerst ja gerade nur die Kaufkosten aus."
+    },
+    {
+      "end": 1298000,
+      "speaker": "B",
+      "start": 1267790,
+      "text": "Ja, ich kann ja den Rest auch berechnen, aber ich weiß noch mal relativ genau, was kostet mich ein Notebook im Normalfall und kann das dann vielleicht auch wirklich eins zu eins umlegen. Und üblicherweise, wenn man natürlich nur zu einem System eine Node hinzufügt, heißt es ja noch lange nicht, dass automatisch die Latency besser wird, weil dieser zusätzliche Server kann natürlich genauso wieder ein Garbage Collector gerade am Laufen haben. Also die Probleme hast du ja immer und nur durch das Duplizieren auf der Client Seite schaffst du das dann überhaupt die Tail Latency anzugehen?"
+    },
+    {
+      "end": 1350000,
+      "speaker": "A",
+      "start": 1298000,
+      "text": "Jetzt könnte man natürlich aber okay, das klingt ja wie geschnitten Brot. Warum? Warum macht das eigentlich nicht jeder? Gibt natürlich auch ein paar Nachteile, ist natürlich auch abhängig von dem System, aber der Wolfgang hackt ja die ganze Zeit auf dieser Hör mal du Andi, du machst ja mit deinen doppelten Request mehr Last rum. Im Endeffekt hat er natürlich auch recht. Wenn du immer doppelte Requests sendest, kann das natürlich auch sein, dass du dein Backend killt. Gar keine Frage. Deswegen ist es ja auch so wichtig, dass wir diesen Hedge Threshold definieren und sagen okay, wir hatten also nur, wenn der erste Request den PC überschritten hat. Achtung, du merkst schon, du musst erstmal wissen, was dein P ist. Das bedeutet ohne Observability, ohne ordentliches Monitoring brauchst du mit Request Hedging einfach gar nicht anzufangen. Und du musst es halt natürlich schon ein bisschen wissen, damit du ungefähr weißt, wie viel doppelte Request auch du sendest und ob dein Backend dir das Ganze natürlich abfedern."
+    },
+    {
+      "end": 1366380,
+      "speaker": "B",
+      "start": 1350240,
+      "text": "So, jetzt komme ich natürlich als Datenbackler um die Ecke und frage mich natürlich kannst du das immer anwenden? Jetzt wenn du da Geld transferierst in der Datenbank, kannst du da dann einfach zweimal ein Request losschicken? Transferiere mir mal da fünf hundert von Konto eins auf Konto zweite Wenn Konto."
+    },
+    {
+      "end": 1408960,
+      "speaker": "A",
+      "start": 1366380,
+      "text": "Eins dein Konto ist und Konto zwei mein Konto, dann würde ich sagen ja bitte mach vor dem Request Hedging keinen Stopp. Aber nein, IDEM potenziell in der ganzen Thematik natürlich Pflicht und das bedeutet natürlich auch, für manche Systeme ist das jetzt hier nicht geeignet. Geld transferieren oder Geld abbuchen. Dann generell Transaktionen erzeugen ist eine schwierige Thematik, aber wie Request Hedging bei Datenbanken und bei schreibenden Prozessen aussieht, kümmern wir uns vielleicht auch noch drum. Aber im Endeffekt musst du sicherstellen, dass dein Backend System oder deine Request Idem potent sind oder dein Backend muss mit Duplikaten umgehen können. Es ist eine schwierige Thematik, besonders bei Transaktionen. Also du kannst es nicht überall anwenden."
+    },
+    {
+      "end": 1433710,
+      "speaker": "B",
+      "start": 1408960,
+      "text": "Im Normalfall sollten Backend sowieso in diese Richtung gebaut sein, weil wenn mein Client irgendwie ein Connection Problem hat und der User vielleicht dann noch mal auf den Button drückt oder sowas, dann kann es auch sein, dass natürlich zwei Requests eintreffen. Das heißt, im Idealfall sollte ein Backend es eigentlich schon können. Aber natürlich, wenn man das bewusst auch noch mal macht, muss man vielleicht dementsprechend auch sicherstellen, dass dieses Backend versteht und vielleicht nicht komplett aus dem Konzept geworfen wird."
+    },
+    {
+      "end": 1441950,
+      "speaker": "A",
+      "start": 1433790,
+      "text": "Und es gibt ja auch manche Situationen, da ist es vorteilhaft, wenn der User auch wirklich einfach nur einen Fehler kriegt, bei Geld abbuchen zum Beispiel."
+    },
+    {
+      "end": 1471530,
+      "speaker": "B",
+      "start": 1442270,
+      "text": "Ich meine, man kann natürlich da schon viel machen und viel herumbauen und vielleicht eindeutige ids, damit das Backend das identifizieren kann und so weiter. Also man kann da schon einiges machen. Die Frage ist, ob es dann in so einem Case, wenn es wirklich um den klassischen Schreibzugriff geht, ob man diesen Mehraufwand, diese Komplexität überhaupt in Kauf nimmt oder ob man da mehr auf die Re Zugriffe geht, die einfach üblicherweise leichter sind und leichter zu handeln sind und auch üblicherweise in den meisten Systemen die Hauptlast sind auf das Backend."
+    },
+    {
+      "end": 1533700,
+      "speaker": "A",
+      "start": 1471530,
+      "text": "Ja, du sprichst ein gutes Thema an und zwar Komplexität, nicht nur auf dem Backend System, weil im Endeffekt empfängt das Backend System ja zwei Requests mit identischem Payload, gegebenenfalls bei einem Schreibzugriff auf unterschiedlichen Nodes und da Transaktions ids über Nodes zu scheren und keine doppelten Einträge zu haben, du merkst schon, das wird relativ tricky, kannst du machen, wenn du ein zentrales Log hast, dann rennst du aber in die Log Contention und blablabla. So, und da wollen wir ja alles umgehen, aber auch die Komplexität, die wird ja nicht geringer, denn im Endeffekt versendest du ein HTTP Request oder wir gehen jetzt einfach mal aus von einem HTTP Request, du hast Themen wie Timeout, Jitter, Retries, was wir ja auch schon besprochen hatten dabei, dann fügst du noch Hedging hinzu, das bedeutet, du feuerst mehrfach den Request und dann kommt eine Antwort zurück und dann musst du die anderen Requests, wo die noch nicht zurückgekommen sind, ja alle cancel. Also du merkst schon, deine Sprache muss irgendwie concurrent fähig sein."
+    },
+    {
+      "end": 1577180,
+      "speaker": "B",
+      "start": 1533780,
+      "text": "Ja, nicht nur die Sprache muss fähig sein, du musst sie implementieren, außer es macht jetzt irgendeine Library, aber üblicherweise machst du es in irgendeiner Form selber, weil da ja schon Business Practice Logik auch mitspielt und dann musst du plötzlich parallel programmieren und in diese ganze parallele Welt eintauchen und das auch behandeln und eben, wie du richtig sagst, andere alte Requests löschen oder invalid setzen. Also das sind schon komplexe Vorgänge, die man erstens vielleicht wegkapseln möchte, also vielleicht gibt es eine gute Library oder ein Team, das das übernimmt oder man muss sich halt selber damit beschäftigen, aber da steigt die Komplexität und da sieht man dann auch schon, dass dieses Hedging vermutlich eher für Bereiche gedacht sind, wo man wirklich sehr viele Requests hat, wo man auch genug Human Power hat, um das Ganze zu implementieren."
+    },
+    {
+      "end": 1667760,
+      "speaker": "A",
+      "start": 1577340,
+      "text": "Ob man das jetzt alles komplett irgendwie immer selbst programmieren muss, würde ich mal sagen, ne? Denn gute HTTP Libraries haben sowas auch drin. HTTP Libraries, die halt sehr exzessiv in diverse Richtungen gehen, auch im Bereich Resilience, zum Beispiel Hysterix von Netflix ist einer der Java Libraries auf dem Markt, die wohl so der Platzhirsch da sind. Aber man könnte auch sagen, okay, wenn das Client System die Hedge Request sendet und dann irgendwie abbricht, dann kann man jetzt auch auf dem Subsystem, das welches die Anfrage entgegennimmt, natürlich auch noch ein paar Sachen machen, denn die Requests werden vom Caller werden abgebrochen. Abgebrochen heißt in diesem Kontext ja, der Caller bricht den Request. Das heißt nicht, dass das Subsystem unbedingt den Request auch abbricht oder vielleicht noch zu Ende führt, eine Antwort gibt und die Antwort weggeschmissen wird. Das ist natürlich dann auch noch mal so eine so eine Lastfrage und Komplexitätsfrage, die man sich in seinem System stellen muss, denn es ist stark abhängig von deiner Anfrage, von deinem Request, welche Last auf den Subsystemen erzeugt wird. Aber wenn das jetzt zum Beispiel auch wieder eine Microservice Architektur ist mit fünf, sechs weiteren Subsystemen, dann macht es natürlich auch schon mal Sinn, den Request auf den Subsystemen auch abzubrechen. Und jetzt stelle ich dir mal die Frage, Wolfgang, wie viel HTTP Services hast du denn bereits implementiert, wo du aktive Request Cancellation als Request empfangendes System eingebaut hast?"
+    },
+    {
+      "end": 1672720,
+      "speaker": "B",
+      "start": 1668080,
+      "text": "Unmengen massig, aber du verdienst es nicht, dass ich dir jetzt erkläre und sage."
+    },
+    {
+      "end": 1680960,
+      "speaker": "A",
+      "start": 1672720,
+      "text": "Natürlich, es ist nämlich auch ein Fall, den man sonst natürlich kaum hat, obwohl es eigentlich Standard sein sollte, aber wie."
+    },
+    {
+      "end": 1706020,
+      "speaker": "B",
+      "start": 1680960,
+      "text": "Du schon richtig sagst, die Subsysteme sind ja auch noch ein Problem. Sogar wenn ich das jetzt einbaue und hintendran irgendwie ein Request zur Datenbank habe, da muss ich erstmal checken, kann ich überhaupt dieses Request zur Datenbank abbrechen und so weiter. Es ist ja kaskadierend dann auch meine Subsysteme müssen sie wieder unterstützen. Und da habe ich mich ehrlich gesagt auch noch nie damit beschäftigt. Also ihr wisst nicht mal, ob Datenbank Client irgendwie ordentliches Cancellation unterstützt. Hatte ich noch nie gebraucht, um ehrlich zu sein."
+    },
+    {
+      "end": 1728270,
+      "speaker": "A",
+      "start": 1706020,
+      "text": "Also die Antwort ist ja, fast alle Datenbank Clients, mit denen ich zumindest in letzter Zeit gearbeitet habe, unterstützen das. Aber das ist ja auch faszinierend, allein von dieser kleinen Konversation hier, HTTP Requests rumsenden, das macht ja jeder, das ist der Standard und jedes Tool, was du eigentlich auf GitHub findest, sollte das doch eigentlich eingebaut haben."
+    },
+    {
+      "end": 1745310,
+      "speaker": "B",
+      "start": 1728270,
+      "text": "Okay, also nachdem ich ja noch nie so was programmiert habe, wie funktioniert denn das rein technisch? Du sagst ja, mit der Datenbank funktioniert das, Wie funktioniert das mit einem HTTP Request? Wie kann ich das überhaupt machen in der Realität? Mache ich da einen neuen Endpunkt, um irgendwas zu canceln? Kriege ich da Request ID? Also wie funktioniert das dann in der Realität?"
+    },
+    {
+      "end": 1750990,
+      "speaker": "A",
+      "start": 1745870,
+      "text": "Die tolle Thematik ist ja dieses TCP IP, dieses Protokoll, was wir immer für Netzwerkkommunikation nutzen."
+    },
+    {
+      "end": 1752390,
+      "speaker": "B",
+      "start": 1751710,
+      "text": "Schon mal gehört?"
+    },
+    {
+      "end": 1760010,
+      "speaker": "A",
+      "start": 1752390,
+      "text": "Ja, ja, OSI Schichtenmodell und so weiter und so. Und dann kennst du ja sehr wahrscheinlich auch die Befehle SYN und AC und so weiter und so fort, oder?"
+    },
+    {
+      "end": 1761690,
+      "speaker": "B",
+      "start": 1760810,
+      "text": "Schon mal gehört."
+    },
+    {
+      "end": 1789790,
+      "speaker": "A",
+      "start": 1762650,
+      "text": "Und das Wissen musst du halt jetzt haben, um das jetzt alles mal ein bisschen zu verstehen. Du hast ja wahrscheinlich auch schon mal von HTTP Version eins gehört und HTTP zwei und vielleicht sogar HTTP, also Quick und so, oder? Natürlich, Surprise surprise, die funktionieren alle anders. Fangen wir mal ganz vorne an. Falls du nur HTTP eins verwendest, muss ich dir leider sagen, es existiert da leider kein Cancel Signal. Also im HTTP Protokoll gibt es sowas nicht. Request abbrechen oder ähnliches, auch erster januar."
+    },
+    {
+      "end": 1792070,
+      "speaker": "B",
+      "start": 1789790,
+      "text": "Nicht, schätze mal, oder? Weil das ist der Klassiker."
+    },
+    {
+      "end": 1832090,
+      "speaker": "A",
+      "start": 1792070,
+      "text": "Genau, ich gehe jetzt nur auf die Major Version, aber im Endeffekt basiert da alles auf der TCP Verbindung selbst. Und zwar, wenn vorne ein Request gecancelt wird am callenden System, dann wird eigentlich klassisch nur ein FIN Befehl gesendet und dann wird die Verbindung einfach mittendrin sauber geschlossen und der Server bekommt dann read, dann ein End of File, also ein EOF Fehler, hast du vielleicht schon mal gesehen, ist dann oft so eine Sache wie Connection, Reset by Peer oder Broken Pipe. Bei schreibenden Befehlen ist das meist so ein Reset Befehl, der dann über die Netzwerkleitung geschickt wird, aber da muss dann der empfangende Service ein bisschen darauf achten, welcher TCP Befehl da kommt."
+    },
+    {
+      "end": 1844360,
+      "speaker": "B",
+      "start": 1832090,
+      "text": "Wenn man websockets verwendet, ist das überhaupt schon möglich gewesen mit HTTP eins? Bin jetzt selber überfragt, aber mit Websockets müsste es eigentlich funktionieren. Ich glaube, dass die noch auf HTTP eins aufbauen."
+    },
+    {
+      "end": 1866360,
+      "speaker": "A",
+      "start": 1844680,
+      "text": "Sehr gute Frage, offen gesprochen, keine Ahnung, ich mache nicht so viel mit websocket selbst, aber jetzt mal eine ganz kurze Google Recherche besagt, dass wenn du eine websocket Verbindung auf HTTP eins aufmachst, dass dann der websocket Kollege direkt Hör mal Kollege, HTTP eins ist zwar schön und gut, aber wir machen jetzt erstmal einen Protokollwechsel und geht dann auf ein anderes Protokoll und dann geht er, glaube ich, auf klassisch TCP."
+    },
+    {
+      "end": 1871930,
+      "speaker": "B",
+      "start": 1866520,
+      "text": "Nachdem du in beide Richtungen kommunizieren willst, ist es wahrscheinlich mit HTTP eins auch eher schwierig."
+    },
+    {
+      "end": 1876210,
+      "speaker": "A",
+      "start": 1872410,
+      "text": "Genau, aber da bin ich dann jetzt auch nicht der Experte, da kann ich jetzt gar nicht so viel zu sagen."
+    },
+    {
+      "end": 1880810,
+      "speaker": "B",
+      "start": 1876210,
+      "text": "Und da müsstest du es natürlich trotzdem noch selber implementieren, die Funktionen, um was abzubrechen."
+    },
+    {
+      "end": 1896730,
+      "speaker": "A",
+      "start": 1881210,
+      "text": "Wie du schon merkst, da kommt es dann auf die Library deiner Programmiersprache darauf an, wie tief die geht, wie gut die implementiert ist und so weiter und so fort. Aber Wolfgang, du bist zwar alt, aber ich hoffe, dein Stack ist moderner, deswegen nutzt du ja HTTP zwei oder?"
+    },
+    {
+      "end": 1903850,
+      "speaker": "B",
+      "start": 1897290,
+      "text": "Natürlich kämpfe jedes Mal mit meinem nginx Proxy, damit HTTP zwei sauber durchreicht."
+    },
+    {
+      "end": 1982190,
+      "speaker": "A",
+      "start": 1903850,
+      "text": "Wundervoll. Denn HTTP selbst arbeitet mit sogenannten Streams, also nicht mit einzelnen TCP Verbindungen. Und eine TCP Verbindung hat viele parallele HTTP Streams. Und bei HTTP gibt es ein Cancel bzw. Reset Signal auf Streamebene, das ist das Reset Stream Frame und da kannst du sogar einen Fehlercode angeben, weswegen der Stream hier gecancelt wird und der Client, also und der Server, der den Request entgegennimmt, kann darauf dann reagieren. Jetzt ist es aber so in der modernen Welt ist alles natürlich leider nicht ganz so einfach, denn man hat in der Regel eine Reverse Proxy davor oder Load Balancer und so weiter und so fort. Und diese zusätzliche Infrastruktur, die können natürlich diese Request Abbrüche in irgendeiner Art und Weise absorbieren. Ein Request kommt von deinem System auf ein Load Balancer, der nimmt den Request entgegen und der Load Balancer hält eine stehende Verbindung zu deiner App. Ja, ist halt nicht ganz so geil, wenn vorne der Request abgebrochen wird und der Load Balancer den dann absorbiert und dann die stehende Verbindung einfach stehen lässt. Das ist natürlich nicht Sinn der Sache, aber die Praxis ist ein bisschen klüger und zwar die Proxys reagieren in der Regel richtig und brechen dann die Verbindung zum Backend ebenfalls ab, weswegen deine App dann eigentlich den Cancel Command auch mitkriegen würde."
+    },
+    {
+      "end": 1994430,
+      "speaker": "B",
+      "start": 1982190,
+      "text": "Jetzt in meiner schönen asynchronen typescript Welt ist das ja alles kein Problem, auf so Events zu reagieren. Wie funktioniert das bei dir in Go? Musst du da irgendwie ein hundert parallele Prozesse aufmachen oder sonst irgendwelche komischen Dinge?"
+    },
+    {
+      "end": 2023610,
+      "speaker": "A",
+      "start": 1994510,
+      "text": "Das Tolle ist in Go, all das, was ich gerade erzählt habe, ist nativ implementiert und zwar jedem Request, jedem HTTP Request gibst du einem sogenannten Kontext Objekt mit. Und dieses Kontext Objekt ist genau das, was ich hier gerade spreche. Es hat ein Timeout und das hat eine Deadline und allem sowas. Und das das Tolle ist auf der Serverseite, wenn ich eine HTTP Request bekomme, bekomme ich in dem Kontext Objekt die Möglichkeit auf ein Event zu lauschen, ob der Request von vorne gecancelt wurde. Das ist alles nativ integriert."
+    },
+    {
+      "end": 2025370,
+      "speaker": "B",
+      "start": 2023850,
+      "text": "Das ist ja asynchron dann, oder?"
+    },
+    {
+      "end": 2026890,
+      "speaker": "A",
+      "start": 2025450,
+      "text": "Ja, unten drunter natürlich."
+    },
+    {
+      "end": 2039680,
+      "speaker": "B",
+      "start": 2026970,
+      "text": "Aber du wirst dann aus deinem prozeduralen Flow rausgerissen, wenn du auf ein Event reagierst. Wenn du jetzt gerade mit der Datenbank kommunizierst und auf die Datenbank wartest und da fliegt jetzt dieses Event rein, wirst du dann rausgerissen aus deinem aktuellen Kontext."
+    },
+    {
+      "end": 2067350,
+      "speaker": "A",
+      "start": 2039680,
+      "text": "In der Regel launcht du eine Go Routine. Also einkommende HTTP Request werden eh in der eigenen Go Routine abgefrühstückt. Das bedeutet, jeder Request ist sein eigener kleiner Prozess, wenn er so möchte. Und Achtung, ja, liebe Community, nehmt mich jetzt nicht mit dem Wort Prozess auseinander. In Go ist das alles ein bisschen anders. Es ist kein realer Prozess und ist auch kein realer Thread, sondern es ist eine sogenannte Go Routine und mehrere Go Routine können in einem Thread gefeuert werden und der Compiler kümmert sich dann darum, wann ein neuer Thread aufgemacht wird und so weiter. Also nehmt mich da nicht auseinander, aber."
+    },
+    {
+      "end": 2117950,
+      "speaker": "B",
+      "start": 2067510,
+      "text": "Wir müssen endlich mal eine Go Folge machen. Das schneide ich jetzt im Nachhinein raus, sonst hast du dann Proof, dass ich das wirklich machen will. Okay, jetzt wissen wir, dass wenn der Client net ist, kann er das Request abbrechen. Alles gut. Jetzt nehmen wir mal an, ich habe da irgendwo in meinem Subsystem Bottleneck. Nehmen wir mal an, Datenbank ist am einfachsten zu verstehen. Die Datenbank hängt gerade aus irgendeinem Grund. Deadlock, was der Geier was. Jetzt habe ich davor zehn Bots, Nodes sitzen, die alle mit der zentralen Datenbank im Hintergrund kommunizieren. Jetzt alle Clients bekommen natürlich ein Timeout oder erreichen zumindest den Threshold und senden ein zweites Request. Jetzt alle Clients, nachdem alle hängen, fangen an noch mehr Requests zu senden. Habe ich dann nicht am Ende einen Retry Storm und mein Backend hat noch mehr Probleme, weil die einfach doppelt so viele Requests bekommen und zwar über alle hinweg mal meine Datenbank gerade hängt."
+    },
+    {
+      "end": 2123790,
+      "speaker": "A",
+      "start": 2118030,
+      "text": "Also du meinst, mein System macht einen HTTP Request an dein System und dein System hat eine hängende Datenbank."
+    },
+    {
+      "end": 2127710,
+      "speaker": "B",
+      "start": 2123790,
+      "text": "Ja, dann bekomme ich doppelt so viele Requests, weil alle Clients es natürlich probieren."
+    },
+    {
+      "end": 2136590,
+      "speaker": "A",
+      "start": 2127870,
+      "text": "Ja, das ist ein Fehler in deiner Architektur, aber ja, natürlich. Also wie gesagt, das Request Hatching verhindert keine Retry Storms, das machen Exponential Backoffs."
+    },
+    {
+      "end": 2139870,
+      "speaker": "B",
+      "start": 2136590,
+      "text": "Jitter und ähnliches, die in dem Fall ja nicht habe."
+    },
+    {
+      "end": 2140590,
+      "speaker": "A",
+      "start": 2139950,
+      "text": "Warum nicht?"
+    },
+    {
+      "end": 2154990,
+      "speaker": "B",
+      "start": 2140670,
+      "text": "Ja, weil ihr die im zweiten Request noch nicht habe. Das parallel gesendet wird danach natürlich schon. Also die Frage ist, wird noch ein drittes, viertes gesendet und da habe ich dann im Idealfall ein Backoff mit dabei oder ich breche ganz ab."
+    },
+    {
+      "end": 2170990,
+      "speaker": "A",
+      "start": 2155070,
+      "text": "Also du musst natürlich deine Guardrails haben, auch im Request Hatching. Also das bedeutet, wenn du einfach nur deine Requests aufeinander stackst und irgendwann sendet mein Client ein hundert Request an ein hundert Notes von dir, dann bin ich als Client auch nicht nett und das funktioniert auch nicht."
+    },
+    {
+      "end": 2187790,
+      "speaker": "B",
+      "start": 2170990,
+      "text": "Also was ich damit sagen will, ist, dass mit dem Hatching, wenn ich wirklich ein Problem habe in meinem Backend, habe ich automatisch ein hundert Prozent mehr Request sofort ohne irgendeinem Exponential Backoff, sondern im ersten Schritt habe ich automatisch doppelt so viele Requests, weil jeder Client einen zweiten Request sendet."
+    },
+    {
+      "end": 2190910,
+      "speaker": "A",
+      "start": 2187790,
+      "text": "Das ist erstmal korrekt, aber den Ausfall hast du ja so oder so."
+    },
+    {
+      "end": 2191910,
+      "speaker": "B",
+      "start": 2190910,
+      "text": "Ja klar, klar."
+    },
+    {
+      "end": 2194230,
+      "speaker": "A",
+      "start": 2191910,
+      "text": "Den hast du ja auch unabhängig vom Request Hatching."
+    },
+    {
+      "end": 2226880,
+      "speaker": "B",
+      "start": 2194230,
+      "text": "Wenn es ein Deadlock ist, kann es natürlich sein, dass ich da noch mehr aufstaut und so weiter. Aber ja, ich habe dann sowieso Probleme, ist schon klar. Aber ich muss mir nur bewusst sein, dass da unter Umständen dann auch mal doppelt so viele Requests kommen können, vielleicht sogar dann danach noch mehr oder wenn es sich aufstaut, ist natürlich ein Problem, das ich allgemein habe. Aber darum ist es, glaube ich, auch wichtig, dass die ganzen Mechanismen, die man da so einfach vielleicht sogar mit einer Checkbox irgendwo einschaltet, dass man die versteht, was da im Endeffekt auch passieren kann und vielleicht auch das dann zusammenspielt mit irgendwelchen Guardrails, die man dann auf der anderen Seite wieder machen muss."
+    },
+    {
+      "end": 2318980,
+      "speaker": "A",
+      "start": 2226880,
+      "text": "Genau dieses Regress Hatching ist ja keine eierlegende Wollmilchs. Dieses Request Hatching ist dafür gedacht, dass du deine Tail Latency optimierst, in dem Falle, dass dein System online ist. Wenn du sein System natürlich Probleme hat, dann ist die Optimierung der Tail Latency natürlich auch überflüssig, weil du generell Probleme hast Und deswegen kann das natürlich dann wieder ein erhöhtes Problem machen durch weiteren Load, durch weitere Request. Ganz klar. Das ist das Problem bzw. Die Kunst bzw. Die Herausforderung von Resilience Engineering. Aber ich merke schon, dir liegt dieses Lastthema wirklich am Herzen. Dann hier ist noch eine andere Möglichkeit, die dir wahrscheinlich nicht gefallen wird, die mir inzwischen sehr gut gefällt, aber initial vor ein paar Jahren habe ich da auch noch gegen geredet. Und zwar kann man nämlich auch sagen, dass der Schwellenwert, wann man den zweiten Request sendet, dynamisch angepasst wird. Du hast also jetzt nicht zwei hundert Millisekunden hart in einem Code verdrahtet, sondern diese zwei hundert Millisekunden. Dieser Wert wird dynamisch angepasst. Und woher kriegt dieser Wert die Information, wie er dynamisch angepasst werden sollte? Eine Möglichkeit ist, wenn das Zielsystem Last hat, dass du anfragen möchtest, dann hat du früher, also dann sendest du den zweiten Request früher an einen anderen Replika. Und wenn das Zielsystem, was du anfragen möchtest, idle ist, dann erhöhst du den Hedge Threshold. Dann wartest du also einen Tick länger, bis deine erste Antwort zurückkommt, bevor du den zweiten sendest."
+    },
+    {
+      "end": 2322740,
+      "speaker": "B",
+      "start": 2318980,
+      "text": "Woher soll ich denn als Client wissen, ob der eitel oder belastet ist?"
+    },
+    {
+      "end": 2330500,
+      "speaker": "A",
+      "start": 2322820,
+      "text": "Und jetzt kommt dieser Streitpunkt, wo ich vor ein paar Jahren sagen würde, nein, das machen wir nicht und inzwischen sage das ist das Beste, was du machen kannst."
+    },
+    {
+      "end": 2337220,
+      "speaker": "B",
+      "start": 2330500,
+      "text": "Übrigens zur Information für alle, also der Andi kennt mich nicht so gut, wir haben im Vorfeld schon darüber gestritten, darum weiß er jetzt schon, was meine Meinung ist."
+    },
+    {
+      "end": 2370440,
+      "speaker": "A",
+      "start": 2337220,
+      "text": "Man connectet sein Observability System zu seiner Live Applikation. Was bedeutet, man füttert die Lastdaten, wie auch immer du Last definierst, CPU, RAM, Number of Requests, wie du auch immer Last definierst. Das kommt natürlich auf Basis deines Systems darauf an. Diese Daten fütterst du in deine App, die den Request sendet und gibst dem Indikator, das System, was du anfragen möchtest, hat viel Last oder hat wenig Last. Und dann kann das System sagen, ich hatte früher oder ich Hedgefonds später."
+    },
+    {
+      "end": 2392440,
+      "speaker": "B",
+      "start": 2370840,
+      "text": "Warum ich das sehr kritisch sehe oder vor allem sehe ich das sehr kritisch durch meine Leadership Brille, wenn ich mal die aufsetze, weil ich sehe schon diese zwei Teams vor mir, die sich beschweren, Dieses eine Team will auf unsere Monitoring Daten Zugriff und die wollen dann entscheiden, wann sie uns Requests senden, was das für eine Frechheit ist. Erlebst du das in deiner Realität?"
+    },
+    {
+      "end": 2404570,
+      "speaker": "A",
+      "start": 2392760,
+      "text": "Nein, überhaupt nicht, weil du hast mit ganz anderen Problemen zu kämpfen. Du hast nicht das Problem deines Observability Systems oder ähnliches. Du hast ein Team Zusammenarbeit. Wir lösen nicht dasselbe Problem."
+    },
+    {
+      "end": 2458790,
+      "speaker": "B",
+      "start": 2404570,
+      "text": "Problem, Ja, aber in der Realität ist es halt oft so, also du musst Informationen nach außen geben. Man könnte jetzt auch argumentieren, okay, diese Kapselung, die man ja erreichen will, also diesen Vertrag, den ich da nach außen gibt, der ist vielleicht gebrochen, wenn jetzt plötzlich ein externes Team interne Daten von mir bekommt. Natürlich, in der Realität kann das natürlich auch stark helfen und mein System entlasten und ich könnte ja auch einen Contract machen, okay, ich gebe diese Observability Daten über eine Schnittstelle nach außen über eine andere und habe damit auch einen sauberen Contract. Es ist ja auch so was Ähnliches wie diese HTTP Headers, die viele Endpoints dir senden, wenn du zu viele Requests sendest, dass sie dir die Info geben, hey, warte mal ein bisschen oder nächstes Request erst in zehn Sekunden. Diese Dinge sind ja eigentlich ein ähnliches Informationssystem bzw. Ähnliche Informationen, die da gesendet werden und fließen. Also von dem Standpunkt kann ich mir das natürlich schon wieder vorstellen, aber ich kann mir auch vorstellen, dass da Teams durchaus gegeneinander geraten."
+    },
+    {
+      "end": 2499350,
+      "speaker": "A",
+      "start": 2458790,
+      "text": "Wenn wir mal praktisch Du hast ein Monitoring System, nehmen wir mal Prometheus. Prometheus hat eine Query Language, nennt sich promql und da kannst du Gib mir mal bitte den CPU Graphen der letzten halben Stunde. Man hat eine UI, sei es entweder die Prometheus UI oder Grafana und du als Mensch sendest da promql Queries hin. Wo ist der Unterschied, wenn das ein anderes System macht? Wo ist ein Unterschied, ob du als Mensch jetzt diese Daten abfragst oder irgendein System automatisiert? Beides hat dasselbe Resultat. Es besteht eine Abhängigkeit. Du als Mensch bist abhängig von den Observability Daten, weil du etwas investigieren möchtest."
+    },
+    {
+      "end": 2523030,
+      "speaker": "B",
+      "start": 2499350,
+      "text": "Das war jetzt gleich meine nächste Frage gewesen. Würdest du das in der Realität wirklich so machen oder würdest du eine eigene Schnittstelle machen, dass das Team das nach außen irgendwie zur Verfügung stellt? Weil sonst hast du ja wirklich eine extreme Abhängigkeit auf deine internen Daten, auf deine Struktur, auf dein Schema vor allem. Das heißt, wenn du deine internen Daten in irgendeiner Form änderst, bricht womöglich da draußen von dem anderen Team irgendwie eine Pipeline."
+    },
+    {
+      "end": 2532670,
+      "speaker": "A",
+      "start": 2523190,
+      "text": "Ja, du machst jetzt hier gerade eine sehr große Frage auf und meines Erachtens nach machst du eine Frage der Abstraktion und einer Leaky Abstraction im Kontext von Platform Engineering auf."
+    },
+    {
+      "end": 2533110,
+      "speaker": "B",
+      "start": 2532670,
+      "text": "Korrekt."
+    },
+    {
+      "end": 2535990,
+      "speaker": "A",
+      "start": 2533110,
+      "text": "Und wenn wir das jetzt besprechen, dann."
+    },
+    {
+      "end": 2543410,
+      "speaker": "B",
+      "start": 2536230,
+      "text": "Will jetzt nur schnell deine Meinung hören, Jetzt komm, du bist der so erfahrene DevOps Leak, schieß mich tot Monitoring Mensch."
+    },
+    {
+      "end": 2545370,
+      "speaker": "A",
+      "start": 2543410,
+      "text": "In der perfekten Welt baut man sich."
+    },
+    {
+      "end": 2549770,
+      "speaker": "B",
+      "start": 2546010,
+      "text": "Mit der perfekten Welt um die Ecke, so in der Realität, wie du es machen würdest."
+    },
+    {
+      "end": 2560290,
+      "speaker": "A",
+      "start": 2549770,
+      "text": "In der perfekten Welt baut man natürlich eine Abstraktion, weil eine Abstraktion gibt dem Plattform Team die Möglichkeit, den Unterbau wegzureißen, ohne dass irgendjemand schreit."
+    },
+    {
+      "end": 2567050,
+      "speaker": "B",
+      "start": 2560290,
+      "text": "Also transparente Contract, der erfüllt wird und intern, wie es dann abläuft, ist dann Teamsache."
+    },
+    {
+      "end": 2592310,
+      "speaker": "A",
+      "start": 2567050,
+      "text": "Ganz genau. Die Realität hat Leaky Abstractions, die Realität hat teilweise einzelne Systeme, aber bleiben wir mal in dem Monitoring Observability Space. Was man wunderschön machen kann, ist, man setzt einfach, und das ist vielleicht gar keine Leaky Abstraction mehr, man setzt einfach ein Promitius Replika auf und federated die Lastmetrik nur für diesen Service in eine eigene Prometheus Instanz. Und das ist ja auch eine Abstraction."
+    },
+    {
+      "end": 2593350,
+      "speaker": "B",
+      "start": 2592550,
+      "text": "Natürlich, ja."
+    },
+    {
+      "end": 2595670,
+      "speaker": "A",
+      "start": 2593510,
+      "text": "Also du musst jetzt keine API haben."
+    },
+    {
+      "end": 2604560,
+      "speaker": "B",
+      "start": 2595670,
+      "text": "Und es ist ja auch eine API in gewisser Weise, aber halt keine HTTP API oder sowas. Aber du hast natürlich eine saubere Schnittstelle, ganz, ganz klar."
+    },
+    {
+      "end": 2686410,
+      "speaker": "A",
+      "start": 2604560,
+      "text": "Und all das, was ich gerade erzählt habe, da wo sich bei manchen Leuten sehr wahrscheinlich die Fingernägel rollen, ist super smart und habe ich inzwischen in mehreren Firmen gesehen. Denn ich habe mal in einer Datenbank as a Service Firma gearbeitet und was da abging, da wurden unter anderem Datenbanken auf Basis von Alerting Webhooks repliziert. Irgendein Alert ist bei irgendeinem Hyperscaler geflogen, der Alert hat ein Webhook gesendet, das Hauptsystem hat diesen Alert empfangen und hat auf Basis des Alerts schon bereits neue Replikas hochgefahren und Daten transferiert und so weiter und so fort. Da könnte man okay, man hat Datenbank Outages verhindert, weil man halt auf Basis von Observability Daten früh genug reagiert hat oder oder oder. Es werden bei CDN Providern ganze Edge Datacenter abgeschaltet auf Basis von Observability Daten oder intelligente Deployment Systeme deployen neue Versionen, zum Beispiel auf deine Staging Server und dann werden da Request drauf gesendet und auf Basis der Metriken, die von dem Service kommen, wird entschieden, deploy ich das System automatisch auf weitere Server oder nicht? Dann gibt es da sogenannte Wartezyklen. Das ist ja nichts anderes als die dynamische Anpassung deines Hedge Schwellenwertes auf Basis von CPU Last oder nicht."
+    },
+    {
+      "end": 2716190,
+      "speaker": "B",
+      "start": 2686410,
+      "text": "Gibt es da schon ein cooles Buzzword für das? Weil es gibt ja Predictive Maintenance, was so was Ähnliches ist, dass ich schon weiß, wann mein Device zusammenbrechen wird, weil die einfach gewisse Werte monitore, zum Beispiel, dass keine Ahnung, meine Weiche beim Zug irgendwann den Geist aufgibt, weil irgendwie Temperaturkurven oder keine Ahnung, Dauer, wie lange die Weiche braucht zum Umstellen. Das ist ja eigentlich genau dasselbe. Wenn irgendwo Metriken auftauchen, die schlecht sind, dupliziere ich schon meine Datenbank. Also wäre eigentlich Zeit für ein Passwort."
+    },
+    {
+      "end": 2717590,
+      "speaker": "A",
+      "start": 2716190,
+      "text": "Andi Automatisierung."
+    },
+    {
+      "end": 2727350,
+      "speaker": "B",
+      "start": 2717670,
+      "text": "Wolfgang Automatisierung, das klingt zu langweilig. Da bist kein Marketingmensch, Da müssen wir noch üben, da machen wir noch eine eigene Episode und mit dem Buzzword dann im Titel."
+    },
+    {
+      "end": 2891830,
+      "speaker": "A",
+      "start": 2727430,
+      "text": "Also sowas kennt man unter oft Health mediated Deployments. Zum Beispiel ist einer dieser Wörter moderne Observability Best Practices Automatisierung Reliability Engineering und so weiter. In diesem Bereich findet sowas oder von mir aus auch Release Engineering, all diese Leute, die in diesen Bereichen arbeiten, die mit sowas schon mal. Jetzt ist es natürlich so, wir sprechen die ganze Zeit von Request Senden und es gibt verschiedene Arten von Request Hatching. Eine Sache ist, habe ich ja gerade gesagt, man sendet Request eins, wartet ein bisschen, sendet dann Request zwei und so weiter. Du kannst natürlich auch einfach drei oder vier Requests automatisch raussenden, gleichzeitig geht auch. Du kannst aber auch sagen, okay, ich habe Informationen über mein Zielsystem und mach das Request Hatching nicht einfach auf mehrere Instanzen, sondern einfach auf mehrere Availability Zones oder sogar mehrere Regions. Das bedeutet, von Anfang an hat dein Request System Informationen über die Infrastruktur, in wie viel Regions das deployed ist, in wie viel Abbild das deployed ist und so weiter. Das kannst du natürlich auch machen, also so eine Cross Cross Region Hatching. Du kannst das Ganze auch auf Netzwerkebene machen, indem du sagst, okay, deine Requests werden einfach über mehrere Netzwerkpfade gesendet, ohne dass sie den Applikationslayer duplizieren. Stell dir vor, du hast einen Server, stell dir vor, der hat einfach mehrere Netzwerkrouten in den Server rein und deine Applikation oder dein Router dupliziert die Pakete und sendet sie auf unterschiedlichen Glasfaserkabeln zu deinem Server. Das geht natürlich auch. Und die ganze Sache kannst du natürlich auch noch weiter treiben, denn im Endeffekt kann jede Ebene in deinem Stack einen Ausreißer haben. Also kannst du sagen, jede Ebene braucht auch diesen Hedging Schutz, denn der Tail entsteht überall, also müssen wir ihn überall hatchen. Somit kannst du auf dem DNS Layer wendest du parallele Queries an, also du sendest dein DNS Request gleichzeitig los. Auf dem Netzwerk Layer machst du dieses Multipassing, was ich gerade mit dem Glasfaser erklärt habe, zum Beispiel auf dem Service Remote Procedure Call Layer, also auf deinem Applikations Layer, machst du das Dynamic Hatching, also du erst den Request, wartest ein bisschen, dann den zweiten, das ist Dynamic Hedging. Und dann auf dem letzten Layer, zum Beispiel auf dem Datenbank Layer, könntest du zum Beispiel Quorum Reeds machen, können wir gleich noch erklären, was das ist. Oder halt einfach Hatch Reads. Und das sind dieses klassische Dynamik Dynamic Hatching, indem du sagst, einfach du feuerst drei Replika ab und ähnlich, also du kannst so deinen kompletten Stack weghatchen und und mit hoher Wahrscheinlichkeit hast du dann deine Tail Latency enorm reduziert oder du."
+    },
+    {
+      "end": 2904750,
+      "speaker": "B",
+      "start": 2891830,
+      "text": "Hast dich selber gedidost, was natürlich auch eine Möglichkeit wäre, wenn du so viele Layer und überall dieses Hedging einbaust. Aber als Cloudflare Mitarbeiter brauche ich dir ja nichts erzählen, dass man das auch schafft, sich selber zu ddosen."
+    },
+    {
+      "end": 2982860,
+      "speaker": "A",
+      "start": 2904750,
+      "text": "Ach, das geht schneller als gucken kannst. Also und du kannst dich auch mit Use Effect by React einfach ddosen, gar keine Frage. Aber du sagtest schon, wie sieht die ganze Sache in der Praxis denn aus? Das, was ich so gesehen habe, ist eigentlich, dass man sowas in Open Source System eigentlich fast nicht sieht, aber in großen Produktionsumgebungen, das eigentlich schon fast als Standard angesehen wird, denn große Infrastrukturen, große Produktionsumgebung sind halt einfach komplex und wenn wir von großen Produktionsumgebungen sind, dann hat man da in der Regel irgendwelche Proxys rumfliegen und Envoy ist zum Beispiel einer dieser Proxys, Edge oder Service Proxy kann als Load Balancer genutzt werden und und der wird eigentlich so als Cloud Native Proxy, ich sag mal durchs Dorf getrieben. Der hat zum Beispiel Features wie HTTP zwei, GRPC Support, Tracing, Rate Limiting und so weiter und der supportet auch natives HTTP Hedging. Also ziemlich coole Sache. Wer mit grpc unterwegs ist, also wer keine klassischen HTTP Calls bespricht, der kann auch mit Request Hedging arbeiten. Kann man da konfigurieren. Ja und wie sieht die ganze Sache denn bei den Datenbanken aus? Denn wir haben ja mit Wolfgang jetzt hier jemanden, der sich gefühlt jahrelang mit Datenbanken beschäftigt hat. Wolfgang, ich spare mir jetzt den Witz über deine Doktorarbeit."
+    },
+    {
+      "end": 2984140,
+      "speaker": "B",
+      "start": 2983340,
+      "text": "Danke sehr."
+    },
+    {
+      "end": 2998060,
+      "speaker": "A",
+      "start": 2984300,
+      "text": "Aber auch da habe ich mal ein bisschen recherchiert, wie sieht eigentlich Hedging bei Datenbanksystemen aus? Und da trennt man jetzt eigentlich Lese von Schreibzugriffen und das ist auch die Grundvoraussetzung für deine Applikation."
+    },
+    {
+      "end": 3008380,
+      "speaker": "B",
+      "start": 2998300,
+      "text": "Also du sprichst jetzt nicht von, was die Datenbanken intern machen als Hedging, sondern was ich als Client einer Datenbank mache, ob ich jetzt Schreibzugriffe hatchen sollte oder nicht zum Beispiel."
+    },
+    {
+      "end": 3032780,
+      "speaker": "A",
+      "start": 3008380,
+      "text": "Die Antwort ist ja, ich spreche davon, dass wenn mein System mit einer Datenbank kommuniziert. Du hast mich aber gerade auf eine gute Idee gebracht. Wie würde Request Hedging intern in einer Datenbank aussehen, wenn ich einen Datensatz auf die Festplatte schreiben möchte, schreibe ich den dann auf die eine Festplatte und wenn die eventuell, wenn die Festplatte nicht zurückkommt, schreibe ich es automatisch auf eine andere Festplatte. Das habe ich glaube ich noch. Das wäre mal interessant für eine Datenbank eigentlich."
+    },
+    {
+      "end": 3087900,
+      "speaker": "B",
+      "start": 3033020,
+      "text": "Also grundsätzlich ist dieser ganze Hedging Gedanke ja in Datenbanken inhärent irgendwo drin, vor allem in verteilte Datenbanken. Und daher kommt dieser ganze Hedging Begriff ja auch oder dieses Verfahren, weil du natürlich in verteilten Datenbanken genau dieses Problem hast, dass Notes wegbrechen, dass du nicht weißt, welcher Node schreibt und so weiter. Es gab ja auch früher, keine Ahnung, ob es immer noch so implementiert wird bei solchen verteilten Datenbank wie Cassandra zum Beispiel, dass du einfach versuchst auf drei Notes zu schreiben gleichzeitig oder du schickst mal dieses Paket per TCP nach draußen an mehrere Nodes und für dich ist es dann schon erledigt und du sendest ein Commit zurück an den User, dass diese Transaktion erledigt ist, in der Hoffnung, dass einer von diesen drei Requests schon irgendwie ankommen wird und auch schreiben wird. Das hat man früher wirklich so gemacht in Hochlast Situationen, dass man einfach nicht auf das Acknowledgement überhaupt wartet und davon ausgeht, einer wird schon durchgehen."
+    },
+    {
+      "end": 3104460,
+      "speaker": "A",
+      "start": 3087900,
+      "text": "Das macht man heutzutage immer noch so. Aber das ist natürlich ganz stark abhängig von der Konfiguration. Ich sag mal so ein Kafka Cluster oder so eine Kassandra. Genau, da kannst du dein Schreib Quorum, das ist nämlich das, wovon du gerade redest, dein Schreib Acknowledgement konfigurieren anhand deiner Persistenzgarantien, die du für deine Daten haben möchtest."
+    },
+    {
+      "end": 3159030,
+      "speaker": "B",
+      "start": 3104460,
+      "text": "Auf jeden Fall. In verteilten Systemen hast du natürlich immer diese Thematik, geht dann aber auch wieder auf das Requirement zurück, dass das Ganze natürlich idempotent sein muss. Sobald es nicht mehr potent ist, hast du natürlich ein Problem, wenn du das parallel raus schickst. Aber an sich ist es in der Datenbankwelt schon alles inhärent vorhanden. Du kannst ja dann auch mit Primary Keys arbeiten, die dir die Eindeutigkeit ermöglichen. Wenn du zum Beispiel neuen Datensatz schreibst, gibt es den Primary Key schon. Also da gibt es ja Mechanismen, die dir dann helfen können, dass du Sachen wirklich doppelt ausführen kannst. Aber natürlich auf der Client Seite, wenn du die Business Logik schreibst, dann solltest du natürlich schon Ist das Write überhaupt idempotent? Kann ich das auf zwei unterschiedlichen Nodes abfeuern? Insert Statement oder bekomme ich dann wirklich einen duplizierten Eintrag am Ende? Oder habe ich Primary Key das abgesichert, dass ich einen Fehler zurückbekomme, dass da schon Datensatz vorhanden ist mit diesem Primary Key?"
+    },
+    {
+      "end": 3198910,
+      "speaker": "A",
+      "start": 3159030,
+      "text": "Ja, Ende vom Lied ist eigentlich das Request Hedging halt auch als Client, wenn ich mit einer Datenbank arbeite, auf Schreibzugriffe in der Regel nicht möglich ist bzw. Unglaublich kompliziert, aber halt im Lesebereich geht klassisch über mehrere Read Replicas. Da muss man natürlich auch ein bisschen drauf aufpassen. Okay, wie aktuell sind deine Read Replicas? Du hast natürlich, wenn du eine Datenbank hast, du hast einen Schreib Primary und etliche Read Replica und die haben natürlich gegebenenfalls ein Replikationsleck, weil die vielleicht noch nicht alle Daten da haben. Dann kann dein Hedging natürlich dazu führen, dass der eine Call Datensatz zurückgeben würde und der andere nicht."
+    },
+    {
+      "end": 3218850,
+      "speaker": "B",
+      "start": 3199150,
+      "text": "Üblicherweise löst man das ja sowieso so, dass wenn du einen Schreibzugriff hast, dass du ab diesem Zeitpunkt eigentlich nur mehr auf der Source, auf dem Primary Node Sticky bist und nur mehr dort Anfragen hinsendest. Aber das musst du natürlich selber implementieren oder die Library implementiert es für dich. Aber diese Logik musst du natürlich im Client in irgendeiner Form vorhanden haben."
+    },
+    {
+      "end": 3238520,
+      "speaker": "A",
+      "start": 3219480,
+      "text": "Genau. Aus meiner Erfahrung mit sehr großen Systemen ist das ganz stark zu vermeiden, weil du in der Regel Lesereplika viel leichter skalieren kannst als Schreibreplika. Und je nach deiner User Anzahl willst du dann relativ wenig Lese Request auf deiner auf deinem Sticky Primary haben."
+    },
+    {
+      "end": 3258330,
+      "speaker": "B",
+      "start": 3238680,
+      "text": "Aber du kannst es natürlich genauso auch wieder anpassen. Sind wir wieder beim Monitoring. Du könntest ja den Lag abfragen. Wie viel Lag gibt es aktuell? Wenn du ein Lag hast, dann machst du Stickiness. Wenn du keinen Lag bei der Replikation hast, machst du kein Stickiness. Aber das sind dann schon komplexe Vorgänge und die rentieren sich wahrscheinlich erst bei wirklich großen Systemen."
+    },
+    {
+      "end": 3269170,
+      "speaker": "A",
+      "start": 3258330,
+      "text": "Und du sprichst da was Lustiges an, denn es gibt einen Proxy, der wird von YouTube verwendet, oft für arbeitet unter anderem mit mysql, wie TESS nennt er sich und der macht genau sowas."
+    },
+    {
+      "end": 3279800,
+      "speaker": "B",
+      "start": 3269250,
+      "text": "Die wie TES Leute bringen dich jetzt um, wenn du sagst wie das ist ein Proxy, das ist ein Fully fledged System, was da eigentlich läuft. Es ist nicht nur ein Proxy, der irgendwas durchreicht oder so."
+    },
+    {
+      "end": 3284520,
+      "speaker": "A",
+      "start": 3280040,
+      "text": "Es hat aber Proxy Funktionalitäten. Es wird vor einem System geschaltet. Deswegen."
+    },
+    {
+      "end": 3290200,
+      "speaker": "B",
+      "start": 3286680,
+      "text": "Also bitte alle Vitesse Fans, gebt mal da Feedback, was ihr davon hält."
+    },
+    {
+      "end": 3340170,
+      "speaker": "A",
+      "start": 3290280,
+      "text": "Also Vitesse hat kein Request Hatching. Die haben aber so ein ähnliches System, nennt sich Tablet Throttling, Tablet Redundancy und Fail Fast Routing. Was die untendrunter machen, ist die proben, also senden immer nur so Observability Requests an ihre Replika und monitoren den Lag und den Lo. Und anhand dessen versuchen die anhand der Fehler Responses Überlastungen zu vermeiden und routen dann ihre Requests entsprechend. Und das ist ein ähnliches System, wie ich das gerade beschrieben hatte mit diesem dynamischen Hatching Threshold, mit dem Observability System. Finde ich auch sehr interessant. Die haben halt kein externes Observability System, sondern machen das Probing direkt aus dem Vitesse raus. Auch super smart. Dann gibt es noch so Systeme, sowas wie PG Bouncer, was oft vor Postgres Datenbanken gepackt wird."
+    },
+    {
+      "end": 3342000,
+      "speaker": "B",
+      "start": 3340640,
+      "text": "Das ist jetzt wirklich ein Proxy."
+    },
+    {
+      "end": 3362320,
+      "speaker": "A",
+      "start": 3342240,
+      "text": "Ja, na, ist es einer? Weiß ich nicht. Also PG Bouncer kann es zum Beispiel nicht, kann kein Request Hatching. Und der Grund ist ganz einfach, weil es eigentlich nur ein Connection Pooler ist und nicht mehr und nicht weniger. Das bedeutet, er sagt, das ist meine Aufgabe, mehr mache ich hier nicht. Und genau das ist so die Datenbankwelt. Wir hatten gerade einmal ganz kurz Moment."
+    },
+    {
+      "end": 3372700,
+      "speaker": "B",
+      "start": 3363280,
+      "text": "Es gibt es gar nicht. Das wäre die erste Episode, wo du über Datenbanken sprichst und nicht deine Lieblingsdatenbank Redis ausbauen kann. Redis sowas gar nicht. Redis kann doch alles, Andy."
+    },
+    {
+      "end": 3385780,
+      "speaker": "A",
+      "start": 3372700,
+      "text": "Nein, pass auf. Der Grund ist ganz einfach. Redis selbst muss sowas nicht können, denn Redis ist dafür gebaut für Request Hatching, genauso wie Memcached. Im Endeffekt, wenn du zum Beispiel diese."
+    },
+    {
+      "end": 3389780,
+      "speaker": "B",
+      "start": 3386100,
+      "text": "Du gibst jetzt endlich zu, dass Redis nur ein Caching Layer ist und keine Datenbank."
+    },
+    {
+      "end": 3392740,
+      "speaker": "A",
+      "start": 3389860,
+      "text": "Nein, das habe ich nicht gesehen. Das habe ich nicht gesehen."
+    },
+    {
+      "end": 3393460,
+      "speaker": "B",
+      "start": 3392740,
+      "text": "Natürlich nicht."
+    },
+    {
+      "end": 3398430,
+      "speaker": "A",
+      "start": 3393780,
+      "text": "Alles, was Daten speichert, ist eine Datenbank. Ich glaube, damals haben wir uns auch in dieser Folge darauf geeinigt, in der Redis Folge."
+    },
+    {
+      "end": 3400220,
+      "speaker": "B",
+      "start": 3398900,
+      "text": "Ich kann mich nicht mehr erinnern."
+    },
+    {
+      "end": 3467230,
+      "speaker": "A",
+      "start": 3400220,
+      "text": "Im Endeffekt kommt es natürlich ganz auf dein Redis Setup an, weil es gibt auch Redis Cluster und so weiter und so fort. Aber das reguläre Setup Was von vielen Firmen verwendet wird, ist, du hast eine Redis Instanz oder eine Memcache Instanz und du stellst einfach fünf oder zehn oder fünfzehn davon nebeneinander, dann musst du natürlich gucken, dass deine Redis Instanzen auch dieselben Daten haben. Das bedeutet, wie viel von deinem Cache möchtest du replizieren? Wie wichtig ist der Cache, kann der Cache abrauchen? Denn wenn du nämlich einen Hashring hast von deinen Redis Instanzen, dann hast du nur einen Teil deiner Cache Daten in einer Instanz liegen. Dann funktioniert Hedging natürlich nicht, weil du dann verschiedene Daten in verschiedenen Instanzen hast. Wenn du sagst aber du hast einen Hashring und hinter jedem Hash Segment hast du ein Cluster an Redis Instanzen, dann kannst du natürlich in diesem Hash Cluster wieder Request Hashing, wieder Request Hedging machen. Hash und Hedgefonds, schwieriges Wort, aber im Endeffekt ist die Wie oft hast du deine Cash Daten repliziert? Und dann kannst du natürlich auch mit Key Value Datenbanken oder In Memory Daten Banken Hedging machen."
+    },
+    {
+      "end": 3478350,
+      "speaker": "B",
+      "start": 3467230,
+      "text": "So, aber Andi, bevor wir zum Ende kommen, ich bin ja immer der, der historisch interessiert ist. Wer hat es erfunden? Ich würde jetzt gerne so einen Schweizer Dialekt nachmachen mit Ricola und so, aber das meist Tirolerisch geht bei mir nicht."
+    },
+    {
+      "end": 3483080,
+      "speaker": "A",
+      "start": 3478350,
+      "text": "Wenn ich jetzt sage, die Schweizer ist leider gelogen. Nee, es war Google."
+    },
+    {
+      "end": 3484200,
+      "speaker": "B",
+      "start": 3483320,
+      "text": "Wer hätte es gedacht?"
+    },
+    {
+      "end": 3560590,
+      "speaker": "A",
+      "start": 3484200,
+      "text": "Und die ganze Sache ist aus der Praxis entstanden und nicht aus der Theorie. Wolfgang, es tut mir leid, ich breche dein Herz. Die ganze Sache ist nicht aus irgendeiner Uni Forschung entstanden, sondern da gab es jemanden oder gab es eine Firma, die haben einfach reale Probleme gelöst. Und Google war ja einer der Firmen, die sehr früh auf einem sehr großen Webscale unterwegs waren. Im Endeffekt, Google hatte immer extrem niedrige Durchschnitts Latenzen. Vielleicht kannst du dich noch daran erinnern, so zwei tausend zehn, zwei tausend elf war Google immer noch sehr snappy, sehr schnell, aber die hatten grausame Tail Latenzen. Und das lag daran, weil die halt sehr viele Systeme früh auf massiven Scale betrieben haben. Google Bigtable, das Google File System, aber auch Map Reduce haben wir auch mal eine Episode drüber gemacht. Und da haben sich zwei Leute von Google mal hingesetzt und haben sich gedacht, okay, wie können wir das denn lösen? Und was sie beobachtet haben in ihrem Stack war ein einzelner Request ist schnell, aber ein einzelner User Request, also eine User Query besteht halt aus hunderten von Calls, was man heutzutage Microservice Architektur nennen würde und jeder einzelne Call hat eine kleine Chance langsam zu sein, aber da die Wahrscheinlichkeiten sich halt multiplizieren, ist das Ergebnis, dass die Nutzer regelmäßig eine Latenz von mehreren Sekunden sehen. Das hatten wir ja vorhin auch errechnet."
+    },
+    {
+      "end": 3706740,
+      "speaker": "B",
+      "start": 3560590,
+      "text": "OK, bist du fertig mit deinem aus der Praxis erfunden Teil bin ich, weil ich habe natürlich nachgeschaut, dieses Paper, das das Ganze beschreibt, der Tail at Scale wurde von Jeff Dean geschrieben, Google Distinguished Engineer, der hat damals auch das mapreduce Paper geschrieben, also der hat wirklich gute Dinge geleistet. Ich habe mir das aber natürlich auch mal genauer angesehen, weil du gesagt hast, Google hat es erfunden und mapreduce sagt man ja auch, Google hat es erfunden, aber wenn man ein bisschen genauer hinsieht, das mapreduce Konzept ist natürlich wesentlich älter schon und ich hab natürlich auch mal grob geschaut, was es so an Konzepten gibt in die Richtung von Request Hatching und ich gebe dir natürlich vollkommen recht, Google hat es in diesem Kontext genauer beschrieben, auch mit dem Perzentil, mit dem P neun und neunzig dass man dann Threshold einführt und natürlich in dem Kontext, in dem praktischen Kontext von Google auch bewiesen bzw. Gezeigt, Aber natürlich das Grundkonzept, dass man etwas parallel abfeuert, das ist natürlich super alt. Also ich habe schon ganz kurz bei den Datenbanken das natürlich erwähnt, dass das von Distributed Systems kommt. Also es wurde eigentlich schon in den ER Jahren teilweise in den ER Jahren gab es solche Konzepte. Es gibt auch am Netzwerkstack solche Konzepte, dass Betriebssysteme, zum Beispiel DCP SYN öfters aussenden, um Verbindungen aufzubauen. Im Netzwerkbereich gibt es das, um die beste Route zu finden. In klassischen Storage Systemen, wenn du an RAID denkst, an RAID Controller, RAID Controller senden teilweise die Anfragen parallel an mehrere Festplatten und nehmen dann die schnellste Antwort, die sie zurückbekommen. Diese Dinge sind teilweise auch zitiert im Paper, also das schreiben sie auch ganz klar im Paper, dass sie natürlich Konzepte wiederverwendet haben dort drinnen auch super. Es gibt ein RFC von DNS, der Happy Eyeballs heißt, wo es darum geht, dass Browser parallel mehrere Verbindungen aufbauen, um schnellere Antworten zu bekommen. Der RFC ist zwei tausend zwölf rausgekommen, also war auch bevor das Paper, ich glaube zwei tausend dreizehn war das Paper oder so. Also es gibt schon ganz viele Ansätze. Nichtsdestotrotz der spezielle Request Hatching, dieser Name mit dem P und konkreten Anwendungsfall in diesen Internetumgebungen, in diesen Large Scale Systems, das geht natürlich eindeutig auf dieses Paper zurück und Google hat es damit auch groß gemacht, muss man auch dazu."
+    },
+    {
+      "end": 3721050,
+      "speaker": "A",
+      "start": 3707530,
+      "text": "Vielen Dank für diesen Exkurs. Und natürlich kann man alles generalisieren und immer wenn man mehr Details wegnimmt, dann ist alles mal irgendwann erfunden worden von irgendwem. Logisch, aber es geht ja um die Spezialisierung."
+    },
+    {
+      "end": 3759120,
+      "speaker": "B",
+      "start": 3721690,
+      "text": "Die Spezialisierung hast du vollkommen recht, aber ich möchte auch Google nochmal in Schutz nehmen, weil wenn man Google Skola zum Beispiel aufmacht, Google hat ja diesen Satz Standing on the shoulders of giants geprägt, ich glaube auch nicht erfunden, aber sie schreiben das ja auch immer ganz groß hin und sie erwähnen das auch in den Papers, dass sie eben genau diese Konzepte wiederverwenden, nehmen diese Patterns, die es schon gibt und dann nochmal anwenden. Und das ist ja eigentlich auch die Kunst und das Coole, dass man nicht immer was Neues erfindet, sondern die bestehenden Patterns, wenn man die versteht, die seit den ERN teilweise gibt, dass man die sehr wohl auch in der aktuellen Welt einsetzen kann und damit super moderne und schnelle Systeme."
+    },
+    {
+      "end": 3803390,
+      "speaker": "A",
+      "start": 3759590,
+      "text": "Und besonders bei den schnellen Systemen, da geht es drum, weil das ganze Paper wurde zwei tausend dreizehn veröffentlicht und das war ja so ein bisschen die Zeit, wo der ganze Webscale halt so richtig Fahrt aufgenommen hat. Bigtable war eines der ersten prominenten Systeme, die Request Hedging für den Storage angewandt hat. Amazon dynamodb und S nutzt es unglaublich aktiv. Facebook hat es in der Caching Infrastruktur sehr stark angewandt und heutzutage ist eigentlich Hedging Standard bei Netflix, bei Uber, bei Dropbox, bei LinkedIn, auch bei Cloudflare ist es in sehr, sehr vielen Systemen drin. Also im Endeffekt kann man sagen, Request Hedging ist die Antwort auf die drei fundamentalen Wahrheiten von großen Infrastrukturen."
+    },
+    {
+      "end": 3808870,
+      "speaker": "B",
+      "start": 3803710,
+      "text": "Jetzt bin ich gespannt. Fundamentale Wahrheiten. Wir präsentieren die drei fundamentalen Wahrheiten."
+    },
+    {
+      "end": 3861900,
+      "speaker": "A",
+      "start": 3808870,
+      "text": "Bitte Andi, nichts Neues, nichts was ich nicht schon mal erzähl habe. Von daher alles skaliert schlecht. Also wenn du Scale hast, skaliert das auch das Schlechte mit. Also Fehler werden potenziert, das ist das Problem. Und Edge Cases werden bei Scale leider keine Edge Cases mehr und du musst dich halt da irgendwo verschützen. Tail Latency bestimmt deine User Experience, nicht deine Durchschnitts Latency. Hast du zehn Request und dauert der letzte zwei Sekunden, ist deine App langsam. Das ist kackegal, ob du P auf ein hundert Millisekunden hast und seltene langsame Knoten. Also Server sind wirklich unvermeidlich, aber redundante Anfragen sind in der Regel günstiger, denn perfekte Hardware kostet einfach massiv Geld, perfekte Software ist unmöglich, besonders wenn du mit sehr vielen Leuten dran arbeitest. Und ein zweiter paralleler Request kostet einfach fast nichts."
+    },
+    {
+      "end": 3874820,
+      "speaker": "B",
+      "start": 3861900,
+      "text": "Und wer da die Gegenmeinung haben will zu dem Ganzen, der hört sich die Episode ein hundert fünf und achtzig an, wo wir über Mainframes gesprochen haben, weil bei Mainframes ist einfach alles und immer schnell, zumindestens intern Scale, sagen wir es."
+    },
+    {
+      "end": 3922550,
+      "speaker": "A",
+      "start": 3874820,
+      "text": "Mal so, ich glaube Ende vom Lied hier ist ja einfach. Ich glaube, wir sollten alle mal akzeptieren, dass Ausreißer unvermeidbar sind. Und da ist einfach die Frage, welche Priorität setzt du und was ist wichtig? Ist User Experience und niedrige Latenzen wichtig oder sagst du einfach Geld? Geld ist gar kein Problem, ich skaliere einfach horizontal. Aber auch bei horizontal skalierten Serverfarmen wirst du auch eine hohe Tail Latency haben, immer mal wieder. Von daher deswegen Request Hedging ist jetzt nicht geschnitten Brot und nicht die Lösung für alles, aber vielleicht ein interessantes Konzept in Bezug auf Resilienz, die du in deinen Client einbauen kannst. Aber bitte nicht vergessen, brech die anderen Request auch ab und lass sie nicht einfach laufen und verwerfe nur die Antwort, denn du solltest dem Subsystem, was du anfragst, halt auch schon die Chance geben, wenigstens da ein paar Ressourcen zu fragen. Also sei ein netter Client."
+    },
+    {
+      "end": 3952080,
+      "speaker": "B",
+      "start": 3922550,
+      "text": "Und was mich jetzt interessieren würde, wer von euch verwendet Request hat, bitte vorbeikommen bei uns in die Community, Discord Community mal erklären, wo ihr das wirklich verwendet, wer von euch denn wirklich das eingebaut hat, dass man Requests canceln kann. Das würde mich auch sehr interessieren. Und nochmal zur Erinnerung für alle die Vitesse Fans, diese Aussage Vitesse ist ein Proxy, kam von Andi, das ist der mit der Vans Kappe, mit der roten Vans Kappe üblicherweise auf, nur dass es da keine Verwechslungen gibt."
+    },
+    {
+      "end": 3982400,
+      "speaker": "A",
+      "start": 3952630,
+      "text": "Und wenn ihr mehr Resilience Engineering Episoden haben wollt, lasst es mich wissen. Ansonsten suche ich mir wieder ein anderes Thema, worüber ich rum nerden kann. Ich würde mich wirklich über Feedback freuen. Auch so eine simple E Mail. Ja, mehr Resilience Engineering reicht. Ihr müsst da gar nicht viel schreiben. Twittert mir das oder mastodont mir das oder tutet mir das oder wie das da inzwischen heißt. Ich werde auch alt, habe ich das Gefühl, bei diesem ganzen Systemwechsel hier. Naja, ihr findet mich schon irgendwo auch in der Discord Community. Einfach bitte kurz melden. Vielen Dank, das war's von uns. Wir hören uns nächste Woche wieder und tschüss."
+    },
+    {
+      "end": 3983200,
+      "speaker": "B",
+      "start": 3982640,
+      "text": "Ciao."
+    },
+    {
+      "end": 3987440,
+      "speaker": "A",
+      "start": 3985920,
+      "text": "Gerade fängt sie an zu schneien, möchte."
+    },
+    {
+      "end": 3990720,
+      "speaker": "B",
+      "start": 3987440,
+      "text": "Ich nur, dass du auch mal Schnee hast."
+    },
+    {
+      "end": 3993250,
+      "speaker": "A",
+      "start": 3991840,
+      "text": "Schnee stört im Pott nur."
+    }
+  ],
+  "webhook_auth": false
+}

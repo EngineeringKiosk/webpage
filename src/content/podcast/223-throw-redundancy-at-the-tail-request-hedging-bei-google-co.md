@@ -85,11 +85,16 @@ length_second: 3993
 pubDate: 2025-11-25 02:00:23+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/28rnENMflk9vcttgyLpBEW
-tags: []
-title: '#223 Throw redundancy at the tail: Request Hedging bei Google & Co.'
-transcript_slim: ''
+tags:
+- Software Engineering
+- DevOps
+- Software Qualität
+title: "#223 Throw redundancy at the tail: Request Hedging bei Google & Co."
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=L-4tBmHUVNk
 
 ---
