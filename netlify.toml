@@ -3009,6 +3009,30 @@ to = "/podcast/episode/223-throw-redundancy-at-the-tail-request-hedging-bei-goog
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/224"
+to = "/podcast/episode/224-yak-shaving?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep224"
+to = "/podcast/episode/224-yak-shaving?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/episodes/225"
+to = "/podcast/episode/225-das-london-ambulance-it-desaster-wenn-software-leben-kostet?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep225"
+to = "/podcast/episode/225-das-london-ambulance-it-desaster-wenn-software-leben-kostet?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
