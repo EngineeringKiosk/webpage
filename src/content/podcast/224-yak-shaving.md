@@ -36,12 +36,17 @@ image: ./224-yak-shaving.jpg
 length_second: 771
 pubDate: 2025-12-01 02:00:57+00:00
 speaker:
-- name: Andy Grunwald
 - name: Wolfi Gassler
+  transcriptLetter: A
+- name: Andy Grunwald
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/6PzX1UA5d08uKWV8Hd9IY5
-tags: []
-title: '#224 Yak Shaving'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Produktivität
+- Tech Kultur
+title: "#224 Yak Shaving"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=0MJRrO55ARo
 
 ---

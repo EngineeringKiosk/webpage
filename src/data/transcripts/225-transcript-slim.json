@@ -1,0 +1,818 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 3653,
+  "audio_url": "https://cloud.inlupus.at/s/8AtypJaC3prpttF/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.96230024,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "6c78a70b-0cb8-47f4-93d5-a02632962325",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 39980,
+      "speaker": "A",
+      "start": 3200,
+      "text": "Wir sind hier beim Engineering Kiosk, da sag ich mal Moin. Geschichten. Von gescheiterten IT Projekten hört man immer wieder. Bekannte Beispiele sind die fünf hundert Millionen teure SAP Einführung bei Lidl oder irgendwelche Kubernetes Migrationen, die die monatlichen Cloud Kosten in die Höhe schießen lassen. Doch eine Story hört man nicht so oft, obwohl diese Geschichte ein Paradebeispiel dafür ist, wie man große IT Projekte nicht macht. Diese Episode erzählt die Geschichte des Londoner Ambulanz Service, wie ein tausend neun hundert zwei und neunzig versucht wurde, das Notrufsystem zu digitalisieren. Und dies ist leider kein Märchen. Wolfgang als Geschichtenerzähler, wir legen los. Viel Spaß."
+    },
+    {
+      "end": 57020,
+      "speaker": "B",
+      "start": 45500,
+      "text": "Andi, was ist deine Lieblingsbeschäftigung bei uns im Projekt, bevor du zu lange ü Automatisieren. Du liebst Automatisierung, dass irgendwas automatisch nach links und rechts gesendet wird und generiert wird."
+    },
+    {
+      "end": 89840,
+      "speaker": "A",
+      "start": 57020,
+      "text": "Ich musste wirklich lange überlegen. Ich kam auf sehr viele schnelle Elemente, die mir nicht so gut gefallen. Aber in der Tat meinen mentalen Load zu reduzieren für Aufgaben, die öfters gemacht werden möchten oder müssen bzw. Das ist einer meiner Lieblingsaufgaben, weil ich weiß, wenn ich das getan habe, muss ich mich damit nicht mehr beschäftigen, weil irgendein Computer tut es in einer deterministischen Art und Weise. Also ich schmeiße jetzt nicht AI auf alles und hab NN Workflows oder ähnliches, sondern schon wirklich Zeile an Zeile programmiert und führe ich die es immer aus, ist das wirklich idempotent. Und das kommt gleich raus."
+    },
+    {
+      "end": 131150,
+      "speaker": "B",
+      "start": 89910,
+      "text": "Danke für diese Brücke zu N, weil NN ist ja fast so der Inbegriff jetzt von diesem Automatisierungs. Möchte nicht Wahnsinn nennen. Ich automatisiere ja auch gern, aber es wird sehr, sehr viel automatisiert. Und wir wollen heute mal über ein Projekt sprechen, wo es auch sehr stark um Automatisierung geht, aber das in einem ganz anderen Zeitalter angesiedelt ist, und zwar in den frühen ERN, wo man sich gedacht hat, es ist doch eine schlaue Idee, wenn wir das komplette Management von allen Rettungen, Ambulanzen in London komplett durch automatisieren mit einem Computer, Was kann da schon schiefgehen? Ein tausend neun hundert zwei und neunzig war das ganze Andy, was hast du so ein tausend neun hundert zwei und neunzig getrieben? In welche Windeln hast du geschissen?"
+    },
+    {
+      "end": 153700,
+      "speaker": "A",
+      "start": 131469,
+      "text": "Ein tausend neun hundert zwei und neunzig war ich fünf bzw. Sechs Jahre alt, soviel ich mich erinnern kann, hatte ich da keine Windel mehr an, aber wahrscheinlich habe ich damals vor dem Fernsehen gesessen und und hab RTL geguckt. Sagt der Name Mareike Amado dir was? Ne, Mareike Amado war die Moderatorin einer sensationellen TV Show, nannte sich Mini Playback Show."
+    },
+    {
+      "end": 156420,
+      "speaker": "B",
+      "start": 153700,
+      "text": "Kennst du die vom Namen Wolfgang?"
+    },
+    {
+      "end": 157740,
+      "speaker": "A",
+      "start": 156420,
+      "text": "Wie alt warst du? Ein tausend neun hundert zwei und neunzig?"
+    },
+    {
+      "end": 171950,
+      "speaker": "B",
+      "start": 157740,
+      "text": "Zehn. Ich hatte, ich hatte wahrscheinlich noch kein Internet, dürfte so ein paar Jahre später gewesen sein, aber ich hab wahrscheinlich irgendein schwindeliges Computerspiel gespielt auf irgendeinem computerartigen Ding, Pre er keine Ahnung mehr."
+    },
+    {
+      "end": 181310,
+      "speaker": "A",
+      "start": 172030,
+      "text": "Aber wenn du mir irgendwas von ein tausend neun hundert zwei und neunzig und Automatisierung und irgendwelche Ambulanz Services erzählst, dann muss ich zugeben, da war mein Kopf ein tausend neun hundert zwei und neunzig nicht."
+    },
+    {
+      "end": 234380,
+      "speaker": "B",
+      "start": 181310,
+      "text": "Ich finde es grundsätzlich sehr spannend, was sie sich damals überlegt haben in Bezug auf Automatisierung und ein neues Computersystem einzuführen, dass das alles ziemlich schief gelaufen ist, darüber sprechen wir ein bisschen später. Aber was mich wundert ist, dass dieses Beispiel eigentlich so selten erwähnt wird oder dass man das zu selten hört, weil es gibt diese ganzen klassischen irgendeine Ariane Rakete ist explodiert oder so, wegen irgendeinem Kommafehler und diese ganzen Geschichten. Aber dieses Desaster, würde ich fast sagen, was sogar sehr viele Leben gekostet hat am Ende von dem hört man eigentlich sehr wenig. Ich habe es jetzt gerade kürzlich in meiner Vorlesung gebracht, ein paar Leute haben es schon gehört, aber es ist eigentlich ein Beispiel, was man selten hört. Und genau darum habe ich mir gedacht, wir sollten das mal behandeln. Und weil jetzt auch gerade so viel automatisiert wird in Firmen und überall und wo man so denkt, der Computer kann alles übernehmen, ist das vielleicht ein ideales Beispiel, was man sich mal ansehen sollte, wie man es nicht macht."
+    },
+    {
+      "end": 248940,
+      "speaker": "A",
+      "start": 234380,
+      "text": "Du sprichst aber jetzt hier in abgehackten Brocken. Also was wissen wir bisher? Es geht um das Jahr ein tausend neun hundert zwei und neunzig, es hat irgendwas mit einem Ambulanz Service zu tun, irgendwas mit Automatisierung und irgendwas mit London. Ich gehe stark davon aus, London in den Vereinigten Königreich, Großbritannien."
+    },
+    {
+      "end": 258100,
+      "speaker": "B",
+      "start": 248940,
+      "text": "Genau. Also steigen wir mal ein in das ganze Thema. Vielleicht bevor wir einsteigen, noch kleine Begriffsdefinition. Heißt es bei euch Rettung in Deutschland oder kommt bei euch die Feuerwehr, wenn man einen Herzinfarkt hat?"
+    },
+    {
+      "end": 264360,
+      "speaker": "A",
+      "start": 258100,
+      "text": "Bei uns kommt nicht die Rett. Also doch, man erhofft sich eine Rettung, aber es kommt die Feuerwehr bzw. Der Krankenwagen."
+    },
+    {
+      "end": 270520,
+      "speaker": "B",
+      "start": 264360,
+      "text": "Die Ambulanz kommt aber wenn du ruf mal blablabla, weil der hat gerade einen Herzinfarkt. Was sagst du?"
+    },
+    {
+      "end": 273600,
+      "speaker": "A",
+      "start": 270600,
+      "text": "Ruf mal einen Krankenwagen oder ruf mal einen Arzt."
+    },
+    {
+      "end": 275359,
+      "speaker": "B",
+      "start": 273600,
+      "text": "Okay, aber du rufst dann die Feuerwehr an."
+    },
+    {
+      "end": 278840,
+      "speaker": "A",
+      "start": 275359,
+      "text": "Ja, ich rufe die ein hundert zwölf an, die dann die Feuerwehr."
+    },
+    {
+      "end": 288740,
+      "speaker": "B",
+      "start": 279080,
+      "text": "Das ist für mich ganz verwirrend, vor allem als Feuerwehrler natürlich, weil in Österreich ist das ja alles sehr stark getrennt. Da hast du die Rettung, die die Ambulanz macht in Krankenwagen und und die Feuerwehr macht wirklich nur Feuer."
+    },
+    {
+      "end": 299540,
+      "speaker": "A",
+      "start": 288900,
+      "text": "Und Fun Fact, ich hatte auch mal einen Unfall, da kam ein Notarzt, der Notarzt kam via Helikopter, weil gerade kein Krankenwagen verfügbar war. Und immer wenn der Helikopter kommt, kommt automatisch die Polizei."
+    },
+    {
+      "end": 360640,
+      "speaker": "B",
+      "start": 299540,
+      "text": "Okay, aber versetzen wir uns mal in dieses ganze Szenario. Also die Idee war, das London Ambulance Service zu automatisieren oder zu erneuern. Das ist grundsätzlich diese Organisation, die ganz London Management, also sechs hundert Quadratmeilen, ziemlich groß, sieben Millionen Einwohner, zehn Millionen Leute am Tag in der Stadt und dafür muss man den Rettungsdienst zur Verfügung stellen. Sind damals ungefähr zwei tausend bis zwei tausend fünf hundert Notrufe täglich gewesen, sechzig Prozent richtige Notfälle davon. Der Rest halt so, ja, irgendwer ruft mal an und glaubt, er hat einen Notfall. Damals ist ein recht neuer Standard rausgekommen in den er Jahren und der hat gesagt, dass innerhalb von drei Minuten die Ambulanz losfahren muss zu dieser Unfallstelle. Also das war so die Voraussetzung, die sich da gerade so entwickelt hat. Und auf diese drei Minuten hat man eigentlich hingearbeitet, weil damals war das System eigentlich sehr oldschool, wie man das so bauen würde. Andy, wenn ich dich jetzt fragen würde, bau so ein Ambulance Service ohne Computer, ganz klassisch. Wie würdest du es machen?"
+    },
+    {
+      "end": 386580,
+      "speaker": "A",
+      "start": 360640,
+      "text": "Auch mit Computer würde ich erst mal Paul Grahams Empfehlung folgen. Do things that don't scale. Und was bedeutet das ohne Computer? Ich würde sagen, Stefan Zettel, oder? Also ich habe einen Telefonhörer oder ein Funkgerät oder irgendwo, wo ich eine Nachricht empfangen kann, dass hier jemand einen Krankenwagen braucht. Und dann würde ich jetzt, glaube ich, erstmal aufschreiben, der Wolfgang braucht einen Krankenwagen. In die Elisabethstraße dreizehn in Innsbruck gibt es die Elisabethstraße, ich weiß es gerade nicht, aber ist auch egal, bin gerade."
+    },
+    {
+      "end": 556120,
+      "speaker": "B",
+      "start": 446580,
+      "text": "Am überlegen gewesen, ich glaube auf jeden Fall hast du vollkommen recht, hat damals genauso funktioniert, man hat den Notruf angerufen, neun hundert neun und neunzig, irgendjemand hat da abgehoben und diese Person hat dann handschriftlich auf einen Zettel geschrieben, was das Problem ist, wo die Adresse ist und was zu tun ist. Und dann hat man damals schon einen klassischen Mechanismus angewandt, den ich jetzt unter Divide and Conquer im IT Wesen ansehen würde. Man lässt nicht alles eine Person machen, sondern man splittet die Probleme auf in Einzelpersonen, also in Sachbearbeiter. Und in dem Fall hat man diesen Zettel auf ein Förderband gelegt mit diesem Einsatz, wo alles oben gestanden ist, dann ist es auf dem Förderband weitergefahren, eine zweite Person hat es übernommen, hat dann probiert im Kopf herauszufinden, habe ich diesen Unfall vielleicht schon mal gehört in den letzten zwei, drei Minuten, weil es kann ja sein, dass fünf Leute anrufen und zu unterschiedlichen Personen kommen. Das heißt, es hat so eine zentrale Instanz gegeben, die über den Kopf diese Deduplizierung gemacht hat, hat dann üblicherweise auch nachgesehen, wo ist das Ganze in einem großen Buch, die Elisabethstraße, wo du mich jetzt gerade hinschicken willst, Andy, wo ist die eigentlich? Und hat da Zusatzinformationen reingetan und hat es dann wieder weitergegeben an eine Regionalstelle, also eine Person, die ein gewisses Segment überwacht und koordiniert, quasi wieder auf dem Förderband weitergelaufen, nächste Person und die hat dann das eigentliche Koordinieren von diesen Krankenwagen Rettungswagen dann gemacht, Der hat gewusst, okay, wo sind die gerade, wo gehen die um, hat mit denen Funkgespräche aufgebaut oder hat da bei irgendeiner Wache per Telefon angerufen und hat dann das eigentliche Alarmieren durchgeführt und das Ganze in drei Minuten. Das heißt, diese ganze Kette hat innerhalb von drei Minuten funktioniert, was meiner Meinung nach schon ganz flott war eigentlich für diese Zeit."
+    },
+    {
+      "end": 570430,
+      "speaker": "A",
+      "start": 556280,
+      "text": "Die Person, die den Anruf entgegengenommen hat, hat einen Zettel geschrieben und auf das Förderband gelegt, so weit, so gut, stelle ich mir ungefähr vor, so wie größeren Supermärkten mit diesem Rohrpost System gibt es ja immer noch, ist glaube ich auch in vielen Großkonzernen immer noch aktiv, das."
+    },
+    {
+      "end": 584150,
+      "speaker": "B",
+      "start": 570430,
+      "text": "Ist ganz üblich in der Klinik wird da glaube ich noch viel herumgeschickt bei Rohrpost. Ich kenne es auch von der Feuerwehr, die dann irgendwelche Einsatzpläne geschickt bekommen bei Rohrpost zum Auto, wo sie dann wegfahren. Also ist durchaus noch üblich, aber am."
+    },
+    {
+      "end": 588710,
+      "speaker": "A",
+      "start": 584150,
+      "text": "Ende des Förderbands saß ja nicht nur eine Person, da saßen ja mit hoher Wahrscheinlichkeit mehrere Personen."
+    },
+    {
+      "end": 596600,
+      "speaker": "B",
+      "start": 588950,
+      "text": "Genau, das hat man dementsprechend schon aufgeteilt nach Regionen. Das heißt, da hat es dann so subjektiv Koordinatoren gegeben, die für einen Stadtteil zum Beispiel verantwortlich waren."
+    },
+    {
+      "end": 607360,
+      "speaker": "A",
+      "start": 596600,
+      "text": "Okay, das beantwortet nämlich meine Frage. Meine Frage wäre, wie kann die eine Person wissen, was die andere Person gerade koordiniert hat, wenn sie keine Segmentszuordnung wie Stadtteile, oder?"
+    },
+    {
+      "end": 620400,
+      "speaker": "B",
+      "start": 607440,
+      "text": "Genau, das hat man schön hierarchisch dann aufgebaut. Eigentlich genauso, wie man heute Sachen programmiert. Man teilt Probleme in kleinere Subprobleme auf hierarchische Zusammenhänge. Eigentlich genauso hat man das früher mit Zettel, Stift und Papier halt gemacht."
+    },
+    {
+      "end": 624130,
+      "speaker": "A",
+      "start": 620610,
+      "text": "Also Menschen wurden geschadet. Okay, habe ich verstanden. Doch was war das Problem dabei?"
+    },
+    {
+      "end": 729040,
+      "speaker": "B",
+      "start": 624130,
+      "text": "Ja, ich habe jetzt schon kurz erwähnt, man muss in so einem fetten Buch da mal nachschlagen, wo ist die Adresse überhaupt, in welchem Segment, in der Stadt, in welchem Bezirk, weil du hast ja da doch recht viele Adressen. Das dauert natürlich, das ist fehleranfällig, du musst es erst mal finden. Der physikalische Fluss von Papieren über Förderbändern ist vielleicht jetzt auch nicht so reliable und funktioniert immer und ist das schnellste. Dann kann es natürlich auch sein, dass einzelne Personen überlastet sind, weil einfach gerade viel dort reinkommt. Also da hat schon Probleme gegeben. Und was die Idee war, man hat sich gedacht, wir sind London, wir sind cool von der Politik, wir machen da jetzt eine absolut coole Verbesserung. Es kommen ja gerade diese ganzen Computersysteme da raus. Das heißt, wir ersetzen alle Menschen mit Computer. Kommt dir vielleicht gerade bekannt vor, wenn man so an aktuelle Projekte denkt, hat man sich damals in den ERN auch gedacht. Schlauerweise hat man sich überlegt, okay, wir wollen das nicht irgendwie inkrementell machen, sondern wir wollen eine komplette Automatisierung von allem haben. Das heißt, möglichst wenige menschliche Entscheidungen da drinnen zu haben. Der Computer soll ganz, ganz schnell reagieren, soll überwachen, wo sind die ganzen Krankenwagen, wo befinden sich die jetzt mit GPS, sollen automatisch immer zurückmelden, in was für Status sie sind, ob sie frei sind und so weiter. Und dann kann man super mit Algorithmus, so wie das teilweise heute funktioniert. Ich muss dazu sagen, also meine Einblicke so in die ganzen Einsatzorganisationen, sogar heute wird es noch ganz oft manuell gemacht und nicht super automatisch. Aber damals wollte man das in den ERN eben automatisch machen und möglichst wenig menschliche Entscheidungen überhaupt noch im System haben. Und nur in absoluten Notfällen oder Ausnahmefällen sind da Menschen, die noch eingreifen können. Das war so die Idee der Politik bzw. Entscheidungsträger."
+    },
+    {
+      "end": 736020,
+      "speaker": "A",
+      "start": 729620,
+      "text": "Ist ja erstmal nicht verkehrt. Vorreiter innovativ. Also das würde ich mir von vielen deutschen Politikern heutzutage auch wünschen."
+    },
+    {
+      "end": 797690,
+      "speaker": "B",
+      "start": 736100,
+      "text": "Genau, also durchaus ambitioniert, würde ich mal sagen, Vor allem keine inkrementelle Verbesserung, sondern irgendwie so eine große Big Bang Einführung. Gut, da kann man schon wieder drüber streiten. Man ist dann in die Implementierung gegangen und hat sich mal überlegt, okay, was brauchen wir alles, was wollen wir da haben? War natürlich ein sehr ambitioniertes System und was dann natürlich sofort reingekretscht ist, ist es Not Invented Here Syndrom. Wir haben da mal eine Episode drüber gemacht, Episode sechs und neunzig, das Non Invented Here Syndrom. Da haben wir auch besprochen, wie es so üblich ist. Man hat da so einen Kriterienkatalog und der ist so umfangreich und so spezifisch und so genau, dass eigentlich nichts darauf zutrifft. Und es hat ja schon Systeme gegeben in anderen Ländern, Städten, auch in England, aber man hat sich gedacht, die ganzen Software Systeme, die es schon gibt, die sind viel zu schwach. Wir wollen was Besseres, das kann nicht zu viel. Außerdem haben wir es nicht erfunden. Das heißt, wir brauchen etwas Neues und wir brauchen einen maßgeschneiderten Ansatz, der genau unsere Probleme löst."
+    },
+    {
+      "end": 818130,
+      "speaker": "A",
+      "start": 797850,
+      "text": "Es gibt sogar böse Stimmen, die behaupten, dass manche Ausschreibungen so formuliert werden, dass sie so speziell sind, dass kein fertiges System passt und dass nur ein Auftragnehmer passen kann, also nur eine Firma so speziell ist, um auf diese Ausschreibung zu passen. Möchte ich den Leuten jetzt hier nicht."
+    },
+    {
+      "end": 867660,
+      "speaker": "B",
+      "start": 818130,
+      "text": "Unterstellen, aber kannst du, glaube ich, sogar unterstellen, weil in dem offiziellen Report, der sechzig Seiten lang ist und es gibt auch noch paar andere Artikel dazu, kommt es eigentlich sehr klar vor, dass das so genau alles spezifiziert wurde. Und teilweise wurde sogar in den Spezifikationen nicht beschrieben, was man eigentlich will, sondern wie das gemacht werden soll. Das heißt, man hat im Prinzip schon die Implementierung vorgeschrieben, anstatt das Problem zu erklären und was die Lösung eigentlich können soll. Und es war dann eigentlich sehr schwierig, da irgendwie nach links oder nach rechts überhaupt beweglich zu sein. Also das war dann später auch für das Projekt natürlich noch ein großes Problem. Aber man hat zumindest mal die ganzen Requirements aufgeschrieben oder wie gesagt, waren teilweise nicht mal Requirements, sondern Implementierungen und hat dann eben befunden, wir brauchen eine eigenständige Lösung und wir müssen da jemanden finden, der uns unsere eigenständige Lösung baut."
+    },
+    {
+      "end": 869460,
+      "speaker": "A",
+      "start": 867660,
+      "text": "Hättest du dich als Freelancer gemeldet?"
+    },
+    {
+      "end": 897070,
+      "speaker": "B",
+      "start": 869990,
+      "text": "Ja, wenn man sich das so anschaut, hätte vielleicht sogar Chancen gehabt, weil die haben sich noch gedacht, tja, es reicht nicht, dass wir ein sehr starres Korsett haben in den Requirements, sondern wir setzen da auch noch drauf, es muss super schnell gehen. Das heißt, es gibt eine Deadline, die glaube unter einem Jahr war oder so, dass das Ganze fertiggestellt werden muss und nebenbei, es darf auch noch nichts kosten. Das sind eigentlich so die idealen Requirements, die man haben will. Also man kennt ja dieses Dreieck in."
+    },
+    {
+      "end": 898750,
+      "speaker": "A",
+      "start": 897070,
+      "text": "Time, in Budget, in Quality."
+    },
+    {
+      "end": 901430,
+      "speaker": "B",
+      "start": 898750,
+      "text": "Genau. Und alles gemeinsam funktioniert nicht, denkst du."
+    },
+    {
+      "end": 903830,
+      "speaker": "A",
+      "start": 901830,
+      "text": "Da hast du noch nicht mit den richtigen Leuten zusammengearbeitet?"
+    },
+    {
+      "end": 939630,
+      "speaker": "B",
+      "start": 903830,
+      "text": "Genau, da haben wir noch nicht mit den Leuten vom London Ambulance Service zusammengearbeitet. Jetzt grundsätzlich kennt man vielleicht so zumindest aus Erzählungen, wenn es so großes Projekt ist, politische Akteure gibt, das dauert ja immer alles relativ lang, so ein Projekt. Das hat sich da auch gezeigt. Also man hat da lang herumdiskutiert und hat auch lange Leute gesucht und hat dann auch probiert mal Sachen zu entwickeln. Also vom Design her, von der Architektur, Das hat aber alles nicht so richtig funktioniert und dann ist die Zeit immer knapper geworden und dann hat man sich überlegt, okay, was macht man dann, wenn die Zeit knapp wird und nichts funktioniert?"
+    },
+    {
+      "end": 947950,
+      "speaker": "A",
+      "start": 939790,
+      "text": "Man schmeißt mehr Leute drauf oder ich hole eine Beratungsgesellschaft rein, könnte ich mir auch noch so McKinsey oder ähnliches, würde ich mir reinholen."
+    },
+    {
+      "end": 1065010,
+      "speaker": "B",
+      "start": 948270,
+      "text": "Genau. Und genau das haben sie gemacht. Sie haben eine Beratung bzw. Einen Berater, einen Experten reingeholt und jetzt muss ich mal was Positives sagen über meine Berufszunft, nennt man das so, weil du hast es ja schon so mit Unterton erzählt, Berater. Aber die haben einen Experten geholt und der Experte hat gesagt, okay, das ist ein kompliziertes Projekt, vielleicht muss man das schon ein bisschen größer planen und er hat so die Empfehlung ausgegeben, also ihr müsst mal mindestens neunzehn Monate rechnen, um irgend sowas zu implementieren. Und eins komma fünf Millionen Pfund, das war so seine Schätzung von dem Ganzen. Was haben die Entscheider gemacht, wenn man von dem Consulting was hört. Die haben sich gedacht, der Consultant übertreibt doch, wir schaffen das in elf Monate, weil ist ja unsere Deadline immer noch die elf Monate. Neunzehn Monate ist absolut übertrieben und eigentlich eins komma fünf Millionen ist auch viel zu viel, wir machen das mal um die Hälfte oder so, da finden wir schon jemanden. Also das war so die Herangehensweise ist komplett ignoriert worden, was der Experte gesagt hat und sie haben dann probiert eine Firma zu finden. Jetzt, wenn man natürlich die Requirements sehr stark setzt, wie gesagt elf Monate, dann werden wahrscheinlich viele professionelle Firmen zumindest sagen, schwierig, elf Monate geht halt nicht oder ist uns zu kritisch. Das haben auch ganz viele gemacht, bis auf einfach eine kleine Agentur, jetzt sind wir fast wieder bei der Freelancer Agentur, aber es war eine relativ kleine Agentur, jetzt keine schlechte Agentur, aber jetzt keine Agentur, die Erfahrung hat mit sehr großen Systemen, die gesagt hat, okay, wir schaffen das um Pfund. Also wie gesagt, der Experte hat eins komma fünf Millionen gesagt, nicht ganz die Hälfte, aber zumindest Drittel weniger. Und das Beste von dem ganzen Projekt von den Pfund war die Software kalkuliert mit Pfund. Das heißt, fünf Prozent circa von dem ganzen Budgetvolumen war für die Software abgestellt. Also dass das vielleicht nicht die ideale Ratio ist, kann man glaube ich selber verstehen."
+    },
+    {
+      "end": 1071810,
+      "speaker": "A",
+      "start": 1065010,
+      "text": "Und der Rest ging wofür drauf? Für Projektplanung, Qualitätssicherung und Hardware oder ist das aufgeteilt worden?"
+    },
+    {
+      "end": 1142380,
+      "speaker": "B",
+      "start": 1071890,
+      "text": "Ja, das war auch ein bisschen eine andere Zeit, weil früher war natürlich so ein Projekt sehr hardware lastig, das heißt, die Hardware war natürlich wesentlich teurer als die Software, das heißt, es ist sehr viel in Hardware geflossen. Ich habe ja auch schon erwähnt, die Positionsdaten von den Fahrzeugen zum Beispiel Kommunikation in den Fahrzeugen, also das war ganz viele Hardware im Spiel. Server waren natürlich sehr teuer, den sie damals verwendet haben. Das war so ein Apricot Computer, habe ich auch zum ersten Mal gehört. Data Track war das System von den Location Data von den Fahrzeugen, da war sehr viel Hardware im Spiel und die Software Komponente war quasi so ein Add on, was man so bei der Hardware mitverkauft, darum war auch dieser Preis so niedrig, weil das ist so irgendwie, ja das kommt halt so noch als kleiner Posten nebenbei dazu, aber eigentlich ist es ein Hardware Projekt, war so die Idee von denen und die waren natürlich ein super Deal, weil die intern haben sich natürlich vom Consultant schon die eins komma fünf Millionen erwartet und das war auch so das interne Ziel. Und dann haben sie aber ein Angebot um neun hundert bekommen und das haben sie natürlich dann gerne angenommen und man muss auch dazu sagen, sie mehr Angebote bekommen, aber das nächst höhere Angebot wäre schon eins komma sechs Millionen gewesen. Also da waren schon ordentliche Abstände dazwischen."
+    },
+    {
+      "end": 1190640,
+      "speaker": "A",
+      "start": 1142460,
+      "text": "Ich habe gerade mal nachgeschaut, weil immer wenn ich britische Pfund höre und andere Währungen dann und dann auch noch aus ein tausend neun hundert zwei und neunzig, dann frage ich mich so, was heißt das denn heute? Also britische Pfund sind heutzutage circa Euro, wenn man jetzt mit, ist eine sehr grobe Rechnung, wenn man jetzt mit rechnet von ein tausend neun hundert zwei und neunzig sind heute circa sechs und siebzig, wenn du die Inflation und Co. Mit berechnest. Also wir reden von circa, ich sag mal Euro heutigem Wert für die Software. Wolfgang, jetzt würde ich dich gerne fragen, welche Applikation, die eigentlich jetzt jeder von uns irgendwie kennt, würdest du dir zutrauen für zu schreiben? Also wo würde die als Budget ausreichen?"
+    },
+    {
+      "end": 1209810,
+      "speaker": "B",
+      "start": 1190640,
+      "text": "Ja, wenn man das so umrechnet jetzt auf halbes Personenjahr, puh, da kommst du nicht weit, würde ich mal sagen. Vor allem mit irgendeinem größeren Projekt. Ja, ich würde mal sagen, vielleicht so ein Webshop, also ein komplexerer Webshop, da sind wir vielleicht in dieser Größenordnung bei dem Projekt und wir reden ja jetzt."
+    },
+    {
+      "end": 1238740,
+      "speaker": "A",
+      "start": 1209810,
+      "text": "Hier nicht von einem Webshop, wir reden von einer Hochverfügbarkeitsapplikation oder einer Applikation, die hoffentlich hochverfügbar ist, die hoffentlich nie down geht, wo hintendran wirklich Menschenleben stehen. Bei einem Webshop sagt man ja in der Regel, hier sterben ja keine Menschen oder das ist ja keine Rocket Science, außer bei SpaceX. Also eigentlich kann man ja fast sagen, dass dieses Angebot gesagt hat, dass Menschenleben weniger als britische Pfund wert sind oder."
+    },
+    {
+      "end": 1285290,
+      "speaker": "B",
+      "start": 1238740,
+      "text": "Zumindest von der Software. Ich meine, das Gesamtbudget war ja eh höher, aber wie gesagt, das ist Hardware und wenn man sich so anschaut, was Qualitätssicherung mit dabei war und Projektmanagement haben sie da glaube ich eh nichts eingeplant sonst außer Hardware und Software. Auf jeden Fall war das eine kleine Firma, die sonst so administrative Software gemacht hat in Visual Basic. Darum haben sie sich gedacht, Visual Basic ist eine gute Idee, machen wir auch in Visual Basic. Natürlich diese Auftraggeber, also dieses Ambulance Service war natürlich nicht so dumm. Die haben sich auch gedacht, wir fragen mal bei Referenzen nach von dieser kleinen Software Schmiede, wie die denn so drauf sind. Und alle Referenzen haben irgendwie gesagt, die sind total überlastet, die haben keine Zeit und können nicht delivern Und sie warnten ausdrücklich davor, mit denen zu arbeiten. Was haben die sich gedacht? So schlimm kann es nicht sein, Es ist billig, das nehmen wir ganz klar."
+    },
+    {
+      "end": 1295210,
+      "speaker": "A",
+      "start": 1285290,
+      "text": "Also es gibt die, es gibt den Begriff Schwarm Intelligenz, es gibt aber auch den Begriff Schwarm Dummheit. Und da würde ich mal als Gegenfrage stellen, vertraust du jeder Amazon Bewertung?"
+    },
+    {
+      "end": 1322730,
+      "speaker": "B",
+      "start": 1295210,
+      "text": "Wolfgang Natürlich nicht, aber wenn ich mit Amazon Bewertungen telefonieren würde, wird das vielleicht schon anders ausschauen. Aber spätestens jetzt schrillen eigentlich schon alle Alarmglocken und man hätte vielleicht sehen können, dass das vielleicht irgendwie nicht das ideale Projekt ist. Aber wenn wir dann ein bisschen weitergehen, wie das Ganze dann umgesetzt wurde, die Verantwortung bei so einem Projekt, wo würdest du die Verantwortung hinlegen, Andy? In welche Hände oder wie würdest du es aufbauen bei so einem Projekt?"
+    },
+    {
+      "end": 1325050,
+      "speaker": "A",
+      "start": 1322810,
+      "text": "Projektmanager, sehr fähig."
+    },
+    {
+      "end": 1349200,
+      "speaker": "B",
+      "start": 1325290,
+      "text": "Genau, einen fähigen Projektmanager, Managerin natürlich. Was haben die damals gemacht? Sie haben sich überlegt, wir nehmen einfach einen Junior Contractor Analyst, der kann doch auch dieses Projekt managen, das kann doch nicht so schwer sein. Außerdem haben wir da noch einen Sales Menschen irgendwo sitzen, der könnte das auch noch mit übernehmen Und das gesamte Management wurde von diesen zwei Leuten gemacht, irgendein Salesmensch und so ein Junior, obwohl man."
+    },
+    {
+      "end": 1359120,
+      "speaker": "A",
+      "start": 1349200,
+      "text": "Jetzt sagen muss, ich nehme jetzt einfach mal an, Junior bedeutet auch jemanden Junges und nicht immer unbedingt unerfahren."
+    },
+    {
+      "end": 1367920,
+      "speaker": "B",
+      "start": 1359120,
+      "text": "Also ich hab's jetzt als unerfahren Junior gelesen, aber es hätte natürlich auch, ist ein englischer Report, vielleicht hat es nur Jung geheißen, aber du weißt, worauf ich."
+    },
+    {
+      "end": 1377550,
+      "speaker": "A",
+      "start": 1367920,
+      "text": "Hinaus möchte, weil in einem solch innovativen Projekt ist es vielleicht vorteilhaft, junge Leute mit reinzunehmen und nicht immer nur den alten weißen Mann, der sagt, das haben wir schon immer so gemacht."
+    },
+    {
+      "end": 1417440,
+      "speaker": "B",
+      "start": 1377550,
+      "text": "Da stimme dir vollkommen zu und es war sehr innovativ dieses Projekt, weil es war so innovativ, dass man sich gedacht hat, Qualitätssicherung brauchen wir eigentlich nicht, also jetzt als Auftraggeber brauchen wir uns eigentlich nicht darum kümmern, das wird schon der Contractor irgendwie intern machen. Der Contractor hat intern auch alles selbstständig geändert, hat da am Live System herumgepfuscht direkt, Es hat keine Tests, Integrationstests gegeben, es hat keine Stresstests gegeben, auch keine Vorgaben diesbezüglich, dass das irgendwie getestet werden muss unter Stress natürlich so ein System Und obwohl alle davor gewarnt haben, hat man sich gedacht, innerhalb von neun Monaten kann man das schon programmieren und kann das dann mit einem Big Bang Rollout einfach von heute auf morgen umschalten."
+    },
+    {
+      "end": 1419760,
+      "speaker": "A",
+      "start": 1417520,
+      "text": "Prinzipiell jetzt erst mal nichts verkehrtes was."
+    },
+    {
+      "end": 1429540,
+      "speaker": "B",
+      "start": 1419760,
+      "text": "Keine Qualitätssicherung, Code Änderungen am Live System, keine Integrationstests, keine Stresstests und ein Big Bang Rollout würdest du unterschreiben. Gutes Projektmanagement hast du nicht gerade gesagt."
+    },
+    {
+      "end": 1437620,
+      "speaker": "A",
+      "start": 1429540,
+      "text": "Dieses Triangel zwischen In Time, In Quality und Budget kann man nicht alles drei haben, Da wurde einfach mal weggelassen dafür In Time und In Budget, also bisher."
+    },
+    {
+      "end": 1515080,
+      "speaker": "B",
+      "start": 1438180,
+      "text": "In Time und In Budget. Das hat sogar mehr oder weniger funktioniert. Man hat zwar bis zum Ende nicht alles geschafft, aber man ist dann im Oktober zwei und neunzig live gegangen, das mit dem komplett paperless und man hat kein Paper mehr, das hat nicht ganz funktioniert, weil man doch nicht ganz fertig geworden ist mit dem Coding. Dann hat man sich gedacht, okay, dann machen wir so eine Semi Lösung, wir drucken noch manche Dinge aus, geben die zwar beim Computer ein, aber drucken die aus. Jetzt war das ganze System aber nicht dafür ausgelegt. Dann hat man halt irgendwo noch einen Drucker dran gehängt, so ad hoc für unsere ersten, für die ersten Monate druckt man halt noch hin und wieder was aus. Das heißt man hat dann auch noch die Requirements zu geändert kurz vor Start, hat aber bisschen dreckig was hingebogen und ist dann am sechs und zwanzigster oktober live gegangen mit dem Wissen, dass man bekannte Bugs hat, dass man Sicherheitsprobleme hat, dass man eigentlich Schulungen ausständig hat. Die Leute waren nicht geschult auf dieses System, dass dieses Tracking System in den Fahrzeugen nicht zuverlässig arbeitet, Man hat gewusst, dass das Probleme macht und man hat sicherheitshalber auch keine Backup Strategie gehabt, also man hat immer noch an diese Big Bang Rollout Strategie gedacht. Wir ersetzen alles von heute auf morgen und wir brauchen kein Backup, kein Fallback wieder auf Papier zurück oder so. Brauchen wir alles nicht. Das führen wir einfach mal so ein."
+    },
+    {
+      "end": 1519800,
+      "speaker": "A",
+      "start": 1515160,
+      "text": "Also bisher höre ich da gar nicht so viel Negatives, denn viele."
+    },
+    {
+      "end": 1523800,
+      "speaker": "B",
+      "start": 1521560,
+      "text": "Kannst du gar nicht gerade sagen oder ohne zu lachen."
+    },
+    {
+      "end": 1539820,
+      "speaker": "A",
+      "start": 1524440,
+      "text": "Ne, aber man hat schon so ein paar Parallelen zu der aktuellen Welt. Also nehmen wir mal den Punkt, keine Backup Pläne. Wie viele Ausfälle hast du gehabt, wo du entschieden hast, aktiv entschieden hast, wir rollen nicht zurück, wir machen Fix forward."
+    },
+    {
+      "end": 1567420,
+      "speaker": "B",
+      "start": 1540620,
+      "text": "So kann man es auch positiv formulieren. Genau, man kann es auch negativ sehen, wenn man so diese ganzen AI Prozesse heutzutage sieht, Da wird man einfach umgeschaltet, es wird schon funktionieren, Man hat keine Ahnung, was da eigentlich passiert. Backup hat man keines, Rollback teilweise auch nicht, wenn es länger gelaufen ist. Quality Assurance gibt es meistens auch nicht. Man hat es halt so zusammengestöpselt in N, diese Pipeline, die läuft dann irgendwie so auf wackligen Beinen und dann deployed man das alles."
+    },
+    {
+      "end": 1569900,
+      "speaker": "A",
+      "start": 1567580,
+      "text": "Wann hast du das letzte Mal eine Schulung bekommen?"
+    },
+    {
+      "end": 1572380,
+      "speaker": "B",
+      "start": 1570300,
+      "text": "Bei der Feuerwehr bekommen wir immer Schulungen."
+    },
+    {
+      "end": 1588970,
+      "speaker": "A",
+      "start": 1572380,
+      "text": "Ja, aber in der letzten Zeit, wo du mal in einer Firma gearbeitet hast, wo dann mal eben das HR System weggerissen wurde, oder natürlich vergleiche jetzt nicht das HR System mit einem ich hole mal ein Krankenwagensystem, aber mal auf deutlich kleinerem Scale."
+    },
+    {
+      "end": 1610330,
+      "speaker": "B",
+      "start": 1589130,
+      "text": "Ja, stimmt schon, es ist seltener. Aber ich würde schon sagen, dass es meistens eine Schulung gibt bzw. Eine Einbindung der Leute schon während der Entwicklung, dass die das System kennenlernen. Also üblicherweise gibt es sowas schon hoffentlich, vor allem bei größeren Systemen will ich mir das mal erhoffen. Und wenn was eingeführt wird, du hast überall jetzt KI Schulungen, sogar das wird eingeführt."
+    },
+    {
+      "end": 1614690,
+      "speaker": "A",
+      "start": 1610690,
+      "text": "Dann hast du gesagt, die Hardware in den Autos war unzuverlässig."
+    },
+    {
+      "end": 1660670,
+      "speaker": "B",
+      "start": 1614690,
+      "text": "Genau, also die Positionsermittlung hat scheinbar nicht so gut funktioniert und hat irgendwie Funkprobleme gehabt, ganz zu schweigen von der Bedienung. Also die war auch nicht scheinbar sehr einfach, Um so einen Status zu schicken von den Fahrzeugen hat man irgendwie sechs Tasten drücken müssen und so weiter. Wenn man das kombiniert mit keiner Schulung und die bekommen irgendwie neue Hardware ins Auto gesteckt, die kompliziert auch noch ist. Man muss denken, es sind die er, dass jetzt nicht UX Designer drüber gegangen sind. Vor allem in so einem Projekt hätte man kein Geld gehabt für UX Designer, aber da irgendwas sinnvoll zu entwickeln, sodass es einfach bedienbar ist, war natürlich nicht. Und dementsprechend hat es wahrscheinlich auch ganz viele Fehleingaben gegeben. Also auch wieder, du hast halt diese Schnittstelle Mensch Computer und wenn die nicht sauber ist, dann hast du da schon alleine Probleme. Sogar wenn technisch alles funktionieren würde."
+    },
+    {
+      "end": 1678970,
+      "speaker": "A",
+      "start": 1660750,
+      "text": "Du stellst das jetzt wieder so negativ dar. Ich stelle mir eine andere aktuelle Haben für dich oder in modernen Cloud Umgebungen Stichwörter wie Alpha, Beta oder Not General Available überhaupt noch eine Bedeutung? Also da wird ja inzwischen jedes Alpha Feature direkt in Produktion mit eingebaut."
+    },
+    {
+      "end": 1689970,
+      "speaker": "B",
+      "start": 1679370,
+      "text": "Lös dich mal von deiner ganzen Cloud Startup Welt und geh mal so in klassische, traditionelle Konzerne oder in sicherheitsrelevante Systeme. Ich hoffe mal schon, dass es der."
+    },
+    {
+      "end": 1706480,
+      "speaker": "A",
+      "start": 1689970,
+      "text": "Alphabet, also so wie ich das hier sehe, bekannte Bugs, sicherheitsrelevant, unvollständige Schulungen, Alpha Beta Systeme, kein Backup Fix. Also ein tausend neun hundert zwei und neunzig war für mich der Londoner Ambulanz Service einfach digitaler Vorreiter."
+    },
+    {
+      "end": 1716960,
+      "speaker": "B",
+      "start": 1706800,
+      "text": "So sehe ich das Standardprojekt, wie es heute umgesetzt wird. Ja, es stimmt schon, man lacht darüber, aber wenn man sich überlegt, macht man das wirklich so sauber in allen Projekten?"
+    },
+    {
+      "end": 1735869,
+      "speaker": "A",
+      "start": 1716960,
+      "text": "Aber denk doch mal drüber nach. Wie viele Projektmanager und Managerinnen hast du in deiner professionellen Laufbahn bisher getroffen, denen du zurechnen würdest, ein solches Projekt stemmen zu können? Und ich rede von heute, ich rede von zwei tausend fünf und zwanzig ich rede nicht von ein tausend neun hundert."
+    },
+    {
+      "end": 1785890,
+      "speaker": "B",
+      "start": 1735869,
+      "text": "Zwei und neunzigste Also mir würden jetzt sicher zwei, drei Leute einfallen, die auf jeden Fall fragen könnte für sowas. Aber man muss ja auch sagen, es muss ja gar nicht unbedingt auf den Schultern von einer Person liegen. Also gerade bei so einem großen Projekt hast du wahrscheinlich hoffentlich mehrere Schultern und Teilbereiche, die du dann jeweils übergeben kannst. Aber klar, du brauchst trotzdem wahrscheinlich einen Projektmanager, der dann alles koordiniert und unter Dach und Fach hat. Aber zum Beispiel hat es da auch ein Gremium gegeben, das sich Statusberichte schicken hat lassen und die haben halt irgendwie so jetzt keine gefakten Statusberichte, aber sehr geschönte Statusberichte bekommen und die haben einfach gesagt, ja perfekt, schöner Statusbericht passt, hinterfragen wir gar nicht. Also es hat schon damals auch so Sicherheitskonzepte gegeben, nur haben die halt scheinbar nicht funktioniert, weil wenn die Leute nichts hinterfragen, dann hast du da auch ein Problem."
+    },
+    {
+      "end": 1802130,
+      "speaker": "A",
+      "start": 1785970,
+      "text": "Und wenn ich jetzt sage Projektmanagement, dann meine ich natürlich auch sowas wie ein PMO. Das ist nämlich ein Projektmanagement Office, was dann eigentlich eine Sammlung von Projektmanager und Projektmanagerinnen ist, die sich dann darum kümmern. Und das sind sehr wahrscheinlich die von dir angesprochenen Teilbereiche."
+    },
+    {
+      "end": 1814720,
+      "speaker": "B",
+      "start": 1802130,
+      "text": "Genau, zum Beispiel, wie man das aufteilt, ist ja dann nochmal was anderes, aber hoffentlich hast du mehr Köpfe und die sich auch vielleicht gegenseitig jetzt weniger überwachen, aber vielleicht halt einfach schauen, dass alles läuft und auch hinterfragen."
+    },
+    {
+      "end": 1834330,
+      "speaker": "A",
+      "start": 1814880,
+      "text": "Sechs und zwanzigster oktober neunzehn zwei und neunzig ist das live gegangen. Ich habe jetzt gerade deine negativen Punkte mit ein paar Bugs, unvollständige Schulungen, Alpha Hardware und kein Papier Backup mal eben ausgeräumt und sage, das ist moderne Vorgehensweise. Was war denn das Resultat? Ist dieses System seit dem sechs und zwanzigster oktober neunzehn zwei und neunzig online?"
+    },
+    {
+      "end": 2040070,
+      "speaker": "B",
+      "start": 1834410,
+      "text": "Also grundsätzlich, es hat funktioniert, es war online. Das Problem war aber natürlich diese ganzen Dinge, die wir schon erwähnt haben, das größte Problem war mal, dass dieses System natürlich schlecht getestet war, auch unter Stresstest nicht getestet wurde und das System so aufgebaut wurde. Und vermutlich da, wo es programmiert wurde oder getestet wurde im Kleinen, hat man immer auf die perfekten Daten zugegriffen. Das heißt, man hat eine perfekte Welt angenommen. Jetzt kommst du in die echte Welt, wo plötzlich Fehleingaben passieren von den Autos zum Beispiel, was für ein Status sie sind, von den Krankenwagen, wo die Location nicht sauber übermittelt wird. Das heißt, du weißt dann öfters nicht mehr, wo sind denn deine Krankenwagen unterwegs und du hast jetzt irgendeinen Algorithmus, der auf diesen falschen Daten oder unvollständigen Daten plötzlich Sachen berechnet. Das Problem war dann, dass dieser Algorithmus diese Krankenwagen sinnlos durch die Stadt geschickt hat, irgendwie ans andere Ende der Stadt. Da haben sich die Fahrer nicht ausgekannt, weil sie dort noch nie waren. System hat gedacht, es ist aber gut, wenn sie dorthin geschickt werden, teilweise basierend auf den falschen Daten, einfach diese ganzen Entscheidungen, Menschenentscheidungen hat sie in dem Sinne nicht mehr gegeben. Ich glaube drei und fünfzig Autos waren überhaupt offline, da hat das Location System nicht mehr funktioniert und man hat einfach vertraut, dass der Computer die richtigen Entscheidungen trifft in der Realität, in der Welt. Dann da draußen hatte das zur Folge, Leute haben ewig lang auf Krankenwagen gewartet. Es gibt da so Erzählungen, dass einer irgendwie nach fünfzig Minuten Warten dann mit einem Herzinfarkt sich selber irgendwie mit dem Sohn ins Krankenhaus geschleppt hat oder so. Es gibt auch ganz viele Fälle, wo man vermutet, dass darum Leute gestorben sind. Also man geht so von zwanzig, die so ziemlich sicher sind, bis zu zwei hundert Fällen aus, je nachdem, ist halt schwer zu sagen, ist jemand gestorben, weil irgendwas zu langsam war. Es gibt so Fälle, wo die Ambulanzen halt zu irgendwelche Bagatellvorfälle gerufen worden sind, irgendwie, keine Ahnung, verstauchter Fuß oder so und in der Nähe war irgendwie ein Herzinfarkt und der hat dann keine Ambulanz bekommen. Also es war scheinbar der absolute Super GAU. Die Leute haben es nicht mehr geschafft einzugreifen, die Leute haben wieder angerufen, das heißt du hast dann doppelte Last, dreifache Last, vierfache Last, weil die Leute immer wieder anrufen, es kommen keine Ambulanzen, die Menschen waren überfordert, der Computer war überfordert, der Computer hat noch dazu massig Fehler ausgespuckt scheinbar, es wird da berichtet, die Bildschirme waren nur mehr voll von Exception Meldungen, das heißt, die Leute haben nicht mal lesen können, was die Exceptions sind. Im Prinzip war das ganze Ding komplett außer Kontrolle und wahrscheinlich haben die Menschen noch das Schlimmste verhindert, also das Schlimmste im Sinne von weniger tote Menschen am Ende. Und obwohl es eigentlich ein ganz normaler Tag war, ohne jetzt irgendwie mit extremer Last oder super viel Vorfällen, es war ein ganz normaler Tag und es ist absolut eskaliert. Es gab aber keinen Backup, gab keinen Rollback, das heißt, man wollte nach vorne gehen und hat probiert halt irgendwie mit dem System zu arbeiten, was die absolute Katastrophe. Man hat das Ganze noch weiter durchgehalten und hat probiert es irgendwie unter Kontrolle zu kriegen, also auch mehrere Tage und viel ist dann auf Papier einfach wieder umgestellt worden, so glaube ich, von den Menschen ist aber parallel weitergefahren worden mit dem Computersystem, weil es war nicht möglich, komplett umzustellen. Und dann war der komplette Kollaps. Eine Woche später, ungefähr im November, ist dann überhaupt das System zusammengebrochen, also technisch zusammengebrochen. Davor war es ja eigentlich auch schon der absolute Zusammenbruch, weil ganz klassische Fehler in der Programmierung. Was ist der klassische Fehler, Andy? In der Programmierung?"
+    },
+    {
+      "end": 2054470,
+      "speaker": "A",
+      "start": 2040390,
+      "text": "Irgendein Resource Leak. Also man schreibt Daten auf die Festplatte und die Festplatte wird auf einmal voll und deswegen der Server unresponsive oder ich glaube ein tausend neun hundert zwei und neunzig ein Memory Leak irgendwie irgendwie sowas mal ein Free vergessen oder man malloc zu viel gemacht."
+    },
+    {
+      "end": 2114560,
+      "speaker": "B",
+      "start": 2054710,
+      "text": "Genau, es war Memory Leak scheinbar am Fileserver. Man hat irgendwie vergessen, wenn man die Dispatch Informationen, also von einem Fall, um so eine Ambulanz zu dispatchen, wenn man die erstellt in RAM, danach wieder freizugeben. Jetzt ist es vollgelaufen über eine Woche. Nach einer Woche war dann alles voll und es ist alles zusammengebrochen mit einem Server Out of Memory Fehler am Ende. Aber sie waren ja schon sehr schlau, sie hatten ja so ein Backup System irgendwo aufgestellt, dass man so umspringen kann, weil es war ja noch nicht klar, was da eigentlich passiert ist. Das Problem war, dieses Backup System hat man nie getestet. Ich habe schon zuerst erwähnt, da gab es ja diese Druckerlösung, diese provisorische Druckerlösung, die sie noch eingebaut haben, weil sie nicht komplett auf Paperless umstellen haben können. Dieses Backup System hat provisorische Druckerlösung gehabt, sondern das Backup System war für die volle Lösung eigentlich ausgelegt und nachdem es halt nie getestet war, war es eigentlich auch wertlos. Das heißt, dieses Backup System war auch nicht zu verwenden und man hat das ganze Ding eigentlich nicht sofort switchen können, dass man sofort auf ein anderes System umstellen hat können."
+    },
+    {
+      "end": 2126070,
+      "speaker": "A",
+      "start": 2114560,
+      "text": "Jetzt stelle ich mir halt schon die Frage, wenn ich diese Story höre, ist das eine Story von einem klassischen IT Projekt, welches gescheitert ist oder ist das, wo einfach nur ein bisschen Geld verbrannt."
+    },
+    {
+      "end": 2130310,
+      "speaker": "B",
+      "start": 2126070,
+      "text": "Wurde, inklusive Zeit, Nerven und zwei hundert Menschen noch."
+    },
+    {
+      "end": 2143470,
+      "speaker": "A",
+      "start": 2130390,
+      "text": "Genau, das wäre die nächste Frage. Oder reden wir hier wirklich von einem Horrorfilm, was wirkliches Menschenleben gekostet hat? Du hattest ja gerade schon gesagt, dass irgendjemand mit Herzinfarkt nach elf Stunden selbst in die Klinik gefahren ist oder ähnliches."
+    },
+    {
+      "end": 2292070,
+      "speaker": "B",
+      "start": 2143470,
+      "text": "Also wie schon erwähnt, zwanzig bis zwei hundert tote Menschen natürlich Verschlechterungen oder sonstige Sachen sind schwer natürlich nachzuweisen. Es hat auf jeden Fall auch Folgen gehabt auf der personellen Seite. Der CEO hat natürlich zurücktreten müssen, also ist eigentlich das Mindeste, aber er hat noch politischen Druck dazu gebraucht. Es hat natürlich dieses Team von den Dispatchern natürlich auch super belastet. Die waren davor schon scheinbar nicht so gut gelaunt und man hat da im Bericht gelesen, dass da schon toxische Kultur eigentlich inhärent drin war, aber das hat es natürlich noch viel schlimmer gemacht. Die war natürlich völlig überlastet, also emotional, aber natürlich auch körperlich dann am Ende. Das ganze System hat natürlich einen Schaden, also im Sinne von moralischen Schaden. Die Leute haben kein Vertrauen mehr auch in das ganze System. Also ich würde schon sagen, das war eher in Richtung Horror, so wie du das gesagt hast. Und der ganze Horror wurde dann eben auch aufgearbeitet. Darum weiß man auch so gut Bescheid eigentlich über den Fall, was ja wirklich eigentlich super ist. Da gibt es einen sechzig seitigen Report und natürlich ganz viele News Einträge in Zeitungen und es gibt auch wissenschaftliche Papers dazu noch, die das Ganze analysiert haben auf verschiedensten Ebenen. Aber dieser sechzig seitige Report, der hat dann auch das Ganze aufgearbeitet und hat eben diese ganzen Details herausgearbeitet und hat dann auch ganz klar festgestellt, dass das halt absolutes überambitioniertes Projekt war. Der Zeitplan war unter jeder Sau, wie man bei uns sagen würde. Also das kann man einfach nicht in dieser Zeit realisieren, dass das Management primär schuld war, also das nicht existente Management oder das Management, das halt einfach nicht reagiert hat, dass das gar nicht unbedingt bei der Softwarefirma liegt, diese Schuld, weil wie gesagt, das Management natürlich dementsprechend verantwortlich ist. Das ganze Vergabemodell, dass man den Billigstanbieter genommen hat, dass da der Research nicht gemacht wurde bzw. Ignoriert wurde. Man hat ja mit Referenzen gesprochen zum Beispiel, also dass es eigentlich ein Super GAU war, der von falschen Menschenverhalten eigentlich herbeigeführt wurde und ganz klar herbeigeführt wurde. Also dass das nicht gerade dumme Umstände waren, sondern das war eigentlich schon hervorsehbar, dass das so enden würde. Und natürlich jetzt rein von der technischen Seite, dass es sehr ambitioniert war, dass das System überhaupt mal funktionieren kann. Also gerade in den ERN, dass man so perfekte Daten überhaupt hat, dass man das komplett automatisieren kann. Und das hat sich dann auch herausgestellt, dass das eigentlich nicht in dem Sinne möglich war."
+    },
+    {
+      "end": 2300070,
+      "speaker": "A",
+      "start": 2292150,
+      "text": "Wie sieht das System des Ambulanz Service London heutzutage aus? Sind sie digitalisiert oder haben sie noch Zettel und Stift und ein Förderlaufband?"
+    },
+    {
+      "end": 2336070,
+      "speaker": "B",
+      "start": 2300470,
+      "text": "Das habe ich ehrlich gesagt nicht nachgeschaut, was sie aktuell haben. Ich hoffe mal schon, dass sie digitalisiert sind. Man hat im Prinzip das Projekt dann ganz auf neue Beine gestellt, hat es komplett nochmal neu gemacht und hat es dementsprechend mit dem ausreichenden Budget gemacht und hat dann auch einen inkrementellen Ansatz gewählt und hat die Menschen auch wesentlich stärker noch eingebunden. Also im Sinne von nicht, dass alle Entscheidungen von dem Computer getroffen werden. Das war eigentlich auch ein großer Unterschied. Und das wurde dann komplett neu aufgesetzt. Aber sie haben jetzt schon am Computer an sich festgehalten. Also sie sind nicht zurück zu Papier und sind immer noch am Papierweg."
+    },
+    {
+      "end": 2369120,
+      "speaker": "A",
+      "start": 2336070,
+      "text": "Jetzt hattest du in der Einleitung gesagt, dass du dieses Projekt als Beispielprojekt in einer deiner Vorlesungen nutzt. Ich hoffe mal, das ist keine Geschichtsvorlesung, sondern dass man sich später auch noch über dieses Projekt unterhält, denn es gibt ja schon viel Futter. Es gibt ja schon viel Futter zum Was kann man da besser machen? Wie würde man heutzutage daraus lernen und so weiter. Und als Techniker würde ich sagen, das ganze Projekt hätte verhindert werden können, wenn man einfach nur statische Code Analyse genommen hätte, um den Memory Leak zu vermeiden. Siehst du das genauso?"
+    },
+    {
+      "end": 2431570,
+      "speaker": "B",
+      "start": 2369660,
+      "text": "Also meine erste Frage funktioniert das in Visual Basic? Gibt es sowas? Vor allem hat es das in den ERN schon gegeben? Keine Ahnung. Es war Windows drei übrigens mit Visual Basic. Ich würde mal sagen, von technischer Seite, dieser technische Kollaps mit dem Memory Leak, das war ja das kleinste Problem, weil das ist ja auch erst nach sieben Tagen aufgetreten. Aber in den ersten sieben Tagen war ja schon absolutes Chaos, vor allem weil eben die Daten nicht verfügbar waren. Also du hast immer Hardwareausfälle, du hast immer Probleme, du musst auch immer mit Memory Leaks rechnen. Es kann ja auch dein ganzes Computersystem mal wegbrechen. Also ich weiß auch jetzt noch, wenn in voll digitalen Systemen bei uns zum Beispiel jetzt bei der Leitstelle die Feuerwehr und die Rettung auch koordiniert, da gibt es einen Notfall Backup Plan, der bis zur Zettelwirtschaft nach unten geht, Also Im absoluten Notfall haben die sogar ein System. Früher war es teilweise auch mit Fax noch, die haben ein komplettes Backup System, dass sie möglichst auf immer tiefere Ebene nach unten fallen können. Und ich glaube, das letzte ist wirklich mit mit Papier und Stiften dann schlussendlich, um trotzdem noch alles abzuwickeln."
+    },
+    {
+      "end": 2438530,
+      "speaker": "A",
+      "start": 2431570,
+      "text": "Du wirst lachen. Ähnliche Pläne gibt es in den größeren Firmen, die größere Cloud Infrastruktur betreuen."
+    },
+    {
+      "end": 2443810,
+      "speaker": "B",
+      "start": 2438690,
+      "text": "Ebenfalls das LLM Modell machst du dann mit Papier und Stift oder wie, wenn das ausfällt?"
+    },
+    {
+      "end": 2449930,
+      "speaker": "A",
+      "start": 2443810,
+      "text": "Ne, da geht es eher darum, die Tage hatte Google Meet zum Beispiel einen Ausfall. Wir hatten aber selbst einen Incident."
+    },
+    {
+      "end": 2453170,
+      "speaker": "B",
+      "start": 2449930,
+      "text": "Laufen wir wie Cloudflare, meinst du wir."
+    },
+    {
+      "end": 2485280,
+      "speaker": "A",
+      "start": 2453610,
+      "text": "Wie Cloudflare einen kleinen internen Incident und dann ist man auf Zoom gewechselt, weil man sich nicht unterhalten konnte, oder? Und das geht halt so, wir haben halt eine Mehrfachkette, wenn der Chat ausfällt, dann gehen wir auf E Mail oder dann haben wir in manchen Systemen auch die Handynummern, wo dann auch hoffentlich nicht, aber in anderen Diensten sich unterhalten werden kann. Das ist natürlich relativ schlecht, weil man nicht alle Daten scheren kann. Und diese Pläne werden kontinuierlich getestet. Hoffe ich doch mal. Funktioniert bei euch ebenfalls in der Feuerwehr auch, dass diese Systeme getestet werden und."
+    },
+    {
+      "end": 2520570,
+      "speaker": "B",
+      "start": 2485280,
+      "text": "Diese Prozedere, ich vermute mal, da habe ich jetzt zu wenig Einblick, ob die wirklich sauber getestet werden, Aber es gibt andere Tests, die natürlich ständig durchgeführt werden. Und auch wenn das Funksystem zum Beispiel zusammenbricht, was hast du noch für Möglichkeiten? Also solche Sachen werden dann schon durchaus immer durchgespielt und getestet, weil du hast ja heutzutage das Problem, dass alles super vernetzt ist. Auch unser digitales Funksystem zum Beispiel, das verschlüsselt ist, ist wie ein Handysystem, Handynetz. Und wenn dir dann durch Masten wegbrechen oder das Handynetz zusammenbricht, dann wirst du trotzdem noch irgendwie eine Möglichkeit haben, Funkgespräche durchzuführen. Also da brauchst du dann auch Rückfallebenen, die das ermöglichen."
+    },
+    {
+      "end": 2557190,
+      "speaker": "A",
+      "start": 2520570,
+      "text": "Es ist ja nicht nur so, dass man es nicht testen muss, sondern die Systeme, die dein Sicherheitsnetz bieten, die werden ja auch geändert. Das bedeutet, da können ja auch Regressions reinkommen, also unabsichtbare Fehler, die es dann nicht möglich machen, das Sicherheitsnetz zu nutzen. Oder neue Leute kommen jetzt in dein Team und dann gibt es einen Ausfall und die wissen nicht, wie man reagieren sollte. Im besten Falle gehen die nicht zum Schrank und holen den Aktenordner mit einer strukturierten Anweisung auf Papier raus, sondern wissen das irgendwie. Das bedeutet, diese Tests haben so viele Vorteile und man muss halt auch die Umgebung haben, wo man diese Tests auch ausführen kann."
+    },
+    {
+      "end": 2637730,
+      "speaker": "B",
+      "start": 2557830,
+      "text": "Was da natürlich sonst auch noch gefehlt hat jetzt beim London Ambulance Service, ist die ganz klassischen Tests, End to End Tests, realistische Lasttests, wie schaut es überhaupt mit der Performance aus? Also Performance Tests gab es überhaupt keine sinnvollen, wie das System unter hoher Last reagiert. Es hat, wie ich schon erwähnt habe, keine externe Validierung gegeben. Das heißt, die Software Leute haben nur intern irgendwie geprüft, ob was funktioniert. Es gab nicht von außen irgendwelche Vorgaben, ihr müsst gewisse Tests machen oder wir wollen uns das auch anschauen und überprüfen, ob irgendwas funktioniert. Also auch da im Testing sind sehr viele klassische Fehler gemacht worden, die man jetzt rein in der Softwareentwicklung eigentlich hoffentlich heutzutage zumindest meistens macht, aber eigentlich schon damals auch Standard waren und bekannt waren. Also auch wenn es jetzt die er waren, dass man irgendwas testen muss sinnvollerweise. Es war damals schon auch bekannt, aber auch da wieder, wie du schon richtig angerissen hast, Andi, in ganz vielen Projekten, wenn man so denkt, was wir so machen, vielleicht jetzt nicht kritische Ambulance Services, aber wie viele Leute machen wirklich einen Lasttest oder einen End to End Test oder der Auftraggeber macht wirkliche Tests oder engagiert eine zweite Firma, um dann irgendwas zu testen. Also jetzt sind wir dreiig Jahre später und bin mir nicht sicher, ob das der absolute Standard schon ist bei allen Projekten, auch bei kritischen Projekten."
+    },
+    {
+      "end": 2710880,
+      "speaker": "A",
+      "start": 2638210,
+      "text": "Ich kann dir sagen, bei Firmen, wo doch schon mal ein bisschen Geld hinter steckt, die machen Lasttests. Vor kurzem war Black Friday, Cyber Monday, glaub mal, die großen Shopbuden, Shopify und Co. Die werden alle Lastists machen. Da geht es ja nicht um Millionen, da geht es ja um Milliarden. Aber also ich weiß zum Beispiel, dass im Travelbereich, wo sehr viel Saisongeschäft ist, wirklich Sommer und Winter, da ist der meiste Traffic auf den Plattformen, dass da Lasttests gemacht werden und dass da auf Basis der Lasttests auch ziemlich viele Regression Bugs rausgeholt werden und dann teilweise vorzeitig hochskaliert werden. Jetzt kann man sagen Autoskaling, blablabla, Autoscaling ist halt auch schwierig Autoscaling braucht halt auch Zeit, ich rede von Minuten und teilweise überprovisioniert man da einfach, weil das im Endeffekt günstiger ist, als wenn man Downtime hat und dann Geld verliert. Also es gibt schon diverse Systeme, die Lasttests machen. Man muss ja auch sagen, Lasttests zu machen ist ja deutlich einfacher geworden als früher. Früher gab es jetzt nur noch jmeter oder ähnliches. Heutzutage gibt es ja wirklich sehr gute Lastsysteme wie K von Grafana oder ähnliches, wo du wirklich sehr einfach Regeln schreiben kannst. Und also es ist ja deutlich, die Barriere wurde deutlich weggenommen, wobei du natürlich."
+    },
+    {
+      "end": 2796110,
+      "speaker": "B",
+      "start": 2710880,
+      "text": "Jetzt in einem sehr vereinfachten Setting unterwegs bist, wenn du von jmeter und so weiter sprichst. Wenn du jetzt bei so einem Ambulance Service von Lasttest sprichst, dann musst du da ja reale Daten haben, Du musst GPS Daten haben, du musst vielleicht auch testen, wie verhält sich denn überhaupt die Kommunikation von den Krankenwagen. Jetzt stattest du da drei Krankenwagen mit irgendeinem System aus, das funktioniert. Wenn du zwanzig ausstattest, hast du womöglich irgendwie ein Problem mit der Bandbreite auf dem Funksystem oder irgendwas. Also es ist viel mehr Hardware im Spiel gewesen damals, als wäre es heute natürlich genauso. Du hast viel mehr Moving Targets in dem Sinne. Du brauchst echt Daten. Also es ist schon ein komplexeres Test Szenario, das du da fahren musst. Nichtsdestotrotz gehört es halt einfach dazu, du solltest zumindest irgendwie so einen normalen Tag abbilden können in dem Test Szenario. Aber wenn man den Bericht liest, haben die halt einfach mit Dummy Daten mit Einzelnen getestet und sind nie eigentlich auf den Live Case gegangen. Und das macht man ja eigentlich auch, wenn du jetzt Black Friday erwähnst, ich schaue mir an, was ist das, was ich zu erwarten habe und dann teste das mal wirklich aus. Also ich probiere mein Produktiv System zu simulieren und je nachdem, wie viel Anfragen ich dort habe, muss ich das halt dementsprechend auch testen. Und bei einem Ambulance Service muss ich halt alles testen. So und so viele Fahrzeuge gibt es, so und so viele Sensoren gibt es, so viele Statusrückmeldungen gibt es, so viele Anrufer gibt es und damit ich das halt dementsprechend möglichst nahe an der Realität durchtesten kann."
+    },
+    {
+      "end": 2858840,
+      "speaker": "A",
+      "start": 2796190,
+      "text": "Gar keine Frage, dass das alles nicht ganz so einfach ist und nicht auch so einfach quantifizierbar ist. Verschiedene Protokolle, verschiedene Hardware Wege, teilweise Menschen involviert. Wie viele Telefonate kannst du gleichzeitig annehmen? Wie schnell können Leute Daten ins System eingeben? Allein zu sagen, wann ist ein Mensch überlastet, ist ja schon eine schwierige Aussage. Und wenn du diesen Lasttest sogar über mehrere Stunden fährst, um zum Beispiel mal eine Terrorattacke oder sowas beim Big Ben zu simulieren, dann gehe ich mal stark davon aus, kommen über mehrere Stunden ganz viele Anrufe rein und allem drum und dran. Gut, vielleicht wird dann der Ambulanz Service nicht mehr gerufen, sondern irgendwie direkt die Hilfe des Militärs oder ähnliches, also Katastrophenschutz und so. Vielleicht ist das eine Ebene drüber, als ich nenne es mal das Business as usual. Aber ich kann mir gerade schon vorstellen, weil ich gerade drüber nachdenke, dass allein ein aussagekräftiger Lasttest für das Ambulanzsystem ja schon ein Projekt ist, was die, von denen wir vorhin gesprochen haben, weit überschreiten würde, oder?"
+    },
+    {
+      "end": 3015440,
+      "speaker": "B",
+      "start": 2858840,
+      "text": "Ja, heutzutage bewegt sich das sicher in anderen Sphären, so ein Budgetprojekt mit sauberen Tests. Was für mich auf jeden Fall spannend ist bei diesem Projekt oder was für mich da so heraussticht, ist eigentlich, dass ganz, ganz viele Probleme eben genau nicht da gelegen sind, die wir jetzt besprochen haben, klassische Lasttests oder Memory Leaks oder solche Dinge, sondern auf der menschlichen Seite natürlich, auf der Management Seite, gar keine Frage, Aber dass man dort auf keinen Fall den Menschen mitgedacht hat. Man nennt es ja soziotechnisches Denken, das heißt, dass man Maschine und Mensch irgendwie in ein Projekt zieht, weil die haben halt wirklich nur die Software gesehen, die haben gesagt, wir wollen den Menschen ersetzen, die haben alleine die Requirements geschrieben, die haben nie mit den Leuten gesprochen, die da eigentlich wirklich dispatchen, die haben nie mit Leuten gesprochen, die im Krankenwagen fahren, Dann haben sie nicht mal Schulungen gemacht, sinnvolle. Das heißt, wie sollen denn die da draußen wissen in dem Krankenwagen, welche sechs Tasten sie drücken müssen gleichzeitig, damit sie da irgendeinen Status schicken können. Also noch klarer kann man den Menschen eigentlich nicht depriorisieren in so einem Projekt und außen vor lassen und dann aber schlussendlich mit dem Menschen in Kontakt lassen. Und dass das schiefgeht, ist eigentlich vorhersehbar, würde ich mal sagen. Und das ist bei ganz vielen Projekten heutzutage auch noch der Fall, dass man einfach den Menschen aus dieser Gleichung rausnimmt und vergisst. Gibt es auch ganz viele Projektmanager oder Product Owner, die sagen, ja, ich weiß schon, was meine User wollen, ich kann das definieren, ich kann die Requirements schreiben, aber dass man mal frühzeitige Tests macht mit den eigentlichen Usern am Ende, dass man die User mit an Bord nimmt ins Requirement Engineering schon, also dass die mitwirken beim Requirement Engineering, dass die frühzeitig mal eine Testversion bekommen, dass man Feedback bekommt. Also ich habe das gerade vor paar Tagen in einem Projekt gehabt, da haben wir gedacht, eigentlich ist es sehr klar, was ein Graph in einer speziellen Software macht. Dann haben wir sieben Leute gefragt und von den sieben Leuten haben vier diesen Graphen nicht verstanden, wo ich mir gedacht habe, also klarer kann es eigentlich nicht mehr sein. Es ist so ein simpler Graph, er ist beschriftet, das kann nicht sein. Und fragst du die Leute und merkst erst, dass die komplett woanders hinschauen, dass die irgendwas übersehen, dass die einfach in einem anderen Modus gerade sind, wenn sie auf den Graphen schauen. Und die war, obwohl ich das jetzt schon öfters gemacht habe, war ich wieder überrascht, wie viele Leute irgendwie einen anderen Gedankengang haben. Und dann gehst du auf so ein komplexes System wie wie das Ambulant Service, das ist ja ganz klar, wo du auch Leute hast, die vielleicht weniger technisch sind, die im Krankenwagen mitfahren, die den Computer nicht schätzen, die den gar nicht verwenden wollen und dann sollst du da irgendwie ein System bauen, was im Vorfeld alles schon weiß. Also meiner Meinung nach ist das unmöglich."
+    },
+    {
+      "end": 3059090,
+      "speaker": "A",
+      "start": 3015520,
+      "text": "Ich höre dich und ich bin auch bei dir, dass man mit den Leuten sprechen soll, die das aktuelle Programm nutzen oder die aktuelle Anwendung oder ähnliches. Doch ich möchte mal eine andere Perspektive in den Raum stellen. Wie hoch schätzt du die Gefahr, dass wenn man alle einbindet, dass man einfach nur das aktuell manuelle System digitalisiert, anstatt es komplett neu zu denken, aufgrund von Angst bei den Leuten, die das aktuelle System anwenden, dass sie wegautomatisiert werden, dass sie keinen Job mehr haben, dass sie sich vielleicht ändern müssen von der Arbeitsweise Und du weißt, manche Leute wollen ihre Arbeitsweise nicht ändern. Wie hoch siehst du die Gefahr, wenn man alle dann komplett einbindet? Das ist glaube ich mal eine Perspektive, die ich in den Raum werfen möchte."
+    },
+    {
+      "end": 3150810,
+      "speaker": "B",
+      "start": 3059090,
+      "text": "Ich habe nicht gesagt, dass du alle einbinden musst im Sinne von ein hundert Prozent aller User. Was meine Erfahrung zumindest ist in klassischen Projekten, ist, dass du mal mit den Leuten sprichst, die erklären lässt, wie die aktuellen Abläufe sind, dann auch probierst da Input zu bekommen. Und da merkst du dann schon, wo sind diese Early Adopters, die offen sind für neue Prozesse, die offen sind für neues Computersystem, die gar nicht so diese Angst haben vor einem Large Language Model, das womöglich ihren Arbeitsplatz wegnimmt. Und diese Leute, mit denen kannst du dann weiterarbeiten und die Leute ziehst du dir raus und mit denen kannst du dann die Tests machen, die Optimierungen machen. Dass du ein hundert Prozent einbindest, ist eigentlich nicht möglich. Und da musst du eigentlich gutes Händchen dafür haben, wer da positiv zuarbeitet. Weil wenn du da Leute drin hast, die nur dagegen sind und die alle schlecht finden, da hast du vollkommen recht. Da hast du dann ein größeres Problem, als was es dir hilft. Und diese Leute gibt es und gerade jetzt auch in der Automatisierung mit KI und LLMs hast du ganz viele von diesen Leuten, aber da musst du einfach mit den positiv gestimmten arbeiten und da findest du garantiert welche. Und auch in so einem klassischen Umfeld wie einem Ambulance Service gibt es vielleicht Jüngere, um das Klischee wieder zu befeuern, die da offener sind. Aber es gibt auch ganz alte Leute, die sehr offen sind. Gerade neulich jemanden getroffen, der ist ein Jahr vor der Pension und hat noch ein super Business aufgebaut und Ideen bis zum Ende. Also es gibt in allen Altersschichten. Du musst einfach die Leute finden, die motiviert sind, die offen sind und Spaß haben, daran irgendwo mitzuwirken und um was Neues zu schaffen."
+    },
+    {
+      "end": 3243660,
+      "speaker": "A",
+      "start": 3150810,
+      "text": "Ich glaube, dieses Projekt hat so viele Ecken und Ecken, kann man wirklich sagen, die man durcharbeiten kann, was man falsch gemacht hat, was man besser machen kann, wie sowas in einem perfekten Projekt aussehen könnte und so weiter und so fort. Wir haben ja auch gerade schon ein bisschen drüber gesprochen, wie macht man sowas vielleicht sogar in nicht so wichtigen Projekten. Obwohl, also wenn ich sage nicht so wichtig, dann ist das natürlich immer Perspektive. Also ein Webshop oder irgendein Internet Service ist natürlich nicht so wichtig wie irgendwelche Menschenleben. Für die Geschäftsführer dieser Firmen, für diese Webprojekte ist das natürlich sehr wichtig und ich stelle mir halt gerade so die Frage, ist dieses Beispiel drei und dreiig Jahre später überhaupt noch relevant? Also das ist ein tolles Lehrbeispiel. Also passiert das heute in IT Projekten auch noch so und auch wenn nur partiell. Ich denke, kann ich schon vorstellen, so viel Geld, wie wir gerade ausgeben, wir als Staat oder als Land oder als Stadt, dass diese Art von Problemen, die du jetzt hier gehighlighted hast in staatlichen Bereichen noch deutlich weniger geworden ist. Vielleicht in kleineren Projekten kommt das immer mal wieder vor, das eine oder andere, ob die alle vorkommen, möchte ich mal bezweifeln. Aber zum Beispiel, man muss leider sagen, die Corona App in Deutschland, man kann sagen, da wurde sehr viel Geld der Telekom und SAP in den Rachen geschmissen. Man kann aber auch sagen, also die war sehr teuer. Man kann aber auch sagen, die hat funktioniert. Also das darf man jetzt leider mal nicht vorenthalten und das würde ich schon so als staatliches Projekt sehen bei der Pandemie und allem drum und dran."
+    },
+    {
+      "end": 3288340,
+      "speaker": "B",
+      "start": 3243660,
+      "text": "Oder es ist witzig, dass du es sagst, weil ich habe dieselbe Diskussion mit meinen Studis geführt, wie dieses Beispiel besprochen habe und mein Take oder unser aller Take war eigentlich die ganzen Probleme passieren immer und überall in kleineren Projekten, aber von denen hört man natürlich viel weniger und bei den großen Projekten vor allem wo Menschenleben dranhängen, da passiert es nicht mehr, weil da weiß man einfach, wie man richtiges Projektmanagement macht, da passieren keine Fehler mehr und wir waren einhellig dieser Meinung und dann habe ich aber danach bisschen recherchiert, was es denn so an Problemfälle, aktuelle Problemfälle so gegeben hat und witzigerweise sind da ganz viele Corona Apps gekommen. Also scheinbar hat es in ganz vielen Ländern viele Corona Probleme gegeben mit den Corona Apps und dass die absolut gescheitert sind, diese Projekte."
+    },
+    {
+      "end": 3291220,
+      "speaker": "A",
+      "start": 3288580,
+      "text": "Wie stehst du denn zur deutschen Corona App?"
+    },
+    {
+      "end": 3317270,
+      "speaker": "B",
+      "start": 3291220,
+      "text": "Also ihr hattet ja auch keine Ahnung, wie die bei euch funktioniert hat. Damals war in Holland, hat die holländische gut funktioniert, die Holländer haben auf alles geschissen, die haben einfach keine Masken aufgesetzt und haben gesagt, es funktioniert so schon auch irgendwie. Aber ich kann mich erinnern an diese grüne Pass App, die man da gehabt hat, um so Nachweise zu haben europaweit. Die hat zumindest in Österreich, Holland, ich glaube die deutsche auch verwendet, mal gut funktioniert, aber keine Ahnung, wie die auf Projektmanager Ebene funktioniert hat, weiß ich nicht."
+    },
+    {
+      "end": 3332520,
+      "speaker": "A",
+      "start": 3317270,
+      "text": "Aber die hatten auf jeden Fall einen Fallbackplan, weil bei jedem Testzentrum habe ich einen Zettel bekommen, der gesagt hat, ich wurde dann und dann getestet und Achtung, diesen Zettel muss ich eigentlich auch immer bei mir führen, soviel ich das noch weiß. Also dieser Fallback Plan hatten sie einfach nur auf alle Bürger halt irgendwie ausgerollt."
+    },
+    {
+      "end": 3438860,
+      "speaker": "B",
+      "start": 3332520,
+      "text": "Ich glaube, das war auch ein Learnings oder Gesellschaft, dass eigentlich Papier schon noch eine ganz gute Erfindung ist und bekommt man ja mehr, als man sich wünscht eigentlich noch auf Papier, aber manchmal ist es ganz praktisch. Aber ein anderes Projekt, was mir dann untergekommen ist und was ich schon fast wieder vergessen hatte, ist das Problem von der Boeing sieben hundert sieben und dreiig Max, die es vor ein paar Jahren gegeben hat, und zwar sind da ja auch dann Abstürze passiert, zwei tausend achtzehn und zwei tausend neunzehn und das Problem war ja, dass da Sensoren falsche Daten geliefert haben von einem neuen System, das Boeing damals unter sehr hohem Druck, Klassiker wieder wie in dem Ambulance Service eingebaut hat und das Problem damals war, dass man eben nur einen Sensor verwendet hat, anstatt mehrere Sensoren, wie es üblich ist in der Flugbranche und es hat dann so ein eigenartiges Verhalten gegeben, dass die Nase nach unten gedrückt worden ist von dem Autopiloten ungefähr, also so wie ich das verstanden habe. Und das größte Problem auch bei diesem Projekt war wieder, dass die Piloten nicht geschult waren. Das heißt, es wurde eingebaut, ohne dass die Piloten eine ordentliche Schulung bekommen haben und eine weitreichende Schulung, dass sie wissen hätten können, wie sie reagieren, weil sie hätten das System nur deaktivieren müssen, das System und alles wäre wieder in Ordnung gewesen. Aber in dem Fall hat es wirklich in zwei Fällen eben so einen Sturzflug produziert und da sind auch wirklich dann Menschen ums Leben gekommen, also auch in so einer regulierten Branche, wo man sagt, die Sicherheitsvorkehrungen sind eigentlich da und da darf das nicht passieren, war genau wie das gleiche hoher Druck, man hat auf nur einen Sensor vertraut, also schlechte Hardware, schlechtes Testing, keine Schulungen und am Ende sind dann Flugzeuge abgestürzt. Also kurzum, es ist auf jeden Fall noch relevant und es passiert auch bei Projekten in der aktuellen Zeit. Leider muss man sagen, also in dreiig Jahren wenig gelernt."
+    },
+    {
+      "end": 3452180,
+      "speaker": "A",
+      "start": 3438860,
+      "text": "Dieser Fall bringt auch schon wieder so viele Fragen auf den Tisch, finde ich, denn wie kann man sich auf einen Sensor verlassen? Bei all den ganzen Zertifizierungen und Audits und Checks, die in der Luft und Raumfahrt denn so üblich sind, Wenn ich."
+    },
+    {
+      "end": 3489450,
+      "speaker": "B",
+      "start": 3452180,
+      "text": "Das richtig im Kopf habe, wurde da irgendwie so halb getrickst, dass das nicht als neues System gilt, sondern nur als Erweiterung und dann gelten andere Regeln, weil das ja nur eine kleine Abänderung war und kein komplett neues System. Aber eigentlich in der Realität, dadurch, dass komplett anders reagiert, muss der Pilot eigentlich eine Schulung bekommen. Aber durch die andere Klassifizierung war es eben nicht nötig, dass der Pilot diese Schulungen bekommt, weil man das runterqualifiziert hat, um möglichst schnell auf den Markt zu kommen, um das rauszubringen. Also da klassischer Druck wieder, der von alle Seiten da war und man hat sich da durchgetrickst und ja, dann passiert wieder sowas."
+    },
+    {
+      "end": 3494450,
+      "speaker": "A",
+      "start": 3489450,
+      "text": "Ich weiß gar nicht, was ich dazu sagen soll. Also ich finde, also es ist schade, schade ist schon das falsche Wort, finde."
+    },
+    {
+      "end": 3497130,
+      "speaker": "B",
+      "start": 3494450,
+      "text": "Ich, weil es ist einfach unter drei hundert Menschen."
+    },
+    {
+      "end": 3516400,
+      "speaker": "A",
+      "start": 3497290,
+      "text": "Deswegen, es ist sehr traurig, dass durch Tipps und Tricks, durch Shortcuts sich auf einen Sensor verlassen wird, der kaputt gehen kann, der dann dazu führt, dass die Flugzeugnase nach unten geht und dann Menschen sterben. Also das ist so. Welchen Vorteil hat es denn jetzt gehabt, das System auszudribbeln? Das ist so im Nachhinein so die what the heck."
+    },
+    {
+      "end": 3558570,
+      "speaker": "B",
+      "start": 3517280,
+      "text": "In dem Fall war es ja eine gute Idee. Also das System soll ja eigentlich positiv wirken, dass glaube ich, wenn irgendwie der Strömungsabriss auftritt, dass dann eben die Nase nach unten gedrückt wird, dass du den Strömungsabriss da wieder raus bekommst oder unterbrechen kannst. Das heißt, es wäre eigentlich eine Sicherheitsvorkehrung gewesen, aber die halt dann einfach schnell durchgedrückt wurde. Und wie gesagt, wenn die Piloten nur gewusst hätten, das ist dieses System und darum druckt die Nase nach unten, ich kann das einfach deaktivieren und dann passt wieder alles. Das hätte schon ausgereicht, aber diese kleine Information, die hat schon gefehlt. Also Time to Market, du bist ein großer Fan, Andi von Time to Market. In dem Fall war es der große Druck. Time to Market, du kannst die Time."
+    },
+    {
+      "end": 3563970,
+      "speaker": "A",
+      "start": 3558570,
+      "text": "To Market Ansage nicht überall verwenden. Also sie ist nicht einfach, oh, Shortcut."
+    },
+    {
+      "end": 3573780,
+      "speaker": "B",
+      "start": 3563970,
+      "text": "Time to Market hat ja auch große Diskussionen bei uns in der Discord Community ausgelöst. Über die Solid Principles und Time to Market, die wir in der letzten Episode besprochen haben."
+    },
+    {
+      "end": 3583140,
+      "speaker": "A",
+      "start": 3573780,
+      "text": "Ja, also ich weiß nicht, was diese Episode hier ist, denn lachen kann ich irgendwie nicht. Es ist schon so eine Art Horror Story. Ich bin kein Mensch, der Horrorfilme mag, Wolfgang."
+    },
+    {
+      "end": 3585060,
+      "speaker": "B",
+      "start": 3583300,
+      "text": "Er ist einfach Tech Suspense."
+    },
+    {
+      "end": 3585940,
+      "speaker": "A",
+      "start": 3585220,
+      "text": "Was ist das?"
+    },
+    {
+      "end": 3594780,
+      "speaker": "B",
+      "start": 3586180,
+      "text": "Tech Suspense, Was ist das? Technisches Gruseln, so wie in Spannender Film, aber ein technischer Thriller."
+    },
+    {
+      "end": 3599700,
+      "speaker": "A",
+      "start": 3595020,
+      "text": "Ich weiß, dass du deinen Kalender nicht unter Kontrolle hast. Ich möchte dir aber kurz mitteilen, Halloween war schon."
+    },
+    {
+      "end": 3602660,
+      "speaker": "B",
+      "start": 3599700,
+      "text": "Ja, ich feier Halloween sowieso nicht, ignoriere."
+    },
+    {
+      "end": 3652060,
+      "speaker": "A",
+      "start": 3602660,
+      "text": "Ich aber vielen lieben Dank, Wolfgang, dass du diese Story als Geschichtenerzähler mitgebracht hast. Ich bin sehr, also ich finde es sehr schade, dass dies kein Märchen ist, sondern wirklich passiert ist. Ich finde es aber wirklich interessant und auch faszinierend, dass diese Story gar nicht so oft erzählt wird, denn die Geschichte selbst war mir auch neu, bis du sie gepitcht hast. Und in der Recherche habe ich mich dann ein bisschen darüber informiert, mich ein bisschen eingelesen und dann bin ich auch über den Podcast Digitale Anomalien gestolpert von Wolfgang Schoch. Der Wolfgang hat die ganze Story in einem sehr hohen Detailgrad recherchiert und trägt sie auch vor. Und diese Podcast Episode drei und siebzig Desaster mit Ansage verlinken wir auch in den Shownotes. Kann ich euch nur ans Herz legen, falls ihr mehr von dieser Story hören wollt. Sehr, sehr interessant und schrecklich zugleich."
+    },
+    {
+      "end": 3663459,
+      "speaker": "B",
+      "start": 3652140,
+      "text": "Wolfgang hat auch ganz andere Geschichten noch, die er immer erzählt über eben Digitale Anomalien allgemein sehr zu empfehlen für alle, die so auf historische Geschichten eigentlich stehen aus der Computerwelt."
+    },
+    {
+      "end": 3682030,
+      "speaker": "A",
+      "start": 3663459,
+      "text": "Das war's von uns, von mir als Geschichtenempfänger, vom Wolfgang als Geschichtenerzähler. Ich habe das Gefühl, die nächste Podcast Episode müssen wir wieder mit einem Flachwitz starten. Und um mal wieder ein bisschen die Stimmung hier zu heben. Also Wolfgang, tut mir leid, ich bin jetzt hier so ein bisschen down, weil gefühlt hast du nur über Memory Leaks gesprochen. Also Memory Leaks, nicht tote Menschen."
+    },
+    {
+      "end": 3702390,
+      "speaker": "B",
+      "start": 3682030,
+      "text": "Das wäre wahrscheinlich eine ganze eigene Episode, aber nur ein Satz. Da sieht man wieder, wenn es um die ethische Verantwortung von Programmierinnen geht, wie viel Einfluss wir eigentlich haben können. Und das sind nur zwei, drei Beispiele. Also wenn wir von den Geschichten oder Problemfällen der Vergangenheit wenigstens lernen können, dann haben wir eh schon gewonnen. Und darum besprechen wir ja auch solche Dinge."
+    },
+    {
+      "end": 3705790,
+      "speaker": "A",
+      "start": 3702390,
+      "text": "Das war's von uns. Wir hören uns nächste Woche wieder und tschüss."
+    },
+    {
+      "end": 3706350,
+      "speaker": "B",
+      "start": 3705870,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}

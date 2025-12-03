@@ -74,11 +74,16 @@ length_second: 3712
 pubDate: 2025-12-02 02:00:59+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/0yoeEgfl5TtxXSEEcya0no
-tags: []
-title: '#225 Das London Ambulance IT-Desaster: Wenn Software Leben kostet'
-transcript_slim: ''
+tags:
+- Projektmanagement
+- Software Qualität
+- Software Engineering
+title: "#225 Das London Ambulance IT-Desaster: Wenn Software Leben kostet"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=8nS_93dYhpg
 
 ---
