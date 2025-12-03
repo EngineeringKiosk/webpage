@@ -2,7 +2,8 @@ name: Publish Podcast Episodes
 
 on:
   schedule:
-    - cron: '15 3 * * 2' # At 03:15 on Tuesday (UTC) or 4:15am (Winter)/5:15am (Summer) in Vienna but seems that there is a lot of cron traffic, usually it is executed between 3 and 4am
+    #- cron: '15 3 * * 2' # At 03:15 on Tuesday (UTC) or 4:15am (Winter)/5:15am (Summer) in Vienna but seems that there is a lot of cron traffic, usually it is executed between 3 and 4am
+    - cron: '15 3 * * *' # Run daily in december
   workflow_dispatch:
 
 jobs:
