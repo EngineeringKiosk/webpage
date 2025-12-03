@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/d9e50d84-885c-4b3c-9199-64adc845e001/engineering-kiosk-225-das-london-ambulance-it-desaster-wenn-software-leben-kostet
 apple_podcasts: https://podcasts.apple.com/us/podcast/225-das-london-ambulance-it-desaster-wenn-software/id1603082924?i=1000739218927&uo=4
 audio: https://audio1.redcircle.com/episodes/bd30a67f-7d72-4f30-b291-54b5986b78fd/stream.mp3
 chapter:
