@@ -41,11 +41,16 @@ length_second: 871
 pubDate: 2025-12-04 02:00:42+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/3AjgTl9omN12udV87VPcOK
-tags: []
-title: '#227 Mit dem Tech-Radar zur besseren Tech-Kultur'
-transcript_slim: ''
+tags:
+- Tech Kultur
+- Software Engineering
+- Knowledge Sharing
+title: "#227 Mit dem Tech-Radar zur besseren Tech-Kultur"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=RBT8GfFaIpk
 
 ---
