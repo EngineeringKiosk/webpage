@@ -43,10 +43,10 @@ speaker:
 spotify: https://open.spotify.com/episode/6PzX1UA5d08uKWV8Hd9IY5
 tags:
 - Software Engineering
-- Produktivität
+- "Produktivit\xE4t"
 - Tech Kultur
-title: "#224 Yak Shaving"
-transcript_slim: ""
+title: '#224 Yak Shaving'
+transcript_slim: src/data/transcripts/224-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=0MJRrO55ARo
 
 ---

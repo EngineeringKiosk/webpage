@@ -80,10 +80,10 @@ speaker:
 spotify: https://open.spotify.com/episode/0yoeEgfl5TtxXSEEcya0no
 tags:
 - Projektmanagement
-- Software Qualität
+- "Software Qualit\xE4t"
 - Software Engineering
-title: "#225 Das London Ambulance IT-Desaster: Wenn Software Leben kostet"
-transcript_slim: ""
+title: '#225 Das London Ambulance IT-Desaster: Wenn Software Leben kostet'
+transcript_slim: src/data/transcripts/225-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=8nS_93dYhpg
 
 ---
