@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/9600462a-d9f3-48ef-8d05-1e5059e3c743/engineering-kiosk-227-mit-dem-tech-radar-zur-besseren-tech-kultur
 apple_podcasts: https://podcasts.apple.com/us/podcast/227-mit-dem-tech-radar-zur-besseren-tech-kultur/id1603082924?i=1000739609784&uo=4
 audio: https://audio1.redcircle.com/episodes/4a3f1676-46f7-4708-83d7-7c2a456bb685/stream.mp3
 chapter:
