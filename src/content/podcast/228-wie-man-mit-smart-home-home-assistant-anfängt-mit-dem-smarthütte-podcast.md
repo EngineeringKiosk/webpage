@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/30472859-9c7b-4c9e-980a-d9a39d8c6402/engineering-kiosk-228-wie-man-mit-smart-home-home-assistant-anf%C3%A4ngt-mit-dem-smarth%C3%BCtte-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/228-wie-man-mit-smart-home-home-assistant-anf%C3%A4ngt-mit/id1603082924?i=1000739776313&uo=4
 audio: https://audio1.redcircle.com/episodes/713bb8e8-0b24-4b0e-9143-3f020ad997eb/stream.mp3
 chapter: []
