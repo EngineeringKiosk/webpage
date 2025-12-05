@@ -39,12 +39,20 @@ length_second: 698
 pubDate: 2025-12-05 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
-- name: Wolfi Gassler
+  transcriptLetter: A
+- name: Thomas (Smarthütte Podcast)
+  transcriptLetter: B
+- name: André (Smarthütte Podcast)
+  transcriptLetter: C
+- name: Vermutlich André oder Thomas, Zuordnung unsicher
+  transcriptLetter: D
 spotify: https://open.spotify.com/episode/0lDzAACqGGjDjCDZkrDF5A
-tags: []
-title: "#228 Wie man mit Smart Home (Home Assistant) anf\xE4ngt mit dem Smarth\xFC\
-  tte Podcast"
-transcript_slim: ''
+tags:
+- Interview
+- Open Source
+- Automation
+title: "#228 Wie man mit Smart Home (Home Assistant) anfängt mit dem Smarthütte Podcast"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=VnokrUCoSN8
 
 ---

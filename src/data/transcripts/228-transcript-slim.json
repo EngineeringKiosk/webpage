@@ -1,0 +1,188 @@
+{
+    "acoustic_model": "assemblyai_default",
+    "audio_duration": 699,
+    "audio_url": "https://cloud.inlupus.at/s/KmWax7ap3z5eggS/download",
+    "auto_chapters": false,
+    "auto_highlights": false,
+    "auto_highlights_result": {},
+    "confidence": 0.9549143,
+    "content_safety": false,
+    "content_safety_labels": {
+        "status": "unavailable"
+    },
+    "custom_topics": false,
+    "disfluencies": false,
+    "dual_channel": false,
+    "entity_detection": true,
+    "filter_profanity": false,
+    "format_text": false,
+    "iab_categories": true,
+    "iab_categories_result": {},
+    "id": "165e2c00-7936-4683-9ab0-a968401b3354",
+    "language_code": "de",
+    "language_detection": false,
+    "language_model": "assemblyai_default",
+    "punctuate": true,
+    "redact_pii": false,
+    "redact_pii_audio": false,
+    "sentiment_analysis": false,
+    "speaker_labels": true,
+    "speakers_expected": 4,
+    "speed_boost": false,
+    "status": "completed",
+    "summarization": false,
+    "throttled": false,
+    "utterances": [
+        {
+            "end": 53330,
+            "speaker": "A",
+            "start": 4000,
+            "text": "Willkommen zum Engineering Kiosk Adventskalender. Es ist mal wieder Zeit für ein neues Türchen und weil Weihnachten natürlich auch das Fest der Liebe genannt wird, dachten wir uns dieses Lass uns doch mal wieder etwas Liebe mit der deutschsprachigen Tech Podcast Szene teilen. Diese Episode ist eine solche Episode und sie kommt nicht von den Standard Engineering Kiosk Hosts Wolfgang oder mir, mein Name ist Andi, sondern wir lassen uns den Engineering Kiosk mal für einen Tag aus der Hand nehmen. Heute übernimmt ein befreundeter Podcast das Mikro und bringt ihm ein paar neue Perspektiven, ein anderes Thema und vielleicht den ein oder anderen Gedanken, der über unsere eigene Bubble hinausgeht. Wir da draußen gibt es großartige Tech Podcasts, die unbedingt mehr Aufmerksamkeit verdienen und wir denken Wissen, Inspiration und gute Geschichten sollte man am besten teilen, also zurücklehnen, neugierig sein heute mit André und Thomas vom Smarthit Podcast. Los geht's, viel Spaß."
+        },
+        {
+            "end": 79020,
+            "speaker": "B",
+            "start": 54380,
+            "text": "Hallo und herzlich willkommen zusammen. Hier sind der André, moin Moin und der Thomas. Hallo, Wir sind vom Smart Hütte Podcast und der liebe Andi und der liebe Wolfgang, die haben uns gefragt, ob wir nicht eine kleine Einspielung machen wollen für den Engineering Kiosk Adventskalender zwei tausend fünf und zwanzig das machen wir natürlich sehr gerne."
+        },
+        {
+            "end": 86710,
+            "speaker": "C",
+            "start": 79430,
+            "text": "Genau und Thema sollte sein, ganz kleiner kurzer Einstieg. Wie fängt man mit Home Assistant an mit dem besten Smart Home, was es auf der Erde gibt?"
+        },
+        {
+            "end": 138110,
+            "speaker": "C",
+            "start": 88870,
+            "text": "Wir müssen uns aber ein bisschen zügig halten, wir haben nicht so viel Zeit hier nur fünf bis zehn Minuten, das machen wir in unserem Podcast anders, da haben wir zwei bis drei Stunden. Wir fangen mal an. Hardware. Wenn ihr gar keinen Bock habt auf irgendwas Setup mäßig und einfach nur eine Kiste kaufen wollen, das Ding soll laufen. Home System Green Punkte aus das Produkt von denen man steckt rein, braucht Strom, Netzwerk, man wartet ein paar Minuten und dann kann man auf die IP Adresse gehen und zack ist man im Webinterface und fängt Es ist ein Tutorial oder ein Onboarding an, dann wenn man noch findet und keine Lust auf Setup hat. Hier muss es ein Yellow wurde abgekündigt, die Produktion heißt nicht, dass sie es nicht supporten, es wurde sogar gegenteilig besprochen oder versprochen von denen. Es wird weiterhin Support dafür geben, aber gibt es halt nicht mehr auf dem Markt. Ich habe mal geguckt und ist auch viel zu teuer dafür. Genau. Ballpark Homes Green Ich glaube, was waren es? Ein hundert Euro plus minus."
+        },
+        {
+            "end": 155230,
+            "speaker": "B",
+            "start": 138190,
+            "text": "Ja, ich glaube wir hatten irgendwas von ein hundert fünfzehn gefunden in Deutschland. Der Yellow ist ein bisschen anders aufgestellt. Der Yellow hat potenziell, also der hat erstmal ein Zigbee Chip noch mit dabei und man muss aber auch noch sein eigenes Compute Model mitliefern. Also naja, wenn ihr es noch findet, könnt ihr es auch in Betracht ziehen."
+        },
+        {
+            "end": 208430,
+            "speaker": "C",
+            "start": 155630,
+            "text": "Genau, aber wenn ihr was schon in der Schublade liegen habt, zum Beispiel alten Raspberry Pi, da würde ich nicht weitergehen als den Vierer, also den er, das wird schon sehr arg langsam, kann man es natürlich auch benutzen, gerade wenn da sowieso nur eine Schublode rumgammelt, sowie neun und neunzig Prozent aller Raspberry Pis, dann natürlich das nutzen, braucht man nichts Neues kaufen. Wenn ihr allerdings was Neues kaufen müsst, würde ich von denen persönlich abraten, einfach aufgrund des Preises, also das Preis Leistungs Verhältnis, was man bei denen hat im Vergleich zu refurbished und gebrauchter Hardware. Und sei es nur ein alter Rechner, den ihr zu Hause habt, ein alter Mini PC oder ein alter Laptop, Alles fein, funktioniert hervorragend und man kann immer später upgraden, denn Home Assistant hat ein super geniales Backup Feature und beim Onboarding werdet ihr auch gefragt, hey, wollt ihr das Backup reinladen und das funktioniert sofort und gut und in fünf Minuten ist man wieder, wo man war."
+        },
+        {
+            "end": 213080,
+            "speaker": "B",
+            "start": 208910,
+            "text": "Genau, also im Zweifel das, was ihr habt, einfach mal nehmen und spielen."
+        },
+        {
+            "end": 297630,
+            "speaker": "C",
+            "start": 213080,
+            "text": "Genau, dann kurzer Hinweis, denn nicht jeder ist so auf dem Markt so unterwegs, so wie ich das manchmal verfolge von Hardware aktuell oder ich würde generell immer empfehlen, einen Thin Client oder Ein Liter PCs nennen, die sich manchmal zu nehmen. Das sind einfach, im Endeffekt sind das häufig Laptop Chips, die in ganz kleinem Gehäuse unterlegt sind. Das sind völlig in Ordnung von der Leistung her als Desktop Computer und alles ab Intel Generation acht und alles ab AMD Ryzen zwei tausend das ist so zwei tausend siebzehn bis zwei tausend achtzehn, also schon ältere Chips, die sind völlig ausreichend für Home Assistant, selbst ein paar Addons noch dazu. Der Vorteil bei den Thin Clients ist, ihr könnt den Rahmen aufstocken bei den meisten, manche sind verlötet, müsst ihr schauen, ihr könnt SSD reinbauen und beim Raspberry Pi ist der Rahmen fest. Modelle mit mehr RAM haben natürlich mehr Preis, was das angeht und da geht es auch schnell hoch und da ist man tatsächlich auch schnell über ein hundert Euro mit Case, SD Karte, Netzteil, Pi selbst dann noch, was braucht man noch? Kühlkörper bei den neueren und das kriegt man bei den Thin Clients halt für unter ein hundert Euro. Bei mydeals und Kuma gucken gibt es zwischen vierzig und ein hundert Euro die Dinger. Je nachdem was man möchte, gibt es jede Menge. Genau. Sollen wir noch dann auf die Protokolle eingehen?"
+        },
+        {
+            "end": 367470,
+            "speaker": "B",
+            "start": 298030,
+            "text": "Genau, denn die Frage am Ende des Tages ist, was kann man denn alles so machen, um in Smart Home einzusteigen? Was sind so die tief hängenden Früchte, die vielleicht schon bestehen? Viele Leute scheint das Thema Licht zu faszinieren. Ich möchte gerne Licht steuern, wenn ich nach Hause komme, soll es vielleicht automatisch angehen oder ich betrete den Flur. Wie kann man das Ganze machen? Was habt ihr technisch zur Wahl? Also welche Komponenten braucht ihr? Also zum einen braucht ihr smarte Glühbirnen und zum anderen bräuchte vielleicht auch einen Bewegungsmelder, wenn ihr das möchtet. Die können alle mit dem gleichen Protokoll funken, also ein sehr verbreitetes Protokoll ist da zum Beispiel Zigbee. Das findet man auch in vielen Fertiglösungen, sagen wir jetzt mal, also Philips Hue oder IKEA tretfree, die Smart Home Sparte von Ikea, die verwenden alle im Hintergrund Zigbee als Protokoll und Zigbee ist erstmal im Grunde offen. Das heißt, wenn ihr zwei Zigbee Geräte habt, könnt ihr sie in dasselbe Netz integrieren und dementsprechend auch, sagen wir mal, vorsichtig miteinander kombinieren."
+        },
+        {
+            "end": 385590,
+            "speaker": "C",
+            "start": 367870,
+            "text": "Da muss man nur ein bisschen vorsichtig sein, weil wenn man sich jetzt kauft mit den HÜ, Hub und tretfr, dann werden die nicht unbedingt miteinander sprechen, weil die Hubs das vielleicht nicht können. Aber dafür gibt es ja dann Home Assistant. Man holt sich dann einen vernünftigen Zigbee Stick sowie den ganz hervorragend auszusprechenden SLZB."
+        },
+        {
+            "end": 411350,
+            "speaker": "C",
+            "start": 387590,
+            "text": "Wir packen einfach links rein, dann wisst ihr Bescheid. Das ist ein schöner Zigbee Stick. Das Ding hat ein Webinterface, kann man super administrieren, dann muss man nur Copy Paste machen. Die haben extra so ein schönes Fältchen, was man einfach in Humuss einfügen kann. Und dann hat man einen sehr performanten Zigbee Stick, der einen dann diverse Hersteller hinzufügen lässt. Bei mir zu Hause sind es halt ein paar HÜS und ein paar Aqara Dinger. Bei Thomas ist glaube ich auch HÜS und was hast du noch?"
+        },
+        {
+            "end": 413430,
+            "speaker": "B",
+            "start": 411670,
+            "text": "Größtenteils HÜS La Cara."
+        },
+        {
+            "end": 434070,
+            "speaker": "C",
+            "start": 415030,
+            "text": "Genau, das ist ein reiner Zigbee Stick von dem Anbieter slimlight heißen die glaube ich. Gibt es noch andere Sticks, die können Zigbee und Meta, das ist dann der SLZB MR, falls man noch mal Meta haben möchte. Meta ist gerade so im Kommen, die Geräte sind ein bisschen teurer, muss man vielleicht noch nicht machen, kann man ein paar Jahre noch warten, aber kann man auch jetzt machen. Völlig fein."
+        },
+        {
+            "end": 463940,
+            "speaker": "B",
+            "start": 434260,
+            "text": "Einfach mal schauen, was ihr kriegt, weil der Aufpreis ist vielleicht gar nicht so hoch, es sei denn, ihr findet irgendwo ein gebrauchtes Gerät. Schöne an den SM Lights, von denen André gerade erzählt hat, ist, die sind USB und Ethernet fähig. Das heißt, ihr müsst nicht unbedingt den Stick dahin packen, wo gerade euer Smart Home Hub steht, sondern ihr könnt auch sagen, ich kann den irgendwo zentral ins Haus stellen, versorgt den mit Strom über poe zum Beispiel und integriert ihn dann in mein Home Assistant übers Netzwerk."
+        },
+        {
+            "end": 523619,
+            "speaker": "C",
+            "start": 464210,
+            "text": "Welche Entscheidung man noch treffen muss bei Zigbee ist, soll man zigbee to MQTT oder ZAH nehmen? Man kann es kurz erklären, ZAH ist integriert in Home Assistant, unterstützt weniger Geräte, Out of the Box Geräte, die hinzugefügt werden müssen, brauchen so eine Quirks Datei. Einfach nicht standardisiertes Verhalten wird dort beschrieben, leider sehr sehr häufig bei Zigbee. Deswegen wird auch ein neuer Standard entwickelt, der sogenannte Meta Standard. Vorteil bei ZH, ihr braucht kein MQTT dazwischen. Kleines Protokoll für iot, wo einfach nur drinsteht ein Sensorwert und der, also Sensor gleich Wert, also Temperatur gleich sieben und zwanzig also ganz, ganz wenig Traffic. Ich persönlich nutze Zigbee MQTT, da braucht man dann den MQTT Broker, das ist einfach ein Addon, das sind zwei Klicks und dann ist das installiert. Man muss auch nicht großartig viel konfigurieren, außer einmal Username und Passwort und das war's dann. So, dann schicken die Zigbee Geräte ihre Daten an den Zigbee Controller, an den Stick, der wiederum schickt das dann per MQTT an irgendwie an Home Assistant und dort sind dann die Entitäten aufgelistet und das war's."
+        },
+        {
+            "end": 548500,
+            "speaker": "B",
+            "start": 523859,
+            "text": "So habt ihr dann effektiv so das erste, was ihr steuern könnt bei euch im Smart Home in Home Assistant. Und das Schöne ist, Home Assistant sucht auch, also sucht einfach mal im Netz. Vielleicht gibt es ja noch andere Dienste wie euer, weiß ich nicht, wifi Drucker zum Beispiel, der wird dann auch gefunden und dann seht ihr halt irgendwie gerade den Druckstatus. Ob das sinnvoll ist, vielleicht eine andere Frage, aber es findet halt aktiv alle."
+        },
+        {
+            "end": 566620,
+            "speaker": "C",
+            "start": 548500,
+            "text": "Geräte, wo ich denke, was schnell passieren wird, ist halt Lautsprecher. Viele Lautsprecher, Google Home, Amazon Alexa etc. Die listen sich sofort. Schaut einfach mal nach. Viele tvs, auch mit Android TV, einfach mal ausprobieren. Und wenn ihr gar kein Hardware kaufen wollt, würde ich genau das machen. Außer noch dazu die Companion App einmal benutzen."
+        },
+        {
+            "end": 598280,
+            "speaker": "B",
+            "start": 566780,
+            "text": "Ganz wichtig. Also wichtig, weil die Companion App ist quasi eure Schnittstelle in Smart Home. Ihr packt es auf euer Handy drauf. Das hat nicht nur den Vorteil, dass ihr dasselbe Interface habt wie im Browser auch, es hat den ganz großen Vorteil, das Handy übermittelt auch ein paar Sensordaten, wie zum Beispiel, wo bin ich gerade oder konkret bin ich zu Hause? Da kriegt ihr so ein bisschen das Problem schon mal gelöst von Präsenzerkennung. Wer ist gerade da und was möchte ich damit machen mit dieser Information. Denn da habt ihr bei Home Assistant einfach die freie Wahl."
+        },
+        {
+            "end": 607300,
+            "speaker": "C",
+            "start": 598600,
+            "text": "Da gibt es auch jede Menge andere Sensoren, die muss man einzeln freischalten. Ein praktischer finde ich, wann ist der nächste Alarm? Da kann man sich den entsprechend auch seine Automation basteln."
+        },
+        {
+            "end": 638250,
+            "speaker": "B",
+            "start": 607300,
+            "text": "Wir hoffen, dass dieser sehr kurze Einstieg euch schon geholfen hat oder motiviert hat, einfach mal was damit zu tun, einfach mal zu starten, was auch immer ihr an Hardware habt. Einfach mal reinstöpseln, installieren und mal gucken, was so gefunden wird. Erfahrung sammeln, das fixt meistens schon an. Und Weihnachtszeit ist ja Bastelzeit. Wir hoffen, ihr habt viel Spaß damit. Und wenn ihr noch mehr zum Thema Smart Home, Self Hosting und Technik hören wollt, schaut doch gerne einfach mal auf Podcast, Smarthütte oder in den Podcatcher eurer Wahl."
+        },
+        {
+            "end": 644810,
+            "speaker": "C",
+            "start": 638330,
+            "text": "Genau, wir haben da Themen schon bearbeitet wie Paperless, NGX und auch dreieinhalb Stunden über E Mail gerentet, wie man E."
+        },
+        {
+            "end": 649890,
+            "speaker": "B",
+            "start": 644810,
+            "text": "Mail self hostet oder wie man E Mail abused und daraus einen Instant Messenger namens deltachat macht."
+        },
+        {
+            "end": 653450,
+            "speaker": "D",
+            "start": 649890,
+            "text": "Genau, also schaut gerne mal rein. Wir freuen uns dann frohe Weihnachten."
+        },
+        {
+            "end": 693090,
+            "speaker": "A",
+            "start": 653530,
+            "text": "Frohe Weihnachten hier ist wieder Andi vom Engineering Kiosk. Das war es auch schon wieder mit dem heutigen Adventskalendertürchen, präsentiert von unseren Freunden aus der deutschsprachigen Tech Podcast Szene. Wenn dir gefallen hat, was du gehört hast, hör unbedingt doch mal dort rein, supportet die Leute, die gute Inhalte machen. Die Links zum Episodenthema, aber auch zu dem Podcast findet ihr natürlich wie immer in den Shownotes. Und wenn du Lust hast, dich mit ganz vielen Gleichgesinnten auszutauschen, schau doch mal in unserer Engineering Kiosk Discord Community vorbei. Dort hängen Entwickler und Entwicklerinnen, Architektinnen, Datenmenschen und Technerds aller Art rum. Genau wie du. Genau wie Wolfgang. Genau wie. Ihr wisst schon, was wir meinen. Wir hören uns bei der nächsten Episode wieder. Bis dahin, frohe Weihnachten und eine wunderbare Adventszeit."
+        },
+        {
+            "end": 693690,
+            "speaker": "C",
+            "start": 693090,
+            "text": "Bis bald."
+        }
+    ],
+    "webhook_auth": false
+}
