@@ -6,7 +6,7 @@ audio: https://audio1.redcircle.com/episodes/4a3f1676-46f7-4708-83d7-7c2a456bb68
 chapter:
 - start: 00:00:00
   title: Tech Radar
-deezer: ''
+deezer: https://www.deezer.com/episode/818593662
 description: "Was macht eine richtig gute Tech-Kultur aus? Ein Tech-Radar hilft zumindest\
   \ dabei bzw. ist ein guter Indikator daf\xFCr. . Du erf\xE4hrst, wie moderne Tech-Organisationen\
   \ technologische Entscheidungen strukturieren, dokumentieren und strategisch einsetzen.\
@@ -49,8 +49,8 @@ tags:
 - Tech Kultur
 - Software Engineering
 - Knowledge Sharing
-title: "#227 Mit dem Tech-Radar zur besseren Tech-Kultur"
-transcript_slim: ""
+title: '#227 Mit dem Tech-Radar zur besseren Tech-Kultur'
+transcript_slim: src/data/transcripts/227-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RBT8GfFaIpk
 
 ---
