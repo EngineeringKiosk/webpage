@@ -1,0 +1,45 @@
+---
+advertiser: ''
+amazon_music: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/229-fragestellung-xy-problem/id1603082924?i=1000739940898&uo=4
+audio: https://audio1.redcircle.com/episodes/993a52db-fa5b-4669-8049-e4644e360287/stream.mp3
+chapter:
+- start: 00:00:00
+  title: XY-Problem
+deezer: ''
+description: "XY-Problem: Frag nicht nach deiner L\xF6sung, sondern erkl\xE4r das\
+  \ Problem.  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster\u22C5\
+  innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb weniger\
+  \ Minuten \xFCber ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest\
+  \ du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode:\
+  \ \U0001F44D (top)\_\U0001F44E (geht so)  Anregungen, Gedanken, Themen und W\xFC\
+  nscheDein Feedback z\xE4hlt! Erreiche uns \xFCber einen der folgenden Kan\xE4le\
+  \ \u2026 EngKiosk Community: https://engineeringkiosk.dev/join-discord\_LinkedIn:\
+  \ https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon:\
+  \ https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram:\
+  \ https://www.instagram.com/engineeringkiosk/ Unterst\xFCtze den Engineering KioskWenn\
+  \ du uns etwas Gutes tun m\xF6chtest \u2026 Kaffee schmeckt uns immer\_ Buy us a\
+  \ coffee: https://engineeringkiosk.dev/kaffee LinksXY-Problem: https://de.wikipedia.org/wiki/XY-ProblemHow\
+  \ To Ask Questions The Smart Way: http://www.catb.org/esr/faqs/smart-questions.htmlThe\
+  \ XY Problem: https://xyproblem.info/Eric S. Raymond: https://de.wikipedia.org/wiki/Eric_S._Raymond\
+  \ Sprungmarken(00:00:00) XY-Problem  HostsWolfgang Gassler (https://gassler.dev)\_\
+  Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen\
+  \ anderen Tech-Spezialist\u22C5innen in unserer Engineering Kiosk Community unter\
+  \ https://engineeringkiosk.dev/join-discord"
+headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und\
+  \ W\xFCnsche||unterstutze-den-engineering-kiosk::Unterst\xFCtze den Engineering\
+  \ Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community"
+image: ./229-fragestellung-xy-problem.jpg
+length_second: 596
+pubDate: 2025-12-06 02:00:23+00:00
+speaker:
+- name: Andy Grunwald
+- name: Wolfi Gassler
+spotify: https://open.spotify.com/episode/4nA91Ml3mliOw9tBGCby8l
+tags: []
+title: '#229 Fragestellung XY-Problem'
+transcript_slim: ''
+youtube: https://www.youtube.com/watch?v=9jrGU5Ye8rw
+
+---
+<p>XY-Problem: Frag nicht nach deiner Lösung, sondern erklär das Problem.</p><p><br></p><p>Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz &amp; knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.</p><p><br></p><p>Unsere aktuellen Werbepartner findest du auf <a href="https://engineeringkiosk.dev/partners">https://engineeringkiosk.dev/partners</a></p><p><br></p><p><strong>Das schnelle Feedback zur Episode:</strong></p><p><a href="https://api.openpodcast.dev/feedback/229/upvote" rel="nofollow"><strong>👍 (top)</strong></a><strong> </strong><a href="https://api.openpodcast.dev/feedback/229/downvote" rel="nofollow"><strong>👎 (geht so)</strong></a></p><p><br></p><h3 id="anregungen-gedanken-themen-und-wunsche">Anregungen, Gedanken, Themen und Wünsche</h3><p>Dein Feedback zählt! Erreiche uns über einen der folgenden Kanäle …</p><ul><li>EngKiosk Community: <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </li><li>LinkedIn: <a href="https://www.linkedin.com/company/engineering-kiosk/" rel="nofollow">https://www.linkedin.com/company/engineering-kiosk/</a></li><li>Email: <a href="mailto:stehtisch@engineeringkiosk.dev" rel="nofollow">stehtisch@engineeringkiosk.dev</a></li><li>Mastodon: <a href="https://podcasts.social/@engkiosk" rel="nofollow">https://podcasts.social/@engkiosk</a></li><li>Bluesky: <a href="https://bsky.app/profile/engineeringkiosk.bsky.social" rel="nofollow">https://bsky.app/profile/engineeringkiosk.bsky.social</a></li><li>Instagram: <a href="https://www.instagram.com/engineeringkiosk/" rel="nofollow">https://www.instagram.com/engineeringkiosk/</a></li></ul><p><br></p><h3 id="unterstutze-den-engineering-kiosk">Unterstütze den Engineering Kiosk</h3><p>Wenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer </p><ul><li>Buy us a coffee: <a href="https://engineeringkiosk.dev/kaffee">https://engineeringkiosk.dev/kaffee</a></li></ul><p><br></p><h3 id="links">Links</h3><ul><li>XY-Problem: <a href="https://de.wikipedia.org/wiki/XY-Problem" rel="nofollow">https://de.wikipedia.org/wiki/XY-Problem</a></li><li>How To Ask Questions The Smart Way: <a href="http://www.catb.org/esr/faqs/smart-questions.html" rel="nofollow">http://www.catb.org/esr/faqs/smart-questions.html</a></li><li>The XY Problem: <a href="https://xyproblem.info/" rel="nofollow">https://xyproblem.info/</a></li><li>Eric S. Raymond: <a href="https://de.wikipedia.org/wiki/Eric_S._Raymond" rel="nofollow">https://de.wikipedia.org/wiki/Eric_S._Raymond</a></li></ul><p><br></p><h3 id="sprungmarken">Sprungmarken</h3><p>(00:00:00) XY-Problem</p><p><br></p><h3 id="hosts">Hosts</h3><ul><li>Wolfgang Gassler (<a href="https://gassler.dev" rel="nofollow">https://gassler.dev</a>) </li><li>Andy Grunwald (<a href="https://andygrunwald.com/" rel="nofollow">https://andygrunwald.com/</a>)</li></ul><p><br></p><h3 id="community">Community</h3><p><span>Diskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter </span><a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a><span> </span></p>

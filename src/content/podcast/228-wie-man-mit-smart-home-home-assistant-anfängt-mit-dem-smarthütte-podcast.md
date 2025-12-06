@@ -4,7 +4,7 @@ amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b11
 apple_podcasts: https://podcasts.apple.com/us/podcast/228-wie-man-mit-smart-home-home-assistant-anf%C3%A4ngt-mit/id1603082924?i=1000739776313&uo=4
 audio: https://audio1.redcircle.com/episodes/713bb8e8-0b24-4b0e-9143-3f020ad997eb/stream.mp3
 chapter: []
-deezer: ''
+deezer: https://www.deezer.com/episode/819032172
 description: "Wie man mit Smart Home (Home Assistant) anf\xE4ngt mit Andrej Friesen\
   \ und Thomas Wiebe von SmartH\xFCtte.  Im Engineering-Kiosk-Adventskalender 2025\
   \ sprechen befreundete Podcaster\u22C5innen und wir selbst, Andy und Wolfi, jeden\
@@ -40,19 +40,20 @@ pubDate: 2025-12-05 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Thomas (Smarthütte Podcast)
+- name: "Thomas (Smarth\xFCtte Podcast)"
   transcriptLetter: B
-- name: André (Smarthütte Podcast)
+- name: "Andr\xE9 (Smarth\xFCtte Podcast)"
   transcriptLetter: C
-- name: Vermutlich André oder Thomas, Zuordnung unsicher
+- name: "Vermutlich Andr\xE9 oder Thomas, Zuordnung unsicher"
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0lDzAACqGGjDjCDZkrDF5A
 tags:
 - Interview
 - Open Source
 - Automation
-title: "#228 Wie man mit Smart Home (Home Assistant) anfängt mit dem Smarthütte Podcast"
-transcript_slim: ""
+title: "#228 Wie man mit Smart Home (Home Assistant) anf\xE4ngt mit dem Smarth\xFC\
+  tte Podcast"
+transcript_slim: src/data/transcripts/228-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VnokrUCoSN8
 
 ---
