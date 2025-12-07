@@ -6,7 +6,7 @@ audio: https://audio1.redcircle.com/episodes/993a52db-fa5b-4669-8049-e4644e36028
 chapter:
 - start: 00:00:00
   title: XY-Problem
-deezer: ''
+deezer: https://www.deezer.com/episode/819441922
 description: "XY-Problem: Frag nicht nach deiner L\xF6sung, sondern erkl\xE4r das\
   \ Problem.  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster\u22C5\
   innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb weniger\
