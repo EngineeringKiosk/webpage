@@ -6,7 +6,7 @@ audio: https://audio1.redcircle.com/episodes/49892689-8e61-4975-9a5e-c458e24eac2
 chapter:
 - start: 00:00:00
   title: "Interesse f\xFCr InfoSec"
-deezer: ''
+deezer: https://www.deezer.com/episode/819677662
 description: "Warum zum Teufel interessiert man sich f\xFCr so ein trockenes Thema\
   \ wie InfoSec? mit Stefan Ebeling und Sven Hauptmann vom Zeroday Podcast.  Im Engineering-Kiosk-Adventskalender\
   \ 2025 sprechen befreundete Podcaster\u22C5innen und wir selbst, Andy und Wolfi,\

@@ -3093,6 +3093,18 @@ to = "/podcast/episode/230-warum-zum-teufel-interessiert-man-sich-für-so-ein-tr
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/231"
+to = "/podcast/episode/231-uuids-die-ids-in-verteilten-systemen?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep231"
+to = "/podcast/episode/231-uuids-die-ids-in-verteilten-systemen?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
