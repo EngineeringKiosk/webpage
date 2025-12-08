@@ -33,12 +33,17 @@ image: ./229-fragestellung-xy-problem.jpg
 length_second: 596
 pubDate: 2025-12-06 02:00:23+00:00
 speaker:
-- name: Andy Grunwald
 - name: Wolfi Gassler
+  transcriptLetter: A
+- name: Andy Grunwald
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/4nA91Ml3mliOw9tBGCby8l
-tags: []
-title: '#229 Fragestellung XY-Problem'
-transcript_slim: ''
+tags:
+- Kommunikation
+- Knowledge Sharing
+- Tech Kultur
+title: "#229 Fragestellung XY-Problem"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=9jrGU5Ye8rw
 
 ---

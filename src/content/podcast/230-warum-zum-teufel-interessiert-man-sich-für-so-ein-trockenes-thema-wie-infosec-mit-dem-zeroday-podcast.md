@@ -32,12 +32,20 @@ length_second: 741
 pubDate: 2025-12-07 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
-- name: Wolfi Gassler
+  transcriptLetter: A
+- name: Sven (Zero Day Podcast)
+  transcriptLetter: B
+- name: Stefan (Zero Day Podcast)
+  transcriptLetter: C
+- name: Sven? (Zuordnung unsicher, vermutlich zweite Spur)
+  transcriptLetter: D
 spotify: https://open.spotify.com/episode/0jUBRMgD2LUxgaD67SOI6z
-tags: []
-title: "#230 Warum zum Teufel interessiert man sich f\xFCr so ein trockenes Thema\
-  \ wie InfoSec mit dem Zeroday Podcast"
-transcript_slim: ''
+tags:
+- Sicherheit
+- Tech Kultur
+- Interview
+title: "#230 Warum zum Teufel interessiert man sich für so ein trockenes Thema wie InfoSec mit dem Zeroday Podcast"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=FCC-kgQKDvY
 
 ---
