@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/f3d40f17-7086-4ff3-85db-1523861a07b0/engineering-kiosk-230-warum-zum-teufel-interessiert-man-sich-f%C3%BCr-so-ein-trockenes-thema-wie-infosec-mit-dem-zeroday-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/230-warum-zum-teufel-interessiert-man-sich-f%C3%BCr-so-ein/id1603082924?i=1000740034112&uo=4
 audio: https://audio1.redcircle.com/episodes/49892689-8e61-4975-9a5e-c458e24eac21/stream.mp3
 chapter:

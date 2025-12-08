@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/57557e7e-4e45-4c6d-8f2a-fd10d07b3cdb/engineering-kiosk-231-uuids-die-ids-in-verteilten-systemen
 apple_podcasts: https://podcasts.apple.com/us/podcast/231-uuids-die-ids-in-verteilten-systemen/id1603082924?i=1000740142699&uo=4
 audio: https://audio1.redcircle.com/episodes/4742b472-c746-41aa-92f4-d7b3f5971ad3/stream.mp3
 chapter:
