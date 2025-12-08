@@ -39,11 +39,16 @@ length_second: 1057
 pubDate: 2025-12-08 02:00:23+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/4XdYOgOMfPa8XBthzqKzNB
-tags: []
-title: '#231 UUIDs: Die IDs in verteilten Systemen'
-transcript_slim: ''
+tags:
+- Backend
+- Datenbanken
+- Software Engineering
+title: "#231 UUIDs: Die IDs in verteilten Systemen"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=ohKiIP1SKFQ
 
 ---
