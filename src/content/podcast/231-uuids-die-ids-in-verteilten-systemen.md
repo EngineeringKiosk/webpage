@@ -47,8 +47,8 @@ tags:
 - Backend
 - Datenbanken
 - Software Engineering
-title: "#231 UUIDs: Die IDs in verteilten Systemen"
-transcript_slim: ""
+title: '#231 UUIDs: Die IDs in verteilten Systemen'
+transcript_slim: src/data/transcripts/231-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ohKiIP1SKFQ
 
 ---

@@ -44,8 +44,9 @@ tags:
 - Sicherheit
 - Tech Kultur
 - Interview
-title: "#230 Warum zum Teufel interessiert man sich für so ein trockenes Thema wie InfoSec mit dem Zeroday Podcast"
-transcript_slim: ""
+title: "#230 Warum zum Teufel interessiert man sich f\xFCr so ein trockenes Thema\
+  \ wie InfoSec mit dem Zeroday Podcast"
+transcript_slim: src/data/transcripts/230-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FCC-kgQKDvY
 
 ---

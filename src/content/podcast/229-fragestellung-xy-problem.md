@@ -42,8 +42,8 @@ tags:
 - Kommunikation
 - Knowledge Sharing
 - Tech Kultur
-title: "#229 Fragestellung XY-Problem"
-transcript_slim: ""
+title: '#229 Fragestellung XY-Problem'
+transcript_slim: src/data/transcripts/229-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=9jrGU5Ye8rw
 
 ---
