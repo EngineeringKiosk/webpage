@@ -31,5 +31,16 @@ talks:
     The goal is to inspire you to create your own small conference.'
     bio: 'Both Christoph and Richard operate as independent consultants, delivering specialized Linux services.'
     website: 'https://alpss.at/'
+    slides: '2412-richard_christoph_alpss.pdf'
 eventId: '10uj0lcb989aqi7e88dq7v2jhs'
+participants:
+  registered: 82
+  present:
+    total: 54
+    male: 43
+    female: 11
+  newParticipants: 30
+speakers:
+  female: 0
+  male: 3
 ---
