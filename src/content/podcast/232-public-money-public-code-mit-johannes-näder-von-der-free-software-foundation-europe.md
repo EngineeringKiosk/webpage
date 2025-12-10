@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/7612ff17-d4ac-4dfd-8f87-f05baf030d40/engineering-kiosk-232-public-money-public-code-mit-johannes-n%C3%A4der-von-der-free-software-foundation-europe
 apple_podcasts: https://podcasts.apple.com/us/podcast/232-public-money-public-code-mit-johannes-n%C3%A4der-von/id1603082924?i=1000740330779&uo=4
 audio: https://audio1.redcircle.com/episodes/cab79e66-1f56-4b5f-b40d-9983bb763353/stream.mp3
 chapter:

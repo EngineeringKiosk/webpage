@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/e4767f04-45e7-4c1c-9f39-3edc3716230b/engineering-kiosk-233-trust-battery-mit-andy-lehr-vom-happy-bootstrapping-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/233-trust-battery-mit-andy-lehr-vom-happy-bootstrapping/id1603082924?i=1000740520930&uo=4
 audio: https://audio1.redcircle.com/episodes/fd6863e2-30c4-4c6a-9f72-9b37e3ca036f/stream.mp3
 chapter:
