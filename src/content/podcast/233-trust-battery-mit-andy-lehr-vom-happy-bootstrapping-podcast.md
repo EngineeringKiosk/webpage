@@ -1,0 +1,50 @@
+---
+advertiser: ''
+amazon_music: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/233-trust-battery-mit-andy-lehr-vom-happy-bootstrapping/id1603082924?i=1000740520930&uo=4
+audio: https://audio1.redcircle.com/episodes/fd6863e2-30c4-4c6a-9f72-9b37e3ca036f/stream.mp3
+chapter:
+- start: 00:00:00
+  title: Trust Battery
+deezer: https://www.deezer.com/episode/820797942
+description: "Trust Battery mit Andreas Lehr vom Happy Bootstrapping Podcast  Im Engineering-Kiosk-Adventskalender\
+  \ 2025 sprechen befreundete Podcaster\u22C5innen und wir selbst, Andy und Wolfi,\
+  \ jeden Tag kurz & knackig innerhalb weniger Minuten \xFCber ein interessantes Tech-Thema.\
+  \  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners\
+  \  Das schnelle Feedback zur Episode: \U0001F44D (top)\_ \U0001F44E (geht so)  Anregungen,\
+  \ Gedanken, Themen und W\xFCnscheDein Feedback z\xE4hlt! Erreiche uns \xFCber einen\
+  \ der folgenden Kan\xE4le \u2026 EngKiosk Community: https://engineeringkiosk.dev/join-discord\_\
+  LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon:\
+  \ https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram:\
+  \ https://www.instagram.com/engineeringkiosk/ Unterst\xFCtze den Engineering KioskWenn\
+  \ du uns etwas Gutes tun m\xF6chtest \u2026 Kaffee schmeckt uns immer\_ Buy us a\
+  \ coffee: https://engineeringkiosk.dev/kaffee LinksHappy Bootstrapping - Der Podcast\
+  \ f\xFCr Gr\xFCnder:innen und Bootstrapper: https://happy-bootstrapping.podigee.io/NY\
+  \ Times Artikel zu \"Trust Battery\" bei Shopify: https://www.nytimes.com/2016/04/24/business/tobi-lutke-of-shopify-powering-a-team-with-a-trust-battery.htmlSessionlab\
+  \ Erkl\xE4rung zu Trust Battery: https://www.sessionlab.com/methods/trust-batteryCharity\
+  \ Majors zu \"How To communitcate when trust is low\": https://charity.wtf/2023/08/17/how-to-communicate-when-trust-is-low-without-digging-yourself-into-a-deeper-hole/Andreas\
+  \ Lehr bei LinkedIn: https://www.linkedin.com/in/andreaslehr/Newsletter \"allesnurgecloud\"\
+  : https://allesnurgecloud.com/Podcast \"Happy Bootstrapping\": https://happy-bootstrapping.de/Eigene\
+  \ Firma \"We Manage\": https://we-manage.de/Happy Bootstrapping mit Wolfi \u201C\
+  Mit Open Source und SaaS zur Podcast-Analytics-Plattform (#101)\u201D: https://happy-bootstrapping.podigee.io/101-mit-open-source-und-saas-zur-podcast-analytics-plattform-101\uFEFF\
+  \ Sprungmarken(00:00:00) Trust Battery  HostsWolfgang Gassler (https://gassler.dev)\_\
+  Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen\
+  \ anderen Tech-Spezialist\u22C5innen in unserer Engineering Kiosk Community unter\
+  \ https://engineeringkiosk.dev/join-discord"
+headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und\
+  \ W\xFCnsche||unterstutze-den-engineering-kiosk::Unterst\xFCtze den Engineering\
+  \ Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community"
+image: ./233-trust-battery-mit-andy-lehr-vom-happy-bootstrapping-podcast.jpg
+length_second: 694
+pubDate: 2025-12-10 02:00:29+00:00
+speaker:
+- name: Andy Grunwald
+- name: Wolfi Gassler
+spotify: https://open.spotify.com/episode/7kMVgnQeHGAHq80DHSr20k
+tags: []
+title: '#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast'
+transcript_slim: ''
+youtube: https://www.youtube.com/watch?v=uTnsV0aPYhM
+
+---
+<p><span>Trust Battery mit Andreas Lehr vom Happy Bootstrapping Podcast</span></p><p><br></p><p><span>Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz &amp; knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.</span></p><p><br></p><p><span>Unsere aktuellen Werbepartner findest du auf </span><a href="https://engineeringkiosk.dev/partners">https://engineeringkiosk.dev/partners</a></p><p><br></p><p><strong>Das schnelle Feedback zur Episode:</strong></p><p><a href="https://api.openpodcast.dev/feedback/233/upvote" rel="nofollow"><strong>👍 (top)</strong></a><strong>  </strong><a href="https://api.openpodcast.dev/feedback/233/downvote" rel="nofollow"><strong>👎 (geht so)</strong></a></p><p><br></p><h3 id="anregungen-gedanken-themen-und-wunsche">Anregungen, Gedanken, Themen und Wünsche</h3><p><span>Dein Feedback zählt! Erreiche uns über einen der folgenden Kanäle …</span></p><ul><li><span>EngKiosk Community: </span><a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a><span> </span></li><li><span>LinkedIn: </span><a href="https://www.linkedin.com/company/engineering-kiosk/" rel="nofollow">https://www.linkedin.com/company/engineering-kiosk/</a></li><li><span>Email: </span><a href="mailto:stehtisch@engineeringkiosk.dev" rel="nofollow">stehtisch@engineeringkiosk.dev</a></li><li><span>Mastodon: </span><a href="https://podcasts.social/@engkiosk" rel="nofollow">https://podcasts.social/@engkiosk</a></li><li><span>Bluesky: </span><a href="https://bsky.app/profile/engineeringkiosk.bsky.social" rel="nofollow">https://bsky.app/profile/engineeringkiosk.bsky.social</a></li><li><span>Instagram: </span><a href="https://www.instagram.com/engineeringkiosk/" rel="nofollow">https://www.instagram.com/engineeringkiosk/</a></li></ul><p><br></p><h3 id="unterstutze-den-engineering-kiosk">Unterstütze den Engineering Kiosk</h3><p><span>Wenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer </span></p><ul><li><span>Buy us a coffee: </span><a href="https://engineeringkiosk.dev/kaffee">https://engineeringkiosk.dev/kaffee</a></li></ul><p><br></p><h3 id="links">Links</h3><ul><li><span>Happy Bootstrapping - Der Podcast für Gründer:innen und Bootstrapper: </span><a href="https://happy-bootstrapping.podigee.io/" rel="nofollow">https://happy-bootstrapping.podigee.io/</a></li><li><span>NY Times Artikel zu &#34;Trust Battery&#34; bei Shopify: </span><a href="https://www.nytimes.com/2016/04/24/business/tobi-lutke-of-shopify-powering-a-team-with-a-trust-battery.html" rel="nofollow">https://www.nytimes.com/2016/04/24/business/tobi-lutke-of-shopify-powering-a-team-with-a-trust-battery.html</a></li><li><span>Sessionlab Erklärung zu Trust Battery: </span><a href="https://www.sessionlab.com/methods/trust-battery" rel="nofollow">https://www.sessionlab.com/methods/trust-battery</a></li><li><span>Charity Majors zu &#34;How To communitcate when trust is low&#34;: </span><a href="https://charity.wtf/2023/08/17/how-to-communicate-when-trust-is-low-without-digging-yourself-into-a-deeper-hole/" rel="nofollow">https://charity.wtf/2023/08/17/how-to-communicate-when-trust-is-low-without-digging-yourself-into-a-deeper-hole/</a></li><li><span>Andreas Lehr bei LinkedIn: </span><a href="https://www.linkedin.com/in/andreaslehr/" rel="nofollow">https://www.linkedin.com/in/andreaslehr/</a></li><li><span>Newsletter &#34;allesnurgecloud&#34;: </span><a href="https://allesnurgecloud.com/" rel="nofollow">https://allesnurgecloud.com/</a></li><li><span>Podcast &#34;Happy Bootstrapping&#34;: </span><a href="https://happy-bootstrapping.de/" rel="nofollow">https://happy-bootstrapping.de/</a></li><li><span>Eigene Firma &#34;We Manage&#34;: </span><a href="https://we-manage.de/" rel="nofollow">https://we-manage.de/</a></li><li><span>Happy Bootstrapping mit Wolfi “Mit Open Source und SaaS zur Podcast-Analytics-Plattform (#101)”: </span><a href="https://happy-bootstrapping.podigee.io/101-mit-open-source-und-saas-zur-podcast-analytics-plattform-101" rel="nofollow">https://happy-bootstrapping.podigee.io/101-mit-open-source-und-saas-zur-podcast-analytics-plattform-101</a></li></ul><p><span><span>﻿</span></span></p><h3 id="sprungmarken">Sprungmarken</h3><p><span>(00:00:00) Trust Battery</span></p><p><br></p><h3 id="hosts">Hosts</h3><ul><li><span>Wolfgang Gassler (</span><a href="https://gassler.dev" rel="nofollow">https://gassler.dev</a><span>) </span></li><li><span>Andy Grunwald (</span><a href="https://andygrunwald.com/" rel="nofollow">https://andygrunwald.com/</a><span>)</span></li></ul><p><br></p><h3 id="community">Community</h3><p><span>Diskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter </span><a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a><span> </span></p>
