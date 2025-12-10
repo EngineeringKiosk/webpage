@@ -91,12 +91,18 @@ length_second: 4643
 pubDate: 2025-12-09 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
+- name: Johannes Neder
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/0finagtW9SQr18gZ5e1iGc
-tags: []
-title: "#232 Public Money, Public Code mit Johannes N\xE4der von der Free Software\
-  \ Foundation Europe"
-transcript_slim: ''
+tags:
+- Open Source
+- Tech Kultur
+- Interview
+title: "#232 Public Money, Public Code mit Johannes Näder von der Free Software Foundation Europe"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=aZ8X3yaYeCw
 
 ---
