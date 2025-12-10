@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/6cb55484-768a-425b-a15c-e2534baef825/engineering-kiosk-229-fragestellung-xy-problem
 apple_podcasts: https://podcasts.apple.com/us/podcast/229-fragestellung-xy-problem/id1603082924?i=1000739940898&uo=4
 audio: https://audio1.redcircle.com/episodes/993a52db-fa5b-4669-8049-e4644e360287/stream.mp3
 chapter:
