@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/aad63045-4082-42c5-a982-d22111574058/engineering-kiosk-234-python-in-electron-apps-mit-dominik-jochen-vom-python-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/234-python-in-electron-apps-mit-dominik-jochen-vom/id1603082924?i=1000740772340&uo=4
 audio: https://audio1.redcircle.com/episodes/3ba4b6a4-4e40-4e63-b685-cc24a0e64882/stream.mp3
 chapter:
