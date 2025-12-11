@@ -101,8 +101,9 @@ tags:
 - Open Source
 - Tech Kultur
 - Interview
-title: "#232 Public Money, Public Code mit Johannes Näder von der Free Software Foundation Europe"
-transcript_slim: ""
+title: "#232 Public Money, Public Code mit Johannes N\xE4der von der Free Software\
+  \ Foundation Europe"
+transcript_slim: src/data/transcripts/232-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=aZ8X3yaYeCw
 
 ---
