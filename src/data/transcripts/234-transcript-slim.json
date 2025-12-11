@@ -1,0 +1,620 @@
+{
+    "acoustic_model": "assemblyai_default",
+    "audio_duration": 556,
+    "audio_url": "https://cloud.inlupus.at/s/HGFAkBCcM8wK9fB/download",
+    "auto_chapters": false,
+    "auto_highlights": false,
+    "auto_highlights_result": {},
+    "confidence": 0.9517901,
+    "content_safety": false,
+    "content_safety_labels": {
+        "status": "unavailable"
+    },
+    "custom_topics": false,
+    "disfluencies": false,
+    "dual_channel": false,
+    "entity_detection": true,
+    "filter_profanity": false,
+    "format_text": false,
+    "iab_categories": true,
+    "iab_categories_result": {},
+    "id": "12a86f23-a5d4-4f51-8cb4-5149990645db",
+    "language_code": "de",
+    "language_detection": false,
+    "language_model": "assemblyai_default",
+    "punctuate": true,
+    "redact_pii": false,
+    "redact_pii_audio": false,
+    "sentiment_analysis": false,
+    "speaker_labels": true,
+    "speakers_expected": 4,
+    "speed_boost": false,
+    "status": "completed",
+    "summarization": false,
+    "throttled": false,
+    "utterances": [
+        {
+            "end": 53240,
+            "speaker": "A",
+            "start": 4400,
+            "text": "Willkommen zum Engineering Kiosk Adventskalender. Es ist mal wieder Zeit für ein neues Türchen. Und weil Weihnachten natürlich auch das Fest der Liebe genannt wird, dachten wir uns dieses Lass uns doch mal wieder etwas Liebe mit der deutschsprachigen Tech Podcast Szene teilen. Diese Episode ist eine solche Episode und sie kommt nicht von den Standard Engineering Kiosk Hosts Wolfgang oder mir, mein Name ist Andy, sondern wir lassen uns den Engineering Kiosk mal für einen Tag aus der Hand nehmen. Heute übernimmt ein befreundeter Podcast das Mikro und bringt ihm ein paar neue Perspektiven, ein anderes Thema und vielleicht den ein oder anderen Gedanken, der über unsere eigene Bubble hinausgeht. Wir denken da draußen gibt es großartige Tech Podcasts, die unbedingt mehr Aufmerksamkeit verdienen und wir denken Wissen, Inspiration und gute Geschichten sollte man am besten teilen. Also zurücklehnen, neugierig sein heute mit Dominik und Jochen vom Python Podcast. Los geht's. Viel Spaß."
+        },
+        {
+            "end": 61970,
+            "speaker": "B",
+            "start": 54690,
+            "text": "Herr Jochen, ich habe gehört, man kann in Python Electron extra benutzen, damit man Desktop Native Anwendungen hat auf unterschiedlichen Systemen."
+        },
+        {
+            "end": 62570,
+            "speaker": "C",
+            "start": 61970,
+            "text": "Ah ja."
+        },
+        {
+            "end": 63890,
+            "speaker": "D",
+            "start": 62570,
+            "text": "Von wem hast du das denn gehört?"
+        },
+        {
+            "end": 83370,
+            "speaker": "C",
+            "start": 64530,
+            "text": "Ja, tatsächlich oder im Allgemeinen ist halt immer so oft ein Problem, wenn man jetzt Python Programme schreibt und die halt irgendwo irgendwie Leuten geben will, wo die dann laufen und Dinge tun, dann will man denen ja nicht erklären, wie man irgendwie einen Python Interpreter installiert und ein Virtual Environment einrichtet und dann die ganzen und die Banane an dem Gorilla dran."
+        },
+        {
+            "end": 88070,
+            "speaker": "D",
+            "start": 83370,
+            "text": "Aus dem Dschungel zieht und so Hölzchen aufs Stöckchen kommt und dann die Wand jax shaven muss. Das wäre alles irgendwie nicht so gut."
+        },
+        {
+            "end": 91310,
+            "speaker": "B",
+            "start": 88070,
+            "text": "Das heißt, wir wollen eine Anwendung direkt haben, die man benutzen kann, direkt irgendwie."
+        },
+        {
+            "end": 95830,
+            "speaker": "C",
+            "start": 91310,
+            "text": "Ein Binary geben oder so. Und normalerweise geht das ja mit Python nicht so einfach, oder es gibt da."
+        },
+        {
+            "end": 100630,
+            "speaker": "B",
+            "start": 95830,
+            "text": "Auch diverse, weil Python keine komplizierte Sprache ist, wo man einfach so ein Paket erzeugt und das weitergibt."
+        },
+        {
+            "end": 105950,
+            "speaker": "D",
+            "start": 100630,
+            "text": "Ja, weil keine Binaries normalerweise rausfallen hinten irgendwo. Ein anderer Ansatz, den ich jetzt letztens."
+        },
+        {
+            "end": 110430,
+            "speaker": "C",
+            "start": 105950,
+            "text": "Irgendwie näher mir angucken durfte, ist halt einfach eine Electron App draus zu bauen."
+        },
+        {
+            "end": 111390,
+            "speaker": "D",
+            "start": 110430,
+            "text": "Weil das geht relativ einfach."
+        },
+        {
+            "end": 113310,
+            "speaker": "B",
+            "start": 111470,
+            "text": "Ah, Electron ist aber gar nicht Python, oder?"
+        },
+        {
+            "end": 115710,
+            "speaker": "D",
+            "start": 113310,
+            "text": "Ne, genau, Electron ist, das ist JavaScript."
+        },
+        {
+            "end": 120460,
+            "speaker": "C",
+            "start": 116860,
+            "text": "Oh oh, der Milch und Gewässer."
+        },
+        {
+            "end": 126700,
+            "speaker": "D",
+            "start": 122060,
+            "text": "Es gibt auch noch andere. Es gibt auch sowas, ein Rust geschriebenes Ding, das nennt sich Tauri. Da kriegt man die Binaries auch ein."
+        },
+        {
+            "end": 134620,
+            "speaker": "C",
+            "start": 126700,
+            "text": "Bisschen kleiner, weil man den im System eingebauten Browser benutzt und nicht halt irgendwie Electron Apps. Ein bisschen verschwenderisch, weil Elektron ist ein Browser."
+        },
+        {
+            "end": 136700,
+            "speaker": "D",
+            "start": 134700,
+            "text": "Ja, ne, Electron ist nicht ein Browser."
+        },
+        {
+            "end": 142510,
+            "speaker": "C",
+            "start": 136700,
+            "text": "Aber in einem Electron Binder ist ein Chromium drin, oder? Genau, ist ein Chromium gebundelt sozusagen, was."
+        },
+        {
+            "end": 145710,
+            "speaker": "D",
+            "start": 142510,
+            "text": "Natürlich irgendwie ein Vorteil ist, weil man ist halt nicht darauf angewiesen, dass das."
+        },
+        {
+            "end": 149270,
+            "speaker": "C",
+            "start": 145710,
+            "text": "Halt auf jeder Browserversion funktioniert, sondern halt man die, auf der es funktionieren soll."
+        },
+        {
+            "end": 151750,
+            "speaker": "D",
+            "start": 149270,
+            "text": "Schippt man halt mit, aber hat halt."
+        },
+        {
+            "end": 157230,
+            "speaker": "C",
+            "start": 151750,
+            "text": "Auch so einen Nachteil, dass das halt irgendwie für ein hundert fünfzig bis zwei hundert Megabyte irgendwie allein dafür sorgt, weil."
+        },
+        {
+            "end": 158790,
+            "speaker": "D",
+            "start": 157230,
+            "text": "Das Browser Binary da mit drin ist."
+        },
+        {
+            "end": 167310,
+            "speaker": "B",
+            "start": 158790,
+            "text": "Okay, also das heißt, man shippt dann ein Binary, was zwei hundert MB groß ist und dann kann der Nutzer, die Nutzerin, der Kunde, wie auch immer, einfach doppelklicken."
+        },
+        {
+            "end": 168710,
+            "speaker": "C",
+            "start": 167310,
+            "text": "Ja, und dann läuft das einfach, öffnet."
+        },
+        {
+            "end": 170650,
+            "speaker": "B",
+            "start": 168710,
+            "text": "Sich ein Binary Browser oder ein Anwendungsfenster."
+        },
+        {
+            "end": 175330,
+            "speaker": "D",
+            "start": 170650,
+            "text": "Das eigentlich muss nicht unbedingt aussehen wie ein Browser. Also ganz viele Anwendungen, die Leute so."
+        },
+        {
+            "end": 178130,
+            "speaker": "C",
+            "start": 175330,
+            "text": "Benutzen, sind tatsächlich Electron, aber dann hast."
+        },
+        {
+            "end": 185210,
+            "speaker": "B",
+            "start": 178130,
+            "text": "Du halt Assets, Static Files, die du halt mit tippen kannst, mit reinlegst und dann wird halt dann der Code der Anwendung ausgeführt, was auch ein Django dann sein kann."
+        },
+        {
+            "end": 190250,
+            "speaker": "C",
+            "start": 185289,
+            "text": "Genau, zum Beispiel Django halt bekanntes Webframework für Python und ja, man kann mit."
+        },
+        {
+            "end": 191450,
+            "speaker": "B",
+            "start": 190250,
+            "text": "Fast API, kriegt ihr das bestimmt auch."
+        },
+        {
+            "end": 192810,
+            "speaker": "C",
+            "start": 191450,
+            "text": "Hin, aber das geht auch mit Fast."
+        },
+        {
+            "end": 195290,
+            "speaker": "D",
+            "start": 192810,
+            "text": "API oder mit Flask oder sonst irgendwie, völlig egal."
+        },
+        {
+            "end": 203470,
+            "speaker": "C",
+            "start": 195450,
+            "text": "Genau, und deren Datenbank will man natürlich dann vielleicht auch haben und da kann man auch einfach ein sqlite mit schippen und das klappt ganz hervorragend."
+        },
+        {
+            "end": 204670,
+            "speaker": "D",
+            "start": 203470,
+            "text": "Und wenn man das halt gewohnt ist."
+        },
+        {
+            "end": 209670,
+            "speaker": "C",
+            "start": 204670,
+            "text": "Wenn man zum Beispiel Webseiten mit sowas baut wie Django oder Flask oder Fast API oder so, oder wie ich halt."
+        },
+        {
+            "end": 217190,
+            "speaker": "D",
+            "start": 209670,
+            "text": "Mit Django oft, dann dachte ich so, gut, ich habe das nie so wirklich als Möglichkeit in Betracht gezogen, weil ich dachte, puh, das ist bestimmt kompliziert, so."
+        },
+        {
+            "end": 220230,
+            "speaker": "C",
+            "start": 217190,
+            "text": "Python da rein, irgendwie friemeln und dann."
+        },
+        {
+            "end": 222150,
+            "speaker": "D",
+            "start": 220230,
+            "text": "Die ganzen Abhängigkeiten, das Virtual muss man."
+        },
+        {
+            "end": 223910,
+            "speaker": "C",
+            "start": 222150,
+            "text": "Ja da auch irgendwie mit reinbauen, geht das überhaupt?"
+        },
+        {
+            "end": 232080,
+            "speaker": "D",
+            "start": 223910,
+            "text": "Und das ist bestimmt viel Arbeit. Und wie ich jetzt festgestellt habe, ist es deutlich weniger Arbeit, als ich dachte. Es ist ein, also du packst sie."
+        },
+        {
+            "end": 240240,
+            "speaker": "B",
+            "start": 232080,
+            "text": "Virtual auch einfach mit in den Ordner rein, den du mitschippst und dann hast du ein portable Verzeichnis, was eine Exe hat, auf die man dann linken kann oder eine Binary und die dann benutzt wird."
+        },
+        {
+            "end": 242160,
+            "speaker": "D",
+            "start": 240240,
+            "text": "Man braucht dafür so einen relocatable Python."
+        },
+        {
+            "end": 243520,
+            "speaker": "C",
+            "start": 242160,
+            "text": "Interpreter, den man dann je nach Plattform."
+        },
+        {
+            "end": 247640,
+            "speaker": "D",
+            "start": 243520,
+            "text": "Da reinlegen muss, weil das sind natürlich unterschiedliche Binaries, je nachdem was das für eine Plattform ist."
+        },
+        {
+            "end": 248640,
+            "speaker": "B",
+            "start": 247640,
+            "text": "Und geht das auch mit UV?"
+        },
+        {
+            "end": 254160,
+            "speaker": "D",
+            "start": 248720,
+            "text": "Ja, also UV macht es unter Umständen einfacher. Also okay, wollen wir die wirklich ganz fiesen kleinen Details?"
+        },
+        {
+            "end": 258120,
+            "speaker": "C",
+            "start": 254480,
+            "text": "Ich finde das total spannend. Okay, ja, UV ist auch noch nicht."
+        },
+        {
+            "end": 267529,
+            "speaker": "D",
+            "start": 258120,
+            "text": "So alt, das Projekt, aber irgendwie auch ein Rust geschrieben, heute alles in Rust geschrieben, ist quasi inzwischen der Standard Paketmanager und auch Standard Tool, um sich Python überhaupt zu installieren für die meisten Leute."
+        },
+        {
+            "end": 271169,
+            "speaker": "B",
+            "start": 267529,
+            "text": "Also könnt ihr Pip schmeißen, Pi schmeißen, alle wie, aber das nur am Rande."
+        },
+        {
+            "end": 284049,
+            "speaker": "D",
+            "start": 271169,
+            "text": "Und das baut halt auch Virtual Envs und macht das sehr schnell und gut und so. Aber das Problem dabei ist so ein bisschen, also ja, das kann man verwenden, Das funktioniert halt auch, wenn man das Virtual Env nicht noch irgendwie anpassen muss, weil wenn man in dem UV Virtual."
+        },
+        {
+            "end": 286230,
+            "speaker": "C",
+            "start": 284049,
+            "text": "Env rumpfuscht, dann kann es sein, dass."
+        },
+        {
+            "end": 286790,
+            "speaker": "D",
+            "start": 286230,
+            "text": "Es nicht mehr geht."
+        },
+        {
+            "end": 288990,
+            "speaker": "B",
+            "start": 286790,
+            "text": "Aber wer fuscht denn mit einem Virtual View?"
+        },
+        {
+            "end": 290830,
+            "speaker": "D",
+            "start": 289070,
+            "text": "Das sind dann so Dinge, die ich dann tun musste."
+        },
+        {
+            "end": 293350,
+            "speaker": "B",
+            "start": 290910,
+            "text": "Aber warum wollte irgendwas Monkey patchen, weil irgendwas nicht funktioniert."
+        },
+        {
+            "end": 309790,
+            "speaker": "D",
+            "start": 293350,
+            "text": "Also wenn du zum Beispiel so einen kompletten Data Science Stack mitschippen willst, das ist natürlich auch so was ich meine, so einen kompletten Data Science Stack, wenn du den halt auf dem Windows installieren willst, das ist kein Spaß so richtig. Das ist so eher, das geht schon, Das geht schon. Okay, du hast Erfahrung damit. Ich hab immer, wenn ich es versucht."
+        },
+        {
+            "end": 311110,
+            "speaker": "C",
+            "start": 309790,
+            "text": "Habe, ich dann irgendwann in der Haft aufgegeben."
+        },
+        {
+            "end": 314110,
+            "speaker": "B",
+            "start": 311110,
+            "text": "Das Hauptproblem bei Data Science Projekten ist meistens, dass sie irgendwelche Requirements."
+        },
+        {
+            "end": 328910,
+            "speaker": "B",
+            "start": 315630,
+            "text": "Die nichts mit dem tatsächlichen Projekt zu tun haben, weil die Subdependencies haben, die ein Outdated sind oder auf bestimmten Python Versionen nicht so funktionieren, wie du erwartest, weil die Wheels davon noch nicht gebaut worden sind, wo man dann die Pakete mit dem Fortran Compiler und der Banane und dem Zoo installieren muss."
+        },
+        {
+            "end": 331150,
+            "speaker": "C",
+            "start": 329070,
+            "text": "Wenn dir irgendwie die Fehlermeldung sagt, ja."
+        },
+        {
+            "end": 336590,
+            "speaker": "D",
+            "start": 331150,
+            "text": "Jetzt, also Entschuldigung, ich brauche jetzt aber wirklich dringend einen Fortran Compiler auf dem Windows, dann. Also ich würde mal sagen, die meisten."
+        },
+        {
+            "end": 339870,
+            "speaker": "C",
+            "start": 336590,
+            "text": "Leute geben dann an dieser Stelle auf, weil das ist halt einfach dann das."
+        },
+        {
+            "end": 341630,
+            "speaker": "D",
+            "start": 340150,
+            "text": "Die meisten sagen, ja gut, das möchte."
+        },
+        {
+            "end": 344870,
+            "speaker": "C",
+            "start": 341630,
+            "text": "Ich in meinem Leben nicht haben, das muss jemand anders machen und dann ist vorbei."
+        },
+        {
+            "end": 352910,
+            "speaker": "D",
+            "start": 344950,
+            "text": "Aber manchmal wäre es ja schon voll cool, so einen kompletten Data Science Deck in einem Windows oder einem Jupyter Notebook unter Windows halt zu haben und lokal."
+        },
+        {
+            "end": 353630,
+            "speaker": "C",
+            "start": 352910,
+            "text": "Laufen lassen zu können."
+        },
+        {
+            "end": 380770,
+            "speaker": "D",
+            "start": 353630,
+            "text": "Das wäre voll cool und das geht auch und das geht auch in der Electron App so, dass du halt das in der Electron App benutzen kannst. Aber das Problem ist, manche von den Bibliotheken, die halt dann gelinkt werden, zum Beispiel von irgendwelchen Data Science Requirements, sind halt auf dem Standard Windows in der falschen, veralteten Version oder einer komischen Version oder gar nicht mit drin. Und da muss man die aus dem Bildsystem irgendwie da in das Virtual Ad mit reinkopieren und dann dafür sorgen, dass die Dinger dagegen gelingt sind und da rumpfuschen. Und wenn man das macht, dann sagt."
+        },
+        {
+            "end": 385970,
+            "speaker": "C",
+            "start": 380770,
+            "text": "Einem so, ey, du hast hier irgendwie ganz komische Sachen gemacht, ne, das starte ich nicht so, das geht nicht."
+        },
+        {
+            "end": 392970,
+            "speaker": "D",
+            "start": 386050,
+            "text": "Also man kann sich ein relativ leicht kaputt machen und deswegen benutze ich kein."
+        },
+        {
+            "end": 394930,
+            "speaker": "C",
+            "start": 392970,
+            "text": "UV in dem Projekt."
+        },
+        {
+            "end": 401170,
+            "speaker": "B",
+            "start": 396850,
+            "text": "Die Link Version kann man ändern, also welche, ob er links benutzt oder direkte Links oder nicht linked oder sowas."
+        },
+        {
+            "end": 405510,
+            "speaker": "D",
+            "start": 401170,
+            "text": "Vielleicht wenn man Spezial Windows Fähigkeiten hat, kann man das auch noch irgendwie in Ordnung bringen."
+        },
+        {
+            "end": 411030,
+            "speaker": "C",
+            "start": 405510,
+            "text": "Das mag sein, aber ich habe dann irgendwie nach einem halben Tag oder einem Tag irgendwie aufgegeben, nicht hingekriegt."
+        },
+        {
+            "end": 425350,
+            "speaker": "B",
+            "start": 411030,
+            "text": "Okay, wie auch immer. Jedenfalls hast du wundervolle Pakete, die kannst du mitschüppen, den ganzen Stack da reingepackt und man kann dann Projekte, die aussehen wie eine native Anwendung, die eigentlich eine Webanwendung sind, lokal auf den Rechnern laufen lassen, die tolle Sachen machen mit so."
+        },
+        {
+            "end": 428870,
+            "speaker": "D",
+            "start": 425350,
+            "text": "Einem kompletten Data Science Stack, wo man halt irgendwie so wirklich wilde Sachen macht."
+        },
+        {
+            "end": 444490,
+            "speaker": "B",
+            "start": 428870,
+            "text": "Und hübschem Frontend, wenn man das will und so weiter. Genau, und das dann lokale Maschine benutzen, weil das Python ja dann lokal läuft auf der Maschine oder sogar natürlich, wenn das freigeschaltet ist und der Netzwerk irgendwie Verkehr frei ist, auch irgendwie Server ansprechen natürlich weitere darauf warten und das schön animieren oder visualisieren."
+        },
+        {
+            "end": 447290,
+            "speaker": "D",
+            "start": 444810,
+            "text": "Genau. Und was auch noch sehr cool ist, ist vielleicht noch zum Schluss, wenn man."
+        },
+        {
+            "end": 453130,
+            "speaker": "C",
+            "start": 447290,
+            "text": "Die Binaries baut, da denkt man sich jetzt, okay, aber wenn ich jetzt Mac Binaries bauen will, dann brauche ich ja irgendwie einen Mac habe ich jetzt gar."
+        },
+        {
+            "end": 464030,
+            "speaker": "D",
+            "start": 453130,
+            "text": "Nicht oder müssen wir den irgendwie mieten oder so und das dann darauf bauen oder ich brauche für Windows halt ein Windows oder so. Nein, braucht man alles nicht. Wenn man zum Beispiel GitHub Runner verwendet mit so GitHub Actions, in denen kann."
+        },
+        {
+            "end": 466630,
+            "speaker": "C",
+            "start": 464030,
+            "text": "Man die Electron App bauen und da."
+        },
+        {
+            "end": 468310,
+            "speaker": "D",
+            "start": 466630,
+            "text": "Gibt es Mac Runner und halt auch."
+        },
+        {
+            "end": 469870,
+            "speaker": "C",
+            "start": 468310,
+            "text": "Windows Runner, einfach so kostenlos."
+        },
+        {
+            "end": 476150,
+            "speaker": "B",
+            "start": 470190,
+            "text": "Cool, dann kann ich meine ganze Anwendung direkt komplett dann auch als Paket zusammenschüren lassen, dann habe ich den Download."
+        },
+        {
+            "end": 478750,
+            "speaker": "C",
+            "start": 476150,
+            "text": "Oder du kannst dir am Schluss die Binaries runterladen und verbreiten."
+        },
+        {
+            "end": 484670,
+            "speaker": "C",
+            "start": 480350,
+            "text": "Musst dafür nicht extra noch Windows oder Mac dir irgendwo besorgen."
+        },
+        {
+            "end": 486630,
+            "speaker": "D",
+            "start": 485310,
+            "text": "Also wie gesagt, der ganze Prozess war."
+        },
+        {
+            "end": 491110,
+            "speaker": "B",
+            "start": 486630,
+            "text": "Deutlich einfacher als Python und Electron ist da so ein winning Team, würde ich sagen, für so ein Anwending."
+        },
+        {
+            "end": 492430,
+            "speaker": "D",
+            "start": 491110,
+            "text": "Ja, also es ist schon groß und."
+        },
+        {
+            "end": 495030,
+            "speaker": "C",
+            "start": 492430,
+            "text": "Cool, komisch und bloated und so, das muss man auch sagen."
+        },
+        {
+            "end": 500150,
+            "speaker": "D",
+            "start": 495910,
+            "text": "Das schon, aber man kann damit, wenn man sonst gedacht hätte, das geht gar nicht."
+        },
+        {
+            "end": 501190,
+            "speaker": "C",
+            "start": 500150,
+            "text": "Damit geht es vielleicht schon."
+        },
+        {
+            "end": 505270,
+            "speaker": "B",
+            "start": 501190,
+            "text": "Ja, genau. Also wenn ihr für eure Großeltern oder im Corporate Umfeld irgendwas machen wollt, dann."
+        },
+        {
+            "end": 510590,
+            "speaker": "C",
+            "start": 505270,
+            "text": "Ist das genau das richtige Corporate. Gut, dann frohe Weihnachten."
+        },
+        {
+            "end": 549720,
+            "speaker": "A",
+            "start": 510590,
+            "text": "Genau, hier ist wieder Andi vom Engineering Kiosk. Das war es auch schon wieder mit dem heutigen Adventskalendertürchen, präsentiert von unseren Freunden aus der deutschsprachigen Tech Podcast Szene. Wenn dir gefallen hat, was du gehört hast, hör unbedingt doch mal dort rein. Supportet die Leute, die gute Inhalte machen. Die Links zum Episodent Thema, aber auch zu dem Podcast findet ihr natürlich wie immer in den Shownotes. Und wenn du Lust hast, dich mit ganz vielen Gleichgesinnten auszutauschen, schau doch mal in unserer Engineering Kiosk Discord Community vorbei. Dort hängen Entwickler und Entwicklerinnen, Architektinnen, Datenmenschen und Technerds aller Art rum, genau wie du, genau wie Wolfgang, genauso wie ich. Ihr wisst schon, was ich. Wir hören uns bei der nächsten Episode wieder. Bis dahin, frohe Weihnachten und eine wunderbare Adventszeit."
+        },
+        {
+            "end": 550360,
+            "speaker": "D",
+            "start": 549720,
+            "text": "Bis bald."
+        }
+    ],
+    "webhook_auth": false
+}

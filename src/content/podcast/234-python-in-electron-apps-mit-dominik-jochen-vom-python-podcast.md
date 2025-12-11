@@ -1,44 +1,33 @@
 ---
-advertiser: ''
-amazon_music: ''
+advertiser: ""
+amazon_music: ""
 apple_podcasts: https://podcasts.apple.com/us/podcast/234-python-in-electron-apps-mit-dominik-jochen-vom/id1603082924?i=1000740772340&uo=4
 audio: https://audio1.redcircle.com/episodes/3ba4b6a4-4e40-4e63-b685-cc24a0e64882/stream.mp3
 chapter:
 - start: 00:00:00
   title: Electron-Apps mit Python
 deezer: https://www.deezer.com/episode/821215522
-description: "Electron-Apps mit Python mit Dominik Geldmacher und Jochen Wersd\xF6\
-  rfer vom Python-Podcast.  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete\
-  \ Podcaster\u22C5innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig\
-  \ innerhalb weniger Minuten \xFCber ein interessantes Tech-Thema.  Unsere aktuellen\
-  \ Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle\
-  \ Feedback zur Episode: \U0001F44D (top)\_ \U0001F44E (geht so)  Anregungen, Gedanken,\
-  \ Themen und W\xFCnscheDein Feedback z\xE4hlt! Erreiche uns \xFCber einen der folgenden\
-  \ Kan\xE4le \u2026 EngKiosk Community: https://engineeringkiosk.dev/join-discord\_\
-  LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon:\
-  \ https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram:\
-  \ https://www.instagram.com/engineeringkiosk/ Unterst\xFCtze den Engineering KioskWenn\
-  \ du uns etwas Gutes tun m\xF6chtest \u2026 Kaffee schmeckt uns immer\_ Buy us a\
-  \ coffee: https://engineeringkiosk.dev/kaffee LinksPython Podcast: https://python-podcast.de/show/Python:\
-  \ https://www.python.org/Electron: https://www.electronjs.org/Django: https://www.djangoproject.com/FastAPI:\
-  \ https://fastapi.tiangolo.com/Flask: https://flask.palletsprojects.com/en/stable/uv\
-  \ Python Package Manager: https://github.com/astral-sh/uv Sprungmarken(00:00:00)\
-  \ Electron-Apps mit Python  HostsWolfgang Gassler (https://gassler.dev)\_Andy Grunwald\
-  \ (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist\u22C5\
-  innen in unserer Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
-headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und\
-  \ W\xFCnsche||unterstutze-den-engineering-kiosk::Unterst\xFCtze den Engineering\
-  \ Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community"
+description: "Electron-Apps mit Python mit Dominik Geldmacher und Jochen Wersdörfer vom Python-Podcast.  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0 👎 (geht so)  Anregungen, Gedanken, Themen und WünscheDein Feedback zählt! Erreiche uns über einen der folgenden Kanäle … EngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram: https://www.instagram.com/engineeringkiosk/ Unterstütze den Engineering KioskWenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer\u00a0 Buy us a coffee: https://engineeringkiosk.dev/kaffee LinksPython Podcast: https://python-podcast.de/show/Python: https://www.python.org/Electron: https://www.electronjs.org/Django: https://www.djangoproject.com/FastAPI: https://fastapi.tiangolo.com/Flask: https://flask.palletsprojects.com/en/stable/uv Python Package Manager: https://github.com/astral-sh/uv Sprungmarken(00:00:00) Electron-Apps mit Python  HostsWolfgang Gassler (https://gassler.dev)\u00a0Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
+headlines: anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und Wünsche||unterstutze-den-engineering-kiosk::Unterstütze den Engineering Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community
 image: ./234-python-in-electron-apps-mit-dominik-jochen-vom-python-podcast.jpg
 length_second: 555
 pubDate: 2025-12-11 02:00:36+00:00
 speaker:
 - name: Andy Grunwald
-- name: Wolfi Gassler
+  transcriptLetter: A
+- name: Dominik Geldmacher
+  transcriptLetter: B
+- name: Jochen Wersdörfer
+  transcriptLetter: C
+- name: Jochen Wersdörfer
+  transcriptLetter: D
 spotify: https://open.spotify.com/episode/2ETiSu7LuQDHB3EtqsGdTZ
-tags: []
-title: '#234 Python in Electron-Apps mit Dominik & Jochen vom Python-Podcast'
-transcript_slim: ''
+tags:
+- Software Engineering
+- Open Source
+- Interview
+title: "#234 Python in Electron-Apps mit Dominik & Jochen vom Python-Podcast"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=ccK-LepqEq4
 
 ---

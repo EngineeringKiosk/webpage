@@ -39,11 +39,18 @@ length_second: 694
 pubDate: 2025-12-10 02:00:29+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
+- name: Andreas Lehr (Happy Bootstrapping)
+  transcriptLetter: B
 - name: Wolfi Gassler
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/7kMVgnQeHGAHq80DHSr20k
-tags: []
-title: '#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast'
-transcript_slim: ''
+tags:
+- Tech Kultur
+- Kommunikation
+- Interview
+title: "#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=uTnsV0aPYhM
 
 ---
