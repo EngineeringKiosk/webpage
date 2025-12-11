@@ -42,7 +42,7 @@ speaker:
   transcriptLetter: A
 - name: Andreas Lehr (Happy Bootstrapping)
   transcriptLetter: B
-- name: Wolfi Gassler
+- name: Andy Grunwald
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/7kMVgnQeHGAHq80DHSr20k
 tags:
