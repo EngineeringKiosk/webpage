@@ -3141,6 +3141,18 @@ to = "/podcast/episode/234-python-in-electron-apps-mit-dominik-jochen-vom-python
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/235"
+to = "/podcast/episode/235-zwei-pizzen-ein-team-und-der-volle-geschirrspüler-im-kopf?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep235"
+to = "/podcast/episode/235-zwei-pizzen-ein-team-und-der-volle-geschirrspüler-im-kopf?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 

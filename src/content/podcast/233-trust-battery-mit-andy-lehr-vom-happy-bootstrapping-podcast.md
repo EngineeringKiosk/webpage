@@ -49,8 +49,8 @@ tags:
 - Tech Kultur
 - Kommunikation
 - Interview
-title: "#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast"
-transcript_slim: ""
+title: '#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast'
+transcript_slim: src/data/transcripts/233-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uTnsV0aPYhM
 
 ---
