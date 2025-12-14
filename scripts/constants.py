@@ -48,5 +48,4 @@ PATH_PODCAST_INFO_JSON_FILE = 'src/data/podcast-info.json'
 
 # Podcast publishing platforms
 PODCAST_APPLE_URL = "https://itunes.apple.com/lookup?id=1603082924&media=podcast&entity=podcastEpisode&limit=100"
-SPOTIFY_SHOW_ID = "0tJRC0UsObPCWLmmzmOkIs"
 DEEZER_PODCAST_ID = 3330122

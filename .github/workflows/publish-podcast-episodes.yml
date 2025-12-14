@@ -23,9 +23,6 @@ jobs:
 
       - name: Run make update-episode-content
         run: make update-episode-content
-        env:
-          SPOTIFY_APP_CLIENT_ID: ${{ secrets.SPOTIFY_APP_CLIENT_ID }}
-          SPOTIFY_APP_CLIENT_SECRET: ${{ secrets.SPOTIFY_APP_CLIENT_SECRET }}
 
       - name: Run make update-episode-redirects
         run: make update-episode-redirects
