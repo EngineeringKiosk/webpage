@@ -50,12 +50,19 @@ image: ./237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer.jpg
 length_second: 1638
 pubDate: 2025-12-14 02:00:19+00:00
 speaker:
-- name: Andy Grunwald
 - name: Wolfi Gassler
+  transcriptLetter: A
+- name: Andy Grunwald
+  transcriptLetter: B
+- name: Boris Hinzer
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/1S96AthIQsrvV4pHkVk9cz
-tags: []
-title: '#237 Open-Source-Arbeit als Ehrenamt mit Boris Hinzer'
-transcript_slim: ''
+tags:
+- Open Source
+- Tech Kultur
+- Interview
+title: "#237 Open-Source-Arbeit als Ehrenamt mit Boris Hinzer"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=-3OnmIFgumw
 
 ---

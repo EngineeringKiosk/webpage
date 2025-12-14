@@ -40,11 +40,16 @@ length_second: 823
 pubDate: 2025-12-12 02:00:27+00:00
 speaker:
 - name: Andy Grunwald
+  transcriptLetter: A
 - name: Wolfi Gassler
+  transcriptLetter: B
 spotify: https://open.spotify.com/episode/65xtCGE50cKZ6QymfHGhl8
-tags: []
-title: "#235 Zwei Pizzen, ein Team und der volle Geschirrsp\xFCler im Kopf"
-transcript_slim: ''
+tags:
+- Tech Kultur
+- Produktivität
+- Projektmanagement
+title: "#235 Zwei Pizzen, ein Team und der volle Geschirrspüler im Kopf"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=sp8RxZubenw
 
 ---

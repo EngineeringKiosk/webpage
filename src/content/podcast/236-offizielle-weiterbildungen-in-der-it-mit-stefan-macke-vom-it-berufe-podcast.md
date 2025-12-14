@@ -36,11 +36,18 @@ length_second: 525
 pubDate: 2025-12-13 02:00:07+00:00
 speaker:
 - name: Andy Grunwald
-- name: Wolfi Gassler
+  transcriptLetter: A
+- name: Stefan Macke
+  transcriptLetter: B
+- name: Stefan Macke
+  transcriptLetter: C
 spotify: https://open.spotify.com/episode/3t8lHOPG3xkKSsgg2pq0oq
-tags: []
-title: '#236 Offizielle Weiterbildungen in der IT mit Stefan Macke vom IT-Berufe-Podcast'
-transcript_slim: ''
+tags:
+- Karriere
+- Knowledge Sharing
+- Interview
+title: "#236 Offizielle Weiterbildungen in der IT mit Stefan Macke vom IT-Berufe-Podcast"
+transcript_slim: ""
 youtube: https://www.youtube.com/watch?v=Kbg-hOIg8Ug
 
 ---
