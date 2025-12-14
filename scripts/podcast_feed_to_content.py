@@ -11,7 +11,6 @@ import toml
 import os
 from os.path import exists, isfile, join
 import logging
-import sys
 import pathlib
 
 from episode_finder import EpisodeFinder
@@ -30,14 +29,11 @@ from constants import (
     REDIRECT_PREFIX,
     DEFAULT_SPEAKER,
     PODCAST_APPLE_URL,
-    SPOTIFY_SHOW_ID,
     DEEZER_PODCAST_ID
 )
 
 # External libraries
 import frontmatter
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
 from PIL import Image
 import deezer
 
@@ -175,7 +171,7 @@ def remove_rel_nofollow_from_internal_links(html_content):
     return new_html_content
 
 
-def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=False, spotify_client=None):
+def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=False):
     """
     Syncs the Podcast Episodes from the RSS feed down to disk
     and prepares the content to match the structure of the used
@@ -209,7 +205,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
 
     # Check if we should run the API calls to external podcast platforms
     apple_podcast_content = {}
-    spotify_episodes = []
     deezer_episodes = []
     if no_api_calls:
         logging.info("Requesting content from Podcast sites is disabled via `--no-api-calls` flag!")
@@ -217,7 +212,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
     else:
         logging.info("Requesting content from Podcast sites ...")
         apple_podcast_content = get_json_content_from_url(PODCAST_APPLE_URL)
-        spotify_episodes = spotify_client.show_episodes(SPOTIFY_SHOW_ID, limit=50, offset=0, market="DE")
 
         # Pagination and auth not respected.
         # Right now it works, because a) we don't make that much requests and
@@ -331,15 +325,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
         filename = slugify(title, True)
         filename = f'{filename}.md'
 
-        spotify_episode = get_episode_from_spotify(spotify_episodes, title)
-        length_second = 0
-        spotify_link = ""
-        if spotify_episode is not None:
-            length_second = spotify_episode["duration_ms"] / 1000
-            length_second = int(length_second)
-
-            spotify_link = spotify_episode["external_urls"]["spotify"]
-
         episode_number = episode_finder.get_episode_number_from_filename(filename, leading_zero=True)
         data = {
             'advertiser': '',
@@ -351,10 +336,9 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
             'description': description_short,
             'headlines': headline_info,
             'image': image_filename,
-            'length_second': length_second,
+            'length_second': 0,
             'pubDate': date_parsed,
             'speaker': DEFAULT_SPEAKER,
-            'spotify': spotify_link,
             'tags': [],
             'title': title,
             'transcript_slim': get_podcast_episode_transcript_slim_path_by_episode_number(episode_number),
@@ -538,43 +522,6 @@ def get_episode_link_from_apple(content, title: str) -> str:
     return u
 
 
-def create_spotify_client(app_id: str, app_secret: str):
-    """
-    Creates a spotify api client based on the application
-    secrets app_id and app_secret.
-
-    Docs: https://github.com/plamere/spotipy
-    Docs: https://developer.spotify.com/documentation/web-api/reference/#/
-    """
-    spotify_client = spotipy.Spotify(
-        auth_manager=SpotifyClientCredentials(
-            client_id=app_id,
-            client_secret=app_secret
-        )
-    )
-    return spotify_client
-
-
-def get_episode_from_spotify(episodes, title: str) -> dict:
-    """
-    Parses the Spotify Episode Single View link (matching with title) from episodes list.
-    episodes is a JSON representation from the Spotify API / Engineering Kiosk Show.
-    title is the full title of a single episode.
-
-    If no title matches, it will return an empty string.
-    """
-    e = None
-
-    if episodes is None or "items" not in episodes:
-        return e
-
-    for episode in episodes["items"]:
-        if episode["name"] == title:
-            e = episode
-
-    return e
-
-
 def get_episode_link_from_deezer(episodes, title: str) -> str:
     """
     Parses the Deezer Episode Single View link (matching with title) from episodes list.
@@ -611,25 +558,11 @@ if __name__ == "__main__":
 
     match args.Mode:
         case "sync":
-            # Bootstrapping API clients
-            spotify_client = None
-            if not args.no_api_calls:
-                # Spotify
-                SPOTIFY_APP_CLIENT_ID = os.getenv('SPOTIFY_APP_CLIENT_ID')
-                SPOTIFY_APP_CLIENT_SECRET = os.getenv('SPOTIFY_APP_CLIENT_SECRET')
-                if not SPOTIFY_APP_CLIENT_ID or not SPOTIFY_APP_CLIENT_SECRET:
-                    logging.error("Env vars SPOTIFY_APP_CLIENT_ID or SPOTIFY_APP_CLIENT_SECRET are not set properly.")
-                    logging.error("Please double check and restart.")
-                    sys.exit(1)
-
-                spotify_client = create_spotify_client(SPOTIFY_APP_CLIENT_ID, SPOTIFY_APP_CLIENT_SECRET)
-
             sync_podcast_episodes(
                 PODCAST_RSS_FEED,
                 build_correct_file_path(EPISODES_STORAGE_DIR),
                 build_correct_file_path(EPISODES_IMAGES_STORAGE_DIR),
-                no_api_calls=args.no_api_calls,
-                spotify_client=spotify_client
+                no_api_calls=args.no_api_calls
             )
         case "redirect":
             create_redirects(TOML_FILE, EPISODES_STORAGE_DIR, REDIRECT_PREFIX)
