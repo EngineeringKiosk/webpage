@@ -31,8 +31,7 @@ from constants import (
     DEFAULT_SPEAKER,
     PODCAST_APPLE_URL,
     SPOTIFY_SHOW_ID,
-    DEEZER_PODCAST_ID,
-    YOUTUBE_PLAYLIST_ID
+    DEEZER_PODCAST_ID
 )
 
 # External libraries
@@ -41,7 +40,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from PIL import Image
 import deezer
-from pyyoutube import Client as YoutubeClient
 
 
 # Amazon Music is missing here.
@@ -140,9 +138,9 @@ def parse_headlines_from_html(raw_html):
 def get_chapter_from_description(description):
     # Chapter entries look like
     #       <p><span>(00:00:00) Intro</span></p>
-    found_chapters = re.findall("<p><span>\(([0-9:]*)\) ([^<]*)</span></p>", description)
+    found_chapters = re.findall(r"<p><span>\(([0-9:]*)\) ([^<]*)</span></p>", description)
     if len(found_chapters) == 0:
-        found_chapters = re.findall("<p>\(([0-9:]*)\) ([^<]*)</p>", description)
+        found_chapters = re.findall(r"<p>\(([0-9:]*)\) ([^<]*)</p>", description)
 
     chapter = []
     for c in found_chapters:
@@ -177,7 +175,7 @@ def remove_rel_nofollow_from_internal_links(html_content):
     return new_html_content
 
 
-def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=False, spotify_client=None, youtube_client=None):
+def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=False, spotify_client=None):
     """
     Syncs the Podcast Episodes from the RSS feed down to disk
     and prepares the content to match the structure of the used
@@ -213,7 +211,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
     apple_podcast_content = {}
     spotify_episodes = []
     deezer_episodes = []
-    youtube_playlist_items = []
     if no_api_calls:
         logging.info("Requesting content from Podcast sites is disabled via `--no-api-calls` flag!")
 
@@ -221,8 +218,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
         logging.info("Requesting content from Podcast sites ...")
         apple_podcast_content = get_json_content_from_url(PODCAST_APPLE_URL)
         spotify_episodes = spotify_client.show_episodes(SPOTIFY_SHOW_ID, limit=50, offset=0, market="DE")
-        youtube_playlist_response = youtube_client.playlistItems.list(parts="snippet", maxResults=50, playlist_id=YOUTUBE_PLAYLIST_ID)
-        youtube_playlist_items = youtube_playlist_response.items
 
         # Pagination and auth not respected.
         # Right now it works, because a) we don't make that much requests and
@@ -363,7 +358,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
             'tags': [],
             'title': title,
             'transcript_slim': get_podcast_episode_transcript_slim_path_by_episode_number(episode_number),
-            'youtube': get_episode_link_from_youtube(youtube_playlist_items, title),
         }
 
         full_file_path = f'{path_md_files}/{filename}'
@@ -438,7 +432,7 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
 
     # Restructure existing redirects into a hashmap
     # for easier lookup
-    redirect_episode_number_regex = re.compile(f"^{redirect_prefix}([-\d]*)$")
+    redirect_episode_number_regex = re.compile(rf"^{redirect_prefix}([-\d]*)$")
     redirect_map = {}
     for redirect in parsed_toml['redirects']:
         # Find the number of the episode
@@ -455,7 +449,7 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
     # Get existing podcast episodes
     episodes = [f for f in os.listdir(path_md_files) if isfile(join(path_md_files, f)) and f.endswith('.md')]
 
-    episode_number_regex = re.compile('([-\d]*)-')
+    episode_number_regex = re.compile(r'([-\d]*)-')
     for episode in episodes:
         # Find the number of the episode
         episode_number = re.findall(episode_number_regex, episode)[0]
@@ -581,31 +575,6 @@ def get_episode_from_spotify(episodes, title: str) -> dict:
     return e
 
 
-def get_episode_link_from_youtube(episodes, title: str) -> str:
-    """
-    Parses the Youtube Episode Single View link (matching with title) from episodes list.
-    episodes is an API representation from the YouTube API / Engineering Kiosk Playlist.
-    title is the full title of a single episode.
-
-    If no title matches, it will return an empty string.
-    """
-    # Get the start of the episode title (#<number>)
-    episode_id = ""
-    matches = re.match("(#(\d+)\s)", title)
-    if matches:
-        episode_id = matches.group(1)
-
-    u = ""
-    if not episode_id:
-        return u
-
-    for video in episodes:
-        if video.snippet.title.startswith(episode_id):
-            u = f"https://www.youtube.com/watch?v={video.snippet.resourceId.videoId}"
-
-    return u
-
-
 def get_episode_link_from_deezer(episodes, title: str) -> str:
     """
     Parses the Deezer Episode Single View link (matching with title) from episodes list.
@@ -644,7 +613,6 @@ if __name__ == "__main__":
         case "sync":
             # Bootstrapping API clients
             spotify_client = None
-            youtube_client = None
             if not args.no_api_calls:
                 # Spotify
                 SPOTIFY_APP_CLIENT_ID = os.getenv('SPOTIFY_APP_CLIENT_ID')
@@ -656,21 +624,12 @@ if __name__ == "__main__":
 
                 spotify_client = create_spotify_client(SPOTIFY_APP_CLIENT_ID, SPOTIFY_APP_CLIENT_SECRET)
 
-                # YouTube
-                YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
-                if not YOUTUBE_API_KEY:
-                    logging.error("Env var YOUTUBE_API_KEY is not set properly.")
-                    logging.error("Please double check and restart.")
-                    sys.exit(1)
-                youtube_client = YoutubeClient(api_key=YOUTUBE_API_KEY)
-
             sync_podcast_episodes(
                 PODCAST_RSS_FEED,
                 build_correct_file_path(EPISODES_STORAGE_DIR),
                 build_correct_file_path(EPISODES_IMAGES_STORAGE_DIR),
                 no_api_calls=args.no_api_calls,
-                spotify_client=spotify_client,
-                youtube_client=youtube_client
+                spotify_client=spotify_client
             )
         case "redirect":
             create_redirects(TOML_FILE, EPISODES_STORAGE_DIR, REDIRECT_PREFIX)
