@@ -52,10 +52,6 @@ init-python: scripts/venv/touchfile ## Installs python dependencies and creates 
 check-episode-player-urls: ## Checks all podcast episodes if all player links (Spotify, etc.) are set
 	. $(VENV_ACTIVATE); python ./scripts/empty_player_urls.py
 
-.PHONY: update-podcast-statistics
-update-podcast-statistics: ## Calculates and updates podcast statistics
-	. $(VENV_ACTIVATE); python ./scripts/statistics.py
-
 .PHONY: update-episode-content
 update-episode-content: ## Pulls the latest Podcast RSS feed from RedCircle and updates the content
 	. $(VENV_ACTIVATE); python ./scripts/podcast_feed_to_content.py sync
