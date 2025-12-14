@@ -37,7 +37,7 @@ speaker:
   transcriptLetter: B
 - name: Stefan (Zero Day Podcast)
   transcriptLetter: C
-- name: Sven? (Zuordnung unsicher, vermutlich zweite Spur)
+- name: Sven (Zero Day Podcast)
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0jUBRMgD2LUxgaD67SOI6z
 tags:

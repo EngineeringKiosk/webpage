@@ -44,7 +44,7 @@ speaker:
   transcriptLetter: B
 - name: "Andr\xE9 (Smarth\xFCtte Podcast)"
   transcriptLetter: C
-- name: "Vermutlich Andr\xE9 oder Thomas, Zuordnung unsicher"
+- name: "Andr\xE9 (Smarth\xFCtte Podcast)"
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0lDzAACqGGjDjCDZkrDF5A
 tags:
