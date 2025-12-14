@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/763b00a1-b742-4dad-8066-8a8b1bfef72d/engineering-kiosk-237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer
 apple_podcasts: https://podcasts.apple.com/us/podcast/237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer/id1603082924?i=1000741178028&uo=4
 audio: https://audio1.redcircle.com/episodes/b9ba89e0-503f-4ac6-8bb4-4ce4f0aef928/stream.mp3
 chapter:

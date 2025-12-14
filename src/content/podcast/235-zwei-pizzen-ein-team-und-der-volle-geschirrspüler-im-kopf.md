@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/0fb1fd0f-b8de-4ea9-8d8a-6bb344bcffdd/engineering-kiosk-235-zwei-pizzen-ein-team-und-der-volle-geschirrsp%C3%BCler-im-kopf
 apple_podcasts: https://podcasts.apple.com/us/podcast/235-zwei-pizzen-ein-team-und-der-volle-geschirrsp%C3%BCler/id1603082924?i=1000740933636&uo=4
 audio: https://audio1.redcircle.com/episodes/654cf472-1ddc-45f2-920d-8225cf031bd4/stream.mp3
 chapter:

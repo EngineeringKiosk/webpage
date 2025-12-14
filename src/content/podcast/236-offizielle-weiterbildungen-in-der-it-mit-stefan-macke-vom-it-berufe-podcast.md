@@ -1,6 +1,6 @@
 ---
 advertiser: ''
-amazon_music: ''
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/93e8e46a-0853-4b20-be49-cb9e62ff52df/engineering-kiosk-236-offizielle-weiterbildungen-in-der-it-mit-stefan-macke-vom-it-berufe-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/236-offizielle-weiterbildungen-in-der-it-mit-stefan/id1603082924?i=1000741080852&uo=4
 audio: https://audio1.redcircle.com/episodes/2bffe06a-98f2-4f4f-bc4b-a698e32bff46/stream.mp3
 chapter:
