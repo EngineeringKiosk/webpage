@@ -1,5 +1,3 @@
-import os
-from os.path import isfile, join
 import json
 import re
 
@@ -16,7 +14,6 @@ from functions import (
 from constants import (
     EPISODES_STORAGE_DIR,
     PATH_PODCAST_INFO_JSON_FILE,
-    BLOGPOST_CONTENT_FILES,
     TAG_FILE_CONTENT
 )
 
@@ -149,21 +146,6 @@ def build_tags_statistics(file_path) -> dict:
     return stats
 
 
-def build_blog_statistics(path_md_files) -> dict:
-    """
-    Going through all Blog Markdown files and collect
-    and calculate some basic statistics.
-    """
-    stats = dict()
-    stats['number_of_blog_posts'] = 0
-
-    # Get existing podcast episodes
-    posts = [f for f in os.listdir(path_md_files) if isfile(join(path_md_files, f)) and f.endswith('.mdx')]
-    stats['number_of_blog_posts'] = len(posts)
-            
-    return stats
-
-
 def build_podcast_statistics(file_path) -> dict:
     """
     Collect and calculate some basic statistics about the
@@ -223,13 +205,6 @@ def print_podcast_stats(stats):
     print(f"Platforms: {stats['plattforms']}")
 
 
-def print_blog_post_stats(stats):
-    print("")
-    print("Blog posts")
-    print_headline_spacer()
-    print(f"Number of blog posts: {stats['number_of_blog_posts']}")
-
-
 def print_episode_speaking_time(episode_speaking_stats):
     print("")
     print("Podcast Episode Speaking Time")
@@ -275,7 +250,6 @@ if __name__ == "__main__":
     # Collecting data
     episode_stats = build_episode_statistics(build_correct_file_path(EPISODES_STORAGE_DIR))
     episode_speaking_stats, overall_speaking_stats = build_episode_speaking_time_statistics(build_correct_file_path(EPISODES_STORAGE_DIR))
-    blog_stats = build_blog_statistics(build_correct_file_path(BLOGPOST_CONTENT_FILES))
     tags_stats = build_tags_statistics(build_correct_file_path(TAG_FILE_CONTENT))
     podcast_stats = build_podcast_statistics(build_correct_file_path(PATH_PODCAST_INFO_JSON_FILE))
     
@@ -288,6 +262,5 @@ if __name__ == "__main__":
     print("=========================")
     print_episode_speaking_time(episode_speaking_stats)
     print_overall_speaking_time(overall_speaking_stats)
-    print_blog_post_stats(blog_stats)
     print_podcast_stats(podcast_stats)
     print_podcast_episode_stats(podcast_episode_stats)
