@@ -451,30 +451,6 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
         toml.dump(o=parsed_toml, f=f)
 
 
-def get_json_content_from_url(u):
-    """
-    Retrieves the JSON content from address u.
-    """
-    content = ""
-    with requests.get(u, stream=True) as r:
-        r.raise_for_status()
-        content = r.json()
-
-    return content
-
-
-def get_raw_content_from_url(u):
-    """
-    Retrieves the raw content from address u.
-    """
-    content = ""
-    with requests.get(u, stream=True) as r:
-        r.raise_for_status()
-        content = r.content
-
-    return content
-
-
 if __name__ == "__main__":
     # Argument and parameter parsing
     cli_parser = argparse.ArgumentParser(description='Automate new Podcast Episide parsing')
