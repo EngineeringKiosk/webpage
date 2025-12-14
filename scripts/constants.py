@@ -45,6 +45,3 @@ REDIRECT_PREFIX = '/episodes/'
 # Podcast
 PODCAST_RSS_FEED = "https://feeds.redcircle.com/0ecfdfd7-fda1-4c3d-9515-476727f9df5e"
 PATH_PODCAST_INFO_JSON_FILE = 'src/data/podcast-info.json'
-
-# Podcast publishing platforms
-PODCAST_APPLE_URL = "https://itunes.apple.com/lookup?id=1603082924&media=podcast&entity=podcastEpisode&limit=100"

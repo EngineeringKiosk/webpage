@@ -27,8 +27,7 @@ from constants import (
     PODCAST_RSS_FEED,
     TOML_FILE,
     REDIRECT_PREFIX,
-    DEFAULT_SPEAKER,
-    PODCAST_APPLE_URL
+    DEFAULT_SPEAKER
 )
 
 # External libraries
@@ -169,7 +168,7 @@ def remove_rel_nofollow_from_internal_links(html_content):
     return new_html_content
 
 
-def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=False):
+def sync_podcast_episodes(rss_feed, path_md_files, path_img_files):
     """
     Syncs the Podcast Episodes from the RSS feed down to disk
     and prepares the content to match the structure of the used
@@ -200,16 +199,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
     # requests makes an educated guess on the response encoding.
     # Here we overwrite the encoding to UTF-8
     feed_response.encoding = 'utf-8'
-
-    # Check if we should run the API calls to external podcast platforms
-    apple_podcast_content = {}
-    if no_api_calls:
-        logging.info("Requesting content from Podcast sites is disabled via `--no-api-calls` flag!")
-
-    else:
-        logging.info("Requesting content from Podcast sites ...")
-        apple_podcast_content = get_json_content_from_url(PODCAST_APPLE_URL)
-        logging.info("Requesting content from Podcast sites ... Successful")
 
     logging.info("Processing Podcast Episode items ...")
 
@@ -315,7 +304,7 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
         data = {
             'advertiser': '',
             'amazon_music': '',
-            'apple_podcasts': get_episode_link_from_apple(apple_podcast_content, title),
+            'apple_podcasts': '',
             'audio': mp3_link,
             'chapter': chapter,
             'description': description_short,
@@ -462,51 +451,6 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
         toml.dump(o=parsed_toml, f=f)
 
 
-def get_json_content_from_url(u):
-    """
-    Retrieves the JSON content from address u.
-    """
-    content = ""
-    with requests.get(u, stream=True) as r:
-        r.raise_for_status()
-        content = r.json()
-
-    return content
-
-
-def get_raw_content_from_url(u):
-    """
-    Retrieves the raw content from address u.
-    """
-    content = ""
-    with requests.get(u, stream=True) as r:
-        r.raise_for_status()
-        content = r.content
-
-    return content
-
-
-def get_episode_link_from_apple(content, title: str) -> str:
-    """
-    Parses the Apple Episode Single View link (matching with title) from content.
-    content is a JSON representation of the Apple Podcast Engineering Kiosk site.
-    title is the full title of a single episode.
-
-    If no title matches, it will return an empty string.
-    """
-    u = ""
-
-    if "results" not in content:
-        return u
-
-    tracks = content["results"]
-    for track in tracks:
-        if track["trackName"] == title:
-            u = track["trackViewUrl"]
-
-    return u
-
-
 if __name__ == "__main__":
     # Argument and parameter parsing
     cli_parser = argparse.ArgumentParser(description='Automate new Podcast Episide parsing')
@@ -518,7 +462,6 @@ if __name__ == "__main__":
         nargs='?',
         choices=['sync', 'redirect'],
         help='Mode to execute. Supported: sync, redirect (default: %(default)s)')
-    cli_parser.add_argument("-n", "--no-api-calls", action="store_true", help='Avoids network calls to Platforms like Spotify, Apple, ... (default: %(default)s)')
 
     args = cli_parser.parse_args()
 
@@ -530,8 +473,7 @@ if __name__ == "__main__":
             sync_podcast_episodes(
                 PODCAST_RSS_FEED,
                 build_correct_file_path(EPISODES_STORAGE_DIR),
-                build_correct_file_path(EPISODES_IMAGES_STORAGE_DIR),
-                no_api_calls=args.no_api_calls
+                build_correct_file_path(EPISODES_IMAGES_STORAGE_DIR)
             )
         case "redirect":
             create_redirects(TOML_FILE, EPISODES_STORAGE_DIR, REDIRECT_PREFIX)
