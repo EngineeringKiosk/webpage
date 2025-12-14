@@ -11,7 +11,6 @@ import toml
 import os
 from os.path import exists, isfile, join
 import logging
-import sys
 import pathlib
 
 from episode_finder import EpisodeFinder
