@@ -140,9 +140,9 @@ def parse_headlines_from_html(raw_html):
 def get_chapter_from_description(description):
     # Chapter entries look like
     #       <p><span>(00:00:00) Intro</span></p>
-    found_chapters = re.findall("<p><span>\(([0-9:]*)\) ([^<]*)</span></p>", description)
+    found_chapters = re.findall(r"<p><span>\(([0-9:]*)\) ([^<]*)</span></p>", description)
     if len(found_chapters) == 0:
-        found_chapters = re.findall("<p>\(([0-9:]*)\) ([^<]*)</p>", description)
+        found_chapters = re.findall(r"<p>\(([0-9:]*)\) ([^<]*)</p>", description)
 
     chapter = []
     for c in found_chapters:
@@ -438,7 +438,7 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
 
     # Restructure existing redirects into a hashmap
     # for easier lookup
-    redirect_episode_number_regex = re.compile(f"^{redirect_prefix}([-\d]*)$")
+    redirect_episode_number_regex = re.compile(rf"^{redirect_prefix}([-\d]*)$")
     redirect_map = {}
     for redirect in parsed_toml['redirects']:
         # Find the number of the episode
@@ -455,7 +455,7 @@ def create_redirects(file_to_parse, path_md_files, redirect_prefix):
     # Get existing podcast episodes
     episodes = [f for f in os.listdir(path_md_files) if isfile(join(path_md_files, f)) and f.endswith('.md')]
 
-    episode_number_regex = re.compile('([-\d]*)-')
+    episode_number_regex = re.compile(r'([-\d]*)-')
     for episode in episodes:
         # Find the number of the episode
         episode_number = re.findall(episode_number_regex, episode)[0]
