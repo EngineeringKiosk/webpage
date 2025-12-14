@@ -13,7 +13,6 @@ from functions import (
 
 from constants import (
     EPISODES_STORAGE_DIR,
-    BLOGPOST_CONTENT_FILES,
     GERMAN_TECH_PODCAST_CONTENT_FILES,
     TAG_FILE_CONTENT,
     TAG_FILE_GERMAN_TECH_PODCASTS,
@@ -138,7 +137,6 @@ if __name__ == "__main__":
         tag_file_path = build_correct_file_path(TAG_FILE_CONTENT)
         content_pathes = [
             build_correct_file_path(EPISODES_STORAGE_DIR),
-            build_correct_file_path(BLOGPOST_CONTENT_FILES),
         ]
 
     if args.mode == "german-tech-podcasts":
