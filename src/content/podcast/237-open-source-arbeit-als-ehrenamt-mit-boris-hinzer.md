@@ -1,0 +1,62 @@
+---
+advertiser: ''
+amazon_music: ''
+apple_podcasts: https://podcasts.apple.com/us/podcast/237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer/id1603082924?i=1000741178028&uo=4
+audio: https://audio1.redcircle.com/episodes/b9ba89e0-503f-4ac6-8bb4-4ce4f0aef928/stream.mp3
+chapter:
+- start: 00:00:00
+  title: Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland mit Boris
+    Hinzer
+deezer: https://www.deezer.com/episode/822326482
+description: "Petition: Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland\
+  \ mit Boris Hinzer  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete\
+  \ Podcaster\u22C5innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig\
+  \ innerhalb weniger Minuten \xFCber ein interessantes Tech-Thema.  Unsere aktuellen\
+  \ Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle\
+  \ Feedback zur Episode: \U0001F44D (top)\_\U0001F44E (geht so)  Anregungen, Gedanken,\
+  \ Themen und W\xFCnscheDein Feedback z\xE4hlt! Erreiche uns \xFCber einen der folgenden\
+  \ Kan\xE4le \u2026 EngKiosk Community: https://engineeringkiosk.dev/join-discord\_\
+  LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon:\
+  \ https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram:\
+  \ https://www.instagram.com/engineeringkiosk/ Unterst\xFCtze den Engineering KioskWenn\
+  \ du uns etwas Gutes tun m\xF6chtest \u2026 Kaffee schmeckt uns immer\_ Buy us a\
+  \ coffee: https://engineeringkiosk.dev/kaffee LinksOnline-Petition - Anerkennung\
+  \ von Open-Source-Arbeit als Ehrenamt in Deutschland: https://www.openpetition.de/petition/blog/anerkennung-von-open-source-arbeit-als-ehrenamt-in-deutschlandEnglish\
+  \ - Online-Petition - Recognition of Work on Open-Source as Volunteering in Germany:\
+  \ https://www.openpetition.de/petition/online/recognition-of-work-on-open-source-as-volunteering-in-germanySpanisch\
+  \ - Reconocimiento del trabajo de c\xF3digo abierto como voluntariado en Alemania:\
+  \ https://www.openpetition.de/petition/online/reconocimiento-del-trabajo-de-codigo-abierto-como-voluntariado-en-alemaniaBoris\
+  \ Hinzer auf LinkedIn: https://www.linkedin.com/in/boris-hinzer-96283111/Boris Hinzer\
+  \ auf Bluesky: https://bsky.app/profile/web-vision.bsky.socialBoris Hinzer auf Mastodon:\
+  \ https://mastodon.social/@webvision\_web-vision: https://www.web-vision.de/Abgabenordnung\
+  \ (AO) - \xA7 52 Gemeinn\xFCtzige Zwecke: https://www.gesetze-im-internet.de/ao_1977/__52.htmlB\xFC\
+  rgerliches Gesetzbuch (BGB) - \xA7 31a Haftung von Organmitgliedern und besonderen\
+  \ Vertretern: https://www.gesetze-im-internet.de/bgb/__31a.htmlInterview im Deutschlandfunk:\
+  \ https://www.deutschlandfunkkultur.de/ende-des-haftungsprivileg-was-wenn-soziale-medien-fuer-inhalte-haften-muessten-100.htmlTYPO3\
+  \ Association: https://typo3.org/associationEngineering Kiosk Episode #232 Public\
+  \ Money, Public Code mit Johannes N\xE4der von der Free Software Foundation Europe:\
+  \ https://engineeringkiosk.dev/podcast/episode/232-public-money-public-code-mit-johannes-n%C3%A4der-von-der-free-software-foundation-europe/Internationaler\
+  \ Tag des Ehrenamts: https://www.deutsche-stiftung-engagement-und-ehrenamt.de/internationaler-tag-des-ehrenamts/Apache\
+  \ Software Foundation: https://www.apache.org/eSport als Ehrenamt: https://www.kicker.de/nach-sieben-jahren-frust-esport-steht-kurz-vor-dem-grossen-durchbruch-1171995/artikelGovernment\
+  \ Site Builder (GSB): https://www.itzbund.de/DE/itloesungen/standardloesungen/gsb/gsb.html\
+  \ Sprungmarken(00:00:00) Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland\
+  \ mit Boris Hinzer  HostsWolfgang Gassler (https://gassler.dev)\_Andy Grunwald (https://andygrunwald.com/)\
+  \ CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist\u22C5innen in unserer\
+  \ Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
+headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und\
+  \ W\xFCnsche||unterstutze-den-engineering-kiosk::Unterst\xFCtze den Engineering\
+  \ Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community"
+image: ./237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer.jpg
+length_second: 1638
+pubDate: 2025-12-14 02:00:19+00:00
+speaker:
+- name: Andy Grunwald
+- name: Wolfi Gassler
+spotify: https://open.spotify.com/episode/1S96AthIQsrvV4pHkVk9cz
+tags: []
+title: '#237 Open-Source-Arbeit als Ehrenamt mit Boris Hinzer'
+transcript_slim: ''
+youtube: https://www.youtube.com/watch?v=-3OnmIFgumw
+
+---
+<p>Petition: Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland mit Boris Hinzer</p><p><br></p><p>Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz &amp; knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.</p><p><br></p><p>Unsere aktuellen Werbepartner findest du auf <a href="https://engineeringkiosk.dev/partners">https://engineeringkiosk.dev/partners</a></p><p><br></p><p><strong>Das schnelle Feedback zur Episode:</strong></p><p><a href="https://api.openpodcast.dev/feedback/237/upvote" rel="nofollow"><strong>👍 (top)</strong></a><strong> </strong><a href="https://api.openpodcast.dev/feedback/237/downvote" rel="nofollow"><strong>👎 (geht so)</strong></a></p><p><br></p><h3 id="anregungen-gedanken-themen-und-wunsche">Anregungen, Gedanken, Themen und Wünsche</h3><p>Dein Feedback zählt! Erreiche uns über einen der folgenden Kanäle …</p><ul><li>EngKiosk Community: <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </li><li>LinkedIn: <a href="https://www.linkedin.com/company/engineering-kiosk/" rel="nofollow">https://www.linkedin.com/company/engineering-kiosk/</a></li><li>Email: <a href="mailto:stehtisch@engineeringkiosk.dev" rel="nofollow">stehtisch@engineeringkiosk.dev</a></li><li>Mastodon: <a href="https://podcasts.social/@engkiosk" rel="nofollow">https://podcasts.social/@engkiosk</a></li><li>Bluesky: <a href="https://bsky.app/profile/engineeringkiosk.bsky.social" rel="nofollow">https://bsky.app/profile/engineeringkiosk.bsky.social</a></li><li>Instagram: <a href="https://www.instagram.com/engineeringkiosk/" rel="nofollow">https://www.instagram.com/engineeringkiosk/</a></li></ul><p><br></p><h3 id="unterstutze-den-engineering-kiosk">Unterstütze den Engineering Kiosk</h3><p>Wenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer </p><ul><li>Buy us a coffee: <a href="https://engineeringkiosk.dev/kaffee">https://engineeringkiosk.dev/kaffee</a></li></ul><p><br></p><h3 id="links">Links</h3><ul><li>Online-Petition - Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland: <a href="https://www.openpetition.de/petition/blog/anerkennung-von-open-source-arbeit-als-ehrenamt-in-deutschland" rel="nofollow">https://www.openpetition.de/petition/blog/anerkennung-von-open-source-arbeit-als-ehrenamt-in-deutschland</a></li><li>English - Online-Petition - Recognition of Work on Open-Source as Volunteering in Germany: <a href="https://www.openpetition.de/petition/online/recognition-of-work-on-open-source-as-volunteering-in-germany" rel="nofollow">https://www.openpetition.de/petition/online/recognition-of-work-on-open-source-as-volunteering-in-germany</a></li><li>Spanisch - Reconocimiento del trabajo de código abierto como voluntariado en Alemania: <a href="https://www.openpetition.de/petition/online/reconocimiento-del-trabajo-de-codigo-abierto-como-voluntariado-en-alemania" rel="nofollow">https://www.openpetition.de/petition/online/reconocimiento-del-trabajo-de-codigo-abierto-como-voluntariado-en-alemania</a></li><li>Boris Hinzer auf LinkedIn: <a href="https://www.linkedin.com/in/boris-hinzer-96283111/" rel="nofollow">https://www.linkedin.com/in/boris-hinzer-96283111/</a></li><li>Boris Hinzer auf Bluesky: <a href="https://bsky.app/profile/web-vision.bsky.social" rel="nofollow">https://bsky.app/profile/web-vision.bsky.social</a></li><li>Boris Hinzer auf Mastodon: <a href="https://mastodon.social/@webvision" rel="nofollow">https://mastodon.social/@webvision</a> </li><li>web-vision: <a href="https://www.web-vision.de/" rel="nofollow">https://www.web-vision.de/</a></li><li>Abgabenordnung (AO) - § 52 Gemeinnützige Zwecke: <a href="https://www.gesetze-im-internet.de/ao_1977/__52.html" rel="nofollow">https://www.gesetze-im-internet.de/ao_1977/__52.html</a></li><li>Bürgerliches Gesetzbuch (BGB) - § 31a Haftung von Organmitgliedern und besonderen Vertretern: <a href="https://www.gesetze-im-internet.de/bgb/__31a.html" rel="nofollow">https://www.gesetze-im-internet.de/bgb/__31a.html</a></li><li>Interview im Deutschlandfunk: <a href="https://www.deutschlandfunkkultur.de/ende-des-haftungsprivileg-was-wenn-soziale-medien-fuer-inhalte-haften-muessten-100.html" rel="nofollow">https://www.deutschlandfunkkultur.de/ende-des-haftungsprivileg-was-wenn-soziale-medien-fuer-inhalte-haften-muessten-100.html</a></li><li>TYPO3 Association: <a href="https://typo3.org/association" rel="nofollow">https://typo3.org/association</a></li><li>Engineering Kiosk Episode #232 Public Money, Public Code mit Johannes Näder von der Free Software Foundation Europe: <a href="https://engineeringkiosk.dev/podcast/episode/232-public-money-public-code-mit-johannes-n%C3%A4der-von-der-free-software-foundation-europe/">https://engineeringkiosk.dev/podcast/episode/232-public-money-public-code-mit-johannes-n%C3%A4der-von-der-free-software-foundation-europe/</a></li><li>Internationaler Tag des Ehrenamts: <a href="https://www.deutsche-stiftung-engagement-und-ehrenamt.de/internationaler-tag-des-ehrenamts/" rel="nofollow">https://www.deutsche-stiftung-engagement-und-ehrenamt.de/internationaler-tag-des-ehrenamts/</a></li><li>Apache Software Foundation: <a href="https://www.apache.org/" rel="nofollow">https://www.apache.org/</a></li><li>eSport als Ehrenamt: <a href="https://www.kicker.de/nach-sieben-jahren-frust-esport-steht-kurz-vor-dem-grossen-durchbruch-1171995/artikel" rel="nofollow">https://www.kicker.de/nach-sieben-jahren-frust-esport-steht-kurz-vor-dem-grossen-durchbruch-1171995/artikel</a></li><li>Government Site Builder (GSB): <a href="https://www.itzbund.de/DE/itloesungen/standardloesungen/gsb/gsb.html" rel="nofollow">https://www.itzbund.de/DE/itloesungen/standardloesungen/gsb/gsb.html</a></li></ul><p><br></p><h3 id="sprungmarken">Sprungmarken</h3><p>(00:00:00) Anerkennung von Open-Source-Arbeit als Ehrenamt in Deutschland mit Boris Hinzer</p><p><br></p><h3 id="hosts">Hosts</h3><ul><li>Wolfgang Gassler (<a href="https://gassler.dev" rel="nofollow">https://gassler.dev</a>) </li><li>Andy Grunwald (<a href="https://andygrunwald.com/" rel="nofollow">https://andygrunwald.com/</a>)</li></ul><p><br></p><h3 id="community">Community</h3><p>Diskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </p>
