@@ -34,7 +34,6 @@ update-episode-redirects                            Writes all short url redirec
 update-german-tech-podcasts                         Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 update-missing-tag-descriptions-content-files       Finds all used tags in content files that need SEO descriptions and updates the tag-file
 update-missing-tag-descriptions-german-tech-podcast Find all used tags in the german tech podcasts that need SEO descriptions and updates the tag-file
-update-podcast-statistics                           Calculates and updates podcast statistics
 ```
 
 ## Blog posts: Image sizes
