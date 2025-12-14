@@ -28,14 +28,12 @@ from constants import (
     TOML_FILE,
     REDIRECT_PREFIX,
     DEFAULT_SPEAKER,
-    PODCAST_APPLE_URL,
-    DEEZER_PODCAST_ID
+    PODCAST_APPLE_URL
 )
 
 # External libraries
 import frontmatter
 from PIL import Image
-import deezer
 
 
 # Amazon Music is missing here.
@@ -205,24 +203,12 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
 
     # Check if we should run the API calls to external podcast platforms
     apple_podcast_content = {}
-    deezer_episodes = []
     if no_api_calls:
         logging.info("Requesting content from Podcast sites is disabled via `--no-api-calls` flag!")
 
     else:
         logging.info("Requesting content from Podcast sites ...")
         apple_podcast_content = get_json_content_from_url(PODCAST_APPLE_URL)
-
-        # Pagination and auth not respected.
-        # Right now it works, because a) we don't make that much requests and
-        # b) don't have that much episodes.
-        # If we have more and more episodes, this might look different and need adjustment.
-        #
-        # Query quota (2022-07-17)
-        # The number of requests per second is limited to 50 requests / 5 seconds.
-        deezer_client = deezer.Client()
-        deezer_podcast = deezer_client.get_podcast(DEEZER_PODCAST_ID)
-        deezer_episodes = deezer_podcast.get_episodes()
         logging.info("Requesting content from Podcast sites ... Successful")
 
     logging.info("Processing Podcast Episode items ...")
@@ -332,7 +318,6 @@ def sync_podcast_episodes(rss_feed, path_md_files, path_img_files, no_api_calls=
             'apple_podcasts': get_episode_link_from_apple(apple_podcast_content, title),
             'audio': mp3_link,
             'chapter': chapter,
-            'deezer': get_episode_link_from_deezer(deezer_episodes, title),
             'description': description_short,
             'headlines': headline_info,
             'image': image_filename,
@@ -518,22 +503,6 @@ def get_episode_link_from_apple(content, title: str) -> str:
     for track in tracks:
         if track["trackName"] == title:
             u = track["trackViewUrl"]
-
-    return u
-
-
-def get_episode_link_from_deezer(episodes, title: str) -> str:
-    """
-    Parses the Deezer Episode Single View link (matching with title) from episodes list.
-    episodes is a JSON representation from the Deezer API / Engineering Kiosk Show.
-    title is the full title of a single episode.
-
-    If no title matches, it will return an empty string.
-    """
-    u = ""
-    for episode in episodes:
-        if episode.title == title:
-            u = episode.link
 
     return u
 
