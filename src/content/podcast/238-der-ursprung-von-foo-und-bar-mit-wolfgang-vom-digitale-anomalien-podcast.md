@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/b593cc6d-1392-4f99-8d9f-aff4b726f07a/engineering-kiosk-238-der-ursprung-von-foo-und-bar-mit-wolfgang-vom-digitale-anomalien-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/238-der-ursprung-von-foo-und-bar-mit-wolfgang-vom-digitale/id1603082924?i=1000741284875&uo=4
 audio: https://audio1.redcircle.com/episodes/030b556b-813b-450c-ba6f-87ca38a35a63/stream.mp3
 chapter:
