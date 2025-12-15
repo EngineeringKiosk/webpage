@@ -15,9 +15,9 @@ pubDate: 2025-12-15 02:00:18+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Wolfi Gassler
+- name: Andy Grunwald
   transcriptLetter: C
-- name: Gast 1, vermutlich Wolfgang vom Podcast Digitale Anomalien
+- name: Wolfgang Schoch (Digitale Anomalien)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/4Gp3YYKW9VIWZDgFhNeUPX
 tags:
