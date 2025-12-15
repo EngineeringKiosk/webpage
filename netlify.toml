@@ -3178,11 +3178,24 @@ to = "/podcast/episode/237-open-source-arbeit-als-ehrenamt-mit-boris-hinzer?pkn=
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/238"
+to = "/podcast/episode/238-der-ursprung-von-foo-und-bar-mit-wolfgang-vom-digitale-anomalien-podcast?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep238"
+to = "/podcast/episode/238-der-ursprung-von-foo-und-bar-mit-wolfgang-vom-digitale-anomalien-podcast?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
-  [headers.headers]
-  Content-Type = "text/x-opml"
-  Content-Disposition = "attachment"
+
+[headers.headers]
+Content-Type = "text/x-opml"
+Content-Disposition = "attachment"
 
 [build]
 publish = "dist/"

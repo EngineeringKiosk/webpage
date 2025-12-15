@@ -46,10 +46,10 @@ speaker:
 spotify: https://open.spotify.com/episode/65xtCGE50cKZ6QymfHGhl8
 tags:
 - Tech Kultur
-- Produktivität
+- "Produktivit\xE4t"
 - Projektmanagement
-title: "#235 Zwei Pizzen, ein Team und der volle Geschirrspüler im Kopf"
-transcript_slim: ""
+title: "#235 Zwei Pizzen, ein Team und der volle Geschirrsp\xFCler im Kopf"
+transcript_slim: src/data/transcripts/235-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=sp8RxZubenw
 
 ---

@@ -46,8 +46,8 @@ tags:
 - Karriere
 - Knowledge Sharing
 - Interview
-title: "#236 Offizielle Weiterbildungen in der IT mit Stefan Macke vom IT-Berufe-Podcast"
-transcript_slim: ""
+title: '#236 Offizielle Weiterbildungen in der IT mit Stefan Macke vom IT-Berufe-Podcast'
+transcript_slim: src/data/transcripts/236-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Kbg-hOIg8Ug
 
 ---

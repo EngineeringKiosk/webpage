@@ -61,8 +61,8 @@ tags:
 - Open Source
 - Tech Kultur
 - Interview
-title: "#237 Open-Source-Arbeit als Ehrenamt mit Boris Hinzer"
-transcript_slim: ""
+title: '#237 Open-Source-Arbeit als Ehrenamt mit Boris Hinzer'
+transcript_slim: src/data/transcripts/237-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=-3OnmIFgumw
 
 ---
