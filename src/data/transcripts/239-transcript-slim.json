@@ -1,0 +1,896 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4246,
+  "audio_url": "https://cloud.inlupus.at/s/c3ztc5N7A4M8NNR/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95768046,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "4e5aff3a-33a2-4e63-a985-8b16643eca80",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 211850,
+      "speaker": "A",
+      "start": 3440,
+      "text": "Herzlich willkommen im Engineering Kiosk. Diesen Podcast machen Wolfi und ich als side Project. Leider ist dies nicht unser Hauptberuf. Manchmal ist es sogar ein ziemlicher Stretch, eine Episode zu recherchieren, zu produzieren und das ganze Projekt überhaupt am Laufen zu halten. Ab und zu bekommen wir eine Frage aus der Community, ob wir Tipps haben, wie man als ambitionierter Entwickler und Vater bzw. Mutter auch noch ein side Project unter einen Hut bekommt Und und da müssen wir Wir haben da eigentlich keine Antwort drauf, weil wir keine Kinder haben. Wir fanden das Thema aber immer irgendwie spannend und in dieser Episode gehen wir das endlich mal an. Wir sprechen mit Stefan, Softwareentwickler, Vater und einer App als side Project. Wir sprechen über die Balance zwischen Familie, Konzernjob und side Project. Ich muss selten so eine ehrliche Episode gehabt Es geht um Selbstzweifel, um Energiemanagement, um klare Absprachen, Zeit für sich selbst, erzeugter Druck, aber auch Positives wie Selbstverwirklichung und die eigene Güte. Wir legen los. Viel Spaß. Im heutigen Thema geht es mal nicht direkt um die Technik, sondern eher um das persönliche Leben. Denn wir behandeln heute ein Thema, wo wir wissen, dass es ziemlich viele Leute betrifft und auch schon Anfragen aus der Community haben. Zum Beispiel hatten wir mal eine Anfrage, wo jemand gesagt Hey, ich bin Softwareentwickler, ich möchte gerne mehr lernen, ich bin sehr engagiert, habe aber auch eine Familie und habe auch Kinder und und wie kriegt ihr das alles unter einen Hut? Wie macht ihr das mit dem Job und mit dem Podcast und so weiter und so fort? Habt ihr da vielleicht ein paar Tipps für mich, wie ich mich trotzdem kontinuierlich weiterbilden kann und auch Open Source Contributions machen kann und so weiter und so fort. Und wir denken, dieses Thema ist unglaublich wichtig, denn dieses Thema betrifft uns alle irgendwie. Aber man muss auch sagen, Wolfgang und ich können zu diesem Thema nur teilweise etwas sagen, weil wir sind keine Väter, also wir haben keine Kinder. Und deswegen haben wir uns gedacht, okay, lass uns doch mal eine Episode zu dem Thema machen. Wie hält man eigentlich die Balance zwischen Familie, Job, side Project, Kinder und Co. Und Wolfgang und ich haben uns schon lange gefragt, wen können wir denn da eigentlich zu interviewen? Und irgendwie ab und zu trifft ja mal der Zufall ein, haben wir mal eine E Mail bekommen. Und zwar hat der Stefan uns geschrieben. Stefan hat uns ein paar Mal gehört, Stefan hat uns eine E Mail geschrieben, Hey, ich mache so ein Zeitprojekt. Monet heißt, das ist ein Haushaltsbuch, ist eine iOS App und ich hätte Lust, mich euren Fragen zu stellen und die Einblicke in Entwicklung zu geben, in die App Search Engine Optimization und in die SEO Strategie und generell mein Leben als Entwickler halt mal so darzustellen. Und dann immer wenn wir solche E Mails kriegen, sagen wir explizit lehnen wir ab. Denn eines unserer Grundregeln ist Leute, die sich brutal ausgedrückt versuchen selbst einzuladen, die schieben wir erst mal zur Seite. Dennoch fand ich die ganze Sache irgendwie so ein bisschen interessant. Irgendwas hatte das und dann habe ich einfach mal zurückgeschrieben, Hey, pass mal auf, das sind unsere Grundregeln. Wir lehnen Leute immer ab, aber pitch doch mal vielleicht. Vielleicht hast du ja mal ein Thema, was uns wirklich anspricht. Und dann kam er wirklich mit diesem Thema, was ich gerade eingeleitet habe, um die Ecke und haben gedacht, okay, das ist cool, denn der Stefan ist Quereinsteiger, hat einen Konzern Job, hat Familie, hat zwei Kinder und macht ein Zeitprojekt. Und das nutzen wir heute einfach mal als Chance, über dieses Thema zu sprechen. Wie kriegt man die Balance eigentlich in ein solches Leben? Und deswegen würde ich Hallo Stefan."
+    },
+    {
+      "end": 214370,
+      "speaker": "B",
+      "start": 211850,
+      "text": "Moin Andi. Moin Wolfi, schön, dass ich hier sein darf."
+    },
+    {
+      "end": 257070,
+      "speaker": "A",
+      "start": 214450,
+      "text": "Ich hatte deine Person gerade schon so ein bisschen eingeleitet. Du wohnst im schönen Hamburg, du bist Vater von zwei Kindern. Im Vorgespräch hattest du gesagt, sie sind drei und fünf. Du hattest es als Hypercare Phase beschrieben. Was das bedeutet, gehen wir gleich auch noch ein bisschen tiefer. Du bist aktuell iOS Software Engineer bei der Techniker Krankenkasse, Du hast Praktika bei Daimler in China gemacht und bei McKinsey. Falls wer McKinsey nicht kennt, sie bezeichnen sich selbst als Top Management Beratung und du betreibst ein side Project, ein Haushalts Buch oder eine Haushaltsbuch App, die vor kurzem neun tausend drei hundert Daily Active User gefeiert hat. Herzlichen Glückwunsch dazu erstmal Dankeschön. War diese Einleitung über deine Person korrekt?"
+    },
+    {
+      "end": 262830,
+      "speaker": "B",
+      "start": 257070,
+      "text": "Das trifft es auf jeden Fall schon mal ziemlich gut. Ich habe eine zweijährige Tochter und einen fünfjährigen Sohn, aber es spielt, glaube ich, nicht so wirklich eine Rolle."
+    },
+    {
+      "end": 302980,
+      "speaker": "C",
+      "start": 263070,
+      "text": "Ja, Zahlen sind nicht an die Stärke. Willkommen bei uns im Engineering Kiosk. Sehr cool dass man da mal auch ganz andere Seite beleuchten können von dem Developer Dasein. Jetzt hat der Andi schon das kurz erwähnt im Intro. Quereinstieg. In deinem Fall war es ja auch ein klassischer Quereinstieg. Du hast bei McKinsey gearbeitet. Jetzt würden sich viele wahrscheinlich denken, das ist der absolute Traum. So als Einsteiger in die ganze Wirtschaftswelt fangt man bei McKinsey an, kann da große Karriere machen, du wolltest es nicht und hast dich dann dazu entschieden abzubiegen und in die Development Richtung das Ganze einzuschlagen. Warum? McKinsey ist doch cool."
+    },
+    {
+      "end": 450370,
+      "speaker": "B",
+      "start": 362980,
+      "text": "Also ich fange einen Ticken früher an, um auch ein bisschen so die nötige Fallhöhe dann herzustellen. Ich habe Wirtschaftsingenieurwesen studiert und das Ganze habe ich einfach aufgrund deswegen getan, weil ich in der zehnte Klasse gab es einen Berufsberatungstest bei uns in der Schule und da kam das raus, dass ich das doch machen könnte, nachdem wir so ein, zwei Tage mit verschiedenen Gruppenarbeiten getestet wurden. Im Nachhinein würde ich das als ziemlich horoskopisch irgendwie bezeichnen, dieses ganze Verfahren. Aber letztlich dachte ich, ich mache das dann und dann ist ja das Studium war dann auch okay und hat Spaß gemacht und ich habe viele tolle Leute gefunden und auch inhaltlich war es, war es irgendwie interessant und ein häufiger Weg ist dann eben in die Beratung zu gehen. Und wie du es gerade schon gesagt hast, McKinsey schien mir als lohnendes Ziel irgendwie eine der Top Beratungen und die Vorstellung, da mit anderen klugen Köpfen an tollen Problemen zu arbeiten und irgendwie die Welt zu bewegen und meinen Einfluss dazu haben, hat mich total begeistert. Und dann habe ich mich da beworben und es hat auch geklappt mit dem Praktikum und habe dann gemerkt, oh ne, warte mal, das ist ja überhaupt nicht meins. Die langen Tage und gleichzeitig irgendwie dann gar nicht so tief im Thema dran zu sein, sondern eher oberflächlich PowerPoint Präsentationen zu erstellen, das war nicht meins. Und da setzte dann bei mir so ein bisschen die Panik ein, weil ich mir dachte, okay, das hast du so lang studiert und alles kulminierte so in diesem Praktikum, jetzt musst du was anderes machen, das funktioniert überhaupt nicht. Du willst nie wieder einen Anzug tragen, du willst einfach nur was gestalten und was bauen und irgendwie. Ja genau, nicht nur labern, jetzt mal frech gesagt, ich will über die Leute da nichts Schlechtes sagen. An sich waren das tolle, nette Menschen, intelligente Menschen, aber es war einfach nichts für mich."
+    },
+    {
+      "end": 469530,
+      "speaker": "C",
+      "start": 450370,
+      "text": "Kannst du mal kurz skizzieren, wie so ein Tagesablauf da ausschaut in so einem Praktikum? Weil man hört immer, man muss dann Folien machen, aber ich habe nie in so einer großen Beratungsagentur gearbeitet. Also was macht man dann da? Im Endeffekt Kommen dann Leute her und sagen, das sind die Inhalte, bereite mir jetzt eine Präsentation vor oder wie läuft es dann ab?"
+    },
+    {
+      "end": 526680,
+      "speaker": "B",
+      "start": 469530,
+      "text": "Also ich war in zwei verschiedenen Teilprojekten. Ich kann auch nicht zu sehr ins Detail gehen, aber die haben sich ein bisschen unterschieden, die liefen auch beide schon. Und letztlich ganz grundlegend hat halt dann jedes Projekt lässt sich unterteilen in kleine Teilprojekte. Als Praktikant wird man das schon ins kalte Wasser geworfen und du übernimmst sehr schnell die Steuerung für ein kleines Teilprojekt und musst das natürlich immer wieder dem Kunden präsentieren. Es müssen Entscheidungen getroffen werden, es müssen Probleme aufgedeckt werden und ja, natürlich, das muss irgendwie dargestellt werden und gezeigt werden. Und es bestand schon viel darin, Ideen zu pitchen, Daten zu sammeln, das wieder aufzubereiten, zu diskutieren und das im ständigen Loop und dann am Ende zu einem gewünschten Ergebnis zu bekommen. Und das alles in unfassbar kurzer Zeit. Also das ist dann nichts mit acht oder neun Stunden Tagen, sondern eher zwölf, dreizehn Stunden Tage. Also ich glaube, das ist auch eine ganz persönliche Sache. Mein Hirn funktioniert so nicht. Ich merke, dass ich nach fünf, sechs Stunden Arbeitstagen mit Programmieren manchmal schon platt bin und dann nicht mehr viel geht dementsprechend nicht so ganz, wie es mir vorgestellt hatte."
+    },
+    {
+      "end": 534910,
+      "speaker": "C",
+      "start": 526910,
+      "text": "Ja, also ich bezweifle, dass Leute wirklich dreizehn Stunden konzentriert an irgendwas arbeiten können. Also ob es diese Leute wirklich gibt, wahrgemacht."
+    },
+    {
+      "end": 538670,
+      "speaker": "B",
+      "start": 534910,
+      "text": "Ich versuche bei mir zu bleiben, ich will niemandem irgendwas unterstellen, aber es ist."
+    },
+    {
+      "end": 572160,
+      "speaker": "A",
+      "start": 538670,
+      "text": "Schon wirklich so, ich sag mal, wie es klassisch stereotypenhaft im Internet beschrieben wird, weil man hört ja immer diese Horror Stories, wie gesagt, zwölf, dreizehn Stunden Tage, das hast du gerade auch bestätigt, dann ziemlich viel PowerPoint oder Google Sheets oder Google Slides und Excel Tabellen und Co. Wie sieht es mit Reisetätigkeiten aus? Warst du immer irgendwie in welchen Hotelräumen und hast das China Fast Food dann bestellt, damit du abends im Büro noch mal kurz was essen kannst oder wie? Also ist das wirklich so ganz klassisch, wie man sich aus Hollywood Movies von Investmentbankern und Top Management Beratung so vorstellt?"
+    },
+    {
+      "end": 574880,
+      "speaker": "C",
+      "start": 572160,
+      "text": "Der Andi meint China essen, nur falls du es nicht verstehst."
+    },
+    {
+      "end": 628170,
+      "speaker": "B",
+      "start": 575280,
+      "text": "Witzig. Ich sag auch China. Ich sag auch China tatsächlich. Also jein, Es war ja zweigeteilt. Die ersten sechs Wochen waren relativ nah zu meinem Wohnort, was an sich dann wahrscheinlich nicht so dem klassischen Bild entsprochen hat, weil ich jeden Tag zu Hause geschlafen habe. War aber auch ganz gut, weil diese emotionale Belastung dadurch ganz gut aufgefangen werden konnte, weil ich halt jeden Abend wieder bei meinen Freunden, Freundinnen, bei meiner Partnerin war. Und die zweite Hälfte, das war dann wirklich so, wie man sich im Film vorstellt. Da bin ich tatsächlich jeden Montag, Morgen, vier uhr morgens, fünf uhr morgens mit dem Flugzeug nach Istanbul gependelt und da dann mit dem schwarzen Uber in das Fünf Sterne Hotel gefahren, schnell eingecheckt und dann ging es direkt weiter zum Kunden und Donnerstag bin ich wieder zurückgeflogen und saß halt dann aber quasi die Woche über in dem Fünf Sterne Hotel. Und das ist alles irgendwie schön anzusehen. Aber wenn du einsam bist, ist so ein großer Raum fast noch schlimmer im Fünf Sterne Hotel. Es hat sich einfach nicht gut und nicht richtig für mich angefühlt."
+    },
+    {
+      "end": 655780,
+      "speaker": "A",
+      "start": 628170,
+      "text": "Aber jetzt hattest du gesagt, du möchtest was gestalten, aber irgendwie hört sich das auch an. Du machst ein Praktikum, bekommst sehr früh sehr viel Verantwortung, bereitest Entscheidungen vor, stellst diese vor, führst zu einer Entscheidungsfindung und versuchst ein reales Problem bei anscheinend einem Kunden, der ein reales Problem hat, Sonst wird er McKinsey nicht beauftragen, ja zu lösen. Aber ist das nicht die Definition, was von mitgestalten? Ich meine, du bist ja, du ownst ja diesen ganzen Prozess schon eigentlich."
+    },
+    {
+      "end": 681920,
+      "speaker": "B",
+      "start": 655780,
+      "text": "Es kann sein, dass ich da hätte auch selbstbewusster auftreten können und mich mehr hätte einbringen können. Es kann auch sein, dass ich da das einfach in dem Moment nicht leisten oder liefern konnte. Für mich hat sich im Großen und Ganzen nicht sinnvoll angefühlt, auch das, was ich getan habe und auch das, was ich empfohlen habe. Der Impact wäre vielleicht da gewesen, aber Es muss ja auch die Richtung stimmen und nicht nur der Betrag. Dementsprechend, das hat für mich nicht gepasst und es hat sich für mich nicht so angefühlt, als würde ich dann einen sinnvollen Beitrag leisten."
+    },
+    {
+      "end": 685680,
+      "speaker": "C",
+      "start": 682000,
+      "text": "Man bekommt da aber schon Geld dafür, oder? Also das ist ein bezahltes Praktikum auf."
+    },
+    {
+      "end": 694360,
+      "speaker": "B",
+      "start": 685680,
+      "text": "Jeden Fall und auch relativ gut vergütet. Also ich hatte da so viel verdient, wie da habe ich in meinem Leben noch nie, aber vorher auch tatsächlich nicht Vollzeit gearbeitet. Aber das war schon okay."
+    },
+    {
+      "end": 698440,
+      "speaker": "A",
+      "start": 694360,
+      "text": "Du hast als Praktikant bei McKinsey mehr verdient als aktueller Softwareentwickler."
+    },
+    {
+      "end": 701280,
+      "speaker": "B",
+      "start": 698440,
+      "text": "Nein, nein, nein, als jemals davor zu dem Zeitpunkt."
+    },
+    {
+      "end": 702800,
+      "speaker": "A",
+      "start": 701680,
+      "text": "Ach so, okay, gut."
+    },
+    {
+      "end": 712780,
+      "speaker": "B",
+      "start": 703120,
+      "text": "Nein, es war jetzt nicht so absurd viel, aber für ein Praktikum, ich weiß es nicht mehr genau. Es wird irgendwas zwischen zwei tausend gewesen sein. Das ist für ein Praktikum schon okay."
+    },
+    {
+      "end": 729140,
+      "speaker": "C",
+      "start": 712780,
+      "text": "Definitiv würde ich sagen. Jetzt hast du schon gesagt, okay, du wolltest was bewegen, was wirklich machen und was auf die Straße bringen. Hast du das im Studium eigentlich auch schon gemacht? Hattest du da irgendwie side Projects oder sowas? Also hat sich das da auch schon irgendwie herauskristallisiert, dass du gerne Projekte machst?"
+    },
+    {
+      "end": 735020,
+      "speaker": "B",
+      "start": 729220,
+      "text": "Am Ende des Studiums habe ich versucht, mit Freunden zu gründen. Im Nachhinein ein sehr naives Unterfangen."
+    },
+    {
+      "end": 736780,
+      "speaker": "C",
+      "start": 735020,
+      "text": "Gut, das kann auch ganz oft funktionieren."
+    },
+    {
+      "end": 823330,
+      "speaker": "B",
+      "start": 736780,
+      "text": "Also ja, aber wenn ich das mit meiner heutigen Brille, aus meiner heutigen Perspektive betrachte, wirkt es irgendwie süß ist das falsche Wort, aber nicht so richtig zielführend. Ansonsten, ne, ich habe mich schon sehr konzentriert auf die Studieninhalte und auch versucht, einfach ein gutes Studium abzuliefern. Tatsächlich habe ich immer auch eine Affinität zum Programmieren gehabt. Also immer wenn es irgendwo was zu Skripten gab, habe ich das auch an mich gerissen. Das war schon da. Aber darüber hinaus habe ich es mich ehrlich gesagt nie getraut. Ich hatte immer so den Gedanken, der nagte ein bisschen in meinem Hinterkopf. Es gibt doch die anderen Leute, die haben mit zwölf, dreizehn Jahren angefangen zu programmieren. Das ist so ein bisschen eine invertierte Sunken Cost Fallacy. Du hast jetzt noch nie was investiert, du bist doch so weit hinten dran. Das brauchst du dich jetzt eigentlich gar nicht mehr groß zu engagieren. Trotzdem, wie gesagt, wenn es dann was zu programmieren gab, irgendwelche mathematischen Probleme, irgendwelche statistischen Probleme zu lösen gab, habe ich das auch schon an mich gerissen. Ich glaube, das witzigste Unterfangen war, wir sollten einmal so eine Lieferketten Bestellsituation, war so ein Minispiel, ein Planspiel, durften dann wöchentlich unsere Planung für die Fertigung in irgendeinem Fertigungsbetrieb eintragen und Bestellungen machen. Und am dieses Planspiels nach mehreren Episoden, die immer so eine Woche dauerten, wurde halt ausgewertet, welches Team sich da am besten geschlagen hat. Und ich habe einfach angefangen, den kompletten Simulator nachzubauen, sodass ich schon immer am Anfang der Woche schon simulieren konnte mit meinem eigenen Simulator, wie eigentlich das Ergebnis sein wird. Ja, da war für mich so zu erkennen, okay, es macht mir irgendwie Spaß, aber mehr als das habe ich mich irgendwie nicht getraut."
+    },
+    {
+      "end": 828130,
+      "speaker": "C",
+      "start": 823410,
+      "text": "War das dann gleich die klare Entscheidung, okay, es soll Softwareentwicklung sein?"
+    },
+    {
+      "end": 932370,
+      "speaker": "B",
+      "start": 828570,
+      "text": "Also nach McKinsey, Ich hatte irgendwie Panik und ich wusste, ich muss was anderes machen. Ja, letztlich. Ich habe dann auf Udemy mir so ein Video angeguckt und hat mir direkt zugesagt und hat Ach genau, ich hatte ja noch die diese Gründungsidee im Studium und hatte die dann anfangs noch weiter verfolgt und damals kam so dieses Machine Learning Thema wurde gerade so ein bisschen groß. Da gab es dann tensorflow und Keras und ich hatte da schon ein bisschen mit experimentiert und das war aber noch so offen. Ich habe da noch nichts, nichts erreicht. Und letztlich habe ich dann gedacht, okay, ich brauche jetzt irgendwas vorzuweisen, um mich vielleicht in die Richtung beruflich engagieren zu können, um irgendwo angenommen zu werden. Und habe dann letztlich mit Hilfe von verschiedenen Sensoren und mit dem Handy die Bewegung meiner Freundin und Freundin aufgezeichnet, während sie Sportübungen gemacht haben und daraus so ein maschinelles Netz entwickelt und gleichzeitig mir auch dazu iOS Entwicklung beigebracht, um dann so eine kleine App zu bauen, die, wenn man das Handy an die Schulter macht, Burpee Sit Ups oder Squats erkennt. Und als ich dann gemerkt okay, das funktioniert irgendwie, ist irgendwie auch ganz cool. Und zu dem Zeitpunkt war mir dann schon klar, okay, das könnte klappen. Ich hatte immer noch Zweifel, hatte aber damals schon einen berufstätigen Mitbewohner, der da Stefan, was glaubst du denn Niemand muss das, was er dann zu tun hat als Junior können, wenn er anfängt. Du musst einfach Bock haben. Das Potenzial muss klar sein. Und gib mal nicht allzu viel auf diese Punkte in irgendwelchen Bewerbungsanforderungen, die da stehen. Du hast auf der Arbeit Zeit, das zu lernen. So als Junge fand ich irgendwie cool, hat mir dann den letzten Stoß versetzt und dann habe ich mich beworben im Bewerbungsgespräch meine Burpees gemacht, das meinem Chef gezeigt und ab dann ging das Ganze, kam so ins Rollen. Und ich bin Gary Tino, ich bin euch bis heute dankbar, dass ihr mir diese Chance gegeben habt."
+    },
+    {
+      "end": 988340,
+      "speaker": "A",
+      "start": 933170,
+      "text": "Dein Mitbewohner ist ein sehr kluger Mensch. Also dieser Rat, den kann ich nur bestätigen. Man muss gar nicht alles können, sondern nur das Potenzial showcase und dass man wirklich Bock hat. Und so habe ich auch schon ganz viele Leute eingestellt. Viele Leute sagen auch, don't hire for skill, hire for attitude. Und ich glaube, das ist genau das, was du ansprichst. Du hattest aber gerade auch das Format mal erwähnt, wie du Software Engineering gelernt hast mit einem Video auf Udemy. Ich persönlich muss sagen, ich habe es mal ausprobiert. Ich habe mich mal durch so einen kompletten Kurs durchgequält. Ich habe auch was am Ende hingestellt bekommen, aber es ist irgendwie nicht die Art, wie ich lerne. Inwieweit denkst du denn, das Videoformat hat dir wirklich geholfen gegenüber Text Tutorials oder ähnliches? Also bist du ein Video Lerntyp oder bist du einer, oh, ich lese mir die Dokumentation durch, Denn für mich funktioniert diese Udemy Thematik gar nicht."
+    },
+    {
+      "end": 1054120,
+      "speaker": "B",
+      "start": 988340,
+      "text": "Ich glaube, dass es zwei Punkte gibt, die mich daran begeistert haben. Zum einen, es ging direkt los in diesem Tutorial, dass man was gebaut hat. Also man hat nicht schon wieder, also ich habe im Studium schon tausendmal versucht, mir das beizubringen. Man hat nicht schon wieder zum tausendsten Mal die For Schleife, weil Schleife und irgendwie Variablen gelernt, sondern es ging direkt los, was produktiv zu bauen. Und das hat mir extrem Spaß gemacht, weil man was gesehen hat. Und es gilt bei mir bis heute. Ich mag das, wenn man ein Ergebnis sieht als Unterschied zu vielleicht auch zu deiner Arbeitstätigkeit an dich. Ich glaube bei dir, du siehst nicht zu häufig ein buntes Ergebnis, wenn du programmierst und Codest wäre jetzt so meine Vermutung und es scheint dich ja trotzdem glücklich zu machen. Ich glaube, da besteht ein Unterschied zwischen uns und das kann man ja einfach akzeptieren. So, das war so die erste Erkenntnis. Und die zweite Erkenntnis war, dieser Tutor war extrem empathisch. Also der hat quasi meine eigenen Zweifel immer schon in dem Vortrag vorweggenommen und es kam immer zum richtigen Zeitpunkt. Es ist okay, wenn du hängst. Es ist okay, wenn du es glaubst. Du kannst das nicht. Das wird schon noch kommen und hat funktioniert. Das ist natürlich in dem Buch sehr viel schwieriger. Das wirkt deutlich trockener und da ist nicht die Möglichkeit, den Leuten noch mal kurz zwischen den leeren Halten einen netten Spruch mit auf den Weg zu geben."
+    },
+    {
+      "end": 1086020,
+      "speaker": "A",
+      "start": 1054830,
+      "text": "Du hast recht, ich sehe nicht so oft ein buntes Ergebnis. Ich muss aber auch zugeben, in allen visuellen Sachen bin ich nicht sehr gut. Ich kann dir sagen, das sieht gut aus. Ich kann dir aber nicht sagen, warum es gut aussieht. Ich habe mal diese ganzen UI und Farbregeln im Studium auch mal gelernt, aber ich bin da einfach nur sehr schlecht drin und deswegen kann ich keine uis machen. Deswegen bin ich zwischen der AI sehr dankbar. Der sagst du einfach nur OK, gib mir mal irgendwie so eine Art Frontend und mach mal bunt und mach mal schön und so weiter. Und die AI macht das ganz gut, weil ich habe dann die Hoffnung, die hat von ganz viel klugen UI Leuten gelernt, deswegen. Aber ne, da hast du recht."
+    },
+    {
+      "end": 1098890,
+      "speaker": "C",
+      "start": 1086330,
+      "text": "Wie lang war dieser Zeitraum zwischen deinem Praktikum und dann wirklich dem Job bzw. Der Bewerbung? Also es hört sich jetzt so irgendwie wie ein Monat an. Du hast da so schnell einen Kuss gemacht und hast dann irgendwie die App angefangen zu entwickeln."
+    },
+    {
+      "end": 1111050,
+      "speaker": "B",
+      "start": 1099690,
+      "text": "Ich glaube, es waren so drei, drei, vier Monate, die ich einfach teil. Aber ich meine, ich hatte nichts anderes. Wobei, warte mal. Ja doch, ich hatte vergessen. Ich hatte währenddessen meine Masterarbeit noch zu tun."
+    },
+    {
+      "end": 1113130,
+      "speaker": "C",
+      "start": 1112410,
+      "text": "Kleinigkeit."
+    },
+    {
+      "end": 1142190,
+      "speaker": "B",
+      "start": 1114570,
+      "text": "Das war tatsächlich auch noch ein ganz anderes Feld, Aber damit habe ich mir tatsächlich ziemlich leicht getan. Ich bin mathematisch, glaube ich, ziemlich stark und das war zur Thermodynamik von Axialturbinen. Es hatte überhaupt nichts damit zu tun. Das lief parallel noch, wobei ich da einfach auch zwei Monate ziemlich gepowert hatte und dann war das auch irgendwie durch. Ich glaube, ich hatte drei Monate dafür Zeit und hatte dann aber parallel schon eben angefangen mit dieser iOS Entwicklung und diesem Machine Learning Modell. Genau, also in Summe waren das vier Monate oder so, würde ich sagen."
+    },
+    {
+      "end": 1150710,
+      "speaker": "C",
+      "start": 1142190,
+      "text": "Und wie war dann die Bewerbung? War sie wirklich so einfach oder problemlos oder hatte dein Kollege recht? Wie hat sich's dann in der Realität entwickelt?"
+    },
+    {
+      "end": 1182360,
+      "speaker": "B",
+      "start": 1150710,
+      "text": "Ich habe mich, glaube ich, bei drei oder vier Agenturen beworben. Bei einer wurde ich direkt abgelehnt. Ich könnte mir vorstellen, weil einfach der akademische Verlauf einfach nicht da war, dass ich da rausgefallen bin durch Filter. Und dann bei zweien wurde ich angenommen und habe aber dann mich bei der ersten Agentur App Loft eben beworben. Die waren sehr positiv. Natürlich haben die mir auch gespiegelt, hey, klar hast du noch einiges zu lernen, aber du scheinst Bock zu haben. Und der Chef erzählt mir bis heute, wenn wir uns sehen, wie unfassbar cool er das fand, dass ich da dann im Werbungsgespräch mit meiner eigenen App da meine Burpees mache. Also ja, es war irgendwie dann doch einfach und straightforward."
+    },
+    {
+      "end": 1188120,
+      "speaker": "C",
+      "start": 1182360,
+      "text": "Das heißt, du würdest schon viel deiner App zurechnen, die du da quasi als Showcase mit hattest."
+    },
+    {
+      "end": 1229450,
+      "speaker": "B",
+      "start": 1188120,
+      "text": "Ja, auf jeden Fall. Also ein bisschen was muss man dann schon auch zeigen. Ich glaube, hätte ich jetzt jemanden, der sich bei mir bewirbt, fände ich es auch cool, wenn der zumindest ein kleines Projekt hat, um einmal sicherzustellen, dass das was für ihn ist oder für sie. Ich würde das jedem und jeder heutzutage raten, wenn du dich irgendwo bewirbst. Natürlich ist es cool, ein Studium zu haben, das ist auch ein Indikator, aber definitiv, das war die Voraussetzung. Ich glaube nicht, dass das so geklappt hätte. Hätte ich das nicht gehabt zu dem Zeitpunkt. Und es war ja, das Machine Learning Modell war vielleicht zu dem Zeitpunkt noch irgendwie einigermaßen beeindruckend. Ich glaube, heute wird er, das könnte ich mir vorstellen, auch nicht mehr so was hermachen, Aber es war auch keine krasse. Ui, es war ein Screen. Es ging einfach nur darum, schon mal reingeschnuppert zu haben. Ich glaube, das bringt immer was."
+    },
+    {
+      "end": 1245610,
+      "speaker": "C",
+      "start": 1230250,
+      "text": "Und war der Job dann besser als McKinsey? Also jetzt gerade in Hinblick auf diese dreizehn Stunden war das dann irgendwie angenehmer, weil es einfach weniger Stunden sind? War es inhaltlich interessanter. Also war das dann so, wie du dir es gedacht hast und erfüllend, so wie du es geplant hattest?"
+    },
+    {
+      "end": 1293560,
+      "speaker": "B",
+      "start": 1245610,
+      "text": "Auf jeden Fall. Also mein damaliger Chef meinte auch Hey, wir sind ja keine Wild West Agentur, wir arbeiten ja acht Stunden und das muss auch für alle so funktionieren. Also der Einstieg war total gnädig irgendwie. Ich habe da mit einem Senior Entwickler zusammen an der App gearbeitet und dann lief das irgendwie ein halbes Jahr und das war damals schon auch mit einer der wichtigsten Kunden. Und nach einem halben Jahr meinte der Ich glaube, du bist reif. Ab jetzt betreust du die App primär. Und diese Erfahrung zu Hey, du hast dann da eine App, die hatte zu dem Zeitpunkt auch schon tägliche Kunden oder so und du arbeitest an dieser App mit, du gestaltest das, du berätst den Kunden, was Features angeht. Das hat sich so schnell als positiv erwiesen. Ich bin bis heute froh, diese Kurve so gekriegt zu haben und habe Mama noch einen kleinen kalten Schauer über den Rücken. Läuft mir Schauer über den Rücken, wenn ich an die Zeit bei McKinsey denke."
+    },
+    {
+      "end": 1305800,
+      "speaker": "C",
+      "start": 1294360,
+      "text": "Und wann war das ungefähr? Mittlerweile muss man das ja wirklich einordnen seit Zeiten der AI, weil jedes Jahr so viel passiert. Und gerade wenn es dann um so Junior Positionen geht. Also wann bist du da eingestiegen?"
+    },
+    {
+      "end": 1313160,
+      "speaker": "B",
+      "start": 1305880,
+      "text": "Zwei tausend siebzehn war das. Also so drei Wann kam chatgpt vor drei Jahren, also fünf Jahre vor der großen AI Welle."
+    },
+    {
+      "end": 1354000,
+      "speaker": "A",
+      "start": 1313420,
+      "text": "Ich möchte jetzt nur noch mal ganz kurz für jemanden, der nicht aus der Softwareentwicklung kommt, für jemanden, der Softwareentwicklung oder Informatik nicht studiert hat, dann mit einem tensorfloor. Tensorfloor, tensorflow Machine Learning Model mit Hardware Sensoren auf einem Handy, Burpees und Squads zu entdecken, ist meines Erachtens nach kein Einsteiger Projekt. Also aktuell wüsste ich nicht, wie ich das baue. Ich habe noch nie etwas mit tensorflow gebaut. Ich habe schon mal eine App geschrieben, aber harten Respekt. Also ich denke besonders vor AI, muss ich sagen, Hut ab."
+    },
+    {
+      "end": 1366240,
+      "speaker": "B",
+      "start": 1354000,
+      "text": "Dankeschön. Ich nehme das Kompliment gerne ab. Einmal abschwächend noch für Leute, die sich damit beschäftigen. Ich habe Keras verwendet, das ist noch mal eine abstrahierte Wrapper um tensorflow macht es ein bisschen einfacher, aber trotzdem, Ja, ich fand es auch cool. Letztlich darf ich das auch so sagen."
+    },
+    {
+      "end": 1414380,
+      "speaker": "C",
+      "start": 1366240,
+      "text": "Ja auch mit Keras muss man das verstehen. Also das ist schon grundsätzlich die Konzepte und alles muss man trotzdem dahinter verstehen. Aber jetzt hat Andi schon in der Introduction eingeleitet, wir wollen ja auch über deine Management Fähigkeiten, wenn ich es mal so sagen darf, sprechen. Das heißt, wie du deine ganze Familie, die du ja dann auch noch erweitert hast danach, wenn ihr das richtig ausrechnen kann, ziemlich gleich mal danach, plus dein großes side Project, was du jetzt hier hast und natürlich auch deinen ganz klassischen Job. Also du bist mittlerweile nicht mehr bei App Loft, sondern du bist jetzt bei der Techniker Krankenkasse, wenn ich das richtig im Kopf habe. Ich noch in Deutschland war, war auch mal dabei. Also das Logo sagt mir sehr viel. Was machst du jetzt dort in deinem Brotberuf sozusagen?"
+    },
+    {
+      "end": 1439230,
+      "speaker": "B",
+      "start": 1414380,
+      "text": "Also eingestiegen bin ich als normaler Feature Entwickler für iOS und dann zwischenzeitlich habe ich ein bisschen DevOps Betreuung gemacht, eher so technisch abstraktere Themen, aber gemerkt, dass ich wieder zurück will in die UI und bin jetzt dabei bei der Entwicklung eines größeren Design Systems zu unterstützen, sodass quasi auch alle Produkte einheitlich werden in Bezug auf die Webprojekte. Genau, also wieder Pixel Schubser quasi, wie man manchmal abwertend sagt, aber mir macht es einfach Spaß."
+    },
+    {
+      "end": 1483690,
+      "speaker": "A",
+      "start": 1439310,
+      "text": "Inwieweit würdest du sagen, hat der Wechsel zur TK deinen Arbeitsalltag geändert? Denn ich meine, es sind zwei unterschiedliche Firmen, also eine Agentur primär Dienstleistungen, ich weiß jetzt nicht, wie groß Apploft ist, aber ich schätze es mal kleiner als die TK. Die TK würde ich fast sagen, ist ein gut etablierter Konzern als Krankenkasse, wahrscheinlich auch ein paar mehr finanzielle Mittel als so eine Agentur. Ich lehne mich jetzt einfach mal aus dem Fenster. Wie gesagt, ich habe wenig Recherche zu Applaudiert betrieben, aber es ist schwer, die finanziellen Mittel einer deutschen Krankenkasse zu schlagen. Was sind so die Hauptunterschiede? Und würdest du zum Beispiel Quereinsteigern eher sagen, geht erst in der Agentur oder geht direkt in einen Konzern?"
+    },
+    {
+      "end": 1528490,
+      "speaker": "B",
+      "start": 1483690,
+      "text": "Also zu den Unterschieden ist, dass ich mein Programmieranteil, Entwickelanteil deutlich kleiner ist als bei Apploft. Also bei einer Agentur, das muss man verstehen, geht es einfach viel auch um abrechenbare Stunden, damit das Ganze wirtschaftlich tragbar ist. Und ich würde schon sagen, dass ich da zu neunzig Prozent wirklich an Featuren gesessen habe und gebaut habe. Und daraus entspringt auch so ein bisschen die Ja, auf jeden Fall geht zu einer Agentur, gerade wenn ihr noch keine Familie habt, dann ist ja auch erstmal nicht so wichtig, wie viel man verdient. Du musst dich selbst versorgen im Zweifelsfall, bist vielleicht noch einen Ticken jünger, aber ich glaube, dass man in Agentur viel mehr lernen kann und auch an viel mehr Projekte reinschauen kann, als das in einem Konzern der Fall ist. Und natürlich macht mir meine Arbeit heute auch Spaß, aber ich will die Phase bei Apploft auf gar keinen Fall missen. Es war von Aufgaben, würde ich sagen, schon auch spannender und abwechslungsreicher."
+    },
+    {
+      "end": 1533250,
+      "speaker": "C",
+      "start": 1528810,
+      "text": "Und wie lange machst du jetzt, Monet? Also das große side Project nebenbei noch."
+    },
+    {
+      "end": 1540000,
+      "speaker": "B",
+      "start": 1533250,
+      "text": "Das kam dann zwei tausend zwei und zwanzig, war glaube ich im Januar. Der erste Kommission habe ich noch mal nachgeguckt, also jetzt dreieinhalb Jahre, da hattest."
+    },
+    {
+      "end": 1548560,
+      "speaker": "C",
+      "start": 1540000,
+      "text": "Du schon ein Kind, deinen normalen Code Beruf und dann hast du dir gedacht, ja, ist noch einiges an Zeit verfügbar, ich mache noch eine App nebenbei."
+    },
+    {
+      "end": 1572440,
+      "speaker": "B",
+      "start": 1548960,
+      "text": "Ja genau. Irgendwie war da gerade eine ruhige Phase. Als Eltern von zwei Kindern gibt es so den Satz, ein Kind ist kein Kind und das war schon, weil du ja noch in der Überzahl bist als Eltern. Das heißt, solange sich eine erwachsene Person mit dem Kind beschäftigt und die andere Person jetzt nicht für den Broterwerb unterwegs ist, hast du Zeit. Das heißt, aus meiner heutigen Perspektive hatte ich da quasi unendlich viel Zeit zur Verfügung. Dementsprechend hat es da gut reingepasst."
+    },
+    {
+      "end": 1577920,
+      "speaker": "A",
+      "start": 1572440,
+      "text": "Ich musste gerade so hart lachen. Als Elternteil mit einem Kind bist du noch in der Überzahl. Was ist das für ein Spruch?"
+    },
+    {
+      "end": 1591120,
+      "speaker": "B",
+      "start": 1578640,
+      "text": "Hört man oft. Also wenn das ist das erste, was eigentlich Eltern von drei Kindern sagen, wenn man sie darauf anspricht, wie der Wechsel ist. Naja, die sind jetzt mehr als du in unterschiedlichen Formulierungen. Das macht was aus, auf jeden Fall."
+    },
+    {
+      "end": 1600500,
+      "speaker": "C",
+      "start": 1591440,
+      "text": "Okay, ich werde es in Zukunft zu allen Eltern in meinem Freundeskreis sagen. Ein Kind ist kein Kind. Vor allem so als Außenstehender. Ohne Kinder kommt es sicher gut an."
+    },
+    {
+      "end": 1601380,
+      "speaker": "B",
+      "start": 1600500,
+      "text": "Direkt empathisch."
+    },
+    {
+      "end": 1609740,
+      "speaker": "A",
+      "start": 1601380,
+      "text": "Ja, den Spruch kannte ich, aber ich kannte noch nicht. Wir sind ja noch in der Überzahl. Also da muss ich zugeben, der ist wirklich gut."
+    },
+    {
+      "end": 1634890,
+      "speaker": "C",
+      "start": 1609740,
+      "text": "Wie hast du das dann konkret gemacht? Hast du dir da irgendwie fixe Zeiten einfach freigenommen, unter Anführungszeichen. Aber reserviert hattest du da immer irgendwie am Abend, in der Nacht, keine Ahnung, oder einfach immer, wenn du Zeit hattest zwischendrin. Man will ja doch irgendwie auch mit dem Kind Zeit verbringen, vermute mal. Also wo findet man dann diese Zeit Slots und die Energie auch noch mit so einem side Project anzufangen?"
+    },
+    {
+      "end": 1675030,
+      "speaker": "B",
+      "start": 1634890,
+      "text": "Also ich glaube, damals habe ich es maßgeblich dann in Abendstunden gemacht und ich hatte ja in keinster Weise ein Ziel. Also ich hatte ja noch keine Nutzer, das war ja noch nicht veröffentlicht, ich hatte keinen Druck. Dementsprechend hat es mir gereicht, ab und zu abends mal da ein Stündchen dran zu sitzen und brauchte irgendwie noch gar nicht so eine feste Routine oder so einen krassen starren Rhythmus, weil ich hatte ja nicht das Ziel, okay, in dreieinhalb Jahren willst du so und so viele Nutzer haben, sondern meine Intention war ja, du trackst gerne deine Finanzen, auch gerne manuell. Irgendwie gefällt dir nicht, was bisher unterwegs ist. Warte mal, du bist doch iOS Entwickler, warum baust du eigentlich nicht deine eigene App? Und dadurch startete das super entspannt und ohne mir groß Gedanken machen zu müssen, wann das eigentlich reinpasst."
+    },
+    {
+      "end": 1677510,
+      "speaker": "A",
+      "start": 1675030,
+      "text": "Also hast du primär dein eigenes Problem gelöst."
+    },
+    {
+      "end": 1684970,
+      "speaker": "B",
+      "start": 1677670,
+      "text": "Genau, Also ich hatte nicht das Ziel, primär, dass andere das nutzen sollen. Ich wollte einfach was haben, was mich glücklich macht und was für mich funktioniert."
+    },
+    {
+      "end": 1695730,
+      "speaker": "A",
+      "start": 1685210,
+      "text": "Denkst du auch, das ist wichtig, um die Energie neben deinem Beruf und neben deinem Kind noch irgendwie abends an den Tag zu legen? Weil ich meine, du könntest dich auch vor Netflix setzen."
+    },
+    {
+      "end": 1741600,
+      "speaker": "B",
+      "start": 1695730,
+      "text": "Das stimmt initial, ja. Mittlerweile ist der motivierende Faktor, glaube ich, eher die Rückmeldung, die ich von Nutzern und Nutzerinnen kriege. Und mittlerweile baue ich ja auch keine Features mehr, die ich selber verwende. Also die sollen für mich sinnvoll sein. Aber ich bin relativ einfach zufriedenzustellen, was so dieses Tracking angeht. Ich will wissen, wie viel ist am Ende des Monats übrig und in welchen Bereichen fallen die Ausgaben an. Also mittlerweile sind es nicht mehr nur meine eigenen Probleme, die ich löse, aber ich habe ja jetzt schon die nächsten Projekte irgendwie in Sicht und das sind alles Apps oder Arten von Apps, die ich selber jetzt schon verwende und wo ich mit Dingen unzufrieden bin. Ich glaube, ich würde nie etwas bauen, was ich nicht selber täglich oder mal mindestens wöchentlich oder mehrmals die Woche verwende, weil ab dann geht ihr wieder relativ viel Energie daran herauszufinden, was man bauen will. Und wenn du es aber selber brauchst, ergibt sich das Ganze automatisch durch die Nutzung."
+    },
+    {
+      "end": 1764600,
+      "speaker": "A",
+      "start": 1741760,
+      "text": "Und du nutzt deine App aktuell immer noch täglich. Ich frage mich gerade, wie sieht denn euer Setup zu Hause aus? Also ich meine, wenn du zwei Kinder hast oder wenn ihr zwei Kinder habt, sind beide berufstätig, sind beide Vollzeit berufstätig, ist einer nur berufstätig, vier Tage Woche, arbeitet vielleicht jemand nur zwanzig Stunden? Kannst du uns vielleicht da mal durchführen, wie, ich sage mal, euer globales Setup in der Familie aussieht?"
+    },
+    {
+      "end": 1781680,
+      "speaker": "C",
+      "start": 1764600,
+      "text": "Und vor allem, man muss ja auch bedenken, dass jetzt, wie du ja selber sagst, mehr Druck drauf ist, weil du hast ja gesagt, okay, ein Kind ist kein Kind und du hattest keinen Druck, aber jetzt hast du Features, die du bauen musst, scheinbar auch neue Projekte, ein Kind mehr, das heißt insgesamt zwei Kinder. Also jetzt ist es ja noch schwieriger, eigentlich alles unter einem Hut zu bringen."
+    },
+    {
+      "end": 1849590,
+      "speaker": "B",
+      "start": 1781840,
+      "text": "Genau, also jetzt ist es schon so, dass man ein bisschen mehr planen muss und auch mehr sprechen muss. Wann ist es eigentlich okay? Vielleicht kurz zum Setup. Also ich arbeite schon seit Apploft nach der Probezeit relativ schnell eine Vier Tage Woche beantragt, um einfach diesen fünften Tag zu haben, an dem ich völlig autonom Dinge bauen kann. Ich habe auch nur ein Projekt gehabt vor Monet, Es war ein bisschen nerdiger, dass da nicht funktioniert hat und habe aber zu dem Zeitpunkt gemerkt, klar, es ist irgendwie ein Tag in der Woche mehr frei, aber es sind halt fünfzig Prozent mehr Freizeit verglichen mit den zwei Tagen eines Wochenendes. Meine Frau arbeitet heute an zwei Tagen, das heißt, wir haben letztlich auch nur einen Tag, der sich überschneidet. Und wir merken auch schon, dass das ein Unterschied ist zu dem Setup vieler anderen Familien. Also dass es ganz schön wenig ist an prinzipieller Arbeitslast. Also wir kennen viele Familien, wo heute beide mindestens vier Tage arbeiten. Das Ganze lösen wir so ein bisschen auf durch, ich würde es nicht sagen Einschnitte, aber durch eine Priorisierung anderer Seite. Also wir sind beide nicht sonderlich prestigeträchtig. Großes Auto ist uns nicht wichtig, eine große Wohnung ist uns nicht wichtig, tolle Kleidung oder teure Kleidung ist mir nicht wichtig. Dementsprechend lösen wir das da ein bisschen, haben wir Zeit, indem wir in anderen Enden Dinge irgendwie als vielleicht nicht ganz so wichtig empfinden."
+    },
+    {
+      "end": 1857830,
+      "speaker": "A",
+      "start": 1849590,
+      "text": "Inwieweit teilt ihr euch die Kinderbetreuung auf? Weil ich meine, das ist ja auch noch ein großes Feld, besonders in Bezug auf, man will auch alles mitkriegen."
+    },
+    {
+      "end": 1973750,
+      "speaker": "B",
+      "start": 1857830,
+      "text": "Okay, also prinzipiell habe ich den Freitag frei, nenne ich es mal, für mich zur freien Verfügung und da bin ich zum einen natürlich morgen früh in der Früh die fertig zu machen und auch nachmittags abzuholen und zu beschäftigen zuständig. Am Dienstag arbeiten wir beide, da macht das, also da bringen wir sie gemeinsam in die Kitas und meine Schwiegermutter übernimmt dann den Nachmittag. Und an den anderen drei Tagen, also Montag, Mittwoch, Donnerstag, ist meine Frau prinzipiell verantwortlich, morgen fertig zu machen, wobei ich da meistens noch mit unterstützt und dann die Nachmittage so ein bisschen zu füllen und eigentlich mir auch den ein oder anderen Nachmittag zu ermöglichen, entweder noch an meinem Projekt was zu arbeiten oder Sport zu machen. Genau, wobei wenn man das dann übertreibt und ich dann Nachmittag gar nicht einbringe, ist man halt schneller in dem Moment, wo man die Kinder auch mal nicht mehr so viel sieht oder nur noch abends sieht, da spüre ich dann schon, bin ich eigentlich noch Teil dieser Familie oder habe ich mich schon wieder zu lange rausgenommen, sei es jetzt durch die, durch Lohnarbeit, durch Sport oder Zeitprojekt. Und ja, also es ist immer wieder, man ist immer wieder am Nachverhandeln, das ist prinzipiell ausgemacht, aber die Nächte sind ja manchmal unterschiedlich gut oder schlecht. Also man muss, glaube ich auch immer dann kurzfristig gucken, hey, für wen passt es eigentlich gerade und wie gut geht es der anderen Person eigentlich gerade. Das kriegt man oft hin, oft auch nicht. Also es knallt auch oft genug, ist glaube ich in jeder Beziehung so, in jeder Familie so. Hilft dann zu sprechen. Dauert manchmal ein bisschen länger, bis man die Zeit findet. Das ist nochmal der erhöhte Schwierigkeitsgrad, glaube ich, bei Familien mit Kindern, weil ja dann manchmal, selbst wenn es dann mal irgendwie stressig wurde oder es zu einem Streit kam, man ja auch im Zweifel mehrere Tage auch nicht so wirklich Zeit hat, das aufzulösen. Ja, die Momente gibt es, aber ich glaube, der Trick ist dann so ein bisschen zum einen sich das nicht allzu krumm zu nehmen und vor allem auch zu verstehen oder ich versuche mir das auch mal wieder zu sagen und ich komme auch immer wieder an den Punkt, ey, es sind ja nicht, bin ja nicht ich, der dann irgendwie doof war oder ein schlechter Mensch ist oder auch nicht meine Partnerin, sondern die Voraussetzungen sind einfach hart und das ein bisschen so auf die Umstände zu schieben und dann kommt man immer wieder an einen Moment oder an einen Punkt, finde ich, wo man sich so wieder zusammenrauft und das dann auch wieder funktioniert."
+    },
+    {
+      "end": 2001500,
+      "speaker": "A",
+      "start": 1973750,
+      "text": "Okay, das was ich gerade raushöre, ihr habt so eine Art selbst entschiedenes Schichtmodell, nennen wir es mal. Du nimmst den Tag, ich nehme den Tag. Also ich sag mal ein paar gewisse Grundregeln natürlich mit einer gewissen Flexibilität, die dann immer, du hast es neu verhandeln genannt, fand ich auch sehr schön, verhandeln. Also ihr sprecht einfach ganz offen drüber und was ich rausgehört habe, ist, dass ihr externe Hilfe habt durch die Schwiegermutter, die wohnt anscheinend nebendran oder in der."
+    },
+    {
+      "end": 2054670,
+      "speaker": "B",
+      "start": 2001500,
+      "text": "Nähe oder ähnliches in der gleichen Stadt. Mittlerweile wohne ich auch nicht mehr in Hamburg, sondern bei Hamburg in Buxtehude und die wohnt auch hier Dementsprechend, das macht einfacher und wir sind auch umgezogen letzten Winter, genau aus dem Grund, weil wir auch gemerkt haben, dass wir das brauchen. Also das ist eigentlich niemanden gibt, der so nah an uns dran und nah an den Kindern ist, wo das in einer gewissen Regelmäßigkeit funktionieren kann. Wir hatten noch so die Vorstellung, dass es vielleicht auch mit Freundinnen und Freunden funktionieren kann und ich glaube, das mag es auch in anderen Setups. Ich will das gar nicht klein oder schlecht reden, aber für uns kam so die Erkenntnis, ja, meine Schwiegermutter oder meine Schwiegereltern sind so die verlässlichsten Säulen, sind dann letztlich zurück in die Heimatstadt meiner Frau gezogen. Hätte sie sich, glaube ich, auch nie vorstellen können. Aber Kinder, ich hätte mir mittlerweile wohnen wir auch in einem Reihenhaus, das hätte ich mir früher auch nie vorstellen können. Also Kinder machen einen irgendwie auch pragmatisch, musst halt Lösungen finden, um da durchzukommen und dein Leben zu leben und dabei nicht verrückt zu werden."
+    },
+    {
+      "end": 2107720,
+      "speaker": "A",
+      "start": 2054670,
+      "text": "Okay. Nutzt die eigene Familie als Hilfestellung, was ja gut ist. Ich glaube, in anderen Familien kann man das vielleicht so, falls wir den Luxus hat von einer Kita oder ähnliches, von einer Tagesbetreuung, kann man das ja circa gleichsetzen natürlich, dass der finanzielle Aufwand bei einer Kita ein bisschen höher ist. Jetzt stelle ich mir natürlich die Frage, wie viel Zeit habt ihr eigentlich noch zu zweit ohne die Kinder und wie organisiert ihr das? Weil ich meine, du hast deinen Job, du hast dein side Project, ihr habt die Kinder, klar sind die Kinder irgendwann im Bett, aber du hast abends, setzt du dich ab und zu mal hin, programmierst oder sagst du, oh ne, nur freitags programmiere ich am side Project. Also hast du für dich selbst so ein Schichtsystem irgendwie etabliert und sagst, auch wenn die Hütte brennt, auch wenn ich negative Reviews im App Store bekomme, ich löse die Probleme nur freitags und meine Support E Mail Inbox ist offen, Freitag sechzehn bis neunzehn uhr."
+    },
+    {
+      "end": 2197640,
+      "speaker": "B",
+      "start": 2107720,
+      "text": "Also viel passiert am Freitagvormittag. Ja, der ist mir auch heilig. Allerdings, es kommt immer so ein bisschen auf die Dringlichkeit an. Ich hatte jetzt im August, ganz besonderer Fall, kam die Android App raus. Mir kommt die Android Entwicklung manchmal ein bisschen rougher vor als die iOS Entwicklung und ich hatte da dann zu Beginn relativ fiese Crashes in der App, sodass irgendwie, ich glaube, jedes zehnte Device war letztlich Bricked. Also bei Firebase, das ist das Backend System, das ich nutze, steht dann bei dem Crash so als Label dran, Repetitive und early Crash, was im Endeffekt heißt, wenn es sehr early ist, dass das Device gebrickt ist, der Nutzer und Nutzerin. Und da habe ich mich dann nachts schon auch mal aus dem Bett geschlichen, unter der Woche um halb zwei noch kurz den Fix geliefert und die Releases gemacht. Das muss aber natürlich die absolute Ausnahme bleiben, weil das geht ja ansonsten sehr schnell auf die Substanz. Und ansonsten bei Support Anfragen gewichte ich das auch, wenn Leute wirklich Blocker haben und nicht weiterkommen und ich die Frage schnell beantworten kann, dann schreibe ich häufig auch zwischen Tür und Angel kurz. Wenn es ein bisschen warten kann, verschiebe ich das entweder auch auf abends oder auf die Freitagmorgen. Genau, man muss dazu sagen, dass seit Mitte Anfang dieses Jahres auch beide Kinder vormittags in Betreuung sind und das hat auf jeden Fall noch mal enorm viel an Stress und Druck rausgenommen und einfach Zeiten geschaffen. Also meine Partnerin oder meine Frau hat quasi die Vormittage auch Zeit, auch Sport zu machen, den Haushalt zu schmeißen, sich zu erholen und das hat massiv Druck rausgenommen. Ich glaube, bis zu dem Zeitpunkt war es schon deutlich häufiger am Knirschen und seitdem ist es doch wieder ein bisschen entspannter."
+    },
+    {
+      "end": 2234510,
+      "speaker": "C",
+      "start": 2197800,
+      "text": "Und wie schaffst du das jetzt auch, wenn jetzt da irgendwo Bugs und so reported sind, die nicht ständig im Kopf mitzutragen? Weil das ist ja, ich kenne es ja auch als Selbstständiger, man kann viel schlechter abschalten als bei einem klassischen Job. Man trägt diese Probleme ja ständig mit sich mit. Wenn du dann mit deinen Kindern irgendwie am Maltisch sitzt und du hast im Kopf aber nur irgendwie die Bugs oder du würdest dich gern mit einer Frau irgendwie, keine Ahnung, treffen und irgendwas gemeinsam machen zu zweit und du hast ständig die Sachen im Kopf. Hast du da irgendwie eine Taktik, wie du das wegbekommst oder akzeptierst du es einfach oder hast du das Problem gar nie?"
+    },
+    {
+      "end": 2305720,
+      "speaker": "B",
+      "start": 2234510,
+      "text": "Also in dem speziellen Fall habe ich es ja nicht geschafft, weil ich mir dachte, okay, die App ist jetzt neu in dem Store draußen und ich habe auch gemerkt, wie die eins Sterne Bewertungen eintrudelten, völlig zu Recht. Und da habe ich ja dann quasi mit jeglicher selbst auferlegter Regel gebrochen und bin halt mitten in der Nacht aufgestanden, habe das gelöst. Aber was mir hilft und das war mir vorher auch nicht bewusst, jede App hat Fehler. Es gibt letztlich nennenswerten oder ab einer gewissen Komplexität gibt es meiner Meinung nach nicht mehr fehlerfreie Software. Es wird immer Edge Cases geben und das muss man, glaube ich, akzeptieren. Und es gibt auch ab einer gewissen Nutzerzahl, glaube ich, nicht mehr so etwas. Zumindest lese ich das auch auf Reddit oder wenn ich da irgendwo andere Blogbeiträge lese, wie Crash freie Apps. Also du hast dann irgendwie eine Verfügbarkeit, eine Zuverlässigkeit der App irgendwie von neun und neunzig komma neun Prozent, Das ist schon sehr gut. Aber um auf diese ein hundert Prozent zu bekommen, musst du extrem viel Zeit investieren bzw. Manchmal hast du die Kontrolle gar nicht, weil dir das System drunter weg crasht. Und da hilft sich einfach auch mal locker zu machen. Auch die Ansprüche dürfen da nicht ins Unermessliche steigen. Es ist okay, wenn deine App auch mal Fehler hat und wenn die zu nervig sind, dann musst du die natürlich irgendwann lösen. Aber die Welt wird nicht untergehen, wenn das noch ein, zwei, drei Tage länger dauert oder auch mal erst nächste Woche passiert. Ich glaube, das muss man einfach hinnehmen."
+    },
+    {
+      "end": 2326280,
+      "speaker": "C",
+      "start": 2305720,
+      "text": "Und annehmen, Aber jetzt vielleicht gar nicht unbedingt, wenn der Druck so hoch ist. Also mir persönlich geht es auch oft so, wenn ich einfach nur neue, coole Features denke oder wie könnte jetzt irgendwas realisieren, dass ihr dann oft abgelenkt bin, auch wenn ich mit Leuten sprich oder so oder Also müssen gar nicht Kinder sein, das kann alles beliebige sein. Hast du so etwas auch? Kennst du dieses Problem?"
+    },
+    {
+      "end": 2332680,
+      "speaker": "B",
+      "start": 2326600,
+      "text": "Ja, auf jeden Fall. Also ich war schon mein ganzes Leben lang ein Träumer und genau, ist eigentlich."
+    },
+    {
+      "end": 2335400,
+      "speaker": "C",
+      "start": 2332680,
+      "text": "Immer so das Du meinst, das wissen eh alle, dann ist es kein Problem."
+    },
+    {
+      "end": 2381970,
+      "speaker": "B",
+      "start": 2335640,
+      "text": "Naja, es ist ja vor allem auch nicht angenehm. Aber genau. Also ich würde schon sagen, dass du fünfzig Prozent meines Hirns in den meisten Situationen, je nachdem wie intellektuell fordernd die Situation ist, immer an irgendwas knabbern oder kauen an irgendeine Aufgabe. Und ich glaube, dass mein Autopilot, der dann quasi das Sozialverhalten auf der anderen Seite übernimmt, relativ gut funktioniert und dass es dann auch nicht sonderlich oft auffällt. Aber ich glaube halt auch nicht, dass es nicht auffällt. Und ich muss mich dann immer zusammenreißen und dann auch wieder sagen, hey, bleib jetzt hier im Moment, leg im Zweifelsfall das Handy weg, wenn dann doch mal die nächste Support Anfrage eintrudelt. Fokussiere dich halt. Das begleitet mich schon die letzten, eigentlich mein Leben lang. Weiß auch nicht, ob das weggeht. Ich habe schon das Gefühl, je ausgeglichener ich bin, je besser ich geschlafen habe, je mehr Sport ich gemacht habe, desto leichter fällt mir das, als wenn ich irgendwie aufgekratzt bin. Aber auch da, ich glaube, es ist irgendwie auch normal abzuschweifen."
+    },
+    {
+      "end": 2418350,
+      "speaker": "C",
+      "start": 2381970,
+      "text": "Also bei mir, wenn ich, wenn ich von mir zumindest spreche, dann hat bei mir auch die Erfahrung einfach viel gemacht. Man gewöhnt sich daran und früher, wenn ich irgendwo einen Kunden E Mail oder einen Kundenanruf hatte, den ich nicht angenommen habe, dann habe ich schon möglichst schnell den zurückrufen und möglichst schnell eine E Mail beantworten. Und mittlerweile ist es mir einfach egal, weil ich denke, es ist komplett egal, wenn der zwölf Stunden später seine Antwort bekommt. Also das ist normal nie so ein großes Problem und da gewöhnt man sich dran. Vielleicht ist es bei dir dann im Endeffekt auch so, wenn du eben sagst, die Crashes sind dann gar nicht so schlimm, die gehören einfach dazu. Also man lässt sich weniger aus dem Konzept bringen."
+    },
+    {
+      "end": 2468490,
+      "speaker": "B",
+      "start": 2418350,
+      "text": "Das auf jeden Fall. Und das Gute an der App, die schon ein bisschen länger draußen ist, sie ist ja auch ein Stück weit battle proof. Also was ich heute sagen kann, wenn Leute Fehler entdecken oder glauben, Fehler entdeckt zu haben, dann ist das zu neunzig Prozent sind es in dem Sinne keine harten Fehler oder vielleicht sogar noch zum höheren Prozentsatz, sondern es war vielleicht einfach nicht verständlich genug und vielleicht muss ich da noch ein bisschen was an der UX drehen. Aber wenn ich heute eine Nachricht Hey, ich habe gerade die App aufgemacht, alle meine Daten waren weg, dann ist es meistens irgendwie, dass noch irgendein Filter aktiviert war und die Leute vergessen, den Filter zu löschen. Dann weiß ich, okay, es ist in dem Sinne kein schlimmer Fehler. Vielleicht muss ich noch ein bisschen besser die UX oder die UI gestalten, damit Leute nicht mehr reinlaufen in diese Denke und diese Probleme gar nicht mehr existieren. So auf Nutzer oder Nutzerinnenseite. Genau. Aber die Entspannung kehrt ein. Stimmt schon. Je öfter so was passiert und je mehr du an deinem Produkt entwickelst und je besser du das auch irgendwie gestaltest."
+    },
+    {
+      "end": 2483540,
+      "speaker": "A",
+      "start": 2468730,
+      "text": "Aus der Reliability Perspektive möchte ich kurz sagen, crashende Apps sind schlimm und crash die mehrmals, bin ich auch nicht mehr dein Haushaltsbuch Nutzer. Nur um da jetzt mal die andere Sichtweise reinzustreuen."
+    },
+    {
+      "end": 2510660,
+      "speaker": "C",
+      "start": 2483860,
+      "text": "Ja, aber Moment, wenn das letzte null komma drei Prozent, das kein Beispiel mehr, aber wenn es die letzten null komma drei Prozent sind, die da auf extrem alten Android Versionen rumspringen und die crashen, dann kannst du es vielleicht auch akzeptieren, wenn die einfach nicht mehr deine User sind. Also Andi, wenn du Also es passiert im Andi nicht, weil der ist immer auf dem neuesten Premium iPhone, whatever, schlag mich tot. Wobei das vielleicht dann auch wieder Schwierigkeiten macht, die neueste Passion."
+    },
+    {
+      "end": 2537450,
+      "speaker": "A",
+      "start": 2511290,
+      "text": "Man kann sich jede Situation schönreden. Wolfgang Das wissen wir inzwischen. Jetzt haben wir gerade schon über die schwierigen Momente gesprochen, über den mentalen Load und wo man jetzt eine mentale Kapazität hinsteckt. Gibt es denn auch Momente, wo du okay, vielleicht ist das hier alles doch eine ganz schlechte Idee, vielleicht ist das alles ein bisschen too much. Vielleicht sollte ich das Projekt einfach pausieren oder wo du irgendwie ein schlechtes Gewissen gegenüber der Familie oder vielleicht sogar dem eigenen Projekt hast oder Ähnliches?"
+    },
+    {
+      "end": 2660630,
+      "speaker": "B",
+      "start": 2538000,
+      "text": "Also prinzipiell nicht, weil ich glaube, dass mir eigentlich die Arbeit daran dann doch irgendwie mehr Energie gibt, als sie zieht, weil sie ein Bedürfnis erfüllt, das ich ansonsten nicht so wirklich gestillt kriege. Und zwar weder in der Arbeit noch mit meinen Kindern. Und das ist so dieses Bedürfnis nach Autonomie. Ich arbeite in einem Konzern und natürlich auf kleinster Ebene kann ich die Implementierung bestimmen, die Umsetzung bestimmen, aber ich kann nicht die große Richtung vorgeben. Könnte ich vielleicht, wenn ich mich nur hoch genug arbeite. Aber da bin ich glaube ich auch nicht der Mensch, für mich groß voranzuschreiten. Und bei meinen Kindern geht es manchmal, Aber die haben halt auch ihren eigenen Kopf und deren Ansprüche muss ich natürlich mitbedenken und die sind noch relativ klein. Die sind manchmal gar nicht so gut darin, meine Ansprüche mitzubedenken. Wir arbeiten dran. Aber das Geile einfach an so einem privaten Projekt oder einem side Project ist, ich muss nur mit mir alleine in meinem Kopf mir einig werden und kann das dann einfach entscheiden. Und das ist ein unfassbar beflügelndes, befreiendes Gefühl. Ich diese diese Autonomie, das ist mir jetzt auch aufgefallen die letzten Jahre ist mir einfach wichtig und ich kann die auch. Ich kann das nicht mehr weg weglassen. Dafür ist mir das macht mir das zu viel Spaß. Und wenn du dann noch jeden Morgen aufwachst und dir fünf bis zehn Leute eine nette Mail geschrieben haben oder eine Rezension hinterlassen haben, wie dankbar sie dir sind, ist einfach nur geil. Aber trotzdem gibt es natürlich die Momente und Phasen. Letzten Winter war so eine Phase, wir waren gerade umgezogen, es war viel im Haus zu tun. Unser jüngeres Kind war noch nicht in der Kita, das ältere Kind wurde gerade eingewöhnt. Da muss man dann schon auch mal irgendwann geht gerade nicht und dann pausiert das auch für ein bis zwei Monate und das ist manchmal hart, da baut sich auch so ein gewisser Druck auf, gerade wenn auch weitere Anfragen kommen. Aber das kann ich dann in dem Moment nicht ändern. Also ich für mich persönlich sehe das so, das ist auch einfach notwendiger Schritt im im Erwachsen werden, dass man das einfach auch aushält. Es ist halt nicht alles immer sofort zu erreichen und du kannst ja nicht mehr als das zu akzeptieren. Und klar ist, die Familie geht dann immer vor. Also ich versuche da ja nichts schleifen zu lassen, sondern da auch mein Bestes zu geben und mich einzubringen."
+    },
+    {
+      "end": 2708440,
+      "speaker": "A",
+      "start": 2660790,
+      "text": "Ich kann zustimmen, was das Gefühl von Feedback oder positivem Feedback angeht. Ab und zu bekommen wir auch die eine oder andere E Mail hier im Podcast und auch ab und zu mal Kaffee gespendet und dann schreiben Leute, was denn diese Episoden mit denen machen. Auf der einen Seite teilweise haben Leute Job gefunden, teilweise kriegen die sehr viel Inspiration, teilweise hat es dann auch zu einer Gehaltserhöhung geführt, weil sie Sachen angewendet haben oder ausprobiert haben. Und das muss ich zugeben, da bin ich, bin ich voll bei dir. Jetzt habe ich mal eine sehr persönliche Hat deine Partnerin, deine Frau ebenfalls ein Zeitprojekt oder sehr hohe Ambitionen an ihren Job oder ähnliches? Also nimmt sie sich etwas ähnliches raus, so wie du mit deinem, mit deiner App?"
+    },
+    {
+      "end": 2782960,
+      "speaker": "B",
+      "start": 2709160,
+      "text": "Nein, also war immer wichtig zu arbeiten und es hat ja auch eigentlich meinem ersten Kind schon getan nach zwei, drei Monaten, Aber es war schon immer klar, nicht weil das klassische Rollenverteilung klar ist oder vorgegeben ist, sondern wir haben es natürlich auch besprochen und darüber diskutiert, dass sie eher zurücksteckt, was Arbeitszeiten angeht. Und ich habe auch nicht das Gefühl, dass es ein großes Problem für sie ist. Ich meine, sie arbeitet als Physiotherapeutin und da muss man auch mal sagen, Physiotherapie in Vollzeit ist ein ganz schöner Knochenjob. Ich glaube, das ist für uns als Entwickler und Entwicklerinnen gar nicht so vorstellbar. Aber da ist halt die Kaffeepause nicht so wirklich eingeplant. Dementsprechend glaube ich, war sie auch immer froh, da die Freiheit zu haben, nicht jetzt fünf Tage durcharbeiten zu müssen. Gerade habe ich erzählt, sie arbeitet zwei Tage die Woche. Sie könnte sich schon vorstellen, auch noch mal auf drei Tage hoch zu stocken, hat aber glaube ich auch keinen Druck Und ich glaube, ein Gedanke, der schon durch die Gegend schwebt oder im Kopf manchmal existiert, ist, sich auch irgendwann mal selbstständig zu machen oder entweder mit der mit der Physiotherapie. Ich fände es auch cool, wenn sie einen Schuhladen für Kinderfüße aufmacht. Also es gibt da diverse Ideen. Sie ist aber auch erst ein und dreiig und ich glaube, dass man noch ganz viel Zeit hat. Also das Leben, ich weiß nicht, wie lange wir arbeiten müssen. Ich weiß auch gar nicht, wie das in Österreich ist. Aber du und Andi, wir müssen ja wahrscheinlich, ich und Andi müssen wahrscheinlich bis siebzig mal mindestens arbeiten."
+    },
+    {
+      "end": 2785120,
+      "speaker": "C",
+      "start": 2782960,
+      "text": "Da ist noch, es ist bei uns sicher auch so."
+    },
+    {
+      "end": 2799280,
+      "speaker": "B",
+      "start": 2786160,
+      "text": "Also ich habe das Gefühl, es ist noch ganz schön viel Zeit Und ich glaube, da ist jetzt kein allzu großer Druck da. Und ich glaube, dass sie mir das total gönnt und auch merkt, was es mit mir macht. Also ich war noch nie in meinem Leben so begeistert von etwas. Und das findet ihr, glaube ich, einfach schön, das zu sehen."
+    },
+    {
+      "end": 2876730,
+      "speaker": "A",
+      "start": 2799440,
+      "text": "Der Hintergrund dieser Frage ist, ich habe mich sehr auf diese Episode gefreut. Ich habe mit meiner Frau darüber gesprochen, dass wir diese Episode machen und dass das auch so ein Thema ist, was wir aus der Community oft als Frage bekommen, aber nicht beantworten können. Und fing so ein bisschen bei meiner Frau an zu brodeln. Und weil sie sagte, wir sollten doch mal eine Mutter befragen, anstatt die Sichtweise des Vaters zu erzählen, was wir jetzt hier in diesem in diesem Podcast tun. Und wie ist denn die Sicht der Mutter auf die Dinge? Denn ihre Begründung, bei Vätern findet man es immer so toll, wenn sie alles unter einen Hut bekommen und Mütter gelten sofort als Rabenmütter, wie zum Beispiel, wenn sie durch hohe Ambitionen an den Job legen oder auch ein, ich sag mal, side Project haben, fand ich ganz gut die Sichtweise. Deswegen hatte ich da auch gefragt, okay, inwieweit sieht das, sieht das bei euch? Es ist keine Kritik an euch, sondern ich wollte nur diese Kritik meiner Frau dann auch mal in den Podcast bringen, weil ich glaube, so was ähnliches habe ich von Carolin Kebekus vor kurzem auch auf Social Media gehört, denn sie ist ja Comedian, als Comedian mehr oder weniger selbstständig, ist, glaube ich, gerade vor gar nicht allzu langer Zeit Mutter bekommen und kriegt deswegen auch gerade relativ viele Hasskommentare, weil sie halt jetzt schon wieder auf der Bühne steht. Und Comedy macht und auch dieses Rabenmütter Problem dann anspricht."
+    },
+    {
+      "end": 2911290,
+      "speaker": "B",
+      "start": 2877370,
+      "text": "Ich glaube, der typische Satz, den dann Frauen häufig zu hören kriegen, ist eher, ja, und wie machst du das mit den Kindern? Ich glaube, das Wort Rabenmütter fällt gar nicht, ist gemeiner und subtiler fast noch ein bisschen dieser Nebensatz. Tut mir auch leid. Was ich mir einfach vornehme, ist, ich meine, Sexismus ist eine fiese Sache. Man beschließt ja nicht, heute kein Sexist mehr zu sein, sondern man kann ja jeden Tag nur ein bisschen mehr versuchen, darauf zu achten und einfach auch auf die Formulierung zu achten und das versuchen zu tun und dann irgendwie das Ganze irgendwie den Raum zu schaffen, dass auch Mütter da kein schlechteres Gewissen haben, mehr haben müssen. Aber ich kann mir vorstellen, dass das noch mal deutlich anstrengender ist und dass es auch irgendwie kräftezehrend ist, ab und an dann so einen Kommentar gedrückt zu bekommen."
+    },
+    {
+      "end": 2956820,
+      "speaker": "C",
+      "start": 2911290,
+      "text": "Ich glaube auch, dass es, Und jetzt bekomme ich vielleicht Probleme mit deiner Frau, Andi, aber ich glaube, dass das auch, wie du richtig sagst, Stefan, großes Problem ist, wenn man ständig Frauen Wie schaffst du denn das? Wie bringst du es unterm Hut? Und wir hatten in Episode ein hundert zwei mit der Melanie gesprochen über ihren Quereinstieg in die Informatik und sie ist auch Mutter und wir haben damals, glaube ich, das auch diskutiert im Vorfeld auch mit ihr und haben uns dann entschlossen, eben genau nicht diese Familienschiene aufzumachen, weil es eben so dieses klassische Klischee ist, du bist doch Mutter, du musst dich um die Kinder kümmern. Wie schaffst du das überhaupt dann noch das Ganze und dich in ein neues Feld einzuarbeiten in die Informatik in dem Fall? Also es kann schon von der anderen Seite dann natürlich auch ein Problem sein, aber ganz allgemein wäre es natürlich sicher auch eine interessante Sichtweise jetzt zum Beispiel."
+    },
+    {
+      "end": 3041870,
+      "speaker": "B",
+      "start": 2956820,
+      "text": "Von deiner Frau, Stefan Auf jeden Fall. Also ich habe zum Beispiel bei meinem ersten Sohn habe ich ein Jahr Elternzeit genommen, wobei ich da drei Tage in Teilzeit gearbeitet habe und bei meiner Tochter jetzt bei meiner jüngeren Tochter, habe ich auch noch mal ein Jahr wirklich Elternzeit genommen. Also ich war dann einfach dieses komplette Jahr auch raus bei meinem Angestelltenjob und ich bin froh, eine Frau kennengelernt zu haben, die das auch einfordert. Also die lässt mich da auch nicht raus. Und das finde ich irgendwie schön, weil ich merke ja, was ich für eine Beziehung und Bindung zu meinen Kindern habe. Ich glaube, tatsächlich ist meine Frau immer noch erste Bezugsperson, aber ich will nicht so ein Wochenendvater sein, der dann am Wochenende sich mal kurz die Kinder schnappt und nur aufregende Dinge tut. Das würde mich nicht glücklich machen. Ich weiß, es gibt andere Lebensumstände und ich glaube, man muss auch immer mitbedenken, dass wir als Softwareentwickler auch gut verdienen und dazu auch manchmal noch mehr möglich ist an Aufteilung der Arbeit. Ich habe das Gefühl, wenn der Nettoverdienst einmal geringer ist, dann wird das manchmal auch so eine ganz krasse finanzielle Frage und auch eine Frage von Effizienz. Wie schafft man es eigentlich noch die Miete zu bezahlen und gleichzeitig die Kinder zu betreuen? Das Problem haben wir nicht, weil meine Frau ist Physiotherapeutin, sie verdient natürlich ein bisschen weniger und dadurch, dass mein Grundgehalt irgendwie so hoch ist, kann ich halt auch ein bisschen runtergehen mit der Arbeitszeit oder auch mal in die Elternzeit nehmen. Also ich finde, da kommen auch ganz schnell noch mal andere Fragestellungen ins Spiel, wenn man eigentlich überlegt, wie schaffen wir das als Familie eigentlich was zu essen auf dem Tisch zu haben, die Miete zu bezahlen und gleichzeitig irgendwie noch beide in Kontakt mit unseren Kindern zu stellen. Ich finde das eine ganz schön komplexe Frage, aber ja, ich kann die Einwände deiner Frau auf jeden Fall trotzdem gut."
+    },
+    {
+      "end": 3080850,
+      "speaker": "C",
+      "start": 3041870,
+      "text": "Verstehen, auch ganz allgemein gesprochen. Ich glaube, wir probieren das auch immer, aber könnten das noch mehr probieren, einfach auch mehr Stimmen von Frauen zu bekommen jetzt bei uns im Podcast. Und vielleicht, wenn man wirklich konkret so ein Thema als Gesamtkomplex sieht und mal bespricht, dann könnte ich mir das gut vorstellen. Aber sonst diese Seitenfrage, wenn man eigentlich über ein anderes Thema Schaffst du das mit den Kindern und mit der Familie, finde es sowieso immer so eine Frage, ob das eigentlich in die richtige Richtung geht, egal wem man das jetzt fragt. Aber vielleicht noch zum Kontext, Wie viel Zeit arbeitest du denn gesamt? Würdest du sagen, wenn du jetzt deine ganzen side Project mitrechnest und den normalen Job?"
+    },
+    {
+      "end": 3087770,
+      "speaker": "B",
+      "start": 3080850,
+      "text": "Also ich habe mein normaler Job sind dreiig Stunden und dann es geht wahrscheinlich schon so Richtung vierzig, fünf und vierzig Stunden dann in Summe würde ich sagen."
+    },
+    {
+      "end": 3092010,
+      "speaker": "C",
+      "start": 3087770,
+      "text": "Okay, aber hält sich jetzt in Grenzen und ist vergleichbar mit einem anderen Fulltime Job."
+    },
+    {
+      "end": 3131800,
+      "speaker": "B",
+      "start": 3092010,
+      "text": "Ja, auf jeden Fall. Und das ist für mich auch so ein bisschen der Druck, der Trick, mir da gar keinen Druck zu machen. Also meine App ist kostenlos. Wer soll denn was fordern von mir? Die Leute haben ja eigentlich, den Leuten bleibt ja nichts viel übrig, außer mir dankbar zu sein oder die App nicht zu nutzen. Aber ich kann das ja so gestalten, wie ich will und auch so viel Zeit reinstecken, wie ich will und auch die Geschwindigkeit bestimmen, wie ich will. Wenn man da irgendwie seine Erwartungen irgendwie sagen, klein hält, aber realistisch hält. Was soll passieren? Ich kann ja jederzeit sagen, also ich glaube, ich bin an einem Punkt, wo ich nicht sage, ich drop das Ganze, dafür sind es dann doch zu viele Nutzer und es freut mich auch irgendwie. Aber ich kann jederzeit sagen, ich reduziere das ein bisschen oder mach gerade nur noch Maintenance und baue eben keine krassen neuen Features."
+    },
+    {
+      "end": 3152600,
+      "speaker": "C",
+      "start": 3132040,
+      "text": "Die Frage ist ja, schafft man das dann für sich selbst zu entscheiden, dass man das Projekt aufgibt oder weniger Zeit investiert oder fühlt man sich eben so attached und ist fast gezwungen oder getrieben, dann weiterzuarbeiten? Also ich glaube, es geht ja auch darum gar nicht, was eigentlich draußen erwartet wird, sondern was man dann von sich selbst erwartet und was man dann am Ende auch macht."
+    },
+    {
+      "end": 3221700,
+      "speaker": "A",
+      "start": 3152600,
+      "text": "Was die Frauen oder Partner Thematik angeht. Du hast ja auch schon gerade erwähnt, okay, ihr sprecht ab und zu mal über Selbstständigkeit und Schuhladen auch zu machen und so weiter. Das klingt dann also schon eher in die Richtung, als dass ihr da offen drüber redet. Aber du hattest gerade auch einen Punkt angesprochen, den ich ganz interessant Elternzeit. Viele Leute, die noch keine Kinder haben und oh, ich habe ja bald ein Jahr Elternzeit oder zwei, drei Monate oder wie viel sie auch immer nehmen, denken, oh cool, dann habe ich endlich Zeit zu programmieren, dann habe ich endlich Zeit, meine side Project zu machen und Ende von Lied ist dann oft oh ne, die Elternzeit, die ging komplett drauf, da hatte ich ja noch weniger Zeit als gar nichts. Klar, weil vielleicht Leute, die das erste Mal ein Kind bekommen, sind dann vielleicht müssen erstmal in die Rolle, wie soll man sagen, in die Rolle wachsen. Wie war das bei dir? Hattest du auch gesagt okay, Elternzeit, wow, Freizeit, ich kann so viel machen oder sagst, ne, die gehen komplett für die Familie drauf. Also was würdest du First time Parents in diesem Fall vielleicht empfehlen, den Gedanken direkt wegzuschmeißen, dass man in der Elternzeit wirklich Zeit für so ein side Project hat oder dass man gerade die Zeit nutzen sollte."
+    },
+    {
+      "end": 3287480,
+      "speaker": "B",
+      "start": 3221940,
+      "text": "Jetzt sind wir wieder bei dem lustigen Spruch von Anfang mit der Überzahl. Also ich glaube, bei der ersten Elternzeit, da habe ich zwar noch drei Tage gearbeitet, aber es war dann ja schon so, dass wir auch überschneidende Elternzeit hatten und auch Tage hatten, wo wir beide frei hatten. Und da kam wir tatsächlich manchmal Punkt, wo wir uns dachten, naja gut, also sitzen wir gefühlt zu zweit um das Kind herum, da gab es diese Freiheiten, diese Freizeit dann oder diesen Raum schon mehr. Und als dann unser zweites Kind kam, würde ich sagen, eher weniger, weil bis das dann alles eingegroovt war, die Nächte wieder gut waren, da war dann auch schon ein halbes, dreiviertel Jahr irgendwie rum, bis das irgendwie halbwegs gut funktioniert hat. Da habe ich mir vielleicht ein bisschen, hätte ich mir mehr gewünscht oder mehr vorgestellt im Vorhinein und irgendwie ging dann die Zeit doch ganz schön schnell rum. Aber es war natürlich entspannter, als wenn ich zu der Zeit hätte arbeiten müssen. Und ich glaube, meine Frau hat auch bei der zweiten Elternzeit auch erst ab dem dritten oder vierten Monat wieder angefangen zu arbeiten. Das heißt, wir hatten auch da einen Zeitraum, wo wir beide da waren, aber die ersten drei Monate sind immer noch die wackeligsten, würde ich sagen. Also ich kann es im Nachhinein nicht mehr genau auseinanderdividieren, wie viel dann wirklich anfiel, aber es war weniger als gedacht an freier Zeit."
+    },
+    {
+      "end": 3298040,
+      "speaker": "C",
+      "start": 3287480,
+      "text": "Jetzt könnt ihr natürlich ketzerisch auch einwerfen, es heißt ja auch Elternzeit und nicht Programmierzeit oder so. Also du bekommst ja die Zeit eigentlich, um dich um Kinder zu kümmern und nicht um deine Software, dich zu kümmern."
+    },
+    {
+      "end": 3302440,
+      "speaker": "B",
+      "start": 3298120,
+      "text": "Auf jeden Fall. Ja, bin ich schon auch von ausgegangen, aber man darf ja Wünsche haben."
+    },
+    {
+      "end": 3314240,
+      "speaker": "C",
+      "start": 3303240,
+      "text": "Ja, stimmt. Wobei man könnte es auch so verstehen, Elternzeit heißt ja Zeit für die Eltern und dann könnte man das wieder auf Freizeit bzw. Auf Programmierzeit ummünzen. Also je nachdem, wie man das Wort liest."
+    },
+    {
+      "end": 3372360,
+      "speaker": "B",
+      "start": 3314240,
+      "text": "Ja, und ich finde, also klar haben Kinder irgendwie Ansprüche oder auch essentielle Ansprüche, die erfüllt sein müssen, wie Schlaf, Hunger, was weiß ich. Aber ich glaube, eine wichtige Kenntnis für mich als Vater war und es geht jetzt heute, wo die Kinder schon einen Ticken älter sind, besser als dann, wenn die noch erst mehrere Monate alt sind. Du kannst dich halt deine eigenen Ansprüche und Wünsche nicht komplett verleugnen. Also du bist ja immer noch ein Mensch und das macht dich ja auch ein Stück weit kaputt, wenn du, wenn du also nach so einem Stunden Tag und da habe ich Respekt vor jeder Mutter oder vor jedem Vater, die dann alleine den Tag mit ein und zw Kindern verbringt, das ist süß, aber jetzt intellektuell nicht sonderlich stimulierend mit einem ein oder zweijährigen Kind rumzuhängen und du brauchst Momente und ist völlig egal, ob meine Frau das ist oder ich das bin, wo du einfach was anderes tust, wo du rauskommst. Und genau und das ist, glaube ich, der Trick, sich das irgendwann zu ermöglichen. Das geht am Anfang, wenn die Kinder noch klein sind, eher weniger und jetzt versuchen wir das einfach immer mehr. Es ist essentiell und irgendwie auch nicht so wirklich optional, weil sonst wird man als Mensch, glaube ich, irgendwann auch sehr uninspiriert."
+    },
+    {
+      "end": 3393150,
+      "speaker": "A",
+      "start": 3372750,
+      "text": "Ich wechsel mal das Thema, ich wechsel mal das Thema auf Energiemanagement und die eigenen Ambitionen, denn du legst ja schon sehr hohe Ambitionen an dich an den Tag. Du machst ein Zeitprojekt neben deinem Konzernjob und in manchen Konzernen könnte man sagen, okay, den Leuten hier kann man beim Laufen die Schuhe besohlen. Inwieweit?"
+    },
+    {
+      "end": 3397790,
+      "speaker": "C",
+      "start": 3393710,
+      "text": "Bitte, bitte was? Das muss man jetzt erklären. Was kannst du besohlen beim Laufen?"
+    },
+    {
+      "end": 3399670,
+      "speaker": "A",
+      "start": 3398030,
+      "text": "Den Leuten kannst du beim Laufen die."
+    },
+    {
+      "end": 3402490,
+      "speaker": "C",
+      "start": 3399670,
+      "text": "Schuhe besohlen, aber sie so langsam sind."
+    },
+    {
+      "end": 3403610,
+      "speaker": "A",
+      "start": 3402490,
+      "text": "Ja, ganz genau."
+    },
+    {
+      "end": 3412170,
+      "speaker": "C",
+      "start": 3405690,
+      "text": "Den meisten muss man ja erklären, was besohlen heißt, weil gibt es ja heutzutage gar nicht mehr. Du kaufst dir neue Schuhe online schnell Fast Fashion."
+    },
+    {
+      "end": 3421930,
+      "speaker": "A",
+      "start": 3412250,
+      "text": "Ja, wenn du bei Temu Schuhe kaufst, dann ist das wahrscheinlich so. Ich glaube, wenn du ordentliche Schuhe kaufst, dann werden die solltest du aber als Wanderer wissen. Ordentliche Wanderschuhe kann man immer neu."
+    },
+    {
+      "end": 3426620,
+      "speaker": "C",
+      "start": 3422570,
+      "text": "Kletterschuhe muss man ständig besohlen. Aber bitte, ich wollte nicht dein Sprichwort."
+    },
+    {
+      "end": 3430500,
+      "speaker": "A",
+      "start": 3426620,
+      "text": "Da zerklauen tust du, aber naja, ich."
+    },
+    {
+      "end": 3434380,
+      "speaker": "C",
+      "start": 3430500,
+      "text": "Wollte es nur verstehen, damit jetzt die Überleitung noch besser funktioniert."
+    },
+    {
+      "end": 3447460,
+      "speaker": "A",
+      "start": 3434380,
+      "text": "Ja, der Gag ist durch, Ne, im Ernst, inwieweit würdest du sagen, OK, fühlt sich der Konzernjob denn eher als Stabilität an oder als Bremse in Bezug auf deine eigene Innovation mit deiner Site App?"
+    },
+    {
+      "end": 3493400,
+      "speaker": "B",
+      "start": 3447460,
+      "text": "Naja, wir leben ja von dem Gehalt zumindest einmal im Monat, fühlt sich sehr stark nach Stabilität an, nämlich dann, wenn das Gehalt kommt. Aber ich glaube, es gibt mir auch irgendeinen Rahmen und Struktur. Also ich stehe jeden Morgen zum gleichen Zeitpunkt auf, bringe die Kinder in die Kita oder bezahlen es auf und setze mich dann an den Rechner und dann beginnen die Meetings, beginnen die Aufgaben und das ist schon wichtig. Ich habe mal den Satz, ich bin mir nicht sicher, ob der Satz von mir kommt oder ob ich den irgendwo gelesen habe, aber Tinkering is a lonely place. Also wenn du so immer nur selber an etwas baust. Einsamkeit ist schon auch ein Thema. Also ich weiß nicht, wie viel darüber gesprochen wird, auch so in der Build in Public oder der Indie Szene, aber dass du nicht so regelmäßig Sozialkontakt hast, das ist, glaube ich ein Thema. Ich meine, dass Sebastian Röhl, als er hier war, das auch erwähnt hatte und ihr so drüber gebitzelt habt, naja, dafür bist du jetzt hier und kannst mit uns sprechen."
+    },
+    {
+      "end": 3495000,
+      "speaker": "C",
+      "start": 3493560,
+      "text": "Das war sicher Andersspruch."
+    },
+    {
+      "end": 3570270,
+      "speaker": "B",
+      "start": 3496760,
+      "text": "Genau, und das ist auf jeden Fall ein Thema und gleichzeitig auch der Austausch, der technische. Man bleibt schon ständig im Loop. Es wird über neue Lösungen, Implementierung, Technik, Techniken, Technologien gesprochen. Auf jeden Fall gleichzeitig, weil du gefragt hast, wann sich wie eine Bremse anfühlt. Der größte Unterschied ist, wenn ich jetzt das mit meinem eigenen Projekt vergleiche, die Ineffizienz. Also sobald halt mehrere Menschen ins Spiel kommen, hast du Reibungsverlust und sobald viele Menschen ins Spiel kommen, sehr starken Reibungsverlust. Und da merke ich mir, das macht mir manchmal schon zu schaffen in der TK und ich glaube, das wäre auch überall anders so, wenn dann die kleinen, kleinsten technischen Themen totdiskutiert werden. Alles muss irgendwie durch die Community entschieden werden. Mir persönlich ist häufig die konkrete technische Lösung gar nicht so wichtig. Natürlich soll sie irgendwie funktionieren, aber ich bin jemand, der Einheitlichkeit extrem mag in Systemen und Umsetzungen und irgendwie seine Struktur liebt und ich würde mir da manchmal wünschen, es muss dann nicht die Autonomie sein, die da bei mir erfüllt wird, aber dass es irgendwie bisschen stringenter und gestreamliner zugeht im Konzern. Ich weiß gar nicht, wie das bei euch in der Arbeit ist, wie viel da dann von oben herab entschieden wird, wird, wie viel Entscheidungsmacht ihr habt, wie viel diskutiert werden muss. Ja, das fühlt sich dann manchmal wie eine Bremse an, vor allem weil ich mir dann setze ich mich abends hin und kriege in der gleichen Zeit irgendwie gefühlt zehnmal so viel hin wie in meinem Konzernshop."
+    },
+    {
+      "end": 3608930,
+      "speaker": "A",
+      "start": 3570270,
+      "text": "Du hattest aber gerade schon Build in Public erwähnt und Build in Public kenne ich so auf Social Media werden die ganze Zeit Erfolge gefeiert und jeder hyped sich da hoch und so weiter und so fort und ab und zu kommt mal ein Blogpost, okay, diese Woche habe ich vielleicht nicht so viel Geschichte, weil irgendwie das Leben reingekickt hat oder ähnliches Und wenn du die ganzen Erfolgsstorys von Build in Public liest, gibt dir das mehr Motivation oder mehr Druck, Denn im Endeffekt siehst du einfach nur, wie erfolgreich eigentlich alle anderen mit ihrer App sind und dass die Graphen immer wie so eine Rakete in die Höhe schießen und Co. Oder triggert das eher Selbstzweifel bei dir? So mache ich das ja eigentlich alles gut genug und kann ich da mithalten?"
+    },
+    {
+      "end": 3702820,
+      "speaker": "B",
+      "start": 3608930,
+      "text": "Also ich bin da so ein bisschen, ohne darüber nachgedacht zu haben, reingerutscht zwei tausend drei und zwanzig weil ich dachte, komm, ich starte jetzt auch mal auf Twitter und poste unter dem Hashtag und vielleicht bringt es ja ein paar Nutzer. Das hat am Anfang mich, glaube ich, eher unter Druck gesetzt, weil ich eben gesehen habe, wie viel die anderen damit schon verdienen, wie viel Follower die haben und man feiert sich ja gegenseitig permanent ständig und versucht sich da irgendwie hoch zu pushen und es war für mich irgendwann ziemlich aufgekratzt und ich habe auch gemerkt, ich messe mich da irgendwie mit Menschen, die vielleicht noch keine Kinder haben, messe mich damit Menschen, die viel mehr Ressourcen, also Zeit zur Verfügung haben und das hat mir nicht so gut getan. Also ich habe dann auch damit irgendwann wieder aufgehört zu posten. Ich habe auch mein Twitter Account gelöscht, auch noch aus anderen Gründen, aber gemerkt, okay, das ist nichts für mich und ich hatte auch Das Gefühl, es bringt mir gar nicht so viel, weil die Leute, die ein manuelles Haushaltsbuch nutzen, ich glaube, die treiben sich gar nicht so sehr auf Twitter oder auf Reddit rum. Das sind dann, keine Ahnung, ich hatte zu Beginn meine App ganz viel mit Hildegard aus Oberbayern geschrieben, die damit irgendwie ihren Hof finanziell geleitet hat. Das sind so die Menschen, die meine App nutzen. Also es hat mir auch gar nicht so viel gebracht, irgendwie marketingtechnisch und habe dem Ganzen dann den Rücken gekehrt, so ein bisschen als aktiver Teilnehmer. Wobei ich schon auch sagen muss, ich habe ja gerade schon von Sebastian Röh gesprochen oder auch Frederik Riedel war das, glaube ich, mit der onesec App oder gerade auf LinkedIn verfolge ich die Story von Clemens Strasser ganz viel, der mit einem echt coolen Spiel Art of Fauna da gerade ziemlich Erfolge feiert. Das finde ich schon motivierend zu sehen. Prinzipiell kann das funktionieren, dass du mit deinem eigenen Projekt auch Geld verdienst oder dich selbstständig machst. Darf noch nicht kostenlos sein, wie das bei mir derzeit der Fall ist, aber der Traum ist zumindest noch nicht gestorben. Also beides, Druck und Inspiration."
+    },
+    {
+      "end": 3728470,
+      "speaker": "A",
+      "start": 3703060,
+      "text": "Wie gehst du denn mit solchen Situationen um, wenn deine Energie einfach mal am Boden ist? Denn auch wenn du sagst, okay, dein Freitagvormittag ist dir heilig und Sport gibt dir Energie und so weiter, Da gibt es Lebenssituationen, wo du jetzt gerade mit deinem Auto über den Nagel gefahren bist und deswegen Plattenreifen hast, danach habt ihr euch noch gestritten und vielleicht hat das Kind noch ins Auto gekotzt, so nach dem Motto, so einfach mal so ein Tag oder zwei Tage oder eine Woche, wo einfach mal nichts lief."
+    },
+    {
+      "end": 3763800,
+      "speaker": "B",
+      "start": 3728550,
+      "text": "Akut kriege ich das manchmal auch nicht so gut hin, gerade auch, wenn es stressig in der Familie ist oder dann zwei, drei Tage auch mal richtig hart ist. Ich habe das Gefühl, dass ich nach einem gewissen, nach einer gewissen Zeit dann irgendwann es immer wieder schaff, auf so einen, das klingt jetzt ein bisschen esoterisch oder ein bisschen zu abgehoben, oder? Aber, dass ich so eine gütige Ebene komme, wo ich mir sage, Stefan, du hast zwei Kinder, diesen kleinen, die musst du betreuen. Du hast einen Vollzeitjob, du hast einen side Project, das irgendwie gut läuft und Nutzer hat. Was willst du denn? Mach dich mal locker. Das ist Cool, also ich schaffe es schon irgendwann wieder auf so eine Ebene zurückzukommen und irgendwie gütig mit mir selbst zu werden und ja, manchmal besser, manchmal schlechter."
+    },
+    {
+      "end": 3773310,
+      "speaker": "C",
+      "start": 3763960,
+      "text": "Bekommst du da von außen Hilfe irgendwie? Also machst du das mit dir selbst aus oder gibt es da irgendwie externe Energiequellen, nenne ich sie mal?"
+    },
+    {
+      "end": 3827130,
+      "speaker": "B",
+      "start": 3774110,
+      "text": "Zum einen der Sport, Laufen gehen hilft quasi akut immer gegen den den Stress muss dann aber auch erstmal abgesprochen werden, ob das gerade möglich ist, so in der Familiensituation. Und also ich habe irgendwann angefangen, gerade auch weil du ja vorhin sprachst von negativen Reviews, das passiert selten, aber ab und zu kommen echt gemeine Nachrichten, dass ich dann auch, also direkt die Nachricht an meinen Bruder geht so und er dann gemeinsam mit mir im Zweifel verlästert, aber auch erstmal feststellt, dass es überhaupt nicht an mir liegt. Ob es dann stimmt oder nicht, keine Ahnung, aber es hilft natürlich und ich glaube, könnte mir vorstellen, dass es so ein Lernfeld für viele Männer ist, einfach relativ schnell über den eigenen Schmerz, die eigene Wut oder die eigene Frustration zu sprechen und dann auch zu meiner Frau zu gehen und sagen, nimm dich mal bitte in den Arm, streiche mir mal kurz über den Kopf, da war jemand gemein zu mir im App Store. Hilft total. Das klingt irgendwie, nee, lächerlich ist das falsche Wort, aber es klingt so klein und unschuldig, Aber auf jeden Fall danach sind achtzig Prozent des Frustes ist weg. Allein durchs Besprechen oder Aussprechen so das."
+    },
+    {
+      "end": 3830670,
+      "speaker": "A",
+      "start": 3827130,
+      "text": "Internet ist ein böser Ort, da würde ich glaube ich schon zustimmen."
+    },
+    {
+      "end": 3838790,
+      "speaker": "B",
+      "start": 3832430,
+      "text": "Überwiegend sind es schöne Nachrichten. Ich frage mich, wie man bei einer kostenlosen App manchmal mit so einer Anspruchshaltung ankommen kann, aber das ist echt selten."
+    },
+    {
+      "end": 3889660,
+      "speaker": "C",
+      "start": 3838790,
+      "text": "Ja, also ich glaube bei kostenlos ist es teilweise sogar noch mehr, kommt mir vor. Ich weiß nicht, ob man da irgendwie spezielle Zielgruppe trifft einfach, aber Leute, wenn sie was geschenkt bekommen, dann fordern sie noch mehr, kommt mir teilweise vor. Es ist schon eigenartiges Verhalten. Es gibt auf allen Ebenen, Du hast jetzt erwähnt, wie du dich selber über dem Wasser hältst oder wenn es mal schlecht läuft, auch mit der App, wenn jetzt ganz viele Leute vielleicht jetzt zuhören und sich denken, ich möchte sowas eigentlich auch machen, aber bisher habe ich mir das einfach nicht zugetraut, was Wären denn deine Tipps, wenn jetzt jemand Kann ich denn das überhaupt? Ich habe Familie, ich habe einen Job, vielleicht auch nur dreiig Stunden, aber ich würde gern irgendwas Cooles nebenbei noch schaffen, irgendwas auf die Beine stellen. Also hast du da irgendwelche Tipps, wie man am besten startet?"
+    },
+    {
+      "end": 3978500,
+      "speaker": "B",
+      "start": 3889820,
+      "text": "Also ich glaube, was mir geholfen hat von Anfang an, aber auch zwischendrin immer wieder die Ansprüche irgendwie nicht zu hoch zu schrauben. Ich glaube, dass man was Schönes baut, was auch genutzt wird. Das ist definitiv möglich. Ich weiß bis heute nicht so richtig, wie diese Initialzündung kam, dass ich die ersten Nutzer und Nutzerinnen hatte. Aber wenn heute sich jemand angesprochen fühlt und Lust hat loszulegen und die das Gefühl habt in zwei, drei Monaten hey, ich habe hier was Schönes, eine schöne App gebaut, dann meldet euch gerne. Dann vielleicht Ich habe jetzt schon so eine Section in der App hier Apps von meinen Freunden, dann kann ich das sicherlich auch irgendwie verlinken. Ich finde es total schön, wenn Leute machen, was ihnen gefällt und irgendwie das auch der Welt präsentieren wollen. Genau, ich glaube einfach loslegen. Und als ich mit der Softwareentwicklung angefangen hatte, dachte ich immer, das wäre eine Frage des Intellekts oder der kognitiven Fähigkeiten. Und je mehr ich mich damit beschäftigt habe, habe ich das Gefühl, es ist eigentlich eher so eine geht es eher um Frustrationstoleranz und emotionale Kontrolle und das klingt irgendwie abgedroschen, aber sich einfach locker machen und nicht so streng mit sich zu sein, zu akzeptieren, gerade auch in der Situation mit Familie. Es gibt Phasen, da ergeben sich Zeiträume, da kann ich was dran tun. Es gibt Phasen, da geht es nicht. Und im Endeffekt, klar kann man sich darüber doll ärgern und es ist für den Moment auch okay, aber sich immer daran zu erinnern. Ja, so ist es halt. Dafür habe ich Kinder, die ich aufwachsen sehe, eine Familie, die mich liebt. So sich locker zu machen, das anzunehmen, anzuerkennen und darauf zu vertrauen, dass der Moment, wo ich dann weitermachen kann, schon wieder kommen wird."
+    },
+    {
+      "end": 4032990,
+      "speaker": "A",
+      "start": 3978500,
+      "text": "Bin die Tage wieder über so ein geiles TikTok oder Instagram Reel gestoßen. Da steht so ein Typ an so einer Maltafel und der macht dann so ein Koordinatensystem, so eine X Achse und so eine Y Achse. Und auf der x Achse steht fuck around und auf der y Achse steht find out. Und er sagt dann the more you fuck around, the more you find out. Das erinnert mich gerade so ein bisschen daran, als du gesagt hast, okay, leg einfach los. Und ich glaube, das summiert es ganz schön. The more you fuck around. Also mach einfach mal. Desto mehr findest du raus, wie es halt funktioniert oder halt auch nicht funktioniert. Denn ich habe auch mal, jetzt kommt die nächste kluge Weisheit gelesen, nur weil ein Experiment schiefgeht, also du nicht das gewünschte Ergebnis bekommen hast, heißt es nicht, dass das Experiment fehlgeschlagen hat ist. Du hast nur einen weiteren Weg gefunden, wie es nicht funktioniert. Und das fand ich auch sehr schön. Ist vielleicht auch relevant für den Advice hier."
+    },
+    {
+      "end": 4044070,
+      "speaker": "B",
+      "start": 4032990,
+      "text": "Ja, und sich auch immer wieder dem Survivorship Bias bewusst zu machen. Alle, die quasi ihre tollen mmas und ihre Ergebnisse präsentieren, die haben ja genug Fehlschläge auch gehabt. Und dann irgendwie auch ein realistisches Bild davon zu gewinnen."
+    },
+    {
+      "end": 4072840,
+      "speaker": "A",
+      "start": 4044230,
+      "text": "Ich glaube, man muss sich einfach nur ganz einfach bewusst werden, das was geteilt wird, sind die Erfolgsstorys. Doch wie viele Leute es wirklich probieren unten drunter, Also das ist ja wirklich nur die oberen null komma null null null schieß mich tot Prozent, die da sagen, okay, wir haben jetzt hier ein bisschen Geld mit meiner App gemacht, aber wie viele Leute da unten drunter unter der Wasseroberfläche sind, um wirklich mal Apps im App Store releasen und vielleicht nie einen User bekommen. Das ist ja die, ich glaube, das nennt man Dunkelziffer."
+    },
+    {
+      "end": 4096090,
+      "speaker": "C",
+      "start": 4073560,
+      "text": "Und sogar diese ganzen Fuck up Nights und so weiter, die es dort gibt, dort präsentieren ja auch immer Leute, die es am Ende geschafft haben. Also da siehst du nie nur die Fails, sondern da kommt immer und dann habe ich es geschafft. Also sogar da hast du immer diese Erfolgsstory mit dabei. Die anderen, die eben das nur probiert haben und dann mal aufgegeben haben, das side Project, die hörst du eigentlich sehr selten, aber ist jetzt vielleicht nicht sehr positives Ende."
+    },
+    {
+      "end": 4107500,
+      "speaker": "A",
+      "start": 4096730,
+      "text": "Ach du, ich finde das, ich finde das ganz okay. Also ich kann sagen, ich habe noch nie auf einer Fuck Up Night gesprochen, aber ich kann sagen, ich habe so viel Zeit Project gestartet und sehr viele davon haben noch niemals das Licht der Welt erblickt."
+    },
+    {
+      "end": 4120580,
+      "speaker": "C",
+      "start": 4107500,
+      "text": "Wir haben das ja auch schon sehr oft besprochen. Und Stefan, du kannst es wahrscheinlich auch bestätigen. Man bekommt ja auch andere Dinge. Also auch wenn etwas nicht so erfolgreich ist, man lernt ja Sachen dabei und man entwickelt sich selbst weiter. Also man hat ja immer ein Outcome."
+    },
+    {
+      "end": 4153670,
+      "speaker": "B",
+      "start": 4120580,
+      "text": "Eigentlich von dem side Project auf jeden Fall. Und selbst wenn ich heute keine Nutzer oder keine Nutzerin hätte, hätte ich ja trotzdem währenddessen die ganze Zeit iOS entwickelt oder habe mir jetzt währenddessen Android Entwicklung beigebracht. Selbst wenn das jetzt alles schiefgeht und morgen ich die Apps aus dem Store nehmen muss. Ich glaube, das ist genauso wie im Einstieg damals bei meinem Beruf. Was gibt es für eine coolere Referenz als jemanden, der so ein Projekt mal, selbst wenn es nur für mehrere Jahre war und danach irgendwie eingestampft wurde, sich dann ein Projekt ausprobiert hat und dabei sich irgendwas beigebracht hat. Also egal von welchem Winkel ich das betrachte, bleibt irgendwie immer erfolgreich."
+    },
+    {
+      "end": 4187240,
+      "speaker": "A",
+      "start": 4153670,
+      "text": "Stefan, vielen lieben Dank für diese Episode, Vielen lieben Dank für diese Einblicke. Du hast uns Einblicke gegeben, die wir auch nicht haben und B, die wir auch nicht weitergeben können. Ich habe schon oft große Probleme, diesen Podcast hier zeitlich unterzukriegen mit meinem Job, mit meiner Familie und ich habe kein Kind, ich habe nur eine Frau und nur einen Hund. Aber bei mir ist es zeitlich schon herausfordernd. Deswegen höchsten Respekt mit zwei Kindern. Was ist der wirklich Number one Tipp, den du den Leuten mitgeben würdest, was die heute noch tun können?"
+    },
+    {
+      "end": 4218140,
+      "speaker": "B",
+      "start": 4187560,
+      "text": "Einfach anfangen. Also ich glaube, du hast ja schon gesagt, es kann eigentlich nichts passieren. Das Schlimmste, was passieren könnte, zumindest eingebildet, ist ja der Reputationsverlust. Und das passiert nicht. Es wird nicht der Moment kommen, wo irgendjemand oh mein Gott, du hast da ein side Project gestartet und es war nicht erfolgreich. Die Leute werden es immer feiern, wenn es die Richtigen sind und einfach auch als cool und inspirierend begreifen. Also es führt nichts am Anfang vorbei und die Ängste, Sorgen und Zweifel, die dann kommen, die sind normal, die gehören dazu, die muss man irgendwie integrieren. Die werden nie weggehen. Seid gut, geht gut mit euch um."
+    },
+    {
+      "end": 4269350,
+      "speaker": "A",
+      "start": 4218220,
+      "text": "Und macht einfach noch mal vielen Dank. Und an alle Leute, die vielleicht die eine oder andere Frage noch an Stefan haben, ich bin mir sicher, er wird antworten, wenn man ihm auf dem LinkedIn mal eine Message schreibt. In den Shownotes haben wir wie immer alle Links für euch reingepackt. Da findet ihr zum Beispiel auch die Monet App, dort findet ihr auch Stefans Reddit Post, wo er feiert, dass er neunzehn ein tausend drei hundert sieben und vierzig Daily Active User hat und da könnt ihr auch sehen, dass die richtigen Leute diesen Erfolg auch mitfeiern. Aber natürlich auch Links zu tensorflow, Keras, Firebase und zu den Episoden. Stefan, vielen lieben Dank für deine Zeit, für deine Offenheit ganz besonders. Falls ihr Feedback habt, könnt ihr das natürlich gerne an Stefan direkt senden, könnt via E Mail oder vielleicht in unserer Discord Community. Alles Feedback, was wir bekommen, leiten wir natürlich an Stefan weiter."
+    },
+    {
+      "end": 4281310,
+      "speaker": "C",
+      "start": 4269350,
+      "text": "Und sonst Stefan Andi, falls eure Partnerinnen bereit sind, da in das Studio zu kommen, ich interviewe gerne die zwei, also ohne euch natürlich gar kein Problem. Fragt mal eure Partnerinnen."
+    },
+    {
+      "end": 4284670,
+      "speaker": "B",
+      "start": 4282590,
+      "text": "Danke, dass ich hier sein durfte. Es hat sehr gut getan."
+    },
+    {
+      "end": 4291470,
+      "speaker": "A",
+      "start": 4284670,
+      "text": "Wolfgang, du kennst meine Frau, ich glaube, du hast auch direkten Zugang zu ihr über ihre Handynummer oder ähnliches. Ich glaube, du kannst sie selbst fragen, also von daher."
+    },
+    {
+      "end": 4293800,
+      "speaker": "C",
+      "start": 4293240,
+      "text": "Mal probieren."
+    },
+    {
+      "end": 4297480,
+      "speaker": "A",
+      "start": 4294040,
+      "text": "So, das war's von uns. Wir hören uns nächste Woche wieder und tschüss."
+    },
+    {
+      "end": 4298040,
+      "speaker": "C",
+      "start": 4297560,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
