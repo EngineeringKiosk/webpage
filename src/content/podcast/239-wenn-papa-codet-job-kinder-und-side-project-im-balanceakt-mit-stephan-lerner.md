@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/18bb4b0b-8d8c-4df6-98a8-4cefda4c1a10/engineering-kiosk-239-wenn-papa-codet-job-kinder-und-side-project-im-balanceakt-mit-stephan-lerner
 apple_podcasts: https://podcasts.apple.com/us/podcast/239-wenn-papa-codet-job-kinder-und-side-project-im/id1603082924?i=1000741456437&uo=4
 audio: https://audio1.redcircle.com/episodes/7ccb8532-c5b4-48e7-ab06-2c3ed7651afe/stream.mp3
 chapter:
