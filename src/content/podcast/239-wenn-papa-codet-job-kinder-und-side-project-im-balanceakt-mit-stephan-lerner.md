@@ -15,9 +15,9 @@ chapter:
 - start: 00:19:02
   title: Vom ersten Agentur Job in den Konzern und zum Side Projekt
 - start: 00:25:40
-  title: 'Vater, Job und Side-Projekt: Wie passt das alles?'
+  title: "Vater, Job und Side-Projekt: Wie passt das alles?"
 - start: 00:36:37
-  title: 'Druck im Side-Projekt: Bugs und Weiterentwicklung'
+  title: "Druck im Side-Projekt: Bugs und Weiterentwicklung"
 - start: 00:44:20
   title: Der Vater macht es toll ... und die Mutter?
 - start: 00:52:32
@@ -25,55 +25,10 @@ chapter:
 - start: 00:56:12
   title: Energiemanagement, eigenen Ambitionen, Selbstzweifel
 - start: 01:03:58
-  title: "Tipps zum Start: Anspr\xFCche senken, einfach anfangen, Frustrationstoleranz"
-description: "Die Balance zwischen Familie, Konzernjob und Side Project. Side Project,\
-  \ Vollzeitjob und dann auch noch Kinder. Klingt nach einer dieser Ideen, die man\
-  \ sonntags feiert und montags bereut. Aber was, wenn genau darin die Energie steckt,\
-  \ die dir im Konzernalltag fehlt? Und was, wenn die gr\xF6\xDFte Challenge gar nicht\
-  \ Zeit ist, sondern Erwartungen, Selbstzweifel und der Druck, immer liefern zu m\xFC\
-  ssen? In dieser Episode sprechen wir mit Stefan, iOS-Software-Engineer bei der Techniker\
-  \ Krankenkasse, Quereinsteiger mit McKinsey-Background, Vater von zwei Kindern und\
-  \ Indie-Developer der Haushaltsbuch-App Monee. Stefan nimmt uns mit in seine Hypercare-Phase\
-  \ als Elternteil, erkl\xE4rt sein Setup mit Vier-Tage-Woche, Kinderbetreuung und\
-  \ klaren Absprachen und zeigt, wie er ein Side Project so baut, dass es nicht die\
-  \ Familie frisst. Wir gehen tief in Energiemanagement, Autonomie als Motivator,\
-  \ Support-Triage, den Umgang mit Crashs und negativen Reviews sowie in die Realit\xE4\
-  t von Build-in-Public, inklusive Survivorship Bias. Dazu gibt es ehrliche Einblicke\
-  \ darin, wie man als Entwickler:in trotz wenig Zeit dranbleibt, ohne sich selbst\
-  \ zu zerlegen. Wenn du dich fragst, wie du Weiterbildung, Open Source oder ein eigenes\
-  \ Produkt neben Familie und Job realistisch unterkommst, ist das deine Episode.\
-  \ Bonus: Elternlogik des Tages. Ein Kind ist kein Kind. Du bist noch in der \xDC\
-  berzahl.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners\
-  \  Das schnelle Feedback zur Episode: \U0001F44D (top)\_\U0001F44E (geht so)  Anregungen,\
-  \ Gedanken, Themen und W\xFCnscheDein Feedback z\xE4hlt! Erreiche uns \xFCber einen\
-  \ der folgenden Kan\xE4le \u2026 EngKiosk Community: https://engineeringkiosk.dev/join-discord\_\
-  LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon:\
-  \ https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram:\
-  \ https://www.instagram.com/engineeringkiosk/ Unterst\xFCtze den Engineering KioskWenn\
-  \ du uns etwas Gutes tun m\xF6chtest \u2026 Kaffee schmeckt uns immer\_ Buy us a\
-  \ coffee: https://engineeringkiosk.dev/kaffee LinksStephan Lerner auf LinkedIn:\
-  \ https://www.linkedin.com/in/stephan-lerner-301ba091/Monee App: https://monee-app.com/de/Reddit\
-  \ - My completely free budget tracking app reached 9347 daily active users: https://www.reddit.com/r/AppIdeas/comments/1nub6ux/my_completely_free_budget_tracking_app_reached/McKinsey:\
-  \ https://www.mckinsey.de/TensorFlow: https://www.tensorflow.org/Keras deep learning\
-  \ API: https://keras.io/Firebase: https://firebase.google.com/Engineering Kiosk\
-  \ Episode #102 Quereinstieg in die Software-Entwicklung mit Melanie Patrick: https://engineeringkiosk.dev/podcast/episode/102-quereinstieg-in-die-software-entwicklung-mit-melanie-patrick/Engineering\
-  \ Kiosk Episode #202 Indie-Hacking, Build in Public & der Traum vom eigenen Produkt\
-  \ mit Sebastian R\xF6hl: https://engineeringkiosk.dev/podcast/episode/202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-sebastian-r%C3%B6hl/\u201C\
-  The more you fuck around, the more you find out\u201D: https://www.instagram.com/reel/CjZjg_wPEpQ/\
-  \ Sprungmarken(00:00:00) Die Balance zwischen Familie, Konzernjob und Side Project\
-  \ (00:04:23) Ein Traumstart mit Studium und Praktikum bei McKinsey? (00:05:02) Info/Werbung\
-  \ (00:06:02) Ein Traumstart mit Studium und Praktikum bei McKinsey? (00:19:02) Vom\
-  \ ersten Agentur Job in den Konzern und zum Side Projekt (00:25:40) Vater, Job und\
-  \ Side-Projekt: Wie passt das alles? (00:36:37) Druck im Side-Projekt: Bugs und\
-  \ Weiterentwicklung (00:44:20) Der Vater macht es toll ... und die Mutter? (00:52:32)\
-  \ Elternzeit = Freizeit? (00:56:12) Energiemanagement, eigenen Ambitionen, Selbstzweifel\
-  \ (01:03:58) Tipps zum Start: Anspr\xFCche senken, einfach anfangen, Frustrationstoleranz\
-  \  HostsWolfgang Gassler (https://gassler.dev)\_Andy Grunwald (https://andygrunwald.com/)\
-  \ CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist\u22C5innen in unserer\
-  \ Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
-headlines: "anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und\
-  \ W\xFCnsche||unterstutze-den-engineering-kiosk::Unterst\xFCtze den Engineering\
-  \ Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community"
+  title: "Tipps zum Start: Ansprüche senken, einfach anfangen, Frustrationstoleranz"
+deezer: https://www.deezer.com/episode/822981232
+description: "Die Balance zwischen Familie, Konzernjob und Side Project. Side Project, Vollzeitjob und dann auch noch Kinder. Klingt nach einer dieser Ideen, die man sonntags feiert und montags bereut. Aber was, wenn genau darin die Energie steckt, die dir im Konzernalltag fehlt? Und was, wenn die größte Challenge gar nicht Zeit ist, sondern Erwartungen, Selbstzweifel und der Druck, immer liefern zu müssen? In dieser Episode sprechen wir mit Stefan, iOS-Software-Engineer bei der Techniker Krankenkasse, Quereinsteiger mit McKinsey-Background, Vater von zwei Kindern und Indie-Developer der Haushaltsbuch-App Monee. Stefan nimmt uns mit in seine Hypercare-Phase als Elternteil, erklärt sein Setup mit Vier-Tage-Woche, Kinderbetreuung und klaren Absprachen und zeigt, wie er ein Side Project so baut, dass es nicht die Familie frisst. Wir gehen tief in Energiemanagement, Autonomie als Motivator, Support-Triage, den Umgang mit Crashs und negativen Reviews sowie in die Realität von Build-in-Public, inklusive Survivorship Bias. Dazu gibt es ehrliche Einblicke darin, wie man als Entwickler:in trotz wenig Zeit dranbleibt, ohne sich selbst zu zerlegen. Wenn du dich fragst, wie du Weiterbildung, Open Source oder ein eigenes Produkt neben Familie und Job realistisch unterkommst, ist das deine Episode. Bonus: Elternlogik des Tages. Ein Kind ist kein Kind. Du bist noch in der Überzahl.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)  Anregungen, Gedanken, Themen und WünscheDein Feedback zählt! Erreiche uns über einen der folgenden Kanäle … EngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram: https://www.instagram.com/engineeringkiosk/ Unterstütze den Engineering KioskWenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer\u00a0 Buy us a coffee: https://engineeringkiosk.dev/kaffee LinksStephan Lerner auf LinkedIn: https://www.linkedin.com/in/stephan-lerner-301ba091/Monee App: https://monee-app.com/de/Reddit - My completely free budget tracking app reached 9347 daily active users: https://www.reddit.com/r/AppIdeas/comments/1nub6ux/my_completely_free_budget_tracking_app_reached/McKinsey: https://www.mckinsey.de/TensorFlow: https://www.tensorflow.org/Keras deep learning API: https://keras.io/Firebase: https://firebase.google.com/Engineering Kiosk Episode #102 Quereinstieg in die Software-Entwicklung mit Melanie Patrick: https://engineeringkiosk.dev/podcast/episode/102-quereinstieg-in-die-software-entwicklung-mit-melanie-patrick/Engineering Kiosk Episode #202 Indie-Hacking, Build in Public & der Traum vom eigenen Produkt mit Sebastian Röhl: https://engineeringkiosk.dev/podcast/episode/202-indie-hacking-build-in-public-der-traum-vom-eigenen-produkt-mit-sebastian-r%C3%B6hl/“The more you fuck around, the more you find out”: https://www.instagram.com/reel/CjZjg_wPEpQ/ Sprungmarken(00:00:00) Die Balance zwischen Familie, Konzernjob und Side Project (00:04:23) Ein Traumstart mit Studium und Praktikum bei McKinsey? (00:05:02) Info/Werbung (00:06:02) Ein Traumstart mit Studium und Praktikum bei McKinsey? (00:19:02) Vom ersten Agentur Job in den Konzern und zum Side Projekt (00:25:40) Vater, Job und Side-Projekt: Wie passt das alles? (00:36:37) Druck im Side-Projekt: Bugs und Weiterentwicklung (00:44:20) Der Vater macht es toll ... und die Mutter? (00:52:32) Elternzeit = Freizeit? (00:56:12) Energiemanagement, eigenen Ambitionen, Selbstzweifel (01:03:58) Tipps zum Start: Ansprüche senken, einfach anfangen, Frustrationstoleranz  HostsWolfgang Gassler (https://gassler.dev)\u00a0Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
+headlines: anregungen-gedanken-themen-und-wunsche::Anregungen, Gedanken, Themen und Wünsche||unterstutze-den-engineering-kiosk::Unterstütze den Engineering Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community
 image: ./239-wenn-papa-codet-job-kinder-und-side-project-im-balanceakt-mit-stephan-lerner.jpg
 length_second: 4305
 pubDate: 2025-12-16 02:00:01+00:00
