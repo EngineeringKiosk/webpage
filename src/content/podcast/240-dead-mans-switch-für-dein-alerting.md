@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/f2a61c12-0eba-412d-a90e-2baf7345e4db/engineering-kiosk-240-dead-man's-switch-f%C3%BCr-dein-alerting
 apple_podcasts: https://podcasts.apple.com/us/podcast/240-dead-mans-switch-f%C3%BCr-dein-alerting/id1603082924?i=1000741612127&uo=4
 audio: https://audio1.redcircle.com/episodes/d6fa9523-230d-46e6-9d1d-4a1d13db40a7/stream.mp3
 chapter:
