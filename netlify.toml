@@ -3238,6 +3238,18 @@ to = "/podcast/episode/242-drei-forks-und-wo-sie-heute-stehen-mit-dem-urlaub-im-
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/243"
+to = "/podcast/episode/243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep243"
+to = "/podcast/episode/243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
