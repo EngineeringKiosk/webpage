@@ -6,28 +6,36 @@ on:
   workflow_dispatch:
 
 jobs:
-  publishing:
+  check-tags-without-descriptions:
     name: Check if all tags have a proper SEO description
     runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: website-admin
 
     steps:
       - uses: actions/checkout@v6.0.1
-      - uses: actions/setup-python@v6.1.0
+      - uses: actions/setup-go@v6
         with:
-          python-version-file: 'scripts/.python-version'
-          cache: 'pip'
+          go-version: "1.25"
 
-      - name: Install python dependencies
-        run: make init-python
+      - name: Build
+        run: make build
 
+      # Finds all used tags in content files that need SEO descriptions and updates the tag-file
       - name: Search for missing SEO tags in content files
-        run: make update-missing-tag-descriptions-content-files
+        run: |
+          ./website-admin tags find website-content --write-file
 
+      # Find all used tags in the german tech podcasts that need SEO descriptions and updates the tag-file
       - name: Search for missing SEO tags in the German Tech Podcast file
-        run: make update-missing-tag-descriptions-german-tech-podcast
+        run: |
+          ./website-admin tags find german-tech-podcasts --write-file
 
+      # Find all used genres in the awesome software engineering games that need SEO descriptions and updates the genre-file
       - name: Search for missing SEO genres in the awesome-software-engineering-games file
-        run: make update-missing-genre-descriptions-awesome-software-engineering-games
+        run: |
+          ./website-admin tags find awesome-software-engineering-games --write-file
 
       # Commit results back to repository
       - uses: stefanzweifel/git-auto-commit-action@v7.1.0
