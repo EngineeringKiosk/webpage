@@ -1,0 +1,44 @@
+name: Update Podcast Episodes from RSS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "5 5 * * *" # Run at 05:05.
+
+jobs:
+  update-podcast-episodes-from-rss:
+    name: Update Podcast Episodes from RSS
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: website-admin
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.25"
+
+      - name: Build
+        run: make build
+
+      - name: pod-admin podcast netlify-redirect
+        run: |
+          ./podcast netlify-redirect \
+            --episodes-dir src/content/podcast \
+            --redirect-prefix "/episodes/" \
+            --toml-file netlify.toml
+
+      # Commit results back to repository
+      - uses: stefanzweifel/git-auto-commit-action@v7.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: Synchronisation of Podcast Episodes and redirects
+          branch: main
+          commit_user_name: Podcast synchronisation workflow bot
+          commit_user_email: stehtisch@engineeringkiosk.dev
+          commit_author: Podcast synchronisation workflow bot <stehtisch@engineeringkiosk.dev>
