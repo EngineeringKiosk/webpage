@@ -70,7 +70,7 @@ update-german-tech-podcasts: ## Updates the German Tech Podcasts data from https
 
 .PHONY: update-awesome-software-engineering-games
 update-awesome-software-engineering-games: ## Updates the Awesome Software Engineering Games data from https://github.com/EngineeringKiosk/awesome-software-engineering-games
-	. $(VENV_ACTIVATE); python ./scripts/sync_awesome_software_engineering_games.py
+	./website-admin/website-admin sync awesome-software-engineering-games
 
 .PHONY: find-missing-tag-descriptions-content-files
 find-missing-tag-descriptions-content-files: ## Finds all used tags in content files that need SEO descriptions and output them on stdout
