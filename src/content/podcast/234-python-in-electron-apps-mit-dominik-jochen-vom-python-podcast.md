@@ -15,11 +15,11 @@ pubDate: 2025-12-11 02:00:36+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Dominik Geldmacher
+- name: Dominik Geldmacher (Python Podcast)
   transcriptLetter: B
-- name: Jochen Wersdörfer
+- name: Jochen Wersdörfer (Python Podcast)
   transcriptLetter: C
-- name: Jochen Wersdörfer
+- name: Jochen Wersdörfer (Python Podcast)
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/2ETiSu7LuQDHB3EtqsGdTZ
 tags:

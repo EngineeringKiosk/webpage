@@ -13,11 +13,11 @@ pubDate: 2025-12-05 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Thomas (Smarthütte Podcast)
+- name: Thomas Wiebe (Smarthütte Podcast)
   transcriptLetter: B
-- name: André (Smarthütte Podcast)
+- name: Andrej Friesen (Smarthütte Podcast)
   transcriptLetter: C
-- name: André (Smarthütte Podcast)
+- name: Andrej Friesen (Smarthütte Podcast)
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0lDzAACqGGjDjCDZkrDF5A
 tags:

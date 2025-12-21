@@ -17,7 +17,7 @@ speaker:
   transcriptLetter: A
 - name: Andy Grunwald
   transcriptLetter: C
-- name: Wolfgang Schoch (Digitale Anomalien)
+- name: Wolfgang Schoch (Digitale Anomalien Podcast)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/4Gp3YYKW9VIWZDgFhNeUPX
 tags:

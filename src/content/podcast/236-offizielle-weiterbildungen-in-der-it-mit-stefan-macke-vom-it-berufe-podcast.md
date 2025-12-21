@@ -17,7 +17,7 @@ speaker:
   transcriptLetter: A
 - name: Stefan Macke
   transcriptLetter: B
-- name: Stefan Macke
+- name: Stefan Macke (IT-Berufe Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/3t8lHOPG3xkKSsgg2pq0oq
 tags:

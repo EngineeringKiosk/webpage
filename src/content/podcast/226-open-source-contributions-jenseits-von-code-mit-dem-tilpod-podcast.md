@@ -15,9 +15,9 @@ pubDate: 2025-12-03 02:00:04+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Sujeevan Vijayakumaran
+- name: Sujeevan Vijayakumaran (TILpod Podcast)
   transcriptLetter: B
-- name: Dirk Deimeke
+- name: Dirk Deimeke (TILpod Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/0l91CM0sGDtaCGEcnGcAms
 tags:

@@ -15,7 +15,7 @@ pubDate: 2025-12-10 02:00:29+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Andreas Lehr (Happy Bootstrapping)
+- name: Andreas Lehr (Happy Bootstrapping Podcast)
   transcriptLetter: B
 - name: Andy Grunwald
   transcriptLetter: C

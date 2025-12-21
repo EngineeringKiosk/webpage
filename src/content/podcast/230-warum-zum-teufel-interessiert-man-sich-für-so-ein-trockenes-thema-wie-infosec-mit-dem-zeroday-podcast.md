@@ -15,11 +15,11 @@ pubDate: 2025-12-07 02:00:16+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Sven (Zero Day Podcast)
+- name: Sven Hauptmann (Zero Day Podcast)
   transcriptLetter: B
-- name: Stefan (Zero Day Podcast)
+- name: Stefan Ebeling (Zero Day Podcast)
   transcriptLetter: C
-- name: Sven (Zero Day Podcast)
+- name: Sven Hauptmann (Zero Day Podcast)
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0jUBRMgD2LUxgaD67SOI6z
 tags:
