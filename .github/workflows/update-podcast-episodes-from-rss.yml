@@ -25,6 +25,14 @@ jobs:
       - name: Build
         run: make build
 
+      - name: website-admin podcast sync-from-rss
+        run: |
+          ./website-admin podcast sync-from-rss \
+            --episodes-dir src/content/podcast \
+            --images-dir src/content/podcast \
+            --rss-feed-url https://feeds.redcircle.com/0ecfdfd7-fda1-4c3d-9515-476727f9df5e \
+            --transcript-dir src/data/transcripts
+
       - name: website-admin podcast netlify-redirect
         run: |
           ./website-admin podcast netlify-redirect \
