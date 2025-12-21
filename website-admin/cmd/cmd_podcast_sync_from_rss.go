@@ -44,6 +44,11 @@ type ITunesImage struct {
 	Href string `xml:"href,attr"`
 }
 
+type HTMLHeadline struct {
+	Slug string
+	Text string
+}
+
 // podcastSyncFromRSSCmd represents the podcast command
 var podcastSyncFromRSSCmd = &cobra.Command{
 	Use:   "sync-from-rss",
@@ -141,9 +146,9 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 		}
 
 		// Parse headlines into string format
-		headlineInfoParts := make([]string, 0, len(headlines))
-		for slug, headline := range headlines {
-			headlineInfoParts = append(headlineInfoParts, fmt.Sprintf("%s::%s", slug, headline))
+		headlineInfoParts := []string{}
+		for _, headline := range headlines {
+			headlineInfoParts = append(headlineInfoParts, fmt.Sprintf("%s::%s", headline.Slug, headline.Text))
 		}
 		headlineInfo := strings.Join(headlineInfoParts, "||")
 
@@ -237,7 +242,7 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 			Headlines:      headlineInfo,
 			Image:          imageFilename,
 			LengthSecond:   0,
-			PubDate:        pubDate.Format(time.RFC3339),
+			PubDate:        episode.FrontmatterPubDateTime{Time: pubDate},
 			Speaker:        defaultSpeaker,
 			Tags:           []string{},
 			Title:          title,
@@ -324,9 +329,9 @@ func writeEpisodeFile(filePath string, frontmatter episode.EpisodeFrontmatter, c
 }
 
 // parseHeadlinesFromHTML extracts h3 headlines from HTML and adds IDs
-func parseHeadlinesFromHTML(rawHTML string) (string, map[string]string) {
+func parseHeadlinesFromHTML(rawHTML string) (string, []HTMLHeadline) {
 	htmlContent := rawHTML
-	headlineSlugs := make(map[string]string)
+	headlineSlugs := make([]HTMLHeadline, 0)
 
 	// Find all h3 headlines with optional span tags
 	headlineRegex := regexp.MustCompile(`<h3>(<span>)?(.*?)(</span>)?</h3>`)
@@ -347,7 +352,10 @@ func parseHeadlinesFromHTML(rawHTML string) (string, map[string]string) {
 		newH3 := fmt.Sprintf(`<h3 id="%s">%s`, slug, line)
 		htmlContent = strings.Replace(htmlContent, oldH3, newH3, 1)
 
-		headlineSlugs[slug] = line
+		headlineSlugs = append(headlineSlugs, HTMLHeadline{
+			Slug: slug,
+			Text: line,
+		})
 	}
 
 	return htmlContent, headlineSlugs
