@@ -25,9 +25,9 @@ jobs:
       - name: Build
         run: make build
 
-      - name: pod-admin podcast netlify-redirect
+      - name: website-admin podcast netlify-redirect
         run: |
-          ./podcast netlify-redirect \
+          ./website-admin podcast netlify-redirect \
             --episodes-dir src/content/podcast \
             --redirect-prefix "/episodes/" \
             --toml-file netlify.toml
