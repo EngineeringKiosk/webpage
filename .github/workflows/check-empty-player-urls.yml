@@ -6,19 +6,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  publishing:
+  check-empty-player-urls:
     name: Check if all detail links for Podcast platforms are set
     runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: website-admin
 
     steps:
       - uses: actions/checkout@v6.0.1
-      - uses: actions/setup-python@v6.1.0
+      - uses: actions/setup-go@v6
         with:
-          python-version-file: 'scripts/.python-version'
-          cache: 'pip'
+          go-version: "1.25"
 
-      - name: Install python dependencies
-        run: make init-python
+      - name: Build
+        run: make build
 
-      - name: Run make check-episode-player-urls
-        run: make check-episode-player-urls
+      - name: website-admin podcast check-player-urls
+        run: |
+          ./website-admin podcast check-player-urls
