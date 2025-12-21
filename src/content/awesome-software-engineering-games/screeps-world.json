@@ -1,44 +1,5 @@
 {
-    "name": "Screeps: World",
-    "steamID": 464350,
-    "slug": "screeps-world",
-    "repository": "https://github.com/screeps/screeps",
-    "programmable": true,
-    "website": "https://screeps.com",
-    "platforms": {
-        "windows": true,
-        "mac": true,
-        "linux": true
-    },
-    "release_date": {
-        "coming_soon": false,
-        "date": "Nov 16, 2016"
-    },
-    "image": "./screeps-world.jpg",
-    "german_content": {
-        "short_description": "Screeps: World is an open source MMO RTS sandbox game for programming enthusiasts. You control your colony by writing JavaScript code that executes 24/7 in a massive, persistent world alongside other programmers.",
-        "categories": [
-            "Einzelspieler",
-            "Mehrspieler",
-            "MMO",
-            "PvP",
-            "Online-PvP",
-            "LAN-PvP",
-            "Plattform\u00fcbergreifender Mehrspieler",
-            "Steam-Sammelkarten",
-            "Steam Workshop",
-            "Statistiken",
-            "Steam-Bestenlisten"
-        ],
-        "genres": [
-            "Indie",
-            "Strategie",
-            "Massively Multiplayer",
-            "Simulation"
-        ]
-    },
     "english_content": {
-        "short_description": "Screeps: World is an open source MMO RTS sandbox game for programming enthusiasts. You control your colony by writing JavaScript code that executes 24/7 in a massive, persistent world alongside other programmers.",
         "categories": [
             "Single-player",
             "Multi-player",
@@ -57,6 +18,45 @@
             "Massively Multiplayer",
             "Simulation",
             "Strategy"
-        ]
-    }
+        ],
+        "short_description": "Screeps: World is an open source MMO RTS sandbox game for programming enthusiasts. You control your colony by writing JavaScript code that executes 24/7 in a massive, persistent world alongside other programmers."
+    },
+    "german_content": {
+        "categories": [
+            "Einzelspieler",
+            "Mehrspieler",
+            "MMO",
+            "PvP",
+            "Online-PvP",
+            "LAN-PvP",
+            "Plattformübergreifender Mehrspieler",
+            "Steam-Sammelkarten",
+            "Steam Workshop",
+            "Statistiken",
+            "Steam-Bestenlisten"
+        ],
+        "genres": [
+            "Indie",
+            "Strategie",
+            "Massively Multiplayer",
+            "Simulation"
+        ],
+        "short_description": "Screeps: World is an open source MMO RTS sandbox game for programming enthusiasts. You control your colony by writing JavaScript code that executes 24/7 in a massive, persistent world alongside other programmers."
+    },
+    "image": "./screeps-world.jpg",
+    "name": "Screeps: World",
+    "platforms": {
+        "linux": true,
+        "mac": true,
+        "windows": true
+    },
+    "programmable": true,
+    "release_date": {
+        "coming_soon": false,
+        "date": "Nov 16, 2016"
+    },
+    "repository": "https://github.com/screeps/screeps",
+    "slug": "screeps-world",
+    "steamID": 464350,
+    "website": "https://screeps.com"
 }
