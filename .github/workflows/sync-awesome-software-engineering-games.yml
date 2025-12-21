@@ -9,6 +9,9 @@ jobs:
   sync-awesome-software-engineering-games:
     name: Sync awesome-software-engineering-games from external repository
     runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: website-admin
 
     steps:
       - uses: actions/checkout@v6.0.1
