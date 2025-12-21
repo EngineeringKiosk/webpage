@@ -15,7 +15,7 @@ const podcastEpisodeCollection = defineCollection({
 					title: z.string(),
 				})
 			),
-			deezer: z.string(),
+			deezer: z.string().optional(),
 			description: z.string(),
 			headlines: z.string(),
 			image: image(),
@@ -27,11 +27,11 @@ const podcastEpisodeCollection = defineCollection({
 					transcriptLetter: z.string().optional(),
 				})
 			),
-			spotify: z.string(),
+			spotify: z.string().optional(),
 			tags: z.array(z.string()),
 			title: z.string(),
 			transcript_slim: z.string(),
-			youtube: z.string(),
+			youtube: z.string().optional(),
 		}),
 });
 
