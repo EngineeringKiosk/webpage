@@ -62,7 +62,3 @@ update-episode-redirects: ## Writes all short url redirects for Podcast episodes
 .PHONY: update-german-tech-podcasts
 update-german-tech-podcasts: ## Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 	. $(VENV_ACTIVATE); python ./scripts/sync_german_tech_podcasts.py
-
-.PHONY: update-awesome-software-engineering-games
-update-awesome-software-engineering-games: ## Updates the Awesome Software Engineering Games data from https://github.com/EngineeringKiosk/awesome-software-engineering-games
-	./website-admin/website-admin sync awesome-software-engineering-games
