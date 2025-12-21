@@ -21,7 +21,8 @@ spotify: https://open.spotify.com/episode/65xtCGE50cKZ6QymfHGhl8
 tags:
 - Tech Kultur
 - Produktivität
-- Projektmanagement
+- Team
+- Adventskalender
 title: "#235 Zwei Pizzen, ein Team und der volle Geschirrspüler im Kopf"
 transcript_slim: src/data/transcripts/235-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=sp8RxZubenw

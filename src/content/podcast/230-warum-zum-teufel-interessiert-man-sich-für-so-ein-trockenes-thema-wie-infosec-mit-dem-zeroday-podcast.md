@@ -25,7 +25,7 @@ spotify: https://open.spotify.com/episode/0jUBRMgD2LUxgaD67SOI6z
 tags:
 - Sicherheit
 - Tech Kultur
-- Interview
+- Adventskalender
 title: "#230 Warum zum Teufel interessiert man sich für so ein trockenes Thema wie InfoSec mit dem Zeroday Podcast"
 transcript_slim: src/data/transcripts/230-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=FCC-kgQKDvY

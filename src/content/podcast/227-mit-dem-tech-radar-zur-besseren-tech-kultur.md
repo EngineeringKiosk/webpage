@@ -22,6 +22,7 @@ tags:
 - Tech Kultur
 - Software Engineering
 - Knowledge Sharing
+- Adventskalender
 title: "#227 Mit dem Tech-Radar zur besseren Tech-Kultur"
 transcript_slim: src/data/transcripts/227-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RBT8GfFaIpk

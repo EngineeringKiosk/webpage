@@ -23,7 +23,7 @@ spotify: https://open.spotify.com/episode/0l91CM0sGDtaCGEcnGcAms
 tags:
 - Open Source
 - Tech Kultur
-- Interview
+- Adventskalender
 title: "#226 Open Source Contributions jenseits von Code mit dem TILpod Podcast"
 transcript_slim: src/data/transcripts/226-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=7zh5VTliReY

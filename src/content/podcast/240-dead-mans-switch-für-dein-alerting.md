@@ -21,7 +21,7 @@ spotify: https://open.spotify.com/episode/4UJvAilPsPHAZVOamPcKOD
 tags:
 - DevOps
 - Software Engineering
-- Engineering Kiosk
+- Adventskalender
 title: "#240 Dead Man's Switch für dein Alerting"
 transcript_slim: src/data/transcripts/240-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=BlIkLn66O1s

@@ -21,7 +21,7 @@ speaker:
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/0lDzAACqGGjDjCDZkrDF5A
 tags:
-- Interview
+- Adventskalender
 - Open Source
 - Automation
 title: "#228 Wie man mit Smart Home (Home Assistant) anfängt mit dem Smarthütte Podcast"

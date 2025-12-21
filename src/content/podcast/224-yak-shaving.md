@@ -20,6 +20,7 @@ tags:
 - Software Engineering
 - Produktivität
 - Tech Kultur
+- Adventskalender
 title: "#224 Yak Shaving"
 transcript_slim: src/data/transcripts/224-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=0MJRrO55ARo

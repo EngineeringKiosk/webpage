@@ -23,7 +23,7 @@ spotify: https://open.spotify.com/episode/4Gp3YYKW9VIWZDgFhNeUPX
 tags:
 - Software Engineering
 - Tech Kultur
-- Interview
+- Adventskalender
 title: "#238 Der Ursprung von Foo und Bar mit Wolfgang vom Digitale Anomalien Podcast"
 transcript_slim: src/data/transcripts/238-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=HBr07gKLejw

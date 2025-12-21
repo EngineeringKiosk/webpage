@@ -25,7 +25,7 @@ spotify: https://open.spotify.com/episode/2ETiSu7LuQDHB3EtqsGdTZ
 tags:
 - Software Engineering
 - Open Source
-- Interview
+- Adventskalender
 title: "#234 Python in Electron-Apps mit Dominik & Jochen vom Python-Podcast"
 transcript_slim: src/data/transcripts/234-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=ccK-LepqEq4

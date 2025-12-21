@@ -23,7 +23,7 @@ spotify: https://open.spotify.com/episode/3t8lHOPG3xkKSsgg2pq0oq
 tags:
 - Karriere
 - Knowledge Sharing
-- Interview
+- Adventskalender
 title: "#236 Offizielle Weiterbildungen in der IT mit Stefan Macke vom IT-Berufe-Podcast"
 transcript_slim: src/data/transcripts/236-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=Kbg-hOIg8Ug

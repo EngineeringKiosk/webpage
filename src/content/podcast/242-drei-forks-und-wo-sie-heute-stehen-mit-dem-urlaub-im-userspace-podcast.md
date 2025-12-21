@@ -27,7 +27,7 @@ spotify: https://open.spotify.com/episode/0zWkhz9EZDH77izxWVdmIF
 tags:
 - Open Source
 - Tech Kultur
-- Interview
+- Adventskalender
 title: "#242 Drei Forks und wo sie heute stehen mit dem Urlaub im Userspace Podcast"
 transcript_slim: src/data/transcripts/242-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=l9e001leG5s

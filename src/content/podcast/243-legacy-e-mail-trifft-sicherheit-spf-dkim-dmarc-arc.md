@@ -22,6 +22,7 @@ tags:
 - DevOps
 - Sicherheit
 - Software Engineering
+- Adventskalender
 title: "#243 Legacy E-Mail trifft Sicherheit: SPF, DKIM, DMARC, ARC"
 transcript_slim: src/data/transcripts/243-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=hcCO2r5GSME

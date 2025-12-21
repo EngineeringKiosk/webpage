@@ -21,7 +21,7 @@ spotify: https://open.spotify.com/episode/3x3iMwJw8RLsn0vR0o40lD
 tags:
 - Software Engineering
 - Open Source
-- Knowledge Sharing
+- Adventskalender
 title: "#244 Spiele für Softwareentwicklerinnen"
 transcript_slim: src/data/transcripts/244-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=DaZlMBdZMOA

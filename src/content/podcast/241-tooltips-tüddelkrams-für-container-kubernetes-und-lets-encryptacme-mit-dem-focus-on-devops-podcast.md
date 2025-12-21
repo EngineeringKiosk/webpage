@@ -27,7 +27,7 @@ spotify: https://open.spotify.com/episode/7pb2YT25cKvvnXKIuadQQA
 tags:
 - DevOps
 - Sicherheit
-- Interview
+- Adventskalender
 title: "#241 Tooltips (Tüddelkrams) für Container, Kubernetes und Lets Encrypt/ACME mit dem FOCUS ON: DevOps Podcast"
 transcript_slim: src/data/transcripts/241-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=iHgfu-DJHH0

@@ -23,7 +23,7 @@ spotify: https://open.spotify.com/episode/7kMVgnQeHGAHq80DHSr20k
 tags:
 - Tech Kultur
 - Kommunikation
-- Interview
+- Adventskalender
 title: "#233 Trust Battery mit Andy Lehr vom Happy Bootstrapping Podcast"
 transcript_slim: src/data/transcripts/233-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=uTnsV0aPYhM
