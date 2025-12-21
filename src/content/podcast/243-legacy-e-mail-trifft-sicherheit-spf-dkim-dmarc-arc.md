@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/92048394-c94d-4c66-b12d-69ad54f889a9/engineering-kiosk-243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc
 apple_podcasts: https://podcasts.apple.com/us/podcast/243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc/id1603082924?i=1000742071731&uo=4
 audio: https://audio1.redcircle.com/episodes/caecea29-1d37-4a6a-9665-cb0254944024/stream.mp3
 chapter:

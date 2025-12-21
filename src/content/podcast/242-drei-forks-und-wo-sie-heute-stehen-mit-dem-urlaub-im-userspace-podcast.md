@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/0b3ab2d3-3f46-416d-a189-cceb5be589b1/engineering-kiosk-242-drei-forks-und-wo-sie-heute-stehen-mit-dem-urlaub-im-userspace-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/242-drei-forks-und-wo-sie-heute-stehen-mit-dem-urlaub/id1603082924?i=1000741931128&uo=4
 audio: https://audio1.redcircle.com/episodes/9d2b4630-1949-486e-ac3c-0246dfade4d2/stream.mp3
 chapter:

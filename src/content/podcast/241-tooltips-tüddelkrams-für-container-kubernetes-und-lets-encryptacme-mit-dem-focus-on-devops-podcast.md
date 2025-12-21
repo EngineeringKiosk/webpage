@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/4f2fe010-1ce3-40fa-83ea-0858407d7ba0/engineering-kiosk-241-tooltips-t%C3%BCddelkrams-f%C3%BCr-container-kubernetes-und-lets-encrypt-acme-mit-dem-focus-on-devops-podcast
 apple_podcasts: https://podcasts.apple.com/us/podcast/241-tooltips-t%C3%BCddelkrams-f%C3%BCr-container-kubernetes-und/id1603082924?i=1000741771268&uo=4
 audio: https://audio1.redcircle.com/episodes/ec406a3e-f993-4878-9fe9-f029c56b940a/stream.mp3
 chapter:

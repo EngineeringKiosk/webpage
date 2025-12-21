@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/7e0d2ece-858e-4c2e-b3e8-5abb2338da9c/engineering-kiosk-244-spiele-f%C3%BCr-softwareentwicklerinnen
 apple_podcasts: https://podcasts.apple.com/us/podcast/244-spiele-f%C3%BCr-softwareentwicklerinnen/id1603082924?i=1000742158059&uo=4
 audio: https://audio1.redcircle.com/episodes/ad818774-b5c2-409e-bea0-1d7751f82d98/stream.mp3
 chapter:
