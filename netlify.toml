@@ -3250,6 +3250,18 @@ to = "/podcast/episode/243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc?pk
 status = 301
 force = true
 
+[[redirects]]
+from = "/episodes/244"
+to = "/podcast/episode/244-spiele-für-softwareentwicklerinnen?pkn=shortlink"
+status = 301
+force = true
+
+[[redirects]]
+from = "/ep244"
+to = "/podcast/episode/244-spiele-für-softwareentwicklerinnen?pkn=shortlink"
+status = 301
+force = true
+
 [[headers]]
 for = "/deutsche-tech-podcasts/podcasts.opml"
 
