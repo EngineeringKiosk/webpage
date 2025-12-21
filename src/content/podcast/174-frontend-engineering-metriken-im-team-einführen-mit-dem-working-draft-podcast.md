@@ -15,11 +15,11 @@ pubDate: 2024-12-23 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Christian "Schepp" Schaefer
+- name: Christian "Schepp" Schaefer (Working Draft Podcast)
   transcriptLetter: B
-- name: Vanessa Otto
+- name: Vanessa Otto (Working Draft Podcast)
   transcriptLetter: C
-- name: Hans Christian Reinl
+- name: Hans Christian Reinl (Working Draft Podcast)
   transcriptLetter: D
 spotify: https://open.spotify.com/episode/33ZSnqecRql5KCTgmzdu7o
 tags:

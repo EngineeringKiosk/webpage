@@ -15,7 +15,7 @@ pubDate: 2024-12-20 05:00:00+00:00
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
-- name: Philipp Hoeler-Lutz
+- name: Philipp Hoeler-Lutz (Click! Clack! Hack! Podcast)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/0UmcTKRabWlLCmnjY79rNs
 tags:

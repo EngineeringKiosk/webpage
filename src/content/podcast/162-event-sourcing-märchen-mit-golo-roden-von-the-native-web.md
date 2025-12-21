@@ -15,7 +15,7 @@ pubDate: 2024-12-11 05:00:00+00:00
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
-- name: Golo Roden
+- name: Golo Roden (the native web)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/05Vaochk7q0MLcWKzwPymO
 tags:

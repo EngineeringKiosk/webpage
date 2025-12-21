@@ -15,9 +15,9 @@ pubDate: 2024-12-09 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Doreen Sacker
+- name: Doreen Sacker (UNMUTE IT Podcast)
   transcriptLetter: B
-- name: Ellen Schwartau
+- name: Ellen Schwartau (UNMUTE IT Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/2fO8Yl2lrXtANQEMFo03zA
 tags:

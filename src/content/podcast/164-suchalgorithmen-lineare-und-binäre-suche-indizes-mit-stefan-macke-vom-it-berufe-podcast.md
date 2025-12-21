@@ -15,7 +15,7 @@ pubDate: 2024-12-13 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Stefan Macke
+- name: Stefan Macke (IT-Berufe Podcast)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/6E7DcDBJpaDpC21I1ItW4s
 tags:

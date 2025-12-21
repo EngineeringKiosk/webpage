@@ -15,9 +15,9 @@ pubDate: 2024-12-02 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Michelle Golchert
+- name: Michelle Golchert (Data Science Deep Dive Podcast)
   transcriptLetter: B
-- name: Dr. Sebastian Warnholz
+- name: Dr. Sebastian Warnholz (Data Science Deep Dive Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/7w2maDNZb6C5dupdSU2cfK
 tags:

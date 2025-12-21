@@ -15,9 +15,9 @@ pubDate: 2024-12-16 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Christian Braun
+- name: Christian Braun (Index out of bounds Podcast)
   transcriptLetter: B
-- name: Thomas Diroll
+- name: Thomas Diroll (Index out of bounds Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/1GmspWQ6qxnJbYjztvaXC2
 tags:

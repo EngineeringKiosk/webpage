@@ -17,9 +17,9 @@ speaker:
   transcriptLetter: A
 - name: Wolfi Gassler
   transcriptLetter: B
-- name: Fabi Fink
+- name: Fabi Fink (programmier.bar Podcast)
   transcriptLetter: D
-- name: Jan Gregor Emge-Triebel
+- name: Jan Gregor Emge-Triebel (programmier.bar Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/3wKKuEaOCr5X7XcFQQHiiQ
 tags:

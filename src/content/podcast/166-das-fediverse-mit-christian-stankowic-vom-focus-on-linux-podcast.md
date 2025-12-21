@@ -15,7 +15,7 @@ pubDate: 2024-12-15 05:00:00+00:00
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
-- name: Christian Stankowic
+- name: "Christian Stankowic (FOCUS ON: Linux Podcast)"
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/1KwtqyAAvKymGLx5MRraX9
 tags:

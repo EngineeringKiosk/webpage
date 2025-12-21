@@ -15,7 +15,7 @@ pubDate: 2024-12-21 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Matthias Endler
+- name: Matthias Endler (Rust in Production Podcast)
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/427VTvSigSVwBznfRgnuMn
 tags:

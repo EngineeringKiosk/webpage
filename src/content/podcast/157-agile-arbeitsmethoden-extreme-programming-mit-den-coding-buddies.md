@@ -15,9 +15,9 @@ pubDate: 2024-12-06 05:00:00+00:00
 speaker:
 - name: Wolfi Gassler
   transcriptLetter: A
-- name: Tino Reising
+- name: Tino Reising (Coding Buddies Podcast)
   transcriptLetter: B
-- name: Fabian Göcke
+- name: Fabian Göcke (Coding Buddies Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/5hS8w9Gkd4V6btBwkWp2Qn
 tags:

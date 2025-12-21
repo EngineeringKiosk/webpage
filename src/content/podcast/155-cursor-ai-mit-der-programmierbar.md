@@ -15,9 +15,9 @@ pubDate: 2024-12-04 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Fabi Fink
+- name: Fabi Fink (programmier.bar Podcast)
   transcriptLetter: B
-- name: Jan Gregor Emge-Triebel
+- name: Jan Gregor Emge-Triebel (programmier.bar Podcast)
   transcriptLetter: C
 spotify: https://open.spotify.com/episode/1tXsaoVZydgD6WDHoxtTJ6
 tags:
