@@ -19,3 +19,8 @@ updates:
     directory: '/scripts'
     schedule:
       interval: 'monthly'
+
+  - package-ecosystem: "gomod"
+    directory: "/website-admin/"
+    schedule:
+      interval: "monthly"
