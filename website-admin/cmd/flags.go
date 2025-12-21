@@ -16,6 +16,10 @@ var (
 	flagNetlifyRedirectEpisodesDir    string
 	flagNetlifyRedirectRedirectPrefix string
 
+	// Podcast
+	// TODO Unify with flagEpisodesStorePath?
+	flagPodcastEpisodesDir string
+
 	// Tags
 	flagTagsWriteFile  bool
 	flagTagsContentDir string
