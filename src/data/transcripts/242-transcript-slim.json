@@ -1,0 +1,104 @@
+{
+    "acoustic_model": "assemblyai_default",
+    "audio_duration": 635,
+    "audio_url": "https://cloud.inlupus.at/s/nqwfk4zbymisaWM/download",
+    "auto_chapters": false,
+    "auto_highlights": false,
+    "auto_highlights_result": {},
+    "confidence": 0.96347576,
+    "content_safety": false,
+    "content_safety_labels": {
+        "status": "unavailable"
+    },
+    "custom_topics": false,
+    "disfluencies": false,
+    "dual_channel": false,
+    "entity_detection": true,
+    "filter_profanity": false,
+    "format_text": false,
+    "iab_categories": true,
+    "iab_categories_result": {},
+    "id": "def5713d-ff2f-4882-b34a-0c049e31be6e",
+    "language_code": "de",
+    "language_detection": false,
+    "language_model": "assemblyai_default",
+    "punctuate": true,
+    "redact_pii": false,
+    "redact_pii_audio": false,
+    "sentiment_analysis": false,
+    "speaker_labels": true,
+    "speakers_expected": 5,
+    "speed_boost": false,
+    "status": "completed",
+    "summarization": false,
+    "throttled": false,
+    "utterances": [
+        {
+            "end": 54510,
+            "speaker": "A",
+            "start": 3920,
+            "text": "Willkommen zum Engineering Kiosk Adventskalender. Es ist mal wieder Zeit für ein neues Türchen. Und weil Weihnachten natürlich auch das Fest der Liebe genannt wird, dachten wir uns dieses Lass uns doch mal wieder etwas Liebe mit der deutschsprachigen Tech Podcast Szene teilen. Diese Episode ist eine solche Episode und sie kommt nicht von den Standard Engineering Kiosk Hosts Wolfgang oder mir. Mein Name ist Andi, sondern wir lassen uns den Engineering Kiosk mal für einen Tag aus der Hand nehmen. Heute übernimmt ein befreundeter Podcast das Mikro und bringt ihm ein paar neue Perspektiven, ein anderes Thema und vielleicht den ein oder anderen Gedanken, der über unsere eigene Bubble hinausgeht. Wir denken da draußen gibt es großartige Tech Podcasts, die unbedingt mehr Aufmerksamkeit verdienen und wir denken Wissen, Inspiration und gute Geschichten sollte man am besten teilen. Also zurücklehnen und neugierig sein. Heute mit Christian, Jan und Enrico aus dem Urlaub im User Space Podcast. Los geht's. Viel Spaß."
+        },
+        {
+            "end": 61870,
+            "speaker": "B",
+            "start": 54590,
+            "text": "Hallo und herzlich willkommen. Wir sind die drei vom Urlaub im User Space Podcast und mit dabei Enrico. Hi Christian."
+        },
+        {
+            "end": 63190,
+            "speaker": "C",
+            "start": 62190,
+            "text": "Hi und ich."
+        },
+        {
+            "end": 74350,
+            "speaker": "B",
+            "start": 63190,
+            "text": "Der Jan. Bei uns im Podcast geht es um News, Deep Dives rund um Linux, Open Source und Container Technologien. Und heute haben wir für euch was ganz Besonderes vorbereitet und zwar drei Forks und wo sie heute stehen. Und los geht's mit Christian."
+        },
+        {
+            "end": 266420,
+            "speaker": "D",
+            "start": 74430,
+            "text": "Ja genau. Ich habe mal Git und forjao mitgenommen. Das ist ja auch ein Projekt, über das viel berichtet wurde. Und zwar wurde ja im Dezember zwei tausend zwei und zwanzig Forjo als Software von Git gestartet und Giti selbst wiederum gibt es auch schon eine Weile, seit zwei tausend sechzehn schon. Und das ist ein Fork Tool, das gox heißt. Das habt ihr vielleicht auch schon mal gehört, liebe Zörn. Da ist so eine kleine leichtgewichtige Alternative zu eben Tools wie GitHub oder GitLab. Ist in Go geschrieben, deswegen Single Binary, einfach fire and forget kann man irgendwo ausführen und hat dann so eine schöne kleine REST API und ein Webinterface für Repos, für Gruppen, für Issues und ein Wiki. Das Ganze läuft sogar auf dem Raspberry Pi. So energieeffizient ist das Ganze. Aber warum wurde das jetzt geforkt? Naja, Hintergrund war, dass es eine profitorientierte Organisation gibt, die GT Limited, die das Giti Projekt mehr oder weniger übernommen hat, denn die Community hatte über Nacht quasi keine Domain und Infrastrukturberechtigung mehr und deswegen dann der Fork und der Fork hat sich dann auch direkt als Ziel gesetzt, von Anfang an eine saubere Governance zu haben und das Projekt auch nachhaltig fortzuführen, damit dem Projekt nicht das gleiche droht wie eben auch. Giti sieht dann so aus, dass das Projekt von codework e. V. Verwaltet wird. Das ist ein gemeinnütziger Verein im weitesten Sinne aus Berlin, der ist spendenfinanziert und der bietet eben eine Alternative zu GitHub und GitLab. Also das gibt es auch schon länger als Four J O, das gibt es seit zwei tausend achtzehn schon und vorher lief das Ganze eben mit Git und die haben dann eben gleich die Migration auf J gemacht und sind da mit einem guten Beispiel vorangegangen. Das heißt, der Verein codeberg hat die Domains und die Markenrechte und die hosten eben Forjo mit CI, CD Pipelines und auch mit Pages, also so eine Funktion, dass man auch statische Webseiten einfach hosten kann und ohne sich mit Infrastruktur rumärgern zu müssen. Und ja, mittlerweile haben mehr als User das Ganze im Einsatz und über Projekte finden sich da auch wirklich größere Dinge, wie die Programmiersprache SICK zum Beispiel. Und das Projekt J hat mittlerweile dreiig Member und seit dem Fork wurden über Commits von auch ein hundert Kontributoren geschrieben und das finde ich, das ist schon ein starkes Stück, kann glaube ich schon festhalten, dass das Projekt sehr aktiv weitergepflegt wird. Sie haben auch mit J Actions eine eigene Continuous Integration Lösung eingebaut, die sehr ähnlich zu GitHub Actions ist und seit Februar zwei tausend vier und zwanzig zählt auch als hardfork. Grund dafür ist, es gibt eben einen Feature Drift, also die Migrationen sind nicht mehr so einfach von Giti nach möglich und dadurch hat das Projekt aber auch die Möglichkeit, den Fokus auf eine stärkere Stabilisierung und neue Features zu setzen, weil sie eben nicht mehr zu ein hundert Prozent kompatibel zu Giti sein müssen. Sie haben dann auch später angefangen, das ganze Projekt auf Semantic Versioning umzustellen und setzen jetzt auch auf die GPL V als Lizenz und auf die MIT Lizenz. Und in den Shownotes habe ich mal ein paar Links zusammengestellt zur FAQ, die Unterschiede, die technischen nochmal zwischen den einzelnen Projekten und auch die Ankündigung, wann das ganze Hardfork geworden ist. Und ich würde sagen, das ist ein aktives Thema und ich nehme auch wahr, dass in meiner Bubble viele Leute jetzt auf codework zum Beispiel migrieren weg von GitHub und ich selbst habe es auch im Home Lab. Also ich würde sagen, das ist ein sehr gutes Beispiel für einen guten Fork, der sehr gut angenommen und aktiv weiterentwickelt wird."
+        },
+        {
+            "end": 432200,
+            "speaker": "E",
+            "start": 266810,
+            "text": "Ich habe euch Alma Linux als Fork von centos mitgebracht und wie ihr euch vielleicht erinnern könnt, so im Jahr zwei tausend zwanzig wurde das centos Projekt so wie es war abgekündigt. Bis dato war das nämlich ein Downstream von Red Hat Enterprise Linux und damit binär und bug kompatibel, also auch mit den Versionen, so wie das im Enterprise Linux von Red Hat eben war. Centos sieben wurde dann bis zwei tausend vier und zwanzig noch gepflegt, centos acht dann schon etwas früher abgekündigt und zwar zwei tausend ein und zwanzig und darum gab es ganz viel Dinge drumherum. Schon zwei tausend neunzehn wurde centos Stream als Alternative bzw. Nachfolger des centos Projekts ins Leben gerufen und auch als solches dann später angekündigt. Das hat aber dazu geführt, dass natürlich die Community da einige Probleme gesehen hat und dann gesagt hat, okay, dann bauen wir jetzt eben einen Fork davon. So sind Rocky und almalinox als zwei Downstreams entstanden, die auch bis heute noch da sind und die Idee des wirklich bug und binär kompatiblen der Version von REL eben das ganze fortführen sollen. Der railsource Code ist seit Juli zwei tausend drei und zwanzig nur noch so möglich, also nur noch so erhältlich, dass ich dafür einen kostenlosen Red Hat Account brauche, was dann auch zur Folge hatte, dass sich beispielsweise Alma davon entfernt hat und auf die Codebase von centos Stream gewechselt ist, also somit deutlich näher an dem ist, wo das centos Stream Projekt hin ist. Allerdings trotzdem auch mit einer großen Community, die sich um dieses Projekt gebildet hat, was dann Bugfixes und eben auch am Ökosystem beiträgt. Unter anderem gibt es auch etwas, was als Alleinstellungsmerkmal bei Alma mit drin ist, zum Beispiel der Support gerade für ältere Hardware, die bei REL bereits entfernt wurden. Und in der aktuellen ER Version gibt es sogar Support für butterfs. Genau so findet ihr heute wahrscheinlich bei dem Cloud Provider eurer Wahl als das, wo mal centos stand, entweder das centos Stream und dann eben auch Alma und Rocky Linux als Alternativen dafür, die dann entsprechend weiter gepflegt werden. Beide ein bisschen unterschiedlich, beide mit einem etwas unterschiedlichen Ansatz. Rocky geht heute beispielsweise auf temporäre Cloud Instanzen, um sich dort den Quellcode zu ziehen. Alma ist relativ schnell auf Stream übergewechselt und so sieht man, dass nach einem so, naja, ich sag mal schon sehr politisch entgegen Ankündigung dann doch was ganz Gutes draus geworden ist und zwei andere Communities entstanden sind. Wenn ihr mehr dazu wissen wollt, dann hört euch gerne aus der Focus on Linux Episode drei und sechzig das Interview mit Jan Wildeböhr an oder guckt euch den Vortrag centos ist tot, lang lebe centos von Christian auf der frostcon zwei tausend ein und zwanzig an und ich."
+        },
+        {
+            "end": 587820,
+            "speaker": "B",
+            "start": 432200,
+            "text": "Habe einen Fork von Audacity mitgebracht. Ganz kurz, im April zwei tausend ein und zwanzig wurde Audacity von einem Muse Group beworben. Dann gab es erst einen Vorstoß, mehr Telemetrie hinzuzufügen, der traf bei der Community allerdings auf Ablehnung und dann wurde der Vorschlag schlussendlich zurückgezogen. Im Mai zwei tausend ein und zwanzig wurde ein Contributors License Agreement hinzugefügt, das möglicherweise im Konflikt mit der GPL Lizenz von Audacity steht. Und im Juli kam dann dazu noch eine neue Privacy Policy, die unter anderem potenziellen User in unter dreizehn Jahren von der Nutzung abriet. Es gab dann mehrere Forks, die alle ein ähnliches Ziel verfolgten, das zunächst namenlose Tenacity. Da gab es dann eine Abstimmung, wie es heißen Audacium, Source, Decity und Odd Monkey. Tenacity bekam dann als erstes ein neues Bildsystem und einen neuen dynamischen Kompressor. Dann schlief die Aktivität so ein bisschen ein, allerdings war das nicht exklusiv für Tenacity, sondern bei allen Forks ein bisschen. Und für Tenacity wurde dann schlussendlich sogar ein Hiatus verkündet, also eine unbestimmte Ruhepause. Im Juli zwei tausend zwei und zwanzig haben sich dann die Entwickler von Source, Destiny und Tenacity abgesprochen und sich dann entschieden, die beiden Projekte zu vereinen. Das war im November zwei tausend zwei und zwanzig abgeschlossen. Audacium schließlich dann auch etwas später noch dem Projekt an. Und dann habe ich mal so ein bisschen noch recherchiert, das ist ja alles auch so ein bisschen inoffiziell. Da habe ich einen Kommentar auf Hacker News gefunden von einem User, der heißt Leo Wattenberg. Ich kann jetzt nicht hundertprozentig sagen, dass es auch der Leo Wattenberg ist, der im offiziellen Audacity Blog Einträge veröffentlicht, aber im Kommentar hat die Person erwähnt, dass sie für Audacity arbeitet und der Name passt, also nehmt es mit einem Grain of Salt. Auf jeden Fall hat Er erzählt, dass sich das Projekt zuerst aufs Bildsystem gestürzt hat und da viel Energie reingesteckt hat und das ist bei den Usern gar nicht sichtbar geworden, weil das halt das Bildsystem ist. Und dann hat Tenacity relativ lange auf dem Stand von Audacity dritter januar verweilt und erst vor zwei Monaten wurde dann auf Audacity dritter juli rebased. Zu den User Facing Änderungen zählen unter anderem neue Themes, Einstellungen, die standardmäßig sichtbar sind in Tenacity und in Audacity standardmäßig nicht sichtbar sind und Support für neue und andere Systeme. Er hat so ein bisschen die Vision zwischen den beiden Projekten so beschrieben, dass sich Audacity mehr in Richtung einer Digital Audio Workstation entwickeln möchte und Tenacity, das zumindest sein Eindruck dem traditionellen Ziel von Audacity treu bleiben möchte, also ganz einfachen Open Source Toneditor. Genau. Und das war's schon. Wir danken euch herzlich für eure Aufmerksamkeit und die Einladung, wünschen euch eine schöne restliche Adventszeit. Wenn euch Themen wie diese interessieren, dann hört doch gerne mal bei uns rein."
+        },
+        {
+            "end": 588380,
+            "speaker": "E",
+            "start": 587820,
+            "text": "Bis dann."
+        },
+        {
+            "end": 590380,
+            "speaker": "C",
+            "start": 588380,
+            "text": "Ciao, ciao."
+        },
+        {
+            "end": 628980,
+            "speaker": "A",
+            "start": 590940,
+            "text": "Hier ist wieder Andi vom Engineer Kiosk. Das war es auch schon wieder mit dem dem heutigen Adventskalendertürchen, präsentiert von unseren Freunden aus der deutschsprachigen Tech Podcast Szene. Wenn dir gefallen hat, was du gehört hast, hör unbedingt doch mal dort rein, supportet die Leute, die gute Inhalte machen. Die Links zum Episodenthema, aber auch zu dem Podcast findet ihr natürlich wie immer in den Shownotes. Und wenn du Lust hast, dich mit ganz vielen Gleichgesinnten auszutauschen, schau doch mal in unserer Engineering Kiosk Discord Community vorbei. Dort hängen Entwickler und Entwicklerinnen, Architektinnen, Datenmenschen und Tech Nerds aller Art, genau wie du, genau wie Wolfgang, genauso wie ich. Ihr wisst schon, was wir meinen. Wir hören uns bei der nächsten Episode wieder. Bis dahin, frohe Weihnachten und eine wunderbare Adventszeit."
+        },
+        {
+            "end": 629540,
+            "speaker": "D",
+            "start": 628980,
+            "text": "Bis bald."
+        }
+    ],
+    "webhook_auth": false
+}

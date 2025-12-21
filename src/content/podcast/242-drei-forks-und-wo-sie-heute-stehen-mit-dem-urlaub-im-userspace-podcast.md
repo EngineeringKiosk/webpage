@@ -1,26 +1,35 @@
 ---
 advertiser: ""
 amazon_music: ""
-apple_podcasts: ""
+apple_podcasts: https://podcasts.apple.com/us/podcast/242-drei-forks-und-wo-sie-heute-stehen-mit-dem-urlaub/id1603082924?i=1000741931128&uo=4
 audio: https://audio1.redcircle.com/episodes/9d2b4630-1949-486e-ac3c-0246dfade4d2/stream.mp3
 chapter:
 - start: 00:00:00
   title: Drei Forks
-deezer: ""
+deezer: https://www.deezer.com/episode/824365892
 description: "3 forks und wo sie heute stehen mit Christian Stankowic, Jan Walther & Enrico Bartz aus dem Urlaub im Userspace Podcast  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)  Anregungen, Gedanken, Themen und WünscheDein Feedback zählt! Erreiche uns über einen der folgenden Kanäle … EngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram: https://www.instagram.com/engineeringkiosk/ Unterstütze den Engineering KioskWenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer\u00a0 Buy us a coffee: https://engineeringkiosk.dev/kaffee LinksUrlaub im Userspace Podcast: https://user.space/Forgejo-Webseite: https://forgejo.orgForgejo FAQ: https://forgejo.org/faq/Forgejo vs. Gitea: https://forgejo.org/compare-to-gitea/Forgejo Hard Fork-Ankündigung: https://forgejo.org/2024-02-forking-forward/AlmaLinux-Webseite: https://almalinux.org/Interview mit Jan Wildeboer zu RHEL-Downstreams (Juli 2023): https://focusonlinux.podigee.io/63-interview-mit-jan-wildeboerVortrag \"CentOS ist tot, lang lebe CentOS - WTFAQ: Häufig gestellte Fragen\" (FrOSCon 2021): https://programm.froscon.org/2021/system/event_attachments/attachments/000/000/637/original/WTFAQ_CentOS.pdfTenacity Ankündigung: https://tenacityaudio.org/docs/_content/Introduction_and_Motivation.html#motivation-and-history-of-tenacityHacker News-Eintrag: https://news.ycombinator.com/item?id=45814328\ufeff Sprungmarken(00:00:00) Drei Forks  HostsWolfgang Gassler (https://gassler.dev)\u00a0Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
 headlines: anregungen-gedanken-themen-und-wünsche::Anregungen, Gedanken, Themen und Wünsche||unterstütze-den-engineering-kiosk::Unterstütze den Engineering Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community
 image: ./242-drei-forks-und-wo-sie-heute-stehen-mit-dem-urlaub-im-userspace-podcast.jpg
-length_second: 0
+length_second: 634
 pubDate: 2025-12-19 02:00:46+00:00
 speaker:
 - name: Andy Grunwald
-  transcriptLetter: ""
-- name: Wolfi Gassler
-  transcriptLetter: ""
-spotify: ""
-tags: []
+  transcriptLetter: A
+- name: Jan Walther (Urlaub im Userspace Podcast)
+  transcriptLetter: B
+- name: Enrico Bartz (Urlaub im Userspace Podcast)
+  transcriptLetter: C
+- name: Christian Stankowic (Urlaub im Userspace Podcast)
+  transcriptLetter: D
+- name: Enrico Bartz (Urlaub im Userspace Podcast)
+  transcriptLetter: E
+spotify: https://open.spotify.com/episode/0zWkhz9EZDH77izxWVdmIF
+tags:
+- Open Source
+- Tech Kultur
+- Interview
 title: "#242 Drei Forks und wo sie heute stehen mit dem Urlaub im Userspace Podcast"
 transcript_slim: ""
-youtube: ""
+youtube: https://www.youtube.com/watch?v=l9e001leG5s
 ---
 <p>3 forks und wo sie heute stehen mit Christian Stankowic, Jan Walther &amp; Enrico Bartz aus dem Urlaub im Userspace Podcast</p><p><br></p><p>Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz &amp; knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.</p><p><br></p><p>Unsere aktuellen Werbepartner findest du auf <a href="https://engineeringkiosk.dev/partners">https://engineeringkiosk.dev/partners</a></p><p><br></p><p><strong>Das schnelle Feedback zur Episode:</strong></p><p><a href="https://api.openpodcast.dev/feedback/242/upvote" rel="nofollow"><strong>👍 (top)</strong></a><strong> </strong><a href="https://api.openpodcast.dev/feedback/242/downvote" rel="nofollow"><strong>👎 (geht so)</strong></a></p><p><br></p><h3 id="anregungen-gedanken-themen-und-wünsche">Anregungen, Gedanken, Themen und Wünsche</h3><p>Dein Feedback zählt! Erreiche uns über einen der folgenden Kanäle …</p><ul><li>EngKiosk Community: <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </li><li>LinkedIn: <a href="https://www.linkedin.com/company/engineering-kiosk/" rel="nofollow">https://www.linkedin.com/company/engineering-kiosk/</a></li><li>Email: <a href="mailto:stehtisch@engineeringkiosk.dev" rel="nofollow">stehtisch@engineeringkiosk.dev</a></li><li>Mastodon: <a href="https://podcasts.social/@engkiosk" rel="nofollow">https://podcasts.social/@engkiosk</a></li><li>Bluesky: <a href="https://bsky.app/profile/engineeringkiosk.bsky.social" rel="nofollow">https://bsky.app/profile/engineeringkiosk.bsky.social</a></li><li>Instagram: <a href="https://www.instagram.com/engineeringkiosk/" rel="nofollow">https://www.instagram.com/engineeringkiosk/</a></li></ul><p><br></p><h3 id="unterstütze-den-engineering-kiosk">Unterstütze den Engineering Kiosk</h3><p>Wenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer </p><ul><li>Buy us a coffee: <a href="https://engineeringkiosk.dev/kaffee">https://engineeringkiosk.dev/kaffee</a></li></ul><p><br></p><h3 id="links">Links</h3><ul><li>Urlaub im Userspace Podcast: <a href="https://user.space/" rel="nofollow">https://user.space/</a></li><li>Forgejo-Webseite: <a href="https://forgejo.org" rel="nofollow">https://forgejo.org</a></li><li>Forgejo FAQ: <a href="https://forgejo.org/faq/" rel="nofollow">https://forgejo.org/faq/</a></li><li>Forgejo vs. Gitea: <a href="https://forgejo.org/compare-to-gitea/" rel="nofollow">https://forgejo.org/compare-to-gitea/</a></li><li>Forgejo Hard Fork-Ankündigung: <a href="https://forgejo.org/2024-02-forking-forward/" rel="nofollow">https://forgejo.org/2024-02-forking-forward/</a></li><li>AlmaLinux-Webseite: <a href="https://almalinux.org/" rel="nofollow">https://almalinux.org/</a></li><li>Interview mit Jan Wildeboer zu RHEL-Downstreams (Juli 2023): <a href="https://focusonlinux.podigee.io/63-interview-mit-jan-wildeboer" rel="nofollow">https://focusonlinux.podigee.io/63-interview-mit-jan-wildeboer</a></li><li>Vortrag &#34;CentOS ist tot, lang lebe CentOS - WTFAQ: Häufig gestellte Fragen&#34; (FrOSCon 2021): <a href="https://programm.froscon.org/2021/system/event_attachments/attachments/000/000/637/original/WTFAQ_CentOS.pdf" rel="nofollow">https://programm.froscon.org/2021/system/event_attachments/attachments/000/000/637/original/WTFAQ_CentOS.pdf</a></li><li>Tenacity Ankündigung: <a href="https://tenacityaudio.org/docs/_content/Introduction_and_Motivation.html#motivation-and-history-of-tenacity" rel="nofollow">https://tenacityaudio.org/docs/_content/Introduction_and_Motivation.html#motivation-and-history-of-tenacity</a></li><li>Hacker News-Eintrag: <a href="https://news.ycombinator.com/item?id=45814328" rel="nofollow">https://news.ycombinator.com/item?id=45814328</a></li></ul><p>﻿</p><h3 id="sprungmarken">Sprungmarken</h3><p>(00:00:00) Drei Forks</p><p><br></p><h3 id="hosts">Hosts</h3><ul><li>Wolfgang Gassler (<a href="https://gassler.dev" rel="nofollow">https://gassler.dev</a>) </li><li>Andy Grunwald (<a href="https://andygrunwald.com/" rel="nofollow">https://andygrunwald.com/</a>)</li></ul><p><br></p><h3 id="community">Community</h3><p>Diskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </p>

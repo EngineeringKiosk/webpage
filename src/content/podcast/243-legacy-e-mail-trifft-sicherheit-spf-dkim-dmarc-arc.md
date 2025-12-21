@@ -1,26 +1,29 @@
 ---
 advertiser: ""
 amazon_music: ""
-apple_podcasts: ""
+apple_podcasts: https://podcasts.apple.com/us/podcast/243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc/id1603082924?i=1000742071731&uo=4
 audio: https://audio1.redcircle.com/episodes/caecea29-1d37-4a6a-9665-cb0254944024/stream.mp3
 chapter:
 - start: 00:00:00
   title: SPF, DKIM, DMARC, SRS, ARC
-deezer: ""
+deezer: https://www.deezer.com/episode/824714442
 description: "E-Mails wirken simpel – sind aber technisch ein ziemliches Minenfeld. In dieser Adventkalender-Folge tauchen wir\u00a0in die Welt von SPF, DKIM, DMARC, SRS und ARC ein.  Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)  Anregungen, Gedanken, Themen und WünscheDein Feedback zählt! Erreiche uns über einen der folgenden Kanäle … EngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0LinkedIn: https://www.linkedin.com/company/engineering-kiosk/Email: stehtisch@engineeringkiosk.devMastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialInstagram: https://www.instagram.com/engineeringkiosk/ Unterstütze den Engineering KioskWenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer\u00a0 Buy us a coffee: https://engineeringkiosk.dev/kaffee Linkshttps://de.wikipedia.org/wiki/DMARChttps://www.cloudflare.com/de-de/learning/dns/dns-records/dns-dmarc-record/gmx.de und web.de haben Mail-Rejects durch SPF https://www.heinlein-support.de/blog/news/gmx-de-und-web-de-haben-mail-rejects-durch-spf\u00a0Free wöchentlicher DMARC Report https://dmarc.postmarkapp.com/OpenSource DMARC Report Parser https://domainaware.github.io/parsedmarc/DKIM Verifier für Thunderbird https://github.com/lieser/dkim_verifier  Sprungmarken(00:00:00) SPF, DKIM, DMARC, SRS, ARC  HostsWolfgang Gassler (https://gassler.dev)\u00a0Andy Grunwald (https://andygrunwald.com/) CommunityDiskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter https://engineeringkiosk.dev/join-discord"
 headlines: anregungen-gedanken-themen-und-wünsche::Anregungen, Gedanken, Themen und Wünsche||unterstütze-den-engineering-kiosk::Unterstütze den Engineering Kiosk||links::Links||sprungmarken::Sprungmarken||hosts::Hosts||community::Community
 image: ./243-legacy-e-mail-trifft-sicherheit-spf-dkim-dmarc-arc.jpg
-length_second: 0
+length_second: 1277
 pubDate: 2025-12-20 02:00:39+00:00
 speaker:
 - name: Andy Grunwald
-  transcriptLetter: ""
+  transcriptLetter: A
 - name: Wolfi Gassler
-  transcriptLetter: ""
-spotify: ""
-tags: []
+  transcriptLetter: B
+spotify: https://open.spotify.com/episode/4RJnhUEsUnSHW7zDHNgCTn
+tags:
+- DevOps
+- Sicherheit
+- Software Engineering
 title: "#243 Legacy E-Mail trifft Sicherheit: SPF, DKIM, DMARC, ARC"
 transcript_slim: ""
-youtube: ""
+youtube: https://www.youtube.com/watch?v=hcCO2r5GSME
 ---
 <p>E-Mails wirken simpel – sind aber technisch ein ziemliches Minenfeld. In dieser Adventkalender-Folge tauchen wir in die Welt von SPF, DKIM, DMARC, SRS und ARC ein.</p><p><br></p><p>Im Engineering-Kiosk-Adventskalender 2025 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz &amp; knackig innerhalb weniger Minuten über ein interessantes Tech-Thema.</p><p><br></p><p>Unsere aktuellen Werbepartner findest du auf <a href="https://engineeringkiosk.dev/partners">https://engineeringkiosk.dev/partners</a></p><p><br></p><p><strong>Das schnelle Feedback zur Episode:</strong></p><p><a href="https://api.openpodcast.dev/feedback/243/upvote" rel="nofollow"><strong>👍 (top)</strong></a><strong> </strong><a href="https://api.openpodcast.dev/feedback/243/downvote" rel="nofollow"><strong>👎 (geht so)</strong></a></p><p><br></p><h3 id="anregungen-gedanken-themen-und-wünsche">Anregungen, Gedanken, Themen und Wünsche</h3><p>Dein Feedback zählt! Erreiche uns über einen der folgenden Kanäle …</p><ul><li>EngKiosk Community: <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a> </li><li>LinkedIn: <a href="https://www.linkedin.com/company/engineering-kiosk/" rel="nofollow">https://www.linkedin.com/company/engineering-kiosk/</a></li><li>Email: <a href="mailto:stehtisch@engineeringkiosk.dev" rel="nofollow">stehtisch@engineeringkiosk.dev</a></li><li>Mastodon: <a href="https://podcasts.social/@engkiosk" rel="nofollow">https://podcasts.social/@engkiosk</a></li><li>Bluesky: <a href="https://bsky.app/profile/engineeringkiosk.bsky.social" rel="nofollow">https://bsky.app/profile/engineeringkiosk.bsky.social</a></li><li>Instagram: <a href="https://www.instagram.com/engineeringkiosk/" rel="nofollow">https://www.instagram.com/engineeringkiosk/</a></li></ul><p><br></p><h3 id="unterstütze-den-engineering-kiosk">Unterstütze den Engineering Kiosk</h3><p>Wenn du uns etwas Gutes tun möchtest … Kaffee schmeckt uns immer </p><ul><li>Buy us a coffee: <a href="https://engineeringkiosk.dev/kaffee">https://engineeringkiosk.dev/kaffee</a></li></ul><p><br></p><h3 id="links">Links</h3><ul><li><a href="https://de.wikipedia.org/wiki/DMARC" rel="nofollow">https://de.wikipedia.org/wiki/DMARC</a></li><li><a href="https://www.cloudflare.com/de-de/learning/dns/dns-records/dns-dmarc-record/" rel="nofollow">https://www.cloudflare.com/de-de/learning/dns/dns-records/dns-dmarc-record/</a></li><li><span>gmx.de und web.de haben Mail-Rejects durch SPF </span><a href="https://www.heinlein-support.de/blog/news/gmx-de-und-web-de-haben-mail-rejects-durch-spf" rel="nofollow">https://www.heinlein-support.de/blog/news/gmx-de-und-web-de-haben-mail-rejects-durch-spf</a><span> </span></li><li><span>Free wöchentlicher DMARC Report </span><a href="https://dmarc.postmarkapp.com/" rel="nofollow">https://dmarc.postmarkapp.com/</a></li><li><span>OpenSource DMARC Report Parser </span><a href="https://domainaware.github.io/parsedmarc/" rel="nofollow">https://domainaware.github.io/parsedmarc/</a></li><li><span>DKIM Verifier für Thunderbird </span><a href="https://github.com/lieser/dkim_verifier" rel="nofollow">https://github.com/lieser/dkim_verifier</a><span> </span></li></ul><p><br></p><h3 id="sprungmarken">Sprungmarken</h3><p>(00:00:00) SPF, DKIM, DMARC, SRS, ARC</p><p><br></p><h3 id="hosts">Hosts</h3><ul><li>Wolfgang Gassler (<a href="https://gassler.dev" rel="nofollow">https://gassler.dev</a>) </li><li>Andy Grunwald (<a href="https://andygrunwald.com/" rel="nofollow">https://andygrunwald.com/</a>)</li></ul><p><br></p><h3 id="community">Community</h3><p>Diskutiere mit uns und vielen anderen Tech-Spezialist⋅innen in unserer Engineering Kiosk Community unter <a href="https://engineeringkiosk.dev/join-discord">https://engineeringkiosk.dev/join-discord</a></p>
