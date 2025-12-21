@@ -271,7 +271,11 @@ func readTagsFromMarkdownFile(filePath, jsonKey string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer file.Close()
+	defer func() {
+		if err := file.Close(); err != nil {
+			fmt.Println("error when closing:", err)
+		}
+	}()
 
 	var matter struct {
 		Tags interface{} `yaml:"tags"`
