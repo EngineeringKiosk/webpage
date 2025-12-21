@@ -20,6 +20,7 @@ speaker:
 spotify: https://open.spotify.com/episode/7xd5pgeeRQByGCJEQZTJjU
 tags:
 - Software Engineering
+- Adventskalender
 title: "#173 Rekursion: Das Ende ist nah!"
 transcript_slim: src/data/transcripts/173-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=CWIDFqZ2_Qc

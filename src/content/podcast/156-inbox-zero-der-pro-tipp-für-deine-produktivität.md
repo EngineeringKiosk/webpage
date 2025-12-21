@@ -21,6 +21,7 @@ spotify: https://open.spotify.com/episode/1G3hZvvThftsHESuvut6aW
 tags:
 - Karriere
 - Produktivität
+- Adventskalender
 title: "#156 Inbox Zero: der Pro-Tipp für deine Produktivität"
 transcript_slim: src/data/transcripts/156-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=awf4pas3s0U

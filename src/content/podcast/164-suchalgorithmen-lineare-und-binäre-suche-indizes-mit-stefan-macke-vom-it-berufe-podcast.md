@@ -21,6 +21,7 @@ spotify: https://open.spotify.com/episode/6E7DcDBJpaDpC21I1ItW4s
 tags:
 - Software Engineering
 - Datenbanken
+- Adventskalender
 title: "#164 Suchalgorithmen: Lineare- und Binäre Suche & Indizes mit Stefan Macke vom IT Berufe Podcast"
 transcript_slim: src/data/transcripts/164-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=_B3w7_LQDdk

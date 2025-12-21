@@ -23,6 +23,7 @@ spotify: https://open.spotify.com/episode/7w2maDNZb6C5dupdSU2cfK
 tags:
 - DevOps
 - Backend
+- Adventskalender
 title: "#153 Wie hoste ich ein Large Language Modell (LLM) mit Kubernetes in 5 Minuten mit Data Science Deep Dive"
 transcript_slim: src/data/transcripts/153-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=MAkGdePUt-U

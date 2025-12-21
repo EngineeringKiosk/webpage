@@ -23,6 +23,7 @@ spotify: https://open.spotify.com/episode/5hS8w9Gkd4V6btBwkWp2Qn
 tags:
 - Software Engineering
 - Software Qualität
+- Adventskalender
 title: "#157 Agile Arbeitsmethoden - Extreme Programming mit den Coding Buddies"
 transcript_slim: src/data/transcripts/157-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=iZ10OgAMm5s

@@ -22,6 +22,7 @@ tags:
 - Tech Kultur
 - Open Source
 - Leadership
+- Adventskalender
 title: "#163 Benevolent Dictator for Life (BDFL)"
 transcript_slim: src/data/transcripts/163-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=sVYwnq9fe7Q

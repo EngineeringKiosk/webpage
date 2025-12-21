@@ -21,6 +21,7 @@ spotify: https://open.spotify.com/episode/76Xohw6WoXJjOflZxIgXTl
 tags:
 - Software Engineering
 - Software Qualität
+- Adventskalender
 title: "#152 Warum i und j als Zählvariablen genutzt werden"
 transcript_slim: src/data/transcripts/152-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=SG2u-ueMSHQ

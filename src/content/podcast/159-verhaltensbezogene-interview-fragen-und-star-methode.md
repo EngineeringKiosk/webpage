@@ -22,6 +22,7 @@ tags:
 - Karriere
 - Bewerbung
 - Kommunikation
+- Adventskalender
 title: "#159 Verhaltensbezogene Interview-Fragen und STAR-Methode"
 transcript_slim: src/data/transcripts/159-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=VJNZ0-kDwmE

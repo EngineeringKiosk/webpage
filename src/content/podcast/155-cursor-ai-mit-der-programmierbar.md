@@ -23,6 +23,7 @@ spotify: https://open.spotify.com/episode/1tXsaoVZydgD6WDHoxtTJ6
 tags:
 - Produktivität
 - Software Engineering
+- Adventskalender
 title: "#155 Cursor AI mit der programmier.bar"
 transcript_slim: src/data/transcripts/155-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=efI5o5FhM20

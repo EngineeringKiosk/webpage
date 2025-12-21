@@ -25,6 +25,7 @@ spotify: https://open.spotify.com/episode/33ZSnqecRql5KCTgmzdu7o
 tags:
 - Frontend
 - Software Qualität
+- Adventskalender
 title: "#174 Frontend-Engineering Metriken im Team einführen mit dem Working Draft Podcast"
 transcript_slim: src/data/transcripts/174-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=p3mDJR_Qdeg

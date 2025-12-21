@@ -21,6 +21,7 @@ spotify: https://open.spotify.com/episode/1mmXkzMJmyfLsfmpQMaXUa
 tags:
 - Software Engineering
 - Datenbanken
+- Adventskalender
 title: "#165 Pessimistisches und Optimistisches Sperren in Datenbanken: Eine Geschichte"
 transcript_slim: src/data/transcripts/165-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=TN1-YbajYBQ

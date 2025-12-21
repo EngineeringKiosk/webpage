@@ -21,6 +21,7 @@ spotify: https://open.spotify.com/episode/1KwtqyAAvKymGLx5MRraX9
 tags:
 - Tech Kultur
 - Open Source
+- Adventskalender
 title: "#166 Das Fediverse mit Christian Stankowic vom Focus on Linux Podcast"
 transcript_slim: src/data/transcripts/166-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=qKVHLw2KjvY

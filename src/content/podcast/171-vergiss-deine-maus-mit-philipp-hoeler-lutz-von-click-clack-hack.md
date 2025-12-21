@@ -20,6 +20,7 @@ speaker:
 spotify: https://open.spotify.com/episode/0UmcTKRabWlLCmnjY79rNs
 tags:
 - Tech Kultur
+- Adventskalender
 title: "#171 Vergiss deine Maus mit Philipp Hoeler-Lutz von Click! Clack! Hack!"
 transcript_slim: src/data/transcripts/171-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=RAr31UfEM5w

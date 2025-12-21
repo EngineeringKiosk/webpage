@@ -22,6 +22,7 @@ tags:
 - Tech Kultur
 - Projektmanagement
 - Kommunikation
+- Adventskalender
 title: "#172 Die kuriosesten Versionsnummern bekannter Software mit Matthias Endler von Rust in Production"
 transcript_slim: src/data/transcripts/172-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=y3QEFsNcr8A

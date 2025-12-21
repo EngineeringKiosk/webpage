@@ -26,6 +26,7 @@ tags:
 - Backend
 - Software Engineering
 - Open Source
+- Adventskalender
 title: "#169 Deno, die Alternative zu Node.js mit der programmier.bar"
 transcript_slim: src/data/transcripts/169-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=PCl3JtKZcUw
