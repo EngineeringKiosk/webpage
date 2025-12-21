@@ -25,6 +25,9 @@ var (
 	flagTagsContentDir string
 	flagTagsDescFile   string
 
+	// Sync
+	flagSyncAwesomeGamesStoragePath string
+
 	// Logging
 	flagDebugLogging   bool
 	flagDisableLogging bool
