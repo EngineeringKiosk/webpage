@@ -74,24 +74,24 @@ update-awesome-software-engineering-games: ## Updates the Awesome Software Engin
 
 .PHONY: find-missing-tag-descriptions-content-files
 find-missing-tag-descriptions-content-files: ## Finds all used tags in content files that need SEO descriptions and output them on stdout
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py website-content
+	./website-admin/website-admin tags find website-content
 
 .PHONY: find-missing-tag-descriptions-german-tech-podcast
 find-missing-tag-descriptions-german-tech-podcast: ## Finds all used tags in the german tech podcasts that need SEO descriptions and output them on stdout
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py german-tech-podcasts
+	./website-admin/website-admin tags find german-tech-podcasts
 
 .PHONY: find-missing-genre-descriptions-awesome-software-engineering-games
 find-missing-genre-descriptions-awesome-software-engineering-games: ## Finds all used genres in the awesome software engineering games that need SEO descriptions and output them on stdout
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py awesome-software-engineering-games
+	./website-admin/website-admin tags find awesome-software-engineering-games
 
 .PHONY: update-missing-tag-descriptions-content-files
 update-missing-tag-descriptions-content-files: ## Finds all used tags in content files that need SEO descriptions and updates the tag-file
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py -write-file website-content
+	./website-admin/website-admin tags find website-content --write-file
 
 .PHONY: update-missing-tag-descriptions-german-tech-podcast
 update-missing-tag-descriptions-german-tech-podcast: ## Find all used tags in the german tech podcasts that need SEO descriptions and updates the tag-file
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py -write-file german-tech-podcasts
+	./website-admin/website-admin tags find german-tech-podcasts --write-file
 
 .PHONY: update-missing-genre-descriptions-awesome-software-engineering-games
 update-missing-genre-descriptions-awesome-software-engineering-games: ## Find all used genres in the awesome software engineering games that need SEO descriptions and updates the genre-file
-	. $(VENV_ACTIVATE); python ./scripts/find_tags_that_need_descriptions.py -write-file awesome-software-engineering-games
+	./website-admin/website-admin tags find awesome-software-engineering-games --write-file

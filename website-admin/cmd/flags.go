@@ -16,6 +16,11 @@ var (
 	flagNetlifyRedirectEpisodesDir    string
 	flagNetlifyRedirectRedirectPrefix string
 
+	// Tags
+	flagTagsWriteFile  bool
+	flagTagsContentDir string
+	flagTagsDescFile   string
+
 	// Logging
 	flagDebugLogging   bool
 	flagDisableLogging bool
