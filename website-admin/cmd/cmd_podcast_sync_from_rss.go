@@ -237,7 +237,7 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 			Headlines:      headlineInfo,
 			Image:          imageFilename,
 			LengthSecond:   0,
-			PubDate:        pubDate.Format(time.RFC3339),
+			PubDate:        episode.FrontmatterPubDateTime{Time: pubDate},
 			Speaker:        defaultSpeaker,
 			Tags:           []string{},
 			Title:          title,
