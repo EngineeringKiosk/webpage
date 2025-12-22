@@ -3262,6 +3262,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/245"
+  to = "/podcast/episode/245-selbstmanagement-weniger-to-do-listen-stress-mehr-produktivität?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep245"
+  to = "/podcast/episode/245-selbstmanagement-weniger-to-do-listen-stress-mehr-produktivität?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
