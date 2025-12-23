@@ -1,7 +1,7 @@
 ---
 advertiser: ""
 amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/398b375d-d8d2-4d8a-8896-330c6f80632c/engineering-kiosk-246-dev-advocate-warum-developer-relations-mehr-ist-als-talks-swag-mit-philipp-krenn-von-elastic
-apple_podcasts: ""
+apple_podcasts: https://podcasts.apple.com/us/podcast/246-dev-advocate-warum-developer-relations-mehr-ist/id1603082924?i=1000742402809&uo=4
 audio: https://audio1.redcircle.com/episodes/987f035e-f68f-4cbe-8b3b-6d0dfc71d118/stream.mp3
 chapter:
 - start: 00:00:00
