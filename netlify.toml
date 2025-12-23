@@ -3274,6 +3274,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/246"
+  to = "/podcast/episode/246-dev-advocate-warum-developer-relations-mehr-ist-als-talks-swag-mit-philipp-krenn-von-elastic?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep246"
+  to = "/podcast/episode/246-dev-advocate-warum-developer-relations-mehr-ist-als-talks-swag-mit-philipp-krenn-von-elastic?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
