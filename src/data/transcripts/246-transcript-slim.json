@@ -1,0 +1,758 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4137,
+  "audio_url": "https://cloud.inlupus.at/s/qEfmAKPRD6sH6tX/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.96237427,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "1bf79c25-0138-4efb-8768-2a5bd566a48e",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 130840,
+      "speaker": "A",
+      "start": 2960,
+      "text": "Developer Relations wirkt von außen oft wie viel Bühne und ein bisschen Zweck, aber dahinter steckt sehr viel mehr als nur auf Konferenzen herumtonen. Es ist ein Hebel für Produkt und Community. In dieser Episode sprechen wir mit Philipp Krenn, Head of Developer Relations bei Elastic, über den vielseitigen Alltag von Developer Advocates, von Konferenzarbeit bis hin zu Feedback Management für das Produkt. Wir klären auch den Unterschied zwischen Developer Relationship Marketing und warum Influencer nicht automatisch die richtige Schublade für Advocates sind. Wir schauen uns auch mal an, ab wann Developer Relations sich für eine Firma auch überhaupt lohnt, welche Skills Developer Advocates benötigen und warum gerade jetzt am Markt super viele Advocates gesucht werden. Also los geht's. Ich hatte einmal einen Kollegen, der irgendwie auf den Geschmack gekommen ist, dass er auf Konferenzen fährt und er hat dann auch irgendwie gemerkt, dass er mit einer Präsentation leichter natürlich auf Konferenzen fahren kann und hat da auch eine sehr gute Präsentation gehabt über großes Projekt, was er gemacht hat. Und er hat dann irgendwie angefangen immer öfters zu Konferenzen fahren. Er hatte dann am Ende irgendwie zwanzig dreiig Konferenzen, wo er den Vortrag gehalten hat und irgendwie gab es dann ziemliche Probleme im C Level, weil die natürlich irgendwann gesagt haben, hey, warum ist der Typ da ständig am Traveln und auf Konferenzen hüpft herum, der soll doch was arbeiten. Andi, vielleicht kannst du dich auch noch daran erinnern. Wir haben dann probiert irgendwie zu erklären, dass das ja vielleicht schon Sinn macht, wenn Leute auf Konferenzen fahren und da eine Außenwirkung haben und vielleicht auch die Firma repräsentieren. Das war natürlich schwierig. Manch andere Firmen haben es vielleicht verstanden, dass das ganz gut ist, dass man auch so Außenwirkungen hat. Und in den letzten Jahrzehnten ist so der Begriff Developer Relations, Developer Advocate entstanden und mittlerweile gibt es eigentlich diesen Job, wo es genau darum geht, die Firma nach außen zu vertreten. Und genau über diesen Job, über dieses Jobprofil wollen wir heute mal sprechen. Wir haben jemanden gefunden, der der absolute Profi ist. Er macht es nämlich seit Jahren Developer Relations und ist mittlerweile sogar Head of Developer Relations. Und ich bin schon fast nervös, weil es ist ein Wiener, es ist ein Österreicher. Endlich haben wir mal einen Österreicher bei uns im Podcast und damit willkommen Philipp."
+    },
+    {
+      "end": 132520,
+      "speaker": "B",
+      "start": 130920,
+      "text": "Hi, danke Philipp."
+    },
+    {
+      "end": 154979,
+      "speaker": "C",
+      "start": 132520,
+      "text": "Klassischerweise stelle ich die ganzen Leute immer vor, die als Interviewgast in diesen Podcast kommen. Das tue ich bei dir jetzt auch. Wie gesagt, der WOL hast du mir schon weggenommen. Du bist aus Wien, du hast auch eine akademische Ausbildung in der TU Wien genossen, Bachelor, Master und warst sogar Research Assistant dort im Bereich Datenbanken bzw. Deren Entwicklung bzw. Für ein Java Enterprise Projekt, wenn ich das richtig gesehen habe."
+    },
+    {
+      "end": 163340,
+      "speaker": "B",
+      "start": 155140,
+      "text": "Ja, wobei, da muss ich gleich korrigieren, ich bin ein klassisches Jobout mehr oder weniger. Den Master habe ich nie abgeschlossen, Da."
+    },
+    {
+      "end": 166900,
+      "speaker": "C",
+      "start": 163340,
+      "text": "Hat mich dein LinkedIn Profil doch etwas getäuscht. Aber okay, irgendwo stand da glaube ich auch."
+    },
+    {
+      "end": 176480,
+      "speaker": "B",
+      "start": 167620,
+      "text": "Ich habe nebenbei recht lange Master gemacht, aber ich habe dann immer recht gearbeitet. Ich habe den Master allerdings nie abgeschlossen, obwohl ich in einem TU Research Projekt danach gearbeitet habe."
+    },
+    {
+      "end": 183520,
+      "speaker": "C",
+      "start": 176880,
+      "text": "Das ist faszinierend. Heute habe ich gelernt, dass man auch mit einem Bachelor dann als Research Assistant arbeiten kann, was es ja dann war."
+    },
+    {
+      "end": 190160,
+      "speaker": "A",
+      "start": 183840,
+      "text": "Die guten Leute können das natürlich und muss ja sagen, Leute, die im Datenbankbereich arbeiten, das sind ja die Besten, habe ich so gehört."
+    },
+    {
+      "end": 204730,
+      "speaker": "B",
+      "start": 190320,
+      "text": "Da bin ich jetzt natürlich vorsichtig. Also ich habe nie sehr viel Research gemacht. Das war dann immer mehr Industrie bezogen. Also ich möchte jetzt nicht sagen, dass wir das missbraucht haben, aber die die TU hat das halt als Startup Ausgründung auch gemacht. Da war Research dann mehr projektbezogen als wirklich Research bezogen."
+    },
+    {
+      "end": 250670,
+      "speaker": "C",
+      "start": 204890,
+      "text": "Ein Praktika wird mir direkt hier, finde ich super. Du hast auch was für die Tech Szene in Wien gemacht. Du warst mal Mitgründer bzw. Mitorganisator der viennadb Meetups und auch das finde ich sehr schön. Papers, we love Vienna Meetup finde ich super. Aber du wohnst gar nicht mehr in Wien. Du wohnst nämlich jetzt im Silicon Valley oder Nähe des Silicon Valleys in San Francisco bis inzwischen, wie der Wolfgang sagte, Head of Developer Relations und Developer Advocate bei Elastic, der Firma hinter den Produkten wie Elasticsearch, Kibana und Logstage. Und was mich enorm gefreut hat, als ich ein bisschen Research gemacht habe, du warst mal Teilnehmer bei Google Summer of Code erst als Student und später warst du sogar Mentor. Das freut mich sehr. Wie war deine Erfahrung bei Google Summer of Code?"
+    },
+    {
+      "end": 322660,
+      "speaker": "B",
+      "start": 250670,
+      "text": "Sehr gut. Also ich bin, das war übrigens das erste Mal, wie ich das Projekt begleitet habe. Also ich war bei einem Projekt, das war ein PHP basiertes CMS aus Neuseeland, also eine sehr internationale Sache. Da war ich Student und dann zwei Jahre Später war ich einer der Organisatoren, wie wir das nochmal gemacht haben. Da gibt es dann nachher so ein kleines Zusammenkommen aller Projekte bei Google. Das war damals das erste Mal, wie ich im Silicon Valley war. Das ist jetzt auch schon fast oder etwa zwanzig Jahre her oder so, aber das war damals das erste Mal, wie ich in San Francisco war. Und da habe ich mir gedacht, eigentlich ist das schon alles cool und mir war noch nicht bewusst, dass ich dann hier sehr viel mehr Zeit verbringen werde. Aber genau, Google Summer of Code war damals eine sehr coole Sache, hat mir irgendwie das erste Mal gezeigt, dass man auch als Wiener irgendwie international was machen kann und dass die Welt deutlich größer ist als der Wiener Projekthorizont. Ich muss da immer leicht vorsichtig sein, weil ich sage immer, aus meiner Erfahrung ist die österreichische Technik Szene manchmal ein bisschen langweilig, ist so Banking und Insurance und alle arbeiten so neun to fünf und man lebt halt ganz gut vor sich hin, aber es ist jetzt nicht super spannend. Ich bin dann irgendwie so eben in dieses Developer Relations und in andere Dinge wie Meetups hineingekippt, aber Google Sum of Code war da sicher ein sehr prägender Schritt damals."
+    },
+    {
+      "end": 341820,
+      "speaker": "A",
+      "start": 322660,
+      "text": "Okay, dann lass uns mal in das Thema Developer Relations einsteigen. In meinem Intro habe ich ja schon erwähnt, Leute, die so auf Konferenzen gehen, meistens kann man das noch am ehesten zu den Firmen irgendwie verklickern, Das ist Employer Branding, aber Developer Relations ist ja noch wesentlich mehr. Was ist denn für dich Developer Relations? Wie würdest du denn das kategorisieren, eingliedern?"
+    },
+    {
+      "end": 445850,
+      "speaker": "B",
+      "start": 341820,
+      "text": "Mein Schlagwort dazu ist, wir wollen erfolgreiche Entwickler mit unseren Produkten haben. Das ist sozusagen das Endziel und ich spanne da immer so einen Bogen. Das beginnt damit, dass Leute mal wissen müssen, dass wir existieren und dass unsere Produkte existieren. Da bieten sich zum Beispiel Konferenzen an, weil Leute, die noch nie von uns gehört haben, wie komme ich an die heran? Mittlerweile natürlich, sie fragen, keine Ahnung, chatgpt und dann sind wir hoffentlich ganz gut in chatgpt gerankt. Aber viele gehen einfach auf eine Konferenz und hören dort, was ist so relevant an Technik. Deshalb bieten sich da Konferenzen an. Aber das ist oft der erste Kontakt. Und dann der nächste Schritt ist oft, dass man irgendjemand weiß von etwas und möchte das dann einsetzen und dann sucht man irgendwie Inhalte dazu, Blogposts, YouTube Videos, was auch immer man dazu haben möchte oder wie man am leichtesten lernt. Das ist das nächste, was wir in Developer Relations versuchen zu machen, ist, dass wir dann einfach den richtigen Content herausbringen, um den Leuten zu helfen, das dann einzusetzen. Und dann gibt es sozusagen als nächsten Schritt noch, ist, wenn man Probleme hat, versuchen wir allen zu helfen, die in irgendwelche Probleme hineinlaufen, um sie dann eben erfolgreich zu machen. Also wir haben ein Diskussionsforum auf Discourse, wir sind aktiv auf Reddit und Stack Overflow, wir haben einen Community Slack, das heißt diese Schleife von Wissen, das es uns gibt, zeigen, wie man etwas mit uns macht und dann das Helfen, damit man erfolgreich ist. Das ist mehr oder weniger so der Bogen, den wir mehr oder weniger spannen wollen. Und dann sind da so diverse Nebenprojekte von Start up Förderungen etc. Das Spiel, alles in dem hinein in das, was wir tun. Oder wir machen mittlerweile auch mehr Hackathons, da gibt es auch die unterschiedlichen Meinungen dazu, Aber das ist so ungefähr der Bogen, den Developer Relations spannen und ganz viele Konferenzen und Meetups eben."
+    },
+    {
+      "end": 478440,
+      "speaker": "C",
+      "start": 445850,
+      "text": "Ist das nicht eigentlich ganz normales klassisches Marketing? Denn im Endeffekt habt ihr ja einen Tech Produkt, Wenn ich jetzt ein anderes Consumer Produkt habe, dann machen die ja auch Marketing auf anderen Kanälen, um die Zielgruppe zu erreichen Und eure Zielgruppe sind ja Entwicklerinnen und Entwickler. Deswegen stelle ich mir gerade die Frage, ist Developer Relations nicht eigentlich nur gutes Marketing auf die Zielgruppe abgestimmt, weil Engineers suchen Tutorials und YouTube und Udemy Kurse und so weiter und so fort. Oder gibt es da wirklich eine ganz klare Abgrenzung zum klassischen Marketing?"
+    },
+    {
+      "end": 737330,
+      "speaker": "B",
+      "start": 538520,
+      "text": "Also ich glaube, die ganz klare Abgrenzung ist schwierig. Ich würde jetzt einmal sagen, dieses Thema Developer Marketing trifft dann sowohl das Produkt Marketing als auch Developer Relations. Für mich ist immer Marketing ein bisschen mehr eine wie eine Einbahnstraße geradezu. Das ist mehr oder weniger, die Firma spricht hinaus, während Developer Relations ist mehr oder weniger eine Zwei Wege Kommunikation. Also nach außen repräsentiere ich natürlich die Firma und bringe das hinaus, aber in der Firma repräsentiere ich sozusagen die Entwickler und die Community und bringe da auch sehr viel zurück. Das ist normalerweise das, was uns unterscheidet vom Produktmarketing, die wirklich sehr darauf bedacht sind, dass ich die Message dann hinausbringe. Was sind die, was sind die Hauptthemen, die ich transportiere? Die machen dann auch möglicherweise wie bezahlte Influencer oder was auch immer halt Reichweite erzeugt. Während Developer Relations für mich ist oft viel mehr sozusagen diese organische Konversation, die wir führen wollen. Das, was mir aber sehr wichtig ist, ist, dass wir sehr technisch sind, auf Augenhöhe diskutieren können und den Leuten dann wirklich helfen können. Das ist dann nicht nur, dass wir sozusagen die Schlagworte oder das, was die Firma sozusagen gerade pushen möchte, präsentieren und das um uns werfen, sondern dass wir wirklich eine sinnvolle Konversation haben können und auch sagen können, das ist jetzt kein sinnvoller Anwendungsfall, da sollte man möglicherweise was anderes verwenden oder dass wir dann tatsächliche Probleme lösen oder dass wir das auch in die Firma zurückbringen. Also zum Beispiel, wir hatten letztens, das hat eigentlich sehr gut funktioniert, wir hatten ein neues Produkt und wir haben dann hier bei einem sehr großen Hackathon teilgenommen und wir haben danach einen recht detaillierten Bericht geschrieben und genau beschrieben, wie zum Beispiel ein Team, ich glaube die sind fünf Mal zu uns gekommen, da hatten wir so einen Stand, die sind dann mehr oder weniger im zwei, drei Stunden Rhythmus sind sie wieder zurückgekommen und haben gesagt, da geht jetzt wieder was nicht oder wir haben ein Problem und kommen da jetzt nicht weiter. Und das haben wir dann mehr oder weniger alles zusammengefasst und das habe ich dann an die gesamte Technik in der Firma verschickt und das hat dann auch entsprechende Reichweite bekommen. Und da sehen dann eben die Leute, was sind so die Probleme oder was haben wir nicht bedacht, wie das verwendet wird oder wo müssen wir einfach gewisse Probleme lösen. Das würde das klassische Marketing normalerweise weniger machen oder gar nicht machen. So wirklich dieses den Kontakt zur Außenwelt halten, das ist unsere Rolle. Das ist, wenn man eine sehr kleine Firma ist, ist das Gefühl oft recht einfach, weil da ist sozusagen die Distanz kleiner, aber wir haben jetzt doch, ich glaube es sind so drei tausend fünf hundert oder mehr Leute, bei Elastic in der Entwicklung alleine sind es etwa ein tausend oder so, glaube ich. Da ist einfach, da ist teilweise der Scope, den jeder dann macht, ist so klein, dass man das dann teilweise gar nicht mehr sozusagen mit dem Enduser oder dem Endergebnis verbindet. Und das ist so eine von diesen Problemen, die wir, da versuchen wir die Brücke sozusagen zu bauen, das Feedback zurückzubringen, aber auch sozusagen das große Ganze im Auge zu behalten, weil wenn jeder so seinen kleinen Teil baut, und man das zusammenwirft. Manchmal passieren Dinge, die dann gar nicht so sinnvoll sind. Also ich will jetzt nicht sagen, dass eine meiner Hauptaufgaben das interne Beschweren ist, aber ich beschwere mich schon intern recht viel über Dinge, wo ich sage dann, ich weiß nicht, das ist jetzt wenig sinnvoll. Ich glaube nicht, dass das funktioniert aus den Gründen oder das sind die Probleme, die ich damit sehe. Also das ist wohl Developer Relations. Gerade wenn man das Zielpublikum Entwickler hat, ist das wichtig, auch weil Entwickler oft auf klassisches Marketing jetzt nicht sehr gut ansprechen und man damit wesentlich leichter fährt, wenn man da auf Augenhöhe diskutieren kann, als wenn man nur versucht, irgendwelche Messages hinauszuwerfen."
+    },
+    {
+      "end": 756440,
+      "speaker": "A",
+      "start": 737330,
+      "text": "Du hast jetzt schon erwähnt, in einer kleinen Firma ist der Kontakt vielleicht direkter. Würdest du dann sagen, in einer kleinen Firma, wenn es da eine Entwicklerin gibt, die einfach gerne zu Konferenzen fährt und da Präsentationen macht, ist es dann schon Developer Relations oder was macht die mehr als klassisches Engineering, die dann auch nach außen gehen?"
+    },
+    {
+      "end": 825270,
+      "speaker": "B",
+      "start": 756440,
+      "text": "Also ich glaube, Developer Relations in einer Firma, wo Developer das Zielpublikum sehen, machen alle Developer Relations. Manche machen es allerdings Vollzeit, also mein Team macht das Vollzeit und die anderen machen das zu einem gewissen Grad Teilzeit. Wobei das ist ein großer Punkt bei uns, dass wir versuchen, dem Rest der Firma zu helfen, wie wir wo auftreten. Zum Beispiel ist ganz lustig für uns ist jede Konferenz ist ein GitHub Issue. Also wir haben über die Jahre, ich glaube, wir haben irgendwas fünf tausend oder mehr GitHub Issues für Konferenzen über die Jahre gesammelt. Das heißt, wir haben einen ganz guten Track Record, dass wir wissen, was für Events existieren, wie waren die in der Vergangenheit, was haben wir submitted, was wurde angenommen, wie hat das generell funktioniert, ist es sinnvoll, dort wieder hinzugehen. Aber wir machen dann immer, wenn ein CFP aufgeht für eine Konferenz, machen wir ein GitHub Issue und dann taggen wir oft die Leute, die wir wissen, die in dem technischen Bereich sind oder oder die in der Stadt leben und gerne Konferenzen machen. Aber das ist auch Teil von Developer Relations mehr oder weniger, dass wir schauen, dass der Rest der Firma dann bei unseren Meetups vorträgt, zu Konferenzen fährt und dort ihre Vorträge macht. Also wir versuchen da dem Rest der Firma auch zu helfen, diesen Kontakt nicht zu verlieren. Aber alle machen Developer Relations, nur Wir machen es Vollzeit."
+    },
+    {
+      "end": 833340,
+      "speaker": "A",
+      "start": 825270,
+      "text": "Jetzt habe ich noch eine ketzerische Würdest du dich oder du bist jetzt Head of Developer Relations, aber deine Leute, würdest du die als Influencer bezeichnen?"
+    },
+    {
+      "end": 947080,
+      "speaker": "B",
+      "start": 833490,
+      "text": "Also ich glaube, die wenigsten von uns, also Twitter Follower und so, ist jetzt nicht unsere Metrik oder meistens nicht die Metrik. Also ich würde sie jetzt nicht unbedingt als Influencer bezeichnen. Durch den Ansatz, wie Algorithmen mittlerweile das Influencing machen, finde ich das auch eine ganz eigenartige Welt. Ich habe manchmal das Gefühl, wie die Algorithmen funktionieren. Es ist nicht mehr so, dass die technisch am interessantesten oder besten Meinungen die weiteste Verbreitung haben, sondern manchmal die eigenartigsten oder die pseudokontroversiell oder die irgendwie teilfalsch sind, dass dann die Leute möglichst damit interagieren und so. Also dieses Influencing finde ich mittlerweile recht eigenartig. Oder was mich immer stört, ist, dass gefühlt die Leute, die jetzt beim Influencing heute sehr weit vorne sind, sind oft nicht die, die eigentlich die Dinge bauen oder die Produktionserfahrung haben, sondern die irgendwie die eigenartigsten Tweets dann darüber schreiben oder die von ihrem Armchair dann die lustigsten Takes oder die schnellsten Takes oder wie auch immer darüber haben. Es ist jetzt nicht so, dass die mit der ganz großen Bandbreite sind dann nicht so die, die bei Google, Facebook, Nvidia, wo auch immer arbeiten und dann einfach wissen, was sie tun, sondern das sind oft einfach Leute, die hauptberuflich Influencer sind, Was natürlich schwierig ist. Ich bin hauptberuflich Developer Relations, hauptberuflich Influencer ist auch ein Ding, wobei das ist jetzt nicht unbedingt mein Team. Außerdem ist in meinem Team versuchen wir die Technik wirklich hochzuhalten. Da ist auch immer wieder die Frage, ob dann die Leute nicht von unserem Team wieder ins Engineering zurückgehen. Das kommt durchaus vor, da sind wir bei uns relativ streng. Teilweise hat Developer Relations gerade über die letzten paar Jahre so ein bisschen mehr den Marketing Touch bekommen und das war dann technisch sehr leichtgewichtig. Ich glaube, das war eine der Kernsünden von Developer Relations. Und warum Developer Relations die letzten Jahre teilweise etwas gelitten hat, war das Profil oder das Ziel ein bisschen aus den Augen verloren wurde und alle haben Developer Relations gemacht, weil man das halt macht. Und oft war das dann nicht nah genug an der Technik und an den Entwicklern. Also wenn man Entwickler als Zielpublikum hat. Deshalb würde ich jetzt meine Leute nicht als Influencer bezeichnen."
+    },
+    {
+      "end": 997139,
+      "speaker": "C",
+      "start": 947080,
+      "text": "Influencer, ich meine, der Wolfgang hat das jetzt so ketzerisch und so böse gesagt, aber ich will mal diesen wahren Kern da vielleicht ein bisschen rausholen, Denn im Endeffekt, also das Ziel, jemanden zu influenzen, zu beeinflussen, ist ja schon irgendwie dasselbe, oder? Ich meine, ihr macht das auf eine andere Art und Weise. Klar, du hast jetzt gerade von diesen Algorithmen gesprochen und so weiter und ihr macht das durch Talks vielleicht oder durch Tutorials oder durch Community Engagement. Aber im Endeffekt ist ja euer Ziel auch jemanden zu influenzen, oder? Du hast es als erfolgreiche Entwicklerinnen beschrieben, dass diese Leute mit euren Produkten, Produkten einen Erfolg haben und somit beeinflusst wurden, nicht aufzugeben vielleicht auch und dann den Erfolg mit euren Produkten zu erzielen, oder? Denn so ein Influencer, wenn ich jetzt Sport Influencer bin und für Proteinriegel werbe, dann möchte ich ja auch, dass du diesen Proteinriegel kaufst, oder?"
+    },
+    {
+      "end": 1000420,
+      "speaker": "A",
+      "start": 997220,
+      "text": "Also es ist jetzt schön, dass du Proteinriegel mit Elastic vergleichst."
+    },
+    {
+      "end": 1009920,
+      "speaker": "C",
+      "start": 1000820,
+      "text": "Ja, nein, also ich habe jetzt einfach nur Sport Influencer und jetzt vielleicht nicht irgendwen jemand, der auf TikTok tanzt oder so. Also war schon schon vielleicht jemand, was dann auch irgendwie eine Form von Marketing ist."
+    },
+    {
+      "end": 1030600,
+      "speaker": "B",
+      "start": 1009920,
+      "text": "Also gerade unsere Social Media Detektion sind oft viel mehr eins zu eins oder ein kleinerer Kreis. Es geht jetzt nicht unbedingt darum, nur große Reichweite zu haben. Möglicherweise ist Influencing, aber es ist Influencing weniger nur durch Reichweite und die lustigen Takes, sondern es ist ein bisschen mehr über die rein technische Ebene, ob das dann Influencing ist oder Marketing oder wie man das auch immer nennt. Möglicherweise."
+    },
+    {
+      "end": 1075180,
+      "speaker": "C",
+      "start": 1030840,
+      "text": "Du hattest gerade auch gesagt, dass es bei euch sehr wichtig ist, dass Developer Relations und Developer Advocates sehr technisch sind. Gibt es da irgendwie so eine Grenze? Weil ich meine, klar, Leute den ganzen Tag irgendwie an einer Datenbank rumschrauben, sind ja auch sehr technisch. Also meine Frage ist, wie technisch muss man denn als Developer Relation oder Developer Advocate eigentlich sein? Und wo ist jetzt die Grenze? Muss ich jetzt wissen, wie intern eine Hashmap aufgebaut ist oder ein Hashtable oder ähnliches? Oder reicht es, wenn ich mit dem Produkt schon mal ein paar Sachen gebaut habe? Also könnt ihr, könnt ihr sowas sagen oder sagt ihr eigentlich jeder Softwareentwickler, der bei euch angestellt werden würde, ist auch in der Lage Developer zu machen und vice versa. Also dass jeder Advocate vielleicht auch Entwickler bei euch sein sollte."
+    },
+    {
+      "end": 1148270,
+      "speaker": "B",
+      "start": 1075180,
+      "text": "Also ich weiß es nicht, ob jeder von unseren Leuten Entwickler sein könnte, aber es sollte relativ nah sein. Also das Endziel ist ja mehr oder weniger, gerade wenn du alleine auf einer Konferenz bist und es kommt jemand mit einem Problem. Also eines meiner Lieblingsszenarien fast ist, dass jemand kommt und sagt, ich habe ein Problem, seinen Laptop aufklappt und dann irgendwie eine kaputte Query oder einen kaputten Cluster hat. Das ist so ein bisschen so den Benchmark, den ich haben möchte im Team, dass wenn jemand kommt mit einem konkreten Problem, dass man dann, niemand kann alle Probleme lösen, also völlig klar. Aber dass es eine gute Chance ist, wenn jemand mit einem Problem kommt, dass wir dem dann auf der Stelle helfen können und dass wir nicht nur sagen können, ah interessant, schreib es irgendwo hin und wir leiten es dann weiter oder so, sondern dass wir wirklich technisch fit genug sind, das Problem zu verstehen und dann idealerweise entweder es zu lösen oder zumindest in die richtige Richtung zu zeigen und Lösungsansätze haben. Weil das ist dann für mich genau eben, dass man auf Augenhöhe diese Diskussion führen kann, dass man fit genug ist, dass man den Leuten dann wirklich helfen kann. Und das ist auch sozusagen das Vertrauen, auf das wir aufbauen. Vielleicht unterscheidet uns das von Influencern. Ich weiß nicht, ob man das als Influencer jetzt auch erwarten würde, aber das, was ich haben möchte, ist, dass wenn jemand mit einem Problem kommt, dass da eine gute Chance ist, dass wir da wirklich helfen können auf der Stelle."
+    },
+    {
+      "end": 1177810,
+      "speaker": "A",
+      "start": 1148270,
+      "text": "Jetzt haben wir immer über Konferenzen und Talks gesprochen. Kannst du mal zu skizzieren, was sonst noch zum ganzen Alltag von so Deaf Advocates gehört? Also du hast auch angesprochen Social Media schon, aber wie teilt sich denn das auf? Bin ich da eigentlich das ganze Jahr unterwegs und fliegt da einfach von Konferenz zu Konferenz oder wie teilt sich das auf? Gibt es da auch Schwerpunkte, dass die einen eher Konferenzen machen, die anderen dann eher in Support, will jetzt gar nicht sagen, ist ja kein richtiger Support, aber auf anderen Kanälen unterwegs ist oder wie splittet sich sowas auf?"
+    },
+    {
+      "end": 1180340,
+      "speaker": "B",
+      "start": 1177810,
+      "text": "Eines unserer Lieblingszitate in der Firma ist It Depends."
+    },
+    {
+      "end": 1183490,
+      "speaker": "A",
+      "start": 1180650,
+      "text": "Es ist auch bei uns im Podcast das Lieblingszitat, würde ich fast sagen."
+    },
+    {
+      "end": 1328140,
+      "speaker": "B",
+      "start": 1183490,
+      "text": "Und ich muss aber dazu sagen. Man kann immer etipend sagen, aber da muss man auch sagen, worauf es ankommt oder warum es etipends ist. Also ich glaube, es gibt bei uns eine gewisse Bandbreite. Also einerseits so wie wir das Team gebaut haben, eine wichtige Komponente ist sozusagen die lokale Komponente. Also wir haben in den Haupttech Hubs versuchen wir Leute zu haben, die dann dort etabliert sind. Und zum Beispiel, wenn ich in Paris bin, unser Pariser Kollege, der macht das seit zwölf Jahren oder so, in Frankreich kennen den alle. Also der ist der französische Elastic Guy und dann haben wir andere Personen, die sind in ihrer jeweiligen Region idealerweise die Personen, die alle kennen und wissen, wenn man einen Meetup Talk von Elastic haben möchte oder eine Konferenz macht, dann weiß man, dass die dort sind. Das ist sozusagen die geografische Komponente. Und dann gibt es aber natürlich gewisse Interessen, aber auch Fähigkeiten, die die Leute haben, dass sie dann zusätzlich andere Dinge machen. Also die einen machen gerne YouTube Videos, die mach dann mehr YouTube Videos, die nächsten beantworten Fragen im Diskussionsforum auf Slack oder auf Reddit, die nächsten organisieren gerne Hackathons. Einer kümmert sich darum, wenn ein Startup daherkommt und irgendwelche Credits haben möchte, ob das sinnvoll für uns ist und ob wir den Credits geben. Also es gibt da mehr oder weniger so ein, möchte jetzt nicht sagen eine Matrix, aber es ist so mehrdimensional. Also man hat eine regionale Komponente zu einem großen Teil, aber man hat dann eben auch andere Zuständigkeiten. Da wo wir dieses Konzept jetzt möglicherweise ein bisschen aufweichen, wo wir manchmal ein bisschen das Problem haben, das ist mit AI dreht sich das Rad ein bisschen zu schnell gefühlt ist das neue Modell der Woche. Wenn das herauskommt, dann muss man irgendwie am selben Tag oder am nächsten Tag irgendwas dazu tun, ansonsten ist das schon wieder veraltet und dann nicht mehr interessant. Also wir versuchen gerade ein paar Leute zu hiren, wo die regionale Komponente untergeordnet ist, die primär in der Früh aufwachen und Zeit haben und dann die Ressourcen haben, das Thema des Tages oder der Woche sozusagen mitzunehmen und dann Teil der Konversation zu sein. Das ist gefühlt schwer. Wenn du dann einen sehr vollen Kalender mit Konferenzen und Meetups und so hast, dann kommst du möglicherweise nicht dazu. Also keine Ahnung, wann ist chatgpt fünfter februar herausgekommen, letzte Woche oder so. Die Woche ist es wahrscheinlich schon wieder weniger interessant, Da muss dann jemand wirklich an dem Tag oder in der Woche dazu was machen. Bei vielen anderen Themen ist es ein bisschen langlebiger. Wo ist das Thema, entwickelt sich dann über mehrere Wochen oder Monate, wo man dann mehr Zeit hat, darauf zu reagieren und dann Teil der Konversation zu sein. Hier mit Modellen zum Beispiel dreht sich das Radgefühl zu schnell, wenn du da nicht sofort dabei bist, dann ist das Thema vorbei und du kannst dann aufs nächste Thema wieder warten."
+    },
+    {
+      "end": 1340370,
+      "speaker": "C",
+      "start": 1328530,
+      "text": "Wenn man sich als einzelne Person, als Developer Advocate dann auf einen Bereich spezialisiert. Du hast jetzt gerade gesagt, entweder geografisch, der eine ist dann jetzt hier die Person für Österreich im Elastic Bereich oder für YouTube macht dann immer YouTube Videos."
+    },
+    {
+      "end": 1342610,
+      "speaker": "A",
+      "start": 1340450,
+      "text": "Der Austrian Guy ist es dann, oder."
+    },
+    {
+      "end": 1350850,
+      "speaker": "C",
+      "start": 1343410,
+      "text": "Wie hoch ist denn dann die Gefahr, dass man eigentlich eine Community um die Person baut, anstatt eine Community um das Produkt?"
+    },
+    {
+      "end": 1514530,
+      "speaker": "B",
+      "start": 1351010,
+      "text": "Ja, das ist bei uns beim Hiring, deshalb bin ich auch bei diesem Influencer Thema ein bisschen vorsichtig. Also wir versuchen immer die Firma und das Produkt ist sozusagen das erste, das mit dem Personenkult, da bin ich nicht so der Fan, Das ist auch als Firma recht gefährlich, weil da gibt es die sehr bekannten Leute, aber die springen dann von einer Firma zur nächsten und gehen dann mit ihrer Community von einer zur nächsten. Da sind wir recht kritisch. Also natürlich, es gibt immer eine persönliche Komponente und man hat dann Leute, die da mehr oder weniger damit anfangen können. Aber für uns, wir versuchen jetzt nicht sozusagen Celebrities zu haben, sondern mehr Leute, die die Firma und das Produkt gut vertreten können, aber wo es dann weniger darum geht, dass die selber Celebrity sind. Das ist teilweise auch in Teams recht schwierig. Also ich höre immer, dass Devrel sehr hoch im Drama Level ist, weil wenn es eben so viel Personenkult ist, dann ist diese Persönlichkeit immer, schwingt da so viel mit und da sind dann die Leute persönlich beleidigt oder da ist dann, wer schafft den Vortrag oder wer ist am beliebtesten bei irgendwas oder wer hat den meisten Twitter Follower. Das sind so Dinge, die wir versuchen nicht zu vermeiden. Deshalb versuchen wir recht wenig Drama zu haben. Ist mir immer wichtig. Oder wir hatten da auch gewisse Probleme in der Vergangenheit manchmal. Mittlerweile ist es sehr dramafrei. Es gibt keine großen Kämpfe darum und wir haben jetzt eigentlich auch recht gute Stabilität im Team. Natürlich hier und da geht jemand oder kommt neu dazu oder wie auch immer, Aber wir haben eigentlich recht gute Kontinuität. Also unser französischer Kollege, der ist jetzt seit zwölf Jahren dabei, ich bin jetzt seit fast zehn Jahren im Team und wir haben einige Leute, die einfach sehr viele Jahre dabei sind. Das ist auch gefühlt Developer Relations, dieses Aufbauen der Verbindungen und so, ist ein sehr langfristiges Ding. Das ist nicht so Marketing gefühlt. Die haben alle sechs Monate oder so, gibt es ein neues Team oder eine neue Kampagne und dann springt man da herum. Bei Community ist der Zeithorizont wesentlich länger gefühlt, weil die Leute sehen das jetzt nicht dauernd und man trifft die auch nicht dauernd. Da muss man die Themen ein bisschen langfristiger wählen und auch langfristig diese Verbindungen aufbauen. Also das Gefühl ein bisschen anders oder ist der Lebenszyklus ein bisschen anders. Und wir sind übrigens leider nicht groß genug, jemanden nur für Österreich zu haben. Also wir versuchen jemanden für Zentral und vielleicht Osteuropa zu haben. Ich war lustigerweise bei Lässig damals, wie meine Position vor knapp zehn Jahren besetzt wurde, haben sie jemanden für Deutschland gesucht und ich habe sie damals überzeugt, dass Österreich auch fast Deutschland ist. Und ich war dann die erste Person in Österreich und ich war damals Freelancer. Also Freelancer ist jetzt nicht mehr wirklich eine Option, aber ich war damals Freelancer und ich hatte dann mein eigenes Land für mehr als ein Jahr, bis ein einer meiner Bekannten, von mit dem ich auch Meetups organisiert habe, also mit dem habe ich eigentlich Papers We Love Vienna organisiert. Peter, der ist jetzt auch schon seit fast neun Jahren bei Elastic, der ist auch noch immer da und der war dann der zweite in Österreich und mittlerweile sind wir so ein knappes Dutzend oder so oder vielleicht leicht über ein Dutzend, ich weiß nicht. Aber wir sind, also Österreich ist jetzt nicht der Nabel der Elastic Welt."
+    },
+    {
+      "end": 1544740,
+      "speaker": "A",
+      "start": 1514530,
+      "text": "Als Österreicher musst du immer aufpassen, wenn du sagst mein Land und von Deutschland sprichst. Aber das ist jetzt noch mal was anderes. Was ich eigentlich fragen wollte, der Andi hat mir ja schon öfters auf der Fossile zum Kelsey Hightower mitgeschleppt, den kennst du ja wahrscheinlich auch, weil der Andi absoluter Fanboy ist von Kelsey. Also ich musste wirklich zu jedem Vortrag gehen und nur noch mal zur Bestätigung. Ich habe keine Ahnung, was der eigentlich so gemacht hat oder was dem Spezialgebiet ist. Ich kenne seinen Namen, ich kenne, dass der Andi absoluter Fanboy ist, aber inhaltlich habe ich keine Ahnung von dem eigentlich."
+    },
+    {
+      "end": 1553620,
+      "speaker": "C",
+      "start": 1544740,
+      "text": "Wolfgang, ich finde das super, weil ich hab Kelsey Hightower noch nie live gesehen. Also verwechselst du gerade den Namen, finde ich super, aber ich finde das klasse, dass, dass du den Namen kennst."
+    },
+    {
+      "end": 1555460,
+      "speaker": "A",
+      "start": 1553700,
+      "text": "Doch, doch, doch, wir waren da schon live."
+    },
+    {
+      "end": 1559620,
+      "speaker": "C",
+      "start": 1555460,
+      "text": "Nein, nein, nein, nein. Du meinst jemanden vom Google Developer Team."
+    },
+    {
+      "end": 1563500,
+      "speaker": "A",
+      "start": 1559780,
+      "text": "Francesca, es kann natürlich auch sein. Bist du auch Fanboy?"
+    },
+    {
+      "end": 1569660,
+      "speaker": "C",
+      "start": 1563500,
+      "text": "Bin ich auch Fanboy, weil kann ich dir auch ganz einfach sagen, er präsentiert einfach unglaublich und die Talks schaut man einfach sehr, sehr gerne an."
+    },
+    {
+      "end": 1578860,
+      "speaker": "A",
+      "start": 1569660,
+      "text": "Aber es hat schon so einen gewissen Personenkult. Also gerade bei den Leuten, die so wirklich bekannt sind, da steht fast der Name im Vordergrund und eben Kelsey Haithau war glaube ich bei Google oder wenn."
+    },
+    {
+      "end": 1585840,
+      "speaker": "B",
+      "start": 1578860,
+      "text": "Ich das richtig bei Google und sehr viel Kubernetes. Also ich glaube, der hat ja Infrastruktur groß gemacht und hat da viel Erfahrung gesammelt und dann Kubernetes, aber es rutscht."
+    },
+    {
+      "end": 1594960,
+      "speaker": "A",
+      "start": 1585840,
+      "text": "So ein bisschen im Hintergrund. Also den würde ich fast dann so eben als Influencer, als Person im Vordergrund sehen. Also ich finde es interessant, dass eben probiert genau den anderen Weg zu gehen."
+    },
+    {
+      "end": 1603920,
+      "speaker": "B",
+      "start": 1594960,
+      "text": "Der ist glaube ich offiziell bezahlter Influencer mittlerweile. Nicht, dass das jetzt, also das ist jetzt nicht offiziell, aber wenn du zahlst, bekommst du Kelsey Hightower Inhalt."
+    },
+    {
+      "end": 1608160,
+      "speaker": "C",
+      "start": 1604000,
+      "text": "Also genau, Kelsey Hightower ist inzwischen in Rente, also offiziell."
+    },
+    {
+      "end": 1615490,
+      "speaker": "B",
+      "start": 1608880,
+      "text": "Das ist die nette Version davon. Eigentlich ist es bezahlter Influencer, glaube ich. Also der wird dir von Agenturen durchaus so angeboten."
+    },
+    {
+      "end": 1620850,
+      "speaker": "C",
+      "start": 1615490,
+      "text": "Das glaube ich auch, aber eins muss man ihm lassen und deswegen habe ich vorhin diese Kulturfrage."
+    },
+    {
+      "end": 1622850,
+      "speaker": "A",
+      "start": 1621010,
+      "text": "Siehst du Fanboy? Ich habe es ja gesagt."
+    },
+    {
+      "end": 1655569,
+      "speaker": "C",
+      "start": 1622850,
+      "text": "Nein, es ist halt einfach nur so, ihn hast du wirklich gefühlt überall auf Bühnen gesehen und allem drum und dran und natürlich auch immer auf diesem Kubernetes Track. Und deswegen habe ich ja gefragt, du baust ja einen Kult um diese Person auf. Wie verhindert man das überhaupt als Firma? Geht das überhaupt? Weil wenn du nämlich immer nur auf Konferenzen unterwegs bist, dann kennt man dich natürlich auch. Und wenn du einigermaßen gut in Präsentationen bist, dann folgen dir auch Leute, weil die Spaß haben wollen bei den Talks und weil sie sich gerne dein Content angucken und so weiter. Kann man sowas dann überhaupt verhindern oder ist das eine Gefahr?"
+    },
+    {
+      "end": 1702370,
+      "speaker": "B",
+      "start": 1656130,
+      "text": "Nein, nein, also ich glaube nicht, dass es eine Gefahr ist. Das ist einfach eine Entwicklung, die dann irgendwann passieren wird und dann wird jeder die richtigen Schlüsse für sich ziehen. Ich glaube, Kubernetes ist da auch ein bisschen in einer speziellen Position, weil Kubernetes einfach größer geworden ist als Google. Das ist jetzt nicht mehr ein Google Produkt, sondern das ist jetzt sozusagen, das hat sich dann fast losgelöst. Das ist übrigens bei CNCF ist das lustig, die Leute, die in CNCF groß sind, das ist ein bisschen ein Problem für mich beim Hiring manchmal ist, dass gefühlt die Loyalität zu CNCF dann meistens höher ist als zur eigenen Firma, was aus Karrieresicht total sinnvoll ist, weil diese CNCF Verbindung garantiert dann die nächsten Jobs. Deshalb ist das total sinnvoll, dass man da fast mehr mit dem CNCF Projekt loyal ist, als mit der eigenen Firma. Was das Hiring allerdings sehr interessant macht."
+    },
+    {
+      "end": 1729870,
+      "speaker": "A",
+      "start": 1702450,
+      "text": "Jetzt habe ich schon angesprochen, Fostem und das sind so klassische Konferenzen, so Open Source Konferenzen, wenn man dort jetzt hingeht, man kann da ja nicht einfach Elastic irgendein Produkt präsentieren. Also gibt es da irgendwie so Herangehensweisen, was ihr macht? Macht ihr dann speziell was für Open Source oder probiert die irgendwie mit anderen Tools da gewisse Sachen zu zeigen zusammen mit Elastic oder Also wie geht man denn da in die ganze Open Source Ecke dran, Weil es ist ja doch schon Riesenpunkt bei euch."
+    },
+    {
+      "end": 1775560,
+      "speaker": "B",
+      "start": 1729870,
+      "text": "Ja, also wir machen einfach unseren, also einfach Anführungszeichen, wir machen mit anderen unseren eigenen Track, aber wir sind die Haupttreiber hinterm Search Track. Es gibt, ich glaube, wir haben jetzt nur Sonntagnachmittag bekommen, wenn ich mich nicht irre, aber es gibt einen eigenen Search Track bei der Fost dieses Jahr wieder. Da waren wir die Haupt Haupttreiber oder wir haben eingereicht dahinter. Es ist ja sozusagen kein Produkt und keine Firma. Also es gibt, glaube ich Sponsoring, das ist aber extrem teuer und recht eingeschränkt. Das ist für uns jetzt nicht so super passend. Also deine Möglichkeiten sind dann mehr oder weniger deinen eigenen Track zu organisieren, den du natürlich offen halten musst, auch für Konkurrenten und andere, oder dass du eben deine Talks einreichst und dann deine Talks machst. Das ist bei der Fossil, das sind die Möglichkeiten gefühlt."
+    },
+    {
+      "end": 1792060,
+      "speaker": "A",
+      "start": 1775560,
+      "text": "Anders gefragt, so klassische Open Source Entwicklung. Liegt es dann auch bei euch, dass ihr wirklich Zeit bekommt als Advocates? Kann wirklich Open Source Contributions machen oder ist es dann einfach freiwillig, wenn es halt jemand gerne macht? Oder ist es wirklich Teil dieser Tätigkeit dann auch?"
+    },
+    {
+      "end": 1817550,
+      "speaker": "B",
+      "start": 1792060,
+      "text": "Nein, das ist wieder Teil der Firma. Also das ist wesentlich größer als unser Team. Also wir sind ja, glaube ich, der größte Contributor zu Apache Lucien. Zum Beispiel gibt es ein eigenes Apache Lucien Subteam, das sind mehrere Entwickler oder wir haben da recht viele Core Contributor dort dabei oder wir machen ja auch viele viel andere Open Source. Also Open Source ist einfach Firmenthema. Das ist größer als Developer Relations. Wenn du jetzt nur sagst, Developer Relations macht Open Source und sonst niemand, weiß."
+    },
+    {
+      "end": 1821310,
+      "speaker": "A",
+      "start": 1817550,
+      "text": "Nicht, aber contributed ihr auch grundsätzlich?"
+    },
+    {
+      "end": 1887520,
+      "speaker": "B",
+      "start": 1821310,
+      "text": "Ja, ja, also jeder ist willkommen und kann gerne, wobei Lucien ist jetzt ein sehr kompliziertes Projekt. Ich glaube niemand in unserem Team ist jetzt der Patch Lucien Committer zum Beispiel, aber dass du jetzt irgendeinen Patch machst, keine Ahnung, du rennst in irgendein Problem im Client oder so, dass du da was contribut oder dass wir contributen zu externen Produkten, gerade so wie LangChain, da gibt es ja die diversesten Projekte, also dass wir da möglicherweise Contributions machen. Ich bin jetzt ein bisschen mehr im Java Umfeld, kenne die Spring Leute ganz gut, dann macht man halt irgendwas rund um Spring AI zum Beispiel mein anderer Kollege hier in San Francisco, der ist mehr JavaScript, der macht dann Master, das ist ein AI Framework, der hat da recht viel contributed. Also Open Source gerade zu anderen Dingen, was jetzt strategisch wichtig ist, ist absolut Teil von unserem Team, aber auch Teil der Firma. Also das ist jetzt nicht nur wir, sondern das machen andere auch. Ich glaube, sonst ist das ein viel zu kleiner Teil, weil unser Team Developer Relations hier ist schon relativ groß. Wir sind so etwa zwanzig Leute in Developer Relations, was doch recht viel ist. Aber wenn das sozusagen die fünfte Tätigkeit ist, wirst du ja sonst nur sehr eingeschränkt weit kommen mit diesem Code. Also deshalb muss das größer sein."
+    },
+    {
+      "end": 1891280,
+      "speaker": "A",
+      "start": 1887840,
+      "text": "Also vor allem im Tooling und Anbindungen und solche Dinge."
+    },
+    {
+      "end": 1907030,
+      "speaker": "B",
+      "start": 1891590,
+      "text": "Ja, also gerade so, ich würde das so Ökosystem nennen. Also und dann Lucien ist für uns einfach eine strategische Dependency, die wir vorantreiben müssen. Open Source machen wir viel, aber ist jetzt mehr als nur ein bisschen Developer Relations oben drauf. Gesetzt oder drauf geworfen."
+    },
+    {
+      "end": 1955180,
+      "speaker": "C",
+      "start": 1907030,
+      "text": "Du hattest gerade gesagt, dass ihr auch von den ganzen Events und von der Arbeit und von der Community arbeitet, die Stimmen dann zurück in die Firma transferiert, nenne ich mal. Inwieweit nimmt denn zum Beispiel das Produktmanagement eure Signale auf und packt die in die Roadmap? Weil im Endeffekt sind ja, es sind ja mehr oder weniger zwei Arten von Kunden. Auf der einen Seite werdet ihr mit hoher Wahrscheinlichkeit auch einen Vertrieb haben, der dann mit den Enterprise Kunden spricht und hier Pre Sales und Post Sales und Solution Architecture und allem drum und dran. Und da werden vielleicht auch die ganz großen Deals gemacht. Auf der anderen Seite seid ihr ja eigentlich an der Basis, also im Endeffekt an den Leuten, die das dann auch bei den Enterprise Kunden später wirklich einsetzen, die halt auch in die Probleme laufen. Inwieweit transferiert ihr die Probleme denn nach intern und inwieweit werden die dann da wirklich auch aufgenommen vom Produktmanagement zum Beispiel?"
+    },
+    {
+      "end": 2071060,
+      "speaker": "B",
+      "start": 1955580,
+      "text": "Ja, also wir haben gegenüber der Vertriebsseite haben wir den großen Nachteil, dass die oft einen Dollarwert an ein gewisses Feature oder einen gewissen Bug hängen können. Das können wir nicht. Das hilft denen natürlich bei der Priorisierung auf der Roadmap. Für uns ist das ein bisschen ein indirekterer Einfluss auch, dass wir genug Vertrauen aufbauen mit den Leuten intern und dass man uns glaubt, dass wir sagen, das ist ein Problem oder das funktioniert so für Entwickler nicht, dass wir da eine gewichtig genug Stimme haben. Aber wir verbringen schon recht viel Zeit, dass wir mit den entsprechenden Produktteams das machen. Wir sind auch oft die Ersten, die dann Dinge einsetzen und dann sehr frühzeitig das Feedback zurückgeben, also gerade wenn irgendein Feature erst als Preview verfügbar ist oder so. Wir sind dann oft die Ersten, die das ausprobieren, einfach weil wir darüber reden möchten oder keine Ahnung, irgendwer möchte dann einen Social Media Post darüber schreiben und wir kennen dann oft die Interna gar nicht so genau. Wir sind dann mehr oder weniger wie ein Endanwender und wir laufen dann immer wieder in die eigenartigsten Probleme hinein, einfach weil wir das irgendwie uns anders vorgestellt haben. Aber unsere Community wird sich das dann auch möglicherweise eben anders oder so ähnlich wie wir vorstellen und würde dann eben in ähnliche Probleme hineinlaufen. Also idealerweise sehen wir schon die ersten Dinge, selbst wenn wir es ausprobieren, um dann die Demo zu machen oder die Leute kommen dann zu uns und zeigen uns das. Also zum Beispiel gerade im Diskussionsforum kommen oft Probleme auf, die wir dann intern weiter eskalieren würden. Wobei das ist auch so, dass da auch die Engineers sozusagen auf einer Rotation sind und Teil dieser Rotation ist, dass man schaut, was im Diskussionsforum passiert und dann einerseits antwortet, um zu sehen, wie die Produkte eingesetzt werden, aber auch, dass man da das Feedback dann sofort einsammelt. Also wir versuchen dann manchmal die Schleife fast noch enger zu fassen, als dass wir immer der Mittelsmann sind, sondern dass die Entwickler dann noch wirklich nah genug am Endkunden sind, aber dass wir das dann teilweise versuchen voranzutreiben und dann noch zusätzliches Feedback rundherum einzusammeln."
+    },
+    {
+      "end": 2107400,
+      "speaker": "A",
+      "start": 2071060,
+      "text": "Jetzt ist es schon eine ziemlich breite Palette, die ihr da anbietet oder abdecken müsst. Wie macht ihr denn das mit Priorisierung oder woher weiß man, was man tun soll? Also macht es jetzt Sinn, irgendwo einen kompletten Proof of Concept und eine Anwendung zu schreiben oder macht es mehr Sinn, in ein Forum zu springen? Habt ihr da irgendwie KPI? Kommen da alle deine Team Members zu dir und sagen, ich würde jetzt gern XY machen und du segnest ab? Also stell mir das extrem schwierig vor, weil es eben so breites Feld ist und man ja auch vielleicht nicht so klare, messbare kpis hat am Ende. Vor allem, wenn du sagst, es sind so langfristige Beziehungen, die man da auch aufbaut."
+    },
+    {
+      "end": 2332060,
+      "speaker": "B",
+      "start": 2107400,
+      "text": "Also wir haben schon kpis, wobei ich versuche die kpis, dass die das Tagesgeschäft von meinen Leuten wenig beeinflussen, dass ich mehr oder weniger oder dass wir die richtigen kpis haben, die ich dann auch präsentieren kann. Gerade wenn man mehr Headcount haben möchte, dann ist das schon ein wichtiges Thema, aber das sozusagen im Tagesgeschäft die Leute daran nicht so denken müssen. Es ist mehr oder weniger du, du bist verantwortlich für eine gewisse Region und dann musst du schauen, dass da, ich weiß nicht, in den großen Städten einmal im Monat oder so ein Meetup ist und du musst dann herausfinden, wie viele Konferenzen kannst du sinnvoll machen, dass du noch nebenbei Entwicklung machen kannst oder andere Dinge. Gewisse Dinge werden natürlich zugeteilt. Also zum Beispiel ich habe dann irgendwann schon einen Plan gemacht, dass jetzt du machst mehr Diskussionsforum, du machst mehr Reddit, deine Spezialität sind jetzt Videos, dass man einen gewissen Fokus hat, aber idealerweise kann dann schon jeder herausfinden, was sind jetzt die richtigen Dinge, um Zeit zu verbringen oder auch in dem Bereich, wie man das dann angeht, weil ansonsten mache ich nur noch Micromanagement und versuche dann jedem Einzelnen zu sagen, was sie machen sollen. Das ist auch gefühlt manchmal ein bisschen schwierig, weil man möchte ja Leute haben, die sehr selbstgetrieben sind, aber manchmal muss man auch sagen, aber jetzt muss ich dir ein Thema geben oder du musst das jetzt machen, egal ob du möchtest oder nicht. Das ist eine schwierige Kombination, weil gefühlt die einen warten gerne darauf, dass man ihnen sagt, was sie machen sollen und das machen sie dann auch sehr brav und das ist manchmal ganz hilfreich. Aber oft möchte man ja auch, dass dann die Leute selber ihre Strategie entwickeln oder herausfinden, was funktioniert oder sinnvoll ist. Also zum Beispiel gerade ich habe keine Ahnung, was jetzt die richtigen Themen sind, die keine Ahnung in wie rede ich mit der Community in Brasilien habe ich jetzt wenig Ahnung oder was sind die richtigen Events in Brasilien. Also brauchst du Leute, die sehr selbstgetrieben sind schon, um das dann halt richtig zu entwickeln und das zu machen. Da gibt es halt schon starke lokale Unterschiede. Also Indien ist ganz anders als China, als Südamerika. Europa und Nordamerika sind dann vielleicht ein bisschen ähnlicher, aber San Francisco ist auch wieder sehr anders als New York zum Beispiel. Und man muss dann eben auch Leute haben, die genug selbst getrieben sind, aber auch noch sozusagen dann mit den Top Down Prioritäten, die ja nicht nur von mir kommen, sondern die möglicherweise ich dann von Top Down bekomme, dass das dann auch noch irgendwie getragen wird und dass man da eine sinnvolle Basis bekommt. Das ist sicher eines der Hauptprobleme, wie man das priorisiert. Wobei ich hasse es eigentlich immer, wenn mir Leute genau sagen, wie ich wann was machen muss. Ich habe das viel lieber, dass ich sinnvoll herausfinden kann, was kann ich jetzt machen und was ist idealerweise sinnvoll und dass ich das dann selber vorantreibe. Wenn mir jemand Schritt für Schritt sagt, was ich zu tun habe, finde ich das immer extrem mühsam. Wobei das auch ein bisschen eine Persönlichkeitssache. Das ist sicher ein Thema, das für uns auch ein bisschen schwierig ist, weil du brauchst diese Balance aus was ist jetzt aus Firmensicht wichtig und was musst du machen, aber wo findest du heraus wie du was selber machst und wie du den größten Einfluss selber vorantreibst, wobei das in der Entwicklung ja auch ein bisschen schwierig ist, oder Ich hab gefühlt Elastica als frühe Firma war extrem Engineering getrieben und das war dann oft so, dass irgendjemand übers Wochenende ein Feature gebaut hat und Montag ist dann die Person mit dem Feature dahergekommen und hat gesagt, da haben wir jetzt ein neues, cooles Ding. Das hat sich mittlerweile auch doch stark verändert, dass das Produktmanagement wesentlich stärker ist, die Roadmap wesentlich mehr geplant ist und dann die Leute eigentlich recht durchgescheduled sind gefühlt, dass sie Du machst jetzt das und als nächste Schritt ist das und die nächste Priorität ist das und am besten passiert natürlich alles gestern. Aber dass es dann schon eine recht strikte Roadmap gibt, wo dann nicht jeder einfach links und rechts abbiegen kann und sagt, mich hat jetzt das interessiert oder das schaut jetzt interessant, interessant aus. Also ich glaube, es ist nicht ganz anders, aber in Developer Relations ist die Bandbreite schon sehr groß, weil es eben nicht nur welches Feature baue ich jetzt, sondern da ist sozusagen welche Art von Aktivität mache ich, welche Konferenz ist wichtig oder welche Themen soll ich vorantreiben oder wozu baue ich eine Demo oder wie gewichte ich jetzt mehr Videos, Social Media Posts gegenüber Konferenzen oder mehr Demo Code schreiben und wie halte ich dann die Balance?"
+    },
+    {
+      "end": 2362440,
+      "speaker": "C",
+      "start": 2332460,
+      "text": "Aber an welchen Kennzahlen werdet ihr jetzt genau gemessen? Also welche Effekte, welche Aktivitäten kann man quantifizieren? Klar, Content Views kriegt man alles gemessen, YouTube Videos und so weiter. Aber du sagtest ja auch gerade, dass ihr ab und zu auch auf Community Events irgendwie One on One Hilfe bevorzugt. Du hast gesagt, im perfekten Falle kommt jemand mit einem Laptop mit einer kaputten Query an. Also an welchen Kennzahlen werdet ihr gemessen und wo würdest du sagen, okay, ich bin als Developer Advocate, ich bin erfolgreich."
+    },
+    {
+      "end": 2431290,
+      "speaker": "B",
+      "start": 2362760,
+      "text": "Also ich glaube, wichtig ist, dass man die großen Sachen misst. Ich möchte jetzt nicht immer so zum Erbsenzähler werden. Also zum Beispiel, wir haben Statistiken, wie viele Meetups und Konferenzen haben wir gemacht und in welchen Bereichen etwa, Aber dass du dann fünf Gespräche dort hattest und dass du zwei Leuten technisch geholfen hast, das zu tracken, ist in meinen Augen sinnlos. Oder wir nehmen an, dass das automatisch passiert und dass das idealerweise funktioniert, weil sonst werde ich ja nur noch Dinge irgendwo eintragen in Listen und dann versuchen das zu tracken. Also man muss natürlich die großen Blöcke, also wir haben dann natürlich gewisse Statistiken von unserem Diskussionsforum, von unserem Subreddit von YouTube. Wir sehen dann, wie ist die Anzahl der Elemente und wie sind dann die Views oder die Watchzeit oder was auch immer von den Dingen, dass man da dann schon einen gewissen Trend sieht. Aber ich möchte nicht hinuntergehen und dann bei jedem sagen, wie viele Diskussionsbeiträge hast du jetzt in diesem Monat wirklich beantwortet. Man kann das natürlich ein bisschen gamifying und dann gibt es diverse Tools, die das tracken, wobei das wird immer imperfekt sein. Also du wirst dann nie ein hundert Prozent erfassen und ich glaube, man darf sich dann nicht verlieren, nur noch kpis zu machen, weil man dann ein bisschen die essentiellen Themen übersieht."
+    },
+    {
+      "end": 2466340,
+      "speaker": "A",
+      "start": 2431290,
+      "text": "Ich könnte mir vorstellen, bei Views ist es ja auch schwierig, weil du willst ja die richtigen Views haben. Also nur weil die Views nach oben gehen, heißt es ja lange nicht, dass du die richtigen Leute erreichst. Und du kannst ja auch irgendwas Reißerisches einfach machen, was eigentlich überhaupt keinen Zweck hat. Und klar, du hast vielleicht trotzdem einen Werbeeffekt, weil die Leute einfach deine Firma vielleicht sehen, aber im Endeffekt wirst du ja in irgendeiner Form qualitative Connections auch aufbauen. Und klar kann man was Lustiges machen und keine Ahnung, irgendein Grafana Dashboard für eine Kaffeemaschine machen oder irgend sowas, aber im Endeffekt wirst du ja auch qualitativen Content dann am Ende liefern vermutlich."
+    },
+    {
+      "end": 2582300,
+      "speaker": "B",
+      "start": 2466340,
+      "text": "Ja, das ist gefühlt manchmal eine Diskussion, die wir mit Marketing haben, weil Marketing, die sind halt extrem KPI getrieben. Da geht es wirklich darum, wie viele Views hatten wir und dann können wir eine lange Diskussion darüber führen, war das sinnvoll oder war das nicht sinnvoll. Ja, also wir versuchen natürlich immer in unseren Augen sinnvolle Dinge zu machen oder Dinge, die irgendwie erfolgreich sind. Das erinnert mich ein bisschen, irgendwann in der Vergangenheit hatte Marketing die KPI, dass wir möglichst viele Cloud Trials machen sollen und dann haben die das gemacht und dann haben sie aber herausgefunden, dass die Conversion Rate extrem schlecht war und dann hatten wir eigentlich, die Marketingzahl hat gewonnen oder war gut, aber das Endergebnis war dann trotzdem nicht gut, weil dann haben wir eigentlich nur recht viel Geld für die Hardware oder Trials ausgegeben. Aber wenn die Conversion Rate so schlecht ist, hast du das Endziel ja überhaupt nicht erreicht. Deshalb muss man, glaube ich, immer sehr vorsichtig sein, welche kpis verwendet man und worauf schaut man, weil das dann immer so einen sekundären oder tertiären Effekt hat potenziell, die man dann schon idealerweise antizipiert und dann schaut, wo wird mich das hinführen, weil die initiale Metrik ist oft leichter zu bauen. Das andere Problem, glaube ich, mit den Metriken ist, dass man dann manchmal zu sehr hineinfällt in das, was kann ich denn leicht messen und dann macht man nur noch, was man leicht messen kann, also gerade Views und so, dass man dann nur noch Dinge macht, die viele Views hat, aber nicht Dinge, die strategisch sinnvoll sind. Das, wo ich sagen muss, was bei uns der große Vorteil ist, ist, dass unser CTO, der Elasticsearch gegründet hat, und unser CEO beide Entwickler waren und genug aus der Technik kommen, dass sie dieses Gesamtkonzept verstehen und dass nicht alles in einer Metrik abgebildet sein kann, dass man schon eine Indikation haben muss, wo ist man und wo geht man hin und was möchte man als nächstes machen und was ist wichtig. Aber dass es nicht nur darum geht, jedes einzelne View zu zählen und daraus dann irgendeine Geschichte zu bauen. Das ist auch, glaube ich, ein ganz wichtiger Punkt in Developer Relations, dass man genug Unterstützung vom Leadership hat. Ansonsten ist Developer Relations oft mehr so gefühlt ein Cost Center oder wenn man es misst mit den Metriken von Marketing, ist das eigentlich sehr teuer."
+    },
+    {
+      "end": 2585860,
+      "speaker": "A",
+      "start": 2582300,
+      "text": "Seid ihr dann dem CTO unterstellt als Developer Relations?"
+    },
+    {
+      "end": 2625660,
+      "speaker": "B",
+      "start": 2585940,
+      "text": "Ich bin lange genug dabei, dass wir mehr oder weniger in jedem Team der Firma waren. Wir waren mal in Engineering, wir waren mal in Marketing, was mir persönlich weniger gefallen hat, was ein bisschen problematisch war in diverser Hinsicht. Der Vorteil war, wir hatten immer einen CEO und CTO, die das genug verstanden haben und uns dann genug unterstützt haben, dass wir auch in Marketing eigentlich nicht mit Marketing Metriken gemessen wurden. Es war dann nur immer eigenartig, weil Marketing dann immer gesagt hat, warum sind die da, die tragen wenig zu unseren Metriken bei oder die sind eigenartig und jetzt sind wir wieder in Engineering, wie wir organisatorisch aufgehängt sind. Das hat sich immer wieder geändert. Ich glaube, es ist jetzt auch mehr oder weniger egal. Wichtig ist, dass wir in Engineering sind und dann diese Engineering Perspektive haben und das ist dann schon hilfreich, wenn ich."
+    },
+    {
+      "end": 2628300,
+      "speaker": "A",
+      "start": 2625660,
+      "text": "Das jetzt richtig raushöre. Bevorzugst du Engineering?"
+    },
+    {
+      "end": 2722620,
+      "speaker": "B",
+      "start": 2628540,
+      "text": "Ich bevorzuge auf jeden Fall Engineering. Also erstens, ich versuche immer sehr nahe an Engineering zu sein, dass wir mehr oder weniger der erste Kontakt mehr oder weniger sind oder dass wir da sehr nah am Produkt sind, sowohl um das Feedback zu geben, aber auch dann nahe an der aktuellen Entwicklung zu sein. Und weil einfach Marketing oft andere Metriken hat, als was ich glaube, was für Developer Relations wichtig ist. Gerade weil Developer Relations ist oft sehr schwer zu messen. Also wenn ich jetzt auf einer Konferenz vortrage, dann tracke ich ja normalerweise nicht oder wir tracken eigentlich nie, wer da jetzt im Publikum sitzt. Das heißt, wir haben nie diese Marketing Attribution. Das heißt, wenn jetzt jemand unser Produkt sieht und dann sechs Monate später bauen sie den Prototyp und neun Monate später kaufen sie dann irgendwas oder gehen zum Cloud Service, werde ich diese Attribution nie haben. Und es muss aber okay sein, dass wir verstehen, dass diese Aktivität war sinnvoll und das führt dann zu etwas später, aber dass ich das nicht messen kann und dann sagen kann, der Revenue kam jetzt von dem Konferenz Talk. Das Gegenteil wiederum ist gefühlt Marketing, wo ich manchmal das Gefühl habe, dass jeder Dollar, den wir einnehmen, drei verschiedene Attributions bekommt, weil man das einfach irgendwie einen Kontakt versucht herzustellen. Also wenn dann irgendjemand von der Firma bei einem Marketing Event war und dann so ein Lead Scanning Ding gemacht hat, dann wird er einfach, egal was in der Firma passiert, glaube ich, wird das dann dem Event zugeordnet zu einem gewissen Teil. Also ich simplifiziere das jetzt und das ist vielleicht ein bisschen eine Übertreibung, dass jeder Dollar dann dreimal zugeordnet wird, aber gefühlt ist es manchmal so, dass diese exakte Attribution einfach recht schwierig ist und dann fasst man die Metriken irgendwie so, dass das gut ausschaut. Ob das jetzt stimmt oder nicht, ist eine andere Sache."
+    },
+    {
+      "end": 2760020,
+      "speaker": "C",
+      "start": 2722700,
+      "text": "Aber das, was du ansprichst, kann ja auch zum Problem werden, oder? Ich meine, wenn es der Firma jetzt gerade mal nicht so gut geht, dann schaut man nach, OK, welche Abteilung, wer ist denn am effektivsten und dann jetzt mal unabhängig davon, ob man das mag oder nicht, aber so funktioniert der Corporate Zirkus nennen wir es mal, wo wird der Dollar ausgegeben, wo kommt der Dollar wieder rein? Oder wenn du mal vielleicht ein Leadership Change hast, du sagtest gerade, eure Gründer sind auch mal Entwickler gewesen, die verstehen, wie das alles mit dem Death Rail ist, aber da kommt dann irgendwann eine zahlengetriebene Finanzperson vielleicht ins Leadership oder ersetzt den CEO, dann kann der Wind ja auch anders drehen, oder ah ja, dann."
+    },
+    {
+      "end": 2819330,
+      "speaker": "B",
+      "start": 2760020,
+      "text": "Wird es kein Developer Relations mehr geben. Developer Relations ist ein sehr langfristiges Geschäft. Also ich glaube, das ist eine der der wichtigen Sachen in dem Job, dass du erstens musst du ein gutes Produkt haben, mit dem du arbeiten kannst, ansonsten wirst du dir sehr schwer tun Und zweitens musst du einfach das Verständnis vom Leadership haben, dass die dich da unterstützen. Wenn du das jetzt nur aus Finanzsicht sozusagen dir anschaust, dann sind wir eigentlich nur Cost Center und dafür recht teuer, weil wir da auch nicht diese Attribution haben, dann wirst du da nicht mehr lange da sein. Das wird eben ein genanntes Zero Interest Rate Problem. Da wie das Geld sehr günstig war, hatten alle Developer Relations, weil man einfach mit dem Geld um sich werfen konnte. Wie dann Geld teurer wurde, wurden viele von diesen Developer Relations Teams entweder ganz hinausgeworfen oder zurückgestutzt, weil da auch man nie den Wert gesehen hat. Das ist eben bei uns eigentlich gut. Und einer der Gründe, warum ich so lange dabei bin, ist, dass da schon sehr langfristig gedacht wird und dass dieser Wert langfristig gesehen wird und dass wir da einfach eine wichtige Rolle haben. Aber wenn du da die Unterstützung nicht hast, dann solltest du dich recht schnell nach einem neuen Job umsehen in meinen."
+    },
+    {
+      "end": 2836220,
+      "speaker": "A",
+      "start": 2819330,
+      "text": "Augen, weil du gerade gesagt hast, es gab eine Zeit, da hatten irgendwie dann alle Developer Relations. Ich habe heute gerade mal Google Trends befragt nach Developer Relations und da gibt es einen extremen Peak ab Mitte diesen Jahres. Hast du dafür irgendwie eine Erklärung? Ist es gerade voll am Hypen oder nur weil wir den Podcast jetzt machen?"
+    },
+    {
+      "end": 3026360,
+      "speaker": "B",
+      "start": 2836460,
+      "text": "Ja, das ist genau da hat die Realität den Podcast bereits antizipiert. Da wir jetzt kein Video haben, tue ich mir das schwer, das aufzuzeigen. Aber gefühlt war ja Developer Relations ist so langsam aber stetig gewachsen. Vor Corona, glaube ich. Während Corona war dann Geld sehr günstig und dann hatten viele auch irgendwie durch dieses alles war remote, hat man diesen Kontakt verloren und da haben sehr viele Leute Developer Relations gemacht und das hat sich dann mehr oder weniger fast zu einem Cargo Cult entwickelt. Das ist so, die großen erfolgreichen Firmen machen Developer Relations. Wir müssen auch Developer Relations machen. Wir wissen eigentlich nicht warum oder was die machen, aber wir brauchen das. Das ist dann recht schief gegangen und ich würde dann sagen, so zwei tausend drei und zwanzig, vier und zwanzig war dann so das Tal der Tränen mehr oder weniger, wo sich das sehr zurückgestutzt hat. Geld wurde teurer, dann haben alle geschaut, ist das jetzt sinnvoll? Nein, ist nicht mehr sinnvoll. Also ich glaube, da wurde auch einfach recht schlecht geplant, schlecht gehired. Da ist viel schief gelaufen. Das war dann ein Teil des Problems. Und ich muss auch sagen, da war dann der Jobmarkt, da war recht niedrig. Aktuell wieder habe ich das Gefühl, wird so viel Geld in AI und andere Dinge geworfen, wo alle verzweifelt versuchen Market Share aufzubauen. Und jetzt ist Developer Relations, merkt man richtig, also was ich an LinkedIn Anfragen bekomme, ist, dass jede Woche mehrere Recruiter schreiben und sagen, hier Startup mit viel Geld, komm doch zu uns, macht Develop Relations, hilf uns da die Verbreitung zu finden, weil aktuell glaube ich, ist gerade rund um er und so ist sehr viel Geld vorhanden, weil alle diese riesige Zukunftshoffnung haben. Fünf und neunzig Prozent dieser Firmen werden ohne dies nie das dann schaffen in die Realität oder langfristig existieren, aber ein paar werden es schaffen. Aber da versuchen jetzt eben aktuell alle möglichst viel Market Share aufzubauen oder irgendwie aus dem Kleinen ins Große hinaus durchzubrechen. Und da ist jetzt Developer Relations dann schon wieder wichtig, auch weil da einfach mit Entwicklerprodukten wieder sehr viel mehr geht. Oder da ist glaube ich auch die Definition von Entwickler dann ein bisschen breiter gefasst, weil mit LLMs können ja plötzlich die Leute oder der Bereich, die die Code produzieren können und dann irgendwelche Produkte bauen, ist wesentlich größer geworden. Und da wollen natürlich alle jetzt ihren Einfluss haben und ihre Produkte positionieren zu einem gewissen Grad. Also deshalb glaube ich, ist gefühlt schon Developer Relations ist jetzt schon ein gewisser Hype. Wie nachhaltig das alles rund um AI ist, müssen wir dann halt auch zu einem gewissen Grad, glaube ich, sehen, wie alles mit AI. Also ich glaube aus Coding Sicht tue ich mir mittlerweile schwer davon wegzukommen oder gerade für Developer Relations, wenn man viele Demos baut oder so. Produktion ist jetzt möglicherweise ein bisschen eine andere Sache, aber gerade um Demos zu bauen und so, es sind jetzt Dinge einfach möglich, die vorher nicht möglich waren und die mich zehnmal mehr Zeit gekostet hätten. Also da jetzt schnell irgendwelche Dinge zu bauen, ist einfach eine völlig andere Dimension. Da ist schon viel da, was uns jetzt hilft. Und du kannst zum Beispiel auch als Produktmanager gefühlt, früher hast du vielleicht irgendein Figma gebaut und das dann irgendwie so gemockt. Mittlerweile kannst du wirklich, das kannst du einfach einen Prototypen zusammen vibe coden und dann bauen und da können die Leute dann wirklich das Ding angreifen. Du musst es dann möglicherweise nachher richtig bauen oder ist dann ein bisschen schwierig zu erklären. Der Prototyp hat einen Tag gedauert und die richtige Implementierung dauert dann drei Monate oder so. Das ist dann vielleicht ein bisschen schwierig zu erklären manchmal. Aber da ist einfach die Realität, dass jetzt Dinge möglich sind, die vorher nicht möglich waren, ist schon faszinierend."
+    },
+    {
+      "end": 3071310,
+      "speaker": "C",
+      "start": 3026680,
+      "text": "Die Leute sehen ja das Video gerade nicht, aber der Wolfgang hat die ganze Zeit grinsend genickt und ja, ja, genau so. Genau, Ja, das sage ich auch immer und super und genau das lebe ich gerade. Nur die ganzen Pull Requests, die ich von Wolfgang immer bekomme, sind reinster AI Slot, die funktionieren teilweise nicht der merged Sachen durch da wo die CI fehlschlägt wegen irgendwelchem YAML Und dann fragt dann meine ich so, was hast du da kaputt gemacht? Schau doch mal da, was ist das denn? Wieso merge du denn sowas? Das CI wäre doch auch sowieso. Ja, das war die AI, sag ich, das war hundertprozentig. Oh, das war ich auch. Ich. Ja, stimmt. Also der Wolfgang macht genau das, Der baut Demos mit AI und schippt die dann in Produktion. Und vielleicht solltest du, Wolfgang, den Teil, wo du gerade so, wie soll man sagen, Ekstase warst mit dem Nicken, vielleicht solltest du, wenn die Podcast Episode draußen ist, noch mal hören."
+    },
+    {
+      "end": 3076720,
+      "speaker": "A",
+      "start": 3071470,
+      "text": "Ich habe das okay von Philipp. Philipp showcasen ist super, will ja nur was showcasen bei dir."
+    },
+    {
+      "end": 3139780,
+      "speaker": "B",
+      "start": 3078150,
+      "text": "Ich glaube, Produktion ist nach wie vor schwierig, oder? AI ist schon faszinierend und tut viele Dinge, aber das Denken kannst du halt trotzdem nicht outsourcen. Ich habe das Gefühl, das Tippen ist jetzt zu einem großen Teil outgesourct oder da ist viel abstrahiert, aber ein gewisser Prozess dahinter ist nach wie vor wichtig. Was jetzt möglicherweise ein bisschen der Vorteil ist für Leute wie uns, die da schon ein bisschen länger dabei sind, die jetzt mehr Erfahrung haben, da tut man sich dann, glaube ich, wesentlich leichter, Dinge anzuschauen und zu sagen, das schaut jetzt sinnvoll aus oder da ist die richtige Idee dahinter und nicht nur, da ist jetzt irgendein Code generiert und es wird schon passen. Also ich finde, als Hilfstool ist es schon faszinierend, auch, keine Ahnung, irgendwelche dummen Bildprobleme, Upgrades, Dependency Probleme, Environment Setups und so. Da finde ich Dinge, mit denen man vorher, oder ich zumindest sehr viel Zeit vorher verbracht habe, da sind die LLMs einfach sehr gut, solche Dinge dann zu lösen, wie ich jetzt meine Projekte richtig strukturiere, wie Security funktioniert, viele andere Dinge. Da ist dann wahrscheinlich noch ein bisschen mehr der Mensch trotzdem noch gefragt, jetzt."
+    },
+    {
+      "end": 3146020,
+      "speaker": "C",
+      "start": 3139780,
+      "text": "Machst du mir den Dev Rel Job schmackhaft, Was würdest du sagen, welche Skills oder welches Profil, warum, weil der Philipp."
+    },
+    {
+      "end": 3151140,
+      "speaker": "A",
+      "start": 3146020,
+      "text": "Nur mehr AI verwendet oder was war jetzt der Grund? Oder du wolltest einfach eine schöne Überleitung."
+    },
+    {
+      "end": 3154580,
+      "speaker": "C",
+      "start": 3151140,
+      "text": "Machen oder Andi, Dankeschön. Wolfgang, ich habe extra chatgpt gefragt nach."
+    },
+    {
+      "end": 3157420,
+      "speaker": "A",
+      "start": 3154580,
+      "text": "Einer Überleitung, so hat sie geklungen."
+    },
+    {
+      "end": 3167350,
+      "speaker": "C",
+      "start": 3158700,
+      "text": "Welches gilt sollte ich mitbringen oder welches Profil würdest du sagen, passt perfekt auf einen Developer Advocate? Welche Fähigkeit muss man an den Tag legen?"
+    },
+    {
+      "end": 3277890,
+      "speaker": "B",
+      "start": 3167350,
+      "text": "Ja, also wir sind da wahrscheinlich biased. Das ist auch ein bisschen so mein Hintergrund, dass man stark aus der Technik kommt. Also ich glaube, für uns ist es schon wichtig, zum Beispiel, dass man mal Softwareentwicklung gemacht hat oder dass man mal Produktion verwendet hat. Ansonsten habe ich immer das Gefühl, die Leute reden von Dingen, die sie nie selber gemacht haben, aber wollen dann allen erklären, wie man Dinge zu tun hat. Das finde ich immer ein bisschen eigenartig oder es geht manchmal auch gefühlt ein bisschen schief. Also ich glaube, man muss schon gewisse Dinge gemacht haben mal Und dann eben diese Entwicklung hin, dass man dann irgendwie, ich möchte jetzt nicht sagen, weil man gelangweilt ist oder wie auch immer, aber dass man dann eben mehr Meetups und Konferenzen macht oder mehr Community Dinge darüber hinaus. Ich glaube, das ist irgendwie so ein Übergang, der oft gut funktioniert oder in unseren Augen gut funktioniert, dass Leute, die diese technische Basis haben und da auch interessiert sind, aber dann ein bisschen mehr rundherum machen wollen. Also die dann eben die Vorträge machen wollen oder die den Leuten helfen wollen oder die dann sozusagen die Verbindung zwischen dem Endanwender und dem Produkt sein wollen. Also ich glaube, das sind so Dinge, die für uns gut funktioniert haben, aber generell die technische Basis ist, glaube ich, wichtig, aber dann eben auch das Interesse, das zu machen. Was, glaube ich, jetzt nicht funktioniert, ist, wenn man entweder nie richtig Software entwickelt hat oder nur so mal ganz kurz nebenbei, weil dann wird man irgendwie diese Diskussion auf Augenhöhe schwierig. Das andere, was dann auch recht schwierig ist, was ich manchmal sehe, ist, dass Leute extrem gute Softwareentwickler sind, aber die dann eigentlich diese Verbindung zu anderen Leuten gar nicht haben. Also letztens habe ich irgendwelche cvs gesehen, Leute, die große Softwareprojekte bauen, aber dann ist da niemand, der damit interagieren oder niemand interessiert das eigentlich. Das ist dann wahrscheinlich auch kein guter Fit. Also da ist es wahrscheinlich besser, dass man dann mit jemand oder für jemand anderen Software baut, wenn man das gerne tut. Aber wenn man sozusagen völlig am Markt oder an den Endanwendern vorbei entwickelt, ist das auch nicht sinnvoll."
+    },
+    {
+      "end": 3293490,
+      "speaker": "C",
+      "start": 3278370,
+      "text": "Aber ist das ein Mythos, dass man komplett extrovertiert sein muss? Oder ich meine, es geht ja auch ziemlich viel um geschriebenen Content, um asynchronen Content, Online Communities und Co. Also ich meine, habe ich auch als introvertierter Mensch da vielleicht in dem Job eine Zukunft?"
+    },
+    {
+      "end": 3336640,
+      "speaker": "B",
+      "start": 3293490,
+      "text": "Also es gibt ja diverse Medien und Ansätze. Also das würde ich jetzt. Ich glaube, man muss jetzt nicht super extrovertiert sein. Ich bin jetzt auch nicht unbedingt super extrovertiert, wobei der Running Gag ist, die Leute, wo ich immer das Gefühl habe, dass sie sehr extrovertiert sind, die erzählen einem dann immer, wie introvertiert sie eigentlich sind. Das finde ich immer total lustig, wo ich dann mich manchmal wundere, wie die im Verhältnis zu richtig introvertierten Leuten eigentlich sind. Aber ich glaube, das ist schon eine ganz große Bandbreite. Meine Liebe, da in die Kamera hineinzureden und mich dann selber zu sehen, ist zum Beispiel nicht so groß. Also ich mag zum Beispiel Konferenzen und mit den Live Publikum wesentlich mehr als Video, Aber das ist eine persönliche Präferenz, würde ich jetzt sagen. Also ich glaube, da muss man einfach finden, was einem gefällt oder wo man sich selber findet und wohlfühlt."
+    },
+    {
+      "end": 3355900,
+      "speaker": "A",
+      "start": 3336720,
+      "text": "Es gibt ja auch ganz viele Leute, die gerne auf der Bühne stehen und introvertiert sind, wie du richtig sagst. Es geht ja nur darum, ob man gerne vielleicht auf der Bühne steht oder wahrscheinlich braucht man gewisse soziale Skills, weil man einfach mit Menschen sprechen muss. Und wenn man das nicht gerne macht, egal ob man jetzt extrovertiert oder introvertiert ist, wenn man damit große Probleme hat, ist es wahrscheinlich schwierig, oder? Schätze ich mal."
+    },
+    {
+      "end": 3379580,
+      "speaker": "B",
+      "start": 3355900,
+      "text": "Ja, genau. Also ich war jetzt zum Beispiel nie super nervös, irgendwelche Vorträge zu halten. Deshalb, also ich fand das eigentlich immer ganz angenehm. Ich fand das auch wesentlich einfacher, weil dann machst du den Vortrag und dann kommen nachher die Leute zu dir, während so von mir aus auf alle zuzugehen, das finde ich fast schwieriger, oder Da musst du immer sozusagen den ersten Schritt gehen, während wenn du den Vortrag machst, kannst du mehr oder weniger Leute auf dich zukommen lassen. Also ich finde das viel angenehmer."
+    },
+    {
+      "end": 3382540,
+      "speaker": "A",
+      "start": 3379580,
+      "text": "Aber du warst bei Elastic Knee Developer oder du bist als."
+    },
+    {
+      "end": 3463120,
+      "speaker": "B",
+      "start": 3382700,
+      "text": "Meine Geschichte ist da kompliziert, Also wurde für Developer Relations angestellt und eine Woche bevor ich angefangen habe, hat mich mein damaliger Teamlead gesagt, wir müssen reden und hat dann gesagt, ich gehe in die Entwicklung zurück, der ist nach wie vor in der Entwicklung übrigens und ich bin jetzt nicht mehr Teamlead und wir lösen das Team auf und es wird jetzt jeder in ein Engineering Team gesteckt Und ich hatte ein bisschen mehr so den Background mit Infrastruktur und so. Und ich wurde dann in unser Infrastructure Team gepackt und habe dann, ich habe recht viel Jenkins vorher gemacht und sonstige Dinge und habe dann das Team unterstützt, wobei, also ich war am Papier in diesem Engineering Team, aber ich habe gefühlt achtzig, neunzig Prozent Developer Relations gemacht und zehn, zwanzig Prozent Arbeit für das Team. Also ich war dann, ich glaube, wir hatten einen anderen Kollegen in Europa damals und wenn der auf Urlaub war, dann war ich mehr oder weniger der Fallback. Also dann musste ich schauen, dass die Jenkins Builds laufen oder was auch immer bei Infrastruktur funktioniert. Ich hatte eben recht viele Ansible Erfahrungen und so. Wir hatten ein sehr großes Ansible Setup damals. Also ich habe dann so ein bisschen ausgelaufen, aber ich habe jetzt sozusagen nie Produktentwicklung selber gemacht. Andere in unserem Team haben schon als Entwickler angefangen und sind dann eben ins Developer Relations Team hinübergewandert, wobei die Mehrzahl der Leute explizit für Developer Relations eingestellt wurde und nicht im Engineering war oder nicht in der Kernproduktentwicklung, aber früher höchstwahrscheinlich."
+    },
+    {
+      "end": 3472800,
+      "speaker": "A",
+      "start": 3463120,
+      "text": "Irgendwo mal im Engineering unterwegs waren. Die bewerben sich wirklich. Also ich könnte mich jetzt als Engineer, wenn ich mich darüber aussehe und das gerne mache, könnte mich durchaus bewerben."
+    },
+    {
+      "end": 3524420,
+      "speaker": "B",
+      "start": 3472800,
+      "text": "Ja, also wir haben, ich glaube gestern haben wir jemanden für New York angestellt, der hat keine offizielle Developer Relations Erfahrung. Der war bis jetzt nur Entwickler, hat aber zum Beispiel nebenbei, ich weiß gar nicht was der studiert hat, Geologie oder so, der hat einen YouTube Kanal zum Beispiel rund um Geologie und macht Videos und hat mehr Konferenzen und Meetups gemacht. Also von dem, der geht eben jetzt mehr so von diese Dinge nebenbei und Hobby zu mehr hauptberuflich, aber der ist rein aus Engineering gekommen und hatte nie eine Developer Relations Position. Also das ist ein Weg, den wir schon recht häufig gehen. Bin ich auch fast mehr Fan. Leute, die gefühlt ewig Developer Relations gemacht haben, da bin ich dann manchmal skeptisch oder da schauen wir recht stark, dass die dann noch genug Bodenhaftung im Engineering und der Entwicklung haben, weil manchmal gefühlt werden ja dann die Leute so, dass sie von Dingen reden, die so weit weg von ihnen sind, dass da die Bodenhaftung völlig verloren gegangen ist."
+    },
+    {
+      "end": 3535120,
+      "speaker": "A",
+      "start": 3524420,
+      "text": "Jetzt, was du bei den Fähigkeiten noch nicht erwähnt has, ist diese Reisebereitschaft. Du hast mir im Vorgespräch erzählt, du warst zwei hundert Tage pro Jahr unterwegs oder sowas oder hattest zwei hundert Reisetag."
+    },
+    {
+      "end": 3536560,
+      "speaker": "B",
+      "start": 3535120,
+      "text": "Vor Corona, Das war eine andere Zeit."
+    },
+    {
+      "end": 3540560,
+      "speaker": "A",
+      "start": 3536640,
+      "text": "Da waren die Dinge, Wir haben eine Zeitrechnung vor Corona, nach Corona."
+    },
+    {
+      "end": 3617430,
+      "speaker": "B",
+      "start": 3540720,
+      "text": "Also für Developer Relations ist das definitiv ein Ding, das vor Corona schon sehr anders war. Also da war der Konferenzzirkus, glaube ich, schon deutlich intensiver. Europa ist da jetzt mittlerweile schon stärker wieder. Die USA sind noch auf einem anderen Niveau da. Er hat sich das nie ganz erholt gefühlt. Aber ja, also vor Corona von zwei tausend sechzehn bis Anfang zwei tausend zwanzig hatte ich, ich glaube, so zwei hundert zwanzig Reisetage jedes Jahr. Also in manchen Wochen habe ich vier Konferenzen in vier verschiedenen Städten gemacht. Ich glaube, der Rekord, das habe ich zweimal geschafft, waren sechs Städte in einer Woche. Das ist nicht empfehlenswert. Da muss man schon ein bisschen trainieren dafür, würde ich sagen, weil da fliegst du Sonntagabend weg, machst dann Montag die erste Konferenz, Montagabend fliegst du dann in die nächste Stadt, Stadt, machst dann halt nächstes Event. Also ich habe das immer so gemacht, du fliegst dann am Abend oder fährst mit dem Zug je nach Distanz am Abend in die nächste Stadt. Ich möchte immer dort aufwachen, wo ich sein muss, dass ich keinen Reisestress in der Früh mehr habe. Machst dann dein Event und je nachdem, entweder bleibst du dann zwei Tage oder fliegst nach Hause zurück oder du fährst eben zur nächsten Stadt. Und ich glaube, ich hatte zwei Wochen, da hatte ich auch Samstag Event. Also gerade in Osteuropa damals Ukraine, Weißrussland und so, die hatten sehr viele Samstags Events. Da habe ich dann geschafft bis zu sechs Events in eine Woche zu packen. Ist aber nicht empfehlenswert. Ob das sinnvoll ist, ist auch die andere Frage."
+    },
+    {
+      "end": 3626470,
+      "speaker": "A",
+      "start": 3617430,
+      "text": "Und was habt ihr jetzt so Reisetage im Schnitt? Also wenn du den French Guy zum Beispiel nimmst, der wird ja trotzdem innerhalb Frankreich unterwegs sein, oder?"
+    },
+    {
+      "end": 3683450,
+      "speaker": "B",
+      "start": 3626710,
+      "text": "Also wir sind generell sehr kontinentbezogen, also dass du außerhalb von deinem Kontinent reist, ist ganz selten. Einerseits Zeit, auch Reisekosten und Energie, Zeitzonen und so ist extrem mühsam. Also da sind wir recht kritisch. Deshalb haben wir ein groß genuges Team, dass jeder in seinem Kontinent eigentlich bleiben kann. Der macht natürlich primär Sachen in Frankreich auf Französisch. Das ist so der Markt. Also da ist Frankreich einfach bisschen ein Alleinstellungsmerkmal, weil da ist einfach sehr viel Französisch. Der hat Kinder. Ich glaube, der hat mehr oder weniger dieses System, dass er eine Woche im Monat reist und er kann dann mehrere Events in der Woche machen, aber er möchte nur eine Woche im Monat wechseln. Ich glaube, das hat eine Zeit lang recht strikt gemacht. Mittlerweile ist es ein bisschen weniger strikt, aber das ist so das Modell. Ich glaube mittlerweile in unserem Team, die wenigsten reisen mehr als zweimal im Monat oder so. Also da haben sich die Zeiten schon massiv geändert, auch weil wir mehr Dinge tun. Das ist ja auch die Frage, ob nur Konferenzen es wirklich sinnvoll ist oder ob du da nicht ein bisschen eine größere Bandbreite haben solltest."
+    },
+    {
+      "end": 3715230,
+      "speaker": "C",
+      "start": 3683530,
+      "text": "Also ich bin auch mal hier und da mal wegen Konferenzen gereist und ich finde es einfach nur super anstrengend, weil du bist halt auch den ganzen Tag am Reden. Du hältst dich ja den ganzen Tag auch mit Leuten auf diesen Events und dann immer noch in eine andere Stadt zu fliegen oder zu fahren. Ich meine, es ist ja nicht nur die Reisetätigkeit, es ist ja sich auch in einer neuen Umgebung zurechtfinden, wo muss ich hin und so weiter. Natürlich kann man mit dem Taxi und Uber und wie so alle heißen, das ein bisschen rausnehmen, aber es ist ja schon tierisch anstrengend. Es hört sich nämlich an so ein bisschen wie so ein Top Big Vorberater bei McKinsey oder Pricewater Coopers oder sowas."
+    },
+    {
+      "end": 3765180,
+      "speaker": "B",
+      "start": 3715390,
+      "text": "Ja, deshalb habe ich, würde ich sagen, man muss ein bisschen trainieren Gefühl. Also einerseits, dass du, das ist ja so wie mit dem Reisen und dem Reden Gefühl, ist das ein bisschen Training. Das wird dann leichter mit der Zeit, auch weil der Reiseoberhead wesentlich geringer wird, weil ab einem gewissen Zeitpunkt kennst du in den wichtigsten Städten, du gehst ja meistens in dieselben Haupt Hubs mehr oder weniger in den Top zwanzig Dreiig Destinationen, weißt du einfach recht genau, wie schaut der Flughafen aus, wie komme ich am leichtesten vom Flughafen zum Hotel, wo möchte ich sein. Also für mich ist immer ganz wichtig, möglichst nah beim Event. Ich möchte in der Früh dann eigentlich nur noch zu Fuß gehen zum Event und dann je nach Stadt fährst du halt öffentlich oder musst Uber fahren, aber das wird dann irgendwie gefühlt leichter, weil du bist dann eigentlich recht gut orientiert. Du weißt dann auch, wann musst du zum Flughafen. Das Reisen hat mich nie sehr gestresst. Ich habe auch in der ganzen Zeit nur zwei Flüge verpasst."
+    },
+    {
+      "end": 3780430,
+      "speaker": "C",
+      "start": 3765900,
+      "text": "Das geht ja noch. Philipp, zum Abschluss habe ich noch zwei Fragen. Und was würdest du sagen, ist die eine Sache, die Unternehmen verstehen sollten, bevor sie darüber nachdenken, ein Developer Relations Team aufzubauen?"
+    },
+    {
+      "end": 3837710,
+      "speaker": "B",
+      "start": 3780590,
+      "text": "Also ich denke, man muss irgendwie einen ganz guten Plan haben, was soll da passieren und was ist realistisch das Ergebnis, was man daraus herausbekommt. Das zweite, was man glaube ich beachten muss, ist, dass das eine sehr langfristige Sache ist. Du kannst das nicht sagen, wir machen jetzt Develop Relations und nach sechs Monaten sehen wir dann die großen Ergebnisse. Die Leute haben dann das alles am Laufen. Ich sage immer, wenn wir jemanden neu anstellen, ich glaube, das dauert etwa ein Jahr, bis die Leute dann voll produktiv sind, dass sie halbwegs bekannt sind, dass sie dann die Technologien genug kennen. Auch weil zum Beispiel Konferenzen, die nur jährlich stattfinden, du musst ja doch zwei, dreimal dort gewesen sein, dass dich die Leute kennen oder dass dich die Konferenz kennt und so. Aber das ist schon ein sehr, sehr langfristiges Ding. Wenn du jetzt als Firma das nur kurzfristig betrachtest, wird das meistens schief gehen und du musst halt einen ganz guten Plan haben, was ist das Zielpublikum und was ist dort sinnvoll erreichbar. Und wenn man das jetzt dann nur denkt, man macht Develop Relations und dann kennen einen alle und dann kaufen nachher alle das Produkt, das ist wahrscheinlich nicht sehr realistisch."
+    },
+    {
+      "end": 3842430,
+      "speaker": "C",
+      "start": 3837790,
+      "text": "Ja, auch weil man das natürlich gar nicht so einfach tracken kann, wie du vorhin schon gesagt hattest."
+    },
+    {
+      "end": 3884950,
+      "speaker": "B",
+      "start": 3842430,
+      "text": "Nein, also selbst wenn man dann glaubt, die Bekanntheit wird dann durch die Decke gehen und das führt dann zu all diesen Zweit und Dritteffekten, dass die Leute dann das mehr einsetzen und dann die Cloud Services verwenden oder mehr kaufen oder was auch immer. Das dauert einfach länger, auch weil einfach oft, du zeigst jemanden etwas und bis sie dann tatsächlich dieses Problem haben, kann möglicherweise ein halbes Jahr vergehen und bis es dann wirklich in Produktion geht, vergeht noch mal einige Zeit. Also da ist einfach der Zeithorizont ist generell recht lang und wenn man das sozusagen nur aus kurzer Sicht sieht, wird das nicht gut gehen. Du musst dann einfach einen recht langen Atem haben als Firma und das langfristig sehen. Was weiß ich nicht. Manchmal habe ich das Gefühl, da ist irgendwie die Ideen kommen und gehen sehr schnell. Das ist dann allerdings schwierig. Gerade bei Developer Relations."
+    },
+    {
+      "end": 3897910,
+      "speaker": "C",
+      "start": 3884950,
+      "text": "Was würdest du sagen, ist die eine Sache, die ich als Entwickler tun kann, um mehr von dir als Developer Advocate zu profitieren? Also kurz, wie kann ich euch, das hört sich jetzt so brutal an, benutzen."
+    },
+    {
+      "end": 3900990,
+      "speaker": "A",
+      "start": 3897910,
+      "text": "Ausnützen, wolltest du ausnützen sagen vielleicht, um."
+    },
+    {
+      "end": 3902830,
+      "speaker": "C",
+      "start": 3900990,
+      "text": "Wirklich alles aus euch rauszuholen?"
+    },
+    {
+      "end": 3958730,
+      "speaker": "B",
+      "start": 3902830,
+      "text": "Ja, also gerade wenn man konkrete Fragen hat, also ich glaube, es sollte niemand schüchtern sein. Developer Relations ist ja wirklich da, um mit den Leuten zu interagieren. Wie gesagt, mich freut es immer, wenn jemand mit seinem Laptop kommt und da haben wir eine kaputte Query oder da ist ein Cluster, der ein Problem hat und wir können uns das dann live anschauen. Das finde ich total gut. Ich glaube, da ist manchmal die Zurückhaltung zu groß, weil die Leute nicht wissen können, die das sind die eigentlich nur Marketing. Aber das nervt mich total. Zum Beispiel bei irgendwelchen Ständen auf Konferenzen, wenn du in dein Team kommst und die Leute sagen dann, ich kann dir eigentlich nur den einen Minuten Pitch geben und deine Kontaktdaten entgegennehmen und für alles andere, da haben wir den einen Spezialisten, aber der ist gerade nicht da, kommen später wieder. Das finde ich total nervig bei Ständen. Das versuchen wir. Also gutes Developed Relations, glaube ich, ist eben diese Diskussion auf Augenhöhe. Die Leute sollten dann einfach nicht schüchtern sein und das probieren. Also gerade wenn Leute bekannt genug sind und man weiß, dass die ihre Dinge können, dann kommen ja auch meistens die Leute und man diskutiert es dann aus."
+    },
+    {
+      "end": 3967530,
+      "speaker": "C",
+      "start": 3958810,
+      "text": "Den Tipp nehme ich mir auf jeden Fall zu Herzen. Normalerweise gehe ich immer zu den Ständen, um irgendwie Socken abzugreifen. Nächste Mal breche ich unsere Produktionscluster und komme dann rum."
+    },
+    {
+      "end": 4005660,
+      "speaker": "B",
+      "start": 3967530,
+      "text": "Ja, also vielleicht, man muss ihn nicht absichtlich kaputt machen, aber ja, also das ist sozusagen, wir sind eigentlich immer ganz, ich würde sagen, stolz gerade. Also wenn wir von Developer Relations eine Konferenz sponsern, wir haben kein Marketing und keinen Sales normalerweise beim Stand. Also wir haben dann, wir haben vielleicht eine Solution Architekt oder so dort, aber sonst, die meisten sind Developer Relations oder Engineers. Also da kann dann, jeder ist mit der Technik vertraut. Das ist dann nicht nur so, dass die eben Socken austeilen, das ist vielleicht ein Nebending, dass es irgendwelche Preise gibt oder so, um die Leute mal zum Stand zu bekommen und die Diskussion mit den Leuten zu starten, die einen gar nicht kennen. Aber da sind schon alle mehr oder weniger qualifiziert, eine gute Diskussion zu führen."
+    },
+    {
+      "end": 4020960,
+      "speaker": "C",
+      "start": 4005660,
+      "text": "Philipp, vielen lieben Dank, dass du uns Einblick in den Beruf des Developer Advocates gegeben hast. Ich verwechsel das immer Developer Relations, Developer Advocate, nur um das klarzustellen. Developer Relations ist der Bereich und Developer Advocate ist eine einzelne Person im Developer Relations Bereich."
+    },
+    {
+      "end": 4091270,
+      "speaker": "B",
+      "start": 4020960,
+      "text": "Genau, das ist mehr oder weniger der Job, weil in unserem Team, wir haben ein paar unterschiedliche Rollen. Wir haben zum Beispiel auch Community Manager, das sind dann die, die mehr ein bisschen die Organisation machen. Die organisieren dann das nächste Meetup und schauen dann, dass da die Sticker dort sehen, dass die Pizza da ist, dass das Venue organisiert ist, dass das wirklich announced wird und dass wir möglicherweise eine E Mail schicken und so. Da gibt es verschiedene Rollen. Also Developer Relations ist mehr oder weniger diese ganze Gruppe und Developer Advocate ist wahrscheinlich die am sichtbarsten Rolle, aber das ist nicht die einzige. Wir haben dann auch ein paar Leute, die sich zum Beispiel mehr um Content kümmern, dass dann zum Beispiel der Content, der von und für Developer geschrieben wird, SEO richtig gemacht wird oder dass die Titel auf YouTube richtig sind und wie das geschedult wird und so. Also da, da kann man mehr machen. Je nach Firma ist das unterschiedlich aufgeteilt, aber deshalb gehe ich immer mit Developer Relations. Und eine abschließende Bemerkung ist das vielleicht ein ganz guter Punkt noch. Ich sage immer, Developer ist der erste Begriff in Developer Relations. Das ist das Kernthema und dann geht es um die Relation. Wenn das eine Marketing Relation oder so ist, ist das nicht Developer Relations. Und das ist der Kern von diesem Developer Relations. Das Developer First und dann Relations auf gleicher Ebene mehr oder weniger. Aber das ist wirklich der Kern von Developer Relations."
+    },
+    {
+      "end": 4096230,
+      "speaker": "C",
+      "start": 4091510,
+      "text": "Das ist ein schöner Abschluss Leitsatz, Vielen lieben Dank dafür. Wo trifft man dich als nächstes an?"
+    },
+    {
+      "end": 4135830,
+      "speaker": "B",
+      "start": 4096310,
+      "text": "Ja, ich sage mittlerweile reise ich meistens nicht mehr so viel. Ich sitze jetzt einfach in San Francisco. Also wer auch immer in San Francisco ist, ich bin im Financial District in San Francisco, wo meine Kollegen immer scherzhalber sagen, da wohnt niemand, das sind nur Büros. Das stimmt aber gar nicht. Es gibt ein paar Wohnungen hier, Also in meinem Gebäude sind zum Beispiel die ersten achtzehn Stockwerke Büro und ich sitze dann im drei und zwanzigste Stockwerk, da gibt es sechs Stockwerke Apartments obendrauf. Also San Francisco ist normalerweise die Chance am besten. Ansonsten mittlerweile mache ich mehr die großen Events, so wie Kubecon Reinvent, Microsoft Build oder so, wo ein bisschen mehr Firmeninteresse da ist, die Einzelkonferenzen vielleicht in San Francisco, aber sonst versuche ich mich da herauszuhalten und das mehr dem Team zu überlassen."
+    },
+    {
+      "end": 4137350,
+      "speaker": "A",
+      "start": 4135830,
+      "text": "Aber du machst noch Talks?"
+    },
+    {
+      "end": 4142550,
+      "speaker": "B",
+      "start": 4137350,
+      "text": "Ich mach schon auch noch Talks, aber es ist mehr oder weniger mein fünf und zwanzig Hobby."
+    },
+    {
+      "end": 4144430,
+      "speaker": "A",
+      "start": 4142550,
+      "text": "Mittlerweile gearbeitet der Chef noch selbst."
+    },
+    {
+      "end": 4165630,
+      "speaker": "C",
+      "start": 4144510,
+      "text": "Ihr habt es gehört. Falls ihr mal in San Francisco seid, droppt dem Philipp einfach mal eine Nachricht. Ansonsten haben wir natürlich auch noch ein paar Links in den Shownotes für euch. Falls ihr eine Frage an Philipp habt zum Thema Developer Relations, zum Job oder ähnliches, scheut euch nicht, schreibt einfach eine E Mail. Ich denke, er wird antworten wahrscheinlich zu einer späteren Zeit, weil wegen dieser Zeitzone."
+    },
+    {
+      "end": 4171990,
+      "speaker": "A",
+      "start": 4165870,
+      "text": "Ja, Philipp hat gerade sein Frühstück konzipiert, würde ich fast sagen, während wir gerade unseren Abend planen."
+    },
+    {
+      "end": 4185950,
+      "speaker": "C",
+      "start": 4172310,
+      "text": "Philipp, vielen lieben Dank für deine Zeit. Mir hat sehr viel Spaß gemacht. Auch diese Diskussion Influencer versus Developer Advocate fand ich sehr spannend und diesen Leitsatz am Ende, den fand ich richtig, richtig gut, dass Developer verloren sind. Vielen lieben Dank für deine Zeit, Philipp. Bis bald."
+    },
+    {
+      "end": 4186709,
+      "speaker": "B",
+      "start": 4185950,
+      "text": "Danke. Gerne."
+    },
+    {
+      "end": 4190470,
+      "speaker": "A",
+      "start": 4186790,
+      "text": "Vielen Dank auch von meiner Seite und wir hören uns dann nächste Woche. Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
