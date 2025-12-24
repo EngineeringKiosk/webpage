@@ -3286,6 +3286,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/247"
+  to = "/podcast/episode/247-adventskalender-behind-the-scenes?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep247"
+  to = "/podcast/episode/247-adventskalender-behind-the-scenes?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
