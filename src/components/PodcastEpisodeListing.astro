@@ -15,13 +15,15 @@ export interface Props {
 	showAllButton?: boolean;
 
 	descriptionChars?: number;
+
+	sectionID?: string;
 }
 
 import { getCollection } from "astro:content";
 
 import PodcastEpisodePreview from '../components/PodcastEpisodePreview.astro';
 
-const { numberOfItems, episodes, headline, description, showAllButton, descriptionChars } = Astro.props;
+const { numberOfItems, episodes, headline, description, showAllButton, descriptionChars, sectionID } = Astro.props;
 
 // Build the list of Podcast Episodes
 let allEpisodes = await getCollection("podcast");
@@ -62,7 +64,7 @@ if (episodes) {
 
 ---
 
-<section class="py-8 md:py-16 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-repeat: no-repeat; background-position: center top;">
+<section id={sectionID} class="py-8 md:py-16 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-repeat: no-repeat; background-position: center top;">
 	<div class="container px-4 mx-auto">
 		<div class="flex flex-wrap items-center mb-12">
 			<div class="w-full md:w-3/4 mb-8 md:mb-0">
