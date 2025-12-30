@@ -1,0 +1,1046 @@
+{
+  "acoustic_model": "assemblyai_default",
+  "audio_duration": 4725,
+  "audio_url": "https://cloud.inlupus.at/s/S5j7CjiAXr8eHSw/download",
+  "auto_chapters": false,
+  "auto_highlights": false,
+  "auto_highlights_result": {},
+  "confidence": 0.95627904,
+  "content_safety": false,
+  "content_safety_labels": {
+    "status": "unavailable"
+  },
+  "custom_topics": false,
+  "disfluencies": false,
+  "dual_channel": false,
+  "entity_detection": true,
+  "filter_profanity": false,
+  "format_text": false,
+  "iab_categories": true,
+  "iab_categories_result": {},
+  "id": "869ece15-952b-4f49-9342-d76065a4c849",
+  "language_code": "de",
+  "language_detection": false,
+  "language_model": "assemblyai_default",
+  "punctuate": true,
+  "redact_pii": false,
+  "redact_pii_audio": false,
+  "sentiment_analysis": false,
+  "speaker_labels": true,
+  "speakers_expected": 3,
+  "speed_boost": false,
+  "status": "completed",
+  "summarization": false,
+  "throttled": false,
+  "utterances": [
+    {
+      "end": 49230,
+      "speaker": "A",
+      "start": 3360,
+      "text": "Eine neue Episode. Willkommen im Engineering Kiosk Podcast. Das Feld der Softwareentwicklung ist riesig und je weiter man sich spezialisiert, desto genauer muss man auf Teamstrukturen, technische und menschliche Schnittstellen sowie Qualitätsmessungen achten. Heute sprechen wir mal über Datenteams. Datenteams, die Daten als eigentliches Produkt Endresultat verarbeiten und anbieten mit Mario, einem Director of Data Engineering. Später sprechen wir über die Themen Data as a Product, was der Unterschied zu wirklichen Datenteams und klassischem Software Engineering ist, wie sich Teamstrukturen über die Zeit ändern von der One Man Show zu fünfzig Leuten, wie ein Tech Stack für Datenprodukte aussehen kann, wie die Qualität von Daten gemessen wird und was passiert, wenn KI mit an den Daten rumfummelt. Ich höre jetzt auf zu brabbeln, lass uns mal loslegen, viel Spaß."
+    },
+    {
+      "end": 64490,
+      "speaker": "B",
+      "start": 52110,
+      "text": "Ich probiere jetzt mal was anderes, weil Andi ist ja immer der, der dann irgendwann in der Episode AI reinbr. Und ich mache das jetzt mal umgekehrt. Ich sage AI einfach ganz am Anfang. Andi, bist du jetzt zerstört oder so oder ist es okay, wenn ich das mach."
+    },
+    {
+      "end": 65930,
+      "speaker": "A",
+      "start": 64650,
+      "text": "Du hast den Druck rausgenommen."
+    },
+    {
+      "end": 151800,
+      "speaker": "B",
+      "start": 65930,
+      "text": "Ja eben, perfekt. Also AI ist ja mittlerweile überall so ein Thema, brauche ich glaube ich niemand erklären. Absolutes Hype Thema. Früher war es halt mehr so Data Analysis und irgendwie Machine Learning und Data Science und dieser ganze Kram. Und was ja mittlerweile eigentlich alle wissen, ist ja, dass man dazu Daten braucht. Diese Daten leben dann in irgendeiner Datenbank, in irgendeinem Datensilo. Das wissen alle, das muss auch da sein. Und man lockt ja brav seine Daten und hat die dann alle. Und irgendwie, was dazwischen passiert zwischen diesem tollen Hype AI Thema und dieser Datenbank da ganz hinten, da ist so ein großes schwarzes Loch, meiner Meinung nach, was sich da auftut. Und darum haben wir uns überlegt, wir widmen uns mal genau diesem schwarzen Loch, weil in diesem schwarzen Loch, da gibt es ja auch Menschen, Teams, die schwarzen Lochteams im Prinzip, die irgendwie diesen Verbindungsweg zwischen Datenbank und AI oder dieser coolen Anwendung schaffen. Und genau über diese Datenteams wollen wir heute sprechen. Sei es jetzt Data Engineering, Data Scientists, Data Ops, da gibt es ja ganz viele Schlagwörter in dem Bereich. Und genau da wollen wir mal ein bisschen Licht reinbringen in dieses schwarze Loch. Und nachdem wir ja nur bedingt mit Daten zu tun haben, haben wir heute jemand zu Besuch beim Engineering Kiosk Studio, der sich wirklich den ganzen Tag mit Datenteams beschäftigt. Daher Mario, willkommen bei uns im Data Engineering Kiosk. Data Engineering Kiosk, um Gottes Willen. Und daher willkommen im Engineering Kiosk."
+    },
+    {
+      "end": 154080,
+      "speaker": "C",
+      "start": 152040,
+      "text": "Vielen Dank. Danke, dass ich da sein darf. Hallo Andi."
+    },
+    {
+      "end": 159160,
+      "speaker": "A",
+      "start": 154080,
+      "text": "Data Engineering Kiosk finde ich richtig gut. Licht ins Schwarze Loch Team finde ich auch klasse."
+    },
+    {
+      "end": 163520,
+      "speaker": "B",
+      "start": 159320,
+      "text": "Super. Jetzt muss ich das alles drin lassen, wenn du das ansprichst, das darf ich nicht mehr rausschneiden."
+    },
+    {
+      "end": 177220,
+      "speaker": "A",
+      "start": 163520,
+      "text": "Okay. Meine Aufgabe ist für die treuen Hörerinnen, die wissen alle, was jetzt kommt. Jetzt stelle ich dich vor, Mario. Und zwar leitest du Schwarze Loch Teams aka Datenteams. Und zwar machst du das aus Mettmann, das ist zwischen Düsseldorf und Wuppertal, da lebst du."
+    },
+    {
+      "end": 186580,
+      "speaker": "B",
+      "start": 177220,
+      "text": "Moment, Andi, warum hast du eigentlich so ein Bias, dass du diese nahen Orte immer super genau erklärst und bei irgendwelchen Gästen aus Bayern sagst, du bist aus Bayern weiter im Programm, Weiß ich nie."
+    },
+    {
+      "end": 191460,
+      "speaker": "A",
+      "start": 186580,
+      "text": "Trete ich da in so ein Fettnäpfchen? Bin ich aus Bayern, bin ich aus Franken und so und für mich ist das so weit im Süden."
+    },
+    {
+      "end": 195820,
+      "speaker": "B",
+      "start": 191460,
+      "text": "Okay, aber mach nur weiter. Magst du die Straße auch noch erwähnen, wo der Mario wohnt in Mettmann?"
+    },
+    {
+      "end": 209960,
+      "speaker": "A",
+      "start": 195820,
+      "text": "Nein, nein, nein, nein. Auf jeden Fall. Der Transparenz halber erwähne ich das. Wir kennen uns, wir drei haben auch schon mal ein paar Jahre zusammengearbeitet bei Trivago. Da warst du auch mal ein sogenannter Boomerang Hire. Du warst da, als ich da war, dann bist du gegangen und kamst später wieder. Das nennt man einen Boomerang Hire."
+    },
+    {
+      "end": 210720,
+      "speaker": "B",
+      "start": 209960,
+      "text": "Ja, das ist richtig."
+    },
+    {
+      "end": 226560,
+      "speaker": "A",
+      "start": 210960,
+      "text": "Du hast einen Background im Software Engineering und so viel ich weiß, hast du Software Engineer gar nicht gelernt, sondern bist ebenfalls eine Art Quereinsteiger, glaube ich, noch in Erinnerung inzwischen. Aber bist du Director Data Engineering bei Viva Systems. Ist Viva die richtige Aussprache?"
+    },
+    {
+      "end": 228480,
+      "speaker": "C",
+      "start": 226640,
+      "text": "Viva. Absolut Viva."
+    },
+    {
+      "end": 259450,
+      "speaker": "A",
+      "start": 228570,
+      "text": "Und ich musste erstmal nachgucken, was Viva eigentlich ist. Viva ist nicht der Musiksender, also es wird mit Doppel E geschrieben. Für die Älteren unter uns, Laut Wikipedia ist Viva ein US amerikanisches Cloud Computing Unternehmen, die auf Anwendungen für die Pharma und Biowissenschaftsbranche spezialisiert ist. Und du hast als Hobby Bloggen und du blogst unter the Second Line Perspective generell über Leadership Themen, wo ich dich auch mal wieder pushen muss, einen neuen Artikel zu schreiben, denn der letzte ist nämlich schon neun Monate."
+    },
+    {
+      "end": 262830,
+      "speaker": "C",
+      "start": 260550,
+      "text": "Pile of Shame ist da neun Monate."
+    },
+    {
+      "end": 267710,
+      "speaker": "B",
+      "start": 262830,
+      "text": "Hallo, das ist ja top. Andi, wie lange ist dein letzter Artikel in deinem Blog her?"
+    },
+    {
+      "end": 275350,
+      "speaker": "A",
+      "start": 267710,
+      "text": "Ich mache das in Intervallboost. Ich habe jedes Jahr zwischen Weihnachten und Neujahr einen Intervallboost und somit blogge ich regelmäßig."
+    },
+    {
+      "end": 291550,
+      "speaker": "B",
+      "start": 275510,
+      "text": "Es ist aber auch immer klar, dass der Andi irgendeine gute Ausrede hat oder normal. Aber steigen wir mal in das Schwarze Loch Thema ein. Also Mario, du als Kenner des Schwarzen Lochs, kannst du uns mal da Licht reinbringen in die Definition. Was sind für dich denn Datenteams? Über was sprechen wir da eigentlich?"
+    },
+    {
+      "end": 334070,
+      "speaker": "C",
+      "start": 291550,
+      "text": "Dann fangen wir mal an vorne an. Datenteams sind für mich erstmal grundsätzlich Teams, die als Hauptsache Software schreiben, Tools betreiben, die Daten ganz grob von A nach B transformieren oder transportieren an erster Stelle. Das heißt also Leute, die externe Daten lesen, transformieren und irgendwo bereitstellen, die auch interne Daten aus dem E Commerce oder sonstigen nehmen und bereitstellen. Und das können verschiedene Zwecke sein, Das kann ein analytischer Zweck sein, das kann ein Produktzweck sein, da gibt es verschiedene Möglichkeiten, wo die dann am Ende landen und welchen Wert sie dann nachher kreieren. Aber das sind erstmal Teams, die sich mit Daten beschäftigen und irgendwie Tools, Software, sonstige dazu machen."
+    },
+    {
+      "end": 337990,
+      "speaker": "A",
+      "start": 334150,
+      "text": "Also ist eigentlich zum Beispiel so ein Business Intelligence Team ein Datenteam?"
+    },
+    {
+      "end": 354690,
+      "speaker": "C",
+      "start": 337990,
+      "text": "Kann ein Datenteam sein. Absolut. Also ich meine, am Ende haben die nichts vielleicht mit der Datenerschaffung zu tun oder mit der Datenbeschaffung zu tun, sondern mit der Auswertung der Daten. Aber gehören in vielen Organisationen zum Daten Vertikale dazu."
+    },
+    {
+      "end": 424530,
+      "speaker": "A",
+      "start": 414850,
+      "text": "Ist ein HR Team, welches Gehaltsanforderungen in eine Excel Tabelle schreibt, damit man weiß, ob man seine Leute marktgerecht bezahlt."
+    },
+    {
+      "end": 443000,
+      "speaker": "C",
+      "start": 424610,
+      "text": "Ebenfalls ein Datenteam, würde ich jetzt sagen nein. Aus meiner Perspektive, weil sie keine Engineering Aspekte mit drin haben und weil das wahrscheinlich eher einen Business Prozess darstellt, als wirklich einen Engineering Prozess, so wie er zumindest in meiner Domain existiert."
+    },
+    {
+      "end": 451200,
+      "speaker": "A",
+      "start": 443000,
+      "text": "Nehmen wir mal das andere Extrem. Die Systemadministratoren, die die Access Logs vom NGX in Elasticsearch packen, sind das Datenteams? Weil ich meine, da ist der Engineering."
+    },
+    {
+      "end": 463390,
+      "speaker": "C",
+      "start": 451200,
+      "text": "Aspekt ja gegeben oder Fair Point. Ich würde trotzdem sagen, die Hauptaufgabe von einem Admin Team ist der Betrieb und nicht die Datenweitergabe. Deswegen würde ich es da auch mal."
+    },
+    {
+      "end": 478109,
+      "speaker": "B",
+      "start": 463390,
+      "text": "Ausklammern, da würde ich jetzt eh schon anschließen. Das heißt, der Outcome von diesem Team, also was das Team liefert, sind auch wieder Daten. Also es ist keine Software in dem Fall, sondern du siehst Datenteam schon wirklich als Provider von Daten, Würde sagen, die."
+    },
+    {
+      "end": 505680,
+      "speaker": "C",
+      "start": 478109,
+      "text": "Hauptaufgabe ist, sich mit Software um Daten zu kümmern. Am Ende sind Data Engineering Teams ja auch Engineering Teams, das heißt, die schreiben auch Software, die hat aber den Hauptzweck, Daten zu bewegen oder zu transformieren oder miteinander zu verbinden oder in irgendeiner Weise damit umzugehen. Aber das Produkt, also wirklich das Produkt im klassischen Sinne, was sie ausgeben, sind auch wieder Daten. Entweder dann zur weiteren Analyse oder zum Verkauf oder was auch immer das bedeutet."
+    },
+    {
+      "end": 516750,
+      "speaker": "A",
+      "start": 505680,
+      "text": "Die Schufa ist eine Datenfirma, würde ich absolut zustimmen, weil im Endeffekt die Schufa holt irgendwelche Daten, niemand weiß so wirklich was, welche Daten die da zugrunde legen und danach kommt eine Kennzahl raus, dein Schufa Score."
+    },
+    {
+      "end": 532739,
+      "speaker": "C",
+      "start": 516980,
+      "text": "Genau, das ist zumindest das sichtbare Produkt, was verkauft wird. Das ist ja auch, du kannst ja einmal selber deinen Score abfragen, aber du hast ja auch ein Business to Business Produkt, wo dann eben die Kreditwürdigkeit über irgendwelche Schnittstellen durch irgendwelche Shops zum Beispiel oder Verkäufer abgefragt werden kann eben."
+    },
+    {
+      "end": 547380,
+      "speaker": "B",
+      "start": 532739,
+      "text": "Also du hast ja auch noch einen Algorithmus auch dahinter und dann hast du vielleicht irgendwie ein Thumbs up, Thumbs down am Ende. Also würde ich schon sagen, da hängt ja auch Software noch dran. Aus dem Andi aufpassen, der CTO von der Schufa weiß, wo du wohnst, also würde da vorsichtig sein mit deinen Aussagen."
+    },
+    {
+      "end": 548650,
+      "speaker": "C",
+      "start": 547380,
+      "text": "Ich wollte gerade sagen, Grüße gehen raus."
+    },
+    {
+      "end": 554640,
+      "speaker": "A",
+      "start": 549280,
+      "text": "Naja, also solange der CTO der Schufa auf meinen Schufa Score immer Thumbs up macht, alles gut."
+    },
+    {
+      "end": 570520,
+      "speaker": "B",
+      "start": 554640,
+      "text": "Wo siehst du denn den Unterschied zu klassischen Analytics Teams oder gibt es da einen Unterschied? Oder wenn wir auch schon ein bisschen reingehen in das Ganze, ist ein Data Scientist, sitzt er in einem Data Team oder würdest du den jetzt woanders eher ansiedeln im Product Team oder von der."
+    },
+    {
+      "end": 655170,
+      "speaker": "C",
+      "start": 570520,
+      "text": "Funktionalen Sinne her ist es so, meiner Erfahrung nach, dass die Teams meistens getrennt sind und dann in groß funktionalen Squads irgendwie zusammenarbeiten. Also so kommen die Sachen nachher zusammen. Würde aber trotzdem sagen, es ist eine separate Domäne. Also die Erfolgsmetriken für einen Data Scientist sind aus meiner Sicht anders. Das heißt, da ist meistens projektorientiert. Das Projekt hat klare Erfolgskriterien, schnelle Iterationen, möglichst schnell zum Ziel kommen. Dabei können gewisse Parameter auf dem Weg ignoriert werden. Da muss vielleicht, der Code ist eher vielleicht ein bisschen linearer, dann hat man vielleicht drei, vier, fünf Modelle ausprobiert und dann sieht das, was nachher irgendwie das Modell exekutet, vielleicht nicht mehr so hübsch aus. Aber das ist eigentlich egal, weil es geht ja darum, das eigentliche Ziel zu beweisen, dass eine Metrik erreichbar ist, Also was weiß ich, ein Precision Recall erreichbar ist. Und das ist total valide. Während ein Datenteam aus meiner Erfahrung grundsätzlich eher Richtung Sustainability, also wir wollen ja langfristig Prozesse maintainen, die stabil und vorhersagbare Daten generieren. Wenn das zum Beispiel, was weiß ich, ein Report für ein C Level ist, dann möchte ich da eine Codequalität und eine Testbarkeit und eine Vorhersagbarkeit haben, die mich ruhig schlafen lässt und die garantiert, dass eine Business Steuerung, die auf seinem Report passiert, halt auch wirklich verlässlich passieren kann. Damit gehen die Interessen ein bisschen auseinander Und das nachher wieder zu vereinen, ist dann ein ganz interessantes Thema, weil du."
+    },
+    {
+      "end": 660650,
+      "speaker": "B",
+      "start": 655170,
+      "text": "Jetzt gerade Reporting erwähnt hast, ist dann das Data Team für so Reporting Plattformen auch verantwortlich?"
+    },
+    {
+      "end": 757100,
+      "speaker": "C",
+      "start": 661130,
+      "text": "Das kann es sein. Ich glaube, das geht. Das ist sehr unterschiedlich von Firma zu Firma. Viele haben so einen operativen Layer mit drin, der dann eben sagt, Analysten, Dashboards, Ad Hoc Reporting, also Insights generieren auf den Daten, entweder Ad Hoc oder Schedule. Du hast in etwas moderneren Setups hast du so was auch wie Analytics Engineers mit drin, die dann halt das Ganze auch anfangen zu professionalisieren und nicht nur so ein Ad Hoc Geprutsche zu machen. Also hau mal schnell ein Python Skript zusammen, was die Daten generiert und dann schmeiß das mal irgendwie in eine Glue oder EMR oder was auch immer deine Cloud gerade zu bieten hat, um dann schnell ein Ergebnis zu generieren, um das dann als Report rauszuhauen. Da merkt man immer mehr, dass das nicht so stainable ist und dass dann die Reports vielleicht von letzter Woche zu dieser Woche andere Zahlen liefern, die irgendwie nicht ganz zusammenhängen, weil man irgendwo einen Fehler gemacht hat oder weil vielleicht die Kenntnisse in den reinen Analytics Teams nicht so tief sind, wie man es braucht, um dann halt ein nachvollziehbares und wiederholbares Ergebnis zu erzielen. Deswegen gibt es ein bisschen den Trend Richtung Analytics Engineer. Das ist dann quasi so ein bisschen die Hybrid Funktion, wie wir das auch von DevOps kennen oder mlops kennen, wo man dann sagt, ich brauche so ein bisschen mehr Engineering und so ein bisschen mehr Professionalisierung im Prozess und ein bisschen mehr, bisschen belastbaren Prozess, aber ich brauche halt nicht das volle Engineering mit, was weiß ich, einem Smoke Test dazu oder mit sonstigen Tests dazu. Ich brauche jetzt nicht einen zwei Wochen Sprint. Ich möchte immer noch irgendwie mehr Kanban artig arbeiten, weil ich halt ändernde Requirements habe. Das ändert sich so ein bisschen, wie die Firma das gerne auch haben möchte. Da gibt es ganz, ganz große Unterschiede."
+    },
+    {
+      "end": 766520,
+      "speaker": "B",
+      "start": 757260,
+      "text": "Und wer sitzt in solchen Datenteams? Also welche Rollen habt ihr zum Beispiel in den Datenteams? Wenn du jetzt sagst, okay, gerade so Engineering, das eher so Randbereich, fast Engineering."
+    },
+    {
+      "end": 820180,
+      "speaker": "C",
+      "start": 766520,
+      "text": "Ist, so wie sie jetzt in meinen Teams zum Beispiel ablaufen, ihren Randbereich. Wir machen halt wenig Analytics, wir machen halt viel Datenprodukte und jetzt nicht im Data Mesh Sinne Datenprodukte, sondern, also Data Mesh kennt sowieso Datenprodukte, als alles, was du so an Daten produzierst, ist hausintern so ein Datenprodukt. Sowas meine ich jetzt nicht, sondern wirklich so ein Datenprodukt, was man verkaufen kann, Also wo dann nachher Referenzdaten bei rauskommen, die man an einen Kunden liefern kann, auch ohne vielleicht ein Stück Software dazwischen. Das können dann Personenkataloge sein. Wenn wir jetzt über eins der Produkte, die wir so haben, dann sind das Referenzdaten von praktizierenden Ärzten zum Beispiel, Die werden dann GDP konform gesammelt und dann so verarbeitet, dass die dann eben ihren Opt out machen können und so. Das ist also alles kein grauer Markt oder sowas, sondern das ist ein ganz normaler Prozess. Die werden dann gesammelt und werden Kunden dann wiederum für ein CRM zur Verfügung gestellt, damit ihr Salesforce steuern könnt."
+    },
+    {
+      "end": 847620,
+      "speaker": "B",
+      "start": 820180,
+      "text": "Das heißt aber, ihr habt wirklich Produkte für, ich sage es mal, Endkunden oder also Kunden außerhalb eurer eigenen Firma. Ihr macht jetzt nicht Datenprodukte intern für andere Teams innerhalb der Firma, sondern wirklich für Kunden außerhalb und die nutzen dann die RAW Daten. Wie kann man sich das vorstellen? Sind es APIs sind es Datasets, die zum Download verfügbar sind, rufe ich bei dir an und sag, schick mir ein CSV mit den und den Daten. Also wie funktioniert das denn am Ende?"
+    },
+    {
+      "end": 874420,
+      "speaker": "C",
+      "start": 847620,
+      "text": "Die Engineering Antwort dazu ist ja zur CSV und Telefon. Nein, das sind verschiedene Integrationsmechanismen. Historisch gibt es ein MDM, also ein Master Data Management Produkt, was wir haben, wo diese Daten zum Beispiel auch vertrieben werden. Wir haben ein Konzept, das nennt sich Direct Data API, was quasi so ein bisschen CSV über HTTP ist, mit so ein paar Zusatzfeatures wie Data Generierung und sowas. Die kannst du dir abrufen, aber im Prinzip ist das alles viel Flatfile."
+    },
+    {
+      "end": 910770,
+      "speaker": "A",
+      "start": 874650,
+      "text": "Also ist das nicht einfach nur Engineering? Also ich meine, du hast gerade gesagt, es werden Daten generiert, es werden Daten gesammelt, okay, die werden dann mit hoher Wahrscheinlichkeit irgendwie aufbereitet mit irgendwelchen Algorithmen und dann werden sie rausgedumpt und jetzt sagst du gerade CSV, aber für mich ist CSV ja auch nur ein Format wie JSON über the Rest API oder werden vom FTP Server hochgeladen. Und für alle Leute, die jetzt lachen, ja, das funktioniert und wird noch in der Industrie sehr, sehr viel gemacht, dass CSV Dateien nächtlich auf irgendwelche FTP Server hochgeladen werden. Also was ist an Datenteams und an Data Engineering und den ganzen Buzzwords von Jobtiteln, die du gerade genannt hast, anders als ganz klassisches Engineering?"
+    },
+    {
+      "end": 1004060,
+      "speaker": "C",
+      "start": 910850,
+      "text": "Ich glaube, der Kernunterschied für mich ist, dass du in den Teams nicht nur ein Ownership auf der Software und den Softwareprozessen hast, sondern auf den Daten an sich hast. Also wenn du Daten als Produkte verkaufst, hast du die Tiefe der Daten und die Breite der Daten noch zusätzlich als zusätzliche Aspekte, Also wo wirklich sich die Gedanken darüber gemacht wird, was für Eigenschaft von einer Person, die jetzt zum Beispiel in dem Produkt, was ich vorher genannt habe, welche Eigenschaften sind da drin in dem Enum von Spezialgebieten von so einem Arzt, welche Werte dürfen denn da drin stehen? Und das ist nicht nur Governance im Sinne von was darf wirklich da drin stehen, sondern was ist richtig und was ist falsch. Also so eine Squad muss in der Lage sein, zusammen so eine Entscheidung treffen zu können. Also den Markt so zu kennen, zu sagen, oh, wir sehen jetzt eine neue Specialty, also ein Spezialgebiet von einem Arzt Markt sich entwickeln. Also ist jetzt in den Hahn beigezogen, aber jetzt um das Beispiel zu machen, dann muss das Team in der Lage sein, das zu entscheiden und auch zu integrieren in die Daten. Okay, was für eine Verteilung dieser Daten erwarten wir denn überhaupt? Wie gut geht es den Daten denn? Also wie ist die Qualität nachher? Also viel Breite und Tiefe der Daten und da ist ein Ownership mit drin, was du wahrscheinlich in einem transaktionalen Kontext von den üblichen Software Teams, also wenn jetzt so ein Shop System vielleicht mal denkst, das ist eher so ein transaktionales Denken, da ist dann eher der Benutzer im Vordergrund und nicht die Daten im Vordergrund. Also die Daten sind das Nebenprodukt einer Benutzer Transaktion. Ich kaufe irgendwas, ich lege irgendwas in den Warenkorb. Das sind alles transaktionale Nebenprodukte, die dann halt aber auch zu im Hintergrund zu Prozessen führen, die dann wiederum datengestützt sind."
+    },
+    {
+      "end": 1014260,
+      "speaker": "B",
+      "start": 1004220,
+      "text": "Habt ihr auch Product Owner oder wirklich so Product Leute, die sich quasi auf einem höheren Level genau darum kümmern? Gibt es irgendwie Neues bei den Ärzten?"
+    },
+    {
+      "end": 1027820,
+      "speaker": "C",
+      "start": 1014420,
+      "text": "Genau, also wir haben wirklich Data Product Manager, den Beruf gibt es bei uns. Das ist eine interessante, aber auch schwierige Rolle, weil du brauchst inhaltliches Verständnis, muss aber trotzdem noch ein Engineering Team steuern können. Also es ist eine hoch anspruchsvolle Rolle. Gibt es nicht so oft."
+    },
+    {
+      "end": 1029860,
+      "speaker": "B",
+      "start": 1027820,
+      "text": "Die haben dann auch das jeweilige Domain Wissen."
+    },
+    {
+      "end": 1046350,
+      "speaker": "C",
+      "start": 1029860,
+      "text": "Genau, also idealerweise haben sie das ja, aber wie gesagt, die Rolle ist jetzt nicht so einfach zu heilen, weil gerade bei dem tiefen Wissen, was wir teilweise haben, ist es nicht so einfach, jemanden zu finden, der den Markt so gut kennt und gleichzeitig auch noch in der Tiefe mit Engineers über einen Feature diskutieren kann."
+    },
+    {
+      "end": 1080040,
+      "speaker": "A",
+      "start": 1046350,
+      "text": "Ja, aber die Anforderung ist ja nicht, dass jeder Engineer super alles weiß. Ich meine, du wirst ja sehr wahrscheinlich Validationsmechanismen haben und dann hast du einen Mitarbeiter, der kennt vielleicht irgendwie alle Fachgebiete von Ärzten und erstellt dann irgendeine Liste, gegen die du validierst. Und dann gibt es vielleicht noch eine fuzzy Matching Logik, falls die Daten irgendwie unsauber sind und so weiter und so fort. Aber im Endeffekt hört sich das für mich an, okay, da sitzt Software Engineer, der piped so ein paar Daten durch und was ist. Also ich habe noch nicht ganz verstanden, warum man dafür eine spezielle Rolle eines, wie hast du es genannt, Data Engineer."
+    },
+    {
+      "end": 1179690,
+      "speaker": "C",
+      "start": 1080040,
+      "text": "Ich glaube, das müssen wir von zwei Aspekten sehen. Also das Eine ist die handwerkliche Qualifikation, also mit was für Tools kannst du umgehen. Das sind dann halt bei uns so Sachen wie Spark mit einem Data Warehouse wie Redshift oder sowas. Datenformat wie Delta, Iceberg, Arrow, also Sachen, die für den Bereich, wo wir tätig sind, einfach Brot und Butter Technologien an vielen Stellen sind, wo aber auch eine fachliche Qualifikation. Also wenn du Spark jetzt mal nimmst als Technologie, du kannst halt schnell Ergebnisse erzielen, wenn du qualitativ hochwertige Ergebnisse erzielen willst, wo du halt nicht arm wirst, weil du zehnmal repartitionieren musst mit deinen Daten und endlos viele Requests auf deine Storage machen musst und ähnliches, dann wird es schon ein bisschen anspruchsvoller. Dann ist es einfach wie bei einem Software Engineer auch, der in einem verteilten System oder in der Microservice Architektur andere Ansprüche hat, als wenn du einen Apache PHP Monolithen hast. Und das zweite ist die Materie, mit der du umgehst. Du musst den Wunsch und den Willen haben, dich in die Tiefe da einzuarbeiten und auch dann eben proaktiv mit den Daten umzugehen zu sehen, wenn was schiefgeht. Weil du hast teilweise so komplexe Zusammenhänge, wenn du Daten miteinander vermischt zum Beispiel oder verbindest oder wenn du Taxonomien anwendest und die Ergebnisse dir anschaust, wenn du experimentierst, dass eine Iteration innerhalb des Teams viel, viel schneller ablaufen kann, wenn du Leute hast, die sich mit den Daten auskennen und den Ownership für die Daten haben, als wenn du Leute hast, die nur sagen, ja, der PM sagt mir schon, was für Daten richtig oder falsch sind. Das ist, glaube ich, eher kulturell als wirklich fachliche Anforderungen oder handwerkliche Anforderungen."
+    },
+    {
+      "end": 1202490,
+      "speaker": "B",
+      "start": 1179690,
+      "text": "Kannst du mal grob skizzieren, wie so ein Flow aussieht, so eine Data Pipeline oder einfach um so ein Gefühl zu bekommen, was so ein Produkt wäre. Du hast jetzt gesagt, okay, am Ende purzelt da irgendwie ein Dataset raus, was man ansprechen kann, aber was gibt es denn für Schritte dazwischen und für was sind da die Teams verantwortlich und was ownen sie? Und einfach so demonstrativ, wie sowas aussehen kann."
+    },
+    {
+      "end": 1207690,
+      "speaker": "C",
+      "start": 1202490,
+      "text": "Als Beispiel, lass uns mal das Schufa Beispiel nehmen, auch wenn der Klaus vielleicht nachher aufs Dach steigt, vielleicht hört er."
+    },
+    {
+      "end": 1209700,
+      "speaker": "B",
+      "start": 1207690,
+      "text": "Dann die Episode wenigstens für alle, die."
+    },
+    {
+      "end": 1220340,
+      "speaker": "A",
+      "start": 1209860,
+      "text": "Jokes hier gerade nicht folgen können. Unser ehemaliger Vorgesetzter ist inzwischen CTO bei der Schufa. Deswegen, falls ihr zuhört, schöne Grüße. Das Schufa Beispiel ist jetzt aber auch wirklich nur random."
+    },
+    {
+      "end": 1226380,
+      "speaker": "B",
+      "start": 1220580,
+      "text": "Wir arbeiten ja alle nicht bei der Schufa. Wir reden immer über irgendwas, was wir nicht verstehen. Insofern ideal perfektes."
+    },
+    {
+      "end": 1231060,
+      "speaker": "A",
+      "start": 1226380,
+      "text": "Wir versuchen jetzt mal die Pipeline der Schufa nachzubauen, ohne dass wir sie jemals von innen gesehen haben."
+    },
+    {
+      "end": 1407910,
+      "speaker": "C",
+      "start": 1231300,
+      "text": "Genau, wir reverse engineeren das sozusagen von außen. Wir gehen jetzt einfach mal davon aus, dass wir die Daten irgendwo erstmal beschaffen müssen. Sagen wir einfach mal, es gibt Vertragspartner, wo die Schufa die Daten herbekommt in irgendeinem Format. Das kann eine Schnittstelle sein, also eine HTTP API, das kann wahrscheinlich irgendwas strukturiertes XMJ sein, SOAP APIs von anno dazumal. Da gibt es auch bei den Sachen, die meine Teams betreuen, einen bunten Zoo von Zeug, der dann eben irgendwie akquiriert werden muss und der muss erst mal reinkommen. Und dann haben wir erst mal die Aufgabe, das, was wir von außen bekommen, irgendwo hinzulegen. Also so als initiale Datenhalde, klassisch als Bronze Layer in manchen Architekturen, also von dieser Medaillen Architektur, die an vielen Stellen eingesetzt wird, dass du erst mal die Rohdaten hast in dem Format, wie sie von den Schnittstellen kommen und erst mal haben und Metaverse sein. Da brauchst du erst mal Leute, die das machen, die in der Lage sind, Prozesse zu schreiben, die wiederholbar sind, die mit sehr, sehr schlechten Datenanbietern klarkommen, teilweise wo Verbindungsabbrüche oder mal sind sie nicht erreichbar oder sonstiges passiert. Also das Resilienz halt ein großes Thema. Das heißt, da liegt bei dem Sourcing Bereich, glaube ich, die höchste Herausforderung in der Vielfalt von den Quellen, die man einfach dort bekommt. Und dann hat man normalerweise, wenn wir uns ein bisschen Architektur, also Datenarchitektur anschauen, hat man ja von außen Formate, die reinkommen, die sehen erstmal so aus, wie die jeweiligen Datenquellen sich das vorstellen, Also die wilde Properties, Aufteilung, sonstiges. All das kommt dann eben aus der Außenwelt. Und man hat ja von innen auch eine Vorstellung, wie sowas aussehen soll. Man modelliert ja irgendwie seine Business Entitäten auch so ein bisschen und denkt sich, okay, die Transaktion, die in den Schufa Score einfließen soll, die sieht jetzt irgendwie so aus, Also Nutzer kauft irgendwas oder Nutzer hat Kredit in Höhe von oder sonst irgendwas. Und dann muss an dieser Stelle in diesem Team auch so ein Mapping in diese interne Entität stattfinden, sodass man halt alle nachgelagerten Teams auf derselben Business Entität rumeiern können und nicht dann nochmal zusätzlich Transformationslogiken an zwanzig verschiedenen Stellen sind aus meiner Sicht immer der erste Schritt. Es ist glaube ich sehr unabhängig davon, ob wir jetzt über die Schufa oder über meine Teams sprechen. Das ist eigentlich relativ ähnlich vom Aufbau her. Der zweite Schritt ist dann immer so ein bisschen mehr Business gebunden. In meinen Teams ist es dann zum Beispiel eine bei den, gerade bei den unstrukturierten Daten, der Versuch der Strukturierung, da guckt man dann irgendwie mal rein, hat vielleicht ein Stückchen Text und aus dem Text möchte man wissen, okay, worum geht es denn da erst mal. Also da ist ein bisschen NLP mit dabei, da ist vielleicht eine Taxonomie, eine Ontologie mit dabei, um dann versucht erst mal irgendwie Sinn aus diesen Daten zu schaffen. Also ich muss aus einer Publication, also aus einer wissenschaftlichen Publikation, muss ich irgendwie raus extrahieren, worum es da geht oder ob es eine Clinical Trial Beschreibung muss ich wissen, da geht es jetzt um Covid neunzehn Vakzin oder sowas. Also diesen Inhalt müssen wir irgendwie extrahieren."
+    },
+    {
+      "end": 1416550,
+      "speaker": "B",
+      "start": 1407990,
+      "text": "Das heißt aber, deine Teams speichern dann auch, Also sind die für die Datenhaltung auch verantwortlich nach dieser Extraktion, wo das abgelegt wird und wie das abgelegt wird?"
+    },
+    {
+      "end": 1471220,
+      "speaker": "C",
+      "start": 1416630,
+      "text": "Ja, absolut. Das ist halt die Verantwortung der Teams. Also natürlich haben wir eine Architektur Gesamtverantwortung als Leadership Team oder wenn die Companies das haben, halt ein Architekt, Datenarchitekten dazu haben, das haben wir jetzt nicht. Wir machen das halt auf einer PM und auf einer Engineering Manager Ebene, wo wir das zusammen entscheiden, was in den jeweiligen Bereichen die richtige Datenarchitektur ist. Und dann haben die eine Persistenzpflicht natürlich und sind auch dafür für die Resilienz dieser Speicherung verantwortlich. Das heißt, die müssen halt sagen, okay, das ist so wertvoll, dass wir ein Off Region Backup machen wollen, also dass wir in einem Desasterfall von einem Region Out Ausfall oder so, dass wir dann eine physische Kopie irgendwo haben. Wir sind für Retention verantwortlich, also zu sagen, wie lange können und dürfen wir diese Daten aufbewahren. Da gibt es ja auch gesetzliche Regelungen, wo wir dann bestimmte Daten einfach nicht so lange speichern dürfen und auch für die Einhaltung verantwortlich. Das heißt, wir werden auch geaudited und das muss halt schon stimmen."
+    },
+    {
+      "end": 1478620,
+      "speaker": "B",
+      "start": 1471220,
+      "text": "Und ihr habt dann auch wirklich Leute, die sich um die Datenbanken kümmern oder wird es dann irgendwie von einem anderen Team gemacht, die mehr die Ops Seite machen?"
+    },
+    {
+      "end": 1508060,
+      "speaker": "C",
+      "start": 1478620,
+      "text": "Wir haben kein separates Ops Team in meiner Org, das heißt, das müssen die Leute selber machen. Wir versuchen laufende Datenbanken, also wie eine Postgres, mysql oder ähnliches zu vermeiden, so gut es geht und versuchen halt viel über S ähnliche Konstrukte zu machen. Also wir sind auf Amazon unterwegs, deswegen werde ich jetzt wahrscheinlich viel Amazon Lingo benutzen, aber im Prinzip nutzen wir so was wie ein S als primären Speicher. Der hat ganz viele Vorteile für uns. Also gerade weil wir auch viel mit Spark arbeiten, ist es für uns unheimlich vorteilhaft."
+    },
+    {
+      "end": 1511060,
+      "speaker": "B",
+      "start": 1508060,
+      "text": "Es klingt jetzt für mich sehr Batch orientiert. Habt ihr da."
+    },
+    {
+      "end": 1612000,
+      "speaker": "C",
+      "start": 1511300,
+      "text": "Ja, ist es. Als ich angefangen habe vor viereinhalb Jahren mittlerweile, standen wir so ein bisschen vor der Herausforderung der Skalierbarkeit, weil da Prozesse liefen, einmal täglich, einmal wöchentlich oder mehrfach täglich, aber am Ende sollte da ein tägliches Delivery rauskommen und einmal wöchentlich und die Datenmenge wurde halt immer größer und diese Prozesse waren dann irgendwann nicht mehr in der Lage, das hinzukriegen. Und dann war der erste Gedanke so ein bisschen Streaming. Können wir das nicht mit Streaming lösen? Können wir nicht eventbasierte Architektur aufbauen, damit wir so ein bisschen aus diesen großen Batchläufen rauskommen? Ich habe ja mal ein bisschen was in der Richtung gemacht, was Kafka Streaming und Kafka Connect angeht und ich habe dann relativ schnell das Feedback gegeben, dass ich nicht glaube, dass das die Lösung von dem Problem ist. Wir haben dann eher versucht, die monolithische Perspektive, die wir da hatten, an den monolithischen Kunst ein bisschen auseinanderzuziehen und das eher in Teams zu verteilen, eher mehr über Daten zu integrieren, als über Prozesse zu integrieren. Und damit konnten wir das Problem dann immer noch lösen und mussten aber nicht von der Batch Orientierung weg, die für die Anwendungsfalle, die wir haben, einfach super ausreichend ist, weil wir haben keine Notwendigkeit von Near Real Time Updates. Also wir können, wenn wir wollen, können wir im Stundentakt batchen, wir können auch im Halbstundentakt batchen. Wir benutzen Datenformate, die uns auch inkrementelle Verarbeitung irgendwie ermöglichen. Wir haben einfach keine Notwendigkeit, uns in diese Komplexität einzukaufen. Das behält sich einfach dann simpler und damit für uns auch effizienter in Erwartung. Simpel ist halt für uns gut, weil simpel ist skalierbar und simpel ist halt keine kognitive Last. Da haben wir viel zu viele Vorteile, als dass wir das nicht machen wollen."
+    },
+    {
+      "end": 1632340,
+      "speaker": "B",
+      "start": 1612000,
+      "text": "Ist aber sehr interessant, weil die ganze Welt irgendwie so Richtung Streams und Event Based und so weiter geht. Du dir auch eben Erfahrung dort darin hast und auch einiges designt hast in diesem Paradigma. Finde ich sehr interessant, aber zeigt auch, dass man halt doch sehr viel Komplexität dazu bekommt, wenn man das gar nicht braucht vielleicht, dass es dann doch das klassische Patch Processing gar nicht so schlecht ist, wie immer alle sagen."
+    },
+    {
+      "end": 1663260,
+      "speaker": "C",
+      "start": 1632500,
+      "text": "Ja, absolut. Und es ist ja auch besser geworden. Also es ist ja nicht mehr so klassisch, dass du jetzt deinen Map Reduce Job in Hadoop schreiben musst und der ist dann irgendwie, der muss durchlaufen und Resumen ist irgendwie teuflisch und so, sondern wir haben ja ganz viel Technologien dazu bekommen, die das so weit abstrahieren, dass es fast schon im Vergleich zu, keine Ahnung, vor fünf, sechs, sieben, acht Jahren einfach erscheint. Das ist natürlich immer noch komplex und abstrahiert halt nur die Komplexität weg. Die ist nicht verschwunden, aber es macht es im operativen Betrieb durchaus einfacher."
+    },
+    {
+      "end": 1699220,
+      "speaker": "A",
+      "start": 1663340,
+      "text": "Viele Leute, glaube ich, unterschätzen die Komplexität und was es wirklich dazugehört. Gutes Streaming und ich sag mal Real Time in Anführungszeichen, weil dieses Wort Realtime ist ja auch sehr schwierig. Wir hatten mal ein, zwei Episoden wirklich zur Zeit chronologisch, Synchronisation über NTP und Co. Diese Menschen, die sowas machen, die reden von Realtime und jetzt nicht irgendwelche Datensätze, die alle zwei, drei, vier Sekunden irgendwie über eine Leitung gehen. Also es stimmt schon. Was mich aber jetzt interessiert, das bedeutet, okay, ihr packt dann jetzt Files auf dem Object Storage, bei Amazon wäre es S, speichert ihr dann CSV oder du hast vorhin irgendwie Tabellenformate wie Apache Iceberg oder Parkett oder ähnliches genannt."
+    },
+    {
+      "end": 1838520,
+      "speaker": "C",
+      "start": 1699220,
+      "text": "Wir sind mit Delta unterwegs. Wir haben vor dreieinhalb Jahren, haben wir quasi die Umstellung gemacht, hatten viel JSON und ähnliches darauf, also in den monolithischen Prozessen noch nicht so viel darauf geachtet, wie wir die Daten, wie wir die Zwischenergebnisse austauschen, das haben wir dann erst später implementiert und wir haben im Prinzip Delta als Format uns ausgeguckt, weil es zum damaligen Zeitpunkt das Format war, was uns Performance und Feature Reichtum gegeben hat, den wir haben wollten. Wir wollten halt die inkrementelle Kapazität haben, wir wollten die Möglichkeit haben, mit einem Presto oder Athena oder ähnlichem auf den Daten irgendwie auch Querying zu können. Und das unterstützt ja zumindest Amazon mit Athena ganz gut. Das heißt, wir wollen ein Format haben, was mit den Sprachen kompatibel ist, die wir haben. Wir sind mit Python und Java unterwegs, Es ist Spark kompatibel natürlich. Man kann es aber von Python direkt aus auch machen. Das heißt, ich bin nicht gezwungen, Spark zu nutzen, wenn ich einfach noch ein bisschen skripten möchte und experimentieren möchte. Oder gerade für die Data Scientist ist es super wichtig, dass sie einen Zugriff haben, der jetzt nicht zwingend über Spark gehen muss, damit die Komplexität da nicht so hoch ist. Genau, und das hat einfach alle Boxen getickt. Eisberg war damals noch nicht so weit wie heute. Heute sehen wir schon ganz klares Rennen zwischen Eisberg und Delta, mal gucken, wer gewinnt. Und deswegen haben wir uns damals für Delta entschieden und alles ist bei uns momentan Delta. Also auch die Integration zwischen den einzelnen Teams ist Delta. Das heißt, wir haben das so aufgebaut, um vielleicht noch ein Circle Back zu machen zu der Perlenkette von Prozess, dass jedes Team die eigenen produzierten Daten wieder auf S in Delta Tables bereitstellt, sodass das nächste Team dann wieder über die Daten integrieren kann. Das heißt, wir haben immer so einen Push Pull Switch mit drin, wo das produzierende Team auf S pusht und die anderen Teams dann zu einem beliebigen Zeitpunkt den Pull von da aus machen können. Und so decouplen wir natürlich auch die Prozesse. Jedes Team kann zu einem beliebigen Zeitpunkt lesen und wir haben nicht das Problem, dass wir irgendwie sowas haben. Oh, der Prozess von Team A ist aber um zwölf uhr hoffentlich fertig. Das heißt, wir starten jetzt hoffentlich dann um eins, aber wir gucken mal, ob die Dateizeitstempel in Ordnung sind und nur dann starten wir unseren Prozess. Das ist halt so eine typische Falle, die du hast, wenn du sehr sequenzielle Prozesse hast, wo dann so kaskadierende Probleme auftreten, wenn das erste Team dann irgendwie der Prozess kaputt geht und du aber dann die neuen Daten haben willst, und dann kaskadiert dir halt dieser Fehler einmal durchs komplette System durch und legt dir das komplette Delivery lahm."
+    },
+    {
+      "end": 1844000,
+      "speaker": "B",
+      "start": 1838520,
+      "text": "Wie löst ihr diese Dependencies auf? Weil wenn ich auf die neuen Daten warten muss, in irgendeiner Form, muss ich warten, oder?"
+    },
+    {
+      "end": 1900550,
+      "speaker": "C",
+      "start": 1844000,
+      "text": "Ja, wir haben einfach gesagt, wir leben mit eventual Consistent und damit leben wir mit der Annahme, dass jedes Team zu jedem Zeitpunkt immer die neuest möglichen Daten bereitstellt. Das ist einfach eine Annahme, die wir im System haben als Makro Architekturrichtlinie. Wir nehmen halt an, dass jedes Team zu jedem gegebenen Zeitpunkt die neuesten möglichen Daten bereitstellt. Damit kann jedes Team entscheiden, ob sie, wenn es sinnvoll ist, einmal stündlich die Daten produzieren oder einmal täglich. Das liegt dann in der Verantwortung der jeweiligen Teams, die die Daten kennen, zu sagen, oh ich kann, was weiß ich, die Clinical Trial Registry kann ich einmal die Stunde abgrasen und das macht auch total Sinn, weil da jede Stunde neue Sachen hinzukommen. Oder man weiß halt durchs Monitoring und von den Zeitstempeln her, wenn man sich das im Date Histogramm anguckt, dass die vielleicht einmal in der Woche oder einmal im Monat ihre Daten aktualisieren, dann macht es viel mehr Sinn, wenn ich das in dem Zeitraum mache, wo die Datenquelle sich aktualisiert. Und diese Dynamik können wir dann einfach damit abbilden mit dieser Annahme."
+    },
+    {
+      "end": 1904660,
+      "speaker": "B",
+      "start": 1900780,
+      "text": "Aber ihr habt keine Notifications oder sowas in irgendeiner Form. Also dass ihr."
+    },
+    {
+      "end": 1908780,
+      "speaker": "C",
+      "start": 1904660,
+      "text": "Nein, also du kannst natürlich mit Spark Structured Streaming Streaming kannst du auf."
+    },
+    {
+      "end": 1910140,
+      "speaker": "B",
+      "start": 1909100,
+      "text": "Also Screaming."
+    },
+    {
+      "end": 1928980,
+      "speaker": "C",
+      "start": 1911900,
+      "text": "Schöner Versprecher auf den Daten, kannst du natürlich mit Structured Streaming von Swag schon relativ zeitnah die Information mitkriegen, dass sich da was verändert hat. Ob du das jetzt brauchst und machen musst, steht auf einem ganz anderen Blatt und viel mehr businessabhängig als technikabhängig."
+    },
+    {
+      "end": 1937680,
+      "speaker": "A",
+      "start": 1928980,
+      "text": "Das bedeutet jetzt, das Sourcing Team grast irgendwelche Daten ab, bringt diese in euer Deltaformat und dumpt diese Daten dann auf S als File."
+    },
+    {
+      "end": 1938240,
+      "speaker": "C",
+      "start": 1937680,
+      "text": "Genau."
+    },
+    {
+      "end": 1947640,
+      "speaker": "A",
+      "start": 1938560,
+      "text": "Und das nachfolgende Team, wann auch immer diese starten, nimmt sich dann dieses File aus irgendeinem Object Path Folder nach einer Naming Struktur."
+    },
+    {
+      "end": 1965830,
+      "speaker": "C",
+      "start": 1947640,
+      "text": "Genau, die Namensstrukturen sind quasi auch Teil unserer Makroarchitekturrichtlinie, damit du immer weißt, wo die Dinger zu finden sind. Das hilft ein bisschen bei der Discovery. Wir haben natürlich auch einen Data Katalog, der technisch quasi dir sagt, wo das Zeug liegt, aber im Prinzip sind die Naming Schema. Du brauchst theoretisch einen Katalog nicht, weil du weißt halt, wo das Zeug liegt."
+    },
+    {
+      "end": 1978550,
+      "speaker": "A",
+      "start": 1965910,
+      "text": "Okay, das bedeutet, ihr habt jetzt keine API dazwischen, ihr habt einfach nur, da liegt immer ein Pfeil nach dieser Struktur und es ist die globale Annahme, die implizite Annahme, das sind immer die aktuellsten Daten."
+    },
+    {
+      "end": 1979350,
+      "speaker": "C",
+      "start": 1978870,
+      "text": "Genau."
+    },
+    {
+      "end": 1992930,
+      "speaker": "A",
+      "start": 1979350,
+      "text": "Und ihr habt jetzt keine Event Architektur, sowas wie ein SQS daneben oder ähnliches, weil das kann man, also der klassische AWS Architektur würde dir sagen, wenn das File da ist, dann adde eine Message in eine SQS und pipapo, da geht."
+    },
+    {
+      "end": 2029000,
+      "speaker": "C",
+      "start": 1992930,
+      "text": "Es halt schon schnell wieder kaputt. Reden wir natürlich so ein bisschen mehr über Streaming Architekturen und so, das Durchschreiben, Change Data Capture und ähnliches. Da wird es dann interessant, Wenn du natürlich einen Prozess hast, der einmal die Daten schreibt und dann die Message verschickt, kann halt immer eines von beiden fehlschlagen. Und wenn du ganz viel Pech hast, dann schlägt das Schreiben der Daten fehl, aber die Message geht trotzdem raus. Also solche Fälle bekommst du dann, solche Möglichkeiten von Fehlern bekommst du als neue Kategorie mit dazu. Und das wollen wir einfach. Deswegen haben wir uns für eine simple Lösung entschieden, gesagt, nimm einfach an, dass das Bestmögliche, was das Team zu dem Zeitpunkt bieten kann, ist auf jeden Fall da drin, stelle ich mir natürlich die Frage."
+    },
+    {
+      "end": 2034400,
+      "speaker": "A",
+      "start": 2029000,
+      "text": "Da kann natürlich auch eine ganze Menge schiefgehen. Das bedeutet, das Fall kann korrupt sein, das Datenformat kann nicht wirklich stimmen."
+    },
+    {
+      "end": 2036880,
+      "speaker": "B",
+      "start": 2034960,
+      "text": "Sei nicht so negativ, Andi."
+    },
+    {
+      "end": 2038240,
+      "speaker": "A",
+      "start": 2037040,
+      "text": "Also es ist ja mein Job."
+    },
+    {
+      "end": 2040500,
+      "speaker": "C",
+      "start": 2038640,
+      "text": "Ich wollte gerade sagen, da spricht der Obsidian."
+    },
+    {
+      "end": 2078540,
+      "speaker": "A",
+      "start": 2041370,
+      "text": "Das ist das Problem von Resilience Engineering. Man fragt sich halt, also das hört sich ja super einfach an und du sagst, ja, einfach ist toll und einfach skaliert. Und ich glaube, jeder SRE oder jeder, der irgendwie mal auf Hochverfügbarkeit sagt, okay, verteilte Systeme sind immer die Pest. Das ist halt einfach so, weil du holst ja mehr Probleme rein, als dir eigentlich lieb ist. Ab und zu sind sie halt nicht vermeidbar. Aber wenn ich jetzt mir sowas andenke, weil du hast ja, du hast fünf Leute in Team eins und die bauen alle an der Software rum und wir wissen alle, wie es ist. Ein Zeichen kann eine Regression reinholen und kann zwar einen Pfeil schreiben, aber das Format kann korrupt sein, oder? Oder inwieweit geht ihr mit sowas um?"
+    },
+    {
+      "end": 2173940,
+      "speaker": "C",
+      "start": 2078540,
+      "text": "Also müssen wir jetzt mal kurz auseinanderbauen. In ein paar Ebenen aufteilen. Also einmal die Datei schreiben wir ja nicht händisch, also wir haben jetzt keine sophisticated piece of software gebaut, das irgendwie Delta Format von Hand schreibt, sondern wir benutzen offizielle Bibliotheken dafür Und meistens, zumindest in meinen Data Teams, kommt das meistens aus dem Spark Job raus. Das heißt also die Bibliothek an sich, da müssen wir einfach davon ausgehen, dass die das richtig macht. Wir können jetzt uns nicht darauf noch versteifen zu überprüfen, ob die von Data bereitgestellte Bibliothek ihren Job richtig macht. Also da gehe ich davon aus, dass die Tests, die die da schreiben und das Release Management, was sie machen, in Ordnung ist. Also ich verbrauche keine Kapazität darauf zu validieren, ob die Bibliothek in Ordnung ist. Ist bin ich bis jetzt auch noch nicht mit auf die Nase gefallen. Kann natürlich passieren. Also das Risiko ist da, Ich bewerte das Risiko jetzt aber nicht hoch genug, als dass ich Ressourcen dafür aufgeben möchte. Das andere ist, was schreiben wir denn in die Dateien rein? Das ist natürlich in der Verantwortung der Teams. Das heißt, wir haben ein Schema, was wir da reinschreiben. Dieses Schema muss gemanagt werden und da machen wir ganz klassisches Release Management mit. Das heißt, wenn wir das Schema verändern, dann ist es non braking. Wenn das Breaking ist, müssen wir einen neuen Pfad erzeugen mit einer neuen Version und dann müssen ein proaktiver Wechsel stattfinden. Also es ist ein Opt in. Wir haben dann Wechselperioden von vier bis sechs Wochen, je nachdem, damit wir von der Sprintplanung her und mit der Synchronisierung über mehrere Teams das hinbekommen. Aber so ist dann eigentlich der Prozess, wenn wir einen Breaking Change haben und non breaking Changes sind relativ easy. Du schmeißt halt einfach eine neue Spalte dazu, das passt. Das ist hinreichend einfach. Das stellt jetzt keine, zumindest keine operative Herausforderung dar."
+    },
+    {
+      "end": 2181280,
+      "speaker": "B",
+      "start": 2174020,
+      "text": "Verwendet ihr da Tools dafür, um das noch irgendwie zu verbessern oder Schema Change ist zu announcen oder irgend so in die Richtung?"
+    },
+    {
+      "end": 2194520,
+      "speaker": "C",
+      "start": 2181360,
+      "text": "Ne, wir sind da ganz klassisch unterwegs. Das Tool heißt miteinander reden. Also Kommunikation ist erstmal alles. Wir haben natürlich, wir haben unser Wiki, wo das Zeug reinkommt und so. Wir haben natürlich machen wir das irgendwie dokumentationsgestützt, aber wir haben jetzt kein keine."
+    },
+    {
+      "end": 2196560,
+      "speaker": "B",
+      "start": 2194520,
+      "text": "Schema Registry oder so irgendwas."
+    },
+    {
+      "end": 2231260,
+      "speaker": "C",
+      "start": 2196640,
+      "text": "Wir haben eine Schema Registry als Teil des Data Katalogs. Also wenn du mit Spark auf AWS unterwegs bist dann kommst du um die Glue Registry nicht drumherum und da drin ist es natürlich registriert. Die macht aber eigentlich nichts mehr als zu Guck mal hier, es gibt das Ding mit dem Namen und den Feldern und den Datentypen und das war's. Versionieren musst du das trotzdem selber und handhaben in der Software musst du das auch selber. Also das macht dir jetzt nichts mehr convenient, also kein Bequemlichkeitstool, sondern es ist ein reines Schematool, was du halt benutzt, um das in der Software zu verwenden."
+    },
+    {
+      "end": 2237970,
+      "speaker": "B",
+      "start": 2231420,
+      "text": "Macht dir der Data Lineage auch ganz klassisch, woher die Daten kommen oder irgendwie so Metainformationen, die da mitgeschliffen werden."
+    },
+    {
+      "end": 2268000,
+      "speaker": "C",
+      "start": 2238280,
+      "text": "Über die verschiedenen Steps haben wir natürlich Wir haben einen eigenen Block Metadaten, den wir mitschleifen. Da wissen wir dann, was weiß ich, was die Original ID war, wo das hergesourct wurde, wer der ursprüngliche Owner war und so weiter und so fort. Also da sind Sachen mit drin. Eine klassische Lineage, so wie wir das vielleicht von Jäger Traces im Webbereich kennen, machen wir nicht, sodass wir halt eine Trace ID da drin haben und das Ganze dann irgendwie visualisieren oder so. Nicht in der Form, nein, wir haben andere Methoden das zu machen, aber das ist Homebrew."
+    },
+    {
+      "end": 2274680,
+      "speaker": "B",
+      "start": 2268000,
+      "text": "Aber jetzt haben wir die Daten da irgendwo liegen. Jetzt sind sie ja noch immer nicht im Produkt oder beim Kunden dann. Also was kommt als nächsten Schritt?"
+    },
+    {
+      "end": 2345600,
+      "speaker": "C",
+      "start": 2274680,
+      "text": "Nächster Schritt sind halt ein bis Endverarbeitungsschritte. Also du musst dann halt schauen, was ist dein Endprodukt und wie musst du zu deinem Endprodukt hinkommen. Wenn du das jetzt bei mir betrachtest, habe ich ja gesagt, wir haben diese unstrukturierte Daten in strukturierte Daten verwandeln, also mit Taxonomien, Ontologien, was auch immer gerade das Nutzen Tool ist. Dann haben wir einen Prozess, der sowas wie Entity Linking macht, also der OK von den Datenquellen, die reingekommen sind und von den Daten, die wir selber haben, wie bringen wir die denn zusammen? Also bei uns geht es ganz viel um Personen. Das heißt, wir wollen wissen, ob der John Doe von der Publikation hier wirklich der John Doe ist, den wir jetzt gerade irgendwie datenmässig in der Hand haben. Und da gibt es dann allerhand Faktoren, die irgendwie zu Disambigration benutzt werden, um wirklich mit hoher Sicherheit dann eben den Finger darauf legen zu können, dass der das wirklich ist und dann gibt es halt ein bis Endschritte. Was bei uns dann noch dazu kommt, ist ein Scoring Prozess, wo wir, das ist glaube ich auch sehr ähnlich mit dem, was wahrscheinlich bei der Schufa kommt. Da kommt dann irgendwann kommen alle Informationen zusammen und dann wird eine Aussage getroffen, die halt business biased ist. Also so ein Score ist selten eine meinungsfreie Metrik, sondern stellt ja irgendwie immer eine Meinung dar. Man bewertet ja irgendwas."
+    },
+    {
+      "end": 2347840,
+      "speaker": "A",
+      "start": 2345760,
+      "text": "Viele Leute werfen der Schufa was anderes vor."
+    },
+    {
+      "end": 2440410,
+      "speaker": "C",
+      "start": 2348080,
+      "text": "Ich würde schon sagen, das ist halt eine Business Meinung und kannst ja selber entscheiden, ob du der Meinung zustimmst oder nicht zustimmst oder vertraust oder nicht vertraust. Wenn du natürlich eine Mehrheit hast, die dieser Meinung vertraut, dann hast du sowas wie ein Standard etabliert. Deswegen gibt es ja sowas wie Kreditreform oder Schufa. Das ist ja eine etablierte Meinung, deren wo eigentlich anscheinend ja viele Leute den vertrauen. Ich kann das nicht bewerten, wie gut das oder schlecht das ist. Aber bei uns ist es halt auch so, wir bewerten dann halt auch, wo wir denken, wer ist denn zum Beispiel gut in einem bestimmten Bereich, also wer ist jetzt als Onkologe zum Beispiel gut oder hat was für eine Reichweite haben die. Das leiten wir dann aus verschiedenen Faktoren ab, also was weiß ich, wo publizieren die den zum Beispiel oder mit wie vielen Leuten arbeiten die zusammen oder sowas in der Richtung. Und daraus können wir dann halt einen Score ableiten. Das ist dann der Value Add, den wir eigentlich nachher machen. Wir haben halt jetzt irgendwie Kontextisierung von Daten, dann diese Verlinkung von Daten, dann die Bewertung von Daten und das Ganze stellen wir dann am Ende bereit als Produkt und dann kannst du das abonnieren quasi in Subscription System und kannst diese Daten dann benutzen. Bei uns ist es tatsächlich so, dass es zwei Wege gibt, wie du das kannst. Du kannst die Daten beziehen, das ist ein Subset der Daten oder du kannst halt über deine Subscription bei uns ein Software Tool benutzen. Das heißt, wir haben ein internes Softwareteam nochmal, das nicht in meinem Bereich ist und dann im Schwesterbereich von mir liegt und die bauen dann quasi eine Viewer Applikation und da haben wir dann auch wieder eine transaktionale Perspektive drauf. Das heißt, die haben die Business Prozesse von den Kunden im Blick und die bauen dann eben was, was den Business Prozessen des Kunden hilft und benutzen unsere Daten dann umgewandelt als Grundlage."
+    },
+    {
+      "end": 2443170,
+      "speaker": "B",
+      "start": 2440410,
+      "text": "Sind wir schon am Ende oder gibt es noch einen Schritt?"
+    },
+    {
+      "end": 2452210,
+      "speaker": "C",
+      "start": 2443170,
+      "text": "Ich habe jetzt versucht zumindest mal den Prozess einmal den Bogen zu spannen, dass wir nicht immer wieder abschweifen in den einzelnen Bereichen, aber das ist zumindest für die Bereiche, wo ich verantwortlich bin, ist das der Bogen."
+    },
+    {
+      "end": 2472900,
+      "speaker": "B",
+      "start": 2452370,
+      "text": "Jetzt hast du schon einige Technologien genannt und Spark ist mir im Kopf geblieben und einige AWS Technologien. Wie macht ihr dieses Sourcing? Das ist nun mal auch immer ein schwieriges Thema. Also du hast ja auch gesagt, es ist komplex mit flaky APIs und schwierigen Sourcen umzugehen. Habt ihr da irgendwie eine Plattform Tools, die ihr verwendet?"
+    },
+    {
+      "end": 2541400,
+      "speaker": "C",
+      "start": 2473140,
+      "text": "Wir sehen natürlich eine ganz große Bandbreite an verschiedenen Anbietern und Technologien, die uns zur Verfügung gestellt werden. Also du kannst dir bei der clinicaltrials GOV, also der amerikanischen Registry für Clinical Trials, die stellt ihre Daten offen ins Netz und die kannst du dir da einmal natürlich strukturiert abholen über eine Schnittstelle, über eine HTTP API oder du kannst dir ganz klassisch für eine NFTP halt einen XML Dump runterladen. Und so haben die ganzen Anbieter verschiedene Möglichkeiten. Manchmal muss man auf Sachen zurückgreifen, die ein bisschen anstrengender sind. Also wir haben einen Vertragspartner, die bieten einfach keine Schnittstelle an und auch kein strukturiertes Datenformat, sondern mit denen haben wir ein Vereinbarung, dass wir die Daten halt abschneicheln dürfen mit einem klassischen Crawler und den durften wir dann auch selber bauen und das funktioniert genauso gut, wie sich das anhört. Also wir haben halt immer wieder Scherereien und immer wieder Maintenance Aufwand dafür, aber das ist die Sache am Ende wert. Das ist halt die Bewertung, die man halt nachher auch machen muss, ist der Aufwand, den Outcome wert? Und in dem Fall ist es absolut so, die Daten sind wichtig für uns und deswegen machen wir das halt."
+    },
+    {
+      "end": 2551720,
+      "speaker": "B",
+      "start": 2541400,
+      "text": "Aber dieses ganze Management von diesen Jobs, die dann FDP holen, die dann den Crawler anwerfen, habt ihr da irgendwie eine Management Plattform, irgendwie eine Teils Teils."
+    },
+    {
+      "end": 2587100,
+      "speaker": "C",
+      "start": 2551720,
+      "text": "Also wir haben zeitlang Airbyte eingesetzt, Open Source Technologie, die halt sowas macht, die dann sowas wie Resume oder das Monitoring der Jobs so ein bisschen für dich übernimmt, das hat für uns ganz gut funktioniert. Ansonsten sind da viele Prozesse auch einfach klassisch selbst geschrieben. Also es gibt keine gute Scraping Plattform in dem Sinne. Also es gibt natürlich viele Dienste da draußen, denen du bisschen Geld in die Hand drücken kannst und die geben dir dann irgendwie so eine vorkonfigurierte Delinium oder Scrappy oder sonst was Instanz. Mit denen kannst du dann so ein bisschen durch die Gegend laufen. Die haben ihren Sinn und Zweck, aber sowas bauen wir eigentlich selber."
+    },
+    {
+      "end": 2593580,
+      "speaker": "B",
+      "start": 2587100,
+      "text": "Also ihr habt keine klassische Pipeline Software oder so Jobs Scheduling, solche Dinge im Einsatz."
+    },
+    {
+      "end": 2625960,
+      "speaker": "C",
+      "start": 2594380,
+      "text": "Arbeit hat sein eigenes Scheduling. Ansonsten ist natürlich Airflow für uns eine ganz klassische Alternative, wo wir ein Scheduling, also Step Based Scheduling mit Branching und allem möglichen machen können, aber das ist halt aus dem Data Engineering eigentlich auch Brot und Butter Technik. Das ist schon gut abgehangen. Da weiß man, was man kriegt und auch nicht kriegt. Gibt genügend neuere Competitors dazu, aber im Moment ist es für uns gut und der Wechselaufwand wäre jetzt auch einfach unangenehm groß und wir haben jetzt aber keine Nachteile dadurch. Also haben wir auch keine Notwendigkeit da jetzt irgendwie dem Hype Flan zu folgen."
+    },
+    {
+      "end": 2634360,
+      "speaker": "B",
+      "start": 2626280,
+      "text": "Aber ihr habt auch Dinge, die komplett selbst programmiert sind, wenn ich richtig verstehe Und da läuft dann auch Monitoring komplett selber gebastelt, würde ich fast sagen."
+    },
+    {
+      "end": 2653890,
+      "speaker": "C",
+      "start": 2634840,
+      "text": "Klar natürlich, aber dann hast du halt ganz klassisch, wir sind halt fully embraced AWS, das heißt wir machen dann auch cloudwatch Metrics und Cloudwatch Logs und alles einfach so, weil das für uns gut genug ist. Wir produzieren nicht so viel, als dass der Schmerz groß genug wäre, jetzt selber irgendwie sowas wie Thanos, Prometheus oder ähnliches zu betreiben."
+    },
+    {
+      "end": 2667900,
+      "speaker": "B",
+      "start": 2653890,
+      "text": "Wie geht die ganz allgemein mit Data Quality Monitoring? Also so der Sind die Daten überhaupt da? Sind die richtigen Daten da? Sind alle Daten da oder sind nur fünfzig Prozent der Daten da? So diese Klassiker, also das klassische Monitoring, aber auf Datenbasis."
+    },
+    {
+      "end": 2787060,
+      "speaker": "C",
+      "start": 2667900,
+      "text": "Genau, ist plain simple. Also da ist jetzt keine große Magie drin. Wir fahren natürlich Abfragen auf unseren Daten, das kann während des Spark Jobs passieren, das kann aber auch auf dem produzierten Resultat sein, in regelmäßigen Abständen oder am Ende von einem Job oder sowas. Sie sind halt immer irgendwie Teil des Prozesses und die Metriken, die wir produzieren, sind sowas wie klassische Counts oder Aggregations auf bestimmten Feldern, wo man dann irgendwie sich anguckt, ob von bestimmten Werten genügend vorhanden sind. Das Ganze kippen wir dann in Cloudwatch Metrics ein und haben dann halt auch klassisch Alerts da drauf, wo dann einfach geschaut wird, ist Standard Deviation in einem Kanal, den wir uns vorstellen oder haben wir mehr als den erwarteten Count? Also wenn du manche Datenquellen, die haben halt ein Top Limit oder ein erwartetes Top Limit von Einträgen und wenn da plötzlich mehr drin ist, dann ist es ein Alert Wert. Und so machen wir erst mal den ganzen quantifizierbaren Teil. Also das ist alles quantifizierbar Metriken, wo man relativ schnell herausfinden kann, ob Prozesse das gemacht haben, was sie machen sollten. Da brauchst du halt einfach mal zehn Läufe oder sechs Wochen, um zu wissen, ob das jetzt so die Realität ist oder auch nicht. Viele Datenanbieter können meiner Erfahrung nach leider keine gute Aussage machen über das, was sie so liefern. Und auch mein blindes Vertrauen in diese Aussagen ist dann auch schon oft erschüttert worden. Deswegen sind wir jetzt einfach dazu übergegangen, das einfach selber rauszufinden. Manchmal gehört das halt auch zu einer Evaluierung von der Datenquelle mit dazu, dass wir uns das halt über ein paar Wochen angucken und okay, das ist eine Datenquelle, da wollen die Daten wollen wir haben, also die ist vielleicht interessant für uns, aber wir sehen halt zu viel Fluktuation oder sonst irgendwas. Sondern vielleicht gehen wir auch mit denen ins Gespräch. Wenn das eine öffentliche Quelle ist, dann ist das immer so ein bisschen schwierig. Aber wenn es halt ein bezahlter Anbieter ist, dann kann man natürlich klar mit dem ins Gespräch gehen. Hey, guck mal, wir sehen da irgendwie so Sachen, die würden wir nicht erwarten. Wie sieht es denn da aus?"
+    },
+    {
+      "end": 2798260,
+      "speaker": "A",
+      "start": 2787220,
+      "text": "Aber die Probleme, die du jetzt gerade aufgeworfen hast mit wie gut sind die Daten, die ihr Source, wenn ihr die Daten später verkauft, haben die Leute, die euch ja Geld geben, eigentlich ganz genau dieselben Fragen, oder?"
+    },
+    {
+      "end": 2800980,
+      "speaker": "C",
+      "start": 2798340,
+      "text": "Natürlich, deswegen versuchen wir es ja auch besser zu machen."
+    },
+    {
+      "end": 2851010,
+      "speaker": "A",
+      "start": 2801060,
+      "text": "Ja gut, aber ich meine, du sagst ja gerade schon selbst, okay, das ist gar nicht so einfach auch beim Sourcing. Und da ist natürlich auch die Frage, inwieweit stellt ihr das denn sicher, dass ihr die hohe Qualität weiter habt? Denn ich meine, ich gehe jetzt zu euch, kaufe eure Daten und ihr seid auf den ersten Blick super, ich arbeite damit einen Monat oder zwei Fülle meine CRMs, fülle meine Lied Pipelines und verkauf irgendwas im Pharmabereich, keine Ahnung. Und jetzt seid ihr ungefähr so wie open ich dem halt mal nach drei Stunden Prompten, der langsam mal den Kontext ausgeht und der anfängt irgendwie die Daten zusammenzufassen und dann den Kontext flöten geht. Und irgendwann merke ich so nach fünf, sechs, acht Wochen, die Daten werden von euch immer schlechter. Ich meine, das gilt es ja zu vermeiden. Also wie wird bei euch die Qualität der Daten gemessen und wie sagt ihr, okay, das ist wirklich jetzt hier eine hochqualitative Datenlieferung?"
+    },
+    {
+      "end": 2904690,
+      "speaker": "C",
+      "start": 2851010,
+      "text": "Wenn wir die Qualität versuchen zu messen, haben wir natürlich die Herausforderung, dass wir das einmal technisch machen müssen, also Füllraten und ähnliches. Da sind wir dann zwar immer noch bei Metriken, die dann nachher raus purzeln, also wir erwarten halt, dass der Vorname gefüllt ist oder sonstige Dinge, aber auch eine inhaltliche Prüfung. Da haben wir zum einen eine Bataillon an SQL quasi, die wir abfeuern, bevor wir irgendwie sagen, so ein Datenrelease ist in Ordnung. Ganz platt ist es tatsächlich so eine vierstellige Anzahl von SQL Statements, die unsere Business Logik und unser Verständnis von qualitativen Daten irgendwie widerspiegelt. Und auf der anderen Seite haben wir eine Quality Control mit Menschen, die sich die Daten anschauen und einen bestimmten Prozentsatz dieser Daten ständig kontrollieren, sodass wir dann dem Kunden gegenüber eine solide Aussage machen können, was unsere Datenqualität angeht. Und das funktioniert für uns im Produkt ganz gut."
+    },
+    {
+      "end": 2966780,
+      "speaker": "A",
+      "start": 2904690,
+      "text": "Was mich jetzt interessiert, ist der Werdegang von solchen Datenteams. Also ich meine, du hast gerade gesagt, du machst die ganze Thematik schon seit circa viereinhalb Jahren und ich meine, ich hoffe mal, ihr seid nicht stehen geblieben. Ich hoffe mal, ihr habt innerhalb von viereinhalb Jahren ein paar Sachen angepasst und ich hoffe mal, dass eure Teams sich dann auch vergrößert haben. Wenn wir jetzt einfach mal simpel annehmen, das Team Vergrößerung gleich auch organisatorisches Wachstum, Umsatzwachstum und Co. Bedeutet, da möchte ich jetzt gar nicht so tief eingehen. Was mich aber interessiert eigentlich so ein bisschen die Evolution der Teamstrukturen. Ich würde mal sagen, von einer One Main Show zu, ich nenne es einfach mal irgendeine Zahl, ein hundert Leuten, so nach dem Motto, Was hast du in diesen viereinhalb Jahren gesehen? Wo man sagt, man hat mit einer klassischen One Man Show gestartet und dann sah die ganze Thematik so aus. Meine nächste Frage wäre, warum machen wir das jetzt nicht immer noch so? Also kurzum, welche Prinzipien haben am Anfang funktioniert und später nicht mehr, Welche würden über Bord geworfen? Vielleicht hast du da zwei, drei Beispiele."
+    },
+    {
+      "end": 3127530,
+      "speaker": "C",
+      "start": 2966780,
+      "text": "Habe ich auf jeden Fall. Wir fangen mit, glaube ich, einer einfachen One Man Show wirklich an oder One to Three Man Show, also mit einer kleinen einstelligen Anzahl von Leuten, wo der Scope wahrscheinlich noch so groß oder so klein ist, dass man mit allen Leuten an allen Sachen arbeiten kann. Also dass das Verständnis vom Business und von den Daten irgendwie noch in den Kopf von einer Person reinpasst. Man auch gar nicht so trennen muss mit der Jimmy macht das und der Johnny macht das und die Margaret macht das, sondern dass man wirklich sagen kann, okay, jeder kennt alle Prozesse, du kannst dich gegenseitig vertreten. Meistens ist es auch eher so eine monolithische Geschichte. Man baut dann irgendwie so ein Ding, was die Daten durchrödelt und am Ende das Ergebnis produziert. Das ist für einen Start auch eine super Sache. Also ich möchte das gar nicht schlecht reden, sondern einfach, das passt in die Köpfe rein, der Quellcode passt in die Köpfe rein und du bist damit auch relativ agil, weil du halt nicht in, keine Ahnung, drei Repositories committen musst, um irgendwie einen Change zu machen. Das ist dann auch unheimlich praktisch, wenn du schnell aufbauen möchtest. Als wir das gemacht haben, gab es halt noch keine AI unterstützten Coding Tools oder sowas in der Richtung. Das macht es dann vielleicht heute auch noch mal ein bisschen anders, aber das ist glaube ich, das, wo viele dann mit starten, wenn sie anfangen. Und um deine zweite Frage so ein bisschen anzusprechen, der Weg ist viel durch das Business dominiert. Wir haben jetzt das Glück gehabt, dass wir im Markt gut angenommen wurden und auch gut gewachsen sind über die letzten Jahre mit dem Produkt, sind damit zufrieden. Natürlich sind wir nicht zufrieden am Ende, sondern wir sind mit dem Weg zufrieden und können sicherlich noch mehr machen, Haben auf dem Weg, glaube ich, zwei bis drei große Veränderungen einfach so mitgemacht, wo wir gemerkt haben, dass die Komplexität höher wird, die Ansprüche höher werden und deswegen halt auch das in der Technologie und im Setup der Teams reflektiert werden muss, Also wo Business und die Struktur, die wir da drunter haben, stark zusammenhängen. Das erste, was wir eigentlich gemacht haben, ist von dieser monolithischen Herangehensweise in mehrere Teams zu gehen und dann in eine funktionale Vertikalisierung zu gehen. Also der Prozess, den wir eben besprochen haben, den haben wir uns dann einmal high Level angeguckt, welche Prozessschritte gibt es denn eigentlich? Und haben dann für jeden Prozessschritt ein oder mehrere Teams gebaut, die dann in die Tiefe gehen konnten und sich erstmal damit beschäftigen können, was ist denn das Beste, was wir an Sourcing machen können? Was ist das Beste, was wir an Tagging machen können? Was ist das Beste, was wir irgendwie an Linking oder Matching machen können? Und dann am Ende auch ein Provisionierungslehrer zu sagen, okay, wir brauchen eine stabile Delivery Maschine, die dann nachher uns ermöglicht, die Daten, die wir generieren, auch zum Kunden zu bringen in einer Verlässlichkeit und in der Kadenz, die wir jetzt am Markt gerne erreichen wollen."
+    },
+    {
+      "end": 3132650,
+      "speaker": "A",
+      "start": 3127690,
+      "text": "Bedeutet das auch, ihr habt jetzt inzwischen mehrere Teams, die Sourcing machen?"
+    },
+    {
+      "end": 3145330,
+      "speaker": "C",
+      "start": 3133130,
+      "text": "Zu dem Zeitpunkt war das so, dass wir zwei Teams hatten, die Sourcing machen. Also wir sind mittlerweile schon woanders angekommen, aber zu dem Zeitpunkt war das so, dass wir zwei Teams hatten, nämlich automatisiertes Sourcing und manuelles Sourcing."
+    },
+    {
+      "end": 3168810,
+      "speaker": "A",
+      "start": 3145330,
+      "text": "Ah, okay. Ihr habt dann also gar nicht nach dem Format des Sourcings unterteilt, weil ihr hättet ja auch sagen können, du hast gerade von irgendwelchen pdfs gesprochen, wo ihr dann Natural Language Processing drauf macht. Also ihr hättet ja auch sagen können, okay, die einen, die crawlen jetzt Google Scholar und downloaden sich die ganzen Studien und die nächsten versuchen halt diesen Web Scraper, von dem du ja auch gesprochen hast, irgendwie am Leben zu halten."
+    },
+    {
+      "end": 3263260,
+      "speaker": "C",
+      "start": 3168970,
+      "text": "Genau, das ist so ein bisschen die Wo willst du schneiden? Wir haben uns dann damals für eine funktionale Vertikalisierung einfach entschieden, weil wir das Wissen aufbauen wollen. Also weil wir nicht das Fachwissen in den Daten, sondern das Fachwissen wie beschafft man Daten eigentlich am besten mit den Datenquellen, die wir haben? Weil wir, wie gesagt, aus einer monolithischen Perspektive rauskamen und wir wollten da einfach die Expertise aufbauen in der jeweiligen Funktion. Konnten dann natürlich auch für was weiß ich, ein Team, was NLP hat, vielleicht auch Leute hiren, die dann mehr und tieferes NLP Wissen hatten, als die Leute, die wir schon da hatten, konnten mit Data Scientists daran arbeiten und so weiter und so fort. Also es bringt dir natürlich dann andere Möglichkeiten auch Experten oder Subject Matter Experts zu hiren, die in den Teams dann aktiv sind und die Qualität von dem Outcome von dem Team halt deutlich verbessern. Also präziseres Tagging vielleicht oder eine höhere Präzision im Linking, dann einen Score einfach vielleicht komplexer aufzubauen, mit mehr Ingredients aufzubauen, also mit mehr Zutaten aufzubauen. Solche Sachen kannst du nur machen, wenn du Leute hast, die sich auf diese Funktion fokussieren. Der Nachteil ist natürlich, dass die Leute so ein bisschen detached werden zum Business. Also weil du hast ja dann so ein bisschen Fließbandarbeit, die nachher diese Perlenkette aufgereiht wird. Also in jeder Teamstruktur kriegst du irgendwas umsonst, muss irgendwas managen. Das ist halt immer ein Trade off Und in dem Fall konnten wir eine technische Tiefe in Anführungsstrichen umsonst bekommen, weil es Teil der Struktur war, mussten aber dann natürlich den Integrationsprozess über alle Teams und auch die Nahe fühlen sich die Leute denn zum Business connected? Natürlich ganz deutlich managed."
+    },
+    {
+      "end": 3269500,
+      "speaker": "B",
+      "start": 3263260,
+      "text": "Das heißt, ihr habt aber keine klassischen Cross Functional Teams und habt wohl zu dem Zeitpunkt hatten wir das jetzt habt ihr die."
+    },
+    {
+      "end": 3371510,
+      "speaker": "C",
+      "start": 3269500,
+      "text": "Genau, das wäre dann so ein bisschen die nächste Stufe, die wir jetzt haben. Wir sind dann wieder ein bisschen größer geworden und einfach gemerkt, dass der Pivot, also das Umschwenken von Produkt zu Funktion immer schwieriger wurde. Also das wurde dann irgendwann, das Produktmanagement war dann irgendwann so weit weg von dem Engineering mit irgendwie noch einem Layer dazwischen, dass wir nicht so, also diese Produktidentifizierung nicht mehr hatten und dann aber auch nicht mehr so dieses Verständnis hatten, wo wir bottom up dann einfach mal irgendwie Innovation betreiben konnten und sagen konnten, ja, aber guck mal, wenn wir das so machen, dann ist das viel viel einfacher. Oder wenn wir ein Feature hatten, was dann irgendwie aus einem Produkt kam, aber dann in drei Teams abgebildet werden musste. Also dieser Aufwand, das von dem Feature zu drehen in die Funktionen, wurde irgendwann zu viel mit dem weiteren Wachstum und deswegen musste man das halt wieder ändern. Und die nächste Stufe, dass wir gesagt Wir haben jetzt irgendwie Teams, die sich halt um bestimmte Domänen kümmern, die sehr produktnah sind. Also wir haben jetzt zum Beispiel, was weiß ich, die Healthcare Professionals oder die Healthcare Organizations oder die Scientific Activities oder andere Sachen. Und da sind wir dann eher in so eine cross functional Squad gegangen und Cross Function dann in dem Sinn, dass wir Data Operations, Data Governance, Analysten, Data Scientists, Data Engineers, Produktmanagement, die sind jetzt zusammen in der Squad. Die Gravitation ist halt wirklich in der Squad, nicht in der Reporting Line. Engineers reporten zu einem Engineering Leader, die Data Scientists zu einem Scientist Leader. Also wir haben halt immer noch so das fachliche, funktionale Leadership da drin, aber wir haben die Bewegung im täglichen Operativen, findet alle nur noch Squatch und die ownt dann auch natürlich das Domain Produkt, was da hinten rausfällt. Also irgendwie Leute, Organisationen, Publikationen, Trials."
+    },
+    {
+      "end": 3458600,
+      "speaker": "A",
+      "start": 3371510,
+      "text": "Was ein Riesenproblem, was ich immer mit dieser Organisation habe und es ist wirklich ein Trade off, wie du gerade schon gesagt hast, ist, dass wenn jetzt der Data Scientist in dem Team, der macht ja seine Arbeit und hat dann eine unglaubliche Verbindung halt auch zum Business, das ist super, Aber die Person hat natürlich dann andere Herausforderungen im Wachstum des Data Science Seins, weil die Data Science Team Kollegen sind ja in anderen Teams, die beschäftigen sich dann mit anderen Problemen. Und das bedeutet, dass in meinen Hard Skills als Data Science oder Data Science ist jetzt nur ein Job Engineering oder was auch immer, braucht man dann immer wieder die Verknüpfung zum eigentlichen, ich sag mal, Hausteam, wo du dich mit deinen Kollegen mit denselben Problemen, mit denselben Skills austauschen kannst. Und ich habe das noch nie wirklich funktionieren sehen über eine lange Zeit, denn irgendwann sind alle so satt davon, weil das eigentliche fachliche Wachstum irgendwie fehlt, dass. Oder ich habe noch nie in einer Firma gearbeitet, die so lange mit einer Struktur gearbeitet hat, weil dann wieder eine reorg kam. Kann auch sein. Wie managt ihr das? Weil das ist ja genauso bei Reliability Engineers oder DevOps Leuten, die kommen aus ihrem DevOps Team raus, gehen in ihre Produktteams und bauen da ein bisschen die Infrastruktur und sind dann der einzige DevOps oder sysadmin in den Engineering Teams. Ist ja genau das Gleiche. Du kannst eigentlich mit Designern genau das Gleiche. Also jede Jobfamily kannst du darauf anwenden."
+    },
+    {
+      "end": 3561240,
+      "speaker": "C",
+      "start": 3458600,
+      "text": "Absolut. Wir haben da auch nicht die Magic Source, Andy, ganz klar. Wir haben Lösungen, die jeder andere auch hat. Wir arbeiten mit Chapter Gildenkonstrukten, die uns dann ein bisschen helfen. Das haben wir auch durch die Engineering Teams. Also wir haben ja sogar noch zwei Matrix Aspekte da drin, nämlich einmal, wie machst du jetzt sowas wie Infrastructure and Security, wenn du kein separates Plattformteam hast, das musst du ja dann auch einmal durch alle Teams durchziehen. Das heißt, across all engineers hast du sowas einmal. Und dann hast du natürlich noch die fachliche Zusammengehörigkeit. Wie machst du das mit allen Engineers oder allen Data Scientists? Und tatsächlich haben wir für so die fachliche Verbindung haben wir kein gutes Mittel. Also da gibt es halt auch einfach nichts, weil die Gravitation wirklich in der Squad liegen soll. Das heißt, es gibt jetzt keine von der Firma angeordneten Mechanismen, die sagen, ihr sollt euch irgendwie alle zwei Wochen treffen. Was wir tun zur Organisation ist eigentlich den Leuten nicht im Weg zu stehen. Also wenn die sich austauschen wollen, können sie das jederzeit tun. Wir haben uns aber auch bewusst entschieden, dass unsere Mitarbeiter da ihr eigenes Schiff steuern. Und damit organisieren die sich halt gerade auch selber und ziehen das auch selber durch. Und das ist auch gut so. Ich glaube, als Manager kann ich da keine Lösung aufbauen, die allen gefällt. Und deswegen ist es vielleicht ganz gut, wenn meine Teams dann teilweise, wenn die nah aneinander arbeiten, ihr, keine Ahnung, alle zwei Wochen oder alle vier Wochen sich mal irgendwie zusammensetzen für eine Stunde und da sich austauschen wollen oder keine Ahnung, einen Bookclub weiter jede zweite Woche machen wollen, machen sie es halt. Also da stehe ich keinem im Weg und dann ist das eine organische Lösung, die da ist, ohne dass wir ein Korsett drüber stülpen."
+    },
+    {
+      "end": 3577370,
+      "speaker": "A",
+      "start": 3561240,
+      "text": "Jetzt drehen wir mal die Frage um. Was ist denn eine Sache, die ihr oder du viel zu spät eingeführt hast, wo du sagst, boah, also wenn du jetzt Bud Spencer siehst, wie der sich so Bud Spencer und Terence hilft, die Hand vor den Kopf klatschen mit diesem Klatschgeräusch. Also Wolfgang, wenn du erst mal so."
+    },
+    {
+      "end": 3586650,
+      "speaker": "B",
+      "start": 3578090,
+      "text": "Einspielst, das kennt ja niemand mehr dieses Zeug, Du bist schon zu alt. Was für eine Netflix Serie brauchst du da jetzt, um so irgendeinen Vergleich zu ziehen?"
+    },
+    {
+      "end": 3604930,
+      "speaker": "A",
+      "start": 3587050,
+      "text": "Es tut mir leid, Netflix hat zwar gerade Warner Brothers gekauft, aber ich glaube, Netflix hat nicht so viel Geld, um die rechte Art, Bud Spencer und Terence Hill Film zu kaufen. Das möchte ich jetzt nur mal ganz kurz sagen. Aber was ist eine Sache, die ihr viel zu spät eingeführt habt, wo du sagst, boah, da hätten wir echt früher drauf kommen können, da wären wir schon viel weiter."
+    },
+    {
+      "end": 3622570,
+      "speaker": "C",
+      "start": 3604930,
+      "text": "Aber das ist abschnittsbasiert. Also in jedem Abschnitt gibt es sowas. In dem ersten Abschnitt hätte ich Observability gerne als erstes eingeführt und nicht hinten dran genagelt. Es war aber einfach in dem Moment nicht im Fokus und ich hätte es viel früher im Fokus haben müssen. Das war ein Leadership Fehler von mir. Das hätte ich machen müssen. Ich hätte es entforcen müssen."
+    },
+    {
+      "end": 3636370,
+      "speaker": "B",
+      "start": 3622570,
+      "text": "Ich muss da kurz reingrätschen, weil was ja jetzt unsere Hörer innen nicht sehen, ist, dass der Andi so ein Smile hat und so grinst und sich so freut innerlich und die Hände gerade hochgerissen hat, weil er das einfach ist. So eine schöne Bestätigung, die du ihm jetzt gegeben hast."
+    },
+    {
+      "end": 3690880,
+      "speaker": "C",
+      "start": 3636370,
+      "text": "Mario unbiased. Ich wollte jetzt nicht dem Andi zwingend eine Freude machen. Es ist einfach so die Sichtbarkeit auf die Prozesse, die Sichtbarkeit auf die Ergebnisse. Auf technischer Ebene, auf Business Ebene haben wir das schon immer gut gemacht. Wir haben natürlich ein Versprechen gegenüber den Kunden, das müssen wir einhalten, Muss man auch beweisen können, dass wir das Versprechen einhalten. Und da haben wir das schon immer gut gemacht. Aber auf technischer Ebene war es halt nicht so. Und wir wussten an manchen Stellen nicht, warum es schiefgegangen ist. Wir wussten zwar, dass es schiefgeht, aber wir wussten nicht, warum. Und das hätte uns an der Stelle, glaube ich, einen schnelleren Weg zur Lösung und auch einen schnelleren Weg zum Erwachsenwerden, weil du weißt ja dann, woran es liegt und du kannst ja viel besser deine Gegenmaßnahmen ergreifen und implementieren und du weißt, was du tust und warum du das tust und kannst es halt auch begründen mit Daten. Daten verändern sich über Zeit, wenn du dann was eingeführt hast und hast dann den Beleg dafür. Also das ist was, was ich gerne früher gemacht hätte."
+    },
+    {
+      "end": 3734910,
+      "speaker": "A",
+      "start": 3690960,
+      "text": "Ich möchte mal ganz kurz sagen, jeder sagt das und Achtung, man hat immer zu wenig Observability, aber wenn man später wirklich die Rechnung dafür zahlen muss und besonders wenn man ziemlich viele KLE Cloud Provider nutzt, wie Datadog, New Relic oder Amazon oder ähnliches, dann muss man mal sich auch die Frage stellen, wie viel prozentualen Anteil von deinem Cloud Kosten soll eigentlich auf Observability gehen, Weil gute Observability ist einfach schweineteuer. Und deswegen muss man da die Balance halten zwischen was monitore ich eigentlich, was nehme ich mit in mein Observability Stack und so weiter und welche Fragen muss ich stellen. Und dann hat man nämlich genau die Daten nicht für die Frage, die man morgen stellen möchte und dann denkt man, ah verflixt."
+    },
+    {
+      "end": 3754270,
+      "speaker": "B",
+      "start": 3735310,
+      "text": "Und vor allem, du sprichst ja auch nur von den Plattformen, jetzt nur weil ich Datadog verwende oder eine tolle Plattform habe, kommen ja da doch trotzdem nicht automatisch irgendwelche Daten rein, vor allem, wenn es dann um Datenqualität oder solche Dinge geht. Also die purzeln ja nicht. Ich habe ja keinen tollen Agent, der mein Domain Wissen kennt und meine Business Domain und dann automatisch die Datenqualität checkt. Das wäre ja das Schöne."
+    },
+    {
+      "end": 3834050,
+      "speaker": "C",
+      "start": 3754430,
+      "text": "Genau, absolut. Ich glaube, für uns war es relativ einfach, weil wir wussten, wir machen AWS only. Also wir haben keine Möglichkeit gerade einfach uns, also natürlich hätten wir finanziell die Möglichkeit, aber wir wollten den Fokus des Teams halt wirklich auf den Technologien halten, die wir haben, weil wir halt unsere Prozesse verbessern wollten, unseren Code ganz platt gesagt verbessern wollten und nicht neue Tools kaufen wollten, um dann zu hoffen, dass die unser Problem lösen. Wir wollten ja selber gerade in dem ersten Umschwung von monolithisch auf die funktionale Vertikalisierung, wollten wir ganz klar die Kompetenz verbessern. Deswegen mussten wir da selber die Sachen machen und mussten selber die implementieren. Deswegen haben wir auch eher mit den Metadaten uns das angeguckt und geschaut, okay, wie kriegen wir das hin, dass wir wissen, wo die Sachen herkommen, auch noch, wenn wir im dritten Verarbeitungsschritt sind, als dass wir jetzt gesagt haben, wir schmeißen da jetzt irgendein Tool drauf, schmeißen alle Daten rein und hoffen, dass es uns, dass er das Ergebnis bringt. Und so konnten wir viel präziser daran gehen. Natürlich haben wir irgendwann auch angefangen, okay, wir bauen jetzt einfach in jedem Feature mit ein und überlegen uns für jedes Feature, was müssen wir da tun, um halt eine Sichtbarkeit zu generieren. Aber irgendwann hast du den Punkt erreicht, wo du einfach entweder alles machen musst und den Preis dafür bezahlst, weil du weißt halt nicht, wo es das nächste Mal schiefgeht, weil die Systemkomplexität zu hoch ist. Oder du musst halt damit leben, dass der erste Incident aufs Haus geht."
+    },
+    {
+      "end": 3835410,
+      "speaker": "B",
+      "start": 3834050,
+      "text": "Hast du noch Learnings oder?"
+    },
+    {
+      "end": 3908290,
+      "speaker": "C",
+      "start": 3835490,
+      "text": "Ja, habe ich noch eine. Ich hatte ja vorher gesagt, dass das so ein bisschen bei mir pro Phase, glaube ich, eher aufgeteilt ist. So in der ersten Phase war das Observability, in der zweiten Phase ist es glaube ich, eher so Teamkultur mäßig. Wenn du aus einer reinen Engineering Gruppe kommst und dann plötzlich eine Squad hast mit Data Scientists, mit Data Operations und allem, dann ändert sich die Dynamik doch sehr stark. Ich glaube da vorher, dass das Operating Modell zwischen zum Beispiel Data Science und Data Engineering deutlicher zu machen, zu sagen, okay, für diese Arten von Prozessen ist ausschließlich Engineering verantwortlich. Du hast zwar ML ops, Leute, die vielleicht contributen, aber die Engineers müssen sich darauf einigen und mlops muss diesen Richtlinien folgen oder so. Also dass du da einfach keine Ambiguität hast, dass du da Klarheit hast zu sagen, wer ist für was verantwortlich, so dass wenn es dann auch in Produktion zum Beispiel bricht, dass du nicht also raten musst, wer jetzt den Fehler fixt, sondern okay, die Modellergebnisse stimmen nicht, okay, ich weiß, dass ich den, weiß ich nicht, den Jimmy anrufe, okay, die Pipeline ist kaputt gegangen, okay, ich muss Johnny. Also dass du diese Ambiguität nicht hast, damit du halt im Fehlerfall Klarheit hast und nicht erst noch ausbaldovern musst, mit wem du jetzt irgendwie das Problem lösen."
+    },
+    {
+      "end": 3932170,
+      "speaker": "B",
+      "start": 3908290,
+      "text": "So und was jetzt eigentlich Andis Aufgabe wäre, das üblicherweise zu stellen. Diese Frage ist die klassische KI Frage, aber dann stelle ich halt mal die KI Frage ausnahmsweise habt ihr jetzt nicht schon AI, die deine ganzen Teams wegrationalisiert hat und eigentlich gar niemand mehr benötigt wird in eurer ganzen Data Pipeline, weil es macht ja alles die AI automatisch. Sag, was ich für Daten habe, was ich haben will und bam, alles ist."
+    },
+    {
+      "end": 3935370,
+      "speaker": "C",
+      "start": 3932170,
+      "text": "Da Magie, ja, die allumfassende Magie oder."
+    },
+    {
+      "end": 3937810,
+      "speaker": "B",
+      "start": 3935370,
+      "text": "Vielleicht noch spürst du überhaupt etwas?"
+    },
+    {
+      "end": 4070870,
+      "speaker": "C",
+      "start": 3937970,
+      "text": "Ja, natürlich spüren wir das an ganz vielen verschiedenen Stellen. Du hast bei der Datenbeschaffung zum Beispiel hast du plötzlich Gemini Code oder Cloud Code oder was auch immer man so einsetzt, hast du natürlich einen großen Vorteil, dass du so eine Datenquelle schnell bootstrappen kannst. Du sagen kannst, hey, geh mal auf die Webseite oder hier ist das XML Format oder was auch immer, schreib mir mal schnell ein Parser, Das funktioniert gut. Das sind auch simpel genug von der Aufgabenstellung her für eine AI, dass die jetzt auch nicht so viel Blödsinn dabei produziert. Die Guideline, die ich meinen Teams gegeben habe, ist, ihr dürft für alles an Codegenehmigung AI einsetzen, wenn ihr euch sicher seid, dass das Ergebnis stimmt und am Ende halte ich den Committer, das muss ein Mensch sein, dafür accountable für den Code, den er committed. Das heißt, du kannst natürlich von mir aus das alles wyben, wenn du Bock hast, aber am Ende musst du halt dir im Klaren darüber sein, dass wenn das Ding halt Produktion abreißt, dass ich zu dir komme und wir dann ein sehr einziges Gespräch führen. Das heißt, jeder KI generierte Code muss von den Menschen reviewed werden und von den Menschen auch committed werden. Natürlich hast du jetzt auch so interessante Sachen wie jetzt hast du einen Entity Linking Algorithmus, den hast du irgendwie mit allen möglichen, vorher hast du das irgendwie ganz klassisch mit Heuristik gemacht, dann hast du in der nächsten Stufe, fängst du an ein klassisches Machine Learning zu machen, fängst an mit, was weiß ich, mit Clustern oder sonstigen Sachen da rumzuhantieren und dann ist natürlich jetzt die Temptation groß zu gucken, was können wir jetzt mit einem LLM zum Beispiel da machen, wobei hilft es, wobei hilft es nicht. Die Dinger werden extrem schnell viel besser. Und ich habe ja auch gesagt, wir haben an vielen Stellen auch noch junge, also Menschen im Loop drin, die hat Prozesse auch mit betreuen und tief in Prozessen mit drinstecken. Musst du dir auch die Frage kann ich einen Prozessschritt vielleicht durch KI in irgendeiner Form argumentieren, mache ich die Leute dadurch effizienter, kriege ich ein besseres Ergebnis dabei raus, kriege ich eine geringere Fehlerquote dabei raus? Das kannst du jetzt beliebig weit spinnen, natürlich, aber das sind natürlich Fragen, die wir uns stellen und wo wir an vielen Stellen halt auch experimentieren und teilweise gute, teilweise nicht so gute Erfolge sehen. Also es ist keine Wunderwaffe, auch nicht für uns, aber klar, es ist ein."
+    },
+    {
+      "end": 4079030,
+      "speaker": "B",
+      "start": 4070870,
+      "text": "Riesenthema, aber ihr habt jetzt noch keine Product Owner oder sowas, die sich schon selber so eine Pipeline in irgendeiner Form zusammenschustern können."
+    },
+    {
+      "end": 4109090,
+      "speaker": "C",
+      "start": 4079270,
+      "text": "Nein, an dem Punkt sind wir nicht. Wir haben aber schon dafür gesorgt, dass wir die Szenarien, wo wir experimentieren müssen, also neue Datenquelle ist immer so ein schönes Szenario, dass wir da schnell sind im Onboarding. Also das waren wir auch schon, bevor wir KI gestützt irgendwie das Ganze in die Arbeit integriert haben. Das heißt, die Punkte, wo wir im Business wissen, dass wir eine schnelle Iterationsgeschwindigkeit brauchen, das haben wir von vornherein so aufgesetzt. Also da ist jetzt KI kein Gamechanger mehr für uns, weil wir schon vorher wussten, dass wir das müssen."
+    },
+    {
+      "end": 4112610,
+      "speaker": "A",
+      "start": 4109170,
+      "text": "Aber kann jetzt KI nicht einfach nur als neue Datenquelle irgendwie angeschlossen werden?"
+    },
+    {
+      "end": 4113090,
+      "speaker": "C",
+      "start": 4112610,
+      "text": "Absolut."
+    },
+    {
+      "end": 4137520,
+      "speaker": "A",
+      "start": 4113330,
+      "text": "Du kannst ja, so werden wir jetzt mal wirklich buzzwordy hier so ein N und dann einfach den PM draufsetzen, so baller mal ein bisschen rum, experimentier mal ein bisschen. Hier hast du eine N Instanz, da kann er sich alles zusammenklicken, da hat er seine KI Agenten, die dann die ganze Analyse auch machen können. Also so ganz klassische Thematiken wie NLP, Taxonomie und all das, was du gerade gesagt hast, ist ja perfekt dafür."
+    },
+    {
+      "end": 4234530,
+      "speaker": "C",
+      "start": 4137600,
+      "text": "Ja, absolut. Kannst du machen. Herr Wolker Weiß, wie der Satz weitergeht, kannst du schon so machen. Ich glaube, es gibt immer noch einen riesen Gap zwischen diesem Experimentierstadium und der wirklichen Produktion und SK. Wir verarbeiten dreiig Millionen Publikationen und machen da ein Matching gegen vier, fünf Millionen Leute. Das ist halt schon eine relativ große Datenmenge, die du da auf einmal durchprügelst. Und wenn du sowas dann eben versuchst mit einem LLM zu lösen, dann merkst du relativ schnell, dass es a ziemlich teuer wird, zumindest diese Art von Operation und b relativ lange dauert. Und das machst du halt auch nicht jedes Mal. Oder eine Taxonomie ist auch ein schönes Beispiel. Du hast eine Taxonomie, die hat dann irgendwie zwischen und Einträge in den größeren Taxonomien und dann hast du halt auch dreiig Millionen Publikationen. Ich bleibe jetzt mal einfach bei dem Beispiel so, das kannst du überlegen, dass du jedes gegen jedes irgendwie einmal zumindest vergleichen musst und dass der Kontext halt auch limitiert ist von seiner, von seinem LLM. Das heißt, du musst dann in Chargen irgendwie deine Textonomie dadurch prügeln mit jedem, mit jeder Publikation, um dann halt auch dein Ergebnis zu bekommen. Und das skaliert halt genauso, wie sie es anhören. Das ist ein Backstein nach aktuellem Stand. Das kann sich, wenn wir in einem Jahr miteinander reden, wird sich das vielleicht auch einfach geändert haben. Das müssen wir dann halt auch sehen. Die Entwicklung geht so rasend schnell, dass diese Aussage, die ich jetzt gerade getroffen habe, in einem Jahr völlig invalide sein. Aber nach heutigem Stand ist das, was wir at scale machen, noch nicht bei selber Qualität und Durchsatz durch ein LL."
+    },
+    {
+      "end": 4250870,
+      "speaker": "A",
+      "start": 4235350,
+      "text": "Jetzt ist ja Ein Manko, was ziemlich viele Leute zumindest als Nachteil nennen, ist, dass die Ergebnisse von diesen generativen AI Modellen nicht idempotent sind. Inwieweit sind denn eure Prozesse, besonders jetzt im Natural Language Processing, besonders in der Taxonomie und Co. Denn idem potent?"
+    },
+    {
+      "end": 4309660,
+      "speaker": "C",
+      "start": 4250870,
+      "text": "Gerade in denen, wo wir Idempotenz brauchen, verwenden wir halt keine LLMs. Das ist dann einfach so, sondern da haben wir, was weiß ich, in der Taxonomie ist es eine Mischung aus Grammar und anderen Methoden, die wir da ansetzen. Wir haben eine Grammar, die wir da ansetzen, wir haben eine Keyword Detection, die wir da ansetzen. Es ist ein Konglomerat aus verschiedenen, aber identten Prozessen, Also wo wir immer wieder bei du kannst es ein hundert mal drüber laufen lassen, kriegst ein hundert mal dasselbe Ergebnis. Wo es dann interessant wird, ist, wenn du sowas wie eine Relevanzbewertung oder sowas machst, wo du halt einen arbiträren Textinhalt reinkippst, wo es dann wirklich schwierig wird, das nicht über einen language affines Modell zu machen. Also kannst auch ein Small Language Modell nehmen, muss jetzt nicht unbedingt wie chatgpt fünf nehmen oder so für, sondern da reicht ein kleines Modell, was ist Gemini Flash oder sowas, reicht da vollkommen aus, um solche Bewertungen dann zu machen. Dafür ist es interessant und auch bestimmt ein relevantes Tool."
+    },
+    {
+      "end": 4318850,
+      "speaker": "B",
+      "start": 4309660,
+      "text": "Nur damit ich mal auch noch mal klug scheißen kann. Andi, du hattest deterministisch gemeint, nicht Ideen, weil du das in den Raum geworfen hast, nur so nachträglich noch zur perfekten Korrektur."
+    },
+    {
+      "end": 4323450,
+      "speaker": "A",
+      "start": 4318850,
+      "text": "Ja, ja, ist richtig. Ja, aber hey, also, aber es ist."
+    },
+    {
+      "end": 4328850,
+      "speaker": "B",
+      "start": 4323450,
+      "text": "Nahe beieinander, Also es ist dann auch idempotent quasi, wenn du es überschreibst, mehr oder weniger. Also egal."
+    },
+    {
+      "end": 4373240,
+      "speaker": "A",
+      "start": 4329010,
+      "text": "Genau, korrigiere gut deine Klugscheißerei selber wenigstens lernst du, finde ich super. Wolfi, aber auch, ne, wir nehmen Freitagabend auf, da kann sowas passieren. Aber worauf ich eigentlich hinaus möchte, ist, wenn du sagst, okay, AI ist problematisch und auf der anderen Seite sagst du, okay, ihr habt auch nicht deterministische, ich lerne on the fly Prozesse, die immer dasselbe rausgeben. Ich meine, ihr müsst ja so oder so im Endeffekt irgendeinen Qualitätsmechanismus haben, um zu sagen, okay, diese Daten sind so, wie wir sie haben wollen oder in diesem qualitativen Level so wie haben wollen. Und im Endeffekt kannst du dann auch eigentlich doch auch mal die ganze Zeit A B Tests fahren und sagen, okay, du schmeißt deine kompletten Prozesse weg, lässt die AI einfach machen, promptest da ein bisschen durch und lässt deine Qualität Sache laufen und sagst, okay, ist gut, ist schlecht."
+    },
+    {
+      "end": 4410210,
+      "speaker": "C",
+      "start": 4373640,
+      "text": "Absolut, Das ist ja auch unsere Aufgabe, wenn wir als Datenproduktanbieter irgendwie das machen und die Produktentwicklung sich ja auch weiterentwickeln möchte, ist das natürlich Teil der Aufgabe, weil am Ende, so rasant, wie sich halt das Feld entwickelt, besteht halt immer die Chance, dass du am Ende vielleicht sogar ein qualitativ besseres Ergebnis bei gleichem Aufwand oder in trauen Situationen vielleicht bei geringerem Aufwand sogar hinbekommst. Und da dürfen wir uns natürlich, also ich sage, wir dürfen uns da nicht vor verschließen, wir müssen diese Felder für uns erforschen, um unser Produkt einfach besser zu machen."
+    },
+    {
+      "end": 4441760,
+      "speaker": "A",
+      "start": 4410210,
+      "text": "Kommen wir zum Ende, kommen wir zum Wrap Up. Jetzt stell dir vor, ich steig irgendwann mal auf, ich bin aktuell Engineering Manager und ich werde gerne, ich bin mal irgendwann Direktor, Das ist ja so, ich sag mal, in manchen Fällen gibt es auch einen Senior Engineering Manager dazwischen und danach kommt dann in der Regel dann die Director Position. Was würdest du mir als einem neuen Data Director raten, wenn ich gerade anfange, meine Organisation für die Zukunft vorzubereiten und auch ein Daten as a Product Team aufbauen? Was ist, was sind die?"
+    },
+    {
+      "end": 4454890,
+      "speaker": "B",
+      "start": 4441760,
+      "text": "Darf ich kurz zuerst antworten, Andy, wenn du mal Direktor wirst und dann auch noch für Daten verantwortlich bist, deinen Vorschlag gerade NN einzusetzen und den einfach an den Product Owner zu geben und die sollen dann alles selber bauen. Das ist keine gute Idee. Aber jetzt lassen wir."
+    },
+    {
+      "end": 4471600,
+      "speaker": "A",
+      "start": 4456000,
+      "text": "Also Wolfgang, ich möchte mal ganz kurz sagen, da kommt jetzt gerade der alte weiße Mann, sprich vom Krieg, so nach dem Motto, das haben wir noch nie so, das haben wir schon immer so gemacht und so bleibt das jetzt hier auch. Und jetzt komme ich als innovativer Jungspund um die Ecke, verstehst du, der am Puls der Zeit, am Puls von Hacker News einmal lebt."
+    },
+    {
+      "end": 4477520,
+      "speaker": "B",
+      "start": 4471600,
+      "text": "Du hast ja uns alte Herren gerade gefragt. Also ich habe jetzt meinen Senf dazugegeben, jetzt hat der Mario noch die Möglichkeit."
+    },
+    {
+      "end": 4658120,
+      "speaker": "C",
+      "start": 4477520,
+      "text": "Also erstmal, ich würde glaube ich sagen, dass so ein NN Film für einen Product Owner, für Product Manager vielleicht einfach gar keine schlechte Idee ist, um die Leute auf Ideen zu bringen. Das muss man halt nur ganz klar abtrennen und den Leuten halt wirklich sehr, sehr deutlich sagen, dass wir jetzt nicht, man nimmt ja auch nicht mehr das Jupyter Notebook produktiv. Also das sollte man ja auch nicht machen. Insofern ist ein NN ja auch kein Produktionstool in diesem Kontext total super für meine Hausautomation, aber im Umfeld einer professionell arbeitenden Firma ist es kein Produktionstool für mich, zumindest nicht in dem Bereich, in dem ich arbeite. Ich möchte nicht für andere Firmen sprechen, aber ein super Enablement für Product Manager. Aber um jetzt auf deine Frage zu antworten, Andy, das ist so, ich glaube, so ein Querschnitt ist das aus verschiedenen Dingen. Wenn du gerade anfängst, musst du, glaube ich, dir überlegen, was das richtige Profil von Mitarbeiter ist, was du einstellen möchtest. Also was für Leute sollen das sein? Aus zwei Gründen. Die müssen Lust auf diese Tiefe und diese Komplexität haben. Also die müssen Spaß daran haben, sich mit dieser Tiefe zu beschäftigen und die Daten auch zu verstehen. Und die ersten fünf Leute definieren auch deine Kultur. Aber das ist jetzt nicht unique zu meinem Umfeld, sondern ich glaube, das ist generell einfach so, dass du da deine Kultur richtig definieren musst. Wenn du die ersten fünf Leute, sage ich jetzt einfach mal, mit dieser Lust auf Tiefe und Komplexität hast und die halt wirklich auch mitdenken und die Daten halt nicht nur als was sehen, was sie von A nach B schieben müssen, sondern wirklich sich da auch auch reindenken und bottom up dann auch wirklich Innovation betreiben wollen, dann stellst du eine Organisation wirklich auf einen soliden Untergrund. Das zweite große Thema ist, glaube ich, ich würde sogar fast sagen, für alle Datenteams relevant, also egal ob analytisch orientiert oder jetzt datenproduktorientiert, dass du die Value Contribution erkennbar machen musst für die Teams, Weil in den seltensten Fällen produzierst du Daten direkt für den Kunden. Also es ist wirklich aus meiner Erfahrung her selten. Also wir haben jetzt bei uns, ich habe in meiner Organisation, ich bin für zwei Produkte verantwortlich. Eins geht halt direkt an den Kunden, da ist die Value Contribution klar. Das andere ist zwei Ebenen vom Kunden entfernt. Und das ist hart. Einmal kulturell hart, weil dann musst du halt irgendwie Commitment schaffen und auf der anderen Seite halt auch zu verstehen, was für ein Impact deine Arbeit hat und dann die Freude daran zu behalten, ist auch schwer. Also Das ist was, was man aktiv managen mus und da kannst du mit Produktmenschen, sei es Owner oder Manager oder was auch immer zusammenarbeiten und du brauchst dieses Kundenfeedback. Du brauchst dieses die Daten leben bei Kunden und guck mal, das machen die beim Kunden. Und weil wir das so machen in der Qualität, können die, keine Ahnung, ganz tolle Dinge machen. Also haben irgendwie eine Drug schneller gelauncht oder haben verstanden, wie was weiß ich, wie das Off Label Use von irgendeiner Drug ist und deswegen können die jetzt die nächste Iteration viel, viel besser machen oder so. Also diesen Real Life Impact irgendwie verstehen. Ist super schwierig für Datenteams."
+    },
+    {
+      "end": 4674720,
+      "speaker": "A",
+      "start": 4658120,
+      "text": "Mario, vielen lieben Dank. Tolle Episode mit einem gesunden Mix aus Leadership, aber auch technischer Architektur, wie zum Beispiel Amazon S wird heutzutage noch ohne SQS genutzt oder vielleicht sollte man es deswegen genau ohne SQS nutzen, was nicht als Backup Speicher dann genutzt wird."
+    },
+    {
+      "end": 4677920,
+      "speaker": "B",
+      "start": 4674720,
+      "text": "Es lebe der Batchjob, es lebe der Batch Job."
+    },
+    {
+      "end": 4684860,
+      "speaker": "A",
+      "start": 4677920,
+      "text": "Ja und dass jemand effektiv und sagt, okay, Batch reicht mir und Realtime brauche ich nicht mehr. Hab meine ja auch selten viele Leute streben."
+    },
+    {
+      "end": 4688860,
+      "speaker": "B",
+      "start": 4685020,
+      "text": "Eigentlich hat man das immer in der Realität, würde ich sagen, aber man hört es selten."
+    },
+    {
+      "end": 4731710,
+      "speaker": "A",
+      "start": 4690300,
+      "text": "Ich denke, man hat Batch Jobs viel mehr als einem lieb ist, aber ich höre selten, dass jemand sagt, wir wollen diese Batch Jobs haben, weil die meisten Leute sagen, wir sind Realtime, agieren dann aber auf Batch Jobs. Von daher Mario, vielen lieben Dank für diese beiden Sichten, hat mir sehr viel Spaß gemacht. Wie immer gilt, wir haben in den Shownotes die üblichen Verdächtigen an Links natürlich zu etlichen Technologien. Wir haben prestodb, deltaformat, Arbeitslos und so weiter. Aber natürlich auch Marios LinkedIn Profil, falls ihr dem Herren mal eine Frage stellen wollt oder auch seinen Blog second in line jetzt mit dem erneuten Druck, einen neuen Blogpost zu veröffentlichen."
+    },
+    {
+      "end": 4738650,
+      "speaker": "C",
+      "start": 4731710,
+      "text": "Ich danke euch beiden, dass wir das hier so in schöner Runde machen durften, dass ich hier sein durfte. Ich habe es sehr, sehr genossen und vielen, vielen Dank."
+    },
+    {
+      "end": 4739450,
+      "speaker": "B",
+      "start": 4738650,
+      "text": "Vielen, vielen Dank."
+    },
+    {
+      "end": 4756530,
+      "speaker": "A",
+      "start": 4739450,
+      "text": "Falls ihr noch ein paar Kommentare zu Data Teams habt oder falls ihr sogar Data Teams leitet und ihr habt eine ganz andere Ansicht als der Mario, springt doch mal kurz in unsere Discord Community und gebt uns da ein bisschen Feedback. Jedes Feedback zu dieser Episode leiten wir natürlich an Mario weiter, aber ich glaube, der Mario ist glaube ich, auch in unserer Discord Community."
+    },
+    {
+      "end": 4766860,
+      "speaker": "C",
+      "start": 4757170,
+      "text": "Ich bin mit drin und ich werde auch sehr, sehr gerne mit euch in die Diskussion gehen. Und es ist vollkommen normal, dass andere Einstellungen, andere Systeme, andere Implementierungen existieren."
+    },
+    {
+      "end": 4773020,
+      "speaker": "B",
+      "start": 4767100,
+      "text": "Ist der Grund für diesen Podcast. Sonst könnt ihr nie mit Andi zusammenarbeiten. Ist schon okay. Andere Meinungen sind gut."
+    },
+    {
+      "end": 4777340,
+      "speaker": "A",
+      "start": 4773660,
+      "text": "Super. Das war's von uns. Wir hören uns nächste Woche wieder und tschüss."
+    },
+    {
+      "end": 4777740,
+      "speaker": "B",
+      "start": 4777340,
+      "text": "Ciao."
+    }
+  ],
+  "webhook_auth": false
+}
