@@ -1,892 +1,878 @@
 {
-  "acoustic_model": "assemblyai_default",
-  "audio_duration": 3204,
-  "audio_url": "https://cloud.inlupus.at/s/aamMLMZtSrJEZ6b/download/ep192_balacing_resources.mp3",
-  "auto_chapters": false,
-  "auto_highlights": false,
-  "auto_highlights_result": {},
-  "confidence": 0.92001915,
-  "content_safety": false,
-  "content_safety_labels": {
-    "status": "unavailable"
-  },
-  "custom_topics": false,
-  "disfluencies": false,
-  "dual_channel": false,
-  "entity_detection": true,
-  "filter_profanity": false,
-  "format_text": false,
-  "iab_categories": true,
-  "iab_categories_result": {},
-  "id": "524de33a-86b8-43c7-98d9-c25b19d2de13",
-  "language_code": "de",
-  "language_detection": false,
-  "language_model": "assemblyai_default",
-  "punctuate": true,
-  "redact_pii": false,
-  "redact_pii_audio": false,
-  "sentiment_analysis": false,
-  "speaker_labels": true,
-  "speakers_expected": 2,
-  "speed_boost": false,
-  "status": "completed",
-  "summarization": false,
-  "throttled": false,
-  "utterances": [
-    {
-      "confidence": 0.92062694,
-      "end": 85490,
-      "speaker": "A",
-      "start": 3360,
-      "text": "Für viele ist es ein notwendiges Übel, für andere die beste Zeit des Jahres. Die Quartals oder Jahresplanung. Firmen lieben es ja zu planen, neue Features zu versprechen und Roadmaps zu füllen. Produktmanager ordnen ihre Ideen ein und alles scheint seinen Platz zu finden. Doch am Quartalsende fragt man sich warum hat das Feature sechs statt zwei Wochen gedauert? Warum werden wir langsamer statt schneller? Eine der möglichen die Perspektive der Entwickler innen fehlt häufig in der Planung. Kennt ihr vielleicht auch technical debt nächstes quartal. Automatisierung für weniger manuelle arbeit lohnt sich nicht. Kleine bugs fixen zu unwichtig. Können wir mal nebenbei machen. Software updates? Macht doch ops. Und genau so wiederholt sich das spiel regelmäßig alle drei Monate. In dieser Episode zeigen wir euch ein Framework, mit dem ihr Entwicklungsressourcen sinnvoll balancieren könnt zwischen neuen Features, Technical Depth und Produktivitätsboosts. Wir erklären, warum Planung wichtig ist, woher all die Anforderungen kommen, was Overcommitments und Rollovers sind und wie Projekte wie Mission Papercut bei GitHub und bei Ubuntu kleine Bugs groß gemacht haben. Mit klaren Kategorien wie Keep the lights on, build new stuff, improve stuff and productivity be bekommt ihr als Devs eine Stimme und endlich die Zeit, um mal aufzuräumen."
-    },
-    {
-      "confidence": 0.9041274,
-      "end": 162710,
-      "speaker": "B",
-      "start": 85570,
-      "text": "Los geht's. Beim heutigen Thema schlägt das Herz höher. Bei allen Produktmanagern und bei den meisten Software Engineern geht das Herz in die Hose. Denn es geht nämlich um Planung. Es geht um Quartalsplanung, es geht um Jahresplanung, es geht eigentlich um die woran arbeiten wir eigentlich in den nächsten Monaten? Denn Firmen lieben es zu planen und ihre Ressourcen zu verwalten. Und wenn man danach mal googelt, da kommt man relativ schnell auf den Begriff Enterprise Resource Planning ERP System. Und dann bin ich so von Höcksgen auf Stöcks gekommen und habe mir gedacht, ist JIra eigentlich ein ERP System bzw. Kann Jira als ERP System bezeichnet werden? Denn im Endeffekt hat Jira ja Tickets und Menschen arbeiten da. Und Menschen werden ja immer als Ressource bezeichnet. Deswegen heißt es ja auch Human Resources, zum Beispiel die Abteilung. Und da bin ich nach ChatGPT gegangen und hab ChatGPT die Situation erklärt. Hör mal, pass mal auf, wir haben Menschen, Programmierer, wir haben Jira Tickets und so weiter und so fort. Kann man Jira als ERP System bezeichnen? Und ChatGPT hat erst mal gesagt hör mal, Andi, das ist ein super Gedankengang, klingt auch im ersten Moment logisch, aber. Und dann kam dann eine Antwort warum das nicht geht. Kurzum ein ERP System ist viel größer und holistischer gedacht und Jira zählt da nicht dazu."
-    },
-    {
-      "confidence": 0.9208775,
-      "end": 171590,
-      "speaker": "A",
-      "start": 162870,
-      "text": "Also ich bin so froh, dass es ChatGPT gibt, dann muss ich nicht mehr solche dummen Fragen beantworten. Also ich finde das wirklich super. Also danke dir, ChatGPT."
-    },
-    {
-      "confidence": 0.90994126,
-      "end": 176102,
-      "speaker": "B",
-      "start": 171670,
-      "text": "Naja, ChatGPT hat ja schon gesagt, war gar nicht so doof und der Gedanke ist nachvollziehbar."
-    },
-    {
-      "confidence": 0.84747285,
-      "end": 177974,
-      "speaker": "A",
-      "start": 176246,
-      "text": "Ja, so nett wäre ich nicht gewesen."
-    },
-    {
-      "confidence": 0.88307667,
-      "end": 193220,
-      "speaker": "B",
-      "start": 178102,
-      "text": "Ich glaube, das ist auf jeden Fall eine gute Bierdiskussion in irgendeinem Meetup. Kann man Jira als ERP System bezeichnen? Aber dann bin ich wieder. Ich bin ja von Höxen auf Stöcks gekommen, habe ja gerade gesagt, habe ich den Hasenbau runter und dann habe ich wieder darüber nachgedacht. Sind Menschen Ressourcen bzw. Ist die Bezeichnung okay?"
-    },
-    {
-      "confidence": 0.9567342,
-      "end": 196500,
-      "speaker": "A",
-      "start": 193220,
-      "text": "War das jetzt eine Frage oder sprichst du noch mit dir selber?"
-    },
-    {
-      "confidence": 0.8130557,
-      "end": 199604,
-      "speaker": "B",
-      "start": 196580,
-      "text": "Ne, das habe ich dann nicht ChatGPT gefragt. Das frage ich jetzt den Wolfgang."
-    },
-    {
-      "confidence": 0.94485366,
-      "end": 223378,
-      "speaker": "A",
-      "start": 199652,
-      "text": "Ja, du bist ja immer der, der sagt, man darf nicht Ressource sagen zu einem Menschen. Ich denke mir immer das so, was du ja planst bei so einer Ressourcenplanung ist ja nicht der Mensch, sondern die Zeit, also die Ressource Zeit von diesem Menschen. Insofern kann man das dann schon natürlich sagen, wenn man nicht den Menschen an sich als Ressource sieht, sondern die Zeit dieses Menschen. Weil du tauscht ja Lebenszeit gegen Geld, wie du auch immer so schön sagst."
-    },
-    {
-      "confidence": 0.9478662,
-      "end": 230930,
-      "speaker": "B",
-      "start": 223474,
-      "text": "Das ist korrekt. Aber immer wenn man in einem Meeting sitzt und dann sagt jemand aber wir haben ja keine Ressourcen, dann redet er ja über Menschen. Wir haben ja nicht genug Menschen oder."
-    },
-    {
-      "confidence": 0.923154,
-      "end": 232706,
-      "speaker": "A",
-      "start": 230970,
-      "text": "Nicht genug Zeit von Menschen."
-    },
-    {
-      "confidence": 0.9407007,
-      "end": 240242,
-      "speaker": "B",
-      "start": 232818,
-      "text": "Da sind wir aber schon wieder beim Thema. Wenn wir nicht genug Zeit haben, dann ist für mich die haben wir richtig priorisiert? Und genau darum geht es heute."
-    },
-    {
-      "confidence": 0.9118273,
-      "end": 249698,
-      "speaker": "A",
-      "start": 240306,
-      "text": "Wie kommt Zeit? Haben wir immer zu wenig? Also darum geht es ja. Darum kommst du ja erst zur Priorisierung eigentlich, weil du zu wenig Zeit hast. Wenn du genug Zeit hättest, dann ist."
-    },
-    {
-      "confidence": 0.9202246,
-      "end": 328462,
-      "speaker": "B",
-      "start": 249754,
-      "text": "Ja sowieso egal, sage ich ja. Und wenn jemand sagt, ich habe zu wenig Leute, dann heißt es für mich auch OK, man hat, man arbeitet in einem Rahmen und man hat zu schlecht priorisiert, weil man sich zu viel vorgenommen hat. Auf jeden Fall bin ich genau über dieses Problem die Tage wieder gestolpert. Ich durfte mal wieder eine Quartalsplanung machen. Ich habe natürlich wie immer zu wenig Leute und wie immer viel zu viele Produkte und Projekte auf dem Plan. Und dann war die woran arbeiten wir denn eigentlich? Packe ich einfach alles rein und sucht euch was aus und wir overcommitten den Monat oder wie schmeiße ich was raus? Also ich habe eine ganz klassische Quartalsplanung gemacht und dieses Thema habe ich heute mitgebracht, weil ich mich damit dann ein bisschen beschäftigt habe, wie wir auch Entwickler, ich sag mal so ein kleines Wort, in der Planung mitgeben können, aber auch hoffentlich das Business zufriedenstellen können. Denn in meiner anfangs Karriere als Softwareentwickler, da wurde mir immer so ein Quartalsplan vorgelegt und ich habe nicht verstanden, wie der zustande gekommen ist. Und dann habe ich ihn einfach abgearbeitet. Ich habe aber damals auch nie gefragt. Später, als ich mehr Erfahrung hatte, wollte ich immer technische Schulden abbauen und immer das Produkt stabiler machen. Da hatten wir dann aber nie Zeit dafür, weil die Quartalsplanung sowieso schon overcommitted war. Deswegen habe ich gedacht, machen wir heute mal eine Selbsthilfegruppe zur Quartalsplanung bzw. Zur Balancierung und Budgetierung von Engineering Ressourcen."
-    },
-    {
-      "confidence": 0.9410995,
-      "end": 374236,
-      "speaker": "A",
-      "start": 328606,
-      "text": "Es klingt jetzt ziemlich langweilig, wie du das sagst, Budgetierung. Ich glaube, dass es ja auch sehr hilfreich ist, wenn du zum Beispiel dein eigenes Projekt managst. Also das ist ja auch so was als. Also egal, ob man jetzt alleine ist oder zu zweit, sobald man an dem Projekt arbeitet, musst du eigentlich priorisieren und dir überlegen, auch wenn es nur ein side Hustle ist, irgendein side Project, wie teile ich die paar Stunden, die ich habe, pro Woche ein und was für Features baue ich oder wie investiere ich meine Zeit? Und auch da, jeder, glaube ich, der side Hustle hat, weiß, wie schwierig das ist und wie overcommitted man meistens ist, weil das schafft man alles in dieser Woche und alles kein Problem in den zwei Stunden jeden Abend und dann ist eine Woche vergangen und man hat genau nichts geschafft. Also auch da ist Priorisierung absolut ein Thema."
-    },
-    {
-      "confidence": 0.9127356,
-      "end": 442316,
-      "speaker": "B",
-      "start": 434348,
-      "text": "Aber warum kann ich nicht einfach in meinem side Hustle mein Backlog abarbeiten? Ich meine, das ist sowieso immer voll und das wird auch nie leerer. Kann ich da nicht einfach von oben abarbeiten und abfahrt?"
-    },
-    {
-      "confidence": 0.9265698,
-      "end": 458604,
-      "speaker": "A",
-      "start": 442348,
-      "text": "Ja, ich glaube, das machen auch viele. Darum sind so viele side Project immer nur in der Schublade und nie online. Also die domain ist dann online mit einer leeren Seite oder coming soon, aber weil man halt dann immer an dem arbeitet, was eigentlich keine Bewegung nach vorne bringt. Und genau darum geht es eigentlich. Wie kommt man nach vorne?"
-    },
-    {
-      "confidence": 0.9035742,
-      "end": 466508,
-      "speaker": "B",
-      "start": 458652,
-      "text": "Bei Seitenprojekten stimme ich dir zu. Ich glaube, ich habe auch wieder viel zu viele Domains, die ich langsam mal wieder kündigen müsste, denn ich glaube, ich kaufe die immer so kurz vorm Sommer und bald werden sie."
-    },
-    {
-      "confidence": 0.8527692,
-      "end": 470044,
-      "speaker": "A",
-      "start": 466564,
-      "text": "Ich habe gerade kürzlich drei Domains gekündigt, bin ganz stolz auf mich."
-    },
-    {
-      "confidence": 0.9505671,
-      "end": 471564,
-      "speaker": "B",
-      "start": 470132,
-      "text": "Meine Frage ist, wie alt waren die?"
-    },
-    {
-      "confidence": 0.9465073,
-      "end": 477948,
-      "speaker": "A",
-      "start": 471652,
-      "text": "Ja, schon alt. Die waren teilweise sogar aktiv. Aber ich habe jetzt angefangen, mit dir nicht mehr aufzuheben und einfach wieder rauszukicken."
-    },
-    {
-      "confidence": 0.9342526,
-      "end": 542324,
-      "speaker": "B",
-      "start": 478044,
-      "text": "Respekt für deinen Mut. Glückwunsch. Hätte ich mich bisher nicht getraut. Aber in einer Firma, da kann man natürlich nicht einfach so vor sich hin arbeiten und nicht einfach das Backlog abarbeiten. Denn wir wissen alle, das Backlog ist immer voll, es wird nicht leerer und ich weiß ja nicht, wie euer Backlog zustande kommt, aber im Backlog sind auch viele, man müsste mal Tasks, so was, was einem aufgefallen ist. Man packt das ins Backlog und wissen wir sowieso, nach drei Jahren macht man einfach ein Backlog Cleanup. Alles, was älter als zwei Jahre ist oder älter als sechs Monate, kein Update hat, schmeißt man einfach weg. Denn Engineering ist in der Regel sehr, sehr teuer, denn es ist nicht umsonst, dass das Engineering Department einer Firma in der Regel der teuerste Headcount der Firma ist. Deswegen ist es zwar gut, wenn ihr immer, immer, immer wieder Tickets ins Backlog packt, aber es bringt eigentlich nichts, wenn die sowieso nicht angefasst werden. Denkst du, Wolfgang, wenn wir ein System haben zum Backlog abarbeiten, sei es OKRs, sei es VMOMs, sei es Scrum oder Kanban, dass das einen Unterschied macht? Oder denkst du, solche Systeme beheben das ursprüngliche Problem nicht?"
-    },
-    {
-      "confidence": 0.9252114,
-      "end": 587522,
-      "speaker": "A",
-      "start": 542492,
-      "text": "Was diese Systeme ja alle lösen wollen, ist in einer gewissen Weise Priorisierung, damit man weiß, auf was man sich konzentriert, also an was arbeitet man, damit man weiterkommt, dass man das side Hustle online bringt, dass man die Firma weiterbringt, dass man mehr Kunden gewinnt, was es auch immer ist. Oder aber auch die Produktivität der Entwicklerinnen erhöht. Also also ganz klassisch Technical Debt ist natürlich auch so ein Thema und dafür sind eigentlich die ganzen Frameworks da. Die Frage ist natürlich, wo finden diese Frameworks statt? Also gerade bei OKRs ist es natürlich so, dass das sehr stark von der Produktseite und von oben kommt, die OKRs. Und da natürlich gerade die technischen bereiche oft untergehen, weil man darf ja nicht vergessen, dass wir ganz viele Stakeholder haben in der Firma, die alle irgendwas anderes wollen."
-    },
-    {
-      "confidence": 0.9193345,
-      "end": 605436,
-      "speaker": "B",
-      "start": 587586,
-      "text": "Ich glaube besonders der letzte Satz, das ist das eigentliche Problem. Denn man kann ja okay, du bist ein Produktteam, du machst jetzt den Warenkorb in deinem E Commerce Shop. Wo ist denn also jetzt das Problem der Priorisierung, wenn das Team entscheiden kann, was am Warenkorb verbessert wird?"
-    },
-    {
-      "confidence": 0.9177004,
-      "end": 646392,
-      "speaker": "A",
-      "start": 605588,
-      "text": "Ja, du hast jetzt die Sicht vom Produktmanager, vom Product Owner, was es auch immer ist, aber du vergisst natürlich da, dass es da ein Developer Team gibt, was mitzureden hat bei der ganzen Technik. Es gibt vielleicht irgendein Security Team, Audi Team, Compliance Team, die da ständig reink grätschen mit der Security. Es gibt noch vielleicht ein DevOps Team, was in irgendeiner Form mit reinspielt. Du hast die klassische Management Ebene, irgendwo grätscht ein CEO rein in das Ganze. Da hat der PO dann auch nicht mehr viel zu reden. Also du hast ganz viele Leute, die in irgendeiner Form andere Prioritäten gerne hätten und natürlich die gegeneinander reiben und die man durch alle mitbedenken muss, wenn man so eine Planung durchzieht."
-    },
-    {
-      "confidence": 0.9460304,
-      "end": 661790,
-      "speaker": "B",
-      "start": 646456,
-      "text": "Gibt es von diesen Zielgruppen bzw. Von diesen Leuten, gibt es da jemanden oder einen Bereich, wo du immer wieder sehr stark grinsen muss, wenn die dir reingrätschen? Da wo du sagst, die schon wieder oder die hatte ich jetzt gar nicht mehr auf dem Schirm, aber irgendwie kommen sie doch jedes Quartal um die Ecke."
-    },
-    {
-      "confidence": 0.9324245,
-      "end": 687800,
-      "speaker": "A",
-      "start": 661870,
-      "text": "Ja, ich würde ja sagen, dass man die meisten eigentlich mitdenken kann, wenn man sich ein bisschen den Kopf zerbricht. Außer natürlich diese C Level Projects, weil die stehen ja nirgends. Die kommen dann ja irgendwann um die Ecke plötzlich. Außer bei Amazon gibt es auch diese C Level Projects, die man dann wirklich einreicht und dann ganz großen Stellenwert haben. Aber noch schlimmer sind natürlich diese Sea Level Projects, die irgendwann während dem Quarter auftauchen und dann plötzlich ganz wichtig sind."
-    },
-    {
-      "confidence": 0.9382896,
-      "end": 700392,
-      "speaker": "B",
-      "start": 687840,
-      "text": "Bei mir anders. Da habe ich immer die Hoffnung, dass C Level nicht mehr so tief in die Produktteams reingrätscht, sondern das irgendwie ganz oben einkippt und dann fällt das wie so eine Murmel runter und irgendwann landet es bei dir als normales Projekt. Bei mir ist es immer der ja."
-    },
-    {
-      "confidence": 0.92740464,
-      "end": 703976,
-      "speaker": "A",
-      "start": 700416,
-      "text": "Ja, aber die Murmel ist so hoch priorisiert, dass sie die fast erschlägt."
-    },
-    {
-      "confidence": 0.91653097,
-      "end": 752304,
-      "speaker": "B",
-      "start": 704168,
-      "text": "Bei mir ist es immer der Vertrieb bzw. Sales, weil die haben nämlich in der Regel immer schon alles verkauft, was die dir auf deinen Tisch setzen. Dann sagen wenn das Feature drin ist, dann unterschreibt der Kunde einen Vertrag. Und das ist ja prinzipiell eine super Sache für so Unternehmen, aber die sind dann immer so laut und gehen dir so auf die Nerven, weil die natürlich eine Provision kriegen, wenn der Kunde unterschreibt. Die haben natürlich dann noch einen persönlichen Incentive, wenn der Kunde unterschreibt und die haben denen dann wieder einem vom Pferd erzählt. Da denke ich mir immer so oh fuck, weil die kann es ja auch nicht planen. Die schließen ja nicht nur am Anfang oder am Ende vom Quartal irgendwelche Deals ab, die sind ja konstant am Telefon und du kannst ja nicht ausdenken, was Kunden wollen, weil du weißt ja, nur weil der Kunde etwas möchte, heißt das nicht, dass er das wirklich will. Der kennt nur diese eine Lösung und denkt, das löst sein Problem ja du."
-    },
-    {
-      "confidence": 0.9150871,
-      "end": 792522,
-      "speaker": "A",
-      "start": 752312,
-      "text": "Hast natürlich recht, in den meisten Umfeldern, wo ich bisher natürlich klassisch gearbeitet habe, da gab es keine Kunden in dem Sinne oder Kundenprojekte, darum ist mir das auch nicht so im Kopf. Das wären dann wahrscheinlich diese c Level Projekte, weil die wichtigen Features entscheidet dann irgendwer anderer. Das ist immer das Problem. Aber ich habe gerade selber in einem side Project mit einem Kollegen genau dasselbe Problem gehabt. Wir haben gerade einen neuen Kunden diskutiert und mein Kollege sagt, ja, da brauchen wir eh nur das kleine Feature implementieren und dann sind wir fertig. Und ich hab so gemeint, naja, in meinem Sales Call habe ich eigentlich noch Feature x und Z versprochen und dann sind so die Augen auch nach oben gegangen von meinem Kollegen. Also ich scheine schon ein guter sales."
-    },
-    {
-      "confidence": 0.948008,
-      "end": 795470,
-      "speaker": "B",
-      "start": 792586,
-      "text": "Mensch zu sein oder bist du jetzt der nervige Vertrieb?"
-    },
-    {
-      "confidence": 0.92808926,
-      "end": 800246,
-      "speaker": "A",
-      "start": 795530,
-      "text": "Kann auch sein, aber wir haben den neuen Kunden, hat er schon unterschrieben fast."
-    },
-    {
-      "confidence": 0.9244229,
-      "end": 912360,
-      "speaker": "B",
-      "start": 800358,
-      "text": "Also habt ihr noch keinen Kunden, von daher erst wenn die Tinte trocken ist. Also so gut im Sales bist du wohl noch nicht. Aber kommen wir zurück zur Quartalsplanung oder Jahresplanung oder drei Jahresplanung, wie auch. Und zwar habe ich mich da vor kurzem wieder mit beschäftigt und habe mir überlegt, okay, wie gehe ich da jetzt wieder ran und habe auch ein bisschen recherchiert und da bin ich über ein Framework gestolpert, was aus dem Hause Dropbox gekommen ist, was ich eigentlich ziemlich cool fand. Und zwar geht es darum, dass man eigentlich bei einer Planung vier Bereiche hat, wovon ein Bereich Pflicht ist und drei Bereiche, ich sag mal optional bzw. Können gefüllt werden. Die vier Bereiche heißen keep the lights on, also KTLO, also mach das, was gemacht werden muss, das ist der Pflichtbereich und die anderen Bereiche nennen sich build new stuff, improve existing stuff und increase your productivity. Wenn wir uns die einzelnen Bereiche mal anschauen, ist das eigentlich super smart, denn keep the lights on, das ist so die ehrliche Grundlinie. Du hast ein Produkt, da muss die Grundlinie gehalten werden und man stellt sich die was kostet uns diese Baseline zu halten? Für Dropbox wäre das jetzt okay, wir halten den Storage und so weiter, wir halten alle Features, welche Infrastrukturthemen müssen wir machen, damit wir einfach ein kontinuierliches Kundenwachstum bei gleichen Features haben und so weiter und so fort. Also die Mindestaufgaben zur Aufrechterhaltung des derzeitigen Dienstleistungsniveaus, würde ich mal so sagen, das, was auf der Webseite gerade steht. Dazu zählt natürlich dann sowas wie ganz klassische Audits, On call Updates von Dependencies für Security und so weiter und so fort. Das ist Pflicht. Weil wenn du die Lichter nicht anlässt, dann hört die Musik halt irgendwann auch auf zu spielen und dann hast du vielleicht auch keinen Job."
-    },
-    {
-      "confidence": 0.9048,
-      "end": 913592,
-      "speaker": "A",
-      "start": 912440,
-      "text": "Was ist mit Security?"
-    },
-    {
-      "confidence": 0.9116778,
-      "end": 920984,
-      "speaker": "B",
-      "start": 913736,
-      "text": "Ja, habe ich ja gesagt, Updating von Dependencies und Co. Das zählt ja da rein. Audit zählt ja auch da rein. Sind ja auch alles Security Bereiche."
-    },
-    {
-      "confidence": 0.94712,
-      "end": 923080,
-      "speaker": "A",
-      "start": 921112,
-      "text": "Aber keine Verbesserung von Security?"
-    },
-    {
-      "confidence": 0.9421909,
-      "end": 926574,
-      "speaker": "B",
-      "start": 923160,
-      "text": "Ne, das wird dann in das Bucket Improve Existing Stuff fallen."
-    },
-    {
-      "confidence": 0.9286748,
-      "end": 941106,
-      "speaker": "A",
-      "start": 926672,
-      "text": "Du hast es jetzt so lapidar irgendwie aufgezählt, das gehört da rein und das kann man dann in den Bucket werfen, damit man da eine Übersicht hat. Also darum gibt es ja mehrere Buckets. Aber woher weiß ich denn jetzt im Vorhinein, wie viel Arbeit es ist im nächsten Quarter?"
-    },
-    {
-      "confidence": 0.94094956,
-      "end": 947154,
-      "speaker": "B",
-      "start": 941218,
-      "text": "Bist du gerade im ersten Quartal mit deinem Produkt und ist das die erste Quartalsplanung oder hast du bereits ein Quartal gemacht?"
-    },
-    {
-      "confidence": 0.95333725,
-      "end": 950018,
-      "speaker": "A",
-      "start": 947202,
-      "text": "Na, kann ja auch im letzten Quartal schon was gegeben haben."
-    },
-    {
-      "confidence": 0.93819,
-      "end": 952270,
-      "speaker": "B",
-      "start": 950154,
-      "text": "Ja, dann hast du eine Basislein oder."
-    },
-    {
-      "confidence": 0.93326414,
-      "end": 957468,
-      "speaker": "A",
-      "start": 953060,
-      "text": "Ich führe ja gerade dieses neue System ein, ich habe nur ganz viele Tickets im letzten Quartal."
-    },
-    {
-      "confidence": 0.9362037,
-      "end": 970844,
-      "speaker": "B",
-      "start": 957564,
-      "text": "Ja, und die haben doch wohl eine Kategorie oder ähnliches. Dann setzt man sich halt mal hin und geht durch, okay, was habe ich im letzten Quartal so alles weggeballert und kategorisiere die einmal. Da kann ich ja ganz einfach mit Jira in meinem neu erlernten ERP System mit Labels machen."
-    },
-    {
-      "confidence": 0.88631094,
-      "end": 974140,
-      "speaker": "A",
-      "start": 970892,
-      "text": "OK, also du setzt Labels voraus und dann noch Time Tracking."
-    },
-    {
-      "confidence": 0.9352717,
-      "end": 1025884,
-      "speaker": "B",
-      "start": 974220,
-      "text": "Also Time Tracking würde ich jetzt nicht voraussetzen, aber ich würde eher mal sagen, die Anzahl der Tickets. Natürlich. Ich sage jetzt nicht, dass jedes Ticket zwei Stunden sein muss oder jedes Ticket zwei Tage. Kann durchaus sein, dass ein Ticket fünf Minuten ist. Offen gesprochen, in der Software Engineering Welt ist nichts fünf Minuten und das andere ein Tag. Alles gut. Aber da geht es mir ja nur um eine grobe Hausnummer. Also reden wir jetzt hier von zwanzig Tickets update Dependency oder reden wir von zwei hundert. Und dann ist ja hoffentlich ein anderes Bauchgefühl. Wenn du zwanzig Tickets hast, da wo jedes Ticket vier Tage dauert, dann solltest du vielleicht mal ein Ticketing ein bisschen anpassen oder ähnliches. Aber gehen wir mal von einer ausgewogenen Zeit Balance pro Ticket aus. Manche fünf Minuten, manche Tag. Dann hebt sich im Mittel irgendwann auf und dann kriegst du ja ein Gefühl dafür. Es geht ja nicht darum, dass du eins zu eins das ganze Quartal bis auf die letzte Minute verplanst."
-    },
-    {
-      "confidence": 0.94505054,
-      "end": 1039684,
-      "speaker": "A",
-      "start": 1025932,
-      "text": "Es gibt ja diese Daumenregel, dass es zwanzig Prozent von den Herstellungskosten sind, die dann als Wartung quasi entstehen pro Jahr. Kannst du das nachvollziehen in der Praxis? Ist das eine Regel, mit der du arbeitest?"
-    },
-    {
-      "confidence": 0.94126505,
-      "end": 1119084,
-      "speaker": "B",
-      "start": 1039812,
-      "text": "Zwanzig Prozent. Also die Zahl kannte ich noch nicht, aber vielleicht nicht immer nur in einem Quartal. Aber wenn man mehrere Quartale übereinander legt, könnte das so im Mittel schon hinkommen. Ich meine, es gibt Quartale, da wirst du mehr Ausfälle haben und da muss dann mehr Arbeit in die Behebung der Ausfälle gesteckt werden. Es gibt Quartale, wo du mehr Dependencies updaten musst. Nehmen wir mal das Quartal, wo Logj, die Sicherheitslücke im Java Code veröffentlicht wurde. Da wurden die zwanzig Prozent wahrscheinlich gerissen in vielen Firmen. Aber ich glaube, so im mittel über vier bis sechs Quartale kann ich mir das schon vorstellen. Und man muss ja auch mal sagen, ich habe gerade Updates von Dependencies gesagt, wir müssen nicht jede Dependency updaten. Natürlich muss man mit dem Lifecycle irgendwie mitgehen und allem drum und dran. Aber was man ja auch machen kann, ist, man kann ja auch einen Sicherheitslückenscanner kaufen, den auf seine Infrastruktur lasten und dann warnt er dich, wenn irgendwo eine Sicherheitslücke in deiner Dependency ist und dann updatest du die Dependency. Du musst ja nicht immer nur updaten des updaten wegen, weil auch beim neuen updaten kann ja neue Bugs reinkommen und allem drum und dran. Und es gibt ja auch LTS Versionen, wo du fünf bis zehn Jahre Support hast. Also deswegen muss man da gucken, okay, was ist gegeben und muss man jetzt alle Dependencies updaten. Aber on call sind da, audits sind da, die kommen jährlich, wenn du mit Kreditkartendaten arbeitest, PCI, DSS, HIPAA Compliance, wenn du mit Gesundheitsdaten arbeitest und ähnliches."
-    },
-    {
-      "confidence": 0.9124748,
-      "end": 1125110,
-      "speaker": "A",
-      "start": 1119132,
-      "text": "Wie war das jetzt bei deinem Team, wenn du das gerade angewandt hast? Wie viel Prozent hast du für Keep delights on eingerechnet?"
-    },
-    {
-      "confidence": 0.9043764,
-      "end": 1140546,
-      "speaker": "B",
-      "start": 1125530,
-      "text": "Leider viel zu viel. Also mehr als mehr als zwanzig Prozent, weil wir in einer größeren Firma arbeiten, wo wir aktuell sehr viel migrieren von einer alten Infrastruktur, die deprecated ist, von einem anderen Team maintain wird und so weiter. Also da haben wir."
-    },
-    {
-      "confidence": 0.939775,
-      "end": 1148882,
-      "speaker": "A",
-      "start": 1140618,
-      "text": "Moment, aber ist Migration dann schon keep the lights on? Weil Migration ist ja eigentlich, was ein Improvement darstellt, oder?"
-    },
-    {
-      "confidence": 0.9069238,
-      "end": 1175640,
-      "speaker": "B",
-      "start": 1148986,
-      "text": "Es kommt darauf an, was du migrierst. Begriffst du jetzt ein altes Framework auf ein neues und dieses neue Framework hat Performance Verbesserungen und erhöht deine Produktivität später, dann ist das das eine. Sagst du jetzt, okay, du änderst jetzt die Service Discovery API von Consul auf irgendwas anderes, dann hat das ja keinen Feature Mehrwert, sondern es ist einfach nur das gleiche, weil das andere System abgeschaltet wird."
-    },
-    {
-      "confidence": 0.9599588,
-      "end": 1184116,
-      "speaker": "A",
-      "start": 1175680,
-      "text": "Okay, also du gehst davon aus, dass du Druck hast, dass du wechseln musst, dass dir das sonst unter dem Arsch weggerissen wird. Dann gibt dir Le, weil sonst sind die Lichter aus."
-    },
-    {
-      "confidence": 0.95497,
-      "end": 1192420,
-      "speaker": "B",
-      "start": 1184188,
-      "text": "Ja, weil es immer noch dieselbe Firma ist, wird das nicht einfach so weggerissen, aber dann werden andere Timelines gerissen und dann klopfen da Leute bei dir an. Das willst du ja auch nicht."
-    },
-    {
-      "confidence": 0.9122877,
-      "end": 1209316,
-      "speaker": "A",
-      "start": 1192460,
-      "text": "Okay, gut, dann haben wir jetzt da, sagen wir mal, ungefähr zwanzig Prozent oder so veranschlagt. Ich glaube auch, dass es vielleicht eher sogar mehr sein könnten, je nachdem, was man natürlich macht im Team. Was mache ich jetzt mit den restlichen achtzig Prozent? Füße hochlegen finde ich mal gut. Guter Ansatz."
-    },
-    {
-      "confidence": 0.89372414,
-      "end": 1213412,
-      "speaker": "B",
-      "start": 1209428,
-      "text": "Bier kalt stellen, vielleicht noch eine Gulaschsuppe machen und dann Füße hochlegen."
-    },
-    {
-      "confidence": 0.8294839,
-      "end": 1220452,
-      "speaker": "A",
-      "start": 1213476,
-      "text": "Also du plädierst für die Ein tages Woche, nicht die vier Tages Woche, sondern die Ein tages Woche sind ungefähr die zwanzig Prozent."
-    },
-    {
-      "confidence": 0.92268115,
-      "end": 1268656,
-      "speaker": "B",
-      "start": 1220596,
-      "text": "Ich habe so viele Vorschläge und so viele Ideen, gebe zu, ist vielleicht nicht immer die beste dabei, aber. Nein. Also falls du noch drei weitere Tage arbeiten möchtest, könnten wir eine zweite Kategorie einführen, die würde bedeuten Build new stuff. Und da geht es dann wirklich wir bauen neue Features. Neue Features für unsere Kunden. Und das ist wohl, wo die meisten Software Engineers auch wirklich tagtäglich dran arbeiten. Neue Features bauen, neue Produkte launchen und so weiter. Also wirklich einen Mehrwert für die Firma schaffen und für die Kunden. Und da könnte man sagen, okay, da soll natürlich die Maße der Zeit drauf verwendet werden. Wenn wir jetzt von den ein hundert Prozent ausgeben, haben wir schon zwanzig Prozent für keep the lights on verschenkt. Dann würde man jetzt sagen, okay, für Bild News, da könnte man so circa sechzig Prozent allokieren, weil da ist ja auch wirklich, wo das Fleisch steckt, wo das Geld herkommt."
-    },
-    {
-      "confidence": 0.9581357,
-      "end": 1272890,
-      "speaker": "A",
-      "start": 1268688,
-      "text": "Also du meinst jetzt mit sechzig Prozent die sechzig Prozent der verbleibenden achtzig Prozent?"
-    },
-    {
-      "confidence": 0.91897535,
-      "end": 1291702,
-      "speaker": "B",
-      "start": 1273000,
-      "text": "Ja, wie gesagt, Zeiten sind ja immer recht schwierig. Du overcomitest ja in der Regel sowieso, dann geht vielleicht noch, dann ist noch wer krank und so weiter. Deswegen bin ich da nicht so auf diese sechzig und zwanzig Prozent fest, sondern eher akzeptiere in deinem Kopf, dass ein Großteil neue Features sein sollen."
-    },
-    {
-      "confidence": 0.941814,
-      "end": 1297942,
-      "speaker": "A",
-      "start": 1291766,
-      "text": "Okay, bring mir ja neue Kunden. Darum kann man die Kunden ja auch so viel in den Sales Gesprächen versprechen."
-    },
-    {
-      "confidence": 0.9002458,
-      "end": 1305464,
-      "speaker": "B",
-      "start": 1298006,
-      "text": "Genau, musst du den Vertrieb fragen. Aber da du jetzt der Vertrieb bei deinem side Project bist, wäre das toll, wenn du die drei Features, die du versprochen hast, auch bauen würdest, oder?"
-    },
-    {
-      "confidence": 0.791364,
-      "end": 1306856,
-      "speaker": "A",
-      "start": 1305552,
-      "text": "Die bauen ja dann gemeint."
-    },
-    {
-      "confidence": 0.71634,
-      "end": 1307992,
-      "speaker": "B",
-      "start": 1306968,
-      "text": "Verstehe, verstehe."
-    },
-    {
-      "confidence": 0.9152891,
-      "end": 1328000,
-      "speaker": "A",
-      "start": 1308056,
-      "text": "Okay. Also sechzig Prozent oder der zweite Bucket build new stuff. Ganz klassisch Produkt driven die ganzen Features jetzt bei ganz vielen Firmen hört es eigentlich jetzt schon auf. Also bei ganz vielen Product Ownern, die machen jetzt eigentlich zu. Die sagen, wir haben die neuen Features, wir haben das Nötigste, was zum Betrieb eigentlich verfügbar ist und das war es dann eigentlich jetzt schon."
-    },
-    {
-      "confidence": 0.9097866,
-      "end": 1404324,
-      "speaker": "B",
-      "start": 1328080,
-      "text": "Ja und das finde ich sehr schade, weil da gibt es nämlich jetzt noch zwei Kategorien, die sprechen mir eigentlich aus dem Herzen. Und das eine ist nämlich existierende Features und existierende Funktionalität verbessern. Da wirklich mit der Priorität auch wieder auf Kunden, da kannst du es so bezeichnen, die Qualität des Produktes erhöhen. Nehmen wir mal zum Beispiel jetzt den Merge Button bei GitHub. Wenn der jetzt ganz oben in der UI einen Pull Request wäre, dann würde ich sagen, was macht der da? Weil du machst ja den Code Review, liest die Kommentare und am ganz unten am Ende der Seite entscheidest du, willst du mergen oder nicht? Da musst du wieder hoch scrollen, den Button, den Merch Button dann ganz nach unten zu verschieben, das wäre dann improve existing stuff, weil da erhöhst du die Qualität des Produktes. Da bügelst du mal so ein UI Fehler aus. Oder andere Beispiele, die mit deinen Sinn kommen, sind so Startseite schneller machen oder die Optimierung des Kunden onboarding. Also wenn du neuen Kunden in dein System. GitHub ist aber außerdem auch ein sehr, sehr gutes Beispiel, weil die bloggen auch sehr, sehr viel über diese kleinen Änderungen. Jetzt haben wir das und jetzt haben wir die UI ein bisschen gestreamlined und so. Also diese ganz kleinen Features, zum Beispiel in ganz vielen Produkten wird jetzt auch Dark Mode eingeführt. Das wäre so eine Verbesserung von vorhandenen Funktionalitäten und da freuen sich ja ganz viele."
-    },
-    {
-      "confidence": 0.9374507,
-      "end": 1413604,
-      "speaker": "A",
-      "start": 1404372,
-      "text": "Woher weiß ich denn, ob etwas ein Improvement ist oder eigentlich ein neues Feature? Weil Dark Mode könnte ich ja jetzt sagen, ist eigentlich ein neues Feature, oder?"
-    },
-    {
-      "confidence": 0.9674559,
-      "end": 1420944,
-      "speaker": "B",
-      "start": 1413692,
-      "text": "Was wäre die Begründung, dass Dark Mode ein neues Feature wäre? Es blendet die User bei Nacht nicht und kann deswegen besser den Kaufen Button klicken, oder?"
-    },
-    {
-      "confidence": 0.89571613,
-      "end": 1426640,
-      "speaker": "A",
-      "start": 1421032,
-      "text": "Ja, ich glaube, dass es in vielen Roadmaps eigentlich als Feature drinsteht und weniger als kleines UI Improvement."
-    },
-    {
-      "confidence": 0.862835,
-      "end": 1427632,
-      "speaker": "B",
-      "start": 1426720,
-      "text": "Gib mir eine Begründung."
-    },
-    {
-      "confidence": 0.9397657,
-      "end": 1441200,
-      "speaker": "A",
-      "start": 1427696,
-      "text": "Weil wenn du Improvement siehst, irgendwo am bestehenden System etwas zu verbessern, dann sind wahrscheinlich sehr viele Features auch eigentlich nur eine Verbesserung von irgendeinem Workflow oder so. Also wo zieht man dann die Grenze?"
-    },
-    {
-      "confidence": 0.89940464,
-      "end": 1476680,
-      "speaker": "B",
-      "start": 1441360,
-      "text": "Ich würde sagen, wenn es halt keine neue Funktionalität ist. Dark Mode ist für mich jetzt keine neue Funktionalität, aber anscheinend siehst du das anders vielleicht. Ich sage halt, wenn es zum Beispiel, wenn man die Usability ein bisschen verbessert, das wäre jetzt einfach eine Verbesserung und das wäre kein neues Feature, wenn man die Batterie Lifetime eines hardware Geräts verbessert, würde ich auch nicht als neues Feature. Also ich meine, Apple verkauft das als neues Feature, kaufe ich den aber nicht ab in der Hinsicht. Also ich kaufe das Produkt dann schon, aber für mich ist das ein Feature, dass die Batterie Lifetime jetzt zum zwei Stunden Dinge, wenn die Webseite jetzt schneller ist, dann ist das eine Verbesserung."
-    },
-    {
-      "confidence": 0.9145688,
-      "end": 1506980,
-      "speaker": "A",
-      "start": 1476760,
-      "text": "Ja, ich hätte gesagt, vielleicht wenn man es auf der Feature Liste auf der Webseite anzeigt, aber auch da könnte man natürlich verbesserte Battery Life auch anzeigen. Also ich glaube, es ist schwierig zu trennen, ist aber auch wahrscheinlich gar nicht so wichtig. Es geht halt darum, dass man da irgendeine Trennung findet und eine Einkategorisierung. Es gibt wahrscheinlich ganz viele Bereiche, die jetzt nicht so klar sind. Muss man sich halt einfach entscheiden. Es geht ja immer bei so einem Framework um eine grobe Einschätzung und weniger um was ganz Hartes, was dann in irgendeiner Formel runtergebrochen."
-    },
-    {
-      "confidence": 0.9207315,
-      "end": 1527780,
-      "speaker": "B",
-      "start": 1507060,
-      "text": "Ich stelle mal die Gegenfrage bzw. Die Testfrage, welches Problem löst man, wenn man sich jetzt darauf einigt, ob Dark Mode jetzt eine Verbesserung oder ein neues Feature ist? Also wenn du konstant so viel diskutierst, nur um die Dark Mode Zeit dann in einen dieser Buckets zu allokieren, dann würde ich sagen, ganz im Ernst, lass das mit der Roadmap sein, ich glaube, du hast größere Probleme."
-    },
-    {
-      "confidence": 0.91373324,
-      "end": 1539668,
-      "speaker": "A",
-      "start": 1527940,
-      "text": "Also man nimmt einfach so ein Label oder ein Post it, je nachdem, wo man arbeitet und klebt da einfach möglichst schnell diese Labels dazu. Und in einem schnellen Prozess einigt man sich da einfach auf irgendwas."
-    },
-    {
-      "confidence": 0.9438836,
-      "end": 1553360,
-      "speaker": "B",
-      "start": 1539844,
-      "text": "Ich würde jetzt auf das Feature Dark Mode in der Kategorie Zoom jetzt nicht so viel Zeit verschwenden. Wenn du später noch Zeit über hast, dann könnte man darüber noch diskutieren. Aber während du in dem Prozess bist, ist es glaube ich mehr dem Team geholfen, diese Roadmap zu machen."
-    },
-    {
-      "confidence": 0.927632,
-      "end": 1562296,
-      "speaker": "A",
-      "start": 1553420,
-      "text": "Okay, aber spätestens jetzt würde der Product Owner sagen, jetzt haben wir neue Features und alte Features verbessern für den Kunden, aber jetzt ist Schluss."
-    },
-    {
-      "confidence": 0.91623497,
-      "end": 1653992,
-      "speaker": "B",
-      "start": 1562408,
-      "text": "Genau, und jetzt kommt nämlich die Power der Entwicklung. Und zwar gibt es nämlich noch ein viertes Bucket, das nennt sich die Erhöhung, die Produktivität. Und das ist in der Regel nicht Kunden sichtbar. Das ist oft engineering driven, also für uns alle. Und da geht es zum Beispiel die Erhöhung der Testabdeckung oder die Test Automation, die Verbesserung der Uptime der Webseite oder des Monitorings, damit zum Beispiel bei Keep the lights on später weniger Alerts kriegt, damit man weniger Keep the lights on Zeit allokieren muss. Das wäre zum Beispiel die Erhöhung der Produktivität. Oder ihr setzt Cursor jetzt in der Firma ein und integriert Cursor mit eurem GitHub und allem drum und dran und verwendet da ein bisschen Zeit drauf, damit ihr dann Vibe Coding machen könnt oder was weiß ich nicht. Punkt ist, ihr sorgt dafür, ihr allokiert ein bisschen Zeit, um euch produktiver zu machen. Und dazu zählt unter anderem auch vielleicht technische Schulden abbauen oder diese lange Klasse da endlich mal ein bisschen aufsplitten oder nutzbar machen oder, oder oder. Sollte natürlich dann schon euch wirklich, ich sage mal, produktiver machen. Denn nur Refactoring des Refactorings wegen, hatten wir ja auch schon mal drüber gesprochen, bringt es halt auch nichts, wenn es euch nicht kurz, mittel oder langfristig schneller in der Arbeit macht. Wenn ihr zum Beispiel Arbeit ins Alerting steckt und das Alerting somit genauer wird und ihr euch deswegen zehnmal weniger gepaged werdet. Das würde ich sagen, ist ein mega Boost. Nicht nur für die Produktivität, weil ihr dann weniger an den Computer müsst, sondern auch für die mentale Gesundheit, würde ich mal sagen."
-    },
-    {
-      "confidence": 0.8990026,
-      "end": 1681378,
-      "speaker": "A",
-      "start": 1654136,
-      "text": "Jetzt habe ich da meine vier Buckets und versuche mein Planning anhand dieser vier Buckets zu machen. Jetzt habe ich aber ganz klassisch in meiner Firma vielleicht OK oder irgendein anderes Framework schon im Einsatz, also was auf höherer Ebene das Ganze auch koordiniert. Funktioniert es im OKR Setting? Kann ich sowas einsetzen in einem OKR Setting oder in einem anderen Space als Methode noch? Also spielt es in irgendeiner Form zusammen?"
-    },
-    {
-      "confidence": 0.90661967,
-      "end": 1707568,
-      "speaker": "B",
-      "start": 1681474,
-      "text": "Ja, ich denke nicht, denn ich kann jetzt relativ wenig zu Space selbst sagen, aber OKR oder shape up oder ähnliches, das sind ja alles nur irgendwelche Frameworks, die Ziele vorgeben und dann gegebenenfalls noch einen Zeitrahmen obendrauf setzen. OKR setzt irgendwie wir wollen jetzt die Kundenbindung erhöhen oder wir wollen fünfzig neue Kunden haben. Aber wie die ganze Sache thematischen umgesetzt wird und auch womit, womit wäre dann in diesem Fall, welche Features bauen wir? Das entscheidet ja immer noch das Team bzw. Der Product auch noch."
-    },
-    {
-      "confidence": 0.9960925,
-      "end": 1708928,
-      "speaker": "A",
-      "start": 1707624,
-      "text": "Also passt schon zusammen."
-    },
-    {
-      "confidence": 0.8979175,
-      "end": 1729908,
-      "speaker": "B",
-      "start": 1709024,
-      "text": "Achso, ja, also ja, schon irgendwie, aber es ist jetzt nicht relevant, ob du OKRs nutzt oder Scrum oder ShapeUp oder VMoms oder ob sich der Chef einmal im Jahr irgendwo auf die Bühne stellt und sagt unser Jahresziel sind ein hundert Kunden und er das dann Chef Framework nennt. Also das ist ja egal, das ist ja die Zielsetzung."
-    },
-    {
-      "confidence": 0.9293931,
-      "end": 1750804,
-      "speaker": "A",
-      "start": 1730004,
-      "text": "Okay, also ich kann das auch, wenn ich OKRs verwende, kann ich das genauso einsetzen in meinem Planning dann. Ich muss natürlich das, was von oben kommt, die Ziele, die Richtung, in die ich gehen will, beachten. Aber wie ich dann in diese Richtung gehe, in welche Schritte habe ich immer noch meine vier Buckets und meine vier Buckets zur Verfügung, um eben die Ziele zu erreichen."
-    },
-    {
-      "confidence": 0.9166015,
-      "end": 1774220,
-      "speaker": "B",
-      "start": 1750932,
-      "text": "Da hoffe ich, dass die Teams diese Freiheit haben. Wenn nicht, dann sollte man das OK Framework vielleicht noch mal durchlesen. Und dasselbe passiert ja auch mit Scrum zum Beispiel. Wenn du sagst okay, mein Team arbeitet in Scrum, ist ein zwei Wochen Sprint. Ich meine, die Sachen, die du da selektierst, die du bauen möchtest, kannst du ja trotzdem in Milestones unterteilen. Die kannst du trotzdem sprintable machen. Gibt es das ich mache was sprintable, dass das in zwei Wochen passt?"
-    },
-    {
-      "confidence": 0.90529335,
-      "end": 1793140,
-      "speaker": "A",
-      "start": 1774300,
-      "text": "Aber ja, Scrum wäre ja eigentlich eine Ebene darunter. Also ich mache mein Quarterly planning zum Beispiel jetzt mit meinen vier Buckets, einfach um, um eigentlich die Zeitallokation irgendwie zu schaffen überhaupt, um nicht ständig over commitment zu betreiben. Und danach kommt eigentlich erst Scrum ins Spiel darunter, eine Ebene darunter."
-    },
-    {
-      "confidence": 0.92709106,
-      "end": 1865220,
-      "speaker": "B",
-      "start": 1793220,
-      "text": "Ja, ich teile diese Art von Frameworks und jetzt völlig egal, ob wir über OKRs, Shape up, scrum kann man usw. Sprechen, halt immer nur in zwei Themen ein. Die eine Thematik ist okay, an was arbeite ich? Das Zielsetzungs Frameworks. Was ist das Ziel, was mein Chef mir vorgibt, mein Management vorgibt, die Firma erreichen möchte und so weiter. Und dann die andere in welchen Rhythmen arbeite ich? Bei Kanban ist es ich pull mir immer ein Ticket und bei Scrum sind es dann irgendwie die Sprints. Bei Shape Ups sind es, glaube ich, sechs Wochen Cycles. Also das ist ja dann eher nur der zeitliche Horizont. In welchen Zyklen arbeite ich? Und das andere ist, an welchem Ziel arbeite ich? Und dieses Framework, was wir hier erzählt haben mit keep the lights on, build new stuff, improve existing stuff und increase your productivity. Das ist ja eher daran woran arbeitet man und wie allokiert man es und wie hält man auch eine Balance dazwischen, zwischen den einzelnen Aufgaben? Weil wie du sagtest, die meisten Product Owner, die knallen da einfach ein hundert Prozent der Zeit für neue Features rein. So, dann kippt die Infrastruktur hinten rüber und dann wird das, dann fragt man sich nach zwei Jahren, wieso wird das Team immer langsamer und so weiter und so fort. Und mit diesem Framework versuchst du halt, ich sag mal, ein Gleichgewicht zu halten. Ich finde, das habe ich schön gesagt."
-    },
-    {
-      "confidence": 0.91044116,
-      "end": 1904220,
-      "speaker": "A",
-      "start": 1865300,
-      "text": "Aber meine Frage wäre ja jetzt, jetzt habe ich meine vier Buckets und habe da irgendeine Prozentzahl dran geschrieben. Also zwanzig Prozent Produktivity, zwanzig Prozent Improvement, sechzig Prozent neue Features und dann natürlich keep the lights on. Da kann man keine Prozentzahl dazuschreiben, weil die muss man sowieso immer machen. Also den verbleibenden Zeitraum teile ich dann ein in sechzig, zwei tausend zwanzig zum Beispiel. Und jetzt habe ich da auf meinem Whiteboard die Labels dazu gehängt. Was ist Improvement? Was ist New stuff? Was ist Productivity? Aber jetzt schaue ich in meine Buckets und in meine Kübel. Heißt es bei euch Kübel oder Eimer? Eimer ist Deutschland, oder? Wir sagen Kübel."
-    },
-    {
-      "confidence": 0.846728,
-      "end": 1908520,
-      "speaker": "B",
-      "start": 1904800,
-      "text": "Ein Kübel ist eher so wie ein Blumenkübel, aber ein Backen wäre eher ein Eimer."
-    },
-    {
-      "confidence": 0.91513103,
-      "end": 1934184,
-      "speaker": "A",
-      "start": 1908600,
-      "text": "Okay, ja, also bei uns ist es kübel in Österreich. Jetzt habe ich da meine vier Kübel. Da haben wir nicht unendlich Projekte Platz. Also ich habe jetzt ganz viele gelabelte Tasks, Projekte, Initiatives, wie du sie auch immer nennst, aber nur einen begrenzten Space durch die Prozentzahl von meinen Kübeln oder Eimern. Also wie wähle ich danach aus, was kommt jetzt in meine Eimer? Also das löst mir noch gar nichts. Ich habe zwar jetzt eine begrenzte Kübelgrösse, aber immer noch zu viel Arbeit."
-    },
-    {
-      "confidence": 0.9289088,
-      "end": 2032108,
-      "speaker": "B",
-      "start": 1934272,
-      "text": "Ja, hätte ich darauf die Allerweltslösung, dann würde ich nicht mit dir Podcast machen, sondern wäre nämlich sehr reich. Weil im Endeffekt ist es das wieder. Okay, was ist mir wichtig genug und was hat den größten Impact? Also an diese Frage bin ich dann auch gekommen, nachdem ich diese Framework gefunden habe. Und da bin ich mal mit dem Hund spazieren gegangen und dann sind mir ein paar Fragen eingefallen, die ich mir zumindest so gestellt habe, so Leitfragen. Und zwar sind das zwei Bereiche. Einmal pro Planung, Cycle, habe ich mir die Frage gestellt, also für das Quartal jetzt, was sind die ein oder zwei Dinge, die ich wirklich vorantreiben möchte? Also wo machen wir, wir als Team wirklich einen Unterschied? Stell dir vor, du bist jetzt ein Produktteam und du hast fünf große Baustellen. Jetzt kannst du sagen, ich arbeite an diesen fünf großen Baustell ganze Quartal und treib jede Baustelle zwanzig Prozent nach vorne. Im Endeffekt ist dann jeder irgendwie unglücklich, weil niemand das gekriegt hat, was er haben wollte, weil alles nur zwanzig Prozent nach vorne geschoben. Oder du stellst dir die was sind die ein oder zwei Dinge, die du wirklich vorantreiben möchtest und limitierst deine Arbeit auf ein oder maximal zwei Dinge. Und schiebst ein Ding um ein hundert Prozent nach vorne oder zwei Dinge um fünfzig Prozent nach vorne, werden Leute schreien. Ja, natürlich, weil drei Leute sind ja hinten rübergefallen, die werden nichts kriegen. Das ist richtig, aber es bringt ja nichts, wenn du alles um zwanzig Prozent nach vorne schiebst. Deswegen, das ist hart, das kann dir keiner abnehmen. Da muss man wirklich gucken, okay, was hat den größten Impact? Da würde ich mal sagen, wenn du ein ganz klassisches Produkt hast, was benutzen deine Kunden, wie sehen deine User Metriken aus? Und so weiter und so fort. Oder was sind deine Profit Margins für diese Produkte und für diese Bereiche? Also ganz, ganz wirtschaftlich einfach mal daran."
-    },
-    {
-      "confidence": 0.91908133,
-      "end": 2036028,
-      "speaker": "A",
-      "start": 2032204,
-      "text": "Aber du hast jetzt gesagt, pro Planung Cycle müsstest du es nicht pro Kübel machen."
-    },
-    {
-      "confidence": 0.92089826,
-      "end": 2061140,
-      "speaker": "B",
-      "start": 2036124,
-      "text": "Kann man auch. Hoffentlich hast du aber die Elemente, die in dein Kübel sind, haben Synergien. Also ich hoffe nicht, dass du. Also im perfekten Fall hast du bei increase productivity Sachen drin, die das Monitoring oder die Uptime verbessern. Um einfach mal bei dem Beispiel zu bleiben für Zeug, was du vielleicht sogar verbessern möchtest oder wo du ein neues Feature drauf bauen möchtest mit you build stuff."
-    },
-    {
-      "confidence": 0.9517754,
-      "end": 2081426,
-      "speaker": "A",
-      "start": 2061300,
-      "text": "Ja, aber die Gefahr besteht ja, wenn du jetzt sagst, die zwei Dinge, die uns wirklich vorantreiben, dann kommen da zwei Features, weil die bringen uns wirklich voran mit ganz großen neuen Kunden. Und dann hebelst du ja deine eigenen Buckets wieder aus eigentlich, wenn du dann nur zwei Features machst, wenn das wirklich die wichtigsten sind. Also müsstest du das ja eigentlich wirklich pro bucket machen."
-    },
-    {
-      "confidence": 0.91404176,
-      "end": 2111884,
-      "speaker": "B",
-      "start": 2081538,
-      "text": "Ja, was ich mit Bereiche meinte ist eigentlich dein Team ist jetzt das Member und Retention Team. Das bedeutet, das Member und Retention Team kümmert sich um den User Login, um das Profil, um den Newsletter und all sowas. Jetzt kannst du verbessere ich jetzt die Login Maske und die Registrierungsmaske, ich verbessere den Newsletter, ich verbessere das Edit my Profil feature und ich verbessere die Bonuspunkteanzeige. Oder du kannst sagen, ich kümmere mich jetzt einfach nur um den Newsletter. Ein Quartal brauche ich den richtig aufbringen, richtig nach vorne."
-    },
-    {
-      "confidence": 0.84725887,
-      "end": 2114076,
-      "speaker": "A",
-      "start": 2111932,
-      "text": "Ja, aber dann hättest du ein hundert Prozent Improvement."
-    },
-    {
-      "confidence": 0.88223803,
-      "end": 2209162,
-      "speaker": "B",
-      "start": 2114188,
-      "text": "Nein, komm mal aus deinen Kübeln da wieder raus. Es geht ja nicht. Zum Beispiel nehmen wir ein Plattformteam. Ein Plattform Team managt ein Kubernetes und ein Plattformteam managt die Docker Registry. Und ein Plattform Team managt sogar noch ein Interface, wo du neue Cron Jobs eingeben kannst und so weiter und so fort. Jetzt kannst du okay, das Plattform Team packt jetzt die einzelnen Tasks, die in deinem Bucket sind build new stuff, improve existing stuff, increase your productivity und so weiter und fokussiert sich einfach nur auf Kubernetes. Increase your productivity. Die bauen sich Tooling, um neue kubernetes nodes in den Cluster zu hängen und alte zu drainen. Sieht kein Kunde, aber dafür können die Nodes rein und rausnehmen ohne Probleme und ohne die Produktionsworkloads anzupassen. Improve existing stuff. Jede neue Applikation, die auf dem Kubernetes Cluster jetzt gelauncht wird, kriegt automatisch ein Sidecar daneben, der die Ressourcen anhand der Usage immer updated. Keine Ahnung, dein Java Prozess braucht acht GB RAM, der knallt immer zwei GB RAM drauf. Oh, der braucht auf einmal zehn, dann updatet er sich automatisch zwölf. Und committee sogar noch in Git. Das wäre jetzt improve existing stuff. Und build new stuff wäre dann jetzt zum Beispiel jede App, die im Kubernetes gelauncht wird, kriegt automatisch ein fertiges Grafana Dashboard. Dadurch wurde dann zum Beispiel jetzt die Funktionalität Cron Jobs vernachlässigt. Aber du hast verschiedene Aufgaben in verschiedenen Buckets, die alle aber auf ein großes Ziel einzahlen, dann die kubernetes Plattform jetzt nach vorne treiben. Das meinte ich eigentlich mit was sind die ein oder zwei Dinge, die wir vorantreiben und nicht was sind die ein, zwei Dinge in deinem Bucket? Improve existing stuff. Bucket."
-    },
-    {
-      "confidence": 0.92320675,
-      "end": 2315034,
-      "speaker": "A",
-      "start": 2209306,
-      "text": "Okay, wenn du so übergreifende Projekte hast oder Bereiche, dann ging das natürlich. Das stimmt. Ich glaube auch da, ich habe jetzt erst über die POs immer so geschimpft oder halt mich lustig gemacht. Die POs sind ja eigentlich Leute, die gerade wenn es um Priorisierung geht, eigentlich normalerweise super Fähigkeiten haben. Die kennen ja viele Frameworks. Also das Rise Framework ist eines, was recht bekannt ist. Moskau, wo es einfach darum geht, ich teile meine ganzen Initiativen, meine Features noch mal ein und betrachte einfach, was bringt uns am meisten weiter? Genau wie du es jetzt gesagt hast, das ist halt dann mathematisch noch wie viel Impact haben wir dadurch? Wie konfident sind wir zum Beispiel, dass wir irgendwas erreichen? Und dann gibt es eine Formel, am Schluss kommt noch ein Wert raus oder ich habe da Matrizen, wo ich das eintrag. Ist ja ganz egal, was eigentlich. Aber ich habe Priorisierungsmöglichkeiten und vielleicht kann mir der DPO wirklich in dem Bereich dann helfen. Also wie kann ich in einem Bucket oder auch übergeordnet über alle Buckets, je nachdem, wie die Initiativen oder oder Tasks aufgeteilt sind, wie kann ich die dann priorisieren? Aber der große Vorteil bei den Buckets ist ja, dass ich mir am Anfang einmal überlege, wie viel Prozent kann ich für Produktivitätstasks verwenden und dann steht es mal fest, weil sonst muss man ja immer diskutieren, ist das Feature wichtiger oder ist die Produktivität wichtiger? Und so habe ich schon mal im Vorhinein aufgeteilt anhand von Prozenten und kann danach innerhalb von dem Bucket zum Beispiel diese ganzen Priorisierung Frameworks wie Rise oder Moskau oder Eisenhower Matrix, um ein ganz simples Ding zu erwähnen, einfach anwenden. Wenn es natürlich übergeordnete Initiativen sind, kann ich das auch vor der Bucket Einordnung eigentlich. Und dann sind wir wieder bei deinen finde die zwei Initiativen, die uns am weitesten weiterbringen."
-    },
-    {
-      "confidence": 0.9319711,
-      "end": 2392010,
-      "speaker": "B",
-      "start": 2315082,
-      "text": "Ich finde, dieses Framework nimmt halt super viel Spannung aus der ganzen Thematik, denn ich habe auch Product Owner gesagt, ne, wir haben keine Zeit da jetzt irgendwie unsere Produktivität zu verbessern und dann hat man da relativ wenig irgendwie Gegenwehr. Ich meine natürlich, dieses Framework muss natürlich auch vom Management getragen werden, das muss sinnhaftig sein. Ich meine im Endeffekt, wenn ein Schreiner die ganze Zeit nur an Möbeln arbeitet und das Werkzeug nie sauber macht und das Werkzeug nie wegräumt und das Werkzeug nicht kontrolliert, ob es noch gut ist, dann leidet die Produktivität nämlich später auch. Und unter der Produktivität leidet dann natürlich dann auch sein Bestellvolumen, weil auf einmal der Bohrer kaputt ist und er keinen Ersatzbohrer da hat und deswegen neue Bohrer bestellt werden müssen und deswegen dauert der Schrank jetzt eine Woche länger, weil Amazon die Bohrer gerade nicht vorrätig hat und so weiter und so fort. Sie ist ja genau dasselbe. Und jetzt ein Thema noch mal zu dem, was du gesagt hast. Was ist denn, wenn ich pro Bucket ganz viel Sachen habe? Weil wenn du jetzt dein aktuelles Backlog einfach kategorisiert, dann laufen die Kübel, wie du sie schön nennst, auch über. Da kannst du dir natürlich auch relativ einfache Fragen stellen. Und die habe ich nämlich für jede dieser Initiative in den einzelnen Eimern gestellt und die habe ich auch aufgeschrieben. Was ist das Problem, welches wir lösen wollen? Also das Aka, warum macht es überhaupt Sinn, dieses Ticket, dieses Projekt oder so zu machen?"
-    },
-    {
-      "confidence": 0.86438304,
-      "end": 2405126,
-      "speaker": "A",
-      "start": 2392510,
-      "text": "Moment mal, bevor du da jetzt in die Tiefe gehst, das nennen wir Andi Framework, oder? Also da gibt es Moskau und Rise und dann gibt es Andy. Andy, du musst dann noch Akronyme dafür finden. A, N D Y, ne, vielleicht nennen."
-    },
-    {
-      "confidence": 0.94429314,
-      "end": 2420930,
-      "speaker": "B",
-      "start": 2405158,
-      "text": "Wir es einfach nur logisch denken. Auf jeden Fall schreibst du einfach. Ich meine, hoffentlich ist dein Ticket oder dein Projekt oder das, was du da in deinem Kübel hast, bereits schon so geschrieben, denn wir schreiben ja alle ordentliche Tickets und Design Dokumente und allem drum und dran. Richtig, Wolfgang?"
-    },
-    {
-      "confidence": 0.87215,
-      "end": 2424818,
-      "speaker": "A",
-      "start": 2421090,
-      "text": "Natürlich, natürlich ist alles schon im Andy Framework kategorisiert."
-    },
-    {
-      "confidence": 0.92535245,
-      "end": 2497702,
-      "speaker": "B",
-      "start": 2424914,
-      "text": "So, also kannst du eigentlich musst du in der Lage sein, folgende drei Fragen für jedes dieser Dinge zu beantworten. Was ist denn eigentlich das Problem, welches wir lösen? Aka warum machen wir das? Wie sieht Erfolg aus bzw. Wie wird Erfolg gemessen? Das könnte sein, dass das seine Definition of Done ist. Definition of Done finde ich aber immer so ein bisschen kurz gegriffen, denn Definition of Done ist, was wir am Ende haben und nicht wie man dann Erfolg misst. Wir wollen ja den outcome messen und nicht den output. Output ist ich habe einen pull request gemacht und ich habe die farbe geändert. Ein outcome ist durch die geänderte buttonfarbe gibt es fünf prozent mehr bestellungen und wir wollen den outcome messen. Und die dritte Frage ist, wenn das nämlich ein sehr großes Projekt ist und gegebenenfalls über mehrere Quartale geht, würde man sagen, was werden wir dieses Quartal erreichen bzw. Was werden wir dieses Quartal genau tun? Und das ist halt sehr sinnvoll bei Multi Quarter Projekten. Und so stellt man halt sicher, dass man kleine erreichbare Milestones und an alle Hörerinnen und Hörer, die uns gerade zuhören, der Wolfgang hat gerade in unserem Vorbereitungsdokument diesen Text markiert. Er wird ihn mit hoher Wahrscheinlichkeit jetzt gerade bei ChatGPT reinpacken und nach einem Akronym fragen. Was kann man daraus machen? Ein Beispiel wäre Space Rise. Und was kam da raus, Wolfgang?"
-    },
-    {
-      "confidence": 0.866681,
-      "end": 2527520,
-      "speaker": "A",
-      "start": 2497866,
-      "text": "Es ist unglaublich. Du kannst es scheinbar wirklich vorhersagen. Also das andere Framework sagt Auftrag klären, Nutzen definieren, dieses Quartal im Fokus, also d schräg und Wort Etappenziel setzen. Okay, das ist eine kreativ, aber ich glaube, das ist Deutschland eigentlich nur ein bisschen ein Problem, aber ja, knapp dran. Vielleicht muss man da noch ein bisschen feilen am andi Framework."
-    },
-    {
-      "confidence": 0.92478514,
-      "end": 2584898,
-      "speaker": "B",
-      "start": 2527600,
-      "text": "Naja, aber kommen wir noch mal zu dem andi Framework und zu der ersten Frage was ist eigentlich das Problem, was wir lösen? Und Achtung, ich bin dann mit sehr vielen Leuten ins Gespräch gegangen und du glaubst gar nicht, wie viel Tickets und wie viel Initiativen dann da rausgefallen sind, weil man mir das Problem nicht erklären konnte, welches wir lösen. Und mit Problemen meine ich nicht immer wirklich ein Problem, was wir haben, sondern eigentlich einen Sinn, einen Grund, warum wir das tun sollten. Ich hatte ja gerade gesagt Updaten des Updatens wegen der saubere Software Engineer sagt Jo, updaten ist immer gut, der Produktmensch. Warum tun wir das? Und die Wahrheit liegt wahrscheinlich irgendwo in der Mitte, weil ist die Version end of life? Gibt es da ein Sicherheitsproblem? Ist die Version vielleicht eine LTS Version? Da gibt es ja so viel drumherum, was man klären sollte. Aber das ist faszinierend. Viele man müsste man Dinge machen wir, weil wir denken, sie sind richtig, aber haben die irgendeinen Wert? Oft glaube ich nicht, zumindest nicht fürs Produkt oder für das Ziel der Firma."
-    },
-    {
-      "confidence": 0.85053116,
-      "end": 2589890,
-      "speaker": "A",
-      "start": 2584994,
-      "text": "Sollte man, glaube ich, in side Projects auch immer überlegen. Die Frage vergisst man eigentlich ganz oft."
-    },
-    {
-      "confidence": 0.87005734,
-      "end": 2599650,
-      "speaker": "B",
-      "start": 2589930,
-      "text": "Naja, side Project ist ja die Frage okay, warum mache ich das hier? Also Motivation, weil ich weiß, ich habe super viele side Projects gestartet, um was Neues zu lernen."
-    },
-    {
-      "confidence": 0.927362,
-      "end": 2686382,
-      "speaker": "A",
-      "start": 2599730,
-      "text": "Ja, aber da hast du ja auch Ziele. Du musst immer schauen, zahlt dieses Ziel, zahlt dieses Ziel, zahlt dieser Task dem Ziel ein? Und wenn das Ziel Learning ist, ist es natürlich was anderes, als wenn das Ziel ist, ich bringe das Produkt online oder ich möchte dann auch mal Kunden bekommen oder was es dann auch immer ist. Also das sollte man im Auge behalten. Auf jeden Fall. Aber jetzt sind wir der Podcast mit den Praxistipps. Jetzt haben wir ja schon quasi ein Framework geliefert, wo man als Engineer und Entwicklerin vielleicht mehr von den eigenen Lieblingsprojekten reinbringen kann dadurch Keep Delights on ist natürlich ganz klassisch Techn und auch die Productivity, dass man da schon Kübeln zur Verfügung hat. Aber ein anderes sehr häufiges Problem, was in der Praxis auftritt, ist, dass man ganz kleinteilige Tasks, Verbesserung Tasks hat, die dann in diesem Kübel landen. Der Kübel geht über. Sagt man bei euch auch geht über oder ist das nur deutsch oder ist das auch schon österreichisch? Ne, er läuft aber siehst du, bei uns geht er über völkerverbindender Podcast. Also der Kübel läuft über, der Eimer läuft über, der Kübel geht über. Und dann fallen natürlich diese kleinteiligen Tasks natürlich weg, weil die anderen großen sind viel wichtiger. Aber man könnte auch sagen, diese feinen, diese vielen kleinen Tasks sind natürlich auch irgendwie sinnvoll und müssen vielleicht in irgendeiner Form erledigt werden. Und nachdem Andy uns ja schon das Andy Framework jetzt quasi geboren hat, hat er darauf sicher auch eine Antwort, oder?"
-    },
-    {
-      "confidence": 0.92769337,
-      "end": 2711764,
-      "speaker": "B",
-      "start": 2686486,
-      "text": "Ich habe da auch eine Antwort, aber die kommt nicht von mir. Die ist aber auch bei der Recherche von diesem ganzen, von dieser ganzen Thematik hier aufgekommen. Und zwar nennt sich das Paper Cuts. Kleine Fixes mit großem Effekt. Also stellt euch vor, einfach, ihr habt ganz viele Dinge, die zwar nie kaputt waren, aber ihr trotzdem jedes Mal stöhnt, wenn sie euch begegnen. Also wachsender Haufen kleiner täglicher Ärgernisse."
-    },
-    {
-      "confidence": 0.8937462,
-      "end": 2722200,
-      "speaker": "A",
-      "start": 2711892,
-      "text": "Also vielleicht die Paper Cuts, falls es jemand nicht kennt. Es gibt ja diesen Spruch Tod der ein hundert, ein tausend Paper Cuts oder ein tausend Paper Cuts. Gibt es das auf Deutsch eigentlich?"
-    },
-    {
-      "confidence": 0.84227556,
-      "end": 2730324,
-      "speaker": "B",
-      "start": 2722860,
-      "text": "Ich kenne das auch nur unter Death by Paper. Ja, Death by Thousand Paper Cuts kenne ich nur."
-    },
-    {
-      "confidence": 0.93777514,
-      "end": 2741492,
-      "speaker": "A",
-      "start": 2730412,
-      "text": "Aber wer sich mal mit einem Papier geschnitten hat, so zwischen den Fingern idealerweise, der weiß, wie schmerzvoll das ist, wenn man das mal ein tausend multipliziert. Die ganzen kleinen Bugs, die tun halt auch weh. Daher kommt es."
-    },
-    {
-      "confidence": 0.9149651,
-      "end": 2917502,
-      "speaker": "B",
-      "start": 2741596,
-      "text": "Und das ubuntu Projekt, also die Linux Distro, hat zwei tausend neunzehn Mission Paper Cuts ausgerufen. Und zwar wollten sie ein hundert Paper Cut bugs in einem Release beheben. Und was ist ein Papercut? Ein Papercut ist etwas, wo ein kompetenter Programmierer nicht länger als einen Tag pro Bug braucht. Und deren Ziel war halt, ein hundert Paper Cuts in einem Release zu fixen. Da gibt es sogar einen Wikipedia Artikel zu. Finde ich auch geil, dass so eine Open Source Mission für den Release auch ein Wikipedia Artikel kriegt. Und dieses Konzept selbst hat GitHub dann irgendwann mal auch übernommen. Ihr wusstet, ihr erinnert euch sehr wahrscheinlich noch, GitHub wurde ja von Microsoft gekauft und danach wusste man gar nicht, was passiert da jetzt und so weiter und so fort. Und dann gab es noch mal auch eine Initiative, die nannte sich dir GitHub. Also liebes GitHub, ich hab da mal ein Anliegen. Wo dann ein Repository erstellt wurde und ganz viele Issues erstellt wurde über diese kleinen Paper Cutscenes, weil wir wissen ja alle, wir sind sehr eigen, wenn ein Button verschoben wird. Und diese kleinen Papercuts findet man auf GitHub überall. Und GitHub hat sich dieses Mission Paper Cuts von Ubuntu genommen und einfach mal gemacht. Und zwar sind die in dieses DIR GitHub Repository gegangen, haben das priorisiert und haben dann diese kleinen Issues einfach mal behoben. Und die sagten, das war super, denn die sind immer hinten rüber gefallen, die waren nie wichtig. Und was die jetzt gemacht haben, die sagten, hey, pass mal auf, das fixen dieser Paper Cuts ist kein Zeit Hassel, das machen wir nicht, wenn mal Zeit ist, sondern die haben das als großes Projekt gemacht. Das war deren Erfolg. Auf Basis von jedem Paper Cut, den die gefixt haben, da haben die Social Media gemacht, die haben das auf ihrem Blog gepostet, einfach nur eine kleine Newsmeldung, hey Jungs und Mädels, wir haben jetzt diesen Button grün gemacht und so weiter. Und warum hat die ganze Thematik funktioniert? Aus drei Gründen. Sie haben daraus wirklich ein Projekt gemacht und das nicht einfach zur Seite geschoben. B die haben bewiesen, dass sie dann der Community auch zuhören. Und der Community, das sind ja im Endeffekt ihre Kunden, wenn man so möchte. Und c weil man jetzt natürlich kontinuierlich diese kleinen Bugs vorgehoben hat, hat man Momentum aufgebaut. Und das ist, glaube ich, ganz wichtig, dass man natürlich auch den Software Engineers, dem eigenen Team zeigt, okay, wir kümmern uns wirklich darum und wir hören auch zu. Sehr, sehr schöne Story, wie ich finde. Und das könnt ihr natürlich auch adaptieren. Also ihr könnt einfach mal sagen O okay, wir sammeln jetzt einfach mal diese kleinen Bugs, die mir einfach immer auf die darf ich auf den Sack gehen? Auf die Nüsse gehen? Auf die Nerven gehen? Auf die Nerven gehen, sagt man hier, glaube ich jetzt. Und dass man, dass man die vielleicht sammelt und vielleicht habt ihr ja dreiig Paper Cuts, dieses man müsste mal, ich müsste das mal beheben, aber. Und dann könnt ihr das auch so eintüten und dann kriegt das vielleicht in improve existing stuff unter in the bucket."
-    },
-    {
-      "confidence": 0.9141635,
-      "end": 2928256,
-      "speaker": "A",
-      "start": 2917646,
-      "text": "Also es ist so was ähnliches wie was zur finanzkrise zwei tausend acht geführt hat oder wo man die ganzen faulen kredite in so pakete geht, gepackt hat in große, dass man sie nicht mehr gesehen hat und die hat man dann verkauft."
-    },
-    {
-      "confidence": 0.93617105,
-      "end": 2939296,
-      "speaker": "B",
-      "start": 2928368,
-      "text": "Aber die faulen Kredite wurden ja dadurch nicht besser. Also wenn du den Paper Cut löst, kannst du dich ja nicht mehr an dem Papier schneiden. Also ist das ja eine Verbesserung. Und ich wüsste nicht, wie das jetzt mit einem vollen Kredit in einem neuen Format."
-    },
-    {
-      "confidence": 0.9299231,
-      "end": 2952942,
-      "speaker": "A",
-      "start": 2939408,
-      "text": "Okay, also wir nehmen nur das Paketieren davon, dass man Pakete schnürt, um dann ein größeres Projekt zu haben, was nicht automatisch so schnell verdrängt wird und das Ganze auch noch marketingmässig gut vermarktet wird am Ende. Vielleicht für den User ideal."
-    },
-    {
-      "confidence": 0.9156879,
-      "end": 2997714,
-      "speaker": "B",
-      "start": 2953086,
-      "text": "Du sagst das so salopp. Ich denke wirklich, dass das der essentielle Erfolg war, dass du okay, du hast eine ganz kleine Sache gefixt und du machst einen Tweet darüber. Und das sehe ich auch bei ganz vielen side Projects so. Diese ganzen Indie Hacker, die machen zum Beispiel immer so Weekly Logs oder die schippen eine Sache und machen einen LinkedIn Post. Da denkt man sich, ist ja lächerlich, ne? Aber das hält das Momentum hoch, das hält die Traction hoch und auch mein Vertrauen zum Indie Hacker wird dadurch irgendwie gesteigert. Ich weiß nicht warum, aber ich finde das super, weil ich denke mir hey, das aktive Entwicklung hinter verlinken wir auf jeden Fall in den Shownotes einmal die ein hundert Paper Cuts Mission von Ubuntu, einmal eine Papercut Wikipedia Artikel und natürlich das GitHub Repository und die Story von GitHub."
-    },
-    {
-      "confidence": 0.9158498,
-      "end": 3074144,
-      "speaker": "A",
-      "start": 2997762,
-      "text": "Das heißt, das nächste Mal, wenn ihr wieder in so einem Planning steckt oder auch euer side Project plant, dann versucht mal diese ganzen Frameworks anzuwenden. Also vom Matt Ecclestone von Dropbox, der die vier Buckets definiert hat, dann als Andy Framework natürlich dann, um innerhalb von den Buckets zu optimieren und zu sortieren. Und wenn ihr wirklich ganz viele kleine bugs habt, die alle kleine Papercuts sind oder eigentlich das Papier ist, das schneidet, dann versucht mal das Ganze zu paketieren. Und ich glaube, da sind paar ganz coole Ansätze dabei, wo man dann das einfach mal ausprobieren kann und auch ganz lightweight einführen kann. Also da braucht es keine große Firmenumstellung, irgendwie großen Support von der obersten C Ebene. Das kann man wirklich im Team einführen. Natürlich braucht Support schon vom Product owner Seite, von den ganzen Leuten im Team. Also auf der Ebene muss natürlich schon das Commitment da sein, aber es ist jetzt kein Framework, was man irgendwie firmenweit einführen muss. Das kann man einfach mal ausprobieren, losstarten. Auch das Paketieren der Papercuts ist kein Problem. Das kann man einfach mal vorschlagen und eine coole Initiative draus machen, wo dann vielleicht auch alle Mitwirkenden Spaß dabei haben, irgendwie veröffentlichen kann jeden Tag, was man cooles erreicht hat. Also das ist motivationstechnisch sicher auch ein guter Ansatz, den man einfach mal ausprobieren kann."
-    },
-    {
-      "confidence": 0.9386669,
-      "end": 3158534,
-      "speaker": "B",
-      "start": 3074232,
-      "text": "Ihr könnt auch noch kleiner starten. Ihr könnt zum Beispiel diese vier Buckets einfach mal auf einen Scrum Sprint anwenden. Angenommen eure Sprintlänge ist zwei Wochen, plant doch einfach den Sprint einfach mal innerhalb dieser vier Buckets. Und bezüglich der Kommunikation nutzt doch einfach euren internen Slack Channel oder vielleicht den Engineering Slack Channel oder den random Slack Channel oder was auch immer ihr da habt. Oder vielleicht habt ihr eine interne Blogging culture oder so einen internen Mastodon Server oder ähnliches in eurer Firma. Was ich euch sagen kann, wenn ihr das auf großem Stil ausrollen wollt im Quartal und echt viele Initiativen habt, diese was ist eigentlich das Problem, welches wir lösen wollen? Wie sieht Erfolg aus? Wie messen wir Erfolg und was erreichen wir dieses Quartal? Das ist schon, also mich hat das schon ein paar Stunden gekostet und man muss sehr viel nachdenken. Man hinterfragt sich auch konstant, ist das jetzt wirklich das Problem, was wir lösen? Aber das tolle dabei ist, wenn ihr das einmal habt, also bei mir kann jetzt zumindest für dieses Quartal kann jetzt jeder VP um die Ecke kommen und ich habe sofort antworten parat. Und man fängt nicht an zu stammeln und man kann wirklich sagen, welches Problem man denkt zu lösen. Ob die Person, die mich dann challenge, dann sagt, das ist ein Problem, das ist dann immer noch was anderes. Aber das ist dann natürlich eine andere Sichtweise aus einer anderen Flughöhe. Aber startet klein, quatscht einfach mit eurem Scrum Master, mit eurem Projektleiter, Vorgesetzten oder ähnliches. Einfach mal, ob ihr das nicht vielleicht auf einen im nächsten Scrum Sprint ausprobieren wollt."
-    },
-    {
-      "confidence": 0.92144287,
-      "end": 3184582,
-      "speaker": "A",
-      "start": 3158582,
-      "text": "So und nachdem das schon so gut geklappt hat mit den Akronymen, jetzt kommt das Ende von dem Podcast. Also denkt daran, das Kiosk Framework zu verwenden. Also einmal klicken und teilen. I ins Gespräch kommen, bei uns in der Discord Community vorbeischauen. Oh, wie offenes Feedback geben. Sag, was du von dieser Episode hältst. S wie Sterne da lassen in deiner Podcast App. Spotify, Apple und was es sonst noch so gibt. Und K kurzes Review schreiben, besonders auf."
-    },
-    {
-      "confidence": 0.88016206,
-      "end": 3201408,
-      "speaker": "B",
-      "start": 3184606,
-      "text": "Apple kurzes Review schreiben. Ja, wundervoll. Ich hasse zwar Abkürzungen, Akronyme, weil ich muss immer fragen, was heißt aber das Kiosk Framework werden wir natürlich auch veröffentlichen. Kriegen wir auch ein Logo dafür, Wolfgang?"
-    },
-    {
-      "confidence": 0.94426227,
-      "end": 3214768,
-      "speaker": "A",
-      "start": 3201504,
-      "text": "Ja, bekommen wir vielleicht hin. Und zum ins Gespräch kommen, wer irgendwie Ideen hat, wie man das Andy Framework besser noch umsetzen kann, akronym technisch, bitte natürlich uns auch wissen lassen, am besten auf Discord."
-    },
-    {
-      "confidence": 0.91596246,
-      "end": 3256850,
-      "speaker": "B",
-      "start": 3214864,
-      "text": "Aber jetzt, jetzt mal ohne Flachs. Mich interessiert auch wirklich, wie ihr eigentlich eure Produktivitäts Tasks bei euch in die Arbeit mit einplant. Kommt einfach mal in die Discord Community vorbei oder schreibt uns über Mastodon und lasst es mich wissen. Mich würde wirklich interessieren, wie schafft ihr es, euren Product Owner oder euren Engineering Manager oder euer Management zu überzeugen, dass ihr jetzt mal ein bisschen was für eure Team Produktivität tun müsst oder das Alerting anpassen muss oder oder. Weil das ist ja immer wieder eine Herausforderung. Mich wird paar Antworten von euch freuen. Ansonsten hoffen wir natürlich, dass ihr etwas Inspiration mitgenommen habt. Würde ich sagen, viel Spaß beim Testen. In den Shownotes findet ihr alle Links. Bis zur nächsten Episode und tschüss."
-    }
-  ],
-  "webhook_auth": false
+    "acoustic_model": "assemblyai_default",
+    "audio_duration": 3204,
+    "audio_url": "https://cloud.inlupus.at/s/aamMLMZtSrJEZ6b/download/ep192_balacing_resources.mp3",
+    "auto_chapters": false,
+    "auto_highlights": false,
+    "auto_highlights_result": {},
+    "confidence": 0.92049646,
+    "content_safety": false,
+    "content_safety_labels": {
+        "status": "unavailable"
+    },
+    "custom_topics": false,
+    "disfluencies": false,
+    "dual_channel": false,
+    "entity_detection": true,
+    "filter_profanity": false,
+    "format_text": false,
+    "iab_categories": true,
+    "iab_categories_result": {},
+    "id": "e93ec171-63b0-418d-9245-e972fa59b858",
+    "language_code": "de",
+    "language_detection": false,
+    "language_model": "assemblyai_default",
+    "punctuate": true,
+    "redact_pii": false,
+    "redact_pii_audio": false,
+    "sentiment_analysis": false,
+    "speaker_labels": true,
+    "speakers_expected": 2,
+    "speed_boost": false,
+    "status": "completed",
+    "summarization": false,
+    "throttled": false,
+    "utterances": [
+        {
+            "confidence": 0.92554396,
+            "end": 85490,
+            "speaker": "A",
+            "start": 3360,
+            "text": "Für viele ist es ein notwendiges Übel, für andere die beste Zeit des Jahres. Die Quartals oder Jahresplanung. Firmen lieben es ja zu planen, neue Features zu versprechen und Roadmaps zu füllen. Produktmanager ordnen ihre Ideen ein und alles scheint seinen Platz zu finden. Doch am Quartalsende fragt man sich warum hat das Feature sechs statt zwei Wochen gedauert? Warum werden wir langsamer statt schneller? Eine der möglichen die Perspektive der Entwickler innen fehlt häufig in der Planung. Kennt ihr vielleicht auch technical debt nächstes quartal. Automatisierung für weniger manuelle arbeit lohnt sich nicht. Kleine bugs fixen zu unwichtig. Können wir mal nebenbei machen. Software updates? Macht doch ops. Und genau so wiederholt sich das spiel regelmäßig alle drei Monate. In dieser Episode zeigen wir euch ein Framework, mit dem ihr Entwicklungsressourcen sinnvoll balancieren könnt zwischen neuen Features, Technical Depth und Produktivitätsboosts. Wir erklären, warum Planung wichtig ist, woher all die Anforderungen kommen, was Overcommitments und Rollovers sind und wie Projekte wie Mission Papercut bei GitHub und bei Ubuntu kleine Bugs groß gemacht haben. Mit klaren Kategorien wie Keep the lights on, build new stuff, improve stuff and productivity be bekommt ihr als Devs eine Stimme und endlich die Zeit, um mal aufzuräumen."
+        },
+        {
+            "confidence": 0.8983381,
+            "end": 162710,
+            "speaker": "B",
+            "start": 85570,
+            "text": "Los geht's. Beim heutigen Thema schlägt das Herz höher. Bei allen Produktmanagern und bei den meisten Software Engineern geht das Herz in die Hose. Denn es geht nämlich um Planung. Es geht um Quartalsplanung, es geht um Jahresplanung, es geht eigentlich um die woran arbeiten wir eigentlich in den nächsten Monaten? Denn Firmen lieben es zu planen und ihre Ressourcen zu verwalten. Und wenn man danach mal googelt, dann kommt man relativ schnell auf den Begriff Enterprise Resource Planning ERP System. Und dann bin ich so von Höcksgen auf Stöcks gekommen und habe mir gedacht, ist Jira eigentlich ein ERP System bzw. Kann Jira als ERP System bezeichnet werden? Denn im Endeffekt hat Jira ja Tickets und Menschen arbeiten da. Und Menschen werden ja immer als Ressource bezeichnet. Deswegen heißt es ja auch Human Resources, zum Beispiel die Abteilung. Und da bin ich nach ChatGPT gegangen und hab ChatGPT die Situation erklärt. Hör mal, pass mal auf, wir haben Menschen, Programmierer, wir haben Jira Tickets und so weiter und so fort. Kann man Jira als ERP System bezeichnen? Und ChatGPT hat erst mal gesagt hör mal, Andi, das ist ein super Gedankengang, klingt auch im ersten Moment logisch, aber. Und dann kam dann eine Antwort warum das nicht geht. Kurzum ein ERP System ist viel größer und holistischer gedacht und Jira zählt da nicht dazu."
+        },
+        {
+            "confidence": 0.93475324,
+            "end": 171590,
+            "speaker": "A",
+            "start": 162870,
+            "text": "Also ich bin so froh, dass es ChatGPT gibt, dann muss ich nicht mehr solche dummen Fragen beantworten. Also ich finde das wirklich super. Also danke dir, ChatGPT."
+        },
+        {
+            "confidence": 0.9031506,
+            "end": 176102,
+            "speaker": "B",
+            "start": 171670,
+            "text": "Naja, ChatGPT hat ja schon gesagt, war gar nicht so doof und der Gedanke ist nachvollziehbar."
+        },
+        {
+            "confidence": 0.8606371,
+            "end": 177974,
+            "speaker": "A",
+            "start": 176246,
+            "text": "Ja, so nett wäre ich nicht gewesen."
+        },
+        {
+            "confidence": 0.8837584,
+            "end": 193220,
+            "speaker": "B",
+            "start": 178102,
+            "text": "Ich glaube, das ist auf jeden Fall eine gute Bierdiskussion in irgendeinem Meetup. Kann man Jira als ERP System bezeichnen? Aber dann bin ich wieder. Ich bin ja von Höxen auf Stöcks gekommen, habe ja gerade gesagt, habe ich den Hasenbau runter und dann habe ich wieder darüber nachgedacht. Sind Menschen Ressourcen bzw. Ist die Bezeichnung okay?"
+        },
+        {
+            "confidence": 0.95654,
+            "end": 196500,
+            "speaker": "A",
+            "start": 193220,
+            "text": "War das jetzt eine Frage oder sprichst du noch mit dir selber?"
+        },
+        {
+            "confidence": 0.81153786,
+            "end": 199604,
+            "speaker": "B",
+            "start": 196580,
+            "text": "Ne, das habe ich dann nicht ChatGPT gefragt. Das frage ich jetzt den Wolfgang."
+        },
+        {
+            "confidence": 0.9468527,
+            "end": 223378,
+            "speaker": "A",
+            "start": 199652,
+            "text": "Ja, du bist ja immer der, der sagt, man darf nicht Ressource sagen zu einem Menschen. Ich denke mir immer das so, was du ja planst bei so einer Ressourcenplanung, ist ja nicht der Mensch, sondern die Zeit, also die Ressource Zeit von diesem Menschen. Insofern kann man das dann schon natürlich sagen, wenn man nicht den Menschen an sich als Ressource sieht, sondern die Zeit dieses Menschen. Weil du tauscht ja Lebenszeit gegen Geld, wie du auch immer so schön sagst."
+        },
+        {
+            "confidence": 0.96219796,
+            "end": 230930,
+            "speaker": "B",
+            "start": 223474,
+            "text": "Das ist korrekt, aber immer wenn man in einem Meeting sitzt und dann sagt jemand aber wir haben ja keine Ressourcen, dann redet er ja über Menschen. Wir haben ja nicht genug Menschen oder."
+        },
+        {
+            "confidence": 0.923378,
+            "end": 232706,
+            "speaker": "A",
+            "start": 230970,
+            "text": "Nicht genug Zeit von Menschen."
+        },
+        {
+            "confidence": 0.9439303,
+            "end": 240242,
+            "speaker": "B",
+            "start": 232818,
+            "text": "Da sind wir aber schon wieder beim Thema. Wenn wir nicht genug Zeit haben, dann ist für mich die haben wir richtig priorisiert? Und genau darum geht es heute."
+        },
+        {
+            "confidence": 0.9177021,
+            "end": 249698,
+            "speaker": "A",
+            "start": 240306,
+            "text": "Wie kommt Zeit? Haben wir immer zu wenig? Also darum geht es ja. Darum kommst du ja erst zur Priorisierung eigentlich, weil du zu wenig Zeit hast. Wenn du genug Zeit hättest, dann ist."
+        },
+        {
+            "confidence": 0.9195957,
+            "end": 328462,
+            "speaker": "B",
+            "start": 249754,
+            "text": "Ja sowieso egal, sage ich ja. Und wenn jemand sagt, ich habe zu wenig Leute, dann heißt es für mich auch OK, man arbeitet in einem Rahmen und man hat zu schlecht priorisiert, weil man sich zu viel vorgenommen hat. Auf jeden Fall bin ich genau über dieses Problem die Tage wieder gestolpert. Ich durfte mal wieder eine Quartalsplanung machen. Ich habe natürlich wie immer zu wenig Leute und wie immer viel zu viele Produkte und Projekte auf dem Plan. Und dann war die woran arbeiten wir denn eigentlich? Packe ich einfach alles rein und sage sucht euch was aus und wir overcommitten den Monat oder wie schmeiße ich was raus? Also ich habe eine ganz klassische Quartalsplanung gemacht und dieses Thema habe ich heute mitgebracht, weil ich mich damit dann ein bisschen beschäftigt habe, wie wir auch Entwickler, ich sag mal so ein kleines Wort, in der Planung mitgeben können, aber auch hoffentlich das Business zufriedenstellen können. Denn in meiner anfangs Karriere als Softwareentwickler, da wurde mir immer so ein Quartalsplan vorgelegt und ich habe nicht verstanden, wie der zustande gekommen ist. Und dann habe ich ihn einfach abgearbeitet. Ich habe aber damals auch nie gefragt. Später, als ich mehr Erfahrung hatte, wollte ich immer technische Schulden abbauen und immer das Produkt stabiler machen. Da hatten wir dann aber nie Zeit dafür, weil die Quartalsplanung sowieso schon overcommitted war. Deswegen habe ich gedacht, machen wir heute mal eine Selbsthilfegruppe zur Quartalsplanung bzw. Zur Balancierung und Budgetierung von Engineering Ressourcen."
+        },
+        {
+            "confidence": 0.93716264,
+            "end": 374236,
+            "speaker": "A",
+            "start": 328606,
+            "text": "Es klingt jetzt ziemlich langweilig, wie du das sagst, Budgetierung. Ich glaube, dass es ja auch sehr hilfreich ist, wenn du zum Beispiel dein eigenes Projekt managst. Also das ist ja auch so was als. Also egal, ob man jetzt alleine ist oder zu zweit, sobald man an dem Projekt arbeitet, musst du eigentlich priorisieren und dir überlegen, auch wenn es nur ein side Hustle ist, irgendein side Project, wie teile ich die paar Stunden, die ich habe, pro Woche ein und was für Features baue ich oder wie investiere ich meine Zeit? Und auch da, jeder, glaube ich, der side Hustle hat, weiß, wie schwierig das ist und wie overcommitted man meistens ist, weil das schafft man alles in dieser Woche und alles kein Problem in den zwei Stunden jeden Abend und dann ist eine Woche vergangen und man hat genau nichts geschafft. Also auch da ist Priorisierung absolut ein Thema."
+        },
+        {
+            "confidence": 0.91023886,
+            "end": 382316,
+            "speaker": "B",
+            "start": 374348,
+            "text": "Aber warum kann ich nicht einfach in meinem side Hustle mein Backlog abarbeiten? Ich meine, das ist sowieso immer voll und das wird auch nie leerer. Kann ich da nicht einfach von oben abarbeiten und abfahrt?"
+        },
+        {
+            "confidence": 0.92749953,
+            "end": 398604,
+            "speaker": "A",
+            "start": 382348,
+            "text": "Ja, ich glaube, das machen auch viele. Darum sind so viele side Project immer nur in der Schublade und nie online. Also die domain ist dann online mit einer leeren Seite oder coming soon, aber weil man halt dann immer an dem arbeitet, was eigentlich keine Bewegung nach vorne bringt. Und genau darum geht es eigentlich. Wie kommt man nach vorne?"
+        },
+        {
+            "confidence": 0.9066526,
+            "end": 406508,
+            "speaker": "B",
+            "start": 398652,
+            "text": "Bei Seitenprojekten stimme ich dir zu. Ich glaube, ich habe auch wieder viel zu viele Domains, die ich langsam mal wieder kündigen müsste, denn ich glaube, ich kaufe die immer so kurz vorm Sommer und bald werden sie."
+        },
+        {
+            "confidence": 0.84768164,
+            "end": 410044,
+            "speaker": "A",
+            "start": 406564,
+            "text": "Ich habe gerade kürzlich drei Domains gekündigt, bin ganz stolz auf mich."
+        },
+        {
+            "confidence": 0.95079285,
+            "end": 411564,
+            "speaker": "B",
+            "start": 410132,
+            "text": "Meine Frage ist, wie alt waren die?"
+        },
+        {
+            "confidence": 0.94599456,
+            "end": 417948,
+            "speaker": "A",
+            "start": 411652,
+            "text": "Ja, schon alt. Die waren teilweise sogar aktiv. Aber ich habe jetzt angefangen, mit dir nicht mehr aufzuheben und einfach wieder rauszukicken."
+        },
+        {
+            "confidence": 0.9350968,
+            "end": 482324,
+            "speaker": "B",
+            "start": 418044,
+            "text": "Respekt für deinen Mut. Glückwunsch. Hätte ich mich bisher nicht getraut. Aber in einer Firma, da kann man natürlich nicht einfach so vor sich hin arbeiten und nicht einfach das Backlog abarbeiten. Denn wir wissen alle, das Backlog ist immer voll, es wird nicht leerer. Und ich weiß ja nicht, wie euer Backlog zustande kommt, aber im Backlog sind auch viele, man müsste mal Tasks, so was, was einem aufgefallen ist. Man packt das ins Backlog und wissen wir sowieso, nach drei Jahren macht man einfach ein Backlog Cleanup. Alles, was älter als zwei Jahre ist oder älter als sechs Monate, kein Update hat, schmeißt man einfach weg. Denn Engineering ist in der Regel sehr, sehr teuer, denn es ist nicht umsonst, dass das Engineering Department einer Firma in der Regel der teuerste Headcount der Firma ist. Deswegen ist es zwar gut, wenn ihr immer, immer, immer wieder Tickets ins Backlog packt, aber es bringt eigentlich nichts, wenn die sowieso nicht angefasst werden. Denkst du, Wolfgang, wenn wir ein System haben zum Backlog abarbeiten, sei es OKRs, sei es VMOMs, sei es Scrum oder Kanban, dass das einen Unterschied macht? Oder denkst du, solche Systeme beheben das ursprüngliche Problem nicht?"
+        },
+        {
+            "confidence": 0.9242238,
+            "end": 527522,
+            "speaker": "A",
+            "start": 482492,
+            "text": "Was diese Systeme ja alle lösen wollen, ist in einer gewissen Weise Priorisierung, damit man weiß, auf was man sich konzentriert, also an was arbeitet man, damit man weiterkommt, dass man das side Hustle online bringt, dass man die Firma weiterbringt, dass man mehr Kunden gewinnt, was es auch immer ist. Oder aber auch die Produktivität der Entwicklerinnen erhöht. Also also ganz klassisch Technical Debt ist natürlich auch so ein Thema und dafür sind eigentlich die ganzen Frameworks da. Die Frage ist natürlich, wo finden diese Frameworks statt? Also gerade bei OKRs ist es natürlich so, dass das sehr stark von der Produktseite und von oben kommt, die OKRs. Und da natürlich gerade die technischen bereiche oft untergehen, weil man darf ja nicht vergessen, dass wir ganz viele Stakeholder haben in der Firma, die alle irgendwas anderes wollen."
+        },
+        {
+            "confidence": 0.9085561,
+            "end": 545436,
+            "speaker": "B",
+            "start": 527586,
+            "text": "Ich glaube besonders der letzte Satz, das ist das eigentliche Problem, denn man kann ja okay, du bist ein Produktteam, du machst jetzt den Warenkorb in deinem E Commerce Shop. Wo ist denn also jetzt das Problem der Priorisierung, wenn das Team entscheiden kann, was am Warenkorb verbessert wird?"
+        },
+        {
+            "confidence": 0.9210009,
+            "end": 586392,
+            "speaker": "A",
+            "start": 545588,
+            "text": "Ja, du hast jetzt die Sicht vom Produktmanager, vom Product Owner, was es auch immer ist, aber du vergisst natürlich da, dass es da ein Developer Team gibt, was mitzureden hat bei der ganzen Technik. Es gibt vielleicht irgendein Security Team, Audi Team, Compliance Team, die da ständig reink grätschen mit der Security. Es gibt noch vielleicht ein DevOps Team, was in irgendeiner Form mit reinspielt. Du hast die klassische Management Ebene, irgendwo grätscht ein CEO rein in das Ganze, da hat der PO dann auch nicht mehr viel zu reden. Also du hast ganz viele Leute, die in irgendeiner Form andere Prioritäten gerne hätten und natürlich die gegeneinander reiben und die man durch alle mitbedenken muss, wenn man so eine Planung durchzieht."
+        },
+        {
+            "confidence": 0.94477534,
+            "end": 601790,
+            "speaker": "B",
+            "start": 586456,
+            "text": "Gibt es von diesen Zielgruppen bzw. Von diesen Leuten, gibt es da jemanden oder einen Bereich, wo du immer wieder sehr stark grinsen muss, wenn die dir reingrätschen? Da wo du sagst, die schon wieder oder die hatte ich jetzt gar nicht mehr auf dem Schirm, aber irgendwie kommen sie doch jedes Quartal um die Ecke."
+        },
+        {
+            "confidence": 0.9337989,
+            "end": 627800,
+            "speaker": "A",
+            "start": 601870,
+            "text": "Ja, ich würde ja sagen, dass man die meisten eigentlich mitdenken kann, wenn man sich ein bisschen den Kopf zerbricht. Außer natürlich diese C Level Projects, weil die stehen ja nirgends. Die kommen dann ja irgendwann um die Ecke plötzlich. Außer bei Amazon gibt es auch diese C Level Projects, die man dann wirklich einreicht und dann ganz großen Stellenwert haben. Aber noch schlimmer sind natürlich diese Sea Level Projects, die irgendwann während dem Quarter auftauchen und dann plötzlich ganz wichtig sind."
+        },
+        {
+            "confidence": 0.9418263,
+            "end": 640392,
+            "speaker": "B",
+            "start": 627840,
+            "text": "Bei mir anders. Da habe ich immer die Hoffnung, dass C Level nicht mehr so tief in die Produktteams reingrätscht, sondern das irgendwie ganz oben einkippt und dann fällt das wie so eine Murmel runter und irgendwann landet es bei dir als normales Projekt. Bei mir ist es immer der ja."
+        },
+        {
+            "confidence": 0.9231362,
+            "end": 643976,
+            "speaker": "A",
+            "start": 640416,
+            "text": "Ja, aber die Murmel ist so hoch priorisiert, dass sie die fast erschlägt."
+        },
+        {
+            "confidence": 0.91290826,
+            "end": 692304,
+            "speaker": "B",
+            "start": 644168,
+            "text": "Bei mir ist es immer der Vertrieb bzw. Sales, weil die haben nämlich in der Regel immer schon alles verkauft, was die dir auf deinen Tisch setzen. Dann sagen die, wenn das Feature drin ist, dann unterschreibt der Kunde einen Vertrag. Und das ist ja prinzipiell eine super Sache für so Unternehmen, aber die sind dann immer so laut und gehen dir so auf die Nerven, weil die natürlich eine Provision kriegen, wenn der Kunde unterschreibt. Die haben natürlich dann noch einen persönlichen Incentive, wenn der Kunde unterschreibt und die haben denen dann wieder einem vom Pferd erzählt. Da denke ich mir immer so, oh fuck, weil die kann es ja auch nicht planen. Die schließen ja nicht nur am Anfang oder am Ende vom Quartal irgendwelche Deals ab, die sind ja konstant am Telefon und du kannst ja nicht ausdenken, was Kunden wollen, weil du weißt ja, nur weil der Kunde etwas möchte, heißt das nicht, dass er das wirklich will. Der kennt nur diese eine Lösung und denkt, das löst sein Problem ja du."
+        },
+        {
+            "confidence": 0.91636,
+            "end": 732522,
+            "speaker": "A",
+            "start": 692312,
+            "text": "Hast natürlich recht, in den meisten Umfeldern, wo ich bisher natürlich klassisch gearbeitet habe, da gab es keine Kunden in dem Sinne oder Kundenprojekte, darum ist mir das auch nicht so im Kopf. Das wären dann wahrscheinlich diese c Level Projekte, weil die wichtigen Features entscheidet dann irgendwer anderer. Das ist immer das Problem. Aber ich habe gerade selber in einem side Project mit einem Kollegen genau dasselbe Problem gehabt. Wir haben gerade einen neuen Kunden diskutiert und mein Kollege sagt, ja, da brauchen wir eh nur das kleine Feature implementieren und dann sind wir fertig. Und ich hab so gemeint, naja, in meinem Sales Call habe ich eigentlich noch Feature x und Z versprochen und dann sind so die Augen auch nach oben gegangen von meinem Kollegen. Also ich scheine schon ein guter sales."
+        },
+        {
+            "confidence": 0.948264,
+            "end": 735470,
+            "speaker": "B",
+            "start": 732586,
+            "text": "Mensch zu sein oder bist du jetzt der nervige Vertrieb?"
+        },
+        {
+            "confidence": 0.9281636,
+            "end": 740246,
+            "speaker": "A",
+            "start": 735530,
+            "text": "Kann auch sein, aber wir haben den neuen Kunden, hat er schon unterschrieben fast."
+        },
+        {
+            "confidence": 0.9267895,
+            "end": 852360,
+            "speaker": "B",
+            "start": 740358,
+            "text": "Also habt ihr noch keinen Kunden, von daher erst wenn die Tinte trocken ist. Also so gut im Sales bist du wohl noch nicht. Aber kommen wir zurück zur Quartalsplanung oder Jahresplanung oder drei Jahresplanung, wie auch. Und zwar habe ich mich da vor kurzem wieder mit beschäftigt und habe mir überlegt, okay, wie gehe ich da jetzt wieder ran und habe auch ein bisschen recherchiert und da bin ich über ein Framework gestolpert, was aus dem Hause Dropbox gekommen ist, was ich eigentlich ziemlich cool fand. Und zwar geht es darum, dass man eigentlich bei einer Planung vier Bereiche hat, wovon ein Bereich Pflicht ist und drei Bereiche, ich sag mal optional bzw. Können gefüllt werden. Die vier Bereiche heißen keep the lights on, also KTLO, also mach das, was gemacht werden muss, das ist der Pflichtbereich und die anderen Bereiche nennen sich build new stuff, improve existing stuff und increase your productivity. Wenn wir uns die einzelnen Bereiche mal anschauen, ist das eigentlich super smart, denn keep the lights on, das ist so die ehrliche Grundlinie. Du hast ein Produkt, da muss die Grundlinie gehalten werden und man stellt sich die was kostet uns diese Baseline zu halten? Für Dropbox wäre das jetzt okay, wir halten den Storage und so weiter, wir halten alle Features, welche Infrastrukturthemen müssen wir machen, damit wir einfach ein kontinuierliches Kundenwachstum bei gleichen Features haben und so weiter und so fort. Also die Mindestaufgaben zur Aufrechterhaltung des derzeitigen Dienstleistungsniveaus, würde ich mal so sagen, das, was auf der Webseite gerade steht. Dazu zählt natürlich dann sowas wie ganz klassische Audits, On call Updates von Dependencies für Security und so weiter und so fort. Das ist Pflicht. Weil wenn du die Lichter nicht anlässt, dann hört die Musik halt irgendwann auch auf zu spielen und dann hast du vielleicht auch keinen Job."
+        },
+        {
+            "confidence": 0.8897825,
+            "end": 853592,
+            "speaker": "A",
+            "start": 852440,
+            "text": "Was ist mit Security?"
+        },
+        {
+            "confidence": 0.89599705,
+            "end": 860984,
+            "speaker": "B",
+            "start": 853736,
+            "text": "Ja, habe ich ja gesagt, Updating von Dependencies und Co. Das zählt ja da rein. Audit zählt ja auch da rein. Sind ja auch alles Security Bereiche."
+        },
+        {
+            "confidence": 0.935626,
+            "end": 863080,
+            "speaker": "A",
+            "start": 861112,
+            "text": "Aber keine Verbesserung von Security?"
+        },
+        {
+            "confidence": 0.95016456,
+            "end": 866574,
+            "speaker": "B",
+            "start": 863160,
+            "text": "Ne, das wird dann in das Bucket Improve Existing Stuff fallen."
+        },
+        {
+            "confidence": 0.9268848,
+            "end": 881106,
+            "speaker": "A",
+            "start": 866672,
+            "text": "Du hast es jetzt so lapidar irgendwie aufgezählt, das gehört da rein und das kann man dann in den Bucket werfen, damit man da eine Übersicht hat. Also darum gibt es ja mehrere Buckets. Aber woher weiß ich denn jetzt im Vorhinein, wie viel Arbeit es ist im nächsten Quarter?"
+        },
+        {
+            "confidence": 0.941505,
+            "end": 887154,
+            "speaker": "B",
+            "start": 881218,
+            "text": "Bist du gerade im ersten Quartal mit deinem Produkt und ist das die erste Quartalsplanung oder hast du bereits ein Quartal gemacht?"
+        },
+        {
+            "confidence": 0.95673275,
+            "end": 890018,
+            "speaker": "A",
+            "start": 887202,
+            "text": "Na, kann ja auch im letzten Quartal schon was gegeben haben."
+        },
+        {
+            "confidence": 0.9421743,
+            "end": 892270,
+            "speaker": "B",
+            "start": 890154,
+            "text": "Ja, dann hast du eine Basislein oder."
+        },
+        {
+            "confidence": 0.93323,
+            "end": 897468,
+            "speaker": "A",
+            "start": 893060,
+            "text": "Ich führe ja gerade dieses neue System ein, ich habe nur ganz viele Tickets im letzten Quartal."
+        },
+        {
+            "confidence": 0.9465169,
+            "end": 910844,
+            "speaker": "B",
+            "start": 897564,
+            "text": "Ja, und die haben doch wohl eine Kategorie oder ähnliches. Dann setzt man sich halt mal hin und geht durch, okay, was habe ich im letzten Quartal so alles weggeballert und kategorisiere die einmal. Da kann ich ja ganz einfach mit Jira in meinem neu erlernten ERP System mit Labels machen."
+        },
+        {
+            "confidence": 0.88548183,
+            "end": 914140,
+            "speaker": "A",
+            "start": 910892,
+            "text": "OK, also du setzt Labels voraus und dann noch Time Tracking."
+        },
+        {
+            "confidence": 0.9407731,
+            "end": 965884,
+            "speaker": "B",
+            "start": 914220,
+            "text": "Also Time Tracking würde ich jetzt nicht voraussetzen, aber ich würde eher mal sagen, die Anzahl der Tickets. Natürlich. Ich sage jetzt nicht, dass jedes Ticket zwei Stunden sein muss oder jedes Ticket zwei Tage. Kann durchaus sein, dass ein Ticket fünf Minuten ist. Offen gesprochen, in der Software Engineering Welt ist nichts fünf Minuten und das andere ein Tag. Alles gut. Aber da geht es mir ja nur um eine grobe Hausnummer. Also reden wir jetzt hier von zwanzig Tickets update Dependency oder reden wir von zwei hundert. Und dann ist ja hoffentlich ein anderes Bauchgefühl. Wenn du zwanzig Tickets hast, da wo jedes Ticket vier Tage dauert, dann solltest du vielleicht mal ein Ticketing ein bisschen anpassen oder ähnliches. Aber gehen wir mal von einer ausgewogenen Zeit Balance pro Ticket aus. Manche fünf Minuten, manche Tag. Dann hebt sich im Mittel irgendwann auf und dann kriegst du ja ein Gefühl dafür. Es geht ja nicht darum, dass du eins zu eins das ganze Quartal bis auf die letzte Minute verplanst."
+        },
+        {
+            "confidence": 0.9436611,
+            "end": 979684,
+            "speaker": "A",
+            "start": 965932,
+            "text": "Es gibt ja diese Daumenregel, dass es zwanzig Prozent von den Herstellungskosten sind, die dann als Wartung quasi entstehen pro Jahr. Kannst du das nachvollziehen in der Praxis? Ist das eine Regel, mit der du arbeitest?"
+        },
+        {
+            "confidence": 0.94573224,
+            "end": 1059084,
+            "speaker": "B",
+            "start": 979812,
+            "text": "Zwanzig Prozent. Also die Zahl kannte ich noch nicht, aber vielleicht nicht immer nur in einem Quartal. Aber wenn man mehrere Quartale übereinander legt, könnte das so im Mittel schon hinkommen. Ich meine, es gibt Quartale, da wirst du mehr Ausfälle haben und da muss dann mehr Arbeit in die Behebung der Ausfälle gesteckt werden. Es gibt Quartale, wo du mehr Dependencies updaten musst. Nehmen wir mal das Quartal, wo Logj, die Sicherheitslücke im Java Code veröffentlicht wurde. Da wurden die zwanzig Prozent wahrscheinlich gerissen in vielen Firmen. Aber ich glaube, so im mittel über vier bis sechs Quartale kann ich mir das schon vorstellen. Und man muss ja auch mal sagen, ich habe gerade Updates von Dependencies gesagt, wir müssen nicht jede Dependency updaten. Natürlich muss man mit dem Lifecycle irgendwie mitgehen und allem drum und dran. Aber was man ja auch machen kann, ist, man kann ja auch einen Sicherheitslückenscanner kaufen, den auf seine Infrastruktur lasten und dann warnt er dich, wenn irgendwo eine Sicherheitslücke in deiner Dependency ist und dann updatest du die Dependency. Du musst ja nicht immer nur updaten des updaten wegen, weil auch beim neuen updaten kann ja neue Bugs reinkommen und allem drum und dran. Und es gibt ja auch LTS Versionen, wo du fünf bis zehn Jahre Support hast. Also deswegen muss man da gucken, okay, was ist gegeben und muss man jetzt alle Dependencies updaten. Aber on call sind da, audits sind da, die kommen jährlich, wenn du mit Kreditkartendaten arbeitest, PCI, DSS, HIPAA Compliance, wenn du mit Gesundheitsdaten arbeitest und ähnliches."
+        },
+        {
+            "confidence": 0.93296,
+            "end": 1065110,
+            "speaker": "A",
+            "start": 1059132,
+            "text": "Wie war das jetzt bei deinem Team, wenn du das gerade angewandt hast? Wie viel Prozent hast du für Keep the lights on eingerechnet?"
+        },
+        {
+            "confidence": 0.90616566,
+            "end": 1080546,
+            "speaker": "B",
+            "start": 1065530,
+            "text": "Leider viel zu viel, also mehr als mehr als zwanzig Prozent, weil wir in einer größeren Firma arbeiten, wo wir aktuell sehr viel migrieren von einer alten Infrastruktur, die deprecated ist, von einem anderen Team maintain wird und so weiter. Also da haben wir."
+        },
+        {
+            "confidence": 0.9403725,
+            "end": 1088882,
+            "speaker": "A",
+            "start": 1080618,
+            "text": "Moment, aber ist Migration dann schon keep the lights on? Weil Migration ist ja eigentlich, was ein Improvement darstellt, oder?"
+        },
+        {
+            "confidence": 0.91289973,
+            "end": 1115640,
+            "speaker": "B",
+            "start": 1088986,
+            "text": "Es kommt darauf an, was du migrierst. Begriffst du jetzt ein altes Framework auf ein neues und dieses neue Framework hat Performance Verbesserungen und erhöht deine Produktivität später, dann ist das das eine. Sagst du jetzt, okay, du änderst jetzt die Service Discovery API von Consul auf irgendwas anderes, dann hat das ja keinen Feature Mehrwert, sondern es ist einfach nur das gleiche, weil das andere System abgeschaltet wird."
+        },
+        {
+            "confidence": 0.95635575,
+            "end": 1124116,
+            "speaker": "A",
+            "start": 1115680,
+            "text": "Okay, also du gehst davon aus, dass du Druck hast, dass du wechseln musst, dass dir das sonst unter dem Arsch weggerissen wird. Dann gibt dir Le, weil sonst sind die Lichter aus."
+        },
+        {
+            "confidence": 0.9548432,
+            "end": 1132420,
+            "speaker": "B",
+            "start": 1124188,
+            "text": "Ja, weil es immer noch dieselbe Firma ist, wird das nicht einfach so weggerissen, aber dann werden andere Timelines gerissen und dann klopfen da Leute bei dir an. Das willst du ja auch nicht."
+        },
+        {
+            "confidence": 0.9127073,
+            "end": 1149316,
+            "speaker": "A",
+            "start": 1132460,
+            "text": "Okay, gut, dann haben wir jetzt da, sagen wir mal, ungefähr zwanzig Prozent oder so veranschlagt. Ich glaube auch, dass es vielleicht eher sogar mehr sein könnten, je nachdem, was man natürlich macht im Team. Was mache ich jetzt mit den restlichen achtzig Prozent? Füße hochlegen finde ich mal gut. Guter Ansatz."
+        },
+        {
+            "confidence": 0.8928925,
+            "end": 1153412,
+            "speaker": "B",
+            "start": 1149428,
+            "text": "Bier kalt stellen, vielleicht noch eine Gulaschsuppe machen und dann Füße hochlegen."
+        },
+        {
+            "confidence": 0.82218784,
+            "end": 1160452,
+            "speaker": "A",
+            "start": 1153476,
+            "text": "Also du plädierst für die Ein tages Woche, nicht die vier Tages Woche, sondern die Ein tages Woche sind ungefähr die zwanzig Prozent."
+        },
+        {
+            "confidence": 0.9237739,
+            "end": 1208656,
+            "speaker": "B",
+            "start": 1160596,
+            "text": "Ich habe so viele Vorschläge und so viele Ideen, gebe zu, ist vielleicht nicht immer die beste dabei, aber. Nein. Also falls du noch drei weitere Tage arbeiten möchtest, könnten wir eine zweite Kategorie einführen, die würde bedeuten Build new stuff. Und da geht es dann wirklich wir bauen neue Features. Neue Features für unsere Kunden. Und das ist wohl, wo die meisten Software Engineers auch wirklich tagtäglich dran arbeiten. Neue Features bauen, neue Produkte launchen und so weiter. Also wirklich einen Mehrwert für die Firma schaffen und für die Kunden. Und da könnte man sagen, okay, da soll natürlich die Maße der Zeit drauf verwendet werden. Wenn wir jetzt von den ein hundert Prozent ausgeben, haben wir schon zwanzig Prozent für keep the lights on verschenkt. Dann würde man jetzt sagen, okay, für Bild News, da könnte man so circa sechzig Prozent allokieren, weil da ist ja auch wirklich, wo das Fleisch steckt, wo das Geld herkommt."
+        },
+        {
+            "confidence": 0.9572914,
+            "end": 1212890,
+            "speaker": "A",
+            "start": 1208688,
+            "text": "Also du meinst jetzt mit sechzig Prozent die sechzig Prozent der verbleibenden achtzig Prozent?"
+        },
+        {
+            "confidence": 0.91206664,
+            "end": 1231702,
+            "speaker": "B",
+            "start": 1213000,
+            "text": "Ja, wie gesagt, Zeiten sind ja immer recht schwierig. Du overcomitest ja in der Regel sowieso, dann geht vielleicht noch, dann ist noch wer krank und so weiter. Deswegen bin ich da nicht so auf diese sechzig und zwanzig Prozent fest, sondern eher akzeptiere in deinem Kopf, dass ein Großteil neue Features sein sollen."
+        },
+        {
+            "confidence": 0.9251005,
+            "end": 1237942,
+            "speaker": "A",
+            "start": 1231766,
+            "text": "Okay, bring mir ja neue Kunden. Darum kann man die Kunden ja auch so viel in den Sales Gesprächen versprechen."
+        },
+        {
+            "confidence": 0.89402515,
+            "end": 1245464,
+            "speaker": "B",
+            "start": 1238006,
+            "text": "Genau, musst du den Vertrieb fragen. Aber da du jetzt der Vertrieb bei deinem side Project bist, wäre das toll, wenn du die drei Features, die du versprochen hast, auch bauen würdest, oder?"
+        },
+        {
+            "confidence": 0.793544,
+            "end": 1246856,
+            "speaker": "A",
+            "start": 1245552,
+            "text": "Die bauen ja dann gemeint."
+        },
+        {
+            "confidence": 0.71634,
+            "end": 1247992,
+            "speaker": "B",
+            "start": 1246968,
+            "text": "Verstehe, verstehe."
+        },
+        {
+            "confidence": 0.9215697,
+            "end": 1268000,
+            "speaker": "A",
+            "start": 1248056,
+            "text": "Okay. Also sechzig Prozent oder der zweite Bucket Build New Stuff, ganz klassisch Produkt driven. Die ganzen Features jetzt bei ganz vielen Firmen hört es eigentlich jetzt schon auf. Also bei ganz vielen Product Ownern, die machen jetzt eigentlich zu. Die sagen, wir haben die neuen Features, wir haben das Nötigste, was zum Betrieb eigentlich verfügbar ist und das war es dann eigentlich jetzt schon."
+        },
+        {
+            "confidence": 0.9123653,
+            "end": 1344324,
+            "speaker": "B",
+            "start": 1268080,
+            "text": "Ja und das finde ich sehr schade, weil da gibt es nämlich jetzt noch zwei Kategorien, die sprechen mir eigentlich aus dem Herzen. Und das eine ist nämlich existierende Features und existierende Funktionalität verbessern. Da wirklich mit der Priorität auch wieder auf Kunden, da kannst du es so bezeichnen, die Qualität des Produktes erhöhen. Nehmen wir mal zum Beispiel jetzt den Merge Button bei GitHub. Wenn der jetzt ganz oben in der UI einen Pull Request wäre, dann würde ich sagen, was macht der da? Weil du machst ja den Code Review, liest die Kommentare und am ganz unten am Ende der Seite entscheidest du, willst du mergen oder nicht? Da musst du wieder hoch scrollen, den Button, den Merch Button dann ganz nach unten zu verschieben, das wäre dann improve existing stuff, weil da erhöhst du die Qualität des Produktes. Da bügelst du mal so ein UI Fehler aus. Oder andere Beispiele, die mit deinen Sinn kommen, sind so Startseite schneller machen oder die Optimierung des Kunden onboarding. Also wenn du neuen Kunden in dein System. GitHub ist aber außerdem auch ein sehr, sehr gutes Beispiel, weil die bloggen auch sehr, sehr viel über diese kleinen Änderungen. Jetzt haben wir das und jetzt haben wir die UI ein bisschen gestreamlined und so. Also diese ganz kleinen Features, zum Beispiel in ganz vielen Produkten wird jetzt auch Dark Mode eingeführt. Das wäre so eine Verbesserung von vorhandenen Funktionalitäten und da freuen sich ja ganz viele."
+        },
+        {
+            "confidence": 0.93907213,
+            "end": 1353604,
+            "speaker": "A",
+            "start": 1344372,
+            "text": "Woher weiß ich denn, ob etwas ein Improvement ist oder eigentlich ein neues Feature? Weil Dark Mode könnte ich ja jetzt sagen, ist eigentlich ein neues Feature, oder?"
+        },
+        {
+            "confidence": 0.9664815,
+            "end": 1360944,
+            "speaker": "B",
+            "start": 1353692,
+            "text": "Was wäre die Begründung, dass Dark Mode ein neues Feature wäre? Es blendet die User bei Nacht nicht und kann deswegen besser den Kaufen Button klicken, oder?"
+        },
+        {
+            "confidence": 0.9141716,
+            "end": 1381200,
+            "speaker": "A",
+            "start": 1361032,
+            "text": "Ja, ich glaube, dass es in vielen Roadmaps eigentlich als Feature drinsteht und weniger als kleines UI Improvement. Gib mir eine Begründung, weil wenn du Improvement siehst, irgendwo am bestehenden System etwas zu verbessern, dann sind wahrscheinlich sehr viele Features auch eigentlich nur eine Verbesserung von irgendeinem Workflow oder so. Also wo zieht man dann die Grenze?"
+        },
+        {
+            "confidence": 0.8968897,
+            "end": 1416872,
+            "speaker": "B",
+            "start": 1381360,
+            "text": "Ich würde sagen, wenn es halt keine neue Funktionalität ist. Dark Mode ist für mich jetzt keine neue Funktionalität, aber anscheinend siehst du das anders vielleicht. Ich sage halt, wenn es zum Beispiel, wenn man die Usability ein bisschen verbessert, das wäre jetzt einfach eine Verbesserung und das wäre kein neues Feature, wenn man die Batterie Lifetime eines hardware Geräts verbessert, würde ich auch nicht als neues Feature. Also ich meine, Apple verkauft das als neues Feature kaufe ich den aber nicht ab in der Hinsicht. Also ich kaufe das Produkt dann schon, aber für mich ist das ein Feature, dass die Batterie Lifetime jetzt zum zwei Stunden Dinge, wenn die Webseite jetzt schneller ist, dann ist das eine Verbesserung."
+        },
+        {
+            "confidence": 0.91227907,
+            "end": 1446980,
+            "speaker": "A",
+            "start": 1417016,
+            "text": "Ich hätte gesagt, vielleicht, wenn man es auf der Feature Liste auf der Webseite anzeigt, aber auch da könnte man natürlich verbesserte Battery Life auch anzeigen. Also ich glaube, es ist schwierig zu trennen, ist aber auch wahrscheinlich gar nicht so wichtig. Es geht halt darum, dass man da irgendeine Trennung findet und eine Einkategorisierung. Es gibt wahrscheinlich ganz viele Bereiche, die jetzt nicht so klar sind. Muss man sich halt einfach entscheiden. Es geht ja immer bei so einem Framework um eine grobe Einschätzung und weniger um was ganz Hartes, was dann in irgendeiner Formel runtergebrochen."
+        },
+        {
+            "confidence": 0.9204787,
+            "end": 1467780,
+            "speaker": "B",
+            "start": 1447060,
+            "text": "Ich stelle mal die Gegenfrage bzw. Die Testfrage, welches Problem löst man, wenn man sich jetzt darauf einigt, ob Dark Mode jetzt eine Verbesserung oder ein neues Feature ist? Also wenn du konstant so viel diskutierst, nur um die Dark Mode Zeit dann in einen dieser Buckets zu allokieren, dann würde ich sagen, ganz im Ernst, lass das mit der Roadmap sein, ich glaube, du hast größere Probleme."
+        },
+        {
+            "confidence": 0.92628837,
+            "end": 1479668,
+            "speaker": "A",
+            "start": 1467940,
+            "text": "Also man nimmt einfach so ein Label oder ein Post it, je nachdem, wo man arbeitet und klebt da einfach möglichst schnell diese Labels dazu. Und in einem schnellen Prozess einigt man sich da einfach auf irgendwas."
+        },
+        {
+            "confidence": 0.9458158,
+            "end": 1493360,
+            "speaker": "B",
+            "start": 1479844,
+            "text": "Ich würde jetzt auf das Feature Dark Mode in der Kategorie Zoom jetzt nicht so viel Zeit verschwenden. Wenn du später noch Zeit über hast, dann könnte man darüber noch diskutieren. Aber während du in dem Prozess bist, ist es glaube ich mehr dem Team geholfen, diese Roadmap zu machen."
+        },
+        {
+            "confidence": 0.9253356,
+            "end": 1502296,
+            "speaker": "A",
+            "start": 1493420,
+            "text": "Okay, aber spätestens jetzt würde der Product Owner sagen, jetzt haben wir neue Features und alte Features verbessern für den Kunden, aber jetzt ist Schluss."
+        },
+        {
+            "confidence": 0.9197132,
+            "end": 1593992,
+            "speaker": "B",
+            "start": 1502408,
+            "text": "Genau. Und jetzt kommt nämlich die Power der Entwicklung. Und zwar gibt es nämlich noch ein viertes Bucket, das nennt sich die Erhöhung, die Produktivität. Und das ist in der Regel nicht Kunden sichtbar. Das ist oft engineering driven, also für uns alle. Und da geht es zum Beispiel die Erhöhung der Testabdeckung oder die Test Automation, die Verbesserung der Uptime der Webseite oder des Monitorings, damit zum Beispiel bei Keep the lights on später weniger Alerts kriegt, damit man weniger Keep the lights on Zeit allokieren muss. Das wäre zum Beispiel die Erhöhung der Produktivität. Oder ihr setzt Cursor jetzt in der Firma ein und integriert Cursor mit eurem GitHub und allem drum und dran und verwendet da ein bisschen Zeit drauf, damit ihr dann Coding machen könnt oder was weiß ich nicht. Punkt ist, ihr sorgt dafür, ihr allokiert ein bisschen Zeit, um euch produktiver zu machen. Und dazu zählt unter anderem auch vielleicht technische Schulden abbauen oder diese lange Klasse da endlich mal ein bisschen aufsplitten oder nutzbar machen oder, oder oder. Sollte natürlich dann schon euch wirklich, ich sage mal, produktiver machen, denn nur Refactoring des Refactorings wegen, hatten wir ja auch schon mal drüber gesprochen, bringt es halt auch nichts, wenn es euch nicht kurz, mittel oder langfristig schneller in der Arbeit macht. Wenn ihr zum Beispiel Arbeit ins Alerting steckt und das Alerting somit genauer wird und ihr euch deswegen zehnmal weniger gepaged werdet. Das würde ich sagen, ist ein mega Boost. Nicht nur für die Produktivität, weil ihr dann weniger an den Computer müsst, sondern auch für die mentale Gesundheit, würde ich mal sagen."
+        },
+        {
+            "confidence": 0.89609987,
+            "end": 1621378,
+            "speaker": "A",
+            "start": 1594136,
+            "text": "Jetzt habe ich da meine vier Buckets und versuche mein Planning anhand dieser vier Buckets zu machen. Jetzt habe ich aber ganz klassisch in meiner Firma vielleicht OK oder irgendein anderes Framework schon im Einsatz, also was auf höherer Ebene das Ganze auch koordiniert. Funktioniert es im OKR Setting? Kann ich sowas einsetzen in einem OKR Setting oder in einem anderen Space als Methode noch? Also spielt es in irgendeiner Form zusammen?"
+        },
+        {
+            "confidence": 0.9112684,
+            "end": 1647568,
+            "speaker": "B",
+            "start": 1621474,
+            "text": "Ja, ich denke nicht, denn ich kann jetzt relativ wenig zu Space selbst sagen, aber OKR oder Shape Up oder ähnliches, das sind ja alles nur irgendwelche Frameworks, die Ziele vorgeben und dann gegebenenfalls noch einen Zeitrahmen obendrauf setzen. OKR setzt irgendwie wir wollen jetzt die Kundenbindung erhöhen oder wir wollen fünfzig neue Kunden haben. Aber wie die ganze Sache thematischen umgesetzt wird und auch womit, womit wäre dann in diesem Fall, welche Features bauen wir? Das entscheidet ja immer noch das Team bzw. Der Product auch noch."
+        },
+        {
+            "confidence": 0.99621,
+            "end": 1648928,
+            "speaker": "A",
+            "start": 1647624,
+            "text": "Also passt schon zusammen."
+        },
+        {
+            "confidence": 0.89596665,
+            "end": 1669908,
+            "speaker": "B",
+            "start": 1649024,
+            "text": "Achso, ja, also ja, schon irgendwie, aber es ist jetzt nicht relevant, ob du OKRs nutzt oder Scrum oder Shapeup oder VMoms oder ob sich der Chef einmal im Jahr irgendwo auf die Bühne stellt und sagt unser Jahresziel sind ein hundert Kunden und er das dann Chef Framework nennt. Also das ist ja egal, das ist ja die Zielsetzung."
+        },
+        {
+            "confidence": 0.9290785,
+            "end": 1690804,
+            "speaker": "A",
+            "start": 1670004,
+            "text": "Okay, also ich kann das auch wenn ich OKRs verwende, kann ich das genauso einsetzen in meinem Planning dann. Ich muss natürlich das, was von oben kommt, die Ziele, die Richtung, in die ich gehen will, beachten. Aber wie ich dann in diese Richtung gehe, in welche Schritte, habe ich immer noch meine vier Buckets und meine vier Buckets zur Verfügung, um eben die Ziele zu erreichen."
+        },
+        {
+            "confidence": 0.9227501,
+            "end": 1714220,
+            "speaker": "B",
+            "start": 1690932,
+            "text": "Da hoffe ich, dass die Teams diese Freiheit haben. Wenn nicht, dann sollte man das OK Framework vielleicht noch mal durchlesen. Und dasselbe passiert ja auch mit Scrum zum Beispiel. Wenn du sagst okay, mein Team arbeitet in Scrum, ist ein zwei Wochen Sprint. Ich meine, die Sachen, die du da selektierst, die du bauen möchtest, kannst du ja trotzdem in Milestones unterteilen. Die kannst du trotzdem sprintable machen. Gibt es das ich mache was sprintable, dass das in zwei Wochen passt?"
+        },
+        {
+            "confidence": 0.90443236,
+            "end": 1733140,
+            "speaker": "A",
+            "start": 1714300,
+            "text": "Aber ja, Scrum wäre ja eigentlich eine Ebene darunter. Also ich mache mein Quarterly planning zum Beispiel jetzt mit meinen vier Buckets einfach um, um eigentlich die Zeitallokation irgendwie zu schaffen überhaupt, um nicht ständig over commitment zu betreiben. Und danach kommt eigentlich erst Scrum ins Spiel darunter, eine Ebene darunter."
+        },
+        {
+            "confidence": 0.92370754,
+            "end": 1805220,
+            "speaker": "B",
+            "start": 1733220,
+            "text": "Ja, ich teile diese Art von Frameworks und jetzt völlig egal, ob wir über OKRs, Shape up, Scrum kann man usw. Sprechen, halt immer nur in zwei Themen ein. Die eine Thematik ist okay, an was arbeite ich? Das ist Zielsetzung, Frameworks, was ist das Ziel, was mein Chef mir vorgibt, mein Management vorgibt, die Firma erreichen möchte und so weiter. Und dann die andere in welchen Rhythmen arbeite ich? Bei Kanban ist es ich pull mir immer ein Ticket und bei Scrum sind es dann irgendwie die Sprints. Bei Shape Ups sind es, glaube ich, sechs Wochen Cycles. Also das ist ja dann eher nur der zeitliche Horizont, in welchen Zyklen arbeite ich? Und das andere ist, an welchem Ziel arbeite ich? Und dieses Framework, was wir hier erzählt haben mit keep the lights on, build new stuff, improve existing stuff und increase your productivity, das ist ja eher daran woran arbeitet man und wie allokiert man es und wie hält man auch eine Balance dazwischen, zwischen den einzelnen Aufgaben? Weil wie du sagtest, die meisten Product Owner, die knallen da einfach ein hundert Prozent der Zeit für neue Features rein. So, dann kippt die Infrastruktur hinten rüber und dann wird das, dann fragt man sich nach zwei Jahren, wieso wird das Team immer langsamer und so weiter und so fort. Und mit diesem Framework versuchst du halt, ich sag mal, ein Gleichgewicht zu halten. Ich finde das habe ich schön gesagt."
+        },
+        {
+            "confidence": 0.91122913,
+            "end": 1844220,
+            "speaker": "A",
+            "start": 1805300,
+            "text": "Aber meine Frage wäre ja jetzt, jetzt habe ich meine vier Buckets und habe da irgendeine Prozentzahl dran geschrieben. Also zwanzig Prozent Produktivity, zwanzig Prozent Improvement, sechzig Prozent neue Features und dann natürlich keep the lights on. Da kann man keine Prozentzahl dazuschreiben, weil die muss man sowieso immer machen. Also den verbleibenden Zeitraum teile ich dann ein in sechzig, zwei tausend zwanzig zum Beispiel. Und jetzt habe ich da auf meinem Whiteboard die Labels dazu gehängt. Was ist Improvement? Was ist New stuff? Was ist Productivity? Aber jetzt schaue ich in meine Buckets und in meine Kübel. Heißt es bei euch Kübel oder Eimer? Eimer ist Deutschland, oder? Wir sagen Kübel."
+        },
+        {
+            "confidence": 0.84493536,
+            "end": 1848520,
+            "speaker": "B",
+            "start": 1844800,
+            "text": "Ein Kübel ist eher so wie ein Blumenkübel, aber ein Backen wäre eher ein Eimer."
+        },
+        {
+            "confidence": 0.9168137,
+            "end": 1874184,
+            "speaker": "A",
+            "start": 1848600,
+            "text": "Okay. Ja, also bei uns ist es kübel in Österreich. Jetzt habe ich da meine vier Kübel. Da haben wir nicht unendlich Projekte Platz. Also ich habe jetzt ganz viele gelabelte Tasks, Projekte, Initiatives, wie du sie auch immer nennst, aber nur einen begrenzten Space durch die Prozentzahl von meinen Kübeln oder eimern. Also wie wähle ich danach aus, was kommt jetzt in meine Heimat? Also das löst mir noch gar nichts. Ich habe zwar jetzt eine begrenzte Kübelgrösse, aber immer noch zu viel Arbeit."
+        },
+        {
+            "confidence": 0.92683834,
+            "end": 1972108,
+            "speaker": "B",
+            "start": 1874272,
+            "text": "Ja, hätte ich darauf die Allerweltslösung, dann würde ich nicht mit dir Podcast machen, sondern wäre nämlich sehr reich. Weil im Endeffekt ist es das wieder. Okay, was ist mir wichtig genug und was hat den größten Impact? Also an diese Frage bin ich dann auch gekommen, nachdem ich diese Framework gefunden habe. Und da bin ich mal mit dem Hund spazieren gegangen und dann sind mir ein paar Fragen eingefallen, die ich mir zumindest so gestellt habe, so Leitfragen. Und zwar sind das zwei Bereiche. Einmal pro Planung, Cycle, habe ich mir die Frage gestellt, also für das Quartal jetzt, was sind die ein oder zwei Dinge, die ich wirklich vorantreiben möchte? Also wo machen wir, wir als Team wirklich einen Unterschied? Stell dir vor, du bist jetzt ein Produktteam und du hast fünf große Baustellen. Jetzt kannst du sagen, ich arbeite an diesen fünf großen Baustell ganze Quartal und treib jede Baustelle zwanzig Prozent nach vorne. Im Endeffekt ist dann jeder irgendwie unglücklich, weil niemand das gekriegt hat, was er haben wollte, weil alles nur zwanzig Prozent nach vorne geschoben. Oder du stellst dir die was sind die ein oder zwei Dinge, die du wirklich vorantreiben möchtest und limitierst deine Arbeit auf ein oder maximal zwei Dinge und schiebst ein Ding um ein hundert Prozent nach vorne oder zwei Dinge um fünfzig Prozent nach vorne, werden Leute schreien. Ja, natürlich, weil drei Leute sind ja hinten rübergefallen, die werden nichts kriegen. Das ist richtig, aber es bringt ja nichts, wenn du alles um zwanzig Prozent nach vorne schiebst. Deswegen, das ist hart, das kann dir keiner abnehmen. Da muss man wirklich gucken, okay, was hat den größten Impact? Da würde ich mal sagen, wenn du ein ganz klassisches Produkt hast, was benutzen deine Kunden, wie sehen deine User Metriken aus? Und so weiter und so fort. Oder was sind deine Profit Margins für diese Produkte und für diese Bereiche? Also ganz, ganz wirtschaftlich einfach mal daran."
+        },
+        {
+            "confidence": 0.91879535,
+            "end": 1976028,
+            "speaker": "A",
+            "start": 1972204,
+            "text": "Aber du hast jetzt gesagt, pro Planung Cycle müsstest du es nicht pro Kübel machen."
+        },
+        {
+            "confidence": 0.91512173,
+            "end": 2001140,
+            "speaker": "B",
+            "start": 1976124,
+            "text": "Kann man auch. Hoffentlich hast du aber die Elemente, die in dein Kübel sind, haben Synergien. Also ich hoffe nicht, dass du. Also im perfekten Fall hast du bei increase productivity Sachen drin, die das Monitoring oder die Uptime verbessern. Um einfach mal bei dem Beispiel zu bleiben für Zeug, was du vielleicht sogar verbessern möchtest oder wo du ein neues Feature drauf bauen möchtest mit you build stuff."
+        },
+        {
+            "confidence": 0.9512603,
+            "end": 2021426,
+            "speaker": "A",
+            "start": 2001300,
+            "text": "Ja, aber die Gefahr besteht ja, wenn du jetzt sagst, die zwei Dinge, die uns wirklich vorantreiben, dann kommen da zwei Features, weil die bringen uns wirklich voran mit ganz großen neuen Kunden. Und dann hebelst du ja deine eigenen Buckets wieder aus. Eigentlich, wenn du dann nur zwei Features machst, wenn das wirklich die wichtigsten sind. Also müsstest du das ja eigentlich wirklich pro bucket machen."
+        },
+        {
+            "confidence": 0.9156532,
+            "end": 2051884,
+            "speaker": "B",
+            "start": 2021538,
+            "text": "Ja, was ich mit Bereiche meinte ist eigentlich dein Team ist jetzt das Member und Retention Team. Das bedeutet, das Member und Retention Team kümmert sich um den User Login, um das Profil, um den Newsletter und all sowas. Jetzt kannst du verbessere ich jetzt die Login Maske und die Registrierungsmaske? Ich verbessere den Newsletter, ich verbessere das Edit my Profil feature und ich verbessere die Bonuspunkteanzeige. Oder du kannst sagen, ich kümmere mich jetzt einfach nur um den Newsletter. Ein Quartal brauche ich den richtig aufbringen, richtig nach vorne."
+        },
+        {
+            "confidence": 0.8887944,
+            "end": 2054076,
+            "speaker": "A",
+            "start": 2051932,
+            "text": "Ja, aber dann hättest du ein hundert Prozent Improvement."
+        },
+        {
+            "confidence": 0.88269645,
+            "end": 2149162,
+            "speaker": "B",
+            "start": 2054188,
+            "text": "Nein, komm mal aus deinen Kübeln da wieder raus. Es geht ja nicht. Zum Beispiel nehmen wir ein Plattformteam. Ein Plattform Team managt ein Kubernetes und ein Plattformteam managt die Docker Registry. Und ein Plattform Team managt sogar noch ein Interface, wo du neue Cron Jobs eingeben kannst und so weiter und so fort. Jetzt kannst du okay, das Plattform Team packt jetzt die einzelnen Tasks, die in deinem Bucket sind build new stuff, improve existing stuff, increase your productivity und so weiter und fokussiert sich einfach nur auf Kubernetes. Increase your productivity. Die bauen sich Tooling, um neue kubernetes nodes in den Cluster zu hängen und alte zu drainen. Sieht kein Kunde, aber dafür können die Nodes rein und rausnehmen ohne Probleme und ohne die Produktionsworkloads anzupassen. Improve existing stuff. Jede neue Applikation, die auf dem Kubernetes Cluster jetzt gelauncht wird, kriegt automatisch ein Sidecar daneben, der die Ressourcen anhand der Usage immer updated. Keine Ahnung, dein Java Prozess braucht acht GB RAM, der knallt immer zwei GB RAM drauf. Oh, der braucht auf einmal zehn, dann updatet er sich automatisch zwölf. Und committee sogar noch in git. Das wäre jetzt improve existing stuff und build new stuff wäre dann jetzt zum Beispiel jede App, die im Kubernetes gelauncht wird, kriegt automatisch ein fertiges Grafana Dashboard. Dadurch wurde dann zum Beispiel jetzt die Funktionalität Cron Jobs vernachlässigt. Aber du hast verschiedene Aufgaben in verschiedenen Buckets, die alle aber auf ein großes Ziel einzahlen, dann die kubernetes Plattform jetzt nach vorne treiben. Das meinte ich eigentlich mit was sind die ein oder zwei Dinge, die wir vorantreiben und nicht was sind die ein, zwei Dinge in deinem Bucket? Improve existing stuff. Bucket."
+        },
+        {
+            "confidence": 0.9224559,
+            "end": 2255034,
+            "speaker": "A",
+            "start": 2149306,
+            "text": "Okay, wenn du so übergreifende Projekte hast oder Bereiche, dann ging das natürlich. Das stimmt. Ich glaube auch da, ich habe jetzt erst über die POs immer so geschimpft oder halt mich lustig gemacht. Die POs sind ja eigentlich Leute, die gerade wenn es um Priorisierung geht, eigentlich normalerweise super Fähigkeiten haben. Die kennen ja viele Frameworks. Also das Rise Framework ist eines, was recht bekannt ist. Moskau, wo es einfach darum geht, ich teile meine ganzen Initiativen, meine Features noch mal ein und betrachte einfach, was bringt uns am meisten weiter? Genau wie du es jetzt gesagt hast. Das ist halt dann mathematisch noch wie viel Impact haben wir dadurch? Wie konfident sind wir zum Beispiel, dass wir irgendwas erreichen? Und dann gibt es eine Formel, am Schluss kommt noch ein Wert raus oder ich habe da Matrizen, wo ich das eintrag. Ist ja ganz egal, was eigentlich. Aber ich habe Priorisierungsmöglichkeiten und vielleicht kann mir der DPO wirklich in dem Bereich dann helfen. Also wie kann ich in einem Bucket oder auch übergeordnet über alle Buckets, je nachdem, wie die Initiativen oder oder Tasks aufgeteilt sind, wie kann ich die dann priorisieren. Aber der große Vorteil bei den Buckets ist ja, dass ich mir am Anfang einmal überlege, wie viel Prozent kann ich für Produktivitätstasks verwenden und dann steht es mal fest, weil sonst muss man ja immer diskutieren, ist das Feature wichtiger oder ist die Produktivität wichtiger? Und so habe ich schon mal im Vorhinein aufgeteilt anhand von Prozenten und kann danach innerhalb von dem Bucket zum Beispiel diese ganzen Priorisierung Frameworks wie Rise oder Moskau oder Eisenhower Matrix, um ein ganz simples Ding zu erwähnen, einfach anwenden. Wenn es natürlich übergeordnete Initiativen sind, kann ich das auch vor der Bucket Einordnung eigentlich. Und dann sind wir wieder bei deinen finde die zwei Initiativen, die uns am weitesten weiterbringen."
+        },
+        {
+            "confidence": 0.9319626,
+            "end": 2332010,
+            "speaker": "B",
+            "start": 2255082,
+            "text": "Ich finde, dieses Framework nimmt halt super viel Spannung aus der ganzen Thematik, denn ich habe auch Product Owner gesagt, ne, wir haben keine Zeit da jetzt irgendwie unsere Produktivität zu verbessern und dann hat man da relativ wenig irgendwie Gegenwehr. Ich meine natürlich, dieses Framework muss natürlich auch vom Management getragen werden, das muss sinnhaftig sein. Ich meine im Endeffekt, wenn ein Schreiner die ganze Zeit nur an Möbeln arbeitet und das Werkzeug nie sauber macht und das Werkzeug nie wegräumt und das Werkzeug nicht kontrolliert, ob es noch gut ist, dann leidet die Produktivität nämlich später auch. Und unter der Produktivität leidet dann natürlich dann auch sein Bestellvolumen, weil auf einmal der Bohrer kaputt ist und er keinen Ersatzbohrer da hat und deswegen neue Bohrer bestellt werden müssen und deswegen dauert der Schrank jetzt eine Woche länger, weil Amazon die Bohrer gerade nicht vorrätig hat und so weiter und so fort. Sie ist ja genau dasselbe. Und jetzt ein Thema noch mal zu dem, was du gesagt hast. Was ist denn, wenn ich pro Bucket ganz viel Sachen habe? Weil wenn du jetzt dein aktuelles Backlog einfach kategorisiert, dann laufen die Kübel, wie du sie schön nennst, auch über. Da kannst du dir natürlich auch relativ einfache Fragen stellen. Und die habe ich nämlich für jede dieser Initiative in den einzelnen Eimern gestellt und die habe ich auch aufgeschrieben. Was ist das Problem, welches wir lösen wollen? Also das Aka, warum macht es überhaupt Sinn, dieses Ticket, dieses Projekt oder so zu machen?"
+        },
+        {
+            "confidence": 0.8780159,
+            "end": 2344598,
+            "speaker": "A",
+            "start": 2332510,
+            "text": "Moment mal, bevor du da jetzt in die Tiefe gehst, das nennen wir Andi Framework, oder? Also da gibt es Moskau und Rise und dann gibt es Andy. Andy, du musst da noch Akronyme dafür finden. A n D Y, ne?"
+        },
+        {
+            "confidence": 0.93716186,
+            "end": 2360930,
+            "speaker": "B",
+            "start": 2344734,
+            "text": "Vielleicht nennen wir es einfach nur logisch denken. Auf jeden Fall schreibst du einfach. Ich meine, hoffentlich ist dein Ticket oder dein Projekt oder das, was du da in deinem Kübel hast, bereits schon so geschrieben, denn wir schreiben ja alle ordentliche Tickets und Design Dokumente und allem drum und dran. Richtig, Wolfgang?"
+        },
+        {
+            "confidence": 0.87825555,
+            "end": 2364818,
+            "speaker": "A",
+            "start": 2361090,
+            "text": "Natürlich, natürlich ist alles schon im Andy Framework kategorisiert."
+        },
+        {
+            "confidence": 0.9287686,
+            "end": 2437750,
+            "speaker": "B",
+            "start": 2364914,
+            "text": "So, also kannst du eigentlich musst du in der Lage sein, folgende drei Fragen für jedes dieser Dinge zu beantworten. Was ist denn eigentlich das Problem, welches wir lösen? Aka warum machen wir das? Wie sieht Erfolg aus bzw. Wie wird Erfolg gemessen? Das könnte sein, dass das seine Definition of Done ist. Definition of Done finde ich aber immer so ein bisschen kurz gegriffen, denn Definition of Done ist, was wir am Ende haben und nicht wie man dann Erfolg misst. Wir wollen ja den outcome messen und nicht den output. Output ist ich habe einen pull request gemacht und ich habe die farbe geändert. Ein outcome ist durch die geänderte buttonfarbe gibt es fünf prozent mehr bestellungen und wir wollen den outcome messen. Und die dritte Frage ist, wenn das nämlich ein sehr großes Projekt ist und gegebenenfalls über mehrere Quartale geht, würde man sagen, was werden wir dieses Quartal erreichen bzw. Was werden wir dieses Quartal genau tun? Und das ist halt sehr sinnvoll bei Multi Quarter Projekten. Und so stellt man halt sicher, dass man kleine erreichbare Milestones und an alle Hörerinnen und Hörer, die uns gerade zuhören, der Wolfgang hat gerade in unserem Vorbereitungsdokument diesen Text markiert. Er wird ihn mit hoher Wahrscheinlichkeit jetzt gerade bei ChatGPT reinpacken und nach einem Akronym fragen. Was kann man daraus machen? Ein Beispiel wäre Space Rise. Und was kam da raus, Wolfgang?"
+        },
+        {
+            "confidence": 0.8774602,
+            "end": 2467520,
+            "speaker": "A",
+            "start": 2437930,
+            "text": "Es ist unglaublich. Du kannst es scheinbar wirklich vorhersagen. Also das andere Framework sagt Auftrag klären, Nutzen definieren, dieses Quartal im Fokus, also d schräg und Wort Etappenziel setzen. Okay, das ist eine kreativ, aber ich glaube, das ist Deutschland eigentlich nur ein bisschen ein Problem, aber ja, knapp dran. Vielleicht muss man da noch ein bisschen feilen am andi Framework."
+        },
+        {
+            "confidence": 0.9228763,
+            "end": 2524898,
+            "speaker": "B",
+            "start": 2467600,
+            "text": "Naja, aber kommen wir noch mal zu dem andi Framework und zu der ersten Frage was ist eigentlich das Problem, was wir lösen? Und Achtung, ich bin dann mit sehr vielen Leuten ins Gespräch gegangen und du glaubst gar nicht, wie viel Tickets und wie viel Initiativen dann da rausgefallen sind, weil man mir das Problem nicht erklären konnte, welches wir lösen. Und mit Problemen meine ich nicht immer wirklich ein Problem, was wir haben, sondern eigentlich einen Sinn, einen Grund, warum wir das tun sollten. Ich hatte ja gerade gesagt Updaten des Updatens wegen der saubere Software Engineer sagt jo, updaten ist immer gut, der Produktmensch. Warum tun wir das? Und die Wahrheit liegt wahrscheinlich irgendwo in der Mitte, weil ist die Version end of life? Gibt es da ein Sicherheitsproblem? Ist die Version vielleicht eine LTS Version? Da gibt es ja so viel drumherum, was man klären sollte. Aber das ist faszinierend. Viele man müsste man Dinge machen wir, weil wir denken, sie sind richtig, aber haben die irgendeinen Wert? Oft glaube ich nicht. Zumindest nicht fürs Produkt oder für das Ziel der Firma."
+        },
+        {
+            "confidence": 0.85110587,
+            "end": 2529890,
+            "speaker": "A",
+            "start": 2524994,
+            "text": "Sollte man, glaube ich, in side Projects auch immer überlegen. Die Frage vergisst man eigentlich ganz oft."
+        },
+        {
+            "confidence": 0.8689503,
+            "end": 2539650,
+            "speaker": "B",
+            "start": 2529930,
+            "text": "Naja, side Project ist ja die Frage okay, warum mache ich das hier? Also Motivation, weil ich weiß, ich habe super viele side Projects gestartet, um was Neues zu lernen."
+        },
+        {
+            "confidence": 0.9258253,
+            "end": 2626382,
+            "speaker": "A",
+            "start": 2539730,
+            "text": "Ja, aber da hast du ja auch Ziele. Du musst immer schauen, zahlt dieses Ziel, zahlt dieses Ziel, zahlt dieser Task dem Ziel ein? Und wenn das Ziel Learning ist, ist es natürlich was anderes, als wenn das Ziel ist, ich bringe das Produkt online oder ich möchte dann auch mal Kunden bekommen oder was es dann auch immer ist. Also das sollte man im Auge behalten. Auf jeden Fall. Aber jetzt sind wir der Podcast mit den Praxistipps. Jetzt haben wir ja schon quasi ein Framework geliefert, wo man als Engineer und Entwicklerin vielleicht mehr von den eigenen Lieblingsprojekten reinbringen kann dadurch. Keep delights on ist natürlich ganz klassisch techn und auch die Productivity, dass man da schon Kübeln zur Verfügung hat. Aber ein anderes sehr häufiges Problem, was in der Praxis auftritt, ist, dass man ganz kleinteilige Tasks, Verbesserung Tasks hat, die dann in diesem Kübel landen. Der Kübel geht über, sagt man bei euch auch geht über oder ist das nur deutsch oder ist das auch schon österreichisch? Ne, er läuft aber siehst du, bei uns geht er über. Völkerverbindender Podcast. Also der Kübel läuft über, der Eimer läuft über, der Kübel geht über. Und dann fallen natürlich diese kleinteiligen Tasks natürlich weg, weil die anderen großen sind viel wichtiger. Aber man könnte auch sagen, diese feinen, diese vielen kleinen Tasks sind natürlich auch irgendwie sinnvoll und müssen vielleicht in irgendeiner Form erledigt werden. Und nachdem Andy uns ja schon das Andy Framework jetzt quasi geboren hat, hat er darauf sicher auch eine Antwort, oder?"
+        },
+        {
+            "confidence": 0.9392697,
+            "end": 2651764,
+            "speaker": "B",
+            "start": 2626486,
+            "text": "Ich habe da auch eine Antwort, aber die kommt nicht von mir. Die ist aber auch bei der Recherche von dieser ganzen Thematik hier aufgekommen. Und zwar nennt sich das Paper Cuts. Kleine Fixes mit großem Effekt. Also stellt euch vor, einfach, ihr habt ganz viele Dinge, die zwar nie kaputt waren, aber ihr trotzdem jedes Mal stöhnt, wenn sie euch begegnen. Also ein wachsender Haufen kleiner täglicher Ärgernisse."
+        },
+        {
+            "confidence": 0.8951385,
+            "end": 2662200,
+            "speaker": "A",
+            "start": 2651892,
+            "text": "Also vielleicht die Paper Cuts, falls es jemand nicht kennt, es gibt ja diesen Spruch Tod der ein hundert, ein tausend Paper Cuts oder ein tausend Paper Cuts. Gibt es das auf deutsch eigentlich?"
+        },
+        {
+            "confidence": 0.84485555,
+            "end": 2670324,
+            "speaker": "B",
+            "start": 2662860,
+            "text": "Ich kenne das auch nur unter Death by Paper. Ja, Death by Thousand Paper Cuts kenne ich nur."
+        },
+        {
+            "confidence": 0.9393472,
+            "end": 2681492,
+            "speaker": "A",
+            "start": 2670412,
+            "text": "Aber wer sich mal mit einem Papier geschnitten hat, so zwischen den Fingern idealerweise, der weiß, wie schmerzvoll das ist, wenn man das mal ein tausend multipliziert. Die ganzen kleinen Bugs, die tun halt auch weh. Daher kommt es."
+        },
+        {
+            "confidence": 0.91357493,
+            "end": 2857502,
+            "speaker": "B",
+            "start": 2681596,
+            "text": "Und das ubuntu Projekt, also die Linux Distro, hat zwei tausend neunzehn Mission Paper Cuts ausgerufen. Und zwar wollten sie ein hundert Paper Cut bugs in einem Release beheben. Und was ist ein Papercut? Ein Papercut ist etwas, wo ein kompetenter Programmierer nicht länger als einen Tag pro Bug braucht. Und deren Ziel war halt, ein hundert Paper Cuts in einem Release zu fixen. Da gibt es sogar einen Wikipedia Artikel zu. Finde ich auch geil, dass so eine Open Source Mission für den Release auch ein Wikipedia Artikel kriegt. Und dieses Konzept selbst hat GitHub dann irgendwann mal auch übernommen. Ihr wusstet, ihr erinnert euch sehr wahrscheinlich noch, GitHub wurde ja von Microsoft gekauft und danach wusste man gar nicht, was passiert da jetzt und so weiter und so fort. Und dann gab es noch mal auch eine Initiative, die nannte sich dir GitHub. Also liebes GitHub, ich hab da mal ein Anliegen. Wo dann ein Repository erstellt wurde und ganz viele Issues erstellt wurde über diese kleinen Paper Cutscenes, weil wir wissen ja alle, wir sind sehr eigen, wenn ein Button verschoben wird. Und diese kleinen Papercuts findet man auf GitHub überall. Und GitHub hat sich dieses Mission Paper Cuts von Ubuntu genommen und einfach mal gemacht. Und zwar sind die in dieses dir GitHub Repository gegangen, haben das priorisiert und haben dann diese kleinen Issues einfach mal behoben. Und die sagten, das war super, denn die sind immer hinten rüber gefallen, die waren nie wichtig. Und was die jetzt gemacht haben, die sagten, hey, pass mal auf, das Fixen dieser Paper Cuts ist kein Zeit Hassel. Das machen wir nicht, wenn mal Zeit ist, sondern die haben das als großes Projekt gemacht. Das war deren Erfolg. Auf Basis von jedem Paper Cut, den die gefixt haben. Da haben die Social Media gemacht, die haben das auf ihrem Blog gepostet, einfach nur eine kleine Newsmeldung, hey Jungs und Mädels, wir haben jetzt diesen Button grün gemacht und so weiter. Und warum hat die ganze Thematik funktioniert aus drei Gründen. Sie haben daraus wirklich ein Projekt gemacht und das nicht einfach zur Seite geschoben. B die haben bewiesen, dass sie dann der Community auch zuhören und der Community, das sind ja im Endeffekt ihre Kunden, wenn man so möchte. Und c weil man jetzt natürlich kontinuierlich diese kleinen Bugs vorgehoben hat, hat man Momentum aufgebaut. Und das ist, glaube ich, ganz wichtig, dass man natürlich auch den Software Engineers, dem eigenen Team zeigt, okay, wir kümmern uns wirklich darum und wir hören auch zu. Sehr, sehr schöne Story, wie ich finde. Und das könnt ihr natürlich auch adaptieren. Also ihr könnt einfach mal sagen O okay, wir sammeln jetzt einfach mal diese kleinen Bugs, die mir einfach immer auf die darf ich auf den Sack gehen? Auf die Nüsse gehen? Auf die Nerven gehen? Auf die Nerven gehen, sagt man hier, glaube ich jetzt. Und dass man, dass man die vielleicht sammelt und vielleicht habt ihr ja dreiig Paper Cuts. Dieses man müsste mal, ich müsste das mal beheben, aber. Und dann könnt ihr das auch so eintüten und dann kriegt das vielleicht in improve existing stuff unter in the bucket."
+        },
+        {
+            "confidence": 0.9127109,
+            "end": 2868256,
+            "speaker": "A",
+            "start": 2857646,
+            "text": "Also es ist so was ähnliches wie was zur finanzkrise zwei tausend acht geführt hat oder wo man die ganzen faulen kredite in so pakete geht, gepackt hat in große, dass man sie nicht mehr gesehen hat und die hat man dann verkauft."
+        },
+        {
+            "confidence": 0.9379877,
+            "end": 2879296,
+            "speaker": "B",
+            "start": 2868368,
+            "text": "Aber die faulen Kredite wurden ja dadurch nicht besser. Also wenn du den Paper Cut löst, kannst du dich ja nicht mehr an dem Papier schneiden. Also ist das ja eine Verbesserung. Und ich wüsste nicht, wie das jetzt mit einem vollen Kredit in einem neuen Format."
+        },
+        {
+            "confidence": 0.9234807,
+            "end": 2892942,
+            "speaker": "A",
+            "start": 2879408,
+            "text": "Okay, also wir nehmen nur das Paketieren davon, dass man Pakete schnürt, um dann ein größeres Projekt zu haben, was nicht automatisch so schnell verdrängt wird und das Ganze auch noch marketingmässig gut vermarktet wird am Ende. Vielleicht für den User ideal."
+        },
+        {
+            "confidence": 0.91682714,
+            "end": 2937714,
+            "speaker": "B",
+            "start": 2893086,
+            "text": "Du sagst das so salopp. Ich denke wirklich, dass das der essentielle Erfolg war, dass du okay, du hast eine ganz kleine Sache gefixt und du machst einen Tweet darüber. Und das sehe ich auch bei ganz vielen side Projects so. Diese ganzen Indie Hacker, die machen zum Beispiel immer so Weekly Logs oder die schippen eine Sache und machen einen LinkedIn Post. Da denkt man sich ist ja lächerlich, ne? Aber das hält das Momentum hoch, das hält die Traction hoch und auch mein Vertrauen zum Indie Hacker wird dadurch irgendwie gesteigert. Ich weiß nicht warum, aber ich finde das super, weil ich denke, hey, das aktive Entwicklung hinter verlinken wir auf jeden Fall in den Shownotes. Einmal die ein hundert Paper Cuts Mission von Ubuntu, einmal eine Papercut Wikipedia Artikel und natürlich das GitHub Repository und die Story von GitHub."
+        },
+        {
+            "confidence": 0.9143513,
+            "end": 3014144,
+            "speaker": "A",
+            "start": 2937762,
+            "text": "Das heißt, das nächste Mal, wenn ihr wieder in so einem Planning steckt oder auch euer side Project plant, dann versucht mal diese ganzen Frameworks anzuwenden. Also vom Matt Ecclestone von Dropbox, der die vier Buckets definiert hat, dann als Andy Framework natürlich dann, um innerhalb von den Buckets zu optimieren und zu sortieren. Und wenn ihr wirklich ganz viele kleine bugs habt, die alle kleine Papercuts sind oder eigentlich das Papier ist, das schneidet, dann versucht mal das Ganze zu paketieren. Und ich glaube, da sind paar ganz coole Ansätze dabei, wo man dann das einfach mal ausprobieren kann und auch ganz lightweight einführen kann. Also da braucht es keine große Firmenumstellung, irgendwie großen Support von der obersten C Ebene, das kann man wirklich im Team einführen. Natürlich braucht Support schon vom Product owner Seite, von den ganzen Leuten im Team. Also auf der Ebene muss natürlich schon das Commitment da sein, aber es ist jetzt kein Framework, was man irgendwie firmenweit einführen muss. Das kann man einfach mal ausprobieren, losstarten. Auch das Paketieren der Papercuts ist kein Problem. Das kann man einfach mal vorschlagen und eine coole Initiative draus machen, wo dann vielleicht auch alle mitwirken Spaß dabei haben, irgendwie veröffentlichen kann jeden Tag, was man cooles erreicht hat. Also das ist motivationstechnisch sicher auch ein guter Ansatz, den man einfach mal ausprobieren kann."
+        },
+        {
+            "confidence": 0.939314,
+            "end": 3098534,
+            "speaker": "B",
+            "start": 3014232,
+            "text": "Ihr könnt auch noch kleiner starten. Ihr könnt zum Beispiel diese vier Buckets einfach mal auf einen Scrum Sprint anwenden. Angenommen eure Sprintlänge ist zwei Wochen, plant doch einfach den Sprint einfach mal innerhalb dieser vier Buckets. Und bezüglich der Kommunikation nutzt doch einfach euren internen Slack Channel oder vielleicht den Engineering Slack Channel oder den random Slack Channel oder was auch immer ihr da habt. Oder vielleicht habt ihr eine interne Blogging culture oder so einen internen Mastodon Server oder ähnliches in eurer Firma. Was ich euch sagen kann, wenn ihr das auf großem Stil ausrollen wollt im Quartal und echt viele Initiativen habt, diese was ist eigentlich das Problem, welches wir lösen wollen? Wie sieht Erfolg aus? Wie messen wir Erfolg und was erreichen wir dieses Quartal? Das ist schon, also mich hat das schon ein paar Stunden gekostet und man muss sehr viel nachdenken. Man hinterfragt sich auch konstant, ist das jetzt wirklich das Problem, was wir lösen? Aber das tolle dabei ist, wenn ihr das einmal habt, also bei mir kann jetzt zumindest für dieses Quartal kann jetzt jeder VP um die Ecke kommen und ich habe sofort Antworten parat. Und man fängt nicht an zu stammeln und man kann wirklich sagen, welches Problem man denkt zu lösen. Ob die Person, die mich dann challenge, dann sagt, das ist ein Problem. Das ist dann immer noch was anderes. Aber das ist dann natürlich eine andere Sichtweise aus einer anderen Flughöhe. Aber startet klein, quatscht einfach mit eurem Scrum Master, mit eurem Projektleiter, Vorgesetzten oder ähnliches. Einfach mal, ob ihr das nicht vielleicht auf einen im nächsten Scrum Sprint ausprobieren wollt."
+        },
+        {
+            "confidence": 0.918923,
+            "end": 3124582,
+            "speaker": "A",
+            "start": 3098582,
+            "text": "So, und nachdem das schon so gut geklappt hat mit den Akronymen, jetzt kommt das Ende von dem Podcast. Also denkt daran, das Kiosk Framework zu verwenden. Also einmal klicken und teilen. I ins Gespräch kommen, bei uns in der Discord Community vorbeischauen. Oh, wie offenes Feedback geben. Sag, was du von dieser Episode hältst. S wie Sterne da lassen in deiner Podcast App. Spotify, Apple und was es sonst noch so gibt. Und k kurzes Review schreiben, besonders auf."
+        },
+        {
+            "confidence": 0.8701227,
+            "end": 3141408,
+            "speaker": "B",
+            "start": 3124606,
+            "text": "Apple kurzes Review schreiben. Ja, wundervoll. Ich hasse zwar Abkürzungen, Akronyme, weil ich muss immer fragen, was heißt aber das Kiosk Framework werden wir natürlich auch veröffentlichen. Kriegen wir auch ein Logo dafür, Wolfgang?"
+        },
+        {
+            "confidence": 0.9547803,
+            "end": 3154768,
+            "speaker": "A",
+            "start": 3141504,
+            "text": "Ja, bekommen wir vielleicht hin. Und zum ins Gespräch kommen, wer irgendwie Ideen hat, wie man das Andy Framework besser noch umsetzen kann, akronym technisch, bitte natürlich uns auch wissen lassen. Am besten auf Discord."
+        },
+        {
+            "confidence": 0.9189644,
+            "end": 3196850,
+            "speaker": "B",
+            "start": 3154864,
+            "text": "Aber jetzt, jetzt mal ohne Flachs. Mich interessiert auch wirklich, wie ihr eigentlich eure Produktivitäts Tasks bei euch in die Arbeit mit einplant. Kommt einfach mal in die Discord Community vorbei oder schreibt uns über Mastodon und lasst es mich wissen. Mich würde wirklich interessieren, wie schafft ihr es, euren Product Owner oder euren Engineering Manager oder euer Management zu überzeugen, dass ihr jetzt mal ein bisschen was für eure Team Produktivität tun müsst oder das Alerting anpassen muss oder oder. Weil das ist ja immer wieder eine Herausforderung. Mich wird paar Antworten von euch freuen. Ansonsten hoffen wir natürlich, dass ihr etwas Inspiration mitgenommen habt. Würde ich sagen, viel Spaß beim Testen. In den Shownotes findet ihr alle Links. Bis zur nächsten Episode und tschüss."
+        }
+    ],
+    "webhook_auth": false
 }
