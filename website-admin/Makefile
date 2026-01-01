@@ -25,3 +25,9 @@ staticcheck: ## Runs static code analyzer staticcheck
 .PHONY: vet
 vet: ## Runs go vet
 	go vet ./...
+
+.PHONY: code-coverage
+code-coverage: ## Runs code coverage analysis
+	go test ./... -covermode=atomic -coverprofile=coverage.out
+	go tool cover -html=coverage.out -o coverage.html
+	open coverage.html
