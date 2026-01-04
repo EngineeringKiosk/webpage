@@ -19,7 +19,7 @@ speaker:
   transcriptLetter: B
 spotify: https://open.spotify.com/episode/1oXXWGRScMZhAnCQmN6inb
 tags:
-- Produktivitaet
+- Produktivität
 - Adventskalender
 - Knowledge Sharing
 title: "#245 Selbstmanagement: Weniger To-do-Listen-Stress, mehr Produktivität"
