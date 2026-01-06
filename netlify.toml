@@ -3310,6 +3310,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/249"
+  to = "/podcast/episode/249-resilience-engineering-rate-limiting-oder-wie-429-dein-system-rettet?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep249"
+  to = "/podcast/episode/249-resilience-engineering-rate-limiting-oder-wie-429-dein-system-rettet?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
