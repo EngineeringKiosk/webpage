@@ -1,0 +1,1059 @@
+{
+    "confidence": 0.95731217,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3852,
+    "utterances": [
+        {
+            "start": 3440,
+            "end": 63230,
+            "speaker": "A",
+            "text": "Moin. Du bist hier im Engineering Kiosk gelandet und mein Name ist Andy, einer der Co Host dieses Podcasts. Heute habe ich mir mal wieder ein Thema ausgesucht. Es geht erneut um eins meiner Reliability und Resilience Engineering. Nachdem wir uns schon um Themen wie Timeouts, Jitter Backoff sowie Tail Latency und Request Hedging gekümmert haben, gibt es heute mal ein Deep Dive zum Thema Rate Limiting. Wir klären, wozu Rate Limiting da ist, was die Abgrenzung zu Begriffen wie Back Pressure, Graceful Degradation, Fault Isolation und Load Shedding ist, wo Rate Limiting in deinem System bzw. In deiner Architektur verankert ist, welche Rate Limiting Strategien existieren, wie man agiert, wenn sogar der Rate Limiter ausfällt, warum Rate Limiting nicht nur eine Engineering, sondern auch eine Produktmanagementfrage ist, wie Plattformen wie GitHub und Cloudflare den Client über seine Rate Limits informieren und warum Rate Limiting für graphql APIs ein schwieriges ist. Eine ganze Menge Holz für eine Podcast Episode, das sage ich dir. Wir springen mal direkt rein."
+        },
+        {
+            "start": 63230,
+            "end": 105290,
+            "speaker": "B",
+            "text": "Viel Spaß. Wie du ja weißt, Andy, habe ich nebenbei noch eines oder eigentlich recht viele kleine Startups am Laufen, aber ein ganz konkretes Im Zuge von diesem Startup war ich auch bei so einem Incubator, der lokalisiert ist in einem großen Gebäude, wo eine Berufsschule auch drinnen ist und so Weiterbildungen und so weiter. Und da ist es mir schon ein, zwei, dreimal passiert, dass sie auf Google gehen wollte und mir dann so ein Capture entgegengeworfen wurde. Es gab zu viele Requests auf Google und ob ich wirklich ein Mensch bin. Wie oft hat einer deiner Crawler schon mal irgendwie sowas produziert, dass alle in dem gesamten Gebäude dann diese Webseite zu Gesicht bekommen, dass zu viele Requests eingehen von dieser gleichen IP Adresse."
+        },
+        {
+            "start": 105450,
+            "end": 113690,
+            "speaker": "A",
+            "text": "Ich meine, das ist so ein klassisches Problem, wenn ich glaube, du einen Proxy nur mit einer Outgoing IP hast. Also ich meine, das ist ja jetzt. Ich glaube, da muss gar kein Crawler am Laufen haben."
+        },
+        {
+            "start": 114030,
+            "end": 130790,
+            "speaker": "B",
+            "text": "Also mein Tipp ist schon, dass da irgendein Crawler im Hintergrund war und da wird ja auch viel Ausbildung gemacht im digitalen Bereich, dass da irgendwer einen kleinen Crawler geschrieben hat. Aber wie viel Crawler hast du schon geschrieben und bist in irgendwelche Rate Limits gelaufen oder mit welchen vielleicht anders gefragt, Mit welchem Crawler bist du nicht in ein Rate Limit gelaufen."
+        },
+        {
+            "start": 130790,
+            "end": 159050,
+            "speaker": "A",
+            "text": "In der Tat ist das eines der Feature, was ich wirklich sehr, sehr früh in meine Crawler einbaue und deswegen bin ich immer sehr, sehr glücklich, wenn die Services, die ich versuche zu crawlen, mir auch wirklich die Rate Limiting Informationen mitgeben. Viel schlimmer ist ja, wenn der Service, den ich crawlen möchte, genau sowas macht, wie du gerade beschrieben hast. Der gibt mir einfach Capture, weil dann ist mein Crawler ohne irgendwie Headless UI oder ähnliches natürlich auch aufgeschmissen, sondern wenn ich die Rat Limiting Informationen dann schön maschinenlesbar zurückbekomme, dann weiß ich ja wenigstens, was ich zu tun habe."
+        },
+        {
+            "start": 159050,
+            "end": 190170,
+            "speaker": "B",
+            "text": "Ich muss zugeben, ich habe noch nie ein Rate Limiting implementiert, sondern ich kenne eigentlich nur den ER HTTP Status, den man so zurückgeworfen bekommt. Meistens zumindest, wenn man einfach zu viel Anfragen schickt. Aber nachdem du ja meine Go to, also pun intended Go to Person bist, wenn es um DevOps geht oder dem ganzen Bereich, der dahinter liegt, lasse ich mir von dir heute mal erklären, wie man Rate Limiting richtig implementiert und welche Möglichkeiten man hat, wenn man nicht auf der Crawler Seite sitzt, sondern auf der Developerseite sitzt."
+        },
+        {
+            "start": 190170,
+            "end": 223620,
+            "speaker": "A",
+            "text": "Und meines Erachtens nach ist das gar kein Bereich von DevOps bzw. Die DevOps Leute, die draußen im Markt so rumrennen, die wenigsten davon beschäftigen sich, glaube ich, so tief mit Rate Limiting, sondern ich denke eher, es ist ein Site Reliability Engineering Thema oder vielleicht sogar ein Softwarearchitektur Thema und nicht ein DevOps Thema. Aber das nur so am Rande. Genauso wie du jedes deiner Schnapsideen, was du als Startup bezeichnest, das lasse ich auch unkommentiert, was heutzutage alles ein Startup ist."
+        },
+        {
+            "start": 223620,
+            "end": 237530,
+            "speaker": "B",
+            "text": "Ich schicke dir dann das Feedback von meinem Co Founder weiter. Aber erklär mir mal, ich habe jetzt zum Beispiel bei einem meiner vielen Projekte, da läuft das Rate Limiting so der Server ist überlastet und wirft einen ER Fehler, ist es dann schon Rate Limiting?"
+        },
+        {
+            "start": 237530,
+            "end": 262210,
+            "speaker": "A",
+            "text": "Ja, das ist fehlendes Rate Limiting. Genau, ich mein Rate Limiting ist ja die Frage, warum braucht man das überhaupt? Und der primäre Sinn von Rate Limiting ist halt genau die Überlastung eines Systems zu verhindern. Ich Meine Systeme scheitern selten an einem Request, sondern in der Regel an zu vielen, wie zum Beispiel irgendwie kleine Bugs, Retry Storms oder Traffic Spikes und Rate Limiting kannst du dir so als, ja wie soll ich sagen, als Sicherheitsgurt vorstellen."
+        },
+        {
+            "start": 262210,
+            "end": 268050,
+            "speaker": "B",
+            "text": "Jetzt da mit so Fremdwörtern herumwerfen. Du musst die schon erklären. Auch Retry Stürme, Traffic Spikes bedeutet was."
+        },
+        {
+            "start": 268050,
+            "end": 278610,
+            "speaker": "A",
+            "text": "Machen wir mal ganz kleinen Exkurs zu typischen Failure Modes. Retry Stürme sind eigentlich fehlgeschlagene Requests, die dann erneut abgefeuert werden."
+        },
+        {
+            "start": 268164,
+            "end": 328164,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 338610,
+            "end": 344650,
+            "speaker": "B",
+            "text": "Also genau das mit dem ER Status Code. Wenn der Client dann sagt, dann probiere ich es noch mal und noch mal und noch mal."
+        },
+        {
+            "start": 344650,
+            "end": 409940,
+            "speaker": "A",
+            "text": "Ja, das ist unverschämtes Retry, das meine ich nicht. Ich meinte eher, du bist mit deinem Handy unterwegs, fährst durch den Tunnel, bevor du in den Tunnel reingefahren bist, sendest du gerade noch ein Request im Tunnel verlierst du die Connection, Kurzum, der Request kam gar nicht richtig durch, fährst aus dem Tunnel wieder raus, kriegst wieder ein Netz und machst dann wieder ein Retry. Und wenn du dann mit einem vielleicht sehr großen Zug durch den Tunnel fährst, wo tausende Leute gerade surfen und alle auf dieselbe Webseite gehen, dann kann das sein, dass alle nach dem Tunnel Retry machen und somit einen Retry Sturm auslöst, was dann natürlich sehr viele Requests auf einmal auf den Service hitten. Sehr unwahrscheinlich, dass das jetzt in einer Zugfahrt passiert. Dann gibt es auf der anderen Seite noch ein Thundering Hurt Problem. Das bedeutet zum Beispiel, dass ziemlich viele Clients auf das gleiche Event reagieren oder auf dasselbe Ereignis gleichzeitig reagieren. Beispiel, du hast sehr viele Server, aber die greifen alle auf einen Cache zu, dieser Cache expired und all diese Server gehen dann automatisch auf auf die Datenbank. Das wäre so ein Thundering Heard Problem."
+        },
+        {
+            "start": 409940,
+            "end": 445810,
+            "speaker": "B",
+            "text": "Darüber haben wir übrigens auch schon in Episode zwei hundert vier gesprochen, wo es um Timeouts jitter Backoff gegangen ist, wo wir genau das Vorgehen beschreiben, wie man solche Dinge verhindern kann, wenn die Clients intelligent agieren und nicht sofort immer Retries raussenden oder wenn Requests ganz allgemein irgendwo langsamer sind oder nicht funktionieren, dass man dann eben Vollgas gibt, sondern ganz im Gegenteil sich zurücknimmt und dann eben zum Beispiel einen Timeout abwartet oder zufallswert noch mit dazu gibt. Für den Timeout kann man alles in Episode zwei hundert vier nachhören, wo der Andi sich da mal ausgelassen hat, um den ganzen Bereich auf der kleinen Seite."
+        },
+        {
+            "start": 445810,
+            "end": 523520,
+            "speaker": "A",
+            "text": "Ich meine, du kannst dir aber auch selbst ins Knie schießen. Und das passiert sehr, sehr oft, besonders in so Microservice Architekturen. Es nennt sich Traffic Amplification oder Fan Out Services, dass wenn ein Microservice dann fünf oder acht oder zehn Request in deine Microservice Architektur macht und wenn du dann einfach vorne auf dem ersten Microservice konstant F konstanten Reload machst, dann hast du hinten raus eine Traffic Amplification, weil das halt einfach eine Multiplizierung deiner Request ist und somit kannst du dir halt, ich sag mal, selbst ins Knie schießen. Eine andere Thematik hat man vielleicht auch schon mal gehört, dass, oh, ich habe einen Curl Befehl abgefeuert und der hat leider einen Load Test gestartet oder so. So eine unbeabsichtigte Überlast passiert ja auch ab und zu mal. Oder vielleicht hast du einfach nur einen Kunden oder einen Tenant, der einfach unverhältnismäßig viele Ressourcen verbraucht. Warum auch? Vielleicht ist eine Datenbank sehr groß oder der hat eine sehr teure Operation am Laufen. Naja, das sind so die klassischen Failure Modes, Thundering, Hurt, Retry Stürme, Traffic Amplification, eine unbeabsichtigte Überlast oder vielleicht auch eine beabsichtigte Distributed Denial of Service. Attacken gehören da auch zu. Ziemlich viele Firmen haben auch immer so einen Batch Job, der zu jeder vollen Stunde startet. Das ist auch so ein Klassiker, dass der Batch Job immer so Spikes in irgendwelchen Graphen erzeugt und da sagt man, ach, das ist ja wieder der Batch Stop. Hast du vielleicht auch schon mal gesehen."
+        },
+        {
+            "start": 523520,
+            "end": 525240,
+            "speaker": "B",
+            "text": "Gutes Monitoring vorausgesetzt."
+        },
+        {
+            "start": 526440,
+            "end": 532200,
+            "speaker": "A",
+            "text": "Ja, oder von mir aus auch einfach jede Stunde Kunden, die anrufen, weil der Service langsam ist oder überhaupt ausfällt."
+        },
+        {
+            "start": 532520,
+            "end": 535280,
+            "speaker": "B",
+            "text": "Genau, Kunde ist immer das beste Monitoring."
+        },
+        {
+            "start": 535280,
+            "end": 552200,
+            "speaker": "A",
+            "text": "Noch mal zusammengefasst. Im Endeffekt, Rate Limiting ist halt jetzt nicht nur ein simpler API Schutz, sondern hoffentlich eine systematische Lastbegrenzung von deinem Service, dass dein Service halt gerade keine er liefert. Das Ziel ist halt der Schutz des Services und nicht die Bestrafung der Clients."
+        },
+        {
+            "start": 552420,
+            "end": 614890,
+            "speaker": "B",
+            "text": "Und meiner Meinung nach sind wir da jetzt eigentlich schon bei einer Key Aussage von dieser Episode, weil ich vermute mal, dass die wenigsten sich überhaupt Gedanken machen über dieses Problem, dass man überhaupt mal an diesen Punkt kommt, okay, wie kann ich denn einen Schutz da einziehen, einen eine Barriere einziehen, die im Falle irgendwie greift und man glaubt es gar nicht, wie schnell so was eigentlich ein Thema werden kann. Also bei unserer Podcast Plattform, zum Beispiel von unserer Analyse Plattform Open Podcast, da haben wir sehr wenig Requests, aber die Request triggern sehr komplexe Anfragen im Hintergrund auf der Datenbank. Und da macht es eigentlich schon Sinn, Rate Limiting zu haben oder sich zumindest zu überlegen, wie könnte man sowas strukturieren und einbauen, obwohl man nur sehr wenige Requests hat. Also wir sprechen da gar nicht nur über irgendwelche Applikationen, die Millionen von Requests haben, sondern es können auch wesentlich kleinere Applikationen sein. Und wenn man mal auf der Architekturseite sich überhaupt mit dem Thema auseinandersetzt, macht es sicher absolut Sinn, ohne dass man jetzt schon mal in die Implementierungs Ecke reingeht, aber einfach sich zu überlegen, wie zieht man da einen Schutz ein oder hat man den Schutz in irgendeiner Form überhaupt."
+        },
+        {
+            "start": 614890,
+            "end": 671720,
+            "speaker": "A",
+            "text": "Dabei muss man sagen, dass dem Wolfgang bei seiner Open Podcast Plattform aber auch so ein bisschen Monitoring fehlt, denn ich habe mal für den Engineering Kiosk diese Plattform genutzt, habe die API angesprochen, um die Top zehn der Best of Episoden vom Engineering Kiosk kontinuierlich zu ziehen. Und immer wenn ich den API Request absende, dann kriege ich halt so in fünfzig, sechzig, siebzig Prozent der Fälle halt so ein ER zurück, weil, weiß ich nicht, wahrscheinlich irgendeine nginx die Connection vorher dicht macht, bevor die Response von der Datenbank kommt. Der Wolfgang sagt dann immer, ich sehe hier keinen Fehler und dann probiert er das selbst nochmal und natürlich hat er von seinem curl Befehl dann irgendwie ein Timeout von neunzig Sekunden oder sowas und dann ist er irgendwie im Cache und ich komme halt immer mit einem kalten Cache an. Aber nun gut, ich bin mir aber nicht sicher, ob da Rate Limiting hilft, sondern ob es da nicht eher was anderes ist. Und da kommen wir nämlich jetzt gleich zu der Abgrenzung oder zu einem anderen Exkurs, was es nämlich neben dem Rate Limiting noch so gibt, was ihr vielleicht doch eher implementieren soll."
+        },
+        {
+            "start": 671720,
+            "end": 672920,
+            "speaker": "B",
+            "text": "Dann schieß mal los."
+        },
+        {
+            "start": 673000,
+            "end": 684120,
+            "speaker": "A",
+            "text": "Naja, also im Endeffekt habe ich ja gerade gesagt, ich sende einen Request und kriegt eine ER von deiner Plattform zurück, Wolfgang. Und ich hoffe, du willst jetzt nicht meinen einen Request Rate Limiten oder wenn."
+        },
+        {
+            "start": 684120,
+            "end": 687920,
+            "speaker": "B",
+            "text": "Du so die bösen Anfragen triggerst, vielleicht schon, vielleicht sollte man deine RAID Limit."
+        },
+        {
+            "start": 687920,
+            "end": 732810,
+            "speaker": "A",
+            "text": "Auf Null setzen in dem ganzen Kontext von Rate Limiting und seine API schützen oder beziehungsweise das System mit einer Lastbegrenzung zu versehen, schwirren noch so ein paar andere Begriffe rum. Ein Begriff ist zum Beispiel Back Pressure, den hatten wir glaube ich auch schon mal vorher erwähnt. Da geht es eher darum, dass ein überlasteter Teil des Systems nach oben signalisiert Hör mal, mir geht es gerade nicht gut, ich kann nicht mehr so viel verarbeiten. Einfach gesagt, das Downstream System sagt dem Upstream System bitte langsamer, ich komme nicht hinterher. Technisch bedeutet das in der Regel Queues sind irgendwie Voll Writes werden blockiert oder dein Downstream Microservice sendet halt einfach ein ER HTTP Status Call oder bei grpc Resource Exhausted oder ähnliches, wobei das ja."
+        },
+        {
+            "start": 732810,
+            "end": 738650,
+            "speaker": "B",
+            "text": "Eigentlich dann schon Rate Limiting wäre, oder? Wenn ich so ein Signal sende, wenn die Rate überschritten ist."
+        },
+        {
+            "start": 739129,
+            "end": 770700,
+            "speaker": "A",
+            "text": "Ja und nein. Du kannst Back Pressure als eine Art Rate Limiting sehen, aber Back Pressure ist reaktiv und entsteht zur Laufzeit und nicht durch eine Policy. Die Einordnung von Rate Limit zu Backpressure ist Das Rate Limiting ist eine explizite und frühzeitige Form von Back Pressure. Der Unterschied halt sagt Backpeasure, ich bin überlastet und Rate Limiting sagt halt, du darfst nicht mehr als X. Du kannst hier also eigentlich sagen, Rate Limiting ist Backpressure mit Vertrag und Zahl. Wohingegen, wenn Backpressure triggert, ist das System bereits schon überlastet."
+        },
+        {
+            "start": 770700,
+            "end": 780000,
+            "speaker": "B",
+            "text": "Also im Idealfall, wenn ich Rate Limiting habe, was sauber funktioniert, dann brauche ich gar kein Back Pressure aussenden. Im Idealfall, weil das System gar nicht zu dem Punkt kommt, dass es überlastet."
+        },
+        {
+            "start": 780000,
+            "end": 790400,
+            "speaker": "A",
+            "text": "Ist, sofern die Schwellenwerte für das Rate Limiting gut gewählt sind. Ja, du kannst natürlich Backpresser immer noch als Sicherheitsnetz unten drunter haben. Also Sicherheitsnetze kannst du natürlich fünfmal haben, ist am besten."
+        },
+        {
+            "start": 790400,
+            "end": 801960,
+            "speaker": "B",
+            "text": "Ganz allgemein, man kann sich wahrscheinlich nicht auf Rate Limiting verlassen, weil man muss ja trotzdem irgendwie monitoren und man kann ja trotzdem in den Zustand kommen, wo man einfach überlastet ist. Aus was für einem Grund auch immer. Also das eine schließt das andere nicht aus."
+        },
+        {
+            "start": 802260,
+            "end": 820980,
+            "speaker": "A",
+            "text": "Genau. Eine andere Thematik ist Graceful Degradation. Das bedeutet eigentlich, dass wenn dein System Last hat oder du weißt, es kommt Last, dass du manche Funktionalität einfach ausschaltest. Ich hatte das mal erzählt, wenn ich mir Karten für die Toten Hosen kaufe, dann kann ich mich in dem Shop einloggen."
+        },
+        {
+            "start": 821140,
+            "end": 824340,
+            "speaker": "B",
+            "text": "Bingo, bingo, ich hab acht Striche von Toten Hosen verkauf."
+        },
+        {
+            "start": 824900,
+            "end": 854700,
+            "speaker": "A",
+            "text": "Dann kann ich aber nicht mehr mir meine letzten Bestellungen anzeigen lassen. Während des Karten Vorverkaufs deaktiviert der Shop diese Funktionalität. Und das ist eine, ich sage mal, manuelle, proaktive Graceful Degradation, die sagt halt, okay, unter Last oder bei Fehlern liefere ich weniger Features, anstatt komplett auszufallen. Die sagen halt so einfach lieber eingeschränkt funktionieren als gar nicht, was glaube ich ganz gut ist, denn die meisten Leute wollen Konzertkarten kaufen und nicht gucken, wann sie das letztes Jahr ihr T Shirt bestellt haben."
+        },
+        {
+            "start": 854700,
+            "end": 869270,
+            "speaker": "B",
+            "text": "Das heißt übersetzt in deinem Beispiel, wenn du bei Open Podcast die Anfrage gestartet hast, gib mir die zehn erfolgreichsten Episoden und das eine sehr langsame Anfrage ist, dass ich genau diese langsamen Anfragen vielleicht blockiere und die schnellen Anfragen aber weiterhin ausliefern."
+        },
+        {
+            "start": 869270,
+            "end": 942120,
+            "speaker": "A",
+            "text": "Also das ist ein relativ schlechtes Beispiel, weil ich ja nur ein API Request für eine sehr teure Operation sende. Wenn du aber in deinem System merkst, dass dieser eine Request eine sehr teure Operation hat und du es nicht schaffst, mir die kompletten Daten zu geben, dann kannst du sagen, okay, ich mache eine Graceful Degradation und gebe mir eine geringere Datenqualität zurück, anstatt das volle Resultat. Das wäre auch eine Form von Graceful Degradation. Beispiel. Features abschalten, geringere Datenqualität liefern. Du lieferst zum Beispiel ein altes Ergebnis aus, also ein Cache anstatt live da oder du schaltest etwas nur im Read Only Modus, zum Beispiel jetzt bei deiner Plattform. Ich glaube, da kann ich gar nicht über die API schreiben. Ja, dein Mantra ist halt einfach, okay, ich funktioniere immer noch, aber dann halt nicht mit vollen Service. Und im Endeffekt ist es wie im richtigen Leben. Also wenn du im richtigen Leben immer nur Ja sagst und nie Nein, viele Leute sagen ja, deine richtige Power ist auch mal Nein zu sagen und so weiter. Und das ist bei Produktmanagement und bei Systemen und bei Plattformen ja genauso. Graceful Degradation funktioniert nur, wenn wir bewusst Nein sagen können zu gewissen Features. Also dafür musst du natürlich auch Gedanken machen, welches Feature ist denn bei dir wichtiger als das andere und frag das mal einen Produktmanager und der wird sagen, alles ist wichtig."
+        },
+        {
+            "start": 942280,
+            "end": 990890,
+            "speaker": "B",
+            "text": "Einen anderen Punkt, der da noch damit zusammenhängt, ist die Fault Isolation. Also wenn es dann wirklich so weit ist, dass es dann wirklich ein Problem gibt, vor allem wenn es zum Beispiel noisy neighbor gibt, also einen Tenant, einen Kunden zum Beispiel, der super viele Anfragen sendet, dann will man ja natürlich nicht das ganze System killen oder down haben, sondern den eigentlichen Verursacher irgendwie aus dem System herausnehmen. Da haben wir auch eine ganze Episode zu gemacht mit Max Schellhorn von AWS über Multitenant Organisation, Isolationsmodelle und ähnliches, kann man gerne mal reinhören, Episode zwei hundert zwölf, wo wir genau darüber gesprochen haben, was macht man, wenn ein Kunde verrückt spielt oder ein Kunde angegriffen wird und wie kann man das System am Leben erhalten und dem restlichen Kunden, den guten Kunden unter Anführungszeichen, weiterhin Daten senden und diese bedienen."
+        },
+        {
+            "start": 990890,
+            "end": 996530,
+            "speaker": "A",
+            "text": "Ja, da ist halt so der Merksatz, okay, wenn was kaputt geht, also wenn es unvermeidlich ist, aber dann bitte nur."
+        },
+        {
+            "start": 996530,
+            "end": 1001370,
+            "speaker": "B",
+            "text": "Dort drüben beim Nachbarn, beim noisy neighbor, wenn was kaputt geht, dann beim Nachbarn."
+        },
+        {
+            "start": 1001930,
+            "end": 1014880,
+            "speaker": "A",
+            "text": "Ja, es bedeutet halt eigentlich, Fehler bleiben lokal und reißen nicht das ganze System runter. Du merkst halt schon, wir sprechen die ganze Zeit immer nur über den Worst Case, wir sind ja schon im Schadensmodus. Also dann ist die Frage, wie groß ist der Schaden?"
+        },
+        {
+            "start": 1014880,
+            "end": 1022040,
+            "speaker": "B",
+            "text": "Gut, aber jetzt haben wir ganz viele Sachen besprochen, die eigentlich gar nichts direkt mit Rate Limiting zu tun haben, beziehungsweise nur in dem Dunstkreis mit dabei sind."
+        },
+        {
+            "start": 1022440,
+            "end": 1051300,
+            "speaker": "A",
+            "text": "Also das kannst du nicht so sagen, weil im Endeffekt Rate Limiting ist ja einer der effektivsten Mittel zur Fault Isolation. Zum Beispiel, du kannst ja dein Rate Limiting pro Kunde oder pro Tenant dynamisch fahren. Ich will nur sagen, das sind alles Begriffe, Fault Isolation, graceful Degradation and Back Pressure, die halt in den ganzen Dunstkreis immer da reinkommen. Aber es ist halt nicht Rate Limiting, es sind halt irgendwie Unterformen oder Rate Limiting ermöglicht es oder eben genau, du."
+        },
+        {
+            "start": 1051300,
+            "end": 1063510,
+            "speaker": "B",
+            "text": "Hast jetzt meine tolle Überleitung zerstört, weil ich wollte ja überleiten, dass wir das alles verhindern können mit einem richtigen Red Limiting im System. Und das wäre jetzt dein Stichwort gewesen, Andi, um Red Limiting zu erklären und."
+        },
+        {
+            "start": 1063510,
+            "end": 1068110,
+            "speaker": "A",
+            "text": "Tiefer reinzugehen, da stelle ich mal die erste Frage an dich, Architekt Wolfgang, jetzt."
+        },
+        {
+            "start": 1068110,
+            "end": 1070670,
+            "speaker": "B",
+            "text": "Lege dir da eine Überleitung und du kommst mit einer Frage an."
+        },
+        {
+            "start": 1070670,
+            "end": 1076670,
+            "speaker": "A",
+            "text": "Das ist wieder typisch, du kannst mir nicht das Wort bei dem Thema geben, sonst mache ich einen Monolog. Wo platzierst du denn Rate Limiting in deinem System?"
+        },
+        {
+            "start": 1076750,
+            "end": 1086350,
+            "speaker": "B",
+            "text": "Das Schöne ist ja, dass wir ein geteiltes Notes Dokument haben, wo jetzt einfach die Antwort runterlesen kann, weil da steht schön Rate Limiting so früh wie möglich, aber so nah wie nötig."
+        },
+        {
+            "start": 1086510,
+            "end": 1093410,
+            "speaker": "A",
+            "text": "Siehst du das immer im Backend oder sagst du Rate Limiting im Frontend, also im Client macht auch irgendeinen Sinn. Fangen wir mal vorne an."
+        },
+        {
+            "start": 1093410,
+            "end": 1137450,
+            "speaker": "B",
+            "text": "Fangen wir beim Client an, beim so früh wie möglich. Das wäre ja dann auf der Client Seite. Macht das Sinn für dich, wenn es ein guter Client ist? Wir hatten ja schon die bösen und die guten Clients heute. Wenn ein Client sich sauber verhält und richtig damit umgeht, ist es natürlich das Beste, wenn der Client auch schon das Rate Limiting macht. Es wäre ja der Klassiker bei einem Crawler, wenn du weißt, du hast ein Rate Limiting, dann stellst du den Crawler schon weiter nach unten, dass der irgendwelche Pausen zwischendrin hat zwischen den Requests, um das eigentliche System nicht zu überlasten. Also es ist natürlich möglich auf der Client Seite. Das große Problem auf der Client Seite ist, du als Server, als Anbieter, als Plattform hast natürlich keinen Einfluss auf die Clients. Du kannst zwar hoffen, dass der Client nett ist, aber zwingend kannst du den Client nicht nett zu sein."
+        },
+        {
+            "start": 1137530,
+            "end": 1141250,
+            "speaker": "A",
+            "text": "Hast du denn schon mal einen netten Client implementiert? Bist du denn schon mal Ja, jeder."
+        },
+        {
+            "start": 1141250,
+            "end": 1155770,
+            "speaker": "B",
+            "text": "Meiner Crawler ist nett, weil sonst würden sie ständig in RAID Limiting laufen. Drum sind alle meine Crawler in irgendeiner Form nett, aber meistens natürlich ganz knapp an dem Rate Limiting, weil man will ja möglichst viele Requests bekommen, aber nicht irgendwie geblockt werden oder in ein Rate Limiting reinlaufen."
+        },
+        {
+            "start": 1155770,
+            "end": 1176550,
+            "speaker": "A",
+            "text": "Ja, ich rede jetzt nicht nur von deinen Crawlern, ich rede vielleicht auch von einer JavaScript Webapplikation. Hast du schon mal eine Webapplikation oder eine Nicht Crawler Client so implementiert, dass er wirklich Funktionalität hat, die auf Basis der HTTP Response Codes unterschiedlich agiert, Also wirklich die Response Codes respektiert, möchte ich fast sagen."
+        },
+        {
+            "start": 1176790,
+            "end": 1239840,
+            "speaker": "B",
+            "text": "Ja, üblicherweise. Also den ER HTTP Code, der hier sagt zu viele too many Requests, glaube ich, heißt er offiziell, dass man dann in irgendeinem Backoff landet und einfach paar Sekunden wartet oder sowas. Das ist eigentlich schon fast Standard. Und versuche schon eigentlich überall zu implementieren, wo ich wirklich mehrere Requests auch sende. Was ich auch oft mache, ist einfach möglichst nett zu sein. Vor allem wenn ich Server und Client programmiere, dann mache ich das üblicherweise, dass wenn der Client mehrere Requests senden würde, zum Beispiel wenn man eine Suche implementiert und du tippst und bei jedem Buchstaben, den du eintippst, würde ein Search Request hinten gesendet werden, dass man diese zusammenfasst und wartet, okay, hat der User jetzt wirklich fünf hundert Millisekunden eine Pause gemacht, keinen neuen Buchstaben eingegeben und erst dann sendest du den Search Request zum Beispiel. Also solche Dinge programmiere ich üblicherweise schon, um einfach den Server bisschen zu entlasten Und wie gesagt, üblicherweise bin ich auch der Server Developer und dann entlaste ich mich selber. Also so Kleinigkeiten kann man eigentlich relativ einfach implementieren und das denke ich üblicherweise schon mit."
+        },
+        {
+            "start": 1240400,
+            "end": 1310750,
+            "speaker": "A",
+            "text": "Schönes Beispiel, diese autocomplete Formulare. Aber ja, in der Tat, das ist so ein Klassiker, wo wirklich Leute mit Request um sich hämmern. Aber ein anderes Beispiel ist halt auch, wenn du Offline Funktionalität oder ein Flaky Network hast, dass du einfach deine Request danach cuest und langsam oder bzw. Kontrolliert abfeuerst, wenn du wieder Netzwerk Konnektivität hast, anstatt alles sofort nach dem Reconnect zu feuern. Aber im Endeffekt, wir haben jetzt ein paar Sachen durchgesprochen und da kommt schon ein recht komplexer Client zustande, auf wie viele Sachen du da achten musst. Aber wie du auch schon sagtest, du kannst es halt nicht durchsetzen als Backend. Du hast keine Handhabe über die Clients. In der Regel hast du inkonsistente Implementierungen vielleicht in verschiedenen Programmiersprachen. Die Komplexität hatte ich gerade angesprochen und Achtung, ein einziger Client und das wird vielen Leuten gar nicht bewusst, der kennt ja gar nicht die globale Sicht. Ich weiß ja gar nicht, ob du meinen Webservice zum Beispiel von deinem Desktop Computer und von meinem Handy und von noch einem iPad oder so benutzt. Also das bedeutet mehrere Geräte pro User, parallele Sessions, vielleicht sogar eine unsaubere Uhrzeit auf den Client. Das kann schon eigentlich der Fehler sein, wann Request wie abgefeuert werden, ganz grundsätzlich."
+        },
+        {
+            "start": 1310910,
+            "end": 1319310,
+            "speaker": "B",
+            "text": "Auch wenn man nette Clients hat. Fehler gibt es immer und überall und die kann man nicht ausschließen. Und auch ein netter Client kann mal verrückt spielen, aus was für einem Grund auch immer."
+        },
+        {
+            "start": 1319310,
+            "end": 1351590,
+            "speaker": "A",
+            "text": "Es gibt aber auch eine Form von Daten, da kann der Client richtig nett sein. Und zwar gehen wir jetzt mal auf das Konzept vom Sampling. Stell dir mal vor, der Client kriegt das Signal, dass das Backend irgendwie überlastet ist oder Gerate limited wird oder halt irgendein Signal, entweder er oder du rennst gerade Rate Limiting oder dann kannst du für manche Arten von Daten, zum Beispiel für Telemetriedaten, für Analytics Daten, für Logging, Tracing und so weiter, kannst du auch einfach deine Daten samplen, dort wo du eigentlich Events senden würdest und vielleicht einfach Requests."
+        },
+        {
+            "start": 1351590,
+            "end": 1355550,
+            "speaker": "B",
+            "text": "Also mit Logging meinst du jetzt, dass der Client Logs sendet an irgendein Backend."
+        },
+        {
+            "start": 1355550,
+            "end": 1408780,
+            "speaker": "A",
+            "text": "Zum Beispiel, ja, Logs oder Telemetriedaten oder Error Reporting via Sentry oder irgendwas. Halt Daten, wo es nicht auf jeden einzelnen Request ankommt, sondern ich sag mal Daten, die du über Zeit Kollektes, von mir aus auch User Telemetrie Daten. Dann kannst du sagen im Client, ich treffe jetzt die Entscheidung und sende nur ein Prozent der Daten, die ich normalerweise senden würde, anstatt gar keine. Dadurch verlierst du natürlich schon so ein bisschen, ich sage mal, den Detailgrad und so, weil du ja nur eine repräsentative Teilmenge sendest, aber du sendest wenigstens etwas. Leute im Datenanalytics Bereich werden das kennen, weil besonders Leute im Big Data Bereich, die werden ziemlich viel mit Sampling unterwegs sein. Und wenn du zum Beispiel die Plattform Sentry nutzt, das ist so eine Error Reporting Plattform, dort kannst du auch Sampling im Client einstellen. Sende bitte nur so und so viel Prozent meines Error Traffics oder ähnliches."
+        },
+        {
+            "start": 1408780,
+            "end": 1418380,
+            "speaker": "B",
+            "text": "Das muss dann aber der Server dementsprechend das Backend unterstützen, oder? Weil ich muss ja immer irgendwie sagen, das repräsentiert jetzt ein hundert Requests, aber ich sende dir keine Ahnung, den Average oder was es auch immer ist."
+        },
+        {
+            "start": 1418380,
+            "end": 1433480,
+            "speaker": "A",
+            "text": "Ach so, ja, soweit kannst du natürlich auch gehen, aber im Endeffekt wäre das ja nur ein zweiter Integer oder ähnliches, den du in demselben Request mit sendest. Kann, kannst du machen, finde ich eine nette Idee, musst du aber auch nicht, weil im Endeffekt kommt es halt ganz auf deine Daten an, was das ist."
+        },
+        {
+            "start": 1433480,
+            "end": 1457440,
+            "speaker": "B",
+            "text": "Okay, jetzt hast du mich in diesen Client gedrückt am Anfang, wenn wir jetzt zurückkommen zu deinem Spruch, den du mir da in die Notes geschrieben hast, Rate Limitierung so früh wie möglich, aber so nah wie nötig. Was ist denn jetzt so nah wie nötig? Also gehen wir mal davon aus, wir haben zwar netten Client, aber wir müssen da trotzdem irgendwie die Kontrolle behalten. Wo macht jetzt Rate Limiting Sinn? Mache das irgendwo am Gateway, mache das ganz hinten in der Datenbank. Was macht Sinn?"
+        },
+        {
+            "start": 1457440,
+            "end": 1522990,
+            "speaker": "A",
+            "text": "Ich könnte fast sagen, umso mehr Rate Limiting Ebenen du hast, desto sicherer bist du. Aber das steigt natürlich auch dein Komplexitätslevel deiner Infrastruktur. Wenn wir den Client mal verlassen, dann geht der Request durchs Internet und wenn du ein weltweites Netzwerk hast oder vielleicht nutzt du auch einfach nur ein CDN oder ähnliches, dann bieten diese Services meist irgendwie so eine Art von Edge Computing, was halt geografisch sehr nah bei dir ist. Da kannst du halt zum Beispiel den ersten Rate Limiting Layer hinpacken, Edge Computing oder von mir aus auch irgendein API Gateway halt. Ich sag mal die Eingangstür bei AWS gibt sowas, bei Google gibt es sowas alles auch von dem Edge Computing oder von einer Serverless Funktion oder wo auch immer. Kannst du natürlich dann direkt vor deinen Service oder beziehungsweise in deiner Service to Service Kommunikation dazwischen kannst du Rate Limiting setzen. Das machen mal viele Leute mit irgend so einem Sidecar, nennt man das ja so einem Envoy Proxy oder Load Balancer dazwischen. Da implementiert man auch sehr oft eine Art von Rate Limiting oder halt dann natürlich auch pro Ressource, das bedeutet pro Datenbank, pro Queue, pro Third Party API und so weiter. Das kannst du halten wie ein Dachdecker. Kannst du machen, wie du möchtest."
+        },
+        {
+            "start": 1522990,
+            "end": 1536880,
+            "speaker": "B",
+            "text": "Okay, jetzt haben wir jetzt entschieden, da überall Rate Limiting einzubauen. Was mache ich denn jetzt für ein Rate Limiting? Also mache ich das pro IP Adresse, pro Kunde, bei mir eine eigene Struktur? Was macht denn da Sinn und wie kann ich das herausfinden?"
+        },
+        {
+            "start": 1536880,
+            "end": 1594520,
+            "speaker": "A",
+            "text": "Am liebsten hätte ich jetzt so gern so ein Whiteboard, denn das war tolle Frage. Und im Endeffekt kannst du da so ein Decision Tree mitbauen, weil du hast so ein paar Engineering Fragen, die du vorher beantworten möchtest oder bzw. Solltest. Dann Rate Limiting. Möchtest du Request Bursts erlauben oder nicht? Das bedeutet, es gibt Clients, die, wenn die hochfahren, zum Beispiel sehr viele Mobile Apps machen das, die fahren hoch, feuern sechs Requests raus und wenn die App oben ist, dann senden die nur einen Request pro Minute. Oder wenn die App gestartet wird, sendest du also fünf. Du hast einen kleinen Request Burst und dann fällt das halt so ab. Möchtest du Bursts unterstützen oder nicht und respektieren oder nicht, dann möchtest du einen fairen Rate Limiting Algorithmus oder möchtest du einen einfachen Rate Limiting Algorithmus, kommen wir gleich zu. Und das dritte, und das ist wohl meines Erachtens nach die wichtigste Frage, möchtest du ein Stateful Rate Limiting Algorithmus oder ein stateless Rate Limiting Algorithmus?"
+        },
+        {
+            "start": 1594520,
+            "end": 1596400,
+            "speaker": "B",
+            "text": "Was ist jetzt stateless und stateful?"
+        },
+        {
+            "start": 1596400,
+            "end": 1614200,
+            "speaker": "A",
+            "text": "Da ist eigentlich die Keyfrage, muss sich der Rate Limiter an die vergangenen Requests erinnern oder nicht? Das bedeutet stateless, es kommt ein Request rein, kann die Entscheidung nur auf Basis dieses Request getroffen werden, ohne sich an vorherige Request zu erinnern. Das ist stateless."
+        },
+        {
+            "start": 1614200,
+            "end": 1620170,
+            "speaker": "B",
+            "text": "Also da ein Beispiel, weil die muss ja immer irgendwie was wissen oder wie viel Requests reingekommen sind von dem Kunden zum Beispiel."
+        },
+        {
+            "start": 1620170,
+            "end": 1671150,
+            "speaker": "A",
+            "text": "Naja, du kannst ja schnelle Heuristiken abfeuern. Beispiel, wenn der User Agent nicht mit der Source IP zusammenhängt, dann kannst du sofort ablehnen. Das kannst du ja aus diesem Request lesen. Viele cdns machen sowas halt überall, wo Performance wirklich kritisch ist und die weltweit verteilt sind, weil immer wenn du sehr schnell antworten musst, ist jeder Look up halt super teuer. Und die zweite Problematik ist, wenn dein CDN weltweit verteilt ist, du brauchst ja irgendwo Daten Storage zentral, damit du den vorherigen Request analysieren kannst und da eine Verbindung ziehen kannst. Und du weißt doch, selbst wenn du eine Datenbank hast, die weltweit zugänglich ist, dann musst du halt irgendwie mal ein paar Millisekunden verlieren, um die Datenbank abzufragen und da geht die Performance dann wieder runter. Deswegen ziemlich viele CDN oder Edge Computing Networks, die Rate Limiting haben, nutzen so eine stateless Logik."
+        },
+        {
+            "start": 1671310,
+            "end": 1682740,
+            "speaker": "B",
+            "text": "Also stateless heißt in dem Fall, ich habe keinen gesharen State über mehrere Instanzen hinweg, aber auf meiner lokalen Instanz habe ich dann schon irgendeinen Counter, zum Beispiel, wie viele Requests überhaupt reinkommen oder sowas."
+        },
+        {
+            "start": 1682980,
+            "end": 1688340,
+            "speaker": "A",
+            "text": "Du hast halt irgendwas, was anhand der Anzahl der Requests kein Speicherwachstum hat, was."
+        },
+        {
+            "start": 1688340,
+            "end": 1690340,
+            "speaker": "B",
+            "text": "Sie lokal entscheiden kann. Prinzip."
+        },
+        {
+            "start": 1690340,
+            "end": 1734310,
+            "speaker": "A",
+            "text": "Genau. Und das ist auch schon der Nachteil dieser ganzen Thematik. Du entscheidest es lokal und du hast halt nicht die Information von der anderen Node oder ähnliches. Wenn du eine Node hast, einen Server, dann ist das super, weil dann hast du, dann kannst du eigentlich sagen, okay, stateless, aber dann, wenn du was Neues startest. Aber du kannst auch zum Beispiel irgendwelche Sachen vorberechnen und die in den Memory laden oder ähnliches. Wird oft wie gesagt bei CDN oder Edge Computing genutzt oder bei ddos Mitigations, dort wo du relativ schnell entscheiden musst oder wo du unglaublich viele Anfragen bekommst, dass du nämlich dann zum Beispiel deine Datenbank nicht überlastet. Aber die meisten Rate Limiting Algorithmen oder Rate Limiting Funktionalitäten sind stateful. Und da habe ich dir jetzt einfach mal vier verschiedene Methoden mitgebracht."
+        },
+        {
+            "start": 1734470,
+            "end": 1745350,
+            "speaker": "B",
+            "text": "Dann lieber Andy, pack mal deinen Methodenkoffer aus und präsentiere uns deine vier Methoden, die du uns mitgebracht hast. Das klingt wie so ein Staubsauger Verkäufer an der Tür. Ich habe Ihnen da mal vier Beispiele mitgebracht."
+        },
+        {
+            "start": 1745509,
+            "end": 1758790,
+            "speaker": "A",
+            "text": "Fangen wir mit dem einfachsten an. Der einfachste ist nicht fair, aber sehr einfach und zwar ist es wirklich ein Fix Window. Du hast halt ein festes Zeitfenster, zum Beispiel eine Minute und da in diesem Zeitfenster sind fünf hundert Requests erlaubt und danach wird der Zähler zurückgesetzt."
+        },
+        {
+            "start": 1759130,
+            "end": 1766490,
+            "speaker": "B",
+            "text": "Ziemlich dumm. Naiver Ansatz, würde ich mal sagen, So wie man das ganz simpel implementieren würde, wenn man mit irgendwas starten will oder?"
+        },
+        {
+            "start": 1766810,
+            "end": 1782810,
+            "speaker": "A",
+            "text": "Ja, ein hundert Prozent. Also wie funktioniert das? Ein Request kommt rein, du erhöhst einen Counter, das Minuten Fenster läuft ab, du resettest den Counter und alles über dem Limit wird abgelehnt, unterstützt natürlich auch, burst so lang, bis das Limit erreicht ist. Also ist es sehr, sehr einfach."
+        },
+        {
+            "start": 1782890,
+            "end": 1784210,
+            "speaker": "B",
+            "text": "Und warum ist jetzt unfair?"
+        },
+        {
+            "start": 1784210,
+            "end": 1822440,
+            "speaker": "A",
+            "text": "Naja, also unfair ist es halt deswegen, weil du sagst halt first come, first serve, also es gibt keine Drosselung, es gibt keinen Split oder ähnliches, du hast keinen Schutz vor aggressiven Clients. Wenn es eine zentrale API ist, dann kann ich die einfach zu machen und du hast halt gar keine Chance mehr auf den auf den Service zuzugreifen. Natürlich kannst du auch Fixed Windows dann noch mal separieren pro Tenant, pro Kunde oder ähnliches, würde ich aber einfach nicht empfehlen im Endeffekt. Das ist ein guter Einsatzfall für, ich sag mal, einen groben Schutzmechanismus, irgendwie interne Tools oder Low Risk APIs oder halt Systeme, wo wirklich die Einfachheit wichtiger ist."
+        },
+        {
+            "start": 1822440,
+            "end": 1826000,
+            "speaker": "B",
+            "text": "Als die Präzision oder das letzte Sicherheitsnetz einfach."
+        },
+        {
+            "start": 1826000,
+            "end": 1829800,
+            "speaker": "A",
+            "text": "Ja, genau. Es ist einfach nur wirklich ein grober Schutzmechanismus."
+        },
+        {
+            "start": 1829800,
+            "end": 1831320,
+            "speaker": "B",
+            "text": "Okay, wenn wir jetzt einen Schritt Richtung."
+        },
+        {
+            "start": 1831320,
+            "end": 1858840,
+            "speaker": "A",
+            "text": "Fairness gehen, du nimmst einfach das Fixed Window und machst daraus ein Sliding Window. Das bedeutet, du zählst die Request über ein gleitendes Zeitfenster und hast halt somit nicht diese festen Grenzen dabei, wie nach einer Minute gesprochen haben. Ich meine, wie funktioniert die ganze Sache? Ähnlich wie gerade, Request kommt rein, jeder Request kriegt ein Timestamp und es zählen nur die Request innerhalb der letzten Sekunden und dann wird das Limit kontinuierlich gebracht. Kannst du dir eigentlich vorstellen. Wie gesagt, ein Sliding Window ist es."
+        },
+        {
+            "start": 1858840,
+            "end": 1876760,
+            "speaker": "B",
+            "text": "Wirklich, man kann meistens so einen Ring Buffer implementieren, den man dann wiederverwendet. So, keine Ahnung, wenn es sechzig Sekunden sind, kann man sechzig Slots machen und dann in jeder Sekunde eingeben, wie viel Requests waren oder so ein Sliding Window implementieren. Hatte ich mal bei irgendeinem Bewerbungsgespräch, musste ich so einen Ringpuffer implementieren."
+        },
+        {
+            "start": 1876980,
+            "end": 1916700,
+            "speaker": "A",
+            "text": "Ja, ein Ringbuffer ist einer der bevorzugten Datenstrukturen für diesen Algorithmus. Eine Queue oder eine DQ oder eine sortierte Liste reicht auch oder halt einfach ein Sorted Z kannst du auch nehmen im Endeffekt irgendwas, wo du halt schnell diese Liste auch dauerhaft aufräumen musst, denn im Endeffekt musst du diese Liste mit deinem Sliding Window, die alten Einträge musst du halt kontinuierlich rausschmeißen. Das bedeutet, du operierst halt konstant auf dieser Datenstruktur und kannst dir vorstellen, das ist halt mit Anzahl der eingehenden Requests halt schon ein Rechen und Speicheraufwand, weil der Speicher wächst halt mit der Requestrate, weil du halt für jeden Request einen Timestamp mit ablegst."
+        },
+        {
+            "start": 1916700,
+            "end": 1920020,
+            "speaker": "B",
+            "text": "Also du machst einen Ringpuffer, dann hat man dieses Problem eben nicht, Klar, aber."
+        },
+        {
+            "start": 1920020,
+            "end": 1921860,
+            "speaker": "A",
+            "text": "Trotzdem muss ja immer noch ein Cleanup machen."
+        },
+        {
+            "start": 1921860,
+            "end": 1926300,
+            "speaker": "B",
+            "text": "Ja, beim Ringpuffer überschreibst du einfach das Ganze, darum ist es relativ effizient."
+        },
+        {
+            "start": 1926300,
+            "end": 2056050,
+            "speaker": "A",
+            "text": "Genau, und dann musst du die ganze Sache natürlich auch horizontal skalieren können. Das bedeutet, wenn du das nur in Memory hast, dann wird es auch wieder schwierig. Aber im Endeffekt ist das halt ein guter Einsatzfall, wenn dir Fairness wichtig ist und wenn du Systeme, ich sage mal, mit moderater Last hast, ich würde es halt nicht bei sehr hohen Request Raten implementieren, weil dann brauchst du horizontale Skalierung, die dann beim Ring Buffer schon wieder, also der Schreibvorgang mag zwar toll sein, aber wie skalierst du den über dein Memory hinweg? Die beiden Algorithmen, Fixed Window und Sliding Window, der HA Proxy, der Load Balancer hat die zum Beispiel implementiert, Also da kannst du beide wählen. Jetzt kommen wir zu einem Weg, den ich sehr sehr schön finde und der auch sehr sehr oft bei AWS und auch in den AWS Clients implementiert ist oder in den AWS Client SDKs. Und zwar ist es das Token Bucket. Das haben wir glaube ich schon mal in der Episode zu Timeouts und Backoffs und Exponential Backoffs besprochen. Im Endeffekt hast du einen Eimer und der füllt sich kontinuierlich mit Tokens und jeder Request verbraucht einen Token und es kommen in diesen Eimer immer neue Tokens hinzu über eine konstante Rate. Also stell dir vor, du hast einen Eimer, da kommen fünf Tokens pro Sekunde rein und in den Eimer passen zehn Tokens. Jeder Request verbraucht einen Token. Jetzt kommst du an, machst deine Mobile App auf und schickst acht Requests auf einmal. Du machst ein Burst, somit verbraucht deine App gerade acht Tokens, zwei Tokens sind noch in dem Eimer und alle acht Requests sind erlaubt. In der nächsten Sekunde füllt sich der Bucket wieder, also füllt sich der Eimer wieder mit fünf weiteren Tokens, weil fünf Tokens die Sekunde reinkommen, bis da wieder zehn Tokens im Eimer sind und dann geht es immer so weiter. Jetzt hast du einen Client, der schickt zwölf Requests sofort, die ersten zehn Requests sind erlaubt, die zwei Requests werden abgelehnt oder verzögert, da kommt es auf die Implementierung an. Nächste Sekunde kommen wieder fünf Tokens rein und somit ist wieder frei für neue Requests. Schützt halt wirklich dann für die Backend Überlast. Ist ein bisschen komplizierter zu implementieren, ist aber sehr flexibel und finde ich ist eine gute Balance zwischen, ich sage mal, Schutz und Nutzerfreundlichkeit, weil danach relativ schnell wieder die Bahn frei ist."
+        },
+        {
+            "start": 2056370,
+            "end": 2076900,
+            "speaker": "B",
+            "text": "So, jetzt haben wir gerade überlegt, was ist eigentlich der Unterschied zum Sliding Window, Weil ein Sliding Window bekommt ja auch mit einer konstanten Rate im Prinzip wieder Slots zugeordnet. Wenn du jetzt sagst, du hast jede Sekunde einen Slot, wo du die Requests abspeicherst, dann ist es ja sehr nahe am Bucket und Bursts sind auch erlaubt, weil du ja in dem Window einen Burst machen kannst."
+        },
+        {
+            "start": 2076900,
+            "end": 2089820,
+            "speaker": "A",
+            "text": "Du kannst ja unter anderem die Anzahl der Tokens, die pro Zeitfenster in das Bucket überfließen, kannst du dynamisch halten, zum Beispiel anhand deiner Infrastruktur kannst du beim Sliding Window nicht. Beim Sliding Window kannst du nur das ganze Window verschnellern oder nicht stimmt, an."
+        },
+        {
+            "start": 2089820,
+            "end": 2154220,
+            "speaker": "B",
+            "text": "Das habe ich gar nicht gedacht. Wo ich den Unterschied zusätzlich noch sehe, ist, dass der Bucket mit einer konstanten Rate arbeitet. Das heißt, es fließen immer konstant viele Tokens nach. Bei einem Sliding Window hast du aber diesen Effekt, dass wenn du am Anfang eine extrem hohe Burst Rate hattest, das heißt in deiner ersten Sekunde von deinem sechzig Sekunden Window gibt es ein hundert Requests und das Window springt dann um genau diese Sekunde weiter, dann fallen dir plötzlich diese ein hundert Requests, diese riesen Burst fällt dir hinten einfach raus. Innerhalb einer Sekunde hast du plötzlich von ein hundert Requests in deinem Window nur mehr zwei Requests von einer auf die andere Sekunde, weil eben das Window so springt. Beim Bucket hast du konstant, dass genau in dem Fluss so viele Tokens, wie du reinfüllst, konstant immer dazu gegeben werden, ohne dass du so extreme Sprünge drin hast wie mit dem Windows. Das wäre meine Erklärung, wo es auch noch ein Unterschied gibt. Also genau wie du sagst, es ist eigentlich dynamischer und konstanter und ein bisschen flüssiger im wahrsten Sinne des Wortes."
+        },
+        {
+            "start": 2154300,
+            "end": 2175240,
+            "speaker": "A",
+            "text": "Du hast auch einen sehr, sehr guten Punkt gebracht. Ich würde sagen, das ist halt, wie die Anfragen gezählt und geglättet und zugelassen werden, ist halt so der kleine Unterschied. Aber im Endeffekt kommt es unten dran halt schon das gleiche bei raus, würde ich sagen. Und wenn wir schon bei Eimern sind, dann kommen wir zu der letzten Methode, dem Leaky Bucket, dem tropfenden Eimer, wenn du so möchtest. Und das ist eigentlich, das heißt erstens."
+        },
+        {
+            "start": 2175240,
+            "end": 2185640,
+            "speaker": "B",
+            "text": "Kübel und gibt es da nicht dieses tolle Lied bei euch in Deutschland? Der Eimer hat ein Loch, Lieber Heinrich Gustav, was war das? Nein, lieber Reinhard war das. Das war Reinhard May."
+        },
+        {
+            "start": 2185880,
+            "end": 2189680,
+            "speaker": "A",
+            "text": "Ein Loch ist im Eimer ist ein deutsches Volks und Kinderlied, Das kennst du gar nicht."
+        },
+        {
+            "start": 2189680,
+            "end": 2192760,
+            "speaker": "B",
+            "text": "Andi, lasst du dir von dem Österreicher was erklären?"
+        },
+        {
+            "start": 2192840,
+            "end": 2232150,
+            "speaker": "A",
+            "text": "Im Endeffekt hat das jetzt relativ wenig mit einem Eimer zu tun, denn die ganze Sache ist ein Cue basiertes Modell, wo dann halt die Request mit einer Konstanten abgearbeitet werden. Also wie funktioniert es? Ein Request kommt rein, landet in der Queue und dann tropfen die hinten halt mit einer fixen Rate raus. Und wenn die Queue halt einfach voll läuft, dann werden die Requests halt einfach verworfen. Also ich meine, der Vorteil, du hast ein relativ gutes stabiles Lastprofil, weil du halt die Austropfrate, also die Verarbeitung deiner Request halt selbst bestimmen kannst und du hast halt ein unglaublich gut vorhersehbares Verhalten. Und Nachteile ist halt dann gegebenenfalls höhere Latenz, kann halt keine Bursts oder ähnliches unterstützen. Und je nach Service kannst du natürlich das Nutzererlebnis verschlechtern, wenn die Latenz hoch ist."
+        },
+        {
+            "start": 2232790,
+            "end": 2235870,
+            "speaker": "B",
+            "text": "Warum kann es keine Burst? Burst hast du ja genauso, oder?"
+        },
+        {
+            "start": 2235870,
+            "end": 2254900,
+            "speaker": "A",
+            "text": "Ja, die Burst werden halt einfach in die Queue geschrieben, aber die Burst werden nicht schneller abgearbeitet. Burst ist ja, dass ganz viele Requests auf einmal kommen und dann die Antwort auch zügig kommt. Hier machen die Bursts halt einfach nur die Queue relativ voll, aber die Antwort geht ja nicht schneller raus, weil du ja die Request in einer fixen Rate abarbeitest."
+        },
+        {
+            "start": 2254900,
+            "end": 2258180,
+            "speaker": "B",
+            "text": "Und warum sagt man nicht einfach Cue dazu zum Leaky Bucket?"
+        },
+        {
+            "start": 2258420,
+            "end": 2267540,
+            "speaker": "A",
+            "text": "Das musst du die Menschen fragen, die das erfunden haben. Keine Ahnung, vielleicht fragst du mal bei Nginx nach, weil die fahren das Modell zum Beispiel im RAID Limiting bei Nginx."
+        },
+        {
+            "start": 2267620,
+            "end": 2271860,
+            "speaker": "B",
+            "text": "Aber warum verarbeite ich nicht mehrere Requests dann parallel aus dem Bucket?"
+        },
+        {
+            "start": 2271860,
+            "end": 2281820,
+            "speaker": "A",
+            "text": "Kannst du doch, ich mein, du hast ja, also wie du die verarbeitest, ist ja egal, aber du definierst ja die konstante Rate. Wenn du zum Beispiel jetzt einen Worker Pool hast, dann kannst du ja trotzdem x mal aus der Queue lesen."
+        },
+        {
+            "start": 2282530,
+            "end": 2286690,
+            "speaker": "B",
+            "text": "Ah OK, also ich entscheide, wie groß das Loch ist im Bucket so ungefähr."
+        },
+        {
+            "start": 2287570,
+            "end": 2293810,
+            "speaker": "A",
+            "text": "Der Unterschied ist, wenn du in einen Eimer bohrst oder in Kübel, dann kannst du es halt nicht wieder zumachen. Hier halt schon."
+        },
+        {
+            "start": 2293890,
+            "end": 2296850,
+            "speaker": "B",
+            "text": "Okay, I see, das kann Nginx default mäßig."
+        },
+        {
+            "start": 2296930,
+            "end": 2316260,
+            "speaker": "A",
+            "text": "Genau, zum Beispiel der Token Bucket, den wir gerade erklärt haben, das ist zum Beispiel im Envoy drin oder Kong, das ist dieses API Gateway, die machen zum Beispiel das mit dem Token Bucket oder halt bei Ada Bö. Jetzt sprechen wir die ganze Zeit über Engineering Themen, aber meines Erachtens nach ist Rate Limiting jetzt nicht nur eine Engineering Entscheidung, sondern auch eine Produkt Produktmanagement Frage. Kannst du dir vorstellen, warum, Wenn ich."
+        },
+        {
+            "start": 2316260,
+            "end": 2330620,
+            "speaker": "B",
+            "text": "Jetzt entscheide bei Open Podcast, dass ich dir Andi als mein User nichts mehr ausliefere, dann ist es sehr wohl eine Produktentscheidung. Und wann ich dir nichts mehr ausliefere, weil du mir nichts zahlst und meine anderen Kunden mir aber schon was zahlen. Und die haben dann die Priorität natürlich."
+        },
+        {
+            "start": 2330700,
+            "end": 2416070,
+            "speaker": "A",
+            "text": "Ja, du sprichst ein wichtiges Thema an. Im Endeffekt kannst du über Rate Limiting definieren, wer dein Produkt wie intensiv nutzen darf. Das ist halt auch so eine Art Werteversprechen deines Software as a Service. Denn Rate Limiting entscheidet wirklich über die Zugänglichkeit, über die Priorisierung und auch Achtung, über die Monetarisierung und das Kundenerlebnis. Denn im Endeffekt kannst du auch Rate Limiting bewusst einsetzen, um zum Beispiel irgendwie einen Upsell zu machen. Und du kannst vielleicht auch als Soft Paywall sehen. Nehmen wir mal als Beispiel GitHub. GitHub hat etliche Rate Limits. Anonyme User können mit der GitHub API sprechen, die dürfen aber nur sechzig Anfragen pro Stunde machen, also eine Anfrage pro Minute. Wenn du aber eingeloggt bist, darfst du fünf tausend Anfragen pro Stunde machen und dann bricht sich die ganze Thematik auch noch sogar nach Service auf. Also GitHub hat eine Funktionalität, die nennt sich LFS, Large File Storage. Da kannst du zum Beispiel Dateien über zwei Gigabyte hochladen. Da können unauthentifizierte User drei hundert Request die Minute machen, authentifizierte User drei tausend Requests oder GitHub Apps haben auch unterschiedliche Rate Limits. Ob du jetzt ein eingeloggter User bis oder ob diese GitHub App von einem Enterprise Cloud Account gesteuert wird oder oder oder. Im Endeffekt kannst du damit halt wirklich deinen Kundenzugang steuern und du kannst halt, so wie du jetzt das gerade auch beschrieben hast, Free Tier User anders behandeln als Enterprise User."
+        },
+        {
+            "start": 2416070,
+            "end": 2421790,
+            "speaker": "B",
+            "text": "Und wie kommuniziere ich das Ganze an den User? Also abgesehen von den Terms and Conditions, dass das irgendwo steht."
+        },
+        {
+            "start": 2421790,
+            "end": 2523040,
+            "speaker": "A",
+            "text": "Ja, im Endeffekt geht es da jetzt drum, auf welche Parameter du dein Rate Limiting setzt. Entweder ist das so zum Beispiel die Rate, also den Durchsatz, also die erlaubten Requests pro Zeiteinheit, ein hundert Request die Sekunde. Dann hat man gerade über die Burst gesprochen. Wie viel Request lässt du kurzzeitig über die Rate hinweg durch. Du kannst ja auch sagen, okay, obwohl du ein hundert Requests die Minute machen darfst, darfst du in zwei Minuten von zehn Minuten über zehn Prozent über das Limit hinausgehen. Das geht ja auch. Du kannst sagen, worauf wird limitiert? Auf die IP Adresse, auf die User ID, auf den API Key, auf einen Tenant. Du kannst sagen, wie wird dein Rate Limiting gesteuert? Also dein Enforcement Mode, ein Hard Limit, also lehnst du jeden Request ab oder sagst du, du hast ein Soft Limit, du verzögerst dann die Antwortzeiten, die priorisiert oder drosselst die. Du kannst eine unterschiedliche Gewichtung auf die Art des Request legen. Du kannst sagen, okay, ein Lese Request, also ein Get Request ist günstiger, einen Post Request, weil ein Post Request dann eben zum Beispiel schreibt. Du kannst dann zum Beispiel sagen, wie mit der Bucket Strategie, die wir gerade gefahren haben, lese Requests, verbrauchen ein Bucket, schreib Request, brauchen fünf Buckets. Du kannst sagen, wenn mein System unter Last ist, priorisiere ich Enterprise Kunden über Free Kunden und so weiter. Und das ist die Art von Kommunikation, die du machen muss. Du musst deine Parameter festlegen und dann, wonach du runterbrichst. Und da kommt es halt wirklich auf eine gute Kommunikation zwischen Engineering und Produktmanagement an. Denn Engineering muss dir sagen, was kann meine Infrastruktur, worauf kann ich limitieren, worauf macht es Sinn zu limitieren, welche Operationen sind teuer, welche sind günstig Und dann kommt Produktmanagement, wie die das Produkt positionieren wollen und kommunizieren wollen."
+        },
+        {
+            "start": 2523040,
+            "end": 2533760,
+            "speaker": "B",
+            "text": "Okay, das ist aber jetzt immer noch die Kommunikation eher auf der Produktseite. Wie kann ich das Ganze technisch kommunizieren über die API, abgesehen jetzt von meinem ER, der mir immer ins Gesicht springt."
+        },
+        {
+            "start": 2533760,
+            "end": 2538000,
+            "speaker": "A",
+            "text": "Also wenn wir jetzt beim HTTP Protokoll bleiben, dann sind klassische Response Händler so."
+        },
+        {
+            "start": 2538000,
+            "end": 2541980,
+            "speaker": "B",
+            "text": "Die Antwort, die Antwort im wahrsten Sinne des Wortes. Die Response."
+        },
+        {
+            "start": 2543570,
+            "end": 2618870,
+            "speaker": "A",
+            "text": "Ich nehme mal wieder GitHub als Beispiel, weil ich finde, die machen auf der einen Seite relativ viel richtig. Und zwar, wenn du mit der GitHub API sprichst, kriegst du fünf Header zurück und die sind sehr explizit. Die geben dir einen Limit Header zurück. Das sagt dir einfach, wie viel Request du pro Stunde machen kannst. Die geben dir einen Remaining Header zurück, wie viel Request du in dem aktuellen Zeitwind noch offen hast. Die geben dir dann auch die Differenz davon zurück, also die Use, wie viel Request du im aktuellen Zeitfenster verbraucht hast. Dann geben dir die sogar mit die Art von Ressource, worauf das Rate Limiting ist. Git lfs hatten wir gerade zum Beispiel genannt und was ich auch sehr nett finde, die geben dir einen Timestamp mit, wann das aktuelle Rate Limit auf dieser Ressource resettet wird. Und da kannst du natürlich Client mäßig super viel machen. Du kannst dynamisch Timer setzen, du kannst dir sogar die Anzahl der Requests in dem aktuellen Zeit Windows ausrechnen und dann drosseln. Also du kannst richtig nette Clients schreiben. Anderes Beispiel, also GitHub ist ja sehr explizit, die geben dir fünf Header und die haben ja doppelte Informationen, wie zum Beispiel Limit, Remaining und Used. Das kannst du dir auch ausrechnen. Cloudflare ist ein bisschen sparsamer. Cloudflare gibt dir nur zwei Header zurück, das hätte aber eigentlich die gleichen Informationen, nur halt die musst du dir den Header Value halt parsen."
+        },
+        {
+            "start": 2618870,
+            "end": 2621470,
+            "speaker": "B",
+            "text": "Kannst du mal ein bisschen positiver über deinen Arbeitgeber sprechen?"
+        },
+        {
+            "start": 2621710,
+            "end": 2626300,
+            "speaker": "A",
+            "text": "Ja, ist doch positiv. Wir kümmern uns halt darum, dass wir nicht so viel Netzwerktransfer haben, Aber lesbarer."
+        },
+        {
+            "start": 2626300,
+            "end": 2633180,
+            "speaker": "B",
+            "text": "Finde ich jetzt schon GitHub als Cloudflare, muss ich mal sagen. Also da irgendwelche mehrere Werte in einen Header mit reinpacken und so."
+        },
+        {
+            "start": 2633180,
+            "end": 2654170,
+            "speaker": "A",
+            "text": "Ja, der Unterschied ist, du bist ein Mensch und für Maschinen ist das relativ egal, denn Achtung, Cloudflare ist aber so nett und zwar implementieren die nämlich den Retry After Header, der bereits seit HTTP erster erster nämlich standardisiert ist. Und ich gehe stark davon aus, dass GitHub einfach die API gebaut hat, bevor dieser Header standardisiert war und es nie angepasst haben."
+        },
+        {
+            "start": 2654170,
+            "end": 2662930,
+            "speaker": "B",
+            "text": "Andi muss das jetzt als Arbeitnehmer von Cloudflare sagen, dass sie nett sind. Ich würde sagen, die verwenden so ein uralt Protokoll HTTP erster erster. Das ist ja er fast schon."
+        },
+        {
+            "start": 2663090,
+            "end": 2732360,
+            "speaker": "A",
+            "text": "Nur weil es in erster erster standardisiert ist, heißt das nicht, dass es nicht in die nächsten HTTP Version mit übernommen wurde. Aber im Endeffekt, jetzt gerade läuft auch ein neuer RFC für die anderen Rate Limiting Felder wurde das letzte Mal im September zwei tausend fünf und zwanzig geupdatet, also ist wirklich ongoing. Verlinken wir euch auch in den Shownotes, wer so ein bisschen mal in den schönen RFC reingucken möchte. Und damit man diese ganze Rate Limiting Header Maße dann auch mal standardisiert, weil im Endeffekt musst du jetzt für jeden Service eigentlich andere Header auslesen und das ist, finde ich, ein bisschen anstrengend. Aber Wolfgang, wir sprechen jetzt immer darüber, dass Rate Limiting dein System vor Überlast schützen soll. Und wir hatten ja gerade über State Full und Stateless Rate Limiting Algorithmen gesprochen. Und in all diesen Algorithmen hast du ja irgendwo, ich sage mal, eine zentrale Datenquelle, wo du einen Counter rausnimmst oder ein Bucket oder Token oder von mir aus auch eine Konfigurationswert, wie viel Tokens in ein Bucket kommen und so weiter. Du brauchst auf jeden Fall irgendeine Kommunikationsstelle, mit der dein Algorithmus arbeitet. Was passiert denn jetzt eigentlich, wenn dein Rate Limiting Algorithmus fehlschlägt? Also das bedeutet, wenn dein Rate Limiting Algorithmus ein Timeout kriegt, Das ist so."
+        },
+        {
+            "start": 2732360,
+            "end": 2738220,
+            "speaker": "B",
+            "text": "Ähnlich wie die Wer monitort das Monitoring System oder wer ist das Sicherheitsnetz für das Sicherheitsnetz?"
+        },
+        {
+            "start": 2738300,
+            "end": 2746060,
+            "speaker": "A",
+            "text": "Ganz genau. Was passiert dann? Ich meine, es gibt Netzwerkpartitions, dein Redis kann abstürzen, Du kannst einen Bug in der Limit Logik haben."
+        },
+        {
+            "start": 2746700,
+            "end": 2748140,
+            "speaker": "B",
+            "text": "Redis verwendet doch niemand."
+        },
+        {
+            "start": 2748140,
+            "end": 2757380,
+            "speaker": "A",
+            "text": "Ja, von mir aus auch Memcache oder mysql oder Redis Fanboy, was ist ja egal. Aber was machst du dann? Wie würdest du dich verhalten als Rate Limiting Algorithmus?"
+        },
+        {
+            "start": 2757380,
+            "end": 2794880,
+            "speaker": "B",
+            "text": "Also meiner Meinung nach gibt es drei Möglichkeiten. Ich lasse alle Requests durch, mir doch egal Ansatz, dann wird halt wahrscheinlich das System sterben früher oder später. Zweiter Ich lasse gar keine Requests mehr durch. Mein System wird nicht sterben, aber die ganzen Kunden werden unhappy sein. Oder die dritte Variante Ich habe irgendwie ein Backup System im Sinne von zum Beispiel den ganz naiven Algorithmus, der dann nur lokal entscheidet, einen lokalen Counter hat und eben keinen geshareten State und auf eine Stufe zurückschaltet. Und je nachdem, wie komplex mein System ist, werde ich wahrscheinlich ein Backup haben oder nicht. Wäre meine Consulting Schnellantwort, würde ich zu."
+        },
+        {
+            "start": 2794880,
+            "end": 2802400,
+            "speaker": "A",
+            "text": "Zwei Dritteln mitgehen, Obwohl das Sicherheitsnetz finde ich auch nicht schlecht. Aber auch der kann ja einen Bug in der Logik haben. Also da bist du ja dann wieder."
+        },
+        {
+            "start": 2802400,
+            "end": 2807800,
+            "speaker": "B",
+            "text": "Auf dem Irgendwann wird es dann habe ich dann die Entscheidung, entweder blockiere ich alles oder gar nichts mehr."
+        },
+        {
+            "start": 2807800,
+            "end": 2920590,
+            "speaker": "A",
+            "text": "Also im Endeffekt reden wir hier gerade über ein Konzept, das nennt sich Fail Open versus Fail Closed. Und da ist die Keyfrage was machen wir, wenn wir nicht wissen, ob ein Request erlaubt ist oder nicht? Und weil gesagt ein Rate kann ausfallen oder unentscheidbar werden, nennen wir es mal Fail Open. Ist genau das, was du auch gesagt hast. Wenn der Rate Limiter nicht entscheiden kann, lassen wir den Request einfach durch. Und Fail Close ist wenn der Rate Limiter nicht entscheiden kann, blockieren wir einfach den Request. Und ich würde sagen, beides ist auch eine valide Lösung. Es kommt halt wirklich nur darauf an, was wird denn da gerade geschützt. Wenn du jetzt die Fail Open Logik bei einem Admin API Panel machen würdest, weiß ich jetzt nicht, ob das die richtige Lösung ist. Da würde ich dann zum Beispiel bei einem Admin API Panel oder bei Security relevanten Endprodukten, da würde ich dann eher die Fail Close Variante nehmen, einfach mal mehr Request blocken. Aber wenn du jetzt zum Beispiel klassische User Facing API hast oder kritische Geschäftsprozesse oder wenn Verfügbarkeit über Sicherheit steht, dann kannst du auch Fail Open machen. Deine dritte Variante fand ich auch ganz interessant. Ich würde aber eine andere vorschlagen und zwar würde ich einen Hybrid Modus zwischen failoben Open und Fail Close vorschlagen. Fail Open bei Lese Requests oder bei authentifizierten Usern zum Beispiel, wenn der User authentifiziert ist, lasst es einfach durch den Request Fail closed bei anonymen Traffic, bei Admin Operationen oder bei Schreib Operationen, weil da weiß ja nie, weil da kannst du die Datenbank ja wirklich mit runterziehen oder du machst die ganze Sache zeitbasiert. Du machst für eine gewisse Zeit Fail Open und dann kommt halt irgendwann vielleicht das Back Pressure Signal, von dem wir gerade auch gesprochen haben und dann switchst du automatisch um auf Fail Close und sagst, okay, ich habe es jetzt ein bisschen versucht, das System offen zu halten, hat nicht funktioniert, bevor ich das ganze System runterziehe, mache ich dann lieber Fail Closed, bis mein Pressure sich wieder erholt hat und dann schaltest du wieder um auf Failo."
+        },
+        {
+            "start": 2920590,
+            "end": 2926310,
+            "speaker": "B",
+            "text": "Und da gibt es ja auch sicher noch fünf andere Varianten, die man fahren kann in so Hybrid oder Backup Modi."
+        },
+        {
+            "start": 2926310,
+            "end": 2928710,
+            "speaker": "A",
+            "text": "Ja, deiner Kreativität sind da keine Grenzen gesetzt."
+        },
+        {
+            "start": 2929270,
+            "end": 2947990,
+            "speaker": "B",
+            "text": "Die Frage ist auch, ist es eine globale Entscheidung dann oder ist es vielleicht nur für irgendeinen Subcluster und wenn ich dann weiß, der Rest vom Cluster wird schon irgendwie sinnvoll reagieren, könnt ihr vielleicht auch mich einfach abschotten, weil ihr weiß, dass der Rest vom Cluster in irgendeiner Form noch weiter agieren wird oder so. Wäre auch eine Möglichkeit. Also ich glaube, da gibt es viele."
+        },
+        {
+            "start": 2947990,
+            "end": 2969880,
+            "speaker": "A",
+            "text": "Möglichkeiten, Aber du merkst schon, ich meine, wir sprechen hier schon nur über das Konzept und wenn wir jetzt mal in einer Firma wären mit ein hundert Leuten, wo ein hundert Software Engineers sind und etliche mehr Applikationen, was meinst du eigentlich? Wer kann eigentlich diese ganze Komplexität, wann, wie, wo gerade limited wird und wo was dazwischen steht, weg? Wer behält das denn überhaupt noch im Kopf?"
+        },
+        {
+            "start": 2969960,
+            "end": 3012740,
+            "speaker": "B",
+            "text": "Wobei ich da sagen muss, dass es eigentlich ja über den ganzen HTTP Header und Statuscodes, wenn man da sinnvollen Weg findet, kann man ja eigentlich relativ unabhängig voneinander agieren. Und klar muss das jedes Team machen und man muss sauber agieren und netten Client schreiben und jedes Serversystem ist wahrscheinlich auch irgendwo ein Client System für ein anderes Server System und so weiter. Aber ich finde, die HTTP Schnittstelle ist eigentlich relativ sauber gelöst und da gibt es Möglichkeiten dafür. Man muss sie halt nur am Schirm haben und entscheiden, was man damit macht. Aber dann kann man eigentlich sehr lokal in seinem Scope agieren und braucht gar nicht jetzt irgendwie einen Chief Rate Limiting Officer oder keine Ahnung, der dann die Gesamtarchitektur irgendwie innehält oder da den Überblick behält."
+        },
+        {
+            "start": 3012820,
+            "end": 3015220,
+            "speaker": "A",
+            "text": "Du hast mir gerade die beste Überleitung gegeben, die es gibt."
+        },
+        {
+            "start": 3015220,
+            "end": 3016100,
+            "speaker": "B",
+            "text": "Jetzt bin ich gespannt."
+        },
+        {
+            "start": 3016490,
+            "end": 3022810,
+            "speaker": "A",
+            "text": "Also erstmal sagst du gerade, wenn sich alle an die Firmenstandards halten würden, dann hätten wir alle kein Problem."
+        },
+        {
+            "start": 3024090,
+            "end": 3027530,
+            "speaker": "B",
+            "text": "Ich bin ja ein Mensch, der sehr positiv denkt und das Gute sieht."
+        },
+        {
+            "start": 3028570,
+            "end": 3046910,
+            "speaker": "A",
+            "text": "Jeder, der in einer größeren Organisation arbeitet, denkt sich, ach du meine Güte, das wäre eine tolle Welt. Aber du hast ja gerade gesagt, wenn man denn auf die HTTP Statuscodes achten würde und dann kommt der Kollege um die Ecke, der gerade eine graphql API implementiert hat, wie retourniert graphql einen HTTP Error? Mit welchem Statuscode?"
+        },
+        {
+            "start": 3046910,
+            "end": 3048430,
+            "speaker": "B",
+            "text": "Bin kein Fan von graphql?"
+        },
+        {
+            "start": 3048430,
+            "end": 3051630,
+            "speaker": "A",
+            "text": "Kannst du die Frage denn beantworten mit zwei hundert?"
+        },
+        {
+            "start": 3051870,
+            "end": 3055950,
+            "speaker": "B",
+            "text": "Das heißt, ich muss mir dann selber was implementieren in meinem Protokoll höchstwahrscheinlich, oder?"
+        },
+        {
+            "start": 3055950,
+            "end": 3107030,
+            "speaker": "A",
+            "text": "Ja, eine graphql Schnittstelle selbst gibt dir den Error im Payload, im Payload mit. Die Frage ist aber, wie ermittelst du denn, ob du einen Rate Limit triggern muss oder nicht? Wir reden die ganze Zeit über HTTP Request und wenn wir jetzt über REST APIs sprechen, dann ist es ja recht einfach, weil ein Request ist dann ein Counter in einem Rate Limit und so weiter und so fort. Aber graphql, das hat ja schon der Name Graph Query Language. Also stell dir vor, SQL über HTTP ist nicht ganz SQL, aber das bedeutet, du kannst, das Tolle ist ja, dass du damit Request bündeln kannst und flexiblere REST APIs bauen kannst. Wo du bei REST API zwanzig Request machen muss, kannst du mit graphql eine Query bauen, die dir nur die Daten zurückgibt, die du brauchst und so weiter und so fort. Aber du merkst jetzt Jetzt kommt schon die ganze Komplexität an den Tisch. Wie ermittelst du denn Rate Limits bei graphql?"
+        },
+        {
+            "start": 3107030,
+            "end": 3138010,
+            "speaker": "B",
+            "text": "Ja, aber dasselbe Problem hättest du bei REST APIs auch, weil manche REST API Calls sind super aufwendig, manche brauchen viel Ressourcen, manche triggern hinten zwanzig Requests, manche andere nur einen Request. Also die Grundproblematik hast du ja weiterhin, dass du wissen musst, was ist es für ein Request, wie komplex ist der Request, wie behandelst du den in deinem Bucket. Du hast ja zuerst schon erwähnt, manche Queries haben vielleicht fünf Tokens, manch andere Queries haben nur einen Token. Ist es Schreibzugriff, Lesezugriff und so weiter. Also dasselbe hast du bei graphql."
+        },
+        {
+            "start": 3138010,
+            "end": 3152480,
+            "speaker": "A",
+            "text": "Nehmen wir doch mal einen Infrastruktur basierten Rate Limiter dazwischen. Nehmen wir mal, du hast eine REST API und du hast Load Balancer daneben, so ein Envoy oder HA Proxy ist ja egal, oder Nginx von mir aus. Und da baust du jetzt das Rate Limiting ein. Bei einer REST API kannst du pro Endpoint dann ein Rate Limiting setzen."
+        },
+        {
+            "start": 3152480,
+            "end": 3163240,
+            "speaker": "B",
+            "text": "Auch bei einem Call von einem Endpoint kann dir passieren, dass ein Call sehr teuer ist und ein anderer Call sehr günstig, obwohl es dieselbe API ist. Dasselbe API Endpoint."
+        },
+        {
+            "start": 3163320,
+            "end": 3165560,
+            "speaker": "A",
+            "text": "Du meinst, wenn man das über Query Parameter steuern kann?"
+        },
+        {
+            "start": 3165640,
+            "end": 3186860,
+            "speaker": "B",
+            "text": "Ja, zum Beispiel Query Parameter. Oder wir haben zum Beispiel bei unseren REST APIs manche Podcasts, die extrem viele Episoden haben und dadurch rennen die Queries viel, viel länger. Das heißt, pro Kunde hast du andere Runtimes, Runtimes, Laufzeiten, da ist der deutsche Begriff mal einfacher. Laufzeiten, obwohl es dieselbe API ist."
+        },
+        {
+            "start": 3186860,
+            "end": 3253460,
+            "speaker": "A",
+            "text": "Okay, Bei dir erhöht sich also die Laufzeit pro Datenvolumen kann passieren. Ja, genau, das sage ich, ist okay. Dann hast du meines Erachtens nach ein Problem mit deiner Datenhaltung, weil das ist generell ein Riesenproblem bei graphql ist. Aber das Riesenproblem ist, du kannst gar nicht abschätzen, was der macht, ohne die Query zu inspizieren, die ja im Payload mitgeliefert wird, weil du hast ja alles nur über einen Endpunkt und der liefert ja immer nur zwei hundert zurück. Und wenn du jetzt einen infrastrukturbasierten Rate Limiter hast, dann funktioniert das nicht, weil der sieht ja nur, aha, da kommt ein HTTP Call rein, der geht über den Endpoint und der liefert zwei hundert zurück. Aber du kennst die Komplexität nicht. Und die Komplexität kann bei graphql sehr sehr hoch sein, weil du kannst tiefe Verschachtelung haben, du kannst große Listen, du kannst Fan Out über verschiedene Resolver haben. Also wie funktioniert graphql? Du kannst eine Query entgegennehmen, dann hast du ein graphql Parser und für jeden Subtree deines Queries baust du intern so eine Art Resolver Klasse und diese Resolver Klasse kann dann verschiedene Datenquellen anzapfen. Das bedeutet, deine eine graphql API kann natürlich einen ganz klassischen Microservice Fan Out, so diese Traffic Amplification, die wir gerade erwähnt haben, auch machen."
+        },
+        {
+            "start": 3253460,
+            "end": 3255020,
+            "speaker": "B",
+            "text": "Aber wie löst du das Problem jetzt?"
+        },
+        {
+            "start": 3255020,
+            "end": 3295530,
+            "speaker": "A",
+            "text": "Du musst so eine Art Kostenberechnung für das Query bauen. Du musst also dein Query in einen Abstract Syntax Tree übersetzen und diese ganze Sache dann durchtraversieren und dann für jedes Feld irgendeinen Basis Kostenwert ansetzen, wie zum Beispiel, keine Ahnung, pro Feld oder pro Resolver sagst du, okay, der kostet dich eine Ressource, Ressource ist jetzt meine Rate Limiting Einheit und wenn du sagst, du hast eine Rekursion, dann multiplizierst du das und so weiter und so fort. Im Endeffekt machst du eigentlich immer eine Worst Case Berechnung und du errechnest dann immer den teuerstmöglichen Pfad und hoffst dann, dass du konservativ anstatt optimistisch gerechnet hast und deine grafql API das dann noch aushält."
+        },
+        {
+            "start": 3295530,
+            "end": 3315700,
+            "speaker": "B",
+            "text": "Aber du könntest es eigentlich auch in dem Response Header mitsenden oder du könntest die Kosten in dem Response Header mitsenden und Envoy oder der Reverse Proxy, der da auch dazwischen hängt, könnte dann anhand von dem Response Kostenwert dem Bucket zum Beispiel auffüllen oder verringern, was es auch dann dementsprechend ist."
+        },
+        {
+            "start": 3315860,
+            "end": 3321060,
+            "speaker": "A",
+            "text": "Ja, du musst ja deine Rate Limiting Informationen in der Response mit senden, weil sonst kann der Client ja gar nicht reagieren."
+        },
+        {
+            "start": 3321060,
+            "end": 3345560,
+            "speaker": "B",
+            "text": "Ja klar, aber es muss jetzt nicht der Envoy, der Reverse Proxy berechnen diesen Kostenfaktor, sondern es kann die Applikation selbst machen und dann im Response mitschicken und Envoy macht dann aber das Management davon. Keine Ahnung, ob das Envoy kann, aber das wäre eigentlich Gewaltenteilung sozusagen. Envoy enforced das Ganze, aber die Berechnung läuft dann hinten im Backend im Code in deiner Applikation ab."
+        },
+        {
+            "start": 3345560,
+            "end": 3364240,
+            "speaker": "A",
+            "text": "Nur die graphql API selbst weiß ja, wie teuer jeder Resolver ist und so weiter. Du kannst ja auch einen In Memory Resolver haben, der ist super schnell und wenn du halt einen Tape Storage hast oder AWS Glacier oder so, wo du halt einfach mal, weiß ich nicht, fünf Sekunden auf deine Response Dauer wartest, das ist halt teurer."
+        },
+        {
+            "start": 3364240,
+            "end": 3392960,
+            "speaker": "B",
+            "text": "Aber genau das glaube ich eben, dass man das bei REST sehr wohl auch hat, weil auch dieses du greifst jetzt auf eine Datei zu, das ist simpler API Call. Die Datei kann aber auf einem Tiered Storage liegen, ganz hinten irgendwo kalt und muss erstmal nach vorne gebracht werden, dauert super lang. Eine andere Datei ist vielleicht hot in memory und ist sofort da. Also du hast glaube ich bei REST auch diese selben Probleme, wenn auch vielleicht nicht so flexibel wie mit einer graphql, wo du wirklich Query mitschicken kannst."
+        },
+        {
+            "start": 3392960,
+            "end": 3405230,
+            "speaker": "A",
+            "text": "Der massive Unterschied ist nur, dass du es bei REST in der Regel über einen Endpoint hast und bei REST haben kannst. Und bei graphql ist es unumgänglich, weil das ist das Prinzip dieser API Schnittstelle."
+        },
+        {
+            "start": 3405230,
+            "end": 3410270,
+            "speaker": "B",
+            "text": "Außer du hast ein gutes Datenbank Team, was die Datenbank so optimiert hat, dass es das Problem nicht gibt."
+        },
+        {
+            "start": 3410270,
+            "end": 3444110,
+            "speaker": "A",
+            "text": "Ne, spätestens wenn du auch bei graphql mit Rekursion ankommst, sende. Also da ist deswegen, also wie dem auch sei, ich nehme aber nochmal GitHub als Beispiel, denn GitHub hat neben seiner REST API auch eine graphql API und die haben ihre komplette graphql AST Berechnung für ihr Rate Limiting und nämlich offengelegt. Dort kannst du ganz genau in der Dokumentation sehen, okay, diese Query kostet mich so und so viel. Haben wir auch in den Show Notes verlinkt, ist ein sehr interessanter Artikel, auch wenn ihr jetzt nicht graphql APIs schreibt. Ich hatte sehr viel Spaß ihn zu lesen, einfach nur mal zu gucken, okay."
+        },
+        {
+            "start": 3444110,
+            "end": 3450190,
+            "speaker": "B",
+            "text": "Wie machen die das denn gelesen, meinst du mit wirklich, du hast ihn gelesen oder du hast ihn nach GPT kopiert und zusammenfassen lassen."
+        },
+        {
+            "start": 3450270,
+            "end": 3458740,
+            "speaker": "A",
+            "text": "Ich lasse mir kaum Texte von GPT zusammenfassen, weil besonders solche Sachen les ich mir sehr sehr gerne durch, weil ich möchte ja kein Detailgrad verlieren."
+        },
+        {
+            "start": 3458740,
+            "end": 3463140,
+            "speaker": "B",
+            "text": "Wolfgang okay, ich werde mir das heute als Gute Nacht Lektüre zu Gemüte führen."
+        },
+        {
+            "start": 3463460,
+            "end": 3497160,
+            "speaker": "A",
+            "text": "Eine Sache aber, die man auch machen kann, ist, man kann persistente Queries definieren. Das bedeutet, das sind so nur vorab genehmigte Queries, die man dann auf seiner API erlaubt. Somit hat man natürlich keine ad hoc Experimentier Queries in Produktion. Da ist der Feedback Loop, besonders mit verschiedenen Teams natürlich deutlich länger, weil in der Regel Hast du irgendwie ein Team, das macht eine graphql API und andere nutzt das und du willst natürlich nicht konstante Kommunikation haben, darf ich diese Query senden? Aber kann man machen. So kontrolliert man so ein bisschen die Last auf der graphql API."
+        },
+        {
+            "start": 3497480,
+            "end": 3564330,
+            "speaker": "B",
+            "text": "Wird ja oft einfach auch als Security Maßnahme gemacht, dass man wirklich nur vordefinierte Queries absenden kann. Und wenn man sowohl Server wie auch Client owned als Team, ist das natürlich sowieso kein Problem. Und teilweise wird es dann auch cross kompiliert, dass man die automatisch dann im Client auch zur Verfügung hat oder überhaupt nur mit einer ID referenziert hat. Also da gibt es Möglichkeiten dazu, aber man will ja vielleicht auch nicht die API so komplett aufmachen, dass jeder, der da Zugriff hat, auch wenn er angemeldeter User ist, plötzlich auf alle Daten irgendwie zugreifen kann und das eins zu eins auf SQL dann umgesetzt wird oder so. Das kann ja auch security technisch durchaus ein Problem sein. Und nachdem wir heute schon ganz oft die vierte Wand durchbrochen haben, Andy, kannst du die vierte Wand? Ne, es ist im Theater, wenn plötzlich die Theaterleute aus dem Stück aussteigen, Schauspieler heißen die Schauspielerinnen, wenn die aus dem Stück aussteigen und plötzlich auf so einer Metaebene mit dem Publikum sprechen und nicht mehr so tun, als wäre das Publikum nicht existent, durchbricht man die vierte Wand. Und das haben wir heute auch schon gemacht, nachdem wir öfters über unsere Notes gesprochen haben. Der nächste Punkt in unserem Skript ist jetzt die Zusammenfassung. Und Andy ist da der Spezialist darin, das ganze Thema nochmal in drei Sätzen zusammenzufassen. Andy, deine Bühne jetzt für die Zusammenfassung."
+        },
+        {
+            "start": 3564330,
+            "end": 3590800,
+            "speaker": "A",
+            "text": "Ich hab eigentlich gehofft, dass ich jetzt hier keine Zusammenfassung machen muss, sondern dass ich dich frage, was du vor der Episode von Rate Limiting gehört hast und was du jetzt über Rate Limiting denkst, weil du stehst diesen Themen ja immer sehr skeptisch gegenüber, das kenne ich doch schon alles, ist ja alles ganz einfach und so weiter und so fort. Und es ist jedes Mal das Gleiche mit dir. Als Berater ist man immer nur so high level unterwegs, immer nur auf der Oberfläche, aber in den Marianengraben möchtest du nie tauchen."
+        },
+        {
+            "start": 3590880,
+            "end": 3602400,
+            "speaker": "B",
+            "text": "Ich würde jetzt auch die vierte Wand noch mal durchbrechen und würde mir jetzt beschweren, dass der Andi sich nicht an unser Skript haltet, an unsere Struktur und mir jetzt einfach da irgendwas auflädt, was gar nicht unserem Skript steht Skript hört."
+        },
+        {
+            "start": 3602400,
+            "end": 3607990,
+            "speaker": "A",
+            "text": "Sich ja gerade so an, als steht da jedes explizite Wort. Natürlich hat unsere Episode eine gewisse Art."
+        },
+        {
+            "start": 3607990,
+            "end": 3676810,
+            "speaker": "B",
+            "text": "Von Vorbereitung, denn wir freestylen sowieso eigentlich nur durch. Wir haben nur ein paar Schlagworte, die uns da helfen zu freestylen. Aber ich bin ja auch gut im Freestylen, darum möchte ich deine Frage natürlich beantworten. Was mir diese Episode gezeigt hat, ist eigentlich, dass ich auf der Client Seite schon meiner Meinung nach ganz gut unterwegs bin, Aber ich muss zugeben, dass ich auf der Serverseite eigentlich nie an irgendein Rate Limiting gedacht habe und aber doch wie auch so in der Vorbereitung von dieser Episode darüber nachgedacht habe, dass ich schon einige Serversysteme hätte, wo das eigentlich sehr gut wäre und man hat ja Nginx oder so davor hängen. Also man bräuchte diese Option nur aktivieren und hätte dann wahrscheinlich am Ende mehr Resilienz im System und vielleicht auch glücklichere Kunden, weil man auch da zeigen kann, wie professionell man ist und das auch kommunizieren kann und dementsprechend auch besser auftreten kann am Markt. Also es hat mir schon gezeigt, es ist noch Luft nach oben bei mir. Es ist einfach zu implementieren, zumindest grundlegend mal und es ist auf jeden Fall wert, darüber nachzudenken und darüber nachzudenken, das ist glaube ich, der größte Punkt oder mein wichtiges Learning, dass man mal drüber nachdenkt, was kann man eigentlich machen oder das bespricht im Team, was macht Sinn, könnte man da irgendwas Einfaches implementieren."
+        },
+        {
+            "start": 3676890,
+            "end": 3726000,
+            "speaker": "A",
+            "text": "Ich glaube, eines der wichtigsten Elemente ist, dass das Rate Limiting nicht nur für große Serverfarmen oder ähnliches notwendig ist, sondern auch für interne Applikationen. Also ich habe schon in etlichen Firmen gearbeitet, wo wir uns selbst intern abgeschossen haben und dann nicht wussten, woher kommen die Requests und wer hämmert darauf rum und dann war das irgendein Entwickler, der irgendwas auf dem Laptop laufen hatte und dann das ganze System mit runtergezogen hat. Und da hätte uns ein simpler Rate Limit Algorithmus halt auch geholfen. Deswegen, es ist meines Erachtens nach nicht optional, sondern fundamental, speziell in den Fällen, wo man interne APIs irgendwie anbietet. Also merkt euch eins, der Schlusssatz, den habe ich mir extra jetzt generieren lassen. Ein resilientes System sagt auch mal bewusst nein und bleibt deshalb erreichbar. Das war das Wort zum Sonntag von mir."
+        },
+        {
+            "start": 3726240,
+            "end": 3727600,
+            "speaker": "B",
+            "text": "Das ist fast lyrisch."
+        },
+        {
+            "start": 3728000,
+            "end": 3751300,
+            "speaker": "A",
+            "text": "Ich hoffe ihr hattet ein bisschen Spaß und habt die eine oder andere Sache beim Thema Rate Limiting mitgenommen, um die ganze Sache noch mal komplizierter zu machen. Bitte verwechselt Rate Limiting also nicht mit Back Pressure, Graceful Degradation oder Fault Isolation, aber verwechselt es auch nicht mit Load Shading. Was ist denn no Shedding jetzt schon wieder dieses Thema mit Resilience Engineering, das geht immer und immer und immer weiter. Das war's von uns."
+        },
+        {
+            "start": 3751940,
+            "end": 3766730,
+            "speaker": "B",
+            "text": "Jetzt musst du schon Load Shading erklären, wenn du schon ein neues Vote damit einstreust. Sorry, dass ich dich da in deiner Zusammenfassung jetzt unterbrechen muss, aber das musst du jetzt in einem Satz schon erklären, außer du sagst, wir machen die nächste Episode nur über Load Shading, aber da hätte Iva, glaube ich, was dagegen."
+        },
+        {
+            "start": 3768080,
+            "end": 3818020,
+            "speaker": "A",
+            "text": "Das könnte alles Teaser sein, bis ich dich dann überzeugt habe, ne? Also wir haben gerade über Back Pressure gesprochen. Back Pressure ist, da kommt ganz viel Traffic auf ein System und das System, was den Traffic akzeptiert, sagt nach oben, ey Kollege, ich kriege hier gerade ein bisschen viel Traffic, mach mal langsamer. Load Shedding ist ein System kriegt ganz viel Traffic und arbeitet das so weit ab wie möglich und irgendwann sagt das System, jetzt bin ich überladen, sagt dem Upstream System aber nicht Bescheid, sondern verwirft den zusätzlichen Traffic einfach. Bedeutet also, Load Shedding passiert reaktiv. Rate Limiting, proaktiv, sind alles so dynamisch verhaltene Systeme und gibt halt immer Fachbegriffe und wir haben noch gar nicht über Grey Failures oder ähnliches gesprochen, aber das lassen wir jetzt auch weg, weil irgendwas müssen wir in der nächsten Episode ja noch mal besprechen. Der Wolfgang grinst jetzt wieder, weil der denkt sich schon, boah, jetzt kommt der nächsten Monat wieder mit so einer Episode."
+        },
+        {
+            "start": 3818020,
+            "end": 3839220,
+            "speaker": "B",
+            "text": "Immer diese Resilience Episoden. Aber lasst uns mal wissen, erstens, was ihr von den Resilience Episoden so denkt, ganz allgemein natürlich, aber auch, ob ihr Rate Limiting implementiert habt, ob ihr irgendeine Library verwendet. Shared es gerne bei uns im Discord. Da haben alle dann was davon, wenn man auch aus der Praxis mal hört, was so im Einsatz ist an Tools oder welche Möglichkeiten man da hat."
+        },
+        {
+            "start": 3839220,
+            "end": 3844860,
+            "speaker": "A",
+            "text": "So, jetzt höre ich auf mit Klugscheißen und dem Buzzword Bingo droppen. Ich bin raus, wir hören uns nächste Woche wieder. Bis bald. Tschüss."
+        },
+        {
+            "start": 3844940,
+            "end": 3845420,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
