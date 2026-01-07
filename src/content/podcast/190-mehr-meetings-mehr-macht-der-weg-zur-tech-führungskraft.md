@@ -45,6 +45,7 @@ spotify: https://open.spotify.com/episode/65aLTSr9xiITg8Nr0y23UY
 tags:
 - Karriere
 - Leadership
+- Interview
 title: "#190 Mehr Meetings, mehr Macht? Der Weg zur Tech-Führungskraft"
 transcript_slim: src/data/transcripts/190-transcript-slim.json
 youtube: https://www.youtube.com/watch?v=jE7iD8nUHfU
