@@ -35,7 +35,7 @@ pubDate: 2025-12-16 02:00:01+00:00
 speaker:
 - name: Andy Grunwald
   transcriptLetter: A
-- name: Stefan
+- name: Stephan Lerner
   transcriptLetter: B
 - name: Wolfi Gassler
   transcriptLetter: C
