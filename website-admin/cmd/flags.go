@@ -11,12 +11,7 @@ var (
 
 	// Netlify Redirects
 	flagNetlifyRedirectTomlFile       string
-	flagNetlifyRedirectEpisodesPath   string
 	flagNetlifyRedirectRedirectPrefix string
-
-	// Podcast
-	// TODO Unify with flagEpisodesStorePath?
-	flagPodcastEpisodesPath string
 
 	// Tags
 	flagTagsWriteFile   bool

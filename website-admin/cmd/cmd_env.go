@@ -13,7 +13,6 @@ const (
 	EnvVarTranscriptPath                = "WEBSITEADMIN_TRANSCRIPT_PATH"
 	EnvVarImagesPath                    = "WEBSITEADMIN_IMAGES_PATH"
 	EnvVarNetlifyRedirectTomlFile       = "WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE"
-	EnvVarNetlifyRedirectEpisodesDir    = "WEBSITEADMIN_NETLIFY_REDIRECT_EPISODES_DIR"
 	EnvVarNetlifyRedirectRedirectPrefix = "WEBSITEADMIN_NETLIFY_REDIRECT_REDIRECT_PREFIX"
 )
 
@@ -23,7 +22,6 @@ var environmentVariables = map[string]string{
 	EnvVarTranscriptPath:                "Path to store podcast transcripts",
 	EnvVarImagesPath:                    "Path to store podcast images",
 	EnvVarNetlifyRedirectTomlFile:       "Path to netlify.toml file for redirects",
-	EnvVarNetlifyRedirectEpisodesDir:    "Directory containing episode markdown files",
 	EnvVarNetlifyRedirectRedirectPrefix: "Prefix for redirect URLs",
 }
 
@@ -42,7 +40,6 @@ Checked environment variables:
   WEBSITEADMIN_TRANSCRIPT_PATH            Path to store podcast transcripts
   WEBSITEADMIN_IMAGES_PATH                Path to store podcast images
   WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE Path to netlify.toml for redirects
-  WEBSITEADMIN_NETLIFY_REDIRECT_EPISODES_DIR  Directory containing episode files
   WEBSITEADMIN_NETLIFY_REDIRECT_REDIRECT_PREFIX  Prefix for redirect URLs
 
 Behavior:
