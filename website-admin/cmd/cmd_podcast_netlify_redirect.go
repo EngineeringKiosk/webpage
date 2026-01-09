@@ -92,7 +92,7 @@ func init() {
 
 	// TODO Unify parameters
 	podcastNetlifyRedirectCmd.Flags().StringVarP(&flagNetlifyRedirectTomlFile, "toml-file", "t", os.Getenv(EnvVarNetlifyRedirectTomlFile), environmentVariables[EnvVarNetlifyRedirectTomlFile])
-	podcastNetlifyRedirectCmd.Flags().StringVarP(&flagNetlifyRedirectEpisodesDir, "episodes-dir", "e", os.Getenv(EnvVarNetlifyRedirectEpisodesDir), environmentVariables[EnvVarNetlifyRedirectEpisodesDir])
+	podcastNetlifyRedirectCmd.Flags().StringVarP(&flagNetlifyRedirectEpisodesPath, "episodes-dir", "e", os.Getenv(EnvVarNetlifyRedirectEpisodesDir), environmentVariables[EnvVarNetlifyRedirectEpisodesDir])
 	podcastNetlifyRedirectCmd.Flags().StringVarP(&flagNetlifyRedirectRedirectPrefix, "redirect-prefix", "r", os.Getenv(EnvVarNetlifyRedirectRedirectPrefix), environmentVariables[EnvVarNetlifyRedirectRedirectPrefix])
 }
 
@@ -104,12 +104,12 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 
 	logger.Info().
 		Str("tomlFile", flagNetlifyRedirectTomlFile).
-		Str("episodesDir", flagNetlifyRedirectEpisodesDir).
+		Str("episodesDir", flagNetlifyRedirectEpisodesPath).
 		Msg("Generating podcast netlify redirects")
 
 	// Adjust paths
 	fileToParse := utils.BuildCorrectFilePath(flagNetlifyRedirectTomlFile)
-	flagNetlifyRedirectEpisodesDir = utils.BuildCorrectFilePath(flagNetlifyRedirectEpisodesDir)
+	flagNetlifyRedirectEpisodesPath = utils.BuildCorrectFilePath(flagNetlifyRedirectEpisodesPath)
 
 	// Read existing TOML file
 	var config NetlifyConfig
@@ -134,7 +134,7 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 	}
 
 	// Get existing podcast episodes
-	entries, err := os.ReadDir(flagNetlifyRedirectEpisodesDir)
+	entries, err := os.ReadDir(flagNetlifyRedirectEpisodesPath)
 	if err != nil {
 		return fmt.Errorf("failed to read episodes directory: %w", err)
 	}

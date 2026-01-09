@@ -81,7 +81,7 @@ func init() {
 
 	// TODO Add the flags as the same structure as other commands (env.go)
 	tagsFindCmd.Flags().BoolVarP(&flagTagsWriteFile, "write-file", "w", false, "Modify the local tag storage file and add missing tags")
-	tagsFindCmd.Flags().StringVarP(&flagTagsContentDir, "content-dir", "c", "", "Content directory to scan (overrides default for mode)")
+	tagsFindCmd.Flags().StringVarP(&flagTagsContentPath, "content-dir", "c", "", "Content directory to scan (overrides default for mode)")
 	tagsFindCmd.Flags().StringVarP(&flagTagsDescFile, "desc-file", "f", "", "Tag description file path (overrides default for mode)")
 }
 
@@ -120,8 +120,8 @@ func RunTagsFindCmd(cmd *cobra.Command, args []string) error {
 	}
 
 	// Allow overriding paths via flags
-	if flagTagsContentDir != "" {
-		contentPaths = []string{flagTagsContentDir}
+	if flagTagsContentPath != "" {
+		contentPaths = []string{flagTagsContentPath}
 	}
 	if flagTagsDescFile != "" {
 		tagFilePath = flagTagsDescFile
