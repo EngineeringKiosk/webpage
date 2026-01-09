@@ -76,7 +76,7 @@ Fields populated from RSS:
 
 Fields preserved from existing files (not overwritten):
   - spotify, apple_podcasts, amazon_music, deezer, youtube URLs
-  - tags, speakers, advertiser, length_second
+  - tags, speakers, advertiser
 
 Note: Platform-specific player URLs (Spotify, Apple, etc.) are NOT available in the
 RSS feed and must be added manually after each platform processes the episode.`,
@@ -282,7 +282,6 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 			Description:    descriptionShort,
 			Headlines:      headlineInfo,
 			Image:          imageFilename,
-			LengthSecond:   0,
 			PubDate:        episode.FrontmatterPubDateTime{Time: pubDate},
 			Speaker:        defaultSpeaker,
 			Tags:           []string{},
@@ -310,9 +309,6 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 				}
 				if existingFM.Deezer != "" {
 					data.Deezer = existingFM.Deezer
-				}
-				if existingFM.LengthSecond > 0 {
-					data.LengthSecond = existingFM.LengthSecond
 				}
 				if len(existingFM.Speaker) > 0 {
 					data.Speaker = existingFM.Speaker

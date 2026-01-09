@@ -42,7 +42,6 @@ type EpisodeFrontmatter struct {
 	Description    string                 `yaml:"description" json:"description"`
 	Headlines      string                 `yaml:"headlines" json:"headlines"`
 	Image          string                 `yaml:"image" json:"image"`
-	LengthSecond   int                    `yaml:"length_second" json:"length_second"`
 	PubDate        FrontmatterPubDateTime `yaml:"pubDate" json:"pubDate"`
 	Speaker        []Speaker              `yaml:"speaker" json:"speaker"`
 	Spotify        string                 `yaml:"spotify" json:"spotify"`
