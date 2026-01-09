@@ -60,7 +60,7 @@ var podcastSyncFromRSSCmd = &cobra.Command{
 func init() {
 	podcastCmd.AddCommand(podcastSyncFromRSSCmd)
 
-	// Add flags with defaults from Python constants
+	// Add flags with defaults
 	podcastSyncFromRSSCmd.Flags().StringVarP(&flagRSSFeedURL, "rss-feed-url", "r", os.Getenv(EnvVarRssFeedUrl), environmentVariables[EnvVarRssFeedUrl])
 	podcastSyncFromRSSCmd.Flags().StringVarP(&flagEpisodesStorePath, "episodes-dir", "s", os.Getenv(EnvVarEpisodesStorePath), environmentVariables[EnvVarEpisodesStorePath])
 	podcastSyncFromRSSCmd.Flags().StringVarP(&flagImagesDir, "images-dir", "i", os.Getenv(EnvVarImagesPath), environmentVariables[EnvVarImagesPath])
