@@ -66,6 +66,26 @@ func ResizeImage(inputPath string, width, height int) error {
 	return nil
 }
 
+// GetImageDimensions returns the width and height of an image
+func GetImageDimensions(path string) (width, height int, err error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return 0, 0, fmt.Errorf("failed to open image: %w", err)
+	}
+	defer func() {
+		if err := file.Close(); err != nil {
+			fmt.Println("error when closing:", err)
+		}
+	}()
+
+	config, _, err := image.DecodeConfig(file)
+	if err != nil {
+		return 0, 0, fmt.Errorf("failed to decode image config: %w", err)
+	}
+
+	return config.Width, config.Height, nil
+}
+
 // ImageExists checks if an image file exists with any common extension
 func ImageExists(baseFilename string) (string, bool) {
 	extensions := []string{".jpg", ".jpeg", ".png", ".gif", ".webp"}

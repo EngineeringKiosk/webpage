@@ -46,7 +46,7 @@ scripts/venv/touchfile: scripts/requirements.txt
 .PHONY: init-python
 init-python: scripts/venv/touchfile ## Installs python dependencies and creates a virtualenv
 
-# Python scripts
+# Go sync scripts (website-admin)
 .PHONY: update-german-tech-podcasts
 update-german-tech-podcasts: ## Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
-	. $(VENV_ACTIVATE); python ./scripts/sync_german_tech_podcasts.py
+	./website-admin/website-admin sync german-tech-podcasts
