@@ -16,24 +16,14 @@ All commands are run from the root of the project, from a terminal.
 Available `Makefile` commands:
 
 ```
-build                                               Compiles the application into static content
-check-episode-player-urls                           Checks all podcast episodes if all player links (Spotify, etc.) are set
-clean                                               Deletes all generated items (like node_modules, build output, caches)
-find-missing-tag-descriptions-content-files         Finds all used tags in content files that need SEO descriptions and output them on stdout
-find-missing-tag-descriptions-german-tech-podcast   Finds all used tags in the german tech podcasts that need SEO descriptions and output them on stdout
-help                                                Outputs the help
-init-javascript                                     Installs JavaScript dependencies
-init-python                                         Installs python dependencies and creates a virtualenv
-init                                                Installs all dependencies (JavaScript and python)
-optimize-episode-transcriptions                     Trims and shortens the episode text transcriptions to only the data we actually need
-prettier                                            Run code formatter prettier (for JavaScript)
-run                                                 Starts the development server
-update-episode-content-no-api                       Pulls the latest Podcast RSS feed from RedCircle and updates the content (without doing external API calls)
-update-episode-content                              Pulls the latest Podcast RSS feed from RedCircle and updates the content
-update-episode-redirects                            Writes all short url redirects for Podcast episodes to netlify.toml
-update-german-tech-podcasts                         Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
-update-missing-tag-descriptions-content-files       Finds all used tags in content files that need SEO descriptions and updates the tag-file
-update-missing-tag-descriptions-german-tech-podcast Find all used tags in the german tech podcasts that need SEO descriptions and updates the tag-file
+build                          Compiles the application into static content
+clean                          Deletes all generated items (like node_modules, build output, caches)
+help                           Outputs the help
+init-javascript                Installs JavaScript dependencies
+init                           Installs all dependencies (JavaScript)
+prettier                       Run code formatter prettier (for JavaScript)
+run                            Starts the development server
+update-german-tech-podcasts    Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 ```
 
 ## Blog posts: Image sizes

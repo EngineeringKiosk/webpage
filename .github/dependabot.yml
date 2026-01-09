@@ -15,11 +15,6 @@ updates:
     schedule:
       interval: 'monthly'
 
-  - package-ecosystem: 'pip'
-    directory: '/scripts'
-    schedule:
-      interval: 'monthly'
-
   - package-ecosystem: 'gomod'
     directory: '/website-admin/'
     schedule:

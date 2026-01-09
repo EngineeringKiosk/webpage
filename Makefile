@@ -1,8 +1,5 @@
 .DEFAULT_GOAL := help
 
-VENV_NAME?=scripts/venv
-VENV_ACTIVATE=$(VENV_NAME)/bin/activate
-
 .PHONY: help
 help: ## Outputs the help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -21,13 +18,9 @@ clean: ## Deletes all generated items (like node_modules, build output, caches)
 	rm -rf node_modules
 	rm -rf .ruff_cache
 	rm -rf .astro
-	rm -rf scripts/__pycache__
-	rm -rf scripts/.ruff_cache
-	rm -rf scripts/venv
-	rm -rf scripts/.cache
 
 .PHONY: init
-init: init-javascript init-python ## Installs all dependencies (JavaScript and python)
+init: init-javascript ## Installs all dependencies (JavaScript)
 
 .PHONY: init-javascript
 init-javascript: ## Installs JavaScript dependencies
@@ -36,15 +29,6 @@ init-javascript: ## Installs JavaScript dependencies
 .PHONY: prettier
 prettier: ## Run code formatter prettier (for JavaScript)
 	node_modules/.bin/prettier -w .
-
-# target is only run if the target or any of the prerequisites have changed (touchfile)
-scripts/venv/touchfile: scripts/requirements.txt
-	test -d $(VENV_NAME) || python3 -m venv $(VENV_NAME)
-	. $(VENV_ACTIVATE) && cd scripts && pip install --require-virtualenv -Ur requirements.txt
-	touch $(VENV_NAME)/touchfile
-
-.PHONY: init-python
-init-python: scripts/venv/touchfile ## Installs python dependencies and creates a virtualenv
 
 # Go sync scripts (website-admin)
 .PHONY: update-german-tech-podcasts
