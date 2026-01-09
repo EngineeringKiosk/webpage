@@ -79,10 +79,9 @@ keys (e.g., "german_content.genres" for games).`,
 func init() {
 	tagsCmd.AddCommand(tagsFindCmd)
 
-	// TODO Add the flags as the same structure as other commands (env.go)
 	tagsFindCmd.Flags().BoolVarP(&flagTagsWriteFile, "write-file", "w", false, "Modify the local tag storage file and add missing tags")
-	tagsFindCmd.Flags().StringVarP(&flagTagsContentPath, "content-dir", "c", "", "Content directory to scan (overrides default for mode)")
-	tagsFindCmd.Flags().StringVarP(&flagTagsDescFile, "desc-file", "f", "", "Tag description file path (overrides default for mode)")
+	tagsFindCmd.Flags().StringVarP(&flagTagsContentPath, "content-dir", "c", os.Getenv(EnvVarTagsContentPath), environmentVariables[EnvVarTagsContentPath])
+	tagsFindCmd.Flags().StringVarP(&flagTagsDescFile, "desc-file", "f", os.Getenv(EnvVarTagsDescFile), environmentVariables[EnvVarTagsDescFile])
 }
 
 func RunTagsFindCmd(cmd *cobra.Command, args []string) error {

@@ -14,6 +14,8 @@ const (
 	EnvVarImagesPath                    = "WEBSITEADMIN_IMAGES_PATH"
 	EnvVarNetlifyRedirectTomlFile       = "WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE"
 	EnvVarNetlifyRedirectRedirectPrefix = "WEBSITEADMIN_NETLIFY_REDIRECT_REDIRECT_PREFIX"
+	EnvVarTagsContentPath               = "WEBSITEADMIN_TAGS_CONTENT_PATH"
+	EnvVarTagsDescFile                  = "WEBSITEADMIN_TAGS_DESC_FILE"
 )
 
 var environmentVariables = map[string]string{
@@ -23,6 +25,8 @@ var environmentVariables = map[string]string{
 	EnvVarImagesPath:                    "Path to store podcast images",
 	EnvVarNetlifyRedirectTomlFile:       "Path to netlify.toml file for redirects",
 	EnvVarNetlifyRedirectRedirectPrefix: "Prefix for redirect URLs",
+	EnvVarTagsContentPath:               "Content directory to scan for tags",
+	EnvVarTagsDescFile:                  "Tag description file path",
 }
 
 var envCmd = &cobra.Command{
@@ -41,6 +45,8 @@ Checked environment variables:
   WEBSITEADMIN_IMAGES_PATH                Path to store podcast images
   WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE Path to netlify.toml for redirects
   WEBSITEADMIN_NETLIFY_REDIRECT_REDIRECT_PREFIX  Prefix for redirect URLs
+  WEBSITEADMIN_TAGS_CONTENT_PATH          Content directory to scan for tags
+  WEBSITEADMIN_TAGS_DESC_FILE             Tag description file path
 
 Behavior:
   - Logs INFO for each environment variable that is set
