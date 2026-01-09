@@ -26,16 +26,48 @@ const (
 // syncAwesomeSoftwareEngineeringGamesCmd represents the awesome-software-engineering-games sync command
 var syncAwesomeSoftwareEngineeringGamesCmd = &cobra.Command{
 	Use:   "awesome-software-engineering-games",
-	Short: "Sync Awesome Software Engineering Games data",
-	Long: `Sync data from the Awesome Software Engineering Games repository.
+	Short: "Sync the Awesome Software Engineering Games catalog from GitHub",
+	Long: `Sync data from the Awesome Software Engineering Games community repository.
 
-This command clones the repository from GitHub, copies the JSON data files
-and images to the local content directory, and performs necessary transformations:
-  - Adjusts image paths to be relative
-  - Normalizes genre names (e.g., "MMO" -> "Massively Multiplayer")
+The Engineering Kiosk website features a catalog of video games that teach programming,
+software engineering, and computer science concepts. This curated list is maintained
+as a separate community-driven GitHub repository, and this command synchronizes that
+data into the website's content directory.
 
-Source: https://github.com/EngineeringKiosk/awesome-software-engineering-games`,
-	RunE: RunSyncAwesomeSoftwareEngineeringGamesCmd,
+Source repository: https://github.com/EngineeringKiosk/awesome-software-engineering-games
+
+What this command does:
+  1. Clones the awesome-software-engineering-games repository to a temporary directory (shallow clone)
+  2. Copies all JSON data files from generated/ to the local content directory
+  3. Copies all game cover images from generated/images/
+  4. Applies the following transformations:
+     - Adjusts image paths in JSON files to be relative (e.g., "./game-name.jpg")
+     - Normalizes genre names for consistency:
+       * "MMO" -> "Massively Multiplayer"
+       * "Simulationen" -> "Simulation"
+  5. Cleans up the temporary clone
+
+The JSON files contain structured game metadata including:
+  - Game name, description, and official website
+  - Available platforms (PC, Mac, Linux, consoles)
+  - Genres and educational topics covered
+  - German-specific content including localized descriptions
+
+This command should be run periodically to pull in new game additions and updates
+from the community repository.`,
+	Example: `  # Sync games catalog using default paths (run from project root)
+  website-admin sync awesome-software-engineering-games
+
+  # Specify a custom storage path for JSON and images
+  website-admin sync awesome-software-engineering-games --storage-path ./custom/content/games
+
+  # Enable debug logging to see detailed file operations
+  website-admin sync awesome-software-engineering-games --debug
+
+  # Disable all logging for quiet operation (useful in scripts)
+  website-admin sync awesome-software-engineering-games --disable-logging`,
+	RunE:              RunSyncAwesomeSoftwareEngineeringGamesCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {

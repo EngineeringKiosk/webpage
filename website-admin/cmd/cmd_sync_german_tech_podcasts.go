@@ -27,16 +27,51 @@ const (
 // syncGermanTechPodcastsCmd represents the german-tech-podcasts sync command
 var syncGermanTechPodcastsCmd = &cobra.Command{
 	Use:   "german-tech-podcasts",
-	Short: "Sync German Tech Podcasts data",
-	Long: `Sync data from the German Tech Podcasts repository.
+	Short: "Sync the German Tech Podcasts directory from GitHub",
+	Long: `Sync data from the German Tech Podcasts community repository.
 
-This command clones the repository from GitHub, copies the JSON data files,
-images, and OPML file to the local content directory, and performs necessary transformations:
-  - Adjusts image paths to be relative
-  - Resizes images larger than 700x700 to 700x700
+The Engineering Kiosk website hosts a directory of German-language technology podcasts,
+which is maintained as a separate community-driven GitHub repository. This command
+synchronizes that external data into the website's content directory.
 
-Source: https://github.com/EngineeringKiosk/GermanTechPodcasts`,
-	RunE: RunSyncGermanTechPodcastsCmd,
+Source repository: https://github.com/EngineeringKiosk/GermanTechPodcasts
+
+What this command does:
+  1. Clones the GermanTechPodcasts repository to a temporary directory (shallow clone)
+  2. Copies all JSON data files from generated/ to the local content directory
+  3. Copies all podcast cover images from generated/images/
+  4. Copies the OPML file for podcast app subscriptions
+  5. Applies the following transformations:
+     - Adjusts image paths in JSON files to be relative (e.g., "./podcast-name.jpg")
+     - Resizes images larger than 700x700 pixels down to 700x700 for web optimization
+  6. Cleans up the temporary clone
+
+The JSON files contain structured podcast metadata including:
+  - Podcast name, description, and website URL
+  - RSS feed URL and language information
+  - Tags/categories and cover image
+  - Episode count and publish frequency
+
+This command should be run periodically to pull in new podcast additions and updates
+from the community repository.`,
+	Example: `  # Sync German tech podcasts using default paths (run from project root)
+  website-admin sync german-tech-podcasts
+
+  # Specify a custom storage path for JSON and images
+  website-admin sync german-tech-podcasts --storage-path ./custom/content/podcasts
+
+  # Specify a custom path for the OPML file
+  website-admin sync german-tech-podcasts --opml-path ./public/feeds/podcasts.opml
+
+  # Use both custom paths
+  website-admin sync german-tech-podcasts \
+    --storage-path ./src/content/germantechpodcasts \
+    --opml-path ./public/deutsche-tech-podcasts/podcasts.opml
+
+  # Enable debug logging to see detailed file operations
+  website-admin sync german-tech-podcasts --debug`,
+	RunE:              RunSyncGermanTechPodcastsCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {

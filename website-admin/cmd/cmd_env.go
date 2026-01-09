@@ -29,13 +29,45 @@ var environmentVariables = map[string]string{
 
 var envCmd = &cobra.Command{
 	Use:   "env",
-	Short: "Checks if all required environment variables are set.",
-	Long: `Checks if all required environment variables are set.
-	
-	If any are missing, a warning is logged.
-	It is advised to run this command before using other commands to ensure all necessary environment variables are configured.
-	This command does not validate the content of the environment variables.`,
-	RunE: RunEnvCmd,
+	Short: "Display and validate environment variable configuration",
+	Long: `Display and validate environment variable configuration for website-admin.
+
+Several website-admin commands can be configured via environment variables instead of
+(or in addition to) command-line flags. This command helps you verify that all the
+environment variables you need are properly set before running other commands.
+
+Checked environment variables:
+  WEBSITEADMIN_EPISODES_STORE_PATH        Path to store episode Markdown files
+  WEBSITEADMIN_RSS_FEED_URL               URL of the podcast RSS feed
+  WEBSITEADMIN_TRANSCRIPT_PATH            Path to store podcast transcripts
+  WEBSITEADMIN_IMAGES_PATH                Path to store podcast images
+  WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE Path to netlify.toml for redirects
+  WEBSITEADMIN_NETLIFY_REDIRECT_EPISODES_DIR  Directory containing episode files
+  WEBSITEADMIN_NETLIFY_REDIRECT_REDIRECT_PREFIX  Prefix for redirect URLs
+
+Behavior:
+  - Logs INFO for each environment variable that is set
+  - Logs WARN for each environment variable that is not set
+  - Always exits with code 0 (missing variables are warnings, not errors)
+  - Does NOT validate whether the paths exist or URLs are valid
+
+You can also use a .env file in the current directory. The tool automatically loads
+it at startup if present.
+
+This command is useful for:
+  - Debugging configuration issues
+  - Verifying CI/CD environment setup
+  - Documenting which variables are available`,
+	Example: `  # Check all environment variables
+  website-admin env
+
+  # Check with debug logging for more details
+  website-admin env --debug
+
+  # Typical workflow: check env, then run a command
+  website-admin env && website-admin podcast sync-from-rss`,
+	RunE:              RunEnvCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {

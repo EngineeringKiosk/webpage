@@ -11,13 +11,21 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "website-admin",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "Administrative CLI tool for the Engineering Kiosk website",
+	Long: `website-admin is a command-line tool for managing the Engineering Kiosk website.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+This tool provides various administrative commands for:
+  - Managing podcast episodes (syncing from RSS, generating redirects, checking player URLs)
+  - Handling content tags and SEO descriptions
+  - Synchronizing external data sources (German Tech Podcasts, Awesome Software Engineering Games)
+  - Validating environment configuration
+
+The Engineering Kiosk website (engineeringkiosk.dev) is a German-language software
+engineering podcast website built with Astro. This admin tool automates many of the
+content management and deployment tasks required to keep the site up-to-date.
+
+Use "website-admin [command] --help" for more information about a command.`,
+	DisableAutoGenTag: true,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

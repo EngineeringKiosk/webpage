@@ -30,19 +30,50 @@ type TagDescription struct {
 // tagsFindCmd represents the tags find command
 var tagsFindCmd = &cobra.Command{
 	Use:   "find [mode]",
-	Short: "Find tags without descriptions",
-	Long: `Find tags or genres without SEO descriptions in content files.
+	Short: "Find tags or genres missing SEO descriptions",
+	Long: `Find tags or genres that are missing SEO descriptions in content files.
 
-Modes:
-  website-content              			Scan podcast episodes and blog posts for tags
-  german-tech-podcasts         			Scan German tech podcasts for tags
-  awesome-software-engineering-games  	Scan software engineering games for genres
+This command scans content files (Markdown, MDX, or JSON) for tags/genres and compares
+them against the corresponding tag description file. It identifies tags that either:
+  - Don't exist in the description file yet
+  - Exist but have empty short_desc or long_desc fields
 
-Without --write-file flag, tags are printed to stdout and exits with code 1 if any are found.
-With --write-file flag, missing tags are added to the respective JSON file with empty descriptions.`,
-	Args:      cobra.ExactArgs(1),
-	ValidArgs: []string{ModeWebsiteContent, ModeGermanTechPodcasts, ModeAwesomeSoftwareEngineeringGames},
-	RunE:      RunTagsFindCmd,
+Available modes:
+  website-content                        Scans podcast episodes (src/content/podcast/) for tags
+                                         Uses: src/data/tags.json
+
+  german-tech-podcasts                   Scans German tech podcast entries for tags
+                                         Uses: src/data/german-tech-podcasts-tags.json
+
+  awesome-software-engineering-games     Scans software engineering games for genres
+                                         Uses: src/data/awesome-software-engineering-games-genres.json
+
+Behavior:
+  - Without --write-file: Lists missing tags and exits with code 1 if any are found.
+    This makes it ideal for CI/CD pipelines to catch missing descriptions.
+  - With --write-file: Adds missing tags to the JSON file with empty descriptions
+    and updates usage counts for all tags. Tags with zero usage are automatically removed.
+
+The command reads tags from YAML frontmatter in Markdown files or from nested JSON
+keys (e.g., "german_content.genres" for games).`,
+	Example: `  # Check for missing tag descriptions in podcast episodes (CI-friendly)
+  website-admin tags find website-content
+
+  # Check German tech podcasts and add missing tags to the description file
+  website-admin tags find german-tech-podcasts --write-file
+
+  # Check game genres with a custom content directory
+  website-admin tags find awesome-software-engineering-games --content-dir ./custom/games
+
+  # Use custom description file path
+  website-admin tags find website-content --desc-file ./custom/tags.json
+
+  # Enable debug logging to see which files are being processed
+  website-admin tags find website-content --debug`,
+	Args:              cobra.ExactArgs(1),
+	ValidArgs:         []string{ModeWebsiteContent, ModeGermanTechPodcasts, ModeAwesomeSoftwareEngineeringGames},
+	RunE:              RunTagsFindCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {
