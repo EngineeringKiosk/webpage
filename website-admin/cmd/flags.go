@@ -26,7 +26,9 @@ var (
 	flagTagsDescFile   string
 
 	// Sync
-	flagSyncAwesomeGamesStoragePath string
+	flagSyncAwesomeGamesStoragePath        string
+	flagSyncGermanTechPodcastsStoragePath  string
+	flagSyncGermanTechPodcastsOPMLPath     string
 
 	// Logging
 	flagDebugLogging   bool
