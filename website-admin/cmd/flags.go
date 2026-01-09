@@ -21,7 +21,7 @@ var (
 	// Tags
 	flagTagsWriteFile   bool
 	flagTagsContentPath string
-	flagTagsDescFile   string
+	flagTagsDescFile    string
 
 	// Sync
 	flagSyncAwesomeGamesStoragePath       string
