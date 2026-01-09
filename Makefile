@@ -47,18 +47,6 @@ scripts/venv/touchfile: scripts/requirements.txt
 init-python: scripts/venv/touchfile ## Installs python dependencies and creates a virtualenv
 
 # Python scripts
-.PHONY: update-episode-content
-update-episode-content: ## Pulls the latest Podcast RSS feed from RedCircle and updates the content
-	. $(VENV_ACTIVATE); python ./scripts/podcast_feed_to_content.py sync
-
-.PHONY: update-episode-content-no-api
-update-episode-content-no-api: ## Pulls the latest Podcast RSS feed from RedCircle and updates the content (without doing external API calls)
-	. $(VENV_ACTIVATE); python ./scripts/podcast_feed_to_content.py sync --no-api-calls
-
-.PHONY: update-episode-redirects
-update-episode-redirects: ## Writes all short url redirects for Podcast episodes to netlify.toml
-	. $(VENV_ACTIVATE); python ./scripts/podcast_feed_to_content.py redirect
-
 .PHONY: update-german-tech-podcasts
 update-german-tech-podcasts: ## Updates the German Tech Podcasts data from https://github.com/EngineeringKiosk/GermanTechPodcasts
 	. $(VENV_ACTIVATE); python ./scripts/sync_german_tech_podcasts.py
