@@ -19,7 +19,6 @@ const podcastEpisodeCollection = defineCollection({
 			description: z.string(),
 			headlines: z.string(),
 			image: image(),
-			length_second: z.number(),
 			pubDate: z.date(),
 			speaker: z.array(
 				z.object({
