@@ -56,7 +56,6 @@ deezer: https://www.deezer.com/de/episode/355566742
 description: "Was ist eigentlich Over-Engineering? Und wann ist es einfach nur gutes Engineering? Ist das eigentlich immer nur negativ? Oder auch mal positiv? Gibt es auch Under-Engineering? In dieser Episode philosophieren Andy und Wolfgang darüber, wann der Drang nach dem perfekten Source-Code Overenegineering ist und warum es in der akademischen Welt nur dreckig programmiert wird. Bonus: Warum Wolfgang seine Kletterschuhe nach Tschechien sendet  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners"
 headlines: sprungmarken::Sprungmarken||artikel::Artikel||konzepte::Konzepte||projekte::Projekte
 image: ./03-over-engineering-das-werkzeug-des-teufels.jpg
-length_second: 3079
 pubDate: 2022-01-18 10:50:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -24,7 +24,6 @@ deezer: https://www.deezer.com/episode/467505017
 description: "1 Jahr Engineering Kiosk: Ein Wrap-up mit Learnings, Statistiken und Pläne für 2023 Dieser Podcast hat ein ganzes Jahr voll gemacht. Dies ist für uns ein Grund mal etwas zurück zu schauen und in dieser etwas anderen Episode ein paar Hintergrundinformationen mit euch zu teilen. Was waren eigentlich die Ziele und Motivation hinter dem Podcast? Wie sehen die Statistiken aus? Wie viele Leute hören uns? Was für Learnings haben Andy und Wolfgang gemacht? Wie viel Aufwand steckt im Podcast? Und viel wichtiger: Was steht für das kommende Jahr, 2023, auf dem Plan? All das in dieser Episode sowie ein mögliches Community-Treffen in Belgien -> https://engineeringkiosk.dev/fosdem2023 Bonus: 3 Flachwitze und wo die größte Orgel Europas steht"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./-1-wrap-up-2022-und-1-geburtstag-learnings-statistiken-und-was-2023-geplant-ist.jpg
-length_second: 1847
 pubDate: 2023-01-05 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

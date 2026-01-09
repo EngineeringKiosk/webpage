@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/episode/493228507
 description: "Forward-Proxy, Reverse-Proxy, Bastion-Host, Load Balancer, SOCKS5-Proxy, Edge-Router, Zero-Trust, Geo-Balancing, ... Haltet eure Buzzword-Bingo-Karten bereit. In dieser Episode beschäftigen wir uns mit der Frage \"Was ist eigentlich der Unterschied zwischen einem Loadbalancer und einem Reverse Proxy?\". Klingt einfach zu beantworten, ist es aber nicht. Zwei (oder sogar mehr) Welten treffen da aufeinander. Um der Antwort näher zu kommen, steigen wir Tief in das Thema ein und klären was eigentlich ein normaler Proxy ist, wo der Unterschied zu einem Reverse Proxy ist, was ein SOCKS5-Proxy kann, wozu Proxies heutzutage eingesetzt werden, was ein Bastion Host ist, wozu Edge Nodes gut sind, was Ihr für Tools einsetzen könnt und klären am Ende auch die Frage, was denn nun eigentlich der Unterschied zu einem Load Balancer ist. Bonus: Ob Wein durch Schläuche schmeckt und was das Düsseldorfer Altbier mit Proxies zu tun hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./64-infrastruktur-bingo-forward-reverse-socks-proxy-load-balancing-und-gibt-es-einen-unterschied-zwischen-load-balancer-und-reverse-proxy.jpg
-length_second: 3417
 pubDate: 2023-03-28 03:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/episode/531281065
 description: "Alle Firmen suchen nur Senior-Engineers - Steckt in Junior-Engineers das wahre Potential? Nachwuchs im Software-Engineering-Bereich zu bekommen ist nicht einfach. Die meisten Stellenanzeigen im Internet suchen Senior-Engineers mit über 5 Jahren Erfahrung. Doch wie sieht es denn mit Junior-Developer aus? Wie erkennt man motivierende Junior-Engineers in Interviews? Wie reagiert ein Team aus Senior-Engineers auf unerfahrene Personen? Welche Rolle spielen strukturierte Interviews und Entscheidungen aus dem Bauch heraus? Und was ist das richtige Verhalten, wenn man Zeit und Geld in die Weiterentwicklung einer Person investiert hat, aber die Person nach 2 Jahren kündigt? In dieser Episode teilen Wolfgang und Andy ihre Erfahrungen im Recruiting, in der Weiterentwicklung und bei Kündigungen von Junior Engineers. Bonus: Warum goto Statements böse sind und was Korn-Brause mit Sommer zu tun hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./80-junior-devs-steckt-das-wahre-potential-in-unerfahrenen-talenten.jpg
-length_second: 4077
 pubDate: 2023-07-18 07:07:16+00:00
 speaker:
 - name: Andy Grunwald

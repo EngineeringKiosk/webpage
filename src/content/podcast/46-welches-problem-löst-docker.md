@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/454783567
 description: "Docker und Container: Buzzwords der letzten Dekade - Doch was ist Docker wirklich? In dieser Episode versuchen wir genau diese Frage zu beantworten. Jeder redet davon, und wie in jedem Hype werden Wörter und Begriffe oft in einem falschen Kontext genutzt und das Ecosystem entwickelt sich unglaublich schnell. Deswegen ist es doch ganz gut, wenn man ein wenig hinter die Kulissen schaut: Warum wurde Docker erschaffen und welches ursprüngliche Problem sollte es lösen? Was ist das besondere an Docker, wenn es \"diese Linux Container\" bereits seit > 20 Jahren gibt? Was ist eigentlich ein Container im Kontext von Software und was hat \"Change Root\" (chroot) damit zu tun? Und welche Nachteile hat Docker? Kurz um: 55 Minuten um das “Warum” hinter Docker. Bonus: Warum Duisburg eine essentielle Rolle im Container-Ecosystem spielt, was Kaffe mit Software deployen zu tun hat und wie man das Endstück vom Brot nennt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./46-welches-problem-löst-docker.jpg
-length_second: 3305
 pubDate: 2022-11-22 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

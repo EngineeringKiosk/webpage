@@ -24,7 +24,6 @@ deezer: https://www.deezer.com/episode/588130872
 description: "Plattform Engineering, Interne Developer Plattformen und das Product-Mindset: 2023 wird als “Das Jahr der Effizienz” bezeichnet. Viele Firmen schauen sich im Detail an, wie die Arbeit der eigenen Software-Entwicklungsteams effizienter gestaltet werden kann. Die Bereiche Infrastruktur, Cloud, Build Pipelines, Deployment und Co stehen oft im Mittelpunkt der Frage “Was kann optimiert werden, damit wir uns schneller bewegen?”. In der Regel dauert es nicht lange, bis die Buzzwords “Interne Developer Plattformen”, “Developer Experience” und “Plattform Engineering” fallen. Doch worum geht es eigentlich beim Plattform Engineering? Was ist eine interne Developer Plattform? Genau darüber sprechen wir mit unserem Gast Puja Abbassi. Wir klären, was das alles ist, welche Probleme eigentlich gelöst werden sollen, wie eine erfolgreiche Plattform aussieht, was klassische Fallstricke sind, ab wann sich die ganze Sache eigentlich lohnt und noch vieles mehr. Bonus: Was ist FinOps?  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./103-plattform-engineering-und-interne-developer-plattformen-mit-puja-abbassi.jpg
-length_second: 4542
 pubDate: 2023-12-26 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

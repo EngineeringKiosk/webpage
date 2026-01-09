@@ -64,7 +64,6 @@ deezer: https://www.deezer.com/de/episode/355566752
 description: "Wolfgang und Andy erzählen ein wenig was über ihre eigenen Side Projects sourcectl (https://gettoknow.sourcectl.dev/), F-Online (https://www.f-online.at/) und the athlete (https://theathlete.app/). Wir machen eine Rundfahrt durch den verwendeten Technologienzoo, diskutieren ob man Monitoring in Side Projects benötigt, wann es Over-Engineering und wann gerechtfertigt ist, ob der heutige Einsatz von Zend Framework 1 schon als kriminell gewertet werden kann und hören Wolfgang zu, wie er DevOps Anfängerfehler begeht indem ihm die Festplatte voll logs läuft.  Bonus: Wie Wolfgang den ultimativen Reichtum mit seinem eigenen CMS zur dotcom Blase verpasst hat  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners"
 headlines: sprungmarken::Sprungmarken||erwähnte-side-projects::Erwähnte Side Projects||erwähnte-technologien::Erwähnte Technologien||anderes::Anderes||erwähnte-personen::Erwähnte Personen||hosts::Hosts
 image: ./02-technologienzoo-side-projects.jpg
-length_second: 2690
 pubDate: 2022-01-10 15:00:00+00:00
 speaker:
 - name: Andy Grunwald

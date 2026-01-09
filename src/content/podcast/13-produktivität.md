@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/de/episode/375279537
 description: "Zeit- und Produktivitätsmanagement: Buzzword-Bingo oder bringt das wirklich was? So blöd wie das Thema auch klingen mag, es hat Vorteile. Nicht nur im beruflichen Umfeld, sondern auch im privaten. Wolfgang und Andy sprechen über Ihre Art und Weise, Aufgaben zu organisieren, welche Methoden Sie verwenden, welche was bringen und welche Blödsinn sind, wo die Probleme liegen, ob man Talent dafür bracht, wie man sich selbst mit spannenden Aufgaben austricksen kann und wie man damit seinen Vorgesetzten Erziehen kann. Bonus: Warum Wolfgang endlich seine Zahnbürste wechselt, was Volkswagen mit Getting Things Done zu tun hat und wieso Andy ab und zu knatsch mit seiner Frau hat."
 headlines: links::Links||bücher::Bücher||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./13-produktivität.jpg
-length_second: 3529
 pubDate: 2022-04-05 04:25:00+00:00
 speaker:
 - name: Andy Grunwald

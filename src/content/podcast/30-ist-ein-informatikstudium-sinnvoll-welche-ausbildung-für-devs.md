@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/de/episode/420513827
 description: "Wie wichtig ist die Universität und ein Studium für den heutigen Beruf als Software Entwickler⋅in? Diese bzw. ähnliche Fragen haben wir von unseren Hörer⋅innen zugesendet bekommen: Welche Unterschiede gibt es in den Ausbildungen? Wie relevant ist eine schulische oder berufliche Ausbildung? Sollte man ein Bachelor, Masterstudium machen? Und würden wir den Weg zum Dr. Titel empfehlen? Haben Akademiker nur Vorteile? Oder auch Nachteile bei der Jobsuche und beim Job selbst? Und wie kann man als Nicht-Studierte oder Quereinsteiger in der IT-Industrie Fuß fassen? All das und noch viel mehr in der Episode. Bonus: Was akademischer Spaß, Beleidigungen und Serdar Somuncu mit der ganzen Thematik zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./30-ist-ein-informatikstudium-sinnvoll-welche-ausbildung-für-devs.jpg
-length_second: 3936
 pubDate: 2022-08-02 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

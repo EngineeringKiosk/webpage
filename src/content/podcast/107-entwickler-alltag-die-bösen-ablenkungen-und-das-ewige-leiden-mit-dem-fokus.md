@@ -22,7 +22,6 @@ deezer: https://www.deezer.com/episode/595739202
 description: "Fokus-Zeit für Software-Engineers Software-Engineers und andere Knowledge-Worker kennen es. Du arbeitest an etwas, hochkonzentriert, hältst diverse Kontext relevante Informationen in deinem Kopf und es kommt von links jemand und fragt “Hast mal eben ne Minute?”. Flups. Alles weg. Du bist raus. Darfst du dich neu einarbeiten? So oder so ähnlich hat es jeder von uns erlebt. Eine klassische Unterbrechung. Doch wie geht man damit um? Was kann man dagegen tun? Das ist wohl die 1 Millionen Euro-Frage. In dieser Episode besprechen wir genau diese Frage. Nicht nur aus der Perspektive der Person, die unterbrochen wird, sondern auch aus dem Blickwinkel von jemandem, der etwas fragen möchte. Und wie geht man als Engineering Manager⋅in mit diesen Unterbrechungen im Team um? Bonus: Dies ist kein theoretisches Problem, sondern eine Frage aus unserer Community!  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./107-entwickler-alltag-die-bösen-ablenkungen-und-das-ewige-leiden-mit-dem-fokus.jpg
-length_second: 3603
 pubDate: 2024-01-23 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

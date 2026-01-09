@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/559335951
 description: "Inner Source - Die Anwendung von Open Source Best Practices in deiner Organisation Jede Firma und jeder Entwickler⋅in hat Berührungspunkte mit Open Source. Direkt oder indirekt durch verwendete Libraries, Server-Systeme oder Ähnliches. Wie die Open-Source-Szene funktioniert, ist auch irgendwie faszinierend. Personen, die sich nicht kennen, arbeiten weltweit und asynchron, relativ effizient zusammen und erschaffen zusammen Großes. Inner Source hat zum Ziel, die besten Praktiken aus Open Source in einer geschlossenen Organisation zu nutzen. Doch was bedeutet dies eigentlich? Dazu haben wir mit Sebastian Spier gesprochen. Wir steigen tiefer ein und klären, was Inner Source ist, welchen Vorteil eine Organisation bei der Anwendung von Inner Source hat, ob Inner Source ohne Open Source Erfahrung möglich ist, ob interne Firmenpolitik dadurch reduziert werden kann und welcher Support vom Leadership und vom Team eigentlich notwendig ist.\u00a0 Bonus: Kneipenguide.de wurde in Perl geschrieben.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./90-inner-source-open-source-best-practices-zur-besseren-zusammenarbeit-zwischen-teams-mit-sebastian-spier.jpg
-length_second: 4200
 pubDate: 2023-09-26 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

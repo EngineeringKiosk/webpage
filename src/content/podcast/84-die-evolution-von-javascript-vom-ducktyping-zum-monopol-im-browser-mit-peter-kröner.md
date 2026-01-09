@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/episode/541294825
 description: "JavaScript: Eine multiparadigmatische Skriptsprache mit einem schwachen dynamischen Ducktyping-System. Um die Sprache JavaScript kommt man im Web nicht mehr vorbei. Die meisten kennen sie durch Frameworks wie React, Angular, Vue.js, Next und Co. Doch wie viel weißt du über die Hintergründe und die Weiterentwicklung dieser Sprache? In dieser Episode geht es nicht um das nächste hippe JavaScript-Framework, sondern wir sprechen mit Peter Kröner darüber, wie JavaScript erfunden wurde, was ECMAScript ist, wie TypeScript in den Mix spielt, warum die Sprache so beliebt ist, wie neue Features den Weg in die Sprache finden, was das TC39 ist, über das Monopol im Browser, verschiedene JavaScript-Engines und viel mehr. Bonus: Wenn Hamburg im Süden liegt.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./84-die-evolution-von-javascript-vom-ducktyping-zum-monopol-im-browser-mit-peter-kröner.jpg
-length_second: 5219
 pubDate: 2023-08-15 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

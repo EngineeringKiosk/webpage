@@ -32,7 +32,6 @@ deezer: https://www.deezer.com/episode/433458577
 description: "Gehälter als Software-Engineer: Wie sind diese aufgebaut? IT-Gehälter sind so hoch wie noch nie. Doch sind 6-Stellige Gehälter gerechtfertigt, fair und bekommen die Mitarbeiter wirklich diesen Betrag jährlich überwiesen? Um diese Frage und ähnliche Themen geht es in dieser Episode: Welche Gehaltsbausteine gibt es? Lohnt es sich bei US-Gehältern überhaupt noch in Deutschland zu bleiben? Gibt es eine große Imbalance zu anderen Industrien? Sind die Gehälter überhaupt gerechtfertigt und was machen zB kleine Agenturen, wenn diese mit der Entwicklung in der Industrie nicht mithalten können? Bonus: Wolfgang der Cloud-Hater, ob Deutschland Single-Feindlich ist und was der VW Golf und das Marketing der Cloud damit zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./36-sechs-stellige-it-gehälter-wie-was-wo-fair.jpg
-length_second: 3255
 pubDate: 2022-09-13 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

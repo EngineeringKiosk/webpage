@@ -44,7 +44,6 @@ deezer: https://www.deezer.com/de/episode/397023617
 description: "Old man yells at cloud - Oder: Wie managed man seine Infrastruktur mit Stil (und Software) Anders als gewohnt nimmt in dieser Episode Andy die Dozenten-Rolle ein und beantwortet Wolfgang all seine Fragen zum Thema Infrastructure as Code. Wir klären wozu man das ganze eigentlich braucht, was Terraform und Pulumi ist, klären über einen weit verbreiteten Mythos auf, wo der Unterschied zwischen Infrastructure Orchestration und Configuration Management ist, was das beste Configuration Management Tool ist und wo es Herausforderungen bei der Verwendung von Infrastructure as Code gibt. Bonus: Was ein Data Engineer ist, ob Wolfgang Holz-Clogs trägt und wie Deutschland mit dem 9€ Ticket umgeht."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./24-infrastructure-as-code-oder-old-man-yells-at-cloud.jpg
-length_second: 3712
 pubDate: 2022-06-21 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

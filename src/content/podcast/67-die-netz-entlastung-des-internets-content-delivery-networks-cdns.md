@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/500384207
 description: "Content Delivery Networks (CDNs): Die Netz-Entlastung des Internets Jeder nutzt sie, bewusst oder unbewusst: Content Delivery Networks. Sie sind aus dem Internet nicht mehr wegzudenken. Angetreten, um einzelne Server/Websites vor Überlastungen zu schützen, bilden diese nun das Backbone von schnellen Ladezeiten für Websites, Video-Streaming und Co. Doch was genau ist eigentlich ein CDN? Was sind Vor- und Nachteile? Welche Arten von CDNs gibt es? Hat der Begriff \"Edge\" aus dem Cloud-Bereich auch was damit zu tun? Und überhaupt: Sollte ich mit meiner App ein CDN verwenden, wie würde ich meine App migrieren und ist dies überhaupt konform mit den aktuellen Datenschutz-Regelungen? Dies und noch viel mehr in dieser Episode. Bonus: Was Geldautomaten und Holland-Räder mit Content Delivery Networks zu tun hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./67-die-netz-entlastung-des-internets-content-delivery-networks-cdns.jpg
-length_second: 4002
 pubDate: 2023-04-18 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

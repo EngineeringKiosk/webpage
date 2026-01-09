@@ -22,7 +22,6 @@ deezer: https://www.deezer.com/episode/468701427
 description: "Werden Software-Engineers sich selbst durch neue Entwicklungen arbeitslos machen? Jedes Jahr wird eine neue Sau durchs Dorf (aka Internet) getrieben. Wenn das passiert, heißt es wieder \"X wird unsere Jobs ersetzen\". Doch ist das wirklich so? In dieser Episode schauen wir uns drei dieser Thesen an, die wir in den letzten Jahren gehört haben: 1. \"Die Cloud wird die Jobs von System-Administratoren ersetzen\" 2. \"No-Code / Low-Code tools werden den Jobs des Software-Entwicklers ersetzen\" 3. \"AI / ChatGPT wird unsere Jobs ersetzen\" und besprechen, wie denn die Realität aussieht, ob die Thesen wahr sind bzw. wahr werden oder ob doch alles beim alten bleibt. Bonus: Warum Wolfgang ein Fan von Holz-Clogs ist und was Plasmaschneider in der Schmiede zu suchen haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./53-cloud-nocode-ai-chatgpt-ersetzen-unsere-jobs.jpg
-length_second: 3959
 pubDate: 2023-01-10 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

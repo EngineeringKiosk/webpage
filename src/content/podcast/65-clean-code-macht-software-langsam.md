@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/episode/495963157
 description: "Zerstört die Anwendung von Clean Code die Performance deiner Applikation? Es war einmal Casey Muratori, ein Softwareentwickler mit Fokus auf Game-Engines, der sich ins Internet gestellt hat und sagte \"Clean Code resultiert in schrecklicher Performance\". Das YouTube-Video ging um die Welt, die YouTube-Kommentare wurden deaktiviert und Hackernews ging bis an die Decke. Auch der Kopf hinter \"Clean Code\", Uncle Bob, hat dies nicht auf sich sitzen lassen und ging in die Diskussion. Diese Episode handelt genau um das genannte Video. Wir besprechen, was die Key-Message des Videos ist, wer der Autor ist, was Clean Code ist und von wem es stammt und um was sich die Diskussion zwischen Casey Muratori und Uncle Bob dreht. Eine Art \"Reaction-Podcast\", sozusagen.\u00a0 Bonus: Was der heilige Gral der Teamentwicklung ist.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./65-clean-code-macht-software-langsam.jpg
-length_second: 3357
 pubDate: 2023-04-04 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

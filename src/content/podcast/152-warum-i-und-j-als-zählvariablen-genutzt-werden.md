@@ -10,7 +10,6 @@ deezer: https://www.deezer.com/episode/694213021
 description: "Warum i und j als Zählvariable genutzt werden und woher das ganze eigentlich stammt. Im Engineering Kiosk Adventskalender 2024 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb von wenigen Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)  LinksSumme: https://de.wikipedia.org/wiki/SummeSigma: https://de.wikipedia.org/wiki/Sigma Sprungmarken(00:00:00) Warum i und j als Zählvariable genutzt werden  HostsWolfgang Gassler (https://mastodon.social/@woolf)Andy Grunwald (https://andygrunwald.com/) FeedbackEngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0Buy us a coffee: https://engineeringkiosk.dev/kaffeeEmail: stehtisch@engineeringkiosk.devLinkedIn: https://www.linkedin.com/company/engineering-kiosk/Mastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialTwitter: https://twitter.com/EngKiosk"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Feedback
 image: ./152-warum-i-und-j-als-zählvariablen-genutzt-werden.jpg
-length_second: 364
 pubDate: 2024-12-01 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

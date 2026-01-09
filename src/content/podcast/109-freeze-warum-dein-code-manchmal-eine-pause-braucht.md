@@ -24,7 +24,6 @@ deezer: https://www.deezer.com/episode/600305552
 description: "Deployst du auch Freitags und während Black-Frida und /Cyber Monday? Code Freezes verbieten, dass neue Änderung in den Hauptentwicklungszweig gemerged werden. Deployment Freezes verhindern das eine neue Software-Version an den Kunden ausgeliefert werden kann. Doch warum tut man dies? Denn eins steht fest: Software Engineers werden dafür bezahlt, Dinge zu ändern. Doch Code- und Deployment Freezes werden oft vom Management vorgegeben. Welche Gründe für Code- und Deployment Freezes sprechen, welche Arten von Freezes es gibt, was ein Code Slush ist, wie das ganze in verschiedenen Industrien aussieht, das klären wir in dieser Episode. Bonus: Wenn Software-Engineers durch Code-Freezes an ihrem Job gehindert werden.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./109-freeze-warum-dein-code-manchmal-eine-pause-braucht.jpg
-length_second: 3228
 pubDate: 2024-02-06 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -30,7 +30,6 @@ deezer: https://www.deezer.com/episode/589653482
 description: "Story-Telling und richtig Präsentieren: Ein Skill der mehr Aufmerksamkeit verdient! Irgendwann im Leben muss jeder von uns mal etwas vor einer Gruppe von Personen präsentieren. Sei es eine Abschlussarbeit, ein Ergebnis von einem Hackathon, eine Knowledge-Sharing Session oder auch das tägliche Standup. Und all diese Präsentationen haben etwas gemeinsam: Du möchtest etwas bei den Zuschauern bewirken, ein gewisses Argument oder eine Nachricht überbringen. Doch wie macht man dies denn eigentlich richtig? Wie fesseln wir unsere Zuhörer und schaffen richtige Emotionen? Wie verhindert man, dass alle gelangweilt am Handy spielen? Inwieweit kann sogenanntes “Storytelling” helfen und wann ist es nicht sinnvoll? Wie lernt man Storytelling überhaupt? Und inwieweit kann die Variation meiner Stimme und meiner Körpersprache mir beim Präsentieren helfen? Das und noch viel viel mehr besprechen wir in dieser Episode mit unserer Expertin Anna Momber. Bonus: Was Software-Engineers von Comedians lernen können.\u00a0  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./104-präsentieren-mit-wirkung-public-speaking-und-storytelling-mit-anna-momber.jpg
-length_second: 4291
 pubDate: 2024-01-02 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

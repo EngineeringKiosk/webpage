@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/episode/422404947
 description: "Schuftest du noch oder automatisierst du schon? Heute gehts um die Faulheit von Entwicklern: Wir sprechen über GitHub Actions - Was es ist, wozu man es benutzen kann, wie es das eigene Leben erleichtern kann, wo der Unterschied zu Jenkins ist, wie das Engineering Kiosk es selbst einsetzt und welche Use-Cases von der Community oft genutzt werden. Bonus: Warum LinkedIn einen HTTP Status Code 999 sendet, wann wir Programmiersprachen wie Unterhosen wechseln und was Michael \"Bully\" Herbig mit der ganzen Sache zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./31-ich-automatisiere-mir-die-welt-wie-sie-mir-gefällt-mit-github-actions.jpg
-length_second: 3675
 pubDate: 2022-08-09 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

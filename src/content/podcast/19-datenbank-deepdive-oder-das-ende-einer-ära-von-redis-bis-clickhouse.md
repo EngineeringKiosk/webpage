@@ -64,7 +64,6 @@ deezer: https://www.deezer.com/de/episode/385182217
 description: "Der zweite Datenbank-Deepdive im Engineering Kiosk. Indirekt knüpfen wir an Episode 8 mit dem Thema Datenbanken. Diesmal fangen wir aber ganz vorne an: Mit hierarchischen Datenbanken über Objektorientierte Datenbanken, anschließend zu SQL bis hin zur NoSQL und Spaltenorientierten Datenbank-Ära. Dabei klären wir Fragen was zum Beispiel der Unterschied zwischen Datenbanken und Dateien ist, ob OOP-Datenbank immer noch ein Hype ist, was Indexe sind und wie diese funktionieren, warum die Migration weg von Oracle schwierig sein kann, ob Lucene eine Datenbank ist und noch viel viel mehr. Bonus: Was Kürbiskerne mit Datenbanken zu tun haben und warum MySQL ein besseres Adressbuch mit SQL Interface ist."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./19-datenbank-deepdive-oder-das-ende-einer-ära-von-redis-bis-clickhouse.jpg
-length_second: 3842
 pubDate: 2022-05-17 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

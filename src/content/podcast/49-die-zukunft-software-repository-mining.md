@@ -52,7 +52,6 @@ deezer: https://www.deezer.com/episode/461266807
 description: "Die Analyse von Metadaten aus dem Software-Entwicklungsprozess: Yey or Ney? Die wenigsten kennen den Begriff des Software Repository Minings, doch die meisten benutzen Features, die darauf zurückzuführen sind. Zum Beispiel der automatische Vorschlag von den richtigen Pull Request Reviewern. Es geht darum, auf Basis der Daten aus dem Softwareentwicklungsprozess neue Erkenntnisse zu gewinnen, um diesen einfacher und produktiver zu gestalten. In dieser Episode klären wir, woher die Daten kommen, wie man an diese gelangt, welche Anwendungsfälle es gibt, was die Herausforderungen dabei sind und wie ihr damit starten könnt. Bonus: Ob Andy bereits 50 Jahre alt ist und warum gute Architektur auch als Selbstschutz dient."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./49-die-zukunft-software-repository-mining.jpg
-length_second: 3295
 pubDate: 2022-12-13 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

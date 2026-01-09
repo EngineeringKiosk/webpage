@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/de/episode/361714572
 description: "Software Engineers fangen bei 0 an zu zählen. Das Engineering Kiosk ist direkt bei Episode 1 gestartet. Diesen Off-by-one error beheben wir nun mit dieser Folge 0. Wir, Wolfgang und Andy, stellen uns als Hosts vor, erzählen wie es zu diesem Podcast kam, wie wir gestartet haben, was wir in den ersten fünf Folgen gelernt haben und wie die Podcast-Distribution technisch funktioniert. Nebenbei erfahren wir den Unterschied zwischen dem deutschen und österreichischem Verständnis von Cafe, warum Bachelor ein anderes Wort für Studenabbrecher ist und was Ziegen damit zu tun haben. Bonus: Ob Kaiserschmarrn mit oder ohne Rosinen gemacht wird."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./00-developer-fangen-bei-0-an-zu-zählen.jpg
-length_second: 1751
 pubDate: 2022-02-08 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

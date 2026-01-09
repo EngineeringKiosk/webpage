@@ -56,7 +56,6 @@ deezer: https://www.deezer.com/episode/435299247
 description: "Lohnt es sich ein IT-Fachbuch zu schreiben? Es gibt zu jeder Software und zu jedem IT-Thema mindestens ein Buch. Doch wie ist es eigentlich, ein solches Buch zu schreiben? Was macht ein Verlag und braucht man diesen in der heutigen Zeit eigentlich noch? Wird man dadurch reich oder bleibt es Hungerlohn? Was für ein Tech-Stack steckt hinter einem Buch? Und wie würde man eigentlich starten? All das klären wir in dieser Episode mit Wolfgang, der ein Buch über MySQL im Rheinwerk-Verlag (Galileo Press) publiziert hat. Bonus: Warum Wolfgang eher ein Fan vom Reden ist und warum er wirklich so lange für seinen Dr. Titel benötigt hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./37-mit-it-büchern-geld-verdienen-wer-liest-überhaupt-noch-bücher.jpg
-length_second: 3621
 pubDate: 2022-09-20 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

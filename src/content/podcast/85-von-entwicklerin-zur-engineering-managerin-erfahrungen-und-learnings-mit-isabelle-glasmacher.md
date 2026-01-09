@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/episode/544032065
 description: "Der Einstieg in die erste Lead-Position, das Engineering Management, kann beängstigend sein. Viele sagen, es ist ein Jobwechsel und keine Beförderung. Mit dem Wechsel kommen eine Vielzahl neue Aufgaben mit sich, der Arbeitsalltag ändert sich. Doch wie sieht das in der Realität aus? Wie werden diese Herausforderungen gemeistert? Darüber sprachen wir mit der Team Managerin Isabelle Glasmacher. Wir sprechen über Hands-On Entwicklung als Manager, die Einführung von 1on1s, Feedback-Cycle als Manager vs. Entwickler, Weiterbildung und Workshops, die negativen Seiten des Manager-Daseins, lange TODO-Listen, Überstunden und Fehler, die gemacht wurden. Bonus: Was eine DIN-Norm und Ö-Norm ist.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./85-von-entwicklerin-zur-engineering-managerin-erfahrungen-und-learnings-mit-isabelle-glasmacher.jpg
-length_second: 4052
 pubDate: 2023-08-22 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

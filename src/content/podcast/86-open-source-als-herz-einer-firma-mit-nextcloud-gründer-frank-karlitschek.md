@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/episode/546838465
 description: "Die Story von ownCloud und Nextcloud inkl. einer erfolgreichen Firma auf Basis von Open Source 2010 hat Frank Karlitschek die Open Source Software ownCloud als Alternative zu Dropbox gestartet. 2016 hat Frank mit dem Core-Team ownCloud verlassen und seine ursprüngliche Software sowie seine Firma geforkt. Als er diese Story 2018 auf der FOSDEM-Konferenz als Vortrag erzählte, bekam er von der Open Source Community Standing Ovations. In dieser Episode sprechen wir mit Frank über den Grundgedanken von ownCloud, was Nextcloud heute ist, GPL basierte Software im Business-Kontext, das Management eines der größten Open Source Projekte, Lobbyismus und Open Source in der Politik und vieles mehr. Bonus: ownCloud ist als KDE Projekt gestartet.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./86-open-source-als-herz-einer-firma-mit-nextcloud-gründer-frank-karlitschek.jpg
-length_second: 3934
 pubDate: 2023-08-29 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

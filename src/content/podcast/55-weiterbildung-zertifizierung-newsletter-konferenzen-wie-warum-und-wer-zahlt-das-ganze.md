@@ -32,7 +32,6 @@ deezer: https://www.deezer.com/episode/472632487
 description: "Wie notwendig ist Weiterbildung und welche Möglichkeiten gibt es? Was ist zur Zeit schwieriger? Die richtigen Leute zu bekommen oder die richtigen Leute zu halten? Speziell für den zweiten Bereich ist Weiterbildung bzw. das Angebot zur Weiterbildung eine notwendige Maßnahme. Doch sind Konferenzen die einzige Möglichkeit, sich im Software-Bereich weiterzubilden? Wie steht es mit Zertifizierungen? Oder sogar hoch qualitativen Content wie kostenpflichtigen Newslettern? Und bringen Remote-Konferenzen auch was? Und ist das alles Arbeitszeit? Wir machen eine Tour durch die verschiedenen Weiterbildungsmöglichkeiten und klären auch die Frage, wer das eigentlich alles bezahlt. Bonus: Ob wir mit einer Leiter wirklich überall reinkommen und ob Newsletter die neuen Zertifizierungen sind."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./55-weiterbildung-zertifizierung-newsletter-konferenzen-wie-warum-und-wer-zahlt-das-ganze.jpg
-length_second: 3621
 pubDate: 2023-01-24 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

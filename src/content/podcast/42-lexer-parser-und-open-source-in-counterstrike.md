@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/episode/446871437
 description: "Was haben Lexer, Parser und Counter-Strike gemeinsam? Richtig! Eine schöne Open Source Story. Computerspiele sind für viele Software-Entwicklerinnen und -Entwickler der Einstieg. Andere wiederum steigen über den klassischen Bildungsweg eines Informatik-Studiums in die Softwareentwicklung ein. Dabei wird oft viel Theorie wie Lexer, Parser und Compilerbau durchgenommen. Doch was haben Computerspiele mit Lexer und Parser gemeinsam? Andy erzählt eine Story, wie er vor Jahren sich mit Lexer und Parser anhand einer Counter-Strike-Konfigurationsdatei vertraut gemacht hat. Eigentlich nur, um eine datengetriebene Spielanalyse zu betreiben. Raus kam ein Lexer und Parser für das Valve Data Format (VDF). Eine Geschichte voller Over-Engineering, Open Source, Spaß und einem Job-Angebot. Bonus: Wie Wolfgang nur ans cheaten denkt, was autoexec mit Maustreibern zu tun hat und was Landmaschinen auf YouTube mit Rabbitholes zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./42-lexer-parser-und-open-source-in-counterstrike.jpg
-length_second: 3218
 pubDate: 2022-10-25 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

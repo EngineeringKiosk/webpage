@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/502478997
 description: "Der Flow, der Tunnel, die Zone - Der Zustand nach dem viele Software-Entwickler⋅innen streben, hat viele Namen. Viele Knowledge-Worker haben den Zustand bereits erlebt: Totale Konzentration über mehrere Stunden. Man vergisst zu essen und zu trinken und ist voll bei der Sache. Man kennt den nächsten Schritt, es besteht keine Ablenkung, niemand stört dich und die Arbeiten gehen dir in einer Geschwindigkeit von der Hand wie selten. Du bist im Flow. Im Tunnel. In der Zone. Doch was ist dieser Zustand eigentlich? Mit unserem ersten Gast, Kirill Sivy, Gründer von shiftspace, gehen wir genau dieser Frage auf den Grund. Was ist der Flow-Zustand? Wie fühlt sich Flow an? Woher kommt das Ganze? Wie sieht der Flow-Zyklus aus? Kann Flow trainiert werden? Was ist ein Mikro- und Makro-Flow? Was passiert mit dem Gehirn und deinem Körper im Allgemeinen bei einer solch hohen Konzentration? Das und noch viel mehr besprechen wir in dieser Episode. Bonus: Der Grund warum wir beim Duschen immer zu den besten Gedanken kommen.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./68-im-flow-und-deepwork-mit-kirill-sivy.jpg
-length_second: 4178
 pubDate: 2023-04-25 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

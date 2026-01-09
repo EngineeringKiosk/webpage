@@ -62,7 +62,6 @@ deezer: https://www.deezer.com/de/episode/378566817
 description: "Kommentare im Quellcode und Git Commit Messages - Liest die überhaupt wer? Ein Streit, der so alt ist wie die Software Entwicklung selbst: Code ist Selbsterklärend und braucht keine Kommentare. Oder doch? Und die Git Historie ist auch eigentlich sinnlos. Warum sollte da jemand zurück gehen und sich die Commit Messages durchlesen? Diese Fragen und Themen wie Semantic Versioning, Idiomatische Programmier-Patterns, Merge Commits, Story-Tellung und was Fynn Kliemanns Kunst mit der Git Branch-Visualisierung zu tun hat, klären Wolfgang und Andy in dieser Episode vom Engineering Kiosk. Bonus: Warum Andy einen neuen Podcast-Partner sucht und Wolfgang lieber seinen Code angreift, anstatt Ihn zu entwickeln."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./15-source-code-kommentare-git-commits-messages-merge-commits-und-branch-visualisierungs-kunst.jpg
-length_second: 3904
 pubDate: 2022-04-19 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/442991047
 description: "Was ist eigentlich ein Senior Engineer und wie werde ich zu einem? In der Tech-Industrie werden Titel wie Junior-, Senior-, Staff- und Co genutzt, um Levels und Erfahrung auszudrücken. Doch was ist eigentlich ein Senior-Engineer? Was unterscheidet ein Senior von einem Junior? Wie kann sowas in der Praxis aussehen? Ist Zeit ein wirklicher Faktor für eine Beförderung (10 Jahre Berufserfahrung oder 10x 1 Jahr Berufserfahrung)? Ist \"Senior\" zu sein ein \"Einmal-Aufwand\" oder ist kontinuierliche Energie gefordert? In dieser Episode beschreiben Andy und Wolfgang einige Attribute, die den Unterschied eines Juniors und Seniors darstellen und beschreiben, wie man den Weg zum Senior einschlagen kann. Bonus: Warum ein Meterstab auch Zollstock genannt wird und warum Wolfgang ein T als hart bezeichnet."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./40-wie-wird-man-und-frau-zum-senior-dev.jpg
-length_second: 2983
 pubDate: 2022-10-11 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -62,7 +62,6 @@ deezer: https://www.deezer.com/de/episode/358074862
 description: "Für Andy ist Open Source und die Open Source Community ist bereits ein langer und essentieller Begleiter. In dieser Episode interviewed Wolfgang Andy genau zu dieseme Thema: Wie war sein Einsteig? Wieso es wichtig ist, sich Zeit zu nehmen um ein Bug-Ticket zu schreiben und was Snowboarden mit Open Source zu tun hat. Bonus: Wie man Andy dazu bringt, nackig durch die Wohnung zu flitzen.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners"
 headlines: sprungmarken::Sprungmarken||erwähnte-artikel::Erwähnte Artikel||erwähnte-personen::Erwähnte Personen||erwähnte-projekte::Erwähnte Projekte||erwähnte-events::Erwähnte Events||erwähnte-lizenzen::Erwähnte Lizenzen||hosts::Hosts
 image: ./04-lohnt-der-einstieg-in-open-source.jpg
-length_second: 3044
 pubDate: 2022-01-25 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

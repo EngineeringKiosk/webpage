@@ -28,7 +28,6 @@ deezer: https://www.deezer.com/episode/586326222
 description: "Erfahrungen durch den Quereinstieg in die Software-Entwicklung Seit über einer Dekade boomt die IT- und Software-Entwicklungsindustrie. Der Mangel an Fachkräften wird immer präsenter und oft locken gute Arbeitsbedingungen und noch bessere Gehälter. Auf der anderen Seite steht oft eine langjährige und traditionelle Berufsausbildung oder ein Studium. Die Alternative dazu, der Quereinstieg aus einer anderen Profession, kommt in der Praxis immer öfter vor. Für viele ist dies aber risikobehaftet und ggf. auch beängstigend. Deswegen nehmen wir uns diesem Thema an und besprechen den Quereinstieg mit unserem Gast Melanie Patrick. Sie hat nach 11 Jahren Berufserfahrung in einem anderen Job den Wechsel in die Softwareentwicklung durch einen Quereinstieg gemeistert. Es geht um ihren Werdegang, ihre Ausbildung, ihre Herausforderungen in der Software-Entwicklung, um das Feedback aus ihrem persönlichen Umkreis und Empfehlungen für Leute, die etwas Ähnliches vorhaben. Bonus: Häkelprojekte sind vollwertige Side-Projekte.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./102-quereinstieg-in-die-software-entwicklung-mit-melanie-patrick.jpg
-length_second: 3977
 pubDate: 2023-12-19 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

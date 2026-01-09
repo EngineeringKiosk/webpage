@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/episode/533704785
 description: "Ist GitHub Copilot (und AI) wirklich dein fehlender Partner beim Pair-Programming? AI und speziell auf die Programmierung trainierte Modelle sind angetreten, um die Welt, wie wir programmieren, zu verändern. Doch halten diese auch die Versprechen? GitHub Copilot ist der Platzhirsch im Markt. Viele Software-Entwickler*innen haben den Service bereits ausprobiert. Manche schwören darauf und wollen nicht mehr ohne. Manche sagen \"Och, ganz nett\", aber nutzen es nicht regelmäßig und andere wiederum, \"hatten noch nicht die Zeit rein zu schauen\". Wolfgang ist einer der Early Adopter und nutzt GitHub Copilot täglich. In dieser Episode teilt er seine Erfahrungen und wir sprechen über Themen wie GitHub Copilot effektiv genutzt werden kann, Training Bias, den möglichen Produktivitäts Boost, Bugs die durch die AI generiert werden, die Auslagerung von langweiligen Arbeiten und warum die Nutzung von solchen AI Modellen die Priorität Nummer 1 für euren CTO sein sollte. Bonus: Die richtige Schnitthöhe von Rasen bei Trockenperioden und ob Shell eine Programmiersprache ist.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./81-copilot-ai-im-dev-test-produktivitäts-boost-oder-nur-hype.jpg
-length_second: 4052
 pubDate: 2023-07-25 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

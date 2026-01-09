@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/episode/562049411
 description: "Konsistent, Verfügbar und Ausfalltolerant: Wähle zwei - Das CAP-Theorem Stellt euch vor, ein Handwerker könnte die Dienstleistung schnell, günstig und in hoher Qualität leisten. Wäre dies nicht ein Traum? Leider sind alle drei Eigenschaften in der Realität nicht möglich. Und genau so geht es uns mit dem CAP-Theorem in verteilten Systemen mit Datenhaltung. Speziell im aktuellen Zeitalter mit Cloud Computing, horizontaler Skalierung, weltweiter Verfügbarkeit spielt das CAP-Theorem eine essentielle Rolle. Wie soll sich dein System verhalten, wenn die Netzwerk-Verbindung zwischen deinen Compute-Knoten ausfällt? Muss die Datenhaltung konsistent bleiben? Oder sind Inkonsistenzen für eine gewisse Zeit OK, dafür hat die Verfügbarkeit eine höhere Priorität? Um diesen Konflikt geht es in dieser Episode. Bonus: Auf GCP kannst du deine Compute-Instanz auf maximal 12 TB SSD Disk (ohne Netzwerk-Storage) aufstocken.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./91-konsistent-verfügbar-ausfalltolerant-oder-performant-das-cap-und-pacelc-theorem-in-verteilten-systemen.jpg
-length_second: 3461
 pubDate: 2023-10-03 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

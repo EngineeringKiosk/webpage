@@ -54,7 +54,6 @@ deezer: https://www.deezer.com/episode/582282582
 description: "100 Episoden Engineering Kiosk: Das Jubiläum, das Quiz, der Tech-Look-Back und die Tech-Predictions 2024 Vor fast zwei Jahren hat der Engineering Kiosk das Licht der Welt erblickt. Seitdem wird jede Woche eine neue Episode veröffentlicht. Und auf einmal wird die Episoden-Nummer dreistellig. Happy Birthday - Dies ist unser Engineering Kiosk Jubiläum. Eine etwas andere Folge mit Viele Stimmen von Freunden und BekanntenEinem Quiz-BattleDer Tech-Look-Back aus den Jahren 2022 und 2023Unsere Tech-Predictions 2024 Ein besonderer Dank geht an Matthias EndlerArne ClausDominik SiebelMarkus PoerschkeChristian Schepp Schaefer vom WorkingDraft-PodcastChristian Braun vom Index Out Of Bounds-PodcastNils Langner vom Super Duper Developers ClubEllen Schwartau und Doreen Sacker vom Unmute IT PodcastRoland Golla von Never Code AlonePatrick Terlisten und Claudia Kühn vom Wartungsfenster Podcast Bonus: 100€ gehen an Open Source.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./100-episoden-ein-tech-rückblick-auf-202223-predictions-2024-und-viel-tech-trivia.jpg
-length_second: 5242
 pubDate: 2023-12-05 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

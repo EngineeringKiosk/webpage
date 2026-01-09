@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/444953397
 description: "SQL Injections: Eine der weitverbreitetsten Sicherheitslücken im Web, auch im Jahr 2022 Der Großteil aller Applikationen interagiert in irgendeiner Art und Weise mit einer Datenbank. Deswegen werden die meisten Entwicklerinnen und Entwickler bereits von der Sicherheitslücke \"SQL Injection\" gehört haben. Seit 24 Jahren ist dies eine der weitverbreitetsten Sicherheitslücken im Internet und es ist kein Ende in Sicht. Was ist eigentlich eine SQL-Injection im Detail? Welche verschiedenen Arten gibt es? Was ist der Grund, dass uns dieses Einfallstor so lange beschäftigt? Woher kommt diese und wer hat sie entdeckt? Wie kann man sich schützen und seine Anwendung ausreichend testen? All das und noch viel mehr in dieser Episode. Bonus: Der Kontrast zwischen Duisburg und Berlin und wie die SQL-Injektion als Nebenprodukt entdeckt wurde."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./41-sql-injections-ein-unterschätztes-risiko.jpg
-length_second: 4117
 pubDate: 2022-10-18 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/episode/528776715
 description: "Font Engineering und die Welt der Programmier-Schriftarten. Wie wichtig ist die Wahl der Schriftart für die Programmierung? Welche Möglichkeiten und Vorteile bietet die richtige Schriftart in deinem Editor? Macht es Sinn für verschiedene Programmiersprachen andere Schriftarten zu wählen? Worauf kommt es eigentlich an, wenn wir uns über Schriftarten für die Programmierung unterhalten? Wie entstehen eigentlich Schriftarten, was ist Font-Engineering und was bedeuten die Begriffe Ligaturen, Hinting und Kerning? Über all diese Fragen sprechen wir mit dem Wahl-Berliner Philipp Acsany. Als Font-Engineer und Python Programmierer hat er an vielen Schriftarten von großen Firmen mitgearbeitet. In dieser Episode gibt er uns einen Einblick in die Welt der Schriftarten mit einem speziellen Fokus auf das Programmieren. Bonus: Warum es völlig OK ist, in Comic Sans zu programmieren.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./79-font-engineering-und-schriftarten-fürs-programmieren-mit-philipp-acsany.jpg
-length_second: 4195
 pubDate: 2023-07-11 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

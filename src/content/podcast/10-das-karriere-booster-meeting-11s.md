@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/de/episode/370131537
 description: "1on1s - Zeitverschwendung oder eins der wertvollsten Meetings deiner Karriere? Andy und Wolfgang sprechen über das meist unterschätzte Meeting deiner beruflichen Laufbahn: 1-on-1s: Purer Müll, Zeitverschwendung und reines Manager-Getue? Oder die beste zeitliche Investition? Wir klären, was 1:1s sind, geben Tipps zum Aufbau einer vertrauensvolle Atmosphäre, geben dir konkrete Fragen an die Hand, die du als Individual Contributor oder Engineering Manager stellen kannst und klären, was du tun kannst, wenn du bisher noch keine regulären Meetings mit deiner Vorgesetzten hast. Bonus: Warum Wolfgang alle 1on1s mit Andy abgebrochen hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./10-das-karriere-booster-meeting-11s.jpg
-length_second: 2756
 pubDate: 2022-03-15 05:30:00+00:00
 speaker:
 - name: Andy Grunwald

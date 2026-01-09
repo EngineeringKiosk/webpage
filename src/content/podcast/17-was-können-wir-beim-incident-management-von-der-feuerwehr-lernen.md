@@ -68,7 +68,6 @@ deezer: https://www.deezer.com/de/episode/381871957
 description: "Was haben die Methoden der Feuerwehr zur Bekämpfung von Großschadensereignissen mit dem Incident Management von IT-Systemen gemeinsam?\u00a0 Diese Frage klären wir in der folgenden Episode. Wolfgang, als Mitglied der freiwilligen Feuerwehr, gibt einen Einblick in das Prozedere, wenn die Feuerwehr ausrückt. Andy vergleicht dies mit dem Incident Management von Cloud-Systemen. Wir klären wie man den Schaden eines Incidents misst, was dies mit dem Vertrauen von Kunden zu tun hat, wie ordentliche Prävention aussehen kann und warum es dafür wenig Ruhm gibt, was man unter War- und Peacetime versteht, wie ein moderner “Schreiberling” aussieht, wie dreist Presseleute sein können und was eine kleine Konferenz in Kalifornien damit zu tun hat. Bonus: Was Gartenschläuche und Stahl-Hochöfen damit zu tun haben und wieso Kaffee holen doch eine Strategie sein kann."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./17-was-können-wir-beim-incident-management-von-der-feuerwehr-lernen.jpg
-length_second: 4174
 pubDate: 2022-05-03 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

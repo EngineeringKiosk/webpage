@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/498192337
 description: "Muss man immer um 5 Uhr morgens aufstehen, um heutzutage produktiv zu sein? In der modernen und komplexen Welt will jeder deine Aufmerksamkeit: Websites, Apps, Arbeitskollegen und Freunde geben dir neue Aufgaben, die erledigt werden müssen. Wie behält man da noch den Überblick, vergisst nichts und bringt noch etwas zustande? Das ist die große Kunst der Produktivität. Getting Things Done ist eine, zugegeben, sehr simple Selbstmanagement-Methode. Simpel, höchst-Effektiv und mit wenig Zeitaufwand. In dieser Episode geben wir mal einen Deep Dive zur Getting Things Done Methode von David Allen. Wolfgang und Andy verwenden diese Methode unter anderem zur Organisation des Podcasts und berichten auch über ihre eigenen Erfahrungen. Bonus: Was Incident Management und ein 8.000€-Mountainbike mit Produktivität und Getting Things Done zu tun haben.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./66-stressfreie-produktivität-in-der-hektischen-welt-mit-getting-things-done.jpg
-length_second: 3660
 pubDate: 2023-04-11 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

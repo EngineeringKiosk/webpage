@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/479388907
 description: "Alte Software akzeptieren oder lieber jedem Update hinterherjagen? Podcast als Video: https://youtu.be/94RZcJefzR8 Das ist die Balance, die jeder finden muss. Wann update ich Software? Wie lange kann ich alte Software betreiben? Ab wann ist alte Software ein wirkliches Risiko? Sollte ich bei jeder neuen Major-Version direkt updaten? Bringt es überhaupt etwas, eine alte Software auf etwas Neues zu migrieren, ohne neue Funktionalität zu bekommen? Welche Risiken verbergen sich hinter den Updates? Ist der klassische Spruch \"Never touch a running system\" noch aktuell oder sogar ein Fehler? All das und weitere Themenbereiche wie Long-Term-Support, End of Life-Dates, die Software-Metrik Dependency Drift, Dependabot und rostende Software besprechen wir in dieser Episode. Bonus: Warum früher alles besser war, sogar die Zukunft und warum Legacy immer das Geld verdient.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)  Das tiefere"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./58-software-updates-alte-software-long-term-support-und-end-of-life-dates.jpg
-length_second: 3399
 pubDate: 2023-02-14 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

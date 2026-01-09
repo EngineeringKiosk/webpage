@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/448812687
 description: "Wann ist die Cloud das richtige für dich und deine Applikation? Oder doch lieber alles selbst hosten? Die Cloud wird oft als \"die Lösung\" für all deine Probleme beschrieben. Sie ist günstig, man benötigt weniger Personen für den operativen Betrieb, alle Services sind gemanagt und serverless und alle anderen Probleme hat man sowieso nur On-Premise. Sind damit On-Premise Datacenter und Selfhosting ausgestorben und sollten gemieden werden? Oder gibt es sogar Szenarien, wo On-Premise sogar große Vorteile hat? In dieser Episode geht es um diese Frage: Wann ist die Cloud und wann On-Premise / die eigenen Server für dich die bessere Wahl? Wir diskutieren über diese Frage anhand eines Blogposts über eine Migration aus der Cloud von 37Signal's Produkt \"Hey.com\". Bonus: Was der Produktlebenszyklus vom VW Golf mit der Cloud zu tun hat und warum ein Raid 1 kein Backup ist."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./43-cloud-vs-on-premise-die-entscheidungshilfe.jpg
-length_second: 4264
 pubDate: 2022-11-01 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

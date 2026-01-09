@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/504746217
 description: "Wie viel MySQL Drop In-Replacement steckt wirklich in MariaDB? MariaDB, ein Fork der populären Datenbank MySQL. Angetreten, um ein Drop-In-Replacement und eine direkte Alternative zu MySQL darzustellen. Doch wie viel ist da dran? Ist MariaDB MySQL kompatibel? Wo liegen die Gemeinsamkeiten und Unterschiede? Was war eigentlich der Grund für den Fork? In welchen Bereichen entwickeln sich beide Datenbanken vollkommen anders? Und was hat sich im Bereich der Storage-Engines alles so getan? In dieser Episode bringen wir etwas Licht in den direkten Vergleich zwischen MySQL und MariaDB. Bonus: Was ein Weber-Grill mit MySQL und MariaDB zu tun hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./69-mysql-vs-mariadb.jpg
-length_second: 4259
 pubDate: 2023-05-02 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -72,7 +72,6 @@ deezer: https://www.deezer.com/episode/569137101
 description: "Freelancing: Selbstverwirklichung und viel Geld oder kontinuierliche Akquise und Selbst- und ständig? Seit einer gefühlten Ewigkeit sprechen wir von einem Fachkräftemangel. Um diesen Mangel einigermaßen auszugleichen, arbeiten viele Unternehmen regelmäßig mit Freelancern zusammen. Ab und zu als Berater, ab und zu als Erweiterung des eigenen Teams. Auf den ersten Blick klingt dies recht verlockend: Man selbst arbeitet an unterschiedlichen Projekten. Stellt jede Stunde in Rechnung. Ist sein eigenes Unternehmen, ist zeitlich flexibel und macht Urlaub wann man will. Doch ist das wirklich so? In dieser Episode sprechen wir über das Thema mit gleich 3 Freelancern. Andy, als einziger Angestellter, interviewt Wolfgang sowie Thomas Diroll und Christian Braun vom Index out of bounds Podcast. Was ist Ihre Motivation zum Freelancing? Verdienen sie wirklich so viel? Wie sieht es aus, wenn es mal schlecht läuft? Wie sieht es mit der eigenen Weiterbildung aus? Und wie gut sind eigentlich Engineers im Sales? All das und noch viel mehr. Bonus: Mit PHP lässt sich noch Geld verdienen.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./94-die-realität-des-freelancings-zwischen-selbstbestimmung-und-unsicherheit-mit-index-out-of-bounds.jpg
-length_second: 5247
 pubDate: 2023-10-24 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

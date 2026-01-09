@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/de/episode/394959707
 description: "Machst du noch selbst das Licht an oder automatisiert du schon? Internet of Things (IoT) ist in aller Munde. Jedes Device trackt irgendwas mit. Doch was kann man damit machen? Home Automation ist das richtige Stichwort. Und dafür braucht man kein eigenes Haus oder ein abgeschlossenes Studium. In dieser Episode geben Andy und Wolfgang einen praktischen Einblick und wie man am einfachsten selbst loslegen kann. Weiterhin versuchen wir euch mit unseren Learnings vor schlimmerem zu bewahren. Viel Spaß beim automatisieren. Bonus: Warum der Grundriss von Andys Wohnung nun in China ist und warum bald alle Hörer∙innen nackig durch ihre Wohnung rennen."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./23-schaltest-du-noch-oder-automatisiert-du-schon-home-automation.jpg
-length_second: 3812
 pubDate: 2022-06-14 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/de/episode/366788312
 description: "Datenbanken, besonders relationale Datenbanken und im Web ganz besonders MySQL. Jeder kennt sie, jeder nutzt sie, aber keiner gibt zu diese zu nutzen da sie uncool und alt sind und sowieso nicht skalieren. Wolfgang und Andy sprechen ein wenig über dieses Thema: Wie man seine eigene SQL Datenbank schreibt, was der Unterschied von Row-Based und Statement-Based Replication ist, warum simple Dateien oft besser sind als eine Datenbank, ob sqlite helfen kann und MongoDB die Lösung ist, wie Facebook, Booking und GitHub MySQL betreiben, ob PostgreSQL wirklich was kann und welche Schritte ihr unternehmen könnt, um eure Datenbank zu tunen. Bonus: Ob Wolfgang Mickey Krause kennt und ob er ein erfolgreicher MySQL Buchautor war."
 headlines: links::Links||erwähnte-personen::Erwähnte Personen||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./08-vergiss-doch-datenbanken.jpg
-length_second: 3167
 pubDate: 2022-03-01 11:30:00+00:00
 speaker:
 - name: Andy Grunwald

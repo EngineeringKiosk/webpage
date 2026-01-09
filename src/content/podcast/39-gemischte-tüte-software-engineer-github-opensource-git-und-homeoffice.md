@@ -22,7 +22,6 @@ deezer: https://www.deezer.com/episode/441043897
 description: "Ein neues Format: Die gemischte Tüte mit Software Engineers, Git, GitHub, Open Source und Home-Office-Equipment Eine Episode mit vier verschiedenen Themen, die uns als User-Fragen zugespielt wurden. Es geht um den Unterschied von einem Software Developer und Software Engineer, ob wirklich alles was wir auf GitHub finden als \"Open Source\" bezeichnet werden kann und benutzt werden darf, ob Git wirklich dezentral ist und wie wir das ganze eigentlich benutzen und wie die Home-Offices von Wolfgang und Andy eigentlich aussehen. Bonus: Ob Lakritz was in einer gemischten Tüte zu suchen hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./39-gemischte-tüte-software-engineer-github-opensource-git-und-homeoffice.jpg
-length_second: 2866
 pubDate: 2022-10-04 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

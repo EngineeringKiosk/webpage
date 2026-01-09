@@ -28,7 +28,6 @@ deezer: https://www.deezer.com/episode/617127462
 description: "AI in der Software-Delivery: Unsere größte Möglichkeit oder purer Hype? - Ein Realitätscheck Generative AI ist in der Software-Entwicklung allgegenwärtig. Mit Co-Pilot stellt GitHub den Platzhirsch im Bereich Codegenerierung und bewirbt es mit einer 55% Produktivitätssteigerung. Bei solchen Effekten dreht jedes C-Level-Management am Rad. Doch was ist dran am Hype? Sollten wir wirklich alle so aufgeregt sein? Zu dieser Frage bzw. zu einem Realitätscheck sprechen wir mit Birgitta Böckeler, Global Lead for AI-assisted Software Delivery bei Thoughtworks. Sie beschäftigt sich u.a. damit, wozu Generative AI in der Softwareentwicklung genutzt werden kann, welche Einsatzbereiche neben der Codegenerierung existieren, für welche Bereiche Coding Assistenten gut und für welche nicht so gut sind funktionieren aber auch welchen Effekt die ganze AI-Bewegung auf den ganzen Softwareentwicklungsprozess hat. Bonus: Ein Kampf zwischen AI-Fans und Skeptiker  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./116-ki-unterstützte-software-entwicklung-ein-reality-check-mit-birgitta-böckeler-von-thoughtworks.jpg
-length_second: 4477
 pubDate: 2024-03-26 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

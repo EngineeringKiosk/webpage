@@ -62,7 +62,6 @@ deezer: https://www.deezer.com/episode/524079715
 description: "Wie bringen wir der nächsten Generation, unseren Kindern, die Welt der Informatik und Software-Entwicklung näher? Über diese Frage sprechen wir mit der Expertin Dr. Diana Knodel. studierte Informatikerin mit Schwerpunkt Psychologie, Autorin von zwei Kinderbüchern zum Thema Programmieren für Kinder sowie Gründerin von zwei Firmen, AppCamps und fobizz, im Bereich Bildung mit Schwerpunkt IT und Softwareentwicklung. Wir sprechen über aktuelle Vorbilder in der Informatik bzw. Programmierung für Kinder, ab welchem Alter Kinder mit der Programmierung starten können, welche Code-Editoren sind speziell für Kinder geeignet, wie können wir Lehrkräfte weiterbilden, damit diese das Thema in den Schulen vorantreiben, wie ChatGPT und KI im Allgemeinen die Bildung verändert wird und vieles mehr. Viel Spaß. Bonus: Warum ChatGPT der neue Taschenrechner wird.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./77-kinder-coding-und-ai-die-zukunft-der-informatik-bildung-mit-diana-knodel.jpg
-length_second: 3678
 pubDate: 2023-06-27 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

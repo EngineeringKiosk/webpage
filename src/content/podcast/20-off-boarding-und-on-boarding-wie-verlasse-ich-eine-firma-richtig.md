@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/de/episode/387099367
 description: "Firmenwechsel. Kündigung ist raus. Wie gehts weiter? Offboarding und Onboarding sind i.d.R. zwei Themen die sehr stark unterschätzt werden. Wie sieht man als Mitarbeiter zu, dass bei einem Firmenwechsel keine verbrannte Erde hinterlassen wird? Wie übergibt man alles ordentlich? Warum ist das überhaupt wichtig? Und was ist ein Exit-Gespräch? Und wenn das alles durch ist: Wie startet man bei der neuen Firma ordentlich? Worauf sollte man achten? Und wie kann Onboarding aussehen? Dies und nich viel mehr. Bonus: Was Peter Thiel mit Kleber zu tun hat, was Krokodile mit Prüfungsergebnissen zu tun hat und was ein Weckmann mit dem Podcast zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./20-off-boarding-und-on-boarding-wie-verlasse-ich-eine-firma-richtig.jpg
-length_second: 4402
 pubDate: 2022-05-24 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

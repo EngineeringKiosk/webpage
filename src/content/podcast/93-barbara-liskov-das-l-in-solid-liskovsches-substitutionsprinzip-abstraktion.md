@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/566886091
 description: "Liskov Substitution Principle: Das L in SOLID von Barbara Liskov Heutzutage wird die Informatik und Softwareentwicklung leider primär von Männern dominiert. Doch schaut man ein paar Jahrzehnte zurück, haben viele Frauen maßgeblich die heutige Software-Entwicklung geprägt. Eine Frau war Barbara Liskov. Liskov? Das kennt man doch irgendwoher? Genau. Sie ist unter anderem die Namensgeberin für das L in den SOLID-Prinzipien (die ersten 5 Prinzipien des objektorientierten Designs). Als zweite Frau überhaupt hat Barbara Liskov 2008 den berühmten Turing Award erhalten. In dieser Episode besprechen wir ihr Lebenswerk. Bonus: Barbara Liskov war an den Sprachkonstrukten Exceptions, yield, multiple assignments und multiple returns beteiligt.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./93-barbara-liskov-das-l-in-solid-liskovsches-substitutionsprinzip-abstraktion.jpg
-length_second: 3161
 pubDate: 2023-10-17 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

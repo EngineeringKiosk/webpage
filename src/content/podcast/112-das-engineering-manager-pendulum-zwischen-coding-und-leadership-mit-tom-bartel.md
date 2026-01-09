@@ -28,7 +28,6 @@ deezer: https://www.deezer.com/episode/607735662
 description: "Wenn der Wechsel vom Software Engineer zur Managerin eine Beförderung ist, ist dann der Wechsel vom Manager-Dasein zurück zum Software Engineer eine Degradierung? Genau mit dieser Frage beschäftigen wir uns in dieser Episode. Umgangssprachlich nennt man den Wechsel hin und her, von Software Engineer zum Management und zurück, das Engineering Manager Pendulum. Wir haben mit Tom Bartel gesprochen, der diesen Wechsel schon zweimal vollzogen hat. Mit Ihm sprechen wir darüber, wie der Gedanke zum Pendeln entstanden ist, wie sein Umfeld und das eigene Unternehmen darauf reagiert hat, wie schwierig es ist sich an andere Perspektiven und Flughöhen in der täglichen Arbeit anzupassen, wie das Gehirn sich auf die unterschiedlichen Tagesabläufe verändert, und was er Leuten raten würde, die ebenfalls darüber nachdenken, in das Engineering Manager Pendulum einzusteigen. Bonus: Wie ein neuer Grill eine Verpackungswut auslösen kann.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./112-das-engineering-manager-pendulum-zwischen-coding-und-leadership-mit-tom-bartel.jpg
-length_second: 5018
 pubDate: 2024-02-27 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

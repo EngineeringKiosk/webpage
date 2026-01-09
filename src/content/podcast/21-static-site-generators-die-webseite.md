@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/de/episode/388828577
 description: "Statische Websites sind wieder cool und wir springen mit der eigenen Website direkt auf den Hype. Eine Episode mal in (teilweise) eigener Sache: Nach 6 Monaten und 20 Episoden haben wir eine eigene Website gebaut. Mit einem Static Site Generator. Wieso wir eine eigene Website haben wollen, was wir uns davon erhoffen, wie der technische Unterbau aussieht, wo wir recht dreckige Hacks eingebaut haben, was Static Site Generatoren sind und wozu sie eigentlich gut sind, bei welchen Use-Cases diese nicht geeignet sind und warum ein Produkt-Name zu Weltraum-Ergebnissen bei Google führen kann, klären wir in dieser Episode. Bonus: Was die Toten Hosen, Broilers und Rammstein mit Static Site Generators zu tun haben und wieso Österreich so gut im Marketing ist."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./21-static-site-generators-die-webseite.jpg
-length_second: 3214
 pubDate: 2022-05-31 04:35:00+00:00
 speaker:
 - name: Andy Grunwald

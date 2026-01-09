@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/de/episode/377043407
 description: "Remote-Work, asynchrone und parallele Arbeit und die eigene Work-Life-Balance. Durch Corona haben wir alle einen Geschmack von der Remote-Arbeit und Home Office bekommen. Einige hassen es, andere lieben es und haben sogar dem Büro für immer den Rücken gekehrt. Aber worauf kommt es denn wirklich an? Wolfgang und Andy gehen dieser Frage mal auf den Grund: async und await, Event-Loop, Fokus-Zeiten, Eule und Lerche als Menschentypen, Vertrauen im Team, messbare Ergebnisse, Pro-Aktivität und Schreib-Skills. Was das alles miteinander zu tun hat, hört ihr in dieser Episode. Bonus: Warum man in Amsterdam anders meditiert als anderswo, wieso Andys Liebe zu Redis einen Knick bekommen hat und ob Wolfgang wirklich Holländer ist."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./14-async-und-await-asynchrones-arbeiten-im-alltag.jpg
-length_second: 3389
 pubDate: 2022-04-12 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

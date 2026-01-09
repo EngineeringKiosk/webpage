@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/episode/521070185
 description: "Kann man von einem Open-Source-Projekt seinen Lebensunterhalt verdienen? Martin Donath ist einer der wenigen Menschen im deutschsprachigen Raum, der über 100.000 USD mit Open Source Sponsorengeldern verdient. Mit seinem Projekt Material for MkDocs hat er das Sponsorware-Model erfolgreich implementiert und dies somit zu seinem Vollzeitjob gemacht. In dieser Episode stellt sich Martin unseren Fragen und wir sprechen über Open Source und wann die Maintenance eines Projektes wirkliche Arbeit wird, was Sponsorware ist, über den Churn von Sponsoren, Pricing-Strategien, Release-Zyklen, den Umgang mit internen Prozessen in Unternehmen, Platform-Risiken bei GitHub Sponsors und viele weitere Themen, die Open Source alles andere als eine schöne Grüne Wiese erscheinen lassen. Bonus: Was Material for MkDocs mit Stripe gemeinsam hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top) 👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./76-mit-open-source-100000-verdienen-sponsorware-und-plattform-risiken-bei-github-mit-martin-donath.jpg
-length_second: 4694
 pubDate: 2023-06-20 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

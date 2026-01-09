@@ -52,7 +52,6 @@ deezer: https://www.deezer.com/de/episode/403651097
 description: "Beim Programmieren ist alles ein Algorithmus. Irgendwie zumindest. Doch wie misst man die Zeitkomplexität? Das ganze nennt sich Big-O-Notation, oder zu deutsch \"Bachmann-Landau-Notation\". Eigentlich ein recht trockenes Thema, doch auch irgendwie relevant in der heutigen Zeit von verteilten Systemen und großen Datenmengen. Doch was ist die Big-O-Notation? Was sagt sie aus? Wo kommt diese in der Praxis vor? Und inwieweit hat das ganze noch eine Relevanz in Zeiten von Cloud Computing und fast unbegrenzten Hardware-Ressourcen? Darum geht es in dieser Episode. Bonus: Wie Andy und Wolfgang in deutscher Grammatik belehrt werden, ob es OK ist in 1on1s zu fluchen und das Hash-Kollisionen mit der ganzen Sache zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./28-o1-olog-n-on2-ist-die-komplexität-von-algorithmen-im-entwickler-alltag-relevant.jpg
-length_second: 3333
 pubDate: 2022-07-19 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

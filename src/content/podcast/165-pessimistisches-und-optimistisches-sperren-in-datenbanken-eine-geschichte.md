@@ -10,7 +10,6 @@ deezer: https://www.deezer.com/episode/698397011
 description: "Pessimistisches und Optimistisches Sperren in Datenbanken.  Im Engineering Kiosk Adventskalender 2024 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb von wenigen Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0 👎 (geht so)  LinksSperrverfahren in Datenbanksystemen: https://de.wikipedia.org/wiki/Sperrverfahren Sprungmarken(00:00:00) Pessimistisches und Optimistisches Sperren in Datenbanken  HostsWolfgang Gassler (https://mastodon.social/@woolf)Andy Grunwald (https://andygrunwald.com/) FeedbackEngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0Buy us a coffee: https://engineeringkiosk.dev/kaffeeEmail: stehtisch@engineeringkiosk.devLinkedIn: https://www.linkedin.com/company/engineering-kiosk/Mastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialTwitter: https://twitter.com/EngKiosk"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Feedback
 image: ./165-pessimistisches-und-optimistisches-sperren-in-datenbanken-eine-geschichte.jpg
-length_second: 369
 pubDate: 2024-12-14 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/de/episode/400384857
 description: "Der Großteil der IT-Ressourcen wie Dokumentationen, Websites, Präsentationen in Englisch, doch was ist wenn man selbst von sich sagt \"My english is not the yellow from the egg\"? Diese Episode dreht sich ganz um die englische Sprache und das Arbeiten in internationalen Teams: Welche Hürden haben die meisten deutschen in Bezug auf die englische Sprache? Wie kann man diese überkommen und sicherer mit der englischen Sprache werden? Und was passiert, wenn ich auf der Arbeit auf einmal Englisch sprechen muss? Wie verändert sich mein Arbeitsumfeld, wenn das Team international zusammengestellt ist? Was muss ein Arbeitgeber im Kopf behalten, wenn sich das Team international entwickeln soll? Und wie verhält sich aktuell die Remote-Arbeit mit der ganzen Thematik? All das und noch mehr in dieser Episode. Bonus: Russische Software-Code-Kommentare, die Vertonung von Hollywood Filmen und schnelle deutsche ALDI Kassierer."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./26-my-english-is-not-the-yellow-from-the-egg-arbeiten-in-internationalen-teams.jpg
-length_second: 3970
 pubDate: 2022-07-05 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

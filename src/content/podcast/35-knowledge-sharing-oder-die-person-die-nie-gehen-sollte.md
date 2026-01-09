@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/429499567
 description: "Der Dauerbrenner in jedem Team: Wie bekommt man ordentliches Knowledge Sharing hin? Jeder kennt's: Die Kollegin ist im Urlaub und genau in dieser Zeit läuft was mit der einen Komponente schief, wo sie das größte Wissen darüber hat. Knowledge Sharing richtig hinzubekommen und das Wissen breit zu verteilen ist eine Mammutaufgabe. Aber eine wichtige, speziell in einer Remote-Umgebung. In dieser Episode gehen wir einige Mythen und Techniken durch, die euch beim Knowledge Sharing unterstützen können: Was ist der Bus-Faktor? Muss jeder im Team alles wissen und übernehmen können? Wobei kann Mob-Programming helfen? Was sind Guilds? Und kann man eigentlich zu viel lernen? Und noch viele weitere Themen. Bonus: Warum das C-Level-Management nicht im selben Flugzeug fliegen darf und ob Podcasts, die Mitarbeiter-Zeitung ablösen."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./35-knowledge-sharing-oder-die-person-die-nie-gehen-sollte.jpg
-length_second: 3784
 pubDate: 2022-09-06 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/464844767
 description: "Was ist ein Staff-Engineer und wo ist der essentielle Unterschied zum Senior-Engineer? Karriere-Titel wie Junior- oder Senior-Engineer sind weit verbreitet. Staff-, Principal- oder sogar Distinguished-Engineer sind weniger bekannt. Aus den USA schwappt diese Art des Karrierepfades für Fachkräfte (Individual Contributor) immer mehr als Alternative zum Management-Pfad nach Europa rüber. Doch was ist eigentlich ein Staff-Engineer? Wo ist der Unterschied zum Senior-Engineer? Welche neuen Anforderungen werden an Staff-Engineers gestellt? Wo ist der Unterschied zu einem klassischen Engineering Manager? Was ist Leading by Influence? Wie wird der Titel des Staff-Engineers in verschiedenen Firmen definiert? Und haben Jobtitel überhaupt Relevanz? Bonus: Was Social-Media-Influencer mit Staff-Engineering zu tun haben und warum Legacy-Code das Geld verdient."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./51-was-ist-das-staff-engineer-level.jpg
-length_second: 3101
 pubDate: 2022-12-27 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

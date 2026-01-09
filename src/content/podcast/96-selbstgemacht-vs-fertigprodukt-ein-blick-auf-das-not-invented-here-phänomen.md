@@ -26,7 +26,6 @@ deezer: https://www.deezer.com/episode/573441021
 description: "Nur unsere eigene Lösung ist die beste: Das \"Not invented here\" Syndrome (NIH) Ihr kennt das bestimmt: Es gibt eine neue Herausforderung zu lösen. Das Team steigt sofort in die Planung ein, um die Anforderungen in Source-Code zu kippen. Ihr sitzt da und fragt euch: Das kann doch nicht sein, dass wir die einzigen sind, die dieses Problem haben. Da muss es doch schon was fertiges geben.”. Doch das Team wettert dagegen: “Unser Problem ist sehr speziell. Wir bezweifeln stark, dass es da etwas gibt, was unseren Anforderungen standhält. So oder so ähnlich spielt es sich jede Woche in etlichen Teams ab. Es wird die eigene Arbeit über externe Lösungen gestellt. Die Nachteile werden oft später sichtbar. Über dieses Thema sprechen wir in dieser Episode. Nicht nur, was die Gründe dafür sind, sondern auch, wie man dem etwas entgegensetzen kann. Bonus: Warum keiner vor dem \"Not invented here\" Syndrome geschützt ist - Wolfgang und sein Meetup-System.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./96-selbstgemacht-vs-fertigprodukt-ein-blick-auf-das-not-invented-here-phänomen.jpg
-length_second: 4163
 pubDate: 2023-11-07 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

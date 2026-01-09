@@ -10,7 +10,6 @@ deezer: https://www.deezer.com/episode/702295891
 description: "Frontend-Engineering Metriken im Team einführen mit dem Working Draft Podcast.  Im Engineering Kiosk Adventskalender 2024 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb von wenigen Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0 👎 (geht so)  LinksWorking Draft Podcast: https://workingdraft.de/Core Web Vitals: https://web.dev/articles/vitals?hl=enSentry: https://sentry.io/Axe® accessibility testing tools: https://www.deque.com/axe/WAVE Web Accessibility Evaluation Tools: https://wave.webaim.org/ Sprungmarken(00:00:00) Frontend-Engineering Metriken im Team einführen  HostsWolfgang Gassler (https://mastodon.social/@woolf)Andy Grunwald (https://andygrunwald.com/) FeedbackEngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0Buy us a coffee: https://engineeringkiosk.dev/kaffeeEmail: stehtisch@engineeringkiosk.devLinkedIn: https://www.linkedin.com/company/engineering-kiosk/Mastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialTwitter: https://twitter.com/EngKiosk"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Feedback
 image: ./174-frontend-engineering-metriken-im-team-einführen-mit-dem-working-draft-podcast.jpg
-length_second: 372
 pubDate: 2024-12-23 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

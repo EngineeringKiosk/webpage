@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/episode/483624947
 description: "On-Call bzw. Rufbereitschaft: Eine ewige Hass-Liebe? Software-Engineers entwickeln die Applikationen. Doch wer maintained diese und bringt diese wieder zurück ins Leben, wenn die Applikationen mal abstürzen? Im klassischen Sinne sind das System-Administratoren. Und für die meisten in diesem Beruf gehört On-Call dazu. Doch ist dies auch im modernen Dev-Ops-Umfeld und in Voll-Autonomen Teams der Fall? Welche Herausforderungen gibt es beim On-Call? Sollten Software-Engineers genauso auf Rufbereitschaft sein? Wie sieht ein strukturierter On-Call-Prozess aus? Und was muss getan werden, um einen solchen zu etablieren? Und welche Modelle zur Bezahlung bzw. Kompensation gibt es, wenn man auch nach der Arbeit für seine App gerade steht? All das und noch viel mehr gibt es in dieser Episode. Bonus: Was Pager mit Tamagotchi zu tun haben und ob On-Call zu einer Handy-Phobie führt.  Schaut vorbei in unserer neuen Community: https://engineeringkiosk.dev/join-discord\u00a0  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./60-on-call-warum-auch-software-engineers-auf-rufbereitschaft-sein-sollten.jpg
-length_second: 3571
 pubDate: 2023-02-28 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/456604017
 description: "Eine Vision und Mission für die Firma und das Team: Notwendig oder Firlefanz? Die Geschäftsführung spricht oft von der Vision und Mission der eigenen Firma. Doch was ist das eigentlich? Wo ist der Unterschied? Und was habe ich, als kleiner Mitarbeiter, eigentlich zu tun? Wie wichtig ein gemeinsames Ziel und ein übergeordneter Sinn für die Belegschaft sein können, wird oft unterschätzt. Ab und zu sogar als esoterisch bezeichnet, denn es ist doch klar, wofür wir alle arbeiten. Ist es? In dieser Episode klären wir was eine Vision und eine Mission ist, wo die Unterschiede liegen, welchen Effekt dies auf die Firma und das eigene Team haben kann, warum es nicht einfach ist eine Vision und Mission zu definieren, ob es auch ohne klappen kann und wie man diese Sache generell angeht. Bonus: Warum man keine Löcher kaufen kann, was Computerbild Themen sind und wieso Andy nicht für Heckler und Koch arbeiten würde."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./47-wer-visionen-hat-soll-zum-arzt.jpg
-length_second: 2633
 pubDate: 2022-11-29 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

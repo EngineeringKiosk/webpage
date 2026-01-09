@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/episode/437316457
 description: "Wie würde heutzutage ein moderner Logging, Metriken, Monitoring, Alerting und Tracing-Stack aussehen? Im Infrastruktur-Bereich gibt es zu jedem Bereich etliche Tools. Cloud-Native ist das Buzzword der Stunde. In dieser Episode erzählt Andy, wie er einen modernen Stack für ein Side-Projekt für die Bereiche Logging, Metriken, Monitoring, Alerting und Tracing aufsetzen würde. Unter anderem geht es dabei um Fragen wie: Was sollte man eigentlich alles loggen? Wie kann man von einem Alert angerufen werden? Wie visualisiert man Daten in schönen Graphen? Brauchen wir Tracing? Und was ist Observability? Bonus: Engineering Porn und Buzzword-Bingo."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./38-monitoring-metriken-tracing-alerting-observability.jpg
-length_second: 3350
 pubDate: 2022-09-27 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

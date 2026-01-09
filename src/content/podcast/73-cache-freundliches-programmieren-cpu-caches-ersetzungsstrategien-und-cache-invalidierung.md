@@ -30,7 +30,6 @@ deezer: https://www.deezer.com/episode/512905195
 description: "There are only two hard things in Computer Science: cache invalidation and naming things. Caches sind einfach überall. Jede Aktion auf einem Computer nutzt eine Vielzahl an Caches. Sei es der Browser Cache, DNS-Cache, In-Memory Cache auf dem Server oder dein lokaler CPU Cache L1-L4. Doch was sind Caches eigentlich? Welche Cache-Layer und Cache-Hierarchien gibt es? Wie funktionieren Caches? Wie kann ich Cache-freundlich programmieren? Was passiert, wenn der Cache voll ist und was sind Eviction-Policies? Wie relevant sind heutzutage eigentlich die CPU-Caches L1 bis L4 für die normalen Software-Entwickler*innen? Wie kann ich verifizieren, ob mein Code Cache-freundlich ist? Und warum ist Cache Invalidation eigentlich ein hartes Problem? Bonus: Was Bandlaufwerke mit Caching und niederländisches Hähnchen mit Queues zu tun haben.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./73-cache-freundliches-programmieren-cpu-caches-ersetzungsstrategien-und-cache-invalidierung.jpg
-length_second: 3583
 pubDate: 2023-05-30 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

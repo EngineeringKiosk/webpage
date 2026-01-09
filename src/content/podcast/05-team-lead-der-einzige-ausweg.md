@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/de/episode/360018702
 description: "Engineering Manager oder Team-Lead: Eine Position die sehr motivierend, aber auch abschreckend wirken kann. Was erwartet einen? Was ist die Aufgabe einer Engineering Managerin? Wie verändert sich der Arbeitsalltag? Ist die Stelle überhaupt etwas für mich? Und was passiert, wenn ich doch lieber Software Entwickeln möchte? Gibt es einen alternativen Karrierepfad? All das und noch über viel mehr Erfahrungen sprechen Andy und Wolfgang in Episode 05 vom Engineering Kiosk. Bonus: Warum Andy Muskelkater im Arsch hat  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners"
 headlines: erwähnte-artikel::Erwähnte Artikel||bücher-über-das-engineering-management::Bücher über das Engineering Management||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./05-team-lead-der-einzige-ausweg.jpg
-length_second: 2412
 pubDate: 2022-02-01 10:05:00+00:00
 speaker:
 - name: Andy Grunwald

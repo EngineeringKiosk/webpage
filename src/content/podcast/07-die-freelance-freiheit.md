@@ -54,7 +54,6 @@ deezer: https://www.deezer.com/de/episode/365060172
 description: "Sein eigener Chef zu sein, sich die Projekte aussuchen können und sich die Zeit frei selbst einzuteilen. Obendrein noch einen Haufen Geld verdienen. Das ist die Vorstellung von vielen ITlern zur Selbstständigkeit. Doch wie sieht die Realität aus? Was sind die negativen Aspekte? Und wie viel Geld kommt wirklich unterm Strich bei rum? In dieser Episode teilt Wolfgang seine langjährige Freelance-Erfahrung: Welche Arten von Freelancing gibt es, wie er die Probleme beim Schätzen des zeitlichen Aufwandes umgeht, warum rostende Software ein Problem ist und zu schlecht gelaunten Kunden führt, ob es sich lohnt seine Finger zu versicherung und was goldene Handschellen mit all dem zu tun haben. Bonus: Wie Wolfgang einen Kunden beim Krafttraining im Fitnessstudio akquiriert hat, ohne selbst Gewichte zu stemmen."
 headlines: links::Links||anderes::Anderes||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./07-die-freelance-freiheit.jpg
-length_second: 3841
 pubDate: 2022-02-22 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

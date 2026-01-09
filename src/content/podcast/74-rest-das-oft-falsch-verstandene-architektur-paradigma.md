@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/episode/515430425
 description: "Das REST-API Architektur-Paradigma: Oft verwendet und oft nicht komplett umgesetzt. REST-APIs sind überall im Internet. Jede statische Webseite ist sogar REST-Konform. Doch die meisten REST-Implementationen sind gar nicht vollständig, bzw. nur halbherzig umgesetzt. Die ursprüngliche Idee von REST hatte viel mehr im Gepäck. In dieser Episode gehen wir das Thema der REST-API an. Was ist REST? Wo ist der Unterschied zu Restful? Warum wird dieses Architektur-Paradigma oft falsch verstanden? Worum geht es bei den 6 Prinzipien (Client-Server-Architektur-Modell, (HTTP)-Caching, Mehrschichtige Systeme, Zustandslosigkeit, Einheitliche Schnittstelle und Code on Demand) eigentlich? Wie versioniert man eine API? Und welche Nachteile hat REST? All das und noch viel mehr in dieser Episode. Bonus: Was Napster, eDonkey und Korn mit Brause mit REST APIs zu tun haben.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./74-rest-das-oft-falsch-verstandene-architektur-paradigma.jpg
-length_second: 3775
 pubDate: 2023-06-06 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

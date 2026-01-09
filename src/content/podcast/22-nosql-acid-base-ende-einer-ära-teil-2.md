@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/de/episode/390748587
 description: "Neben relationalen Datenbanken gibt es noch eine ganz andere Welt: NoSQL. Doch wofür steht eigentlich NoSQL? Kein SQL? Not Only SQL? Was ist eigentlich die Geschichte hinter dem Hype? Warum wurde diese Art von Datenbanken erfunden? Wofür sind diese gut? Folgen NoSQL Datenbank auch dem ACID-Concept? Was ist Eventual Consistency? Und was sind Neo4J, M3, Cassandra, und Memcached für Datenbanken? Eine Episode voller Buzzwords … Hoffen wir auf ein Bingo. Bonus: Warum Wolfgang keinen Manta fährt und ob Andy bald mit einem Ferrari zum einkaufen fährt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./22-nosql-acid-base-ende-einer-ära-teil-2.jpg
-length_second: 3636
 pubDate: 2022-06-07 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

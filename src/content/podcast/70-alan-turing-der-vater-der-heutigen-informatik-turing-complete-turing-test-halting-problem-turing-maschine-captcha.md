@@ -26,7 +26,6 @@ deezer: https://www.deezer.com/episode/506732327
 description: "Wenn man sich eigentlich mal fragt, auf wen die ganze heutige Entwicklung in der Informatik zurückführt, taucht immer wieder ein Name auf: Alan Turing. Sei es der Turing-Award (der Nobelpreis der Informatik), die Turing-Maschine oder der Turing-Test. Doch wer ist bzw. war Alan Turing eigentlich? Warum wurde nach ihm ein Award benannt? Was ist die Turing-Maschine und wofür ist sie gut? Was bedeutet es, wenn etwas Turing-Complete ist und wieso ist das Bestehen des Turing-Tests eigentlich so schwer? In dieser Episode machen wir mal einen kleinen (historischen) Ausflug in einen Teil der theoretischen Informatik und schmeißen mit Begriffen wie dem Hilbert Kalkül, das Halting-Problem, dem Lambda Kalkül und Co um uns. Bonus: Was die Band Abba mit Turing zu tun hat und warum Turing Serverless erfunden hat.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./70-alan-turing-der-vater-der-heutigen-informatik-turing-complete-turing-test-halting-problem-turing-maschine-captcha.jpg
-length_second: 3419
 pubDate: 2023-05-09 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

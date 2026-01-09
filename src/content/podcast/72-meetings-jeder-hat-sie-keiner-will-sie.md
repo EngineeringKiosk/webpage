@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/510897245
 description: "Meetings: Ein essentieller Teil unseres Arbeitsalltages und doch wird nur gemeckert? Meetings sind ein Teil unserer Arbeitskultur, um die keiner herumkommt. Doch irgendwie meckert jeder darüber. \"Dieses Meeting hätte auch eine E-Mail sein können\", \"Ich habe zu viele Meetings und komme nicht zum Arbeiten\", \"Das Meeting war nicht interessant oder relevant für mich\". Das Faszinierende daran: Jeder kennt die Grundregeln, um ein Meeting effizient zu gestalten: Eine Agenda, ein klares Ziel, nur die relevanten Leute einladen, Meeting Notes, etc. Doch scheint es unmöglich, gute bzw. gut geführte und relevante Meetings im Arbeitsalltag zu etablieren? Wir sprechen über Meetings absagen, in Meetings wirklich präsent zu sein, \"No-Tech-Meetings\", die \"Law of two feet\", wieviel Probleme eigentlich durch Meetings an der Kaffeemaschine entstehen und warum es auf die Disziplin jedes einzelnen bei Meetings ankommt. Bonus: Hund im Büro und die Abkürzung von \"Team\" - Toll ein anderer Machts"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./72-meetings-jeder-hat-sie-keiner-will-sie.jpg
-length_second: 3866
 pubDate: 2023-05-23 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -54,7 +54,6 @@ deezer: https://www.deezer.com/episode/452792217
 description: "Datengetriebene Entscheidungen oder auch \"Glaube keiner Statistik, die du nicht selbst gefälscht hast\". Entscheidungen treffen und die nächsten Schritte planen ist nicht einfach. Relevante Daten können einem die Entscheidung erleichtern. Doch wie fängt man mit datengetriebenen oder daten-unterstützenden Entscheidungen eigentlich an? Woher weiß man, ob man die richtigen Daten hat? Was wird zur entsprechenden Aufbereitung benötigt und wie kann ich die Daten entsprechend visualisieren? In dieser Episode geben wir einen Einblick in das Feld der datengetriebenen Entscheidungen. Wir beantworten, warum Tortendiagramme blödsinn sind, wie die Architektur aussehen kann, ob das Bauchgefühl überhaupt noch relevant ist und warum man nicht mehr sein eigenes JavaScript Frontend mehr bauen muss. Bonus: Was warmes Bier mit Husten zu tun hat und wie das Oktoberfest unsere Podcast-Statistiken beeinflusst."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./45-datengetriebene-entscheidungen-und-der-perfekte-dashboard-stack.jpg
-length_second: 3068
 pubDate: 2022-11-15 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -26,7 +26,6 @@ deezer: https://www.deezer.com/episode/591617652
 description: "Cloud Regions und Availability Zones: The good, the bad, the ugly Das Cloud Marketing verspricht viel - unter anderem Hochverfügbarkeit und Resilienz. Primär wird das durch die gleichzeitige Nutzung mehrerer Availability Zones und Regions ermöglicht. Doch ist wirklich alles Gold was glänzt? In dieser Episode schauen wir mal etwas tiefer rein. Wie sind Regions und AZs eigentlich bei den Cloud Providern definiert? Sind alle Regionen gleich oder gibt es gewisse Eigenheiten? Hat jede Region mehrere Availability Zones? Was bedeutet es eigentlich, wenn man eine App in mehreren Availability Zones betreiben möchte? Oder sogar in mehreren Regions? Und wie häufig gibt es eigentlich AZ und Region-Ausfälle? In dieser Episode bringen wir etwas Licht ins Dunkel. Bonus: Deprimierender Regen und die Cloud haben viel gemeinsam  Das schnelle Feedback zur Episode: 👍 (top) \u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./105-cloud-ausfallsicherheit-die-realität-von-regionen-und-availability-zones.jpg
-length_second: 4037
 pubDate: 2024-01-09 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

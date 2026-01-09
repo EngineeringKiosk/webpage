@@ -34,7 +34,6 @@ deezer: https://www.deezer.com/episode/538809655
 description: "Die Fehlerkultur im Unternehmen, Transparenz in der Kommunikation und eine gewisse Distanz zum Team als Engineering Manager. Diese Episode ist eins unserer Sommergespräche, bei dem nur eine Seite die Fragen kennt. Wolfi stellt die Fragen: Was ist eine gesunde Fehlerkultur? Viele Unternehmen werben damit, eine gute Fehlerkultur zu haben, aus Fehlern zu lernen, Wachstumsmöglichkeiten zu bieten und Experimente zu ermöglichen. Doch ist das wirklich so? Werden Fehler transparent und weitreichend geteilt? In wirklich allen Bereichen und nicht nur im Engineering? Da trennt sich die Spreu vom Weizen. Was darf sich ein Engineering Manager erlauben, mit dem Team zu teilen und wie viel Transparenz ist gesund? Sollte alles direkt mit dem Team geteilt werden? Oder ist eine gewisse Distanz gesund? Wie schlimm ist es, wenn mal beim Feierabendbier etwas raus rutscht? Und kann es einem Lead auch mal schlecht gehen? All das in dieser Episode. Viel Spaß Bonus: Wolfgangs Bio Bike und seine CO2-Emissionen  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./83-transparenz-im-tech-leadership-fehlerkultur-wie-weit-kann-ich-gehen.jpg
-length_second: 3864
 pubDate: 2023-08-08 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

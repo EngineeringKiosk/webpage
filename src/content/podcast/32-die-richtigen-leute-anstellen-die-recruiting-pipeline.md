@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/424150377
 description: "Recruiting: Einer der wichtigsten Aufgaben einer Firma - Doch worauf kommt es an? Leute kommen. Leute gehen. Fluktuation bzw. ein Jobwechsel ist ganz normal in der heutigen Zeit. Kaum jemand bleibt \"bis zur Rente\". Doch worauf kommt es an, wenn man neues Personal für sein Team / Firma sucht? Wie viel Zeit soll man als Hiring Manager investieren? Wo findet man gute Leute? Welche Fragen sind die richtigen? Wie geht man damit um, wenn man sich nicht 100%ig sicher ist? Und wie trifft man die finale Entscheidung? All das und noch viel mehr behandeln wir in dieser Episode. Bonus: Warum Wolfgang eine Aufmerksamkeitsspanne wie ein Welpe hat, was Aufzüge mit Recruiting zu tun haben und ob Wanne-Eickel wirklich existiert."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./32-die-richtigen-leute-anstellen-die-recruiting-pipeline.jpg
-length_second: 3868
 pubDate: 2022-08-16 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

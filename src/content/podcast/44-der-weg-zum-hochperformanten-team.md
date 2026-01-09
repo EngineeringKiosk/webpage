@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/450837687
 description: "Psychologie, Team-Dynamiken und hochperformante Teams: Zufällige Stichwörter oder relevante Themen? Eine Gruppe von Menschen soll zusammen und miteinander arbeiten. Am besten noch hochperformant, mit einem grandiosen Outcome und das ganze innerhalb einer Woche nach Gründung des Teams. So oder so ähnlich stellen sich viele Leute Team-Dynamiken vor. Dass dies alles nicht ganz so einfach ist, weiß jeder, der schon mal ein neues Team geformt bzw. übernommen hat. Das 5 Phasenmodell für die Teamentwicklung von Bruce Tuckman, ein US-amerikanischer Psychologe, kann dir eine gewisse Hilfestellung liefern. Forming, Norming, Storming, Performing und Mourning/Adjourning: Was zeichnet die einzelnen Phasen aus? Welches Verhalten kann beobachtet werden? Welche Fragen und Bedürfnisse entstehen bei den Teammitgliedern? Welcher Leadership-Style wird benötigt bzw. ist angebracht? Über dieses Thema sprechen wir in dieser Episode. Viel Spaß. Bonus: Was Puppenspieler mit Leadership zu tun haben, warum Kaiserschmarrn immer noch ein Thema ist und wieso das Currywurst-Museum + Bud Spencer-Museum eine Rolle spielt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./44-der-weg-zum-hochperformanten-team.jpg
-length_second: 3380
 pubDate: 2022-11-08 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

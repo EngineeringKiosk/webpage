@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/de/episode/368390957
 description: "Es wird politisch: Der Angriffskrieg auf die Ukraine und eine möglichst technische Beleuchtung des Themas. Wolfgang und Andy sprechen über die Ukraine und den Angriff durch Russland: Wie haben Tech Konzerne und Firmen reagiert, wie helfen sie ihren Mitarbeiterinnen und Familien. Welche Rolle spielen die GAFA Konzerne und welche Rolle könnten sie spielen. Wie können wir alle helfen und welche Rolle spielen (Miss)informationen? Bonus: Als kleine Aufmunterung starten wir ein Projekt, das lustige Geschichten hinter Open-Source Projekten sammelt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./09-ukraine.jpg
-length_second: 2250
 pubDate: 2022-03-08 10:55:00+00:00
 speaker:
 - name: Andy Grunwald

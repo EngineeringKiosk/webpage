@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/553150205
 description: "Die Personalabteilung: Dein strategischer Partner auf Augenhöhe oder dein Feind und Blocker? Für viele ist die Personalabteilung ein notwendiges Übel. Eine Abteilung, die “halt notwendig ist”. Dennoch kann die HR auch ein Team sein, welches dir eine Menge Arbeit abnimmt und neue Möglichkeiten eröffnet. In dieser Episode sprechen wir mit Patrick Kuster. Patrick hat seine ganze Karriere in verschiedenen Personalabteilungen verbracht und er gibt uns Einblicke in Recruiting-Prozesse, Job-Benefits, Arbeitszeitverkürzung, Sabbaticals, Bildungsurlaub und vieles mehr. Bonus: Warum Mallorca als 17. deutsches Bundesland nicht von unserem Bildungsurlaub profitiert.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./88-die-personalabteilung-freund-oder-feind-mit-patrick-kuster.jpg
-length_second: 4600
 pubDate: 2023-09-12 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

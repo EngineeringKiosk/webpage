@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/episode/459224287
 description: "Wie sieht eigentlich der Layer unter Docker aus? Und wie interagiert Kubernetes mit Containern? In Episode 46 haben wir geklärt, welches Problem Docker eigentlich löst. Das Container-Ecosystem ist jedoch weit größer. Deswegen widmet sich diese Folge der darunter liegenden Ebene. Wir besprechen die Modularisierung von Docker, die herausgetrennte Highlevel Runtime containerd, wie Kubernetes mit Docker-Containern umgeht, ob Docker Container die einzige Art von Containern ist, die Kubernetes unterstützt, was ein Container Runtime Interface (CRI) ist, was die Open Container Initiative (OCI) und ob auch du dir deine eigene Highlevel Container Runtime programmieren kannst. Bonus: Was die Linux-Mafia ist und wieso es bald eine österreichische Container Runtime gibt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./48-der-layer-unter-docker-containerd-kubernetes-container-runtime-interface-cri-o-und-open-container-initiative-oci.jpg
-length_second: 2264
 pubDate: 2022-12-06 09:21:47+00:00
 speaker:
 - name: Andy Grunwald

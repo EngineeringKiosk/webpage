@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/de/episode/355566762
 description: "Zwei Engineering Manager über Side Projects: Wie diese den Recruiting Prozess beeinflussen, welche Learnings aus einem Projekt generiert werden, was die freiwillige Feuerwehr mit Site Reliability Engineering zu tun hat, welche negativen Seiten Side Projects haben können, ob ein Hund auch ein eigenes Side Project ist und warum man nicht seinen eigenen Mailserver betreiben sollte. Bonus: Der Unterschied zwischen Schnacken und Schnackseln Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners"
 headlines: sprungmarken::Sprungmarken||erwähnte-personen::Erwähnte Personen||hosts::Hosts
 image: ./01-side-projects-fluch-oder-segen-für-die-karriere.jpg
-length_second: 2782
 pubDate: 2022-01-03 12:00:00+00:00
 speaker:
 - name: Andy Grunwald

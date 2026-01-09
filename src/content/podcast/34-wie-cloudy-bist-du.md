@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/episode/427694387
 description: "Die Cloud Native Infrastruktur vs. ein dicker Server - Ein Dauerstreit-Thema AWS, GCP, Azure und Co bieten viele Cloud Native Services, die dir dein Leben vereinfachen sollen. Serverless, weniger Admins und alles super günstig. Das sind die Versprechen. Doch ist das wirklich so? Wäre ein leistungsstarker Server nicht besser, günstiger, einfacher und ausreichend? Und wie steht das nicht im Konflikt mit einer modernen Microservice-Architektur? All diese Fragen stellen Wolfgang und Andy in dieser Episode, wo sie einen Artikel \"Use One Big Server\" besprechen. Bonus: Was eine Klatsche auf Reddit, Vendor-Lock-in und CV-Driven-Development mit Servern zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./34-wie-cloudy-bist-du.jpg
-length_second: 2959
 pubDate: 2022-08-30 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

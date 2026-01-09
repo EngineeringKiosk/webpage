@@ -60,7 +60,6 @@ deezer: https://www.deezer.com/de/episode/411451087
 description: "Meetups und Konferenzen: Ein wichtiger Bestandteil der Tech-Community und als Plattform für den Wissenstransfer. Jeder kennt Meetups und Konferenzen. Firmen sponsern Meetups und geben Mitarbeitern sogenannte Konferenz-Budgets. Doch wie sieht es hinter den Kulissen aus? Was bedeutet es ein Meetup zu organisieren? Welche Herausforderungen und Chancen bietet es? Wie viel Zeitaufwand benötigt es, ein Meetup auf die Beine zu stellen? Und ist es das gleiche wie die Organisation einer Konferenz? In dieser Episode wird Andy, als Organisator des Web Engineering Meetups Düsseldorf und der localhost-Konferenz, genau zu diesem Thema interviewed. Bonus: Was die Zeitschrift Computer Bild und Fortuna Düsseldorf mit Meetups zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./29-die-andere-seite-meetups-konferenzen-organisieren.jpg
-length_second: 4128
 pubDate: 2022-07-26 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

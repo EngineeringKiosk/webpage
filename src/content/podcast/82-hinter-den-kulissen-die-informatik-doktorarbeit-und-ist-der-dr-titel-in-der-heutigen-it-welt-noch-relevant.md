@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/episode/536124265
 description: "Bildung: Einblick in den Dr. Titel im Bereich Informatik. Bildung ist wichtig. Viele Personen, die im Bereich Informatik und Software-Entwicklung unterwegs sind, haben auch studiert. Bachelor, Master, teilweise sogar einen Dr. Titel. Doch wie wichtig ist der Dr. Titel eigentlich für die Ausübung des Berufes? Brauche ich einen Dr. Titel, um eine gute Programmiererin zu werden? Was bedeutet es eigentlich, einen Dr. Titel zu erlangen? Was muss dafür getan werden? Welche Voraussetzungen muss ich erfüllen? Was kostet mich das ganze und wie finanziere ich mein Leben während dieser Zeit? Und ganz allgemein: Warum brauchen viele Doktoranden so lange? All diese Fragen beantwortet der Podcast Co-Host Wolfgang, der selbst einen Dr. Titel der Informatik trägt. Bonus: Die Automatisierung einer Kaffee-Strichliste als Bachelor-Arbeit.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./82-hinter-den-kulissen-die-informatik-doktorarbeit-und-ist-der-dr-titel-in-der-heutigen-it-welt-noch-relevant.jpg
-length_second: 4189
 pubDate: 2023-08-01 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

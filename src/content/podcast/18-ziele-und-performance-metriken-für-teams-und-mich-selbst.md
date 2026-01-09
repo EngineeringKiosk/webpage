@@ -48,7 +48,6 @@ deezer: https://www.deezer.com/de/episode/383733037
 description: "Ziel-Definitionen und Mitarbeiter-Metriken: Sinnvoll oder totaler Blödsinn? Das Thema ist heiß umstritten. Viele lieben Ziele im Job. Andere sind eher auf dem Trichter von “Wer misst, misst Mist.”. In dieser Episode sprechen Wolfgang und Andy über individuelle Ziele, Team-Ziele und über die Frage, ob sich das Team in die richtige Richtung bewegt. Unter anderem mit Fragen wie, ob es immer mathematisch messbare Ziele sein müssen, wie man mit subjektiven Zielen umgeht, ob man Lines of Code messen sollte, was die Velocity aus dem Scrum Framework mit OKRs zu tun haben und noch vieles mehr. Bonus: Wieso Österreicher Podcasts anschauen können und was das Fortuna Düsseldorf und das Sams mit der ganzen Sache zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./18-ziele-und-performance-metriken-für-teams-und-mich-selbst.jpg
-length_second: 4248
 pubDate: 2022-05-10 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

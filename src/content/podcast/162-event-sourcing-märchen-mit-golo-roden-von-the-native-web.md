@@ -10,7 +10,6 @@ deezer: https://www.deezer.com/episode/697364581
 description: "Event Sourcing mit Golo Roden von the native web.  Im Engineering Kiosk Adventskalender 2024 sprechen befreundete Podcaster⋅innen und wir selbst, Andy und Wolfi, jeden Tag kurz & knackig innerhalb von wenigen Minuten über ein interessantes Tech-Thema.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)  LinksEvent Sourcing: https://de.wikipedia.org/wiki/Event_Sourcingthe native web GmbH: https://thenativeweb.io/YouTube-Kanal von Golo Roden: https://www.youtube.com/@thenativeweb#117 Vanilla Web: Niedrige Kopplung & hohe Kohäsion mit Golo Roden von the native web https://engineeringkiosk.dev/ep117\u00a0 Sprungmarken(00:00:00) Event Sourcing  HostsWolfgang Gassler (https://mastodon.social/@woolf)Andy Grunwald (https://andygrunwald.com/) FeedbackEngKiosk Community: https://engineeringkiosk.dev/join-discord\u00a0Buy us a coffee: https://engineeringkiosk.dev/kaffeeEmail: stehtisch@engineeringkiosk.devLinkedIn: https://www.linkedin.com/company/engineering-kiosk/Mastodon: https://podcasts.social/@engkioskBluesky: https://bsky.app/profile/engineeringkiosk.bsky.socialTwitter: https://twitter.com/EngKiosk"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback::Feedback
 image: ./162-event-sourcing-märchen-mit-golo-roden-von-the-native-web.jpg
-length_second: 578
 pubDate: 2024-12-11 05:00:00+00:00
 speaker:
 - name: Wolfi Gassler

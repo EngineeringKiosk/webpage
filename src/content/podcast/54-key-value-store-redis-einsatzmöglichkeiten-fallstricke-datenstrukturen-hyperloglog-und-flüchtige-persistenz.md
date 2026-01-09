@@ -52,7 +52,6 @@ deezer: https://www.deezer.com/episode/470664857
 description: "Redis - Der open source, in-memory data structure server Viele Software-Engineers haben bereits von Redis gelesen. Primär im Anwendungsfall eines Caches. Doch das ist bei weitem nicht alles, was Redis unter der Haube hat. In dieser Episode schauen wir uns den Data Structure Server mal genauer an. Was ist Redis? Welche Datentypen unterstützt dieser? Was ist Geospatial und HyperLogLog? Kann Redis meine Daten auch persistieren? Welche Use-Cases gibt es neben dem Caching? Wer ist eigentlich der Kopf hinter Redis? Und wie kann ich Redis erweitern, falls ich noch mehr Funktionalität brauche? All das und noch viel mehr Hintergrundwissen zu Redis in dieser Episode. Bonus: Wann unser Co-Host Andy und wann Andreas genannt wird und was Clippy von Word mit Redis zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./54-key-value-store-redis-einsatzmöglichkeiten-fallstricke-datenstrukturen-hyperloglog-und-flüchtige-persistenz.jpg
-length_second: 3727
 pubDate: 2023-01-17 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

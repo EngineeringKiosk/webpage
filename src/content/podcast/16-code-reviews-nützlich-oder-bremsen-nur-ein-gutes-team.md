@@ -60,7 +60,6 @@ deezer: https://www.deezer.com/de/episode/380202837
 description: "Code Reviews: Jeder will schnelles Feedback, doch niemand hat Zeit dafür - Eine Hassliebe. Eine Komponente im Alltag jedes Software Engineers. Egal ob Junior, Senior oder Staff-Engineer. Jeder erstellt Code Reviews und kommentiert die Arbeit von den Kollegen. Doch wie sehen gute Code Reviews aus? Was gehört hinein, was bleibt besser draußen? Wie viel Reviewer machen Sinn? Wie geht man mit Nitpicking-Kommentaren und Gatekeepern um? Und allgemein: Zieht dieser zusätzliche Schritt nicht die Performance des Teams runter und ist sowieso Overhead? All das und noch viel mehr in dieser Episode zum Thema Code Reviews. Bonus: Was Faultiere und Markus Söder mit Code Reviews zu tun haben und warum Blubberwasser den Charakter verdirbt."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./16-code-reviews-nützlich-oder-bremsen-nur-ein-gutes-team.jpg
-length_second: 3543
 pubDate: 2022-04-26 04:30:00+00:00
 speaker:
 - name: Andy Grunwald

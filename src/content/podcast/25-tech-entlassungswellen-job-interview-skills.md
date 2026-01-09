@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/de/episode/398712977
 description: "Interviews als Bewerber zu führen ist nicht immer leicht. Oft hat man das Gefühl, dass man sich “Beweisen” muss. Doch muss das wirklich so sein? Besonders im Tech-Sektor sind Whiteboard-Challenges und Coding-Interviews der Endgegner. Viele Bewerber sind aber schon vorher nervös, stammeln, stehen unter Druck und sind ggf. nicht sich selbst. In dieser Episode sprechen wir mal ein wenig über die aktuelle Lage im Tech-Sektor in Bezug auf Layoffs, und falls man eine neue Firma sucht, wie man an ein Interview locker und sicher ran geht. Wir klären wie heutzutage eine Bewerbung aussehen kann, was man vor dem eigentlichen Interview tun kann, um herauszustechen, wie man sich im Interview verhält und aus dem “Frage-Antwort-Spiel” eine ordentliche Konversation auf Augenhöhe macht aber auch wie man den Endgegner, die Coding Challenge, meistern kann. Bonus: Warum Wolfgang nur Kaffee in Portugal trinkt und was ein Gehsteig, Bürgersteig und Klettersteig gemeinsam haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./25-tech-entlassungswellen-job-interview-skills.jpg
-length_second: 4376
 pubDate: 2022-06-28 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

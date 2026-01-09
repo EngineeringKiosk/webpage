@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/episode/425877397
 description: "Wie können Engineering Manager und Tech-Lead-Interviews aussehen? Jeder, der vom Individual Contributor in eine Engineering Manager und Tech-Lead-Rolle wechseln möchte, muss sich Fragen aussetzen, die nichts mit Code zu tun haben. Fragen über Leadership Styles, Motivationen, Team-Entscheidungen, Business-Prioritäten, Selbst-Reflektion und Schwächen. Denn als Engineering Manager oder Tech-Lead gilt man als Multiplikator. In dieser Episode stellt Wolfgang seinem Co-Host Andy einfach mal die Fragen, die er damals Bewerbern gestellt hat, um sich selbst als Engineering Manager bei trivago zu ersetzen. Dies gibt einen guten Einblick, mit welchen Fragen Ihr so rechnen könnte, falls Ihr euch in eine ähnliche Situation begebt. Bonus: Warum Wikingerschach der neue Sport ist und was eine Straßenampel mit Continuous Integration zu tun hat."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./33-andy-im-team-lead-bewerbungsgespräch.jpg
-length_second: 3654
 pubDate: 2022-08-23 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

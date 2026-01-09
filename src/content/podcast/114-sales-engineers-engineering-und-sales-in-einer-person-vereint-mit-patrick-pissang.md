@@ -28,7 +28,6 @@ deezer: https://www.deezer.com/episode/612550952
 description: "Sales Engineering: Die Karriere “on top” auf deiner eigentlichen Karriere Im Software Engineering gibt es viele Vorurteile gegen die Sales-Funktion. Doch wenn wir mal ehrlich zu uns sind: Die Sales-Abteilung bringt die Kunden, die wiederum das Geld in die Firma bringen. Kurz um: Durch die Sales-Arbeit haben wir alle einen Job. Und wenn wir dies mal weiterdenken: Was wäre, wenn du mit deinem Engineering Know How an diesem Hebel etwas bewirken könntest? Genau darum geht es in der Funktion des Sales Engineerings. In dieser Episode sprechen wir mit Patrick Pissang, dem Social Sales Engineer, und bringen etwas Licht ins Dunkle: Was ist Sales Engineering? Sind dies zwei Jobs in einer Person? Wie technisch muss ein Sales Engineer sein und wie sieht eigentlich ein solcher Sales Prozess aus? Welche Firmen können von dieser Rolle denn wirklich Gebrauch machen? Welche Skills sind gefragt und wie kann man mehr über diese Rolle erfahren? All das in dieser Episode. Bonus: Was Herr der Ringe und Sales Engineering gemeinsam haben.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./114-sales-engineers-engineering-und-sales-in-einer-person-vereint-mit-patrick-pissang.jpg
-length_second: 4124
 pubDate: 2024-03-12 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

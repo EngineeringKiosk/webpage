@@ -42,7 +42,6 @@ deezer: https://www.deezer.com/episode/556838105
 description: "Green IT und die CO2-Emissionen durch die IT, das Internet und die Software-Entwicklung Die Klimakrise ist real. Damit wir das ganze Problem in den Griff bekommen, muss jeder mit anpacken. Doch wie viel Einfluss hat die IT mit der Hardware, dem Internet, auf der Client- und Serverseite? Darüber sprechen wir in dieser Episode. Wie lange solltest du deine Hardware nutzen? Was für eine Rolle spielen Display-Technologien wie Oled und LCD? Sind performante Websites mehr Eco-Friendly? Wie sieht es mit Cloud-Infrastruktur, Build- und CI-Pipelines aus? Wie berechnet man die CO2-Emissionen von Gigabit-Datentransfer? Welche ist die grünste Programmiersprache? Das und noch viel mehr besprechen wir mit unserem Gast Christian \"Schepp\" Schaefer, der sich mit diesem Thema auseinandergesetzt hat. Bonus: Wo die dreckigsten Industrieunternehmen Deutschlands stehen.  Das schnelle Feedback zur Episode: 👍 (top) 👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./89-die-klimakrise-und-green-it-unser-einfluss-über-hardware-farben-web-performance-und-green-hosting-mit-christian-schäfer.jpg
-length_second: 4563
 pubDate: 2023-09-19 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

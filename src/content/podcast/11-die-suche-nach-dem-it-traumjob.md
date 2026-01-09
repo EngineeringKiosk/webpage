@@ -50,7 +50,6 @@ deezer: https://www.deezer.com/de/episode/371918487
 description: "Den richtigen Arbeitgeber und die richtige Firma finden: Eine Mammut-Aufgabe. In dieser Episode sprechen Wolfgang und Andy ein wenig darüber wie man neue, potentielle, Arbeitgeber findet, welche Fragen man sich selbst stellen kann um herauszufinden, was einem wichtig ist, geben Tipps um mit Recruitern zusammen zu arbeiten, Fragen uns ob ein hohes Gehalt wirklich alles ist, ob Startups, ScaleUps oder Konzerne besser sind und warum Agrar-Tech und Mähdrescher der heiße Scheiß sind. Als Start in dieses Thema gibt es ein Re-Cap von einer User-Umfrage auf Reddit zum Thema 1on1s und die Beantwortung der Frage, wie man gutes (People) Leadership in neuen Firmen erkennt. Bonus: Was Andys Kegeltour mit seiner Jobsuche zu tun hat und was ein Mottek ist."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./11-die-suche-nach-dem-it-traumjob.jpg
-length_second: 3531
 pubDate: 2022-03-22 12:45:00+00:00
 speaker:
 - name: Andy Grunwald

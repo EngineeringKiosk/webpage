@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/578029472
 description: "Rust: Die System-Programmiersprache der nächsten 40 Jahre? Die Programmiersprache Rust erlebt aktuell einen Hype, wie kaum eine andere Programmiersprache bisher. Sehr viele Leute nennen Rust als die nächste Programmiersprache, die sie gerne lernen wollen. Projekte auf Github prahlen damit, dass diese mit Rust geschrieben wurden. Und jede zweite Case-Study einer großen Tech-Firma hat etwas mit Rust zu tun. Doch warum wird die Sprache so gehyped? Ist es nur Marketing oder steckt wirklich der Knaller der nächsten 40 Jahre dahinter? Und ist wirklich alles Gold was glänzt? Irgendwo muss es doch auch ein paar Pitfalls und Shortcomings geben. In dieser Episode sprechen wir mit Matthias Endler. Matthias ist seit Anfang an bei Rust dabei. Dabei geht es um: Welches Problem Rust löst, einen Deep Dive in die Konzepte, wie sich die Lernkurve von Rust verhält, aber auch die Rückwärtskompatibilität gewährleistet wird und noch vieles vieles mehr. Bonus: Ob Franken oder Oberpfalz. Bayern bleibt Bayern.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./98-der-hype-um-rust-mit-matthias-endler.jpg
-length_second: 4425
 pubDate: 2023-11-21 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

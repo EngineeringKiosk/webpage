@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/episode/571279671
 description: "Als Knowledge-Worker sein Wissen teilen: Welche Arten gibt es und was ist für dich das Richtige? Leute im Tech-Bereich werden oft als Knowledge-Worker bezeichnet. Und es gibt auch noch diesen Mythos, dass im Team jeder alles wissen muss, damit jeder alles übernehmen kann. Wurde dieser Zustand jemals erreicht? Dennoch ist das Teilen von Wissen wichtig. Schon allein, um Flaschenhälse zu vermeiden und sich vom Bus-Faktor zu lösen. In dieser Episode sprechen wir über verschiedene Formate wie Hackathons, Code Challenges, interne Konferenzen und Guilds, Book-Clubs und Co. Wir teilen unsere Erfahrung und worauf es besonders ankommt, wenn du etwas ähnliches in deiner Firma starten möchtest. Bonus: Was Hardware-Buzzer und Jeopardy! spiele mit Knowledge Sharing zu tun haben.  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./95-effiziente-knowledge-sharing-formate-wissen-teilen-und-begeistern.jpg
-length_second: 3909
 pubDate: 2023-10-31 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

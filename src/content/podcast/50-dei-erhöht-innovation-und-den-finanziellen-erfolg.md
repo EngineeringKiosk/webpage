@@ -44,7 +44,6 @@ deezer: https://www.deezer.com/episode/463186237
 description: "Diversity: Das Thema mit hoher Relevanz - Nicht nur in der Gesellschaft, sondern auch in Firmen und Tech-Teams. Forbes berichtet, dass diverse Firmen innovativer und erfolgreicher sind. Doch was ist Diversity eigentlich? Irgendwie wird es überall erwähnt und ist stets präsent. In dieser Episode klären wir was Diversity und DEI ist, warum es wichtig ist, darüber zu sprechen, welchen Effekt es auf Teams haben kann, wie nützlich Frauenquoten sind, wie der Mangel an weiblichen IT-Fachkräften sich auf das Thema auswirkt, was es mit der inklusiven Sprache aufsich hat und wo der Unterschied zwischen Diversität, Inklusion und Gleichberechtigung ist. Bonus: Ob Harvard und Stanford inklusiv sind und was Schokoküsse mit dem Thema zu tun haben."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./50-dei-erhöht-innovation-und-den-finanziellen-erfolg.jpg
-length_second: 3450
 pubDate: 2022-12-20 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

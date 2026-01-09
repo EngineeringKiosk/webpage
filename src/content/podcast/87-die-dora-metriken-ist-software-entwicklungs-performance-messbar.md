@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/549830805
 description: "DORA Metriken: Die Performance-Messung deines Software Development Teams bzw. die Ermittlung des Reifegrades von DevOps in deiner Organisation Softwareentwicklung ist ein kreativer Beruf. Jedes Projekt ist einzigartig und die geschriebenen Lines of Code sagen wenig über die dafür benötigte Zeit aus. Das Research-Programm DevOps Research and Assessment (DORA) versucht dennoch die Performance eines Software-Entwicklungs-Teams zu messen. Nicht via Lines of Code, sondern auf Basis von Aktivitäten, die Value liefern: Deployment Frequency, Lead Time for Changes, Mean Time to Recovery, Change Failure Rate und Reliability. Die Metriken selbst sind weit bekannt. Wie diese Metriken beeinflusst werden können, wer eigentlich dahinter steckt, und was die Organisation eigentlich für eine Kultur vorleben muss, damit es überhaupt zu einem positiven Ergebnis kommt, wissen viele nicht. Und genau darüber sprechen wir in dieser Episode. Bonus: AOL CDs und Metal-Musik aus Litauen  Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./87-die-dora-metriken-ist-software-entwicklungs-performance-messbar.jpg
-length_second: 3282
 pubDate: 2023-09-05 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

@@ -36,7 +36,6 @@ deezer: https://www.deezer.com/de/episode/363367892
 description: "Sind Machine Learning und Artificial Intelligence nur Hypes oder sollte ich meine Karriere dahingehend ausrichten? Und welche Hypes gibt es im Infrastruktur-Bereich? Und überhaupt: Wie steht das alles im Zusammenhang mit Job-Titels, meiner Beförderung zum Senior Engineer und meinem Gehalt? All diese Themen klären Wolfgang und Andy in dieser wilden Folge. Weiterhin: Warum das Leben kein Ponyhof ist, was Agrar-Tech und autonom-fahrende Trecker, die Inflation und Krösus damit zu tun haben, sowie warum Software Engineers zu den Top 5% der Gesellschaft gehören. Bonus: Warum Wolfgang kein Eiskunstlauf macht und wie er seinen Dr.-Titel bekommen hat."
 headlines: links::Links||erwähnte-personen::Erwähnte Personen||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./06-hype-oder-hope-job-titel-und-beförderungen.jpg
-length_second: 3133
 pubDate: 2022-02-15 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

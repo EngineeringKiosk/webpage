@@ -30,7 +30,6 @@ deezer: https://www.deezer.com/episode/508753217
 description: "\"Open Data now\" - Dazu ruft der Turing Award Gewinner Sir Tim Berners-Lee in seinem Kampf um offene Daten auf. Das macht er heute. Doch bekannt ist er als Erfinder des World Wide Webs. Wofür er 2016 auch den Turing Award verliehen bekommen hat. Doch wer ist eigentlich Sir Tim Berners-Lee genau? Wie kam es dazu, dass er das “heutige Internet” erfunden hat? Welches Problem wollte er damals lösen? Wie weit ist die heutige Implementierung und Nutzung des WWW von der ursprünglichen Idee entfernt? Welche architekturelle Änderungen würde Sir Tim Berners-Lee machen, wenn er das ganze nochmal neu machen würde? Und womit verbringt er heute seine Zeit? All das und noch viel mehr klären wir in der ersten Episoden zu den Turing Award Gewinnern. Bonus: Das Internet war ein Side Project geschrieben in Objective-C und ob wir für Social Media zahlen sollten.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./71-tim-berners-lee-was-ist-das-world-wide-web-und-was-ist-seine-zukunft.jpg
-length_second: 3710
 pubDate: 2023-05-16 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

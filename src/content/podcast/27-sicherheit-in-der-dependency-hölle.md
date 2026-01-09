@@ -40,7 +40,6 @@ deezer: https://www.deezer.com/de/episode/401978277
 description: "Was haben die JavaScript Pakete left-pad, color, faker und cross-env gemeinsam? Alle waren in npm Package Sicherheits-Incidents involviert. Wenn man sich die Anzahl von Javascript Abhängigkeiten bei Mittelgroßen Projekten ansieht, ist eine dreistellige Anzahl an JavaScript Paketen nicht unüblich. Das liegt primär an der überschaubaren Größe der Pakete und somit der Funktionalität. Alles nur, um Pakete verwaltbarer zu halten. Doch dieser Umstand macht das JavaScript-Ecosystem so attraktiv für Angreifer oder kann zu extremen Seiteneffekten führen. In dieser Episode sprechen wir drei npm Package Incidents durch, was es damit aufsich hatte, welche Attack-Möglichkeiten es noch gibt und wie man sich als Software Entwickler dagegen schützen kann. Bonus: Was Bademeister, Blubberwasser und eine ASCII-Repräsentation von Uncle Sam und der amerikanischen Flagge mit JavaScript zu tun haben."
 headlines: links::Links||weitere-nicht-behandelte-incidents::Weitere nicht behandelte Incidents||sprungmarken::Sprungmarken||hosts::Hosts
 image: ./27-sicherheit-in-der-dependency-hölle.jpg
-length_second: 3378
 pubDate: 2022-07-12 04:00:00+00:00
 speaker:
 - name: Andy Grunwald

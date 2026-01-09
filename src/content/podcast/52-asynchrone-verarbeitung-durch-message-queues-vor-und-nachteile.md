@@ -46,7 +46,6 @@ deezer: https://www.deezer.com/episode/466631357
 description: "Asynchrone Verarbeitung durch Message Queues: Was ist das und wofür ist das gut? In vielen Applikationen gibt es Bereiche, die einfach etwas Zeit für die Verarbeitung brauchen, aber das klassische Anfrage/Antwort (Request/Response) Verhalten nicht blockieren sollen. Oft werden dafür asynchrone Prozesse verwendet. Durch den Einsatz von Message Queues ergeben sich weitere Vorteile wie u.a. granulare Skalierbarkeit und Unabhängigkeit von einzelnen Programmiersprachen. RabbitMQ ist einer der Platzhirsche im Bereich Open-Source-Message-Broker. In dieser Episode klären wir wofür Message Queues gut sind, bei welchen klassischen Anwendungsfällen diese helfen können, welche Herausforderungen diese Darstellen, wo der Unterschied zu Pub/Sub oder Streams ist und was Redis, Kafka und ZeroMQ damit zu tun hat. Bonus: Warum Software rostet."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./52-asynchrone-verarbeitung-durch-message-queues-vor-und-nachteile.jpg
-length_second: 3409
 pubDate: 2023-01-03 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

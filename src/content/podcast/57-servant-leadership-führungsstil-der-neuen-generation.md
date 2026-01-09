@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/477208047
 description: "Servant Leadership, die dienende Führung: Heiße Luft oder ein neuer Trend? Mit Leadership-Stilen ist es wie mit JavaScript-Frameworks: Jede Woche kommt ein neuer. Servant Leadership, der dienende Führungsstil, kann auch als solch einer bezeichnet werden. Speziell mit dem Einzug der Generation Z in die Arbeitswelt, könnte dieser Leadership-Style in Zukunft eine besondere Bedeutung bekommen. Doch was ist Servant Leadership überhaupt? Wie unterscheidet sich dieser Stil von anderen Stilen wie Laissez-faire? Warum ist Servant Leadership gerade ein Trend und in aller Munde? Für wen beziehungsweise in welchen Situationen ist Servant Leadership unangebracht? Und warum spielt die Frage \"Warum?\" dabei eine bedeutende Rolle? All das und viel mehr in dieser Episode. Bonus: Was JavaScript-Frameworks, Krokodile und Greta Thunberg mit Servant Leadership zu tun haben.  Deine \"schnelle\" Rückmeldung zur Episode?👍 (sehr cool)  👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./57-servant-leadership-führungsstil-der-neuen-generation.jpg
-length_second: 3462
 pubDate: 2023-02-07 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

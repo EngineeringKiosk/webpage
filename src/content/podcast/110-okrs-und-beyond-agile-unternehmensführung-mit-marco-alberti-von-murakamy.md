@@ -38,7 +38,6 @@ deezer: https://www.deezer.com/episode/602550982
 description: "Objectives & Key Results (OKRs): Die Wunderwaffe für die Zielsetzung? Google, Adobe und die Gates Foundation schwören auf OKRs als Methode für die Zielsetzung, die Teams beim Festlegen messbarer Ziele unterstützen sollen. Doch was ist wirklich dran am Hype? Ist es wirklich so gut wie geschnitten Brot? Wir sind der Sache auf den Grund gegangen und haben mit Marco Alberti von Murakamy über das Thema gesprochen. Mit seiner Firma berät er Firmen jeglicher Größe zum Thema Vision, Mission und Zielsetzung durch OKRs. Mit ihm klären wir, was OKRs eigentlich sind, wie das ganze zu anderen agilen Methoden wie Scrum und Kanban steht, wie OKRs ein Unternehmen verändern können, ob die AI zur Erstellung von Zielsetzung hilfreich ist, was gute und schlechte Objectives sind und wie man mit Hilfe von OKRs wieder in die Sommer-Badehose passt. Bonus: Wieso es OK ist, SAP mit OKRs zu vergleichen.  Unsere aktuellen Werbepartner findest du auf https://engineeringkiosk.dev/partners \u00a0 Das schnelle Feedback zur Episode: 👍 (top)\u00a0👎 (geht so)"
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./110-okrs-und-beyond-agile-unternehmensführung-mit-marco-alberti-von-murakamy.jpg
-length_second: 4683
 pubDate: 2024-02-13 05:00:00+00:00
 speaker:
 - name: Andy Grunwald

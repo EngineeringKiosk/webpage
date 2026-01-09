@@ -32,7 +32,6 @@ deezer: https://www.deezer.com/episode/474777487
 description: "Die App muss skalieren. Das kann doch nicht so schwer sein, oder? Sekundenschnelles und automatisches Hochskalieren bei einem erhöhten Traffic-Aufkommen. So oder so ähnlich versprechen es die Cloud-Hyperscaler in ihren Marketing-Texten. Das erweckt oft den Anschein, dass das Ganze gar nicht so schwer sein kann. Doch ist dies auch in der Realität so? Eine Applikation skalierbar zu gestalten, ist bei weitem nicht einfach. Stichworte wie Ausfallsicherheit, vertikale- oder horizontale Skalierung, Stateless- oder Stateful-Applications, Loadbalancer und Auto-Discovery, Kubernetes und zusätzliche Code-Komplexität, finanzieller Impact, Load-Tests, Request-Deadlines, Chaos Monkey und Down-Scaling. Alles Begriffe, die damit in Verbindung stehen und einen wichtigen Bestandteil ausmachen. In dieser Episode geben wir einen Überblick über das Thema Application-Skalierung: Was ist das? Wer braucht es? Was sind die Grundbegriffe und welche Grundlagen müssen erfüllt werden, damit das ganze erfolgreich wird? Bonus: Warum Andy eine Märchenstimme hat und warum wir Milchmädchenrechnung nicht mehr sagen sollten."
 headlines: links::Links||sprungmarken::Sprungmarken||hosts::Hosts||feedback-gerne-auch-als-voice-message::Feedback (gerne auch als Voice Message)
 image: ./56-applikations-skalierung-wann-wieso-was-kostet-es-stateless-und-stateful-horizontal-vs-vertikal.jpg
-length_second: 3026
 pubDate: 2023-01-31 05:00:00+00:00
 speaker:
 - name: Andy Grunwald
