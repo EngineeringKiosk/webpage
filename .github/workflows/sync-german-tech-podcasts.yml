@@ -28,8 +28,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: Update src/data/german_tech_podcasts.json with latest podcast data
+          commit_message: "chore: Update src/data/german_tech_podcasts.json with latest podcast data"
           branch: main
-          commit_user_name: Sync German Tech Podcast workflow bot
-          commit_user_email: stehtisch@engineeringkiosk.dev
-          commit_author: Sync German Tech Podcast workflow bot <stehtisch@engineeringkiosk.dev>
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"

@@ -33,8 +33,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: Update the latest data from awesome-software-engineering-games
+          commit_message: "chore: Update the latest data from awesome-software-engineering-games"
           branch: main
-          commit_user_name: Sync awesome-software-engineering-games workflow bot
-          commit_user_email: stehtisch@engineeringkiosk.dev
-          commit_author: Sync awesome-software-engineering-games workflow bot <stehtisch@engineeringkiosk.dev>
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"

@@ -45,8 +45,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: Synchronisation of Podcast Episodes and redirects
+          commit_message: "chore: Synchronisation of Podcast Episodes and redirects"
           branch: main
-          commit_user_name: Podcast synchronisation workflow bot
-          commit_user_email: stehtisch@engineeringkiosk.dev
-          commit_author: Podcast synchronisation workflow bot <stehtisch@engineeringkiosk.dev>
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"
