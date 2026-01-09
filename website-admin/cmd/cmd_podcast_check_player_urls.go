@@ -61,7 +61,7 @@ This command is useful for:
 func init() {
 	podcastCmd.AddCommand(podcastCheckPlayerURLsCmd)
 
-	podcastCheckPlayerURLsCmd.Flags().StringVarP(&flagPodcastEpisodesDir, "episodes-dir", "e", os.Getenv(EnvVarNetlifyRedirectEpisodesDir), environmentVariables[EnvVarNetlifyRedirectEpisodesDir])
+	podcastCheckPlayerURLsCmd.Flags().StringVarP(&flagPodcastEpisodesPath, "episodes-dir", "e", os.Getenv(EnvVarNetlifyRedirectEpisodesDir), environmentVariables[EnvVarNetlifyRedirectEpisodesDir])
 }
 
 func RunPodcastCheckPlayerURLsCmd(cmd *cobra.Command, args []string) error {
@@ -71,7 +71,7 @@ func RunPodcastCheckPlayerURLsCmd(cmd *cobra.Command, args []string) error {
 		Msg("starting")
 
 	// Set default if not provided
-	episodesDir := flagPodcastEpisodesDir
+	episodesDir := flagPodcastEpisodesPath
 	if episodesDir == "" {
 		episodesDir = "src/content/podcast"
 	}

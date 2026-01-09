@@ -104,8 +104,8 @@ func init() {
 	// Add flags with defaults
 	podcastSyncFromRSSCmd.Flags().StringVarP(&flagRSSFeedURL, "rss-feed-url", "r", os.Getenv(EnvVarRssFeedUrl), environmentVariables[EnvVarRssFeedUrl])
 	podcastSyncFromRSSCmd.Flags().StringVarP(&flagEpisodesStorePath, "episodes-dir", "s", os.Getenv(EnvVarEpisodesStorePath), environmentVariables[EnvVarEpisodesStorePath])
-	podcastSyncFromRSSCmd.Flags().StringVarP(&flagImagesDir, "images-dir", "i", os.Getenv(EnvVarImagesPath), environmentVariables[EnvVarImagesPath])
-	podcastSyncFromRSSCmd.Flags().StringVarP(&flagTranscriptDir, "transcript-dir", "t", os.Getenv(EnvVarTranscriptPath), environmentVariables[EnvVarTranscriptPath])
+	podcastSyncFromRSSCmd.Flags().StringVarP(&flagImagesPath, "images-dir", "i", os.Getenv(EnvVarImagesPath), environmentVariables[EnvVarImagesPath])
+	podcastSyncFromRSSCmd.Flags().StringVarP(&flagTranscriptPath, "transcript-dir", "t", os.Getenv(EnvVarTranscriptPath), environmentVariables[EnvVarTranscriptPath])
 }
 
 func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
@@ -120,7 +120,7 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 
 	// Adjust paths if needed
 	flagEpisodesStorePath = utils.BuildCorrectFilePath(flagEpisodesStorePath)
-	flagImagesDir = utils.BuildCorrectFilePath(flagImagesDir)
+	flagImagesPath = utils.BuildCorrectFilePath(flagImagesPath)
 
 	// Fetch RSS feed
 	resp, err := http.Get(flagRSSFeedURL)
@@ -230,7 +230,7 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 		if item.Image.Href != "" {
 			imageURL := item.Image.Href
 			sluggedTitle := utils.Slugify(title)
-			imageBaseFilename := filepath.Join(flagImagesDir, sluggedTitle)
+			imageBaseFilename := filepath.Join(flagImagesPath, sluggedTitle)
 
 			// Check if image already exists
 			if existingImage, exists := utils.ImageExists(imageBaseFilename); exists {
@@ -270,7 +270,7 @@ func RunPodcastSyncFromRSSCmd(cmd *cobra.Command, args []string) error {
 		}
 
 		// Get transcript path
-		transcriptPath := episode.GetTranscriptSlimPathByEpisodeNumber(episodeNumber, flagTranscriptDir)
+		transcriptPath := episode.GetTranscriptSlimPathByEpisodeNumber(episodeNumber, flagTranscriptPath)
 
 		// Build episode data
 		data := episode.EpisodeFrontmatter{

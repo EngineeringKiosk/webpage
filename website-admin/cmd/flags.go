@@ -6,23 +6,21 @@ var (
 
 	// Episodes
 	flagEpisodesStorePath string
-	flagImagesDir         string
-	flagTranscriptDir     string
-
-	// TODO Unify "Dir" vs "Path" naming
+	flagImagesPath        string
+	flagTranscriptPath    string
 
 	// Netlify Redirects
 	flagNetlifyRedirectTomlFile       string
-	flagNetlifyRedirectEpisodesDir    string
+	flagNetlifyRedirectEpisodesPath   string
 	flagNetlifyRedirectRedirectPrefix string
 
 	// Podcast
 	// TODO Unify with flagEpisodesStorePath?
-	flagPodcastEpisodesDir string
+	flagPodcastEpisodesPath string
 
 	// Tags
-	flagTagsWriteFile  bool
-	flagTagsContentDir string
+	flagTagsWriteFile   bool
+	flagTagsContentPath string
 	flagTagsDescFile   string
 
 	// Sync
