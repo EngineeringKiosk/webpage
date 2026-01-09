@@ -15,20 +15,47 @@ import (
 // podcastCheckPlayerURLsCmd represents the check-player-urls command
 var podcastCheckPlayerURLsCmd = &cobra.Command{
 	Use:   "check-player-urls",
-	Short: "Check if all podcast episodes have player URLs set",
-	Long: `Check if all podcast episodes have their player URLs properly set.
+	Short: "Validate that all podcast episodes have player URLs configured",
+	Long: `Validate that all podcast episodes have their player URLs properly configured.
 
-This command iterates through all podcast episode files and verifies that
-the following player links are filled:
-  - spotify
-  - apple_podcasts
-  - amazon_music
-  - deezer
-  - youtube
+Podcast episodes need links to various streaming platforms so listeners can choose
+their preferred player. This command scans all episode Markdown files and checks
+that the following frontmatter fields contain non-empty URLs:
 
-If any player URL is missing, the episode and missing fields are reported.
-The command exits with code 1 if any URLs are missing (useful for CI/CD).`,
-	RunE: RunPodcastCheckPlayerURLsCmd,
+  - spotify:        Link to the episode on Spotify
+  - apple_podcasts: Link to the episode on Apple Podcasts
+  - amazon_music:   Link to the episode on Amazon Music
+  - deezer:         Link to the episode on Deezer
+  - youtube:        Link to the episode on YouTube
+
+This is typically run after syncing new episodes from the RSS feed, as the RSS
+feed doesn't include platform-specific URLs. These URLs usually need to be added
+manually after each platform processes the new episode (which can take a few hours
+to a day after publication).
+
+Behavior:
+  - Scans all .md files in the episodes directory
+  - Reports each episode with missing URLs and which platforms are missing
+  - Exits with code 0 if all episodes have complete URLs
+  - Exits with code 1 if any URLs are missing (CI-friendly)
+
+This command is useful for:
+  - CI/CD pipelines to ensure episode completeness before deployment
+  - Identifying episodes that need manual URL updates
+  - Quality assurance after RSS feed syncs`,
+	Example: `  # Check player URLs using default episodes directory
+  website-admin podcast check-player-urls
+
+  # Specify a custom episodes directory
+  website-admin podcast check-player-urls --episodes-dir ./src/content/podcast
+
+  # Enable debug logging to see each file being checked
+  website-admin podcast check-player-urls --debug
+
+  # Use in CI pipeline (exits with code 1 if any URLs missing)
+  website-admin podcast check-player-urls || echo "Some episodes need player URLs!"`,
+	RunE:              RunPodcastCheckPlayerURLsCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {

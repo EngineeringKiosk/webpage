@@ -44,15 +44,47 @@ type Build struct {
 // podcastNetlifyRedirectCmd represents the netlify-redirect command
 var podcastNetlifyRedirectCmd = &cobra.Command{
 	Use:   "netlify-redirect",
-	Short: "Generate URL redirects for podcast episodes in netlify.toml",
-	Long: `Generate URL redirects for podcast episodes in netlify.toml.
+	Short: "Generate short URL redirects for podcast episodes in netlify.toml",
+	Long: `Generate short URL redirects for podcast episodes in netlify.toml.
 
-This command scans the podcast episodes directory and creates short URL redirects
-for each episode in the netlify.toml configuration file. Two redirects are created
-per episode:
-  - /episodes/{n} -> /podcast/episode/{slug}
-  - /ep{n} -> /podcast/episode/{slug}`,
-	RunE: RunPodcastNetlifyRedirectCmd,
+This command scans the podcast episodes directory and creates user-friendly short URL
+redirects for each episode. These short URLs make it easy to share episode links
+verbally or in print.
+
+For each episode, two redirect entries are created:
+  /episodes/{n}  ->  /podcast/episode/{full-slug}?pkn=shortlink
+  /ep{n}         ->  /podcast/episode/{full-slug}?pkn=shortlink
+
+Where {n} is the episode number (e.g., 42) and {full-slug} is the episode filename
+without the .md extension (e.g., "42-clean-code-prinzipien").
+
+The redirects use HTTP 301 (permanent redirect) status codes with force=true to
+ensure they work even if a file exists at that path.
+
+Behavior:
+  - Reads the existing netlify.toml file and preserves all other configuration
+  - Skips episodes that already have redirects configured
+  - Episode numbers are extracted from filenames (e.g., "042-title.md" -> 42)
+  - Leading zeros are stripped from episode numbers
+  - The ?pkn=shortlink query parameter helps track traffic from short links`,
+	Example: `  # Generate redirects using default paths (run from project root)
+  website-admin podcast netlify-redirect
+
+  # Specify custom paths for all options
+  website-admin podcast netlify-redirect \
+    --toml-file ./netlify.toml \
+    --episodes-dir ./src/content/podcast \
+    --redirect-prefix /episodes/
+
+  # Use environment variables instead of flags
+  export WEBSITEADMIN_NETLIFY_REDIRECT_TOML_FILE=./netlify.toml
+  export WEBSITEADMIN_NETLIFY_REDIRECT_EPISODES_DIR=./src/content/podcast
+  website-admin podcast netlify-redirect
+
+  # Enable debug logging to see each redirect being processed
+  website-admin podcast netlify-redirect --debug`,
+	RunE:              RunPodcastNetlifyRedirectCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {

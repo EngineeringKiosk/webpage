@@ -52,9 +52,50 @@ type HTMLHeadline struct {
 // podcastSyncFromRSSCmd represents the podcast command
 var podcastSyncFromRSSCmd = &cobra.Command{
 	Use:   "sync-from-rss",
-	Short: "Sync podcast episodes from RSS feed",
-	Long:  `Syncs podcast episodes from an RSS feed to local markdown files with frontmatter.`,
-	RunE:  RunPodcastSyncFromRSSCmd,
+	Short: "Sync podcast episodes from the RedCircle RSS feed",
+	Long: `Sync podcast episodes from the RedCircle RSS feed to local Markdown files.
+
+This command fetches the Engineering Kiosk podcast RSS feed and creates or updates
+local Markdown files with YAML frontmatter for each episode. It's the primary way
+to import new episodes after they've been published to the podcast hosting platform.
+
+What the command does:
+  1. Fetches and parses the RSS/XML feed from RedCircle
+  2. For each episode in the feed:
+     - Downloads the episode cover image (if not already present)
+     - Resizes images to 700x700 pixels for web optimization
+     - Extracts chapter markers from the episode description
+     - Parses and cleans up the HTML description
+     - Generates a slugified filename from the episode title
+  3. Creates Markdown files with frontmatter containing all episode metadata
+  4. Preserves manually-added fields when updating existing episodes (like player URLs, tags, speakers)
+
+Fields populated from RSS:
+  - title, description, audio URL, publication date
+  - chapter markers, episode image, headlines
+
+Fields preserved from existing files (not overwritten):
+  - spotify, apple_podcasts, amazon_music, deezer, youtube URLs
+  - tags, speakers, advertiser, length_second
+
+Note: Platform-specific player URLs (Spotify, Apple, etc.) are NOT available in the
+RSS feed and must be added manually after each platform processes the episode.`,
+	Example: `  # Sync episodes using environment variables for configuration
+  export WEBSITEADMIN_RSS_FEED_URL=https://feeds.redcircle.com/your-podcast-id
+  export WEBSITEADMIN_EPISODES_STORE_PATH=./src/content/podcast
+  export WEBSITEADMIN_IMAGES_PATH=./src/content/podcast
+  website-admin podcast sync-from-rss
+
+  # Sync episodes with explicit paths
+  website-admin podcast sync-from-rss \
+    --rss-feed-url https://feeds.redcircle.com/your-podcast-id \
+    --episodes-dir ./src/content/podcast \
+    --images-dir ./src/content/podcast
+
+  # Enable debug logging to see detailed processing info
+  website-admin podcast sync-from-rss --debug`,
+	RunE:              RunPodcastSyncFromRSSCmd,
+	DisableAutoGenTag: true,
 }
 
 func init() {
