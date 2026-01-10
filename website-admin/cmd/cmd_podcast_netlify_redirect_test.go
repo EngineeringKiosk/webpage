@@ -4,10 +4,10 @@ import "testing"
 
 func TestExtractEpisodeNumber(t *testing.T) {
 	tests := []struct {
-		name           string
-		filename       string
-		wantNumber     string
-		wantOk         bool
+		name       string
+		filename   string
+		wantNumber string
+		wantOk     bool
 	}{
 		{
 			name:       "episode 170 with 404 in title (bug fix case)",
