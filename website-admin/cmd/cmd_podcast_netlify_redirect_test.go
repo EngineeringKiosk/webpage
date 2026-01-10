@@ -2,6 +2,139 @@ package cmd
 
 import "testing"
 
+func TestRedirectExistence_BothExist(t *testing.T) {
+	tests := []struct {
+		name     string
+		input    RedirectExistence
+		expected bool
+	}{
+		{
+			name:     "both redirects exist",
+			input:    RedirectExistence{EpisodesRedirect: true, EpRedirect: true},
+			expected: true,
+		},
+		{
+			name:     "only episodes redirect exists",
+			input:    RedirectExistence{EpisodesRedirect: true, EpRedirect: false},
+			expected: false,
+		},
+		{
+			name:     "only ep redirect exists",
+			input:    RedirectExistence{EpisodesRedirect: false, EpRedirect: true},
+			expected: false,
+		},
+		{
+			name:     "neither redirect exists",
+			input:    RedirectExistence{EpisodesRedirect: false, EpRedirect: false},
+			expected: false,
+		},
+		{
+			name:     "zero value struct",
+			input:    RedirectExistence{},
+			expected: false,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := tt.input.BothExist()
+			if got != tt.expected {
+				t.Errorf("RedirectExistence%+v.BothExist() = %v, want %v", tt.input, got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestCheckBothRedirectsExist(t *testing.T) {
+	tests := []struct {
+		name              string
+		redirectExistence map[string]RedirectExistence
+		episodeNumber     string
+		expected          bool
+	}{
+		{
+			name: "episode has both redirects",
+			redirectExistence: map[string]RedirectExistence{
+				"42": {EpisodesRedirect: true, EpRedirect: true},
+			},
+			episodeNumber: "42",
+			expected:      true,
+		},
+		{
+			name: "episode has only episodes redirect",
+			redirectExistence: map[string]RedirectExistence{
+				"42": {EpisodesRedirect: true, EpRedirect: false},
+			},
+			episodeNumber: "42",
+			expected:      false,
+		},
+		{
+			name: "episode has only ep redirect",
+			redirectExistence: map[string]RedirectExistence{
+				"42": {EpisodesRedirect: false, EpRedirect: true},
+			},
+			episodeNumber: "42",
+			expected:      false,
+		},
+		{
+			name: "episode has neither redirect",
+			redirectExistence: map[string]RedirectExistence{
+				"42": {EpisodesRedirect: false, EpRedirect: false},
+			},
+			episodeNumber: "42",
+			expected:      false,
+		},
+		{
+			name: "episode not in map",
+			redirectExistence: map[string]RedirectExistence{
+				"1": {EpisodesRedirect: true, EpRedirect: true},
+			},
+			episodeNumber: "42",
+			expected:      false,
+		},
+		{
+			name:              "empty map",
+			redirectExistence: map[string]RedirectExistence{},
+			episodeNumber:     "42",
+			expected:          false,
+		},
+		{
+			name:              "nil map",
+			redirectExistence: nil,
+			episodeNumber:     "42",
+			expected:          false,
+		},
+		{
+			name: "multiple episodes with mixed states",
+			redirectExistence: map[string]RedirectExistence{
+				"1":   {EpisodesRedirect: true, EpRedirect: true},
+				"42":  {EpisodesRedirect: true, EpRedirect: false},
+				"100": {EpisodesRedirect: false, EpRedirect: true},
+				"200": {EpisodesRedirect: true, EpRedirect: true},
+			},
+			episodeNumber: "42",
+			expected:      false,
+		},
+		{
+			name: "episode 0",
+			redirectExistence: map[string]RedirectExistence{
+				"0": {EpisodesRedirect: true, EpRedirect: true},
+			},
+			episodeNumber: "0",
+			expected:      true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := CheckBothRedirectsExist(tt.redirectExistence, tt.episodeNumber)
+			if got != tt.expected {
+				t.Errorf("CheckBothRedirectsExist() = %v, want %v", got, tt.expected)
+			}
+		})
+	}
+}
+
 func TestExtractEpisodeNumber(t *testing.T) {
 	tests := []struct {
 		name       string
