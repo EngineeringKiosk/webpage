@@ -3,8 +3,6 @@ package episode
 import (
 	"fmt"
 	"os"
-	"path/filepath"
-	"strconv"
 	"strings"
 	"time"
 
@@ -168,42 +166,11 @@ func (e *Episode) GetFrontmatter() EpisodeFrontmatter {
 	return e.episodeFrontmatter
 }
 
-// getNumber extracts the episode number from the filename
-// leadingZero determines whether to return with leading zeros (e.g., "04" vs "4")
+// getNumber extracts the episode number from a podcast episode filename.
 //
-// TODO Cleanup this function together with GetEpisodeNumberFromFilename (it is nearly the same)
+// For proper usage, see GetEpisodeNumberFromFilename.
 func (e *Episode) getNumber(leadingZero bool) (string, error) {
-	filename := filepath.Base(e.fileName)
-	index := strings.Index(filename, "-")
-
-	var episodeNumber string
-
-	// Handle episodes starting with '-1' (negative episode numbers)
-	if index == 0 {
-		remainingFilename := filename[1:]
-		nextIndex := strings.Index(remainingFilename, "-")
-		if nextIndex == -1 {
-			return "", fmt.Errorf("invalid filename format: %s", filename)
-		}
-		episodeNumber = filename[0 : nextIndex+1]
-	} else if index == -1 {
-		return "", fmt.Errorf("invalid filename format: %s", filename)
-	} else {
-		episodeNumber = filename[0:index]
-	}
-
-	if !leadingZero {
-		episodeNumber = trimEpisodeNumber(episodeNumber)
-	} else {
-		// Pad with zeros for positive numbers
-		if !strings.HasPrefix(episodeNumber, "-") {
-			if num, err := strconv.Atoi(episodeNumber); err == nil && num < 10 {
-				episodeNumber = fmt.Sprintf("%02d", num)
-			}
-		}
-	}
-
-	return episodeNumber, nil
+	return GetEpisodeNumberFromFilename(e.fileName, leadingZero)
 }
 
 // trimEpisodeNumber removes leading zeros from episode number
