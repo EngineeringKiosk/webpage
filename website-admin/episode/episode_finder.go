@@ -9,8 +9,20 @@ import (
 	"github.com/EngineeringKiosk/website/website-admin/utils"
 )
 
-// GetEpisodeNumberFromFilename extracts the episode number from a filename
-// leadingZero determines whether to return with leading zeros
+// GetEpisodeNumberFromFilename extracts the episode number from a podcast episode filename.
+//
+// The function parses filenames in the format "{number}-{title}.{ext}" where the episode
+// number appears before the first dash. It handles both positive numbers (e.g., "01-title.md")
+// and negative numbers (e.g., "-1-title.md") for special episodes.
+//
+// The leadingZero parameter controls the output format:
+//   - When true, single-digit positive numbers are zero-padded (e.g., "01", "09")
+//   - When false, leading zeros are stripped (e.g., "1", "9")
+//
+// If filename contains a path, only the base filename is used for parsing.
+//
+// Returns an error if the filename format is invalid (no dash separator, or for
+// negative numbers, no second dash after the negative sign).
 func GetEpisodeNumberFromFilename(filename string, leadingZero bool) (string, error) {
 	filename = filepath.Base(filename)
 	index := strings.Index(filename, "-")

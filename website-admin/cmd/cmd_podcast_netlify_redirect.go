@@ -9,13 +9,9 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
 
+	"github.com/EngineeringKiosk/website/website-admin/episode"
 	"github.com/EngineeringKiosk/website/website-admin/utils"
 )
-
-// episodeNumberRegex matches episode numbers at the start of filenames.
-// It captures only digits (not dashes) to correctly handle filenames like "170-404-not-found.md"
-// where we want to extract "170", not "170-404".
-var episodeNumberRegex = regexp.MustCompile(`^(\d+)-`)
 
 // RedirectExistence tracks which redirect types exist for an episode.
 type RedirectExistence struct {
@@ -50,12 +46,16 @@ func CheckBothRedirectsExist(redirectExistence map[string]RedirectExistence, epi
 //   - "-1-special-episode.md" -> "", false
 //   - "invalid.md" -> "", false
 func ExtractEpisodeNumber(filename string) (string, bool) {
-	matches := episodeNumberRegex.FindStringSubmatch(filename)
-	if len(matches) < 2 {
+	// Use leadingZero=true to validate the episode number is numeric
+	episodeNumber, err := episode.GetEpisodeNumberFromFilename(filename, true)
+	if err != nil {
 		return "", false
 	}
 
-	episodeNumber := matches[1]
+	// Negative episode numbers should not match (e.g., "-1-special-episode.md")
+	if strings.HasPrefix(episodeNumber, "-") {
+		return "", false
+	}
 
 	// Remove leading zeros
 	episodeNumber = strings.TrimLeft(episodeNumber, "0")
