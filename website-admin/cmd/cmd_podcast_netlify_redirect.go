@@ -17,6 +17,28 @@ import (
 // where we want to extract "170", not "170-404".
 var episodeNumberRegex = regexp.MustCompile(`^(\d+)-`)
 
+// RedirectExistence tracks which redirect types exist for an episode.
+type RedirectExistence struct {
+	EpisodesRedirect bool // /episodes/{n} redirect exists
+	EpRedirect       bool // /ep{n} redirect exists
+}
+
+// BothExist returns true if both redirect types exist for the episode.
+func (r RedirectExistence) BothExist() bool {
+	return r.EpisodesRedirect && r.EpRedirect
+}
+
+// CheckBothRedirectsExist checks if both redirect types (/episodes/{n} and /ep{n})
+// exist for a given episode number in the redirect existence map.
+// Returns true only if both redirects are present.
+func CheckBothRedirectsExist(redirectExistence map[string]RedirectExistence, episodeNumber string) bool {
+	existence, found := redirectExistence[episodeNumber]
+	if !found {
+		return false
+	}
+	return existence.BothExist()
+}
+
 // ExtractEpisodeNumber extracts the episode number from a podcast episode filename.
 // It returns the episode number as a string with leading zeros removed.
 // If no valid episode number is found, it returns an empty string and false.
@@ -154,15 +176,26 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("failed to parse TOML file: %w", err)
 	}
 
-	// Build redirect map for easy lookup
-	redirectMap := make(map[string]Redirect)
-	redirectEpisodeNumberRegex := regexp.MustCompile(fmt.Sprintf(`^%s([-\d]*)$`, regexp.QuoteMeta(flagNetlifyRedirectRedirectPrefix)))
+	// Build redirect existence map for easy lookup
+	// Track both /episodes/{n} and /ep{n} redirects separately
+	redirectExistence := make(map[string]RedirectExistence)
+	episodesRedirectRegex := regexp.MustCompile(fmt.Sprintf(`^%s(\d+)$`, regexp.QuoteMeta(flagNetlifyRedirectRedirectPrefix)))
+	epRedirectRegex := regexp.MustCompile(`^/ep(\d+)$`)
 
 	for _, redirect := range config.Redirects {
-		matches := redirectEpisodeNumberRegex.FindStringSubmatch(redirect.From)
-		if len(matches) > 1 {
+		// Check for /episodes/{n} pattern
+		if matches := episodesRedirectRegex.FindStringSubmatch(redirect.From); len(matches) > 1 {
 			episodeNumber := matches[1]
-			redirectMap[episodeNumber] = redirect
+			existence := redirectExistence[episodeNumber]
+			existence.EpisodesRedirect = true
+			redirectExistence[episodeNumber] = existence
+		}
+		// Check for /ep{n} pattern
+		if matches := epRedirectRegex.FindStringSubmatch(redirect.From); len(matches) > 1 {
+			episodeNumber := matches[1]
+			existence := redirectExistence[episodeNumber]
+			existence.EpRedirect = true
+			redirectExistence[episodeNumber] = existence
 		}
 	}
 
@@ -185,40 +218,49 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 			continue
 		}
 
-		// Check if redirect already exists
-		// TODO Fix bug: This check currently only works for /episodes/{n} redirects, not /ep{n} (or vice versa)
-		// It only checks if one of those exists, not both
-		if _, exists := redirectMap[episodeNumber]; exists {
+		// Check if both redirects already exist
+		if CheckBothRedirectsExist(redirectExistence, episodeNumber) {
 			logger.Debug().
 				Str("episodeNumber", episodeNumber).
-				Msg("Skipping redirect processing for episode: Redirect exists already")
+				Msg("Skipping redirect processing for episode: Both redirects exist already")
 			continue
 		}
 
-		logger.Info().
-			Str("episodeNumber", episodeNumber).
-			Msg("Processing redirect for episode")
-
 		// Build episode file path (without .md extension)
 		episodeFile := strings.TrimSuffix(episodeName, ".md")
+		existence := redirectExistence[episodeNumber]
 
-		// Add /episodes/{n} redirect
-		newRedirectShortlink := Redirect{
-			From:   fmt.Sprintf("%s%s", flagNetlifyRedirectRedirectPrefix, episodeNumber),
-			To:     fmt.Sprintf("/podcast/episode/%s?pkn=shortlink", episodeFile),
-			Status: 301,
-			Force:  true,
-		}
-		config.Redirects = append(config.Redirects, newRedirectShortlink)
+		// Add /episodes/{n} redirect if it doesn't exist
+		if !existence.EpisodesRedirect {
+			logger.Info().
+				Str("episodeNumber", episodeNumber).
+				Str("redirectType", "episodes").
+				Msg("Adding redirect for episode")
 
-		// Add /ep{n} redirect
-		newRedirectEpisodeShortlink := Redirect{
-			From:   fmt.Sprintf("/ep%s", episodeNumber),
-			To:     fmt.Sprintf("/podcast/episode/%s?pkn=shortlink", episodeFile),
-			Status: 301,
-			Force:  true,
+			newRedirectShortlink := Redirect{
+				From:   fmt.Sprintf("%s%s", flagNetlifyRedirectRedirectPrefix, episodeNumber),
+				To:     fmt.Sprintf("/podcast/episode/%s?pkn=shortlink", episodeFile),
+				Status: 301,
+				Force:  true,
+			}
+			config.Redirects = append(config.Redirects, newRedirectShortlink)
 		}
-		config.Redirects = append(config.Redirects, newRedirectEpisodeShortlink)
+
+		// Add /ep{n} redirect if it doesn't exist
+		if !existence.EpRedirect {
+			logger.Info().
+				Str("episodeNumber", episodeNumber).
+				Str("redirectType", "ep").
+				Msg("Adding redirect for episode")
+
+			newRedirectEpisodeShortlink := Redirect{
+				From:   fmt.Sprintf("/ep%s", episodeNumber),
+				To:     fmt.Sprintf("/podcast/episode/%s?pkn=shortlink", episodeFile),
+				Status: 301,
+				Force:  true,
+			}
+			config.Redirects = append(config.Redirects, newRedirectEpisodeShortlink)
+		}
 	}
 
 	// Write updated TOML file
