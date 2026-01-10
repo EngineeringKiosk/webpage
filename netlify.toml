@@ -3322,6 +3322,12 @@
   status = 301
   force = true
 
+[[redirects]
+  from = "/fosdem"
+  to = "https://cloud.inlupus.at/apps/polls/s/vwTecUlW"
+  status = 302 
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
