@@ -12,6 +12,40 @@ import (
 	"github.com/EngineeringKiosk/website/website-admin/utils"
 )
 
+// episodeNumberRegex matches episode numbers at the start of filenames.
+// It captures only digits (not dashes) to correctly handle filenames like "170-404-not-found.md"
+// where we want to extract "170", not "170-404".
+var episodeNumberRegex = regexp.MustCompile(`^(\d+)-`)
+
+// ExtractEpisodeNumber extracts the episode number from a podcast episode filename.
+// It returns the episode number as a string with leading zeros removed.
+// If no valid episode number is found, it returns an empty string and false.
+//
+// Examples:
+//   - "42-clean-code.md" -> "42", true
+//   - "042-clean-code.md" -> "42", true
+//   - "170-404-not-found.md" -> "170", true
+//   - "-1-special-episode.md" -> "", false
+//   - "invalid.md" -> "", false
+func ExtractEpisodeNumber(filename string) (string, bool) {
+	matches := episodeNumberRegex.FindStringSubmatch(filename)
+	if len(matches) < 2 {
+		return "", false
+	}
+
+	episodeNumber := matches[1]
+
+	// Remove leading zeros
+	episodeNumber = strings.TrimLeft(episodeNumber, "0")
+
+	// Handle the case where the number was all zeros (e.g., "00-episode.md")
+	if episodeNumber == "" {
+		episodeNumber = "0"
+	}
+
+	return episodeNumber, true
+}
+
 // NetlifyConfig represents the netlify.toml structure
 type NetlifyConfig struct {
 	Redirects []Redirect `toml:"redirects"`
@@ -138,7 +172,6 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("failed to read episodes directory: %w", err)
 	}
 
-	episodeNumberRegex := regexp.MustCompile(`^([-\d]*)-`)
 	for _, entry := range entries {
 		if entry.IsDir() || !strings.HasSuffix(entry.Name(), ".md") {
 			continue
@@ -146,18 +179,11 @@ func RunPodcastNetlifyRedirectCmd(cmd *cobra.Command, args []string) error {
 
 		episodeName := entry.Name()
 
-		// Extract episode number
-		// TODO Fix bug, there is an episode with number episodeNumber=170-404
-		// I would expect only to get 170, not 170-404
-		matches := episodeNumberRegex.FindStringSubmatch(episodeName)
-		if len(matches) < 2 {
+		// Extract episode number from filename
+		episodeNumber, ok := ExtractEpisodeNumber(episodeName)
+		if !ok {
 			continue
 		}
-
-		episodeNumber := matches[1]
-
-		// Remove leading zero if present
-		episodeNumber = strings.TrimPrefix(episodeNumber, "0")
 
 		// Check if redirect already exists
 		// TODO Fix bug: This check currently only works for /episodes/{n} redirects, not /ep{n} (or vice versa)
