@@ -108,6 +108,27 @@ func TestGetEpisodeNumberFromFilename(t *testing.T) {
 			want:        "101",
 			wantErr:     false,
 		},
+		{
+			name:        "episode 131 with special characters in title",
+			filename:    "131-equity-in-tech-startups-mehr-als-nur-gehalt-mit-philipp-pip-klöckner.md",
+			leadingZero: false,
+			want:        "131",
+			wantErr:     false,
+		},
+		{
+			name:        "episode 170 with 404 in title (bug fix case)",
+			filename:    "170-404-not-found.md",
+			leadingZero: false,
+			want:        "170",
+			wantErr:     false,
+		},
+		{
+			name:        "episode 209 high episode number",
+			filename:    "209-in-der-besenkammer-jenseits-der-cloud-mittelstands-it-mit-patrick-terlisten.md",
+			leadingZero: false,
+			want:        "209",
+			wantErr:     false,
+		},
 
 		// Real episode filenames - negative episode number
 		{
@@ -190,6 +211,20 @@ func TestGetEpisodeNumberFromFilename(t *testing.T) {
 			name:        "non-numeric prefix with dash",
 			filename:    "abc-episode-title.md",
 			leadingZero: true,
+			want:        "",
+			wantErr:     true,
+		},
+		{
+			name:        "filename with only text and dash",
+			filename:    "wrap-up-special.md",
+			leadingZero: true,
+			want:        "",
+			wantErr:     true,
+		},
+		{
+			name:        "filename without episode number pattern",
+			filename:    "invalid.md",
+			leadingZero: false,
 			want:        "",
 			wantErr:     true,
 		},
