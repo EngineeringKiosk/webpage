@@ -13,7 +13,7 @@ export interface Props {
 
 import { URLify } from '../scripts/urlify.js';
 import { formatDate } from '../scripts/date.js';
-import { cutText } from '../scripts/strings.js';
+import { cutText, cleanDescription } from '../scripts/strings.js';
 
 const { episode, descriptionChars } = Astro.props;
 const data = episode.data;
@@ -21,9 +21,9 @@ const data = episode.data;
 let tags = data.tags.map((element) => URLify(element));
 
 // Cut description text
-let description = data.description;
+let description = cleanDescription(data.description);
 if (descriptionChars > 0) {
-	description = cutText(data.description, descriptionChars);
+	description = cutText(description, descriptionChars);
 }
 if (descriptionChars < 0) {
 	description = '';
