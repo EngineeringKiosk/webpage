@@ -12,10 +12,10 @@ const { meetup } = Astro.props;
 const meetupId = `meetup-${formatDateWithoutWeekday(meetup.date, 'en-GB').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`;
 
 ---
-<div class="flex flex-col md:flex-row border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer bg-white hover:bg-yellow-50" onclick={`window.location.href='#${meetupId}'`}>
+<div class="flex flex-col md:flex-row border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-all cursor-pointer bg-white hover:bg-yellow-50" onclick={`window.location.href='#${meetupId}'`}>
   <div class="flex flex-col md:flex-row flex-grow">
     <!-- Date & Host Column -->
-    <div class="w-full md:w-48 lg:w-64 p-4 md:border-r">
+    <div class="w-full md:w-48 lg:w-64 p-4 md:border-r md:border-r-gray-200">
       <div class="text-sm font-medium text-yellow-500 mb-4">
         {formatDateWithoutWeekday(meetup.date, 'en-GB')}
       </div>
