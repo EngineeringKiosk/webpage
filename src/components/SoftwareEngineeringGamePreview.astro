@@ -34,7 +34,7 @@ const nameId = URLify(game.data.name);
 					))
 				}
 
-				<h2 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">
+				<h2 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">
 					<a href={game.data.website} class="hover:underline hover:text-yellow-500" title={`Website von ${game.data.name}`}>
 						{game.data.name}
 					</a>
@@ -92,7 +92,7 @@ const nameId = URLify(game.data.name);
 			<div class="w-full md:w-4/12 px-4">
 				<div class="relative mx-auto md:mr-0 max-w-max">
 					<a href={game.data.website} title={`Website von ${game.data.name}`}>
-						<Image class="rounded-3xl" src={game.data.image} alt={`Spiel ${game.data.name}`} title={`Spiel ${game.data.name}`} />
+						<Image class="rounded-2xl" src={game.data.image} alt={`Spiel ${game.data.name}`} title={`Spiel ${game.data.name}`} />
 					</a>
 				</div>
 			</div>

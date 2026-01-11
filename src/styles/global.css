@@ -1,25 +1,24 @@
-body {
-	font-family: 'Spectral', serif;
-	line-height: 1.4;
-}
+@import 'tailwindcss';
+@import './theme.css';
 
-p {
-	line-height: 2;
-}
+@layer base {
+	body {
+		@apply text-gray-700;
+	}
 
-img {
-	max-width: 100%;
-	height: auto;
-}
+	p {
+		@apply leading-loose;
+	}
 
-.wrapper {
-	max-width: 60rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
+	img {
+		@apply max-w-full h-auto;
+	}
 
-.hostpreview .description a {
-	@apply text-yellow-500;
+	.wrapper {
+		@apply max-w-[60rem] mx-auto px-[2rem];
+	}
+
+	.hostpreview .description a {
+		@apply text-yellow-500;
+	}
 }

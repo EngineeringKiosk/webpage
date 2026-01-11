@@ -32,7 +32,7 @@ import testimonialMediaLab from "../images/partners/medialab_alex.jpg";
 					<div class="flex flex-wrap mb-24 lg:mb-18 justify-between items-center">
 						<div class="w-full">
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Werbung</span>
-							<h1 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tighter leading-tight">Perfekte Zielgruppe für deine Botschaft</h1>
+							<h1 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Perfekte Zielgruppe für deine Botschaft</h1>
 							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
 								Die ideale Zielgruppe für deine Werbung umfasst hochqualifizierte Fachleute aus dem Softwareentwicklungs- und Technikbereich, einschließlich:
 							</p>
@@ -54,6 +54,8 @@ import testimonialMediaLab from "../images/partners/medialab_alex.jpg";
 			</section>
 
 			<style type="text/css">
+				@reference "../styles/global.css";
+
 				.partner-image {
 					@apply h-20 w-auto mx-0 my-8 sm:mx-8 max-w-full block sm:inline-block;
 				}
@@ -64,7 +66,7 @@ import testimonialMediaLab from "../images/partners/medialab_alex.jpg";
 					<div class="flex flex-wrap mb-24 lg:mb-18 justify-between items-center">
 						<div class="w-full">
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">In guter Gesellschaft</span>
-							<h2 class="mb-8 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tighter leading-tight">Auszug Werbepartner</h2>
+							<h2 class="mb-8 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Auszug Werbepartner</h2>
 							<div class="max-w-full">
 								<Image class="partner-image" src={(await import(`../images/partners/handelsblatt.png`)).default} alt="Handelsblatt" title="Handelsblatt" />
 								<Image class="partner-image" src={(await import(`../images/partners/trivago.svg`)).default} alt="trivago" title="trivago" />
@@ -104,7 +106,7 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 					<div class="flex flex-wrap mb-24 lg:mb-18 justify-between items-center">
 						<div class="w-full">
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Beispiele</span>
-							<h2 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tighter leading-tight">Host-Read Werbung</h2>
+							<h2 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Host-Read Werbung</h2>
 									<div class="flex flex-wrap lg:items-center -mx-4 my-8">
 										<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 											<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
@@ -114,10 +116,10 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 											</div>
 										</div>
 										<div class="w-full md:w-4/5 px-4">
-											<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+											<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">
 												Episode 86
 											</span>
-											<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tighter">
+											<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tight">
 												<a href={`/podcast/episode/${episode86.slug}/#t=908`} class="hover:underline">
 													Open Source als Herz einer Firma mit Nextcloud Gründer Frank Karlitschek
 												</a>
@@ -135,10 +137,10 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 											</div>
 										</div>
 										<div class="w-full md:w-4/5 px-4">
-											<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">
+											<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">
 												Episode 85
 											</span>
-											<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tighter">
+											<h1 class="mb-8 text-3xl md:text-4xl leading-tight text-darkCoolGray900 font-bold tracking-tight">
 												<a href={`/podcast/episode/${episode85.slug}/#t=699`} class="hover:underline">
 													Von Entwicklerin zur Engineering Managerin - Erfahrungen und Learnings mit Isabelle Glasmacher
 												</a>

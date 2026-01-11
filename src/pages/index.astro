@@ -138,7 +138,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 									</a>
 								))
 							}
-							<h1 class="mb-8 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight text-white font-bold tracking-tighter">
+							<h1 class="mb-8 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight text-white font-bold tracking-tight">
 								<a href={`/podcast/episode/${episode.slug}/`} title={`Engineering Kiosk Episode ${episode.data.title}`}>
 									{episode.data.title}
 								</a>
@@ -195,6 +195,8 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 			</section>
 
 			<style>
+				@reference "../styles/global.css";
+
 				.review-box {
 					@apply w-full px-4 mb-8 min-w-full;
 				}
@@ -209,7 +211,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 
 			<section id="kaffee-support" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
-					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tighter">Supporte uns mit einem Kaffee ...</h3>
+					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Supporte uns mit einem Kaffee ...</h3>
 					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="https://buymeacoffee.com/engineeringkiosk">
 						Buy Me A Coffee ☕
 					</a>
@@ -220,7 +222,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 
 			<section id="alle-episoden" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
-					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tighter">Lust auf mehr?</h3>
+					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Lust auf mehr?</h3>
 					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="/podcast/">
 						Alle Podcast Episoden anzeigen
 					</a>
@@ -235,7 +237,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 				<div class="container px-4 mx-auto">
 					<div class="mb-16 text-center">
 						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl"> Team</span>
-						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Die Gesichter hinter'm Engineering Kiosk.</h3>
+						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Die Gesichter hinter'm Engineering Kiosk.</h3>
 						<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Wer macht's? Wer brabbelt da die ganze Zeit? Wer hält den Kiosk am Laufem?</p>
 					</div>
 
@@ -269,7 +271,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 
 			<section id="jetzt-folgen" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
-					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tighter">Jetzt hören auf...</h3>
+					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Jetzt hören auf...</h3>
 					<div class="flex flex-wrap justify-center px-10 mt-8">
 						<div class="m-4">
 							<a class="flex items-center" href={podcastInfo.platformLinks.appleMusic} title="Engineering Kiosk bei Apple Podcasts">

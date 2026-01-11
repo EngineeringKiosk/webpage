@@ -146,7 +146,7 @@ const sliderImages = await Promise.all(
 						<div class="container px-4 mx-auto w-full md:w-1/2">
 							<div class="mb-16 text-center">
 								<a name="register"></a>
-								<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Please, let us know that you are coming</h3>
+								<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight	">Please, let us know that you are coming</h3>
 								<div class="leading-relaxed">
 									Please, for better planning and organization, let us know that you are coming. <br />
 									It is free and you can cancel your registration at any time.<br />
@@ -197,7 +197,7 @@ const sliderImages = await Promise.all(
 										<p class="hidden text-lg mt-8" id="formMessage"></p>
 										<input type="hidden" name="eventId" value={nextMeetup.eventId} />
 										<input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
-										<input class="m-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xsm" name="regId" placeholder="Your email address" />
+										<input class="bg-whitem-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xs" name="regId" placeholder="Your email address" />
 										<input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value=`Register for ${dateString}` />
 										<br />
 										<div class="block sm:inline-block"><input type="checkbox" name="register" value="true" checked="checked" class="m-2" disabled/> Register for next meetup</div>
@@ -213,7 +213,7 @@ const sliderImages = await Promise.all(
 							<div class="container px-4 mx-auto w-full md:w-1/2">
 								<div class="mb-16 text-center">
 									<a name="register"></a>
-									<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Registration is closed</h3>
+									<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Registration is closed</h3>
 									<div class="leading-relaxed">
 										We have reached the maximum number of registrations for the event on {dateString}.<br />
 										Please do not show up if you have not registered beforehand as the venue has limited capacity due to safety regulations.<br />
