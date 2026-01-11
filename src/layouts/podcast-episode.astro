@@ -383,7 +383,7 @@ const html = (await Astro.slots.render('default'))
 								<h3 class="mb-4 text-2xl md:text-3xl font-semibold text-coolGray-800" id="headline-content">Shownotes / Worum geht's?</h3>
 								<article class="podcast_episode_content_slot">
 									<Fragment set:html={html} />
-									<PodcastEpisodeTranscript utterances={transcriptionUtterances} />
+									<PodcastEpisodeTranscript utterances={transcriptionUtterances} hideSpeakerInTranscript={frontmatter.hideSpeakerInTranscript ?? false} />
 								</article>
 							</div>
 						</div>
