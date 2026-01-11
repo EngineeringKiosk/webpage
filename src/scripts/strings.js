@@ -9,3 +9,12 @@ export function cutText(input, len) {
 
 	return text;
 }
+
+export function cleanDescription(input) {
+	const cutMarker = 'Unsere aktuellen Werbepartner';
+	const index = input.indexOf(cutMarker);
+	if (index !== -1) {
+		return input.substring(0, index).trim();
+	}
+	return input;
+}
