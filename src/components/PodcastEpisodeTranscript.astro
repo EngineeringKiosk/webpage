@@ -28,7 +28,8 @@ const { utterances, hideSpeakerInTranscript = false } = Astro.props;
  .utterance {
 		@apply text-base md:text-lg text-coolGray-500 leading-relaxed p-2 hover:bg-gray-100 mb-1;
 		h4 { @apply font-bold mb-2;	}
-		span.time { @apply font-normal ml-2 text-base; }
+		span.speaker { @apply mr-2; }
+		span.time { @apply font-normal text-base; }
 		p { @apply m-0; }
 
 		&.highlight {
