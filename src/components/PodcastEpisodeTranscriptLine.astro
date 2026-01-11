@@ -1,11 +1,12 @@
 ---
 export interface Props {
 	utterance: object;
+	hideSpeakerName?: boolean;
 }
 
 import { millisecondsToHumanTimestamp } from '../scripts/date.js';
 
-const { utterance } = Astro.props;
+const { utterance, hideSpeakerName = false } = Astro.props;
 
 // utterance.{start|end} is in milliseconds
 const startTime = millisecondsToHumanTimestamp(utterance.start);
@@ -14,7 +15,7 @@ const endTime = millisecondsToHumanTimestamp(utterance.end);
 const startInSeconds = Math.floor(utterance.start / 1000);
 ---
 <div data-trans-start={startInSeconds} class="utterance">
-	<h4>{utterance.speaker}
+	<h4>{!hideSpeakerName && utterance.speaker}
 		<span class="time">({startTime} - {endTime})</span>
 		<a href=`#t=${startInSeconds}` onclick=`showSharingLink(${startInSeconds}, event)` title="Diese Transkriptstelle teilen">
 			<img src="/images/elements/share-arrow.svg" alt="Teilen"/>

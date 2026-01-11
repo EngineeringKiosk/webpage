@@ -3,9 +3,10 @@ import PodcastEpisodeTranscriptLine from './PodcastEpisodeTranscriptLine.astro'
 
 export interface Props {
 	utterances: object[]
+	hideSpeakerInTranscript?: boolean
 }
 
-const { utterances } = Astro.props;
+const { utterances, hideSpeakerInTranscript = false } = Astro.props;
 
 ---
 <style is:global>
@@ -137,7 +138,7 @@ const { utterances } = Astro.props;
 					<h3 class="mb-4 text-2xl md:text-3xl font-semibold text-coolGray-800" id="transcript">Transkript</h3>
 					<div class="text-gray-500 text-xs mb-4">Das Transkript wurde automatisiert per Speech-to-Text erstellt und kann daher Fehler enthalten.</div>
 					{utterances.map((utterance, i) => (
-							<PodcastEpisodeTranscriptLine utterance={utterance} />
+							<PodcastEpisodeTranscriptLine utterance={utterance} hideSpeakerName={hideSpeakerInTranscript} />
 					))}
 			</div>
 			<div id="showFullTranscriptButton" class="flex justify-center">
