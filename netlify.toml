@@ -3316,6 +3316,18 @@
   status = 302
   force = true
 
+[[redirects]]
+  from = "/episodes/250"
+  to = "/podcast/episode/250-tech-leadership-skalieren-was-ein-cto-wirklich-tun-muss-mit-philipp-deutscher?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep250"
+  to = "/podcast/episode/250-tech-leadership-skalieren-was-ein-cto-wirklich-tun-muss-mit-philipp-deutscher?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
