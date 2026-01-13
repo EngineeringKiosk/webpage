@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/0a919738-24e0-496e-8e18-22312e6d0f82/engineering-kiosk-250-tech-leadership-skalieren-was-ein-cto-wirklich-tun-muss-mit-philipp-deutscher
 apple_podcasts: https://podcasts.apple.com/us/podcast/250-tech-leadership-skalieren-was-ein-cto-wirklich/id1603082924?i=1000744921746&uo=4
 audio: https://audio1.redcircle.com/episodes/c3beabe4-1b5f-4b6f-8d91-ac9fd025d228/stream.mp3
 chapter:
