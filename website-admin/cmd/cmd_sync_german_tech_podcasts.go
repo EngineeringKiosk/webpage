@@ -205,9 +205,9 @@ func copyAndTransformGermanTechPodcastsJSONFile(srcPath, dstPath string) error {
 		return fmt.Errorf("failed to parse JSON: %w", err)
 	}
 
-	// Transform image path to relative
+	// Transform image path to relative and ensure lowercase
 	if imagePath, ok := content["image"].(string); ok {
-		content["image"] = "./" + filepath.Base(imagePath)
+		content["image"] = "./" + strings.ToLower(filepath.Base(imagePath))
 	}
 
 	// Write transformed JSON
@@ -249,7 +249,7 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 		}
 
 		srcPath := filepath.Join(sourceDir, entry.Name())
-		dstPath := filepath.Join(destDir, entry.Name())
+		dstPath := filepath.Join(destDir, strings.ToLower(entry.Name()))
 
 		logger.Debug().
 			Str("src", srcPath).
