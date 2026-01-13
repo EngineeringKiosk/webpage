@@ -266,11 +266,24 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 			continue
 		}
 		tmpPath := tmpFile.Name()
-		tmpFile.Close()
+		err = tmpFile.Close()
+		if err != nil {
+			logger.Warn().
+				Err(err).
+				Str("file", tmpPath).
+				Msg("Failed to close temp file")
+			continue
+		}
 
 		// Copy to temp location
 		if err := copyFile(srcPath, tmpPath); err != nil {
-			os.Remove(tmpPath)
+			errRemove := os.Remove(tmpPath)
+			if errRemove != nil {
+				logger.Warn().
+					Err(errRemove).
+					Str("file", tmpPath).
+					Msg("Failed to remove temp file after copy failure")
+			}
 			logger.Warn().
 				Err(err).
 				Str("file", entry.Name()).
@@ -281,7 +294,13 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 		// Check image dimensions to validate the image and determine if resizing is needed
 		width, height, err := utils.GetImageDimensions(tmpPath)
 		if err != nil {
-			os.Remove(tmpPath)
+			errRemove := os.Remove(tmpPath)
+			if errRemove != nil {
+				logger.Warn().
+					Err(errRemove).
+					Str("file", tmpPath).
+					Msg("Failed to remove temp file after reading image dimensions failure")
+			}
 			logger.Warn().
 				Err(err).
 				Str("file", entry.Name()).
@@ -299,7 +318,13 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 				Msg("Resizing image")
 
 			if err := utils.ResizeImage(tmpPath, germanTechPodcastsMaxImageSize, germanTechPodcastsMaxImageSize); err != nil {
-				os.Remove(tmpPath)
+				errRemove := os.Remove(tmpPath)
+				if errRemove != nil {
+					logger.Warn().
+						Err(errRemove).
+						Str("file", tmpPath).
+						Msg("Failed to remove temp file after resize failure")
+				}
 				logger.Warn().
 					Err(err).
 					Str("file", entry.Name()).
@@ -310,7 +335,13 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 
 		// Success - copy to final destination
 		if err := copyFile(tmpPath, dstPath); err != nil {
-			os.Remove(tmpPath)
+			errRemove := os.Remove(tmpPath)
+			if errRemove != nil {
+				logger.Warn().
+					Err(errRemove).
+					Str("file", tmpPath).
+					Msg("Failed to remove temp file after copy failure")
+			}
 			logger.Warn().
 				Err(err).
 				Str("file", entry.Name()).
@@ -318,7 +349,13 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 			continue
 		}
 
-		os.Remove(tmpPath)
+		errRemove := os.Remove(tmpPath)
+		if errRemove != nil {
+			logger.Warn().
+				Err(errRemove).
+				Str("file", tmpPath).
+				Msg("Failed to remove temp file after successful copy")
+		}
 		logger.Info().
 			Str("file", entry.Name()).
 			Msg("Copied image file")
