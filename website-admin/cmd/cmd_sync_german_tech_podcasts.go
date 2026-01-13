@@ -254,24 +254,43 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 		logger.Debug().
 			Str("src", srcPath).
 			Str("dst", dstPath).
-			Msg("Copying image file")
+			Msg("Processing image file")
 
-		if err := copyFile(srcPath, dstPath); err != nil {
+		// Create temp file for processing
+		tmpFile, err := os.CreateTemp("", "podcast-image-*"+filepath.Ext(entry.Name()))
+		if err != nil {
 			logger.Warn().
 				Err(err).
 				Str("file", entry.Name()).
-				Msg("Failed to copy image file")
+				Msg("Failed to create temp file, skipping")
+			continue
+		}
+		tmpPath := tmpFile.Name()
+		tmpFile.Close()
+
+		// Copy to temp location
+		if err := copyFile(srcPath, tmpPath); err != nil {
+			os.Remove(tmpPath)
+			logger.Warn().
+				Err(err).
+				Str("file", entry.Name()).
+				Msg("Failed to copy image to temp, skipping")
 			continue
 		}
 
-		// Check if image needs resizing
-		width, height, err := utils.GetImageDimensions(dstPath)
+		// Check image dimensions to validate the image and determine if resizing is needed
+		width, height, err := utils.GetImageDimensions(tmpPath)
 		if err != nil {
-			logger.Debug().
+			os.Remove(tmpPath)
+			logger.Warn().
 				Err(err).
 				Str("file", entry.Name()).
-				Msg("Could not get image dimensions, skipping resize")
-		} else if width > germanTechPodcastsMaxImageSize && height > germanTechPodcastsMaxImageSize {
+				Msg("Failed to read image dimensions, skipping (image may be corrupted)")
+			continue
+		}
+
+		// Resize if needed (only if both dimensions exceed max)
+		if width > germanTechPodcastsMaxImageSize && height > germanTechPodcastsMaxImageSize {
 			logger.Info().
 				Str("file", entry.Name()).
 				Int("originalWidth", width).
@@ -279,14 +298,27 @@ func syncGermanTechPodcastsImageFiles(logger zerolog.Logger, sourceDir, destDir 
 				Int("newSize", germanTechPodcastsMaxImageSize).
 				Msg("Resizing image")
 
-			if err := utils.ResizeImage(dstPath, germanTechPodcastsMaxImageSize, germanTechPodcastsMaxImageSize); err != nil {
+			if err := utils.ResizeImage(tmpPath, germanTechPodcastsMaxImageSize, germanTechPodcastsMaxImageSize); err != nil {
+				os.Remove(tmpPath)
 				logger.Warn().
 					Err(err).
 					Str("file", entry.Name()).
-					Msg("Failed to resize image")
+					Msg("Failed to resize image, skipping (image may be corrupted)")
+				continue
 			}
 		}
 
+		// Success - copy to final destination
+		if err := copyFile(tmpPath, dstPath); err != nil {
+			os.Remove(tmpPath)
+			logger.Warn().
+				Err(err).
+				Str("file", entry.Name()).
+				Msg("Failed to copy image to destination")
+			continue
+		}
+
+		os.Remove(tmpPath)
 		logger.Info().
 			Str("file", entry.Name()).
 			Msg("Copied image file")
