@@ -1,0 +1,585 @@
+{
+    "confidence": 0.9635074,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4475,
+    "utterances": [
+        {
+            "start": 3440,
+            "end": 182260,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Cures Podcast. Heute geht es mal wieder um das Thema Tech Leadership und zwar von ganz oben. Wir sprechen über die Rolle des ctos, ausgesprochen Chief Technology Officer. Er bzw. Sie ist die oberste Führungskraft, die für die gesamte Technologie und Innovationsstrategie eines Unternehmens verantwortlich ist. Doch was ist ein CTO eigentlich? Was macht die Rolle aus? Welche Aufgaben hat man als CTO? Ist jede CTO Rolle gleich oder gibt es Unterschiede? Existieren gegebenenfalls sogar CTO Archetypen? Um diese Fragen zu beantworten, ist Philipp Deutscher bei uns zu Gast. Er ist als CTO Coach und Fractional CTO unterwegs und hat bereits einige CTO Rollen besetzt. Mit ihm klären wir auch provokante Fragen wie zum Ist der CTO das schwächste C Level Oder ist der CTO der Code bzw. Tech Monkey vom CEO Oder oder andersherum ist CTO vielleicht die schwierigste Rolle im C Level? Wir kümmern uns aber auch um das Thema Karriere, zum Beispiel wenn du als Entwicklerin dich zum CTO entwickeln möchtest. Dabei geht es um die Schwierigkeiten beim Übergang zum CTO, wieso der beste Entwickler seltenst der beste CTO ist und wie ich aktiv steuern kann bzw. Was kann ich tun, um mich für die Rolle des ctos zu positionieren. Wir springen rein, los geht's. Viele von uns werden, ich sag mal, in einem Unternehmen arbeiten, wo auch eine Geschäftsführung tätig ist. Im deutschen Mittelstand nennt man das vielleicht auch noch Geschäftsführung oder Geschäftsführer oder Geschäftsführerin. Und in modernen Unternehmen nennt man sowas CEO, COO, CMO und so weiter und so fort. Da gibt es aber auch die Rolle des Chief Technology Officers und auf Deutsch würde man sagen der Technikvorstand, der technische Leiter. Und je nach Art und Größe des Unternehmens spielt Technologie vielleicht auch eine andere Rolle und man hat vielleicht einen CTO oder man hat auch keinen CTO, weil dann die Aufgabe von einem CEO übernommen wird. Und auch ob Technologie in dem Unternehmen jetzt nur eine Kostenstelle ist oder wirklich ein Innovationstreiber, spielt auch eine große Rolle, in was für einen Standpunkt dann der CTO eigentlich hat und wie die Rolle ausgelebt wird. Und in meiner Karriere habe ich schon mit mehreren ctos zusammengearbeitet und die haben auch unterschiedliche Aufgaben gehabt. Vielleicht wurde der CTO mal viel CTO genannt, was dann in der Regel oft irgendwie für den Vertrieb oft angewandt wird. Dann hatte ich schon mal Berührung mit einem Interims bzw. Fractional CTO. Das war dann ein CTO, der nur für eine kurze Zeit da war. Auf jeden Fall gibt es da eine sehr, sehr breite Spanne in Bezug auf die Rolle der Aufgaben, der Verantwortung. Aber ich habe auch schon mit Leuten zusammengearbeitet, die sehr tief in der Architektur drin waren und auch ein Steering Komitee gegründet haben und so weiter und so fort. Also ich selbst war noch nie CTO und ich habe noch nicht ganz herausgefunden, welche weiteren CTO Rollen es noch so gibt."
+        },
+        {
+            "start": 182260,
+            "end": 188180,
+            "speaker": "B",
+            "text": "Aber das heißt, wir sind heute da, um dir deine Fragen zu beantworten. Andi, seht es richtig. Um dir endlich die Erleuchtung zu bringen."
+        },
+        {
+            "start": 188260,
+            "end": 206180,
+            "speaker": "A",
+            "text": "Von Themen, wo ich relativ wenig Ahnung habe, strecke ich immer meine Fühler aus und versuche Leute zu finden, die mir meine Fragen beantworten können. Richtig. Und heute haben wir dies wieder geschafft und da bin ich sehr stolz drauf. Wir haben den Philipp Deutsche angefragt, ob er nicht Lust hätte auf ein Interview mit uns. Deswegen begrüße ich ganz herzlich. Hallo Philipp."
+        },
+        {
+            "start": 206180,
+            "end": 208480,
+            "speaker": "C",
+            "text": "Hallo. Schön, dass ich da sein darf und danke für die Einladung."
+        },
+        {
+            "start": 208480,
+            "end": 273730,
+            "speaker": "A",
+            "text": "Philipp, jetzt habe ich deinen Namen schon genannt, in der Hoffnung, dass dich bereits jeder kennt und dich nicht vorstellen muss. Dennoch tue ich dies trotzdem. Du bist wohnhaft in einer großen norddeutschen Hafenstadt in Hamburg. Meines Wissens nach. Laut deiner Webseite bist du beruflich unterwegs als CTO Coach und als externer CTO. Du positionierst dich als Fractional oder Interim CTO. Und jetzt finde ich es einen sehr schönen Begriff, den ich bei dir gelesen habe. CTO as a Service. Du kommst selbst aus der Technik, dein Background ist Softwareentwicklung und Stationen in deiner Karriere waren unter anderem Tipico als Director IT Operations, wo du für den Aufbau und Skalierung des IT Betriebs und DevOps und der Platform Engineering verantwortlich warst. Du warst mal bei teamviewer und du hast diverse Stationen als Fractional und Interim CTO besucht. Inzwischen bist du selbstständig und bist unter anderem Executive Sparring Partner für Tech Führungskräfte und CEOs und auch als Fractional Interims CTO unterwegs. Und und was mich auch sehr Vielen Dank dafür, dass du selbst Podcaster bist und auch dein Wissen als CTO bzw. In einem Interview Podcast mit anderen ctos auch teilst."
+        },
+        {
+            "start": 273730,
+            "end": 275090,
+            "speaker": "B",
+            "text": "Wie heißt der Podcast?"
+        },
+        {
+            "start": 275090,
+            "end": 328640,
+            "speaker": "C",
+            "text": "Der Podcast heißt Becoming CTO Secrets und es ist auch ein Interview Podcast, den mache ich allerdings alleine. Also ihr habt natürlich hier doppelte Firepower und ich interviewe ctos geht dann viel um die persönlichen Geschichten. Es geht um die Herausforderungen in der Rolle, es geht darum, wie sie CTO geworden sind, wie sie selber die Rolle sehen, wie sie sie ausleben und diese Bandbreite, die das Thema mit sich bringt, die ist sehr mannigfaltig, so würde ich das mal bezeichnen und versuche auch das Thema CTO und CTO Leadership den Engineers näher zu bringen, die sich vielleicht dafür interessieren, selber in so eine Rolle reinzuwachsen, sich vielleicht noch nicht so ganz sicher sind, ob das was für sie ist und hier einen Übergang zu schaffen, vielleicht auch die Hemmschwelle zu senken und vielleicht auch die die eindimensionalen Bilder, die manche im Kopf haben, wenn sie an so eine Rolle denken, wegzukriegen. Und dafür funktioniert das ganz gut, glaube ich."
+        },
+        {
+            "start": 328640,
+            "end": 354100,
+            "speaker": "B",
+            "text": "Ich musste jetzt gerade ziemlich lachen, weil du gesagt hast, bei uns gibt es doppelte Bauer und wir sind zu zweit und genau in dem Moment, wenn sich jetzt alle vorgestellt haben, wir sind konzentriert zu zweit, probieren die perfekten Fragen rauszusuchen, habe ich gerade auf Andis Video geschaut und er frühstückt gerade und hat sich einfach gemutet und währenddessen gefrühstückt. Also das ist die Superpower, die wir hier haben im Podcast. Darum frage auch ich jetzt weiter we der Andi kann nicht mal fragen, der."
+        },
+        {
+            "start": 354100,
+            "end": 355060,
+            "speaker": "C",
+            "text": "Hat gerade einen vollen Mund."
+        },
+        {
+            "start": 355220,
+            "end": 379220,
+            "speaker": "B",
+            "text": "Du hast ja schon erwähnt, du sprichst mit Leuten ganz oft über die Rolle des ctos und wie sie sie ausleben. Wie würdest du denn grundsätzlich ein CTO definieren? Also ganz klassisch, wenn ich mir jetzt vorstelle, ich bin Entwickler in der Firma und dann heißt es immer ja der CTO da oben, der hat keine Ahnung und der macht nur irgendwas und was macht er eigentlich? Ich weiß es eh nicht, bekommt nur viel Geld. Wie würdest du denn CTO grundsätzlich definieren? Gibt es überhaupt eine Definition?"
+        },
+        {
+            "start": 379444,
+            "end": 439444,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 439600,
+            "end": 535790,
+            "speaker": "C",
+            "text": "Ich glaube, wenn du auf Wikipedia guckst, gibt es schon eine Definition. Die interessiert mich allerdings meistens nicht, weil sie ist genauso fuzzy oder weitreichend, wie die Rolle eigentlich auch an Spektrum mit sich bringt. Also der CTO ist auf dem Papier natürlich die höchste Position oder die höchste Rolle, die du bekommen kannst, wenn du im Engineering arbeitest. Du musst nicht zwangsläufig, muss nicht jedes Unternehmen einen CTO haben, Aber wenn es ein CTO hat, dann ist klar, darüber gibt es dann maximal noch den CEO Und das limitiert die Rolle dann schon oder es engt die Rolle dann doch schon ein. Und es ist meistens eine Business Funktion, die hier wahrgenommen wird. Das heißt, es ist natürlich, es hat einen Engineering Fokus, es hat einen Tech Fokus, der ist allerdings in vielen Unternehmen wesentlich weniger stark ausgeprägt, wie das viele Engineers glauben, dass es ist. Ich glaube, es ist hauptsächlich so, dass jedes Unternehmen eine eigene Interpretation hat, was für eine Art von CTO sie brauchen, welche Art von CTO ihnen am besten zu Gesicht steht. Und auch das kann sich ändern. Für ein Startup ist es dann eher der sehr erfahrene Senior Engineer, der noch sehr viel Hands on Mentalität mit sich bringt, vielleicht noch wenig Leadership Erfahrung hat, aber für das Unternehmen in der aktuellen Entwicklungsstufe genau die richtigen Merkmale mit sich bringt, um diese Rolle auszufüllen. Und natürlich ist es in einem Enterprise Segment sind es auf einmal ganz andere Qualitäten, die gefragt sind. Dann sind eher auch politische Rahmenbedingungen sind auf einmal wichtig, Stakeholder Alignment und da ist die technische Hands on Expertise wesentlich weniger interessant. Und genau damit macht man auch das Feld auch schon wieder auf. Nicht was definiert ein CTO, sondern welche die verschiedenen Lesarten und Spielarten gibt es denn in der Rolle."
+        },
+        {
+            "start": 535790,
+            "end": 576890,
+            "speaker": "A",
+            "text": "Jetzt hattest du den Wikipedia Artikel zum Bereich oder zum Namen oder zum Begriff CTO erwähnt und ich muss zugeben, ist mir ein bisschen peinlich, aber ich habe diesen Wikipedia Artikel auch in der Recherche nicht aufgehabt, weil ich kam gar nicht auf die Idee. Doch, dieser Wikipedia Artikel ist sehr kurz und was er eigentlich nur besagt ist, gibt es verschiedene Arten des ctos. In manchen Branchen werden auch technische Belange auf mehrere Personen verteilt, wie zum Beispiel nämlich Chief Information Officer und einem Chief Science Officer. Und dann ist da auch eine Unterscheidung zu technisch orientierten Firmen und Unternehmen, deren Produkte weniger technikaffin sind usw. Also eigentlich hätte man sich diesen Wikipedia Artikel auch sparen können, muss ich zugeben, Ja, oder."
+        },
+        {
+            "start": 576890,
+            "end": 581130,
+            "speaker": "C",
+            "text": "Dann lass uns doch gleich im Anschluss den mal richtig schreiben, vielleicht haben wir dann genug Informationen zusammen."
+        },
+        {
+            "start": 581210,
+            "end": 599140,
+            "speaker": "A",
+            "text": "Was mich natürlich interessiert, wenn du sagst, okay, die Rolle ist so breit und je nach Firmengröße ist es auch unterschiedliche Belange oder unterschiedliche Sachen werden, wie soll man sagen, benötigt. Wenn du einem Laien erklären müsstest, was ein CTO macht, was würdest du nicht sagen, obwohl es viele glauben, der Engineer."
+        },
+        {
+            "start": 599140,
+            "end": 640150,
+            "speaker": "C",
+            "text": "Ist in allererster Linie nicht für das Schreiben des Codes zuständig, er ist nicht für die Lieferung zuständig. Ultimativ ist er dafür schon verantwortlich, aber ist nicht derjenige, der die größte technische Expertise haben muss. Und er ist idealerweise auch nicht der beste Techie im Raum. Ich glaube, so kann man es möglichst vereinfacht darstellen, weil wenn du sagst, was soll der, was soll der CTO definitiv nicht tun, hängt auch das natürlich davon ab, was er denn in seiner Rolle tun muss. Also das hängt auch noch mal sehr stark davon ab, welche CTO Ausprägung wir jetzt gerade hier besprechen. Aber ich glaube, in den allermeisten Fällen ist der CTO weniger Techie und weniger Tech Experte, als es viele glauben."
+        },
+        {
+            "start": 640150,
+            "end": 640750,
+            "speaker": "B",
+            "text": "Und warum?"
+        },
+        {
+            "start": 640910,
+            "end": 701310,
+            "speaker": "C",
+            "text": "Je mehr du Experte bist, wenn du der beste Techie im Raum bist, dann wirst du eine Gruppe von drei, vier, fünf Engineers gut führen können. Je größer deine Engineering Organisation ist und du bist immer noch der beste Techie im Raum, hast du entweder einen Fehler gemacht im Hiring, weil das ist nicht mehr deine Aufgabe, sondern es ist deine Aufgabe dafür zu sorgen, dass du eine Organisation baust, die skalieren kann, die liefern kann, die funktionsfähig ist, die alles hat. Du bist für die Rahmenbedingungen verantwortlich und die Rahmenbedingungen sind auch stell die besten Engineers ein, die die besten technischen Entscheidungen treffen. Denn wenn du immer noch den Anspruch hast, diese Entscheidungen treffen zu wollen, bist du immer das Bottleneck. Und das funktioniert für Organisationen für einen gewissen Zeitraum und irgendwann nicht mehr. Und genau in dem Moment, in dem es nicht mehr funktioniert, hat das Unternehmen Probleme, gerade was Skalierung angeht, was Lieferfähigkeit angeht. Und spätestens dann wird es zum Problem. Und wenn sie das Problem nicht vorher adressiert haben, dann wird das Problem irgendwann vom CEO adressiert, weil der dann erkennt, mein CTO ist das Bottleneck, ich muss dieses Bottleneck lösen, heißt, ich muss mir einen neuen CTO suchen."
+        },
+        {
+            "start": 701940,
+            "end": 721660,
+            "speaker": "B",
+            "text": "Jetzt hast du schon erwähnt, es kommt darauf an, über welchen CTO wir sprechen, in welchem Stadium sich die Firma zum Beispiel befindet, ob das jetzt eine kleine Firma ist, Startup, große Firma, Enterprise. Was siehst du denn für Kategorien von ctos, wenn du irgendwie eine Einteilung machen müsstest? Oder was sind so große Gruppen an CTO Typen?"
+        },
+        {
+            "start": 721660,
+            "end": 874040,
+            "speaker": "C",
+            "text": "Andy hat eben den Field CTO genannt. Das ist vielleicht schon die ungewöhnlichste CTO Ausprä oder Kategorie, über die wir hier sprechen können. Aber ich würde es vielleicht mal gleich an den Anfang packen, denn das habe ich auch schon erlebt, Dann gibt es da dr draußen tatsächlich Rollen, die nennen sich CTO. Das sind meistens dann große Unternehmen wie Salesforce oder IBM, Die sind aber gar keine ctos auf dem Papier. Das heißt, die treffen eigentlich keine technischen Entscheidungen in dem Kontext, wie man sie normalerweise von einem CTO als Business Funktion gewöhnt sind. Aber sie sind quasi bessere Sales Representatives. Das heißt, sie versuchen mit Unternehmen größere Deals abzuschließen, sie versuchen strategische Partnerschaften einzugehen, Das heißt, sie operieren auf einem ganz anderen Level. Sie haben aber in der Regel keine Engineering Organisation, die Produkte für sie baut und liefert. Das machen dann andere. Das wäre zum Beispiel eine Ausprägung. Dann haben wir natürlich noch ganz klassisch so den Founding CTO oder den Early Stage Startup CTO. Das sind dann sehr oft sogar noch die Entrepreneure. Das sind auch sehr oft dann die besten Techies und die besten Entwickler, denen man einen CTO Titel vielleicht gibt, weil man ihnen nicht das Gehalt zahlen kann, was sie anderswo bekommen könnten. Und CTO Titel sind günstig, sie kosten erst mal nichts, die kosten vielleicht hinten raus, aber sie kosten erst mal kein Gehalt und du kannst sie auch einsetzen, um dein Compensation Package für eine Person natürlich auch auf der monetären Seite runterzuschrauben. Dann gibt es den Scale Up CTO, der sich wiederum mit ganz anderen Themen auseinandersetzen muss. Also jetzt skaliert mein Produkt, jetzt ist exponentielles Wachstum da in der Organisation, was macht das mit der Kultur, was macht das mit den Lieferfähigkeiten? Wo habe ich vorher genau solche Bottlenecks drin gehabt, die mir jetzt auf die Füße fallen und wie löse ich die. Dann gibt es den Corporate CTO, der sich tatsächlich eher darum klären muss, okay, wie sorge ich denn dafür, dass die besten Entscheidungen getroffen werden in der Organisation? Wie bereite ich Entscheidungen vor in einer Organisation mit mehreren tausend Mitarbeitern? Wen muss ich dafür auf meine Seite ziehen, Wo muss ich Alignment schaffen? Denn das ist wie in der Politik dann oft auch. Einer Entscheidung geht oft ein mehrheitsfindender Prozess voraus und das betrifft Corporate Umgebungen und Enterprise Umgebungen natürlich genauso. Und dementsprechend sind dann auch noch mal andere Qualitäten gefragt. Und dann gibt es auch, und das hat Andy vorhin auch erwähnt, natürlich den Fractional CTO und den Interim CTO. Die Rollen liegen teilweise nah beisammen, sie sind aber auch in der Ausprägung hinten raus. Haben sie dann doch noch mal große Unterschiede. Vielleicht können wir da gleich noch mal ein bisschen im Detail drauf eingehen, weil das natürlich auch einen Bereich betrifft, den ich mache."
+        },
+        {
+            "start": 874120,
+            "end": 875480,
+            "speaker": "B",
+            "text": "Wo siehst du den Unterschied?"
+        },
+        {
+            "start": 875560,
+            "end": 991650,
+            "speaker": "C",
+            "text": "Der Interim CTO ist jemand, der vier bis fünf Tage die Woche in einem Unternehmen die CTO Rolle einnimmt, und zwar in voller Ausprägung. Das heißt operativ, strategisch. Sogar Hiring und Firing ist Teil seiner Aufgabe und das macht er oft für einen Zeitraum von sechs bis achtzehn Monaten. Meistens sind das Übergangssituationen, wenn der vorherige CTO des Unternehmens gegangen ist oder ihm nahegelegt wurde zu gehen und die Organisation vielleicht größer ist, dann brauchst du jemanden, der hier temporär die Zügel in die Hand nimmt und du willst jemanden haben, den du einfach reinwerfen kannst, der sofort weiß, was zu tun ist, der loslaufen kann, weil der hat keine Zeit zu verlieren. Du kannst dir da keine drei Monate Einarbeitungszeit leisten, sondern du musst jemanden haben, der ähnliche Rollen und Situationen, nicht Rollen, aber ähnliche Situationen und Konstellationen schon reihenweise gesehen hat und die natürlich auch sofort weiß, wie er sie zu bespielen hat. Das ist die klassische Ausprägung. Das neuere Thema ist eher die Rolle des Fractional ctos. Das ist im Grunde auch eine Art Interim cto, denn er ist auch mit einer kurzen Halbwertszeit, wird er nur eingestellt oder kommt nur mit einer kurzen Halbwertszeit ins Unternehmen. Dadurch, dass er aber oft nur ein, zwei, drei Tage die Woche dem Unternehmen zur Verfügung steht, fällt die operative Ebene sehr oft weg oder wird sehr viel kleiner. Das heißt, man arbeitet sehr viel mehr auf der strategischen Ebene. Auch klassisches Hiring und Firing wird damit weniger relevant. Er ist also nicht ultimativ für alle, für das Wohl und Wehe der Organisation verantwortlich. Er wird aber oft dafür genutzt für Early Stage Startups, die vielleicht CTO Expertise sich strategisch reinholen, holen wollen, aber noch nicht, die noch nicht jemanden Vollzeit in diese Rolle, in diese Rolle allokieren wollen. Und dafür lohnt es sich, ein Fractional CTO reinzunehmen. Also die Unterscheidung ist eine Vollzeit für einen kurzen Zeitraum, volle Aus, volles Ausfüllen der Rolle und auf der anderen Seite nur ein, zwei, drei Tage und damit wesentlich weniger operativ, wesentlich mehr strategisch."
+        },
+        {
+            "start": 991650,
+            "end": 1065740,
+            "speaker": "A",
+            "text": "Interim CTO hat sich jetzt gerade recht spannend angehört, weil du sagtest, da kommt jemand rein, falls es einen personellen Wechsel gab, wie auch immer, herbeigeführt für sechs bis achtzehn Monate und man hat keine Zeit, die Person eigentlich onzuboarden, sondern du brauchst jemanden, der sofort ready ist. Und go go go bedeutet das dann auch bzw. Wird diese Stelle des Interim ctos oft dann aus intern besetzt. Denn wenn jemand von außen reinkommt, eine neue Firma, die Kultur ist unbekannt, die Historie ist unbekannt, von technischen Entscheidungen, von der digitalen Strategie, von fehlgeschlagenen Projekten, denn der vorherige CTO in der Regel hat es einen Grund, dass diese Person nicht mehr da ist. Wenn es jetzt nicht die Rente ist, dann ist dieser Grund oft negativ. Also wird diese Person oft intern besetzt oder wie oft kommt es auch vor, dass die Person, die die Stelle interims technisch befüllt hat, dann später wirklich übernommen wird. Denn es fühlt sich ein bisschen für mich komisch an, wenn ich als Interim CTO reinkomme, sechs Monate bis achtzehn Monate und ich weiß, okay, meine Zeit ist hier endlich, also unsere Allezeit ist endlich, aber meine Zeit ist sehr endlich. Auf sechs bis acht Monate hat man dann volles Commitment, wenn man weiß, okay, ich bin in zwölf Monaten eh nicht mehr da."
+        },
+        {
+            "start": 1065740,
+            "end": 1152390,
+            "speaker": "C",
+            "text": "Das ist Teil deiner Aufgabe dann. Also das unterscheidet dann auch noch den Interim CTO von dem vielleicht von dem Start up CTO. Also als Interim CTO musst du der High Professional sein, der sofort weiß, was zu tun ist. Dein Commitment wird sehr gut bezahlt. Also den Vorteil hast du als Geschäftsführer, du holst jemanden rein und du bist dir eigentlich ziemlich sicher, der hat keine eigene Agenda, der wird natürlich bezahlt, der hat vielleicht ein Interesse daran auch dran, länger im Unternehmen zu sein, aber in erster Linie wird natürlich sehr gut geguckt, wie schnell wirkt er denn, wie schnell kann er denn die Probleme der Organisation adressieren und wenn er das nicht kann, dann kann er auch genauso schnell wieder ersetzt werden. Und deswegen Commitment auf jeden Fall. Und das ist ja für den Interim cto auch attraktiv, denn die Qualität des Interim ctos liegt ja meistens darin, er ist sehr gut darin, Dinge, die er in anderen Organisationen gesehen hat, Muster zu erkennen, auch zu erkennen, das kann ich jetzt auf diese Organisation übertragen, das funktioniert in dieser Branche vielleicht nicht. Und im Endeffekt seine Best Practice und Erfahrungen aus anderen Organisationen sehr zielgerichtet einzusetzen. Man kann natürlich auch sagen, das ist der Söldner, der von außen kommt und hier als Hired Gun versucht, jetzt die Kohlen aus dem Feuer zu holen. Ja, das ist vielleicht auch zu gewissen Teilen so, aber er weiß es auch Und wenn er professionell agiert und in dem Umfeld auch weitere Mandate haben möchte, dann muss er das auch genauso GAU genauso leben. Er muss sofort funktionieren, er muss einen guten Übergang schaffen später. Ansonsten wird sich das natürlich rumsprechen und dann hast du sehr bald keine Interim Mandate mehr."
+        },
+        {
+            "start": 1152470,
+            "end": 1170910,
+            "speaker": "A",
+            "text": "Aber je nach Größe des Unternehmens kann man da überhaupt in sechs Monaten einen effektiven Impact schaffen. Also reden wir jetzt mal von einem Unternehmen mit fünf hundert, acht hundert Mitarbeitern. Ich meine, da fährt man ja kein schnelles Segelboot mehr, da ist ja schon ein tausend Mitarbeiter, sind ja schon eine kleine AIDA. Also bis das Schiff mal umdreht in."
+        },
+        {
+            "start": 1170910,
+            "end": 1205340,
+            "speaker": "C",
+            "text": "Einem Siemens Konzern wirst du jetzt nicht in sechs Monaten eine agile Transformation auf einmal komplett durchführen. Aber du wirst natürlich sehr stark in Kundenprojekte eingebunden werden. Es wird Initiativen intern geben, die müssen weiterhin gesteuert werden und da braucht es jemanden mit C Level Expertise, der das kann und der das machen kann. Und natürlich hängt die Erwartungshaltung immer auch daran, wo steht das Unternehmen gerade, was ist realistisch Und natürlich gibt es auch unrealistische Erwartungshaltungen von Seiten der Kunden. Aber ja, wie gesagt, auch hier kommt es immer darauf an, was braucht das Unternehmen und an welcher Stelle steht es."
+        },
+        {
+            "start": 1205570,
+            "end": 1256030,
+            "speaker": "B",
+            "text": "Jetzt machst du das Ganze natürlich auch und das ist auch dein Angebot. Aber ganz grundsätzliche siehst du diese Fractional oder Interim ctos auch mehr im Kommen jetzt im deutschsprachigen Raum? Weil wir haben ja da immer klassischen Mittelständler und es gibt halt die großen Konzerne und da wird alles immer intern besetzt. Das klingt ja alles sehr amerikanisch, würde ich fast sagen. Also auch der Begriff an sich, dass es ctos überhaupt gibt in Deutschland ist ja auch noch nicht so lange her. Also dass man diesen Begriff verwendet natürlich die Rolle in irgendeiner Form hat es natürlich schon gegeben. Kommt es mehr, dass das alles dynamischer wird und dass man da auch Leute von außen überhaupt das Vertrauen schenkt, was früher vielleicht, wo man gesagt hat, okay, verwende irgendwen intern als Interim CTO, aber so muss ich das ja wirklich einer außenstehenden Person wirklich komplett übergeben und auch dieses Vertrauen entgegenbringen."
+        },
+        {
+            "start": 1256030,
+            "end": 1402080,
+            "speaker": "C",
+            "text": "Den Eindruck habe ich schon. Also das ist natürlich ein neuerer Trend, sich CTO Expertise in kleineren Happen ins Unternehmen zu holen. Das merke ich auch. Der Begriff Fractional, der war vor drei, vier Jahren noch gar nicht präsent und wenn ich mit Leuten spreche, gibt es immer noch welche, die den Begriff noch nicht gehört haben und nicht einordnen können. Also allein das zeigt schon, dass es hier noch nicht geläufig ist oder noch nicht sich fest etabliert hat. Aber sehr viele Start ups und auch vcs, die packen sich diese Rollen ins Portfolio, weil sie wissen, hier kann ich Dediziertexpertise in Unternehmen geben für einen Zeitraum X, weil ich möchte sicherstellen, die sollen nicht in eine falsche Richtung laufen und die sollen sich langfristig auch noch einen eigenen CTO suchen. Aber ich möchte, dass hier keine strukturellen Fehler gemacht werden, die uns hinten raus eine ganze Menge an Risiko bringen und Potenzial liegen lassen und das möchte ich damit potenziell absichern. Ihr habt jetzt eben noch mal die Frage gestellt, interner, ob ein interner CTO wird. Das passiert hin und wieder und natürlich ist die Datenlage hier sehr unklar, wie oft das passiert, weil in aller Regel sprechen die Unternehmen dann darüber nicht öffentlich und den meisten Interim ctos, denen ich begegnet bin, das waren definitiv keine, die jetzt aus dem Unternehmen temporär diese Rolle übernommen haben. Was wir dabei aber nicht sehen, ist, wie oft es ein CTO geht und der Head of Engineering temporär die Führung der Gesamtorganisation übernimmt, aber das weiter tut als Head of Engineering. Damit ist im Endeffekt diese Übernahme von Rolle und Verantwortlichkeit bleibt komplett unsichtbar von außen betrachtet. Aber intern ist klar, der übernimmt aktuell diese Rolle und diese Verantwortung des ctos passiert es dann auch öfter, dass so eine Rolle fest übernommen wird. Es gibt Konstellationen, in denen das die Möglichkeit ist für jemanden sich auch zu beweisen und sich selber sichtbar zu machen für eine Rolle als fester CTO im Unternehmen. In aller Regel fangen aber die Unternehmen parallel dazu mit dem Recruiting an und schauen sich an, was für Kandidaten gibt es denn auf dem Markt, die zu uns passen. Und wenn sie jemanden passendes finden, der schon ready ist, dann werden sie hier auch jemanden einstellen, der schon auf dem Level ist. Das man denkt zwar oft, dass aus den eigenen Reihen diese Rolle gefüllt wird, aber das passiert seltener als man denkt."
+        },
+        {
+            "start": 1402160,
+            "end": 1462900,
+            "speaker": "A",
+            "text": "Ich kann mir auch gut vorstellen, dass eine externe Perspektive auch super viele Vorteile hat, weil ich mein, wenn du die Position intern besetzt, dann ist es ja so, okay, haben wir schon immer so gemacht oder beziehungsweise die Gefahr, da haben wir schon immer so gemacht und wenn jemand extern reinkommt, dann kann das natürlich auch positive Signale senden. Was mir jetzt gerade erst bewusst wird, ist, nachdem ich dir so zuhöre und auch über die Definition oder den Unterschied eines Interims und Fractional CTO nachdenke, der gute deutsche Mittelstand, so mit fünfzig und ein hundert Leuten, der vielleicht jetzt gerade über die Generationsübernahme nachdenkt und die Digitalisierung noch verschlafen hat, so der Klassiker in Deutschland, habe ich so das Gefühl, für den ist ja eigentlich so ein Fractional CTO perfekt, oder? Also ich meine, du kannst diese Person nicht Vollzeit anstellen oder willst es noch nicht, willst es vielleicht mal ausprobieren, zwei Tage, drei Tage die Woche, um die Digitalisierung im Mittelstand voranzutreiben. Gibt es da irgendeine Erfolgsstory im Deutschen oder vielleicht im österreichischen Mittelstand? Wolfi? Vielleicht kannst du da was zu sagen."
+        },
+        {
+            "start": 1463300,
+            "end": 1543130,
+            "speaker": "C",
+            "text": "Meistens ist der Impact der Fractional CTO Rolle nach außen gar nicht so sichtbar, denn wenn du als Fractional CTO mit einem strategischen Auftrag reinkommst, dann wird es im Endeffekt immer der Gesamtorganisation zugeschrieben werden, ob sie erfolgreich ist oder nicht. Und das macht das schwierig bewertbar, ob der Einsatz eines Fractional ctos über jetzt den Unterschied gemacht hat für eine Gesamtorganisation, ob sie erfolgreich waren oder nicht. Ich glaube, er kann Risiko absichern. Ich glaube, er kann potenzielles Wachstum möglich machen. Er kann sicherstellen, dass die Weichen für die Zukunft gestellt sind und dass man die richtigen Entscheidungen am Anfang trifft, aber sein Wirkungskreis ist doch dadurch, dass er operativ nicht eingebunden ist, auch eingeschränkt. Und dementsprechend würde ich jetzt nicht den Erfolg oder Gesamterfolg des Unternehmens an so einer Rolle festmachen. Und was du sagst mit dem deutschen Mittelstand, ich kann mir eher überlegen, wenn der deutsche Mittelstand der Meinung ist, er braucht so eine Rolle, dann sollte der deutsche Mittelstand sich eher gleich einen festen CTO einstellen. Ansonsten einen Fractional CTO reinzuholen, kann natürlich auch, je nachdem wie groß die Organisation ist, wie weit die Organisation ist, kann natürlich aber auch den Anschein haben, Man versucht hier mit homöopathischen Dosen, versucht man strukturelle Probleme zu lösen, die eine gesamte Branche hat oder das gesamte Unternehmen. Das ist der Erfolg einer solchen Aktion, sehe ich auch eher kritisch."
+        },
+        {
+            "start": 1543210,
+            "end": 1551490,
+            "speaker": "A",
+            "text": "Du hattest gerade den Wirkungsgrad eines ctos angesprochen. Und da komme ich mal zu einer sehr provokativen Welchen echten Wert liefern denn ctos?"
+        },
+        {
+            "start": 1551490,
+            "end": 1564090,
+            "speaker": "B",
+            "text": "Oder warum reicht mir kein CEO aus? Ich habe vielleicht irgendein Head of irgendwas Tech. Also warum brauche ich auf C Level überhaupt auch noch so eine Techie Person, die mir nur Probleme schafft?"
+        },
+        {
+            "start": 1565210,
+            "end": 1680650,
+            "speaker": "C",
+            "text": "Wenn der CEO natürlich einen sehr hohen Tech Bezug hat, dann kann er vielleicht die Rolle eines ctos mit einnehmen. Also gute ctos sind erfolgreich, wenn sie in der Lage sind, die Brücke zu bauen zwischen Business und Tech und hier Alignment schaffen zwischen den verschiedenen Business Funktionen in der Organisation. Also das sind teilweise ja gegenläufige Anforderungen, die sind und Engineering wird immer daran gemessen werden, ist die Implementierung richtig oder falsch? Und das lässt sich binär oder auch im Entscheidungsraum recht schwarz weiß irgendwo voneinander abgrenzen. Ist das eine gute Entscheidung oder ist das eine schlechte Entscheidung auf der rein technischen Ebene? Sobald du Aber diese Entscheidungen werden ja nicht in Isolation getroffen, nicht wie an der Uni, wo man einfach Dieser Lösungsansatz ist richtig, ja oder nein, Sondern die Entscheidungen, die eine Organisation trifft, die zahlen sich dann kurzfristig aus, die haben aber vielleicht langfristige Kosten oder sie haben kurzfristig, zahlen sich nicht aus, aber sind langfristig halt unwahrscheinlich wertvoll. Und dafür brauchst du einen guten CTO, um hier Risikoabschätzungen zu machen, um zu helfen, zu vermitteln zwischen den Business Anforderungen und dem, was technisch möglich ist. Und idealerweise ist der CTO immer noch so tech affin, dass er in der Lage ist, all die Tech Belange des Unternehmens zu verstehen und strategisch auszurichten. Er muss nicht jede Implementierung verstehen können, das ist völlig irrelevant, aber er muss in der Lage sein, gute von schlechten Entscheidungen zu unterscheiden und gute Fragen zu stellen, wenn er mit seinen Engineers zusammenarbeitet, sich nicht bullshitten zu lassen. Und auf der anderen Seite muss er Übersetzungsarbeit leisten in beide Richtungen, weil der CEO versteht viele Logiken und viele Zusammenhänge im Engineering Bereich nicht. Und der Techie ist prinzipiell eher avers, wenn es um Business Entscheidungen geht, um finanzielle Aspekte, um rechtliche Rahmenbedingungen. Und hier muss ein Verständnis geschaffen werden, auf dessen Grundlage dann für das Unternehmen gute Entscheidungen getroffen werden. Und das macht einen guten CTO aus."
+        },
+        {
+            "start": 1680650,
+            "end": 1693470,
+            "speaker": "B",
+            "text": "Aber um jetzt eine kette Frage zu stellen, das macht ein Produktmanager auch oder ein Product Owner oder sowas, der kann die Business Seite übersetzen in die Tech Welt. Also brauche ich eigentlich keinen C Level dafür."
+        },
+        {
+            "start": 1693550,
+            "end": 1751930,
+            "speaker": "C",
+            "text": "Das ist dann immer eine Entscheidungsfrage für die Organisation. In welcher Ausbaustufe möchte man das machen? Theoretisch brauchst du keinen. Kannst du auch den CPO, den CTO kannst du zusammenführen, Du kannst dich entscheiden, du brauchst gar kein MC Level. Das ist auch immer eine Frage, auf welcher Ebene möchtest du dich denn mit den Möchtest du dich mit dem Thema denn auseinandersetzen? Wenn du als Organisation siehst, ich habe in meinem C Level, habe ich den CFO drin, den brauche ich auf jeden Fall. Ich habe den CEO und ich habe vielleicht noch den CEO, der operativ den Laden am Laufen hält, aber Tech ist für mich jetzt reine Lieferkette und ist reine Lieferung und das muss ich nicht im C Level irgendwo diskutieren. Dann brauchst du auch keinen CTO. Aber meistens geht es ja darum, du möchtest diese, Du siehst ja die Notwendigkeit, dass du diese Themen auch auf C Level auf Augenhöhe diskutieren möchtest. Und dann brauchst du auch jemanden, der hier auf Augenhöhe mit den anderen Akteuren agieren kann. Und das kann in aller Regel dann nicht der Tech Lead oder der Senior Engineer, weil er auf dieser Ebene noch nie agiert hat."
+        },
+        {
+            "start": 1752250,
+            "end": 1795350,
+            "speaker": "A",
+            "text": "Jetzt habe ich dich über LinkedIn gefunden bzw. Bist du auf meiner LinkedIn for you Page aufgetaucht mit einem sehr provokativen Post, der die Überschrift hatte Ist der CTO das schwächste C Level? Und du hast jetzt auch gerade gesagt, der CEO benötigt jemanden, mit dem man auf Augenhöhe über technische Entscheidungen, die dann auch sehr weitreichende Folgen oder Kostenfolgen haben können. Deswegen mal die Ist der CTO das schwächste C Level? Also ist er oder sie nur ein Berater für den CEO und der CEO entscheidet, weil er ist der König der Firma? Oder hat der CTO wirklich Entscheidungspower und ist es vielleicht sogar das schwierigste C Level?"
+        },
+        {
+            "start": 1795430,
+            "end": 1936780,
+            "speaker": "C",
+            "text": "Beides ist gleichermaßen wahr und beides hängt davon ab, wen hast du in der Rolle und was lässt du als Organisation? Und das betrifft auch natürlich den CEO. Wie verstehst du die Rolle und was lässt du zu? Siehst du den CEO tatsächlich nur als ausführendes Organ, als derjenige, der Entscheidungen exekutiert, die an anderer Stelle getroffen werden? Du hast eben gesagt Product Roadmap wird ja von Produktmanagement gemacht. Wenn das Produktmanagement nicht bei einem CTO liegt, sondern sondern bei einem Produktmanager oder beim CPO, beim Chief Product Officer, dann am Ende des Tages sorgt der CTO nur dafür, wie man es technisch umsetzt, wie man es exekutiert. Und das kann natürlich im schlimmsten Fall dazu führen, dass man Naja, du bist nur das ausführende Organ, du bist nur die Herstellung dessen, was wir strategisch entschieden haben. Aber um das nochmal Der gute CTO, der schafft hier immer den strategischen Wert, der schafft hier immer die Brücke zu bauen zwischen dem, was möglich ist und dem, was sinnvoll ist. Und damit, wenn er das dann tut, wird er natürlich nicht der schwächste C Level sein. Und ist es das schwierigste C Level? Genauso? Ja und nein. Also ich glaube, es ist prinzipiell schwieriger für viele zu verstehen, was in TAG stattfindet. Ich glaube, es ist intuitiv einfacher zu verstehen, was in Sales oder in Operations stattfindet. Und hier diese Brücke permanent zu bauen und zu übersetzen zwischen all diesen verschiedenen Funktionen macht diese Rolle schwierig. Auch Engineers sind durchaus schwierig in ihrer Herangehensweise, weil sie natürlich jede technologische Entscheidung, die technische Schulden verursacht, prinzipiell erstmal schlecht finden. Aber in einem Unternehmenskontext wirst du immer Kompromisse machen müssen. Auch Kompromisse, die dazu führen, dass du ganz bewusst technische Schulden eingehst und hier die Engineers trotzdem mitzunehmen, dass sie dir langfristig folgen, dass sie langfristig deine Strategie unterstützen und gleichzeitig aber auch verstehen, dass es notwendig und sinnvoll ist, hier nicht die beste technische Lösung zu implementieren, die dich aber vielleicht sechs Monate kostet, sondern du nimmst halt hier die Abkürzung, Du weißt, es wird ja hintenrum irgendwo Schwierigkeiten machen, aber du gehst erwachsen und bewusst mit dieser Entscheidung um und du triffst sie ganz bewusst und du machst sie erklärbar. Das ist eine schwierige Form der Kommunikation, die auch viele Softwareentwickler, viele Techies nicht gerne akzeptieren wollen. Und hier ist richtig, die richtige Balance zu finden, die richtige Form der Kommunikation zu finden, gibt dir enorm viel Kredibilität in der Engineering Organisation und schafft sehr viel Wert."
+        },
+        {
+            "start": 1936780,
+            "end": 2004190,
+            "speaker": "A",
+            "text": "Ich meine, Kommunikation ist natürlich super schwieriges Thema, besonders wenn du einen C Level hast oder ein CTO und dann eine Softwareentwicklerin und man geht sofort in die Details. Das geht nicht, weil diese Variable und diese Sprache macht dann die Duct Typing und bla und blub und dass man das Detail Level so hoch holt. Ich habe mal einen schönen Spruch gehört und zwar unser Job als Softwareentwickler und Softwareentwicklerin ist nicht Code zu schreiben, sondern Probleme zu lösen. Und um diese Probleme zu lösen, nutzen wir sehr oft Quellcode oder schreiben sehr auf Quellcode. Würdest du fast sagen, dass der oder die CTO eigentlich genau dasselbe für den CEO ist? Problemlösung durch Technologie und dass Technologie dann jetzt vielleicht nicht der Hauptjob des CTO ist, sondern der Hauptjob wirklich auch Problemlösung ist. Und wenn Code oder AI oder Infrastruktur oder Cloud oder was auch immer Bild versus Buy dann die Lösung ist, dann ist es das halt. Und ab und zu ist es halt auch nicht. Oder kann man dieses Sprichwort, das was ich gerade für den Softwareentwickler genannt habe, irgendwie auf die Rolle ctos übersetzen?"
+        },
+        {
+            "start": 2004430,
+            "end": 2043740,
+            "speaker": "C",
+            "text": "Absolut, absolut. Und ich würde den Raum aber noch ein bisschen größer machen. Der CTO ist manchmal, manchmal muss er auch Probleme kreieren für seine Organisation, ganz bewusst, um das Schiff vielleicht in eine andere Richtung zu lenken. Also ja, er ist natürlich auf einer organisatorischen Ebene ist er der Problemlöser, um Räume zu schaffen, innerhalb denen das beste technische Produkt entstehen kann und die beste Lieferung entstehen kann. Und das bedeutet aber auch manchmal Probleme zu schaffen und nicht nur sie zu lösen, Probleme für seine Organisation zu schaffen, die seine Organisation dann lösen muss. Und seine Organisation muss aber alle Anforderungen oder alle Requirements haben, um diese Probleme dann lösen zu können. Das ist dann auch wieder seine Aufgabe."
+        },
+        {
+            "start": 2043820,
+            "end": 2045900,
+            "speaker": "B",
+            "text": "Hast du da ein Beispiel für so ein Problem?"
+        },
+        {
+            "start": 2046950,
+            "end": 2078540,
+            "speaker": "C",
+            "text": "Wenn du jetzt weißt, dass dein Technologie Stack dich potenziell in eine Sackgasse manövriert, dann wirst du vielleicht harte Entscheidungen treffen müssen, die auch einen Teil deiner Organisation betreffen. Vielleicht auch dazu führt, dass du deine Organisation umbauen musst, dass du sie ändern musst. Und dann kann es sein, dass du eine Abkehr von einem Technologie Stack beschließt. Und das ist erstmal keine technische Entscheidung, sondern es ist eine strategische Entscheidung und es ist die Aufgabe deiner Engineering Organisation, Lösungen zu schaffen für die Entscheidungen, die du getroffen hast."
+        },
+        {
+            "start": 2078860,
+            "end": 2080620,
+            "speaker": "B",
+            "text": "Aber hast du da ein Problem kreiert."
+        },
+        {
+            "start": 2080780,
+            "end": 2095780,
+            "speaker": "C",
+            "text": "Für das Beispiel, Ich habe ein Problem kreiert, das meine Organisation lösen muss, weil sie vielleicht die Expertise in dem Technologie Stack, den wir auf der strategischen Ebene sinnvoll implementieren müssen, dass wir diese Expertise noch gar nicht haben."
+        },
+        {
+            "start": 2095780,
+            "end": 2140120,
+            "speaker": "A",
+            "text": "Ist das nicht Teil eigentlich auch des Softwareentwicklungsjobs, was man kontinuierlich lernt und dann auch sich mit neuen Technologie auseinandersetzen muss? Also ich nehme mal die AI Thematik. Jeder sagt immer, okay, wir müssen jetzt alles machen, aber kaum jemand ist wirklich Experte drin. Im Endeffekt die seltensten Personen von uns trainieren irgendwelche Modelle oder tweaken irgendwelche Parameter. Die meisten Leute prompten halt immer nur entsprechend. Ist das nicht eigentlich nur auch Teil der technischen Strategie, dass man vielleicht sich, ich sag mal, vorsichtig an die Lösung von neuen Problemen mit neuen Technologien herantastet, mit Proof of Concepts und so weiter und so fort. Und ist das dann vielleicht nicht sogar die Entscheidung des ctos, dass man sagt, okay, wir machen jetzt mal ein Extended Investment, bevor wir all in gehen oder verstehe ich das falsch?"
+        },
+        {
+            "start": 2140120,
+            "end": 2159260,
+            "speaker": "C",
+            "text": "Nö, das verstehst du prinzipiell schon richtig, aber am Ende des Tages ist es ja trotzdem so, natürlich kannst du da alles wieder umdrehen und kannst sagen, ja, das ist ja doch wieder Problemlösung auf einem anderen Level. Ja, natürlich, du löst für den CEO ein Problem, aber auf der anderen Seite schaffst du in der Engineering Organisation ein Problem, dass sie das deine Organisation erst lösen muss."
+        },
+        {
+            "start": 2159260,
+            "end": 2210490,
+            "speaker": "A",
+            "text": "Jetzt habe ich ab und zu mal auf LinkedIn so Horror Stories gehört, so nach dem Ein Unternehmen hatte ein CTO, der war sehr technikverliebt und die Firma hat fünfzig Kunden gehabt und die Infrastruktur wurde weltweit skalierend aufgebaut auf einem Kubernetes Cluster mit automatischem Autoscaling und Pipapo und die Amazon Webservice Rechnung war eine Million Euro pro Monat, obwohl da vielleicht auch einfach nur eine ganz simple Architektur mit einer Hetzner Compute Box gereicht hätte und einem dicken Server, wo wir dann bei ein hundert fünfzig im Monat. Ist dir sowas schon mal vorgekommen? Also ich meine, dass du in eine Firma gekommen bist, wo das vorherige Leadership wirklich Technik verliebt war, vielleicht sogar zu sehr hands on und du musstest es dann richten?"
+        },
+        {
+            "start": 2210490,
+            "end": 2318280,
+            "speaker": "C",
+            "text": "Also ich habe Unternehmen gesehen, die zu einem sehr frühen Zeitpunkt ihrer Entwicklung einen sehr großen Fokus auf technische Exzellenz gelegt haben und eigentlich zu einem Zeitpunkt, bevor sie noch richtig Product Market Fit hatten und noch bevor sie in der Scaling Phase waren, aus Engineering Sicht sehr vorbildlich gearbeitet haben. Das hat aber dazu geführt, dass sie natürlich sehr viel Zeit und Ressourcen reingesteckt haben in eine Plattform und auch in so Themen wie Microservice Architektur, wie Kubernetes Cluster zu einem Zeitpunkt, in dem das noch gar nicht unbedingt notwendig war. Und wenn man natürlich jetzt in einem Scaling Bereich angekommen wäre, hätte man Ja, siehst du, haben wir alles richtig gemacht. Jetzt können wir halt super skalieren und die Entscheidungen, die wir früher getroffen haben, zahlen sich jetzt aus. Aber in aller Regel sind das genau diese Start ups, die jetzt in der aktuellen wirtschaftlichen Phase gerade reihenweise nicht den Bach runtergehen. So würde ich es gar nicht sehen, aber Probleme haben. Das heißt, man kann natürlich in Hindsight jetzt hätte man doch nicht lieber eher mehr Ressourcen und Zeit darauf allokiert, Product Market Fit zu finden und sich besser aufzustellen, anstatt sich in Engineering Themen zu perfektionieren. Und das ist vielleicht nicht immer wahr und vielleicht auch nicht immer fair, weil natürlich in Hindsight das leicht ist zu sagen. Aber was wir schon gesehen haben in den letzten zehn Jahren ist, dass sehr viele Start ups, die kommen aus einer Zeit, in der die bestehenden Unternehmen, die schon erfolgreich waren, sich alle mit Monolithen rumgeschlagen haben. Die haben sich alle mit schlechter Performance und mit schlechter Skalierung auseinandersetzen müssen. Und hier war der Wunsch Vater des Gedanken, dass von Anfang an anders zu machen, richtig zu machen, weil man auch schon verbranntes Kind aus den aus anderen Corporate Situationen war. Und das war aus der Sicht mit Sicherheit richtig. Und trotzdem hat sie hintenrum halt wieder in den Arsch gebissen, um das jetzt mal so Ich weiß nicht, ob ich das bei euch so sagen darf, aber."
+        },
+        {
+            "start": 2318360,
+            "end": 2334220,
+            "speaker": "A",
+            "text": "Hier darfst du alles sagen. Ich habe auch mal gehört, wir bauen das jetzt erstmal Und wenn wir, wenn das dann hinten rüberfällt wegen Traffic, wegen zu viel Product Market Fit, dann ist das ein tolles Problem, was wir haben wollen. Das habe ich auch mal gehört, weil man dann natürlich erst an der richtigen Sache arbeitet."
+        },
+        {
+            "start": 2334220,
+            "end": 2334860,
+            "speaker": "C",
+            "text": "Gehe ich mit."
+        },
+        {
+            "start": 2334860,
+            "end": 2335580,
+            "speaker": "B",
+            "text": "Ich auch."
+        },
+        {
+            "start": 2336860,
+            "end": 2374910,
+            "speaker": "A",
+            "text": "Die Frage war jetzt mal ein bisschen fies gestellt, denn ich habe gerade gesagt, dass der CTO in dieser Situation mit dieser eins Million Dollar AWS Rechnung zu hands on war. Die Flip Question wäre natürlich dann jetzt Wie bleibt man denn als CTO am Ball? Wie wird man denn nicht der Technik Opa oder die Technik Opa? Denn man ist ja so weit weg von der Technik. Du hast gesagt es wäre die falsche Priorität, wenn man die Implementierung würde Wie bleibe ich am Ball und werde nicht dieser Mensch, der ganz oben steht und okay, ich habe jetzt in der Computerbild dieses Thema gelesen, das müssen wir jetzt auch machen, sondern mal vielleicht ein bisschen fundierter an die Sache rangehen kann."
+        },
+        {
+            "start": 2375070,
+            "end": 2416450,
+            "speaker": "C",
+            "text": "Idealerweise hast du die richtigen Leute in der Organisation. Also die richtigen Diskussionen finden in deiner Organisation statt, und zwar schon bevor dieses Hype Thema aufkommt. Also wenn du die Expertise im Raum hast, wenn du die richtige Kultur hast, um diese Themen offen ansprechen zu können, um richtig überall über verschiedene Lösungsszenarien nachdenken zu können, dann bist du immer nah dran. Dann wirst du nicht weit weg sein. Dann hast du die Leute, die für dich die richtigen Entscheidungen treffen im Tech Bereich und du stiehlst diese gesamte Organisation und du stellst sicher, dass du all die Leute hast, die du brauchst, um diese richtigen Entscheidungen zu treffen. Das ist jetzt die sehr high levelige Antwort darauf Und ich sehe an deinem Gesicht, du möchtest auch noch auf was anderes hinaus."
+        },
+        {
+            "start": 2416450,
+            "end": 2481190,
+            "speaker": "A",
+            "text": "Ne, das war schon richtig. Nur ich frage mich, wie etabliert man das? Weil im Endeffekt baut man sich ja natürlich als CTO dann auch so einen kleinen elitären Kreis. Das habe ich nämlich auch schon erlebt. Ich bin Entwickler und Entwicklerin. Und dann hat der CTO sich so einen kleinen elitären Kreis an Leuten zusammengesucht, mit denen er sich dann regelmäßig trifft. Und das ist natürlich auch ein tolles Gefühl, auch aus Entwicklersicht dann in diesem Bereich dabei zu sein. In manchen Firmen wurde das Steering Komitee genannt, in anderen Firmen Architekturgruppe oder was weiß ich nicht. Und diese, ich sag mal, negativ behaftete, in Anführungszeichen elitäre Gruppe hat dann immer Architekturentscheidungen oder ähnliches. Und man will natürlich dann auch mitbekommen, was wird da besprochen oder hey, ich habe vielleicht auch was dazu zu sagen und so weiter. Wie behält man denn diesen offenen Kommunikationskanal als CTO, vielleicht auch ohne, ich sag mal, elitäre Kreise aufzubauen? Oder sagt man vielleicht, diese elitären Kreise sind auch gerechtfertigt, weil das die erfahrensten Entwicklerinnen und Entwickler in der Firma sind."
+        },
+        {
+            "start": 2481700,
+            "end": 2579190,
+            "speaker": "C",
+            "text": "Und das muss so sein, sowohl als auch. Also ich bin ein Freund von Meritokratie. Das heißt, wenn in diesen Kreisen die Leute drin sitzen, die sich das Mitreden an diesen Tisch auch verdient haben, in dem, was sie bereits in der Vergangenheit für Verantwortung übernommen haben, an Dinge, die sie bereits schon geleistet haben, an Problemen, die sie vielleicht schon gelöst haben, haben sie sich eine gewisse Wertigkeit auch verdient, hier permanent mitreden zu dürfen. Also ich finde es wichtig, dass diese Kreise da sind, um miteinander regelmäßig im Austausch zu sein. Ich finde es auch wichtig, dass das nicht ein offenes Forum ist, wo jeder mitreden kann, weil das hilft, glaube ich, nicht weiter. Es ist einfach, Meinungen zu haben und es ist einfach zu sagen, das ist schlecht und die allerwenigsten sind aber in der Lage zu Das wäre eine bessere Lösung und wir machen das so aus dem und dem Grund und deswegen ist das besser als die Lösung, die du vorgeschlagen hast. Und dann kann man nämlich anfangen, erwachsen über diese Themen zu sprechen. Den Unterschied, den ich machen würde, ist, diese Gremien, wenn es diese gibt, die sollten natürlich durchlässig sein. Das heißt, es sollten Möglichkeiten gegeben sein für Leute auch darin potenziell Platz zu finden und darin eingeladen zu werden. Und hier ist auch die Mischung macht es auch. Wenn das zu harte Linien sind, dann hast du wirklich so Elitedenken, dann ist es ein kleiner Kreis, der immer sagt, was die anderen zu tun haben, weiß ich nicht, wie langfristig sinnvoll das ist. Wenn es zu durchlässig ist, dann wirst du ein Potpourri von dreiig Entwicklern haben und jeder hat eine andere Meinung. Und wie wie kommst du jetzt da zu einer entscheidungsfähigen Diskussion, die nicht gestört wird von unsachlichen oder vielleicht noch nicht mature Diskussionen, die da stattfinden."
+        },
+        {
+            "start": 2579190,
+            "end": 2613230,
+            "speaker": "B",
+            "text": "Du hast ja jetzt einiges erwähnt von der Business Seite und du hast ja am Anfang auch erwähnt, es ist ja so eine Mapping Funktion zwischen Business und Tech und jetzt haben wir auch darüber gesprochen, Abkürzungen zu gehen und so weiter. Also das war alles sehr viel von Business Seite in die Tech Welt zu kommunizieren. Hast du konkrete Beispiele, auf was ein CTO so achten muss auf der technischen Seite und was er dann auf die CEO Seite kommunizieren muss? Also was sind so Themen, wo man vielleicht entgegengesetzt kommunizieren muss oder auch gegenhalten muss am Ende?"
+        },
+        {
+            "start": 2613310,
+            "end": 2666580,
+            "speaker": "C",
+            "text": "Ja, du musst immer in der Lage sein, natürlich die technischen Implikationen möglichst an Business Implikationen festzumachen und sie greifbar zu machen für den Rest des C Levels, weil der C Level, der versteht das Konzept technische Schulden erstmal nicht. Und selbst wenn du es ihm dreimal erklärt hast, das lässt sich im ersten Moment nicht in fehlendem Umsatz irgendwo widerspiegeln. Aber wenn du natürlich konkret Auswirkungen von bestimmten kpis zeigen kannst, wenn du zum Beispiel zeigen kannst, dass hey, wir haben diesen Monat so und so viel weniger Umsatz gemacht, ja, wir hatten aber auch so und so viele Ausfälle und das ist die Konsequenz davon und wir haben diese und jene KPI etabliert, um genau sicherzustellen, wo kommen denn diese Incidents, wo kommen sie denn her, wie können wir denn Hand anlegen und was sind die Implikationen dafür für die Business Seite, wie können wir das dann wieder drehen? Also auch erklärbar zu machen, was die technischen Implikationen für die Business Seite bedeuten. Darum geht es ja."
+        },
+        {
+            "start": 2666820,
+            "end": 2675570,
+            "speaker": "B",
+            "text": "Aber ist es dann nicht erst recht deine Schuld als CTO, dass der CEO Ja, warum habt ihr denn so viel Ausfälle? Du bist doch der CTO, du musst doch die Ausfälle im Griff haben."
+        },
+        {
+            "start": 2675650,
+            "end": 2725980,
+            "speaker": "C",
+            "text": "Absolut. Also es geht ja darum, in der Regel fängt das Problem ja nicht an in dem Moment, in dem die Ausfälle passieren, sondern in der Regel sind Entscheidungen an anderer Stelle getroffen worden, die in der Summe sich aufsummieren und dazu führen, dass deine Engineering Organisation langsamer geworden ist, deine Engineering Organisation fehleranfälliger geworden ist, deine Engineering Organisation unsaubere Arbeit und am Ende des Tages der Kunde die Rechnung kriegt, indem er mit Ausfällen zu kämpfen hat und das sich natürlich wieder auf seine Organisation zurückschlägt. Also wenn diese Diskussion natürlich erst in dem Moment anfängt, in dem dein Produkt ausfällt, dann hast du natürlich ein Problem und dann kommt der CEO immer zu dir und sagt, ja, wieso ist das denn nicht passiert? Aber dann ist davor schon ganz viel schiefgelaufen. Dieses Gespräch muss diese Diskussion, dieser Austausch muss schon an viel früherer Stelle stattfinden."
+        },
+        {
+            "start": 2725980,
+            "end": 2783350,
+            "speaker": "A",
+            "text": "Ich meine, ich grinse gerade total, also ich meine, ich unterschreibe ein hundert Prozent, was du gerade gesagt hast. Desto mehr Incidents man mitmacht und man sich mal wirklich die Root Cause ansieht oder beziehungsweise Ausfälle, dann merkt man schon, okay, diesen Fehler, der poppt schon seit drei Wochen auf und man hätte ihn viel früher beheben können und so weiter. Haben wir nicht gemacht auf Basis von Priorisierung ABC. Aber da kommen wir gerade zu einer sehr interessanten Frage und auf welche kpis sollte denn ein CTO denn so achten oder welche sollte man auf dem Schirm haben? Du hattest jetzt gerade Ausfälle genannt. Natürlich Ausfälle beeinflussen irgendwie den Umsatz oder den Gewinn und so weiter, aber da gibt es ja auch schwierige Kennzahlen, die man vielleicht gar nicht so quantifizieren kann. Developer Productivity, Developer Efficiency, Natürlich gibt es was wie DORA Metriken und so weiter und so fort, weil im Endeffekt musst du auch als Interim CTO oder als Fractional CTO ja auch irgendwie deinen Wert, ich sag mal, gerechtfertigt."
+        },
+        {
+            "start": 2783350,
+            "end": 2926180,
+            "speaker": "C",
+            "text": "Ich versuche das immer gut, dass du auch die DORA Metriken erwähnst, weil natürlich spielen die eine Rolle. Meine erste Frage ist erstmal, wenn ihr in agiler Softwareentwicklung arbeitet, wenn ihr nach Scrum arbeitet, habt ihr eine Velocity? Wenn ein Team oder wenn Teams stabile Velocity haben, ist das für mich erstmal ein guter Indikator dafür, dass wir eine healthy Engineering Organisation haben. Das Problem ist, dass in den allermeisten Organisationen die Velocity nicht stabil ist, sondern die schwankt und geht von A nach B und wieder zurück. Und das sind meistens erstmal, also das sagt dir erstmal nicht aus, wo du ein Problem hast. Es ist aber ein Indikator dafür, dass du irgendwas oder eine Gesprächseinladung dafür, dass du dir ein paar Themen mal genauer anschauen kannst. Und das kann natürlich sein. Wo fangen dann die Probleme an, die wir gerade haben? Warum sind wir denn nicht in der Lage, regelmäßig verlässlich zu liefern? Ist das Problem, dass wir nicht wissen, wie wir hier richtig schätzen sollen? Haben wir also ein Maturity Problem in der Engineering Organisation? Haben wir unklares Requirements Engineering? Also müssen wir uns vielleicht mal anfangen, was ist denn unsere Lead Time? Was ist denn unsere Cycle Time? Wo fängt denn unser Problem denn eigentlich an? Haben wir vielleicht ein Qualitätsproblem hinten raus? Das heißt, wir sichern unsere Arbeit nicht ab oder wir kriegen so viel Druck rein, dass wir bemüßigt sind, hier schnell, schnell zu releasen, aber das machen oder wir sichern das nicht genug mit automatisierten Tests ab und so weiter und so fort. Also das Endgame ist dann irgendwann auch die Availability. Alles, was du in deinem Produkt, wenn es schlecht läuft, wird sich immer in der Verfügbarkeit niederschlagen. Und das kannst du aber dann in der Kette, kannst du das vorziehen bis hin zum Requirements Engineering, denn dort startet normalerweise starten die Problematiken und auf dieser Strecke kannst du Dutzende oder hunderte Metriken einführen. Und es geht weniger darum, welche sind jetzt, ist jetzt immer die richtige, sondern es geht darum, welche Metrik hilft dir denn, das Problem besser zu verstehen. Und wenn du das Problem verstanden hast, kannst du auch an einer Lösung arbeiten. Wenn du nur auf die Availability schaust und die ist schlecht, weißt du immer noch nicht, warum ist sie denn jetzt schlecht. Und wenn du auf deine Velocity schaust und die Velocity ist einmal zehn Story Points, die das Team geliefert hat im Sprint und einmal hat sie ein hundert Story Points geliefert, sagt dir auch nichts über die Qualität deines Teams erstmal aus. Es sagt dir nur aus, du hast irgendwo ein Problem, das du dir näher anschauen solltest und dann können dir einzelne Metriken helfen, das näher zu verstehen und runterzubrechen und hier auch die richtigen Metriken für die jeweilige Situation zu finden. Das ist sehr wichtig."
+        },
+        {
+            "start": 2926340,
+            "end": 2952330,
+            "speaker": "A",
+            "text": "Ketzerische Frage, weil ich habe auch schon in mehreren Unternehmen gearbeitet. Hast du schon mal ein Unternehmen vorgefunden, wo du wirklich mehrere Teams hast, vielleicht sogar unterteilt in mehreren Abteilungen, die wirklich diese, ich sag mal, nehmen wir mal die DORA Metriken als Beispiel, wirklich konsolidiert nach oben abgeführt haben, als du reingekommen bist? Oder hast du immer den Zustand vorgefunden, oh ja, die einzelnen Teams tracken das, die anderen jetzt nicht so wirklich und jetzt fangen wir erstmal an, die Metriken zu erheben, damit wir überhaupt mal eine Basis Kennzahl haben?"
+        },
+        {
+            "start": 2952330,
+            "end": 3013310,
+            "speaker": "C",
+            "text": "Ja, eher letzteres natürlich. Also das ist auch ein Grund, wenn du als externer CTO kommst du meistens in Organisationen, die suchen ja nicht ohne Grund externe Expertise, die geben ja nicht ohne Grund viel Geld dafür aus, hier externe Expertise reinzuholen. Und das ist meistens, weil sie ein Problem Entweder weil der vorherige CTO Dinge massiv vernachlässigt hat und die Ursache dafür findest du meistens in der Engineering Organisation oder weil sie noch nicht so weit sind und noch nie über diese Themen drüber nachgedacht haben, weil die Organisation vielleicht noch an einem viel früheren Stadium ihres Entwicklungszyklus angekommen ist und sich der Engineer jetzt eher darüber Gedanken macht, wie implementiere ich jetzt das Feature und das müssen wir, weil ansonsten kauft der Kunde nicht und wenn der Kunde nicht kauft, dann kriegen wir kein Revenue. Und wenn wir den Revenue nicht kriegen, dann gibt es uns in drei Monaten nicht mehr. Also der kommt natürlich mit einem ganz anderen Fokus und ganz anderen Prioritäten rein. Und deswegen hast du meistens, wenn du als externer CTO in einem Unternehmen aufschlägst, wirst du in aller Regel Themen haben, die Monitoring betreffen, die kpis betreffen und die richtigen Daten betreffen."
+        },
+        {
+            "start": 3013780,
+            "end": 3056250,
+            "speaker": "A",
+            "text": "Ich finde das nämlich total amüsant. Ich spreche mit so vielen Leuten und sehr oft werden die DORA Metriken und Deployment Frequency und so weiter und so weiter genannt. Doch in den seltensten Fällen wird die ganze Sache wirklich erhoben oder auch über eine Zeit getrackt Und ich höre auch immer, boah ne, das ist alles Reporting, das ist doch alles total langweilig und so weiter. Und dann stelle ich immer die ketzerische Frage, aber woher wisst ihr denn, dass ihr euch als Team einheitlich verbessern? Und dann kommt immer meist Shoulders, ich habe so ein bisschen die Schultern, ich habe keine Ahnung. Und das finde ich immer so amüsant, weil jeder redet davon, aber kaum einer hat es wirklich implementiert und misst es wirklich in einem größeren Umfang, obwohl es ja eigentlich gar nicht so schwierig ist."
+        },
+        {
+            "start": 3056250,
+            "end": 3120200,
+            "speaker": "C",
+            "text": "Ja, ich glaube, man weiß auch, man sollte mehr Sport tun, aber man tut es ja nicht. Das eine ist zu wissen, was ist sinnvoll und das andere ist auch immer zu implementieren und das auch tagtäglich umzusetzen, weil das erfordert natürlich auch Disziplin. Also Engineering ist ja auch ein kreativer Prozess. Es ist eine Mischung aus Handwerk, es ist eine Mischung aus Kreativität und Lösungsfindung. Da passiert ganz schön viel. Und gemessen daran ist natürlich Metriken zu erfassen, auszuwerten, sich darüber Gedanken zu machen. Das ist Prozess, das ist Disziplin, das ist vielleicht strategisch richtig, aber es ist vielleicht auch fucking langweilig. Und ich glaube, deswegen ist der Wunsch der Vater des Gedanken hier. Man sollte das ja irgendwie tun. Und vielleicht auch ist der Biasreflex erstmal ja der Grund, warum wir das nicht tun, ist, wir kriegen ja gar keine Zeit, weil Management schickt uns ja immer von A nach B und deswegen können wir ja gar nicht. Und dann sind wir wieder an dem Punkt, wo glaube gute Organisation gelernt hat, damit umzugehen und die schlechte Organisation, die ergibt sich einer gelernten Hilflosigkeit. Du wiegst den Kopf hin und her, das heißt Du siehst das mit gemischten Gefühlen."
+        },
+        {
+            "start": 3120200,
+            "end": 3134110,
+            "speaker": "A",
+            "text": "Ich sehe das mit gemischten Gefühlen, weil es ist sehr einfach zu sagen, das Management gibt mir keine Zeit, wenn man noch nie wirklich mal versucht hat, sich mit seiner Vorgesetzten einen Freitagnachmittag ab zwölf uhr einfach mal an das Problem zu sitzen."
+        },
+        {
+            "start": 3134110,
+            "end": 3134990,
+            "speaker": "C",
+            "text": "Ja, absolut."
+        },
+        {
+            "start": 3134990,
+            "end": 3165310,
+            "speaker": "A",
+            "text": "Denn im Endeffekt irgendwo in irgendeiner CI einen Datenpunkt in eine Datenbank zu schreiben, wenn man ein neues Release baut, es tut mir leid, aber das braucht jetzt keine Woche Implementierung in der Regel. Und ob jetzt eine Person mal einen Tag krank ist, also ausfällt oder mal sechs Stunden daran arbeitet, um diesen Datenpunkt zu erheben, ist für die größere Kostenstelle irgendwie kein Punkt. Deswegen schüttel ich immer so den Kopf. Es ist sehr einfach zu sagen, das Management gibt mir keine Zeit, wenn man es noch nie wirklich versucht hat zu platzieren."
+        },
+        {
+            "start": 3165310,
+            "end": 3202140,
+            "speaker": "C",
+            "text": "Aber du kennst das Problem ja auch der Klassiker natürlich, alle Gründe, warum ich etwas nicht leisten kann, liegen immer bei den anderen. Ich glaube, der erste Schritt, eine bessere Engineering Organisation zu werden, ist, sich genau dieser Probleme anzunehmen und zu sagen, naja, wenn wir nicht diese kpis erfassen, wird das niemand für uns tun. Man wird uns nur an unseren Ergebnissen messen und es ist unsere Aufgabe, diese richtigen Dinge zu erheben, die richtigen Erkenntnisse herauszuziehen und die richtigen Maßnahmen davon abzuleiten, um wieder beim Ziel zu sein, nämlich die richtigen Ergebnisse zu liefern für die Gesamtorganisation."
+        },
+        {
+            "start": 3202300,
+            "end": 3258740,
+            "speaker": "A",
+            "text": "Ich denke, es ist einfacher, sich zu beschweren als zu machen. Und ich schließe diesen Blog jetzt mit einem tollen Zitat ab, was ich vor kurzem wieder gehört habe, weil das ein Engineering Manager Kollege von mir gesagt hat, von Mahatma Gandhi sei die Veränderung, die du in der Welt sehen möchtest und bau es einfach. Vielleicht bewegt das etwas und vielleicht zeigt das auch Wert und vielleicht kommt man dann auch in einen solchen elitären Kreis und diskutiert über Dora Metriken in dem CTO Circle Next Time, weil man die extra Meile gegangen ist. Aber lass uns mal zu einem weiteren Blog kommen, und zwar, wie werde ich als Entwickler und Entwicklerin eigentlich CTO? Und möchte ich das? Denn du hattest auch am Anfang gesagt, der CTO ist vielleicht nicht der beste Entwickler. Und da habe ich mich natürlich jetzt gefragt, okay, welche Qualifikation sollte man eigentlich mitbringen, um diese CTO Rolle zu besetzen? Muss ich den klassischen Entwicklerweg gehen oder kann ich auch Quereinsteiger sein? Oder ist es doch am besten, wenn ich eine klassische MBA auswähle?"
+        },
+        {
+            "start": 3259530,
+            "end": 3398870,
+            "speaker": "C",
+            "text": "Wir sind hier wieder bei der sehr langweiligen Antwort, nämlich es kommt drauf an. Und ich habe Engineers gesehen, die sind CTO geworden über den langen Weg vom Tech Lead, vom Team Lead zum Tech Lead, zum Director, zum Vice President, zum CTO. Also die klassische Corporate Karriere. Du wirst eher weniger Corporate CTO, wenn du vorher nicht irgendwo im Corporate Bereich gearbeitet hast. Also da gibt das Ziel, wo du CTO werden willst, legt auch etwas fest den Weg, den du gehen musst. Und wenn du CTO in einem Startup werden willst, dann solltest du vielleicht schon eher noch wie ein Engineer denken und auch wie ein Engineer handeln und vielleicht näher an der Engineering Rolle sein. Und der sehr gute Senior Engineer, der vielleicht noch nicht Haus, Kind oder vier Kinder hat und vielleicht auch schon eine Organisation von ein hundert Mann geleitet hat bei Bosch, der eignet sich vielleicht für eine Startup CTO Rolle weniger als der ambitionierte Jährige oder jährige Senior Engineer, der sehr viel Passion, Leidenschaft mit sich bringt und hier bereit ist, Extrameile nach Extrameile nach Extrameile zu gehen, weil er auch in einer ganz anderen Phase seines Lebens steckt und auch noch einen ganz anderen Punkt. So der kann nämlich in eine Rolle reinwachsen und der kann mit der mit der Organisation wachsen. Und das ist ja auch ein wichtiger Punkt, denn wenn du dir als Startup einen CTO reinholst, der zum jetzigen Zeitpunkt vielleicht passt, aber der wächst gar nicht genauso schnell mit, wie deine Organisation später wächst, dann wirst du ihn irgendwann auch ersetzen müssen. Also solltest du als Organisation auch so viel Weitsicht haben, diese Rolle so zu besetzen, dass du die Fantasie hast, du hast jemanden, der füllt diese Rolle jetzt aus, der ist aber auch in der Lage, in einer anderen Entwicklungszyklus diese Rolle perspektivisch auch noch zu übernehmen, wenn sich die Anforderungen ändern. Wenn wenn die Organisation nicht mehr nur fünf Mitarbeiter hat, sondern fünfzig kann er das dann immer noch, Dann kann er trotzdem noch der gut, der beste CTO für die aktuelle Konstellation sein. Und ich weiß und ich weiß vielleicht nicht, wird er das mit fünfzig Mitarbeitern noch sein, aber ich gehe ganz bewusst dieses Risiko ein und das macht diese. Die Antwort auf die Frage ist dann auch ja, du kannst als sehr guter Engineer, kannst du CTO werden, indem du direkt in einem Startup anfängst und hier eine Leadrolle einnimmst, Verantwortung zeigst, der beste Techie im Raum bist, wenn du das im Corporate Umfeld machen willst, wird diese Strategie dir wenig helfen, sondern das sind andere Qualitäten, die eine Rolle spielen."
+        },
+        {
+            "start": 3398870,
+            "end": 3411470,
+            "speaker": "B",
+            "text": "Du hast jetzt ganz viele Bereiche erwähnt, aber der technische Bereich, den hast du nur ganz kurz angeschnitten und nur im Start up Umfeld. Also für alles andere ist die Technik eigentlich eher zweitrangig, wenn ich das zusammenfassen darf."
+        },
+        {
+            "start": 3411470,
+            "end": 3470170,
+            "speaker": "C",
+            "text": "Nein, so würde ich das nicht sehen. Ich wollte nur ganz bewusst auch die verschiedenen Extreme zeigen. Natürlich gibt es da zwischendrin sehr viele Abstufungen und Graubereiche und natürlich ohne Tech Expertise wirst du es schwer haben, in einem Startup CTO zu werden. Du kannst aber ohne Tech Expertise CTO in einem anderen, in einem Corporate Umfeld werden, wenn nämlich die Technologie am Ende des Tages für die Erfüllung deiner Aufgabe, dessen, was du in der Organisation hast, vielleicht gar nicht mehr der wichtigste Aspekt ist, sondern dann geht es wirklich nur um Organisationsentwicklung. Dann geht es wirklich nur darum, kann ich Transformation, kann ich Change machen, managen, kann ich das in die Organisation reintragen Und das sind Qualitäten, die haben erstmal nichts mit Technologie zu tun. Und natürlich wirst du immer mehr Kredibilität in deinen Tag Teams haben, wenn du einen Tech Background hast, aber das Tag Team entscheidet ja in einer Corporate Organisation nicht, ob du CTO bist und der CEO wird immer schauen, welche Herausforderungen habe ich denn gerade und welcher Person traue ich denn zu, diese Rolle am besten ausfüllen zu können."
+        },
+        {
+            "start": 3470250,
+            "end": 3474030,
+            "speaker": "A",
+            "text": "Mal eine Testfrage, Wolfgang, wer ist der CTO von Salesforce?"
+        },
+        {
+            "start": 3474110,
+            "end": 3478830,
+            "speaker": "B",
+            "text": "Kenne dich? Ja, das ist sicher eine Trickfrage. Also war es früher der Head of Sales oder so?"
+        },
+        {
+            "start": 3478830,
+            "end": 3495950,
+            "speaker": "A",
+            "text": "Zugegeben, ich musste die Person auch gerade googeln. Also ich habe gerade mal versucht, das sinnbildlich irgendwie zu fassen, was Philipp gesagt hat. Und zwar Salesforce ist ja ein Riesenunternehmen. Ich habe noch nie was von Parker Harris gehört. Parker Harris ist der CTO von Salesforce. Ich guck mal ganz kurz, was er für einen Background hat."
+        },
+        {
+            "start": 3496030,
+            "end": 3497090,
+            "speaker": "B",
+            "text": "Software Engineer zu."
+        },
+        {
+            "start": 3498280,
+            "end": 3501720,
+            "speaker": "A",
+            "text": "Er ist aber schon seit sechs und zwanzig Jahren CTO. OK, hart."
+        },
+        {
+            "start": 3501720,
+            "end": 3511560,
+            "speaker": "B",
+            "text": "Das ist ein Beispiel. Wenn ein CTO mitwächst, würde ich mal sagen, sechs und zwanzig Jahre CTO bei sowas wie Salesforce, der hat schon ziemlich viele Steps mitgemacht, würde ich mal sagen."
+        },
+        {
+            "start": 3511640,
+            "end": 3564930,
+            "speaker": "C",
+            "text": "Als Gründer hat er noch vielleicht noch den Benefit of a Doubt und kann sich dann auch selber aussuchen, wenn er in der Organisation als CEO nicht mehr die beste Fit ist. In welcher Rolle zieht er sich dann zurück oder auf welchen, Welche Rolle konzentriert er sich dann eher? Das sieht man teilweise recht häufig bei sehr tech lastigen Gründern, die irgendwann merken, dass sie doch immer noch mehr Techie sind als Unternehmer sind und die dann irgendwann den Bereich des CEOs oder des Geschäftsführers bereitwillig abgeben und sich dann rein auf die Tech Rolle konzentrieren oder auch ganz aus dem Unternehmen rausgehen, aber die sich auch gerne auf die reine Tech Rolle konzentrieren. Aber genauso, wer kennt denn den, den oder die ctos? Es gibt mehrere, nämlich von Google oder von Microsoft. Also das sind ja teilweise in spezifischen Bereichen gibt es zum Thema Cloud einen eigenen CTO oder zum Thema DeepMind. Nicht jede Organisation hat nur einen CTO."
+        },
+        {
+            "start": 3565810,
+            "end": 3579250,
+            "speaker": "A",
+            "text": "Das ist faszinierend. In der Tat. Ich hätte dir nicht den CTO von Microsoft sagen können. Kevin Scott, Today Alert würde ich sagen, das ist genauso wie CTO von Google. Kenne ich auch nicht, will grad, aber ich kenne den CTO von Google Cloud."
+        },
+        {
+            "start": 3579330,
+            "end": 3594930,
+            "speaker": "B",
+            "text": "Aber das zeigt ja schon, dass eigentlich die Rolle des ctos nicht unbedingt die Außenwirkung ist oder nur begrenzt, würde ich mal sagen, sondern eigentlich eher eine Rolle ist, die nach innen gerichtet ist und weniger PR nach außen, was ja schon dem CEO meistens zugetragen wird."
+        },
+        {
+            "start": 3595170,
+            "end": 3656900,
+            "speaker": "C",
+            "text": "Das ist richtig. In den allermeisten Fällen ist es so. Und natürlich, wenn wir über Google und Microsoft sprechen, dann reden wir immer über die CEOs in der öffentlichen Berichterstattung. Und es gibt auch trotzdem ctos, die haben einen viel größeren Fokus auf die Außendarstellung und auf das Wirken nach außen. Und das sind sehr oft ctos von Digitalagenturen. Die haben nämlich nicht das eine Produkt, das sie bauen. Die haben nicht den einen Technologie Stack, den sie bauen, sondern ihr Wirken ist natürlich auch nach innen gerichtet. Da haben sie auch eine Engineering Organisation, die sie natürlich managen müssen und gucken müssen, dass sie in der Lage ist zu liefern. Aber die müssen natürlich auch auf die Bühne. Die müssen Vision und Wirken der Company erzählen, weil die Company ist sehr stark davon abhängig, dass andere glauben, dass man hier die richtigen Engineers oder das richtige Mindset, die richtige Gruppe an Delivery Capabilities findet, die einem hilft, seine Probleme zu lösen. Und dementsprechend, wir haben über diese Gruppe an ctos noch nicht gesprochen, aber ja, es gibt auch den CTO mit einem großen Fokus nach außen. Und das ist oft in den Agencies."
+        },
+        {
+            "start": 3656900,
+            "end": 3686030,
+            "speaker": "A",
+            "text": "Jedoch, jetzt hatten wir schon die Bühne und das Showlight irgendwie kurz erwähnt, was meist dann irgendwie auf die CEOs gerichtet ist. Was würdest du sagen, warum streben ziemlich viele Entwicklerinnen und Entwickler die Rolle des ctos an? Zumindest ist das sehr plakativ beschrieben und höre ich immer mal wieder, wenn ich mal groß werde oder wenn ich mal groß bin, möchte ich CTO werden. Warum denken diese Leute in diesen Bildern?"
+        },
+        {
+            "start": 3686580,
+            "end": 3705060,
+            "speaker": "C",
+            "text": "Also die Statistiken und Daten, die ich dazu gesehen habe, sagen eigentlich nur zwanzig Prozent der Softwareentwickler können sich eine Karriere im Leadership Bereich vorstellen. Also ist die Anzahl derjenigen, die das wirklich tun wollen, ist wahrscheinlich relativ gering. Zwanzig Prozent ist nicht wenig, aber es ist auch nicht die Mehrheit."
+        },
+        {
+            "start": 3705060,
+            "end": 3726300,
+            "speaker": "B",
+            "text": "Es ist ja vielleicht auch so ein Ding, was einfach in Richtung Einfluss Geld, man wächst in seiner Rolle und dann ist halt irgendwie automatisch Lead CTO, man will irgendwie das besser machen. Die Leute schimpfen ja auch ganz gerne immer über die da oben, wer die auch immer sind in der Firma und dann sagt man, ja, ich könnte das besser, wenn ich mal in der CTO Rolle bin, dann mache ich das ganz anders."
+        },
+        {
+            "start": 3726300,
+            "end": 3871070,
+            "speaker": "C",
+            "text": "Diese Rolle hat ja eine große Sichtbarkeit in jeder Organisation und dementsprechend entsteht dadurch auch Reibung. Und natürlich ist ein Engineer oder sind viele Engineers nicht immer sehr glücklich damit, wie ihre ctos entscheiden. Und dann haben wir natürlich auch so einen Effekt, man, obwohl man diese Rolle noch nie selber hatte, dass man sich anmaßt, vielleicht ist das sogar schon zu negativ aus, aber man denkt, man könnte ja diese Entscheidungen viel besser treffen und der CTO trifft ja immer die falschen Entscheidungen. Tatsächlich ist es aber so, also wenn man es mal wirklich dann ganz objektiv betrachtet, der Engineer, der guckt auf Probleme durch ein Schlüsselloch, der sieht nur einen geringen Teil dessen, was ein CTO sieht, weil ein CTO immer die breitere Perspektive hat, immer viel mehr Informationen hat. Der hat sie nicht in dem gleichen Detailgrad wie der Engineer für den Bereich, auf dem er auf sein Problem guckt, aber der hat das komplettere Bild und der ist natürlich in der Lage, hier für die Gesamtorganisation die besseren Entscheidungen zu treffen. Wenn das in der Engineering Organisation aber nicht ankommt, dann hat der CTO trotzdem einen schlechten Job gemacht, weil er es halt nicht gut genug erklärt hat und seine Leute nicht genug mitgenommen hat. Oder aber gibt natürlich auch den Fall. Manche wollen es auch gar nicht verstehen und sind dann so fest in ihrer Meinung, obwohl und wollen sich nicht eingestehen, dass der andere da vielleicht doch weiß, was er denn da tut, weil sonst wäre er nicht dahin gekommen. Aber das steht dann auch noch mal auf einem anderen Blatt. Also ich vergleiche das ganz gerne auch mit der Situation, wenn wir alle irgendwie nächstes Jahr bei der Weltmeisterschaft Fußball gucken, dann sitzen ganz, ganz viele Bundestrainer auf der Couch zu Hause und genauso viele ctos sitzen halt auch an ihren Schreibtischen und schreiben auf LinkedIn über die CTO Rolle, haben sich aber noch nie inhaltlich so richtig damit auseinandergesetzt und haben vielleicht ein oberflächliches Verständnis davon, aber waren noch nie in der Situation, ähnliche Entscheidungen treffen zu müssen mit unklarer Informations und Faktenlage, wie ein CEO entscheiden muss oder auch ein CTO entscheiden muss und dann auch mittragen muss solche Entscheidungen. Denn oftmals ist ja nicht jede Entscheidung, die ein CTO in seiner Organisation reintreibt, ist der Wunsch gewesen des ctos, sondern er trägt hier Leadership Entscheidungen des gesamten Managements mit und er hat das Prinzip disagree und commit verstanden und sagt jetzt nicht, ja wir müssen das jetzt machen, finde ich eigentlich total scheiße, was unser CEO macht, aber machen wir jetzt halt so, weil das wäre auch schlechtes Management, schlechtes Leadership. Aber trotzdem an der Schnittstelle hakt es sehr oft, dass hier Engineers nicht mitgenommen werden und ich sehe die Verantwortung tatsächlich auf beiden Seiten, das besser zu machen."
+        },
+        {
+            "start": 3871070,
+            "end": 3909710,
+            "speaker": "B",
+            "text": "Du hast gesagt, zwanzig Prozent der Leute können sich vorstellen, in Leadership Rollen zu gehen. Jetzt meine Erfahrung ist oft so, dass die Leute, die sich das nicht vorstellen können, eigentlich die sind, die viel besser geeignet wären für diese Rollen. Also nicht automatisch die achtzig Prozent, Aber ganz oft muss man Leute irgendwie pushen, in diese Leadership Rolle zu kommen und andere, die es unbedingt wollen. Da frage ich mich oft, ja okay, vielleicht wäre es ja nicht besser, du bleibst im Engineering. Also wenn ich das mal ganz klischeehaft sagen darf, hast du irgendwie Metriken oder Anzeichen oder irgendwie Leitlinien, wo du sagst, okay, wenn sich Leute mit irgendwas wohlfühlen, dann könnten sie sich auch überlegen, in so Leadership Rolle zu gehen."
+        },
+        {
+            "start": 3909870,
+            "end": 4063880,
+            "speaker": "C",
+            "text": "Ich stelle fest, dass es oft diejenigen sind, die sehr begierig darauf sind, immer zu gucken, was ist denn so um die nächste Ecke, was erwartet mich dann noch, also auch eine gewisse Neugier mit sich bringen, immer weiter wachsen wollen, weiterkommen wollen, jetzt so gar nicht so sehr in erster Linie auf die Karriereleiter geblickt, sondern sondern die einfach nicht mit zufrieden sind, immer nur den Status quo an Wissen und Erkenntnis zu behalten, sondern tatsächlich ein Growth Mindset entwickelt haben, die werden automatisch irgendwann aus ihrer reinen Engineering Rolle rauswachsen, weil sie werden anfangen Verantwortung zu übernehmen, sie werden mit der Verantwortung wachsen, sie werden andere Perspektiven gewinnen und das hebt sie automatisch ab von anderen Engineers, die das eben nicht tun. Und dementsprechend werden die nicht alle davon kommen dann irgendwann oben an, aber die Wahrscheinlichkeit ist dann schon sehr hoch. Also was ich tatsächlich feststelle, warum fangen dann einige Engineers nicht an, eine solche Transformation durchzumachen? Und ich spreche hier ganz bewusst von einer Transformation, weil es ist ein Identitätswechsel, der da stattfindet. Als Engineer ist deine Hauptaufgabe Software zu entwickeln, Code in der IDE einzugeben, zum Laufen zu bringen, auszuliefern in all seinen Ausprägungen, die damit zu tun haben. Und als CTO hat dir diese Fähigkeit vielleicht geholfen dahin zu kommen, aber sie hilft dir null deinen Job richtig zu machen als CTO, weil das, was dich da groß gemacht hat, ist später vielleicht noch zwanzig Prozent von dem, was deine Rolle ausmacht und die anderen achtzig Prozent sind dann, naja, wie mache ich denn jetzt richtiges Stakeholder Alignment? Habe ich denn überhaupt verstanden, warum meine Peers in der Organisation so ticken, wie sie ticken? Warum ist der eine dann immer auf Krawall gebürstet? Wieso kriege ich mein eines Thema bei dem irgendwie nicht durch? Also sich Gedanken zu machen, auch darum, wie funktionieren denn Menschen, wie funktionieren Organisationen, das erfordert nochmal eine ganz andere Auseinandersetzung mit dem Thema Tech. Und ich sage natürlich auch immer zu den Menschen, mit denen ich zusammenarbeite, wenn du eine Organisation entwickelst als CTO, dann ist das auch Engineering nur auf einer anderen Flughöhe, weil du musst natürlich dir auch Gedanken machen, wie funktioniert die Organisation und wie funktioniert sie möglichst deterministisch und wie wenn du hier A eingibst, stellst du sicher, dass du immer das gleiche Ergebnis raus bekommst. Aber am Ende des Tages sind nur sehr wenige bereit dazu, diesen Schritt aktiv zu gehen, weil im ersten Moment heißt es immer Ich muss eigentlich mal zwei Schritte zurückgehen von dem was von dem Level an Expertise, was ich eigentlich habe. Und ich muss den Raum aufmachen für ganz viele neue Sachen, die ich bereit bin zu lernen, um noch mal weiter wachsen zu können. Und dazu sind nur wenige bereit."
+        },
+        {
+            "start": 4063960,
+            "end": 4114100,
+            "speaker": "A",
+            "text": "Ich höre so zwischen den Zeilen, dass das leider auch sehr viele schwierige und unangenehme Entscheidungen erfordert. Also auf dem Weg, besonders in der Organisationsumstellung. Also ich habe noch nie jemanden gefunden, der Reorganisationen toll findet, weil irgendwas fällt immer hinten runter. Philipp, du hast schon ganz viele Sachen genannt, auf die es ankommt, wenn man CTO ist. Menschen kennenlernen, wie sie ticken, Organisationen beobachten und Co. Das sind ja die Ergebnisse, wenn ich das kann, die ich dafür brauche, um CTO zu werden und die Rolle auszufüllen. Wie komme ich denn dahin? Welchen Tipp würdest du mir geben, wie ich aktiv steuern kann, um mich auf die Rolle des ctos vorzubereiten bzw. In Position zu bringen, dass meine Mühen vielleicht auch von einem aktuellen CTO gesehen werden."
+        },
+        {
+            "start": 4114180,
+            "end": 4228540,
+            "speaker": "C",
+            "text": "Das Erste, was ich Menschen mitgebe, hast du denn schon in deiner jetzigen Organisation, hast du denn schon Verantwortung übernommen, die über das hinausgeht, was du in deinem Team, im Sprint, in deiner IDE irgendwo machst? Wenn nicht, dann geh zu deiner Führungskraft oder geh zu deinem CTO und bemühe dich ganz aktiv darum, Verantwortung zu ziehen. Und das kann natürlich sein, irgendwie ein kleines Projekt, was du machst. Das kann irgendwas sein, was schon länger liegen geblieben ist, was keiner anfassen möchte, was ich gelernt habe, auch selber in der Rolle CTO. Du hast immer viel mehr Verantwortung und viel mehr Baustellen, als du wirklich angehen kannst. Und du bist froh um jeden, der kommt und selber in die Hand hebt und sagt, gib mir mehr, ich will das jetzt machen und so weiter, Weil da merkst du diejenigen, die wirklich gewillt sind, hier die nächsten Schritte zu gehen. Und so beginnt Sichtbarkeit, indem du anfängst, Verantwortung zu übernehmen und dann auch zu lernen, was das denn bedeutet, wenn du jetzt Verantwortung übernommen hast. Weil viele haben noch eine sehr romantische Vorstellung davon, was Verantwortung ist. Die haben aber dann die negativen Seiten von Verantwortung noch nicht kennengelernt, weil Verantwortung heißt auch, ich gebe die ja nicht einfach so. Also wenn ich mich wirklich für was verantwortlich fühle, dann bin ich vielleicht zwar im Urlaub und ja, ich fahre dann irgendwie runter, aber dann habe ich nicht die Mentalität, ne, meine E Mail würde ich nie im Leben aufmachen und was da jetzt aktuell auf der Arbeit passiert, ist mir im Endeffekt egal. Wenn ich mich wirklich, wirklich verantwortlich für etwas fühle, dann interessiert mich dann auch was. Dann gebe ich die nicht irgendwo abends um siebzehn uhr ab und mache da nichts mehr anderes. Und natürlich ist das immer eine Gratwanderung zwischen das konsumiert mein gesamtes Dasein und Leben. Aber wer nur in Nine to Five denkt, der wird es eher schwierig haben, sich von den anderen abzugrenzen hier positiv und derjenige, der Verantwortung übernimmt und bereit ist, hier mehr zu tun, der wird auch mehr sichtbar werden und der prädestiniert sich automatisch für weitere Aufgaben, für höhere Aufgaben. Ich glaube, das ist der beste Starting Point für Techies, die wirklich hier die nächsten Schritte gehen wollen."
+        },
+        {
+            "start": 4228620,
+            "end": 4288270,
+            "speaker": "A",
+            "text": "Kann ich nur zustimmen Und ich gebe allen Leuten, die jetzt noch nicht ihrem oder ihrer CTO mal eine Message geschrieben haben, im internen Slack oder Chat oder E Mail usw. Einfach mal über sich selbst zu springen und einfach mal eine Nachricht zu droppen. Kann auch nur für zwanzig Minuten Chat sein oder einen Kaffee oder ähnliches, um ein paar Fragen zu stellen. Bereitet euch natürlich auf das Gespräch vor. Aber immer wenn ich das getan habe, immer wenn ich über meinen eigenen Schatten gesprungen bin, kam eine positive Rückmeldung. Also kann ich nur zustimmen. Natürlich muss man da irgendwie ein bisschen aufpassen, weil das hatte ich nämlich auch schon, dass wenn eine Person dann irgendwie, ich sag mal, vom CTO eingenommen wird, dass diese Person dann nicht mehr zum Team contributet und dann nur noch an spezialen Projekten des ctos arbeitet. Kann natürlich auch schwierig sein, Aber soviel ich weiß, gibt es da auch die Möglichkeit des sogenannten CTO Offices, wo in der Regel, ich glaube, ein paar Staff oder Principal Engineers dann direkt zum CTO reporten, die dann, ich sag mal, Prototypen bauen und spezielle Projekte machen oder ähnliches."
+        },
+        {
+            "start": 4288270,
+            "end": 4341600,
+            "speaker": "C",
+            "text": "Ich sage es mal so, wenn ich da kurz einhaken darf, es gibt ja auch mittlerweile in Führungsorganisationen gibt es sehr häufig den Chief of Staff. So, das ist ja keine offizielle Funktion, die einen bestimmten Aufgabenbereich im C Level hat. Es ist sozusagen das Mädchen für alles, für den CEO oder vielleicht auch für den Rest des Engineering Teams. Das kann man natürlich auch negativ konnotieren. Aber was ganz auf passiert ist, sehr viele Chief of Staff Menschen, die holen sich hier auch die notwendige Expertise und Erfahrung, um sich für CEO Rollen bereit zu machen. Und natürlich kann auch so eine Art Co CTO Rolle, auch wenn es die, glaube ich, noch viel seltener gibt, kann natürlich auch eine Möglichkeit sein, hier sich bereit zu machen. Je mehr du dich mit diesen Themen auseinandersetzt oder selber in Berührung kommst, mit denen ein CTO tagtäglich Berührung hat, umso mehr wirst du anfangen, diese Perspektiven auch besser zu verstehen und auch selber verstehen, wie man Entscheidungen in diesem Kontext trifft."
+        },
+        {
+            "start": 4341600,
+            "end": 4422080,
+            "speaker": "A",
+            "text": "Du wirst lachen, aber bei uns in der Firma gibt es mehrere Chief of Staffs, die reporten dann zu höherem Management, vps und so weiter und so fort. Und Mädchen für alles. Klingt so negativ, aber diese Personen, muss ich zugeben, helfen mir fast täglich. Also die wissen gefühlt alles, die sind überall aktiv. Wahnsinn. Philipp, vielen lieben Dank für die letzte Stunde und für die ganzen Insights in die Rolle des ctos. Mein Problem mit diesem Podcast hier, nicht mit dieser Podcast Episode, mit diesem Podcast ist, immer wenn wir in ein Thema hineingehen, habe ich gedacht, okay, ich verstehe es in der Vorbereitung und so weiter. Und in der Podcast Episode wird dann einfach noch mal eine zweite Hölle aufgemacht, so nach dem Motto, einfach weil das Thema einfach so riesengroß ist. Und Hölle meine ich jetzt nicht negativ, sondern einfach nur um die Größe mal ein bisschen zu verdeutlichen. Und ich habe das Gefühl, bei CTO ist es ebenfalls so. Am Anfang meiner Karriere habe ich gedacht, CTO, aha, Teil der Geschäftsführung, verantwortlich für Technologie, habe ich verstanden. Am Anfang meiner Karriere, desto mehr ich weiß, umso mehr verstehe ich, dass ich diese Rolle vielleicht doch weniger verstehe, weil sie so breit ist. Und du hast die ganze Thematik ja auch bestätigt, schon allein durch die Stereotypen, die wir gerade genannt haben. Founding CTO, Scale Up CTO, Field CTO, Fractional CTO, Corporate CTO, Interim CTO. Meine Güte, ich habe das Gefühl, wir können ein ganzes Buch darüber schreiben. Philipp, wenn man mehr von deinem Wissen möchte und kann man dich dafür auch."
+        },
+        {
+            "start": 4422080,
+            "end": 4423880,
+            "speaker": "C",
+            "text": "Bezahlen, So viel ich weiß, wenn ihr."
+        },
+        {
+            "start": 4423880,
+            "end": 4466180,
+            "speaker": "A",
+            "text": "Möchtet, ja, wie immer gilt es in den Shownotes nach den entsprechenden Links zu suchen. Dort haben wir alles verlinkt. Natürlich auch das LinkedIn Profil von Philipp, den Podcast, ein paar seiner LinkedIn Post, wie zum Beispiel mit den reißerischen Headlines, wie ist der CTO, das schwächste C Level, was wir auch im Podcast erwähnt haben, aber natürlich auch die Dora Metriken oder vielleicht mal die Profile von Kevin Scott, dem CTO von Microsoft, oder Parker Harris, dem CTO von Salesforce und jetzt auch verantwortlich für Slack, habe ich während der Recherche des Podcasts gelernt. Philipp, vielen Dank für deine Zeit. Das war's von uns. Wenn ihr Feedback habt, gerne in die Discord Community. Wir leiten alles an den Philipp weiter. Ansonsten würde ich sagen, wir hören uns nächste Woche und tschüss."
+        },
+        {
+            "start": 4466180,
+            "end": 4467460,
+            "speaker": "C",
+            "text": "Ciao, Ciao, ciao."
+        }
+    ]
+}
