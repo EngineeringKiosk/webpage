@@ -33,30 +33,38 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
 				<div class="">
 					<div class="container px-4 mx-auto">
-						<div class="flex flex-wrap xl:items-center -mx-4">
-							<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+						<div class="flex flex-wrap xl:items-start -mx-4">
+							<div class="w-full md:w-1/2 px-4">
 								<h1>
 									<div>
-										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">29. und 30. Oktober 2025 in Bad Nauheim</span>
+										<span class="inline-block w-auto py-px px-2 mb-4 mt-2 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Karlsruhe & Berlin</span>
 									</div>
-									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight">programmier.con - Web & AI Edition 2025</span>
+									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight">Frachtwerk sucht Unterstützung</span>
 								</h1>
-								<p class="mb-8 text-base xl:text-xl text-coolGray-500 font-medium">
-									Seid dabei, wenn sich am 29. und 30. Oktober 2025 in Bad Nauheim alles um Webentwicklung und künstliche Intelligenz dreht!
-									Auf der <a href="https://con.programmier.bar/">programmier.con</a> erwarten euch zwei Tage mit inspirierenden Vorträgen, spannenden Keynotes und jeder Menge Raum für Austausch. Lernt von Expert:innen der Web- und KI-Community, erweitert eure Skills und entdeckt die neuesten Trends. Egal, ob ihr neu im Thema seid oder schon Erfahrung habt – hier findet ihr Inspiration, Wissen und Austausch auf Augenhöhe.
+								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
+									<a href="https://jump.engineeringkiosk.dev/frachtwerk" class="text-yellow-500 hover:text-yellow-600">Frachtwerk</a> ist ein IT-Unternehmen für Beratung und Softwareentwicklung mit Standorten in Berlin und Karlsruhe sowie Remote-Möglichkeiten.
 								</p>
-								<div class="flex flex-wrap">
+								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
+									Vier Entwickler- und Beraterteams arbeiten an Software-, Transformations- und Data-Analytics-Projekten und betreuen den automatisierten Betrieb von über 300 Systemen im Zero-Trust-Modell mit mehr als 1.000 Containern.
+								</p>
+								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
+									Als New-Work-Organisation setzt Frachtwerk auf innovative Arbeitsmodelle wie ein „New-Pay-Gremium" für Gehaltsverhandlungen und hat Weiterbildung fest in der Unternehmenskultur verankert. Open Source wird aktiv gelebt – das hauseigene <a href="https://github.com/Frachtwerk/essencium-backend" class="text-yellow-500 hover:text-yellow-600">Java-Start-Framework Essencium</a> auf Basis von Spring Boot ist unter der LGPL-Lizenz verfügbar.
+								</p>
+								<p class="mb-8 text-base xl:text-xl text-coolGray-500 font-medium">
+									Aktuell werden Software-Entwickler:innen (Schwerpunkt Java) und DevOps-Engineer:innen (Schwerpunkt Kubernetes) gesucht.
+								</p>
+								<div class="flex flex-wrap mb-8">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="https://con.programmier.bar/">
-											Jetzt Tickets sichern auf con.programmier.bar
+										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="https://jump.engineeringkiosk.dev/frachtwerk">
+											Mehr über Frachtwerk erfahren
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="w-full md:w-1/2 px-4">
-								<div class="relative mx-auto md:mr-0 max-w-max">
-									<a href="https://con.programmier.bar/">
-										<Image class="relative rounded-7xl" src={(await import(`../../images/partners/programmier.con.webp`)).default} alt="programmier.con - Web & AI Edition 2025" title="programmier.con - Web & AI Edition 2025" />
+							<div class="w-full md:w-1/2 px-4 my-8 md:mb-0">
+								<div class="relative mx-auto md:ml-0 max-w-max">
+									<a href="https://jump.engineeringkiosk.dev/frachtwerk">
+										<Image class="relative rounded-7xl" src={(await import(`../../images/partners/frachtwerk.jpg`)).default} alt="Frachtwerk Büro in Berlin" title="Frachtwerk - IT-Beratung & Softwareentwicklung" />
 									</a>
 								</div>
 							</div>
