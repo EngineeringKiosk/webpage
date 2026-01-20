@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/3fcdd4a7-680f-4e42-9c01-fb69c3854475/engineering-kiosk-251-ohne-frust-ins-jahresgespr%C3%A4ch-performance-reviews-und-feedback-richtig-nutzen
 apple_podcasts: https://podcasts.apple.com/us/podcast/251-ohne-frust-ins-jahresgespr%C3%A4ch-performance-reviews/id1603082924?i=1000745831642&uo=4
 audio: https://audio1.redcircle.com/episodes/e0a4a130-9cc7-4915-a75e-4709a3e1fb0b/stream.mp3
 chapter:
