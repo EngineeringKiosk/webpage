@@ -3334,6 +3334,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/251"
+  to = "/podcast/episode/251-ohne-frust-ins-jahresgespräch-performance-reviews-und-feedback-richtig-nutzen?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep251"
+  to = "/podcast/episode/251-ohne-frust-ins-jahresgespräch-performance-reviews-und-feedback-richtig-nutzen?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
