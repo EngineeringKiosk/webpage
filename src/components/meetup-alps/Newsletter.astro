@@ -32,7 +32,7 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
           })
           .then((response) => {
             if (response.ok) {
-              formMessage.innerHTML = `${regId} subscribed successfully!`;
+              formMessage.innerHTML = `${regId} subscribed successfully! Please check your inbox to confirm your subscription.`;
             } else {
               formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
             }
