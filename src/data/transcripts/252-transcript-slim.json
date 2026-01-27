@@ -1,0 +1,765 @@
+{
+    "confidence": 0.95927995,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3592,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 110970,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode des Engineering Kiosk Podcast. Hand aufs Keyword Herz meine ich natürlich kennst du noch die Zeit, in der man sich Syntax, Standard Libraries und Edge Cases mühsam zusammengegoogelt hat, statt einfach die KI zu fragen. Und wenn die KI heute doch alles kann, ist es dann überhaupt noch wichtig mehrere Programmiersprachen zu kennen? In dieser Episode gehen Wolfi und ich genau da rein, aber nicht als Sprachkrieg zwischen den Programmiersprachen, sondern als eine Art Nerd Tour durch vier richtig spannende Sprachfeatures von verschiedenen Programmiersprachen. Wir starten mit Ada und Type Ranges, also Typen mit eingebauten Wertebereichen, inklusive eines Raketencrashes der Ariane fünf Rakete und eines Integer Overflows. Danach gehts weiter mit F mit Units of Measure, wo Meter, Sekunden und Euro plötzlich Teil eines Typensystems werden und der Compiler dich vor Einheitenchaos rettet. Als drittes geht's zu PHP. Ja wirklich mit sensitive Parameters gegen Secret Leaks in Stack Traces. Und zum Schluss schauen wir uns nochmal Go mit dem Secret Mode an, damit Schlüssel nach dem Handshake wirklich aus dem Speicher verschwinden. Wenn du auf coole Features von Programmiersprachen stehst, ist diese Episode für dich. Los geht's. Wir nehmen diesen Podcast hier remote auf und immer wenn ich mich initial in dieses Video Tool hier einlogge, also es ist ein Video und Audio Tool, wir veröffentlichen aber nur Audio, dann guckt ihr Wolfgang oft sehr angestrengt Und wenn er oft sehr angestrengt guckt, dann sage ich öfters hör auf so zu gucken, gibt Falten auf der Stirn und jetzt kam er gerade mit der Antwort um die Ecke. Das passt zu meinem Alter. Und genau das erfreut mich sehr, dass du unseren Aufnahmetermin heute so begonnen hast. Denn lieber Wolfgang, kannst du dich noch an die Zeit vor der KI Programmierung erinnern? Aufgrund deines Alters solltest du dies eigentlich."
+        },
+        {
+            "start": 110970,
+            "end": 128260,
+            "speaker": "B",
+            "text": "Ja, es war bei mir schon etwas länger her. Du bist erst vor zwei Wochen draufgekommen, dass es KI gibt und dass die gut ist und auch sinnvollen Code rauswerfen kann. Aber ich kann mich noch daran erinnern. Aber falls du jetzt überleiten willst zu Ada, das irgendwann in den er Jahren rausgekommen ist, daran kann ich mich nicht."
+        },
+        {
+            "start": 128260,
+            "end": 145390,
+            "speaker": "A",
+            "text": "Erinnern, will ich nicht. Und zwar geht es nämlich um eine Wie viele Sprachen, wie viele Programmiersprachen bist bzw. Warst du in der Lage einigermaßen zu schreiben in der Prä KI Zeit? Also in wie vielen Sprachen würdest du sagen, kanntest du dich aus?"
+        },
+        {
+            "start": 145790,
+            "end": 147150,
+            "speaker": "B",
+            "text": "Mit Google oder ohne Google?"
+        },
+        {
+            "start": 147310,
+            "end": 168590,
+            "speaker": "A",
+            "text": "Ne, schon mit Google. Also womit hast du mal, ich sag mal, wirklich Produktivsoftware geschrieben und Probleme gelöst und all das und das sagst du, okay, das da ist cool und dies ist cool und ich hätte jetzt gerne, weiß ich nicht, Map reduce aus JavaScript in Python, weil genau das würde jetzt auf mein Problem passen und so. Also ich sag mal, mit wie viel Sprachen warst du fluent? Flüssig würde man fast sagen."
+        },
+        {
+            "start": 168670,
+            "end": 202700,
+            "speaker": "B",
+            "text": "Also flüssig wahrscheinlich in keiner bzw. Meistens nur in einer. Die, die ich gerade so wirklich viel programmiert hatte, weil es ist eigentlich schon peinlich, wenn ich mich so zurückerinnere, wie oft ich eigentlich gegoogelt habe, wie so eine Vorschleife oder so funktioniert. Welcher Syntax jetzt gerade für die Vorschleife oder for each oder wie man for each schreibt und ist es getrenntes for each oder nicht oder zusammen und groß und Kleinschreibung. So was hat man früher alles immer googeln müssen. Aber ich würde mal sagen, üblicherweise hatte ich immer so irgendwie drei Sprachen, wo ich so unterwegs war, die gerade in waren. Viel mehr waren das eigentlich nicht."
+        },
+        {
+            "start": 202780,
+            "end": 206860,
+            "speaker": "A",
+            "text": "Welche waren das? JavaScript sehr wahrscheinlich. Python wahrscheinlich und PHP."
+        },
+        {
+            "start": 206860,
+            "end": 224620,
+            "speaker": "B",
+            "text": "Ja, es hat auch so mal Zeiten gegeben, wo so paar C Projekte oder so am Start waren oder Java natürlich auch in irgendeiner Form, gerade mobile Programmierung, aber das ist so der Scope. Python habe ich eigentlich am wenigsten programmiert und da habe ich am meisten googeln müssen, weil dieser Syntax irgendwie ganz anders ist als so bei klassischen Programmiersprachen gefühlt."
+        },
+        {
+            "start": 224790,
+            "end": 321480,
+            "speaker": "A",
+            "text": "Hintergrund meiner Frage ist, man sagt ja immer, use the right tool for the job. Also wir sollen das richtige Tool nutzen, um das Problem jetzt zu lösen, denn jede Programmiersprache hat ja ihre Eigenheiten und jede Programmiersprache ist ja stark in irgendeiner. Und als ich mich auf diese Podcast Episode heute vorbereitet habe, kam mir wieder in den Sinn, dass eigentlich die besten Programmierer und die besten Programmiererinnen, die ich so kenne, die kannten sich eigentlich sprachübergreifend aus bzw. Waren sie sehr versiert in der Funktionalität von drei bis sechs Programmiersprachen und hatten dann auch immer relativ schnell ein gutes Argument, warum das jetzt das richtige Tool für den Job ist oder nicht. Und genau dieser Gedanke hat mich dann zu der nächsten Frage geführt, ist das überhaupt noch relevant in der heutigen KI? Zeit. Aber dieser Gedanke hat mich auch zu dieser Podcast Episode geführt, denn diese Podcast Episode habe ich coolen Sprachfeatures in Programmiersprachen gewidmet. Und was rauskam, ist eine hoch subjektive Liste von einzelnen Features, die wir mal durchgehen von verschiedenen Programmiersprachen, die ich zumindest sehr cool finde. Schauen wir mal, wie Wolfgang darauf reagiert. Es kann natürlich sein, dass einige Features nicht unique für eine Sprache sind und auch in anderen Programmiersprachen vorkommen bzw. Ähnliche Features haben. Deswegen, da kommt ihr ins Spiel, falls ihr ein Feature hier hört von einer Programmiersprache, sagt hey, hä, der Andi beschreibt doch gerade das Feature blablabla in Python, dann meldet euch mal bei uns, weil das würde mich natürlich auch interessieren. Ist das unique für eine Sprache oder kommt das auch in anderen Sprachen? Bevor wir loslegen, wir brabbeln natürlich nicht so, wir sind richtige Macher und dank KI und vier, ich wollte gerade sagen."
+        },
+        {
+            "start": 321480,
+            "end": 323519,
+            "speaker": "B",
+            "text": "Wir sind Macher, die KI ist der."
+        },
+        {
+            "start": 323519,
+            "end": 349840,
+            "speaker": "A",
+            "text": "Macher bei dir und dank vier langen Prompts haben wir euch ein GitHub Repo auch zur Verfügung gestellt, wo all diese vier Sprachfeatures von vier verschiedenen Programmiersprachen in Docker Containern als Demo drin sind. Und ihr könnt einfach ein Docker Bild und Docker Run machen und dann habt ihr eine Demo von all diesen vier Features. Also falls ihr mal die eine oder andere Minute habt und euch das eine oder andere Feature mal ansehen wollt, könnt ihr das natürlich auch testen. Link zu dem GitHub Repo habt ihr in den Showroom."
+        },
+        {
+            "start": 349741,
+            "end": 409741,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 409840,
+            "end": 461590,
+            "speaker": "B",
+            "text": "Ich möchte nur einen Kommentar sagen auf deine Aussage, dass du findest, dass gute Programmierer innen immer viele Sprachen kennen und ich bin genau deiner Meinung. Und gerade heute, auch wenn man AI hat, finde ich, dass man noch leichter Programmiersprachen ausprobieren kann und mal einfach ein Gefühl dafür bekommt, was es denn so gibt, damit man eben unter Umständen auch das beste Tool findet für den Job, auch wenn man jetzt vielleicht das nicht automatisch dann idiomatic programmieren kann, aber man kennt mal so grob irgendwelche Programmiersprachen. Und ich habe gerade kürzlich vor ein paar Tagen rausbekommen, dass zum Beispiel bei uns, wenn man an der Uni Informatiklehrer wird für allgemein höhere Schulen, dass die im gesamten Studium nur Python lernen. Die haben nicht einmal einen Kontakt mit irgendeiner anderen Sprache. Und das habe ich dann eigentlich schon sehr bedenklich gefunden, dass es eigentlich in diese Richtung geht."
+        },
+        {
+            "start": 461590,
+            "end": 487580,
+            "speaker": "A",
+            "text": "Ich finde das schön, dass du sagst, denn Talk is cheap Wolfgang und soviel ich weiß, lehrst du jetzt wieder an der Uni. Deswegen zitiere ich Mahatma Gandhi be the change that you wish to see in the world. Warum änderst du jetzt nicht den Lehrplan dieser Informatiklehre? Nutzt vielleicht KI und bewegt sie mal von Python und dann vielleicht mal nach Go Rust oder Julia oder von mir aus auch Haskell, ist mir ja egal welche Sprache, aber dass du diesen Change mal initiierst."
+        },
+        {
+            "start": 487580,
+            "end": 498460,
+            "speaker": "B",
+            "text": "Ja, ihr habt da natürlich auf den Plan nicht so viel Einfluss, aber ich habe ein sehr flexibles Fach, was ich unterrichten werde und ich kann dir jetzt schon garantieren, sie werden auch was anderes sehen als Python."
+        },
+        {
+            "start": 498460,
+            "end": 624990,
+            "speaker": "A",
+            "text": "Wundervoll genug gebrabbelt. Lass uns mal starten. Und zwar starten wir mit etwas Älterem und du hast es schon genannt, wir starten mit Ada. Ich möchte mit einer kleine Story starten, wie ich zu diesem coolen Sprachfeature gekommen bin bzw. Wie ich es kennengelernt habe. Es war einmal auf der FOSSAM. Die FOSTM ist eine große Open Source und freie Softwarekonferenz in Belgien in Brüssel, findet jedes Jahr statt, immer im Februar steht für Free and Open Source Developer Europe Meeting. Und eins dieser Key Highlights von dieser Konferenz ist, dass es ganz viele Uni oder BE Schulräume gibt, die von Programmiersprachen Communities betrieben werden, sogenannte Dev Rooms. Und der Wolfgang, der Matthias Endler und ich, wir reisen zu dieser Konferenz eigentlich jährlich, kann man fast sagen. Und wir haben so eine kleine Tradition. Es gibt immer irgendwann an diesem Wochenende so einen Zeitpunkt, da wählt einer einen Talk aus und die anderen beiden müssen mit und das rotiert dann einmal durch. Das zwingt uns so ein bisschen über den Tellerrand zu gucken, weil natürlich der Wolfgang, der interessiert sich ziemlich viel für diesen Railway Raum, wo es dann irgendwie um Software für Bahnzüge und sowas geht, keine Ahnung. Und dann gibt es den Matthias Endler vom Rust in Production Podcast, der ist sowieso ganz abgefahren. Letztens sind wir in irgendeinem Sprachraum von der Programmiersprache Force gelandet und da hat jemand ein Framework zur Erstellung von Gameboy Spielen vorgestellt, also ganz wilder Kram auf jeden Fall. Und da haben wir dieses Spiel gespielt und ich war dran und es war am Sonntagmorgen, da wir in Belgien sind, waren wir Samstagabend aus und haben einen Fehler begangen. Wir haben belgisches Bier wie deutsches Bier getrunken. Jeder der so ein bisschen Kenntnis über belgisches Bier hat, das fängt halt irgendwie erst ab sechs Prozent an. War ein Riesenfehler. Das bedeutet, man hatte ganz schön Kopfschmerzen. Aber was gibt man sich dann morgens um Uhr? Richtig, eine einstündige Introduction to Ada for Beginners and Experience programmers, also wir in den Ada Dev und uns erst mal eine schöne Introduction in Ada reingezogen, weil ich kannte Ada vorher nicht. Ich kannte die Sprache, den Namen, aber ich habe keine Ahnung, was das ist. Und deswegen jetzt mal kurz als Exkurs. Was ist Ada? Ada ist etwas älter, kam ein tausend neun hundert achtzig raus. Syntax ähnelt so der Sprache Pascal. Die Sprache."
+        },
+        {
+            "start": 625070,
+            "end": 626550,
+            "speaker": "B",
+            "text": "Hast du schon mal Pascal programmiert?"
+        },
+        {
+            "start": 626550,
+            "end": 667770,
+            "speaker": "A",
+            "text": "Hab ich schon mal in der Schule so ganz kleines Programm, ich glaube hello World und dann vielleicht fängt so Doku Game. Ja, gäb mir endlich die Sprache selbst. Wurde nach Ada Lovelace bekannt, die als erste Programmiererin bezeichnet wird und der originale Use Case bekommen Ada entwickelt wurde, war, dass es als eine allgemeine Programmiersprache galt, die dann eine größere Menge an Programmiersprachen im amerikanischen Verteidigungsministerium ersetzen sollte. Ob das dann jemals gemacht wurde, weiß ich gerade nicht. Aber eins der Kernfeatures ist das Typsystem, also wirklich starke Typosierung mit fehlerrobuster Syntax. Fand ich erst mal ganz cool. Klingt, wenn man das so hört, so ein bisschen. Hä, ist das nicht Rust? Ist Ada nicht das Rust von ein."
+        },
+        {
+            "start": 667770,
+            "end": 672730,
+            "speaker": "B",
+            "text": "Tausend neun hundert achtzig Wollte gerade sagen, strenge Typisierung ist jetzt keine große Neuigkeit, oder?"
+        },
+        {
+            "start": 672810,
+            "end": 674810,
+            "speaker": "A",
+            "text": "Ja, ein tausend neun hundert achtzig vielleicht schon so ein bisschen."
+        },
+        {
+            "start": 674810,
+            "end": 676530,
+            "speaker": "B",
+            "text": "Naja, da hat es auch schon C gegeben."
+        },
+        {
+            "start": 676530,
+            "end": 735730,
+            "speaker": "A",
+            "text": "Genau, da lässt sich jetzt die Frage stellen, ist C wirklich stark typisiert? Da kommen wir nämlich jetzt gleich zu. Das ist nämlich ein cooles Feature von Ada und da möchte ich drauf eingehen. Aber nachdem wir jetzt gelernt haben, was Ada ist, habe ich mich natürlich gefragt, was wird denn eigentlich in Ada geschrieben bzw. Das war auch Teil dieser Introduction. Und Ada wird immer dann gewählt und das ist die Punchline, die Marketing, der Marketing Slogan von denen When Failure is not an option. Und das finde ich schön. Und im Endeffekt wird Ada eigentlich für sicherheitskritische Echtzeit Systeme genutzt, also ziemlich viel in der Luft und Raumfahrt. Das bedeutet, die Software von der Boeing und vom Airbus ist damit geschrieben. Die Europäische Weltraumorganisation nutzt das sehr viel. Zum Beispiel der Roboterarm der Internationalen Raumstation ISS wird mit Ada betrieben und so weiter weiter und so fort. Dann der französische Hochgeschwindigkeitszug TGV nutzt Ada ziemlich viel und eigentlich kannst du dir vorstellen, dass Ada in etlichen Raketensystemen genutzt wird. Also falls ihr mal wirklich Rocket Science programmieren wollt, würde ich euch vorschlagen, lernt mal Ada."
+        },
+        {
+            "start": 735730,
+            "end": 746470,
+            "speaker": "B",
+            "text": "Und die letzte Version von Ada ist nämlich von zwei tausend drei und zwanzig, also da kommen auch neue Versionen raus, es wird wirklich verwendet und der letzte ISO Standard wurde zwei tausend drei und."
+        },
+        {
+            "start": 746470,
+            "end": 795180,
+            "speaker": "A",
+            "text": "Zwanzig verabschiedet, ist schon stark eine Programmiersprache, die fünf und vierzig oder knapp fünf und vierzig Jahre alt ist. In den Shownotes habe ich euch auch noch die Slides von dieser Interaktion verlinkt, sowie meine Liste von Usern, die Ada wirklich nutzen, also Firmen und wofür die das nutzen, ist ganz interessant mal zum Durchscrollen. Jetzt kommen wir zu dem geilen Feature, was ich zumindest sehr geil fand und zwar ist das Ranges für Typen. Also du kannst sagen, dass zum Beispiel ein eigener Typ, zum Beispiel Age, also das Alter eines Menschen, definierst du und das ist dann ein Integer und der kann nur eine fix definierte Range haben von null bis ein hundert fünf und zwanzigste Ich weiß gerade nicht, was der älteste Mensch ist. Der älteste Mensch ist aktuell ein hundert fünfzehn Jahre alt, also passt mein Beispiel mit der Range von null bis ein hundert fünf und zwanzigste Das heißt du."
+        },
+        {
+            "start": 795180,
+            "end": 805690,
+            "speaker": "B",
+            "text": "Introduct, ganz viele neue YK Bugs, so in der Richtung, weil du musst ständig diesen Typ anpassen. Wenn die Menschen älter werden, dann hast du ständig Probleme, weil deine Typen irgendwie veraltet sind."
+        },
+        {
+            "start": 805850,
+            "end": 865480,
+            "speaker": "A",
+            "text": "Ja, das ist leider richtig. Oder du kannst natürlich sagen, okay, pass mal auf, ich habe einen eigenen Typ wie Stockwerke, ich weiß jetzt nicht, was ist das höchste Gebäude, müssen wir jetzt auch mal wieder gucken, sind es vielleicht gar nicht so geile Beispiele, aber du verstehst schon, was ich meine. Und dann kannst du sagen, okay, es gibt Stockwerke von, weiß ich nicht, minus zehn bis ein hundert und du kannst die Zahl ein hundert eins dann nicht in diesem Typ Stockwerke speichern. Das ist schon ziemlich cool. Und jetzt kommt es auch noch, jeder Wertebereich muss dann aber auch in anderen Überpunkt Prüfungen, wie zum Beispiel in Switch Case Statements abgefangen werden. Und das ist ja mal wohl der Klassiker. Und das Ganze wird dann zur Compile Time noch geprüft, denn das ursprüngliche Problem, weswegen es gibt, Wolfgang, jetzt erklär mir mal bitte, wie oft du damit reingerannt bist, wie oft hattest du schon einen Bug, weil man irgendeinen Fall nicht abgefangen hat? Du hast eine Überprüfung von HTTP Statuscodes und du hast vier hundert, vier hundert eins, vier hundert zwei, vier hundert drei abgefangen, aber nicht vier hundert vier, aber vier hundert fünf, wie oft bist du in sowas schon reingerannt?"
+        },
+        {
+            "start": 865480,
+            "end": 877760,
+            "speaker": "B",
+            "text": "Ja, ständig. Und was man dann macht, ist, dass man irgendwie so Gruppen macht, zwei hundert ist okay, alles andere ist böse und dann fällst du immer in den Böse Fall rein und hast aber keine Ahnung, was für ein Böse das ist eigentlich und welcher Fall da eigentlich eintritt."
+        },
+        {
+            "start": 877760,
+            "end": 907870,
+            "speaker": "A",
+            "text": "Ja und jetzt kannst du sagen, für deine Websoftware oder für dein Kontaktformular ist das ein Edge Case, aber auch mit steigendem Traffic oder hohen User Anzahlen sind Edge Cases, aber keine Edge Cases mehr, sondern irgendwie das normale Behavior Und besonders wenn wir auf sicherheitskritische Echtzeitsysteme, wie zum Beispiel irgendwelchen Raketen, die kurz vor Mars sind und da landen wollen, dann hoffe ich mal, dass all diese Gruppen von Fehlern irgendwie explizit gehandhabt werden, oder? Und dafür ist die Sprache natürlich gemacht und das muss ich schon zugeben, ist eigentlich eine ganz geile Nummer, wenn man."
+        },
+        {
+            "start": 907870,
+            "end": 994060,
+            "speaker": "B",
+            "text": "Es zumindest richtig verwendet, weil es gibt auch ein sehr cooles Beispiel, das ich in der Recherche gefunden habe, es hat eine Ariane Rakete gegeben und zwar war das die Ariane fünf, die ist mit Ada programmiert gewesen, so wie die Ariane vier und die ist abgestürzt wegen einem Overflow im Klassischen. Jetzt hat Ada aber eingebaut, dass es eigentlich keine Overflows gibt und Ada während der Laufzeit checkt, ob du in ein Overflow läufst und dann eine Exception wirft. Warum ist jetzt die Ariane fünf trotzdem abgestürzt? Wegen dem Overflow? Weil sich die Ingenieure damals sich überlegt haben, wir haben acht Integer Werte, wir haben aber nicht so viel CPU Power, um das bei Laufzeit zu checken, das heißt, wir entscheiden uns nur für vier Werte, die overflow geprüft werden und die anderen drei Werte, die sind nicht so wichtig und die Ariane fünf hat sowieso mehr Speicher und keine Ahnung und hat weniger Probleme diesbezüglich. Das heißt, es wird bei den drei Integern schon nicht passieren. Das heißt, man hat sich bewusst entschieden, das abzuschalten, diese Sprachfeature, und genau dann ist das Problem trotzdem aufgetreten. Es war ein Code von der Ariane vier die bei der Ariane fünf dann wiederverwendet wurde, ohne das genau zu checken. Und genau darum ist die Ariane fünf dann abgestürzt. Also eigentlich ein menschlicher Fehler, obwohl die Software das verhindert hat und die Software einfach nicht richtig genutzt wurde. Also ein perfektes Beispiel, falsche Usage und Wiederverwendung von altem Code, ohne was zu checken."
+        },
+        {
+            "start": 994060,
+            "end": 1037490,
+            "speaker": "A",
+            "text": "Als du mir diesen Case gegeben hast, habe ich auch noch mal ein bisschen recherchiert. Und zwar gibt es inzwischen Ada Compiler, die sowas natürlich nicht nur zur Runtime, sondern auch zur Compile Time checken. Und zwei tausend fünfzehn ist der letzte Compiler mehr oder weniger ausgestorben bzw. Geupdatet worden, der dann solche Integer Overflows oder Silent Integer Overflows auch abfängt. Und jetzt habe ich mal geguckt, Ariane fünf war von ein tausend neun hundert sechs und neunzig bis zwei tausend drei und zwanzig im Einsatz. Ich weiß jetzt nicht, ob die zwei tausend fünfzehn dann den Compiler geupdatet haben und dann die Software von zwei tausend fünfzehn bis zwei tausend drei und zwanzig geupdatet haben. Das kann ich dir jetzt nicht sagen, aber ich glaube der Ariane fünf Unfall war ein tausend neun hundert sechs und neunzig kurz nach dem Start der Explosion, nach dem Jungfernflug sozusagen. Also das bedeutet damals, du bist auf."
+        },
+        {
+            "start": 1037490,
+            "end": 1043530,
+            "speaker": "B",
+            "text": "Mute, es war sogar nur ein Check, der irgendwie so im Pre Flight oder so durchgeführt worden ist. War eigentlich nicht mal so kritisch das ganze."
+        },
+        {
+            "start": 1043610,
+            "end": 1076240,
+            "speaker": "A",
+            "text": "Punkt ist aber auch, diese Overflow Thematik wurde inzwischen von Ada behoben, finde ich aber immer noch eine coole Sprache. Und besonders dieses, dass der Compiler sagt, okay, du hast jetzt diesen Case in dem Switch Case Statement nicht drin, ihr kennt das alle, man catcht nämlich irgendwie alles im Default State ab und dann schmeißt man eine Exception oder welchen Fehlerhändler ihr auch immer habt. Und natürlich, wie bei diesem starken Typensystem, kannst du natürlich in meinem Beispiel das Alter, den Typ Alter nicht zu einem Typ Stockwerk assignen. Das ist aber, du kannst ja auch kein Integer auf dem Float assignen in normalen typisierten Sprachen."
+        },
+        {
+            "start": 1076319,
+            "end": 1089660,
+            "speaker": "B",
+            "text": "Aber jetzt wäre ja meine Frage, okay, du kannst da irgendwie Typen erstellen, aber das kannst du ja in jeder anderen Sprache auch. Du kannst ja auch in Java eine Klasse erstellen, die Stockwerk heißt und die dann irgendwie mit Setter und Getter und so weiter das alles überprüft und Checks drinnen hat."
+        },
+        {
+            "start": 1089970,
+            "end": 1107130,
+            "speaker": "A",
+            "text": "Klar, du kannst es auch mit anderen Sprachen mimiken, aber wie du sagtest, dann erstellst du jetzt in Java eine eigene Klasse, aber in Ada selbst ist es halt nativ integriert. Du schreibst halt wirklich Type Age isrange null bis ein hundert fünf und zwanzig und dann ist da alles fertig. Du hast halt nicht diesen ganzen Klassenoberhält."
+        },
+        {
+            "start": 1107130,
+            "end": 1109090,
+            "speaker": "B",
+            "text": "Aber First Citizen, wie es immer so."
+        },
+        {
+            "start": 1109090,
+            "end": 1162180,
+            "speaker": "A",
+            "text": "Schön heißt, wow, meine Güte. Hier werden aber auch die Buzzwords rausgehauen. Ich habe mir aber trotzdem die Frage gestellt, wie sieht es denn mit anderen Sprachen aus? Welche Sprache hat es denn noch? So ein starkes typisiertes System. Und da bin ich auf zwei gestoßen. Auf der einen Seite die Sprache Nim, die kann das auch, ist etwas moderner, kam zwei tausend acht raus und wurde unter anderem in diesem Feature von Ada inspiriert. Finde ich natürlich auch sehr schön. Und in Rust kannst du dieses Feature, ich sag mal, nachbauen, wenn du halt Enums definierst und dann mit einem Match die ganze Sache nachbaust. Und das waren so die beiden Sprachen, die ich gefunden habe, die das so mehr oder weniger First Class drin haben. Natürlich, wie gesagt, du kannst es in Java oder jeder objektorientierten Sprache irgendwie nachbauen, aber das finde ich so ein bisschen, es klappt, aber ich finde es halt irgendwie ein bisschen unschön. Und deswegen habe ich mir das starke Typensystem mit den Type Ranges von Ada für diese Episode ausge."
+        },
+        {
+            "start": 1162260,
+            "end": 1196270,
+            "speaker": "B",
+            "text": "Wenn man sich so allgemein überlegt, wundert man sich eigentlich, warum das nicht Standard in allen Sprachen ist. Das kann man ja auch optional eigentlich einbauen, solche Features. Klar ist es performance technisch natürlich gar nicht so einfach unter Umständen, je nachdem, ob es bei Laufzeit gecheckt wird oder bei Compile Time. Aber grundsätzlich solche zusätzlichen Sicherheitsnetze wären ja eigentlich relativ sinnvoll, würde ich mal sagen. Man muss sie ja auch gar nicht verwenden. Also für mich war das so ein no Brainer, aber ich bin kein Sprachentwickler und Designer, keine Ahnung, vielleicht gibt es da doch noch viele Probleme, die da hinten mit dranhängen. Aber für mich wäre das eigentlich schon was, was man überall einbauen könnte."
+        },
+        {
+            "start": 1196270,
+            "end": 1205970,
+            "speaker": "A",
+            "text": "Wenn du so ein Thema aufwirfst, stellt sich natürlich die Frage, welches Feature lässt man dann in welcher Sprache weg? Und dann, wenn alle Sprachen all die gleichen Features haben, wieso brauchen wir so viele Also weiß ich nicht."
+        },
+        {
+            "start": 1206130,
+            "end": 1210690,
+            "speaker": "B",
+            "text": "Ja, ich frage mich auch heute, warum nicht jeder JavaScript programmiert, warum man noch andere Sprachen braucht."
+        },
+        {
+            "start": 1210770,
+            "end": 1249670,
+            "speaker": "A",
+            "text": "Da kann ich dir ganz einfach sagen, wenn wir bei Typensystem sind und ich einen Integer habe, den ich mit einem Float multipliziere, Entschuldigung, gibt es ja gar nicht wirklich. Was gibt es? Da gibt es ja nur diese Numerik Kram. Weißt du, was dann rauskommt? Da kommt wahrscheinlich ein String raus. Also von daher. Deswegen. So, lass uns weitermachen. Zweiter Use Case. Ich habe gedacht, wir bleiben einfach in unserer Bubble. Wir bleiben bei Typensystemen. Wir wechseln aber mal komplett die Sprache. Wir wechseln auf eine so eine Art, ein bisschen modernere Sprache. Eine Sprache, die zwei tausend fünf bzw. Zwei tausend sechs in der Version erschienen ist. Wir sprechen über F. Kanntest du die Sprache F?"
+        },
+        {
+            "start": 1250310,
+            "end": 1256950,
+            "speaker": "B",
+            "text": "Ja, natürlich. Eine Kollegin von mir hat lang bei Microsoft Research an F gearbeitet oder mit F gearbeitet."
+        },
+        {
+            "start": 1256950,
+            "end": 1274770,
+            "speaker": "A",
+            "text": "Du hast auch schon das Intro gegeben. Was ist F? Ja, es ist eine Sprache, die stammt aus der Microsoft Microsoft Research Ecke, also ist ein Forschungsprojekt und es ist eine Sprache mit starkem Fokus auf funktionale Programmierung. Für das Net Framework. Kennt jeder C F die Sprache. Ocaml diente als Vorbild."
+        },
+        {
+            "start": 1274770,
+            "end": 1277010,
+            "speaker": "B",
+            "text": "Hast du schon mal ocaml programmiert, Andy?"
+        },
+        {
+            "start": 1277010,
+            "end": 1280810,
+            "speaker": "A",
+            "text": "Nein, ich habe es mal gelesen, aber ich habe echt Probleme, ocaml zu lesen."
+        },
+        {
+            "start": 1280810,
+            "end": 1308420,
+            "speaker": "B",
+            "text": "Also wir haben vor langer, langer Zeit mal Einführung in die Informatik an der Uni mit ocaml bzw. Mit Funktional gestartet. War nicht ganz ocaml, um den ganzen jungen Leuten den Wind aus den Segeln zu nehmen, damit alle bei Null starten, weil alle, die schon in der Schule ganz viel programmiert hatten mit C und so weiter, sind dann einfach an Funktional gescheitert. Und so haben wir bei Null gestartet. Und ocaml war im universitären Umfeld sehr weit verbreitet, weil es funktional und objektorientiert so ein bisschen kombiniert."
+        },
+        {
+            "start": 1308420,
+            "end": 1316100,
+            "speaker": "A",
+            "text": "Ja, ich finde auch so theoretisch, wie es in der Uni angewandt wird, liest es sich auch nämlich echt schwierig. Also das muss man ja, das ist."
+        },
+        {
+            "start": 1316100,
+            "end": 1321930,
+            "speaker": "B",
+            "text": "Nur, weil du keine funktionalen Programmiersprachen magst, aber eigentlich ist es eine sehr coole Sprache, kann man viel damit machen."
+        },
+        {
+            "start": 1321930,
+            "end": 1328810,
+            "speaker": "A",
+            "text": "Ich ist nicht so, als mag ich die nicht. Ich habe mich nur noch nie damit beschäftigt und deswegen bin ich da sehr, sehr unbeholfen drin, sagen wir mal so."
+        },
+        {
+            "start": 1328810,
+            "end": 1333690,
+            "speaker": "B",
+            "text": "Ist auch nicht pure functional, also gar keine hardcore functional Sprache."
+        },
+        {
+            "start": 1333690,
+            "end": 1351770,
+            "speaker": "A",
+            "text": "Kommen wir mal wieder zur Praxis. Jetzt habe ich mich gefragt, Was ist eigentlich in F geschrieben und was habe ich gemacht? Ich bin auf GitHub Com gegangen in die Advanced Search und habe einfach mal nach Repositories gesucht, die einen hohen Anteil an F Code haben und dann absteigend nach Stars gesucht und muss zugeben, ich war nicht so erfolgreich."
+        },
+        {
+            "start": 1351770,
+            "end": 1375580,
+            "speaker": "B",
+            "text": "Also was ich weiß ist, dass Microsoft intern sehr viel verwendet in allen Bereichen, wo es um Verifizierung geht, wo es um Compiler Entwicklung geht, um andere Compiler zu checken, also mehr auf der formalen Seite im Hintergrund und ich glaube es fließt auch in Office Pakete ein, wenn ich das richtig im Kopf habe, im Hintergrund, um gewisse Sachen zu verifizieren. Also intern wird scheinbar recht viel verwendet."
+        },
+        {
+            "start": 1375580,
+            "end": 1524760,
+            "speaker": "A",
+            "text": "Ja, du hast, ich würde dir sogar recht geben, auf Basis meiner Recherche wird seltener für Endnutzer Apps verwendet, sondern eher häufiger für Applikationen in der Kernlogik bei hochkomplexen Algorithmen oder dort, wo halt Korrektheit wichtiger als Boilerplate ist und auch als Dev Experience. Und da wird es dann sehr speziell für Finanzanalyse und Datenpipelines eingesetzt. Bei Microsoft zum Beispiel im Azure Serverless Umfeld, da ist hinten dran im Backend wohl ein bisschen was mit F geschrieben und super viele Finanz und Trading Systeme nutzen F, speziell Investmentbanken, Hedgefonds, Risikomodelle, Pricing Engines und Simulationen meist intern. Diese Dinger werden natürlich nicht Open Source gemacht, was heißt natürlich schade eigentlich, aber irgendwie verständlich, weil da steckt unglaublich viel Geld hinter. Und was so ungefähr als Vorzeige Case für F genannt wird, ist das Pricing und das Angebotssystem, wo hochkomplexe Preisoptimierung gemacht werden von Jet Com, was ein Teil von Walmart ist. Und wer sich ein bisschen mit Zahlen auskennt, Walmart ist nicht so ein ganz kleiner Laden und ich glaube bei deren Pricing und Angebotssystem sollte Korrektheit auch im Vordergrund stehen. Aber genug zu F. Kommen wir jetzt zu dem Feature, was ich highlighten möchte und das Feature heißt Units of Measure. Da geht es um physikalische Einheiten im Typensystem. Wir bleiben beim Typensystem, was ich geil finde, denn F geht meines Erachtens nach noch einen Tick weiter als Ada. Ada sagt ich habe jetzt hier einen Integer und der und die Range von dem Integer ist von null bis ein hundert fünf und zwanzig und F kannst du Ich erstelle einen Typ, der ist von einem Integer, also von einem Zahlenwert und dem weise ich eine physikalische Einheit zu, zum Beispiel Meter, Sekunde, Kilogramm. Diese Einheiten sind dann Teil von dem Datentyp und werden sogar vom Compiler überprüft. Man könnte also ich habe eine Variable vom Typ float und das ist die physikalische Einheit Meta und ich habe einen anderen Typ float, das ist vom physikalischen Typ Sekunde und dann führt man darauf eine Division durch und das ergibt automatisch einen neuen Typ Float, Meter durch Sekunde, also die Geschwindigkeit. Versucht man jetzt aber irrtümlich die Meter mit Sekunde zu addieren, dann moppert der Compiler und das muss ich zugeben, ist schon geil. Besonders wie Ich habe Meter, ich habe Sekunde, ich mache eine Division drauf und habe dann die Geschwindigkeit mit einem neuen Typ Meter durch Sekunde nativ im Typensystem abgefahren. Was ist dein erster Eindruck?"
+        },
+        {
+            "start": 1524760,
+            "end": 1558460,
+            "speaker": "B",
+            "text": "Ja, wie bei der bei Ada natürlich auch. Da finde ich sehr praktisch und man denkt so im ersten Moment an Raketen, aber wenn ich so weiter denke, wie oft ich schon an Preisen gescheitert bin, so an Cent und irgendwie pro Jahr, pro Monat, irgendwo sind diese ganzen Dinge im ganz klassischen Business Umfeld, wie oft man da irgendwelche falschen Sachen miteinander addiert und multipliziert hat und irgendwelche, keine Ahnung, Kilo von irgendeinem Gemüse in einem Webshop oder was auch immer, Denke mir, dass das eigentlich auch viel Probleme verhindert hätte, sogar in ganz klassischen Webanwendungen."
+        },
+        {
+            "start": 1558460,
+            "end": 1628290,
+            "speaker": "A",
+            "text": "Naja, wir haben in Episode drei und sechzig Spaß mit Zahlen auch mal darüber gesprochen, Wie speichert man eigentlich Währungsbeträge ordentlich in der Datenbank ab? Als Integer, als Dezimal nutzt man den Money Type in, ich glaube im Postgres, postgresql hat so ein Money Type und so weiter. Also all die ganze Thematik ist natürlich jetzt nicht ganz so einfach und deswegen wird vielleicht auch F bzw. Units of Measure speziell für die Finanz und Trading Systeme so eingesetzt, weil du halt dann diese physikalische Einheit direkt im Datensystem drin hast. Aber das ursprüngliche Problem ist, glaube ich, eigentlich relativ klar. Einheiten in Programmiersprachen sind einfach ein hartes Problem. Wie hat man es bisher gelöst? Eine Lösung, die ich halt kenne, ist die Benamung von Variablen. Ist oft so eine Art Lösung. Das bedeutet, ich habe halt keine Ahnung, Time MS, dann weiß ich, das ist die Zeit in Millisekunden oder Time Seconds oder ähnliches. Und lustigerweise habe ich vor kurzem noch an unserer Podcast Automatisierung geschraubt und genau da hatte ich genau diesen Fall. Ich hatte eine Variable, die war nicht so benannt, die hieß nur Time oder irgendwie sowas oder Timestamp und der war in Sekunden. Und dann hatte ich einen anderen Timestamp, der war in Millisekunden. Und auch die KI ist drüber gestolpert, Die hat dann einfach Sekunden mit Millisekunden verglichen."
+        },
+        {
+            "start": 1628450,
+            "end": 1638750,
+            "speaker": "B",
+            "text": "Ja, dann hast du ja noch Milli und Mikro und so weiter, die beide M sind. Und da muss man sich noch immer vor Wie viele Stellen hat jetzt Milli, Bin ich jetzt richtig oder ist es Mikro und so weiter."
+        },
+        {
+            "start": 1639070,
+            "end": 1750990,
+            "speaker": "A",
+            "text": "So, und da muss ich dann erst die variablen Namen ordentlich benennen und einen Kommentar reinpacken und dann hat die KI das auch verstanden und hat mir dann den Bug gefixt. Aber im Endeffekt hätte ich den Bug dann auch selbst fixen können, weil es war halt nur eine Umrechnung, eine fehlende Umrechnung. Aber das ist genau das ursprüngliche Problem. Einige Sprachen supporten zwar Custom Typen, wie zum Beispiel Ada oder ähnliches oder vielleicht in Java kannst du ja auch alles mit Getter und Setter und Klassen nachbauen, aber dass physikalische Einheiten Teil des Typen sind, finde ich schon stark. Und was ist denn der reale Impact eines solchen Problems? Und da habe ich einen schönen Use Case gefunden. Und zwar gab es mal eine NASA Sonde. Diese NASA Sonde war auf dem Weg zum Mars, nannte sich den Mars Climate Orbiter, wie wir alle wissen. Elon Musk hat es immer noch nicht geschafft, Wir sind noch nicht auf dem Mars, aber der Weg von der Erde zum Mars, das sind ein paar Meter Punkt. Die Sonde wurde losgeschickt und sollte dann irgendwo auf der Rückseite vom Mars, zumindest aus unserer Perspektive irgendwie landen. Haben die diesen Landevorgang da irgendwie initiiert Und flups war die Sonde weg, war nicht mehr zu finden, Kommunikation abgebrochen, im Navigationssystem verloren gegangen. Was ist passiert? Und zwar haben die Damen und Herren zwei unterschiedliche Typen Einheiten miteinander verglichen. Und zwar ist die NASA davon ausgegangen, die rechnen im metrischen System, also Kilogramm, Meter, Kilome. Und die Firma, die die Software geschrieben hat, Lockheed Martin ist eine amerikanische Firma, die hat das imperiale System genommen, also Meilen lb für pounds und so weiter. Ja, und siehe da, somit haben die Berechnungen nicht mehr gestimmt und somit ist die Sonde flöten gegangen. Mit F wäre die ganze Sache nicht passiert. Zugegeben, F gab es zu diesem Zeitpunkt noch nicht, der Unfall war ein tausend neun hundert neun und neunzig, F kam erst zwei tausend fünf und zwanzig raus, aber F würde solche Einheiten Mismatches zur Compile Time abfangen."
+        },
+        {
+            "start": 1750990,
+            "end": 1780190,
+            "speaker": "B",
+            "text": "Also F gibt es schon länger, aber dieses Feature ist, glaube ich, rausgekommen. Übrigens auch sehr interessant im Gegensatz zu Ada, wo wir ja gesagt haben, es wird teilweise zur Laufzeit gecheckt, wird das wirklich komplett zur Compiled Zeit gecheckt und du hast wirklich zero Costs dadurch, weil das, sobald es dann übersetzt wird in diese Microsoft Intermediate Language, die da dazwischen hängt, eben ist automatisch der ganze Overhead weg und du hast keinen Overhead mehr während der Laufzeit, was natürlich auch sehr cool ist."
+        },
+        {
+            "start": 1780190,
+            "end": 1790230,
+            "speaker": "A",
+            "text": "Und bei diesem Feature, da würde ich mit deinem ursprünglichen Statement mitgehen, das hätte ich gern in Mehrsprache, weil ich denke, das wird wirklich viele Bugs entfernen und."
+        },
+        {
+            "start": 1790230,
+            "end": 1796670,
+            "speaker": "B",
+            "text": "Weil du schon so schön über dieses Feature redest und du das so cool findest, dieses Feature. Wie wurde das Feature erfunden?"
+        },
+        {
+            "start": 1796750,
+            "end": 1798550,
+            "speaker": "A",
+            "text": "Normal würde ich sagen, wer hat es erfunden?"
+        },
+        {
+            "start": 1798550,
+            "end": 1821580,
+            "speaker": "B",
+            "text": "Die Schweizer, in dem Fall war es Andrew Kennedy, muss man jetzt nicht unbedingt kennen. Aber das Wichtige ist, er hat es in seiner Doktorarbeit beschrieben, weil du ja immer so über die Doktorarbeiten schimpfst, dass es keine Relevanz in der Praxis hat. Er hat es in seiner Doktorarbeit beschrieben und das ganze Feature geht eigentlich auf seine Doktorarbeit zurück. Ist mittlerweile ein Engineer bei Facebook, habe ich gerade gecheckt, war früher bei Microsoft Research."
+        },
+        {
+            "start": 1821580,
+            "end": 1849320,
+            "speaker": "A",
+            "text": "Ja, Ausnahmen bestätigen die Regel und ich bin auch immer ein Fan davon, wenn Doktorarbeiten dann wirklich einen praktischen Use Case haben, denn ich habe mal gelesen, dass Doktorarbeiten etwas Neues erforschen sollen und leider muss ich auch nur weil man ein Experiment macht und es schlägt fehl, ist es kein fehlgeschlagenes Experiment. Man kennt nur einen weiteren Weg, wie es nicht funktioniert und vielleicht trifft das dann auf viele Forschungen in Doktorarbeiten zu, aber ich freue mich immer wieder, wenn dann ein Experiment gemacht wird und das dann später auch ein Use Case hat."
+        },
+        {
+            "start": 1849320,
+            "end": 1854740,
+            "speaker": "B",
+            "text": "Also meine Doktorarbeit hat auch sehr viel Relevanz in der Praxis, aber es muss erst bewiesen werden. Aber das kommt schon noch."
+        },
+        {
+            "start": 1855620,
+            "end": 1857700,
+            "speaker": "A",
+            "text": "Wir werden dir irgendeinen Preis verleihen, wenn."
+        },
+        {
+            "start": 1857700,
+            "end": 1870300,
+            "speaker": "B",
+            "text": "Du stirbst, Wolfgang, so ein Turing Award oder so wäre ganz gut. Okay, Außerdem, Trump kann sich auch alle Preise wünschen und Zufriedenstellpreis und So, also kann ich mir auch einen Turing Award wünschen."
+        },
+        {
+            "start": 1870300,
+            "end": 1888260,
+            "speaker": "A",
+            "text": "Ja, zu dem, was Trump da abliefert und mit seiner Rede in Davos kommentiere ich jetzt einfach mal nicht. Ich glaube, da haben ziemlich viele Leute von uns dieselbe Meinung. Aber kommen wir mal wieder zu einem Thema, was vielleicht ein besseres Schmunzeln ins Gesicht zaubert, zu einer Sprache, die vielleicht einen schweren Stand in der Softwareentwickler Community hat."
+        },
+        {
+            "start": 1888260,
+            "end": 1893740,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen, jetzt kommen wir von den coolen Sprachen zu den uncoolen Sprachen, oder? Oder die uncool geworden sind."
+        },
+        {
+            "start": 1894060,
+            "end": 1919080,
+            "speaker": "A",
+            "text": "Ja, und das ist die Keyfrage. Wir kommen zur Sprache PHP und bevor jetzt jeder abschaltet, wartet. Ich finde, es ist wirklich ein cooles Feature. Es hat nichts mit dem. Doch, es hat ein bisschen was mit dem Typensystem zu tun, aber der Impact ist ein anderer als auf dem Typensystem, denn es geht hier um Security und jetzt Security und PHP. Aber Wolfgang war Warum hat PHP aktuell so einen schlechten Stand in der Softwareentwickler Community und ist dieser schlechte Stand zu Recht?"
+        },
+        {
+            "start": 1919080,
+            "end": 1981910,
+            "speaker": "B",
+            "text": "Ja, ich persönlich finde es eigentlich immer noch ganz coole Sprache und vor allem, sie ist sehr rock solid, finde ich. Es gibt viele dieses Feature ja dann auch, das einfach Probleme löst in dieser Business Welt, wo es verwendet wird. Und ich glaube auch, dass vielleicht die Uncoolness irgendwie damit zusammenhängt, wo eigentlich BHB noch verwendet wird. Es ist halt eher so Oldschool Web, gewisse alte Systeme irgendwie. Es ist nicht mehr so hip, weiß gar nicht genau warum. Und vielleicht hat es dann damit zu tun, dass einfach die Projekte weniger interessant sind und dadurch dann die Sprache auch uncooler wirkt. Aber ansonsten, also jetzt rein sprachfeature technisch würde ich sagen, ist es immer noch eine sehr coole, schnelle, performante Sprache, wo man sehr schnell was auf die Straße bringt, gerade im Webbereich. Und sie hat sich auch stark weiterentwickelt und ist jetzt sicher, auch wenn man jetzt das ganze Typsystem und so weiter anschaut und vergleicht mit JavaScript. Also da finde ich, ist BHP schon wesentlich besser. Ich habe keine genaue Erklärung dafür, aber irgendwie ist es auf jeden Fall nicht mehr die hippie coole Sprache, die es mal vor fünfzehn Jahren war."
+        },
+        {
+            "start": 1981910,
+            "end": 2061460,
+            "speaker": "A",
+            "text": "Du hast das Thema Performance angesprochen, Performance subjektiv, zu was vergleicht man es? C, Rust, Go, Keine Ahnung. Aber ich denke, dass PHP inzwischen zu Unrecht einen schlechten Stand hat. Lass es mich erklären. Ich denke, PHP war und ist immer noch der Platzhirsch bei Webseiten, speziell natürlich getrieben durch WordPress und Co. Zu der Zeit, als das alles hochkam, hat WordPress natürlich nicht den hochqualitativen Source Code abgeliefert und dann haben die gesagt, ich glaube, Code ist Poetry und so weiter. Damit haben sie, glaube ich, dem ganzen PHP Ecosystem jetzt nicht wirklich geholfen. Inzwischen sage ich, die Sprache selbst hat einen enormen Boost an Sprachfeatures hingelegt in letzter Zeit. Also besonders mit wenn Version acht wir sind glaube ich bei achter april oder achter mai inzwischen. Also die darf sich die Sprache muss sich nicht verstecken. Unglaublich. Ich denke, alle Leute, die sagen PHP ist eine Scheisssprache, sollten mal inzwischen mal wieder reingucken. Die hat sich enorm entwickelt. Und hier ist das Lustige. Ich meine, PHP ist bekannt dafür für Server Side Rendering. Dann kam irgendwie die ganze JavaScript Welt, die ist dann zu Client Side Rendering gegangen und jetzt geht die ganze JavaScript Welt Aha, sie lernen mal wieder vielleicht von den großen alten Leuten, Jetzt geht React und wie sie alle heißen, wieder zurück auf Server Side Rendering. Also im Endeffekt ist halt naja, ich denke, PHP hat zu Unrecht schlechten Schanden."
+        },
+        {
+            "start": 2061460,
+            "end": 2063740,
+            "speaker": "B",
+            "text": "Was ist jetzt dieses Lieblingsfeature, das du da hast?"
+        },
+        {
+            "start": 2063740,
+            "end": 2188700,
+            "speaker": "A",
+            "text": "Nicht Lieblingsfeature? Ich finde es ein cooles Feature und das habe ich so noch nicht gesehen. Und zwar gibt es ein Feature, das nennt sich Sensitive Parameter und Sensitive Parameter ist ein neues PHP Attribut. Dafür muss ich kurz einen Exkurs machen. Was sind Attribute in PHP? Attribute in PHP sind sind Metadaten für PHP Funktionen, Parametern, Klassen, Klassenmethoden, Konstanten und so weiter. Diese Attribute kannst du programmatisch drauf zugreifen. Du kannst also okay, hat diese Funktion ein Attribut, also einen Metadaten und hä, das gibt es doch schon. Ja, das ist nichts Neues. In Java sind das Annotations, in Python sind das Decorators, in Rust sind das Attributes Und die klassischen Use Cases sind halt eigentlich irgendwie so Attribute für Orms, also für Datenbank Abstraktionslayer, wie zum Beispiel diese Klassenvariable. Dieses Klassenmember repräsentiert das Feld Username in meiner User Tabelle oder in Web Frameworks. Dann in der Controller Klasse hast du das meist über HTTP Routen, dass dann sagst okay, dieser Controller ist für diese HTTP Route. Das sind halt Attribute, nichts Neues für Leute, die Java oder Python schreiben. Jetzt Aber was ist ein Sensitive Parameter Attribut? Stack Traces oder Core Dumps oder ähnliches kennt jeder hoffentlich. Wenn nicht, es ist unglaublich sinnvoll zum Debuggen. Wenn dein Programm crasht, hast du da Details zu jedem Stack Frame und du siehst, was in welcher Reihenfolge ausgeführt wurde. Jede Applikation heutzutage verarbeitet natürlich Daten, denn ohne Daten ist irgendwie eine Applikation ja fast sinnfrei. Und jetzt gibt es verschiedene Arten von Daten. Es gibt sensible Daten, es gibt PI Daten, also persönlich identifizierbare Informationen. Sensible Daten sind zum Beispiel Passwörter, API Keys, Kreditkartendaten oder vielleicht auch einfach so die DSN, also die Data Source. DSN ist eigentlich so eine Art URL, womit du zum Beispiel die Connection zu einer Datenbank herstellst. PI Daten sind klassische E Mail Adresse oder Klarnamen von Kunden, was nicht so klar ist. Und das ist jetzt eine Testfrage, Wolfgang Sind IP Adressen PI Daten persönlich identifizierbare Daten?"
+        },
+        {
+            "start": 2189090,
+            "end": 2196890,
+            "speaker": "B",
+            "text": "Grundsätzlich ja, aber ich glaube mich zu erinnern, dass man sie für Logging grundsätzlich speichern darf, wenn ich das richtig im Kopf habe."
+        },
+        {
+            "start": 2196890,
+            "end": 2247590,
+            "speaker": "A",
+            "text": "Die Antwort ist gar nicht so einfach. Und der Grund ist normalerweise sagt Kann ich mit Zugriff auf diesen Datensatz die Person identifizieren? Bei einer IP Adresse kann ich das nicht, ohne Zugriff auf den ISP zu haben, weil der ISP hat das Mapping zwischen IP Adresse und dem Kunden. Wenn ich jetzt keinen Zugriff auf das System der Telekom habe, kann ich deine IP Adresse nicht auf Wolfgang Gassler münzen. Deswegen sagen manche Länder ist kein PIA, wenn du das international betrachtest. Es gibt diverse Länder, die sagen, das ist trotzdem PIA. Deswegen, du bist, glaube ich, immer auf der sicheren Seite, wenn du IP Adressen auch als PDA Daten klassifizierst. Wie das jetzt ganz alleine in Deutschland ist, ist eine gute Frage, weil du kannst mit den IP Adressen natürlich dann irgendwie zur Polizei gehen und so einen Antrag stellen und pipapo, falls da irgendwas was mit gemacht wurde."
+        },
+        {
+            "start": 2248070,
+            "end": 2285220,
+            "speaker": "B",
+            "text": "Ja, aber es geht ja auch darum, dass du, wenn du eine IP Adresse hast und später irgendwo anders die IP Adresse bekommst, dass du dann Rückschlüsse auf die Leute ziehen kannst. Das heißt, du hast einmal irgendwo einen Namen gespeichert und in einem anderen System über die IP Adresse könntest du dann wieder auf den Namen kommen. Also brauchst du gar nicht auf den ISP zugreifen. Und darum wird es ja auch so angesehen. Aber ich habe eben im Kopf, dass ich glaube, für eine gewisse Zeit wird toleriert, dass du die IP Adresse speicherst, sobald die dann irgendwann raus floatet, wie in Log Dateien, die halt, keine Ahnung, eine Retention von zwei Wochen haben oder so, da wird es akzeptiert. Aber wenn du es auf lange Sicht speicherst, dann ist es eigentlich ganz klassisch GDPR mäßig nicht konform."
+        },
+        {
+            "start": 2285220,
+            "end": 2312800,
+            "speaker": "A",
+            "text": "Jetzt ist es aber so, wenn eine Application crasht und du hast ein Stack Trace, dann gibt es auch Applikationen, die schippen diese rohe Fehlernachricht an den User. Und das ist natürlich ganz schlecht, weil in dem Stack Trace stehen unter anderem auch die Values von deinen Funktionsparametern. Wolfgang, was passiert jetzt also, wenn ich eine Funktion authenticate habe und die kriegt einen Username und ein Passwort als Funktionsparameter rein, weil irgendwie musst du ja deinen User authentifizieren."
+        },
+        {
+            "start": 2312800,
+            "end": 2319280,
+            "speaker": "B",
+            "text": "Ja, dann wird der schön im SEC Trace alles mitgelockt. Natürlich alle Tokens, Keys oder was es sonst so gibt."
+        },
+        {
+            "start": 2319360,
+            "end": 2431990,
+            "speaker": "A",
+            "text": "Und da sind wir bei dem Thema Daten in Logs leaken. Und jetzt sagt Warum ist das denn ein Problem? Die sind ja nur auf meinem Server. Ja, ich kann euch sagen, weil ich bei zwei größeren Software as a Service Firmen gearbeitet habe. Wenn Kundendaten oder sensible Daten oder Pi Daten in irgendwelchen Logs geleakt werden, dann ist das automatisch ein interner Security Incident, Denn du weißt nie wirklich, also doch, weißt du hoffentlich, aber es gibt etliche Leute innerhalb deiner Firma, die Zugriff auf die Logs haben, auf deine Observability Daten haben und dann hoffentlich hast du ein ordentliches Rose Access Control System implementiert. Denn im Endeffekt kann es sein, dass dann der Customer Support Zugriff auf einen API Key vom Kunden hat, der dann in irgendeinen Datenbank Log liegt. Punkt ist, guckt, dass ihr euren Scheiß zusammen habt und dass ihr keine sensiblen Daten, Secrets und Co. In euren Logs liegt. Ich weiß zum Beispiel, dass bei postgresql, wenn die sowas haben, wenn die solche Secrets loggen im Upstream Project, dass das auch ein Security Release ist. Jetzt habe ich gerade die Datenbank angesprochen und jetzt gibt es in der Standard Library von PHP leider ein Prime example dafür, nämlich die Datenbank Connection. Und zwar gibt es in PHP ein Objekt, das nennt sich PDO, das nennt sich PHP Data Object, das ist eigentlich eine objektorientierte Datenbank Abstraktionsschicht und da gibt es eine Connect Funktion oder eine Connect Methode, die nimmt ein Passwort entgegen und wenn keine Connection zur Datenbank aufgebaut werden konnte, wird eine Exception geschmissen und da wird leider das Passwort im Stack Trace mitgeballert. Ist halt kacke. Naja, jetzt kannst du in PHP aber sagen, dass der zweite Funktionsparameter in deiner Funktion, nämlich das Passwort, ein sensitive Parameter ist. Und wenn dann ein Stack Trace geschmissen wird, ein Fatal Error oder ein Panic, dann wird das Value einfach redacted und sagt, wird nicht angezeigt. Und das muss ich zugeben, finde ich geil und habe ich noch in keiner anderen Sprache gesehen."
+        },
+        {
+            "start": 2431990,
+            "end": 2524470,
+            "speaker": "B",
+            "text": "Und da sieht man glaube ich wieder, dass BHB einfach für einen gewissen Use Case dann auch optimiert wird, weil es ist einfach ein klassisches Problem in der Webwelt und BHB versucht da eine Lösung zu finden dafür. Was jetzt eigentlich kein so ein klassisches Sprachfeature ist, ist jetzt irgendwie auf der untersten Ebene, sondern halt wirklich für den Use Case, wo PHP viel eingesetzt wird, gibt es dieses Feature. Man muss natürlich schon sagen, dass die meisten Frameworks sowie Laravel oder so diese Redaction Logik schon eingebaut haben. Und natürlich, wenn du jetzt irgendwie nur ein Echo in PHP machst oder selber irgendwie ein Log machst, dann wird es natürlich jetzt nicht redacted und rausgelöscht, sondern wird es ganz normal ausgegeben. Also es ist nur für den klassischen Stack Trace, der so von PHP ausgegeben wird. Wenn du dadurch ein großes Framework drumherum hast, was es irgendwie wrappt, dann hast du das wahrscheinlich schon im Framework gehabt. Aber jetzt ist es natürlich nativ in PHP verfügbar und ich glaube, das zeigt auch so ein bisschen, dass man schon in die Security Richtung pusht und die User auch erzieht, weil ganz oft, wenn es in irgendwelchen Frameworks oder so drin ist, musst du das natürlich aktiv nutzen und erstmal wissen, dass es das überhaupt gibt. Und so über ein natives Feature ist es vielleicht doch näher am User dran, dass sich User auch daran gewöhnen, dass man sich um das kümmern muss. In Kontakt kommen mit der ganzen Problematik überhaupt, weil du musst die Problematik überhaupt kennen, dass du vielleicht was damit machst oder das angehst, dieses Problem, weil davor hast du das vielleicht durch die ganze Welt geschickt und irgendwie Grafana Logs und keine Ahnung, Sentry und weiß was ich was, wo du das dann überall drin hast, deine ganzen Tokens."
+        },
+        {
+            "start": 2524630,
+            "end": 2591530,
+            "speaker": "A",
+            "text": "Als ich mir das Feature angesehen, habe ich mich gefragt, hä, ist das neu für PHP? Ist das wirklich so neu? Gab es das vorher nicht? Und da ist die Antwort leider ja und nein. Ähnliche Features gab es Bereich, also du kannst zum Beispiel PHP konfigurieren, dass der einfach in allen Exceptions und in allen Stacktraces einfach alle Argumente ignoriert. Somit nimmt er jede Value aus dem Stacktrace. Und das ist natürlich ein bisschen suboptimal, wenn man jetzt wirklich den Stack Trace fürs Debug nutzt, denn ab und zu braucht man halt die Value. Und dann gibt es noch Userland Implementierungen. Also da gibt es jemand, der hat eine Library dafür geschrieben, die kannst du integrieren, die hat das dann gemacht, aber das kollidiert natürlich gegebenenfalls mit neuen PHP Features und die Adoption dieser Library, die muss halt bekannt sein und so weiter. Und dann natürlich muss das Feature mit allen PHP Features funktionieren, wie Closures, Variation, Parametern, Objekten und Co. Also deswegen das nativ in der Sprache implementiert zu haben, ist schon eine gute Sache. Die ganze Sache existiert seit Dezember zwei tausend zwei und zwanzig also auch schon drei Jahre. Und falls ihr PHP programmiert und habt sensitive Daten, dann baut das mal ein. Falls ihr irgendwie die großen Frameworks wie Symphony, Laravel und wie sie alle heißen nutzt, dann wird es mit hoher Wahrscheinlichkeit schon drin sein."
+        },
+        {
+            "start": 2592090,
+            "end": 2622930,
+            "speaker": "B",
+            "text": "Aber jetzt kommen wir natürlich zu einer Programmiersprache, die nicht fehlen darf in der Liste. Und der Andi hat mir schon geschrieben, er hat drei coole Features gefunden, aber er findet jetzt keines mehr und es muss unbedingt Go reinkommen oder so ähnlich. Und ich glaube, er hat wirklich viel Zeit investiert, um ein cooles Feature in Go zu finden. Und er hat irgendeines gefunden, was glaube ich noch gar nicht so richtig live ist, was seit Jahrzehnten diskutiert wird, aber trotzdem cool ist. Und in anderen Sprachen gibt es schon lang, aber Go muss natürlich rein. Also bitte Andi, was ist das coole Go Feature?"
+        },
+        {
+            "start": 2622930,
+            "end": 2631650,
+            "speaker": "A",
+            "text": "Ich finde das schön, wie du hier Lügen verbreitest, denn diese Episode hat eigentlich mit dem Feature, mit dem vierten Feature aus der Programmiersprache gestartet."
+        },
+        {
+            "start": 2631650,
+            "end": 2637370,
+            "speaker": "B",
+            "text": "Und dann habe ich gedacht, nicht in meiner Welt. In meiner Welt hat es so stattgefunden, wie ich es gerade erzählt habe."
+        },
+        {
+            "start": 2637370,
+            "end": 2643170,
+            "speaker": "A",
+            "text": "Ja, dann, naja, Perception is Reality. Also Fakten lassen wir mal weg, verstehe ich."
+        },
+        {
+            "start": 2643570,
+            "end": 2646370,
+            "speaker": "B",
+            "text": "Wir hatten Trump heute schon, also setzt sich nur konsequent."
+        },
+        {
+            "start": 2646980,
+            "end": 2656220,
+            "speaker": "A",
+            "text": "Aber starten wir mal mit derselben Frage. Wir hatten gerade über den Stand von PHP in der Softwareentwickler Community gesprochen. Wie ist denn der Stand von Go in der Softwareentwickler Community deines Erachtens nach? Weil Perception ist ja Reality ja schon."
+        },
+        {
+            "start": 2656220,
+            "end": 2659380,
+            "speaker": "B",
+            "text": "Ein bisschen altes Pferd, was langsam tot ist, was man noch reitet, oder?"
+        },
+        {
+            "start": 2659460,
+            "end": 2715230,
+            "speaker": "A",
+            "text": "Ich verstehe das. Ich verstehe das. Du kannst es einfach nicht lassen, über dein Ego zu springen. Aber das ist okay, Wolfgang. Das ist okay. Du bist alt, du bist eingesessen, du bist mürrisch, das verstehe ich. Wir sprechen über ein neues Feature, was zum Release dieser Episode noch nicht draußen ist, aber ich glaube in zwei, drei Wochen rauskommt in der Go Version als Experimental Feature. Wir sprechen über den Secret Mode. Und zwar ist das Feature ein neues Paket in der Standard Library Runtime Secret. Und kommen wir aber erstmal zu dem ursprünglichen Problem. Ähnlich wie beim ursprünglichen Problem von PHP und dem Sensitive Parameter geht es wieder um Security, nur auf einer anderen Ebene, also eher auf der Ebene von Kryptographieprotokollen und verschlüsselter Kommunikation. Also ich rede von wireguard und TLS und da sprechen wir jetzt über das Stichwort Forward Secrecy oder auch Perfect Forward Secrecy Kurs PFS. Hast du das schon mal gehört, bevor."
+        },
+        {
+            "start": 2715230,
+            "end": 2717590,
+            "speaker": "B",
+            "text": "Du mir es gepitcht hast? Ehrlicherweise noch nicht."
+        },
+        {
+            "start": 2717750,
+            "end": 2755220,
+            "speaker": "A",
+            "text": "Okay, gar kein Problem. Machen wir ganz kurz einen Exkurs, was das eigentlich ist, denn es ist auch keine Schande. Es gibt nicht so viele Leute, die die Protokolle von White wireguard und Co. Implementieren. Deswegen sei dir verziehen, Wolfgang. Im Endeffekt ist das ein Sicherheitsprinzip bei verschlüsselter Kommunikation. Forward Secrecy sorgt dafür, dass jedes Gespräch sein eigenes einmaliges Geheimnis hat. Das bedeutet, ein kompromittierter Schlüssel gefährdet nicht die Vergangenheit. Warum ist das also wichtig? Selbst wenn ein Angreifer Zugriff auf das Geheimnis erhält, wie zum Beispiel den privaten Schlüssel in TLS, sollte er nicht in der Lage sein, vergangene Kommunikations Sitzungen zu entschlüsseln."
+        },
+        {
+            "start": 2755540,
+            "end": 2767140,
+            "speaker": "B",
+            "text": "Man merkt, dass du dir das von der AI übersetzen hast lassen, wenn du Geheimnis sagst. Das ist das Secret. Ich glaube, damit alle das verstehen, wenn der Andi von Geheimnis spricht. Er meinte Secret in der Verschliessung Naja."
+        },
+        {
+            "start": 2767140,
+            "end": 2801060,
+            "speaker": "A",
+            "text": "Stell dir vor, wir haben jetzt diesen Call hier und wir quatschen und die Kommunikation ist verschlüsselt und die verschlüsselte Kommunikation wird aufgezeichnet und wir beenden den Call und wir machen nächste Woche wieder eine Aufnahme. Und das Gleiche passiert Wir exchangen einen Schlüssel am Anfang und die verschlüsselte Kommunikation wird von dem FBI oder so aufgezeichnet. Wenn wir für jede Kommunikation immer den gleichen Schlüssel nehmen würden und in einem Jahr das FBI an den Schlüssel rankommt, kann das FBI unsere Kommunikation von heute auch in der Zukunft entschlüsseln. Richtig, weil wir immer denselben Schlüssel genommen haben."
+        },
+        {
+            "start": 2801140,
+            "end": 2806450,
+            "speaker": "B",
+            "text": "Also es kann in der Zukunft die Vergangenheit entschlüsseln. Meinst du? Die Zukunft kannst du nicht entschlüsseln, aber die Vergangenheit in der Zukunft."
+        },
+        {
+            "start": 2807240,
+            "end": 2828320,
+            "speaker": "A",
+            "text": "Genau. Forward Secrecy oder Perfect Forward Secrecy sagt, wir tauschen für jede Kommunikation einen neuen Schlüssel aus. Auch wenn die verschlüsselte Kommunikation mitgeschnitten wird und der Angreifer in Zukunft Zugriff auf den Schlüssel hat, kann er vergangene Kommunikation, vergangene verschlüsselte Kommunikation, die aufgezeichnet wurde, nicht entschlüsseln."
+        },
+        {
+            "start": 2828320,
+            "end": 2830120,
+            "speaker": "B",
+            "text": "Soweit gut, soweit klar."
+        },
+        {
+            "start": 2830120,
+            "end": 2884280,
+            "speaker": "A",
+            "text": "Basiert ganz klassisch auf Diffie, Hellmann und Co. Und damit das Ganze funktioniert, müssen kurzlebige Schlüssel, also temporäre Schlüssel, unmittelbar nach dem Handshake aus dem Memory, aus dem Speicher gelöscht werden. Wir beginnen die Sitzung, wir tauschen den Schlüssel aus und wenn er dann noch im Memory bleibt und wir haben sowas wie Hardbleed oder Mongobleed, das bedeutet Sicherheitslücken, wo du erweiterten Speicherbereich lesen kannst, dann kannst du den temporären Schlüssel, den wir zur Kommunikation hier ausgemacht haben, auslesen und die ganze Sache verschlüsseln. Deswegen musst du dafür sorgen, dass wenn der Schlüsselaustausch stattgefunden hat, dass die ganze Thematik der Schlüssel sofort aus dem Memory gelöscht wird, damit der Schlüssel nicht mehr angreifbar ist. Und genau darum geht's. Es geht darum, dass wir nach einer Funktion gewisse Werte direkt aus dem Memory schreiben. Wir reden also nicht von Stack Traces, sondern vom Speichern von Memory selbst."
+        },
+        {
+            "start": 2884360,
+            "end": 2887500,
+            "speaker": "B",
+            "text": "Und warum ist das ein großes Problem oder warum ist es so schwierig?"
+        },
+        {
+            "start": 2887500,
+            "end": 2932170,
+            "speaker": "A",
+            "text": "Naja, es gibt ja Sprachen, die haben keinen Garbage Collector, Da musst du das selbst managen. Und dann gibt es Sprachen, die haben einen Garbage Collector. Aber weißt du, wann der Garbage Collector triggert und weißt du, ob der Garbage Collector Counter deinen temporären Schlüssel, den wir gerade ausgemacht haben, nirgendwo mehr referenziert und dass der Garbage Collector den wirklich wegräumt. Hast du als Programmierer darüber die Sichtbarkeit? Du kannst dir das alles mit Profiling Tools ausgeben, aber wann hast du das letzte Mal etwas programmiert, wo du sagst, du guckst auf den Code und hast gesagt, diese Variable, die ist sensitiv, das hat sensible Daten. Ich weiß aber, dass da hinten in der anderen Funktion die ganze Sache referenziert wird, deswegen räumt der Garbage Collector den in drei Millisekunden nicht weg."
+        },
+        {
+            "start": 2932250,
+            "end": 2938330,
+            "speaker": "B",
+            "text": "Wann wird denn das ganze Feature dann endlich released, wenn du jetzt schon über Features sprichst, die in der Zukunft liegen?"
+        },
+        {
+            "start": 2938330,
+            "end": 2940530,
+            "speaker": "A",
+            "text": "Februar zwei tausend sechs und zwanzig in der Go Version ein hundert sechs und."
+        },
+        {
+            "start": 2940530,
+            "end": 2959150,
+            "speaker": "B",
+            "text": "Zwanzig jetzt habe ich kurz da Recherche betrieben und habe gesehen, dass das Originalticket zwei tausend siebzehn angelegt wurde, wo dieses Feature vorgeschlagen wurde. Was ist jetzt ein Security Feature, was scheinbar sehr wichtig ist? Warum braucht man da acht bis neun Jahre für so eine Implementierung oder die Diskussion eher? Die Implementierung war wahrscheinlich schneller, aber die."
+        },
+        {
+            "start": 2959150,
+            "end": 3025100,
+            "speaker": "A",
+            "text": "Diskussion Naja, also erstens, ja, es ist ein Security Feature und ja, Security Features sind sehr wichtig, aber dieses Feature betrifft eine unglaublich minimale prozentualen Anteil an Softwareentwicklern, denn es ist primär fokussiert auf Leute, die an Kryptographie Library schrauben. Wie viele Leute kennst du, die Go programmieren, die an Kryptographie Library schrauben? Wahrscheinlich nicht so viele. Das ist die eine Thematik. Die zweite Thematik hast du natürlich mit Rob Pike und Co. Zu tun und die Go Language Sprachdesigner sind ja sehr, sehr picky. Also nur weil etwas frühzeitig vorgeschlagen wurde und lange diskutiert wurde, heißt das nicht, dass es kompliziert zu implementieren ist. Natürlich baust du jetzt hier an der Runtime rum, an dem Garbage Collector, an der Heat Modifikation und Frames und so weiter werden gelöscht. Das hat natürlich eine gewisse Komplexität, aber da würde ich jetzt erst mal keinen großen Punkt drauflegen, nur etwas, weil lang etwas diskutiert wurde. Ich weiß nicht, wie lange Generics in der Go Community diskutiert wurden, obwohl das für ziemlich viele Leute unverständlich war und im Endeffekt sind sie halt reingekommen. Deswegen würde ich auf die Dauer jetzt erstmal keinen großen Wert legen."
+        },
+        {
+            "start": 3025100,
+            "end": 3046900,
+            "speaker": "B",
+            "text": "Und wie schaut es jetzt Performance technisch aus, weil wenn ich da irgendwie reinspringe in den Speicher und irgendwie Garbage Collector Interference mache, zwischendrin da reinpfusche, hat es dann keine Performance Nachteile, weil gerade Go sagt ja immer, sie sind super schnell und wenn ich dann da irgendwie eine Crypto Library implementiere damit und dann irgendwie ständig auf den Speicher zugreife und Sachen lösche und den Garbage Collector womöglich irgendwie."
+        },
+        {
+            "start": 3046900,
+            "end": 3057180,
+            "speaker": "A",
+            "text": "Anhalten muss oder solche Dinge, streich mal sofort ständig. Also ich hoffe nicht, dass du kontinuierlich neue Kommunikationskanäle aufmachst, wo du temporäre Schlüssel austauschen musst. Ich weiß nicht, wie oft du das machst."
+        },
+        {
+            "start": 3057180,
+            "end": 3063300,
+            "speaker": "B",
+            "text": "Keine Ahnung, wie oft so Schlüssel geändert werden in einer High Security Connection. Kann schon passieren, aber naja, wenn der."
+        },
+        {
+            "start": 3063300,
+            "end": 3182680,
+            "speaker": "A",
+            "text": "Austausch des Schlüssels secure ist und du einen temporären Schlüssel hast, dann weiß ich gar nicht, ob du es jetzt jede Minute refreshen musst. Das ist die eine Thematik. Die zweite Thematik ist halt die Frage, wie oft das angewandt wird. Performance technisch habe ich da keine Kennzahlen zu, da es noch im Upstream ist und noch nicht wirklich released wurde. Ich gehe stark davon aus, dass bin mir nicht sicher, ob das jetzt der unglaublich performance kritischste Teil ist, aber kann ich relativ wenig zu sagen. Was ich dir aber sagen kann, ist, dass die ganze Thematik auch ausgeführt wird, wenn dein Go Programm panicked, also ähnlich wie bei PHP in Fatal Error schmeißt oder sowas, wenn es crash dann funktioniert auch, was sehr cool ist. Und die Syntax finde ich relativ einfach. Du inkludierst einfach ein Paket der Standard Library und dann schreibst du secret do und als Funktionsparameter gibt es eine Closure rein. Und wenn diese Closure ausgeführt wird, inklusive des kompletten Stack Traces, also auch wenn du in andere Funktionen springst, dann klirrt der den Memory von den verwendeten Variablen. Das ist natürlich schon mal eine unglaublich einfache Thematik, denn man kann sich auch fragen, hä, wieso bauen die das denn? Kannst du das nicht im Userland bauen? Ja und nein. Also es war im Userland oder es ist im Userland schon möglich und auch schon seit acht Jahren, denn die Go Implementierung von wireguard ist so eine VPN Software, wendet das bereits an bzw. Hat sich da selbst was geschrieben. Das klappt zwar, aber die Implementierung selbst ist nicht wirklich schön, denn wenn du den Code mal ansiehst und zwar ist der Code im GitHub Issue, wo das Feature ursprünglich mal vorgeschlagen wurde, haben wir auch in den Shownotes verlinkt. Da siehst du schon, ist zwar nur sechs, sieben, acht Zeilen, aber es geht halt dann wieder mit Reflection und so weiter. Und was der eigentlich macht, ist, der überschreibt halt den Speicherwert dann von der Variable, von dem temporär ausgehandelten Schlüssel dann auch mit einer Null. Und deswegen go gilt ja als einfach zu lernen und da macht es halt schon Sinn, dass solche Funktionen zur Verfügung gestellt werden. Also nein, es ist nicht neu, aber ja, es ist neu."
+        },
+        {
+            "start": 3182680,
+            "end": 3206850,
+            "speaker": "B",
+            "text": "Ja, es hat ja auch nur acht Jahre gebraucht, also so neu kann es gar nicht sein. Ich habe mir probiert mal die Konversation durchzuschauen. Also da kommt schon oft Performance irgendwie als Argument vor, aber nachdem das irgendwie, ich hab so grob gezählt, über drei hundert Messages sehen in dem Issue, ist es wahrscheinlich eine tiefere Diskussion, die man sich mal durchlesen könnte. Wenn jemand Ahnung hat, was das im Detail bedeutet, der kann es gerne bei uns in der Discord Community dem Andi mal erklären."
+        },
+        {
+            "start": 3207010,
+            "end": 3330800,
+            "speaker": "A",
+            "text": "Ja, also wie gesagt, ich lege da jetzt keinen großen Wert auf die Performance. Ich weiß gar nicht, ob ich diese Funktion jemals anwenden werde. Warum habe ich das jetzt in dieser Podcast Episode als cooles Feature mit aufgenommen? Nicht, weil es ein neues Feature ist, sondern weil es unglaublich einfach anzuwenden ist. Wenn wir darüber sprechen, mal nach der Ausführung der Funktion musst du diese Werte aus dem Memory löschen. Da würde ich erstmal vor einem Wald stehen. Fuck, wie mache ich denn das? Und mit einem Function Call muss ich zugeben, wow, also es ist schon, es ist unglaublich einfach anzuwenden. Und meine Perspektive geht jetzt hier auf die einfache Anwendung, denn ich habe nämlich auch mal geguckt, ist das denn jetzt ein neues Feature? Und dieses Feature habe ich dann einfach mal in unsere Discord Community gehauen, dass ich das cool finde. Und da hat der Richard mit dem Handle rw was dazu gesagt. Vielen lieben Dank, Grüße gehen raus. Und zwar in der Sprache C gibt es sowas schon und zwar über eigentlich drei Funktionen. Auf der einen Seite gibt es eine Funktion memzero explicit, die füllt eine Memory Region einfach mit Null. Dann gibt es eine andere Funktion in der Glib C Extension, nennt sich explicit b, die macht ungefähr das gleiche. Und dann gibt es noch eine Funktion memset beziehungsweise memset s und die schreibt einfach byte für byte einen String, sagte Aber auch vor ein paar Jahren gab es in der C Community dann so ein kleines Drama, weil diese memset Funktion einfach vom Compiler wegoptimiert wurde. Und das ist natürlich nicht Sinn der ganzen Thematik. Da haben wir den Blogpost auch in den Shownotes verlinkt. Du versuchst hier irgendwie spezielle Werte aus dem Memory nach einem Function Call, besonders wenn du die Memory selbst handhabst, wie bei C hat ja keinen Garbage Collector zu überschreiben, weil du halt irgendwie sensitive Daten aus dem Memory löschen möchtest. Und dann kommt der Compiler bei Compiler und optimiert das einfach mal weg. Das ist natürlich jetzt nicht ganz so geil, wurde inzwischen behoben und das geht dann auch mit memset s. Die Links zu den Funktionen haben wir euch dann auch in die Show Notes gepackt und memset s gibt es dann seit C, also ist es auch nicht so super lange da."
+        },
+        {
+            "start": 3330800,
+            "end": 3339780,
+            "speaker": "B",
+            "text": "Aber ein gutes Beispiel, wen man bei uns in der Community findet, also wenn sich der Andi mit Kernel Entwicklern anlegt, dann bekommt er so eine Antwort, dass go das nicht erfunden hat."
+        },
+        {
+            "start": 3340660,
+            "end": 3347180,
+            "speaker": "A",
+            "text": "Das habe ich ja nie behauptet, dass go das erfunden hat. Ich finde es halt. Was ich aber behaupte ist, Go macht es sehr einfach."
+        },
+        {
+            "start": 3347180,
+            "end": 3352020,
+            "speaker": "B",
+            "text": "Von daher Go macht es besser. Gar keine Frage. Immer, immer macht's go besser."
+        },
+        {
+            "start": 3352020,
+            "end": 3407400,
+            "speaker": "A",
+            "text": "Du bist ein perfektes Beispiel für Annahmen über Fakten. Das ist einfach unglaublich. Der Wolfgang dreht sich die Welt, wie sie ihm gefällt. Aber in Rust gibt es das auch, aber nur über eine Third Party Library. Da gibt es ein externes Paket oder ein sogenanntes crate, nennt sich zero eyes, macht eigentlich genau das Gleiche. Deswegen. Und wer das Feature mal ausprobieren möchte, der springt mal kurz in die Show Notes. Da haben wir GitHub Repository verlinkt, wo wir alle vier Sprachfeatures, also einmal das starke Typensystem mit den Type Ranges von Ada, einmal F mit den Units of Measure, einmal PHP mit den Sensitive Parameter und einmal go im Secret Mode. Da habe ich dank Cloud Code einfach mal vier Demos gepromptet. Mit einem Docker Environment könnt ihr starten. Da könnt ihr den Source Code einfach einsehen, nur um mal ein Gefühl dafür zu kriegen, wie einfach das zu verwenden ist oder wie das funktioniert."
+        },
+        {
+            "start": 3407560,
+            "end": 3413000,
+            "speaker": "B",
+            "text": "Was mich jetzt noch interessieren wü Wie war deine Ada Erfahrung? Was sagst du zu Ada, was du bisher gesehen hast?"
+        },
+        {
+            "start": 3413160,
+            "end": 3416140,
+            "speaker": "A",
+            "text": "Deutlich leichter zu lesen als ocaml oder Haskell oder ähnliches."
+        },
+        {
+            "start": 3416610,
+            "end": 3419570,
+            "speaker": "B",
+            "text": "Ich bin nicht abgeneigt, auch keine funktionale Sprache, muss man dazu sagen."
+        },
+        {
+            "start": 3419730,
+            "end": 3427410,
+            "speaker": "A",
+            "text": "Ich bin nicht abgeneigt. Ich finde es eigentlich ziemlich cool und seit dieser Introduction, obwohl ich Kopfschmerzen hatte, Ada ist sehr schön zu lesen, finde ich."
+        },
+        {
+            "start": 3427570,
+            "end": 3435090,
+            "speaker": "B",
+            "text": "Man sagt immer, dass Ada auch sehr verbose ist und dass man eher viel schreiben muss, aber das macht natürlich auch eine gute Lesbarkeit üblicherweise."
+        },
+        {
+            "start": 3435170,
+            "end": 3447700,
+            "speaker": "A",
+            "text": "Ich bin angetan, ich finde es gut und ich habe noch nie Produktionssoftware in Ada gesehen, zumindest auch noch nie daran gearbeitet. Es ist mir freundlicher gestimmt als JavaScript, sage ich dir, aber das ist bei mir auch nicht schwer."
+        },
+        {
+            "start": 3447700,
+            "end": 3449860,
+            "speaker": "B",
+            "text": "Von daher, ich wollte gerade sagen, das ist auch nicht schwer."
+        },
+        {
+            "start": 3450180,
+            "end": 3517670,
+            "speaker": "A",
+            "text": "Das war die erste Session von vier coolen Sprachfeatures und jetzt bist du gefragt. Kennst du eins der vier Features, die in anderen Sprachen auch vorhanden ist? Wenn ja, springen wir in unsere Discord Community, Schreib mir eine E Mail, schreib uns über Mastodon, LinkedIn oder ähnliches, drop uns mal Link und das schauen wir uns an. Wir wollen von euch lernen, denn die besten Programmierer und Programmiererinnen haben gutes Grundverständnis von den Stärken und Schwächen von vielen Programmiersprachen. Auf der anderen Seite ist die zweite Welches Programmiersprach Feature ist denn dein Highlight? Wo sagst du, wow, das bumst mich jedes Mal weg, das finde ich richtig cool, das bringt mich zum Grinsen. Schickt uns mal eure Features, denn es gibt viel zu viele Programmiersprachen, Es gibt viel zu viele coole Features und wir kennen natürlich nicht alle. Und die dritte Frage ist natürlich will ich jetzt nicht die Fragen bomben, aber was hältst du von diesem Format? Muss ich dem Wolfgang jetzt auch mal auf die Füße treten, dass der sich auch mal wieder mit Programmiersprachen auseinandersetzt und auch mal ein paar Features raussucht oder sagt, wisst ihr was, war zwar interessant, aber könnte mal sein lassen. Deswegen Discord Community Stehtischineering. Unsere E Mail Adresse findet ihr auch in den Shownotes."
+        },
+        {
+            "start": 3517670,
+            "end": 3530590,
+            "speaker": "B",
+            "text": "Ich habe auf jeden Fall einiges gelernt. Danke, Andi, für den Push. Habe ich ehrlich gesagt auch immer nur so im theoretischen Umfeld wahrgenommen und hatte nie irgendwie in direkten Kontakt damit. Danke dafür."
+        },
+        {
+            "start": 3530670,
+            "end": 3543070,
+            "speaker": "A",
+            "text": "Und die Show Notes sind voll mit interessanten Links. Ihr findet da Deep Dives zum PHP Sensitive Parameter Feature. Ihr findet den RFC vom Go Feature Secret Mode."
+        },
+        {
+            "start": 3543070,
+            "end": 3546130,
+            "speaker": "B",
+            "text": "Ihr findet acht Jahre Diskussion im Issue."
+        },
+        {
+            "start": 3547320,
+            "end": 3573200,
+            "speaker": "A",
+            "text": "Ihr findet Details wie der Mars Climate Orbiter wegen der Fundkraft Sekunde gescheitert ist. F die ADA Slides zu der ADA Introduction und so weiter und so fort. Schaut mal rein. Ich hatte sehr viel Spaß bei der Recherche und ich freue mich auf die nächste ADA Introduction. Ich habe schon geguckt, auf der Foster zwei tausend sechs und zwanzig gibt es leider kein ADA Devot. Das war's von uns. Wir verabschieden uns, wir hören uns nächste Woche. Bis bald."
+        },
+        {
+            "start": 3573200,
+            "end": 3584320,
+            "speaker": "B",
+            "text": "Und wer uns in Person treffen will, wir sind bei der Fostem ist nächste Woche. Kann man auch ganz kurzfristig vorbeischauen. In Brüssel braucht man keine Anmeldung. Auch da gibt es alle Informationen bei uns im Discord Channel."
+        },
+        {
+            "start": 3584320,
+            "end": 3585040,
+            "speaker": "A",
+            "text": "Und ciao."
+        }
+    ]
+}
