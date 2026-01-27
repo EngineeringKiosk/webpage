@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/18258a92-02e3-47e5-9ddd-88c9e6ba062a/engineering-kiosk-252-coole-sprach-features-in-ada-f-php-und-go
 apple_podcasts: https://podcasts.apple.com/us/podcast/252-coole-sprach-features-in-ada-f-php-und-go/id1603082924?i=1000746785136&uo=4
 audio: https://audio1.redcircle.com/episodes/d70de971-30ae-4245-9fd9-5ddb5e7ade84/stream.mp3
 chapter:
