@@ -3346,6 +3346,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/252"
+  to = "/podcast/episode/252-coole-sprach-features-in-ada-f-php-und-go?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep252"
+  to = "/podcast/episode/252-coole-sprach-features-in-ada-f-php-und-go?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
