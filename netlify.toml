@@ -3358,6 +3358,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/253"
+  to = "/podcast/episode/253-technisches-produktmanagement-mit-michael-gasch-von-amazon-web-services?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep253"
+  to = "/podcast/episode/253-technisches-produktmanagement-mit-michael-gasch-von-amazon-web-services?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
