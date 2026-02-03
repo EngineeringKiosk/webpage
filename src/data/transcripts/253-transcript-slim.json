@@ -1,0 +1,597 @@
+{
+    "confidence": 0.95641756,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4507,
+    "utterances": [
+        {
+            "start": 3200,
+            "end": 93290,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode des Engineering Kiosk Podcasts. Heute wird es mal Zeit, eine Lücke zu schließen, die wir viel zu lange ignoriert haben. Wir reden gefühlt in jeder zweiten Folge über Product Owner Backlogs und Prioritäten. Aber eine echte Episode zum Thema Produktmanagement? Fehlanzeige bis jetzt. Durch Zufall sind wir an einen Kontakt zu Michael Gasch gekommen. Michael ist Produktmanager bei AWS im Serverless Umfeld. Amazon selbst gilt als eine Art Vorreiterorganisation, was das Thema Produktmanagement angeht. Zwei Pizza Teams, fünf Fragen, Dokument und Working Backwards, indem man als erste Aktivität eine Pressemitteilung über das neue Feature schreibt, sind nur wenige Buzzwords aus dem Amazon Kosmos. Mit Michael steigen wir tief ins Produktmanagement ein. Was ist Produktmanagement eigentlich und was ist es definitiv nicht? Warum ist Projektmanagement nicht einfach nur ein anderes Word für Produktmanagement? Wo ist der Unterschied zwischen Produktmanagement bei BMW Booking Com und einem Produkt mit technischer Kundschaft wie AWS? Ist jeder in irgendeiner Art und Weise ein Produktmanager? Inwieweit macht AI den Job obsolet oder stärkt diesen gegebenenfalls sogar? Ist Produktmanager eine glorifizierte Rolle als Jira Backlog Maintainer Und was können Softwareentwickler innen tun, um mehr in Produktentscheidungen involviert zu sein? Und wir behandeln noch viele weitere Themen wie Metriken, Priorisierung unter Dauerbeschuss, Disagree und Commit und wie ein Feature wie Durable Funk in Lambda von der Idee bis zum Launch kommt. Ich sage einfach mal, lass uns direkt loslegen. Viel Spaß."
+        },
+        {
+            "start": 97850,
+            "end": 187920,
+            "speaker": "B",
+            "text": "Wir haben jetzt im Engineering Kiosk schon über zwei hundert fünfzig Episoden produziert und wir sprechen ja immer über viele technische Dinge in der Softwareentwicklung. Und unser Credo ist ja auch, dass wir über alles rundherum auch sprechen und sprechen wollen. Und ich habe mal in unsere Transkripte geschaut und habe eine kurze Suche angeworfen und habe mal geschaut, wie oft wir Produktmanager, Product Owner oder Product Management oder sowas erwähnt haben. Und ich bin auf ungefähr vier hundert fünfzig Erwähnungen gekommen in unsere Transkripte. Das heißt, wir sprechen ständig in irgendeiner Form über diese Produktmanagement Seite, aber meistens mit Wir sind die Developer, da ist die Produktmanagement Ownerseite oder man muss das argumentieren mit dem Product Owner, man muss denen erklären, was Technical Debt ist, man muss argumentieren, was niederschreiben für die Product Owner Seite Produktmanager Seite und wir haben noch nie eine eigene Episode über Produktmanagement gemacht. Wir hatten einmal eine Episode, die ein hundert acht, da ging es aber eher um Projektmanagement mit dem Stefan Strack in Teams, also mit sehr vielen Teams und Personen, aber nie um die konkrete Entwicklung von Produkten. Und genau diese Seite wollen wir mal heute abdecken. Und da haben wir glücklicherweise jemanden gefunden, der in einer Firma arbeitet, wo Produktmanagement sehr, sehr groß geschrieben wird und die auch sehr viele Produkte haben. Daher bin ich sehr glücklich heute den Michael willkommen zu heißen. Also hi Michael bei uns im Engineering Kiosk."
+        },
+        {
+            "start": 187920,
+            "end": 189640,
+            "speaker": "C",
+            "text": "Hi und danke für die Einladung."
+        },
+        {
+            "start": 189800,
+            "end": 231990,
+            "speaker": "A",
+            "text": "Wolfgang, du lügst hier schon wieder rum. Also wir haben den Michael nicht gefunden. Der Michael hat uns über Umwege gefunden und zwar ist die Story wie fol. Der Wolfgang veranstaltet ja das Meetup in Innsbruck, das Engineering Kiosk Alps Meetup und da gab es einen Talk zu Multitenant Architecture von Maximilian Schellhorn, ebenfalls AWS Amazon Web Service Mitarbeiter. Und da haben wir sozusagen Sourcing betrieben. Ich sag mal aus dem Meet Up Talk eine Podcast Episode gemacht. Und natürlich macht man auch so ein bisschen auf gut Deutsch Chit Chat nach dem Motto, hey, dies und das und so weiter und so fort. Und da kamen wir dann irgendwie auf eine Empfehlung von Michael. Das bedeutet, Wolfgang, wir wurden gefunden und nicht wir haben gefunden."
+        },
+        {
+            "start": 232070,
+            "end": 253310,
+            "speaker": "B",
+            "text": "Also genauer gesagt ist Max mit mir bei einem Kaffee gesessen. Kaffee, Andi, Kaffee. Und da spricht man ja über viele Dinge und da hat er gemeint, ich kenne jemand, der ist extrem guter Product Manager und der ist super gut im Produkt, mit dem ich zusammenarbeite. Ich könnte euch da vielleicht vermitteln und ich könnte ihn mal fragen, ob er Lust dazu hat und in dem Fall hat er Lust dazu. Also danke Michael für deine Lust."
+        },
+        {
+            "start": 253310,
+            "end": 262369,
+            "speaker": "C",
+            "text": "In dem Fall alles gut. Der Max hat gar nicht viel mich überzeugen müssen, der hat nur Positives von eurem Podcast berichtet. Erfahrung natürlich."
+        },
+        {
+            "start": 262609,
+            "end": 266129,
+            "speaker": "B",
+            "text": "Bevor wir jetzt zu rot werden. Andy, fang mal mit Michaels Erfahrung an."
+        },
+        {
+            "start": 266129,
+            "end": 337410,
+            "speaker": "A",
+            "text": "Genau, meine Aufgabe in diesem Podcast ist immer die Interviewgäste auch vorzustellen und da habe ich eine kleine Recherche betrieben. Du hast zwei tausend achtzehn schon ein paar Artikel über Kubernetes auf Entwickler DE veröffentlicht. Ich war erstaunt, dass in zwei tausend sechs und zwanzig die Entwickler DE Plattform noch existiert. Aber ja. Und was mich auch erstaunt hat, zwei tausend achtzehn hattest du da, ich glaube, einen Einstieg in Container Kubernetes gemacht. Das ist natürlich dann jetzt schon wieder acht Jahre her, denkt man so, wow, wann wurde Kubernetes eigentlich released? Kubernetes wurde irgendwie Mitte zwei tausend vier und zwanzig released. Das bedeutet, du warst da schon relativ früh dabei. Damals warst du noch bei vmware, wo du eigentlich zwei Stationen abgearbeitet hast. Einmal als Solution Architekt und später als Staff Engineer Office of the CTO. Musst du mir gleich auch noch mal erklären, was das im Detail ist, aber das ist nicht mehr dein aktueller Arbeitgeber. Aktuell bist du als Senior Projekt Product Manager und nicht Project Manager. Ich glaube, über diese Stolperfalle werde ich heute noch ein bisschen mehr fallen. Bei Amazon Web Services, bei AWS, bei einem sehr, sehr großen Hyperscaler unterwegs für das Thema AWS Serverless. Und meine erste Frage ist, wenn ich AWS Serverless lese, sprechen wir da über Lambda Functions."
+        },
+        {
+            "start": 337410,
+            "end": 365210,
+            "speaker": "C",
+            "text": "Interessant, dass du diese Serverless und Lambda Assoziation hast, die sicherlich viele haben, aber es ist mehr. Und wenn man genau hinguckt und reinguckt, ist Serverless fing mit S und SQS an, also vor mehr als über zwanzig Jahren. In unserem Serverless Team sprechen wir aber über die Services Lambda Eventbridge und Step Functions. Das ist so unser Bereich im Serverless, aber das ist je nach Auffassung von dem Begriff dehnbar."
+        },
+        {
+            "start": 365273,
+            "end": 425273,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 425370,
+            "end": 449720,
+            "speaker": "B",
+            "text": "Jetzt hat Andi schon erwähnt, wo du überall so Stationen gehabt hast. Was mich grundsätzlich interessieren würde, weil Andy hat jetzt wenig zu deinem Background erzählt, wie kommt man denn in dieses Projektmanagement überhaupt rein? Kannst du mal kurz umreißen, von welcher Ecke du eigentlich kommst und wie du dann in das Produktmanagement oder Produkt Ownership? Was bevorzugst du eigentlich, was für einen Begriff?"
+        },
+        {
+            "start": 449800,
+            "end": 472820,
+            "speaker": "C",
+            "text": "Tatsächlich würde ich PM, also Product Management und nicht Project Management, das ist also wirklich, werden wir bestimmt noch ganz viel heute drüber sprechen über PO, PM Projektmanagement, aber in unserem Fall ist die Rolle auch bezeichnet als Product Manager, sogar mit einem Zusatz Tech. Also PMT ist die offizielle Rollenbeschreibung bei AWS und da werden wir bestimmt noch ein bisschen drüber sprechen, wo die Unterschiede."
+        },
+        {
+            "start": 472820,
+            "end": 483340,
+            "speaker": "B",
+            "text": "Liegen und wie bist du hineingekommen? Also weil man kann ja nicht Produktmanagement so richtig studieren, ist ja kein klassisches Informatikstudium oder sowas. Also wie kommt man in diesen Bereich rein?"
+        },
+        {
+            "start": 483340,
+            "end": 777190,
+            "speaker": "C",
+            "text": "Ich glaube, wenn du mich vor fünf oder zehn Jahren gefragt hättest, ob ich mal Produktmanagement machen würde oder ob ich überhaupt verstehe, was Produktmanagement ist, hätte ich noch gar keine richtige Ahnung gehabt. Ich bin da so ein bisschen reingeklitten jetzt mit meiner Erfahrung mit fast vier Jahren in der Rolle bei AWS, glaube ich, dass in jedem von uns so ein bisschen Produktmanagement steckt, wenn nicht sogar mehr. Und ich hatte auch zu Andi im Vorgespräch schon erwähnt, dass ich glaube, jeder kann Produktmanagement, so ein bisschen wie in dem Film Ratatouille, jeder kann kochen. Viele haben es vielleicht nicht in sich entdeckt, machen es vielleicht sogar schon, wissen noch gar nicht, dass sie, dass sie eigentlich schon Produktmanagement machen. Und bei mir war es ein bisschen ähnlich, wenn du meinen Werdegang anschaust, sogar noch vor vmware. Ich habe sehr viel im technischen Sales, Pre Sales gearbeitet, war vorher noch bei Dell, also dem Hardwareanbieter, war also immer sehr nah am Kunden dran, aber dafür eher weit weg vom klassischen Engineering, Software Development und demzufolge auch Produktmanagement. Aber der Kunde verbindet das irgendwie alles, weil wir machen ja nicht Produktmanagement oder Software Engineering zum Selbstzweck, sondern da gibt es ja immer irgendeinen Grund, einen Ansporn, warum wir das machen und das ist in der Regel ein Kunde oder ein User, wenn es jetzt irgendwie vielleicht ein Open Source Projekt ist. Durch meinen damaligen Wechsel von Dell zu vmware, wo ich zunächst die Rolle als Solution Architekt hatte, also auch im Field da mit Kunden viel gemacht hatte, aber später zu Kubernetes gekommen bin. Andi und da muss ich dich leider korrigieren, das war nicht Mitte zwei tausend vier und zwanzig ich glaube, du wolltest sagen Mitte der er denn Kubernetes genau das erste, ich glaube der erste Commit war vierzehn das erste Release Stable war fünfzehn zwei tausend fünfzehn da bin ich tatsächlich schon reingerutscht, weil das bei vmware natürlich auch ein Thema war. Vmware als Hersteller von Hypervisor, jetzt kommen da die Container daher, was macht man mit denen und viele Kunden haben gesagt, oh, brauche ich, brauche ich gar keinen Hypervisor mehr, wenn ich alles mit Container machen kann. Und diese technische Differenzierung zu machen und auch zu verstehen, was überhaupt Kubernetes ist, insbesondere wenn man gerade nicht in diesem Seattle Speckgürtel ist, wo da die damalige Erfindung oder Innovation stattgefunden hat, hat mich da tie in dieses Rabbit Hole, dieses technische Rabbit Hole reingetrieben. Also von der Ausbildung her bin ich auch als Informatiker ausgebildet, aber nicht studiert, sondern eine klassische IHK Ausbildung gemacht. Und da gibt es zwei Profile auch. Es gibt ein Systemadministrationsprofil, das ist also sehr stark Integration, Netzwerke, Systeme und dann gibt es ein Anwendungsprofil und Anwendung habe ich nicht gemacht, weil damals war das alles Java und hatte ich kein Interesse daran, irgendwie Java zu lernen. Die Sprache hat mich überhaupt nicht gereizt Und bin dann leider, also da gibt es auch Gutes und Schlechtes, bin dann leider so ein bisschen von diesem Softwareentwickler Pfad abgedriftet, der mich dann aber später eingeholt hat, Denn bei Kubernetes zwei tausend fünfzehn, da gab es ein bisschen Dokumentation, aber die eigentliche Dokumentation war der Source Code und Kubernetes ist ein goprojekt, das war eines der ersten großen goprojekte nach Docker und das hieß, also du musstest den Source Code lesen, um zu verstehen, wie das Ding funktioniert. War halt neugierig, also Neugierde ist auch so eine, ich glaube, eine meiner Eigenschaften oder Haupteigenschaften und sicherlich nicht einzigartig. Und die hat mich dann tiefer in dieses technische Rabbit Hole reingetrieben, wo ich mir dann die Programmiersprache angeeignet hab im Selbststudium. Es war alles noch vor KI, du musstest halt noch klassisch Bücher wälzen und so. Bin dann ins Research reingekommen und habe dann aber festgestellt, dass alle Dinge, die ich da bei vmware auch schon gemacht hatte, immer irgendwie einen Kundenbezug, ich wollte immer irgendwas für einen Kunden bauen, ich wollte immer User Feedback direkt haben und bin dann durch einen Zufall in Kontakt gekommen mit einem AWS Produktmanager, der den Service eventbridge verantwortet, denn ich habe so ein paar Integrationen bei vmware gebaut, Thema Multicloud Integration und eine der Integrationen war mit AWS. Und in dieser Integration habe ich so ein paar technische Hürden oder User Experience Issues ausgemacht in dem eventbridge Service, habe dann das Team kennengelernt als User, also da war ich in der genau gegengesetzten Rolle, da hat der PM mit mir gesprochen und hat sich gefreut, dass da ein User gebrannt hat für den Service, also Feedback gebracht hat. Und dadurch ist diese Verbindung hergestellt worden. Und später hat dann jemand auf Twitter, glaube ich, gepostet, oh, we are hiring. Und ich dachte, ich probiere das einfach mal und hatte mich eigentlich für eine Engineeringstelle beworben, weil in dem Zeitraum war ich schon im Office of the CTO Staff Engineer und habe auch Research gemacht, also war sehr tief im Engineering sogar drin und Engineering wurde da aber nicht als Remote gesucht. Und da wurde mir eine Produktmanagerrolle angeboten, weil man vorher mich kannte, gesehen hat, dass ich sehr stark produktorientiert bin, ich selber aber nie auf die Idee gekommen wäre, mich als Produktmanager zu bewerben, weil ich kein klassischer, ausgebildeter, wie auch immer man das definiert, Produktmanager bin. So, da bin ich in die Rolle reingerutscht. Sorry, das war jetzt ganz lange Exkurs, aber ich wollte so ein bisschen Hintergrund geben, dass ich auch kein klassischer Produktmanager bin. Und ich glaube, jeder, auch der Zuhörer."
+        },
+        {
+            "start": 777190,
+            "end": 799690,
+            "speaker": "B",
+            "text": "Hier, kann PM gleich noch eine Frage nachgeschossen. Du hast jetzt einen sehr technischen Background und natürlich auch ein sehr technisches Produkt In dem Fall habt ihr bei EWS grundsätzlich die Regel, dass irgendwie die pms sehr technisch sein müssen und auch dieses technische Verständnis mitbringen müssen? Oder könnte jetzt jemand, der einfach, keine Ahnung, Wirtschaft studiert hat, auch PM werden? Oder ist es bei euch schon sehr hart?"
+        },
+        {
+            "start": 799770,
+            "end": 873360,
+            "speaker": "C",
+            "text": "Ja, und ja, das waren jetzt zwei Fragen. Die Rollenbezeichnung ist tatsächlich Product Manager Tech, also PMT. Und dieses Tech ist sehr stark bewertet und das war sicherlich auch einer der Gründe, warum man mir diese Rolle zugetraut hat, weil ich zwar nicht die klassische Produktmanager Erfahrung mitgebracht habe, bei meinem Wechsel zu AWS, aber ein extrem tief technisches Verständnis hatte und das hat man höher bewertet, hat man gesagt, dass es in der Regel schwieriger für einen nicht technischen Produktmanager ist, die Technik, die Technologie zu erlernen. Es dauert viel länger, insbesondere wenn du wie bei AWS sehr viel mit Entwicklern zu tun hast, Entwicklerprozesse, wie arbeiten Entwickler, was stört die sich in diese Rolle reinzuversetzen? Und aus der Rolle kam ich ja schon so, dass es für mich nicht ganz einfach war, Produktmanagement zu lernen, also das ganze drumherum, aber doch einfacher als für einen nicht technischen Produktmanager die ganze Technologie zu erfahren. Trotzdem ist es so, dass viele der Produktmanager Kollegen, die ich habe, klassische MBA oder also Business Ausbildung haben und einfach eine technische Affinität und dann dadurch quasi ihre technischen Gaps einfach aufholen mussten. Und so trifft man sich irgendwo in der Mitte und lernt gegeneinander."
+        },
+        {
+            "start": 873360,
+            "end": 887130,
+            "speaker": "A",
+            "text": "Bevor wir jetzt in die Definition von Produktmanagement einsteigen, denn ich bin immer so ein Freund davon, gib mir mal den ersten Paragraph von Wikipedia. Also ich weiß ja nicht, wie ihr Wikipedia lest, ich mache es meist irgendwie so, erster Paragraph und dann kriege ich den Tab schon wieder weg."
+        },
+        {
+            "start": 887130,
+            "end": 890890,
+            "speaker": "B",
+            "text": "Ja, dass du grundsätzlich aufhörst zu lesen nach dem ersten Paragraphen, ist mir bewusst."
+        },
+        {
+            "start": 891530,
+            "end": 899930,
+            "speaker": "A",
+            "text": "Ja, aber du musst ja auch korrigieren, weil du bist ja immer noch auf dem Stand von zwei tausend zwanzig, inzwischen gibt es Bachelorstudiengänge. Zum Thema Produktmanagement möchte ich kurz hinweisen."
+        },
+        {
+            "start": 900410,
+            "end": 902170,
+            "speaker": "B",
+            "text": "Es gibt alles speziell von der Code."
+        },
+        {
+            "start": 902170,
+            "end": 940550,
+            "speaker": "A",
+            "text": "University und von der IU University, also das gibt es inzwischen. Jetzt kann ich dir natürlich nicht sagen und das werden wir gleich in diesem Podcast auch noch lernen, ob Produktmanagement gleich Produktmanagement ist, denn Softwareentwickler ist nicht gleich Softwareentwickler gefühlt. Also IT ist ja oder jedes Spezialfeld der IT ist ja schon irgendwie so ein bisschen speziell und man kann sich glaube ich sehr tief da rein nerden, dass Rabbit Hole runtergehen. Deswegen, Michael, wenn ich dich jetzt fragen würde, du kommst jetzt bei mir Weihnachten an den Familientisch, du hast jetzt mal die Aufgabe im ersten Schritt für Nicht Techniker und dann im zweiten Schritt vielleicht für Software Engineers zu erklären, was ist denn überhaupt Produktmanagement, warum muss ein Produkt gemanagt werden?"
+        },
+        {
+            "start": 940550,
+            "end": 981880,
+            "speaker": "C",
+            "text": "Aus meiner Erfahrung und vielleicht ein bisschen allgemeiner gesprochen würde ich sagen, Produktmanagement ist, wenn du evaluierst, was benötigt wird, der Markt, der Kunde, was auch immer deine Zielgruppe ist und dass du dann in der Lage bist, das zu übersetzen in ein Produkt, in einen Service, in einer Dienstleistung, kann ja auch sein, und das wiederum dann auf die Straße bringst, also die Ausführung, Delivery von einem Produkt oder einer Erfahrung, dieses Dreigespann aus Analyse, Umsetzung und Shippen oder Delivern, ich weiß, mir fällt jetzt gerade das bessere deutsche Wort nicht ein. Abliefern würde ich sagen, ist der Kern von Produktmanagement."
+        },
+        {
+            "start": 982120,
+            "end": 989320,
+            "speaker": "A",
+            "text": "Was würdest du sagen, ist in der Industrie weit verbreitet, was Product Management nicht ist?"
+        },
+        {
+            "start": 989560,
+            "end": 1035400,
+            "speaker": "C",
+            "text": "Das war auch vielleicht so eine Frage, die ich vorher hatte, bevor ich in die Rolle reingeschlüpft bin. Ich hatte auch natürlich keine so richtig gute Vorstellung, was mich da erwartet bei AWS, aber was es nicht ist, ist Projektmanagement und diese, also PMS und PMS und das war auch in meiner Rolle bei vorhergehenden Arbeitgebern hatte ich sehr viel mit Projektmanagern zu tun. Dienstleistungen, die ausgerollt werden. Größere Projekte. Also Produktmanagement ist nicht Projektmanagement. Das heißt, wir sind in der Regel nicht, vielleicht mit einer kleinen Differenzierung je nach Unternehmensgröße. Bei Startups sind da die Grenzen ein bisschen fließender, aber bei größeren Unternehmen wie AWS sind wir nicht zuständig für Ressourcenplanung zum Beispiel im Engineering oder gewisse Zeitplanung. Was so ein typischer Projektmanagement."
+        },
+        {
+            "start": 1035400,
+            "end": 1067220,
+            "speaker": "A",
+            "text": "Eins der größten Mythen, die man da immer hört oder bzw. Das ist eine gute Frage. Produktmanagement, Projektmanagement, die haben leider dieselbe Abkürzung. Bei euch wird es vielleicht jetzt anders gehandhabt, PM, PMT hattest du gerade gesagt, aber eins der Mythen bzw. Vorurteile, die ich immer höre. Wer verwaltet denn das Jira Backlog davon, ob ihr Jira nutzt, aber ihr versteht schon, versteht schon, was ich meine. Würdest du sagen, das ist jetzt PM Aufgabe, also PMT Aufgabe oder Projektmanagement Aufgabe oder wie ist das bei euch gelebt?"
+        },
+        {
+            "start": 1067220,
+            "end": 1157590,
+            "speaker": "C",
+            "text": "Bei uns sogar weder noch, denn es gibt noch eine ganz wichtige Rolle bei uns im Engineering und da die Zusammenarbeit zwischen dem Produktmanager und dem Engineering ist bei uns auch ganz klar geregelt. Mein Counterpart im Engineering und wir sitzen sehr eng mit diesen Teams, ist der Service oder Software Delivery Manager, der SDM und der verwaltet tatsächlich den Backlog, das Grooming, das Picken, die Sprints, das macht der SDM. Es gibt manchmal Rollen bei uns, die machen dann, das ist der TPM, Technical Project Manager, der macht bei größeren Campaigns oder serviceübergreifenden Sachen, übernimmt eine Steuerungsaufgabe, aber in den meisten Fällen ist das Paar PM, SDM oder ein PM, mehrere stms in die Engineering Org rein. Und als ich damals noch im Feld im Sales gearbeitet habe, also auf der anderen Seite wollte ich natürlich auch viel verändern. Kunde erzählt dir irgendwas und cool, genau das machen wir. Den Bug habe ich auch schon irgendwie festgestellt oder das Feature würde ich gerne implementieren, aber du triffst dann meistens auf so eine Wall, so eine Wand, denn du musst dann den Produktmanager überzeugen davon, dass das, was dein Kunde, da dieser eine kleine Kunde in irgendeinem Hinterdorf möchte, unbedingt wichtig ist, in das Produkt rein muss. Und der Produktmanager hört das tausendmal am Tag von ganz vielen verschiedenen Leuten und muss natürlich priorisieren, abwägen und so weiter. Und da war ich immer ein bisschen frustriert, warum dieses Feature immer noch nicht implementiert ist, obwohl es seit zwei Jahren ein Backlog, vielleicht sogar ein Jira Ticket oder so."
+        },
+        {
+            "start": 1157590,
+            "end": 1177990,
+            "speaker": "B",
+            "text": "Wie ist dann der Kontakt zu den Engineers? Hast du dann da irgendwie direkten Kontakt? Sitzen da dann diese Rollen, die du erwähnt hast dazwischen oder wie schaut es dann wirklich in der Realität aus? Oder wie oft hast du überhaupt Kontakt mit den Engineers? Bist du für ein Team verantwortlich für viele Teams? Also wie ist da die Connection bei euch?"
+        },
+        {
+            "start": 1177990,
+            "end": 1222690,
+            "speaker": "C",
+            "text": "Genau, in meinem Fall habe ich tatsächlich mehrere sdms. In der Regel ist es so ein eins zu eins Pairing, je nachdem wie groß das Team ist, die Entwickler, die der SDM verwaltet und auch was deine Seniorität im Level des Produktmanagers angeht. Also es gibt natürlich da auch verschiedene Stufen. Bei Amazon sind sogenannte Levels, also L und so weiter hoch. Andere Firmen haben da andere Klassifizierung und je seniorer du bist, desto größer ist natürlich dein Scope. Demzufolge arbeitest du auch mit mehreren stms vielleicht sogar serviceübergreifend zusammen Und einer meiner letzten Launches, den ich gemacht habe, war nämlich genauso ein Cross Service Launch. Das bedeutet, du arbeitest über mehrere Services hinweg, um eine Lösung für den Kunden."
+        },
+        {
+            "start": 1222690,
+            "end": 1231610,
+            "speaker": "B",
+            "text": "Zu entwickeln Und die stms, die sind wirklich technische Rollen, also die kommen aus dem oder sind auch im Engineering eingehängt von der Organisation."
+        },
+        {
+            "start": 1231770,
+            "end": 1261260,
+            "speaker": "C",
+            "text": "Genau, ob das jetzt tatsächlich dann so ist, dass du einen eigenen Engineering Track hast und Product Track, da habe ich verschiedene Modelle gesehen, das ist eigentlich irrelevant. Also dass die pms tatsächlich mit den Engineering Teams zusammensitzen in der Organisation oder getrennte Tracks haben, beides ist üblich. Die sdms selber sind aber üblicherweise Engineers, die entweder zu stms wachsen, reifen in den Manager Track dann übergehen oder von extern gekommen sind schon als STM rein, weil sie Management Erfahrung haben und das geht dann höher in VP of Engineering."
+        },
+        {
+            "start": 1261260,
+            "end": 1267270,
+            "speaker": "B",
+            "text": "Und okay, das heißt aber, dass du keinen direkten Kontakt jetzt mit Engineers hast im Daily Business sozusagen."
+        },
+        {
+            "start": 1267270,
+            "end": 1311940,
+            "speaker": "C",
+            "text": "Entschuldigung, ne? Genau, doch jeden Tag. Das habe ich vorge Du hattest vorhin die Frage Ich habe jeden Tag Kontakt mit dem Engineering und das ist dieses TNP bei AWS, dieses Product Manager Tech ist ein ganz großes T größer als diese PM wahrscheinlich. Also der Prozess auch wie AWS Produktmanagement macht und warum oder wie auch AWS einige Sachen anders macht, weshalb ich auch dankbar bin, die Erfahrung da zu machen, ist sehr stark verzahnt mit der Delivery dann und der Anforderungsanalyse. Und das ist manchmal Wasserfall mäßig, aber manchmal auch eher so ein Kreislauf, wo du ganz lange iterierst zusammen mit Engineering, bevor der bevor der Service dann oder das Feature geboren wird. Und ich habe täglich tatsächlich mit den Engineers zu tun. Das ist eine ganz enge Verzahnung."
+        },
+        {
+            "start": 1311940,
+            "end": 1332800,
+            "speaker": "A",
+            "text": "Du hattest jetzt verschiedene Rollen erwähnt. Software SDM, Technical Program Manager. Ich frage mich gerade, okay, was macht denn der Engineering Manager dann? Also wie ist denn da die Verantwortungsverteilung? Wer hat welche Aufgabe? Es hört sich jetzt also jetzt von außen und mir fehlt der Kontext, hört sich das echt schon Wasserkopf technisch an oder habe ich da ein komplettes falsches Bild gerade?"
+        },
+        {
+            "start": 1332880,
+            "end": 1379760,
+            "speaker": "C",
+            "text": "Ne, das kommt also Wasserkopf nicht im Gegenteil, denn AWS ist da bekannt für diese Two Pizza Team Modelle, das heißt Teamgrösse bis hin, dass sie irgendwie satt werden von zwei Pizzen. Ganz so streng darf man das jetzt nicht nehmen. Der eine ist ein bisschen mehr als der andere, aber da kommt ja diese Philosophie her und ganz stark Service Gedanken. Deswegen auch ganz viele Services, die du siehst in so einem Baukasten, der dann über die Jahre größer geworden ist bei AWS. Du hast Engineering Manager gesagt, also ist gleichzusetzen mit SDM in dem Fall. Der SDM hat eine Gruppe von Engineers dir verantwortet dort eben das Backlog, das Grooming, die Roadmaps zusammen mit dem Produktmanagement, Operational Themen, Service Optimierung, Verantwortung."
+        },
+        {
+            "start": 1379760,
+            "end": 1392320,
+            "speaker": "A",
+            "text": "Okay, die Info hat mir jetzt gerade gefehlt, dass der SDM mehr oder weniger in der in der globalen Industrie dann gleichzusetzen ist mit dem Engineering Manager. Macht der STM dann auch das People Management und die, ich sag mal, Karriereweiterentwicklung mit den Engineers."
+        },
+        {
+            "start": 1392400,
+            "end": 1392920,
+            "speaker": "C",
+            "text": "Korrekt."
+        },
+        {
+            "start": 1392920,
+            "end": 1430540,
+            "speaker": "A",
+            "text": "Jetzt sprechen wir natürlich über Produktmanagement und dann natürlich jetzt mit diesem speziellen Fokus auf AWS. Aber Produktmanagement gibt es ja auch bei BMW. Produktmanagement gibt es ja auch für BC Webseiten wie Booking, Comics. Wie würdest du sagen, unterscheidet sich Produktmanagement je nach Produkt? Also kann ich mir vorstellen, dass du jetzt durch deine Erfahrung bei AWS auch einfach Produktmanager bei BMW werden kannst für ein neues Elektroauto oder sagst du, oh ne Andi, das sind komplett andere Nischen. Das ist genauso wie nur weil du ein Gartenhaus bauen kannst, heißt das nicht, dass du ein ganzes Wohnhaus bauen kannst?"
+        },
+        {
+            "start": 1430540,
+            "end": 1433180,
+            "speaker": "B",
+            "text": "Elektroauto ist eh doch nur wie ein Handy oder mit Rädern."
+        },
+        {
+            "start": 1433540,
+            "end": 1582930,
+            "speaker": "C",
+            "text": "Also es ist selbe zur ersten Frage, wie sich das unterscheidet, die PM Rolle bei AWS zu einer anderen Rolle in einer anderen Branche vielleicht sogar. Ich kann da nur so ein bisschen vom Hörensagen von Freunden, die ich habe, die in solchen Organisationen arbeiten, sprechen. Vielleicht hört der eine oder andere sogar gerade zu, was ich gehört habe. Zum Beispiel bei BMW oder bei einem Autozulieferer wird oftmals die Bezeichnung Product Owner verwendet, wobei das vielleicht sich auch alles gerade ändert. Grenzen sind ja immer fließend. Da ist meine Erfahrung, was mir da so berichtet wurde, dass diese Rolle ein sehr starkes Wissen über die Prozesse in so einem Unternehmen voraussetzt, um überhaupt in der Lage seine Innovation voranzutreiben. Wobei gleich gleichermaßen müsste man vielleicht sagen, was vereint alle diese, du hast Booking angesprochen, BMW und AWS, was vereint alle diese Produktmanager oder Product Owner? Am Ende sind sie immer für ein bestimmtes Problemfeld, Vertical oder Kundenset verantwortlich, was sie verbessern, wo sie Innovation treiben müssen. Der Unterschied, den ich aber jetzt vielleicht nehmen würde bei AWS ist, dass wir nicht einen Kunden oder eine Zielgruppe haben, den Autofahrer oder ein Autokäufer, sondern eine extreme Breite an unterschiedlichen Kunden Regionen, Stichwort Governments bestimmter Regionen wie China, die ganz andere regulatorische Anforderungen haben. Vor kurzem haben wir die europäische Cloud von AWS veröffentlicht und dann diese zig hunderte Services, die es da auch noch gibt, weshalb ich glaube, dass dieses T PMT, diese technische Anforderungen bei AWS schon sehr besonders sind. Du musst halt also sehr tief, aber trotzdem sehr breit auch sein. Wohingegen ich glaube, dass ich jetzt nicht einfach zu BMW gehen könnte und sagen, oh, ich mache jetzt hier mal bei euch Product Owner, denn da fehlt mir sehr viel Background Kontext. Was ich aber glaube ist, dass sehr viele Unternehmen, und das sehen wir natürlich Elektromobilität gerade angesprochen, sehr viele Unternehmen immer technischer werden. Wo früher Technologie eine ganz kleine Rolle oder gar nicht gespielt hat, spielt sie mindestens die Hälfte, wenn nicht sogar mehr. In Zukunft sieht man an den chinesischen Autoherstellern, da ist ja das Auto mehr ein Handy oder Software als das eigentliche Auto, der Baukasten rundherum. Und deswegen glaube ich auch, dass wenn du mich vielleicht in fünf Jahren fragst, genauso wie ich vor fünf Jahren nicht gedacht hätte, bei AWS mal Produktmanager zu werden als Engineering, dass man vielleicht schon in der Lage ist, in fünf Jahren mit einem sehr technischen Produktmanagement Hintergrund von einem Cloud Provider durchaus auch Produktmanagement in einem anderen Vertical machen könnte."
+        },
+        {
+            "start": 1583090,
+            "end": 1619980,
+            "speaker": "B",
+            "text": "Ganz kurz nochmal auf die Verantwortung, die wir zuerst gesprochen haben. Also wenn ich dich richtig verstehe, du bist ja für das Produkt an sich verantwortlich, aber der STM ist für Backlog verantwortlich. Aber das heißt, die Priorisierung des Backlogs ist dann auf deiner Seite oder macht die da STM oder du machst übergeordnete Priorisierung und der STM dann wirklich die Sprints oder wie man es dann auch immer nennt. Also wo sind da genau die Grenzen, wer was entscheiden darf und soll bei euch, aber vielleicht auch ganz, keine Ahnung, ob man es ganz allgemein beantworten kann für Industrie, aber was so vielleicht üblich ist."
+        },
+        {
+            "start": 1620140,
+            "end": 1724670,
+            "speaker": "C",
+            "text": "Ich glaube, das ist tatsächlich unterschiedlich in Unternehmen, wie das gelebt wird, wie stark die Rolle des Produktmanagers auch ausgeprägt ist, also welche Wichtigkeit er hat. Ich glaube POS sind vielleicht tatsächlich mehr in den Sprints und Backlog und Scrum Mechanismen mit drin, als wir als Produktmanager. Nicht desto trotz, also zumindest bei AWS ist es so, dass der SDM oder das Engineering Team und der Produktmanager sehr stark da auch da zusammenarbeiten bei der Roadmap Planung und Feature Priorisierung. Und das ist auch nicht so, dass man das irgendwie einmal im Jahr festmacht und dann wird das so gemacht, denn das ist extrem dynamisch so ein Markt, insbesondere jetzt mit all den neuen Themen, die da so hochkommen. Und der Product Manager ist verantwortlich dafür, erstmal Informationen darzulegen, warum überhaupt gewisse Sachen in der Roadmap rein sollten, auf welcher Datenbasis das passiert ist. Vielleicht gibt es auch ein gewisses Projekt, ein Commitment, was man zu gewissen Kunden gemacht hat oder man möchte in den Markt rein, da gibt es regulatorische Anforderungen. Also diese Datenbasis erstmal aufzuarbeiten und dann in Zusammenarbeit mit dem Engineering Team zu priorisieren, wo das Engineering Team in der Lage ist einzuschätzen. Das ist der Aufwand für das und das Feature. Hinzu kommen zu den täglichen Aufgaben, die die Engineers haben. AWS als Cloud Service Provider, das heißt, du musst permanent sowieso deine ganze Flotte überwachen, optimieren. Du hast vielleicht Incidents, die reinkommen, die nicht geplant sind. Das ist eine Grundlast, die auch noch mit dazu kommt. Diese Planung liegt auf der Engineering Seite bei dem STM und dann ist das so ein Spiel zwischen geben und nehmen, wo man sich abstimmt und auf eine Roadmap einigt. Also es ist nicht so, dass der PM sagt, Das ist die Roadmap und Engineering exekutiert und es ist eine sehr enge Abstimmung hier, wie auch bei jedem anderen Projekt, wie man eine Feature Entwicklung bei uns macht."
+        },
+        {
+            "start": 1724670,
+            "end": 1739630,
+            "speaker": "B",
+            "text": "Und wie entscheidest du über die Priorisierung? Also du hast ja schon erwähnt, da kommen die ganzen Sales Leute und Customer Success Manager und keine Ahnung, was es alles für Rollen gibt, die alle bei dir irgendwas einkippen. Jetzt musst du irgendwie etwas entscheiden. Wie machst du das?"
+        },
+        {
+            "start": 1740270,
+            "end": 1837640,
+            "speaker": "C",
+            "text": "Genau, da will ich vielleicht noch dazu sagen, dass ich da meine Rolle als Produktmanager nicht nur sehe, dass ich irgendwie durch die Feature Requests gehe oder meine E Mails, die ich den ganzen Tag bekomme. Die sind natürlich eine sehr wichtige Datenbasis, aber mein Anspruch an mich selber ist auch Innovation zu treiben, Dinge zu sehen, die vielleicht noch keiner sagt. Und intern verwende ich gerne so diese Henry Ford Analogie, der gesagt hätte, wenn gefragt hätte meine Kunden, was sie gerne hätten, hätten sie gesagt, ich hätte gerne schnellere Pferde gehabt. Manchmal musst du auch anders denken und auch eine Wette auf dem Markt machen. Auch das ist eine Roadmap, ein neues Feature, neuen Service, den du vielleicht etablieren möchtest, weil du ein Bauchgefühl hast. Und das musst du aber natürlich mit Daten untermauern, so gut wie möglich. Und die Datenbasis, da kann sein Feature Request, wo du so Padmuster siehst, das muss ja nicht sein, dass du ein Feature Request hast und das sind ein hundert Klicks drauf, das kann so gescattert sein und du musst dann das Muster erkennen. Ach guck mal, der sagt, das ist ein bisschen schwierig dort und der sagt, ich würde gerne, wenn das ein bisschen so gehen würde, wäre ich noch besser. Und dieses Clustering, diese Datenanalyse ist eigentlich eine Grundvoraussetzung bei AWS als Produktmanager. Also ist auch nicht debattiert und hilft mir dann aber in den Gesprächen mit Engineering, wo wir sprechen über technische Innovationen, aber auch Paper Cuts nennen wir die so Sachen, wo jeder Kunde sich irgendwie dran stößt oder schneidet, die wir verbessern wollen und die sind meistens aber so kleine Sachen, klingt jetzt nicht so super spannend, Müssen wir das wirklich machen? Können wir das nicht nächstes Jahr machen? Und da aber die Datenbasis zu haben und auch den Willen, das durchzusetzen mit Engineering, das auch eine PM Rolle."
+        },
+        {
+            "start": 1837640,
+            "end": 1853400,
+            "speaker": "B",
+            "text": "Und wie sieht es aus mit solchen Feature Requests, wo einfach ein fetter Kunde dranhängt. Also ich vermute mal, wenn dann irgendwie Netflix um die Ecke kommt, dann wird vielleicht irgendwas höher priorisiert, als wenn das ich bin als Privatkunde, glaubt man, habe."
+        },
+        {
+            "start": 1853400,
+            "end": 1860440,
+            "speaker": "C",
+            "text": "Ich tatsächlich so noch nicht bei AWS gesehen. Also zum einen ist AWS so groß, dass es nicht nur eine Netflix dann gibt, sondern tatsächlich mehrere."
+        },
+        {
+            "start": 1860440,
+            "end": 1863720,
+            "speaker": "B",
+            "text": "Es kann ja irgendein großer Kunde sein, muss ja jetzt nicht Netflix sein, aber."
+        },
+        {
+            "start": 1863720,
+            "end": 1920060,
+            "speaker": "C",
+            "text": "Ich meinte jetzt, das ist nur an einem festgemacht wird. Es ist tatsächlich so, weil du hast natürlich auch das Risiko bei einem dieser Kunden als Cloud Provider, dass du eine sehr spezielle Lösung baust. Und das ist nicht der AWS Ansatz, aber es ist im Prinzip der gegengesetzte Ansatz. Tools Utility Provider, da kommt man ja her, deswegen gibt es auch so viele Services da, die sich teilweise auch ähneln. Aber der Ansatz ist eher zu gucken, was braucht die Maße, wie kann ich diese Skaleneffekte erzeugen, was auch wichtig ist für die Effizienz von einem Unternehmen, weil wenn du für jeden Netflix dieser Welt so eine kleine Sonderlocke baust, hängst du am Ende des Tages A an deren Schicksal, die bestimmen quasi diktieren, können dann quasi deine Roadmap diktieren und zum anderen skalierst du damit nicht, es sei denn das, was Netflix braucht und da können die dann grad Messer sein, Stichwort CI, CD, Chaos Engineering, die Themen, die eine Netflix getrieben hat, die dann in der Maße für die Kunden auszurollen."
+        },
+        {
+            "start": 1920060,
+            "end": 1948610,
+            "speaker": "B",
+            "text": "Aber trotzdem hast du ja diese ganzen Personen, die mit dem Kunden zusammenarbeiten und die dann natürlich extremen Druck aufbauen können. Ist es so in der Kultur verankert, dass man das argumentieren kann oder sind es auch tägliche Fights, die man einfach austragen muss als Produktmanager, um da eben irgendwie dagegen anzukämpfen, damit man eben nicht in diese Hölle der Feature Request oder Features oder eben diese Einzellösungen, die dann nur einem Kunden was womöglich bringen, rein."
+        },
+        {
+            "start": 1948770,
+            "end": 2104420,
+            "speaker": "C",
+            "text": "Das ist einer der täglichen Fights, die man in so einem großen Unternehmen wie AWS, das ist jetzt nicht auch irgendein Cloud Anbieter, es nutzen ja wirklich so viele Kunden weltweit rund um die Uhr und du hast eher das Problem, dass du zu viel Information bekommst, dass du einfach zu viele Requests bekommst als Produktmanager oder den ganzen Tag vier und zwanzig mal sieben arbeiten könntest und würdest die Arbeit trotzdem nicht schaffen. Das heißt, du musst auch, musst in der Lage zu sein, zu filtern und zu priorisieren und du priorisierst nicht immer richtig. Wenn du priorisierst, musst du das tun auf einer gewissen Datenbasis, um eine Entscheidungsgrundlage zu haben. Und AWS ist eine Firma, eine sehr starke Kultur im Niederschreiben von Informationen, um sich auszutauschen. Also es ist auch ganz anders, habe ich in keinem Unternehmen so erlebt, wie AWS Meetings macht, wie AWS kommuniziert. Und ich glaube auch das ist einer der Erfolgsrezepte, warum AWS auch so erfolgreich geworden ist. Oder Amazon, vieles wurde auch von Amazon übernommen, das ist ja so bisschen fließend, wenn du nicht richtig priorisierst, Du hast deine Aufgabe gemacht, aber du hast einen Blind Spot gehabt oder ist es tatsächlich so, dass dieser große Kunde ganz unbedingt wichtig ist dann und das ist auch Standard bei uns und das ist in Deutschland immer so ein bisschen ein schwieriges Thema, Eskalation, dann wird eskaliert und wenn du mit einem Peer, mit deinem Sales Peer vielleicht nicht im Einklang bist, dann wird eskaliert und dann wird eine gemeinsame Entscheidung getroffen. Manchmal ist es so, dass die Entscheidung vielleicht aus meiner Sicht nicht die richtige ist oder aus des Sales Teams nicht die richtige Entscheidung ist. Und da ist es ganz wichtig, dass es Leitlinien gibt, eine Kultur im Unternehmen, an der sich alle ausrichten können. Und es gibt eine Philosophie oder eine Leitlinie bei AWS, die nennt sich Disagree and Commit. Das bedeutet auch wenn ich nicht der Meinung bin, die da entschieden werden soll, ich unblocke quasi diese Entscheidung, ich mache ein Disagree, aber committee mich dazu. Das heißt in den nächsten Meetings, wenn es da weitergeht, komme ich nicht wieder zurück und habe ich euch doch gesagt, sondern ich committe und unterstütze denjenigen. Und das ist ganz wichtig, weil du brauchst einen Tiebreaker und manchmal ist nicht dieser Tiebreaker extern, sondern du oder dein Gegenüber muss der Tiebreaker sein. Und dann, wenn ich disagree und committe, erwarte ich aber, dass mein Gegenüber, die Ownership, wieder so ein anderes Leitlinien Thema übernimmt und in der Lage ist, das Thema zu exekutieren. Ob er das dann auch richtig oder falsch macht, ist Schicksal. Manchmal kannst du nicht alles beeinflussen, aber das zwingt den Owner noch tiefer, noch granularer reinzuschauen und zu analysieren, ob diese Entscheidung, die da jetzt erwirkt worden ist, auch die richtige ist an der Stelle. Also Leitlinien spielen eine ganz große Rolle bei diesen Themen."
+        },
+        {
+            "start": 2104420,
+            "end": 2183320,
+            "speaker": "A",
+            "text": "Ja, ich glaube, da muss man wirklich auf die Kultur vertrauen, denn ich denke, oft kann sowas, so eine Eskalation ja auch sehr persönlich genommen werden und das kann natürlich dann negative Effekte für die zukünftige Arbeit zusammen haben. Jetzt in diesem Fall mit deinem Sales Peer. Wir haben gerade schon so ein bisschen über diese, ich sag mal, wie soll man sagen, Produktmanagement Pipeline gesprochen. Wie kommen neue Features da rein? Großer Kunde, ich musste gerade einmal grinsen, es wurde gerade erwähnt, die Netflix dieser Welt, also plural, habe ich mich gefragt, wie viele Netflix dieser Welt gibt es? Also in dieser Größe? Wahrscheinlich nicht so viele, die dann auch noch AWS nutzen, blablabla. Und zwar habe ich in der Recherche festgestellt, dass ihr vor kurzem ein neues Feature gelauncht habt oder an dem du maßgeblich beteiligt warst, Durable Functions in AWS Lambda. Kannst du mal grob, ich sag mal, die Struktur skizzieren, was alles in deiner Verantwortung lag, in der Produktmanagementverantwortung und wie lange ihr an dem Feature gearbeitet habt und was da alles notwendig war hintendran von der Produktmanagement Seite, um jetzt zum Beispiel das Feature Durable Functions in AWS Lambda als Beispiel irgendwie zu launchen? Also wann ging das los, Zeithorizont und welche Hürden hat man da? Also kurz um, wie hat der Fokus auf dieses spezifische Feature irgendwie deinen Tag bestimmen?"
+        },
+        {
+            "start": 2183320,
+            "end": 2403000,
+            "speaker": "C",
+            "text": "An dem Feature habe ich tatsächlich länger gearbeitet, also sehr intensiv über das letzte Jahr, aber die eigentliche Entwicklung begann bei mir im Kopf schon viel länger noch vor AWS. Denn mit dem Thema, was Durable Functions ausmacht. Wir müssen vielleicht kurz mal ausholen, was ist Durable Functions, was ist Lambda? Lambda ist ein Compute Service bei AWS haben vielleicht einige schon gehört, Stichwort Functions as a Service, also Event getrieben, schickst kurz was rein, macht irgendwas, kommt irgendwas raus. Ist so ein bisschen angelehnt an auch so wie Java, JavaScript Node funktioniert mit einem Event Loop, heißt aber auch, dass es stateless ist, also massiv skalierbar, wird immer gern so als Supercomputer bezeichnet, ist aber stateless, so eine Function. Das bedeutet, und in den meisten Fällen sind ja unsere Anwendungen stateful, haben irgendwo eine gewisse Information, da brauchst du zusätzlich Dienste und so eine Funktion macht ja immer nur so eine kleine Sache. Das heißt, du brauchst viele von diesen Funktionen zusammen, die dieses Ding abbilden. Und das hat man in der Vergangenheit bei AWS mit mehreren Services gemacht. Und als ich zu AWS gekommen bin, hat mich das auch so ein bisschen erschlagen, diese tatsächlich Komplexität, mit welchen Service nehme ich jetzt? Wie baue ich das alles zusammen? Wie mache ich diese Verfügbarkeit? Also ich war selber der Kunde an der Stelle und habe dann ein bisschen rausgezoomt und da kommen wir wieder zu Henry Ford zurück. Wenn ich jetzt meine Kunden gefragt hätte, was wollt ihr, hätten die bestimmt nicht gesagt, ich will Durable Functions. Die haben gesagt, Local Testing ist schwierig mit all diesen ganzen Services, Lambda Funktion, also State, brauche ich immer irgendwie andere Dienste dazu. Was ich damit sagen Meine Rolle als PM war da extrem wichtig, aus den Signalen, die ganz verrauscht verschieden waren, zu extrapolieren, dass wir Durable Functions brauchen an der Stelle. Meine Rolle war da quasi der Verantwortliche von der Ideengebung bis hin zum Launch. Der Launch war jetzt letztes Jahr auf der Re Invent im Dezember und da sind ganz viele Meilensteine dazwischen. Und der erste wichtigste Meilenstein nach der Ideensammlung, nach den Informationen, nach den ganzen Signalen, damit ich überhaupt zu dem Entschluss komme, ich glaube, wir brauchen so was wie Du Functions. Der erste ist dann die Stakeholder in unserem Unternehmen zu überzeugen, dass wir das bauen sollen, dass wir das brauchen. Und da kommen Mechanismen zum Spiel, die bei AWS das ist eben diese Kultur des Schreibens. Ich weiß nicht, ob vielleicht einer der Zuhörer schon mal von dem PR FAC, also PRFAQ Ansatz gehört haben. Das ist im Prinzip ein Press Release und Frequently Asked Questions, ein Dokument, was aussieht wie ein Zeitungsartikel, also so ein Press Release und dazu faqs hat Fragen und Antworten. Es ist auch Public, kann man nachlesen, diese Amazon Working Backwards. Und das war unfassbar schwierig, als ich bei AWS angefangen habe, meine Idee in dieses Format reinzudrücken, denn jeder hat eine unterschiedliche Art zu schreiben. Das Problem nur in so einer großen Organisation wie AWS ist, dass jeder Leser einen anderen Kontext hat, andere Informationen aufnimmt. Und der PR FAC Ansatz, also dieses Standard Template von einem Dokument, hilft allen Stakeholdern, also mein direkter Vorgesetzter, sein Vorgesetzter bis hin zum CEO hoch, relativ schnell zu erfahren und zu erfassen, was das Problem die vorgeschlagene Lösung die Erfahrung und typische Fragen sind. Dieses PRF ist die Essenz, mit der der PM arbeitet und seine quasi Idee formt, um zu kommunizieren und das habe ich tatsächlich noch keinen anderen Unternehmen so kennengelernt und dieses Artefakt wird dann genommen später von Engineering als Anforderungsanalyse. Also dort sind auch sehr viele technische Fragen schon drin zu dem jeweiligen Projekt."
+        },
+        {
+            "start": 2403000,
+            "end": 2416860,
+            "speaker": "B",
+            "text": "Kurze Zwischenfrage, weil du Stakeholder erwähnt hast, kannst du da mal Beispiele neh bei so einem Feature? Also wen muss man da überzeugen? Wer entscheidet dann am Ende, ob so ein Feature wirklich entwickelt wird? Weil das entscheidet so wie es klingt, nicht du alleine in dem Fall."
+        },
+        {
+            "start": 2416940,
+            "end": 2490110,
+            "speaker": "C",
+            "text": "Richtig, genau. Der Product Manager, der schlägt das dann vor in Form dieses PR FAC Dokuments und dann hängt es ein bisschen von der Komplexität, dem Scope ab von dem Feature. Kleinere Sachen werden innerhalb des Serviceteams entschieden, weil man da jetzt die Autonomie hat man sehr hohe Autonomie bei größeren, wichtigen, prestigeträchtigen Features und Launches nutzt man, geht man meistens bewusst die nächste Stufe hoch, um die Wichtigkeit des Projekts nach oben zu signalisieren und auch Sponsorship zu bekommen. Buy in Leadership, buy in. Das hilft halt auch. Man weiß natürlich gar nicht, was auf höheren Ebenen gerade besprochen wird und erreicht man eine höhere Visibilität und verbindet auch andere Launches, die da alle passieren, zu einer größeren Gesamtstory, die dann rauskommt kommt. Also das ist so ein bisschen abhängig vom Scope des Projekts. In unserem Fall sind wir fast bis zum CEO hochgegangen und dann ist in die nächsten Stufen nach so einem PRF, da kommen ja weitere Stufen, zum Beispiel das Pricing zu machen. Also brauche ich ein Pricing überhaupt dafür, das Naming? Wie benennt man das, was man da irgendwie hat? Oftmals nutzt man ja einen Projektname, das heißt Marketing kommt dann sehr stark mit rein und immer dann gibt es gewisse Stufen, die man durch muss und das entscheidet man auch gesamt mit der Leadership Chain, wie hoch das sollte oder muss."
+        },
+        {
+            "start": 2490110,
+            "end": 2544770,
+            "speaker": "A",
+            "text": "Jetzt habt ihr den Launch gemacht oder vielleicht noch nicht General Available GA vielleicht irgendwie mit ein paar Kunden getestet. Wie evaluiert ihr Erfolg? Also wie sieht Erfolg in der Rolle des Projekt. Entschuldigung, jetzt habe ich schon wieder den Mythos gestärkt. PM, wie sieht Erfolg in der Rolle des Produktmanagements aus und wie misst man zum Beispiel jetzt Erfolg nach einem Feature Launch, um zu gucken, okay, war das jetzt das Richtige habe ich gute Arbeit gemacht, weil du hast ja gerade gesagt, du hast sehr viel Zeit darauf aufgewendet. Das bedeutet, Zeit ist immer ein Geld Investment der Firma. Also auf welche Metriken schaut ihr? Ist das eine rein subjektive Thematik auf Basis von Kundenfeedback oder habt ihr harte quantitative Metriks, wo ihr sagt, dieser Graph geht nach oben und wenn dieser Schwellenwert überschritten ist, dann war es ein erfolgreicher Produkt Launch."
+        },
+        {
+            "start": 2544770,
+            "end": 2709510,
+            "speaker": "C",
+            "text": "Kurz zum GE, nicht GA. Also es ist tatsächlich so, dass wir versuchen, jedes neue Feature oder Produkt direkt GA zu machen, also General Availability, was auch eine höhere Hürde dann für den Produktmanager und das ganze Team ist, weil die Anforderungen auch höher sind. In wie viele Regions gehst du raus, was ist das Service Level und so weiter. Der Grund GA zu sein ist einfach, dass die meisten Kunden erwarten, dass das Feature GA stable. Ansonsten hast du vielleicht ein Prototyp und dann hast du nämlich genau das Thema nach dem Launch. Wie erfolgreich sind wir? Wir werden erfolgreicher, werden wir GE, weil wir nur in der Preview Phase zum Beispiel sind. Also deswegen ist tatsächlich das Ziel immer ein GA zu machen. Da gibt es auch Abweichungen davon. In unserem Fall sind wir aber GA gegangen. Das heißt, jetzt kann ich ganz anders evaluieren, weil meine Kunden. Es gibt zumindest nicht die Ausrede. Ja, weil wir Preview sind, haben wir nicht so viele Kunden oder so, sondern die kpis, also die Messbarkeit von Erfolg wird auch schon viel vorher weiter vorher festgelegt. Startet quasi nicht nach dem Projekt, sondern vorher schon an verschiedenen Metriken. Wir haben so Core Metriken wie jedes Unternehmen sicherlich auch, Adoption, Usage, so klassische Sachen. Dann natürlich das, was du gerade sagtest, das Kundenfeedback, was reinkommt, wenn ich mit zehn Kunden spreche und zehn sagen, ich kann es nicht nutzen, weil dann ist es sicherlich nicht erfolgreich. Dann habe ich irgendwo einen Miss an der Stelle. Was haben wir übersehen? Und dann geht man wieder zurück an dieses Pure Fact Dokument. Warum war das da nicht drin? Was haben wir? Also man versucht immer in so einem kontinuierlichen Loop auch zu verbessern, nicht alles perfekt machen, aber man versucht ganz viele Blind Spots über Messbarkeit rauszunehmen. Und da muss ich noch eine ganz kurze Detour machen. Ich komme gleich wieder zurück. Andi, auf deine Frage gibt es eine schöne Anekdote von Jeff Bezos, der gesagt hat, es stehen zwei Leute im Raum und der eine sagt, du, was glaubst du, wie hoch der Raum ist? Sagst eine weiß nicht fünfzehn Meter, sagt der andere ich denke siebzehn, okay, einigen wir uns, machen wir sechzehn. Die Philosophie bei AWS ist, wir messen, wir machen nicht eine Bauchentscheidung raus, vielleicht waren es dreiig und beide lagen irgendwie komplett falsch. Also Messbarkeit, Datenbasis ist unfassbar wichtig und dadurch kommen wir dann auch wieder zurück zum Projekterfolg. Wir haben sehr viele Instrumente oder Metriken auch um zu erkennen, wie das Feature genutzt wird, viel Telemetrie auch natürlich im Einklang mit Datenschutz und so weiter und so fort. Aber da haben wir ganz viele Instrumente. Wir haben eine riesengroße Partner und Kundenbasis. Also der Vorteil bei AWS, es gibt natürlich auch Nachteile bei so einem großen Unternehmen, aber einer der Vorteil über AWS ist, ich habe ganz viel Feedback, fast schon zu viel, ich habe ganz viele Signale, also an Feedback mangelt es mir nicht. Die Messbarkeit ist dann natürlich auch Revenue, wenn jetzt ein Produkt rauskommt, was irgendwie einen Revenue Ansatz hat oder Deployments, Open Source Stars unterschiedlich, aber wir haben ganz viele Instrumente zu messen und das wird auch ganz genau gemessen, regelmäßig."
+        },
+        {
+            "start": 2709670,
+            "end": 2724620,
+            "speaker": "B",
+            "text": "Und wann legt ihr diese Metriken fest? Also ist es dann schon in dem FAQ Dokument ganz am Anfang stehen da auch schon Metriken drin und wie detailliert oder wie groß ist denn so ein Dokument? Weil wenn da schon Metriken und so drinstehen, das klingt ja schon nach zwanzig."
+        },
+        {
+            "start": 2724620,
+            "end": 2786810,
+            "speaker": "C",
+            "text": "Seiten irgendwie, ach, das ist viel länger. Es gibt auch tatsächlich, es wurde vor kurzem das Lambda, das originale Lambda PR FAC veröffentlicht, das ist ein ganz gutes PRF, was man sich mal durchlesen sollte, weil Lambda schon so ein bisschen auch die Industrie damals vor zehn Jahren revolutioniert hat mit Functions as a Service und Computing. Das ist natürlich gekürzt, da sind ein paar interne Sachen rausgenommen aus dem, was man veröffentlicht hat, aber allein das ist glaube ich locker vor fünfzehn Seiten in der Regel. Meine sind immer so dreiig, vierzig Seiten, weil was da auch drin ist, sind schon mal API Designs sind schon drin, auch da wieder die Verzahnung mit Engineering zusammen, Console Mocs, das Deployment, wie arbeitet der Kunde damit, das ist auch schon mit drin. Deswegen da hast du einen ganz großen Appendix hintendran. Und eine der Fragen in den faqs ist auch, wie messen wir den Success? Wie definieren wir den Success von dem Produkt, das da auch mit drin, Das wird also ganz viel neun und neunzig komma neun neun neun Prozent wird versucht im Vorfeld zu adressieren über Fragen, über Reviews. Deswegen ist dieser Prozess auch sehr langwierig, aber bei der Scale auch wie eine AWS arbeitet, notwendig."
+        },
+        {
+            "start": 2787130,
+            "end": 2815670,
+            "speaker": "B",
+            "text": "Jetzt hast du schon erwähnt, du bekommst sehr viel Feedback. Also du hast die, ich nenne es jetzt mal quantitativ, die Metriken, die wirklich die Hardcore Facts und dann hast du ganz viel Feedback, qualitatives Feedback hoffentlich. Wie ordnest du das dann ein oder wie wird es überhaupt, kommt es mal zu dir oder wird es im Vorfeld schon zusammengefasst und du probierst es dann irgendwie nochmal zu komprimieren, zu funneln? Wie schauen da die Stages aus, wo so ein Feedback von dem Kunden durchläuft?"
+        },
+        {
+            "start": 2815750,
+            "end": 2882260,
+            "speaker": "C",
+            "text": "Da muss auch, glaube ich, jeder Produktmanager so ein bisschen selber für sich lernen, wie er die Quellen anzapft. Es gibt sehr viel Feedback öffentlich auf Blogs. Mittlerweile nutze ich Tools, Bots, die Reddit Hacker News, Blogs abgrasen, mir jede Woche so ein Digist zusammenstellen, was so die Community über das Feature sagen oder sagt. Dann interne Kommunikation, Slack E Mails, Product Feature Requests, direkte Pings, die wir bekommen. Und wo man dann als PM aufpassen muss, ist, dass man das alles auch strukturiert und niederschreibt, weil bei so viel Signalen und Quellen, die man hat, fragt man sich dann, wo das noch mal war, wann hat er das gesagt. Also man muss relativ stringent auch sich organisieren. Das habe ich auch erst lernen müssen. Klingt jetzt trivial, ist aber bei so viel Quellen und auch so viel Durchsatz, den man hat am Tag in der Firma, wichtig, dieses Feedback zu kategorisieren, weil das wiederum mir hilft als Produktmanager dann meine Stakeholder zu überzeugen, dass wir ein neues Feature bauen sollten oder hier was priorisieren müssen. Und da helfen Daten."
+        },
+        {
+            "start": 2883070,
+            "end": 2939120,
+            "speaker": "A",
+            "text": "Das PA FAQ Dokument zu Lambda habe ich gerade auch mal in die Show Notes gepackt. Sehr interessanter Read, wurde im November vier und zwanzig von Werner Vogels auf seinem All Distributed Com Blog veröffentlicht. Sehr guter Blog meines Erachtens nach, aber ich bin auch ein kleiner Fanboy, wie Wolfgang mich beschreiben würde. Jetzt hattest du schon gesagt, du organisierst auch sehr viel Kommunikation mit den Stakeholdern und disagree and commit und all die Kultur. Meine Frage ist, wer trifft denn am Ende eigentlich die finale Entscheidung? Natürlich, die simple Antwort ist wahrscheinlich der CEO, weil der hat ja den Hut auf und der nimmt auch das Risiko auf, sich und allem drum und dran. Aber wer trifft am Ende die wirklich finale Entscheidung über ein Produkt, über ein Produkt? Launch und Flipp Frage natürlich, wo endet der Einfluss eines Produktmanagers? Jetzt in diesem Falle im Spezifischen bei AWS, weil du arbeitest da und deswegen kannst du wahrscheinlich jetzt nicht für Booking kommen oder für BMW sprechen."
+        },
+        {
+            "start": 2940390,
+            "end": 2996120,
+            "speaker": "C",
+            "text": "Also ich habe das vorhin schon gesagt, eine der Leitlinien bei AWS ist ja dieses Thema Ownership. Das heißt auch einen Engineer oder einen Solution Architekt aus dem Feld kann ein gewisses Feature entwickeln. Du musst ja nicht immer irgendwo im Service Team arbeiten, wenn du ein Open Source Projekt hast, wo du dafür brennst und glaubst, damit eine Kundenlösung zu treffen. Du musst halt nur jemanden überzeugen davon. Und ob das jetzt ein PRF immer sein muss oder ein kleineres Design Doc oder Working Backwards Dokument, was wir so haben. Es gibt eine formale Entscheidung und ich will mal sagen, so eine inhaltliche Entscheidung. Die inhaltliche Entscheidung wird individuell getroffen, entweder von dem PM oder in der Regel von einem PM oder von einem Owner, von einem der vielen Owner innerhalb des Unternehmens. Wenn der in der Lage ist, seine Stakeholder zu überzeugen, dann gibt es nur dieses formale Approval, gibt es Approval Chains, je nach Scope und Impact. Also deswegen würde ich sagen, die Entscheidung ist tatsächlich bei dir selbst, indem du auch selber anfängst, die Entscheidung zu treffen, dass du irgendwas verbessern willst."
+        },
+        {
+            "start": 2996120,
+            "end": 3034800,
+            "speaker": "A",
+            "text": "Wenn ich da mal weitergehe, gibt es Produktentscheidungen, die du vertreten musst, weil du so viel Einfluss hast, obwohl du innerlich zweifelst, wo du sagst, da habe ich vielleicht nicht eine ordentliche Datenbasis oder vielleicht lehnst du dich mal ein bisschen weit aus dem Fenster, kann ja auch sein. Oder irgendjemand hat halt overruled oder einfach deutlich bessere Argumente. Disagree commit, wo du mal disagreen musst in dieser Hinsicht, wo du sagst, ich habe innerliche Zweifel und dann die andere, wie oft wurdest du dann im Nachhinein vom Gegenteil überzeugt, so nach dem Motto, dass es dann intuitiv vielleicht richtig war, das zu vertreten, obwohl du innerliche Zweifel."
+        },
+        {
+            "start": 3035600,
+            "end": 3162620,
+            "speaker": "C",
+            "text": "Das sind auch, glaube ich, zwei, drei Fragen jetzt drin gewesen. Lass mich die mal auspacken. Also die erste, also Disagreeing Commit hast du ja schon mal genannt. Es gibt aber noch ein anderes Leitprinzip und es ist auch nicht so, dass die sind zwar so gerankt von eins bis fünfzehn sind es glaube ich gerade, aber aber das ist nicht so, dass eins höher ist als fünfzehn, die stehen auch im Konflikt miteinander. Und eines der anderen Leitlinien ist auch Bias for Action. Also im Zweifel entscheide dich auf einer gut genug Datenbasis, wenn du, wenn deine Entscheidung eine Two Way Door Decision ist, also sehr viele Anglizismen hier drin, also wenn deine Entscheidung reversibel ist oder keine Konsequenz hat, dass du sie, Also du kannst halt immer noch bei One Way Do Decisions und was ist eine One Way Do Klassische One Way Dossition ist Pricing setzt ein Preis fest, sehr schwer den Preis nach oben, nach unten geht immer, aber sehr schwer den Preis nach oben zu setzen. Pricing Naming, das sind ganz starke One Way Decisions, wo ganz, ganz lange iteriert wird und diskutiert wird. Die meisten Entscheidungen, die ein Produktmanager trifft, sind aber hoffentlich Two Way Door Decisions, wo er mit einer gut genug Datenbasis und seiner Erfahrung einfach in Aktion treten kann und Dinge entscheiden kann. Also das wollte ich bloß mal so ein bisschen einordnen. Es ist nicht immer nur Disagree Commit. In der Regel ist es also wahrscheinlich neunzig Prozent Bias for Action. Dann hast du hoffentlich weniger One Way Doors, wo du ganz viel umdrehen musst und dann hast du diese Disagreeing Commits. Wurde ich overruled in meinen Projekten noch nicht, da geht es eher so, da gibt es weniger ein Disagree and Commit. Das ist eher so die Priorisierung, wir schaffen das nicht, Guck mal, hier ist noch was ganz anderes und dann passt man sich an. Also das würde ich mal so sagen, würde ich jetzt nicht unter overruled verstehen, weil ich natürlich dann selber auch ein Agreement gefunden habe im Sinne des Kunden, im Sinne des Teams. Aber es gab auch Disagreeing Commits, die ich gegeben habe. Das waren aber in der Regel Projekte von anderen PMS Kollegen, wo ich Feedback hatte, wo ich glaube, dass man vielleicht eine andere Entscheidung treffen sollen oder nicht ganz dahinter stand. Aber dann habe ich Disagreeing Commit gemacht und das ist auch okay. Habe ich jetzt alle beantwortet."
+        },
+        {
+            "start": 3163100,
+            "end": 3207450,
+            "speaker": "A",
+            "text": "Ich glaube schon. Wenn nicht, ist es mein Fehler als Interviewer, dass ich zu komplexe und zu verschaffelte Fragen stelle. Es tut mir leid, lass uns mal ein bisschen weg von Produktmanagement bei AWS im Spezifischen gehen, sondern zu einem Clickbait Claim, den du im vorgespräch rausgehauen hast. Und zwar sagtest du im Zeitalter von AI wird die Rolle des Produktmanagers wichtiger, nicht unwichtiger, aber zeitgleich auch sagtest du, dass im Zeitalter von AI viele Knowledge Worker oder viel Knowledge Work redundant wird. Und dann ist natürlich die offensichtliche Warum trifft es Produktmanagement nicht zuerst sehr gut?"
+        },
+        {
+            "start": 3207450,
+            "end": 3210330,
+            "speaker": "C",
+            "text": "Waren auch wieder paar verschachtelte Fragen da drin."
+        },
+        {
+            "start": 3210330,
+            "end": 3219090,
+            "speaker": "B",
+            "text": "Jetzt Es ist immer super, Du kannst dir dann aussuchen, was du beantwortest, Antworten willst du, kannst du Politiker like machen, ein kleines Teil rauspicken und sonst nichts."
+        },
+        {
+            "start": 3219090,
+            "end": 3221810,
+            "speaker": "C",
+            "text": "Beantworten und hoffen, dass Andy vergessen hat, was er gefragt hat."
+        },
+        {
+            "start": 3221890,
+            "end": 3223330,
+            "speaker": "B",
+            "text": "Ja, das vergisst du sowieso."
+        },
+        {
+            "start": 3224370,
+            "end": 3405060,
+            "speaker": "C",
+            "text": "Genau. Also genau das habe ich gesagt im Vorgespräch, Andi, Wenn man sich so ein bisschen anguckt, wie Industrialisierung diese Blue Collar, also Leute im Blaumann, ich will nicht sagen ersetzt hat, aber umgekrempelt hat, glaube ich, passiert was ähnliches gerade für die White Collar, also die Labor weiße Umhänge tragen, also die Knowledge Worker. Denn du hast halt in deiner Hosentasche den Supercomputer drin, der die jegliche Frage beantworten kann. Man sieht ja Benchmarks permanent, dass die besser in Mathe Olympiaden wären sowieso alle Unitests schon passen. Also es ist sehr schwierig überhaupt noch ein Feld zu finden, wo ein Individuum besser ist, smarter ist als die KI. So und weiß nicht, wie es euch ging, aber über Weihnachten, über die Feiertage war extrem viel in Social Netzwerken, aber ganz viel Vibe Coding und was Leute alles gebaut haben. Und das Thema da war, die waren alle nicht technisch, es waren alle keine, vielleicht waren sie Backend Entwickler, aber keine Frontend Entwickler oder waren überhaupt keine Entwickler und haben unfassbar gute Ideen umgesetzt, was sie so vorher ohne KI nicht konnten, weil sie immer in Abhängigkeit waren von irgendeinem Service Provider oder irgendeinem Engineer oder irgendeinem Produktmanager. Und das hat für mich noch mal so ein bisschen das Thema forciert, wie bahnbrechend oder umbrechend KI ist auch für unsere für unsere Jobs in unserem Jobumfeld. Vielleicht ähnlich wie das Internet. Vor dem Internet war ja Information gar nicht so frei zugänglich. Das Internet hat Informationen frei zugänglicher gemacht. Jetzt macht es KI noch einfacher, Informationen zu verarbeiten oder Dinge zu ermöglichen. Das sagen auch schon viele, dass so klassische Software Development Ich will nicht sagen Software Engineering, weil Software Engineering, das ist ein kleiner Unterschied zum klassischen Software Development, aber klassisches Software Development, wo ich Code schreibe, den ganzen Tag irgendein Ticket nehme und irgendwas mache, da würde ich mir schon Gedanken machen über meine Zukunft. Weniger, ob ich den Job morgen noch habe, mehr über, kriege ich überhaupt noch das Jobangebot, die Umgebung, die Bezahlung, die ich heute habe. Das haben wir ja auch gesehen bei Systemadministratoren, als die Cloud gekommen ist, brauchten viel weniger Systemadministratoren. Du musstest dich als höher qualifizieren, wurdest auf einmal Cloud Architekt, sowas. Also wird sich sehr viel verändern. Auf der anderen Seite habe ich aber, sehe ich auch die Power, die KI mir gibt in meinem täglichen Doing als Produktmanager. Jetzt wollte ich schon fast Projektmanager sagen, Andi hab's aber nicht gesagt. Und zwar, dass ich selber ganz viel Prototypen bauen kann. Ich habe natürlich als Engineer, konnte ich sowieso schon sehr viel bauen, aber natürlich nicht in der Geschwindigkeit, die ich jetzt mit KI machen kann. Frontend Mocs, Figmas, überall da, wo ich abhängig bin von anderen Leuten, die mich bremsen, weil die Leute andere Prioritäten haben in dem Unternehmen, wir wissen alle, wie das ist, kann ich jetzt mehr quasi so self sufficient, also ich bin unabhängig von anderen primär und kann viel schneller Innovation betreiben, Entscheidungen, Dokumente schreiben. Also ich sehe absolutes Riesenpotenzial von diesen Tools für Produktmanager, auch Engineers, aber auch eine gewisse Vorsicht, sich zu hinterfragen, ob meine Rolle noch relevant ist."
+        },
+        {
+            "start": 3405540,
+            "end": 3430240,
+            "speaker": "A",
+            "text": "Aber bedeutet dies nicht im Umkehrschluss, dass deine Rolle doch gefährdeter ist, weil jetzt natürlich jeder die Möglichkeiten hat und deswegen deswegen natürlich auch mehr Konkurrenz auf dem Markt ist und Leute, also eine Produktmanagement Stelle wird ausgeschrieben und die doppelte, dreifache, vierfache Anzahl an Leuten, dass du trotzdem mehr gefährdet bist, weil jeder hat ja diese Möglichkeit."
+        },
+        {
+            "start": 3430560,
+            "end": 3431080,
+            "speaker": "B",
+            "text": "Korrekt."
+        },
+        {
+            "start": 3431080,
+            "end": 3486710,
+            "speaker": "C",
+            "text": "Und das Gleiche ersetze PM mit Engineer oder Software Developer und so weiter, wenn du siehst, wie heute Software Engineers mit den Tools schon arbeiten, wie schnell die sind, welche Projekte sie vorweisen können im Vergleich zu jemandem, der die Tools nicht nutzt. Das Gleiche gilt für PM, jemand, der sich in der Firma bewirbt. Und das sieht man ja auch bei offenen Stellen bei Firmen, die halt sagen, zeig mir, was du gemacht hast, erzähl mir nicht, ich brauche deinen Lebenslauf nicht, zeig mir einfach, was du gemacht hast, zeig eine Webseite oder einen Service oder irgendein Produkt, irgendwas, was du entwickelt hast, also show and tell. Natürlich muss man dann immer noch gucken, wie viel Wahrheit ist drin. Das erfährt man dann im Interviewprozess wahrscheinlich. Aber erstmal ist es für viele viel einfacher geworden zu zeigen, irgendwas zu prototypisieren, zu bauen. Das heißt natürlich auch, dass ich mich weiterentwickeln muss. Deswegen setze ich mich auch mit den Tools auseinander und sehe auch dieses Potenzial und den Effekt auf mich selber, um mich zu differenzieren. Also ja, auch ich am Ende des Tages ist wahrscheinlich jeder gefährdet, wenn er stehen bleibt. Aber genau deswegen tue ich das nicht."
+        },
+        {
+            "start": 3486870,
+            "end": 3540120,
+            "speaker": "B",
+            "text": "Weil man könnte ja auch argumentieren, weil du jetzt sagst, pms sind dann noch wichtiger oder wichtig, weil wenn ich das jetzt einfach parafrisiere, dann kann ich ja auch dich jetzt in einen Agent stecken und Werner Vogels hat irgendwie eine Idee und fragt dann diesen Agent, meinen PM Agent, jetzt mach mir mal dieses FAQ Dokument und stell mir da mal alles zusammen mit den Metriken und hol dir die Infos und dann zwei Tage später kommst du wieder vorbei, Agent, dann sage ich nochmal Thumbs up oder Thumbs down und dann geht es an die Agents von den Entwicklern und dann brauche ich eigentlich kaum mehr irgendeinen PM, weil wie du sagst, umso datengetriebener man ist, umso vielleicht einfacher ist es auch für jetzt irgendeine AI daraus irgendwie was rauszuziehen oder weiterzuarbeiten, weil dann gibt es ja klare Metriken und klare Facts und es ist wenig irgendwie eine Bauchentscheidung oder so ein Gefühl oder sowas in der Richtung. Das heißt ja dann, dass die PM schon auch dementsprechend vielleicht nicht mehr gebracht werden."
+        },
+        {
+            "start": 3540120,
+            "end": 3632730,
+            "speaker": "C",
+            "text": "Genau, könnte man provokativ meinen und haben wir intern natürlich auch gesehen, als so die ersten Leute angefangen haben, PRFX mit LLMs zu schreiben. Ich habe diese Idee in one zeiler, one prompt, schreib mir ein PRF. Da kann man sich glaube ich, vorstellen, was dabei rauskommt, weil es nicht genau spezifiziert ist. Und das sehen wir halt gerade auch bei Coding Spec Driven Development spezifizieren vorher. Der Code, der rauspurzelt, ist genau genauso gut wie die Anforderungen oder der Input, den ich vorne reinstecke. Und ich hatte es letztens mit einem, mit einem guten Kumpel auch länger besprochen über ein Bierchen, dass Anforderungsmanagement und Anforderungsanalyse umso wichtiger wird im Zeitalter von KI, weil die Agents so mächtig sind, aber sie brauchen Steuerung und diese Anforderungs. Jetzt könnte man auch sagen, gut, dann können ja die Agents einfach so ein Anforderungsanalyse Agent. Das Problem an KI Stand heute noch ist, wenn diese virtuelle Welt auf die reelle Welt trifft. Noch sind wir quasi, wir leben als Menschen in so einer realen Welt hier drin, verhalten uns anders, kommunizieren anders. Deswegen glaube ich, Menschen, die an dieser Schnittstelle sitzen, sehr stark mit Kunden jeden Tag interagieren, werden es noch ein bisschen sich gegen KI wehren können, als das komplett quasi in die Hände von KI geben zu können. Man hört es ja auch aus dem Handwerk und in der Pflege, das sind ja so diese Jobs, die sicher sind vor KI, sagt man ja heute. Deswegen glaube ich auch, dass Produktmanagement gar nicht so ersetzbar ist, genauso wie Sales, weil am Ende das immer noch ein People Business ist und so hat jeder seine Wichtigkeit und das, glaube ich, kann man über kurze Zeit auch nicht mit KI ersetzen."
+        },
+        {
+            "start": 3632730,
+            "end": 3683530,
+            "speaker": "A",
+            "text": "Ja, ich bin gespannt, wie sich die ganze Thematik entwickelt und du hattest auch schon diesen, ich sag mal, Switch jetzt über die Feiertage zwei tausend fünf und zwanzig angesprochen und mich hat der auch komplett gehittet. Ich war sehr, sehr lange AI Kritiker, weiß ich nicht, ob Kritiker vielleicht schon ein bisschen zu viel ist. Doch, doch, das passt schon konservativ, weil die Ergebnisse, weil jeder hat es auf LinkedIn so hoch gehypt und ich habe die Ergebnisse einfach nicht gesehen und das hat sich jetzt über die Feiertage geändert. Bin ich auch offen und es hat mich positiv überrascht. Aber vorher, ich bin auch ehrlich, da ist einfach nur zu viel Scheiße im Markt. Jeder hyped sich hoch und jeder versucht irgendwie auf den Waggon aufzuspringen und ich finde, das hat sich jetzt erst richtig geändert. Tolle Technologie, gar keine Frage, aber manche haben es ein bisschen overhyped zuvor. Aber deswegen bin ich sehr gespannt, was die Zukunft bringt, denn wir wissen alle Prognosen sind schwierig, besonders wenn sie die Zukunft betreffen."
+        },
+        {
+            "start": 3683530,
+            "end": 3688490,
+            "speaker": "B",
+            "text": "Also fokussieren wir uns auf den Menschen, oder Andi? Wir sind immer auf die Kommunikation."
+        },
+        {
+            "start": 3688490,
+            "end": 3747200,
+            "speaker": "A",
+            "text": "Immer People first. Ja, ich meine, das ist vielleicht auch der Grund, warum Leute oder warum Leute wirklich so einen großen Hass auf AI Slop haben und von daher, ich habe die Tage noch einen schönen Blogpost gelesen von Matthias Endler, Grüße gehen raus, dass er auch, ich sag mal, ihm nervt es hart, dass jetzt nur noch AI basierte Blogposts rauskommen und er hat dann dafür gevotet, dass wir doch wieder mehr menschlich geschriebene Blogposts produzieren. Fand ich auch sehr schön. Aber wir haben auch einen Lehrauftrag in diesem Podcast und wir haben auch einen Auftrag, dass Leute neue Ideen mitnehmen, was sie zum Beispiel selbst besser machen können. Und da wollen wir jetzt mal dein Wissen, Michael Und zwar geht es um die Zusammenarbeit zwischen Entwickler und Entwicklerinnen mit dem Produktmanagement. Deswegen würde ich gerne mal von dir Welche Tipps kannst du mitgeben, was eine Entwicklerin oder Entwickler konkret tun kann, um dir als Produktmanager, ich sag mal, das Leben einfacher zu machen, um dich zu unterstützen."
+        },
+        {
+            "start": 3747200,
+            "end": 3851730,
+            "speaker": "C",
+            "text": "Genau, das ist auch so eine Mentorrolle, die ich gerade habe für unsere insbesondere Junior Engineers bei uns, denn die kommen typischerweise von der Uni oder haben so paar Jahre Erfahrung in der Softwareentwicklung und haben dieses Jira implementieren fertig und das wird sich verändern und das will ich auch, dass so ein Engineer einfach nicht mehr so Jira Ticket nimmt und irgendwas machen muss, sondern ich möchte, dass unsere Entwickler, also gerade die Juniors, mehr zur OK entwickeln. Und das bedeutet, dass anstatt dass ich evaluiere, was ein Kunde braucht aus den Signalen, die wir haben und das muss ja jetzt nicht ein neuer Service sein, das können kleine Features oder Optimierung sein, dass der Engineer selber quasi sich diese Informationen zieht aus unseren Quellen und das ist in jedem Unternehmen, jedes Unternehmen hatte sicherlich irgendwelche Informationen und Datenbasis da und dann in Dokumentation schreibt, ein Dokument schreibt, in dem er sagt okay, das ist mein Problem, das ist das Problemfeld, was ich angehe. Hier ist eine Lösung, hier ist die Erfahrung, hier ist die API, hier sind die offenen Fragen, die die ich habe. Das ist ein Großteil der Aufgabe, die ich als PM auch machen muss. Und das hatten wir vorhin schon besprochen mit Field Solution Architects. Also wenn Sie wenn jetzt hier Leute dabei sind, die nicht aus der Entwicklung kommen, sondern vielleicht im Feld unterwegs sind. Genau das hilft den pms, weil diese Anforderungsanalyse und das Kristallisieren vielleicht Skizzieren von einer Lösung muss ansonsten ich übernehmen und dann muss ich priorisieren. Und je mehr du oder der Ingenieur oder der Feldkollege dafür schon macht desto einfacher habe ich es natürlich sagen, okay, das klingt ja echt spannend. Und tatsächlich haben viele Kunden dieses Problem, das schon die Hälfte der Aufgabe gemacht und jetzt können wir das durchexekutieren. Also jemanden zu einem Champion machen, zu einem Champion und Owner zu entwickeln und nicht zu okay, PM, was bauen wir morgen? Daran sehe ich meine Aufgabe gerade."
+        },
+        {
+            "start": 3851890,
+            "end": 3857010,
+            "speaker": "B",
+            "text": "Also eigentlich, dass die Developer mehr zum PM werden oder zumindest teile."
+        },
+        {
+            "start": 3857170,
+            "end": 3887810,
+            "speaker": "C",
+            "text": "Korrekt, weil ich als PM werde auch immer mehr als Engineer, weil ich mit den LLM Tools kann die APIs bauen. Ich habe natürlich gute Arbeit, Erfahrung oder Wissen aus dem Hintergrund von früher, aber das hilft auch den Engineers. Hier ist eine API. Ich habe mir schon Gedanken darüber gemacht, habe schon mit Kunden drüber gesprochen, da brauche ich kein Engineer. Im Call kann ich mit den Kunden einfach die API schon mal oder die CLI oder was auch immer durchbrechen. Also die Grenzen sind da ein bisschen fließend. Ich will nicht sagen, dass PM und Engineering irgendwann nur noch eine Rolle ist. Vielleicht in kleineren Unternehmen, in größeren nicht, aber trotzdem nähern sie sich an."
+        },
+        {
+            "start": 3887810,
+            "end": 3914000,
+            "speaker": "A",
+            "text": "Aber allgemein zusammenfassend könnte man ja sagen, dass du gerade Proaktivität beschrieben hast, oder Ich meine nicht darauf warten, dass der Produktmanager sagt, okay, bau das, sondern dass man wirklich proaktiv vorgeht, wirklich, ich sag mal, versucht mitzudenken und pipapo. Du hast gerade Champion genannt, ist ja auch so ein Wort. Im Vertrieb kenne ich zumindestens. Herr Solution Architekt, wer ist mein Champion auf der Kundenseite? Wer drückt meine Firma intern durch und so sagt ich es her? Ist das richtig?"
+        },
+        {
+            "start": 3914000,
+            "end": 3927600,
+            "speaker": "C",
+            "text": "Klar? Und am Ende, viele der Hörer werden vielleicht jetzt sagen, das ist ja alles trivial und mache ich ja eh schon sehr gut, Aber also gerade bei Junior Engineers sehe ich es halt nicht. Woher auch? Und die möchte ich natürlich dahin entwickeln, schneller als sonst."
+        },
+        {
+            "start": 3927920,
+            "end": 3940000,
+            "speaker": "A",
+            "text": "Wir erwähnen das immer öfter. Natürlich ist es trivial. Kanban, Die Anwendung von Kanban ist auch trivial. Es geht aber darum, dass es konstant Energie kostet und dadurch sehr anstrengend wird."
+        },
+        {
+            "start": 3940720,
+            "end": 3941280,
+            "speaker": "B",
+            "text": "Beispiel."
+        },
+        {
+            "start": 3941360,
+            "end": 4014260,
+            "speaker": "A",
+            "text": "Und das überrascht ziemlich viele Leute bei Kanban, so habe ich es zumindest gelernt. Dein Ziel ist es, Tickets vor Tickets, jetzt nicht die Toyota Thematik, aber von links nach rechts möglichst schnell zu kriegen. Das bedeutet auch, hast du keine Arbeit, fängst du von rechts an und schaust nach, kannst du deinen Kollegen helfen, bevor du dir selbst ein neues Ticket holst. Und allein diese Erkenntnis, dass das Teamwork ist und so weiter, überrascht ziemlich viele. Und das zeigt mir auch, dass die simpelsten Techniken, ich meine, kann man hat fünf Regeln oder so, die schwierigsten sind zu implementieren und ich denke, das Gleiche trifft auf Proaktivität. Wenn wir jetzt aber mal nicht davon ausgehen, dass jeder als Entwickler in der gleichen Rolle bleiben möchte, um zum Beispiel den Produktmanager zuzuarbeiten oder die Zusammenarbeit zu verbessern, sondern wenn man okay, ich war jetzt zehn Jahre in dem Entwicklertum, ich möchte jetzt gerne auch mal die Rolle des pms einnehmen. Was würdest du jemandem raten, der mal reinschnuppern möchte, ohne direkt Produktmanager zu werden? Oder wenn man sich doch schon entschieden hat, wenn man sich mit der Thematik schon länger beschäftigt hat, was würdest du vorschlagen, dass jemand tun sollte, um den Weg mal zu explorieren und sich vielleicht sogar auf eine PM Rolle zu bewerben?"
+        },
+        {
+            "start": 4014500,
+            "end": 4170880,
+            "speaker": "C",
+            "text": "Also als Mentor für interne Kollegen sehe ich das auch regelmäßig, dass Kollegen aus unterschiedlichen, nicht nur aus der Softwareentwicklung bei uns in der PM Rolle bewegen wollen, weil die PM Rolle auch eine sehr starke, prestigeträchtige Rolle bei AWS ist. Denn wenn man sich auch so ein paar BP oder CEOs bei Amazon und AWS anguckt, viele kommen aus dem PM. Also der PM ist tatsächlich eine sehr mächtig, klingt jetzt vielleicht übertrieben, aber eine sehr mächtige Rolle innerhalb des Unternehmens und deswegen wollen auch viele PM werden. Das, wo ich so ein bisschen Erfolg gesehen habe mit meinen Mentees, ist zum einen das, was wir gerade schon besprochen haben. Such dir einfach ein kleines Projekt, vielleicht ein Open Source Projekt oder irgendwas Internes, eine Optimierung oder und exerziere einmal diesen Loop von Anforderungsanalyse. Warum sollen wir das bauen? Dieses Destillieren dieser Informationen in den Dokument, diese Reviews dazu, die auch teilweise brutal sein können, weil das Feedback ist sehr direkt oft in den Reviews. Das ist auch eine Erfahrung. Exerziere den einfach mal in der Komfortzone für dich durch. Zum anderen such dir einen Mentor, also so wie ich jetzt Mentor für interne Kollegen sind, die dir auf dem Pfad helfen können, die die Türen öffnen können, die dich mit den Teams verknüpfen können, die dir mit Meetings geben können. Und wenn jemand das vielleicht schon länger macht oder jetzt will ich es mal in einem anderen Unternehmen versuchen. Was mir sehr geholfen hat, ist die Vorbereitung auf den AWS Interview Prozess und wir haben vorhin gerade über KI gesprochen und grundsätzliche Marktdynamiken. Ich glaube, es wird nicht einfacher, sich zu bewerben heute am Markt und sich durchzusetzen. Was mir geholfen hat bei dem AWS Prozess war, der sich auch der Loop nennt, weil du da über mehrere Stufen durchgehst. Gibt so eine Methodik, die einem empfohlen wird, weil diese so wird man auch interviewt, die nennt sich die STAR Methodik. Gibt es auch verschiedene. Und STAR bedeutet Situation, Task Assignment oder Action und Result. Wenn man sich das einmal verinnerlicht, wenn du gefragt okay, erzähl mir mal über XYZ, was du gemacht hast und dann verfieseln wir uns irgendwo im Lebenslauf und erzählen irgendwas, aber wir sind nicht präzise genug. Und diese STAR Methode hilft zu sagen okay, ich war in der und der Situation, das war meine Aufgabe, das und das habe ich gemacht und das war das Outcome. Ist unfassbar mächtig in Überzeugung. Also wenn man in so einem Interview überzeugen möchte und dieser AWS Interview Prozess, der ist öffentlich dokumentiert, weil kann sich ja jeder irgendwie mal drauf bewerben. Das heißt, da kann man das vielleicht mal so theoretisch durchexerzieren. Andere Unternehmen haben sicherlich ähnliche, es gibt Bücher drüber. Das kann ich nur empfehlen, sich da vorzubereiten, weil es sehr schwierig ist, glaube ich, heutzutage sich durch Michael, sag mir."
+        },
+        {
+            "start": 4170880,
+            "end": 4242330,
+            "speaker": "A",
+            "text": "Mal kurz, wie ich dich jetzt über die Videostream küsse. Denn verhaltensbezogene Interviewfragen und die STAR Methode habe ich am achter dezember im Engineering Kiosk Adventskalender zwei tausend vier und zwanzig ebenfalls durchexerziert. Bin ein mega Fan davon. Auch als Interviewer kriegt man da sehr, sehr viel Insights und es ist wirklich eine meines Erachtens nach einfache Thematik, wenn man sie einmal verstanden hat und sie erzeugt so viel Value. Und auch weil ich jetzt wieder sehr viel im Recruiting Prozess unterwegs bin, bin ich merke einfach, wie wenig Leute eine solche strukturierte Antwort Art und Weise anwenden und es ist faszinierend. Jetzt ist es nun mal so und das ist auch meine letzte Frage, Ist es nun mal so, dass leider nicht jeder Job immer super viel Spaß macht. Jeder Job hat irgendwie Elemente, wo man sagt ach komm, gut, da muss ich jetzt durch. Passiert halt. Sei es dem Dachdecker, der jetzt gerade keinen Kran zur Verfügung hat und deswegen die Dachpfannen alleine aufs Dach schleppen muss. Ich denke nicht, dass ein Dachdecker darauf wirklich Bock hat, sondern ich glaube, dass jeder sagt, okay, ein Kran wäre schon cool. Was würdest du sagen, sind die Elemente im Produktmanagement, die dir nicht so Spaß machen oder vielleicht andersrum? Was ist die unbequeme Wahrheit über pms, die zu selten ausgesprochen?"
+        },
+        {
+            "start": 4242330,
+            "end": 4318880,
+            "speaker": "C",
+            "text": "Allgemein ausgedrückt kann man sagen, der Stressfaktor. Ich weiß nicht, ob das vielleicht an dieser hohen Dynamik in so einem Technologieunternehmen wie AWS liegt, aber es glaube ich kein Geheimnis, dass du insbesondere als PM mit so viel Verantwortung einen sehr hohen Stress hast und der wird nicht weniger, je erfolgreicher du bist, weil dein Scope immer größer wird, der Impact, die Verantwortung und so weiter. Das muss man schon abkönnen und auch da Mechanismen finden, wie man das in Balance hält mit seinem Leben, Familie, was auch immer das vielleicht jetzt allgemein ausgedrückt für die PM Rolle gibt auch ganz viele andere Jobs, wo mindestens genauso viel Stress und mehr ist, aber ich glaube nicht ganz so oft gesagt, oder ist nicht das erste, was man über ein PM hört, persönlich aus meiner Erfahrung, weil ich ja auch eher einen Engineering Hintergrund hatte, bevor ich in die Rolle gewechselt bin. Was mir, wo ich sehr lange Schwierigkeiten hatte oder viel lernen musste, ist das ganze Pricing, Profit and Loss Financial Analysis. Das, was man als Engineer jetzt nicht so jeden Tag macht, da musste ich ganz viel haben. Leute, die mit einem Wirtschaftsstudium daherkommen, in die Rolle reingehen sicherlich und sehe ich auch, dass meine Kollegen mit dem Hintergrund, den fällt das deutlich einfacher. Das ist einfach nur persönlich. Mein Profil würde ich jetzt nicht verallgemeinern."
+        },
+        {
+            "start": 4318880,
+            "end": 4329440,
+            "speaker": "B",
+            "text": "Andi super Frage, ending on a positive note. Du stellst so eine schöne negative Frage noch am Ende, Was ist alles schlecht? Da musst du dich jetzt rausretten."
+        },
+        {
+            "start": 4329440,
+            "end": 4347650,
+            "speaker": "A",
+            "text": "Andi Muss ich nicht, muss ich nicht. Bleibt mal bei euch euren Floskeln. Ich denke, ich sehe der Realität richtig ins Auge. Ich denke, die Realität und das Leben ist hart. Soll man sich nicht verstecken. Ich bin jetzt hier kein Ich pack dich nicht in Watte ein. Wolfgang tut mir leid, die Duisburger Herangehensweise."
+        },
+        {
+            "start": 4347650,
+            "end": 4348930,
+            "speaker": "B",
+            "text": "Da hat man ein hartes Leben."
+        },
+        {
+            "start": 4349090,
+            "end": 4449670,
+            "speaker": "A",
+            "text": "Ja, pass auf, wenn wir weichen Stahl machen würden, dann wären wir auch nicht erfolgreich gewesen. Also von daher, da kommen ja Karneval steht vor der Tür, würde ich sagen. Michael, vielen lieben Dank für deine Zeit. Es war für mich unglaublich spannend, mal diese ganzen AWS Mythen, Rumors, Gerüchte aus erster Hand zu hören. Wie wird dieses Five Question Dokument oder diese faqs wirklich gemacht, dieses Working Backwards, dieses wird wirklich erst eine Pressemitteilung geschickt und Co. Super interessant auch der Einfluss von Produktmanagement in dieser Organisation. Ich denke, ein paar Organisationen können davon lernen. Ich bin sehr froh, dass dieses Interview geklappt hat. Ich bin sehr froh, dass du die Zeit genommen hast. In den Shownotes haben wir eigentlich ziemlich viel Material zusammengeführt, wie zum Beispiel natürlich auch das LinkedIn Profil von Michael, falls noch mal, wer eine Frage hat, aber auch die ganze Produktmanagement Thematik, wie zum Beispiel ein Exzerpt von dem Buch Working Backwards, dann das FAQ Dokument von AWS Lambda, was vor kurzem veröffentlicht wurde, wer das mal in Praxis sehen möchte, aber natürlich auch etliche Funktionen und Dokumentationsseiten zu Step Functions, eventbridge, was ist Serverless Computing und so weiter und so fort. Und wer sich vielleicht auf das nächste Interview vorbereiten möchte, kann sich auch noch mal eine zehn Minuten Episode zur STAR Methode anhören. Das war's von uns, Vielen lieben Dank. Wenn ihr Feedback habt, kommt gerne unsere Discord Community auch zu dieser Episode. Das Feedback leiten wir natürlich alles sehr, sehr gerne an den Michael weiter. Wolfgang, was ist das letzte Wort von dir? Und Michael, was ist das letzte Wort von dir für unsere Hörer am Hörgerät?"
+        },
+        {
+            "start": 4449750,
+            "end": 4455110,
+            "speaker": "B",
+            "text": "Ja, ich bin ja unwichtig in diesem Podcast, also von mir braucht es kein Wort, darum übergebe ich das direkt an Michael."
+        },
+        {
+            "start": 4455350,
+            "end": 4468370,
+            "speaker": "C",
+            "text": "Danke. Also ich kann nur allen Hörern empfehlen, dass wenn sie eine Idee haben oder irgendwas teilen möchten, euch unbedingt für diesen Podcast zu bewerben. Ich kriege dafür keine Werbung oder Geld. Hat mir super Spaß gemacht. Danke euch."
+        },
+        {
+            "start": 4468370,
+            "end": 4493560,
+            "speaker": "B",
+            "text": "Vielen, vielen Dank. War super spannend, vor allem diese tiefen Einblicke in AWS, vor allem von der Product Seite. Und du hast mit uns jetzt die erste Episode zum Produktmanagement eingeläutet und ich hoffe, es wird nicht die letzte Episode bleiben bei uns, weil es ein wichtiger Teil ist. Und wie wir jetzt gelernt haben, auf der Developer Seite müssen wir ja viel mehr PMS werden. Insofern müssen wir da jetzt fast ein paar Episoden nachliefern. Also vielen, vielen Dank auch von meiner Seite."
+        },
+        {
+            "start": 4493720,
+            "end": 4494200,
+            "speaker": "C",
+            "text": "Danke."
+        },
+        {
+            "start": 4494200,
+            "end": 4498360,
+            "speaker": "A",
+            "text": "Das war's von uns drei. Wir hören uns in der nächsten Podcast Episode und tschüss."
+        },
+        {
+            "start": 4498440,
+            "end": 4498920,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
