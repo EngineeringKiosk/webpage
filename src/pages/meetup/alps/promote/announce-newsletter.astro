@@ -2,7 +2,8 @@
 import MainHead from '../../../../components/MainHead.astro';
 
 import { formatDate, formatDateWithoutWeekday, formatTime, monthSuffixedDay, year} from '../../../../scripts/date.js';
-import { getNextMeetup } from '../../../../scripts/meetups.js';
+import { createMeetupHelpers } from '../../../../scripts/meetups.js';
+const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
 
 let title = 'Newsletter Template for Engineering Kiosk Alps';
 let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';

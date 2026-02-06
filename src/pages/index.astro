@@ -9,7 +9,7 @@ import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday } from '../scripts/date.js';
-import { getNextMeetup } from '../scripts/meetups.js';
+import { createMeetupHelpers } from '../scripts/meetups.js';
 import AnnouncementBar from '../components/AnnouncementBar.astro';
 
 // Testimonials images
@@ -44,21 +44,35 @@ let currentEpisodeTags = episode.data.tags.map((element) => URLify(element));
 // Cut description text
 let currentEpisodeDescription = cutText(episode.data.description, 170);
 
-// get next meetup and show announcement bar if it is in the next 3 days
-const nextMeetup = getNextMeetup();
+// get next meetups for both meetup series
 const showAnnouncementBarDays = 3;
-let showAnnouncementBarStart = new Date();
-let showAnnouncementBarEnd = new Date();
-let nextMeetupDate = ""
 
-if (nextMeetup && nextMeetup.date) {
-	showAnnouncementBarStart = new Date(nextMeetup.date);
-	showAnnouncementBarEnd = new Date(nextMeetup.date);
-	// show the bar 3 days before the meetup
-	showAnnouncementBarStart.setDate(showAnnouncementBarStart.getDate() - showAnnouncementBarDays);
-	// keep the bar for 2 hours more so people find le location quickly when they are late
-	showAnnouncementBarEnd.setHours(showAnnouncementBarEnd.getHours() + 2);
-	nextMeetupDate = nextMeetup.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+const { getNextMeetup: getNextMeetupAlps } = await createMeetupHelpers('meetup-alps');
+const nextMeetupAlps = getNextMeetupAlps();
+let showAnnouncementBarStartAlps = new Date();
+let showAnnouncementBarEndAlps = new Date();
+let nextMeetupDateAlps = "";
+
+if (nextMeetupAlps && nextMeetupAlps.date) {
+	showAnnouncementBarStartAlps = new Date(nextMeetupAlps.date);
+	showAnnouncementBarEndAlps = new Date(nextMeetupAlps.date);
+	showAnnouncementBarStartAlps.setDate(showAnnouncementBarStartAlps.getDate() - showAnnouncementBarDays);
+	showAnnouncementBarEndAlps.setHours(showAnnouncementBarEndAlps.getHours() + 2);
+	nextMeetupDateAlps = nextMeetupAlps.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+}
+
+const { getNextMeetup: getNextMeetupRhineRuhr } = await createMeetupHelpers('meetup-rhine-ruhr');
+const nextMeetupRhineRuhr = getNextMeetupRhineRuhr();
+let showAnnouncementBarStartRhineRuhr = new Date();
+let showAnnouncementBarEndRhineRuhr = new Date();
+let nextMeetupDateRhineRuhr = "";
+
+if (nextMeetupRhineRuhr && nextMeetupRhineRuhr.date) {
+	showAnnouncementBarStartRhineRuhr = new Date(nextMeetupRhineRuhr.date);
+	showAnnouncementBarEndRhineRuhr = new Date(nextMeetupRhineRuhr.date);
+	showAnnouncementBarStartRhineRuhr.setDate(showAnnouncementBarStartRhineRuhr.getDate() - showAnnouncementBarDays);
+	showAnnouncementBarEndRhineRuhr.setHours(showAnnouncementBarEndRhineRuhr.getHours() + 2);
+	nextMeetupDateRhineRuhr = nextMeetupRhineRuhr.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
 }
 
 let bestPerformingEpisodes = [
@@ -79,8 +93,11 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 		<div>
 			<Nav title={title} />
 
-			<AnnouncementBar message={`Upcoming Meetup in Innsbruck! ${nextMeetupDate}: Engineering Kiosk Alps`	}
-			 link="/meetup/alps/" showStart={showAnnouncementBarStart} showEnd={showAnnouncementBarEnd} />
+			<AnnouncementBar message={`Upcoming Meetup in Innsbruck! ${nextMeetupDateAlps}: Engineering Kiosk Alps`}
+			 link="/meetup/alps/" showStart={showAnnouncementBarStartAlps} showEnd={showAnnouncementBarEndAlps} id="announcementBarAlps" />
+
+			<AnnouncementBar message={`Upcoming Meetup in Rhine-Ruhr! ${nextMeetupDateRhineRuhr}: Engineering Kiosk Rhine-Ruhr`}
+			 link="/meetup/rhine-ruhr/" showStart={showAnnouncementBarStartRhineRuhr} showEnd={showAnnouncementBarEndRhineRuhr} id="announcementBarRhineRuhr" />
 
 			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
 				<div class="py-20 md:py-28">

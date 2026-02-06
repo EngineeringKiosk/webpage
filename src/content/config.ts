@@ -50,60 +50,60 @@ const blogEntryCollection = defineCollection({
 		}),
 });
 
-// Schema for Meetups
-const meetupCollection = defineCollection({
-	type: 'content',
-	schema: ({ image }) =>
-		z.object({
-			date: z.date(),
-			eventId: z.string().optional(),
-			registrationClosed: z.boolean().optional(),
-			location: z.object({
-				name: z.string(),
-				address: z.string(),
-				url: z.string().optional(),
-				logo: image().optional(),
-				note: z.string().optional(),
-			}),
-			talks: z.array(
-				z.object({
-					avatar: image().optional(),
-					name: z.string(),
-					title: z.string(),
-					description: z.string(),
-					github: z.string().optional(),
-					twitter: z.string().optional(),
-					// string or array of strings
-					linkedin: z.union([z.string(), z.array(z.string())]).optional(),
-					mastodon: z.string().optional(),
-					youtube: z.string().optional(),
-					website: z.string().optional(),
-					bio: z.string().optional(),
-					slides: z.string().optional(),
-				})
-			),
-			participants: z
-				.object({
-					registered: z.number(),
-					present: z
-						.object({
-							total: z.number().optional(),
-							male: z.number().optional(),
-							female: z.number().optional(),
-						})
-						.optional(),
-					newParticipants: z.number().optional(),
-				})
-				.optional(),
-			speakers: z
-				.object({
-					female: z.number().optional(),
-					male: z.number().optional(),
-					nonbinary: z.number().optional(),
-				})
-				.optional(),
+// Schema for Meetups (shared between meetup-alps and meetup-rhine-ruhr)
+const meetupSchema = ({ image }) =>
+	z.object({
+		date: z.date(),
+		eventId: z.string().optional(),
+		registrationClosed: z.boolean().optional(),
+		location: z.object({
+			name: z.string(),
+			address: z.string(),
+			url: z.string().optional(),
+			logo: image().optional(),
+			note: z.string().optional(),
 		}),
-});
+		talks: z.array(
+			z.object({
+				avatar: image().optional(),
+				name: z.string(),
+				title: z.string(),
+				description: z.string(),
+				github: z.string().optional(),
+				twitter: z.string().optional(),
+				// string or array of strings
+				linkedin: z.union([z.string(), z.array(z.string())]).optional(),
+				mastodon: z.string().optional(),
+				youtube: z.string().optional(),
+				website: z.string().optional(),
+				bio: z.string().optional(),
+				slides: z.string().optional(),
+			})
+		),
+		participants: z
+			.object({
+				registered: z.number(),
+				present: z
+					.object({
+						total: z.number().optional(),
+						male: z.number().optional(),
+						female: z.number().optional(),
+					})
+					.optional(),
+				newParticipants: z.number().optional(),
+			})
+			.optional(),
+		speakers: z
+			.object({
+				female: z.number().optional(),
+				male: z.number().optional(),
+				nonbinary: z.number().optional(),
+			})
+			.optional(),
+	});
+
+const meetupAlpsCollection = defineCollection({ type: 'content', schema: meetupSchema });
+const meetupRhineRuhrCollection = defineCollection({ type: 'content', schema: meetupSchema });
 
 // Schema for German Tech Podcasts
 const germantechpodcastsCollection = defineCollection({
@@ -168,7 +168,8 @@ const awesomeSoftwareEngineeringGamesCollection = defineCollection({
 export const collections = {
 	podcast: podcastEpisodeCollection,
 	blog: blogEntryCollection,
-	meetup: meetupCollection,
+	'meetup-alps': meetupAlpsCollection,
+	'meetup-rhine-ruhr': meetupRhineRuhrCollection,
 	germantechpodcasts: germantechpodcastsCollection,
 	'awesome-software-engineering-games': awesomeSoftwareEngineeringGamesCollection,
 };
