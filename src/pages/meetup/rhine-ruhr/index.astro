@@ -4,15 +4,15 @@ import MainHead from '../../../components/MainHead.astro';
 import MeetupListing from '../../../components/MeetupListing.astro';
 import Nav from '../../../components/Nav.astro';
 import CompanyLogo from '../../../components/CompanyLogo.astro';
-import Newsletter from '../../../components/meetup-alps/Newsletter.astro';
-import Discord from '../../../components/meetup-alps/Discord.astro';
-import Team from '../../../components/meetup-alps/Team.astro';
+import Newsletter from '../../../components/meetup-rhine-ruhr/Newsletter.astro';
+import Discord from '../../../components/meetup-rhine-ruhr/Discord.astro';
+import Team from '../../../components/meetup-rhine-ruhr/Team.astro';
 import { Image } from "astro:assets";
 
 import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
 import { createMeetupHelpers } from '../../../scripts/meetups.js';
-const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
-import Sponsors from '../../../components/meetup-alps/Sponsors.astro';
+const { getNextMeetup } = await createMeetupHelpers('meetup-rhine-ruhr');
+import Sponsors from '../../../components/meetup-rhine-ruhr/Sponsors.astro';
 import ImageSlider from '../../../components/meetup-alps/ImageSlider.astro';
 
 // Current Meetup
@@ -24,12 +24,12 @@ const dateAndTime = `${dateString} - open doors at ${timeString} (talks start ~3
 const registrationClosed = nextMeetup.registrationClosed || false;
 
 
-let title = 'Meetup Alps - Engineering Kiosk - Innsbruck';
-let description = `Tech Meetup in Innsbruck (Next: ${dateString}): Brings together tech enthusiasts, engineers, developers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+let title = 'Meetup Rhine-Ruhr - Engineering Kiosk - Germany';
+let description = `Tech Meetup in Rhine-Ruhr (Next: ${dateString}): Brings together tech enthusiasts, engineers, developers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Dynamically import all images from the slider directory
-const imageModules = import.meta.glob('../../../images/meetup-alps/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
+const imageModules = import.meta.glob('../../../images/meetup-rhine-ruhr/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
 
 // Prepare images array for the slider by processing the dynamic imports
 const sliderImages = await Promise.all(
@@ -44,7 +44,7 @@ const sliderImages = await Promise.all(
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/meetup/alps/images/ibk.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/meetup/rhine-ruhr/images/rr.jpg" {canonicalURL} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
@@ -58,12 +58,12 @@ const sliderImages = await Promise.all(
 							<div class="w-full md:w-1/2 px-4 mb-2 md:mb-16 md:mb-0">
 								<h1>
 									<div>
-										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Innsbruck</span>
+										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Rhine-Ruhr</span>
 									</div>
-									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Alps<br />Meetup Innsbruck</span>
+									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Rhine-Ruhr Meetup Germany</span>
 								</h1>
 								<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
-									Join us at Engineering Kiosk Alps, a dynamic tech meetup happening in the heart of the Alps, in Innsbruck! This event brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and
+									Join us at Engineering Kiosk Rhine-Ruhr, a dynamic tech meetup happening in the heart of the Rhine-Ruhr region, in Germany! This event brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and
 									technology.
 								</p>
 								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
@@ -138,7 +138,8 @@ const sliderImages = await Promise.all(
 				</div>
 			</section>
 
-			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' />
+			<!-- TODO: Activate archive -->
+			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' archive={true} meetupName="Rhine-Ruhr" />
 
 			{ () => { 
 				if (!registrationClosed) {
@@ -226,7 +227,9 @@ const sliderImages = await Promise.all(
 					)
 				}
 			}}
+			<!-- 
 			<Newsletter />
+			-->
 
 			<Discord />
 

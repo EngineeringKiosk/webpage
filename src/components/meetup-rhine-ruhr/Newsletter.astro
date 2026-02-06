@@ -1,7 +1,7 @@
 ---
 import { formatDateWithoutWeekday } from '../../scripts/date.js';
 import { createMeetupHelpers } from '../../scripts/meetups.js';
-const { getNextMeetups } = await createMeetupHelpers('meetup-alps');
+const { getNextMeetups } = await createMeetupHelpers('meetup-rhine-ruhr');
 
 let dates = getNextMeetups().map((meetup) => meetup.date);
 
@@ -12,7 +12,7 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
 		<div class="mb-16 text-center">
 			<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Interested in upcoming meetups?</h3>
 			<p>
-				Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
+				Register to our Engineering Kiosk Rhine-Ruhr newsletter and receive emails about upcoming meetups.<br />
 				No worries, we won't spam you and you can unsubscribe at any time.
 			</p>
 

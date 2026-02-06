@@ -10,9 +10,10 @@ export interface Props {
 	headline: string;
 	meetupsToShow: any[];
 	archive?: boolean;
+	meetupName?: string;
 }
 
-const { headline, meetupsToShow, archive } = Astro.props
+const { headline, meetupsToShow, archive, meetupName = 'Alps' } = Astro.props
 
 
 ---
@@ -42,7 +43,7 @@ const { headline, meetupsToShow, archive } = Astro.props
 						<div class="text-center mt-8 text-lg md:text-xl text-coolGray-500 font-medium">
 							Find previous talks in the{' '}
 							<a href="./archive/" class="text-yellow-500">
-								Engineering Kiosk Alps Talks Archive
+								Engineering Kiosk {meetupName} Talks Archive
 							</a>
 						</div>
 					)}

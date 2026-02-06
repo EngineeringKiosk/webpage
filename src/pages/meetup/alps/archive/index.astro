@@ -8,7 +8,8 @@ import Newsletter from '../../../../components/meetup-alps/Newsletter.astro';
 import MeetupArchiveEvent from '../../../../components/meetup-alps/MeetupArchiveEvent.astro';
 import Team from '../../../../components/meetup-alps/Team.astro';
 
-import { getPastMeetups } from '../../../../scripts/meetups';
+import { createMeetupHelpers } from '../../../../scripts/meetups';
+const { getPastMeetups } = await createMeetupHelpers('meetup-alps');
 import { Image } from "astro:assets";
 
 let title = 'Archive of Engineering Kiosk Alps Meetup in Innsbruck';

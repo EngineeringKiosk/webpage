@@ -4,12 +4,13 @@ export interface Props {
 	link: string;
 	showStart: Date;
 	showEnd: Date;
+	id?: string;
 }
 
-const { message, link, showStart, showEnd } = Astro.props;
+const { message, link, showStart, showEnd, id = 'announcementBar' } = Astro.props;
 ---
 
-<section id="announcementBar" class="py-6 bg-coolGray-900 overflow-hidden bg-opacity-75" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center; background-size: cover; display:none;">
+<section id={id} class="py-6 bg-coolGray-900 overflow-hidden bg-opacity-75" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center; background-size: cover; display:none;">
 	<div class="container px-3 mx-auto text-center">
 		<a href={link} class="text-darkCoolGray-50 font-semibold text-xl">
 			{message}
@@ -17,9 +18,9 @@ const { message, link, showStart, showEnd } = Astro.props;
 	</div>
 </section>
 
-<script define:vars={{ showStart, showEnd }}>
+<script define:vars={{ showStart, showEnd, id }}>
 	const now = new Date();
 	if (now < new Date(showEnd) && now > new Date(showStart)) {
-		document.getElementById('announcementBar').style.display = 'block';
-	}	
+		document.getElementById(id).style.display = 'block';
+	}
 </script>
