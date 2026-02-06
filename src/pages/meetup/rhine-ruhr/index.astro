@@ -1,0 +1,240 @@
+---
+import Footer from '../../../components/Footer.astro';
+import MainHead from '../../../components/MainHead.astro';
+import MeetupListing from '../../../components/MeetupListing.astro';
+import Nav from '../../../components/Nav.astro';
+import CompanyLogo from '../../../components/CompanyLogo.astro';
+import Newsletter from '../../../components/meetup-rhine-ruhr/Newsletter.astro';
+import Discord from '../../../components/meetup-rhine-ruhr/Discord.astro';
+import Team from '../../../components/meetup-rhine-ruhr/Team.astro';
+import { Image } from "astro:assets";
+
+import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
+import { getNextMeetup } from '../../../scripts/meetups.js';
+import Sponsors from '../../../components/meetup-rhine-ruhr/Sponsors.astro';
+import ImageSlider from '../../../components/meetup-alps/ImageSlider.astro';
+
+// Current Meetup
+const bufferDays = 2 // wait 2 days after meetup before showing next meetup
+const nextMeetup = getNextMeetup(bufferDays);
+const dateString = formatDateWithoutWeekday(nextMeetup.date, 'en-US');
+const timeString = formatTime(nextMeetup.date);
+const dateAndTime = `${dateString} - open doors at ${timeString} (talks start ~30min later)`;
+const registrationClosed = nextMeetup.registrationClosed || false;
+
+
+let title = 'Meetup Rhine-Ruhr - Engineering Kiosk - Germany';
+let description = `Tech Meetup in Rhine-Ruhr (Next: ${dateString}): Brings together tech enthusiasts, engineers, developers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Dynamically import all images from the slider directory
+const imageModules = import.meta.glob('../../../images/meetup-rhine-ruhr/slider/*.{jpg,jpeg,png,webp}', { eager: true });
+
+// Prepare images array for the slider by processing the dynamic imports
+const sliderImages = await Promise.all(
+  Object.entries(imageModules).map(async ([path, module]) => ({
+    src: (module as any).default,
+    alt: "",
+    title: ""
+  }))
+);
+
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/meetup/rhine-ruhr/images/rr.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="py-2 md:py-28">
+					<div class="container px-4 mx-auto">
+						<div class="flex flex-wrap xl:items-center -mx-4">
+							<div class="w-full md:w-1/2 px-4 mb-2 md:mb-16 md:mb-0">
+								<h1>
+									<div>
+										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Rhine-Ruhr</span>
+									</div>
+									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Rhine-Ruhr Meetup Germany</span>
+								</h1>
+								<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
+									Join us at Engineering Kiosk Rhine-Ruhr, a dynamic tech meetup happening in the heart of the Rhine-Ruhr region, in Germany! This event brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and
+									technology.
+								</p>
+								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
+								<p class="mt-2 text-sm md:text-base text-coolGray-500 font-medium">
+									📅 Date <span class="font-bold">{dateAndTime}</span>
+								</p>
+								<div class="mb-8 text-sm md:text-base text-coolGray-500 font-medium">
+									📍 Location:
+									{
+										nextMeetup.location.url && (
+											<a href={nextMeetup.location.url} target="_blank" rel="noopener noreferrer">
+												{nextMeetup.location.name}
+											</a>
+										)
+									}
+									{!nextMeetup.location.url && nextMeetup.location.name} (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>
+									{nextMeetup.location.note && (
+										<span set:html={nextMeetup.location.note} class="text-xs" />
+									)})
+									
+								</div>
+
+								<div class="flex flex-wrap mt-2">
+									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
+									{ () => { 
+										if (!registrationClosed) {
+											return(
+												<a
+													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
+													onclick="scrollToElement('a[name=register]'); return false;"
+													href="#register"
+												>
+													Register for next meetup
+												</a>
+												 <p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
+													</a>
+												</p>)
+											} else {
+											return(								
+												<a
+													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 font-medium text-center text-coolGray-500 outline-none placeholder-coolGray-500 border border-coolGray-200  rounded-md shadow-sm disabled"
+													onclick="scrollToElement('a[name=register]'); return false;"
+													href="#register"
+												>
+													Registration is closed (Max. Capacity Reached)
+												</a>
+												<p class="mt-12 mb-2 md:mb-8 text-lg md:text-m text-coolGray-500 font-medium">  
+													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+														We have reached the maximum number of registrations for this event. <span class="underline">Please do not show up if you have not registered beforehand</span> as the venue has limited capacity due to safety regulations. You can subscribe to our newsletter and get an email when the next meetup is announced. Hope to see you there!
+													</a>
+												</p>)
+											}
+									}}
+									</div>
+								</div>	
+							</div>
+							<div class="hidden md:block w-full md:w-1/2 px-4">
+								<div class="relative mx-auto md:mr-0 max-w-max">
+									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+									<ImageSlider 
+										images={sliderImages} 
+										autoSlideInterval={2000}
+										className="relative rounded-7xl"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- TODO: Activate archive -->
+			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' archive={true} />
+
+			{ () => { 
+				if (!registrationClosed) {
+					return(
+					<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+						<div class="container px-4 mx-auto w-full md:w-1/2">
+							<div class="mb-16 text-center">
+								<a name="register"></a>
+								<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Please, let us know that you are coming</h3>
+								<div class="leading-relaxed">
+									Please, for better planning and organization, let us know that you are coming. <br />
+									It is free and you can cancel your registration at any time.<br />
+									We'll also send you an ics-event file, so you can add the event to your calendar.
+									If you can't make it, please cancel your registration by declining the event in your calendar.
+									<br /><br />
+									Next meetup:<br />
+									<span class="font-bold">📅 {dateAndTime}</span><br />
+									<div class="h-5 inline-block">
+										📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="20" /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
+									</div>
+								</div>
+								<script>
+									window.submitRegisterForm = function(form) {
+										const regId = form.regId.value; // we use regId instead of email to confuse bots
+										const formMessage = document.getElementById('formMessage');
+										formMessage.classList.remove('hidden');
+										formMessage.innerHTML = `Registering ${regId}...`;
+										const formData = new FormData(form);
+										// use simple urlencoded form data instead of multipart
+										fetch(form.action, {
+											method: 'POST',
+											headers: {
+												'Content-Type': 'application/x-www-form-urlencoded',
+											},
+											body: new URLSearchParams(formData).toString(),
+										})
+										.then((response) => {
+											if (response.ok) {
+												formMessage.innerHTML = `${regId} registered successfully!`;
+											} else {
+												formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
+											}
+										})
+										.catch((error) => {
+											formMessage.innerHTML = 'Something went wrong. Please try again later.';
+										});
+										return false;
+									}
+								</script>
+								<style>
+									.email-field {
+										display: none;
+									}
+								</style>
+								<form action="https://rsvp.engineeringkiosk.dev/register" method="post" onsubmit="return submitRegisterForm(this);">
+									<div class="mt-4">
+										<p class="hidden text-lg mt-8" id="formMessage"></p>
+										<input type="hidden" name="eventId" value={nextMeetup.eventId} />
+										<input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
+										<input class="bg-whitem-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xs" name="regId" placeholder="Your email address" />
+										<input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value=`Register for ${dateString}` />
+										<br />
+										<div class="block sm:inline-block"><input type="checkbox" name="register" value="true" checked="checked" class="m-2" disabled/> Register for next meetup</div>
+										<div class="block sm:inline-block"><input type="checkbox" name="newsletter" value="true" checked="checked" class="m-2"/> Inform me about upcoming meetups</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>)
+				} else {
+					return(
+						<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+							<div class="container px-4 mx-auto w-full md:w-1/2">
+								<div class="mb-16 text-center">
+									<a name="register"></a>
+									<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Registration is closed</h3>
+									<div class="leading-relaxed">
+										We have reached the maximum number of registrations for the event on {dateString}.<br />
+										Please do not show up if you have not registered beforehand as the venue has limited capacity due to safety regulations.<br />
+										You can subscribe to our newsletter below to get an email when the next meetup is announced. Hope to see you there!
+									</div>
+								</div>
+							</div>
+						</section>
+					)
+				}
+			}}
+			<Newsletter />
+
+			<Discord />
+
+			<Sponsors />
+
+			<Team />
+
+			<Footer />
+		</div>
+	</body>
+</html>
