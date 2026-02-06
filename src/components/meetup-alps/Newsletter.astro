@@ -1,6 +1,7 @@
 ---
 import { formatDateWithoutWeekday } from '../../scripts/date.js';
-import { getNextMeetups } from '../../scripts/meetups.js';
+import { createMeetupHelpers } from '../../scripts/meetups.js';
+const { getNextMeetups } = await createMeetupHelpers('meetup-alps');
 
 let dates = getNextMeetups().map((meetup) => meetup.date);
 

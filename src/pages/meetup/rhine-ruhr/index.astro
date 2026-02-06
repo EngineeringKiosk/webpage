@@ -10,7 +10,8 @@ import Team from '../../../components/meetup-rhine-ruhr/Team.astro';
 import { Image } from "astro:assets";
 
 import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
-import { getNextMeetup } from '../../../scripts/meetups.js';
+import { createMeetupHelpers } from '../../../scripts/meetups.js';
+const { getNextMeetup } = await createMeetupHelpers('meetup-rhine-ruhr');
 import Sponsors from '../../../components/meetup-rhine-ruhr/Sponsors.astro';
 import ImageSlider from '../../../components/meetup-alps/ImageSlider.astro';
 
@@ -138,7 +139,7 @@ const sliderImages = await Promise.all(
 			</section>
 
 			<!-- TODO: Activate archive -->
-			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' archive={true} />
+			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' archive={true} meetupName="Rhine-Ruhr" />
 
 			{ () => { 
 				if (!registrationClosed) {
