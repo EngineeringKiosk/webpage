@@ -29,7 +29,7 @@ let description = `Tech Meetup in Innsbruck (Next: ${dateString}): Brings togeth
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Dynamically import all images from the slider directory
-const imageModules = import.meta.glob('../../../images/meetup-alps/slider/*.{jpg,jpeg,png,webp}', { eager: true });
+const imageModules = import.meta.glob('../../../images/meetup-alps/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
 
 // Prepare images array for the slider by processing the dynamic imports
 const sliderImages = await Promise.all(
