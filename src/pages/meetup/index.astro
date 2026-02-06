@@ -1,0 +1,100 @@
+---
+import Footer from '../../components/Footer.astro';
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import { Image } from "astro:assets";
+
+import { formatDateWithoutWeekday } from '../../scripts/date.js';
+import { createMeetupHelpers } from '../../scripts/meetups.js';
+
+const { getNextMeetup: getNextMeetupAlps } = await createMeetupHelpers('meetup-alps');
+const { getNextMeetup: getNextMeetupRhineRuhr } = await createMeetupHelpers('meetup-rhine-ruhr');
+
+const bufferDays = 2;
+const nextMeetupAlps = getNextMeetupAlps(bufferDays);
+const nextMeetupRhineRuhr = getNextMeetupRhineRuhr(bufferDays);
+
+import imageAlps from '../../images/meetup-alps/slider/ibk.jpg';
+import imageRhineRuhr from '../../images/meetup-rhine-ruhr/slider/duesseldorf-skyline.jpg';
+
+const title = 'Meetups - Engineering Kiosk';
+const description = 'Engineering Kiosk Meetups: Join our tech meetups in Innsbruck (Alps) and the Rhine-Ruhr region in Germany. Community talks about engineering culture, open source, people and technology.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="en">
+	<head>
+		<MainHead title={title} description={description} {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="py-16 md:py-24">
+					<div class="container px-4 mx-auto text-center">
+						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Meetup</span>
+						<h1 class="mb-6 text-3xl md:text-5xl lg:text-5xl leading-tight font-bold tracking-tight">Engineering Kiosk Meetups</h1>
+						<p class="mb-0 text-lg md:text-xl text-coolGray-500 font-medium max-w-2xl mx-auto">
+							Join our tech meetups bringing together engineers, developers, and tech enthusiasts to explore engineering culture, open source, people and technology.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-12 md:py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap -mx-4">
+						<div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+							<div class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+								<Image src={imageAlps} alt="Innsbruck, Austria" class="w-full h-64 object-cover" />
+								<div class="p-6 flex flex-col flex-grow">
+									<span class="inline-block w-auto py-px px-2 mb-3 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl self-start">Alps</span>
+									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight">Meetup Alps</h2>
+									<p class="mb-4 text-coolGray-500 font-medium">Innsbruck, Austria</p>
+									{nextMeetupAlps ? (
+										<p class="mb-6 text-coolGray-500">
+											Next meetup: <span class="font-bold">{formatDateWithoutWeekday(nextMeetupAlps.date, 'en-US')}</span> @ {nextMeetupAlps.location.name}
+										</p>
+									) : (
+										<p class="mb-6 text-coolGray-500">Next meetup date will be announced soon.</p>
+									)}
+									<div class="mt-auto">
+										<a class="inline-block py-4 px-6 text-yellow-50 bg-yellow-500 hover:bg-yellow-600 font-medium rounded-md shadow-sm" href="/meetup/alps/">
+											View Meetup Alps
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="w-full md:w-1/2 px-4">
+							<div class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+								<Image src={imageRhineRuhr} alt="Rhine-Ruhr, Germany" class="w-full h-64 object-cover" />
+								<div class="p-6 flex flex-col flex-grow">
+									<span class="inline-block w-auto py-px px-2 mb-3 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl self-start">Rhine-Ruhr</span>
+									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight">Meetup Rhine-Ruhr</h2>
+									<p class="mb-4 text-coolGray-500 font-medium">Rhine-Ruhr, Germany</p>
+									{nextMeetupRhineRuhr ? (
+										<p class="mb-6 text-coolGray-500">
+											Next meetup: <span class="font-bold">{formatDateWithoutWeekday(nextMeetupRhineRuhr.date, 'en-US')}</span> @ {nextMeetupRhineRuhr.location.name}
+										</p>
+									) : (
+										<p class="mb-6 text-coolGray-500">Next meetup date will be announced soon.</p>
+									)}
+									<div class="mt-auto">
+										<a class="inline-block py-4 px-6 text-yellow-50 bg-yellow-500 hover:bg-yellow-600 font-medium rounded-md shadow-sm" href="/meetup/rhine-ruhr/">
+											View Meetup Rhine-Ruhr
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>
