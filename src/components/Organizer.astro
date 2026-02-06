@@ -11,6 +11,7 @@ export interface Props {
 	linkedin: string;
 	website: string;
 }
+// TODO Add mastodon
 
 const { avatar, name, subtitle, description, github, twitter, linkedin, website } = Astro.props;
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
