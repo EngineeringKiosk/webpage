@@ -14,10 +14,13 @@ talks:
     linkedin: anna-larch
     github: miaulalala
     website: https://techniktechnik.de/
-  - avatar: './images/speaker/avatar.png'
-    name: ''
-    title: 'tba'
-    description: ''
-    bio: ''
+  - avatar: './images/speaker/beate-oettl.png'
+    name: 'Beate Oettl'
+    title: 'Fast, independent and...useless? Building stuff people actually wanna use.'
+    description: 'AI allows us to build faster, more independently, and with fewer constraints than ever before. But speed alone doesn’t create value. In this talk, I question a common assumption in tech: just because we can build something at lightning speed, does that mean we should? Drawing on my work at studio craft design, I explore how engineers and designers can combine technical power with human judgment — so we don’t just ship quickly, but build things that are truly useful, responsible, and worth people’s time.'
+    bio: 'I work with B2B companies as a UX designer and strategist, translating between management, users, and technical teams. My focus is on turning complex products and websites into clear, effective user experiences through solid UX thinking and high-quality design mockups.'
+    linkedin: beateoettl
+    youtube: '@design-and-beyond'
+    website: https://www.studio-craft.at
 eventId: '0hlu8j5i4g3112fh9foih87hc3'
 ---
