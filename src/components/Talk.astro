@@ -10,12 +10,13 @@ export interface Props {
 	twitter?: string;
 	linkedin?: string;
 	mastodon?: string;
+	youtube?: string;
 	website?: string;
 	bio?: string;
 	slides?: string;
 }
 
-const { avatar, name, title, description, github, twitter, linkedin, mastodon, website, bio, slides } = Astro.props;
+const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides } = Astro.props;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');
@@ -59,6 +60,13 @@ const mastodonHandle = mastodon ? mastodon.split('@')[0] : '';
 				mastodon && (
 					<a class="inline-block mr-6 hover:opacity-80" href={`https://${mastodonServer}/@${mastodonHandle}`}>
 						<img src="/images/brands/mastodon.svg" alt={`${name} auf Mastodon`} class="h-5	 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				youtube && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://youtube.com/${youtube}`}>
+						<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5	 grayscale opacity-60"/>
 					</a>
 				)
 			}
