@@ -1,0 +1,22 @@
+---
+import Organizer from '../Organizer.astro'
+
+// TODO We might want to migrate the Organizer to a "People" Content Collection
+---
+
+<section class="py-4 md:py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+	<div class="container px-4 mx-auto">
+		<div class="mb-16 text-center">
+			<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">The local team of Rhine-Ruhr</span>
+			<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Team Engineering Kiosk Rhine-Ruhr</h1>
+			<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">The organizers of Engineering Kiosk Rhine-Ruhr. <br />Feel free to drop us a message.</p>
+			<a href="mailto:rhine-ruhr@engineeringkiosk.dev" class="text-lg md:text-xl text-yellow-500 font-medium">rhine-ruhr@engineeringkiosk.dev</a>
+		</div>
+
+		<div class="flex flex-wrap justify-center -mx-4 ">
+			<Organizer avatar="andy-grunwald-headshot" name="Andy Grunwald" subtitle="Organizer" description="" github="andygrunwald" twitter="andygrunwald" linkedin="andy-grunwald" website="https://andygrunwald.com/" />
+			<Organizer avatar="schepp-headshot" name="Schepp" subtitle="Organizer" description="" github="schepp" twitter="" linkedin="christian-schaefer-a696041a" website="https://schepp.dev/" />
+			<Organizer avatar="dario-tilgner-headshot" name="Dario Tilgner" subtitle="Organizer" description="" github="" twitter="" linkedin="dariotilgner" website="" />
+		</div>
+	</div>
+</section>
