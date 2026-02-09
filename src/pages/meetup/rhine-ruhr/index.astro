@@ -161,6 +161,7 @@ const sliderImages = await Promise.all(
 										📍 Location: <CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="20" /> (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>)
 									</div>
 								</div>
+								<!--
 								<script>
 									window.submitRegisterForm = function(form) {
 										const regId = form.regId.value; // we use regId instead of email to confuse bots
@@ -206,6 +207,7 @@ const sliderImages = await Promise.all(
 										<div class="block sm:inline-block"><input type="checkbox" name="newsletter" value="true" checked="checked" class="m-2"/> Inform me about upcoming meetups</div>
 									</div>
 								</form>
+								 -->
 							</div>
 						</div>
 					</section>)
