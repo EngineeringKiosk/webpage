@@ -3370,6 +3370,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/254"
+  to = "/podcast/episode/254-domain-driven-design-hype-hate-oder-handwerk-für-komplexe-systeme?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep254"
+  to = "/podcast/episode/254-domain-driven-design-hype-hate-oder-handwerk-für-komplexe-systeme?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
