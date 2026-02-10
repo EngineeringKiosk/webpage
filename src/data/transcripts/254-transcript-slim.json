@@ -1,0 +1,621 @@
+{
+    "confidence": 0.95610225,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4036,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 98170,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Hand aufs Herz. Wie viele Domains hast du gekauft, die heute immer noch ungenutzt herumliegen und dich einmal im Jahr per Renew Mail an deine guten Vorsätze erinnern? Genau mit diesem kleinen Reality Check steigen Wolfi und ich heute ein. Nach so einer Quatschfrage springen wir aber auch direkt ins Thema. Wir reden nicht über Webdomains, sondern sondern über Domain Driven Design. Was steckt hinter DDD, der Abkürzung von Domain Driven Design? Warum taucht es überall auf, sogar in Cloud Automation und Infrastructure as Code? Und welches Problem soll es eigentlich lösen? Wir sprechen darüber, wie man Komplexität in großen Systemen greifbar macht und weshalb eine gemeinsame, allgegenwärtige Sprache oft der erste echte Hebel gegen Chaos im Code ist. Außerdem schauen wir uns an, was Begriffe wie Bounded Context und Context Mapping in der Praxis bedeuten, warum das erstaunlich nah an Teamstrukturen und API Schnittstellen lie und wo Dedede im Alltag schnell over engineered wirken kann. Plus wir streifen das taktische Software Design mit Begriffen wie Value Objects, Entity Aggregates und Repositories. Wenn du wissen willst, was sich hinter Dedede verbirgt, ohne direkt ein fünf hundert sechzig Seiten Buch zu heiraten, dann bleib dran. Los geht's. Lieber Wolfgang, immer mal wieder sollte man ein Check In machen. Meine Frage Wie viel Domains hast du in zwei tausend fünf und zwanzig gekauft und wie viel davon sind heute in zwei tausend sechs und zwanzig immer noch unbenutzt Null. Hattest du zum erster erster zwei tausend fünf und zwanzig einen neuen Jahresvorsatz?"
+        },
+        {
+            "start": 98170,
+            "end": 103530,
+            "speaker": "B",
+            "text": "Wieso? Ich habe schon lange diese Regel Solange kein Produkt verkaufsfähig ist, gibt es keine Domain."
+        },
+        {
+            "start": 103610,
+            "end": 104410,
+            "speaker": "A",
+            "text": "Ich bin erstaunt."
+        },
+        {
+            "start": 104490,
+            "end": 110410,
+            "speaker": "B",
+            "text": "Ich glaube, ich bin sogar negativ, weil ich habe sogar ein paar abgestoßen. Ich habe jetzt, glaube ich, nur mehr irgendwie fünf und dreiig Domains oder so."
+        },
+        {
+            "start": 110490,
+            "end": 138010,
+            "speaker": "A",
+            "text": "Ich bin jetzt erstaunt, aber ich muss jetzt leider auch Das ist eine ungesprochene Regel in dieser ganzen Softwareentwicklung und side Project Community und Build in Public und so weiter. Ich muss dir leider den Status als Indie Hacker, Softwareentwickler und Zeit Projekt Bilder aberkennen, denn man hat mindestens immer zwei Domains auf Halde, die dich nur Geld kosten, die dich einmal pro Jahr per E Mail daran erinnern. Ein Renew ist fällig und du sagst ach, ich wollte das noch bauen."
+        },
+        {
+            "start": 138010,
+            "end": 153270,
+            "speaker": "B",
+            "text": "Ja, ich meine, ich habe noch genug von denen übrig, also so ist es nicht. Ihr habt da schon einen guten Puff von, würde ich mal sagen. Aber ich versuche wenigstens keine neuen dazu zu bekommen. Aber wenn du mir den Status jetzt schon absprichst, dann ist ja dieses Thema heute ideal, weil wir gehen ja heute fast in Enterprise Level hinein."
+        },
+        {
+            "start": 153430,
+            "end": 155230,
+            "speaker": "A",
+            "text": "Hilfe, mal sprechen wir nicht über Webdomains."
+        },
+        {
+            "start": 155230,
+            "end": 164230,
+            "speaker": "B",
+            "text": "Wir sprechen heute über Domain Driven Design und nicht Domain Driven Indie Hacking oder sowas oder side Project Development."
+        },
+        {
+            "start": 164230,
+            "end": 197480,
+            "speaker": "A",
+            "text": "Pass mal auf. Für mich ist Domain Driven Design eigentlich genau das. Wir reden immer über Design Documents, ich designe ein Dokument für ein side Project und was macht man immer als erstes? Man kauft eine Domain und wenn wir alles zusammensetzen, sind wir wo bei Domain Driven Design. Wir kaufen eine Domain, dies bestimmt den Namen unseres Produkts, dann bauen wir ein Design Dokument und dann verlassen wir es einstauben im Google Drive oder in deinem Obsidian bei Markdown oder wo auch immer, bis wir eine Renew E Mail bekommen. Das ist doch Domain Driven Design."
+        },
+        {
+            "start": 197640,
+            "end": 312850,
+            "speaker": "B",
+            "text": "Du hast es gar nicht so schlecht zusammengefasst. Also man könnte, halte diese Punchline mal im Kopf für das Ende dann. Wir fangen mit der Domain an, ist eigentlich die ideale Zusammenfassung, aber das werden wir erst jetzt mal langsam aufbröseln. Aber wie du richtig gesagt hast, wir sprechen heute über Domain Driven Design und das ist ja schon so ein Thema Enterprise, irgendwie so Models, Bücher, das magst du ja sowieso nicht. Also alles, was irgendwie wissenschaftlich ist, dann so Bücher so theoretisch, da flippst du ja eh schon aus. Also wir hatten ja kürzlich die Solid Principles in Episode zwei hundert zwei und zwanzig, wo du ja auch gesagt hast, warum brauchen wir überhaupt diese alten Solid Principles und objektorientierte Programmierung Und in meinem Lieblings Go gibt es das eigentlich alles nicht. Und ich bin ja eigentlich auf diese ganze Theorie in letzter Zeit gekommen, auch über die Uni wieder. Aber ich habe ja mit dir auch oft diskutiert früher und die war eigentlich auch der Meinung, dass man an der Uni nicht programmieren lernt und eigentlich braucht man die Erfahrung, um gut zu coden und die Erfahrung, um gute Architektur zu bauen. Der Meinung war ich auch sehr lange, komme ja auch aus der Datenbankwelt und mittlerweile umso öfter ich Kontakt habe mit diesen Paradigmen, Solid Principles Literatur, die es da gibt. Zu den ganzen Bereichen komme ich immer mehr drauf, dass man das eigentlich schon gelernt hätte damals. Nur ich war damals total uninteressiert und in den Vorlesungen, wo wir das gelernt haben, da habe ich einfach abgeschaltet, weil mir das überhaupt nicht interessiert. Diese ganzen Paradigmen, XP Programming damals und Agile und wie man schöne Architektur baut und jetzt im Nachhinein, diese mühsame Erfahrung, die ich mir da aufgebaut habe, die lese ich jetzt teilweise einfach in Büchern, wo genau das drinsteht, was ich heute predige. Und darum finde Domain Driven Design auch super interessant, weil es sehr viel eigentlich zusammenfasst, das ich eigentlich aus der Erfahrung mitgenommen habe. Und wenn ich mir denke, wenn ich jetzt Junior wäre und das Buch wirklich sauber durchgelesen hätte, hätte wahrscheinlich sehr viel mitnehmen können."
+        },
+        {
+            "start": 312930,
+            "end": 328210,
+            "speaker": "A",
+            "text": "Vielleicht lebe ich auch einfach nur den Traum von vielen. Vielleicht bin ich auch einfach nur Kind geblieben, so wie du damals studiert hast und diese Vorlesungen geskippt hast, weil die langweilig waren, finde ich diese Themen immer noch langweilig. Nein, kurz bei jetzt Real Talk."
+        },
+        {
+            "start": 328210,
+            "end": 329970,
+            "speaker": "B",
+            "text": "Also du findest sie wirklich langweilig."
+        },
+        {
+            "start": 330530,
+            "end": 336690,
+            "speaker": "A",
+            "text": "Du findest sie wirklich. Genau. Lass mich bitte ausholen. Also auch zum Thema Solid."
+        },
+        {
+            "start": 336890,
+            "end": 341970,
+            "speaker": "B",
+            "text": "Ich gebe ja zu, du darfst jetzt nicht das vorwegnehmen, dann hört ihr unsere Episode zwei hundert zwei und zwanzig niemand mehr."
+        },
+        {
+            "start": 341970,
+            "end": 350410,
+            "speaker": "A",
+            "text": "Nein, nein, hört die ruhig mal. Das ist gut. Und ich gebe ja immer noch Kasala. Das ist ja auch gut. Was gibst du Kasala so ein bisschen Gegenwehr und allem drum und dran."
+        },
+        {
+            "start": 350410,
+            "end": 354010,
+            "speaker": "B",
+            "text": "Kasala, Kasa kenne ich, aber das war zum Downloaden von der Musik."
+        },
+        {
+            "start": 354170,
+            "end": 446340,
+            "speaker": "A",
+            "text": "Das war noch vor Emuel, oder? Oder idon Ken, Aber nach Napster, vor Napster, glaube ich, oder nach Napster, ist ja auch egal. Du hast einen Punkt. Diese ganze Theorie mit Solid und Domain Driven Design und Extreme Programming und so weiter ist alles eine gute Theorie. Doch hier kommt immer mein Knatsch mit der ganzen Thematik. Ich sehe das als Tools oder als Werkzeuge in deinem Werkzeugkasten. So erklärt das ungefähr jeder Engineering Management Coach. Du hast Tools zum People Management in deinem Werkzeugkasten und so und dann wendest du sie auch an und muss sie auch trainieren und du musst sie auch öfter mal nachlesen mit Code Beispielen, damit du sie richtig anwenden kannst und verinnerlicht alles super. Und dann gibt es diese Hooligans, diese Solid Hooligans und diese Domain Driven Design Hooligans, diese Ultras, die die im Stadion diese Pyrotechnik wirklich Monatelang vorbereiten und für die es ja nichts neben Solid gibt und das auch für Domain Driven Design und auch für, weiß ich nicht, Test Driven Development und nimm einfach irgendwas, ist ja völlig egal was kannst du auch Scrum und kam an und gegen die habe ich dann immer so ein Knatsch und da wetter ich gegen und du bist ja auch so einer der okay in den Medien und wir sind ja Content Creator mit diesem Podcast. Du bist ja sozusagen Software Engineering Influenza. Ich weiß nicht, ob du dir dessen bewusst bist Wolfgang und da musst du natürlich um Aufmerksamkeit zu kriegen provokativ wirken und deswegen würde ich mir wünschen, dass du heute mal den Domain Driven Design Hooligan spielst und mich davon mal überzeugst."
+        },
+        {
+            "start": 361793,
+            "end": 421793,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 506340,
+            "end": 538440,
+            "speaker": "B",
+            "text": "Ich sage auch immer, man muss zuerst die Regeln verstehen, um sie dann brechen zu können. Also von dem her muss man sich ja mal mit den Grundlagen eigentlich beschäftigen. Aber ich habe ja auch eine ganz andere Argumentation noch gefunden bei meiner Recherche. Es gibt ein Buch, das nennt sich Domain Driven Design in Golang und da habe ich mir gedacht, okay, jetzt habe ich was gefunden für den Andi und dann habe ich mir angeschaut, wer das ganze geschrieben hat, Matthew Boyle und dann habe ich gesehen, dass das ein Ex Kollege von dir war bei Cloudflare. Also im Prinzip, du musst ja eigentlich Domain Driven Design Fan sein, soviel ich."
+        },
+        {
+            "start": 538440,
+            "end": 546640,
+            "speaker": "A",
+            "text": "Weiß, hat er aber in einer ganz anderen Ecke gearbeitet, wo er glaube ich Domain Driven Design oder vielleicht doch vielleicht habe ich es nicht ganz verstanden und du willst mir das gleich erklären, gar nicht so anwenden kann."
+        },
+        {
+            "start": 546640,
+            "end": 585480,
+            "speaker": "B",
+            "text": "Aber und was ich auch noch gefunden habe zur Argumentation, weil Domain Driven Design ist wirklich überall. Ich glaube man findet es wirklich in zahlreichen Büchern, Firmen, Consultants natürlich. Aber was mich auch bisschen gewundert hat, dass sogar in Bereichen wie Cloud Automation und Infrastructure is Code und so weiter dieses Domain Driven Design Einzug gefunden hat und ich habe sehr viele Podcasts gefunden, auch von AWS, die sprechen über Domain Driven Design for Cloud Automation und wirklich sogar in den Infrastrukturbereich gehen. Also da muss ich ja fast sagen, ist ja peinlich, dass du gar nicht Domain Driven Design verwendest als großer Infrastrukturmensch."
+        },
+        {
+            "start": 585480,
+            "end": 614030,
+            "speaker": "A",
+            "text": "Ja, es gibt anscheinend auch Trends, die auch ich verpasse. Aber jetzt hilf mir doch mal. Ich bin ja immer praktisch orientiert. Wir starten mit einem Problem. Irgendjemand hatte anscheinend ein Problem, wofür es noch keine fertige Lösung gab. Und dann kam dieser Mensch, ich weiß nicht wer das war, wirst du mir jetzt gleich sehr wahrscheinlich sagen, mit einer Lösung um die Ecke. Und diese Lösung hat dieser Mensch Domain Driven Design genannt. Also welches Problem löst Domain Driven Design? Bevor du mir mal sagst, was das eigentlich ist, wenn es nicht um Webdomains kaufen geht."
+        },
+        {
+            "start": 614350,
+            "end": 631860,
+            "speaker": "B",
+            "text": "Also gecoint wurde der Begriff von Eric Evans, der das Buch geschrieben hat, Domain Driven Design Tackling Complexity in the heart of Software. Und zwar war das ganze zwei tausend dritte Du hast wahrscheinlich zwei tausend drei gerade irgendwelche Spaghetti Code im BHB programmiert, höchstwahrscheinlich, wie ich dich kenne, oder?"
+        },
+        {
+            "start": 632100,
+            "end": 662260,
+            "speaker": "A",
+            "text": "Zwei tausend drei habe ich noch nicht mal meine Ausbildung begonnen. Das bedeutet, ich habe entweder noch ordentlich Zeit im Online Zocken mit Tactical Ops, also Unreman verbrannt, oder ich habe schon ein eigenes CMS für die World of Warcraft Gilde geschrieben, um Raids und Co. Zu organisieren. Also entweder so was und das zweite wäre dann dreckigstes PHP mit allem was dazugehört, SQL Injections, Cross Site Scripting, so das, was man zwei tausend drei gemacht hat."
+        },
+        {
+            "start": 662580,
+            "end": 781860,
+            "speaker": "B",
+            "text": "Tactical Design ist übrigens ein Unterkapitel vom Buch, also ist gar nicht so weit entfernt vielleicht auf jeden Fall Spaghetti Code und dreckiger Code ist ein gutes Schlagwort, weil genau darum geht's. Also eigentlich das Problem, was Domain Driven Design oder DDD abgekürzt eigentlich versucht zu lösen, ist, dass wenn man bei sehr großen, komplexen Softwareprojekten eigentlich zu dem Zustand kommt, zu dem Punkt kommt, wo eigentlich alle Developer sagen, unser Code ist dreckig, es ist so schwierig irgendwas zu ändern, es ist alles irgendwie so ein riesen Wollknäuel, wir haben ganz viele Dependencies im Code irgendwie die Business Leute verstehen nicht, was wir wollen auf der technischen Seite und umgekehrt. Also so diese ganzen üblichen Schmerzen bei größeren Softwareprojekten, auch dieser Clinch zwischen Business Seite und Developer Seite. Um genau diese Probleme zu entspannen oder vielleicht auch zu entwirren, hat sich Eric Evans, um genau zu sein, wie viel waren es, ich glaube fünf hundert sechzig Seiten, überlegt, wie man denn da an so Probleme dran gehen kann und das im Vorfeld, bevor man wirklich Code schreibt, das dann auch zu entwirren. Und es gibt einerseits dieses strategische Design, nennt er es im Buch, da geht es mehr um die Vorarbeiten und Dann das taktische Design, da geht es wirklich mehr in die Implementierungsrichtung und es stellt so ein Paradigma dar, wie man an Projekte herangeht und am Ende möglichst wenig Spaghetti Code und möglichst wenig Dependencies dann in seinem Code hat, so dass man den Code leicht warten kann, dass man Bugs schneller fixen kann, leichter findet, die ganzen üblichen Dinge einfach Clean Code, Clean Architecture, das was wesentlich später alles gekommen ist, steht eigentlich in diesem Buch sehr grundlegend schon drin und wahrscheinlich stehen auch ganz viele Dinge drin, wo du jetzt sagen würdest, ja das ist sowieso klar und das mache ich sowieso, aber man muss das auch eben sehen, dass es zwei tausend drei war und wenn man vielleicht neu in der ganzen Softwareentwicklung ist, dann kennt man eben das nicht schon automatisch und hat alles mitbekommen, dass man zum Beispiel, um jetzt gerade einen Punkt rauszunehmen, Repositories verwendet."
+        },
+        {
+            "start": 782250,
+            "end": 793050,
+            "speaker": "A",
+            "text": "Repositories meinst du jetzt Repositories im Quellcode und nicht Git Repositories oder Subversion Repositories, sondern zum Beispiel Data Repositories oder ähnliches."
+        },
+        {
+            "start": 793210,
+            "end": 796850,
+            "speaker": "B",
+            "text": "Genau dieses Pattern Repositories zu verwenden im Code."
+        },
+        {
+            "start": 796850,
+            "end": 820230,
+            "speaker": "A",
+            "text": "Nochmal zum Verständnis, das hat also jetzt nichts mit Projektmanagement zu tun oder doch, weil du redest die ganze Zeit jetzt von, dass es eine Methode ist oder ein Prinzipien Toolkasten, um dreckigen Code zu vermeiden. Und da frage ich mich natürlich, ist das nicht solid und Clean Code und all das so weiter oder ist es auch was Projektmanagement Technisches?"
+        },
+        {
+            "start": 820310,
+            "end": 898300,
+            "speaker": "B",
+            "text": "Also ist die Frage, wie du jetzt Projektmanagement siehst, aber grundsätzlich ist etwas Vorgelagertes, bevor ich eigentlich Coden beginne. Und vielleicht können wir schon in die Kernidee eintauchen, also in dieses strategische Design, weil die Grundaussage von Domain Driven Design, wie der Name schon sagt, ist, dass ich mich als erstes mit der Domain beschäftige. Genau das, was du gesagt hast, ich kaufe mir als erstes die Domain für mein side Project, ist bei einem großen professionellen Projekt sollte ich mal die Domäne verstehen. Das heißt, ich spreche mit den Domain Spezialisten, Domain Experten und versuche zu verstehen, was wollt ihr eigentlich für ein Problem lösen, wie geht ihr vor, das Problem zu lösen, was für Wörter verwendet ihr, um dieses Problem zu lösen. Also ich versuche mit den Businessleuten zu sprechen. Hingegen Gegenteil wäre, ich spring mal los, habe meine technischen üblichen Vorgehensweisen, spring in Code und probiere da irgendwas zu basteln, ohne dass ich mich ausgiebig mit der Domain beschäftigt habe. Es ist ein ganz grundlegendes Prinzip, könnte es auch Business First oder so irgendwas nennen, aber es geht natürlich nicht nur ums Business, sondern einfach um die gesamte Problemdomäne, den Problem Space, wie es dein Ex Kollege Matthew Boyle lieber formuliert, dass man diesen Problem Space versteht, gut versteht, vielleicht auch sogar niederschreibt in irgendeiner Form, um dann eine Grundlage zu haben für die nächsten Schritte im Domain Driven Design."
+        },
+        {
+            "start": 898300,
+            "end": 914540,
+            "speaker": "A",
+            "text": "Nur damit das klar ist, wenn du jetzt von Domain oder Domäne sprichst, sprechen wir nicht von Webdomains, nicht von Webadressen, sondern von thementechnischen Domänen, wie zum Beispiel Steuern oder Marktplatz oder ähnliches."
+        },
+        {
+            "start": 914540,
+            "end": 993960,
+            "speaker": "B",
+            "text": "Das ist eine Problemdomäne, also wirklich klassisch Business Domain. Also wenn man zum Beispiel als Beispiel verwendet, ist jetzt zwar schwierig für dich als Deutscher, wenn jetzt einen Fahrradverleih als Beispiel nehmen, weil bei euch müsste ich wahrscheinlich eher Autoverleih oder keine Ahnung, Autokauf oder sowas nehmen, aber außer in Münster eben, ich habe auch in Amsterdam eine Zeit gelebt, also da war Fahrradverleih doch der Klassiker. Also nehmen wir mal an Fahrradverleihung. Wir haben unsere Fahrräder in der Stadt zum Beispiel so für Kurztrips, die man einfach ausleihen kann oder auch vielleicht monatlich wie Swap Feeds aus Holland, Dann wäre diese ganze Domäne, wäre der Fahrradverleih, also wie ich mein Geld mache, das wäre die Kerndomäne, die mein Hauptbusiness beschreibt. Es gibt dann im Buch auch noch so andere Domains, Supporting Subdomains, das wäre dann vielleicht die Buchhaltung zum Beispiel oder das Lager oder die Werkstätte für meine Räder. Es gibt dann auch noch Generic Subdomains, also so generische Domains, wo man vielleicht Software irgendwie hinzukauft von außen, um E Mails zu versenden, um irgendwie Authentication zu machen mit einem externen Service. Das wären so Subdomains, Generic Subdomains, aber meine Kerndomain ist eigentlich die, die mein Business beschreibt und mit der muss ich mir mal auseinandersetzen. Zu Beginn auf der Zeitleiste hast du."
+        },
+        {
+            "start": 993960,
+            "end": 1009750,
+            "speaker": "A",
+            "text": "Gesagt, wir fangen die ganze Thematik an, bevor wir eine Zeile Code schreiben. Das bedeutet, man geht erst mal mit der ganzen Truppe ins Kämmerchen und plant erst mal eine Woche oder geht man ins Kämmerchen, plant eine Woche, kommt dann mit einem KI Prompt raus und drückt dann nur noch auf Enter inzwischen."
+        },
+        {
+            "start": 1010150,
+            "end": 1130009,
+            "speaker": "B",
+            "text": "Also es kommt natürlich darauf an, ob du von null startest oder das vielleicht in bestehenden Systemen mit einbauen willst. Grundsätzlich werden jetzt wahrscheinlich die meisten sagen, ja logisch muss ich meine Domäne verstehen und ich muss ja irgendwie wissen, was ich da eigentlich programmieren will und was meine Prozesse sind. Stimmt auf der einen Seite natürlich auch. Was im Domain Driven Design aber ganz große Kernkomponente von diesem Domänenwissen oder von dieser Domain ist, ist eine einheitliche Sprache zu haben. Also Ubiquitis Language, allgegenwärtige Sprache, die ich entwerfen muss, damit ihr mal am Tisch einen Common Ground hab, mit dem ich arbeiten kann, miteinander sprechen kann, die Business Leute mit den Developern, dass alle unter den eigentlichen Wörtern dasselbe verstehen. Das heißt, ich muss mir da jetzt nicht wochenlang einsperren in Kämmerchen, aber es macht natürlich schon Sinn, irgendwie ein Glossar zu haben oder ein Verständnis, was ist denn für dich ein Fahrrad, was ist für dich ein Kunde, ein User, ein Customer, Dass man so Grunddefinitionen macht, dass wenn man dann in den einzelnen Prozessen, Workshops, Dokumenten, die man immer entwirft, dass man da eine gemeinsame Sprache hat. Und die gemeinsame Sprache ist absolute Grundlage bei Domain Driven Design und wahrscheinlich die wichtigste Grundlage, weil die zieht sich dann natürlich komplett durch. Die hast du in irgendwelchen Decision Records drinnen, die hast du im Code drinnen, die hast du natürlich in irgendwelchen Issues drinnen, Bug Trackern in der Oberfläche womöglich, also für die internen User zumindestens. Das heißt, es ist die absolute Grundlage, die du brauchst, in einem Softwareprojekt sinnvoll kommunizieren zu können. Und da sieht man schon auch, wohin das Ganze geht, sprechen wir schon eher von größeren Teams. Das heißt, zu zweit werde ich wahrscheinlich kein Lexikon brauchen, damit ich weiß, worüber der andere spricht. Gut, bei manchen Leuten vielleicht auch, aber grundsätzlich ist es eher in größeren Teams, wo eben auch Business Leute habe, verschiedene Anwender habe von meiner Software, damit die da ein einheitliches Vokabular hab, diese Ubiquitis Language und die ist der zentrale Punkt eigentlich von der Domäne und mit der kann ich dann weiterarbeiten."
+        },
+        {
+            "start": 1130009,
+            "end": 1150470,
+            "speaker": "A",
+            "text": "Bei einer einheitliche Sprache, ich meine, wir haben ja mal zum Beispiel bei Trivago gearbeitet, da gibt es natürlich, weil es dann im Travel Bereich ist, gibt es natür dann auch diverse Fachwörter. Ein Fachwort ist zum Beispiel Wholesaler, das sind also Firmen, die kaufen Kapazität in einem ganzen Hotel auf und vermieten sie dann weiter. So zum Beispiel."
+        },
+        {
+            "start": 1150550,
+            "end": 1223900,
+            "speaker": "B",
+            "text": "Und du glaubst gar nicht, wie lange ich wie damals angefangen habe, bei Trivago gebraucht habe, um rauszufinden, was ein OTA ist. Jeder hat über OT gesprochen, aber glaubst du, ich hätte irgendwo nachlesen können, was so ein OTA heißt oder so irgendwas? Also da sind einige Meetings vergangen und habe immer und ich war zu schüchtern wahrscheinlich zu fragen, weil irgendwie war das für jeden natürlich im Raum klar, was ein OTA ist. Ich kann es dir gar nicht mal, ich kann es dir erklären, was ein OTA ist, aber was die Abkürzung steht Online Travel Agent. Genau, danke. Wahrscheinlich kennen das viele. Wenn man in einer Firma anfängt, dann braucht man Ewigkeiten, bis man mal diesen Lingo drauf hat. Und jede Abteilung hat dann sogar noch eine andere Sprache. Die Developer nennen vielleicht den Besucher auf der Webseite User, den eigentlichen Kunden. Und die Buchhaltung nennt den aber natürlich Kunden oder Customer und nicht User, weil die haben eine andere Sprache. Und die Idee von Domain Driven Design ist jetzt natürlich, das im Vorhinein irgendwie schon zu begegnen, anstatt irgendwie dann später und diese ganzen Missverständnisse in der Kommunikation zu haben, weil wenn man die am Anfang einmal glatt zieht, dann hat man sie später natürlich nicht mehr. Und da sprechen wir nicht von drei Wochen Workshop, sondern das kann ein lebendes Dokument sein, das einfach mit der Zeit entwickelt wird. Aber bei gewissen Dingen, wo man schon auch drüber diskutiert, wie sollen wir vielleicht etwas nennen?"
+        },
+        {
+            "start": 1223900,
+            "end": 1289840,
+            "speaker": "A",
+            "text": "Okay, bei der vereinheitlichen Sprache hasse mich, weil besonders nämlich bei dem Wort oder bei dem Beispiel Kunde, was du gerade erwähnt hast, kommt mir auch mein aktueller Arbeitgeber in den Sinn. Denn wenn wir über Fehler in HTTP Requests und den Proxys und Co. Sprechen und jemand sagt Kunde, dann ist erst mal die Frage, okay, wer ist denn jetzt der Kunde hier? Ist das jetzt die Person, die Firma, die uns zahlt, die den Proxy zur Verfügung stellt? Was für Proxy und oder bist du, Wolfgang? Das als Enduser, der auf die Webseite ist, geht und dafür haben wir auch eine vereinheitliche Sprache. Zum Beispiel der End User du, der dann auf die Webseite geht, nennt sich bei uns Eiball. Und wenn immer wenn jemand Eyeball sagt, wissen wir, das ist der End User, der den Service wirklich nutzt. Also bei dieser vereinheitlichen Sprache, da hast du mich da muss ich zugeben. Okay, aber ich sage auch, es ist jetzt schon die zweite Firma, in der ich arbeite, die eine riesen Wikipedia hat, mit was ein Dictionary ist. Also diese vereinheitliche Sprache ist da nicht Domain driven Design spezifisch, sondern ich würde sagen, das ist eine unumgängliche Thematik für eine Firma, denn jede Firma hat ja in irgendeiner Art und Weise ein Fachlingo."
+        },
+        {
+            "start": 1290160,
+            "end": 1397090,
+            "speaker": "B",
+            "text": "Aber genau das ist die Core Domain. Diese Fachlingo sollte in der Core Domain sein und das sollte allen klar sein in der Firma, was das eigentlich bedeutet. Weil du Trivago als Beispiel gebracht hast. Wir hatten ja mal so einen Prozess, wo wir diesen Hauptidentifier, der bei Trivago Item ID geheißen hat, umbenannt oder wollten ihn umbenennen, weil er so tief verankert war. Und eigentlich ist nicht klar, was ist ein Item, sondern Item war einfach ein Hotel, irgendeine Unterkunft, das war ein Item. Und eigentlich, wenn man neu in eine Firma kommt und hört, Item, was ist ein Item? Und darum war die Idee, bei einem großen Umstellungsprozess sowieso diese ID dann zu ändern. Und das ist natürlich dann eine harte Änderung, weil das betrifft dann wirklich tausende Leute in der gesamten Firma. Jeder verwendet diese Item ID tagtäglich im Sprachgebrauch überall. Und da könnte man sich dann schon natürlich länger als zwanzig Minuten hinsetzen, wenn man überlegt, was verwendet man denn da wirklich für Wörter, die üblich sind, die alle verstehen, die vielleicht von Native Speakern kommen und nicht nur von irgendwelchen Deutschen, die glauben, es ist das richtige Wort. Also da kann man dann vielleicht schon mehr Leute einbeziehen und wirklich einen sinnvollen Begriff finden, der leicht verständlich ist, weil auch für mich als Datenbankmensch, ich war da auch immer sehr picky, wenn es um irgendwelche Felder in Datenbanken geht. Wenn die Felder nicht verständlich sind, sobald man sie liest, dann ist irgendwas falsch. Und genauso sollte man eigentlich mit allen Variablen und mit allen Begriffen umgehen. Und genau das schlagt in dieselbe Kerbe mit Domain Driven Design, dass man sich eben genau über diese Kernbegriffe Gedanken macht und die mal glatt zieht. Wobei, wie gesagt, es muss nicht einmal zu Beginn sein, sondern es kann natürlich schon ein lebendes Dokument sein. Und ich würde sogar sagen, eure Wikipage ist in gewisser Weise der erste Schritt von Domain Driven Design."
+        },
+        {
+            "start": 1397090,
+            "end": 1413700,
+            "speaker": "A",
+            "text": "Okay, gut, da hast du mich Pluspunkt dafür. Aber ich sage auch, der Gegenseite, weil ich bin ja hier der Kontrakollege, nicht contra K der Kontrakollege. Jetzt in dem Podcast Kontext. Du sagst, die vereinheitliche Sprache ist die Grundlage, jetzt habe ich die Grundlage, ich habe eine Wikipage. Was kommt als nächstes?"
+        },
+        {
+            "start": 1413700,
+            "end": 1443830,
+            "speaker": "B",
+            "text": "Die Grundidee von dem strategischen Design ist ja, diesen riesen unüberschaubaren Bereich einer Domäne, eines Softwareprojekts irgendwie aufzubröseln in kleinere Bereiche, damit sie verständlicher sind, damit man sie irgendwie handhaben kann, Weil bei großen Projekten weiß man ja nie, wo man beginnt, wo zieht man denn irgendwie Linien, wie macht man irgendwas kleiner. Und was Domain Driven Design vorschlägt, ist ein anderes Konzept, und zwar nennt sich das Bounded Context. Wenn du Bounded Context hörst, an was denkst du sofort?"
+        },
+        {
+            "start": 1443990,
+            "end": 1454710,
+            "speaker": "A",
+            "text": "Enterprise Buzzword Bingo. Auf jeden Fall Bounded Context, aber auch im geografischen GIS Bereich eine Umkreissuche, da kenne ich den Begriff Bounded Context auch noch mal her."
+        },
+        {
+            "start": 1454710,
+            "end": 1457510,
+            "speaker": "B",
+            "text": "Ja, das ist die Bounding Box üblicherweise, oder?"
+        },
+        {
+            "start": 1457510,
+            "end": 1461030,
+            "speaker": "A",
+            "text": "Stimmt, stimmt, ja, stimmt. Aber du musst schon zugeben, das ist schon verwirrend, oder?"
+        },
+        {
+            "start": 1461590,
+            "end": 1591910,
+            "speaker": "B",
+            "text": "Man ist auch irgendwo, könnte man schon auch als Bounded Context sehen, aber du hast eh recht, es geht eigentlich in die geografische Richtung. Also mir war Bounded Context eigentlich früher immer bekannt aus der Microservice Welt. Man hat immer so gesagt, ein Microservice ist auf jeden Fall durch diesen Bounded Kontext begrenzt, also auf diesen zusammenhängenden Kontext. Und eigentlich ist es dieselbe Herkunft, weil Domain Driven Design wird auch sehr gerne verknüpft eigentlich mit Microservices. Und Bounded Context sagt eigentlich nichts anderes aus, als dass sie einen sehr klar abgegrenzten Bereich habe. Das kann ein Team zum Beispiel sein, das kann eine Abteilung sein, aber da, wo ich ganz klar Grenzen stecken kann, auch ein Prozess vielleicht. Und in diesem Bounded Kontext bei Microservices jetzt zum Beispiel, dann mache ich einen Microservice, der nicht irgendwie hinausgeht, der nicht über zwei Teams hinweggeht, sondern immer von einem Team gehandelt werden kann. Und bei Bounded Context im Domain Driven Design ist es eigentlich dasselbe. Das ist die kleinere Einheit eigentlich von Domains. Das heißt, die bricht das alles nochmal auf, auch von meiner Sprache zum Beispiel. Wenn ich jetzt zum Beispiel den Bounded Context von der Buchhaltung habe, dann können die ruhig über Customer sprechen und für die ist es immer der Customer. Und wenn ich einen Bounded Context habe von meinem Webshop, von meinem Fahrradverleih, zum Beispiel oder die Oberfläche, dann werden die immer von User sprechen und das ist komplett okay. Man muss sich nicht unbedingt auf ein Wort einigen, solange man weiß, okay, diese zwei Bounded Contexts haben unterschiedliche Sprache. In deren Dokumenten wird es aber dann einheitlich verwendet. Die einen verwenden immer User, die anderen immer Customer. Und im Idealfall habe ich dann sogar noch irgendwo ein Dokument, wo dieses Mapping steht. Der User bei den Developern ist eigentlich der Customer in der Buchhaltung, aber die sollen natürlich nicht irgendwie sich umgewöhnen auf das Wort User, wenn das für die keinen Sinn macht. Also das kann man schon auch sauber trennen und man hat dann jeweils eine andere Sprache in dem Bounded Kontext. Was aber ganz wichtig Der Bounded Context ist nicht technisch zu sehen. Also das ist nicht eine Datenbank, eine Schicht, ein Layer oder sonst irgendwas, was da begrenzt wird, UI oder Repository Services oder whatever, sondern das ist wirklich auf einer Business Ebene, wie Teams zusammenarbeiten, wie Prozesse laufen und genau da werden dann die Bounded Contexts gezogen."
+        },
+        {
+            "start": 1592150,
+            "end": 1642800,
+            "speaker": "A",
+            "text": "Jetzt ist die Realität natürlich ein bisschen schwieriger als die Theorie und das bedeutet, eine Entwicklerin schraubt ja in der Regel öfter mal an mehreren Microservices rum. Du erklärst mir jetzt das Konzept des Bounded Contextes. Du erklärst mir jetzt, dass Fachbegriffe eine spezifische Bedeutung haben können und du erklärst mir, dass innerhalb eines Bounded Context dasselbe Wort was anderes bedeuten kann als dasselbe Wort in einem anderen Bounded Kontext. Ist das nicht eine super erhöhte mentale Load für die Person, wenn es den Fall gibt, Ich als Entwickler schraube an zwei bis drei Microservices rum, was ja ab und zu mal vorkommt oder vielleicht an Nano Services, diesen Begriff gibt es ja auch noch kleiner als Microservices und habe das Wort Kunde oder Customer. Und das bedeutet in den drei unterschiedlichen Micro bzw. Nano Services Bounded Context ist immer was anderes. Da wird man nur bekloppt."
+        },
+        {
+            "start": 1642960,
+            "end": 1737490,
+            "speaker": "B",
+            "text": "Wenn du als eine Person in verschiedenen Bounded Contexts unterwegs bist und die unterschiedliche Sprachen haben, dann ist es so, aber dann ist es auch klar getrennt. Dann hast du im einen Microservice immer den User zum Beispiel, aber konsistent in diesem einen Service oder in dem eigenen Modul vielleicht sogar. Da sprechen wir immer über den User auf der Webseite. Und wenn du dann aber in der Software in einem Microservice in der Buchhaltung etwas programmierst, dann hast du den Customer und da hast du natürlich ganz andere Felder, auch wenn ich das jetzt von der Datenbankseite beschreiben würde. Also da sieht man auch schon, dass technische Separierung nicht übereinstimmt mit der Business Separierung von den Kontexten, weil in der Datenbank habe ich vielleicht alle Felder, da habe ich auch irgendwelche Felder für meine Buchhaltung, da habe ich meinen User drin, das wäre bunt gemischt. Aber natürlich auf der höheren Ebene Bounded Context sollte ich das möglichst gut trennen können, dass ich natürlich irgendwann, wenn ihr Buchhaltungssoftware programmiere und mit denen zu tun habt, dass ich dann lernen muss, was Customer heißt, ist vollkommen klar. Aber dann bin ich eine Person, die das lernen muss und die anderen drei hundert Entwickler, die mit dem Webshop zu tun haben, die müssen das nicht lernen und die müssen diese Context Mappings, wie es übrigens offiziell im Buch heißt, nur dann konsultieren, wenn sie wirklich mit beiden Welten in irgendeiner Form zu tun haben. Also du versuchst wieder Schnittstellen zu bauen, Wie bei jeder API versuchst du auch dort mit einem Bounded Context eigentlich eine Schnittstelle zu definieren, wie du miteinander sprichst über die Schnittstellen hinweg. Aber wenn du nur intern etwas machst, dann brauchst du nicht wissen, was dieses andere Team macht, was dieser andere Bounded Context macht und kannst dich auf deine Arbeit und auf deine Sprache auch dementsprechend fokussieren."
+        },
+        {
+            "start": 1737490,
+            "end": 1753340,
+            "speaker": "A",
+            "text": "Hast du mal ein Beispiel für mich, was, wo du mich mal durch die zwei, drei Themen durchführen kannst, Wo ist die vereinheitliche Sprache, wo ist der Baunet Kontext und wo kommt das Kontext Mapping dann ins Spiel? Hast du da vielleicht mal ein Beispiel, wo du mich mal ganz kurz durchführen kannst, damit du mir das anfassbarer machen kannst?"
+        },
+        {
+            "start": 1753340,
+            "end": 1905560,
+            "speaker": "B",
+            "text": "Also ganz oft entspricht eigentlich ein Bounded Context einem Prozess oder vielleicht mehreren Prozessen. Wenn wir jetzt wieder das Fahrradverleih Service verwenden, dann wäre zum Beispiel die ganze Abo Verwaltung, also starten ein Abo, dass ich da die Fahrräder ausleihen kann an den verschiedenen Stationen oder ich kündige so ein Abo. Also diesen ganzen Prozess wäre vielleicht ein Bounded Kontext. Dann gibt es einen anderen Bounded Kontext, das ist zum Beispiel die Werkstatt, die kümmert sich nur um das Reparieren von Fahrrädern und die brauchen keine Informationen über die Sprache, wie denn so Abos verwaltet werden, weil die kümmern sich eben nur um die Werkstatt dann gibt es vielleicht einen anderen Bounded Kontext, da geht es nur darum, ich verwalte die Fahrräder, wo die eigentlich gerade stehen, bei welchen Stationen, also Flotten Management im weitesten Sinne, die kümmern sich, wie bekomme ich irgendwelche Fahrräder von Station A nach B, weil da zu viele stehen und die will eigentlich bei der anderen Station Fahrräder haben. Also die haben wieder andere Aufgaben, andere Prozesse und wahrscheinlich andere Sprache und die blicken auf dem Fahrrad ganz anders als die Werkstatt wahrscheinlich und die Leute, die ein Abo verwalten und dementsprechend kannst du da dann Grenzen ziehen. Und dann hast du natürlich auch irgendwo Schnittstellen zwischen den ganzen Bereichen, weil wenn jetzt zum Beispiel ein Fahrrad kaputt geht und der User meldet es, dann muss natürlich irgendwie die Werkstatt informiert werden. Und da kommt dann dieses Kontext Mapping ins Spiel oder auch Events, wenn es dann technisch gesehen wird, dass du da einfach dementsprechend ein Event sendest, zum Beispiel vom Flottenmanagement, dass da ein Fahrrad zum Beispiel jetzt als nicht mehr ausleihbar markiert wurde aufgrund einer nötigen Reparatur. Und wenn man das technisch sieht, das kann einfach eine strukturierte Message sein, Fahrrad Nummer fünf wurde von Customer Nummer sechs gemeldet, als muss repariert werden, wo das vielleicht steht. Und dieses Event, also das kann man jetzt wirklich technisch sehen, dieses Event in der Message Queue von mir aus wird dann von dem Werkstätten Bounded Context empfangen und die wissen dann, was zu tun ist und die legen dann zum Beispiel einen Issue an, einen Auftrag, einen Werkstattauftrag für dieses jeweilige Fahrrad und die kümmern sich dann um genau ihren Bereich und können fokussiert weiterarbeiten. Also das ist da ganz klare Übergabe. Schnittstellen gibt einerseits auf der technischen Seite wären das Events, aber auf der konzeptionellen Seite wäre das eigentlich Context Mapping, um die Zusammenhänge zwischen den Bounded Contexts zu definieren. Und die Werkstätte muss nicht wissen, woher die Information kommt, was da mit dem Kunden passiert ist, die brauchen nur die Info. Rat Nummer fünf braucht einfach eine Reparatur."
+        },
+        {
+            "start": 1906120,
+            "end": 1928790,
+            "speaker": "A",
+            "text": "Wo ist der Unterschied zwischen Bounded Contextes und eigentlich Software Engineering Teams in einer Firma? Weil jedes Software Engineering Team oder jede Abteilung ist ja eine Art Bounded Context. Sie kümmert sich um ihren Service, Flottenmanagement versus Werkstatt zum Beispiel. Und wo ist der Unterschied zu einer stabil definierten API zwischen deinen Abteilungen? Weil das ist ja das was du gerade mit dem Event beschrieben hast, da."
+        },
+        {
+            "start": 1928790,
+            "end": 2044250,
+            "speaker": "B",
+            "text": "Ist gar kein Unterschied. Das eine ist die Implementierung von dem Ganzen und Teams sind klassischerweise auch Bounded Context. Es gibt ja Convey's Law, das beschreibt eigentlich, dass deine Architektur sich so anpasst, wie deine Teamstrukturen sind und diese natürlichen Grenzen dann üblicherweise in der Software abgebildet werden, genauso wie sie auch mit den Teams sind zwischen den Teams. Und genau darauf zielt ja Domain Driven Design auch ab, dass man eben die Domain versteht auf der Business Seite und dementsprechend so die Schnittstellen anlegt und eben nicht nur auf technischer Ebene. Und meistens auch dank Conways Law entspricht es ganz oft auch den Teamstrukturen natürlich, wobei ein Team natürlich mehrere Bounded Contexts haben kann oder vielleicht verschwimmt es auch bisschen, aber natürlich ist es schon immer sehr nahe an den Teamstrukturen, weil ein Team ist verantwortlich meistens für einen Prozess, zumindest wenn es End to End Responsibility gibt. Wenn du keine End to End Responsibility hast, dann hast du da auch schon wieder ein Problem und dann hast du vielleicht mehrere Teams und dann siehst du auch schon, dass da vielleicht Probleme sind und dass du vielleicht deine Teams anders strukturieren musst oder deine Software anders strukturieren musst. Also genau dafür ist es ja auch da, dass man eben diese Grundsätze mal definiert und auch aufschreibt, weil ganz oft sind die natürlich vorhanden und es ist alles immer vorhanden. Auch die Sprache ist immer vorhanden. Die Frage Definierst du einmal die Sprache im Vorhinein oder probierst du das glatt zu ziehen? Oder wartest du halt einfach drei Jahre, bis sich das irgendwann angleicht und du in deinem Code fünf verschiedene Wörter für User hast und das dann irgendwann aufräumen musst und Technical Depth dann wieder reduzieren musst mühselig? Oder machst du das im Vorhinein und probierst es schon im Vorhinein möglichst zu verhindern, indem du den Fokus auf deine Sprache, auf die Kontexte und auf die Schnittstellen dazwischen legst. Und wieder zur Erinnerung, wir sprechen halt von größeren Projekten und das ist eine Herangehensweise, wie man einfach den großen Projekt Problem Space einfach kleiner bekommen kann und aufteilen kann. Und das ist die Herangehensweise auf der strategischen Seite."
+        },
+        {
+            "start": 2044480,
+            "end": 2054240,
+            "speaker": "A",
+            "text": "Okay, Du formulierst das auch schon direkt zu Enterprise, denn das, was ich rausgehört habe, ist, du machst das implizite explizit. Das bedeutet das, was das Organigramm bereits darstellt, schreibst du auf."
+        },
+        {
+            "start": 2054480,
+            "end": 2072240,
+            "speaker": "B",
+            "text": "Im Organigramm stehen jetzt keine Prozesse, da steht jetzt nicht zum Beispiel drinnen meine Aboverwaltung, meine Fahrradverwaltung, wer macht die Abrechnung, wer macht die Notifications zum User. Also das geht dann schon auf einen tieferen Level runter. Und wie gesagt, es kann ja auch ein Team zehn Bounded Contexts verwalten."
+        },
+        {
+            "start": 2073030,
+            "end": 2078150,
+            "speaker": "A",
+            "text": "Ich frage ja nur offen. Also das bedeutet ja, das ist ja in irgendeiner Art und Weise so ein Architekturdiagramm und wer ist wofür verantwortlich?"
+        },
+        {
+            "start": 2078310,
+            "end": 2097510,
+            "speaker": "B",
+            "text": "Genau, strategische Designer geht es wirklich darum, die Domäne zu verstehen, aufzusplitten und die Vorarbeit zu leisten, bevor ich dann überhaupt in die technische Implementierung gehe, weil dann habe ich schon grob die Schnittstellen zwischen meinem Bounded Contexts und das Ganze kann ich dann natürlich in die Technik auch übernehmen und dann habe ich eine saubere Strukturierung auch auf der Technikseite."
+        },
+        {
+            "start": 2097510,
+            "end": 2106260,
+            "speaker": "A",
+            "text": "So und jetzt hast du das, diese ganze Episode begonnen mit Domain Driven Design, verhindert technische Schulden und dreckigen Code und Co. Habe ich bisher noch nicht gehört. Wie machen wir das?"
+        },
+        {
+            "start": 2106260,
+            "end": 2226530,
+            "speaker": "B",
+            "text": "Ja, grundsätzlich, also die Sprache kann natürlich schon viel verhindern. Ich glaube, man unterschätzt auch, wie mächtig Sprache ist, wenn du dich eben einigst auf das Wort User und nicht fünf verschiedene Wörter, verschiedene verwendest in deiner Codebase oder mein User ist nur ein relativ einfaches Beispiel, aber denk mal an irgendwelche Steuersätze oder sonstiges, so Variablennamen, da hast du dann fünf verschiedene Varianten und womöglich hast du nur Deutsch, Englisch und solche Sachen mit im Code und die musst du irgendwann aufräumen. Wenn Codebase größer wird, dann musst du sie aufräumen. Und da verzweifeln ja auch ganz viele Developer, hört man ja auch ständig, wir haben so einen Wildwuchs an Wörtern, wir haben Abhängigkeiten und so, die nicht klar sind. Also ich glaube, da kann Sprache schon sehr viel eigentlich dazu beitragen, dass das aufgelöst wird. Aber es gibt natürlich in Domain Driven Design auch den zweiten Bereich neben dem strategischen Design, das taktische Design oder Tactical Design. Und da geht es dann wirklich eigentlich auf die Coding Ebene hinunter. Wie kann man die Architektur auf der technischen Seite schöner machen bzw. Näher eben auch an die Business Architektur an, was wir alles davor erwähnt haben, dass man da auch einen direkten Bezug zum Business jeweils zum Problem Space haben. Und das Ganze kommt aus der Zeit zwei tausend drei da war gerade Objektorientierung. Großes Thema übrigens bei dem Buch hat Martin Fowler das Vorwort geschrieben, also dann kann man sich schon mal vorstellen, wo das Ganze umgeht. Die sind auch große Fans, glaube ich, voneinander, wenn ich das richtig mitbekommen habe. Das heißt, es geht natürlich schon in Richtung objektorientierte Programmierung, aber es gibt jetzt eben auch DDD, Golang, Andy, dann kann man das auch in Go dementsprechend umsetzen. Was das damalige Buch eigentlich beschreibt, ist, dass man zusätzlich nochmal verschiedene, auf der Code Seite verschiedene Hauptbestandteile, also Bauteile, eigentlich Bausteine von diesem Tactical Design hat. Und das sind einmal Value Objects, Entities, Aggregates, Domain, Event Services, Repositories und Repositories."
+        },
+        {
+            "start": 2226530,
+            "end": 2243050,
+            "speaker": "A",
+            "text": "Okay, auch ich habe mal ein Buch zu Design Patterns gelesen, man mag es kaum glauben. Danach habe ich auch Design Patterns verwendet. Value Object, Entity, Aggregate und Repository sind mir hängen geblieben, verknüpfe ich irgendwie mit dem Buch. Das Repository Pattern kenne ich, Ich kenne Value Object."
+        },
+        {
+            "start": 2243050,
+            "end": 2244890,
+            "speaker": "B",
+            "text": "Wie würdest du jetzt Value Object beschreiben?"
+        },
+        {
+            "start": 2244890,
+            "end": 2253330,
+            "speaker": "A",
+            "text": "In Go würde ich sagen, das ist ein Struct oder in C würde ich sagen, das ist ein Struct. Das ist ein Objekt, was Daten hält, aber keine wirkliche Logik hat."
+        },
+        {
+            "start": 2254210,
+            "end": 2462710,
+            "speaker": "B",
+            "text": "Also bei Domain Driven Design geht es noch ein bisschen weiter. Das sind eigentlich wirklich Objekte, die durch ihren Wert definiert werden, also die keinen Identifier in dem Sinne haben. Also ganz klassisch wären Geldbeträge, Adressen, also einfach ein String Integer Wert, der aber natürlich eben eine Bedeutung hat, wie Euro zum Beispiel, dass da halt wirklich ein Geldwert dahinter steckt. Aber es gibt keine ID, also ich verwalte jetzt keine Euroscheine, außer implementiere irgendeine Bank oder so, aber sonst ist der Geldwert einfach nur Value. Hingegen Entity, wie der Name schon sagt, Entity kann ich eindeutig identifizieren haben Identifier, das wäre jetzt zum Beispiel das Fahrrad bei uns oder eine Leihstation. Und da habe ich dann, wie du schon richtig sagst, Logik drin. Also das ist auch noch ein großer Punkt, den Domain Driven Design wirklich versucht zu pushen. Ich habe die Business Logik möglichst nah an meinen Entities oder auch an den Aggregates. Aggregates sind by the way so eine Erweiterung von Entities, das heißt, es sind verschiedene Entities zusammengefasst. Der Klassiker wäre jetzt eine Fahrradausleihe, nennt man das so. Ausleihe, Bestellung. Ich nenne es mal Bestellung ist einfacher, weiß nicht wie die Ausleihe richtig heißt, besteht natürlich aus einem Customer oder User, aus einem Fahrrad, aus einer Fahrradstation und wahrscheinlich ganz viele Value Objects, irgendwelche Zeiten und die werden meistens über einen Wurzelknoten oder Aggregate Root, wie es so heißt, dann zusammengehalten, was dann üblicherweise die Leih ID von dieser Ausleihung, Ausleihe, ich glaube es ist Ausleihe, Ausleihe ist. Und auch da wieder ganz wichtig, Aggregates beinhalten Logik und Business Logik. Das heißt, ich hab nicht irgendwo Services, die die eigentliche Business Logik haben. Das wird sogar als Anti Pattern im Domain Driven Design sehr stark immer beschrieben, nennt sich auch anämisches Modell oder Anamic Model, dass man eben nur so dumme Objekte hat, dumme Entities und die eigentliche Logik ist woanders. Und es war ja auch die Anfangsidee von Objektorientiertheit, dass man wirklich in diese Objekte die Logik reinpacken kann, Dass man eben sagt, okay, wenn ich da ein Fahrrad habe, dann kann ich da eine Funktion auf dem Fahrradobjekt aufrufen, Du bist jetzt nicht mehr ausleihbar, du hast eine Reparatur nötig und nicht irgendwo einen anderen Service, der heißt Fahrrad Reparatur Service und dem übergibe ich dann irgendwie ein Fahrrad und der setzt mir das Fahrrad dann irgendwo hinten in der Datenbank wieder auf, nicht ausleihfähig um, sondern wirklich möglichst nah an den Entitäten und nicht so ein, weiß nicht genau, wie man es übersetzt, anämisch, ich glaube, es gibt ja diese Anämie oder Blutleerheit, wenn ich das richtig im Kopf habe, irgendwie so medizinisch. Ich glaube, das ist also dieselbe Herkunft, also irgendwie so leer, dass eben keine Logik drin sitzt, keine Business Logik. Und Domain Driven Design sagt, genau da sollst du die Business Logik eigentlich reinstecken, weil das ist viel übersichtlicher. Wenn du ein Fahrradobjekt hast, dann wirst du natürlich wissen, was kann ich jetzt mit dem Fahrrad machen und nicht fünf andere Services fragen, was könnt ihr denn mit Fahrrädern machen, sondern ich will wissen, was kann ich jetzt mit dem Fahrrad machen oder zum Beispiel mit meinem Abo, mit meinem Fahrrad Abo kann ich das jetzt pausieren, dann will ich eine Funktion haben, basieren auf diesem Abo und nicht irgendwo ein Service, wo ich wieder was aufrufen kann. Weil das muss ich wieder mühsam suchen. Wenn man fremden Code liest, ist das eigentlich die Einfachheit, wenn man direkt die Funktionen hat, was kann ich wirklich für Aktionen machen mit diesem aktuellen Objekt? Und das ist eigentlich die Idee von dem ganzen taktischen Design."
+        },
+        {
+            "start": 2462710,
+            "end": 2468810,
+            "speaker": "A",
+            "text": "Ist Domain Driven Design einfach nur ein anderes Wort für gute, logische, konsequente Code Architektur."
+        },
+        {
+            "start": 2469040,
+            "end": 2497400,
+            "speaker": "B",
+            "text": "Siehst du, wie gesagt, du wirst sagen, das ist meine Erfahrung und das ist doch klar, aber man muss das so sehen. Woher hast du ja die Information? Und damals ist es in dem Buch eigentlich reingeschrieben worden und ich glaube, du hast es wahrscheinlich auch nicht gelesen. Ich muss zugeben, ich habe das Buch zwar oft in der Hand gehabt und ein bisschen durchgeblättert und gewisse Sachen gelesen, aber so voll habe ich es auch nie gelesen und war schon wesentlich später als zwei tausend drei natürlich. Aber ja, das ist genau das, was du heute unter guter Softwarearchitektur verstehst."
+        },
+        {
+            "start": 2497630,
+            "end": 2503670,
+            "speaker": "A",
+            "text": "Ja, oder beziehungsweise intuitive Softwarearchitektur. Also du machst ja ziemlich viel gut."
+        },
+        {
+            "start": 2503670,
+            "end": 2552590,
+            "speaker": "B",
+            "text": "Ich schreibe also die Anti Pattern Geschichte mit dem anämischen Modell, das ist schon noch immer ein Problem, was man sehr viel sieht. Ihr habt dann Services und alles wird in diese Service reingeklatscht und dann gibt es diese Services, die sich nur mehr aufblähen und eigentlich habe ich dann nur ganz dumme Entitäten oder überhaupt nur so DAO, Data Access Objects, die eigentlich nichts beinhalten, außer die Daten und ihr habt getroffen. Also sieht man schon sehr oft, muss man sagen. Aber ja, es ist natürlich etwas, wo ich jetzt auch sagen würde, klar, ist doch schön, wenn man es sauberer so macht. Aber bei mir basiert es halt vor allem darauf, dass ich halt fünfmal irgendwie gegen die Wand gerannt bin und dann gemerkt habe, okay, es geht schöner auch und habe den Schmerz vielleicht persönlich miterlebt. Vielleicht hätte ich das Buch damals lesen sollen, hätte vielleicht weniger Fehler gemacht in meinem Leben diesbezüglich."
+        },
+        {
+            "start": 2552670,
+            "end": 2581110,
+            "speaker": "A",
+            "text": "Aber jetzt habe ich eine Codebase und jetzt höre ich diese Podcast Episode. Woher weiß ich, dass meine Codebase jetzt nach Domain Driven Design gebaut wurde? Weil gibt es Key Kriterien und also wie wird das, wie wird das im Team und während der Arbeit gelebt? Ich werde jetzt nicht in Pull Request springen und ein Review auf deinem, auf deinem Code machen und sagen, hier hast du aber das Aggregate vergessen, mein Junge. So, jetzt benenn das mal bitte pausieren Warum calls du hier eine Service, das soll doch lieber da sein. Also du verstehst, was ich meine."
+        },
+        {
+            "start": 2581270,
+            "end": 2719860,
+            "speaker": "B",
+            "text": "Naja, ich glaube schon, dass diese Diskussionen grundsätzlich stattfinden. Was dein lieber Ex Kollege, der Matthew Boyle als sehr gutes Beispiel erwähnt hat, ist Kubernetes, das ja in Go geschrieben ist. Und ich persönlich lese ja grundsätzlich kein Go, weigere mich ja fast darum kann ich nur nachplappern, was der gesagt hat. Aber er hat gemeint, man kann zum Beispiel bei den Internals sogenannte Resource Typen sich durchschauen, die schön aufgeteilt sind in verschiedene Files. Und wenn du einfach in eine Resource hineintauchst in den Code, siehst du sofort, was kann ich mit dem machen, was für Aktionen kann ich ausführen, was für Funktionen gibt es da überhaupt, Methoden, Aktionen Und ich brauche gar nicht irgendwie eine komplette Beschreibung von dem Ding, sondern kann wirklich super schnell im Code verstehen, was kann ich eigentlich machen und verstehe dann dadurch, dadurch ich weiß, was eigentlich möglich ist auf den verschiedenen Resource Typen, verstehe sehr schnell, wie das ganze Gesamtkonzept von Kubernetes ist und wie da die Dinge zusammenspielen. Also er hat es als sehr positives Beispiel erwähnt, kann ich jetzt nicht nachvollziehen, ich hab nicht so tief in der Codebase jetzt das nachgeprüft, aber nachdem er ja ein Buch drüber geschrieben hat, wird das einigermaßen stimmen, höchstwahrscheinlich. Und genau da kann man eigentlich guten Code ja auch relativ schnell identifizieren, wenn ich mich schnell auskenne, wenn ich schnell weiß, was kann ich mit dem Code machen, wenn ich mich schnell zurechtfinde, also wenn ich Repositories habe, wenn ich Services habe, ich nenne das jetzt nicht Aggregate natürlich im Code, aber wenn ich so zusammengefasste Entitäten habe, Aggregates, wo ich auch wieder schnell sehe, was kann ich denn machen, kann ich Abo basieren, habe vielleicht saubere Events, ich habe irgendwo Events definiert, wie die verschiedenen Domains miteinander sprechen, wie die verschiedenen Services miteinander sprechen. Wenn ich da eine saubere Eventstruktur habe, dann habe ich auch eine schöne API dazwischen geschalten und da sehe ich dann schon, geht es in Richtung Domain Driven Design oder habe ich da noch Potenzial, eben gewisse Sachen zu verbessern. Ich muss ja auch sagen, diese taktischen Elemente, diese Bausteine, die sind wahrscheinlich jetzt ein bisschen veraltet, die muss man eher so abstrakt sehen, weil seit zwei tausend drei ist doch einiges vergangen und In Go kann ich jetzt das gar nicht so direkt übersetzen, das was klassisch früher objektorientiert war, aber die Grundidee, dass sie möglichst schnell eben möglichst nahe an meinen Entitäten auch die Aktionen und Methoden sehe, die kann ich sehr wohl in Go dementsprechend umsetzen."
+        },
+        {
+            "start": 2719860,
+            "end": 2756730,
+            "speaker": "A",
+            "text": "Kommen wir mal wieder weg von deiner Theorie, mal wieder hin zur Praxis. Lass uns mal was schaffen, lass uns mal aufhören zu definieren und weißt du, Talk ist cheap. Wie komme ich denn hier mit meinem Team, sechs Leute mal an den Start? Muss ich den jetzt erstmal alle das Buch kaufen und die ackern das durch oder jagen das durch Notebook LLM und kriegen eine Zusammenfassung? Oder weil ich meine im Endeffekt das, da bin ich jetzt gehässig, aber du gibst mir hier eine Vorlage, mein Schloss zu bauen, das die ganze Sache zu übermodellieren, Ich kann die perfekte Architektur schreiben und du weißt genau wohin das geht. Wir schippen nichts und du gibst mir ja gerade auch die Gründe, das zu tun."
+        },
+        {
+            "start": 2756810,
+            "end": 2936760,
+            "speaker": "B",
+            "text": "Also ich glaube, da gibt es grundsätzlich zwei Aspekte. Auf der einen Seite hast du natürlich, wenn du jetzt keine Ahnung, kleines Startup irgendwas schippen willst, ist die Frage, macht Domain Driven Design jetzt klassisch da sehr lange die Domain entwickeln und so weiter überhaupt Sinn? Würde jetzt sagen, nein, mach einfach Go for it. Aber gewisse Konzepte kann man trotzdem übernehmen, dass man zum Beispiel ein Glossar hat, wo man einfach gewisse Dinge beschreibt, die man mitnimmt, damit man die in die Dokumente auch hat. Und ihr habt es selber auch erlebt, gerade jetzt mit LLMs ist es ein Riesenproblem, wenn du da deine Codebase nicht sauber hast, LLM pflügt dir da einfach durch und inventet wieder neue Wörter und dann wird es wieder weitergeführt und am Schluss hast du teilweise Funktionen, die alle das Gleiche machen, aber fünf verschiedene Namen haben und noch verschiedene Wörter verwenden für die gleichen Dinge. Also auch da würde ich sagen, ist es sicher nicht schlecht und es ist kein großes Zeitinvestment, da einfach gewisse Sachen mitzuführen, wie ein Glossar oder dass du eben auch jetzt, keine Ahnung, kein anämisches Modell, Datenmodell hast, sondern eben ein reiches, ein Rich Entity Model hast, wo du die Logik da dabei hast. Also das kannst du im Kleinen natürlich auch machen und da braucht ein Team gar nicht mitmachen. Das kannst sogar du selber langsam einfach machen. Natürlich idealerweise umso mehr mitmachen, umso besser. Aber das ist ja sehr leicht einführbar das Ganze. Wenn du natürlich jetzt bei einem großen Projekt bist, macht es schon Sinn, sich am Anfang Gedanken zu machen. Vor allem wenn du jetzt paar hundert Mitarbeiter innen hast, Developer innen hast, dann macht es sehr wohl Sinn, da vielleicht auch mal dir eine Woche zu überlegen, unsere wichtigsten Kernentitäten, wie nennen wir die ganzen Felder, die Entitäten selbst vielleicht, Dann habe natürlich auch die Zeit, weil dann sind Projekte üblicherweise in einem viel größeren Scope und da macht es schon Sinn, das Ganze zu entwickeln. Wenn du jetzt natürlich in einem Team bist, was schon Code hat, kannst du ja einfach mal damit anfangen. Du selber kannst probieren, diese Sachen zu implementieren. Du kannst es mal vorstellen für deine Leute. Du kannst mit einem ganz simplen Glossar mit einer Wiki Seite starten und hey, alle Newcomer, die zu uns ins Team kommen, die können das bearbeiten, die können da Sachen dazuschreiben. Jedes Mal, wenn es eine Frage gibt, was heißt denn eigentlich jetzt bei uns Customer? Was heißt denn eigentlich jetzt ein Werkstattauftrag? Was ist das genau von unserem Fahrrad? Dann schreibe das dort rein und dann kann ich das auch dementsprechend verwenden. Und natürlich auch sehr cool jetzt mit AI und LLM, wenn ich so ein Glossar habe, dann würfe das einfach mal als Kontext mit rein und dann wird es auch immer richtig verwendet. Das heißt, ich kann es ja auch super einfach dann verwenden in meiner Codebase, Dann werden die Terminologien richtig verwendet, im Idealfall, wenn ich sie noch nicht schon drinnen habe. Also auch da alles was schriftlich einfach erstellt wird, es kann erleben, das Dokument sein ist null Aufwand, mit dem kann ich einfach mal losstarten und das ist relativ einfach. Und den Vorteil, was ihr noch habt, klassisch haben wir ja auch schon oft drüber gesprochen, wenn die Leute was beitragen können beim Onboarden, dann sind die auch schon mal happy, weil erstens verstehen die das schneller und sie können was dazu beitragen. Die schreiben einfach ins Wiki den Begriff rein, den sie gerade gelernt haben und dann hast du schon wieder einen Vorteil für alle in der Zukunft."
+        },
+        {
+            "start": 2936840,
+            "end": 2993440,
+            "speaker": "A",
+            "text": "Ja, da hast einen guten Punkt erwähnt. Konsistenz in deiner Code Base ist aktuell sehr sehr wichtig, dass die AI auf jeden Fall da gut navigieren kann, zumindest den Kontext bilden kann, das stimmt schon, aber wer Ist denn die führende Kraft dabei? Muss ich eine Architektenrolle haben? Ist das der Product Owner, der dafür pusht? Ist das der Tech Lead oder ist das einfach jeder? Weil Naming ist hart, das wissen wir alle. Und Naming ist ein unlösbares Problem. Du kannst jetzt nicht mehr einfach mal eine ganze Woche reservieren und einfach nur irgendwelche dauerhaften Variablen und Klassen umbenennen. Klar, zugegeben, heute mit Ideas und Co. Ist es in der Regel ein Rechtsklick und der flügt dann einmal durch die Codebase, gar keine Frage. Aber je nach Größe der Codebase erzeugt natürlich etliche Git Konflikte und so weiter. Ich sage nicht, dass das jetzt super viel Aufwand ist, nur ich sage, es wird halt, es ist halt schon sehr viel Arbeit, Domain Driven Design in einer großen Codebase nachträglich zu vereinheitlichen. Ist das ein Aufwand, den man tun sollte? Gar keine Frage, denke ich. Und du hast ja auch gute Punkte genannt, aber wer treibt das denn?"
+        },
+        {
+            "start": 2993520,
+            "end": 3087530,
+            "speaker": "B",
+            "text": "Meiner Meinung nach kann das jede Person machen. Du kannst einfach ein Projekt antreiben, intern im Team sagst du mal, hey, wollen wir nicht einfach so ein Glossar Ball machen, lebendes Dokument und lass uns mal langsam die Dinge umbenennen. Boy Scout Rule. Jedes Mal, wenn ich irgendwo in einem Code unterwegs bin, irgendwas sehe, was nicht konsistent ist, ändere ich es halt schnell mit um. Das kann ja wirklich ein laufender Prozess sein und braucht jetzt nicht irgendwie Zeit, die reserviert wird. Im Idealfall habe ich ja vielleicht auch schon gewisse Dokumente, Guidelines und es ist nur noch eine Erweiterung und eigentlich ist es ja auch nichts Komplexes und ist auch keine Rocket Science. Man kann das eigentlich sehr einfach einführen und es ist ja mehr ein Mindset Shift. Und klar, ich muss vielleicht Zeit investieren, um das mal ins Team reinzubringen, dieses Mindset, wenn das noch nicht vorhanden ist durch einen Vortrag, durch einen Talk, was auch immer in der Firma. Und dann kann man das aber sofort losstarten. Es ist ja nicht so, wie dass ich jetzt, keine Ahnung, mein Datenmodell auf Event Sourcing umbaue, was übrigens auch sehr stark verknüpft ist mit Domain Driven Design, weil Event Sourcing betrifft dann natürlich wirklich alle die Datenbank, Datenmodell, Layer und so weiter. Also das ist ein riesiger Change. Hingegen einfach mit dem Mindset hineinzugehen, lass uns da mal probieren, ein bisschen aufzuräumen, in die Richtung zu gehen. Das kann ich eigentlich sehr problemlos einführen in ein Team und da brauche ich kein Architekt oder sonst was sein. Natürlich kann ich jetzt auf höherer Ebene, wenn ich irgendwie ein Staff Engineer bin, natürlich das probieren weiter zu verbreiten. Aber warum kann das nicht der absolute Newcomer, der seit sechs Monaten in der Firma ist, in dem Team, einfach mal vorschlagen, Sehe ich überhaupt kein Problem eigentlich."
+        },
+        {
+            "start": 3087609,
+            "end": 3136550,
+            "speaker": "A",
+            "text": "Jetzt verkaufst du hier Domain Driven Design bzw. Das Glossar und gute Architektur. Das ist meine Synonyme jetzt für Domain Driven Design. Und Leute, die das vielleicht beruflich coachen, werden mich jetzt steinigen. Schmeißt ruhig einen Stein Richtung Duisburg. Für wen ist denn das nicht das Richtige? Weil du verkaufst das wie geschnitten Brot. Und jetzt will ich mal wissen, muss sich jetzt jeder, der diesen Podcast jetzt hier hört, damit beschäftigen oder sollte? Oder sagst du das gerade schon, die Teamgrösse erwähnt, ein Startup, was schnell was schippen möchte, für den ist für die ist das nicht das Richtige. Inzwischen glaube ich, denke ich, dass jeder Konzern versucht, kleine Startups innerhalb von Teams zu bauen, die schnell was zu shippen. Deswegen frage ich mich wirklich, für wen ist das dann wirklich noch was, wenn auch Konzerne versuchen agiler zu werden und schneller zu werden? Also wann würdest du sagen, wenn ihr diese Situation vorfindet, ignoriert diese Podcast Episode?"
+        },
+        {
+            "start": 3136550,
+            "end": 3275440,
+            "speaker": "B",
+            "text": "Grundsätzlich würde ich sagen, es ist für alle Größen etwas. Die Frage stellt sich, wie weit geht das Ganze? Wie viel Zeit investierst du, wie viel Zeit reservierst du vor allem dafür? Aber grundsätzlich, dass ich ein Glossar mache und zum Beispiel Logik, Business Logik bei meinen Entitäten dran habe, das ist unabhängig davon, wie groß meine gesamte Company ist, meine Teams oder sonst was. Wenn ich natürlich sage, ich mache jetzt grundsätzlich mal einen Domain Definitions Workshop für zwei Wochen, das werde ich nicht in einem kleinen Startup machen, ist klar. Und wenn es dann in die Richtung geht, Microservices, weil Domain Driven Design geht ja sehr stark in die Microservice Welt hinein und eigentlich, wenn man das richtig fortsetzt und das merkt man ja schon mit Bounded Context, dann landet man eigentlich immer bei Microservices oder lass es Services sein heutzutage, das ist ja auch okay. Aber da ist es ganz klar, Services, Microservices macht erst Sinn ab einer gewissen Größe Und da würde ich mal sagen, vielleicht so ab zwei Teams, drei Teams vielleicht, dann macht es langsam Sinn. Aber ich kann natürlich ganz viele Konstrukte aus dem Domain Driven Design genauso bei Monolithen auch einsetzen. Also es muss nicht Microservices sein, aber natürlich umso größer die Firma, umso mehr Teams es gibt, umso wichtiger ist Domain Driven Design. Aber ich würde nicht sagen, dass es irgendwie auszuschließen ist bei irgendeiner Größe, weil es einfach sinnvolle Herangehensweisen sind, sinnvolle Mindset Entscheidungen, die mir einfach im Alltag helfen. Und das kann ich bei einer Zwei Personen Firma oder Startup genauso haben. Und wenn ich mir überlege, wie oft ich diskutiere über irgendwelche Datenbankfelder, sogar mit mir selber, Ist es das richtige Feld und soll es lieber so benennen und ist es einfach zu verstehen? Könnte man auch schon unter Domain Driven Design sehen. Macht es auch auf jeden Fall Sinn, dass man da vielleicht paar Sekunden mehr überlegt, als dieses Feld nur ID zu nennen oder wie man die Tabelle benennt? Oder verwendet man immer Einzahl oder Mehrzahl bei Tabellen? Und natürlich ganz Wie arbeiten meine Teams und meine Bounded Contexts zusammen? Also wo sind die Schnittstellen? Nicht nur die Entitäten, sondern welche Events gibt es? Welche Schnittstellen gibt es? Was man natürlich bei einem großen Projekt definitiv machen muss, damit man weiß, wie die ganzen Teams zusammenarbeiten. Aber bei so einem großen Scope, bei einem riesen Projekt oder bei ein paar hundert Mitarbeiter innen, da macht es auf jeden Fall Sinn, das Ganze zu entwickeln und da auch die Zeit zu investieren."
+        },
+        {
+            "start": 3275520,
+            "end": 3282160,
+            "speaker": "A",
+            "text": "Wer gewinnt da eigentlich, wenn du selbst mit dir über einen Tabellennamen diskutierst? Ich okay, gut. Scheinst eine hohe Winrate da zu haben."
+        },
+        {
+            "start": 3282320,
+            "end": 3284880,
+            "speaker": "B",
+            "text": "Ja, ist definitiv ein Vorteil, bin Gewinnertyp."
+        },
+        {
+            "start": 3287920,
+            "end": 3289520,
+            "speaker": "A",
+            "text": "Das stimmt, du bist ein Gewinnertyp."
+        },
+        {
+            "start": 3290550,
+            "end": 3290990,
+            "speaker": "B",
+            "text": "Unglaublich."
+        },
+        {
+            "start": 3290990,
+            "end": 3303390,
+            "speaker": "A",
+            "text": "Vereinfacht gesagt ist es ja die Einigung auf ein einheitliches Vokabular und dann ist es ja die Anwendung von modernen Architekturpraxis, würde ich mal so ganz einfach sagen. Und Leute steinigen mich jetzt, dass es."
+        },
+        {
+            "start": 3303390,
+            "end": 3313630,
+            "speaker": "B",
+            "text": "Viel mehr ist, aber ich würde es eher umgekehrt sehen. Es ist eine moderne Praxis, die einfach zum Standard geworden ist, wo aber wenige dazu Domain Driven Design heutzutage sagen, das."
+        },
+        {
+            "start": 3313630,
+            "end": 3321260,
+            "speaker": "A",
+            "text": "Bringt mich zu der nächsten Was denkst du denn, wie viele Leute wenden Domain Driven Design intuitiv an, ohne es so zu nennen?"
+        },
+        {
+            "start": 3321420,
+            "end": 3357230,
+            "speaker": "B",
+            "text": "Wenige. Ich glaube, dass wenige Leute sich wirklich Gedanken machen über die Domain und man sieht es im Alltag immer, wie weit Technik entfernt ist eigentlich von der Business Domäne und wie viel wieder technisch optimiert wird und technisch getrennt wird und die Schnittstellen technisch gedacht werden, anstatt auf der Business Seite. Dieses Problem, das kann man zwar zehn mal wiederholen, aber in der Praxis funktioniert es halt doch nur mäßig. Das heißt, ich glaube, da ist es weniger, als man eigentlich so denkt und dass sich konkret Leute wirklich Gedanken machen über so eine Sprache zum Beispiel und die auch niederschreiben. Das sind dann noch mal weniger Leute."
+        },
+        {
+            "start": 3357470,
+            "end": 3409970,
+            "speaker": "A",
+            "text": "Aber denkst du nicht, dass die Vorteile von Domain Driven Design erst richtig, richtig sichtbar werden, umso komplexer die Domain ist? Ich baue jetzt die Firma Typeform nach. Typeform ist ein Formularbilder und die haben bestimmt ganz viel hintendran, gar keine Frage. Doch wir fokussieren auf die auf die Kernlogik. Du kannst hier ein Formular erklicken und zusammenstellen und dann raus senden und so weiter. Ich glaube, du kannst dich richtig hart in die Domain von Formulare rein nerden. Ich glaube, das geht. Aber wenn ich die Domain von Formularen nun mal von der Oberfläche beobachte und die mit einer Steuersoftware in Deutschland vergleiche, dann ist mein erstes Bauchgefühl, dass die Domain der Steuersoftware deutlich komplexer ist und dass dort die Kernelemente von Domain Driven Design wahrscheinlich mehr Value liefern, mehr Wert liefern als bei der Formular Software. Ist das eine valide Aussage oder würdest du die auch challengen?"
+        },
+        {
+            "start": 3410050,
+            "end": 3415210,
+            "speaker": "B",
+            "text": "Ich glaube, du unterschätzt die Komplexität von Formularen ein hundert Prozent."
+        },
+        {
+            "start": 3415210,
+            "end": 3422890,
+            "speaker": "A",
+            "text": "Ein hundert Prozent. Deswegen habe ich ja extra gesagt von der Oberfläche und ich habe gesagt, man kann sich in alles rein nerden und man kann die Komplexität von Formularen multistat Formulare, alles."
+        },
+        {
+            "start": 3422890,
+            "end": 3519260,
+            "speaker": "B",
+            "text": "Auch wenn du dir überlegst, keine Ahnung, ein optionales Feld, was heißt das jetzt optional? Also solche könnt mir vorstellen, dass eigentlich diese ganzen Terms, die sind alle sehr schwammig und wahrscheinlich, wenn du fünf Leute fragst, verstehen fünf Leute was unterschiedliches darunter wahrscheinlich alle was ähnliches, aber nicht so klar, was es eigentlich ist. Ein optionales Feld oder ein Multiauswahlfeld? Was ist ein Multi Auswahlfeld? Wie wird es dargestellt? Was bedeutet es in deinem Kontext? Also ich glaube, solche Dinge machen schon Sinn. Die entwickeln sich mit der Zeit wahrscheinlich, aber wenn man sie aufschreibt und konkret mal formuliert und dann auch durchzieht, dann macht es sicher natürlich Sinn. Und auch da wieder, es geht ja vor allem darum, wenn du ein Projekt hast, was mehrere Teams hat, mehrere Bounded Contexts, weil ab da hast du dann natürlich noch mal dieses Problem, dass sich jeder Bounded Context in irgendeiner Form selbst weiterentwickelt und selbst mit der Sprache umgeht, neue Wörter erfindet, neue Wörter einführt und da macht natürlich so ein übergeordnetes Konzept dann natürlich noch mehr Sinn. Aber auch da, wie gesagt, eine pragmatische Herangehensweise. Man muss das nicht durch alles durchziehen. Man braucht kein Event Driven Design jetzt machen, auch wenn das in Domain Driven quasi so vorgeschlagen wird über die Events. Man braucht kein Event Sourcing automatisch machen. Sind alles coole Konzepte und ich glaube, man kann es auch für alle Größenordnungen machen, aber man kann sich ja gewisse Teile herauspicken und das Grundkonzept, was man in einer Zeile zusammenfassen kann, Domain first, konzentriere dich auf die Domain als erstes, wenn du eine Software entwickelst, die kann man sicher in jedes Projekt eigentlich mit reinnehmen und das macht immer Sinn."
+        },
+        {
+            "start": 3519260,
+            "end": 3541900,
+            "speaker": "A",
+            "text": "Das klingt nach einer super Bierdiskussion. Was verstehst du eigentlich unter einem optionalen Formularfeld? Und dann auf einmal sind da zehn Nerds, die kloppen sich, was ein optionales Formularfeld ist und dann reden wir über Datentypen. Was ist eigentlich ein optionales Datumsfeld? Was wird dann in der DB gespeichert? Null oder null, oder? Ich glau, das könnte interessant werden."
+        },
+        {
+            "start": 3542060,
+            "end": 3593260,
+            "speaker": "B",
+            "text": "Also ich kann mich noch erinnern, diese Diskussion bei Trivago, was wir zu Item für neues Wort einführen, das hat glaube ich so drei Wochen benötigt oder vier Wochen am Ende. Keine Ahnung, ob es das wirklich wert war, aber du bindest da viele Leute mit ein, was glaube ich auch gut ist, weil dann ist die Identifikation einfach höher am Ende. Du hast sehr viele Sichtweisen, die du mit rein nimmst und wenn du so eine zentrale Komponente hast, dann macht es schon Sinn, glaube ich, da mehr Zeit zu investieren. Wenn es irgendwie eine Subdomäne ist von irgendeinem Nebenbereich von irgendeiner Abrechnungssoftware, die in deinem Unternehmen absolut an fünfter Stelle irgendwo unten drin arbeitet, dann ist komplett egal, wie sie heißen. Aber wenn es ein Begriff ist, der überall verwendet wird, in der gesamten Firma von ein tausend Leuten, dann macht es vielleicht auch Sinn, da mal eine Woche zu investieren. Also ist ja keine Fulltime Woche, aber jetzt rein, was es halt dann braucht."
+        },
+        {
+            "start": 3593260,
+            "end": 3599940,
+            "speaker": "A",
+            "text": "An Zeit, Gutes Stichwort, ob es der Aufwand wert ist. Was ist denn die Nummer eins Kritik an Domain Driven Design?"
+        },
+        {
+            "start": 3600100,
+            "end": 3658780,
+            "speaker": "B",
+            "text": "Also einerseits die Komplexität, wenn du das nicht pragmatisch machst, sondern bis ins kleinste Detail halt over Engineers. Aber ich würde fast sagen, das geht mit jeder Technik. Also das Problem hast du immer. Das zweite Problem ist jetzt weniger eine Kritik, aber Problem, was genannt wird und das ist gar nicht so zu unterschätzen, ist ganz oft hast du keine Domain Experten. Also wenn du nicht in derselben Firma bist und vielleicht für andere entwickelst, draußen ist es super schwer, einen direkten Zugang zu Domain Experten zu bekommen. Und dann kann es sein, dass das Ganze dann so komplex wird, diese Kommunikation, dass das dich dann eigentlich wieder einbremst. Also das sind vielleicht so Fälle, die schwieriger sind. Wobei ich würde sagen, heutzutage, wenn man auch eine gute Partnerschaft hat mit irgendeiner Firma und jetzt Scrum und Agile und sonst zusammenarbeitet, sollte man dann schon einen gewissen Draht haben. Aber natürlich macht es das komplizierter, wenn man da extrem lange Kommunikationswege immer hat und wenn man was übertreibt, ist es natürlich immer schlecht."
+        },
+        {
+            "start": 3658780,
+            "end": 3701890,
+            "speaker": "A",
+            "text": "Es gibt ja noch den Stereotypen des Technikers und der Technikerin, die Ich bin hier einfach nur hier um Software zu schreiben. Mich interessiert die Domäne gar nicht. Ich hoffe, dieser Stereotyp stirbt bald aus, weil ich glaube, von dem sprechen wir ja auch oft, dass man auch das Business verstehen soll, dass man versteht, wie man eigentlich Geld verdient. Und das bedarf natürlich in irgendeiner Art und Weise gute Software zu schreiben. Und um gute Software zu schreiben, muss man natürlich in irgendeiner Art und Weise das Areal, wofür man denn eigentlich Software schreibt, verstehen. Also wenn ich jetzt bei jobrat arbeiten würde, dann muss ich mich schon irgendwie mal mit Fahrrädern, Versicherungen, Leasing und Abrechnung über mehrere Stellen, also Arbeitgeber, Arbeitnehmer, wie wird das Brutto und so weiter schon irgendwie beschäftigen oder?"
+        },
+        {
+            "start": 3702230,
+            "end": 3762930,
+            "speaker": "B",
+            "text": "Ja, ich glaube, das beten wir ja immer rauf und runter eigentlich in diesem Podcast, dass das eigentlich der wichtigste Bereich ist, dass entwicklerinnen sich eben auch mit der Domäne auseinandersetzen, mit der Business Domäne. Und auch wenn man jetzt so was wie Plattform Teams denkt und daher kommt eigentlich auch, ich glaube, da gibt es sogar ein Buch mit DDD für Cloud Automation, das geht ja genau in die Richtung, da bist du in einem Plattform Team und da geht es dann auch wieder darum, dass du eine gemeinsame Sprache hast, weil was ist ein Container bei dir? Wo läuft der Container automatisch? Was ist irgendeine Function? Wie wird das verstanden? Was ist eigentlich Rate Limiting, wenn du sagst, wir setzen da Rate Limiting ein? Was heißt das eigentlich am Ende? Also da hast du auch wieder deine eigene Sprache in deinem Bounded Kontext. Und das ist natürlich dann auch wichtig, dass du deine Sprache aufpasst und dass jeder in der Firma, auch die Leute, deine Kunden, in dem Fall die internen Kunden, die deine Plattform verwenden, dass die ein Verständnis haben, was passiert, wenn da Rate Limiting irgendwo eingestellt ist oder was passiert, wenn ich dann Container schiebe im Endeffekt, Was ist es für ein Container? Wo läuft der? Was passiert da?"
+        },
+        {
+            "start": 3763010,
+            "end": 3773730,
+            "speaker": "A",
+            "text": "Gutes Beispiel, was ist ein Container? Also reden wir hier von einem freebsd Jail, reden wir hier von einem LXC, reden wir hier von OCI, Wovon reden wir hier?"
+        },
+        {
+            "start": 3774290,
+            "end": 3788940,
+            "speaker": "B",
+            "text": "Und wie gesagt, alle, die in der Firma seit fünf Jahren sind, für die ist es wahrscheinlich alles klar, aber denkt mal an die Leute, die frisch onboarden oder von einem Team in ein anderes Team kommen, für die ist es halt alles andere als klar und die hatten das nicht fünf Jahre ständig im Alltag."
+        },
+        {
+            "start": 3789180,
+            "end": 3815290,
+            "speaker": "A",
+            "text": "Welche Ressource gibst du mir jetzt, die ich in meinem Browser öffne, mir vornehme zu lesen und irgendwann den Tab schließe, weil ich fünfzig Tabs auf hab. Also das ist jetzt für mich. Aber welche Ressource gibst du den Hörerinnen und Hörern an die Hand, die ihre vereinheitliche Sprache in ihrer Applikation, in der sie sich beruflich austoben, verbessern wollen? Und das ist, wie du merkst, schon einer der Key Elemente, die bei mir hängen geblieben sind, wo ich wahrscheinlich Domain Driven Design unrecht tue."
+        },
+        {
+            "start": 3816000,
+            "end": 3922130,
+            "speaker": "B",
+            "text": "Also es ist schwierig bei so einem Begriff, wo du einfach, wenn du den eintippst in Google, tausende Möglichkeiten findest von YouTube Videos, Podcasts, Blogbeiträgen. Du kannst natürlich diese originalen Blogbeiträge von Martin Fowler über Domain Driven Design lesen oder du kannst dir auch das Buch, haben wir unten auch verlinkt, anschauen. Das ist zwar nicht der Final Print, aber das ist so ein Pre Draft, Final Draft von Eric Evans. Die Kapitel stimmen alle überein, also es dürfte ungefähr dasselbe sein, wenn man sich das Buch nicht leisten will. Man kann natürlich das Buch lesen. Es gibt neuere Bücher, die die Default Golang zum Beispiel ist ja fast Werbung, was wir heute für deinen Ex Kollegen machen, aber es gibt wirklich ganz viele Bücher und ganz viele Erklärungsvideos. Es gibt ganze Konferenzen zu Domain Driven Design und nicht nur eine. Das heißt, es ist schwierig, nichts dazu zu finden und vielleicht probiert man einfach die jeweilige Domäne, in der man sich befindet und geht über den Weg. Dann eben ist man in Infrastruktur unterwegs, ist man bei klassischer Softwareentwicklung unterwegs und dann findet man eigentlich genug dazu, wenn man sich da noch rein nerden will. Und wie gesagt, das originale Buch ist sicher auch eine Empfehlung wert, wenn man da tiefer eintauchen will, weil es klingt zwar jetzt alles sehr simpel, aber in dem Buch gibt es auch extrem viele Beispiele, auch Szenarien, die dann durchgegangen werden. Was macht man im Szenario A, B, wie kommt man da weiter? Also sind da schon konkrete Dinge auch drinnen? Es gibt da natürlich auch noch ganz viele Detailsachen, die wir jetzt auch gar nicht erwähnt haben, wie man die verschiedenen Domains aufteilt und was es da für Möglichkeiten gibt. Also es geht dann natürlich schon noch tiefer, aber die Grundidee, dass man sich einfach mehr mit der Domäne beschäftigt, das ist glaube ich, was man auf jeden Fall mitnehmen kann und das kann man auch, ohne dass man sich jetzt noch irgendwelche YouTube Videos, fünf Stunden anschaut oder vier hundert oder sechs hundert Seiten sind es glaube ich, dann am Ende durchliest."
+        },
+        {
+            "start": 3922130,
+            "end": 3947960,
+            "speaker": "A",
+            "text": "Es ist natürlich schwierig, desto erfolgreicher eine Firma wird, umso mehr diversifiziert die ihr Businessmodell und somit hat man natürlich nicht nur eine Domäne, um die man sich kümmern muss. Hoffentlich du schon, hoffentlich kontinuierst du nur zu einer Domäne, aber um die ganze Sache einheitlich zu verstehen, wird es natürlich unglaublich schwierig, da eine Übersicht über alle Domänen zu haben. Aber Wolfgang, vielen lieben Dank für diesen Exkurs. Ich werde das Buch nicht lesen."
+        },
+        {
+            "start": 3948600,
+            "end": 3950760,
+            "speaker": "B",
+            "text": "Es war nett, nichts anderes habe ich."
+        },
+        {
+            "start": 3950760,
+            "end": 3961950,
+            "speaker": "A",
+            "text": "Mir erwartet, aber ich weiß nicht, also ich bin ehrlich hyped, hast du mich nicht bei Implizites explizit machen? Da hat sie mich bei der vereinheitlichen Sprache, bei der Wiki Page, aber bei."
+        },
+        {
+            "start": 3961950,
+            "end": 3974430,
+            "speaker": "B",
+            "text": "Dem Rest, du entwickelst ja auch gar keine großen Softwareprojekte, du hängst ja nur auf der Infrastruktur Seite rum, aber ich kann dir noch mal raussuchen ob ihr diesen Podcast findet zu Infrastructure Domain Driven Design for Infrastructure as Code oder so ähnlich."
+        },
+        {
+            "start": 3974430,
+            "end": 3980070,
+            "speaker": "A",
+            "text": "Und du hast gerade bewiesen, dass du keine Ahnung von Infrastruktur hast, denn Infrastruktur sind heute sehr große Softwareprojekte."
+        },
+        {
+            "start": 3980310,
+            "end": 3988000,
+            "speaker": "B",
+            "text": "Du bist ja nur so ein Manager, das machen ja deine Leute, die verwenden wahrscheinlich eh alle Domain Driven diese. Die waren alle bei einem Workshop bei Matthew Boyle damals."
+        },
+        {
+            "start": 3988160,
+            "end": 3989280,
+            "speaker": "A",
+            "text": "Wahrscheinlich, wahrscheinlich."
+        },
+        {
+            "start": 3989280,
+            "end": 3991880,
+            "speaker": "B",
+            "text": "Nein, frag sie mal, falls du jetzt."
+        },
+        {
+            "start": 3991880,
+            "end": 4028720,
+            "speaker": "A",
+            "text": "Gerade am Audiogerät zuhörst und dir die Nägel abkaust, wo du denkst, boah, was verzapfen die da? Spring mal in unseren Discord und gib dem Wolfgang mal richtig Feuer. Ich habe es versucht zu verstehen. Wolfgang hat es versucht zu erklären und ich möchte jetzt von dir War der Wolfgang erfolgreich oder ist das Thema eigentlich was ganz anderes und der Wolfgang hat es falsch verstanden? Da bin ich gespannt. Ich warte auf das Feedback. Wir lesen jede E Mail, wir lesen jeden Social Media Post. Deswegen Wolfgang ignoriert viele, aber ich leite ihn dann immer diese weiter und dann reagiert er. Von daher, ich erwarte euer Feedback. Wolfgang, vielen lieben Dank und wir hören uns nächste Woche wieder. Bis bald und tschüss."
+        }
+    ]
+}
