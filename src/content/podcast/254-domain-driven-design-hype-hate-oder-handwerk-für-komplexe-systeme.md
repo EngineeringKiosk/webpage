@@ -1,6 +1,6 @@
 ---
 advertiser: ""
-amazon_music: ""
+amazon_music: https://music.amazon.com/podcasts/c35a09fe-4116-4e04-8f68-77d61b112e46/episodes/74690b55-e9e2-4e73-90f7-9617c9173222/engineering-kiosk-254-domain-driven-design-hype-hate-oder-handwerk-f%C3%BCr-komplexe-systeme
 apple_podcasts: https://podcasts.apple.com/us/podcast/254-domain-driven-design-hype-hate-oder-handwerk-f%C3%BCr/id1603082924?i=1000749006203&uo=4
 audio: https://audio1.redcircle.com/episodes/e7c5310c-7fe9-4d1f-8683-ca614cafa01a/stream.mp3
 chapter:
