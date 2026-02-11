@@ -48,10 +48,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 					<div class="flex flex-wrap -mx-4">
 						<div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
 							<div class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-								<Image src={imageAlps} alt="Innsbruck, Austria" class="w-full h-64 object-cover" />
+								<a href="/meetup/alps/"><Image src={imageAlps} alt="Innsbruck, Austria" class="w-full h-64 object-cover" /></a>
 								<div class="p-6 flex flex-col flex-grow">
 									<span class="inline-block w-auto py-px px-2 mb-3 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl self-start">Alps</span>
-									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight">Meetup Alps</h2>
+									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight"><a href="/meetup/alps/" class="no-underline hover:no-underline">Meetup Alps</a></h2>
 									<p class="mb-4 text-coolGray-500 font-medium">Innsbruck, Austria</p>
 									{nextMeetupAlps ? (
 										<p class="mb-6 text-coolGray-500">
@@ -70,10 +70,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						</div>
 						<div class="w-full md:w-1/2 px-4">
 							<div class="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-								<Image src={imageRhineRuhr} alt="Rhine-Ruhr, Germany" class="w-full h-64 object-cover" />
+								<a href="/meetup/rhine-ruhr/"><Image src={imageRhineRuhr} alt="Rhine-Ruhr, Germany" class="w-full h-64 object-cover" /></a>
 								<div class="p-6 flex flex-col flex-grow">
 									<span class="inline-block w-auto py-px px-2 mb-3 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl self-start">Rhine-Ruhr</span>
-									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight">Meetup Rhine-Ruhr</h2>
+									<h2 class="mb-2 text-2xl md:text-3xl font-bold tracking-tight"><a href="/meetup/rhine-ruhr/" class="no-underline hover:no-underline">Meetup Rhine-Ruhr</a></h2>
 									<p class="mb-4 text-coolGray-500 font-medium">Rhine-Ruhr, Germany</p>
 									{nextMeetupRhineRuhr ? (
 										<p class="mb-6 text-coolGray-500">
