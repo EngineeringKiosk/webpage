@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 import { formatDateWithoutWeekday, formatTime } from '../../../scripts/date.js';
 import { createMeetupHelpers } from '../../../scripts/meetups.js';
 const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
-import Sponsors from '../../../components/meetup-alps/Sponsors.astro';
+import Sponsors from '../../../components/meetup/Sponsors.astro';
 import ImageSlider from '../../../components/meetup/ImageSlider.astro';
 
 // Current Meetup
@@ -230,7 +230,7 @@ const sliderImages = await Promise.all(
 
 			<Discord meetupName="Alps" />
 
-			<Sponsors />
+			<Sponsors meetupCollection="meetup-alps" regionDescription="tech people in Tyrol" />
 
 			<Team />
 
