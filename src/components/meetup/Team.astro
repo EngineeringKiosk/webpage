@@ -1,0 +1,48 @@
+---
+import Organizer from '../Organizer.astro'
+
+export interface Props {
+	badge: string;
+	title: string;
+	description: string;
+	email: string;
+	members: {
+		avatar: string;
+		name: string;
+		subtitle: string;
+		description: string;
+		github: string;
+		twitter: string;
+		linkedin: string;
+		website: string;
+	}[];
+}
+
+const { badge, title, description, email, members } = Astro.props;
+---
+
+<section class="py-4 md:py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+	<div class="container px-4 mx-auto">
+		<div class="mb-16 text-center">
+			<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">{badge}</span>
+			<h1 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">{title}</h1>
+			<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">{description} <br />Feel free to drop us a message.</p>
+			<a href={`mailto:${email}`} class="text-lg md:text-xl text-yellow-500 font-medium">{email}</a>
+		</div>
+
+		<div class="flex flex-wrap justify-center -mx-4">
+			{members.map((member) => (
+				<Organizer
+					avatar={member.avatar}
+					name={member.name}
+					subtitle={member.subtitle}
+					description={member.description}
+					github={member.github}
+					twitter={member.twitter}
+					linkedin={member.linkedin}
+					website={member.website}
+				/>
+			))}
+		</div>
+	</div>
+</section>
