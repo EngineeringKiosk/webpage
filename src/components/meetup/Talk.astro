@@ -9,7 +9,10 @@ export interface Talk {
 	github?: string;
 	twitter?: string;
 	linkedin?: string;
+	bluesky?: string;
 	mastodon?: string;
+	threads?: string;
+	instagram?: string;
 	youtube?: string;
 	website?: string;
 	bio?: string;
@@ -21,15 +24,12 @@ export interface Props {
 	talk: Talk;
 }
 
-const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides, language } = Astro.props.talk;
+const { avatar, name, title, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');
 
 const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];
-
-const mastodonServer = mastodon ? mastodon.split('@')[1] : '';
-const mastodonHandle = mastodon ? mastodon.split('@')[0] : '';
 
 ---
 
@@ -67,16 +67,30 @@ const mastodonHandle = mastodon ? mastodon.split('@')[0] : '';
 				)
 			}
 			{
-				mastodon && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://${mastodonServer}/@${mastodonHandle}`}>
-						<img src="/images/brands/mastodon.svg" alt={`${name} auf Mastodon`} class="h-5	 grayscale opacity-60" />
+				bluesky && (
+					<a class="inline-block mr-6 hover:opacity-80" href={bluesky}>
+						<img src="/images/brands/bluesky.svg" alt={`${name} auf Bluesky`} class="h-5 grayscale opacity-60" />
 					</a>
 				)
 			}
 			{
-				youtube && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://youtube.com/${youtube}`}>
-						<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5	 grayscale opacity-60"/>
+				mastodon && (
+					<a class="inline-block mr-6 hover:opacity-80" href={mastodon}>
+						<img src="/images/brands/mastodon.svg" alt={`${name} auf Mastodon`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				threads && (
+					<a class="inline-block mr-6 hover:opacity-80" href={threads}>
+						<img src="/images/brands/threads.svg" alt={`${name} auf Threads`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				instagram && (
+					<a class="inline-block mr-6 hover:opacity-80" href={instagram}>
+						<img src="/images/brands/instagram.svg" alt={`${name} auf Instagram`} class="h-5 grayscale opacity-60" />
 					</a>
 				)
 			}
@@ -87,6 +101,13 @@ const mastodonHandle = mastodon ? mastodon.split('@')[0] : '';
 									<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
 							</a>
 					))
+				)
+			}
+			{
+				youtube && (
+					<a class="inline-block mr-6 hover:opacity-80" href={youtube}>
+						<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5 grayscale opacity-60"/>
+					</a>
 				)
 			}
 			{

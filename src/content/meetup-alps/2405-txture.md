@@ -21,7 +21,7 @@ talks:
     bio: 'Jacob Rief graduated with a master in physics from the University of Innsbruck. He then worked for many years as a software developer, system architect and consultant for different companies, before returning to his Alma Mater in 2020. There he’s in charge of evolving the main Content Management System of the university. Jacob is also an eager Open Source contributor and maintainer of a few popular third party packages around the Django ecosystem. His main focus is on Django, Python, JavaScript and web development in general.'
     github: 'jrief'
     twitter: 'jacobrief'
-    mastodon: '@jrief@fosstodon.org'
+    mastodon: 'https://fosstodon.org/@jrief'
     slides: '2405-jacob-rief-style-pilfering.pdf'
 speakers:
   male: 2

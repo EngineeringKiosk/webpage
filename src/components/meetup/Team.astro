@@ -11,10 +11,15 @@ export interface Props {
 		name: string;
 		subtitle: string;
 		description: string;
-		github: string;
-		twitter: string;
-		linkedin: string;
-		website: string;
+		github?: string;
+		twitter?: string;
+		linkedin?: string;
+		bluesky?: string;
+		mastodon?: string;
+		threads?: string;
+		instagram?: string;
+		youtube?: string;
+		website?: string;
 	}[];
 }
 
@@ -40,6 +45,11 @@ const { badge, title, description, email, members } = Astro.props;
 					github={member.github}
 					twitter={member.twitter}
 					linkedin={member.linkedin}
+					bluesky={member.bluesky}
+					mastodon={member.mastodon}
+					threads={member.threads}
+					instagram={member.instagram}
+					youtube={member.youtube}
 					website={member.website}
 				/>
 			))}
