@@ -14,7 +14,7 @@ export interface Props {
 // TODO Add mastodon
 
 const { avatar, name, subtitle, description, github, twitter, linkedin, website } = Astro.props;
-const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
+const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 ---
 
 <div class="w-full sm:w-1/2 md:w-1/3 px-4 mb-10 hostpreview">

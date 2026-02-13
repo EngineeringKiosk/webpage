@@ -3,7 +3,7 @@
 import { createMeetupHelpers } from '../../scripts/meetups';
 const { meetupCollection, regionDescription } = Astro.props;
 const { getPastMeetups, getNextMeetup } = await createMeetupHelpers(meetupCollection);
-import CompanyLogo from '../CompanyLogo.astro';
+import CompanyLogo from './CompanyLogo.astro';
 
 
 // fetch all meetups and extract all location sponsors.
