@@ -78,6 +78,7 @@ const meetupSchema = ({ image }) =>
 				website: z.string().optional(),
 				bio: z.string().optional(),
 				slides: z.string().optional(),
+				language: z.enum(['en', 'de']).optional().default('en'),
 			})
 		),
 		participants: z

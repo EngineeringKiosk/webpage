@@ -14,9 +14,10 @@ export interface Props {
 	website?: string;
 	bio?: string;
 	slides?: string;
+	language?: string;
 }
 
-const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides } = Astro.props;
+const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides, language } = Astro.props;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');
@@ -36,9 +37,14 @@ const mastodonHandle = mastodon ? mastodon.split('@')[0] : '';
 			{title}
 		</h2>
 
-		<span class="inline-block mb-6 text-lg font-medium text-yellow-500">
+		<span class="inline-block mb-2 text-lg font-medium text-yellow-500">
 			{name}
 		</span>
+		<div class="mb-6">
+			<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full">
+				{language === 'de' ? 'Vortrag in Deutsch' : 'Talk in English'}
+			</span>
+		</div>
 		<p class="mb-8 text-coolGray-500 font-medium description" set:html={htmlDescription} />
 		{bio && <p class="mb-8 text-coolGray-500 font-medium bio">{bio}</p>}
 		<div class="flex items-center justify-center">
