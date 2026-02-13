@@ -100,6 +100,22 @@ export function monthSuffixedDay(ts, locale = 'en-US') {
 	}
 }
 
+// returns the date in the format of Thursday, 26th of February 2026
+export function formatDateWithWeekdayAndOrdinal(date, locale = 'en-US') {
+	const d = new Date(date);
+	const weekday = d.toLocaleDateString(locale, { weekday: 'long' });
+	const day = d.getDate();
+	const month = d.toLocaleDateString(locale, { month: 'long' });
+	const year = d.toLocaleDateString(locale, { year: 'numeric' });
+
+	let suffix = 'th';
+	if (day % 10 === 1 && day !== 11) suffix = 'st';
+	else if (day % 10 === 2 && day !== 12) suffix = 'nd';
+	else if (day % 10 === 3 && day !== 13) suffix = 'rd';
+
+	return `${weekday}, ${day}${suffix} of ${month} ${year}`;
+}
+
 // returns the date in the format of Monday, October 12, 2023
 export function year(date, locale = 'de-DE') {
 	const options = {
