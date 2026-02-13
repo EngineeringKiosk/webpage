@@ -26,7 +26,7 @@ logos.sort(() => Math.random() - 0.5);
 	<div class="container px-4 mx-auto w-full md:w-1/2">
 		<div class="mb-16 text-center">
 			<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Our Supporters</h3>
-			<p>Our locations partners have been instrumental in helping us build a community of {regionDescription}.<br />We are grateful for their support!</p>
+			<p class="text-lg md:text-xl text-coolGray-500 font-medium">Our locations partners have been instrumental in helping us build a community of {regionDescription}.<br />We are grateful for their support!</p>
 			<div class="mt-8">
 				{logos.map(location => (
 					<div class="h-14 mx-4 my-4 inline-block"><CompanyLogo name={location.name} logo={location.logo} url={location.url} logoHeight="56" /></div>
