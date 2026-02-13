@@ -49,8 +49,16 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 				{language === 'de' ? 'Vortrag in Deutsch' : 'Talk in English'}
 			</span>
 		</div>
-		<p class="mb-8 text-coolGray-500 font-medium description" set:html={htmlDescription} />
-		{bio && <p class="mb-8 text-coolGray-500 font-medium bio">{bio}</p>}
+		<div class="text-left mt-6">
+			<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Talk</h4>
+			<p class="mb-8 text-coolGray-500 font-medium description" set:html={htmlDescription} />
+		</div>
+		{bio && (
+			<div class="text-left">
+				<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Speaker</h4>
+				<p class="mb-8 text-coolGray-500 font-medium bio">{bio}</p>
+			</div>
+		)}
 		<div class="flex items-center justify-center">
 			{
 				github && (
