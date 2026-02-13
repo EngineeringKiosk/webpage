@@ -6,16 +6,19 @@ export interface Props {
 	name: string;
 	subtitle: string;
 	description: string;
-	github: string;
-	twitter: string;
-	linkedin: string;
+	github?: string;
+	twitter?: string;
+	linkedin?: string;
 	bluesky?: string;
 	mastodon?: string;
-	website: string;
+	threads?: string;
+	instagram?: string;
+	youtube?: string;
+	website?: string;
 	profileLink: string;
 }
 
-const { avatar, name, subtitle, description, github, twitter, linkedin, bluesky, mastodon, website, profileLink } = Astro.props;
+const { avatar, name, subtitle, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink } = Astro.props;
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 
 // TODO We might want to migrate the Hosts to a "People" Content Collection
@@ -36,15 +39,16 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 		</span>
 		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
 		<div class="flex items-center justify-center">
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
-				<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
-			</a>
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
-				<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
-			</a>
-			<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
-				<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
-			</a>
+			{github && (
+				<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
+					<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
+				</a>
+			)}
+			{twitter && (
+				<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
+					<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
+				</a>
+			)}
 			{bluesky && (
 				<a class="inline-block mr-6 hover:opacity-80" href={bluesky}>
 					<img src="/images/brands/bluesky-gray.svg" alt={`${name} auf Bluesky`} />
@@ -55,9 +59,31 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 					<img src="/images/brands/mastodon-gray.svg" alt={`${name} auf Mastodon`} />
 				</a>
 			)}
-			<a class="inline-block hover:opacity-80" href={website}>
-				<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
-			</a>
+			{threads && (
+				<a class="inline-block mr-6 hover:opacity-80" href={threads}>
+					<img src="/images/brands/threads.svg" alt={`${name} auf Threads`} class="h-5 grayscale opacity-60" />
+				</a>
+			)}
+			{instagram && (
+				<a class="inline-block mr-6 hover:opacity-80" href={instagram}>
+					<img src="/images/brands/instagram.svg" alt={`${name} auf Instagram`} class="h-5 grayscale opacity-60" />
+				</a>
+			)}
+			{linkedin && (
+				<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
+					<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
+				</a>
+			)}
+			{youtube && (
+				<a class="inline-block mr-6 hover:opacity-80" href={youtube}>
+					<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5 grayscale opacity-60" />
+				</a>
+			)}
+			{website && (
+				<a class="inline-block hover:opacity-80" href={website}>
+					<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
+				</a>
+			)}
 		</div>
 	</div>
 </div>

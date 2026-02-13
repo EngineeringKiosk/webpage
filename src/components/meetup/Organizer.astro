@@ -6,14 +6,18 @@ export interface Props {
 	name: string;
 	subtitle: string;
 	description: string;
-	github: string;
-	twitter: string;
-	linkedin: string;
-	website: string;
+	github?: string;
+	twitter?: string;
+	linkedin?: string;
+	bluesky?: string;
+	mastodon?: string;
+	threads?: string;
+	instagram?: string;
+	youtube?: string;
+	website?: string;
 }
-// TODO Add mastodon
 
-const { avatar, name, subtitle, description, github, twitter, linkedin, website } = Astro.props;
+const { avatar, name, subtitle, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website } = Astro.props;
 const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 ---
 
@@ -45,9 +49,44 @@ const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 				)
 			}
 			{
+				bluesky && (
+					<a class="inline-block mr-6 hover:opacity-80" href={bluesky}>
+						<img src="/images/brands/bluesky.svg" alt={`${name} auf Bluesky`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				mastodon && (
+					<a class="inline-block mr-6 hover:opacity-80" href={mastodon}>
+						<img src="/images/brands/mastodon.svg" alt={`${name} auf Mastodon`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				threads && (
+					<a class="inline-block mr-6 hover:opacity-80" href={threads}>
+						<img src="/images/brands/threads.svg" alt={`${name} auf Threads`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
+				instagram && (
+					<a class="inline-block mr-6 hover:opacity-80" href={instagram}>
+						<img src="/images/brands/instagram.svg" alt={`${name} auf Instagram`} class="h-5 grayscale opacity-60" />
+					</a>
+				)
+			}
+			{
 				linkedin && (
 					<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
 						<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
+					</a>
+				)
+			}
+			{
+				youtube && (
+					<a class="inline-block mr-6 hover:opacity-80" href={youtube}>
+						<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5 grayscale opacity-60" />
 					</a>
 				)
 			}
