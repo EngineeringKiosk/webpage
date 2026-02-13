@@ -4,7 +4,7 @@ import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import { Image } from "astro:assets";
 
-import { formatDateWithoutWeekday } from '../../scripts/date.js';
+import { formatDateWithWeekdayAndOrdinal } from '../../scripts/date.js';
 import { createMeetupHelpers } from '../../scripts/meetups.js';
 
 const { getNextMeetup: getNextMeetupAlps } = await createMeetupHelpers('meetup-alps');
@@ -55,7 +55,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 									<p class="mb-4 text-coolGray-500 font-medium">Innsbruck, Austria</p>
 									{nextMeetupAlps ? (
 										<p class="mb-6 text-coolGray-500">
-											Next meetup: <span class="font-bold">{formatDateWithoutWeekday(nextMeetupAlps.date, 'en-US')}</span> @ {nextMeetupAlps.location.name}
+											Next meetup: <span class="font-bold">{formatDateWithWeekdayAndOrdinal(nextMeetupAlps.date)}</span> @ {nextMeetupAlps.location.name}
 										</p>
 									) : (
 										<p class="mb-6 text-coolGray-500">Next meetup date will be announced soon.</p>
@@ -77,7 +77,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 									<p class="mb-4 text-coolGray-500 font-medium">Rhine-Ruhr, Germany</p>
 									{nextMeetupRhineRuhr ? (
 										<p class="mb-6 text-coolGray-500">
-											Next meetup: <span class="font-bold">{formatDateWithoutWeekday(nextMeetupRhineRuhr.date, 'en-US')}</span> @ {nextMeetupRhineRuhr.location.name}
+											Next meetup: <span class="font-bold">{formatDateWithWeekdayAndOrdinal(nextMeetupRhineRuhr.date)}</span> @ {nextMeetupRhineRuhr.location.name}
 										</p>
 									) : (
 										<p class="mb-6 text-coolGray-500">Next meetup date will be announced soon.</p>
