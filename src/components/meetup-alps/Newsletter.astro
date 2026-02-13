@@ -11,7 +11,7 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
 	<div class="container px-4 mx-auto w-full md:w-1/2">
 		<div class="mb-16 text-center">
 			<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Interested in upcoming meetups?</h3>
-			<p>
+			<p class="text-lg md:text-xl text-coolGray-500 font-medium">
 				Register to our Engineering Kiosk Alps newsletter and receive emails about upcoming meetups.<br />
 				No worries, we won't spam you and you can unsubscribe at any time.
 			</p>
@@ -62,7 +62,7 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
 	<div class="container px-4 mx-auto w-full md:w-1/2">
 		<div class="mb-16 text-center">
 			<h4 class="mb-4 text-xl md:text-xl leading-tight text-coolGray-900 font-bold tracking-tight">Upcoming tentative meetups:</h4>
-			<p>
+			<p class="text-lg md:text-xl text-coolGray-500 font-medium">
 				{dates.map((date) =>
 					<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/>
 				)}
