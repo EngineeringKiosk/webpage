@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-export interface Props {
+export interface Talk {
 	avatar: string;
 	name: string;
 	title: string;
@@ -17,7 +17,11 @@ export interface Props {
 	language?: string;
 }
 
-const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides, language } = Astro.props;
+export interface Props {
+	talk: Talk;
+}
+
+const { avatar, name, title, description, github, twitter, linkedin, mastodon, youtube, website, bio, slides, language } = Astro.props.talk;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');

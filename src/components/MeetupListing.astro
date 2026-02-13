@@ -36,7 +36,7 @@ const { headline, meetupsToShow, archive, meetupName = 'Alps' } = Astro.props
 
 					<div class="flex flex-wrap justify-center -mx-4">
 						{meetup.talks.map((talk, j) => (
-							<Talk avatar={talk.avatar} name={talk.name} title={talk.title} description={talk.description} bio={talk.bio} github={talk.github} twitter={talk.twitter} linkedin={talk.linkedin} website={talk.website} slides={talk.slides} mastodon={talk.mastodon} youtube={talk.youtube} language={talk.language} />
+							<Talk talk={talk} />
 						))}
 					</div>
 					{!archive && (
