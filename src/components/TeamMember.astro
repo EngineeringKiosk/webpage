@@ -7,7 +7,6 @@ export interface Props {
 	avatar?: string;
 	name?: string;
 	subtitle?: string;
-	description?: string;
 	github?: string;
 	x?: string;
 	linkedin?: string;
@@ -21,7 +20,7 @@ export interface Props {
 }
 
 const { memberKey, ...overrides } = Astro.props;
-const { avatar, name, subtitle, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink, badges = [] } = resolveTeamMember(memberKey, overrides);
+const { avatar, name, subtitle, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink, badges = [] } = resolveTeamMember(memberKey, overrides);
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 ---
 
@@ -61,10 +60,6 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 					</span>
 				))}
 			</div>
-		)}
-
-		{description && (
-			<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
 		)}
 
 		<div class="flex items-center justify-center">
