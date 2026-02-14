@@ -8,7 +8,7 @@ export interface Props {
 	name?: string;
 	subtitle?: string;
 	github?: string;
-	twitter?: string;
+	x?: string;
 	linkedin?: string;
 	bluesky?: string;
 	mastodon?: string;
@@ -19,7 +19,7 @@ export interface Props {
 }
 
 const { memberKey, ...overrides } = Astro.props;
-const { avatar, name, subtitle, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website } = resolveTeamMember(memberKey, overrides);
+const { avatar, name, subtitle, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website } = resolveTeamMember(memberKey, overrides);
 const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 ---
 
@@ -43,9 +43,9 @@ const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 				)
 			}
 			{
-				twitter && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
-						<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
+				x && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${x}`}>
+						<img src="/images/brands/x.svg" alt={`${name} auf X`} />
 					</a>
 				)
 			}

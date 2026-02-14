@@ -20,7 +20,7 @@ talks:
     description: 'One of the hassles when writing any kind of component for the browser is how to style them, so that they fit well into the currently used design system. Currently the only approach I’m aware of, is to create one special theme for every CSS toolkit to support. This approach is time consuming and does not scale well. I therefore developed a technique to reuse the current design and apply it to any web component. This enables frontend developers to focus on the functionality of their components without having to continuously adopt their styles to the never ending stream of upcoming CSS toolkits.'
     bio: 'Jacob Rief graduated with a master in physics from the University of Innsbruck. He then worked for many years as a software developer, system architect and consultant for different companies, before returning to his Alma Mater in 2020. There he’s in charge of evolving the main Content Management System of the university. Jacob is also an eager Open Source contributor and maintainer of a few popular third party packages around the Django ecosystem. His main focus is on Django, Python, JavaScript and web development in general.'
     github: 'jrief'
-    twitter: 'jacobrief'
+    x: 'jacobrief'
     mastodon: 'https://fosstodon.org/@jrief'
     slides: '2405-jacob-rief-style-pilfering.pdf'
 speakers:

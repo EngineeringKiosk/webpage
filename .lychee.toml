@@ -1,4 +1,4 @@
 exclude_mail = true
 exclude_path = ["./src/content/podcast/"]
-# thanks Elon
-exclude = [ '.*twitter\.com.*' ]
+# x.com often blocks automated link checkers
+exclude = [ '.*x\.com.*' ]

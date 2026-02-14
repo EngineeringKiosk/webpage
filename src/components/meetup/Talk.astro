@@ -7,7 +7,7 @@ export interface Talk {
 	title: string;
 	description: string;
 	github?: string;
-	twitter?: string;
+	x?: string;
 	linkedin?: string;
 	bluesky?: string;
 	mastodon?: string;
@@ -24,7 +24,7 @@ export interface Props {
 	talk: Talk;
 }
 
-const { avatar, name, title, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
+const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');
@@ -60,9 +60,9 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 				)
 			}
 			{
-				twitter && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${twitter}`}>
-						<img src="/images/brands/twitter.svg" alt={`${name} auf twitter`} />
+				x && (
+					<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${x}`}>
+						<img src="/images/brands/x.svg" alt={`${name} auf X`} />
 					</a>
 				)
 			}
