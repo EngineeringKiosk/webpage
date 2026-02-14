@@ -4,8 +4,11 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+import { getTeamMember } from '../../scripts/team-members.js';
 
 import imageAndyGrunwald from "../../images/teams/andy-grunwald-profile.jpg";
+
+const member = getTeamMember('andy-grunwald');
 
 let title = 'Andy Grunwald, Podcast Host - Engineering Kiosk';
 let description = 'Engineering Manager im Bereich Site Reliability Engineering und Software Engineer mit einem Fokus auf Backend-Systeme, Infrastruktur und Engineering Kultur aus Duisburg.';
@@ -26,19 +29,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 					<div class="flex flex-wrap lg:items-start -mx-4">
 						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
 							<div class="flex items-center mb-4">
-								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Der aus dem Ruhrpott</span>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://github.com/andygrunwald">
-									<img src="/images/brands/github-gray.svg" alt="Andy Grunwald auf GitHub" />
-								</a>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://twitter.com/andygrunwald">
-									<img src="/images/brands/twitter.svg" alt="Andy Grunwald auf twitter" />
-								</a>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://linkedin.com/in/andy-grunwald-09aa265a">
-									<img src="/images/brands/linkedin.svg" alt="Andy Grunwald auf LinkedIn" />
-								</a>
-								<a class="inline-block hover:opacity-80" href="https://andygrunwald.com/">
-									<img src="/images/elements/icon-website.svg" height="33" width="33" alt="Website von Andy Grunwald" />
-								</a>
+								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> {member.subtitle}</span>
+								{member.social.github && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${member.social.github}`}>
+										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
+									</a>
+								)}
+								{member.social.twitter && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${member.social.twitter}`}>
+										<img src="/images/brands/twitter.svg" alt={`${member.name} auf twitter`} />
+									</a>
+								)}
+								{member.social.bluesky && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.bluesky}>
+										<img src="/images/brands/bluesky-gray.svg" alt={`${member.name} auf Bluesky`} />
+									</a>
+								)}
+								{member.social.mastodon && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.mastodon}>
+										<img src="/images/brands/mastodon-gray.svg" alt={`${member.name} auf Mastodon`} />
+									</a>
+								)}
+								{member.social.linkedin && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${member.social.linkedin}`}>
+										<img src="/images/brands/linkedin.svg" alt={`${member.name} auf LinkedIn`} />
+									</a>
+								)}
+								{member.social.website && (
+									<a class="inline-block hover:opacity-80" href={member.social.website}>
+										<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${member.name}`} />
+									</a>
+								)}
 							</div>
 							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Andy Grunwald</h1>
 							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">

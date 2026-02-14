@@ -4,8 +4,11 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+import { getTeamMember } from '../../scripts/team-members.js';
 
 import imageWolfgangGassler from "../../images/teams/wolfgang-gassler-profile.jpg";
+
+const member = getTeamMember('wolfgang-gassler');
 
 let title = 'Wolfgang Gassler, Podcast Host - Engineering Kiosk';
 let description = 'Freelancer und Consultant mit einem Interesse in Menschen, Tech-Kultur, Datenbank und Skalierung, Product Entwicklung und Usability sowie Recommender Systems aus Innsbruck.';
@@ -33,19 +36,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						</div>
 						<div class="w-full md:w-1/2 px-4">
 							<div class="flex items-center mb-4">
-								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Der aus den Bergen</span>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://github.com/woolfg">
-									<img src="/images/brands/github-gray.svg" alt="Wolfgang Gassler auf GitHub" />
-								</a>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://twitter.com/schafele">
-									<img src="/images/brands/twitter.svg" alt="Wolfgang Gassler auf twitter" />
-								</a>
-								<a class="inline-block mr-6 hover:opacity-80" href="https://linkedin.com/in/wolfganggassler">
-									<img src="/images/brands/linkedin.svg" alt="Wolfgang Gassler auf LinkedIn" />
-								</a>
-								<a class="inline-block hover:opacity-80" href="https://wolfgang.gassler.org/">
-									<img src="/images/elements/icon-website.svg" height="33" width="33" alt="Website von Wolfgang Gassler" />
-								</a>
+								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> {member.subtitle}</span>
+								{member.social.github && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${member.social.github}`}>
+										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
+									</a>
+								)}
+								{member.social.twitter && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${member.social.twitter}`}>
+										<img src="/images/brands/twitter.svg" alt={`${member.name} auf twitter`} />
+									</a>
+								)}
+								{member.social.bluesky && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.bluesky}>
+										<img src="/images/brands/bluesky-gray.svg" alt={`${member.name} auf Bluesky`} />
+									</a>
+								)}
+								{member.social.mastodon && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.mastodon}>
+										<img src="/images/brands/mastodon-gray.svg" alt={`${member.name} auf Mastodon`} />
+									</a>
+								)}
+								{member.social.linkedin && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${member.social.linkedin}`}>
+										<img src="/images/brands/linkedin.svg" alt={`${member.name} auf LinkedIn`} />
+									</a>
+								)}
+								{member.social.website && (
+									<a class="inline-block hover:opacity-80" href={member.social.website}>
+										<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${member.name}`} />
+									</a>
+								)}
 							</div>
 							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Wolfgang Gassler</h1>
 							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">

@@ -1,11 +1,13 @@
 ---
 import { Image } from "astro:assets";
+import { resolveTeamMember } from '../../scripts/team-members.js';
 
 export interface Props {
-	avatar: string;
-	name: string;
-	subtitle: string;
-	description: string;
+	memberKey: string;
+	avatar?: string;
+	name?: string;
+	subtitle?: string;
+	description?: string;
 	github?: string;
 	twitter?: string;
 	linkedin?: string;
@@ -17,7 +19,8 @@ export interface Props {
 	website?: string;
 }
 
-const { avatar, name, subtitle, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website } = Astro.props;
+const { memberKey, ...overrides } = Astro.props;
+const { avatar, name, subtitle, description, github, twitter, linkedin, bluesky, mastodon, threads, instagram, youtube, website } = resolveTeamMember(memberKey, overrides);
 const imageAvatar = (await import(`../../images/teams/${avatar}.jpg`)).default
 ---
 

@@ -7,19 +7,8 @@ export interface Props {
 	description: string;
 	email: string;
 	members: {
-		avatar: string;
-		name: string;
-		subtitle: string;
-		description: string;
-		github?: string;
-		twitter?: string;
-		linkedin?: string;
-		bluesky?: string;
-		mastodon?: string;
-		threads?: string;
-		instagram?: string;
-		youtube?: string;
-		website?: string;
+		memberKey: string;
+		[key: string]: string | undefined;
 	}[];
 }
 
@@ -37,21 +26,7 @@ const { badge, title, description, email, members } = Astro.props;
 
 		<div class="flex flex-wrap justify-center -mx-4">
 			{members.map((member) => (
-				<Organizer
-					avatar={member.avatar}
-					name={member.name}
-					subtitle={member.subtitle}
-					description={member.description}
-					github={member.github}
-					twitter={member.twitter}
-					linkedin={member.linkedin}
-					bluesky={member.bluesky}
-					mastodon={member.mastodon}
-					threads={member.threads}
-					instagram={member.instagram}
-					youtube={member.youtube}
-					website={member.website}
-				/>
+				<Organizer {...member} />
 			))}
 		</div>
 	</div>
