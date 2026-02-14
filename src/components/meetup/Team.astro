@@ -1,5 +1,5 @@
 ---
-import Organizer from './Organizer.astro'
+import TeamMember from '../TeamMember.astro'
 
 export interface Props {
 	badge: string;
@@ -26,7 +26,7 @@ const { badge, title, description, email, members } = Astro.props;
 
 		<div class="flex flex-wrap justify-center -mx-4">
 			{members.map((member) => (
-				<Organizer {...member} />
+				<TeamMember {...member} />
 			))}
 		</div>
 	</div>
