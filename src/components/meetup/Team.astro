@@ -6,14 +6,13 @@ export interface Props {
 	title: string;
 	description: string;
 	email: string;
-	memberBadges?: string[];
 	members: {
 		memberKey: string;
 		[key: string]: string | undefined;
 	}[];
 }
 
-const { badge, title, description, email, memberBadges = [], members } = Astro.props;
+const { badge, title, description, email, members } = Astro.props;
 ---
 
 <section class="py-4 md:py-24 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
@@ -27,7 +26,7 @@ const { badge, title, description, email, memberBadges = [], members } = Astro.p
 
 		<div class="flex flex-wrap justify-center -mx-4">
 			{members.map((member) => (
-				<TeamMember {...member} badges={memberBadges} />
+				<TeamMember {...member} />
 			))}
 		</div>
 	</div>

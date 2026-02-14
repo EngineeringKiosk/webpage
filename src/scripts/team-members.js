@@ -18,6 +18,6 @@ export function getTeamMember(memberKey) {
  */
 export function resolveTeamMember(memberKey, overrides = {}) {
   const member = getTeamMember(memberKey);
-  const { social, ...rest } = member;
-  return { ...rest, ...social, ...overrides };
+  const { social, badges = [], ...rest } = member;
+  return { ...rest, ...social, badges, ...overrides };
 }

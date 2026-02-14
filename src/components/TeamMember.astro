@@ -4,7 +4,6 @@ import { resolveTeamMember } from '../scripts/team-members.js';
 
 export interface Props {
 	memberKey: string;
-	badges?: string[];
 	avatar?: string;
 	name?: string;
 	subtitle?: string;
@@ -21,8 +20,8 @@ export interface Props {
 	profileLink?: string;
 }
 
-const { memberKey, badges = [], ...overrides } = Astro.props;
-const { avatar, name, subtitle, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink } = resolveTeamMember(memberKey, overrides);
+const { memberKey, ...overrides } = Astro.props;
+const { avatar, name, subtitle, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink, badges = [] } = resolveTeamMember(memberKey, overrides);
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 ---
 
