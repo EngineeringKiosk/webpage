@@ -70,7 +70,7 @@ const meetupSchema = ({ image }) =>
 				title: z.string(),
 				description: z.string(),
 				github: z.string().optional(),
-				twitter: z.string().optional(),
+				x: z.string().optional(),
 				// string or array of strings
 				linkedin: z.union([z.string(), z.array(z.string())]).optional(),
 				bluesky: z.string().optional(),

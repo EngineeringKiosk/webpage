@@ -23,7 +23,7 @@ let content_image = new URL(frontmatter.image.src, Astro.site.href).href;
 let title = ''.concat(frontmatter.title, ' - Engineering Kiosk');
 let encodedUrl = encodeURI(canonicalURL);
 
-// We need to replace #, because this is treated as a twitter hastag
+// We need to replace #, because this is treated as an X hashtag
 let social_text = 'Bock auf nen guten Software Engineering Podcast? Hör doch mal in die Episode "' + frontmatter.title.replace('#', '') + '" rein';
 let encoded_social_text = encodeURI(social_text);
 
@@ -316,13 +316,13 @@ const html = (await Astro.slots.render('default'))
 										</svg>
 									</a>
 									<a
-										title={`Teile die Episode ${frontmatter.title} auf twitter`}
+										title={`Teile die Episode ${frontmatter.title} auf X`}
 										class="inline-flex mr-2 h-9 w-9 items-center justify-center text-coolGray-500 border border-coolGray-200 hover:border-coolGray-300 rounded-md shadow-md transition duration-200"
-										href={`https://twitter.com/intent/tweet?text=${encoded_social_text}&url=${encodedUrl}&via=EngKiosk`}
+										href={`https://x.com/intent/post?text=${encoded_social_text}&url=${encodedUrl}&via=EngKiosk`}
 									>
-										<svg width="18" height="14" viewbox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
-												d="M17.3333 1.83339C16.7069 2.10513 16.0445 2.28477 15.3667 2.36672C16.0818 1.93949 16.6177 1.26737 16.875 0.475053C16.203 0.875105 15.4673 1.15697 14.7 1.30839C14.1871 0.752196 13.5041 0.381966 12.7582 0.255762C12.0122 0.129558 11.2455 0.254518 10.5782 0.611044C9.91087 0.96757 9.38078 1.5355 9.07104 2.22575C8.76129 2.916 8.68941 3.68954 8.86667 4.42505C7.50786 4.35632 6.1787 4.00251 4.96555 3.3866C3.75239 2.77069 2.68237 1.90646 1.825 0.850052C1.52428 1.37519 1.36627 1.9699 1.36667 2.57505C1.3656 3.13704 1.50352 3.69057 1.76813 4.18636C2.03275 4.68215 2.41585 5.10481 2.88333 5.41672C2.33998 5.40194 1.80824 5.25613 1.33333 4.99172V5.03339C1.33741 5.82079 1.61333 6.58263 2.11443 7.19002C2.61553 7.79742 3.31105 8.21309 4.08333 8.36672C3.78605 8.45719 3.4774 8.50489 3.16667 8.50839C2.95158 8.50587 2.73702 8.48637 2.525 8.45005C2.74493 9.1274 3.17052 9.71934 3.74256 10.1435C4.31461 10.5677 5.00465 10.803 5.71667 10.8167C4.51434 11.7628 3.0299 12.2791 1.5 12.2834C1.22145 12.2843 0.943114 12.2676 0.666668 12.2334C2.22869 13.2419 4.04901 13.7773 5.90833 13.7751C7.19141 13.7884 8.46428 13.5459 9.6526 13.0618C10.8409 12.5777 11.9209 11.8616 12.8293 10.9555C13.7378 10.0493 14.4566 8.97121 14.9438 7.78414C15.431 6.59707 15.6767 5.32483 15.6667 4.04172C15.6667 3.90005 15.6667 3.75005 15.6667 3.60005C16.3206 3.11239 16.8846 2.51457 17.3333 1.83339V1.83339Z"
+												d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
 												fill="currentColor"></path>
 										</svg>
 									</a>

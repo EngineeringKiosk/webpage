@@ -35,9 +35,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
 									</a>
 								)}
-								{member.social.twitter && (
-									<a class="inline-block mr-6 hover:opacity-80" href={`https://twitter.com/${member.social.twitter}`}>
-										<img src="/images/brands/twitter.svg" alt={`${member.name} auf twitter`} />
+								{member.social.x && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${member.social.x}`}>
+										<img src="/images/brands/x.svg" alt={`${member.name} auf X`} />
 									</a>
 								)}
 								{member.social.bluesky && (

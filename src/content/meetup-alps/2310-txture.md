@@ -11,7 +11,7 @@ talks:
     bio: 'Software Developer and Co-Founder of AboutBits'
     title: 'Decentralization of infrastructure and DevOps tasks to the whole team'
     description: 'In recent years, many companies have started to document and automate their infrastructure in the cloud using infrastructure as code. However, the responsibility and execution remained part of the operations team. In this talk, I will show how you can hand over certain tasks to the developers and provide them full transparency, but without neglecting the topic of security. We will talk about tools like Terraform, Atlantis, 1Password Connect and many more.'
-    twitter: 'alex__lanz'
+    x: 'alex__lanz'
     linkedin: 'alex-lanz'
     website: 'https://aboutbits.it'
     slides: '2310-alex-lanz.pdf'
