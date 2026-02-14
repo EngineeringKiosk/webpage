@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
-import HostPreview from '../components/HostPreview.astro';
+import TeamMember from '../components/TeamMember.astro';
 import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
@@ -259,9 +259,9 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
-						<HostPreview memberKey="andy-grunwald" />
+						<TeamMember memberKey="andy-grunwald" badges={["Podcast Host", "Meetup Organizer"]} />
 
-						<HostPreview memberKey="wolfgang-gassler" />
+						<TeamMember memberKey="wolfgang-gassler" badges={["Podcast Host", "Meetup Organizer"]} />
 					</div>
 				</div>
 			</section>

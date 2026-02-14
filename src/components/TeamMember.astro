@@ -4,6 +4,7 @@ import { resolveTeamMember } from '../scripts/team-members.js';
 
 export interface Props {
 	memberKey: string;
+	badges?: string[];
 	avatar?: string;
 	name?: string;
 	subtitle?: string;
@@ -20,25 +21,53 @@ export interface Props {
 	profileLink?: string;
 }
 
-const { memberKey, ...overrides } = Astro.props;
+const { memberKey, badges = [], ...overrides } = Astro.props;
 const { avatar, name, subtitle, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, profileLink } = resolveTeamMember(memberKey, overrides);
 const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 ---
 
-<div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-10 hostpreview">
+<div class="w-full sm:w-1/2 md:w-1/3 px-4 mb-10 hostpreview">
 	<div class="h-full py-8 px-10 bg-white rounded-md text-center">
-		<a href={profileLink}>
-			<Image class="w-24 h-24 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} />
-		</a>
-		<a href={profileLink}>
+		{profileLink ? (
+			<a href={profileLink}>
+				<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} />
+			</a>
+		) : (
+			<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} />
+		)}
+
+		{profileLink ? (
+			<a href={profileLink}>
+				<h2 class="mb-2 text-2xl md:text-3xl leading-tight font-semibold">
+					{name}
+				</h2>
+			</a>
+		) : (
 			<h2 class="mb-2 text-2xl md:text-3xl leading-tight font-semibold">
 				{name}
 			</h2>
-		</a>
-		<span class="inline-block mb-6 text-lg font-medium text-yellow-500">
-			{subtitle}
-		</span>
-		<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+		)}
+
+		{subtitle && (
+			<span class="inline-block mb-4 text-lg font-medium text-yellow-500">
+				{subtitle}
+			</span>
+		)}
+
+		{badges.length > 0 && (
+			<div class="mb-4 flex flex-wrap justify-center gap-2">
+				{badges.map((badge) => (
+					<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full">
+						{badge}
+					</span>
+				))}
+			</div>
+		)}
+
+		{description && (
+			<p class="mb-8 text-coolGray-500 font-medium description" set:html={description} />
+		)}
+
 		<div class="flex items-center justify-center">
 			{github && (
 				<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>

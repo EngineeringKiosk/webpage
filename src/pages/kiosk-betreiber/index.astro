@@ -2,7 +2,7 @@
 import Footer from '../../components/Footer.astro';
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
-import HostPreview from '../../components/HostPreview.astro';
+import TeamMember from '../../components/TeamMember.astro';
 
 let title = 'Kiosk-Betreiber - Engineering Kiosk';
 let description = "Wer sind eigentich die Gesichter hinter'm Engineering Kiosk? Wer macht's? Wer brabbelt da die ganze Zeit? Wer hält den Kiosk am Laufem?";
@@ -28,9 +28,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
-						<HostPreview memberKey="andy-grunwald" />
+						<TeamMember memberKey="andy-grunwald" badges={["Podcast Host", "Meetup Organizer"]} />
 
-						<HostPreview memberKey="wolfgang-gassler" />
+						<TeamMember memberKey="wolfgang-gassler" badges={["Podcast Host", "Meetup Organizer"]} />
 					</div>
 				</div>
 			</section>
