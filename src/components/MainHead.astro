@@ -7,9 +7,15 @@ export interface Props {
 	image?: string;
 	canonicalURL?: string | URL;
 	ogType?: string;
+	ogImageAlt?: string;
+	ogImageWidth?: number;
+	ogImageHeight?: number;
+	profileFirstName?: string;
+	profileLastName?: string;
+	jsonLd?: Record<string, unknown>;
 }
 
-const { title, description, image, canonicalURL, ogType } = Astro.props as Props;
+const { title, description, image, canonicalURL, ogType, ogImageAlt, ogImageWidth, ogImageHeight, profileFirstName, profileLastName, jsonLd } = Astro.props as Props;
 
 let ogTypeValue = 'website';
 if (ogType) {
@@ -51,6 +57,12 @@ if (ogType) {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 {image && <meta property="og:image" content={new URL(image, canonicalURL)} />}
+<meta property="og:site_name" content="Engineering Kiosk" />
+{ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+{ogImageWidth && <meta property="og:image:width" content={String(ogImageWidth)} />}
+{ogImageHeight && <meta property="og:image:height" content={String(ogImageHeight)} />}
+{profileFirstName && <meta property="profile:first_name" content={profileFirstName} />}
+{profileLastName && <meta property="profile:last_name" content={profileLastName} />}
 
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
 <meta property="twitter:domain" content={Astro.site.host} />
@@ -59,5 +71,7 @@ if (ogType) {
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 {image && <meta name="twitter:image" content={new URL(image, canonicalURL)} />}
+
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
 <script src="/js/main.js" is:inline></script>
