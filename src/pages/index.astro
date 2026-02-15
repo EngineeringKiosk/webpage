@@ -9,7 +9,7 @@ import teamMembers from '../data/team-members.json';
 import PodcastEpisodeListing from '../components/PodcastEpisodeListing.astro';
 import { URLify } from '../scripts/urlify.js';
 import { cutText } from '../scripts/strings.js';
-import { formatDateWithoutWeekday } from '../scripts/date.js';
+import { formatDateWithoutWeekday, formatDateWithWeekdayAndOrdinal } from '../scripts/date.js';
 import { createMeetupHelpers } from '../scripts/meetups.js';
 import AnnouncementBar from '../components/AnnouncementBar.astro';
 
@@ -59,7 +59,7 @@ if (nextMeetupAlps && nextMeetupAlps.date) {
 	showAnnouncementBarEndAlps = new Date(nextMeetupAlps.date);
 	showAnnouncementBarStartAlps.setDate(showAnnouncementBarStartAlps.getDate() - showAnnouncementBarDays);
 	showAnnouncementBarEndAlps.setHours(showAnnouncementBarEndAlps.getHours() + 2);
-	nextMeetupDateAlps = nextMeetupAlps.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+	nextMeetupDateAlps = formatDateWithWeekdayAndOrdinal(nextMeetupAlps.date);
 }
 
 const { getNextMeetup: getNextMeetupRhineRuhr } = await createMeetupHelpers('meetup-rhine-ruhr');
@@ -73,7 +73,7 @@ if (nextMeetupRhineRuhr && nextMeetupRhineRuhr.date) {
 	showAnnouncementBarEndRhineRuhr = new Date(nextMeetupRhineRuhr.date);
 	showAnnouncementBarStartRhineRuhr.setDate(showAnnouncementBarStartRhineRuhr.getDate() - showAnnouncementBarDays);
 	showAnnouncementBarEndRhineRuhr.setHours(showAnnouncementBarEndRhineRuhr.getHours() + 2);
-	nextMeetupDateRhineRuhr = nextMeetupRhineRuhr.date.toLocaleDateString('en-UK', { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+	nextMeetupDateRhineRuhr = formatDateWithWeekdayAndOrdinal(nextMeetupRhineRuhr.date);
 }
 
 let bestPerformingEpisodes = [
@@ -94,10 +94,10 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 		<div>
 			<Nav title={title} />
 
-			<AnnouncementBar message={`Upcoming Meetup in Innsbruck! ${nextMeetupDateAlps}: Engineering Kiosk Alps`}
+			<AnnouncementBar message={`🏔️ Upcoming Meetup in Innsbruck! ${nextMeetupDateAlps} – Sign up here`}
 			 link="/meetup/alps/" showStart={showAnnouncementBarStartAlps} showEnd={showAnnouncementBarEndAlps} id="announcementBarAlps" />
 
-			<AnnouncementBar message={`Upcoming Meetup in Rhine-Ruhr! ${nextMeetupDateRhineRuhr}: Engineering Kiosk Rhine-Ruhr`}
+			<AnnouncementBar message={`🌉 Upcoming Meetup in Rhine-Ruhr! ${nextMeetupDateRhineRuhr} – Sign up here`}
 			 link="/meetup/rhine-ruhr/" showStart={showAnnouncementBarStartRhineRuhr} showEnd={showAnnouncementBarEndRhineRuhr} id="announcementBarRhineRuhr" />
 
 			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
