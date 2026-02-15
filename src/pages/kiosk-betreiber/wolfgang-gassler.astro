@@ -5,6 +5,7 @@ import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { getTeamMember } from '../../scripts/team-members.js';
+import badgeLinks from '../../data/badge-links.json';
 
 import imageWolfgangGassler from "../../images/teams/wolfgang-gassler-profile.jpg";
 
@@ -35,8 +36,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							</div>
 						</div>
 						<div class="w-full md:w-1/2 px-4">
+							<div class="flex flex-wrap items-center gap-2 mb-4">
+								<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">{member.subtitle}</span>
+								{member.badges && member.badges.map((badge) => (
+									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full hover:bg-yellow-200 transition-colors">{badge}</a>
+								))}
+							</div>
 							<div class="flex items-center mb-4">
-								<span class="inline-block mr-6 py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> {member.subtitle}</span>
 								{member.social.github && (
 									<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${member.social.github}`}>
 										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
