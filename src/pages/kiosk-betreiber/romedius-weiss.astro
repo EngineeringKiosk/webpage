@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
+import badgeLinks from '../../data/badge-links.json';
+
+import imageRomediusWeiss from "../../images/teams/romedius-weiss-headshot.jpg";
+
+const member = getTeamMember('romedius-weiss');
+
+let title = 'Romedius Weiss, Meetup Organizer - Engineering Kiosk';
+let description = 'Backend Entwickler mit vielen Zwischenstationen. ';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sameAs = getSocialUrls(member);
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": member.name,
+	"url": canonicalURL.toString(),
+	"image": new URL("/images/teams/romedius-weiss-profile.jpg", Astro.site).toString(),
+	"sameAs": sameAs,
+};
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/teams/romedius-weiss-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt={member.name} ogImageWidth={imageRomediusWeiss.width} ogImageHeight={imageRomediusWeiss.height} profileFirstName={member.firstName} profileLastName={member.lastName} {jsonLd} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap lg:items-start -mx-4">
+						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+							<div class="relative mx-auto md:ml-0 max-w-max">
+								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+								<Image class="rounded-2xl" src={imageRomediusWeiss} alt={member.name} title={member.name} />
+							</div>
+						</div>
+						<div class="w-full md:w-1/2 px-4">
+							<div class="flex flex-wrap items-center gap-2 mb-4">
+								{member.subtitle && (
+									<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">{member.subtitle}</span>
+								)}
+								{member.badges && member.badges.map((badge) => (
+									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:bg-yellow-200 transition-colors">{badge}</a>
+								))}
+							</div>
+							<div class="flex items-center mb-4">
+								{member.social.github && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${member.social.github}`}>
+										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
+									</a>
+								)}
+								{member.social.x && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${member.social.x}`}>
+										<img src="/images/brands/x.svg" alt={`${member.name} auf X`} />
+									</a>
+								)}
+								{member.social.bluesky && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.bluesky}>
+										<img src="/images/brands/bluesky-gray.svg" alt={`${member.name} auf Bluesky`} />
+									</a>
+								)}
+								{member.social.mastodon && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.mastodon}>
+										<img src="/images/brands/mastodon-gray.svg" alt={`${member.name} auf Mastodon`} />
+									</a>
+								)}
+								{member.social.linkedin && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${member.social.linkedin}`}>
+										<img src="/images/brands/linkedin.svg" alt={`${member.name} auf LinkedIn`} />
+									</a>
+								)}
+								{member.social.website && (
+									<a class="inline-block hover:opacity-80" href={member.social.website}>
+										<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${member.name}`} />
+									</a>
+								)}
+							</div>
+							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Romedius Weiss</h1>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								Hat mit 10 beschlossen Informatiker zu werden und es nie bereut. Aktuell als Backend Engineer / Senior Consultant für <a href="https://www.reply.com/open-reply-germany/de" class="underline hover:no-underline">Open Reply GmbH</a> am Weg.
+							</p>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								In der Freizeit sammelt Romedius Vereine und ist im <a href="https://www.it-syndikat.org" class="underline hover:no-underline">IT-Syndikat</a> als Sozialtierchen aktiv (Veranstaltungsorganisation + der der immer grüßt und Führungen gibt) und im <a href="https://www.cunst.net" class="underline hover:no-underline">Cunst&Co</a> ab und an am Siebdrucken. Romedius hilft gerne bei <a href="https://repaircafe-tirol.at/" class="underline hover:no-underline">Repaircafes</a> mit und ist im September oft beim <a href="https://schmiedehallein.com/" class="underline hover:no-underline">Medienkunstfestival Schmiede</a> anzutreffen.
+							</p>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								Wenn der Menschenkontakt wieder mal zu viel wird findet man ihn im Garten oder hinterm Kochtopf.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>
