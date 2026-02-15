@@ -24,7 +24,7 @@ export async function GET(context) {
 
 	return rss({
 		title: 'Engineering Kiosk',
-		description: 'Der deutschsprachige Software-Engineering-Podcast mit Wolfgang Gassler und Andy Grunwald rund um die Themen Engineering-Kultur, Open Source und Technologie.',
+		description: 'Der deutschsprachige Software-Engineering-Podcast, Tech-Meetups und Discord-Community rund um die Themen Engineering-Kultur, Open Source und Technologie.',
 		site: context.site,
 		items: rssItems,
 		customData: `<language>de-de</language>`,
