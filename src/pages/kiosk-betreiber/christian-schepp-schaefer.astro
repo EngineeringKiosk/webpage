@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import { getTeamMember } from '../../scripts/team-members.js';
+import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
 import badgeLinks from '../../data/badge-links.json';
 
 import imageSchepp from "../../images/teams/christian-schepp-schaefer-profile.jpg";
@@ -14,11 +14,20 @@ const member = getTeamMember('schepp');
 let title = 'Christian "Schepp" Schaefer, Meetup Organizer - Engineering Kiosk';
 let description = 'Freiberuflicher Frontend-Entwickler aus Düsseldorf mit Fokus auf modernem CSS, Barrierefreiheit sowie optimaler Lade- und Laufzeitperformance.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sameAs = getSocialUrls(member);
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": "Christian Schaefer",
+	"url": canonicalURL.toString(),
+	"image": new URL("/images/teams/christian-schepp-schaefer-profile.jpg", Astro.site).toString(),
+	"sameAs": sameAs,
+};
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/teams/christian-schepp-schaefer-profile.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/teams/christian-schepp-schaefer-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt="Christian Schepp Schaefer" ogImageWidth={imageSchepp.width} ogImageHeight={imageSchepp.height} profileFirstName="Christian" profileLastName="Schaefer" {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">

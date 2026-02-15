@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import { getTeamMember } from '../../scripts/team-members.js';
+import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
 import badgeLinks from '../../data/badge-links.json';
 
 import imageWolfgangGassler from "../../images/teams/wolfgang-gassler-profile.jpg";
@@ -14,11 +14,20 @@ const member = getTeamMember('wolfgang-gassler');
 let title = 'Wolfgang Gassler, Podcast Host - Engineering Kiosk';
 let description = 'Freelancer und Consultant mit einem Interesse in Menschen, Tech-Kultur, Datenbank und Skalierung, Product Entwicklung und Usability sowie Recommender Systems aus Innsbruck.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sameAs = getSocialUrls(member);
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": member.name,
+	"url": canonicalURL.toString(),
+	"image": new URL("/images/teams/wolfgang-gassler-profile.jpg", Astro.site).toString(),
+	"sameAs": sameAs,
+};
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/teams/wolfgang-gassler-profile.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/teams/wolfgang-gassler-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt="Wolfgang Gassler" ogImageWidth={imageWolfgangGassler.width} ogImageHeight={imageWolfgangGassler.height} profileFirstName="Wolfgang" profileLastName="Gassler" {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">

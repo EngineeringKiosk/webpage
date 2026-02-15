@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import { getTeamMember } from '../../scripts/team-members.js';
+import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
 import badgeLinks from '../../data/badge-links.json';
 
 import imageAndyGrunwald from "../../images/teams/andy-grunwald-profile.jpg";
@@ -14,11 +14,20 @@ const member = getTeamMember('andy-grunwald');
 let title = 'Andy Grunwald, Podcast Host - Engineering Kiosk';
 let description = 'Engineering Manager im Bereich Site Reliability Engineering und Software Engineer mit einem Fokus auf Backend-Systeme, Infrastruktur und Engineering Kultur aus Duisburg.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sameAs = getSocialUrls(member);
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": member.name,
+	"url": canonicalURL.toString(),
+	"image": new URL("/images/teams/andy-grunwald-profile.jpg", Astro.site).toString(),
+	"sameAs": sameAs,
+};
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/teams/andy-grunwald-profile.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/teams/andy-grunwald-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt="Andy Grunwald" ogImageWidth={imageAndyGrunwald.width} ogImageHeight={imageAndyGrunwald.height} profileFirstName="Andy" profileLastName="Grunwald" {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">

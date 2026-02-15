@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import { getTeamMember } from '../../scripts/team-members.js';
+import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
 import badgeLinks from '../../data/badge-links.json';
 
 import imageDarioTilgner from "../../images/teams/dario-tilgner-profile.jpg";
@@ -14,11 +14,20 @@ const member = getTeamMember('dario-tilgner');
 let title = 'Dario Tilgner, Meetup Organizer - Engineering Kiosk';
 let description = 'Head of Department IT, der bestehende Systeme kritisch hinterfragt und neben dem Job Meetups organisiert und Talks hält.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sameAs = getSocialUrls(member);
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": member.name,
+	"url": canonicalURL.toString(),
+	"image": new URL("/images/teams/dario-tilgner-profile.jpg", Astro.site).toString(),
+	"sameAs": sameAs,
+};
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/teams/dario-tilgner-profile.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/teams/dario-tilgner-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt="Dario Tilgner" ogImageWidth={imageDarioTilgner.width} ogImageHeight={imageDarioTilgner.height} profileFirstName="Dario" profileLastName="Tilgner" {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
