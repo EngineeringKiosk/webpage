@@ -39,7 +39,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="flex flex-wrap items-center gap-2 mb-4">
 								<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">{member.subtitle}</span>
 								{member.badges && member.badges.map((badge) => (
-									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full hover:bg-yellow-200 transition-colors">{badge}</a>
+									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:bg-yellow-200 transition-colors">{badge}</a>
 								))}
 							</div>
 							<div class="flex items-center mb-4">
