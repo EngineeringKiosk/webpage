@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { resolveTeamMember } from '../scripts/team-members.js';
+import badgeLinks from '../data/badge-links.json';
 
 export interface Props {
 	memberKey: string;
@@ -47,11 +48,18 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 
 		{badges.length > 0 && (
 			<div class="mb-4 flex flex-wrap justify-center gap-2">
-				{badges.map((badge) => (
-					<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full">
-						{badge}
-					</span>
-				))}
+				{badges.map((badge) => {
+					const badgeLink = badgeLinks[badge];
+					return badgeLink ? (
+						<a href={badgeLink} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full hover:bg-yellow-200 transition-colors">
+							{badge}
+						</a>
+					) : (
+						<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full">
+							{badge}
+						</span>
+					);
+				})}
 			</div>
 		)}
 
