@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getTeamMember } from '../../scripts/team-members.js';
+import badgeLinks from '../../data/badge-links.json';
+
+import imageSchepp from "../../images/teams/christian-schepp-schaefer-profile.jpg";
+
+const member = getTeamMember('schepp');
+
+let title = 'Christian "Schepp" Schaefer, Meetup Organizer - Engineering Kiosk';
+let description = 'Freiberuflicher Frontend-Entwickler aus Düsseldorf mit Fokus auf modernem CSS, Barrierefreiheit sowie optimaler Lade- und Laufzeitperformance.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/teams/christian-schepp-schaefer-profile.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="flex flex-wrap lg:items-start -mx-4">
+						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+							<div class="flex flex-wrap items-center gap-2 mb-4">
+								{member.subtitle && (
+									<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">{member.subtitle}</span>
+								)}
+								{member.badges && member.badges.map((badge) => (
+									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:bg-yellow-200 transition-colors">{badge}</a>
+								))}
+							</div>
+							<div class="flex items-center mb-4">
+								{member.social.github && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${member.social.github}`}>
+										<img src="/images/brands/github-gray.svg" alt={`${member.name} auf GitHub`} />
+									</a>
+								)}
+								{member.social.x && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${member.social.x}`}>
+										<img src="/images/brands/x.svg" alt={`${member.name} auf X`} />
+									</a>
+								)}
+								{member.social.bluesky && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.bluesky}>
+										<img src="/images/brands/bluesky-gray.svg" alt={`${member.name} auf Bluesky`} />
+									</a>
+								)}
+								{member.social.mastodon && (
+									<a class="inline-block mr-6 hover:opacity-80" href={member.social.mastodon}>
+										<img src="/images/brands/mastodon-gray.svg" alt={`${member.name} auf Mastodon`} />
+									</a>
+								)}
+								{member.social.linkedin && (
+									<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${member.social.linkedin}`}>
+										<img src="/images/brands/linkedin.svg" alt={`${member.name} auf LinkedIn`} />
+									</a>
+								)}
+								{member.social.website && (
+									<a class="inline-block hover:opacity-80" href={member.social.website}>
+										<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${member.name}`} />
+									</a>
+								)}
+							</div>
+							<h1 class="mb-6 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Christian &bdquo;Schepp&ldquo; Schaefer</h1>
+							<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
+								Christian Schaefer, genannt &bdquo;Schepp&ldquo;, ist ein freiberuflicher Frontend-Entwickler aus Düsseldorf. Statt sich ausschließlich auf JavaScript-Frameworks zu verlassen, arbeitet er bevorzugt mit klassischen, serverseitig gerenderten, komponentenbasierten Systemen. Sein Fokus liegt auf modernem CSS, Barrierefreiheit sowie optimaler Lade- und Laufzeitperformance.
+							</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
+								Gleichzeitig hat er einen eigenen clientseitigen Renderer entwickelt, der auf Twig.js, Web Workers, Redux und MorphDOM basiert. Neben seiner Arbeit für Kunden organisiert er Meetups wie das <a href="https://www.meetup.com/de-de/css-cafe/" class="underline hover:no-underline">CSS Café</a> und den Engineering Kiosk, richtet Konferenzen wie <a href="https://www.fronteers.nl/" class="underline hover:no-underline">Fronteers</a> aus und ist Co-Host des <a href="https://workingdraft.de/" class="underline hover:no-underline">Working Draft</a> Podcasts.
+							</p>
+						</div>
+						<div class="w-full md:w-1/2 px-4">
+							<div class="relative mx-auto md:mr-0 max-w-max">
+								<img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
+								<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
+								<Image class="rounded-2xl" src={imageSchepp} alt="Christian Schepp Schaefer" title="Christian Schepp Schaefer" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>
