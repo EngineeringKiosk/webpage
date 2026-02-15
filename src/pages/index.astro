@@ -26,8 +26,8 @@ import headerImageAndyWolfiLounge from "../images/headers/andy-grunwald-wolfgang
 import podcastInfo from '../data/podcast-info.json';
 import bestOfEpisodes from '../data/episodes-best-of.json';
 
-let title = 'Engineering Kiosk - Der Software-Engineering-Podcast';
-let description = 'Der deutschsprachige Software-Engineering-Podcast mit Wolfgang Gassler und Andy Grunwald rund um die Themen Engineering-Kultur, Open Source und Technologie.';
+let title = 'Engineering Kiosk - Podcast, Meetups + Community';
+let description = 'Der deutschsprachige Software-Engineering-Podcast, Tech-Meetups in Innsbruck (AT) und Rhein-Ruhr (DE) sowie eine große Software-Engineering-Discord-Community rund um die Themen Engineering-Kultur, Open Source und Technologie.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Data Fetching: List all Markdown posts in the repo.
@@ -109,16 +109,25 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 									<div>
 										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl"> Engineering Kiosk</span>
 									</div>
-									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight"> Der deutschsprachige Software-Engineering-Podcast</span>
+									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight"> Podcast, Meetups + Community</span>
 								</h1>
 								<p class="mb-8 text-base xl:text-xl text-coolGray-500 font-medium">
-									Der Engineering Kiosk ist der deutschsprachige Software-Engineering-Podcast mit <a href="/kiosk-betreiber/wolfgang-gassler/">Wolfgang Gassler</a> und <a href="/kiosk-betreiber/andy-grunwald/">Andy Grunwald</a> rund um die Themen Engineering-Kultur, Open Source, Menschen, Technologie
-									und allen anderen Bereichen, die damit in Verbindung stehen.
+									Der Engineering Kiosk ist die deutschsprachige Software-Engineering-Community mit Podcast, Tech-Meetups und Discord. Jede Woche eine neue Podcast-Episode mit <a href="/kiosk-betreiber/wolfgang-gassler/">Wolfgang Gassler</a> und <a href="/kiosk-betreiber/andy-grunwald/">Andy Grunwald</a>, regelmäßige Meetups in Innsbruck (AT) und im Rhein-Ruhr-Gebiet (DE) sowie eine aktive Discord-Community rund um die Themen Engineering-Kultur, Open Source, Menschen und Technologie.
 								</p>
 								<div class="flex flex-wrap">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="#jetzt-folgen">
-											Hören in deiner App...
+										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/podcast/">
+											🎙️ Podcast
+										</a>
+									</div>
+									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
+										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/meetup/">
+											👥 Meetups
+										</a>
+									</div>
+									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
+										<a class="inline-flex items-center justify-center py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/join-discord/">
+											<img class="w-6 mr-2" src="/images/brands/discord-blue.svg" alt="Discord" /> Community
 										</a>
 									</div>
 								</div>
@@ -127,7 +136,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<Image class="relative rounded-7xl" src={headerImageAndyWolfiLounge} alt="Die Podcast-Hosts Andy Grunwald und Wolfgang Gassler" title="Die Podcast-Hosts Andy Grunwald und Wolfgang Gassler" />
+									<Image class="relative rounded-7xl" src={headerImageAndyWolfiLounge} alt="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" title="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" />
 								</div>
 							</div>
 						</div>
@@ -225,6 +234,41 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 				}
 			</style>
 
+			<section id="was-wir-machen" class="py-20 md:py-28 bg-coolGray-50" style="background-image: url('/images/elements/pattern-light-big.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="mb-16 text-center">
+						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">Was wir machen</span>
+						<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Podcast, Meetups + Community</h3>
+					</div>
+					<div class="flex flex-wrap -mx-4">
+						<div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+							<div class="p-8 bg-white rounded-md shadow-sm h-full">
+								<span class="block text-4xl mb-4">🎙️</span>
+								<h4 class="mb-4 text-2xl font-bold text-coolGray-900">Podcast</h4>
+								<p class="mb-6 text-lg text-coolGray-500 font-medium">Jeden Dienstag eine neue Episode rund um Engineering-Kultur, Open Source, Menschen und Technologie.</p>
+								<a class="inline-block text-yellow-500 hover:text-yellow-600 font-medium" href="/podcast/">Alle Episoden &rarr;</a>
+							</div>
+						</div>
+						<div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+							<div class="p-8 bg-white rounded-md shadow-sm h-full">
+								<span class="block text-4xl mb-4">👥</span>
+								<h4 class="mb-4 text-2xl font-bold text-coolGray-900">Meetups</h4>
+								<p class="mb-6 text-lg text-coolGray-500 font-medium">Tech-Meetups in Innsbruck (AT) und im Rhein-Ruhr-Gebiet (DE) mit Talks, Networking und Austausch.</p>
+								<a class="inline-block text-yellow-500 hover:text-yellow-600 font-medium" href="/meetup/">Zu den Meetups &rarr;</a>
+							</div>
+						</div>
+						<div class="w-full md:w-1/3 px-4">
+							<div class="p-8 bg-white rounded-md shadow-sm h-full">
+								<span class="block text-4xl mb-4">💬</span>
+								<h4 class="mb-4 text-2xl font-bold text-coolGray-900">Community</h4>
+								<p class="mb-6 text-lg text-coolGray-500 font-medium">Über 500 Tech-Enthusiasten auf unserem Discord – Austausch, Fragen und Vernetzung.</p>
+								<a class="inline-block text-yellow-500 hover:text-yellow-600 font-medium" href="/join-discord/">Zum Discord &rarr;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<PodcastEpisodeListing numberOfItems={3} showAllButton={true} descriptionChars={300} headline="Die aktuellsten Podcast Episoden" sectionID="aktuellste-podcast-episoden" />
 
 			<section id="kaffee-support" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
@@ -269,7 +313,8 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 
 			<section id="jetzt-folgen" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
-					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Jetzt hören auf...</h3>
+					<h3 class="mb-4 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Jetzt mitmachen</h3>
+					<p class="mb-8 text-lg md:text-xl text-coolGray-400 font-medium text-center">Höre den Podcast, komm zum Meetup oder werde Teil der Community.</p>
 					<div class="flex flex-wrap justify-center px-10 mt-8">
 						<div class="m-4">
 							<a class="flex items-center" href={podcastInfo.platformLinks.appleMusic} title="Engineering Kiosk bei Apple Podcasts">
@@ -335,6 +380,20 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 							<a class="flex items-center" href={podcastInfo.platformLinks.rss} title="Engineering Kiosk als RSS-Feed">
 								<img class="w-12" src="/images/brands/rss.svg" alt="Engineering Kiosk als RSS-Feed" title="Engineering Kiosk als RSS-Feed" />
 								<span class="text-white text-lg m-2">RSS</span>
+							</a>
+						</div>
+					</div>
+					<div class="flex flex-wrap justify-center px-10 mt-4 pt-4 border-t border-coolGray-700">
+						<div class="m-4">
+							<a class="flex items-center" href="/meetup/" title="Engineering Kiosk Meetups">
+								<span class="text-4xl">👥</span>
+								<span class="text-white text-lg m-2">Meetups</span>
+							</a>
+						</div>
+						<div class="m-4">
+							<a class="flex items-center" href="/join-discord/" title="Engineering Kiosk Discord Community">
+								<img class="w-12" src="/images/brands/discord-blue.svg" alt="Engineering Kiosk Discord Community" title="Engineering Kiosk Discord Community" />
+								<span class="text-white text-lg m-2">Discord</span>
 							</a>
 						</div>
 					</div>
