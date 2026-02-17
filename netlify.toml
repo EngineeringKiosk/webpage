@@ -3382,6 +3382,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/255"
+  to = "/podcast/episode/255-die-db-skaliert-nicht-oltp-vs-olap-row-vs-column-stores-parquet-csv-iceberg-duckdb?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep255"
+  to = "/podcast/episode/255-die-db-skaliert-nicht-oltp-vs-olap-row-vs-column-stores-parquet-csv-iceberg-duckdb?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
