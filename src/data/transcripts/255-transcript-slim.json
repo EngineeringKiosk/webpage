@@ -1,0 +1,783 @@
+{
+    "confidence": 0.95614517,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4635,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 86600,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Kennst du diesen Moment im Team, wenn jemand das skaliert nicht und plötzlich steht der Datenbankwechsel schneller im Raum als die eigentliche Frage nach dem Warum? Genau da steigen wir heute ein. Wolfi und ich nehmen den Satz auseinander und landen ziemlich schnell bei dem, was in vielen Systemen wirklich entscheidet, ob es rund läuft oder ruckelt. Datenlayout. Wir sprechen darüber, warum Zeilenorientierung der Default für klassische OLTP Workloads ist und was an Pages und Block IO damit zu tun haben. Danach drehen wir die Tabelle einmal um neunzig Grad und schauen uns Column Stores, OLAP Aggregation über viele Zeilen, Spalten, Pruning, Kompression, also all die Tricks, mit denen Clickhouse, bigquery, Snowflake und Co. Richtig Gas geben und danach wirds File basiert. CSV bekommt sein Fett weg, Parkett bekommt seinen verdienten Hype und mit Iceberg reden wir über Snapshots, Time Travel und warum Storage und Compute heute gerne getrennte Wege gehen, plus wie das Ganze plötzlich bei Kafka oder sogar Prometheus eingebunden wird. Wir legen direkt los. Viel Spaß. Wolfgang, du bist ja keine zwanzig mehr und deswegen habe ich mich mal gerade Wie lang bist du eigentlich schon in der Softwareentwicklungsindustrie unterwegs? Entweder als Software Engineer, als Berater oder als Engineering Manager? Wie viele Jahre hast du hier schon auf dem Buckel? Berufserfahrung könnte man fast so sagen, ist."
+        },
+        {
+            "start": 86600,
+            "end": 92800,
+            "speaker": "B",
+            "text": "Die Frage immer, wie du das rechnest natürlich. Aber wenn man die Zeit rechnet, wo ich mein erstes Geld damit verdient habe, ne?"
+        },
+        {
+            "start": 92880,
+            "end": 107200,
+            "speaker": "A",
+            "text": "Also schon mal was relevant. Jetzt sag nicht, ich habe mal irgendwie für meine World of Warcraft Gilde irgendwie eine Webseite gebaut, sondern lass mal richtig real werden jetzt hier jetzt nicht den ersten Euro, sondern da, wo du sagen würdest, okay, ab hier ging es beruflich signifikant um etwas."
+        },
+        {
+            "start": 107200,
+            "end": 120770,
+            "speaker": "B",
+            "text": "Naja, ich habe schon mit sechzehn erste Software geschrieben, die dann auf cds und so delivered wurde an im großen Stile, was dann an einem Buch dran gehängt ist oder so. Also es geht schon von fünf und zwanzig Richtung dreiig Jahre, würde ich fast sagen."
+        },
+        {
+            "start": 120770,
+            "end": 134170,
+            "speaker": "A",
+            "text": "Okay, ich habe gerade mal den Gegencheck gemacht auf deinem LinkedIn Profil. Da wurde gesagt, dass in Lupus deine Firma mit einer Selbstständigkeit im Januar zwei tausend dreizehn gegründet wurde. Somit sind wir dann circa bei dreizehn Jahren, würde ich sagen Kongratulation, wenn man so möchte."
+        },
+        {
+            "start": 134170,
+            "end": 137690,
+            "speaker": "B",
+            "text": "Ja, ich habe davor über zehn Jahre andere Firma gehabt, wie dem auch sei."
+        },
+        {
+            "start": 137690,
+            "end": 150800,
+            "speaker": "A",
+            "text": "Dreizehn oder fünf und zwanzig Jahre, macht keinen Unterschied für meine nächste Thematik. Wie oft hast du in deiner beruflichen Laufbahn bereits den Spruch gehört, das skaliert nicht und wir müssen da jetzt was machen, wir müssen was Fundamentales ändern."
+        },
+        {
+            "start": 150800,
+            "end": 156320,
+            "speaker": "B",
+            "text": "Muss ich dir das jetzt mitzählen, wo ich das damals in meinen jungen Jahren auch gesagt habe oder nur wenn es andere gesagt haben?"
+        },
+        {
+            "start": 156560,
+            "end": 158080,
+            "speaker": "A",
+            "text": "Mich würde beides mal kurz interessieren."
+        },
+        {
+            "start": 158240,
+            "end": 179250,
+            "speaker": "B",
+            "text": "Ja, Premature optimization, das habe ich sehr früh gelernt, würde ich mal sagen, das zu machen. Ich habe es dann erst sehr spät gelernt, dass es sinnlos ist und dass man das besser machen kann. Aber natürlich, der junge Wolfi war natürlich immer am Start, wenn es darum ging, irgendwas zu overengineeren. Ganz klar. Ich glaube, durch diese Schule müssen wir ja irgendwie alle mal gehen."
+        },
+        {
+            "start": 179250,
+            "end": 189290,
+            "speaker": "A",
+            "text": "Und wie oft hast du das circa so von deinen Kunden, von deinem Team oder von Leuten, die in einem Projekt mitgearbeitet haben, wofür du verantwortlich warst oder dass du Surat geleitet hast, gehört ja."
+        },
+        {
+            "start": 189290,
+            "end": 193130,
+            "speaker": "B",
+            "text": "Mehrmals pro Jahr, würde ich sagen, so im Schnitt, dass man sowas mal hört."
+        },
+        {
+            "start": 193130,
+            "end": 203270,
+            "speaker": "A",
+            "text": "Und wie oft wurde dann wirklich was gemacht? Also wie oft wurde dann eine Aktion getätigt, die dann den Austausch der Datenbank zur Folge hatte oder eine fundamentale Änderung implementiert?"
+        },
+        {
+            "start": 203270,
+            "end": 214750,
+            "speaker": "B",
+            "text": "Gute Frage, Ihr müsst überlegen, ob das jemals stattgefunden hat. Also auf diese Aussage drauf haben wir das, glaube ich, nie gemacht. Also in einem strukturierteren Prozess vielleicht schon, aber ich glaube, dass diese Aussage nie zu einem Wechsel geführt hat."
+        },
+        {
+            "start": 214750,
+            "end": 220630,
+            "speaker": "A",
+            "text": "Bei mir sieht es ein bisschen anders aus. Und zwar ja, der junge Andy, obwohl bin ja noch keine vierzig, ich wollte."
+        },
+        {
+            "start": 220630,
+            "end": 221670,
+            "speaker": "B",
+            "text": "Gerade sagen, du bist ja noch jung."
+        },
+        {
+            "start": 221670,
+            "end": 258980,
+            "speaker": "A",
+            "text": "Ja klar, ich habe schon etliche Male gehört und ich habe auch etliche Male selbst gesagt, ich schließe mich nicht aus und ich denke, es ist auch ein Reifeprozess und man sollte das auch mal sagen, um zu lernen. Und öfter mal war das Resultat dann wirklich Datenbank A wird durch Datenbank B ausgetauscht, ein großer Engineering Aufwand findet statt und man ersetzt eigentlich, und das sage ich jetzt nach etlichen Jahren Erfahrung, man ersetzt ein bekanntes Problem durch ein neues, ein noch unbekanntes Problem. Auf Basis meiner Erfahrungen wird die Das skaliert nicht, warum eigentlich viel zu selten gestellt, beziehungsweise der Satz ist auch sehr einfach gesagt. Würdest du mir da zustimmen, dass der."
+        },
+        {
+            "start": 258980,
+            "end": 293450,
+            "speaker": "B",
+            "text": "Satz sehr einfach zu sagen ist? Da stimme ich dir zu, dass das Warum nie gefragt wird. Ich würde sagen, es gibt normalerweise schon Leute, die hoffentlich nachfragen und meistens, darum bin ich ja auch der Meinung, dass es selten zu einer Änderung geführt hat, wie ich es mitbekommen habe, weil es eben Leute gegeben hat, die gefragt haben, hey Moment, warum eigentlich? Und dann vielleicht auch tiefer gegangen sind. Aber es kommt natürlich immer darauf an, ob du dann Leute im Team hast, die sich so stark positionieren, überhaupt mal Warum zu fragen und dann vielleicht auch dagegen anzukämpfen. Und je nachdem, von welcher Seite das kommt, ist dann natürlich die Frage, ob du überhaupt die Position hast, da irgendwie dagegen anzukämpfen."
+        },
+        {
+            "start": 293530,
+            "end": 308450,
+            "speaker": "A",
+            "text": "Natürlich bin ich ein bisschen plakativ unterwegs hier, dass die Frage nie gestellt wird, ist auch falsch. Ich habe aber auch Teams gesehen, die vielleicht noch nicht so viel Erfahrung haben, wo die Aussage, das skaliert nicht einfach so hingenommen wurde und dann sofort auf die neue Lösung gesprungen wurde, ohne das wirkliche Problem zu beachten."
+        },
+        {
+            "start": 308450,
+            "end": 318070,
+            "speaker": "B",
+            "text": "Du findest ja auch immer Antworten auf das Warum. Also wenn das ganze Team dafür ist, die neue Datenbank einzusetzen, dann wäre, werden die schon irgendwas finden auf das Warum drauf und irgendwelche Argumente."
+        },
+        {
+            "start": 318070,
+            "end": 390620,
+            "speaker": "A",
+            "text": "Genau. Und vielleicht ist dann die Motivation, nicht das neue System skalierend zu machen, sondern etwas Neues auszuprobieren, eine neue Datenbank, die man gerade auf Hacker News gesehen hat und so weiter. Aber ich war nicht anders, deswegen ich nehme mich nicht aus. Inzwischen würde ich sagen, man ersetzt ein bekanntes Problem durch ein neues, noch unbekanntes Problem. Meiner Erfahrung nach liegt die ganze Sache aber oft an den fundamentalen Datenstrukturen und an den Read und Write Patterns, also an den Lese und Schreib Patterns, warum ein System nicht skaliert? Denn welches System arbeitet ohne Daten? Ich glaube keins. Und da geht es immer eigentlich an die Grundfrage, wie werden denn die Daten gespeichert? Wie werden die Daten gelesen? Wie viel Arbeit muss der Storage Layer machen? Und wir hatten auch mal eine schöne Episode zu, ich nenne es nur Big Landau Notation oder auch bekannt als Big O Notation, Algorithmenoptimierung und so weiter und so fort. Wie oft werden die Daten geschrieben? Wie oft werden die Daten gelesen? Und im Datenbanken Bereich, wenn ich über dieses Thema spreche, kommt man da an einem Bereich nicht an den Normalformen. Lieber Doktor der Datenbanken. Nenne mir doch mal in einem too long didn't read noch mal kurz die Normalformen bei relationalen Daten. Wir sind ja ein Wissens Podcast und wollen Wissen übermitteln."
+        },
+        {
+            "start": 390351,
+            "end": 450351,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 450700,
+            "end": 557590,
+            "speaker": "B",
+            "text": "Also ich werde das jetzt einfach so beantworten, dass wir nicht zu sehr in die Tiefe gehen und damit auch meine Unwissenheit kaschieren. Aber es gibt eins bis fünf Normalformen, die ersten drei sind aber die wichtigsten. Und im Prinzip geht es darum, dass man einfach Daten möglichst nur einmal speichert. Das heißt, wenn du zum Beispiel Kunden und Rechnungen hast, dann wirst du die Kundendaten ja vielleicht nur einmal speichern und nicht bei jeder Rechnung mitspeichern. Wobei da sieht man schon, dass das schon wieder so ein Use Case ist, dass durch Änderungen der Adresse, vielleicht willst du es doch bei der Rechnung dazu speichern, Das wäre dann denormalisiert. Normalisiert wäre, ich speicher einmal die Kundendaten ab, einmal die reinen Rechnungsdaten und verknüpfe die dann über eine Relation. Aber es sind auch so einfache Dinge wie die erste Normalform besagt, dass du in einer Spalte in einem Feld nicht mehrere Informationen speichern solltest. Das heißt, du machst normalerweise Straße, Postleitzahl, Land als drei Felder, drei Spalten und nicht eine Spalte Adresse, wo du dann die Straße, Postleitzahl oder Land mit rein speicherst. Also es geht darum, die Daten möglichst nur einmal zu speichern und dann sinnvoll miteinander zu verknüpfen mit Joints, mit Relationen und mit der neuen Welle von Document Stores zum Beispiel damals wie mongodb aufgekommen ist, das war ja auch so was mongodb revolutioniert die Welt, alles wird leichter durch mongodb, alles skaliert. Das war genau so eine hippe Datenbank damals, bis dann die ersten Firmen reported haben, dass sie alle Daten verloren haben oder so. Das war der Klassiker damals, Dann sind alle ein bisschen vorsichtiger geworden. Aber das war so eine Datenbank, die hat alles einfach ohne irgendeine Normalisierung alles in ein Dokument geschmissen und du hast da einfach riesige Blobs mehr oder weniger gehabt, wo du die Daten reingeschmissen hast, Also wo keine Normalisierung stattgefunden hat, würde."
+        },
+        {
+            "start": 557590,
+            "end": 652860,
+            "speaker": "A",
+            "text": "Ich so gelten lassen. In der Klausur hätte ich gesagt, da fehlt ein bisschen Fleisch, aber das passt schon so. Aber wenn wir jetzt über den Satz, das skaliert nicht und Datenbanken sprechen, dann stehen die Normalform eigentlich, ich sag mal so ein bisschen im Weg, denn bei großen Datenmengen greift man dann in der Regel zur Denormalisierung als Oberbegriff, also das bedeutet Präaggregation, also Vorberechnung von Summen und Statistiken und nicht irgendwelche Sum und Average Funktionen über Millionen von Datensätzen zu feuern. Man macht sogar Data Duplication, also man hält explizit Daten mehrfach vor, um Joins zu vermeiden. Man baut vielleicht sogar White Tables, also sehr breite Tabellen für sehr schnell Reads und so weiter. Und eine Thematik, die wir im Podcast hier und da mal immer so beiläufig erwähnt haben, und jetzt kommen wir endlich mal zu dem Thema dieser Episode, ist die Datenspeicherung bzw. Das Layout der Daten, entweder zeilen oder spaltenbasiert. Und ich habe festgestellt, wir sind da nie tiefer drauf eingegangen, Deswegen gilt diese Episode auf der einen Seite mal ein Deep Dive in row oriented datastores, also zeilenorientierten Datenbanken und spaltenorientierten Datenbanken, aber auch Dateisysteme, denn der Wolfgang nicht Dateisysteme, das heißt falsch Dateiformate, weil der Wolfgang sagt ja immer, wir sollen lieber Files schreiben, anstatt Datenbanken zu nutzen. Aber Herr Doktor der Datenbank, lass uns mal einsteigen, wenn ich Gib mir mal einen Einblick in zeilenorientierte Datenbanken. Was würdest du mir für einen Einblick geben?"
+        },
+        {
+            "start": 652860,
+            "end": 760980,
+            "speaker": "B",
+            "text": "Also grundsätzlich geht es ja nicht um Datenbanken, sondern um das eigentliche Format, wie Daten abgelegt werden. Wir sagen zwar jetzt immer Datenbank dazu, aber das kann ja auch einfach eine Datei sein, die man im Endeffekt verwendet. CSV oder sowas. Auch da gibt es row based, column based, aber ganz oft spricht man natürlich im Kontext von Datenbanken darüber. Und ro based, also zeilenbasiert, ist eigentlich das, was wir alle so als klassische relationale Datenbank kennen. Postgres, mysql, mssql, was es auch immer ist, die sind üblicherweise ro based, das heißt ganz klassisch, wie man es auch aus Excel zum Beispiel kennt. Man sieht eine Zeile und alles wird dann auch zeilenweise gespeichert. Das heißt auf der Festplatte in der Datei steht zuerst die erste Spalte, dann die zweite Spalte, dann die dritte Spalte, dann die vierte Spalte, dann kommt die nächste Zeile, Spalte eins, Spalte zwei, Spalte drei und so weiter geht es weiter. Also so wie man natürlich so eine Excel Tabelle wahrscheinlich ablegen würde, zeilenweise. Und so funktionieren eigentlich auch alle Datenbanken, die wir so kennen. Klassische relationale Datenbanken, die wir so seit den er Jahren eigentlich haben. Und warum ist das jetzt so? Ist ganz klassisch. Wir fragen ja meistens, wenn wir irgendwas von der Datenbank haben wollen, eine Zeile oder mehrere Felder von einer Zeile ab. Also es passiert ja selten, dass du jetzt nur eine Information, eine Spalte wirklich haben willst von einem Datensatz. Es ist ja üblicherweise mehr du hast eine ID, du fragst irgendwie ein Land an, gib mir alle Kunden in Duisburg zum Beispiel. Das heißt, du brauchst mal schon die Spalte von Duisburg. Du wirst dann aber natürlich auch die Namen anzeigen von den Kunden oder vielleicht wie viel Umsatz sie gemacht haben. Also du fragst ja üblicherweise mehrere Informationen ab aus einer Zeile. Und darum macht es natürlich Sinn, dass die Zeilen auch gemeinsam in irgendeiner Form abgespeichert werden. Also die Spalten von einer Zeile."
+        },
+        {
+            "start": 760980,
+            "end": 792420,
+            "speaker": "A",
+            "text": "Wenn man da jetzt mal genau zugehört hat, dann hast du gesagt, die Spalten werden nacheinander geschrieben und somit ist eine Zeile, also auch eine Datenbank Zeile mehr oder weniger sehr simplifiziert gesagt, eine Repräsentation auf der auf der Disc als Page oder als Blog. Und das bedeutet ja auch, dass eine Abfrage von ein paar Zeilen aber mit vielen Spalten eher vorteilhaft ist, weil die Performance nach unten geht. Umso mehr Zeilen ich lese, weil ich dann mehr I O machen muss."
+        },
+        {
+            "start": 792420,
+            "end": 953690,
+            "speaker": "B",
+            "text": "Also vielleicht zur Erklärung noch, weil du Page jetzt in den Raum geworfen hast, keine Ahnung, wie viele Leute überhaupt sich damit genau beschäftigen. Wenn man natürlich weiter runtergeht in dem ganzen Stack, wie eigentlich die Daten abgespeichert werden auf der Festplatte oder auch auf ssds, also gar nicht Spinning Disks wie früher, sondern ssds ist eigentlich immer so ein Konzept, dass es in irgendeiner Weise gewisse Blöcke gibt, die man ansprechen kann. Früher waren die eher größer auf so Spinning Discs. Es war vielleicht so, wenn man sich jetzt so vorstellen könnte, eine Umdrehung so auf einer Spur auf der Festplatte. Bei ssds sind es einfach auch Blöcke, die gemeinsam gelesen werden, also die Daten von einem so einem Block. Das hat einfach damit zu tun, dass man nicht bitweise irgendwas auslesen kann bzw. Kann man natürlich schon, aber es ist langsam, sondern man liest ganze Blöcke immer aus und dann muss man schauen, was hat in so einem Block Platz. Hat er jetzt eine Zeile Platz haben da zehn Zeilen Platz haben da ein hundert Zeilen Platz, je nachdem wie groß diese Blöcke sind, es ist meistens so ein paar Kilobyte üblicherweise heutzutage und egal wie viel man von dieser Page, von dieser Seite eigentlich benötigt, man muss immer die ganze Seite laden. Das heißt auch wenn jetzt nur ein Bit wirklich ein null oder eins von so einer Seite benötigt, kann es sein, dass ich trotzdem irgendwie sechzehn KB eigentlich laden muss in meinen Speicher, um dieses eine Bit herauszuholen. Jetzt macht es natürlich Sinn, dass sie möglichst viel in eine so eine Seite hinein speicher von Informationen, die ich brauchen könnte und darum, wenn das zeilenweise in diesen Seiten liegt, heißt es, wenn ich eine so eine Seite in meinen Speicher hole von der SSD, dann habe ich vielleicht schon fünf Zeilen eigentlich mitgelesen und darum ist es auch wichtig, dass Zeilen so gespeichert werden, dass ähnliche Informationen, die oft miteinander gebraucht werden, auch in einer Seite abgelegt werden. Das heißt, wenn ich jetzt zum Beispiel Anfragen habe, die immer auf eine Postleitzahl gehen, ich hole mir meine Kunden immer aus einer gewissen Postleitzahl aus Duisburg zum Beispiel oder aus München oder aus Innsbruck, dann macht es natürlich Sinn, dass ich die Zeilen so gruppiere, dass alle Datensätze aus Duisburg zusammenliegen, alle Datensätze aus München und alle Datensätze aus Innsbruck, weil ich dann schon automatisch, wenn ich irgendwas von der Festplatte hole, automatisch die anderen Zeilen auch schon mitbekomme aus Duisburg und üblicherweise brauche ich halt alle Informationen aus Duisburg und so wird es dann halt abgelegt, meistens eher über Indizes dann, weil die Rohdaten liegen natürlich irgendwie randomisiert auf der Festplatte. Aber das ist die eigentliche Idee, dass man diese Seitenzugriffe optimiert und egal was man darüber für Abstraktionsebene hat, ganz ganz unten sind es immer irgendwelche Blöcke, die man liest, sei es auf den ssds oder im RAM oder im Cache, wo auch immer alle Speicher sind in irgendeiner Form immer block orientiert."
+        },
+        {
+            "start": 953690,
+            "end": 978780,
+            "speaker": "A",
+            "text": "Das bedeutet auch, es gibt keinen negativen Performance Impact, wenn ich sage select Spalte eins from Tabelle versus select Spalte eins Spalte zwei Spalte drei from Tabelle, weil die Spalten ja mit in der Page liegen in der Regel und beim Page Load sowieso geladen werden. Also I O technisch ist das genau das gleiche bei Row Oriented Datastores."
+        },
+        {
+            "start": 978780,
+            "end": 1047270,
+            "speaker": "B",
+            "text": "Genau wenn du nur eine Spalte brauchst, ist es leider der Fall, dass du trotzdem alles andere in irgendeiner Form einmal aus dem SSD Speicher holst, dann in deinen Cache legst, dann CPU und so weiter. Also das geht alles durch deine ganze IO Pipeline durch, obwohl du nur eine Spalte brauchst. Das heißt, es ist eigentlich egal, ob du einen Stern machst oder nur eine Spalte, ist im Endeffekt mehr oder weniger zumindest gleich langsam, würde ich mal in dem Fall sagen, weil eigentlich könnte man das schon optimieren. Und wenn man sich da jetzt überlegt, ich habe eine Million Rows und ich will eigentlich nur wissen, wie viel Kunden ich pro Postleitzahl habe, dann ist eigentlich nur Postleitzahl wichtig. Die Spalte muss aber komplett durch alle Millionen Rows durchgehen, durch alle Namen, durch alle Straßen, durch alle Länder, durch keine Ahnung, was ich noch dabei habe als Geschlecht, als die Anrede, irgendwelche Zusatzinformationen. Wenn ich da vierzig Felder habe, also vierzig Spalten habe, dann muss ich da komplett durchwandern und durch vierzig Millionen Spalten eigentlich durchgehen, nur um zu wissen, wie viele Personen pro Postleitzahl habe ich eigentlich in meiner Daten. Also eigentlich ein Full Table Scan, also ich habe irgendeinen optimierten Index, aber wenn man das mal weglässt, dann muss man komplett durch die ganze Tabelle durch."
+        },
+        {
+            "start": 1047270,
+            "end": 1073410,
+            "speaker": "A",
+            "text": "Also natürlich Metastrukturen und Pointer und Co. Jedes Datenbanksystem hat das irgendwie oben drauf implementiert. Lass uns das mal wegabstrahieren, weil dann wird es wirklich, wirklich kompliziert. Aber zusammenfassend bedeutet, umso mehr Zeilen ich lesen möchte, desto mehr wird die Performance, die IO Performance negativ beeinträchtigt. Die Anzahl der Spalten, die ich selektiere pro Zeile, ist irrelevant, da die ganze Zeile in der Regel geladen wird."
+        },
+        {
+            "start": 1073410,
+            "end": 1085090,
+            "speaker": "B",
+            "text": "Genau unten drunter, zumindest dann auf der Datenbankebene natürlich wird dann weniger verarbeitet, wenn du jetzt weniger Spalten natürlich wirklich ausgibst, das schon, aber alles drunter, die IO Pipeline wird eigentlich gleich beeinflusst."
+        },
+        {
+            "start": 1085090,
+            "end": 1097670,
+            "speaker": "A",
+            "text": "Du hattest die klassischen Vertreter schon erwähnt, mysql, MS SQL, Oracle, sqlite. Jetzt klären wir das mal final. Heißt das Postgres oder Postgres oder postgresql? Weil ich kriege ja immer einen auf die Mütze hier von unserer Community."
+        },
+        {
+            "start": 1097670,
+            "end": 1104670,
+            "speaker": "B",
+            "text": "Ich hab gedacht, das haben wir schon geklärt. Also ich würde Postgres sagen einfach ohne QL auch dabei Postgres, Post G, wie."
+        },
+        {
+            "start": 1105150,
+            "end": 1114550,
+            "speaker": "A",
+            "text": "Jetzt hast du im Intro über mongodb so gehatet und mongodb ist ja eine Dokumentenorientierte Datenbank, genauso wie Elasticsearch oder opensearch und Solar und wie sie alle heißen."
+        },
+        {
+            "start": 1114550,
+            "end": 1134350,
+            "speaker": "B",
+            "text": "Also ich würde sagen, da ist schon nochmal ein Unterschied, weil mongodb wirklich eine Datenbank an sich ist und jetzt irgendeine Elasticsearch ist ja jetzt nicht so dafür geeignet, dass man da jetzt die Update Queries die ganze Zeit sendet und da würde jetzt keine Bank drauf implementieren. Gott würde jetzt vielleicht mit mongodb auch nicht, aber geht eher in die Richtung zu einem klassischen Datenbankmanagement System."
+        },
+        {
+            "start": 1134430,
+            "end": 1152510,
+            "speaker": "A",
+            "text": "Aber dokumentenorientierte Datenbank, meines Wissens nach werden ebenfalls physisch record oriented gespeichert, weil die halt eher optimiert sind für operative Workloads und nicht für spaltenorientierte Scans. Und deswegen kann man ja eigentlich auch sagen, dass mongodb ebenfalls eine zeilenorientierte Datenbank ist, oder?"
+        },
+        {
+            "start": 1152510,
+            "end": 1197010,
+            "speaker": "B",
+            "text": "Genau, bei mongodb weiß ich es zufällig, die verwenden auch B, haben sie früher zumindest, es gibt ja auch andere Storage Engines mittlerweile, aber die klassische läuft über einen B Tree, ganz klassisch wie eine relationale Datenbank, einen B Baum und die Dokumente sind dann an den Blättern quasi dran gehängt. Und so ein Dokument ist hier nichts anderes als eine Zeile in dem klassischen System, nur dass es halt kein Schema gibt. Aber klar, wenn du die Dokumente ablegst, ein Dokument entspricht einer Zeile im relationalen Modell. Insofern hast du eigentlich dasselbe Row based Format, außer du hast natürlich, jetzt gibt es schon Vertreter, die natürlich dann optimieren und vielleicht auch was spaltenorientiert machen, aber klassischerweise dokumentenorientiert heißt oder könnte man in ro based auch einordnen."
+        },
+        {
+            "start": 1197010,
+            "end": 1225720,
+            "speaker": "A",
+            "text": "Und da dieser Podcast euch natürlich auch auf euren beruflichen Werdegang vorbereitet, zählt sicheres Auftreten bei völliger Ahnungslosigkeit ein hundert Prozent dazu und deswegen bereiten wir euch auf gutes Buzzword Bingo. Der Wolfgang hat zeilenorientierte Datenbank als die ganz klassische Datenbank bezeichnet und dabei möchte ich jetzt ein neues Buzzword in den Raum werfen. OTLP Wolfgang, bereite mich doch mal vor, damit ich das Buzzword nächste Woche droppen kann."
+        },
+        {
+            "start": 1225800,
+            "end": 1287690,
+            "speaker": "B",
+            "text": "Also Buzzword finde ich jetzt fast ein bisschen übertrieben, ist die absolute Grundlage. OLTP und OLAP, die Wörter gibt es auch seit den, weiß nicht wann sie erfunden worden sind, aber ich vermute mal auch in den ERN, weil da ist das Ganze so aufgekommen mit den Datenbanken. OLTB steht für Online Transactional Processing hingegen OLAP, also OLAP ist für Online Analytical Processing, das heißt die eine Seite ist mehr diese ganze Data Crunching Analytics Analysen, ich hole irgendwelche aggregierten Werte aus meiner Datenbank heraus für ein Report zum Beispiel. Und im Gegenzug OLTB sind wir wieder bei den klassischen Datenbanken mysql, Postgres, Oracle, ganz viele Transaktionen, Banktransaktionen, ich überweise Geld von Konto A nach Konto B, kurze Transaktionszeit, paar Millisekunden ACID, atomar garantiert, ganz klassische, was man sich so unter einer Bank vorstellt, ist OLTP."
+        },
+        {
+            "start": 1287690,
+            "end": 1400970,
+            "speaker": "A",
+            "text": "So und weil wir natürlich jetzt von vielen kurzen Transaktionen sprechen, wo row oriented Data Stores performant sind, habe ich mir ganz überlegt, lass uns das mal richtig praktisch machen, also in welchen Situationen werden die Stärken herausgespielt? Und zwar ist das, wie der Wolfgang schon sagte, wenn die Abfrage wenige Zeilen betrifft oder viele Spalten pro Zeile benötigt werden, was bedeutet das? Ein Primary Key Lookup, also select foo from orders where ID vier tausend sieben hundert elf wirklich ein punktueller Request, da kann der Rowstore wirklich in seiner Indexstruktur im B Tree nachgucken, weiß sofort, wo er hinspringen muss und holt wirklich einmal die komplette Zeile. Das gleiche natürlich umgekehrt, wenn man die Zeile auch updaten möchte, ebenfalls mit einem Primary Keylookup, also update users setname Wolfgang where account ID gleich vier tausend sieben hundert elf ebenfalls klassische OLTP Query, wenige Zeilen, der Roster weiß sofort, wohin es geht und kann einfach nur eine Zeile neu schreiben. Bei einem ganz klassischen Insert. Ganz klassische Inserts gelten auch als kurze Transaktionen, werden angehangen, in Index reingepackt, innodb Abfahrt bei mysql zumindest, und das hat der Wolfgang auch schon gesagt, Range Queries über, ich sag mal, kleine Bereiche, wenn die Daten relativ nah beieinander liegen. Der Wolfgang hatte das Postleitzahlen Beispiel genannt von Duisburg, vielen lieben Dank dafür, aber ich glaube Duisburg hat fünfzig oder sechzig Stadtteile oder fünf und fünfzig das bedeutet, da kommen echt eine Menge Postleitzahlen zusammen. Ich weiß nicht, ob das dann noch eine kleine Range ist, aber für eine Datenbank wahrscheinlich schon, aber da würde ich sagen, ist so eine so ein Rostor prädestiniert. Und jetzt ist die bedeutet das, ich kann keine Art von Gruppierungsfunktionen wie sum oder average auf row oriented Datenbanken machen oder bzw. Sollte ich das nicht Wolfgang Weil in meiner mysql Welt habe ich etliche Summen gebildet und etliche Group by Queries geschrieben."
+        },
+        {
+            "start": 1401280,
+            "end": 1621450,
+            "speaker": "B",
+            "text": "Es war ja auch die Grundidee eigentlich von relationalen Datenbanken. Das haben wir auch besprochen in unserer SQL Geburtstagsfolge, wie SQL, jetzt muss ich selber nachdenken, fünfzig geworden ist, glaube ich, oder was, haben wir genau das besprochen, dass man eben die Daten ablegt in einem einheitlichen Format, row based in dem Fall, und dann über SQL sich die Ansicht bauen kann, die man gerne hätte. Und genau da kann man dann natürlich Summen machen, Group by, diese ganzen Operationen, um die Daten anders darzustellen. Das war die große Stärke von SQL und vom relationalen Modell. Und in der Praxis funktioniert das eigentlich auch wahrscheinlich für neunzig Prozent der Use Cases, weil wenn wir uns ehrlich sind, wie viele Zeilen haben wir denn üblicherweise, wie groß ist denn unsere Datenbank? Also es gibt wahrscheinlich wenig Datenbanken, die irgendwie größer als paar Gigabyte sind oder wo eine Tabelle vor allem größer ist als ein paar Gigabyte. Und das sind ja heutzutage alles keine großen Datenbanken oder großen Mengen mehr. Also heute, wo wir irgendwelche Speicher Durchsätze von vielen Gigabit haben, in der Sekunde, sind es ja alles keine Größenordnungen mehr. Das heißt, da kann man natürlich auch ganz klassisch, auch wenn man viel verliert, performance technisch einfach einen Full Table Scan machen und sich irgendwas ausrechnen. Oder man erstellt dann einen Index, der in irgendeiner Form etwas optimiert oder aggregiert oder halt schneller zugreifbar macht oder vielleicht auch nur einen Index auf drei Spalten aufbaut, dann hat man eben nur diese drei Spalten, die man durchgehen muss, um eine Frage zu beantworten. Ein guter Index kann das ja, wenn er für eine Abfrage optimiert ist. Darum funktioniert es natürlich auch. Und das ist halt die, ich würde es jetzt nicht eierlegende Wollmilchsau nennen, aber doch irgendwo ein System, was halt dann sehr viel unterstützt. Das hat ACID, das hat Transaktionen, das kümmert sich darum, dass meine Daten wirklich sicher irgendwo liegen. Und für die meisten Abfragen, inklusive Urlaub Anfragen, wo irgendwelche Analysen mach für einen monatlichen Report, der läuft halt dann vielleicht nicht so performant, aber ist halt in den meisten Fällen egal, ob die Query irgendwie eine Sekunde oder vier Sekunden läuft für einen Report, ist komplett egal, wenn ich natürlich davon spricht, wirklich von noch mehr Daten oder ich rede dann von Terabyte an Daten oder es sind irgendwelche Log Daten Metriken, wo ich einfach Milliarden, viele, viele Milliarden von Daten habe. Dann kommen wir natürlich in einen Bereich, wo man sagt, okay, gibt es da vielleicht Möglichkeiten, um was zu optimieren? Und genau da sind dann eigentlich in den ER Jahren sehr stark die spaltenorientierten, die Column Based Stores eigentlich aufgetreten. Das Konzept gibt es schon seit den ERN, wie es so in der Datenbankwelt alles seit den ERN gibt. Aber so in den ERN ist es dann vor allem durch den guten alten Stonebreaker wieder mal auf der wissenschaftlichen Seite zumindest sehr breit getreten worden. Da sind dann diese speziellen Workloads aufgekommen einfach wo man mal viele Daten auch hat, Webscale Daten, also irgendwie haben wir schon öfters besprochen, Google wäre nie so groß geworden, hätten sie einfach Oracle verwendet, das hätte einfach nicht funktioniert. Da hat es dann einfach neue Ansätze gebraucht. Man hat viele Daten, man hat viele Log Daten, man hat plötzlich im Web einfach Milliarden von Usern und muss irgendwie mit den großen Datenmengen umgehen. Und genau da hat man sich dann überlegt, was kann man denn machen? Und Vertica war, glaube ich, die erste kommerzielle Ausgründung von der Idee von Stormbreaker, wenn man alles täuscht, hatte C Store geheißen, die wissenschaftliche Datenbank die erste. Und da hat so ein ganzes Movement eigentlich so begonnen in Richtung Column Store, um die Daten noch für OLAP, also für Analytical Queries, noch besser abzulegen und eine Datenbank zu bauen, die das eben noch besser beherrscht und mit den riesigen Datenmengen auch umgehen kann."
+        },
+        {
+            "start": 1621450,
+            "end": 1645520,
+            "speaker": "A",
+            "text": "Vielen Dank, Opa, für die Story vom Krieg. Aber ja, lass uns mal in den Bereich spaltenorientierte Datenbanken gehen. Und zwar hatte ich initial immer so das Verständnisproblem, weil ich muss mir die ganze Sache visuell vorstellen und eine klassische relationale Datenbank. Du hast Zeile eins und da sind die Spalten hintereinander. Okay, Bei der spaltenorientierten Repräsentation dreht man eigentlich eine relationale Tabelle um neunzig Grad."
+        },
+        {
+            "start": 1645520,
+            "end": 1647120,
+            "speaker": "B",
+            "text": "Gegen den Uhrzeigersinn, kann man so sehen."
+        },
+        {
+            "start": 1647120,
+            "end": 1679100,
+            "speaker": "A",
+            "text": "Ja, man hat eine Zeile, die Zeile heißt ID und dann hat man eins, zwei, drei, vier, fünf und dann hat man eine Zeile, die nennt sich Name und die heißt Andy, Wolfgang, Tim, Werner, Miriam und dann hat man eine Zeile, die heißt Stadt, Berlin, München, Duisburg und so weiter. Und das ist nämlich genau der riesengroße Unterschied, warum diese Art von Storages für OLAP, was der Wolfgang da immer sagt, erinnert mich hart an OLAF. Ich weiß nicht, ich muss jetzt echt aufpassen, dass ich nicht OLAF SAF Queries dazu sagen."
+        },
+        {
+            "start": 1679100,
+            "end": 1683320,
+            "speaker": "B",
+            "text": "Wir verstehen dich, Andi. Ist schon okay. In Duisburg ist es schwierig mit so eng begriffen."
+        },
+        {
+            "start": 1683320,
+            "end": 1744540,
+            "speaker": "A",
+            "text": "OLAF wäre dann Online Analytical, Frau Fressing. Also OLAF steht für Online Analytical Processing. Naja, aber wie gesagt, da hatte der Wolfgang ja bereits erwähnt, da ist es eigentlich, da geht es darum, dass man Erkenntnisse aus großen Datenmengen ziehen kann. Also klassische Analyse, Bi Millionen von Datensätzen, lange Reads, große Scans, Aggregationen, komplexe Joins. Das Datenmodell ist wirklich in der Regel denormalisiert, man speichert sogar oft die Daten mehrfach. Und genau da kommen die Stärken von Columna Storages nämlich richtig hervor, weil alle Werte einer Spalte, über die man zum Beispiel summieren möchte, liegen dann physisch nahe beieinander. Stell dir vor, du hast eine Artikel Tabelle, dann gibt es eine Zeile, die heißt Preis. Und wenn ich die Summe über alle Preise machen möchte, dann lese ich wirklich nur diese Preise Zeile und dann habe ich den gleichen Effekt wie beim Ro Based, wo ich sagen möchte, ich nehme nur wie so einer Primary Key Look ab, wenn man so möchte."
+        },
+        {
+            "start": 1744540,
+            "end": 1752940,
+            "speaker": "B",
+            "text": "Du hast dir gedacht, du ziehst jetzt einen Use Case aus der Realität, oder? Wenn man die Summe über alle Preise bilden will. Sehr realistisches Beispiel."
+        },
+        {
+            "start": 1753660,
+            "end": 1758220,
+            "speaker": "A",
+            "text": "Schmeiß mein Beispiel weg, nehmen wir eine Bestellungstabelle. Ja, ne, das ist auch scheiße."
+        },
+        {
+            "start": 1758220,
+            "end": 1761740,
+            "speaker": "B",
+            "text": "Du willst den Umsatz generieren, den Umsatz meiner Firma."
+        },
+        {
+            "start": 1761740,
+            "end": 1778710,
+            "speaker": "A",
+            "text": "Genau, jetzt wollte ich gerade sagen, jetzt möchte ich die Summe der ganzen Bestellungen haben, aber das wäre ja auch falsch, da ich ja eine Bestelltabelle habe und dann noch den Filter auf deine Bestellung habe. Ich möchte den Umsatz meines kompletten Geschäftes von allen Bestellungen berechnen. Da würde ich sagen, wow."
+        },
+        {
+            "start": 1778710,
+            "end": 1943820,
+            "speaker": "B",
+            "text": "Genau, wir können auch das Beispiel von gerade eben nehmen mit den Postleitzahlen. Wenn du nur wissen willst, wie viele Kunden hast du pro Postleitzahl oder pro Stadt zum Beispiel, dann musst du natürlich nur durch diese Spalte Stadt gehen und kannst einfach mitzählen, wie oft habe ich jetzt München gesehen, wie oft habe ich Duisburg gesehen und kannst da einfach eine simple Map aufbauen und mitzählen. Das heißt, du wanderst nur einmal durch diese Spalte mit den Städten und das war's. Und du musst nicht irgendwie wissen, was für Name das ist, wie viel Umsatz der generiert hat der Kunde oder sonstige Informationen. Und da kommt dann eigentlich die Stärke von den spaltenorientierten Datenbanken heraus. Zusätzlich, was du auch schon erwähnt hast, ich habe denselben Typ von Daten in so einer Spalte. Das heißt, ich kann viel besser komprimieren, weil es eben ähnliche Daten sind oder vom Typ zumindest die gleichen. Das plakativste Beispiel wahrscheinlich ist, wenn man Geschlecht hernimmt, dann hat man männlich, weiblich, divers freie Werte und die ändern sich ja nicht so oft, wenn man die einzelnen Zeilen durchgeht. Also du hast wahrscheinlich auch mal ein hundert männliche Kunden hintereinander. Das heißt, du musst dir nicht hundertmal merken, ich habe da jetzt männlich in meiner Tabelle stehen, sondern du kannst sagen, die nächsten ein hundert Werte sind immer männlich. Das nennt sich Lauflängen Codierung und ist eigentlich die einfachste Art von Komprimierung. Das heißt, du kannst plötzlich diese ganze Gender Spalte zusammen komprimieren und brauchst dir nur mehr merken, nächsten ein hundert Werte sind männlich, nächsten fünfzig Werte sind weiblich und so weiter. Das heißt, du speicherst dir nur mal so einzelne Punkte, wenn sich etwas ändert und umso gleichmäßiger die Spalten, umso einfacher natürlich. Aber du kannst auch ganz andere Komprimierungs Algorithmen draufsetzen, auch wenn das Strings sind, ist es ja auch besser zu komprimieren, weil wahrscheinlich Strings vorkommen, die öfters verwendet werden. Und dann kannst du natürlich in deinem Komprimierungs Algorithmus den Baum einfach anders aufbauen. Das heißt, die Komprimierung funktioniert viel viel besser. Und wir sprechen ja von ganz großen Datenmengen. Das heißt, wenn wir da komprimieren können und Anfragen dadurch dann auch schneller bearbeiten können, ist es natürlich ideal genau für den OLAP Workload mit ganz großen Datenmengen und langen Queries, die eben irgendwas Analytisches machen. Und darum haben sich die Column based in dem Feld zumindest sehr stark dann weiterentwickelt und durchgesetzt. Und es gibt ja mittlerweile auch sowas wie HANA, die SAP Datenbank, die kann zum Beispiel beides. Da kannst du will was row based anlegen oder will was column based anlegen, das heißt du kannst dann schon entscheiden, was für Workload ist es eigentlich und wie will ich meine Daten anlegen. Es gibt auch, glaube ich, für Postgres so ein Plugin, dass du Column Stores dementsprechend verwenden kannst. Also es hat sich eigentlich schon durchgesetzt und ist, würde ich mal sagen, fast de facto Standard eigentlich heute in der Datenbank."
+        },
+        {
+            "start": 1943980,
+            "end": 1962010,
+            "speaker": "A",
+            "text": "Wer sind denn so die klassischen Vertreter? Ich meine, Clickhouse würde ich sagen, ist einer der bekanntesten Vertreter, zumindest im Bereich, was man so selbst hosten kann. Snowflake als Firma gibt es auch noch, nutzen ebenfalls ein Columnar Format. Google bigquery ist genau das, was wir gerade beschreiben oder Amazon Redshift, die frühen."
+        },
+        {
+            "start": 1962010,
+            "end": 1978290,
+            "speaker": "B",
+            "text": "Waren monetb, das war glaube ich eine der ersten Datenbanken, die so in dem Bereich unterwegs waren, nach eben Vertica, Vertika war von Stormbreaker, aber eben kommerziell. Und es gibt eben auch für klassische wie mariadb Column Store eine Engine, die das dementsprechend auch column basiert ablegt."
+        },
+        {
+            "start": 1978370,
+            "end": 2050640,
+            "speaker": "A",
+            "text": "Wenn wir jetzt das gleiche Prinzip wie bei der Row oriented Datenbank mal nehmen und wo ist es denn mal wirklich performant, dann kann man generell sagen, bei Column Stores hängt der Aufwand eher davon ab, wie viele Spalten du brauchst und nicht davon, wie viele Spalten die Tabelle insgesamt hat, wohingegen bei der Row wie viel Zeilen du brauchst. Aber das sagt auch Aggregationen über viele Zeilen und wenige Spalten ist dann natürlich genau das Richtige, denn dann kannst du nämlich Nutzung von sogenanntem Spalten Pruning machen. Das bedeutet massiv komprimierte Spaltenblöcke, weil die Spalten ja eigentlich alle dasselbe Datenformat haben, werden gescannt, aggregiert und vektorisiert zusammengerechnet. Und diese vektorisierte Zusammenrechnung ist sogar sehr CPU freundlich, weil es gibt ein CPU Konzept, das nennt sich SIMD, Single Instruction Multiple Data. Dabei lädt die CPU Daten in große Vektorregister und kann die dadurch zusammenhängend berechnen. Keine Pointer Sprünge werden dann notwendig und das nutzt so eine Columna Storage natürlich sehr gut aus und deswegen ist halt auch so eine spaltenorientierte Datenbank genau bei sowas recht performant."
+        },
+        {
+            "start": 2050720,
+            "end": 2091580,
+            "speaker": "B",
+            "text": "Nachdem bei SIMT Operations aber natürlich immer die Daten gleichartig sein müssen vom gleichen Typ, damit man eben parallel dann mit einer Instruction parallel mehrere Daten verändern kann, lesen, irgendwas addieren, was es auch immer ist, müssen die Daten aber natürlich so dann im Speicher abgelegt werden und da spielt dann Column Store genauso so wieder rein. Man kann natürlich auch sind Operations auf Row based machen, gar keine Frage, aber üblicherweise haben die natürlich in irgendeinem Register nicht so Platz, weil die Rows halt dementsprechend länger sind, damit man die gleichen Datentypen hat und so weiter. Also wenn es um parallele Verarbeitung geht auf CPU Ebene, hat man üblicherweise beim Column Store eine einfachere Möglichkeit dadurch."
+        },
+        {
+            "start": 2091660,
+            "end": 2112100,
+            "speaker": "A",
+            "text": "Eine Sache wurde mir sehr früh beigebracht bei relationalen Datenbanken, bei row oriented Datenbanken ist, dass sehr breite Tabellen, also mit sehr vielen Spalten nicht so dolle sind. Macht natürlich Sinn, wenn du auch wenn du nur eine Spalte in einer row oriented Datenbank lesen möchtest, dass du deine ganze Zeile lesen musst und dann deswegen deine neun hundert oder ein tausend Spalten hast."
+        },
+        {
+            "start": 2112100,
+            "end": 2119540,
+            "speaker": "B",
+            "text": "Hast du ja üblicherweise nicht, weil du ja normalisierst und durch die Normalisierung solltest du eigentlich gar keine Tabellen mehr am Ende haben, die ganz viele Spalten haben."
+        },
+        {
+            "start": 2119540,
+            "end": 2162160,
+            "speaker": "A",
+            "text": "Ja, ja, Theorie hin oder her. Bei der Spaltnorit Datenbank ist das völlig egal, denn du kannst ohne Probleme eine Tabelle mit ein tausend Spalten haben, weil der Aufwand wird dadurch bestimmt, wie viele Spalten du liest. Wenn du jetzt nicht dauerhaft ein tausend Spalten gleichzeitig liest, kann deine Tabelle wirklich Millionen Spalten haben. Das ist kein Problem, denn es geht wirklich nur darum, wie viel Spalten liest du natürlich Aggregationen oder ein Top N Ranking nach Aggregationen, all diese ganzen Thematiken, die für klassische Bi klassische Analytics Workflows relevant sind. Da kommt so eine Datenbank wie Clickhouse oder bigquery oder sowas nicht ins Schwitzen, denn genau dafür sind die gebaut."
+        },
+        {
+            "start": 2162160,
+            "end": 2213140,
+            "speaker": "B",
+            "text": "Was du jetzt noch erwähnt hast mit, dass man unendlich viele Columns haben kann, ganz klassisch den normalisiert, da ist eben auch ganz wichtig, dass es die Komprimierung gibt, weil sonst hättest du ja ganz viele Nullwerte. Sagen wir mal, du hast irgendwie drei tausend Spalten, weil du drei tausend Felder hast, dann wirst du wahrscheinlich ganz viele Einträge haben, wo ein Feld nicht gesetzt ist, keine Ahnung, weil Jason dahinter liegt und theoretisch kannst du da halt alles reinschreiben und für jedes neue Feld machst du eine eigene Spalte. Dann hast du Spalten, wo ganz ganz viele Null Values drinnen sind. Durch die Komprimierung werden die aber eigentlich nicht gespeichert, weil wenn du jetzt fünf Werte hast, konkrete und danach kommt eine Million mal null, also nicht bekannt, dann speicherst du natürlich nicht eine Million mal null ab, sondern komprimiert die Nullwerte weg und hast dann nur fünf Werte abgespeichert. Und so kannst du das erreichen, dass du eigentlich kein Limit auf der Anzahl der Spalten hast."
+        },
+        {
+            "start": 2213140,
+            "end": 2282450,
+            "speaker": "A",
+            "text": "Jetzt kann man sich fragen, warum schicken wir denn nicht immer nur Columna Storage in Produktion für meine Webseite? Denn ich baue ja das nächste Unicorn. Ich habe natürlich Milliarden von Benutzern, deswegen wird meine Datenhaltung auch sehr, sehr groß. Immer wenn man sich die Frage stellt über OLTP und versus OLAP, dann hat das natürlich alles immer was mit Trade off zu tun, wo wir gesagt haben, wenn es um schnelle Transaktionen gehen soll, um kurze Transaktionen, um schnelle Point Lookups, da sind halt OLTP Datenbanken deutlich stärker und OLAP Datenbanken sind häufig leselastiger. Sie nutzen Snapshot oder Batch Vorgänge, um Daten zu schreiben. Wenn es um schnelle Insert geht, sollte man lieber role based orientierte Datenbanken nutzen. Ähnlich bei der Latenz. OLTP zielt auf Millisekunden Latenz ab für einzelne Vorgänge. OLAP selbst toleriert eher höhere Latenz, weil sie sind optimiert für Durchsatz, für große Scans, für Parallelität. Das muss man halt schon wissen, bevor man sowas einfach in Produktion schippt. Und warum kommt meine Clickhouse Query über drei Milliarden Rows nicht schnell zurück? Ich habe doch beim Wolfi und Andi gelernt, das ist doch spaltenorientiert, das muss doch jetzt schnell gehen."
+        },
+        {
+            "start": 2282610,
+            "end": 2389670,
+            "speaker": "B",
+            "text": "Man muss sich das ja auch nur bildlich vorstellen. Wenn du jetzt ein Update denkst in so einem Column Store und du änderst jetzt eine Zeile oder du fügst eine neue Zeile hinzu und du hast eine Million Spalten, dann musst du diese eine Million Spalten, die einzeln abgespeichert sind, musst du überall einen Wert dranhängen. Das heißt, du musst je nachdem wie viel Spalten du hast, verschiedene Blöcke wieder angreifen und dementsprechend ändern. Hingegen bei einem Robes speicherst du einfach die gesamte Zeile hintendran Append von deinem Blog und that's it. Wenn du jetzt an den Use Case denkst, wie zum Beispiel irgendeine Webseite und du speicherst jetzt deine Cookies von den Usern, weil die ja logged in sind in einem Column Based Store und in dem Cookie hast du immer den Timestamp drin, die letzte besuchte Webseite und vielleicht irgendwelche andere User Informationen. Mit jedem Klick auf der Webseite müsstest du dann zwei oder drei Spalten updaten. Jetzt sind die komprimiert auch noch, das heißt, du musst die mal dekomprimieren, musst den Wert finden irgendwo zwischendrin von deinem User, von diesem Cookie, musst dann in der Spalte den Wert ändern, den Timestamp, dann gehst du zur nächsten Spalte, Millionen von Einträgen, dekomprimierst die, suchst dir wieder den Wert raus, was ist die Last Visit Page von dem User, änderst dort einen String, komprimiert, programmierst danach wieder alles, legst es wieder kompliziert ab. Also man merkt schon, wenn man viele Updates hat auf zeilenbasierten Inhalten, dann ist natürlich Column based einfach ein falsches Format. Das heißt, man muss schon genau wissen, was ist der Workload. Um dann zu entscheiden, verwende ich Row based, Column based. Und genau darum hat HANA zum Beispiel auch die Wahl zwischen den zwei Herangehensweisen, weil du weißt, was habe ich für ein Workload. Habe ich OLAP, habe ich OLTB, dementsprechend kann ich dann Rode Column Based auswählen, wenn ich die Tabelle erstelle."
+        },
+        {
+            "start": 2389670,
+            "end": 2391910,
+            "speaker": "A",
+            "text": "Kennst du den Dietmar und den Hasso eigentlich persönlich?"
+        },
+        {
+            "start": 2392230,
+            "end": 2423860,
+            "speaker": "B",
+            "text": "Ich habe den Hasso einmal erlebt in einem, ich glaube es war ein Workshop oder so, eine kleine Konferenz irgendwo. Er war dann schon ziemlich alt, war interessant, er hat nämlich in seinem Alter noch damals die Storage Engine von HANA erklärt, die damals noch sehr wissenschaftlich war und zwar wirklich, er hat sich wahnsinnig gut ausgekannt, das war unglaublich. Was aber auch interessant war, er hat es nicht geschafft, selber die Folien weiter zu klicken, sondern hatte einen Assistenten mit dabei, der ihm die Folien weiter geklickt hat, Aber er hat die Folien auf jeden Fall perfekt erklärt."
+        },
+        {
+            "start": 2424020,
+            "end": 2430820,
+            "speaker": "A",
+            "text": "Also so viel Werbung, wie du für HANA machst, habe ich das Gefühl, dein nächster Job wird SAP Consultant, Nicht, dass du dann ABAP schreibst."
+        },
+        {
+            "start": 2430820,
+            "end": 2466710,
+            "speaker": "B",
+            "text": "Ja, ich spreche von der Zeit, wo HANA noch überhaupt nicht produktiv im Einsatz war, war, man muss sagen, dass SAP damals mit In Memory Stores, ist ja ein In Memory Store, schon einiges abgeliefert hat und es gab da eigentlich in der Wissenschaft zwei große Systeme, In Memory drei würde ich mal sagen, eines aus München und eines natürlich vom Stormbreaker. Und da Hasu Plattner war da auch so ein bisschen in dem Game drin und hat da wirklich viel mit seinem Hasso Plattner Institut weiterentwickelt und was dann eben später daraus geworden ist, ist was heute HANA ist. Aber da sind natürlich viele, viele Jahre Wissenschaft auch dahinter, hinter dem ganzen System."
+        },
+        {
+            "start": 2466870,
+            "end": 2473110,
+            "speaker": "A",
+            "text": "Jetzt hast du dich im Juni zwei tausend vierzehn mal hier in den Podcast gestellt und hast gesagt, wieso nutzen wir eigentlich alles Datenbanken?"
+        },
+        {
+            "start": 2473590,
+            "end": 2476150,
+            "speaker": "B",
+            "text": "Also zwei tausend vierzehn gesagt, Juni zwei."
+        },
+        {
+            "start": 2476150,
+            "end": 2480870,
+            "speaker": "A",
+            "text": "Tausend vierzehn kam die Episode ein hundert neun und zwanzig raus, Da wurde du dich hier hingestellt, hast gesagt, ich glaube."
+        },
+        {
+            "start": 2480870,
+            "end": 2482550,
+            "speaker": "B",
+            "text": "Nicht, dass das zwei tausend vierzehn war."
+        },
+        {
+            "start": 2482710,
+            "end": 2489590,
+            "speaker": "A",
+            "text": "Oh, zwei tausend vier und zwanzig, Entschuldigung, ich hatte ein bisschen gebraucht. Wir nehmen am Sonntag auf. Mein Hirn ist also auch noch im Wochenende."
+        },
+        {
+            "start": 2489980,
+            "end": 2497540,
+            "speaker": "B",
+            "text": "Das scheint so ein Pattern zu sein. Kubernetes hast du kürzlich auch in einem Interview so um zehn Jahre irgendwie verschätzt auf zwei tausend elf oder so."
+        },
+        {
+            "start": 2497540,
+            "end": 2507820,
+            "speaker": "A",
+            "text": "Naja, Kubernetes kam zwei tausend vierzehn raus, also das passt dann schon noch. Wie dem auch sei, jetzt lass mich mal zu Ende reden hier. Du unterbrichst mich. Hast du das in deiner Erziehung nicht genossen, dass man Leute nicht unterbrechen soll?"
+        },
+        {
+            "start": 2508060,
+            "end": 2512580,
+            "speaker": "B",
+            "text": "Also ich sage jetzt nicht, was man in Tirol in der Erziehung mitbekommt, wenn es um deutsche TUS ist schon wieder."
+        },
+        {
+            "start": 2512580,
+            "end": 2527050,
+            "speaker": "A",
+            "text": "Es ist unglaublich. Du hast dich hier hingestellt, hast gesagt, wir brauchen keine Datenbank, wir brauchen Files zwei tausend vierzehn, zwei tausend vierzehn plus minus zehn Jahre spielt bei deinem Alter keine Rolle mehr. Dann lass uns doch mal ganz simpel starten, wenn wir über ro based und column based sprechen. Wo siehst du CSV?"
+        },
+        {
+            "start": 2527130,
+            "end": 2553810,
+            "speaker": "B",
+            "text": "Ja, CSV ist ro based, ganz klar. Und das ist ja das, was ich eigentlich am Anfang auch erwähnt habe. Man spricht immer von row based Datenbanken, aber wir sprechen eigentlich von dem Datenformat in Files. Datenbanken speichern ja eigentlich auch im Endeffekt alles in Files ab und so kann man durchaus auch selbstständig Files abspeichern. CSV zum Beispiel, ganz klassisches Role based Format, dreckiges Format, ist nicht standardisiert, du hast kein Schema, es ist einfach nur grausam und eigentlich will man das alles nicht machen."
+        },
+        {
+            "start": 2553810,
+            "end": 2570690,
+            "speaker": "A",
+            "text": "Naja, nehmen wir mal ein paar Vorteile von CSV. Es ist unglaublich einfach, weil zum Beispiel Sachen wie Kompression finden außerhalb statt durch gzip und so weiter und so fort. Und es ist enorm breit unterstützt und ich bin mir nicht sicher, ob es was leichteres zu debuggen gibt als CSV."
+        },
+        {
+            "start": 2570770,
+            "end": 2620770,
+            "speaker": "B",
+            "text": "Ja, aber du sagst ja schon richtig debuggen, weil debuggen ist immer damit verbunden, weil CSV ist einfach dreckiges Format. Es ist nicht definiert, was ist ein Anführungszeichen, was ist ein Beistrich. Beistrich verstehst du ja nicht. Komma, Semikolon, Strichpunkt in Österreich, diese ganzen Trennungszeichen und so weiter. Es ist einfach nichts definiert und darum ist es ja auch nicht möglich, einfach ein CSV zu öffnen in deinem Excel und die richtigen Daten zu haben. Du musst dir im Vorhinein definieren, was sind die einzelnen Trennzeichen, was ist ein Komma bei einem Preis, bei einem Integer und die ganzen Dinge und erst dann kannst du damit arbeiten. Also unstandardisierter und dreckiger geht es eigentlich gar nicht mehr. Aber ich gebe dir recht, es ist sehr einfach und es versteht halt jeder mehr oder weniger. Aber jetzt auf technischer Ebene würde ich mal sagen, zum automatischen Verarbeiten ist es einfach ein dreckiges Format."
+        },
+        {
+            "start": 2620850,
+            "end": 2629410,
+            "speaker": "A",
+            "text": "Was ist dann der Grund, warum das eigentlich der de facto Standard für den Austausch, Export, Import für viele, sehr viele Firmen ist?"
+        },
+        {
+            "start": 2629730,
+            "end": 2635380,
+            "speaker": "B",
+            "text": "Ich weiß auch nicht, warum Windows das Standard Operating System geworden ist. Es gibt Sachen, die muss man nicht."
+        },
+        {
+            "start": 2635380,
+            "end": 2639820,
+            "speaker": "A",
+            "text": "Verstehen, weil immer noch nicht das Jahr des Linux Desktops gekommen ist. Relativ einfach."
+        },
+        {
+            "start": 2639820,
+            "end": 2653180,
+            "speaker": "B",
+            "text": "Ich würde jetzt gerne sagen, vielleicht hat es was mit der Pornoindustrie zu tun, weil VHS hat sich auch durchgesetzt. Ein schlechteres Format wegen der Pornoindustrie heißt es immer, vielleicht spielten die da auch irgendwie mit bei CSV. Keine Ahnung, da kann ich jetzt keinen Link herstellen."
+        },
+        {
+            "start": 2653180,
+            "end": 2671430,
+            "speaker": "A",
+            "text": "Mich interessiert jetzt echt der Link von Windows zur Pornoindustrie, aber ist auch egal. Dann lass uns mal zu einem etwas more sophisticated Pfeilformat kommen und zwar fliegt eine Sache öfter über meinen Bildschirm in letzter Zeit und zwar ist das Apache Parkett oder Parke. Ich weiß immer noch nicht, wie es richtig ausgesprochen wird, aber es ist mir auch egal."
+        },
+        {
+            "start": 2671590,
+            "end": 2681270,
+            "speaker": "B",
+            "text": "Ich glaube, das eine ist Deutsch und das andere ist dann Französisch. Eigentlich Französischer hätte jetzt gesagt, aber ich glaube, die Englisch speaking Leute sagen auch OK. Meines Wissens."
+        },
+        {
+            "start": 2681270,
+            "end": 2744220,
+            "speaker": "A",
+            "text": "Für die Leute, die es noch nicht gehört haben, nur mal ganz kurz, was ist das eigentlich? Wir sprechen hier über ein binäres File Format, über ein binäres Open Source File Format, was standardisiert ist und was ein Columna Storage Format für Analysesysteme ist. Die ganze Sache wurde zwei tausend dreizehn von Twitter und Cloudera entwickelt, auf Basis eines wissenschaftlichen Papers von Google, wo es um Dremel geht. Wer Google Dremel nicht kennt, Google Dremel ist die Abfrage Engine, die aktuell bei Google bigquery verwendet wird. Und Cloudera war damals eine Firma, also zwei tausend dreizehn war Claudera eine Firma, die haben eine Hadoop Distribution rausgebracht. Ähnlich wie bei Linux gab es bei Hadoop auch fertige Installationspakete mit so ein paar Eigenheiten. Und Cloudera war eine Firma, die hat so eine rausgebracht und Twitter war so ein heavy Hadoop User. Und da haben die gesagt, hey cool, dieses binäre Format Columna Storage, das brauchen wir. Also hat Twitter und Cloudera das File Format für das File System entwickelt, denn genau da wurde es genutzt."
+        },
+        {
+            "start": 2744380,
+            "end": 2767340,
+            "speaker": "B",
+            "text": "Cloudera gibt es übrigens immer noch. Also die hatten damals so diese Distro sind vor allem im industriellen Umfeld einfach weit verbreitet immer noch meines Wissens, weil sie halt Sachen vereinfachen. Und wenn du halt eine Firma bist, die jetzt weniger Tech Knowledge und Kompetenz hast, dann setzt du halt gern auf so Out of the Box Lösungen oder die dir das halt einfach weg abstrahieren. Da war klar eigentlich immer stark."
+        },
+        {
+            "start": 2767340,
+            "end": 2878900,
+            "speaker": "A",
+            "text": "So, jetzt kann man sich die Frage stellen, hä, wenn ich doch eine Datei habe, wie baue ich denn ein Columnar Storage Format? Und das ist nämlich ganz interessant und warum das jetzt interessant ist, kommen wir gleich zu, was das nämlich für einen praktischen Anwendungsfall in der aktuellen Industrie mit Kafka und Co. Wo das eingesetzt wird. Denn Apache Parket oder Parkett hat ein paar Designprinzipien. Auf der einen Seite ist das spaltenorientiert innerhalb von sogenannten Row Groups. Was ist eine Row Group? Eine Row Group besteht aus einem Column Chunk für jede Spalte. Das hört sich total komisch an, aber im Endeffekt geht es darum, stellt euch vor, wir haben eine Columnar Tabelle und diese Tabelle selbst wird nochmal gesplittet, also nochmal partitioniert. Innerhalb jeder Partition werden die Daten spaltenweise gespeichert. Ich nehme mal ein sehr doofes Beispiel. Stellt euch vor, Deutschland, Deutschland hat sechzehn Bundesländer wir speichern jetzt alle Postleitzahlen und alle Einwohner und so weiter und so fort in einer Kalumna Tabelle. Dann könnte man sagen, okay, es gibt sechzehn Row Groups, es gibt eine Row Group Nordrhein Westfalen, eine Row Group Saarland und so weiter. Das bedeutet, die Kalumna Tabelle wird noch mal horizontal partitioniert. Das hat ein paar Vorteile. Unter anderem kann jede Grow Group von einem Thread verarbeitet werden, weil jede Row Group unabhängig ist. Für jede Row Group selbst werden Metadaten gespeichert, wie zum Beispiel die Min Max Werte, Statistiken oder die Anzahl von Nullwerten. Das hat natürlich zum Vorteil, wenn jetzt der Wolfgang gebe mir alle Einwohner, wo die Postleitzahl mit fünf anfängt. Da kann man sagen größer oder größer. In Deutschland hat ja in der Regel fünf Stellen. Dann wird die halbe Datei einfach gar nicht mehr gelesen, weil man einfach nur in den Metadaten nachgucken kann, welche Row Group hat denn welche Min Max Wert. Und so kannst du relativ einfach über die Datei seeken, ohne die ganze Datei zu parsen."
+        },
+        {
+            "start": 2878900,
+            "end": 2896060,
+            "speaker": "B",
+            "text": "Vielleicht zur Einordnung, wir sprechen da von Row Groups in der Größenordnung von so mehreren hundert Megabyte oder default ist glaube ich um die ein hundert Megabyte. Das heißt, da hat schon einiges Platz so in ein hundert Megabyte, vor allem wenn dann noch irgendwas komprimiert wird oder so. Also es sind schon große große Gruppen."
+        },
+        {
+            "start": 2896460,
+            "end": 3003500,
+            "speaker": "A",
+            "text": "Ja, Row Group sind jetzt gerade nicht vorteilhaft zum Thema Kompression. Da würde man eher sagen, das ist ein Trade Off oder ein Sweet Spot, weil auf der einen Seite je größer eine Row Group ist, desto besser kannst du die ganze Sache natürlich komprimieren. Das hatten wir ja gerade schon bei Columnar Storage gesagt. Umso mehr Datensätze mit den gleichen Datentypen man hat, desto größer kann man die komprimieren. Aber bei zu großen Row Groups kann man natürlich weniger paralysiert die ganze Sache verarbeiten. Finde ich einen schönen Sweet Spot. Und eine andere Sache, die Parqet auch sehr gut macht, sind die Metadaten. Denn jede Parkett Datei hat Metadaten zu den Row Groups, die sind aber nicht mehr. Die sind nämlich im Footer. Die Datei beginnt mit einem Header, der dann direkt auf den Beginn des Footers verweist und im Footer befinden sich die Metadaten mit Beschreibung der Datenblöcke. Jetzt kann man sich Hä, was ist das denn für ein Fehlfans? Ich mache die Datei auf und kriege erstmal einen Pointer auf eine andere Stelle in der Datei, um dann weiterzulesen. Was ist das für ein Fehlerfanz? Ja, ganz einfach. Und zwar, wenn die Metadaten im Footer sind, dann werden die Metadaten auch erst geschrieben, wenn die ganze Datei geschrieben wurde. Das bedeutet, man kann die ganze Datei in einem Stream wegschreiben und ist somit ideal für verteilte Systeme wie Hadoop oder Amazon S oder ähnliches und es ist kein Full Scan der Datei notwendig, um zu wissen, was ist denn in der Datei so drin. Denn im Footer in den Metadaten steht zum Beispiel das Schema, die Anzahl der Row Groups, die Position jeder Row Group, die Min Max Werte der Statistiken pro Spalte, Kompressionsinformation, Encoding Informationen und so weiter. Also das ganze Dateiformat ist wirklich für Right, Runs, Read, Many optimiert. Und da sind wir natürlich dann jetzt wieder im ganzen Data Lake und ich sag mal großen Datenuniversum, wo es dann wirklich um Millionen oder Milliarden von Datensätzen."
+        },
+        {
+            "start": 3003500,
+            "end": 3010940,
+            "speaker": "B",
+            "text": "Geht, also in dem ganzen Urlaub Bereich. Aber jetzt ist ja Paket keine Datenbank, sondern nur ein Format, wie die Dateien abgespeichert werden."
+        },
+        {
+            "start": 3011100,
+            "end": 3054660,
+            "speaker": "A",
+            "text": "Ja genau. Also ich meine, es ist selbst nur ein Dateiformat. Das bedeutet, die Partitionierung deiner Paket Dateien, die müsstest du, wenn du Paket alleine nutzt, durch Verzeichnis oder Dateikonventionen irgendwie managen. Hive oder S hat das ganze Zeit lang so gemacht, dass du sagst, okay, du partitionierst deine Daten anhand der Tage oder sowas. Wenn du jetzt zum Beispiel Log Dateien in Paket speicherst, dann hast du einen Ordner von mir aus, das Datum von heute und da schreibst du fünf und dreiig Paketdateien rein und wenn du auf den nächsten Tag gehst, dann machst du einen neuen Ordner und so weiter. Das ist eine Art von Partitionierung. Aber es gibt von Haus aus in Paket selbst kein Orchestrierungsmechanismus."
+        },
+        {
+            "start": 3054900,
+            "end": 3059940,
+            "speaker": "B",
+            "text": "Aber was sind jetzt Use Cases, wo ich Paket wirklich einsetze, wenn das nur ein Fall ist, was ich eigentlich schreibe?"
+        },
+        {
+            "start": 3059940,
+            "end": 3078580,
+            "speaker": "A",
+            "text": "Naja, Use Cases sind halt alles Time Series Datenbanken, Logs von mir aus einfach Event Logs, also sowas wie Event Sourcing, kannst ja ein Paket super reinschreiben auf hochfrequentierte Systeme. Alles das, was man, ich sag mal, Archivdaten macht alles, was du auf Object Storage fahren würdest, alles Data Lake technische, würde ich fast sagen."
+        },
+        {
+            "start": 3078580,
+            "end": 3085940,
+            "speaker": "B",
+            "text": "Also alles, was mich nicht umbringt, wenn ich mal eine Zeile verlieren sollte, so in der Richtung, oder? Also ich mache jetzt keine Bank auf Paketfiles."
+        },
+        {
+            "start": 3085940,
+            "end": 3094740,
+            "speaker": "A",
+            "text": "Genau, wenn du Milliarden von Daten schreibst, dann verändert ein fehlender Datensatz in der Regel nicht die große Statistik."
+        },
+        {
+            "start": 3094900,
+            "end": 3104360,
+            "speaker": "B",
+            "text": "Klar, wenn meine Logfiles jetzt Fehler beinhalten und ich möchte rausfinden, ist ein Fehler drin oder nicht und ich schreibe löschin Fehler, ist natürlich schlecht, aber es zerstört mein Business trotzdem nicht."
+        },
+        {
+            "start": 3104440,
+            "end": 3155410,
+            "speaker": "A",
+            "text": "Aber in der Regel, wenn du ein hochfrequentiertes System hast, hast du den Fehler nicht nur einmal, sondern mal und dann ist es irrelevant, ob du es mal oder hast. Jetzt ist es aber so, jetzt schreibst du ganz viele Daten und jeder, der das schon mal über eine gewisse Zeit gemacht hat, der weiß immer, wenn ich Dateien in Ordner speicher und anhand von Ordnernamen partitioniere oder Object Präfixes, wie es dann bei Amazon S und so weiter Object Storage heißt, irgendwann füge ich eine Spalte hinzu, dann verändert sich das Schema oder es findet eine Evolution des Schemas statt und da fängt irgendwie jeder an, da so eine Art Management Layer drauf zu bauen und dafür gibt es bei Paket selbst gar nichts. Und um dieses Problem zu lösen, gibt es ein weiteres Apache Projekt. Wer hätte es gedacht, wie viele Apache Projekte gibt es eigentlich? Das nennt sich Apache Iceberg."
+        },
+        {
+            "start": 3155410,
+            "end": 3239560,
+            "speaker": "B",
+            "text": "Es ist ja historisch eigentlich auch immer so gewesen, man hat ja irgendwie ein Problem, alle Leute finden eine Lösung dafür, bauen sich da selber eine Management Lösung für die Parquet Files oder andere Files. Gibt ja auch Avro und andere Formate. Also Parquet ist jetzt nicht das einzige klassische Format, um sowas abzuspeichern. Je nach Ökosystem gibt es halt andere, HIFWA dann eher auf Avro zum Beispiel. Auf jeden Fall kommt dann halt irgendwer um die Ecke und sagt meistens, ich habe eine allgemeinere Lösung für eure ganzen eigenen Selbstentwicklungen. Und das war halt Iceberg. Und Iceberg ist ein Management System von diesen Dateien, der nochmal eine Ebene darüber setzt über Paquet und das Management übernimmt. Das heißt, weiß, wo liegt welche Datei, welche Bereiche liegen wo, wo kommen neue Dateien rein, wer schreibt diese Dateien? Also das ist auch so ein Gateway an sich, Man schreibt dann Dateien über Iceberg und Iceberg, weiß dann, OK, schreiben gerade zwei User vielleicht gleichzeitig, auch wenn es eine Änderung gibt. Man kann darüber auch Änderungen abbilden, also einfach so ein Management System oben drüber, um diese vielen Paketfiles überhaupt managebar zu machen. Und gemeinsam ist es dann ein stabiles System, was eben auch gewisse Sicherheitskriterien dann anbietet, dass eben nicht passieren kann, dass irgendwer anderer gerade mein S File, mein Paket File löscht und ein anderer User schreibt aber gerade darauf was oder solche Sachen. Also gerade paralleler Zugriff ist ein großes."
+        },
+        {
+            "start": 3239560,
+            "end": 3274530,
+            "speaker": "A",
+            "text": "Thema, werden halt so simple Fragen wie beantwortet, wie zum Beispiel, welche Dateien gehören denn zu welcher Tabelle oder zu welchem Schema ohne die Datei. Also das kannst du halt bei Eisberg abfragen. Und ich bin ja ein Mensch, der auf einfache Analogien steht, deswegen habe ich bei der Vorbereitung noch mal kurz die AI meines Vertrauens gefragt, gib mir doch mal eine einfache Analogie. Und chatgpt hat mir was sehr Tolles rausgepackt, wo ich sage, es kann sich jeder merken, Paket ist wie Ziegelsteine, Eisberg ist der Bauplan, Bauaufsicht und das Katasteramt die Ziegel speichern Material. Iceberg sorgt dafür, dass daraus ein stabiles Haus wird."
+        },
+        {
+            "start": 3274850,
+            "end": 3369170,
+            "speaker": "B",
+            "text": "Puh, also deine Bauanalogien. Naja, aber gut, man kann es im weitesten Sinne so sehen. Und das Coole an dieser Bauaussicht, wie du sie so schön nennst, ist ja, wie ich schon erwähnt habe, dass User Management auch mit dabei ist, also paralleles Schreiben und so weiter abgefangen wird, also die Probleme, die dadurch entstehen. Und ein sehr cooles Feature, was mir persönlich sehr gut gefällt als Datenbänkler, ist sogenanntes Time Traveling. Das heißt, ich kann in der Historie von meinen Datenänderungen nach hinten gehen und bekomme dann den Stand von einer gewissen Zeit. Und das hängt auch damit zusammen, wie Iceberg mit Änderungen umgeht, weil an sich Paket Files sind eigentlich immutable und werden nicht geändert. Und wenn jetzt eine Änderung reinkommt, wenn du irgendwie einen User löscht, zum Beispiel irgendwo, der wird jetzt nicht in das Paketfile hineingegangen und der einzelne User wird gelöscht, sondern es wird das gesamte Paketfile kopiert und der User, der eben rausfliegen soll, der wird gelöscht. Und sobald das Paketfile neu geschrieben wurde mit dem fehlenden User und alles safe auf Platte ist, dann switcht Iceberg quasi um, setzt den Pointer um auf die neue Datei und genau zu diesem Zeitpunkt ist dann die neue Datei gültig und die andere nicht mehr. Und nachdem ich aber dadurch die Historie behalte, kann ich eben durch meine Zeit traveln und kann auch alte Datenstände auslesen. Und das ist auch ein sehr großer Vorteil über dieses Snapshot Technologie bei Änderungen, dass mir das Ganze ermöglicht wird. Und gerade wenn es um analytische Daten geht, ist es natürlich sehr praktisch, wenn ich sagen kann, wie war denn der Stand vor einem Jahr und was ist dann dazugekommen."
+        },
+        {
+            "start": 3369170,
+            "end": 3387410,
+            "speaker": "A",
+            "text": "Zum Beispiel Iceberg selbst hat sich eigentlich relativ gut entwickelt. Also ich meine, Google bigquery unterstützt Iceberg nativ. Amazon MSK, das ist der Managed Kafka von Amazon kann das, also eigentlich hat das fast jede Big Data Streaming Lösung irgendwie integriert. Also da könnte man fast sagen, ist es schon Standard?"
+        },
+        {
+            "start": 3387410,
+            "end": 3414610,
+            "speaker": "B",
+            "text": "Keine Ahnung, es ist zumindest ein Format, was sehr viel verwendet wird, eben neben AVRO, bisschen älteres Format, das aber auch noch viel verwendet wird. ORC gibt es auch noch. Es gibt schon ein paar andere Formate und wie gesagt, je nachdem Ecosystem werden andere verwendet. Aber gerade weil es auch mit Kafka zum Beispiel stark verwendet wird, da gibt es einen Eisberg Connector, hat sich das Ganze schon in die Richtung entwickelt, dass das jetzt durchaus viel verwendet wird, das Ganze."
+        },
+        {
+            "start": 3414690,
+            "end": 3433690,
+            "speaker": "A",
+            "text": "Und jetzt kann man sich mal die generelle Frage stellen, warum macht man den ganzen Quatsch eigentlich? Warum lasse ich nicht einfach alles in meiner Click House oder in meinem Kafka? Warum? Warum muss ich mich jetzt darum kümmern, noch mal irgendwelche Files auf Festplatte darum zu bewegen und zu managen und so weiter? Berechtigte Frage. Man kann auch Ist das eine gute Sache, ist das eine schlechte Sache?"
+        },
+        {
+            "start": 3433850,
+            "end": 3534120,
+            "speaker": "B",
+            "text": "Ich bin ja immer da, um den historischen Ansatz zu erklären. Das würde jetzt in dem Fall auch wieder mal wählen, weil man kann eigentlich fast alles historisch herleiten. Die Datenbanken sind halt irgendwann an einen Punkt gekommen, wo es schwierig war, das Ganze noch handhaben zu können. Vor allem wenn man dann in die Richtung In Memory Datenbanken geht. Jetzt muss ich schon wieder HANA erwähnen. Sorry Andy, aber da Hasso Plattner hat damals immer schon gesagt auf das Argument ja, aber die Speicher sind ja so klein der Rahmen, wie kann ich denn alles im Main Memory haben? Hat der Hasso Plattner immer gesagt, wir haben keinen Kunden auf der Welt, keinen SAP Kunden, wo nicht der gesamte Datenbestand, der HOT Datenbestand in Memory Platz hat. Das war immer seine Aussage schon vor vielen Jahren. Das stimmt natürlich. Aber wenn man dann in Richtung Logs geht, dann wird schon schwieriger. Events, wo man sehr viele hat und ob man die dann in einer Datenbank oder womöglich sogar im Hauptspeicher oder auf einem sehr teuren Speichermedium abspeichert, das ist halt dann einfach kostentechnisch nicht mehr so effizient. Und darum ist man natürlich in die Richtung gegangen, okay, kann billig auf S, auf irgendeinem einfachen Storage einfach meine Daten ablegen in einem Paketformat zum Beispiel. Und daraus her ist es eigentlich alles entstanden, dass man gesagt okay, will diesen billigen Speicherplatz verwenden, ich will dort meine Dateien ablegen können, aber das soll natürlich auch irgendwie sinnvoll vonstatten gehen, damit ich mir nicht selber da irgendwie meine Fallstruktur und so weiter überlegen muss. Darum setzt man Eisberg darüber und dann hat man ein sicheres System, was meine Daten ablegen, abspeichern kann, ich aber trotzdem irgendwelche Garantien bekommen, dass ich mir nicht irgendwas mit parallelen Zugriffen kaputt mache und trotzdem auf die Daten zugreifen kann und dann mit Analysenwerkzeugen im Nachhinein die Daten auch analysieren kann."
+        },
+        {
+            "start": 3534280,
+            "end": 3595040,
+            "speaker": "A",
+            "text": "Du hast es nicht explizit angeschnitten, aber implizit Diese Möglichkeit mit Columna Storage auf Filesystem ermöglicht halt ein modulares Setup, dass man wirklich Storage und Compute voneinander trennen kann. Besonders im Cloud Bereich ist das sehr relevant, denn wer schon mal eine Compute oder eine EC Instanz mit sehr viel schnellem Storage haben möchte, der muss tief in die Tasche greifen. Und Object Storage wie AWS drei oder ähnliches ist vergleichsweise günstig zu Hot Storage. Und wenn man dann auch noch so Themen wie Kompression oder Tiered Storage anwendet, also Tiered Storage bedeutet, dass du zum Beispiel kurzfristige Daten hot vorhältst auf deiner SSD und Daten, die länger in der Vergangenheit liegen, dann auf immer kälteren Storage, wo die Zugriffszeiten höher sind, Sei es Object Storage, sei es von mir aus auch Tape irgendwann mal, wo der Zugriff auf eine Minute hochgeht oder ähnliches, dann kann man natürlich über Zeit deine Storage Kosten noch weiter drüber."
+        },
+        {
+            "start": 3595040,
+            "end": 3725230,
+            "speaker": "B",
+            "text": "Was man aber natürlich schon sagen muss, und das haben wir jetzt noch gar nicht explizit erwähnt, wenn wir so eine dateiorientierte Speicherform wählen, wie mit Parque und Iceberg auch darüber geschalten, wir haben da noch keine Engine, die unsere Daten analysiert. Das heißt, man braucht zusätzlich nochmal on top irgendwie ein System, was diese Daten überhaupt verfügbar macht, weil ich kann da jetzt auf Eisberg keine SQL Query hinsetzen oder irgendein Aggregate rausholen, also das sind nur die Daten an sich und die muss dann darüber irgendein Presto oder Trino heißt heutzutage duckdb, Snowflake hast du auch schon erwähnt, oder bigquery eben mit dem Storage hintendran dann als Engine darüber setzen, damit die überhaupt was verarbeiten kann, prozessieren kann, meine Analysen, meine Reports dann überhaupt erstellen kann aus meinen ganz vielen Dateien, die dann irgendwo vielleicht am günstigen Cold Storage irgendwo liegen. Also man merkt das schon, man braucht dann schon viele Systeme am Ende, um wieder sowas zu erreichen, was man in der Datenbank out of the box bekommt. Also wenn ich da ein Click House hinstelle, da habe ich meine Query Engine, da kann ich SQL hinschreiben, da bekomme ich sofort Antworten, da kann ich auch Writes drauf ausführen. Wenn ich jetzt ein komplexes Paketsystem habe, wo Eisberg drüber sitzt, dann sitzt noch duckdb drüber, dann habe ich schon mal ganz viele Systeme, die miteinander sprechen müssen. Ich muss natürlich auch irgendwie die Daten hineinbekommen, habe dann vielleicht noch ein Kafka. Also da merkt man schon, das ist ein großes System, was man halt auch maintainen muss, im Gegensatz zu einer kleinen Clickhouse oder vielleicht sogar mysql, die ja genauso für ganz viele Daten das auch handeln kann, gar keine Frage, oder Postgres. Man braucht da die Leute dazu und auch den Use Case, damit sich das irgendwann rentiert. Dafür ist man natürlich modular, kann verschiedene Engines verwenden, die Paketfiles können auch von unterschiedlichen Processing Engines natürlich ausgelesen werden. Ich kann meine eigenen Pipelines schreiben. Man ist da natürlich schon flexibel, aber es ist halt so der Klassiker, man baut sich auch nicht selber Auto, sondern kauft sich vielleicht einfach ein fertiges Auto, aber ein paar Freaks, die irgendwas Spezielles wollen, bauen sich ein Auto auch selber. Und so ähnlich ist es da halt dann auch. Je nachdem, was man braucht, was man für Anforderungen hat, nimmt man Standard Datenbank oder eher dann irgendwie so ein komplexeres System, wo man die einzelnen Bausteine auch selber definieren oder vielleicht sogar selber programmieren kann."
+        },
+        {
+            "start": 3725540,
+            "end": 3756780,
+            "speaker": "A",
+            "text": "Naja, du sagst jetzt auf der einen Seite Paket mit Iceberg und so weiter, das ist alles super viel Aufwand, ist es auch, gar keine Frage. Das bedeutet aber im Umkehrschluss könnte man darauf stießen, ja, ein Klickhouse betreibe ich auch wie so eine mysql Cluster. Clickhouse fährt man in der Regel nicht auf einer Node, sondern auf Endnote. Und dann fängt es halt wirklich an, wo du wirklich jemanden brauchst, der sich konstant um deinen Clickhouse Cluster kümmert, also auch ein Clickhouse Cluster oder von mir aus auch deine gelebte SAP HANA, die betreibt man mal eben nicht wie eine klassische mysql auf einem kleinen digitalocean Ding."
+        },
+        {
+            "start": 3756780,
+            "end": 3761100,
+            "speaker": "B",
+            "text": "Naja, du kannst Qlik schon auch Single Node fahren. Ist halt die Frage, was du für Ansprüche hast."
+        },
+        {
+            "start": 3761100,
+            "end": 3782200,
+            "speaker": "A",
+            "text": "Genau, du kannst auch bei der gleichen Argumentation kannst du auch sagen, okay, ich habe nur ein Paket File, das schreibe ich mit meiner Paket Go Library, was ohne Probleme geht und nutze das mit duckdb. Duckdb ist eine In Memory Datenbank, die ähnlich schmal gehalten ist wie sqlite. Das bedeutet, das ist auch dein Minimum Setup, was du nur auf deinem Desktop fahren kannst. Also das ist aber auch, wenn du."
+        },
+        {
+            "start": 3782200,
+            "end": 3852970,
+            "speaker": "B",
+            "text": "Es im minimalen Setup fährst, dann hast du trotzdem mehr Moving Targets. Dann hast du grundsätzlich mal Paket, dann hast du Eisberg drüber, dann hast du, da brauchst du irgendwie ein Ingest. Es muss ja irgendwas deine Daten schreiben, wie ein Clickhouse, wo all inclusive einfach, du hast einen Docker, sage ich mal, einen Docker Container, der läuft und der macht alles. Hingegen bei der Paket Variante hast du mal auf jeden Fall mehrere Docker Container und musste da die Pipelines zusammenbauen und das ist auch schon komplexer, würde ich mal sagen, auch wenn es nur sogar Single Node angewandt wird. Aber es ist einfach, ja, du hast halt andere Use Cases, andere Targets, die du damit ansprechen willst und je nachdem, was dein System können muss, wie viel Daten du vor allem hast, was du für Ansprüche hast, dementsprechend kannst du natürlich wählen, was du verwenden willst. Der große Vorteil ist natürlich bei so einem modularen System, du kannst klein anfangen, du kannst mal einfach Paket irgendwo rausschreiben mit einem Data Capturing zum Beispiel irgendwo und schreibst hinten einfach die Files mal raus. Und wenn du dann irgendwie größer wirst und Probleme damit hast, dann kannst du Iceberg drüber schalten oder wirklich eine Processing Engine, aber am Anfang, um irgendwelche Logs zu schreiben, kannst du natürlich mal einfach starten. Aber du kannst natürlich auch irgendwie ein opensearch verwenden und da alle Logs reinschreiben. Das ist halt dann eher eine Out of the Box Lösung."
+        },
+        {
+            "start": 3852970,
+            "end": 3955640,
+            "speaker": "A",
+            "text": "So, jetzt brabbeln wir hier über Kalimna, Storage, Iceberg Paket und so weiter. Wo wird der ganze Kram denn überhaupt genutzt? Dann lass uns mal ganz kurz in die Community schauen, was jetzt gerade hier und da so abgeht. Erstmal eine tolle Clickhouse kann nativ Paketfiles lesen. Das bedeutet, stellt euch mal vor, ihr habt ein Clickhouse Cluster und stellt euch mal vor, die Notes sind am Anschlag mit ihrem Festplattenplatz oder mit ihrem RAM, dann schreibt die ganze Sache doch einfach in Paketfiles auf Object Storage und Clickhouse kann die Sache lesen. Wahnsinn. Natürlich Latenzzeiten gehen ein bisschen nach oben, aber wie wir gerade gesagt haben, bei Urlaub sollte es eigentlich kein Problem. Dann hatten wir den Case für Iceberg und Pake gemacht, dass man die Datei in einem Stream schreiben kann, weil die Metadaten ja im Footer liegen. Somit, wer also eigentlich ziemlich viel Data Streaming macht mit Kafka, der kann jetzt mit der Kombination mit Iceberg und Paket sogenanntes Kafka Tiered Storage nutzen, denn Kafka hat ein Problem. Kafka speichert alle Lot Dateien auf schnellem, teuren SSD Laufwerken in der Regel bzw. Das was du da hast. Und mit T Storage wandern die älteren Kafka Segmente auf günstigen Object Storage und da kommt dann die Nutzung mit Iceberg und Paket zusammen. Und mein vorheriger Arbeitgeber Ivan, der ist da ganz stark in dem Business gerade drin, was die gemacht haben. Die haben so ein Open Source Kafka Plugin geschrieben, da kannst du mit Kafka Connect eine Iceberg Sync schreiben und dann aus dem Stream eine native Eisberg Tabelle lesen. Also das ganzen Moving Targets, die der Wolfgang beschrieben hat, die sind dann da. Die sind aber für Consumer, für Kafka Konsumenten, ich sage mal transparent im Kafka Cluster dann gehandhabt. Natürlich auch mal wieder ein Plugin, blabliblub kann alles fehlen, aber darum geht die Folge jetzt nicht so."
+        },
+        {
+            "start": 3955640,
+            "end": 3969490,
+            "speaker": "B",
+            "text": "Aber keine Episode ohne deinem DevOps Kram und deiner Lieblingsdatenbanken. Es ist mal ausnahmsweise nicht Redis, aber ich würde fast sagen, das zweitbeliebteste Wort grundsätzlich in den Episoden nach Redis ist Prometheus. Was hat Prometheus zu bieten?"
+        },
+        {
+            "start": 3969640,
+            "end": 4001860,
+            "speaker": "A",
+            "text": "Naja, wir sprechen die ganze Zeit über Cloud Kosten und seit einem halben Jahr oder seit einem Jahr spricht man leider nicht mehr über Cloud Kosten, sondern man spricht auch über Kosten, über Observability. Es gibt sehr viele Leute in der Industrie, die ctos fragen oder auch sehr viele ctos werden gefragt von ihrem CFO, wieso zahlen wir eigentlich so viel Geld für diese Infrastruktur? Und dann wird gesagt, ja, das ist unsere Observability, die kostet dreiig Prozent unseres Cloud Budgets. Das ist oder teilweise vierzig Prozent. Also wer mal eine große Datadog oder New Relic Instanz hat, der weiß glaube ich, wie schnell man Geld verbrennt kann."
+        },
+        {
+            "start": 4001940,
+            "end": 4011980,
+            "speaker": "B",
+            "text": "Jetzt hast du schon so viele Sätze zu DevOps gesagt, zu Kosten und Finops noch gar nicht erwähnt bist du krank. Andi, heute ist noch mal dein Lieblingswort, was sofort bei DevOps und Kosten um die Ecke."
+        },
+        {
+            "start": 4011980,
+            "end": 4103730,
+            "speaker": "A",
+            "text": "Du wehrst dich ja gegen dieses Thema, dass wir das mal in der Podcast Episode behandeln. Deswegen habe ich gedacht, irgendwann gebe ich auf, verstehst du? Irgendwann bin ich zermürbt, Wolfgang. Aber nein. Aktuell findet auch eine Entwicklung in dem ganzen Time Series Thematiken bei OBS statt, bei Prometheus und Thanos. Und zwar wird dort PAQ auch als TSDB Store eingeführt. Und zwar ist die Diskrepanz, du hast Prometheus, was auf SSD optimierten TSDB, also Time Series Datenbank Blockformaten funktioniert. Und das hat einen Clash mit den aktuellen Realitäten von Object Storage. Object Storage ist in der Regel langsam. Du musst immer, wenn du den TSDB Block auf Object Storage legen würdest, dann würdest du so Overfetching betreiben und die ganze Datei lesen, was natürlich völlig unattraktiv ist. Und Time Series Datenbanken möchtest du eigentlich sehr lange speichern. Du möchtest ja mal wissen, wie hat sich meine Performance von heute zu von vor einem Jahr oder vor zwei Jahren verändert. Dafür sind ja Time Series Datenbanken unter anderem da. Und deswegen sagt man, okay, man schreibt ältere Blöcke in Paket raus aus Object Storage, dann verhindert man das Overfetching, weil man liest nur den Head, dann den Futter, die Metadaten und weiß ganz genau, welche Row Groups man lesen kann. Und da ist der Ansatz jetzt, dass du den Hot Pass auf den SSD optimierten TSDB basierten Blocks lässt und alles andere, das halt immer kälter wird, immer nach hinten raus in Parkett speicherst und dann auf Object Storage packst."
+        },
+        {
+            "start": 4103730,
+            "end": 4106090,
+            "speaker": "B",
+            "text": "Also wieder ein Tiered Storage eigentlich Tiered."
+        },
+        {
+            "start": 4106090,
+            "end": 4123820,
+            "speaker": "A",
+            "text": "Storage für aktuelle, ich sag mal, Cloud Native Observability Ansätze. Die ganze Sache befindet sich gerade in der Entwicklung. Aus eigener Erfahrung kann ich sagen, es funktioniert wunderbar. Bei Prometheus gibt es auch eine Prometheus Parkett Working Group. Kann man im CNCF Slack auch nachgucken. Vielleicht für den einen oder anderen ganz interessant, wenn er mal ein bisschen tiefer einsteigen möchte."
+        },
+        {
+            "start": 4123820,
+            "end": 4152520,
+            "speaker": "B",
+            "text": "Von welchen Größenordnungen sprechen wir denn da jetzt eigentlich? Also so irgendwie Dateigrößen, Weil es ist ja schon, wenn ich jetzt mir so überlege, was ich bisher so mit mysql gemacht habe und du hast da ein paar hundert Gigabyte an Daten, hat mysql noch überhaupt kein Problem. Da brauchst du noch nicht mal auf Clickhouse gehen. Jetzt sind wir da quasi noch eine Stufe weiter. Welche Größenordnungen kennst du denn da bzw. Ab wann macht es Sinn, irgendwie so ein tiered Storage aufzubauen?"
+        },
+        {
+            "start": 4152680,
+            "end": 4166200,
+            "speaker": "A",
+            "text": "Das ist eine sehr komplexe Frage. Das kommt natürlich auf deine Servernotes drauf an und B, wie viele Metriken du speicherst, also jetzt für Zeitdatenbanken und dann C, wie lang hinten raus du speichern möchtest. Was hast du für eine Retention Time? Deswegen ist die Frage gar nicht so einfach zu beantworten."
+        },
+        {
+            "start": 4166280,
+            "end": 4187840,
+            "speaker": "B",
+            "text": "Oder vielleicht anders gefragt, wenn man jetzt mal annimmt, ich habe ein Terabyte an Daten, ich würde mal sagen, das bekommt man mit einem Node alles noch ganz gut hin, oder? Also kommt natürlich auf die Daten drauf an, was man genau damit machen will, aber jetzt nur so als Hausnummer. Heutzutage würde ich mal sagen, Terabyte braucht man wahrscheinlich noch keine Große irgendwie speziellen Systeme, Verteilungen oder sonst irgendwas."
+        },
+        {
+            "start": 4187840,
+            "end": 4252030,
+            "speaker": "A",
+            "text": "Also ein Terabyte, wenn du das optimiert auf SSD hältst, das funktioniert halt schon gut. Da kommt es halt darauf an, wie viel RAM hat deine Kiste. Also wenn du auf dem Terabyte Disc nur ein hundert oder zwei hundert Gramm hast und ziemlich viele Time Series Datenbank Queries hast, würde ich sagen, pack mal mehr RAM nach. Aber das hast du ebenfalls bei Clickhouse und ähnliches. Also auf der Clickhouse Com gibt es auch Relationen, wie du Storage zu RAM skalieren solltest. Und diese Datenbanken sind ja berühmt dafür, auf sehr günstigem Storage zu laufen, also auf Spinning Discs. Aber dann brauchst du sehr viel RAM. Jetzt gerade RAM kaufen, bisschen unvorteilhaft wegen dem Ganzen, deswegen kannst du dir jetzt gerade überlegen, ob du nicht lieber ein paar Terabyte Disc SSD kaufst, um dann die Geschwindigkeit von dem RAM zu kompensieren durch eine SSD. Aber in der Regel fährst du ja Click aus. Zum Beispiel Clickhouse kannst du ja sehr viel mit sehr vielen Nodes, auf sehr vielen Spinning Discs mit sehr viel RAM fahren. So fährt sich zum Beispiel auch bigquery. Aber wie gesagt, RAM ist gerade ein bisschen frech vom Preis her."
+        },
+        {
+            "start": 4252110,
+            "end": 4285630,
+            "speaker": "B",
+            "text": "Man muss ja auch dazu sagen, dass gerade jetzt bei Metriken, da bist du ja üblicherweise nicht so interessiert an den Metriken von vor zwei Jahren, sondern vielleicht eher von den aktuelleren. Das heißt, wenn man da noch ein bisschen Partitionierung draufsetzt, so wie man es früher gemacht hat. Mysql kannst du partitionieren zum Beispiel, das ist so der Oldschool Weg, da hast du trotzdem den teuren Speicher, den teuren SSD Speicher, aber du partitionierst halt trotzdem, dass du die Hot Daten, die halt aktueller sind, dann eigens abgespeichert waren, ein bisschen schneller zugreifbar sind und dann kommst du da eigentlich schon auch relativ weit, würde ich mal sagen, mit dem Ansatz."
+        },
+        {
+            "start": 4285630,
+            "end": 4413220,
+            "speaker": "A",
+            "text": "Ich sage mal, bei modernen Observability Daten und je nachdem, wie viele Metriken du hast, nehmen wir mal dreiig Microservices, jeder Microservice ist in Go geschrieben oder in Java, da gibt es dann Time Series Datenbanken über deine Runtime, über deine JVM, über deine, das sind schon mal irgendwie fünfzig, sechzig, siebzig Metriken. Dann hast du noch Business Metriken, dann hast du, also da kommt schon was ordentlich zusammen, das potenziert sich dann auf Basis deiner Anzahl von Services, Das ist der erste Multiplikator, dann hast du das sehr wahrscheinlich auf irgendeinem Container Schedule Kubernetes, dann hast du da vielleicht noch weitere Metriken, die dann noch ein Label dran packen, wie zum Beispiel von welcher POD Instanz kommt das, weil jedes Label erzeugt eine neue Time Series, die dann wieder potenziert. Also du bist da relativ schnell bei einer sehr, sehr großen Anzahl Zeitreihen Daten und da ist das Terabyte relativ schnell voll. Das hört sich viel an, vielleicht trifft das auch nicht zu auf euer Home Lab, aber wenn man jetzt mal, ich sag mal, eine Webseite betreibt, wo ein bisschen was los ist mit großen System, dreiig, vierzig Microservice, ein paar Engineering Teams, vielleicht ein paar Server Metriken noch, wie geht es die CPU und so. Also da bist du relativ schnell bei sehr, sehr Zeitreihen Daten, wenn du das einfach die Zeit laufen lässt, bist du mit einem Terabyte relativ schnell dabei. Was ich dir sagen kann ist, mein Arbeitgeber hat das schon in Produktion, da geht es um Petabyte und das ist ein enormer Geschwindigkeitsboost auf Basis dieser Roblox, auf Basis der Statistiken im Metafeil und so weiter. Ich finde diese, deswegen habe ich das Thema auch mitgebracht, ich bin gespannt über die nächsten paar Jahre, wo Paket oder Parkett noch so Einsatz findet. Ich denke, es wird mehr und mehr genutzt, auch in klassischen Systemen, weil einfach Object Storage, ich sag mal, zur Commodity geworden ist und einfach super günstig und es ist einfach super bequem und wenn du dann das Overfetching vermeiden kannst und dann, weil Object Storage hat das Riesenproblem, dass es als langsam gilt und das gilt nur als langsam, weil gesagt wurde, du musst das ganze File nehmen, lesen, parsen und das ist natürlich jetzt ein."
+        },
+        {
+            "start": 4413220,
+            "end": 4468070,
+            "speaker": "B",
+            "text": "Möglicher Lösungs und es kommen natürlich immer mehrere Out of the Box Lösungen. Iceberg war ja schon eigentlich so ein wichtiger Baustein, der das einfach stabiler macht, die ganze Handhabung. Und dann kann man auch eben duckdb ist relativ einfach draufgesetzt, also das Deck wird auch einfacher, maintainbarer heutzutage mit den ganzen Standard Tools, die man sich früher vielleicht alle selber gebaut hat. Aber trotzdem, ich würde mal einfach anfangen, vor allem bei einem neuen Projekt, außer man weiß schon, dass man wirklich gleich mal in die Größenordnung geht und dann kann man das immer noch mal umstellen. Und ich bin sogar noch immer ein Freund, dass man, wenn man kleine side Project, also jetzt eher in der Größe, wo man weiß, ich habe nicht morgen eine Million User, dass man da vielleicht sogar ganz einfache Systeme in Standard Boom if Standard mysql vielleicht sogar, es kommt mir schwer über die Lippen, vielleicht sogar am Anfang die Logs in mysql speichert, auch wenn man das eigentlich nicht machen sollte, aber für einen ganz simplen, einfachen Start eignet sich das immer noch sehr gut."
+        },
+        {
+            "start": 4468070,
+            "end": 4549560,
+            "speaker": "A",
+            "text": "Ja, und ich glaube, das ist die eine Sache, die ich euch noch allen mitgeben möchte. Nur weil wir hier über Roll versus Kalumna orientiert und Paket und Terabyte und so reden, heißt das nicht, dass ihr in eurer klassischen Row oriented Datenbank keine Summen oder Durchschnitte querien könnt. Macht das, macht das so lange, wie das für euch funktioniert. Ich habe Seitenprojekte, die haben Millionen von Zeilen in mysql Datenbanken, die funktionieren ohne Probleme. Da werde ich bei weitem keine Click offs aufsetzen. Was ich aber auch sage, wenn ihr euch bei euch im professionellen Umfeld ein bisschen mehr Daten rumturnt, dann schaut euch doch mal Kalumna Storages an. Ein Beispiel, was ich aus einem internen Test nehmen Wir haben einen sehr, sehr großen Elasticsearch Cluster. Wir haben ein Proof of Concept gemacht mit Clickhouse Columnar Storage für Logs und es hat eine Kompression von fünf komma fünf mal. Das bedeutet, wir können den Cluster echt zusammendampfen, wenn wir die gleiche Load auf einem Kalumna Storage fahren. Solche Hebel könnt ihr da machen und besonders mit Object Storage und Paket und so weiter. Probiert da mal ein bisschen rum, da könnte in Zukunft einige auch finanzielle Hebel für euch und für euren Arbeitgeber oder für euer Projekt verborgen liegen."
+        },
+        {
+            "start": 4549560,
+            "end": 4550560,
+            "speaker": "B",
+            "text": "Das heißt jetzt nicht, dass ihr alles."
+        },
+        {
+            "start": 4550560,
+            "end": 4570370,
+            "speaker": "A",
+            "text": "Da umbauen müsst, aber schaut euch das einfach mal an. Und fun Mit duckdb kannst du auch CSV und JSON Dokumente parsen. Das bedeutet, du lädst dir einfach duckdb runter, startest auf deinem lokalen Rechner und gibst ihm einfach einen Ordner voll JSON Dokumente. Du kannst da schön SQL drauf fahren. Kann ich nur jedem empfehlen. Schau ich mal duckdb an Und da."
+        },
+        {
+            "start": 4570370,
+            "end": 4612280,
+            "speaker": "B",
+            "text": "Haben wir jetzt auch wieder die Brücke zu dem Eingangsstatement von dir. Das skaliert nicht genau und muss man immer auf was Neues setzen. Man kann auf was Neues setzen. Ich habe gerade auch noch mal schnell kurz gegoogelt, was es an Blogposts gibt in dem Bereich und habe da auch Blogposts gefunden mit Prometheus auf Single Notes Setups mit eins komma fünf Millionen Samples pro Sekunde und fünfzig Millionen Active Series. Also sind wahrscheinlich Extremwerte natürlich, aber das gibt es grundsätzlich und ich glaube, man sollte sich gut überlegen, ob man wirklich die neueste Hipster Technologie von Hacker News einsetzen muss, nur weil mal die Datenbank in irgendeinem Use Case irgendwo vielleicht langsam ist und ob man das vielleicht nicht anders lösen kann."
+        },
+        {
+            "start": 4612360,
+            "end": 4618680,
+            "speaker": "A",
+            "text": "Wir nehmen an meinem Sonntag auf und deswegen sage ich das das Wort zum Sonntag. Wir verabschieden uns viel Spaß beim Experimentieren."
+        },
+        {
+            "start": 4618680,
+            "end": 4628280,
+            "speaker": "B",
+            "text": "Bis bald und tschüss und lass uns mal wissen, was ihr so verwendet an Stacks und Hacker News Datenbanken oder so, was gerade da draußen so rumschwirrt und cool ist CI."
+        }
+    ]
+}
