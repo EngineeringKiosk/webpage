@@ -11,52 +11,6 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
 	<div class="container px-4 mx-auto w-full md:w-1/2">
 		<div class="mb-16 text-center">
 			<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Interested in upcoming meetups?</h3>
-			<p class="text-lg md:text-xl text-coolGray-500 font-medium">
-				Register to our Engineering Kiosk Rhine-Ruhr newsletter and receive emails about upcoming meetups.<br />
-				No worries, we won't spam you and you can unsubscribe at any time.
-			</p>
-
-      <script>
-        window.submitNewsletterForm = function(form) {
-          const regId = form.regId.value; // we use regId instead of email to confuse bots
-          const formMessage = document.getElementById('newsletterFormMessage');
-          formMessage.classList.remove('hidden');
-          formMessage.innerHTML = `Subscribing ${regId}...`;
-          const formData = new FormData(form);
-          // use simple urlencoded form data instead of multipart
-          fetch(form.action, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams(formData).toString(),
-          })
-          .then((response) => {
-            if (response.ok) {
-              formMessage.innerHTML = `${regId} subscribed successfully! Please check your inbox to confirm your subscription.`;
-            } else {
-              formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
-            }
-          })
-          .catch((error) => {
-            formMessage.innerHTML = 'Something went wrong. Please try again later.';
-          });
-          return false;
-        }
-      </script>
-      <style>
-        .email-field {
-          display: none;
-        }
-      </style>
-      <form action="https://rsvp.engineeringkiosk.dev/newsletter" method="post" onsubmit="return submitNewsletterForm(this);">
-        <div class="mt-4">
-          <p class="hidden text-lg mt-8" id="newsletterFormMessage"></p>
-          <input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
-          <input class="bg-white m-2 px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xs" name="regId" placeholder="Your email address" />
-          <input type="submit" class="py-4 m-2 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" value="Subscribe" />
-        </div>
-      </form>
 		</div>
 	</div>
 	<div class="container px-4 mx-auto w-full md:w-1/2">
@@ -66,8 +20,6 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
 				{dates.map((date) =>
 					<b>{formatDateWithoutWeekday(date, 'en-US')}</b><br/>
 				)}
-			<br/>
-				Please register to the Newsletter to get notified when the talk dates get fixed, as those are preliminary.
 			</p>
 		</div>
 	</div>
