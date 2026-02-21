@@ -11,9 +11,10 @@ export interface Props {
 	meetupsToShow: any[];
 	archive?: boolean;
 	meetupName?: string;
+	showGeneralLanguageNote?: boolean;
 }
 
-const { headline, meetupsToShow, archive, meetupName = 'Alps' } = Astro.props
+const { headline, meetupsToShow, archive, meetupName = 'Alps', showGeneralLanguageNote = false } = Astro.props
 
 
 ---
@@ -31,7 +32,7 @@ const { headline, meetupsToShow, archive, meetupName = 'Alps' } = Astro.props
 								<CompanyLogo name={meetup.location.name} logo={meetup.location.logo} url={meetup.location.url} logoHeight="56" />
 							</div>
 						</h1>
-						{!archive && <p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Join the next meetup and listen to the following talks.</p>}
+						{!archive && <p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">Join the next meetup and listen to the following talks.{showGeneralLanguageNote ? ' All talks and the meetup are in English.' : ''}</p>}
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
