@@ -23,4 +23,14 @@ talks:
     youtube: '@design-and-beyond'
     website: https://www.studio-craft.at
 eventId: '0hlu8j5i4g3112fh9foih87hc3'
+speakers:
+  female: 2
+  male: 0
+participants:
+  registered: 69
+  present:
+    total: 54
+    male: 41
+    female: 13
+  newParticipants: 19
 ---
