@@ -3394,6 +3394,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/256"
+  to = "/podcast/episode/256-hochleistungskultur-ohne-druckkultur-mit-philip-klasen-schwidetzki?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep256"
+  to = "/podcast/episode/256-hochleistungskultur-ohne-druckkultur-mit-philip-klasen-schwidetzki?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
