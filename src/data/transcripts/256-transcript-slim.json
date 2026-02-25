@@ -1,0 +1,639 @@
+{
+    "confidence": 0.96314675,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4578,
+    "utterances": [
+        {
+            "start": 3680,
+            "end": 80310,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode des Engineering Kiosk Podcast. Kennst du diese Momente, in denen plötzlich überall von Hochleistungskultur die Rede ist, aber sich das Ganze eher nach Druck und mehr Bauchschmerzen anfühlt? Genau da steigen wir heute ein. Denn Hochleistung ist nicht einfach nur mehr Stundenkloppen. Und während Führungskräfte versuchen, Accountability hochzuziehen, dabei aber psychologische Sicherheit auf der Strecke lassen, kippt ein Team schneller in die Angstzone, als sie lieb ist. Zu Gast ist Philipp Klaassen Schwiedetzky, Organisationsentwickler, Coach und Gründer von Trudy. Mit ihm schauen wir auf ein Modell von Amy Edmondson. Psychologische Sicherheit, Accountability und warum genau diese Kombination der Kern von echter Team Performance ist. Wir klären, wie Performance Management, individuelle Ziele und Tracking wirken können, ohne dass Menschen in den Selbstschutzmodus gehen. Und wir sprechen über typische Sabotagemuster, die Führungskräfte oft unbewusst auslösen, zum Beispiel wenn sie Verantwortung an sich ziehen, statt Ownership im Team zu halten. Du bekommst außerdem konkrete Checkfragen, um psychologische Sicherheit im Team zu erkennen. Plus praktische Hebel für Caring und Daring Leadership, Radical Candor und Pushback im Mittelmanagement. Denglisch Ahoi, sagt der geht auf mich, klingt interessant, bleib dran, los geht's."
+        },
+        {
+            "start": 85990,
+            "end": 156040,
+            "speaker": "B",
+            "text": "Ich bin mir geil auf den Bergen unterwegs. Auf den Bergen gibt es ja auch immer so eine gemütliche Kultur und dann gibt es so diese Kultur, wo man vielleicht auch so ein bisschen nach oben blickt, so diese Hochleistungskultur. Ich komme aus Innsbruck, Votenbach ist vielleicht so Begriff. Das ist so dieses Unternehmen, was dann Leute von allen Kalibern und Gewichtsklassen irgendwie so auf dem Mount Everest drauf karrt, würde ich fast sagen. Aber diese Hochleistungs Kultur, nenne ich sie mal, ist mir ja nicht so ganz verständlich. Und es gibt ja auch diese Hochleistungskultur bei uns in der Tech Szene. Gerade C Level spricht immer so von ich will Hochleistungsteams haben und Hochleistungskultur bei mir im Unternehmen und wir leisten alle so viel. Und genau über dieses Thema wollen wir eigentlich mal sprechen, wie das aussieht mit dieser Hochleistungskultur, wie man dorthin kommt. Ist es überhaupt sinnvoll? Was macht eine Hochleistungskultur aus? Und wir haben da einen sehr qualifizierten Gast. Warum der so qualifiziert ist, wird Andi gleich berichten. Aber ich finde ja, er ist am qualifiziertesten, weil er Andi und mich mal zur Höchstleistungsform gebracht hat. Wir haben nämlich mit fünf hundert Leuten Schere, Stein, Papier gespielt und der Philipp, willkommen bei uns im Engineering Kiosk Studio, by the way, ist verantwortlich dafür eigentlich."
+        },
+        {
+            "start": 156520,
+            "end": 157320,
+            "speaker": "C",
+            "text": "Dankeschön."
+        },
+        {
+            "start": 157880,
+            "end": 257540,
+            "speaker": "A",
+            "text": "Das Schere, Stein, Papier Spiel hatte ich schon mal ganz vergessen, aber so viel ich weiß, halten wir somit den offiziellen Philipp Rekord, Deutschlandrekord, Europa Rekord, Ich weiß es nicht. Kann ich nur bestätigen für alle Leute, die jetzt gar nicht wissen, wovon der Wolfgang da spricht. Und zwar folgendermass Ich stelle den Philipp in einer Minute vor, aber Philipp macht unter anderem oder hat unter anderem meine ganze Zeit Leadership Trainings gemacht und ich hatte die Ehre, dann mal bei einem oder bei mehreren dabei zu sein und so als ich sage mal, ich glaube, das war so ein Spiel nach der Pause, damit man so das Mittagstief irgendwie überbrücken kann, weil sonst schläft man da irgendwie im Suppenkoma ein. Da ging es irgendwie darum, Schere, Stein, Papier zu spielen und der Verlierer hängt sich hinter den Gewinner und feuert den dann an und das geht dann immer weiter, immer weiter. Das bedeutet also, du hast eigentlich so ein Divide entkommen und relativ schnell kannst du dann natürlich mit einer sehr großen Gruppe ein Schere, Stein, Papierturnier machen. Und das haben wir, glaube ich, im Training mit zwölf Leuten oder mit zehn Leuten gemacht und das war dann innerhalb von anderthalb Minuten schon vorbei und auf einmal hattest du so zwei Teams mit fünf, ich sag mal, Ultra Fans dahinter und man spielt da Schere, Schein, Papier. Und das haben Wolfgang und ich mal auf einer internen Technologie Konferenz mit circa fünf hundert Leuten gemacht und das war, glaube ich, nach sechs Minuten durch. Ich habe da mal einen Artikel auch drüber geschrieben, da gibt es auch ein Video von, verlinke ich in den Show in den Block Notes, wollte ich gerade sagen. Show Notes. Philipp, wir haben dich vor einer ganzen Zeit angefragt, ob du nicht Lust auf ein Interview hattest. Ich hatte dich schon länger im Kopf für diesen Podcast, weil ich damals diese Leadership Trainings bei dir sehr, sehr genossen habe. Doch die Problematik mit diesen Leadership Trainings ist ja immer, du hast es auch immer so beschrieben, du vermittelst immer Tools in einem Werkzeugkasten."
+        },
+        {
+            "start": 257540,
+            "end": 269850,
+            "speaker": "B",
+            "text": "Jetzt weiß sie, woher du das hast, Andy, weil Andi sagt in jeder Episode, das ist ja nur ein Tool für eure Werkzeugkiste. Kommt scheinbar auch von dir. Jetzt erklärt sich das langsam alles Ja, vielleicht."
+        },
+        {
+            "start": 269850,
+            "end": 307700,
+            "speaker": "A",
+            "text": "Auf jeden Fall habe ich mir immer die Frage gestellt, weil dieser Podcast dreht sich ja immer primär um die Themen mit einem Gast mit Credibility. Okay, Philipp hat so viel drauf, wir können ja nicht zwanzig mal einladen. Und deswegen haben wir dich einfach mal gefragt, Philipp, hast du nicht Lust bei uns hier im Podcast aufzukommen? Wofür brennst du gerade? Und du hast das Thema gepitcht, Hochleistungskultur in Teams zu entwickeln und wie viele Führungskräfte diese in Klammern unbewusst zu sabotieren. Und das Thema hat mich gepackt und jetzt sind wir hier, freue ich mich sehr. Aber wer bist du denn? Denn dein Hintergrund passt wie die Faust aufs Auge aufs Thema. Du hast Sozialwissenschaften studiert, in meines Wissens nach der schönsten Stadt der Welt, Duisburg. Oder warst du in Essen?"
+        },
+        {
+            "start": 307700,
+            "end": 309780,
+            "speaker": "C",
+            "text": "Ich war, ne? Ich war tatsächlich in Duisburg am Standort."
+        },
+        {
+            "start": 309780,
+            "end": 316900,
+            "speaker": "B",
+            "text": "Wo ist der Link jetzt zum Sabotieren? Andi passt wie fast auf alle sabotieren. Okay, nee, nee, nee, da ging es"
+        },
+        {
+            "start": 316900,
+            "end": 362710,
+            "speaker": "A",
+            "text": "eigentlich um Sozialwissenschaften, aber du warst auch mal Projektkoordinator bei der Katastrophenhilfe und hast drei Monate in Pakistan mitgearbeitet. Du hast über zehn Jahre Erfahrung als Trainer, Berater und Coach in der Personal und Organisationsentwicklung. Und wir haben uns damals kennengelernt, Da warst du, soviel ich weiß noch Angestellter oder beziehungsweise am Ende Partner über die Firma Contract mit Leadership Trainings und Begleitprozessen von Change Prozesse in Organisationen und so weiter und so fort. Aber seit sechs Jahren verwirklichst du deinen eigenen Traum mit der Firma Trudy und Trudi dreht sich um Personalentwicklung und um Organisationen gezielt und nachhaltig zu unterstützen und um das volle Potenzial ihrer Mitarbeitenden zu entfalten und volles Potenzial. Da sind wir direkt bei Hochleistungskultur, glaube ich. Ist das alles richtig?"
+        },
+        {
+            "start": 363270,
+            "end": 375710,
+            "speaker": "C",
+            "text": "Wunderbar. Ich habe gerade schon gedacht, vielen Dank für den Service, dass du mich vorstellst, weil ich finde das immer gar nicht so einfach, sich selber vorzustellen und deshalb super. Das passt alles. Ja, und es ist schon eine Weile her, dass wir uns gesehen haben, aber"
+        },
+        {
+            "start": 375507,
+            "end": 435507,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 435710,
+            "end": 454810,
+            "speaker": "B",
+            "text": "jetzt ist eigentlich Schluss mit dem Service. Jetzt musst du mal antworten und darüber gleich mal meine Frage. Jetzt habe ich das Intro gemacht mit den Bergen und Hochleistungskultur. Was ist denn für dich die Hochleistungskultur? In Tech. Ist es irgendwie vergleichbar mit diesen sportlichen Hochleistungspersonen, die da so rumschwirren?"
+        },
+        {
+            "start": 454810,
+            "end": 560500,
+            "speaker": "C",
+            "text": "Jein. Also erstmal müssen wir ein bisschen ausholen vielleicht, weil woher kommt das Thema und warum brenne ich gerade dafür? Ich begleite immer noch relativ viele Führungskräfte in Organisationen über Coaching oder über Entwicklungsprozesse oder über Trainings und guck natürlich dann auch, was begegnet mir gerade? Und was mir gerade ganz viel begegnet, ist große Sorge dafür, dass wir ich arbeite ja überwiegend in Deutschland, dass wir abgehängt werden und dass man in dem ganzen Wettbewerb nicht mehr mitkommt. Und daraus kommt dann die Idee, wir brauchen mehr Leistung. Und das kann einerseits erstmal nachvollziehbar okay, wenn vielleicht auch technologische Wettbewerbsvorteile wegfallen am Standort in Deutschland Dinge wegfallen, dann ist die Wie kommen wir zu mehr Leistung? Und dann geht es los, dass man sich damit genauer beschäftigen muss. Und dann habe ich das gemacht, habe mir das angeguckt, was wird gefordert? Eigentlich wird meistens gefordert, mehr und härter zu arbeiten. Da fange ich dann an, skeptisch zu werden und gucke auch genauer hin, okay, was ist das, was ihr wirklich braucht? Und ich glaube, dieses Was ist eigentlich Hochleistung? Ist etwas, was zum Beispiel im Vergleich zum Sport in Unternehmen oft gar nicht wirklich definiert ist. Also ich weiß nicht, wie oft ihr mit den Teams, in denen ihr gearbeitet habt, euch schon auseinandergesetzt habt, zu sagen, wann sind wir eigentlich wirklich hoch performant? Und das finde ich schon ganz faszinierend. Ich habe momentan auch immer mal wieder Schnittstellen zum Leistungssport und da ist das super klar. Da ist Leistung auch definiert als eigenes Vorankommen. Da ist es verbunden mit ganz viel Passion. Und all das ist in dem Unternehmenskontext viel weniger einfach und viel weniger klar. Und deshalb geht es damit erst mal los. Also was bedeutet für uns Leistung? Wie messen wir das? Ist es die individuelle Entwicklung oder ist das tatsächlich das Erreichen von Zielen und das messbare Erreichen von Zielen über KPI? Was ist das eigentlich?"
+        },
+        {
+            "start": 560500,
+            "end": 566610,
+            "speaker": "A",
+            "text": "Ich hatte gerade ganz kurze Angst, dass jetzt gleich irgendwie so ein Friedrich Merz Zitat kommt. Wir arbeiten zu wenig und dann machen wir den Podcast zu Ende hier."
+        },
+        {
+            "start": 569080,
+            "end": 584760,
+            "speaker": "C",
+            "text": "Ja, das ist ja auch das, was mir so auffällt jetzt momentan aus, ich glaube, aus einer Hilflosigkeit heraus gehen viele genau in diese Richtung. Also es muss mehr sein. Also wirklich, es gibt doch Diese Geschichte, wo Merz dann seiner Tochter irgendwie Mitbringsel aus den USA macht. Habt ihr gehört?"
+        },
+        {
+            "start": 586520,
+            "end": 587320,
+            "speaker": "A",
+            "text": "Ich kenne ihn nicht."
+        },
+        {
+            "start": 587320,
+            "end": 609900,
+            "speaker": "C",
+            "text": "Moment, okay. Er schenkt seiner Tochter, die ist in einer Situation, dass sie auf der Suche war, was mache ich jetzt mit meinem Leben? Was will ich beruflich machen? Und er kommt aus einer USA Reise wieder und hat ihr so ein Häuschen, Holzbrettchen oder sowas mitgebracht. Da steht dann drauf, the secret to success is. Und wenn man das dann aufklappt, ist dann drin work. Ich glaube, das sagt alles."
+        },
+        {
+            "start": 609900,
+            "end": 615300,
+            "speaker": "B",
+            "text": "Das sagt alles selber erzählt, muss man auch noch sagen. Also er erzählt die Story immer."
+        },
+        {
+            "start": 615380,
+            "end": 696980,
+            "speaker": "C",
+            "text": "Es gibt einen O Ton, es gibt ein Bild dazu, es gibt Video. Also das ist jetzt, ich glaube, das geht nicht in den Bereich Fake News, es sei denn, ich bin auf irgendwas reingefallen, Aber das habe ich gesehen. Und das ist genau das, wo man ein bisschen aufpassen muss. Und ich erlebe sogar andersrum, wenn in Unternehmen gerade über Leistungen gesprochen wird, dass Leute erst mal Angst bekommen. Also weil werde ich jetzt messbar, Bin ich dann nicht mehr gut genug? Also es kippt ganz schnell in die falsche Richtung. Und das sieht man wiederum beim Sport viel weniger. Und deshalb ist ja eigentlich die interessante Frage, was müssen wir eigentlich tun, damit etwas entsteht, was motivierende Form von Hochleistung ist. Und das ist, glaube ich, schon mal eine Arbeit, die Führungskräfte mit ihren Teams machen müssen und die wir sehr bewusst angehen müssen. Und dabei gibt es eben auch Dinge, die ich immer wieder erlebe, die in Unternehmen schiefgehen und wie man so in dem Wunsch, das eine zu fördern, also mehr Leistung, vielleicht bessere Ergebnisse, höheren Output oder sonst was, dass wir eigentlich Dinge tun, die das gerade quasi verhindern. Und das war das, was ich euch geschrieben habe, als ich vorher gefragt Wofür brennst du gerade? Weil meistens werden dann Fronten aufgemacht, es wird entschieden, wer ist jetzt an allem schuld? Und sobald diese Schuld Debatte losgeht, gehen wir in die völlig falsche Richtung. Und alle sind frustriert, alle fühlen sich gefangen in der Situation und sehen aber nicht, dass sie alle dazu beitragen, dass es eher schwieriger oder schlechter wird als besser. Ich weiß erst mal kryptisch, Wir hatten"
+        },
+        {
+            "start": 696980,
+            "end": 735450,
+            "speaker": "B",
+            "text": "mal Marco Alberti von Murakami, vielleicht kennst du ihn zufällig bei uns zu Gast in Episode ein hundert zehn der sagt ja auch immer, also diese Analogien zu Sport sind einfach nicht zu gebrauchen eigentlich, weil Sport ist ganz genau definiert und wirklich ein Korsett, in dem du dich bewegst. Und in der Text Szene haben wir eigentlich überhaupt nicht dieses Environment. Also da ist nicht so ganz klar wie in einem Sportsetting, was einfach seit fünfzig Jahren irgendwie dasselbe ist und wo genauestens gemessen werden kann. Jetzt die Frage zur Was ist denn für dich dann eigentlich die Hochleistungskultur? Was messen wir denn und ist es messbar oder in welche Richtung müssen wir denn überhaupt messen?"
+        },
+        {
+            "start": 735450,
+            "end": 910750,
+            "speaker": "C",
+            "text": "Genau. Und da machen wir schon Unterschied. Also wir wechseln von Hochleistung. Das ist sehr individuell in den Teams. Und das finde ich auch interessant mit den Sportanalogien. Es kommt ein bisschen auf die Sportart an. Es gibt durchaus Sportarten, wo man, glaube ich, sehr flexibel, sehr situativ auch entscheiden muss und ein Team sich auf Veränderungen einstellen muss, psychisch sehr resilient sein muss. Das ist vielleicht eher der Mannschaftssport. Und dann gibt es andere Sportarten, die sehr genau im Ablauf definiert sind und dementsprechend auch klarer, messbarer und so weiter sind. So gehen wir aber weg von dem, was ist eigentlich Leistung? Weil das muss, glaube ich, individuell definiert werden. Was ist Leistungskultur oder Hochleistungskultur? Was sind so die Rahmenbedingungen, die es braucht? Und da gibt es ein wunderbares Modell, das beschäftigt sich mit psychologischer Sicherheit, ist von Amy Edmondson, die damals Teams untersucht hat, Bezug auf die Performance. Und sie ist mit der Hypothese reingegangen, dass sie gesagt okay, Teams, die besonders leistungsstark sind, machen weniger Fehler. Würde man ja auch auf den ersten Blick erstmal zustimmen. Was dann aber rauskam, war, dass die Teams, die messbar hohe Leistung gebracht haben, das war glaube ich sogar im medizinischen Bereich, dass die mehr Fehler gemacht haben. Und das war natürlich erst mal eine große Verwunderung. Und dann haben die genauer reingeforscht und dann kam aber raus, dass es eigentlich nicht mehr Fehler grundsätzlich sind, sondern dass dieses Team viel offener mit den Fehlern umgeht. Daraufhin fing sie an, das weiter zu erforschen, ist tiefer reingegangen und es wurde immer deutlicher, dass es ein Konzept gibt, dass wenn Menschen zum Beispiel psychologische Sicherheit empfinden, das heißt, sich akzeptiert fühlen, sich also ein Vertrauen ihrem Umfeld gegenüber haben, sich trauen unbequem zu sein. Also wirklich auch wenn sieben Leute nacheinander das eine sagen, traue ich mich als Achter jetzt zu sagen, ne, ich sehe es aber anders, dass wenn diese Faktoren stehen, dass dann Teams höhere Leistung bringen. Sie ist dann damit rausgegangen, also an die Öffentlichkeit. Das war ein ziemlicher Hype, habt ihr wahrscheinlich auch von gehört, psychologische Sicherheit. Und heute sagt sie selbst, sie war vielleicht ein bisschen früh dran, weil dieses Modell doch ein Stückchen zu einseitig war. Und was sie heute macht, ist, sie stellt dir Dimensionen psychologischer Sicherheit eine zweite Dimension gegenüber, die nennt sie Accountability, also Verantwortlichkeit. Und dann entsteht das übliche, wir machen zwei Achsen auf, wir haben eine Vier Felder Matrix und wir können sagen, wenn die psychologische Sicherheit hoch ist und die Accountability, also die Verantwortlichkeit gering, dann finden wir Teams in Komfortzonen wieder. Ich fühle mich sehr sicher, ich kann sagen, was ich denke, ich kann mich hier frei bewegen, aber ich bin jetzt auch nicht wirklich stark in der Pflicht. Die Ownership ist vielleicht nicht hoch genug. Dieses auch vielleicht die Messbarkeit meiner Leistung ist nicht ho so, dann haben wir die Komfortzone. Wenn die Accountability sehr hoch ist, aber die Sicherheit nicht, dann kippen wir in die Angst. Wenn beides niedrig ist, ist Katastrophe, wird von Apathie gesprochen. Das gibt es leider auch und ich sehe es wirklich auch in Organisationen, die dann vielleicht auch nach drastischen Veränderungen, nach Covid und mit vielen anderen Schmerzen zusammen da mittlerweile gelandet sind. Aber am Ende ist ja das Ziel, dass wir sozusagen eine hohe Verbindlichkeit haben, eine hohe Accountability und eine hohe psychologische Sicherheit. Und dann kommen wir in diesen Hochleistungssektor."
+        },
+        {
+            "start": 910980,
+            "end": 917620,
+            "speaker": "B",
+            "text": "Wird da jetzt irgendwo was gemessen oder ist es einmal nur grundsätzlich das Setting und das Messen ist jetzt komplett außen"
+        },
+        {
+            "start": 917620,
+            "end": 968380,
+            "speaker": "C",
+            "text": "vor, Das ist jetzt erstmal Kultur und Kultur ist natürlich schwierig zu messen. Ich glaube, sobald du es auf dein Team anwendest oder auf dein Umfeld, wirst du relativ schnell sehen können, was es für eine Dynamik ist. Und das ist also eine der Sachen, warum ich geschrieben habe, warum Führungskräfte selber sabotieren. Ich moderiere regelmäßig auch Board Meetings, also C Level. Und momentan ist der Tenor, den ich ganz oft höre, unsere Organisation ist in der Komfortzone, wir müssen die Accountability hochziehen, wir müssen da mehr Druck machen, wir müssen jetzt mal klarer messen, was ist Leistung klarer Performance tracken, Wir müssen uns auch klarer vielleicht von Leuten trennen, die diese Leistung nicht mitgehen können und was dieser Shift ist in dem Wunsch, dass wir aus der Komfortzone rauskommen, wird die Accountability hochgezogen, aber die psychologische Sicherheit gleichzeitig radikal entzogen. Und dann wechselt die Organisation, die vorher nicht so leistungsfähig war, aus einer Komfortzone, gegebenenfalls in der Angstzone."
+        },
+        {
+            "start": 968690,
+            "end": 977810,
+            "speaker": "B",
+            "text": "Und was ist jetzt wirklich Verantwortlichkeit, wenn du von Verantwortlichkeit sprichst und wenn die erhöht wird jetzt vom Board, Also wie sieht es in der Praxis aus? Was passiert da?"
+        },
+        {
+            "start": 978050,
+            "end": 1032650,
+            "speaker": "C",
+            "text": "Also es werden Performance Management Systeme eingeführt, es wird bis aufs Individuum runtergebrochen, wer wozu beizutragen hat. Und ich weiß nicht, ob ihr das mal erlebt habt in Organisationen, in denen ihr gearbeitet habt, wo sowas eingeführt wird. Die meisten Leute fürchten sich erstmal davor, was ist, wenn ich da nicht gerecht bewertet werde. Also wenn ich in meiner Organisation gerade zum Beispiel Zielzahlen einführe, auch für Individuen, dann merke ich, mit welcher Unsicherheit das verbunden ist im Sinne, was passiert eigentlich, wenn ich die Ziele nicht erreiche. Und genau der Kontext wird selten gegeben, das heißt, die Sicherheit wird nicht dazugegeben zum Beispiel, wie werden wir damit umgehen? Und dementsprechend sorgt es dann für Angst. Also ein Ding wäre, du hast gerade gefragt, was sind die Maßnahmen, also Performance Tools, die eingeführt werden, anderes Tracking nochmal auch schnellere Konsequenzen. Wenn Leute Ziele nicht erreichen, wird sie schneller getrennt. Sehen wir gerade viele Entlassungen, Kürzungen, die Dinge."
+        },
+        {
+            "start": 1032650,
+            "end": 1056330,
+            "speaker": "B",
+            "text": "Weil wenn wir jetzt in der ganz klassischen Tech Szene über Verantwortung sprechen, da heißt ja eher, wir sind verantwortlich für das Produkt, wir sind verantwortlich, wenn was schiefgeht, ob das stabil läuft und solche Verantwortlichkeiten. Aber du sprichst jetzt wirklich dann von Zielen und auch der Druck, der dann aufgebaut wird, dass man diese Ziele wirklich erreichen muss und Ziele im Sinne von Performance oder Umsatzziele, die es dann am Ende ganz oft sind, also eher in"
+        },
+        {
+            "start": 1056330,
+            "end": 1104040,
+            "speaker": "C",
+            "text": "diese Richtung gehend, das sind die Blickwinkel. Wir können das, glaube ich, auch auf eure Welt anwenden. Also angenommen, du bist verantwortlich für ein Produkt und etwas geht schief, wie gehst du dann damit um? Wenn du in der Angstzone bist, wirst du versuchen zu verhindern, dass es deine Schuld ist, also dazu zu stehen. Du wirst gucken, ob jemand anders Die haben nicht zugeliefert, ich hatte knappe Ressourcen, ich weiß nicht was. Wenn du in der Zone bist, dass du grundsätzlich dich sicher akzeptiert und anerkannt fühlst dann würdest du wahrscheinlich viel eher dafür aufstehen oder dafür einstehen und Hey, mein Part darin muss ich besser werden. Ich habe auch schon Ideen, wie ich das mache. Der Mechanismus. Wir arbeiten also in meiner Arbeit arbeite ich ganz viel mit Zoomstufen. Du kannst ganz rauszoomen auf die Gesamtorganisation oder du zoomst ganz rein auf ein eins zu eins Zusammenarbeitsverhältnis von zum Beispiel Führungskraft und mitarbeitender Person."
+        },
+        {
+            "start": 1104200,
+            "end": 1170200,
+            "speaker": "A",
+            "text": "Das ist aber ganz interessant, was du jetzt gerade gesagt hast, besonders mit diesem Gedanken, oh, wie werde ich denn eingestuft und bringe ich meine Performance oder ähnliches. Ich kann die Angst hundertprozentig verstehen. Ich möchte jetzt aber auch mal Devil's Advocate spielen. Und dann die Frage wenn wir zu einem objektiveren, ich sage nicht objektiven, objektiveren Messverhalten gehen, reduziert das nicht die Gefahr für menschlichen Bias? Weil wenn wir jetzt hier über psychologische Sicherheit sprechen und über Accountability und dann wer trägt, wer sind eigentlich die Leute, die jetzt hier wirklich leisten und davon rede ich nicht Überstunden, buckeln, sondern die sich wirklich auf die richtige Arbeit fokussieren mit richtig. Also jeder macht Arbeit, aber es gibt Arbeit mit Impact und es gibt Arbeit, da fühlen wir uns busy und wir trampeln aber auf der Stelle und ich glaube, die gibt es in jeder Art von Job, nennen wir es mal. Ist es dann die Einführung eines solchen Bewertungssystems, einem objektiveren Bewertungssystem über Accountability nicht ein bisschen vorteilhaft, dass es dann auch zum Wachstum der Person beiträgt?"
+        },
+        {
+            "start": 1170200,
+            "end": 1334760,
+            "speaker": "C",
+            "text": "Ja, absolut. Also ich bin auch nicht gegen Performance Tools, ich bin auch nicht gegen Messbarkeit von Leistung und so weiter. Ich bin nur dagegen, wenn wir dann. Ich bin überhaupt nicht dagegen, aber ich glaube, es ist erfolgreicher, wenn du auf der anderen Seite auch die Bewertungsmechanismen einbringst oder wenn du darüber sprichst, wie gehen wir denn mit den Ergebnissen um, wenn die Leute ein Gefühl dafür bekommen, was passiert mit mir? Und wenn Menschen trotzdem in einem Umfeld dann sich bewegen, was zum Beispiel zugewandt ist, was mit deiner Entwicklung sich beschäftigt, darüber entsteht die Sicherheit. Also du kannst es ganz einfach messen. Du siehst, wie reagiert jemand darauf, wenn sie ein Ziel nicht erreicht haben, ärgern sie sich. Ich erlebe es immer wieder in der Arbeit mit Leuten in meinem Team beispielsweise, wenn was nicht klappt, ich muss nicht derjenige sein, der schimpft, weil die Person ist so stinksauer darüber dass was nicht klappt und zeigt mir das offen, das ist gesund, dann kann ich ja eher schon in den Modus gehen, hey, jetzt werde aber sei mal nicht zu streng mit dir. Aber die hat keine Angst vor mir, mir gegenüber zu zeigen, dass was nicht geklappt hat. Und genauso, wenn ich eine Kennzahl ich habe Trainerinnen bei mir im Team, wenn ich dafür Kennzahlen einführe, also wie viel Umsatz macht eine Trainerperson, Dann hat die Person zum Beispiel Angst davor, was, wenn ich das nicht schaffe? Und dann ist zum Beispiel der Kulturteil von diesem, was wir an Strukturen schaffen, ist, dass wir darüber reden, wie gehen wir eigentlich damit um, wenn das nicht klappt. Als ich damals noch in der Beratung war, war das auch so. Ich habe angefangen, ich komme aus dem Non Profit und kriege eine Zielzahl. Ich hab mich furchtbar fertig gemacht, weil ich überhaupt kein Gefühl dafür hatte, schaffe ich das an Umsatz? Und dann gab es diverse Gespräche, die mir dann gesagt haben, hey, wenn wir beispielsweise jetzt nur Senior Jobs kriegen würden für ein Jahr und du hast deshalb niedrigeren Umsatz, dann fällt das nicht zu deinen Lasten. Unser Verständnis ist aber, dass du dich fit machst dafür, dass du möglichst viele Jobs machen kannst Und wie machst du das? Und dabei unterstützen wir dich. Und damit war das so ein Rahmen gesetzt, in dem ich meine Leistung weiterentwickeln konnte, in dem ich scheitern und besser werden konnte, in dem sehr klare Motivation gesetzt war, aber auch, indem ich eine Sicherheit empfunden habe dafür, wenn was nicht klappt, dass ich dann damit hin zu jemandem gehen konnte und gesagt Der Kunde hat mich abgelehnt, die wollen mich nicht, die wollen nicht mit mir arbeiten, was kann ich tun? Und nicht versucht habe zu verheimlichen, dass es bloß keiner mitkriegt. Und das ist dieser Sicherheitsaspekt, der zur Accountability dazu muss. Hast du nur die muggelige Sicherheit, dann entsteht vielleicht auch nicht genug Power, um sich weiterzuentwickeln. Dann hast du das, was du vielleicht im Kopf hattest von den Leuten, die auf der Stelle treten, die fühlen sich weiterhin gewertschätzt und wir kommen aber nicht in den Vortrieb. Oder andersrum, hast du nur die Accountability, gehen die Leute in die Angst. Und dann ganz interessant, ein bisschen länger, aber ganz interessant. Ich erlebe momentan Organisationen, die in die Angst gekippt sind, wo sich die Logik der Organisation vom eigentlichen Sinn der Organisation wegentwickelt. Und ich vergleiche das immer mit diesem LinkedIn Algorithmus, wo man mittlerweile, damit man mehr Klicks bekommt oder Instagram oder so, musst du Dinge tun, die mit dem eigentlichen Inhalt ja nichts mehr zu tun haben."
+        },
+        {
+            "start": 1334920,
+            "end": 1340760,
+            "speaker": "A",
+            "text": "Hast du da vielleicht mal ein konkretes Beispiel? Also ein fiktives muss jetzt nicht einer deiner Kunden irgendwie exposen oder so, sondern"
+        },
+        {
+            "start": 1341160,
+            "end": 1393710,
+            "speaker": "C",
+            "text": "was ich meine mit dem Algorithmus beispielsweise bei LinkedIn musst du ja Dinge tun, damit dein Post zum Beispiel höher, auch wenn das überhaupt nichts mit der Arbeit eigentlich mit dem mit dem Inhalt zu tun hat. Und das Übertragen in der Organisation ist zum Beispiel, dass sich Menschen um. Ich überlege gerade, ob ich ein ganz konkretes Beispiel hab, wo ich nicht aufpassen muss, ist natürlich, ich habe hohe Vertraulichkeit in meinem Job, aber zum Beispiel, dass ein Team ein anderes nicht informiert darüber, dass sie an etwas arbeiten, weil sie Sorge haben, dass ihnen dann was weggenommen wird und dass sie dann schlecht dastehen. So ein typisches Beispiel. Und hinterher kommt raus, zwei Teams in einer großen Organisation, eins wusste sogar davon, haben parallel an etwas gearbeitet und trotzdem hatten sie Angst davor, dass zum Beispiel die Existenz wegfällt, die Existenzgrundlage, dass sie aufgeteilt werden oder sonst was. Und dementsprechend machen sie etwas, was der Gesamtorganisation nicht mehr hilft."
+        },
+        {
+            "start": 1393950,
+            "end": 1416110,
+            "speaker": "A",
+            "text": "Aber das ist jetzt ein wirklich interessantes Beispiel. Zwei Teams arbeiten, weiß ich nicht, an der einen an derselben Sache. Beide Teams rennen umeinander, wer es besser macht, keine Ahnung was. Und haben beide Angst, dass es nicht irgendwie, dass sie aufgesplittet werden oder gemerged werden oder was. Ja, so habe ich das verstanden. Also um Reorganisation oder ähnliches, ist das richtig."
+        },
+        {
+            "start": 1416350,
+            "end": 1432780,
+            "speaker": "C",
+            "text": "Aber so wie du es jetzt darstellst, wäre es ja eine Art Wettbewerb. Da hätten wir ja schon wieder ein anderes Setting, dass ich also komm hier, dein Team macht dasselbe, kriegt dieselbe Aufgabe, wir arbeiten parallel, beide wissen voneinander. Dann habe ich ja investiert, dass zwei Teams in Wettbewerb gehen und in so einer Art Sprint gegeneinander antreten."
+        },
+        {
+            "start": 1434610,
+            "end": 1440690,
+            "speaker": "A",
+            "text": "So habe ich das verstanden, ohne dass diese Wettbewerbskommunikation da ist, aber dass die Teams das einfach so machen, ohne dass es wirklich so geplant war."
+        },
+        {
+            "start": 1440770,
+            "end": 1482150,
+            "speaker": "C",
+            "text": "Naja, oder das Team eins arbeitet an etwas und stellt mit der Zeit fest, ich habe gerade ein Gespräch geführt hier mit, keine Ahnung, der Kollegin aus dem anderen Team, die sind am selben Thema dran. So jetzt haben wir es gesehen und jetzt wäre ja sozusagen Ownership, Verantwortlichkeit und so weiter, dass ich Leute, Moment mal, ist es gedacht, dass wir hier parallel arbeiten? Wollen wir wirklich mit zwei Teams antreten? Macht das gerade Sinn für die Organisation? Also ich bringe dieses Thema an die Oberfläche, eskaliere es gegebenenfalls, um dann zu gucken, was wird damit. Aber hey, bevor wir hier Stress kriegen, bevor es irgendwie unproblematisch wird, bevor wir vielleicht ein anderes Thema kriegen, was vielleicht Unsicherheit in unser Team bringt, sagen wir lieber nichts."
+        },
+        {
+            "start": 1482310,
+            "end": 1484470,
+            "speaker": "A",
+            "text": "Aber das ist doch nicht im Sinne der Organisation, weil ich den."
+        },
+        {
+            "start": 1484470,
+            "end": 1489330,
+            "speaker": "C",
+            "text": "Nein, genau das ist ja das, was ich meine. Das ist nicht im Sinne der Organisation. Das ist ein Angstverhalten."
+        },
+        {
+            "start": 1489640,
+            "end": 1535170,
+            "speaker": "A",
+            "text": "Vielleicht sehe ich das etwas zu pragmatisch, aber ich denke mir meine sehr simplifizierte Definition von Arbeit, Ich bekomme Geld im Austausch gegen Zeit und Fähigkeit, Leistung. Also das bedeutet, jemand stellt mich an, damit ich dieser Person helfe, den Traum von dieser Person zu verwirklichen, weil diese Person entweder die Skills nicht hat oder die Zeit nicht hat. Das bedeutet, ich komme dazu und helfe den Traum dieser Person, die mich angestellt hat, zu verwirklichen. Und das bedeutet, es kann doch gar nicht etwas Schlimmes passieren, wenn das Thema, was du gerade beschreibst, auf den Tisch kommt, denn dafür werden wir doch alle bezahlt. Oder denke ich einfach nur zu doof? Also ich weiß nicht, ne?"
+        },
+        {
+            "start": 1535810,
+            "end": 1618810,
+            "speaker": "C",
+            "text": "Wunderbar. Also was einmal zeigt ist, dass du, glaube ich, in deinem, entweder für dich selbst geschafft hast oder in deinem Umfeld es auch erhält, ein hohes Maß an Sicherheit empfindest. Wenn nämlich aber damit verbunden ist, dass du zum Beispiel, wenn du dann unbequem bist, dass du dann Sorge hast davor, dass du vielleicht deinen Job verlierst oder dass etwas Unangenehmes mit dir passiert, wenn deine Sicherheit nicht gegeben ist, dann würde diese Logik plötzlich nicht mehr so einfach sein. Klar, dann werde ich das melden, wenn das ist. Oder werde ich dagegen was tun? Oder werde ich unbequem sein, wenn ich Dinge tue, die keinen Sinn machen. Und das erleben wir gerade in vielen natürlich eher in größeren Organisationen, weil da wird alles komplexer, dass Menschen abschalten, nicht mehr unbequem sind, nicht mehr mitdenken, weil sie Existenzsicherung betreiben. Und das hat viel mit der Angst zu tun. Ich weiß nicht, wie viele Organisationen ich gerade begleitet habe, die massiv Stellen abgebaut haben. Und das ist zum Beispiel so ein Faktor. Ich meine, die wirtschaftliche Lage ist schwierig Deshalb sind Organisationen dazu gezwungen. Der Preis ist aber nicht nur, dass dann Wissen aus der Organisation verloren geht, sondern der Preis ist häufig, dass die Kultur in Richtung Angst dreht. Angst im Sinne meines Modells. Die psychologische Sicherheit geht runter, Verantwortlichkeiten bleiben hoch. Oft wird da gar nicht so viel draufgelegt und plötzlich fängt an, das Verhalten der Menschen sich zu verändern. Die Leute ducken sich eher weg, als Verantwortung zu Die sagen Dinge bringen Dinge eher nicht an die Wasseroberfläche, weil ich muss jetzt nicht der Überbringer der schlechten Nachricht sein."
+        },
+        {
+            "start": 1618810,
+            "end": 1673630,
+            "speaker": "B",
+            "text": "Aber wenn du jetzt von psychologischer Sicherheit sprichst und du hast ja das Beispiel erwähnt, okay, du setzt jetzt Ziele, sagst aber dazu, es ist quasi nicht so schlimm, wenn du die Ziele nicht schaffst. Jetzt bisschen einfach formuliert. Und das passiert ja meistens, wenn Subziele eingeführt werden. Jetzt wird irgendwie Druck gemacht, es werden Ziele eingeführt. Das heißt aber ja, die sind im ersten Schritt gar nicht so wichtig und wir nehmen die gar nicht so ernst, aber wollen mal einfach messen. Und darum haben ja die Leute sofort Angst, weil es ja dann oft zu dem führt, was es dann wirklich ist, Messbarkeit. Und dann habe ich wirklich harte Kriterien. Wenn es darum geht, irgendwen rauszuwerfen, dann habe ich halt meine Kriterien, die ich verwenden kann, meine Messinstrumente. Also wie schaffst du das, vor allem, wenn du so Dinge neu einführst, trotzdem Sicherheit zu gewährleisten? Weil nur zu sagen, es ist nicht so schlimm, wir werden eine Lösung finden oder du bekommst Unterstützung, das kann man sagen. Aber ob das dann wirklich ankommt, gibt es da irgendwie sinnvolle Möglichkeiten, das zu verbessern, die Sicherheit?"
+        },
+        {
+            "start": 1673790,
+            "end": 1727590,
+            "speaker": "C",
+            "text": "Ja, und nochmal, es geht nicht darum, dass ich Hey, wir möchten gerne so und so viel Umsatz machen, aber hey, wenn es nicht klappt, dann ist auch nicht so schlimm. Das ist nicht meine Position. Meine Position. Sollte das aus einem Grund nicht klappen, werden wir uns nach folgenden Kriterien angucken, warum es nicht geklappt hat. Und es gibt durchaus auch den Anteil, wenn man nehmen wir mal noch mal das Beispiel von der Trainingsorganisation, für die ich gearbeitet habe. Wenn ich jetzt mein Umsatzziel nicht erreicht hätte und ich hätte aber auch diverse Jobs einfach abgelehnt, weil ich Ah ne, passt mir gerade nicht rein und so weiter, dann wäre das Gespräch auch durchaus sehr kritisch gewesen. Es gibt aber auch Aspekte und vor denen fürchten sich Leute ganz oft, wo sie es nicht in der Hand haben. Und wenn sie da das Gefühl haben, dass es einen fairen Umgang miteinander gibt, dass es ein vertrauensvolles Verhältnis gibt, dann entsteht aus einem ambitionierten Ziel nicht etwas, was negativ Druck macht und mich in die Angst führt."
+        },
+        {
+            "start": 1727590,
+            "end": 1748100,
+            "speaker": "B",
+            "text": "Aber glaubst du, dass es grundsätzlich möglich ist, das wirklich on the fly zu kreieren, dieses Sicherheitsgefühl? Oder braucht es einfach eine Kultur, die schon zwei Jahre läuft und wenn ich dann ein Ziel einführe, dann funktioniert es? Oder kann ich bei so einer Zieleinführung gemeinsam das dann auch so wirklich schaffen, dass diese Sicherheit plötzlich vorhanden ist, wenn die vorher noch nicht vorhanden ist."
+        },
+        {
+            "start": 1748100,
+            "end": 1903410,
+            "speaker": "C",
+            "text": "Jetzt sehen wir wieder, dass diese Themen oft ein bisschen abstrakt bleiben, wenn man nicht an einem konkreten Fallbeispiel ist. Es kommt jetzt darauf an, wenn du zum Beispiel ein ganz neu zusammengesetztes Team hast, dann haben wir erstmal einen Vertrauensvorschuss, den wir eigentlich fordern müssen. Vertrauen, was ja eine wichtige Komponente von psychologischer Sicherheit ist, ist ein Ergebnis und nicht etwas von vornherein, was wir uns versprechen können. Wir können uns den Vorschuss geben, wir probieren das aus, ist ein Erfahrungslernen und dann merken, okay, das funktioniert. Das heißt, bei einem ganz neuen Team kann man, glaube ich, Dinge tun, die das Vertrauen fördern, wie man sich gut kennenlernt, wie man Spielregeln miteinander vereinbart, all das, was man am Anfang investieren kann, was überraschend wenig gemacht wird, muss man auch wieder sagen. Wie viele Teams haben eine Vereinbarung zur Zusammenarbeit miteinander gemacht. Was sind die Spielregeln für unsere Kooperation? Wann weiß ich, dass ich für dich ein guter Kollege bin? Machen wir nicht. Wir fangen einfach mal an, weil wir uns um die Sache kümmern. Also damit kann ich natürlich schon was tun, aber jetzt gehen wir mal weiter. Dann kommen diese Zielformulierungen. Wenn jetzt jemand bei mir neu ins Team kommt und trifft dann direkt auf diese Ziele, dann ist zum Beispiel ein Ding, wo ich der Person helfen kann, damit umzugehen, ist, dass ich ein Gespräch führe, in dem ich Kontext zu diesen Zielen gebe. Also auch schon mal erkläre, warum machen wir das, dass es nicht willkürlich ist und dann erkläre, wie gehen wir damit um und dann Fragen beantworte oder auch auf Sorgen eingehe, die da sein könnten. Manchmal sind die ja gar nicht da, da muss ich auch gar nicht besonders viel Arbeit reinstecken, aber bei anderen Leuten gibt es das. Und dann arbeite ich damit und gebe Kontext dazu und rahmen es. Und nochmal, ich habe für mein Team zum Beispiel übrigens gesetzt, ich habe, ich sage bei Judy in der Kultur habe ich eigentlich nur zwei Werte definiert oder eine Idee von zwei Werten gehabt, als ich damit angefangen habe. Ich habe gesagt, ich möchte diese psychologische Sicherheit, bei mir heißt es irgendwie sowas wie Zusammenhalt und Wertschätzung. Also ich möchte, dass wir ganz eng miteinander sind und dass auch zum Beispiel Hierarchie nicht für falsche Distanz sorgt, so dass Leute sich auch trauen, ihre Gedanken jederzeit einzubringen. Und auf der anderen Seite sage ich nicht Accountability, sondern Ambitionen, weil das im Umgang miteinander super gut funktioniert. Diese beiden Werte streiten kontinuierlich miteinander. Also beispielsweise eine Kollegin hat mit viel Aufwand ein Konzept erarbeitet und dann habe ich in Organisationen erlebt, entweder es wird geklatscht, auch wenn man es gar nicht gut findet, weil sie so viel Aufwand betrieben hat, oder es wird hart dran rum kritisiert und sie geht hinterher geprügelt raus, haben wir wieder die beiden Dimension, richtige Hochleistungskultur wäre, dass man super der Einsatz und so weiter, dass man auch wertschätzt, was sie gemacht hat und gleichzeitig auch sehr deutlich sagt, was mir nicht geht. Und manchmal kann ich auch nicht irgendwas drumrum packen, wenn es einfach insgesamt nicht gut ist, habe ich halt die Klarheit, in der ich kritisiere, bin aber mit der Person ansonsten so verbunden, dass es funktioniert und dass sie motiviert wird von meiner Kritik und nicht das Gefühl hat, sie wurde geprügelt."
+        },
+        {
+            "start": 1903410,
+            "end": 1914090,
+            "speaker": "A",
+            "text": "Mich erinnert das gerade irgendwie an dieses, wie heißt das, Shit Sandwich, Wundervoll, dass du da super viel Arbeit reingestellt hast. Der letzte Absatz, echt kacke, aber das Layout toll mit diesen ganzen Bildern."
+        },
+        {
+            "start": 1916170,
+            "end": 1963040,
+            "speaker": "C",
+            "text": "Also ja, du hast recht, habe ich auch gerade gedacht. Vielleicht bei dem Beispiel, wenn das Konzept insgesamt schlecht ist, bin ich eher dafür, dass unsere Beziehung so gut ist, dass ich dir das klar sagen kann und dass ich nicht davor zurückschrecke, weil mein Wert ist, das muss besser werden. Aber ich investiere in unserer Zusammenarbeit so in unsere Beziehung, dass du weißt, dass ich gerade die Sache kritisiere und dass ich dich nicht runter mache. Ich glaube, so ist es besser erklärt. Es gibt da zig Modelle für momentan super super beliebt ist das ganze Thema Radical Candor. Ich weiß nicht, ob euch das schon begegnet ist, aber alle erzählen mir dann, wir müssen jetzt mal Radical Candor machen, das heißt wir müssen uns klar und deutlich die Meinung sagen, sage ich immer super. Aber das Modell hat eine weitere Achse und die heißt Care personally. Ich kann Leute hart kritisieren, ohne dass sie verletzt sind, beleidigt sind, defensiv werden usw. Wenn die wissen, dass ich es gut mit ihnen meinen."
+        },
+        {
+            "start": 1963040,
+            "end": 2056640,
+            "speaker": "A",
+            "text": "Eine Sache, die mir zumindest in den letzten Jahren geholfen hat, immer wenn ich kritisiert werde, dass ich das nicht persönlich nehme, sondern immer mir denke, es geht um die Sache, weil im Endeffekt geht es halt wirklich um die Sache. Also wir sind hier zusammen und arbeiten zusammen an einer Thematik und niemand hat etwas davon, wenn ich jetzt den Wolfgang persönlich angreife, sondern es geht um die Sache, es geht um dieses Projekt und das hat mir zumindest sehr geholfen, immer wenn ich, ich sage mal, Kritik bekomme, denn die seltensten Menschen wollen dauerhaft negative Kritik, dass man da auf jeden Fall nicht, ich sag mal, mies wird. Bevor wir zu dem Thema Sabotage Muster von Führungskräften kommen, denn das ursprüngliche Thema war ja Hochleistungskultur in Teams zu entwickeln und wie viele Führungskräfte diese unbewusst sabotieren, habe ich noch eine Frage und zwar treffe ich seltenst Leute Tech Leads, Engineering Manager und so weiter, die sagen psychologische Sicherheit gibt in meinem Team nicht, das ist alles super sicher. Gibt es deiner Meinung nach zwei, drei Kontrollfragen, die entweder ich mir als Teammitglied oder als Team Manager stellen kann, Ich sag mal so ein Entscheidungsbaum oder so, wo ich sagen kö OK, psychologische Sicherheit ist gar nicht vorhanden, ein bisschen vorhanden und könnte verbessert werden oder top notch, sodass man sagt okay, geh mal die letzten zwei, drei Situationen im Team Meeting hier oder so durch, dass man selbst so, ich sag mal, so ein Selbst Assessment machen kann, ob man überhaupt weiß, ob ich hier jetzt weiterhören soll oder ob ich direkt zurück ans Reißbrett gehen soll."
+        },
+        {
+            "start": 2056640,
+            "end": 2167040,
+            "speaker": "C",
+            "text": "Lass uns doch mal überlegen. Also erstmal würde ich sagen, die erste Frage Wie offen sagen deine Teammitglieder, wenn etwas nicht geklappt hat, also wenn ein Fehler passiert ist, ganz einfach, Wie offen stehen sie dazu ein? Wie sehr nehmen sie die Verantwortung dafür? Wie proaktiv kommunizieren sie? Das ist der erste. Das zweite ist auch für dich selbst Also immer, du kannst es auf dich oder auf deine Teammitglieder beziehen, je nachdem, ob du Führungskraft bist oder Mitglied eines Teams. Machen wir mal die zweite Frage aus der Ich Perspektive. Ich bin unzufrieden mit der Leistung einer Kollegin, eines Kollegen. Wie viel Bauchschmerzen habe ich, das anzusprechen, das offen anzusprechen? Ich habe das Gefühl, dass mein Team gerade Entscheidungen trifft, die ich nicht richtig finde. Wie klar und deutlich traue ich mich dagegen zu halten? Wie oft ertappe ich mich in Meetingsituationen, vielleicht mit einer größeren Runde dabei, dass ich Dingen zustimme, denen ich innerlich eigentlich nicht zustimme, wo ich noch nicht einverstanden bin? In Klammern sozusagen. Wir hören ganz viel von Disagree and commit. Aber was ich ganz viel höre, wenn nämlich dazu nicht wirklich aus großer Sicherheit und Überzeugung entsteht, dann passiert nämlich disagree, commit and do nothing, Wird es ausgesessen? Kennt ihr vielleicht auch schon. Also das wären solche Fragen, wenn ich zu einem Feedback Gespräch gehe, wie viel Bauchschmerzen habe ich davor? Weil wenn wir jetzt eine hohe psychologische Sicherheit haben und eine hohe Accountability, dann gehe ich zum Beispiel in mein Feedbackgespräch mit meiner Führungskraft oder mit Kollegen aus dem Team, mit dem ich zusammenarbeite und kriege ja eigentlich wieder Futter für meine Weiterentwicklung, um besser zu werden, um was Gutes zu tun. Wie viel Angst habe ich davor? Ein bisschen ist, also ich würde immer sagen, ich habe auch immer ein bisschen Kribbeligkeit habe ich dabei, weil ich natürlich auch nicht gerne höre, wenn irgendwas noch nicht gut genug ist. Aber ist es, sagen wir mal, eine aufgeregte Angespanntheit oder habe ich schon wirklich Bauchschmerzen? Das macht schon einen Unterschied."
+        },
+        {
+            "start": 2167200,
+            "end": 2187840,
+            "speaker": "A",
+            "text": "Aber ab wann ist das Disagree and commit and do nothing denn wirklich fehlende psychologische Sicherheit oder einfach nur simple Verantwortungserosion? Weil das hat die Miriam immer gemacht, die macht das jetzt bestimmt auch noch mal so nach dem Motto. Ja, also es kann ja auch sein, das ist jetzt gerade nicht meine Baustelle, es gibt auch andere Leute im Team, ne?"
+        },
+        {
+            "start": 2188560,
+            "end": 2223820,
+            "speaker": "C",
+            "text": "Es fehlende Hochleistung und es kann seine Gründe auf der Achse der psychologischen Sicherheit haben. Es kann seine Gründe auf der Accountability. Dein letztes Beispiel war ja genau das, dass jemand sich nicht verantwortlich fühlt. Und das ist wieder dieses Andersrum. Wenn ich jetzt eine Situation vorfinde, wo Dinge nicht funktionieren. Dann lasst doch mal reinzoomen, Was haben wir denn für eine Situation? Und sind wir da oder da fehlt der Person die Sicherheit, um zu Hey, passt mir nicht. War das der Fehler in der Geschichte? Oder haben wir gerade jemanden, der sich vor allem damit beschäftigt, Dinge von sich fernzuhalten, andere zu blamen? Wie heißt das, andere zu beschuldigen und so weiter. Dann wären wir auf der Accountability."
+        },
+        {
+            "start": 2224610,
+            "end": 2257270,
+            "speaker": "A",
+            "text": "Jetzt schneide ich das Thema an, wovon ich gerade besprochen habe. Sabotagemuster von Führungskräften. Was siehst du denn so in deiner Arbeit? Was Führungskräfte berichten? Kann man berichten sagen in deiner Arbeit? Weiß ich gerade nicht. Darstellen, wo sie Seit zwei Wochen mache ich jetzt das und das läuft hier richtig rund. Hochleistung, Kultur und du denkst dir Bauchschmerzen. Also gibt es da klassische Muster, wo du sagst okay, das sind jetzt hier klassische Stereotypen?"
+        },
+        {
+            "start": 2257270,
+            "end": 2457130,
+            "speaker": "C",
+            "text": "Ja, und wir können auch mal bei dem Modell erst mal bleiben, weil es gibt natürlich ganz, ganz vieles. Aber bleiben wir erst mal bei dem Modell. Das erste ist, es gibt sozusagen zwei unterschiedliche Komfortzonen. Die Einführungskräfte sind gut in dem die Accountability hochzuhalten, tun sich schwer auf der Beziehungsebene anzudocken und Sicherheit zu vermitteln. Und das Gegenteil, es gibt Leute, die sind auf der Beziehungsebene gut, kriegen die Accountability aber nicht hin. Und wenn man eigentlich da mal zwei Führungsstile rausleitet, dann gibt es ja sozusagen die Caring Führungs Seite, also vielleicht eine fürsorgliche sich kümmern. Und es gibt die Daring die herausfordernde Seite. Und ich mag die Begriffe, weil die geht gut von der wie sagt man, gehen gut über die Lippen. Caring and Daring leadership. Und jetzt fangen wir mal an. Die einen schaffen zwar wirklich gut klar Ziele zu setzen, auch klar Verpflichtungen, Verbindlichkeit herzustellen und so weiter, docken aber auf der Beziehungsebene nicht an. Es entsteht kein Vertrauen. Die Menschen sind grundsätzlich verunsichert und die kriegen schon mal vieles nicht zu hören, was sie eigentlich hören müssten, damit sie ihren Job. Also die müssten wirklich intensivieren zu verstehen, wie baue ich eigentlich gute, vertrauensvolle Beziehungen und wie führe ich Menschen? Das ist der eine Teil und es gibt den anderen Teil. Und wenn du mich fragst, wo ich mich als Führungskraft selber tendiere, würde ich sagen, ich kann das mit den Beziehungen Gut, das ist ja so ein bisschen mein Thema beruflich. Ich muss aber auf dieses Verbindlichkeitsthema achten, das Daring, auch dieses Pushige, dieses unbequem sein. Ich habe schon gerne Harmonie und für mich ist eine Herausforderung ab und zu mich selber zu Bin ich gerade unbequem? Sage ich wirklich deutlich genug, was gerade nicht stimmt. Das wären schon mal zwei Muster. Dann kommt diese Sabotage, ist auch, dass ich jetzt was verändern will, aber anstatt das eine beizubehalten und das andere dazu zu nehmen, also zum Caring das Daring hinzuzufügen, lasse ich das eine plötzlich weg und mache nur noch das andere. Und damit schieße ich mir mein Team ab. Ganz, also wirklich ganz häufig gesehen, so jetzt ist Schluss. Ich war jetzt so lange so verständnisvoll und irgendwie bin ich viel zu sehr der Buddy von meinem Team. Jetzt muss hier mal Klarheit rein und fünf Monate später spricht gar nicht mehr mit der Führungskraft. Es sind irgendwie lauter verdeckte Konflikte. Die Führungskräfte hat ein völlig anderes Bild von dem, was in dem Team passiert, als eigentlich die Mitarbeitenden. Ich mache es mal bewusst extrem, aber haben wir komplett die Seite gewechselt. Und eigentlich ist wirklich die gute Führung, was Hochleistung angeht, dass ich beides gut kann. Und wenn ihr euch vorstellt, vielleicht hattet ihr mal eine Führungskraft, die euch wirklich wirklich gepusht hat, wo ihr so das Gefühl hattet, wow, da war ich wahnsinnig motiviert. Meistens sind das Leute, die mit euch auf der Beziehungsebene wirklich eng andocken und dann aber basierend auf dieser guten gemeinsamen Grundlage heraus echt fordern können, echt pushen, echt unbequem sind. Das wäre ein Muster. Also ich kippe, ich pushe mein Team in die Angst oder ich schaffe Komfortzonen. Das sind die Ballen, die man häufig sieht. Es gibt andere Sachen. Es gibt Sachen, ich arbeite als Führungskraft zu viel. Menschen, die in Führung kommen, sind meistens Menschen, die ein hohes Verantwortungsbewusstsein haben. So und jetzt übernehme ich als Mitarbeiter vielleicht, weil ich Philipp habe jetzt jahrelang in meinem Team echt super gute Leistungen gebracht und jetzt werde ich ausgewählt, das Team zu führen. Und dann mache ich das mit denselben Erfolgsstrategien, die mich vorher zu einem richtig guten Mitarbeiter gemacht haben. Und das ist ich ziehe die Verantwortung und jetzt habe ich ein Team und ich ziehe die Verantwortung weiter an mich und dann lassen die immer weiter los. Gibt halt im Ruhrgebiet diesen schönen so wie du zupackst, lassen zwei andere los."
+        },
+        {
+            "start": 2457290,
+            "end": 2458390,
+            "speaker": "B",
+            "text": "Andis Lieblingssprache."
+        },
+        {
+            "start": 2459740,
+            "end": 2492780,
+            "speaker": "C",
+            "text": "Dann merke ich das, dass Leute loslassen. Was mache ich dann? Ich nehme noch mehr Verantwortung. Und das mal reingezoomt auf eine Eine Person hat ein Problem und die Führungskraft beschießt diese Person mit Lösungsvorschlägen und die Person kauft keins so richtig. Führungskraft ist hinterher geschwitzt, müde und fertig und die Person hat eigentlich immer noch nicht selber gearbeitet, weil sie in die Passivität erzogen ist. Auch so ein typisches Beispiel, wie ich als Führungskraft gute Leistungen, also ich bleib mal bei dem Begriff Hochleistung, hohe Leistungen in meinem Team sabotieren kann im besten Wissen und Gewissen."
+        },
+        {
+            "start": 2492780,
+            "end": 2515580,
+            "speaker": "B",
+            "text": "Das Gleiche gibt es ja auch im Team, dass irgendwie eine Person extrem heraussticht und Vollgas gibt und das ja dann auch durchaus ein Problem sein kann, wenn die dann eben alles an sich zieht und alles übernimmt und immer die Verantwortung dann bei einem im Team bleibt. Wie gehst du da dann von Leadership Seite damit um? Also gar nicht, wenn du selber das Problem bist, sondern eben ein so ein Hochleistungssportler, nenne ich es mal, im Team"
+        },
+        {
+            "start": 2515580,
+            "end": 2570300,
+            "speaker": "C",
+            "text": "hast du beste Spieler in diesem Team, muss immer wieder seine eigene Leistung daran messen. Was kann das Team eigentlich leisten? Also ich kann ja der, ich bleibe mal bei irgendeinem Sportbeispiel, ich kann ja der Torschützenkönig der Liga sein und trotzdem absteigen mit meiner Mannschaft. Und das heißt, ich glaube, dass das Erste, was ich machen würde, wäre, ich würde der Person versuchen zu helfen, zu sehen, wie die Wirkung neben der eigenen Leistung ist. Also dass andere zum Beispiel vielleicht demotiviert verunsichert werden über die Souveränität und die Power. Und dann würde ich überlegen, wie kannst du als Hochleistungsperson in meinem Team, wie kannst du deine Leistung hochhalten und gleichzeitig positiv aufs Team abfärben? Das schließt sich ja nicht aus. Das heißt, wahrscheinlich würdest du, wenn du das jetzt bist, würdest du in meinem Team sozusagen Zusatzziele bekommen, dass ich und die Leute in deinem Umfeld ziehen mit oder sind motiviert oder fühlen sich von deinem Coaching Sparring unterstützt."
+        },
+        {
+            "start": 2570540,
+            "end": 2653470,
+            "speaker": "A",
+            "text": "Du hast gerade ein wundervolles Beispiel gehabt und zwar, dass der Engineering Manager oder die Engineering Managerin oder die Teamleiterin alles übernimmt und versucht OK, Leistung, Leistung, Leistung, sonst läuft ja hier nichts. Und das geht vielleicht kurz einen Augenblick gut, vielleicht einen Monat oder zwei, aber irgendwann halt nicht. Burnout, zu viel Arbeitsstunden und so weiter und so fort. Und das ist ja ein ganz klassisches Beispiel von Leuten, die entweder neu in einer Rolle sind oder okay, ich möchte mich jetzt beweisen, mehr Zeit gleich mehr Output. Wie würdest du denn vorgehen, um genau diese diesen Stereotypen zu drehen? Weil ich meine, da geht es ja jetzt gerade um die Accountability für deine Teammitglieder. Und jetzt hat man natürlich vielleicht auch verschiedene Erfahrungslevel im Team. Leute mit weniger Erfahrung, Leute mit mehr Erfahrung, Leute, die sind organisierter, Leute, die sind weniger organisiert. Und das kann ja mit ganz einfachen Dingen beginnen, wie jemand schlägt ja, lass uns doch mal ein Meeting zu dem Thema machen, um ein bisschen Wissen zum Thema Künstliche Intelligenz zu teilen. Dann sagt er stell doch mal eine Einladung und lad das Team noch mal ein, damit du als Engineering Manager das nicht machen musst. Aber dann passiert nichts. Also man verteilt ja die Accountability, aber sie wird, wie nennt man das, nicht wahrgenommen. Also ich meine, wie würdest du jetzt an sowas rangehen? Weil das ist nämlich genau der Punkt, das Sabotage Muster. Wie dreht man das?"
+        },
+        {
+            "start": 2654430,
+            "end": 2718150,
+            "speaker": "C",
+            "text": "Wunderbar. Wir können genau bei dem Beispiel bleiben, Nennen wir es mal die Teamleiterin, die hat ja jetzt gerade Hey, du willst ein Meeting zum Thema KI machen, dann erstell doch mal Termin und lad doch schon mal alle ein und so weiter. Würde ich sagen, du arbeitest schon wieder zu viel. Mein Ansatz wäre, wenn ich Du möchtest das haben, was machst du jetzt? Wie kommst du dahin? So, dann sagt die Person auf der anderen Seite ja, vielleicht sollen wir mal Meeting machen. Gute Idee. Wen brauchst du fürs Meeting? Also wenn du das machen möchtest, was ist dein Ansatz? Wie kommst du dahin? Das funktioniert bei jemandem, der bisher Passivität gewöhnt war, natürlich nicht auf Anhieb und man darf auch irgendwann aufhören mit den Fragen, Aber das sind die kleinen Zeitinvestitionen, die wir, die wir tätigen müssen, damit die Person in die Verantwortung kommt. OK, von mir brauchst du sozusagen als Führungskraft das Go, dass du sowas machen kannst, Aber du bekommst jetzt hier mit ein Mandat und wenn die Person es dann nicht macht. Entweder habe ich auch ein Interesse, dass es gemacht wird, Dann würde ich natürlich irgendwann mal sagen, hey, warum passiert nichts und was hält dich davon ab, das zu tun? Oder sie hat sich das gewünscht, sie möchte es selber machen, kommt nicht in die Puschen, dann hat sie ja selber ein Problem."
+        },
+        {
+            "start": 2718150,
+            "end": 2749080,
+            "speaker": "A",
+            "text": "Wenn sie es nicht aber geht genau das Problem, das was du sagst, die Person hat das Problem nicht, dann zu Lasten des Teams. Denn ich meine mit diesen, ich nenne es mal sehr simplifizierten Fragen, was machst du denn als nächstes und so weiter, Da kann man sich natürlich auch ein bisschen dumm vorkommen, weil das sind ja alles hochintelligente Menschen. Du hast ja ein Team mit hoher Wahrscheinlichkeit mit Fachexperten und die verdienen natürlich auch ein Schweinegeld und so weiter und so fort. Das ist ja sehr kreative Arbeit und da muss man natürlich auch einen gewissen Respekt dran bringen und nicht wie gehst du jetzt vor, ein Meeting anzulegen, was mir wichtig ist?"
+        },
+        {
+            "start": 2749080,
+            "end": 2923110,
+            "speaker": "C",
+            "text": "Und das weiß mein Team, glaube ich, auch. Wenn ich mir diesen Fragen komme, dann heißt Achtung, Philipp hat gerade gemerkt, dass du ihm eine Verantwortung zuschiebst, die er nicht haben will. Wir haben das ja dekodiert, wir sprechen darüber. Ich habe auch von vornherein klargemacht, was ich von Leuten in meinem Team erwarte und wie ich gerne zusammenarbeiten möchte. Und dann gibt es immer mal wieder so kleine Beispiele. Meine Kollegin, die das Team leitet, was die Lernprogramme produziert, mit der hatte ich mal so auf dem Weg zum Training so einen WhatsApp Austausch, wo sie mir Fragen schickte und so weiter. Und dann kam am Ende die Also stellen wir jetzt das Lernprogramm live oder nicht? Und das war so eine typische Situation. Ich werde als Führungskraft gefragt, ich gehe jetzt erst mal schnell in so ein paar Aussagen machen und plötzlich rutscht die Verantwortung für alles auf mich. Und dann habe ich nur zurückgeschrieben so nach dem ja, was würdest du jetzt entscheiden? Und dann kam nur von ihr okay, ich habe schon verstanden, alles klar, so Augenzwinkern, Das muss ja nicht sein, was ich manipulativ mache. Ich kann ja durchaus vorher sagen, mein Interesse ist, dass ihr in die Verantwortung für eure Themen geht. Und dann aber das ist das, was ich meine. Wo sabotieren wir uns, Indem wir das nicht durchziehen, indem wir nicht aushalten, wann immer solche kleinen Einladungen kommen, reinzuspringen, dass wir die dann auch immer möglichst alle annehmen. Ist ja auch schön manchmal ist ja auch schneller. Ich mache so eins, zwei, drei, sage das vom Tisch, das vom Tisch, das habe ich entschieden und so weiter. Aber dadurch gewöhnen sich alle dran, dass man eigentlich nur mit einer Frage zu mir kommt und einer Antwort. Und natürlich, wenn die Person das dann nicht durchzieht und wenn eine Person Themen vernachlässigt, dann sprechen wir ja gar nicht mehr von dem wie kriege ich jemanden Verantwortung, sondern dann ist am Ende meine Verantwortung als Führungskraft auch sehr eindeutig zu sagen, was ich nicht gut finde. Vielleicht in der Eskalationsstufe Feedbackgespräch, Hey, und danach denkst du drüber nach, dann gehen wir ins Kritikgespräch und dann ist auch nicht mehr Überleg mal, ob du was dran ändern kannst. Und dann gibt es eine klare Aussage von mir, was ich brauche an Veränderungen. Das gibt es alles immer noch, wenn jemand jetzt unwillig ist oder wirklich gar nicht zurechtkommt oder auch diese Angebote nicht annimmt. Ich glaube aber, dass ganz vieles, bis wir da erstmal sind, auch eine Form von gelebter Passivität ist, weil es so am besten funktioniert. Anderes Zwei Leute im Team haben einen Konflikt, können sich nicht entscheiden. Machen wir A oder B. Der eine will A, der andere will B. Jetzt kommen Sie zur Führungskraft und Hey, wir wissen nicht, was wir machen sollen. Er sagt A, ich sag B. Meine Empfehlung an die Führungskraft ist immer dann zu Wenn ich das jetzt entscheide, delegiert ihr das an mich und damit brauche ich von euch das Mandat, dass ihr meine Entscheidung kauft. Also ich mache euch da ein Preisschild dran und ich sage es euch in sechzig, siebzig, keine Ahnung, ich habe es nie gemessen. Aber in vielen Fällen kommt dann wir reden noch mal und dann gibt es am Ende doch eine Einigung, weil vor Gericht ziehen wollte ich jetzt doch nicht und den Einfluss abgeben. Und ich glaube, an so vielen kleinen alltäglichen Stellen können wir den Leuten aufzeigen, Achtung, du verlässt gerade den Teil, wo du in Verantwortung bist, würde ich dir gerade aber nicht empfehlen. Und irgendwann, wenn du das wirklich durchziehst und das ist eine Disziplinfrage, es ist eine Mikrosituation im Alltag, kannst du dein Team sehr, sehr mündig halten und sehr unbequem, aber anstrengend vielleicht vor allem, wenn ich es nicht gewöhnt bin."
+        },
+        {
+            "start": 2923190,
+            "end": 2936310,
+            "speaker": "A",
+            "text": "Genau, also auf der einen Seite sagst du ja gerade, du bietest eigentlich mit deinem Führungsstil jedem eine Chance, es über Zeit selbst zu verstehen und selbst zu lernen oder mit diesen Rückfragen initial."
+        },
+        {
+            "start": 2936470,
+            "end": 2987430,
+            "speaker": "C",
+            "text": "Ja, also ich mache von Anfang an das Angebot, dass ich möchte, dass du so viel wie möglich Verantwortung selber trägst, übernimmst und dass ich dich gerne dabei unterstütze. Das ist sozusagen der Deal, den ich dir am Anfang hinhalten kann. Ganz ehrlich, ich bin Gründer, Geschäftsführer von einem kleinen Unternehmen. Wir haben großen Wettbewerb, wir müssen sehr schnell sein. Ich kann mir das jetzt auch nicht Monate und jahrelang angucken und dann gibt es auch was, wo ich merke, okay, das funktioniert nicht. Die Person schafft es nicht, da reinzukommen, aber dann muss ich zumindest mit mir im Reinen sein. Habe ich die Angebote wirklich alle gemacht oder habe ich was dazu beigetragen, dass die Person keine Chance hatte, bei mir zu performen? Wenn ich aber in den Spiegel gucken kann und sagen kann, ey, ich habe die Angebote gemacht, ich habe unterstützt, ich habe, habe den Rahmen gesetzt, ich habe eine Kultur geschaffen, in der man Verantwortung nehmen kann und sie auch erträgt. Das gibt es ja auch. Dann kann ich auch relativ gut eine Entscheidung treffen, mich zum Beispiel von jemandem zu trennen, wenn es dann nicht klappt."
+        },
+        {
+            "start": 2987430,
+            "end": 3018440,
+            "speaker": "A",
+            "text": "Aber du hast es ja auch gesagt, wenn man mit diesem Prozess beginnt, dieses Feld zu drehen, dass das sehr anstrengend ist. Denn du musst ja eigentlich, also du als Führungskraft muss ja eigentlich, ich sag mal, alles, was du subdelegierst und oder zurück Ping Pongs auch irgendwie begleiten, Das bedeutet dem nächsten One on one vielleicht mal ansprechen, weil du musst ja auch in irgendeiner Art und Weise beobachten. Und wenn du jetzt sagst, das sind diese Mikrotransaktionen, Mikrotransaktionen, das kann eine Riesenliste werden bei einem Zehn Mann Team."
+        },
+        {
+            "start": 3018440,
+            "end": 3132190,
+            "speaker": "C",
+            "text": "Es gibt so einen schönen zwischen Reiz und Reaktion steckt Haltung, habe ich letztens gehört. Also am Ende ist es gar nicht so schwierig, wenn ich das Muster einmal verstanden hab. Achtung, wen möchte ich gerade eigentlich in der Verantwortung haben? Das heißt, es gibt immer wieder Situationen, die treffen aber immer wieder bei mir auf diese Haltung. Bist du selber in charge oder gehst du gerade aus der Verantwortung. Das ist jetzt nicht sonst was für ein Hardcore Job. Das ist, glaube ich, dann hart. Wenn du zum Beispiel ein Team erben würdest in einer Organisation, was vorher eine Führungskraft hatte, die alles im Micromanagement durchentschieden hat, durchregiert hat, sagen wir es wirklich mal so, dann ist der Kulturwandel dahin ist natürlich Arbeit. Aber grundsätzlich treffen wir auf Leute, die erstmal klug sind, die grundsätzlich auch ein Interesse haben, einen guten Job zu machen und so weiter. Also also ich bin ganz selten irgendwie überhaupt erst negativ überrascht worden. Und dann geht es nur darum, dass wir so Überangepasstheiten rausnehmen, dass ich dir die Sicherheit gebe, dass ich dich auch verantwortlich halte und dass ich nicht aus Versehen über meine Präsenz dich aus der Verantwortung drücke. Das ist das Bild. Das findet oft ganz alltäglich gar nicht so sehr statt. Aber es gibt so wunderbare Sachen bei uns, die Homeoffice Regelung bei Trudy, da habe ich mir auch ordentlich den Kopf zerbrochen. Wie machen wir das denn jetzt? Und wer ist dann hinterher alle sauer auf mich? Und am Ende habe ich, glaube ich, nur einen Punkt reingegeben, wo ich gesagt Ich finde nicht gut, wenn wir komplett remote gehen. Und danach habe ich und jetzt, weil vorher hatten wir schon Leute gesagt, was sie gerne hätten und dann habe ich das moderiert. Und am Ende hat das Team sich auch was vereinbart, was fantastisch ist, weil das Schöne ist, wenn es nicht meine gesetzte Regel ist, sondern eine Vereinbarung des Teams, wer achtet dann darauf, ob das eingehalten wird? Ich führe keine Gespräche mit Leuten, die nicht genug ins Büro kommen. Das machen die untereinander. Da sagen die sich das Wir finden es echt nicht gut. Du bist gerade schon drei Wochen wieder nicht da gewesen, ist doch super, trägt von alleine. Und wenn du das schaffst zu bauen, hast du natürlich an vielen Stellen als Führungskraft auch Zeit für andere Dinge, weil du dich nicht um sowas kümmern musst."
+        },
+        {
+            "start": 3132190,
+            "end": 3151070,
+            "speaker": "A",
+            "text": "Devil's Advocate mal wieder gerne. Ab wann ziehst du dich denn da etwas zu viel raus als Führungskraft? Als Führungskraft bist du ja auch verantwortlich für die Themen im Endeffekt. Und ab wann sagst du oder ab wann kommt vielleicht der Gedanke bei dem Team Moment mal, der ist doch die Führungskraft jetzt hier, der steht doch dafür gerade."
+        },
+        {
+            "start": 3151310,
+            "end": 3216440,
+            "speaker": "C",
+            "text": "Ja, ich glaube, wenn das Gefühl ist, dass ich eben nicht mehr erreichbar bin, ich finde immer noch, dass die Entscheidung, die ich zum Beispiel auch bei uns in der Firma treffe, ist eine Form von Service, wenn man nicht mehr weiterkommt. Und natürlich bringe ich Ideen ein und solche Dinge. Ich glaube auch, dass das ist eher eine theoretische Sorge, dass ich zu weit draußen bin. Kann natürlich sein, wenn ich jetzt als Führungskraft nicht mehr mitbekomme, was in meinem Team los ist oder wenn ich keine guten, guten Infolinien habe und so weiter und so weiter, dann wäre ich wahrscheinlich zu weit draußen. Dann ist es nicht mehr machen lassen und empowern, sondern dann ist es irgendwann, ich weiß nicht, absent sein kann es auch geben, ehrlich gesagt. Also zumindest bei Führungskräften, die alltäglich mit ihren Teams arbeiten, sehe ich die Gefahr nicht so. Bei mir gibt es die durchaus. Ich mache auch noch relativ viel beim Kunden Arbeit und bin dann auch mal zwei, drei Tage in der Woche unterwegs und da muss ich dann höllisch aufpassen, dass ich nicht zu weit weg bin. Dann ist es gut, ein empowered Team zu haben, was selbstständig Dinge macht, aber wahrscheinlich nicht so hoch. Es gab so ein, zwei Erlebnisse für mich als Führungskraft, wo ich gemerkt habe, okay, jetzt gibt es so Alleingänge, jetzt wird es mir zu unabgestimmt, jetzt ist jemand vielleicht zu sehr in der Selbststeuerung, da muss ich es wieder einfangen."
+        },
+        {
+            "start": 3216440,
+            "end": 3263130,
+            "speaker": "B",
+            "text": "Über was du jetzt gesprochen hast, das war ja ziemlich so der Radical Candor Ansatz, dass man die Leute pusht oder wie du es selber genannt hast, Caring and Daring, eher die Daring Seite, würde ich mal sagen. Jetzt wenn man auf die Caring Seite schaut, die Verantwortlichkeit auch jetzt von dir als Führungskraft, gerade wenn es auch in die Richtung geht, was wir jetzt ja immer mehr merken, dass die Leute immer mehr leisten müssen sollen und es vielleicht auch gewollt wird, wenn es dann in Richtung Selbstausbeutung geht, wo stehst du dann als Führungsperson? Wo musst du reinspringen, Was ist wichtig, um da immer noch die Sicherheit zu gewährleisten im Team? Weil Radical Cando, du pusht die Leute ja in gewisser Weise, aber du musst ja dann auch oben irgendwo auffangen, oder ist die Frage, musst du sie auffangen oder bist du einfach froh, dass alle Vollgas geben und einfach siebzig Stunden arbeiten?"
+        },
+        {
+            "start": 3263130,
+            "end": 3298070,
+            "speaker": "C",
+            "text": "Ne, und ich meine auch nicht mit Vollgas die reine Menge an Arbeit, darum geht es gar nicht. Also man kann, glaube ich Vollgas geben und sehr erfolgreich sein, auch mit einer anderen Anzahl an Arbeit. Glaube, das muss sich immer der Aufgabe zuordnen und wir müssen über Ressourcen sprechen. Also ich habe überhaupt kein Problem, dass mal jemand siebzig Stunden arbeitet, finde ich völlig okay. Ich glaube, wann zum Beispiel, das haben auch die meisten Leute übrigens nicht mal ein mal so eine extra Schicht zu gehen, wenn sie den Sinn zum Beispiel dahinter sehen, schwierig wird siebzig Stunden zu glauben für irgendetwas, wo ich zum Beispiel nicht mehr verstehe, warum und wo ich oder das Gefühl habe, es macht gerade gar keinen Sinn."
+        },
+        {
+            "start": 3298070,
+            "end": 3309030,
+            "speaker": "B",
+            "text": "Aber das ist ja auch die Gefahr, dass wenn du den Sinn erkennst und den Sinn darin siehst, dass du vielleicht dann mehr arbeitest. Also das gibt es ja sehr wohl auch, dass die Leute den Sinn sehen und darum so viel Arbeit."
+        },
+        {
+            "start": 3309590,
+            "end": 3421630,
+            "speaker": "C",
+            "text": "Und dann gibt es einen zweiten Aspekt, den ich auch eine Fürsorgepflicht sehe. Ich sehe mich schon in der Verantwortung, dass Leute in der Zusammenarbeit mit mir in meinem Unternehmen nicht ausbrennen. Da geht es ja dann um psychische Gesundheit oder auch körperliche Gesundheit. Und um dafür ein gutes Gefühl zu kriegen, muss ich mit denen eng sein. Also wir brauchen Vertrauen. Die Person, Ich glaube nicht, dass das Gefährliche ist. Also die meisten Unternehmen bieten mittlerweile genug Möglichkeiten sich auszubrennen. In welchen Unternehmen passiert das Ausbrennen wirklich in den Unternehmen, in denen die Leute nicht sagen so langsam, mir wird es viel oder mit niemandem darüber reden. Ich glaube, das Sicherheitsnetz ist nicht die Ambition runterzuschrauben, sondern das Sicherheitsnetz ist, dass wir so verbunden miteinander sind, dass wir so eine Nähe zueinander haben, dass die Person sagt, mir wird es viel und dass wir da, dass ich dann und das ist nicht nur, dass sie es mir sagt, sondern das ist ja sich immer wieder bestätigendes oder bestärkendes System, dass ich damit gut umgehe. Das muss nicht schon sein, wenn die Person sagt, ich bin jetzt hier kurz vorm krank sein oder ich falle jetzt aus oder ich muss mir nicht Woche rausziehen, sondern auch schon darauf, auf die feineren Töne zu achten. Und wir können auch grundsätzlich eine Vereinbarung dazu machen. Bei Judy zum Beispiel sage ich, OK, wir haben jetzt gerade fünfzehn Leute, angenommen ich könnte zehn mehr Leute einstellen, würden wir uns Arbeit für zwanzig mehr Leute machen. Das ist ja, es ist gar nicht die Idee Wir haben eine Illusion von fertig werden, die müssen wir als erstes kippen. Wir werden nicht fertig, das heißt, wir müssen uns nicht darin trainieren, immer schneller zu werden, damit wir fertig werden, sondern wir müssen besser im Priorisieren werden und wir müssen gut abgestimmt sein, wie wir mit diesem Druck umgehen, dass wir immer noch zwei Dinge mehr machen können und mit dieser latenten Unzufriedenheit, dass es eigentlich noch was gäbe und noch was, was wir tun können. Und Leute darin, sagen wir mal, ich habe ein sehr junges Team auch zu unterstützen, da für sich eine gute Balance zu finden, zwischen so in der hohen Leistung zu bleiben, zwischendurch sich auch diese Pausen zu gönnen, das ist auch was sehr Individuelles und das ist meine Aufgabe dabei zu unterstützen."
+        },
+        {
+            "start": 3421870,
+            "end": 3436170,
+            "speaker": "B",
+            "text": "Und wie machst du das, sicherzustellen, dass sich die Leute die Pausen nehmen? Weil ich kenne es auch aus dem NGO berei ich ganz oft, dass die Leute eigentlich ausbrennen, obwohl da gar niemand dahinter steht, aber weil sie eben so dran glauben an das Ganze, dass sie dann erst recht ausbrennen."
+        },
+        {
+            "start": 3436170,
+            "end": 3574760,
+            "speaker": "C",
+            "text": "Also ich habe Katastrophenhilfe gemacht und da habe ich neunzehn Stunden am Tag gearbeitet, manchmal sogar noch mehr. Ich habe auch drei Nächte nicht geschlafen, drei Tage nichts gegessen, weil ich sonst nicht hätte arbeiten können mit Magen Darm Problem. Ich habe das mal alles ausprobiert, ich habe mal so wirklich meine absoluten Grenzen getestet, noch dazu natürlich psychisch, was man da erlebt hat, was noch so auf einen einprasselt und so die Umstände von sechs und vierzig Grad und sowas. Und da haben sich aber so ein paar ganz einfache Bilder geprägt, die ich auch ganz gut vermitteln kann und wo, glaube ich, so ein Prinzip klar wird. Wir haben in einem Katastrophengebiet, wo eine Million Menschen obdachlos waren und wir durchaus eine hohe Anzahl an massiv unterernährten Menschen haben, hat mein Team gegessen abends und wir haben auch geschlafen, Ich hatte Ärzte, die waren überwiegend über sechzig, wir haben auch in klimatisierten Räumen geschlafen, das heißt, direkt vor unserer Nase ging es den Leuten schlecht und wir haben unsere Leistungsfähigkeit erhalten, erhalten. Und dieser Selbsterhaltungstrieb ist wahnsinnig wichtig für Hochleistung und der ist aber sehr, sehr unterschiedlich. Das heißt, ich werde nicht hingehen und du darfst abends um zehn keine Mails mehr beantworten. Ich als Vater von zwei kleinen Kindern, mache das super gerne, habe meinem Team aber zum Beispiel Leute, das mache ich, damit ich die abends zwei Stunden mit meinen Töchtern habe und nicht, weil ich euch suggeriere, dass ihr auch um zwei und zwanzig uhr noch Mails schreiben müsst. Können wir das vereinbaren? Dann hat das ein ganz anderes Bild, als wenn der Geschäftsführer zwei und zwanzig uhr Mails schreibt und alle denken, der sitzt da mitten stand. So kann ich, kann ich dafür sorgen. Ich führe Einzelgespräche mit den Leuten, die ich direkt führe. Und da geht es auch darum, wie geht's dir gerade, Wie läuft's und was brauchst du, damit du eine hohe Leistung bringen kannst und dass du gleichzeitig aber für dich sorgst. Und dann kann es bei der einen Person sein, dann sage Hey, wie wäre es denn, wenn du einfach mal einen halben Tag dich rausziehst oder dich einen Tag rausziehst, hast eh genug Stunden da helfe ich da. Bei anderen Leuten geht es eher um organisatorische Dinge. Wie strukturiere ich mich? Bei anderen Leuten geht es wieder darum, wie kann ich meine psychologischen Grundbedürfnisse bedienen. Das heißt, ich bin tatsächlich für die Leute auch eine Art Coach und das ist natürlich super, weil ich da das, was ich nach draußen zu Kunden nutze, auch intern nutzen kann. Und ich würde sagen, dass, glaube ich, viele Führungskräfte sich darin ein ganzes Stück weiterbilden könnten. Dann können sie auch noch einen anderen Führungsjob für ihre Leute machen. Aber fangen wir noch mal ganz einfach an, dein eigenes Vorbild und mach transparent und mal sei dir bewusst, welche Wirkung du hast ins Team. Also nimm das Beispiel mit dem zwei und zwanzig und interessiere dich dann für deine Leute und was die brauchen."
+        },
+        {
+            "start": 3574920,
+            "end": 3609310,
+            "speaker": "B",
+            "text": "Jetzt wird das ganz oft ja auch von oben eingekippt. Du hast schon gesagt, Sea Level und Sport ist mehr Druck aufbauen, Leute sollen mehr arbeiten. Wie gehst du dann auf der Mittelmanagement Ebene damit um? Jetzt bekommst du den Druck von oben, die Leute sollen mehr arbeiten. Es gibt neue Metriken und du musst aber trotzdem irgendwie diese Gratwanderung schaffen mit der Sicherheit im Team und gleichzeitig dich darum kümmern, dass die Leute eben nicht ausbrennen. Hast aber trotzdem den Druck von oben natürlich. Und es wird auch von dir erwartet heutzutage ganz oft, dass du performst und dein Team auch dementsprechend performt."
+        },
+        {
+            "start": 3609310,
+            "end": 3722970,
+            "speaker": "C",
+            "text": "Du hast es ja gerade schon so skizziert. Das Bild wird deutlich. Also ich habe da ein eingeschränktes Feld an Möglichkeiten. Im besten Fall, im Idealbild gibt es die Möglichkeit des Pushback in der Organisation. Also wir kriegen jetzt vielleicht noch ein Thema drauf. Das wird mein Team aber ausbrennen und ich habe die Möglichkeit nach oben hin zurück zu pushen und die Führungsebene darüber nimmt mich darin ernst, Weil wenn ich jetzt auf mein Pushback wieder ein Pushback bekomme, also es landet eh auf meinem Tisch, dann wird es irgendwann leise in der Organisation. Wenn ich das nicht habe, dann bleibt mir sozusagen nur Entweder ich lege mich nach oben hin an oder ich werde als nicht performant gesehen oder ich gebe was weiter. Und wenn ich okay, ich muss es weitergeben, weil ich wirklich keine anderen Möglichkeiten habe, dann kann ich noch gucken, wie können die Individuen mit diesem Druck besser umgehen. Also was kann ich tun? Wie kann ich, wie kann ich da zumindest ein hohes Vertrauensverhältnis haben? Wie sehr können sie zu mir kommen, wenn sie mit Dingen unzufrieden sind? Wie viel Kontext gebe ich, was schon wahnsinnig hilft im Umgang mit Druck? Wie gut verstehen die, warum wir was machen? Dafür kann ich sorgen. Klug ist auch nach oben hin nicht nur Pushback, sondern auch zum Teil. Ich mag dieses Bild von Preisschildern. Ich habe es vorhin schon mal gesagt, Preisschilder dran zu hängen. Also häufig fangen Führungskräfte im Mittelmanagement, wenn die von oben eine Aufgabe bekommen, an, entweder defensiv zu werden und dann kriegen sie nur noch mehr Druck und es wird durchgedrückt. Gegebenenfalls hilft es aber auch als eine kluge Methode zu Wir können das machen unter folgenden Voraussetzungen. Das wird viel konstruktiver wahrgenommen, funktioniert oft viel besser. Und zum Beispiel unter der Voraussetzung wir priorisieren irgendwas um oder unter der Voraussetzung wir kriegen noch mal Ressourcen von dem anderen Team und so weiter. Aber ich sage erstmal geht, können wir machen, funktioniert wunderbar. Und oft dann, wenn der Preis aber einmal dran ist, kann es auch sein, dass dann die Führungskräfte da drin rüber Der Preis ist uns schon relativ hoch. Natürlich kann es dann immer noch sein, dass wir so jetzt Klappe halten und trotzdem machen. Aber so habe ich zumindest so kleine Gestaltungsspielräume in der Art nach oben auch zu managen."
+        },
+        {
+            "start": 3723290,
+            "end": 3768970,
+            "speaker": "A",
+            "text": "Ich kenne dieses Modell nur okay, wenn wir das jetzt reinkippen, fliegt was anderes einfach raus. Ich glaube, das ist so deine Preis Tag Analogie, so nach dem Wir haben diese Projekte gerade laufen. Wenn wir das reinkippen, delegiere ich dann die Entscheidung nach oben mit wahrscheinlich einer Empfehlung, dann lass uns doch das Projekt von Werner zur Seite schieben. Oft kommt dann u ne, kommen wir nicht. Aber dann zerfällt ja die ganze Organisation, zerfällt ja eigentlich. Also dann ist es ja wirklich diese okay, jetzt sind wir hier in verhärteten Zonen, nenne ich es mal, weil deine Aufgabe als Abteilungsleiter, Teamleiter ist es ja eigentlich, ich sag mal, die Firma zu vertreten, aber auch irgendwie das Team zu beschützen. Also das ist natürlich dann da, wo du dich dann in einem Spannungsfeld befindest, würde ich mal sagen."
+        },
+        {
+            "start": 3768970,
+            "end": 3834520,
+            "speaker": "C",
+            "text": "Absolut. Das ist eine der großen Herausforderungen von Medal Management ist genau dieses Verwalten, diese Multiloyalität. Ich muss der Organisation loyal sein, ich muss aber auch meinem Team loyal sein, weil wenn mein Team nicht sich von mir, also mir gegenüber kein Vertrauen entwickelt, dann werden sie wahrscheinlich auch nicht besonders motiviert unterwegs sein. Ja, das ist genau die Herausforderung und das klappt auch nicht immer schlichtweg. Ich glaube, wenn wir im größeren Bild drauf gucken, müssen wir gucken, klappt es oft genug. Also zum Beispiel schaffend es das Mittelmanagement regelmäßig Preisschilder an die Dinge zu hängen und zum Beispiel sowas zurückzugeben und wird darauf auch eingegangen, Weil stell dir vor, als Mittelmanager hast du jetzt zehn Mal Leute. Wenn wir das noch dazunehmen, wird die Qualität von allen anderen Projekten rasant nach unten gehen. Deshalb empfehlen wir nehmen das raus und es kommt jedes Mal. Wir machen es einfach trotzdem. Beim elften Mal wirst du wahrscheinlich nicht mehr Rückmeldungen geben und damit fängt die Führung, die Spitze der Organisation an, immer blinder zu werden für das, was eigentlich vorgeht. Es wird leicht und nicht, dass jemand dagegen pusht, ist das große Problem für eine Organisation, sondern dass es leise wird, dass die Leute, die den Job machen, nicht mehr mit den Leuten, die alles koordinieren, kommunizieren."
+        },
+        {
+            "start": 3834680,
+            "end": 3870510,
+            "speaker": "A",
+            "text": "Aber das bedarf ja auch eine unglaubliche psychologische Sicherheit von dir als Mittelmanagement dann nach oben, ich sag mal, auf eine andere Ebene im Gespräch zu gehen, weil wenn wir jetzt die ganze Zeit über Projekte sprechen, dann merkt man halt, wie gesagt, du hast gerade beim zehnten Mal gesagt, also ich glaube, ich werde nach dem dritten Mal schon leise nach dem, ja, okay, ich habe das schon vor drei Projekten gesagt, wir sind jetzt hier voll. Also ich meine, das bedarf ja einer ganz anderen psychologischen Sicherheit, dass man dann sagt, okay, dann lass mal irgendwie im nächsten One on One die ganze Sache ansprechen. Hör mal, Chef oder Chefin, so funktioniert es jetzt hier irgendwie nicht, zumindest nicht auf meiner Seite."
+        },
+        {
+            "start": 3870590,
+            "end": 3912040,
+            "speaker": "C",
+            "text": "Also ich mein, ja, absolut. Und das ist genau das, was ich meine. Aber stell dir vor, wir würden zusammenarbeiten und ich wäre jetzt in der Hierarchie über dir. Wie dumm wäre ich denn, wenn ich deinen Kopf ausschalten würde? Du bist ja derjenige, der das versteht. Du bist derjenige, der die Details kennt. Du bist derjenige, der mir das einordnet. Ich kann dich ja challengen in unseren Gesprächen. Ich kann, mach es dir nicht so leicht. Oder gibt es nicht noch eine Lösung zwischen den Lösungen, ja oder nein? Dazwischen ist ja oft ganz viel Raum. Das wären die Gespräche, die wir miteinander führen müssten. Aber aus meiner Sicht entsteht Hochleistung, wenn zum Beispiel zwei Menschen auf zwei Ebenen miteinander passioniert streiten können, richtig streiten. Aber dass du gleichzeitig keine Angst hast, dass ich als hierarchisch Vorgesetzter dich danach"
+        },
+        {
+            "start": 3912040,
+            "end": 3973980,
+            "speaker": "A",
+            "text": "im Kopf kürzer, Mach das mit dem Kopf kürzer. Das fand ich immer gerade super, weil, oder das ist ein super Stichwort. Du hast vorhin gesagt, vorhin, ich meine vor einer Dreiviertelstunde gesagt, dass psychologische Sicherheit oder dass viele Leute auch irgendwie Angst in ihrem Job haben. Und ich denke mir immer so, vielleicht denke ich zu simplifiziert, aber wir sind hier in Deutschland, Deutschland hat ein enorm gutes Kündigungsrecht für uns. Also da denke ich mir halt, wir sind leider nicht in den USA, was heißt leider zum Glück, Entschuldigung, Streicher, Slider. Wir sind nicht in den USA, wo man sagt, okay, du bist jetzt hier gekündigt und hast, glaube ich, zehn Tage Kündigungsfrist, sondern bis man in Deutschland jemanden kündigen kann, der aus der Probezeit raus ist, dauert es ein bisschen. Und da frage ich mich dann, ersetzt dieser Kündigungsschutz nicht einen großen Batzen, und jetzt Achtung, ganz genau, einen großen Batzen der psychologischen Sicherheit, dass dir zumindest die Angst genommen wird, solche schwierigen Themen dann auch anzusprechen. Hey, du pusht jetzt hier ein bisschen zu hart gegenüber dem Vorgesetzten, weil man die Angst, dass man den Job verliert, einfach nicht haben muss. Oder denke ich zu simplifiziert?"
+        },
+        {
+            "start": 3973980,
+            "end": 3976980,
+            "speaker": "C",
+            "text": "Ne, ich glaube, du denkst aus deinem Persönlichkeitsprofil heraus."
+        },
+        {
+            "start": 3977700,
+            "end": 3980900,
+            "speaker": "A",
+            "text": "Ein hundert Prozent anders wäre falsch, glaube ich."
+        },
+        {
+            "start": 3981940,
+            "end": 4077750,
+            "speaker": "C",
+            "text": "Das heißt ja, natürlich. Also es kommt ein bisschen darauf an, wie hoch dein Sicherheitsbedürfnis ist und auch was du in deiner Organisation erlebt hast. Also ganz, ganz viel Kontext. Nehmen wir eine Person, die grundsätzlich ein hohes Sicherheitsbedürfnis hat, die wird die Vorstellung, dass sie aus ihrem Job ihren Job verliert, wesentlich gruseliger finden. Das hängt auch vielleicht damit ab, wie alt bist du, in welcher Lebenssituation bist du und so weiter und so weiter. Und unser Gehirn ist nun mal so gebaut, dass es sich vor allen Dingen auf Gefahren vorbereitet und dementsprechend sind die viel stärker in der Wahrnehmung als andere. Es gibt Leute, die sind da weniger anfällig. Es gibt auch Profile, die wissen, weißt du, wenn du jetzt gerade irgendwie wahnsinnig stark in AI Themen bist, dann wirst du wahrscheinlich jetzt auch nicht so große Sorgen haben, wenn du in der Organisation nicht weiter machst. Aber es gibt eben auch andere Leute, die da einerseits anderes ticken, andererseits andere Rahmenbedingungen haben. Und dann gibt es die Vorgeschichte in der Organisation. Was haben wir denn da erlebt? Habe ich jetzt erlebt, dass die letzten fünf Leute, die unbequem dem Management gegenüber waren, alle plötzlich irgendwann weg waren und dazu habe ich keine weitere Erklärung bekommen. Dann füllt mein Gehirn Wissenslücke mit Interpretation. Und die Story ist, wenn ich aufmucke, bin ich weg. Und dann überlege ich aber, will ich jetzt weg sein, habe gerade irgendwie einen Kredit abgeschlossen oder so Und dann hast du es. Ansonsten gebe ich dir recht. Wir haben, also ich habe auch auf der anderen Seite, habe ich mit diversen C Level Leuten gesprochen und irgendwann hat mal jemand zu mir gesagt, das ist das letzte deutsche Unternehmen, was ich leite, weil die Leute, die nicht performen, sind so unfassbar sicher, dass dann die andere Perspektive ich kann da gar nichts gegen machen. Also ich kann die eigentlich nur mitschleppen und versuchen, dass der Rest trotzdem bei Laune bleibt. Das sind die Perspektiven, die es darauf gibt, kann ich auch verstehen."
+        },
+        {
+            "start": 4077750,
+            "end": 4094770,
+            "speaker": "A",
+            "text": "Es tut mir schon fast leid, so langsam gegen das Ende einzuläuten für diese, ich weiß nicht, persönliche Coaching Session, keine Ahnung, Coaching Session für alle Hörerinnen und Hörer des Engineering Kiosk. Man weiß es nicht. Deswegen lass uns mal noch mit zwei oder vier Tipps abschließen."
+        },
+        {
+            "start": 4095250,
+            "end": 4099890,
+            "speaker": "B",
+            "text": "Abschlussfrage Ist das binäres Denken zwei oder vier oder warum gerade zwei oder vier?"
+        },
+        {
+            "start": 4100290,
+            "end": 4151280,
+            "speaker": "A",
+            "text": "Ich wollte erst zwei oder drei und dann habe ich gesagt, okay, ich formuliere die Frage so, dass man zwei Tipps für Long hat, die ein Team leiten und zwei Tipps für Leute, die keine formale Power haben. Und so kam ich von zwei auf vier und deswegen, da war mein Mund schneller als mein Gehirn. Deswegen, Philipp, welche zwei Tipps hättest du denn für Personen, die jetzt in einer Führungsposition sind, die jetzt die Episode gehört haben, um auf der einen Seite vielleicht mal etwas mehr in dem Thema psychologische Sicherheit, ich sag mal, zu pushen und auf der anderen Seite ein Tipp zur Hochleistungskultur und dann noch zwei Tipps für jemanden, der in keiner Führungsposition ist, für jemanden, der innerhalb eines Teams ist und vielleicht Elemente, die du hier auch genannt hast, zum Beispiel die Sabotagemuster oder ähnliches, vielleicht hier und da in seinem Team"
+        },
+        {
+            "start": 4151280,
+            "end": 4157880,
+            "speaker": "B",
+            "text": "erkennt oder vielleicht trotzdem in einem Hochleistungsteam arbeiten will, obwohl er nur Team Member ist und keine Leadership Position."
+        },
+        {
+            "start": 4157880,
+            "end": 4159640,
+            "speaker": "A",
+            "text": "Team wechseln. Team wechseln, ganz klar."
+        },
+        {
+            "start": 4161669,
+            "end": 4227289,
+            "speaker": "C",
+            "text": "Okay, also fangen wir mit den Führungskräften an. Dann müsst ihr mir vielleicht die zweite Frage nochmal sagen. Bei den Führungskräften habe ich überlegt, ob das zu einfach ist, Aber grundsätzlich erstmal setz dich doch mal hin und mal Was sind die idealen Mitarbeitenden für dein Team? Und dann als Was musst du als Führungskraft tun, damit die sich so verhalten? Also eine klassische Gap Analyse quasi die gewünschte Zukunft und dein ist und wie kommst du dahin und das hat was mit dir zu tun? Und dann werden da Fragen entstehen und zu denen gibt es alle überall kluge Antworten und da glaube ich, ist schon viel drin. Und das andere ist ich glaube, es gibt heute immer noch so eine Idee von professioneller Distanz, die ich für schwierig halte. Ich glaube, es ist wirklich völlig OK menschlich mit den Leuten zu connecten, mit denen du arbeitest. Und wenn diese Nähe entsteht, dieses Vertrauen entsteht, dann glaube ich, wirst du auch in der Lage sein, gut zu fordern und behalte mal die zwei Begriffe im Kopf. Caring und Daring. Wenn beides gleichzeitig stattfindet, dann kommst du, glaube ich, sehr nah. Das war jetzt schon fast drei Tipps. Es fällt mir aber auch schwer. Ich arbeite so viel mit Führungskräften. Da sind zwei Tipps, sind ein hartes Limit."
+        },
+        {
+            "start": 4227369,
+            "end": 4255019,
+            "speaker": "A",
+            "text": "Okay, Aber vielleicht, vielleicht, wenn du so viel mit Führungskräften arbeitest, vielleicht machen wir es jetzt einfacher. Jetzt bin ich Teammitglied oder ich bin ja Teammitglied, aber ich bin auch Führungskraft, aber ich bin ja auch Mitglied eines größeren Leadership Teams. Welche Tipps hast du denn für jemanden, der in keiner Führungsposition ist, was man zum Thema psychologische Sicherheit oder Hochleistungskultur in seinem Team machen kann? Kann, dass man vielleicht, weiß ich nicht, seine Teammitglieder accountable hält, ohne jetzt hier neunzig Stunden zu buckeln?"
+        },
+        {
+            "start": 4255179,
+            "end": 4351540,
+            "speaker": "C",
+            "text": "Ja, also ich glaube erstmal, das sind ganz ähnliche Einflussbereiche wie als Führungskraft, weil ja nur diese kleine winzige Unterschied von Hierarchie fehlt. Also ich kann ja durch mein eigenes Vorbild, kann ich ja die Kultur in meinem Umfeld auch prägen. Und das heißt, wenn ich Hochleistung in meinem Team haben will, kann ich dazu ja beitragen, indem ich erstens mal natürlich selber versuche, dahin zu kommen und anderen dahingehend auch das Feedback gebe, die Angebote mache zu unterstützen. Also nicht nur auf mich zu gucken. Wenn ich mich für das Team verantwortlich fühle, dann bin ich auch sicher in der Lage, da mitzugestalten. Ich glaube, dass viele Leute denken, ich darf das nicht. Und wenn ich das Gefühl habe, ich darf nicht mitgestalten, also mit an der Performance meines Teams arbeiten, dann würde ich dir empfehlen, hol dir ein Mandat dafür. Als Mandat Mein Ich darf zum Beispiel Vorstände moderieren. Und das sind Leute, die sind zum Teil sehr mächtig. Und wenn ich da einfach hingehen würde und CEO XY mit einem Satz unterbreche, dann fliegt da achtkantig raus zurecht. Aber wenn die mir am Anfang Mandat geben und sagen, dann sage ich immer, was kann ich denn für euch tun? Und dann sagen die ja, wenn wir zu lange ausschweifend diskutieren, dann unterbrich uns. Dann darf ich euch dann im Satz unterbrechen. Ja, und dann kann ich den CEO im Satz unterbrechen, weil der will das ja von mir. Und ich glaube, dass viele Leute in ihren Teams etwas gehemmt sind. Weil sie unklar sind. Soll ich jetzt was dazu sagen? Darf ich Rückmeldung geben? Und immer wenn ihr euch da erlebt an diesen Stellen, sprecht es doch mal an, geht doch mal in euer Team. Und Leute, wie gehen wir eigentlich damit um? Wie gehen wir damit um, wenn ich bei dir in deinem Thema was sehe, was nicht gut funktioniert, Ist es okay, da was zu sagen? Bin mir irgendwie gerade nicht sicher. Sobald du das Mandat hast, super easy."
+        },
+        {
+            "start": 4351540,
+            "end": 4357700,
+            "speaker": "A",
+            "text": "Also eigentlich sehr, sehr explizite Kommunikation von Erwartungen und Co. Oder?"
+        },
+        {
+            "start": 4357860,
+            "end": 4372579,
+            "speaker": "C",
+            "text": "Ja, und sich bewusst machen, wo gibt es denn Dinge, die für mich unklar sind und die dann ansprechbar machen. Also ich immer wieder so ein Verständnis für die eigentliche Dynamik zu haben. Wenn ich was nicht darf, hole ich mir das Gefühl habe oder unsicher bin, hole ich mir das Mandat."
+        },
+        {
+            "start": 4372580,
+            "end": 4425960,
+            "speaker": "A",
+            "text": "Mir kommt gerade irgendwie in den Sinn, wer schreibt, der bleibt. Ich habe immer das Gefühl, dass wenn man, ja, also das klingt jetzt so ein bisschen doof, aber wenn du jetzt sagst, du hast jetzt, ich glaube, das habe ich mal bei dir gelernt sogar, du hast ein Team von fünf bis acht Leuten und du möchtest Erwartungen kommunizieren, dann sage ich das dir, Philipp, im ein hundert eins in Version A und dann mache ich das One on One mit meinem Teammitglied Wolfgang, dann erkläre ich ihm dasselbe, aber leider in Version B Und Version A und B sind leicht unterschiedlich. Und jetzt kannst du dir denken, was mit der dritten Person mit der Version C funktioniert und Co. Wer schreibt, der bleibt. Man schreibt einmal auf und dann hat man, ich sag mal, die gleiche Art und Form von Kommunikation zu jedem. Ja, interessant. Explizite Kommunikation. Immer wieder fordere ich bei Wolfi auch immer an und er lacht auch immer, weil er denkt, ich kann zwischen seinen Zeilen lesen, aber internationale Kommunikation zwischen Deutschen und Österreichern ist doch sehr, sehr schwer."
+        },
+        {
+            "start": 4425960,
+            "end": 4428640,
+            "speaker": "B",
+            "text": "Wie man es immer wieder merkt, müssen"
+        },
+        {
+            "start": 4428640,
+            "end": 4436080,
+            "speaker": "C",
+            "text": "wir da nochmal ein Coaching zu machen. Ich habe das Gefühl, ihr seid ein ziemlich eingespieltes Team hier. Da merkt man schon auch die Performance."
+        },
+        {
+            "start": 4436720,
+            "end": 4460860,
+            "speaker": "A",
+            "text": "Wenn das nach zwei hundert Episoden oder mehr als zwei hundert fünfzig Episoden nicht der Fall wäre, würde ich auch sagen, wir stagnieren stark. Philipp, vielen lieben Dank für die vergangene Stunde. Was soll ich noch sagen? Wer vom Philipp oder von seinem Team und von diesen Inhalten, die ihr gerade gehört habt, noch mehr hören möchte. Ich glaube, man kann Geld bei dir ausgeben. Ist das richtig?"
+        },
+        {
+            "start": 4460940,
+            "end": 4508090,
+            "speaker": "C",
+            "text": "Ja, also natürlich kann man das schön, dass du den Werbeblock einspielst. Wir haben digitale Lernprogramme, wo es genau um diese Themen geht. Kann man sich bei uns natürlich einkaufen, kann man sich bei uns melden. Was wir auch machen können, ist, dass wir euch einen Link zur Verfügung stellen, wo wir einmal zu diesem Caring und Daring Thema euch ein Lernprogramm kostenlos zur Verfügung stellen. Und ich würde noch ein zweites dazu packen. Überlege ich mir noch mal. Das ist ein Video Lernprogramm mit Reflexionsinhalten und das richtet sich an Führungskräften. Deshalb habe ich so im Hinterkopf Hey, wir sprechen die ganze Zeit auf beiden Ebenen. Ich guck mal, dass ich noch was zu Thema Zusammenarbeit im Team dazu packe. Viele der Modelle, die sich an Führungskräfte richten, sind aber für alle interessant. Da kann man, glaube ich, aus beiden Rollen drauf gucken. Deshalb machen wir zwei Programme, die wir euch da reinstellen und ihr stellt das dann irgendwo zur Verfügung."
+        },
+        {
+            "start": 4509530,
+            "end": 4538650,
+            "speaker": "A",
+            "text": "Uns hören Leute aus allen Ebenen und uns hören auch Leute, die sind noch ganz klassisch. Ich nenne das immer individual contributor, also Personen ohne Führungskraft, die sich auf diesem Weg zur Führungskraft gerade machen. Also von daher, falls ihr das hört und ihr wisst, wie komme ich denn jetzt da ran, schaut mal in den Shownotes, da werden wir es irgendwie einbauen. Oder kommt in unsere Discord Community und fragt kurz nach oder schreibt dem Wolfgang oder mir eine E Mail. Kriegen wir irgendwie hin, das zu kommunizieren oder folgt uns auf den Social Media Kanälen oder oder oder. Wir kriegen das schon kommuniziert."
+        },
+        {
+            "start": 4538650,
+            "end": 4540090,
+            "speaker": "C",
+            "text": "Super, danke euch."
+        },
+        {
+            "start": 4540090,
+            "end": 4546810,
+            "speaker": "A",
+            "text": "Philipp, vielen lieben Dank, dass du als Kölner für uns den Karneval sausen lässt an einem Rosenmontag."
+        },
+        {
+            "start": 4546810,
+            "end": 4547890,
+            "speaker": "B",
+            "text": "Für alle, die uns gerade hören."
+        },
+        {
+            "start": 4547890,
+            "end": 4557140,
+            "speaker": "A",
+            "text": "Wir nehmen an einem Rosenmontag mit einem Kölner auf. Ich habe noch kein Trara oder ähnliches. Alav sagt man ja bei euch. Bei uns sagt man Halau gehört, aber"
+        },
+        {
+            "start": 4557140,
+            "end": 4560740,
+            "speaker": "B",
+            "text": "nun gut, ihr seid schon komisch. Deinem Norden möchte ich noch mal anmerken."
+        },
+        {
+            "start": 4560900,
+            "end": 4566420,
+            "speaker": "C",
+            "text": "Du mit deinem Fasching, mir hat Spaß gemacht. Ich danke euch. Das war echt gut."
+        },
+        {
+            "start": 4567140,
+            "end": 4569740,
+            "speaker": "A",
+            "text": "Vielen, vielen Dank und tschüss, Bye bye."
+        },
+        {
+            "start": 4569740,
+            "end": 4571300,
+            "speaker": "C",
+            "text": "Ciao, ciao, ciao."
+        }
+    ]
+}
