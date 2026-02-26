@@ -22,6 +22,7 @@ talks:
     linkedin: beateoettl
     youtube: '@design-and-beyond'
     website: https://www.studio-craft.at
+    slides: 2602_beate_fast_independent_useless.pdf
 eventId: '0hlu8j5i4g3112fh9foih87hc3'
 speakers:
   female: 2
