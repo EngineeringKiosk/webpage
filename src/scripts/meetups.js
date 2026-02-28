@@ -18,7 +18,7 @@ export async function createMeetupHelpers(collectionName) {
 	// to not immediately show the next meetup as soon as it's over
 	// add a buffer of X days
 	function getNextMeetup(bufferDays = 0) {
-		const timeDivider = new Date(new Date().getTime() - bufferDays * 24 * 60 * 60 * 1000);
+		const timeDivider = new Date(todayEndOfDay - bufferDays * 24 * 60 * 60 * 1000);
 		return getNextMeetups(1, timeDivider)[0];
 	}
 
