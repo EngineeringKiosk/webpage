@@ -92,7 +92,7 @@ speakerStats.nonbinaryPercentage = Math.round((speakerStats.nonbinary / speakerS
                                 <td class="px-6 py-4 border-b">{formatDate(meetup.date)}</td>
                                 <td class="px-6 py-4 border-b">{meetup.location.name}</td>
                                 <td class="px-6 py-4 border-b">
-                                    {meetup.talks.map(talk => `${talk.name} (${talk.title})`).join(', ')}
+                                    {meetup.talks.filter(t => t._announced).map(talk => `${talk.name} (${talk.title})`).join(', ') || 'no data'}
                                 </td>
                                 <td class="px-6 py-4 border-b text-center" id={ meetup.eventId }>
                                     {meetup.participants?.registered === highestRegistrationNum ? (
