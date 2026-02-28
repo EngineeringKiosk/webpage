@@ -4,26 +4,26 @@ import MainHead from '../../../../components/MainHead.astro';
 import MeetupListing from '../../../../components/meetup/MeetupListing.astro';
 import Nav from '../../../../components/Nav.astro';
 import Discord from '../../../../components/meetup/Discord.astro';
-import Newsletter from '../../../../components/meetup-alps/Newsletter.astro';
+import Newsletter from '../../../../components/meetup-rhine-ruhr/Newsletter.astro';
 import MeetupArchiveEvent from '../../../../components/meetup/MeetupArchiveEvent.astro';
 import Team from '../../../../components/meetup/Team.astro';
 
 import { createMeetupHelpers } from '../../../../scripts/meetups';
-const { getPastMeetups } = await createMeetupHelpers('meetup-alps');
+const { getPastMeetups } = await createMeetupHelpers('meetup-rhine-ruhr');
 import { Image } from "astro:assets";
 
-let title = 'Archive of Engineering Kiosk Alps Meetup in Innsbruck';
-let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
+let title = 'Archive of Engineering Kiosk Rhine-Ruhr Meetup in Germany';
+let description = 'Tech Meetup in the Rhine-Ruhr region, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const meetupArchive = getPastMeetups()
-const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')).default;
+const rhineRuhrImage = (await import('../../../../images/meetup-rhine-ruhr/slider/duesseldorf-skyline.jpg')).default;
 
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/meetup/alps/images/ibk.jpg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/meetup/rhine-ruhr/images/rr.jpg" {canonicalURL} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
@@ -37,9 +37,9 @@ const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')
 							<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
 								<h1>
 									<div>
-										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Innsbruck</span>
+										<span class="inline-block w-auto py-px px-2 mb-4 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Tech Meetup Rhine-Ruhr</span>
 									</div>
-									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Alps<br />Meetup Innsbruck<br />Talks Archive</span>
+									<span class="block mb-6 text-3xl md:text-5xl lg:text-5xl 2xl:text-6xl leading-tight font-bold tracking-tight">Engineering Kiosk Rhine-Ruhr<br />Meetup Germany<br />Talks Archive</span>
 								</h1>
 							</div>
 
@@ -47,7 +47,7 @@ const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<Image class="relative rounded-7xl h-80 w-80" src={alpsImage} alt="View on Innsbruck" title="View on Innsbruck" />
+									<Image class="relative rounded-7xl h-80 w-80" src={rhineRuhrImage} alt="Düsseldorf Skyline" title="Düsseldorf Skyline" />
 								</div>
 							</div>
 						</div>
@@ -85,18 +85,16 @@ const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')
     <MeetupListing headline='Meetup Tech Talk Archive' archive={true}	meetupsToShow={meetupArchive} />
 
 		<Newsletter />
-		<Discord meetupName="Alps" />
+		<Discord meetupName="Rhine-Ruhr" />
 		<Team
-		badge="The local team in Innsbruck"
-		title="Team Engineering Kiosk Alps"
-		description="The organizers of Engineering Kiosk Alps Innsbruck."
-		email="alps@engineeringkiosk.dev"
+		badge="The local team of Rhine-Ruhr"
+		title="Team Engineering Kiosk Rhine-Ruhr"
+		description="The organizers of Engineering Kiosk Rhine-Ruhr."
+		email="rhine-ruhr@engineeringkiosk.dev"
 		members={[
-			{ memberKey: "wolfgang-gassler" },
-			{ memberKey: "tim-hannemann" },
-			{ memberKey: "romedius-weiss" },
-			{ memberKey: "christoph-stanger" },
-			{ memberKey: "mirjam-ziselsberger" },
+			{ memberKey: "andy-grunwald" },
+			{ memberKey: "schepp" },
+			{ memberKey: "dario-tilgner" },
 		]}
 	/>
 		<Footer />
