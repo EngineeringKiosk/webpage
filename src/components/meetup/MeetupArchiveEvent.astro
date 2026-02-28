@@ -34,9 +34,7 @@ const meetupId = `meetup-${formatDateWithoutWeekday(meetup.date, 'en-GB').toLowe
 
       <ul class="space-y-2">
         {meetup.talks && meetup.talks.map((talk) => (
-          talk.title && (
-            <MeetupArchiveEventTalk title={talk.title} speaker={talk.name} avatar={talk.avatar} />
-          )
+          <MeetupArchiveEventTalk title={talk.title} speaker={talk.name} avatar={talk.avatar} />
         ))}
       </ul>
     </div>

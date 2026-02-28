@@ -3,6 +3,16 @@ import { getCollection } from 'astro:content';
 export async function createMeetupHelpers(collectionName) {
 	let allMeetups = await getCollection(collectionName);
 	allMeetups = allMeetups.map((meetup) => meetup.data);
+	allMeetups = allMeetups.map((meetup) => ({
+		...meetup,
+		talks: meetup.talks.map((talk) => ({
+			...talk,
+			title: talk.title || 'To be announced',
+			name: talk.name || 'Here could be your name',
+			description: talk.description || 'The description will be available soon',
+			bio: talk.bio || 'How awesome would it be to read your profile here?',
+		})),
+	}));
 	const todayEndOfDay = new Date(new Date().setHours(23, 59, 59, 999)).getTime();
 
 	function getNextMeetups(limit = undefined, timeDivider = undefined) {
