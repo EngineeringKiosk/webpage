@@ -10,7 +10,7 @@ import { createMeetupHelpers } from '../../scripts/meetups.js';
 const { getNextMeetup: getNextMeetupAlps } = await createMeetupHelpers('meetup-alps');
 const { getNextMeetup: getNextMeetupRhineRuhr } = await createMeetupHelpers('meetup-rhine-ruhr');
 
-const bufferDays = 2;
+const bufferDays = 1;
 const nextMeetupAlps = getNextMeetupAlps(bufferDays);
 const nextMeetupRhineRuhr = getNextMeetupRhineRuhr(bufferDays);
 
