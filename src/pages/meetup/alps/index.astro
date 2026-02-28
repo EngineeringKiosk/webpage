@@ -16,7 +16,7 @@ import Sponsors from '../../../components/meetup/Sponsors.astro';
 import ImageSlider from '../../../components/meetup/ImageSlider.astro';
 
 // Current Meetup
-const bufferDays = 2 // wait 2 days after meetup before showing next meetup
+const bufferDays = 1 // wait 1 day after meetup before showing next meetup
 const nextMeetup = getNextMeetup(bufferDays);
 const dateString = formatDateWithoutWeekday(nextMeetup.date, 'en-US');
 const timeString = formatTime(nextMeetup.date);
