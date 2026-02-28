@@ -7,6 +7,7 @@ export async function createMeetupHelpers(collectionName) {
 		...meetup,
 		talks: meetup.talks.map((talk) => ({
 			...talk,
+			_announced: !!(talk.title && talk.name),
 			title: talk.title || 'To be announced',
 			name: talk.name || 'Here could be your name',
 			description: talk.description || 'The description will be available soon',
