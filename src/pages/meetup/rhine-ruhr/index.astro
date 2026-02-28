@@ -138,8 +138,7 @@ const sliderImages = await Promise.all(
 				</div>
 			</section>
 
-			<!-- TODO: Activate archive -->
-			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' archive={true} meetupName="Rhine-Ruhr" showGeneralLanguageNote={false} />
+			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' meetupName="Rhine-Ruhr" showGeneralLanguageNote={false} />
 
 			{ () => { 
 				if (!registrationClosed) {
