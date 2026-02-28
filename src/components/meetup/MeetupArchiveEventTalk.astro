@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import defaultAvatar from "../../content/meetup-alps/images/speaker/avatar.png";
 
 export interface Props {
   title: string;
@@ -12,7 +13,7 @@ const { title, speaker, avatar } = Astro.props;
 ---
 <li class="flex items-center">
   <div class="flex items-center mr-2 hidden sm:block">
-    <Image class="w-12 h-12 m-2 rounded-full" src={avatar} alt={speaker} title={speaker} />
+    <Image class="w-12 h-12 m-2 rounded-full" src={avatar || defaultAvatar} alt={speaker} title={speaker} />
   </div>
   <div class="text-sm">
     <div class="font-medium">{title}</div>
