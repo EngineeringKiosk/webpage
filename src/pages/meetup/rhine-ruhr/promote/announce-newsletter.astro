@@ -1,11 +1,11 @@
 ---
 import PromoteNewsletter from '../../../../components/meetup/promote/PromoteNewsletter.astro';
 
-import { formatTime, monthSuffixedDay, year } from '../../../../scripts/date.js';
+import { monthSuffixedDay, year } from '../../../../scripts/date.js';
 import { createMeetupHelpers } from '../../../../scripts/meetups.js';
 import { getMeetupConfig } from '../../../../scripts/meetup-config.js';
 
-const config = getMeetupConfig('alps');
+const config = getMeetupConfig('rhine-ruhr');
 const { getNextMeetup } = await createMeetupHelpers(config.collectionName);
 
 const bufferDays = 1;
@@ -13,16 +13,15 @@ const nextMeetup = getNextMeetup(bufferDays);
 ---
 
 <PromoteNewsletter
-	title={config.newsletterTitle}
-	description={config.socialPostDescription}
+	title={config.announceNewsletterTitle}
+	description={config.announceNewsletterDescription}
 	backgroundImage={config.backgroundImage}
 	dateStringMonthDay={monthSuffixedDay(nextMeetup.date)}
 	dateStringYear={year(nextMeetup.date)}
-	timeString={formatTime(nextMeetup.date)}
-	includeTime={true}
+	includeTime={false}
 	locationName={nextMeetup.location.name}
 	locationAddress={nextMeetup.location.address}
 	talks={nextMeetup.talks}
 	registrationUrl={config.registrationUrl}
-	signOffNames={config.signOffNamesNewsletter}
+	signOffNames={config.signOffNamesAnnounce}
 />

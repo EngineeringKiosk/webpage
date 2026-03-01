@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import MainHead from '../../MainHead.astro';
+
+export interface Props {
+	meetupName: string;
+	dateString: string;
+	cityName: string;
+	shortUrl: string;
+	backgroundImage: string;
+	nextMeetup: any;
+}
+
+const { meetupName, dateString, cityName, shortUrl, backgroundImage, nextMeetup } = Astro.props;
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={`Social Media Post ${meetupName}`} description={`Tech Meetup in ${cityName}`} image={backgroundImage} canonicalURL={new URL(Astro.url.pathname, Astro.site)} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<section style={`background-image: url('${backgroundImage}'); width: 700px; height: 700px;`} class="block text-center flex flex-col font-medium">
+			<h1 class="text-white text-5xl font-semibold p-3">{meetupName}</h1>
+		  <h2 class="text-white text-4xl">{dateString}</h2>
+			<h2 class="text-white text-4xl">Meetup in {cityName}</h2>
+			<div class="text-2xl p-4">{shortUrl}</div>
+			<div class="bg-white bg-opacity-90 mt-auto p-4 relative">
+				<div class="text-2xl">
+					hosted by {nextMeetup.location.logo ? <Image class="h-12 inline" src={nextMeetup.location.logo} alt={nextMeetup.location.name} /> : nextMeetup.location.name}
+				</div>
+			{nextMeetup.talks.map((talk) => (
+				<div class="flex flex-row my-2 mx-4">
+					{talk.avatar ? <Image class="w-32 h-32 rounded-full" src={talk.avatar} alt={talk.name} /> : <img class="w-32 h-32 rounded-full" src="/meetup/alps/images/speaker/avatar.png" alt={talk.name} />}
+					<h3 class="ml-4 text-2xl text-left my-auto">{talk.title}<br>by <span class="text-yellow-500">{talk.name}</span></h3>
+				</div>
+			))}
+				<img src={`/images/logos/engineering-kiosk-logo.svg`} alt="Engineering Kiosk" class="h-20 inline absolute bottom-4 right-4" />
+			</div>
+		</section>
+	</body>
+</html>
