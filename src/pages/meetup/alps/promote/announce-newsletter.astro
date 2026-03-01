@@ -1,52 +1,27 @@
 ---
-import MainHead from '../../../../components/MainHead.astro';
+import PromoteNewsletter from '../../../../components/meetup/promote/PromoteNewsletter.astro';
 
-import { formatDate, formatDateWithoutWeekday, formatTime, monthSuffixedDay, year} from '../../../../scripts/date.js';
+import { monthSuffixedDay, year } from '../../../../scripts/date.js';
 import { createMeetupHelpers } from '../../../../scripts/meetups.js';
-const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
+import { getMeetupConfig } from '../../../../scripts/meetup-config.js';
 
-let title = 'Newsletter Template for Engineering Kiosk Alps';
-let description = 'Tech Meetup in Innsbruck, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.';
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const config = getMeetupConfig('alps');
+const { getNextMeetup } = await createMeetupHelpers(config.collectionName);
 
-// Current Meetup
 const bufferDays = 1;
 const nextMeetup = getNextMeetup(bufferDays);
-const dateString = formatDate(nextMeetup.date, 'en-US');
-const dateStringMonthDay = monthSuffixedDay(nextMeetup.date);
-const dateStringYear = year(nextMeetup.date);
-const hostName = nextMeetup.hostName
-const locationName = nextMeetup.location.name
-const locationAddress = nextMeetup.location.address
 ---
 
-<html lang="de">
-
-	<head>
-		<MainHead title={title} description={description} image="/meetup/alps/images/ibk.jpg" {canonicalURL} />
-	</head>
-
-	<body class="antialiased bg-body text-body">
-
-		<h1 class="text-xl font-bold">Engineering Kiosk Meetup Announcement - {dateStringMonthDay}</h1>
-
-		<p>
-				<br/>
-				We would like to invite you to the next <b>Engineering Kiosk Meetup</b>, this time we will meet at the following date & location: <br/>
-		<br/>
-			&#128197; {dateStringMonthDay}, {dateStringYear}<br/>
-		&#x1F389;  Hosted by: {locationName}<br/>
-		&#128205;  Location: {locationAddress}<br/>
-		<br/>
-		<b>&#x1F3A4; Featured Talks</b><br/>
-		<br/>
-		{nextMeetup.talks.map((talk, j) => (
-				<span><b>{talk.title} by {talk.name}:</b> {talk.description}</span><br/><br/>
-		))}
-		&#128221; Reserve Your Spot and receive an instant calendar invite: <a href="https://engineeringkiosk.dev/alps">https://engineeringkiosk.dev/alps</a><br/>
-		<br/>
-		cheers,<br/>
-		Wolfgang, Tim, Romedius, Christoph and Mirjam<br/>
-		</p>
-	</body>
-</html>
+<PromoteNewsletter
+	title={config.announceNewsletterTitle}
+	description={config.announceNewsletterDescription}
+	backgroundImage={config.backgroundImage}
+	dateStringMonthDay={monthSuffixedDay(nextMeetup.date)}
+	dateStringYear={year(nextMeetup.date)}
+	includeTime={false}
+	locationName={nextMeetup.location.name}
+	locationAddress={nextMeetup.location.address}
+	talks={nextMeetup.talks}
+	registrationUrl={config.registrationUrl}
+	signOffNames={config.signOffNamesAnnounce}
+/>
