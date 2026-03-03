@@ -1,0 +1,633 @@
+{
+    "confidence": 0.95925874,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3668,
+    "utterances": [
+        {
+            "start": 3440,
+            "end": 106010,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kills Podcast. Heute zoomen wir mal in einen Bereich rein, der gleichzeitig kreativ, unbequem und leider oft erst dann sichtbar wird, wenn es schon IT Security Wir schauen uns dafür drei Stories an, die irgendwie wie so ein schlechter Film klingen, aber ziemlich reale Learnings liefern. Ein Casino, bei dem ein iot Thermometer aus einem Aquarium plötzlich als Datenabflusskanal dient, inklusive zehn GB Traffic nach Finnland. Jeep Cherokee Hack, bei dem ein offener Port und eine unsignierte Firmware reichen, um vom Infotainment bis zum CAN Bus zu kommen. Und ein aktueller Case rund um den Staubburger Roboter MQTT und fehlende Autorisierung, bei dem plötzlich nicht nur ein Gerät, sondern tausende Geräte im Spiel sind. Der rote Trust Boundaries, Netzwerksegmentierung, Zero Trust, Egress Traffic und die unbequeme Wahrheit, dass iot Teil deines Systems ist. Und ob du es willst oder nicht. Wenn du dich schon einmal gefragt hast, warum Segmentierung immer nach hinten geschoben wird, dann ist diese Episode für dich. Wir legen los. Viel Spaß. Wolfgang, du bist leider nicht mehr der Jüngste, aber du kennst ja wahrscheinlich noch aus der Historie folgende Du bist auf einer Party, auf einer gemütlichen Wohnungsparty oder so. Wo findet die beste Party statt? Natürlich stehst du mit jemandem in einem Kaltgetränk, einer Hopfenschorle in der Küche. Das Weil in der Küche passieren immer die besten Partys und dann lernst du irgendwen Neues kennen. Du triffst irgendwen, den du noch nie vorher getroffen hast, kommst ins Gespräch und dann kommt diese klassische Ja, und was machst du so? Also mit dem Hintergrund, was machst du so beruflich? Und die Person Ja, ich bin in der IT. Wie viel Informationsgehalt hat diese Information für dich?"
+        },
+        {
+            "start": 106010,
+            "end": 110370,
+            "speaker": "B",
+            "text": "Genug Informationsgehalt, um weiterzufragen? Was denn genau oder wo denn genau?"
+        },
+        {
+            "start": 110610,
+            "end": 141790,
+            "speaker": "A",
+            "text": "Du bist eher so der Optimist. Ich bin eher so der Pessimist, weil diese Antwort, die sagt mir ungefähr gar nichts. Das ist ungefähr so, als würdest du mir sagen, du hast ein Dach über dem Kopf. Ich weiß aber nicht. Hast du eine Wohnung? Hast du ein Haus? Besitzt du die Wohnung oder bist du nur Mieter? In welcher Stadt wohnst du in der WG? Hast du vielleicht nirgendwo ein Zimmer? Bist du vielleicht in irgendeiner Obdachlosenunterkunft? Also Es gibt so eine breite Varianz dieser möglichen Antwort und in der IT ist das ja nicht anders. Kannst du mir sagen, wie viele Jobs oder Bereiche es in der IT gibt?"
+        },
+        {
+            "start": 141950,
+            "end": 153120,
+            "speaker": "B",
+            "text": "Natürlich, da kann man bei ACM nachschauen, da gibt es ein Verzeichnis, gibt es Kategorien, wie ist die Informatik aufgeteilt? Ich glaube, das sind so zwei und zwanzig Hauptkategorien, dann kannst du das nachschauen natürlich."
+        },
+        {
+            "start": 153360,
+            "end": 184590,
+            "speaker": "A",
+            "text": "Und pro Hauptkategorie gibt es dann sehr wahrscheinlich sieben und dreiig Unterkategorien. Und davon dann, also dieser Baum wird sehr groß, würde ich mal sagen. Und ich glaube, das Thema Security oder Sicherheit ist nicht nur ein Subbaum in deiner ACM Kategorisierung, sondern Security ist ja schon wild und hoch spezialisiert, wie eigentlich fast jeder Subbereich. Da gibt es Red Teaming, Blue Teaming, Security Analysten, da gibt es White Hat Hacker und was habe ich noch vergessen? Was fällt dir als Jobs im IT Security Bereich ein?"
+        },
+        {
+            "start": 184830,
+            "end": 186790,
+            "speaker": "B",
+            "text": "Zieh so Schiff ganz oben."
+        },
+        {
+            "start": 186790,
+            "end": 243520,
+            "speaker": "A",
+            "text": "Okay, du bist jetzt eher so der Management Kollege, verstehe ich. Naja, wie dem auch sei, wir dachten uns in dieser Episode einfach mal, im Security Bereich passiert so viel und im Security Bereich ist auch die Kreativität meines Erachtens nach unglaublich hoch, nicht nur von den Angreifern, sondern auch von den Beschützern. Und es gibt natürlich ein paar weltweit bekannte Attacken, die es sogar bis in die Tagesschau geschafft haben, um mal drei zu nennen. Das wäre Stuxnet, das ist dieser Hack damals in iranischen Anlagen, um Zentrifugen, glaube ich, langsamer zu schalten, um das iranische Atomprogramm zu stören oder ähnliches. Dann gab es einmal Logshell in dieser Java Logging Library und da gab es einmal Heartbleed, wo glaube ich, Speicher von anderen Prozessen geleakt wurde. Das sind so die Riesendinger, würde ich mal sagen, die es bis in die zumindest deutsche Tagesschau geschafft haben, wahrscheinlich auch in die österreichische Tagesschau, die heißt ZIB zweite ZIP, OK, warum auch? Warum nicht einen einfachen Namen wählen?"
+        },
+        {
+            "start": 243600,
+            "end": 246320,
+            "speaker": "B",
+            "text": "Zeit im Bild ist viel kürzer als Tagesschau."
+        },
+        {
+            "start": 246320,
+            "end": 247400,
+            "speaker": "A",
+            "text": "Und wo ist Zeit im Bild?"
+        },
+        {
+            "start": 247400,
+            "end": 253800,
+            "speaker": "B",
+            "text": "Eins gibt es auch, das ist um neunzehn uhr dreiig. Und ZIB zwei ist dann für die coolen Leute um zehn uhr mit Interview"
+        },
+        {
+            "start": 253800,
+            "end": 255760,
+            "speaker": "A",
+            "text": "und so, die mehr Zeit haben, die"
+        },
+        {
+            "start": 255760,
+            "end": 262160,
+            "speaker": "B",
+            "text": "keine Zeit haben, die dann um zehn noch mal wirklich die News haben wollen. Bisschen anders aufgestellt, wieder was gelernt."
+        },
+        {
+            "start": 262480,
+            "end": 284700,
+            "speaker": "A",
+            "text": "Aber wir haben uns gedacht, wir haben, wir lenken den Scheinwerfer mal auf weniger bekannte Hacks, weniger bekannte Attacken und lesen jetzt nicht nur einen Blogpost vor, sondern fragen uns wirklich, was können wir eigentlich daraus lernen? Und wir versuchen mal ein bisschen, ich sag mal, ein bisschen tiefer als die ganz klassische Berichterstattung oder als das Offensichtliche zu gucken. Bist du ready, Wolfgang, für den ersten Hack?"
+        },
+        {
+            "start": 284613,
+            "end": 344613,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 344780,
+            "end": 374910,
+            "speaker": "B",
+            "text": "Ich bin natürlich absolut ready. Und vielleicht als kleine Hintergrundgeschichte, woher dieser Hack eigentlich kommt. Der Andi hat den irgendwo so als side Note in dem Vortrag auf der diesjährigen Fostem mitbekommen. Also er wurde nicht genau erklärt, sondern nur so angerissen. Aber Andi ist schon so nervös am Stuhl herumgerückt, wie er nur gehört hat, was das für ein toller Hack ist und dass der so cool ist. Und darum ist es jetzt auch der erste Hack, den wir besprechen, weil der Andi würde sonst gar nicht mehr aushalten. Darum darf der Andi jetzt starten mit seinem ersten Hack, der übrigens wirklich cool ist."
+        },
+        {
+            "start": 374910,
+            "end": 380270,
+            "speaker": "A",
+            "text": "Ich kannte den Hack schon, aber er wurde mir auf der diesjährigen Pfosten wieder in Erinnerung gerufen. Hast du ein Aquarium?"
+        },
+        {
+            "start": 380270,
+            "end": 385130,
+            "speaker": "B",
+            "text": "Wolfgang? Jetzt wollte ich gerade sagen, schaue aus, als würde die Fische züchten, aber ich will jetzt niemanden beleidigen."
+        },
+        {
+            "start": 385130,
+            "end": 447460,
+            "speaker": "A",
+            "text": "Nein, wahrscheinlich hast du ein paar Silberfische im Bad oder ähnliches. Aber nun gut, lassen wir das. Es geht um ein Aquarium. Es geht um ein Thermometer in einem Aquarium. Die ganze Sache wurde im Sommer zwei tausend siebzehn von den Medien aufgegriffen und zwar hat damals eine sogenannte IT Sicherheitsfirma mit dem Namen Darktrace ein Global Threat Report veröffentlicht. Ihr kennt das, diese pdfs, wo man Customer Case Studies und so weiter und so fort announced und eine Customer Case Stud, die ging um ein amerikanisches Casino. Ein amerikanisches Casino, wo die Software von der Firma Darktrace auffällige Aktivitäten im Netzwerk entdeckt hat. Leider wurde das Casino nie genannt und leider wurden auch nie forensische Details zu dem ganzen Fall veröffentlicht. Dennoch haben die Medien die ganze Sache aufgegriffen und natürlich weiter recherchiert. Das bedeutet dann leider auch, der kommende Fall kann nicht sauber rekonstruiert anhand von einer Incident Timeline behandelt werden. Aber wir haben das Beste getan, um investigativen Journalismus zu betreiben."
+        },
+        {
+            "start": 447700,
+            "end": 448820,
+            "speaker": "B",
+            "text": "Jetzt bin ich gespannt."
+        },
+        {
+            "start": 449060,
+            "end": 549040,
+            "speaker": "A",
+            "text": "Wie dem auch sei, also was ist passiert? Ein Casino in den USA hatte ein Aquarium und heutzutage hat man natürlich nicht nur ein Aquarium, sondern man hat auch ein Thermometer in einem Aquarium. Die Temperatur für Fische ist sehr wichtig und natürlich könnte man jetzt einen Mitarbeiter anstellen, der rumgeht, haben wir fünf und zwanzig Grad in diesem Aquariumwasser. Oder man kann natürlich einen iot Sensor installieren. Im Endeffekt gab es einen iot Sensor in diesem Aquarium, der hat die Temperatur, die Fütterung und die Reinigung und Umweltwerte und so weiter überwacht. Und diese Daten wurden dann an einen Computer gesendet. Die Software von Darktrace hat dann über Zeit auffällige Datenabflüsse im Netzwerk beobachtet und zwar wurden ungefähr zehn Gigabyte nach außen transferiert. Kein anderes Gerät in diesem Casino, in der Serverlandschaft von dem Casino, hatte jemals Kontakt zu der externen Adresse, wo die zehn GB hingesendet wurden. Kein anderes Gerät innerhalb des Casinos hat jede Menge Daten außerhalb des Netzwerks transferiert. Und wenn man sich die Daten genauer angeguckt hat, wurden Protokolle genutzt, die eher fürs Videostreaming geeignet sind. Und die Software hat all das erkannt. Klingt irgendwie nach logischen Patterns, würde ich mal sagen, und Kudos für die Software. Und dann hat man sich diesen ganzen Vorfall einmal genauer angesehen. Und zwar wurde dieses Aquarium Thermometer dafür genutzt, um circa zehn Gigabyte Daten aus dem internen Netzwerk des Casinos rauszuschleusen. Wer das genau war, weiß man bis heute nicht. Der Zielserver, wohin die zehn Gigabyte Daten gingen, stand irgendwo in Finnland. Das heißt natürlich nicht automatisch, dass der Täter aus Finnland kommt und die zehn"
+        },
+        {
+            "start": 549040,
+            "end": 553920,
+            "speaker": "B",
+            "text": "Gigabyte, die kamen alle von diesem Thermometer oder irgendwo von Devices im Netzwerk."
+        },
+        {
+            "start": 553920,
+            "end": 566390,
+            "speaker": "A",
+            "text": "Genau. Die Software von Darktrace hat festgestellt, dass das Thermometer der Ausgangspunkt, also der Endpunkt im internen Netzwerk war und zehn Gigabyte Daten dann nach Finnland versendet hat."
+        },
+        {
+            "start": 566390,
+            "end": 567670,
+            "speaker": "B",
+            "text": "Und was waren das für Daten?"
+        },
+        {
+            "start": 567990,
+            "end": 577350,
+            "speaker": "A",
+            "text": "Die Medien beschreiben, dass die Angreifer die High Roller Datenbank anvisiert haben. High Roller im Casino. Ich weiß ja nicht, wie viel Glücksspiel du machst, aber es gibt ja wahrscheinlich,"
+        },
+        {
+            "start": 577430,
+            "end": 579990,
+            "speaker": "B",
+            "text": "das musst du mir jetzt erklären, es"
+        },
+        {
+            "start": 579990,
+            "end": 591770,
+            "speaker": "A",
+            "text": "gibt halt immer so einen Raum in so einem Casino, okay, Da sind halt die zahlungskräftigen Kunden aktiv und da wird eine Datenbank drüber geführt, wo man halt, ich sag mal, nicht nur um ein tausend Dollar spielt, sondern vielleicht mal ein bisschen höher bei Poker und Blackjack."
+        },
+        {
+            "start": 591770,
+            "end": 596490,
+            "speaker": "B",
+            "text": "Das sind dann die Whales sozusagen wie bei den Spielen oder da, wo man viel Geld rausbekommt."
+        },
+        {
+            "start": 596490,
+            "end": 620250,
+            "speaker": "A",
+            "text": "Ganz genau. Und natürlich hat ein Casino Interesse, diese High Roller irgendwie schön zu betütteln. Und deswegen führen die natürlich eine Datenbank von diesen High Rollern, weil natürlich irgendwann auch Geldwäsche da ins Spiel kommt. Woher kommt das Geld, pipapo. Und mit hoher Wahrscheinlichkeit laufen die dann nicht wie in irgendwelchen Hollywood Action Filmen mit einem Koffer voll Geld und zehn Millionen zum Chip Counter, sondern das wird dann mit hoher Wahrscheinlichkeit über Banktransfer gemacht. Deswegen führen die so eine Datenbank."
+        },
+        {
+            "start": 620250,
+            "end": 630490,
+            "speaker": "B",
+            "text": "Aber das müssen ja schon andere Infos auch gewesen sein, weil diese Datenbank hat, keine Ahnung, zwei hundert KB wahrscheinlich, wenn es um Namen geht, es waren ja zehn Gigabyte. Also da muss schon irgendwie mehr dranhängen."
+        },
+        {
+            "start": 630490,
+            "end": 683670,
+            "speaker": "A",
+            "text": "Naja, also da wir es nicht genau wissen, was übertragen wurde und wir wissen auch nicht, wie die High Roller Datenbank geführt wurde, welche Metadaten ist, wenn da jede Transaktion mitgeliefert wurde, wenn da Daten in anderen Datenpaketen verpackt wurden. Ich hatte gerade gesagt, dass die Software hat ein Protokoll festgestellt, was normalerweise für Videostreaming genutzt wurde, dann bedeutet das, da werden Daten in Daten gepackt. Und das kann natürlich ein gewissen Overhead erzeugen. Und zehn Gigabyte Outbound Transfer kann natürlich auch sein, okay, du musst erst mal das Netzwerk erkunden, Port Scans und so weiter. Diese Information muss zurück zum Angreifer. Also das kann natürlich sein, dass die zehn Gigabyte nicht die zehn Gigabyte Größe der Datenbank ist, aber wie gesagt, das wurde nie explizit offengelegt. Und politisch korrekt würde man sagen, ein ungewöhnlicher Outbound Transfer von circa zehn Gigabyte über das Thermometer im Aquarium."
+        },
+        {
+            "start": 683670,
+            "end": 700470,
+            "speaker": "B",
+            "text": "Okay, jetzt wissen wir, dass da zehn Gigabyte übertragen wurden über ein Streaming Protokoll. Das heißt, es muss aber nicht heißen, dass es wirklich dann irgendwie Videodaten waren, sondern es wurde nur irgendein Streaming Protokoll an sich verwendet oder es kann, können auch irgendwelche Live Daten von einer Shell oder so gewesen sein, theoretisch."
+        },
+        {
+            "start": 700810,
+            "end": 707210,
+            "speaker": "A",
+            "text": "Ja, natürlich. Also im Endeffekt musst du dir die Frage stellen, welche Videodaten würdest du von einem Aquarium Thermometer erwarten?"
+        },
+        {
+            "start": 707450,
+            "end": 716730,
+            "speaker": "B",
+            "text": "Ja gut, sowieso. Aber auch dann, was innen drin ist in so einem Streaming Protokoll kann ja dann auch noch mal alles sein. Also kann ja die Datenbank genauso über das Streaming Protokoll übertragen."
+        },
+        {
+            "start": 716810,
+            "end": 726650,
+            "speaker": "A",
+            "text": "Genau, die High Roller Datenbank, das wurde von den Medien beschrieben, wurde aber nie explizit bestätigt. Also es könnte theoretisch alles drin sein. Es wird nur die Größe des Transfers von circa zehn Gigabyte."
+        },
+        {
+            "start": 726650,
+            "end": 731360,
+            "speaker": "B",
+            "text": "Okay, aber ich muss jetzt irgendwie von außen überhaupt mal da reinkommen zu diesem Fisch Thermometer."
+        },
+        {
+            "start": 731590,
+            "end": 784610,
+            "speaker": "A",
+            "text": "Genau. Und da kommt noch mal so ein kleiner Disclaimer. Die Medien haben das Ganze natürlich so aufgegriffen wie, okay, iot ist böse, iot kann alles ruinieren und Internet of Things ist auch unsicher. Die reale Quellenlage ist alles ein bisschen mager, denn es gibt keine verifizierten technischen Details, dass man irgendwie über das Fisch Thermometer in die Datenbank vom Casino gekommen ist. Also es steht nirgendwo explizit. Das Fisch Thermometer hatte eine Sicherheitslücke, das Fischthermometer aber auf dem Internet. Das Fischthermometer wurde gehackt und von da aus hat man weiter gesprungen. Das steht nirgends, aber das haben die Medien so aufgegriffen. Und wenn man jetzt, so wie es leider viele im Internet tun, einfach nur die Headline lesen, dann kann man da glaube ich, auch sehr einfach drauf schließen, denn diese Fälle sind ja jetzt nicht weit hergeholt, dass irgendein iot Sensor offen im Internet steht, oder?"
+        },
+        {
+            "start": 784690,
+            "end": 792510,
+            "speaker": "B",
+            "text": "Ja. Wie viele iot Sensoren hast du übrigens in deinem Netzwerk und so Temperatursensoren braucht da ja kein Aquarium wahrscheinlich, oder?"
+        },
+        {
+            "start": 792830,
+            "end": 799150,
+            "speaker": "A",
+            "text": "Ich bin kein Fischbesitzer, aber natürlich, ich habe ein paar iot Sensoren stehen, aber nicht offen im Internet."
+        },
+        {
+            "start": 799230,
+            "end": 800870,
+            "speaker": "B",
+            "text": "Ja, das sagst du jetzt so leicht."
+        },
+        {
+            "start": 800870,
+            "end": 908660,
+            "speaker": "A",
+            "text": "Ja, natürlich. Also ich kann ja nur das sagen, was ich jetzt aktuell weiß, aber die Story, die halt oft verbreitet wird, ist, du hast einen Fisch, du hast ein Aquarium Thermometer, Ein Aquarium Thermometer wurde gehackt. Vom Aquarium Thermometer ist man interne Netzwerk gesprungen, dann hat man ein sogenanntes Lateral Movement gemacht. Das bedeutet, man bewegt sich seitwärts im Netzwerk und explodiert so ein bisschen. Das Netzwerk hat dann die Datenbank gefunden und hat diese Daten dann nach außen geschleust. Aber Achtung, der Initial Access, wie man eigentlich ins interne Netzwerk gekommen ist, ist nicht eindeutig belegt. Deswegen geht man aktuell davon aus, dass der Angreifer irgendwie Zugriff auf das Corporate Network bereits hatte und das entweder durch gestohlene Credentials also Zugangsdaten oder halt durch irgendwelche Brutforce Attacken. Und das verschiebt die Story natürlich komplett. Von iot war das Einfallstor hin zu iot war mindestens ein erfolgreicher Exit Egress Kanal und eventuell auch der, ich sag mal, Pivot Punkt, so nach dem Motto, dass man Zugriff aufs interne Netzwerk hat, zuerst das Thermometer gefunden hat und von diesem Thermometer weiter gehoppt ist oder dieses Thermometer als Ausgangstür genutzt hat. Und das ist natürlich eine ganz andere Perspektive auf diesen Sicherheitsvorfall, denn es wird nirgendwo genannt, dass dieses Thermometer ein Sicherheitsloch, also eine CVE hatte oder dass irgendwo ein Exploit genutzt wurde. Was man aber, und das kommt jetzt noch dazu, aus dieser Case Study gesehen hat, ist, dass die Netzwerkanbindung bzw. Dass es einen Segmentierungsversuch des Aquariums bereits gab. Also dieses Thermometer hatte eine VPN Konfiguration, ist geil."
+        },
+        {
+            "start": 908660,
+            "end": 912740,
+            "speaker": "B",
+            "text": "Das erste Thermometer, das Sie kennen, der eine VPN Konfiguration hat, es muss ja"
+        },
+        {
+            "start": 912740,
+            "end": 937930,
+            "speaker": "A",
+            "text": "nicht das Thermometer selbst gehabt haben, es kann ja auch die Netzwerksegmentierung gehabt haben, die dann VPN, den Jump Host hatte. Aber das bedeutet, es gab einen Segmentierungsversuch und dieser Angreifer hat es irgendwie geschafft, die VPN Konfiguration zu bekommen, um dann weiterzuspringen. Und das ändert jetzt natürlich alles. Das bedeutet, du, Wolfgang, der für die Überwachung des Aquariums zuständig ist, hast vielleicht"
+        },
+        {
+            "start": 937930,
+            "end": 941850,
+            "speaker": "B",
+            "text": "auf eine Phishing Mail geklickt, pun intended oder Phishing Mail."
+        },
+        {
+            "start": 944810,
+            "end": 1002840,
+            "speaker": "A",
+            "text": "Also wenn man sich die ganze Sache jetzt von der Perspektive anguckt und nicht sagt, iot ist insecure, sondern okay, Credentials wurden irgendwie geleakt, dann hat man irgendwie Zugriff darauf bekommen und dann ist man da weitergehopst. Dann muss man natürlich schon gucken, was hat das betroffene Unternehmen eigentlich vorher getan, um sich zu schützen. Und da kann man sagen, leider, es gibt keinen kompletten Post Mortem, aber es wurde ein Versuch unternommen, das Aquarium mit einer VPN Konfiguration zu isolieren. Das bedeutet, oder man kann darauf schließen, dass das Risiko grob gesehen wurde und es gab eine Art Überwachung auf das Netzwerkverhalten, denn die Parameter, die ich gerade initial genannt hatte, kein anderes Gerät des Casinos hat mit dem Server in Finnland gesprochen, kein anderes Gerät hat diese Menge an Daten nach außen transferiert. Plus warum kommuniziert ein Fisch Thermometer mit Videostream Daten? Also es gab schon Sicherheitsmechanismen und da muss man zugeben, irgendwie wurde das Risiko ja grob gesehen, aber auch nur grob."
+        },
+        {
+            "start": 1002840,
+            "end": 1022330,
+            "speaker": "B",
+            "text": "Also bei mir gehen da ja schon ganz viele Red Flag Lichter an, wenn ich das so höre. Jetzt, was können wir denn davon lernen? Was würdest du empfehlen? Kann man sowas verhindern? Also klar, wir wissen nicht, wo die Person hereingekommen ist überhaupt, aber wenn wir das mal auf die Seite schieben, was können wir verhindern oder was können wir davon lernen?"
+        },
+        {
+            "start": 1022330,
+            "end": 1046890,
+            "speaker": "A",
+            "text": "Ja, da bin ich mal gespannt, ob ich deine roten Flaggen jetzt auch treffe. Generell würde ich sagen, und ich betrachte den ganzen Fall jetzt aus, dieser Angreifer oder die Angreiferin hatte Zugangsdaten und nicht iot ist insecure und hatte einen Exploit oder hatte ein Sicherheitsloch und mit einem Exploit wurde es auf. Generell ist das das beispielhafteste Szenario einer Exfiltration Failure Mode einer."
+        },
+        {
+            "start": 1046890,
+            "end": 1052630,
+            "speaker": "B",
+            "text": "Was hast du wieder mal in GPT irgendwie einen englischen Begriff ins Deutsche probiert zu übersetzen oder was ist, Ne, ich"
+        },
+        {
+            "start": 1052630,
+            "end": 1137330,
+            "speaker": "A",
+            "text": "habe nämlich was zur Exfiltration Taktik in einer Sicherheitsdatenbank gelesen, was Taktiken und Techniken von Angreifern beschreibt. Das heißt wirklich Exfiltration, denn ein iot Gerät wurde genutzt als Initial Access. Von da hat man sich dann seitwärts bewegt und dann hat man wieder über das Thermometer Daten rausgeschleust. Das ist ja schon so relativ smart. Aber was können wir jetzt daraus lernen? Und jetzt kommt die Wahrheit, die viele Leute ignorieren. Iot ist Teil eures Systems. Was meine ich damit? Die meisten Leute bestellen sich auf Temu irgendeinen Fenstersensor, binden den einfach ein und machen dann mit der nächsten Sache weiter. Und da frage ich mich, warum? Denn dieses Beispiel zeigt relativ gut, der Kernfehler ist, nicht dein Thermometer ist hackbar oder hat eine Sicherheitslücke, sondern ein nicht kritisches Gerät, wie zum Beispiel ein Aquarium Thermometer hatte direkt oder indirekt einen Pfad zu kritischen Datenbanken oder Assets, nennen wir es mal, bzw. Wurde als vertrauenswürdiger Transportkanal angesehen, denn sonst hätte man ja eine Netzwerkisolation, eine Netzwerk Trennung gemacht. Sonst hätte man ja gesagt, okay, das VPN von dem Thermometer, warum braucht das jetzt eine Route zu irgendwelchen Datenbanken oder zu irgendwelchen Fileservern oder ähnliches und das wird mit hoher Wahrscheinlichkeit bei dir zu Hause nicht anders aussehen, oder Wolfgang?"
+        },
+        {
+            "start": 1137330,
+            "end": 1194570,
+            "speaker": "B",
+            "text": "Ja, ich habe schon automatisch eine physikalische Trennung, weil ich zigbee verwende bei meinen ganzen iot Sensoren und das dadurch auf einer anderen Netzwerkebene funktioniert. Das hilft mir schon ein bisschen. Das finde ich auch sehr sympathisch. Aber klar, ich habe keine Regeln auf meinem Router, der irgendwelche Segmentierungen durchführt oder so von irgendwelchen Devices. Ist mir ehrlich gesagt zu mühsam, mache auch absichtlich nicht so. Aber es ist halt immer die Frage, wo ist dann, wo hört es mühsam auf? Wie groß bin ich als Firma, als kleine Firma, Casino, wo fängt man an mit der Sicherheit? Das ist natürlich schon ein großes Thema. Ich würde mal sagen, bei der Größe von dem Casino, wo es auch um sicherheitskritische Daten geht, soll es natürlich schon eine Segmentierung geben. Aber ich kenne das selber auch in Firmen, wie oft ist es man hat irgendwie ein Device, fragt hey, habt ihr WLAN, habt ihr eh intern WLAN oder können wir einfach reinhängen und dann hängt es da mal drinnen, macht vielleicht sogar irgendwie eine Untergruppe ohne da IT direkt und so weiter. Also das passiert natürlich ständig, solche Dinge."
+        },
+        {
+            "start": 1194880,
+            "end": 1298510,
+            "speaker": "A",
+            "text": "Und das ist genau der Punkt, denn es gibt halt keine sauberen, ich sag mal, Trust Boundaries nennt man das, also Stichwort Zero Trust Network, kurzum, wer darf eigentlich mit wem kommunizieren? Gibt es eine explizite Authentifizierung und Autorisierung? Jetzt denkt wie jetzt muss ich mein Aquarium Thermometer authentifizieren? Ja, bitte Irgendwo, wenn das Daten irgendwo hinschreibt oder Daten transferiert, gibt es eine Art Validierung aller eingehenden Daten? Hätte man hier auch machen können. Warum eingehende oder ausgehende Daten? Warum verlassen von einer Source IP, die ein Thermometer darstellt, Videostream Daten mein Netzwerk? Fragwürdig. Warum verlassen überhaupt Videostream Daten mein Netzwerk? Wir sollten nämlich intern bleiben hoffentlich. Netzwerk Segmentierung, Lease Privilege, Monitoring und Logging aller Grenzen, aller Netzwerk Boundaries. Und das kann man alles natürlich mit vlans und Portlimitierungen und Co. Ich sage mal, erschweren. Eine vollständige Sicherheit gibt es auch hier nicht. Desto länger ein Angreifer im Netzwerk bleibt, umso eher findet er natürlich auch einen Weg. Auch das, was du gerade gesagt hast, würde ich gerne challengen, weil wenn der Kollege nämlich bei dir im Netzwerk ist und bei dir im Home Assistant da ist, wird er mit hoher Wahrscheinlichkeit auch einen Weg finden, seine Befehle in zigbee Pakete zu packen, zu deinen Geräten zu senden, zum Beispiel zu deinem Heizungssteuerungsgerät, was vielleicht auch zigbee fährt, weiß ich gerade nicht, um dir dann, ich sag mal, eine wabe Bude zu bescheren oder halt eine kalte. Von daher, das würde ich mal sagen, ist eine Thematik, die so offensichtlich ist, dass sie von sehr vielen Leuten ignoriert wird, das iot Teil eures Systems ist und genauso wie ihr Laptops von irgendwelchen Consultants hoffentlich nicht ins komplette Firmennetzwerk lasst, sondern denen vielleicht ein eigenes Netzwerk gebt oder ähnliches, müsste man das eigentlich mit iot Geräten genauso machen."
+        },
+        {
+            "start": 1298510,
+            "end": 1395270,
+            "speaker": "B",
+            "text": "Ja, du lebst da auch in deiner Traumwelt, also in wie viel größeren Firmen ich schon war, wo ich einfach voll Zugriff bekommen habe, relativ easy eigentlich auf alles. Gut, ich bin eine vertrauenswürdige Person natürlich mit meinem Laptop, aber das ist natürlich schon ein Grundproblem. Ich kenne natürlich auch die andere Variante, die ist dann sehr nervig. Also ich kenne eine so eine Umgebung zum Beispiel auf deren Servern, Docker Container haben automatisch nichts, wohin sie schreiben können oder wohin sie Pakete schicken können, die sind einfach automatisch totgeschalten und du musst dann wirklich jeden einzelnen Port, jede einzelne Internetadresse auf eine Allowlist setzen lassen. Das heißt, wenn du dann irgendwelche Updates brauchst in deinem Container, genau ips oder Domains über irgendeinen zentralen Proxy wieder freischalten lassen. Also es ist dann natürlich sehr, sehr aufwendig und auf meiner Seite, auf der Seite, der die Container vielleicht wartet oder updaten muss, natürlich sehr nervig, muss man auch dazu sagen, aber man sieht dann schon, es gibt da definitiv große Unterschiede, wenn es um Security geht und die arme IT Abteilung und Security Abteilung, das sind halt dann die, die das immer alle abbekommen und dann heißt halt immer, die wollen uns blocken und das ist halt der übliche Kampf in den Firmen. Also ich verstehe natürlich beide Seiten irgendwo, aber mittlerweile bin ich eigentlich auch auf dem Pfad einfach grundsätzlich mal nichts zu erlauben, Least Privilege oder Zero Trust und alles andere muss dann wirklich auf eine allowlist gesetzt werden und warum so ein Fisch Thermometer grundsätzlich überhaupt mal Internetzugang haben kann, also auch nach außen was senden, ist sowieso die Frage. Also vielleicht ist es über VPN gegangen, aber grundsätzlich, warum so ein Thermometer nach draußen telefonieren darf, ist ja auch schon mal eine grundlegende Frage, ob das wirklich Sinn macht."
+        },
+        {
+            "start": 1395270,
+            "end": 1467480,
+            "speaker": "A",
+            "text": "Ja, ich verstehe, wenn man Denial als Default setzt, dass das auch für Softwareentwickler und Softwareentwicklerinnen anstrengend ist, weil du kannst nicht mal eben deployen, neuen Service, muss der Port freigeschaltet werden, die Route freigeschaltet werden und so weiter und so fort. Auf der anderen Seite, und jetzt kommen wir zu dem Positiven der ganzen Sache. Du als Entwickler und Entwicklerin musst dir dadurch dann bewusst werden, was deine Applikation eigentlich tut. Auf welchen Ports kommunizieren wir. Ich bin mir nicht sicher, wie viele Leute wirklich wissen, auf welchen Ports die grpc Kommunikation läuft oder oder oder, welche Ports meine Applikation eigentlich braucht oder einen ganz klassischen Fall, den ich eigentlich bei kaum einem Open Source Projekt sehe. Dein Open Source Projekt braucht jetzt eine mysql Datenbank. Okay, ich würde mal sagen Standardanforderung. Jetzt hast du eine mysql Datenbank irgendwo, Du richtest für diese Applikation einen User ein. Welche Rechte gibst du dem User denn? Also welche Art von Queries macht denn diese Applikation? Muss diese Applikation die Alter Permissions haben, um Tabellen umzuschreiben? Wäre ja toll, wenn man die wegnehmen könnte, oder? Und so weiter und so fort. Und dass man zum Beispiel die Auflistung der Permissions der Datenbank Permissions, die ein Open Source Projekt braucht, habe ich fast nirgendwo gesehen bisher."
+        },
+        {
+            "start": 1467560,
+            "end": 1564290,
+            "speaker": "B",
+            "text": "Ich hatte so ein ähnliches Problem und das gar nicht im Open Source Bereich. Aber genau wie zuerst gesagt, ein Container darf grundsätzlich nicht nach Hause telefonieren, irgendwo im Internet was abrufen. Also du setzt es auf eine allowlist, jetzt hatte ich einen Online Service genutzt, so ein Index Such Service und das SDK von denen und es hat mich Stunden gekostet, um herauszufinden, welche Domains dort wirklich verwendet werden, weil das SDK natürlich alles weggekapselt hat und das war auch nicht irgendwo im Source Code. Ich hätte sogar nachschauen können, es war PHP, aber der macht natürlich irgendwelche Abfragen, bekommt dann irgendwelche Infos an welcher Server überhaupt senden muss Das ist halb dynamisch und natürlich Load Balancing und so weiter. Also am Ende rauszufinden, was du da wirklich auf eine Allowlist setzen musst, ist wirklich schwierig gewesen. Auch in der Dokumentation, obwohl es eine sehr große Firma war, die den Online Dienst angeboten hat, keine Infos dazu gefunden. Also hat mir wirklich viel, viel Zeit gekostet. Insofern, wenn man sowas anbietet, dass man dann auch sagt, okay, diese Sachen müsst ihr auf eurer Firewall freischalten, vor allem im Business Kontext. Also das ist eine Enterprise Ready Software oder Service, die dort verwendet wird. Und trotzdem habe ich nichts gefunden in der Knowledge Base. Also da brauchst du gar nicht zu Open Source gehen, da kannst du auch im professionellen Umfeld unterwegs sein und nichts bekommen. Klar hätte ich ein Support Ticket aufmachen können und so weiter oder vielleicht auf der Firewall von der IT sieht man das vielleicht aufschlagen, was da probiert wird, aber es ist dann wirklich schwierig. Und ich habe dann halt schlussendlich das Ganze so gelöst, dass ich mir wirklich ziemlich tief reingefuchst habe in den PHP Code und dort dann Ausgaben gemacht hat, was da wirklich aufgerufen wird. Das war glücklicherweise im BHP möglich und dann habe ich die Domains rausgefunden."
+        },
+        {
+            "start": 1564290,
+            "end": 1565970,
+            "speaker": "A",
+            "text": "Schöne Story. Das macht die ganze Sache aber nicht"
+        },
+        {
+            "start": 1565970,
+            "end": 1568650,
+            "speaker": "B",
+            "text": "besser, auf keinen Fall."
+        },
+        {
+            "start": 1568890,
+            "end": 1709440,
+            "speaker": "A",
+            "text": "Aber jetzt reden wir ja hier, iot ist Teil eures Systems und ja, wir haben alle verstanden, dass wir jetzt irgendwie das Netzwerk segmentieren müssen, aber das gilt jetzt nicht nur für Firmen, das gilt auch für euch zu Hause. Eine Story, die ich gerne teilen wollen würde, ist, ich habe meine Sensoren alle im selben Netzwerk und das ist natürlich nicht geil. Und dann hatte ich einen Bekannten zu Hause, der arbeitet unter anderem für Bechtle und macht da Netzwerke für große Firmen und für Kinos und allem sowas. Somit ist der IT technisch und netzwerktechnisch sehr bewandert. Da sitzt er bei mir am Küchentisch, macht seinen Portscanner auf dem Handy auf und seinen Netzwerkscanner und zeigt mir mal eben ganz kurz, was er jetzt mal eben hier alles so sieht und pipapo. Das bedeutet, wenn ihr IT versierte Freunde habt, die ein bisschen was auf dem Kasten haben, ja auch die können mal eben eure Lichter steuern, obwohl ihr das vielleicht gar nicht wollt. Also vielleicht solltet ihr darüber nachdenken, euer Heimnetzwerk auch etwas zu segmentieren, sofern es denn auf WLAN und zigbee und Co. Läuft. Also es ist jetzt nicht nur für große Firmen was. Aber machen wir mal mit dem zweiten Learning weiter, dass du Egress Traffic als First Class Control betrachten solltest. Wir haben gerade gesagt, da wurde zehn Gigabyte Outbound Traffic von einem recht unwichtigen Device beobachtet, was spannend ist, nicht, dass die Daten abgezogen wurden, sondern dass ein alternativer Kanal genutzt wurde, um die Daten abzuziehen. Und wenn du jetzt mal ein bisschen recherchierst, dann findest du die MIT Attack Database. Das ist eine Abspaltung, ist eine Non Profit Abspaltung vom MIT, was sich darum kümmert, eine weltweit zugängliche Wissensdatenbank bereitzustellen, die Taktiken und Techniken von Angreifern darstellt, die auf Beobachtung aus der Praxis basieren. Hört sich erst mal tierisch gut an. Und in dieser Datenbank wird in der Kategorie Exfiltration explizit betont, dass Angreifer alternative Kanäle nutzen, wenn direkte, harte TPS Kanäle zu sichtbar wären. Und das ist ja genau hier passiert. Da hat jemand Pakete in Videostream Protokolle gepackt und dann von einem Thermometer rausgefunden, weil klassischer HTTP HTTPs Traffic zu sichtbar wäre. Als ich das erste Mal gelesen habe, habe ich gedacht, wow, super smart. Und genau das meine ich mit Kreativität, womit ich die Folge auch eingeleitet habe, dass man Pakete in Paketen verpacken kann. Alles irgendwie im Studium gehabt oder in der Ausbildung. Das dann kombiniert mit alternativen Kanälen aus dem Netzwerk, wie zum Beispiel dieser IT Sensor in dem Aquarium, finde ich natürlich spannend."
+        },
+        {
+            "start": 1709440,
+            "end": 1733420,
+            "speaker": "B",
+            "text": "Wobei mein initialer Gedanke eigentlich eher war, es ist ja schlecht, sowas über ein iot Device zu senden, weil da fällt es ja plötzlich auf, wenn ein iot Device zehn GB sendet, was es ja dann auch genauso war. Und ich würde ja eher über einen Server gehen, der ganz viel Traffic hat, weil da fällt es noch weniger auf. Aber wie man sieht, wenn das IT Device dann offen ist und vielleicht einfacher zu übernehmen ist als ein Server, dann ist es natürlich klar darüber zu gehen."
+        },
+        {
+            "start": 1733420,
+            "end": 1750420,
+            "speaker": "A",
+            "text": "Naja, du kannst das aus zwei Perspektiven sehen. Erstens könnte der Angreifer natürlich gesagt haben, okay, ich nutze jetzt dieses iot Device, dieses Thermometer, weil das mit hoher Wahrscheinlichkeit nicht gemonitort wird. Die zweite Thematik, die zehn Gigabyte sind herausgeflossen Er hat ja Erfolg gehabt. Also von daher würde ich sagen OK, touché."
+        },
+        {
+            "start": 1750420,
+            "end": 1755990,
+            "speaker": "B",
+            "text": "Das ist ja das Problem bei dieser Monitoring Software. Du kommst zwar im Nachhinein drauf, aber die Daten sind halt schon mal weg."
+        },
+        {
+            "start": 1755990,
+            "end": 1822269,
+            "speaker": "A",
+            "text": "Genau, ist halt reaktiv und nicht proaktiv. Ein weiteres Learning ist auch ganz Behandle deine iot Beschaffung wie Software Engineering. Also das bedeutet, kauf dir keine Devices ohne Update Mechanik, keine Devices ohne sinnvolle Authentifizierung und Autorisierung, keine Devices ohne Logging oder State Signale für zu Hause, würde ich sagen, okay, vielleicht für ein Casino, weiß ich jetzt nicht. Und das letzte Learning, aber das ist hoffentlich ein alter Hut in dieser Szene, die uns jetzt hier auch zuhört. Wenn wir davon ausgehen, dass der Angreifer Zugriff aufs Netzwerk hatte. Wenn wir davon ausgehen, dass das iot Device kein Sicherheitsleck hatte, dann gilt natürlich ganz klassische Credential und Access Pass Härtung, Two Factor Authentifizierung, device spezifische Zugangsdaten, Abschalten von Default Accounts, Einführung von Rate Limits, Passwörter rotieren und so weiter und so fort. Also eigentlich ganz klassisch die Elemente aus der OWASP Top zehn beachten, sollte ein alter Hut sein. Das glaube ich sagt sogar das BSI,"
+        },
+        {
+            "start": 1822269,
+            "end": 1845750,
+            "speaker": "B",
+            "text": "wobei mir in dem Fall eigentlich die Segmentierung am einfachsten vorkommt und eigentlich das sollte die absolute Grundlage sein. Und sogar alle Heimrouter haben mittlerweile zwei WLAN Netze und du kannst interne Netze machen. Also es ist eh schon so viel möglich, dass man das relativ einfach umsetzen kann. Und da hast du dann schon eine Barriere, die sehr tief im Stack sitzt, wo du erst mal drüber kommen musst. Alles richtig."
+        },
+        {
+            "start": 1845830,
+            "end": 1883410,
+            "speaker": "A",
+            "text": "Und das ist ja auch alles jetzt nichts Neues, was wir hier erzählen. Dennoch möchte ich euch alle einmal kurz bitten, diese Podcast Episode kurz zu pausieren und euch zu Wie gut seid ihr gerade aufgestellt? Und ihr müsst euch dabei nie schämen, denn beim Wolfgang ist das genauso, bei mir ist das vielleicht genauso. Und es ist ja auch schwierig, weil du willst ja eigentlich nur den Fenster Temperatursensor gerade installieren und und du willst nicht dein komplettes Netzwerk neu modellieren anhand eines professionell erstellten Threat Modeling etc. Etc. Also wir verstehen das doch. Es kann halt dazu führen, dass eure interne High Roller Datenbank über euer Fisch Thermometer nach außen nach Finnland geschickt wird."
+        },
+        {
+            "start": 1883410,
+            "end": 1981240,
+            "speaker": "B",
+            "text": "Aber warum ich auf dieser Segmentierung so herumhacke ist ja auch, weil es einfach sehr oft ein Grundproblem ist Und auch bei unserer nächsten Geschichte ist es sehr zentrales System und zwar ist ein bisschen älterer Hack, der von zwei tausend fünfzehn ist, aber ich glaube, er ist immer noch sehr relevant und hat auch damals sehr viel bewegt. Um was geht es? Kurz erklärt, wie das groß herausgekommen ist mit einem Wired Artikel. War das so, Sie haben das schön dargestellt, ein Wired Redakteur sitzt in dem Auto Jeep Cherokee auf der Autobahn schnell und plötzlich fängt sein Autoradio verrückt spielen an, Scheibenwischer gehen ein, Klimaanlage schaltet sich Vollgas ein, ist vielleicht noch ganz nett und witzig. Wie dann aber das Ganze übergegangen ist auf die Bremsen, die Bremsen wurden deaktiviert und die Steuerung wurde deaktiviert, war das schon nicht mehr so lustig. Und das Ganze war eine Demonstration von zwei Security Researchern zusammen mit Wired, mit dem Redakteur, die eben damals das ganze System von diesem Jeep aufgemacht haben und dann vollen Zugriff bekommen haben. Und das war damals eben zwei tausend fünfzehn schon eine Zeit her, wobei ich nicht weiß, ob das wirklich viel viel besser überall geworden ist. Auf jeden Fall war das damals ein ziemlicher Weckruf für die Autoindustrie. Das hat dann auch sehr, sehr viel bewegt natürlich, weil die Scheibenwischer wären ja noch okay oder würde man vielleicht noch tolerieren, aber wenn die Bremsen dann weg sind, plötzlich ist natürlich ein Super GAU und nebenbei waren das noch läppische eins komma vier Millionen Autos, die da betroffen gewesen sind. Also es war nicht nur dieses eine Jeep Modell, sondern es war die Plattform an sich und und es hat natürlich auch andere betroffen, aber das war so der weit verbreitetste damals."
+        },
+        {
+            "start": 1981720,
+            "end": 1994440,
+            "speaker": "A",
+            "text": "Gibt es da mehr Infos zu, was da wirklich passiert ist? Also ich meine, wenn die Security Researcher eine Kombination oder eine Demonstration mit Wired gemacht haben, Wired ist ja jetzt kein Klatschblatt, das bedeutet mit hoher Wahrscheinlichkeit haben die dann auch alles offengelegt oder haben wir da Details zu?"
+        },
+        {
+            "start": 1994760,
+            "end": 2264390,
+            "speaker": "B",
+            "text": "Ja, ist natürlich super reported, da gibt es CVE dazu, da gibt es Artikel. Es hat dann ja auch in der Industrie einiges bewegt, dass wirklich Security Standards geändert wurden. Also von dem her gibt es da natürlich super viele Infos, was die im Prinzip gemacht haben. Die haben angefangen einfach mal zu schauen, was kann denn dieses Auto und das war halt damals zu frühen Zeiten, wo die angefangen haben, irgendwie online zu sein, WLAN anzubieten und was die relativ schnell entdeckt haben, die Security Researcher, dass im WLAN, wenn man bei WLAN mit dem Auto verbunden ist, dass da ein offener Port sechs tausend sechs hundert sieben und sechzig war, das damals offen ist und da der D Bus lauscht. Das heißt, der D Bus von diesem Infotainment und Navigation System im Auto ist da einfach nach außen offen und du kannst da Befehle zum D Bus hinschicken. Das System war ein QNX Betriebssystem, das von BlackBerry entwickelt ist, ein Unix artiges System und da gibt es eben auch den D Bus, wo man einfach Befehle hinschicken kann. Alle Linux User kennen das ja mittlerweile, also ziemlich wichtiger Bus eigentlich und so eine Hauptkommunikationsvariante. Jetzt war das schon grundsätzlich mal sehr problematisch, wenn so ein wichtiger Port offen ist, aber es war nur das Infotainment System mit der Navigation und es war im WLAN. Sie sind dann aber relativ schnell draufgekommen, dass dieser Port auch im Mobilfunknetz offen ist. Also die Autos waren alle online und wenn du in demselben Mobilfunknetz warst, hast du einfach, wenn du die IP von dem Auto gekannt hast, direkt auf diesen Port zugreifen können. Das heißt, du hast jedes Auto, was irgendwie verbunden war mit dem Mobilfunknetz, sprich alle, in dem Fall D Bus Messages schicken können auf dem offenen Board sechs tausend sechs hundert sieben und sechzigste Da wurde also auch auf der Mobilfunkseite nichts gefiltert und du hast es direkt hinschicken können. Jetzt warst du natürlich auf der Infotainment und Navigationssystem Seite. Das ist noch nicht so kritisch grundsätzlich, obwohl du dann natürlich auch irgendwie Blödsinn anstellen kannst. Aber die wollten natürlich noch weitergehen und haben versucht, in irgendeiner Form tiefer ins Auto vorzudringen. Und die meisten kennen wahrscheinlich diesen CAN Bus, der verwendet wird im Auto, um Informationen zu senden zwischen den einzelnen Microcontrollers und Devices, die so im Auto verbaut sind, aber auch so eine Bremsensteuerung zum Beispiel. Und da war es aber schon nicht mehr so leicht hinzukommen von diesem Infotainment System, weil da schon eigentlich eine Sicherheitsbarriere dazwischen war. Es gab zwar eine Connection vom CAN Bus zu dem Infotainmentsystem, aber das war natürlich relativ gut abgesichert. Da war ein Hardware System und da war es nicht möglich, einfach irgendwelche CAN Bus Messages zu schicken. Sie haben dann aber relativ schnell herausgefunden, dass dieser Controller in diesem Infotainmentsystem, dass man dem eine neue Firmware aufspielen kann. Das heißt, diese Connection von dem Infotainment System zum CAN Bus war offen bereit, einfach eine neue Firmware anzunehmen, egal woher die stammt, keine Signierung, nichts. Jetzt haben die einfach die Firmware umgeschrieben, haben die gepatcht und waren dann in der Lage, CAN Bus Messages zu schicken auf dieses interne System, wo dann alles draufhängt, Bremsen und so weiter. Jetzt ist es aber auch so, dass grundsätzlich auf dem CAN Bus ganz viele Messages herumfliegen, also zwischen den Steuergeräten und Bremsen, Devices, alles was im Auto verbaut ist. Und wenn du jetzt nur eine Message injecten würdest, würde dann vielleicht noch gar nichts passieren, weil der Hauptsteuer Controller vielleicht immer sendet, Bremsen sind OK, Bremsen sind okay, wenn du da jetzt einmal irgendwas reinsteuerst, Bremsen sind aus, das sind alles Highspeed Befehle, da passiert dann relativ wenig. Was sie dann aber herausgefunden haben, ist, dass es eine Möglichkeit gibt, diese Bremsen in so einen Wartungsmodus zu setzen. Der ist speziell dafür da, wenn die Bremsen in der Werkstatt entlüftet werden, dann musst du irgendwie diese Bremsen deaktivieren, während die entlüftet werden und sie haben es geschafft, diesen Diagnose Modus über CAN Messages über den CAN Bus zu aktivieren und dann haben die Bremsen sich einfach abgeschaltet und du konntest nicht mehr bremsen. Glücklicherweise so als kleinere Abschwächung von dem Ganzen. Diese Diagnosefunktion geht nur bis zu einer gewissen Geschwindigkeit, das heißt, wenn du ein hundert kilometer h fährst, kannst du diesen Diagnose Modus nicht einschalten. Also es geht nur bei niedrigeren Geschwindigkeiten so bisschen Abschwächung, leichte. Also da hat noch irgendwo ein Sicherheitssystem gegriffen, aber grundsätzlich, sie haben dann wirklich bewiesen, sie können deine Bremsen deaktivieren und zwar nicht, wenn sie im Auto sitzen und bei WLAN mit dem Auto verbunden sind, sondern irgendwo auf der Welt, solange sie mit dem Mobilfunknetz in Verbindung stehen und haben dann Zugriffe auf tausende Autos im Prinzip gehabt."
+        },
+        {
+            "start": 2264390,
+            "end": 2269510,
+            "speaker": "A",
+            "text": "Das Szenario klingt jetzt gar nicht so unwahrscheinlich bei der aktuellen Vernetzung von modernen"
+        },
+        {
+            "start": 2269510,
+            "end": 2286520,
+            "speaker": "B",
+            "text": "Autos Oder natürlich, das war ja eigentlich der erste Case in diese Richtung und das ist das Grundproblem, wenn du online bist und irgendwo einen Hack findest, dann hast du Zugriff auf alle von diesen Devices, wenn du das multiplizieren kannst. Das ist halt der Nachteil von Cloud und von Systemen, die online sind."
+        },
+        {
+            "start": 2286600,
+            "end": 2293800,
+            "speaker": "A",
+            "text": "Als Wired den Artikel veröffentlicht hat, wurde das alles nach dem Bilderbuch reported vorher und war das dann zu dem Zeitpunkt schon gefixt?"
+        },
+        {
+            "start": 2293800,
+            "end": 2364530,
+            "speaker": "B",
+            "text": "Also die Security Researcher haben das natürlich, so wie sie es gehört, schon frühzeitig gemeldet. Es wurde sogar ein Patch ausgerollt, bevor dieser Wired Artikel erschienen ist, also ich glaube zwei Wochen zuvor. Wobei, wenn ich jetzt Patch sage, man darf sich das nicht so vorstellen, ich habe da einen Patch, der bei Cloud eingespielt wird, sondern wir bewegen uns da im Jahr Jahr zwei tausend fünfzehn und damals hat es so funktioniert. Over the Air Updates gab es nicht, wahrscheinlich aus Sicherheitsgründen, das heißt, alle Kunden haben deinen USB Stick gesendet bekommen und haben diesen USB Stick dann selber einstecken können, um diese neue Firmware aufzuspielen. Oder den Patch waren im Prinzip Firewall Regeln auf gut Deutsch, also den D Bus Eingang im Prinzip blockiert, das geht am schnellsten oder du fährst zu einer Werkstatt, aber sie waren angewiesen, dass die Leute das von sich aus machen. Das ist natürlich ein großes Problem, also kannst du es nicht von der Entfernung jetzt irgendwie patchen. Wie der Wired Artikel aber herausgekommen ist, einen Tag später hat das Mobilfunknetz reagiert und hat einfach diesen Port gesamt in ihrem gesamten Mobilfunknetz gesperrt. Das heißt, das war eigentlich die beste Variante, ist aber erst nach dem Wired Artikel passiert, weil damit hast du dieses Einfallstor mal komplett geschlossen, weil du nicht mehr über das Mobilfunknetz gehen kannst."
+        },
+        {
+            "start": 2364610,
+            "end": 2379160,
+            "speaker": "A",
+            "text": "Jetzt ist Jeep ja nur eine Automarke von vielen. Hat das denn irgendwie einen größeren Effekt in der Automobilindustrie gehabt oder waren das einfach nur zwei Hacker von irgendeiner Universität, die ein bisschen Research gemacht haben? Jeep hat es gefixt und dann sind wir einfach nur mit unserem Leben, haben weitergemacht wie normal."
+        },
+        {
+            "start": 2379160,
+            "end": 2442060,
+            "speaker": "B",
+            "text": "Jeep hat es probiert so zu framen, aber die ganzen Behörden haben dann relativ Druck gemacht, dass das höher gewertet wird, dass das wirklich eine Rückholaktion wird, dass das wirklich auf einen höheren Level gepusht wird und längerfristig hat es im Prinzip dann auch die ganze Branche bewegt, neue Standards einzuführen, neue Security Standards, wo dann einfach auch eine striktere Trennung vorgesehen wird vom Campus und vom Infotainmentsystem. Also genau diese Segmentierung, die wir davor besprochen haben, dass die noch mal stärker gelebt wird und dadurch die Sicherheit erhöht wird. Ein anderer Punkt, der natürlich ganz klar auch ein Riesenproblem ist und ich glaube, das ist auch besser geworden, wobei, wie gesagt, ich kann jetzt nicht für die Autoindustrie sprechen, aber der Secure Boot, dass du nicht so einfach einfach eine neue Firmware aufspielen kannst, sondern die Firmware signiert sein muss, das ist jetzt schon der Standard geworden. Aber ich kenne selber, gerade wenn man dann über iot Devices oder so spricht, da ist es eigentlich definitiv noch nicht der Standard. Also da kann man relativ leicht meistens irgendwelche Over the Air Updates sogar von der Firmware fahren und da hat sich das noch nicht zum Standard entwickelt."
+        },
+        {
+            "start": 2442060,
+            "end": 2473650,
+            "speaker": "A",
+            "text": "Wenn ich jetzt darüber nachdenke, was können wir daraus so lernen, dann ist das ja schon relativ nah an der Thematik, wie mit dem Aquarium Trust Boundaries, wer darf mit was kommunizieren. Auf der anderen Seite das Infotainment System mit dem Hauptbussystem würde ich schon sagen, dass eine Kommunikationsmöglichkeit bestehen sollte. Gut, jetzt Zugriff über WLAN, Zugriff über das Mobilfunknetz, das waren vielleicht ein bisschen zu offene Ports, die hätte man, glaube ich, streichen können, War ja auch der Quick Fix, wenn ich das jetzt so korrekt verstanden habe. Was kann man daraus noch lernen?"
+        },
+        {
+            "start": 2473650,
+            "end": 2617470,
+            "speaker": "B",
+            "text": "Also ich möchte mal kurz die Autoindustrie in Schutz nehmen. Ich glaube, sie haben schon sehr viel gelernt und haben da auch einiges verbessert, wenn es um um Security geht. Mir ist gerade eingefallen, dass mir ein Freund kürzlich erzählt hat, der beide Schlüssel von seinem VW verloren hat, nicht mehr in der Lage war, einen neuen Schlüssel zu bekommen von VW, weil die den Verschlüsselungscode nicht haben bei ihnen. Das heißt, am Ende hat er den kompletten Bordcomputer und alles austauschen müssen. Es waren viele tausende Euro, weil dieser Schlüssel, dieser Verschlüsselungsschlüssel nur auf den eigentlichen Schlüsseln lebt, die du daheim hast. Und wenn du beide verlierst, hast du keine Möglichkeit mehr, das werkseitig irgendwie zu resetten oder dir neue Schlüssel zu holen. Also vielleicht hat die Autobranche gelernt, wobei, ob das jetzt gut oder schlecht ist, ich glaube, man könnte das definitiv kundenfreundlicher zumindest machen, als wenn du dann die gesamte Elektronik austauschen musst im Auto und das mehrere tausend Euro kostet. Aber man sieht auf jeden Fall, dass die Branche schon was gelernt hat von diesem Hack damals zwei tausend fünfzehnte Was wir jetzt davon lernen können oder ganz allgemein, ist natürlich einfach mal die Angriffsflächen zu reduzieren. Das hast du schon richtig gesagt. Also die Ports, die da offen sind, muss das im WLAN nach außen offen sein. Was muss man wirklich exponieren von dem System nach außen? Dann natürlich vertraue ich allem, was da reinkommt, über meine externen Schnittstellen. Also einfach einen Port offen zu haben und einfach alles zu akzeptieren ohne eine Authentifizierung, Autorisierung ist natürlich genauso ein Problem. Also diese Zero Trust Policy, die du schon genannt hast, macht natürlich auf jeden Fall Sinn, dass man einfach mal alles ablehnt, was da reinkommt und man muss dann wirklich eine ordentliche Authentifizierung machen, egal ob das jetzt auf Firewall Seite ist oder im internen System. Secure Boot habe ich schon erwähnt. Also ich glaube, da kann man sicher noch einiges optimieren und ich wage es mal zu bezweifeln, dass alle Firmen auf ihren ganzen iot Devices oder kleineren Devices wirklich Secure Boot oben haben und dass man da keine Firmware so einfach flashen kann. Also das bezweifle ich und sehe ich auch ständig noch, dass man da eigentlich keine Sicherheitsbeschränkungen bei ganz vielen Devices hat. Also wenn man selber in irgendeiner Embedded Seite unterwegs ist, sollte man sich vielleicht wirklich mal da auch umschauen. Ist natürlich auch immer die Frage, unterstützt es die Hardware, kann es die Hardware überhaupt die Chips, die man verwendet? Das ist halt auch immer so das Problem, dass die Hardware, vor allem wenn sie dann günstig sein soll, natürlich auch ein bisschen hinterherhinken, bis man da die ganzen Security Features dann wirklich auch drin"
+        },
+        {
+            "start": 2617470,
+            "end": 2644070,
+            "speaker": "A",
+            "text": "hat beim Secure Boot. Ich meine, klar, Signierung der Firmware, aber auch da gibt es ja super viele Lücken, Certification, Pinning und so weiter. Also diese ganze Thematik, nur deine Firmware zu signieren, ist ja nicht so einfach, wie wir es jetzt hier gerade so salopp sagen, denn die ganze Zertifizierungsinfrastruktur und Zertifizierungs Zertifikatsinfrastruktur dahinter und so weiter, die muss natürlich auch ordentlich stehen und auch ordentlich stabil aufgebaut sein, klar."
+        },
+        {
+            "start": 2644070,
+            "end": 2669170,
+            "speaker": "B",
+            "text": "Und Was machst du, wenn dein Hauptschlüssel verloren geht oder geklaut wird, dein CE, was auch immer. Klar, also da hängt schon viel dran, aber das Problem ist ja, dass bei den meisten Devicen, die ich zumindest so kenne, auch im professionellen Umfeld, da sind wir noch nicht mal so weit. Also da gibt es einfach gar nichts und du kannst da einfach einen Upload machen von deiner Firmware and that's it. Also da sind wir gar nicht so weit, dass wir dann um die anderen Probleme kümmern müssen, sondern da ist schon mal grundsätzlich was falsch."
+        },
+        {
+            "start": 2669170,
+            "end": 2670640,
+            "speaker": "A",
+            "text": "Wir reden hier von einem Case von vor elf Jahren."
+        },
+        {
+            "start": 2670870,
+            "end": 2692310,
+            "speaker": "B",
+            "text": "Ja, ich hoffe mal, dass es bei der Autoindustrie ein bisschen besser ist, aber wenn man jetzt wieder auf iot Devices oder ganz allgemein Devices, die so herumfliegen, ausweitet, dann schaut es natürlich auch schlechter aus. Und wirklich sogar im professionellen Umfeld, da ist halt Hardware teilweise fünfzehn Jahre alt und zwar nicht vor fünfzehn Jahren gekauft, sondern vor fünfzehn Jahren designt und da ist halt wenig passiert in der Zwischenzeit. Das ist das Problem oft."
+        },
+        {
+            "start": 2692310,
+            "end": 2729890,
+            "speaker": "A",
+            "text": "Ich stelle mir gerade die Frage, du hast ja auch gesagt, wie wurde das gepatcht und zwar wurden USB Sticks versendet und allem drum und dran. Jetzt frage ich mich gerade, Overseer Updates, wäre das eine Lösung? Weiß ich nicht, bringt auch schon wieder neue Attack Vectors mit sich, alles wieder neu absichern, denn auch so eine Suchmaschine, wie heißt das Shodan, da findest du ja immer wieder irgendwelche Hardware, irgendwelchen Ölfeldern mitten in Texas, die man offen übers Internet steuern kann. Also du verstehst, was ich meine. Over the Air Updates wäre eine schöne Thematik, das zu fixen, alles gut, aber da kommt ja ein rieser Rattenschwanz mit, was dann vielleicht einen ähnlichen Sicherheitsvorfall auslösen kann."
+        },
+        {
+            "start": 2730280,
+            "end": 2816070,
+            "speaker": "B",
+            "text": "Also ich glaube, dass wenn du von eins komma vier Millionen Fahrzeugen sprichst, also wenn du wirklich viele Devices draußen hast, dann musst du heute Overtr Update anbieten, weil wenn da irgendwie etwas passiert, dann musst du in der Lage sein, das in kurzer Zeit zu patchen. Mir ist schon klar, dass das auch wieder schwierig ist, aber da sprechen wir dann genau über die Sachen, die du erwähnt hast. Wie kann ich das Ganze signieren? Wie kann ich das sicher machen, dass mir niemand anderer deine Firmware aufspielt? Was mache ich, wenn meine Schlüssel verloren gehen und so weiter. Also das sind dann schon die Sachen, die man beachten muss. Aber ich glaube, man kann es sich heute nicht mehr leisten, wenn, wenn du jetzt als Hausnummer über ein tausend Geräte irgendwo draußen hast, da kein Over the Air Update mehr zu machen, Wenn du wirklich fix ausliefern musst, wenn du jetzt, keine Ahnung, eine ganz spezielle Hardware auslieferst, ein MRT Scanner Gerät, was sowieso nicht online ist, wo es vielleicht nur drei hundert Stück gibt, dass du das dann mit USB belieferst. Ein Krankenhaus wird sich nie einlassen auf Over the Air. Das macht natürlich Sinn. Aber wenn du jetzt in die Maße gehst, Autos oder irgendwelche iot Devices, wo es um tausende Stückzahlen geht, ich glaube, da musst du das heute anbieten. Ich glaube, dass es dir heute niemand mehr verzeiht, wenn du sagst, du hast einen kritischen Patch, du kannst nicht mehr bremsen und dann sagst Over the Air ist aber schlecht. Es ist zwar Einfallstore Over the Air wie damals zwei tausend fünfzehn, aber ich kann jetzt nichts patchen und wir rollen jetzt mal USB aus und auf der Straße fahren eins komma vier Millionen zwei Tonnen Vehikel herum, die plötzlich nicht mehr bremsen könnten."
+        },
+        {
+            "start": 2816070,
+            "end": 2838330,
+            "speaker": "A",
+            "text": "Ich weiß nicht, ob ich das zu generalisiere, aber es ist schon faszinierend, dass zwei unterschiedliche Hacks sehr, sehr ähnliche Mitigation Strategien haben. Denn wir haben über Trust Boundaries gesprochen, wer darf mit wem kommunizieren? Und es hört sich so an, als wenn man das richtig gemacht hätte, dass die zwei spezifischen Attacken dann ja eigentlich verhindert hätten werden können, oder?"
+        },
+        {
+            "start": 2838410,
+            "end": 2853460,
+            "speaker": "B",
+            "text": "Genau, es hätte sich verhindern lassen und du hast es auch schon gesagt, zwei tausend fünfzehn war das. Man hatte doch Zeit gehabt, es zu verbessern. Und ich weiß nicht, ob du es mitbekommen hast, aber die letzten Tage ist es durch die Medien gegangen von diesem DJI Staubsaugerroboter."
+        },
+        {
+            "start": 2853540,
+            "end": 2856900,
+            "speaker": "A",
+            "text": "Ich bin in einer anderen Bubble als du. Heb mich mal ganz kurz auf den"
+        },
+        {
+            "start": 2856900,
+            "end": 3083360,
+            "speaker": "B",
+            "text": "aktuellen Stand, das ist mal ganz was Neues, dass ich dir News gebe, nicht du mir. Und es war vor allem so ein Case, der jetzt auch durch die ganzen Mainstream Medien gegangen ist, also jetzt nur auf der technischen Seite. Und zwar ging es da um einen Hack, der gar kein Hack war, weil die eigentliche Idee, die ein Nicht Techniker hatte, also es ist kein Developer, Hacker oder sonst irgendwas, sondern Sammy hat er geheißen wollte einfach nur so ein Spassprojekt bauen und wollte mit dem Controller von seiner Konsole seinen Saugroboter steuern von DJI. Und wie macht man das heutzutage, wenn man keine Ahnung hat, aber sagt selber, glaube ich, dass er KI Stratege ist. Er hat einfach mal einen KI Bot gefragt, in dem Fall Claude Code meines Wissens, und hat einfach mal gesagt, hoch mir doch diesen ganzen Traffic ab von diesem Staubsaugerroboter und suche mir das dann raus, damit ich den selber steuern kann. Also einfach über den Computer, dann Bluetooth Konsole, wäre doch cool, wenn ich dann mit meinem Roboter herumfahren könnte in der Wohnung und hat sich da seine Token rausgeholt und so weiter, Hat dann herausgefunden, okay, das Ganze funktioniert über MQTT, also ist auch wieder so ein klassisches iot Protokoll, wo Messages hin und her fliegen. Und was dann aber ganz interessant war, er hatte plötzlich, wenn er auf den MQTT Broker auf den Server zugegriffen hat, nicht nur Zugriff auf seinen Staubsaugerroboter, sondern auf sieben tausend andere Saugroboter. Und nochmal, wir sprechen da vom Februar zwei tausend sechs und zwanzig und DJI ist jetzt keine kleine Firma unbedingt, sondern eine Firma mit Historie und die doch ein paar Geräte da draußen hat. Es hat sich dann auch gezeigt, dass man noch andere Power Stations, glaube ich, ansprechen kann über den gleichen MQTT Server und dann waren so um die Geräte in zwanzig verschiedenen Ländern hatte man dann Zugriff drauf. Und vor allem, wenn man bedenkt, was Staubsaugerroboter heutzutage liefern, die liefern dir ja Audio, Video, damit du nachschauen kannst, ob es deinem Hund gut geht, Andi, du musst es ja verstehen, du machst es wahrscheinlich auch ständig oder der Katze, wenn die gerade rumfährt mit dem Staubsaugerroboter oder so, dass man da mal schauen kann. Das heißt, man hat vollen Zugriff in die Wohnungen hinein, plus natürlich Floorplan üblicherweise, also wie sind die Zimmer aufgeteilt, diese ganzen Dinge, wo immer alles sagen, ist doch egal, mein Staubsaugerroboter hat doch keine kritischen Daten. Und genau die waren alle verfügbar. Und das einzige Problem oder das Hauptproblem war, dass dieser MQTT Broker bzw. Ganz allgemein so Bab SAP Systeme, die sind üblicherweise standardmäßig nicht abgesichert, das heißt, wenn du da ein Login hast und dich anmelden kannst, dann kannst du dich überall subscriben zu jedem Channel, zu jedem Topic und du musst manuell Selts drüberlegen, dass du eben nur Zugriff auf ein spezielles Topic haben kannst, auf das Topic, Video, Audio Location von deinem Saugroboter und nicht von allen Saugrobotern. Und man kann da ja mit dem PUB Subsystem klassischerweise Subscriptions machen, das heißt, du kannst auf irgendwelchen Topics lauschen und da gibt es auch Wildcards, also ein klassisches Sternchen zum Beispiel, das heißt, du kannst sagen, ich will jetzt auf alle Channels hochen, die Location heißen mit einem Stern, also alle Saugroboter, deren Location und dann bekommst du ständig alle Messages geschickt von allen Staubsaugerrobotern und ihre Location und genau das war in dem Fall das Problem. Das heißt, da gab es keine Autorisierung, nur eine Authentifizierung. Aber klar, wenn du Besitzer von einem Staubsauger bist, kannst du dich authentifizieren, bekommst Zugriff und dann aber auch Zugriff auf alles andere. Also da gab es keine Beschränkungen auf dieser Ebene. Also auch da wieder null Segmentierung und eigentlich würde ich mal sagen, schon eine ziemliche Basiskonfiguration, aber ich kenne das selber, ich habe kürzlich mit MQTT Servern zu tun gehabt, Es ist schon ein eigenartiges Konzept, diese acls und gerade wenn man mit Wildcards arbeitet, man muss ja mit den acls teilweise auch mit Wildcards arbeiten, es ist schon ein bisschen frickelig und irgendwie nicht so klar, wer was darf. Also ich finde es auch irgendwie vom gesamten Design, vom Sicherheitsdesign bisschen schwierig, muss ich zugeben."
+        },
+        {
+            "start": 3083360,
+            "end": 3089970,
+            "speaker": "A",
+            "text": "Was spricht denn dagegen, dass einfach jeder Roboter ein eigenes MQTT Topic kriegt und nur Zugriff auf dieses Topic haben kann?"
+        },
+        {
+            "start": 3090210,
+            "end": 3119390,
+            "speaker": "B",
+            "text": "Gar nichts. Also jeder Roboter hat wahrscheinlich sein eigenes Topic, aber ich kann halt auch alle anderen Topics lesen und das ist so hierarchisch aufgebaut, also zum Beispiel Tel für Telemetry, Andis Roboter Location und ich kann aber natürlich auch sagen, ich will jetzt subscriben zu Tel Stern Location, da bekomme ich einfach alle Locations von allen Geräten, also das ist halt in MQTT so vorgesehen oder Pub Sub ganz allgemein, du"
+        },
+        {
+            "start": 3119390,
+            "end": 3138190,
+            "speaker": "A",
+            "text": "hast jetzt Telemetrie auf den First Level gesetzt, aber du kannst auch deinen Roboter auf den First Level setzen und dann nur dir Zugriff auf das First Level von deinem Roboter geben und darunter Telemetrie und Commands und was weiß ich für Topics noch haben. Also kurzum, ganz Basis Software Design, Isolierung, Mandantenisolierung ist hier falsch gelaufen."
+        },
+        {
+            "start": 3138190,
+            "end": 3158040,
+            "speaker": "B",
+            "text": "Ja, es gab scheinbar einfach keine acls. Also es hat einfach, so wie es aussieht, einfach jeder User auf alles Zugriff gehabt. Und das ist natürlich, wenn du dann Cloud Code drüber jagst, der findet das natürlich relativ schnell heraus, weil der probiert das einfach mal aus. Und wie gesagt, das war kein Hacker, das war kein Security Researcher, das war einfach ein Dude, der sich gedacht hat, er macht da jetzt ein Spassprojekt."
+        },
+        {
+            "start": 3158040,
+            "end": 3167450,
+            "speaker": "A",
+            "text": "Was heißt das denn jetzt für uns? Heißt das jetzt jedes neue Gerät, was ich mir jetzt kaufe, muss ich jetzt einmal Cloud Code über die API drüber jagen, um zu gucken, kann ich das zu Hause einsetzen? Das kann es ja jetzt irgendwie auch nicht sein."
+        },
+        {
+            "start": 3167530,
+            "end": 3228330,
+            "speaker": "B",
+            "text": "Ja, es gibt ja genug Security Tools, die du nehmen kannst, aber ich glaube, so diese Grundregeln, die Basissachen, die man einfach verstehen muss oder auch sich überlegen muss, das ist einfach, ich glaube, Authentifizierung, Autorisierung, also auf welche Objekte darf mein User dann wirklich Zugriff haben und dann halt eine sinnvolle Segmentierung, sei es auf User Ebene, sei es auf Netzwerkebene. Ich glaube, wenn man die drei Sachen sich einfach durchdenkt, Authentifizierung, Autorisierung und sinnvolle Segmentierung als Überbegriff, dann bist du wahrscheinlich schon relativ sicher. Und wenn man jetzt die drei Cases betrachtet, dann ist es immer irgendwie ein Segmentierungsproblem gewesen. Also ich habe irgendwie weiterspringen können, einen Hop weiter raus aus meinem Käfig. Wir haben ja auch mal über mehr Mandantenfähigkeit gesprochen in einer Episode und da ging es ja auch genau darum, also wie kann ich meine Mandanten, meine User einsperren in ihrem Bereich, damit die möglichst schwer nach außen kommen, ausbrechen können. Und da macht halt einfach ein sinnvolles Management von Segmenten oder halt dementsprechend auch Autorisierung, was ja auch eine Segmentierung ist, einfach Sinn."
+        },
+        {
+            "start": 3228490,
+            "end": 3280100,
+            "speaker": "A",
+            "text": "Ich will jetzt nicht sagen, diese Episode ist sehr netzwerklastig, denn wenn man sich die ganzen Cases mal im Detail anschaut, dann unterscheiden die sich natürlich schon, aber es ist schon beachtlich zu sehen, wie stark Netzwerksegmentierung oder Kommunikationssegmentierung, wer darf mit wem kommunizieren, also welchen Einfluss sowas haben kann und was eigentlich dadurch verhindert werden kann. Denn es ist ja nicht einfach, aber der Impact ist Wahnsinn. Ich frage mich halt immer und immer und immer und immer wieder, warum wird das immer so als nachgelagerter Prozess angesehen? Weil auch du sagst ja in vielen Firmen kommst du rein als Berater, kriegst Zugriff aufs Netzwerk und das zeigt mir ja auch, dass es nachgelagerter Prozess ist, dass es jetzt irgendwo auf der To Do Liste ganz hinten steht, weil es ist ja nicht dringend, weil es ist ja nichts passiert wahrscheinlich oder ich kenne die Gründe nicht oder vielleicht einfach, weil es kompliziert und schwierig ist."
+        },
+        {
+            "start": 3280100,
+            "end": 3296740,
+            "speaker": "B",
+            "text": "Ich glaube, es ist kompliziert und ich könnte natürlich jetzt immer dieses Totschlagargument in den Raum werfen, sind halt gewachsene Strukturen. Aber wie ein Freund von mir, der übrigens auch Security Berater ist, immer sagt, ja es ganz nette gewachsene Strukturen, aber dann lasst uns einfach in die Zukunft blicken und diese ändern."
+        },
+        {
+            "start": 3296820,
+            "end": 3306220,
+            "speaker": "A",
+            "text": "Gewachsene Strukturen, was ist denn das für eine Ausrede? Ja, das ist der aktuelle Case, aber das heißt ja nur, das klingt so wie ein Synonym für okay, hier ist was zu holen."
+        },
+        {
+            "start": 3306300,
+            "end": 3374570,
+            "speaker": "B",
+            "text": "Ja, es ist halt immer eine Ausrede einfach, warum das so ist, aber eigentlich interessiert mich ja nicht, warum es so ist, sondern ich will es ja ändern. Also wir wollen es ja in einen besseren Zustand überführen und da brauchen wir uns eigentlich gar nicht überlegen, warum war das die letzten zehn Jahre anders, sondern wie können wir es ändern oder warum ist es bisher noch nicht passiert vielleicht, aber auch das ist eigentlich gar nicht mehr so wichtig. Die Frage ist, wie kann ich es ändern, wie kann ich sicheren Zustand kommen Und darauf sollte man sich eigentlich konzentrieren Und ich glaube, man vergisst es auch oft. Wir alle machen Fehler und man braucht halt in einem SQL Statement nur irgendwo eine WHERE Clause vergessen, wo irgendwas geprüft wird, sicherheitsrelevant ist und plötzlich bist du schon offen und da würde ich mir jetzt gar nicht ausnehmen. Das passiert uns, glaube ich, allen, da müssen wir damit leben. Aber man kann ja auch heutzutage damit umgehen. Es gibt Tools, Security Checks. Ich kann selber einfach mal statt der ID fünf oben in der URL ID eingeben und schauen, ob ich plötzlich auf einen anderen User Zugriff habe. Diese easy Sachen, also es ist unsere Verantwortung und die müssen wir irgendwie wahrnehmen als Developer, auch wenn es nicht einfach ist, kommt halt einfach jetzt dazu. Und wenn man online sein will und alles online haben will, muss man sich halt auch darum kümmern."
+        },
+        {
+            "start": 3374570,
+            "end": 3411150,
+            "speaker": "A",
+            "text": "Der Wolfgang und ich haben noch mehr crazy Hacks vorbereitet, die vielleicht als Mitigation nicht immer die Netzwerksegmentierung haben. Die haben wir jetzt gerade irgendwie, weiß ich nicht, per Zufall irgendwie so gebündelt. Wir hatten noch ein paar Hardware spezifischere Hacks und vielleicht machen wir noch mal eine Episode numero zwei dazu. Lasst uns einfach mal wissen, was ihr über diese Art von Format denkt oder bzw. Ob da irgendwas Überraschendes bei euch war. Und ich würde jetzt super gerne wissen, was ist eure Ausrede, die ihr in der Firma habt oder vielleicht auch im privaten Homelab, um euer Netzwerk nicht zu segmentieren. Meine ist relativ einfach, warum ich das in meinem Homelab noch nicht habe. Noch nicht."
+        },
+        {
+            "start": 3411800,
+            "end": 3413720,
+            "speaker": "B",
+            "text": "Jetzt kommt, ich habe keine wichtigen Daten, oder?"
+        },
+        {
+            "start": 3413800,
+            "end": 3485060,
+            "speaker": "A",
+            "text": "Nein, nein, das habe ich nie gesagt. Wichtige Daten sind für mich wichtig. Ob meine wichtigen Daten für dich wichtig sind, kann ich nicht beantworten, wie viel du über meine wichtigen Daten wissen möchtest. Bei mir ist es aber super simpel. Ich habe einfach kein DNS oder mdns oder ähnliches in meinem Netzwerk. Das bedeutet auch in meinem Netzwerk Scanner ist hardcoded eine IP von einem Samba Share von meinem Proxmox Server drauf. Und wenn ich das Netzwerk segmentieren würde, dann müsste ich überall die hartgecodeten ips abändern. Und das, das ist natürlich schmerzhaft. Du kennst das, wenn du schon mal versucht hast, ein recht komplexes Passwort auf einem kleinen Display von einem Netzwerkscanner einzugeben. Sowas möchtest du nicht noch mal machen. Und das versuche ich einfach zu vermeiden und so lange vor mir herzuschieben. Also ganz klassisch könnte man sagen, gewachsene Strukturen oder ich muss es einfach machen, dann muss ich mir einfach mal ein oder zwei Tage Zeit nehmen und mich da durchbeißen. Aber ich muss auch zugeben, ich bin mir gar nicht sicher, ob ich alle Stellen, wo ich eine hartgecodete IP drin habe, gerade im Kopf habe oder ob ich die dann über Wochen hinweg immer so dieses System failt gerade da muss ich die IP austauschen. Aber ich will auch irgendwie keinen DNS Server und du kennst diese Problematik, wenn es nicht DNS ist, wer ist schuld am nächsten Outage DNS. Es ist immer DNS."
+        },
+        {
+            "start": 3485060,
+            "end": 3532100,
+            "speaker": "B",
+            "text": "Ausreden, Ausreden, Ausreden. Hater. Übrigens vielleicht noch eine side Note zu DJI, die hatten auch eine ganz coole Ausrede, weil Journalisten geschrieben haben, ja, da kann man doch alle Messages in Klartext lesen von den anderen Devices. Dann haben die gesagt, wir machen MQTT over TLS, da ist gar nichts in Klartext lesbar. Aber wenn du einen User hast, dann hast du plötzlich halt alles in Klartext. Klar ist es netterweise verschlüsselt übers Internet, aber es kommt bei dir dann unverschlüsselt wieder an. Also Ausreden gibt es scheinbar viele. Man sollte, glaube ich, lieber einfach probieren, das zu verbessern, anstatt die Energie in die Ausreden zu legen. Und wenn man immer sagt, okay, meine Daten sind doch nicht so wichtig, dann frage ich immer, ja kann ich dann Zugriff auf deine Daten haben? Gibst du mir mal einen User, wo ich auf alle deine Daten zugreifen kann? Wenn sie nicht so wichtig sind, kannst du sie mir ja auch zeigen. Bin das sogar ein Freund."
+        },
+        {
+            "start": 3532100,
+            "end": 3550860,
+            "speaker": "A",
+            "text": "Ich glaube, den besten Case oder das beste Gegenargument, was ich mal gehört habe, ist zu so Aussagen wie, ich habe nicht zu verbergen und so weiter. Da ging es dann oft damals, als die Überwachungsdebatte losging, wärst du damit d', accord, Wolfgang, wenn ich Zugriff auf deine Amazon Bestellung hätte und ich sehe, dass du ein Buch über AIDS bestellt hast, wärst du damit d', accord, dass das jeder weiß?"
+        },
+        {
+            "start": 3550860,
+            "end": 3563730,
+            "speaker": "B",
+            "text": "Ja, ja, aber dann kommen ja immer die Leute und sagen, ich bestell ja kein Buch über AIDS, aber ich glaube, dass die wenigsten ihren Amazon Account auch so teilen würden, egal was sie da bestellen oder auf deine E Mails oder so. Gib mir doch mal Zugriff auf deine E Mails, nur lesen."
+        },
+        {
+            "start": 3563730,
+            "end": 3601550,
+            "speaker": "A",
+            "text": "Und dieses Beispiel, das ich gerade genannt habe, heißt jetzt nicht, du hast AIDS oder nicht AIDS. Es geht nur darum, wenn alle wissen, du hast ein Buch über AIDS bestellt, was die in ihrem Kopf daraus machen und du weißt nicht, jeder ist so gebildet, wie AID sich verbreitet und so weiter. Aber jeder hat Angst davor, möchte vermeiden, dass er oder sie AIDS bekommt und auf einmal brechen die Kontakte ab und so weiter, weil sie halt uninformiert sind, wie AIDS sich überträgt. Das war der Longtail von dieser Story und die fand ich so schön, also so nahbar. Und immer wenn mir jemand Ich habe nichts zu verbergen und wir sprechen über diese Story, dann sieht danach die ganze Sache relativ schnell anders aus."
+        },
+        {
+            "start": 3601550,
+            "end": 3611510,
+            "speaker": "B",
+            "text": "Noch ein anderes Beispiel wäre die Suchhistorie. Darf ich mal auf deine Google Such Historie Zugriff bekommen? Zeigst du mir die einfach mal? Bin doch ein guter Freund. Also von mir hast du wirklich nichts zu verbessern."
+        },
+        {
+            "start": 3611510,
+            "end": 3648180,
+            "speaker": "A",
+            "text": "Ich bin sehr dankbar, dass chatgpt URLs einfach mit so einer UUID versehen werden und nicht mit der Zusammenfassung von meinem Chat. Aber belassen wir es Hierbei springt man in unsere Discord Community. Ich bin hart interessiert an euren Ausreden, warum ihr euer Netzwerk noch nicht segmentiert habt und Hacks über MQTT, Staubsauger Roboter, einem Jeep Cherokee oder eurem Sensor in eurem Hightech Aquarium, warum ihr sowas nicht verhindert habt. Ich habe mich jetzt mal nackt gemacht und einfach nur faul hat, weil ich einfach zu Hause kein DS betreibe. Aber mein Heimnetzwerk ist auch kein Casino. Das war's von uns."
+        },
+        {
+            "start": 3648260,
+            "end": 3650260,
+            "speaker": "B",
+            "text": "Du schließt mit einer Ausrede Sehr gut."
+        },
+        {
+            "start": 3650420,
+            "end": 3660980,
+            "speaker": "A",
+            "text": "Immer. Immer. Also man hat nur vier und zwanzig Stunden am Tag, zwei Hände und schlafen muss ich auch noch. Also von daher Und natürlich für euch neuen Content machen. Wir sind raus. Bis später. Bye bye CI."
+        }
+    ]
+}
