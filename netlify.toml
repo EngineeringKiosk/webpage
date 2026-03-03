@@ -3406,6 +3406,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/257"
+  to = "/podcast/episode/257-fischbecken-jeep-saugroboter-3-hacks-1-lesson-zero-trust?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep257"
+  to = "/podcast/episode/257-fischbecken-jeep-saugroboter-3-hacks-1-lesson-zero-trust?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
