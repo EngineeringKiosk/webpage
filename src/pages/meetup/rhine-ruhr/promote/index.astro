@@ -5,7 +5,7 @@ import { formatDate } from '../../../../scripts/date.js';
 import { createMeetupHelpers } from '../../../../scripts/meetups.js';
 import { getMeetupConfig } from '../../../../scripts/meetup-config.js';
 
-const config = getMeetupConfig('alps');
+const config = getMeetupConfig('rhine-ruhr');
 const { getNextMeetup } = await createMeetupHelpers(config.collectionName);
 
 const bufferDays = 1;

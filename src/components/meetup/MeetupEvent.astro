@@ -1,9 +1,11 @@
 ---
 export interface Props {
 	event: any;
+	meetupName?: string;
+	meetupSlug?: string;
 }
 
-const { event } = Astro.props;
+const { event, meetupName = 'Engineering Kiosk Alps', meetupSlug = 'alps' } = Astro.props;
 
 const description = `Talks: ${event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => `"${talk.title}" by ${talk.name}`).join(', ')}`;
 const performer = event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => {
@@ -18,37 +20,39 @@ const endDate = new Date(event.date);
 endDate.setTime(endDate.getTime() + (2.5*60*60*1000));
 const endDateString = endDate.toISOString();
 
+const meetupUrl = `https://engineeringkiosk.dev/meetup/${meetupSlug}`;
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": `Engineering Kiosk Alps @ ${(event.location && event.location.name) || 'tba'}`,
+  "name": `${meetupName} @ ${(event.location && event.location.name) || 'tba'}`,
   "startDate": startDateString,
   "endDate": endDateString,
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "Place",
-    "name": (event.location && event.location.name) || 'tba',
+    "name": (event.location && event.location.name) || 'tba',
     "address": {
       "@type": "PostalAddress",
-      "name":(event.location && event.location.address) || 'tba',
+      "name": (event.location && event.location.address) || 'tba',
     }
   },
   "description": description,
-  "image": "https://engineeringkiosk.dev/meetup/alps/images/ibk.jpg",
+  "image": `${meetupUrl}/images/ibk.jpg`,
   "offers": {
     "@type": "Offer",
     "price": 0,
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
     "validFrom": startDateString,
-    "url": "https://engineeringkiosk.dev/meetup/alps"
+    "url": meetupUrl
   },
   "performer": performer,
   "organizer": {
     "@type": "Organization",
-    "name": "Engineering Kiosk Alps",
-    "url": "https://engineeringkiosk.dev/meetup/alps"
+    "name": meetupName,
+    "url": meetupUrl
   }
 }
 ---

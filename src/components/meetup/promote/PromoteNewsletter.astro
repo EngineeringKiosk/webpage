@@ -1,0 +1,67 @@
+---
+import MainHead from '../../MainHead.astro';
+
+export interface Props {
+	title: string;
+	description: string;
+	backgroundImage: string;
+	dateStringMonthDay: string;
+	dateStringYear: string;
+	timeString?: string;
+	includeTime: boolean;
+	locationName: string;
+	locationAddress: string;
+	talks: any[];
+	registrationUrl: string;
+	signOffNames: string;
+}
+
+const { title, description, backgroundImage, dateStringMonthDay, dateStringYear, timeString, includeTime, locationName, locationAddress, talks, registrationUrl, signOffNames } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+
+	{!includeTime && (
+		<head>
+			<MainHead title={title} description={description} image={backgroundImage} {canonicalURL} />
+		</head>
+	)}
+
+	<body class="antialiased bg-body text-body">
+
+		<h1 class="text-xl font-bold">Engineering Kiosk Meetup Announcement - {dateStringMonthDay}</h1>
+
+		<p>
+				<br/>
+				We would like to invite you to the next <b>Engineering Kiosk Meetup</b>, this time we will meet at the following date & location: <br/>
+		<br/>
+		{includeTime ? (
+			<Fragment>
+				&#128197; {dateStringMonthDay}, {dateStringYear} - {timeString}<br/>
+				&#128591; Hosted by: {locationName}<br/>
+			</Fragment>
+		) : (
+			<Fragment>
+				&#128197; {dateStringMonthDay}, {dateStringYear}<br/>
+				&#x1F389;  Hosted by: {locationName}<br/>
+			</Fragment>
+		)}
+		&#128205; {includeTime ? '' : ' '}Location: {locationAddress}<br/>
+		<br/>
+		{includeTime ? (
+			<Fragment>&#x1F3A4; Featured Talks<br/></Fragment>
+		) : (
+			<Fragment><b>&#x1F3A4; Featured Talks</b><br/></Fragment>
+		)}
+		<br/>
+		{talks.map((talk) => (
+				<span><b>{talk.title} by {talk.name}:</b> {talk.description}</span><br/><br/>
+		))}
+		&#128221; Reserve Your Spot and receive an instant calendar invite: <a href={registrationUrl}>{registrationUrl}</a><br/>
+		<br/>
+		cheers,<br/>
+		{signOffNames}<br/>
+		</p>
+	</body>
+</html>

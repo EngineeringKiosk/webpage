@@ -11,10 +11,11 @@ export interface Props {
 	meetupsToShow: any[];
 	archive?: boolean;
 	meetupName?: string;
+	meetupSlug?: string;
 	showGeneralLanguageNote?: boolean;
 }
 
-const { headline, meetupsToShow, archive, meetupName = 'Alps', showGeneralLanguageNote = false } = Astro.props
+const { headline, meetupsToShow, archive, meetupName = 'Alps', meetupSlug = 'alps', showGeneralLanguageNote = false } = Astro.props
 
 
 ---
@@ -37,7 +38,7 @@ const { headline, meetupsToShow, archive, meetupName = 'Alps', showGeneralLangua
 
 					<div class="flex flex-wrap justify-center -mx-4">
 						{meetup.talks.map((talk, j) => (
-							<Talk talk={talk} />
+							<Talk talk={talk} slidesBasePath={meetupSlug} />
 						))}
 					</div>
 					{!archive && (
@@ -50,7 +51,7 @@ const { headline, meetupsToShow, archive, meetupName = 'Alps', showGeneralLangua
 					)}
 				</div>
         {meetup && meetup.talks && meetup.talks[0] && meetup.talks[0].name && meetup.talks[0].title && meetup.location.name && meetup.location.address && (
-				    <MeetupEvent event={meetup} />
+				    <MeetupEvent event={meetup} meetupName={`Engineering Kiosk ${meetupName}`} meetupSlug={meetupSlug} />
         )}
 			</>
 		))

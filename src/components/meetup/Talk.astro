@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import defaultAvatar from "../../content/meetup-alps/images/speaker/avatar.png";
+import defaultAvatar from "../../images/meetup/default-avatar.png";
 
 export interface Talk {
 	avatar: string;
@@ -23,9 +23,11 @@ export interface Talk {
 
 export interface Props {
 	talk: Talk;
+	slidesBasePath?: string;
 }
 
 const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
+const slidesBasePath = Astro.props.slidesBasePath || 'alps';
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const htmlDescription = description.replace(/\n/g, '<br>');
@@ -130,7 +132,7 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 		{
 			slides && (
 				<div class="flex items-center justify-center mt-5">
-				<a target="_blank" class="inline-block hover:opacity-80 text-yellow-500 font-medium" href={`/meetup/alps/slides/${slides}`}>
+				<a target="_blank" class="inline-block hover:opacity-80 text-yellow-500 font-medium" href={`/meetup/${slidesBasePath}/slides/${slides}`}>
 					<img src="/images/elements/icon-presentation.svg" height="25" width="25" alt="Slides of the talk" class="inline-block" /> Download slides of the talk
         </a>
 				</div>
