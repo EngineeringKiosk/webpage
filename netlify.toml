@@ -3418,6 +3418,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/258"
+  to = "/podcast/episode/258-fuck-around-find-out-hardware-side-projects-mit-esphome-mit-andrej-friesen?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep258"
+  to = "/podcast/episode/258-fuck-around-find-out-hardware-side-projects-mit-esphome-mit-andrej-friesen?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
