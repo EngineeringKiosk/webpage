@@ -1,9 +1,9 @@
 ---
 date: 2026-03-19T18:30:00+01:00
 location:
-  name: '???'
-  address: '???, 6020 Innsbruck'
-  url: ''
+  name: 'Kaino'
+  address: 'Grabenweg 68, Soho 2, 6020 Innsbruck'
+  url: 'https://kaino.io'
   logo: ''
 talks:
   - avatar: './images/speaker/2603-matthias.jpg'
