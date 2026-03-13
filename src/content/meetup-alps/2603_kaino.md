@@ -4,7 +4,7 @@ location:
   name: 'Kaino'
   address: 'Grabenweg 68, Soho 2, 6020 Innsbruck'
   url: 'https://kaino.io'
-  logo: ''
+  logo: './images/location/kaino-12.png'
 talks:
   - avatar: './images/speaker/2603-matthias.jpg'
     name: 'Matthias Seehauser'
