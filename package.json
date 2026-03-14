@@ -10,17 +10,17 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.5",
     "esbuild": "^0.27.0",
     "postcss-nesting": "^14.0.0",
     "prettier": "^3.6.2",
-    "@tailwindcss/vite": "^4.1.5",
     "prettier-plugin-astro": "^0.14.1"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.7",
-    "@astrojs/rss": "^4.0.14",
-    "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.16.8",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/rss": "^4.0.17",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^6.0.4",
     "astro-remote": "^0.3.4",
     "autoprefixer": "^10.4.21",
     "sass": "^1.97.2",

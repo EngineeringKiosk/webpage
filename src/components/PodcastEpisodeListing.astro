@@ -49,7 +49,7 @@ if (episodes) {
 
 	// add all remaining episodes, keep the order and prevent duplicates
 	episodes.forEach((ep) => {
-		const episodeToAdd = allEpisodes.find((episode) => episode.slug.includes(ep) || episode.data.title.includes(ep));
+		const episodeToAdd = allEpisodes.find((episode) => episode.id.includes(ep) || episode.data.title.includes(ep));
 		if (episodeToAdd && !episodesToShow.includes(episodeToAdd)) {
 			episodesToShow.push(episodeToAdd);
 		}

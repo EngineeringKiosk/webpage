@@ -1,19 +1,19 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import PodcastEpisodeLayout from '../../../layouts/podcast-episode.astro';
 
 export async function getStaticPaths() {
     const podcastEpisodes = await getCollection('podcast');
     return podcastEpisodes.map(entry => ({
         params: {
-            slug: entry.slug
+            slug: entry.id
         },
         props: { entry },
     }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 <PodcastEpisodeLayout episode={entry}>
     <Content />

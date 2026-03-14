@@ -41,13 +41,13 @@ let tags = data.tags.map((element) => URLify(element));
 ---
 
 <div class={`w-full md:w-1/2 lg:w-1/3 px-4 ${cssClass}`}>
-	<a class="block mb-6 overflow-hidden rounded-md" href={`/blog/post/${post.slug}/`}>
+	<a class="block mb-6 overflow-hidden rounded-md" href={`/blog/post/${post.id}/`}>
 		<Image class="w-full" src={data.thumbnail} alt={data.title} title={data.title} />
 	</a>
 	<p class="mb-2 text-coolGray-500 font-medium">
 		<time class="date" datetime={data.pubDate}>{formatDate(data.pubDate)}</time>
 	</p>
-	<a class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 font-bold hover:underline" href={`/blog/post/${post.slug}/`}>
+	<a class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 font-bold hover:underline" href={`/blog/post/${post.id}/`}>
 		{data.title}
 	</a>
 	<span class="text">
