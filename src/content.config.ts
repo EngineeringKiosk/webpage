@@ -1,8 +1,10 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection } from "astro:content"
+import { z } from "astro/zod"
+import { glob } from 'astro/loaders';
 
 // Schema for Podcast Episodes
 const podcastEpisodeCollection = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/podcast" }),
 	schema: ({ image }) =>
 		z.object({
 			advertiser: z.string(),
@@ -37,7 +39,7 @@ const podcastEpisodeCollection = defineCollection({
 
 // Schema for Blog Entries
 const blogEntryCollection = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog" }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -106,12 +108,18 @@ const meetupSchema = ({ image }) =>
 			.optional(),
 	});
 
-const meetupAlpsCollection = defineCollection({ type: 'content', schema: meetupSchema });
-const meetupRhineRuhrCollection = defineCollection({ type: 'content', schema: meetupSchema });
+const meetupAlpsCollection = defineCollection({
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/meetup-alps" }),
+	schema: meetupSchema
+});
+const meetupRhineRuhrCollection = defineCollection({
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/meetup-rhine-ruhr" }),
+	schema: meetupSchema
+});
 
 // Schema for German Tech Podcasts
 const germantechpodcastsCollection = defineCollection({
-	type: 'data',
+	loader: glob({ pattern: '**/[^_]*.json', base: "./src/content/germantechpodcasts" }),
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),
@@ -136,7 +144,7 @@ const germantechpodcastsCollection = defineCollection({
 
 // Schema for awesome-software-engineering-games
 const awesomeSoftwareEngineeringGamesCollection = defineCollection({
-	type: 'data',
+	loader: glob({ pattern: '**/[^_]*.json', base: "./src/content/awesome-software-engineering-games" }),
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),

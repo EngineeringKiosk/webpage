@@ -24,7 +24,7 @@ const description = cutText(data.description, 200);
 	<div class="flex flex-wrap lg:items-center -mx-4">
 		<div class="w-full md:w-1/3">
 			<div class="relative mx-auto md:ml-0 max-w-max">
-				<a class="block mb-6 overflow-hidden" href={`/podcast/episode/${content.slug}/`}>
+				<a class="block mb-6 overflow-hidden" href={`/podcast/episode/${content.id}/`}>
 					<Image class="rounded-2xl" src={data.image} title={`Podcast episode ${data.title}`} alt={`Podcast episode ${data.title}`} />
 				</a>
 			</div>
@@ -33,7 +33,7 @@ const description = cutText(data.description, 200);
 			<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Mehr zu diesem Thema in unserer Podcast Episode</span>
 
 			<h4 class="">
-				<a class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 hover:underline" href={`/podcast/episode/${content.slug}/`}>
+				<a class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 hover:underline" href={`/podcast/episode/${content.id}/`}>
 					{data.title}
 				</a>
 			</h4>

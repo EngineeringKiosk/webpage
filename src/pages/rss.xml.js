@@ -10,7 +10,7 @@ export async function GET(context) {
 		title: post.data.title,
 		pubDate: post.data.pubDate,
 		description: post.data.description,
-		link: `/posts/${post.slug}/`,
+		link: `/posts/${post.id}/`,
 	}));
 
 	podcastEpisodes.map(function (episode) {
@@ -18,7 +18,7 @@ export async function GET(context) {
 			title: episode.data.title,
 			pubDate: episode.data.pubDate,
 			description: episode.data.description,
-			link: `/podcast/episode/${episode.slug}/`,
+			link: `/podcast/episode/${episode.id}/`,
 		});
 	});
 

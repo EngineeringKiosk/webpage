@@ -38,7 +38,7 @@ frontmatter.speaker.forEach ((person, index) => {
 });
 
 // Transcripts
-const episodeFilename = Path.basename(episode.id);
+const episodeFilename = Path.basename(episode.filePath);
 let episodeNumber = episodeFilename.substring(0, episodeFilename.indexOf('-'));
 
 // We have one episode starting with -1
@@ -271,7 +271,7 @@ const html = (await Astro.slots.render('default'))
 									{
 										header.map((element) => (
 											<li class="mb-2">
-												<a class="inline-block py-1 text-coolGray-400 hover:text-coolGray-500 font-semibold" href={`#${element.slug}`}>
+												<a class="inline-block py-1 text-coolGray-400 hover:text-coolGray-500 font-semibold" href={`#${element.id}`}>
 													{element.title}
 												</a>
 											</li>

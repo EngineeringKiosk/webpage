@@ -31,7 +31,7 @@ if (descriptionChars < 0) {
 ---
 
 <article class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-	<a class="block mb-6 overflow-hidden rounded-md" href={`/podcast/episode/${episode.slug}/`}>
+	<a class="block mb-6 overflow-hidden rounded-md" href={`/podcast/episode/${episode.id}/`}>
 		<Image class="w-full" src={data.image} alt={`Details zur Podcast Episode ${data.title}`} title={`Details zur Podcast Episode ${data.title}`} />
 	</a>
 	{
@@ -44,7 +44,7 @@ if (descriptionChars < 0) {
 	<p class="mb-2 text-coolGray-500 font-medium">
 		<time class="date" datetime={data.pubDate}>{formatDate(data.pubDate)}</time>
 	</p>
-	<a href={`/podcast/episode/${episode.slug}/`} title={data.title}>
+	<a href={`/podcast/episode/${episode.id}/`} title={data.title}>
 		<h2 class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 font-bold hover:underline">{data.title}</h2>
 	</a>
 	<p class="mb-4 text-base md:text-lg text-coolGray-400 font-medium">
