@@ -1,0 +1,1077 @@
+{
+    "confidence": 0.9567156,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4809,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 75590,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode des Engineering Kiosk Podcasts. Heute wird es praktisch ein bisschen nerdig und an ein paar Stellen auch herrlich schmerzhaft, denn wir steigen in die Welt der Maker ein. Zu Gast ist André Friesen, Co Host vom Smarthütte Podcast, Home Assistant Meetup Organisator und Team Lead beim Cloud Anbieter Gridscale. Und ja genau der Typ, der beruflich Hardware abstrahiert und privat plötzlich Platinen designt. Wir sprechen darüber, wie du als Softwareentwicklerin mit ESP Chips und esphome in YAML in Hardware Projekte reinrutschen kannst, ohne direkt C oder C zu heiraten. Du bekommst ein Gefühl für Breadboards, Pins, Octokoppler und warum Over the Air Flashing so viel Stress rausnimmt. Der Kern der Folge ist aber Andres Hardware Side Project pokepow, ein Man in the Middle Board fürs PC Front Panel, mit dem du deinen Rechner über Home Assistant starten und sauber herunterfahren kannst. Dazu kommen Stories über externe Antennen, Löten als Endgegner, PCB Prototyping, Upwork als Hardware Support und die Realität von CE Tests und Fulfillment über Crowd Supply. Wenn du wissen willst, was beim ersten Hardware Produkt wirklich schiefgehen kann und wie man trotzdem weitermacht, dann bleib mal dran, Wir legen los. Viel Spaß."
+        },
+        {
+            "start": 78390,
+            "end": 151180,
+            "speaker": "B",
+            "text": "Auf unserer Webseite vom Engineering Kiosk Podcast steht der deutschsprachige Software Engineering Podcast. Also bei uns geht es ja ganz viel um Software, obwohl wir über Gott und die Welt sprechen im Normalfall auch und über ganz viele Metathemen. Aber zentral sprechen wir über Software. Und in letzter Zeit haben wir uns schon ein paar Mal überlegt, irgendwie diese ganze Hardware Ecke, die auch sehr stark mit der Software natürlich zusammenhängt, haben wir eigentlich bisher noch nie so richtig beleuchtet. Und zeitgleich kam dann in der Community auch so ein paar Requests an, könnt ihr nicht mehr über Hardware machen, Die ganze Hardware Ecke, Embedded Ecke und so weiter wäre eigentlich schon interessant. Dann habe ich mir natürlich überlegt, okay, es wäre eigentlich irgendwie cool am Anfang vielleicht nicht so hardcore mäßig einzusteigen und jetzt eine Episode zu machen, wo liegt der Vorteil von Sapphire gegenüber Free RTOS oder solche Dinge, sondern irgendwie so einen gemütlichen Einstieg. Es wäre eigentlich extrem cool, wenn wir auch so eine Geschichte hätten, wie kommt man denn so in die Hardware überhaupt hinein, Wenn ich jetzt als Wolfi einfach mal so in die Hardware Ecke einsteigen würde. Wie ist denn das Ganze? Weil für mich ist es auch ein absolut neues Thema. Und genau zu dem Zeitpunkt kam dann Andi um die Ecke und hat Wolfi, ich habe da was für dich."
+        },
+        {
+            "start": 151180,
+            "end": 259050,
+            "speaker": "A",
+            "text": "Ja, ich habe endlich mal was Praxisrelevantes, denn wenn du über Hardware sprichst, denke ich immer nur an RAM Festplatten und cpus und gpus. Und da wir ja ein praxisnaher Podcast sind, habe ich mir gedacht, okay, diese Hardware Thema schieben wir ganz lange nach hinten, denn aktuell kann sich ja keine Hardware mehr leisten bei den aktuellen Preisen. Deswegen haben wir gesagt, okay, komm, ne? Aber was ist passiert? Ich bin durch unsere German Tech Podcast Liste auf den Podcast Smart Hütte aufmerksam geworden und dann habe ich mir das angehört und dann natürlich schaue ich immer hinter die Kulissen. Wer ist denn das? Und das ist der André und der Thomas. Vielen lieben Dank, dass ihr den Podcast macht. Grüße gehen raus und Und der André ist auch der Organisator eines Home Assistant Meetups, was er glaube ich einmal im Jahr circa macht. Und das war vor kurzem in Köln. Da bin ich dann hingefahren und da kommt diese Podcast Episode her und diese Podcast Episode dreht sich um Hardware, um Hardware Side Projects. Und da habe ich mich gefragt, nennt man eigentlich Leute, die ein Hardware Side Project machen, auch Indie Hacker? Das ist ja so ein Software Begriff, habe ich so das Gefühl, weil jeder macht irgendwie eine Software as a Service und wird dann in Indie Hacker. Und dann habe ich festgestellt, nee, die nennt Indie Hacker, die nennt man Maker. Ich habe keine Ahnung, ob man jetzt auch Hardware Leute in die Hacker nennen darf. Klären wir gleich auch. Aber auf diesem Home Assistant Meetup hat der André seine Story von seinem Hardware Side Project vorgestellt und ich habe mehrmals gelacht während dieser kurzen Präsentation. Die ging so zwanzig Minuten lang. Ich würde sie zusammenfassen als the more you fuck around, the more you find out. Denn das eigentlich alles. Und das versuchen wir mal in diesem Podcast heute zu transportieren. Das bedeutet, wir kümmern uns um ein Hardware Side Project mit der Was kann da eigentlich alles schiefgehen? In diesem Sinne, genug geschwafelt, willkommen André."
+        },
+        {
+            "start": 259130,
+            "end": 261370,
+            "speaker": "C",
+            "text": "Moin moin. Vielen Dank für die Einladung, André."
+        },
+        {
+            "start": 261370,
+            "end": 295550,
+            "speaker": "A",
+            "text": "Damit die Leute dich mal kennenlernen und dich vielleicht auch anders im Kopf haben als nur der Home Assistant Meetup Organisator und Smart Podcast Host. Du kommst aus Düren in dem schönen Nordrhein Westfalen, das liegt so ungefähr zwischen Köln und den Niederlanden. Ich wollte gerade Holland sagen, so Ruhrpotter technisch, aber Holland sind ja Bundesländer, zwei Stück in den Niederlanden, deswegen die korrekte Aussprache zwischen Köln und den Niederlanden. Wie bereits gesagt, du machst den Smarthütte Podcast mit dem Thomas. Da sprecht ihr über Smart Home Self Hosting Technik, macht das eine oder andere Interview mit anderen Makern und ihr wart"
+        },
+        {
+            "start": 295550,
+            "end": 307820,
+            "speaker": "B",
+            "text": "auch bei uns schon im Adventkalender, muss man auch dazu sagen. Hat der Andi natürlich ganz vergessen dieses Jahr, also eigentlich letztes Jahr, aber Dezember zwei tausend fünf und zwanzig war der auch mit einer Episode vertreten über Home Assistant."
+        },
+        {
+            "start": 308290,
+            "end": 366400,
+            "speaker": "A",
+            "text": "Du bist Maker von pokepau. Das ist unter anderem dieses Hardware Produkt, wo du mal, ich würde sagen, ein paar Erfahrungen gesammelt hast, über die wir das gleich sprechen. Deine Miete bezahlst du mit einem Job bei Gridscale. Das ist ein Public und Private Cloud Anbieter. Dort bist du Teamlead. Die Firma wurde damals mal von OVH übernommen. Das ist, soviel ich weiß, ein französischer Cloud Anbieter, bekannt dafür, dass irgendwelche Datacenter mit Holzdecken abgebrannt sind oder sowas, meine ich vor ein paar Jahren. Aber ihr bietet nicht nur Server an, sondern auch Plattform as a Service Angebote wie Managed DBS, Manage Kubernetes und Manage Load Balance. Aber das sei die Nerd Area. Und die Frage ist was macht der André eigentlich menschlich? Und da habe ich gesehen, du bist Schwimmlehrer für Kinder unter anderem. Das bedeutet richtig schön Brustkraulen und Delfin heißt die Schwimmart, glaube ich."
+        },
+        {
+            "start": 366400,
+            "end": 389020,
+            "speaker": "C",
+            "text": "Ich glaube nicht, dass du es bei vierjährigen Staaten brauch mit Delfi, ne, Ich arbeite Teilzeit oder habe Teilzeit gearbeitet und bin nämlich aktuell jetzt heute in die Elternzeit gegangen und ich gebe seit anderthalb Jahren hier in der Ecke Schwimmunterricht für vierjährige Kinder. Und das ein ganz tolles niederländisches Konzept, weil die Niederländer ganz viel Wasser haben sollen, die sich selber retten können und da bringen wir denen das dann bei."
+        },
+        {
+            "start": 389100,
+            "end": 390940,
+            "speaker": "B",
+            "text": "Also du machst das in den Niederlanden, ne?"
+        },
+        {
+            "start": 391420,
+            "end": 397580,
+            "speaker": "C",
+            "text": "Die haben sehr, sehr viele Standorte in Niederlanden und ein oder zwei in Deutschland und einer von denen ist da, wo ich halt arbeiten kann, in Märzen nicht."
+        },
+        {
+            "start": 397580,
+            "end": 435380,
+            "speaker": "B",
+            "text": "Jetzt stellt sich für mich da natürlich jetzt gleich die okay, du arbeitest in deinem Job in einem Bereich, wo es darum geht, Hardware zu abstrahieren und die Cloud möglichst wegzukommen. Von dieser Hardware. Jetzt hast du eine Freizeit, die du scheinbar verbringst, unter anderem mit Kindern und Schwimmlehrer Dasein. Und jetzt kommst du auf diese verrückte Idee, jetzt mache noch irgendwas mit Hardware und zwar wirklich ganz ganz unten mit der Hardware. Jetzt vorab mal meine Was war das Schlimmste oder das Unerwartete, was du da erlebt hast, wenn du mit Hardware umgehst im Vergleich zu der ganzen Software Ecke, die du ja sehr, sehr, sehr gut kennst?"
+        },
+        {
+            "start": 435207,
+            "end": 495207,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 495380,
+            "end": 530600,
+            "speaker": "C",
+            "text": "Ich würde sagen, zwei Dinge, wie unfassbar wenig Spaß mir löten macht also schon heftig oder ich kann es auch nicht oder Equipment oder alles, ich weiß es nicht. Und das Zweite ist dann doch dieses europäische, vor allem auch deutsche, die Regularien, die ganzen Gesetze, die man einhalten müsste, wie viel Grauzone da es eigentlich theoretisch gibt, aber keiner spricht drüber, weil es gesetzlich gefordert ist. Das sind die beiden, wo ich dachte, wow, das ist schon, das hätte ich jetzt nicht erwartet, dass es doch so viele Steine im Weg liegt bei dem Löten."
+        },
+        {
+            "start": 530600,
+            "end": 535080,
+            "speaker": "A",
+            "text": "Das war überraschend. Bei den Regularien verwundert mich gar nicht, Da sage ich willkommen in Deutschland."
+        },
+        {
+            "start": 535240,
+            "end": 539320,
+            "speaker": "C",
+            "text": "Ja, vielleicht war ich zu naiv, vielleicht ist es auch der Vorteil, dass man es dann einfach macht."
+        },
+        {
+            "start": 539400,
+            "end": 574020,
+            "speaker": "B",
+            "text": "Aber ich glaube aber auch, dass grundsätzlich das Interessante ist, dass eigentlich bei klassischer Software überhaupt nichts da rein spielt. Also es kann ja jeder einfach eine Web App veröffentlichen, anbieten, die kann genauso Schaden anrichten, vielleicht sogar ordentlichen Schaden unter Umständen in gewissen Bereichen. Und die Hardware Ecke, die ist irgendwie historisch wahrscheinlich auch regulierter einfach. Da gibt es EU Regulatorien, was ja auch Sinn macht, würde ich mal so im Groben und Ganzen sagen. Die Frage ist, warum es auf der Softwareseite das eigentlich nicht gibt, aber vielleicht findet man das eh noch raus in dieser Episode."
+        },
+        {
+            "start": 574020,
+            "end": 593300,
+            "speaker": "C",
+            "text": "Ja, bitte wecken wir jetzt keine schlafenden Hunde. Ich möchte nicht, dass es solche Regularien auch dort gibt. Vielleicht gibt es die auch, nur ist es halt schwerer zu enforcen, weil so ein Softwareprodukt zu verkaufen ist. Domain kaufen, Striplink drauf, fertig. Und ein Produkt zu verkaufen ist halt hart, weil es Hardware ist. Man braucht Lager, man braucht Shipment und den ganzen Kram drumherum."
+        },
+        {
+            "start": 593300,
+            "end": 653730,
+            "speaker": "A",
+            "text": "Ich rede mir die ganze Sache immer schön wegen den ganzen Regularien. Und das ist auch mein letztes Statement zu diesen Regularien, dass ich immer denke, okay, das beschützt mich davor, dass meine Bude abbrennt, weil dann irgendwer, weiß ich nicht, ein Kabel in die falsche Lötstelle gestopft hat oder so. Deswegen, also so rede ich mir die ganze Sache immer schön. Aber kommen wir mal zum Thema. Wir haben in diesem Podcast natürlich auch einen Lehrauftrag und Leute, die uns schon länger hören, wissen, wir machen immer Deep Dive Folgen und man nimmt immer irgendwas mit. Herr Wolfgang hat das so salopp beschrieben, wir reden über Gott und die Welt. Das hört sich für mich an wie so ein Laber Podcast, aber das versuchen wir gerade nicht zu sein. Deswegen starten wir mal mit einem Kontext Setting und Hardware. Und wenn ich Google aufmache und sage, ich möchte mein erstes Hardware Produkt bauen, dann stolpere ich über so Sachen wie ein Raspberry Pi, über ein Head, über ein Arduino und so weiter. Und da komme ich relativ schnell zu einem Begriff oder zu einer Abkürzung vielleicht sogar, die da irgendwie fast überall drinsteckt und das ist ESP."
+        },
+        {
+            "start": 654450,
+            "end": 654890,
+            "speaker": "C",
+            "text": "Genau."
+        },
+        {
+            "start": 654890,
+            "end": 661980,
+            "speaker": "A",
+            "text": "Gib uns doch mal ganz kurz ein Too long, didn't read. Was ist ein oder der, die, das ESP, Genau."
+        },
+        {
+            "start": 661980,
+            "end": 710420,
+            "speaker": "C",
+            "text": "Der ESP ist ein wifi Chip, ein sehr bekannter von der Firma Espressiv, das sind glaube ich auch Chinesen, dort gab es sehr, sehr lange den ESP acht tausend zwei hundert sechs und sechzig, das ist so das erste gewesen, gibt es dann zehn, fünfzehn Jahre oder so, vielleicht sogar noch länger. Und dieser wurde und wird bis heute noch in wahnsinnig vielen Produkten verbaut. Alles was oder vieles, was iot ist, sei es diese Steckdosen, sei es irgendwelche Sensoren. Dort war früher sehr wahrscheinlich der ESP drin und mittlerweile gibt es den Nachfolger, seit einigen Jahren auch schon ein bisschen länger, der ESP. Und der hat auch verschiedene Variationen und Features, kann man sagen. Der eine kann nur wifi, der andere kann noch Thread, der andere kann noch zigbee. Da gibt es dann diverse Anforderungen, die man sich dann aussuchen muss und dementsprechend den Chip aussuchen muss, kann."
+        },
+        {
+            "start": 710420,
+            "end": 749740,
+            "speaker": "A",
+            "text": "Und wenn ich ESP google, dann komme ich über etwas, das nennt sich esphome. Und jetzt frage ich mich, ist das das Zuhause vom ESP? Was ist das denn? So ein Chip? Cool, den kann ich mir kaufen. Und ich habe jetzt gerade auch mal die Preise gecheckt. Ein ESP ist relativ kostengünstig, also ich muss jetzt hier keine fünfzehn, zwanzig investieren, um diesen Chip zu kriegen. Und das ist natürlich geil. Ich habe einen Chip, da ist wifi drauf, also Wireless LAN oder zigbee oder irgendein anderes Protokoll, Infrarot, keine Ahnung. Und aber irgendwas muss ich ja damit machen können, also muss ich jetzt Assembly lernen oder wie steuere ich das Ding, weil ich bin ja immer noch Softwareentwickler aus dem Herzen."
+        },
+        {
+            "start": 749740,
+            "end": 825690,
+            "speaker": "C",
+            "text": "Ja, also in der Theorie muss man den mit CC schreiben, gibt auch noch andere Leute, die micropython und Lua benutzen und was weiß ich. Das heißt, dann hat man sich wieder eine Programmiersprache ans beIN gebunden, falls man sie noch nicht kann. Aber es gibt halt das esphome Projekt, das wurde mal gestartet von dem Otto Winter und irgendwann vor einiger Zeit wurde es der Open Home Foundation gespendet. Das heißt, die Open Home Foundation, die jetzt auch Home Assistant unter dem Hut hat, ist jetzt dafür verantwortlich, bezahlt Entwickler dafür, dass sie das Projekt halt weiterentwickeln und daran arbeiten und Dokumentationen und alles. Und was ist der Unterschied von esphome zu den Programmiersprachen? Anstatt imperativ zu programmieren, kann man einfach eine YAML Datei erstellen, die bestimmten Pins Funktionen zuweist. Zum Beispiel wenn man so ein ESP sich kauft, haben die häufig schon Pins ausgebrochen, wo man dann andere Sensoren dran machen kann. Das heißt Temperatur, Co, Feuchtigkeit, alles mögliche ist vorhanden Und dann sagt man nur an Pin sechs habe ich den und den Feuchtigkeitssensor, compile das mit esphome und dann läuft das schon und dort läuft dann schon ein ganzer Stack, mit der dann direkt mit Home Assistant reden kann. Die ganze API ist geklärt. Wifi Captive Portal, wenn man sein wifi Passwort eintragen möchte. Es wird sehr, sehr viel für einen gemacht."
+        },
+        {
+            "start": 825690,
+            "end": 862060,
+            "speaker": "B",
+            "text": "Wir hatten ja auch mal den Pascal Vicelli zu Besuch bei uns im Podcast, der im ganzen Home Assistant Ecosystem unterwegs ist und auch eben über die Open Home Foundation gesprochen hat, die jetzt das ISB Home Projekt auch dementsprechend unterstützt. Das heißt, das was Home Assistant ist, das kennen vielleicht viele, einfach zum Managen von Devices wäre esbhome das gleiche simple System, aber für die Devices dann selbst, dass ich die mit YAML konfigurieren kann, steuern kann, so wie meinen Home Assistant mit YAML ganz einfach konfigurieren kann, wäre das das Depon auf der Device Seite, wenn ich dich richtig verstehe."
+        },
+        {
+            "start": 862460,
+            "end": 881240,
+            "speaker": "C",
+            "text": "Das kann man so sagen, Anstatt dass man halt eine Programmiersprache hat, guckt man sich die Dokumentation an, man googelt den Sensor, den man gekauft hat oder welchen man haben möchte, Temperatur, Feuchtigkeit, was auch immer. Und dann gibt es dann Dokumentation, die man mehr oder weniger copy pasten kann. Man muss es dann nur anpassen, welche Pins man selber benutzen möchte. Dieser ESP hat halt x Pins, je nachdem, was für eine Größe man sich gekauft."
+        },
+        {
+            "start": 881320,
+            "end": 887720,
+            "speaker": "B",
+            "text": "Für mich jetzt als Laie gerade zum Verständnis, du redest jetzt von Pins, das heißt, ich löte dann da irgendwelche Sensoren"
+        },
+        {
+            "start": 887720,
+            "end": 889560,
+            "speaker": "C",
+            "text": "dran, es muss noch nicht mal gelötet sein."
+        },
+        {
+            "start": 889560,
+            "end": 915650,
+            "speaker": "B",
+            "text": "Ja, ich connecte sie, ist ja egal grundsätzlich, aber woher weiß dann mein esphome? Keine Ahnung. Habe ich da immer dieselbe Spannung, Volt, die da drauf liegen oder wie so ein Sensor funktioniert? Gibt es da dann irgendwelche Templates oder. Also ich muss da ja grundsätzlich irgendwie dann Strom durchschicken und ich muss ja wissen, was für ein Strom oder wie oder wie diese Sensoren funktionieren. Wie kann ich mir das als Hardwareleihe dann vorstellen?"
+        },
+        {
+            "start": 915810,
+            "end": 944440,
+            "speaker": "C",
+            "text": "Die einfachen Sensoren, die kann einfach getrost dran stecken, die Module, die man da kauft, so ein Temperaturmodul, was sowieso alles mitnimmt, Temperatur, Feuchtigkeit, das kann man direkt anschließen und dann sucht man sich den Pin aus. Es gibt natürlich auch komplexere Hardware, dann muss man halt überlegen, vielleicht eine kleine Schaltung davor zu schalten oder Widerstände. Das ist dann aber immer in den Datasheets von den jeweiligen Sensoren drin. Das heißt, da kriegt man dann so ein Datasheet, da kriegt man immer so eine Beispielschaltung dabei und die muss man dann quasi einhalten."
+        },
+        {
+            "start": 944760,
+            "end": 962650,
+            "speaker": "B",
+            "text": "Aber wie funktioniert die Kommunikation von SIM? Also wenn das jetzt zum Beispiel ein kombinierter Sensor ist mit Feuchtigkeit und Temperatur, ist dann wirklich ein Protokoll auf den Pins, das dann wirklich, also das ist nicht nur Strom ein und aus oder wie groß ist der Widerstand, sondern ihr habt da wirklich irgendwie eine Art Protokoll."
+        },
+        {
+            "start": 962650,
+            "end": 988010,
+            "speaker": "C",
+            "text": "Genau, da gibt es mehrere Möglichkeiten, da bin ich auch nicht super tief drin, da bin ich nur Nutznießer, aber es gibt halt das i Protokoll, was darüber gefahren werden kann. Aber auch andere Motorsteuerung braucht, glaube ich noch andere Protokolle. Ich glaube, man braucht gar nicht so tief gehen, wenn man sich mit dem Thema mal auseinandersetzen möchte. Man kann sich natürlich dann immer dazu einlesen, aber man braucht nicht so tief gehen, um es nutzen zu können, was ich so toll finde. Es abstrahiert einem sehr, sehr viel weg."
+        },
+        {
+            "start": 988090,
+            "end": 998350,
+            "speaker": "A",
+            "text": "Jetzt gerade, wo der Wolfgang von Volt und Spannung und so gesprochen habe, kam mir wieder eine Sache aus meiner Ausbildung in den Sinn. Die URI Formel. Kennt ihr die noch? U R I."
+        },
+        {
+            "start": 998510,
+            "end": 1006110,
+            "speaker": "B",
+            "text": "Das Ohmsche Gesetz, Grundlage kennt sogar ich als Informatiker. Gut, ich bin Elektro interessiert, aber trotzdem."
+        },
+        {
+            "start": 1006270,
+            "end": 1026220,
+            "speaker": "A",
+            "text": "Also wie steht die Spannung, also Volt mit dem Widerstand in Ohm und mit der Stärke in Ampere und so weiter. Ach du meine Güte. Good old times. Aber das bringt mich zu meiner nächsten Frage. Um so Basiskram zu machen, Temperatur zu messen oder ähnliches, muss ich mich mit Spannung, Widerstand und Strom eigentlich nicht auseinandersetzen, oder?"
+        },
+        {
+            "start": 1026220,
+            "end": 1064180,
+            "speaker": "C",
+            "text": "Nein, man kauft sich einfach fertige Boards. Es gibt die esps, gibt es in verschiedenen Variationen. DSP an sich ist jetzt erstmal so ein kleiner Microchip, den kauft sich aber keiner. Dann gibt es das, ich glaube, Sokoda Modul, da bin ich jetzt durcheinander, da komme ich jetzt durcheinander, aber ist nicht so wild. Dann gibt es diesen Chip selber, den man auf Platinen lötet und dann nutzt man den. Und dann gibt es noch Module, die sind fertig. Dort sind schon die Pins drauf, die haben schon Stromversorgung im Sinne von, da packt man nur USB rein und gut ist. Und wenn man den hat und dann ein paar Sensoren und ein paar dupont Kabels oder ein Breadboard, dann kann man schon mitspielen und zack hat man sich seinen eigenen Sensor gebaut. Und das finde ich so toll daran. Die Einstiegshürde ist relativ niedrig."
+        },
+        {
+            "start": 1064340,
+            "end": 1069580,
+            "speaker": "A",
+            "text": "Breadboard ist das ein Brett, wo ich Brot draufschneide oder was ist ein Breadboard?"
+        },
+        {
+            "start": 1069580,
+            "end": 1090300,
+            "speaker": "C",
+            "text": "Ein Breadboard ist dieses weiße Plastikding mit ganz vielen Stecklöchern drin, mit einem bestimmten Abstand, wo man diese dupont Cable, diese typischen Verbindungskabel für kleinere Elektroprojekte reinstecken kann. Und dann hat man nicht so einen Kabelwust in der Hand, sondern hat man das auf dem Brett und kann man sich das dann auf seinem Tisch zusammentütteln und man sieht das dann auch ein bisschen einfacher."
+        },
+        {
+            "start": 1090460,
+            "end": 1096140,
+            "speaker": "B",
+            "text": "Ich habe das so als Kind gehabt, wo man dann irgendwelche Bilder machen kann mit so bunte Stecker. Das ist dasselbe, nur für Erwachsene sozusagen."
+        },
+        {
+            "start": 1098010,
+            "end": 1122330,
+            "speaker": "A",
+            "text": "Ich habe auch noch ein paar Breadboards hier rumfliegen und zwar habe ich mir vor Jahren mal ein Arduino Starter Kit gekauft und bei diesem Arduino Starter Kit gibt es ein Arduino dabei ein Breadboard, ein paar Kabel, ein paar Sensoren und eine Anleitung, wo du einfach mehrere Beispielprojekte machen kannst. Und da gibt es unter anderem ein Lofometer, keine Ahnung, da musst du dann irgendwie was, einen Sensor anpacken und dann schlägt irgendwas aus und dann ist das"
+        },
+        {
+            "start": 1122330,
+            "end": 1123400,
+            "speaker": "C",
+            "text": "ein Herz und so weiter."
+        },
+        {
+            "start": 1123400,
+            "end": 1152390,
+            "speaker": "A",
+            "text": "Also relativ um die ganze Sache mit der Elektrotechnik. Aber du hattest gerade auch gesagt, dass esphome in YAML konfiguriert wird und B schon eine automatische Verbindung zu Home Assistant mitbringt. Das bedeutet APIs und so weiter. Heißt das, ich packe da jetzt einen Temperatursensor dran, deploy ISP Home drauf, schreib oder kopiere, so wie du das sagtest, fünf Zeilen YAML und hab dann direkt Temperaturwerte im Home Assistant in einem schönen Graphen?"
+        },
+        {
+            "start": 1152390,
+            "end": 1183330,
+            "speaker": "C",
+            "text": "Theoretisch ja. Das einzige, was man macht, ist noch wifi. Entweder hardcodet man das in seine YAML Konfiguration, fair enough. Oder man nimmt dann dieses Captive Portal, wo man halt dieses typische, diesen Onboarding Prozess hat. Das Gerät kriegt Strom, macht einen Access Point auf, mit dem Handy verbindet man sich und dann packt man seine wifi Credentials da rein und es wird sofort mit Home Assistant sprechen. Es meldet sich sogar automatisch im Home Assistant Webinterface und sagt, hey, hier ist ein neues Gerät, bitte, bitte, hier, bitte richte mich ein. Und wenn man das gemacht hat, hat man schon die Werte des jeweiligen Sensors drin."
+        },
+        {
+            "start": 1183330,
+            "end": 1197650,
+            "speaker": "A",
+            "text": "Das klingt so ein bisschen wie was Kubernetes für die Infrastruktur ist und dann leider auch mit YAML konfiguriert wird, wie jeder DevOps Engineer ein professioneller YAML Engineer ist, dass esphome das Kubernetes für ESP Chips ist."
+        },
+        {
+            "start": 1197810,
+            "end": 1202730,
+            "speaker": "C",
+            "text": "Skalierung? Nein, aber YAML, ja, geht halt eher"
+        },
+        {
+            "start": 1202730,
+            "end": 1311020,
+            "speaker": "A",
+            "text": "in die Framework Thematik. Aber cool. Also für mich klingt das dann so, als wäre das nicht wirklich nur ein reines Software Framework, sondern wirklich, es ist da, um das Leben einfacher zu machen. Und ich habe vor kurzem mit einem anderen Kumpel gesprochen, Grüße gehen raus an den Dominik, der hat einen sehr, sehr schönen Use Case gehabt, von dem ich gar nicht wusste, dass dieser so einfach möglich ist. Und zwar hatte er eine Fernbedienung gehabt. Die Fernbedienung kommunizieren in der Regel zu deinem Fernseher oder zu deiner, was du auch immer anmachen möchtest über Infrarot. Was er gemacht hat, er hat sich ein esp genommen, hat einen Infrarotsensor da angeschlossen, hat esphome drauf deployed, hat die Fernbedienung geklickt und dann den Infrarot Stream ausgelesen und einfach rausgelockt. Also so Konsole Log mäßig in JavaScript, hat dann so ein Beitream daraus gekriegt, hat diesen Beitream dann wiederum in esphome gepackt und kann jetzt über Home Assistant diesen Beitream an das Device, was du anmachen möchtest, dein Fernseher oder deine Box oder so weiter senden. Und das ist ja mal super smart. Der hat also mit dem esphome das Infrarotsignal ausgelesen, sich das zwischengespeichert, den esphome einmal umgemodelt, dass der nicht Infrarot empfängt, sondern infrarot sendet, diesen Beitream da reingepackt von diesen Infrarotsignalen und kann jetzt darüber, hat er sich eigentlich eine neue kleine esphome Fernbedienung gebaut und hat er mir Fotos davon gezeigt, weil das klingt total kompliziert für mich. Jemand, der keine Ahnung von Hardware hat, hat er mir das YAML gezeichnet, ich bin hinten rüber gekippt, das waren wirklich zehn Zeilen oder sowas. Wahnsinn. Und wenn du jetzt mal weiter denkst, ich habe noch unten in der Garage so einen alten Garagentor Öffner, ja, ich habe leider jetzt nicht mehr den Klicker davon. Schauen wir mal, ob man das irgendwie gehackt kriegt, keine Ahnung. Naja, ist auf jeden Fall sehr faszinierend, was man damit machen kann. Und das mal vielleicht als praktisches Beispiel."
+        },
+        {
+            "start": 1311020,
+            "end": 1345480,
+            "speaker": "B",
+            "text": "Jetzt besprechen wir natürlich esphome, weil du bei deinem Projekt auch esphome verwendet hast natürlich, bzw. Darauf gekommen bist am Anfang. Hast du da jetzt auch schon irgendwelche Grenzen entdeckt, wo du sagen würdest, okay, da kommt esphome an die Grenzen und man sollte da dann wirklich eine eigene Software in dem Fall schreiben oder ein anderes OS verwenden, das dann eben nicht mehr auf YAML basiert, sondern wo man halt schon tiefer gehen kann, wie Sapphire oder sonstige Dinge. Kannst du das schon einschätzen? Bist du so weit drin, dass du sagen würdest, okay, bis dorthin eignet sich gut, aber wenn man XY machen will, dann muss man schon was anderes einsetzen."
+        },
+        {
+            "start": 1345480,
+            "end": 1479180,
+            "speaker": "C",
+            "text": "Ja, da kann ich was zu sagen. Der Vorteil von diesen Deklarativen ist, man beschreibt das, es ist relativ gut zu erkennen, was da passiert Mir ist es persönlich wichtig bei solchen Projekten, wenn ich in fünf Jahren da wieder reingucke, ach komm, lügen wir uns nicht an in zwei Wochen, dass ich das immer noch verstehe und dann genau weiß, was da passiert. Das ist bei dem Deklarativen relativ einfach. Man kommt auch relativ noch viel weiter als mit dem Deklarativen, weil man kann auch sogenannte Lambdas benutzen und dort einfach C Code reinhauen. Das geht auch, ist ein bisschen nervig zu debuggen, wenn da was falsch ist, weil der Vorteil bei dem Deklarativen ist, wenn was kaputt ist, geht das zur Compilezeit kaputt, regulär. Außer du hast jetzt was elektrisch falsch angeschlossen, aber wir reden jetzt nur von Code Seite aus, dann sagt dir das der Compiler und ne, compilt nicht. Guck mal bitte, wenn du das viel mit C und C machst, dann wird es schwierig, weil das ist dann Runtime viele Sachen, aber da kommt man schon sehr weit. Man kann dynamische Dinge machen, zum Beispiel auch anstelle, ich habe das mal gemacht, ich hatte eine Zeitschaltuhr, die habe ich ganz blöd, ich habe eine Bettheizung, das ist so ein Kissen oder so eine Decke, die legt man unter die unters Laken und dann drückt man, dann ist der Strom drauf und dann wird es warm. So, ich hatte das früher mal in Home Assistant drin, aber irgendwann ist der Home Assistent mir dann abgeraucht nachts und es war verdammt heiß im Winter, Normalerweise reichen so zwanzig Minuten, dann ist es warm genug, aber das Ding hat einfach sechs Stunden durchgeballert und wir haben uns so hochgeschwitzt im Bett und dann habe ich die Steckdose genommen, die ich hasse, esphom drauf und dort den Timer eingebaut, sodass der unabhängig von irgendeinem Server ist. Das heißt, dynamische Dinge kann man damit auch machen. Wo es dann aber schwieriger wird, das habe ich mal als Freelance Projekt gemacht für jemanden, der hat zentral ganz viele ESP in jedem Raum, aber jeder Raum hat unterschiedlich viele Fenster und Lichtschalter und so weiter und er wollte halt Code haben, der in dem Raum nur zwei Lichtschalter hat und nur ein Rollo, in dem Raum fünf Lichtschalter und zwei Rollos und und dann wird das Dynamische schwierig, weil es muss immer alles vorhanden sein, was man konfiguriert und dann wird es kompliziert und da kann man dann vielleicht überlegen mache ich mir jetzt pro Raum eine esphome Config und dann ist das erstmal so deklarativ und fest oder bin ich der Programmierer, der unbedingt das einmal definieren möchte in der Liste und dann in so einer Map, wo ich dann drüber iteriere zu Runtime hat halt seine Vor und Nachteile."
+        },
+        {
+            "start": 1479420,
+            "end": 1492780,
+            "speaker": "B",
+            "text": "Es gibt ja auch noch das Motor, das ist ja auch sehr, sehr weit verbreitet. Hast du dir das auch mal angeschaut, ob das in irgendeiner Form einsetzbar wäre oder ist es dann eben schon der nächste Schritt, wenn man tiefer gehen will? Wie blickst du da drauf?"
+        },
+        {
+            "start": 1493100,
+            "end": 1521150,
+            "speaker": "C",
+            "text": "Gute Frage. Ich habe mir das mal kurz angeguckt. Ich bin damit nicht so warm geworden, weil ich esphome schon länger kenne und habe es dann irgendwann aufgegeben. Ich glaube, es ist auch ähnlich weit. Dort werden auch komplexe Geräte mit konfiguriert, aber ich bin dort nicht so mit warm geworden, vor allem weil ich glaube, Tasmoto hat ja vorkonfigurierte Binaries oder vor compile Binaries, die man sich runterladen möchte kann. Wenn man aber bestimmte Funktionen haben muss, muss man sich die dann doch selber compilen und dann dachte ich, kann ich auch gleich zu esphome gehen?"
+        },
+        {
+            "start": 1521310,
+            "end": 1537310,
+            "speaker": "B",
+            "text": "Ja, ist auf jeden Fall wesentlich komplexer, aber die Idee ist ja auch, glaube ich, dass man einfach so Standardgeräte damit hat. Irgendwer konfiguriert diese Standardgeräte und dann hast du eine standard offene Firmware für irgendeine Steckdose oder für irgendeine Lampe oder so für so wirklich Standarddinger."
+        },
+        {
+            "start": 1537310,
+            "end": 1566940,
+            "speaker": "A",
+            "text": "Jetzt war die Frage ja von Wolfgang Implizit, wo würdest du abraten, esphome zu nutzen? Ich wechsel die Frage mal eher positiv. Wenn du heute noch mal ein esphome Projekt starten würdest, welche zwei, drei Sachen würdest du sofort von Beginn an in Anführungszeichen und ich mache jetzt diese Anführungszeichen Gänsefüßchen Thematik richtig machen? Also was würdest du, wo würdest du dich dann direkt am Anfang drum kümmern, dass das ordentlich und sauber ist, was dir dann im Nachhinein ziemlich viel Schmerzen erspart?"
+        },
+        {
+            "start": 1567020,
+            "end": 1596920,
+            "speaker": "C",
+            "text": "Gute Frage. Eigentlich ganz gar nichts, weil das ist so einfach. Man braucht ja nicht viel. Und selbst wenn man was falsch macht, ist die Iteration so einfach, weil man nur drei, vier Zeilen YAML dazu packt und dann drückt man, dann macht man ein Compile und flasht die Firma dann neu. Und das Gute ist ja das erste Mal muss man es mit dem Kabel flashen, das ist ein bisschen nervig, aber danach kann man das ja over the air machen, also übers wifi. Das heißt also, man kann halt super iterieren. Ich sehe da gerade nicht so große Fehler, die ich gemacht habe."
+        },
+        {
+            "start": 1596920,
+            "end": 1617040,
+            "speaker": "B",
+            "text": "Wie groß sind denn eigentlich so YAML Files? Weil ich kenne das nur aus Home Assistant, dass man dann teilweise in so einer YAML Hölle, würde ich fast sagen, endet, weil man da halt natürlich ganz viele Automations hat und irgendwelche Berechnungen und Templates an dieser Stelle und YAML Dot, jetzt ist es nur ein Device. Hat man dann wesentlich weniger YAML Files. Wird es irgendwann unübersichtlich deiner Meinung nach oder war das nie ein Problem, so"
+        },
+        {
+            "start": 1617200,
+            "end": 1694570,
+            "speaker": "C",
+            "text": "von der Größenordnung für meinen speziellen Use Case wird es nicht unübersichtlich, weil ich sehr, sehr wenig Sensoren habe. Ich habe keine große Logik da drin. Wenn man aber viele Sensoren reinpackt und auch Messlogik reinpackt, zum Beispiel Steckdosen, die schaltbar sind, Steckdosen, die dann auch K und Volt und Ampere messen können, dann wird es schon ein bisschen komplexer. Aber da kann man dann auch mit includes arbeiten, sich gegenseitig die yamls, die Dateien aufsplitten und die dann aufsplitten in Konfigurationen, die man für sich selbst als sinnvoll erachtet. Das geht ganz einfach. Der Standard ist, dass man, wenn man ein Produkt anbieten möchte, da gibt es dann auch von esphome so eine Art Struktur, die man einhalten muss, wo dann das Gitterprojekt ist und solche Sachen. Und dort hat man dann in der Core Konfiguration nur diesen minimalen Aufbau und die ganze Logik, die man halt hat für sein spezielles Gerät, die kommt dann in eine zweite YAML Datei. Das kann man aber machen, wie man mag. Es gibt auch Projekte, das habe ich mir schon angeguckt von anderen Firmen, die solche ESP Home Devices anbieten, die haben dann eher so eine Grundstruktur und basteln die sich dann zusammen, je nach Gerät. Da gibt es dann ganz viele Möglichkeiten. Also man kann Struktur schaffen, wenn man mag, aber ich würde es erst mal lassen, denn das ist wie beim Programmieren. Wenn man sich vorher so eine Struktur überlegt und dann anfängt zu programmieren, dann merkt man, dass die Struktur nachher doch nicht so passt, wie man sich's gedacht hat mit so Frameworks. Das ist ja ganz schnell der Fall."
+        },
+        {
+            "start": 1694730,
+            "end": 1721900,
+            "speaker": "A",
+            "text": "Jetzt habe ich diese Episode mit the more you fuck around, the more you find out begonnen. Und wer das nicht kennt, das ist so ein Internet Meme inzwischen, verlinke ich vielleicht auch mal in den Shownotes. Ich liebe das so, weil da steht so ein Typ an so einer Tafel, der hat so ein Koordinatensystem und der sagt halt einfach you find out. If you don't fuck around, you don't find out. Also genial. Deswegen starten wir mal in dein Zeitprojekt mit dem Namen pokepau meines Wissens nach."
+        },
+        {
+            "start": 1721980,
+            "end": 1722820,
+            "speaker": "C",
+            "text": "Ja, richtig."
+        },
+        {
+            "start": 1722820,
+            "end": 1728460,
+            "speaker": "A",
+            "text": "Gib uns mal Kontext. Was ist pokepow? Was kann es? Für wen ist gedacht und wie kam es zu der Idee überhaupt?"
+        },
+        {
+            "start": 1729080,
+            "end": 1790000,
+            "speaker": "C",
+            "text": "Genau, ich erkläre kurz, was es macht. Es macht wirklich nicht viel. Es ist eine kleine Platine, die hat einen USB C Port zum Flashen und ein USB Socket, heißt das glaube ich, für Strom. Das kann man dann ins Mainboard stecken. Das ist auch der Use Case. Man hat ein Mainboard und ein PC Case und für regulär verbindet man von dem PC Case ein paar Kabel ans Mainboard für Power Switch, Power LED und Reset und andere noch. Und ich wollte meinen Rechner per Home Assistant starten, stoppen können und gucken, ob der an ist. Und dieser pokepaw sitzt im Endeffekt dazwischen. Die Kabel vom Case kommen auf die eine Seite rein vom pokepow und dann gehen weitere Pins und Kabel weiter vom pokepaw zum Mainboard. Man kann sich das als Man in the Middle vorstellen. Anstatt dass die Kabel direkt verbunden sind, ist der pokepaw als Main in the Middle da drin, dann wird er noch ins Mainboard reingesteckt, um Strom zu bekommen. Genau, super simpel. Ich kann damit jetzt nur meinen Computer neu starten, starten, stoppen. Also da brauchen wir uns nicht anlügen. Das Ding kann nicht viel, ist ganz einfach."
+        },
+        {
+            "start": 1790720,
+            "end": 1792720,
+            "speaker": "A",
+            "text": "Aber was ist der Use Case davon?"
+        },
+        {
+            "start": 1792720,
+            "end": 1849230,
+            "speaker": "C",
+            "text": "Vielleicht auch dazu, wie die Idee entstanden ist. Schon lange her, zwei tausend ein und zwanzig schrieb mir ein Kollege und Hey, es gibt hier so Remote Start Fernbedienung für Computer, aber nur mit Cloud. Gibt es da was ohne Cloud? Weil ich halt viel mit Home Assistant zu der Zeit auch gemacht habe, hat er mich gefragt und sein Problem war halt, der VR PC, den er im Wohnzimmer stehen hatte, war irgendwo hoch im Schrank und kam man nicht dran. Und wenn man auf der Couch ist und ihn ausschalten möchte oder so, oder automatisch ausschalten möchte, wenn man ins Bett geht und es vergessen hat, dann zieht er halt die ganze Nacht Saft. VR PCs haben ja auch eine dicke GPU drin, die dann auch ihre, weiß nicht, fünfzig, sechzig Watt im Idle verbrauchen. Und das wollte er lösen. Und dann dachte ich, das finde ich krass, dass es kein Gerät gibt, was ohne Cloud ist zu dem Zeitpunkt. Und ich finde es halt nicht so sinnvoll, einen Schalter durch das ganze Internet zu schieben nach China Server und dann wieder zurück, um halt was an und auszuschalten, egal worum es geht, ob Licht oder der Pokéball in dem Falle."
+        },
+        {
+            "start": 1849390,
+            "end": 1853630,
+            "speaker": "B",
+            "text": "Was verbraucht so ein Teil dann schlussendlich, Weil du gesagt hast, es geht natürlich"
+        },
+        {
+            "start": 1853630,
+            "end": 1866230,
+            "speaker": "C",
+            "text": "auch um den Stromverbrauch der Pokébau, das habe ich noch nicht gemessen, aber das ist ganz wenig Watt oder so zwei vielleicht, wenn überhaupt. Also das Höchste, was halt USB rausbringen könnte."
+        },
+        {
+            "start": 1866310,
+            "end": 1893400,
+            "speaker": "A",
+            "text": "Aber da gibt es jetzt wirklich nichts anderes. Also ich meine, ich denke da an Steckdosen, die ich mit Tasmota flashen kann. Von Shelly ist er ja bekannter Hersteller. Und dann, wenn wir über einen Computer sprechen, dann sprechen wir ja auch oft über Sachen, die irgendwie Wake on LAN oder Wake on Voltage oder so. Kann jetzt zum Beispiel mein Intel Nucier, wenn Strom drauf ist, dass er automatisch hochfährt. Sowas gab es wirklich nicht, keine Alternative."
+        },
+        {
+            "start": 1893560,
+            "end": 1932590,
+            "speaker": "C",
+            "text": "Es gibt Wake on LAN, das funktioniert für diejenigen, die es funktioniert, nutzt es weiter, für die es nicht funktioniert, wie für mich und andere. Es ist nicht immer stabil, es hängt sehr viel vom Mainboard Hersteller ab, vom Router. Und für mich war das keine Lösung und für ihn damals auch nicht. Funktioniert einfach nicht vernünftig. Das Steckdosenproblem ist ja, man kann Mainboards meistens so konfigurieren, dass wenn die Strom kriegen, gehen die automatisch an. Aber ausmachen ist halt der Mann mit dem Hammer, der Baseboard, das ist halt kein sauberes Herunterfahren. Und diesen einen Problem Case wollte ich halt mit diesem ganz einfachen Powerbutton Remote halt lösen. Wirklich, ich habe es auch extra klein gehalten, damit ich mein erstes Elektrikprojekt nicht direkt völlig überbaue und sofort aufgebe."
+        },
+        {
+            "start": 1932590,
+            "end": 1960850,
+            "speaker": "B",
+            "text": "Und nochmal zum Verständnis, du greifst dann wirklich am Motherboard auf diese Pins, also ich schließe diese Pins wirklich am Motherboard an. Keine Ahnung, ob man das heute noch kennt. Wir in unserem Alter kennen das noch alle, weil wir Computer zusammengebaut haben, sonst kennt es vielleicht niemand mehr. Aber da, wo man früher so diese ganzen Keyboard Geschichten, leds und so diesen, keine Ahnung, ob der einen Namen hat, wo diese ganzen Pins rausschauen und dann macht man mit diesen Mini Steckerchen, steckt man die oben rein und genau darauf greifst du dann zu, oder?"
+        },
+        {
+            "start": 1960850,
+            "end": 2053150,
+            "speaker": "C",
+            "text": "Genau, das nennt sich häufig Frontpanel, aber das ist tatsächlich die Nische. Derjenige, der einen PC gebaut hat, weiß, was los ist, die anderen halt nicht. Aber im Endeffekt, dieser Knopf wird ja per Kabel dort verbunden Und dann was macht der Knopf aber im PC Case? Der schaltet halt kurz, der macht kurz einen Kurzschluss und dann lässt man los und dann geht der Rechner ja an. Und wenn der Rechner an ist, passiert das Gegenteil. Dann sendet er ein Signal hey, zum Betriebssystem, es wird jetzt heruntergefahren, ist auch egal, welches Betriebssystem das ist, das wird als sauberer Herunterfahrbefehl akzeptiert. Und der Vorteil, den ich dann noch haben konnte oder einbauen konnte, ist, dadurch, dass ich dort den Pokéball als man in the middle habe, kann ich ja den Knopf, den Power Knopf vom Case als Sensor nutzen. Das heißt, wurde gedrückt, dann reagiere ich darauf. Ich habe dann einfach auch die Idee gehabt, oder besser gesagt, auf einem Home Assistant Meetup kam dann einer auf mich zu und Mach doch da mal ein Schloss rein. Meine Kids, die zocken zu viel und ich möchte, dass die eine geregelte Zockzeit haben. Und das war eine super Idee. Dann habe ich das umgebaut und jetzt kann man halt man kann den Knopf vorne am PC drücken, der poképaw registriert das auch und sendet das auch zu Home Assistant, dass der gedrückt wurde. Wenn das Schloss aber aktiv ist, dann geht halt nicht an. Das heißt, man sitzt da so als digitales Schloss dazwischen. Und deswegen habe ich da auch ein bisschen Ich habe dann so ein Blueprint erzeugt, das ist so eine Home Assistant Entität, so eine Automation. Und da kann man halt mit dem Kalender sagen, okay, montags bis donnerstags gar nicht freitags, Samstag, sonntags jeweils eine Stunde spielen und dann kann man es im Kalender packen, dass das Schloss automatisch an und ausgeht und hat dadurch quasi so eine Parential Control für sein Gaming PC gebaut."
+        },
+        {
+            "start": 2053150,
+            "end": 2059590,
+            "speaker": "A",
+            "text": "Aber wie kann ich mir dieses Graceful Shutdown vorstellen? Ähnlich wie so ein SIG Hub Signal auf der Shell."
+        },
+        {
+            "start": 2059590,
+            "end": 2081800,
+            "speaker": "C",
+            "text": "Da wird ein ACPI Befehl oder so geschickt, der dann einfach akzeptiert wird vom Mainboard. Also wenn dieser Pin kurzgeschlossen wird, während es aktiv ist, dann geht das ans Betriebssystem und er sagt dann, das ist ein ACPI Signal, sauberes Herunterfahren bitte. In der virtuellen Welt gibt es das ja auch. Es gibt ja die Konsolen von einem V Server, also von der VM. Und da kann man ja auch ein Herunterfahrsignal schicken. Ist halt dann nur virtuell in dem Sinne."
+        },
+        {
+            "start": 2081800,
+            "end": 2107590,
+            "speaker": "A",
+            "text": "Jetzt hattest du schon von diesem Schloss erzählt, von diesem Parental Control. Und jetzt stelle ich mir so vor, okay, das Kind kommt dann dahin, will zocken, drückt auf an und poképaw sagt, nö, heute nicht oder jetzt nicht, weil das im Home Assistant anders konfiguriert ist. Jetzt hattest du auf dem Home Assistant aber noch von einem anderen Use Case erzählt, dass nicht nur Kinder an und aus Buttons drücken. Was ist ein unerwarteter Use Case, der dir zugetragen wurde?"
+        },
+        {
+            "start": 2107670,
+            "end": 2126710,
+            "speaker": "C",
+            "text": "Ja, das Internet ist ja eigentlich dafür da, um Katzenvideos zu haben und dadurch ist es entstanden, denke ich. Und es gibt viele, viele Katzen, die auf Rechnern sitzen, weil der warm ist. Und wenn die dann drauf treten, dann wird halt einfach ein Herunterfahrsignal ausgefüllt und zack ist die Gaming Session oder was man auch immer gerade macht, vorbei. Und das fand ich sehr lustig, dass einer das dann haben wollte."
+        },
+        {
+            "start": 2126710,
+            "end": 2150160,
+            "speaker": "A",
+            "text": "Also eigentlich ein Katzenschloss, wenn man so möchte, auch. Ja, okay, da bin ich ja froh, dass ich keine Katze habe bzw. Mein Labrador, der ist so groß, ich bin mir nicht sicher, ob der diesen kleinen Button drücken können würde. Jetzt ist die Story ja, dass ein Bekannter oder ein Freund von dir auf dich zukam. Was ist denn deine Motivation, die ganze Sache zu starten? Was waren denn deine persönlichen Ziele für das Projekt überhaupt? Weil im Endeffekt könntest du, wolltest du jetzt nur deinem Freund helfen?"
+        },
+        {
+            "start": 2151040,
+            "end": 2186940,
+            "speaker": "C",
+            "text": "Ich habe meinem Freund definitiv schnell geholfen, indem ich was zusammen selbst gelötet habe. Aber was war die Motivation? Die Motivation, das kann nicht so schwer sein. Also dieser doofe Satz, den man sich denkt, es kann nicht so schwer sein, das zu bauen. Und dann Prototypen hatte ich relativ fix dann da. Das hat dann auch Spaß gemacht, dass das funktioniert hat. Und dann, ja, dann dachte ich, wie cool wäre das in der Theorie, wenn jemand das einfach kaufen kann. Also ich finde diesen Gedanken einfach toll. Ich weiß nicht warum, keine Ahnung. Den habe ich einfach schon länger. Es wäre einfach schön, wenn jemand mal was kauft, was fertig ist. Und dann dachte ich, ja komm, spielst du das Spiel einfach mal durch? Einfach mal durchspielen."
+        },
+        {
+            "start": 2186940,
+            "end": 2202820,
+            "speaker": "A",
+            "text": "Leite uns mal durch die Anfangszeit. Wie hast du begonnen? Denn ich bin Software Mensch. Ich glaube, ich würde mich jetzt erst mal in der Recherche sieben Tage lang verlieren. Aber wir sind ja hier bei the more you fuck around, the more you find out. Also wie hast du gestattet?"
+        },
+        {
+            "start": 2202820,
+            "end": 2290040,
+            "speaker": "C",
+            "text": "Sieben Tage ist auf jeden Fall hart untertrieben, für mich zumindest. Ich habe ja keine Ahnung von Elektronik. Und dann habe ich einfach mal geschaut, was andere Leute gemacht haben, um solche kleinen Schaltsignale zu machen. Es gibt schon etliche solcher kleinen Hobbyprojekte. Und dann habe ich eine Gemeinsamkeit gesehen, und zwar, dass die alle so einen Optokoppler genutzt haben. Da habe ich mir okay, was ist ein Optokoppler? Das ist im Endeffekt so ein Gerät, da hast du einen Eingang, der dann quasi messen kann, okay, hier ist ein Signal, also im Endeffekt high low, also drei komma drei Volt kommen da an. In diesem Optokoppler ist dann eine LED mehr oder weniger. Und auf der anderen Seite ist ein Photoresistor, der das Signal annimmt. Und wenn der auf der einen Seite hochgeschaltet wird, geht auf der anderen Seite ein Signal durch. Das heißt, wir machen einen elektrischen Schaltkreis auf der einen Seite durch Licht geben wir diese Information an einen zweiten elektrischen Schaltkreis. Das ist so eine galvanische Trennung, nennt man das. Und dieses Teilchen wurde immer wieder bei diesen Projekten benutzt. Und dann habe ich YouTube Videos gefunden und Schaltpläne und habe mir das einfach mal bestellt, dieses Modell. Und versuch mal selber auf einem kleinen Breadboard zu löten. Und dann habe ich tatsächlich auch einfach nur ein Breadboard genommen, ESP reingesteckt, diese Optokoppler, die zwei Widerstände, die man da brauchte für die Schaltung und habe das eiskalt einfach direkt in meinen Server angeschlossen. Und ich hatte auch ein bisschen Bammel, weil ich habe keine Ahnung gehabt zu dem Zeitpunkt. Ich hatte jetzt nicht einfach so Computer Hardware ohne Ende rumfliegen. Ja, und dann hat das tatsächlich einfach mal funktioniert nach einer Zeit, bis sich das Herausgehen gefunden hatte."
+        },
+        {
+            "start": 2290040,
+            "end": 2301200,
+            "speaker": "A",
+            "text": "Du hast schon von deiner neuen Hassliebe gesprochen, zumindest hast du sie so und so vorgestellt. Löten. Warum magst du löten nicht? Beziehungsweise wann hast du diese Hassliebe entwickelt?"
+        },
+        {
+            "start": 2301280,
+            "end": 2399840,
+            "speaker": "C",
+            "text": "Das Löten brauchen wir mit dem Breadboard ja noch nicht. Also alles cool. Das Breadboard funktioniert, das heißt, der Prototyp geht, Code ging, Hardware ging. Jetzt muss man das nur noch in so ein Paket bringen, was ich meinem Freund halt geben kann und jetzt so lose Kabel und Breadboard in PC einzubauen ist ja auch nicht die feine Art. Dann habe ich per Hand mal so ein Prototyping Board gelötet und ich glaube meine Lötskills waren nicht gut genug da hat halt nur die Hälfte funktioniert. Also einer dieser Knöpfe hat funktioniert, der andere nicht und ich habe nicht verstanden warum, obwohl ich das exakt gleich gemacht habe und da fing es schon an mit gut vielleicht kannst du es einfach nicht, dann lernt man da ein bisschen drüber vielleicht Übung. Irgendwann habe ich dann gesagt, okay jetzt per Hand löten macht halt gar keinen Spaß das ist wirklich alles per Hand, wo man dann wirklich auch so eine mit Lötzinn so eine Brücke baut. Ich möchte schon so ein kleines Steckplatinchen haben, wo ich dann die Komponenten draufpacke und nur die fünf, sechs Komponenten verlöte. Was ich dann gemacht habe ist habe mir geguckt angeschaut wie macht man denn so Platin und da gibt es dann wahnsinnig viel Software, zu viel kommerziell und teuer Open Source mit Keycard und aber auch eine freie oder ein freies Tool von JCPCB das so ein riesen Platinenhersteller, die auch so ein Web Tool haben und das habe ich mir einfach bei YouTube angeguckt und das war super easy so vom ziehen und hier eine Linie hin machen von dem Pin, dann möchte ich das dahin, da kommt man die Platine dann design nach ein paar YouTube Videos war das Ding dann durch und dann habe ich mir die Platinen kommen lassen und habe mal rumgelötet und das hat auch funktioniert. Dieser Teil war gut. Ich habe aber auch mal gemessen wie lange ich für so ein blödes Board brauche und habe dann gedacht oh mein Gott, das wird ja gar keinen Spaß machen, wenn ich davon mal zehn Stück verkaufen möchte Allein da hat mich das schon zwei Stunden oder so kostet."
+        },
+        {
+            "start": 2399840,
+            "end": 2408720,
+            "speaker": "B",
+            "text": "Wie viel Teile hast du da gehabt, dass man sich das so vorstellen kann? Also wie groß war das oder wie viel fliegende Teile hast du da dran gelötet dann am Ende Es war der"
+        },
+        {
+            "start": 2408720,
+            "end": 2438460,
+            "speaker": "C",
+            "text": "ESP eins für den ESP brauchte jemand zwei Female Sockets nennt man das, wo man einfach reinstecken kann so sind wir bei drei, dann zwei Optokoppler, zwei Widerstände und auch zwei Pins, also knapp zehn Teile plus minus. Ich weiß jetzt nicht ob da noch eins fehlt, war nicht viel, aber meine Skills sind nicht so hoch gewesen, dass ich da Spaß dran hatte, das einen halben Tag machen zu können, damit ich dann irgendwie zehn oder so verkaufen könnte. Und dann habe ich mal die Zeit gemessen, mein Stundenundang. Nee, nee, das kann nicht sein."
+        },
+        {
+            "start": 2438700,
+            "end": 2454220,
+            "speaker": "A",
+            "text": "Also du hast dich wirklich eigentlich hingesetzt, die ganze Sache auf dem Breadboard einmal gemacht, dann dir eine Platinendesign, ich glaube PCB ist das Fachwort dafür, hingesetzt, dann mal Geld in die Hand genommen, zehn Stück, weiß ich nicht, drucken, ich glaube"
+        },
+        {
+            "start": 2454220,
+            "end": 2456490,
+            "speaker": "C",
+            "text": "ätzen, ja, ätzend sagt man glaube ich,"
+        },
+        {
+            "start": 2456810,
+            "end": 2467090,
+            "speaker": "A",
+            "text": "oder bestellen oder bestellen, was die dann da hinten dran machen. Okay, dann kommen die an und dann hast du dich mit so einer Sportstoppuhr daneben gesetzt und hast einmal gelötet, oder wie darf ich mir das vorstellen?"
+        },
+        {
+            "start": 2467090,
+            "end": 2470970,
+            "speaker": "C",
+            "text": "Ja, ich wollte wissen, wie lange braucht man denn für sowas? Ist das was Sinnvolles?"
+        },
+        {
+            "start": 2470970,
+            "end": 2479690,
+            "speaker": "B",
+            "text": "Aber zum Verständnis, diese bcbs, das waren Standarddinger. Also da hast du jetzt noch kein spezielles Design angefordert oder waren das schon,"
+        },
+        {
+            "start": 2479690,
+            "end": 2481750,
+            "speaker": "C",
+            "text": "Das war mein Design, was ich be bestellt habe."
+        },
+        {
+            "start": 2481750,
+            "end": 2485150,
+            "speaker": "B",
+            "text": "Okay, also es waren schon Customized bcps, keine Standard bcps."
+        },
+        {
+            "start": 2485310,
+            "end": 2507790,
+            "speaker": "C",
+            "text": "Ja, ich habe wirklich nur die Pins, die ich brauche, habe ich exposed an anderer Stelle, so dass ich dort, also von dem espins habe ich irgendwo hingezogen, damit der Optokoppler durchgeht, der Widerstand, dass ich bestimmte Stellen habe, wo ich die reinlöten muss und das war's. Das ist auch einfach zum Nachmachen. Das gibt es auch immer noch bei mir auf dem GitHub. Das kann man sich dann auch nachmachen, wenn man mag."
+        },
+        {
+            "start": 2508150,
+            "end": 2517670,
+            "speaker": "B",
+            "text": "Kannst du mal erklären, wie das funktioniert? Wie macht man so ein Customized? Rufe ich da irgendwo an und hey, leg mir da die Leitung von links nach rechts oder wie funktioniert das dann am Ende wirklich?"
+        },
+        {
+            "start": 2517750,
+            "end": 2646360,
+            "speaker": "C",
+            "text": "Ich hatte auch keine Ahnung und habe dann einfach mal, wie gesagt, YouTube gefunden, da hat einer dieses Tutorial gehabt über Easy EDA, heißt diese Webanwendung von JCBCB und dort ja gut, da bestimmt man erstmal, wie groß ist das Platinchen, was man haben möchte. Dann gibt es dort ganz viel, gibt es da so eine Art Bibliothek, dann kann man seine Teilchen suchen, die mehr oder weniger verfügbar sind, also im Sinne von, wie einfach das zu finden ist. Ich habe dann einfach mal ESP so und so eingetippt, dann gab es da so ein ESP als Modell, das zieht man dann da einfach rein. Das gleiche hat man auch mit dem Optokoppler gemacht und mit den Widerständen. Standardteile sind relativ einfach zu finden und dann hat man die Leiterbahn von dem Pin vom ESP dorthin gezogen, wo die halt hin sollen zum Optokoppler, zum Widerstand und hat das einfach gemacht. Dann gibt es da so eine automatische Funktion fürs Routing, dass der einfach guckt, okay, gibt es da gibt es ja ganz viele elektrische Gegebenheiten, die ich nicht kenne, die für so eine Platine sehr sehr wichtig sind. Bei meiner Platine war nichts wichtig, weil ich keine Daten darüber schiebe, keine Hochfrequenzsignale habe. Aber wenn man jetzt zum Beispiel USB Signal drüber schiebt, bei fängt das schon an, da müssen Leiterbahnen zum Beispiel exakt gleich lang sein, weil das ein differenziales Signal ist. Wenn das eine Leiterbähnchen da wirklich einen Millimeter kürzer ist, dann ist das Signal kaputt Und diese Dinge, die musste ich Gott sei Dank noch nicht benutzen, weil der ESP, den ich genutzt habe, diese ganze Komplexität in diesem Chip drin hat. Das heißt, ich musste wirklich nur ganz einfach diese fünf, sechs Komponenten exposen und in richtige Reihenfolge schalten, wenn man das dann gemacht hat und deswegen habe ich auch Easy EDA genommen zu dem Zeitpunkt kann man einfach in der Weboberfläche Sachen sagen Gerber File erstellen, das ist so eine Art Standard, den ganz viele Platinen Firmen annehmen und das ist so, da steht dann, dass die Bomben drin, die Bill of Materials, also welche Teile sind da, da ist das Platinenlayout drin, da ist auch alles mögliche drin, damit du diese Platine herstellen kann, also ätzen kannst Und dann kann man die bei den sehr einfach hochladen und kommt direkt in so eine Art Bestellprozess rein Und dort gibt es dann viel zu viele Fragen, die ich nicht auch beantworten konnte, was für ein Service Finish man haben möchte und was weiß ich und ich habe alles auf Standard gelassen. Das einzige, was ich mir ausgesucht habe, ist, ich wollte eine schwarze Platine haben,"
+        },
+        {
+            "start": 2646600,
+            "end": 2672680,
+            "speaker": "B",
+            "text": "weil schwarz halt und das Ganze wird dann ist eine chinesische Firma, oder? Und die schichtet es dann Hast du dich da auch zufällig erkundigt, ob es irgendwas in Europa gibt oder so? Weil was ich so von so Designern gehört habe, die so Platinen designen, ist, dass es in Europa einfach auch kaum Leute gibt oder also Firmen gibt, die dir das auch in sinnvoller Zeit liefern können. Also gar nicht, jetzt abgesehen mal vom Preis, aber einfach in sinnvoller Zeit auch so kleine Stücke."
+        },
+        {
+            "start": 2673870,
+            "end": 2708290,
+            "speaker": "C",
+            "text": "Ich habe damals das nicht gewusst, aber muss ja nicht so tun, als ob ich damals wäre, sondern ich weiß, dass es jetzt auch in Deutschland auch zum Beispiel eine Firma gibt, Eisler heißt sie, mit der hätte ich das vielleicht auch mal probieren können damals. Das wusste ich allerdings nicht. Ich arbeite jetzt auch noch mit einem anderen europäischen Hersteller, Soldrid heißen die, die sitzen in Kroatien, aber das war mir zu dem Zeitpunkt alles nicht bewusst. Und man muss auch sagen, das sagen auch viele, die Prototypen, die ersten, das macht tatsächlich Sinn, das in China zu machen, weil vom Preis Leistung her wahnsinnig gut sind. Und die nehmen auch Kleinaufträge ganz entspannt an. Die kleinste Stückzahl, die man da bestellen kann, ist fünf Platinchen und dann kriegt man die."
+        },
+        {
+            "start": 2708290,
+            "end": 2709650,
+            "speaker": "B",
+            "text": "Was kostet sowas dann?"
+        },
+        {
+            "start": 2709650,
+            "end": 2719890,
+            "speaker": "C",
+            "text": "Ja, ich glaube so um die zehn, aber das war noch nicht bestückt. Das heißt, das muss man selber löten. Wenn wir bei der Bestückung reden, dann sind wir ganz schnell bei ganz anderen Preisen."
+        },
+        {
+            "start": 2719890,
+            "end": 2726530,
+            "speaker": "B",
+            "text": "Also wenn die Leute das dann auch löten, also ziemlich sicher dann Menschen auch wirklich löten bei dieser Stückzahl höchstwahrscheinlich."
+        },
+        {
+            "start": 2727100,
+            "end": 2771470,
+            "speaker": "C",
+            "text": "Das kommt tatsächlich darauf an, das habe ich dann auch gelernt. Es gibt sogenannte verschiedene Größen von Komponenten in diesem Feld. Through Hole, ich weiß gar nicht, wofür das dritte T steht, vielleicht ist auch kein drittes T drin, Egal. Das sind die Komponenten, die man durch so ein Loch steckt und dann hat man so ein Beinchen, biegt das weg und dann lötet man das fest. Das wird nicht per Maschine gemacht, das wird immer per Hand gemacht. SMD Bauteile hingegen, das sind kleinere, da gibt es auch Abstufungen für welche, die wirklich wirklich klein sind, die können von der Maschine gemacht werden. Und ich glaube selbst, also alles was SMD ist, das werden die mit der Maschine löten, auch wenn es nur fünf Stück sind. Das kostet dann aber auch richtig Geld, also nicht richtig, also dann rede mal schnell von ein hundert, zwei hundert für so fünf Stück anstatt zehn."
+        },
+        {
+            "start": 2771790,
+            "end": 2802620,
+            "speaker": "A",
+            "text": "Jetzt hast du die erste Platine zu Hause, baust sie in deinen Computer ein und du musst sie ja irgendwie steuern. Da gibt es ja irgendwie Funk. Das Problem ist ja damals, als ich noch die Rechner gebaut habe, ein Computer ist ein Metallgehäuse, da gibt es diesen Begriff faradäischen Käfig den ich zumindest mal gelernt habe in der Physik, glaube ich. Und das Problem ist, wenn du in einem Metallkäfig sitzt, zum Beispiel in einem Auto, bist du auch mehr oder weniger sicher vor Blitzen und so weiter und so fort, weil bist du in einem Metallkäfig, sofern du natürlich den Metallkäfig nicht"
+        },
+        {
+            "start": 2802620,
+            "end": 2808380,
+            "speaker": "B",
+            "text": "berührst, oder backt jemand die absoluten Grundkenntnisse aus? Sehr schön."
+        },
+        {
+            "start": 2808380,
+            "end": 2837040,
+            "speaker": "A",
+            "text": "Andi, ich hab mich nass gemacht, nass und nackt gemacht. Ich bin kein Physiker, aber das ist mir auch völlig egal. Ich hoffe, ich hab's richtig beschrieben und man wird mich jetzt hier nicht verbrennen. Jetzt ist es aber so, wie erreicht denn mein Home Assistant deine Platine? Denn wenn ich da einen Metallkäfig drum habe, dann, Also jeder, der schon mal irgendwie versucht hat, seinen WLAN Router in so einen kleinen Serverrack zu packen, was zu ist, weiß genau, wovon ich gerade rede. Da kommt einfach kein Signal durch. Wie hast du dieses Problem gelöst?"
+        },
+        {
+            "start": 2837120,
+            "end": 2993390,
+            "speaker": "C",
+            "text": "Das Problem hatte ich für meinen Kollegen Gott sei Dank nicht, weil er hatte sein PC, hat er selber D gedruckt, sein Gehäuse. Also das war okay. Aber ich bin auf das Problem gekommen. Es gab nämlich dieses eine Konkurrenzprodukt, Konkurrenz. Es gab ein Produkt, das das Ding schon machte, aber die hatten halt auch eine Platine auf dem ESP selber drauf, auf dem Platinchen, ne? Die hatten eine Antenne auf dem Platin, so rum. Und die ist natürlich nicht so toll in einem Metallkäfig, wie du schon sagtest. Und das war auch tatsächlich einer der großen Kritikpunkte, den man bei den ganzen Bewertungen gesehen hat. Das habe ich mir zu Herzen genommen, gesagt, das muss ich anders machen, weil das bringt nichts, wenn ich das dann baue und dann hat das keinen Empfang. Und da habe ich dann gesehen, es gibt auch ESP Module, die einfach einen externen Antennenanschluss haben. Das heißt, man kann da einfach eine kleine Antenne dranhängen, die kann dann zwanzig zentimeter lang sein und dann kann man die hinten aus dem PC raushängen lassen oder mit was hier Adhesiv Kleber oder so ans Metallgehäuse kleben. Da hat man ja immer Platz bei den PCI Slots, die sind häufig auch gelöchert oder das sind halt so Slots drin, da kann man die durchangeln. Und dann dachte ich, das probiere ich mal. Und da kommen wir, glaube ich, auch zum Punkt, warum ich löten gar nicht mag. Und zwar habe ich dann diese Platinen gesucht, die es mir erlauben, die externe Antenne zu nutzen. Habt ihr auch welche gefunden und bestellt? Gibt es meistens im Fünferpack diese esps. Ja, das Problem war, was ich nicht wusste, dass die auch eine Onboard Antenne hatten Und man muss um diesen externen Anschluss nutzen zu können, muss man einen ganz kleinen Widerstand, der keinen Zero Ohm, also Null Ohm Widerstand, muss man umlöten von einer Position auf die andere, damit man die interne Platinen Antenne deaktiviert und die externe Antenne aktiviert. Und ich habe es wirklich aus Verrecken nicht hinbekommen, dieses Mini Sandkorn große Widerständchen. Ich habe es, ich habe alles andere weggelötet von der Platine, nur nicht dieses Sandkörnchen. Ich habe es hingekriegt, den Widerstand wegzulöten, aber nicht an die richtige Stelle wieder dran zu bekommen. Ich war entweder zu doof dafür schlechtes Equipment oder beides. Und irgendwann habe ich dann mir so eine Hot Air Gun extra bestellt. Also einfach kannst du das vorstellen wie so ein Föhn, der einfach alles warm macht, dass man ganz vorsichtig damit Highlight, der macht das Lötzinn warm, da kann man die Teile verschieben und das hat leider überhaupt nicht funktioniert. Das Ding hat alles weggepustet. Okay, neuer Versuch mit weniger Luft. Und dann habe ich das hat nicht geklappt. Und dann bei meinem fünften letzten ESP habe ich das so weggeschoben, dachte ja, vielleicht kriegst du jetzt hin, musste niesen und dann flog mir das Ding weg und da habe ich das Ding in die Ecke gepfeffert und gesagt, nee, ich hab keinen Bock mehr darauf. Ich mache das nicht mehr."
+        },
+        {
+            "start": 2993470,
+            "end": 3000910,
+            "speaker": "A",
+            "text": "Du machst das nicht mehr mit diesen ESP und du hörst jetzt auf. Also wirklich Abbruch, Abbruch, Abbruch oder was war da los?"
+        },
+        {
+            "start": 3001200,
+            "end": 3027680,
+            "speaker": "C",
+            "text": "Kompletter Abbruch. Ich habe so keinen Bock mehr gehabt. Ich habe das ganze Projekt abgebrochen. Ich habe gesagt, ne, wenn ich das nicht hinkriege und das daran scheitert, das ist ja eine Katastrophe. Und dann habe ich ein paar Tage später habe ich auf meinem Blog, wo immer, wo ich immer meine Schritte beschrieben habe, geschrieben, nee, Projekt abgebrochen auf GitHub Projekt abgebrochen. Hier sind die Fights, könnt ihr machen, was ihr wollt. Ich hatte einfach keine Lust mehr. Das ging mir so auf den Keks, diese Löterei. Das ne Hardware Debugging war einfach nervig."
+        },
+        {
+            "start": 3028080,
+            "end": 3042880,
+            "speaker": "A",
+            "text": "Kennst du dieses Meme im Internet da wo siehst du so ein relativ altes Büro und irgendwie so ein Mensch in so einem riesengroßen Panda Kostüm und der geht dann da einfach hin und räumt einfach diese großen CRT Monitore ab. So stelle ich mich gerade vor, wie du einfach deinen Lötkolben so in die Ecke wämst."
+        },
+        {
+            "start": 3043280,
+            "end": 3055800,
+            "speaker": "C",
+            "text": "Ja genau. Also so war es. Ich habe hier Fliesen, die sind so hellgrau und diese Widerstände sind auch hellgrau und Sandkorn groß und ich habe einfach wirklich die Krise gekriegt, weil ich das nicht mehr machen wollte."
+        },
+        {
+            "start": 3055800,
+            "end": 3085210,
+            "speaker": "B",
+            "text": "Ich hätte noch eine Frage kurz zum Hardware Design. Wenn du da so an den Book gekommen bist, so wenn du jetzt im Nachhinein da nochmal drauf blickst, war das möglichst einfach dieser Start, weil Optokoppler klingt ja für mich schon relativ aufwendig, galvanische Trennung und ich kenne ja auch ganz viele Schalter, die gar nicht galvanisch getrennt sind, meines Wissens zumindest. War das schon gewisser Weise over engineered das Ganze? Oder würdest du sagen, es war einfach schon so, was man minimal eigentlich machen muss oder war das Hardware Design auch schon zu komplex, das du gewählt hast?"
+        },
+        {
+            "start": 3085210,
+            "end": 3110240,
+            "speaker": "C",
+            "text": "Ne, ich würde sagen, das ist nicht zu komplex gewesen. Ich habe es bewusst sehr sehr simpel und einfach gehalten. Ich glaube, ich kann das auch sagen, weil jedes Hobbyprojekt, welches das nutzt, nutzt entweder diese Optokoppler oder mosfets. Und mosfets fand ich komplexer und habe ich es auch nicht ganz verstanden. Von daher, das war okay, Das habe ich auch verstanden. Ich glaube komplexes, wenn man es nicht mehr ganz versteht und wenn man es anderen nicht erklären kann, dann wird es zu komplex. Aber das ging."
+        },
+        {
+            "start": 3110320,
+            "end": 3118610,
+            "speaker": "B",
+            "text": "Also es war wirklich die Hardware und manuelle Leistung, die mit den Händen, die die dich zum Ende gebracht hat, sozusagen."
+        },
+        {
+            "start": 3119090,
+            "end": 3131810,
+            "speaker": "C",
+            "text": "Ich bin ein ungeduldiger Mensch und ich kann nicht so filigran Arbeit, das weiß ich und ich habe mich versucht dazu zu zwingen, aber habe irgendwann Akzeptanz walten lassen, dass ich damit OK bin, dass"
+        },
+        {
+            "start": 3131810,
+            "end": 3147690,
+            "speaker": "A",
+            "text": "ich das jetzt nicht kann, was ich ja liebe. Du hast das Projekt abgebrochen und einfach mal alles Open Source, aber wir reden jetzt hier von der Vergangenheit und mein letzter Stand, du arbeitest wieder an diesem Projekt. Also woher kam die Motivation, die neue bzw. Alte Energie, das Projekt wieder aufzunehmen?"
+        },
+        {
+            "start": 3148090,
+            "end": 3236180,
+            "speaker": "C",
+            "text": "Ja, ich weiß leider, ich habe nachgeguckt, ich wollte wissen, wie lange ich eine Pause gemacht habe, aber ich habe die Info nicht mehr gefunden. Ich habe wahrscheinlich einen Force Push gemacht bei GitHub irgendwo, aber ich glaube so anderthalb Jahre habe ich da nichts mehr dran gearbeitet und auch komplett ignoriert. Ich habe auch keine Gedanken dran verschwendet. Aber über die Zeit, da ich über meine Entwicklung, weil ich das cool finde, wenn ich mag das total gerne Leuten zu folgen, die Lernprozess dokumentieren, wenn die etwas lernen, so von Pike auf und gar keine Ahnung haben. Und das habe ich mir dann auch vorgenommen, habe dann so fünf, sechs Blogposts dazu geschrieben und aus irgendwelchen Gründen kamen immer wieder Leute und vermehrt aus den Niederlanden, was ich komisch finde, aber ist doch so. Die mich gefragt haben, hey, ich würde das Ding gern kaufen, kann man das irgendwo kaufen? Ich habe keine Lust zu löten, das haben die so gesagt, weil die Dateien waren ja frei zur Verfügung. Du konntest dir das selber bei JCPCB selber kaufen und ich habe auch eine Anleitung gehabt, wie man das macht, aber die Leute hatten da keinen Bock drauf. Völlig verständlich, kann ich nachvollziehen. Ich mag ja Leuten auch nicht. Und dann habe ich zwischendurch noch Leuten auch noch Platinchen fertig geschickt, ich glaube zehn Stück nachher noch einfach Freundschaft hier bezahlen, Versand, dann kannst du haben. Und irgendwann waren das dann halt drei hundert Leute, die auf meiner, auf meinem Blog sich angemeldet hatten für den Newsletter für dieses eine Thema. Und da dachte ich so, irgendwie scheint das ja doch ein kleines Interesse zu haben. Vielleicht gucke ich mal ja doch, wie man das angehen könnte. Also es hat lange gedauert, bis ich das dann akzeptiert habe, dass ich das vielleicht doch mal ausprobieren kann. Und ich glaube, die drei hundert war dann so eine magische Grenze. Das sind ja doch schon einige, die das finden."
+        },
+        {
+            "start": 3236260,
+            "end": 3248820,
+            "speaker": "A",
+            "text": "Jetzt hast du ja festgestellt, dass die Produktion einer Platine ein bisschen, wie gesagt, mehr Zeit in Anspruch nimmt, als du dachtest. Und löten ist nicht dein Hobby oder beziehungsweise wird es, glaube ich, in diesem Leben nicht mehr. Was hast du anders gemacht als im ersten Versuch?"
+        },
+        {
+            "start": 3248820,
+            "end": 3333180,
+            "speaker": "C",
+            "text": "Ja, ich weiß gar nicht warum, aber irgendwie kam mir der Gedanke, wieso kann ich nicht jemanden bezahlen, der die Arbeit macht, die ich nicht mag? Und das ist halt dann das Hardware Design. Und genau das habe ich gemacht. Ich habe einfach gesagt, okay, ich habe jetzt nehmen wir jetzt mal ein bisschen Spielgeld, ein paar hundert und bezahl einfach jetzt mal wen und guck mal, wie weit das kommt. Und man kennt ja diese üblichen Plattformen, Fiverr und Upwork. Ich weiß jetzt nicht, wie gut die sind, Ich habe jetzt nicht so viel Erfahrung mit, aber da habe ich gesagt, ja gut, dann melde ich mich da mal an als nicht alsjeniger, der ein Projekt ausschreibt im Endeffekt. Und ich habe mich erst mal hingesetzt, was ich eigentlich beruflich häufig mache. Ich habe erst mal Requirements zusammengeschrieben. Welche Features haben wir, Was sind die harten Requirements, was für Gegebenheiten möchte ich geben, Maße, welche Teile, welchen Chip? Und ich habe mich erstmal wirklich lange hingesetzt und recherchiert, wie soll dieses Design denn aussehen? Vorgaben, aber nicht Implementierungsdetails. Das ist ja immer das typische, was man ja hat. Implementierungsdetails haben mich nicht interessiert. Mich interessiert nicht jetzt, welchen Wert dieser Kondensator hat, um die wifi Spannung abzufangen, die man braucht. Ne, das soll der Hardware Engineer machen, der das gut kann und ich kümmere mich um das Use Case, um das Produkt mehr oder weniger, so eine Art Produktmanagement im Effekt Produktmanager. Dann habe ich so ein Sechs Seiten Dokument zusammengeschrieben, was ich haben möchte und das dann online gestellt bei Upwork und nach ein paar Tagen haben sich dann einige Leute gemeldet und dann gibt man halt diese diese Bewerbung durch."
+        },
+        {
+            "start": 3333500,
+            "end": 3339100,
+            "speaker": "B",
+            "text": "Das war aber wirklich dein erstes Dokument, was du in dieser Domäne geschrieben hast oder so Requirements Document."
+        },
+        {
+            "start": 3339100,
+            "end": 3354860,
+            "speaker": "C",
+            "text": "Ich habe auch erst gegoogelt, gibt es da was, gibt es da irgendwie Vorlagen, Best Practices, nicht großartig was gefunden Und dann ja gut, dann mache ich es so, wie ich es mir überlege. Ich habe dann versucht so zu schreiben, dass man das nicht missinterpretieren kann und"
+        },
+        {
+            "start": 3354860,
+            "end": 3358620,
+            "speaker": "B",
+            "text": "was dann rückblickend in Ordnung oder hast du irgendwas vergessen?"
+        },
+        {
+            "start": 3358980,
+            "end": 3374540,
+            "speaker": "C",
+            "text": "Natürlich habe ich was vergessen. Es gibt natürlich, ja, das habe ich dann auch gelernt mit der Zeit, dass ein guter Freund von mir mittlerweile, den ich durch dieses Projekt kennengelernt habe, sagte, so drei bis fünf Iterationen von dem Wort sind ganz normal, da kommt man nicht drumrum, Man kriegt nicht den ersten Versuch hin."
+        },
+        {
+            "start": 3374540,
+            "end": 3397710,
+            "speaker": "B",
+            "text": "Wie hast du dann diese Person ausgewählt? Also für mich persönlich, ich habe da auch schon Erfahrung auf diesen Plattformen und das ist eigentlich immer schwierigste, da irgendwie die Richtige Person zu finden oder womöglich auszuwählen. Du hast wenig Einblicke. Es ist irgendwie so nur Kurzzeitprojekt ist ja nicht so, dass man irgendwie persönlich jemand treffen kann und über lange Zeit dann zusammenarbeitet, sondern gerade am Anfang ist es halt so ein One Shot. Wie bist du da vorgegangen?"
+        },
+        {
+            "start": 3398030,
+            "end": 3444310,
+            "speaker": "C",
+            "text": "Das ist eine gute Frage, denn da gibt es dann ja auch Leute, die sich für wahnsinnig niedrige Stundenlöhne und wahnsinnig hohe Stundenlöhne anmelden. Das hängt von Ländern ab, das hängt von Erfahrung ab. Das sind natürlich ganz viele Variablen, die da einspielen. Und ich habe mir gesagt, nee, ich wollte jetzt nicht irgendwie da reinstecken, sondern nur ein paar hundert, um so einen Prototyp mal zu haben, zu gucken, wie die Erfahrung so ist. Und ich habe jetzt nicht das günstigste Angebot genommen, aber schon ein sehr günstiges. Und das kam auch, glaube ich, dadurch zustande, dass die Person damals in Pakistan gelebt hat. Denke mal, es gibt Länder, wo die Lebenshaltungskosten einfach niedriger sind im Vergleich zu Deutschland. Derjenige hatte schon ein bisschen Erfahrung, hatte auf seinem Lebenslauf schon ein paar ESP Projekte drauf und dann dachte ich, ja gut, dann sollte es ja funktionieren. Ich habe da nicht viel, Also es war eher so Budget Constraint, weil ich jetzt nicht als Hobbyprojekt und Zeitprojekt ausgeben."
+        },
+        {
+            "start": 3444620,
+            "end": 3447340,
+            "speaker": "A",
+            "text": "Darf man mal fragen, über welche Beträge wir hier davon reden?"
+        },
+        {
+            "start": 3447420,
+            "end": 3457500,
+            "speaker": "C",
+            "text": "Ich glaube, wir hatten ausgemacht, so um die drei hundert Dollar waren das plus minus für was Genau, für das Design und einen funktionierenden Prototyp am Ende mit ein paar Iterationen, die habe ich dann auch inkludiert."
+        },
+        {
+            "start": 3457820,
+            "end": 3494680,
+            "speaker": "A",
+            "text": "Und in diesen drei hundert Dollar ist das jetzt nur das, ich sag mal in Anführungszeichen, Gehalt oder ist da Hardware mit bei und diese Person kümmert sich da komplett selbst drum? Oder ich meine, weil die Person muss ja auch irgendwie die Hardware vor Ort haben, weil das ist ja jetzt leider kein einfacher Job, den man, ich sag mal, remote machen kann. Obwohl, Achtung, side Fun Fact, Oxide, ich weiß nicht, wer die Firma kennt, Server und so weiter mit eigener Rust Firmware und so weiter, Die haben es so hingekriegt, dass ihre Hardware und Software Engineers auch remote arbeiten können. Aber verlinke ich auch mal in den Show Notes. Aber wie ist diese Person dann aus Pakistan an die Hardware gekommen und sind in diesen drei hundert Dollar auch die, Also ist die Hardware da drin oder"
+        },
+        {
+            "start": 3494680,
+            "end": 3545930,
+            "speaker": "C",
+            "text": "kommt die noch on top, die war on top. Die Bestellung bei JCPCB, die wir dann genutzt haben, war halt on top. Derjenige hatte einfach schon ein kleines Laborchen zu Hause sich eingerichtet mit Netzteil und was weiß ich und Messgeräten mehr als ich auf jeden Fall und hat dann einfach diese Teile bestellt, hat erst mal das Design gemacht, das bestellt und dann selber zusammengelötet, um zu gucken, ob es funktioniert, so Prototypen mäßig. Der Prototyp für sich selber war auch nur eher OK, funktioniert die Schaltung so wie ich mir das vorstelle. Diese Iteration habe ich auch gar nicht bekommen, brauchte ich auch gar nicht. Und dann war das Hardware Design in dem Sinne fertig, dass ich dann, das war auch ein Learning, dass ich dann für die Person bei JCPCB bestellen musste. Der Witz ist nämlich, war mir überhaupt nicht klar, dass derjenige in Pakistan nicht bei JCPCB bestellen konnte oder anders, er konnte bestellen, aber der Zoll liegt bei zwei hundert Prozent, irgendwie sowas zu dem"
+        },
+        {
+            "start": 3545930,
+            "end": 3549330,
+            "speaker": "B",
+            "text": "Zeitpunkt Pakistan, also von China nach Pakistan."
+        },
+        {
+            "start": 3549520,
+            "end": 3566880,
+            "speaker": "C",
+            "text": "Es macht halt gar keinen Sinn, weil es richtig teuer wird. Und dann hat er gesagt, ich muss das bestellen. Er hat mir die Dateien geschickt, habe das dann bestellt, habe das dann von China zu mir gekriegt und dann musste ich wieder ein Paket machen für fünfzig, sechzig Dollar, um das nach Pakistan zu schicken und das dann, ich glaube, drei, vier Mal."
+        },
+        {
+            "start": 3567200,
+            "end": 3573240,
+            "speaker": "B",
+            "text": "Und das war im Endeffekt dann aber billiger, als wenn es direkt von China kurz über die Grenze nach Pakistan geht."
+        },
+        {
+            "start": 3573240,
+            "end": 3595560,
+            "speaker": "C",
+            "text": "Leider ja, aber es wäre smarter gewesen, hätte ich mich für jemanden entschieden, der nicht diese Zollprobleme gehabt hätte, welches Land auch immer. Und derjenige hätte dann autark für sich arbeiten können und auch dadurch viel, viel schneller, weil jedes Mal gehen da zwei Wochen ins Land. Und das ist halt auch, was man da lernt. Man muss schon sehr geduldig sein bei sowas. Das geht nicht wie bei Software. Die Iterationszyklen sind ganz anders jetzt, wenn"
+        },
+        {
+            "start": 3595560,
+            "end": 3621350,
+            "speaker": "B",
+            "text": "du gesagt hast, okay, du hast nach Europa geschickt. Wenn wir schon auf dem Weg nach Europa sind bei so Produkten, dann kommen wir ganz schnell auf das CE Zeichen zu sprechen. Da gibt es ja auch dieses leicht abgeänderte CE Zeichen, was man so auf auf chinesischen Produkten teilweise vielleicht schon mal gehört hat. Das China Export schaut so ähnlich aus wie das CE, das europäische. Was ist es eigentlich? Es ist eine Zertifizierung oder im weitesten"
+        },
+        {
+            "start": 3621350,
+            "end": 3636690,
+            "speaker": "C",
+            "text": "Sinne CE ist keine Zertifizierung. CE ist im Endeffekt eine eidesstattliche Versicherung, dass du sagst, dass du dich an die Normen hältst, die in den Ländern gelten, in denen du es verkaufen möchtest. Europa, Deutschland jetzt in dem Falle, also das europäische CE."
+        },
+        {
+            "start": 3636770,
+            "end": 3669230,
+            "speaker": "B",
+            "text": "Jetzt habe ich ein bisschen verwirrend. Das CE ist halt für irgendwelche Fake Produkte. Wenn man dieses Siegel oder Zeichen, wenn man das in irgendeiner Form faken will, dann kann man es leicht abändern und dann ist es ja China Export. Aber das wissen halt die meisten Kunden nicht. Aber alles, was nach Europa importiert wird oder überhaupt in Europa auf den Markt gebracht wird, ist ja egal, ob es jetzt von China kommt oder du selbst baust in Europa, muss das CE Zeichen haben und du musst bestätigen, dass du alle Regulatorien entsprechend designt hast und geprüft hast. Meines Wissens auch, oder?"
+        },
+        {
+            "start": 3669470,
+            "end": 3675430,
+            "speaker": "C",
+            "text": "Also wenn ich das jetzt, wenn ich den Prototyp bei JC oder wo auch immer bestelle, dann nicht. Erst wenn ich es verkaufe an Konsumenten,"
+        },
+        {
+            "start": 3675430,
+            "end": 3677710,
+            "speaker": "B",
+            "text": "dann muss es genau auf den Markt bringen."
+        },
+        {
+            "start": 3678190,
+            "end": 3689140,
+            "speaker": "C",
+            "text": "In der Theorie muss man das nicht haben für Business Kunden, aber die wollen das natürlich haben, weil die ihr Gesamtprodukt ja auch, falls sie das als Teil nutzen, auch CE zertifizieren. Es ist dann einfacher, wenn die Teilprodukte CE Zertifizierung."
+        },
+        {
+            "start": 3690170,
+            "end": 3693450,
+            "speaker": "B",
+            "text": "Kannst du mal erklären, was da dahinter steckt hinter so einem CE."
+        },
+        {
+            "start": 3693770,
+            "end": 3764250,
+            "speaker": "C",
+            "text": "Ich bin jetzt kein Profi, also gar nicht. Das ist auch das Thema, was mir am wenigsten Spaß macht nach der Hardware. Aber die CE ist jetzt erstmal keine Zertifizierung per se. Das muss man selber machen. Du kannst jetzt nicht jemanden beauftragen, gib mir ein CE Zertifikat. Du als Inverkehrbringer des Produktes schreibst ich André Friesen in meinem Falle. Folgendes Produkt ist nach folgenden Normen, nach folgenden harmonisierten Normen in Europa oder Deutschland. Daran halte ich mich. Und es gibt dann so verschiedene Normen, wie zum Beispiel Produktsicherheitsgesetz. Andi hat das, glaube ich, schon erwähnt, dass man halt nicht irgendwie, wenn ich jetzt zwei hundert dreiig Volt drauf hätte, dass da keine blanke Leitung liegt, die der Kunde auf einmal anfassen könnte. Solche Dinge, da fangen wir an. Oder dass man den Stecker nicht falschrum rein tut und auf einmal brät der PC durch. Auch solche Dinge gehören dazu. Aber auch dann Störsicherheit für, wenn da jetzt WLAN Signale draufkommen, wenn ganz starke WLAN Signale draufkommen, soll mein Produkt weiter funktionieren und nicht irgendwie anfangen zu brennen oder so. Und andersrum, ich darf natürlich nicht einfach funken wie blöde, weil sonst kommt der Bundesnachrichtendienst direkt nach Hause und sagt hier, was ist denn hier los? Warum ist hier so eine starke Antenne, die unseren Notruf blockiert oder was auch immer. Da gibt es dann ganz viele, viele Normen."
+        },
+        {
+            "start": 3764330,
+            "end": 3775130,
+            "speaker": "B",
+            "text": "Aber jetzt, wenn du sagst okay, möchte da jetzt keine Störsignale senden? Das kannst du netterweise sagen und glauben, Aber woher weißt du, dass dein Chip keine Störsignale sendet?"
+        },
+        {
+            "start": 3775210,
+            "end": 3844710,
+            "speaker": "C",
+            "text": "Genau dafür musst du dir ein akkreditiertes Labor mieten und dort schickst du dein Gerät dann hin. Du bestimmst auch, wie der Test abläuft, weil jetzt meine Platine dorthin zu schicken und sagen hier teste mal, funktioniert ja nicht. Man muss dort auch den Testaufbau machen mit einem PC Case zum Beispiel, weil das verändert die Bedingungen. Und da bin ich gerade bei das herauszufinden, wie ich das mache, Da bin ich jetzt nicht der Profi drin. Aber im Endeffekt schickt man das in ein akkreditiertes Labor. Man erstellt ein Test Case, man schreibt auch ein kleines Test Tool, womit man OK, zum Beispiel jetzt ein Python Skript, welches mein Gerät immer pingt. Und wenn der Ping dann weg ist, dann kann man oh ja, okay, ab jetzt funktioniert das Gerät nicht mehr. Und die andere Seite ist, wenn das zu viel strahlt, Das machen die im Labor. Die sehen dann, okay, man muss unter bestimmte Schwellwerte bleiben. Solange die eingehalten werden, ist das okay. Und diese Labore halten sich an Normen, die man auch für teuer Geld kaufen muss und die machen dementsprechend dann diese Tests. Und wenn die sagen jo, ist fein, dann kriegt man so einen Testbericht und den hakt man dann bei sich in den Aktenordner ab und kann dann schreiben in seiner CE Erklä okay, ich habe mich an folgende Normen gehalten und versichere ihnen, dass ich das gemacht."
+        },
+        {
+            "start": 3845110,
+            "end": 3858490,
+            "speaker": "B",
+            "text": "Also das ist im Prinzip eine Absicherung für dich dann, weil du unterschreibst ja, du bist im CE konformen Raum und wenn du dann ein Problem hast, irgendwann kannst du Moment, ich habe das damals überprüft in einem zertifizierten Labor und es war kein Problem."
+        },
+        {
+            "start": 3858570,
+            "end": 3869930,
+            "speaker": "C",
+            "text": "Ja, es ist mehr. Es ist glaube ich eher für den Kunden, dass man sich daran hält, dass man wirklich ein sicheres Produkt in den Verkehr bringt. Aber natürlich ist auch eine Absicherung, wenn man alles getan hat, dass man halt nicht dann dran kommt, weil du könntest"
+        },
+        {
+            "start": 3869930,
+            "end": 3890240,
+            "speaker": "B",
+            "text": "ja einfach auch sagen, also Endkundenprodukte, da fragt ja niemand, hey, wo ist dieses Zertifikat? Oder hast du das wirklich in einem Labor prüfen lassen, Kaufen das einfach ein paar Euro. Jetzt hast du schon Geld erwähnt, dass das nicht ganz günstig ist, diese Nomen und so weiter. Hast du da irgendwie Hausnummern? Von was sprechen wir da, wenn man sowas in irgend so Labor schickt?"
+        },
+        {
+            "start": 3890960,
+            "end": 3912880,
+            "speaker": "C",
+            "text": "Ja, das ist eine interessante Frage. Ich habe jetzt zwei, drei Angebote mir eingeholt und werde jetzt noch mehrere machen, Da bin ich noch nicht ganz durch. Aber ich habe ein Angebot von bekommen und auch eins von Dollar und irgendwo dazwischen wird hoffentlich auch die Wahrheit liegen, denn ich wollte jetzt mit wird es halt echt spannend. Das macht dann finanziell nicht so viel Sinn. In meinen Augen hängt es davon ab,"
+        },
+        {
+            "start": 3912880,
+            "end": 3915320,
+            "speaker": "B",
+            "text": "wo die Labore beheimatet sind."
+        },
+        {
+            "start": 3915480,
+            "end": 3930680,
+            "speaker": "C",
+            "text": "Ja, definitiv. Also ich glaube, es hängt auch davon ab, ob die Labore Lust haben, mit kleinen Leuten zu arbeiten. Das ist glaube ich das Problem. Und dann kriegt man halt ein Angebot, ein Abschreckangebot, wenn man es annimmt, dann freuen die sich halt. Ja gut, dann machen wir es. Das ist meine Theorie aktuell."
+        },
+        {
+            "start": 3931320,
+            "end": 3938960,
+            "speaker": "B",
+            "text": "Aber diese Angebote sind es jetzt von Labore in Deutschland oder in Europa oder woanders? Also wie nahe sind die jetzt bei dir?"
+        },
+        {
+            "start": 3939440,
+            "end": 3949360,
+            "speaker": "C",
+            "text": "Das für ein tausend sieben hundert hatte ich in einem chinesischen Labor angefragt oder bekommen und das für war jetzt in Deutschland. Aber ich muss noch mehr Angebote einhören, um da jetzt irgendwie repräsentativ was sagen zu können."
+        },
+        {
+            "start": 3949600,
+            "end": 3962400,
+            "speaker": "B",
+            "text": "Aber würdest du dann einem chinesischen Labor vertrauen, Beziehungsweise wenn wir jetzt wieder davon sprechen, es ist ja auch für deine Kunden, wären die dann happy mit einem Zertifikat von einer chinesischen Firma und einem Labor?"
+        },
+        {
+            "start": 3962700,
+            "end": 3988480,
+            "speaker": "C",
+            "text": "Das ist eine gute Frage. Ich glaube, das hängt auch stark davon ab, wie sieht dieser, man kriegt ja dann nachher ein Dokument, dieser Test und wenn dieser Testaufbau und dieses Dokument vernünftig aussieht, dass es wirklich gemessen wurde, dann ja. Aber wenn man halt so einen copy paste generischen Text bekommt, dann ist halt die Frage ein tausend sieben hundert ist günstig, aber es ist zu teuer für ein Fake, sagen wir es so. Das ist ja auch dann rausgeschmissenes Geld und das ist jetzt gerade mein Punkt, den ich versuche rauszufinden."
+        },
+        {
+            "start": 3988790,
+            "end": 4003110,
+            "speaker": "B",
+            "text": "Was ich so von Leuten in der Branche auch gehört habe, ist normalerweise, wenn man ein deutsches Labor hat, dann bewegt man sich eher so bei den üblicherweise für CE, also für so ein kleines WLAN Modul oder so. Das ist auch das, was ich als Info bekommen habe."
+        },
+        {
+            "start": 4003110,
+            "end": 4046500,
+            "speaker": "C",
+            "text": "Ja, es hängt glaube ich auch stark davon ab, wie man das Produkt macht. Zum Beispiel der ESP mit der Antenne auf der Platine, der ist schon zertifiziert und dort braucht man dann nicht großartig viele Tests machen. Jetzt habe ich aber eine externe Antenne dran und der Hersteller hat mit einer bestimmten Antenne getestet, die ist aber nicht käuflich für mich erwerblich und ich brauche eh eine längere. Dadurch ändere ich die Antennendynamik oder die Eigenschaften dieses Strahlers und zack sitzt man in einem anderen Fall. Und wenn man jetzt nur diesen Chip nehmen würde und sich alles layouten würde, komplett auf seine Platine und gar nicht mal dieses System oder Chip Ding von Espresso nehmen würde, dann muss man komplett den ganzen Zertifizierungsprozess für wifi durchgehen oder für WLAN und dann wird es richtig teuer."
+        },
+        {
+            "start": 4046580,
+            "end": 4085620,
+            "speaker": "A",
+            "text": "Jetzt hast du einen Design, jetzt kümmerst du dich um Zertifizierungen für den Verkauf und so weiter und du bist dir ein hundert Prozent sicher, dass du selbst nicht löten wirst. Für mich stellt sich die Distribution Wirst du, wenn die Zertifizierung durch ist und du ein Labor zwischen und Dollar gefunden hast, dir Platinen bestellen, die auf Upwork jemanden suchen, der dir das zusammen lötet oder wie und danach mit Kartons zur Post laufen. Also wie funktioniert Distribution eines Hobby Hardware Produktes und was. Also da hängt eine ganze Maschinerie dran."
+        },
+        {
+            "start": 4085620,
+            "end": 4208789,
+            "speaker": "C",
+            "text": "Ja, das stimmt. Ich war letztes Jahr aus dem Grund, um diese Branche kennenzulernen oder diese Maker Szene ein bisschen besser, war ich auf der Hackaday in Berlin und habe genau das gefragt. Hey, wie macht ihr das? Ich habe viele Leute doch gesehen, die ein Heizungscontroller oder was auch immer gebastelt haben und so dann übers Jahr ein paar verkauft haben über Tindi oder Etsy oder welche Online Shops es auch immer noch gibt. Und viele davon machen das tatsächlich, weil die halt richtige Elektriker sind, Elektroniker, die das können und auch dann einfach zu Hause löten und dann was verschicken und gut ist. Ich persönlich habe dabei tatsächlich nicht so Lust drauf zu Hause jetzt einen Versandhandel aufzumachen und Kartons zu kleben und wegzubringen und bin fein damit, wenn jemand diese Dienstleistung für mich macht und dann ein Prozent davon kriegt. Und da kommen wir dann zu dem Punkt, was habe ich aus dem Upwork Vertrag rausgenommen mit allen Learnings. Natürlich würde ich es jetzt genauso machen. Ich würde jetzt vorher das Land recherchieren, schauen wie die Kosten sind für Prototyping und so weiter aus China und vielleicht auch ein teureres nehmen mit mehr Erfahrung. Aber es hat mir trotzdem den Schritt erlaubt, mich bei der Plattform Crowd Supply zu bewerben. Crowd Supply ist eine Crowdfunding Plattform in den USA für Hardware Projekte speziell und die sind jetzt nicht so wie bei Kickstarter, wo du Bei Kickstarter reicht ja ein Werbevideo, paar Texte und dann kannst du Geld sammeln. Bei denen muss man sich tatsächlich so einen richtigen Bewerbungsprozess aussetzen und dort muss dann auch ein funktionierender Prototyp hingeschickt werden und dann schmeißen die achtzig Prozent der Bewerbung raus und dann die anderen zwanzig bleiben drin. Und das hat funktioniert. Die haben mein Projekt akzeptiert und dafür bin ich dann dankbar, dass das mit dem Upwork so geklappt hat mit diesem Prototypen. Und warum habe ich mich bei Crowd Supplier beworben? Weil die halt genau diese Dienstleistungen anbieten. Die kümmern sich um das Einsammeln des Geldes, das Sammeln der Kampagnengelder und auch nachher um Fulfillment, das heißt die ganzen Pakete mit den Teilen zu den Kunden zu bringen und auch Retouren und so weiter und so fort, weil das wollte ich mich mit mir zu Hause nicht antun."
+        },
+        {
+            "start": 4208869,
+            "end": 4237819,
+            "speaker": "A",
+            "text": "Und genau da bist du jetzt gerade. Also Zertifizierung, ich sag mal im Softwarebereich würde ich sagen, Productionizing, ich sag mal Vorbereitung der Distribution und Paperwork, Bürokratie vielleicht zusammenfassen und dann versuchst du die ganze Sache auf die Straße zu bringen. Finde ich ein starker Fortschritt, nachdem man schon gehört hat, dass du die ganze Sache einfach schon in die Ecke geschmissen hast und wieder aufgenommen hast. Also so viel Energie muss man erstmal aufbringen. Was sind die nächsten Schritte für dich?"
+        },
+        {
+            "start": 4238139,
+            "end": 4290290,
+            "speaker": "C",
+            "text": "Vielleicht noch ein Rückschritt, also nicht ein Rückschritt, aber nochmal einen Schritt zurück. Wenn man bei Crosswipper anfängt und sich beworben hat, dann heißt es ja noch lange nicht, dass man genug Leute hat, um dieses Produkt an den Mann zu bringen. Man spricht mit denen zusammen ab, was ist denn deine minimale Anzahl an Boards, die du verkaufen möchtest. Und da gibt es dann so eine Art, ich sag mal, Stagegate Milestone, das man erreichen muss. Und dann spricht man mit denen, hey, wie viele würdest du gerne verkaufen? Dann einigt man sich auf eine Nummer und dann sagen, ja, dafür musst du aber mindestens so und so viele E Mail Adressen sammeln, Erst dann geht es weiter im Schritt. Das heißt, die bremsen einen auch so ein bisschen auf gute Art und Weise Schritt für Schritt an dieses Projekt zu gehen, weil es bringt nichts, wenn ich jetzt alles organisiert habe, Papierkram, CE dies, das. Aber ich habe nur fünf Leute auf der Mailliste. Das schützt einem so ein bisschen auch vielleicht. Vielleicht findet man da auch heraus und interessiert doch keinen oder mein Marketing ist nicht gut genug, je nachdem."
+        },
+        {
+            "start": 4290290,
+            "end": 4297290,
+            "speaker": "A",
+            "text": "Das klingt aber eigentlich nach gesunden Einstiegshürden und nach einem gemeinsamen Interesse, dass da wirklich was am Ende bei rumkommt."
+        },
+        {
+            "start": 4297290,
+            "end": 4300690,
+            "speaker": "C",
+            "text": "Genau, sehe ich auch so. Also finde ich null negativ, aber die"
+        },
+        {
+            "start": 4300690,
+            "end": 4301850,
+            "speaker": "A",
+            "text": "Hürden hast du schon alle genommen."
+        },
+        {
+            "start": 4301930,
+            "end": 4322170,
+            "speaker": "C",
+            "text": "Genau, die Anzahl der Leute auf der E Mail Liste ist genug. Bin jetzt glaube ich bei sieben hundert achtzig oder sowas, die theoretisch Interesse haben, wie auch immer die Conversion Rate nachher aussieht. Aber ich kann auf jeden Fall sinnvoll ein hundert Stück bestellen mit meinem Partner Solderit Und das macht dann auch ja, ich werde jetzt kein Geld mit verdienen, aber ein Plus minus Null wird es irgendwann werden, wenn ich das so weiterhalte."
+        },
+        {
+            "start": 4322170,
+            "end": 4339680,
+            "speaker": "A",
+            "text": "Ist natürlich schon beachtlich, wenn du sagst, du wirst kein Geld damit verdienen, Plus minus Null bei der ganzen Arbeit, die du da reingesteckt hast. Aber wenn das wirklich, ich sag mal, Hobby für dich ist, Spaß ist und du am Lernen interessiert bist, wie das eigentlich funktioniert, Ich weiß noch nicht, was du dann mit deinen Learnings später machst. Vielleicht das nächste Hardware Produkt, aber möglich. Was sind die nächsten Schritte in der ganzen Reise?"
+        },
+        {
+            "start": 4339680,
+            "end": 4364320,
+            "speaker": "C",
+            "text": "Genau, die nächsten Schritte finalisieren dieser CE Geschichte, damit das endlich durch ist. Und dann werde ich diese oder nächste Woche mal die ersten ein hundert Stück bestellen als Production Test Run für mich. Die sind noch nicht zum Verkauf. Genau. Und dann vielleicht ein bisschen mehr Marketing Youtuber und Influencer anzuschreiben, dass die sagen, hey, guckt euch das mal an, gefällt euch das? Und dann wird die Kampagne gestartet. Hoffentlich. Das sage ich aber auch schon seit fünf Jahren."
+        },
+        {
+            "start": 4365360,
+            "end": 4372820,
+            "speaker": "B",
+            "text": "Was du noch nicht erwähnt hast, ist, hast du ein Gehäuse oder steckst du das irgendwie direkt in den hinein im Computer?"
+        },
+        {
+            "start": 4372980,
+            "end": 4397650,
+            "speaker": "C",
+            "text": "Sehr gute Frage. Jeder der Hardware Produkte anbietet, lass das mit dem Gehäuse, wenn es geht. Es ist ein sehr. Darum frage ich ja, das war mir auch nicht so bewusst. Ich habe kein Gehäuse für mein Produkt, ich stecke es ins Mainboard, da hat man die USB Header, diese neuen Pins, dadurch brauche ich kein Gehäuse. Aber wenn ich ein Gehäuse hätte, könnte ich noch mal drauf rechnen an Kosten."
+        },
+        {
+            "start": 4397890,
+            "end": 4400050,
+            "speaker": "A",
+            "text": "Und warum sagt das jeder, dass du kein Gehäuse."
+        },
+        {
+            "start": 4400530,
+            "end": 4415250,
+            "speaker": "C",
+            "text": "Gehäuseherstellung mit D Druck ist tatsächlich ein bisschen einfacher geworden heutzutage bei niedriger Stückzahl. Das geht heute. Aber früher musste man ja alles Spritzguss machen und so eine Form für einen Spritzguss kostet halt so zwischen und zwar"
+        },
+        {
+            "start": 4415250,
+            "end": 4419090,
+            "speaker": "B",
+            "text": "in China, wir reden da jetzt von China, in Europa bist du wahrscheinlich noch mal höher."
+        },
+        {
+            "start": 4419090,
+            "end": 4421650,
+            "speaker": "A",
+            "text": "Ist das nicht einfach nur ein bisschen Silikon oder so?"
+        },
+        {
+            "start": 4421730,
+            "end": 4449450,
+            "speaker": "C",
+            "text": "Nein, das ist Metall, das wird gefräst. Wenn du dann einen Fehler gemacht hast, musst du das noch mal fräsen lassen, das kostet richtig Geld und diese Formen halten dann für X Spritzfussvorgänge, kommt aus Plastik an und so weiter. Ich habe mal als Student ein bisschen Spritzguss gemacht in der Firma und dort Qualitätskontrolle, das ist ein Wahnsinnsaufwand und dann muss die Maschine richtig bedient werden mit der richtigen Flussgeschwindigkeit, sonst hat man da diese komischen Ecken drin, oder? Das ist Wahnsinn. Das ist wirklich ein komplexes Thema."
+        },
+        {
+            "start": 4449850,
+            "end": 4479220,
+            "speaker": "B",
+            "text": "Was ich von einem Freund in der Branche kürzlich gehört habe, ist, die sind auf Metallgehäuse umgestiegen, weil die scheinbar leichter zu machen sind. Und die kannst du CNC fräsen, professionell bei Firmen, die schauen dann auch sehr sauber aus, irgendwelche Alu Gehäuse und die kannst du in geringeren Stückzahlen um sinnvolle Preise bekommen. Und es schaut dann nicht, weil so ein D gedrucktes Gehäuse in Plastik schaut halt immer irgendwie billig oder irgendwie homemade aus, im Gegensatz zu einem professionellen Gehäuse. Aber bei Metall ist es scheinbar einfacher."
+        },
+        {
+            "start": 4479690,
+            "end": 4498170,
+            "speaker": "C",
+            "text": "Ich glaube, da gibt es so einen Punkt, an dem man ab einer bestimmten Verkaufsmenge macht es Sinn Spritzguss zu machen, aber vorher ist dann eher so Kleinstückzahlen D Druck, vielleicht auch Resin D Druck, wo das dann wirklich auch eine gute Qualität hat, aber teurer als normaler D Druck. Also FDM und Metallgehäuse habe ich auch noch nicht gehört, dass das auch eine gute Option ist. Hätte ich nicht gedacht, dass es so"
+        },
+        {
+            "start": 4498170,
+            "end": 4504750,
+            "speaker": "B",
+            "text": "günstig ist, aber ich habe es nicht validiert. Also es ist noch fair, was ich so gehört habe, aber scheinbar günstiger dann als natürlich Spritzgut."
+        },
+        {
+            "start": 4504980,
+            "end": 4508180,
+            "speaker": "A",
+            "text": "Welchen Zielpreis strebst du für das Projekt an?"
+        },
+        {
+            "start": 4508580,
+            "end": 4543240,
+            "speaker": "C",
+            "text": "Ich würde am liebsten unter fünfzig Dollar bleiben, aber müssen wir mal schauen, weil du hast ja da, es gibt eine Tabelle, die Crowd Supply, die gibt, die als Anreiz dafür sitzt, mal die Kalkulation durchzugeben. Da sind alle Sachen drin, wie der Cut von denen, die Payment Fees, Shipping Fees, was ist deine Bordkosten, dann musst du deine Marge draufpacken und natürlich der liebe Trump mit seinen random Zöllen, die immer mal wieder angehoben und weggehoben werden werden und die jetzt ja aktuell illegal sind, aber wo die nachher liegen, weiß ich nicht. Das muss man alles mit rein berechnen und da muss man auch einen bestimmten Margen Prozentsatz haben, damit andere Shops eventuellerweise das auch bei sich listen könnten."
+        },
+        {
+            "start": 4543400,
+            "end": 4569350,
+            "speaker": "A",
+            "text": "Wenn ich jetzt nur diesen Preis sehen würde, würde ich sagen, fünfzig Dollar ist jetzt nicht günstig, ist jetzt aber auch nicht super teuer. Wenn ich diese Podcast Episode jetzt aber mal Revue passieren lasse mit der Arbeit, die dahinter steckt auf fünfzig, ist aber noch unglaublich human. Also da ist ja keine einzige Stunde Arbeitszeit drin, so wie ich dich jetzt höre, sondern eher Materialkosten und Surroundings, nenne ich es mal."
+        },
+        {
+            "start": 4569350,
+            "end": 4594080,
+            "speaker": "C",
+            "text": "Absolut. Da ist kein, also kein bisschen an Arbeitszeit ist da drin, das ist rein nur Materialkosten und da sind auch noch nicht mal die Entwicklungskosten mit drin. Die Entwicklungskosten, die will ich vielleicht über die Verkäufe vielleicht irgendwann reinkriegen, über die Zeit, wie je nachdem, Aber da machen wir uns nichts vor. Also für fünfzig Leute das zu machen, lohnt sich gar nicht. Man muss schon mindestens ein hundert, zwei hundert oder mehr machen."
+        },
+        {
+            "start": 4594080,
+            "end": 4623370,
+            "speaker": "A",
+            "text": "Okay, ich möchte diese Podcast Episode nicht negativ enden lassen, das drehen wir jetzt noch, weil die Story war gut. Du hast gesagt, du liebst es Leuten dabei zuzuschauen, wie sie lernen. Und diese Podcast Episode ist ein Paradebeispiel meines Erachtens. Deswegen hast du hoffentlich den einen oder anderen Hörer und die eine oder andere Hörerin hier in inspiriert. Welche drei Learnings würdest du uns mit auf den Weg geben, wenn wir von deiner Story inspiriert sind und unser erstes Hardware Side Project starten wollen?"
+        },
+        {
+            "start": 4623370,
+            "end": 4675960,
+            "speaker": "C",
+            "text": "Haltet es so simpel wie möglich. Das finde ich sehr, sehr wichtig, damit man einfach nicht in Komplexität direkt von vornherein erstickt. Gibt euch selber Grenzen, die ihr einhaltet, sagt, okay, weil irgendwann, man hat immer mehr Ideen, immer mehr Features, aber steckt ein festes Ziel und ändert das auch nicht. Das hilft auch sehr. Und holt euch Hilfe. Geht zu Meetups, versucht in diese Bubble einzutauchen und schreibt einfach Leute bei LinkedIn oder was auch immer an, um wenigstens reinzukommen. Weil tatsächlich ohne zufällige Freunde, die ich auf Meetups getroffen habe, heutige Freunde, damals Fremde, hätte ich dieses Projekt nicht weitermachen können. Das geht nicht alleine. Und dieses Community Ding dahinter, das muss man machen. Meetups, Konferenzen, Messen, was auch immer, egal geht wohin und lernt Leute kennen, die in dieser Branche sind. Schreibt sie einfach an und die können eventuell zumindest mit dem Finger woanders hinzeigen und sagen, hier, guck mal da."
+        },
+        {
+            "start": 4675960,
+            "end": 4767560,
+            "speaker": "A",
+            "text": "Ich glaube eine Sache, die auch recht offensichtlich ist. Genau das wird nicht so schnell von der KI ersetzbar sein, so wie ich das jetzt gerade hier höre. André, was soll ich sagen? Ich fand diese Story zum zweiten Mal wunderschön. Ich habe sie ja schon mal gehört auf dem Home Assistant Meetup in Köln und da haben wir dich ja her sozusagen. Vielen Dank, dass du die Zeit investiert hast. Ich finde diese Story wirklich, wirklich schön, diesen ganzen Werdegang, diese ganzen Fuck ups, ich grinse gerade so ein bisschen. Es tut mir total leid, dass du, weiß ich nicht, wie viel Dollar oder Euro in Versand von China nach Deutschland, von Deutschland nach Pakistan und Co. Versendet hast. Das tut mir, ich sag mal, für den grünen Planeten doch schon sehr weh. André, vielen lieben Dank, dass du hier warst. Für alle Leute, die mehr Infos zu dem Projekt wollen, zu das, was André macht, da findet ihr in den Show Notes ganz, ganz viele Links über all das, was wir gesprochen haben, aber auch zu Andrés Blog. André ist ein sehr, sehr aktiver Blogger. Dort kann man eigentlich die komplette Historie von diesem POK Projekt nachverfolgen. Kleiner Disclaimer, poképao hieß das Projekt nicht immer in dem Blog heißt es teilweise PC Switch. Deswegen, falls ihr etwas ältere Blogposts mal seht von zwei tausend ein und zwanzig, denn das ist zumindest der Zeitrahmen, da wo ich gesehen habe, hieß das noch PC Switch. Und ansonsten würde ich sagen, schaltet doch mal bei der Smarte rein, ein Podcast um all diese Themen. Ich gehe stark davon aus, dass André und Thomas auch irgendwann mal über den aktuellen Status von diesem Projekt dort weiterreden. André, deine Chance, unseren Hörerinnen und Hörern am Ende noch etwas mitzugeben."
+        },
+        {
+            "start": 4767720,
+            "end": 4769920,
+            "speaker": "C",
+            "text": "Ja, fuck around und find out, das"
+        },
+        {
+            "start": 4769920,
+            "end": 4775810,
+            "speaker": "A",
+            "text": "ist mein aktueller und ich habe das Video gefunden, das ist auch in den Show Notes. Schaut es euch an, dreiig Sekunden lang oder zwölf Sekunden lang."
+        },
+        {
+            "start": 4776050,
+            "end": 4798690,
+            "speaker": "B",
+            "text": "Nehmt es mit, wie der Andi jetzt wahrscheinlich kurz davor zu sagen ist. Das war das Wort zum Sonntag, sein Lieblingsspruch, aber in dem Fall finde ich auch sehr passend und vielen Dank auch von meiner Seite. Ich finde Hardware super spannend, vielleicht auch, weil es so weit weg ist von mir, aber es ist doch ein super interessantes Feld und ist schön, dass man auch was anderes machen kann, als nur die abstrahierte Software Seite, würde ich mal sagen."
+        },
+        {
+            "start": 4799010,
+            "end": 4801290,
+            "speaker": "A",
+            "text": "Wir sind raus, bis nächste Woche und tschüss."
+        },
+        {
+            "start": 4801450,
+            "end": 4802490,
+            "speaker": "C",
+            "text": "Ciao, ciao."
+        }
+    ]
+}
