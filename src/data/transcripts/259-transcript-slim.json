@@ -1,0 +1,675 @@
+{
+    "confidence": 0.95899886,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4263,
+    "utterances": [
+        {
+            "start": 3120,
+            "end": 80900,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute wird es nostalgisch, nerdig und überraschend relevant. Wir sprechen über Fortran. Ja genau, die Sprache aus der Ära von Lochkarten in der Programmierung. Und trotzdem steht Fortran im TIOBE Index plötzlich ziemlich weit oben. Was ist da los? Dafür haben wir uns Verstärkung geholt. Zu Gast ist Martin Diehl, Professor an der KU Löwen in Belgien und tief drin im Fortran Ecosystem, Open Source und wissenschaftlichen Simulationen. Mit Martin klären wir, warum Fortran überhaupt entwickelt wurde, warum es in High Performance Computing bis heute eine Rolle spielt und wieso du in Python oft nur das schicke Interface siehst, während im Hintergrund Fortran Libraries rechnen. Wir schauen uns außerdem an, was modernes Fortran seit ein tausend neun hundert neunzig kann, inklusive Module, Typisierung und Interoperabilität mit C. Meine Güte, schweres Wort und neue Compiler auf LLVM Basis wie flank und Und der Martin hat sich auch noch einen Fortran Flachwitz gewünscht. Also hier kommt mal einer zum Einstieg. Was ist das Lieblingsessen eines Fortran Compilers? Lochkartensalat, OK, der war relativ flach. Naja gut, wenn du auf jeden Fall mehr wissen willst zu Fortran und warum Legacy immer noch Geld verdient und warum Fortran vielleicht mehr Zukunft hat, als du denkst, dann bleib doch mal dran. Los geht's."
+        },
+        {
+            "start": 83380,
+            "end": 122140,
+            "speaker": "B",
+            "text": "Heute haben wir mal ein Thema, was mich sehr stark an meine Studienzeit erinnert. Und zwar sprechen wir heute über eine Programmiersprache, die ich nur einmal kurz in einem Semester lernen musste. Sind nicht gerade die besten Erinnerungen. Es war ein HPC Kurs. Manchmal mussten wir C programmieren und manchmal mussten wir Fortran programmieren. Wir haben ja so ein Faible teilweise, oder ich persönlich zumindest. Der Andi aber grundsätzlich, auch wenn er mal abseits von seinem Go unterwegs ist, dass wir auch über Sprachen sprechen, die jetzt vielleicht nicht so im Vordergrund stehen. Und wobei, ich habe heute gerade mal beim TIOBE Index nachgeschaut. Kurze Frage, Andi, Was glaubst du, an welcher Position Fortran steht?"
+        },
+        {
+            "start": 122140,
+            "end": 134460,
+            "speaker": "A",
+            "text": "Der TIOBE Index macht das Ranking auf Basis, ich glaube unter anderem von Google. Suchtreffern ist zumindest ein Faktor, der da reinfliesst. Bei Fortran, denke ich, wirft das relativ weit nach hinten."
+        },
+        {
+            "start": 134780,
+            "end": 197840,
+            "speaker": "B",
+            "text": "Platz neun und zwanzig tja, da bist du knapp vorbei. Platz zwölf zwei tausend vier und zwanzig sogar auf Platz achte Das heißt, es ist immer noch eigentlich ein großes Thema und wenn man sich den Graphen anschaut, ab zwei tausend zwei und zwanzig ist das Ganze oder ab zwei tausend zwanzig eigentlich, ist es auch noch mal ganz stark nach oben gegangen. Ich habe schon erwähnt, bei mir war es damals HPC, also High Performance Computing. In der Wissenschaft ist es, glaube ich, noch immer sehr verbreitet. Also darum haben wir das damals auch gemacht in dem Kurs. Und nachdem mir als einziges noch im Kopf ist, dass da die Arrays in einem anderen Memory Layout gespeichert werden als in C, das ist das, was ich damals aus dem Kurs mitgenommen habe, das eine ist spaltenorientiert, das andere ist zeilenorientiert, dann hört es aber bei mir schon auf, haben wir uns natürlich überlegt, okay, wir brauchen auf jeden Fall jemanden, der mehr Ahnung hat als wir, wenn es um diese Sprache geht. Und daher haben wir jemanden gefunden, der da sehr tief drinnen steckt und den wir jetzt auch bei uns im Engineering Kiosk Studio begrüßen können. Hi Martin."
+        },
+        {
+            "start": 197840,
+            "end": 199040,
+            "speaker": "C",
+            "text": "Ja, hallo Frank."
+        },
+        {
+            "start": 199040,
+            "end": 292420,
+            "speaker": "A",
+            "text": "Du drehst dir die Welt mal wieder, wie sie dir gefällt. Also A haben wir nicht gesucht und wir wurden überlegt, wenn man so möchte, denn der Transparenz halber, der Martin hat das Thema auch gepitcht bei uns, der Martin hat sich bei uns gemeldet und ich zu meinem wie soll man sagen, Trauer vielleicht, weiß ich nicht, habe noch nie Vortran programmiert. Ich habe es mir zur Vorbereitung, habe mir Vortra Code mal angesehen. Martin, willkommen erstmal ganz schön, dass du hier bist. Vielen Dank für die Zeit. Und wie gesagt, in der Regel lehnen wir sogenannte Selbsteinladungen ab. Doch in letzter Zeit kommt es immer öfter vor, dass uns einfach richtig gute Pitches gemacht werden. Und Martin, du warst so einer, Du hast einen Pitch zum Thema Fortran gemacht, weil du Fortran auch, kann man sagen, produktiv einsetzt? Ich würde schon sagen, produktiv einsetzt. Und das hat unser Interesse geweckt, weil wir haben nämlich schon lange auf dem Zettel mal Podcast Episoden zu machen zum Thema Programmiersprachen. Und natürlich können wir dann mit Java starten oder mit PHP oder mit Go oder Rust oder sowas. Aber wer wären wir, wenn wir das tun würden? Wir starten einfach mal mit etwas, was kaum jemand kennt. Und was ich sagen würde, ist nicht so weit verbreitet wie Rust oder Go. Deswegen Und jetzt die Wer nutzt heute eigentlich noch Fortran in Produktion? Und deswegen stelle ich dich jetzt Einmal ganz kurz vor Martin, du hast nach meiner Recherche eine akademische Bilderbuchlaufbahn hingelegt. Diplomstudent, PhD Student, Postdoc, Gruppenleiter und das alles in der Nachbarstadt Düsseldorf, wenn man von meiner Perspektive ausspr. Denn ich sitze gerade in Duisburg. Aktuell bist du Professor an der KU Leuven in Belgien. Ich weiß nicht, ob ich. Leuven, Löwen, Löwen, Entschuldigung."
+        },
+        {
+            "start": 292420,
+            "end": 294780,
+            "speaker": "B",
+            "text": "So wie es dir an dir ganz einfach zu merken."
+        },
+        {
+            "start": 294860,
+            "end": 297260,
+            "speaker": "C",
+            "text": "Genau, auf Deutsch wird es ja auch so geschrieben."
+        },
+        {
+            "start": 297420,
+            "end": 314040,
+            "speaker": "A",
+            "text": "Ganz genau. Also ich bin eher der deutschen Aussprache mächtig und nicht der belgischen, aber das liegt direkt neben Brüssel. Und was machst du da? Du machst dort Nano und Mikrostrukturdesign von Werkstoffen und nutzt dabei Computersimulationen als Werkzeug, um Materialien besser zu verstehen und zu verbessern. Ist das richtig?"
+        },
+        {
+            "start": 314200,
+            "end": 331520,
+            "speaker": "C",
+            "text": "Das stimmt so, ja genau. Vielleicht noch eine Sache zu meinem Studium. Also ich habe in München studiert und bin dann nur für meine Diplomarbeit nach Düsseldorf gewechselt ans Max Planck Institut für Eisenforschung, jetzt Max Planck Institut für nachhaltige Materialien, bis ich nach Löwen gewechselt, bin"
+        },
+        {
+            "start": 331520,
+            "end": 367620,
+            "speaker": "A",
+            "text": "dort geblieben und jetzt könnte man meinen, da du ja seit fünf Jahren Professor bist, stehst du nur vorne unten an der Tafel von diesen riesen Hörsälen und sagst, wie es geht, weil du das mal irgendwo gelernt hast. Aber nein, wenn man sich mal dein Gitterprofil ansieht, dann sieht man unten relativ viele grüne Dots mit acht hundert vier und vierzig Contributions im letzten Jahr. Deswegen, es freut mich natürlich sehr, dass du ein toller Open Source Contributor bist. Du bist nicht nur einer, der sagt, okay, Open Source ist cool und wir sollten das alle anwenden, sondern du kontributest auch sehr viel dazu und auch sehr viel Fortran Kurt, weil du bist auch in der Community aktiv. Habe ich irgendwas vergessen?"
+        },
+        {
+            "start": 367620,
+            "end": 399690,
+            "speaker": "C",
+            "text": "Ne, das stimmt soweit. Vielleicht noch eine Sache. Als Professor definiere ich immer meine Aufgabe als zweigeteilt, mindestens. Also eine Sache ist Forschung und in dem Fall fällt dann wirklich da die Programmierung oder Softwareentwicklung für wissenschaftliches Rechnen auch darunter. Das machen dann auch meine Doktoranden. Und das andere ist an der Tafel stehen. Und auch da ist es vielleicht ein bisschen anders. Materialwissenschaften wird in der Regel von eher kleineren Gruppen besucht. Von daher sprechen wir da eigentlich nicht über die ganz große Tafel und den ganz großen Hörsaal."
+        },
+        {
+            "start": 399572,
+            "end": 459572,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 459690,
+            "end": 465950,
+            "speaker": "B",
+            "text": "Jetzt, wenn wir über Tafel sprechen, jetzt würde mich schon mal interessieren, Verwendest du wirklich noch eine Tafel, also so mit Kreide und sowas?"
+        },
+        {
+            "start": 465950,
+            "end": 481270,
+            "speaker": "C",
+            "text": "Ich eher weniger. Ich bin ja hier auch in einer Gruppe mit Mathematikern und die machen das durchaus noch gerne, aber ein Whiteboard habe ich natürlich dann doch. Und gerade wenn ich dann spontan irgendwas erklären will, was jetzt nicht auf einer PowerPoint steht, dann benutze ich die durchaus."
+        },
+        {
+            "start": 481510,
+            "end": 503870,
+            "speaker": "B",
+            "text": "Ich kann mich auch noch immer erinnern, die Mathematiker und Physiker, die waren da immer ganz hart im ganz viel Runterschreiben an der Tafel. Okay, also bei den Materialwissenschaftlern ist es dann maximal das Whiteboard. Aber haben wir da jetzt als Materialwissenschaftler auch einen absoluten Fortran Fan vor uns sitzen? Also bist du wirklich eingefleischter Fortran Fan oder ist es für dich nur ein Tool? Wie blickst du auf Votran? Ist es deine Lieblingssprache?"
+        },
+        {
+            "start": 503870,
+            "end": 548320,
+            "speaker": "C",
+            "text": "Also ich würde nicht sagen, dass es meine Lieblingssprache ist. Ich denke, es ist ein Werkzeug, was gute und schlechte Seiten hat. Ich programmiere auch viel Python. Das sind eigentlich die Sprachen, die ich so am meisten einsetze inzwischen auch mehr C vielleicht mehr dazu. Ja, Fortran hat, glaube ich, gerade aus Sicht der Ingenieure oder Wissenschaftler den Vorteil, dass es für Ingenieure und Wissenschaftler geschrieben ist. Zum Beispiel aus der Einleitung des Row Major versus Column major, also die transponierte Matrix. Das kommt einfach daher, dass das in der Mathematik so definiert ist und dann muss jeder, der dann eine Formel eins zu eins aus einer Überlegung herschreibt, muss es für C oder C Python einmal transponieren."
+        },
+        {
+            "start": 548320,
+            "end": 554240,
+            "speaker": "B",
+            "text": "Kannst du das gerade kurz erklären? Weil ich sehe schon die Stirnrunzeln bei Andi. Ich glaube, er hat keine Ahnung, von was du gerade sprichst."
+        },
+        {
+            "start": 554240,
+            "end": 596890,
+            "speaker": "C",
+            "text": "Vielleicht als einfachstes Beispiel. Eine Matrix ist, sagen wir mal, eine quadratische Anordnung von Zahlen und das kleinste Beispiel wären dann zwei mal zweite Also ich habe vier Zahlen angeordnet, zwei mal zwei und dann ist die zähle ich erst die Zeilen, also ist die Reihenfolge eins eins zwei zwei eins zwei oder erst die Spalten, dass ich eins eins zwei eins zwei das sind eben die beiden Konventionen, die man machen kann. Im Speicher liegt es natürlich einfach linear. Der Speicher hat nur eine Zahl nach der anderen, meinetwegen double precision. Und die Frage ist nur, wie ich das indiziere. Wo schreibe ich meine Indizes hin?"
+        },
+        {
+            "start": 596970,
+            "end": 621910,
+            "speaker": "A",
+            "text": "Auch ich hatte im Studium, ich glaube mit Statistik eins und zwei ziemlich viel Matrizenrechnung Ich war kein Fan davon, aber ich bin auch nicht der stärkste Mathematiker in diesem Call. Deswegen aber ich bin gerne der praktische Typ hier und deswegen stelle ich oft die Wolfgang, warum machen wir das überhaupt? Welches Problem wollen wir denn hier lösen? Und diese Frage stelle ich jetzt auch dir, Martin Warum wurde Fortran überhaupt entwickelt und welches Problem sollte Fortran eigentlich lösen?"
+        },
+        {
+            "start": 622870,
+            "end": 692440,
+            "speaker": "C",
+            "text": "Damals waren die Probleme auf jeden Fall noch anders und Fortran ist die erste realisierte höhere Programmiersprache. Das heißt, vor Fortran hat man Assembler programmiert und ich glaube, da ist jedem klar heute, dass das ein Problem ist. Wenn ich, keine Ahnung, eine Web GUI in Assembler programmieren würde, hätten wir wahrscheinlich nicht so viele guis oder überhaupt irgendwelche Sachen. Und das Problem, das Fortran damals lösen wollte und sicherlich auch gelöst hat, war eben Mathematikern, Naturwissenschaftlern eine Sprache an die Hand zu geben, in der sie für die damalige Sicht zumindest ihre Probleme in natürlicher Sprache ausdrücken konnten. Wir reden hier über so ein tausend neun hundert fünfzig ein tausend neun hundert drei und fünfzig also Computing war damals weniger verbreitet als heute. Aber es kam eben dann hauptsächlich in zwei Bereiche. Einerseits diese technisch naturwissenschaftliche Schiene, wo dann fortan dominiert hat und lange die wichtigste Sprache war und eben auch im Businessbereich, da gibt es ja glaube ich ähnliche Ideen in Richtung COBOL, wo dann sich so eine Sprache entwickelt hat mit dem gleichen Ziel, aber für Leute, die in der Buchhaltung arbeiten."
+        },
+        {
+            "start": 692440,
+            "end": 695640,
+            "speaker": "B",
+            "text": "Also ist im Prinzip V dran, dann das COBOL für die Wissenschaft."
+        },
+        {
+            "start": 696120,
+            "end": 761770,
+            "speaker": "C",
+            "text": "Ich denke, das kann man so sagen, ohne dass ich jetzt COBOL wirklich kenne, aber das war, glaube ich, damals eine relativ starke Trennung. Von der Hardware weiß ich nicht genau, aber von den Programmiersprachen war es dann offensichtlich so, dass fortan mit der Matrizenberechnung, mit dem Fokus auf natürliche Sprache für Mathematiker oder Naturwissenschaftler eben in die Schiene gegangen ist und COBOL dann in die Schiene für einen anderen Anwendungsfall. Und vielleicht nochmal, wie ich mir das damals Jeder hat Assembler programmiert und auf einmal kommt IBM und ja, das ist alles viel zu kompliziert, das kann ja kein Mensch. Wir müssen das viel einfacher machen. Ich glaube, das war damals vielleicht so eine Revolution wie jetzt seit zwei, drei Jahren LLMs. Auf einmal kommt man weg von Assembler Programmieren zu Hochsprache. Und heute haben wir dann so den Switch von Hochsprache programmieren zu Ideen in recht natürlicher Sprache zu erklären und dann von einem Werkzeug, was ja auch im Endeffekt so eine Art Compiler ist, übersetzen zu lassen."
+        },
+        {
+            "start": 761770,
+            "end": 787030,
+            "speaker": "B",
+            "text": "Jetzt hatte ich gerade kurz überlegt, wie du gesagt hast, in den ER Jahren haben wir gedacht, irrt er sich da jetzt? Das war doch in den ERN. Aber ich habe jetzt wirklich nachgeschaut, es war sieben und fünfzig, ich hab gar nicht gewusst, dass es damals schon Programmiersprachen gab, ehrlich gesagt. Das sind jetzt siebzig Jahre und erfunden ist es ja von John Bacchus worden, was man vielleicht von der Bacchus kennt, alle, die da im mathematischen Bereich unterwegs waren. Andi, hast du die auch schon mal gehört?"
+        },
+        {
+            "start": 787110,
+            "end": 803040,
+            "speaker": "A",
+            "text": "Die kenne ich auch, aber jetzt hast du mich gerade auch mein Interesse geweckt, so nach dem Motto, weil hier ist ja doch schon der Name COBOL gefallen. Da frage ich mich, Moment mal, erste höhere Programmiersprache Fortran sieben und fünfzig, COBOL war doch auch irgendwie in der Ecke, COBOL kam neun und fünfzig, sechzig, aber"
+        },
+        {
+            "start": 803040,
+            "end": 805520,
+            "speaker": "B",
+            "text": "gut, ja, war früher dran auf jeden Fall."
+        },
+        {
+            "start": 805520,
+            "end": 807520,
+            "speaker": "A",
+            "text": "Welche AI hast du wieder genutzt?"
+        },
+        {
+            "start": 807520,
+            "end": 809720,
+            "speaker": "B",
+            "text": "Um Wikipedia Artikel?"
+        },
+        {
+            "start": 809720,
+            "end": 817160,
+            "speaker": "A",
+            "text": "Ja, ich bin auch im Wikipedia Artikel, bist du auf at Wikipedia Org, weil auf DE Wikipedia Org steht Erscheinungsjahr ein tausend neun hundert neun und fünfzig bei Cobra."
+        },
+        {
+            "start": 817160,
+            "end": 820360,
+            "speaker": "B",
+            "text": "Ich bin im englischen Artikel, da steht first appeared ein tausend neun hundert sechzig"
+        },
+        {
+            "start": 820830,
+            "end": 864060,
+            "speaker": "C",
+            "text": "aber ich glaube, so genau kann man das auch nicht sagen. Also Fortran wurde seit ein tausend neun hundert drei und fünfzig entwickelt, nach meinen Informationen. Dann gab es was funktionierendes ein tausend neun hundert vier und fünfzig was ich absolut beeindruckend finde. Es gibt jetzt neue Fortran Compiler, die vor kurzem entwickelt wurden. Die bauen alle auf LLVM auf, also auf dieser Compilerinfrastruktur, die super viel vereinfacht und da ist von Start bis Entwicklung mit viel Geld von ARM oder Nvidia braucht man zehn Jahre und die haben es damals geschafft, einen Prototyp nach vier Jahren oder nach einem Jahr auf den Markt zu bringen. Und dann, ich glaube, einer von euch hat es gesagt, ein tausend neun hundert sieben und fünfzig kam es auf den Markt, das sind vier Jahre, das ist, glaube ich, heute unvorstellbar."
+        },
+        {
+            "start": 864140,
+            "end": 892770,
+            "speaker": "B",
+            "text": "Und jetzt sprechen wir von einer Sprache, die ist siebzig Jahre alt oder mehr als siebzig Jahre wahrscheinlich sogar und die ist immer noch auf Platz zwölf oder vor kurzem Platz acht gewesen. Warum? Warum ist es eine revolutionäre Sprache immer noch oder damals war sie revolutionär Aber warum gibt es sie immer noch? Wird sie überhaupt weiterentwickelt noch? Wie schaut denn das aus? Warum sitzen wir heute da und sprechen über Fortran? Und scheinbar ist es immer noch eine Sprache, die sehr, sehr häufig verwendet wird in gewissen Bereichen."
+        },
+        {
+            "start": 893010,
+            "end": 952650,
+            "speaker": "C",
+            "text": "Also ich glaube, es sind zwei Punkte, die vielleicht auch ein bisschen gegensätzlich klingen. Das eine ist, Fortran wird weiterentwickelt und so wie Fortran ein tausend neun hundert sechzig aussah, sieht es heute nicht mehr aus. Das wäre wahrscheinlich auch niemandem zuzumuten. Also da gibt es einfach Statements, viel Go to, merkwürdige Konventionen, die sich dann nachher einfach als nicht so zielführend herausgestellt haben. Also Fortran wird weiterentwickelt. Der neueste Standard ist jetzt drei Jahre alt, vier Jahre alt von zwei tausend drei und zwanzig, es wird einerseits weiterentwickelt, andererseits wird bei der Weiterentwicklung aber auch viel Wert auf Rückwärtskompatibilität gelegt. Und das ist natürlich eine attraktive Kombination, wenn ich einerseits neuen Code schöner, moderner, in der Regel kürzer schreiben kann, ohne aber jetzt darauf verzichten zu müssen, dass den Code, den ich vielleicht seit dreiig vierzig Jahren habe, dass ich den wegschmeißen muss."
+        },
+        {
+            "start": 952650,
+            "end": 968490,
+            "speaker": "B",
+            "text": "Ist das jetzt Fortran drei und zwanzig dann? Ich kann mich erinnern, ich habe glaube ich, Fortran war sieben und siebzig oder was war mit neunzig? Ich kann mich gar nicht mehr genau erinnern, aber ich glaube, es war fast sieben und siebzig wo man noch die Zahlen vorne hinschreiben muss von den einzelnen Zeilen, oder? Ich glaube, das war sieben und siebzig schätze ich mal."
+        },
+        {
+            "start": 968490,
+            "end": 1028910,
+            "speaker": "C",
+            "text": "Genau, also fort dran sieben und siebzig ist so der letzte Standard, der diese zeilenbasierte oder diese nicht Zeilen, sondern diese spaltenbasierte strenge Einteilung hatte. Da waren die ersten sechs Balten, glaube ich, für Kommentare und danach begann dann das Programm. Offensichtlich hängt es damit zusammen, dass die ersten Fortran Programme auf Lochkarten geschrieben wurden und so hat sich das dann immer weiterentwickelt. Und dann kam der große Schritt mit Fortran neunzig dreizehn Jahre später, das hat damals wohl auch wirklich lange gedauert, in eine Konvention, die als Freeformat benannt wird. Und das ist dann ohne diese Limitierung. Und dann kamen halt in den nächsten Jahren ein tausend neun hundert fünf und neunzig zwei tausend neunzehn zwei tausend drei, zwei tausend acht zwei tausend achtzehn und dann eben zwei tausend drei und zwanzig Ergänzungen zu dem Standard und Fortran sieben und siebzig sieht auch aus meiner Sicht, ich habe das selbst nie aktiv geschrieben, doch sehr altertümlich aus."
+        },
+        {
+            "start": 1029070,
+            "end": 1048610,
+            "speaker": "A",
+            "text": "Also jetzt wird hier dieser Turboindex ja immer noch erwähnt und er hat mich jetzt gerade nicht losgelassen. Ich möchte jetzt nur mal ganz kurz hier klären und die Frage geht auch an dich, Martin, warum du denkst, Fortran ist auf Platz zwölfte Also erstens, Fortran ist auf dem absteigenden Ast, es hat einen roten Pfeil nach unten, das ist das Downtrending. Müssen wir mal jetzt hier, aber ja,"
+        },
+        {
+            "start": 1048610,
+            "end": 1049970,
+            "speaker": "B",
+            "text": "es war ja auf acht eben."
+        },
+        {
+            "start": 1049970,
+            "end": 1094950,
+            "speaker": "A",
+            "text": "Also typescript ist gerade auf Platz zwei und dreiig. Und da habe ich dann mal geguckt, okay, jetzt ist irgendwo Was ist hier los? Wie wird dieser Index eigentlich zusammengesetzt? Suchvolumen. Der Hauptfaktor ist die Häufigkeit der Suchanfragen, die den Namen der Programmiersprache enthalten, zum Beispiel Fortran Programming dann bei Google. Okay, dann Quellen. Es werden über fünf und zwanzig Suchmaschinen und Webseiten wie Wikipedia, YouTube, Bing und Google genutzt. Okay, und jetzt kommt es Qualifizierte Entwickler, Drittanbieter, Anzahl der Entwickler, die die Sprache nutzen, sowie die Verfügbarkeit von Kursen. Also ihr könnt mir doch nicht erzählen, dass Fortran in allen drei Segmenten typescript schlägt oder Go oder Rust, weil die sind alle hinter Fortran. Martin, jetzt du."
+        },
+        {
+            "start": 1095110,
+            "end": 1162530,
+            "speaker": "C",
+            "text": "Ja, also was der Index misst, ist wahrscheinlich für alle so ein großes Rätsel. In der Fortran Community wird eigentlich immer gesagt, wenn Fortran nach oben geht, hat er recht, wenn Fortran nach unten geht, hat er nicht recht. Also es gibt eine relativ klare Regel, die auch jeder so versteht. Ein Problem, das mir irgendwie nie so ganz klar war, ist die Namen Fortran. Wenn jemand nach Fortran sucht, dann ist es entweder ein Typo oder er sucht nach der Programmiersprache. Wenn jemand nach Rust sucht, ist vielleicht einfach sein Auto irgendwie kaputt gerostet. Wenn jemand nach Go sucht, sucht er vielleicht auch einfach irgendeiner Fitness App. Ich weiß nicht, was typescript und Fortran sollten eigentlich in der gleichen Kategorie sein. Warum typescript da so schlecht abschneidet, weiß ich nicht. Ein Punkt, der natürlich auch immer klar Wenn niemand nach dem Begriff suchen muss, vielleicht weil die Sprache so klar und gut ist, dass man es einfach schreiben kann, ohne danach zu googeln, dann Sucht man da nicht. Vielleicht ist es einfach, dass fortan so verwirrend ist, aber das würde ich jetzt persönlich nicht sagen."
+        },
+        {
+            "start": 1162690,
+            "end": 1175370,
+            "speaker": "A",
+            "text": "Ich mag deine Argumentation. Aber auf der anderen Seite, um die wieder herauszufordern, wenn ich nach Rust Programming suche, müsste das nicht, wenn das nach rostigen Stellen auf meinem Auto ist, müsste das nicht eigentlich zur Folge haben, dass dort mehr Suchtreffer kommen als bei Fortran schon."
+        },
+        {
+            "start": 1175370,
+            "end": 1267400,
+            "speaker": "C",
+            "text": "Aber die Frage ist halt natürlich, was machen die für Datenmanipulation, um da auf ihre Zahl zu kommen. Ich weiß es nicht, es ist mir auch nicht so klar. Eine Sache, die ich weiß, ist, das Fortran war schon mal deutlich schlechter. Also vor zehn Jahren vielleicht auf zwanzig, fünf und zwanzig so in der Gegend. Und seit inzwischen vielleicht acht Jahren, ich weiß es nicht so genau, gibt es eine fortranlang Website, also eine relativ informative Website, die auch nicht so aussieht wie aus den ER Jahren. Also wenn ihr irgendwie mal gucken wollt, wie eine Website von ein tausend neun hundert neunzig aussieht, dann geht auf Fortran Com oder sowas. Also es gibt auch wirklich Sachen, denen sieht man das alte an auf Fortran Lang Org, glaube ich. Das ist einfach eine Up to date Seite. Es gibt einen Fortran Discourse, wo dann die Sachen diskutiert oder Themen diskutiert werden können. Das hat der Sprache auf jeden Fall im Tiobe Index einen Push gegeben. Ob das jetzt echte Relevanz Verbreiterung ist, würde ich jetzt fast ein bisschen bezweifeln. Aber nochmal, ich habe es eben schon mal gesagt, es gibt zwei neue Fortran Compiler, die in den letzten zehn Jahren entwickelt worden sind. Es gibt Flang basierend auf LLVM und dann direkt kompatibel mit Klang, also dem Apple Compiler oder diesem Open Source Compiler, der viel gebraucht wird. Und dann gibt es L Fortran auch basierend auf LLWM mit ein bisschen anderen Fokus. Also es ist jetzt auch nicht so, dass sich da nichts tut und die Standardisierung geht auch immer weiter."
+        },
+        {
+            "start": 1267730,
+            "end": 1279130,
+            "speaker": "B",
+            "text": "Ich glaube, das Grundproblem ist einfach, dass der Andi gesehen hat, dass Go auf Platz sechzehn ist und das geht dann überhaupt nicht, dass das schlechter ist als Fortran. Und ich glaube, darum springt er jetzt so auf auf diesen Index."
+        },
+        {
+            "start": 1279130,
+            "end": 1341140,
+            "speaker": "A",
+            "text": "Nee, nee, nee, nee, nee, nee. Ich habe einfach nur mal geguckt, okay, auf welche Datenbasis beziehen wir uns denn hier? Und deswegen, aber wo ich gerade so ein bisschen die Top Level Domains durchgegangen bin, Fortran Org ist zu verkaufen. Also falls wer eine Top Level Domain haben möchte, kann man die kaufen. Jetzt ist einer dieser Sprüche in diesem Podcast, Legacy verdient das Geld und jetzt sprechen wir über eine sehr alte Programmiersprache. Deswegen nehme ich einfach mal an, da ist sehr viel Code drin geschrieben worden und deswegen nehme ich auch noch mal darauf an, dass sehr viel Code davon immer noch in Produktion ist. Und wenn ich das einfach mal so weiterführe, dieses Gedankenspiel, dann denke ich mir, wir haben so viel gelernt in der Programmierung, wie man gute Software schreibt. Habe ich da immer nur einen Haufen Spaghetti Code vor mir oder bietet Fortran auf Englisch, würde ich sagen, Guardrails, beschützt dich so ein bisschen vor der Code Mess oder wie strukturiert man guten Code oder wird der alte Code noch modernisiert? Ich gehe stark davon aus, auch du hast mal alten Fortran Code irgendwo gesehen oder vielleicht sogar täglich in den Händen,"
+        },
+        {
+            "start": 1341300,
+            "end": 1430690,
+            "speaker": "C",
+            "text": "Also täglich in den Händen zum Glück nicht. Und ich denke, es ist auf jeden Fall was dran, dass viele Software einfach geschrieben wurde und sie wird weiter eingesetzt. Also heute in der Produktentwicklung ist es ja eigentlich immer so, jedes technische Produkt startend von dem Material, das wäre dann meine Domäne bis zu Festigkeit beim Auto, vielleicht von einem wifi, die Antenne, wie die abstrahlt, das wird ja alles erstmal simuliert, bevor da überhaupt jemand das erste Produkt herstellt. Und ich würde mal fast behaupten, jedes technische Produkt, was wir verwenden, hat sicherlich in irgendeiner Form, vielleicht nicht super wichtig, irgendeine Simulation stattgefunden, wo Fortran drin war. Es gibt LAPAC, Linear Algebra Package, was eigentlich die Grundlage für viele Simulationen ist, für die grundlegenden linearen Algebra Probleme. Das ist in Fortran. Und wenn man dann auch sowas benutzt, wie gesagt, ich gebraucht viel Python, da werden dann für Simulationen sowas gebraucht wie scipy oder numpy, das sind Wrapper auf Fortran Code. Also wenn ich einen Eigenwert in scipy oder numpy ausrechne, dann habe ich ein schönes Python Interface und im Hintergrund wird Fortran oder auch C oder C aufgerufen. Und viele von den Sachen stand heute meines Wissens nach immer noch Fortran Routine. Man sieht es natürlich nicht mehr."
+        },
+        {
+            "start": 1430850,
+            "end": 1435010,
+            "speaker": "B",
+            "text": "Und warum, also warum sind es keine C Implementierungen zum Beispiel?"
+        },
+        {
+            "start": 1435170,
+            "end": 1552460,
+            "speaker": "C",
+            "text": "Ich denke einfach, die fortrans Routinen sind da, man kann sie verwenden, sie sind oft meiner Meinung nach nicht so getestet, wie man es heute testen würde, aber sie sind battle proof. Also sie sind einfach dadurch, dass keiner in den letzten dreiig Jahren einen Fehler gefunden hat, kann man trotzdem davon ausgehen, dass sie gut sind. Das ist, glaube ich, ein Argument. Das andere ist vielleicht ein bisschen mehr in Richtung der Sprache. Sie hat halt eben doch auch einen Fokus auf Performance. Also es gibt so Sachen wie die Reihenfolge der Statements kann zum Beispiel ausgetauscht werden. Das heißt, der Compiler hat die Möglichkeit, Optimierungen durchzuführen, die zum Beispiel bei C nicht so einfach sind. In C gibt es ja immer die Pointer Thematik mit Aliases. In Fortran muss ich explizit diese Zahl oder diese Variable kann möglicherweise ein Alias haben. Das heißt, das ist dann so eine Art Warnung an den Compiler zu okay, vielleicht kann ich damit bestimmte Optimierungen nicht machen. Wenn ich normalen C Code schreibe, ist immer die Zeigt da nicht noch irgendein Pointer drauf, der dann vielleicht ein Argument zu einer Routine ist und irgendwas wird übersehen. Also Fortran hat schon den Anspruch und die Idee, schnellen Code zu ermöglichen. Die alten Routinen sind dann halt oft noch Fortran sieben und siebzig da gibt es viele Sachen, die heute verwendet werden, noch nicht aber jetzt bei modernerem Fortran. Das bietet dann, glaube ich schon die Möglichkeiten, guten Code zu schreiben. Also ich habe multidimensionale Arrays, das gibt es jetzt, glaube ich, in C mit dem kommenden Standard. MD SPAN ist gerade standardisiert. In Fortran gibt es das seit ein tausend neun hundert neunzigste Dynamische Memory ist natürlich auch kein unique selling point heute, aber mit dieser Matrix Notation, dass ich einfach Ideen relativ nah am Problem ausdrücken kann, das macht es für mich auch heute noch interessant."
+        },
+        {
+            "start": 1552700,
+            "end": 1598940,
+            "speaker": "A",
+            "text": "Man hört schon ziemlich viel raus, dass Fortran sehr stark in der Mathematik ist. Das bedeutet Zahlen, Berechnungen, Matrizenkalkulation und so weiter und so fort. Vor kurzem haben wir auch in dem Podcast über die Sprache F gesprochen, bzw. Haben wir ganz kurz erwähnt, dass die Sprache F unter anderem Datentypen zur Datentypen zur physikalischen Maßeinheit habt. Das bedeutet irgendwie Geschwindigkeit und Meter und Sekunden und sowas, was die ganze Sache wirklich stark typisiert in der Sprache. Jetzt frage ich Wie sieht es denn mit der Typisierung in Fortran aus? Also ist das spezialisiert irgendwie auf Floating Point Numbers und Decimals oder Integer und das war's? Oder dynamisch typisiert wie PHP oder vielleicht sogar Python und Vielleicht kannst du mal zu dem Typensystem ein bisschen was sagen,"
+        },
+        {
+            "start": 1599650,
+            "end": 1707380,
+            "speaker": "C",
+            "text": "also statisch und stark und was es gibt sind Floating Points, die heißen real, integers, complex und logical boolean. Und dann kann man noch sowas wie derive types, also Compound Datentypen machen. Es gibt Enums, das ist glaube ich so ein bisschen der absurdere Teil von Fortran, weil ein Enum Typ wurde eingeführt hauptsächlich für Interoperabilität mit C. Also das ist ja heute so glaube ich der Standard, dass jede Sprache spricht irgendwie zusammen mit C. Das heißt, wenn ich Python mit Fortran verbinden will, macht man das oft über so ein C Layer oder mit C. Auf jeden Fall wurden Enums eingeführt, die gibt es im Sprachstandard, die sind relativ beschränkt. Und dann paar Jahre später wurden nochmal Enums eingeführt, die heißen anders, fragt mich nicht genau wie die einen heißen Enum und die anderen Enumerator oder irgendwie sowas, Aber das ist schon etwas absurd. Generell ist es wirklich so der Fokus auf diese Basis Datentypen und dadurch, dass es stark und statisch ist, weiß der Compiler sozusagen zu jedem Zeitpunkt, was ihn erwartet. Und ein Unterschied ist dann natürlich zwischen Array und Liste. Eine Liste, die vielleicht verschiedenartige Typen enthalten kann, ist natürlich viel, viel schwieriger zu optimieren als ein Array, wo ich den Zugriff einfach über Zahl mal Offset oder sowas berechnen kann. Und das macht es natürlich auch sehr einfach zu optimieren, wenn ich sozusagen da ein Limit habe oder eine Einschränkung habe zu okay, wenn dann ein Array kommt, dann weiß ich einfach der fünf hundertste Eintrag ist fünf hundert mal sizeof. Das habe ich in der Liste nicht. Da muss man sich dann durchkämpfen."
+        },
+        {
+            "start": 1707460,
+            "end": 1715560,
+            "speaker": "A",
+            "text": "OK, du sagtest gerade, dass es auch Listen gibt und dass Listen unterschiedliche Typen enthalten können. Das klingt jetzt so ein bisschen nach irgendwie, das klingt jetzt gar nicht stark typisiert."
+        },
+        {
+            "start": 1715560,
+            "end": 1771990,
+            "speaker": "C",
+            "text": "Ne, das gibt es in Fortran, deshalb gibt es das nicht. Man kann das natürlich selbst implementieren und das wird auch gemacht. Dann muss ich mir eben, oder auch da mit Hinblick auf die Interoperabilität mit C gibt es in Fortran heißt es unlimited polymorphic, also praktisch jeder Typ, in C ist es so ein void. Das heißt aber in jedem Zugriff, wenn ich dann irgendwas mit meinem Datentyp oder mit meinen Daten machen will, dann muss ich so ein typeguard einbauen. Das heißt, wenn dieser Typ jetzt ein Integer ist, dann mach das. Wenn dieser Typ ein Float ist, dann mach das. Das heißt, es gibt keine Listen in der Sprache. Man kann sie sich selbst programmieren, aber das fühlt sich dann wirklich schwierig an. Vor allem wenn man dann irgendwie weiß, in Python sind es zwei Zeilen und es funktioniert einfach. Es funktioniert natürlich mit einer ganz anderen Geschwindigkeit, aber der Komfort ist da in Fortran relativ gering."
+        },
+        {
+            "start": 1772230,
+            "end": 1779390,
+            "speaker": "B",
+            "text": "Das heißt aber, man hat vollen Speicherzugriff, klassisch wie in C. Wenn du dir das selber bauen musst, gute Frage, man"
+        },
+        {
+            "start": 1779390,
+            "end": 1785550,
+            "speaker": "C",
+            "text": "kann schon viel machen. Es gibt in Fortran auch Pointer, die werden eigentlich relativ wenig gebraucht, aber das"
+        },
+        {
+            "start": 1785550,
+            "end": 1792560,
+            "speaker": "B",
+            "text": "Memory Management liegt bei dir. Also es gibt jetzt keinen Garbage Collector oder sowas, sondern du musst allokieren und damit umgehen."
+        },
+        {
+            "start": 1792560,
+            "end": 1832680,
+            "speaker": "C",
+            "text": "Genau, also allokieren muss man auf jeden Fall. Das ist teilweise doch ein bisschen komfortabler als in C. Also ich kann zum Beispiel einfach, wenn ich meinem dynamischen Array drei Einträge zuweise, dann versteht der Compiler, okay, das soll auf Länge drei allokiert werden und dann direkt zugewiesen werden. Also es ist ein bisschen komfortabler als malloc, aber im Endeffekt ist natürlich ein ganz normales Malloc da drunter. Garbage Collection gibt es nicht, aber es gibt natürlich diese Regeln, wenn Sachen out of scope gehen, Also wenn ich Array in einer Funktion definiere, dann kann ich das in der Funktion verwenden, aber wenn die Funktion endet, wird es automatisch wieder freigegeben."
+        },
+        {
+            "start": 1832680,
+            "end": 1859690,
+            "speaker": "B",
+            "text": "Jetzt klingt das alles sehr nach direkten alten Konzepten und sehr nach Spaghetti Code. Und wenn ich mich so zurückerinnere, das, was ich damals geschrieben habe, war auch sehr Spaghetti artig, aber das waren halt sehr kleine Geschichten. Gibt es da mittlerweile in irgendeiner Form Modularisierung, irgendwelche neuen Features, Objekte, Objektorientierung, vielleicht sogar Generics, was man von anderen Sprachen kennt? Oder ist es immer noch eigentlich das gleiche Fortran wie vor dreiig Jahren?"
+        },
+        {
+            "start": 1859690,
+            "end": 1920510,
+            "speaker": "C",
+            "text": "Also Module gibt es seit ein tausend neun hundert neunzigste Fortran neunzig gibt Module und da würde ich auch sagen, ist Fortran C deutlich voraus. Also ich schreibe nicht irgendwo mein Header und dann in andere Dateien die Implementierung, sondern ich schreibe einmal die Implementierung. Der Compiler kann dann checken, rufe ich die Funktion, die ich irgendwo in dem Modul definiert habe, mit den richtigen Argumenten auf, also sowas, was ich in C machen kann. Dass ich verwechsel den Datentyp oder sowas. Das kann ein Fortran Compiler sehr effektiv dadurch feststellen. Das gibt dann eben einen Fehler während des Kompilierens. Also Module gibt es auf jeden Fall. Bisschen merkwürdig implementiert, weil wenn ich an Module denke, auch wieder von Python, dann denke ich natürlich direkt an Namespaces. Die gibt es komischerweise in Fortran nicht. Vielleicht ein bisschen das Problem, wenn man sich überlegt, ein tausend neun hundert neunzig ich weiß nicht, was da der Stand bei anderen Programmiersprachen war, aber ich denke, da waren Module, naja, Java war noch"
+        },
+        {
+            "start": 1920510,
+            "end": 1923310,
+            "speaker": "B",
+            "text": "gar nicht auf der Welt ein tausend neun hundert neunzig die gab es damals"
+        },
+        {
+            "start": 1923310,
+            "end": 1985930,
+            "speaker": "C",
+            "text": "noch gar nicht, Da waren Module noch relativ neu und vielleicht war da die Erkenntnis, dass Module mit Namespaces zusammen sind eine richtig gute Idee. Module ohne Namespaces waren damals wahrscheinlich auch eine gute Idee, aber heute fühlt sich ein bisschen komisch an. Objektorientiert gibt es auch. Also ich kann Methoden an Typen binden, sicherlich nicht so, wie soll ich sagen, vom Gefühl her gut gemacht wie in C oder Python, aber das geht. Die Frage ist da dann so ein bisschen von der vorderen Seite, ist es noch schnell? Wir haben ja diskutiert, Fortran ist eigentlich dafür da oder wird verwendet, weil es eine schnelle Programmiersprache ist. Und da muss man leider feststellen, in dem Moment, wo ich viel objektorientierten Code schreibe, können zumindest die existierenden Compiler das nicht mehr so gut optimieren. Das heißt, da habe ich dann schon den Will ich diese modernen Features benutzen oder soll mein Code schnell sein? Das letzte, was du gefragt hast, Generics, das ist im Moment in der Diskussion für einen der nächsten Standards."
+        },
+        {
+            "start": 1986170,
+            "end": 1993410,
+            "speaker": "A",
+            "text": "Siehst du, Fortran und Go sind gar nicht so weit auseinander. Generic sind inzwischen in Go, hat aber auch ein paar Jahre gedauert. Aber nun gut, wieso?"
+        },
+        {
+            "start": 1993410,
+            "end": 1996170,
+            "speaker": "B",
+            "text": "Martin hat gerade gesagt, es gibt keinen Spaghetti Code mehr."
+        },
+        {
+            "start": 1996890,
+            "end": 1999410,
+            "speaker": "A",
+            "text": "Wolfgang war schön mit dir zu sprechen. Ich wünsche dir einen schönen Tag."
+        },
+        {
+            "start": 1999410,
+            "end": 1999850,
+            "speaker": "B",
+            "text": "Dankeschön."
+        },
+        {
+            "start": 1999850,
+            "end": 2068410,
+            "speaker": "A",
+            "text": "Ich mache von hier alleine weiter. Die Frage ist ja, wir haben gerade ein bisschen über Performance gesprochen, Du sagtest gerade, dann ist Fortran nicht mehr schnell, oder es ist immer noch die Frage, welche Funktionalität wird denn vom Compiler da weg optimiert und Co. Und der Wolfgang hat diese Podcast Episode auch mit High Performance Computing begonnen und du arbeitest ja auch in dem Feld Simulationen und Co. Ich gehe stark davon aus, du führst die Simulationen nicht auf deinem kleinen MacBook durch, sondern auf einer etwas größeren, hoffentlich verteilteren Kiste. Und immer wenn ich von High Performance Computing spreche bzw. Von verteilten Kisten, spreche ich natürlich auch von Shared versus Distributed Memory. Und wenn, Fork, wollte ich gerade sagen, wenn Fortran genau auf mathematische Operationen ausgelegt ist und Co. Kann ich mir auch vorstellen, das wird auch für Wettersimulationen genutzt, ich weiß es nicht. Das bedeutet aber für mich aber mit einem Terabyte Memory oder vielleicht mit ein bisschen mehr, vielleicht kommst du damit nicht aus, also brauchen wir ein bisschen mehr CPU Power, ein bisschen mehr RAM. Wie geht denn Fortran oder wie löst Fortran in das Thema Shared versus Distributed Memory? Greift das auf irgendwie Standard Libraries wie aus dem C C Bereich zurück, wie MPI und Co. Oder gibt es da irgendwie was Eigenes, was speziell optimiert ist?"
+        },
+        {
+            "start": 2069280,
+            "end": 2243480,
+            "speaker": "C",
+            "text": "Zwei Antworten. Also es gibt im Prinzip die Äquivalente zu C und C im Bereich openmp, also openmp als Pragma, so eine Art Kommentar, die ich in den Code schreibe, die dann, wenn die Library vorhanden ist, dazu führt, dass Schleifen im Shared Memory parallelisiert werden. Das sieht im Endeffekt genauso aus wie in C und wird dann im Backend sind es eigentlich nur Threads, also so eine Art glorifizierte Threads, wo man als Programmierer sich keine Gedanken machen muss, wie starte ich den, wie join ich den, sondern ich sage einfach, da ist eine große Schleife, teil die doch einfach auf, dass auf meinem System die vier Prozessoren, die ich habe, einfach einer macht den ersten Teil, der nächste macht den zweiten Teil und so weiter. Das ist Shared Memory. Da sehe ich keinen Unterschied zu C oder C für Distributed Memory. Also alles, was dann wirklich auf Cluster geht, auf High Performance, hat sich auch wirklich da MPI, also Message Passing Interface durchgesetzt. Das kann man eben in den meisten Sprachen, die verwendet werden, benutzen, also C, C, eine der Sprachen ist die native Implementierung, dann gibt es Bindings zu Fortran und man kann das dann auch mit anderen Programmiersprachen dann benutzen, sowas wie Julia oder Python. Also da gibt es keinen großen Unterschied. Fortran selbst hat aber eine Spezialität und das sind sogenannte Co Arrays. Und das ist im Endeffekt der Versuch, dieses einfache Paradigma vom Shared Memory. Das heißt, wenn ich einen Datenpunkt von einem anderen Thread oder Prozess haben will, dann sage ich gib mir den Datenpunkt fünf und ob der jetzt in meinem Speicher liegt oder in dem anderen. Das ist ja das Schöne an Shared Memory zu übertragen auf Distributed Memories. Das heißt, in Co Array Fortran, was Teil des Standards ist, kann man neben den normalen Matrix Dimensionen eine Co Dimension spezifizieren und die bedeutet dann, auf welchem anderen Prozess liegen die Daten. Das heißt, wenn ich jetzt sage, ich will Eintrag eins eins von der Matrix haben, dann nehme ich meinen eins eins Index. Und wenn ich jetzt aber den Index von Prozessor fünf haben will und ich bin jetzt selbst nicht gerade Prozessor fünf dann sage ich einfach und dann in einer, glaube ich, eckigen Klammer fünfte Und das ist so eigentlich der Versuch in der Sprache das einfache Shared Memory Access auf Distributed Memory zu übertragen. Vielleicht noch als im Endeffekt zumindest eine Implementierung, von der ich gehört habe, basiert es dann wieder auf MPI. Also man benutzt MPI, um diese ganzen Datentransfer von einem Knoten zum anderen zu machen, aber baut es dann in der Sprache so ein, dass ich da kein explizites Send oder Receive mehr brauche."
+        },
+        {
+            "start": 2243480,
+            "end": 2276820,
+            "speaker": "A",
+            "text": "Ich habe mir gerade Co Arrays in Fortran gegoogelt und komm auf den Wikipedia Artikel und da denkst du dir, das kann noch nicht euer Ernst sein. Warum ist Benamung eigentlich so schwer? Also nur mal ganz kurz, wir haben eine Sprache, die nennt sich C. Wir haben eine Sprache, die nennt sich F und Co Array Fortran wurde ehemals F genannt. Ist das dein Ernst? Also sorry, wie kann man gut, ein tausend neun hundert neunzig als das rauskam, gab es noch kein Google Alter, wisst ihr oder weiß ich nicht oder noch gar nichts. Aber F, C, das ist doch nicht"
+        },
+        {
+            "start": 2276820,
+            "end": 2279100,
+            "speaker": "B",
+            "text": "deren Ernst, darum haben sie es ja geändert."
+        },
+        {
+            "start": 2279100,
+            "end": 2341200,
+            "speaker": "C",
+            "text": "Ja, wusste ich ehrlich gesagt auch noch nicht. Heute ist es wie gesagt einfach Teil des Standards. Ist auch oft so passiert, dass, dass erst die Compiler, Entwickler und in den er Jahren gab es da auch wirklich jeder hatte seine eigene Hardware, jeder verkaufte oder hat dann den Compiler dazu verkauft. Das heißt, wenn ich damals im High Performance Computing Bereich was verkaufen wollte, Hardware verkaufen wollte, dann musste ich den Compiler dann dazugeben und dann haben die Hersteller auch versucht, sich über bessere Features in Fortran zu unterscheiden. Und eine so eine Möglichkeit oder eine so Unterscheidung war dann eben Co Array Fortran. Ich weiß nicht wer, aber irgendeiner der Hersteller hat einen gesagt, okay, auf meinem System habt ihr jetzt dieses neue Feature, also kauft die Hardware, dann kriegt ihr den Compiler dazu und danach wurde das dann standardisiert. Also das war dann oft so, die Hersteller haben sich überlegt, wie soll sich die Sprache entwickeln? Dann haben sich alle zusammengesetzt und haben gesagt, okay, die und die Syntax, die und die Semantik übernehmen wir und nennen das jetzt, keine Ahnung, Fortran fünf und"
+        },
+        {
+            "start": 2341200,
+            "end": 2377320,
+            "speaker": "B",
+            "text": "neunzigste Jetzt hast du schon ein bisschen aufgezeigt, dass das vor allem für die parallelen Systeme natürlich sehr angenehm ist oder ein paar Features zumindest diesbezüglich gibt. Jetzt hast du aber auch erwähnt, du verwendest sonst Python sehr stark, die OBE Index Nummer eins übrigens by the way, und zwar viel, viel weiter oben, irgendwie so zwanzig Prozent. Alle anderen Sprachen haben so irgendwie drei Prozent oder so irgendwas, Also scheint sehr hip zu sein, dieses Python, hab schon mal davon gehört. Aber wann verwendest du jetzt Python und wann verwendest du Photon und warum verwendest du nicht nur Python? Oder wie entscheidest du das? Oder ist es dann, ob du bei alten Zeug herumschraubst oder bei neuem?"
+        },
+        {
+            "start": 2377800,
+            "end": 2559440,
+            "speaker": "C",
+            "text": "Also es ist relativ häufig so im technisch wissenschaftlichen Rechnen, dass man zuerst seine Simulation aufsetzt. Also ich definiere Randbedingungen, Anfangsbedingungen, eine Geometrie, irgendwelche numerischen Inputwerte für Materialverhalten, dann führe ich die Simulation durch und dann habe ich eine große Menge Daten, keine Ahnung, mehrere Gigabyte oder sowas und dann muss ich die analysieren. Und die traditionelle Auftrennung ist, dass man die Vorbereitung nicht in Fortran macht, da ist Performance nicht so wichtig, aber ease of Use, so was wie, was wir eben besprochen haben, Listen oder Dictionaries, um Daten zusammenzuführen, brauche ich da eben, um effektiv zu arbeiten. Dann führe ich meine Simulation aus und da ist dann Performance mein Hauptkriterium und dann habe ich wieder meine Daten. Und da brauche ich eigentlich auch oft eine Flexibilität, um die dann zu untersuchen, um Statistiken zu bilden, Daten zu visualisieren, plotten und so weiter. Und das ist bei mir und bei vielen dann so die typische Aufteilung zu okay, die Simulation selbst läuft auch fort dran und das Pre und Post Processing läuft in Python oder vielleicht auch auch Matlab eben in einer Sprache oder AR für Statistik in einer Sprache, die eben darauf abzielt, dem Benutzer viel Komfort in der Regel auf Kosten der Performance zu geben. Und dieses Problem, und ein Problem deshalb, weil man eben zwei Sprachen gleichzeitig beherrschen muss, zumindest wenn man wirklich sowohl die Simulation Software entwickelt, als auch Simulation ausführt. Das wurde dann so ein bisschen von Julia Lang von einer neuen Programmiersprache gecoint als to Language Dilemma. Und Julia ist eben angetreten, um zu sagen, wir haben eine Sprache, die ist einfach zu benutzen und schnell. Julia basiert auch auf LLVM. Also ich glaube, da der Einfluss von dieser Compiler Infrastruktur ist einfach riesig. Es gibt ein ähnliches Projekt, Mojo, was eine Python ähnliche Syntax mit mehr Typins und LLVM basiert macht. Aber das sind so im Moment die Entwicklungen, die weg von Fortrans führen, weil Fortrans eigentlich immer noch notwendig macht, zwei Sprachen zu beherrschen. Und ich glaube, da ist auch der Unterschied zu C nicht so groß. Also es gibt schon auch den Trend, dass neue numerische Software in C geschrieben wird, nicht mehr in Fortran. Die Gründe kann man vielleicht auch gleich ein bisschen drüber nachdenken, ist mir auch nicht so ganz klar, was da wirklich der Grund ist. Aber auch wenn ich jetzt mein Computation Kernel oder meine Hauptsimulation in C schreibe, gibt es immer noch niemanden, der die Datenvorbereitung und Nachbereitung in C macht. Das heißt, da ist meiner Meinung nach C wirklich dann ein Ersatz für Fortran, wohingegen sowas wie Mojo oder Julia wirklich dahin abzielt zu Wir machen das ganze Ökosystem besser."
+        },
+        {
+            "start": 2559440,
+            "end": 2566420,
+            "speaker": "B",
+            "text": "Jetzt hast du ein paar Mal LLVM erwähnt. Kannst du das kurz erklären für alle, die jetzt nicht so in dem ganzen Sprachen Kosmos drin sind?"
+        },
+        {
+            "start": 2566500,
+            "end": 2598730,
+            "speaker": "C",
+            "text": "Ja, LLVM ist eine Compilerinfrastruktur, Compiler Toolkit. Ich weiß nicht, wie sie sich selbst bezeichnen. Das gibt es, glaube ich, seit so ungefähr fünf und zwanzig Jahren. Zwei tausend wurde es entwickelt. Der Compiler auf Macs ist basiert auf LLVM. Ich bin kein Compiler Entwickler, aber es ist eben ein Toolkit, wo ich relativ einfach sagen okay, du interpretierst den Quellcode so und dann hat es eben die Backends, um daraus schnellen Maschinencode für verschiedene Architekturen zu erzeugen."
+        },
+        {
+            "start": 2598890,
+            "end": 2604650,
+            "speaker": "B",
+            "text": "Das heißt, Fortran ist dann irgendwann oder der Hauptcompiler ist dann irgendwann umgestiegen einfach auf LLWM."
+        },
+        {
+            "start": 2604730,
+            "end": 2691250,
+            "speaker": "C",
+            "text": "Bei Fortran ist es ein bisschen anders. Fortran ist ja eine Sprache, die, wie ich eben gesagt habe, standardisiert wird. Also das ist ein ISO Standard. C und C sind es auch. Python zum Beispiel nicht. Rust Go auch nicht. Das sind mehr Sprachen, die entwickelt werden mit einer Referenzimplementierung. Also bei Python weiß ich ein bisschen besser, da gibt es auch noch zwei, drei alternative Implementierungen, aber die werden praktisch nicht benutzt. Bei Rust gibt es den Rust Compiler, der basiert auch auf LLVM oder LLVM, je nachdem wie man es ausspricht. Es gibt jetzt einen im nucompiler, also in der New Compiler Collection, gibt es auch einen Rust Compiler, aber im Endeffekt ist es die Sprache ist stark mit dem Compiler verheiratet, würde ich mal sagen. Bei Fortran ist es anders. Es gibt eine Reihe verschiedener Compiler, unter anderem auch den meistgebrauchten im Open Source Umfeld, Gefortran, der zur GNU Compiler Collection gehört. Und dann gibt es eine Reihe von Compilern, die auch auf LLVM basieren. Intel zum Beispiel, bei denen war das natürlich auch Teil des Geschäftsmodells. Wenn ich High Performance Computing Hardware verkaufe, dann brauche ich auch einen guten Compiler, weil es nützt ja nichts, wenn ich den Leuten erzähle, ihr habt so und so viel extra Flops, aber der Compiler kann die nicht ansprechen. Und Intel ist vor drei oder vier Jahren haben die auch ihr Backend, vorher hatten sie irgendwas selbst geschriebenes auf LLVM umgestellt."
+        },
+        {
+            "start": 2691250,
+            "end": 2738670,
+            "speaker": "A",
+            "text": "Ich frage mich gerade, weil du dieses Zwei Sprachen Dilemma erwähnt hast und dass Giulia anscheinend angetreten ist, um dieses Problem zu lösen, ob Fortran Teil des Problems oder Teil der Lösung hier ist, Weil warum wird Fortran dennoch genutzt? Also wenn es dieses Dilemma gibt, sind andere Sprachen so schlecht, möchte ich nicht sagen, nicht so gut in der mathematischen Berechnung in Kombination mit der Geschwindigkeit? Oder ist Giulia noch nicht da, wo es verspricht zu sein, um Fortran abzulösen? Oder ist Python, weil du nutzt es zur Vor und Nachbereitung vielleicht auf Basis seiner skriptähnlichen Ausführung noch zu langsam für wirklich parallele Execution auf High Performance? Also kannst du da vielleicht was zu sagen?"
+        },
+        {
+            "start": 2738750,
+            "end": 2784550,
+            "speaker": "C",
+            "text": "Ich würde sagen, Fortran könnte Teil der Lösung sein, dazu müsste es sich aus meiner Sicht aber schneller modernisieren. Also wenn man sich jetzt die letzten Standards anguckt, persönlich ist es für mich eher eine Enttäuschung, da wurden viele Sachen eher kosmetischer Natur geändert. Da denke ich, wenn Fortran so weitermacht, ich meine, ich habe es oft gesagt, Legacy verdientes Geld, vielleicht wird es noch zehn Jahre lang Geld verdienen oder fünfzehn Jahre. Aber auch hier in Löwen, ich unterrichte in einem Programm, in einem Master, der heißt Mathematical Engineering, da gibt es jetzt seit zwei oder drei Jahren kein Fortran mehr. Also da sehe ich schon einfach auch für Fortran als Sprache die Bedrohung, dass es sich nicht schnell genug entwickelt."
+        },
+        {
+            "start": 2784870,
+            "end": 2786390,
+            "speaker": "B",
+            "text": "Was unterrichtest du denn dort?"
+        },
+        {
+            "start": 2786470,
+            "end": 2909590,
+            "speaker": "C",
+            "text": "Also in dem Kurs unterrichte ich mit einem Kollegen zusammen Parallel Computing. Also da geht es wirklich darum, wie kann ich Algorithmen entwickeln, die dann auf hauptsächlich Distributed Memory laufen, also Eigenwertberechnung. Wie kann ich das auf High Performance Computing Systemen ausführen? Wie muss da die Kommunikationsstruktur sein, um effiziente Algorithmen zu haben und vielleicht ein bisschen ausholen. Das Problem bei heutigem High Performance Computing ist eigentlich nicht die Geschwindigkeit der cpus. Heutige cpus sind unglaublich schnell. Ich meine, wir sprechen über Exascale Computing, das heißt, es sind irgendwie sowas wie zehn hoch achtzehn Flops. Das ist unglaublich krass, was heute das Problem Wie kriege ich die Daten an den Prozessor? Und der Term dazu ist Memory Bound. Das heißt die Frage wie schaffe ich es, dass die CPU einfach ausgelastet ist. Ehrlich gesagt schaffen wir es einfach nicht. Das heißt, diese Peak Performance, die in der Top fünf hundert Liste mit den schnellsten Rechnern steht, die wird einfach nicht erreicht, weil die Daten sind nicht da. Also dieser ganze Fokus im traditionellen High Performance Computing auf Flops ist so ein bisschen Marketing. Am Freitag war hier eine Vorlesung vom neuen Kollegen von mir, der Zahlen genannt. Normalerweise ist die Auslastung, wenn man das so betrachtet, im Bereich von zwei Prozent. Das heißt, eigentlich wartet man nur auf die Daten. Das ist absolut absurd und das ist, glaube ich, dann im High Performance Computing so die große Herausforderung und da tut sich Fortran dann noch ganz gut. Zurück zur Frage, was ich unterrichte. Also eben einmal Parallel Computing und dann ein Kurs, ein Projektkurs, wo es darum geht, dass Studenten in einer kleinen Gruppe ein kleines Problem lösen. Und da war es eben vor ein paar Jahren eigentlich immer dreiig Prozent, vierzig Prozent haben vielleicht fortan gewählt, die anderen C. Und seitdem jetzt in den vorherigen Kursen eben kein Fortran mehr gelehrt wird, ist es eigentlich so, dass alle C verwenden."
+        },
+        {
+            "start": 2909590,
+            "end": 2920320,
+            "speaker": "B",
+            "text": "Aber das heißt, ihr setzt dann auch auf C, also ihr unterrichtet C oder kommt dann auch so was wie Julia und so weiter dazu Oder was ist mit Rust hippe Technologie, die alles kann, so in der Richtung."
+        },
+        {
+            "start": 2920640,
+            "end": 2969640,
+            "speaker": "C",
+            "text": "Also in dem Kurs sagen wir, es soll eine kompilierte Sprache sein, deshalb fällt Giulia eben raus Das ist ja eine interpretierte Sprache wie Python. Ich persönlich unterrichte es nicht, aber es gibt sicherlich auch Doktoranden hier, die Giulia verwenden. Das ist auf jeden Fall eine gute Alternative. Rust, ja, ich habe es mir mal angeschaut, Dem merkt man aber eigentlich an, dass es keine Sprache ist, die gut sein will in Mathematik. Das ist ein Ersatz für C, nicht für, nicht für Fortran. Natürlich kann man es auch machen, das hat ja auch irgendwelche Arten von Vektordatentypen und es gibt auch Bindings sicherlich zu anderen Libraries. Aber Rust selbst, ich sehe es einfach nicht als die Sprache, die besonders gut darin ist, mathematische Ideen auszudrücken."
+        },
+        {
+            "start": 2969800,
+            "end": 2976440,
+            "speaker": "B",
+            "text": "Jetzt hast du immer C erwähnt, wenn wir schon bei den Sprachen sind. C gibt es gar nicht oder wird C auch gemacht?"
+        },
+        {
+            "start": 2976680,
+            "end": 3071290,
+            "speaker": "C",
+            "text": "Eigentlich relativ wenig. Ich bin neben der eigentlichen Software, die ich sozusagen mit meinen Kollegen entwickle, für einen Teil von Materialwissenschaften, bin ich auch aktiv in der Entwicklung von einem relativ generellen Paket für numerische Berechnungen. Das ist Portable Extendable Toolkit for Scientific Computation oder sowas. Und da wird in der Tat C benutzt. Der Grund war, das ist auch ein bisschen ältere Software, dass sie damals gesagt haben, und von damals reden wir auch so über dreiig Jahre, dass sie da mit der Qualität von C Compilern noch nicht zufrieden waren. Aber generell sehe ich im direkten Ersatz für Fortran, denke ich, ist es wirklich hauptsächlich C. C mit dem ganzen Speichermanagement, mit der doch sehr systemorientierten Programmierung, passt eigentlich nicht in diese domain specific language for Scientific computing. Man kann es natürlich machen, insbesondere wenn man ein guter C Programmierer ist, Aber der Punkt ist einfach, meine Domäne ist ja hauptsächlich Materialwissenschaften. Das heißt, ich habe Studenten, Doktoranden, die haben einen Einführungskurs in Programmierung gehabt, das sind aber keine Softwareentwickler und denen will man eigentlich auch keine Sprache an die Hand geben, wo sie sich mit Pointern in die Füße schießen können. Wir brauchen keine Pointer oder Low Level Memory Zugriff, nur um ein paar Matrizen zu multiplizieren. Das passt nicht so richtig zusammen."
+        },
+        {
+            "start": 3071530,
+            "end": 3081590,
+            "speaker": "B",
+            "text": "Aber du hast ja jetzt gesagt, ihr unterrichtet kein V Trend mehr, sondern C. Das ist ja eigentlich die komplexere Sprache. Also ihr habt euch ja dann entschieden, den Leuten zu helfen, ins Knie zu schießen, oder?"
+        },
+        {
+            "start": 3081750,
+            "end": 3197030,
+            "speaker": "C",
+            "text": "Das würde ich so nicht sehen. Also modernes C kann man ja auch ohne Pointer weitgehend machen. C ist für mich auch so eine irgendwie merkwürdige Sprache. Vielleicht ist es so ein bisschen, warum sie so populär ist wie bei der Hardware. Also ich hatte ja eben gesagt, ursprünglich Fortran auf Computern für numerische Berechnungen. Das heißt, ich habe eine Hardware, ich will die Hardware verkaufen mit dem Ziel darauf numerische Berechnungen durchzuführen. Das gibt es heute nicht mehr. Es hat sich dann in die Richtung entwickelt seit zwanzig dreiig Jahren, ein tausend neun hundert vier und neunzig glaube ich, gab es den ersten Cluster bei der NASA, der berühmte Biowulf Cluster, wo jemand gesagt Wir kaufen keine teure spezielle Hardware mehr für unser High Performance Computing. Wir kaufen uns einfach so viel wie möglich billige X und schließen die aneinander. Das ist die Idee von einem Cluster. Ich kaufe billige Hardware und einfach viel davon. Und das hat sich so durchgesetzt, dass heute alle Rechner im Bereich High Performance Computing, alle Cluster basieren auf diesem Prinzip. Und ich glaube, bei C ist es ein bisschen ähnlich. Einfach dadurch, dass die Sprache so allgemein ist, wird sie natürlich von vielen verschiedenen Gruppen weiterentwickelt und auch Compiler werden angeboten. Es gibt ja einen Microsoft Compiler für C, es gibt einen Intel Compiler für C, es gibt natürlich GNU Compiler für C. Und ich glaube, da ist es wirklich so ein Economy of Scale. Wenn ich C mache oder wenn ich irgendwas für C entwickle, dann habe ich einfach eine viel größere Kundschaft, einen größeren Markt als für Fortran, genauso wie es bei der Hardware ist. Und deshalb ist es auch für Studenten natürlich sinnvoller zu Ich lerne C, dann kann ich nachher überall arbeiten. Wenn ich mich jetzt auf Fortran spezialisiere, dann gehe ich natürlich schon in die Nische."
+        },
+        {
+            "start": 3197189,
+            "end": 3221920,
+            "speaker": "A",
+            "text": "Meine Frage ist, wenn du sagst, die CPU Geschwindigkeit ist nicht mehr der Bottleneck, sondern eigentlich der Datenfluss zur CPU. Inwieweit springt die? Inwieweit spielt die Programmiersprache, die Performance der Programmiersprache denn eigentlich noch eine Rolle, wenn wir sowieso von einer Auslastung von zwei Prozent reden? Also ist zum Beispiel Python so langsam, dass wir dann auf die CPU warten würden anstatt auf die Daten? Das ist, glaube ich, meine Frage."
+        },
+        {
+            "start": 3222160,
+            "end": 3387060,
+            "speaker": "C",
+            "text": "Das kann ich so direkt nicht beantworten. Hängt natürlich wahrscheinlich von vielen Dingen ab. Aber eine Sache ist natürlich normalerweise, wenn ich sage der Speicherzugriff. Details des Speicherzugriffs spielen eine große Rolle. Das spricht ja eigentlich dafür, dass ich mein Code lieber in C schreibe, wo ich viel Kontrolle habe, oder sogar in Assembler. Und es gibt durchaus auch Kernel für numerische Libraries, die werden in Assembler geschrieben. Das Problem ist dann natürlich erstmal, ich muss Assembler können wieder nicht unbedingt die Domäne von den Leuten, die ich einstelle. Und zweitens, eigentlich muss ich das für jede Hardware neu schreiben. Das heißt, ich muss wirklich hingehen und Cache Size L ist das, dann mache ich diese Block Size und so weiter. Das heißt, ich habe einen Riesenaufwand, um dann eben für den Spezialfall, von dem ich vielleicht gar nicht weiß, wann er eintritt, genau dann die optimale Performance zu haben. Und da ist Fortan oder High Level Sprachen natürlich anders, weil da soll ich mehr Intention ausdrücken und dann hoffen, dass der Compiler das macht oder dass der Compiler das schnell macht. Wieder LLVM. Das ist offensichtlich sehr gut da drin. Ein Beispiel, wo ich denke, dass das Fortran das richtig macht auf einem hohen Abstraktionslevel sind sogenannte Elemental Functions. Das sind Funktionen, die schreibe ich einmal für ein Skalar und kann die dann aber auch für Vektoren oder Matrizen verwenden, also sowas wie eine Addition. Wenn ich in Fortan schreibe eins eins, dann kommt zwei raus. Das ist zumindest meine Hoffnung. Wenn ich jetzt aber einen Vektor habe, wo vorne drin steht eins zwei plus zweiter Vektor, dann soll ein Vektor von der Länge drei drei rauskommen. Jetzt kann ich natürlich eine Schleife aufmachen und OK, wir schreiben eine Schleife über den Vektor, dann machen wir das. In Fortran kann ich einfach Ich definiere eine Funktion für den Skalar und kann dann Vektorargumente reingeben. Wenn der Compiler das richtig macht, kann er dafür den schnellsten Code raussuchen. Und vielleicht ganz, ganz zum Anfang von unserer Diskussion, Wenn ich jetzt zwei Sprachen habe und eine davon ist grow major und die andere column major, dann ist natürlich die Frage, in welcher Reihenfolge ich die Schleifen schreibe, Performance entscheidend, weil entweder habe ich guten Memory Access konsekutiv oder nicht. Wenn ich das jetzt aber einfach so abstrakt hinschreibe und okay, ist mir doch egal, mach es einfach schnell. Dann habe ich genau diesen Weg, den ich eigentlich für die Art von Programmierung haben möchte, die wir machen."
+        },
+        {
+            "start": 3387140,
+            "end": 3447370,
+            "speaker": "A",
+            "text": "Jetzt haben wir natürlich ein bisschen über Assembler gesprochen und Fortran und auch C. Und da frage ich mich auch, wenn ich jetzt Student wäre oder ich wäre bei dir Doktorand oder ähnliches, Bekommt man heutzutage überhaupt noch Leute auf die Sprache Fortran ongeboarded? Ich mein, klar, sie entwickelt sich weiter und so, ich verstehe das. Und du hast ja aber auch schon gesagt, bei anderen alternativen Sprachen wie Julia oder C usw. Hat man vielleicht eine höhere oder eine einfachere Zugänglichkeit. Man kann sich mit Pointern in den Fuß schießen. Alles richtig, alles Pro und Cons. Aber ich denke da auch so ein bisschen an die Zukunft der Leute, die das jetzt lernen, die da jetzt einsteigen. Jetzt kann man sagen, okay, Fortran ist seit, was war das ein tausend neun hundert sieben und sechzig am Start, wird der wahrscheinlich, ich bin immer noch in den ERN, es tut mir leid. Jetzt kann man sagen, okay, das ist seit sieben und fünfzig am Start, die nächsten zwanzig Jahre wird es auch noch da sein. Aber da ist natürlich auch die Frage Jobmarkt technisch, wie sieht die Industrie aus? Ihr seid jetzt in der Forschung, sieht die Industrie genauso aus? Werden die gleichen Tools genommen in der Industrie wie in der Forschung? Wie stehst du dazu? Und ihr habt ja gerade auch gesagt, glaube ich, intern lehrt ihr auch weniger Vortragen?"
+        },
+        {
+            "start": 3447370,
+            "end": 3494700,
+            "speaker": "C",
+            "text": "Also in dem Masterprogramm kommt es eigentlich nicht mehr vor. Wenn jemand bei mir in der Gruppe als Doktorand arbeitet, ist die Chance relativ hoch, dass er was mit Vortrag macht. Aber ich bin, also erstmal, ich mache Computational Material Science, ich bilde keine Programmierer aus. Das heißt, was die Leute bei mir lernen sollen, sind Konzepte, Materialwissenschaft und das große Ganze. Wenn die nachher ein Problem haben, C zu lernen oder Python zu lernen, weil das ihr Arbeitgeber verlangt, dann habe ich versagt. Ich habe nicht versagt, wenn sie nicht das letzte Detail von Fortran verstehen. Also das ist überhaupt nicht der Anspruch in so einer Forschungsgruppe, dass da jemand rauskommt als Fortran Nerd, der genau die eine Sache kann."
+        },
+        {
+            "start": 3494700,
+            "end": 3519010,
+            "speaker": "A",
+            "text": "Ne, ich glaube, das ist auch total fair. Ich glaube, du sollst das richtige Tool nutzen, was euch weiterbringt, was zum Ziel der Forschung beiträgt. Ich glaube, das ist total fair. Und ich sag mal so, ich lehne mich jetzt aus dem Fenster und sage, wenn man Fortran lernen kann, kann man auch andere Sprachen lernen. Ich glaube, Leute, die bei IDEA im Feld unterwegs sind, sind hochintelligent und smart genug, sich das drauf zu karren, besonders mit heutzutage Tools wie AI und Co."
+        },
+        {
+            "start": 3519090,
+            "end": 3535950,
+            "speaker": "B",
+            "text": "Aber würdest du dann, wenn ich da reingrätschen darf, auch kein neues Projekt mal mit Fortran anfangen, mit irgendwelchen Studis? Also außer sie wollen jetzt natürlich. Aber wenn du irgendwie was Neues angehst und da jetzt keine Abhängigkeiten hast, dann klingt es ja eher danach, als würdest du auf was anderes setzen und nicht mehr auf Fortran."
+        },
+        {
+            "start": 3536030,
+            "end": 3627230,
+            "speaker": "C",
+            "text": "Also ich glaube, die Idee, keine Abhängigkeit zu haben, gibt es nicht. Die gibt es eben nicht. Genau. Also wahrscheinlich ist es schon so, dass es nicht unbedingt Fortran wird. Ich weiß aber auch nicht, vielleicht bin ich auch einfach penibel. Es gibt irgendwas, was mich bei jeder Sprache stört. Da würde ich jetzt nicht irgendwie ah, okay, das ist mein Traum und wir machen einfach alles in dem. Aber es gibt halt doch natürlich Abhängigkeiten. Libraries müssen verfügbar sein. Das ist eigentlich meistens so, wenn man jetzt wirklich die Wahl hat zwischen C und Fortran. Alles, was es für Fortran gibt, gibt es auch für C. Also das wäre dann schon auch okay, C zu nehmen. Andererseits finde ich, ist C halt einfach auch eine super komplexe Sprache. Ich weiß nicht, wie viele Seiten der Standard von C hat. Fortran hat sieben hundert oder sechs hundert, finde ich auch schon relativ lang. Das liest sich natürlich auch niemand durch. Ich befürchte, bei C ist es noch mal deutlich mehr. Es ist jetzt auch nicht so, dass ich einfach denke, nimmst du kein Fortran, hast du kein Problem. So ist es halt leider nicht. Ein Fortran hat sicherlich auch viele Nachteile. Eins ist so ein bisschen das ganze Tooling. Da ist C doch besser, wobei ich jetzt auch nicht so ganz überzeugt bin. Python ist da schon relativ stark und dann auch so was wie Julia oder Rust einfach vom Tooling her von Unittest als Teil des Package Managers oder sowas. Das Ecosystem ist dann halt doch sehr, sehr wichtig."
+        },
+        {
+            "start": 3627230,
+            "end": 3639870,
+            "speaker": "A",
+            "text": "Du hast das Ecosystem schon angesprochen. Kennt man die Leute in der Community oder ist die Community noch so groß, also Open Source Community und die Leute, die in Fortran Foren unterwegs sind, dass man sagt, ohne neues Gesicht kommt hier gerade hoch?"
+        },
+        {
+            "start": 3639870,
+            "end": 3689680,
+            "speaker": "C",
+            "text": "Also es gibt durchaus immer mal natürlich Leute, die neu dazukommen. Ich habe es eben erwähnt, es gibt diese Fortran Discourse Website. Da tummeln sich natürlich auch viele Leute, mit denen man dann doch schon mal irgendeine Art von Interaktion hatte, meistens weil sie auf irgendeinen Post von mir eine gute Antwort hatten. In dem Forum sind auch einige Leute aus dem Standardkomitee aktiv. Es gibt jemanden von Intel, von LLVM, Flang, die sind da aktiv, die erklären dann, okay, wir haben das so verstanden, deshalb glauben wir, das ist ein Compiler Bug oder wir glauben, der Code ist invalid. Die Community, da ist schon so, dass ich denke, die Hauptakteure hat man alle oder habe ich alle schon mal irgendwie nicht persönlich gesehen, aber schon mal was von ihnen gelesen oder so."
+        },
+        {
+            "start": 3689840,
+            "end": 3748870,
+            "speaker": "A",
+            "text": "Was mich auf jeden Fall gefreut hat bei der Recherche zu sehen, dass auch beim Google Summer of Code zwei tausend sechs und zwanzig wieder Fortran Projekte, zumindest nicht selektiert, aber beworben werden. Also ich habe jetzt hier gerade zum Beispiel eine Seite vom GCC Compiler auf und der GCC Compiler kriegt immer einen relativ großen Stake im Google Summer of Code und auch der GCC Compiler hat zwei Projekte zu der Unterstützung von Fortran im GCC Compiler wieder drin. Das freut mich natürlich schon sehr, weil da sieht man dann schon, okay, also GCC möchte jetzt die Features von Fortran zwei tausend achtzehn und von fortan zwei hundert zwanzig implementieren. Das ist natürlich schon schön zu sehen, dass da immer noch nach einer solch langen Zeit eine aktive Entwicklung stattfindet und anscheinend dann auch sich Leute finden, Studenten in diesem Falle, das zu implementieren, weil das sind alles keine kleinen Projekte, die werden hier mit ein hundert fünf und siebzig Stunden oder drei hundert fünfzig Stunden veranschlagt. Das ist für Google Summer of Code Projekt aber schon richtig groß."
+        },
+        {
+            "start": 3749110,
+            "end": 3822820,
+            "speaker": "C",
+            "text": "Also ich glaube, Google Summer of Code gibt es zwei oder drei Kategorien. Ich habe letztes Jahr auch jemanden hier in Löwen betreut, da haben wir die Fortran Bindings für Patsy, also für diese numerische Bibliothek modernisiert. Das gibt es immer mal wieder. Die Fordrunlung, Org ist da auch aktiv, die Projekte einzuwerben oder das zu organisieren. Das muss ja auch irgendwie administrativ organisiert werden mit den Auszahlungen und mit Ranking von Bewerbungen. Also das gibt es auf jeden Fall. Was ich ehrlich gesagt noch erstaunlicher finde, ist eben, dass es zwei neue Fortran Compiler gibt. Ich habe es eben erwähnt, einmal L Fortran, was auch dann in Jupyter Notebooks, also interaktiv so scripting mäßig funktionieren soll und auch schon kann. Und eben Flang, wo ARM und Nvidia Geld in die Hand genommen haben und gesagt haben, wir brauchen einfach einen Fortram Compiler, weil andernfalls können wir unsere Chips nicht verkaufen und die genauen Zahlen sind mir nicht so, also habe ich nicht ganz im Kopf. Aber das sind Projekte, die ungefähr vor zehn Jahren gestartet sind und jetzt sind beide eigentlich so weit, dass man sie benutzen kann."
+        },
+        {
+            "start": 3822820,
+            "end": 3825860,
+            "speaker": "A",
+            "text": "Würdest du uns deine Beobachtung sagen, dass die Fortran Community wächst?"
+        },
+        {
+            "start": 3825860,
+            "end": 3865920,
+            "speaker": "C",
+            "text": "Ich glaube, sie ist durch das Fortran Discourse und die Website, was auch relativ neu ist und dann gekommen ist, ist ein Fortran Package Manager. Also dass ich sowas wie pip mit Python oder cargo mit Rust, meine Pakete und Abhängigkeiten einfach installieren kann. Ich glaube, sie ist sichtbarer geworden, gerade auch im Vergleich zu Mailinglisten. Ich benutze eigentlich gerne Mailing Listen, aber ich glaube, für viele Leute, die jünger sind, ist es so ein bisschen abschreckend. Ich glaube, sie ist sichtbarer geworden in den letzten zehn Jahren und wahrscheinlich ist das auch der Grund für die gute oder relativ gute Ranking auf Kyobe."
+        },
+        {
+            "start": 3866000,
+            "end": 3882560,
+            "speaker": "A",
+            "text": "Was ich unglücklich finde, weil ich einen PHP Background habe, ist, dass der Fortran Package Manager FPM genannt wird. Und wer schon mal PHP auf Nginx betrieben hat, kommt um PHP FPM nicht drumherum. Das kann man natürlich jetzt in einen Topf werfen, dann hat man den PHP Fortran Package Manager. Naming ist hart."
+        },
+        {
+            "start": 3882720,
+            "end": 3885400,
+            "speaker": "C",
+            "text": "Ja, vor allem, wenn man nur drei Buchstaben verwendet."
+        },
+        {
+            "start": 3885400,
+            "end": 3922510,
+            "speaker": "A",
+            "text": "Martin, wir könnten, glaube ich, noch ewig über die Sprache von ein tausend neun hundert sieben und fünfzig sprechen. Lass uns mal zu einem Tipp, den du unseren Hörerinnen und Hörern geben kannst, wechseln. Und zwar ist die Was sollte man über Fortran verstehen, bevor man es benutzt? Was würdest du sagen, ist der Number One Tipp? Also ich habe jetzt am Wochenende Zeit, ich habe keinen Supercomputer hier, aber ich habe ein paar Raspberry Pi und die schließe ich in einem Cluster zusammen und da kompiliere ich fortan drauf. Ob das Sinn macht oder nicht, sei mal dahingestellt. Was sagst du mir, Andy? Lies dir erst das durch, Versteh das erst, bevor du da dran gehst, sonst kriegst du nämlich graue Haare."
+        },
+        {
+            "start": 3922590,
+            "end": 4024970,
+            "speaker": "C",
+            "text": "Also ich glaube, meine Message wä fokussiert direkt auf Modern Fortran. Also alles, was nach ein tausend neun hundert neunzig kommt, dieses Fixed Format mit den ersten sechs Spalten, sind Kommentare. Das ist wirklich nicht mehr state of the art. Versuch einfach fortan so zu schreiben, dass es dem entspricht oder dass es die Möglichkeiten von den neuen Features nutzt. Das wäre meine Nachricht Und verbunden damit ist einfach, es gibt viel mehr alten Code, den man von mir aus gerne verwenden soll, aber bitte nicht als Beispiel. Ich habe eben LAPAC erwähnt, das Linear Algebra Package LAPAC hat unglaublich viele Routinen, Eigenwerte, Matrix Multiplikation, Gleichungssysteme lösen, alles Mögliche wurde in Fortran sieben und siebzig geschrieben und die Namenskonventionen sind super rigide, unter anderem wahrscheinlich, weil man damals keine langen Namen verwenden konnte. Was weiß ich? Der erste Buchstabe ist es real, dann steht da ein S, ist es double, dann steht da ein D, dann kommt der Matrix Typ, was weiß ich, Diagonal DI, dann die Berechnung. Man hat also immer sechs Buchstabenkombinationen, die irgendwie sich so aussprechen wie DRX. Das kann man natürlich machen. Ein tausend neun hundert achtzig war das vielleicht auch so, weil der Speicher klein war oder nur so und so viele Ziffern auf die Lochkarte gepasst haben, fragt mich nicht, aber wenn ich heute eine Eigenwertine schreibe, dann nenne ich die einfach Eigenvalues und dann versteht auch jeder, was es ist. Also man kann ja auch mit Fortran mit der Zeit gehen."
+        },
+        {
+            "start": 4024970,
+            "end": 4080390,
+            "speaker": "A",
+            "text": "Also ich sage mal so, für mich klingt das nach einer Opinion Programmiersprache, Framework, also alles super, also Ruby on Wales und wie sie alle heißen heutzutage sind ja auch opinionated und heutzutage argumentiert man opinionated ist eine stärke, aber ich musste gerade stark grinsen. Du sagtest, konzentriere dich auf alles Neuere als ein tausend neun hundert neunzig ich hoffe, dass die Anzahl der oder die meisten Hörerinnen und Hörern hier überhaupt schon so alt sind, Aber nun gut, das überlassen wir den Hörerinnen und Hörern. Martin, vielen lieben Dank. Wo kann man deine Arbeit verfolgen? Wo kann ich, wenn ich sagen möchte, Materialwissenschaft, das ist der Spot da, wo ich hin möchte. Wo kann man an deine Tür anklopfen und bei dir mitforschen, wenn man da sich auf eine Doktorstelle bewerben kann, sollte? Jetzt bin ich raus aus der Wirtschaft, ich weiß nicht, wie das ist, ich habe noch nie einen Doktor gemacht. Laut Wolfgangs Professor oder Doktorvater habe ich einen Bachelor und bin deswegen Studienabbrecher, deswegen bin ich da raus."
+        },
+        {
+            "start": 4080390,
+            "end": 4099150,
+            "speaker": "C",
+            "text": "Also die meisten Wissenschaftler haben ein Google Scholar Profil. Das ist natürlich mehr für Leute, die schon in der Thematik drin sind. Einfach schauen, was ich gemacht habe. Ich habe eine persönliche Website. Martin Deal net. Am einfachsten ist es wahrscheinlich eine E Mail zu schreiben. Martindiel Löwen googeln funktioniert eigentlich auch ganz"
+        },
+        {
+            "start": 4099150,
+            "end": 4102470,
+            "speaker": "B",
+            "text": "gut und sonst findet man dich auf der Fortran Mailing Liste oder auf der"
+        },
+        {
+            "start": 4102470,
+            "end": 4109310,
+            "speaker": "C",
+            "text": "Mailing Liste habe ich ehrlich gesagt noch nie was geschrieben, aber im Fortran Discourse, ich müsste die URL raussuchen, können wir"
+        },
+        {
+            "start": 4109310,
+            "end": 4111190,
+            "speaker": "B",
+            "text": "alles noch in die Show Notes packen, gar kein Problem."
+        },
+        {
+            "start": 4111190,
+            "end": 4163560,
+            "speaker": "A",
+            "text": "Ich wollte schon sagen, haben wir alles in den Shownotes, gar kein Problem. Da haben wir auch Links. Links zu deiner Homepage, zu deinem LinkedIn Profil, zu deinem Gitterprofil, zu deinem Skoda Profil, aber natürlich auch zu den ganzen Paketen, die wir genannt haben. Scipy, numpy, Julia, LLVM, Petra, Package Manager und so weiter und so fort. Martin, vielen lieben Dank. Es ist unglaublich interessant mal zu wissen. Also Fortran habe ich immer mal wieder gehört, aber mich nie beschäftigt. Ich habe auf jeden Fall das Gefühl, ich kam klüger aus dieser Podcast Episode raus, als ich reingegangen bin und das freut mich sehr Zu meinem oder deinem Leid, ich weiß es nicht, muss ich sagen. Ich habe nicht so viele Matrizen, Kalkulationen, die ich machen muss. Ich habe auch noch keinen D Drucker, als dass ich Simulationen für Materialwissenschaften hier durchführen muss. Aber wenn doch, dann schreibe ich das mal, glaube ich, in Vortrag."
+        },
+        {
+            "start": 4163720,
+            "end": 4175290,
+            "speaker": "B",
+            "text": "Es hat mich auf jeden Fall gefreut, über eine Sprache zu sprechen, die älter ist als Andy und ich zusammen und aber trotzdem an die Oberbe Index vor BHB und Go League immer schön zu sehen."
+        },
+        {
+            "start": 4176330,
+            "end": 4183450,
+            "speaker": "A",
+            "text": "Moment mal, stopp. Älter als wir beide zusammen. Sieben und fünfzig nie im Leben."
+        },
+        {
+            "start": 4183770,
+            "end": 4185850,
+            "speaker": "B",
+            "text": "Er ist ja seit drei und fünfzig entwickelt worden."
+        },
+        {
+            "start": 4186330,
+            "end": 4254669,
+            "speaker": "A",
+            "text": "Neun und sechzig, ich bin acht und dreiig. Wolfgang, du bist älter als ich, da passt was nicht. Ja, knapp. Details, Details hat die LLM ausgerechnet. Genau. Okay. Martin, vielen lieben Dank für deine Zeit, vielen lieben Dank für all die ganzen Interviews. Ich sehe fort rein jetzt mit anderen Augen, mit positiveren Augen, allein auch wegen dem Turboindex. Ich habe mir noch nie den Turboindex so detailliert angesehen, dass ich Fortran auf Platz zwölf gesehen habe, Aber nun gut. Aber ich habe auch festgestellt, es ist der monatliche Platz zwölf, es ist nicht die, nicht die Jahresliste. Und die monatliche Liste wird anders zusammengesteckt als die Jahresliste. Da muss man vielleicht mal differenzieren. Naja gut, danke Martin, danke euch. Und wenn ihr Feedback zu dieser Folge habt oder auch zu der Arbeit von Martin, kommt doch ruhig in unseren Discord, lasst uns ein bisschen Feedback Da wir leiten natürlich alles sehr gerne an Martin weiter. Ansonsten lasst uns auch mal wissen, wie euch dieses Programmiersprachenformat gefallen hat. Das war die erste Episode, ob wir, wir versprechen immer, wir starten immer ein neues Format und dann machen wir zwei Episoden und dann braucht das etwas bis zur dritten Episode, sagen wir es mal so. Ansonsten würde ich sagen, vielen Dank, wir hören uns nächste Woche und tschüss."
+        },
+        {
+            "start": 4254749,
+            "end": 4260029,
+            "speaker": "B",
+            "text": "Danke."
+        }
+    ]
+}
