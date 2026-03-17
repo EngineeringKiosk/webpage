@@ -3430,6 +3430,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/259"
+  to = "/podcast/episode/259-modern-fortran-nach-70-jahren-immer-noch-ein-hpc-arbeitstier-mit-prof-martin-diehl?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep259"
+  to = "/podcast/episode/259-modern-fortran-nach-70-jahren-immer-noch-ein-hpc-arbeitstier-mit-prof-martin-diehl?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
