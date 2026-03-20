@@ -24,4 +24,14 @@ talks:
     website: https://gassler.dev
     slides: 2603-wolfgang_ StopCoding_Engineering_Kiosk_Alps_2026-03-19.pdf
 eventId: '15re1hvh522cv4dm82gg1t70p4'
+speakers:
+  female: 0
+  male: 2
+participants:
+  registered: 81
+  present:
+    total: 67
+    male: 60
+    female: 7
+  newParticipants: 26
 ---
