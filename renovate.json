@@ -28,6 +28,11 @@
       "description": "One week stability period for Go packages",
       "matchDatasources": ["go"],
       "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Group Astro ecosystem updates",
+      "matchPackagePatterns": ["^astro", "^@astrojs/"],
+      "groupName": "Astro ecosystem"
     }
   ]
 }
