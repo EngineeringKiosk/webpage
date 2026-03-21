@@ -3,7 +3,7 @@ export function URLify(element) {
 	let e = element.trim().replace(/\s/g, '-');
 
 	// Replace dots (.) with nothing.
-	e = e.replace('.', '');
+	e = e.replace(/\./g, '');
 
 	return {
 		name: element,
