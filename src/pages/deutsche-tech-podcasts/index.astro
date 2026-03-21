@@ -5,23 +5,13 @@ import Nav from '../../components/Nav.astro';
 import TechPodcastPreview from '../../components/TechPodcastPreview.astro';
 
 import { getCollection } from "astro:content";
+import { orderByName } from '../../scripts/sorting.js';
 
 let title = 'Die besten Deutschsprachigen Tech Podcasts kuratiert im Engineering Kiosk';
 let description = 'Eine handverlesene Liste der besten deutschsprachigen Tech Podcasts zu relevanten Themen für Entwickler:innen, Tech-Leads und Nerds.';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Build the list of Podcast Episodes
-function orderByName(a, b) {
-	if (a.data.name.toLowerCase() < b.data.name.toLowerCase()) {
-		return -1;
-	}
-
-	if (a.data.name.toLowerCase() > b.data.name.toLowerCase()) {
-		return 1;
-	}
-
-	return 0;
-}
 let germanTechPodcasts = await getCollection("germantechpodcasts");
 germanTechPodcasts.sort(orderByName);
 ---

@@ -7,6 +7,7 @@ export interface Props {
 }
 
 import { getCollection } from "astro:content";
+import { sortByDateDesc } from '../scripts/sorting.js';
 import podcastInfo from '../data/podcast-info.json';
 
 const { title, episode } = Astro.props;
@@ -27,7 +28,7 @@ if (episode) {
 // Determine the latest episode
 // We have places where the last episode is linked
 let allEpisodes = await getCollection("podcast");
-allEpisodes.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+sortByDateDesc(allEpisodes);
 let episodesToShow = allEpisodes.slice(0, 1);
 let latestEpisode = episodesToShow[0];
 ---

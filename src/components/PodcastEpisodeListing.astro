@@ -20,6 +20,7 @@ export interface Props {
 }
 
 import { getCollection } from "astro:content";
+import { sortByDateDesc } from '../scripts/sorting.js';
 
 import PodcastEpisodePreview from '../components/PodcastEpisodePreview.astro';
 
@@ -27,7 +28,7 @@ const { numberOfItems, episodes, headline, description, showAllButton, descripti
 
 // Build the list of Podcast Episodes
 let allEpisodes = await getCollection("podcast");
-allEpisodes.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+sortByDateDesc(allEpisodes);
 
 // Default wise list all items, only limit it if requested
 let episodesToShow = allEpisodes;
