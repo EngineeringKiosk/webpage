@@ -8,6 +8,7 @@ const exludeFromSitemap = ['meetup/alps/promote/'];
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'static',
 	site: 'https://engineeringkiosk.dev/',
 	trailingSlash: 'always',
 
