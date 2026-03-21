@@ -21,7 +21,7 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
           const regId = form.regId.value; // we use regId instead of email to confuse bots
           const formMessage = document.getElementById('newsletterFormMessage');
           formMessage.classList.remove('hidden');
-          formMessage.innerHTML = `Subscribing ${regId}...`;
+          formMessage.textContent = `Subscribing ${regId}...`;
           const formData = new FormData(form);
           // use simple urlencoded form data instead of multipart
           fetch(form.action, {
@@ -33,13 +33,13 @@ let dates = getNextMeetups().map((meetup) => meetup.date);
           })
           .then((response) => {
             if (response.ok) {
-              formMessage.innerHTML = `${regId} subscribed successfully! Please check your inbox to confirm your subscription.`;
+              formMessage.textContent = `${regId} subscribed successfully! Please check your inbox to confirm your subscription.`;
             } else {
-              formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
+              formMessage.textContent = 'Something went wrong. Please try again later or contact us via email.';
             }
           })
           .catch((error) => {
-            formMessage.innerHTML = 'Something went wrong. Please try again later.';
+            formMessage.textContent = 'Something went wrong. Please try again later.';
           });
           return false;
         }
