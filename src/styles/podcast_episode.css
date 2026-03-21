@@ -5,28 +5,15 @@ Used to style a single podcast episode.
 */
 
 .podcast_episode_content_slot p {
-	@apply mb-6;
-	@apply text-base;
-	@apply md:text-lg;
-	@apply text-coolGray-500;
+	@apply mb-6 text-base md:text-lg text-coolGray-500;
 }
 
 .podcast_episode_content_slot h3 {
-	@apply mb-4;
-	@apply text-2xl;
-	@apply md:text-3xl;
-	@apply font-semibold;
-	@apply text-coolGray-800;
+	@apply mb-4 text-2xl md:text-3xl font-semibold text-coolGray-800;
 }
 
 .podcast_episode_content_slot ul {
-	@apply list-disc;
-	@apply px-5;
-	@apply mb-6;
-	@apply md:px-5;
-	@apply text-base;
-	@apply md:text-lg;
-	@apply text-coolGray-500;
+	@apply list-disc px-5 mb-6 md:px-5 text-base md:text-lg text-coolGray-500;
 }
 
 .podcast_episode_content_slot li {
@@ -34,8 +21,7 @@ Used to style a single podcast episode.
 }
 
 .podcast_episode_content_slot a {
-	@apply underline;
-	@apply hover:no-underline;
+	@apply underline hover:no-underline;
 }
 
 .podcast_episode_content_slot p.timestamp {

@@ -7,15 +7,9 @@ Due to the Markdown convertion, be have static HTML.
 */
 
 span.text p {
-	@apply mb-4;
-	@apply text-base;
-	@apply md:text-lg;
-	@apply text-coolGray-400;
-	@apply font-medium;
+	@apply mb-4 text-base md:text-lg text-coolGray-400 font-medium;
 
 	a {
-		@apply text-yellow-500;
-		@apply hover:text-yellow-600;
-		@apply underline;
+		@apply text-yellow-500 hover:text-yellow-600 underline;
 	}
 }
