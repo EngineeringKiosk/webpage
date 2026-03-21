@@ -33,6 +33,11 @@
       "description": "Group Astro ecosystem updates",
       "matchPackagePatterns": ["^astro", "^@astrojs/"],
       "groupName": "Astro ecosystem"
+    },
+    {
+      "description": "Require dashboard approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
     }
   ]
 }
