@@ -51,17 +51,21 @@ const transcriptFilename = 'src/data/transcripts/' + episodeNumber + '-transcrip
 
 let transcriptionUtterances = [];
 if (fs.existsSync(transcriptFilename)) {
-	const transcriptionData = JSON.parse(fs.readFileSync(transcriptFilename));
+	try {
+		const transcriptionData = JSON.parse(fs.readFileSync(transcriptFilename));
 
-	transcriptionUtterances = transcriptionData.utterances;
-	// Overwrite "Speaker A" with a real name
-	transcriptionUtterances.forEach ((entry, index) => {
-		if (speakerMap.has(entry.speaker)) {
-			transcriptionUtterances[index].speaker = speakerMap.get(entry.speaker)
-		}
+		transcriptionUtterances = transcriptionData.utterances;
+		// Overwrite "Speaker A" with a real name
+		transcriptionUtterances.forEach ((entry, index) => {
+			if (speakerMap.has(entry.speaker)) {
+				transcriptionUtterances[index].speaker = speakerMap.get(entry.speaker)
+			}
 
-		transcriptionUtterances[index].startSeconds = Math.floor(entry.start / 1000);
-	});
+			transcriptionUtterances[index].startSeconds = Math.floor(entry.start / 1000);
+		});
+	} catch (e) {
+		console.warn(`Failed to parse transcript file: ${transcriptFilename}`, e.message);
+	}
 }
 
 // Headlines is in a format like
