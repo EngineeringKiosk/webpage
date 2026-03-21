@@ -67,11 +67,10 @@ export function millisecondsToHumanTimestamp(ms) {
 export function humanTimestampToSecondsTo(ts) {
 	const humanTimestamp = ts.replaceAll(/[)(]/g, '');
 	const timestampParts = humanTimestamp.split(':');
-	const hourSeconds = parseInt(timestampParts[0]) * 60 * 60;
-	const minuteSeconds = parseInt(timestampParts[1]) * 60;
-	const seconds = parseInt(timestampParts[2]);
-
-	return hourSeconds + minuteSeconds + seconds;
+	const hours = parseInt(timestampParts[0] || '0', 10) || 0;
+	const minutes = parseInt(timestampParts[1] || '0', 10) || 0;
+	const seconds = parseInt(timestampParts[2] || '0', 10) || 0;
+	return hours * 3600 + minutes * 60 + seconds;
 }
 
 /*
