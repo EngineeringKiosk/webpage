@@ -4,6 +4,7 @@ import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import SoftwareEngineeringGamePreview from '../../components/SoftwareEngineeringGamePreview.astro';
 import { URLify } from '../../scripts/urlify.js';
+import { orderByName } from '../../scripts/sorting.js';
 import { getCollection } from "astro:content";
 
 // TODO Genres for games
@@ -56,17 +57,6 @@ let games = awesomeSoftwareEngineeringGames.filter(function (p) {
 	return p.data.german_content.genres.includes(genreHumanName);
 });
 
-function orderByName(a, b) {
-	if (a.data.name.toLowerCase() < b.data.name.toLowerCase()) {
-		return -1;
-	}
-
-	if (a.data.name.toLowerCase() > b.data.name.toLowerCase()) {
-		return 1;
-	}
-
-	return 0;
-}
 games = games.sort(orderByName);
 ---
 

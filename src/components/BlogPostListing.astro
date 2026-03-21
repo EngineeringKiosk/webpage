@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { sortByDateDesc } from '../scripts/sorting.js';
 
 export interface Props {
 	// Number of items to show in the listing
@@ -12,7 +13,7 @@ const { numberOfItems } = Astro.props;
 
 // Build the list of posts
 let allPosts = await getCollection("blog");
-allPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+sortByDateDesc(allPosts);
 
 // Default wise list all items, only limit it if requested
 let postsToShow = allPosts;

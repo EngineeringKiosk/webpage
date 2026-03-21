@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { sortByDateDesc } from '../../scripts/sorting.js';
 import Footer from '../../components/Footer.astro';
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
@@ -50,10 +51,10 @@ if (Object.hasOwn(tagInfo, tagHumanName)) {
 }
 
 // Filter blog posts by tag, sort by date
-const blogPosts = allBlogPosts.filter((post) => post.data.tags.includes(tagHumanName)).sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+const blogPosts = sortByDateDesc(allBlogPosts.filter((post) => post.data.tags.includes(tagHumanName)));
 
 // Filter podcast episodes by tag, sort by date
-const podcastEpisodes = allPodcastEpisode.filter((episode) => episode.data.tags.includes(tagHumanName)).sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+const podcastEpisodes = sortByDateDesc(allPodcastEpisode.filter((episode) => episode.data.tags.includes(tagHumanName)));
 ---
 
 <html lang="de">

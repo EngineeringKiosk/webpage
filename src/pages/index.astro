@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import { sortByDateDesc } from '../scripts/sorting.js';
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
@@ -32,12 +33,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = await getCollection("blog");
-allPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+sortByDateDesc(allPosts);
 
 // Determine the latest episode
 // We have places where the last episode is linked
 let allEpisodes = await getCollection("podcast");
-allEpisodes.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+sortByDateDesc(allEpisodes);
 let episodesToShow = allEpisodes.slice(0, 1);
 let episode = episodesToShow[0];
 
