@@ -38,6 +38,11 @@
       "description": "Require dashboard approval for major updates",
       "matchUpdateTypes": ["major"],
       "dependencyDashboardApproval": true
+    },
+    {
+      "description": "Group Go extended stdlib packages",
+      "matchPackagePatterns": ["^golang.org/x/"],
+      "groupName": "Go extended stdlib"
     }
   ]
 }
