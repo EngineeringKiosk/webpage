@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "schedule:monthly"],
+  "extends": ["config:best-practices", "schedule:monthly"],
+  "osvVulnerabilityAlerts": true,
+  "prConcurrentLimit": 5,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on the first day of the month"]
+  },
   "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
   "customManagers": [
     {
@@ -23,6 +29,21 @@
       "description": "One week stability period for Go packages",
       "matchDatasources": ["go"],
       "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Group Astro ecosystem updates",
+      "matchPackagePatterns": ["^astro", "^@astrojs/"],
+      "groupName": "Astro ecosystem"
+    },
+    {
+      "description": "Require dashboard approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "description": "Group Go extended stdlib packages",
+      "matchPackagePatterns": ["^golang.org/x/"],
+      "groupName": "Go extended stdlib"
     }
   ]
 }
