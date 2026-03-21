@@ -2,6 +2,9 @@
   "name": "@engineering-kiosk/webpage",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
