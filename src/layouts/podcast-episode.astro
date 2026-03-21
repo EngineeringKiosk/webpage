@@ -108,10 +108,10 @@ const html = (await Astro.slots.render('default'))
 	// remove everything between <p>Feedback and 136776</p> (136776 is part of the former WhatsApp number)
 	// We previously had a WhatsApp number for feedback. We don't use it anymore (from Episode 118 ongoing)
 	// However, for older episodes, we keep this removeal process in place.
-	.replace(/<p>Feedback[\s\S]*136776<\/p>/g, '')
+	.replace(/<p>Feedback[\s\S]*?136776<\/p>/g, '')
 	// New feedback removal step (from episode 118+)
 	// remove everything between <p>Feedback and stehtisch@engineeringkiosk.dev</a>.</p>
-	.replace(/<p>Feedback[\s\S]*stehtisch@engineeringkiosk.dev<\/a>.<\/p>/g, '')
+	.replace(/<p>Feedback[\s\S]*?stehtisch@engineeringkiosk.dev<\/a>.<\/p>/g, '')
 ---
 
 <html lang="de">
