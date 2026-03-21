@@ -105,11 +105,16 @@ speakerStats.nonbinaryPercentage = Math.round((speakerStats.nonbinary / speakerS
                                             var element = document.getElementById(eventId);
                                             element.textContent = 'Loading...';
                                             fetch(`https://rsvp.engineeringkiosk.dev/registrations/${eventId}`)
-                                                .then(response => response.json())
+                                                .then(response => {
+                                                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                                                    return response.json();
+                                                })
                                                 .then(data => {
                                                     element.textContent = `${data.registrations} (live!)`;
                                                 })
-                                                .catch(error => console.error('Error fetching registration data:', error));
+                                                .catch(error => {
+                                                    console.warn('Failed to fetch registration count:', error);
+                                                })
                                         </script>
                                     )}
                                     {(meetup.participants?.newParticipants && meetup.participants.newParticipants > 0 && meetup.participants.registered) && (
