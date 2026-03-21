@@ -1,5 +1,4 @@
 ---
-import Path from 'path';
 import fs from 'fs';
 
 import { Image } from "astro:assets";
@@ -38,7 +37,7 @@ frontmatter.speaker.forEach ((person, index) => {
 });
 
 // Transcripts
-const episodeFilename = Path.basename(episode.filePath);
+const episodeFilename = episode.id;
 let episodeNumber = episodeFilename.substring(0, episodeFilename.indexOf('-'));
 
 // We have one episode starting with -1
