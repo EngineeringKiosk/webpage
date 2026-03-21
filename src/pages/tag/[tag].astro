@@ -6,6 +6,7 @@ import Nav from '../../components/Nav.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import PodcastEpisodePreview from '../../components/PodcastEpisodePreview.astro';
 import { URLify } from '../../scripts/urlify.js';
+import TagBadge from '../../components/TagBadge.astro';
 
 import tagInfo from '../../data/tags.json';
 
@@ -82,7 +83,7 @@ const podcastEpisodes = allPodcastEpisode.filter((episode) => episode.data.tags.
 						<div class="container px-4 mx-auto">
 							<div class="flex flex-wrap items-center mb-12">
 								<div class="w-full md:w-3/4 mb-8 md:mb-0">
-									<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Podcast</span>
+									<TagBadge name="Podcast" />
 									<h1 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tight">{tagHumanName} im Engineering Kiosk Podcast</h1>
 								</div>
 							</div>
@@ -102,7 +103,7 @@ const podcastEpisodes = allPodcastEpisode.filter((episode) => episode.data.tags.
 						<div class="container px-4 mx-auto">
 							<div class="flex flex-wrap items-center mb-16">
 								<div class="w-full md:w-3/4 mb-8 md:mb-0">
-									<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Blog</span>
+									<TagBadge name="Blog" />
 									<h3 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tight">Alle Blog posts zum Thema {tagHumanName}</h3>
 								</div>
 							</div>

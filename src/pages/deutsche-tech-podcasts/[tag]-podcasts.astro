@@ -3,6 +3,7 @@ import Footer from '../../components/Footer.astro';
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
 import TechPodcastPreview from '../../components/TechPodcastPreview.astro';
+import TagBadge from '../../components/TagBadge.astro';
 import { URLify } from '../../scripts/urlify.js';
 
 import { getCollection } from "astro:content";
@@ -83,7 +84,7 @@ podcasts = podcasts.sort(orderByName);
 				<div class="container px-4 mx-auto">
 					<div class="flex flex-wrap items-center mb-12">
 						<div class="w-full md:w-3/4 mb-8 md:mb-0">
-							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Kuratierte Podcast Liste</span>
+							<TagBadge name="Kuratierte Podcast Liste" />
 							<h1 class="mb-4 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-bold tracking-tight">
 								{customTitle || `Die besten ${tagHumanName}-Podcasts`}
 							</h1>

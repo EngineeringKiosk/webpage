@@ -6,6 +6,7 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { getTeamMember, getSocialUrls } from '../../scripts/team-members.js';
 import badgeLinks from '../../data/badge-links.json';
+import TagBadge from '../../components/TagBadge.astro';
 
 import imageTimHannemann from "../../images/teams/tim-hannemann-profile.jpg";
 
@@ -47,10 +48,10 @@ const jsonLd = {
 						<div class="w-full md:w-1/2 px-4">
 							<div class="flex flex-wrap items-center gap-2 mb-4">
 								{member.subtitle && (
-									<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">{member.subtitle}</span>
+									<TagBadge name={member.subtitle} />
 								)}
 								{member.badges && member.badges.map((badge) => (
-									<a href={badgeLinks[badge] || '#'} class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:bg-yellow-200 transition-colors">{badge}</a>
+									<TagBadge name={badge} url={badgeLinks[badge] || '#'} />
 								))}
 							</div>
 							<div class="flex items-center mb-4">

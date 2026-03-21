@@ -6,6 +6,7 @@ export interface Props {
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { cutText } from '../scripts/strings.js';
+import TagBadge from '../components/TagBadge.astro';
 
 const { episode } = Astro.props;
 
@@ -30,7 +31,7 @@ const description = cutText(data.description, 200);
 			</div>
 		</div>
 		<div class="w-full md:w-2/3 px-4">
-			<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"> Mehr zu diesem Thema in unserer Podcast Episode</span>
+			<TagBadge name="Mehr zu diesem Thema in unserer Podcast Episode" />
 
 			<h4 class="">
 				<a class="inline-block mb-4 text-2xl leading-tight text-coolGray-800 hover:text-coolGray-900 hover:underline" href={`/podcast/episode/${content.id}/`}>
