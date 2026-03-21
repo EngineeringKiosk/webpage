@@ -24,9 +24,11 @@ export interface Talk {
 
 export interface Props {
 	talk: Talk;
+	meetupSlug?: string;
 }
 
 const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
+const meetupSlug = Astro.props.meetupSlug || 'alps';
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];
@@ -127,7 +129,7 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 		{
 			slides && (
 				<div class="flex items-center justify-center mt-5">
-				<a target="_blank" class="inline-block hover:opacity-80 text-yellow-500 font-medium" href={`/meetup/alps/slides/${slides}`}>
+				<a target="_blank" class="inline-block hover:opacity-80 text-yellow-500 font-medium" href={`/meetup/${meetupSlug}/slides/${slides}`}>
 					<img src="/images/elements/icon-presentation.svg" height="25" width="25" alt="Slides of the talk" class="inline-block" /> Download slides of the talk
         </a>
 				</div>
