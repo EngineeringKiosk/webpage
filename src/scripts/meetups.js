@@ -2,10 +2,9 @@ import { getCollection } from 'astro:content';
 
 export async function createMeetupHelpers(collectionName) {
 	let allMeetups = await getCollection(collectionName);
-	allMeetups = allMeetups.map((meetup) => meetup.data);
 	allMeetups = allMeetups.map((meetup) => ({
-		...meetup,
-		talks: meetup.talks.map((talk) => ({
+		...meetup.data,
+		talks: meetup.data.talks.map((talk) => ({
 			...talk,
 			_announced: !!(talk.title && talk.name),
 			title: talk.title || 'To be announced',
