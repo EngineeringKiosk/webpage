@@ -165,7 +165,7 @@ const sliderImages = await Promise.all(
 										const regId = form.regId.value; // we use regId instead of email to confuse bots
 										const formMessage = document.getElementById('formMessage');
 										formMessage.classList.remove('hidden');
-										formMessage.innerHTML = `Registering ${regId}...`;
+										formMessage.textContent = `Registering ${regId}...`;
 										const formData = new FormData(form);
 										// use simple urlencoded form data instead of multipart
 										fetch(form.action, {
@@ -177,13 +177,13 @@ const sliderImages = await Promise.all(
 										})
 										.then((response) => {
 											if (response.ok) {
-												formMessage.innerHTML = `${regId} registered successfully!`;
+												formMessage.textContent = `${regId} registered successfully!`;
 											} else {
-												formMessage.innerHTML = 'Something went wrong. Please try again later or contact us via email.';
+												formMessage.textContent = 'Something went wrong. Please try again later or contact us via email.';
 											}
 										})
 										.catch((error) => {
-											formMessage.innerHTML = 'Something went wrong. Please try again later.';
+											formMessage.textContent = 'Something went wrong. Please try again later.';
 										});
 										return false;
 									}
