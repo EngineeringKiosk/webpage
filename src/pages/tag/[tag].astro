@@ -44,9 +44,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let tagDescription_short = '';
 let tagDescription_long = '';
-if (tagInfo.hasOwnProperty(tagHumanName)) {
-	tagDescription_short = tagInfo[tagHumanName]['short_desc'];
-	tagDescription_long = tagInfo[tagHumanName]['long_desc'];
+if (Object.hasOwn(tagInfo, tagHumanName)) {
+	tagDescription_short = tagInfo[tagHumanName]?.short_desc ?? '';
+	tagDescription_long = tagInfo[tagHumanName]?.long_desc ?? '';
 }
 
 // Filter blog posts by tag, sort by date
