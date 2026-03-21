@@ -81,6 +81,7 @@ if (transcriptionUtterances.length > 0) {
 
 headline_split.forEach(function callback(val) {
 	let parts = val.split('::');
+	if (parts.length < 2) return;
 
 	// Strip out strings we don't need in the headline link
 	parts[1] = parts[1].replace('(gerne auch als Voice Message)', '');
