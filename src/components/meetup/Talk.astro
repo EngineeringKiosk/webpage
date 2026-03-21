@@ -28,8 +28,6 @@ export interface Props {
 const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
-const htmlDescription = description.replace(/\n/g, '<br>');
-
 const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];
 
 ---
@@ -52,7 +50,7 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 		</div>}
 		<div class="text-left mt-6">
 			<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Talk</h4>
-			<p class="mb-8 text-coolGray-500 font-medium description" set:html={htmlDescription} />
+			<p class="mb-8 text-coolGray-500 font-medium description" style="white-space: pre-line">{description}</p>
 		</div>
 		{bio && (
 			<div class="text-left">
