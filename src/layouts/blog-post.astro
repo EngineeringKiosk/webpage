@@ -7,6 +7,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { URLify } from '../scripts/urlify.js';
 import { formatDate } from '../scripts/date.js';
+import TagBadge from '../components/TagBadge.astro';
 
 import '../styles/blogpost.css';
 
@@ -39,9 +40,7 @@ let tags = content.tags.map((element) => URLify(element));
 						<div>
 							{
 								tags.map((element) => (
-									<a class="inline-block py-1 px-3  mb-3 mr-3 text-xs leading-5 text-yellow-500 hover:text-yellow-600 font-medium uppercase bg-yellow-100 hover:bg-yellow-200 rounded-full shadow-sm" href={`/tag/${element.url}/`}>
-										{element.name}
-									</a>
+									<TagBadge name={element.name} url={`/tag/${element.url}/`} />
 								))
 							}
 						</div>

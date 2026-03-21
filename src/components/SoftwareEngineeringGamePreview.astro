@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Image } from "astro:assets";
 import { URLify } from '../scripts/urlify.js';
+import TagBadge from '../components/TagBadge.astro';
 
 export interface Props {
 	game: CollectionEntry<'awesomeSoftwareEngineeringGames'>;
@@ -28,9 +29,7 @@ const nameId = URLify(game.data.name);
 			<div class="w-full md:w-8/12 px-4 mb-16 md:mb-0">
 				{
 					genres.map((element) => (
-						<a class="inline-block py-px mr-2 px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm" href={`/spiele-fuer-softwareentwickler/${element.url}-spiele/`}>
-							{element.name}
-						</a>
+						<TagBadge name={element.name} url={`/spiele-fuer-softwareentwickler/${element.url}-spiele/`} />
 					))
 				}
 

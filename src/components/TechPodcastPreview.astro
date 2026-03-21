@@ -8,6 +8,7 @@ export interface Props {
 
 import { URLify } from '../scripts/urlify.js';
 import { formatDate, formatUnixTimestampToDate } from '../scripts/date.js';
+import TagBadge from '../components/TagBadge.astro';
 
 const { podcast } = Astro.props;
 
@@ -98,9 +99,7 @@ const nameId = URLify(podcast.data.name);
 			<div class="w-full md:w-8/12 px-4 mb-16 md:mb-0">
 				{
 					tags.map((element) => (
-						<a class="inline-block py-px mr-2 px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-full shadow-sm" href={`/deutsche-tech-podcasts/${element.url}-podcasts/`}>
-							{element.name}
-						</a>
+						<TagBadge name={element.name} url={`/deutsche-tech-podcasts/${element.url}-podcasts/`} />
 					))
 				}
 

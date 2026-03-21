@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import defaultAvatar from "../../content/meetup-alps/images/speaker/avatar.png";
+import TagBadge from '../../components/TagBadge.astro';
 
 export interface Talk {
 	avatar: string;
@@ -44,9 +45,7 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 			{name}
 		</span>
 		{language && <div class="mb-6">
-			<span class="inline-block py-px px-2 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium rounded-full">
-				{language === 'de' ? 'Vortrag in Deutsch' : 'Talk in English'}
-			</span>
+			<TagBadge name={language === 'de' ? 'Vortrag in Deutsch' : 'Talk in English'} />
 		</div>}
 		<div class="text-left mt-6">
 			<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Talk</h4>
