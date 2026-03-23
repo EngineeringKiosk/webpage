@@ -16,8 +16,8 @@ export interface Props {
 const { collectionName, meetupName, meetupCity, meetupUrl, ogImage } = Astro.props;
 const { getNextMeetup } = await createMeetupHelpers(collectionName);
 
-const title = `Social Media Post Meetup ${meetupName} - Engineering Kiosk - ${meetupCity}`;
-const description = `Tech Meetup in ${meetupCity}, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+const title = `Promote Meetup ${meetupName} - Engineering Kiosk ${meetupCity}`;
+const description = `Social media assets for the Engineering Kiosk ${meetupName} meetup in ${meetupCity}. A local in-person community event for software engineers and tech enthusiasts.`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Current Meetup
