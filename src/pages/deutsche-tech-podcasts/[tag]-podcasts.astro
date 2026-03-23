@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 
 const tagHumanName = Astro.props.tagName;
 
-let title = `Die besten ${tagHumanName} Tech-Podcasts kuratiert im Engineering Kiosk`;
+let title = `${tagHumanName} Tech-Podcasts auf Deutsch - Engineering Kiosk`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let customTitle = '';

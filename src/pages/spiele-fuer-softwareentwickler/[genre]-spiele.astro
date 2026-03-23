@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 
 const genreHumanName = Astro.props.genreName;
 
-let title = `Die besten ${genreHumanName} Spiele für Softwareentwickler:innen kuratiert im Engineering Kiosk`;
+let title = `${genreHumanName} Spiele für Softwareentwickler:innen - Engineering Kiosk`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let customTitle = '';

@@ -41,7 +41,7 @@ const tagHumanName = Astro.props.tagName;
 const allBlogPosts = Astro.props.allBlogPosts;
 const allPodcastEpisode = Astro.props.allPodcastEpisode;
 
-let title = `Podcast Episoden und Blog Posts zum Thema ${tagHumanName} - Engineering Kiosk`;
+let title = `${tagHumanName} - Podcast-Episoden und Blog Posts - Engineering Kiosk`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let tagDescription_short = '';
