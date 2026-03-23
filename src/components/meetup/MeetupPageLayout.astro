@@ -54,6 +54,7 @@ const {
 	regionDescription,
 } = Astro.props;
 
+const meetupSlug = collectionName.replace('meetup-', '');
 const { getNextMeetup } = await createMeetupHelpers(collectionName);
 
 const bufferDays = 1;
@@ -163,7 +164,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				</div>
 			</section>
 
-			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' meetupName={meetupName} showGeneralLanguageNote={showGeneralLanguageNote} />
+			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' meetupName={meetupName} meetupSlug={meetupSlug} meetupImage={ogImage} showGeneralLanguageNote={showGeneralLanguageNote} />
 
 			{ () => {
 				if (showRegistrationForm && !registrationClosed) {
