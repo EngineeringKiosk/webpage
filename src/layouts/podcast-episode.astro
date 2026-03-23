@@ -188,7 +188,7 @@ const html = (await Astro.slots.render('default'))
 						<div class="flex flex-wrap lg:items-start mb-12 -mx-4">
 							<div class="w-full md:w-1/2 2xl:w-5/12 px-4 mb-8 md:mb-0">
 								<div class="mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
-									<Image src={frontmatter.image} alt={`Engineering Kiosk Episode ${frontmatter.title}`} title={`Engineering Kiosk Episode ${frontmatter.title}`} />
+									<Image src={frontmatter.image} alt={`Engineering Kiosk Episode ${frontmatter.title}`} title={`Engineering Kiosk Episode ${frontmatter.title}`} format="webp" quality={80} />
 								</div>
 							</div>
 							<div class="w-full md:w-1/2 px-4">
