@@ -49,6 +49,7 @@ const {
 	showNewsletterForm = false,
 } = Astro.props;
 
+const meetupSlug = collectionName.replace('meetup-', '');
 const { getPastMeetups } = await createMeetupHelpers(collectionName);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -103,7 +104,7 @@ const meetupArchive = getPastMeetups();
 
 					<!-- Meetup Rows -->
 					{meetupArchive.map((meetup) => (
-						<MeetupArchiveEvent meetup={meetup} />
+						<MeetupArchiveEvent meetup={meetup} meetupSlug={meetupSlug} />
 					))}
 				</div>
 			</div>
@@ -117,7 +118,7 @@ const meetupArchive = getPastMeetups();
 			}
 		</style>
 
-    <MeetupListing headline='Meetup Tech Talk Archive' archive={true}	meetupsToShow={meetupArchive} />
+    <MeetupListing headline='Meetup Tech Talk Archive' archive={true} meetupsToShow={meetupArchive} meetupName={meetupName} meetupSlug={meetupSlug} meetupImage={ogImage} />
 
 		<Newsletter collectionName={collectionName} meetupDisplayName={meetupName} showForm={showNewsletterForm} />
 		<Discord meetupName={meetupName} />

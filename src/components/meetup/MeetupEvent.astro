@@ -6,7 +6,7 @@ export interface Props {
 	meetupImage?: string;
 }
 
-const { event, meetupName = 'Alps', meetupSlug = 'alps', meetupImage = '/meetup/alps/images/ibk.jpg' } = Astro.props;
+const { event, meetupName, meetupSlug, meetupImage } = Astro.props;
 
 const description = `Talks: ${event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => `"${talk.title}" by ${talk.name}`).join(', ')}`;
 const performer = event.talks.filter((talk) => (talk.title && talk.name)).map((talk) => {
