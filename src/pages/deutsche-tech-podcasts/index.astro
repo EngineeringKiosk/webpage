@@ -7,6 +7,7 @@ import TagBadge from '../../components/TagBadge.astro';
 
 import { getCollection } from "astro:content";
 import { orderByName } from '../../scripts/sorting.js';
+import { buildPodcastDirectoryJsonLd } from '../../scripts/jsonld-builders.js';
 
 let title = 'Die besten Deutschsprachigen Tech Podcasts kuratiert im Engineering Kiosk';
 let description = 'Eine handverlesene Liste der besten deutschsprachigen Tech Podcasts zu relevanten Themen für Entwickler:innen, Tech-Leads und Nerds.';
@@ -15,11 +16,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Build the list of Podcast Episodes
 let germanTechPodcasts = await getCollection("germantechpodcasts");
 germanTechPodcasts.sort(orderByName);
+
+const jsonLd = buildPodcastDirectoryJsonLd(germanTechPodcasts, canonicalURL, Astro.site);
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/headers/german-tech-podcasts-head.jpeg" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/headers/german-tech-podcasts-head.jpeg" {canonicalURL} {jsonLd} />
 		<script src="/js/podcast-listing-filter.js" is:inline></script>
 	</head>
 

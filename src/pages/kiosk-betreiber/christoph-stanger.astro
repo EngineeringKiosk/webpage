@@ -23,6 +23,8 @@ const jsonLd = {
 	"url": canonicalURL.toString(),
 	"image": new URL("/images/teams/christoph-stanger-profile.jpg", Astro.site).toString(),
 	"sameAs": sameAs,
+	"mainEntityOfPage": canonicalURL.toString(),
+	"worksFor": { "@type": "Organization", "name": "Engineering Kiosk" },
 };
 ---
 
