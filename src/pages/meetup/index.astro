@@ -24,7 +24,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <html lang="en">
 	<head>
-		<MainHead title={title} description={description} {canonicalURL} />
+		<MainHead title={title} description={description} image={imageAlps.src} {canonicalURL} ogImageAlt="Engineering Kiosk Meetup" />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">

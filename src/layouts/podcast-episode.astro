@@ -125,7 +125,7 @@ const html = (await Astro.slots.render('default'))
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={frontmatter.description} image={frontmatter.image.src} {canonicalURL} ogType="article" {jsonLd} />
+		<MainHead title={title} description={frontmatter.description} image={frontmatter.image.src} {canonicalURL} ogType="article" ogImageAlt={`Engineering Kiosk Episode: ${frontmatter.title}`} {jsonLd} />
 
 		<!-- https://github.com/embedly/player.js -->
 		<script type="text/javascript" src="/js/player-0.1.0.min.js"></script>
