@@ -64,7 +64,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="w-full md:w-1/2 px-4 my-8 md:mb-0">
 								<div class="relative mx-auto md:ml-0 max-w-max">
 									<a href="https://jump.engineeringkiosk.dev/frachtwerk">
-										<Image class="relative rounded-7xl" src={(await import(`../../images/partners/frachtwerk.jpg`)).default} alt="Frachtwerk Büro in Berlin" title="Frachtwerk - IT-Beratung & Softwareentwicklung" />
+										<Image class="relative rounded-7xl" src={(await import(`../../images/partners/frachtwerk.jpg`)).default} alt="Frachtwerk Büro in Berlin" title="Frachtwerk - IT-Beratung & Softwareentwicklung" loading="lazy" decoding="async" format="webp" quality={80} />
 									</a>
 								</div>
 							</div>

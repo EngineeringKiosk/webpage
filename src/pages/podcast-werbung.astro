@@ -68,13 +68,13 @@ import testimonialMediaLab from "../images/partners/medialab_alex.jpg";
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">In guter Gesellschaft</span>
 							<h2 class="mb-8 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Auszug Werbepartner</h2>
 							<div class="max-w-full">
-								<Image class="partner-image" src={(await import(`../images/partners/handelsblatt.png`)).default} alt="Handelsblatt" title="Handelsblatt" />
-								<Image class="partner-image" src={(await import(`../images/partners/trivago.svg`)).default} alt="trivago" title="trivago" />
-								<Image class="partner-image" src={(await import(`../images/partners/eurowingsdigital.webp`)).default} alt="Eurowings Digital" title="Eurowings Digital" />
-								<Image class="partner-image" src={(await import(`../images/partners/medialabbayern.webp`)).default} alt="Media Lab Bayern" title="Media Lab Bayern" />
-								<Image class="partner-image" src={(await import(`../images/partners/aboutyou.svg`)).default} alt="About You" title="About You" />
-								<Image class="partner-image" src={(await import(`../images/partners/iuhochschule.svg`)).default} alt="IU Hochschule" title="IU Hochschule" />
-								<Image class="partner-image" src={(await import(`../images/partners/workshopsde.svg`)).default} alt="Workshops.de" title="Workshops.de" />
+								<Image class="partner-image" src={(await import(`../images/partners/handelsblatt.png`)).default} alt="Handelsblatt" title="Handelsblatt" loading="lazy" decoding="async" format="webp" quality={80} />
+								<Image class="partner-image" src={(await import(`../images/partners/trivago.svg`)).default} alt="trivago" title="trivago" loading="lazy" decoding="async" />
+								<Image class="partner-image" src={(await import(`../images/partners/eurowingsdigital.webp`)).default} alt="Eurowings Digital" title="Eurowings Digital" loading="lazy" decoding="async" format="webp" quality={80} />
+								<Image class="partner-image" src={(await import(`../images/partners/medialabbayern.webp`)).default} alt="Media Lab Bayern" title="Media Lab Bayern" loading="lazy" decoding="async" format="webp" quality={80} />
+								<Image class="partner-image" src={(await import(`../images/partners/aboutyou.svg`)).default} alt="About You" title="About You" loading="lazy" decoding="async" />
+								<Image class="partner-image" src={(await import(`../images/partners/iuhochschule.svg`)).default} alt="IU Hochschule" title="IU Hochschule" loading="lazy" decoding="async" />
+								<Image class="partner-image" src={(await import(`../images/partners/workshopsde.svg`)).default} alt="Workshops.de" title="Workshops.de" loading="lazy" decoding="async" />
 							</div>	
 					</div>		
 				</div>
@@ -90,7 +90,7 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 
 							</h3>
 							<div class="flex items-center py-8 pl-4 pr-2">
-								<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialMediaLab} alt="Alexander Rühl, Teamlead Marketing, Media Lab Bayern" title="Alexander Rühl, Teamlead Marketing, Media Lab Bayern" />
+								<Image class="w-20 md:w-24 h-20 md:h-24 mr-6 rounded-full" src={testimonialMediaLab} alt="Alexander Rühl, Teamlead Marketing, Media Lab Bayern" title="Alexander Rühl, Teamlead Marketing, Media Lab Bayern" loading="lazy" decoding="async" format="webp" quality={80} width={96} height={96} />
 								<div>
 									<h4 class="mb-1 text-lg font-semibold">Alexander Rühl</h4>
 									<p class="text-lg text-coolGray-400">Teamlead Marketing, Media Lab Bayern</p>
@@ -111,7 +111,7 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 										<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 											<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
 												<a href={`/podcast/episode/${episode86.id}/#t=907`}>
-													<Image class="w-full rounded-lg shadow-lg" src={episode86.data.image} alt={`Episode ${episode86.data.title}`} title={`Episode ${episode86.data.title}`} />
+													<Image class="w-full rounded-lg shadow-lg" src={episode86.data.image} alt={`Episode ${episode86.data.title}`} title={`Episode ${episode86.data.title}`} loading="lazy" decoding="async" format="webp" quality={80} />
 												</a>
 											</div>
 										</div>
@@ -132,7 +132,7 @@ Mit der gezielten Ansprache in Host-Read Botschaften und der hohen Glaubwürdigk
 										<div class="w-full md:w-1/5 px-4 mb-16 md:mb-0">
 											<div class="relative mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
 												<a href={`/podcast/episode/${episode85.id}/#t=697`}>
-													<Image class="w-full rounded-lg shadow-lg" src={episode85.data.image} alt={`Episode ${episode85.data.title}`} title={`Episode ${episode85.data.title}`} />
+													<Image class="w-full rounded-lg shadow-lg" src={episode85.data.image} alt={`Episode ${episode85.data.title}`} title={`Episode ${episode85.data.title}`} loading="lazy" decoding="async" format="webp" quality={80} />
 												</a>
 											</div>
 										</div>
