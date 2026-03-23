@@ -137,7 +137,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 								<div class="relative mx-auto md:mr-0 max-w-max">
 									<img class="absolute z-10 -left-14 -top-12 w-28 md:w-auto" src="/images/elements/circle3-red.svg" alt="Roter Kreis" />
 									<img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto" src="/images/elements/dots3-green.svg" alt="Grüne Punkte" />
-									<Image class="relative rounded-7xl" src={headerImageAndyWolfiLounge} alt="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" title="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" />
+									<Image class="relative rounded-7xl" src={headerImageAndyWolfiLounge} alt="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" title="Andy Grunwald und Wolfgang Gassler vom Engineering Kiosk" format="webp" quality={80} />
 								</div>
 							</div>
 						</div>
@@ -151,7 +151,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 						<div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
 							<div class="relative md:w-full mx-auto md:ml-0 max-w-max overflow-hidden rounded-lg">
 								<a href={`/podcast/episode/${episode.id}/`} title={`Engineering Kiosk Episode ${episode.data.title}`}>
-									<Image src={episode.data.image} alt={`Engineering Kiosk Episode ${episode.data.title}`} title={`Engineering Kiosk Episode ${episode.data.title}`} />
+									<Image src={episode.data.image} alt={`Engineering Kiosk Episode ${episode.data.title}`} title={`Engineering Kiosk Episode ${episode.data.title}`} format="webp" quality={80} />
 								</a>
 							</div>
 						</div>

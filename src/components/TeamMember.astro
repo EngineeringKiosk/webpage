@@ -29,10 +29,10 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 	<div class="h-full py-8 px-10 bg-white rounded-md text-center">
 		{profileLink ? (
 			<a href={profileLink}>
-				<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} />
+				<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} loading="lazy" decoding="async" format="webp" quality={80} width={176} height={176} />
 			</a>
 		) : (
-			<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} />
+			<Image class="w-44 mx-auto mb-6 rounded-full" src={imageAvatar} alt={name} title={name} loading="lazy" decoding="async" format="webp" quality={80} width={176} height={176} />
 		)}
 
 		{profileLink ? (

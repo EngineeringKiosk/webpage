@@ -14,11 +14,11 @@ const { name, logo, url, logoHeight } = Astro.props;
 {
 	url ? (
 		<a href={url} target="_blank">
-			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} />) : (<span class="underline">{name}</span>)}
+			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} loading="lazy" decoding="async" />) : (<span class="underline">{name}</span>)}
 		</a>
 	) : (
 		<span>
-			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} />) : name}
+			{logo ? (<Image src={logo} height={logoHeight} class="inline h-full" alt={name} title={name} loading="lazy" decoding="async" />) : name}
 		</span>
 	)
 }
