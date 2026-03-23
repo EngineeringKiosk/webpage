@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 // do not add to sitemap if specified string is contained in path
-const exludeFromSitemap = ['meetup/alps/promote/'];
+const exludeFromSitemap = ['meetup/alps/promote/', 'meetup/rhine-ruhr/promote/'];
 
 // https://astro.build/config
 export default defineConfig({
