@@ -23,6 +23,8 @@ const jsonLd = {
 	"url": canonicalURL.toString(),
 	"image": new URL("/images/teams/christian-schepp-schaefer-profile.jpg", Astro.site).toString(),
 	"sameAs": sameAs,
+	"mainEntityOfPage": canonicalURL.toString(),
+	"worksFor": { "@type": "Organization", "name": "Engineering Kiosk" },
 };
 ---
 

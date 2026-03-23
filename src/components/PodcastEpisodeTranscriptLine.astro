@@ -2,23 +2,25 @@
 export interface Props {
 	utterance: object;
 	hideSpeakerName?: boolean;
+	pubDate?: Date;
 }
 
 import { millisecondsToHumanTimestamp } from '../scripts/date.js';
 
-const { utterance, hideSpeakerName = false } = Astro.props;
+const { utterance, hideSpeakerName = false, pubDate } = Astro.props;
 
 // utterance.{start|end} is in milliseconds
 const startTime = millisecondsToHumanTimestamp(utterance.start);
 const endTime = millisecondsToHumanTimestamp(utterance.end);
 
 const startInSeconds = Math.floor(utterance.start / 1000);
+const isoDate = pubDate ? new Date(pubDate).toISOString().split('T')[0] : undefined;
 ---
-<div data-trans-start={startInSeconds} class="utterance">
-	<h4>{!hideSpeakerName && (<span class="speaker">{utterance.speaker}</span> )}<span class="time">({startTime} - {endTime})</span>
+<div data-trans-start={startInSeconds} class="utterance h-entry">
+	<h4>{!hideSpeakerName && (<span class="speaker p-author h-card">{utterance.speaker}</span> )}<time class="time dt-published" datetime={isoDate}>({startTime} - {endTime})</time>
 		<a href=`#t=${startInSeconds}` onclick=`showSharingLink(${startInSeconds}, event)` title="Diese Transkriptstelle teilen">
 			<img src="/images/elements/share-arrow.svg" alt="Teilen"/>
 		</a>
 	</h4>
-	<p>{utterance.text}</p>
+	<p class="e-content p-name">{utterance.text}</p>
 </div>

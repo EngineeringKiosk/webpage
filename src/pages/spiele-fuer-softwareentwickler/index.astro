@@ -6,6 +6,7 @@ import SoftwareEngineeringGamePreview from '../../components/SoftwareEngineering
 import TagBadge from '../../components/TagBadge.astro';
 import { getCollection } from "astro:content";
 import { orderByName } from '../../scripts/sorting.js';
+import { buildGamesDirectoryJsonLd } from '../../scripts/jsonld-builders.js';
 
 let title = 'Die besten Spiele für Softwareentwickler:innen kuratiert im Engineering Kiosk';
 let description = 'Eine handverlesene Liste der besten Spiele für Softwareentwickler:innen, Tech-Leads und Nerds.';
@@ -14,11 +15,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Build the list of Games
 let awesomeSoftwareEngineeringGames = await getCollection("awesome-software-engineering-games");
 awesomeSoftwareEngineeringGames.sort(orderByName);
+
+const jsonLd = buildGamesDirectoryJsonLd(awesomeSoftwareEngineeringGames, canonicalURL, Astro.site);
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/headers/awesome-software-engineering-games-head.png" {canonicalURL} />
+		<MainHead title={title} description={description} image="/images/headers/awesome-software-engineering-games-head.png" {canonicalURL} {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">

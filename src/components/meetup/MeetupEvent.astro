@@ -34,11 +34,14 @@ const schema = {
     "name": (event.location && event.location.name) || 'tba',
     "address": {
       "@type": "PostalAddress",
-      "name":(event.location && event.location.address) || 'tba',
+      "streetAddress": (event.location && event.location.address) || 'tba',
     }
   },
   "description": description,
   "image": `https://engineeringkiosk.dev${meetupImage}`,
+  "url": `https://engineeringkiosk.dev/meetup/${meetupSlug}`,
+  "inLanguage": "de",
+  "duration": "PT2H30M",
   "offers": {
     "@type": "Offer",
     "price": 0,
