@@ -6,10 +6,9 @@ import { formatDateWithoutWeekday } from '../../scripts/date.js';
 
 export interface Props {
 	meetup: CollectionEntry<'meetup'>;
-	meetupSlug?: string;
 }
 
-const { meetup, meetupSlug = 'alps' } = Astro.props;
+const { meetup } = Astro.props;
 const meetupId = `meetup-${formatDateWithoutWeekday(meetup.date, 'en-GB').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`;
 
 ---
@@ -35,7 +34,7 @@ const meetupId = `meetup-${formatDateWithoutWeekday(meetup.date, 'en-GB').toLowe
 
       <ul class="space-y-2">
         {meetup.talks && meetup.talks.map((talk) => (
-          <MeetupArchiveEventTalk title={talk.title} speaker={talk.name} avatar={talk.avatar} meetupSlug={meetupSlug} />
+          <MeetupArchiveEventTalk title={talk.title} speaker={talk.name} avatar={talk.avatar} />
         ))}
       </ul>
     </div>

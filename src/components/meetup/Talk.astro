@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import defaultAvatarAlps from "../../content/meetup-alps/images/speaker/avatar.png";
-import defaultAvatarRhineRuhr from "../../content/meetup-rhine-ruhr/images/speaker/avatar.png";
+import defaultAvatar from "../../content/meetup/images/speaker/avatar.png";
 import TagBadge from '../../components/TagBadge.astro';
 
 export interface Talk {
@@ -25,12 +24,11 @@ export interface Talk {
 
 export interface Props {
 	talk: Talk;
-	meetupSlug?: string;
+	meetupSlug: string;
 }
 
 const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
-const meetupSlug = Astro.props.meetupSlug || 'alps';
-const defaultAvatar = meetupSlug === 'rhine-ruhr' ? defaultAvatarRhineRuhr : defaultAvatarAlps;
+const meetupSlug = Astro.props.meetupSlug;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];

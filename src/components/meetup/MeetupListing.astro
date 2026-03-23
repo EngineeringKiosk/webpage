@@ -10,13 +10,13 @@ export interface Props {
 	headline: string;
 	meetupsToShow: any[];
 	archive?: boolean;
-	meetupName?: string;
-	meetupSlug?: string;
-	meetupImage?: string;
+	meetupName: string;
+	meetupSlug: string;
+	meetupImage: string;
 	showGeneralLanguageNote?: boolean;
 }
 
-const { headline, meetupsToShow, archive, meetupName = 'Alps', meetupSlug = 'alps', meetupImage = '/meetup/alps/images/ibk.jpg', showGeneralLanguageNote = false } = Astro.props
+const { headline, meetupsToShow, archive, meetupName, meetupSlug, meetupImage, showGeneralLanguageNote = false } = Astro.props
 
 
 ---

@@ -1,17 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import defaultAvatarAlps from "../../content/meetup-alps/images/speaker/avatar.png";
-import defaultAvatarRhineRuhr from "../../content/meetup-rhine-ruhr/images/speaker/avatar.png";
+import defaultAvatar from "../../content/meetup/images/speaker/avatar.png";
 
 export interface Props {
   title: string;
   speaker: string;
   avatar: string;
-  meetupSlug?: string;
 }
 
-const { title, speaker, avatar, meetupSlug = 'alps' } = Astro.props;
-const defaultAvatar = meetupSlug === 'rhine-ruhr' ? defaultAvatarRhineRuhr : defaultAvatarAlps;
+const { title, speaker, avatar } = Astro.props;
 
 ---
 <li class="flex items-center">
