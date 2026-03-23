@@ -21,7 +21,7 @@ const jsonLd = {
 	"@type": "Person",
 	"name": member.name,
 	"url": canonicalURL.toString(),
-	"image": new URL("/images/teams/andy-grunwald-profile.jpg", Astro.site).toString(),
+	"image": new URL(imageAndyGrunwald.src, Astro.site).toString(),
 	"sameAs": sameAs,
 	"mainEntityOfPage": canonicalURL.toString(),
 	"worksFor": { "@type": "Organization", "name": "Engineering Kiosk" },
@@ -30,7 +30,7 @@ const jsonLd = {
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image="/images/teams/andy-grunwald-profile.jpg" {canonicalURL} ogType="profile" ogImageAlt="Andy Grunwald" ogImageWidth={imageAndyGrunwald.width} ogImageHeight={imageAndyGrunwald.height} profileFirstName="Andy" profileLastName="Grunwald" {jsonLd} />
+		<MainHead title={title} description={description} image={imageAndyGrunwald.src} {canonicalURL} ogType="profile" ogImageAlt="Andy Grunwald" ogImageWidth={imageAndyGrunwald.width} ogImageHeight={imageAndyGrunwald.height} profileFirstName="Andy" profileLastName="Grunwald" {jsonLd} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
