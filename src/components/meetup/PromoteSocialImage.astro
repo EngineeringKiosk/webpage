@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import MainHead from '../MainHead.astro';
+
+import { formatDate } from '../../scripts/date.js';
+import { createMeetupHelpers } from '../../scripts/meetups.js';
+
+export interface Props {
+	collectionName: string;
+	meetupName: string;
+	meetupCity: string;
+	meetupUrl: string;
+	ogImage: string;
+}
+
+const { collectionName, meetupName, meetupCity, meetupUrl, ogImage } = Astro.props;
+const { getNextMeetup } = await createMeetupHelpers(collectionName);
+
+const title = `Social Media Post Meetup ${meetupName} - Engineering Kiosk - ${meetupCity}`;
+const description = `Tech Meetup in ${meetupCity}, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Current Meetup
+const bufferDays = 1;
+const nextMeetup = getNextMeetup(bufferDays);
+const dateString = formatDate(nextMeetup.date, 'en-US');
+
+const defaultAvatarPath = `/meetup/${meetupUrl}/images/speaker/avatar.png`;
+
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image={ogImage} {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<section style={`background-image: url('${ogImage}'); width: 700px; height: 700px;`} class="block text-center flex flex-col font-medium">
+			<h1 class="text-white text-5xl font-semibold p-3">Engineering Kiosk {meetupName}</h1>
+		  <h2 class="text-white text-4xl">{dateString}</h2>
+			<h2 class="text-white text-4xl">Meetup in {meetupCity}</h2>
+			<div class="text-2xl p-4">engineeringkiosk.dev/{meetupUrl}</div>
+			<div class="bg-white bg-opacity-90 mt-auto p-4 relative">
+				<div class="text-2xl">
+					hosted by {nextMeetup.location.logo ? <Image class="h-12 inline" src={nextMeetup.location.logo} alt={nextMeetup.location.name} /> : nextMeetup.location.name}
+				</div>
+			{nextMeetup.talks.map((talk, j) => (
+				<div class="flex flex-row my-2 mx-4">
+					{talk.avatar ? <Image class="w-32 h-32 rounded-full" src={talk.avatar} alt={talk.name} /> : <img class="w-32 h-32 rounded-full" src={defaultAvatarPath} alt={talk.name} />}
+					<h3 class="ml-4 text-2xl text-left my-auto">{talk.title}<br>by <span class="text-yellow-500">{talk.name}</span></h3>
+				</div>
+			))}
+				<img src={`/images/logos/engineering-kiosk-logo.svg`} alt="Engineering Kiosk" class="h-20 inline absolute bottom-4 right-4" />
+			</div>
+		</section>
+	</body>
+</html>

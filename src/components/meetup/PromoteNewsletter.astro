@@ -1,0 +1,59 @@
+---
+import MainHead from '../MainHead.astro';
+
+import { formatDate, formatDateWithoutWeekday, formatTime, monthSuffixedDay, year} from '../../scripts/date.js';
+import { createMeetupHelpers } from '../../scripts/meetups.js';
+
+export interface Props {
+	collectionName: string;
+	meetupName: string;
+	meetupCity: string;
+	meetupUrl: string;
+	ogImage: string;
+	teamSignoff: string;
+}
+
+const { collectionName, meetupName, meetupCity, meetupUrl, ogImage, teamSignoff } = Astro.props;
+const { getNextMeetup } = await createMeetupHelpers(collectionName);
+
+const title = `Social Media Post Meetup ${meetupName} - Engineering Kiosk - ${meetupCity}`;
+const description = `Tech Meetup in ${meetupCity}, brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Current Meetup
+const bufferDays = 1;
+const nextMeetup = getNextMeetup(bufferDays);
+const dateString = formatDate(nextMeetup.date, 'en-US');
+const dateStringMonthDay = monthSuffixedDay(nextMeetup.date);
+const dateStringYear = year(nextMeetup.date);
+const timeString = formatTime(nextMeetup.date);
+const hostName = nextMeetup.hostName
+const locationName = nextMeetup.location.name
+const locationAddress = nextMeetup.location.address
+---
+
+<html lang="de">
+	<body class="antialiased bg-body text-body">
+
+		<h1 class="text-xl font-bold">Engineering Kiosk Meetup Announcement - {dateStringMonthDay}</h1>
+
+		<p>
+				<br/>
+				We would like to invite you to the next <b>Engineering Kiosk Meetup</b>, this time we will meet at the following date & location: <br/>
+		<br/>
+			&#128197; {dateStringMonthDay}, {dateStringYear} - {timeString}<br/>
+		&#128591; Hosted by: {locationName}<br/>
+		&#128205; Location: {locationAddress}<br/>
+		<br/>
+		&#x1F3A4; Featured Talks<br/>
+		<br/>
+		{nextMeetup.talks.map((talk, j) => (
+				<span><b>{talk.title} by {talk.name}:</b> {talk.description}</span><br/><br/>
+		))}
+		&#128221; Reserve Your Spot and receive an instant calendar invite: <a href={`https://engineeringkiosk.dev/${meetupUrl}`}>https://engineeringkiosk.dev/{meetupUrl}</a><br/>
+		<br/>
+		cheers,<br/>
+		{teamSignoff}<br/>
+		</p>
+	</body>
+</html>
