@@ -104,7 +104,7 @@ const meetupArchive = getPastMeetups();
 
 					<!-- Meetup Rows -->
 					{meetupArchive.map((meetup) => (
-						<MeetupArchiveEvent meetup={meetup} />
+						<MeetupArchiveEvent meetup={meetup} meetupSlug={meetupSlug} />
 					))}
 				</div>
 			</div>

@@ -6,12 +6,14 @@ export interface Props {
   title: string;
   speaker: string;
   avatar: string;
+  meetupSlug: string;
 }
 
-const { title, speaker, avatar } = Astro.props;
+const { title, speaker, avatar, meetupSlug } = Astro.props;
+const talkId = `talk-${speaker.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 
 ---
-<li class="flex items-center">
+<li class="flex items-center group">
   <div class="flex items-center mr-2 hidden sm:block">
     <Image class="w-12 h-12 m-2 rounded-full" src={avatar || defaultAvatar} alt={speaker} title={speaker} loading="lazy" decoding="async" format="webp" quality={80} width={48} height={48} />
   </div>
@@ -19,4 +21,13 @@ const { title, speaker, avatar } = Astro.props;
     <div class="font-medium">{title}</div>
     {speaker && <div class="text-coolGray-500">({speaker})</div>}
   </div>
+  <button
+    class="talk-share-btn ml-2 p-1 text-coolGray-300 hover:text-yellow-500 transition-colors rounded-full hover:bg-yellow-50 opacity-0 group-hover:opacity-100"
+    data-talk-id={talkId}
+    data-meetup-slug={meetupSlug}
+    title="Copy link to this talk"
+    aria-label="Copy link to this talk"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
 </li>

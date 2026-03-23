@@ -36,7 +36,16 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 ---
 
 <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-10 hostpreview" id={talkId}>
-	<div class="h-full py-8 px-10 bg-white rounded-md text-center">
+	<div class="h-full py-8 px-10 bg-white rounded-md text-center relative">
+		<button
+			class="talk-share-btn absolute top-3 right-3 p-2 text-coolGray-400 hover:text-yellow-500 transition-colors rounded-full hover:bg-yellow-50"
+			data-talk-id={talkId}
+			data-meetup-slug={meetupSlug}
+			title="Copy link to this talk"
+			aria-label="Copy link to this talk"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+		</button>
 		<Image class="w-56 h-56 mx-auto mb-6 rounded-full" src={avatar || defaultAvatar} alt={name} title={name} loading="lazy" decoding="async" format="webp" quality={80} width={224} height={224} />
 
 		<h2 class="mb-2 text-2xl md:text-3xl leading-tight font-semibold">
@@ -137,3 +146,25 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 		}
 	</div>
 </div>
+
+<script>
+	document.addEventListener('click', (e) => {
+		const btn = e.target.closest('.talk-share-btn');
+		if (!btn) return;
+
+		const talkId = btn.dataset.talkId;
+		const meetupSlug = btn.dataset.meetupSlug;
+		const link = `${window.location.origin}/meetup/${meetupSlug}/archive/#${talkId}`;
+
+		navigator.clipboard.writeText(link).then(() => {
+			const svg = btn.querySelector('svg');
+			const originalHTML = svg.outerHTML;
+			btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+			btn.classList.add('text-green-500');
+			setTimeout(() => {
+				btn.innerHTML = originalHTML;
+				btn.classList.remove('text-green-500');
+			}, 2000);
+		});
+	});
+</script>
