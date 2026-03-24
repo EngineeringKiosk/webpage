@@ -3447,6 +3447,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/260"
+  to = "/podcast/episode/260-crazy-attacks-part-2-acoustic-dos-garmin-hack-im-luftverkehr?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep260"
+  to = "/podcast/episode/260-crazy-attacks-part-2-acoustic-dos-garmin-hack-im-luftverkehr?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
