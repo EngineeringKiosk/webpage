@@ -1,0 +1,675 @@
+{
+    "confidence": 0.9582451,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 2878,
+    "utterances": [
+        {
+            "start": 3200,
+            "end": 152849,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute wird es mal wieder ein bisschen absurd, denn wir sprechen über Security Fälle, bei denen du dich mehrfach fragen Ist das wirklich passiert? Die kurze Antwort ist ja. Wir knüpfen an unsere letzte Episode über verrückte Hacking Attacken an und haben wieder zwei Fälle dabei, die zeigen, wie kreativ, seltsam und gleichzeitig lehrreich Sicherheitsvorfälle sein können. Es geht um eine legendäre Geschichte rund um Janet Jackson, Resonanz, Festplatten und die Frage, ob ein Song tatsächlich ein Denail of Service Ausfall auslösen kann. Ja, Akustik, Physik und Betriebssystem Crash in einer Kausalkette. Ich würde mal sagen, willkommen im Cross Layer Chaos. Danach schauen wir auf den Garmin Vorfall aus dem Jahr zwei tausend zwanzig Ransomware, Lateral Removement, Phishing, Flight Planning und die unschöne Erkenntnis, dass ein Security Incident eben nicht nur deine Laufdaten betrifft, sondern im Zweifel auch kritische Infrastrukturen und Luftfahrt Workflows. Wir sprechen darüber, was man aus solchen Fällen fürs Redmodelling, Backup Strategien und Incident Response lernen kann. Also wenn du Lust auf Security Geschichten mit technischem Tiefgang und einer Prise WTF hast, dann bist du genau hier richtig. Wir springen ein, los geht's. Vor ein paar Episoden haben wir crazy Hacks vorgestellt, also so ein paar Sicherheits Hacks. Sicherheits Hacks? Gibt es. Sicherheits Hacks? Weiß ich gerade nicht. Auf jeden Fall Hacking Attacken, die der einen Seite viral gegangen sind, auf der anderen Seite vielleicht ein bisschen kurios. Auf jeden Fall haben wir uns dann immer gefragt, was kann man daraus lernen? Irgendwie. Also das war wirklich Zufall, das war nicht geplant. Wir immer auf Zero Trust rausgekommen, also man soll den Leuten die Request senden, nicht vertrauen, egal ob es interne Systeme sind oder nicht. Und als wir die Episode vorbereitet haben, sind wir über so viel spannenden Kram gestolpert. Also spannende Security Hacks, also spannende Sicherheitslücken, die vielleicht beabsichtigt waren, vielleicht auch nicht. Und wir hatten gar keine Zeit in der Episode zwei hundert sieben und fünfzig alle unterzubringen. Und da haben wir einfach irgendwann gedacht, ja gut, dann machen wir jetzt bei drei Sicherheitslöchern Schluss. Und wenn wir mal irgendwann wieder Lust haben, machen wir eine zweite Episode und nehmen die anderen mit rein. Und jetzt ist die zweite Episode, weil wir jetzt Lust haben, Wolfgang, wie viel Sicherheitsgedanken hast du dir denn seit der letzten Episode gemacht? Denkst du jetzt vermehrt über Zero Trust nach oder hast du einfach seitdem nicht mehr programmiert? Und deswegen war das völlig irrelevant."
+        },
+        {
+            "start": 152849,
+            "end": 194720,
+            "speaker": "B",
+            "text": "Ich habe gerade ein konkretes Problem und zwar im iot Umfeld, wo es um MQTT geht, dieses Messaging Protokoll, was wir auch in der Episode behandelt haben, über dieses diese gesamte Roboterflotte von sieben tausend Staubsaugerrobotern hops genommen wurde, dass ich das in einem eigenen Projekt habe und das Problem habe, dass ich es nicht über TLS machen kann, weil dieser Chip zu schwach ist und der TLS nicht hinbekommt. Und das ist gerade aktuell was, was mir Kopfzerbrechen bereitet. Nicht nur nach der letzten Episode, sondern ganz allgemein. Aber Hardware ist schwieriger, als man so denkt. Wenn man aus der Software Ecke kommt, hat man ja immer so das Gefü Man braucht nur irgendeine Lip reinschmeissen und alles ist okay. Aber im Hardware Umfeld ist das schon alles viel schwieriger, muss man sagen."
+        },
+        {
+            "start": 194720,
+            "end": 207400,
+            "speaker": "A",
+            "text": "Da geht es ja um die Verschlüsselung von Kommunikation. Da geht es ja nicht um das Vertrauen von dem Request, also auch die Komponente, die auch das Zertifikat hat, um die Kommunikation zu verschlüsseln, kann ja befallen sein und kann ja bösartige Requests senden natürlich."
+        },
+        {
+            "start": 207400,
+            "end": 214240,
+            "speaker": "B",
+            "text": "Aber wenn es schon mal gar nicht verschlüsselt ist, dann hast du natürlich grundsätzlich schon ein Problem, wenn du im Klartext irgendwelche Passwörter rumsendest, beim Login zum Beispiel."
+        },
+        {
+            "start": 214410,
+            "end": 215530,
+            "speaker": "A",
+            "text": "Und wie löst du es jetzt?"
+        },
+        {
+            "start": 215530,
+            "end": 217210,
+            "speaker": "B",
+            "text": "Vermutlich eine andere Hardware."
+        },
+        {
+            "start": 217210,
+            "end": 230330,
+            "speaker": "A",
+            "text": "Also das war jetzt wirklich nicht abgesprochen, aber der Übergang ist wirklich perfekt, denn wir legen direkt los und kommen direkt zum ersten, ich würde fast sagen beabsichtigten unbeabsichtigten Fall. Naja Wolfgang, was hast du ein tausend neun hundert neun und achtzig gemacht?"
+        },
+        {
+            "start": 230330,
+            "end": 238530,
+            "speaker": "B",
+            "text": "Glaube ich bin ins Gymnasium gekommen, das war so erste Klasse, Gymnasium zweite Bin mir nicht mehr ganz sicher, so um den Dreh rum."
+        },
+        {
+            "start": 238530,
+            "end": 250090,
+            "speaker": "A",
+            "text": "Okay, dann könnte das ja wirklich sein, dass du nach dem Gymnasium Prince of Persia gespielt hast und dabei Rhythm Nation von Janet Jackson gehört hast und dich gefragt hast, warum stürzt dein Computer mal ab?"
+        },
+        {
+            "start": 250090,
+            "end": 264570,
+            "speaker": "B",
+            "text": "Oder Prince of Persia habe ich wahrscheinlich gespielt, wobei ich habe jetzt gerade nachgerechnet, das kann noch nicht sein. Es war eigentlich die Volksschule, also die Grundschule. Bei uns heißt die Volksschule steht, waren auch andere Zeiten. Aber habe ich da schon einen Computer gehabt? Vermutlich noch gar nicht."
+        },
+        {
+            "start": 264730,
+            "end": 321640,
+            "speaker": "A",
+            "text": "Ich auf keinen Fall. Ein tausend neun hundert neun und achtzig war ich mit hoher Wahrscheinlichkeit mit mir selbst auf einem Schaukelpferd oder Schaukelstuhl oder ähnlichem beschäftigt. Aber es geht nicht um Prince of Persia. Schade. Es geht um Janet Jackson. Es geht um Rhythm Nation. Das ist ein Song, der im September ein tausend neun hundert neun und achtzig von Janet Jackson veröffentlicht wurde. Und dieser Song hat sozusagen eine eigene CVE Nummer bekommen. Und zwar reden wir hier über die Janet Jackson Sicherheitslücke. Das klingt schon kurios, lass es mich bitte erklären. Und zwar fällt dieses CVE in ein Akustik DOS. Und dann habe ich erst mal nachgeguckt, okay, DOS. Jeder aus dem Sicherheitsbereich weiß, dass das eigentlich Denail of Service heißt. Und ich mache mal wieder einen Punkt, um Abkürzungen zu vermeiden. Wenn du DOS, also DOS bei Google reinpackst, dann kommt die KI Antwort und wofür steht das? Wofür steht das DOS? Und dann gibt es lustigerweise das Disk Operating System."
+        },
+        {
+            "start": 321640,
+            "end": 326120,
+            "speaker": "B",
+            "text": "Ja klar, DOS. Hast du nie DOS verwendet? Bist du zu jung, um DOS verwendet zu haben?"
+        },
+        {
+            "start": 326120,
+            "end": 352210,
+            "speaker": "A",
+            "text": "Nein, nein, ich habe mich nie gefragt, wofür MS DOS, Also das DOS in MS DOS steht. Und das ist es Disc Operating System. Ich meine aber in diesem Punkt mit Akustik DOS meine ich nicht Akustik Disc Operating System, obwohl das leider auch zutrifft. Und ich erkläre jetzt gleich warum. Aber hier geht es um DOS im Sicherheitskontext. Das ist Denial of Service, also ein Cyberangriff, der Dienste durch Überlastung blockiert bzw. Nicht verfügbar macht."
+        },
+        {
+            "start": 352210,
+            "end": 356515,
+            "speaker": "B",
+            "text": "Haben wir eine ganze Episode zu DOS Attacken gemacht und wie man das abwehrt?"
+        },
+        {
+            "start": 356482,
+            "end": 416482,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 416515,
+            "end": 424590,
+            "speaker": "A",
+            "text": "Ja, in Episode zwei hundert elf haben wir aber über Distributed Denial of Service gesprochen und hier reicht es, obwohl das könnte auch ein Distributed Attack sein."
+        },
+        {
+            "start": 424590,
+            "end": 432230,
+            "speaker": "B",
+            "text": "Das ist ja ein ddos. Ja, ist nochmal. Genau, das sind Audio DOS, ddos, Audio DOS, MS DOS. Jetzt haben wir da alles."
+        },
+        {
+            "start": 432230,
+            "end": 494610,
+            "speaker": "A",
+            "text": "So, jetzt haben wir hier genug Spannung erzeugt. Also was ist eigentlich passiert? Und zwar, wenn du auf einem Laptop im Jahre zwei tausend fünf den Song Rhythm Nation von Janet Jackson abgespielt hast, dann sind einige Laptop Modelle, auf denen der Song abgespielt wurde, gecrashed. Colonel Panic, Bye Bye, Reboot. Das Es sind auch Laptops in unmittelbarer Nähe gecrashed, obwohl die das Video gar nicht abgespielt haben und B die Laptops gar nicht miteinander vernetzt waren oder verbunden waren. Und da kommen wir jetzt zu dem Punkt Akustik, den Service. Was ist also passiert? Der Song selbst hat, so wie jedes Geräusch, Schallwellen ausgelöst. Durch Schallwellen wird eine sogenannte Resonanz erzeugt. Wer hat in Physik aufgepasst? Ich habe es damals nicht, ich musste erst recherchieren, um das jetzt zu verstehen. Was ist eine Resonanz? Wolfgang Stell dir eine Schaukel vor. Wenn du eine Schaukel genau dem richtigen Rhythmus anschiebst, wird sie immer höher, selbst mit wenig Kraft, oder?"
+        },
+        {
+            "start": 494610,
+            "end": 495770,
+            "speaker": "B",
+            "text": "Ja, macht Sinn natürlich."
+        },
+        {
+            "start": 495770,
+            "end": 552950,
+            "speaker": "A",
+            "text": "Naja, drückst du zu früh oder zu spät, dann passiert halt kaum was. Aber drückst du im richtigen Moment nach vorne, dann wird sie immer höher, weil du die Schwingung mitnimmst. Und dieses Phänomen heißt Resonanz. Also jedes schwingfähige Objekt hat eine gewisse Eigenfrequenz und wenn du es genau mit dieser Frequenz anregst, schaukeln sich die Amplituden auf, oft dramatisch. Das ist zum Beispiel der Hintergrund. Es gab mal eine Brücke ein tausend neun hundert vierzig das ist die Tacoma Narrows Brücke, die durch Wind in Resonanz geriet und kollabierte. Wenn da so ein bisschen Wind ist und die Brücke wackelt, dann verstärkt der Wind die Resonanz und dann wackelt die immer noch mehr. Hast du vielleicht schon mal bei der Golden Gate Bridge gesehen oder ähnliches in so YouTube Videos. Oder das gleiche Phänomen hat man, wenn Opernstimmen Weingläser explodieren lassen. Also durch die Schallwellen der Opernstimme und durch die Eigenschwingung des Weinglases wird die Schwingung des Weinglases halt verstärkt durch die Resonanz. Macht soweit Sinn, oder?"
+        },
+        {
+            "start": 552950,
+            "end": 559720,
+            "speaker": "B",
+            "text": "Das heißt, der eigentliche Grund, warum man in Theatern und Opern keine Gläser mit reinnehmen darf, ist, dass die sonst brechen. Oder von den Opernsängern."
+        },
+        {
+            "start": 559950,
+            "end": 580110,
+            "speaker": "A",
+            "text": "Ich war noch nie in einer Oper, ich weiß es nicht. So, jetzt ist es so. Genau das ist hier passiert. Und zwar bei gewissen Laptop Modellen mit Festplatten, mit hdds, Hard Disk Drives, also mit diesen mechanischen Platten drin, Spinning Discs, Spinning. Wie heißt das auf Deutsch? Jetzt sage nicht drehende Platten, Drehende Platten,"
+        },
+        {
+            "start": 581390,
+            "end": 583790,
+            "speaker": "B",
+            "text": "Keine Ahnung, gibt es keine Namen. Glenn."
+        },
+        {
+            "start": 583790,
+            "end": 621090,
+            "speaker": "A",
+            "text": "Also Festplatten mit einer Umdrehungsgeschwindigkeit von Umdrehungen pro Minute. Bei denen hat, wenn der Song von Janet Jackson abgespielt wurde durch die Tonlage, durch die Basslage genau die Resonanz des Lesekopfes getroffen und somit die Schwingung des Lesekopfes drastisch verstärkt, weil die genau die Eigenresonanz getroffen hat. Und dies hat dazu geführt, dass Lese und Schreiboperationen auf dem Betriebssystem nicht erfolgreich ausgeführt werden konnten bzw. So in die Länge gezogen wurden. Das ist eine Kernel Panic ab, aber"
+        },
+        {
+            "start": 621090,
+            "end": 650650,
+            "speaker": "B",
+            "text": "es wurde nichts zerstört in dem Fall. Man muss sich das ja kurz vielleicht vorstellen, kurz nachgegoogelt. Der Abstand zwischen dem Lesekopf und der eigentlichen Platte beträgt fünf bis zehn Nanometer, also würde mal sagen sehr sehr klein. Und ich kann mich erinnern, es gab ja früher auch dieses Phänomen von dem Head Crash, dass der Kopf wirklich in die Platte gecrashed ist, wenn du theoretisch den Computer irgendwie, wenn der umgefallen ist oder sonst irgendwie eine Schockwelle empfangen hat und dann war ja wirklich Ende Gelände, dann war ja wirklich alles kaputt."
+        },
+        {
+            "start": 650810,
+            "end": 653690,
+            "speaker": "A",
+            "text": "Ja, aber das war ja ein Hardwarefehler auf der Festplatte, einen Head Crash."
+        },
+        {
+            "start": 653770,
+            "end": 663370,
+            "speaker": "B",
+            "text": "Ja genau. Also die Vibrationen haben nur etwas verzögert und haben jetzt nicht den Kopf wirklich rein crashen lassen. Also da war scheinbar schon noch Luft, aber die Vibrationen haben halt alles gestört."
+        },
+        {
+            "start": 663370,
+            "end": 684870,
+            "speaker": "A",
+            "text": "Hier ging es primär darum, dass die Lese und Schreibköpfe einfach ihre Position nicht mehr halten konnten aufgrund der Schwingung. So, jetzt fragt man was ist denn an diesem Song so spezielle? Also warum, Warum dieser Song? Dieser Song? Und das hat man später herausgefunden. Das Stück wurde in einer nicht standardisierten Stimmung aufgenommen bzw. Produziert, was die Töne in wenigen gewöhnliche Frequenzbereiche schiebt."
+        },
+        {
+            "start": 684870,
+            "end": 692390,
+            "speaker": "B",
+            "text": "Also es war eine Produktionseinstellung eigentlich. Es war nicht der Song selber, sondern wie das Ganze konvertiert wurde, wie der"
+        },
+        {
+            "start": 692390,
+            "end": 700790,
+            "speaker": "A",
+            "text": "Song selbst aufgenommen wurde, wie die Bassschwingungen aufgenommen wurden. Die wurden minimal anders aufgenommen als standardübliche Musik ein tausend neun hundert neun und"
+        },
+        {
+            "start": 700790,
+            "end": 712830,
+            "speaker": "B",
+            "text": "achtzigste Ich hab ihn eigentlich gerade angehört, den Song nebenbei. Ich kann mich sogar noch daran erinnern, aber er klingt sonst eigentlich jetzt relativ harmlos. Er hat jetzt keine irgendwie ein Brummen oder sonst irgendwas, was man sich vielleicht erwarten würde."
+        },
+        {
+            "start": 712830,
+            "end": 775660,
+            "speaker": "A",
+            "text": "Also wenn wir uns jetzt diese klassischen Fragen stellen wie wer stand dahinter, wer war das Ziel? Da kann man ganz einfach sagen, niemand stand dahinter. Niemand war das Ziel, weil das einfach ein unbeabsichtigter Effekt war. Und der wurde später vom Hersteller und auch vom Microsoft Support als, ich sage mal, Bug Design Interaktion klassifiziert. Also der wurde nicht wirklich als Sicherheitslücke, obwohl es eigentlich ein akustischer Denail of Service Attacke ist. Jetzt könnte man sagen, ja, der Song kam ein tausend neun hundert neun und achtzig raus, du hast jetzt gerade das Jahr zwei tausend fünf erwähnt. Ja, das ist richtig, aber die ganze Sache hat uns eigentlich bis zum Januar zwei tausend zwanzig begleitet, weil der Fix, der gemacht wurde, war, Achtung, wie du gerade sagtest, bei deinem Chip kein Hardware Fix. Also hier kann man nicht einfach einen Hardware Fix machen, sondern einen Software Fix. Und was sage ich dir gleich, aber der Software Fix wurde auf jeden Fall in Windows sieben auch noch implementiert und der hat uns so lange bis Windows sieben begleitet. Das bedeutet, die ganze Sache war bis zwei tausend zwanzig wirklich in der Codebase drin."
+        },
+        {
+            "start": 775660,
+            "end": 778980,
+            "speaker": "B",
+            "text": "Aber waren da alle Festplatten betroffen oder nur ganz spezielle?"
+        },
+        {
+            "start": 779220,
+            "end": 818470,
+            "speaker": "A",
+            "text": "Nur ganz spezielle, nur Spinning Dis mit fünf tausend vier hundert Umdrehungen von einem bestimmten Hersteller in einer bestimmten Serie. Es wurde damals entschieden, nicht öffentlich zu nennen, welcher Hersteller und welche Serie betroffen ist, um aufgrund von Marketing Schäden und so weiter und so fort abzusehen. Das ist nie rausgekommen. Und man muss auch es ist nicht ganz klar, wie viele Festplatten wirklich betroffen waren, da jede Festplatte je nach Modell unterschiedliche Resonanzfenster haben. Kommt wirklich auf ganz, ganz kleine Ebenen an, wie viel Dämmung ist in der Festplatte, wie ist der Lesekopf, wie schwer ist er und so weiter und so fort, wie viel Maße hat der und"
+        },
+        {
+            "start": 818470,
+            "end": 829020,
+            "speaker": "B",
+            "text": "wie laut hat man die Musik dann einschalten müssen? Gibt es dazu irgendwelche Informationen? Also hat das Ding neben einer fetten Box stehen müssen oder ging das sogar mit ganz normaler Lautstärke?"
+        },
+        {
+            "start": 829260,
+            "end": 835220,
+            "speaker": "A",
+            "text": "Ne, da habe ich leider keine Infos drüber gefunden, wie laut man den Song stellen muss. Das habe ich leider nicht gefunden."
+        },
+        {
+            "start": 835220,
+            "end": 867730,
+            "speaker": "B",
+            "text": "Tut mir leid, weil ich stelle mir das ja schon so vor, es hat ja bei Batman zum Beispiel immer solche Audiowaffen oder so gegeben, die irgendwie der Joker dann entwickelt hat, so in den er Jahren. Serien vor allem waren das ja ganz eigenartige Waffen. Aber ich könnte mir natürlich schon vorstellen, wenn ich sowas konkret weiß und zum Beispiel eine Überwachungskamera Aufzeichnung auf so einer Festplatte habe und ich marschiere einfach rein mit Janet Jackson im Hintergrund, dann wird halt einfach dieses Video nicht aufgezeichnet. Zum Beispiel, wenn ich sowas weiß, wäre das ja schon eigentlich eine coole Sache und könnte man schon eigentlich recht gezielt einsetzen."
+        },
+        {
+            "start": 867810,
+            "end": 1038090,
+            "speaker": "A",
+            "text": "Es wird auf jeden Fall fehlerhaft aufgezeichnet, weil Lese und Schreiboperationen werden ja nur gestört, weil der Lesekopf die oder Schreibkopf die Position nicht mehr halten kann. Aber du hättest eine Chance. Aber dazu Videokameras kommen wir jetzt gleich, warum die ganze Sache heutzutage immer noch relevant ist. Lass uns mal über den Fix reden. Ich hatte gerade schon geteasert, es ist kein Hardware Fix. Und warum? Weil Resonanz, Schwingung, Schallwellen, habe ich ja gerade alles erklärt bzw. Versucht zu erklären. Physikprofessor wird mich sehr wahrscheinlich in der Luft auseinandernehmen. Im Endeffekt wäre ein Fix halt mehr Dämpfung in die Festplatte zu packen, so dass weniger Schallwellen oder in einer anderen Resonanz auf die Maße treffen oder halt die Maße des Lesekopfes oder Festplatte selbst ändern, damit du in einem anderen Frequenzbereich bist. Kurzum, du musst das Hardware Design dieser Festplatte ändern und jetzt könnte man sagen, okay zwei tausend fünf Andy, da waren die Laptops alles noch etwas größer als heutzutage. Ja, das ist richtig. Dennoch war es für damalige Zeiten immer noch relativ ein kleiner Formfaktor und das bedeutet mit zusätzlicher Maße oder mit zusätzlichen Gehäuse Redesign ist natürlich enorm teuer, weil du musst natürlich Fabriklinien und so weiter anpassen. Dann gibt es neue Test und Regulatorik Risiken, Vibrationstests, Balance Tests, blablabla. Und deswegen hat man sich damals entschieden, okay, wir machen einen Software Fix, weil der ist einfach deutlich günstiger. Und wie sieht jetzt dieser günstige Fix aus? Und zwar sprechen wir hier primär über Windows. Ich habe das jetzt nicht mit Linux verifiziert, weil ich habe jetzt gerade nur relativ gute Infos oder tiefe Infos zu Windows gefunden. Und zwar bei Windows kannst du dich in die Audio Filter Pipeline einschalten. Als Programmierer kannst du sogenannte Audio Processing Objects programmieren und die sind Bestandteil des Audiotreibers oder werden als Bestandteil des Audiotreibers eingebunden. So ähnlich so wie so wie Equalizer oder wenn du so ein Hall rausholt. Solche Filter kannst du da drauflegen. Und was Windows OEM Treiber damals einfach gemacht haben, die haben ein solches Audio Processing Object als Offending Frequencies gekennzeichnet. Die haben den Frequenzbereich von diesem Song genommen und haben den Frequenzbereich beim Abspielen minimal geändert als Filterobjekt bei Songs relativ simpler Fix eigentlich. Und das haben sie halt mit einem Windows Update ausgespielt oder mit einem Treiber Update und dann war das Ding eigentlich durch. Der Fix, muss ich zugeben, ziemlich smart, also im Gegensatz zu dem teuren Hardware Fix. Und jetzt ist es aber so, da gab es damals eine Entscheidung, weil diese Audio Processing Objects kannst du als Enduser aktivieren oder deaktivieren. Du kannst ja sagen, okay, du möchtest einen Equalizer haben und dann kannst du den Equalizer rumschrauben und so weiter. Ja, dieses Audio Processing Object war Pflicht, das haben sie einfach mal rausgenommen, konnte nicht deaktivieren, weil die wollten halt einfach, dass keine Laptops mehr crashen."
+        },
+        {
+            "start": 1038090,
+            "end": 1046570,
+            "speaker": "B",
+            "text": "Aber Andi, ich bin ja in diesem Podcast für die Historie zuständig, ich habe gerade nachgeschaut, Linux kam ein und neunzig raus, das heißt, darum hast du zu Linux nichts gefunden, wenn es neun und achtzig war."
+        },
+        {
+            "start": 1046570,
+            "end": 1078710,
+            "speaker": "A",
+            "text": "Ja, Unix und Co. Und irgendwelche freebsd oder BSD Systeme hatten bestimmt auch schon einen Audiotreiber. Aber nochmal zur Zeitleiste, also ein tausend neun hundert neun und achtzig kommt der Song raus, zwei tausend fünf war dieser Vorfall und zwei tausend zwanzig, das habe ich jetzt noch nicht erwähnt, zwei tausend zwanzig wurde dieser Vorfall erst veröffentlicht durch ein oder zwei Blogposts von einem Microsoft Support Mitarbeiter, weil Microsoft Support war natürlich damals relativ stark involviert, weil das ja dieser damals zwei tausend fünf Windows sieben, du erinnerst dich vielleicht auf dieser Blue Screen of Death, das war ja die Kernel Panic von Windows, die hat man dann immer gesehen."
+        },
+        {
+            "start": 1078710,
+            "end": 1083990,
+            "speaker": "B",
+            "text": "Warum ist es nicht veröffentlicht worden? Einfach aus Sicherheitsgründen oder weil es halt Closed Source ist."
+        },
+        {
+            "start": 1084070,
+            "end": 1102260,
+            "speaker": "A",
+            "text": "Also den Grund, warum das nicht veröffentlicht wurde, kenne ich nicht. Der Support Mitarbeiter hat auch auf irgendeinem Mitarbeiterblog zwei tausend zwanzig nur zwei Posts daraus gemacht, sehr wahrscheinlich. Hey, damals vor fünfzehn Jahren war das eine lustige Geschichte, an der ich gearbeitet habe oder ein Kollege von ihm hat er geschrieben, deswegen, jetzt haben sie so"
+        },
+        {
+            "start": 1102260,
+            "end": 1105540,
+            "speaker": "B",
+            "text": "eine coole Geschichte und veröffentlichen die erst so spät und nutzen die nicht."
+        },
+        {
+            "start": 1105540,
+            "end": 1114060,
+            "speaker": "A",
+            "text": "Aber ich glaube schon, dass das ziemlich, also stell dir mal vor, das wäre Seagate gewesen oder Wester Digital oder sowas. Ich bin mir nicht sicher, ob du damals dann diese Festplatten noch gekauft hättest."
+        },
+        {
+            "start": 1114060,
+            "end": 1125650,
+            "speaker": "B",
+            "text": "Ja, ja, aber sie hätten ja grundsätzlich das veröffentlichen können, nicht ohne die Firma jetzt zu nennen, aber vielleicht hätten wir es dann irgendwie reverse engineeren können oder so. Unter Umständen ja immer das Problem."
+        },
+        {
+            "start": 1126370,
+            "end": 1190140,
+            "speaker": "A",
+            "text": "Eins ist noch wichtig, also zwei tausend zwanzig als das rauskam, gab es von den Medien mal wieder falsche Berichterstattung. Und zwar wurde kontinuierlich gesagt, Schall zerstört die Festplatte physisch. Das war nicht der Fall. Also nicht wie bei deinem Head Crash gerade beschrieben. Hier wurde die Festplatte nicht beschädigt, die Daten waren nicht betroffen, die Daten konnten nur, der Lese und Schreibkopf konnte nur seine Position nicht halten, was dann zu einem Delay der Operation auf Betriebssystem geführt hat, was dann zu einer Kernel Panic geführt. Also es war ein reiner Software Effekt und der Schall hat nicht die Festplatte zerstört. Also richtig würde die Medienberichterstattung heißen. Die Resonanz stört die Operation, bis eine kritische IO Operation fehlschlägt. Nach Entfernen der Schallquelle kann sich die Festplatte wieder normal verhalten. Permanenter Schaden sei probably not permanent. Das wäre so die korrekte Berichterstattung. Deswegen, also falls ihr auch mal wieder, weiß ich nicht, winfuture oder Computerbild lest, dann steht da wahrscheinlich schallzerstört die Festplatte physisch."
+        },
+        {
+            "start": 1190140,
+            "end": 1198380,
+            "speaker": "B",
+            "text": "Ich hab übrigens gerade nachgeschaut, weil ich irgendwie von Seagate nie mehr was gehört habe, aber die gibt es wirklich noch als Firma und die haben sogar die Festplattensparte von Samsung mal aufgekauft zwei tausend"
+        },
+        {
+            "start": 1198380,
+            "end": 1274820,
+            "speaker": "A",
+            "text": "elfte Interessant, Jetzt lernen wir sogar noch was, wo wir gerade über Festplatten reden. Wir könnten auch mal irgendwie eine Episode über oder von jemandem mit Black Base oder Black Blaze machen. Die machen doch immer diese Festplatten Endurance Tests, möchte ich doch mal sagen, wie lang so eine Festplatte oder welches Modell so lange hält. Kennst du die? Nope, glaub genau, Blackblaze heißen die. Die veröffentlichen jedes Jahr einen Hard Drive Reliability Statistik Report, jedes Quartal sogar. Also wer so ein bisschen auf Storage und Festplatten steht, kann sich da mal gönnen. Aber zurück zu diesem CVE, zurück zu diesem Fall, zurück zu Janet Jackson. Die ganze Sache ist natürlich ein bisschen kurios. Es gibt keine öffentlich belastbaren Produktdetails, also welche Festplatte genau betroffen war und so weiter und so fort. Und ja, das ist auch irgendwie anekdotisch. Über so ein Akustik Denail of Service ist natürlich schon beeindruckend, über Schallwellen etwas zum Absturz gebracht werden kann, aber es gibt auch noch ein paar andere Hacks in irgendwelchen isolierten Systemen, wo auch Daten über Schallwellen übertragen werden, aber das was anderes. Der Sicherheitsscore, also CVSS Score ist von fünfter märz, also Medium nicht wirklich viel. Aber jetzt kommen wir mal zu den relevanten. Wolfgang, was fällt dir auf? Was können wir daraus lernen?"
+        },
+        {
+            "start": 1274820,
+            "end": 1277440,
+            "speaker": "B",
+            "text": "Höre beim Programmieren Musik nur mit Kopfhörern,"
+        },
+        {
+            "start": 1277990,
+            "end": 1314990,
+            "speaker": "A",
+            "text": "auch eine gute Nummer, aber auch die Resonanz existiert dabei, weil ab und zu hörst du dich ja auch bei dieser Podcast Aufnahme über meine Kopfhörer selbst. Also die gibt es da auch. Völlig ausgeschlossen ist es ja da nicht. Alternativ könnte man auch sagen, Finger weg von Janet Jackson. Das wäre aber jetzt auch mal, wo ich jetzt gerade drüber nachdenke, auch mal ein guter KI Use Case, oder? Ich meine, man kriegt doch die Resonanz von existierenden Spinning Discs raus. Also die wird ja physikalisch irgendwie feststellbar sein und da könnte man noch irgendwie KI Kram machen, der dann genau auf diesen Frequenzen blablabla, also die ganze Sache automatisch generiert, oder?"
+        },
+        {
+            "start": 1314990,
+            "end": 1317990,
+            "speaker": "B",
+            "text": "Ja, die Frage ist überhaupt, wo findest du denn noch Spinning Discs?"
+        },
+        {
+            "start": 1317990,
+            "end": 1354680,
+            "speaker": "A",
+            "text": "Ja, und da kommen wir zum ersten Learning. Wir reden hier zwar über Legacy, Windows sieben hatte ich gerade erwähnt und so weiter, aber Legacy ist nicht weg, sondern nur woanders. Spinning Disks sind weiterhin verbreitet, zum Beispiel in digitalen Videorekordern. Da sind wir bei deiner Überwachungskamera. Das bedeutet, wenn du dir heutzutage immer noch eine große Video Recording Rack hinstellst, dann sind da mit hoher Wahrscheinlichkeit Spinning Discs drin. Ich habe hier in diesem Zimmer, wo ich gerade aufnehme, noch ein NAS, ein sehr altes NAS und in diesem alten NAS sind noch zwei Terabyte Spinning Discs drin. Die sind jetzt zum Glück aus."
+        },
+        {
+            "start": 1354680,
+            "end": 1357160,
+            "speaker": "B",
+            "text": "Schade, ihr wollt jetzt schon Janet Jackson mal einspielen."
+        },
+        {
+            "start": 1357160,
+            "end": 1429160,
+            "speaker": "A",
+            "text": "Ja, ich glaube, die haben sieben tausend zwei hundert Umdrehungen. Bin mir nicht mehr sicher, aber weil ich nur sagen möchte, Spinning Disc gibt es ja immer noch. So, dann mal als nächstes Learning in deinem Thread Modeling. Ich würde mal sagen, da Acoustic Denail of Services jetzt ein Ding sind, müsstest du die Physik auch mal in Thread Modeling einführen, oder? Also da kann man, kann man jetzt leider nicht mehr rausreden. Dann auch ein anderes Learning. User Toggles können Sicherheits bzw. Stabilitätsimplikationen haben. Ich hatte gerade über diesen Audiofilter, über dieses Audio Processing Object gesprochen und das ist natürlich schon eine Diskussion wert mit einem Produktmanager, macht man das jetzt deaktivierbar oder nicht? Nutzerautonomie versus Schutz vor schweren erklärbaren Fehlern, weil da geht es auch schon irgendwie ins User Interface. Und ich glaube, das letzte Learning ist, jetzt könnte man drüber nachdenken, ist der Software Fix ein Hack, also ist das Tech Depth oder ist das einfach nur eine Mitigation im falschen Layer auf Basis von wirtschaftlichen realistischen Optionen? Wie würdest du das klassifizieren? Weil der Hardware Hack wäre ja der Hardware Hack, der Hardware Fix wäre ja dann die richtige Lösung, wie man es sauber machen würde."
+        },
+        {
+            "start": 1429160,
+            "end": 1432840,
+            "speaker": "B",
+            "text": "Aber wirtschaftlich, ja, war pragmatischer Ansatz, finde ich eigentlich sehr cool."
+        },
+        {
+            "start": 1432840,
+            "end": 1436040,
+            "speaker": "A",
+            "text": "Ja, aber den hättest du ja dann eigentlich auf jedes Betriebssystem replizieren müssen, oder?"
+        },
+        {
+            "start": 1436200,
+            "end": 1441560,
+            "speaker": "B",
+            "text": "Ja, natürlich, aber die Festplatten sind ja schon mal draußen, da müsstest du ja alle Festplatten zurückrufen."
+        },
+        {
+            "start": 1441640,
+            "end": 1445320,
+            "speaker": "A",
+            "text": "Ja gut, aber du kannst ja keinen User zwingen zu updaten."
+        },
+        {
+            "start": 1445480,
+            "end": 1464180,
+            "speaker": "B",
+            "text": "Ja, im Normalfall. Es muss ja erstmal passieren und wahrscheinlich der richtige Raum sein und muss ja alles zusammenstimmen. Also ich vermute ja nicht, wenn da jetzt alle Festplatten betroffen gewesen wären von einem Hersteller und man es dann vielleicht auch nachvollziehen hätte können und es publik geworden wäre, dann hätte man sicher anders reagiert. Vermute ich mal zumindestens."
+        },
+        {
+            "start": 1464260,
+            "end": 1532750,
+            "speaker": "A",
+            "text": "Ist auf jeden Fall eine lustige Story und eine Thematik, was wir daraus lernen können, die fand ich auch recht interessant, hat ein bisschen gebraucht, bis ich drauf gekommen bin. Und zwar, dass sogenannte Cross Layer Failure Modes jetzt entscheidend sind. Also ich meine, der Crash ist ja nicht, weil Audio böse ist, sollst ja ruhig Musik hören und wenn du auf Janet Jackson stehst, sollst du natürlich auch Janet Jackson hören, aber im Endeffekt hörst du einen Song. Das löst Schwingungen in einem Lesekopf aus. Das wiederum führt zu Read Write Fehlern. Das wiederum führt auf der Code Basis auf einen Operating System I O Fehlerpfad. Das wiederum zu einer Kernel Panic, also vom Audio zur Kernel Panic. Also ich meine, die Story ist schon recht lang und diese Cross Layer, die muss man natürlich dann auch in seinem Threat Modeling dann irgendwie mal auf jeden Fall mal vielleicht nochmal einen Satz dazu schreiben. Jetzt kannst du natürlich fragen, okay, ich packe da jetzt schon die Physik rein, Resonanz und Schwingungen und bla, ist das überhaupt relevant? Schwierig, Aber Kreativität, besonders im Sicherheitssektor, da gibt es keine Grenzen. Wie viel Sekunden dürfen wir eigentlich von dem Janet Jackson Song in diesem Podcast abspielen, ohne von der GEMA irgendwie belangt zu werden?"
+        },
+        {
+            "start": 1532830,
+            "end": 1537550,
+            "speaker": "B",
+            "text": "Gar keine. Diese Fair Use Geschichte ist eine Urban Legend, die eigentlich nicht stimmt."
+        },
+        {
+            "start": 1537550,
+            "end": 1542530,
+            "speaker": "A",
+            "text": "Okay, dann wenn du diesen Podcast gerade hörst, einfach mal Jeanette Jackson, wir können"
+        },
+        {
+            "start": 1542530,
+            "end": 1544770,
+            "speaker": "B",
+            "text": "das Ganze ja verlinken, einfach mal Janet"
+        },
+        {
+            "start": 1544770,
+            "end": 1550450,
+            "speaker": "A",
+            "text": "Jackson Rhythm Nation anmachen. Das war Nummer eins und ich glaube an Kuriosität nicht mehr zu übertreffen."
+        },
+        {
+            "start": 1550450,
+            "end": 1555210,
+            "speaker": "B",
+            "text": "Ein Hack ohne Hacker. Ja, ist durchaus. Muss man mal erst schaffen, dass die Natur einen hackt."
+        },
+        {
+            "start": 1555210,
+            "end": 1592240,
+            "speaker": "A",
+            "text": "Ja, also du wurdest ja nicht gehackt, aber dein System wurde unschädlich gemacht. Und wenn du das wirklich so anwenden kannst, wie du das sagtest mit der Videokamera, du gehst dann mit so einer Boombox irgendwie unter die Videokamera, löst die diesen. Ah ne, Moment, das geht ja nicht, weil die Videokamera selbst hat ja keine Spinning Dis, sondern die Spinning Dis ist ja in dem Serverschrank, der dann hoffentlich irgendwo im Gebäude sitzt oder ähnliches. Das wird nicht funktionieren. Oder du musst jemanden schicken, der so laut Musik macht, dass der Serverschrank ist halt. Also der Serverschrank ist hört und so weiter. Aber wo wir schon von Cross Layer Effekten sprechen, können wir direkt zu Nummer zwei gehen. Bist du bereit?"
+        },
+        {
+            "start": 1592240,
+            "end": 1592640,
+            "speaker": "B",
+            "text": "Immer."
+        },
+        {
+            "start": 1592640,
+            "end": 1598750,
+            "speaker": "A",
+            "text": "OK. Frage Nummer eins, Was sollte man auf einem Flugzeugträger nicht tun?"
+        },
+        {
+            "start": 1598910,
+            "end": 1600830,
+            "speaker": "B",
+            "text": "Das ist klar, dass ich Zivildiener war,"
+        },
+        {
+            "start": 1600830,
+            "end": 1603310,
+            "speaker": "A",
+            "text": "das ist okay, Aber du weißt ja, was ein Flugzeugträger ist und du kannst"
+        },
+        {
+            "start": 1603310,
+            "end": 1605390,
+            "speaker": "B",
+            "text": "dir sehr wahrscheinlich auch Ja, wir waren noch nie auf einem."
+        },
+        {
+            "start": 1605710,
+            "end": 1612190,
+            "speaker": "A",
+            "text": "Ich auch nicht. Ich glaube auch ziemlich viele Leute, die beim Heer oder bei der Bundeswehr waren, waren noch nie auf einem Flugzeugträger. Also das ist keine Ausrede."
+        },
+        {
+            "start": 1612270,
+            "end": 1615470,
+            "speaker": "B",
+            "text": "Ich würde mal nicht ins Wasser springen neben dem Flugzeugträger."
+        },
+        {
+            "start": 1615630,
+            "end": 1628380,
+            "speaker": "A",
+            "text": "Das ist gut. Aber was man auch nicht tun sollte, und das ist vielleicht so ein bisschen der Bezug zu aktuellen Geschehnissen, sieben Kilometer auf einem Flugzeugträger als Joggingrunde drehen und dann die Ergebnisse auf Strava posten."
+        },
+        {
+            "start": 1628780,
+            "end": 1629980,
+            "speaker": "B",
+            "text": "Das stimmt natürlich."
+        },
+        {
+            "start": 1630060,
+            "end": 1647580,
+            "speaker": "A",
+            "text": "Ist jetzt gerade passiert mit einem Flugzeugträger von Charles de Gaulle, glaube ich oder sowas. Und somit wurde die Position des Flugzeugträgers bekannt gegeben, weil der Lauf natürlich ziemlich skurril war. Flugzeugträger hat halt nicht so viel Fläche. Aber jetzt zum Hack. Womit wurden diese Strava Daten übertragen oder aufgezeichnet?"
+        },
+        {
+            "start": 1647740,
+            "end": 1650250,
+            "speaker": "B",
+            "text": "Mit einer Garmin Uhr Mit hoher Wahrscheinlichkeit"
+        },
+        {
+            "start": 1650250,
+            "end": 1668330,
+            "speaker": "A",
+            "text": "mit einer Garmin Uhr, Denn wie du wahrscheinlich auch gerade in deinem Kopf zusammengeknüpft hast, Garmin ist ja ein sehr, sehr bekannter Hersteller für Sport Equipment wie Pulsuhren und Gurte und so weiter und so fort. Und wir sprechen über einen Garmin Vorfall im Juli zwei tausend zwanzig was ein Intro."
+        },
+        {
+            "start": 1668490,
+            "end": 1673410,
+            "speaker": "B",
+            "text": "Meine Güte Flugzeugträger Strava Überleitung ist unglaublich an dich."
+        },
+        {
+            "start": 1673410,
+            "end": 1760610,
+            "speaker": "A",
+            "text": "Okay, ganz kurz, was ist passiert? Im Juli zwei tausend zwanzig wurde Garmin Opfer eines Cyberangriffs. Weltweit sind mehrere Dienste ausgefallen. Nach Medienberichten war das ein Ransomware Angriff und es wurden Lösegeld von zehn Millionen US Dollar gefordert bzw. Bezahlt, wurde offiziell nie bestätigt. Nach Medienberichten hat man dann später irgendwann den Entschlüsselungs Key enthalten und nach vier Tagen Wiederherstellung war das System wieder online. So weit so gut würde man Aha, warum ist das jetzt wert hier in Podcast besprochen zu werden? Kommen wir mal auf den Impact der ganzen Sache und zwar Garmin Connect und die Webinfrastruktur war zeitweise nicht verfügbar. Garmin Connect ist unter anderem Hey, meine Garmin ist hiermit verbunden und trackt dann die Laufzeiten und so weiter und so fort. Also die Fitnessdaten werden in die Cloud synchronisiert. Das war da nicht der Fall, weil die Cloud, die Garmin Cloud natürlich dann offline war, aber und die sozialen Features und Challenges und Integrationen funktionieren nicht, würde ich sagen, okay, ist verkraftbar. Der Support war natürlich auch nicht verfügbar. Okay, wenn ich jetzt nicht sofort meinen Lauf auf dem Flugzeugträger mit dem Wolfgang teilen kann, ist das glaube ich auch okay. Und da muss man sagen, Hut ab Garmin. Die ganzen Daten werden lokal offline first gespeichert. Das bedeutet, die Aktivitäts und Gesundheitsdaten werden halt zu einem späteren Zeitpunkt synchronisiert. Okay, das ist jetzt aber eher unspannend. Aber wusstest du, dass Garmin auch was mit der Luftfahrt zu tun hat?"
+        },
+        {
+            "start": 1760610,
+            "end": 1763410,
+            "speaker": "B",
+            "text": "Du meinst abseits von den Läufern, die über den Flugzeugträger."
+        },
+        {
+            "start": 1764930,
+            "end": 1768370,
+            "speaker": "A",
+            "text": "Das hat jetzt wirklich was mit Flugzeugen zu tun und nicht mit dem Flugzeugträger."
+        },
+        {
+            "start": 1768850,
+            "end": 1770610,
+            "speaker": "B",
+            "text": "Habe ich zumindest noch nie gehört."
+        },
+        {
+            "start": 1770610,
+            "end": 1915550,
+            "speaker": "A",
+            "text": "Ich nämlich auch nicht. Und jetzt kommt nämlich das Spannende und zwar es gibt ein Produkt oder es gibt mehrere Produkte und zwar nennt sich sowas Garmin Pilot oder Fly Garmin. Und das ist eine App oder ein Service und eine mobile App für Flugplanung, Navigation und FL Logbuch und so weiter und so fort. Und Fly Garmin ist deren Webplattform, wo halt Piloten irgendwie alle Luftfahrtdaten kriegen können in der Datenbanken Beispiel kannst du dir kaufen und dann kriegst du da irgendwie aktuelle Flughafendaten, Wetterdaten und all sowas. Also du kannst dir vorstellen, wenn man vom Innsbrucker Flughafen mit seinem Segelflieger hoch möchte, dann braucht man sehr wahrscheinlich Wetterdaten. Da muss man sehr wahrscheinlich wissen, okay, welche Flughäfen sind wo und all diese Thematiken, wo ist die Telefonnummer und pipapo und all diese Daten kannst du halt von Garmin auch kaufen und da kannst du dir da Subscription machen lassen und so weiter. Und jetzt ist es so, wenn du starten möchtest oder halt landen, dann musst du sogenannte Flugpläne einreichen, Also was du denn machst, weil nicht jeder kann sich, sollte nicht in der Luft sich einfach so bewegen. Und diese Services Garmin Pilot und Fly Garmin werden unter anderem dafür genutzt, um halt diese Flugpläne vorzubereiten und dann einzureichen. Und je nach Land gibt es dann gibt es dann verschiedene Anforderungen. Das bedeutet, wenn du keinen Flugplan einreichst, darfst du gar nicht starten. Ich weiß jetzt nicht, wie das in Deutschland oder Österreich ist, aber es gibt dann Länder, da geht es gar nicht und diese Services waren dann halt offline. Das bedeutet, das kann zum Extremfall zu sogenanntem Grounding führen. Das bedeutet, dass das Flugobjekt, Helikopter, irgendwas halt am Boden bleiben muss. Und jetzt weißt du, jetzt gibt es halt nicht nur Leute, die sonntags bei schönem Wetter mit dem Segelflieger fliegen, sondern vielleicht auch Organtransplantationen, wo dann irgendwie ein Organ von Krankenhaus zu Krankenhaus geflogen werden muss. Ich weiß jetzt nicht, ob genau diese Flüge Garmin nutzen, könnte ich mir aber schon vorstellen. Und diese Infrastruktur, die ist einfach mal mit down gegangen, was natürlich dann einen ziemlich harten Effekt hat, wenn Flugzeuge nicht starten können, oder? Also ich würde mal diesen Effekt, glaube ich, ein bisschen drastischer einschätzen, als wenn du deine Laufdaten nicht teilen kannst. Und wer von diesem ganzen Garmin Kram noch nicht genug hat, die haben auch Geräte zur Satellitenkommunikation für so Outdoor Leute. Da gibt es das sogenannte Iridium Satellitennetzwerk. Das ist ein weltumspannendes Satellitenkommunikationssystem aus sechs und sechzig aktiven Satelliten in sechs Umlaufbahnen. Damit kommunizieren die."
+        },
+        {
+            "start": 1915630,
+            "end": 1926070,
+            "speaker": "B",
+            "text": "Ich habe übrigens in der Zwischenzeit bisschen recherchiert über meine internen Kanäle Air Ambulance Services verwenden unter anderem Garmin Systeme. Habe gerade bei einem Piloten kurz nachgefragt."
+        },
+        {
+            "start": 1926070,
+            "end": 2049430,
+            "speaker": "A",
+            "text": "OK, das freut mich sehr zu hören, dass diese Podcast Episode Relevanz hat. Ich finde das sehr schade, dass die Ambulanz dann im Extremfall zum Grounding gezwungen werden musste. Aber so ist das nun mal. Aber lass uns mal über den Hack sprechen bzw. Hack, nicht Hack, man weiß es nicht. Also technische Details. Ich hatte Ransomware gesagt. Das ist zumindest das, was jeder gerade denkt. Nach Berichten zufolge wurde dies nie offiziell bestätigt. Ransomware nur ganz kurz. Fangen wir mal ganz vorne an. Die Intention ist, dass durch Verschlüsselung der Geschäftsbetrieb unterbrochen wird. Und wenn du relativ schnell zu deinem normalen Geschäftsbetrieb zurückkehren möchtest, dann musst du in der Regel irgendwen bezahlen und der gibt dir ein Passwort, damit du all deine Daten wieder entschlüsseln kannst. Das ist random. Und Garmin wurde jetzt hier Opfer eines sogenannten Big Game Hunting oder es ist das klassische Big Game Hunting Muster. Big Game Hunting nennt man einen gezielten Angriff auf eine große Firma mit hoher Zahlungsfähigkeit. Kurzum, wer macht Cash? Niemand möchte Cash verlieren. Die Leute sind mit hoher Wahrscheinlichkeit dazu geneigt, relativ schnell zu zahlen. Jetzt könnte man ja okay, wenn ich jetzt hier eine Ransomware Attacke fahren würde, was würde ich tun? Ich würde mir selbst programmieren. Nein, sowas gibt es natürlich. Fertig. In diesem Fall ist immer die Regel von Wasted Locker. Wasted Locker ist eine hoch entwickelte Ransomware, die speziell auf große Unternehmen abzielt. Die wird von einer sogenannten Firma namens Firma, einer Gruppe namens Evil Corp. Betrieben. Zumindest sagt das US Finanzministerium, dass Evil Corp. Ein Cybercrime Netzwerk aus Russland sei. Und das ist jetzt natürlich eine recht interessante Thematik, denn auch zwei tausend zwanzig gab es schon Sanktionen gegen Russland. So, jetzt stell dir vor, du hast Garmin. Garmin wurde von Ransomware befallen. Garmin zahlt das Geld an eine russische Gruppe, die unter Sanktionen steht. Also es hat hier sogar noch einen Meta Aspekt, denn eigentlich dürften die ja gar kein Geld nach Russland senden. Auch nicht, wenn es nach Bitcoin ist und Co."
+        },
+        {
+            "start": 2049430,
+            "end": 2079200,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen, normalerweise verwendest du ja Bitcoin für so etwas und jetzt keine klassischen Wire Transfers und du weißt ja nicht, wohin Bitcoin fließt. Außerdem wissen wir ja auch nicht, ob das Geld bezahlt wurde, da ist Stillschweigen natürlich ausgesprochen worden, wie immer bei allen Firmen, aber nachdem es natürlich bald wieder funktioniert hat, könnte man schon annehmen, dass da entweder haben sie zufällig ein Backup gefunden und alles wiederherstellen können, was aber natürlich in der kurzen Zeit dann schon fraglich ist, oder sie haben vielleicht doch gezahlt oder eine andere Möglichkeit gefunden."
+        },
+        {
+            "start": 2079280,
+            "end": 2238390,
+            "speaker": "A",
+            "text": "Ja, wenn wir über die andere Möglichkeit uns mal ein paar Gedanken machen, dann könnte man sagen, haben sie es vielleicht selbst entschlüsselt. Ja, Wasted Locker verschlüsselt die Daten eigentlich mit vier tausend sechs und neunzig Bit mit AES zwei hundert sechs und fünfzig, kurzum, solange die keinen Quantencomputer haben, glaube ich nicht, dass sie selbst entschlüsselt haben, aber alles nur Mutmaßungen, wissen wir nicht, wurde nicht offiziell bestätigt. Jetzt ist natürlich die Frage, wie kam denn diese Ransomware da rein? Und das, was ich jetzt beschreibe, ist nicht unique für den Garmin Hack, sondern eigentlich das Standard Vorgehen von Evil Corp, also von diesem Cybercrime Netzwerk mit Wasted Locker. Klassischerweise kommt die Ransomware ins Netzwerk und da meist über den Einstieg über eine Applikation, die nennt sich SOC Golisch. SOC Golisch ist auch bekannt als Fake Updates, also das ist eine JavaScript basierte Malware, die über eine komprimierte Webseite verbreitet wird. Du gehst auf diese Webseite und dann tarnt die sich als normales Browser Update, Ihr Browser ist veraltet, bitte aktualisieren und dann klickst du da drauf, dann lädst du eine ZIP Datei runter und hast du eine Schadsoftware auf deinem Rechner, klickst drauf, weil du willst ja nur deinen Browser updaten. Dieses Fake Browser Update lädt dann eine Software nach und jetzt kommt jetzt, jetzt wird es ein bisschen wild, namens Cobalt Strike. Cobalt Strike ist eine Software, die in der Regel zur Simulation von Cyberangriffen genutzt wird von sogenannten Red Teams für Penetration Test. Also eigentlich wird hier von der Ransomware eine Software zur Prävention von Cyberangriffen genutzt, um einen Cyberangriff durchzuführen, ähnlich wie bei diesem JavaScript NPM Wurm, der vor kurzem mehrmals aufkam. Shi Hulut. Shih Hulut hat ja auch ein Open Source Tool nachgeladen, was Secrets und Passwörter auf deiner Festplatte scannt. Und dieses Tool wird eigentlich auch zur Sicherheitsprävention genommen und nicht zu Attacken. Also auch mal wieder eine interessante Wendung hier bei Security, also Kurzum, jemand kriegt eine Fake Website untergejubelt, dann wird ein Zip runtergeladen, dann wird Cobalt Strike nachgeladen und Cobalt Strike macht im internen Netzwerk sogenannte Penetrationstests, um zu gucken, wo kann ich mich weiter bewegen. Und sowas nennt man Lateral Movement. Lateral Movement ist, du findest irgendwo einen Einstiegspunkt und bewegt sich dann seitwärts, um zu gucken, was gibt es denn hier noch so. Und bei Ransomware, da habe ich gerade gesagt, geht es um die Verschlüsselung. Da willst du nicht natürlich relativ weit nach rechts oder nach links bewegen und zum Beispiel bewusst nach Backups suchen, weil du willst natürlich nicht nur die aktuellen Infrastrukturen verschlüsseln, sondern auch die Backups."
+        },
+        {
+            "start": 2238390,
+            "end": 2274790,
+            "speaker": "B",
+            "text": "Aber wir wollen ja auch immer was daraus lernen aus solchen Fällen. Aber bevor wir darauf zu sprechen kommen, habe gerade kurz noch mal Google angeworfen und bin gerade zufällig auf einen Artikel gestoßen. Garmin hatte dann später nämlich die Versicherung verklagt, weil die Versicherung nicht zahlen wollte und zwar das Lösegeld zahlen wollte. Das heißt, es wurde scheinbar implizit dann doch auch öffentlich gemacht, dass sie das Lösegeld dann am Ende bezahlt haben, weil es diesen Fall, diese Klage gegen die Versicherung dann am Ende gegeben hat und die Versicherung nicht zahlen wollte wegen Bar Versicherungsklauseln dann am Ende. Und das Gericht, Schweizer Gericht, hat dann festgestellt, sie müssen zahlen."
+        },
+        {
+            "start": 2274790,
+            "end": 2371430,
+            "speaker": "A",
+            "text": "Verlinken wir natürlich in den Shownotes. Faszinierend, faszinierend. Aber was können wir daraus lernen? Ein Punkt, wenn man nur auf Ransomware Detection optimiert, dann ist es leider schon zu spät. Denn Ransomware Detection, die sogenannte Verschlüsselung oder die Ransomware Phase, ist leider die letzte von vier Phasen bei einem Ransomware Angriff. Denn die klassischen Phasen eines gezielten Cyberangriffs, speziell mit Ransomware, sind Phase eins die sogenannte Aufklärung und Informationsbeschaffung nach dem Wer ist das Ziel, wen kann ich attackieren, warum sind sie relevant? Phase zwei Zugangsdaten stehlen, hatte ich gerade gesagt mit diesem Phishing über dieses Fake Update von dem Browser. Phase drei ist die Seitwärtsbewegung, also das sogenannte Lateral Movement im Netzwerk. Welche Ziele habe ich denn im Netzwerk? Und Phase vier ist dann die wirkliche Verschlüsselung, also die Ransomware Phase, von der die ganzen Medien immer sprechen. Im Endeffekt ist dann, wenn du auf Ransomware Detection optimierst, Optimierst du hier eigentlich aufs Ende der Attacke und nicht auf den Anfang der Attacke? Also geht es eigentlich auf die frühe Eindämmung und auf die Credential Kontrolle, würde ich mal sagen. Die Backups hatte ich schon angesprochen. Ransomware kümmert sich natürlich auch um die Verschlüsselung deiner Backups. Wenn du aber offline bzw. Isolierte Backup hast, dann seht ihr natürlich Ransomware resilient. Und Achtung, wir reden hier natürlich auch von Schrödingers Backup. Das hat jetzt nichts mit dem Hack zu tun, sondern vielleicht für deine Backups. Solange du dein Backup nicht getestet hast, hast du ein Schrödingers Backup. Wer weiß, ob es existiert oder nicht oder möglich ist zu restoren? Ich weiß es nicht."
+        },
+        {
+            "start": 2371590,
+            "end": 2394740,
+            "speaker": "B",
+            "text": "Und ganz oft ist es ja auch so, dass man bei dem Backup das Problem hat, dass man nicht weiß, ob die Angreifer schon im Backup drin waren. Also nicht am Backup Server, sondern zu dieser Zeit, wo das Backup erstellt wurde, dass da vielleicht der Eintritt des Hintertürchen schon geöffnet war. Und wenn man dann das Backup einspielt, dann ist es zwar nicht mehr verschlüsselt, aber es kann sein, dass die Angreifer weder noch schon drin sind, Zugang haben und dann wieder verschlüsseln können."
+        },
+        {
+            "start": 2394740,
+            "end": 2397460,
+            "speaker": "A",
+            "text": "Ist natürlich sehr schwer zu erkennen sowas."
+        },
+        {
+            "start": 2397700,
+            "end": 2435730,
+            "speaker": "B",
+            "text": "Und du musst dann die Eintrittstür finden, sonst hast du eigentlich keine Chance. Wenn du die Eintrittstür nicht gefunden hast, kannst du sie im Backup auch nicht verifizieren. Darum gehen ja auch ganz viele Firmen mittlerweile in die Richtung, dass sie einfach alles per Knopfdruck von Null aus wieder hochbooten können. Wenn du Infrastructure as Code oder so hast, dann hast du ja im Idealfall einfach eine Möglichkeit, alles zu wipen und die Daten hast du natürlich gebackupt, aber die ganzen Betriebssysteme und alles rundherum kannst du einfach von Null wieder hochziehen. Könnte natürlich dann auch irgendwo im Infrastructure Code dann drin sein, theoretisch, aber das könntest du auch woanders hinlegen, das könntest du sichern, dass es keine Änderungen gibt und so weiter."
+        },
+        {
+            "start": 2435730,
+            "end": 2443900,
+            "speaker": "A",
+            "text": "Naja, also wie gesagt, ich glaube auch dieses Lateral Movement kann sich auch auf dein Ansible und Terraform und was du da auch immer hast, halt auch bewegen."
+        },
+        {
+            "start": 2443980,
+            "end": 2457500,
+            "speaker": "B",
+            "text": "Aber das kannst du leichter überprüfen. Da kannst du ja sagen, okay, du hast eine Git History, wurde da was verändert, kannst es hashen, Hashes bilden und solche Dinge. Da gibt es einfache Möglichkeiten, wenn es nur um die Ansible Skripte geht."
+        },
+        {
+            "start": 2457500,
+            "end": 2493390,
+            "speaker": "A",
+            "text": "Ja, aber auch in der Realität würde ich mal sagen, hast du eine Firma mit Entwickler innen, Big Came Hunting, hatte ich ja gerade gesagt, dann und da hast du ein zentrales Infrastructure as Code Repository für deine Server, dann sind da eine Million, eins komma fünf Millionen Zeilen, dann fliegen da vier hundert, fünf hundert Commits Tag rein, Also bin ich mir nicht sicher, wie schnell. Also du musst schon sehr sophisticated sein, um da guten Kram zu erkennen. Und dann auch schon angenommen, das ist PGP codiert, dann was sind reale PGP codierte Daten?"
+        },
+        {
+            "start": 2493390,
+            "end": 2505550,
+            "speaker": "B",
+            "text": "Was ist natürlich, du hast immer die Möglichkeit, aber es ist ein bisschen einfacher zu überblicken als alle Server, wo direkt im Kernel irgendwas gehackt worden sein könnte. Und da hast du natürlich dann null Möglichkeiten, da Einblick zu bekommen."
+        },
+        {
+            "start": 2505790,
+            "end": 2621560,
+            "speaker": "A",
+            "text": "Aber ich glaube, eine Thematik, die immer eine Rolle spielt, sind halt zu mächtige Zugangsdaten, weil die sind oft ein Einfallstor. Also auch wenn ich meinen Laptop hier mit Ransomware verseucht hätte, meine Zugangsdaten werden ja für das Lateral Movement, für die Seitwärtsbewegung genutzt und dann die Frage, desto höhere Zugangsdaten ich habe, umso mehr natürlich kann die sich bewegen. Also wenn ich jetzt sehr eingeschränkt bin oder vielleicht nur zeitkritische Zugangsdaten habe, die sich nur eine Stunde gültig sind oder ähnliches, dann sogar besser. Ja, und ich glaube, das Relevanteste hier ist natürlich mal wieder der Flugzeugträger, aber diese Luftfahrt Thematik, und zwar, wenn die Luftraum Workflows, also Flight Planning, die Datenbanken von dem Outage betroffen sind, dann könnte man ein starkes Argument dafür bringen, mal hier auf getrennte Betriebszonen umzuswitchen. Warum ist denn zum Beispiel die Flugzonen Thematik oder die Flugthematik mit den Datenbanken auf demselben Stack wie meine Laufdaten? Warum ist das überhaupt nicht in eigenen Zonen? Warum ist das nicht eine unabhängige Update Distribution? Du hast ja schon eine kritischere Nutzergruppe, wenn ich in der Luft bin oder in die Luft gehen möchte, versus ich mach mal eben einen Lauf am Rhein auf jeden Fall, dass man die ordentlich Trend absichert, aber war anscheinend nicht der Fall. Und als spannendes Learning jetzt hier, die Incident Response war ja hier jetzt nicht nur Technologie, die war ja auch Kommunikation und Recht. Wenn wir jetzt mal annehmen, das Lösegeld wurde gezahlt, ging das dann nach Russland? Wer weiß das schon? Bitcoin ja alles. Gut, aber Sanktionsfragen kann man dann theoretisch nicht Garmin verklagen, weil die dann mit Muslars nicht an Leute überwiesen haben, die in einem Staat unter Sanktionen sind. Natürlich alles nur Mutmaßungen, weit hergeholt, aber ich auf jeden Fall finde es immer wieder spannend, wie weitreichend denn so eine Incident Response sein kann. Technologie ist da nur ein Teil."
+        },
+        {
+            "start": 2621560,
+            "end": 2629360,
+            "speaker": "B",
+            "text": "Hat Garmin eigentlich irgendwas veröffentlicht, wie sie das in Zukunft verhindern wollen? Also dass sie irgendwie da eine interne Strategie sich überlegt haben oder irgendwas geändert"
+        },
+        {
+            "start": 2629360,
+            "end": 2687250,
+            "speaker": "A",
+            "text": "haben, haben sie nicht. Wenn du dir die Kommunikation ansiehst, ist die eher schlecht. Warum meine ich das? Also die haben nie offiziell bestätigt, das war ein Ransomware Angriff. Die haben die ersten zwei, drei Tage davon gesprochen, ja, wir haben internen Ausfall und so weiter, bis dann irgendwann mal gesagt wurde, es ist Cyberattacke und dann haben sie gesagt behoben und dann stillschweigen. Also die ganze öffentliche Kommunikation war eher schlecht und wie sie es verhindern wollen, also einen öffentlichen Postmortem und so, bin ich mir nicht sicher, ob wir das von Garmin erwarten sollten, denn auch Amazon macht sowas nicht und da könnte schon überlegen, okay, wer hat höheres Interesse, das Vertrauen wieder herzukriegen, Amazon oder Garmin? Ich denke beide, aber Amazon ist eine hohe Tech Company und auch die geben dir oft keine detaillierten Post Mortems dafür, das dann von Garmin zu erwarten. Weiß ich jetzt nicht. Natürlich kann man immer besser sein. Amazon muss jetzt nicht als gutes Vorbild dienen, aber ich habe nichts gefunden zu einem Postmortem. Die sind da sehr stillschweigen."
+        },
+        {
+            "start": 2687250,
+            "end": 2707500,
+            "speaker": "B",
+            "text": "Ja, in dem Fall geht es ja primär um die, um die Phishing Attacken, die wahrscheinlich verhinderbar sind und das Ausbilden und die Education innerhalb der Firma, damit sowas überhaupt erst gar nicht ins System reinkommt, weil das ist ja eigentlich immer die größte Schwäche. Die ganz normalen User, die auf irgendwas klicken oder wo irgendwas über PDF oder sonst irgendwas sehr einfach eingeschleust wird unter"
+        },
+        {
+            "start": 2707500,
+            "end": 2716860,
+            "speaker": "A",
+            "text": "Umständen, ja, da ist der Mensch das schwächste Glied. Also natürlich kannst du irgendwelche Security Trainings machen oder dein Virenscanner oder nur Webseiten"
+        },
+        {
+            "start": 2716860,
+            "end": 2734530,
+            "speaker": "B",
+            "text": "zulassen und so weiter, aber das heißt ja jetzt, wenn die KI alle unsere Arbeitsplätze ersetzt, dann wird ja in Zukunft alle sicherer, weil die KI ist ja nicht so dumm und klickt auf irgendwelche Phishing E Mails oder ich war übrigens ganz nervös, dass wir jetzt vielleicht eine Episode haben, wo wir KI nicht erwähnen, aber ist ja normal dein Job, Andi. Aber jetzt habe ich es gemacht."
+        },
+        {
+            "start": 2734530,
+            "end": 2761030,
+            "speaker": "A",
+            "text": "Ich habe vor kurzem eine andere Podcast Episode gehört, da ging es darum, auch um KI Use Cases. Und da hat irgendjemand ein KI Agent losgelassen und dann hat der KI Agent auch irgendwas runtergeladen und der Antivirus hat dann das File immer gelöscht oder die KI konnte dann auf die Datei nicht zugreifen, weil der Antivirus den Zugriff geblockt hat. Ja, da hat die KI gedacht, okay, vielleicht lade ich nicht mal einen anderen File runter, sondern was ist die schlauste Lösung? Ich deaktiviere den Antivirus und hat dann auf die Datei zugegriffen."
+        },
+        {
+            "start": 2761030,
+            "end": 2764950,
+            "speaker": "B",
+            "text": "Ja, das habe ich auch gelesen, aber Problem gelöst quasi."
+        },
+        {
+            "start": 2765590,
+            "end": 2769190,
+            "speaker": "A",
+            "text": "Ja, es ist eine Lösung. Also zurück zu einer Frage, weiß ich nicht."
+        },
+        {
+            "start": 2770070,
+            "end": 2802250,
+            "speaker": "B",
+            "text": "Ich habe auch kürzlich gelesen über KI Einordnungen, über LLMs, die Phishing E Mails einordnen, ob es Phishing ist oder nicht. Und bei vielen, die eigentlich sehr klar Phishing Angriffe sind, haben viele LLMs gesagt, kein Problem, ist schon okay so. Andere haben gesagt, okay, scheint irgendwie nach Phishing auszusehen. Gemini ist da scheinbar ein bisschen besser, vielleicht weil er auch eben die konkreteren Infos im Hintergrund irgendwie hat von aktuellen Meldungen, aber funktioniert auch noch nicht so klar, muss man auch dazu sagen."
+        },
+        {
+            "start": 2802250,
+            "end": 2803690,
+            "speaker": "A",
+            "text": "Ich glaube, da ist noch Luft nach oben."
+        },
+        {
+            "start": 2803690,
+            "end": 2856900,
+            "speaker": "B",
+            "text": "Security bleibt auf jeden Fall ein spannendes Thema. Und gerade wenn man so in alten Cases herumgräbt, es ist erschreckend, wie viel eigentlich schon da war und wie viel sich wiederholt. Und wenn man so ein bisschen in die Geschichte schaut, kann man eigentlich da schon sehr viel lernen. Schade, dass man eigentlich weniger lernt, als einem so lieb ist. Man nimmt sich immer viel vor und vergisst dann trotzdem, ihn zu feiern. Und vielleicht haben wir ein bisschen Anregung geben können. Alle, die jetzt Spinning Discs so bei sich zu Hause haben, spielt mal Janet Jackson im Versuchslabor ab, ob sich da was bewegt. Und wenn ihr irgendwie interessante Hacks habt, die aktuell sind, aber auch vielleicht in der Geschichte mal irgendwo vorgekommen sind, schaut bei uns auf den Discord Server, teilt es mit uns. Ich glaube, Andy ist sowieso jetzt der absolute Historiker geworden, wenn es um solche Fälle geht. Der liebt ja so alte Fälle und wenn da welche guten dabei sind, dann können wir die ja gerne auch mal in der Episode dann dementsprechend aufarbeiten."
+        },
+        {
+            "start": 2856900,
+            "end": 2870420,
+            "speaker": "A",
+            "text": "Ich bin immer wieder überrascht, wie kreativ diese Leute sind. Von daher, oder was da immer zutage kommt. Deswegen finde ich es immer super und ja, man kann daraus lernen und ich bin gespannt. Naja, wir hören uns nächste Woche wieder. Bis später und tschüss."
+        },
+        {
+            "start": 2870420,
+            "end": 2870900,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
