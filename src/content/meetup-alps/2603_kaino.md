@@ -14,6 +14,7 @@ talks:
     linkedin: seesle
     bluesky: https://bsky.app/profile/seehma.at
     website: https://zeugwerk.at
+    slides: 2603_Matthias_WhenCodeMovesMetal.pdf
   - avatar: './images/speaker/2603-wolfgang.jpg'
     name: 'Wolfgang Gassler'
     title: 'AI Writes More Code. What Makes You Senior?'
