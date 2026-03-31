@@ -1,0 +1,741 @@
+{
+    "confidence": 0.95898455,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4659,
+    "utterances": [
+        {
+            "start": 3520,
+            "end": 79870,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kurs Podcast. Heute geht es um ein Tool, das wir alle täglich benutzen und gleichzeitig oft nur an der Oberfläche Git, git, commit, push, pull, fertig oder oder eben doch nicht. Denn hinter den paar Befehlen, die im Alltag gefühlt automatisch aus den Fingern fallen, steckt ein ziemlich tiefes System mit jeder Menge Historie, Architekturentscheidungen und spannenden Baustellen für die Zukunft. Dafür haben wir uns jemanden eingeladen, der nicht nur Git benutzt, sondern direkt daran mitarbeitet. Patrick Steinhardt ist Git Maintainer, Contributor zu libgit zwei und arbeitet im Git Team bei GitLab. Mit ihm sprechen wir darüber, was auf der Serverseite eigentlich passiert, wenn du clonst, fetcht oder pusht und warum große Repositories, Binärdateien und Millionen von Referenzen echte Herausforderungen sind. Außerdem schauen wir auf die Zukunft von Git. Es geht um Git, den Wechsel von char zu char zwei hundert fünf und sechzig Rev Tables und Large Object Promises. Wenn du also dachtest, du kennst Git, weil du die sechs Befehle auswendig kannst, dann kommt jetzt der Reality Check. Los geht's. Lieber Wolfgang, wie viel cvs zu Subversion Migrationen hast du bereits in deinem Leben durchgeführt?"
+        },
+        {
+            "start": 79870,
+            "end": 89450,
+            "speaker": "B",
+            "text": "Du beleidigst mich allgemein sehr gerne, aber so alt, dass ich jetzt schon Migrationen SVN durchgeführt habe. Also ich war natürlich immer cool und hip und habe schon mit SVN gestartet."
+        },
+        {
+            "start": 89450,
+            "end": 106930,
+            "speaker": "A",
+            "text": "Das hat nichts mit Beleidigung zu tun. Ich habe schon, ich glaube, als ich angefangen habe, so im Azubi Bereich, Fachinformatiker, Anwendungsentwicklung nennt sich das ja in Deutschland zu gut Deutsch Programmierer, habe ich glaube ich sechs cvs zu Subversion Migration gemacht. Dann die nächste Wie viel SVN zu Git Migration hast du gemacht?"
+        },
+        {
+            "start": 106930,
+            "end": 122690,
+            "speaker": "B",
+            "text": "Ich habe keine Strichelliste da mitgeführt, aber es waren auf jeden Fall einige cvs habe ich natürlich schon auch verwenden müssen. Man muss ja hin und wieder mit Legacy Systemen arbeiten, aber es dürften schon mehr gewesen sein, als jetzt Finger an meinen Händen habe, würde ich mal sagen."
+        },
+        {
+            "start": 122690,
+            "end": 135690,
+            "speaker": "A",
+            "text": "Und jetzt die letzte Frage, bevor wir zum eigentlichen Thema kommen. Was denkst du, ist der Hauptgrund, warum im heutigen Entwickleralltag Git über Subversion gewonnen hat? Gewonnen in R Quotes, was auch immer gewonnen jetzt heißt."
+        },
+        {
+            "start": 135770,
+            "end": 162890,
+            "speaker": "B",
+            "text": "Also für mich war eigentlich der Hauptgrund, dass es einfach im Alltag wesentlich besser funktioniert hat. Also dieses ganze Merchen und wirklich Arbeiten im Team. Das hat sich einfach viel flüssiger angefühlt mit Git als mit SVN. Das war in SVN immer eine Katastrophe, da irgendwie einen Branch überhaupt zu machen oder irgendwas dann wieder rein zu migrieren. Das war alles Katastrophe und hat irgendwie nie funktioniert. Hat sich einfach automatisch immer viel besser angefühlt."
+        },
+        {
+            "start": 162890,
+            "end": 182590,
+            "speaker": "A",
+            "text": "Ja, da frage ich mich natürlich gerade, ist das jetzt gerade so eine Art aktueller Zeit Bias bei dir? Weil Branching in Subversion war ja möglich, aber ich hatte immer das Gefühl, erst als Git, ich sag mal, populärer wurde, hat jeder gesagt, ah, Branching als First Class Citizen, wo bei Subversion ja eher Branching dran geklatscht wurde. Aber wie dem auch sei, ja, wie"
+        },
+        {
+            "start": 182590,
+            "end": 195180,
+            "speaker": "B",
+            "text": "gesagt, das war eigentlich das Arbeiten im Team, das war das Problem. Es hat einfach immer Probleme gegeben bei SVN und das war eigentlich dann der große Unterschied, der Hebel, der mir dann auch gezeigt hat, okay, Git funktioniert einfach im Team wesentlich besser."
+        },
+        {
+            "start": 195180,
+            "end": 229200,
+            "speaker": "A",
+            "text": "Und wie kam ich auf diese Frage? Diese Frage habe ich mir auch erst auf dem Rückweg von der FOSS Konferenz gestellt, nachdem ich nämlich einen Talk von Patrick Steinhardt zum Thema Evolving Git for the Next Decay gesehen habe und da hat er mir ins Gedächtnis gerufen, dass Git ja auch schon zwanzig Jahre alt ist Und dann saß ich in diesem Vortrag und habe dem Patrick zugehört und dann war ich Moment, der Akzent, der klingt so deutsch. Wir machen doch einen deutschsprachigen Podcast. Steht da vielleicht der nächste Podcast Gast? Und ich bin sehr, sehr froh, ich diese Frage jetzt mit Ja beantworten kann. Deswegen herzlich willkommen, Patrick Steinhardt."
+        },
+        {
+            "start": 229200,
+            "end": 231480,
+            "speaker": "C",
+            "text": "Vielen Dank, dass ich heute Teil des Podcast sein darf."
+        },
+        {
+            "start": 231480,
+            "end": 236760,
+            "speaker": "A",
+            "text": "Fun Fact, was die Leute an der Audiobox gerade nicht sehen, der Patrick hat ein Subversion T Shirt an,"
+        },
+        {
+            "start": 238760,
+            "end": 260460,
+            "speaker": "C",
+            "text": "kommt tatsächlich von einiger Zeit her, weil wie auch schon gesagt hatte, Subversion ist ja mittlerweile schon ein bisschen älter, Aber bei einem meiner ersten Jobs hatte ich tatsächlich auch an einem Subversion Hackathon teilgenommen, weil mein Arbeitgeber damals generell in allen möglichen Open Source Open Source Version Control Systemen unterwegs war und Subversion war eins davon und daher habe ich noch das T Shirt und trage es auch immer noch gerne"
+        },
+        {
+            "start": 260460,
+            "end": 278060,
+            "speaker": "A",
+            "text": "mit Stolz kann ich verstehen. Ich fand Subversion auch immer ein super Versionskontrollsystem und ich habe nie so einen Hass geschürt zu Branchen in Subversion, wie der Wolfgang es gerade hat, denn ich denke, es hat einigermaßen gut funktioniert, aber ich bin ehrlich, es hatte Quirks und man musste genau wissen, was man da tut."
+        },
+        {
+            "start": 278300,
+            "end": 308280,
+            "speaker": "C",
+            "text": "Man musste definitiv wissen, was man tut. Und ich würde auch nicht sagen, dass ich damals ein Fan von Subversion war. Das einzige, was ich an Subversion mochte, ist der Code tatsächlich, weil der deutlich besser geschrieben ist als Git. Aber ich kann nur unterschreiben, dass gerade das Branching Modell wirklich ein extremer Pain Point in Subversion war. Ich kann mich noch gut erinnern, das war mein allererster Job und da hatten wir einfach teilweise zwei Wochen lang Produktionsstopp, weil jemand mergen musste. Und das ist so extrem schmerzhaft. Und diese Probleme gibt es halt einfach mit GIZ so in dem Grad nicht mehr."
+        },
+        {
+            "start": 308280,
+            "end": 365940,
+            "speaker": "A",
+            "text": "Jetzt kann es natürlich sein, dass der eine oder andere, der diesen Podcast gerade hört, dich nicht kennt. Deswegen stelle ich dich einmal ganz kurz vor und sage, warum du eigentlich qualifiziert bist, über Git zu sprechen. Du kommst aus der Hauptstadt Deutschlands, nicht Österreichs. Du wohnst in Berlin. Du bist seit zwei tausend fünfzehn Contributor und Maintainer zu Git selbst und zu Libgit zweite Aktuell verdienst du dein Geld als Engineer und Engineering Manager im Git Team bei GitLab selbst. Und in letzter Zeit, besonders wenn man mal deinen Namen bei YouTube eingibt, sprichst du sehr viel über die Themen Ref, Tables, File, Backends, B von Unterstützung von großen Files in Git. Und das war auch unter anderem dein Thema oder ein Subthema von einem Talk auf der Fossile. Und du sagtest gerade schon, du mochtest den Code von Subversion lieber als der von Git. Ich mein, den Bereich Modernisierung von Git. Ich hatte auch gerade gesagt, Git ist zwanzig Jahre alt, haben wir auf der Agenda. Bin ich mal gespannt, was da gleich noch so rumkommt."
+        },
+        {
+            "start": 365940,
+            "end": 372180,
+            "speaker": "C",
+            "text": "Da gibt es definitiv einige Sachen, die sehr überarbeitungswürdig sind. Darüber kann man wahrscheinlich alleine schon einen halben Tag reden."
+        },
+        {
+            "start": 372180,
+            "end": 416280,
+            "speaker": "B",
+            "text": "Git ist ja doch schon jetzt einige Jahre alt und eigentlich komplexer, als man das so denkt, weil im Alltag verwendet man das irgendwie so commit, push, pull, so die drei Standardbefehle. Ich hatte jetzt gerade das Vergnügen, mal auf der Universität Studierenden Git beizubringen und da habe ich erst wieder gemerkt, wie komplex eigentlich diese Grundlagen sind. Wenn man sie so tagtäglich verwendet, ist es ja total easy und alles verständlich, aber sogar die Grundlagen sind schon schwierig, wirklich mal zu vermitteln, da steckt doch einiges dahinter. Aber wenn wir jetzt noch eine Stufe weitergehen, was wäre denn ein cooles Feature, wo du sagst, die meisten Developer, die verwenden Push Pull Commit, aber das wäre ein cooles Feature, das sollte sich mal jeder mal irgendwie anschauen oder zumindest die Doku durchlesen, weil man könnte eigentlich noch viel mehr machen. So ein cooler Tipp schon zu Beginn der Episode."
+        },
+        {
+            "start": 372217,
+            "end": 432217,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 476360,
+            "end": 522260,
+            "speaker": "C",
+            "text": "Das ist tatsächlich eine super Frage, muss ich sagen, weil ich habe natürlich einen extremen Bias, darum haben wir dich ja eingeladen. Die Frage oder das Problem ist quasi, dass ich gar nicht so wirklich einschätzen kann, was benutzt denn der Durchschnittsnutzer täglich. Ich würde sagen, dass eines der wichtigsten Features von Git, das ein bisschen fortschrittlicher ist, Interactive Rebases sind, Einfach weil du damit deine Historie relativ frei gestalten kannst, schön machen kannst, Commit Messages noch mal überarbeiten kannst oder einfach einen Commit beispielsweise aufsplitten kannst in zwei Commits. Und das ist meiner Meinung nach eines der wichtigsten Features in Git, das ich auch jeden Tag dutzende Male benutze. Ich würde auf jeden Fall jedem empfehlen, mit Interactive Rebases wirklich ein bisschen warm zu werden und die regelmäßig zu benutzen."
+        },
+        {
+            "start": 522260,
+            "end": 543780,
+            "speaker": "A",
+            "text": "Ich benutze es öfters mal, aber immer wenn ich es benutze, muss ich auch immer nachgucken, okay, diese einzelnen Buchstaben, die ich im Interactive Rebase eingeben muss, was heißt noch was, zum Glück zeigt ihr das ja unten an, jetzt zwei Commit mergen möchte, wo muss ich das nochmal hinsetzen? Das ist schon, also die UI ist da ein bisschen tricky, ich muss mich jedes Mal neu dran erinnern, was ist"
+        },
+        {
+            "start": 543780,
+            "end": 546660,
+            "speaker": "B",
+            "text": "Quash nach oben oder nach unten oder so. Diese Dinge"
+        },
+        {
+            "start": 548560,
+            "end": 606360,
+            "speaker": "C",
+            "text": "kann ich definitiv bestätigen und ich kann ja auch schon mal ein bisschen spoilern. Das ist tatsächlich auch eine Sache, an der ich gerade arbeite mit einem neuen Git Kommando, das heißt git history. Und git history ist genau dafür, quasi Interactive Rebases zugänglicher zu machen. Ich hatte auch als Teil meines Post darüber geredet, dass relativ einfache Sachen deutlich zu kompliziert sind, wie beispielsweise ein Commit in zwei aufsplitten. Ich weiß, wie das geht, ich weiß, wie man das gut mit einem Interactive Rebase macht, aber insgesamt sind es, ich glaube, das sind so sieben bis zehn Schritte, die du wirklich machen musst mit unterschiedlichen Git Kommandos und auch mit unterschiedlichen Flags, die erst mal relativ scary wirken, würde ich sagen. Und da ist wirklich die Idee, dass man beispielsweise sagt, Git History Split, man gibt einfach den Committee aufgesplittet werden soll, kriegt man Editor, der zweimal nach den Commit Messages fragt und fertig ist. Das heißt, ja, es gibt definitiv Usability Probleme, aber ich möchte die auch gerne beheben und das ganze Probleme ein bisschen einfacher machen, sodass auch normale Leute quasi die Historie neu schreiben können."
+        },
+        {
+            "start": 606520,
+            "end": 639820,
+            "speaker": "A",
+            "text": "Eins meiner Features, die ich wirklich jeden Tag nutze, ist Git p, also Git Patch, weil du kennst das, du hast eine Datei, du fährst dann dadurch, editierst ein paar Sachen und dann siehst du da oben diesen einen Typo, diesen einen Typo oder was auch immer, diese eine kleine Sache, die du eben mitfixt. Natürlich kannst du jetzt wieder zurückgehen, Commit machen, neuen Branch aufmachen, blablabla, aber ich editiere das einfach durch und wenn ich dann committen möchte, suche ich mir aus, welche Hanks ich denn da mit in den nächsten Commit nehme. Also das nutze ich wirklich jeden Tag. Ich weiß gar nicht, wie Leute ohne"
+        },
+        {
+            "start": 639820,
+            "end": 680890,
+            "speaker": "C",
+            "text": "das können, kann ich dir auch definitiv beipflichten. Und das ist auch ein weiteres Unterkommando, was ich irgendwann in Git History noch nachziehen möchte, ist Git History absorb, weil das ist nämlich genau der Nutzungsfall hier. Du hast quasi einen Typo gehabt und der soll automatisch quasi dann noch mal in dem alten Commit behoben werden. Das heißt, die Idee ist dahinter, dass man einfach sagt, Git History absorb, nimmt er quasi alle lokalen Hanks oder alle lokalen Änderungen und guckt, wann wurde diese Zeile das letzte Mal geändert und wird dann quasi automatisch die Änderungen an diesen Commit mit ranflanschen, was auch durch andere Versionskontrollsysteme wie beispielsweise Mercurial inspiriert ist. Also ich erfinde jetzt hier keine neuen Sachen, aber ich versuche quasi von anderen Versionskontrollsystemen auch ein bisschen zu lernen."
+        },
+        {
+            "start": 681050,
+            "end": 714340,
+            "speaker": "A",
+            "text": "Gut, aber man muss ja nicht immer alles neu erfinden. Ich meine gut kopiert, also ist ja auch so eine Suche. Lass uns mal ein bisschen über Git sprechen. Selbst tun wir natürlich, aber du bist ja beruflich mehr auf der Serverseite von Git unterwegs und nicht auf der Client Seite. Jetzt sprechen wir natürlich mit Interactive Rebase und Git Patch und Git History absorb natürlich über Client seit Features. Aber mich würde mal interessieren, was sind denn aus deiner Sicht die wesentlichen Unterschiede von einem Git Repository auf der Client Seite und auf der Serverseite?"
+        },
+        {
+            "start": 714340,
+            "end": 771240,
+            "speaker": "C",
+            "text": "Es kommt sehr stark auf den einzelnen Server drauf an. Das Wesentliche ist nämlich, dass auf der Serverseite haben wir deutlich mehr Freiheiten in der Art und Weise, wie wir unsere Git Repositories quasi strukturieren. Das heißt, es kann zwar genauso aussehen wie ein clientseitiges Repository, es muss aber nicht. Wir können quasi komplett unser eigenes Ding machen, weil das Einzige, was wirklich denn stimmen muss, ist das Protokoll, das zwischen der Serverseite und der Client Seite gesprochen wird. Das heißt, je nachdem wie der Server aufgebaut ist, kann es ziemlich ähnlich aussehen. Es kann aber auch wirklich komplett anders aussehen. Im simpelsten Fall, wie das beispielsweise bei GitLab ist und meiner Meinung oder meines Wissens nach auch bei GitHub, ist der wesentliche Unterschied, dass wir auf der Serverseite mit Bare Repositories arbeiten. Das heißt, ein Repository, das kein Work Tree hat, also die ganzen Dateien quasi, die in deinen Commits drinstecken, die sind nirgendwo auf der Festplatte zu sehen, sondern wir haben wirklich nur die einzelnen Objektstrukturen von Git selber. Das heißt die Objekte, die Referenzen und noch ein paar Metadaten, Du sagtest gerade,"
+        },
+        {
+            "start": 771240,
+            "end": 788240,
+            "speaker": "A",
+            "text": "die können je nach Server unterschiedlich aussehen. Kannst du das mal ein bisschen beleuchten? Was heißt das? Unterschiedlich bedeutet dann, dass die Struktur vom Bear Repository auch komplett anders auf der Festplatte abgelegt wird oder andere Datenstrukturen oder worüber reden wir gerade, wenn wir sagen, die können anders aussehen?"
+        },
+        {
+            "start": 788240,
+            "end": 833050,
+            "speaker": "C",
+            "text": "Naja, prinzipiell muss es quasi das Git Repository an sich gar nicht erst geben, weil wie gesagt, das Einzige, was wirklich stimmen muss, ist das Protokoll, was zwischen der Serverseite und der Client Seite gesprochen wird. Das heißt, ich weiß von anderen Firmen, die gar nicht erst in Git Repository lokal rumzufliegen haben auf der Serverseite, sondern die haben wirklich ihre komplett eigene Logik, um die Daten quasi an den Client übertragen zu können. Dementsprechend hast du quasi kein echtes Git Repository, auf den du mit einem normalen Git Client arbeiten könntest. Könnte dann beispielsweise so aussehen, dass man beispielsweise die Objekte alle in einer verteilten Datenbank oder sowas zu stehen hat. Der Client wird davon nichts mitbekommen, aber für den Server kann es unter Umständen deutlich effizienter sein, das so zu implementieren. Da ist quasi der Kreativität ziemlich viel Freiraum gegeben."
+        },
+        {
+            "start": 833130,
+            "end": 850420,
+            "speaker": "B",
+            "text": "Wenn du jetzt kein Work Tree, das heißt aber, man kann den kompletten Source Code über die Git Objekte auch wieder herstellen sozusagen. Das heißt, wenn ich jetzt auf den Download Button drücke, dann wird es wirklich aus den Git Objekten dann zusammengebaut oder wiederhergestellt. Also wirklich ohne Work Tree."
+        },
+        {
+            "start": 850730,
+            "end": 898470,
+            "speaker": "C",
+            "text": "Korrekt. Es gibt hier zwei wesentliche Datenstrukturen, die für die Client Seite dann eigentlich wirklich von Relevanz sind. Das sind einerseits die Referenzen. Referenzen sind quasi einfach bestimmte Namen, die man einzelnen Objekten geben kann, um die Objekte relativ leicht wiederfinden zu können. Und für den Client, um dann den Work Tree wiederherstellen zu können, ist dann von wesentlicher Relevanz eigentlich nur das Commit Objekt. Und von dem Commit Objekt hat man dann quasi die komplette Historie des Repositories, das dadurch aufgespannt wird. Weil ein Commit Objekt referenziert erstmal andere Commit Objekte, das ist dann quasi deine Repository History. Und zusätzlich hat ein Commit Objekt noch eine Referenz auf einen sogenannten Root Tree. Und dieser Tree ist dann die gesamte Dateistruktur, die du in deinem Repository eigentlich hast. Und das ist dann das, was der Git Client quasi benutzt, um den Work Tree wiederherstellen zu können."
+        },
+        {
+            "start": 898550,
+            "end": 920620,
+            "speaker": "A",
+            "text": "Aber das bedeutet, wenn ich jetzt ein Bare Repository habe und dann nur mit den Commit Objekten da agiere und somit gar nicht den aktuellen Stand der Dateien auf der Platte liegen habe, ich mache das jetzt einfach nur mal einfach nicht in einer verteilten Datenbank oder sowas, dann würde das ja bedeuten, dass wenn ich den Filetree wiederherstellen möchte, dass ich einfach von komplett Git Commit bis Git Commit Head komplett replayen muss, oder tatsächlich nicht."
+        },
+        {
+            "start": 920620,
+            "end": 945600,
+            "speaker": "C",
+            "text": "Es gibt Versionskontrollsysteme, bei denen ist das so. Ich glaube, Peugeot beispielsweise ist ein Versionskontrollsystem, wo das genauso funktioniert. Git ist aber anders aufgebaut, weil Git ist Snapshot basiert. Das heißt, jeder Commit referenziert quasi den kompletten Tree von allen Dateien, die existieren innerhalb dieses Repositories. Das heißt, eigentlich brauchst du nur den einen Commit und den Root Tree davon und dann weißt du sofort, was alle Dateien sind, die in dem Work Tree ausgecheckt werden müssten."
+        },
+        {
+            "start": 945600,
+            "end": 954800,
+            "speaker": "B",
+            "text": "Gibt es auf der Serverseite Befehle, die eigentlich nur auf der Serverseite verwendet werden oder ist es eigentlich alles, was du im Client brauchst, brauchst du auch am Server oder umgekehrt."
+        },
+        {
+            "start": 954880,
+            "end": 1052450,
+            "speaker": "C",
+            "text": "Viele von den Befehlen, die du auf der Client Seite benutzt, wirst du auch auf der Serverseite benutzen. Aber es gibt schon wesentliche Unterschiede. Es gibt auf jeden Fall ein paar Befehle, die wirklich nur auf der Serverseite von relevant sind und die wichtigsten sind hier einerseits git uploadpack, andererseits git receivepack. Git uploadpack ist quasi für den Fall zuständig, wo der Client ein Fetch macht. Das heißt, der Client möchte jetzt alle Dateien von der Serverseite bekommen oder alle Objekte von der Serverseite bekommen. Das heißt, der Client führt git fetch aus, das wird dann an den Server geroutet und der Server wird dann git upload pack ausführen, wobei git uploadpack dann dafür zuständig ist, zu gucken, welche Objekte benötigt der Client denn jetzt gerade in seiner momentanen Anfrage. Ausgehend davon wird er dann alle Objekte erstmal enumerieren, die benötigt werden, daraus eine Packfile generieren. Diese Packfile wird dann zurück an den Client gesendet, sodass der Client dann alle Objekte zur Verfügung hat und danach dann quasi seine Referenzen updaten kann und dann potenziell vielleicht auch noch den Worktree update. Das ist git uploadpack. Git receivepack ist dann quasi die andere Seite. Der Client macht einen Push, wird dementsprechend dann alle seine Objekte, die der Server benötigt, lokal erstmal packen in eine Packfile. Die Packfile wird rübergeschickt, die empfängt dann der Server über git receivepack und getreceivepack. Guckt sich quasi erstmal die Packfile an. Sind alle Objekte, die mir der Client gesendet hat, konsistent oder gibt es irgendwelche Fehler? Beispielsweise in den Objekten? Habe ich alle Objekte, die ich wirklich brauche, um auch meine Referenzen updaten zu können? Und wenn das der Fall ist, dann wird der Server quasi die Änderung committen und danach dann in den Git Repository persistieren, sodass andere Clients darauf zugreifen können."
+        },
+        {
+            "start": 1052530,
+            "end": 1089370,
+            "speaker": "A",
+            "text": "Jetzt liest man immer mal wieder, dass große Repositories oder dass einige Repositories Herausforderungen beim Git Hosting machen, nennen wir es mal auf der Serverseite zumindest, dass das Git Repository Serverseite zur Verfügung zu stellen ist da die Größe die einzige Herausforderung, also ich sage mal File Size oder Anzahl Commits oder gibt es da noch irgendwelche anderen Herausforderungen die beim Git Server Hosting eine Rolle spielen? Weiß ich nicht. Irgendwelche Operationen, die unglaublich viel CPU fressen, weil sie linear oder exponentiell mit der Größe skalieren und deswegen länger dauern oder oder oder."
+        },
+        {
+            "start": 1089370,
+            "end": 1093169,
+            "speaker": "C",
+            "text": "Die Antwort ist prinzipiell erstmal es ist kompliziert, muss ich sagen."
+        },
+        {
+            "start": 1093169,
+            "end": 1094009,
+            "speaker": "B",
+            "text": "It depends."
+        },
+        {
+            "start": 1094649,
+            "end": 1218820,
+            "speaker": "C",
+            "text": "It depends. Richtig. Die wesentliche Sache ist, es gibt nicht einen Skalierungsfaktor in Git Repositories. Es gibt viele verschiedene Faktoren, die mit reinspielen, wie teuer es ist, ein gewisses Git Repository an den Clients zu serven bzw. Das generell hosten zu können. Einerseits ist natürlich die Dateigröße auf jeden Fall ein wesentlicher Faktor, also wie groß sind die einzelnen Blobs, die ich innerhalb eines Repositories habe. Es kann wirklich massive Probleme verursachen, wenn man viele Blobs hat, die beispielsweise Gigabytes groß sind, weil ein Blob, der Gigabyte groß ist, wird natürlich auch dementsprechend so in dem Git Repository gespeichert werden müssen, was in einige Probleme, beispielsweise wenn es um Repository Maintenance geht, führen wird. Aber es gibt auch andere Probleme, die wir hier haben, beispielsweise wie viel Historie gibt es insgesamt, wie viele Commits existieren in dem Repository, weil man jedes Mal, wenn beispielsweise der Client rankommt, den kompletten Tree einmal ablaufen muss, um zu gucken, welche Objekte braucht der Client überhaupt. Klar, dafür gibt es Optimierungen, die wir natürlich auf der Serverseite benutzen, aber je größer oder je tiefer die Commit Historie wird, desto mehr Probleme können wir hier auch bekommen. Dann gibt es aber auch andere Probleme, wie beispielsweise, wie groß ist dein maximaler Tree? Also wie groß ist dein maximales, ich sag mal, Verzeichnis quasi? Wie viele Blobs hast du in einem Verzeichnis drin? Sind es Millionen oder sind es nur ein paar Dutzend? Das sind dann erstmal so die Probleme, die wir vor allem mit den Git Datenstrukturen haben und wo es immer keine wirkliche Antwort gibt. Wird dein Repository jetzt funktionieren oder nicht, wenn du mir nur einfach eine Metrik gibst? Sondern eigentlich brauchen wir quasi Zugriff auf die komplette Repository Struktur, um zu sagen kö Wird es wahrscheinlich funktionieren oder wird es wahrscheinlich nicht funktionieren? Die zweite Seite neben den Datenstrukturen, die wesentlich noch mit reinspielt, ist natürlich auch der Workflow bzw. Die Use Cases, die der Kunde hat. Je nachdem, wie oft beispielsweise auf ein Repository zugegriffen werden kann, werden wir unterschiedliche Probleme haben. Das heißt, wenn jetzt das Repository zwar relativ unhandlich ist, aber wir wissen, dass nur einmal alle fünf Minuten beispielsweise einen Clone passieren wird, naja, dann werden wir damit schon umgehen können. Aber andererseits, wenn wir ein Repository haben, das relativ groß ist und in der Sekunde hundertmal gecloned wird, dann sieht es schon wieder ganz anders aus."
+        },
+        {
+            "start": 1219300,
+            "end": 1228740,
+            "speaker": "B",
+            "text": "Aber das heißt, so ein Clone bedeutet schon viel mehr am Server als jetzt nur ein ganz dummes Download, weil sonst wäre ja das relativ einfach abzufrühstücken."
+        },
+        {
+            "start": 1228740,
+            "end": 1317000,
+            "speaker": "C",
+            "text": "Richtig? Das ist definitiv deutlich komplizierter als ein Download, denn ich kann ja mal so ein bisschen runterbrechen, was eigentlich passiert Der Client wird erstmal an den Server rantreten und Hey, ich möchte einen Fetch machen. Das heißt, was er aufrufen wird, ist git uploadpack auf der Serverseite. Denn git uploadpack ist dafür da, quasi die Packfile zu generieren, die der Client benötigt, um seine bestimmte Anfrage erstmal beantworten zu können. Wir wollen aber natürlich jetzt nicht einfach nur die Objekte rüberschubsen oder dem Client einfach sagen, du kannst über HTTP direkt auf alle unsere Objekte zugreifen, sondern was stattdessen passiert, zumindest im modernen Git mit dem Smart Protocol, ist, dass erstmal eine Packfile Negotiation passiert. Das heißt, der Client sagt der Welche Objekte sind für mich überhaupt von Interesse? Das heißt, der Server wird erstmal Das sind alle meine Referenzen, die ich momentan habe, mit bestimmten Objekten, auf die die Referenzen zeigen. Und dann wird der Client aussuchen, welche Referenzen davon er haben möchte, schickt das an den Server und schickt zusätzlich nochmal an den Server, welche Objekte der Client auch schon unter Umständen hat. Bei einem Clone hat er natürlich erstmal gar keine Objekte. Dementsprechend ist es da relativ einfach. Aber wenn man beispielsweise einen Fetch haben möchte, wird der Client auch Guck mal, das sind alle meine Referenzen, die ich habe, und das sind die Objekte, zu denen diese Referenzen hinzeigen. Und generiere mir mal bitte quasi eine Packfile, die einfach nur der Div ist zwischen den Referenzen oder den Objekten, die ich schon habe und den Objekten, die ich haben möchte. Und da wird dann der Server dynamisch dann das Packfile generieren und mit der minimalen Anzahl an Objekten, die der Client eigentlich nur benötigt."
+        },
+        {
+            "start": 1317240,
+            "end": 1332760,
+            "speaker": "B",
+            "text": "Das heißt aber, du sprichst jetzt schon in einem späteren Schritt, wenn ich lokal Informationen schon liegen habe, dass ich eben nur in irgendeiner Form die richtigen dann herunterlade. Bei einem klassischen Klon wird ja mal zuerst alles kopiert, oder? Also da fließt ja dann mehr oder weniger alles zum Client."
+        },
+        {
+            "start": 1333000,
+            "end": 1397380,
+            "speaker": "C",
+            "text": "Jein. Es kommt auch noch mal sehr stark darauf an, wie man genau den Clone durchführen möchte. Git hat da ja auch viele verschiedene Möglichkeiten, wie du den Clone durchführen kannst. Du kannst beispielsweise Ich möchte einen shallow Clone haben, wo ich nur Historie bis Comit X runterladen möchte. Ich kann aber auch sagen, ich möchte einen partial Clone haben, wo ich beispielsweise alle Objekte klone, bis auf Blobs, die größer als einen Gigabyte groß sind, sodass die dann erst on demand später heruntergeladen werden. Zusätzlich dazu hat man aber natürlich auch noch mal den Fall, dass auf der Serverseite unter Umständen Objekte in den Repositories existieren, die der Client niemals haben möchte, weil die beispielsweise von den öffentlich sichtbaren Referenzen in dem Repository gar nicht erst erreichbar sind, weil wir beispielsweise Metadaten innerhalb des Repositories speichern, die für den Client unter Umständen nicht relevant sind, die wir aber benötigen innerhalb des Repositories. Dementsprechend passiert auch schon bei einem Clone in der Regel erstmal diese Packfile Negotiation, wo wir gucken, der Client möchte diese Referenzen, hat zusätzlich noch diese Parameter gesetzt, also gucken wir, welche Objekte wir dann schicken müssen. Das sind in der Regel nicht alle."
+        },
+        {
+            "start": 1397460,
+            "end": 1423190,
+            "speaker": "B",
+            "text": "Ich wollte jetzt nicht schon wieder so als Line User dastehen von Git und ich hab mir gedacht, bei Clone kann ich vielleicht Clone kenne ich, das kann nur ein Befehl sein, aber sogar da gibt es irgendwie Du hast schon so viele Parameter jetzt wieder besprochen, die ich noch nie in meinem Leben gehört habe. Also es ist wirklich so ein Rabbit Hole. Git kommt mir immer wieder vor. Man kann so tief gehen und findet irgendwie auch nach fünfzehn Jahren Verwendung immer noch jeden Tag fast neue Befehle."
+        },
+        {
+            "start": 1423350,
+            "end": 1443670,
+            "speaker": "C",
+            "text": "Ich verwende Git seit bestimmt auch ungefähr fünfzehn Jahren. Ich bin seit zehn Jahren Entwickler im Git Ökosystem. Ich würde behaupten, dass ich trotzdem noch jeden fünften Tag bestimmt einen neuen Command Line Switch kennenlerne, den ich vorher noch nie in meinem Leben gesehen habe, weil jeder einzelne Befehl in Git wirklich Dutzende, teilweise Hunderte von Optionen hat. Und ich glaube, man hat gar nicht die Möglichkeit, alles zu kennen."
+        },
+        {
+            "start": 1443670,
+            "end": 1484520,
+            "speaker": "B",
+            "text": "Aber nur noch mal zur Wir sprechen jetzt immer von Git, was Git an sich unterstützt. Also wir sprechen nicht von GitLab, GitHub oder sonstigen Dinge. Die ganzen Sachen sind standardmäßig in Git dabei und würden auch funktionieren, wenn ich jetzt mein Git einfach auf dem Server self hosted irgendwo hinleg, einfach Git binary und dann kann ich über SSH bereits so kommunizieren und klonen und alle Befehle durchführen, die du jetzt genannt hast. Genau, weil ja viele immer glauben, das sind irgendwelche Features, die dann eben von GitLab, GitHub und so weiter kommen, sondern das sind wirklich alles Core Git Features. Und so wurde ja Git auch, ich glaube früher, keine Ahnung, kannst du wahrscheinlich besser beantworten, ob das heutzutage noch irgendwo so genutzt wird, dass man einfach irgendwo Git liegen hat und dann sich bei SSH connected."
+        },
+        {
+            "start": 1484600,
+            "end": 1512660,
+            "speaker": "C",
+            "text": "Das wird auf jeden Fall noch so benutzt. Ich glaube, wo das vor allem noch wirklich von Relevanz ist, ist im privaten Setup sehr viel. Ich hatte selber jahrelang einfach nur einen Server gehabt, einen Git Server gehabt, wo die Git Binaries einfach rumlagen und ich dann über SSH einfach rangegangen bin, weil ich ansonsten auch nicht wirklich viel weiter benötigte für meine persönlichen Anwendungsfälle. Aber auch bei Forges ist das mit einigen zusätzlichen Komplexitäten natürlich, die existieren im Großen und Ganzen aber immer noch so der Fall."
+        },
+        {
+            "start": 1512980,
+            "end": 1522980,
+            "speaker": "A",
+            "text": "Bilderbuchüberleitung zum nächsten Thema. Und zwar habe ich mit Git immer ein Gedankenproblem und zwar Beef wolltest du sagen damit Git habe ich nicht Beef. Ne, das passt jetzt nicht."
+        },
+        {
+            "start": 1523460,
+            "end": 1525740,
+            "speaker": "B",
+            "text": "Beef ist Problem mit deinem Kopf, wenn"
+        },
+        {
+            "start": 1525740,
+            "end": 1616390,
+            "speaker": "A",
+            "text": "Git und ich Probleme hätten. Also wir haben auch Probleme zwischen unserer Beziehung, aber ich meinte eigentlich eher dieses Konzept von Git und Dezentral. Wir haben den ganzen Podcast hier mit Subversion gestartet. Problemstatement, was ich jetzt aufmache, ist ähnlich wie Subversion. Bei Subversion konnte man ja keinen einzigen Commit machen ohne eine Konnektivität zum Server. Also jeder Commit brauchte eine Konnektivität zum Server. Git hat das ja nicht. Du kannst ein Commit machen, alles gut. Aber irgendwie haben wir uns von den fundamentalen, ich würde mal sagen, Features von Git so ein bisschen wegbewegt. So habe ich zumindest das Gefühl. Wir hatten gerade geklärt, Wolfgang, du kannst ein Repository bei dir auf der Festplatte haben, du kannst mir irgendwie eine Netzwerk HTTP oder SSH Konnektivität geben und ich kann von meiner Festplatte auf deine Festplatte pushen. Das geht ja noch. Aber irgendwie haben wir uns alle darauf geeinigt, dass wir einen zentralen Server haben, Sei es mein lokal gehostetes GitLab oder irgendwie was Software as a Service oder ist ja egal was oder ein Open Code, opencode sag ich schon, wie heißt denn diese Plattform von Deutschland da? Naja, ist auch egal. Irgendwo ein GIZ Server wird gehostet und das nutzen wir als zentrales Repository. Ihr kennt auch diese Comics, was machen die Entwickler da? GitHub ist down und dann ich kann gerade nicht arbeiten Und da sagt dann jeder, okay, obwohl es eigentlich totaler Blödsinn ist, weil wir haben ja alle eine komplette Kopie, also wie wir gerade gelernt haben, nicht eine komplette Kopie, aber eine zu arbeitende vollständige Kopie auf unserer Festplatte. Und deswegen ist jetzt mein Problem, haben wir ein dezentrales Versionskontrollsystem wieder zentral gemacht."
+        },
+        {
+            "start": 1616550,
+            "end": 1740600,
+            "speaker": "C",
+            "text": "Also prinzipiell würde ich erstmal sagen, auch wenn man mit einem zentralen Server arbeitet, dass man immer noch dezentral arbeitet, weil ja, wir haben zwar in einem normalen Clone unter Umständen nicht alle Objekte zur Verfügung, aber du kannst immer noch weiterarbeiten, du kannst immer noch auf die komplette Commit Historie zugreifen, wenn GitHub, GitLab oder wie auch immer down sind. Es funktionierte weiterhin. Das heißt das Problem wie früher mit Subversion, dass du wirklich nichts mehr machen konntest, weil du konntest ja auch nicht mal eben zwischen verschiedenen Branches wechseln, das existiert so nicht mehr und dementsprechend ist es weiterhin dezentral, Aber der Grad der Dezentralisierung ist natürlich in den meisten Setups nicht allzu hoch. Und ja, in der Regel ist es schon so, dass wir mit einem einzigen wirklich klassischen zentralen Server arbeiten. Ich denke, dass es prinzipiell aber erstmal kein riesiges Problem ist, weil das ist größtenteils eine Frage, wie organisieren wir eigentlich unsere Arbeit bei beispielsweise unserem Arbeitgeber? Denn in der Regel ist es ja, wir arbeiten für ein gewisses Unternehmen, das Unternehmen wird sowieso irgendwo die zentrale Serverstruktur bereitstellen. Das heißt, warum sollten wir das nicht auch wirklich als zentralen Server benutzen? Es hat halt einfach so ein bisschen praktikable Gründe, weil irgendwo wollen wir sowieso auch Issue Tracking haben, wir wollen unsere Merge Requests irgendwo haben, quasi all die Metadaten, die noch um dieses Projekt herum existieren. Es ist ja nicht nur das Git Repository, das wirklich von Relevanz ist und deswegen sehe ich das prinzipiell erstmal nicht als ein wesentliches Problem an. Und zusätzlich dazu gibt es ja auch gerade in letzter Zeit einige Bestreben dahin, dass wir das auch wieder dezentraler machen. Es gibt beispielsweise Projekte wie Tangled, die auf dem Protokoll aufbauen, um wirklich eine dezentrale Entwicklungsstruktur basierend auf Git wieder bereitstellen zu können, wo dann quasi jeder mit jedem so ein bisschen interagieren kann und das versucht, das wesentliche Problem zu lösen. Weil du meintest ja gerade so schön, prinzipiell könntest du einfach ein Repository bei dir auf der Festplatte haben und irgendjemand anderes kann darauf zugreifen. Aber die Frage Willst du wirklich, dass irgendjemand mal eben auf die Repositories auf deiner Festplatte zugreifen kann? Und ich würde behaupten, meistens wahrscheinlich eher nicht. Du müsstest Ports öffnen, du hast eine gewisse höhere Attack Surface und das macht dich natürlich einfach ein bisschen angreifbarer für andere Personen."
+        },
+        {
+            "start": 1741320,
+            "end": 1787030,
+            "speaker": "A",
+            "text": "Das bringt mich dann zu der okay, ist das denn eigentlich hier, dass wir uns alle um ein zentrales Repository organisiert haben? Ist das denn ein technisches oder ist eher so ein kulturelles oder Bequemlichkeitsphänomen? Und ich habe halt mit Gesprächen mit anderen Leuten herausgefunden, dass sie alle gar nicht wussten, dass man dass wir drei uns jetzt hier Repositories hin und her pushen können ohne einen GitHub, ohne einen GitLab, ohne einen zentralen Server. Und da waren die Das geht. Ich denke mir so hä, Das ist doch der Kern von der ganzen Thematik. Und deswegen frage ich mich Es scheint anscheinend kein technisches Problem zu sein. Klar, die Sicherheitsbedenken, die du gerade aufgemacht hast, die existieren, die existieren immer, wenn du irgendwas aufmachst, so an Ports und Co. Aber ist das eher nicht ein kulturelles oder ein Ja, vielleicht sind wir alle"
+        },
+        {
+            "start": 1787030,
+            "end": 1794670,
+            "speaker": "B",
+            "text": "faul geworden, aber wie würdest du das managen? Du arbeitest jetzt mit fünfzehn Leuten zusammen, wo schiebst du dann die GIZ hin und her oder so in dem Team?"
+        },
+        {
+            "start": 1794750,
+            "end": 1827370,
+            "speaker": "A",
+            "text": "Ich bin hier so eher gerade im Land und Precht Moment, dass wir philosophisch über etwas sprechen, wofür ein dezentrales Versionskontrollsystem geschaffen wurde und wir als Menschen das wieder zentralisieren. Und ich will jetzt nicht in den Lösungsweg wechseln, weil ich habe keine Ahnung, ich habe keine Antwort darauf, gebe ich zu. Aber im Endeffekt kann ich ja ich kann mir einen Wolfgang Remote einrichten, dann kann ich mir ein Patrick Remote einrichten und dann habe ich das Problem, ja, ihr habt da bestimmt zu Hause dünndns oder ähnliches. Also Lösung parat. Ist ein bisschen kompliziert, gebe ich zu."
+        },
+        {
+            "start": 1827450,
+            "end": 1853630,
+            "speaker": "B",
+            "text": "Ich finde schön, dass du diese wissenschaftliche Seite mal einnimmst, wo man sagt, man soll die Grundlagen verstehen und wie das eigentlich darunter funktioniert und nicht wie es in der Praxis einfach überall angewendet wird, sondern hardcore. Die Leute müssen das noch verstehen, wie man das pusht zueinander. Also ich sehe das alles entspannter. Aber Patrick, vermisst du dieses direkte dezentrale Arbeiten oder musst du jetzt als Arbeitnehmer von GitLab sowieso Das Zentrale ist cool,"
+        },
+        {
+            "start": 1853789,
+            "end": 1944640,
+            "speaker": "C",
+            "text": "muss ich printspace nicht unbedingt sagen. Ich arbeite ja vor allem auch in dem Git Projekt selber und das Git Projekt selber beispielsweise ist ja relativ dezentral aufgebaut. Wir arbeiten mit keiner offiziellen Forge, das heißt, wir benutzen kein Issue Tracking, wir benutzen keine Merge Requests, sondern stattdessen arbeiten wir nur mit der Git Mailing Liste. Und das ist ziemlich dezentral. Es gibt mehrere Forks von unserem Repository und natürlich gibt es ein paar offizielle Anlaufstellen. Es gibt beispielsweise einen Fork bei GitLab, einen Fork bei GitHub, einen bei Kernel Org, weil wir aus der Kernel Community kommen usw. Das ist ziemlich dezentral insgesamt. Aber die Frage ist halt im Was bringt es den meisten Projekten dezentral zu sein? In dem Fall von dem Git Projekt macht es durchaus schon Sinn, weil wir wollen beispielsweise keinen bestimmten Bias haben gegenüber einer der Hosting Provider. Das ist einer der großen Gründe, warum wir dezentral aufgestellt sind, damit wir nicht Unser offizielles Projekt ist bei GitHub. Dementsprechend ist GitHub quasi die Heimat von Git, würde halt so einen gewissen Bias erschaffen und diesen Bias wollen wir halt vermeiden. Aber ich würde behaupten, dass die meisten Projekte nicht unbedingt davon profitieren würden, wenn es wirklich dezentral ist. Denn ich meine, man muss ja auch schon mal sagen, viele Entwickler haben schon alleine Probleme mit Git, wenn sie mit einem zentralen Server arbeiten. Sie haben schon Probleme damit, was mache ich denn jetzt, wenn das Remote geupdatet wurde? Wie rebase ich überhaupt meine Änderungen? Was ist eine Rebase überhaupt, was ist eine Merge? Und da kommen wirklich viele Probleme zueinander. Und wenn man dann auch noch anfängt dezentral zu arbeiten, sodass jeder einzelne Entwickler auf einmal mit drei Dutzend verschiedenen Remotes arbeiten muss, herzlichen Glückwunsch. Die werden auf jeden Fall Spaß haben, wenn sie schon den eigentlichen einfachen Workflow nicht so richtig verstehen."
+        },
+        {
+            "start": 1944960,
+            "end": 1994230,
+            "speaker": "A",
+            "text": "Vielleicht machst du da gerade ein gutes Fass auf, denn auch auf diesen zentralen Plattformen wie GitHub und GitLab, wenn du Projektmantainer bist und dir mal ansiehst, wer eigentlich dein Repository forkt und da Änderungen macht, dass du, du hast ja ein Interesse natürlich auch zu gucken, okay, was machen denn dann die Forks, was machen dann die anderen Kopien, kann man davon inspiriert werden? Das ist ja super schwierig. Also du musst dich ja dann durch weggefolgte Repositories manuell fräsen, um zu gucken, wo ist denn welche sinnvolle Änderung, kann ich was zurück mergen und so weiter, Weil nicht jeder hat das Konzept verstanden, ich mache einen Pull Request oder Merge Request auf und contribute zum Upstream, sondern die Leute beheben ihr Problem und gehen dann weiter, was ja völlig okay ist. Ich meine, das ist ja der Sinn von Open Source, alles super. Aber wenn man natürlich versucht, sein Upstream Repository zu maintainen, dann mit den zwanzig dreiig verschiedenen Forks oder Remotes zu arbeiten, das stimmt schon."
+        },
+        {
+            "start": 1994310,
+            "end": 2056019,
+            "speaker": "C",
+            "text": "Genau. Es muss halt am Ende immer noch irgendwo eine zentrale Autorität geben, die quasi das ist jetzt der eigentliche Stand von dem Projekt und diese Person ist dann dafür zuständig, das alles wieder zu reintegrieren. Was passiert in den einzelnen Forks? Das sieht man beispielsweise in der Linux Community ganz gut, da funktioniert es ja genauso, wo Linux mehr oder weniger ganz oben sitzt. Er hat quasi das offizielle Repository, aber dann gibt es ja ganz viele verschiedene Forks von diesem Repository, die die einzelnen Lieutenants von ihm quasi benutzen, also die einzelnen Subsystem Maintainers. Die werden dann quasi in ihren eigenen Forks erstmal die ganzen Änderungen von ihren Delegates oder von ihren Entwicklern sammeln und geben dann irgendwann ihre Änderungen nach oben weiter zu Linus, sodass Linus irgendwann am Ende dann quasi alles zusammen merged und das ist dann die offizielle Version von dem Projekt mehr oder weniger. Aber es gibt halt nicht quasi die eine Version von Linux, sondern es gibt halt ganz viele verschiedene Repositories, die auch unterschiedliche Stände haben. Und das funktioniert in dem Projekt sehr gut, aber es funktioniert halt nicht unbedingt in jedem Projekt sehr gut. Und da muss man halt auch immer sehen, was braucht das Projekt eigentlich?"
+        },
+        {
+            "start": 2056340,
+            "end": 2092870,
+            "speaker": "A",
+            "text": "Du machst mir schon wieder die beste Überleitung der Welt. Und da frage ich mich natürlich, wenn du sagst, was braucht das Projekt eigentlich? Du hast gerade gesagt, oder ich habe gesagt in der Einleitung, das geht inzwischen zwanzig Jahre alt ist. Und da frage ich mich, wieso hat Git eigentlich initial Perl gebraucht? Lass uns mal ein bisschen über die Modernisierung von Git bzw. Der Git Code Base sprechen. Denn wenn ich mir mal die Source Code Verteilung vom aktuellen Git Repository ansehe, dann hat man da immer noch so circa fünf Prozent Perl rumfliegen, circa fünfzig, ein und fünfzig, zwei und fünfzig Prozent C, eine ganze Menge Shell Kram. Aber Pearl, wundervoll."
+        },
+        {
+            "start": 2093110,
+            "end": 2104950,
+            "speaker": "C",
+            "text": "Mein Liebling ist es auch nicht. Sagen wir es mal so, ich kann bis heute kein Perl schreiben. Ich kann es gerade mal so lesen, wenn ich mich wirklich anstrenge. Aber für mich ist das größte größtenteils eigentlich nur irgendeine esoterische Sprache mit sehr eigenartiger Syntax."
+        },
+        {
+            "start": 2104950,
+            "end": 2109750,
+            "speaker": "A",
+            "text": "Pearl war für mich nie eine Programmiersprache. Pearl ist die Kunst, das richtige Zeichen zu finden."
+        },
+        {
+            "start": 2110870,
+            "end": 2126400,
+            "speaker": "B",
+            "text": "Also Pearl war meine erste Programmiersprache. Andi möchte ich nur mal anmerken, dann bist du Künstler. Man es programmieren nennen hat können, weiß ich nicht. Das war zumindest kopieren und irgendwas ändern und dann versuchen, ob die Änderung funktioniert hat. Aber ja, das war meine Perl Erfahrung."
+        },
+        {
+            "start": 2126549,
+            "end": 2138149,
+            "speaker": "A",
+            "text": "Aber lass uns mal wirklich jetzt über die Modernisierung von Git sprechen. Also meines Wissens nach ist die ganze Sache größtenteils in C gebaut und mittlerweile mittlerweile. Okay, da habt ihr euch die letzten zwanzig Jahre hin entwickelt."
+        },
+        {
+            "start": 2138149,
+            "end": 2219460,
+            "speaker": "C",
+            "text": "Richtig. Ganz am Anfang sah das alles noch ein bisschen anders aus. Wir hatten von Anfang an quasi zwei unterschiedliche Layer. Das sind einerseits das Plumbing Layer und andererseits das Porzellan Layer. Plumbing ist quasi, das sind die wesentlichen Tools, die sehr stark runtergebrochen sind, um relativ einfache Operationen auf dem Git Repository zu machen. Das heißt, das ist dann so was wie gib mir ein einzelnes Objekt raus oder update eine einzelne Referenz, so ein Zeugs. Porzellan ist dagegen das Layer, das für den Nutzer das direkte Interface ist. Das heißt, du würdest in der Regel nicht mit dem Plumbing Layer arbeiten, weil das viel zu low level ist und dir keine gute Usability gibt. Und ja, man kann darüber streiten, ob die Usability von unserem Porzellan Layer in Git so super ist, aber es ist zumindest deutlich besser. So viel kann ich verspre Ursprünglich war das so, dass viele von den einzelnen Kommandos, die heutzutage existieren und Teil des Porzellan Layers sind, also user facing sind, in Perl geschrieben wurden und einfach nur quasi in das Plumbing Layer reingereicht haben. Das heißt, sie haben die Plumbing Commands ausgeführt, die in C geschrieben waren, größtenteils, und Perl war dann oftmals quasi das, worin dann die higher level Commands geschrieben wurden, was wahrscheinlich einfach den Anwendungsfall hatte, dass es halt relativ schnell und einfach quasi zu implementieren war und man dadurch ein bisschen schneller iterieren konnte. Aber ich muss auch dazu sagen, dass es vor meiner Zeit im Git Projekt, also ich bin mir auch nicht so hundertprozentig sicher, wie es dazu kam."
+        },
+        {
+            "start": 2219460,
+            "end": 2254740,
+            "speaker": "A",
+            "text": "Jetzt gibt es diese populäre Diskussion, ah, C, du musst dich selbst um den Memory kümmern und Memory Buffer overflows und so die ganze Thematik. Und dann wird immer spätestens nach drei Sätzen tief in der Diskussion Rust erwähnt, sollte man das eine nicht mit dem anderen ersetzen. Im Linux Kernel findet Rust jetzt nach langer Diskussion da langsam irgendwie eine Anwendung und wurde, glaube ich, jetzt auch partiell akzeptiert als zweite Sprache. Wie sieht es in Git aus? Habt ihr über sowas auch schon gesprochen oder sagt ihr ne, wir sind alle happy mit C, weil wir da den Plumping Layer so stabil haben, dass wir da gar nicht mehr ran müssen?"
+        },
+        {
+            "start": 2254900,
+            "end": 2401920,
+            "speaker": "C",
+            "text": "Also prinzipiell muss ich erst mal sagen, dass ich persönlich mit C sehr zufrieden bin, weil C eine super einfache Sprache ist und relativ wenig Zeugs passiert, wo ich nicht nachvollziehen kann, was passiert. Aber wir hatten natürlich in der Git Community schon seit Jahren die Diskussion, ob wir vielleicht doch mal irgendwann Rust benutzen wollen, weil man sieht es ja überall, dass alle möglichen Projekte anfangen, Rust zu akzeptieren und es gibt definitiv auch gute Gründe dafür. Memory Safety ist das eine, Borrow Checking und dadurch Fearless Concurrency ist natürlich ein anderes wesentliches Thema, was auch für das Git Projekt von einer großen Relevanz ist. Und außerdem haben wir halt auch noch deutlich besseres Tooling teilweise mit der ganzen Rust Compiler Toolchain und das ist natürlich sehr lukrativ und sehr attraktiv für das Git Projekt. Die Diskussion existierte, wie gesagt, schon seit einigen Jahren, dass wir vielleicht doch mal so ein bisschen mit Rust warm werden wollen, sodass wir dann lass mich lügen, ich glaube vor vier oder fünf Jahren hatten wir quasi den ersten Rust Code im Git Projekt drin. Das war aber erstmal quasi ein Wrapper um die C Bibliotheken, die wir haben, sodass man quasi die C Bibliotheken in Rustcode relativ einfach aufrufen kann. Allerdings ist es extremst eingeschränkt. Das Einzige, was du damit machen kannst, ist eine Git Konfiguration, also die Git Config quasi parsen und darauf Zugriff haben. Das heißt, wirklich viel kannst du damit nicht so richtig tun. Die Diskussion ist allerdings Mitte letzten Jahres noch mal sehr stark aufgeflammt und führte dann im Endeffekt dahin, dass wir gesagt Wir akzeptieren jetzt auch Rust in unserem Core von Git, also quasi direkt im Code drin, sodass es zentral in Git selber ist. Wir haben das jetzt allerdings sehr, sehr schrittweise eingeführt. Das heißt, anfangs haben wir erst mal Wir akzeptieren Rustcode im Kern von Git, aber werden erstmal diesen Code nur als optional betrachten. Das heißt, es ist noch nicht möglich zu sagen, wir führen wirklich zwingendermassen Rust ein, weil sich auch das ganze Ökosystem anpassen muss. Das sind die ganzen Downstream Distributions, die dann auf einmal noch eine Rust Compiler Toolchain mit reinfügen müssen, wenn sie Git kompilieren wollen. Das sind esoterische Plattformen, die vielleicht gar nicht erst Rust Support haben, also sowas wie HP UX Nonstop oder irgendwie solche Plattformen, die halt super esoterisch sind, die aber auch Git benutzen. Deswegen ist es momentan tatsächlich noch optional. Unser Ziel ist es allerdings voraussichtlich mit Git zu Es wird jetzt zwingendermassen notwendig sein, Rust in der Toolchain zu haben und Git damit zu kompilieren, sodass wir dann quasi Rust auch deutlich mehr in der Git Code Base benutzen können."
+        },
+        {
+            "start": 2401920,
+            "end": 2414340,
+            "speaker": "B",
+            "text": "Kannst du mal kurz umreißen, was Git drei bedeutet oder in welchen Sphären bewegen wir uns da? Ist es so die Zukunftsmusik von in ein hundert Jahren oder ist es schon was Konkretes und was für Änderungen gibt es dort?"
+        },
+        {
+            "start": 2414340,
+            "end": 2498470,
+            "speaker": "C",
+            "text": "Ich kann nur sagen, es ist halbwegs konkret, was jetzt nicht so unbedingt konkret ist. Git ist jetzt mittlerweile seit eineinhalb, zwei Jahren ungefähr bei uns in der Diskussion. Da geht es dann um einige Änderungen, die nicht rückwärtskompatibel sein werden. Es geht beispielsweise darum, dass wir ein anderes Backend haben, um Referenzen zu speichern. Es geht darum, dass wir eine große Änderung haben, dass wir beispielsweise SHA als Default Hashing Algorithmus ersetzen durch Shaw und noch ein paar andere Themen. Halt wirklich große Änderungen, die der Nutzer auch wirklich merken werden. Wir müssen an diese Änderungen natürlich extremst konservativ rangehen, weil uns natürlich bewusst ist, dass das auch einen wesentlichen Impact auf das gesamte Ökosystem haben wird. Und naja, Git sitzt halt sehr zentral in allen Softwareentwicklungen und dementsprechend können wir halt nicht einfach mal eben sagen, ja, wir haben jetzt mal eben Lust, hier das alles zu ändern und machen es einfach mal morgen, sondern es muss gut geplant sein und es muss vor allem auch gut kommuniziert sein. Konkreter heißt es allerdings, dass wir anstreben, ganz lose vielleicht Ende diesen Jahres, vielleicht irgendwann Mitte nächsten Jahres G auch wirklich veröffentlichen zu können. Da warten wir aber auch noch auf ein paar Faktoren im Ökosystem, sodass wesentliche Bibliotheken beispielsweise Support für Schatz haben oder dass beispielsweise ein GitHub auch Schatz unterstützen kann, weil es bringt nichts, wenn wir unsere Defaults ändern, ohne dass die ganzen Code Hosting Forges das eigentlich unterstützen."
+        },
+        {
+            "start": 2498780,
+            "end": 2505900,
+            "speaker": "A",
+            "text": "Natürlich schon ein bisschen schade, dass das Ökosystem schon eine zentrale Power hat eigentlich über eure Entwicklungs Iteration."
+        },
+        {
+            "start": 2505980,
+            "end": 2554650,
+            "speaker": "C",
+            "text": "Ich würde sagen, es ist Blessing und Curse gleichzeitig, weil es ist natürlich schön, dass quasi jeder Entwickler heutzutage Git benutzt. Das fühlt sich für einen selber natürlich wahnsinnig toll an, wenn man Entwickler im Git Ökosystem ist, weil man auch weiß, dass man einen riesigen Impact hat. Es kann aber auch wirklich wahnsinnig frustrierend sein, wenn schon seit Jahren große Themen wie Charts beispielsweise anstehen, aber einfach nichts passiert in dem Kontext und man halt immer geblockt ist durch die ganzen großen Code Forges, weil die sich halt einfach nicht bewegen. Das ist teilweise halt so ein bisschen ein Chicken und Act Problem, dass man sagt, niemand wechselt auf SHA beispielsweise, weil die Forges es nicht unterstützen, aber die Forges unterstützen es nicht, weil niemand auf SHA wechseln möchte. Und das ist teilweise schon wirklich, es zieht sich dadurch halt extremst in die länge."
+        },
+        {
+            "start": 2554650,
+            "end": 2565450,
+            "speaker": "A",
+            "text": "Lass uns da mal kurz tiefer einsteigen. Sha hast du jetzt als große Änderung angekündigt. Warum sind Hashes überhaupt ein zentrales Designelement von Git beziehungsweise von Git Objekten?"
+        },
+        {
+            "start": 2565450,
+            "end": 2629210,
+            "speaker": "C",
+            "text": "Man bezeichnet Git ja so schön als Content Addressable File system. Das heißt, jedes Objekt ist durch den Inhalt von dem Objekt eindeutig identifizierbar. Ein bisschen weniger abstrakt gesagt heißt es einfach Ich habe irgendeinen Inhalt, irgendeine Datei beispielsweise ich hashe die Datei und dann habe ich den Objektnamen. Und das ist quasi eine der wesentlichen Designkriterien von Git. Dementsprechend ist das ganze Objektmodell darauf aufgebaut. Ein Objekt wird ein anderes Objekt dadurch referenzieren, dass es einfach das hier ist der Hash von dem anderen Objekt. Und wenn man sich dann quasi einfach nur einen Commit irgendwo nimmt, hat man einen kompletten Merkle Tree, der dann eindeutig alle anderen Objekte in der Abhängigkeit identifizieren. Das heißt, über die Hashes kannst du den kompletten Objektgraphen ablaufen und alle anderen Objekte referenzieren. Das heißt, alle vorherigen Commits, alle Dateien, die ausgecheckt werden müssen, alle Verzeichnisstrukturen und so weiter. Und dadurch ist dieser Objekt Hash sehr stark eingebettet in das komplette Datenmodell und von wesentlicher Relevanz. Und das natürlich zu ändern ist relativ schwierig, weil das heißt, dass man alle Objekte neu schreiben müsste."
+        },
+        {
+            "start": 2629290,
+            "end": 2643970,
+            "speaker": "A",
+            "text": "Aktuell nutze ich ja Shaw, wenn ich mich recht erinnere und ihr wollt jetzt auf Chart zwei hundert sechs und fünfzig wechseln. Da geht es aber dann nicht um das Thema Security, sondern eher um Integrität. Schwieriges Wort, oder?"
+        },
+        {
+            "start": 2644290,
+            "end": 2722020,
+            "speaker": "C",
+            "text": "Ja und nein. Integrität ist erstmal das Wesentliche, wofür wir diese Hashes benutzen. Denn man hat natürlich eine schöne Eigenschaft, wenn jedes Objekt eindeutig durch den Hash identifizierbar ist, kann man auch relativ einfach überprü Ist denn dieses Objekt, was dahinter steht, eigentlich noch konsistent, Indem man einfach noch mal neu Hashtag und du wirst ja sofort sehen, hat sich der Hash geändert von dem Objekt? Dann muss da ja irgendwas faul sein. Dann hat sich beispielsweise ein Bit auf der Festplatte geflippt oder sowas. Oder die Datenstrukturen, die ich habe, sind irgendwie korrupt oder was weiß ich was. Das ist eines der wesentlichen Designkriterien, warum wir dieses Hashing haben. Und ja, es wurde gerade am Anfang von dem Git Projekt gesagt, dass Sicherheit keine wesentliche Relevanz für dieses Hashing hat, aber man muss im Endeffekt auch sagen, es stimmt nicht so wirklich. Denn wenn du in der Lage bist, relativ leicht Hash Collisions herbeizuführen, wo quasi das gleiche Objekt oder nee, unterschiedliche Objekte auf den gleichen Namen gehashed werden können, dann wirst du daraus folgend schon ein paar Sicherheitsimplikationen haben, beispielsweise sowas wie Commitsignaturen. Also wenn man eine kryptographische Signatur auf einem gewissen Commit macht, ist ja davon auszugehen, die Person weiß, was sie signiert hat. Aber wenn du jetzt in der Lage bist, eine Hash Kollision herbeizuführen, dann ist ja die Commit Signatur nicht mehr wirklich eindeutig, sondern kann vielleicht das eine Objekt referenzieren oder das kollidierende Objekt und dementsprechend verliert diese ganze kryptographische Signatur so ein bisschen an Wert."
+        },
+        {
+            "start": 2722100,
+            "end": 2736020,
+            "speaker": "B",
+            "text": "Aber habe ich in der Realität wirklich Kollisionen? Also ich könnte mir vorstellen, dass da ja sogar irgendein MD Hash ohne Probleme ausreichen würde, weil wir sprechen da jetzt nicht irgendwie von dem ganzen Internet, sondern von einem Repository."
+        },
+        {
+            "start": 2736180,
+            "end": 2843850,
+            "speaker": "C",
+            "text": "Ohne dass man sie bewusst herbeiführt, hat man eigentlich keine Kollision. Meines Wissens nach gab es bisher weltweit noch keine einzige Kollision mit SHA. Mit MD hätte das vielleicht anders ausgesehen, weil MD halt deutlich schwächer ist, als es mit SHA der Fall ist. Weiß ich aber ehrlich gesagt nicht so ganz. Was man aber auf jeden Fall sagen kann, ist, dass mit MD es viel viel einfacher ist, bewusst Kollisionen herbeizuführen, als es mit SHA der Fall ist. Und das heißt, wenn es irgendwo einen Angreifer beispielsweise geben möchte, der dein Git Repository kompromittieren möchte, ist er mit SHA ziemlich trivial in der Lage, dann halt Kollisionen zu erschaffen und dadurch zumindest einiges an Schaden herbeizuführen. SHA ist allerdings auch nicht mehr so wirklich kollisionsresistent. Es gab ja vor ein paar Jahren den ersten praktisch durchgeführten Angriff, der Shattered heißt. Und da wurde dann ja die erste wirkliche Kollision herbeigeführt mit zwei unterschiedlichen PDF Dokumenten, die beide syntaktisch valide sind, unterschiedliche Inhalte haben, aber den gleichen Objekt Hash haben. Dementsprechend kann man schon davon ausgehen, dass Shawan mittlerweile kryptografisch nicht mehr sicher ist und man kann auch vor allem davon ausgehen, dass es über die nächsten Jahre wahrscheinlich irgendwann auch mal den nächsten Angriff geben wird, der es vielleicht noch schwächer macht, als es momentan schon der Fall ist. Und vor allem auch mit dem allseits beliebten Thema Artificial Intelligence sieht man natürlich momentan, dass die Datenzentren Strukturen immer weiter ausgebaut werden und immer mehr gpus beispielsweise bereitgestellt werden. Und gpus sind auch ein wesentlicher Bestandteil oder ein wesentlicher Faktor, mit dem man relativ gut Hashes berechnen kann. Und je mehr GPU Kapazitäten wir haben, desto einfacher wird es quasi eine Hash Collision auch herbeizuführen. Das heißt, ich würde behaupten, für einen wirklichen Angreifer, der es möchte, wäre er auch in der Lage, heutzutage relativ kostengünstig Hash Kollisionen herbeizuführen. Mit SHA wieder was gelernt."
+        },
+        {
+            "start": 2843850,
+            "end": 2862850,
+            "speaker": "A",
+            "text": "Ich glaube, ich muss mal ein bisschen lokal bei mir experimentieren, ob ich auch Hash Collisions herbeiführen kann. Interessant. In deinem Vor Stemtalk hast du aber von einer weiteren großen Änderung gesprochen, und zwar sogenannten Ref Tables. Erklär mir mal bitte, was Rev Tables sind oder wofür diese genutzt werden oder welches Problem sie überhaupt lösen sollten."
+        },
+        {
+            "start": 2862850,
+            "end": 3186740,
+            "speaker": "C",
+            "text": "Ich glaube, um das zu erklären, muss ich erstmal ein bisschen erklären, wie eigentlich momentane Referenzen gespeichert werden. Ich habe ja schon gesagt, was eine Referenz überhaupt ist. Eine Referenz ist quasi einfach nur ein Name, der mit einer bestimmten Objekt ID verknüpft wird, sodass du halt nicht jedes Mal dir die Objekt ID merken musst in einem Git Repository, sondern dass du einfach sagen Ich möchte jetzt beispielsweise den Main Brand auschecken und dann sagst du halt einfach git checkout main anstatt git checkout Objekt ID. Die sind quasi einfach so ein gewisser Shorthand. Das wurde Ewigkeiten über das sogenannte Files Backend gemacht. Das heiß vereinfacht gesagt ist jede Referenz erstmal als eine einzelne Datei abgespeichert. Der Main Branch beispielsweise ist in dem Git refs hats main als Datei abgespeichert und diese Datei wird einfach nur die Objekt ID beinhalten. Skaliert natürlich so erstmal nicht unbedingt gut, weil es durchaus Repositories gibt, wo du Millionen von Referenzen hast und du willst nicht zwanzig Millionen einfache Dateien auf deiner Festplatte haben, um die Referenzen alle lesen zu können, weil es natürlich erstmal ineffizient ist, was die CPU Zeit angeht, weil du unter Umständen halt alle Referenzen laden musst und du keine zwanzig Millionen Dateien öffnen willst. Andererseits ist natürlich auch vom Storage Space relativ ineffizient, weil es oftmals so ist, dass eine Referenz den kompletten Disk Sektor beispielsweise braucht im Dateisystem. Deswegen packt Git regelmäßig schon im Files Backend diese losen Referenzen in die Packdress File. Das heißt, es ist dann eine einzelne Datei, die alle deine Referenzen beinhaltet mit der jeweiligen Objekt ID. Das ist natürlich deutlich effizienter, wir haben eine deutlich geringere Festplattenbelastung, wir müssen nicht mehr alle Dateien einzeln öffnen und so weiter. Aber auch mit Pack References haben wir einige Probleme. Wir haben beispielsweise eines meiner Lieblingsrepositories da draußen hat ungefähr fünf und zwanzig Millionen Referenzen und fünf und zwanzig Millionen Referenzen summieren sich auf so einer Packdress File, die ungefähr eineinhalb GB groß ist, was schon relativ viel ist. Das Problem ist, jedes Mal, wenn du deine Referenzen packen möchtest, musst du die komplette Packdress Datei neu schreiben, das heißt eins komma fünf GB neu schreiben. Das größere Problem ist allerdings, jedes Mal, wenn du eine Referenz löschen möchtest in deinem Repository, beispielsweise weil du einen Branch löscht, musst du das auch aus der Pack Graphs Datei rauslöschen. Heiß eine einzelne gelöschte Referenz wird jetzt dafür sorgen, dass du eins komma fünf GB an Daten neu schreiben musst, was jetzt vielleicht nicht unbedingt effizient ist. Rev Tables sind dafür quasi so ein bisschen die Lösung, denn mit Rev Tables haben wir quasi ein komplett anderes Datenformat. Wir haben erstmal quasi die individuelle Table. In den Table haben wir quasi ein Binärdateienformat, was die einzelnen Referenzen auflistet, was schon mal ein bisschen effizienter ist, was den Festplattenspeicher angeht, weil du halt weniger Daten speichern musst, weil es halt in einem Binärformat ist. Zusätzlich haben wir so was wie Prefix Compression beispielsweise, sodass wir nicht die kompletten Referenznamen jedes Mal speichern müssen, sondern wenn du jetzt refs hat eins hast, refs head zwei kannst du bei dem zweiten Mal das Refs Heads weglassen. Durch Prefix Compression macht es auch noch mal ein bisschen effizienter, wodurch wir insgesamt, ich glaube, fast die Hälfte weniger an Festplattenspeicher benötigen dafür. Zusätzlich haben wir aber nicht nur eine Rev Table, sondern wir haben mehrere Rev Tables, die dann in einem sogenannten Stack organisiert sind. Und vor allem kannst du dann quasi in einer zukünftigen Ref Table einfach nur einen sogenannten Tombstone Marker drin haben, der Ich lösche jetzt Referenz eins, sodass du nicht mehr alles neu schreiben musst, jedes Mal, wenn du eine einzelne Referenz löschen möchtest. Wir benutzen dann noch ein paar weitergehende technische Sachen, wie beispielsweise nennst du Geometric Compaction. Das heißt, wir gucken quasi, wie müssen wir diese einzelnen Tabellen zusammen mergen, um nicht jedes Mal quasi alles neu schreiben zu müssen, aber um trotzdem möglichst wenig Tabellen insgesamt zu haben, sodass wir quasi dann eine geometrische Sequenz haben an Tables. Das heißt, jede Table muss mindestens doppelt so groß sein wie die nächstkleinere, so dass du quasi erstmal eine Tabelle hast, die hat zehn Referenzen, dann hast du eine Tabelle, die hat acht Referenzen, dann hast du noch eine Tabelle, die hat zwei Referenzen und wenn du dann quasi eine weitere Referenz hinzufügen würdest, sodass die unterste dann drei hätte, dann würdest du quasi nach oben hin weg merchen. Ist relativ technisch, aber das erlaubt uns quasi einige Probleme zu lösen, wenn es um Effizienz geht. Ein weiteres Problem, was wir außerdem mit Rev Tables lösen wollen, ist, dass Dateisysteme erstaunlicherweise relativ komplex sind und vor allem die Art und Weise, wie Dateisystem Pfade repräsentiert werden, je nach Betriebssystem auch ziemlich unterschiedlich sind. Wir haben das Problem, dass eine einzelne Referenz als tatsächliche Datei gespeichert wird. Das heißt, du hast git ref hat main beispielsweise, das heißt, der Name der Referenz ist im Dateisystem als Pfad abgespeichert. Funktioniert unter Linux relativ gut. Wenn du aber beispielsweise einen Windows oder macOS hast, wo du ein Dateisystem hast, das case insensitive ist, funktioniert das nicht mehr so gut, weil du dann beispielsweise keine zwei Branches haben kannst, wo einfach nur das Casing unterschiedlich ist. Unter Linux kannst du das haben und dementsprechend kannst du das auch beispielsweise auf GitHub oder GitLab hochpushen. Aber wenn dann jemand unter Windows das runter fetchen möchte, dann hat er ein bisschen Probleme, weil er die halt nicht mehr in seinen Dateisystemen strukturieren kann. Und das ist halt auch ein wesentliches Problem, was mit Rev Table jetzt nicht mehr existieren wird, weil dort die Referenznamen in dem Binärformat gespeichert sind und nicht mehr als Teil des Dateisystempfades."
+        },
+        {
+            "start": 3187060,
+            "end": 3218030,
+            "speaker": "A",
+            "text": "Ich wollte gerade fragen, und die Frage hast du mir eigentlich schon beantwortet, auch mit deinem letzten Kommentar, ob das etwas ist, was Entwickler innen aktiv merken oder ob das eher so ein Unter der Haube Thema ist. Ganz lange habe ich gedacht, unter der Haube bis zu dieser Case Intensivität, da würde ich sagen, okay cool, das ermöglicht ja ein neues Feature. Auf der anderen Seite frage ich mich gerade, fixt ihr damit Sachen, die in Filesystemen eigentlich gar nicht möglich sein sollten? Case Incentive Filesysteme finde ich ein bisschen schwierig. Ich bin auf einem Mac, ich kenne dieses Problem und das nervt mich tierisch."
+        },
+        {
+            "start": 3218030,
+            "end": 3240210,
+            "speaker": "C",
+            "text": "Viel schlimmer ist ja auch noch Windows, muss man sagen, weil unter Windows hast du nicht nur das Problem, dass du Case insensitive bist, sondern dass Windows dir auch gar nicht erlaubt, viele verschiedene Dateinamen überhaupt erst zu erstellen. Ist dann beispielsweise sowas wie COM oder LPT, weil es irgendwann mal zu DOS Zeiten spezielle Dateinamen waren, die für bestimmte Funktionalitäten reserviert waren. Das heißt, du kannst keinen Branch haben, der COM heißt."
+        },
+        {
+            "start": 3240210,
+            "end": 3243610,
+            "speaker": "A",
+            "text": "Okay, also reservierte Keywords haben die, Das wusste ich jetzt auch noch nicht richtig."
+        },
+        {
+            "start": 3243770,
+            "end": 3248010,
+            "speaker": "C",
+            "text": "NTFS ist ein sehr, sehr interessantes Dateisystem, würde ich insgesamt sagen."
+        },
+        {
+            "start": 3248010,
+            "end": 3251570,
+            "speaker": "A",
+            "text": "NTFS ist auch immer noch das Filesystem, was auf Windows aktiv genutzt wird, oder"
+        },
+        {
+            "start": 3251570,
+            "end": 3270200,
+            "speaker": "C",
+            "text": "aktuell, soweit ich weiß. Ja, ich weiß, dass es mittlerweile auch Möglichkeiten gibt, bestimmte Features in NTFS zu ändern, sodass beispielsweise reservierte Dateinamen oder sowas nicht mehr existieren, meines Wissens nach, aber ich benutze in meinem Alltag immer nur Linux. Dementsprechend bin ich da auch so ein bisschen out of my depth, wie man so schön sagt."
+        },
+        {
+            "start": 3270360,
+            "end": 3279280,
+            "speaker": "A",
+            "text": "Ja gut, aber ich meine, Default Settings werden ja von den meisten Leuten nicht geändert, besonders nicht auf Filesystemebene. Also deswegen würde ich sagen, die kann man halt schon als Standard setzen."
+        },
+        {
+            "start": 3279280,
+            "end": 3280600,
+            "speaker": "C",
+            "text": "Ja, auf jeden Fall."
+        },
+        {
+            "start": 3280840,
+            "end": 3333400,
+            "speaker": "A",
+            "text": "Ein weiterer großer dritter Punkt, den du in deinem Fosk angesprochen hast, waren große Dateien oder besserer Support für größere Dateien in Git Repositories. Und auf Basis meines Wissens nach haben da besonders Leute, die irgendwie Spiele entwickeln, ein Riesenproblem, weil die natürlich die ganzen Grafik Assets und Co. Oder generell Binary Dateien in Repositories, Binary Dateien kann man ja auch nicht so wirklich gut diffen, würde ich mal sagen. Also geht bestimmt, wirst du sagen, aber meines Wissens nach, ich versuche immer Large Binary Files zu verhindern, weil dieses ganze Gehässle mit was nutzt man heutzutage, Git, LFS und Co. Es gibt, klingt immer wie so ein Plugin da dran und das war immer so ein bisschen, muss das jetzt sein? Erklären wir uns mal bitte, was ihr da vorhabt bzw. Welches Kernproblem ihr eigentlich identifiziert habt."
+        },
+        {
+            "start": 3333400,
+            "end": 3512190,
+            "speaker": "C",
+            "text": "Also erstmal zu Git LFS. Ja, es ist genau das. Es ist ein Plugin, es ist halt nicht offizieller Bestandteil von Git, sondern ist komplett extern entwickelt und dafür muss man sagen, funktioniert Git LFS erstaunlich gut. Was es nämlich macht, ist, dass es quasi, anstatt die einzelnen Binärdateien wirklich in die Commit Historie reinzuspeichern und dadurch in dem einzelnen Git Repository zu speichern, speichert es einfach nur ein Pointer auf diese Datei und lädt diese Datei dann auf einen separaten LFS Server nach oben, sodass das eigentliche Repository gar nicht mehr deutlich größer wird durch diese Binärdateien und trotzdem in der Lage ist, zu einem späteren Zeitpunkt sich on demand die großen Dateien runterzuladen, wenn es möchte. Hat aber halt einige Probleme, wie du schon meintest, es ist halt erstmal ein Add on, das heißt, dein Server muss es unterstützen, auch wenn es die meisten Server mittlerweile tun. Aber wenn du jetzt, wie wir vorhin schon gesagt hatten, wenn du einfach nur eine Git Executable auf deinem eigenen Server rumzufliegen hast und dann einfach per SSH reingehst, dann wirst du damit kein LFS Support bekommen und das ist natürlich nicht so prickelnd. Zusätzlich musst du dann noch Sachen machen, wie beispielsweise deine Git Attributes pflegen, sodass du Git LFS sagst oder Git im Endeffekt sagst, welche Dateien überhaupt mit Git LFS gespeichert werden sollen und welche nicht. Das heißt, du hast dann noch einen wesentlichen Overhead, weil du halt konfigurieren musst. Und das größte Problem ist, wenn die Konfiguration nicht stimmt, dann hast du jetzt aus Versehen doch eine Binärdatei in deinem Repository, was das Repository für immer größer machen wird. Und wenn es dann aus Versehen mal eben fünf hundert Megabyte waren und dann an einem anderen Tag nochmal aus Versehen fünf hundert Megabyte und Das läppert sich dann über die Zeit, dann hast du halt irgendwann auch wieder in deinem Repository, das viele, viele Gigabyte groß ist und du bekommst diese Binärdateien nicht mehr raus aus Git, ohne dass du die komplette Historie einmal komplett neu schreibst und quasi eine Migration machst. Und das ist halt super, super schmerzhaft, sowas zu machen. Deswegen ist halt unser Ansatz, dass wir wollen, dass so Tools wie Git lfs gar nicht mehr nötig sind, sondern dass du stattdessen in der Lage bist, einfach eine Binärdatei in Git reinzuschmeißen und Git damit umgehen kann. Dazu gehören erst mal ziemlich viele verschiedene Komponenten. Es ist nicht ein einziges Projekt und dann ist alles getan, sondern da müssen wir in Git einige Änderungen machen. Das fängt einerseits an beim Festplattenformat, das heißt, wie speichern wir überhaupt Objekte, sodass sie auch effizient gespeichert werden können, auch wenn die einzelnen Dateien Gigabytes groß sind oder Dutzende von Gigabytes teilweise sogar. Geht dann aber auch weiterhin, wie handeln wir sowas überhaupt effizient auf der Serverseite? Wie schaffen wir das, dass wir effizient so große Binärdateien zwischen der Client Seite und der Serverseite überhaupt austauschen können. Beispielsweise, wenn sich jetzt nur ein Byte oder sowas in einer sehr großen Binärdatei geändert hat, willst du nicht die komplette neue Version nochmal rüberschieben müssen, sondern du willst im Idealfall quasi nur eine minimale Änderung rüberschieben können. Und da brauchen wir auch nochmal Änderungen in Git selber, um quasi das Remote Protokoll, also das, wie der Client und der Server miteinander reden, dass wir das ein bisschen adaptieren können."
+        },
+        {
+            "start": 3512350,
+            "end": 3539680,
+            "speaker": "B",
+            "text": "Aber das ist ja auch das Grundproblem grundsätzlich, dass du den Div bei Binärdaten eigentlich gar nicht machen kannst, oder? Also bei den klassischen, bei den meisten Binärformaten zumindest, ändert sich ja wirklich die gesamte Datei. Das ist ja auch das große Problem bei den Spielern, die halt irgendwelche Shader oder sonstige Dinge haben, da änderst du halt ein Pixel und die gesamte Binärdatei ändert sich. Also du bräuchtest ja dann sogar irgendwie Div Tools, die tiefer reinblicken könnten in die Binärdateien, damit du es effizient überhaupt hinbekommst."
+        },
+        {
+            "start": 3539760,
+            "end": 3578620,
+            "speaker": "C",
+            "text": "Stimmt hundertprozentig. Und hier muss man auch sagen, es kommt wieder sehr stark darauf an, was für eine Arten von Binärdateien du hast. Es gibt Binärdateien, da hast du das Problem nicht. Da kannst du quasi einfach ganz vorne irgendwo einen Byte ändern und dann wird sich der Rest trotzdem nicht verändern. Und das ist unser erstes Ziel, erstmal daran zu gehen und quasi zu schaffen, dass solche Binärdateien effizient auch übertragen werden können. Aber das andere Problem, dass sich dann wirklich die komplette Datei ändert, da musst du dann ja schon irgendwie anfangen mit semantischen Divs zu arbeiten, weil ansonsten kannst du gar nicht oder ansonsten kann Git gar nicht effizienten berechnen. Aber das ist dann quasi nochmal ein Problem, was ich erst mal bewusst in die Zukunft schiebe, weil das dann noch mal deutlich komplexer werden wird."
+        },
+        {
+            "start": 3578860,
+            "end": 3587500,
+            "speaker": "B",
+            "text": "Also ihr plant jetzt keine externen semantischen div Tools irgendwie einbindbar zu machen oder so. Also soweit geht das Ganze noch nicht, oder?"
+        },
+        {
+            "start": 3587580,
+            "end": 3630600,
+            "speaker": "C",
+            "text": "Naja, es gibt schon Support in Git für semantische div Tools, die du einbinden kannst. Es gibt sogenannte div und merge Driver, die du in Git haben kannst, Die sind aber kleinseitig. Das heißt, du kannst in Git eine Git Attributes Datei quasi so schreiben, dass du sagst, eine bestimmte Datei, beispielsweise eine PNG Datei, soll mit einem Image Stiffing Tool gedifft werden. Das ist dann aber, wie gesagt, erstmal ein kleinseitiges Feature, sodass du quasi als Endanwender sehen kannst, was hat sich denn jetzt eigentlich geändert in meiner PNG Datei, so dass quasi ein kleiner Bereich in der PNG Datei irgendwie gehighlighted wird und jetzt zeigen das hier hat sich geändert. Ändert aber erstmal nichts an dem anderen Problem, dass wir quasi immer noch schaffen müssen, irgendwie auch die Objekte, also die Objektives effizient berechnen zu können und auch zwischen Client und Serverseite austauschen zu können."
+        },
+        {
+            "start": 3630920,
+            "end": 3636680,
+            "speaker": "B",
+            "text": "Und das Ganze ist auch für Git geplant oder ist das komplett separates Projekt?"
+        },
+        {
+            "start": 3636840,
+            "end": 3680510,
+            "speaker": "C",
+            "text": "Das ist erstmal ein separates Projekt, weil wie ich schon meinte, das sind viele verschiedene Sachen, die wir angehen müssen. Und ich habe jetzt seit eineinhalb Jahren bin ich dabei am Arbeiten, nennt sich Pluggable Object Databases, ist quasi die Möglichkeit, das Backend, wie Objekte gespeichert werden, komplett auszutauschen. Woran ich jetzt quasi konkret arbeite, ist erstmal ein ordentliches Interface in Git zu schaffen, um zu Wir haben erstmal ein Layer, das abstrahiert, wie wir auf Objekte zugreifen können, sodass wir dann im Nachhinein sagen können, wir tauschen dieses Layer aus gegen ein anderes Layer, sodass wir ein anderes Dateiformat haben können. Und sobald wir diese Möglichkeit haben, haben wir erst quasi einfache Möglichkeiten, auch ein für Binärdateien effizienteres Format zu implementieren."
+        },
+        {
+            "start": 3680760,
+            "end": 3728130,
+            "speaker": "A",
+            "text": "Ich stelle mir gerade die Frage, und die ist sehr wahrscheinlich sehr simpel gestellt und deutlich komplexer unter der Haube aber wäre es nicht möglich, dass man komplett auf Binary Dateien oder auf Dateien größer eins MB oder irgendeinem Schwellenwert, ab hier arbeiten wir nur noch mit Lazy Loading. Das bedeutet, dass auch beim Clone, Fetch und Co. Einfach die Dateien initial einfach mal gar nicht übertragen werden, sondern die liegen irgendwo auf einem Object Storage, bei euch auf dem Server oder bei dem Forge auf dem Server. Und wenn der Client drauf zugreift, dann findet das Lazy Loading, das Fetching statt, weil dann könnte man sagen, okay, man reduziert die Netzwerk Bandbreite enormst und die Annahme wäre jetzt hier, dass die großen Binary Dateien selten angefasst werden oder dass kleinere Dateien mehr angefasst werden."
+        },
+        {
+            "start": 3728130,
+            "end": 3882810,
+            "speaker": "C",
+            "text": "Und das ist auch genau eine der Sachen, eine der großen Projekte, die wir momentan angehen. Und da gehen wir auch wieder ein bisschen zurück zu dem eigentlichen Thema. Wird Git eigentlich immer zentraler? Wird es genau durch solche Probleme. Je größer deine Repositories werden, desto mehr muss Git halt ein bisschen zentraler werden, weil du halt irgendwann quasi den Load nicht mehr handeln kannst. Du kannst keine Repositories lokal haben, die fünf hundert Gigabyte groß sind. Das passt bei vielen Entwicklern gar nicht mehr auf die Festplatte rauf. Und das, was du gerade beschreibst, gibt es tatsächlich schon im Git. Das nennt sich erstmal promiser Remotes bzw. Partial Clones. Das heißt, du kannst sagen, Git clone Object Filter. Ne, ich glaube, das ist Filter, nicht Object Filter. Und dann kannst du quasi sagen, welche Objekte herausgefiltert werden sollen. Beim initialen Clone kann beispielsweise, genauso wie du gerade gesagt hast, jede Blob Datei, die größer als eins Megabyte ist, soll rausgefiltert werden. Das heißt, Git clone Filter, blob colon limit one M. Und dann würdest du genau so einen Clone bekommen, wo erstmal alle Objekte größer als eins Megabyte rausgefiltert worden sind. Und jedes Mal, wenn du dann beispielsweise ein anderer Commit auscheckst, wo genau so ein Blob jetzt benötigt wird, dann wird Git automatisch diesen Blob von dem Remote fetchen und dann reinlegen. Das Problem hier ist allerdings, dass es noch relativ komplex ist und ich würde behaupten, dass die wenigsten von Partial Clones überhaupt schon mal gehört haben. Und die Frage ist vor allem, wie genau soll dieser Filter jetzt eigentlich aussehen? Weil je nach Server kann es ja beispielsweise auch unterschiedlich effektiv sein. Der eine Server kann beispielsweise vielleicht ein gewisses Special Casing haben für sehr große binäre Dateien, so dass die vielleicht irgendwo ganz woanders liegen. Das heißt, der Server weiß eigentlich, was ist der beste Filter für dich. Und da gehen wir jetzt an die Large Object Promises ran. Das ist ein Feature, was wir gerade dabei sind in Git zu implementieren. Und die Idee dahinter ist, dass der Server, wenn er Client einen Fetch oder einen Clone macht, dir Guck mal, das sind meine Promissign Remotes, die ich kenne und das sind die jeweiligen Filter, die in diesen Promisser Remotes dranhängen. Du kannst dich jetzt dazu entscheiden, einen von dieser Promiser oder alle von denen zu benutzen. Das heißt, du würdest dann auf der Client Seite nur noch sagen Git Clone Filter Auto und dann wirst du automatisch quasi einen idealen Filter benutzen, der dann in deiner Konfiguration von Git gespeichert wird. Und von da ausgehend wirst du dann immer die Remotes benutzen, die der Server dir oder die Promiser Remotes benutzen, die der Server dir genannt hat. Das ist noch nicht komplett fertig. Die Partial Clones funktionieren, aber die Large Object Promisers Machen wir jetzt gerade noch so die finalen Schritte, sodass quasi dann auch die Konfiguration wirklich auf der Client Seite auch persistiert wird, wenn der Server dir sowas announced, mehr oder weniger."
+        },
+        {
+            "start": 3882890,
+            "end": 3990610,
+            "speaker": "A",
+            "text": "Diese Episode gibt mir einen ganz komischen Vibe, muss ich sagen. Auf der einen Seite habe ich gerade ganz kurz gedacht, ich bin an was ganz großem dran, dass der Patrick gesagt Andi hat recht, das wird jetzt als zentral und so weiter, Wow, ich bin hier an was ganz großem dran. Auf der anderen Seite kommt er da mit Features um die Ecke und ich habe gerade so das Gefühl, ich habe keine Ahnung, was geht ist. Ich benutze es irgendwie jeden Tag, meine sechs, sieben, acht Befehle und du Haus hier, Partial Clones kannte ich, Shadow Clones kannte ich, Bar Repositories, all Die Thematiken kannte ich, aber das, was du gerade erzählst, da bin ich einfach raus. Also schon faszinierend. Aber du gibst mir auch ein gutes Gefühl, nachdem du nämlich gerade gesagt hast, okay, du arbeitest schon mit so lange und du lernst immer noch irgendwelche Command Line Flex oder ähnliches kennen. Was ich aber auch interessant fand, dass du gerade zum Beispiel bei den Ref Tables Tombstones erwähnt hast. Jetzt kommst du mit Pluggabel Object Databases um die Ecke. Das gibt mir so ein bisschen so, ich nenne es mal Object Storage Vibes, so Amazon S und Co. Also das bedeutet, habt ihr dann vielleicht irgendeine Art tiered Storage als File Backend später hinten dran im Git? Und da frage ich mich natürlich auch nicht, frage ich. Ich finde das schön zu sehen, dass ziemlich viele Elemente, die, weiß ich nicht, aus verschiedenen Bereichen kommt. Tombstones kommt glaube ich aus der, aus der Datenbankwelt, um Deletes ebenfalls effizienter zu gestalten. Object Storage, keine Ahnung, zumindest alle Datenbanken binden das jetzt gerade auch ein. Also du kannst fast, kannst Tabellen auf Object Storage legen oder Tier Storage gibt es ja schon seit Ewigkeiten in der Datenbank. Da finde ich schon interessant, dass auch so was mehr oder weniger kleinseitiges lokales natürlich wie Git es anbindet. Klar, das ist alles auf Serverseite hier, aber interessant, interessant. Wie viel Inspiration nehmt ihr euch denn aus der Datenbankwelt oder aus der, ja, aus anderen Segmenten der Entwicklung, Informatik?"
+        },
+        {
+            "start": 3990690,
+            "end": 4083620,
+            "speaker": "C",
+            "text": "Ich würde sagen, zu wenig, deutlich zu wenig. Eines der wesentlichen Probleme, die wir vor allem hatten, ist, dass Git relativ lange Zeit ziemlich stagnant war in seiner Entwicklung. Das heißt, ich würde behaupten, wir haben ein bisschen zu lange geschlafen. Wir haben quasi gesehen, dass es Skalierungsprobleme gibt, aber wir haben immer weiter daran rumgeschraubt, unser lokales Optimum, was wir hatten, weiter zu optimieren. Hier vielleicht noch mal eine wesentliche Optimierung zu machen in der Art und Weise, wie wir alles handeln. Da noch mal eine kleine Optimierung. Und es hat dann auch oftmals geholfen, die Probleme, die wir dann akut hatten, zu beheben. Aber es hat halt nicht so wirklich geholfen, wirklich auch die langfristigen Probleme handeln zu können, quasi mit der wachsenden Größe an Repositories auch weiterhin umgehen zu können, weil mit lokalen Optimierungen kommst du halt nur so weit. Und deswegen kommen halt vor allem so Sachen wie Rev Tables und jetzt halt auch Pluggabel Object Databases. Und da ist natürlich meine Idee auch ich möchte nicht immer das Rad neu erfinden. Ich möchte halt auch einfach mal Technologien benutzen, die schon existieren. Wie du schon meintest, Blob Storage oder Object Storage S. Warum benutzen wir sowas nicht? Warum können wir sowas nicht mal eben benutzen? Naja, weil Gitter dafür ursprünglich nicht designt wurde. Es ist halt zwanzig Jahre alt und vor zwanzig Jahren gab es das Zeug alles noch nicht so wirklich. Klar, ich meine, Datenbanken gab es natürlich schon und wahrscheinlich gab es auch schon Tombstones, aber gerade am Anfang wurde halt erstmal quasi alles sehr speziell nur für Git entwickelt und da sind wir jetzt gerade. Das heißt, wir müssen jetzt erstmal aufschließen quasi mit der Industrie, um uns die Möglichkeit zu geben, dann auch aktuelle Trends vielleicht für Git zu benutzen und dadurch besser skalieren zu können."
+        },
+        {
+            "start": 4083780,
+            "end": 4100140,
+            "speaker": "B",
+            "text": "Wobei ich muss ja jetzt als Datenbank Fan auch einwerfen, es gibt ja auch die umgekehrte Seite, so wie gitbutler zum Beispiel, die dann Git als Datenbank verwenden, also was die an Metadaten und so weiter haben, speichern die alles. Also die missbrauchen fast Git, um dort drin dann alle Daten zu speichern."
+        },
+        {
+            "start": 4100140,
+            "end": 4177670,
+            "speaker": "C",
+            "text": "Ich muss sagen, ich freue mich sehr darüber, dass skipbutler genannt wird, weil ich die Firma super gerne mag. Ich habe mit denen viel zu tun und auch mit dem Scott habe ich schon regelmäßig über die ganzen Thematiken gequatscht und sie gehen halt auch viele neue Wege im Git Projekt und versuchen auch wieder so ein bisschen Innovation reinzubringen. Und ja, man sieht es definitiv, dass viele Projekte, auch gitbutler versuchen, alle möglichen Metadaten in Git reinzuspeichern. Und man sieht auch beispielsweise auf der Git Mailing Liste kommen immer mal wieder Leute ran, die hier guck mal, ich will eine Datenbank implementieren in Git, weil Git mir schon so viele Sachen gibt, beispielsweise Versionierung und dann brauche ich mich ja um so viel anderes gar nicht mehr zu kümmern. Man muss aber auch dazu Git ist keine universelle Datenbank. Du wirst halt Probleme haben in Git, die du halt mit einer ordentlichen Datenbank Lösung nicht haben würdest, weil Git halt einfach nicht dafür gemacht ist. Git ist halt eine sehr, sehr spezielle Datenbank, die für ein ganz konkretes Problem gebaut würde und zwar Versionskontrollsysteme und Versionierung davon dementsprechend man kommt wahrscheinlich bis zu einem gewissen Grad auch wirklich voran, wenn man Git als Datenbank benutzen möchte, aber ideal ist es dafür nicht und ich rate immer jedem davon, davon auch wirklich Abstand zu nehmen und vielleicht eine ordentliche Datenbank zu benutzen für das Problem, was sie lösen möchten, weil sie ansonsten sehr schnell auch an Skalierungsprobleme rankommen werden, wenn sie halt so sehr datenbankspezifische Probleme lösen wollen."
+        },
+        {
+            "start": 4177670,
+            "end": 4191669,
+            "speaker": "B",
+            "text": "Jetzt hast du ganz am Anfang schon gesagt, was wir uns wirklich anschauen sollten, ist Interactive Rebase. Wenn du jetzt in die Zukunft blickst, zwei tausend sieben und zwanzig, auf welches Feature freust du dich am meisten, dass dann alle Entwickler sich anschauen müssten."
+        },
+        {
+            "start": 4191749,
+            "end": 4353060,
+            "speaker": "C",
+            "text": "Ich hatte es ja schon einmal ganz kurz erwähnt, Git History ist so eines der neuen Tools, die ich sehr interessant finde, weil wir mit Git History versuchen, die Usability so ein bisschen geradezu ziehen in Git. Git ist ja ziemlich bekannt dafür, dass das User Interface jetzt nicht unbedingt das Gelbe vom Ei ist, sondern doch viele viele verschiedene Stellen hat, wo man denkt, könnte ja durchaus besser sein, könnte durchaus konsistenter sein und so weiter. Und Git History wird das nicht alles auf einmal konsistent machen. Es geht gar nicht so wirklich, weil, naja, Git ist halt organisch gewachsen über viele Jahre und mit einem weiteren Command wird man jetzt nicht alles andere konsistent machen. Aber was wir mit Git History machen wollen, ist halt ein einfaches Tool bereitstellen, mit dem du deine Repository History anpassen kannst. Das heißt, es wird Sub Commands bereitstellen, wie beispielsweise, ich möchte die Commit Message anfassen, ich möchte einen Commit aufsplitten in zwei, ich möcht Commits reordern, ich möchte mehrere Commits zusammen mergen in eins und so weiter. Und zusätzlich eine weitere Sache, die Git History auch anders macht als Git Rebase, ist, dass die Idee dahinter ist, dass es Stack Branch Workflows erlauben soll. Stack Branch ist quasi, dass man mehrere Branches hat, die aufeinander aufbauen, wo man quasi gleichzeitig ist, die alle zu entwickeln und irgendwann dann quasi nach und nach die einzelnen Branches. Das heißt jetzt allerdings, wenn ich jetzt quasi mehrere Branches habe, die aufeinander aufbauen und ich im untersten Branch irgendwie was anpasse, muss ich alle Branches, die darauf aufbauen, auch noch mal rebasen, was natürlich super super nervig ist für Nutzer. Und Git History geht da quasi einen anderen Weg. Und wenn du die Commit Message von einem Commit im ersten Branch anpasst, werden automatisch alle anderen Branches auch gerebased, so dass die dann quasi den neuen Commit auch mit beinhalten. Der Nutzer muss sich nicht mehr damit selber auseinandersetzen. Da wird es noch einige weitere Sachen geben, an denen wir arbeiten werden. Vor allem sind viele Features da von Jiu Jitsu ein bisschen inspiriert, was ein relativ neuer Git kompatibler Command Line Client ist. Heiß wir wollen beispielsweise wie First Class Conflicts haben, dass du quasi Konflikte auch direkt in der Git Historie erstmal abspeichern kannst und direkt weitermachen kannst, sodass du die Konflikte erst zu einem späteren Zeitpunkt wirklich beheben kannst. Change ids werden da unter Umständen auch nochmal von Relevanz sein, wo eine Change ID quasi ein Identifier für einen bestimmten Commit ist, der sich aber nicht ändert, weil wir haben ja vorhin schon gesagt, wir haben erstmal die Objektnamen, also die Object ids, die von dem Hash ausgehen. Das heißt aber auch, wenn du den Commit irgendwann änderst, wird sich natürlich der Name des Objektes auch ändern. Die Change ID allerdings wird konstant bleiben, sodass du den gleichen Commit dann über die Change ID referenzieren kannst, ohne dass sich das irgendwie ändert. Das heißt, wenn ich den beispielsweise umgeschrieben habe, kann ich weiterhin die gleiche Change ID benutzen."
+        },
+        {
+            "start": 4353060,
+            "end": 4359200,
+            "speaker": "B",
+            "text": "Wann werden wir Git History verwenden können? Zwei tausend sieben und zwanzig habe ich schon gesagt, das sollte er dann halten. Geht es früher auch noch."
+        },
+        {
+            "start": 4359360,
+            "end": 4364160,
+            "speaker": "C",
+            "text": "In zwei Wochen kommt die nächste Git Version raus und da ist der erste Stand von Git History mit drin."
+        },
+        {
+            "start": 4364160,
+            "end": 4366400,
+            "speaker": "B",
+            "text": "OK, perfekt. Das ist ja eine Ansage."
+        },
+        {
+            "start": 4366400,
+            "end": 4391940,
+            "speaker": "C",
+            "text": "Ich glaube, es sind tatsächlich drei Wochen, keine zwei Wochen, aber auf jeden Fall bald. Aber Git History wird anfangs erstmal sehr eingeschränkt sein. Es gibt anfangs erstmal nur zwei Sub Commands sein. Das ist einerseits githistory reword, um halt die Commit Message um ändern zu können und dann ist es andererseits Git History Split, um einen Commit in zwei Commits aufzusplitten. Das ist es erstmal. Wir werden im nächsten Release Zyklus aber weiter daran arbeiten und mehr Commands implementieren."
+        },
+        {
+            "start": 4392420,
+            "end": 4397059,
+            "speaker": "B",
+            "text": "Aber das ist noch der normale Zweier Brunch Git, zwei ganz normale Versionen."
+        },
+        {
+            "start": 4397300,
+            "end": 4404900,
+            "speaker": "C",
+            "text": "Es ist ja keine Rückwärts inkompatible Änderung, sondern es ist ja einfach nur ein weiterer Befehl, der hinzugefügt wird. Und das kann man ja auch einfach in einem ganz normalen Release machen."
+        },
+        {
+            "start": 4404900,
+            "end": 4425070,
+            "speaker": "A",
+            "text": "Wolfgang, nicht immer fordern, auch mal machen. Ich bin mir sicher, dass wenn du den Patrick fragst, ob der dir mal eine Stunde Code Einführung in Git gibt, in Perl wolltest du jetzt sagen, in was auch immer. Du hast gerade hier gesagt, Perl war deine erste Programmiersprache und du bist fast fluent da drin. Also würde ich sagen, du bist willkommen"
+        },
+        {
+            "start": 4425070,
+            "end": 4429110,
+            "speaker": "B",
+            "text": "als neuer Symbol, als Git Contributor."
+        },
+        {
+            "start": 4429110,
+            "end": 4430990,
+            "speaker": "C",
+            "text": "Von daher, also ich würde mich auf jeden Fall freuen."
+        },
+        {
+            "start": 4431070,
+            "end": 4433160,
+            "speaker": "A",
+            "text": "So, Wolfgang Pressure ist da."
+        },
+        {
+            "start": 4435720,
+            "end": 4441960,
+            "speaker": "C",
+            "text": "Ich würde auch mal sagen, in einer Stunde kommt man da nicht allzu weit. Da ist die Git Code Basis dann doch ein bisschen zu kompliziert und komplex."
+        },
+        {
+            "start": 4442120,
+            "end": 4452840,
+            "speaker": "A",
+            "text": "Ja gut, also ich würde vom Wolfi schon erwarten, dass er dann einmal Cloud Code rüberjagt und sagt, erklär mir mal ein bisschen die Grundpfeiler hier von der Codebase und dass da dann für die Stunde mit gezielten Fragen auf dich zukommt."
+        },
+        {
+            "start": 4452840,
+            "end": 4458600,
+            "speaker": "B",
+            "text": "Jetzt habe ich mir gedacht, wir schaffen eine Episode ohne den Bot, irgendwas mit AI, aber jetzt hast du es wieder versaut."
+        },
+        {
+            "start": 4459110,
+            "end": 4463990,
+            "speaker": "A",
+            "text": "Nee, ich habe es nicht versaut. Ich motiviere dich jetzt endlich mal zu Git zu kontributen, damit wir nämlich getester schneller bekommen können."
+        },
+        {
+            "start": 4464070,
+            "end": 4467110,
+            "speaker": "B",
+            "text": "Wie der Andi immer sagt, ich werde mir das am Wochenende mal anziehen."
+        },
+        {
+            "start": 4467110,
+            "end": 4584760,
+            "speaker": "A",
+            "text": "So sieht es aus. Welches Wochenende ist eine andere Sache. Das Lustige ist, und wir kommen jetzt auch zum Ende dieser Episode, das Lustige ist, der Patrick und der Wolfgang und ich, wir hatten im Vorgespräch so darüber gesprochen, wir haben noch gar keine Episode zum Einstieg zu Git. Was ist Git eigentlich? Wie funktioniert Git unter der Haube sowie Speicherdaten? Wie machst du eigentlich dein eigenes Git Repository mit fünf Shell Befehlen und so Thematiken und was ist eigentlich ein Git? Was passiert und so. Ja, nee, haben wir den Patrick ja hier, da können wir ja keine Git Basis Folge machen. Dann lass uns mal ein bisschen tiefer gehen. Und jetzt komme ich aus dieser Episode raus und fühle mich wie ein totaler Anfänger. Ich habe das Gefühl, das war so die Git Basis Folge für mich, aber Wahnsinn. Und ich habe mich auch immer gefragt, warum hat Git als Command Line Parameter bei manchen Befehlen Porzellan drin? Hä? Und jetzt habe ich es verstanden. Ich habe aber noch nie das Git Internals Buch mit Plumber und Porzellan, mit der Befehlsstruktur und so weiter gelesen. Wahnsinn. Das ist auf jeden Fall etwas, was ich nicht mehr vergessen werde. Und Patrick, vielen lieben Dank und ich denke, wir haben auch ein paar gute Themen auf der Serverseite gecovert, die die meisten Leute, glaube ich, gar nicht so auf dem Schirm Schirm haben, denn ich würde sagen, neun und neunzig Komma weiß ich nicht, wie viel Prozent der Leute arbeiten kleinseitig. Vielleicht hostet der ein oder andere vielleicht ein Forge, aber ich glaube, mit den ganzen Themen, über die wir gesprochen haben, kommen die meisten dann auch nicht in Berührung, wenn man das die ganze Sache nicht zumindest professionell anbietet oder in einem sehr großen Stil. Patrick, vielen lieben Dank, dass du dir die Zeit genommen hast, mit uns über Git zu sprechen, Eins deiner Lieblingsthemen. Und wir haben natürlich auch in den Show Notes etliche Links vergraben, unter anderem auch zu deinem fossilen Talk Evolving Git for the Next Decade, wo ja, ich würde fast sagen, ziemlich viele oder fast alle der Themen, die wir heute besprochen haben, auch Anklang finden. Vielleicht nicht die Diskussion über zentrale Repositories, aber nun gut. Ja, vielen Dank. Hast du noch einen letzten Satz für unsere Hörerinnen und Hörer?"
+        },
+        {
+            "start": 4584920,
+            "end": 4608390,
+            "speaker": "C",
+            "text": "Ich glaube, das Wesentliche, was ich gerne noch mitgeben möchte, ist, dass Git sich nach wie vor verändert. Denn viele, wie du schon meintest, viele Leute sagen einfach nur, ja, ich benutze meine fünf Befehle und ansonsten ändert sich absolut gar nichts. Stimmt aber nicht so ganz. Wir arbeiten daran, viele Sachen effizienter zu machen, neue Use Cases zu erlauben und Git ist auf jeden Fall nicht eingestaubt und nicht komplett eingerostet, sondern es gibt Fortschritt."
+        },
+        {
+            "start": 4608630,
+            "end": 4617070,
+            "speaker": "A",
+            "text": "Super. Ich werde ab dieser Folge das Changelog vermehrt lesen. Das habe ich nämlich vorher zumindest nicht so gemacht, wie ich es tun sollte, glaube ich."
+        },
+        {
+            "start": 4617070,
+            "end": 4634280,
+            "speaker": "C",
+            "text": "Ich kann nur sagen, Vorsicht, denn der offizielle Changelog vom Git Projekt ist relativ technisch. Es ist meistens leichter, die Blogposts von GitLab und GitHub zu lesen, weil die ein bisschen tiefer reinsteigen in die einzelnen Themen und auch so ein bisschen Kontext geben."
+        },
+        {
+            "start": 4634360,
+            "end": 4651000,
+            "speaker": "A",
+            "text": "Das ist doch mal ein wundervoller Tipp für neuen Lesestoff. Patrick, vielen lieben Dank an alle anderen. Ihr wisst, wo ihr uns findet, falls ihr Feedback zu dieser Folge habt oder Feedback auch direkt an Patrick schickt uns das einfach. Wir leiten das sehr, sehr gerne weiter. Ansonsten würde ich sagen, wir hören uns nächste Woche wieder und tschüss."
+        },
+        {
+            "start": 4651000,
+            "end": 4658430,
+            "speaker": "C",
+            "text": "Ciao, ciao."
+        }
+    ]
+}
