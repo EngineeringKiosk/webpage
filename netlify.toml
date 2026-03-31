@@ -3459,6 +3459,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/261"
+  to = "/podcast/episode/261-git-30-sha-256-reftables-die-zukunft-von-git-mit-maintainer-patrick-steinhardt?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep261"
+  to = "/podcast/episode/261-git-30-sha-256-reftables-die-zukunft-von-git-mit-maintainer-patrick-steinhardt?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
