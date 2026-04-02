@@ -1,7 +1,7 @@
 (function () {
 	let maxTriesToSetPlayerCommands = 100;
 	var _paq = window._paq || [];
-	const setPlayerCommands = function() {
+	const setPlayerCommands = function () {
 		const iframe = document.querySelector('iframe.podigee-podcast-player');
 		if (iframe && playerjs && playerjs.Player) {
 			// Tracking docs at https://developer.matomo.org/api-reference/tracking-javascript
@@ -35,14 +35,14 @@
 				});
 			});
 
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener('DOMContentLoaded', function () {
 				// Click events for the transcriptions
 				const transcriptsElements = document.querySelectorAll('[data-trans-start]');
 				for (let item of transcriptsElements) {
 					item.classList.add('cursor-pointer');
 					item.addEventListener('click', (e) => {
 						player.setCurrentTime(item.dataset.transStart);
-						player.play()
+						player.play();
 					});
 				}
 
@@ -52,10 +52,10 @@
 					item.classList.add('cursor-pointer');
 					item.addEventListener('click', (e) => {
 						player.setCurrentTime(item.dataset.chapterStart);
-						player.play()
+						player.play();
 					});
 				}
-			})
+			});
 		} else {
 			// as longs as the player and iframe wasn't loaded yet, try again
 			if (maxTriesToSetPlayerCommands > 0) {
@@ -63,6 +63,6 @@
 				setTimeout(setPlayerCommands, 300);
 			}
 		}
-	}
+	};
 	setPlayerCommands();
 })();

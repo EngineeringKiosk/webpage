@@ -1,10 +1,10 @@
-import { defineCollection } from "astro:content"
-import { z } from "astro/zod"
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 // Schema for Podcast Episodes
 const podcastEpisodeCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/podcast" }),
+	loader: glob({ pattern: '**/[^_]*.md', base: './src/content/podcast' }),
 	schema: ({ image }) =>
 		z.object({
 			advertiser: z.string(),
@@ -39,7 +39,7 @@ const podcastEpisodeCollection = defineCollection({
 
 // Schema for Blog Entries
 const blogEntryCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog" }),
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/blog' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -109,17 +109,17 @@ const meetupSchema = ({ image }) =>
 	});
 
 const meetupAlpsCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/meetup-alps" }),
-	schema: meetupSchema
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/meetup-alps' }),
+	schema: meetupSchema,
 });
 const meetupRhineRuhrCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/meetup-rhine-ruhr" }),
-	schema: meetupSchema
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/meetup-rhine-ruhr' }),
+	schema: meetupSchema,
 });
 
 // Schema for German Tech Podcasts
 const germantechpodcastsCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.json', base: "./src/content/germantechpodcasts" }),
+	loader: glob({ pattern: '**/[^_]*.json', base: './src/content/germantechpodcasts' }),
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),
@@ -144,7 +144,7 @@ const germantechpodcastsCollection = defineCollection({
 
 // Schema for awesome-software-engineering-games
 const awesomeSoftwareEngineeringGamesCollection = defineCollection({
-	loader: glob({ pattern: '**/[^_]*.json', base: "./src/content/awesome-software-engineering-games" }),
+	loader: glob({ pattern: '**/[^_]*.json', base: './src/content/awesome-software-engineering-games' }),
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),

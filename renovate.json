@@ -12,18 +12,14 @@
     {
       "customType": "regex",
       "managerFilePatterns": ["/^website\\-admin/Makefile$/"],
-      "matchStrings": [
-        "honnef\\.co/go/tools/cmd/staticcheck@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
+      "matchStrings": ["honnef\\.co/go/tools/cmd/staticcheck@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
       "depNameTemplate": "dominikh/go-tools",
       "datasourceTemplate": "github-releases"
     },
     {
       "customType": "regex",
       "managerFilePatterns": ["/^\\.github/workflows/[^/]+\\.ya?ml$/"],
-      "matchStrings": [
-        "uses:\\s*golangci/golangci-lint-action@[^\\n]+\\n\\s+with:\\n\\s+version:\\s*(?<currentValue>v[\\d.]+)"
-      ],
+      "matchStrings": ["uses:\\s*golangci/golangci-lint-action@[^\\n]+\\n\\s+with:\\n\\s+version:\\s*(?<currentValue>v[\\d.]+)"],
       "depNameTemplate": "golangci/golangci-lint",
       "datasourceTemplate": "github-releases"
     }
