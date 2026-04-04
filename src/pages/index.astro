@@ -82,6 +82,12 @@ let bestPerformingEpisodes = [
     .sort((a, b) => a.rank - b.rank) 	// Sort by rank
     .map(item => item.title)         	// Only get the titles
 ];
+// as this list is quite static, let's introduce a randomization factor
+// to show different episodes on the homepage from time to time
+// let's take the top 20 episodes and shuffle them, then take the top 6 to show on the homepage
+bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 20);
+bestPerformingEpisodes = bestPerformingEpisodes.sort(() => Math.random() - 0.5);
+
 // Limit to 6 items
 bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 ---
