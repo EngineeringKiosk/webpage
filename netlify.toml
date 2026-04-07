@@ -3471,6 +3471,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/262"
+  to = "/podcast/episode/262-value-based-pricing-mehr-verantwortung-statt-stunden-zählen-mit-christoph-burchartz?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep262"
+  to = "/podcast/episode/262-value-based-pricing-mehr-verantwortung-statt-stunden-zählen-mit-christoph-burchartz?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/deutsche-tech-podcasts/podcasts.opml"
   [headers.headers]
