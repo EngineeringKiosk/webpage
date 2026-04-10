@@ -1,10 +1,11 @@
 ---
+import { marked } from 'marked';
 import { Image } from "astro:assets";
 import defaultAvatar from "../../content/meetup/images/speaker/avatar.png";
 import TagBadge from '../../components/TagBadge.astro';
 
 export interface Talk {
-	avatar: string;
+	avatar: string | string[];
 	name: string;
 	title: string;
 	description: string;
@@ -31,13 +32,20 @@ const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon
 const meetupSlug = Astro.props.meetupSlug;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
+const avatarArray = avatar ? Array.isArray(avatar) ? avatar : [avatar] : [];
 const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];
 
 ---
 
 <div class="w-full md:w-1/2 lg:w-1/2 px-4 mb-10 hostpreview" id={talkId}>
 	<div class="h-full py-8 px-10 bg-white rounded-md text-center">
-		<Image class="w-56 h-56 mx-auto mb-6 rounded-full" src={avatar || defaultAvatar} alt={name} title={name} loading="lazy" decoding="async" format="webp" quality={80} width={224} height={224} />
+		<div class="flex gap-2 justify-center mx-auto mb-6">
+			{avatarArray.length ? (
+				avatarArray.map((avatar) => (
+					<Image class="w-56 h-56 rounded-full" src={avatar || defaultAvatar} alt="" format="webp" quality={80} width={224} height={224} />
+				))
+			) : <Image class="w-56 h-56 rounded-full" src={defaultAvatar} alt="" format="webp" quality={80} width={224} height={224} />}
+		</div>
 
 		<h2 class="mb-2 text-2xl md:text-3xl leading-tight font-semibold">
 			{title}
@@ -51,12 +59,12 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 		</div>}
 		<div class="text-left mt-6">
 			<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Talk</h4>
-			<p class="mb-8 text-coolGray-500 font-medium description" style="white-space: pre-line">{description}</p>
+			<div class="prose mb-8 text-coolGray-500 font-medium description" set:html={marked.parse(description)}></div>
 		</div>
 		{bio && (
 			<div class="text-left">
-				<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Speaker</h4>
-				<p class="mb-8 text-coolGray-500 font-medium bio">{bio}</p>
+				<h4 class="mb-2 text-sm font-semibold uppercase tracking-wide text-coolGray-900">About the Speaker{avatarArray.length > 1 ? 's' : ''}</h4>
+				<div class="prose mb-8 text-coolGray-500 font-medium bio" set:html={marked.parse(bio)}></div>
 			</div>
 		)}
 		<div class="flex items-center justify-center">
