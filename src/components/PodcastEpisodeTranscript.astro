@@ -1,10 +1,17 @@
 ---
 import PodcastEpisodeTranscriptLine from './PodcastEpisodeTranscriptLine.astro'	
 
+interface Utterance {
+	speaker: string;
+	start: number;
+	end: number;
+	text: string;
+}
+
 export interface Props {
-	utterances: object[]
-	hideSpeakerInTranscript?: boolean
-	pubDate?: Date
+	utterances: Utterance[];
+	hideSpeakerInTranscript?: boolean;
+	pubDate?: Date;
 }
 
 const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;

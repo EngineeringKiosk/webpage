@@ -1,6 +1,13 @@
 ---
+interface Utterance {
+	speaker: string;
+	start: number;
+	end: number;
+	text: string;
+}
+
 export interface Props {
-	utterance: object;
+	utterance: Utterance;
 	hideSpeakerName?: boolean;
 	pubDate?: Date;
 }
