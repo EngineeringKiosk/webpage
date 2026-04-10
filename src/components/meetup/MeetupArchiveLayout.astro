@@ -8,6 +8,7 @@ import Newsletter from './Newsletter.astro';
 import MeetupArchiveEvent from './MeetupArchiveEvent.astro';
 import Team from './Team.astro';
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 import { createMeetupHelpers } from '../../scripts/meetups';
 
@@ -19,7 +20,7 @@ export interface Props {
 	ogImage: string;
 	badgeText: string;
 	archiveTitle: string;
-	heroImage: any;
+	heroImage: ImageMetadata;
 	heroImageAlt: string;
 	heroImageTitle: string;
 	teamBadge: string;

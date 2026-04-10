@@ -32,7 +32,7 @@ let encoded_social_text = encodeURI(social_text);
 // Prepare speaker names for transcript
 // Our transcript only contains "Speaker A" and "Speaker B".
 // In the Podcast Episode Metadata, we also have real names :)
-const speakerMap = new Map();
+const speakerMap: Map<string, string> = new Map();
 frontmatter.speaker.forEach ((person, index) => {
 	if ('transcriptLetter' in person) {
 		speakerMap.set(person.transcriptLetter, person.name);
