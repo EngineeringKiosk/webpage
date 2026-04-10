@@ -18,7 +18,7 @@ const isoDate = pubDate ? new Date(pubDate).toISOString().split('T')[0] : undefi
 ---
 <div data-trans-start={startInSeconds} class="utterance h-entry">
 	<h4>{!hideSpeakerName && (<span class="speaker p-author h-card">{utterance.speaker}</span> )}<time class="time dt-published" datetime={isoDate}>({startTime} - {endTime})</time>
-		<a href=`#t=${startInSeconds}` onclick=`showSharingLink(${startInSeconds}, event)` title="Diese Transkriptstelle teilen">
+		<a href=`#t=${startInSeconds}` data-share-seconds={startInSeconds} title="Diese Transkriptstelle teilen">
 			<img src="/images/elements/share-arrow.svg" alt="Teilen"/>
 		</a>
 	</h4>
