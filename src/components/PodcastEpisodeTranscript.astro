@@ -76,7 +76,6 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 	const trackEvent = function(eventType) {
 		const name = window.playerConfiguration.episode.title || 'unknown'										
 		_paq.push(['trackEvent', 'transcript', eventType, name]);
-		console.log('trackEvent', eventType, name);
 	}
 
 	window.showFullTranscript = function() {
@@ -120,7 +119,6 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 			utterances.forEach((utterance, i) => {
 				const start = parseInt(utterance.dataset.transStart);
 				if (start <= time && (!utterances[i+1] || utterances[i+1].dataset.transStart > time)) {
-					console.log('found', utterance, start, time);
 					element = utterance;
 				}
 			});

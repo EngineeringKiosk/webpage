@@ -69,15 +69,7 @@ const { images, autoSlideInterval = 5000, className = "relative rounded-7xl" } =
       const images = slider?.querySelectorAll('[data-index]') || [];
       const dots = sliderWrapper.querySelectorAll('button[data-index]');
 
-      console.log('Found slider:', {
-        wrapper: sliderWrapper,
-        slider: slider,
-        imagesCount: images.length,
-        dotsCount: dots.length
-      });
-
       if (!images.length || !dots.length || !slider) {
-        console.log('Skipping slider - missing elements');
         return;
       }
 
@@ -89,8 +81,6 @@ const { images, autoSlideInterval = 5000, className = "relative rounded-7xl" } =
 
       // Show specific slide
       function showSlide(index) {
-        console.log('Showing slide:', index, 'Total images:', images.length, 'Total dots:', dots.length);
-
         // Hide all images
         images.forEach((img, i) => {
           img.classList.add('opacity-0');
@@ -141,7 +131,6 @@ const { images, autoSlideInterval = 5000, className = "relative rounded-7xl" } =
       // Dot clicks
       dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-          console.log('Dot clicked:', index);
           showSlide(index);
           stopAuto();
           startAuto();
