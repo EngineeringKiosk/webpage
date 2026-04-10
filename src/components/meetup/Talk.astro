@@ -3,6 +3,7 @@ import { marked } from 'marked';
 import { Image } from "astro:assets";
 import defaultAvatar from "../../content/meetup/images/speaker/avatar.png";
 import TagBadge from '../../components/TagBadge.astro';
+import SocialLinks from '../SocialLinks.astro';
 
 export interface Talk {
 	avatar: string | string[];
@@ -33,7 +34,6 @@ const meetupSlug = Astro.props.meetupSlug;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
 const avatarArray = avatar ? Array.isArray(avatar) ? avatar : [avatar] : [];
-const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin] : [];
 
 ---
 
@@ -67,73 +67,7 @@ const linkedInArray = linkedin ? Array.isArray(linkedin) ? linkedin : [linkedin]
 				<div class="prose mb-8 text-coolGray-500 font-medium bio" set:html={marked.parse(bio)}></div>
 			</div>
 		)}
-		<div class="flex items-center justify-center">
-			{
-				github && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
-						<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
-					</a>
-				)
-			}
-			{
-				x && (
-					<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${x}`}>
-						<img src="/images/brands/x.svg" alt={`${name} auf X`} />
-					</a>
-				)
-			}
-			{
-				bluesky && (
-					<a class="inline-block mr-6 hover:opacity-80" href={bluesky}>
-						<img src="/images/brands/bluesky.svg" alt={`${name} auf Bluesky`} class="h-5 grayscale opacity-60" />
-					</a>
-				)
-			}
-			{
-				mastodon && (
-					<a class="inline-block mr-6 hover:opacity-80" href={mastodon}>
-						<img src="/images/brands/mastodon.svg" alt={`${name} auf Mastodon`} class="h-5 grayscale opacity-60" />
-					</a>
-				)
-			}
-			{
-				threads && (
-					<a class="inline-block mr-6 hover:opacity-80" href={threads}>
-						<img src="/images/brands/threads.svg" alt={`${name} auf Threads`} class="h-5 grayscale opacity-60" />
-					</a>
-				)
-			}
-			{
-				instagram && (
-					<a class="inline-block mr-6 hover:opacity-80" href={instagram}>
-						<img src="/images/brands/instagram.svg" alt={`${name} auf Instagram`} class="h-5 grayscale opacity-60" />
-					</a>
-				)
-			}
-			{
-				linkedInArray && linkedInArray.length > 0 && (
-					linkedInArray.map(handle => (
-							<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${handle}`}>
-									<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
-							</a>
-					))
-				)
-			}
-			{
-				youtube && (
-					<a class="inline-block mr-6 hover:opacity-80" href={youtube}>
-						<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5 grayscale opacity-60"/>
-					</a>
-				)
-			}
-			{
-				website && (
-					<a class="inline-block hover:opacity-80" href={website}>
-						<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
-					</a>
-				)
-			}
-		</div>
+		<SocialLinks name={name} github={github} x={x} linkedin={linkedin} bluesky={bluesky} mastodon={mastodon} threads={threads} instagram={instagram} youtube={youtube} website={website} />
 		{
 			slides && (
 				<div class="flex items-center justify-center mt-5">
