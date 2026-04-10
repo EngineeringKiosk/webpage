@@ -13,8 +13,8 @@ import awesomeSoftwareEngineeringGameGenres from '../../data/awesome-software-en
 
 export async function getStaticPaths() {
 	// Get genres from the "awesome-software-engineering-games" collection
-	const awesomeSoftwareEngineeringGames = await getCollection("awesome-software-engineering-games");
-	const allGameGenresUniqueInclNull = [...new Set(awesomeSoftwareEngineeringGames.flatMap((p) => p.data.german_content.genres))];
+	const allGames = await getCollection("awesome-software-engineering-games");
+	const allGameGenresUniqueInclNull = [...new Set(allGames.flatMap((p) => p.data.german_content.genres))];
 	const allGameGenresUnique = allGameGenresUniqueInclNull.filter(function (genre) {
 		return genre != null;
 	});
@@ -30,12 +30,12 @@ export async function getStaticPaths() {
 
 		return {
 			params: { genre: genreUrlName },
-			props: { genreName },
+			props: { genreName, allGames },
 		};
 	});
 }
 
-const genreHumanName = Astro.props.genreName;
+const { genreName: genreHumanName, allGames } = Astro.props;
 
 let title = `${genreHumanName} Spiele für Softwareentwickler:innen - Engineering Kiosk`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -49,9 +49,8 @@ if (awesomeSoftwareEngineeringGameGenres.hasOwnProperty(genreHumanName)) {
 	customTitle = awesomeSoftwareEngineeringGameGenres[genreHumanName]['title'] || '';
 }
 
-// Filter awesome software engineering games by genre, sort by name
-const awesomeSoftwareEngineeringGames = await getCollection("awesome-software-engineering-games");
-let games = awesomeSoftwareEngineeringGames.filter(function (p) {
+// Filter games by genre, sort by name
+let games = allGames.filter(function (p) {
 	if (p.data.german_content.genres == null) {
 		return false;
 	}
