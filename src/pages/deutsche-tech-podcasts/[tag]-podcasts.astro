@@ -13,8 +13,8 @@ import germanTechPodcastsTags from '../../data/german-tech-podcasts-tags.json';
 
 export async function getStaticPaths() {
 	// Get tags from the german tech podcasts
-	const germanTechPodcasts = await getCollection("germantechpodcasts");
-	const allPodcastTagsUniqueInclNull = [...new Set(germanTechPodcasts.flatMap((p) => p.data.tags))];
+	const allPodcasts = await getCollection("germantechpodcasts");
+	const allPodcastTagsUniqueInclNull = [...new Set(allPodcasts.flatMap((p) => p.data.tags))];
 	const allPodcastTagsUnique = allPodcastTagsUniqueInclNull.filter(function (tag) {
 		return tag != null;
 	});
@@ -30,12 +30,12 @@ export async function getStaticPaths() {
 
 		return {
 			params: { tag: tagUrlName },
-			props: { tagName },
+			props: { tagName, allPodcasts },
 		};
 	});
 }
 
-const tagHumanName = Astro.props.tagName;
+const { tagName: tagHumanName, allPodcasts } = Astro.props;
 
 let title = `${tagHumanName} Tech-Podcasts auf Deutsch - Engineering Kiosk`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -50,8 +50,7 @@ if (germanTechPodcastsTags.hasOwnProperty(tagHumanName)) {
 }
 
 // Filter german tech podcasts by tag, sort by name
-const germanTechPodcasts = await getCollection("germantechpodcasts");
-let podcasts = germanTechPodcasts.filter(function (p) {
+let podcasts = allPodcasts.filter(function (p) {
 	if (p.data.tags == null) {
 		return false;
 	}
