@@ -33,9 +33,10 @@ let episodesToShow = allEpisodes.slice(0, 1);
 let latestEpisode = episodesToShow[0];
 ---
 
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:bg-yellow-500 focus:text-white focus:rounded-md focus:font-medium">Zum Inhalt springen</a>
 <section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
 	<div class="bg-tarnsparent">
-		<nav class="flex justify-between p-6 px-4">
+		<nav class="flex justify-between p-6 px-4" aria-label="Hauptnavigation">
 			<div class="flex justify-between items-center w-full">
 				<div>
 					<a href="/" title="Engineering Kiosk Startseite" class="flex flex-row items-center">
@@ -99,9 +100,9 @@ let latestEpisode = episodesToShow[0];
 			</button>
 		</nav>
 
-		<div class="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+		<div class="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50" role="dialog" aria-label="Navigationsmenü">
 			<div class="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
-				<nav class="relative p-6 h-full overflow-y-auto">
+				<nav class="relative p-6 h-full overflow-y-auto" aria-label="Mobile Navigation">
 					<div class="flex flex-col justify-between h-full">
 						<a href="/" title="Engineering Kiosk Startseite" class="flex flex-row items-center">
 							<img class="h-12" src="/images/logos/engineering-kiosk-logo.svg" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
@@ -168,6 +169,7 @@ let latestEpisode = episodesToShow[0];
 		</div>
 	</div>
 </section>
+<div id="main-content"></div>
 
 <script>
 	const openMenu = () => {
