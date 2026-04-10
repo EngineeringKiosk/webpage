@@ -46,7 +46,12 @@ const defaultAvatarPath = `/meetup/${meetupUrl}/images/speaker/avatar.png`;
 				</div>
 			{nextMeetup.talks.map((talk, j) => (
 				<div class="flex flex-row my-2 mx-4">
-					{talk.avatar ? <Image class="w-32 h-32 rounded-full" src={talk.avatar} alt={talk.name} /> : <img class="w-32 h-32 rounded-full" src={defaultAvatarPath} alt={talk.name} />}
+					{(() => {
+						const avatarArray = talk.avatar ? (Array.isArray(talk.avatar) ? talk.avatar : [talk.avatar]) : [];
+						return avatarArray.length
+							? avatarArray.map((av) => <Image class="w-32 h-32 rounded-full" src={av} alt={talk.name} />)
+							: <img class="w-32 h-32 rounded-full" src={defaultAvatarPath} alt={talk.name} />;
+					})()}
 					<h3 class="ml-4 text-2xl text-left my-auto">{talk.title}<br>by <span class="text-yellow-500">{talk.name}</span></h3>
 				</div>
 			))}

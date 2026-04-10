@@ -67,7 +67,7 @@ const meetupSchema = ({ image }) =>
 		}),
 		talks: z.array(
 			z.object({
-				avatar: image().optional(),
+				avatar: z.union([image(), z.array(image())]).optional(),
 				name: z.string(),
 				title: z.string(),
 				description: z.string(),

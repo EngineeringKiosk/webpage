@@ -5,15 +5,23 @@ import defaultAvatar from "../../content/meetup/images/speaker/avatar.png";
 export interface Props {
   title: string;
   speaker: string;
-  avatar: string;
+	avatar: string | string[];
 }
 
 const { title, speaker, avatar } = Astro.props;
 
+const avatarArray = avatar ? Array.isArray(avatar) ? avatar : [avatar] : [];
+
 ---
 <li class="flex items-center">
   <div class="flex items-center mr-2 hidden sm:block">
-    <Image class="w-12 h-12 m-2 rounded-full" src={avatar || defaultAvatar} alt={speaker} title={speaker} loading="lazy" decoding="async" format="webp" quality={80} width={48} height={48} />
+		<div class="flex gap-2 justify-center m-2">
+			{avatarArray.length ? (
+				avatarArray.map((avatar) => (
+					<Image class="w-12 h-12 rounded-full" src={avatar || defaultAvatar} alt="" loading="lazy" decoding="async" format="webp" quality={80} width={48} height={48} />
+				))
+			) : <Image class="w-12 h-12 rounded-full" src={defaultAvatar} alt="" loading="lazy" decoding="async" format="webp" quality={80} width={48} height={48} />}
+		</div>
   </div>
   <div class="text-sm">
     <div class="font-medium">{title}</div>
