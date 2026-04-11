@@ -10,14 +10,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.2.2",
     "esbuild": "0.28.0",
     "postcss-nesting": "14.0.0",
     "prettier": "3.8.2",
-    "prettier-plugin-astro": "0.14.1"
+    "prettier-plugin-astro": "0.14.1",
+    "vitest": "^4.1.4"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.0",
