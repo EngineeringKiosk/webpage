@@ -85,43 +85,58 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 		_paq.push(['trackEvent', 'transcript', eventType, name]);
 	}
 
-	window.showFullTranscript = function() {
+	function showFullTranscript() {
 		const transcript = document.querySelector('.transcript');
-		if (!transcript.classList.contains('show')) {
+		if (transcript && !transcript.classList.contains('show')) {
 			transcript.classList.add('show');
-			transcript.querySelector('.overlay').style.display = 'none';
+			const overlay = transcript.querySelector('.overlay');
+			if (overlay) overlay.style.display = 'none';
 		}
 		trackEvent('show');
-		document.getElementById('showFullTranscriptButton').classList.add('hidden');
-		return true;
+		const btn = document.getElementById('showFullTranscriptButton');
+		if (btn) btn.classList.add('hidden');
 	}
-	window.showSharingLink = function(seconds, event) {
-		// link is the current link with the fragement #t=seconds
-		// show a simple popup showing the link to the user and add a button to copy it to the clipboard
+
+	function showSharingLink(seconds, event) {
 		const link = window.location.href.split('#')[0] + '#t=' + seconds;
 		const popup = document.getElementById('sharing-link-popup');
 		const url = document.getElementById('sharing-link-url');
-		url.innerText = link;
-		popup.classList.remove('hidden');
+		if (url) url.innerText = link;
+		if (popup) popup.classList.remove('hidden');
 		navigator.clipboard.writeText(link);
 		event.stopPropagation();
-
 		trackEvent('share');
-
-		return false;
 	}
+
+	// Bind show-transcript triggers
+	document.querySelectorAll('[data-show-transcript]').forEach((el) => {
+		el.addEventListener('click', () => showFullTranscript());
+	});
+
+	// Bind close-popup trigger
+	document.querySelector('[data-close-popup]')?.addEventListener('click', () => {
+		const popup = document.getElementById('sharing-link-popup');
+		if (popup) popup.classList.add('hidden');
+	});
+
+	// Bind sharing links on transcript lines
+	document.querySelectorAll('[data-share-seconds]').forEach((el) => {
+		el.addEventListener('click', (event) => {
+			const seconds = parseInt(el.getAttribute('data-share-seconds'));
+			showSharingLink(seconds, event);
+		});
+	});
 
 	// Handler to jump to a specific time
 	// in the podcast if #t=seconds is in the url
-	window.addEventListener('DOMContentLoaded', (event) => {
+	window.addEventListener('DOMContentLoaded', () => {
 		const hash = window.location.hash;
 		if (hash && hash.startsWith('#t=')) {
 			const time = parseInt(hash.substring(3));
 
 			trackEvent('incoming-link');
 
-			//find utterance div based on data-trans-start, time should be in between
-			const utterances = document.querySelectorAll('.utterance')
+			const utterances = document.querySelectorAll('.utterance');
 			let element = null;
 			utterances.forEach((utterance, i) => {
 				const start = parseInt(utterance.dataset.transStart);
@@ -130,7 +145,7 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 				}
 			});
 			if (element) {
-				window.showFullTranscript();
+				showFullTranscript();
 				element.classList.add('highlight');
 				element.scrollIntoView();
 			}
@@ -141,7 +156,7 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 {
 	utterances.length > 0 && (
 			<div class="transcript h-feed">
-					<div class="overlay" onclick="showFullTranscript()">&nbsp;</div>
+					<div class="overlay" data-show-transcript>&nbsp;</div>
 					<h3 class="mb-4 text-2xl md:text-3xl font-semibold text-coolGray-800" id="transcript">Transkript</h3>
 					<div class="text-gray-500 text-xs mb-4">Das Transkript wurde automatisiert per Speech-to-Text erstellt und kann daher Fehler enthalten.</div>
 					{utterances.map((utterance, i) => (
@@ -150,7 +165,7 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 			</div>
 			<div id="showFullTranscriptButton" class="flex justify-center">
 				<button class="text-coolGray-500 hover:text-coolGray-700 border border-coolGray-500 rounded-lg p-3"
-				onclick="showFullTranscript()">Ganzes Transkript anzeigen</button>
+				data-show-transcript>Ganzes Transkript anzeigen</button>
 			</div>
 	)
 }
@@ -162,7 +177,7 @@ const { utterances, hideSpeakerInTranscript = false, pubDate } = Astro.props;
 		<p>Der Link zu dieser Transkriptstelle wurde bereits in deine Zwischenablage kopiert.</p>
 		<button
 			class="mt-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg"
-			onclick="document.getElementById('sharing-link-popup').classList.add('hidden')">Schließen</button>
+			data-close-popup>Schließen</button>
 	</div>
 </div>
 

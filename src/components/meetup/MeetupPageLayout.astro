@@ -119,13 +119,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 											return(
 												<a
 													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
-													onclick="scrollToElement('a[name=register]'); return false;"
+													data-scroll-to="a[name=register]"
 													href="#register"
 												>
 													Register for next meetup
 												</a>
 												 <p class="mt-12 mb-2 md:mb-8 text-lg text-coolGray-500 font-medium">
-													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+													<a class="text-yellow-500" data-scroll-to="a[name=newsletter]" href="#newsletter">
 														<span class="underline">Subscribe</span> and get an email when the next meetup is announced.
 													</a>
 												</p>)
@@ -133,13 +133,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 											return(
 												<a
 													class="inline-block py-5 px-7 w-full text-base md:text-lg leading-4 font-medium text-center text-coolGray-500 outline-none placeholder-coolGray-500 border border-coolGray-200  rounded-md shadow-sm disabled"
-													onclick="scrollToElement('a[name=register]'); return false;"
+													data-scroll-to="a[name=register]"
 													href="#register"
 												>
 													Registration is closed (Max. Capacity Reached)
 												</a>
 												<p class="mt-12 mb-2 md:mb-8 text-lg text-coolGray-500 font-medium">
-													<a class="text-yellow-500" onclick="scrollToElement('a[name=newsletter]'); return false;" href="#newsletter">
+													<a class="text-yellow-500" data-scroll-to="a[name=newsletter]" href="#newsletter">
 														We have reached the maximum number of registrations for this event. <span class="underline">Please do not show up if you have not registered beforehand</span> as the venue has limited capacity due to safety regulations. You can subscribe to our newsletter and get an email when the next meetup is announced. Hope to see you there!
 													</a>
 												</p>)
@@ -306,5 +306,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 			<Footer />
 		</div>
+
+		<script>
+			document.querySelectorAll('[data-scroll-to]').forEach((el) => {
+				el.addEventListener('click', (e) => {
+					e.preventDefault();
+					const target = document.querySelector(el.getAttribute('data-scroll-to'));
+					if (target) {
+						window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
