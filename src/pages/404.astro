@@ -1,0 +1,39 @@
+---
+import Footer from '../components/Footer.astro';
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+
+let title = '404 - Seite nicht gefunden - Engineering Kiosk';
+let description = 'Die angeforderte Seite konnte leider nicht gefunden werden.';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="de">
+	<head>
+		<MainHead title={title} description={description} image="/images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg" {canonicalURL} />
+	</head>
+
+	<body class="antialiased bg-body text-body font-body">
+		<div>
+			<Nav title={title} />
+
+			<section class="py-20 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
+				<div class="container px-4 mx-auto">
+					<div class="max-w-2xl mx-auto text-center">
+						<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl">404</span>
+						<h1 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Seite nicht gefunden</h1>
+						<p class="mb-12 text-lg md:text-xl text-coolGray-500 font-medium">
+							Die Seite, die du suchst, existiert leider nicht oder wurde verschoben.
+						</p>
+						<div class="flex flex-wrap justify-center gap-4">
+							<a href="/" class="inline-block py-3 px-7 text-white font-semibold rounded-md bg-yellow-500 hover:bg-yellow-600 transition duration-200">Zur Startseite</a>
+							<a href="/podcast" class="inline-block py-3 px-7 text-coolGray-700 font-semibold rounded-md border border-coolGray-200 hover:border-coolGray-300 transition duration-200">Zum Podcast</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<Footer />
+		</div>
+	</body>
+</html>
