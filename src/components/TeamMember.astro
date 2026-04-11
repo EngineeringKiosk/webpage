@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import { resolveTeamMember } from '../scripts/team-members.js';
 import badgeLinks from '../data/badge-links.json';
 import TagBadge from '../components/TagBadge.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 
 export interface Props {
 	memberKey: string;
@@ -56,52 +57,6 @@ const imageAvatar = (await import(`../images/teams/${avatar}.jpg`)).default
 			</div>
 		)}
 
-		<div class="flex items-center justify-center">
-			{github && (
-				<a class="inline-block mr-6 hover:opacity-80" href={`https://github.com/${github}`}>
-					<img src="/images/brands/github-gray.svg" alt={`${name} auf GitHub`} />
-				</a>
-			)}
-			{x && (
-				<a class="inline-block mr-6 hover:opacity-80" href={`https://x.com/${x}`}>
-					<img src="/images/brands/x.svg" alt={`${name} auf X`} />
-				</a>
-			)}
-			{bluesky && (
-				<a class="inline-block mr-6 hover:opacity-80" href={bluesky}>
-					<img src="/images/brands/bluesky-gray.svg" alt={`${name} auf Bluesky`} />
-				</a>
-			)}
-			{mastodon && (
-				<a class="inline-block mr-6 hover:opacity-80" href={mastodon}>
-					<img src="/images/brands/mastodon-gray.svg" alt={`${name} auf Mastodon`} />
-				</a>
-			)}
-			{threads && (
-				<a class="inline-block mr-6 hover:opacity-80" href={threads}>
-					<img src="/images/brands/threads.svg" alt={`${name} auf Threads`} class="h-5 grayscale opacity-60" />
-				</a>
-			)}
-			{instagram && (
-				<a class="inline-block mr-6 hover:opacity-80" href={instagram}>
-					<img src="/images/brands/instagram.svg" alt={`${name} auf Instagram`} class="h-5 grayscale opacity-60" />
-				</a>
-			)}
-			{linkedin && (
-				<a class="inline-block mr-6 hover:opacity-80" href={`https://linkedin.com/in/${linkedin}`}>
-					<img src="/images/brands/linkedin.svg" alt={`${name} auf LinkedIn`} />
-				</a>
-			)}
-			{youtube && (
-				<a class="inline-block mr-6 hover:opacity-80" href={youtube}>
-					<img src="/images/brands/youtube.svg" alt={`${name} auf YouTube`} class="h-5 grayscale opacity-60" />
-				</a>
-			)}
-			{website && (
-				<a class="inline-block hover:opacity-80" href={website}>
-					<img src="/images/elements/icon-website.svg" height="33" width="33" alt={`Website von ${name}`} />
-				</a>
-			)}
-		</div>
+		<SocialLinks name={name} github={github} x={x} linkedin={linkedin} bluesky={bluesky} mastodon={mastodon} threads={threads} instagram={instagram} youtube={youtube} website={website} />
 	</div>
 </div>
