@@ -26,6 +26,10 @@ init: init-javascript ## Installs all dependencies (JavaScript)
 init-javascript: ## Installs JavaScript dependencies
 	npm install
 
+.PHONY: test-javascript
+test-javascript: ## Runs JavaScript unit tests via vitest
+	npm test
+
 .PHONY: prettier
 prettier: ## Run code formatter prettier (for JavaScript)
 	node_modules/.bin/prettier -w .
