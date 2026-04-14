@@ -3483,6 +3483,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/263"
+  to = "/podcast/episode/263-das-monorepo-comeback-project-graphs-dev-kultur-und-ai-agents-mit-max-kless-von-nx?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep263"
+  to = "/podcast/episode/263-das-monorepo-comeback-project-graphs-dev-kultur-und-ai-agents-mit-max-kless-von-nx?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
