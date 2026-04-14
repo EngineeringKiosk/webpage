@@ -1,0 +1,687 @@
+{
+    "confidence": 0.95369595,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4438,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 85910,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute geht es um ein Thema, das viele schon mal abgeschrieben hatten und das gerade ziemlich spannend. Zurück auf die Bühne. Monorepos. War das Ganze nur ein Hype aus der Google Ecke oder ist genau jetzt der richtige Zeitpunkt, sich das Thema nochmal ernsthaft anzuschauen? Dafür haben wir Max Kless zu Gast. Er ist Senior Software Engineer bei NX und beschäftigt sich beruflich genau mit der Frage, wie Monorepos in der Praxis funktionieren und wo die Vorteile liegen, wo es weh tut und warum das richtige Tooling am Ende doch den Unterschied macht. Wir sprechen darüber, was ein Monorepo überhaupt ist, warum Monorepo nicht gleich Monorepo ist und weshalb der Mittelweg für viele Teams sinnvoller sein kann als das eine gigantische Firmenrepository. Außerdem geht es um Tooling, Project Graphs, Caching, CI Ownership Kultur und die Frage, warum Monorepos eben nicht nur ein technisches, sondern sondern ab und zu auch ein organisatorisches Thema sind. Und dann kommt noch der Klassiker, von dem wir irgendwie alle schon die Schnauze voll haben, aber wir müssen ihn mit reinbringen. Welche Rolle spielen eigentlich AI, LLMs und Coding Agents dabei? Ist das vielleicht genau der Grund, warum Monorepos gerade wieder deutlich relevanter werden? Wer weiß das schon? Wenn du dich schon mal über Releases, abgestimmte Änderungen zwischen Frontend und Backend oder nervige Repo Grenzen geärgert hast, dann ist diese Episode für dich. Wir legen los. Viel Spaß."
+        },
+        {
+            "start": 88470,
+            "end": 195400,
+            "speaker": "B",
+            "text": "Der Andi beschimpft mich ja immer, dass ich irgendwie Geschichten aus dem Krieg erzähle, die irgendwie lange her sind. Ich bin ja vermutlich auch heute in unserer illustren Runde der Älteste. Und wenn ich mich so zurückerinner, wenn ich das Wort Monorepo höre, dann denke ich an so eine Zeit zurück, wo das der absolute Hype war. Jeder wollte Monorepo machen, weil Google Monorepos gemacht hat und jeder wollte auf den Zug aufspringen und es war wirklich gehypt. In jedem zweiten Talk hast du was von Monorepo gehört Und wenn man sich dann angesehen hat, wie so die Umsetzung war, dann war das schon ziemlich schwierig und irgendwie ging der Hype relativ schnell vorbei, weil man gesehen hat, okay, man braucht da schon ziemlich gutes Tooling herum, damit das alles sinnvoll funktioniert. Und vielleicht ist es für Google gut, aber für viele andere nicht. Und für mich persönlich ist es so ein bisschen eingeschlafen das Thema. Also das war dann so die letzten, würde man sagen, zehn Jahre war es nicht mehr so gehypt oder eigentlich nicht mehr so am Schirm. Und in letzter Zeit ist mir persönlich auch wieder irgendwie untergekommen, weil mit dem ganzen AI und LLM Trend habe ich auch persönlich gemerkt, dass es teilweise einfach einfacher ist, wenn man verschiedene Projekte gemeinsam in einem Repo hat und das LLM einfach über alles drüber fegen kann. Und da habe ich mir wieder gedacht, OK, Monorepos, vielleicht ist es jetzt wieder ein Thema, vielleicht gibt es ja Tooling. Und genau aus diesem Grund haben wir uns überlegt, okay, wir machen mal eine Episode zu dem ganzen Thema. Wo stehen wir denn jetzt gerade? Was funktioniert? Es funktioniert nicht und ist jetzt vielleicht die richtige Zeit für Monorebus oder habe ich nur einfach geschlafen und habe nichts mitbekommen Und eigentlich ist es eh überall schon ein großes Thema und genau das besprechen wir heute Und da haben wir jemanden heute bei uns im Engineering Kiosk Studio, der uns da wesentlich mehr darüber erzählen kann. Und daher Max, willkommen bei uns im Engineering Kiosk Studio."
+        },
+        {
+            "start": 195400,
+            "end": 198440,
+            "speaker": "C",
+            "text": "Hi, vielen Dank für die Einladung. Sehr schön, dass ich hier sein kann mit euch."
+        },
+        {
+            "start": 198520,
+            "end": 205650,
+            "speaker": "A",
+            "text": "Nach dem Intro habe ich so viele Fragen. Erstens die Story, die du gerade erzählt hast, aus welchem Jahr stammt die du"
+        },
+        {
+            "start": 205650,
+            "end": 207490,
+            "speaker": "B",
+            "text": "meinst, wann der Hype war, wann du"
+        },
+        {
+            "start": 207490,
+            "end": 210210,
+            "speaker": "A",
+            "text": "den Hype so wahrgenommen hast? Sagen wir es mal so."
+        },
+        {
+            "start": 210210,
+            "end": 220730,
+            "speaker": "B",
+            "text": "Ich würde sagen, der Hype war so vor über zehn Jahren. Da ist es so ziemlich gehypt worden, würde ich jetzt mal so einschätzen. Zwei tausend sechzehn, ja so ungefähr zweite"
+        },
+        {
+            "start": 221050,
+            "end": 231370,
+            "speaker": "A",
+            "text": "Warst du dann immer der Typ, der rumgelaufen ist mit diesem Lehrerstock aus den ERN, als man noch die Schüler verprügelt hat und hab Du sollst keine Monorepos nutzen. Du bist nicht Google, ich komme ja"
+        },
+        {
+            "start": 231370,
+            "end": 235750,
+            "speaker": "B",
+            "text": "aus Tirol, ich verwende keine Stöcke mehr, so Eisbär und so, die verwende für solche Zwecke."
+        },
+        {
+            "start": 235830,
+            "end": 242950,
+            "speaker": "A",
+            "text": "Das ist eine Zustimmung. Das würde ich als ja deklarieren. Und die dritte Thematik Du sagtest, der Hype ist vorbei. Ernsthaft?"
+        },
+        {
+            "start": 243030,
+            "end": 253750,
+            "speaker": "B",
+            "text": "Ich hab gesagt, er ist eingeschlafen, hatte ich das Gefühl, Es war nicht mehr so bei jeder Konferenz ein großes Thema und irgendwie hat man sich darauf geeinigt, ja okay, ist einfach schwierig. Wir machen es doch nicht so in die Richtung."
+        },
+        {
+            "start": 253750,
+            "end": 276450,
+            "speaker": "A",
+            "text": "Also normalerweise bei jedem würde ich sagen. Unter welchem Stein lebst du denn? Bei dir würde ich sagen. Bei dir weht der Wind so ein bisschen falsch. Innsbruck in eurem Tal, da weißt du, da geht der Wind schön über die Berge und irgendwie berührt das Tal nicht. Kollege Schnürschuh, ich glaube, der Hype war nie weg. Ich glaube, der war so ein konstanter Hype die ganze Zeit dabei und ich glaube, du lebst einfach nur in der falschen Bubble."
+        },
+        {
+            "start": 276450,
+            "end": 281489,
+            "speaker": "B",
+            "text": "Naja, ich würde einfach sagen, wenn es mich nicht mehr erreicht unter meinem Stein, dann ist der Hype vorbei."
+        },
+        {
+            "start": 281489,
+            "end": 377420,
+            "speaker": "A",
+            "text": "Naja, naja, man sieht das anders. Aber Max, jetzt ist natürlich die Wer ist dieser Max und warum kann dieser Max was über monorepos erzählen? Und da möchte ich ganz kurz erklären, wo der Max auf einmal herkommt. Und zwar hatte ich irgendwann mal Lust. Lass uns mal eine Episode über monorepos machen. Also was macht man bei Gibt bei Google Monorepos ein? Ja, nicht bei chatgpt und auch nicht bei Cloud, sondern einfach bei ganz oldschool Google. Und einer der ersten Webseite ist Monorepo Tools. Monorepo Tools ist, wer hätte es sich gedacht, eine Webseite über Tools zum Thema monorepos und everything you need to know about monorepos and the tools to build them. Wundervoll. Dann bin ich da so ein bisschen rumgescrollt und irgendwann bin ich in den Footer gekommen und da steht, dass diese Webseite eine Webseite der Firma NX ist. Und was mache ich dann? Ich schaue mir natürlich die Webseite von NX an. NX ist eine Firma, die stellt eine monorepo Plattform zur Verfügung, würde ich mal sagen, mit Tooling drumrum und allem Pipapo. Und dann bin ich auf jemanden gestoßen, der bei NX arbeitet, der aus Südtirol kommt, habe ich mir natürlich die Frage gestellt, kann diese Person dann jetzt irgendwie Deutsch oder Italienisch oder irgendwie so ein Südtiroler Dialekt? Das ist ja noch schlimmer, als wenn der Wolfgang anfängt zu sprechen. So und da habe ich gedacht, okay, komm, ich gucke einfach mal weiter. Da habe ich da gar nicht angefragt. Und irgendwann bin ich über den Max gestolpert, denn der Max kommt nämlich aus München. Das hat mich dann sehr gefreut. Passend zum Engineering Kiosk ist der Max auch noch Senior Software Engineer bei NX drei Jahren und beschäftigt sich somit beruflich mit Monorepus und da habe ich gedacht, dem droppe ich doch mal eine Mail. Und jetzt sind wir hier und es freut mich sehr, dass wir es geschafft haben. Vielen lieben Dank für deine Zeit, Max."
+        },
+        {
+            "start": 377890,
+            "end": 379410,
+            "speaker": "C",
+            "text": "Danke euch, freue mich aufs Gespräch."
+        },
+        {
+            "start": 379810,
+            "end": 383250,
+            "speaker": "B",
+            "text": "Alle Beschwerden aus Südtirol bitte an Andi."
+        },
+        {
+            "start": 385810,
+            "end": 387170,
+            "speaker": "A",
+            "text": "Gibt es diese E Mail Adresse?"
+        },
+        {
+            "start": 387330,
+            "end": 388210,
+            "speaker": "B",
+            "text": "Ich glaube schon."
+        },
+        {
+            "start": 388210,
+            "end": 390050,
+            "speaker": "A",
+            "text": "Natürlich, drop die, mach."
+        },
+        {
+            "start": 392530,
+            "end": 412240,
+            "speaker": "B",
+            "text": "Vielleicht sollten wir eine Beschwerdengineering. Aber steigen wir mal in das ganze Thema ein. Max, wenn du jetzt mal kurz erklären könntest für alle, die mit mir unter dem Stein geschlafen haben oder noch unter einem tieferen Stein geschlafen haben die letzten zehn Jahre, was ist ein Monorepo? Worüber sprechen wir da und um was geht es eigentlich?"
+        },
+        {
+            "start": 412240,
+            "end": 517360,
+            "speaker": "C",
+            "text": "Wie all die Definitionsfragen eigentlich gar nicht so einfach und jeder wird eine unterschiedliche Meinung haben, aber für mich ist ein Monorepo ein einzelnes Repository, wo mehrere Projekte drin sind, die untereinander verschiedene Beziehungen haben, die irgendwie definiert sind. Also letztlich geht es darum, dass irgendwie Code von verschiedenen Projekten in einem Repository liegt, aber man, wenn man jetzt irgendwie einfach nur einen großen Monolithen hat und einen großen Block an Code, wo alles irgendwie drin liegt und nicht klar strukturiert ist, dann ist es kein Monorepo, sondern man muss schon auch die Beziehung unter den einzelnen Projekten nachvollziehen können. Was man damit macht, ist natürlich die nächste Frage. Du hast schon gesagt am Anfang, alle haben irgendwie den Hype mitbekommen wegen Google und Monorepos und letztlich all die großen Big Tech Firmen nutzen Mono Repos. Also da muss ja schon irgendwas dran sein. Auch wenn du und ich und die meisten Zuhörer, Zuhörerinnen vermutlich nicht bei Google arbeiten, können sie trotzdem was von den Benefits mitnehmen. Letztlich gibt es alle möglichen Orte in der Softwareentwicklung, finde ich, die Reibung in den Prozess bringen, wenn man irgendwie Code teilen möchte mit anderen Leuten, alle möglichen Releases, die man machen muss, um geteilten Code irgendwie miteinander abzustimmen und dann hast du ein Backend Repo und ein Frontend Repo und die hängen voneinander ab, aber dann musst du mit den Leuten koordinieren. Das sind alles so Sachen, die für Reibung sorgen, die in Monorepo, wo alles in einem großen Ordner ist und du auf alles Zugriff hast und alles auf einmal ändern kannst mit einem Commit sozusagen den kompletten Stack verändern kannst und ein neues Feature bauen oder sowas einfach verschwinden."
+        },
+        {
+            "start": 517375,
+            "end": 577375,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 577579,
+            "end": 592219,
+            "speaker": "A",
+            "text": "Du hattest gerade gesagt, Mono Repo ist nicht einfach ein Repository und wir knallen den ganzen Code da rein, sondern die Beziehungen müssen ersichtlich sein. Was heißt Beziehungen? In dem Kontext? Habe ich überall Readme Files, die dann irgendwie auf andere Folder pointen oder da"
+        },
+        {
+            "start": 592219,
+            "end": 652410,
+            "speaker": "C",
+            "text": "gibt es ganz viele verschiedene Lösungen. Also das kommt dann auch auf das monorepo Tool an, die du hast. Ich würde mal sagen, in der Skala von PNPM, NPM, Workspaces, die auch Monorepo Support haben, was das ganz simpelste Tooling das sozusagen am wenigsten macht. Zu Bazel auf der anderen Seite, was von eben dem Google internen Tool abgeleitet ist und immer den Ruf hat, als das Komplizierteste, was man überhaupt sich so ins Haus holen kann. Über dieses ganze Spektrum haben alle irgendeine Art und Weise, Beziehungen zwischen den Projekten zu definieren, sehen immer anders aus. Bei NPM ist es dann so zum Beispiel oder bei PNPM sind so im Package JSON so Workspaces, Entries, die einfach sagen, okay, hier die und die Ordner sind einzelne Projekte und dann importierst du halt von denen, wie du auch sonst in JavaScript importierst. So werden dann die Beziehungen zwischen den einzelnen Projekten definiert. Und auf dem anderen Ende gibt es natürlich auch Sachen, wo du alles Mögliche selber definieren kannst, irgendwelche komplizierten Graphen hast und so weiter."
+        },
+        {
+            "start": 652410,
+            "end": 661930,
+            "speaker": "A",
+            "text": "Wenn wir jetzt von monorepo sprechen, frage ich mich ist Monorepo gleich Monorepo oder gibt es Subkategorien und Sub Arten von Monorepo?"
+        },
+        {
+            "start": 662010,
+            "end": 747060,
+            "speaker": "C",
+            "text": "Es ist auf jeden Fall nicht Monorepo. Jeder hat seinen eigenen Flavor. Also ist ja schon mal die Was ist da drin? Sind da irgendwie dein paar Frontend Applikationen und Packages, die dazugehören drin? Hast du ein Monorepo mit vielen verschiedenen Sprachen? Vielleicht noch mal einen Schritt zurückzugehen in meine Definition habe ich ja auch nicht gesagt, dass Monorepo heiß All dein Code in der ganzen Firma muss in diesem einen Monorepo sein. Das ist, glaube ich, auch viel, was bei der Hype und dann der dazugehörigen Hater Welle natürlich so ein bisschen mitschwingt, dass dieses gigantische Aufwand keinen Sinn So Google hat all den Code in einem großen Report und das hat super viele Vorteile für die, aber die haben halt auch zehntausende Entwickler, die da drin, ich habe jetzt keine Zahlen, aber massiv viele Entwickler, die darin arbeiten und deswegen auch massiv große Teams, die sich darum kümmern, dass alles rund läuft und dass das Tooling alles da ist und sowas. Aber ganz viele andere Leute, die sagen, wir haben Monorepos, sind da nicht so wie mir, sind da nicht so streng in dieser Definition des All. Der Code muss drin sein, sondern es muss einfach nur mehrere Projekte in einem Repo sein. Und das ist zum Beispiel schon mal eine ganz große Unterscheidung, dass das Monorepo, wie Google und Facebook es zum Beispiel haben, ist nicht das Monorepo, das XY deutsche Mittelständler hat, obwohl sie ähnliches Tooling verwenden und ähnliche Rezepte dahinter sind und die ähnlichen Vorteile davon haben als auf einer anderen Skala."
+        },
+        {
+            "start": 747060,
+            "end": 776620,
+            "speaker": "A",
+            "text": "Okay, da habe ich jetzt gleich noch eine Follow up Frage, aber bevor möchte ich noch mal auf einen Punkt eingehen. Du sagtest gerade Hype und dann die Flip Side, die Hater Welle und den Hype hat ja der Wolfgang auch im Intro schon angesprochen. Wolfgang, wenn du dich zurückerinnerst an die Zeit ein tausend neun hundert sechzig als du diesen Hype erlebt hast, welche Gründe haben denn, welche positiven Gründe haben denn damals für diesen Hype gesprochen? Weil die nächste Frage wäre dann an den Max, was denn die Haterseite an Hauptargumente aufgeführt hat."
+        },
+        {
+            "start": 776620,
+            "end": 837830,
+            "speaker": "B",
+            "text": "Ja, die positive Seite war eigentlich primär, was ja Max jetzt schon erwähnt hat, dass die Zusammenarbeit zwischen verschiedenen Teams, Backend und Frontend war ja immer so der Klassiker, dass die eigentlich vereinfacht wird, weil du hast halt immer eine Änderung im Frontend, wenn du auch im Backend eine Änderung hast oder halt oft, vor allem, wenn du irgendwelche Schnittstellen änderst und dass solche Dinge natürlich einfacher sind, wenn du alles ändern kannst oder irgendwelche Libraries sogar noch drin hast, die irgendwie inkludiert werden, dass das alles dementsprechend einfacher wird. Und das war ja auch das große Versprechen eigentlich, was Monorepos damals mitgebracht haben und warum es dann jeder haben wollte, weil es kennt ja jeder, die Kommunikation zwischen Teams ist schwierig und gerade solche, wann wird was released und was wird zuerst released und die ganzen Probleme, die damit einhergehen und die Pull Requests, die voneinander abhängen. Und dann hast du einen Pull Request, den du zuerst merchen musst, bevor du einen anderen merchen musst, damit die Pipeline nicht zu früh angetriggert wird und und und. Also das waren ja so die klassischen Probleme, die eigentlich Monorepos damals lösen wollten oder versprochen haben zu lösen."
+        },
+        {
+            "start": 837830,
+            "end": 840590,
+            "speaker": "A",
+            "text": "Und womit kam jetzt die Hater Fraktion um die Ecke?"
+        },
+        {
+            "start": 840590,
+            "end": 929020,
+            "speaker": "C",
+            "text": "Max Letztlich ist das Schöne, wenn man, was ich jetzt Poly Repo nenne, sozusagen den gegensätzlichen Approach, jedes Projekt ein Einzelship hat, dass man ziemlich einfach Out of the box Autonomie hat. Jedes Team betreut ihr eigenes Repo. Sie haben komplette Flexibilität darüber, wie sie gestalten, welche Technologien da drin sind, welche Tools sie verwenden fürs Testen, fürs Bilden und so weiter, wie sie releasen, deployen, alles drumrum sozusagen. Es ist autonom. Und wenn da jetzt jemand kommt und Hey, da gibt es noch diese anderen ein hundert Leute, die ihr alle euch nicht so gut leiten könnt, weil immer an unterschiedlichen Enden vom Tisch bei irgendwelchen Company Diskussionen. Jetzt bitte mach doch mal alles mit denen zusammen in einem Repo. Das natürlich erstmal Widerstand, weil der Gedanke dann ist, dass man da Autonomie, Flexibilität und Geschwindigkeit irgendwie aufgibt, was nicht sein muss. Aber es ergibt Sinn, dass der Gedanke erst mal da ist. Und es braucht eben auch Arbeit und Design, um zu schauen, dass man die Vorteile erhält. Also du kannst in einem Monoreap immer noch komplett autonom deine Technologie bestimmen und bestimmen, wer kontributen kann zu dir, dass nicht irgendwelche Leute kommen und einfach random Code bei dir ändern. Dann sitzt du plötzlich auf den auf den Folgen. Das kann man immer noch alles so einrichten. Aber es braucht eben ein bisschen mehr Aufwand als dieses schön isolierte Out of the box. Ich habe mein eigenes Repo, ich kann machen, was ich will Modell."
+        },
+        {
+            "start": 929020,
+            "end": 957310,
+            "speaker": "A",
+            "text": "Du hattest gerade was Schönes gesagt bzw. Einen großen Mythos aufgelegt oder? Aufgelöst. Aufgelegt. Mythos aufgelegt ist auch gut aufgelöst. Und zwar hast du gesagt, Monorepo heißt nicht, dass die ganze Firma alles in ein Repo klatschen muss, sondern dass man auch mehrere Monorepos haben kann. Oder man kann auch ein Monorepo haben und etliche Poly Repos. Polyrepos, wenn ich das richtig verstanden habe, ist wirklich eine Applikation oder ein Package in einem Repository, das, was wir klassischerweise von GitHub so kennen, oder?"
+        },
+        {
+            "start": 957310,
+            "end": 958190,
+            "speaker": "C",
+            "text": "Ja, genau."
+        },
+        {
+            "start": 958270,
+            "end": 993710,
+            "speaker": "A",
+            "text": "Da frage ich mich okay, wie sehen denn klassische Monorepo Unterteilungen aus? Habe ich jetzt in einer Firma wo ziemlich viel Go und Java geschrieben wird und JavaScript. Habe ich dann ein Monorepo für Go und eins für Java und eins für JavaScript? Oder ist das eher so, dass ich eine große Applikation habe und diese große Applikation hat ein Frontend, ein Backend, dann Terraform für die Infrastruktur und dann noch eine Mobile App. Und all diese Sachen sind dann in einem Monorepo, weil die zu einer Applikation. Also was sind so klassische Aufteilungen, die du in der freien, kann ich jetzt Wirtschaft, Welt oder Natur sagen? Weiß ich nicht, in der freien Natur,"
+        },
+        {
+            "start": 993950,
+            "end": 995670,
+            "speaker": "C",
+            "text": "philosophische Frage, würde ich sagen."
+        },
+        {
+            "start": 995670,
+            "end": 998750,
+            "speaker": "B",
+            "text": "Wo sind die Grenzen in der freien Wildbahn, wolltest du sagen."
+        },
+        {
+            "start": 999230,
+            "end": 1000590,
+            "speaker": "A",
+            "text": "Ja, das ist die Frage."
+        },
+        {
+            "start": 1000670,
+            "end": 1147600,
+            "speaker": "C",
+            "text": "Wenn ich durch den Wald stapfe und mir die Monorepos anschaue, die ich sehe dann. Also was ganz klassisch ist, würde ich sagen, ist so dieser Frontend Backend Split, also nach Technologie aufgesammelt sozusagen. Viele Monorepo Tools, die auf dem weniger komplexen Spektrum, das ich vorhin schon aufgemacht habe, sind, die sind irgendwie für eine Sprache gedacht. Also zum Beispiel Turborepo oder PNPM Workspaces und sowas. Das sind alles Monorepo Tools, die sich um JavaScript kümmern. Und deswegen, was viele Leute machen, ist Alien Frontend Code in Monorepo tun, dass dann vielleicht mehrere Applikationen, Design System, irgendwelche Shared Libraries und so weiter und so fort und der Backend Code ist dann in einem anderen Java Repo oder sowas. Das ist so ein ziemlich klassischer Split, den ich viel sehe nach Technologie sozusagen. Und also was wir zum Beispiel machen, ich meine, wir bauen Monorepo Tooling und wir haben nicht ein großes Monorepo, also NX an sich ist ja erstmal komplett Open Source und mit License und kostenlos, also da muss man nicht für zahlen, das das ist Repo, das auf GitHub existiert, Da ist ganz viel drin. Es ist ein großes Monorepo, da sind verschiedene, wir haben so eine Graf Applikation zum Beispiel, die noch mit da drin ist, neben dem ganzen CLI Tooling an sich und den einzelnen Packages für die einzelnen Technologien, die wir supporten und so weiter und so fort. Aber unser Closed Source Cloud Applikationen, all solche Sachen, die sind halt trotzdem in einem anderen Monorepo, weil das ja auch dann logistisch nicht funktioniert. Wenn du es eine mit Leistung Open Source hast, dann kannst du nicht dann noch deinen eigenen privaten Code drin haben. Und sonst ist das, was du erwähnt hast schon auch sehr sinnvoll, dass man irgendwie das nach Domain, würde ich mal sagen, gruppiert im Gröberen. Das ist auch ganz wichtig in diesem Entscheidungsfindungsprozess. Monorepo pro contra ist, wo ziehen wir die Linie, dass es noch Sinn ergibt, die Sachen auch in ein Monorepo zu tun. Also dieses Backend, Frontend in einem Repo ist auch total sinnvoll, löst total viele Probleme. Aber wenn ich jetzt ein komplett unrelatedes Backend auch noch da rein tue, das mit meinem Frontend gar nichts zu tun hat, mit denen mein Team gar nichts zu tun hat, die andere Technologien verwenden, dann fragt man sich irgendwann, okay, mache ich mir hier mehr Probleme, als dass ich welche löse? Und deswegen dieses Gruppieren nach Domain, dass all die Sachen auch irgendwie zusammenpassen, ist eine Grundsatzleitlinie, der ich da folgen würde."
+        },
+        {
+            "start": 1147600,
+            "end": 1191460,
+            "speaker": "B",
+            "text": "Das heißt, du bist eigentlich ein Verfechter, wenn ich das richtig raushöre von so einem hybriden Approach. Man hat nicht ein Repo, wo alles drin liegt, wie es bei Google mehr oder weniger so ist und auch nicht, ich habe nur wirklich ein Modul oder Building Block von meinem Stack sozusagen in einem Repo, wo ja nichts anderes drin sein darf und alles muss wirklich nur ein Bild Script darf da drin sein und eine Pipeline und ja nichts anderes, sondern irgendwie ein Zwischenweg. Da wo es Sinn macht, legen wir Sachen zusammen und weichen diese Grenzen ein bisschen auf, um eben einen schönen Mittelweg zu finden. Jetzt wäre meine Frage noch, warum Mittelweg und nicht dieses ich pack alles in ein Monorepo, weil es funktioniert ja auch zumindest bei Große total."
+        },
+        {
+            "start": 1191700,
+            "end": 1289110,
+            "speaker": "C",
+            "text": "Ich bin da voll ein Verfechter des Pragmatismus, würde ich mal sagen. Das das Zusammenpacken, was gut zusammenpasst, warum nicht alles in ein Repo packen? An sich hat es auch Kosten, Sachen in ein Monorepo zu packen. Da müssen plötzlich ganz viele Leute miteinander arbeiten, die vielleicht im normalen Arbeitsalltag gar nicht so viel miteinander zu tun haben. Die müssen ja auch irgendwie auch auf einen gemeinsamen Nenner kommen. So was wie, welches Monorepo Tool verwenden wir zum Beispiel, wäre schon mal wichtig, dass sich da alle einig sind, damit man alle auf einem Monorepo Tool irgendwie zusammenbringen kann. Sachen wie CI Pipelines, wenn da jetzt jeder andere Vorstellungen hat, welches Tool sie verwenden wollen, ist es auch eher sicher theoretisch möglich, aber auch eher anstrengend. Also So ein gewisser Wille da irgendwie zusammenarbeiten und zu standardisieren und zu konsolidieren zu wollen, muss schon da sein. Und der Wille ist eben auch psychologisch, würde ich sagen, und in den Köpfen der Menschen und in den Organisationsstrukturen und gar nicht so ein technologisches Problem. Also was ich sehe bei Kunden von uns, was ich immer wieder höre, ist, dass das Monorepo dann auch so einen Magnetismus an sich entwickelt. Wenn du mal anfängst, irgendwo kleine Gruppierungen zu machen, wo es Sinn ergibt, dass dann auch immer mehr Leute merken, oh, es hat ja Vorteile in den Monorepo, sondern ich will damit rein und dann der beIN von ihnen kommt und dann es immer größer wird und immer größer und die Vorteile sich immer weiter verbreiten in der Firma. Wenn jetzt aber von oben die Devise kommt, so jetzt Monorib, alles zusammen, dann wird man die Reibungen in der Firma und in den ganzen verschiedenen Technologien, die da zusammenspielen, schon merken."
+        },
+        {
+            "start": 1289110,
+            "end": 1336210,
+            "speaker": "B",
+            "text": "Jetzt komme ich noch mal mit einer Geschichte aus dem Krieg. Ich hatte mal den Kontakt mit einem Feature von Git und zwar nennt sich das, glaube ich, Submodules, wenn mich nicht alles täuscht. Wir hatten gerade eine Episode über Git übrigens, dass man ständig neue Features lernt und ich hatte damals über das neue Feature Sub Module gelernt, wo man Repos einbinden kann in ein geklontes Repo, Also dass sie so Submodules, die eigentlich in einem anderen Repo liegen, mir einbinden kann. Ich habe das mal versucht, es war absolutes Chaos und es hat nichts funktioniert. Ich habe das, glaube ich, ein oder zweimal versucht und habe es dann aufgegeben. Und das war auch das, was ich von anderen Leuten gehört habe. Wir sprechen jetzt wirklich, wir klatschen alles in ein Repo. Wäre so Submodule artiges Vorgehen irgendwie eine Alternative. Kennst du das überhaupt? Hast du eine Meinung dazu?"
+        },
+        {
+            "start": 1336210,
+            "end": 1344800,
+            "speaker": "C",
+            "text": "Ich habe davon auf jeden Fall schon gehört und immer wieder gesehen. Ich habe sehr bewusst die Finger von gelassen, weil ich immer genau die gleiche Geschichte höre."
+        },
+        {
+            "start": 1345680,
+            "end": 1347200,
+            "speaker": "B",
+            "text": "Gute Entscheidung, hätte ich jetzt auch gesagt."
+        },
+        {
+            "start": 1347520,
+            "end": 1373110,
+            "speaker": "C",
+            "text": "Ich kann jetzt nicht firsthand sozusagen über die Pro und Contra sprechen, weil ich, wie schon gesagt, nicht viel Erfahrung damit habe. Aber was ich sozusagen immer wieder sehe, ist, dass es gar nicht was ist, was man braucht irgendwie letztlich bei all den normalen Repo Größen, die vielleicht nicht Google sind, wo es wirklich gibt, dann auch strapaziert wird mit den Datenstrukturen und sowas, ist es auch einfach okay, die Sachen dann als normale Dateien in einem großen Repo zu haben."
+        },
+        {
+            "start": 1373190,
+            "end": 1402330,
+            "speaker": "B",
+            "text": "Die Vorteile sind ja auch eigentlich dann nicht mehr so groß, weil du hast ja dann trotzdem in Employ Request zum Beispiel nicht die übergreifenden Commits sozusagen auf mehrere Repositories, weil sie ja im wirklichen Leben lokal. Bei dir sind sie zwar vielleicht in einem Folder, aber in der Realität sind sie dann natürlich aufgeteilt auf mehrere Repositories. Und dann hast du ja wieder dieselben Probleme, dass du nicht einen Pull Request haben kannst, den du einfach einmal Tuch pusht und dann geht es an fünf verschiedenen Ecken los und die CICD Pipelines"
+        },
+        {
+            "start": 1402330,
+            "end": 1404130,
+            "speaker": "C",
+            "text": "rennen los, hat man nicht viel gewonnen."
+        },
+        {
+            "start": 1404290,
+            "end": 1481600,
+            "speaker": "A",
+            "text": "Ich frage mich gerade, wie kompliziert es eigentlich ist, um zu entscheiden, ob ich auf ein Mono Repo oder Poly Repo gehen möchte. Denn wir haben gerade schon die Strukturfrage geklärt, Wie strukturiert man das? Applikation, Sprache und so weiter. Und mit hoher Wahrscheinlichkeit gibt es dann noch Hybridmodelle und ganz viele andere Modelle. Die zweite Frage Besteht überhaupt eine Intention zu einer Art von Standardisierung über Teams hinweg? Weil Teams wollen ja unabhängig sein, wir wollen ja alle schnell sein und Standards und so weiter funktionieren in neunzig Prozent der Fälle und in zehn Prozent nicht und so weiter und so fort. Deswegen frage ich mich, hast du ein mentales Modell, ich sag mal ein Decision Tree, einen Entscheidungsbaum zu sagen, das sind die Fragen, die Entwickler, Teams oder Firmen sich stellen sollten. Und wenn sie die eine mit Ja und die andere mit Nein beantworten, dann ist ein Monorepo vielleicht nicht das Richtige für sie. Denn auch später CI umzubauen, Applikationen über Repos hinwegzuschieben, die haben vielleicht eine direkte Connection zu irgendeinem Kubernetes und zu einem automatischen Deployment und so. Also ein Repo umziehen ist ja heutzutage bei moderner Infrastruktur gar nicht mal so einfach durch die ganzen Querverbindungen. Genau. Habt ihr da irgendwie so einen Entscheidungsbaum oder eine Leitlinie oder zwei, drei Leitfragen, die man sich stellen kann und sagen, okay, ab da macht es Sinn, sich weiter über Monorepos Gedanken zu machen?"
+        },
+        {
+            "start": 1481600,
+            "end": 1602240,
+            "speaker": "C",
+            "text": "Also die wichtigste Frage würde ich sagen, kann ich es aushalten, mit meinen anderen Teams in einem Raum zu sein oder hasse ich die? Absolut, das ist die wichtigste Sache, würde ich sagen, weil wenn ihr euch gar nicht leiden könnt, dann wird Schmerz sein. Abgesehen davon, Ich meine, vielleicht bin ich auch voreingenommen, natürlich, weil ich an einem Monorepo Tool arbeite, aber letztlich, ich finde Monorepo ergibt immer Sinn von ganz klein bis ganz bis ganz groß, weil der Overhead gar nicht mehr so groß ist. Die Sache ist, wenn du, wenn du anfängst ein Projekt zu bauen und du machst irgendwas, was nicht nur ein kleines Mini Spielzeug oder Wipe Codes Ding ist oder sowas, dann wirst du früher oder später immer an diesen Punkt kommen, wo du plötzlich Code teilen musst zwischen zwei Sachen oder jetzt muss ich auch noch Tests für das neue Projekt schreiben und jetzt muss ich mich wieder um das Tooling kümmern, um das ich mich da schon fünfzehn Mal gekümmert habe in letzter Zeit. Und das sind alles Sachen, wo Monorepos massiv helfen. Die Kosten auf der anderen Seite, wie ich ja vorhin schon gemeint habe, sind eher so das Umziehen und das Koordinieren und sowas mit den Leuten und halt irgendwie Verantwortung auch dafür zu schaffen, dass jemand sich um das Tooling kümmert. Das ist also, wenn ich was Neuem anfange, einfach Monorepo und happy sein und da werden dann Sachen Stück für Stück damit reinkommen. Wenn ich die Entscheidung treffe, will ich umziehen, will ich jetzt anfangen alles zu migrieren, dann ist es natürlich viel eher eine Abwägung, welche konkreten Pain Points habe ich, warum will ich, warum mache ich mir diesen Gedanken überhaupt? Und dann ist natürlich super persönlich und super Team und firmenspezifisch. Deswegen, sorry, wenn es ein bisschen unbefriedigend Antwort auf die Frage ist, ich kann keinen so klaren Leitfaden geben, aber mein Leitfaden wäre Monorepo bei Default. Und wenn schon diese existierende, super komplexe Infrastruktur da ist, dann sich genau überlegen, was man sich erwartet von dem Effort."
+        },
+        {
+            "start": 1602240,
+            "end": 1613800,
+            "speaker": "A",
+            "text": "Ja, das ist kein Problem. Wenn wir die Episode fertig haben, dann lasse ich die einmal irgendwie transkribieren und dann durch Cloud sagen und sagen, bau mir mal ein Decision Tree daraus und dann schicke ich dir den, dann könnt ihr den auf eurem Marketing, das ist gar kein Problem."
+        },
+        {
+            "start": 1613800,
+            "end": 1614400,
+            "speaker": "C",
+            "text": "Danke dir."
+        },
+        {
+            "start": 1614800,
+            "end": 1688090,
+            "speaker": "B",
+            "text": "Jetzt werden wir mal kurz in Richtung Tooling schauen, weil das war ja immer die Argumentation, warum Monorepos nicht funktionieren. Und da fällt mir jetzt so spontan ein, keine Ahnung, ich habe Frontend und Backend in meinem Repo drinnen und ich schaffe es aber nicht zum Beispiel in meinem Default Deployment von Frontend, was irgendeine JavaScript Web App ist, einfach zu unterscheiden, wann soll die bauen. Die soll nur bauen, wenn zum Beispiel im Frontend sich was geändert hat und nicht im Backend. So die üblichen Sachen, ich will nicht alles los triggern, wenn sich nur irgendwo ein Typo geändert hat. Solche Dinge. Also ganz grundlegende Sache zum Beispiel für mein Deployment. Kann Cloudflare überhaupt sinnvoll unterscheiden? Bau nur, wenn sich im Folder Frontend was geändert hat zum Beispiel. Also ich weiß zufällig, das funktioniert mittlerweile, aber vor ein paar Jahren war es wahrscheinlich schwieriger. Jetzt würdest du sagen, man kann einfach drauflos starten, auch wenn man jetzt kein spezielles Tooling hat, ist nicht so schlimm. Heutzutage ist es eh kein Problem. Im Notfall triggern halt fünf CD Pipelines und nicht so schlimm. Oder muss man sich im Vorhinein schon überlegen, okay, was für ein Tooling brauche ich, wie geht es alles an und braucht es dann Prozess, wo man sich wirklich überlegt, was man macht oder kann man einfach mal losstarten, deiner Meinung nach?"
+        },
+        {
+            "start": 1688090,
+            "end": 1830590,
+            "speaker": "C",
+            "text": "Also einfach nur losstarten und experimentieren kann man auf jeden Fall. Da würde ich sagen, lieber anfangen und probieren, als sich zu viel Gedanken machen über alles und dann wird man schon merken, wo es irgendwie noch hakt. Letztlich ist aber die Tooling Geschichte natürlich super wichtig, weil je größer dein Repo wird, wie du schon gesagt hast, ich kann nicht, wenn ich Google bin, ah ja, irgendwer hat eine Änderung gemacht, ich lasse jetzt noch mal alles durchlaufen und dann wird Google Maps gebaut, obwohl ich ganz woanders geändert hab, weil dann würde deine CI Pipeline ja auch irgendwie vier Tage brauchen, bis sie durchgelaufen ist oder sowas. Und da wird es dann nach dem Rumprobieren und Spassprojekt auf jeden Fall wichtig, dass du Tooling hast in CI auf jeden Fall so Sachen wie, was du schon erwähnt hast, so eine Art von, also bei uns heißt es affected, dass sozusagen anhand der Änderungen in deinem Pull Request sagen, okay, diese Sachen müssen neu gebaut werden, neu getestet werden und so weiter und so fort. Aber dann sind es auch Sachen wie Caching zum Beispiel. In so einem Monorepo haben ja Dutzende, hunderte, wie viel auch immer Developer dann die ganze Zeit Tasks laufen und deine CI Maschinen laufen durch und durch und durch und machen Sachen. Da zahlt man irgendwann schon viel für Compute, wenn wir das einfach alles immer wieder machen. Da kann man viel, viel rausholen, indem man das nicht, dass nicht jede Berechnung zweimal gemacht werden muss. Ich weiß nicht, ob ihr schon mal versucht habt, irgendwie so ein komplexeren Bild aufzubauen mit so NPM Scripts oder sowas, wo man hat, okay, ich baue mein Script und dann muss ich Bild und Setup, Publish und Copy hier und dahin und dann plötzlich hat man dieses ewig lange Ding, das natürlich auch nicht maintainable at scale. Das sind Sachen, wo monorepo Tools wie NX zum Beispiel, ganz viele andere natürlich auch so helfen. Also zum Beispiel was ganz Klassisches, was eigentlich alle machen, ist so ein Project Graph aufbauen in irgendeiner Form und Weise, dass du siehst, das sind all die verschiedenen Projekte in meinem Repo, so hängen sie voneinander ab. Und wenn ich dann sage, ich möchte dieses eine Projekt bauen, dann kann mein monorepo Tool anhand von Konfiguration und anhand von statischer Analyse, von Imports und sowas genau, ich möchte Projekt A bauen, dann muss ich auch noch Projekt B und Projekt C bauen und das und das noch kompilieren und das davor hin und her kopieren und solche Sachen, dass man die Beziehung zwischen den Tasks einfach deklarieren kann, statt zu jedes Mal genau definieren, was all die Schritte sind, die passieren müssen."
+        },
+        {
+            "start": 1830590,
+            "end": 1840950,
+            "speaker": "B",
+            "text": "Wie baue ich diesen Graph auf? Ist das jetzt was manuelles? Brauche ich da wieder ein spezielles Tooling dazu oder sprichst du jetzt eher vom konzeptionellen? Also wie funktioniert das dann in der Praxis?"
+        },
+        {
+            "start": 1841030,
+            "end": 1919570,
+            "speaker": "C",
+            "text": "Das kommt ganz aufs Tool an, also auf dem ganz einen Ende des Spektrums, so PNPM, npm Workspaces, die analysieren einfach JavaScript Imports Punkt wird zwischen den verschiedenen Ordnern dann diese Beziehungen definiert durch die Imports und das war's. Bei NX zum Beispiel, also zum Beispiel zwischen deinem Frontend und Backend wirst du ja keinen Import in deiner Datei irgendwo haben, sondern da ist dann vielleicht irgendwie eine URL, die irgendwie gehittet wird für die API. Da muss man dann natürlich manuell nachhelfen und okay, mein Frontend hängt irgendwie von meinem Backend ab, muss diese Beziehung irgendwie definieren können, Also was an X ist, nicht zu sehr ich mich selber pushen. Aber was auch cool daran ist, dass wir Plugins für alle möglichen verschiedenen Technologien, alle möglichen verschiedenen Ökosysteme haben, dass dieses Import analysieren und Beziehungen zwischen den verschiedenen Projekten auch für Java und Kotlin funktioniert und auch für Go, PHP und alle solche Sachen, dass man möglichst wenig an diesem Project Graph selber rumdoktern muss, weil das ist ja auch was, was wenn du Google bist, dann kann jetzt keiner dahin kommen und okay, ich definiere jetzt, wie jedes System von jedem anderen System in diesem Monorepo abhängt, woran Leute seit Dutzenden von Jahren irgendwie schrauben und da muss ein automatischer Schritt dabei sein. Das muss irgendwie mehr oder weniger durch statische Analyse passieren."
+        },
+        {
+            "start": 1919570,
+            "end": 1988680,
+            "speaker": "B",
+            "text": "Du hast mir jetzt schon eine Antwort gegeben auf meine nächste Frage, die ich eigentlich stellen wollte, weil auch wenn du selber NX nicht hervorheben willst, tue ich das jetzt mal kurz, bzw. Ich habe so das Gefühl, dass in den letzten Jahren schon gewisse Grundfeatures so in den ganzen Toolchains dazugekommen sind. Jetzt in GitHub Actions kann ich definieren, eben nur, wenn sich was in einem gewissen Folder geändert hat. Dann trigger eine Action Cloudflare, habe ich erwähnt, die können auch prüfen, automatisch hat sich nur was in dem Folder geändert. Dann trigger mir das Deployment von meinem Frontend, zum Beispiel bei Netlify, keine Ahnung, weiß ich schon wieder nicht, ob das funktioniert, aber man sieht schon so eine gewisse Bewegung in diese Richtung, dass es solche Features gibt, wobei das nie Monorepo Feature heißt. Also das ist halt ein kleines Feature, aber man merkt schon, dass man dadurch Monorepos überhaupt ermöglicht, weil vor zehn Jahren war das einfach unmöglich bzw. Man hat sehr viel customizen müssen, um überhaupt in die Richtung zu gehen. Jetzt hast du die Graphen schon genannt, also die Abhängigkeiten. Was wären denn sonst noch so Key Features oder so grundlegende Features, die man eigentlich braucht in Monorepo, die jetzt NX zur Verfügung stellt, die aber zum Beispiel GitHub Actions noch nicht automatisch kann oder oder vielleicht zu komplex sind."
+        },
+        {
+            "start": 1988680,
+            "end": 2339130,
+            "speaker": "C",
+            "text": "Genau, also ich würde da unterscheiden zwischen CI Features, weil CI einfach ein ganz wichtiges Thema ist für Monorepos und lokalen Features, also lokal. Die wichtigen Sachen sind eben dieser Project Graph und der sich daraus ableitende Taskgraph sozusagen, wo ich irgendwie definieren kann, Pipelines, wie läuft mein Bild, das dann auch maintainable ist. Das finde ich immer ein bisschen schwer, den Leuten irgendwie zu vermitteln, dass so Monorebo Tooling auch so ganz oft Death by a thousand Cuts ist irgendwie. Es gibt einfach so ganz viele kleine Probleme, die aufkommen werden Und Tooling wie NX hilft an ganz, ganz, ganz vielen verschiedenen Orten verschiedene Sachen zu machen. Ganz ganz grob. Neben dem ganz core Teil des Project Graph und Task Orchestration und Caching. Solche Sachen gibt es eben auch alle möglichen Features wie automatisierte Migration zum Beispiel, dass wenn alle in einem großen Repo sind und dann muss eine Version geupgradet werden, dann ist es jetzt ganz schön schwer, wenn ihr sagt, okay, wir machen jetzt einen Pull Request und erst machst du deine Änderung, dann machst du deine Änderung, dann machst du dir Jetzt gibt es Merch Konflikt von vorne anfangen. Da braucht man automatisierte Migrierung, Migration, um diesen Prozess zu helfen, Guidelines, Standards. Was NX eben auch hat, sind Generators, also Code Generierung, was eben ganz wichtig ist, um Code Quality und Standards in der Firma zu erhalten, weil natürlich jeder seine eigene Meinung hat dazu, wie irgendwas passieren sollte. Wenn plötzlich jede Komponente, jedes neue Projekt irgendwie anders aufgebaut sind, dann wird es ganz schnell, ganz schnell chaotisch. Neben den Core Features sind lokal noch ganz wichtig jegliche Features, um deine Firmen Präferenzen zu encoden irgendwie und Guidelines zu encoden. Wir haben dann auch Sachen wie Regeln, die man definieren kann, wie verschiedene Projekte voneinander abhängen können. Wenn ich jetzt eine Library habe, die sich nur darum kümmert, irgendwie mit der API zu reden und das in irgendeinem speziellen Format auszuführen, dann darf die auf jeden Fall nicht React Komponente importieren, weil dann ist irgendwas ganz ordentlich schiefgegangen. Und sowas ist eben super wichtig, dass auch wenn deine Firma immer weiter wächst, die Struktur von deinem Code noch übersichtlich bleibt. Und dadurch ist es eben nicht so, dass dein Projekt immer weiter wächst und alles wird chaotisch und man kann Überblick mehr Ah, okay, jetzt sind drei Jahre vergangen, jetzt fangen wir noch mal von vorne an und bauen das Ganze auf neu auf, weil das alte kann man gar nicht mehr anschauen. Das Projekt wächst und entwickelt sich aber in eine Richtung, die auch nachhaltig ist. Das war jetzt lange geredet für die eine Seite, die das lokale Tooling. Auf der anderen Seite ist das CI Tooling super wichtig, weil wie schon gesagt, irgendwann brauchen deine Pipelines vier Tage und dann kannst du keinen Bug mehr fixen und dann stehst du ganz schön blöd da. Also was super wichtig ist, ist eben Caching, dass du nicht immer alles nochmal neu ausführen muss, sondern wenn jemand irgendeinen Task schon wo ausgeführt hat, mit den gleichen Inputs, also den gleichen Bild auf den gleichen Dateien, mit den gleichen Environment Variables ausgeführt hat, dann kann ich den einfach mir direkt aus dem Cache ziehen und muss das nicht nochmal ausführen. Dieses Affected, was du schon erwähnt hast, dass man nicht immer alle Bilds laufen lassen muss und nur die, die wirklich relevant sind für meine, für meine Veränderung. Also dass die beiden zusammen helfen schon massiv dabei, so in einem großen Monorepo die CI Zeiten runterzuhalten, weil dadurch skaliert die Zeit, die deine CI braucht, nicht mehr mit der Größe des Repos, sondern mit der Größe der Änderungen, die du machst. Wenn ich jetzt irgendeinen Typo irgendwo fixe, dann müssen nur ganz wenige Sachen neu gebildet und getestet werden und fertig. Und wenn ich einen massiven Refactor mache, der alle möglichen Bereiche des des Repos affected, dann muss ich mehr bauen und mehr neu testen und dann wird es also länger brauchen. Das Problem damit ist, dass das immer irgendwann kaputt gehen wird. Es gibt immer den einen Pull Request, der irgendwas ganz Zentrales ändert, was alles in dem ganzen Repo Effect hat und dann plötzlich stehe ich wieder vor diesen vier Tagen CI Pipeline Execution Time und das ist einfach nicht nicht machbar. Und deswegen, was man ab einer Skala immer irgendwann braucht, ist Distribution in irgendeiner Art und Weise. Also die Möglichkeit, deine Tests nicht alle in einer langen GitHub Actions Pipeline auszuführen, sondern über mehrere Runner, über mehrere Jobs, Agents, wie auch immer die Abstraktion in eurem CI Tool of Choice heißt, zu verteilen, scheint erst mal nicht so kompliziert zu sagen, wir packen jetzt drei GitHub Actions Runners ein und da werden die Sachen ausgeführt. Aber dass das auch mehr oder weniger effizient ist, ist gar nicht so einfach zu gestalten, weil all diese Sachen haben ja auch Abhängigkeiten voneinander. Wenn dann einer Runner plötzlich alle Bilds ausführen soll und der andere alle Tests, dann kann es sein, dass der eine fünf Stunden braucht und der andere nach einer halben Stunde fertig ist und dann drumrum steht. Das ist nicht sehr effizient. Ich rede einfach mal ein Beispiel, Das ist ein bisschen einfach zu verstehen, glaube ich. Wenn ich ein Bild auf dem einen ausführe, dann braucht der Bild ja fünf andere Sachen, die da vorgelaufen sind. Da muss ich jetzt irgendwie schauen, dass all diese Builds nur auf dem einen Runner laufen, weil sonst muss ich sie ja gleichzeitig auf mehreren Runner laufen lassen. Und dann merkt man, wenn man sich dann all die Szenarien anfängt runterzurechnen, merkt man, dass es plötzlich ganz schön kompliziert wird, so eine Distributed Pipeline zu schaffen, die effizient ist, keine Zeit verschwendet, aber auch keine Sachen zweimal ausführt. Und das ist dann genau der Ort, wo NX und andere monorepo Tools ansetzen."
+        },
+        {
+            "start": 2339130,
+            "end": 2488800,
+            "speaker": "A",
+            "text": "Ich meine, dieser Dependency Graph, von dem Wolfgang gesprochen hat, ich meine, jedes Bildsystem, sei es npm, go, rust, jeder Compiler baut sich dieses Bildsystem ja auch auf. Diese Bild Dependencies, meine ich, Entschuldigung, diesen Graphen. Und ich kenne jetzt nur, ich kenne jetzt NX nicht, ich kenne nur Bazel. Bazel, wenn man das mal googelt, dann googelt man am besten nach Blaze. Blaze ist das interne von Google, Bazel ist dann die Open Source Version davon, ähnlich wie Borg und Kubernetes bei Google. Und da gibt es auch so ein Dependency Graph und da gibt es auch eine Konfigurationsdatei, die wird mit der Sprache stark geschrieben, ein bisschen wild, aber da wird halt auch gesagt, okay, die Dependencies sind A, B und C und dann baut ihr den Dependency Graphen. Aber das Tolle ist, wenn du diesen Graphen explizit hast und nicht neu errechnen musst, dann kannst du natürlich Remote Caching auch enorm nutzen. Das, was du auch gerade gesagt hast. Man kann halt sagen, okay, Independency B hat sich jetzt gar nichts geändert, deswegen habe ich das schon pre und es hat sich seit sieben Wochen nicht geändert, deswegen liegt im Remote Cache diese pre compiled Dependency bereits drin. Und jetzt das Tolle, wenn ihr lokal zum Beispiel wieder was mit Bazel baut, dann kann sich jeder Entwickler diese Cache pre compiled Dependency bereits runterziehen. Und dann kriegt man natürlich auch Build Times, von denen du gerade auch gesprochen hast, die dann sehr lange sind, natürlich auf Sekunden runter, weil du Dependencies vorkompilieren kannst und Remote Cachen. Und das fand ich unglaublich stark, bei Bazel zumindest, aber ich sage auch ganz oben drauf mit starlag und einen ordentlichen Remote Cash zu handhaben und zu operaten und allem drum und dran. Ich habe das Gefühl, du brauchst da schon so ein eigenes devtool Team, um das wirklich ans Fliegen zu kriegen und auch wirklich gute, ich nenne es mal Monorepo Infrastruktur hinzubauen, obwohl ich inzwischen auch sage, und das wäre die Frage, wo ist eigentlich der Unterschied zu diesen ganzen Herausforderungen, die ein Monorepo hat gegenüber einem Repository, wo einfach nur sehr viel los ist. Weil es kann ja auch eine große Library sein, wo zwanzig Entwickler inzwischen zwanzig zehn X Entwickler hämmern darauf rum und alle zwanzig haben Merge Rechte. Die Unterschiede oder die Herausforderungen im CI System sind doch dann eigentlich dieselben, oder? Merge Konflikte, Merge Cues, Remote Caching, Compute Power und so weiter und so fort, die sind doch eigentlich genau die gleichen wie bei einem großen Monorepo, oder?"
+        },
+        {
+            "start": 2488800,
+            "end": 2528130,
+            "speaker": "C",
+            "text": "Letztlich ist ein Monorepo ja auch nur ein großes Repo, wo viel los ist drin. Nur es ist eben der Versuch da, das auch zu strukturieren auf eine Art und Weise, dass es nicht so viel zu Problemen führt. Also wenn man einfach nur zehn gigantische Dateien hat mit tausenden Lines of Code, dann wirst du viele Verkonflikte haben. Wenn du im Gegensatz dazu das Ganze irgendwie klar strukturiert hast in Libraries, die voneinander abhängen, wie ich das vorhin genannt habe, dann hat man viel, viel weniger Probleme damit. Aber so die grundlegenden Sachen an die Zeit, die Compute braucht und sowas. Klar, am Ende ist es das Gleiche."
+        },
+        {
+            "start": 2528130,
+            "end": 2602670,
+            "speaker": "A",
+            "text": "Du hattest initial gesagt, einer der Herausforderungen bei einem großen Monorepo sind auch die Compute Kosten, weil du hast ja ziemlich viele CI Builds laufen. Und wenn ich dann jetzt weiterdenke in Bezug auf ein Poly Repo, wo sehr viel los ist, wo zwanzig Zen X Entwickler drauf sind, ich mag dieses Bild, ich hätte gerne mal ein Team von zwanzig zehn X Entwickler, was ist eigentlich ein zehn X Entwickler? Lass uns mal philosophisch werden. Dann kenne ich unter anderem auch die Technik, dass man sagt, du bundest einfach fünf Pull Requests, also du führst nicht jeden Pull Request einzeln aus, sondern du bundlest einfach fünf Pull Request, Merge die alle zusammen und führst dann die CI einmal für das Repo mit den fünf Pull Requests applied aus und sagst, wenn es grün ist, alles super. Das heißt natürlich nicht, dass der Bild nicht failt, wenn die einzelnen Sachen gemerged werden und nur wenn der CI failt, dann machst du eine Art Binary Split. Dann machst du eine Art Binary Split und sagst, okay, welcher Merge Request, welcher Commit war denn jetzt hier der Failure, weil dadurch nimmst du nämlich die Annahme, dass die Tests grundlegend durchlaufen, nur im Fehlerfall musst du dann weitere CI Execution haben. Ist sowas bei Monorepos eigentlich auch."
+        },
+        {
+            "start": 2602910,
+            "end": 2694570,
+            "speaker": "C",
+            "text": "Ja, so Merge Queues als Konzept letztlich total, total verbreitet. Also viele von unseren Kunden, die NX verwenden und Enterprise Contracts haben, wo wir auch dann viel mit den reden und interagieren und ihre Repo optimieren und sowas, die verwenden sowas auch. Ist eher ein Problem später. Also wenn du wirklich viele Entwickler hast, die auf einmal arbeiten und es hängt natürlich auch davon ab, wie dein Repo strukturiert ist und wie du deine Arbeit strukturierst. Also weil sozusagen viel kannst du ja auch vermeiden, indem du irgendwie dafür sorgst, dass nicht alle die ganze Zeit in den gleichen Dateien arbeiten. Um nochmal zurück auf deine Frage zu der Compute Kost an sich ist gar nicht so das oder zumindest das Problem, das ich mitbekomme oder über das Leute reden, weil du ja viel optimierst. Also der unoptimierte Compute Kost wäre ein Problem, wo du einfach alles die ganze Zeit ausführst und das ist kein Problem. Aber der optimierte Compute Cost, wo man nur Effekte macht, wo man Caching hat und so weiter und so fort, ist jetzt nicht was, wo wir zumindest oft hören, oh nein, das ist uns zu teuer, wir brauchen eine Art und Weise unsere Pull Request zu bundeln. Das Problem, was Merge Cues eher lösen, ist halt Merch Konflikte und sowas. Also wenn das man nicht die ganze Zeit immer rebasen muss und jetzt ist das eine reingegangen, jetzt kann ich mein Pull Request, muss ich von vorne anfangen und wenn halt jede Minute ein Pull Request reingeht in deine Repo, weil du so viele Leute hast, die daran arbeiten, dann wirst du die ganze Zeit Konflikte haben. Das ist eher das Problem, was Merge Cues meiner Erfahrung nach lösen."
+        },
+        {
+            "start": 2694570,
+            "end": 2705400,
+            "speaker": "A",
+            "text": "Wir hatten gerade noch mal zu der Historie gesprochen, bzw. Der Wolfgang hat vom Krieg erzählt. Wolfgang, du hattest gerade gesagt, das war vor zehn Jahren, zwölf Jahren. Von welchem Jahr haben wir da gesprochen?"
+        },
+        {
+            "start": 2705400,
+            "end": 2706520,
+            "speaker": "B",
+            "text": "Der Hype, meinst du?"
+        },
+        {
+            "start": 2706520,
+            "end": 2708760,
+            "speaker": "A",
+            "text": "Deine Sichtweise auf den Hype hat man ja schon geklärt."
+        },
+        {
+            "start": 2709080,
+            "end": 2716040,
+            "speaker": "B",
+            "text": "Start des Hypes, Ja, jetzt irgendwann zwei tausend fünfzehn hat das Ganze so begonnen, wäre jetzt meine Einschätzung, aber ohne es überprüft zu haben."
+        },
+        {
+            "start": 2716120,
+            "end": 2783750,
+            "speaker": "A",
+            "text": "Eine Argumentation, an die ich mich noch erinnern kann, war unter anderem die Größe von Monorepos und dann mit CI, weil ja Wolfgang hatte auch diese Features erwähnt von GitHub Actions, dass du sagen kann, wenn sich in diesem Folder was geändert hat, dann trigger den dritten und so weiter. Die kamen ja erst später. Aber es ging ja auch immer damals so, dass wenn du ein Monorepo hattest, dass du das komplette Repository klonen musstest, um den CI Run zu machen vor zehn Jahren. Und ich habe mal ganz kurz eine Recherche betrieben, dass es nämlich inzwischen Features von Git, so was wie ein Partial Klone oder ein Spars Checkout gibt, dass du nur ein Subfolder von dem Git Repository klonen kannst und nicht das ganze Repository. Und das ist natürlich jetzt super hilfreich in Sachen von Monorepos, aber diese Features wurden erst zwei tausend achtzehn zwei tausend neunzehn bzw. Zwei tausend zwanzig released, also eigentlich vor acht bis sechs Jahren. Max. Wie siehst du das? Wie inwieweit haben solche Art von Features Monorepos noch mal ein Boost gegeben? Weil ich meine an Effizienz ist das ja schon nicht zu nicht zu überbieten oder bei großen Monorepos, dass du nur ein Teil auscheckst und so weiter und so fort."
+        },
+        {
+            "start": 2784060,
+            "end": 2854190,
+            "speaker": "C",
+            "text": "Ich würde es tatsächlich gar nicht so hoch einschätzen, den Effekt. Also sowas wie Cello Clone auf jeden Fall super wichtig, wenn ein Mono Repo Commits hast, dass du dann nicht jedes Mal, wenn dein CI Runner das auscheckt, alle Commits replayen muss. Wichtig für so Sachen wie Partial Clones und Sparse Checkouts, wo ja nur ein Teil des Repos, nicht alle Ordner, sondern nur die und die Subfolder geklont werden. Das ist nicht was, wo ich sehe, dass viele Leute es wirklich brauchen oder verwenden. Wenn du Google bist, dann bist du irgendwann in der Dimension, wo sowas wichtig ist, wo du auch wirklich an die. Ich meine, deswegen reimlementieren ja dann auch solche großen Firmen irgendwie ihre Package Manager und ihre Dinge, weil sie einfach in der einzigartigen Position sind, wo die Assumptions nicht mehr halten. Wenn du nicht Google bist, dann würde ich mir erstmal keine Sorgen um Git machen. Es gibt da schon Sachen, die irgendwann Probleme bereiten und die werdet ihr sicher lösen, wenn sie kommen. Aber da würde ich mir erstmal nicht anfangen rum zu experimentieren, bis man wirklich an dem Punkt ist, wo es ganz akute Probleme gibt und den sehe ich tatsächlich auch bei größeren Firmen selten."
+        },
+        {
+            "start": 2854190,
+            "end": 2893860,
+            "speaker": "A",
+            "text": "Es macht aber Spaß, sich über diese Probleme Gedanken zu machen. Naja, naja, wir haben jetzt eine ganze Menge über die Grundlagen gesprochen. Wir haben ein bisschen über das Tooling gesprochen und du hattest schon erwähnt, einer der Keyfragen, wenn du dich mit deinen Arbeitskollegen eigentlich gar nicht verträgst und mit denen gar nicht sprechen möchtest, dann lass mal lieber ein Monorepo sein. Das bringt mich natürlich zu dieser ganzen People Frage. Ist die Entscheidung für ein Monorepo eher eine technische Sache oder vielleicht sogar eher eine People Sache? Also inwieweit verändert sich denn die tägliche Arbeit von uns allen, wenn wir auf einem Monorepo anstatt auf einem Poly Repo agieren?"
+        },
+        {
+            "start": 2894190,
+            "end": 2994870,
+            "speaker": "C",
+            "text": "Ich finde, vieles wird massiv simpler. Also ich erinnere mich an meinen letzten Job, wo ich kein Monorepo gab. Da waren irgendwie Azure DevOps und es gab eine lange Liste an fünfzig verschiedenen oder wie viel verschiedenen Repos und der Gedanke, dann irgendwas außerhalb meiner Komfortzone zu machen, war ein bisschen gruselig und die Hürde war massiv. Und das ist was, wo ich ganz klar merke, dass jetzt, wo ich in einem Monorepo arbeite seit ein paar Jahren, dass es sich ganz anders anfühlt. Also diese Mobilität, würde ich sagen, die Mobilität auch in andere Projekte zu contributen zu können, was im Backend und im Frontend auf einmal zu lösen. Solche Sachen sind einfach natürlich. Das ist nicht was, wo ich mir irgendwie so. Also klar, ich muss irgendwie ein Verständnis dafür haben und ich muss immer noch, wenn ich ein Problem habe, mit der Person reden, die da verantwortlich für ist. Aber das merke ich schon, dass es sich massiv ändert. Die Geschwindigkeit ändert sich auch. Also dadurch, dass du einfach einen Commit hast, wo du sagst, okay, das ist mein Frontend, meine Backend Änderung, alles passt zusammen, deployed, fertig. Das ganz viele Probleme, die ich davor wieder mitbekommen habe. Okay, jetzt müssen wir aber schauen, dass die Leute vom Backend Team die Änderung machen. Ah, jetzt muss ich denen erstmal hinterherlaufen. Ah, die haben gar keine Zeit dafür. Ah, okay, jetzt haben sie es endlich gemacht, jetzt müssen wir es deployen, jetzt müssen wir das Timing so und so hinkriegen, muss ich noch Backwards Compatibility bei mir einbauen und so weiter. Das ist halt ziemlich anstrengend und das macht einen ja auch viel langsamer. Das ist ja Reibung in jeder Ecke. Deswegen finde ich, dass sich durch diese Zugewinn an Mobilität und den Zugewinn an Geschwindigkeit sich das Arbeiten schon ganz anders anfühlt, wenn du in einer Firma bist, die auf einer Monorepo baut."
+        },
+        {
+            "start": 2994870,
+            "end": 3032130,
+            "speaker": "A",
+            "text": "Das, was du gerade gesagt hast, bin ich mega Fan von. Die Realität zeigt aber ein anderes Bild meines Erachtens nach, ne? Heißt, das zeigt ein anderes Bild? Ne, es zeichnet. Die Realität zeichnet ein anderes Bild. Meine Güte, heute fliegeln aber fliegeln aber wieder. Meine Güte, heute fliegen die Floskeln aber wieder und ich kriege sie nicht hin. Ist egal. Ich bin mega Fan von dem, was du erzählst. Aber das bedarf auch eine sehr erwachsene Kultur. Das bedarf eine Kultur des Inner Sources, so nenne ich das Open Source in einer geschlossenen Organisation, dass ich mich als Backend Engineer traue, deinen Frontend Code anzufassen. Und diese Barriere sehe ich konstant überall."
+        },
+        {
+            "start": 3032130,
+            "end": 3043700,
+            "speaker": "B",
+            "text": "Es ist auch nicht nur die Barriere, dass du dich traust, sondern dass es die andere Seite erlaubt. Das ist auch nochmal, dass sich die andere Seite wohl dabei fühlt, dass du jetzt in dem Code vom anderen Team irgendwas machst."
+        },
+        {
+            "start": 3043700,
+            "end": 3065770,
+            "speaker": "A",
+            "text": "Also ich verstehe das, was du sagst und ich finde das super gut und das ist der, ich glaube, das ist der Kicker fürs Monorepo. Und ich glaube, mit AI ist diese Polyglot, diese Sprach Polyglot Thematik auch gelöst. Ich bin nicht so gut in typescript. Ja, das kann jetzt die AI, dafür bin ich Java Engineering. Also das ist jetzt keine Ausrede mehr. Aber der kulturelle Aspekt wird ja nicht von der UI gelöst."
+        },
+        {
+            "start": 3066010,
+            "end": 3066570,
+            "speaker": "C",
+            "text": "Stimmt."
+        },
+        {
+            "start": 3066650,
+            "end": 3067530,
+            "speaker": "A",
+            "text": "Wie siehst du das?"
+        },
+        {
+            "start": 3068090,
+            "end": 3152990,
+            "speaker": "C",
+            "text": "Es ist ja schon mal auch eine massive Änderung, wenn du den Code einfach siehst. Ich muss es ja gar nicht jetzt anfangen anzufassen. Aber es existiert auch nicht mehr in dieser seltsamen Parallelwelt, von der ich auf jeden Fall die Finger lasse. Es ist alles da in meinem einen Repo, das ich lokal mir anschauen kann. Und der kulturelle Shift dann auch da irgendwie mit anzupacken, der ist viel leichter, wenn man davor schon sich dran gewöhnen konnte und das einfach sieht und es einfach da hat. Es löst aber keine Organisationsprobleme. Das habe ich ja vorhin schon gesagt. Wenn Leute sich nicht leiden können, dann werden sie da keinen Spaß dran haben. Also das ist schon irgendwas, wo man schauen muss, dass das irgendwie organisch, dass die Leute auch Bock drauf haben. Deswegen alle einfach reinschmeissen in ein Monorepo und sagen, so jetzt werdet ihr ganz viel Mobilität haben und kein Code mehr duplizieren und ihr werdet euch alle gut vertragen und alles wird ganz schnell gehen. Wird vermutlich nicht klappen. Man muss da schon auch ansetzen früher und die Leute dazu bringen, miteinander zu reden und schauen, dass der Buy in existiert, weil die Vorteile sind massiv, wenn sie ausgelegt werden. Aber du kannst nicht dazu zwingen, die Vorteile zu sehen, sondern du musst es ihnen irgendwie zeigen und vorleben. Deswegen bin ich auch so ein Fan von diesem inkrementellen Adaptionsansatz, weil dann man es eben schafft, Stück für Stück die Kultur zu demonstrieren, statt sie versuchen der Organisation überzustülpen."
+        },
+        {
+            "start": 3152990,
+            "end": 3164730,
+            "speaker": "B",
+            "text": "Hast du da irgendwelche Tipps, wie man die Kultur in diese Richtung reinbringt, wenn du sagst, eben nicht überstülpen, wie so eine Einführung von einem Monorepo, wie mache ich denn das dann am besten?"
+        },
+        {
+            "start": 3164960,
+            "end": 3266940,
+            "speaker": "C",
+            "text": "Also man braucht auf jeden Fall irgendjemanden, der ein Fan von Monorepos ist. Es ist ja erstmal auch Tooling Setup Aufwand und die Vorteile, die kommen im hinteren Ende erst raus und die werden lange gespürt werden und die werden sich selber potenzieren und sowas. Aber erstmal muss ja auch jemand sein, der irgendwie sich darum kümmert, Recherche zu machen, das Tool aufzusetzen und so weiter und so fort. Deswegen irgendwie ein Team oder eine Person oder eine Gruppe an Leuten identifizieren, die da Bock drauf haben, die da Champion sind und dann eben identifizieren, wo in der Firma Sinn ergibt. Kann ich mein Frontend und mein Designsystem Repo zum Beispiel zusammenlegen in ein Monorepo? Da muss ich nicht jedes Mal, wenn ich eine kleine Änderung an einem Button habe, erst das Design System publishen und dann mir das updaten in meinem Frontend Repo und dann mir den Button anschauen, dann wieder eine Änderung machen und dann geht es hin und her, sondern ich ändere die eine Datei, schaue mir eine App an, es sieht alles anders aus, schön easy. Das ist technologisch nicht aufwendig, weil es die gleichen Sprachen sind. Das sind eh schon Sachen, die direkt voneinander importieren. Die Leute arbeiten eh miteinander. Also die Frontend Engineers, die Wahrscheinlichkeit, dass sie mit den Leuten vom Designsystem, wenn sie auch nicht die Komponenten selber schreiben, irgendwie Zusammenarbeit im Kontakt sind mit denen ist ja recht hoch. Da gibt es einfach Sinn. Und deswegen würde ich sagen, find Leute, die Bock drauf haben, lass sie das Experiment starten und dann, wie schon gesagt, entwickelt es so einen Magnetismus. Dann werden die anderen Leute auch sehen, dass es Vorteile bringt und dann sich überlegen, ob sie da auch mitmachen wollen. Und dann wird der Kulturshift irgendwie organisch über die Leute kommen, die sozusagen Stück für Stück reingehen."
+        },
+        {
+            "start": 3266940,
+            "end": 3277340,
+            "speaker": "B",
+            "text": "Gibt es irgendwelche Anti Patterns, die du gesehen hast, wo du sagst, OK, auf keinen Fall, weil sonst geht es eben schon auf der technischen Seite schief und braucht es gar nicht die kulturelle dazu"
+        },
+        {
+            "start": 3277420,
+            "end": 3309440,
+            "speaker": "C",
+            "text": "jegliches Dogma letztlich sagen, es muss jetzt alles sofort, Es müssen von Anfang an verschiedene Sprachen sein, es müssen Teams sein, die nichts miteinander zu tun haben. Das ist einfach alles kleine Reibung, die dazu führen kann, dass das ganze Projekt einfach fehlschlägt. Und alle Leute Wir haben jetzt diese ganze Arbeit gemacht und mein Leben ist dadurch nicht besser geworden. Monarch und Scheiße. Dabei ist es vielleicht auch Wir haben die Arbeit nicht an der richtigen Stelle angesetzt und vielleicht war es einfach der falsche Implementationsansatz. Monorepos sind gar nicht so schlecht, wie ich denke."
+        },
+        {
+            "start": 3309520,
+            "end": 3358740,
+            "speaker": "A",
+            "text": "Aber ich mein, ein Risiko kann ja auch sein, und das höre ich gerade so raus, dass Monorepos initial schon mehr Koordinationsaufwand sind. Man muss sich halt irgendwie auf ein paar Standards einigen, man muss gucken, wie organisiert man den Code, wie verhindert man, dass man irgendwie Code, der nicht zusammenpasst, nicht zusammengelegt wird. Entwickler und Entwicklerinnen sind ja sehr opinionated, Sie haben ihre Tools und lieben ihre Setups. Der eine mag ein Makefile, der andere nix Container und nix Apps und weißt du, also da gibt es ja super viele Flavors und das ist natürlich schon ein Risiko, dass dieser hohe Koordinationsaufwand auch dieser hohe Diskussionsaufwand das ganze Projekt auch zum Kippen bringt, oder? Denn du sagtest zwar, lass uns das Experiment einfach mal starten, aber es kann auch so enden, dass jeder frustriert ist, weil niemand das bekommt, was er oder sie möchte, weil niemand möchte seine Babys abgeben."
+        },
+        {
+            "start": 3358740,
+            "end": 3440940,
+            "speaker": "C",
+            "text": "Auf jeden Fall. Deswegen hat Google ja auch große Teams, die sich nur darum kümmern, das Monorepo zu maintainen. Und deswegen haben viele Firmen ja auch so Plattform Teams, die genau sich darum kümmern, dass irgendwer auch das ownt das Ganze. Die einzelnen Teams wollen sich vielleicht nur um ihr Frontend, ihr Backend, ihre Library kümmern und möglichst die Finger von dem Monorebo Zeug weglassen lassen. Aber irgendwer muss dafür verantwortlich sein, dass das Tooling Setup ist, dass das Tooling maintained wird, dass irgendwie Probleme, die in den verschiedenen Teams aufkommen, gelöst werden. Deswegen, es ist auf jeden Fall auch ein Investment. Also es ist nicht komplett for free und magisch passiert es einfach Tooling wie NX zum Beispiel sich viel Mühe, dass dieser Aufwand möglichst gering ist, dass man eben nicht wie bei Basil Blaze Leute braucht, die Full Zeit Job. Es ist sich da einzuarbeiten und da lag oder wie auch immer die Sprache heißt zu lernen, so dass es alles bisschen tiefer geht. Aber es ist auf jeden Fall, da ist auf jeden Fall was dran. Es ist ein Investment. Die Sache ist aber es ist ja kein Investment, das du nur dann hast. Also dir Gedanken machen über Code Quality und die Architektur deines Systems und wie das strukturiert ist. Das musst du dir so oder so Du zahlst was, was du dann an anderer Stelle sowieso irgendwie gezahlt hättest. Also zahlen im Sinne von Aufwand, aber es ist ein Aufwand, der sich lohnt, weil es um wichtige Sachen geht."
+        },
+        {
+            "start": 3440940,
+            "end": 3504150,
+            "speaker": "A",
+            "text": "Vor ein paar Jahren hätte ich mir wirklich gewünscht, wir hätten einen Monorepo und zwar habe ich in einer Firma gearbeitet, die hat sehr stark damals auf PHP und Symphony gesetzt und in jedem Package Manager waren strikte Versionsnummern eingetragen, so wie man es ja heute auch macht. Damals gab es noch kein Dependabot und Renovate und allem drum und dran Bots, die das automatisch durchfahren. Deswegen musstest du Pakete manuell immer noch hochziehen und diese ganze Firma hatte dann ein Logging Paket über etliche Teams und du kannst dir vorstellen, was das dann immer für eine Maloche war, wenn du die Version hochgezogen hast und dann von allen Subdependen neue Releases gemacht hast und so weiter und so fort. Du warst gefühlt einen halben Tag nur in irgendwelchen fünf und dreiig Repos unterwegs unter was nur die Version hochgezogen. Ja, damals war es mir zumindest zu viel Aufwand, irgendein Skript zu schreiben, was dann darüber iteriert und diese Pull Request automatisch aufmacht. Heutzutage lacht man da wirklich drüber mit Dependabot und Renovate und AI und allem drum und dran. Schreckliche Zeit. Jetzt fühle ich mich wie nach dem Krieg. Wolfgang, jetzt fühle ich mich so wie du."
+        },
+        {
+            "start": 3504150,
+            "end": 3530880,
+            "speaker": "B",
+            "text": "Heutzutage löst ist sowieso alles AI. Die Plattform Teams brauchen wir übrigens auch nicht mehr. Das macht auch AI. Also Andis Job als Lead von dem Plattform Team ist dann sowieso auch obsolet, ganz klar. Also AI ändert alles. Aber ich habe es ja auch eingangs schon erwähnt, AI hat mich zumindest auch wieder an die Monorepos erinnert. Max, kannst du uns mal einen Einblick geben, warum dieses AI Thema jetzt mit Monorepos so zusammenhängt und warum das so wichtig ist oder wichtig geworden ist?"
+        },
+        {
+            "start": 3531040,
+            "end": 3536840,
+            "speaker": "C",
+            "text": "Ich bin übrigens, um ganz am Anfang zurückzugehen, ich bin schon bei dir, dass es so ein bisschen abgeflaut hat und es irgendwie andere Themen waren, die heißer waren."
+        },
+        {
+            "start": 3537950,
+            "end": 3539070,
+            "speaker": "B",
+            "text": "Danke, du bist ein guter Gast."
+        },
+        {
+            "start": 3541710,
+            "end": 3547990,
+            "speaker": "A",
+            "text": "Ich verstehe das komplett irgendwie Leute, die südlich von mir wohnen, irgendwie zusammenhalten müssen. Macht ruhig, macht ruhig."
+        },
+        {
+            "start": 3547990,
+            "end": 3715350,
+            "speaker": "C",
+            "text": "Stell dir vor, du würdest diesen super coolen zehn x Engineer, den du hast, in den Raum setzen und Hier ist eine Datei, die du dir anschauen darfst. Jetzt bitte mach die Änderungen, die ich möchte in meinem System, egal wie klug der ist. Wird halt nicht weit kommen, leider, weil viel Kontext fehlt und er nur diese eine Datei ändern kann und nicht irgendwie Zugriff zu dem ganzen anderen Rest des Systems hat. Und so ähnlich ist es mit AI Agents und LLM Tooling an sich, dass je mehr Kontext über das ganze System die zur Verfügung haben, desto besser können die dann auch Änderungen in diesem System machen Und je mehr Zugriff sie haben auf die ganzen verschiedenen Orte, wo der Code definiert ist, desto höher größer wird deren Autonomie, auch ein ganzes Feature zu bauen, statt nur diese eine kleine Änderung in der einen Datei machen. Copilot gibt es ja schon seit vier Jahren jetzt oder sowas, vier, vielleicht sogar mehr Jahren. Und am Anfang war der Scope halt, diese eine Zeile Code jetzt zu completen und dann war es irgendwann diese eine Funktion und dann gab es irgendwann ein Chatfenster und Cursor konnte in einer einen Datei ein bisschen Zeug rumschreiben und dann gab es Cloud Code und plötzlich konnte man in mehreren Dateien immer größere Sachen bauen. Also die Scope, in der AI Agents sich bewegen, die wächst stetig. Und wenn du dann dadurch, dass du nur ein kleines Repo hast, in dem nur ein kleiner Teil deines Systems definiert ist, dadurch schränkst du ja total ein, weil Die Modelle sind ziemlich gut mittlerweile und sie werden sicher nur besser werden. Deswegen ist ein Monorepo, was dann eben auch ganz viel enabled. Also ich bin jetzt wirklich kein AI Researcher, aber warum ich glaube, dass AI im Coding Bereich auch so weit fortgeschritten ist, ist das COTA so ganz klar semantisch eindeutig definiert ist, was hier passiert. Was macht diese Sache, was macht diese Sache, was macht diese Sache gegenüber? Ich habe ein wirres Netzwerk an Menschen, die irgendwie miteinander reden und verschiedene Repos maintainen und dann, wenn ich irgendwas ändern will, dann muss ich diesen einen Typen auf Slack anschreiben Und das muss ich halt wissen, weil ich, keine Ahnung, den neulich beim Lunch getroffen habe. Das ist was, was AI nicht gut kann. Wenn jetzt aber ich ein Monorepo habe, wo das alles klar definiert ist, wo die AI genau sehen kann, wie hängen all die verschiedenen Sachen voneinander ab, wie mache ich diese eine Änderung und was wird es dann Impact hier an der anderen Seite. Das ist natürlich genau die Stärke, die diese Systeme haben. Dadurch werden sie auch viel größere Änderungen machen können. Und das ist ja genau das, was wir wollen. Wir wollen ja, dass, also das ist vielleicht eine größere Frage, aber grundsätzlich ist im Interesse des AI Codings, dass die Agents immer autonomer werden können, immer bessere, größere Änderungen machen können im ganzen System."
+        },
+        {
+            "start": 3715510,
+            "end": 3726090,
+            "speaker": "A",
+            "text": "Ganze Thematik. Mit dem Kontext Window spielt natürlich auch eine sehr hohe Relevanz, besonders bei einem Monorepo. Klar, ich glaube, wir sind aktuell bei eins Million bedauerlicherweise."
+        },
+        {
+            "start": 3726170,
+            "end": 3732330,
+            "speaker": "C",
+            "text": "Ich bin mit meinem Opus eine Million Kontext Window nicht so happy irgendwie. Ich finde die Performance schlechter als davor."
+        },
+        {
+            "start": 3732570,
+            "end": 3765140,
+            "speaker": "A",
+            "text": "Genau, aber von der Theorie her, ein großes Kontext Window wird ja bei einem großen Mono Repo ja auch Sinn machen, oder? Ich meine, der Kollege, der Herr oder Frau LLM fährt sich da eine ganze Menge Code rein, analysiert dann eine Menge Code, summarize vielleicht so ein bisschen. Besonders, wenn du dann nicht nur auf einer Applikation nur auf deinem Java Backend rumturnst, sondern vielleicht auch noch die neuen APIs in der Mobile oder Flutter App, die in demselben Repo liegt, anpasst, dann noch das Java Backend und so weiter und so fort. Da muss man natürlich schon ein großes Kontext Window haben."
+        },
+        {
+            "start": 3765140,
+            "end": 3812290,
+            "speaker": "B",
+            "text": "Aber es geht ja auch darum, dass du einfach Zugriff auf die Dateien überhaupt hast. Das heißt ja gar nicht, dass dein Context Window gefüllt wird. Aber du kannst überhaupt auf diese Dateien zugreifen, wenn du wissen willst, wie ist die Backend API aufgebaut im Frontend, dann ist halt einfach gut, wenn du die eine Datei, die vielleicht auch ganz kurz ist, halt öffnen kannst, weil sonst hat das Frontend Repo die Informationen gar nicht. Die kannst du vielleicht einbauen und die kannst du vielleicht auch mit auschecken oder extra mit dem Pfeil dazugeben. Aber es ist natürlich alles viel mehr Aufwand. Und wenn du zum Beispiel im GitHub Universe arbeitest und dort ein Agent startest, ich glaube mittlerweile hat der Zugriff auf mehrere Repos, aber grundsätzlich ist natürlich auch einfacher, wenn du alles in einem Repo liegen hast und der dann in diesem Kontext schön vor sich hin rattern kann und alles findet, was er braucht. Es muss nicht unbedingt sehr viel sein, aber das Richtige muss halt sein."
+        },
+        {
+            "start": 3812290,
+            "end": 3884160,
+            "speaker": "C",
+            "text": "Ja, genau. Würde ich auch noch mal so unterstreichen. Also dieses Kontext Window größer auf jeden Fall besser, Aber das hat sich ja auch verändert, sagen wir mal vor zwei Jahren, als ich Fenster offen hatte und dann habe ich da irgendwie Code reingepastet und gesagt, erklär mir das und das. Da war diese Kontext Windows Sache noch viel relevanter, weil es da wirklich ein Hier sind all die Dateien, die ich habe, erklär mir irgendwas. Heutzutage sind so Agents ja super smart, dass sie dann anfangen, sich da die einzelnen Dateien rauszusuchen und dann nur gezielt Sachen auszulesen. Und das ist ja gar nicht mehr so ein wir ballern einfach alles ins Kontextfenster und dann muss es auch eine Million Tokens haben, weil sonst passt mein monorepoder nicht rein, sondern es ist sehr viel präziser. Deswegen würde ich das Kontext Window und monorepo Thema so ein bisschen entkoppeln. Das ist auch was, was ich vor einer Weile immer wieder gehört habe, so als Gegenargument, so nein, Monrepo ist schlecht, weil die AI ist verwirrt, weil es gibt zu viel Kontext und zu viele Dateien. Das würde ich sagen, ist heutzutage nicht mehr so kein Problem. Und dann ist eben der andere Effekt, die Agents können auch alles sehen und alles verstehen, alles nachvollziehen, alles recherchieren von alleine. Viel wichtiger."
+        },
+        {
+            "start": 3884160,
+            "end": 3912070,
+            "speaker": "A",
+            "text": "Ich denke jetzt aber auch mal über Elemente nach, wo Monorepos mal jetzt nicht das geschnitten Brot ist, sondern über die Kritik zum Beispiel. Es deckt ja auch Risiken, denn du hast jetzt eine Frontend App, eine Backend App und eine Mobile App in einem Monorepo. Du machst einen Pull Request und änderst die Backend API. In diesem Pull Request editierst du ebenfalls die Anbindung der Mobile App an die neue Backend API. Das ist technisch alles super, funktioniert grandios,"
+        },
+        {
+            "start": 3912150,
+            "end": 3913270,
+            "speaker": "C",
+            "text": "ergibt Sinn bis jetzt."
+        },
+        {
+            "start": 3914470,
+            "end": 3944930,
+            "speaker": "A",
+            "text": "Das ist schon super, dass wir uns darauf einigen können. Jetzt ist es natürlich im Mobile Sektor so, dass du, zumindest wird das oft nicht gemacht, die Leute, die die Mobile App installiert haben, nicht auf ein Update forcieren kannst. Das bedeutet, alte Versionen sind im Umlauf echt lange und deswegen kannst du diesen harten Cut ja nicht machen. Also du brauchst ja im Backend die alte Version der API noch, weil du halt alte App Version hast. Obwohl jetzt gerade, wo ich das Ich mache hier gerade so ein bisschen Rubber Ducking, weil dieses Risiko hast du in einem Pulli Glot Repo natürlich auch."
+        },
+        {
+            "start": 3945090,
+            "end": 3974880,
+            "speaker": "B",
+            "text": "Ich wollte genau dasselbe fragen. Wo ist der Unterschied? Das einzige, was mir natürlich einfällt, ist, dass du grundsätzlich die Reviewer dazu brauchst. Also dass du nicht selber irgendwas durchpushen darfst, wenn es die Mobile App zum Beispiel betrifft, sondern dass das Mobile Team dann natürlich mit eingebunden ist. Aber das geht ja heutzutage mit Code Ownership eigentlich ganz gut, dass das automatisch gemacht wird und zum Beispiel NX bietet ihr da auch irgend sowas an, dass quasi auf der Teamseite irgendwie Verantwortlichkeiten noch mal zusätzlich definiert werden."
+        },
+        {
+            "start": 3976310,
+            "end": 4040260,
+            "speaker": "C",
+            "text": "Nächsten Tooling, das ich ganz cool finde, dass dieses ganze Ownership Thema viel einfacher macht, weil man eben sagen Ich definiere Ownership in diesem Project Graph zum Beispiel. Ich sage alle Sachen, die das Backend und damit abhängen, muss ich dieses Team irgendwie ein Review geben, damit es durchkommt Oder alle Sachen, die getaggt sind mit dem Thema API muss diese Person draufschauen, heißt man muss nicht mehr ein und wir synchronisieren das dann sozusagen in deine Code Owners, GitHub File oder wie auch immer das bei BitBucket und sowas allem heißt, dass du sozusagen nur einmal zentral deklarieren kannst und wir dann die Textdateien draus machen, weil genau, also das ist natürlich ein wichtiges Thema, was auch Leute, das habe ich glaube ich vorhin schon angeschnitten, sich Sorgen machen, dass dann plötzlich alle möglichen Leute kommen und Code bei ihnen im Projekt reinpushen, der gar nicht den sie selber gar nicht so verantworten wollen. Das ist also alles ohne Probleme lösbar. Man kann immer noch als Team Kontrolle über seinen eigenen Code haben."
+        },
+        {
+            "start": 4040260,
+            "end": 4046859,
+            "speaker": "B",
+            "text": "Und die ganzen Metadaten, die ihr abspeichert in NX, die liegen üblicherweise in Files, wenn ich das richtig verstanden habe, oder?"
+        },
+        {
+            "start": 4047020,
+            "end": 4097360,
+            "speaker": "C",
+            "text": "Genau, also wir haben dieses Project Graph Konzept eben und der wird aus verschiedenen Quellen zusammengebastelt. Da gibt es Sachen, ich habe irgendwas selber konfiguriert im Sinne von dieses Projekt hängt von dem Projekt ab, aber zum Beispiel gibt es auch Sachen, ich habe zentral das Plugin für Gradle definiert und dann, wenn ich verschiedene Gradle Bild Files hab, werden die sozusagen automatisch NX Targets und auch in diesem Project Graph mit eingebunden. Das sozusagen, wenn ich sage, lass mal alles bauen, lass mal ein Bild machen für alles, was sich geändert hat. Es ist mir erstmal egal, ob das jetzt ein Gradle Bild ist oder Webpack Bild oder was auch immer, sondern es gibt eben so eine Unified CLI, die Leute verwenden können und der Project Graph setzt sich eben aus all diesen verschiedenen Sachen zusammen und ist dann eine gigantische JSON Datei, die da irgendwo liegt."
+        },
+        {
+            "start": 4097440,
+            "end": 4136940,
+            "speaker": "B",
+            "text": "Also der Hintergrund meiner Frage war natürlich auch dahingehend, es ist jetzt nicht irgendeine Plattform in der Cloud, wo ihr irgendwie diese Metadaten speichert, sondern ihr habt es in einem Repository und damit hat auch mein LLM oder mein Agent wieder Zugriff auf diese ganzen Metadaten und kann diese Metadaten natürlich auch noch mal mit einbeziehen, diesen ganzen Thinking Process und wie man dann damit umgeht. Das heißt, ich stelle meinem AI Agent sogar diese Informationen zur Verfügung auf der Teamebene, wer ist für was verantwortlich, muss man irgendwas beachten. Also der kann sogar in die menschlichen, unter Anführungszeichen, Strukturen hineingehen und die mitnehmen. Das ist natürlich auch ein großer Vorteil,"
+        },
+        {
+            "start": 4137260,
+            "end": 4143000,
+            "speaker": "C",
+            "text": "hätte ich gar nicht hier sein müssen. Für den Podcast hast du selber perfekt, perfekt, perfekt rübergebracht."
+        },
+        {
+            "start": 4143000,
+            "end": 4169800,
+            "speaker": "B",
+            "text": "Hat nichts jetzt nur mit NX zu tun, sondern ganz allgemein. Also die Tendenz geht ja wieder, muss man ja auch dazu sagen, mehr in diese Richtung, weil früher hattest du natürlich dann irgendwelche Jenkins Definitionen, die sind irgendwo gelegen in irgendeinem anderen Repository und du hattest natürlich diese Infos nicht. Und umso mehr natürlich im Repository liegt GitHub Actions oder sonstige Dinge, umso einfacher ist es natürlich auch, das mit einzubeziehen. Also für uns Menschen natürlich, aber für die Agents besonders."
+        },
+        {
+            "start": 4170350,
+            "end": 4189230,
+            "speaker": "C",
+            "text": "Ja genau das Bild, was wir gerne verwenden, ist so navigieren im Sinne im Auto zu sitzen, einfach irgendwie raten, wo man hin muss, gegenüber Google Maps zu haben und dir ganz klar anschauen kann, wo bin ich, wo muss ich hin, wie ist diese ganze Map von meinem Repo sozusagen aufgebaut. Macht es natürlich massiv einfacher für Agents und Menschen."
+        },
+        {
+            "start": 4189310,
+            "end": 4207800,
+            "speaker": "A",
+            "text": "Ich möchte jetzt auch mal eine Lanze brechen für die ganze Jenkins Crew. Erstens, ich glaube ganz viele Firmen nutzen Jenkins noch. Zweitens, auch bei Jenkins gibt es inzwischen einen Jenkins File und auch schon echt paar Jahre, was du dir zur Repo legen kannst. Also diese Story, die du gerade erzählt hast, tut mir leid, die ist wirklich nicht vom Zweiten Weltkrieg. Ich glaube, die ist vom ersten."
+        },
+        {
+            "start": 4207960,
+            "end": 4248780,
+            "speaker": "B",
+            "text": "Ja, drum sage ich, früher sind diese ganzen Jenkins Sachen irgendwo anders. Die sind meistens auch in dem Repo gelegen, aber halt in irgendeinem anderen. Das war ja immer das Problem, also dass die Daten dann nicht in dem eigentlichen Repo liegen, weil die CI CD Pipelines irgendwo anders definiert waren in einem, vielleicht sogar in einem Cloud Tool, aber im besten Fall in einem anderen Repo. Und das finde ich eigentlich ganz cool, dass das zusammenwächst einfach und dass man alle Informationen an einem Ort hat und das alles sich auch so schleichend Richtung Monorepo langsam bewegt hat in den letzten zehn Jahren. Also der Hype ist vielleicht abgeflacht, aber es ist dann so schleichend immer mehr übergegangen, dass man sich fast so natürlich schon wohlgefühlt hat, da vielleicht Frontend und Backend mal zusammenzulegen in einem Repository."
+        },
+        {
+            "start": 4248780,
+            "end": 4262410,
+            "speaker": "A",
+            "text": "Und während du gesprochen hast, habe ich natürlich Jenkins gegoogelt, weil ich natürlich die ganze Sache in den Shownotes verlinken möchte und dabei habe ich gesehen, das letzte Jenkins Release ist keine zwei Wochen alt. Also das Projekt ist alive and kicking."
+        },
+        {
+            "start": 4262570,
+            "end": 4273410,
+            "speaker": "B",
+            "text": "Jenkins wird auch noch viel verwendet, gar keine Frage. Ich hab übrigens in der Zwischenzeit auch gegoogelt und habt es noch mal gecheckt. Google ist damals zwei tausend fünfzehn rausgekommen mit dem Single Monorepo bei ihnen."
+        },
+        {
+            "start": 4273410,
+            "end": 4275090,
+            "speaker": "C",
+            "text": "Hätte schon gedacht, dass es ein bisschen länger sein ist."
+        },
+        {
+            "start": 4275090,
+            "end": 4286300,
+            "speaker": "B",
+            "text": "Also ich weiß nicht, ob es die erste Erwähnung war, aber es war auf jeden Fall große Story damals. Why Google stores billions of lines of code in a single repository zwei tausend fünfzehn auf der Scale Conference."
+        },
+        {
+            "start": 4286460,
+            "end": 4359430,
+            "speaker": "A",
+            "text": "Okay. Und das ja Stimmt, das Paper wurde im Juni zwei tausend sechzehn veröffentlicht. Das haben wir natürlich auch in den Shownotes verlinkt. Max, vielen lieben Dank für diese Episode. Jetzt frage ich mich gerade natürlich, wie viele Leute nach dieser Episode die Diskussion mal mit ihrem Staff Engineer, Teamleiter, Tech Lead oder Chef generell mal anstoßen. Ich habe da was gehört, dieses Monorepo und AI, die beiden lieben sich und wir wollen doch hier auf den Train aufspringen. Lass uns das doch mal probieren. Lass uns das doch mal wissen. Also ich bin da sehr gespannt, wer vielleicht sogar ein Monorepo in seiner Firma nutzt und wer nicht und wer gerade darüber überlegt oder wem diese Episode diesen Flausen in den Kopf gesetzt hat, die ganze Sache einfach mal zu testen. Und natürlich sind wir auch immer daran interessiert, Kritik an Monorepo, also was habt ihr euch gedacht? Läuft dann besser oder gut, aber was hat sich davon nicht bewahrheitet? Komm doch einfach mal in unsere Discord Community und da bin ich sehr, sehr gespannt auf euer Feedback. Max, was ist die eine Sache, wirklich die eine Sache, die sich jeder fragen sollte, bevor man ein Monorepo aufsetzen sollte oder das Experiment starten sollte, So wie"
+        },
+        {
+            "start": 4359430,
+            "end": 4378270,
+            "speaker": "C",
+            "text": "du es formuliert hast, will ich am Ende des Tages ein bisschen weniger genervt sein. Das ist die Frage. Sag nicht, dass Monorepo für jeden perfekt ist, aber ich glaube, viele Leute leiden mehr in ihrer alltäglichen Arbeit als Softwareentwickler, als sie es müssten. Und das Experiment starten, das glaube ich ist echt, das ist für jeden das Richtige."
+        },
+        {
+            "start": 4378270,
+            "end": 4385430,
+            "speaker": "A",
+            "text": "Hast du auf diese Frage jemals eine Nein Antwort bekommen? Will ich weniger genervt sein? Nein."
+        },
+        {
+            "start": 4385430,
+            "end": 4387550,
+            "speaker": "C",
+            "text": "Siehst du dann Monorepos."
+        },
+        {
+            "start": 4387710,
+            "end": 4428730,
+            "speaker": "A",
+            "text": "Wie immer, falls ihr Feedback zu dieser Episode habt, kommt in die Discord Community, nennt uns das. Wir leiten das gerne an den Max weiter. Wir haben natürlich auch in den Shownotes ein paar Links hinterlegt, zum Beispiel von NX haben wir ein bisschen drüber gesprochen, von der Monorepos Tools Webseite. Wer vielleicht ein bisschen mehr Informationen über Monorepos und die entsprechenden Tools für eure Sprache habt. Turbo Repo wurde zum Beispiel für JavaScript und typescript erwähnt, aber wir haben auch über Basil und natürlich auch Wolfgangs Lieblings Tool Jenkins gesprochen, haben wir natürlich auch verlinkt, falls ihr das neueste Release downloaden wolltet. Ansonsten würde ich sagen, Max, vielen lieben Dank für deine Zeit und ich verabschiede mich im Namen von allen drei. Ich hoffe, die sagen gleich auch noch mal Tschüss. Sonst würde ich sagen bis zur nächsten Episode und Tschüss."
+        },
+        {
+            "start": 4428730,
+            "end": 4431730,
+            "speaker": "C",
+            "text": "Ja, danke euch. Ich hatte viel Spaß. Ciao, Servus."
+        }
+    ]
+}
