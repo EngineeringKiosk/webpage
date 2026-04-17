@@ -20,4 +20,14 @@ talks:
     website: 'https://www.thewanderingman.art'
     linkedin: 'aliciatrepatpont'
 eventId: '006b5e7seqd85i5ioq2i12tdnf'
+speakers:
+  female: 1
+  male: 1
+participants:
+  registered: 84
+  present:
+    total: 70
+    male: 60
+    female: 10
+  newParticipants: 32
 ---
