@@ -213,7 +213,7 @@ const html = (await Astro.slots.render('default'))
 									{
 										header.map((element) => (
 											<li class="mb-2">
-												<a class="inline-block py-1 text-coolGray-400 hover:text-coolGray-500 font-semibold" href={`#${element.id}`}>
+												<a class="inline-block py-1 text-coolGray-400 hover:text-coolGray-500 font-semibold" href={`#${element.slug}`}>
 													{element.title}
 												</a>
 											</li>
