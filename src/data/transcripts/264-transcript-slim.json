@@ -1,0 +1,597 @@
+{
+    "confidence": 0.9606843,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3598,
+    "utterances": [
+        {
+            "start": 3120,
+            "end": 91300,
+            "speaker": "A",
+            "text": "Herzlich willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute machen wir uns mal an ein Thema, das wir lange eher gestreift als frontal angefasst KI im Alltag von Softwareentwickler innen. Genauer gesagt geht es um eine ziemlich unangenehme, aber extrem wichtige Wie wirst du eigentlich Senior oder Staff Engineer, wenn AI inzwischen Code schneller produziert, als Teams ihn reviewen können? Wir sprechen darüber, warum mehr KI nicht automatisch bessere Software bedeutet, weshalb Output und Outcome gerade jetzt noch stärker auseinandergehen und warum das klassische Bottleneck im Code Review durch AI plötzlich für alle sichtbar wird. Gleichzeitig schauen wir auf die Was macht Seniorität heute eigentlich wirklich aus? Geht es noch um schneller coden oder vielmehr um Kontext, Kommunikation, Priorisierung und gute Entscheidungen? Außerdem diskutieren wir, warum Junior Rollen gefühlt verschwinden, weshalb das für die Branche ein echtes Problem ist und warum ein Coding Agent eben nicht einfach dein nächster Praktikant ist. Kurz zwischen Hype, Skepsis, Vibe, Coding und Big Picture sortieren wir gemeinsam, was von Senior Engineers in der AI Ära wirklich erwartet wird. Man könnte auch Wenn mehr Code billiger wird, wird Klarheit wertvoller. Also lass uns genau darüber sprechen. Viel Spaß mit dieser Episode. Ein Thema, welches wir im Podcast hier immer gekonnt umschifft haben, ist das Thema AI oder KI?"
+        },
+        {
+            "start": 91300,
+            "end": 95500,
+            "speaker": "B",
+            "text": "Du bringst es jede Episode, kommst du mit AI um die Ecke? Moment mal."
+        },
+        {
+            "start": 95500,
+            "end": 120000,
+            "speaker": "A",
+            "text": "Ja, immer mit dieser Seitenfrage und welchen Effekt hat jetzt AI auf dieses Thema X und dann Thema X, das Thema der Episode? Weil im Endeffekt ist das so eine Evergreen Frage und die kann es halt überall droppen. Aber deswegen stellen wir sie nicht. Wir stellen sie, weil AI da ist, Alltag in der Softwareentwicklung und vielleicht auch so langsam, muss man das auch mal sagen, gekommen ist, um zu bleiben."
+        },
+        {
+            "start": 120320,
+            "end": 133040,
+            "speaker": "B",
+            "text": "Vor allem, wir fokussieren uns nie auf die Frage. Wir stellen zwar die Frage immer so am Ende und so, du kommst meistens damit um die Ecke, aber wir fokussieren uns nicht drauf, damit nicht alles AI ist, weil wir wollen nicht das nächste Podcast sein, was komplett in die Bubble schwappt."
+        },
+        {
+            "start": 133130,
+            "end": 147210,
+            "speaker": "A",
+            "text": "Wir wollen halt kein LinkedIn im Audioformat sein. Aber der Wolfgang hat gedacht, ich breche heute mal das Eis, ich lauf mal wieder aus dem Ruder. Und deswegen hat der Wolfgang sich vor gar nicht allzu langer Zeit auf seinem eigenen Engineering Kiosk Meetup eingezeckt."
+        },
+        {
+            "start": 147210,
+            "end": 148650,
+            "speaker": "B",
+            "text": "Das erste Mal nach zwei Jahren möchte"
+        },
+        {
+            "start": 148650,
+            "end": 169210,
+            "speaker": "A",
+            "text": "ich dazu sagen, völlig egal. Eingezeckt ist eingezeckt. Man könnte meinen, du organisierst das Meetup, um dir eine Bühne zu geben, weil du nirgendwo anders eine Bühne kriegst. Aber nun gut. Du hast aber auf jeden Fall einen Talk gehalten und zwar hast du einen Talk gehalten, wie man Senior oder Staff Engineer wird, wenn doch die AI die ganze Arbeit macht. Und ich habe Fragen und deswegen habe ich dich heute eingeladen."
+        },
+        {
+            "start": 169370,
+            "end": 170970,
+            "speaker": "B",
+            "text": "Wolfgang, bitte."
+        },
+        {
+            "start": 171610,
+            "end": 293880,
+            "speaker": "A",
+            "text": "Also im Endeffekt schauen wir der Sache einfach mal ehrlich ins Auge. Keiner von uns hat die Weisheit mit Löffeln gefressen. Wir alle versuchen gerade irgendwie mit KI und AI umzugehen. Arbeitnehmer und du bist kein Arbeitnehmer, du bist ja Freelancer, kriegen oft auch vom Management einen gewissen Druck, die Produktivität zu steigern bzw. Manche Manager sagen, okay, ich habe jetzt nur noch zehn x Engineers. Manch andere Manager, ctos, Vice President oder Abteilungsleiter sind vielleicht etwas realistischer, die sagen, okay, wendet mal AI an, vielleicht seid ihr ein bisschen schneller, zwei, drei, vier x. Du als selbstständiger Berater machst hoffentlich dir selbst ein bisschen Druck, um produktiver zu werden. Im Endeffekt sind wir alle im gleichen Boot und wir versuchen jetzt alle irgendwie damit umzugehen und zu lernen und stellen uns auch all dieselben Fragen. Werden wir bald alle von der KI ersetzt oder nicht? Diese Fragen werden wir wahrscheinlich nie beantworten können, denn Achtung Wolfgang, ein Spruch, den du immer so gerne sagst, Vorhersagen sind schwierig, besonders wenn sie die Zukunft betreffen, ist glaube ich einer deiner Lieblingssätze. Und ja, auch inzwischen denke ich, nee, die KI will uns glaube ich nicht ersetzen, sondern wir Menschen oder wir Software Engineers sind schon sehr, sehr wichtig, denn so eine KI lässt sich halt auch nicht einfach bedienen. Shit in, shit out und so weiter und so fort, kennen wir alles. Aber ich habe gerade gesagt, die KI ist hier und die ist auch gekommen, um zu bleiben. Deswegen müssen wir alle irgendwie damit lernen umzugehen und dieses Tool, Achtung, in unserem Werkzeugkasten müssen wir irgendwie lernen anzuwenden wie eine neue Zange. Und der Wolfgang hat eine Meinung darüber, wie man dieses neue Tool jetzt auch anwendet, um entweder vom Junior oder Midlevel Karriere Level auf das Senior Level zu kommen oder wie man, wenn man bereits Senior oder Staff ist, auf diesem Level denn auch bleiben kann bzw. Welche Kriterien denn wichtiger sind für den Alltag, wenn man die AI in der Hand hat. Habe ich das richtig zusammengefasst, Wolfgang?"
+        },
+        {
+            "start": 293880,
+            "end": 350110,
+            "speaker": "B",
+            "text": "Einen Punkt, den du auf jeden Fall noch nicht erwähnt hast und der ja so aktuell überall herumschwirrt, ist diese Geschichte rund um den Junior. Weil es heißt ja, dass Junior Rollen eigentlich aktuell nicht mehr gebraucht werden und die meisten Firmen suchen ja nur mehr nach Seniorentwickler innen und keine Juniorrollen mehr. Das sieht man ja auch wirklich aktuell in Studien. Zum Beispiel Indeed hat das Ganze mal verglichen. In den letzten Jahren sind die Junior Positionen zum Beispiel um vier und dreiig Prozent gesunken und der Anteil der Jobs mit fünf plus Jahren Erfahrung sind von sieben und dreiig auf zwei und vierzig Prozent zum Beispiel gestiegen in zwei Jahren. Das heißt, man sieht schon da einen eindeutigen Trend auch in den Zahlen. Also es ist nicht nur so, was man mitbekommt. Und da stellt sich natürlich immer die Frage, woher kommen dann diese Senior Personen? Wie wächst man überhaupt noch in die Senior Position? Kann man überhaupt noch in die Senior Position wachsen oder ist man eh schon verloren als Junior? Und genau in diesen Komplex sollten wir auch mal reinschauen."
+        },
+        {
+            "start": 350058,
+            "end": 410058,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 410110,
+            "end": 432450,
+            "speaker": "A",
+            "text": "Dann lass uns mal mit der ganzen Thematik starten. Ich hoffe, du hast ein paar Daten mitgebracht und nicht nur deine eigene. Wir leben in einer Bubble, wir sind in der IT, wir sind ganz vorne an der Front, was Innovation angeht, alle von uns. Aber ist das denn die Realität oder sagen die Daten was anderes? Also nutzen bereits ein hundert Prozent der Softwareentwickler in der IT Industrie KI Tools oder sind wir komplett geblendet?"
+        },
+        {
+            "start": 432530,
+            "end": 455350,
+            "speaker": "B",
+            "text": "Kennst du jemanden, der AI noch nicht verwendet beim Coden? Also während du nachdenkst, es gibt Stackoverflow Daten von der klassischen Survey von zwei tausend fünf und zwanzig und da haben schon vier und achtzig Prozent angegeben, dass sie KI Tools nutzen. Ich vermute, dass die Zahl wesentlich höher mittlerweile ist. Jetzt zwei tausend sechs und zwanzig da gibt es halt noch keine Survey Daten. Aber jetzt in deinem direkten Umfeld, kennst du jemanden, der sich noch weigert?"
+        },
+        {
+            "start": 455350,
+            "end": 496660,
+            "speaker": "A",
+            "text": "Ich hatte vor kurzem ein Gespräch mit jemandem, der war negativ gegenüber KI eingestellt. Diese Person hat noch nie mit KI programmiert und diese Person war sehr kritisch da gegenübergestellt in Bezug auf die KI halluzioniert nur nur die Leute, die die KI verkaufen, gewinnen dabei also Nvidia und keiner ist mit KI wirklich Produktiv und dann war das natürlich ein relativ schwerer Stand. Aber auf jeden Fall hat man relativ schnell gemerkt, okay, diese Person hat noch ein altes Bild von vor einem Jahr oder anderthalb oder ähnliches. Also die Antwort ist ja, aber nur eine Person. Und ich habe mit sehr, sehr vielen Personen gesprochen, also wirklich eine Minderheit, würde ich sagen."
+        },
+        {
+            "start": 496660,
+            "end": 608040,
+            "speaker": "B",
+            "text": "Es ist ja auch ganz interessant, weil du gerade Kritik erwähnst. Ich habe auch kürzlich gehört, es gibt allein zwei Studien von Writer und eine von Gallup, dass eigentlich so die Gegenwehr bei KI sehr groß geworden ist. Also die Writer Studie sagt, dass neun und zwanzig Prozent aller Mitarbeitenden gegen KI Initiativen arbeiten wirklich aktiv und in der Gen C sogar vier und vierzig Prozent. Und ganz viele Führungskräfte sind ziemlich enttäuscht, dass es keinen Return on Investment gibt bei der KI. Also man sieht schon aktuell so eine Bewegung, die bisschen negativ gegenüber der KI ist. Da sprechen wir natürlich jetzt von allgemeinen Industrien, Führungskräfte im Allgemeinen jetzt nicht nur Development, sondern ganz allgemein sieht es wahrscheinlich auch schwieriger aus, dass man da etwas rauszieht als bei Developern. Aber interessanterweise die Gen Z ist da sehr, sehr stark dagegen, hat vielleicht dann auch mit der Jobsituation zu tun, das wurde jetzt dort nicht erhoben, aber man merkt schon, dass es da auch einen Gegentrend gibt und das sind aktuelle Studien und jetzt keine alten Studien. Also diesen Gegentrend, den es vielleicht bei Developern eher früher gegeben hat, sieht man jetzt vielleicht in der Gesellschaft ganz allgemein durchaus durchklingen. Und wenn wir gerade bei den Studien sind, eine andere Studie habe ich auch noch, und zwar von Gartner. Die haben herausgefunden, dass AI im Allgemeinen fünf komma vier Stunden spart in der Woche, dass man dann aber eine Stunde Korrektur wieder braucht für die KI Arbeit und dass die restlichen eins komma fünf Stunden werden dann durch irgendwelche Team Sachen noch zugemüllt und eins komma sieben Stunden durch irgendwelche neuen Arbeiten und dass die Akzeptanz da eigentlich auch gar nicht so hoch ist, weil dann hat man endlich durch die KI irgendeine Zeit herausgeholt aus seiner Arbeit und dann wird sie vom Team oder von der Chefin wieder zugemüllt und man hat nichts davon und die Motivation sinkt dadurch dann auch wieder automatisch KI Tools überhaupt zu verwenden, weil man ja persönlich keinen Vorteil daraus ziehen kann. Betrifft auch wieder allgemeine Arbeit und jetzt weniger Development."
+        },
+        {
+            "start": 608040,
+            "end": 634400,
+            "speaker": "A",
+            "text": "Ich musste gerade erst mal nachschauen, wer ist nochmal die Gen Z. Gen Z sind Leute, die ein tausend neun hundert fünf und neunzig bis zwei tausend zehn geboren wurden, also heutzutage zwischen vierzehn und ein und dreiig Jahre alt sind. Und das fasziniert mich halt schon, dass du sagtest, bisschen mehr als vierzig Prozent gegen KI sind, weil das sind doch eigentlich die Leute, die voll im Saft sind mit der Technologie oder gibt es eine Unterschaffung? Also warum und weswegen und so Hast du da was in den Daten gefunden?"
+        },
+        {
+            "start": 634880,
+            "end": 675890,
+            "speaker": "B",
+            "text": "Ich glaube, die Gründe wurden nicht erhoben, was ich gesehen habe, aber ich könnte mir schon vorstellen, dass es einfach mit der aktuellen Situation zusammenhängt, mit der Jobsicherheit. Diese Generation, der sagt mir auch nach, dass das live in der Live Work Balance wichtiger wird. Also könnte schon aus der Ecke kommen und ich habe gerade jetzt mit sehr jungen Studierenden auch zu tun im Informatik Kontext und ich bin auch immer wieder verwundert, wie wenig AI Nutzung eigentlich dort vorhanden ist und wie wenig Erfahrung auch diesbezüglich vorhanden ist, obwohl es eigentlich die AI native Generation ist. Also das eine schließt andere scheinbar nicht aus."
+        },
+        {
+            "start": 675890,
+            "end": 725020,
+            "speaker": "A",
+            "text": "Okay, ich habe mir gerade noch mal kurz die Datenlage angesehen und zwar wurde die Studie bereits AI Adoption in Enterprise genannt. Es besteht sich also auf größere Firmen, ist jetzt eine Mutmaßung, weil die Gründe stehen wirklich nicht in der Studie, aber das, was man so liest, wie AI in großen Firmen ausgerollt wird, ist ja auch oft fraglich. Also das bedeutet, kann man da die Daten reinpacken, die ich brauche, um die Produktivität zu gewinnen oder darf ich da keine sensiblen Daten reinpacken? Welche Limitierungen habe ich? Ist AI vielleicht das neue Messmodell? Kriege ich mehr Gehalt, wenn ich mehr nutze und so weiter und so fort? Ist ja alles ein bisschen schwierig. Aber was lustig ist, achtzig Prozent der Gen Z vertraut der AI mehr an, gewisse Arbeiten besser zu machen als ihr Manager."
+        },
+        {
+            "start": 725020,
+            "end": 733870,
+            "speaker": "B",
+            "text": "Ja gut, das hat sich jetzt nicht geändert gegen früher, oder Man war immer schon besser als der Manager und man kann sowieso immer alles besser als der Manager. Also das kann ich noch irgendwo nachvollziehen."
+        },
+        {
+            "start": 733870,
+            "end": 770440,
+            "speaker": "A",
+            "text": "Aber dass Leute aktiv KI Initiativen sabotieren, es tut mir leid, ich hoffe, jeder, der uns gerade zuhört, macht dies nicht, sondern er hebt wirklich einfach nur mal das Wort und die Kritik und spricht mit irgendwem, der das macht, weil sabotieren, das ist meines Erachtens nach wirklich brutales Geld verbrennen. Also du bist angestellt du bekommst Geld, um die Firma nach vorne zu bringen, die Firma macht etwas, weil sie daran glaubt oder ein Experiment kann ja auch nach hinten losgehen, aber ein Experiment und jemand anders sabotiert ist. Also das geht so gegen meine Philosophie irgendwie."
+        },
+        {
+            "start": 770600,
+            "end": 930750,
+            "speaker": "B",
+            "text": "Ich habe gerade andere Studie kürzlich mal überflogen und da ist es darum gegangen, dass einerseits natürlich die KI sabotiert wird, also wenn so Testdatensätze und so weiter generiert werden, dass da absichtlich Fehler reingebaut werden, damit der eigene Arbeitsplatz nicht in Gefahr ist. Und ich glaube, das Beispiel war in China, dass da sogar Leute dann irgendwie KI verwenden, um ihre Leute im Team zu ersetzen, um zu zeigen, dass diese anderen Leute ersetzbar sind, sie aber selber nicht und fangen dann an, so mit Machtspielchen irgendwie die anderen rauszukicken und solche Sachen. Also dass KI für Machtspielchen verwendet wird, scheint durchaus ein Trend zu sein und ist meistens halt auch in größeren Enterprises der Fall. Und ich hoffe einfach mal, dass es bei uns in der Tech Szene etwas anders zugeht. Hoffentlich. Aber kommen wir mal zurück in die Tech Welt, weil da sieht das Ganze ja auch anders aus und die meisten sehen ja schon irgendwo einen Mehrwert in der AI. Also sogar wenn man mit den ärgsten Linux Open Source, Alles muss lokal sein Leuten spricht, auch die haben das mittlerweile irgendwo entdeckt und sehen das Ganze auch teilweise wirklich positiv in manchen Bereichen immer natürlich. Aber was sich auch in letzter Zeit so ein bisschen gezeigt hat, ist eben, dass sich dieses Beschleunigen des Code Produzierens eigentlich nicht direkt auf den Outcome auswirkt. Es gibt sogar ein paar Beispiele, die eigentlich genau in die Gegenrichtung zeigen. Die Dora Metriken sind ja deine Lieblingsmetriken, Andy, aber der Dora Report ist jetzt schon ein bisschen älter, ich glaube, das war der letzte von vier und zwanzig vom letzten Quartal fünf und zwanzig gibt es ähnliche Zahlen, aber da wurden nicht genau die gleichen abgefragt. Aber da ist zum Beispiel rausgekommen, gerade am Anfang plus fünf und zwanzig Prozent KI Adoption, die Einzug gehalten hat in die Teams. Das Problem war dann aber, dass am Ende der Outcome oder auch der Output eigentlich nach unten gegangen ist. Das heißt, die Deliverables am Ende, was am Ende rausgeschaut hat, ist eigentlich nach unten gegangen und die Stabilität sogar um minus sieben Prozent nach unten. Und der Dora Report sieht da ganz klar einen Grund auch dafür und zwar wird halt einfach mehr Code produziert und es ist einfach viel schwerer, wenn du mehr Code produzierst, herauszufinden, ist der Code gut, gibt es Bugs in dem Code? Und du hast natürlich dieses Bottleneck von Code Reviews und diesem Überprü Macht der Code das Richtige? Ist es ein guter Code? Dieses Bottleneck, das wird natürlich noch mehr geflutet mit Code und dann rutscht eher was durch. Und genau darum ist dann die Stabilität am Ende nach unten gegangen und auch der Team Output nach unten gegangen, weil eben mehr Code produziert wird und am Ende dann weniger rauskommt, obwohl die Einzelperson natürlich gefühlt mehr produzieren kann mit dem Ganzen."
+        },
+        {
+            "start": 930830,
+            "end": 967490,
+            "speaker": "A",
+            "text": "Was ich schön finde daran ist, dass zwei tausend vier und zwanzig bereits erkannt wurde, dass KI den Code schneller produziert, als Menschen darüber urteilen können. Also beim Code Review, das ist super. Auf der anderen Seite stelle ich aber dein Datenargument hier jetzt mal in Frage, denn KI, so wie wir es heute kennen, ist ja meilenweit vorne von dem, was wir zwei tausend vier und zwanzig hatten. Zwei tausend vier und zwanzig hatten wir den ersten Chat GPT und vielleicht das bessere Auto Complete in den ersten ides vielleicht, wenn überhaupt. Also da weiß ich nicht, wie gut die Zahlen jetzt auf die heutige Situation noch übertragbar sind."
+        },
+        {
+            "start": 967490,
+            "end": 1101980,
+            "speaker": "B",
+            "text": "Das stimmt natürlich. Aber wenn man sich auch anschaut, wie viel Incidents in letzter Zeit passieren oder Fehler in Code geschickt werden, obwohl das Ganze eigentlich besser werden sollte und die KI weniger Fehler machen sollte. Bei Amazon gab es kürzlich einen großen Ausfall, der dann auch das Ganze intern getriggert hat, dass man gesagt hat, Juniors dürfen jetzt nicht mehr so einfach Code schippen, sondern es muss mehr überprüft werden, weil eben genau diese ganzen KI Bugs durchgerutscht sind und am Ende dann veröffentlicht wurden. Anthropic selber hat zum Beispiel auch einen extrem dummen Bug geschippt, und zwar bei ihrer Hauptseite, dass alle, die gezahlt haben für Claude, haben in der UX ein Problem gehabt, dass wenn sie getippt haben, dass die ersten Wörter nach zwei Sekunden gelöscht wurden, und zwar bei ihrem Hauptprodukt, bei dem normalen Chat Window. Und das ist ihnen auch durchgerutscht, ist ein klassischer UX Fehler, aber den hat die KI halt auch nicht gesehen. Also sogar diese großen Firmen, die sich auf die Fahne schreiben, dass sie eigentlich überall KI verwenden und mehr Output haben, denen rutschen diese Hardcore Fehler durch. Und ich glaube genau da sieht man auch, dass es nicht automatisch alles gut ist, was da rauskommt hinten. Es kann natürlich gut sein, es kann auch mehr sein, aber dieses Bottleneck und das Problem, dass du den Code überprüfen musst und gerade auf der UX Seite ist es ja noch mal schwieriger, irgendwas zu überprüfen, dieses Bottleneck bleibt bestehen und da brauchst du auch die richtigen Leute dazu, die dann wirklich sagen können, OK, ist die Architektur gut, ist die UX gut, passt es überhaupt in mein Architekturbild? Weil ich habe das, glaube ich, vor ein, zwei Episoden mal erwähnt und ich hatte gestern genau wieder dasselbe Problem, habe was implementieren lassen, hat mir da Variablen angelegt und dann habe ich sagen müssen, hey, diese Variablen gibt es schon an anderer Stelle, obwohl das wirklich eigentlich sogar im gleichen Chat Window war. Und dann ist es natürlich zentralisiert worden, die Variablen, dass man sie nur einmal definieren muss, aber es passieren solche Fehler immer noch. Und da sieht man schon, dass man eine gewisse Erfahrung braucht und auch die Code Reviews wirklich braucht, um sinnvollen, wartbaren Code zu liefern. Weil sonst hast du genau dieses Problem, wenn du die Variablen an zwei Ordner hast, das funktioniert zwar, aber du änderst die dann irgendwann mal. Das waren so Variablen, du änderst die an einem Punkt, weil du gar nicht mehr am Schirm hast, dass die an zwei Punkten definiert sind und dann fliegt dir irgendwas um die Ohren, Das ist fair."
+        },
+        {
+            "start": 1101980,
+            "end": 1124390,
+            "speaker": "A",
+            "text": "Aber du setzt ja dann auch die Annahme, dass KI perfekt ist, weil im Endeffekt ist meine Gegenfrage, bei Menschen wäre es ja nicht anders. Du sagst jetzt gerade, die KI macht Fehler. Ja, das stimmt, Menschen machen auch Fehler und im Endeffekt sagst du jetzt gerade, der Bottleneck ist der Code Review, der hat hier bei deinem Amazon Beispiel und bei deinem Anthropic Beispiel anscheinend nicht gut gegriffen. Wie wäre das anders bei Menschen?"
+        },
+        {
+            "start": 1124710,
+            "end": 1171240,
+            "speaker": "B",
+            "text": "Es ist gar nicht anders, aber dieser Bottleneck wird natürlich noch mehr überlastet. Ich habe neulich mit einer, ja ich würde sagen, bisschen höher als Mittelstand Firma gesprochen, mit einem Architekten und der hat mir genau die gleiche Frage gestellt, was soll ich denn jetzt tun? Ich bin der Architekt. Ich meine, das ist schon ein Grundproblem, glaube ich, dass es einen Architekten gibt, der alles kontrolliert und da Bull Request reviewt. Das war dann auch meine Antwort übrigens. Aber der hat natürlich gesagt, er hat früher schon die Schwierigkeit gehabt, alles zu reviewen, aber jetzt hat er richtige Schwierigkeiten, alles zu reviewen, weil er wird einfach zugeschüttet mit Bull Requests, die er reviewen muss. Also ich glaube, dieses Bottleneck wird noch noch klarer und genau da braucht es dann die richtigen Leute, die das Bottleneck irgendwie erweitern können und aufmachen können, dass da mehr Durchfluss stattfindet, dass das ganze Team dann im Endeffekt auch produktiver ist."
+        },
+        {
+            "start": 1171240,
+            "end": 1230420,
+            "speaker": "A",
+            "text": "Also wenn ich jetzt die Podcast Episode bis hierhin gehört habe, habe ich negative Argumente für KI und und wenn ich die Podcast Episode dann jetzt beenden würde, würde ich mit einer zentralen Gegenposition zum Hype rausgehen und vielleicht sogar KI Initiativen in meiner Firma sabotieren. Denn im Endeffekt, das was du sagst, mehr KI heißt nicht automatisch bessere Software, Ich glaube, da stimmt jeder zu. Menschen sind immer noch in der Verantwortung. Mehr Output heißt nicht automatisch mehr Wert. Und du sagst, wo ich nicht wirklich mit zustimme, denn das Bottleneck war nie weg. Es wird jetzt nur sichtbar. Die lokale Produktivität kann steigern, aber die Team Delivery wird schlechter, wobei ich da nicht mitgehe, denn das Bottleneck war ja immer da. Es wird nur sichtbarer, weil man, weil die Queue hintendran voller wird. Aber die Team Delivery sollte ja die gleiche bleiben bei der gleichen Anzahl an Menschen."
+        },
+        {
+            "start": 1230420,
+            "end": 1322140,
+            "speaker": "B",
+            "text": "Was du natürlich nicht vergessen darfst, ist, dass auch die Last, wenn die Last höher wird, dann machst du eher Fehler, dann lasst du vielleicht eher auch Fehler durch. Das, was du früher detaillierter anschauen hast können, weil es auch vielleicht weniger Code war, wird jetzt immer schwieriger, weil die Pull Requests ja auch viel, viel größer werden und einfach mehr Pull Requests werden. Das heißt, du wirst vielleicht fehleranfälliger, nenne ich es mal als Senior, als Gateway. Ob es diese Position geben soll, ist wieder, wie gesagt, eine andere Frage. Aber wenn du so eine Schlüsselfunktion hast, die alles überprüft und das sind ja meistens Menschen, dann passieren da einfach Fehler. Und das ist, glaube ich, schon vor zwanzig Jahren oder so in Studien herausgefunden worden, bei Ärzten, die sich selber dann misstraut haben, wenn der Computer eine andere Diagnose gestellt hat, weil sie dem Computer dann schon anfangen, mehr zu vertrauen als sich selber. Und ich habe da gerade eine andere Studie, eine aktuelle gefunden, wo Radiologen feststellen haben sollen, ob ein Bild ein echtes Röntgenbild ist oder ein KI generiertes Bild. Und nur ein und vierzig Prozent von den Bildern wurden überhaupt erkannt von den Falschen. Und sogar nachdem man ihnen gesagt Hey, da sind KI Bilder dabei, konnten trotzdem nur fünf und siebzig Prozent erkannt werden. Also der Computer wird besser und sobald du weißt, dass der Computer besser wird, glaubst du dem einfach automatisch mehr. Das heißt, dein eigenes Filtersystem wird nach unten reguliert und dann, wenn du täglich noch mehrere prs hast, die du reviewen musst, klar, dann machst du das einfach schneller und dann rutscht auch mehr durch."
+        },
+        {
+            "start": 1322220,
+            "end": 1327620,
+            "speaker": "A",
+            "text": "Warum werden die prs größer mit KI? Das war gerade deine Argumentation."
+        },
+        {
+            "start": 1327620,
+            "end": 1331900,
+            "speaker": "B",
+            "text": "Hast du nicht das Gefühl, wenn du irgendwie einen Agent losschickst, dass der immer mehr Code raschert?"
+        },
+        {
+            "start": 1331900,
+            "end": 1344990,
+            "speaker": "A",
+            "text": "Wenn ich da Scheiße reinschreibe, kommt scheiße raus. Das ist richtig. Und ja, es gibt Situationen, da reimplementiert die KI eine Funktion, die bereits in deiner Utils Modul oder ähnliches da ist. Das stimmt."
+        },
+        {
+            "start": 1344990,
+            "end": 1346470,
+            "speaker": "B",
+            "text": "Oder meine Config Variable."
+        },
+        {
+            "start": 1346550,
+            "end": 1386190,
+            "speaker": "A",
+            "text": "Aber bevor du als Engineer das ja als Pull Request einstellst, schaust du ja drüber. Und wenn du die Codebase gar nicht kennst, dann kannst du den Code Review auch nicht beurteilen. Dann ist die Wenn du den Code Review nicht beurteilen kannst, warum submittest du erst einen Pull Request überhaupt? Da kommen wir dann ganz einfach in die Slop Thematik. Wenn du Drive by Pull Request machst, du klonst was, promptest was nach mir die Sintflut, open ein Pull Request YOLO. Klar, wenn du solche Teammates hast, das funktioniert nicht. Und dass da dann die Delivery runtergeht, weil du jeden Busy hältst, stimme ich dir zu. Aber das ist ja nicht das Qualitätskriterium, was wir an den Tag legen wollen."
+        },
+        {
+            "start": 1386190,
+            "end": 1430170,
+            "speaker": "B",
+            "text": "Ja, aber in der Realität ist es auch so. Ich glaube, es war sogar in der DORA Studie auch erwähnt, dass die Lines of Code nach oben gehen. Und was ich selber schon sehe, ist, dass der Code einfach umfangreicher wird, weil er teilweise vielleicht ein, zwei Edge Cases noch mitnimmt oder fünf Edge Cases mitnimmt und du dann denkst ja, eigentlich sind die Edge Cases schon in Ordnung und der Code wird meiner Meinung nach schon ein bisschen aufgeblähter. Erfahrungsgemäß würde ich sagen, dass es mehr Code gibt in einem PR, sonst macht man wirklich eine kleine Funktion, die einfach leichter zu zu verstehen ist, leichter zu durchschauen ist. Und so hat man halt vielleicht schon mal fünf Funktionen, die irgendwie noch was abchecken und irgendwelche side Effects vielleicht prüfen, aber vielleicht auch side Effects dann haben, die dann wieder negativ drauf wirken. Also es wird auch schwieriger, den Code zu durchschauen."
+        },
+        {
+            "start": 1430410,
+            "end": 1498580,
+            "speaker": "A",
+            "text": "Beim Edge Case Handling würde ich dir fast sogar zustimmen, aber da würde ich auch mal die Gegenfrage stellen, da habe ich jetzt keine Daten zu, ob das nicht eigentlich nachgelagerte Codeänderungen sind, die du vorher reinpackst, weil die KI das vorher antizipiert und deswegen der Pull Request größer wird, aka du verhinderst also Fehler aus der Zukunft bereits und fängst sie bereits ab, was ja dann zu höherer Qualität der Software und Co. Führt. Aber das ist nur eine Annahme, da stimme ich dir zu. Da würde ich sagen, okay, die werden komplexer. Das zweite Argument war, dass man mehr prs kriegt. Ja, das ist richtig, weil hoffentlich dein Team sich schneller bewegt, aber das ist ja nicht die KI schuld. Also die KI ist ja nicht schuld daran, wenn du dich nicht auf einen Pull Request Review fokussierst. Du hast mehr in der Queue, aber es kann auch sein, dass einfach neues Team in Amerika angestellt wurde und die deswegen acht Stunden außerhalb deiner Arbeitszeitzone arbeiten und dann stehst du morgens auf und hast trotzdem zwanzig Pull Requests, auch wenn die ohne KI arbeiten. Also ich meine, das ist ja, ich sage mal, ein Strukturproblem von dir, wenn du dir selbst Stress machst. Ich habe zwanzig Pull Requests in der Queue, die müssen noch reviewed werden, da kann die KI ja nichts für."
+        },
+        {
+            "start": 1498580,
+            "end": 1573460,
+            "speaker": "B",
+            "text": "Ja, mir geht es ja auch gar nicht um eine Schuldfrage, sondern einfach eine Entwicklung, die man aktuell sieht und die ja auch dazu führt, dass alle Firmen jetzt nach Seniors Ausschau halten, weil die Seniors halt einfach mehr reviewen können oder die Seniors schon selber das Wissen haben, wie eine Architektur besser gebaut werden soll, das besser einschätzen können, die Erfahrung haben und dann vielleicht auch die Prompts dementsprechend besser schon schreiben oder die Zusatzinformationen mit reinbringen oder in einem Planning Mode einfach dementsprechend schon die besseren Entscheidungen treffen können, damit am Ende der bessere Code herauskommt. Also kürzlich Podcast mit TH, also dem Erfinder von Ruby on Rails, gehört und von sieben und dreiig Signals von Basecamp. Der hatte immer so eine Industrie gegenläufige Meinung, würde ich fast sagen. Aber in dem Fall hat er eben auch gesagt, er sieht eigentlich den meisten Speed Ramp Up bei Seniors, weil die selbstständig plötzlich schneller sein können. Ein Junior kann zwar mehr Code produzieren, aber produziert eben nur mehr Code und unter Umständen weniger Outcome. Und der Senior ist halt eigenständig bemächtigt, sozusagen unter Anführungszeichen die richtigen Entscheidungen zu treffen und dadurch schneller zu shippen und schneller zu delivern. Und da würde ich grundsätzlich mitgehen."
+        },
+        {
+            "start": 1573460,
+            "end": 1630940,
+            "speaker": "A",
+            "text": "Du bist jetzt hier gerade auf den Zug aufgesprungen, warum KI nicht funktioniert und warum AI nicht das liefert, was es verspricht und welche Bottlenecks aufzeigt und welche Probleme jetzt gerade Firmen haben. Jetzt sind wir aber in diese Podcast Episode gestartet, mit dem ich gesagt AI ist, ob wir wollen oder nicht gekommen, um im Softwareentwicklungsalltag zu bleiben. Heißt das, ich als Senior bin jetzt eine AI Code Review Maschine, weil da gibt es ja jetzt mehr oder was sagst du jetzt zu mir, wie ich mich ändern muss, wie ich das Schiff wieder rumreiße? Auch nicht nur für die Firma, sondern auch für mich als Karriere Tipp? Also worauf kommt es denn jetzt bei mir an? Und soll ich aktiv die Reviews liegen lassen? Und auf was soll ich mich fokussieren? Denn ich kann mich ja nicht wehren, dass AI kommt. Vielleicht sollte ich mich auch gar nicht wehren. Jetzt komme ich wieder so, jetzt lasse ich mich hier schon negativ reinziehen in dein Loch. Wir wehren uns nicht, wir sind proaktiv, wir wollen doch Value liefern. Das ist so."
+        },
+        {
+            "start": 1631740,
+            "end": 1738290,
+            "speaker": "B",
+            "text": "Ja, man muss sich ja die Frage stellen, warum kann ein Senior überhaupt den Code reviewen? Und was hast du da gelernt? Wie bist du vom Junior zum Senior geworden, dass du den Code reviewen kannst und die richtigen Fragen stellen kannst? Und ganz viel, was da eigentlich mit rein wirkt, ist ja dieses, haben wir ja schon keine Ahnung, wie oft wir schon drüber gesprochen haben, dieses Big Picture, dass du einschätzen kannst in der Firma, was wird gebraucht, wie sieht die Architektur dazu aus, in welche Richtung entwickelt sich die Firma, wo soll das hingehen? Und nur so kannst du ja auch entscheiden, wie eine Architektur aussehen soll. Also du brauchst natürlich die technische Erfahrung wobei da würde ich fast sagen, die AI wird immer besser und vielleicht wird es in Zukunft auch noch immer weniger werden und vielleicht dieses Bottleneck dann auch ein bisschen auflösen. Das wäre ja so die Hoffnung. Was aber trotzdem darüber bleibt und das kann die AI ja aktuell wirklich nicht, dass du dieses Verständnis hast, wer arbeitet wie zusammen, was ja dann auch Auswirkungen auf die Architektur hat. Wo werden diese Config Variablen, jetzt ganz dummes Beispiel von mir, wie ich zuerst gebracht habe, wo werden die definiert, wer braucht die alle? Welche Teams haben diese Config Variablen, Aber natürlich auch übergeordnet auf einem ganz organisatorischen Level. Was will die Firma, was haben wir für Produkte, wie arbeiten die Teams zusammen, Also wesentlich höher drüber, was meistens jetzt nicht in irgendwelchen Dokumenten irgendwo niedergeschrieben ist, sondern dieses informelle Wissen, was in dem Senior Kopf eigentlich drinnen lebt. Und genau dieses Wissen befähigt dich ja erst dann die richtigen Entscheidungen zu treffen. Und meine these wäre eigentlich, dass man auf diesen Teil viel mehr Fokus legen sollte. Deshalb predigen wir ja seit Ewigkeiten dieses Big Picture und ich glaube, dass die AI da die größten Probleme hat, dieses Big Picture irgendwann zu verstehen."
+        },
+        {
+            "start": 1738370,
+            "end": 1754810,
+            "speaker": "A",
+            "text": "Provokative Gegenfrage, hilft ein eins Millionen Kontext Window nicht genau dabei, wenn ich dem sage, lies diese Wiki Vision Page von meiner Firma und mach den Rest und hier hast du noch das Organigramm und da hast du noch das Mapping zu Applikation, Produktkontext und Team."
+        },
+        {
+            "start": 1754890,
+            "end": 1858730,
+            "speaker": "B",
+            "text": "Es wird sicher besser und umso mehr du niedergeschrieben hast, setzt natürlich voraus, dass du es niedergeschrieben hast überhaupt. Aber gehen wir mal davon aus, dass sehr viel niedergeschrieben ist, umso besser wird es natürlich. Und klar, wenn das Kontext Window größer wird oder die richtigen Stellen in das aktuelle Kontext Window reingebracht werden, dann wird es sicherlich besser. Aber du hast natürlich diese ganze menschliche Komponente, die Kommunikation von den Teams, wie die zusammenarbeiten, wo du die auch hinführen willst. Und diese Dinge sind halt meistens nicht irgendwo in Dokumente niedergeschrieben. Könntest du natürlich theoretisch, aber ich bezweifle, wenn man so Dokumente anzieht, da musst du schon froh sein, wenn da irgendwo ein Team definiert ist, welches Team für was arbeitet und wie die Schnittstellen aussehen, dann bist du eh schon sehr weit, wenn du die Information und wenn wir dann natürlich noch in diese, ich nenne es jetzt mal Leadership Ecke gehen, aber ihr redet schon von Seniors, Tech Leads oder solche Personen, die haben ja auch noch die Verantwortung, als Team weiterzubringen oder auch eben diese Juniors, die es ja fast nicht mehr gibt leider aktuell eben in diese Senior Level überhaupt reinzubringen. Also das ist ja auch ein sehr großer Verantwortungsbereich von so einer Senior Person und auch die wird von der AI nicht übernommen. Aktuell ist es höchstens so, dass durch meine ganzen Code Reviews die, dass ich gar keine Zeit mehr habe für die anderen Dinge mir zu überlegen, wie kann ich ihr Team weiterentwickeln? Wie machen wir Task Aufteilung in Teams? Wie gehe ich mit Juniors um, die hoffentlich bald zum Senior werden, damit sie dann auch Code Reviews machen können. Also diese ganzen Dinge, die sehr wichtig sind in so einer Senior Rolle und wo man eigentlich hineinwachsen sollte, umso senioriger man wird, Kommunikation und die ganzen Dinge, die werden jetzt eigentlich irgendwie so in den Hintergrund gerückt und werden reduziert, weil alles wieder auf diese Code Reviews geht."
+        },
+        {
+            "start": 1859120,
+            "end": 1866160,
+            "speaker": "A",
+            "text": "Wenn ich das jetzt aber weiterdenke, du hast jetzt Seniors, du Code schreiben ist nicht mehr deren Superpower, ist das korrekt?"
+        },
+        {
+            "start": 1866320,
+            "end": 1874200,
+            "speaker": "B",
+            "text": "Schnell Code schreiben ist garantiert keine Fähigkeit von irgendwem mehr, weil schnell Code schreiben kann die AI auf jeden Fall schneller."
+        },
+        {
+            "start": 1874200,
+            "end": 1884910,
+            "speaker": "A",
+            "text": "Dann sagst du Seniors haben das Wissen, einen ordentlichen Code Review durchzuführen, sind aber jetzt auch ein Bottleneck, weil jetzt mehr Code Reviews reinkommen. Genau."
+        },
+        {
+            "start": 1884910,
+            "end": 1886990,
+            "speaker": "B",
+            "text": "Und darum suchen alle Firmen nach Seniors."
+        },
+        {
+            "start": 1886990,
+            "end": 1900470,
+            "speaker": "A",
+            "text": "Dann sagst Die Aufgabe von Seniors ist, das Team nach vorne zu bringen, Kommunikation und vielleicht auch die Business Ziele im Kopf zu halten. Das bedeutet eigentlich zu bestimmen oder mitzuwirken, an was wir arbeiten."
+        },
+        {
+            "start": 1900950,
+            "end": 1909750,
+            "speaker": "B",
+            "text": "Vision, Strategie, Priorisierung, Collaboration zwischen den Teams, die ganzen klassischen Begriffe, was so zu einem Big Picture dazugehören."
+        },
+        {
+            "start": 1910000,
+            "end": 1920960,
+            "speaker": "A",
+            "text": "Und dann hast du die Juniors und die Mid Level Engineers, die sich auch mit den Themen beschäftigen, mit denen sich der Senior beschäftigt, weil sie wollen ja auf das Senior Level. Wer schreibt dann noch den Code und wer reviewt dann den Code?"
+        },
+        {
+            "start": 1920960,
+            "end": 2001100,
+            "speaker": "B",
+            "text": "Leute, die das Verständnis haben, egal ob du die jetzt Seniors nennst oder Juniors, die das Verständnis haben, aber du musst natürlich auf ein Level kommen, das irgendwo über der AI in gewissen Bereichen sitzt, dass du das Review eben durchführen kannst oder besser mit der AI arbeiten kannst. Und ich habe da auch ein cooles Paper dazu gefunden von zwei tausend sechs und zwanzig ganz neu. Und die haben sich angesehen, wie eigentlich die AI so das Lernen beeinflusst und deine Skills, die du aufbaust und was die Rausgefunden haben, ist, dass du zwar schneller fertig wirst mit dem, was du machst und programmierst, aber du hast siebzehn Prozent weniger gemessenes Verständnis von dem, was du machst. Also die KI hilft dir dabei, fertig zu werden, aber nicht unbedingt das Ganze zu verstehen und zu lernen. Und genau das ist eigentlich der gefährliche Weg, den ja auch ganz viele Leute jetzt immer ansprechen. Wie soll denn Junior zum Senior überhaupt werden, wenn er das nicht versteht? Weil Lernen ist halt auch mit Schmerz verbunden. Wenn man den Schmerz mal richtig gespürt hat selber, wenn man mal gegen die Wand gelaufen ist, wenn man auf die Schnauze geflogen ist, dann lernt man. Wenn die KI natürlich schon das perfekte Ergebnis liefert, ob du das dann lernst, ist schwierig. Und das ist ja so der klassische Kriegpunkt, auch wenn es ums Lernen geht. Und da stellt sich dann die Woher kommen die Seniors in Zukunft? Oder die Leute, die den Code verstehen und eben sinnvoll mit der KI arbeiten können oder ein Code Review machen können."
+        },
+        {
+            "start": 2001100,
+            "end": 2050540,
+            "speaker": "A",
+            "text": "Also ich glaube, jeder, der sich mal ein bisschen länger mit KI beschäftigt hat und ein bisschen mehr rumprogrammiert hat, der wird dir da zustimmen, dass das Verständnis sinkt, wenn man was generieren lässt. Aber das ist ja das gleiche Prinzip, was man hat. Wenn ich in einer Uni sitze und dem Professor zuhöre, dann lerne ich zwar was, vergesse das aber wieder. Wenn ich in einer Uni sitze, dem Professor zuhöre und das selbst mitschreibe, dann verwirkliche ich das deutlich mehr. Deswegen sage ich auch immer, Schreiben ist ein Skill, weil man denkt drei, vier, fünf Mal drüber nach, besonders wenn du es danach noch mal das, was du gerade gelernt hast, versuchst in deinen eigenen Worten niederzuschreiben. Also jemanden anders zu erklären. Das ist ja, ich sag mal, die Superpower, von dem ihr da redet. Du hast ein Thema verstanden, wenn du es jemand anders erklären kannst. Jetzt ist es aber so, wir haben es leider immer noch nicht geschafft, Menschen zu klonen, glaube ich, Oder hat das irgendwer inzwischen geschafft?"
+        },
+        {
+            "start": 2050860,
+            "end": 2051620,
+            "speaker": "B",
+            "text": "Nur Schafe."
+        },
+        {
+            "start": 2051620,
+            "end": 2054460,
+            "speaker": "A",
+            "text": "Meines Wissens nur Schafe. Wie heißt das Schaf nochmal?"
+        },
+        {
+            "start": 2054540,
+            "end": 2055380,
+            "speaker": "B",
+            "text": "Dolly."
+        },
+        {
+            "start": 2055380,
+            "end": 2065020,
+            "speaker": "A",
+            "text": "Dolly, Ich weiß nicht, war das nicht ein tausend neun hundert Schieß mich tot. Müssen die nicht langsam weiter sein? Und deswegen die Frage wo kommen denn jetzt die ganzen Seniors her? Weil Du sagst, wir brauchen jetzt mehr."
+        },
+        {
+            "start": 2065020,
+            "end": 2203360,
+            "speaker": "B",
+            "text": "Es wäre ja schon schön, wenn wir überhaupt die Anzahl der Senior Rollen halten würden. Aber wenn man jetzt sieht, dass die Junior Rollen da mit minus vier und dreiig Prozent stark reduziert sind, woher sollen die Seniors kommen? Das ist schon ein grundsätzliches Problem und ich glaube, die Industrie muss da umdenken. Und ich verstehe es ehrlich gesagt nicht, warum das so ein Problem ist, warum Firmen eigentlich Juniors nicht mehr einstellen wollen. Und ich glaube, man sieht so hin und wieder Hoffnungsblitze, würde ich es mal nennen, wo dann Firmen wieder sagen, okay, wir hiren Juniors. Und ich sehe es ja selber auch bei mir in meinem Umfeld. Wenn du irgendwie einem Agent zum fünften Mal dasselbe erklärt hast, dann denkst du dir halt auch, also einem Junior hätte das nur einmal erklären müssen, der hätte das eigentlich schon drauf gehabt. Und wenn es dann darum geht, irgendwie selbstständig Informationen zu suchen, ein anderes Team zu fragen, zu kommunizieren, aufs Leck eine Message zu schreiben, da sind wir einfach noch nicht mit den Agents. Menschen sind da meiner Meinung nach, gerade wenn es um die Kommunikation geht, eigentlich schon noch in den meisten Fällen besser. Und darum verstehe ich es gar nicht, warum die Juniors eigentlich so abnehmen. Und wenn man bisschen weiter denkt, dann muss man eigentlich Juniors in irgendeiner Form mitnehmen und muss die auch weiterentwickeln. Und klar, auf der Junior Seite muss man das auch irgendwie lernen, mit den ganzen Tools umzugehen und dabei zu lernen und nicht diese minus zwanzig Prozent Verständnisverlust zu haben. Es ist eigentlich total logisch. Wenn ich was lernen will, muss ich vielleicht auch mal irgendeinen Hintergrund verstehen. Aber sogar diesen Step, dass man in einem Chatfenster, wenn ich irgendwas präsentiert bekomme, einmal dazu schreib, erklär mir mal, warum du das jetzt so gelöst hast. Alleine dieser Step wird ja bei ganz vielen schon nicht gemacht, zumindest bei den Studierenden, was ich so mitbekomme, fehlt dieser Step ja auch schon oft. Also dieses einmal noch fünf Minuten mehr investieren, um vielleicht ein, zwei Sachen noch mitzuschneiden. Also ich spreche jetzt gar nicht von ich muss mal selber auf die Schnauze fliegen und das implementieren, aber vielleicht diese Frage stellen. Alleine die Frage wird dir ja schon viel weiter helfen. Ich verstehe zwar, dass man das nicht gerne macht, vor allem wenn man Zeitstress hat, ist ja bei mir auch so, wenn ich eine schöne Lösung habe, gehe dann noch ins Detail rein. Es funktioniert ja eh. Stell dir da noch mal die Frage. Aber gerade wenn man in einem Junior Level unterwegs ist, wo man einfach die Aussicht hat, ich muss da noch Informationen auf der technischen Seite auch mitlernen, Auch da muss man sich einfach drum kümmern, dass man auch lernt, ohne vielleicht auf die Schnauze zu fallen."
+        },
+        {
+            "start": 2203360,
+            "end": 2264000,
+            "speaker": "A",
+            "text": "Also ich glaube, der Hype, den du beschreibst, der ist vorbei. Denn als die ganze KI Welle gestartet hat, dann hat jeder gesagt, ja, wir brauchen jetzt keine Juniors mehr. Und dann sind ja super viele Leute auch zurückgerudert. Auch große wie Jeff Bezos haben ja gesagt, ne, Amazon stellt weiter Juniors ein und man sieht ja auch Firmen wie Atlassian kümmern sich weiter um Fresh Graduates und Interns. Also im Ausland sind Praktika sehr, sehr, sehr, sehr groß. Vielleicht jetzt in Deutschland jetzt nicht so, aber in der Universität, da hat man dann meist drei Monate Praktika irgendwo. Und super viele Firmen nutzen das dann auch als frühe Recruiting Pipeline. Also ich weiß zum Beispiel, dass mein Arbeitgeber auch in diesem Jahr sehr, sehr viele Praktikanten einstellt. Das ist jetzt nicht, um Leute irgendwie günstig arbeiten zu lassen, sondern speziell, um diesen Leuten halt auch eine Chance zu geben und weil es natürlich auch ein guter Einstieg in die Recruiting Pipeline ist und allem drum und dran, talentierte Leute zu finden und pipapo. Also ich meine, Recruiting ist halt immer noch einer der wichtigsten und vielleicht teilweise auch teuersten Aktivitäten, die eine Firma machen kann."
+        },
+        {
+            "start": 2264420,
+            "end": 2276340,
+            "speaker": "B",
+            "text": "Also Andi, jetzt musst du mir schon noch erklären, warum Cloudflare ein tausend ein hundert elf Interns einstellen will. Warum ein tausend ein hundert elfte Wie"
+        },
+        {
+            "start": 2276340,
+            "end": 2278140,
+            "speaker": "A",
+            "text": "ist die IP Adresse des Cloudflare DNS"
+        },
+        {
+            "start": 2278140,
+            "end": 2288260,
+            "speaker": "B",
+            "text": "Servers als großer Cloud? Schwieriges Wort. Ich will da keine Werbung machen von deinem Arbeitgeber. Ja, genau."
+        },
+        {
+            "start": 2288260,
+            "end": 2289300,
+            "speaker": "A",
+            "text": "Ja, merkst du was?"
+        },
+        {
+            "start": 2289620,
+            "end": 2386950,
+            "speaker": "B",
+            "text": "Ja, ja, okay, ich verstehe. Schöne Presseaussendung, gefällt mir, aber ich glaube, du hast recht. Und das habe ich auch mit Hoffnungsschimmer gemeint. Auch wenn man jetzt sieht in diesen Surveys, diese Writer Studie, die am Anfang erwähnt habe, wo nur neun und zwanzig Prozent aller Führungskräfte eigentlich einen Return of Investment von KI sehen, dass die Skepsis ja auch ein bisschen gestiegen ist, dass es nicht so klar ist, wir können da jetzt alle Mitarbeiter innen ersetzen, sondern dass es doch nicht so einfach ist und dass es vielleicht doch Sinn macht, auch gewisse Menschen als Arbeitskräfte durchaus zu haben im Unternehmen. Und ich glaube, daher kommt auch jetzt diese Gegenbewegung, dass man wieder merkt, man braucht Juniors und man muss Interns aufnehmen und sich da eben genau die rausholen, die was weiterbringen, Also die, die was lernen wollen, die da Gas geben, die was weiterbringen, vielleicht auch gut kommunizieren können und in dem Fall in dem Team irgendwas weiterbringen. Also gar nicht auf der technischen Seite, weil im Prinzip am Ende zählt ja eigentlich nur der Outcome und nicht der Output, weil genau dadurch habe ich dann Business Value geschaffen. Und ob das ein Junior macht, indem man einfach mit den richtigen Leuten spricht und irgendwas pusht oder die richtigen Fragen stellt, auch ganz ohne technisches Wissen, das ist eigentlich unabhängig von KI oder sonst was. Man muss was weiterbringen. Und ich glaube, als kleiner Tipp für alle, die irgendwie als Junior oder in so Junior Rollen drinnen sind, einfach Gas geben und was delivern Am Ende ist wesentlich wertvoller, als irgendwas technisch im tiefsten Detail zu verstehen, obwohl ich die Technik natürlich jetzt nicht ausblenden will. Aber grundsätzlich sollte man schon, vor allem wenn man dann auch in Richtung Senior wächst, eben dieses Big Picture sehen, was bringt meine Firma am meisten aktuell weiter."
+        },
+        {
+            "start": 2387030,
+            "end": 2560050,
+            "speaker": "A",
+            "text": "Ja, der Wolfgang sagte es gerade, etwas delivern und das ist eins meiner Steckenpferde, wo ich mal ein paar Wörter gerade ziehen möchte. Und der Wolfgang hat es gerade schon genannt, Output versus Outcome, Denn das ist etwas, was ich zumindest in meiner beruflichen Karriere sehr, sehr oft sehe, was falsch gemacht wird. Es ist nicht wichtig zu delivern. Es ist wichtig, was man delivert. Du kannst fünf und dreiig Pull Requests machen, die werden alle gemerged, die werden alle nach Produktion gesippt und die haben keinen einzigen Impact, Die verändern nichts. Da hast du einen super guten Output. Fünf und dreiig Pull Requests sind dein Output, aber dein Outcome ist nichts. Und du kannst einen recht geringen Output haben. Du kannst einen Pull Request machen und schippst den in Produktion und hast einen riesen Outcome, wie zum Beispiel, du machst irgendeine Memory Optimierung. Ihr seid in einem großen Umfeld, wo ihr eine große Cloud Infrastruktur habt. RAM ist da auch teuer. Durch diese Memory Optimierung spart ihr eins Terabyte an RAM über eure komplette Cloud Infrastruktur. Das ist ein geringer Output, ein Pull Request, aber ein hoher Outcome. Weil ihr dadurch entweder mit derselben Serveranzahl mehr Applikationen hosten könnt oder ihr könnt die Server runterskalieren und das wiederum ist dann wieder in Geld Einsparnis messbar. Deswegen ist unglaublich wichtig als Senior und das sehe ich quer durch die Bank zu entscheiden, an was ihr arbeitet und warum. Und deswegen ist es auch so wichtig das warum dahinter zu verstehen. Denn ihr werdet nicht oder ich hoffe ihr werdet nicht anhand der Anzahl eurer Lines und Code und Pull Request gemessen. Ich hoffe aus dem Jahre ein tausend neun hundert fünf und neunzig sind wir endlich raus und ich hoffe, dass auch der letzte deutsche Mittelstand das verstanden hat. Und ich habe so ein bisschen Bedenken, dass manche Firmen jetzt mit der KI Adoption wieder genau da reingehen und messen, wie viel Tokens von welchem Mitarbeiter denn verbraucht werden. Denn auch so ein Nvidia Chef hat mal gesagt, einem Mitarbeiter, der eine halbe Million pro Jahr kriegt, der sollte mindestens zweieinhalb Millionen an Tokens verbrennen. Zugegeben der Wiederchef hat dann Incentive für, der verkauft die Dinger mehr oder weniger. Das kann aber auch bedeuten, dass du den ganzen Tag irgendwie nur was Vibe Code ist irgendwo auf Vercell oder was weiß ich nicht Chips und es keinen einzigen Business Outcome hat. Du verbrennst aber eine Menge Tokens. Also ich hoffe nicht, dass ihr alle jetzt Token Leaderboards habt, wo gemessen wird, wer wie viel Tokens verbrennt. Denn das kann dahin schwappen, dass Token verbrennen das neue Lines of Code Measurement wird, wovon wir uns hoffentlich seit den er alle entfernt haben und verstanden haben, dass Lines of Code Output nicht der Wert ist, den wir haben wollen. Denn jeder der Softwareentwicklung macht, weiß man kann drei Tage debuggen und der fix ist, man dreht einen Buchstaben um und damit hat man Debug gefixt."
+        },
+        {
+            "start": 2560050,
+            "end": 2597890,
+            "speaker": "B",
+            "text": "Es gab ja früher auch immer diese Aussage der beste Pull Request ist der, der gar keine Lines of Code hinzufügt, sondern irgendwelche entfernt. Und ich glaube das Mantra sollte man sich eigentlich noch weiter vor Augen führen, gerade jetzt mit dem Code, den man so einfach produzieren kann, dass wenn man da die Lines of Code reduziert oder auch die Token sinnvoller verwendet, indem man schon beim Prompten die richtigen Kontext und Zusatzinformationen mit reinsetzt und sich vielleicht schrittweise dem Ziel mit dem Agenten nähert dass das eigentlich die bessere Weise ist, zu einem guten Outcome zu kommen, dann am Ende, der eben auch Business Value liefert am Ende."
+        },
+        {
+            "start": 2597890,
+            "end": 2613970,
+            "speaker": "A",
+            "text": "Wenn ich jetzt aber noch mal zurück zu den Juniors bzw. Praktikanten oder ähnliches komme, dann habe ich auch schon öfters gehört, ja, aber die AI ist doch mein Junior, die AI ist doch mein Intern, dem sage ich doch was gemacht. Finde ich ein harter Vergleich, aber ich verstehe irgendwie, woher er kommt."
+        },
+        {
+            "start": 2614050,
+            "end": 2675160,
+            "speaker": "B",
+            "text": "Das ist aber nur, wenn du in den Leuten eben Coding Maschinen siehst, weil die codet mir ja prinzipiell was. Wenn du aber in der Menschen genau das siehst, was du da eben auch auf der Senior Ebene abseits des Coding siehst, dass es da Personen gibt, die Entscheidungen fällen, die kommunizieren, die priorisieren, die Abstimmungen treffen zwischen den Teams, zwischen Personen im Team, was wird wann, wo, wie gemacht, Vielleicht sogar Leadership auch für Individual Contributors. Auch da gibt es Leadership Möglichkeiten innerhalb des Teams, also diese ganzen Dinge mit einberechnest unter Anführungszeichen für eine Person, für einen Menschen, dann schaut es ganz anders aus, weil wenn du das auf diesen Dimensionen beurteilst, wird die AI aktuell zumindest auf jeden Fall immer den Kürzeren ziehen. Wenn du es nur als Coding Monkey bezeichnest, dann ist die AI natürlich besser und darum können ja Seniors auch so gut performen aktuell, weil der Coding Teil, der auch viel Zeit früh in Anspruch genommen hat, der kann halt stark optimiert werden und beschleunigt werden."
+        },
+        {
+            "start": 2675240,
+            "end": 2759650,
+            "speaker": "A",
+            "text": "Ich sehe beim Einstellen von Junioren bzw. Praktikanten ja eigentlich auch einen Triple oder einen Vierfach Win, sogar einen Win Win. Genau, einen Win Win Win. Also deswegen, falls du, wenn du es hier gerade hörst, auch sagst, ja, aber die KI ist doch mein Junior, hör zu. Also erstens bist du da mit hoher Wahrscheinlichkeit noch kein Senior. Wenn doch, tut es mir sehr leid für dich, dann muss ich deine Annahme über Senior zerstören. Denn Mentoring und Coaching gehört zum Skill eines Seniors und Staff Engineers dazu. Das ist Teil deiner Aufgabe, dass du andere Mitarbeiter dein Wissen weitergibst und hoffentlich, wie jeder Lehrer, hast du auch diese Ambition, dass deine Schüler und Schülerinnen besser werden als du. Das habe ich mal aus dem Kampfsport gelernt. Ich habe Taekwondo und Kickboxen gemacht und da hieß es immer du erkennst schlechte Lehrer daran, dass die ihre Schüler klein halten und gute Lehrer, wenn sie daran arbeiten, dass die Schüler besser werden als die Lehrer. Also kurzum, wenn du einen Junior bzw. Einen Intern Mentors, dann ist das sehr wertvoll für deinen Personal Growth und vielleicht auch wenn du mit Level Engineer bist und du leitest einen Praktikanten an, dann ist das ebenfalls Personal Growth für dich, der für dein Promotion Dokument oder deine Promotion Argumentation zum Senior genutzt werden kann. Das ist die eine Thematik. Das ist erste Win. Wolfgang von vier Ich glaube, du kannst"
+        },
+        {
+            "start": 2759650,
+            "end": 2784120,
+            "speaker": "B",
+            "text": "von Juniors extrem viel lernen mittlerweile. Also es war ja früher auch schon so, dass du von Juniors was lernen kannst. Neue Ansichten, dumme Fragen stellen, hatten wir ja auch oft im Podcast, Aber ich glaube, dass das jetzt noch intensiver wird eigentlich, weil diese AI Natives wahrscheinlich durchaus gewisse Dinge driven machen, die du noch gar nicht am Schirm hast. Also ich glaube, da kannst du für dich auch viel rausholen. Ich hoffe, das war jetzt keines von deinen anderen drei Wins."
+        },
+        {
+            "start": 2784270,
+            "end": 2790190,
+            "speaker": "A",
+            "text": "Nee, früher hätte man gesagt, die Junioren stellen einfach die besten Fragen, weil sie wussten gar nicht, dass man diese nicht stellen kann."
+        },
+        {
+            "start": 2790430,
+            "end": 2801790,
+            "speaker": "B",
+            "text": "Das meine ich ja mit dumme Fragen. Also dumme Fragen stellen bewirken dann ganz viel, wenn man einfach eine dumme Frage stellt. Warum hast du es eigentlich so implementiert und sich der Senior dann. Ja, gute Frage. Ist eigentlich wirklich dumm implementiert."
+        },
+        {
+            "start": 2802190,
+            "end": 2866050,
+            "speaker": "A",
+            "text": "Ja, ich fand den anderen Punkt, den du genannt hast, irgendwie viel spannender. Die jungen Leute nutzen KI ganz anders als wir zwei alten weißen Männer, weil die natürlich den neuesten Trick auf TikTok gesehen haben oder weil die einfach mit der ganzen Sache von Haus aus aufgewachsen sind und wir immer noch daran denken, haha, du kannst ja keine Kassette mit einem Bleistift zurückspulen, so nach dem Motto, nach dem Gedanken, ich lebe das Klischee, oder Andi? Ja, ja, ist richtig. Aber jetzt stell dir mal vor, du hast keinen Junior, weil Junior ist ja schon angestellt worden. Stell dir mal vor, du hast einen Intern, also Praktikanten, davon rede ich jetzt nicht von einem Praktikanten, der gerade in der neunten Klasse ist, sondern eher von so einem Informatikstudenten oder ähnliches, der dann wirklich ein drei Monate Praktikum macht. Das kann natürlich sehr positiv sein, wenn diese Person einen positiven Eindruck von eurer Firma hatte, dass dies euer nächster Mitarbeiter oder eure nächste Mitarbeiterin wird. Das bedeutet, eure Hiring Pipeline habt ihr dann sofort gekürzt und jeder weiß, der schon mal im Hiring und im Recruiting aktiv war, das dauert ewig, bis man eine Position gefüllt hat. Dritter Win. Jeder von uns, jeder hat eine Man müsste mal Liste. Hast du auch so eine Liste, Wolfgang?"
+        },
+        {
+            "start": 2866050,
+            "end": 2873730,
+            "speaker": "B",
+            "text": "Eine sehr, sehr lange. Und ich hab hin und wieder jetzt mal was mit einem Agent einfach abgearbeitet. Agent mach mal. Hat gar nicht so schlecht funktioniert."
+        },
+        {
+            "start": 2873890,
+            "end": 2891410,
+            "speaker": "A",
+            "text": "Kann man machen. Man kann jetzt dem Agent natürlich oder der KI deine Man müsste mal Liste geben, man kann die aber auch einfach einem Praktikanten oder so geben. Hey, denk das mal bitte durch. Das bedeutet Experimente oder Sachen, zu denen ihr bisher nie gekommen seid, gibt die einfach mal einer anderen Person und die packt da vielleicht ein paar neue Ideen drauf."
+        },
+        {
+            "start": 2891410,
+            "end": 2933850,
+            "speaker": "B",
+            "text": "Und das glaube ich wichtig, weil das, was ich erwähnt habe jetzt von meiner Liste, wenn es ein klar formuliertes Ziel ist, das kann man einem Agent geben. Ich will zum Beispiel meine Podcast einfach transkribieren lassen, mach mir da einen Code dazu, Funktioniert gut. Wenn du eine andere Idee hast, wo es darum geht, mach mal eine Research, verknüpft es, sprich mal mit einem anderen Team, schau dir das im Detail an, was hast du noch für Ideen? Das kann die AI nicht. Und genau da sind die Interns oder Juniors eigentlich sehr, sehr gut und das macht vielleicht auch Spaß einfach, weil meistens ist ja dann Greenfield, sich einfach mal irgendwo rein zu vertiefen und dann natürlich mit den ganzen AI Tools, die wir zur Verfügung haben, an ein Ziel zu kommen. Und genau diese Kette ist noch nicht so leicht mit AI umzusetzen."
+        },
+        {
+            "start": 2933930,
+            "end": 2966170,
+            "speaker": "A",
+            "text": "Ja, einfach ein lose definiertes Problem halt, das dann einfach mal von einem Menschen oder von einer neuen kreativen Person mit einem ganz anderen Hintergrund durchdacht wird. Und der vierte Win, der geht jetzt auf die sentimentale Ebene. Und zwar gibt es ein Sprichwort, das nennt sich Be the change you want to see in the world. Hätte der kleine Wolfgang gerne die Chance gehabt, während des Informatikstudiums ein dreimonatiges Praktikum irgendwo zu machen und dann von den erfahrenen Leuten, die schon große Enterprise Software schreiben, zu lernen."
+        },
+        {
+            "start": 2966250,
+            "end": 2972490,
+            "speaker": "B",
+            "text": "Ich würde mal sagen, er hätte es sollen. Es wäre besser gewesen für ihn, aber es ist ein anderes Thema. Aber ich verstehe deinen Punkt."
+        },
+        {
+            "start": 2973290,
+            "end": 2984400,
+            "speaker": "A",
+            "text": "Also das, was ich sagen möchte. Ich glaube, jeder von uns hätte gern eine solche Chance gehabt, falls ihr diese nicht bekommen habt. Denn ich denke von fresh graduates, also"
+        },
+        {
+            "start": 2984400,
+            "end": 2988480,
+            "speaker": "B",
+            "text": "von vielleicht sogar Studienabbrechern, Bachelor Absolventen meinst du?"
+        },
+        {
+            "start": 2988480,
+            "end": 3010260,
+            "speaker": "A",
+            "text": "Ja, Bachelor, Bachelor, Master, keine Ahnung, Diploma gibt es ja nicht mehr. Ich glaube, die haben es nicht leicht, einen Einstiegsjob zu finden und ich glaube, die sind sehr, sehr glücklich über jede Chance und deswegen gibt den Leuten auch mal eine Chance, denn vielleicht hättet ihr diese damals auch genutzt, wäre sie da gewesen. Sentimentale Story Ende."
+        },
+        {
+            "start": 3010260,
+            "end": 3046560,
+            "speaker": "B",
+            "text": "Ja, die kann mir nicht helfen. Also ich persönlich finde irgendeine junge Persönlichkeit, die einfach Vollgas gibt, motiviert ist und irgendwas weiterbringen will, immer noch irgendwie sympathischer als einen Agent, auch wenn der viel rausklopfen kann, dieser Agent. Auf einer menschlichen Ebene, wenn man im Team zusammenarbeitet, entsteht einfach sehr viel. Und da sehe ich schon noch auch einen guten Vorteil. Das soll nicht heißen, dass die Agents nichts können können, sehr viel. Aber es gibt auch einfach andere Dimensionen und mir persönlich fallen auch oft einfach Ideen ein, wenn ich mit jemandem, sprich meistens mehr Ideen, als wenn ich mit einem LL M Rubber Ducking betreibe, obwohl"
+        },
+        {
+            "start": 3046560,
+            "end": 3056600,
+            "speaker": "A",
+            "text": "der Wolfgang jetzt die ganze Episode irgendwie so ein negatives Bild von KI gezeichnet hat, warum das doch nicht so gut ist, warum das nicht versprochenen Output liefert oder Outcome und warum doch alle langsamer sind."
+        },
+        {
+            "start": 3057000,
+            "end": 3068110,
+            "speaker": "B",
+            "text": "Das hat mir beim Vortrag auch jemand vor vorgehalten, zumindest im Feedback, das ich bekommen habe, obwohl ich eigentlich gar kein Problem habe. Also ich weiß nicht, warum das alle immer so negativ sehen. Ich sehe es nur differenziert."
+        },
+        {
+            "start": 3068110,
+            "end": 3237840,
+            "speaker": "A",
+            "text": "Dann würde ich sagen, Wolfgang, hör genau zu, weil dieser Tipp ist dann auch für dich, wenn zwei unabhängige Leute, die die ich habe den Vortrag ja nicht gesehen. Du erzählst mir das ja hier, du hast mir gerade die Datenbasis vorgestellt und dieses Bild hast du in meinem Kopf gezeichnet. Ich habe die Episode begonnen mit KI ist da, wird gerade einmal durchs Dorf getrieben, ist aber wahrscheinlich auch gekommen, um zu bleiben. Das bedeutet, wir können uns jetzt wären KI zu nutzen. Ich gehe aber stark davon aus, dass wir dann recht schweren Stand haben und vielleicht nicht nur in der Firma, in der du gerade arbeitest, weil der CEO oder die Geschäftsführung sagt, ihr müsst alle KI nutzen, sondern ich glaube auch in jeder anderen Firma, in der du dich dann irgendwie in Zukunft werben möchtest. Es sei denn, du bist selbstständig und baust dein Marketing auf. Ich mache alles ohne KI, dann weiß ich auch nicht, wie viele Kunden du kriegst. Aber ich glaube, du wirst in Zukunft in der IT schweren Stand haben, wenn du kontinuierlich mit einem geschlossenen Mindset dich nicht mit AI beschäftigt, denn ich denke auch mit AI werden sich die Erwartungen an dein aktuelles Karrierelevel, egal ob du Senior bist oder mit Level oder Junior, die haben sich verändert. Die sind nicht schmaler geworden. Da sind jetzt höhere Anforderungen. Es wird in der Regel erwartet, dass du KI zu deinem Vorteil nutzt. Und damit meine ich jetzt nicht mehr Code rausballern. Früher wurde Seniorität oft mit besserem Code verwechselt. Jetzt kann jeder sehr guten Code schreiben mit KI. Deswegen haben sich automatisch die Erwartungen an deine aktuelle Rolle geändert, ohne dass du was getan hast. Es tut mir leid. Brutale Wahrheit. Das bedeutet aber auch, jetzt müssen wir einmal die Frage stellen, die hat der Wolfgang gerade beleuchtet. Was heißt denn Seniorität denn jetzt wirklich? Und das, was ich jetzt sage, war auch schon immer da. Doch es wird jetzt sichtbarer. Genauso wie der Wolfgang dieses Bottleneck vom Code Review sichtbarer gemacht hat. Das Bottleneck war immer da. Der Wolfgang hat immer meine Pull Request reviewed, aber ich war halt nur nicht in der Lage, zwanzig in der Minute rauszuhauen, sondern zwanzig in der ganzen Woche und die konnte der Wolfgang dann reviewen. Das bedeutet, die richtigen Kriterien für deine Seniorität sind also jetzt bessere Entscheidungen. Woran arbeiten wir denn? Dass wir arbeiten, ist okay, aber woran wir arbeiten, wird immer wichtiger oder war eigentlich schon immer wichtig, muss ich zugeben. Nur jetzt hat halt jeder einen Ferrari. Bessere Kommunikation, bessere Priorisierung, bessere Abstimmung. Und jetzt kommt was ganz fluffy, aber vielleicht ist es genau sogar Leadership by Influence, also führen ohne formale Autorität. Leute beeinflussen. Du als Senior bist ein Role Model im Team und damit meine ich nicht, du sollst jetzt Opus vierter juli nutzen und der andere nutzt noch Opus vierter mai, Das ist schöne Role Model, sondern eher, wie verhält man sich, wie bringt man andere Leute dazu, etwas zu tun, ohne zu zwingen? Wie überzeugt man Leute von einer Idee, von einer Architektur Entscheidung und Co."
+        },
+        {
+            "start": 3238000,
+            "end": 3247970,
+            "speaker": "B",
+            "text": "Sehr schön, dass du das jetzt sagst. Ich hatte in meinem Vortrag eine Folie drin, wo gestanden ist, sorry, you are an influencer now für Seniors. Also kann ich dir voll und ganz zustimmen."
+        },
+        {
+            "start": 3247970,
+            "end": 3318700,
+            "speaker": "A",
+            "text": "Ja, aber das war ja immer da. Also du warst ja schon immer ein Influencer. Also jeder Staff Engineer und Principal Engineer, er oder sie ist ein Influencer. Also sei es auch nur um Architekturentscheidungen, weil du willst ja andere Leute von dir überzeugen Deswegen würde ich sagen, die KI selbst zerstört nicht das Bild der Seniorität, sondern macht es eigentlich vielleicht sogar klarer, dass Seniorität, und damit meine ich Senior Level, Staff Level, Principal Level, da ging es nie um mehr Code, da ging es immer mehr um Menschen, da ging es immer mehr um alles andere, was notwendig ist, dass du mehr Profit für die Company machst, in der du gerade arbeitest. Weil es tut mir leid, in der Regel arbeitest du nicht für einen Non Profit. In der Regel kriegst du Geld, damit du mehr Geld für die Firma generierst, auch wenn das viele Leute nicht hören wollen, aber das ist oft unser Job. Also wer von euch wachsen möchte, sei es in die Senior Position oder du bist bereits in der Senior Position, da geht es jetzt wahrscheinlich nicht darum, mehr Pull Request pro Tag zu erzeugen, sondern eher um deine Soft Skills, obwohl ich das Wort Soft Skills nicht mag. Ich denke, das sind jetzt eigentlich die Hard Skills. Ich glaube, das versuche ich zu sagen. Ich glaube, ich versuche zu sagen, dass die Soft Skills die eigentlichen Hard Skills der Seniorität jetzt sind."
+        },
+        {
+            "start": 3319180,
+            "end": 3344290,
+            "speaker": "B",
+            "text": "Es ist eigentlich auch deine Lieblingsaussage, die du schon seit, wie vielen Episoden haben wir jetzt schon predigst, aber ich stimme dir vollkommen zu und ich möchte mich bedanken bei dir, Andi, dass du dich durch so eine KI Folge gekämpft hast, wo es nicht um Hardcore Nullen und Einsen geht, sondern wirklich um paar Meinungen und wie man zusammenarbeitet. Und ich glaube, es ist erst die zweite Episode, die wir ausschließlich AI gewidmet haben. Wenn ich das richtig im Kopf habe,"
+        },
+        {
+            "start": 3344290,
+            "end": 3355690,
+            "speaker": "A",
+            "text": "ist es, ist es. Und ich muss mich jetzt auch mal outen, weil der Wolfgang habe ich sehr lange sehr viel Hass von Wolfgang gekriegt. Und zwar war ich auch eine ganze Zeit lang ja, AI Kritiker ist nicht"
+        },
+        {
+            "start": 3356010,
+            "end": 3360500,
+            "speaker": "B",
+            "text": "der Richtige, du wolltest nie anfangen damit, du warst Late Adopter."
+        },
+        {
+            "start": 3360660,
+            "end": 3420710,
+            "speaker": "A",
+            "text": "Late Adopter. Ich glaube, da würde ich mich wirklich zu zählen. Ich glaube, ich habe erst im November oder so richtig angefangen. Ich meine, der Wolfgang war schon voll Hype von diesem statistischen Wortgenerator, der am Anfang ja mal war und hat gefühlt jede E Mail damit beantwortet. Und mir ging es schon wirklich auf den Sack, wie der mir geschrieben hat, weil du hast gesehen, das war nicht der Wolfgang, es war irgendwie chatgpt. Und irgendwann, als diese Welle mit diesem OPOS Modell, dann kam ich glaube ich November, Dezember war das, da habe ich es dann mal ausprobiert und dann habe ich mal Cloud Code genutzt und den ganzen Hype und seitdem bin ich relativ hooked eigentlich, weil die Qualität schon sehr gestiegen ist. Und das hat Warum erzähle ich euch das? Nicht, warum ich, weil ich mich eigentlich bleiben möchte, sondern weil ich eigentlich zwei Sachen untermauern möchte. Erstens, jeder lernt gerade damit umzugehen. Ihr seid nicht alleine, nur weil irgendwelche Leute auf Instagram Es sei denn, es ist Andrew Karpati. Das ist eine andere Geschichte. Wenn der Mittelstandsdieter irgendwas über LLMs schreibt,"
+        },
+        {
+            "start": 3421030,
+            "end": 3424230,
+            "speaker": "B",
+            "text": "lass mal den armen Dieter und Herbert da in Ruhe. Das ist ja unglaublich."
+        },
+        {
+            "start": 3427110,
+            "end": 3468680,
+            "speaker": "A",
+            "text": "Von mir aus auch die Mittelstand Susanne, keine Ahnung. Also irgendwer scrollt da einfach drüber, weil auch diese Menschen lernen gerade mit KI LinkedIn Post zu schreiben. Also was ich sagen möchte ist, hab keine Scheu, den anderen Leuten zu fragen, hey, was ist eigentlich dein Workflow? Oder wie machst du das? Oder weil die lernen das alle. Das ist die eine Thematik. Die zweite Sache, die ich mitgeben möchte, dauerhaft open minded zu sein und konstant seinen Workflow über Bord zu werfen, ist auch für mich unglaublich schwierig, denn es ist für jeden schwierig. Also ihr seid nicht alleine, das möchte ich glaube ich damit sagen. Das war das Wort zum Sonntag und jetzt schließe ich diese Podcast Episode ab. Das wird mir zu sentimental. Die Träne kullert schon."
+        },
+        {
+            "start": 3468920,
+            "end": 3480040,
+            "speaker": "B",
+            "text": "Ich habe auf jeden Fall abschließend noch eine Zusammenfassung von meinem Modell meines Vertrauens bekommen und das wäre, wenn mehr Code billiger wird, wird Klarheit wertvoller."
+        },
+        {
+            "start": 3480520,
+            "end": 3485480,
+            "speaker": "A",
+            "text": "Puh, Mittelstands Wolfgang könnte auch so ein Glückskeks Ding sein, oder?"
+        },
+        {
+            "start": 3485560,
+            "end": 3498800,
+            "speaker": "B",
+            "text": "Wobei, ich würde die Episode ja gerne nennen Ode Andy Juniors oder so ähnlich. Andi ist ja immer unzufrieden mit meiner Titelwahl, weil meistens bestimme ich die Titel. Jetzt habe ich mich geoutet. Andi, was hältst du von Ode an den Junior?"
+        },
+        {
+            "start": 3498960,
+            "end": 3508280,
+            "speaker": "A",
+            "text": "Es ist wirklich wahr. Der Wolfgang bestimmt die Titel der Episoden. Der Wolfgang will immer so Clickbait Scheiße haben. Ich sag uns doch einfach das machen, was drin ist, Eben weil es ja"
+        },
+        {
+            "start": 3508280,
+            "end": 3510520,
+            "speaker": "B",
+            "text": "das, was drin ist. Eine Ode an die Juniors."
+        },
+        {
+            "start": 3510520,
+            "end": 3526630,
+            "speaker": "A",
+            "text": "Und da der Wolfgang einen anderen Arbeitszyklus hat, der Wolfgang arbeitet oft nachts und ich gehe halt relativ früh ins Bett. Dann stehe ich halt morgens auf, gucke auf mein Handy, Spotify hat mir eine Push Nachricht geschickt und dann rolle ich entweder die Augen oder, ne, geht ja einigermaßen, weil ich dann in der Regel bei der Veröffentlichung selbst den Titel kennenlerne."
+        },
+        {
+            "start": 3526940,
+            "end": 3529740,
+            "speaker": "B",
+            "text": "Das ist die Frühstücksüberraschung, die du da immer bekommst."
+        },
+        {
+            "start": 3529740,
+            "end": 3585480,
+            "speaker": "A",
+            "text": "Deswegen bin ich gespannt, wie diese Episode genannt wird. Oder es klingt so ein bisschen kirchlich, muss ich zugeben, aber du machst das schon. Und wenn ich schon die ganze Zeit sage, wir sind alle im selben Boot, wir lernen alle. Interessiert mich natürlich auch deine Meinung. Denkst du immer noch, der Coding Agent ist dein Junior oder bist du eher auf der Seite, wenn wer talentierte Leute hat, hier ist meine Adresse, schick mir eine E Mail. Also wie seid ihr drauf? Mich interessiert mal, wie ihr die ganze Sache seht oder wie die ganze Sache auch in eurer Firma gesehen wird bei der Mittelstand Susanne oder dem Mittelstand Wolfgang. Denn in der Discord Community haben wir eine sehr, sehr breite Varianz an Leuten an verschiedenen Firmen aus verschiedenen Bereichen und wir arbeiten jetzt im, ich sag mal, Internet Native Bereich. Aber was ist zum Beispiel Maschinenbauern, was ist mit Krankenkassen und so. Also das würde mich mal interessieren. Springt doch mal in unsere Discord Community. Link findet ihr in den Shown us oder auf unserer Webseite und schreibt mal da rein. Der Wolfram und ich lesen es auf jeden Fall. Das war mein Wort zum Sonntag, Montag, Dienstag."
+        },
+        {
+            "start": 3585480,
+            "end": 3589520,
+            "speaker": "B",
+            "text": "Wir sprechen uns so viel Wörter zum Ende, die gelten für die ganze Woche in dem Fall."
+        },
+        {
+            "start": 3589600,
+            "end": 3591520,
+            "speaker": "A",
+            "text": "Wir hören uns bald wieder. Bye bye. Ciao."
+        }
+    ]
+}
