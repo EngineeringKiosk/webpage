@@ -3495,6 +3495,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/264"
+  to = "/podcast/episode/264-seniorität-im-ki-zeitalter-eine-ode-an-den-junior?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep264"
+  to = "/podcast/episode/264-seniorität-im-ki-zeitalter-eine-ode-an-den-junior?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
