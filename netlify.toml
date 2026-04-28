@@ -3507,6 +3507,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/265"
+  to = "/podcast/episode/265-one-billion-row-challenge-java-mit-mmap-unsafe-richtig-vielen-bit-tricks?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep265"
+  to = "/podcast/episode/265-one-billion-row-challenge-java-mit-mmap-unsafe-richtig-vielen-bit-tricks?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
