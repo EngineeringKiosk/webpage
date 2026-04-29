@@ -19,8 +19,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Get all meetups data
 const allMeetups = getPastMeetups()
 const nextMeetup = getNextMeetup();
-// if next meetup is not already in the list, add it
-if (allMeetups.findIndex(m => m.date === nextMeetup.date) === -1) {
+// if next meetup exists and is not already in the list, add it
+if (nextMeetup && allMeetups.findIndex(m => m.date === nextMeetup.date) === -1) {
     allMeetups.push(nextMeetup);
 }
 
