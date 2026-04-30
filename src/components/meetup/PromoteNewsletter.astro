@@ -1,7 +1,7 @@
 ---
 import MainHead from '../MainHead.astro';
 
-import { formatDate, formatDateWithoutWeekday, formatTime, monthSuffixedDay, year} from '../../scripts/date.js';
+import { formatTime, monthSuffixedDay, year} from '../../scripts/date.js';
 import { createMeetupHelpers } from '../../scripts/meetups.js';
 
 export interface Props {
@@ -23,37 +23,39 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Current Meetup
 const bufferDays = 1;
 const nextMeetup = getNextMeetup(bufferDays);
-const dateString = formatDate(nextMeetup.date, 'en-US');
-const dateStringMonthDay = monthSuffixedDay(nextMeetup.date);
-const dateStringYear = year(nextMeetup.date);
-const timeString = formatTime(nextMeetup.date);
-const hostName = nextMeetup.hostName
-const locationName = nextMeetup.location.name
-const locationAddress = nextMeetup.location.address
+const dateStringMonthDay = nextMeetup ? monthSuffixedDay(nextMeetup.date) : null;
+const dateStringYear = nextMeetup ? year(nextMeetup.date) : null;
+const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
+const locationName = nextMeetup?.location.name;
+const locationAddress = nextMeetup?.location.address;
 ---
 
 <html lang="de">
 	<body class="antialiased bg-body text-body">
 
-		<h1 class="text-xl font-bold">Engineering Kiosk Meetup Announcement - {dateStringMonthDay}</h1>
+		<h1 class="text-xl font-bold">Engineering Kiosk Meetup Announcement{nextMeetup ? ` - ${dateStringMonthDay}` : ''}</h1>
 
-		<p>
-				<br/>
-				We would like to invite you to the next <b>Engineering Kiosk Meetup</b>, this time we will meet at the following date & location: <br/>
-		<br/>
-			&#128197; {dateStringMonthDay}, {dateStringYear} - {timeString}<br/>
-		&#128591; Hosted by: {locationName}<br/>
-		&#128205; Location: {locationAddress}<br/>
-		<br/>
-		&#x1F3A4; Featured Talks<br/>
-		<br/>
-		{nextMeetup.talks.map((talk, j) => (
-				<span><b>{talk.title} by {talk.name}:</b> {talk.description}</span><br/><br/>
-		))}
-		&#128221; Reserve Your Spot and receive an instant calendar invite: <a href={`https://engineeringkiosk.dev/${meetupUrl}`}>https://engineeringkiosk.dev/{meetupUrl}</a><br/>
-		<br/>
-		cheers,<br/>
-		{teamSignoff}<br/>
-		</p>
+		{nextMeetup ? (
+			<p>
+					<br/>
+					We would like to invite you to the next <b>Engineering Kiosk Meetup</b>, this time we will meet at the following date & location: <br/>
+			<br/>
+				&#128197; {dateStringMonthDay}, {dateStringYear} - {timeString}<br/>
+			&#128591; Hosted by: {locationName}<br/>
+			&#128205; Location: {locationAddress}<br/>
+			<br/>
+			&#x1F3A4; Featured Talks<br/>
+			<br/>
+			{nextMeetup.talks.map((talk) => (
+					<span><b>{talk.title} by {talk.name}:</b> {talk.description}</span><br/><br/>
+			))}
+			&#128221; Reserve Your Spot and receive an instant calendar invite: <a href={`https://engineeringkiosk.dev/${meetupUrl}`}>https://engineeringkiosk.dev/{meetupUrl}</a><br/>
+			<br/>
+			cheers,<br/>
+			{teamSignoff}<br/>
+			</p>
+		) : (
+			<p>No upcoming meetup is scheduled yet.</p>
+		)}
 	</body>
 </html>

@@ -59,12 +59,14 @@ const { getNextMeetup } = await createMeetupHelpers(collectionName);
 
 const bufferDays = 1;
 const nextMeetup = getNextMeetup(bufferDays);
-const dateString = formatDateWithoutWeekday(nextMeetup.date, 'en-US');
-const timeString = formatTime(nextMeetup.date);
-const dateAndTime = `${dateString} - open doors at ${timeString} (talks start ~30min later)`;
-const registrationClosed = nextMeetup.registrationClosed || false;
+const dateString = nextMeetup ? formatDateWithoutWeekday(nextMeetup.date, 'en-US') : null;
+const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
+const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ~30min later)` : null;
+const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false) : false;
 
-const description = `In-person tech meetup in ${meetupName} (Next: ${dateString}): A local community event for software engineers, developers and tech enthusiasts featuring talks on engineering culture, open source and technology.`;
+const description = nextMeetup
+	? `In-person tech meetup in ${meetupName} (Next: ${dateString}): A local community event for software engineers, developers and tech enthusiasts featuring talks on engineering culture, open source and technology.`
+	: `In-person tech meetup in ${meetupName}: A local community event for software engineers, developers and tech enthusiasts featuring talks on engineering culture, open source and technology.`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 ---
@@ -92,29 +94,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 								<p class="mb-8 text-lg md:text-xl text-coolGray-500 font-medium">
 									{heroDescription}
 								</p>
-								<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
-								<p class="mt-2 text-sm md:text-base text-coolGray-500 font-medium">
-									📅 Date <span class="font-bold">{dateAndTime}</span>
-								</p>
-								<div class="mb-8 text-sm md:text-base text-coolGray-500 font-medium">
-									📍 Location:
-									{
-										nextMeetup.location.url && (
-											<a href={nextMeetup.location.url} target="_blank" rel="noopener noreferrer">
-												{nextMeetup.location.name}
-											</a>
-										)
-									}
-									{!nextMeetup.location.url && nextMeetup.location.name} (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>
-									{nextMeetup.location.note && (
-										<span class="text-xs">{nextMeetup.location.note}</span>
-									)})
+								{nextMeetup ? (
+									<>
+										<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
+										<p class="mt-2 text-sm md:text-base text-coolGray-500 font-medium">
+											📅 Date <span class="font-bold">{dateAndTime}</span>
+										</p>
+										<div class="mb-8 text-sm md:text-base text-coolGray-500 font-medium">
+											📍 Location:
+											{
+												nextMeetup.location.url && (
+													<a href={nextMeetup.location.url} target="_blank" rel="noopener noreferrer">
+														{nextMeetup.location.name}
+													</a>
+												)
+											}
+											{!nextMeetup.location.url && nextMeetup.location.name} (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>
+											{nextMeetup.location.note && (
+												<span class="text-xs">{nextMeetup.location.note}</span>
+											)})
 
-								</div>
+										</div>
+									</>
+								) : (
+									<>
+										<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup: To be announced</h2>
+										<p class="mt-2 mb-8 text-sm md:text-base text-coolGray-500 font-medium">
+											We are working on the next meetup. <a class="text-yellow-500 underline" data-scroll-to="a[name=newsletter]" href="#newsletter">Subscribe</a> to get notified as soon as the date is set.
+										</p>
+									</>
+								)}
 
 								<div class="flex flex-wrap mt-2">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
 									{ () => {
+										if (!nextMeetup) {
+											return null;
+										}
 										if (!registrationClosed) {
 											return(
 												<a
@@ -164,9 +180,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				</div>
 			</section>
 
-			<MeetupListing meetupsToShow={[nextMeetup]} headline='Awesome Community Talks' meetupName={meetupName} meetupSlug={meetupSlug} meetupImage={ogImage} showGeneralLanguageNote={showGeneralLanguageNote} />
+			<MeetupListing meetupsToShow={nextMeetup ? [nextMeetup] : []} headline='Awesome Community Talks' meetupName={meetupName} meetupSlug={meetupSlug} meetupImage={ogImage} showGeneralLanguageNote={showGeneralLanguageNote} />
 
 			{ () => {
+				if (!nextMeetup) {
+					return null;
+				}
 				if (showRegistrationForm && !registrationClosed) {
 					return(
 					<section class="py-4 md:py-24 bg-white" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
