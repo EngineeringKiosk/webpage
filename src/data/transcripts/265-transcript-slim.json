@@ -1,0 +1,627 @@
+{
+    "confidence": 0.9591519,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4323,
+    "utterances": [
+        {
+            "start": 3200,
+            "end": 104110,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute wird es schnell, richtig schnell. Wir sprechen über eine Challenge, die auf den ersten Blick fast harmlos klingt und dann völlig die One Billion Road Challenge Eine Milliarde Zeilen Wetterdaten einlesen, pro Station, Minimum, Mittelwert und Maximum berechnen und das Ganze so schnell wie möglich Klingt nach einer simplen Fleißarbeit. Tja, genau hier wird es spannend, denn wir schauen uns auch an, wie aus einer naiven Java Implementierung mit fast fünf Minuten Laufzeit plötzlich Lösungen mit rund anderthalb Sekunden werden. Und dabei geht es nicht nur um Java, DJVM und Graal VM, sondern auch um die Frage, was Performance Optimierung eigentlich wirklich lokale Hashmaps, Memory Mapping, Integer statt Float, Single Instructions, Multiple Data, kurz SIMD, Branchless Coding, Unsafe, Cashlines und warum plötzlich sogar das Parsen eines Temperaturwerts zur Wissenschaft wird. Außerdem sprechen wir darüber, warum diese Challenge so viral gegangen ist, welche Kritik es daran gab und was andere Sprachen wie C, Go, PHP, SQL oder sogar AWK daraus gemacht haben und warum eine GPU hier nicht automatisch der Endgegner ist. Wenn du wissen willst, ob Java wirklich langsam ist oder ob ob wir diesem Mythos heute endgültig den Stecker ziehen, dann bleib dran. Los geht's. Lieber Wolfgang, die Grüße gehen raus an das wunderschönste Land mit dem leckersten Kaiserschmarrn ohne Rosinen. Und heute haben wir mal ein Thema, was ich schon lange auf der Uhr habe, aber wir starten mit einer einfachen Frage für was war die letzte Performance Optimierung, die du geschrieben hast oder gepromptet hast?"
+        },
+        {
+            "start": 104110,
+            "end": 113810,
+            "speaker": "B",
+            "text": "Moment, ich war kurz abgelenkt. Bei Kaiserschmarrn habe ich schon abgeschaltet, weil du hast von dem Land gesprochen, wo es Kaiserschmarrn ohne Rosine gibt und der der beste ist. In welchem Land ist es das? Weil in Österreich gibt es sowas nicht."
+        },
+        {
+            "start": 113810,
+            "end": 115410,
+            "speaker": "A",
+            "text": "In Österreich gibt es sowas vermehrt."
+        },
+        {
+            "start": 115410,
+            "end": 118490,
+            "speaker": "B",
+            "text": "Da gibt es nur mit Rosinen Glaubenskrieg."
+        },
+        {
+            "start": 118490,
+            "end": 121450,
+            "speaker": "A",
+            "text": "Bin ja nicht religiös, deswegen halte ich mich von solchen Kriegen fern."
+        },
+        {
+            "start": 121450,
+            "end": 129810,
+            "speaker": "B",
+            "text": "Du wolltest jetzt Einleitung machen in religiöse Kriege in der Entwicklerwelt, wo es darum geht, ob man Micro Optimization machen soll oder nicht."
+        },
+        {
+            "start": 130050,
+            "end": 147010,
+            "speaker": "A",
+            "text": "So, jetzt hör auf die Frage wegzuschmeißen, so wie der Berater es macht. Komm mal raus aus deinem Beruf und komm mal wieder rein in den Podcast, wo du mal essentiellen Wert liefern sollst und und unter anderem Fragen beantworten sollst, die dir gestellt werden. Was war die letzte Performance Optimierung, die du geschrieben oder gepromptet hast?"
+        },
+        {
+            "start": 147010,
+            "end": 161970,
+            "speaker": "B",
+            "text": "Ich glaube, meine Optimierungen bewegen sich eigentlich immer auf der SQL Ebene. Also wenn ich so zurückdenke in den letzten Monaten weiß, dass ich sicher mal mindestens zwanzig SQL Queries optimiert habe, weil im Code habe ich eigentlich sehr selten Optimierungen, muss ich sagen."
+        },
+        {
+            "start": 161970,
+            "end": 163610,
+            "speaker": "A",
+            "text": "Im Code hast du selten Optimierung oder"
+        },
+        {
+            "start": 163610,
+            "end": 181240,
+            "speaker": "B",
+            "text": "im Code hast du selten die Bottlenecks, beides, also Bottleneck. Und dadurch habe ich auch keine Optimierungen, weil ich selten unterwegs bin, wo man mit wirklich sehr großen Daten hantiert. Und oft geht es ja um große Datenmengen und wenn ich große Datenmengen habe, dann liegen die meistens in irgendeiner Datenbank und dann sind wir wieder beim SQL Thema."
+        },
+        {
+            "start": 181240,
+            "end": 187160,
+            "speaker": "A",
+            "text": "Das führt mich aber auch zu der Annahme, dass du in letzter Zeit auch keine compute intensiven Applikationen geschrieben, wenn du"
+        },
+        {
+            "start": 187160,
+            "end": 189680,
+            "speaker": "B",
+            "text": "mal von dem Compute in SQL Queries absiehst."
+        },
+        {
+            "start": 189680,
+            "end": 191000,
+            "speaker": "A",
+            "text": "Ja, ja, genau, klar."
+        },
+        {
+            "start": 191240,
+            "end": 200020,
+            "speaker": "B",
+            "text": "Also so zumindest nicht, dass ich jetzt an extreme Bottlenecks dran gekommen wäre, wo ich mir so gedacht habe, ja okay, dann ist die CPU Load halt ein bisschen höher, statt drei Prozent ist sie vier Prozent."
+        },
+        {
+            "start": 200580,
+            "end": 215180,
+            "speaker": "A",
+            "text": "Verstehe, verstehe. OK. Und die nächste Frage, da möchte ich eine Antwort, die aus der Hüfte geschossen kommt, so richtig Bauchgefühl. Jetzt nicht drei Sekunden, vier Sekunden, fünf Sekunden überlegen, weil wir schneiden den Podcast und alle Leute am Audiogerät kriegen das nie mit, wenn du so lange überlegst."
+        },
+        {
+            "start": 215180,
+            "end": 217140,
+            "speaker": "B",
+            "text": "Ja, drum bin ich immer super schnell. Das ist ja genial."
+        },
+        {
+            "start": 217140,
+            "end": 237050,
+            "speaker": "A",
+            "text": "Ja, ja, Ne, deswegen jetzt mal flott, flott Bauchgefühl. Was ist dein erster Gedanke, wenn du Java und Performance hast? Um Gottes willen, muss ich zugeben, jetzt mal ohne Cut hier, ohne das Audio geschnitten zu haben. Die kamen sogar relativ schnell, ich würde sagen so eine anderthalb Sekunden. Interessant. Was führt dich zu diesem Bauchgefühl, zu diesem ersten Gedanken?"
+        },
+        {
+            "start": 237050,
+            "end": 265770,
+            "speaker": "B",
+            "text": "Ja, grundsätzlich mal das Klischee. Aber ich hatte einen Kollegen an der Uni, der an hochoptimierten Indexstrukturen gearbeitet hat und der hat mit Java angefangen, weil er großer Java Fan war und auf allen Konferenzen, wo das eingereicht hat, obwohl sein Index sehr, sehr schnell war, hat es geheißen. Warum machst du es in Java? Warum kommst du mit Java um die Ecke? Um Gottes willen, geh weg mit deinem Java und am Ende hat er es dann in C implementiert, damit alle Leute glücklich waren. Und man muss zugeben, er war dann auch schneller in C, aber gar nicht so viel schneller, wie man vielleicht denken würde."
+        },
+        {
+            "start": 265616,
+            "end": 325616,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 325770,
+            "end": 337970,
+            "speaker": "A",
+            "text": "Ich glaube auch, dass immer nur Leute sagen, Java ist langsam oder Java und Performance. Das sind so zwei gegenläufige Begriffe in einem Satz, dass das von Leuten kommt, die wenig Java schreiben."
+        },
+        {
+            "start": 337970,
+            "end": 379230,
+            "speaker": "B",
+            "text": "Ich meine, man muss natürlich schon sagen, dass die JVM irgendwo da dazwischen liegt. Das heißt, wenn du Natür jetzt Hardcore Optimierungen machen willst, dann musst du immer diese JVM mitdenken. Was macht denn die JVM da im Hintergrund? Was macht die für Optimierungen? Und in C kannst du halt einfach, da gibt es niemand, der dich irgendwo da unterstützt bei den Optimierungen. Du musst halt alles selber machen. Dafür kannst du auch alles selber machen. Das sehe ich so als größten Unterschied. Wobei die JVM natürlich auch, wenn man jetzt zurückblickt auf die letzten zwanzig Jahre, in denen Java sich natürlich sehr stark weiterentwickelt hat, hat sich die JVM auch weiterentwickelt und ist auch wesentlich optimierter geworden und hat auch mehr Möglichkeiten und werden wir heute auch Dinge besprechen diesbezüglich."
+        },
+        {
+            "start": 379230,
+            "end": 398750,
+            "speaker": "A",
+            "text": "Ja, ich bin mir da nicht sicher, ob ich da ein hundert Prozent mitgehe, dass man immer drüber nachdenken muss. Was macht die JVM dafür Optimierung? Denn dann würde ja das gleiche Argument gelten. Okay, bei C, was macht der Compiler für Optimierung? Weil der Compiler optimiert ja auch Sachen weg und schreibt ja auch insgeheim mehr oder weniger deinen Code, wo er denkt, er wäre smarter und Co."
+        },
+        {
+            "start": 398750,
+            "end": 427040,
+            "speaker": "B",
+            "text": "Also das musst du auch machen, weil ich kann mich selber erinnern, in den ganzen Optimierungsbeispielen und so, die wir gemacht haben, auch paralleles Rechnen und so weiter, damals an der Uni noch, ich hatte das sehr oft, am Ende war das Programm super schnell und dann bist du draufgekommen, der hat dir einfach eine komplette Loop weg optimiert und du wolltest es eigentlich zeigen, dass du es irgendwie schneller machen kannst. Der Compiler O Flag hat einfach gecheckt, oh, da gibt es nie einen Output, der wird nie verwendet, ich kick mal die ganze Loop einfach raus."
+        },
+        {
+            "start": 427290,
+            "end": 467940,
+            "speaker": "A",
+            "text": "Ich meine, bei den ganzen Compiler Optimierung gab es natürlich auch etliche Bugs in der ganzen Historie, aber darum geht es heute nicht, denn es geht heute mal etwas darum, ob ich dich davon überzeugen kann, dass Java und Performance doch vielleicht in einem Satz genannt werden können. Denn die heutige Episode dreht sich um ein Thema, was ich schon länger im Kopf habe, schon eigentlich fast zwei Jahre, aber ich kam noch nie dazu. Und zwar sprechen wir heute über die One Billion Row Challenge. Also zu Deutsch, weil es gibt auch das Wort Billionen in Deutsch, aber eine Billion in Englisch ist nicht eine Billion in Deutsch, eine Billion in Englisch ist eine Milliarde in Deutsch. Also reden wir heute über die Eine Milliarden Zeilen Challenge."
+        },
+        {
+            "start": 467940,
+            "end": 470980,
+            "speaker": "B",
+            "text": "Hast du davon schon mal gehört von dir, Monatstakt?"
+        },
+        {
+            "start": 470980,
+            "end": 724170,
+            "speaker": "A",
+            "text": "Das ist schön, dass du dich an unsere Kommunikation erinnerst, wenigstens etwas Positives. Hier fangen wir an. Und zwar gibt es einen Software Engineer, der heißt Gunnar Morling. Gunnar Morling hat früher für Red Hat gearbeitet. Zum Zeitpunkt dieser One Billion Road Challenge, von der wir gleich erzählen, hat er bei Decodable gearbeitet. Das ist ein Apache Flink Software as a Service Startup, wenn man so möchte. Apache Flink ist so Stream Processing und inzwischen ist er auch Software Engineer bei Confluent, das ist die Firma hinter Kafka für die Leute, die es nicht kennen. Und Gunnar hatte eine Idee, lass uns doch mal einen Performance Contest starten. Da hat er sich gedacht, ich setze mich mal hin, tüftel mal ein bisschen und schreibe daraus einen Blogpost. Den hat er dann am erster januar zwei tausend vier und zwanzig veröffentlicht und die Challenge hat er gesagt, okay, die ich jetzt gleich beschreibe, worum es da geht. So, wir starten jetzt am erster erster zwei tausend vier und zwanzig und die geht jetzt ganz genau einen Monat bis zum ein und dreiigster januar bis Mitternacht. Und dann schauen wir mal, was passiert. Womit er nicht gerechnet hätte. Der Performance Contest ging ein wenig viral und hat ihm ein wenig mehr Arbeit gemacht als er eigentlich. Aber was hat er eigentlich in diesem Blogpost geschrieben. Und zwar sagte er, lass mal Performance Contest machen, lass doch mal gucken, wie weit sich modernes Java performance technisch eigentlich treiben lässt. Und vielleicht kommen da Lösungen bei rum, von denen man auch noch etwas Neues lernen kann. Das war die Motivation. Und da hat er sich eine Aufgabe ausgedacht. Die Aufgabe, und das fand ich so schön, So hat er seinen Blogpost begonnen. Deine Aufgabe, solltest du sie annehmen, ist trügerisch einfach. Schreibe ein Java Programm, das Temperaturmesswerte aus einer Textdatei ausliest und die minimal mittel und Maximaltemperatur pro Wetterstation berechnet. Es gibt nur einen Haken. Die Datei hat eine Milliarde Zeilen und ich weiß, du guckst ja nicht so viele Hollywood Action Filme, aber deine Aufgabe solltest du sie annehmen. Woher kommt das? Matrix, Mission Impossible oder eigentlich deine Aufgabe im Falle, dass du sie annimmst. Und danach zerstört sich dann dieses Memo. Selbst dieser Blogpost hat sich nicht von selbst zerstört, aber ist trotzdem schon. Also diese Textdatei hat auch eine relativ einfache Struktur und zwar Hamburg Semikolon, Temperaturwert, also zwölf komma null, Krakau Semikolon zwölf komma sechs und so weiter und so fort. Das Programm, was du schreiben sollst, soll halt den minimalen Mittelwert und den Maximalwert pro Messstation, also Hamburg, Krakau und so weiter in alphabetischer Reihenfolge ausgeben. Also Hamburg gleich fünf Grad ist der niedrigste Wert, achtzehn Grad ist der Mittelwert, sieben und zwanzig komma vier ist der Maximalwert, Komma Krakau und so weiter in alphabetischer Reihenfolge. Ziel der ganzen Wer kriegt es am schnellsten hin? Und die Regeln, weil wir könnten jetzt hier Anarchie machen und keine Regeln haben. Aber Gunnar, lass mal ein paar Regeln festlegen und die fand ich auch ganz interessant. Du darfst keine externen Abhängigkeiten nutzen. Das bedeutet also eigentlich, wenn du so möchtest, nur Standard, liberale, Java only, also auch keine Derivate irgendwie wie Kotlin und auch kein Java Native Interface, also dass du mit Java was anderes, eine andere Sprache calls oder so. Dann hast du ja schon über die JVM gesprochen und bei Java gibt es ja auch alternative Runtimes, Open JDK, GRAL, VM und so weiter und so fort. Die wurden erlaubt, aber nur, wenn sie in einem spezifischen Package Manager verfügbar waren. Also das nennt man SDK Man, das ist ein Software Development Kit Manager. Kannst dir vorstellen wie irgendwie so ein Paketmanager für Java Runtimes. Dann fand ich sehr gut. Die Regel kam ich auch initial gar nicht drauf. Die Berechnung der Ergebnisse muss zur Laufzeit der Anwendung erfolgen und nicht zur Compile Time. Da gibt es ja ganz dreckige Elemente, die man da fahren kann. Und noch mal ein bisschen paar mehr Informationen zu den Daten selbst. Ich habe gerade Hamburg und Krakau als Wetterstation Beispiel genannt. Es gibt nur maximal eindeutige Wetterstationsnamen. Was ist erstmal deine Meinung zu der Aufgabe, zu dem Datenset und zu den Regeln? Du als alter Universitätsprofessor und auch Dozent, das ist aber so eine klassische Aufgabe, die man auch den Studenten geben kann, um die gegeneinander antreten zu lassen oder oder hättest du noch eine andere Regel reingeführt?"
+        },
+        {
+            "start": 724170,
+            "end": 780960,
+            "speaker": "B",
+            "text": "Mein Initialgedanke war sofort, wie würde ich das in Node JS machen mit JavaScript. Andi, für dich kann ich schneller sein als Java. Aber gut, das ist noch eine Nebenbaustelle. Sonst ist es natürlich eigentlich sehr cooles Beispiel, weil es super einfach ist. Also auch die Daten, es gibt ja nur zwei Werte, die Station und die Temperatur, weil ganz oft sind Datensätze irgendwie ganz groß, sondern da geht es halt wirklich darum, ganz einfaches Problem, viele Daten, wie kann ich das wirklich bis ins Kleinste optimieren? Also du hast wenig Möglichkeiten da jetzt mit den Daten irgendwas zu machen oder mehrere Baustellen, sondern es geht halt wirklich darum, wie kannst du das schnell einlesen, wie kannst du Strings verarbeiten? Klassisch so eine Datei hat halt ganz viele Strings, Text und wie kannst du das optimiert machen? Also super klein und ihr mir jetzt gerade wieder überlegt, wie du das vorgelesen hast. Wir sind jetzt schon wieder fünf Ideen gekommen. Das könnte man eigentlich mit Studierenden so machen, da könnte man bei der Challenge mitmachen. Die einen machen eine Datenbank, die anderen machen JavaScript und so weiter. Eigentlich eine geniale Challenge, also ich bin voll überzeugt von der."
+        },
+        {
+            "start": 780960,
+            "end": 837350,
+            "speaker": "A",
+            "text": "Ja, dann machen wir mal weiter. Denn wenn du diese Challenge auch deinen Studenten gibst, so wie Gunnar es dem Internet gegeben hat, muss man natürlich auch eine Methode auswählen, wie man die ganze Sache denn testet. Und Gunnar hat sich gedacht, okay, ich teste das alles, also nicht ich Andi, sondern ich Gunna. Und zwar hat er gesagt, alle Lösungen werden bitte als Pull Request submitted bei GitHub und irgendwann nach dem ein und dreiigster januar, also im Februar, schnappt sich Gunnar die Lösung und testet das zentral auf einem Hetzner Server mit acht dedizierten cpus und zwei und dreiig GB RAM. Er hat dann auch ganz genau geschrieben, wie er getestet hat. Das bedeutet, er hat das Linux Time Command zur Zeitmessung genommen, er hat jede Submission fünfmal laufen gelassen, er hat das schnellste und das langsamste Ergebnis verworfen und den Durchschnitt aus den drei mittleren übergebliebenen ermittelt. Würde ich sagen, ist eine faire Runtime oder also eine faire Zeitmessung, um halt irgendwie so noisy neighbor und Co. Alles mal irgendwie auszuschließen."
+        },
+        {
+            "start": 837350,
+            "end": 860060,
+            "speaker": "B",
+            "text": "Und natürlich das klassische Caching Problem, weil Wenn du die Daten natürlich vom Operating System schon im Cache liegen hast, im RAM liegen hast, dann hast du natürlich auch einen Vorteil. Und das ist eigentlich ab dem zweiten Run hast du die Daten irgendwo im Cache liegen und erst ab dem zweiten Run hast du richtige Zeitmessungen. Und darum das Größte wegzuwerfen, den größten Messwert, macht absolut Sinn."
+        },
+        {
+            "start": 860060,
+            "end": 891390,
+            "speaker": "A",
+            "text": "Aber man merkt schon, du gehst schon in die richtige Ecke, weil was Caching und RAM und Co. Angeht, da kommen wir gleich noch mal ein bisschen zu der Kritik, weil es ist das Internet. Du kannst ja nicht einfach einen Blogpost rauspacken und eine perfekte Lösung, die gibt es ja gar nicht. Es findet sich immer irgendwer, der was zu meppern hat. Aber wenn du das jetzt mal so hörst, was würdest du denn so schätzen, wo liegen wir denn da zeitlich bei den Ergebnissen? Wir sind immer noch bei Java. Was würdest du sagen, wie schnell kann man so ein Java Programm laufen lassen, damit man die zu erwartenden Ergebnisse, Es"
+        },
+        {
+            "start": 891390,
+            "end": 930620,
+            "speaker": "B",
+            "text": "sind ja mal dreizehn Gigabyte an Daten, das heißt, man braucht ja eigentlich alleine schon dreizehn Gigabyte Transfer der Daten. Also wenn du jetzt davon ausgehst, dass die CPU schneller ist als der Datentransfer, dann hast du zumindest die dreizehn GB Daten. Und da sind wir da schon im Bereich, ich habe jetzt keine aktuellen Zahlen so im Kopf, was aktuelle moderne Hardware hinbekommt, aber ich würde mal sagen, dreizehn GB von einer klassischen Festplatte braucht sicher mehrere Sekunden. Von einer SSD Platte bist du wahrscheinlich irgendwo bei einer Sekunde, vermute ich mal, oder bei eineinhalb Sekunden, ist so eine grobe Schätzung von mir. Aber auf jeden Fall, der Datentransfer an sich ist schon durchaus sportlich."
+        },
+        {
+            "start": 930700,
+            "end": 952240,
+            "speaker": "A",
+            "text": "Ich muss zugeben, ich bin beeindruckt, Wolfgang, ich bin beeindruckt. Also du bist wirklich auf dem richtigen Track. Ich greife mal ganz kurz vor, weil nämlich auch diese Zahlen habe ich natürlich vorbereitet. Eine moderne nvme SSD schafft sequenziell circa fünf bis sieben GB und eine klassische Server SSD so circa zwei bis drei GB pro Sekunde."
+        },
+        {
+            "start": 952240,
+            "end": 957040,
+            "speaker": "B",
+            "text": "Also meinst du zwei bis drei GB für eine Spinning Disk Serverplatte, Ne, für"
+        },
+        {
+            "start": 957040,
+            "end": 970750,
+            "speaker": "A",
+            "text": "so eine sogenannte SATA SSD. Also der Unterschied zwischen nvme ssds und Data ssds ist in der Regel das Interface, über das sie kommunizieren, Da nvme ssds oft über das PCIE Interface kommunizieren."
+        },
+        {
+            "start": 970990,
+            "end": 975870,
+            "speaker": "B",
+            "text": "Das heißt die Spinning Disk ist wahrscheinlich gleich langsam, weil das Interface bottleneck ist."
+        },
+        {
+            "start": 975950,
+            "end": 979230,
+            "speaker": "A",
+            "text": "Ja, da bin ich jetzt zu weit von der wirklichen Hardware entfernt."
+        },
+        {
+            "start": 979630,
+            "end": 988190,
+            "speaker": "B",
+            "text": "Ich habe gerade noch mal nachgeschaut, so klassische Spinning Disks waren ja eher so bei drei hundert Megabyte die Sekunde. Jetzt habe ich es auch wieder so im Kopf und früher die guten alten Zeiten."
+        },
+        {
+            "start": 988350,
+            "end": 1008670,
+            "speaker": "A",
+            "text": "Aber kommen wir zurück zu dem richtigen Track, auf dem du warst. Also bei dreizehn GB Rohdaten ist allein der I O auf realistischer Hardware circa zwei bis sechs Sekunden. Und das bedeutet natürlich, dass allein bis das Programm deine Daten hat, zwei bis sechs Sekunden. Warum dem aber nicht so ist, kommen wir gleich drauf. Jetzt weiß ich gar nicht, hattest du mir jetzt schon eine Zeit genannt? Ne, hattest du noch nicht. Du bist sofort auf das I O gegangen und hast es."
+        },
+        {
+            "start": 1008670,
+            "end": 1025770,
+            "speaker": "B",
+            "text": "Ja, ich habe mir gedacht, dass das eigentlich der limitierende Faktor ist, weil meiner Meinung nach hätte ich gesagt, die Daten kommen langsamer, als die CPU das verarbeiten kann. Wäre jetzt so mein Tipp. Das heißt, man kommt dann wahrscheinlich so irgendwo bei den eben zwei, drei Sekunden raus, wenn man das jetzt normal implementiert."
+        },
+        {
+            "start": 1025770,
+            "end": 1044610,
+            "speaker": "A",
+            "text": "Okay, also Gunnar selbst hat, als er die Performance Challenge gelauncht hat, eine naive Implementierung gebaut, Also wirklich hier Open File und geh durch die Zeilen und pack die alle in so ein Array und so weiter und so fort. Und da hat es vier Minuten und neun und vierzig Sekunden gebraucht, ohne wirklich so einfach völlig dumm runtergeschrieben."
+        },
+        {
+            "start": 1044610,
+            "end": 1047010,
+            "speaker": "B",
+            "text": "Es lebe die Objektorientiertheit in Java."
+        },
+        {
+            "start": 1047090,
+            "end": 1140570,
+            "speaker": "A",
+            "text": "Ja, also ich meine, make it work, make it beautiful, make it fast, ne, Make it fast und dann beautiful. Ist ja aber auch egal. Er hat make it work. So, jetzt der Gewinner der ganzen Challenge hat anderthalb Sekunden gebraucht und zwar lief die Gewinnerlösung auf der GRAL VM. Das bedeutet, dass die Gewinner Lösung ein hundert acht und achtzig mal schneller ist als Gunnars native, nicht native naive. Die andere ist ja auch nativ, wir reden nur über Java. Naive Lösung, schneller ist. Fun Fact, der hat mich enorm zum Grinsen gebracht, muss ich zugeben. Der Gewinner ist Thomas Würtinger. Thomas ist Vice President zu Software Development bei Oracle und Gründer der GRAL VM. Also du hattest da jemanden, der wirklich, also wirklich weiß, was er tut und das muss ich zugeben, hat mich sehr zum Grinsen gebracht. So, jetzt ist es aber So, das war jetzt die Gewinner Submission von eins komma fünf Sekunden, wenn man Gunnars Regelwerk an den Tag legt. Gunnar hat aber während des Monats hier und da ein bisschen Kritik bekommen, deswegen hat er noch zwei andere Bonus Ergebnislisten gemacht. Und zwar habe ich gerade gesagt, er hat die ganze Sache auf einem Hetzner Server abgefeuert mit acht dedizierten V cpus. Und dann wurde die Frage Ja Moment mal, aber was passiert denn eigentlich, wenn wir einfach mal mehr CPU zur Verfügung haben? Also hatten wir ja auch schon eine Episode zu, dass ab und zu höhere Parallelisierung nicht unbedingt immer ein schnelleres Ergebnis ist."
+        },
+        {
+            "start": 1140570,
+            "end": 1151840,
+            "speaker": "B",
+            "text": "Episode ein hundert achtzig habe ich natürlich gerade nachgeschaut, Skalierung um jeden Preis. Da haben wir genau besprochen, ab wann rentiert sich denn überhaupt in die parallele Welt einzutauchen, weil da ja auch ein gewisser Overhead ist."
+        },
+        {
+            "start": 1151840,
+            "end": 1173080,
+            "speaker": "A",
+            "text": "Hier in diesem Falle lohnt es sich. Und zwar wurde derselbe Test mal mit zwei und dreiig Cores durchgeführt, also dieselben Submissions und dann ging es auf drei hundert millisekunden runter. Ebenfalls mit der GRAL VM war jetzt nicht die Lösung von Thomas, dem VP von Oracle. Das bedeutet, dass dann die Lösung mit den zwei und dreiig Cores fünfmal so schnell ist."
+        },
+        {
+            "start": 1173240,
+            "end": 1177800,
+            "speaker": "B",
+            "text": "Das heißt, sie ist dann fünfmal so schnell ungefähr. Es sind aber nur viermal so viele Cores."
+        },
+        {
+            "start": 1177880,
+            "end": 1178440,
+            "speaker": "A",
+            "text": "Genau."
+        },
+        {
+            "start": 1178520,
+            "end": 1187000,
+            "speaker": "B",
+            "text": "Interessant. Das wäre auch mal interessant herauszufinden, warum das sein kann. Aber wahrscheinlich gibt es da auch noch mal irgendwelche Optimierungen Caches, die da genutzt werden können."
+        },
+        {
+            "start": 1187080,
+            "end": 1295080,
+            "speaker": "A",
+            "text": "Ja, normalerweise würde ich sagen, das übersteigt meine Gehaltsklasse, weil das tut es jetzt in diesem Fall auch, weil das weiß ich nicht warum. Und dann gibt es noch eine Bonusliste. In den Regeln stand ja, dass es maximal einzigartige Wetterstationen gibt. Jetzt ist es aber nur so, dass der Testdatensatz nur vier hundert dreizehn verschiedene Wetterstationen hat. Leute, die sich ein bisschen mit Competitive Coding auseinandersetzen und Algorithmen Optimierung wissen, da gibt es aber Potenzial. Wenn du nämlich umso mehr Informationen du über die Daten hast, die für den Performance Test genutzt werden, desto eher kannst du natürlich auf diese Daten optimieren. Und deswegen wurde mal ein neues Datenset erstellt, wo wirklich verschiedene einzigartige Wetters Stationen erzeugt wurden. Und jetzt könnte man Warum ist das denn relevant? Ja, also auf der einen Seite, wenn du natürlich andere Strings hast, beeinflusst das natürlich die Entscheidungen, wie du das File passt. Wenn du kleinere Strings hast zum Beispiel, kannst du andere Hash Funktionen nutzen und wie gesagt, du kannst halt nicht deine Algorithmen auf die speziellen Datensätze anpassen. Dataset Overfitting nennt man sowas, dann kannst du nämlich alles relativ gut handtunen. Ja, und das hat die Top Ten Liste dann auch noch mal ein bisschen durchgemixt. Also kann man nur, weil die Lösung die bei dem originalen Regelset gewonnen hat, das ist nicht automatisch der Gewinner dann, wenn die Testszenarien minimal geändert werden. Ein Fun Fact gibt es jedoch und zwar gab es einen Teilnehmer, der bei allen drei Tests, das bedeutet bei dem originalen Regelwerk, bei dem Regelwerk mit den zwei und dreiig cpus und mit den einzigartigen Wetterstationen in den Top drei war eine einzige Submission und da könnte man schon drüber sprechen, okay, das ist ja so die beste, würde ich sagen, wellrounded"
+        },
+        {
+            "start": 1295080,
+            "end": 1351420,
+            "speaker": "B",
+            "text": "Lösung oder außer du hast nur ein Datenset, wo du vier hundert Stationen drin hast. Also es kommt immer darauf an, was du für Daten hast am Ende, weil vielleicht hat die Lösung dann ein Problem mit Stationen. Also es ist immer die Frage, wie weit ist das Ganze optimiert? Vielleicht auch noch jetzt nachträglich zur Erklärung, weil du jetzt gesagt hast, okay, die Strings sind dann länger geworden bei den Stationen, Das würde ja auch heißen, die Transferzeit von Disc wird länger und eigentlich wäre das ja alles Disc bound, wenn man das wirklich von Disc laden würde. Aber wie du ja initial schon gesagt Erstens wird das Ganze öfters ausgeführt, das heißt, diese ganzen Informationen von der Platte wandern mal zuerst in den RAM, entweder über ein Betriebssystem Cache und im RAM sprechen wir dann von vierzig bis sechzig GB pro Sekunde. Das heißt, wir laden das gesamte File unter einer Sekunde eigentlich in Richtung CPU, wenn das schon im RAM liegt. Und dadurch kann man erst solche Micro Optimierungen machen, weil sonst bin ich mir ziemlich sicher, dass eigentlich das Bottleneck die Festplatte wäre."
+        },
+        {
+            "start": 1351420,
+            "end": 1398250,
+            "speaker": "A",
+            "text": "Ja, also jetzt greife ich mal ein bisschen vor, bevor wir zu der offiziellen Kritik an der Challenge kommen, denn du sprichst es ja schon an. Also auch im Test hat Gunnar anscheinend die Datei bereits auf eine RAM Disk gelegt. Das bedeutet auch im ersten Run lag die schon im RAM. Die lag gar nicht, also die Datei, die Testdatei lag gar nicht auf einer realen Festplatte. Das bedeutet natürlich dann genau das, was du gesagt hast, dass der Disc IO eigentlich ja maskiert ist, was in der realen Welt ja der dominante bottleneck ist. Also du misst ja eigentlich hier den reinen CPU und Memory Bandbreitendurchsatz und nicht den Bottleneck von Festplatten IO, der eigentlich bei realen Big Data Workloads der Bottleneck ist. Und somit hat das mit der realen Welt relativ wenig zu tun."
+        },
+        {
+            "start": 1398330,
+            "end": 1418490,
+            "speaker": "B",
+            "text": "Aber die Challenge wäre sonst relativ langweilig, weil wenn der limitierende Faktor die Festplatte wäre oder der Speicher, also SSD Speicher, dann hättest du halt nichts zum Optimieren. Dann könntest du auf der CPU Ebene noch so viel optimieren. Wenn das Limit die SSD ist, dann kannst du halt nichts machen. Also es wäre eine langweilige Challenge. Insofern ist es sehr wohl sinnvoll, das so aufzusetzen."
+        },
+        {
+            "start": 1418490,
+            "end": 1460390,
+            "speaker": "A",
+            "text": "Das ist nicht ganz richtig, denn einige Optimierungen werden jetzt besonders belohnt, so handgeschriebene CPU Instructions und so weiter. Andere Optimierungen, wenn du die Datei von der Festplatte lesen würdest, könntest du trotzdem machen, Wie zum Beispiel, du könntest den Page Cache umgehen, du könntest asynchrones Prefetching machen, du könntest vorher die ganze Sache komprimieren, könntest vielleicht sogar spaltenorientierte Formate transferieren und ähnliches. Also solche ganzen Tricks lässt du komplett außen vor und ja, du hast recht, man kriegt das Ergebnis dann mit hoher Wahrscheinlichkeit nicht auf eine Sekunde. Aber du kannst eine ganze Menge Optimierungen bezüglich IO machen. Betriebssysteme und Co. Die jetzt komplett außen vor gelassen werden,"
+        },
+        {
+            "start": 1460390,
+            "end": 1482500,
+            "speaker": "B",
+            "text": "ist ein Fair Point. Man muss dazu sagen, da musst du die Daten wieder umschreiben und das ist halt auch nicht realistisch, weil wenn die Daten umschreibt, kann ich sie gleich zusammenfassen. Aber wie dem auch sei, es ist die Challenge so definiert, dass es eben um Code Optimierungen geht, die du beim Processing im CPU Layer wirklich Und das finde ich auch schön an dieser Challenge, dass das eben so ein kleines Fenster ist, dass es genau um diese Dinge eben auch geht."
+        },
+        {
+            "start": 1482500,
+            "end": 1503420,
+            "speaker": "A",
+            "text": "Jetzt ist natürlich die große Wie kreativ ist das Internet geworden? Oder zumindest die Leute, die eine Submission eingereicht haben, Welche Optimierungen haben sie gemacht? Und da waren ein paar Optimierungen dabei, die wollen wir jetzt mal so ein bisschen durchgehen. Die sind vielleicht hier und da etwas Java spezifisch, aber im Endeffekt lassen die sich, glaube ich, auf fast alle Sprachen übertragen."
+        },
+        {
+            "start": 1503420,
+            "end": 1522790,
+            "speaker": "B",
+            "text": "Genau. Man glaubt nämlich immer, dass das irgendwie dann irgendwelche JVM Sachen sind oder sonstige Dinge. Aber so grundlegende Optimierungen kann man sowohl für Java machen, die würde man auch in C machen, die funktionieren bei PHP im Prinzip auch ähnlich, weil im Hintergrund halt trotzdem das Operating System arbeitet. Also es sind schon allgemein gültige Optimierungen, die meisten zumindest."
+        },
+        {
+            "start": 1522950,
+            "end": 1583680,
+            "speaker": "A",
+            "text": "Die erste Optimierung, die vielleicht gar nicht so offensichtlich ist, die für mich auch wieder interessant war, ist, dass natürlich eigentlich alle Lösungen parallel gearbeitet haben. Also sie haben wirklich auf acht CPU Cores gearbeitet. OK, cool. Da natürlich auch später das ganze Result auch irgendwie ausgegeben werden muss, kann man sich ja gut, dann habe ich dann vielleicht jetzt eine hashmap, da schreibe ich die ganzen Daten rein, Wetterstation irgendwie als Key und darunter vielleicht noch mal eine hashmap oder einfach nur ein Array mit dem Min, Mittel und max Temperaturwert und dann schreibe ich die einfach da rein. Das Problem ist natürlich, wenn du auf acht Cores arbeitest, dann hast du natürlich Parallelisierung, dann je nachdem welche hashmap du dann nutzt, kannst du vielleicht parallel schreiben oder die wird halt global gelockt in einem Performance Kontext Locking, ihr merkt schon, alles ein bisschen unvorteilhaft. Eine der Optimierungen, die eigentlich jeder genutzt hat, lokale Hashmaps, damit jeder Thread halt wirklich eigenständig arbeiten kann, weil sonst würde viel zu viel Zeit zur Synchronisation und zum Locking verbraucht werden und dann halt am Ende einfach gemerged und rausgeschrieben."
+        },
+        {
+            "start": 1583680,
+            "end": 1608650,
+            "speaker": "B",
+            "text": "Wobei auch da wieder du musst natürlich die Merge Zeit mitrechnen. Also wenn du im ganz Allgemeinen das optimierst, kann natürlich auch sein, dass dieses Merchen am Ende wieder sehr teuer ist, aber üblicherweise würde jetzt auch mal sagen, es ist meistens der schnellere Schritt. Vor allem wir sprechen da ja von vier hundert Wetterstationen, das heißt, du musst nur vier hundert Wetterstationen merchen. Wenn du jetzt Wetterstationen hättest, sieht die Sache vielleicht schon wieder ganz anders aus, oder vier Millionen Wetterstationen."
+        },
+        {
+            "start": 1608970,
+            "end": 1619770,
+            "speaker": "A",
+            "text": "Das ist korrekt, aber ich glaube, das ist ja eine Sache, die man sehr schnell durchmessen kann. Also hast du jetzt eine globale hashmap oder hast du eine hashmap pro Thread? Das ist ja relativ schnell umgeschrieben."
+        },
+        {
+            "start": 1619770,
+            "end": 1974970,
+            "speaker": "B",
+            "text": "Was auch noch ganz interessant war, war bei dieser Parallelisierung, wie die Daten aufgeteilt wurden, weil du hast ja eine große Datei, die du lesen musst. Jetzt ist das, du weißt ja nicht, wenn das Strings sind, wo ist denn ein sauberer Cut bei diesen Dateien? Und was da gemacht wurde, ist, dass man grundsätzlich einfach mal die Datei aufsplittet man zieht irgendwo die Grenze und dann sagt man aber, jeder einzelne Thread fängt nicht am Start an bei der Position, die mitgeteilt wurde, sondern dieser Thread schaut mal, wo ist denn die nächste neue Zeile und erst die nächste neue Zeile wird dann genommen und von da aus wird gelesen. Das heißt, wenn du in der Mitte von einer Zeile bist, dann ist es kein Problem. Das heißt, du suchst dir die nächste Zeile und erst ab da fängst du arbeiten an. Jetzt hast du natürlich das Problem, wenn du jetzt erst die zweite Zeile nimmst, wer bearbeitet die erste Zeile? Und das ist dann einfach so gelöst worden, dass der Thread am Ende, wenn das Ende erreicht ist von seiner Position, der trotzdem noch mal weiterliest bis zur nächsten neuen Zeile. Das heißt, diese verlorene Zeile wird vom Thread davor übernommen, dass also wirklich jede einzelne Zeile processed wird und keine Zeile verloren wird. Und so kann man einfach mal stur diese Datei in der Mitte durchschneiden und das sauber verteilen. Also es sind so Kleinigkeiten, die man einfach beachten muss. In der echten Welt würde man es vielleicht weglassen oder einfach das sinnvoll durchzählen, aber wenn man halt diese Zeit nicht hat und nicht weiß, wo eine Zeile aufhört, wo eine Zeile beginnt, muss man dann mit solchen Taktiken arbeiten. Aber wenn wir mal von dieser kleinen Optimierung unter Anführungszeichen oder sehr naiven Implementierung von Parallelisierung auf mehreren Threads auf eine Optimierung gehen, die wirklich extremen Impact hat und das ist eigentlich so die grundlegendste, wichtigste Optimierung meiner Meinung nach ist natürlich dieses Problem, wenn du in Java einfach mal eine große Datei einliest, dann gehst du da Zeile für Zeile durch, erstellst Objekte, für jede Zeile gibt es ein Objekt, für jede Wetterstation, für jeden Namen gibt es einen neuen String, alles wird schön am Heap angelegt, du erstellst Objekte, Objekte, Objekte und danach kommt hin und wieder der Garbage Collector vorbei und fängt dann an eine Milliarde von Zeilen und Objekten zu Garbage collecten und das wird dich einfach töten. Also da wartest du auf den Garbage Collector, keine Ahnung, wahrscheinlich neun und neunzig Prozent deiner Zeit ist nur mehr der Garbage Collector am Weg, irgendwie deine Objekte zu entfernen. Und Objekte generieren natürlich kostet auch viel Zeit, Das heißt, wenn man mit großen Datenmengen arbeitet, ist das eigentlich die schlechteste Idee, die man machen kann und ist ja nicht nur Java, was Objekte erzeugt, machen ja andere Sprachen genauso. Und was sich da eigentlich so durchgesetzt hat, ist, dass man einfach MMAP verwendet. Das ist eine Möglichkeit vom Betriebssystem auf sehr große Dateien zuzugreifen. Es wird in der Datenbankwelt verwendet, es wird überall verwendet, wo man eigentlich mit sehr großen Datenmengen hantiert. Das ist nichts anderes, als dass ich sagen kann, map mir doch eine große Datei in meinem File System in einen virtuellen Speicherbereich und dann greifst du nur mehr auf diesen virtuellen Speicherbereich zu und das Betriebssystem im Hintergrund managt alles für dich. Das heißt, wann werden die Daten wirklich geladen von der Festplatte, wo werden die zwischengespeichert, wenn du was änderst, werden die wieder zurückgeschrieben. Das heißt, dieses ganze Management im Hintergrund, wann werden welche Teile von der Festplatte geladen und geschrieben, es wird vom Betriebssystem übernommen und du kannst eigentlich auf die Daten zugreifen, als hättest du einen riesengroßen Speicherbereich. Der kann auch größer als der RAM an sich sein, weil es dann automatisch im Hintergrund gemappt wird. Die Pages werden geladen, durch diese ganzen Caches durchgereicht und dann am Ende von deinem Programm überhaupt verarbeitet. Und das ist natürlich super optimiert, weil das Betriebssystem das im Hintergrund macht. Und wie gesagt auch große Datenbanksysteme, wenn du da irgendeinen Datum änderst, eine Zeile änderst in der Datenbank, dann wird da im Hintergrund wieder dieses Mapped File zurückgespeichert auf die Festplatte. Und genau dieses Vorgehen haben die natürlich auch alle verwendet. Das heißt, man mappt einmal diese dreizehn GB in einen virtuellen Speicher und geht dann schrittweise durch diese Datei durch und liest die Daten. Und der große Unterschied ist, dass dann du in Java keine Objekte hast, die du immer erzeugen musst, sondern du greifst direkt auf den Speicher zu. Früher war das nur möglich mit unsafe. Unsafe ist in der Java Welt eigentlich so ein Begriff, der auf einen gewissen Sprachumfang, Funktionen hinweist, die eben unsafe sind, nicht sicher sind im Sinne von Speichermanagement. Und wenn man zum Beispiel so einen Mapped Byte Buffer verwendet, der eben auf so ein M Map vom Betriebssystem zugreift, auf so ein virtuelles Speichersystem von einer Datei, dann wird da eben direkt auf den Puffer zugegriffen und nicht mehr auf irgendwelche Objekte im Heap. Und dann verliere ich natürlich auch gewisse Sicherheitschecks, die im Hintergrund von Java natürlich, wenn es um normale Objekte geht, immer gemacht werden. Und daher ist es natürlich für den produktiven Betrieb eigentlich eher nicht zu empfehlen bzw. Viele sagen dann halt auch, wenn ich schon unsafe verwende, warum verwende ich dann überhaupt Java? Weil dann kann ich Gleit C verwenden, da ist alles unsafe sozusagen. Also bringt mir dann Java überhaupt noch einen gewissen Vorteil. Seit Java zwei und zwanzig gibt es da auch dann Memory Segments, bzw. Seit zwei tausend zwei und zwanzig sind die eigentlich stabil und können auch verwendet werden, um etwas sichereren Zugriff zu haben auf Mapped Memory. Das große Problem ist aber auch, dass da gewisse Checks im Hintergrund noch immer gemacht werden, die das Ganze langsamer machen. Das Java Team selber sagt, da wird auch sehr viel gemacht. Zwei tausend fünf und zwanzig haben sie das mal in dem Talk auch wirklich angesprochen, was für Optimierungen sie machen und dass das Memory Segment dann noch wesentlich schneller werden sollte und in Richtung unsafe von der Performance gehen sollte. Unsafe ist garantiert immer das schnellste, weil da hast du einfach null Checks und darum wurde das bei der Challenge eigentlich auch immer verwendet. Gegenüber, obwohl es Memory Segment schon gegeben hätte, ist man am Ende trotzdem wieder auf die Unsave Funktionen gegangen, weil man da einfach noch mal mehr Speed rausholen kann."
+        },
+        {
+            "start": 1974970,
+            "end": 2003510,
+            "speaker": "A",
+            "text": "Jetzt ist es natürlich so, weil unsave mehr oder weniger deprecated wurde und das Java Ecosystem sich natürlich auch weiterentwickelt wurde, haben wir mal nachgeschaut, in dem JDK sechs und zwanzig was aktuell veröffentlicht wurde, wird Unsave default mäßig Exceptions schmeißen. Das bedeutet, wenn du jetzt eigentlich dieselbe Performance Challenge noch mal laufen lassen würdest mit unsafe, wird dann eine Exception fliegen und wenn du die abfangen würdest, dann wird das natürlich auch negativen Impact auf deine zeitliche Performance geben, weil Exceptions schmeißen immer relativ teuer ist."
+        },
+        {
+            "start": 2003750,
+            "end": 2021870,
+            "speaker": "B",
+            "text": "Vielleicht noch als Information, was das wirklich in Zahlen bedeutet hat damals, also von so einem normalen Approach auf einen Unsafe Approach, da haben wir einen Speed Up von ungefähr vier, das heißt auf ein Viertel der Zeit, die es davor gebraucht hat. Also es sind schon Riesengrössenordnungen, wenn man da in den unsafe Bereich hineingeht."
+        },
+        {
+            "start": 2021870,
+            "end": 2035490,
+            "speaker": "A",
+            "text": "Aber wie der Name schon sagt, unsafe ist leider auch in normalen Fällen unsafe. Also wenn du nicht ganz genau weißt, was du da tust, solltest du das glaube ich nicht verwenden. Für so eine Performance Challenge sage ich, gib Kette, nutze es bitte auf jeden"
+        },
+        {
+            "start": 2035490,
+            "end": 2078800,
+            "speaker": "B",
+            "text": "Fall, wenn man mit großen Files arbeitet. MMAP, super Ding, funktioniert eigentlich in jeder Sprache und lagert viel ans Betriebssystem aus, was einfach meistens speedtechnisch eine gute Sache ist. Aber auch da muss man sagen, es gibt trotzdem noch diese Einteilung von Pages, von Cache Lines. Das spielt alles dort natürlich genauso eine Rolle. Das heißt, wenn man jetzt wahllos in dem virtuellen Memory herumspringt, ist es natürlich trotzdem langsam, weil im Hintergrund muss dann das Betriebssystem ständig irgendwie auf der Platte herumspringen und sich wieder andere Pages von der Platte holen. Das heißt, es dauert dann immer lang. Also man ist da jetzt nicht irgendwie automatisch superschnell, immer wenn man schlecht programmiert und irgendwie wahllos random herumspringt, wird es langsam bleiben, egal ob es jetzt Memory mapped ist oder nicht."
+        },
+        {
+            "start": 2078800,
+            "end": 2166290,
+            "speaker": "A",
+            "text": "Aber ich komme jetzt einfach mal mit zwei Optimierungen, die auch von jedem genutzt wurden, die deutlich einfacher zu implementieren sind und deutlich einfacher auch zu verstehen, jetzt nicht immer diese Map und ich brauche ein Informatikstudium, irgendwas zu finden. Und zwar kümmere ich mich mal wieder um Hashmaps. Ich habe gerade schon von lokalen Hashmaps gesprochen, die dann über Threads nicht geteilt werden müssen oder bzw. Nicht synchronisiert werden müssen wegen dem Locking. Jetzt spreche ich mal über Custom Hashmaps. Und zwar haben die ganzen Lösungen auch immer die Standard Hashmap ersetzt. Die Standard hashmap, wenn du da Sachen rein reinpackst irgendwann, weil die Standard Hashmap weiß von vornherein nicht, wie viele Entries reinkommen. Wenn du irgendwann dauerhaft da reinschreibst, kommst du an einen Punkt, da muss sie resized werden, da müsste im Memory ein bisschen was umgeschaffelt werden, das wird alles transparent hinten dran gemacht. Wenn du aber weißt, wie groß deine Thematik wird, wie viel Daten du da hast und so weiter, dann kannst du natürlich mit Fixed Sized Arrays oder mit Fixed Size Hashmaps arbeiten, um das ganze Resizing natürlich zu sparen Und dann wird es natürlich interessant. Dann kannst du natürlich die ganze Zeit Sache sogar so weit treiben, dass du Custom Hashmap implementierst und die Größe deiner Einträge ganz genau kennst. In diesem Fall waren die Einträge dann alle vier und sechzig Byte groß, was dann ganz genau eine Cache Line ist und somit könnte das ganze Working Set wirklich in den L Cache von der CPU passen und das ist natürlich Wahnsinn. Also dann brauchst du eigentlich gar nicht mehr irgendwie im Memory rumspringen, sondern hast das ganze Datensatz direkt in der CPU und das bringt dir natürlich einen schönen Boost. Wenn du aber weißt, wie viel Daten du hast."
+        },
+        {
+            "start": 2166290,
+            "end": 2210680,
+            "speaker": "B",
+            "text": "Ich habe mir jetzt nicht genau angeschaut, was die Implementierungen von den Custom hashmaps waren, aber die einfachste hashmap Implementierung, die es hier an sich gibt, ist, du machst ein Modulo, du nimmst die Stringwerte, den Integer Wert von dem String in irgendeiner Form, konvertierst ihn zu einem Integer und machst ein Modulo und bekommst dann die Position von dem jeweiligen Eintrag. Das ist ja so, was man so ganz basistechnisch mal lernt und wenn man nur vier hundert Einträge hat, hast du keine Kollisionen, hast du keine Probleme, dann hast du da im Prinzip Modulo vier hundert und bist schon glücklich. Ob jetzt Modulo die schnellste Variante ist, keine Ahnung, gibt es wahrscheinlich noch optimiertere Dinge, aber das wäre so die naive Herangehensweise. Du machst immer einmal eine Modulo Operation, die auch sehr schnell ist und hast schon die Position in der hashmap."
+        },
+        {
+            "start": 2210680,
+            "end": 2223640,
+            "speaker": "A",
+            "text": "Eine andere, noch einfachere Optimierung, die sogar ich wirklich schon mal angewendet habe, ist Integer statt Float. Ich habe gerade gesagt, die Temperaturwerte sind zum Beispiel zwölf komma vier, also zwölf"
+        },
+        {
+            "start": 2223640,
+            "end": 2223820,
+            "speaker": "B",
+            "text": "komma fünf"
+        },
+        {
+            "start": 2226370,
+            "end": 2244850,
+            "speaker": "A",
+            "text": "und ich glaube, man kann davon ausgehen, dass Temperaturen in der Regel von minus neun und neunzig komma neun Grad bis plus neun und neunzig komma neun Grad von Wetterstationen in der Welt sind. Oder kennst du einen Ort, wo eine Wetterstation steht, was über oder gleich minus ein hundert Grad ist oder plus ein hundert Grad?"
+        },
+        {
+            "start": 2245250,
+            "end": 2250000,
+            "speaker": "B",
+            "text": "Sollte bei Celsius selten vorkommen. Wenn wir bei Fahrenheit sind, schaut es schon wieder anders aus, ne?"
+        },
+        {
+            "start": 2250160,
+            "end": 2310970,
+            "speaker": "A",
+            "text": "Aber wir kennen die Daten, wir sind in einem ordentlichen metrischen System und nicht in irgendwas amerikanischem unterwegs. Jetzt gibt es einen simplen Trick, der wird auch oft bei finanziellen Werten angewendet, und zwar, dass man die ganze Sache einfach nicht als Float speichert, sondern als Integer. Denn wenn wir davon ausgehen können, dass wir immer nur eine Nachkommastelle hat, dann multipliziert man den Temperaturwert einfach mit zehn, dann werden einfach aus zwölf komma vier Grad einfach ein hundert vier und zwanzig und Integer Arithmetik Operationen sind zwei bis dreimal schneller auf klassischen cpus als Float Operation. Und wenn man dann somit mit Ganzzahlen arbeitet, brachte das in dieser Messung allein dieser Schritt vierzig Prozent Speed, also minus vierzig Prozent, also bis um vierzig Prozent schneller, nur weil man die Temperaturberechnung von Float auf Integer umgerechnet hat, mit dem man einfach mal zehn rechnet. Solche kleinen Tweaks finde ich unglaublich schön, weil sie sind super einfach zu verstehen, sie sind super schnell zu implementieren und sie sind einfach nicht kompliziert."
+        },
+        {
+            "start": 2310970,
+            "end": 2396330,
+            "speaker": "B",
+            "text": "Was du jetzt halt einfach weg verschwiegen hast, ist, wie komme ich denn von dem Stringwert zu dem Integer, weil das ist ja die eigentliche Schwierigkeit. Das Ganze liegt als String in der Datei. String parsen ist immer super teuer. Und auch da hat ein Teilnehmer, und zwar ein vietnamesischer Student, sein Handle ist Mary Kitty, hat eine Optimierung geschafft, dass er wirklich auf Bit Ebene diese ganze Umformung macht. Das heißt, er sieht diesen String wieder als Bit Reihenfolge an, macht dann eine sehr schlaue Bit Operation, eine Multiplikation eigentlich auf CPU Ebene und nimmt sich die Einzelteile so heraus von dieser Float Zahl, dass er die Hunderter Stelle, die Zehnerstelle und die einer Stelle jeweils einzeln betrachtet, da eine Multiplikation drauf macht. Lange Rede, kurzer Sinn, mit einer ganz simplen Operation von achtzehn Alu Operationen, also das sind so die Grundoperationen auf der CPU. Super wenig schafft das, diesen kompletten String umzuwandeln in einen Integer, indem man so die einzelnen Stellen einzeln behandelt und diese einzelnen Behandlungen werden aber über eine Multiplikation parallel auf der CPU quasi durchgeführt. Und so kann man das umformen, wenn man natürlich die Daten genau kennt. Also es geht natürlich nur mit diesem Muster, mit diesem Format und sonst, wenn man sich denkt, wie kompliziert sonst ist, irgendwie einen String zu parsen, das sind natürlich Welten, was man sich da einsparen kann."
+        },
+        {
+            "start": 2396570,
+            "end": 2483450,
+            "speaker": "A",
+            "text": "Der vietnamesische Student, der hat sich die ganze Challenge angesehen und hat relativ schnell festgestellt, nach den ganzen ersten Optimierungen, die wir gerade besprochen haben, hier mit mmap und dem Integer und all sowas, war halt irgendwann das Parsen der Temperatur der Bottleneck. Und mit diesen Alu Operationen, die hat er irgendwie, glaube ich, auf Twitter oder so veröffentlicht, da sind die ganzen Leuten irgendwie so die Kinnlatte runtergefallen, weil da niemand drauf kam. Und also wenn der Wolfgang von Alu Operationen spricht, hat das gerade so weggemacht. Das sind diese grundlegenden Rechen und Logikoperationen, also hier zum Beispiel Add Substract, Inkrement, Dekrement, sowas. Also all das, was so eine CPU halt super schnell kann. Und das wurde eigentlich zum Standardteil für jede Lösung. Und jetzt, da gibt es noch eine Seitenstory zu der ganzen Thematik. Und zwar hat der vietnamesische Student, die Lösung wurde veröffentlicht, dann hat der Vice President von Oracle, der da auch die Gewinnerlösungen gemacht hat, ihn offiziell ins Gewinnerteam aufgenommen und laut Gerüchten, ich konnte es nicht verifizieren, ich habe wirklich hart gesucht und fünf AI draufgeschmissen und so weiter und so fort. Alles etwas zeitlich etwas unscharf. Was aber auf jeden Fall der Fall jetzt ist. Dieser vietnamesische Student arbeitet inzwischen für Oracle. Also der Thomas, der VP bei Oracle und degral VM Projekt liebt, hat den Kollegen anscheinend durch diese Lösung ins Gral wie im geholt. Und das muss man natürlich schon sagen, ist schon eine harte Story, sofern diese denn stimmt. Ich konnte sie nicht ein hundert Prozent verifizieren."
+        },
+        {
+            "start": 2483450,
+            "end": 2494690,
+            "speaker": "B",
+            "text": "Ich bin jetzt schon ein bisschen enttäuscht, Andi, von deinem investigativen Journalismus Fähigkeiten. Du könntest ja dem Thomas einfach eine LinkedIn Message schreiben. War denn das so? Hast du denn das wirklich gemacht?"
+        },
+        {
+            "start": 2494770,
+            "end": 2522820,
+            "speaker": "A",
+            "text": "Ja, was jetzt gerade läuft? Und jetzt gucken wir mal, ob das funktioniert oder nicht. Der Thomas hat eine E Mail von mir bekommen, ob wir nicht mal ein Interview zum Thema Gravier machen, weil ich habe nämlich festgestellt, dass der Thomas in der Schweiz lebt und in Österreich studiert hat. Deswegen habe ich die Hoffnung, dass der Thomas auch Deutsch spricht und wir ihn mal zum Interview kriegen und dann werde ich ihm, glaube ich, diese Frage mal stellen, sofern das denn auch was wird. Ich möchte jetzt nichts versprechen, Talk ist cheap, wir haben noch nicht geliefert. Jetzt hast du mich aber dazu gedrängt."
+        },
+        {
+            "start": 2522820,
+            "end": 2748690,
+            "speaker": "B",
+            "text": "Naja, aber wenn jetzt vielleicht gerade eine Kollegin vom DOMUS zuhört, vielleicht könnt ihr ihn ja mal anstoßen. Was aber da Mary Kitty auf der CPU Ebene gemacht hat, ist natürlich ein ganz allgemeines Vorgehen und alle Lösungen arbeiten eigentlich sehr tief unten und man kann natürlich auf der CPU Ebene sehr viel optimieren, wenn man nur die richtigen Instructions gibt. Und ganz allgemein vielleicht D hast du vielleicht auch schon mal gehört, Andy, Single Instruction Multiple Data. Das heißt, du gibst eine Instruction an und kannst dann aber auf einem breiteren Feld auf mehrere Bytes, zwei und dreiig Bytes zum Beispiel, dieselbe Operation durchführen, dieselbe binäre Operation, dieselbe Addition. Das heißt, wenn man mehrere Daten schon in die Register reinlädt und dann die eine Instruction anwendet, dann kann die CPU das wesentlich performanter durchführen, parallel eigentlich durchführen und man hat natürlich einen extremen Speedup. Jetzt haben wir sehr viel ähnliche Daten und wenn man natürlich schafft mit SIMD Dinge durchzuführen, dann erhält man da dementsprechend einen Speedup. Jetzt gibt es auch noch SVAR nennt sich das, wird auch gerne so genannt, the poor SMAN SIMD. Das heißt, ich mache eine parallele Operation auf einem Register, zum Beispiel auf einem Bit Register, ich sehe aber die einzelnen Werte in diesem Register als einzelne Werte an und mach dann wieder eine mathematische Operation. Und genau das ist bei der Challenge genauso gemacht worden. Das heißt, ich lade mal eine Zeile oder einen Teil einer Zeile in ein Register und prüfe, wo ist, jetzt muss ich aufpassen, dass du mich auch verstehst, Andy, wie heißt es Semikolon? Bei uns heißt es Strichpunkt, das heißt in der CSV, ich muss ja wissen, wo ist der Trenner zwischen meiner Wetterstation und meiner Temperatur und die Kosten für einen String Vergleich, wo ist denn dieses Zeichen, die sind eigentlich sehr hoch. Wenn ich das jetzt aber über SWAR mach, also SIMD within Register heißt es ausgeschrieben, dann kann ich mit einem Bitmuster überprüfen, wo ist denn dieses Semikolon in meinem String, gibt es da irgendwo ein Semikolon? Weil das muss ich mal als erstes finden, damit ich überhaupt weiterarbeiten kann. Und wenn ihr das dann gefunden habt, dann gibt es auch noch mal so einen speziellen Instruktor Befehl für die CPU, das im Instructor Set mit dabei nennt sich tz cnt. Im Prinzip nichts anderes als zähl mir die Nullen nach einem Einser, nach dem binären Einser, da wo das Semikolon drin ist, dann bekomme ich die genaue Position. Und das sind super wenig ALU Operationen, das heißt, auch da kann ich wieder super viel Zeit rausholen und kann String Operationen auf mathematische ALU Grundoperationen runterbrechen, um möglichst schnell meinen Strichpunkt, mein Semikolon in dem String zu finden. Und dann kann ich weiterarbeiten mit den restlichen Optimierungen, die wir auch schon erwähnt haben. Aber auch da ist wieder natürlich wichtig, umso mehr ich Sequenziell durch meine Daten durchgehen kann, umso mehr kann ich natürlich auch die Hardware Optimierung ausnützen, weil am Ende kommt ja alles vom RAM oder von dieser RAM Disk, geht durch meinen L Cache, L Cache, L Cache, bis es dann irgendwo im Register landet und umso mehr da sequenziell durchwandern kann, also vier und sechzig Bit für vier und sechzig Bit können meine Cache Optimierungen dann auch auf der Hardware Ebene gemacht werden und die bekommen über Pipelining Effekt dann sehr sequenziell meine Daten rein. CPU kann immer die gleichen Instructions eigentlich wieder ausführen, das heißt ich bin überall optimiert und kann auf allen Systemebenen eigentlich meine Caching Funktionen verwenden und hol dann auch wieder viel Speed raus. Also zu klassische Patterns sind eigentlich immer möglichst wenig ändern in meinen Instructions und möglichst gleiche Patterns anwenden, weil dann kann die Hardware auch super optimieren."
+        },
+        {
+            "start": 2748690,
+            "end": 2927140,
+            "speaker": "A",
+            "text": "Du hast gerade schon Pipelining genannt und Vorausschaubarkeit von der CPU und da sind wir jetzt bei einem Stichwort Branchless Coding und das hat auch eine gewisse Relevanz bei dem ganzen Performance Contest gespielt, denn da geht es mal wieder um eine Performance Optimierung auf CPU Ebene. Jetzt mal ganz high level beschrieben, was Branchless Coding eigentlich ist. Du schreibst deinen Code so um, dass if Else Verzweigungen eigentlich durch arithmetische oder bitweise Operationen ersetzt werden können, weil dann muss die CPU eigentlich nicht mehr raten, welchen Weg sie denn als nächstes nehmen soll. Und so eine CPU, die hat eigentlich drei Ebenen. Auf der einen Seite die Pipeline, hat der Wolfgang gerade schon besprochen, dann gibt es einen Predictor, einen Branch Predictor und dann gibt es sogenannte Branch Misses, also Kosten eines Fehlers, falls man einen falschen Weg gegangen ist, nennen wir es mal so. Relativ simpel. Leute, die Doktorarbeiten über Branches Coding schreiben, würden mich jetzt glaube ich auseinandernehmen, weil ich die Terminologie nicht treffe, aber die meisten Leute von uns, würde ich mal sagen, sind nicht auf der Ebene unterwegs. Im Endeffekt kann man die ganze Sache jetzt so optimieren, man kann seinen Code so umschreiben, dass er relativ branchless ist. Also das bedeutet, der Branch Predictor versucht zu raten, welcher der richtige Weg ist, den die CPU als nächstes nehmen muss. Der versucht also die nächsten fünfzehn, fünfzehn, zwanzig Stufen für die CPU vorzuschreiben und dann in die Pipeline zu legen. Typischerweise liegt so ein Branch Predictor zu fünf und neunzig Prozent richtig. Wenn das der Fall ist, ist die Performance fast gratis, weil die CPU einfach nur die Pipeline abarbeiten kann und einfach durchballern kann. Ungefähr so wie ihr fahrt einen ER Porsche und ihr habt eine freie Autobahn. Wenn er jedoch falsch rät, dann habt ihr einen Branch Miss und dann muss die gesamte Pipeline geleert und neu befüllt werden. Und jetzt könnt ihr euch schon vorstellen, je nach Architektur, je nach fünfzehn, fünf und zwanzig Zyklen kann das relativ teuer werden. Und in dem Zeitspektrum, in dem wir jetzt hier gerade in dieser Performance Challenge unterwegs sind, ist dies natürlich teuer. Deswegen gab es eine Optimierung von Thomas, dem Gewinner. Der hat seinen Code so umgeschrieben, dass er möglichst wenig Branches hat und hat somit die Instruktionen in der Pipeline zwar erhöht, also die CPU hatte mehr Arbeit, er hat aber die Branche misses selbst von sechs Prozent auf null komma drei Prozent reduziert und ist somit deutlich schneller geworden und es hat somit auch den Gewinn gekriegt. Also Branchless Coding war seine letzte Optimierung. Der hat zehn Versionen geschrieben. Alle zehn Versionen sind in seinem GitHub Repository verfügbar. Die haben wir auch in den Shownotes verlinkt. Könnt ihr euch das mal ansehen, wie das funktioniert. Ganz interessante Thematik, auf welcher Ebene man da alles optimieren kann. Ob man das jetzt für Produktionscode machen muss oder nicht, weiß ich jetzt nicht. Also für meine Webapplikation wahrscheinlich nicht notwendig, weil HTTP alles springt. Also von daher, also ich glaube, das"
+        },
+        {
+            "start": 2927140,
+            "end": 2993250,
+            "speaker": "B",
+            "text": "ist grundsätzlich, wenn du Code schreibst und der Code extrem oft ausgeführt wird, dass das durchaus Sinn macht. Und dann solltest du eben in deinem if Statement vielleicht nicht irgendwas drin haben, was einmal so ist, einmal so, also so ein Check auf gerade und ungerade und dann hast du ganz viel darunter mit dem Check gerade ungerade, wenn du den irgendwie weg optimieren könntest, dass das halt eher so ein Fall ist. Wenn ein Fehler Fall da ist, dann geh in den else Zweig und sonst ist der klassische if Zweig immer der richtige, weil dann hast du wieder so ein Pattern, was immer angewandt wird, was immer gleich ist. Und alles, was gleich ist, ist für die CPU und für das ganze System einfach immer von Vorteil. Und darum ist es auch wichtig, dass du, wenn du durch ein Array durchläufst, halt so durchläufst, wie das im Memory liegt und nicht irgendwie random springst weil sonst bringst du alles durcheinander und dann fallen überall alle Caches raus. Du hast wieder womöglich irgendwo andere Branches, Branch Misses und das macht dann einfach alles teuer. Und wenn du auf so einer Ebene bist, dass du da optimieren musst, dann macht sowas natürlich definitiv Sinn, das mal mitzudenken und vielleicht auch bauen ifs wegzulassen. Das ist ja auch möglich. Vielleicht kannst du irgendwas mit einem Bit Shift zum Beispiel machen, anstatt mit einem if."
+        },
+        {
+            "start": 2993330,
+            "end": 3131580,
+            "speaker": "A",
+            "text": "Jetzt haben wir schon über ein paar Optimierungen gesprochen, relativ einfache, wie zum Beispiel lokale Hashmaps, Custom Hashmaps, Integer statt float und so weiter. Ein paar kompliziertere Branchless Coding, SIMD, dem Register, allem Pipapo, irgendwelche Bit Instruktionen, Alu Operationen. Also da kann einem schon mal der Kopf rauchen. Aber auch für die Infrastruktur Leute ist was dabei. Und zwar kann man eine ganz einfache Optimierung machen und zwar acht von zehn Lösungen. In den Top Ten haben die es auch gemacht. Die haben einfach die Standard JVM ausgetauscht und zwar haben die einfach mal die Graal VM genutzt. Und wer jetzt nicht aus dem Java Umfeld kommt, stellt sich dafür die Frage, was ist denn jetzt schon wieder die Gral VM? Gar kein Problem, wir haben euch gecovert. Und zwar die Graal VM ist auch von Oracle entwickelt, ist eine alternative Laufzeitumgebung für Java bzw. In JDK, ist voll kompatibel zum Java Standard, hat aber ein paar andere Elemente, die besonders für diesen Performance Contest sehr relevant sind. Auf der einen Seite macht die Graal VM sogenanntes Ahead of Time Kompilierung. Das bedeutet, die Graal VM erzeugt eine ausführbare Datei und braucht bei der Ausführung keine JVM zur Laufzeit mehr. Also es wird nicht so wie die JVM auf der virtuellen Maschine ausgeführt, sondern die gralvm kompiliert ahead of time den ganzen Code in eine ausführbare Datei. Dann im Gegensatz oder im direkten Vergleich zur JVM hat die graalvm einen extrem schnellen Start. Das ist natürlich für Performance Contest, da wo es irgendwie um teilweise Millisekunden geht, schon hart relevant. Die zeichnet sich wohl auch durch geringen Speicherverbrauch aus, zumindest in der Basisversion. Und was auch ganz interessant ist, die kann auch mit mehreren Sprachen umgehen. Das bedeutet, die gralvm, wenn man da mal ein, zwei Extensions reinpackt, Truffle Framework heißt das jetzt in diesem Fall, kann man da auch JavaScript, Python und Ruby und C und C in derselben Runtime ausführen, also Interoperabilität zwischen Sprachen ganz interessant. Das ist globale Bild, was eigentlich die Graal VM ist. Ich habe gesagt, acht von zehn Lösungen in der Top zehn nutzen die graalvm. Ich möchte aber auch positiv hervorheben, dass die schnellste JVM Implementierung auf Platz vier liegt. Also das geht alles auch mit der JVM."
+        },
+        {
+            "start": 3131820,
+            "end": 3245480,
+            "speaker": "B",
+            "text": "Eine andere schöne Optimierung, oder ja, also ich weiß nicht, ob man es Optimierung nennen kann, ich würde es eher ein Hack nennen, aber auch das sei ja bei einer Challenge durchaus erlaubt, ist, dass dieses Memory Mapping, was wir zuerst erwähnt haben, dass du das File in den Memory Maps, das musst du ja dann auch irgendwann aufräumen. Das heißt, wenn du das wieder schließt, dann muss das wieder alles gecheckt werden, das braucht auch wieder Zeit, es muss alles ordnungsgemäß abgeschlossen werden und es braucht halt bei dreizehn GB ein hundert Millisekunden. Jetzt ist ja das eigentlich unnötig und will man ja eigentlich gar nicht machen. Was sich jetzt paar Schlaue ausgedacht haben ist, wir können das Ganze ja in den Sub Prozess auslagern und wenn wir fertig sind mit unserer Berechnung, dann lassen wir einfach den Parent terminieren, also den Parent Prozess, den eigentlichen Berechnungsprozess, weil wir haben ja das Ergebnis schon ausgegeben, dann terminieren wir das Ganze und dann läuft eigentlich dieser Kind Prozess, den wir da weggespawnt haben, der läuft im Hintergrund weiter und wird dann vom Betriebssystem als Zombie Prozess irgendwie verarbeitet und dann gekillt bzw. Es wird halt alles geschlossen und verarbeitet und im Hintergrund passiert das alles jetzt, indem man aber im Parent killt. Frühzeitig ist man eigentlich noch gar nicht fertig mit dieser ganzen Arbeit, aber nachdem die im Zombie Prozess dann vom Betriebssystem im Hintergrund erledigt wird, ist man offiziell schon beendet und hat das Ergebnis schon ausgegeben. Und die offiziellen Regeln erlauben das auch, weil die Zeit wird nur gestoppt, bis dieses Endergebnis ausgegeben ist. Wenn da im Hintergrund noch irgendwas passiert auf Betriebssystemebene, dann ist es völlig okay und da holst du wieder ein hundert Millisekunden raus, was ja bei einerinhalb Sekunden Laufzeit schon einiges an Zeit sind, also sind sieben Prozent in dem Fall. Und wenn du sieben Prozent rausholen kannst, ist es natürlich super. Also das ist eher ein Hack, weil die eigentliche Berechnung wird jetzt nicht schneller dadurch, aber zumindest die Zeitnehmung wird positiv beeinflusst. Nennen wir es mal so habe ich einen sehr netten Hack gefunden."
+        },
+        {
+            "start": 3245560,
+            "end": 3405490,
+            "speaker": "A",
+            "text": "Win is win. Also ich würde sagen, kennst du die Regeln, kennst du die Daten, kannst du optimieren. Und das finde ich immer sehr, sehr lustig und deswegen haben wir auch eine ganze Menge dieser Optimierung mal durchgesprochen, weil da ist schon sehr, sehr viel Kreativität bei. Jetzt ist die ganze Challenge aber auf Java ausgelegt worden und das Internet hat sich natürlich entnehmen lassen, einfach mal andere Sprachen auch zu testen. Es gab nie eine offizielle Challenge zu Sprachen wie C, Go, PHP oder ähnliches, aber es gibt im GitHub Repository der Challenge in den Diskussionen ein sogenanntes Show and Tell und da könnt ihr euch etliche Lösungen zu anderen Sprachen auch ansehen. Zum Die schnellste Version, die recorded wurde, wurde in C geschrieben, die knapp über einer halben Sekunde liegt bei acht Cores, also auch noch mal dreimal so schnell wie die schnellste Java Lösung. Und was es eigentlich ist, es ist eigentlich C mit einer ganzen Menge CPU Instruktionen, sogar mit so einem Befehl Erweiterungssatz, der nur auf Intel cpus läuft, weil da wurde dann direkt drauf optimiert, okay, wir wissen ja auch auf welcher CPU die Tests durchgeführt wurden, deswegen nehmen wir direkt so einen Erweiterungssatz für die Befehle zu. Also auch schon ziemlich krude, aber mal recht interessant. Dann habe ich mir mal als alter Go Fanboy auch die Go Lösung mal angesehen und wenn man sich die mal so ansieht, dann hat die eigentlich eine ganze Menge derselben Optimierung drin. Erst relativ naiv implementiert, danach wurden Pointer verwendet, danach wurde kein Float Parsing mehr genutzt, sondern es wurden Custom Temperatur Parser implementiert, danach hat man eine eigene Hashtable gebaut, anstatt die aus der standardlip zu nehmen und danach hat man Parallelisierung drauf gesetzt. Also alles ähnliche Optimierungen wie bei Java auch. Die schnellste native PHP Lösung fand ich auch ganz lustig, die liegt bei fünfzehn Sekunden, also schon noch ein bisschen was länger, aber es gab auch eine kreative Lösung, wie man PHP noch schneller machen kann. Die wollte ich jetzt hier auch nicht unerwähnt lassen. Und zwar hat jemand, das wird glaube ich nicht mehr ins Regelwerk passen, aber einfach nur der Kreativität halber, die Original PHP Standard Lib Lösung wäre fünfzehn Sekunden. Dann hat noch jemand das FFI Interface von PHP genutzt, das ist eigentlich so wie JNI, dass du Foreign Functions callen kannst. Und zwar hat irgendjemand eine PHP Lösung geschrieben, die dann untendrunter eine andere Rust Lösung einfach called. Kann man machen. Dadurch kriegt man PHP auf eins komma neun Sekunden runter. Also eigentlich wird alles in Rust berechnet, nur die Ausgabe wird über PHP gemacht. Jetzt können wir darüber streiten und philosophieren, ob das da eine PHP Lösung ist oder eine Rust Lösung. So Wolfgang, deine Meinung? Ist das PHP oder ist das eine Rust Lösung?"
+        },
+        {
+            "start": 3405490,
+            "end": 3437620,
+            "speaker": "B",
+            "text": "Ja, eigentlich hätte ich jetzt gesagt, ist schon eine Rust Lösung, aber dann habe ich mir überlegt, eigentlich diese ganzen Sprachen Python, PHP, die basieren alle auf irgendwelche Libs, die darunter liegen. Also auch Java basiert natürlich auf Libs, die darunter liegen. MMAP ist auch vom Betriebssystem. Also es verschwimmt da eigentlich eh schon ziemlich. Also nur zu sagen, wenn man eine interne Lib verwendet oder eine Lib, die darunter sitzt, schwierig zu sagen. Aber am Ende ist dann die Was macht die Lip immer und was verwendest du ganz unten? Was du darüber stülpst, ist ja dann eigentlich eh egal."
+        },
+        {
+            "start": 3437700,
+            "end": 3507000,
+            "speaker": "A",
+            "text": "Und jetzt kommt noch ein bisschen was fürs Grinsen. Es hat sich jemand die Arbeit gemacht und hat die One Billion Road Challenge in AWK gelöst. Die AWK Lösung hat ganze elf Zeilen, was auch sehr beachtlich ist und braucht circa sechs Minuten. Als ich mir den Code angesehen habe, ich gedacht ich kannte AWK. Nein, ich kannte nicht AWK. Verlinkt man natürlich auch in den Shownotes. Und dann für dich, Wolfgang speziell habe ich auch noch zwei One Billion Road Challenges in SQL rausgesucht, und zwar einmal mit Clickhouse und einmal mit DACDB. Da nicht überraschend, muss man sagen, hat der Datenbank Import schon sieben und zwanzig bis dreiig Sekunden gedauert und dann die Query ging so auf sechs Sekunden, um die richtigen Daten zu machen, weil die ganze Berechnung halt in SQL gemacht wurde. Aber eine Billion oder eine Milliarde Datenbankzeilen nach duckdb oder nach Clickhouse laden dauert halt schon. Obwohl ich muss sagen, die Clickhouse Lösung hat sogar noch nicht mal die Daten in die Clickhouse Datenbank geladen, weil das hätte länger gedauert. Die Clickhouse Lösung hat einfach nur eine Query gemacht, die dann direkt auf das CSV über das Filesystem zugreift. Und das ist natürlich auch eine interessante Geschichte. Das bedeutet, da wurde nur wirklich die Query Engine genutzt und die Daten wurden gar nicht in die Storage Engine von Clickhouse geladen."
+        },
+        {
+            "start": 3507080,
+            "end": 3513600,
+            "speaker": "B",
+            "text": "Mir kommt es ja nur schweren Herzens jetzt über meine Lippen, aber ich habe eine Implementierung in Oracle gefunden, die habe"
+        },
+        {
+            "start": 3513600,
+            "end": 3515000,
+            "speaker": "A",
+            "text": "ich auch gefunden, die habe ich rausgelassen"
+        },
+        {
+            "start": 3515080,
+            "end": 3516680,
+            "speaker": "B",
+            "text": "und die braucht nur acht Sekunden."
+        },
+        {
+            "start": 3517080,
+            "end": 3521760,
+            "speaker": "A",
+            "text": "Ja, ich meine aber gelesen zu haben, dass die den Import rausgerechnet haben, die"
+        },
+        {
+            "start": 3521760,
+            "end": 3560810,
+            "speaker": "B",
+            "text": "lesen direkt in CSV ein, das ist eine externe Tabelle. Keine Ahnung, ob die jetzt im Vorhinein schon irgendwie in Memory unter Umständen gemappt wird, das weiß ich jetzt nicht. Aber scheinbar ist Oracle in manchen Bereichen zumindest recht schnell, weil es gibt glaube ich auch noch eine Postgres Variante, die irgendwie acht Minuten braucht oder so. Aber die Dinger sind halt einfach nicht fürs Parsing gedacht und die machen halt dann wirklich ganz klassisches String Parsing und da merkt man halt dann, dass das einfach sehr, sehr teuer ist, wenn du halt diese Zeichen für Zeichen wirklich String mäßig beachtest und nicht dieses Format, was eigentlich dahinter steckt, dann hast du einfach einen schweren Stand mit solchen Techniken."
+        },
+        {
+            "start": 3560810,
+            "end": 3619410,
+            "speaker": "A",
+            "text": "Und jetzt höre ich manche Leute, die den Podcast schon hören, Jungs, schmeiß doch mal eine GPU drauf, das ist alles viel schneller. Ja, hat der Jakob gemacht. Der Jakob ist sogar Senior Software Engineer bei Nvidia, der hat sich die One Billion Road Challenge mal angenommen und er hat mit DUSK, das ist eine Python Bibliothek für paralleles und verteiltes Rechnen und mit QDF, was eine Python GPU Data Frame Bibliothek ist, wo er beides auch Maintainer von ist, hat die ganze Sache mal auf echt heftigen Grafikkarten auf zwei RTX acht tausend ausgeführt und siehe da, es hat viereinhalb Sekunden gedauert. Also da sieht man auch, dass mit Peak Hardware und etwas Abstraktionsoverhead doch langsamer wird als klassisches Java auf einen auf acht CPU. Aber da wurde auch gesagt, okay, die ganze Challenge ist einfach nicht für gpus, für sogenannte FPGA Field Programmable Gate Arrays geeignet, weil die Berechnung halt sehr trivial ist und die Read Patterns halt sehr"
+        },
+        {
+            "start": 3619410,
+            "end": 3664420,
+            "speaker": "B",
+            "text": "sequenziell sind und du hast dann auch noch diese Lookup Hashmaps, die du irgendwie umformen musst. Das geht ja auch nicht. Alles, was random ist, ist mit gpus natürlich sehr böse. Zusätzlich glaube ich jetzt, dass es auch ein Problem ist, wie du mit Strings umgehst und wenn du das davor umrechnest wieder in Integerwerte, hast du wieder dasselbe Problem. Also ist die, könntest du solche Lösungen, wie sie in den Challenge Lösungen vorgekommen sind, wo du dann das ganze binär betrachtest oder so, vielleicht könntest du es dann auf gpus umformen, Vielleicht würde es dann auch schneller werden, aber es ist halt einfach am Ende gar nicht so ein großes Datenset für eine GPU, muss man auch sagen. Wenn man das jetzt als Integer sieht, sind es schon keine dreizehn Gigabyte mehr und viele Strings. Da ist GPU auch nicht gut. Keine mathematischen Berechnungen."
+        },
+        {
+            "start": 3664580,
+            "end": 3673630,
+            "speaker": "A",
+            "text": "Genau, es ist keine klassische Matrix oder Vektorberechnung, Es ist halt Min, Max und den Mittelwert. Also von daher aber auch mal interessant."
+        },
+        {
+            "start": 3673790,
+            "end": 3676910,
+            "speaker": "B",
+            "text": "Aber hätte mir auch gedacht, dass es schneller ist als vier Sekunden, ehrlich gesagt."
+        },
+        {
+            "start": 3677310,
+            "end": 3688110,
+            "speaker": "A",
+            "text": "Ja, wahrscheinlich. Das kriegst du vielleicht wahrscheinlich auch noch ein bisschen runter. Ist ja auch Python noch dabei und pipapo. Aber ich glaube jetzt auch nicht, dass der Senior Software Engineer von Nvidia so viel Zeit reingesteckt hat."
+        },
+        {
+            "start": 3688430,
+            "end": 3704580,
+            "speaker": "B",
+            "text": "Ja, wobei er kennt es dafür sehr gut und kennt alle Basistricks zumindest. Also wenn er selber Maintainer ist, würde ich mir schon vorstellen, dass er ganz guten Ansatz wählen könnte. Dementsprechend, aber ist schon interessant für manche Challenges ist halt GPU auch nicht das Wahre."
+        },
+        {
+            "start": 3704580,
+            "end": 3793980,
+            "speaker": "A",
+            "text": "Naja, aber an so einer Performance Challenge, besonders wenn es um Performance geht, da fühlen sich manche Leute ja immer geknickt. Kritikpunkte hatten wir schon während der Episode ein bisschen angesprochen, zwar das Dataset Overfitting, das bedeutet, dass du deine Algorithmen ganz genau auf das Datenset, auf dem getestet wird, optimierst. Dann hatten wir so ein bisschen über das Cache Problem gesprochen, dass die Daten auf einer RAM Disk liegen und somit manche Optimierungen, die auch das Lesen von der Festplatte sind, halt nicht relevant sind. Es gab aber noch eine dritte Kritik, und zwar zur Architektur der CPU. Und zwar wurde eine Zen CPU genutzt und die Zen CPU ist von der zenbleed Lücke betroffen. Das ist eine CPU Lücke aus zwei tausend drei und zwanzig die es möglich macht, sendible Daten abzufangen. Und diese Lücke wurde auf der CPU mit einem Microcode Update gepatcht. Und dieser Microcode Update verändert die Performance messbar und die Teilnehmer, die das dann auf einer gepatchten CPU ausgeführt haben, haben fünf bis zehn Prozent Abweichungen von den jeweiligen Lösungen gefunden. Und wie relevant das jetzt ist, weiß ich nicht, weil da ging es jetzt nicht um viel Geld. Ich glaube, Gunnar hat am Ende ein T Shirt und zwei Tassen rausgehauen oder so. Also da wurde jetzt keine wirklichen Preise vergeben. Von daher würde ich sagen, liebes Internet, finde ich mal wieder spannend, wie tief eigentlich auch solche Diskussionen und Kritikpunkte gehen können."
+        },
+        {
+            "start": 3793980,
+            "end": 3801620,
+            "speaker": "B",
+            "text": "Wenn du jetzt zurückblickst auf diese ganzen Optimierungen und was du da jetzt alles gelesen hast, was bringt dir das im Alltag?"
+        },
+        {
+            "start": 3801620,
+            "end": 3914800,
+            "speaker": "A",
+            "text": "Nummer eins Ich habe hoffentlich mal den Mythos zerstört, dass Java langsam ist, obwohl ich kein JVM und Java Fan bin. Ich oute mich aber nach solchen Zahlen, kann man wohl sagen, die JVM ist kein Performance Verlierer mehr. Ja, sie ist zwei bis drei Faktoren langsamer als handgeschriebenes C. OK, ist auch schwer zu übertreffen, aber der generelle Mythos, dass Java langsam ist, wurde, glaube ich, erstmal widerlegt und ich glaube auch die letzten haben es hoffentlich jetzt verstanden. Ich sage aber auch, dass der ganze Code, den wir da besprochen haben, vielleicht kein realer Produktionscode ist, denn ein Großteil der Leistungssteigerung ist darauf zurückzuführen, dass halt irgendwie alle Best Practices über Bord geworfen wurden, also irgendwelche Validierungen, Boundchecks, Hashtable, Resizing und so weiter und so fort, würde ich so nicht schippen. Und ein Teilnehmer hat auch in einem GitHub Issue Der Code der schnellsten Beiträge unterscheidet sich stark von dem, was meine Kollegen und ich in unserem täglichen Arbeit schreiben. Da würde ich Das stimmt, das stimmt. Also es hat eigentlich hier nichts mit Produktionscode zu tun, sondern ist eher eigentlich so eine schöne Spielwiese. Aber und jetzt kommen wir zum positiven Punkt dieser ganzen Thematik, Gute Performance und gute Lesbarkeit ist gleichzeitig machbar, denn viele Sachen, die wir besprochen haben, sind eigentlich Basisfehler und einfach nur gute Arbeit. Diese Bit Operation mit diesem Temperatur Parser von diesem vietnamesischen Studenten Wahnsinn, das ist einfach nur gute Arbeit und die ganzen Performance Gewinne, da steckt keine Magie drin, sondern teilweise würde ich sagen, auch die Vermeidung von Anfängerfehlern. Also gut, die Bit Instruktion mit einer Operation von den vietnamesischen Studenten würde ich jetzt nicht als Anfängerfehler bezeichnen, aber dass man jetzt zum Beispiel die Float mal zehn multipliziert, damit man einen ganzen Integer hat, das ist für jeden einfach erlernbar, würde ich mal sagen, oder?"
+        },
+        {
+            "start": 3914960,
+            "end": 3985090,
+            "speaker": "B",
+            "text": "Und du sparst dir auch die ganzen Rundungsfehler, die du hast. Also was du bei den Currencies, bei den Währungen ja üblicherweise genauso machst, dass du Integerwerte hast, das sind dann wirklich Fehler, die man macht zu deinem Argument schön lesbar. Ja, das ist die Frage. Und da bin ich auch eher auf der Seite Wenn mein Code zwanzig Sekunden dauert, anstatt drei Sekunden, wenn der beim Import einmal am Tag ausgeführt wird, dann bevorzuge ich die Lesbarkeit anstatt irgendwas Codiertes auf Bit Operationsebene, was dann nur fünfzig Prozent von meinem Team verstehen. Also ja, ich glaube, da ist Lesbarkeit dann schon auch wichtiger als die eigentliche Performance. Aber es kommt immer darauf an, wo man in was für einem Bereich man wirklich arbeitet. Und vielleicht können wir da ja mal eine Episode machen mit jemand, der wirklich performance orientiert ganz unten arbeitet. Gut, der würde wahrscheinlich sagen, unser Code ist auch schön, das müssten wir dann wahrscheinlich beurteilen. Aber würde mich mal interessieren, so Leute, die wirklich, keine Ahnung, an Datenbank Indexstrukturen, irgendwas memory optimierte Indexstrukturen wirklich arbeiten, schaut dieser Code noch schön aus oder ist er einfach auch unlesbar und du musst da irgendwie zwei Jahre dort arbeiten, damit du nur annähernd irgendwas verstehst."
+        },
+        {
+            "start": 3985090,
+            "end": 4081980,
+            "speaker": "A",
+            "text": "Ja, ich kann jetzt auch sagen, es gab auch eine Submission und zwar von einer Person, Alexej, Nachname kann ich nicht aussprechen, er gilt in der Open JDK Welt wohl als Performance Guru. Er hat eine Submission hingelegt, die allein ein hundert neunzig Zeilen Kommentare hat, wo dann erklärt wird, warum er alles macht. Also das ist vielleicht auch ein Gegenbeispiel zur guten Lesbarkeit, aber es ist mal interessant, das zu lesen, weil du kannst eine ganze Menge, Menge lernen. Was aber auch Eilearning ist, ist, dass eine gute Community Challenge, eine schön organisierte und gut designte Community Challenge eine klassische Konferenz in puncto Bildung auf jeden Fall schlagen kann. Denn so viel Wissen, wie in diesem GitHub Repository von dieser One Billion Road Challenge steckt, ich glaube, das kriegst du nicht auf einer Konferenzreihe mit. Also da, wer wirklich mal so Nerd Spielplatz haben möchte, der geht mal da rein, liest sich ein bisschen Quellcode durch, ein bisschen die Diskussion. Das ist schon spannend. Es gab ein paar Leute, die haben versucht, die ganze Sache auf andere Sprachen zu übertragen. Es gab auch eine GitHub Organisation, One Billion Road Challenge, aber die wurde inzwischen archiviert und das ist nie wirklich viral gegangen. Sie haben es versucht, dann auch in JavaScript zu machen, wie du initial das auch in typescript machen wolltest oder auf Node JS hast du gesagt, und ist aber nie wirklich viral gegangen. Und jemand hat einen Nachfolger gemacht, eine sogenannte One Trillion Road Challenge. Das ist ein zwei Komma fünf großes Terabit Paket File auf S ist auch nie wirklich viral gegangen. Also diese ganzen Spin offs, nette Idee, aber ich glaube, der Hype ist jetzt vorbei."
+        },
+        {
+            "start": 4082140,
+            "end": 4129780,
+            "speaker": "B",
+            "text": "Finde ich aber eigentlich schade, wäre eigentlich schon cool zu sehen. Es gibt ja auch andere Challenges, auch so im universitären Umfeld oder so im hybriden Umfeld, wo es bei einer Konferenz jedes Jahr irgendwelche Challenges gibt. Ich kenne es nur aus dem Recommender Bereich. Bei der REX gibt es immer eine Challenge, haben wir damals mit Trivago auch mitgemacht und ein Datenset zur Verfügung gestellt. Vielleicht sind da die Probleme komplexer, dass es interessant bleibt, dass es einfach ein zu einfaches Problem ist. Aber grundsätzlich solche Challenges finde ich schon super spannend und vielleicht auch im kleinen Bereich, wie erwähnt habe, so mit Studierenden oder mal selber was ausprobieren. Mir juckt es eigentlich auch schon unter den Fingernägeln, irgendwie das auszuprobieren, ob ich mit SQL schneller sein kann als die anderen, die das mit SQL gemacht haben oder JavaScript würde ich auch einmal reizen, einfach um zu sehen, wie schnell das eigentlich funktioniert oder nicht funktioniert. Eben."
+        },
+        {
+            "start": 4129780,
+            "end": 4229620,
+            "speaker": "A",
+            "text": "Ja, eine Kritik muss man schon sagen. Also diese ganzen Zeiten, die wir hier während der Episode genannt haben, für Go, für C, für SQL und so weiter, die sind natürlich jetzt nicht vergleichbar mit den originalen Werten, weil das natürlich nicht die gleiche Testausführung war. Da hat jetzt irgendjemand diese One Billion Road Challenge genommen, hat die in SQL gemacht, hat die auf irgendeine Cloud Node gepackt und hat dann diese Zeiten gepostet. Also das sind jetzt nicht diese Zeiten, die von Gunnar, dem Organisator selbst ausgeführt wurden. Der hat das nur für Java gemacht und nur in diesem Zeitraum. Und alle anderen Zeiten danach sind halt, ich sag mal, selbst reported und selbst ausgeführt. Da hast du natürlich eine große Varianz von eigentlichen Hardware Chips und allem drum und dran, was natürlich die ganze Sache komplizierter macht. Wenn du jetzt natürlich jetzt diese Challenge machen würdest, replizieren würdest du bei deinen Studenten, dann würdest du natürlich isoliert diese Tests ausführen, dann wären die Zeiten wieder vergleichbar. Könnte natürlich auch eine schöne Übung für einen kleinen Hackathon sein oder vielleicht für einen Freitagabend, Freitagabend, für einen Freitagnachmittag oder vielleicht mal für den ganzen Freitag. Wenn ihr mal mit eurem Team eine lustige Sache machen wollt, warum setzt ihr euch nicht einfach mal einen Freitag in den Meetingraum, fragt euren Chef, ob der ein kleines Frühstück springen lässt, geht jeder zum Bäcker, irgendwie ein bisschen Ei und so weiter holen und dann bereitet einer eine Challenge vor und baut das einfach mal nach. Und dann Freitag vierzehn uhr, macht eine Präsentation, jeder präsentiert seine Lösung, wie oder was er gemacht hat. Und ich glaube, das ist eine ganz spannende Thematik, jetzt, wo AI im Spiel ist, weil jeder hat die gleichen Tools und dann kommt es auf die bessere Recherche an und allem drum und dran. Ich glaube, das könnte relativ lustig werden. Guck mal, jetzt habe ich doch AI erwähnt, obwohl ich es gar nicht geplant hatte, aber hey, du hast mich drauf gebracht."
+        },
+        {
+            "start": 4229620,
+            "end": 4267650,
+            "speaker": "B",
+            "text": "Ja, wäre wahrscheinlich spannend, was die Eideras macht, wenn man den ganzen Input mal eine AI füttert und sagt, jetzt mach es noch schneller. Wäre interessant, was dabei rauskommen würde, wäre vielleicht eine eigene Challenge. Auf jeden Fall. Lasst uns mal wissen, was ihr dazu denkt. Vor allem alle Java Hater würde mich natürlich am meisten interessieren, was ihr dazu sagt. Oder wenn ihr andere Verbesserungsvorschläge habt, wie man es noch schneller machen kann, schaut mal bei uns in der Discord Community vorbei Oder wenn ihr euch auch wundert, so wie ich, warum da Andy zu einem Bäcker geht, um ein Ei zu kaufen bei uns. Es gibt, gibt es da Brot, aber gut, was weiß ich schon in Österreich ist Andi Sache, kommt vorbei bei uns in der Discord. Wir freuen uns immer über ein bisschen Diskussion."
+        },
+        {
+            "start": 4267650,
+            "end": 4316310,
+            "speaker": "A",
+            "text": "Wie gesagt, wer ein bisschen rumnerden möchte, schaut mal in die Show Note Links, da findet ihr auch die AWK Lösung in elf Zeilen und die ganzen Java Implementierungen und etliche Blogposts, die die Top Gewinner einfach mal auseinandergenommen haben. Teilweise echt hart zu lesen, aber super lehrreich, kann ich nur empfehlen, falls ihr heute Abend noch nicht kopftechnisch ausgelastet seid, macht das mal. Wie immer gilt für Performance Freaks, kommt man in den Discord, korrigiert mich mal oder auch den Wolfgang, falls wir was Falsches gesagt haben. Und jetzt würde mich mal interessieren, was war die beste Performance Optimierung, die ihr gemacht habt? Lasst es uns mal wissen. Ich glaube, das wird sehr, sehr viele Leute in der Discord Community interessieren. Da haben wir ungefähr fünf hundert Leute inzwischen drin und bei sowas sind sehr viele immer Start. Ich freue mich auf eure Submissions. Bis bald, bye bye."
+        },
+        {
+            "start": 4316310,
+            "end": 4316710,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
