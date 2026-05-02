@@ -32,9 +32,7 @@ describe('cutText', () => {
 
 describe('cleanDescription', () => {
 	it('removes text from marker onwards', () => {
-		expect(cleanDescription('Good content. Unsere aktuellen Werbepartner: Sponsor1')).toBe(
-			'Good content.'
-		);
+		expect(cleanDescription('Good content. Unsere aktuellen Werbepartner: Sponsor1')).toBe('Good content.');
 	});
 
 	it('returns unchanged if no marker present', () => {

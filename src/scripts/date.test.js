@@ -1,11 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import {
-	millisecondsToHumanTimestamp,
-	humanTimestampToSecondsTo,
-	monthSuffixedDay,
-	formatDateWithWeekdayAndOrdinal,
-	year,
-} from './date.js';
+import { millisecondsToHumanTimestamp, humanTimestampToSecondsTo, monthSuffixedDay, formatDateWithWeekdayAndOrdinal, year } from './date.js';
 
 describe('millisecondsToHumanTimestamp', () => {
 	it.each([
@@ -60,37 +54,27 @@ describe('monthSuffixedDay', () => {
 describe('formatDateWithWeekdayAndOrdinal', () => {
 	it('formats a date with weekday and ordinal suffix', () => {
 		// 2026-02-26 is a Thursday
-		expect(formatDateWithWeekdayAndOrdinal('2026-02-26', 'en-US')).toBe(
-			'Thursday, 26th of February 2026'
-		);
+		expect(formatDateWithWeekdayAndOrdinal('2026-02-26', 'en-US')).toBe('Thursday, 26th of February 2026');
 	});
 
 	it('handles 1st suffix', () => {
 		// 2026-03-01 is a Sunday
-		expect(formatDateWithWeekdayAndOrdinal('2026-03-01', 'en-US')).toBe(
-			'Sunday, 1st of March 2026'
-		);
+		expect(formatDateWithWeekdayAndOrdinal('2026-03-01', 'en-US')).toBe('Sunday, 1st of March 2026');
 	});
 
 	it('handles 2nd suffix', () => {
 		// 2026-03-02 is a Monday
-		expect(formatDateWithWeekdayAndOrdinal('2026-03-02', 'en-US')).toBe(
-			'Monday, 2nd of March 2026'
-		);
+		expect(formatDateWithWeekdayAndOrdinal('2026-03-02', 'en-US')).toBe('Monday, 2nd of March 2026');
 	});
 
 	it('handles 3rd suffix', () => {
 		// 2026-03-03 is a Tuesday
-		expect(formatDateWithWeekdayAndOrdinal('2026-03-03', 'en-US')).toBe(
-			'Tuesday, 3rd of March 2026'
-		);
+		expect(formatDateWithWeekdayAndOrdinal('2026-03-03', 'en-US')).toBe('Tuesday, 3rd of March 2026');
 	});
 
 	it('handles 11th (not 11st)', () => {
 		// 2026-03-11 is a Wednesday
-		expect(formatDateWithWeekdayAndOrdinal('2026-03-11', 'en-US')).toBe(
-			'Wednesday, 11th of March 2026'
-		);
+		expect(formatDateWithWeekdayAndOrdinal('2026-03-11', 'en-US')).toBe('Wednesday, 11th of March 2026');
 	});
 });
 
