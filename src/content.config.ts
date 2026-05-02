@@ -173,6 +173,13 @@ const awesomeSoftwareEngineeringGamesCollection = defineCollection({
 				categories: z.array(z.string()).optional(),
 				genres: z.array(z.string()),
 			}),
+			license: z
+				.object({
+					name: z.string(),
+					spdx_id: z.string(),
+					url: z.string().url(),
+				})
+				.optional(),
 		}),
 });
 

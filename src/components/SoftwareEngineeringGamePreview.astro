@@ -53,6 +53,22 @@ const nameId = URLify(game.data.name);
 						{game.data.platforms.mac && (<img class="h-7 inline" src="/images/brands/apple-os.svg" alt={`${game.data.name} auf Mac`} title={`${game.data.name} auf Mac`} />)}
 						{game.data.platforms.linux && (<img class="h-7 inline" src="/images/brands/linux.svg" alt={`${game.data.name} auf Linux`} title={`${game.data.name} auf Linux`} />)}
 					</li>
+					{
+						game.data.license && (
+							<li class="pt-2">
+								Lizenz:{' '}
+								<a
+									class="hover:underline hover:text-yellow-500"
+									href={game.data.license.url}
+									title={`Lizenz von ${game.data.name}: ${game.data.license.name}`}
+									rel="license noopener"
+									target="_blank"
+								>
+									{game.data.license.spdx_id}
+								</a>
+							</li>
+						)
+					}
 				</ul>
 				
 				<div class="flex flex-wrap">
