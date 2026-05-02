@@ -104,9 +104,13 @@ const nameId = URLify(podcast.data.name);
 				}
 
 				<h2 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">
-					<a href={podcast.data.website} class="hover:underline hover:text-yellow-500" title={`Website von ${podcast.data.name}`}>
-						{podcast.data.name}
-					</a>
+					{podcast.data.website ? (
+						<a href={podcast.data.website} class="hover:underline hover:text-yellow-500" title={`Website von ${podcast.data.name}`}>
+							{podcast.data.name}
+						</a>
+					) : (
+						podcast.data.name
+					)}
 				</h2>
 				<p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">
 					{podcast.data.description}
@@ -153,9 +157,13 @@ const nameId = URLify(podcast.data.name);
 			</div>
 			<div class="w-full md:w-4/12 px-4">
 				<div class="relative mx-auto md:mr-0 max-w-max">
-					<a href={podcast.data.website} title={`Website von ${podcast.data.name}`}>
+					{podcast.data.website ? (
+						<a href={podcast.data.website} title={`Website von ${podcast.data.name}`}>
+							<Image class="rounded-2xl" src={podcast.data.image} alt={`Podcast ${podcast.data.name}`} title={`Podcast ${podcast.data.name}`} loading="lazy" decoding="async" format="webp" quality={80} />
+						</a>
+					) : (
 						<Image class="rounded-2xl" src={podcast.data.image} alt={`Podcast ${podcast.data.name}`} title={`Podcast ${podcast.data.name}`} loading="lazy" decoding="async" format="webp" quality={80} />
-					</a>
+					)}
 				</div>
 			</div>
 		</div>
