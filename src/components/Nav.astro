@@ -6,7 +6,7 @@ export interface Props {
 	episode?: CollectionEntry<'podcast'>;
 }
 
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 import { sortByDateDesc } from '../scripts/sorting.js';
 import podcastInfo from '../data/podcast-info.json';
 
@@ -27,7 +27,7 @@ if (episode) {
 
 // Determine the latest episode
 // We have places where the last episode is linked
-let allEpisodes = await getCollection("podcast");
+let allEpisodes = await getCollection('podcast');
 sortByDateDesc(allEpisodes);
 let episodesToShow = allEpisodes.slice(0, 1);
 let latestEpisode = episodesToShow[0];
@@ -41,7 +41,7 @@ let latestEpisode = episodesToShow[0];
 				<div>
 					<a href="/" title="Engineering Kiosk Startseite" class="flex flex-row items-center">
 						<img class="h-12" src="/images/logos/engineering-kiosk-logo.svg" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
-						<span class="text-xl ml-4 hidden xl:block">Engineering Kiosk</span>	
+						<span class="text-xl ml-4 hidden xl:block">Engineering Kiosk</span>
 					</a>
 				</div>
 				<div class="hidden md:block">
@@ -74,7 +74,7 @@ let latestEpisode = episodesToShow[0];
 						<a class="inline-block py-2 px-4 text-sm leading-5 text-yellow-50 bg-yellow-500 hover:bg-yellow-600 font-medium focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md" href="/#jetzt-folgen" title="Höre den Engineering Kiosk Podcast">in deiner App 🎧</a>
 					</div>
 				</div>
-				<div class="flex md:hidden m-auto">						
+				<div class="flex md:hidden m-auto">
 					<a href={appleLink} title="Engineering Kiosk bei Apple Podcasts">
 						<img class="w-6 grayscale mx-2" src="/images/brands/apple.svg" alt="Engineering Kiosk bei Apple Podcasts" title="Engineering Kiosk bei Apple Podcasts" />
 					</a>
@@ -82,7 +82,7 @@ let latestEpisode = episodesToShow[0];
 						<img class="w-6 grayscale mx-2" src="/images/brands/spotify.svg" alt="Engineering Kiosk bei Spotify" title="Engineering Kiosk bei Spotify" />
 					</a>
 					<a href={podcastInfo.platformLinks.pocketCasts} title="Engineering Kiosk auf Pocket Casts">
-							<img class="w-6 grayscale mx-2" src="/images/brands/pocketcasts.svg" alt="Engineering Kiosk bei Pocket Casts" title="Engineering Kiosk bei Pocket Casts" />
+						<img class="w-6 grayscale mx-2" src="/images/brands/pocketcasts.svg" alt="Engineering Kiosk bei Pocket Casts" title="Engineering Kiosk bei Pocket Casts" />
 					</a>
 					<a href={podcastInfo.platformLinks.rss} title="Engineering Kiosk als RSS-Feed">
 						<img class="w-6 grayscale mx-2" src="/images/brands/rss.svg" alt="Engineering Kiosk als RSS-Feed" title="Engineering Kiosk als RSS-Feed" />
@@ -106,7 +106,7 @@ let latestEpisode = episodesToShow[0];
 					<div class="flex flex-col justify-between h-full">
 						<a href="/" title="Engineering Kiosk Startseite" class="flex flex-row items-center">
 							<img class="h-12" src="/images/logos/engineering-kiosk-logo.svg" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
-							<span class="text-lg ml-2">Engineering Kiosk</span>	
+							<span class="text-lg ml-2">Engineering Kiosk</span>
 						</a>
 						<ul class="py-6">
 							<li>
@@ -135,6 +135,9 @@ let latestEpisode = episodesToShow[0];
 							</li>
 							-->
 							<li>
+								<a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" title="Engineering Kiosk Newsletter" href="/newsletter/"> 📧 Newsletter</a>
+							</li>
+							<li>
 								<a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" href="/deutsche-tech-podcasts/" title="Deutschsprachige Tech Podcasts"> 🎧 Deutschsprachige Tech Podcasts</a>
 							</li>
 							<li>
@@ -146,15 +149,12 @@ let latestEpisode = episodesToShow[0];
 						</ul>
 						<div class="flex flex-wrap">
 							<div class="w-full mb-2">
-								<a class="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md" href={`/podcast/episode/${latestEpisode.id}/`} title={`Aktuelle Engineering Kiosk Podcast Episode ${latestEpisode.data.title}`}> Aktuelle Episode</a>
+								<a class="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md" href={`/podcast/episode/${latestEpisode.id}/`} title={`Aktuelle Engineering Kiosk Podcast Episode ${latestEpisode.data.title}`}>
+									Aktuelle Episode</a
+								>
 							</div>
 							<div class="w-full">
-								<a
-									class="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-yellow-500 hover:bg-yellow-600 font-medium text-center focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md"
-									href="/#jetzt-folgen"
-									title="Höre den Engineering Kiosk Podcast"
-									data-close-menu
-								>
+								<a class="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-yellow-500 hover:bg-yellow-600 font-medium text-center focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md" href="/#jetzt-folgen" title="Höre den Engineering Kiosk Podcast" data-close-menu>
 									Hören in deiner App...
 								</a>
 							</div>
