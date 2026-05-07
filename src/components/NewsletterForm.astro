@@ -1,0 +1,179 @@
+---
+// Inline newsletter signup form. Backend: Plunk (https://docs.useplunk.com/).
+// Sends `POST /v1/track` with subscribed:false so Plunk's double-opt-in
+// workflow (configured in the Plunk dashboard) handles confirmation.
+//
+// Render in two layouts:
+//   <NewsletterForm variant="full"    source="newsletter-page" />
+//   <NewsletterForm variant="compact" theme="dark" source="home-cta" />
+
+import { PLUNK_API_BASE } from '../scripts/newsletter.js';
+
+export interface Props {
+	variant?: 'full' | 'compact';
+	theme?: 'light' | 'dark';
+	source?: string;
+	labelText?: string;
+	buttonText?: string;
+	formId?: string;
+}
+
+const { variant = 'full', theme = 'light', source = '', labelText = 'Deine E-Mail-Adresse', buttonText = 'Anmelden', formId } = Astro.props;
+
+const apiKey = import.meta.env.PUBLIC_PLUNK_API_KEY;
+if (!apiKey) {
+	throw new Error('PUBLIC_PLUNK_API_KEY is not set. Add it to .env (see .env.example) or Netlify env vars before building NewsletterForm.');
+}
+
+const idSuffix = formId ?? Math.random().toString(36).slice(2, 10);
+const formElementId = `newsletter-form-${idSuffix}`;
+const inputId = `newsletter-email-${idSuffix}`;
+const statusId = `newsletter-status-${idSuffix}`;
+const honeypotId = `newsletter-company-${idSuffix}`;
+const configId = `${formElementId}-config`;
+
+const messages = {
+	loading: 'Sende …',
+	success: 'Danke! Bitte bestätige deine Anmeldung über den Link in deiner Inbox.',
+	generic: 'Etwas ist schiefgelaufen. Bitte versuche es später erneut.',
+	invalidEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+};
+
+const config = {
+	formElementId,
+	inputId,
+	statusId,
+	honeypotId,
+	apiKey,
+	apiBase: PLUNK_API_BASE,
+	source,
+	messages,
+};
+
+const isCompact = variant === 'compact';
+const isDark = theme === 'dark';
+
+const labelClasses = isCompact ? 'sr-only' : `block mb-2 font-medium ${isDark ? 'text-white' : 'text-coolGray-900'}`;
+
+const layoutClasses = isCompact ? 'flex flex-col sm:flex-row gap-3 max-w-xl mx-auto' : 'flex flex-col gap-3 max-w-xl mx-auto';
+
+const inputClasses = 'flex-1 bg-white px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xs';
+
+const buttonClasses = 'py-4 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm disabled:opacity-60 disabled:cursor-not-allowed';
+
+const statusClasses = `hidden mt-4 text-base ${isDark ? 'text-coolGray-100' : 'text-coolGray-700'}`;
+---
+
+<form id={formElementId} novalidate class="w-full" aria-describedby={statusId} data-newsletter-form data-config-id={configId}>
+	<label for={inputId} class={labelClasses}>{labelText}</label>
+	<div class={layoutClasses}>
+		<input id={inputId} type="email" name="email" required autocomplete="email" placeholder="Deine E-Mail-Adresse" class={inputClasses} />
+		<input id={honeypotId} type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute left-[-9999px] h-0 w-0 opacity-0" />
+		<button type="submit" class={buttonClasses}>{buttonText}</button>
+	</div>
+	<p id={statusId} role="status" aria-live="polite" tabindex="-1" class={statusClasses}></p>
+</form>
+
+<script id={configId} type="application/json" is:inline set:html={JSON.stringify(config).replace(/</g, '\\u003c')} />
+
+<script>
+	import { isValidEmail, buildNewsletterPayload, interpretNewsletterResponse } from '../scripts/newsletter.js';
+
+	function initNewsletterForm(form) {
+		const configId = form.dataset.configId;
+		const configEl = document.getElementById(configId);
+		if (!configEl) {
+			return;
+		}
+		const config = JSON.parse(configEl.textContent);
+		const { inputId, statusId, honeypotId, apiKey, apiBase, source, messages } = config;
+
+		const input = document.getElementById(inputId);
+		const status = document.getElementById(statusId);
+		const honeypot = document.getElementById(honeypotId);
+		const button = form.querySelector('button[type="submit"]');
+
+		const showMessage = (text) => {
+			status.textContent = text;
+			status.classList.remove('hidden');
+		};
+
+		const setLoading = (loading) => {
+			button.disabled = loading;
+			input.disabled = loading;
+		};
+
+		const handleSuccess = () => {
+			form.reset();
+			showMessage(messages.success);
+			setLoading(false);
+			input.disabled = true;
+			button.disabled = true;
+			status.focus({ preventScroll: false });
+		};
+
+		const handleError = (text) => {
+			showMessage(text);
+			setLoading(false);
+			input.focus();
+		};
+
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+
+			if (honeypot.value.trim() !== '') {
+				handleSuccess();
+				return;
+			}
+
+			if (!input.checkValidity() || !isValidEmail(input.value)) {
+				handleError(messages.invalidEmail);
+				return;
+			}
+
+			setLoading(true);
+			showMessage(messages.loading);
+
+			let response;
+			let body = {};
+			try {
+				response = await fetch(`${apiBase}/v1/track`, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						Authorization: `Bearer ${apiKey}`,
+					},
+					body: JSON.stringify(buildNewsletterPayload({ email: input.value.trim(), source })),
+				});
+				try {
+					body = await response.json();
+				} catch (_parseError) {
+					body = {};
+				}
+			} catch (_networkError) {
+				handleError(messages.generic);
+				return;
+			}
+
+			const verdict = interpretNewsletterResponse({ status: response.status, body, messages });
+			if (verdict.kind === 'success') {
+				handleSuccess();
+			} else {
+				if (verdict.kind === 'server') {
+					console.error('Newsletter signup failed', { status: response.status, body });
+				}
+				handleError(verdict.message);
+			}
+		});
+	}
+
+	const wireUpForms = () => {
+		document.querySelectorAll('form[data-newsletter-form]').forEach((form) => initNewsletterForm(form));
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', wireUpForms);
+	} else {
+		wireUpForms();
+	}
+</script>
