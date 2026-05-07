@@ -50,12 +50,16 @@ const config = {
 	messages,
 };
 
-const isCompact = variant === 'compact';
 const isDark = theme === 'dark';
 
-const labelClasses = isCompact ? 'sr-only' : `block mb-2 font-medium ${isDark ? 'text-white' : 'text-coolGray-900'}`;
+// Label is always visually hidden — the placeholder serves as the visible
+// field caption and the surrounding page copy explains the form. The <label>
+// element stays in the DOM for assistive tech.
+const labelClasses = 'sr-only';
 
-const layoutClasses = isCompact ? 'flex flex-col sm:flex-row gap-3 max-w-xl mx-auto' : 'flex flex-col gap-3 max-w-xl mx-auto';
+// Single horizontal row on sm+ screens, stacked on mobile. Mirrors the
+// established site pattern (see src/components/meetup/Newsletter.astro).
+const layoutClasses = 'flex flex-col sm:flex-row gap-3 max-w-xl mx-auto';
 
 const inputClasses = 'flex-1 bg-white px-3 h-12 text-coolGray-900 outline-none placeholder-coolGray-500 border border-coolGray-200 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-lg shadow-xs';
 
