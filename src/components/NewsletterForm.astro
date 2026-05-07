@@ -65,7 +65,10 @@ const inputClasses = 'flex-1 bg-white px-3 h-12 text-coolGray-900 outline-none p
 
 const buttonClasses = 'py-4 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm disabled:opacity-60 disabled:cursor-not-allowed';
 
-const statusClasses = `hidden mt-4 text-base ${isDark ? 'text-coolGray-100' : 'text-coolGray-700'}`;
+// Status message follows the page's body-text style so it reads as part of
+// the surrounding copy. Light theme matches the /newsletter/ paragraphs;
+// dark theme matches the centered pitch above the home-page CTA.
+const statusClasses = isDark ? 'hidden mt-4 text-lg md:text-xl text-coolGray-300 font-medium text-center' : 'hidden mt-4 text-lg md:text-xl text-coolGray-500 font-medium';
 ---
 
 <form id={formElementId} novalidate class="w-full" aria-describedby={statusId} data-newsletter-form data-config-id={configId}>
