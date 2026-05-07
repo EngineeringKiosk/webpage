@@ -3,7 +3,7 @@
 // subscribed:false so Plunk's double-opt-in workflow handles confirmation.
 // Custom field `data.newsletter = true` powers a dynamic segment in Plunk.
 
-export const PLUNK_API_BASE = 'https://api.useplunk.com';
+export const PLUNK_API_BASE = 'https://next-api.useplunk.com';
 export const NEWSLETTER_EVENT = 'newsletter-signup';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

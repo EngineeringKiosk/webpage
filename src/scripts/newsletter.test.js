@@ -158,7 +158,7 @@ describe('module constants', () => {
 		expect(NEWSLETTER_EVENT.startsWith('segment.')).toBe(false);
 	});
 
-	it('Plunk API base points at api.useplunk.com', () => {
-		expect(PLUNK_API_BASE).toBe('https://api.useplunk.com');
+	it('Plunk API base points at next-api.useplunk.com', () => {
+		expect(PLUNK_API_BASE).toBe('https://next-api.useplunk.com');
 	});
 });
