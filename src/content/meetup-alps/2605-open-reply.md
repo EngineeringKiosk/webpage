@@ -25,4 +25,14 @@ talks:
     bio: "Leonardo Pedri holds a Master’s degree in Chemistry and also studied Computer Science alongside his main field. He spent three years working in a computational chemistry research group, where he conducted research for pharmaceutical companies using high-performance computing systems and large-scale data analysis. He currently works at Innerspace as a data engineer, focusing on data systems for risk management in pharmaceutical manufacturing."
     linkedin: 'leonardo-pedri-910125286'
 eventId: '7ua6nqejh1dv0q8termn6g3g11'
+speakers:
+  female: 0
+  male: 2
+participants:
+  registered: 58
+  present:
+    total: 53
+    male: 43
+    female: 10
+  newParticipants: 20
 ---
