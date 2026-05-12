@@ -3531,6 +3531,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/267"
+  to = "/podcast/episode/267-no-deploy-friday-meme-ausrede-oder-reifegrad-test-mit-sujeevan-vijayakumaran?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep267"
+  to = "/podcast/episode/267-no-deploy-friday-meme-ausrede-oder-reifegrad-test-mit-sujeevan-vijayakumaran?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
