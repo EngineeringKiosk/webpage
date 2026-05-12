@@ -19,9 +19,7 @@ The episode pages use the player in **iframe-script mode**.
    object (theme, chapter marks, transcript URL, ...) and includes:
 
    ```html
-   <script class="podigee-podcast-player"
-           src="/podcast-player/javascripts/podigee-podcast-player.js"
-           data-configuration="playerConfiguration"></script>
+   <script class="podigee-podcast-player" src="/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="playerConfiguration"></script>
    ```
 
 2. That loader script scans the page for `script.podigee-podcast-player`,
@@ -43,16 +41,16 @@ play/pause/ended events into Matomo.
 
 Only the files actually requested by the browser at runtime:
 
-| Path under `public/podcast-player/` | Role |
-| --- | --- |
-| `podigee-podcast-player.html` | Iframe document (CSS and embed JS inlined at build time) |
-| `javascripts/podigee-podcast-player.js` | Loader served by the script tag |
-| `fonts/podigee-podcast-player.ttf` | Icon font (modern browsers) |
-| `fonts/podigee-podcast-player.woff` | Icon font (modern browsers) |
-| `fonts/podigee-podcast-player.svg` | Icon font (legacy fallback) |
-| `fonts/podigee-podcast-player.eot` | Icon font (legacy IE) — kept for `@font-face` parity with upstream |
-| `images/chromcast.png` | Chromecast UI icon, referenced from inlined CSS |
-| `README.md` | Pointer to the fork commit this snapshot was built from |
+| Path under `public/podcast-player/`     | Role                                                               |
+| --------------------------------------- | ------------------------------------------------------------------ |
+| `podigee-podcast-player.html`           | Iframe document (CSS and embed JS inlined at build time)           |
+| `javascripts/podigee-podcast-player.js` | Loader served by the script tag                                    |
+| `fonts/podigee-podcast-player.ttf`      | Icon font (modern browsers)                                        |
+| `fonts/podigee-podcast-player.woff`     | Icon font (modern browsers)                                        |
+| `fonts/podigee-podcast-player.svg`      | Icon font (legacy fallback)                                        |
+| `fonts/podigee-podcast-player.eot`      | Icon font (legacy IE) — kept for `@font-face` parity with upstream |
+| `images/chromcast.png`                  | Chromecast UI icon, referenced from inlined CSS                    |
+| `README.md`                             | Pointer to the fork commit this snapshot was built from            |
 
 ## Files we do NOT vendor (and why)
 
@@ -105,15 +103,15 @@ git branch --show-current
 From the webpage repo root, on a fresh feature branch
 (`andygrunwald/upgrade-podigee-podcast-player` or similar):
 
-| Source (`<fork>/build/…`) | Destination (`public/podcast-player/…`) |
-| --- | --- |
-| `podigee-podcast-player.html` | `podigee-podcast-player.html` |
+| Source (`<fork>/build/…`)               | Destination (`public/podcast-player/…`) |
+| --------------------------------------- | --------------------------------------- |
+| `podigee-podcast-player.html`           | `podigee-podcast-player.html`           |
 | `javascripts/podigee-podcast-player.js` | `javascripts/podigee-podcast-player.js` |
-| `fonts/podigee-podcast-player.ttf` | `fonts/podigee-podcast-player.ttf` |
-| `fonts/podigee-podcast-player.woff` | `fonts/podigee-podcast-player.woff` |
-| `fonts/podigee-podcast-player.svg` | `fonts/podigee-podcast-player.svg` |
-| `fonts/podigee-podcast-player.eot` | `fonts/podigee-podcast-player.eot` |
-| `images/chromcast.png` | `images/chromcast.png` |
+| `fonts/podigee-podcast-player.ttf`      | `fonts/podigee-podcast-player.ttf`      |
+| `fonts/podigee-podcast-player.woff`     | `fonts/podigee-podcast-player.woff`     |
+| `fonts/podigee-podcast-player.svg`      | `fonts/podigee-podcast-player.svg`      |
+| `fonts/podigee-podcast-player.eot`      | `fonts/podigee-podcast-player.eot`      |
+| `images/chromcast.png`                  | `images/chromcast.png`                  |
 
 Plain `cp` is sufficient. Do not copy anything not listed above.
 
@@ -173,6 +171,6 @@ loader and the iframe document themselves are vendored as-is.
 ## Related
 
 - Fork repo: <https://github.com/EngineeringKiosk/podigee-podcast-player>
-- Upstream:  <https://github.com/podigee/podigee-podcast-player>
+- Upstream: <https://github.com/podigee/podigee-podcast-player>
 - Embedly `player.js` (separate upgrade): see the top-level
   [`README.md`](../README.md) "Podcast player" section.
