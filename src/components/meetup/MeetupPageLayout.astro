@@ -69,7 +69,7 @@ const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false)
 
 const description = (() => {
 	if (!nextMeetup) {
-		return `Engineering Kiosk ${meetupName}: free in-person tech meetup in ${cityName} for software engineers and developers, with talks on engineering culture, open source, and technology.`;
+		return `Engineering Kiosk ${meetupName}: a free in-person tech meetup and local community event in ${cityName} for software engineers and developers, with talks on engineering culture, open source, and technology.`;
 	}
 	const announcedTalks = nextMeetup.talks.filter((talk) => talk._announced);
 	const intro = `Next Engineering Kiosk ${meetupName} meetup on ${dateString} in ${cityName}.`;
