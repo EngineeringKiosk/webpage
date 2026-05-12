@@ -67,9 +67,19 @@ const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
 const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ~30min later)` : null;
 const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false) : false;
 
-const description = nextMeetup
-	? `Next Engineering Kiosk ${meetupName} meetup on ${dateString} in ${cityName}. Free in-person community event with talks on engineering culture, open source, and technology for software engineers and developers.`
-	: `Engineering Kiosk ${meetupName}: free in-person tech meetup in ${cityName} for software engineers and developers, with talks on engineering culture, open source, and technology.`;
+const description = (() => {
+	if (!nextMeetup) {
+		return `Engineering Kiosk ${meetupName}: free in-person tech meetup in ${cityName} for software engineers and developers, with talks on engineering culture, open source, and technology.`;
+	}
+	const announcedTalks = nextMeetup.talks.filter((talk) => talk._announced);
+	const intro = `Next Engineering Kiosk ${meetupName} meetup on ${dateString} in ${cityName}.`;
+	if (announcedTalks.length === 0) {
+		return `${intro} Free in-person community event with talks on engineering culture, open source, and technology for software engineers and developers.`;
+	}
+	const label = announcedTalks.length === 1 ? 'Talk' : 'Talks';
+	const list = announcedTalks.map((talk) => `"${talk.title}" by ${talk.name}`).join(', ');
+	return `${intro} ${label}: ${list}. Free in-person community event for software engineers and developers.`;
+})();
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Inject the next-meetup date into the SEO/OG title between the event-half and the brand-half
