@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isValidEmail, buildNewsletterPayload, interpretNewsletterResponse, NEWSLETTER_EVENT, PLUNK_API_BASE } from './newsletter.js';
+import { isValidEmail, buildNewsletterPayload, interpretNewsletterResponse } from './newsletter.js';
 
 const messages = {
 	loading: 'Sende …',
@@ -36,129 +36,113 @@ describe('isValidEmail', () => {
 });
 
 describe('buildNewsletterPayload', () => {
-	it('returns the canonical Plunk payload shape', () => {
-		expect(buildNewsletterPayload({ email: 'andy@example.com', source: 'home-cta' })).toEqual({
+	it('returns the canonical worker payload shape with all fields', () => {
+		expect(
+			buildNewsletterPayload({
+				email: 'andy@example.com',
+				newsletters: ['general'],
+				source: 'home-cta',
+				honeypot: '',
+			})
+		).toEqual({
 			email: 'andy@example.com',
-			event: 'newsletter-signup',
-			subscribed: false,
-			data: { newsletter: true, source: 'home-cta' },
+			newsletters: ['general'],
+			honeypot: '',
+			source: 'home-cta',
 		});
 	});
 
-	it('omits data.source when source is not provided', () => {
-		expect(buildNewsletterPayload({ email: 'andy@example.com' })).toEqual({
+	it('omits source when not provided', () => {
+		expect(
+			buildNewsletterPayload({
+				email: 'andy@example.com',
+				newsletters: ['general'],
+				honeypot: '',
+			})
+		).toEqual({
 			email: 'andy@example.com',
-			event: 'newsletter-signup',
-			subscribed: false,
-			data: { newsletter: true },
+			newsletters: ['general'],
+			honeypot: '',
 		});
 	});
 
-	it('omits data.source when source is empty string', () => {
-		const payload = buildNewsletterPayload({ email: 'andy@example.com', source: '' });
-		expect(payload.data).toEqual({ newsletter: true });
+	it('omits source when empty string', () => {
+		const payload = buildNewsletterPayload({
+			email: 'andy@example.com',
+			newsletters: ['general'],
+			source: '',
+			honeypot: '',
+		});
+		expect(payload).not.toHaveProperty('source');
 	});
 
-	it('uses the exported event constant', () => {
-		const payload = buildNewsletterPayload({ email: 'andy@example.com' });
-		expect(payload.event).toBe(NEWSLETTER_EVENT);
+	it('defaults honeypot to empty string when undefined', () => {
+		const payload = buildNewsletterPayload({
+			email: 'andy@example.com',
+			newsletters: ['general'],
+		});
+		expect(payload.honeypot).toBe('');
+	});
+
+	it('preserves a non-empty honeypot value (worker decides what to do)', () => {
+		const payload = buildNewsletterPayload({
+			email: 'andy@example.com',
+			newsletters: ['general'],
+			honeypot: 'gotcha',
+		});
+		expect(payload.honeypot).toBe('gotcha');
+	});
+
+	it('passes the newsletters array through verbatim', () => {
+		expect(
+			buildNewsletterPayload({
+				email: 'andy@example.com',
+				newsletters: ['general', 'meetup_alps'],
+			}).newsletters
+		).toEqual(['general', 'meetup_alps']);
 	});
 });
 
 describe('interpretNewsletterResponse', () => {
 	it('treats 200 as success', () => {
-		expect(interpretNewsletterResponse({ status: 200, body: { success: true }, messages })).toEqual({
+		expect(interpretNewsletterResponse({ status: 200, messages })).toEqual({
 			kind: 'success',
 			message: messages.success,
 		});
 	});
 
 	it('treats 201 as success', () => {
-		expect(interpretNewsletterResponse({ status: 201, body: {}, messages })).toEqual({
+		expect(interpretNewsletterResponse({ status: 201, messages })).toEqual({
 			kind: 'success',
 			message: messages.success,
 		});
 	});
 
-	it('maps 400 with email-related message to validation + invalidEmail', () => {
-		expect(
-			interpretNewsletterResponse({
-				status: 400,
-				body: { message: 'Invalid email format' },
-				messages,
-			})
-		).toEqual({ kind: 'validation', message: messages.invalidEmail });
-	});
-
-	it('maps 422 with email-related message to validation + invalidEmail', () => {
-		expect(
-			interpretNewsletterResponse({
-				status: 422,
-				body: { message: 'email is not valid' },
-				messages,
-			})
-		).toEqual({ kind: 'validation', message: messages.invalidEmail });
-	});
-
-	it('falls back to body.message for non-email validation errors', () => {
-		expect(
-			interpretNewsletterResponse({
-				status: 400,
-				body: { message: 'Some other validation error' },
-				messages,
-			})
-		).toEqual({ kind: 'validation', message: 'Some other validation error' });
-	});
-
-	it('uses generic fallback when 400 has no body message', () => {
-		expect(interpretNewsletterResponse({ status: 400, body: {}, messages })).toEqual({
+	it('maps 400 to validation + invalidEmail', () => {
+		expect(interpretNewsletterResponse({ status: 400, messages })).toEqual({
 			kind: 'validation',
-			message: messages.generic,
+			message: messages.invalidEmail,
 		});
 	});
 
-	it('maps 401 to server + generic', () => {
-		expect(interpretNewsletterResponse({ status: 401, body: { message: 'Unauthorized' }, messages })).toEqual({
+	it('maps 405 to server + generic', () => {
+		expect(interpretNewsletterResponse({ status: 405, messages })).toEqual({
 			kind: 'server',
-			message: messages.generic,
-		});
-	});
-
-	it('maps 403 to server + generic', () => {
-		expect(interpretNewsletterResponse({ status: 403, body: {}, messages })).toEqual({
-			kind: 'server',
-			message: messages.generic,
-		});
-	});
-
-	it('maps 429 to rateLimit + generic', () => {
-		expect(interpretNewsletterResponse({ status: 429, body: {}, messages })).toEqual({
-			kind: 'rateLimit',
 			message: messages.generic,
 		});
 	});
 
 	it('maps 500 to server + generic', () => {
-		expect(interpretNewsletterResponse({ status: 500, body: {}, messages })).toEqual({
+		expect(interpretNewsletterResponse({ status: 500, messages })).toEqual({
 			kind: 'server',
 			message: messages.generic,
 		});
 	});
 
-	it('handles a non-object body without throwing', () => {
-		expect(() => interpretNewsletterResponse({ status: 500, body: null, messages })).not.toThrow();
-		expect(() => interpretNewsletterResponse({ status: 500, body: 'oops', messages })).not.toThrow();
-	});
-});
-
-describe('module constants', () => {
-	it('event name avoids reserved Plunk prefixes', () => {
-		expect(NEWSLETTER_EVENT.startsWith('email.')).toBe(false);
-		expect(NEWSLETTER_EVENT.startsWith('contact.')).toBe(false);
-		expect(NEWSLETTER_EVENT.startsWith('segment.')).toBe(false);
-	});
-
-	it('Plunk API base points at next-api.useplunk.com', () => {
-		expect(PLUNK_API_BASE).toBe('https://next-api.useplunk.com');
+	it('maps 502 to server + generic', () => {
+		expect(interpretNewsletterResponse({ status: 502, messages })).toEqual({
+			kind: 'server',
+			message: messages.generic,
+		});
 	});
 });

@@ -1,29 +1,34 @@
 ---
-// Inline newsletter signup form. Backend: Plunk (https://docs.useplunk.com/).
-// Sends `POST /v1/track` with subscribed:false so Plunk's double-opt-in
-// workflow (configured in the Plunk dashboard) handles confirmation.
+// Inline newsletter signup form. Backend: the Engineering Kiosk newsletter
+// worker at https://api.engineeringkiosk.dev/newsletter/subscribe. The worker
+// owns input validation, the honeypot check, the double-opt-in flow, and the
+// Plunk integration — this component just submits the form.
 //
 // Render in two layouts:
 //   <NewsletterForm variant="full"    source="newsletter-page" />
 //   <NewsletterForm variant="compact" theme="dark" source="home-cta" />
 
-import { PLUNK_API_BASE } from '../scripts/newsletter.js';
-
 export interface Props {
 	variant?: 'full' | 'compact';
 	theme?: 'light' | 'dark';
 	source?: string;
+	newsletters?: string[];
 	labelText?: string;
 	buttonText?: string;
 	formId?: string;
 }
 
-const { variant = 'full', theme = 'light', source = '', labelText = 'Deine E-Mail-Adresse', buttonText = 'Anmelden', formId } = Astro.props;
+const {
+	variant = 'full',
+	theme = 'light',
+	source = '',
+	newsletters = ['general'],
+	labelText = 'Deine E-Mail-Adresse',
+	buttonText = 'Anmelden',
+	formId,
+} = Astro.props;
 
-const apiKey = import.meta.env.PUBLIC_PLUNK_API_KEY;
-if (!apiKey) {
-	throw new Error('PUBLIC_PLUNK_API_KEY is not set. Add it to .env (see .env.example) or Netlify env vars before building NewsletterForm.');
-}
+const NEWSLETTER_ENDPOINT = 'https://api.engineeringkiosk.dev/newsletter/subscribe';
 
 const idSuffix = formId ?? Math.random().toString(36).slice(2, 10);
 const formElementId = `newsletter-form-${idSuffix}`;
@@ -44,9 +49,9 @@ const config = {
 	inputId,
 	statusId,
 	honeypotId,
-	apiKey,
-	apiBase: PLUNK_API_BASE,
+	endpoint: NEWSLETTER_ENDPOINT,
 	source,
+	newsletters,
 	messages,
 };
 
@@ -93,7 +98,7 @@ const statusClasses = isDark ? 'hidden mt-4 text-lg md:text-xl text-coolGray-300
 			return;
 		}
 		const config = JSON.parse(configEl.textContent);
-		const { inputId, statusId, honeypotId, apiKey, apiBase, source, messages } = config;
+		const { inputId, statusId, honeypotId, endpoint, source, newsletters, messages } = config;
 
 		const input = document.getElementById(inputId);
 		const status = document.getElementById(statusId);
@@ -142,32 +147,32 @@ const statusClasses = isDark ? 'hidden mt-4 text-lg md:text-xl text-coolGray-300
 			showMessage(messages.loading);
 
 			let response;
-			let body = {};
 			try {
-				response = await fetch(`${apiBase}/v1/track`, {
+				response = await fetch(endpoint, {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
-						Authorization: `Bearer ${apiKey}`,
 					},
-					body: JSON.stringify(buildNewsletterPayload({ email: input.value.trim(), source })),
+					body: JSON.stringify(
+						buildNewsletterPayload({
+							email: input.value.trim(),
+							newsletters,
+							source,
+							honeypot: honeypot.value,
+						}),
+					),
 				});
-				try {
-					body = await response.json();
-				} catch (_parseError) {
-					body = {};
-				}
 			} catch (_networkError) {
 				handleError(messages.generic);
 				return;
 			}
 
-			const verdict = interpretNewsletterResponse({ status: response.status, body, messages });
+			const verdict = interpretNewsletterResponse({ status: response.status, messages });
 			if (verdict.kind === 'success') {
 				handleSuccess();
 			} else {
 				if (verdict.kind === 'server') {
-					console.error('Newsletter signup failed', { status: response.status, body });
+					console.error('Newsletter signup failed', { status: response.status });
 				}
 				handleError(verdict.message);
 			}

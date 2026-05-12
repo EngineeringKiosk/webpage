@@ -1,10 +1,7 @@
 // Newsletter signup helpers.
-// Backend: Plunk (https://docs.useplunk.com/). Sends `POST /v1/track` with
-// subscribed:false so Plunk's double-opt-in workflow handles confirmation.
-// Custom field `data.newsletter = true` powers a dynamic segment in Plunk.
-
-export const PLUNK_API_BASE = 'https://next-api.useplunk.com';
-export const NEWSLETTER_EVENT = 'newsletter-signup';
+// Backend: the Engineering Kiosk newsletter worker
+// (https://api.engineeringkiosk.dev/newsletter/subscribe). Plunk integration,
+// double-opt-in orchestration, and bot protection now live server-side.
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -15,49 +12,24 @@ export function isValidEmail(value) {
 	return EMAIL_PATTERN.test(value.trim());
 }
 
-export function buildNewsletterPayload({ email, source } = {}) {
-	const data = { newsletter: true };
-	if (typeof source === 'string' && source.length > 0) {
-		data.source = source;
-	}
-	return {
+export function buildNewsletterPayload({ email, newsletters, source, honeypot } = {}) {
+	const payload = {
 		email,
-		event: NEWSLETTER_EVENT,
-		subscribed: false,
-		data,
+		newsletters,
+		honeypot: typeof honeypot === 'string' ? honeypot : '',
 	};
+	if (typeof source === 'string' && source.length > 0) {
+		payload.source = source;
+	}
+	return payload;
 }
 
-export function interpretNewsletterResponse({ status, body, messages }) {
-	const safeBody = body && typeof body === 'object' ? body : {};
-	const bodyMessage = typeof safeBody.message === 'string' ? safeBody.message : '';
-
+export function interpretNewsletterResponse({ status, messages }) {
 	if (status >= 200 && status < 300) {
 		return { kind: 'success', message: messages.success };
 	}
-
-	if (status === 400 || status === 422) {
-		if (mentionsEmailIssue(bodyMessage)) {
-			return { kind: 'validation', message: messages.invalidEmail };
-		}
-		return { kind: 'validation', message: bodyMessage || messages.generic };
+	if (status === 400) {
+		return { kind: 'validation', message: messages.invalidEmail };
 	}
-
-	if (status === 401 || status === 403) {
-		return { kind: 'server', message: messages.generic };
-	}
-
-	if (status === 429) {
-		return { kind: 'rateLimit', message: messages.generic };
-	}
-
 	return { kind: 'server', message: messages.generic };
-}
-
-function mentionsEmailIssue(message) {
-	if (!message) {
-		return false;
-	}
-	const lowered = message.toLowerCase();
-	return lowered.includes('email') || lowered.includes('e-mail') || lowered.includes('format');
 }
