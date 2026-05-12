@@ -16,6 +16,7 @@ import { createMeetupHelpers } from '../../scripts/meetups.js';
 export interface Props {
 	collectionName: string;
 	meetupName: string;
+	cityName: string;
 	pageTitle: string;
 	pageDescription?: string;
 	ogImage: string;
@@ -37,6 +38,7 @@ export interface Props {
 const {
 	collectionName,
 	meetupName,
+	cityName,
 	pageTitle,
 	ogImage,
 	badgeText,
@@ -65,16 +67,38 @@ const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
 const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ~30min later)` : null;
 const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false) : false;
 
-const description = nextMeetup
-	? `In-person tech meetup in ${meetupName} (Next: ${dateString}): A local community event for software engineers, developers and tech enthusiasts featuring talks on engineering culture, open source and technology.`
-	: `In-person tech meetup in ${meetupName}: A local community event for software engineers, developers and tech enthusiasts featuring talks on engineering culture, open source and technology.`;
+const description = (() => {
+	if (!nextMeetup) {
+		return `Engineering Kiosk ${meetupName}: a free in-person tech meetup and local community event in ${cityName} for software engineers and developers, with talks on engineering culture, open source, and technology.`;
+	}
+	const announcedTalks = nextMeetup.talks.filter((talk) => talk._announced);
+	const intro = `Next Engineering Kiosk ${meetupName} meetup on ${dateString} in ${cityName}.`;
+	if (announcedTalks.length === 0) {
+		return `${intro} Free in-person community event with talks on engineering culture, open source, and technology for software engineers and developers.`;
+	}
+	const label = announcedTalks.length === 1 ? 'Talk' : 'Talks';
+	const list = announcedTalks.map((talk) => `"${talk.title}" by ${talk.name}`).join(', ');
+	return `${intro} ${label}: ${list}. Free in-person community event for software engineers and developers.`;
+})();
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Inject the next-meetup date into the SEO/OG title between the event-half and the brand-half
+// of pageTitle (split on the last " - "). MeetupEvent.astro already emits a richer
+// schema.org/Event JSON-LD for the same upcoming meetup, so no JSON-LD is added here.
+const headTitle = (() => {
+	if (!nextMeetup) return pageTitle;
+	const sep = ' - ';
+	const idx = pageTitle.lastIndexOf(sep);
+	return idx === -1
+		? `${pageTitle} on ${dateString}`
+		: `${pageTitle.slice(0, idx)} on ${dateString}${pageTitle.slice(idx)}`;
+})();
 
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={pageTitle} description={description} image={ogImage} {canonicalURL} ogImageAlt={`Engineering Kiosk Meetup ${meetupName}`} />
+		<MainHead title={headTitle} description={description} image={ogImage} {canonicalURL} ogImageAlt={`Engineering Kiosk Meetup ${meetupName}`} />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
