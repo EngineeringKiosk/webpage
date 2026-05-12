@@ -82,7 +82,7 @@ The CLI reads/writes the Astro content collections directly (`src/content/...`),
 - Tailwind v4 via `@tailwindcss/vite`; no `tailwind.config.js` — config is CSS-first in `src/styles/`.
 - Tests: vitest for JS (`src/scripts/*.test.js`), `go test` for the CLI. CI workflows: `astro-testing.yml`, `javascript-testing.yml`, `go-testing.yml`, `links.yml` (lychee, config in `.lychee.toml`).
 - New display strings for movies/genres live in `src/scripts/movie-labels.js` and `src/data/awesome-software-engineering-*-*.json`, not in upstream JSON.
-- Environment variables: the only one currently is `PUBLIC_PLUNK_API_KEY` (Plunk public API key, prefix `pk_`) used by the inline newsletter signup form. Set it in `.env` locally and in Netlify env vars. The build throws if it's missing.
+- Environment variables: none required by the frontend. Newsletter signups are submitted to the `engineeringkiosk/newsletter-worker` Cloudflare Worker at `https://api.engineeringkiosk.dev/newsletter/subscribe`, which owns the Plunk integration server-side.
 
 ## Go Unit Testing Conventions
 
