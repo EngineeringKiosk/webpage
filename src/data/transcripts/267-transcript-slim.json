@@ -1,0 +1,1053 @@
+{
+    "confidence": 0.9535058,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4676,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 104240,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Es ist Freitag, sechzehn uhr sieben und vierzig der Pull Request ist grün. Drückst du nun auf Deploy oder schiebst du das Thema lieber ganz elegant in die Zukunft, also auf Montag. Genau um diesen Klassiker geht es um Friday Deployments, um Angst vor Produktionsfehlern, um kaputte Prozesse und um die Frage, ob das eigentliche Problem wirklich die Technik ist oder doch eher wir Menschen. Um das zu diskutieren, haben wir uns Verstärkung geholt. Zu Gast ist suchen, vielen vielleicht auch bekannt aus dem Tilpot, als ehemaliger Solutions Architekt bei GitLab und Grafana, als Buchautor rund um Git DevOps und inzwischen mit seiner wunderbar provokanten Firma Friday Deployments gmbh unterwegs. Mit ihm sprechen wir darüber, warum Freitag Deployments in vielen Teams fast schon als Tabu gelten, welche technischen Sicherheitsnetze wirklich helfen, von CI und CD Staging und Monitoring bis Feature Flex, Blue, Green und Canary Deployments. Aber wir schauen auch auf die unbequeme Seite, auf Kultur, auf Verantwortung, On Call, Blameless, Post Mortems, Freigabeprozesse und die Angst am Wochenende aus dem Grill abgepaged zu werden. Die wichtigste Frage ist also nicht nur, ob du freitags deployen solltest, sondern ob dein Team es überhaupt könnte. Genau da steigen wir heute ein. Viel Spaß mit dieser Episode. Wolfgang, ich bin mir jetzt nicht sicher, ob ich dir jetzt eine Quizfrage oder eine Fangfrage stelle. Hör gut zu, Freitag, sechzehn uhr sieben und vierzig der Pull Request ist grün. Drückst du auf Deploy oder lässt du es wirklich bis Montag liegen? Falsche Antworten."
+        },
+        {
+            "start": 104240,
+            "end": 126420,
+            "speaker": "B",
+            "text": "Only Hallo, ich bin selbstständig, also ich bin selbst und ständig. Das heißt, Wochenende gibt es bei mir sowieso nicht. Das heißt, ich deploye vier und zwanzig Stunden, muss es dann aber immer selbst fixen und ich kann es mal abschieben auf dich, weil wenn ich was deploye, dann muss ich es leider selber fixen und nicht mein großes Team, das sie zur Verfügung habe. Das kennst du nicht, Andi, als Manager, aber bei mir wird noch Hand angelegt."
+        },
+        {
+            "start": 126420,
+            "end": 166480,
+            "speaker": "A",
+            "text": "Ja, ich habe ja meine Leute dafür, würde ich jetzt dreckigerweise sagen. Aber Wolfgang, ich kenne ja auch deine Ausrede. Du bist ja Berater und kein outgesourcer Mitarbeiter. Also mit Programmieren hast du es ja eh nicht mehr so. Von daher kannst du ja Freitag um auch nicht mehr deployen, aber du warst ja auch mal Engineering Manager und hast ja Leute gehabt, die die Arbeit gemacht haben und da hattest du sehr wahrscheinlich auch schon mal Druck von oben bekommen, dass um Freitag das Feature noch raus muss. Und bist du dann im Team eher auf technische Hürden gestoßen oder auf oh ne, wir deployen jetzt nicht, ich bin morgen on call. Also eher so auf Kann man das ein Kulturproblem nennen? Ja, ich glaube schon."
+        },
+        {
+            "start": 166480,
+            "end": 187430,
+            "speaker": "B",
+            "text": "Also ich habe eigentlich beides erlebt. Es hat ein Team gegeben, da haben wir ein, ich würde es mal Greenfield Projekt nennen, gestartet und da waren diese ganzen Checks und Sicherheitsnetze alle verfügbar und da hat das Team von sich aus eigentlich deployed, wie es Lust gehabt hat. Und das war nie ein Problem. Hingegen, wenn ich so diese, ich nenne es mal Legacy Code Base betrachte, da"
+        },
+        {
+            "start": 187430,
+            "end": 189150,
+            "speaker": "C",
+            "text": "war es ein sehr großes Problem, ein"
+        },
+        {
+            "start": 189150,
+            "end": 191190,
+            "speaker": "A",
+            "text": "technisches oder kulturelles beides."
+        },
+        {
+            "start": 191270,
+            "end": 197710,
+            "speaker": "B",
+            "text": "Also da war die technische Grundlage schon ein Problem und dadurch war es natürlich kulturell erst recht ein Problem, weil niemand das am Wochenende fixen wollte."
+        },
+        {
+            "start": 197710,
+            "end": 232790,
+            "speaker": "A",
+            "text": "Okay, aber wir wissen ja alle, Legacy verdient das Geld, deswegen hat das C Level sehr wahrscheinlich entschieden, Es wird trotzdem deployed. Ist mir völlig egal, ob es ein technisches oder ein kulturelles Problem ist. Und das zeigt ja gerade diesen Konflikt hier, warum Freitags Deployment irgendwie so ein komischer Mythos sind. Und das ist genau das Thema dieser Episode. Dazu machen der Wolfgang und ich jetzt keine Philosophie Stunde, sondern wir haben jemanden angefragt, der damit, ich würde mal fast sagen, sein Geld verdient und vor kurzem sogar einen Talk gehalten hat zu dem Thema Freitags Nachmittags Zeit für ein Deployment. Und ich begrüße Sojivien. Hallo."
+        },
+        {
+            "start": 232790,
+            "end": 233270,
+            "speaker": "C",
+            "text": "Hi."
+        },
+        {
+            "start": 233270,
+            "end": 243470,
+            "speaker": "A",
+            "text": "Deine Stimme kennt man vielleicht schon, denn du bist ebenfalls Podcast Profi und zwar machst du seit mehr als sechs Jahren inzwischen seit zwei tausend zwanzig seit sechs Jahren."
+        },
+        {
+            "start": 243470,
+            "end": 247030,
+            "speaker": "B",
+            "text": "Andi, stell dir das mal vor. Wir haben es erst vier Jahre geschafft. Sechs Jahre."
+        },
+        {
+            "start": 247670,
+            "end": 252470,
+            "speaker": "A",
+            "text": "Und jetzt sei du mal wieder höflich und lass mich lieber ausreden. Wir sind die nicht bei kleinen Kindern so."
+        },
+        {
+            "start": 252470,
+            "end": 256470,
+            "speaker": "B",
+            "text": "Ja, aber das solltest du nach vier Jahren wissen, dass das auch vorbei ist. Dieser Zug ist abgefahren."
+        },
+        {
+            "start": 256470,
+            "end": 265410,
+            "speaker": "A",
+            "text": "Du machst mit dem Dirk den schönen Podcast Tillpot, der eigentlich nicht für Today I Learned steht. Wofür steht T in diesem Kontext?"
+        },
+        {
+            "start": 265410,
+            "end": 282890,
+            "speaker": "C",
+            "text": "Naja, also ursprünglich dachten wir an Today I Learned und dann war ich bei einem anderen Podcast mal zu Gast, nämlich bei einem Programmier Podcast. Da meinten die so, das steht doch für Things I Learned, oder? Und ich dachte dann so, das macht eigentlich viel mehr Sinn, weil ja, wir reden über Dinge, die wir zuletzt gelernt haben und dadurch ist der Name entstanden."
+        },
+        {
+            "start": 282890,
+            "end": 306910,
+            "speaker": "A",
+            "text": "Das ist auf jeden Fall eine Podcast Empfehlung. Für alle, die den Podcast noch nicht kennen, Grüße gehen raus, auch an den Dirk. Aber wer bist du wirklich? Endlich mal haben wir einen Gast aus dem Pott. Das freut mich sehr. Wolfgang, Ein bisschen Erdkunde. Duisburg liegt im Ruhrgebiet, ist natürlich die schönste Stadt im Ruhrgebiet. Direkt danach kommt jetzt für diesen Podcast Kasrop Rauxel."
+        },
+        {
+            "start": 307950,
+            "end": 320110,
+            "speaker": "B",
+            "text": "Ich hab schon Schwierigkeiten, das auszusprechen, also ist leichter auszusprechen als Kastl. Was brauchst Rauxen? Was, wie wirkt das? Ich kenne Castor Transporte, hat das was damit zu tun?"
+        },
+        {
+            "start": 321730,
+            "end": 323250,
+            "speaker": "C",
+            "text": "Nicht ganz, nicht ganz, aber fast."
+        },
+        {
+            "start": 323410,
+            "end": 387860,
+            "speaker": "A",
+            "text": "Aber aus Castrop Rauxel hattest du berufliche Stationen, wie zum Beispiel als Solution Architekt bei GitLab oder auch als Solutions Architekt bei Grafana. Aber inzwischen arbeitest du bei beiden Firmen nicht mehr, denn du bist nämlich selbstständig und trollst jetzt so ein bisschen mit deinem neuen Firmennamen, wo ich sage, der geilste Firmenname, der mir in letzter Zeit untergekommen ist, und zwar hast du die Friday Deployments gmbh gegründet. Ich weiß nicht, ob das jetzt irgendwie ein jahrelanger Plan war, um in diesen Podcast eingeladen zu werden, aber du warst teilweise auch schon, nicht nur teilweise, schon mehrfach als Buchautor unterwegs. Wenn ich das richtig erzählt habe von fünf Büchern, Versionsverwaltung mit Git, dann hast du ein Buch über den Schnelleinstieg in Git geschrieben und ein ganz berühmtes Buch über DevOps, wie IT Projekte mit einem modernen Toolset und der richtigen Kultur gelingen. Und wenn du mal nicht vor dem Computer sitzt, dann läufst du auch Ultramarathons und da hast du mir einen Funfact erzählt, den konnte ich leider nicht googeln. Danke, dass du mir den erzählt hast. Du bist mal letzter bei einem Ultramarathon geworden, ist das richtig?"
+        },
+        {
+            "start": 387860,
+            "end": 388620,
+            "speaker": "C",
+            "text": "Das ist richtig."
+        },
+        {
+            "start": 389100,
+            "end": 393660,
+            "speaker": "A",
+            "text": "Was heißt letzter bei einem Ultramarathon? Also wovon reden wir da?"
+        },
+        {
+            "start": 393660,
+            "end": 429360,
+            "speaker": "C",
+            "text": "Also Ultramarathon ist erstmal alles, was über einem Marathon ist, also über zwei und vierzig komma zwei Kilometer in der Regel, meistens so fünfzig Kilometer plus und in dem Fall auch ein Trail Marathon. Das heißt, man ist dann halt eher in Wäldern, Bergen unterwegs und ich laufe quasi jedes Jahr an der Zugspitze den Zugspitz Ultra Trail mit. Und vor zwei Jahren oder drei Jahren, als ich vor drei Jahren, als ich das erste Mal da mitgelaufen bin auf, ich glaube das waren acht und sechzig, neun und sechzig kilometer, bin ich nach achtzehn Stunden als letzter ins Ziel gekommen. Von denen, die es geschafft haben, sind auch viele ausgestiegen."
+        },
+        {
+            "start": 429360,
+            "end": 432920,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen, das Finishen an sich ist ja schon Leistung. Definitiv."
+        },
+        {
+            "start": 432920,
+            "end": 438920,
+            "speaker": "C",
+            "text": "Genau, genau. Weil ich habe ein paar Mal halt auch nicht geschafft und das dann halt auch in Ordnung. Aber letzteres muss man auch erstmal schaffen."
+        },
+        {
+            "start": 440250,
+            "end": 459250,
+            "speaker": "B",
+            "text": "Übrigens, wir hatten gestern einen Call mit den Jungs von Index Out of Bounds und der Christian von Index Out of Bounds sucht einen Buddy für seinen Ultra Marathon von, keine Ahnung, achtzig kilometer oder so. Vielleicht wirst du ja mit ihm laufen. Das wäre ideal. Oder wenn sonst jetzt jemand gerade zuhört, Index Out of Bounds sucht noch Buddies zum Laufen."
+        },
+        {
+            "start": 459250,
+            "end": 465890,
+            "speaker": "A",
+            "text": "Wolfgang, krieg mal die Fakten zurecht. Der Christian sucht nicht jemanden für einen Ultramarathon, der sucht jemanden für einen Mammutmarsch."
+        },
+        {
+            "start": 465890,
+            "end": 466810,
+            "speaker": "B",
+            "text": "Ist ja dasselbe."
+        },
+        {
+            "start": 466970,
+            "end": 468170,
+            "speaker": "C",
+            "text": "Das ist nicht dasselbe."
+        },
+        {
+            "start": 469700,
+            "end": 473620,
+            "speaker": "A",
+            "text": "Also da merkst du einfach, der Sportmuffel Wolfgang kriegt mal wieder die ganzen Sachen zusammen."
+        },
+        {
+            "start": 473620,
+            "end": 477100,
+            "speaker": "B",
+            "text": "Ja, wer das eine kann, kann das andere auch. Das ist gar nicht so weit entfernt."
+        },
+        {
+            "start": 477100,
+            "end": 477660,
+            "speaker": "C",
+            "text": "Das geht schon."
+        },
+        {
+            "start": 477660,
+            "end": 484180,
+            "speaker": "B",
+            "text": "Wer auf den Berg rauflaufen kann, ein Ultramarathon, der bekommt auch noch flachbar zehn Kilometer mehr rauf oder so."
+        },
+        {
+            "start": 484500,
+            "end": 488740,
+            "speaker": "C",
+            "text": "Ja, das ist dann einfach flach ist einfacher, auch wenn es länger ist."
+        },
+        {
+            "start": 488740,
+            "end": 523550,
+            "speaker": "B",
+            "text": "Aber kommen wir mal zum Extrem Deployment zurück, also zum Fridays Deployment. Du kommst ja aus der ganzen GitLab Welt, Grafana Welt, da war alles wahrscheinlich schön und grün, vor allem die ganzen Pipelines waren grün und alles war gar kein Problem am Freitag zu deployen. Jetzt bist du im ganzen Consulting Wesen drin und hast plötzlich mit dem deutschen guten alten Mittelstand zu tun. Wie würdest du die aktuelle. Es ist so schön, jetzt kann endlich mal im Podcast so eine politische Frage stellen. Wie schätzt du denn so die Lage in Deutschland ein, wenn es um Freitags Deployments geht, wenn man auf den Mittelstand blickt?"
+        },
+        {
+            "start": 523475,
+            "end": 583475,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 583790,
+            "end": 638740,
+            "speaker": "C",
+            "text": "Also vielleicht sollten wir noch ein bisschen kurz darüber unterhalten, was ich dann bei GitLab genau gemacht habe als Solutions Architekt. Also es war eine Pre Sales Rolle. Also es ging effektiv darum, dass ich den Leuten erkläre, was kann GitLab in den Enterprise Varianten, welche Features sind da drin in Premium, Ultimate Security, Compliance und hast du nicht gesehen. Und da habe ich halt vor allem alles aus dem deutschsprachigen Raum, Kunden plus zwei tausend Mitarbeitende mit denen gesprochen. Und da bekommt man halt einen sehr, sehr guten Überblick darüber, wie der technische Zustand der Software Delivery Lifecycle in den ganzen verschiedenen Firmen sind, Also Mittelstand bis Konzern. Und es ist immer super spannend, wenn man dann die Außendarstellung von den verschiedenen Firmen sieht, was sie so posten, was sie sagen öffentlich und wenn man dann mit den Firmen spricht und dann mal tatsächlich mal sieht, wie sie arbeiten. Es ist ein himmelweiter Unterschied."
+        },
+        {
+            "start": 639140,
+            "end": 658280,
+            "speaker": "B",
+            "text": "Und was würdest du sagen, ist es gut, ist es schlecht? Luft nach oben gibt es immer. Siehst du einen Unterschied zwischen Konzern und Mittelstand? Ich persönlich habe die Erfahrung gemacht, dass mancher Mittelstand durchaus unterschätzt wird, auch wenn es um die Fähigkeiten geht, also um die technischen Fähigkeiten. Wie würdest du da auf Deutschland blicken?"
+        },
+        {
+            "start": 658280,
+            "end": 690250,
+            "speaker": "C",
+            "text": "Natürlich, ja, also ich würde eher sagen, dass der Mittelstand ist eher besser, schneller, effizienter unterwegs als die Großkonzerne. Mit Großkonzernen meine ich dann halt mit mehreren tausenden Mitarbeitenden, als der Mittelstand halt auch eben. Hat natürlich auch ein bisschen strukturelle Vor und Nachteile, beides jeweils, so dass man dann halt auch sieht, okay, große versuchen dann manchmal auch das Rad neu zu erfinden. Mittelstand kann dann doch ein bisschen agiler sein, weil die da nicht so viele Abhängigkeiten zu irgendwelchen anderen Tools, wo sie was anschließen müssen, sein müssen."
+        },
+        {
+            "start": 690250,
+            "end": 697570,
+            "speaker": "B",
+            "text": "Wenn du jetzt eine Prozentzahl sagen müsstest von dem, was du gesehen hast, wie viel Prozent der Firmen deployen am Freitag"
+        },
+        {
+            "start": 698610,
+            "end": 701330,
+            "speaker": "C",
+            "text": "eigentlich, muss man die Frage stellen, wer deployed überhaupt regelmäßig."
+        },
+        {
+            "start": 703090,
+            "end": 704850,
+            "speaker": "B",
+            "text": "Okay, wir müssen weiter unten anfangen."
+        },
+        {
+            "start": 705890,
+            "end": 750670,
+            "speaker": "C",
+            "text": "Genau, ja, deswegen, das ist so ein bisschen, also aus meinen alten Rollen habe ich halt meistens auch immer nur mit den Teams geredet, die schon relativ modern unterwegs waren. Aber wenn man die dann abgefrühstückt hat, dann spricht man oder sieht man dann halt die Teams, die halt nicht so sind, nicht so modern sind, wo schon der neueste heiße Scheiß quasi mit drin ist, was man so von Konferenzen sieht, Weil wenn man mal auf Konferenzen geht, dann sieht man immer, der macht hier mit Feature Flex und echtes CI CD mit hunderten Deployments pro Tag und hast du nicht gesehen und dann merkt man eigentlich, naja, es ist ein grüne Wiese Projekt, es ist ein kleines Projekt innerhalb von einer größeren Firma vielleicht. Und wenn man sich dann aber die eigentlichen Cash Cows ansieht, da sieht es wieder ganz anders aus."
+        },
+        {
+            "start": 751300,
+            "end": 764020,
+            "speaker": "A",
+            "text": "Ist das nicht auch irgendwie Survivorship Bias? Im Endeffekt heuert man ja dich an oder Berater, wie kann ich Freitags deployen, wenn ich Freitags nicht deploye? Deswegen war ja eigentlich die Frage von Wolfgang ja eigentlich mehr oder weniger schon eine Fangfrage."
+        },
+        {
+            "start": 764580,
+            "end": 768420,
+            "speaker": "C",
+            "text": "Ja, vor allem ist das halt eh schwierig, weil es kommt halt sehr stark auf die verschiedenen Teams an."
+        },
+        {
+            "start": 768420,
+            "end": 777140,
+            "speaker": "A",
+            "text": "Ja, und auch in einem Konzern. Im Konzern hat ja nicht nur zwei Teams oder eine Applikation, sondern eine vierstellige Anzahl an Applikationen hier oft eben vor"
+        },
+        {
+            "start": 777140,
+            "end": 786400,
+            "speaker": "C",
+            "text": "allem auch diese Zahlen, die man so von Netflix, Amazon und Co. Hört. Wir machen fünf tausend Deployments oder sowas pro Tag. Ja, okay, aber was ist das jetzt, wenn du jetzt jeden Microservice mitzählst?"
+        },
+        {
+            "start": 786480,
+            "end": 802880,
+            "speaker": "A",
+            "text": "Ja, aber ich meine, große Zahlen beeindrucken ja immer. Lass uns mal ganz kurz in diesen Mythos Freitags Deployment einsteigen. Wir haben das jetzt so eigentlich schon angesprochen, als wäre das gang und gäbe und jeder wüsste, was denn eigentlich Problem ist. Aber warum ist Freitags ein Problem beim Deployment?"
+        },
+        {
+            "start": 803280,
+            "end": 842380,
+            "speaker": "C",
+            "text": "Vielleicht sollte ich auch noch ein bisschen erzählen, warum ich die Firma überhaupt so genannt habe. Also da sind mehrere Sachen, die so ein bisschen zusammenspielen. Ich habe überhaupt einen Firmennamen gesucht und dann war natürlich irgendein lustiges auch schön, aber dabei sollte auch irgendwo eine Message mit drin sein. Das Schöne ist, wenn man die Firma Friday Deployments nimmt, die sagt jeder sofort, was er darüber denkt, was auch immer gute Gesprächseinstiege sind, weil dann kann man das immer so schön challengen, weil die meisten, mit denen ich rede oder die mir ihre Meinung sagen, sagen wir so, die sagen dann, oh Gott, das würde ich doch nie tun, weil ich will doch Wochenende haben. Und das sind meistens auch die Leute, die Bereitschaft haben am Wochenende oder halt die typischen Admins sind."
+        },
+        {
+            "start": 842840,
+            "end": 857560,
+            "speaker": "A",
+            "text": "Aber ich frage mich gerade, wie viele Applikationen failen vier und zwanzig Stunden nach dem Deployment und nicht sofort oder beziehungsweise in sehr naher Zukunft. Also was heißt das denn, wenn ich Freitag morgens um acht oder um neun deploye, dann habe ich ja eigentlich noch theoretisch den ganzen Arbeitstag zu fixen."
+        },
+        {
+            "start": 857560,
+            "end": 858080,
+            "speaker": "C",
+            "text": "Richtig."
+        },
+        {
+            "start": 858080,
+            "end": 894730,
+            "speaker": "A",
+            "text": "Und jetzt kommt die Ausrede oder vielleicht auch Dein Troll Hack, ich nenne die Firma so und jeder was er denkt, finde ich genial. Die gehen ja alle davon aus, wie viel ihr Wochenende haben samstags. Das bedeutet, okay, du hast ein Delay, klar, vielleicht hast du irgendwie einen Batch Job oder sowas oder irgendwelche Zeitintervalle, das verstehe ich ja alles. Aber ich rede jetzt mal einfach von einer Webapplikation oder ähnliches. Ich rede jetzt nicht von irgendeiner iOS App, wo du den Rollout ja eh nicht kontrollieren kannst, zumindest wenn du keine Feature Activation drin hast. Da gibt es ja auch Hacks. Aber wie oft ist das denn wirklich ein Problem, dass du versetzte Outages hast?"
+        },
+        {
+            "start": 894730,
+            "end": 903560,
+            "speaker": "C",
+            "text": "Ja, vor allem ist auch die Frage, die nächste Frage, macht das einen Unterschied dann, ob es ein Montag oder ein Freitag ist oder deinen Dienstag, wenn es eh mitten in der Nacht passiert?"
+        },
+        {
+            "start": 904200,
+            "end": 916280,
+            "speaker": "A",
+            "text": "Ja, Moment mal, aber wenn du jetzt vier und zwanzig Stunden versetzt hast, dann ist ja auch die Darfst du überhaupt noch Donnerstag Mittag deployen? Dann ist ja Donnerstag vor Mittagessen ja eigentlich schon Ende, oder?"
+        },
+        {
+            "start": 916360,
+            "end": 927240,
+            "speaker": "C",
+            "text": "Ja, frage gerne die fünf Fragen oder fünf why Fragen, wo man fünfmal fragt, warum oder wir simulieren das mal. Sag mal, Andi, die pleuste am Freitag."
+        },
+        {
+            "start": 927500,
+            "end": 930620,
+            "speaker": "A",
+            "text": "Nein, warum? Ich habe Angst, dass es Samstag kaputt geht."
+        },
+        {
+            "start": 930780,
+            "end": 938060,
+            "speaker": "C",
+            "text": "Und was machst du, wenn du an einem Donnerstag deploys, Dann fixe ich es am Freitag. Ja, aber warum hast du Angst, dass was kaputt geht?"
+        },
+        {
+            "start": 938060,
+            "end": 942460,
+            "speaker": "A",
+            "text": "Ja, da könnte ja immer nur ein Commit sein, den ich übersehen habe in einem Bug."
+        },
+        {
+            "start": 942620,
+            "end": 944860,
+            "speaker": "C",
+            "text": "Ja, und warum testest du das nicht ordentlich vorher?"
+        },
+        {
+            "start": 944860,
+            "end": 962400,
+            "speaker": "A",
+            "text": "Ja, das geht halt immer so weiter. Also ich meine, theoretisch kann man ja auch vielleicht sogar sagen, okay, warum schickt man neue Features überhaupt ohne Feature Flag und dann einfach ohne Deployment aktivierbar oder nicht aktivierbar zu machen? Aber ja, ich frage mich, ist das Ganze überhaupt ein Technikproblem?"
+        },
+        {
+            "start": 962960,
+            "end": 963840,
+            "speaker": "C",
+            "text": "Ja und nein."
+        },
+        {
+            "start": 964000,
+            "end": 967840,
+            "speaker": "A",
+            "text": "Was heißt ja und nein? Wann ist es ein Technikproblem? Fangen wir mal so an."
+        },
+        {
+            "start": 968160,
+            "end": 1080140,
+            "speaker": "C",
+            "text": "Das eine Ding ist, was man häufig auf diesen Konferenzen, sage ich jetzt mal so klassisch hört, so richtet man das ein. Wir haben hier Kubernetes und hast du nicht gesehen. Worauf ich aber gerade auch noch hinaus will, ist, naja, es kommt ja auch ein bisschen darauf an, wie oft du überhaupt deploys. Wenn du alle drei Monate deploys, dann macht es vielleicht sogar mehr Sinn, freitags zu deployen, auch wenn viele sagen nein, weil du dann das Wochenende hast, das zu fixen, je nachdem natürlich welche Kunden da drauf sind. Aber grundsätzlich ist es eigentlich kein großes technisches Problem, weil du das kannst vieles ja lösen und mit Technik erschlagen. Kommen wir gleich ja auch wahrscheinlich noch zu. Ich sag nur mal so Feature Flex, Blue Green Deployments, Canary Deployments, ordentliches Monitoring, ordentliche Staging Umgebung, ordentliche Tests vorher auch laufen zu lassen. Da gibt es diverse Sicherheitsnetze, die man machen kann. Aber nur weil es technisch richtig funktioniert, heißt es ja immer noch nicht, dass du bzw. Die Leute in dem Team sich auch trauen, das entsprechend auch durchzuführen. Ich bringe mal ein klassisches Auto Beispiel. Wir lieben noch Autos. Ich bin, ich hatte bis vor drei Monaten kein eigenes Auto gehabt. Ich bin wenn dann den zwanzig Jahre alten Auto auf meinen Vater gefahren, also so ein dummes Auto und dann hatte ich dieses neue Auto und da gibt es dann ja die tollen neuen Features. Also für mich waren sie dann neu mit Spurhalteassistenz, mit Abstandhalter, das automatisch bremst, wenn du zu nahe kommst und nicht selbst bremst und Tempomat und so ein Kram. Und so ein bisschen so ähnlich ist das auch mit Freitags Deployments, weil da muss ich tatsächlich auch drüber nachdenken, als ich dann im Auto saß und ich dann so als eigentlich müsste jetzt das Auto gleich bremsen und sollte nicht auf das Vorderauto auffahren. Aber ich hatte ja im Kopf ich weiß, dass es technisch funktioniert. Ich habe im Kopf aber noch nicht dieses Vertrauen gehabt, dass es tatsächlich funktioniert, weil ich noch nicht diese Erfahrung hatte, ob es tatsächlich funktioniert."
+        },
+        {
+            "start": 1080220,
+            "end": 1101660,
+            "speaker": "A",
+            "text": "Aber was heißt das jetzt? Heißt das, dass du einfach Hoffnung zur Strategie machst und hoffentlich funktioniert dann das automatische Bremsen in deinem Auto und wenn nicht, dann fährst du halt drauf. Also ich meine Hoffnung ist in der Regel keine Strategie und einfach YOLO, irgendwelche Sachen zu machen in der Hoffnung, dass es dann funktioniert, ist halt auch eigentlich nicht so smart, oder?"
+        },
+        {
+            "start": 1101980,
+            "end": 1121429,
+            "speaker": "C",
+            "text": "Genau. Und da habe ich natürlich dann auch geguckt, wie kann ich das testen, ohne dass es brenzlig wird. Ich will es ja nicht auf der Autobahn mit ein hundert fünfzig machen, sage ich jetzt mal, und gucken, ob der Abstand noch richtig eingehalten wird, sondern eher, wenn du in der Stadt fährst mit dreiig und gucken so, okay, bleibt er jetzt auch wirklich stehen an der Ampel"
+        },
+        {
+            "start": 1121429,
+            "end": 1124349,
+            "speaker": "A",
+            "text": "schön in der Spielstraße richtig schön drängeln."
+        },
+        {
+            "start": 1124989,
+            "end": 1145790,
+            "speaker": "C",
+            "text": "Genau. Und dadurch bekommst du ja schon Gefühl und dann arbeitest du dich ja so langsam voran, dass du merkst, okay, wie ist das Bremsverhalten, ist das jetzt schneller später und so weiter. Und genau das Gleiche hast du dann ja auch mit Freitags oder Deployments überhaupt. Ich meine, eigentlich ist es ja egal, um welchen Tag es sich handelt. Die meisten trauen sich überhaupt nicht zu deployen, egal welcher Tag es ist."
+        },
+        {
+            "start": 1146270,
+            "end": 1196100,
+            "speaker": "B",
+            "text": "Aber bevor wir überhaupt das testen können, in die Spielstraße fahren können. Ich bin übrigens kein großer Fan von diesen automatischen Autodingern. Ich hab selber gerade mal ein Auto gekämpft, weil das immer gebremst hat bei einer Straße, die ich sehr gut kenne, bergab am Berg und da war noch Platz, aber dieses Auto wollte einfach nicht um die Kufe fahren, weil dieser Abstandsassistent gedacht hat, es ist keine Chance da runterzukommen. Aber egal, noch mal ein anderes Thema. Aber wenn man das mal jetzt so genau betrachtet, diese Features von einem modernen Auto, also was brauche ich denn für das Freitags Deployment auf der technischen Seite, diese Sicherheitsnetze oder die Sicherheitsnetze oder die Features, was benötige ich da auf der technischen Seite, dass ich mir überhaupt mal drüber trauen kann und dass ich technisch bemächtigt bin, überhaupt Freitags Deployments machen zu können."
+        },
+        {
+            "start": 1196180,
+            "end": 1229810,
+            "speaker": "C",
+            "text": "Ja, ich meine, das erste ist halt überhaupt eine ordentliche CI CD Pipeline auch zu haben, sowohl die Pipeline selbst als auch Monitoring dahinter natürlich für den operativen Betrieb. Und da würde ich jetzt erst mal angehen und gucken, okay, was kann ich jetzt machen, damit das Ganze überhaupt vorangeht, damit ich da ein besseres Gefühl für bekomme, wie zum Beispiel eine Staging Umgebung. Also kommt immer darauf an, von wo man gerade startet, wenn man gerade alle halbe Jahr deployed, dann ist erstmal gut, eine stabile Staging Umgebung zu haben, wo man hin auch testen kann und ein Gefühl dafür bekommen kann. Selbst das trauen sich ja viele auch schon nicht."
+        },
+        {
+            "start": 1230130,
+            "end": 1249910,
+            "speaker": "B",
+            "text": "Wenn du jetzt sagst, gute CI CD Pipeline, was ist denn für dich gut? Also du hast es so hingeworfen, aber ich bin mir nicht sicher, ob jeder so CI CD Pipeline, ob das so klar ist, Was heißt Deployment überhaupt? Und ich habe ja auch nicht in jeder Branche vielleicht so einfaches Deployment. Hast du da irgendwelche Metriken oder was ist für dich state of the art? Sagen wir es mal so."
+        },
+        {
+            "start": 1250140,
+            "end": 1295960,
+            "speaker": "C",
+            "text": "Ich würde es auch gar nicht zu sehr auf die Technik beschränken, sondern vielmehr auf Prozesse und auch auf die People drauf gucken, weil die beste Technik bringt halt nichts, wenn du die Prozesse und den Mindset halt auch nicht drin hast. Also klar, eine ordentliche CI CD Pipeline wäre dann zum Beispiel, naja, das Projekt wird auf allen Ebenen ordentlich getestet, also Unit Tests, Integration Tests und so weiter. Dann wird es vielleicht noch auf Staging Umgebungen deployed, getestet, möglichst nah an Realität, dann vielleicht noch direkt auf Production Ebene. Und da kann man ja auch noch mal unterscheiden, machen wir ein Delivery oder machen wir ein Deployment, weil wofür steht CI CD? Das steht entweder für Deployment oder für Delivery, was ja auch noch mal ein gewisser Unterschied ist."
+        },
+        {
+            "start": 1296120,
+            "end": 1306470,
+            "speaker": "B",
+            "text": "Kannst du den Unterschied mal erklären für alle, die das nicht wissen? Der Andi hat es mir ja schon hundertmal erklärt und ich verwechsle es meistens immer noch, aber vielleicht hast du eine bessere ESL jetzt für mich."
+        },
+        {
+            "start": 1306470,
+            "end": 1338000,
+            "speaker": "C",
+            "text": "Also ich verwechsel das manchmal dann auch, Aber meine Eselsbrücke ist die Waschmaschine, weil du kannst ja eine Waschmaschine geliefert bekommen, also eine Delivery. Das heißt aber noch nicht, dass du da Load drauf packst, indem du da Wäsche reinpackst. Wenn es deployed ist, dann ist sie auch angeschlossen und dann landet da auch eine gewisse Last drauf, also deine Wäsche. Und dann kannst du auch so schöne Sachen machen wie Canoe Deployments, dass du dann erstmal anfängst und sagen, ich packe jetzt erstmal nur zwanzig Prozent der Wäsche in die neue Waschmaschine und gucke, ob das auch alles sauber ist, bevor ich die alte wieder runter nehme."
+        },
+        {
+            "start": 1338000,
+            "end": 1359360,
+            "speaker": "B",
+            "text": "Das ist mal eine sehr schöne Eselsbrücke. Vielen Dank. Ich habe jahrelang Andi zugehört und Andi hat es mir immer probiert zu erklären. Jetzt habe ich mal eine gute Eselsbrücke. Wenn das Amazon Paket angekommen ist, heißt es noch nicht, dass es in Verwendung ist. Der Andi kennt ihr selber, der hat immer zwanzig Amazon Pakete rumliegen oder irgendwelche iot Devices, die seit fünf Jahren nicht im Einsatz sind. Das ist eine gute."
+        },
+        {
+            "start": 1360400,
+            "end": 1382320,
+            "speaker": "C",
+            "text": "Ich meine, ich habe da ja gerade auch schon Blue Green Canoe Deployments mit reingeworfen in die Waschmaschine oder in das Waschmaschinen Setup. Aber vom Prinzip ist es ja genau du kannst Delivery dafür machen, dass es schon irgendwo läuft, aber doch kein Traffic dahin schicken. Und das kannst du halt technisch alles umsetzen, aber es heißt immer noch nicht, dass du es dann tatsächlich auch an einem Freitags ausrollst, in Betrieb nimmst."
+        },
+        {
+            "start": 1382320,
+            "end": 1387480,
+            "speaker": "B",
+            "text": "Und was hat es für einen Vorteil, wenn ich jetzt das irgendwo schon rumliegen habe, aber kein Traffic draufkommt?"
+        },
+        {
+            "start": 1387480,
+            "end": 1504060,
+            "speaker": "C",
+            "text": "Also man weiß zumindest, dass der technische Teil vom Deployment, also dass das Software Paket auf dem Zielsystem draufkommt, als auch startet, dass das zumindest funktioniert. Da scheidet es bei vielen ja schon, weil ich hatte das bei noch länger her, ich glaube das war zwei tausend achtzehn, neunzehn rum, da war ich angestellter Consultant und da war ich bei so einer Firma, die haben unter anderem einen Online Job betrieben und da hatte ich mich auch um so CI CD Krams gekümmert, deswegen kenne ich diesen Kontext. Und das war halt ein sehr großer, monolithischer Jenkins Server. Und da war zum Beispiel das Problem, dass sie da keine Feature Flex genutzt haben und dieser Jenkins historisch gewachsen ist, erstmal jetzt auch egal, was die Technik ist, aber da gab es dann halt diesen Shop, der hatte dann Fernsehwerbung geschaltet für Mittwoch, sieben uhr abends und genau dann sollten die neuen Angebote live gehen. Und was ich jetzt vor allem heute sagen würde, ist, du machst das Deployment irgendwann über den Tag, mittwochs über den Tag und machst dann irgendwann nur noch den Feature Flag zum, klickst du dann an, damit es dann halt aktiviert wird und alles ist gut und du hast kein oder vielleicht sogar automatisiert, dass der Feature Flag dann halt um sieben uhr abends aktiv geht und dann sind die Angebote halt online und du kannst das schon für einzelne User, für dich selbst, also die internen User schon mal testen, bevor sieben uhr abends ist, Was war dort das Problem? Das haben sie halt nicht gemacht, Da musste der Jenkins zwangsläufig um sieben uhr laufen, da durftest du den Tag über schon keine Updates oder sonst was, irgendwelche Plugin Updates machen und dann hat was nicht funktioniert und dann läuft aber schon die Kampagne über Social Media, über Fernsehen und hast du nicht gesehen und dann sind aber die Angebote nicht online und das ist dann natürlich finanziell nicht so geil, um es freundlich auszudrücken. Und da fragt man sich dann doch schon, naja, woran hat es gelegen? Am Ende fragt man sich immer, woran es gelegen hat. Und viele Sachen lassen sich halt technisch dann auch schon ordentlich umsetzen, machen viele danach auch nicht."
+        },
+        {
+            "start": 1504220,
+            "end": 1554040,
+            "speaker": "A",
+            "text": "Jetzt packst du natürlich schon eine ganze Menge technische Sachen aus. Feature Flex, Blue Green Deployments, Delivery versus Deployment, also das Paket da liegen haben und Co. Und du sprichst da gerade so, von, als wäre das normal. Bei großen Applikationen ist das vielleicht normal. Jetzt hatten wir die Episode auch damit begonnen. Wie sieht es denn eigentlich mit Deployments generell beim deutschen Mittelstand aus? Also wenn ich mal so auf Meetups unterwegs bin, dann über Observability spreche, Feature Flags und Co. Dann bekomme ich oft Gespräche zu hören, so ja, ich wünschte, ich hätte Zeit, das alles zu implementieren oder das wäre total toll. Also ist die Industrie, ist die deutsche Industrie überhaupt so weit oder springen wir gerade irgendwelchem amerikanischen Hype und irgendwelchen Büchern hinterher und irgendwelchen Netflix Talks?"
+        },
+        {
+            "start": 1554200,
+            "end": 1630940,
+            "speaker": "C",
+            "text": "Ja, ich würde sagen, für den Durchschnitt hängt man da deutlich hinterher. Also dadurch, dass ich ja bei GitLab gesehen habe, wie vor allem die guten DevOps Teams quasi arbeiten bei den Deutschen oder aus dem Dach Raum Deutschland, Österreich, Schweiz, gleichzeitig aber auch den Kontakt hatten zu den Kollegen und Kolleginnen, die in den USA an der Westküste, also Silicon Valley, Seattle und hast du nicht gesehen, arbeitet. Das ist eine ganz andere Liga technisch. Da redet man halt auch auf der technischen Ebene auf ganz anderem Niveau, als das im Dachraum oder Euro Europa generell der Fall ist. Und man merkt halt schon, dass Mindset ist in Silicon Valley, aber auch Seattle, die Ecke oder US Westküste halt schon was ganz anderes von oben auch gesehen als in Europa mit allen Vor und Nachteilen. Also ich will jetzt nicht sagen, dass das eine Toll gut ist und das schlecht ist, aber man merkt halt schon, der deutsche Mittelstand ist ja häufig dann ja auch irgendwie Maschinenbau oder halt Industrie, klassische Industrie und jetzt nicht unbedingt so die typischen IT Buden und die verstehen aber noch nicht, dass es eine IT Bude ist. Und das merkt man dann halt schon in Softwarequalität und wie das Ganze auch ausgerollt wird an die Kunden."
+        },
+        {
+            "start": 1631180,
+            "end": 1656760,
+            "speaker": "A",
+            "text": "Ich mache immer gerne den Unterschied, wie deine Firma IT betrachtet als Kostenstelle oder Innovationstreiber. Du hast ja gerade mehr oder weniger das beschrieben als Kostenstelle, aber du hast schon den Maschinenbau angesprochen. Macht es eigentlich einen Unterschied, wenn wir von der Technik und bei, ich sag mal, Friday Deployments eigentlich über Bank Software, einem internen Tool, eine Mobile App, einer Web App oder einem Embedded System reden oder ist das eigentlich alles das Gleiche?"
+        },
+        {
+            "start": 1656760,
+            "end": 1762070,
+            "speaker": "C",
+            "text": "Naja, kommt natürlich darauf an, in welchem Blickwinkel wir jetzt drauf gucken. Wenn ich damit kommen wir wieder zurück zu Leuten, die mir ihre Meinung sagen zu Freitags Deployments. Es gibt halt auch welche, die Ich darf nur freitags nachmittags deployen und dann ist oh, endlich mal ein vernünftiger. Aber dann, wenn man da ein bisschen weiter nachfragt, dann hört man auch sehr schnell, warum. Im Bankenumfeld ist es teilweise so, naja, am Wochenende, da laufen ja keine Bankgeschäfte im klassischen Sinne ab. Das heißt, wenn da mal irgendwelche Systeme down sind, ist das nicht so schlimm. Also klar ist es jetzt für die Mitarbeitenden doof, die das Ganze verwalten müssen, weil sie halt wochenend arbeiten müssen, aber dafür kriegen sie auch Ausgleichstage oder Überstunden oder sowas, behaupte ich jetzt mal. Aber es betrifft jetzt nicht so dann den typischen Kern von den Endnutzern, weil wenn du am Wochenende, ob du jetzt am Wochenende mal eine Stunde guckst, tendenziell machst du halt eher weniger deine Bankgeschäfte. Andere Sache, ich habe ja viel mit den Leuten zu tun, die GitLab betreiben und da ist es dann auch naja, wenn das Ding halt offline ist und das ist ja wiederum noch mal was anderes, weil es ist nicht die eigene Software. Man muss ja auch noch unterscheiden, reden wir jetzt von unserer eigenen Software, die selbst inhouse entwickelt wird, wo wir volle Kontrolle theoretisch haben, wie es getestet wird, wo es getestet wird und wann wir es live schalten oder ist es eine Fremdsoftware wie GitLab, was wir dann halt eben ausrollen müssen in der eigenen Infrastruktur, wo man eventuell nicht die Edge Cases kennt. Und da ist es dann häufig auch so, naja, wir machen das lieber abends oder Freitagabends zum Beispiel, meint halt einer, weil da stört es halt nicht die Entwickler und Entwicklerinnen, die wir in der Firma haben, sondern halt maximal die fünf Leute, die da gerade das Update fahren. Wenn es halt ein bisschen länger dauern sollte, wenn man es tagsüber macht, dann kann es halt sein, weil es eine fremde Software ist, dass es dann doch mal eine halbe Stunde offline ist und dann können halt eine halbe Stunde lang ein tausend Leute nicht arbeiten, in der"
+        },
+        {
+            "start": 1762070,
+            "end": 1788220,
+            "speaker": "A",
+            "text": "Hoffnung, dass diese ein tausend Leute alle in derselben Zeitzone sind und nicht weltweit arbeiten, weil dann hast du nämlich wieder dieses andere Problem, Aber wir sind ja jetzt schon wieder bei den Prozessen, so nach dem Motto, ich darf ja nur Freitagabends deployen wegen einer Bank oder ähnliches. Welche Prozesse sind dir denn schon mal untergekommen, die Freitags Deployments vielleicht sehr schwierig machen oder die es gerade erst erlauben, dass du nur Freitags Deployment."
+        },
+        {
+            "start": 1788770,
+            "end": 1903420,
+            "speaker": "C",
+            "text": "Ja, ich würde gerne noch einen Schritt zurückgehen, weil wir hatten die Begriffe zwar schon genannt, aber ich rede halt gerne von People over Processes over Tools. Das kommt ja aus dem ganzen DevOps Movement halt auch und das ist auch großes Thema bei mir in meinem DevOps Buch. Da ist es halt schon so, die meisten haben tendenziell eher die Technik unter Kontrolle, aber nicht unbedingt die Prozesse. Und die People ist dann das nächste Problem. Bevor wir jetzt auf die Prozesse gucken, sollten wir natürlich gucken, was haben wir als Technik. Und das hatten wir ja gerade schon gut diskutiert, aber das ist halt so ein bisschen so, naja, du kaufst dir ein schnelles Auto, ein Formel eins Auto und dann merkst du aber, und das war effektiv mein Gefühl, als ich bei GitLab in diesem Sales Kosmos effektiv dann halt auch war, GitLab positioniert sich selbst als DevOps Plattform, mit uns kannst du schneller, sicherer Software entwickeln und deployen, aber es hilft halt nicht, wenn du dein Formel eins Auto hast, aber keine Rennstrecke hast du, wo wir bei den Prozessen sind, weil wenn die Straße halt voll mit Schlaglöchern ist, das ist ein Problem. Und das sieht man halt häufig bei Prozessen und das geht aber auch sehr stark in diese People Schiene mit rein. Mein klassisches Beispiel sind irgendwelche Prozesse, die sagen, irgendein Vorgesetzter muss einen Change abdecken. Das ist ein Prozess, hat aber auch Einflüsse auf die People, weil was ich zum Beispiel mal gehört habe von einer Freundin, die Entwicklerin ist, sie meinte dann, naja, Ra muss das irgendwie abnicken. Dann nickt es zwar jemand ab, der aber an der Implementierung so gar nichts gemacht hat und auch überhaupt nicht einschätzen kann, ist das jetzt gut oder ist das schlecht. Und gleichzeitig muss man aber als Entwickler oder als Entwicklerin dann auch entsprechend diese Changes verantworten. Da kommt halt die People und die Prozessthema zustande, weil wenn jetzt erstmal für einen Change, der ausgerollt werden muss, drei Leute von weiter oben das approven müssen, bis zum Vorstand hoch, dann ist das für einen Entwickler auch irgendwie so, die Verantwortung liegt weiter oben."
+        },
+        {
+            "start": 1903900,
+            "end": 1936600,
+            "speaker": "B",
+            "text": "Und warum macht man überhaupt so ein Approval? Woher kommt das? Weil wie du richtig sagst, die Leute haben ja meistens wenig Ahnung, was eigentlich in dem Change drinnen ist, außer jetzt auf High Level. Aber sonst können die haben ja keine Ahnung über Architektur, über den aktuellen Zustand und sagen wahrscheinlich sowieso immer, ja, außer wenn sie gerade wissen, vielleicht wir haben gerade eine super wichtige Kampagne und sagen, okay, jetzt mach kein Update, weil will nichts riskieren oder so. Aber im Grundsätzlichen wird es ja wahrscheinlich immer durchgewunken. Also woher kommt diese Angst überhaupt vom Management?"
+        },
+        {
+            "start": 1936680,
+            "end": 1966360,
+            "speaker": "C",
+            "text": "Ich würde sagen, das ist so ein bisschen kulturell auch. Ich würde sagen, so die Deutschen oder Europäer sind eher, naja, wir gucken uns das erst mal ein bisschen an und machen ein bisschen langsamer und nicht dieses Disruptive aus den USA jetzt quasi so, ach komm, wir machen jetzt einfach mal. Und gleichzeitig merkt man ja doch schon in Deutschland, in Europa ja schon eine gewisse Hierarchie. Weiter oben ist die Stimme von weiter oben ist wichtiger als die von weit unten, auch wenn es faktisch fachlich egal ist."
+        },
+        {
+            "start": 1966600,
+            "end": 2003070,
+            "speaker": "A",
+            "text": "Naja, also ich mag es gerne diese Prozesse zu hinterfragen. Hierarchie hin oder her. Du stellst eine Fachkraft ein, er oder sie programmiert. Du stellst diese Fachkraft entweder ein, weil du keine Zeit dafür hast und deswegen Hilfe brauchst. Vielleicht kannst du ja selbst programmieren, wer weiß das schon. Oder du stellst die Fachkraft ein, weil du es gerade nicht kannst. Du holst dir also neue Skills ins Haus und dann proof du immer noch etwas, was du nicht verstehst. Also das macht ja keinen Sinn, denn du bist ja in der Hierarchie drüber, weil du ja schon automatisch mehr Verantwortung trägst oder durch deine Position trägst du ja mehr Verantwortung."
+        },
+        {
+            "start": 2006270,
+            "end": 2008100,
+            "speaker": "C",
+            "text": "Ja, ich bin ganz bei dir, aber"
+        },
+        {
+            "start": 2008100,
+            "end": 2031140,
+            "speaker": "B",
+            "text": "jetzt lass uns mal davon dem Negativen und dem Blaming wegkommen. Wie ändere ich denn das Ganze? Weil das war in der Vergangenheit so Und es ist ja immer so dieses schöne Argument, das ist historisch so gewachsen, mag sein, aber wie ändern wir das Ganze jetzt? Also wie bringst du ein Management jetzt dazu, dann auch zu sagen, okay, jemand anderer darf entscheiden. Also wie bekomme ich diesen Entscheidungsprozess dann weg?"
+        },
+        {
+            "start": 2031140,
+            "end": 2066550,
+            "speaker": "C",
+            "text": "Wirklich? Ja, das ist schwierig. Grundsätzlich ist es schwierig. Auf Prozessebene kann man das ein bisschen kann man das schotten, wenn man das rein auf den Prozess betrachtet. Aber häufig hängt halt die Technik und die People, die Menschen halt auch mit dazu. Du hattest ja Blaming, das Wort Blaming schon verwendet. Das erste ist dann halt auch eben, dass man so eine Blameless post mortem zum Beispiel macht, dass wenn was kaputt geht und das muss jetzt, ist ja egal, an welchem Tag oder wann auch immer was kaputt geht, sowohl als, normalerweise, im Englischen sagt man ja immer individual contributor. Ich weiß gar nicht, wie man das auf Deutsch sagt oder bei deutschen Firmen"
+        },
+        {
+            "start": 2066550,
+            "end": 2072190,
+            "speaker": "B",
+            "text": "sagt, Das ist gute Frage. Wir sagen auch individual contributor, das ist einfach Mitarbeiter, keine Ahnung."
+        },
+        {
+            "start": 2072190,
+            "end": 2097330,
+            "speaker": "C",
+            "text": "Ja, also Personen ohne Führungsverantwortung, die halt Dinge tun, wenn die Fehler machen, was passiert dann? Sowohl für einen selbst als auch für die Management Struktur weiter oben. Also Andi, wenn du, warte, du bist ja Engineering Manager, wenn einer deiner Leute einen Fehler macht, einer mehrere, ist erst mal egal. Was heißt das für dich, Weil du musst ja auch weiter nach oben geradestehen eventuell."
+        },
+        {
+            "start": 2097410,
+            "end": 2105730,
+            "speaker": "A",
+            "text": "Ja, ja. Also jetzt kann ich dir die beste Antwort geben. Der wird natürlich gefeuert, so wie es gehört."
+        },
+        {
+            "start": 2105810,
+            "end": 2106930,
+            "speaker": "C",
+            "text": "Das wollte ich nicht wissen."
+        },
+        {
+            "start": 2107810,
+            "end": 2172510,
+            "speaker": "A",
+            "text": "Nein, ich sehe das oder ich habe mal was Schönes gehört und das finde ich auch wirklich, wirklich immer noch schön. Und ich glaube, das treibt auch diese ganze Antwort in die richtige Richtung. Das ist jetzt der wertvollste Mitarbeiter, weil diese Person wird diesen Fehler nie wieder machen. Nicht, weil ich dann mit dem Stock komme, um draufzuschlagen, sondern weil man ungern in der Situation ist. Denn wenn da ein Ausfall ist, dann hat man Adrenalin im Blut oder im Körper und dann sind alle aufgeregt und allem drum und dran. Und im Endeffekt interessiert es ja gar nicht, wer es war. Denn so ist das bei uns zumindestens. Wenn du als Mensch in der Lage bist, diesen Fehler zu machen, dann fehlt da irgendwas. Dann ist entweder der Prozess kaputt oder da fehlt Sicherheitsnetz oder auch im dümmsten Falle ist einfach nur eine Anleitung falsch geschrieben. Das ist so nicht der beste Weg, das zu fixen, die Anleitung zu beheben, weil man kann ja immer vertippen oder ähnliches. Aber das ist wenigstens ein Schritt in die richtige Richtung. Und ich habe halt, wie gesagt, irgendwann mal, ich glaube, die steht sogar auch irgendwo in einem Buch, in der Phoenix"
+        },
+        {
+            "start": 2172510,
+            "end": 2173670,
+            "speaker": "C",
+            "text": "Story, Wie heißt das denn?"
+        },
+        {
+            "start": 2173670,
+            "end": 2183349,
+            "speaker": "A",
+            "text": "Unicorn Phoenix Story, Wie heißt denn dieses Phoenix Project. Phoenix Project, wer ist da drin? Naja, wie dem auch sei, das ist auf jeden Fall der wertvollste Mitarbeiter, weil der wird diesen Fehler nie wieder machen."
+        },
+        {
+            "start": 2183349,
+            "end": 2314890,
+            "speaker": "C",
+            "text": "Genau. Und das ist auch ein guter Punkt zu eurer Erfolg aber Seniorität, die ihr vor einer Weile veröffentlicht habt. Aber das ist auch die Frage, wie lernt man dazu? Und man lernt ja in der Regel ja dazu, wenn man Fehler macht. Und Fehler machen muss ja nicht unbedingt auf Pro sein und es muss nicht gleich sein. Die Datenbank ist gelöscht. Es reicht ja schon, wenn Fehler auf Testumgebungen oder beziehungsweise Staging Umgebungen passieren und man dafür dann auch ein besseres Gefühl für die Plattform bekommt. Ich war früher halt auch, das ist jetzt so zwei tausend siebzehn rum, war ich halt auch in einem klassischen Ops Team gewesen. Da gab es dann halt auch Bereitschaftswochen, wo man die ganze Woche dann halt Bereitschaft gemacht hat. Ich war glaube ich bei zwei Wochenenden, wo ich dann halt auch Bereitschaft hatte, war ich auch auf irgendeinen Hochzeiten unterwegs. Der Laptop war dann in der Tasche im Auto oder sonst was. Und ich hatte aber keine Angst, dass was kaputt geht, weil ich ein gutes Gefühl für die Plattform hatte. Ich wusste zu neun und neunzig komma neun Prozent der Fälle passiert nichts, weil da kommen wir wieder auf die Technik hinzu. Du kannst auch schon vieles so bauen, dass es Self Healing ist. Also Kuba Data zum Beispiel hat ja auch ganz viele Sachen, die dann halt auch eben helfen. Das halt irgendwie eine Art Self Healing Mechanismus mit drin ist. Und das eine ist, dass du es Technik kannst, das andere ist, dass die Prozesse auch richtig umgesetzt ist, dass es dann auch richtig funktioniert bei jedem Deployment zum Beispiel. Und das andere ist, dass du selbst ein Gefühl dafür hast. Das funktioniert auch tatsächlich. Und das musst du dann halt auch lernen. Mein Lieblingsbeispiel ist nämlich die Booking Com Story. Der Christian Kühntop erzählt das immer gerne oder hat das mal vor Ewigkeiten mal in einem Talk erwähnt. Der sagte dann ein neuer Mitarbeiter hat angefangen und irgendwie am zweiten oder dritten Tag trifft er den CTO in der Kantine. Dann fragt halt der Ah, du bist ja neu hier hast du schon Pot kaputt gemacht? Und naja, wie antwortest du dann? Ich glaube so der typisch Deutsche oder Europäer würde sagen und das hat er wohl auch was nein ich habe doch nicht POT kaputt gemacht, weil immer dieser Eindruck entsteht, man muss nach oben hin zeigen, man macht keine Fehler, man darf keine Fehler machen und hast du nicht gesehen. Und darauf war halt die Antwort von dem CTO entsprechend, warum hast du nicht POT kaputt gemacht? Du lernst nur dafür, wenn du PROD kaputt gemacht hast, hast du bisher noch"
+        },
+        {
+            "start": 2314890,
+            "end": 2318130,
+            "speaker": "B",
+            "text": "nichts gemacht bei uns, sonst hättest du kaputt machen müssen."
+        },
+        {
+            "start": 2318210,
+            "end": 2356910,
+            "speaker": "C",
+            "text": "Genau, und kaputt machen ist ja auch noch mal ein bisschen unterschiedlich. Was ist jetzt genau kaputt? Wenn jetzt die PROD Datenbank für die Hauptapplikation weg ist, ist es wahrscheinlich sehr schlecht. Das sollte wahrscheinlich nicht passieren. Aber da sind wir wieder das, was Andi gerade gesagt hat, da sollte es schon diverse Sicherheitsmechanismen geben, dass es das gar nicht durchführbar ist. Gleichzeitig gibt es auch viele kleinere Fehler, wo was passieren kann, wo man halt schon wieder was dazulernt. Und wenn man das halt nicht traut und dazu gehört dann auch regelmäßig zu deployen seine Changes, dass man dann halt eben ein Gefühl dafür bekommt, okay, dieses Deployment ist sicher, man muss ja nicht jedes Deployment an einem Freitag ausrollen, man sollte aber in der Lage sein, jeden Freitag oder überhaupt egal welchen Tag ausrollen zu können."
+        },
+        {
+            "start": 2357330,
+            "end": 2438070,
+            "speaker": "A",
+            "text": "Ich glaube, dein letzter Satz, der ist auch einer dieser Key Sätze, denn die Beispiele, die du gerade genannt hast, die können natürlich auch ins andere Extrem umschlagen. Nehmen wir mal das Beispiel Self Healing. Du sagtest gerade Kubernetes Self Healing, ein Crash Loop ist ja auch Self Healing irgendwie. Also ich mein, die Applikation crasht, Kubernetes startet ist neu, die Applikation crasht, rescheduled die auf andere Node, blablabla. Das ist ja auch Self Healing in irgendeiner Art und Weise. Die andere Thematik ist, du sagtest gerade Postmortems und herauszufinden, okay, was lief denn hier gerade verkehrt oder warum war dieser Mensch, dieser Mitarbeiter überhaupt in der Lage, diesen Fehler zu machen? Hast du jetzt eine relativ instabile Infrastruktur oder hast ziemlich viele Incidents, bedeutet das im Umkehrschluss aber auch, du machst ziemlich viele Incident Reports und Post Mortems. Und da muss man natürlich auch ganz stark aufpassen, dass das nicht zur Qual wird oder zur Burden, weil natürlich sagst du klar, wenn du hier und da mal ein Incident hast, dass sich alle da hinsetzen, wirklich fünf, sechs, acht, zehn Mal warum fragen, um wirklich zu verstehen, was lief denn hier gerade verkehrt? Ist eine schöne Erfahrung, gar keine Frage. Wenn du die einmal pro Quartal hast, freut sich auch jeder drauf, weil jeder lernt was. Hast du die sechs Mal pro Woche, dann ist das Instant Report schreiben vielleicht einfach nur richtig harte Arbeit und fühlt sich nicht an wie Lernen, sondern wie Reporting."
+        },
+        {
+            "start": 2438550,
+            "end": 2440710,
+            "speaker": "C",
+            "text": "Die Strafe wie Strafe."
+        },
+        {
+            "start": 2440790,
+            "end": 2462790,
+            "speaker": "A",
+            "text": "Und das ist natürlich dann auch wieder so schwierig, weil du sagtest ja auch gerade, du warst mal auf Rufbereitschaft auf irgendeiner Hochzeit, weil das System so stabil war. Ich glaube, jeder, der schon mal irgendwie in diesem Bereich gearbeitet hat, der kann sich nur einen Hauch vorstellen, was das bedeutet, wie viel Vorarbeit da reingesteckt wurde."
+        },
+        {
+            "start": 2462790,
+            "end": 2471990,
+            "speaker": "C",
+            "text": "Ja, genau. Diese Vorarbeit ist nicht wenig Aufwand, aber im Endeffekt ist das ja nicht nur für die eigenen Mitarbeiter relevant, sondern halt auch für die Kollegen oder wer auch immer die Endnutzer sind."
+        },
+        {
+            "start": 2471990,
+            "end": 2492670,
+            "speaker": "A",
+            "text": "Was sagst du denn den Leuten? Weil die Leute kommen immer zu dir und die Leute geben dir deine Meinung, die Ja, ne, ich arbeite bei einer Versicherung, ich darf gar nicht deployen hier und da, weil wegen reguliertem Umfeld, ABC oder Zertifizierung oder PCI, DSS, SOX, bafin und was es da nicht noch alles gibt."
+        },
+        {
+            "start": 2492670,
+            "end": 2533870,
+            "speaker": "C",
+            "text": "Ja, dann habe ich häufig dann doch noch ein Beispiel, wo es geht. Also das ist so ein bisschen wie Datenschutz alle. Das geht nicht wegen Datenschutz. Wenn man mal wirklich hinterfragt, dann geht das meistens dann doch nur, dass das als Vorschub genommen wird. Viele Sachen aus den Compliance relevanten Sachen, die lassen sich ja schon automatisieren. Das meiste ist ja tatsächlich mehr so eine Reporting Thematik und einige Sachen sind dann auch mehr, naja, da sind wir wieder bei den kaputten Prozessen. Ich habe eine Excel Tabelle, wo ich irgendwelche Sachen abhaken muss und viele Sachen lassen sich halt automatisieren und einige Sachen sind ja sowas. Es wurde jedes Mal ein Code Review gemacht. Kannst du es abhaken oder nicht?"
+        },
+        {
+            "start": 2533950,
+            "end": 2540510,
+            "speaker": "A",
+            "text": "Errollen sich bei mir auch immer die Fingernägel, weil meine Erfahrung ist eigentlich, dass sehr, sehr viele Leute einfach super schlecht in Code Reviews sind."
+        },
+        {
+            "start": 2541150,
+            "end": 2543790,
+            "speaker": "C",
+            "text": "Ja, also anderes Thema, aber ja."
+        },
+        {
+            "start": 2544110,
+            "end": 2572920,
+            "speaker": "A",
+            "text": "Ja, dann frage ich mich wieder, okay, warum muss da ein Code Review gemacht werden, wenn der Code Review eigentlich nur ein visueller Syntax Check ist, was dann eigentlich bereits der Compiler macht oder eine Linter oder ähnliches und nicht die relevanten Fragen stellt, ist dieser Code an der richtigen Stelle, macht dieser Code eigentlich Sinn? Eine Kontrollfrage ist Wolfgang und die geht jetzt an dich und wirklich antworte die bitte ehrlich. Wenn du Code Reviews machst, wie oft hast du dir das verlinkte Jira Ticket vor dem Code Review durchgelesen?"
+        },
+        {
+            "start": 2572920,
+            "end": 2575240,
+            "speaker": "B",
+            "text": "Ja, sehr sehr selten."
+        },
+        {
+            "start": 2576040,
+            "end": 2581250,
+            "speaker": "A",
+            "text": "Woher willst du dann wissen, dass der geänderte Code überhaupt das Problem löst, was wir lösen wollen?"
+        },
+        {
+            "start": 2581250,
+            "end": 2586850,
+            "speaker": "B",
+            "text": "Ja, in guten PR steht es ja noch mal drinnen heutzutage sowieso von der KI zusammengefasst."
+        },
+        {
+            "start": 2587810,
+            "end": 2597250,
+            "speaker": "A",
+            "text": "Aber ja, Fairpoint, du fängst schon an zu lachen. Und dann frage ich mich natürlich wieder, kommen wir zu der Ablegthematik gerade, was soll das denn?"
+        },
+        {
+            "start": 2597570,
+            "end": 2612860,
+            "speaker": "C",
+            "text": "Über ordentliche Code Reviews kann man eine eigene Folge zu machen, glaube ich. Aber wenn man jetzt noch mal auf diese Compliance Thematik guckt, deswegen hatte ich dir die Frage auch gestellt, Wurde eins gemacht, da das bei Compliance Sachen ist, der wäre halt Wurzeln durchgeführt. Nicht unbedingt. Ob es sinnvoll ist, wenn man auf"
+        },
+        {
+            "start": 2612860,
+            "end": 2638210,
+            "speaker": "B",
+            "text": "diese sinnvolle Ebene gehen Was würdest du denn jemandem sagen bei einer Bank, warum Friday Deployments oder die Möglichkeit diese durchzuführen sinnvoll wären? Weil wenn der jetzt Ja, wir sind eine Bank, es muss alles ultra geprüft werden und es ist alles langsam und so ein schneller Prozess, der macht ja gar keinen Sinn bei uns in der Bank. Also unabhängig gar keine Ausrede von der Compliance Seite, sondern einfach macht es für eine Bank überhaupt Sinn?"
+        },
+        {
+            "start": 2638210,
+            "end": 2781380,
+            "speaker": "C",
+            "text": "Ja, also ich habe da zwei Beispiele. Also zu Banken gehören für mich jetzt halt auch Versicherungen und sowas zu klar, ein früherer Arbeitskollege fand es witzig, dass ich halt die Firma so genannt habe und ich hatte also Sticker gemacht mit dem Das ist fein Meme Doc und Feuerdepoints drunter und das muss ich in der Firma verteilen. Wir deployen nämlich nur alle halbe Jahr und da wird dann halt nämlich diese Compliance Sachen dann auch alles zum Schluss dann halt gemacht bzw. Als ich dann gefragt wie macht ihr denn das dann so? Naja, wir werden da eh durchfallen, weil wir das gar nicht richtig umgesetzt haben. Also sie wissen, dass da noch viel zu tun ist und das fängt schon damit an auf technischer Ebene, dass sie noch auf Subversion und sowas setzen oder auch so denken huiuiui, das noch im Jahr zwei tausend Ja, letztes Jahr war zwei tausend fünf und zwanzig und gleichzeitig kenne ich aber auch eine andere Bank, eine große Schweizer Bank, da merkt man auch wieder diesen Kulturunterschied, da gab es dann einen CTO irgendwas, der naja, wir wollen hier den ganzen Entwicklungsprozess komplett verschlanken. Und da war der Fokus vor allem die Mitarbeiterzufriedenheit und die Effizienz zu steigern, weil es ist letztendlich auch erstmal egal, ob du freitags deploys oder nicht. Du willst aber, dass die Entwickler effizient arbeiten können. Da musst du ja auch das Gefühl dafür kannst du jetzt ständig was deployen. Und da gibt es dann ja auch diverse Regularien wie naja, es muss bei jeder Testumgebung, wenn dann noch mal separat was hochgezogen werden muss, muss das auch nachgehalten werden, dokumentiert werden, wer was wo wie gemacht hat. Das lässt sich technisch schon automatisieren und je größer du natürlich bist, desto mehr lohnt sich das natürlich, weil sich das ja auch ein gewisser Skaleneffekt reinkommt. Aber da gab es dann einen, der sagte, naja, wenn ich jetzt neun Mitarbeiter habe, der soll am Tag eins Changes theoretisch machen können und da haben wir jetzt die Kultur drin, da haben die Prozesse drin und da haben wir trotzdem die Compliance in diesen Prozessen drin, weil viele Sachen dann halt in der IDE zum Beispiel ist dann halt ein Knopf drin irgendwo, der dann sagt, okay, ich möchte jetzt eine Testumgebung für diesen Change, den ich jetzt mache, haben, wo das dann auch alles automatisch dokumentiert wird. Da muss man vielleicht noch ein paar Sachen angeben und viele andere Sachen werden dann halt enforced. So Sachen wie das ein Code Review technisch umgesetzt wird, das lässt sich dann halt ja auch enforcen und ob man das dann richtig umsetzt, ist natürlich noch mal ein bisschen was anderes. Aber viele Sachen lassen sich halt schon automatisieren und machen."
+        },
+        {
+            "start": 2781380,
+            "end": 2817430,
+            "speaker": "B",
+            "text": "Ich glaube auch, dass diese Automatisierung und das Enforcen ja eigentlich, wenn du es automatisierst, viel leichter vonstatten geht. Sonst hast du irgendwelche manuellen Prozesse und irgendwelche du loggst dich auf irgendwelchen Servern bei SSH ein und schiebst irgendwie eine Datei raus und hoffst, dass das irgendwie funktioniert oder dann weiter verbreitet wird. Und es gibt ja da diesen berühmten Fall von Night Capital, der in der DevOps Szene immer gerne genannt wird, wo dann irgendwie so ein halb deployed Job. Ich glaube, die haben, wenn ich mich richtig erinnere, die haben glaube ich vergessen auf manchen Nodes das zu deployen oder es hat dann irgendwie nicht funktioniert und keiner haben es mitbekommen."
+        },
+        {
+            "start": 2817670,
+            "end": 2823520,
+            "speaker": "C",
+            "text": "Die haben ein Feature Flag wiederverwendet und auf einen Node war das aber noch irgendwie aktiv. Irgendwie sowas war das."
+        },
+        {
+            "start": 2823520,
+            "end": 2863860,
+            "speaker": "B",
+            "text": "Aber ja, dann sind halb manuell und innerhalb von fünf und vierzig Minuten sind vier hundert vierzig Millionen US Dollar verloren gegangen, weil da irgendwelche krummen Orders, High Frequency Trading Orders, um die ON irgendwie geflogen sind. Also wenn man das automatisiert gehabt hätte und sinnvolle Metriken gehabt hätte, hätte sich das natürlich verhindern lassen. Also nur weil man was manuell macht und jeder, der manuelle Prozesse macht und wenn man sie ist fünf, gerade wenn man sie das fünfte oder das zehnte Mal macht, dann macht man sie halt gern falsch. Also der Andi hat mich heute gerade gerügt, weil er gestern einen Zahlendreher drin hatte bei einer Episoden ID und unsere ganze Pipeline um die Ohren geflogen ist. Ja, menschliche Fehler passieren halt mal."
+        },
+        {
+            "start": 2864020,
+            "end": 2870020,
+            "speaker": "A",
+            "text": "Ja, sei bitte ehrlich, wie habe ich diesen Satz oder diese Nachricht abgeschlossen, als ich dich gerügt habe?"
+        },
+        {
+            "start": 2870020,
+            "end": 2871380,
+            "speaker": "B",
+            "text": "Wie können wir es verhindern?"
+        },
+        {
+            "start": 2871380,
+            "end": 2872420,
+            "speaker": "C",
+            "text": "Das ist es nämlich."
+        },
+        {
+            "start": 2872900,
+            "end": 2965350,
+            "speaker": "A",
+            "text": "Und ja, ich habe gesagt, du hast das gemacht, das ist richtig. Aber ich finde beim Blameless, und da kommen wir jetzt mal zu diesem Punkt, heißt es nicht ich blame den, sondern es ist ja teilweise auch zum Reporting und zur Dokumentation, wer hat wann welche Operation durchgeführt. Also nur weil da ein Name steht, heißt das ja nicht unbedingt ich blame jemanden. Natürlich solltest du versuchen, die Namen nicht zu nennen, aber ab und zu macht es ja Sinn, falls irgendwie Leute außerhalb des normalen Realms involviert waren, dann fragt man sich, warum war die Person überhaupt involviert. Das hat ja auch wieder Rückschluss auf Prozesse jetzt bei Wolfgang und ich zugegeben. Wir sind ein Zwei Mann Team, also wenn ich es nicht war, war es der Wolfgang. Das ist dann ein bisschen was anderes. Lass uns mal ganz kurz auch zu den, vielleicht auch nicht ganz kurz, vielleicht ein bisschen länger zu dem Bereich People kommen. Prozesse haben wir jetzt ein bisschen gesprochen und wir haben jetzt gerade so ein bisschen über ein reguliertes Umfeld gesprochen. Und das, was ich schon erlebt habe, ist, dass zum Beispiel die Operations Abteilung sagt, nein, wir können freitags nicht deployen wegen Ausrede. Also Datenschutz, Compliance, völlig egal was, um irgendein großes Buzzword zu droppen, wo dann Engineers keine Ahnung von haben, weil sie sich mit Datenschutz oder ähnliches, einfach nur aus dem Grund, weil das eine strikte Trennung war, wer auf Rufbereitschaft war und diese Angst, dass Samstag oder Wochenende was kaputt geht. Und das ist ja, also ich meine, du hast ein Buch über DevOps geschrieben, also ich meine, Dev und ops kommen sich da in die Quere."
+        },
+        {
+            "start": 2966030,
+            "end": 3037090,
+            "speaker": "C",
+            "text": "Je entfer Dev und Ops voneinander sind, desto eher würde ich nicht empfehlen, überhaupt zu deployen, unabhängig vom und erst recht nicht am Freitag. Also das ist schon ein DevOps Thema, also wo in einem Team Dev und Ops zusammen sind und Security und Business und Finance vielleicht auch noch, weil die ja auch irgendwie alle dazugehören. Und nur wenn das wirklich dazugehört, dann hat man auch so eine Shared Ownership darüber. Deswegen habe ich jetzt auch zum Beispiel Finance gerade auch noch mit diese Aufzählung mit reingenommen, weil ein Incident kann ja zum Beispiel auch sein, dass wegen irgendeiner technischen Implementierung dann von den fünf Kubernetes Nodes, die du dann im Cluster hast, plötzlich sind und dann ist die Rechnung plötzlich für drei Tage für das Wochenende dann statt oder fünf hundert, dann meckert plötzlich Finance, von denen du noch nie was gehört hast. Wenn die aber nah im Boot sind und technisch nicht alles im Detail verstehen, aber schon so wissen, warum wird das jetzt gerade mehr oder vielleicht auch mal weniger, wie es mit Last zusammenhängt, dann hast du da auch ein bisschen mehr Verständnis. Deswegen ist es schon wichtig, da die verschiedenen Rollen zusammenzubringen, möglichst nah beieinander und nicht ein naja, Dev macht es halt auch OBS, das passt dann halt häufig dann doch nicht so ganz."
+        },
+        {
+            "start": 3037170,
+            "end": 3047510,
+            "speaker": "A",
+            "text": "Mit wie vielen Firmen arbeitest du zusammen, wo die Entwickler auf Rufbereitschaft sind? Weil wenn du sagst Shared Ownership, ich meine, ich habe gerne die Shared Ownership von Montag bis Freitags, acht bis sechzehn uhr."
+        },
+        {
+            "start": 3048460,
+            "end": 3126700,
+            "speaker": "C",
+            "text": "Ja, das ist ein guter Punkt, weil viele sagen mir dann bei dem DevOps Thema, ja, dann muss aber doch Dev auch Bereitschaft machen und dann meine ja stimmt. Und dann gucken sie mal. Komisch, weil eigentlich haben sie nicht erwartet, dass ich ja sage, aber ja, so ist es dann halt. Ich meine, so genau kann ich das nicht sagen, wer das Vivo macht. Ich kann aber viel erzählen, wie es GitLab selbst macht als Firma. Da wird zum Beispiel auch nicht freitags deployed, weil da sieht man das dann, dass dann irgendwann ja doch Freitag morgens europäische Zeit hört es auf, weil freitags in Neuseeland geht ja noch, weil dann ist ja noch bis zur Westküste USA ist dann ja noch ein bisschen achtzehn Stunden Zeit oder sowas. Aber dann warten halt gemerkt Sachen bis zum nächsten Montag dann auch entsprechend. Aber auch da, Devs machen Rufbereitschaft und da kommt es natürlich noch ein bisschen drauf an. Okay, habe ich jetzt sais, habe ich jetzt klassische DevOps Teams, habe ich noch Saison oder muss ich da noch mal ein bisschen was anderes strukturell machen? Kann man nicht so einfach pauschal sagen, aber es ist ja auch nochmal ein Unterschied, wann sie reingerufen werden, weil sie müssten ja nicht der Erste oder die Erste sein, die sofort angerufen werden, sondern man hat ja häufig dann ja auch verschiedene Stufen, also Second Level Bereitschaft quasi und das ist dann meistens noch eher entspannter."
+        },
+        {
+            "start": 3126860,
+            "end": 3191190,
+            "speaker": "A",
+            "text": "Ich glaube, die schrecklichste Ausrede, die ich mal gehört habe, ist, ich kann nicht auf Rufbereitschaft, weil ich habe Familie und meine Antwort, ja, die Leute, die in der Operations Abteilung arbeiten, haben auch Familie und dann war auch Ruhe. Aber ich meine, das ist ja teilweise auch so ein bisschen angstgetrieben, was ist, wenn das Handy schält und dann bin ich ja erstmal alleine, dann bin ich vielleicht für den Stack verantwortlich und nicht nur meine kleine Java Applikation, sondern weil die Datenbank jetzt down ist oder der Red ist oder der Memcache oder ähnliches. Und das ist ja auch mehr oder weniger dasselbe Thema, wie ich deploy Freitag nichts, weil ich habe Angst, was kaputt zu machen und dann Überstunden zu machen oder ich komme nicht richtig zum Grillen oder ähnliches, was man so freitags halt macht. Wie geht man mit Angst im Team um? Ich meine, das ist ja prinzipiell genau die Frage, wie teste ich mein Auto, wenn ich dicht auf der Spielstraße auffahre, ob das jetzt wirklich bremst, was du vorhin gesagt hast? Also wie testet man ein Team daran?"
+        },
+        {
+            "start": 3191270,
+            "end": 3203030,
+            "speaker": "C",
+            "text": "Genau, also erst mal würde ich mal die Frage stellen, wenn ich einen Fehler mache, was passiert dann? Und das ist, glaube ich, die wichtigste Frage, die man sich zu begründen stellen kann. Vor allem, wenn du es nicht in der Hand hast, was die anderen machen und dann kommt es."
+        },
+        {
+            "start": 3203110,
+            "end": 3213120,
+            "speaker": "B",
+            "text": "Aber du meinst jetzt auf der Ebene bezüglich Blameless Culture, bekomme ich irgendwie Anschiss, wenn ich den Fehler mache oder nicht nur auf welcher Ebene?"
+        },
+        {
+            "start": 3213440,
+            "end": 3302870,
+            "speaker": "C",
+            "text": "Auf allen Ebenen, Weil das eine ist, ich muss mich rechtfertigen, aber es kann ja auch sein, wie was wir vorhin hatten mit, oh Gott, wenn ich jetzt einen Fehler mache, dann muss ich sechs Seiten Reporting schreiben. Das hatte Andi ja als Negativbeispiel genommen. Man kann es aber auch als Positivbeispiel nehmen, weil du dann noch mal stärker darauf achtest, kein Schindloder zu treiben, sondern das ordentlich testest, damit du eben nicht noch ein langes Reporting schreiben musst. Kann man beide Seiten drin sehen. Aber ja, grundsätzlich erstmal Fehlerkultur. Was passiert, traue ich mich Fehler zu machen? Was passiert dann? Was passiert für mich selbst erstmal? Weil ich meine, ich bin effektiv solo selbstständig. Wenn ich in Sachen, die ich selbst hoste und betreibe, dann gucke ich natürlich auch, wie schlimm ist das jetzt, wenn was nicht funktioniert. Dadurch, dass das meiste nur mich selbst betrifft, ist das relativ egal. Wenn ich jetzt aber was für Kunden bereitstelle, dann will ich das teilweise auch gar nicht, weil ich gar nicht alleine das komplett managen kann, wenn ich halt auch mal offline sein will und so weiter. Und da hängt es halt auch wieder darauf an, okay, was ist das? Kommen natürlich die verschiedenen Faktoren, die wir vorhin auch schon teilweise hatten, wer sind die Endnutzer, wann sind die Endnutzer aktiv und so weiter. Aber halt auch so Sachen wie, habe ich einen Error Budget, was passiert in der Nacht? Kann ich vielleicht auch ein paar, vielleicht werde ich manchmal auch, das gibt es ja auch voll oft, dass irgendwas in der Nacht benachrichtigt, was überhaupt nicht relevant ist. Das hatte ich auch schon so oft, wo mir Leute gesagt haben, naja, werde ich nachts aufgeweckt, dann sehe das SSL Zertifikat läuft in sieben Tagen aus, warum kriege ich da nachts eine Benachrichtigung?"
+        },
+        {
+            "start": 3304070,
+            "end": 3361210,
+            "speaker": "A",
+            "text": "Wer stößt denn überhaupt so einen Wandel an? Denn jetzt mal entweder du bist in einer Luxussituation und die ganze Firma ist blameless unterwegs, die ganze Firma move fast, break things. Facebook hat ja auch nicht mehr das Motto, die haben es ja auch geändert aus unerklärlichen Gründen. Aber wenn die ganze Firma da ist, dann bist du natürlich in der Luxussituation. Aber es kann natürlich sein, dass das C Level jetzt noch auf der Blameful Kultur, wie nennt sich diese Kultur? Blameful traditionelle Kultur, das ist fies, aber naja, nennen wir sie Blameful Kultur, unterwegs ist, aber dann dein Abteilungsleiter und dein Teamleiter sich den ganzen Blame abholen und nach unten Blameless betreiben. Das ist ja schon eine tolle Sache eigentlich von deiner Abteilung. Aber jetzt ist es natürlich auch so, dass das auch zu Streit im Team selbst führen kann. Jetzt stell dir mal vor, wir drei arbeiten zusammen."
+        },
+        {
+            "start": 3361850,
+            "end": 3363770,
+            "speaker": "C",
+            "text": "Schlimme Vorstellung, ist richtig."
+        },
+        {
+            "start": 3365370,
+            "end": 3398280,
+            "speaker": "A",
+            "text": "Und der Wolfgang macht halt AI Slop, Force Merge auf Master, weil Projected Branches haben wir auch nicht, die behindern uns ja nur. Wolfgang ist aber am Wochenende auf einem Rockfestival oder auf einer Hüttentour in den Bergen und ich bin on call und der macht das zum vierten Mal in Folge. Schippt einfach irgendeinen, den er nicht gereviewt hat, weil es geht ja um Produktivität. Es geht ja nicht um Verstehen. Das kann ja richtig Knatsch erzeugen. Was sagst du solchen Teams oder Teamleitern, die vielleicht so ein Team haben, die"
+        },
+        {
+            "start": 3398280,
+            "end": 3561160,
+            "speaker": "C",
+            "text": "sich nicht mehr grün miteinander sind, was mit Holz machen? Ne, da gibt es keine einfache Antwort. Also da kann ich jetzt so auch spontan auch nicht so richtig zu sagen, weil da muss man sich schon ein bisschen gucken, okay, warum, Also müsste ich jetzt wieder die Five Why Fragen stellen, warum macht er das? Also ein paar Sachen würde ich jetzt eh sagen, so OK, Force Push of Master oder Force Merge of Master sollte man eh nicht können, alleine per Default, damit löst du schon einige Probleme. Aber es kann natürlich dann trotzdem sein, dass der Wolfgang dann sagt so ich werde hier nur ausgebremst, weil ich ständig ein Review machen müssen. Aber dann kann man ja schon dann sagen, okay, da musst du aber auch die Schmerzen selbst spüren, die von wegen, okay, du darfst was selbst mergen, aber dann hast du das Wochenende dann Bereitschaft oder sowas. Und dann die meisten gucken ja dann doch eher, sind da doch eher egoistisch und gucken auf sich, wie rette ich meinen Arsch und sowas. Und dadurch ist jetzt ein Mechanismus, Man müsste jetzt genauer gucken und überlegen, was man dann halt auch macht, um das Ganze zusammenzuführen, weil theoretisch kannst du das Gleiche mit ihm auch machen. Wenn es jetzt egal ist für den Kunden, dann mache ich jetzt auch irgendeinen Change, wo ich weiß, das wird dem Wolfgang auf die Nase fallen. Ich kenne ein Beispiel von einem Kollegen, wo ich in einem Team auch saß als Externer, der hatte Jahre später wieder getroffen vor ein paar Jahren und der meinte, der hat die Firma und das Team, wo er war, hat er gekündigt, ohne einen Folgejob zu haben. Da fragte ich ja, was war denn los? Und dadurch, dass sie in diesem Team halt war als Externe, ohne dass sie Bereitschaft machen musste, die anderen aber schon, war es dann halt auch so, die wurden halt jede Nacht, also nicht jede Nacht, aber regelmäßig nachts aufgeweckt, weil ein Pfeilsystem voll gelaufen ist. Und da bist du dann als reines Ops Team, stehst du dann da und kannst nicht viel machen, was irgendeine Anwendung ist, von der du keine Ahnung hast. Da würde ich an seiner Stelle, hätte ich auch schon längst gekündigt. Also ich konnte das voll nachvollziehen. Und da bist du dann aber teilweise an einem Punkt, wo du strukturell schon was verändern musst, wo du als einzelner Individual Contributor effektiv halt nicht zu einer Verbesserung führen kannst. Also ein paar Sachen kannst du schon machen, weil du kannst ja schon zu den Teams hingehen, gucken, was ist das für eine Anwendung mit denen reden, wenn Devon Ops natürlich getrennt sind. Viele Sachen lösen sich halt doch durch Reden. Und da war es zum Beispiel auch so, da gab es dann immer irgendwelche Projektmanager, die sind dann, wenn sie was schneller unterwegs haben wollten, sind die mit Tafel Schokolade ins Büro geladen und dann hier kannst du dich doch und einfach so als Dankeschön und sonst was und mit den Leuten reden hilft."
+        },
+        {
+            "start": 3561560,
+            "end": 3595930,
+            "speaker": "A",
+            "text": "Ja, aber vielleicht ist das jetzt auch wirklich, das klingt jetzt so ein bisschen komisch, aber ich habe vor kurzem einen Actionfilm gesehen, da ist dann irgendwie so ein Elite Soldaten Team irgendwo in Bolivien und blablabla wurden dann abgesetzt und kommen sich irgendwann in die Haare und dann kloppen sich zwei Leute und ein Dritter aus dem Team so Werner, du sagst jetzt dem Henry mal Entschuldigung, Entschuldigung, Henry und so, Henry, du sollst ihm Werner jetzt auch mal entschuldigen, Entschuldigung, so nach dem Motto, so muss es ja auch gehen. Also irgendwie, ich habe so das Gefühl, die Situation, die ich gerade beschreibe. Ach so, bevor ich die weiter beschreibe, Wolfgang, was sagst du eigentlich zu deiner Verteidigung?"
+        },
+        {
+            "start": 3595930,
+            "end": 3608210,
+            "speaker": "B",
+            "text": "Warum muss ich mich verteidigen? Also das ist die Zukunft. Andi, du hast es nur verstanden, dass AI alles macht und das durchgewunken wird, dass wir da jetzt flotter am Weg sind und nicht nur da auf alten Reviews herumhängen."
+        },
+        {
+            "start": 3608210,
+            "end": 3622210,
+            "speaker": "A",
+            "text": "Ich finde das toll, dass man bei Pager Duty und Ops Genie dann sehr wahrscheinlich die Rufbereitschaft auch überschreiben kann, ohne dass der andere das irgendwie acknowledgen muss. Von daher, ne? Aber ich glaube, du sprichst da gerade einen guten Punkt an und den sprechen Wolfgang und ich natürlich auch dauerhaft irgendwie."
+        },
+        {
+            "start": 3622610,
+            "end": 3629800,
+            "speaker": "B",
+            "text": "Moment, was heißt, du kannst ein neues Thema anfangen. Du wolltest noch deine Kindergartentaktik für besprechen, dass man sich gegenseitig entschuldigt?"
+        },
+        {
+            "start": 3629800,
+            "end": 3633560,
+            "speaker": "A",
+            "text": "Ja, sage ich doch gerade. Sage ich doch gerade. Da komme ich doch dazu. Lass mich doch mal ausreden."
+        },
+        {
+            "start": 3634120,
+            "end": 3635800,
+            "speaker": "B",
+            "text": "Okay, okay. Natürlich, natürlich."
+        },
+        {
+            "start": 3636200,
+            "end": 3679070,
+            "speaker": "A",
+            "text": "Also ich glaube, da kommt es dann wirklich darauf an, dass sich das Team jetzt in der Retrospektive oder sowas einfach mal klar wird, okay, wir arbeiten hier zusammen und wir müssen jetzt hier an einem Strang ziehen und wenn einer halt irgendwie Sound geht, dann funktioniert die ganze Sache nicht, weil die ganze Sache vielleicht hier auch kein Einzelsport, sondern Teamsport ist. Und vielleicht fehlt dann aber auch mal eine direkte Ansage vom Management, was dann wahrscheinlich nicht förderungsfähig für die Frage ist, was passiert, wenn du einen Fehler machst. Aber wenn einer halt irgendwie immer gegen den Strom schwimmt, dann ist es natürlich auch schwierig. Und da frage ich mich natü okay, ist Freitags Deployment überhaupt eine technische Sache oder geht es halt wirklich nur um den Zusammenhalt eines Teams? Wie stark steht man da zusammen?"
+        },
+        {
+            "start": 3679540,
+            "end": 3741730,
+            "speaker": "B",
+            "text": "Ich möchte aber auch noch mal grundsätzlich, weil du alles aufs Team lenkst, schon auch noch sagen, dass es gerade bei diesen Sachen, und da kommt jetzt wieder mein Feuerwehrhut ins Spiel, wenn du schnell Entscheidungen treffen musst, und das musst du ja meistens, wenn es On Call und so weiter ist, damit es stressfreier abläuft, gibt es einfach gewisse Regeln und du kannst Guardrails einstellen, du kannst verhindern, dass jemand irgendwie einen Force Push macht, du kannst Standard Operation Procedures definieren, dass sich die Leute leichter tun, dass die Angst wegkommt. Dann funktioniert es auch zwischenmenschlich öfters besser, vor allem, wenn man dann auch, wenn man mal zusammenkracht und dann sagt, okay, dann machen wir da irgendwelche Guardrails, dann machen wir irgendwelche Action Points und ändern das aber auf struktureller Ebene oder auf Automatisierungsebene und kommen dann auch weiter. Also ich glaube, das Problem ist Einfach wenn, wie ihr das schon als Beispiel gesagt habt, wenn einer immer Scheiße baut, aber du musst dich dann halt auch darum kümmern, dass das besser wird und vielleicht irgendwie in die Schranken beißen. Weil oft ist es ja auch so, dass die Leute gar nicht absichtlich machen."
+        },
+        {
+            "start": 3741810,
+            "end": 3778540,
+            "speaker": "C",
+            "text": "Ich habe noch ein paar Beispiele, die ich gerade wieder super passend finde. Ich bin ja teilweise auch in Teams als Externer, jetzt gerade auch in einem Team, da gibt es halt eine Person, die ist ein bisschen, sagen wir mal, anstrengender und auch sehr nach, naja, ich möchte was verändern. Also er möchte nichts verändern, es sollte möglichst alles gleich bleiben, wie es ist. Und das haben wir schon immer so gemacht. Was dann halt wieder schwierig ist, wenn man dann auch wieder keinen Vorgesetzten hat, der da ein bisschen eingreift, weil wenn dann so Sachen kommen, so Aussagen kommen, oh, bei Reboots wäre ich vorsichtig, dann weißt du schon, mit dem brauchst du nicht über Freitags Deployments diskutieren, sondern über alle Deployments, egal welchen Tag."
+        },
+        {
+            "start": 3778940,
+            "end": 3784540,
+            "speaker": "A",
+            "text": "Da weiß ich einfach nur, wo ich meine Ransomware verstecke oder halt auch irgendwie"
+        },
+        {
+            "start": 3784540,
+            "end": 3952520,
+            "speaker": "C",
+            "text": "so Sachen wie, hatte ich dann auch zum Beispiel so gemacht, naja, okay, wenn Abhängigkeiten nicht händisch aktualisiert werden und die ständig hinterherhängen, kannst du hingehen und das mit Renovate automatisieren, bist du wieder bei Technik und Prozess. Wenn aber eine Person dann wieder Angst hat dadurch meinte dann halt so, naja, das ist ja schon ziemlich fahrlässig, wenn einfach Merch Requests aufgemacht werden von einem Bot, naja, was ist daran fahrlässig? Es wird ja nicht gemerged und sträubt sich halt mit Händen und Füßen dagegen, wo ich dann manchmal auch nicht weiß, warum ist das Problem. Und dann muss halt schon irgendwann ein Vorgesetzter eingreifen, sagen, das macht hier schon Sinn, weil was ich häufig sehe in den verschiedenen Teams, Firmen, wo ich war, dass eine Person, die ständig blockiert und so, ja, aber sagt für alles Mögliche, das zieht dann schon die Produktivität, die Zufriedenheit von diesem Team herunter. Manchmal wird das gar nicht so sichtbar, weil Leute haben dann keine Lust zu diskutieren, wenn man weiß, dass wenn ich jetzt was anbringen, was uns voranbringen würde, dass ich dann in einer endlosen Diskussion mit einem, ich nenne ihn jetzt einfach mal Andi, Andi wäre der ständig mit mir alles totdiskutieren will, deswegen macht er einen Podcast. So, das muss man aber halt auch als Team Lead dann vielleicht auch sehen oder auch Strukturen schaffen, damit man das sehen kann. Weil wenn du in einer Retro bist und hatten wir Beispiel vorhin ja auch, du traust dich aber nicht zu sagen, dass jemand ständig nur am Blockieren ist, weil es wieder zu unnötigen Diskussionen führt und du darauf keine Lust hast, dann ist das vielleicht ein bisschen schlecht. Dann solltest du halt auch in One on Ones oder einen anderen Feedback Kanal noch aufmachen, wo du solche Themen dann halt auch besprechen kannst und anbringen kannst, weil es keinen Sinn macht, das in der Gruppe zu machen. Menschen ist echt ein kompliziertes Thema und da gibt es echt nicht die einzig wahre Lösung, deswegen ist das echt nicht so einfach. Einige Sachen müssen durchgedrückt werden, aber ich sage immer so ein bisschen von unten her gesehen, von der Hierarchie her, muss man nach oben hin die Hand geben, aber die andere Seite muss halt auch die Hand zurückstrecken, damit das was wird. Weil wenn wir jetzt gerade, also ich meine, wir haben kaum über AI gesprochen hier und das müssen wir jetzt auch mal ändern. Wir hören ja gerade alle möglichen Leute, egal ob in den USA oder auch in Deutschland oder in Europa, sagen oh ja, wir sind jetzt mit AI so viel mehr produktiver. Ich frage den Leuten ständig, aber wie oft deployed ihr das Ganze überhaupt oder wie testet ihr das Ganze? Eislog hatten wir vorhin ja so ein bisschen und das ist auch bei Management gar nicht so auf dem Schirm und ich frage mich dann hä, du hast Angst freitags zu deployen, gleichzeitig habt ihr aber so viel Slot, der da irgendwie rumfliegt, Dann wundert mich nicht, dass ihr auch nicht freitags deployed, aber dann habt ihr auch da keinen wesentlichen Mehrwert durch AI. Sehr vereinfacht gesagt."
+        },
+        {
+            "start": 3953150,
+            "end": 3989110,
+            "speaker": "B",
+            "text": "Ja, ich glaube auch, dass das Problem ja dann, wenn wir jetzt über Renovate Bot sprechen und das schon ein Problem ist, dann brauchen wir ja gar nicht über AI sprechen. Noch mal einen Schritt weiter. Aber meine Herangehensweise ist ja auch immer bisschen in den Untergrund zu schauen, weil meist hat es ja irgendwelche Gründe, warum Leute jetzt ein Problem haben, dass dann Bot ein Merge Request aufmacht. Hast du da Ideen, warum das so ist? Haben die Angst vor, dass sie ihren Job verlieren, weil da jetzt ein Bot irgendwas macht oder die Kontrolle zu verlieren? Oder hast du da irgendwie Ideen, warum Leute ein Problem damit haben, wenn Bot ein Merge Request aufmacht?"
+        },
+        {
+            "start": 3989110,
+            "end": 4046560,
+            "speaker": "C",
+            "text": "Also da, wo ich es gemerkt habe, wo es zu solchen Diskussionen kam, wo Angst vor Automatisierung effektiv gab, hatte ich mehr das Gefühl, dass die Leute Angst hatten, deren Job zu verlieren oder halt nicht mehr relevant zu sein. Ich habe für mich immer, ich habe bei ein paar Firmen gearbeitet. Bei mir war immer der Punkt, ich möchte nicht unersetzbar sein, weil das gehört für mich jetzt auch in diese Kultur dazu, weil ich möchte auch wenn andere Bereitschaft haben und trotzdem was nicht funktioniert, dann möchte ich nicht der sein, der angerufen wird, auch wenn ich die Firma vielleicht längst verlassen habe. Ich finde es immer noch spannend zu hören, was sie so machen und sonst was, auch wenn ich schon lange raus bin. Aber ich will damit auch abschließen können. Wenn ich aber mich so manifestiert habe in einer Firma, in einem Projekt, in einer Infrastruktur, dass es nicht mehr ohne mich geht, dann habe ich so eine starke Abhängigkeit in beide Richtungen, dass ich dann halt auch Angst habe, dass ohne mich nichts läuft. Und das ist dann wieder ein schlechter Indikator für wie gut funktioniert das an einem Freitag, Samstag, Sonntag, wenn ich im Urlaub bin."
+        },
+        {
+            "start": 4046640,
+            "end": 4087180,
+            "speaker": "B",
+            "text": "Das habe ich übrigens auch erlebt bei On Call. Die Teams, die davor ziemlich Probleme hatten, irgendwas aufzuschreiben, das waren teilweise auch so Persönlichkeiten. Ich habe das Wissen und die Leute kommen dann zu mir und fragen mich nach. On Call war das meistens selten das Problem. Da haben plötzlich alle freiwillig angefangen, alles niederzuschreiben und dass jeder alles weiß, weil wenn man mal in der Situation ist und auf die Schnauze fällt, dann ist man froh, wenn es irgendwo steht oder wenn auch jemand anderer das machen kann oder man nicht ständig aus dem Urlaub raus gepatcht wird. Also vielleicht ist es gar nicht so schlecht, auch wenn man einfach mal On Call einführt, dann verstehen Leute auch, wo die Probleme liegen. Man muss halt doch hin und wieder einfach selber gegen die Wand laufen, damit man versteht, um was es geht."
+        },
+        {
+            "start": 4087180,
+            "end": 4088300,
+            "speaker": "C",
+            "text": "Ja, absolut."
+        },
+        {
+            "start": 4088460,
+            "end": 4163930,
+            "speaker": "A",
+            "text": "Ich bring mal die andere Seite rein und ich advocate jetzt nicht dafür, dass du dich unersetzbar machen sollst. Ich will nur sagen, menschlich, psychologisch ist es ein tolles Gefühl, gebraucht zu werden und es ist unglaublich schwierig, daraus zu kommen und dich ersetzbar zu machen, denn es ist halt nicht intuitiv, denn eigentlich, wenn du darüber nachdenkst, wenn du dich ersetzbar machst, dann dokumentierst du viel, dann machst du hochqualitative Arbeit, dann schreibst du Runbooks und all das, was Leute enabled, diese Probleme selbst zu lösen, das bewegt dich ja eigentlich dazu, der beste Mitarbeiter zu sein, weil du ja ersetzbar bist. Also das ist ja eigentlich gegenläufig von dem, was man eigentlich so denken würde. Aber psychologisch gesehen ist es echt toll, wenn du immer vom Management gefragt wirst und alles eine Antwort hast, in die großen Meetings mit eingeladen wirst, in die Entscheidungen mit triffst, weil du weißt ja alles. Vielleicht bist du ein Bassfactor, vielleicht bist du der Knowledge Keyholder, es ist alles schwierig. Aber ich will nur sagen, psychologisch fühlt sich das toll an, dass das weitreichende Probleme hat und dass du dann vielleicht auch die Firma als Geisel nehmen kannst, wenn die dir nicht Euro im Monat"
+        },
+        {
+            "start": 4163930,
+            "end": 4165130,
+            "speaker": "C",
+            "text": "zahlen oder im Jahr."
+        },
+        {
+            "start": 4165690,
+            "end": 4174810,
+            "speaker": "A",
+            "text": "Das steht auf einem anderen Blatt. Aber ich will nur sagen, psychologisch, wenn man die Situation ist, da rauszukommen, ist so vielleicht einen Drogensüchtigen sagen, dass er drogensüchtig ist."
+        },
+        {
+            "start": 4176010,
+            "end": 4239170,
+            "speaker": "C",
+            "text": "Ich bin ganz bei dir. Also es ist wie so vieles bei diesem People Thema. Es gibt keine einfache Lösung. Es gibt sehr viele Faktoren, über die man schauen kann, sollte, muss und das ist halt auch so ein Punkt, den man betrachten muss, weil ich denke dann wieder, sondern wenn ich so gut bin, dass ich das so dokumentiere, so verwalte, dass das auch ohne mich läuft, dann finde ich auch einen anderen Job in einer anderen Firma und kann das Gleiche machen und in den Jobinterviews auch davon erzählen, weil wenn du dich abhängig, wenn du die Infrastruktur oder deine Anwendungen so baust, dass die davon abhängig ist, dann kannst du das bei einem Jobinterview nicht so gut erzählen wie andere. Ich sage den Leuten immer, meistens hat er so juniorige Leute, wenn sie sich irgendwo bewerben, also die mich dann halt fragen, hast du Bewerbungstipps oder so, Schau, wie du das Leben von dem Teamleiter vereinfachen kannst, das Arbeitsleben vereinfachen kannst. Wenn du das nicht hinbekommst, dann wirst du den Job halt auch nicht kriegen und das zieht sich dann halt auch, wie du tatsächlich auch arbeitest, dann halt auch Job für Job weiter durch."
+        },
+        {
+            "start": 4239410,
+            "end": 4274310,
+            "speaker": "A",
+            "text": "Würde ich dir zustimmen, ohne halt jetzt irgendwem in den Arsch reinzukriechen. Also ich mein, das gibt es natürlich dann auch, aber nun gut. Aber ich finde eine schöne Sache, die diese Podcast Episode mal wieder zeigt, ist, die Technik ist zwar kompliziert, aber ein gelöstes Problem. Anscheinend sind die Menschen mal wieder das reale Problem, weil die Menschen schaffen dann auch Prozesse und allem drum und dran und sich gegenseitig vertrauen. Das ist ja auch mehr oder weniger das Credo dieses Podcast. Aber kommen wir mal zum Ende. Wenn die Hörerschaft nach dieser Episode nur eine Sache mitnimmt, was ist das?"
+        },
+        {
+            "start": 4274310,
+            "end": 4282070,
+            "speaker": "C",
+            "text": "Man muss nicht freitags deployen, Man sollte es können bzw. Dahin arbeiten, dass man theoretisch immer deployen könnte."
+        },
+        {
+            "start": 4282230,
+            "end": 4297340,
+            "speaker": "A",
+            "text": "Und welchen konkreten Arbeitsauftrag würdest du unserer Hörerschaft mitgeben, wenn die morgen oder falls ihr diese Episode am Wochenende hört, am Montag ins Büro geht? Was sollte man überprüfen? Was sollte man direkt als ersten Handlungsstrang machen?"
+        },
+        {
+            "start": 4297340,
+            "end": 4338170,
+            "speaker": "C",
+            "text": "Ich würde erst mal überlegen für mich selbst, die Frage hatten wir vorhin ja auch, wenn ich einen Fehler mache, was passiert dann? Und kann ich das verbessern? Also die Antwort, die darauf kann ich das verbessern? Wenn die Antwort auf die Frage, ich würde Ärger bekommen von meinen Teamkollegen, dann kann man schon mal wieder warum kriege ich Ärger Und kann das verbessern, wenn es von dem Chef oder vom Teamleiter oder von weiter oben kommt, ist wieder ein bisschen schwieriger. Aber auch da kann man noch mal gucken, wie kann ich das verbessern? Kann ich strukturell vielleicht was verbessern, damit das gar nicht erst auftritt, wo ich mal mit anderen Teams arbeiten muss? Also sehr viel Warum fragen, Aber halt, was kann ich im Konkreten tun?"
+        },
+        {
+            "start": 4338330,
+            "end": 4358420,
+            "speaker": "A",
+            "text": "Das klingt für mich ganz stark. Man tippt mal sein Bestie am Montag im Büro an und lass mal Kaffee trinken gehen und dann versackt man da in der Kaffeeküche um mal aber jetzt noch, jetzt bin ich Montag im Büro, ich komme nicht weiter und denke mir aber ich will das Thema angehen. Man kann auch Geld bei dir dafür ausgeben, ist das richtig?"
+        },
+        {
+            "start": 4358980,
+            "end": 4362820,
+            "speaker": "C",
+            "text": "Korrekt. Das ist einer meiner Punkte, die ich angehe bei Firmen."
+        },
+        {
+            "start": 4363700,
+            "end": 4375380,
+            "speaker": "A",
+            "text": "Wie kontaktiert man dich? Was bietest du an? Nutze diese Zeit doch bitte, um etwas Werbung für die Firma zu machen mit dem Trollnamen oder mit dem besten Namen ever?"
+        },
+        {
+            "start": 4375620,
+            "end": 4470190,
+            "speaker": "C",
+            "text": "Friday. Genau. Also man findet mich über meine Firmenseite, unter mir gehören beide Domains und da gibt es auch Kontaktformular man findet mich im Fidiverse, also auf Mastodon findet man mich und auf LinkedIn auch, wo ich vielleicht demnächst mal ein bisschen mehr posten werde und wer sich mit dem Thema genauer auseinandersetzen, also vollumfänglicher. Im Endeffekt geht es in meinem DevOps Buch ja genau darum jetzt nicht um Freitags Deployments im Konkreten, aber letztendlich ist es ja auch nur ein Aufhänger über die Kultur zu sprechen. Ist dann wieder unabhängig von welchen Tag wir jetzt deployen oder ist es überhaupt eine Software, die man deployed Und falls ihr also in dem Sinne, die zuhören, eine Story habt aus einer Firma, wo was gut funktioniert hat, wo was anders funktioniert hat, die wir vielleicht nicht betrachtet haben, ich werde demnächst an der zweiten Auflage meines DevOps Buchs arbeiten und ich suche da noch Stories von deutschen Firmen, was alles rund um DevOps angeht. Das kann sein, wie man Blameless Post Mortems eingeführt hat, vielleicht wie man Freitags Deployments eingeführt hat, weil man kennt halt diese ganzen Stories von so einer Netflix, von so einer Amazon, von so einer Google. Man sieht jetzt aber irgendwie nicht so richtig deutsche Firmen oder aus dem deutschsprachigen Raum, die auch eher modern nach den DevOps Prinzipien arbeiten und das würde ich gerne ein bisschen tiefer mit eingehen in meinem Buch."
+        },
+        {
+            "start": 4470270,
+            "end": 4493010,
+            "speaker": "A",
+            "text": "Also falls ihr eine Story zum Teilen habt, wie ihr jeden Freitag absichtlich deployed oder fast noch spannender, wie ihr da hingekommen seid und wie ihr ein komplettes Management Turnaround hingelegt habt, meldet euch doch einfach mal. Alle Kontaktdaten für Tsujiwan findet ihr im findet ihr in den Show Notes. Ich glaube du bist bei uns auch im Discord richtig?"
+        },
+        {
+            "start": 4493170,
+            "end": 4495730,
+            "speaker": "C",
+            "text": "Ja, aber nicht sonderlich aktiv."
+        },
+        {
+            "start": 4500690,
+            "end": 4503890,
+            "speaker": "B",
+            "text": "Alle jetzt zu gingen auf Discord bitte direkt."
+        },
+        {
+            "start": 4503890,
+            "end": 4527000,
+            "speaker": "C",
+            "text": "Ich ändere jetzt meinen Namen zu Friday Deployments. Ja eigentlich wollte ich ja in meine Selbstständigkeit gehen und weniger arbeiten, damit ich sagen konnte so naja ich mache hier Lifestyle Teilzeit und ich deploy auch nicht freitags, sondern donnerstags, aber dann dachte ich, okay, dann müsste ich die Firma auch wieder umbenennen, dann müsste ich eigentlich Thursday Deployments, egal."
+        },
+        {
+            "start": 4527240,
+            "end": 4535690,
+            "speaker": "A",
+            "text": "Ja, also ich mein, du musst halt auch das machen, was Friedrich Merz sagt, mehr arbeiten, deswegen ist das alles okay."
+        },
+        {
+            "start": 4535690,
+            "end": 4537410,
+            "speaker": "C",
+            "text": "Also Saturday Deployments, das ist es"
+        },
+        {
+            "start": 4539490,
+            "end": 4557410,
+            "speaker": "A",
+            "text": "auch geil oder Sunday Deployments, ich finde den Namen immer noch, ich feier den total und ich glaube ich habe auch irgendwo diesen This is fine. Friday Deployments Sticker hier rumfliegen. Vielen lieben Dank, dass du dir die Zeit genommen hast, mit uns über dieses Thema zu sprechen. Ich weiß nicht, ist es ein Streitthema, ist es kein Streitthema, aber ich glaube,"
+        },
+        {
+            "start": 4557410,
+            "end": 4565000,
+            "speaker": "B",
+            "text": "es ist ein Leidensthema, würde ich sagen, aber kein Streitthema mehr. Zumindest in der Community würde ich fast davon ausgehen."
+        },
+        {
+            "start": 4565160,
+            "end": 4580320,
+            "speaker": "A",
+            "text": "Also jetzt die Was machen wir als nächstes? Ich meine, wir nehmen am Abend auf. Wir haben jetzt kurz vor ein und zwanzig uhr, also ich deploy gleich noch mal die Engineering Webseite, aber wir haben auch keine Rufbereitschaft für die Webseite. Naja gut, aber dann geht das einfach."
+        },
+        {
+            "start": 4580320,
+            "end": 4581760,
+            "speaker": "C",
+            "text": "Du hast doch keine Angst, dass was kaputt geht."
+        },
+        {
+            "start": 4581760,
+            "end": 4583400,
+            "speaker": "B",
+            "text": "Immer verfügbar, bitte, Andi."
+        },
+        {
+            "start": 4583480,
+            "end": 4589730,
+            "speaker": "A",
+            "text": "Ja, die Self Healing auf Netlify oder so. Also von daher das fast schon."
+        },
+        {
+            "start": 4589730,
+            "end": 4608210,
+            "speaker": "B",
+            "text": "Wobei, während wir diesen Podcast aufgenommen haben, habe ich zumindest drei Messages von unserer Pipeline gesehen, dass irgendwie unsere Webseite dreimal deployed wurde, weil wir sind ja mittlerweile ein großes Team mit den Meetups und es gibt ja auch andere Leute, die die Pipeline nutzen. Also Andi, wir sind nicht mehr zu zweit und sie scheint, hoffentlich hat sie funktioniert. Ich habe es nicht überprüft."
+        },
+        {
+            "start": 4608530,
+            "end": 4668000,
+            "speaker": "A",
+            "text": "Wir haben aber in letzter Zeit auch über Discord Bescheid bekommen, wenn irgendwas kaputt war und von irgendwas vom Franky schöne Grüße raus, haben wir glaube ich, auch einen Pull Request bekommen, der das dann auch gefixt, was ich dann mit AI kaputt gemacht habe. Aber nun gut, das war's von uns. Friday Deployments. Wir wünschen euch ganz viele schöne und erholsame Friday Deployments. Habt keine Angst, fangt einfach an zu shippen und shippt auch einfach mal vielleicht irgendeinen Typo in irgendeinem Dokument oder so oder in einem Kommentar als Friday Deployment, als Übung, denn theoretisch sollte nichts kaputt gehen. Ist ja keine Codeänderung. Vielleicht ist das eigentlich immer ganz guter Tipp, nächsten Freitag einfach mal einen Kommentar ändern durch mergen, freitags deployen, einfach nur um den Teamleiter oder Teamleiterin zu sagen, hey, schau mal, das geht, da geht nichts kaputt. Das war's von uns. Und falls ihr noch nicht genug habt, hört mal in den t p o r t i l p o dot net findet ihr natürlich überall da, wo es Podcast gibt. Und ansonsten würde ich sagen, vielen lieben Dank und tschüss."
+        },
+        {
+            "start": 4668080,
+            "end": 4669280,
+            "speaker": "C",
+            "text": "Ciao, ciao."
+        }
+    ]
+}
