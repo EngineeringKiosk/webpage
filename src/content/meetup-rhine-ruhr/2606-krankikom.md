@@ -1,0 +1,31 @@
+---
+date: 2026-06-10T18:00:00+02:00
+location:
+  name: 'Krankikom GmbH'
+  address: 'Calaisplatz 5, 47051 Duisburg'
+  url: 'https://www.krankikom.de/'
+  logo: './images/location/krankikom.png'
+talks:
+  - avatar: ''
+    name: ''
+    title: ''
+    language: 'en'
+    slides: ''
+    description: ''
+    bio: ''
+    linkedin: ''
+    bluesky: ''
+    mastodon: ''
+    website: ''
+  - avatar: ''
+    name: ''
+    title: ''
+    language: 'en'
+    slides: ''
+    description: ''
+    bio: ''
+    linkedin: ''
+    bluesky: ''
+    mastodon: ''
+    website: ''
+---
