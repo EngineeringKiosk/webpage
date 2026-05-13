@@ -23,7 +23,8 @@ const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
 	sliderImages={sliderImages}
 	showRegistrationForm={false}
 	showGeneralLanguageNote={false}
-	showNewsletterForm={false}
+	showNewsletterForm={true}
+	newsletterConfig={{ source: "website-meetup-rhine-ruhr", primaryNewsletter: "meetup_rhine_ruhr" }}
 	regionDescription="tech people in the Rhine-Ruhr region"
 	teamBadge="The local team of Rhine-Ruhr"
 	teamTitle="Team Engineering Kiosk Rhine-Ruhr"
