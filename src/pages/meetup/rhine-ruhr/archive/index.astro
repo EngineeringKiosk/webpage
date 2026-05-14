@@ -1,6 +1,6 @@
 ---
 import MeetupArchiveLayout from '../../../../components/meetup/MeetupArchiveLayout.astro';
-import { NEWSLETTER_SOURCES } from '../../../../scripts/newsletter-sources.js';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS } from '../../../../scripts/newsletter-constants.js';
 
 const rhineRuhrImage = (await import('../../../../images/meetup-rhine-ruhr/slider/duesseldorf-skyline.jpg')).default;
 ---
@@ -17,7 +17,7 @@ const rhineRuhrImage = (await import('../../../../images/meetup-rhine-ruhr/slide
 	heroImageAlt="Düsseldorf Skyline"
 	heroImageTitle="Düsseldorf Skyline"
 	showNewsletterForm={true}
-	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP, primaryNewsletter: "meetup_rhine_ruhr" }}
+	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP, primaryNewsletter: NEWSLETTER_LISTS.MEETUP_RHINE_RUHR }}
 	teamBadge="The local team of Rhine-Ruhr"
 	teamTitle="Team Engineering Kiosk Rhine-Ruhr"
 	teamDescription="The organizers of Engineering Kiosk Rhine-Ruhr."
