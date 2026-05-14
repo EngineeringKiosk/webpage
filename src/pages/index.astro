@@ -1,6 +1,6 @@
 ---
-import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import { sortByDateDesc } from '../scripts/sorting.js';
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
@@ -13,16 +13,18 @@ import { cutText } from '../scripts/strings.js';
 import { formatDateWithoutWeekday, formatDateWithWeekdayAndOrdinal } from '../scripts/date.js';
 import { createMeetupHelpers } from '../scripts/meetups.js';
 import AnnouncementBar from '../components/AnnouncementBar.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LOCALES } from '../scripts/newsletter-constants.js';
 
 // Testimonials images
-import testimonialLuiseHaack from "../images/testimonials/luise-haack.jpeg";
-import testimonialPascalLandau from "../images/testimonials/pascal-landau.jpeg";
-import testimonialSaskiaKeil from "../images/testimonials/saskia-keil.png";
-import testimonialSebastianHammerl from "../images/testimonials/sebastian-hammerl.jpg";
-import testimonialYanivPreiss from "../images/testimonials/yaniv-preiss.jpeg";
+import testimonialLuiseHaack from '../images/testimonials/luise-haack.jpeg';
+import testimonialPascalLandau from '../images/testimonials/pascal-landau.jpeg';
+import testimonialSaskiaKeil from '../images/testimonials/saskia-keil.png';
+import testimonialSebastianHammerl from '../images/testimonials/sebastian-hammerl.jpg';
+import testimonialYanivPreiss from '../images/testimonials/yaniv-preiss.jpeg';
 
 // Header image
-import headerImageAndyWolfiLounge from "../images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg";
+import headerImageAndyWolfiLounge from '../images/headers/andy-grunwald-wolfgang-gassler-lounge.jpg';
 
 import podcastInfo from '../data/podcast-info.json';
 import bestOfEpisodes from '../data/episodes-best-of.json';
@@ -32,12 +34,12 @@ let description = 'Der deutschsprachige Software-Engineering-Podcast, Tech-Meetu
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Data Fetching: List all Markdown posts in the repo.
-let allPosts = await getCollection("blog");
+let allPosts = await getCollection('blog');
 sortByDateDesc(allPosts);
 
 // Determine the latest episode
 // We have places where the last episode is linked
-let allEpisodes = await getCollection("podcast");
+let allEpisodes = await getCollection('podcast');
 sortByDateDesc(allEpisodes);
 let episodesToShow = allEpisodes.slice(0, 1);
 let episode = episodesToShow[0];
@@ -53,7 +55,7 @@ const { getNextMeetup: getNextMeetupAlps } = await createMeetupHelpers('meetup-a
 const nextMeetupAlps = getNextMeetupAlps();
 let showAnnouncementBarStartAlps = new Date();
 let showAnnouncementBarEndAlps = new Date();
-let nextMeetupDateAlps = "";
+let nextMeetupDateAlps = '';
 
 if (nextMeetupAlps && nextMeetupAlps.date) {
 	showAnnouncementBarStartAlps = new Date(nextMeetupAlps.date);
@@ -67,7 +69,7 @@ const { getNextMeetup: getNextMeetupRhineRuhr } = await createMeetupHelpers('mee
 const nextMeetupRhineRuhr = getNextMeetupRhineRuhr();
 let showAnnouncementBarStartRhineRuhr = new Date();
 let showAnnouncementBarEndRhineRuhr = new Date();
-let nextMeetupDateRhineRuhr = "";
+let nextMeetupDateRhineRuhr = '';
 
 if (nextMeetupRhineRuhr && nextMeetupRhineRuhr.date) {
 	showAnnouncementBarStartRhineRuhr = new Date(nextMeetupRhineRuhr.date);
@@ -78,9 +80,9 @@ if (nextMeetupRhineRuhr && nextMeetupRhineRuhr.date) {
 }
 
 let bestPerformingEpisodes = [
-  ...bestOfEpisodes
-    .sort((a, b) => a.rank - b.rank) 	// Sort by rank
-    .map(item => item.title)         	// Only get the titles
+	...bestOfEpisodes
+		.sort((a, b) => a.rank - b.rank) // Sort by rank
+		.map((item) => item.title), // Only get the titles
 ];
 // as this list is quite static, let's introduce a randomization factor
 // to show different episodes on the homepage from time to time
@@ -101,11 +103,9 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 		<div>
 			<Nav title={title} />
 
-			<AnnouncementBar message={`🏔️ Upcoming Meetup in Innsbruck! ${nextMeetupDateAlps} – Sign up here`}
-			 link="/meetup/alps/" showStart={showAnnouncementBarStartAlps} showEnd={showAnnouncementBarEndAlps} id="announcementBarAlps" />
+			<AnnouncementBar message={`🏔️ Upcoming Meetup in Innsbruck! ${nextMeetupDateAlps} – Sign up here`} link="/meetup/alps/" showStart={showAnnouncementBarStartAlps} showEnd={showAnnouncementBarEndAlps} id="announcementBarAlps" />
 
-			<AnnouncementBar message={`🌉 Upcoming Meetup in Rhine-Ruhr! ${nextMeetupDateRhineRuhr} – Sign up here`}
-			 link="/meetup/rhine-ruhr/" showStart={showAnnouncementBarStartRhineRuhr} showEnd={showAnnouncementBarEndRhineRuhr} id="announcementBarRhineRuhr" />
+			<AnnouncementBar message={`🌉 Upcoming Meetup in Rhine-Ruhr! ${nextMeetupDateRhineRuhr} – Sign up here`} link="/meetup/rhine-ruhr/" showStart={showAnnouncementBarStartRhineRuhr} showEnd={showAnnouncementBarEndRhineRuhr} id="announcementBarRhineRuhr" />
 
 			<section class="relative bg-white overflow-hidden" style="background-image: url('/images/elements/pattern-white.svg'); background-position: center;">
 				<div class="py-20 md:py-28">
@@ -119,7 +119,9 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight"> Podcast, Meetups + Community</span>
 								</h1>
 								<p class="mb-8 text-base xl:text-xl text-coolGray-500 font-medium">
-									Der Engineering Kiosk ist die deutschsprachige Software-Engineering-Community mit Podcast, Tech-Meetups und Discord. Jede Woche eine neue Podcast-Episode mit <a href="/kiosk-betreiber/wolfgang-gassler/">Wolfgang Gassler</a> und <a href="/kiosk-betreiber/andy-grunwald/">Andy Grunwald</a>, regelmäßige Meetups in Innsbruck (AT) und im Rhein-Ruhr-Gebiet (DE) sowie eine aktive Discord-Community rund um die Themen Engineering-Kultur, Open Source, Menschen und Technologie.
+									Der Engineering Kiosk ist die deutschsprachige Software-Engineering-Community mit Podcast, Tech-Meetups und Discord. Jede Woche eine neue Podcast-Episode mit <a href="/kiosk-betreiber/wolfgang-gassler/">Wolfgang Gassler</a> und <a href="/kiosk-betreiber/andy-grunwald/"
+										>Andy Grunwald</a
+									>, regelmäßige Meetups in Innsbruck (AT) und im Rhein-Ruhr-Gebiet (DE) sowie eine aktive Discord-Community rund um die Themen Engineering-Kultur, Open Source, Menschen und Technologie.
 								</p>
 								<div class="flex flex-wrap">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
@@ -128,12 +130,13 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 										</a>
 									</div>
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/meetup/">
-											👥 Meetups
-										</a>
+										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/meetup/"> 👥 Meetups </a>
 									</div>
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a class="inline-flex items-center justify-center py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="/join-discord/">
+										<a
+											class="inline-flex items-center justify-center py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm"
+											href="/join-discord/"
+										>
 											<img class="w-6 mr-2" src="/images/brands/discord-blue.svg" alt="Discord" /> Community
 										</a>
 									</div>
@@ -162,9 +165,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 							</div>
 						</div>
 						<div class="w-full md:w-1/2 px-4">
-							<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm"
-								>Aktuelle Episode / <time class="date" datetime={episode.data.pubDate}>{formatDateWithoutWeekday(episode.data.pubDate)}</time>
-							</span>
+							<span class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm">Aktuelle Episode / <time class="date" datetime={episode.data.pubDate}>{formatDateWithoutWeekday(episode.data.pubDate)}</time> </span>
 							{
 								currentEpisodeTags.map((element) => (
 									<a class="inline-block py-px px-2 mb-4 mr-3 text-xs leading-5 text-yellow-900 bg-yellow-100 font-medium uppercase rounded-full shadow-sm hover:text-yellow-1000 hover:bg-yellow-200" href={`/tag/${element.url}/`}>
@@ -281,20 +282,26 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 			<section id="kaffee-support" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
 					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Supporte uns mit einem Kaffee ...</h3>
-					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="https://buymeacoffee.com/engineeringkiosk">
-						Buy Me A Coffee ☕
-					</a>
+					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="https://buymeacoffee.com/engineeringkiosk"> Buy Me A Coffee ☕ </a>
 				</div>
 			</section>
 
-			<PodcastEpisodeListing episodes={bestPerformingEpisodes} showAllButton={true} descriptionChars={300} headline="Unsere Best-Of Episoden" description="Neu hier? Unsere Best-Of-Episoden sind der perfekte Einstieg in den Engineering Kiosk – spannende Gespräche über Menschen, Technologie und Engineering-Kultur." sectionID="best-of-episoden" />
+			<PodcastEpisodeListing
+				episodes={bestPerformingEpisodes}
+				showAllButton={true}
+				descriptionChars={300}
+				headline="Unsere Best-Of Episoden"
+				description="Neu hier? Unsere Best-Of-Episoden sind der perfekte Einstieg in den Engineering Kiosk – spannende Gespräche über Menschen, Technologie und Engineering-Kultur."
+				sectionID="best-of-episoden"
+			/>
 
 			<section id="alle-episoden" class="py-20 md:py-28 bg-coolGray-900 overflow-hidden" style="background-image: url('/images/elements/pattern-dark2.svg'); background-position: center;">
 				<div class="container px-4 mx-auto flex flex-col items-center">
-					<h3 class="mb-8 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Lust auf mehr?</h3>
-					<a class="inline-block py-4 px-5 mt-2 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm" href="/podcast/">
-						Alle Podcast Episoden anzeigen
-					</a>
+					<h3 class="mb-4 font-bold leading-tight text-white text-4xl md:text-5xl tracking-tight">Lust auf mehr?</h3>
+					<p class="mb-8 text-lg md:text-xl text-coolGray-300 font-medium text-center max-w-2xl">Einmal im Monat News, Links und Empfehlungen aus dem Engineering Kiosk in deiner Inbox.</p>
+					<div class="w-full max-w-xl">
+						<NewsletterForm variant="compact" theme="dark" source={NEWSLETTER_SOURCES.HOME_CTA} locale={NEWSLETTER_LOCALES.DE} />
+					</div>
 				</div>
 			</section>
 			<!--
@@ -311,9 +318,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
-						{Object.keys(teamMembers).map((key) => (
-							<TeamMember memberKey={key} />
-						))}
+						{Object.keys(teamMembers).map((key) => <TeamMember memberKey={key} />)}
 					</div>
 				</div>
 			</section>

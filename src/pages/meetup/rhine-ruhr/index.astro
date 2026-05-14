@@ -1,5 +1,6 @@
 ---
 import MeetupPageLayout from '../../../components/meetup/MeetupPageLayout.astro';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS, NEWSLETTER_LOCALES } from '../../../scripts/newsletter-constants.js';
 
 // Dynamically import all images from the slider directory
 const imageModules = import.meta.glob('../../../images/meetup-rhine-ruhr/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
@@ -23,7 +24,8 @@ const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
 	sliderImages={sliderImages}
 	showRegistrationForm={false}
 	showGeneralLanguageNote={false}
-	showNewsletterForm={false}
+	showNewsletterForm={true}
+	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP, locale: NEWSLETTER_LOCALES.EN, primaryNewsletter: NEWSLETTER_LISTS.MEETUP_RHINE_RUHR }}
 	regionDescription="tech people in the Rhine-Ruhr region"
 	teamBadge="The local team of Rhine-Ruhr"
 	teamTitle="Team Engineering Kiosk Rhine-Ruhr"

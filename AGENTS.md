@@ -82,17 +82,18 @@ The CLI reads/writes the Astro content collections directly (`src/content/...`),
 - Tailwind v4 via `@tailwindcss/vite`; no `tailwind.config.js` — config is CSS-first in `src/styles/`.
 - Tests: vitest for JS (`src/scripts/*.test.js`), `go test` for the CLI. CI workflows: `astro-testing.yml`, `javascript-testing.yml`, `go-testing.yml`, `links.yml` (lychee, config in `.lychee.toml`).
 - New display strings for movies/genres live in `src/scripts/movie-labels.js` and `src/data/awesome-software-engineering-*-*.json`, not in upstream JSON.
+- Environment variables: none required by the frontend. Newsletter signups are submitted to the `engineeringkiosk/newsletter-worker` Cloudflare Worker at `https://api.engineeringkiosk.dev/newsletter/subscribe`, which owns the Plunk integration server-side.
 
 ## Go Unit Testing Conventions
 
- - Prefer standard library (testing package, t.Run(), t.Errorf())
- - Use testify/assert only when it significantly reduces boilerplate (deeply nested struct comparisons,
- slice equality)
- - Table-driven tests as default pattern
- - Refactor to individual tests if a table test requires closures/anonymous setup functions
- - Use t.TempDir() for file-based tests
- - Use httptest.NewServer() for HTTP mocking (already in use)
- - Use zerolog.Nop() for logger injection in statemanager tests (already in use)
+- Prefer standard library (testing package, t.Run(), t.Errorf())
+- Use testify/assert only when it significantly reduces boilerplate (deeply nested struct comparisons,
+  slice equality)
+- Table-driven tests as default pattern
+- Refactor to individual tests if a table test requires closures/anonymous setup functions
+- Use t.TempDir() for file-based tests
+- Use httptest.NewServer() for HTTP mocking (already in use)
+- Use zerolog.Nop() for logger injection in statemanager tests (already in use)
 
 # JavaScript Unit Testing Conventions
 

@@ -2,7 +2,9 @@
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 import podcastInfo from '../data/podcast-info.json';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LOCALES } from '../scripts/newsletter-constants.js';
 
 let title = 'Newsletter - Engineering Kiosk';
 let description = 'Abonniere den Engineering Kiosk Newsletter und erhalte regelmäßig Updates zu neuen Podcast-Episoden, Tech-Meetups und Themen rund um Software Engineering.';
@@ -24,23 +26,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 						<div class="w-full mb-10 lg:mb-0">
 							<span class="inline-block py-px px-2 mb-4 text-xs leading-5 text-yellow-500 bg-yellow-100 font-medium uppercase rounded-9xl"> Newsletter</span>
 							<h1 class="mb-4 text-4xl md:text-5xl text-darkCoolGray-900 font-bold tracking-tight leading-tight">Wenn du mehr von uns möchtest ...</h1>
-							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
-								Immer mal wieder erreichen uns Nachrichten, dass wir doch bitte mehr von uns geben sollen. Und das tun wir jetzt!
-							</p>
-							<p class="text-lg md:text-xl text-coolGray-500 font-medium">
-								Wir haben einen Newsletter gestartet.
-								Einmal im Monat bekommst du von uns eine E-Mail mit Links und News, die über unseren Tisch gegangen sind.
-							</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">Immer mal wieder erreichen uns Nachrichten, dass wir doch bitte mehr von uns geben sollen. Und das tun wir jetzt!</p>
+							<p class="text-lg md:text-xl text-coolGray-500 font-medium">Wir haben einen Newsletter gestartet. Einmal im Monat bekommst du von uns eine E-Mail mit Links und News, die über unseren Tisch gegangen sind.</p>
 						</div>
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
-						<script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-						<iframe src="https://subscribe-forms.beehiiv.com/0250b21c-3fbe-4535-95f5-3afca8984d8a" class="beehiiv-embed" data-test-id="beehiiv-embed" title="Engineering Kiosk Newsletter Anmeldung" scrolling="no" style="width: 100%; height: 220px; margin: 0; border: none; border-radius: 0; background-color: transparent;"></iframe>
+						<NewsletterForm variant="full" source={NEWSLETTER_SOURCES.NEWSLETTER_PAGE} locale={NEWSLETTER_LOCALES.DE} />
 					</div>
 				</div>
 			</section>
-			
+
 			<Footer />
 		</div>
 	</body>

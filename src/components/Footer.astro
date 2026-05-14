@@ -11,11 +11,9 @@ const year = new Date().getFullYear();
 			<div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-16 lg:mb-0">
 				<a href="/" title="Engineering Kiosk Startseite" class="flex flex-row items-center mb-4">
 					<img class="h-12" src="/images/logos/engineering-kiosk-logo.svg" alt="Engineering Kiosk Logo" title="Engineering Kiosk Logo" />
-					<span class="text-xl ml-4">Engineering Kiosk</span>	
+					<span class="text-xl ml-4">Engineering Kiosk</span>
 				</a>
-				<p class="text-base md:text-lg text-coolGray-500 font-medium lg:w-64">
-					Podcast, Tech-Meetups und Community rund um die Themen Engineering-Kultur, Open Source, Menschen und Technologie.
-				</p>
+				<p class="text-base md:text-lg text-coolGray-500 font-medium lg:w-64">Podcast, Tech-Meetups und Community rund um die Themen Engineering-Kultur, Open Source, Menschen und Technologie.</p>
 			</div>
 			<div class="w-full md:w-1/4 lg:w-2/12 px-4 mb-16 lg:mb-0">
 				<h3 class="mb-5 text-lg font-bold text-coolGray-900">Engineering Kiosk</h3>
@@ -46,23 +44,28 @@ const year = new Date().getFullYear();
 						</a>
 					</li>
 					<li class="mb-4">
+						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Newsletter" href="/newsletter/">
+							<span class="w-6 mr-2">📧</span> Newsletter
+						</a>
+					</li>
+					<li class="mb-4">
 						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Discord Community" href="/join-discord/">
 							<img src="/images/brands/discord-blue.svg" class="inline w-6 mr-2" alt="Discord logo" title="Discord logo" /> Community
 						</a>
 					</li>
 					<li class="mb-4">
-						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Podcast RSS-Feed" href={podcastInfo.platformLinks.rss}> 
-							<img src="/images/logos/rss-icon.svg" class="inline w-6 mr-2" alt="RSS logo" title="RSS logo" />  RSS-Feed
+						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Podcast RSS-Feed" href={podcastInfo.platformLinks.rss}>
+							<img src="/images/logos/rss-icon.svg" class="inline w-6 mr-2" alt="RSS logo" title="RSS logo" /> RSS-Feed
 						</a>
 					</li>
 					<li class="mb-4">
-						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Podcast at Spotify" href={podcastInfo.platformLinks.spotify}> 
-							<img src="/images/brands/spotify.svg" class="inline w-6 mr-2" alt="Spotify logo" title="Spotify logo" />  Spotify
+						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Podcast at Spotify" href={podcastInfo.platformLinks.spotify}>
+							<img src="/images/brands/spotify.svg" class="inline w-6 mr-2" alt="Spotify logo" title="Spotify logo" /> Spotify
 						</a>
 					</li>
 					<li class="mb-4">
 						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Podcast at Apple Podcasts" href={podcastInfo.platformLinks.appleMusic}>
-							<img src="/images/brands/apple.svg" class="inline w-6 mr-2" alt="Apple Podcasts logo" title="Apple Podcasts logo" />  Apple Podcasts
+							<img src="/images/brands/apple.svg" class="inline w-6 mr-2" alt="Apple Podcasts logo" title="Apple Podcasts logo" /> Apple Podcasts
 						</a>
 					</li>
 				</ul>
@@ -70,13 +73,15 @@ const year = new Date().getFullYear();
 			<div class="w-full md:w-1/4 lg:w-2/12 px-4 mb-16 lg:mb-0">
 				<h3 class="mb-5 text-lg font-bold text-coolGray-900">Social Media</h3>
 				<ul>
-					{ ["x", "mastodon", "instagram", "youTube", "linkedin", "tiktok", "github", "bluesky"].map((social) => (
-						<li class="mb-4">
-							<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" href={podcastInfo.socials[social].link} title={podcastInfo.socials[social].linkTitle}>
-								<img src={podcastInfo.socials[social].icon} class="inline w-6 mr-2" alt={podcastInfo.socials[social].iconAlt} title={podcastInfo.socials[social].iconTitle} /> {podcastInfo.socials[social].name}
-							</a>
-						</li>
-					))}
+					{
+						['x', 'mastodon', 'instagram', 'youTube', 'linkedin', 'tiktok', 'github', 'bluesky'].map((social) => (
+							<li class="mb-4">
+								<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" href={podcastInfo.socials[social].link} title={podcastInfo.socials[social].linkTitle}>
+									<img src={podcastInfo.socials[social].icon} class="inline w-6 mr-2" alt={podcastInfo.socials[social].iconAlt} title={podcastInfo.socials[social].iconTitle} /> {podcastInfo.socials[social].name}
+								</a>
+							</li>
+						))
+					}
 				</ul>
 			</div>
 			<div class="w-full md:w-1/3 lg:w-4/12 px-4">
@@ -99,10 +104,10 @@ const year = new Date().getFullYear();
 					</li>
 					<li class="mb-4">
 						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Werbung im Engineering Kiosk Podcast" href="/podcast-werbung/"> <span class="w-6 mr-2">📢</span> Werbung im Engineering Kiosk Podcast</a>
-					</li>	
+					</li>
 					<li class="mb-4">
 						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Aktuelle Werbepartner" href="/podcast/partners/"> Aktuelle Werbepartner</a>
-					</li>					
+					</li>
 					<li>
 						<a class="inline-block text-coolGray-500 hover:text-coolGray-600 font-medium" title="Engineering Kiosk Impressum" href="/impressum/"> Impressum</a>
 					</li>
