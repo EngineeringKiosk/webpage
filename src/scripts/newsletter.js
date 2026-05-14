@@ -12,7 +12,7 @@ export function isValidEmail(value) {
 	return EMAIL_PATTERN.test(value.trim());
 }
 
-export function buildNewsletterPayload({ email, newsletters, source, honeypot } = {}) {
+export function buildNewsletterPayload({ email, newsletters, source, locale, honeypot } = {}) {
 	const payload = {
 		email,
 		newsletters,
@@ -20,6 +20,9 @@ export function buildNewsletterPayload({ email, newsletters, source, honeypot } 
 	};
 	if (typeof source === 'string' && source.length > 0) {
 		payload.source = source;
+	}
+	if (typeof locale === 'string' && locale.length > 0) {
+		payload.locale = locale;
 	}
 	return payload;
 }

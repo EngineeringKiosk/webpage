@@ -33,7 +33,7 @@ export interface Props {
 	showRegistrationForm?: boolean;
 	showGeneralLanguageNote?: boolean;
 	showNewsletterForm?: boolean;
-	newsletterConfig?: { source: string; primaryNewsletter: string; secondaryNewsletter?: string };
+	newsletterConfig?: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
 	regionDescription: string;
 }
 
@@ -358,6 +358,7 @@ const headTitle = (() => {
 					meetupDisplayName={meetupName}
 					showForm={showNewsletterForm}
 					source={newsletterConfig.source}
+					locale={newsletterConfig.locale}
 					primaryNewsletter={newsletterConfig.primaryNewsletter}
 					secondaryNewsletter={newsletterConfig.secondaryNewsletter}
 				/>

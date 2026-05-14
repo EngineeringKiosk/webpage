@@ -4,7 +4,7 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import NewsletterForm from '../components/NewsletterForm.astro';
 import podcastInfo from '../data/podcast-info.json';
-import { NEWSLETTER_SOURCES } from '../scripts/newsletter-constants.js';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LOCALES } from '../scripts/newsletter-constants.js';
 
 let title = 'Newsletter - Engineering Kiosk';
 let description = 'Abonniere den Engineering Kiosk Newsletter und erhalte regelmäßig Updates zu neuen Podcast-Episoden, Tech-Meetups und Themen rund um Software Engineering.';
@@ -32,7 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 					</div>
 
 					<div class="flex flex-wrap justify-center -mx-4">
-						<NewsletterForm variant="full" source={NEWSLETTER_SOURCES.NEWSLETTER_PAGE} />
+						<NewsletterForm variant="full" source={NEWSLETTER_SOURCES.NEWSLETTER_PAGE} locale={NEWSLETTER_LOCALES.DE} />
 					</div>
 				</div>
 			</section>

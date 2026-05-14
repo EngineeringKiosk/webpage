@@ -12,6 +12,7 @@ export interface Props {
 	variant?: 'full' | 'compact';
 	theme?: 'light' | 'dark';
 	source?: string;
+	locale?: string;
 	newsletters?: string[];
 	labelText?: string;
 	buttonText?: string;
@@ -22,6 +23,7 @@ const {
 	variant = 'full',
 	theme = 'light',
 	source = '',
+	locale = '',
 	newsletters = ['general'],
 	labelText = 'Deine E-Mail-Adresse',
 	buttonText = 'Anmelden',
@@ -51,6 +53,7 @@ const config = {
 	honeypotId,
 	endpoint: NEWSLETTER_ENDPOINT,
 	source,
+	locale,
 	newsletters,
 	messages,
 };
@@ -98,7 +101,7 @@ const statusClasses = isDark ? 'hidden mt-4 text-lg md:text-xl text-coolGray-300
 			return;
 		}
 		const config = JSON.parse(configEl.textContent);
-		const { inputId, statusId, honeypotId, endpoint, source, newsletters, messages } = config;
+		const { inputId, statusId, honeypotId, endpoint, source, locale, newsletters, messages } = config;
 
 		const input = document.getElementById(inputId);
 		const status = document.getElementById(statusId);
@@ -158,6 +161,7 @@ const statusClasses = isDark ? 'hidden mt-4 text-lg md:text-xl text-coolGray-300
 							email: input.value.trim(),
 							newsletters,
 							source,
+							locale,
 							honeypot: honeypot.value,
 						}),
 					),

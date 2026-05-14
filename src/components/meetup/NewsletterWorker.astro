@@ -17,6 +17,7 @@ export interface Props {
 	meetupDisplayName: string;
 	showForm?: boolean;
 	source: string;
+	locale?: string;
 	primaryNewsletter: string;
 	secondaryNewsletter?: string;
 	secondaryNewsletterLabel?: string;
@@ -27,6 +28,7 @@ const {
 	meetupDisplayName,
 	showForm = false,
 	source,
+	locale = '',
 	primaryNewsletter,
 	secondaryNewsletter = 'general',
 	secondaryNewsletterLabel = 'Also subscribe to the general Engineering Kiosk newsletter (German)',
@@ -60,6 +62,7 @@ const config = {
 	checkboxId,
 	endpoint: NEWSLETTER_ENDPOINT,
 	source,
+	locale,
 	primaryNewsletter,
 	secondaryNewsletter,
 	messages,
@@ -130,7 +133,7 @@ const config = {
 			return;
 		}
 		const config = JSON.parse(configEl.textContent);
-		const { inputId, statusId, honeypotId, checkboxId, endpoint, source, primaryNewsletter, secondaryNewsletter, messages } = config;
+		const { inputId, statusId, honeypotId, checkboxId, endpoint, source, locale, primaryNewsletter, secondaryNewsletter, messages } = config;
 
 		const input = document.getElementById(inputId);
 		const status = document.getElementById(statusId);
@@ -200,6 +203,7 @@ const config = {
 							email: input.value.trim(),
 							newsletters,
 							source,
+							locale,
 							honeypot: honeypot.value,
 						}),
 					),

@@ -42,6 +42,7 @@ describe('buildNewsletterPayload', () => {
 				email: 'andy@example.com',
 				newsletters: ['general'],
 				source: 'home-cta',
+				locale: 'de',
 				honeypot: '',
 			})
 		).toEqual({
@@ -49,6 +50,7 @@ describe('buildNewsletterPayload', () => {
 			newsletters: ['general'],
 			honeypot: '',
 			source: 'home-cta',
+			locale: 'de',
 		});
 	});
 
@@ -74,6 +76,25 @@ describe('buildNewsletterPayload', () => {
 			honeypot: '',
 		});
 		expect(payload).not.toHaveProperty('source');
+	});
+
+	it('omits locale when not provided', () => {
+		const payload = buildNewsletterPayload({
+			email: 'andy@example.com',
+			newsletters: ['general'],
+			honeypot: '',
+		});
+		expect(payload).not.toHaveProperty('locale');
+	});
+
+	it('omits locale when empty string', () => {
+		const payload = buildNewsletterPayload({
+			email: 'andy@example.com',
+			newsletters: ['general'],
+			locale: '',
+			honeypot: '',
+		});
+		expect(payload).not.toHaveProperty('locale');
 	});
 
 	it('defaults honeypot to empty string when undefined', () => {
