@@ -5,5 +5,5 @@
 export const NEWSLETTER_SOURCES = {
 	HOME_CTA: 'website-home-cta',
 	NEWSLETTER_PAGE: 'website-newsletter-page',
-	MEETUP: 'website-meetup-rhine-ruhr',
+	MEETUP: 'website-meetup',
 };
