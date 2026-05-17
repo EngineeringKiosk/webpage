@@ -1,5 +1,6 @@
 ---
 import MeetupPageLayout from '../../../components/meetup/MeetupPageLayout.astro';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS, NEWSLETTER_LOCALES } from '../../../scripts/newsletter-constants.js';
 
 // Dynamically import all images from the slider directory
 const imageModules = import.meta.glob('../../../images/meetup-alps/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
@@ -24,6 +25,7 @@ const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
 	showRegistrationForm={true}
 	showGeneralLanguageNote={true}
 	showNewsletterForm={true}
+	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP, locale: NEWSLETTER_LOCALES.EN, primaryNewsletter: NEWSLETTER_LISTS.MEETUP_ALPS }}
 	regionDescription="tech people in Tyrol"
 	teamBadge="The local team in Innsbruck"
 	teamTitle="Team Engineering Kiosk Alps"
