@@ -20,6 +20,7 @@ export const NEWSLETTER_SOURCES = {
 
 export const NEWSLETTER_LISTS = {
 	MEETUP_RHINE_RUHR: 'meetup_rhine_ruhr',
+	MEETUP_ALPS: 'meetup_alps',
 };
 
 export const NEWSLETTER_LOCALES = {
