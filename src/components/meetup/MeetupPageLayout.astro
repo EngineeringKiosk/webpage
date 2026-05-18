@@ -282,7 +282,7 @@ const headTitle = (() => {
 								</style>
 								<form action="https://rsvp.engineeringkiosk.dev/register" method="post" onsubmit="return submitRegisterForm(this);">
 									<div class="mt-4">
-										<p class="hidden text-lg mt-8" id="formMessage"></p>
+										<p class="hidden mt-8 text-lg md:text-xl text-coolGray-500 font-medium" id="formMessage"></p>
 										<input type="hidden" name="eventId" value={nextMeetup.eventId} />
 										<input type="hidden" name="meetup" value={meetupSlug} />
 										<input name="email" value="" placeholder="Your Email here" type="email" class="email-field" />
