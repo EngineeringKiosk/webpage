@@ -45,6 +45,7 @@ const inputId = `meetup-newsletter-email-${idSuffix}`;
 const statusId = `meetup-newsletter-status-${idSuffix}`;
 const honeypotId = `meetup-newsletter-company-${idSuffix}`;
 const checkboxId = `meetup-newsletter-also-${idSuffix}`;
+const eventsCheckboxId = `meetup-newsletter-events-${idSuffix}`;
 const configId = `${formElementId}-config`;
 
 const messages = {
@@ -75,7 +76,8 @@ const config = {
 			<h3 class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tight">Interested in upcoming meetups?</h3>
 			{showForm && (
 				<p class="text-lg md:text-xl text-coolGray-500 font-medium">
-					Register to our Engineering Kiosk {meetupDisplayName} newsletter (in English) and receive emails about upcoming meetups.<br />
+					Register to our Engineering Kiosk {meetupDisplayName} newsletter (in English).<br />
+					Receive updates about upcoming meetups.<br />
 					No worries, we won't spam you and you can unsubscribe at any time.
 				</p>
 
@@ -93,6 +95,12 @@ const config = {
 						/>
 						<input id={honeypotId} type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute left-[-9999px] h-0 w-0 opacity-0" />
 						<button type="submit" class="py-4 px-5 leading-4 cursor-pointer text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 rounded-md shadow-sm disabled:opacity-60 disabled:cursor-not-allowed">Subscribe</button>
+					</div>
+					<div class="max-w-xl mx-auto mt-3 flex justify-center">
+						<label for={eventsCheckboxId} class="inline-flex items-center text-base text-coolGray-500 font-medium">
+							<input id={eventsCheckboxId} type="checkbox" checked disabled class="mr-2" />
+							Get notified about upcoming events
+						</label>
 					</div>
 					<div class="max-w-xl mx-auto mt-3 flex justify-center">
 						<label for={checkboxId} class="inline-flex items-center text-base text-coolGray-500 font-medium cursor-pointer">
