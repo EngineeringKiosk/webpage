@@ -31,7 +31,7 @@ const {
 	locale = '',
 	primaryNewsletter,
 	secondaryNewsletter = 'general',
-	secondaryNewsletterLabel = 'Also subscribe to the general Engineering Kiosk newsletter (German)',
+	secondaryNewsletterLabel = 'Also send me the Engineering Kiosk newsletter (in German)',
 } = Astro.props;
 
 const { getNextMeetups } = await createMeetupHelpers(collectionName);
@@ -99,7 +99,7 @@ const config = {
 					<div class="max-w-xl mx-auto mt-3 flex justify-center">
 						<label for={eventsCheckboxId} class="inline-flex items-center text-base text-coolGray-500 font-medium">
 							<input id={eventsCheckboxId} type="checkbox" checked disabled class="mr-2" />
-							Get notified about upcoming events
+							Notify me about upcoming meetups and events
 						</label>
 					</div>
 					<div class="max-w-xl mx-auto mt-3 flex justify-center">
