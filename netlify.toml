@@ -3543,6 +3543,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/268"
+  to = "/podcast/episode/268-unsere-side-project-fails-wo-wir-aufgegeben-haben-und-warum?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep268"
+  to = "/podcast/episode/268-unsere-side-project-fails-wo-wir-aufgegeben-haben-und-warum?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
