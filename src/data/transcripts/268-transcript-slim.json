@@ -1,0 +1,723 @@
+{
+    "confidence": 0.95807946,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4099,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 157350,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Cures Podcast. Heute wird es ehrlich, so richtig ehrlich, denn wir sprechen über ein Thema, das in der Tech Welt oft viel zu kurz Gescheiterte side Projects. Nicht die Hochglanz Version auf LinkedIn, nicht die Geschichte mit großem Finale, Funding und Happy End, sondern die Projekte, die mit viel Motivation gestartet sind und dann irgendwo zwischen Alltag, Overengineering, fehlendem Payment, Plattformabhängigkeiten und zu wenig Zeit liegen geblieben sind. Wir schauen uns an, warum sich gescheiterte side Projects oft wie ein persönlicher Makel anfühlen, obwohl sie eigentlich völlig normal sind. Dabei sprechen wir über Start up Statistiken, Survivorship Bias und die Frage, warum wir überall nur Erfolgsgeschichten sehen, während die meisten Projekte still und leise verschwinden. Natürlich wird es bei uns auch konkret. Wolfi packt das Projekt Wohnbot aus einem Bot für Wohnungsanzeigen per WhatsApp, der an der Preispolitik von Meta gescheitert ist. Und ich erzähle von einer Fitness App, bei dem ich erst ein eigenes Problem lösen wollte und dann plötzlich in Flutter CI Monitoring und perfektionistischem Over Engineering versunken bin. Doch was würden wir heute anders machen? Payment First Ship First, mehr Dogfooding, mehr Accountability oder einfach weniger anfangen und mehr fertig machen? Wenn du selbst schon mal ein side Project gegen die Wand gefahren hast, dann ist diese Episode für dich. Los geht's. Der Wolfgang und ich predigen ja immer asynchrone Kommunikation und auch wir haben für den Engineering Kiosk einen Engineering Kiosk Slack Workspace. Und in diesem Engineering Kiosk Slack Workspace ist echt ein Zungenbrecher, wenn du das fünfmal sagst. Hintereinander haben wir einen Channel, der nennt sich Podcast Industrie. Und ab und zu schicken wir uns da einfach mal Links oder Podcast Episoden hin und her, die der andere sich mal irgendwie ansehen soll. So alles drum, was andere Podcaster so machen. Denn auch andere Podcaster machen so Behind the Scenes Episoden. Und auf einmal hat der Wolfgang mir da eine Episode von dem Podcast Erklär mir die Welt reingepackt. So ein österreichischer Podcast. Wer hätte es gedacht? Der erklärt einem die Welt. Und da ging es halt in so einer Hinter der Kulissen Episode um eine Hörerfrage. Die könnt ihr nicht mal Storys zu Fehlschlägen bringen. Ihr bringt immer irgendwie die Erfolgsgeschichten und das ist ja irgendwie immer schön zu hören, aber halt oft nicht realistisch. Und dann habe ich mich Wolfgang, wann haben wir denn eigentlich mal über Misserfolg oder mal nicht über Erfolge gesprochen? Denn wir haben ja auch etliche Gäste zu Gast und irgendwie wird die ja alle immer positiv. Also die kriegen es ja irgendwie immer gedeichselt. Und deswegen das die Motivation dieser Folge hier."
+        },
+        {
+            "start": 157350,
+            "end": 211190,
+            "speaker": "B",
+            "text": "Also ich würde sagen, wir sprechen schon immer wieder über Misserfolge, vor allem wenn wir über unsere side Project sprechen oder über grundsätzlich Produktentwicklung und solche Dinge. Wir fragen auch was hat denn bei irgendwelchen Umstellungen zum Beispiel nicht funktioniert technologisch? Also wir nehmen das schon ein bisschen mit, aber ich muss dir auch zustimmen und ich kenne das auch von diesen Fuck Up Nights, die es ja sehr oft gibt, wo man immer sagt ja, man präsentiert die absoluten Fuck Ups und was hat nicht funktioniert? Ich habe es bisher, glaube ich, noch nie erlebt, dass da irgendwie ein Talk war, der präsentiert hat, was hat nicht funktioniert? Punkt. Sondern es ist immer was hat nicht funktioniert? Okay, aber wir haben es dann geschafft und haben das und das gemacht und sind jetzt super erfolgreich. Also also dieser Punkt nach es hat mal was nicht funktioniert, habe ich bisher eigentlich noch nie erlebt. Und das finde ich eigentlich immer sehr schade, dass man dann trotzdem wieder das absolut sehr Positive reinbringt, weil es einfach so klingt, als hätte jeder am Ende Erfolg, auch wenn er Fuck Ups hat."
+        },
+        {
+            "start": 211190,
+            "end": 255680,
+            "speaker": "A",
+            "text": "Da bin ich mal gespannt, was in dieser Episode dabei rumkommt. Ob du mir auch wieder mit solchen Sätzen kommst wie ja, dieses Projekt blabla, aber jetzt fliegt es. Naja, warte ich mal ab. Aber du hast schon das Thema genannt Fuck Ups by side Project und side Projects ist auch in diesem Podcast nichts Neues, also ist kein neues Thema. Wir haben sogar auf unserer Webseite ein eigenes Tag für side Project und jetzt mal Back to the Roots. Vor mehr als vier Jahren haben wir sogar die ersten zwei Episoden von diesem Podcast side Projects gewidmet und zwar den Themen side Projects, Fluch oder Segen für die Karriere und Technologien zu side Project. Ich glaube, da bin ich dann einmal durch den damaligen Tech Stack von ein, zwei side Projects gegangen. Hört euch diese bitte nicht mehr an. Ich glaube, die Qualität, ich glaube, die"
+        },
+        {
+            "start": 255680,
+            "end": 263200,
+            "speaker": "B",
+            "text": "meistgehörte Episode, die Episode eins klarerweise, obwohl das eigentlich immer, sagen alle Podcaster immer die schlechtesten sind. Aber ja, man startet damit."
+        },
+        {
+            "start": 263280,
+            "end": 320750,
+            "speaker": "A",
+            "text": "Danach haben wir aber eine ganze Menge Pause gemacht. Ich glaube so ungefähr ein hundert Folgen und erst bei ein hundert elf kam wieder eine Episode über Sci Projects, wo wir hier diesen Podcast mal ein bisschen over engineered haben. Also es zieht sich so ein bisschen durch und hier und da haben wir mal side Projects immer mal erwähnt. Der Wolfgang hat bei Episode ein hundert neun und neunzig zum Beispiel die richtige Herausforderung bei seinen Zeitprojekts mal auf den Tisch gepackt. Und zwar coden ist leicht, Sales ist schwer, Business ist der Endgegner. Schauen wir mal, wie viel davon heute wiederkommt. Auf jeden Fall sprechen wir heute mal wirklich über Fehlschläge von unseren Zeitprojekten. Aber wir belassen es nicht bei den Fehlschlägen, denn wir öffnen uns mal ein bisschen. Wir reflektieren auch bzw. Haben reflektiert. Wir haben diese Episode ein bisschen vorbereitet und wir stellen uns die Was würden wir denn heute anders machen? Also wir schütten mal unser Herz aus und sind hoffentlich mal sehr ehrlich zu uns selbst. Schauen wir mal. Aber Wolfgang, wie ist deine Sicht auf die Welt? Sind wir alleine, failen immer nur unsere side Projects oder Und alle anderen sind erfolgreich? Das Gefühl habe ich ab und zu mal."
+        },
+        {
+            "start": 320699,
+            "end": 380699,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 380750,
+            "end": 437560,
+            "speaker": "B",
+            "text": "Das ist ja das, was ich gerade gemeint habe auch mit, dass am Ende dann auch bei diesen Fuck Up Nights immer präsentiert wird, wie toll man ist. Und es kann ja rein statistisch und so nicht sein, dass jeder und jede erfolgreich ist und jede Idee vor allem dann auch erfolgreich ist. Und es gibt ja diese berühmte Formel, würde ich sie mal nennen, dass man sagt, irgendwie jedes zehnte Startup ist erfolgreich und neun von zehn Startups sind nicht erfolgreich. Ich glaube mittlerweile, wenn man das bisschen längerfristig sieht, ist wahrscheinlich das Ganze noch schlechter. Also da ist man dann, glaube ich, schon froh, wenn das zehnte Startup wirklich sehr, sehr gut funktioniert. Und es gibt da ja auch viele Statistiken dazu. Ich glaube aber, es gibt sehr, sehr wenig bis keine Statistiken, die mir zumindest bekannt sind oder die mir mal untergekommen sind oder jetzt bei der Recherche irgendwie um die Ohren geflogen sind, wo es wirklich um side Projects geht, weil das Ganze natürlich weniger erfasst ist. Also das meiste ist dann schon eher auf der Startup Welt, was da erfasst wird, weil das sind halt öffentlich zugängliche Zahlen oder sind irgendwelche Organisationen, die solche Zahlen erfassen."
+        },
+        {
+            "start": 437560,
+            "end": 520020,
+            "speaker": "A",
+            "text": "Ja, ich glaube, die Statistiken zu side Project, zu richtigen side Project sind halt irgendwelche GitHub Repositories. Da müssen wir gucken, wie schnell GitHub Repositories gestartet werden oder erzeugt werden und dann nach drei Monaten wieder liegen gelassen werden. Ich glaube, das ist ein guter side Project Indikator. Aber wenn wir uns mal ein bisschen im Internet durchsuchen, dann findest du solche Thematiken wie zum Beispiel alle Neugründungen in den USA. Achtung, bei Neugründungen zählen jetzt nicht nur Tech Gründungen, also nicht nur Tech Startups, sondern wirklich alle Neugründungen, also auch Friseursalons und Cafés. Und wenn du das alles zusammennimmst, scheitern zwanzig Prozent im ersten Jahr, fünfzig Prozent innerhalb der ersten fünf Jahre und fünf und sechzig Prozent der ersten zehn Jahre. Gut, mit den zehn Jahren, da würde ich schon fast sagen, okay, wenn du ein Business aufbaust, was neun Jahre hält, sage ich Respekt, zumindest von mir höchsten Respekt, aber du siehst schon die Hälfte aller gestarteten Businesses oder Firmen oder Startups oder wie du immer möchtest, scheitern in den USA, zumindest innerhalb der ersten fünf Jahre, was schon hart ist. Wenn du jetzt mal aber eine Firma gegründet hast und dir anschaust, warum die denn dann fehlschlagen, dann geht eine andere Studie darauf zurück, dass zwei und vierzig Prozent einfach darauf zurückzuführen sind, dass einfach keine Nachfrage ist, also kein Product Market Fit. Dreiig Prozent, also ein Drittel, denen ist das Geld ausgegangen und drei und zwanzig Prozent, also ein Viertel, sagt ich hatte das falsche Team. Gut, was auch immer das falsche Team. Jetzt ist vielleicht so, ihr seid schuld."
+        },
+        {
+            "start": 520020,
+            "end": 567360,
+            "speaker": "B",
+            "text": "Naja, es ist eigentlich in der ganzen VC und Startup Welt schon immer dieses Key Kriterium, Du brauchst ein Team, was gut funktioniert, was nicht der gleichen Meinung ist, was sich auch bisschen reibt und was gut funktioniert. Und es gibt da noch andere Studien, eine Harvard Studie zum Beispiel, die besagt, dass fünf und sechzig Prozent aller Startups dann am Ende scheitern, weil es Reibereien im Team gibt, also das Team an sich. Und du kannst es ja selber auch zwischen uns. Es ist natürlich ein Reibungspunkt und du kannst noch die so gute Idee haben, wenn du das im Team nicht ausführen kannst oder umsetzen kannst oder dich nur streitest oder nie streitest und dann vielleicht am Markt vorbei entwickelst, dann hast du genau wieder dieses Team Problem. Und darum kommt sehr viel immer auf das Team zurück. Und gerade in der Startup Welt, die wie Sie schauen genau darauf, ist es ein gutes Team, bevor sie dir Geld geben."
+        },
+        {
+            "start": 567520,
+            "end": 652630,
+            "speaker": "A",
+            "text": "Wenn du schon bei den vcs bist, bei den Venture Capital Gebern, dann kommen wir mal zu den richtigen Blendern bzw. Zu dem richtigen Survivorship Bias. Denn wir lesen ja immer wieder, dass dieses Startup ganz viel Geld bekommt und das andere Startup ganz viel Geld bekommt. Nur null komma null fünf Prozent der Startups bekommen überhaupt Venture Capital Funding. Dann geht es weiter mit dem Media Buzzword Bingo. Nur ein Prozent der ganzen Startups werden Unicorns. Unicorns sind Startups, die mit einer Milliarde Dollar bewertet werden. Und da hören wir ja gefühlt dauerhaft nur Storys drüber. Und jetzt kommt auch eine sehr traurige Thematik, auch von diesen null komma null fünf Prozent der Startups, die wirklich VC Funding bekommen. Fünf und siebzig Prozent dieser Firmen geben ihren Investoren nie das Geld zurück. Also ich hab mir die ganzen Statistiken rausgesucht, um mal wirklich zu verstehen, bin ich alleine, schlagen nur meine side Projects fehl und meine side Projects gebe ich jetzt auch zu, sind jetzt keine Startups, aber hatten wir ja gerade gesagt, meine side Projects, um da Statistiken zu finden, müsste ich sehr wahrscheinlich GitHub, GitLab und keine Ahnung was crawlen und dann irgendwie eine Heuristik finden, womit ich gefailte Tech side Projects finde. Aber das sind so auf jeden Fall mal Statistiken, die hoffentlich untermauern, dass das, was wir auf Gründerszene und LinkedIn und keine Ahnung wo sehen, nicht normal ist, sondern die Ausreißer."
+        },
+        {
+            "start": 652630,
+            "end": 690760,
+            "speaker": "B",
+            "text": "Man muss ja auch dazu sagen, dass man das dann meistens nicht mehr mitbekommt, sogar wenn man liest, großes Startup hat irgendwie eine Funding Runde geraced, Series A, Series B. Klar, wenn sie dann sehr groß sind, bekommt man vielleicht noch mit, wenn sie pleite gehen, Aber wenn jetzt so eine Pre Seed, also so die erste Runde, wo man Geld einsammelt, dann nicht funktioniert. Das liest du ja nicht mehr. Das sind irgendwelche Founder, die haben mal sechs Monate an irgendwas geschraubt, hat nicht funktioniert und dann ist es einfach wieder weg. Und das liest man eben nie. Wenn man jetzt diese ganze Startup Szene mal auf dich umlegt, Andy, findest du dich da wieder? Bist du höher, bist du niedriger von allen Projekten, die du bisher so angerissen hast."
+        },
+        {
+            "start": 690760,
+            "end": 707340,
+            "speaker": "A",
+            "text": "Ich muss erst mal überlegen, welches einem meiner side Projects eigentlich erfolgreich war. Man könnte jetzt sagen, ist dieser Podcast erfolgreich? Da kommt immer die Frage, mit wem vergleichen wir uns? Also der Vergleich ja schon an sich ist ja das Übel. Man soll ja nicht vergleichen, man soll es ja machen, um Spaß zu haben und so weiter."
+        },
+        {
+            "start": 707340,
+            "end": 754510,
+            "speaker": "B",
+            "text": "Es ist ja auch interessant, ihr habt heute gerade den Wartungsfenster Podcast gehört, die haben nach einem Jahr wieder mal eine Episode rausgebracht. Gratulation dafür übrigens doch noch durchzuziehen und weiterzumachen. Und der Patrick hat, glaube ich, erwähnt, eigentlich sind es ja alles keine Projekte, weil Projekte haben eine definierte Abschlussphase. Wann ist ein Projekt fertig? Und wir sprechen ja eigentlich eher von so Lebensprojekten oder ein Unternehmen, was dann für die Ewigkeit eigentlich gebaut wird. Und da ist ja dann wirklich die Frage, wann ist so ein Projekt erfolgreich? Weil wenn du das jetzt aufgebaut hast, es war nur mäßig erfolgreich, du verkaufst es, Ist es ein Erfolg, ist es kein Erfolg? Also auch da ist die Definition natürlich schwieriger, würde ich mal sagen. Aber es gibt Projekte, die sind erfolgreicher und wahrscheinlich weniger erfolgreich, zumindest wenn ich jetzt auf meine Projekte blicke. Viele Projekte haben mir Geld gebracht, am Ende habe ich sie aber trotzdem nicht weitergemacht."
+        },
+        {
+            "start": 754510,
+            "end": 783670,
+            "speaker": "A",
+            "text": "Ja, aber ich habe viele Projekte gestartet, wo ich eigentlich nie damit gerechnet habe, dass da Geld kommt, beziehungsweise das Geld mein Motivationsfaktor ist. Deswegen, ich glaube, wir beide haben so eine andere Art von side Projects, aber das ist okay. Du hast mir gerade bei Flashbacks ein bisschen erzeugt und zwar wegen der Definition eines Projektes. Ich kenne auch meinen Professor von der Uni damals. Ein Projekt ist ein einmaliges, zielgerichtetes Vorhaben, was zeitlich begrenzt ist und dann auch noch begrenzte Ressourcen hat und pipapo."
+        },
+        {
+            "start": 783670,
+            "end": 789630,
+            "speaker": "B",
+            "text": "Und ja, siehst du mal, da rentiert sich jetzt da deine Wirtschaftsausbildung. Wenn du jetzt Informatik auch noch gemacht"
+        },
+        {
+            "start": 789630,
+            "end": 896390,
+            "speaker": "A",
+            "text": "hättest, ja, dann wäre vielleicht aus mir was geworden. Aber lass uns mal hier entweder ein bisschen educational unterwegs sein oder zum Thema kommen. Und zwar wähle ich jetzt mal die educational Thematik mal ganz kurz. Ich habe nämlich gerade, wenn ihr eine Sache mitnehmt, dann neues Fachwort. Ich habe gerade Survivorship Bias die ganze Zeit genannt. Und das ist ja die Antwort auf die Frage, sind wir allein, failen nur meine side Projects. Und ich glaube, wenn man Survivorship Bias mal hört, dann ist immer die eine Story aus dem Zweiten Weltkrieg, so das Prime example. Und zwar kamen da US Militärflugzeuge immer zurück zur Basis sind dann halt irgendwie rausgeflogen und haben Leute bombardiert und die kamen dann mit Einschusslöchern zurück. Und dann hat sich das Militär halt die Flugzeuge angesehen und hat gesagt, okay, überall wo Einschusslöcher drin sind, da müssen wir die Rüstung verstärken und die Karosserie von dem Flugzeug, damit das hier besser ist. Und das ist ja genau dieser Survivorship Bias, Denn was man nicht gesehen hat, sind die Einschusslöcher von den Flugzeugen, die ganz und gar nicht zurückgekommen sind. Weil die hatten nämlich dann, als die zurückgekommen sind, hatten sie irgendwie Einschusslöcher in den Tragflächen. Aber alle Leute, die ein Flugzeug geflogen sind, die Einschusslöcher im Motor hatten, sind halt nie zurückgekommen. Und deswegen konntest du das nie analysieren. Und das ist ungefähr jetzt die Definition von Survivorship Bias, also ein Denkfehler, dass man nur die Überlebenden in seiner Auswahl sieht und daraus halt Schlüsse zieht. Also falls ihr nur eine Sache von unserer Philosophiestunde hier mitnimmt, dann ist das die Definition von Survival Bias. So, kommen wir jetzt aber mal zu dem harten Kern dieser Episode. Packen wir ein bisschen Fleisch dran, wie der Nicht Veganer sagen würde, Bisschen Tofu, kein Problem, packen wir ein bisschen Tofu dran. Okay, Wolfgang, was ist denn dein Number One persönlich gefailtes side Project? Pack mal aus."
+        },
+        {
+            "start": 896390,
+            "end": 1059830,
+            "speaker": "B",
+            "text": "Also ich habe heute mal so in meinem ganzen Archiv gekramt und immer gedacht, ich gehe einfach auf meine Domains, die ich besitze und habe und kann da rauslesen, was für Projekte ich habe. Also ich habe aktuell, glaube ich, sieben und dreiig Domains und dann habe ich mir gedacht, ja, die ganzen alten sind aber auch nicht da. Dann habe ich ein bisschen herumgekramt, was so bei Nik at, das ist so die österreichische Registrierungsstelle, herumfleucht. Dann habe ich so E Mails aus den ERN gefunden und acht und neunzig wo man noch mit den Leuten irgendwie über Nick Handels persönlich geschrieben hat, wenn man eine Domain angemeldet hat. Wirklich waren dubiose Zeiten, wenn man sich überlegt, was das heutzutage an Arbeit ist. Aber ich will jetzt gar nicht zu sehr in die Vergangenheit abschweifen, sondern ein aktuelleres Projekt nehmen, was ich eigentlich erst vor kurzem mal gestartet hatte, Vermut mal vor zwei Jahren circa. Und zwar habe ich wieder mal, wie es so üblich ist, ich glaube den meisten geht so, wenn man selber irgendwo Probleme hat und sieht, da könnte es natürlich eine technische Lösung dafür geben. Was macht man als gut gelernter Informatiker, bevor man überhaupt schaut, ob es das woanders gibt. Man programmiert sich das selber. Aber in dem Fall habe ich sogar ein bisschen Recherche betrieben. Es hat sich in dieser Form noch nicht gegeben und zwar war das Problem, dass ich auf der Suche nach einer Wohnung war. Jetzt ist es bei uns in Innsbruck so, der Wohnungsmarkt ist ziemlich angespannt, würde ich es mal nennen. Sehr, sehr viele Studenten, Berge aussenrum, wenig Platz, das heißt Wohnungen sind sehr begehrt, Begehrt ist gut. Vielleicht zur Illustration, ich kann mich erinnern, einmal da ist eine Anzeige, dadurch ich das dann später gecrawlt habe, weiß ich das, wann die online gegangen ist, Die ist so um acht uhr online gegangen und ich habe eineinhalb Stunden später angerufen dort und derjenige hat gemeint, ja sorry, aber es sind schon über vierzig Leute jetzt für den ersten Besichtigungstermin angemeldet, ich schreibe dich gar nicht mehr auf die Liste, also du musst wirklich schnell sein, damit du überhaupt auf eine Besichtigungsliste kommst. Dann haben wir gedacht, okay, dann crawlt man einfach dieses ganze Zeug, was so herum fliegt auf den zwei, drei wichtigsten Plattformen in Österreich oder für Innsbruck in dem Fall. Und jedes Mal, wenn es irgendwo eine neue Anzeige gibt, will ich eine Message bekommen, dass es diese neue Anzeige gibt, im Idealfall aufs Handy und ich kann kurz checken, ist das was für mich, ja oder nein oder kann dementsprechend schnell weiterschauen. Die Plattformen haben ja teilweise selber so Such Agenten, nur die sind super langsam, da bekommt man teilweise eine Stunde später eine Message oder drei Stunden später eine Message. Und dann habe ich mir gedacht, okay, ich will das gesammelt von allen wichtigen Plattformen gesammelt auf mein Handy, habe mir dann auch überlegt, okay, was ist das Einfachste? Ich könnte WhatsApp nehmen, weil vielleicht ist es ja auch für andere Leute interessant und kann dann an alle Leute so eine WhatsApp Message schicken, vielleicht dann auch später mal personalisiert und so weiter und habe das ganze Wohnbot genannt, also so ein Robot, der sich um meine Wohnungen kümmert, um die Anzeigen und mich informiert, wenn es irgendwo was gibt."
+        },
+        {
+            "start": 1060000,
+            "end": 1071360,
+            "speaker": "A",
+            "text": "Ich meine im Endeffekt ist das ja ein Meta Aggregator, du bist check für Wohnungen mit Push Notification gab es ja glaube ich bei ebay früher auch so bei ebay Kleinanzeigen oder gibt es glaube ich immer noch, da kann ich ja nur so Desktop Applikationen."
+        },
+        {
+            "start": 1071360,
+            "end": 1127270,
+            "speaker": "B",
+            "text": "Genau, war eigentlich sehr easy, habe mir das auch sehr einfach vorgestellt, war auch gar nicht so kompliziert. Die Webseiten waren halt ein bisschen tricky wieder das klassische JavaScript wird irgendwas nachgeladen, irgendwelche Sachen, die man so ein bisschen intelligenter vielleicht abfragen muss beim Crawling und die Kernschwierigkeit war dann aber eher WhatsApp. Wie kann man WhatsApp Messages schicken über die Business API, wie funktioniert es, man muss dann Geld bezahlen auch die hatten ganz schräges Abrechnungsmodell, dass man irgendwie für vier und zwanzig Stunden Fenster bezahlt, wo man Nachrichten absendet aber ich habe das alles umgesetzt und habe das einfach mal online gestellt für mich paar Leute habe das weitererzählt und es sind dann schon von selbst irgendwie ohne jetzt Marketing zu betreiben durchaus paar Anmeldungen dabei rumgekommen und durch Word of Mouth hat es an sich ganz gut funktioniert und die hatte dann innerhalb kürzester Zeit würde man sagen so dreiig Leute, die das verwendet haben, ohne dass jetzt irgendeine Werbung gemacht hätte"
+        },
+        {
+            "start": 1127270,
+            "end": 1138670,
+            "speaker": "A",
+            "text": "und wie hat das funktioniert? Bin ich einfach in die WhatsApp Gruppe und da kam jede fünf Minuten irgendwie hier diese fünf neuen Wohnungen sind online oder muss ich da irgendwie sagen ich suche eine mit Balkon und dreiig Quadratmeter und dies und das und dann habe ich die personalisiert bekommen."
+        },
+        {
+            "start": 1138670,
+            "end": 1183750,
+            "speaker": "B",
+            "text": "Also die Idee war das personalisiert zu machen. Am Anfang habe ich es einfach gemacht, dass jeder alle bekommt, weil in Innsbruck bekommst du jetzt nicht so viele Meldungen, das waren so um die sechzig und das Problem ist ja immer mit wenn du da was eingrenzt, ist es dann brutto netto warm, kalt sind die drei Zimmer wirklich drei Zimmer oder wird da noch was mitgezählt? So diese Problematik wollte ich umgehen und habe mir gedacht okay wenn ich auf der Wohnungssuche bin, ist mir das scheißegal, wenn ich sechzig Messages bekomme, die kann ich leicht manuell durchsuchen. Also am Anfang war das dumm. Ich habe aber natürlich schon als guter Informatiker in die Zukunft gedacht und haben gedacht, wenn ich es dann richtig machen will, dann sollte es natürlich ein intelligenter Bot sein Und daher war der Ansatz auch personalisiert, dass du keine Gruppe hast, sondern wirklich dir eine Nummer dieser Bot einzelne Messages sendet."
+        },
+        {
+            "start": 1183750,
+            "end": 1189750,
+            "speaker": "A",
+            "text": "Okay, du hast dreiig Leute in einer WhatsApp Gruppe, du bist in geldtechnische Vorleistungen gegangen und dann, ja, das war auch"
+        },
+        {
+            "start": 1189750,
+            "end": 1315720,
+            "speaker": "B",
+            "text": "so eine Frage, ob das der richtige Ansatz ist, aber ich habe es ja für mich selber gebaut. Jetzt hatte ich keine Payment Schnittstelle, weil es war ja nur für mich im ersten Moment bzw. Ganz ursprünglich hatte ich das auch bei Slack mal, das war noch einfacher für mich, aber wenn man in die Breite gehen will, war das dann WhatsApp das Medium meiner Wahl und ich habe da was gezahlt, so um die einen Euro pro User pro Monat, aber mir gedacht, okay, gehen Vorleistung und bau dann eine Payment Schnittstelle. Hatte auch dann bereits angefangen an der Payment Schnittstelle zu arbeiten, hatte die fast abgeschlossen, hatte sogar eine Umfrage davor gebaut, um mal rauszufinden, was Leute bereit wären zu zahlen über WhatsApp. Also war eigentlich auch sehr cool, hatte übrigens einen Event Sourcing Ansatz für die Datenbank, hat sehr gut funktioniert, hatten wir eine eigene Episode, darum konnte ich diese ganze Umfrage super einfach implementieren, kann ich also nur empfehlen, Event Sourcing auf jeden Fall hatte ich die Umfrage, hatte das Payment beinahe abgeschlossen und dann war plötzlich das böse Erwachen. Ich habe nämlich üblicherweise so um die zwanzig dreiig pro Monat gezahlt für diese ganzen Messages bei Facebook und plötzlich habe ich eine Rechnung über ein hundert Dollar bekommen und ich mich am Anfang gar nicht ausgekannt und war mal kurzzeitig nervös und gedacht, mein Bot hat irgendwie verrückt gespielt oder was ist passiert. Der Hintergrund war, Meta hat einfach das Preismodell umgestellt und hat nochmal die Preise erhöht und hat auch die Abrechnung umgestellt und plötzlich habe ich eben nicht mehr einen Euro gezahlt pro User, sondern es waren plötzlich irgendwie fünf oder sechs Euro pro Monat, die für einen User bezahlen hätte müssen. Ich glaube, es war sogar eine kürzere Abrechnungsperiode, weil die mitten im Monat umgestellt haben. Also ich hätte glaube ich sogar noch mehr irgendwie für ein ganzes Monat gezahlt. Das heißt, es war sogar glücklicherweise, dass sie nur irgendwie um die ein hundert Dollar gezahlt habe und dann war ich an dem Punkt, wo ich mir gedacht habe, okay, jetzt wird es schwierig, ich möchte nicht in Volleistung gehen, habe genug User aufs Payment umzustellen, mache ich das jetzt wirklich? Habe den klassischen Ansatz von mir gewählt, ich mache es nächste Woche. Nächste Woche ist dann der Andi mit einer schweren Episode um die Ecke gekommen, das heißt, ich habe es dann noch mal um eine Woche verschoben und noch mal um eine Woche verschoben und irgendwann habe ich mir gedacht, ich glaube, ich habe mittlerweile eine Wohnung, so wichtig ist es mir nicht, ich lasse das Ganze mal sterben."
+        },
+        {
+            "start": 1315960,
+            "end": 1335240,
+            "speaker": "A",
+            "text": "Meine Frage wäre auch gerade eben gewesen, hast du dann gesagt, jetzt erst recht und du skalierst das hoch? Denn ich würde mal sagen, wenn Leute wirklich ernsthafterweise eine Wohnung suchen, dann nehmen die auch ein bisschen Geld in die Hand, vielleicht für deinen Service zu zahlen. Fünfzehn, um Early Access irgendwie zu neuen Wohnungen zu bekommen, ist glaube ich eine gut investierte Sache."
+        },
+        {
+            "start": 1335240,
+            "end": 1345380,
+            "speaker": "B",
+            "text": "Ja, wobei ich habe mir das eben durchgerechnet, ich glaube fünfzehn waren gar nicht drinnen. Also ich hätte es sogar noch höher machen müssen, glaube ich. Und daher habe ich dann halt wenig Hoffnung auch gesehen, muss ich zugeben."
+        },
+        {
+            "start": 1345380,
+            "end": 1348340,
+            "speaker": "A",
+            "text": "Okay, also hast du direkt Abbruch, Abbruch, Abbruch."
+        },
+        {
+            "start": 1348420,
+            "end": 1358020,
+            "speaker": "B",
+            "text": "Es war so eine Mischung, immer gedacht, ich könnte noch mal probieren, ich könnte auch vielleicht andere Varianten wählen, aber es war dann einfach, die Motivation war nicht da und andere Projekte waren einfach wichtiger."
+        },
+        {
+            "start": 1358020,
+            "end": 1362580,
+            "speaker": "A",
+            "text": "Schlüsselfrage, hast du über den Wohnbot deine neue Wohnung gefunden?"
+        },
+        {
+            "start": 1362740,
+            "end": 1370440,
+            "speaker": "B",
+            "text": "Nein. Okay, so über Umwege vielleicht. Man könnte sagen, er war durchaus hilfreich, aber er war nicht ausschlaggebend."
+        },
+        {
+            "start": 1370670,
+            "end": 1381390,
+            "speaker": "A",
+            "text": "Das ist enttäuschend, weil dann hat dein Produktversprechen eigentlich nicht gehalten oder anders. Kennst du irgendwen, der über den Wohnbot eine Wohnung gefunden hat von diesen dreiig, fünf und dreiig Leuten, die du in der WhatsApp Gruppe drin hattest?"
+        },
+        {
+            "start": 1381470,
+            "end": 1403220,
+            "speaker": "B",
+            "text": "Ich hatte keinen Kontakt zu den Leuten. Der Großteil waren irgendwelche Leute, insofern keine Ahnung, ob es für die funktioniert hat. Es haben sich paar nach einer Zeit wieder abgemeldet. Paar sind dazugekommen. Keine Ahnung, ob die dann wirklich was gefunden haben darüber, aber ich gehe fast davon aus, weil du hast in Innsbruck wenig Möglichkeiten. Also du kommst nur über diese Plattformen an Wohnungen oder halt über private Wege."
+        },
+        {
+            "start": 1403220,
+            "end": 1435970,
+            "speaker": "A",
+            "text": "Ich finde die Idee aber schön, muss ich zugeben. Ich bin nicht auf dem Wohnungsmarkt aktiv. Also ich suche nicht so oft Wohnungen oder ähnliches, deswegen kenne ich das Problem nicht. Aber ich habe Bekannte und die strugglen da schon sehr. Also ich finde die Idee sehr schön. Aber Wolfgang, jetzt gehen wir mal ganz tief in dich, denn wir kommen jetzt zu dieser schwierigen Phase dieser Podcast Episode, zur Reflexion, zur Retrospektive. Was hat der kleine Wolfgang anhand des Wohnbot Failures gelernt? Erste Frage, bevor du jetzt antwortest, hattest du die Domain wohnbot at bereits vorher gekauft, bevor du eine Zeile kurz geschrieben hattest?"
+        },
+        {
+            "start": 1435970,
+            "end": 1457900,
+            "speaker": "B",
+            "text": "Nein, die hatte ich sehr spät gekauft. Ich glaube sogar KOM und AT, zwei Domains sogar. OK, natürlich gehe ich mal auf die internationale auch klar, wenn es geht, aber es kam relativ spät. Also klar, ich habe den komplett geschrieben, der war fertiggestellt. Ich glaube, es haben sogar ein, zwei Freunde von mir verwendet über Slack noch ganz am Anfang und dann bin ich irgendwann public gegangen mit den Domains."
+        },
+        {
+            "start": 1457900,
+            "end": 1468780,
+            "speaker": "A",
+            "text": "Okay, das ist also keine Reflektion, würde ich mal sagen wert, weil Domains hast du ja später gehofft. Also was würdest du sagen, war jetzt hier der Knackpunkt, wenn du reflektierst, was hast du falsch gemacht?"
+        },
+        {
+            "start": 1468860,
+            "end": 1586460,
+            "speaker": "B",
+            "text": "Also bei diesem Projekt sehe ich eigentlich zwei Knackpunkte. Der eine ist der ganz klassische Payment First. Also eigentlich sollte man mit Payment an den Start gehen und dann direkt sagen, du kannst es eine Woche kostenlos verwenden und ab der zweiten Woche kostet das Ganze, dann hast du sofort Feedback von den Usern, sage ich mir sogar im Schlaf immer vor mich her. Payment First, Payment First, Payment First habe es da trotzdem nicht gemacht, aber ja. Und ich war dann relativ spät dran mit dem Payment, in dem Fall zu spät. Und das zu spät in dem Fall war der zweite Knackpunkt, weil es war zu spät, weil Meta was umgestellt hat. Und das war mir eigentlich auch nie so bewusst, wie abhängig man ist, wenn man mit irgendeinem externen Service arbeitet. Weil wenn man sich auf WhatsApp verlässt und das ist ja wirklich ein Hauptkommunikationskanal, also von WhatsApp wegzukommen auf irgendwas anderes. Klar, für mich ist es easy, ich kann auf Signal umsteigen oder auf irgendeine Push Notification, aber wenn du mit Endkunden zusammenarbeitest, dann ist es halt schon eine kritische Entscheidung, welchen Kanal du verwendest. Und da hat mir Meta einfach einen Strich durch die Rechnung gemacht mit ihrem neuen Zahlungsmodell. Und hat mir so den Boden unter dem Arsch weggerissen, muss man ganz klar sagen. Natürlich auch da wieder, es hätte Alternativen gegeben. Du kannst eine Gruppe machen, hätte auch funktioniert. Du könntest eine Payment Funktion irgendwie über die Gruppe hinweg schreiben. Du kickst die Leute einfach raus, wenn sie nicht zahlen. Also es gibt viele, viele Möglichkeiten. Man hätte sich da noch mal dran setzen können und überlegen, okay, wie kann ich das trotzdem irgendwie lösen. Vielleicht nicht so schön wie davor, aber so, dass am Ende die Leute zu ihren Wohnungen kommen. Das wäre ja das Ziel eigentlich von der ganzen Sache. Aber da hat mir dann einfach die Zeit und die Motivation auch gefehlt, da noch mal Gas zu geben und noch mal den Schritt zu machen und eine neue Lösung zu finden. Hätte ich da jetzt vielleicht schon Geld bekommen, dass ich vielleicht schon fünfzehn zahlende Kunden gehabt hätte oder zwanzig, hätte das wahrscheinlich schon anders ausgesehen, dann hätte ich wahrscheinlich noch mal probiert, wie kann ich da jetzt eine andere Lösung finden."
+        },
+        {
+            "start": 1586540,
+            "end": 1622220,
+            "speaker": "A",
+            "text": "Aber das mit der Abhängigkeit, das ist wirklich faszinierend, Denn wo es relativ offensichtlich ist, ist ja halt bei Software as a Service Providern, die zum Beispiel ihre Infrastruktur auf AWS anbieten, wenn die da zum Beispiel Multitenant Modell haben, da kenne ich das ja, die können ihr Preismodell niemals günstiger machen als die EC Compute Instanz bei Amazon, weil sie müssen ja auch noch Geld verdienen. Und jetzt ist es bei Cloud natürlich, die werden in der Regel immer günstiger. Du hast jetzt WhatsApp für dich als Kommunikationskanal genutzt, vielleicht wäre E Mail sogar günstiger gewesen oder Telegram. Telegram hatte so einen shady Touch."
+        },
+        {
+            "start": 1622380,
+            "end": 1694690,
+            "speaker": "B",
+            "text": "Wenn du mit Endkundinnen arbeitest, dann musst du was Einfaches wählen. Das war ja auch die Idee. Klar kannst du eine App programmieren, du kannst die App runterladen, du bekommst Notifications von der App, aber die Grundidee war ja, ich kann einfach eine Nummer schreiben, Start, dann kommt dieser Bot und spricht mit mir. Man könnte natürlich auch irgendwie eine WhatsApp Integration verwenden, die jetzt Open Claw und so weiter verwendet, also die so selbst gehackt ist, nicht über die offizielle Business API wäre auch noch eine Option gewesen. Es gibt schon technische Optionen, aber das Problem ist, wenn man mal anfängt mit der offiziellen API und sich darauf verlässt, dann können die halt doch irgendwann die Preise ändern. Und das hast du bei SaaS Software schon auch oder bei irgendwelchen Lizenzen, wenn du jetzt zum Beispiel an die vmware Übernahme denkst und vmware hat dann die Preise irgendwie, keine Ahnung, verdreifacht oder noch höher und hat die ganzen Konditionen geändert. Dieser Login Effekt, den kennen wir ja aus der Software von Library, von der Technik, aber gibt es natürlich auf der Business Seite auch ganz stark und hatte ich noch nie so erlebt, muss ich dazu sagen, weil man ist eher gewohnt, die SaaS Businesses werden eher günstiger als teurer, aber in dem Fall ist es einfach ordentlich teurer geworden und hat halt in dem Fall viel gekillt."
+        },
+        {
+            "start": 1694690,
+            "end": 1696010,
+            "speaker": "A",
+            "text": "Kann ich mir eben Kaffee noch holen."
+        },
+        {
+            "start": 1696010,
+            "end": 1706570,
+            "speaker": "B",
+            "text": "Natürlich, Andi ist jetzt weg und glaubt, ich schneide das jetzt heraus, aber damit ihr auch mal so was mitbekommt hinter den Kulissen, könnt ihr noch so eine Fahrstuhlmusik einspielen, während ich warte."
+        },
+        {
+            "start": 1716430,
+            "end": 1751230,
+            "speaker": "A",
+            "text": "Ich habe mir gerade so überlegt, natürlich warst du von der Plattform abhängig, aber auf der anderen Seite hat die Plattform dir natürlich auch einen Kickstart gegeben. Du musstest jetzt keine eigene App schreiben, du musstest jetzt keine eigene Webseite machen, du musstest nicht dir irgendwas mit openclaw hacken und so weiter, sondern du hast eine fertige API genutzt. Also von daher würde ich sagen, okay, war ein Trade off. Natürlich später die Leute dann von WhatsApp runterzuholen, ist glaube ich relativ schwierig. Das Problem hat man immer mit diesen Closed Plattformen, wo du deine Daten nicht ownst. Aber nun gut, so weit ist es ja nicht gekommen, denn du hast das Projekt ja anscheinend eingestellt, freiwillig oder halt auch nicht freiwillig und ich weiß bis"
+        },
+        {
+            "start": 1751230,
+            "end": 1776930,
+            "speaker": "B",
+            "text": "heute nicht, ob die Leute dafür gezahlt hätten. Das wäre ja eigentlich das Interessanteste gewesen, weil wenn du mal zahlende Leute hast, dann bringst du die wahrscheinlich auch auf eine andere Plattform. Wenn du jetzt sagst, okay, sorry, WhatsApp funktioniert nicht mehr, aber es funktioniert ja für euch, ihr zahlt sogar dafür, ich ihr programmiere euch eine App oder gehen wir auf Telegram oder was es auch immer ist, dann sind die Leute ja wahrscheinlich bereit etwas zu machen und zu wechseln. Aber in dem Fall war es halt für mich einfach schwierig, da noch solche Infos rauszuziehen."
+        },
+        {
+            "start": 1776930,
+            "end": 1783650,
+            "speaker": "A",
+            "text": "Was würdest du denn heute anders machen, wenn du Wohnbot neu starten würdest? Payment First, OK, habe ich verstanden, davon träumst du ja inzwischen."
+        },
+        {
+            "start": 1783650,
+            "end": 1863100,
+            "speaker": "B",
+            "text": "Genau, Payment First ist eigentlich der Klassiker, meine Grundregel, erst eine Domain zu kaufen, wenn wirklich ein Produkt launchbar ist, was schon funktioniert, habe ich in dem Fall beachtet, war eh schon ganz stolz auf mich. Ich glaube, ich habe auch nicht unbedingt over engineered, außer vielleicht, dass ich unbedingt auf diese WhatsApp Plattform wollte, genau in dieser Form als Bot Version. Wie gesagt, man hätte auch einfacher starten können, einfach eine Gruppe machen und mal loslegen und vielleicht noch, das hätte ich nicht anders gemacht, aber wenn es jetzt ein Projekt gewesen wäre, wo schon Geld fließt, wo man zahlende Kunden hat, dass man eben auch mit diesen Problemchen, oder war jetzt ein großes Problem natürlich die Preispolitik von Meta, aber dass man das einfach nimmt und pragmatisch eine andere Lösung findet. Und gerade im Startup Umfeld hat man ständig irgendwie solche Blocker oder vielleicht fällt man mal tief, irgendwas funktioniert nicht regulatorisch, was es auch immer ist. Also du hast ständig diese Probleme und du brauchst natürlich auch diese Energie, dran zu bleiben und jedes Problem wieder zu lösen. Und wenn man da halt alleine ist und das vielleicht nicht das wichtigste Projekt ist und man selber vielleicht schon eine Wohnung hat, das heißt, es ist auch nicht mehr das eigene Problem, dann ist die Motivation einfach sehr, sehr, sehr niedrig und dann ist man auch nicht mehr bereit, diese ganzen Probleme einfach anzugehen, auf die Seite zu räumen, eine Lösung finden. Weiter."
+        },
+        {
+            "start": 1863260,
+            "end": 1879230,
+            "speaker": "A",
+            "text": "Kennst du diese Kontrollfragen, die du früher in der Schule immer hattest? Du hast eine Frage gestellt, du hast die richtige Antwort gegeben, ich stelle die gleiche Frage nochmal, formuliert sie aber anders, aber die Antwort ist dieselbe. Bitte stell sie mir das erste Projekt nach dem Wohnbot. Welches war das, was du danach gemacht hast?"
+        },
+        {
+            "start": 1879230,
+            "end": 1887950,
+            "speaker": "B",
+            "text": "Ich glaube, ich habe keines mehr gestartet in letzter Zeit. Zumindest kein richtiges für die Öffentlichkeit, nur kleine Tools, die ich so nebenbei von der AI schreiben hab lassen."
+        },
+        {
+            "start": 1887950,
+            "end": 1894390,
+            "speaker": "A",
+            "text": "Naja gut, dann lohnt sich meine nächste Frage nicht, denn die nächste Frage wäre das nicht. Hattest du sofort eine Stripe Anbindung oder ähnliches."
+        },
+        {
+            "start": 1894390,
+            "end": 1944690,
+            "speaker": "B",
+            "text": "Ich habe noch ein anderes großes Projekt, was man jetzt wirklich Startup schimpfen könnte und auch da sieht es mit Payment sehr schlecht aus, aber ich glaube, dass ich das vor dem Wohnbot Abbruch gestartet habe. Es ist nämlich auch das Problem, Payment ist gar nicht so einfach, auch mit Stripe, dass das alles korrekt abläuft. Und ich glaube, wenn man sich da eine gute Variante mal gebaut hat, dass man das fixfertig schon hat, dann ist es glaube ich auch viel einfacher, das immer wieder zu verwenden oder dass man sich überhaupt mal entschieden hat, verwendet man Stripe, verwendet man sumup, welche APIs verwende ich, kann wiederkehrende Abo Modelle darüber abbilden, wie schreibe ich eine Rechnung, diese ganzen Probleme, die da ja auch noch mitspielen. Wenn man die einmal gelöst hat, hat man sie einfach in seinem Werkzeugkoffer, wie du immer sagst, Andy, und dann kann man es einfach wiederverwenden. Also das würde ich auch empfehlen. Darum mal einfach einmal Payment durchimplementieren, dann hat man das in der Hinterhand."
+        },
+        {
+            "start": 1944770,
+            "end": 1959810,
+            "speaker": "A",
+            "text": "Also das, was ich hier gerade eigentlich höre, ist, dass jedes Projekt, was du in nächster Zeit startest, wo du Payment first sagst, auch fehlschlagen wird, Denn du fängst ja schon wieder an, Probleme zu sehen von Sachen, die du noch nicht mal implementiert hast. Payment ist ja gar nicht so einfach und dies und das und das."
+        },
+        {
+            "start": 1959810,
+            "end": 1967890,
+            "speaker": "B",
+            "text": "Naja, ich habe Payment ja mittlerweile implementiert und darum weiß ich ja, dass es gar nicht so einfach ist. Aber jetzt würde ich schneller sein beim Payment."
+        },
+        {
+            "start": 1967890,
+            "end": 2006960,
+            "speaker": "A",
+            "text": "Ja, ja, du bist ja Entrepreneur, deswegen du musst ja keine Probleme sehen, sondern Opportunities, Chancen, positives Wording, Wolfgang, damit du nicht nur dicht nach oben ziehst, sondern auch deine Gefolgschaft. Aber auch für Payment mit Stripe und so. Ja, wenn du einen reinen Zahlungsanbieter nimmst, dann stimme ich dir dazu. Aber für solche Probleme gibt es ja auch andere Lösungen, so was wie Merchant of Records, nennt sich der Fachbegriff hier. Das bedeutet also auch im internationalen Business, so was wie Paddle und Co. Die ziehen sich ein paar mehr Prozent als zum Beispiel so ein Stripe, aber die machen ja das komplette Handling, die machen das Steuerproblem und so weiter und so so fort. Also sowas gibt es ja auch, deswegen keine Probleme, Wolfgang."
+        },
+        {
+            "start": 2006960,
+            "end": 2055690,
+            "speaker": "B",
+            "text": "Opportunities, ja, aber auch die Opportunities muss man ergreifen und müssen durchprogrammiert werden mit AI jetzt etwas einfacher. Und was übrigens auch noch, wenn ich mich gerade auslassen darf über dieses Payment Testing, ist im Payment katastrophal. Weiß nicht, ob jetzt eine Marke nennen soll, aber ich habe Ipsum auch probiert als API und hätte wirklich große Probleme mit der ganzen Testingumgebung, war auch mit deren Support teilweise in Kontakt. Also da sieht man dann schon auch den Unterschied zum Beispiel jetzt zu irgendeinem paypal oder Stripe die einfach da länger schon dabei sind, kosten zwar vielleicht mehr, haben dann aber auf der einen oder anderen Seite wieder bessere Unterstützung, besseres Tooling, besseres Testing, Sandboxing, obwohl ich sonst großer Fan übrigens von sumup bin und gerade von den Kartenterminals. Aber wenn du jetzt schon so tief und gemein fragst, Andi, dann lass mal von deinem Fail hören. Und gleich mal vorweg, hast du mit Payment begonnen?"
+        },
+        {
+            "start": 2055900,
+            "end": 2059100,
+            "speaker": "A",
+            "text": "Nee, weil das initial auch gedacht war, dass ich ein eigenes Problem löse."
+        },
+        {
+            "start": 2059180,
+            "end": 2061020,
+            "speaker": "B",
+            "text": "Also so wie bei mir meinst du?"
+        },
+        {
+            "start": 2061020,
+            "end": 2067540,
+            "speaker": "A",
+            "text": "Ja, obwohl Payment ist jetzt eigentlich auch gar nicht mein Learning. Aber lass mich mal ganz kurz das Projekt beschreiben. Und zwar, ich habe nämlich auch die ganze Zeit überlegt, welches Projekt."
+        },
+        {
+            "start": 2067540,
+            "end": 2084640,
+            "speaker": "B",
+            "text": "Moment, bevor du kurz startest, weil du jetzt gerade gesagt hast, eigenes Problem lösen, Hattest du schon jemals ein Projekt, wo du nicht dein eigenes Problem lösen wolltest? Weil ich glaube, dass ich das noch nie hatte, außer irgendwo in der ER Bubble, wo ich auch irgendwie groß sein wollte und was kopiert habe, aber da war nur jung und dumm."
+        },
+        {
+            "start": 2084720,
+            "end": 2096080,
+            "speaker": "A",
+            "text": "Ja, also zum Beispiel habe ich ja mehrere Projekte im Bereich Datenanalyse von Open Source Daten gestartet und das ist jetzt nicht wirklich ein Problem. Da war Neugier da, weil ich hatte mir Fragen gestellt, wo ich keine Antworten darauf gefunden habe."
+        },
+        {
+            "start": 2096080,
+            "end": 2102200,
+            "speaker": "B",
+            "text": "Okay, aber du wolltest trotzdem deine eigenen Fragen auch beantworten, also von dem her ein Need, den du bei dir gesehen hast."
+        },
+        {
+            "start": 2102200,
+            "end": 2211860,
+            "speaker": "A",
+            "text": "Genau. Und ich glaube, das ist auch die beste Motivation, die du haben kannst, weil sonst fühlt sich das alles nämlich nach Arbeit an. Naja, kommen wir zu dem eigentlichen Projekt, was ich gestartet habe. Und Achtung, es lässt mich immer noch nicht los. Also ich baue schon mal den Spannungsbogen hier auf zum Ich mache viel Sport, meist so Functional Fitness, Crossfit, Fahrradfahren, Laufen, so all die ganze Thematik. Und jetzt kann man natürlich eine ganze Menge an Übungen mit Bodyweight machen, Liegestütz oder ähnliches. Man kann aber auch sich ganz viel Equipment kaufen, also so ein Springseil, so ein Rudergerät und so weiter und so fort. Und dann war die Hey, ich möchte nicht immer irgendwo zu einem Fitnessstudio fahren oder zu einer Sporthalle, sondern ich möchte das jetzt auch so im Garten machen. Und ich habe jetzt aber ein Rudergerät und ich habe eine kleine Laufstrecke hier die Straße ist ja eigentlich meine Laufstrecke, wenn du so möchtest, ein Springseil und so weiter. Welche Workouts kann man denn da so machen, weil du möchtest ja nicht immer dasselbe Workout machen. Okay, ich in den App Store gegangen und dann gibt es einen Workout. Randomizer nannte sich Smartwatch, da konnte sagen, okay, ich habe dieses Equipment und dann sagst du, generiere mir mal bitte ein Workout und dann hat er dir ein Workout gegeben. Okay, habe ich ein bisschen genutzt, hat alles super geklappt, aber irgendwie haben da so ein paar Filter gefehlt, die ich gerne hätte, wie zum Beispiel ich habe nur fünf Minuten Zeit und keine drei Stunden. Ich möchte jetzt eher mehr auf Kraft gehen anstatt auf Ausdauer. Halt solche Thematik. Die hatten zwar Filter, aber die waren immer nur auf die Workout Art bezogen, also nach Runden, nach Zeit, sowas halt Dann in dem Randomizer immer wenn du eine Rudereinheit hattest, dann stand da ja die Ruderdistanz ab und zu in Meter, ab und zu in Kilometer, ab und zu in Meilen und bei manchen stand dann halt was auch in Feed und ich denke, das kann ja wohl nicht sein, dass die Einheiten nicht sauber sind. Wollt ihr mich eigentlich veräppeln? Bei dem einen ist das so, bei dem anderen so. Okay, ich das Workout gemacht, habe mich natürlich während des Workouts schon über solche Sachen aufgeregt. Der innere Monk kam da schon raus. Ich glaube, ich glaube, das versteht jeder, oder? Diese kleinen Gremlins in so einer UI."
+        },
+        {
+            "start": 2211860,
+            "end": 2221510,
+            "speaker": "B",
+            "text": "Also ich kann es nachvollziehen, auch wenn ich natürlich immer perfekt alles umrechnen kann, gar kein Problem. Mal drei ist es meistens oder fast immer, aber ich weiß natürlich ganz genau, was du meinst."
+        },
+        {
+            "start": 2221750,
+            "end": 2330510,
+            "speaker": "A",
+            "text": "Okay, also was habe ich an demselben Abend noch gemacht? Ich bin iOS User, aber ich bin ja auch technisch versiert und ich wusste, diese App hat auch eine Android App. Also bin ich in den Android Store gegangen, habe mir das APK runtergeladen, habe das ausgepackt, weil das APK ist ja eigentlich nur ein ZIP Datei, habe gesehen, ah, okay, das wurde mit Flutter oder React Native oder so geschrieben, Ah, und in dem Source Code ist eine riesen JSON Datei und da sind alle Workouts drin. Also habe ich mir diese JSON da rausgezogen, habe das in eine Datenbank gepackt, Datenstruktur aufgebaut, ein Datenschema und und hab dann erstmal ein paar SQL Queries gefahren, wie viel Ruder Workouts gibt es und welche Einheiten haben die, ein paar Counts und so weiter und so fort und hab mir dann Update Queries geschrieben, die mir das eigentlich beheben, was ich nicht getan hab. Ich hab das JSON nicht wieder zurückkopiert, mir das wieder kompiliert und dann auf ein Android Phone gepackt, weil ich kein Android Phone hatte. Das wäre es eigentlich gewesen. Was ich gemacht habe, ist, ich bin auf Udemy gegangen, hab mir einen Flutter Videokurs reingezogen, vierzig Stunden, wie baue ich eine Flutter App? Hab mir gedacht, das baust du mal eben nach. Ich habe ja die Daten und die Daten sind ja eigentlich das Gold hier, der ganze Thema, so ein paar Buttons mit so ein paar Filtern, das kann ja wohl nicht sein. Okay, dann habe ich mir da so eine App gebaut, habe mir eine Apple Dev Lizenz gekauft, die kostet ein hundert Dollar im Jahr, damit ich das auf mein iOS deployen kann. Später habe ich festgestellt, wenn du das nur auf dein eigenes iOS Device deployen möchtest, brauchst du gar nicht so eine Dev Lizenz, sondern nur wenn du es in den App Store packen möchtest und so. Da gibt es sowas per Testflight, da kannst du das ohne Dev Lizenz machen. Und dann wurde iOS mal geupdatet, dann hat die App nicht mehr gestartet und irgendwann habe ich da so viel Nächte und so reingeschustert und ich wollte eigentlich mal wieder Sport machen und kam halt immer noch nicht dazu. Und dann habe ich das erstmal zur Seite gelegt. Also ich habe den Boilerplate gestartet, viel Zeit investiert und dann realisiert, dass die ganze Sache vielleicht doch nicht so einfach ist. Und dann habe ich Abbruch, Abbruch, Abbruch gecallt."
+        },
+        {
+            "start": 2330590,
+            "end": 2350650,
+            "speaker": "B",
+            "text": "Warum hast du eigentlich wirklich eine native App gemacht? Wäre das über eine Web App nicht aufgegangen oder hat das Ding irgendwelche Features, wo du wirklich den nativen Zugriff benötigst? Weil du kommst ja aus der Webwelt, wenn du ein Problem schnell lösen willst, dann wärst du ja in deiner eigenen Welt, bevor du einen Flatterkurs auf Udemy machst, über vierzig Stunden wärst du ja eigentlich schneller."
+        },
+        {
+            "start": 2350810,
+            "end": 2396640,
+            "speaker": "A",
+            "text": "Ja, das ist richtig, aber da wüsste ich ja A, wie es funktioniert, B, mag ich auch kein Frontend, also ich mag auch kein CSS und JavaScript. Und wenn ich das ja als native Web App, wie heißt das, PWA, Progressive Web App machen würde, dann brauche ich auch ziemlich viel JavaScript und das, ich mag kein JavaScript schreiben und da habe ich so eine kleine Abneigung, obwohl Flutter ist ja in Dart geschrieben, was JavaScript sehr ähnelt, aber schon halt nicht das gleiche ist. Naja, wie dem auch sei, ich habe die originale App, wo ich mir das APK runtergeladen habe, später noch mal gestartet. Später im Dezember war ich auf einer Geschäftsreise und da war in dem Hotel dann auch ein Gym und da stand auch ein Rudergerät und habe gedacht, komm, jetzt gehst du mal ein bisschen Sport machen, machst die App nochmal auf, die ist voll mit Werbung. Du machst sie auf und das kotzt sich erstmal an. So viel Werbung. Weißt du dann noch die hässliche Werbung,"
+        },
+        {
+            "start": 2396640,
+            "end": 2399280,
+            "speaker": "B",
+            "text": "Aber du könntest zahlen dafür, oder? Dann hast du keine Werbung."
+        },
+        {
+            "start": 2399280,
+            "end": 2444010,
+            "speaker": "A",
+            "text": "Ja, ja, ganz genau. Also ohne Bezahlen ist es kaum benutzbar, aber du kannst da ein Premium Account machen, das kostet dich zwei oder drei im Monat. Dann wäre eigentlich mein Problem gelöst, muss ich zugeben. Aber ich weiß nicht, ob die immer noch die Metriken Probleme haben. Die ganze Sache wurde abgebrochen. Ich mache den Sport aber jetzt noch mehr als früher. Also ich mache den drei, vier, fünf mal die Woche. Also die Idee lässt mich immer noch nicht los. Und umso mehr ich diesen Sport mache, desto mehr Nuancen fallen dir in dem Sport auf. Also noch mehr Filter, die ich eigentlich haben möchte. Und inzwischen würde ich sagen, kannst du ja sogar mit einem Small Language Model deine Workouts generieren lassen und pipapo. Also da gibt es ja, da gibt es ja unendliche Lernmöglichkeiten. Also die lässt mich immer noch nicht los."
+        },
+        {
+            "start": 2444170,
+            "end": 2492400,
+            "speaker": "B",
+            "text": "Jetzt gehen wir mal davon aus, du wärst kein Informatiker, sondern du bist Automechaniker. Die Automechaniker müssen ja heutzutage auch schon programmieren. Was gibt es denn? Du wärst Literaturwissenschaftler, Dann würdest du doch denen einfach schreiben und Hey, ich würde eure drei da zahlen. Wenn ihr dieses Metriken Problem, also diese Meter und Kilometer und so weiter und Fuß fixt, so wie es normale Menschen tun würden, dann würdest du drei Euro zahlen plus die Zeit für eine E Mail und hättest im Idealfall mit der nächsten Version. Vielleicht kannst du ihnen die Update Query sogar noch mitschicken, wenn du willst. Dann hättest du wahrscheinlich eine neue Version. Vielleicht bekommst du sogar einen Zugang gratis, wenn du ihnen hilfst. Hättest dann eine Version, die weiterentwickelt wird, die weiterlebt. Wahrscheinlich stecken die mehr Zeit rein, als du jemals reinstecken könntest und du hättest eine gute App und dein Problem gelöst."
+        },
+        {
+            "start": 2492400,
+            "end": 2502560,
+            "speaker": "A",
+            "text": "Ja, du bist jetzt lachen und leider hast du auch komplett recht, denn eigentlich hätte ich denen eine E Mail schreiben müssen, so nach dem Motto, hey, pass mal auf, mich nervt es richtig hart, so dieses Kilometer und Meilen und so weiter."
+        },
+        {
+            "start": 2503040,
+            "end": 2507980,
+            "speaker": "B",
+            "text": "Vor allem weil du das ja immer predigst im Open Source Bereich, schreib Issue, wenn es ein Problem gibt."
+        },
+        {
+            "start": 2507980,
+            "end": 2519020,
+            "speaker": "A",
+            "text": "Deswegen, deswegen ja, also auch als Informatiker hätte ich das tun sollen und es hätte eigentlich mein Problem gelöst, aber ich hätte den richtiges Produktfeedback gegeben können, weil ich das ja wirklich jeden Tag nutze,"
+        },
+        {
+            "start": 2519100,
+            "end": 2521820,
+            "speaker": "B",
+            "text": "das was wir eigentlich alle wollen, wenn wir ein Produkt bauen."
+        },
+        {
+            "start": 2522380,
+            "end": 2536940,
+            "speaker": "A",
+            "text": "Gib uns Feedback ein hundert Prozent und ich hätte denen ja auch die sqliteb mitschicken können mit den Update Queries, mit den Select Queries und die hätten das ja alles verstanden, weil die haben ja diese App gebaut, aber irgendwie habe ich nicht gemacht. Ich gebe auch zu, das war jetzt alles nicht gestern die Story, das war zwei tausend zwei und zwanzig oder so."
+        },
+        {
+            "start": 2537190,
+            "end": 2588100,
+            "speaker": "B",
+            "text": "Aber vielleicht noch mal, um dann Schritt auf Metaebene zu gehen. Du wolltest dein eigenes Problem lösen, hast dann aber gleichzeitig entschieden, du lernst auch eine neue Technologie und verwendest keine einzige Technologie, die du sehr gut kannst. Das heißt, du wolltest auch zwei Sachen eigentlich machen, weil wenn es jetzt darum geht, um mich noch mal zu wiederholen, wenn es darum geht, möglichst schnell an ein Ziel zu kommen, dann verwende diese Technologien, die ich gerade kenne und sehr gut kenne und mach kein Hacker News Driven Development mit der neuesten coolen Datenbank. Gut, du hast wenigstens sqlite verwendet zwischenzeitlich, aber Flutter neu gelernt. Das würde man ja nie machen, wenn man möglichst schnell ein Ziel kommen wird. Wenn ihr zu dir sagt, Andy in deinem Job, du musst jetzt ganz, ganz wichtig bis nächste Woche was programmieren, irgendwie ein Feature machen, irgendwas, keine Ahnung, in der Firma, dann würdest du ja nie sagen, ich setze mir jetzt mal hin und machen vierzig Stunden Flatterkurs."
+        },
+        {
+            "start": 2588100,
+            "end": 2633140,
+            "speaker": "A",
+            "text": "Also du sprichst da schon so ein bisschen die Reflexionspunkte an und ja und nein. Also auf der einen Seite ja, ich wollte mein eigenes Problem lösen. Auf der anderen Seite habe ich aber auch gedacht, ich könnte es besser. Die eine Kleinigkeit da in der App hat mir nicht gefallen, aber stört sie mich, Die eine Kleinigkeit gefällt mir Aber hindert diese mich wirklich an der Lösung des ursprünglichen Problems? Und dann, ich kann das besser. Und später habe ich ja wirklich festgestellt, scheiße, ich kann es vielleicht nicht, weil echt viele Gedanken in diese App da geflossen sind. Also dieses typische Entwicklerproblem, würde ich mal sagen, heutzutage will ich einfach die zwei, drei Euro zahlen und eine E Mail droppen. Also, aber wie gesagt, die Idee lässt mich ja immer noch nicht los. Also ich droppe denen jetzt keine E Mail, Irgendwie habe ich Lust, dieses Small Language Model zu bauen, aber ich zwinge mich es halt nicht zu tun. Schwierig."
+        },
+        {
+            "start": 2633140,
+            "end": 2662460,
+            "speaker": "B",
+            "text": "Ich frage mich immer, warum wir eigentlich so sind. Weil wenn du jetzt, ich probiere jetzt ein Beispiel zu verwenden, was du auch verstehst, Andi, als klassischer Einwohner einer Autonation, du hast eine Ingenieurin bei BMW, die Autos designt oder die Architektur von Autos macht, die würde ja auch nie auf die Idee kommen, sich selber ein Auto zu bauen, nur weil sie ihr Auto bauen kann. Die würde ja genauso wahrscheinlich BMW, Mercedes oder keine Ahnung, von mir aus einen Hyundai kaufen, weil das einfach ein sinnvolles Produkt ist am Ende."
+        },
+        {
+            "start": 2662460,
+            "end": 2727320,
+            "speaker": "A",
+            "text": "Ja, ich meine, ich will mich hier gar nicht rausreden. Du hast auch gerade gesagt, hör mal, du wolltest dein Problem lösen, hast aber deine neue Sprache gelernt und dann komplett neuer Stack und so weiter. Und da habe ich mich auch gefragt, habe ich mich da eigentlich selbst getäuscht? Habe ich mich da eigentlich mit dem, Warum mit der Motivation selbst getäuscht? Denn natürlich auf der einen Seite möchte ich, möchte ich mein eigenes Problem lösen, auf der anderen Seite habe ich gedacht, ich könnte es besser. Auf der dritten Sache habe ich vielleicht gedacht, ja Moment mal, aber wenn die doch zwei bis drei pro Sportler nehmen, dann kann ich das ja später auch. Also war die Selbsttäuschung der Motivation, oh, ist da ein Traum von gewissen Nebeneinkünften vielleicht? Also war vielleicht die wirkliche Motivation, einfach nur zu lernen, wie geht das denn hier alles? War die wirkliche Motivation vielleicht, Coding macht einfach Spaß Und war das dann vielleicht auch der Drop der Motivationskurve später, warum die ersten drei Wochen geil sind und Woche acht tödlich, weil ich weiß, wie man dann einen neuen Button in iOS baut und das auf mein Handy deployed, weil dann habe ich eine App zum Starten und der Rest ist ja nur noch Arbeit. Also da musst du ja wirklich die Filter schreiben und die Daten beheben und so. Also Deswegen habe ich mich da vielleicht"
+        },
+        {
+            "start": 2727320,
+            "end": 2736180,
+            "speaker": "B",
+            "text": "selbst getäuscht Und von Sadis haben wir noch gar nicht gesprochen. Wenn du dann wirklich User drauf hast auf dem ganzen Ding oder halt drauf bekommen willst, dass du wirklich dann auch was verdienst."
+        },
+        {
+            "start": 2736580,
+            "end": 2760930,
+            "speaker": "A",
+            "text": "Ja, total. Und ich meine, wenn du, wenn du das auch mal komplett durchdenkst, ich wäre ja froh, wenn das die Selbstreflexion gewesen wäre. Ich wäre ja froh, wenn es das gewesen wäre. Aber ich habe natürlich in diesem Kurs auch Unit Tests gehen gelernt für Flutter und wie man das automatisiert baut und so weiter und so fort. Also eigentlich habe ich dann auch Over Engineering als Prokrastinationsform genutzt. Ich habe da zwar jetzt kein Kubernetes aufgesetzt, weil den brauchte ich ja nicht Kubernetes für Null User Moment, aber du"
+        },
+        {
+            "start": 2760930,
+            "end": 2770650,
+            "speaker": "B",
+            "text": "hast in einer anderen Episode mal erzählt, dass du komplette CI CD Pipeline aufgesetzt hast, die irgendwie zumindest die Webseite automatisch deployed oder so irgendwas in der Richtung, wenn ich das richtig im Kopf habe."
+        },
+        {
+            "start": 2770650,
+            "end": 2814750,
+            "speaker": "A",
+            "text": "Ja, und das ist genau diese Story hier. Also ich habe das eine noch optimiert und dann habe ich in die Flutter App noch ein Sentry eingebaut und natürlich Wolfgang, aber ohne Monitoring geht ja auch nichts. Und dann jetzt wo ich drüber nachdenke, denke ich mir so scheiße, irgendwie stehe ich mir doch mit meinem Wissen selbst im Weg. Also der Perfektionismus blockiert mich hier eigentlich von dem eigentlichen Ziel, denn ich wollte ja nur, dass wenn ich im Garten stehe, da dreimal auf generiere mir jetzt bitte ein Workout, dass ich die Ruderergebnisse in der gleichen Meter oder Kilometereinheit und nicht in Meilen und den Feed und so weiter kriege. Also das ist ja. Und vielleicht zwei, drei Filter mehr, mehr wollte ich ja gar nicht. Aber stattdessen habe ich gesagt, okay, es ist wichtiger, wenn ich die CSS Color auf der Webseite ändere, dass dann per GitHub Actions die ganze Sache automatisch live geht."
+        },
+        {
+            "start": 2814750,
+            "end": 2901120,
+            "speaker": "B",
+            "text": "Also ich würde mal sagen, das Ziel hast du absolut verfehlt. Das eigentliche Problem, was du lösen wolltest, hast du verfehlt. Dafür hast du am Weg ganz viele andere Sachen gemacht. Muss ja auch nicht schlecht sein. Was ich jetzt persönlich immer schlecht finde, ist, wenn man dann das so als Ausrede nimmt. Ich habe ja auch viel gelernt. Also vielleicht sollte man sich schon überlegen, was man für Ziel hat, aber ich finde es auch vollkommen okay, wenn man einfach sagt, man baut gerne was. Es gibt ja auch Leute, die einfach Modelleisenbahnen im Keller aufbauen und da geht es einfach nur ums Aufbauen. Da hast du ja auch kein Ziel oder vielleicht haben die es Ziel, dass sie mal so eine große Modelleisenbahnanlage haben, dass sie Eintritt verlangen können oder so. Aber im Prinzip, du machst ja auch Sport einfach so. Du zahlst sogar für deinen Sport, also du weniger. Für die App hast du dir drei Euro gespart und hast die ganze Werbung. Aber du machst es ja trotzdem freiwillig und investierst deine Zeit. Also wenn man es als reines Hobby sieht, finde ich das ja vollkommen okay. Aber wenn du das Ziel hast, natürlich Geld zu verdienen oder den Fame oder Kunden zu bekommen oder auch das Ziel, etwas zu lernen, dann ist es natürlich was anderes, als wenn du sagst, du hast das Ziel, dein Kilometer und Feed Problem zu lösen. Und ich glaube eben, dass das nicht alles in einem Projekt unterzubekommen ist. Also dass du sagst, ich möchte Geld verdienen, ich möchte aber auch etwas lernen, weil die sind einfach diametral unterschiedlich. Wenn du was an den Start bringen willst, nimm alte Technologie. Boring Technology haben wir auch schon öfters diskutiert. Wenn du was lernen willst, mach ein Projekt, wo du was lernen kannst. Aber dann kann das Ziel eigentlich nicht sein, möglichst schnell Geld zu verdienen oder möglichst schnell irgendein Problem zu lösen."
+        },
+        {
+            "start": 2901350,
+            "end": 2917349,
+            "speaker": "A",
+            "text": "Ja, und da sind wir auch schon genau bei dem Was würde ich heute anders machen? Und da hast du auch meine erste Notiz aufgegriffen, denn ich glaube, heutzutage würde ich den Unterschied zwischen einem Lernprojekt und einem Business Projekt sauber trennen. Und Business Projekt heißt jetzt, ich muss nicht unbedingt Geld machen, aber du weißt, was ich meine."
+        },
+        {
+            "start": 2917750,
+            "end": 2922710,
+            "speaker": "B",
+            "text": "Ich möchte ein businessorientiert. Du hast ein Ziel, dass du vielleicht ein bisschen Geld damit machst."
+        },
+        {
+            "start": 2922710,
+            "end": 2950180,
+            "speaker": "A",
+            "text": "Ja, ganz genau. Also ein gefailtes Lernprojekt ist ja dann so kein Fail. Also es gibt ja diese berühmte Aussage aus der Nur weil ein Experiment fehlgeschlagen ist, ist das Experiment ja nicht fehlgeschlagen. Du kennst nur einen weiteren Weg, wie es nicht funktioniert. Und das bringt mich dann, wenn wir jetzt zurück auf Lern und Business Projekt gehen, bringt mich zu der Sollte diese Sport App überhaupt jemals fertig werden? Also ist die Fertigstellung des Projektes überhaupt das Ziel oder ist es der Weg zum Projekt?"
+        },
+        {
+            "start": 2950340,
+            "end": 2957880,
+            "speaker": "B",
+            "text": "Also ich würde sagen, an meiner Stelle soll sie nicht fertig werden. Sonst wird das Engineering Kiosk darunter leiden. Aber auf deiner Seite kommt es darauf an, was du für Ziele hast."
+        },
+        {
+            "start": 2958270,
+            "end": 2963870,
+            "speaker": "A",
+            "text": "Und das Lustige, wenn ich jetzt mal drüber nachdenke, ich weiß jetzt, wie ich eine mobile App baue mit Flutter und ich finde es immer noch spannend."
+        },
+        {
+            "start": 2964110,
+            "end": 2965390,
+            "speaker": "B",
+            "text": "Hast du es mal genutzt für."
+        },
+        {
+            "start": 2966510,
+            "end": 2997980,
+            "speaker": "A",
+            "text": "Ne, dieses Wissen brauche ich nicht. Ich bin in dem Space nicht unterwegs. Ich habe was Neues gelernt, was ich eigentlich niemals brauche, zumindest bis jetzt nicht, Also die letzten viereinhalb Jahre. Und wahrscheinlich, wenn ich das jetzt anwenden müsste, müsste ich mich eh neu einarbeiten, weil das Framework ja wahrscheinlich wieder eine Major Version hat und der Bauprozess auf Xcode oder wo wir da inzwischen sind, auch sich wieder geändert hat. Und weißt du, was ich meine? Also ich kenne die Grundpatterns, aber die hätte ich mir, glaube ich, auch in drei Stunden Podcast irgendwo reinziehen können bei Spotify sehr wahrscheinlich. Lerne Flatter und dann erzählt dir jemand"
+        },
+        {
+            "start": 2997980,
+            "end": 3015170,
+            "speaker": "B",
+            "text": "die Grundpatterns, warum hast du denn nicht weitergemacht? Also warum hast du nicht mehr Zeit investiert? Du hättest ja auch an ein Ende, oder ein Ende ist es in dem Fall nicht, aber Publish irgendwie veröffentlichen oder selber an ein Ziel bringen können. Also ich würde dir das ja zutrauen grundsätzlich."
+        },
+        {
+            "start": 3015410,
+            "end": 3161610,
+            "speaker": "A",
+            "text": "Du wirst jetzt lachen, ich habe schon weitergemacht. Ich habe mir zumindest immer, wenn ein Update von der App auf meinem iOS kam, habe ich mir die neue APK Version runtergeladen und geguckt, ob die Daten Probleme behoben haben. Und irgendwann habe ich auch gemerkt, hey, die haben ja jetzt dann ihr JavaScript, weil sie es mit React Native gebaut haben oder sowas, haben die Minified, aber ich konnte die Workouts trotzdem noch nachlesen, weil ich ja die vorherigen APK Versionen hatte, Die haben die Daten immer noch nicht gefixt. Und irgendwann habe ich dann aufgehört, weil ich dann zeitlich was anderes gemacht habe. Und irgendwann haben wir diesen Podcast gestartet und dann war ich beruflich wieder unterwegs und so die ganze Thematik. Also ich habe irgendwann die Lust dran verloren, weil ich ja wusste, wie es dann funktioniert. Und dann war es ja nur noch Arbeit, Dann war es ja okay, jetzt muss ich den Partner hin und dann habe ich auch die ganze Sache immer gedockt und dann haben mir manche Sachen nicht so gefallen. Und dann bin ich in das Rabbit Hole von State Management in so einer App gefallen und das konnte ich dann irgendwie nicht lösen und da hatte ich dann abends keinen Kopf mehr und nun habe ich die ganze Scheiße einfach in die Ecke geworfen. Die Source Code Sachen habe ich natürlich noch in so einem Repository, aber ich muss sie mal wieder auskramen. Aber ich habe einfach, ich glaube, aus zeitlichen Gründen nicht weitergemacht. Und das ist auch so eine Sache. Was würde ich heute anders machen? Ich würde mir eine Art Accountability schaffen. Also manche Leute sagen, ja, lass mal was im Team starten, da hat man so eine automatische Accountability. Manche sagen, mach doch Bild in Public, so als Disziplinierung Tool, dass andere Leute dich accountable halten. Aber im Endeffekt hält man sich bei Build in Public accountable oder feiern die sich alle nur, wenn man irgendwie zehn Maa hat, Keine Ahnung, Sich jede Woche zu zwingen, etwas zu posten, ist glaube ich eine gute Sache. Aber eigentlich würde ich, glaube ich eher so was machen, dass ich irgendwie einen guten Freund oder so frage, Hey, pass mal auf, kannst du mich einfach jeden Sonntag anrufen und mir die harte Frage stellen, was hast du diese Woche in deiner App gebaut? Und wenn nicht, dann musst du mich jedes Mal zum Essen einladen, Weißt du, irgendwas, was so richtig weh tut, oder? Und das habe ich jetzt für mich selbst gemacht. Ich habe jetzt noch keinen Freund angerufen, der mich jeden Sonntag anruft. Diese Sport App ist ja leider nicht mein einziges Projekt. Ich habe ja ganz viele angefangene Projekte, Lose Enden würde man sagen. Und ich möchte gerne D Drucker haben und ich weiß, wenn ich mir einen D Drucker kaufe, dann falle ich in das D Drucker Rabbit Hole. Du kennst ja mit eigener Konstruktion und pipapo. Also zwinge ich mich jetzt selber diverse lose Enden abzuschließen und dann darf ich mir erst einen D Drucker kaufen. Also ich schaffe mir selbst Accountability sozusagen. Ein Problem habe ich natürlich, wenn ich jetzt in einem Monat keinen D Drucker mehr möchte, dann habe ich keine Accountability mehr. Aber das sehe ich noch nicht."
+        },
+        {
+            "start": 3161610,
+            "end": 3290050,
+            "speaker": "B",
+            "text": "Aber du kannst mir dann was drucken, weil ich brauche was übrigens, wenn du den dann endlich hast. Aber Accountability ist, glaube ich, ein wichtiger Punkt. Das betrifft natürlich nicht alle, weil ich glaube, es gibt sehr wohl Personen, die selber irgendwie die Accountability aufbauen können und einfach so diszipliniert sind, dass sie das einfach durchziehen. Und wir hatten da ja auch, war schon im Podcast, wenn man daran denkt, an Episode zwei hundert neun und dreiig, wo wir mit Stefan Lerner gesprochen haben über seine App, der ist ja auch alleine unterwegs oder Andre Friesen, gut, der hatte auch mal abgebrochen in Episode zwei hundert acht und fünfzig aber es gibt Leute, die sind sehr diszipliniert, die sitzen alleine daran und arbeiten. Ich persönlich Horror. Also ich kann nicht alleine an irgendetwas lange arbeiten oder mich motivieren und ich habe jetzt grob mal meine Projekte so auf die Schnelle durchgezählt, die mir nur so eingefallen sind, die ich gemacht habe, so bisschen größere Projekte, würde ich mal sagen, bin irgendwie auf fünfzehn Projekte gekommen und habe mal schnell gecheckt, welche gibt es noch von denen Und die drei aktuellen Projekte, die es noch gibt, die habe ich im Team gemacht. Das sind immer zwei Leute. Eines unter anderem mit dir ist der Engineering Kiosk und meiner Meinung nach ist es viel viel einfacher, wenn du eine zweite Person hast, nicht nur die Accountability, sondern auch, dass du über Sachen diskutieren kannst, dass du vielleicht eine gewisse Friction hast, dass du auch dein Produkt besser bauen kannst, weil du einfach schon mal zwei Meinungen grundsätzlich hast und irgendwie ist immer jemand da, der Druck macht und wenn es nur ist, machen wir mal Meeting oder hast du das schon fertig gemacht, diese losen Gruppen, die du meinst, so mit Freunden, wir haben die ja auch mal gemacht, da warst du ja auch Teil Andy von so einer Runde, wo man sich gegenseitig so reportet, was im Projekt weitergegangen ist jeweils. Aber wenn man dann in Einzelprojekten ist, ja dann reportet man, man hat nichts weitergebracht, ist vielleicht ein bisschen peinlich, aber irgendwie die anderen bekommen eh auch nichts weiter und dann zerfällt es wieder alles. Also wenn man eine zweite Person hat oder mehrere Personen, ist meine Erfahrung zumindest, dass es viel mehr Push einfach ist und dass man dann einfach weiterkommt und dass die Motivation einfach viel viel höher bleibt. Also mein Tipp Nummer eins, wenn es, wenn ich einen geben müsste, ist irgendwas im Team zu machen, was aber nicht leicht ist, weil man kann sich halt auch jederzeit streiten und dann fällt es wieder auseinander. Kann natürlich genauso passieren."
+        },
+        {
+            "start": 3290440,
+            "end": 3318790,
+            "speaker": "A",
+            "text": "Ja, also Team hat Vor und Nachteile. Ich sehe, muss ich zugeben, auch eine ganze Menge Nachteile. Man muss immer abstimmen Also dann hat der andere mal eine schwierige Lebensphase oder wenig Zeit und dann kommt man da nicht weiter. Also die Geschwindigkeit kann teilweise auch leiden, aber ich verstehe, was du meinst. Und bei der Accountability, deswegen sage ich ja immer, wenn der Kollege dich anruft, dann und du hast nichts gemacht, dann musst du den zum Essen einladen oder so irgendwas, was weh tut. Wenn du einfach nur so reportest, dann ist das so. Kommst du heute nicht, kommst du morgen. Also es muss dir schon irgendwie wehtun."
+        },
+        {
+            "start": 3319100,
+            "end": 3325700,
+            "speaker": "B",
+            "text": "Ja, aber das wäre dir ja egal. Du bist jemand, der gutes Geld verdient in der IT. Dieses Essen kannst du dir auch noch"
+        },
+        {
+            "start": 3325700,
+            "end": 3461600,
+            "speaker": "A",
+            "text": "leisten, dann mach das Essen weg, dann fegt man die Garageneinfahrt oder so. Es muss ja nichts Monetäres sein, Es muss irgendwas sein, was du nicht gerne machst, was du nicht machen möchtest. Und wenn du dann anfängst zu lügen, dann sorry, aber wenn du dich dann selbst belügst, dann ist ja eh Hopfen und Malz verloren. Aber in dem ganzen Cosmos ist mir eine Idee gekommen bzw. Wurde ein Gedanke getriggert auf Basis eines Hacker News Artikels. Ich bin mal wieder abends gedoom scrollt. Zum Glück mache ich nicht so viel Instagram Doomscrolling, sondern mach eher Hacker News Doomscrolling. Und da hat jemand einen Blogpost gepostet. It's okay to use coding assistant tools to revive the project, you never were going to finish. Also ich möchte jetzt nicht den Zug hier wieder auspacken, aber den packe ich jetzt mal aus. Denn hier geht es nicht darum, wir alles, um irgendwie produktiver zu sein und so weiter, sondern hier geht es wirklich darum, die ganzen Sachen, die wir abgebrochen haben, nicht weil wir nicht mehr dran glauben, sondern weil wir gar keine Zeit hatten, weil wir keine Lust hatten, uns über den Boilerplate zu kümmern. Sowas halt. Da ist ja KI perfekt und es ist schon fast zu offensichtlich. Man sieht den Wald vor lauter Bäumen nicht mehr. Also ich meine, KI ist ja die perfekte Spielwiese hier. Und in der Hacker News Diskussion, die haben wir auch in den Shownotes verlinkt, da gab es ein Beispiel, was ich einfach richtig, richtig schön fand. Da hat irgendwer ein tausend neun hundert acht und neunzig einen Quake zwei Mod angefangen, den hat er nie fertiggestellt. Jetzt mit KI hat er sich das Ding wieder ausgegraben. Und hat den fertiggestellt und der ganze Tenor von dem von der von der Hacker News Diskussion war, eigentlich ist ja die Code Qualität ja irgendwie gar nicht so wichtig. Also ich will nicht sagen komplett egal, aber schon so ein bisschen egal, weil du löst ja Hauptsache es löst ein eigenes Problem. Und da habe ich ein bisschen drüber nachgedacht und dachte, scheiße, das ist eigentlich wahr. Eigentlich kann ich die ganze Sache doch jetzt eigentlich nur mal Kickstarter, so ein paar Abende vorm Fernseher design ich so einen guten Prompt, so mit Milestones und so weiter, Weißt du, so Spec Driven Development, all das, was die ganzen CEOs und ctos und schieß mich tot auf LinkedIn da brabbeln und und drückst du einfach mal auf Play und guckst einfach mal, was da rauskommt."
+        },
+        {
+            "start": 3461600,
+            "end": 3464160,
+            "speaker": "B",
+            "text": "Ich muss dich jetzt enttäuschen, ich bin komplett anderer Meinung."
+        },
+        {
+            "start": 3464160,
+            "end": 3467440,
+            "speaker": "A",
+            "text": "Ja, endlich mal. Kann ja nicht sein, dass wir die ganze Zeit hier in unserer Suppe schweben."
+        },
+        {
+            "start": 3467840,
+            "end": 3550200,
+            "speaker": "B",
+            "text": "Ich glaube nämlich, und das hatten wir ja auch in Episode zwei hundert vier und sechzig besprochen, Seniorität im KI Zeitalter, wo wir eine these aufgestellt haben, dass wenn das Coding jetzt alles von Agents erledigt wird, dann wird es noch wichtiger, was eigentlich so ein Senior ausmacht. Das heißt die Kommunikation und alles, was abseits der Technik ist. Bei den side Projects würde ich das Gleiche sagen. Wenn du jetzt ein side Project startest, dann ist die Technik nicht mehr das Problem. Das heißt, alle anderen Dinge, die wir sowieso nicht machen wollen, Sales, Product, Market, Fit, wie kommen wir in die User? Also wenn du da was bauen willst, dann musst du jetzt genau die Zeit in diesen Teil legen, den üblicherweise die Techniker und Technikerinnen sowieso nicht gern machen. Du kannst, wie du richtig sagst, dein eigenes Problem lösen. Da bist du wahrscheinlich schneller, wenn es nur um deine eigene Problemlösung geht. Wenn du aber wirklich ein Produkt bauen willst, ein side Project, was Leute verwenden, dann wirst du jetzt noch viel schneller an diese Mauer stoßen, an die ganz viele Produktentwickler stoßen, Weil sobald du was fertig gecodet hast, geht es an den Verkauf, ans Kunden finden, ans Feedback sammeln, ans Einarbeiten. Das heißt, alles, was man eigentlich nicht machen will, aber um einen positiven Effekt noch da mit reinzunehmen. Vielleicht gibt es dadurch mehr Open Source Projekte, dass Leute sagen, ich löse mein eigenes Projekt und stelle es einfach mal online. Vielleicht haben andere auch das Problem, das ist dann kein klassisches Produkt."
+        },
+        {
+            "start": 3550200,
+            "end": 3610870,
+            "speaker": "A",
+            "text": "Also ich stimme dir da zu, das was du sagst. Aber ich möchte ganz stark differenzieren von deiner Definition von Zeitprojekt und meiner Definition von Zeitprojekts. Denn meine Definition von Zeitprojekt ist, ich baue was, was für meinen Zweck ist und wo gar nicht die Intention ist, ein großes Business draus zu bauen, meinen Lebensunterhalt von zu bestreiten und mich selbstständig zu machen. Ich gebe zu und jetzt öffne ich mich mal diesem großen weißen Internet. Ich hatte auch schon etliche Ambitionen. Ich mache ein Zeitprojekt, habe Nebeneinkünfte und irgendwann sind die Nebeneinkünfte so groß, dass ich dann meinen Job kündigen und das Vollzeit machen kann. Ich finde diese Storys immer super schön und ich finde das auch klasse, was da Leute auf die Beine stellen und so weiter. Und ich hatte auch lange den Traum der Selbstständigkeit. Inzwischen muss ich sagen, ich glaube, ich habe mir die ganze Zeit in die Tasche gelogen, denn ich bin sehr, sehr glücklich als Angestellter, wenn du so möchtest. Und weil ich glaube, ich habe viele Probleme nicht, die Selbstständige haben. Und deswegen denke ich auch, das was du da gerade gesagt hast, trifft auf meine Art von Zeit Projects nicht zu."
+        },
+        {
+            "start": 3611030,
+            "end": 3628850,
+            "speaker": "B",
+            "text": "Nur wenn du das definierst als du willst dein Problem lösen, aber du hast es jetzt auch definiert, ich möchte was lernen. Mit der KI lernst du gar nichts, weil es wird einfach weggecodet. User bekommen bekommst du auch nicht. Also auch wenn du ein Open Source Projekt machst und ein Produkt baust, Feedback, das kostet ja auch alles Zeit. Das willst du eigentlich alles nicht."
+        },
+        {
+            "start": 3628850,
+            "end": 3700080,
+            "speaker": "A",
+            "text": "Du hast mal wieder nicht zugehört, Du hast mal wieder nicht die Sektionen Reflexion und Retrospektive zu Was würde ich heute anders machen? Getrennt. Ich habe in der Ich habe damals das Ziel nicht ordentlich gesetzt. Das bedeutet so nach dem Motto eigenes Problem lösen, wieso es lernen und so weiter. Und ich habe in der Sektion Was würde ich heute anders machen? Habe ich das nie wieder erwähnt. Ich weiß ja jetzt, wie es funktioniert. Und wenn ich dann sagen würde, okay, ich würde mein Problem lösen, dann würde ich die Learning Thematik zur Seite stellen, wohin ich dann wieder als KI, als Fertigstellungstool nutzen kann. Also das sind ja zwei verschiedene Baustellen. Und mit den Usern, da kommen wir wieder zurück aufs Ziel. Vielleicht würde ich es online stellen, aber würde ich dann Und vielleicht würde ich zwei, drei LinkedIn Posts machen, weil ich bin ja auch stolz darauf, dass ich sowas online gestellt habe und vielleicht kommt ein User, vielleicht aber auch nicht. Verstehst du? Ich bin ja nicht abhängig davon. Ich habe ja dann kein monetäres Ziel, wo ich sagen würde, oh, ich muss das jetzt zum Fliegen bringen, weil dann kann ich nämlich die Sachen, die ich nicht machen möchte, all das, was du gesagt hast, Sales und so, einfach droppen. Deswegen sage ich ja die Definition von Seitenprojekte und Lebenszustand, würde ich mal sagen. Du bist ja selbstständig. Wenn du nichts tust, zahlt auch keiner die Miete bei dir. Na gut, wenn ich nichts tue, dann."
+        },
+        {
+            "start": 3700240,
+            "end": 3703120,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen, ich hoffe, dass es bei dir dasselbe ist, als wenn"
+        },
+        {
+            "start": 3703120,
+            "end": 3707090,
+            "speaker": "A",
+            "text": "du nichts tust, dann zahlt halt ir irgendwann auch keiner mehr die Miete bei mir."
+        },
+        {
+            "start": 3707090,
+            "end": 3709010,
+            "speaker": "B",
+            "text": "Richtig, Ich verstehe dann den Punkt Ja,"
+        },
+        {
+            "start": 3709330,
+            "end": 3737960,
+            "speaker": "A",
+            "text": "deswegen, also ich glaube, das ist schon eine andere Motivation. Und deswegen habe ich ja gesagt, ich habe mir vielleicht am Anfang so ein bisschen in die Tasche gelogen und das klingt jetzt alles so einfach, was ich sage, aber das hat jetzt schon ein paar Wochen und Monate gedauert, bis ich das mal verstanden habe oder beziehungsweise akzeptiert habe, dass man vielleicht einfach zu viel auf einmal wollte, weil man wollte was lernen, man wollte selbstständig werden, Nebenankünfte haben, man wollte sein eigenes Problem lösen. Das hat ja alles nicht funktioniert irgendwie. Und ich meine, ich habe jetzt noch nichts geshippt in der Hinsicht."
+        },
+        {
+            "start": 3738120,
+            "end": 3788280,
+            "speaker": "B",
+            "text": "Und shippen ist, glaube ich, ein guter Punkt, weil auch egal, ob es jetzt mit AI ist oder klassische Projekte oder du was lernen willst oder sonst was, glaub trotzdem, dass es das Beste ist, dass du möglichst schnell etwas schippst, dass du sagst, okay, was ist das Minimal Viable Product? Was ist dieses Tool, was mich jetzt weiterbringt in diesem Moment und das möglichst schnell für mein Problem oder eben auch für einen großen User Bereich, Wie kann ich deren Problem lösen? Und zwar möglichst schnell, egal ob mit AI oder ohne AI, das galt früher und das gilt jetzt auch noch. Und dann kann ich iterieren und dann kann ich entscheiden, mache ich weiter, setze ich mehr Energie drauf, kann ich lernen. Und ich glaube, dass man da viel Feedback bekommt von den Leuten und auch dann für sein eigenes Problem viel Feedback und vielleicht auch schneller wachsen kann, sogar wenn es nur das eigene Problem ist, was man lösen will, da bin ich"
+        },
+        {
+            "start": 3788280,
+            "end": 3790840,
+            "speaker": "A",
+            "text": "jetzt mal wirklich ein hundert Prozent, ein tausend Prozent bei dir."
+        },
+        {
+            "start": 3791000,
+            "end": 3793880,
+            "speaker": "B",
+            "text": "Ship schön, danke, Ship das."
+        },
+        {
+            "start": 3793960,
+            "end": 3807760,
+            "speaker": "A",
+            "text": "Auch wenn du noch nicht mal eine UI hast. Ich habe glaube ich mal in irgendeiner Episode hier erzählt, bau dein erstes, keine Ahnung, wenn du Webseite baust, bau dein erstes Nginx Setup mit einem hello World und Chip das und dann baust du erst die Webseite und dann baust du das und dann brauchst du das."
+        },
+        {
+            "start": 3807760,
+            "end": 3818130,
+            "speaker": "B",
+            "text": "Was aber wichtig ist, bau dir ein ganz einfaches Setup und nicht die und CI CD. Ich baue eine riesen Pipeline, die mir dann diese Blank Page schippt, sondern da"
+        },
+        {
+            "start": 3818130,
+            "end": 3824130,
+            "speaker": "A",
+            "text": "stimme ich dir, ne, also da stimme ich jetzt wieder nicht zu, da muss schon alles automatisiert gehen, Git push und dann geht alles online."
+        },
+        {
+            "start": 3824450,
+            "end": 3827570,
+            "speaker": "B",
+            "text": "Aber eine Sache zwei Monate später, eine"
+        },
+        {
+            "start": 3827570,
+            "end": 3922100,
+            "speaker": "A",
+            "text": "Sache, die ich in den letzten vier Jahren wirklich zu schätzen gelernt habe, ist Dogfooding. Jetzt sagt jeder, weiß doch jeder. Meine Frage ist, wer von euch entwickelt wirklich etwas, was ihr selbst täglich nutzt für den Podcast hier? Ich glaube, wir haben das schon mal erzählt, wir managen all unsere Episoden und Planungen in YAML Files und da haben wir uns Tooling drum gebaut, nennt sich Pot Admin, der Administrator des Podcasts, wenn du so möchtest. Und da haben wir so ganz viele Befehle und allem drum und dran und dann können wir YAML Dateien modifizieren und dann pushen wir die zurück ins Git Repo und so weiter und so fort. Und dieses Tooling, das nutzen Wolfgang und ich mehrere Stunden pro Woche, würde ich sagen. Und auch nach drei, dreieinhalb Jahren gehen da teilweise echt noch große Changes rein, so von so, von so kleinen Sachen, die mich entweder nerven oder mich stört oder wir dachten, wir benutzen den Workflow so, aber nutzen ihn doch nicht so und entfernen das. Also auch nach drei, dreieinhalb Jahren entwickeln wir bzw. Ich oder bzw. Claude die ganze Sache einfach weiter und ich habe das Gefühl, es wird immer und immer immer ein bisschen besser gestreamt. Also dieses Dog Fooding, das würde ich sagen, ist heute essentiell, weil da kommen die richtig geilen Iterationen durch. Und jetzt, jetzt sind wir wieder an dem Punkt, der Wolfgang sagt ja Payment first und dann die Frage ist, hat er es jemals gemacht? Nein, haben wir gerade gehört, hat er immer noch nicht. Der predigt auch wieder irgendwas, was der nicht macht, deswegen Ship and Payment first, würde ich fast sagen Payment first. Oder erst Ship first."
+        },
+        {
+            "start": 3922180,
+            "end": 3940900,
+            "speaker": "B",
+            "text": "Ja, als erstes Ship first, aber es sollte schon sehr nahe aneinander liegen. Aber dass du mal selber das ausprobierst oder vielleicht zwei Freunden gibst zum Ausprobieren schon okay, bevor du Payment aktivierst, also rein von der Reihenfolge her, ist schon shippen zuerst, aber es sollte möglichst wenig Zeit zwischen dem ersten Chip und dem ersten Payment vergehen."
+        },
+        {
+            "start": 3940900,
+            "end": 3961320,
+            "speaker": "A",
+            "text": "Also ich glaube, was die Episode verdeutlichen soll, ist, wir sind auch nur Menschen, wir haben die gleichen Struggle wie ihr und die gleichen Fehler und wir schlagen voll in die Kerbe von den Statistiken, die wir vorhin genannt haben. Bei uns schlägt einfach einfach mal alles fehl. Und jetzt muss ich aber auch langsam mit dieser Episode mal aufhören, weil ich muss diese losen Enden zusammen machen, weil ich will diesen D Drucker ja dann"
+        },
+        {
+            "start": 3961480,
+            "end": 3964520,
+            "speaker": "B",
+            "text": "zuerst abschließen, bevor man was startet. Ist doch gut so."
+        },
+        {
+            "start": 3964600,
+            "end": 4003060,
+            "speaker": "A",
+            "text": "Ja, die Leute sehen das jetzt gerade nicht, aber ich habe hier eine Postkarte auf meinem Schreibtisch und da ist so eine kleine Comicfigur drauf, die sprüht was an die Wand und die sprüht den Satz Stop starting, start finishing an die Wand. Und diese Postkarte sehe ich jeden Tag und es tut mir immer im Herzen weh, weil ich habe so viel Ideen, besonders jetzt mit der KI, wo du diesen ganzen Boilerplate nicht mehr schrauben musst. Also an Ideen mangelt es mir gerade leider gar nicht. Ich möchte zu viele Projekte parallel. Das ist gerade das Problem. Also die side Projects scheitern gerade nicht an Ideen, sondern wirklich an der Zeit oder an der Consistency."
+        },
+        {
+            "start": 4003970,
+            "end": 4025410,
+            "speaker": "B",
+            "text": "Ich glaube auch ja grundsätzlich, dass Ideen einfach wertlos sind. Solange du Ideen nicht umsetzt, sind sie einfach wertlos. Und früher hat mich das noch gegiftet, wenn ich so andere Firmen dann gesehen habe, die irgendwas umgesetzt haben und ich habe gedacht, ich habe die Idee von einem Jahr gehabt und habe es nicht gemacht. Mittlerweile denke ich mir, ja, die haben es verdient, weil die haben es umgesetzt. Ich war unfähig dazu. Die Idee alleine ist einfach wertlos."
+        },
+        {
+            "start": 4025410,
+            "end": 4033300,
+            "speaker": "A",
+            "text": "Okay, ich mache das Ding jetzt hier Schluss, denn der Wolfgang holt irgendwelche Höhle der Löwensprüche raus. Ideen sind wertlos, die Umsetzung zählt. Ich investiere nur in gute Teams."
+        },
+        {
+            "start": 4033620,
+            "end": 4041700,
+            "speaker": "B",
+            "text": "Meine Güte, ich hab übrigens das Zeug noch nie gesehen, noch keine einzige Episode. Ich muss mir das wirklich mal anschauen. Aber"
+        },
+        {
+            "start": 4043940,
+            "end": 4089400,
+            "speaker": "A",
+            "text": "dafür haust du. Aber die Floskeln von den ganzen Venture Capital Investoren oder von diesen TV Königen hier um die Ohren. Deswegen also geht mal in eure Reflektion von eurem letzten side Projekt, was ihr freiwillig oder unfreiwillig aufgegeben habt und sagt mir mal, wie denkt ihr da heute drüber? Und jetzt, was würdet ihr anders machen? Hau mir mal so eine Story in die Discord Community oder per Social Media. Mastodon X Instagram. Wir sind sogar auf TikTok, aber ich glaube, da haben wir zwei Videos mal hochgeladen. Da haben wir gedacht, okay, die Plattform ist nichts für uns. Naja, ihr findet uns schon. Ich möchte eure Reflektion hören. Bin gespannt. Und falls ihr den Wolfi jetzt noch mal seht, sagt ihr mal, der soll erst Paymap implementieren, bevor ihr hier wieder irgendwas sagt. Deswegen, ich verabschiede mich, wir hören uns nächste Woche und tschüss."
+        },
+        {
+            "start": 4089560,
+            "end": 4092280,
+            "speaker": "B",
+            "text": "Ciao. Ich gehe jetzt Payment implementieren."
+        }
+    ]
+}
