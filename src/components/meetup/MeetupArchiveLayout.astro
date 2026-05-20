@@ -4,7 +4,6 @@ import MainHead from '../MainHead.astro';
 import MeetupListing from './MeetupListing.astro';
 import Nav from '../Nav.astro';
 import Discord from './Discord.astro';
-import Newsletter from './Newsletter.astro';
 import NewsletterWorker from './NewsletterWorker.astro';
 import MeetupArchiveEvent from './MeetupArchiveEvent.astro';
 import Team from './Team.astro';
@@ -30,7 +29,7 @@ export interface Props {
 	teamEmail: string;
 	teamMembers: Array<{ memberKey: string }>;
 	showNewsletterForm?: boolean;
-	newsletterConfig?: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
+	newsletterConfig: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
 }
 
 const {
@@ -124,19 +123,15 @@ const meetupArchive = getPastMeetups();
 
     <MeetupListing headline='Meetup Tech Talk Archive' archive={true} meetupsToShow={meetupArchive} meetupName={meetupName} meetupSlug={meetupSlug} meetupImage={ogImage} />
 
-		{newsletterConfig ? (
-			<NewsletterWorker
-				collectionName={collectionName}
-				meetupDisplayName={meetupName}
-				showForm={showNewsletterForm}
-				source={newsletterConfig.source}
-				locale={newsletterConfig.locale}
-				primaryNewsletter={newsletterConfig.primaryNewsletter}
-				secondaryNewsletter={newsletterConfig.secondaryNewsletter}
-			/>
-		) : (
-			<Newsletter collectionName={collectionName} meetupDisplayName={meetupName} showForm={showNewsletterForm} />
-		)}
+		<NewsletterWorker
+			collectionName={collectionName}
+			meetupDisplayName={meetupName}
+			showForm={showNewsletterForm}
+			source={newsletterConfig.source}
+			locale={newsletterConfig.locale}
+			primaryNewsletter={newsletterConfig.primaryNewsletter}
+			secondaryNewsletter={newsletterConfig.secondaryNewsletter}
+		/>
 		<Discord meetupName={meetupName} />
 		<Team
 			badge={teamBadge}

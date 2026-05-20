@@ -4,7 +4,6 @@ import MainHead from '../MainHead.astro';
 import MeetupListing from './MeetupListing.astro';
 import Nav from '../Nav.astro';
 import CompanyLogo from './CompanyLogo.astro';
-import Newsletter from './Newsletter.astro';
 import NewsletterWorker from './NewsletterWorker.astro';
 import Discord from './Discord.astro';
 import Team from './Team.astro';
@@ -33,7 +32,7 @@ export interface Props {
 	showRegistrationForm?: boolean;
 	showGeneralLanguageNote?: boolean;
 	showNewsletterForm?: boolean;
-	newsletterConfig?: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
+	newsletterConfig: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
 	regionDescription: string;
 }
 
@@ -367,19 +366,15 @@ const headTitle = (() => {
 				}
 			}}
 
-			{newsletterConfig ? (
-				<NewsletterWorker
-					collectionName={collectionName}
-					meetupDisplayName={meetupName}
-					showForm={showNewsletterForm}
-					source={newsletterConfig.source}
-					locale={newsletterConfig.locale}
-					primaryNewsletter={newsletterConfig.primaryNewsletter}
-					secondaryNewsletter={newsletterConfig.secondaryNewsletter}
-				/>
-			) : (
-				<Newsletter collectionName={collectionName} meetupDisplayName={meetupName} showForm={showNewsletterForm} />
-			)}
+			<NewsletterWorker
+				collectionName={collectionName}
+				meetupDisplayName={meetupName}
+				showForm={showNewsletterForm}
+				source={newsletterConfig.source}
+				locale={newsletterConfig.locale}
+				primaryNewsletter={newsletterConfig.primaryNewsletter}
+				secondaryNewsletter={newsletterConfig.secondaryNewsletter}
+			/>
 
 			<Discord meetupName={meetupName} />
 
