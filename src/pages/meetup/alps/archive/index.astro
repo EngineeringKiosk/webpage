@@ -1,5 +1,6 @@
 ---
 import MeetupArchiveLayout from '../../../../components/meetup/MeetupArchiveLayout.astro';
+import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS, NEWSLETTER_LOCALES } from '../../../../scripts/newsletter-constants.js';
 
 const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')).default;
 ---
@@ -16,6 +17,7 @@ const alpsImage = (await import('../../../../images/meetup-alps/slider/ibk.jpg')
 	heroImageAlt="View on Innsbruck"
 	heroImageTitle="View on Innsbruck"
 	showNewsletterForm={true}
+	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP, locale: NEWSLETTER_LOCALES.EN, primaryNewsletter: NEWSLETTER_LISTS.MEETUP_ALPS }}
 	teamBadge="The local team in Innsbruck"
 	teamTitle="Team Engineering Kiosk Alps"
 	teamDescription="The organizers of Engineering Kiosk Alps Innsbruck."
