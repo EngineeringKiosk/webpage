@@ -16,6 +16,7 @@ export const NEWSLETTER_SOURCES = {
 	HOME_CTA: 'website-home-cta',
 	NEWSLETTER_PAGE: 'website-newsletter-page',
 	MEETUP: 'website-meetup',
+	MEETUP_ARCHIVE: 'website-meetup-archive',
 };
 
 export const NEWSLETTER_LISTS = {
