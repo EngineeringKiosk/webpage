@@ -34,6 +34,7 @@ export interface Props {
 	showNewsletterForm?: boolean;
 	newsletterConfig: { source: string; locale?: string; primaryNewsletter: string; secondaryNewsletter?: string };
 	regionDescription: string;
+	talkStartOffset?: string;
 }
 
 const {
@@ -56,6 +57,7 @@ const {
 	showNewsletterForm = false,
 	newsletterConfig,
 	regionDescription,
+	talkStartOffset = '~30min',
 } = Astro.props;
 
 const meetupSlug = collectionName.replace('meetup-', '');
@@ -66,7 +68,7 @@ const nextMeetup = getNextMeetup(bufferDays);
 const hasPastMeetups = getPastMeetups().length > 0;
 const dateString = nextMeetup ? formatDateWithoutWeekday(nextMeetup.date, 'en-US') : null;
 const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
-const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ~30min later)` : null;
+const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ${talkStartOffset} later)` : null;
 const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false) : false;
 
 const description = (() => {
