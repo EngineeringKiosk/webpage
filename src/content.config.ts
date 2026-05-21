@@ -58,6 +58,11 @@ const meetupSchema = ({ image }) =>
 		date: z.date(),
 		eventId: z.string().optional(),
 		registrationClosed: z.boolean().optional(),
+		// Per-event override for the promote-page background image (also
+		// used as the page's Open Graph preview). Absolute /public/ path,
+		// e.g. "/meetup/rhine-ruhr/images/2606-duisburg.jpg". Square 1200×1200
+		// is the recommended target. Omit to fall back to the region default.
+		promoteBackgroundImage: z.string().optional(),
 		location: z.object({
 			name: z.string(),
 			address: z.string(),
