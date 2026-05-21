@@ -29,7 +29,7 @@ talks:
     slides: ''
     description:  |
       Software engineering in a tech startup is just the same as in any other company? I doubt it (and I was there). Join me in this session to see how we crafted tech at Frontastic and why we did it that way. I'll show you the hidden requirements your tech stack needs to fulfill and what "product market fit" actually has to do with your software architecture.
-    bio: ''
+    bio: 'Coming soon'
     linkedin: 'tobiasschlitt'
     mastodon: 'https://ruhr.social/@tobyS'
     github: 'tobyS'
