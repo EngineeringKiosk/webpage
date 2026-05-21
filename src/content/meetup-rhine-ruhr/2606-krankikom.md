@@ -1,5 +1,6 @@
 ---
 date: 2026-06-10T18:00:00+02:00
+promoteBackgroundImage: '/meetup/rhine-ruhr/images/promote-background-landschaftspark-duisburg.png'
 location:
   name: 'Krankikom GmbH'
   address: 'Calaisplatz 5, 47051 Duisburg'
