@@ -34,17 +34,22 @@ const addressCity = nextMeetup?.location.address
 	?.trim();
 const displayCity = addressCity ?? meetupCity;
 
+// Per-meetup override (frontmatter field `promoteBackgroundImage`)
+// falls back to the page-level default prop when not set on the
+// upcoming meetup or when there is no upcoming meetup.
+const effectiveOgImage = nextMeetup?.promoteBackgroundImage ?? ogImage;
+
 const defaultAvatarPath = `/meetup/${meetupUrl}/images/speaker/avatar.png`;
 
 ---
 
 <html lang="de">
 	<head>
-		<MainHead title={title} description={description} image={ogImage} {canonicalURL} noindex />
+		<MainHead title={title} description={description} image={effectiveOgImage} {canonicalURL} noindex />
 	</head>
 
 	<body class="antialiased bg-body text-body font-body">
-		<section style={`background-image: url('${ogImage}'); width: 700px; height: 700px;`} class="block text-center flex flex-col font-medium">
+		<section style={`background-image: url('${effectiveOgImage}'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 700px; height: 700px;`} class="block text-center flex flex-col font-medium">
 			<h1 class="text-white text-5xl font-semibold p-3">Engineering Kiosk {meetupName}</h1>
 			{nextMeetup ? (
 				<>
