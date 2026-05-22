@@ -4,6 +4,10 @@
 @plugin '@tailwindcss/typography';
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		@apply text-gray-700;
 	}
