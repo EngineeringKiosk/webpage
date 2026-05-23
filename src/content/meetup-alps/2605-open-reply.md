@@ -14,6 +14,7 @@ talks:
     bio: 'Martin Häusler completed his PhD in Computer Science in 2018 in the area of data modeling, versioning and databases. In 2014, he joined a research project which would later become the Txture company which was acquired by IBM in 2025. Today, he works at IBM as a Consulting Architect while remaining true to his roots as a technology-oriented person. His favorite topics include databases, programming languages (in particular Kotlin and Rust), game development (Godot), gaming in general and Dungeons & Dragons.'
     github: 'MartinHaeusler'
     linkedin: 'martin-haeusler89'
+    slides: '2605-haeusler.pdf'
   - avatar: './images/speaker/2605-leonardo.jpg'
     name: 'Leonardo Pedri'
     title: 'Revisiting Analytical Storage with DuckLake: A Simpler Take on the Lakehouse'
@@ -24,6 +25,7 @@ talks:
     We’ll explore how DuckLake works, what trade-offs come with adopting this new approach, and whether it can really provide a simpler path between “just use Postgres” and running a full-blown lakehouse platform."
     bio: "Leonardo Pedri holds a Master’s degree in Chemistry and also studied Computer Science alongside his main field. He spent three years working in a computational chemistry research group, where he conducted research for pharmaceutical companies using high-performance computing systems and large-scale data analysis. He currently works at Innerspace as a data engineer, focusing on data systems for risk management in pharmaceutical manufacturing."
     linkedin: 'leonardo-pedri-910125286'
+    slides: '2605-pedri.pdf'
 eventId: '7ua6nqejh1dv0q8termn6g3g11'
 speakers:
   female: 0
