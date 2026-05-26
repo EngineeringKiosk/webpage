@@ -3555,6 +3555,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/269"
+  to = "/podcast/episode/269-performance-basics-indexstrukturen-cache-lokalität-zugriffsmuster?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep269"
+  to = "/podcast/episode/269-performance-basics-indexstrukturen-cache-lokalität-zugriffsmuster?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
