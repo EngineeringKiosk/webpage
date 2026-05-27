@@ -1,0 +1,495 @@
+{
+    "confidence": 0.95876586,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4009,
+    "utterances": [
+        {
+            "start": 3440,
+            "end": 137020,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode von deinem Lieblingspodcast, dem Engineering Kiosk Podcast. Heute sprechen wir über Indexstrukturen, also über genau das Thema, das in Datenbank ständig mitläuft, oft super wichtig ist und trotzdem erstaunlich selten wirklich verstanden wird. Denn ein Index ist eben nicht einfach nur ein Häkchen für schneller. Dahinter stecken Datenstrukturen, Algorithmen, Hardware, Zugriffsmuster und eine ganze Menge Trade Offshore. Wir schauen uns an, was ein Index eigentlich ist, warum ein Full Table Scan manchmal trotzdem sinnvoller sein kann, was Selektivität und Kardinalität mit deiner Query Performance zu tun haben und warum ein falscher Index nicht nur nichts bringt, sondern sogar schaden kann. Außerdem sprechen wir über Read Heavy und Write Heavy Workloads, über Write Amplification, Observability, Slow Query Logs und darüber, wie der Optimizer in Datenbanken überhaupt entscheidet, ob ein Index verwendet wird oder halt auch nicht. Und danach wird es halt noch ein bisschen praktischer. Wir sprechen über Hauptspeicher versus Sekundärspeicher, BE und Binärbäume und über unsichtbare Indizes in mysql. Ja, richtig gehört. Unsichtbare Indizes klingt irgendwie schräg, ist aber doch schon ziemlich nützlich. Wenn du also verstehen willst, warum Datenbank Performance nicht mit Create Index erledigt ist, dann bleib dran, die Episode ist für dich. Los geht's. Der Engineering Kiosk ist ja nicht nur ein Podcast. Der Engineering Kiosk ist inzwischen eine ganze Entwickler Community mit echt über fünf hundert Leuten im Discord und wir haben sogar zwei Meetups. Eins in Innsbruck, das macht der Wolfgang mit einem ganzen Team schon seit längerer Zeit und in Rhein Ruhr in Deutschland, in der Rhein Ruhr Region haben wir jetzt auch ein Meetup und das hatten wir die Tage. Und dann hat der Schepp Grüße gehen raus auch so ein kleines Intro gemacht, okay, was ist der Engineering Kiosk? Und hat dann unter anderem auch das Bild des Podcasts gezeigt und sagte, ja, wer irgendwie so auf Backend Infrastruktur steht, der soll in diesen Podcast mal reinhören und hat danach auch seinen Podcast vorgestellt, den Working Draft Podcast. Grüße gehen auch da raus und hat gesagt, wer mehr auf Front entsteht. So Wolfgang, Infrastruktur und Backend Podcast, siehst du das auch so? Und was hast du zu deiner Verteidigung zu sagen?"
+        },
+        {
+            "start": 137020,
+            "end": 171990,
+            "speaker": "B",
+            "text": "Also ich bin schnell mal auf unsere Webseite gegangen und habe auf den Tag Kommunikation geklickt und das sind glaube ich über dreiig Episoden, wo es nur ums Thema Kommunikation geht. Jahresgespräch, Performance Reviews, Impostor Syndrom, Datenjournalismus. Also das stimmt schon, wir kommen wahrscheinlich sehr aus der Backend Welt, aber wir machen schon sehr viel und das ist ja auch das Credo von diesem Podcast, dass wir auch andere Sachen machen, rund über den Tellerrand, Rundumschlag in der IT Szene. Und da wir ja da so viel machen, ist es jetzt eigentlich schon wieder Zeit für eine ordentliche Backend Folge."
+        },
+        {
+            "start": 171990,
+            "end": 222780,
+            "speaker": "A",
+            "text": "Ich habe dieses Intro nicht einfach so gewählt, denn jetzt befeuern wir die ganze Thematik mal wieder. Denn für die Leute, die es nicht Der Wolfgang hat einen Doktortitel im Bereich Datenbanken und wir wären ja schön doof, wenn wir das nicht auch mal ausschlachten würden. Im Produktivitätsbereich würde man sagen, wir nutzen mal ein paar Synergien, denn solche Themen fallen dem Wolfgang natürlich immer ganz locker von der Hand. Und deswegen beschäftigen wir uns heute mal mal oder mal wieder, das weiß ich gerade gar nicht mehr, über Indexstrukturen. Indexstrukturen kommen bei den meisten Leuten im Kopf immer nur in Datenbanken vor. Es wird aber nicht nur in Datenbanken angewendet. In sehr vielen computelastigen Applikationen gibt es ebenfalls Indexstrukturen. Deswegen Wolfgang, Indexstrukturen, was hast du dazu zu sagen?"
+        },
+        {
+            "start": 222860,
+            "end": 269600,
+            "speaker": "B",
+            "text": "Also nur um das gerade oder glatt zu ziehen, wie du ja immer so schön sagst, war gerade am Tag Datenbanken bei uns auf der Webseite, da haben wir ungefähr zwanzig Episoden. Also wir haben mehr Kommunikations Episoden als Datenbank Episoden auf jeden Fall. Und wir hatten schon mal über Indexstrukturen gesprochen in einem sehr speziellen Bereich, Geo Indexstrukturen, also räumliche Indexstrukturen. Wir hatten auch mal eine Episode, wo es um Gaming Indexstrukturen sogar gegangen ist, also sehr spezialisierte Episoden. Aber wir hatten bisher eigentlich noch nie so eine grundlegende Episode, wo wir mal besprechen, was es eigentlich für Indexstrukturen im Allgemeinen gibt, was vor und Nachteile sind. Hauptspeicher, Sekundärspeicher, also Festplatte, woher kommt das Ganze? Und genau darum soll es in dieser Episode mal gehen."
+        },
+        {
+            "start": 269600,
+            "end": 279400,
+            "speaker": "A",
+            "text": "Wie sagt man bei uns so auf dem Dorf? Dann lass uns nicht lang schnacken, Kopf in Nacken gilt eigentlich fürs Saufen. Deswegen übertragen wir das jetzt mal auf das Thema. Hauen wir direkt raus. Was ist eigentlich ein Index?"
+        },
+        {
+            "start": 279400,
+            "end": 406740,
+            "speaker": "B",
+            "text": "Also wahrscheinlich haben wir alle von einem Index schon mal gehört in der Schule oder wenn sie damals irgendwie so ein Lexikon, also ich hoffe, sind alle so alt, dass sie ein Lexikon kennen, also so ein Buch, wo man hinten so ein Index drin hat, der hat schon Index geheißen, das ist die Grundform, Aber wir in der Tag Szene verstehen natürlich was anderes unter dem Index. Und ich würde mal grundsätzlich das eigentlich so definieren, dass ein Index eine gewisse Struktur bzw. Sogar ein Vertrag ist, wo man versucht, eine gewisse Datenstruktur zu implementieren, die dann einen Optimierer oder Algorithmus hat, um mit dieser Datenstruktur zusammenzuarbeiten. Und das Ganze immer spezialisiert auf eine gewisse Hardware. Also die Hardware spielt da auch immer Rolle. Wo wird das Ganze ausgeführt? Auf einer Festplatte im Hauptspeicher? Habe ich eine SSD Platte, habe einen schnellen RAM, habe ich Caches, L, Cache L, L und wie ist der Workload? Also wie greife ich auf diese Daten zu? Und meistens wird das Ganze ja optimiert für einen speziellen Workload. Also Facebook hat wahrscheinlich einen anderen Workload als Wikipedia, weil Wikipedia hat ganz viele Read Zugriffe, Facebook hat wahrscheinlich auch ganz viele Schreibzugriffe oder eine andere Plattform, wo es um Chats zum Beispiel geht, wo man einfach viele viele Writes eben auch hat oder Änderungen in dem Sinne. Und genau dafür optimiert man dann diese Datenstruktur, diesen Algorithmus, damit das Ganze dann am Ende schneller funktioniert. Und die Grundannahme ist eigentlich immer, ich probiere eigentlich meine Rechenzeit runterzubekommen, indem ich weniger Daten anfassen muss oder wie in Österreich sagt man angreifen, da bist du ja immer verwirrt, wenn man Daten angreifen sagt oder dich angreifen, ist schon einmal Unterschied. Auf jeden Fall, man will möglichst wenig Daten anfassen, berühren in irgendeiner Form, weil es ist meistens langsam. Und wenn ihr natürlich jetzt ein hundert Gigabyte an Daten habe, aber für irgendeine Anfrage nur zehn Megabyte berühren muss oder irgendwie laden muss, bin ich am Ende schneller. Und das ist eigentlich so das Ziel von einem Index, egal ob das im Hauptspeicher ist, auf der Festplatte, auf einem Bandlaufwerk soll es ja auch noch geben, kann man eigentlich überall abbilden."
+        },
+        {
+            "start": 406740,
+            "end": 464370,
+            "speaker": "A",
+            "text": "Wenn wir nochmal über die Verbindung zu der Hardware sprechen, dann sprechen wir nicht über Hardwaregenerationen, wie zum Beispiel CPU Architekturen, ob das jetzt in X oder ARM ist, sondern wir sprechen eigentlich darum, okay, CPU lastig, RAM lastig, disklastig und nicht ob das jetzt, ob die CPU eine zwei GHz Taktung oder eine drei GHz Taktung hat. Bei Disks mag es vielleicht ein bisschen anders sein, bei ssds versus Spinning Disks, da ist es vielleicht ein bisschen anders wegen der Aufteilung, wie die Daten auf die Platte geschrieben werden. Da hatten wir ja glaube ich, da hatten wir ja auch mal eine Episode über OLAP versus OLTP und auch über Zeilen versus spaltenorientierte Datenbanken, wo das Disk Layout ja dann auch eine Rolle spielt. Wenn wir uns jetzt mal von der Festplatte entkoppeln, dann sprechen wir jetzt nicht über die Taktung von RAM oder die Taktung von CPU, sondern eher über CPU und Cache Größen versus RAM versus Disc generell. Und da über die Unterschiede in der Geschwindigkeit, also über die sogenannte Order of Magnitude."
+        },
+        {
+            "start": 406802,
+            "end": 466802,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 524370,
+            "end": 607060,
+            "speaker": "B",
+            "text": "Also wenn du jetzt alle Indexstrukturentwickler innen beleidigen willst, dann kann man davon ausgehen. Aber die ganzen Leute, die sich die letzten fünfzehn Jahre damit beschäftigt haben, die optimieren natürlich auf alles. Und alleine diese ganze Änderung in letzter Zeit, dass die L bis L Caches größer geworden sind oder wie die CPU kommuniziert, wie gelockt wird, was in einem gesharen Cache auf der CPU passiert oder nicht passiert oder was geshared werden kann zwischen Kerne, der spielt natürlich alles eine Riesenrolle. Also die reinen Taktfrequenzen spielen jetzt vielleicht weniger die Rolle, aber alles andere, was an Architektur irgendwie möglich ist. Instruction Sets, ob du auf der CPU irgendwas parallel abarbeiten kannst, sind die. Das spielt natürlich alles in die Indexstrukturen rein. Und wenn du auf die großen Datenbankkonferenzen blickst, so wie eine FIRE DB, Very Large Database ist eine der größten, da findest du überall Papers, die da die letzten Prozent irgendwie noch mal rausholen, um für eine ganz spezielle Architektur noch mal irgendwie in einer Indexstruktur mit einem Delta vom Delta vom Delta, also der achtzehnte Verbesserung von einer Indexstruktur noch mal irgendwo ein bisschen rausholen. Und gerade die großen Companies wie Meta oder Google, bei denen bringt natürlich dieses null komma null null fünf Prozent auch noch was natürlich bei ihren Indexstrukturen."
+        },
+        {
+            "start": 607060,
+            "end": 686920,
+            "speaker": "A",
+            "text": "Und wenn du von Workload spezifischen Strukturen sprichst, dann kommt mir immer eine Sache in den Sinn, die ich in meiner Karriere super oft hatte und die vielleicht auch jeder hier schon kennt. Der klassische Satz, das skaliert nicht. Denn wenn ich eine Sache in meiner Karriere gelernt habe, dann ist das immer, wenn Ich höre, das skaliert nicht, dann hat die Person wahrscheinlich am Vorabend Hacker News gelesen und da kam irgendeine neue Datenbank hoch, die man dann die Produktion schippen möchte. Oder die Person hat den Satz einfach sehr schnell gesagt, weil es sehr einfach ist, diesen Satz zu sagen, um dann ein sehr spannendes Projekt zu launchen. Ich habe aber auch gelernt, und jetzt kommt die positive Seite, dass immer wenn man sagt, das skaliert nicht, dass es sehr viel Optimierungspotenzial in diesen Workloads gibt. Das bedeutet, haben wir als Engineering Team eigentlich verstanden, welche Daten, welche Tabellen wir in welchem Volumen schreiben versus lesen? Also haben wir einen Write Heavy Workload oder einen Read Heavy Workload? Haben wir einen Traffic Serving Workload oder haben wir einen Batch Workload, der vielleicht nicht so zeitintensiv ist, wo es keine Rolle spielt, ob das jetzt fünf oder fünfzehn Sekunden lang dauert. Wohingegen bei einem Traffic Serving Workload, also einem Live Traffic, sei es Mobile App, sei es irgendwas anderes, auf Millisekunden ankommt."
+        },
+        {
+            "start": 686920,
+            "end": 762530,
+            "speaker": "B",
+            "text": "Also du hast jetzt gerade OLTB und OLAP nochmal erklärt, also OLAP ist Analytik, da hat man Zeit, OLTP ist Transactional, da hat man wenig Zeit. Aber genau das ist eben der Punkt. Du hast im Prinzip diese vier Datenstruktur, Algorithmus, Hardware und Workload. Und diese vier Sachen müssen zusammenpassen. Wenn wir das jetzt ganz unten mal aufmachen, diese vier Punkte bei dem Index in der Volksschule. Aber wie heißt es bei euch? Grundschule, Grundschule in einem Lexikon, wenn man das mal sieht, in einem Lexikon habe ich eine Workload, wo ich mir denke, okay, in einem Lexikon will ich vielleicht gewisse Begriffe oder allgemein in dem Buch will ich gewisse Begriffe schnell nachschauen können, dass ich schnell die Seitenzahl finde. Es ist rein read driven, würde ich mal sagen. Dann habe ich eine Hardware, das ist mein Buch, meine Seiten in dem Fall sind einfach klassische Seiten, die ich umblättern kann, ist im Speicher aber eigentlich eh sehr ähnlich, Wenn man sich das anschaut, dann habe ich eine Datenstruktur, ich habe einfach eine lange Liste, aber in dem Fall habe ich eine sortierte Liste, üblicherweise in dem Index hinten im Buch. Das heißt, es ist schon mal so, ich habe da irgendeine Struktur drinnen, eine sortierte Liste, das wäre die Datenstruktur. Und dann habe ich den Optimizer oder den Algorithmus, der da drauf läuft. Der läuft natürlich bei uns im Gehirn, bei einem klassischen Buch übrigens, Buch muss ich dir nicht erklären, Andi, kannst du"
+        },
+        {
+            "start": 762530,
+            "end": 777350,
+            "speaker": "A",
+            "text": "noch oder kenne ich sogar sehr gut. Ich habe ein Hobby, ich kaufe Bücher, das heißt nicht, ich lese sie, sondern ich kaufe sie. Also ich habe hier einen großen Stapel links und rechts vor mir von Fachbüchern, die ich alle sehr gut finde und alle lesen möchte. Doch, naja gut, ist halt schwierig."
+        },
+        {
+            "start": 777350,
+            "end": 873470,
+            "speaker": "B",
+            "text": "Du kannst ja mal den Index hinten anschauen, vielleicht kannst du dann schon ein paar Inhalte rausziehen. Auf jeden Fall hat man dann die studierte Liste und der Algorithmus läuft dann im Kopf ab. Und das ist üblicherweise die Binary Search, die wir im Kopf anwerfen, mehr oder weniger. Das heißt, wenn wir wissen, wir suchen nach irgendetwas, was mit K anfängt, keine Ahnung, Konflikt zum Beispiel als Wort, dann schauen wir natürlich schon, wo sind die Wörter mit K und dann machen wir so eine binäre Suche, um das möglichst schnell einzugrenzen. Wir schauen mal bei alle K, wo sind die nächsten Buchstaben? Ist es eher vorne in den K Listen oder eher hinten? Und so macht man dann ein paar Checks und probiert sich anzunähern, ganz klassisch wie in einer binären Suche, um das zu finden. Also eigentlich haben wir das im echten Leben genauso, diese Indexe und Indexierungen und Algorithmus im Kopf. Und das Ganze kann man eigentlich wirklich eins zu eins umsetzen dann auf die Technik. Und auch da wieder, egal ob im Hauptspeicher oder Festplatte oder wo wir auch immer umgehen oder bei uns in der Software, wenn wir es programmieren, ist eigentlich immer dasselbe. Wir wollen schnell auf Daten zugreifen können und Sachen schneller finden, ohne dass wir eben das ganze Lexikon durchsuchen oder den ganzen Index durchsuchen. Und dieses Vorgehen wird dann optimiert und das fällt eigentlich alles in Indexstrukturen. Also man kann nicht nur, wie du richtig sagst, das nur auf einen Index an sich reduzieren, man muss immer alles rundherum wissen, um das dann am Ende optimieren zu können. Und wenn man den falschen Index verwendet für ein Workload, dann ist das Ganze natürlich langsam und dann kommt es eskaliert ja nicht. Aber vielleicht hat man einfach den falschen Index gewählt oder hat gar keinen Index gewählt oder hat sich einfach gar nicht beschäftigt damit, wie man die Daten vielleicht ablegen kann in einer besseren Datenstruktur, um dann am Ende schneller zu sein."
+        },
+        {
+            "start": 873470,
+            "end": 897750,
+            "speaker": "A",
+            "text": "In der Episode zwei hundert fünf und sechzig wo wir über die One Billion Road Challenge gesprochen haben, haben wir auch über die Kritik von Dataset Overfitting gesprochen. Das bedeutet, man optimiert seinen Algorithmus ganz genau auf die Daten, die man da hat. Wenn ich das jetzt auf das ummünze, was du jetzt gerade gesagt hast, dann ist ja Dataset Overfitting in Bezug auf Index Design sehr vorteilhaft, oder Solange du"
+        },
+        {
+            "start": 897750,
+            "end": 976590,
+            "speaker": "B",
+            "text": "garantieren kannst, dass dein Dataset gleich bleibt. Das ist eigentlich das größte Problem in der Datenbankwelt. Oder ganz allgemein natürlich, du baust jetzt irgendeinen Index für einen ganz speziellen Use Case. Das heißt, du machst eine Datenstruktur, einen Algorithmus drauf, kennst ja deine Hardware ganz gut und kennst auch den Workload. Du hast so und so viele Zugriffe, zum Beispiel ein tausend User, muss die Daten speichern von ein tausend User, alles kein Problem, funktioniert schnell und über die Zeit kommen jetzt plötzlich ganz viele User dazu. Oder du hast einen coolen Marketing Effekt und hast plötzlich User. Plötzlich ändert sich dein Workload oder deine Daten ändern sich, weil plötzlich so viel geschrieben wird und dann stimmen diese Annahmen alle nicht mehr. Das heißt, es kann natürlich über die Zeit passieren, dass diese Indexstrukturen nicht mehr geeignet sind oder nicht mehr die richtigen sind. Und das macht ja bei so einem lebenden System eigentlich das Problem aus. Und darum hat man früher auch diese dbs, die Datenbank Administratoren gehabt, die sich immer das angeschaut haben, funktionieren unsere Datenbanken noch, ist alles noch schnell. Mir gerade ein Freund erzählt, der ist ein Datenbank Administrator für MSSQL, die haben einfach ein Update eingespielt und plötzlich war alles langsam bei denen und sie haben wirklich eigentlich nie an dieses Update gedacht, weil es auch ein bisschen verzögert war und so weiter. So das klassische Problem erst ein paar Tage später und am Ende sind sie aber drauf. Ja, das Update hat halt irgendwas in den Algorithmen geändert und plötzlich war alles langsam bei denen."
+        },
+        {
+            "start": 976590,
+            "end": 1012330,
+            "speaker": "A",
+            "text": "Das bringt mich aber zu der nächsten Frage. Man kennt ja das Gute, wenn ich mit der Zeit geht, geht mit der Zeit und somit ist das Strichwort sozusagen, ja, man wird dann auch gestrichen. Das ist richtig pun intended oder beziehungsweise nicht intended. Wenn du nun, wenn du einen Index einführst, hast du gewisse Annahmen an die Daten und diese Annahmen müssen weiterhin stimmen, damit der Index auch seinen Soll erfüllt. Jetzt wird aber jede Applikation kontinuierlich geändert und die seltensten Datensätze sind statisch. Und wenn sie statisch sind, überlege ich gerade, braucht man dann eigentlich einen Index oder kann man da nicht ziemlich viel pre computen? Das ist eine andere Thematik."
+        },
+        {
+            "start": 1012330,
+            "end": 1028290,
+            "speaker": "B",
+            "text": "Naja, ein Index ist ja nichts anderes als pre computed eigentlich. Also klar wird der verändert, aber eigentlich, wenn du ein statisches Datenset hast und einen Index machst, dann precomputest du eine andere Sicht auf die Daten. Und das ist genau so ein Index."
+        },
+        {
+            "start": 1028290,
+            "end": 1058300,
+            "speaker": "A",
+            "text": "Ich glaube, meine Frage ist, was sind denn Best Practices, um deinen Index kontinuierlich zu kontrollieren, ob die initialen Annahmen in Relation zu den Daten eigentlich noch stimmen? Also eigentlich ist das ja so eine Art, wenn ich das im Infrastrukturbereich vergleiche, eine Art Capacity Planning für deine Daten, nicht für Server, nicht für Speicherplatz, nicht für RAM, sondern für deine Daten. Gibt es da Best Practices, die du aus dem Hut zaubern kannst? Und ich meine jetzt nicht hire einfach eine Armee von DB von Datenbank Administratoren."
+        },
+        {
+            "start": 1058890,
+            "end": 1130920,
+            "speaker": "B",
+            "text": "Grundsätzlich gelten die gleichen Regeln, wie du jetzt gesagt hast aus dem Infrastrukturbereich. Du brauchst mal Observability und die hast du üblicherweise ja schon mal ganz ganz oben auf der Application Seite und wenn dort was langsam wird, dann musst du liegt es an der Datenbank. Das Ganze gibt es natürlich auch auf der Datenbankseite. Du kannst die Datenbank monitoren, du kannst herausfinden, welche Queries dauern lang alle, die in der mysql Welt unterwegs waren. Slow Query Lock ist so der Schlagwort schlechthin, Aber du kannst es natürlich grundsätzlich nicht verhindern. Du kannst es probieren vorherzusehen und so grob einschätzen, okay, was wird sein, Wenn wir viele Daten plötzlich reinbekommen, funktioniert es noch gut, aber im Endeffekt musst du es monitoren und dann eben auch dementsprechend agieren. Die Datenbanken sind natürlich schon einigermaßen schlau und die halten mittlerweile Statistiken und probieren auch für den internen Optimizer den richtigen Index rauszusuchen. Also da gibt es natürlich schon viele Punkte, die die Datenbank versucht automatisch zu machen und mittlerweile immer mehr automatisch zu machen und intelligent zu machen. Aber grundsätzlich ist die Datenbank sowie die Codebase an sich auch in irgendeiner Form lebendes System und kann über die Zeit degraden und langsamer werden und wird sie üblicherweise auch, weil du ja tendenziell immer mehr Daten bekommst."
+        },
+        {
+            "start": 1131000,
+            "end": 1160650,
+            "speaker": "A",
+            "text": "Über diesen Aspekt habe ich eigentlich so noch nie nachgedacht. Es gibt Firmen, die stellen Performance Engineers ein, zum Beispiel auf dem letzten Rhein Ruhr Engineering Kiosk Meetup war jemand, der hat mal bei Komoot gearbeitet und hat da die Frontend Performance optimiert, was sie gemacht haben. Die haben bei jedem Pull Request Frontend Tests laufen lassen, um zu gucken, ob die Frontend Performance degradet wird durch den Pull Request, was ja sein kann. Ich habe so was eigentlich noch nie für Datenbank Indizes gesehen."
+        },
+        {
+            "start": 1160650,
+            "end": 1213130,
+            "speaker": "B",
+            "text": "Die Datenbank Hersteller haben sowas, also die haben riesige Test Sets von Kunden auch, weil die wollen ja üblicherweise nicht ihre Kunden langsamer machen. Also es ist MS SQL und bei meinem Kollegen, der wirklich in dem Fall alles dann langsamer hatte. Aber genau das wirst du eigentlich verhindern. Du hast riesige Testsets, die dann durchlaufen über Tage meistens, um zu checken, hat irgendein Update eine Auswirkung auf irgendeinen speziellen Data Load und Workload. Meistens, wie gesagt, große Kunden haben dann noch eigene Testsets und die laufen dann wirklich tagelang durch und checken, gibt es irgendwo Probleme oder können wir das neue Release wirklich rausbringen und ausrollen. Und das kannst du natürlich auf deiner Seite als Programmierer natürlich genauso machen und haben. Und manche Leute haben das natürlich auch, dass die in den Tests gewisse Workloads abarbeiten, um das dann wirklich zu testen."
+        },
+        {
+            "start": 1213210,
+            "end": 1225340,
+            "speaker": "A",
+            "text": "Und wenn du das Wort Workloads wieder in den Mund nimmst, fällt mir noch eine Frage, Würdest du sagen, ein Lexikon ist eher ein Read Heavy Workload und kein Write Heavy Workload? Weil du hast ja vorhin den Index anhand eines Lexikons beschrieben."
+        },
+        {
+            "start": 1225340,
+            "end": 1280980,
+            "speaker": "B",
+            "text": "Genau, habe ich glaube ich gesagt, das ist klassisch Read Heavy natürlich, weil eigentlich nur gelesen wird und das Schreiben basiert halt einmal beim Druck eigentlich. Wobei natürlich das Lexikon an sich ganz praktisch ist, weil da kommt halt nichts dazu. Das heißt, ich brauche den Index nicht updaten. In der Datenbank oder im Hauptspeicher habe ich natürlich das Problem, dass ich ständig neue Daten reinbekomme und immer den Index auch updaten muss. Und diese Write Amplification, wenn ich ganz viele Indizes mit updaten muss, das heißt, ich schreibe eigentlich nur eine Zeile, muss aber an zwanzig verschiedenen anderen Stellen den Index updaten. Das heißt, das nennt sich dann Write Amplification, weil ich eben statt einem Write dann am Ende zwanzig machen muss, dann wird halt alles langsam. Also dieses updaten der Indizes braucht natürlich auch Zeit und wenn es dann um Transaktionen geht und es mit reinfliesst womöglich, dann wird eben alles dementsprechend langsamer. Muss man natürlich auch immer mit beachten. Umso mehr parallele Datenstrukturen ich halte, umso mehr muss ich auch updaten."
+        },
+        {
+            "start": 1280980,
+            "end": 1297940,
+            "speaker": "A",
+            "text": "Die Right Amplification ist also eigentlich das, was so ein Fan Out von Microservice Requests macht, wenn du einen Microservice anfragst und der zwanzig Fan Out machst. Also eine Request Verstärkung, wenn du so möchtest und hier eine Schreibverstärkung, dass du dir selbst gegebenenfalls ins Knie schießt."
+        },
+        {
+            "start": 1297940,
+            "end": 1298300,
+            "speaker": "B",
+            "text": "Genau."
+        },
+        {
+            "start": 1298300,
+            "end": 1316770,
+            "speaker": "A",
+            "text": "Okay, Basis geklärt, finde ich super. Kommen wir zum zweiten Basis Thema. Gib mir noch mal einen Rundown über die Kernkonzepte von Datenbanken. Also ich habe eine Tabelle, nehmen wir mal Kundendaten oder User, ganz klassisch, ich habe Primary Key, eine E Mail, ein Land und vielleicht wann der Record angelegt"
+        },
+        {
+            "start": 1316770,
+            "end": 1440750,
+            "speaker": "B",
+            "text": "wurde, Da fangt ihr schon mal an. Primary Key. Key ist eigentlich in der Datenbankwelt immer ein Vote für Index. Das heißt, du hast mit dem Primary Key eigentlich schon einen Index auf deinen Daten drauf. Und üblicherweise ist der Primary Key drum heißt der Primary Key der Key, der bestimmt, wie die Daten sortiert sind. Das heißt, üblicherweise sind die Daten nach dem Primary Key sortiert, physikalisch wirklich auf der Festplatte im Speicher. Und wenn du jetzt noch irgendwas suchst, also wenn du eine User hast, select stand from User where E Mail ist Andi engineeringkiosk dev. Da müsstest du durch deine ganzen User durchgehen und überall schauen, ist die E Mail Adresse irgendwo vorhanden. Das heißt, du machst einen Full Table Scan, das heißt, du gehst durch alle Daten durch, lädst alle Daten durch die gesamte Speicherpipeline, das heißt von der klassischen Festplatte, egal ob SSD oder sonst was, in den RAM, in den L Cache umgekehrt, L Cache kommt zuerst L und dann L, dann die Register und dann kommt der eigentliche Vergleich, ist es wirklich diese E Mail Adresse. Wir hatten auch kürzlich in der Episode von der One Billion Road Challenge, diese String Vergleiche sind sehr teuer, Strings sind sehr lang, müssen alle noch mal durchgepiped werden und es wäre natürlich super langsam. Sogar bei kleinen Tabellen kann es unter Umständen schon sehr langsam sein und da würde sich natürlich ein Index anbieten, wenn ich oft diese E Mail Adresse suche, baue einen eigenen Index auf, in diesem Index steht die E Mail Adresse von den einzelnen Usern und dann steht irgendwo Andi Engineering Kiosk Dev ist die ID achtzehn und dann suche ich in diesem sortierten Index, der nach der E Mail Adresse sortiert ist, bin ich sehr schnell. Andi könnte zum Beispiel eine binäre Suche machen, in meinem Index finde Andy sehr schnell, weiß dann, das ist die ID achtzehn und dann hole ich mir die eigentlichen Daten aus der User Tabelle mit der ID achtzehn vom Andi und habe nur einen Zugriff auf der Festplatte. Im Idealfall passt der Index vielleicht sogar in meinen Hauptspeicher, das heißt, ich kann im Hauptspeicher superschnell nach Andy suchen, nach der E Mail Adresse und wenn ich seine Adresse brauche, mache ich dann eine Punktanfrage und hole mir genau die Adresse von der Festplatte, von der SSD, wo der Andy gespeichert ist."
+        },
+        {
+            "start": 1442020,
+            "end": 1451460,
+            "speaker": "A",
+            "text": "Computer Science ein hundert eins was ist eine binäre Suche? Wie funktioniert die? Du hast das gerade so salopp gesagt, als müsste das jetzt hier jeder ohne AI locker programmieren können."
+        },
+        {
+            "start": 1451620,
+            "end": 1531570,
+            "speaker": "B",
+            "text": "Ich habe es eh schon erwähnt mit dem Lexikon und eigentlich machen wir da mehr oder weniger eine binäre Suche. Wenn du eine lange Liste hast, die sortiert ist, dann fängst du üblicherweise mal in der Mitte an, checkst in der Mitte, was für Buchstaben hast du in der Mitte und dann entscheidest du, musst du weiter vorne nachschauen oder weiter hinten. Das heißt, wenn ich nach Andy such, A kommt üblicherweise am Anfang, könnt ihr in dem Fall schon wissen, aber wenn ich die klassische binäre Suche mache, schaue genau in der Mitte, wo lande ich da, Wenn ich da jetzt zum Beispiel M habe in der Mitte, dann weiß ich, okay, muss nach links gehen, nimm dort wieder die Mitte, komme irgendwo bei K an, weiß ich, okay, muss wieder nach oben gehen Richtung A, nimm wieder die Mitte und so suche mir immer wieder die Mitte heraus und prüfe so lange die Mitte und entscheide, muss ich links oder rechts gehen, bis ich Andy gefunden habe. Und das nennt sich binäre Suche, weil sich der Suchraum immer halbiert. Das heißt, ich mache die erste Hälfte dann in der linken Hälfte, halbiere wieder, also es wird immer halbiert der Suchraum und darum komme ich dann relativ schnell, weil es logarithmisch ist, zu meinem eigentlichen Ziel. Und das ganz allgemein. Üblicherweise bei Baumstrukturen hat man immer logarithmischen Zugriff. Wir haben ja schon mal eine Episode zur O Notation gehabt, also wie komplex ist so ein Algorithmus, wie schnell komme ich ans Ziel, wie viel Daten muss ich verarbeiten Und Indexstrukturen sind üblicherweise Bäume und Bäume sind immer logarithmisch."
+        },
+        {
+            "start": 1531570,
+            "end": 1550820,
+            "speaker": "A",
+            "text": "Okay, ich suche jetzt eine E Mail, habe die E Mail in meinem Index gefunden, habe dann die ID der Zeile gefunden und lese dann die ganze Zeile. Okay, dabei kommt die Frage, gibt es denn auch Situationen, wo ein Index langsamer sein kann als ein kompletter sequenzieller Table Scan?"
+        },
+        {
+            "start": 1551130,
+            "end": 1705079,
+            "speaker": "B",
+            "text": "Das gibt es nicht nur, sondern es kommt sogar sehr oft vor und das ist ein Grundsatzproblem, wenn man immer sagt, okay, irgendwas ist langsam, ich werfe meinen Index drauf, weil da sind wir genau wieder bei dem Punkt, Ich muss wissen, was macht der Index, was für ein Workload habe ich und wie funktioniert das eigentlich im Hintergrund. Und wenn man sich das anschaut, dann muss man so bisschen verstehen, wie Indizes eigentlich funktionieren. Und zwar wird es ja schon erwähnt, wenn wir jetzt einen Index haben auf die E Mail Adressen, dann ist dieser Index nichts anderes als ein Nachschlagewerk, wo eigentlich die einzelnen User gespeichert sind. Also ihr habt die E Mail Adresse sortiert nach der E Mail Adresse und dann steht da ID achtzehn, jetzt muss ich aber einen Sprung auf die ID achtzehn machen. Dieser Sprung, der kostet mich natürlich auch was. Das heißt, ich suche jetzt alle E Mails durch, finde die E Mail Adresse, finde die ID und mache dann einen Sprung auf die Festplatte und dieser Sprung kostet mich Zeit, CPU Cycles und so weiter. Wenn ich jetzt annehme, die Tabelle hat sowieso nur ein hundert Einträge und ich könnte die sequenziell durchgehen und habe die im Hauptspeicher, dann kann das schneller sein, als ich mache einen extra Index, der auch upgedatet werden muss. Ich muss in dem Index nachschlagen, ich muss dann springen auf die Festplatte, muss mir die Daten holen. Also dieser gesamte Ablauf von dem Index, von dem Lookup kann unter Umständen langsamer sein. Also das kann eigentlich immer sein, wenn die Daten klein sind. Ein anderer Punkt, der in der Datenbankwelt sehr wichtig ist, ist die Selektivität von einem Index. Das heißt, wie selektiv ist die E Mail Adresse? Ist natürlich super selektiv, weil üblicherweise ist die sogar unique in meinem Dataset, das heißt, die gibt es nur einmal. Das heißt ich habe einen Treffer. Wenn ich jetzt aber einen Index habe über zum Beispiel das Land, woher meine User kommen, also aus dem Land und die machen einen eigenen Index und bin jetzt aber im deutschsprachigen Raum unterwegs, dann werden neunzig Prozent meiner User DE als Land haben. Wenn ich da jetzt ein Lookup mache in meinem Index und der Index hat nur die Länderinformationen, dann bekomme ich natürlich von meinem Index neunzig Prozent aller ids zurück und muss dann erst wieder auf die Tabelle. Das heißt, mir bringt dieser Index überhaupt nichts, der ist absolut sinnlos. Das heißt, die Selektivität, also wie sehr filtert mein Index die Daten eigentlich? Auf diese Selektivität muss ich auch wirklich achten und nur eine hohe Selektivität macht eigentlich Sinn, also niedrige Selektivität, wenn meine Daten nicht ordentlich eingeschränkt werden, sobald ich den Index verwende, gibt es ein Problem. Und da kommt der Optimizer auch ins Spiel wieder von den Datenbanken, weil der schaut sich natürlich an, wie selektiv ist ein Index, verwende ich diesen überhaupt? Und eine schlaue Datenbank sagt dann, nope hat eine niedrige Selektivität, ich gehe sofort auf die Daten und mache einen Full Table Scan, weil das dementsprechend noch schneller ist."
+        },
+        {
+            "start": 1705079,
+            "end": 1721530,
+            "speaker": "A",
+            "text": "Du hast einen interessanten Punkt angesprochen, weil da sind wir ja schon wieder hier, kenne deine Daten, weil in deinem Beispiel gab es achtzig oder neunzig Prozent Deutsche, Aber was ist denn, wenn ich jetzt nach Österreich filtern würde? Dann hätte ich ja nur noch zehn oder fünfzehn Prozent oder zwanzig Prozent der Records und dann hätte ich ja wieder eine hohe Selektivität, oder?"
+        },
+        {
+            "start": 1721690,
+            "end": 1823790,
+            "speaker": "B",
+            "text": "Genau, die Selektivität hängt natürlich auch von der Query grundsätzlich ab bzw. Die Verteilung in diesem Index oder Kardinalität, also wie viele unterschiedliche Werte habe ich denn da überhaupt drinnen? Jetzt bei den Ländern hätte ich wahrscheinlich nur im DACH Raum jetzt drei Werte, Deutschland, Österreich, die Schweiz und die Verteilung ist wahrscheinlich ziemlich ungleichmäßig oder skewed auf Englisch, weil ich natürlich sehr viel Deutsche in meinem Index habe. Das ist die Frage. Macht jetzt der Index natürlich trotzdem Sinn, wenn ich zum Beispiel noch österreichische Personen suche, dann habe ich vielleicht nur fünf Prozent von meinem Index. Das ist die Frage. Aber genau da springt der Optimizer dann ein von der Datenbank, weil der sich Histogramme und Statistiken auch von den Indizes speichert und der weiß, okay, der Großteil ist DE für Deutschland und ein kleiner Teil ist AT. Und wenn jetzt in der Query AT gefragt wird, dann wird der Index zum Beispiel verwendet. Also die Datenbank trackt es automatisch mit und bildet sich im Hintergrund Statistiken, wie denn die Daten eigentlich aufgebaut sind und entscheidet dann on the fly bei jeder Query, soll ich den Index verwenden oder nicht. Und im Idealfall mit dem Land, wenn es um Österreich geht, würde er wahrscheinlich das Ganze verwenden. Oder wenn man zum Beispiel ein Feld hat des Status, heißt aktiv oder nicht aktiv, dann hast du wahrscheinlich ganz viele aktive User und ganz wenige inaktive. Das wäre auch so ein ganz ungleich verteilter Index, aber der macht natürlich auch Sinn, wenn du wirklich die nicht aktiven User rausfiltern willst, dass du den verwendest. Hingegen, wenn du in der whereclause drin hast, gib mir die aktiven, dann wirst du wahrscheinlich den Index gar nicht verwenden, weil einfach neun und neunzig Prozent der User sowieso aktiv sind. Und das macht dann aber die Datenbank dementsprechend automatisch, okay, irgendwann, irgendwie trifft die"
+        },
+        {
+            "start": 1823790,
+            "end": 1864460,
+            "speaker": "A",
+            "text": "Datenbank die Entscheidung, ich nutze diesen Index oder nicht anhand von ihren Statistiken. Jetzt können diese Statistiken ja auch out of date sein und das Updaten dieser Statistiken kostet ja auch Rechenpower und Zeit und allem drum dran. Deswegen die Frage für Kann ich auch einen Index nicht nur auf die Spalte setzen, sondern auch auf Datenvalues? Also könnte ich jetzt zum Beispiel in unserem Länderbeispiel den Index nur auf AT setzen, weil ich meine Daten so gut kenne und wenn ich nach Deutschland query, da habe ich so viele Datensätze, da wird der Index sowieso nicht genutzt, um diesen ganzen Lookup auf die Statistiken und das Risiko, dass die Länderstatistiken out of date sind, zu vermeiden und mir all das spare."
+        },
+        {
+            "start": 1864540,
+            "end": 2043970,
+            "speaker": "B",
+            "text": "Also klassisch in Datenbanken kannst du das nicht. Es gibt natürlich spezielle Indexstrukturen, die das optimiert abspeichern. Der Bitmap Index zum Beispiel ist halt genau für diesen Use Case auch da, dass man zum Beispiel eben solche inaktiv aktiv binäre Werte abspeichert. Der würde das dann super optimiert abspeichern, Er macht es trotzdem über die gesamte Tabelle, aber er speichert es optimal ab, dass eben die neun und neunzig Prozent aktiv nicht wirklich Zeile für Zeile gespeichert werden, sondern das Ganze optimiert abgelegt wird. Also je nachdem, was du für Daten und Zugriffsmuster hast, musst du auch entscheiden, was für einen Typ von Index du hast, gerade wenn es im Hauptspeicher passiert, da hast du mehr Flexibilitäten, was du für Indexstrukturen verwenden kannst. In der Datenbank Welt hast du meistens nicht so viele Möglichkeiten und die Datenbank macht es schon einigermaßen richtig. Aber auch da kann man sich überlegen, kann in Hauptspeicher Index noch drüber setzen, einen speziellen Index Hash, zum Beispiel klassischen B Tree habe ich für Geostrukturen zum Beispiel natürlich eigene Indexstrukturen oder eben den Bitmap Index. Also da gibt es schon Möglichkeiten. Aber grundsätzlich, wie du richtig sagst, Statistiken können outdated sein, sind eigentlich immer outdated, weil Statistiken halt nicht immer automatisch angepasst werden. Also die sind nicht immer komplett live, weil das würde ja sonst zu viel Zeit benötigen und es sind ja nur Statistiken an sich. Und wenn man sich diesen Optimizer anschaut in der Datenbank, der arbeitet sowieso grundsätzlich immer auf Statistiken und Heuristiken. Das heißt, der überlegt sich, okay, wie sieht meine Hardware aus, was habe ich für IO CPU, was habe ich da in meiner Query drinnen, für Joints muss ich irgendwas sortieren, was für Daten habe ich, was für Indizes habe ich zur Verfügung und versuche dann alles in den Topf zu werfen, dann einmal umzurühren und dann die ideale Abfolge von Kommandos zu erstellen, die dann wirklich OK, probier zuerst den Index mit den Daten gehe ich dann auf den zweiten Index, dann fehlt die noch mal über den dritten Index, dann gehe ich auf die eigentlichen Daten, dann mache ich die Sortierung oder nehme einen anderen Index, weil der sortiert mir das schon richtig. Also ich hab da ganz, ganz viele Abfolgen. Und die eigentliche Kunst von Datenbanken ist dieser Optimizer. Wie gut kann dieser Optimizer automatisch erkennen, was er machen muss, mit was einem Kostenmodell funktioniert er, welche Informationen hat er überhaupt? Das ist nochmal auch ein Problem, weil manche Optimizer nehmen vielleicht ganz klassische Festplatten an, du hast aber irgendwelche Hauptspeicher, nvs, keine Ahnung, schlag mich tot, irgendwas. Das muss die Datenbank natürlich auch wissen, weil sonst macht sie falsche Optimierungen. Das ist eigentlich so ein Grundproblem, was es natürlich gibt, Aber für die klassische fünfzehn Hardware funktioniert das eigentlich ganz gut. Und wenn du dann alles mitberücksichtigst als Optimizer, Selektivität, Kardinalität, welche Daten überhaupt in meinem Index drinstecken weil ein Index hat ja nicht nur eine Spalte, der kann ja zehn Spalten haben theoretisch. Dann kommst du am Schluss auf einen idealen Pfad, den du abarbeiten kannst als Datenbank. Und da musst du natürlich dem Optimizer ein bisschen helfen, weil der kann natürlich nur verwenden, was du auch erstellt hast an Indexstrukturen."
+        },
+        {
+            "start": 2044050,
+            "end": 2093120,
+            "speaker": "A",
+            "text": "Welche Möglichkeiten habe ich denn dem Optimizer zu helfen? Also in Bezug auf die Hardware zum Beispiel, du hast gerade gesagt, OK, wie teuer ist, wie teuer ist eine IO Operation, CPU und pipapo. Und je nach Hardwarearchitektur ist das ja anders. Vielleicht bin ich ja Hardware Engineer, vielleicht möchte ich ja die Performance von einer Datenbank auf meiner CPU testen, vielleicht baue ich ja sogar eine CPU speziell für diese Datenbank Workloads. Also A die erste Kann ich der Datenbank, kann ich dem Optimizer helfen, indem ich die Kostenparameter des Optimizers in Bezug auf die Hardware tweaken kann? Und B macht das überhaupt Sinn, sich diese Frage zu stellen? Also hat die überhaupt eine Relevanz im normalen Entwickler Umfeld oder trifft das nur auf High Performance Sachen zu und Co."
+        },
+        {
+            "start": 2093420,
+            "end": 2232720,
+            "speaker": "B",
+            "text": "Also in erster Linie kommt es mal darauf an, was du für Datenbanksystem verwendest, Manche erlauben mehr Eingriff, manche weniger. Mariadb hat zum Beispiel einen wesentlich transparenteren Optimizer als zum Beispiel mysql. Also da gehen sie zum Beispiel komplett auseinander. Was du aber immer machen kannst und das ist eigentlich mal die Grundlage, du erstellst die Indexstrukturen, das heißt, du entscheidest, welcher Index lebt und geupdatet wird und damit kannst du eigentlich dem Optimizer am meisten helfen. Das heißt, du stellst mal die Indexstrukturen zur Verfügung, der Optimizer entscheidet dann verwende ich die oder verwende ich nicht, Passt mir das ins Konzept, macht das Ganze schneller oder nicht? Also diese Entscheidung macht der Optimizer, aber du gibst ihm schon mal das Futter überhaupt, weil ohne Index kann der Optimizer eigentlich wenig machen. Jetzt in Bezug auf IO und hardware technische Sachen. Wie gesagt, manche Datenbanken erlauben, dass du da Informationen gibst, manche nicht. Wie gesagt, der normalsterbliche Entwickler, Entwicklerin wird es nicht brauchen. Was mir aber im Tagesgeschäft durchaus unterkommt, ist, dass man gewisse Hintschaft gibt, also gerade wenn man sehr aufwendige Queries hat, dass man zum Beispiel irgendwelche Hints gibt, okay, jetzt verwende einen speziellen Index oder materialisiert zum Beispiel die Daten. Also wenn du ganz komplexe Join Reihenfolgen oder mehrere Tabellen hast mit Common Table Expressions, dass du sagst, okay, jetzt bau mal die erste Tabelle zuerst zusammen und dann mach erst den nächsten Schritt, anstatt bau einen riesen Plan zusammen, der die gesamte Query beantwortet, dass das so schrittweise gelöst wird. Da sind die Optimizer teilweise überfordert und da kannst du so paar Hints geben mit so Kommandos, dass du eben sagst, OK, bau dir mal diesen Subteil zusammen von der Query und dann mach weiter und da kannst du gewisse Sachen optimieren und noch Performance rausholen. Der Nachteil ist auch da wieder, es kommt neue Version raus von der Datenbank, du machst ein Update, plötzlich ist der Optimizer viel intelligenter und deine Hints machen eigentlich die ganze Sache schlechter, als was der Optimizer das machen würde, der neue. Also auch da ist wieder das Problem, dass das halt eine gewisse Art von Blackbox ist zusätzlich die ganzen Statistiken ändern sich ja ständig, deine Daten ändern sich, also auch da ist es schwierig. Alles was man dann so hardcodet ist eher negativ, würde ich mal sagen. Also ich würde den Optimizer schon einfach arbeiten lassen, weil die sind intelligent, da wird wirklich viel Zeit reingesteckt und die schauen sich dann wirklich die aktuelle Datenlage an und machen dann einen optimierten Ausführungsplan."
+        },
+        {
+            "start": 2232960,
+            "end": 2273940,
+            "speaker": "A",
+            "text": "Zusätzlich. Wenn du dem Optimizer dann noch diese Hints gibt oder ich kenne das ab und zu von SQL Quiz, den kannst du ja sogar forcen, nutze diesen Index. Wenn du jetzt wirklich weißt, was du da tust, dann kann sich die Implementierung des Optimizers ja auch in der nächsten Version der Datenbank ändern. Und dann sind wir genau wieder bei dem Beispiel, was du von deinem Kollegen da erzählt hast, die jagen irgendwelchen Performance Degradations hinterher wegen einem Datenbank Update oder ähnliches, weil der Optimizer sich unten drunter geändert hat. Also da ist ja die Frage, optimierst du hier auf eine innere Implementierung oder optimierst du auf Basis des Optimizer Interfaces, ähnlich wie ein Unittest du das externe Interface oder testest du die inner Implementierung?"
+        },
+        {
+            "start": 2274180,
+            "end": 2307130,
+            "speaker": "B",
+            "text": "Und auch da würde ich wieder sagen, wenn du keinen Einfluss drauf hast auf diese externe Implementierung, dann lass es einfach und nimm die an, dass die möglichst geschickte Sachen machen. Also da die Trennlinie zu ziehen, wie bei allen anderen Tests oder so. Genauso alles, was extern ist, was ich nicht beeinflussen kann, versuche ich dann auch weniger zu beeinflussen, weil sonst hat man genau diese Seiteneffekte, wo man dann auch so mit Bugs ewig lang sucht. Da hat man irgendwo einen Hint drinnen und alles wird langsamer und dann viel Spaß beim Suchen, weil der Hint ist irgendwo vor fünf Jahren mal eingegeben worden."
+        },
+        {
+            "start": 2307130,
+            "end": 2327080,
+            "speaker": "A",
+            "text": "Ich frage mich gerade, was ist der Hauptfokus von Indizes? Was optimieren die? Optimieren die die algorithmische Ausführung oder optimieren die anhand von Tweaks, wie die Hardware genutzt wird, also I, O und Co. Denn wir haben über beide Areale bereits gesprochen. Was würdest du sagen, ist der Hauptfokus eines Index zur Optimierung?"
+        },
+        {
+            "start": 2327320,
+            "end": 2415900,
+            "speaker": "B",
+            "text": "Die Grundidee, die habe ich auch ganz ganz am Anfang schon erwähnt, ist, möglichst wenig Daten verarbeiten zu müssen, weil es dauert grundsätzlich am längsten, wenn ich irgendwelche Daten laden muss, vergleichen muss, bis sie im CPU mal landen, durch die ganzen Cache Hierarchien. Das braucht einfach und das versucht einen Index in irgendeiner Form zu optimieren. Aber wie auch am Anfang schon gesagt habe, Index ist immer die Datenstruktur selbst und der Algorithmus auf einer speziellen Hardware für eine spezielle Workload. Und das muss ich alles mitdenken. Also man kann nicht sagen, es wird nur eine Sache optimiert von den vier. Du musst immer alles mitdenken. Du kannst natürlich auch den Workload verändern und damit großen Impact auf die Gesamtzeit haben, auf die Ausführungszeit. Also diese vier Punkte musst du immer gemeinsam betrachten, sonst funktioniert es nicht. Und da ist natürlich auch ein großer Unterschied, wenn wir jetzt von der Hardware sprechen, sprechen wir von Sekundärspeicher, Festplatte oder von Hauptspeicher, weil da unterscheiden sich die Strukturen natürlich extrem, wie abgearbeitet wird, was schnell ist. Da ist vielleicht ein Lookup sehr schnell im RAM, auf der Festplatte ist es langsamer, da habe ich andere Cache Hierarchien, andere Geschwindigkeiten und dann muss ich natürlich schon ganz anders arbeiten mit meinem Algorithmus. Ich habe vielleicht dieselben Daten irgendwo liegen, aber der Algorithmus muss dann anders arbeiten oder der Optimierer, weil du eine Operation vielleicht hast, die im Rahmen viel schneller ist als auf der Festplatte und du dadurch den Ablauf ganz anders machen kannst, da rentiert es sich vielleicht paar Daten mehr zu lesen, weil schneller ist dafür weniger abzuspeichern. Der klassische Trade off vom Speicherplatz und Geschwindigkeit zum Beispiel."
+        },
+        {
+            "start": 2415900,
+            "end": 2453960,
+            "speaker": "A",
+            "text": "Du wirfst jetzt hier wieder mit Fachbegriffen um sich und erwartest von mir, dass ich hier im Vorlesungssaal sitze und wir haben Donnerstag und du referenzierst hier gerade eine Vorlesung von Dienstag. Hauptspeicher Sekundarspeicher. Wolfgang ich habe acht Stunden Arbeit hinter mir, ich bin gerade auf dem Weg vom Büro nach Hause im Auto. Mein Gehirn ist schon gebrutzelt, weil mein Vorgesetzter wieder fünf Reportings haben wollte. Also explain me like I'm five. Gib mir noch mal eine Einführungsvorlesung über die Unterschiede Hauptspeicher Sekundarspeicher, damit ich dir auch mal folgen kann, weil sonst reden wir."
+        },
+        {
+            "start": 2453960,
+            "end": 2473820,
+            "speaker": "B",
+            "text": "Oder hast du vielleicht ist es wieder so eine deutsche, österreichische Sache, Sekundärsektion, sekundar egal, ich nenne es mal Sekundärspeicher. Also grundsätzlich fährst du mal nicht zur Arbeit, du bist fully remote, Andy. Aber gut, es kann trotzdem anstrengend sein, weil eigentlich kommst du wahrscheinlich gerade aus dem Garten vom Rasenmähen oder so, aber ich lasse dir mal deine anstrengende Arbeit."
+        },
+        {
+            "start": 2474220,
+            "end": 2486710,
+            "speaker": "A",
+            "text": "Da packst du jetzt aber auch wirklich hier Stereotypen aus, wie Leute Homeoffice beschreiben, die nie Homeoffice machen durften, so nach dem Motto, ach die liegen ja eh nur im Garten und naja, wenn ich"
+        },
+        {
+            "start": 2486710,
+            "end": 2786820,
+            "speaker": "B",
+            "text": "sagt liegen, du machst ja eh viel im Garten, Rasenmähen und so. Aber gehen wir mal zurück auf den Hauptspeicher. Also grundsätzlich früher war das natürlich noch ein größerer Unterschied mit dem Sekundärspeicher, mit der Festplatte, mit der Spinning Disc, weil die halt viel viel langsamer war. Also so eine Spinning Disc hatte halt früher drei hundert Megabyte die Sekunde und heute bist du halt doch bei einigen Gigabit, die du vielleicht an Durchsatz erreichen kannst. Also das hat sich bisschen geändert. Nichtsdestotrotz sind die Konzepte eigentlich noch dieselben. Grundsätzlich überall wo du auf Daten zugreifst, auf Speicher zugreifst, sei es jetzt auf der Festplatte oder im RAM oder im L Cache, du hast immer eine gewisse Größe, mit der du arbeitest. Auf der Festplatte ist es die Seite Page, die ist sehr groß üblicherweise und wenn du irgendwas lädst von dieser Festplatte, von deinem Sekundärspeicher, dann musst du immer eine ganze Page laden. Das heißt, es sind, wenn du jetzt einen Integer laden willst, dann sind es meistens wesentlich mehr Informationen, die du da immer mitlädst automatisch. Das heißt, du lädst deine Seite dann mit vier KB oder vielleicht sogar noch mehr paar hundert Kilobyte, wie das auch immer je nach Speichertyp funktioniert. Aber du lädst mehr als nur diesen einen Integer Wert, den du zum Beispiel haben willst. Und das ist überall gleich, auch beim L L Cache. Du lädst nie nur den einzelnen Integer Wert, du lädst nun mal immer mehr mit außen herum und mit dem musst du mal grundsätzlich arbeiten. Also wie lokal liegen deine Daten? Weil du kannst wirklich nie nur einen Integer Wert laden. Du kannst ihn natürlich schon, aber du musst alles andere wegwerfen. Das heißt, wie lokal liegen deine Daten zusammen, die du gemeinsam brauchst. Das ist so die Grundannahme von Indexstrukturen, dass du eigentlich diese Lokalität optimierst. Im Hauptspeicher ist es halt eher die Cache Lokalität, die Größen von den Caches und auf der Festplatte sind es eben diese ganzen Seiten, die du optimierst. Das sind meistens größere Blöcke, die du da unter einmal lädst. Was natürlich im Hauptspeicher schon noch mal eine andere Nummer ist, ist einfach die Geschwindigkeit, auch jetzt im Vergleich zu ssds oder modernen, schnellen Sekundärspeichern. Ich bin im RAM viel, viel schneller, ich kann viel mehr springen, weil eben meine Cachelines oder Blöcke, die adressieren kann, einfach viel kleiner sind. Dadurch ist ein Sprung auch weniger teuer, weil die nicht immer vier KB laden muss, sondern nur vier und sechzig Byte oder so in meinen Cache laden muss. Also umso näher ich an der CPU bin, umso billiger sind meine Sprünge und umso mehr Pointer kann ich eigentlich verwenden, wenn jetzt meine Daten auf der SSD randomisiert irgendwo herumliegen. Auch wenn man sagt, auf der SSD kann man ja trotzdem random springen, weil es ist ja keine Spinning Disc mehr wie früher, ist es trotzdem teuer zu springen. Und wenn ich was zusammen habe und in einem Block in einer Page lesen kann, bin ich trotzdem immer schneller. Und genau da unterscheiden sich noch Sekundärspeicher zu Hauptspeicher. Also wie sehr muss ich auf meine Lokalität achten, dass meine Daten zusammenliegen. Und wenn man da wieder auf diese binäre Suche geht, die wir jetzt zum Beispiel schon gehabt haben, eine der einfachsten Indexstrukturen im Hauptspeicher ist ja der Binärbaum, das heißt ich habe einen Baum und bei jedem Knoten habe ich zwei Abzweigungen, einmal nach links, einmal nach rechts, binär, kleiner oder größer. Diese Struktur funktioniert natürlich nur im Hauptspeicher, das heißt, ich habe einen Knoten, mache einen Sprung nach links oder nach rechts und spring zu einer anderen Adresse. So ein Binärbaum würde mich auf der Festplatte natürlich killen, weil dieser Sprung von einem Knoten zum nächsten super teuer ist. Und darum macht man zum Beispiel bei den sekundären Speicherindexstrukturen einen viel größeren Fan Out auf so einem Knoten. Das heißt, ich hab auf so einem Knoten nicht nur einen linken und rechten Knoten Kind Knoten, sondern ich hab zum Beispiel zwei hundert Kind Knoten. Das heißt, ich kann unter einmal, wenn ich bei einem Knoten eine Überprüfung mache, wohin soll die springen, dann kann ich zwei hundert Überprüfungen machen und meinen Suchraum in zwei hundert Untersuchräume aufteilen. Das ist der klassische B Baum dann. Also der Binärbaum teilt alles in zwei Subräume auf und der B Baum üblicherweise in zwei hundert in der Größenordnung. Und dann lade ich mir einmal so einen Knoten von der Festplatte mit den zwei hundert Kriterien, wohin soll ich jetzt springen, kann die auf einmal bearbeiten in meiner CPU, idealerweise so lang wie die Cacheline ist, kann das hochoptimiert prüfen und teile dann meinen Suchraum in zwei hundert auf. Und das ist dann üblicherweise schneller, weil ich natürlich einen höheren Logarithmus habe und dann schneller an mein Ziel komme. Beim Binärbaum ist es nicht so schlimm, weil da kann ich schnell springen im Speicher, dafür ist das Ändern wesentlich schneller, weil ich natürlich weniger umstrukturieren muss. Ein B Baum hat super komplexe Umstrukturierungsprozesse, wenn da irgendwas geändert wird, dann muss ich achtzehn Knoten umhängen und umbauen und so weiter. Es ist wesentlich komplexer und das ist wieder der klassische Trade off zwischen Hauptspeicher und Sekundärspeicher. Das Umbauen ist vielleicht teurer, dafür bin ich beim Suchen schneller beim Sekundärspeicher beim B Baum. Und beim Binärbaum ist es eben genau umgekehrt."
+        },
+        {
+            "start": 2786820,
+            "end": 2802100,
+            "speaker": "A",
+            "text": "Wenn ich als Softwareentwicklerin die ganze Sache nutze, dann sind ja so viel Sachen abstrahiert, wie kann ich das überprüfen was du jetzt gerade gesagt hast. Mache ich immer zeitliche Messungen oder kann ich mir die Datenstruktur effektiv ansehen durch einen simplen Unix Command oder ähnliches."
+        },
+        {
+            "start": 2802100,
+            "end": 2832020,
+            "speaker": "B",
+            "text": "Du brauchst das Hintergrundwissen. Also du musst mal grundsätzlich verstehen, was bedeutet ein Binärbaum, was bedeutet ein B Baum, welche Indexstrukturen verwendet meine Datenbank, welche verwende ich für mich im Hauptspeicher zum Beispiel, Wenn du eine hashmap verwendest, musst du ja auch verstehen, was macht diese hashmap. Und eine hashmap ist auch nichts anderes als eine Indexstruktur im Hauptspeicher, die erlaubt mir einen schnellen Lookup, ohne dass ich ganz viele Daten laden muss. Also ist genau dasselbe. Und du musst es einfach verstehen, damit du es auch verwenden kannst."
+        },
+        {
+            "start": 2832020,
+            "end": 2835830,
+            "speaker": "A",
+            "text": "Also ich muss ja auch nicht verstehen, wie ein Benzinmotor funktioniert, um Auto zu fahren."
+        },
+        {
+            "start": 2835830,
+            "end": 2884080,
+            "speaker": "B",
+            "text": "Ja, du kannst natürlich einfach sagen, okay, der AI Agent meines Vertrauens hat mir gerade vorgeschlagen, eine hashmap zu verwenden. Klar, kannst du verwenden, es wird schnell sein, ist vielleicht ausreichend, wenn du ein Problem hast. Wenn du in die Tiefe gehen willst, musst du natürlich verstehen, was ist eine hashmap, wie funktioniert ein Hash, was sind die Nachteile. Kannst du natürlich auch schmerzvoll einfach rausfinden, wenn du irgendwann mal dann gegen die Wand läufst und alles langsam wird und du musst dann mühsam rausfinden, okay, es ist die hashmap und es gibt irgendwie Kollisionen in der hashmap und darum wird alles langsam. Oder du verstehst es halt grundsätzlich oder eignest dir das Wissen an oder fragst mal deinen Agent, hey, du hast mir da eine hashmap vorgeschlagen, warum, was ist eine hashmap und erklär mir kurz vor und Nachteile? Und dann ließe diese drei Sätze und habe die Information. Das ist halt dann der Unterschied. Hole mir die Informationen, verstehe das einigermaßen, was im Hintergrund passiert oder mache ich einfach Web Coding?"
+        },
+        {
+            "start": 2884080,
+            "end": 2894530,
+            "speaker": "A",
+            "text": "Naja, also da beleidigst du jetzt aber sehr, sehr viele Leute zwischen Vibe Coding und ich weiß genau, wie unten drunter eine hashmap die Daten organisiert. Da liegen halt schon noch ein paar Level."
+        },
+        {
+            "start": 2895170,
+            "end": 2952970,
+            "speaker": "B",
+            "text": "Ich sage nicht, dass man das bis ins tiefste Detail verstehen muss, aber eben diese simple Agent. Erklär mir mal kurz vor und Nachteile, wie das so grob funktioniert. Ich rede von diesem Verständnis und mehr brauchst du ja auch gar nicht verstehen. Du musst ja jetzt nicht wissen, wie werden Kollisionen wirklich im Detail aufgelöst in dieser Hashmap, aber du musst wissen, wenn ich ganz viele Kollisionen habe, dass das Ganze langsamer wird. Also solche Grund Informationen habe ich einen Key, wo ich viele Kollisionen habe, dann wird das Ganze langsamer üblicherweise. Und solche Grundsatzinformationen und Verständnis von Indexstrukturen, das ist natürlich hilfreich, wenn man die einfach hat, was das bedeutet. Ich verstehe jetzt auch nicht im Detail, wie der neueste Redix Tree irgendwie die L bis L Cache Optimierung macht und wie lange die Zeilen im Detail sind. Aber ich weiß grundsätzlich, dass es da Optimierungen gibt und man kann ja dann auch sehr schnell nachschauen, welche Indizes sind für was geeignet. Hauptspeicher, Sekundärspeicher, was ist besser, was ist schlechter Und so ein Grundverständnis hilft dann schon im Alltag meiner Meinung nach."
+        },
+        {
+            "start": 2952970,
+            "end": 2967210,
+            "speaker": "A",
+            "text": "Jetzt habe ich dich initial so angekündigt als jemand mit Doktortitel in Datenbanken und gegen Ende dieser Episode zerstörst du deine Credibility, indem du ja, ich weiß auch nicht, wie das untendrunter funktioniert. Wolfgang so funktioniert Podcasting nicht."
+        },
+        {
+            "start": 2967210,
+            "end": 3023720,
+            "speaker": "B",
+            "text": "Ist wahrscheinlich das Problem von dem wissenschaftlichen Ansatz, weil wenn du mal so Papers von der VLDB zum Beispiel durchliest, da weißt du einfach, dass du eigentlich dann keine Ahnung hast, wenn du so irgendeine Indexstruktur, die das Delta vom Delta vom Delta dir vorrechnet und zeigt und irgendwelche Optimierungen macht auf der Indexstruktur und du hast keine Ahnung mehr, von was die eigentlich sprechen. Da merkst du, obwohl du da viele Jahre verbracht hast in dem Bereich, dass es dann schon unter Umständen auch Sachen gibt, Ebenen gibt, die so tief liegen, die du nicht verstehst und dann kann man das auch akzeptieren, dass man die nicht versteht. Aber so grundlegende Optimierungen sind schon ganz hilfreich und dann am Ende sucht man sich einfach raus, was gut funktioniert. Aber das ist mal zum Beispiel Hauptspeicher und Sekundärspeicher gibt, dass es da einfach unterschiedliche Indexstrukturen auch gibt. Wenn ich einen klassischen Red Black Tree oder AV Speicher verwende, Binär Baum und eben einen klassischen B Baum, dann bin ich schon mal eigentlich ganz gut am Weg und habe schon relativ viel verstanden."
+        },
+        {
+            "start": 3023720,
+            "end": 3085740,
+            "speaker": "A",
+            "text": "Lass mich noch mal auf die ganzen abstraktionen zurückkommen, denn du hast es gerade so abgewunken, ja, dann prompt es halt mal mit der KI so ein bisschen und dann musst du es halt verstehen. Da kann ich dir jetzt auch nicht helfen. Da merkt man schon, du bist so ein typischer Professor, der vorne unten im Hörsaal steht und einfach keinen Bock mehr hat, weil die alle zu dumm sind. Verstehe ich, nehme ich gerne an, aber ich lasse das jetzt nicht auf mir sitzen für die ganze Hörerschaft hier. Deswegen, wenn ich all das selbst programmiere, da kann ich mich da so tief rein nerden, kann meine Structs optimieren, Cash in line und pipapo. Aber in meiner postgresql, in meiner mysql, in meiner mariadb, in meiner Oracle, in meiner whatever Datenbank mache ich Create Index, freue mich, dass es um zwölf uhr Mittagessen gibt und gehe in die Pause. Also lass uns die ganze Thematik doch mal bitte praktisch machen und den Leuten hier nicht immer Hausaufgaben geben. Verstehe, wie halt eine hashmap funktioniert und dann wird das schon alles besser. Ne, so funktioniert das nicht. Herr Akademiker. Also drei praktische Tipps, die du mir jetzt mitgeben kannst, die ich jetzt heute Abend auf mein side Project anwenden kann. Hopp, hopp."
+        },
+        {
+            "start": 3085740,
+            "end": 3090980,
+            "speaker": "B",
+            "text": "Also erstens, ich bin kein Professor, nur um das klarzustellen. Trotzdem habe ich diese."
+        },
+        {
+            "start": 3090980,
+            "end": 3096040,
+            "speaker": "A",
+            "text": "Nee, nee, nee, das ist klar. Aber du verhältst, du verhältst dich ja genauso wie einer."
+        },
+        {
+            "start": 3096440,
+            "end": 3311900,
+            "speaker": "B",
+            "text": "Trotzdem bin ich der Meinung. Und wenn du mir jetzt konkret nach drei Tipps fragst, wäre für mich schon ein Tipp, grundsätzlich Sachen besser verstehen zu wollen. Und gerade in der heutigen Zeit ist es eigentlich wichtig, dass man die Sachen besser versteht. Und wenn du jetzt sagst, okay, in meiner Post Crest, da kann ich ja nichts ändern, da mache ich nur Create Index. Das stimmt schon. Aber du kannst in der Postgres erstens mal auswählen, ob du ein B Tree machst, ein Hashtag Brian, einen Blumenindex über eine Extension. Also du hast schon auch bei Postgres die Wahl, was für Indexstrukturen du wirklich verwendest. Und dann musst du die Indexstrukturen verstehen und wissen auch da wieder, was für ein Workload hast du und wie wendest du den Index an. Zusätzlich hast du jetzt auch, wenn man mal ganz klassischen Index verwenden in bittree, der halt so überall der Allround Index in der Datenbankwelt ist. Auch da kannst du entscheiden, welche Spalte ist in meinem Index, welchen Index erzeuge ich denn überhaupt über welche Spalten. Da kommen dann diese ganzen Zugriffsmuster nämlich auch noch mal ins Spiel. Du kannst ja mehrere Spalten in dem Index hinzufügen und wenn du zum Beispiel jetzt zusätzlich zu deiner E Mail Adresse, wenn wir wieder auf das Beispiel zurückkommen, immer den Namen haben willst, also du suchst eine E Mail Adresse und willst dann den Namen Andi haben, Andi Kronwald, dann kannst du in diesen Index die E Mail Adresse hineinspeichern als Spalte, die Sortierung läuft dann über die E Mail und als zweite Spalte noch den Namen. Dann beinhaltet nämlich dieser Index die E Mail Adresse und den Namen und covert diese zwei Spalten. Und für eine Anfrage über die E Mail Adresse gib mir den Namen, brauchst du dann die eigentlichen Daten gar nicht. Das heißt, du kannst die Anfrage ausschließlich über den Index beantworten. Und solche Dinge helfen dir natürlich im Alltag weiter, weil dann sparst du dir wieder einen kompletten Zugriff auf die klassischen Daten. Wir können mal eine eigene Episode zu Optimierungen ganz allgemein machen, welche Indexstrukturen man verwendet und wie man dann optimiert im Speziellen, aber ganz allgemein kannst du sehr wohl viel machen. Im Hauptspeicher hast du sowieso alle Möglichkeiten, da kannst du ja machen, was du willst. Vielleicht sollst du nicht alles selber programmieren vom Scratch, Also du wirst es jetzt lernen. Ich würde auch keine hashmap neu implementieren, sondern eine hashmap verwenden. Aber dass man mal weiß, was kann man überhaupt verwenden, was gibt es für Indexstrukturen, welche passen für meinen Use Case und wie wende ich sie richtig an. Weil wie gesagt, der B Tree ist zwar fix in mysql oder einer Postgres Standard Index, aber ich habe trotzdem viele Möglichkeiten, wie ich den dann auf meine Daten anwende. Und da hilft mir dann schon das Grundverständnis, wie ein Index funktioniert und was ich dann mit meinem Index machen kann. Und ich kann mir dann das über Explain Statements zum Beispiel auch ausgeben lassen, um das dann vielleicht zu optimieren, um mal zu schauen, wie funktionieren meine Zugriff Patterns, welche Indexstrukturen werden überhaupt verwendet vom Optimizer. Und da kann ich wirklich konkret ansetzen. Und meiner Meinung nach muss man da auch konkret ansetzen, weil genau diese Stellen sind die Möglichkeiten für uns Entwickler innen da Einfluss zu nehmen, auf dem Optimizer Einfluss zu nehmen, das ist dann schon next level. Aber mal grundsätzlich zu entscheiden, was für Indexstrukturen verwende ich, welche Spalten klatsche da rein, was habe ich für ein Workload? Also dieses Vierer Gespann von Datenstruktur, Algorithmus, Hardware und Zugriffsmuster zu kennen, zu verstehen und anzuwenden, macht meiner Meinung nach am meisten Sinn. Und sich da vielleicht mal jetzt im side Project konkret Was habe ich denn überhaupt für einen Index? Was verwende ich da für einen Index? Kenne ich überhaupt die Indexstruktur? Was sind meine Zugriffsmuster Und kann ich da was optimieren? Das wäre so mein Plan, wenn ich an irgendwas rangehen will, um mal zu schauen, habe ich irgendwo ein Problem in meiner Implementierung? Kann ich was schneller machen, wenn ich in diese Richtung wirklich gehen will."
+        },
+        {
+            "start": 3311900,
+            "end": 3323770,
+            "speaker": "A",
+            "text": "Du hast gerade sehr viel über die Erstellung von Indexe, Indexe, Indizes gesprochen. Das ist ja fast mit Greenfield gleichzusetzen. Ich habe eine neue Tabelle, die ist noch ganz jungfräulich, da packe ich meine."
+        },
+        {
+            "start": 3324250,
+            "end": 3326650,
+            "speaker": "B",
+            "text": "Du kannst ja Indizes jederzeit erstellen und löschen."
+        },
+        {
+            "start": 3326650,
+            "end": 3368140,
+            "speaker": "A",
+            "text": "Ja, richtig. Nur jetzt ist es ja so, Legacy verdient das Geld und wir arbeiten ja alle in einem Team an einer großen Applikation. Mit hoher Wahrscheinlichkeit existieren schon Indizes oder Indexe oder keine Ahnung, wie das Wort jetzt heißt. Würdest du mir auch empfehlen, quartalsweise alle Indexe zu reviewen und zu schauen, ist die Annahme noch konkret Oder würdest du auch empfehlen, die Annahmen pro Index als SQL Kommentar ins Schema mitzupacken oder ähnliches? Weil es hört sich so an, als wären die Indexe auf Basis von Annahmen erstellt, ähnlich wie damals Designentscheidungen in deinem Code getroffen wurden, also so Architecture Decision Records für Indizes oder ähnliches? Oder ist das ein bisschen over the top?"
+        },
+        {
+            "start": 3368220,
+            "end": 3372100,
+            "speaker": "B",
+            "text": "Willst du jetzt meine wissenschaftliche oder meine pragmatische Herangehensweise hören?"
+        },
+        {
+            "start": 3372100,
+            "end": 3373580,
+            "speaker": "A",
+            "text": "Ich will eine Antwort auf meine Frage."
+        },
+        {
+            "start": 3374540,
+            "end": 3438390,
+            "speaker": "B",
+            "text": "Also grundsätzlich ist es so wie überall pragmatisch, würde ich sagen, wenn du kein Problem hast, mach einfach nichts. Wenn das schnell läuft, dieses Ding, und du nirgends Schmerzen hast, dann ändere nichts. Das kannst du immer noch machen, wenn du Probleme hast. Aber was natürlich schon gut wäre, wäre ein grundsätzliches Monitoring von dem Ganzen. Wie schnell sind denn meine Abfragen überhaupt auf der Datenbank? Wie viel CPU Load hat meine Datenbank und wie viel die eigentliche App zum Beispiel. Also solche Grundsatzmetriken mal zu haben, sind schon gut. Und wenn ich dann eine Fleißaufgabe machen würde und das ist dann die wissenschaftliche Herangehensweise oder ich will was lernen oder ich habe einfach so viel Zeit, weil die LLMs meine Arbeit machen und ich so viel Freizeit habe, dass ich da tief eintauchen kann, dann kann man sich natürlich so ein Review mal überlegen, welche Indexstrukturen habe ich überhaupt, brauche ich welche, Gibt es vielleicht so ein Slow Query Log zum Beispiel, was sind meine langsamen Anfragen, kann ich da irgendwo was beschleunigen? Es schadet natürlich nie da mal reinzuschauen, wenn man so was hat, aber wie gesagt, wenn man kein Problem hat, würde jetzt auch keines künstlich da kreieren."
+        },
+        {
+            "start": 3438390,
+            "end": 3459860,
+            "speaker": "A",
+            "text": "Grundsätzlich ja, es geht ja nicht nur um Probleme lösen, es geht ja teilweise auch um Bildung, es geht ja teilweise auch um Optimierung von low hanging fruits und besonders wenn wir Webapplikationen bauen, wissen wir ja alle, jede Millisekunde zählt. Also von daher weiß ich gar nicht, ob man hier immer nur Probleme löst oder nicht wirklich gute Optimierung macht, um vielleicht dann die Conversion zu steigern."
+        },
+        {
+            "start": 3459940,
+            "end": 3512950,
+            "speaker": "B",
+            "text": "Was mir auch oft passiert ist, wenn ich wirklich auf die Datenbank bei manuell irgendeine Query absetze und die so gefühlt irgendwie fünf Sekunden warte und mir denke schon irgendwie komisch langsam, auch wenn es nur eine Log Tabelle oder irgendwas ist, dann schaue ich mal kurz rein, gibt es da eigentlich Indizes, habe ich da die richtigen, könnt ihr da vielleicht einen Index schnell drüberlegen? Man muss auch aufpassen, gerade wenn man so riesige Tabellen hat und plötzlich einen Index erzeugt, kann es sein, dass man die ganze Datenbank lockt oder einen Großteil oder vielleicht auch produktiv was kaputt macht. Also da muss man auch aufpassen. Aber wenn ich Anzeichen sehe in irgendeiner Form, sei es jetzt Slow Query Lock oder persönlich, dass irgendwas langsam läuft, wenn ich eine Ad Hoc Query abfeuer, dann schaue ich vielleicht mal kurz rein, wenn ich Zeit habe und teilweise ist es ja wirklich nur fünf Minuten und man sieht, okay, ist jetzt ein Index, der viel helfen würde, ist vielleicht keine Riesentabelle, die jetzt alles langsam machen würde mit dem Index und dann probiere ich es einfach mal aus."
+        },
+        {
+            "start": 3512950,
+            "end": 3515750,
+            "speaker": "A",
+            "text": "Es gibt aber noch ein Problem. Ich habe diese Episode gehört."
+        },
+        {
+            "start": 3515750,
+            "end": 3517830,
+            "speaker": "B",
+            "text": "Es gibt keine Probleme, es gibt nur Challenges."
+        },
+        {
+            "start": 3517830,
+            "end": 3562080,
+            "speaker": "A",
+            "text": "Andi Herausforderung, ich mag dein positives Wording. Danke, dass du mich daran erinnerst. Ich habe diese Episode jetzt gehört, verinnerlicht. Ich habe mir sogar Notizen gemacht. Ich schaue auf mein Datenbankschema. Ich habe gelernt, Indexe zu maintainen kann teuer sein. Nicht jeder Index bringt noch was, weil vielleicht die Datenannahme nicht mehr stimmt. Dann gibt es ja das Problem, wenn ich jetzt meine Datenbank anpasse, mein Schema anpasse, ich nehme den Index weg, ich droppe den und der war doch vielleicht doch in Begrenzung und der war vielleicht doch noch in Benutzung von irgendeiner Query, von irgendeinem anderen Service und der ist jetzt ganz langsam, dann kann ich den ja nicht einfach so wieder hinzufügen. Klar, Also ich kann den, ich kann die Query absetzen zu oh, pack den mal wieder dahin. Aber das kann ja auch einen großen Performance Impact auf die DB haben, oder?"
+        },
+        {
+            "start": 3562160,
+            "end": 3566480,
+            "speaker": "B",
+            "text": "Ja, aber das hat jede Änderung. Du kannst ja auch am Code irgendeinen Scheiß ballern."
+        },
+        {
+            "start": 3566480,
+            "end": 3592110,
+            "speaker": "A",
+            "text": "Ja, ja, richtig. Nur der Unterschied ist, dass du halt um nichts wieder hinzuzufügen, sehr wahrscheinlich eine harte Last auf die DB setzen kannst und somit produktiv Traffic beeinflussen kannst und so weiter und so fort. Meine Frage ist eigentlich, sollte man deswegen keine Indizes droppen? Also ich meine, das geht schon alles in die Richtung, so nach dem Motto, wenn du Angst hast, eine Änderung zu machen, ist das schon sehr problematisch, Egal ob es wir an Source Code oder Datenbanken ändern, aber das hat ja wirklich jetzt einen schwierigen Impact."
+        },
+        {
+            "start": 3592110,
+            "end": 3694060,
+            "speaker": "B",
+            "text": "Naja, das kann eigentlich schon überall sein. Ich glaube nur, dass wir die Sicherheitsnetze natürlich, wenn es um Programmcodeänderungen geht, schon aufgebaut haben und wir haben selten diese Sicherheitsnetze bei der Datenbank, weil du kannst natürlich diese Testszenarien genauso mit der Datenbank auch fahren. Du kannst ja mal einen Index löschen und dann, wenn du einen sauberen Test Workload hast, den mal abfeuern und schauen, ist die Datenbank jetzt immer noch gleich schnell, gibt es ein Problem? Also kannst es ja auch mal im Vorhinein testen. Du kannst natürlich so high sophisticated Szenarien haben wie einen Proxy SQL, der dir den gesamten Datenbank Traffic noch mal kopieren kann und an einen anderen Server schicken. Dann löscht du dort diesen Index und schaust mal, läuft der Server immer noch gleich weiter mit dem gleichen Load, mit dem Live Load, hast das Ganze aber dupliziert. Also wenn du natürlich große Strukturen hast, dann kannst du da schon was machen und sonst kannst du es im kleinen Lokal natürlich auch testen. Und ich würde mal sagen, wenn du sehr, sehr groß bist, dass das ein Problem ist, dann hast du vielleicht schon Strukturen, um solche Sachen zu testen. Und wenn du klein bist, hast du wahrscheinlich kein Problem, weil deine Datenbank einfach nicht so groß ist. Und im Idealfall ist deine Datenbank sowieso nicht jetzt auf Anschlag. Und wenn du das dann in der Nacht machst, dann erzeugst du den Index halt wieder oder deine Datenbank ist mal langsam über eine gewisse Zeit. Index erstellen ist normal gar nicht so das Problem, weil es relativ gut asynchron eigentlich funktioniert. Und grundsätzlich, um deine Frage zu beantworten, sollte man nie droppen. Grundsätzlich jeder Index braucht Performance, weil er immer upgedatet werden muss. Wenn du jetzt ganz viele Indexstrukturen hast, die du updaten musst, du brauchst sie aber gar nicht, dann ist deine Datenbank wesentlich langsamer. Also es würde jetzt nicht unterschätzen, was das eigentlich ausmachen kann, einen Drop zu machen."
+        },
+        {
+            "start": 3694060,
+            "end": 3718700,
+            "speaker": "A",
+            "text": "Ja, ich spreche nur diese Herausforderung an, die ich halt schon in Firmen gesehen habe. Du hast halt irgendwelche Systemadministratoren, die kümmern sich halt um die Datenbank und die haben dann immer Angst, einen Index zu droppen, weil sie all die Details nicht wissen, wie eine Hashmap aufgebaut ist und so weiter und so fort. Über all das, was wir hier gesprochen haben. Also advocates du eigentlich dafür, dass man ein ordentliches Staging System hat, wo man ordentliche Load Tests fahren kann mit Sicherheitstest. Also ähnlich wie bei Code ist das"
+        },
+        {
+            "start": 3718700,
+            "end": 3769010,
+            "speaker": "B",
+            "text": "richtig in größeren Setups sicher ist immer die hast du die Kapazität, sowas zu machen. Aber klar, grundsätzlich gehört das natürlich zu einem guten Test. Dazu Funktioniert auch mein klassischer Workload noch mit dem Code, mit der Datenbank ist ja alles ein System und ich will ja eigentlich alles testen. Genau wie du bei Observability halt Metriken aus allen Bereichen haben willst. Du willst ja, wenn du jetzt einen Redis hast, der übrigens auch Datenstrukturen hat und eigentlich fast eine Datenbank ist, aber das ist nochmal eine andere Diskussion, dann willst du ja auch Metriken von Redis haben. Du würdest ja nie sagen, ich mache nur die Metrik ganz, ganz vorn auf der App Seite, alles andere ist mir egal, sondern du suchst dir schon hoffentlich dir die richtigen Metriken raus und von allen Systemen, die du hast, hast du einen groben Überblick zumindest wie die funktionieren. Sind sie auf Anschlag, gibt es Probleme und dann kannst du auch ein bisschen besser dementsprechend agieren."
+        },
+        {
+            "start": 3769010,
+            "end": 3785320,
+            "speaker": "A",
+            "text": "Ja, das was du da erzählst, das ist alles richtig und ist auch in zwei tausend sechs und zwanzig immer noch korrekt, ist aber auch irgendwie so eine Gedankenstruktur von ein tausend neun hundert neunzig denn du hast gerade gesagt, in großen Setups und wenn du dir das leisten möchtest, kannst du dir ein Sicherheitsnetz für Datenbanken aufbauen."
+        },
+        {
+            "start": 3785800,
+            "end": 3794800,
+            "speaker": "B",
+            "text": "Ja, es ist schon viel Arbeit, wenn du da so eine Infrastruktur aufbaust, wo du zweite Datenbank hast, alles spiegeln kannst, Workloads abfeuern kannst. Also ist nicht zu unterschätzen, würde ich mal sagen."
+        },
+        {
+            "start": 3794800,
+            "end": 3895330,
+            "speaker": "A",
+            "text": "Ich habe eine pragmatischere Lösung für dich und zwar habe ich diese Frage nicht ohne Grund gestellt. Ich habe mir gedacht, in etlichen Episoden haben wir Dad Jokes, Programming Dad Jokes gebracht. Hier habe ich jetzt einfach mal die Suchanfrage gestartet, was ist denn so der skurrilste Index Type, den so eine Datenbank eigentlich hat, so nach dem Motto, um mal ein bisschen Humor hier reinzubringen, nach den ganzen hashmap Thematiken und so. Mysql hat mir geantwortet, bei mysql gibt es inzwischen einen unsichtbaren Index. Dieser unsichtbare Index wird vom Optimizer komplett links liegen gelassen. Der wird gepflegt von der Datenbank, der wird geupdatet, der löscht Records, alle drum und dran, nur der wird vom Optimizer komplett links liegen gelassen. Und da fragt man sich hä, warum gibt es diesen Indextype dann überhaupt? Warum macht der Load auf die DB? Er wird vom Optimizer nicht verwendet. Ja, stellt sich heraus, du kannst einen Index sichtbar und unsichtbar schalten innerhalb von Millisekunden und das ermöglicht natürlich genau das, was du da gerade angesprochen hast. Performance Testing von wird dieser Index noch benötigt? Bedeutet, du kannst jetzt zum Beispiel auf deiner mysql Datenbank hingehen, auf irgendeine Tabelle, schaltest einen Index auf unsichtbar, misst die Performance und wenn es eine Performance Degradation hat, schaltest du ihn wieder auf sichtbar. Ich weiß jetzt gerade leider nicht, ob das in anderen Datenbanken auch der Fall ist, aber ich habe den jetzt mal für mysql zumindest mit in die Shownotes gepackt. Ich meine, das lasse ich dann als Hausaufgabe für die für die Hörerinnen und Hörer, ob es sowas gibt, Aber da muss ich zugeben, schon irgendwie geil. Und das kannst du dann schon wirklich, ich sag mal so Testing in Production machen. Vielleicht in so einer Low Traffic Zone morgens um acht oder so oder abends um acht kannst du einfach mal einen Index auf invisible stellen."
+        },
+        {
+            "start": 3895410,
+            "end": 3911430,
+            "speaker": "B",
+            "text": "Ja, du kannst auch in einer High Traffic Situation machen, weil du es ja recht schnell wieder zurückstellen kannst. Und dieses Feature, cool, dass du das aufgebracht hast, weil es gibt schon eigentlich sehr lange. Es gibt glaube ich schon zehn Jahre oder so. Grundsätzlich ich bei mysql, also ist ein cooles Feature, was man da verwenden kann."
+        },
+        {
+            "start": 3911910,
+            "end": 3966830,
+            "speaker": "A",
+            "text": "Acht Jahre gibt es das Feature kam in mysql acht rein, aber nah dran. Aber ja, kannte ich auch noch nicht. Fand ich wirklich cool. Invisible Indizes. Nun gut. Und mit diesem Knowledge Byte würde ich mal sagen, verlassen wir diese Episode. Wer jetzt noch dran ist, harten Respekt. Ich hoffe, euer Gehirn ist nicht zu sehr frittiert und ihr habt als Hausausgabe mitgenommen, wie wird eigentlich eine hashmap aufgebaut. Fun Fact, wir haben uns auch mal überlegt eine Episode zu machen. Wie baut man eigentlich eine Hashmap bzw. Wie funktioniert eine Hashmap? Unten drunter haben wir dann aber wieder weggeschmissen, weil ohne Whiteboard ist das echt kompliziert zu erklären, weil du musst echt viele Pfeile zeichnen und nur auf Audiospur, da kann man nicht wirklich folgen bzw. Wir haben uns nicht zugetraut, das ordentlich zu erklären. Naja, doktor Wolfgang Gassler, vielen lieben Dank für diesen Datenbank Exkurs. Ich habe erstmal die Schnauze voll von irgendwelchen Indizes. Ich werde heute keinen mehr anlegen, wahrscheinlich die ganze Woche nicht."
+        },
+        {
+            "start": 3966990,
+            "end": 3988740,
+            "speaker": "B",
+            "text": "Ja, glaube wir müssen mal eine Episode wirklich konkret zu den Indexstrukturen machen, die es so gibt, damit wir das mal auch, weil so, es gibt schon coole Sachen, so ein Blumenfilter zum Beispiel oder die ganze Redix Try Geschichte, Patricia Tries und so weiter. Es sind schon coole Indexstrukturen und ist schön, was man da nicht so machen kann. Das ist immer so die Beauty of Index, aber vielleicht bin ich da anders gepolt."
+        },
+        {
+            "start": 3988980,
+            "end": 4002140,
+            "speaker": "A",
+            "text": "Ja, ich finde das schön, was manche Leute so cool finden. Ich finde ein Volksfest cool, wo es günstig Bier gibt, Du Blumenfilter, okay, lassen wir so stehen. Und mit diesem Statement würde ich sagen, wir verabschieden uns und hören uns nächste Woche. Bis bald. Bye bye."
+        },
+        {
+            "start": 4002140,
+            "end": 4002580,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
