@@ -49,20 +49,13 @@ describe('createMeetupHelpers', () => {
 	});
 
 	it('returns undefined when no upcoming meetups exist', async () => {
-		getCollection.mockResolvedValue([
-			buildMeetup('2026-04-01T18:30:00Z'),
-			buildMeetup('2026-03-01T18:30:00Z'),
-		]);
+		getCollection.mockResolvedValue([buildMeetup('2026-04-01T18:30:00Z'), buildMeetup('2026-03-01T18:30:00Z')]);
 		const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
 		expect(getNextMeetup(1)).toBeUndefined();
 	});
 
 	it('picks the soonest upcoming meetup when several are scheduled', async () => {
-		getCollection.mockResolvedValue([
-			buildMeetup('2026-07-01T18:30:00Z'),
-			buildMeetup('2026-05-13T18:30:00Z'),
-			buildMeetup('2026-06-15T18:30:00Z'),
-		]);
+		getCollection.mockResolvedValue([buildMeetup('2026-07-01T18:30:00Z'), buildMeetup('2026-05-13T18:30:00Z'), buildMeetup('2026-06-15T18:30:00Z')]);
 		const { getNextMeetup } = await createMeetupHelpers('meetup-alps');
 		expect(getNextMeetup(1).date).toBe('2026-05-13T18:30:00Z');
 	});

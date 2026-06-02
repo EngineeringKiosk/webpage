@@ -12,7 +12,7 @@ talks:
     title: 'For the Love of Programming'
     language: 'en'
     slides: ''
-    description:  |
+    description: |
       In a world where everyone around you is using agents 24/7, what's the point of even trying to get good at coding? And even if you try, there are so many levels of abstraction. How do you go down to the root?
 
       This is a little story about why I still code by hand like a madman. (Often without an IDE, syntax highlighting, or even code completion.) What could I possibly gain from that?
@@ -28,7 +28,7 @@ talks:
     title: 'Navigating Tech Decisions - A Startup Survival Guide'
     language: 'en'
     slides: ''
-    description:  |
+    description: |
       Software engineering in a tech startup is just the same as in any other company? I doubt it (and I was there). Join me in this session to see how we crafted tech at Frontastic and why we did it that way. I'll show you the hidden requirements your tech stack needs to fulfill and what "product market fit" actually has to do with your software architecture.
     bio: 'Coming soon'
     linkedin: 'tobiasschlitt'

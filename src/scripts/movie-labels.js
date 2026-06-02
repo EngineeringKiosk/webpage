@@ -28,14 +28,7 @@ export const LINK_PLATFORM_LABELS = {
 
 // Brand SVGs that exist under public/images/brands/. Anything not in this set
 // falls back to the generic website icon.
-const KNOWN_BRAND_ICONS = new Set([
-	'youtube',
-	'netflix',
-	'amazon_prime_video',
-	'hbo_max',
-	'apple_tv',
-	'rtl_plus',
-]);
+const KNOWN_BRAND_ICONS = new Set(['youtube', 'netflix', 'amazon_prime_video', 'hbo_max', 'apple_tv', 'rtl_plus']);
 
 export function iconFor(platform) {
 	if (KNOWN_BRAND_ICONS.has(platform)) {
