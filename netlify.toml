@@ -3579,6 +3579,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/271"
+  to = "/podcast/episode/271-selbstmanagement-statt-zeitmanagement-warum-du-nie-fertig-wirst-mit-dirk-deimeke?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep271"
+  to = "/podcast/episode/271-selbstmanagement-statt-zeitmanagement-warum-du-nie-fertig-wirst-mit-dirk-deimeke?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
