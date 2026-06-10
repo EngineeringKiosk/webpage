@@ -1,0 +1,1443 @@
+{
+    "confidence": 0.9584857,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 5269,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 207780,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute wird es praktisch ehrlich und vielleicht auch ein kleines bisschen schmerzhaft, denn wir sprechen über das Thema, das uns alle To Do Listen, E Mails, Kalender, Notifications, Doomscrolling und die ewige Wie bekommt man Job Side Projects, Familie, Freizeit und vielleicht sogar noch ein bisschen Ruhe im Kopf? Alles unter einen Hut. Dafür haben wir uns Dirk Deimecke eingeladen. Dirk kommt aus dem Systems Engineering und arbeitet bei der Swisscom, ist tief im Open Source Umfeld unterwegs, Podcaster, Buchautor und beschäftigt sich seit vielen Jahren intensiv mit Selbstverwaltung, Zeitplanung und Produktivität. Also genau der richtige Gast, wenn du dich auch schon mal gefragt hast, warum deine persönliche Man müsste mal Liste immer länger wird. Wir sprechen darüber, warum Zeitmanagement eigentlich Selbstmanagement ist, weshalb Tools allein dich nicht retten, was in Inbox Zero wirklich bringt, warum E Mail oft die To Do Liste anderer Leute ist und wieso ein Handy im anderen Raum manchmal der beste Productivity Hack überhaupt sein kann. Außerdem geht es um Reviews, Gewohnheiten, over Commitment, die zwei oder fünf Minuten Regel, da konnten wir uns irgendwie selbst nicht drauf einigen. Eat the Frog und die sehr unangenehme Wahrheit, dass ich habe keine Zeit eigentlich nicht existiert, sondern du meistens nur anders priorisierst. Kurz gesagt, diese Episode ist eine kleine Selbsthilfegruppe für alle, die produktiv sein wollen, ohne dabei komplett durchzudrehen. Wir wünschen dir viel Spaß. Los geht's. Das Credo vom Engineering Kiosk ist Die Technik ist kompliziert, aber gelöstes Problem oder in der Regel ein gelöstes Problem. Es sei denn, du baust irgendwie Raketen oder Rocket Science, aber wir sind ja hier alle nicht bei SpaceX und und eigentlich alles drumherum ist das Komplizierte. Und da sagen wir halt immer so die Kultur, Menschen und dann irgendwie das Team in die eine Richtung zu führen und so weiter und so fort. Aber ein Subthema des Ganzen ist auch noch, ich sag mal, Zeitmanagement oder wie nennt unser Gast es schön? Das Wort finde ich ein bisschen hochgestochen, aber er hat irgendwie recht Selbstverwaltung. Und wir haben es in dem Podcast hier schon mal versucht, irgendwie, ich sag mal, zu transferieren. Wir hatten schon Podcast Episoden zu Selbstmanagement, weniger To Do Listen, Stress, mehr Produktivität. Wir haben mal was über Inbox Zero besprochen, dann über die bösen Ablenkungen und das ewige Leiden mit dem Fokus in Episode ein hundert siebte Aber ich habe auch schon mal über Getting Things Done, das ist die Methode, die ich verwende, gesprochen und so weiter und so fort. Und jetzt habe ich mir mal gedacht, da müssen wir mal eine richtig gute Diskussion machen. Und dann bin ich durch meine Favoriten gegangen, also diese Bookmarks, die man im Browser hat. Da habe ich mir vor Jahren mal einen Workshop gebucht, Markt vom Dirk, vom Dirk Deimeke. Und zwar ist das ein zwei hundert Slide Gewitter über Selbstverwaltung und Zeitmanagement. Irgendwann habe ich mit dem musst du mal darüber quatschen. Und vor kurzem hatte ich die Möglichkeit, ihn mal persönlich zu treffen, nämlich auf der letzten frostcon. Und da haben wir irgendwie ein paar Kaffee zusammen getrunken. Jetzt habe ich Komm, frag ihn doch mal, ob er Lust hat, über Selbstverwaltung und Zeitplanung zu sprechen. Und da kam die Antwort Ja, mein Lieblingsthema. Deswegen sage Herzlichen Glückwunsch, dass du eingeladen wurdest. Nein, herzlich willkommen. Herzlichen Glückwunsch. Das war ein Versprecher. Herzlich willkommen, Dirk."
+        },
+        {
+            "start": 208580,
+            "end": 212980,
+            "speaker": "B",
+            "text": "Dankeschön. Ich fühle mich aber wirklich geehrt, dass ich mit euch zusammenreden darf. Freue mich sehr darauf."
+        },
+        {
+            "start": 213140,
+            "end": 229480,
+            "speaker": "A",
+            "text": "Im Vorgespräch, weil der Wolfgang, den habt ihr jetzt noch gar nicht gehört. Im Vorgespräch hat der Wolfgang etwas über das Ruhrgebiet gelernt, denn der Dirk, der kommt ursprünglich aus dem Pott und zwar aus Wannereickel. So Wolfgang, wo liegt Wanner Eickel zwischen Gelsenkirchen und Dortmund?"
+        },
+        {
+            "start": 230040,
+            "end": 231760,
+            "speaker": "C",
+            "text": "So irgendwo dazwischen drin."
+        },
+        {
+            "start": 231760,
+            "end": 235160,
+            "speaker": "A",
+            "text": "Also Gelsenkirchen ist da in der Ecke, Bochum ist da in der Ecke und her."
+        },
+        {
+            "start": 235240,
+            "end": 263870,
+            "speaker": "C",
+            "text": "Also Bochum kommt noch dazwischen. Ja, genau. Ja, aber das verschwimmt ja alles. Dirk hat es ja schon im Vorgespräch auch gesagt, es verschwimmt alles. Ich habe lange in Düsseldorf gelebt, aber da hört ja im Prinzip die Welt dann auf am Rand vom Pott und das dahinter ist ja dann uninteressant. Aber ich habe schon so das mitbekommen mit Schalke und so weiter. Und das war eigentlich das größte Learning, was ich jetzt im Vorgespräch hatte. Schalke ist ein Stadtteil von Gelsenkirchen. Ich dachte immer, das ist eine Stadt oder überhaupt nur ein Fußballverein. Aber jetzt habe ich das mal auch gelernt."
+        },
+        {
+            "start": 263870,
+            "end": 268150,
+            "speaker": "A",
+            "text": "Falls du noch was lernen möchtest, die Leute aus dem Pott sagen öfters, dass in Düsseldorf einfach nur der Schnösel wohnt."
+        },
+        {
+            "start": 268550,
+            "end": 270350,
+            "speaker": "C",
+            "text": "Ja, Darum bin ich ja zurück nach Österreich."
+        },
+        {
+            "start": 270350,
+            "end": 283670,
+            "speaker": "A",
+            "text": "Aber was soll ich sagen, wenn ich über Schnösel rede und dann rede ich auch über Geld in Düsseldorf. Ja, Dirk, es tut mir leid, aber du bist leider für uns Deutsche in den Geldstaat gewechselt sozusagen. Du wohnst nämlich in Zürich, in der schönen Schweiz."
+        },
+        {
+            "start": 283950,
+            "end": 308030,
+            "speaker": "B",
+            "text": "Ja, so dreiig Kilometer vor Zürich. Und um dem Ganzen die Krone aufzusetzen, als ich vor achtzehn Jahren in die Schweiz gekommen bin, habe ich für eine Schweizer Bank gearbeitet. Also alle Klischees erfüllt. Von daher, wer sich daran erinnern kann, es gab mal vor Jahren diese Geschichte, dass die deutschen Steuerbehörden eine CD aus der Schweiz gekauft haben und es hat sich herausgestellt, dass ich die gleichen Rechte auch hatte, aber ich habe die CD nicht gebaut. Da hätte ich vielleicht ein bisschen mehr Geld verdient mit, als mit dem, was ich sonst so tue."
+        },
+        {
+            "start": 308030,
+            "end": 328610,
+            "speaker": "A",
+            "text": "Genau, dann würde ich mal sagen, wir testen mal in dieser Podcast Episode, ob du deinen Wurzeln noch treu geblieben bist. Aber wer bist du denn wirklich? Wie verdienst du denn deine Brötchen oder deine Schweizer Franken? Und zwar bist du eher so im Bereich System Administration, Systems Engineering unterwegs. Du arbeitest bei der Swisscom. Das ist so ungefähr die Schweizer Telekom, oder? Genau, Aber gehört die Swisscom wirklich zur Telekom?"
+        },
+        {
+            "start": 328610,
+            "end": 344420,
+            "speaker": "B",
+            "text": "Nein, die Swisscom ist die Schweizer Telekom. Das ist, wenn du in Deutschland heißt es Telekom, in der Schweiz heißt es Swisscom, das war früher mal der Staatsapparat, also die staatliche Post, PTT hieß die hier, ist später zur Swisscom geworden und die macht die Telefonie und also wie die Telekom in Deutschland eigentlich."
+        },
+        {
+            "start": 344500,
+            "end": 381160,
+            "speaker": "A",
+            "text": "Today I learned. Today I learned, ich sage es ja. Und da sind wir auch schon. Today I Learned, oder wie es bei euch heißt, Things I Learned ist unter anderem ein Podcast, den du machst, den du Podcast schon seit zwanzig Jahren. Du hattest mal einen Podcast, den hast du bereits schon eingestellt, aber neben dem Things I Learned oder dem tillpod machst du auch noch den Bass Zoom Podcast. Du bist sogar noch Buchautor über einem Linux Server Buch. Und zwar hat der Wolfgang mir jetzt in die Vorbereitungsnotizen hier reingeschrieben, das war beim Verlag Rheinberg, früher Galileo, wo auch, wo Wolfgang sein mysql Buch rausgebracht hat. Also lehnt Wolfgang sich aus dem Fenster und sagt, ihr seid also quasi Kollegen."
+        },
+        {
+            "start": 381160,
+            "end": 382880,
+            "speaker": "B",
+            "text": "Ja, kann man so sagen, definitiv."
+        },
+        {
+            "start": 382960,
+            "end": 392960,
+            "speaker": "C",
+            "text": "Rein Werk, Andi, früher Galileo, das hat man gekannt. Früher war es, glaube ich grün und jetzt ist es blau, so die klassische Farbe. Der größte IT Verlag in Deutschland, solltest du schon wissen."
+        },
+        {
+            "start": 393520,
+            "end": 395680,
+            "speaker": "A",
+            "text": "Ich bin Digital Native und kauf nicht"
+        },
+        {
+            "start": 395680,
+            "end": 396560,
+            "speaker": "B",
+            "text": "so viel Bücher,"
+        },
+        {
+            "start": 398320,
+            "end": 400000,
+            "speaker": "C",
+            "text": "ganz viele Bücher, Du liest sie noch nicht."
+        },
+        {
+            "start": 400270,
+            "end": 466410,
+            "speaker": "A",
+            "text": "Ja, ich habe ein Hobby, Bücher zu kaufen, aber du bist auch sehr stark im Open Source Bereich unterwegs mit Konferenzen, Vorträgen, ganzen Ökosystem. Ich habe gesehen, du bist irgendwie Mitglied in fünf gefühlten Vereinen im Open Source Bereich. Du engagierst dich da sehr, sehr stark und da kennen wir uns auch her. Das freut mich natürlich sehr. Und hatte ich ja schon im Intro gesagt, du hast seit zwei tausend fünfzehn einen Workshop zum Thema Zeitverwaltung und Selbstmanagement, den du immer mal wieder hältst und immer mal wieder aktualisierst, als ich dich angefragt habe zu diesem Workshop, das kriegen wir aber nicht in einer Stunde hin. Da müssen wir mal gucken, was wir da machen. Deswegen finde ich das super, dass du zugesagt hast, denn das passt nämlich, weil wie gesagt, du machst auch eine ganze Menge, zwei Podcast, du arbeitest nebenher, bist noch im Open Source Bereich unterwegs und hast mir im Vorgespräch auch was Schönes gesagt. Und zwar ist es ja so, dass man in der Systemadministration als Systems Engineer ja viele Sachen irgendwie unplanbar sind. Also wenn der Server abraucht, ich weiß ja nicht, den kannst du jetzt nicht in den nächsten Sprint einplanen. Und das macht es natürlich eigentlich enorm spannend. Deswegen bin ich sehr, sehr gespannt, wo wir bei der Diskussion hier enden."
+        },
+        {
+            "start": 466410,
+            "end": 473330,
+            "speaker": "C",
+            "text": "Jetzt ist aber schon die Frage, wenn du sagst, das bekommen wir in einer Stunde nicht unter. Wo ist es das Zeitmanagement, dass wir das natürlich schon in einer Stunde unterbekommen, oder?"
+        },
+        {
+            "start": 473490,
+            "end": 494720,
+            "speaker": "B",
+            "text": "Ich meine, die Wahrheit liegt in der Beschränkung. Wir haben uns im Vorgespräch darüber unterhalten, was wir machen wollen. Der Workshop, den habe ich über drei oder sogar vier Stunden schon gehalten. Der Punkt ist, wir müssen uns auf das konzentrieren, was uns jetzt in dieser Stunde wichtig ist. Und ich glaube, das kann man, wenn man so durch den Tag guckt, ist das eigentlich auch eine gute Maxime für den Tag. Konzentrier dich auf die Dinge, die an dem Tag wichtig sind."
+        },
+        {
+            "start": 494720,
+            "end": 511360,
+            "speaker": "C",
+            "text": "Wie kommst du eigentlich zu dem ganzen Zeitmanagement Bereich? Weil jetzt, wenn man aus dem Serverbereich kommt, das klingt so nerdig und irgendwie, man spielt da eh nur mit seinen Computern herum. Und du hast auch das Buch geschrieben über Linux Server und jetzt machst du irgendwie auch Zeitmanagement. Wie kommt es dazu?"
+        },
+        {
+            "start": 494763,
+            "end": 554763,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 571840,
+            "end": 605100,
+            "speaker": "B",
+            "text": "Es ist viel einfacher als man so denken mag. Ich bin ein vielseitig interessierter Mensch und ich versuche meine gesamten Interessen irgendwie irgendwie so organisiert zu bekommen, dass ich überall was machen kann. Ich habe gerade schon richtig gesagt, nebenbei arbeite ich auch noch. Also es war eine Zeit lang wirklich so, dass die Interessen außerhalb der Arbeit deutlich mehr Raum eingenommen haben als die Arbeit selber, weil ich halt so viele Dinge tun möchte und auch so viele Dinge für mich selber wichtig finde. Deswegen habe ich mich mit Zeitmanagement auseinandergesetzt und mir darüber Gedanken gemacht, wie viele Sachen kann ich unter einen Hut bringen. Disclaimer, es klappt natürlich nicht immer."
+        },
+        {
+            "start": 605100,
+            "end": 614040,
+            "speaker": "A",
+            "text": "Fangen wir mal mit der ganzen Sache an. Wie viel Produktivitäts Apps habt ihr auf eurem Handy installiert und wie viel davon nutzt ihr noch?"
+        },
+        {
+            "start": 614040,
+            "end": 630440,
+            "speaker": "C",
+            "text": "Wolfgang ist die Frage jetzt, was du unter Produktivitäts Apps so verstehst. Aber wenn du jetzt eine klassische To Do oder so irgendwas verstehst, dann hatte ich glaube ich überhaupt in meinem ganzen Leben eigentlich nur eine App, die wirklich tief verwendet habe, viele ausprobiert, aber eine wirklich verwendet habe."
+        },
+        {
+            "start": 630440,
+            "end": 649830,
+            "speaker": "A",
+            "text": "Aber wie bist du da vorgegangen? Bist du hast du dir runtergeladen, drei To Dos reingeknallt und dann irgendwann nie wieder geöffnet oder Also ich mein besonders mit diesem vielen getestet und warum hast du viele getestet? Hat dir irgendwie das, wie man eine Aufgabe von nicht erledigt zu erledigt ändert nicht gefallen oder war der Button grün und du wolltest ihn rot haben?"
+        },
+        {
+            "start": 650230,
+            "end": 688970,
+            "speaker": "C",
+            "text": "Das ist eine gute Frage. Bin nicht so strukturiert an die Dinge herangegangen, so irgendwie ein Test Case oder so irgendwas, der abgearbeitet werden muss, sondern ich habe das Zeug halt einfach ausprobiert und irgendwie, es hat meistens nicht in meinen Flow gepasst und irgendwie hat es mich nicht weitergebracht und am Ende dann remember the milk, da hast du du mir zwei Jahre lang die Ohren voll gesummst, wie man bei uns sagt, dass ich das auch verwenden soll. Und irgendwann habe ich mich dann erbarmt und dann hat es irgendwie sehr gut funktioniert und mir in den Flow hineingepasst. Es soll ja irgendwie mich ergänzen und unterstützen und nicht irgendwie, dass ich komplett in meinem Flow mich umändern muss und dann wieder irgendwie ein Problem habe diesbezüglich."
+        },
+        {
+            "start": 688970,
+            "end": 690850,
+            "speaker": "A",
+            "text": "Dirk, wie viele Apps hast du auf deinem Handy gerade?"
+        },
+        {
+            "start": 691090,
+            "end": 732240,
+            "speaker": "B",
+            "text": "Ich glaube drei. Ich sage das. Das eine ist eine Aufgabenverwaltung. Also ich benutze auf dem Linux System, auf dem ich hauptsächlich arbeite, Taskwarrior, wo ich auch im mit dabei bin. Da gibt es eine Android App mittlerweile, die, wie der Autor sagt, achtzig Prozent vibe coded ist, aber die tut sehr gut. Der Kalender ist für mich eine App zur Selbstverwaltung benutze. Und es gibt so eine App unter Android System, die heißt Digital Wellbeing. Da geht es darum, wie viel Zeit man in verschiedenen Apps pro Tag verbringt, um festzustellen, ich glaube, das ist eines der großen Geheimnisse, man muss halt rausfinden, wo seine Zeit eigentlich bleibt. Wie glauben gar nicht, wie viel Zeit wir mit Dingen verbringen, die überhaupt nicht produktiv sind in irgendeiner Form."
+        },
+        {
+            "start": 732720,
+            "end": 738920,
+            "speaker": "A",
+            "text": "Das ist jetzt spannend. Wie oft schaust du in dein Digital Wellbeing rein? Ich glaube, das ist dann auf dem iOS diese Bildschirmzeit, oder?"
+        },
+        {
+            "start": 738920,
+            "end": 760980,
+            "speaker": "B",
+            "text": "Ja, genau. Also ich gucke da vielleicht einmal in der Woche rein und vor allem gucke ich da rein, wenn ich gemerkt habe, dass ich in der Woche nicht das geschafft habe, was ich mir eigentlich vorgenommen habe, um zu schauen, ob das Handy da groß dran beteiligt war. Und ich verrate jetzt nicht zu viel, dass das Handy häufig nicht der einzige Grund ist, weshalb das Problem ist. Also vielleicht sogar nur ein untergeordneter Grund ist, weshalb ich meine eigentlichen Aufgaben nicht schaffe."
+        },
+        {
+            "start": 761140,
+            "end": 809010,
+            "speaker": "A",
+            "text": "Aber da kommen wir mal zu einem interessanten Diskussionspunkt. Und zwar sagtest du ja schon, du schaust da in das Digital Wellbeing einmal die Woche rein. Wie hast du deine Zeit verbracht bzw. Wie hast du deine Zeit am Linux oder am Handy verbracht? Und das tue ich auch ab und zu mal. Und dann sehe ich da teilweise Sachen, die gefallen mir nicht. Keine Ahnung, habe ich wieder ein bisschen gedaddelt oder Instagram oder was, weiß der Geier nicht, ist ja auch egal. Dann stelle ich mir die Frage, fuck, habe ich denn jetzt zu viel Zeit verschwendet? Also war ich nicht produktiv? Aber dann wechsle ich auch wieder meinen Gedankengang hin zu ich muss ja aber auch nicht vier und zwanzig Stunden, sieben Tage die Woche produktiv sein. Ich muss ja auch mal abschalten. Ich muss ja auch mal was für mich tun, meine mentale Gesundheit und nicht immer schaffe, schaffe, schaffe, häusle, baue ich. Wie stehst du zu diesem Konflikt?"
+        },
+        {
+            "start": 809330,
+            "end": 838630,
+            "speaker": "B",
+            "text": "Es ist für mich gar kein Konflikt. Ich denke nur, dass die Zeit, die wir am Handy verbringen mit Apps, die darauf designt sind, möglichst unsere Aufmerksamkeit zu fesseln und möglichst mit Inhalten zu fesseln, die uns eigentlich völlig schnurz sind. Ich habe kein Instagram, ich habe nichts aus dem Meta Universum auf dem Handy. Ich benutze auch nichts aus dem Meta Universum. Muss man sich einfach klar sein, dass es zum großen Teil wirklich verschwendete Zeit ist? Oder würdest du für dich sagen, dass du in der letzten Zeit, in den letzten Wochen und Monaten irgendetwas Vernünftiges aus Instagram mitgenommen hast?"
+        },
+        {
+            "start": 838630,
+            "end": 873190,
+            "speaker": "A",
+            "text": "Das ist eine sehr interessante Frage und ich würde sagen, zu siebzig Prozent ist das purer Müll, was ich da sehe, wenn ich irgendwelche Leute tanzen sehe. Aber ich sage auch, ab und zu kriege ich kreative Einflüsse von Instagram, wenn ich mal in so eine D Druck Bubble reinspringe, warum auch immer. Und dann kommen Leute mit irgendwas Tollem, was sie D gedruckt haben und denke mir, hey, das ist leider cool. Also so als Inspiration. Oder teilweise kommt mir auch irgendein IT Podcaster da über meinen Screen, denke ich mir, da könnte ich auch mal reinhören. Also es ist nicht alles sinnfrei."
+        },
+        {
+            "start": 873350,
+            "end": 909310,
+            "speaker": "C",
+            "text": "Das ist die übliche Ausrede, die Social Media Leute haben. Und wir hatten ja auch mal in dem Gespräch, Andy unter uns geklärt, wie oft wir dann wirklich mal reinhören in den Podcast oder dort bleiben. Und das ist ja so gut wie nie. Und dann ist auch die Frage, wenn du jetzt zwei Stunden lang Inspiration für deinen D Drucker dir da anschaust und meistens sind die dann auch noch langgezogen, diese Reels, weil du könntest wahrscheinlich so auf Thingiverse oder sowas einfach kurz durch eine Liste scrollen, zwei Minuten, und hast wahrscheinlich die ganze Inspiration, die du sonst auf Instagram über fünf Stunden, zwanzig Stunden oder so hinweg hättest."
+        },
+        {
+            "start": 909710,
+            "end": 924810,
+            "speaker": "A",
+            "text": "Ja, das ist ein fairer Punkt. Und ich will mit der Sache auch nicht schönreden. Also wenn ich da einmal da mit dem Daumen da durchscrolle, bin ich da gefangen. Aber ich glaube, das geht auch ganz vielen Leuten so. Aber ich sag auch, es ist ja ab und zu auch okay, auf der Couch zu sitzen und dumm zu scrollen,"
+        },
+        {
+            "start": 924810,
+            "end": 946810,
+            "speaker": "B",
+            "text": "was man aber mal versuchen könnte, wäre einfach mal zu sagen, ich versuche mal mit mir selber auszukommen, ich versuche mal Stille zu ertragen, ich versuche mal meine Gedanken schweifen zu lassen. Einfach mal so, einfach mal zu gucken, was passiert bei mir im Kopf, wenn ich sonst nichts an äußeren Einflüssen dran lasse. Es ist einfach so. Wir haben verlernt, aufgrund dessen, dass wir so bedudelt werden von allen Seiten, wir haben verlernt, einfach mal Zeit mit uns zu verbringen."
+        },
+        {
+            "start": 946810,
+            "end": 955350,
+            "speaker": "A",
+            "text": "Das stimmt. Und ich merke das auch bei mir, dass wenn ich zwanzig, dreiig vierzig Sekunden Zeit habe und mein Handy in der Tasche habe, ich zücke das sofort."
+        },
+        {
+            "start": 955430,
+            "end": 973390,
+            "speaker": "B",
+            "text": "Apps, die du da aufmachst. Und wenn wir jetzt Instagram als Beispiel nehmen, die haben nur ein Ziel. Die haben ein Ziel, dich dabei der Stange zu halten und dir zwischendurch mal eine Werbung zu zeigen. Die haben nicht das, die haben nicht das Ziel, dir was beizubringen. Die haben auch nicht das Ziel, dass du, dass du eine tolle Zeit hast, sondern einfach das Ziel, dich möglichst lange am Handy zu lassen."
+        },
+        {
+            "start": 973390,
+            "end": 991450,
+            "speaker": "A",
+            "text": "Aber du schaust ja jetzt ins Digital well Being, weil klar, auf der einen Seite stellst du dir die Frage, wo ist meine Zeit hingegangen? Auf der anderen Seite ist ja das, warum du dir diese Frage stellst, weil du dich weiter optimieren möchtest oder weil du nach einem Grund suchst, warum du nicht deine Aufgaben, die du dir vorgenommen hast, geschafft hast."
+        },
+        {
+            "start": 991450,
+            "end": 1007750,
+            "speaker": "B",
+            "text": "Oder ja, oder dass ich einfach auch mal sage, ich war jetzt, weiß ich nicht, letzten Tag mal mit Toilettengängen rausgenommen, vielleicht zwei Stunden mit Schach beschäftigt. Vielleicht ist es eine gute Zeit, auch einfach mal die Schach App für eine Woche nicht auf dem Handy zu haben. Einfach zu dealen, installieren."
+        },
+        {
+            "start": 1007830,
+            "end": 1011030,
+            "speaker": "A",
+            "text": "Moment, daraus höre ich, dass du weniger als zwei Stunden pro Tag auf Toilette bist."
+        },
+        {
+            "start": 1012630,
+            "end": 1013910,
+            "speaker": "B",
+            "text": "Das bin ich wohl."
+        },
+        {
+            "start": 1016150,
+            "end": 1020630,
+            "speaker": "A",
+            "text": "Wolfgang, welche App siehst du in deinem Digital Wellbeing, die dir nicht gefällt? Weil du hast gerade reingeguckt."
+        },
+        {
+            "start": 1020630,
+            "end": 1071490,
+            "speaker": "C",
+            "text": "Stimmt, ich hab grad reingeschaut heute Erstaunlich gut. Ich finde gerade die Wochenansicht nicht, aber ich habe vor kurzem mich von Instagram mehr oder weniger getrennt und bin sehr stolz, dass Instagram jetzt zum Beispiel nicht aufgetaucht ist in meiner Liste, weil hin und wieder schaue ich halt doch rein. Aber ich schaffe es jetzt so, dass in meinem klassischen Account, also natürlich ein paar Firmen Accounts, Engineering Kiosk Account, aber in meinem privaten Account eigentlich nur alle zwei bis drei Wochen mal kurz einen Blick werfe, ob irgendwelche Messages oder so da sind. Und das hat sich schon natürlich stark geäußert, weil es ist nicht schlimmer als Instagram, wenn man da mal zwei Stunden oder so drin ist und es vergeht wie im Flug die Zeit. Also man glaubt, es sind so fünf Minuten, kurz mal scrollen und dann schaut man auf die Uhr und es waren irgendwie zwei Stunden oder so. Also das war schon extremer Zeitfresser."
+        },
+        {
+            "start": 1071490,
+            "end": 1074810,
+            "speaker": "B",
+            "text": "Es sind ja nicht die vierzig Sekunden, von denen du zu Beginn gesprochen hast, Andy."
+        },
+        {
+            "start": 1074810,
+            "end": 1097570,
+            "speaker": "A",
+            "text": "Das stimmt. Und ich glaube, der Wolfgang hat auch schon eine erwachsenere Haltung angenommen gegenüber mir, weil ich müsste eigentlich mich auch schon mal auf Instagram ausloggen. Oder kennt ihr diese Sperr Apps? Du kannst ja auf deinem Handy eine App installieren und wenn du Instagram aufmachst, dann sagt diese App, willst du das wirklich? Und dann musst du da ein Puzzle lösen oder du kannst es ganz blocken lassen. Diese Fokus Apps ist das."
+        },
+        {
+            "start": 1097570,
+            "end": 1134670,
+            "speaker": "B",
+            "text": "Aber um mal aufs Handy, jetzt nicht bei Instagram nur herziehen, aber um mal aufs Handy als Ganzes zu kommen. Das, was ich mache, ist, ich stelle alle Benachrichtigungen ab auf dem Handy, also zumindest erstmal alle Lautstärke. Ich möchte keine lauten Benachrichtigungen haben, das auch für Telefonanrufe nicht. Das will ich nicht. Wenn jemand mit mir telefonieren möchte, dann kann er mich fragen, wann und wann wir zusammen telefonieren, Das ist in Ordnung. Aber ich möchte nicht ständig gestört, ich möchte nicht ständig durch irgendwelche Geräusche gestört werden. Ich habe einen E Mail Client auf dem Handy, aber ich habe den E Mail Client so eingestellt, dass ich manuell die E Mails abholen muss, weil ehrlicherweise die Mails, die reinkommen, die erwarten nicht, dass ich binnen Sekunden reagiere."
+        },
+        {
+            "start": 1134670,
+            "end": 1190820,
+            "speaker": "C",
+            "text": "Aber kennst du das Problem, dass du dann ständig in dein E Mail Postfach reingehst, manuell, so dass du den Klick hast? Also nicht ständig jetzt im Sekundentakt, aber ich mache ganz oft, also wenn ich mein Handy entsperre, dass ich sofort auf den E Mail Client klicke. Eigentlich gehe die Messages nicht mal wirklich durch. Vielleicht checke ich nur, ist irgendwas Wichtiges da in den ersten drei Messages? Und das mache ich wahrscheinlich irgendwie ein hundert Mal am Tag. Wahrscheinlich fast irgendwie so ein Automatismus, den hat man mit Instagram übrigens auch. Das war wie das Icon entfernt habe von Instagram zum Beispiel von meinem Homescreen, habe ich einfach diesen unterbewussten Klick nicht mehr gehabt, dass ich ständig geöffnet habe. Aber E Mail Postfach ist immer noch so ein Klick, wo ich einfach immer wieder draufklicke. Also ich bin mir nicht ganz sicher, was effizienter ist. Also es ist sicher besser, als ich bekomme Notifications, weil die bekommen irgendwie zwei hundert E Mails am Tag. Aber trotzdem, man klickt eigentlich öfters hinein, als dass man okay, einmal pro Tag oder zweimal pro Tag reserviere ich mir irgendwie fünfzehn Minuten und mache dann meine E Mails."
+        },
+        {
+            "start": 1191060,
+            "end": 1205700,
+            "speaker": "B",
+            "text": "Vielleicht muss man auch da sagen, ich sitze natürlich den ganzen Tag vorm Computer in irgendeiner Form und ich habe den ganzen Tag einen E Mail Client offen. Da bin ich nicht so super diszipliniert, sodass ich auf dem Handy nicht unbedingt jederzeit noch reagieren müsste. Also Handy benutze ich überwiegend in der Freizeit nicht während ich arbeite."
+        },
+        {
+            "start": 1205780,
+            "end": 1224920,
+            "speaker": "A",
+            "text": "Aber das ist ja jetzt lustig von euch beiden sogar. Ihr habt ein asynchrones Medium gewählt. Der eine swipe gefühlt ein hundert Mal am Tag runter, ist hier ein neues Update, um das IMAP und POP zu triggern und der andere hat den E Mail Client auch die ganze Zeit auf, als wäre es ein synchrones Medium. Warum ist das E Mail nicht asynchron für euch?"
+        },
+        {
+            "start": 1224920,
+            "end": 1237310,
+            "speaker": "B",
+            "text": "Jetzt kommen wir zu dem Punkt, den du ganz zu Beginn gesagt hast, dass ich aus dem Systems Engineering komme und dass ich auch DevOps natürlich kann. DevOps hat einen Teil, der sich Operations nennt, der Betrieb heißt und die Benachrichtigungen von Systemen kommen in der Regel per E Mail."
+        },
+        {
+            "start": 1238420,
+            "end": 1241460,
+            "speaker": "A",
+            "text": "Jetzt brecht mir bitte nicht mein Herz. Ihr macht Alerting via E Mail."
+        },
+        {
+            "start": 1241460,
+            "end": 1266560,
+            "speaker": "B",
+            "text": "Die dringenden Alerts kommen via Pager bzw. Über andere Möglichkeiten, Aber es kommen auch eine Menge E Mails rein und wir arbeiten mit Kunden zusammen und wenn ein Kunde eine Anfrage schickt, dann erwartet er schon, dass wir zeitnah reagieren. Wir können jetzt über Asynchronität von E Mail lange reden, aber wenn wir mit Kunden zu tun haben, den kann ich nicht verkaufen. Dass ich, wenn ich in der Leitungsfunktion bin, dass ich ja vielleicht zweimal die Woche in die E Mails gucke. Das kriegen wir nicht hin."
+        },
+        {
+            "start": 1266560,
+            "end": 1297950,
+            "speaker": "A",
+            "text": "Ne, das verstehe ich aber. Also natürlich könnten wir jetzt ganz tief da reingehen, ob dann das das richtige Medium ist oder ob ihr ein Ticketsystem habt, was euch dann pagen sollte, wenn nach X und so weiter. Ich glaube, das kann man auch alternativ aufsetzen. Ich glaube, das ist jetzt nicht die Ausrede zu suchen, da gibt es nur per E Mail. Aber wenn du sagst, okay, manche Alerts kommen auch per E Mail rein, da würde ich auch sagen, sollte man vielleicht mal was optimieren und seinem Alerting System vertrauen, weil sonst kriegt man es ja nicht hin. Aber das ist sehr spannend. Klar, die Kundenthematik, da kann man, glaube ich, immer optimieren, aber da will ich jetzt auch gar nicht so tief reingehen."
+        },
+        {
+            "start": 1298190,
+            "end": 1300750,
+            "speaker": "C",
+            "text": "Aber hast du Notifications dann aktiv am Desktop?"
+        },
+        {
+            "start": 1300910,
+            "end": 1301390,
+            "speaker": "B",
+            "text": "Nein."
+        },
+        {
+            "start": 1301390,
+            "end": 1304270,
+            "speaker": "C",
+            "text": "Okay. Also du schaust schon aktiv in die Mailbox hinein."
+        },
+        {
+            "start": 1304670,
+            "end": 1325870,
+            "speaker": "B",
+            "text": "Ich muss das mit einem klassischen Jein beantworten. Also im Firmenkontext ändert sich das Icon unten und zeigt den Briefumschlag an, wenn eine Mail angekommen ist. Also ich sehe auf einen Blick, ob es eine neue Mail gibt oder nicht, Auch wenn ich keine echte Benachrichtigung anhabe, wenn ich nicht im Kundenkontakt bin und wenn ich auch keinen Betrieb habe, dann ist der Mail Client auch mal tagsüber auch so. Dann gucke ich morgens und mittags und abends rein und dann war es das."
+        },
+        {
+            "start": 1325870,
+            "end": 1351950,
+            "speaker": "A",
+            "text": "Aber ich habe die Tage auch was Lustiges gelesen. Und zwar sagte auch wenn jeder sagt, die Antwortzeiten bei E Mails sind irrelevant, wenn du Karriere machen möchtest. Und in manchen Unternehmen sind die Antwortzeiten von E Mails relevant. Und das hat mich auch so ein bisschen zum Nachdenken gebracht. Zurück zur Ist E Mail wirklich asynchron? Denn es kommt jetzt sehr wahrscheinlich nicht auf drei oder vier Minuten an, aber es kommt darauf an, ob es zehn Minuten oder zehn Stunden sind, wenn ich"
+        },
+        {
+            "start": 1351950,
+            "end": 1377050,
+            "speaker": "B",
+            "text": "mit neun Kunden zu tun habe. Das, was ich als allererstes mache, ist er Erwartungen klären. Eine Erwartung ist zum Beispiel zu Hört mal zu, Leute. Ich habe E Mail nicht den ganzen Tag an. Wenn ihr was Dringendes wollt, kontaktiert mich. Und da dann leider auch über Telefon, wenn es wirklich dringend ist. Aber die Wahrnehmung im Business ist schon, dass E Mail zeitnah beantwortet wird. Und zeitnah bedeutet nicht innerhalb von vier und zwanzig Stunden, sondern zeitnah bedeutet innerhalb von einer oder zwei Stunden vielleicht."
+        },
+        {
+            "start": 1377210,
+            "end": 1384890,
+            "speaker": "A",
+            "text": "Wo wir jetzt aber gerade beim Thema E Mail sind, da gibt es ja die Produktivitätsmethode Inbox Zero. Habt ihr die schon mal ausprobiert?"
+        },
+        {
+            "start": 1384890,
+            "end": 1392970,
+            "speaker": "C",
+            "text": "Wolfgang Ich hoffe, das war jetzt nur eine Alibi Frage, weil du solltest eigentlich schon wissen, dass ich die natürlich verwende. Wie erfolgreich, Sehr erfolgreich."
+        },
+        {
+            "start": 1392970,
+            "end": 1394930,
+            "speaker": "A",
+            "text": "Das bedeutet, wie viele E Mails hast du jetzt gerade?"
+        },
+        {
+            "start": 1394930,
+            "end": 1398370,
+            "speaker": "C",
+            "text": "Acht und fünfzig ungelesen und acht und neunzig gesamt."
+        },
+        {
+            "start": 1398450,
+            "end": 1400770,
+            "speaker": "A",
+            "text": "Dirk hast du das schon mal ausprobiert? Inbox Zero?"
+        },
+        {
+            "start": 1401010,
+            "end": 1417560,
+            "speaker": "B",
+            "text": "Ja, ich arbeite so ähnlich, also nicht genau nach Inbox Zero. Als ich heute den Rechner ausgemacht habe, war ich bei einer Nachricht, die noch bearbeiten muss in der Inbox und irgendwie zehn oder fünfzehn Nachrichten, die noch im To Do sind, wo ich später noch mal reingucken muss, wo ich noch auf Zulieferungen warte."
+        },
+        {
+            "start": 1417880,
+            "end": 1420640,
+            "speaker": "A",
+            "text": "Und was hast du bei deiner Methode verändert gegenüber Inbox Zero?"
+        },
+        {
+            "start": 1420640,
+            "end": 1458010,
+            "speaker": "B",
+            "text": "Also ich gucke mir die Mail an und habe einen Button definiert, auch in Outlook, wo der einfach sagt archivieren. Und wenn ich die Mail angesehen habe und gemerkt habe, dass ich nichts mehr tun muss, klicke ich sofort auf archivieren. Wenn ich merke, dass ich, und das ist vielleicht die goldene Produktivitätsregel, auf die wir vielleicht noch zu sprechen kommen, ist, wenn ich etwas in zwei, drei oder fünf Minuten erledigen kann, mache ich das sofort. Das bedeutet auch E Mails beantworte ich sofort, weil wenn ich das auf eine To Do Liste schreibe, dann schreibe ich unendliche To Do Listen, dann bin ich länger mit der Verwaltung der To Do Liste beschäftigt, als mit dem Beantworten der E Mail Und Sachen, die später beantwortet werden können oder die noch irgendwelche Vorbedingungen brauchen, die noch nicht erfüllt sind, die kommen halt in den To Do Ordner. Also ich habe drei Ordner, Inbox, Archiv und To Do."
+        },
+        {
+            "start": 1458170,
+            "end": 1489700,
+            "speaker": "A",
+            "text": "Die Produktivitätsregel, die du gerade genannt hast, die liebe ich. Ich versuche sie auch anzuwenden. Ich sage aber auch, sie ist sehr schwierig. Also sie hört sich sehr simpel an, weil a hast du eine enorme Anzahl an Kontext und Themen, Switches und b heißt es ja, du sollst dir das To Do nicht aufschreiben, weil sonst hast du eine ganz lange To Do Liste. Dennoch ist es ab und zu so, dass du dann auf einmal fünf Stunden später erst wieder aus deiner Fünf Minuten Agenda da rauskommst und dann trotzdem den ganzen Arbeitstag damit verbracht. Ich meine, du warst so produktiv, gar"
+        },
+        {
+            "start": 1489700,
+            "end": 1495530,
+            "speaker": "B",
+            "text": "keine Frage, aber hast du den Contact Switch noch nicht Schon in dem Moment, wo du E Mails reinguckst und entscheiden"
+        },
+        {
+            "start": 1495530,
+            "end": 1496810,
+            "speaker": "C",
+            "text": "musst, was du damit machst."
+        },
+        {
+            "start": 1497370,
+            "end": 1525240,
+            "speaker": "A",
+            "text": "Total. Vielleicht ist das sogar der Punkt. Aber ich glaube, die Sache, die ich machen möchte, ist, du kannst auch den ganzen Tag mit diesen fünf Minuten Dingern verbringen. War das produktiv? Ja, wahrscheinlich. Aber durch die Anzahl der Kontext Switche, also fünf Minuten hier, fünf Minuten da, fünf Minuten da versus eine Stunde an einem Thema zu arbeiten. Du kannst ja jede fünf Minuten Aufgabe kann ein anderes Thema sein. Und das ist ja unglaublich. Genauso wie mit den ganzen KI Agenten und so weiter, wenn du drei, vier, fünf Prompts laufen hast, das ist ja unglaublich ermüdend für den Kopf."
+        },
+        {
+            "start": 1525240,
+            "end": 1542320,
+            "speaker": "C",
+            "text": "Aber was wäre die Alternative? Weil wenn du es auf eine Liste schreibst, muss ja trotzdem irgendwann dann diese fünf Minuten machen und hast noch den zusätzlichen Aufwand, das auf eine Liste zu schreiben und den neuerlichen Kontext Switch auch nochmal, wenn du das dann bearbeitest. Also kannst natürlich okay, ich mache das Ganze nicht, aber dann kannst du das auch sofort entscheiden."
+        },
+        {
+            "start": 1542320,
+            "end": 1557450,
+            "speaker": "A",
+            "text": "Okay, zwei Perspektiven. Was ist die Alternative? Und jetzt komme ich auf mein zweites Thema, bevor der Dirk mit dieser Produktivitätsregel ankam. Bei den bei generellen Todos die zwei, drei, fünf Minuten. Ich weiß nicht, ich kenne das Sagen mit zwei Minuten. Ich kenne das Sagen mit fünf Minuten. Keine Ahnung was."
+        },
+        {
+            "start": 1557450,
+            "end": 1561290,
+            "speaker": "B",
+            "text": "Ich kenne es mit drei Minuten. Ich kenne es wirklich, ich habe es in drei verschiedenen Versionen gehört."
+        },
+        {
+            "start": 1561610,
+            "end": 1564769,
+            "speaker": "C",
+            "text": "Also in Getting Things Done ist es glaube ich mit zwei Minuten so, da"
+        },
+        {
+            "start": 1564769,
+            "end": 1604010,
+            "speaker": "A",
+            "text": "sage ich okay, da gibt es keine Alternative. Und jetzt kommt es bei der E Mail gibt es aber eine Alternative, denn in Box Zero habe ich mal was Schönes gehört und deswegen, ich versuche es leider auch zu machen, einfach nur um der dem Volumen Herr zu werden. Aber die E Mail Inbox ist ja schon irgendwie eine To Do Liste, die von anderen gefüllt wird, oder? Definitiv. Und da frage ich mich ist das eine gute Sache? Weil Dirk, ich kann dir jetzt fünf E Mails schreiben. Das bedeutet, ich setze dir fünf Tasks auf deine Liste und dann frage ich mich, wie selbstbestimmt bist du dann noch auch privat? Weil ich meine, du manage sehr wahrscheinlich dann deine E Mail Inbox, ähnlich wie im Beruf, glaube ich. Weiß ich nicht. Und das fand ich ein sehr schönes Statement."
+        },
+        {
+            "start": 1604090,
+            "end": 1611290,
+            "speaker": "B",
+            "text": "Ist das nicht jedes Kommunikationsmedium, wirklich jedes, ob es nun Slack ist, ob es bei mir Matrix, Signal oder Threema ist,"
+        },
+        {
+            "start": 1611290,
+            "end": 1618490,
+            "speaker": "C",
+            "text": "ob es Teams ist, oder ein Telefonanruf oder irgendjemand, der persönlich vorbeikommt und dir was einwirft."
+        },
+        {
+            "start": 1618570,
+            "end": 1620090,
+            "speaker": "A",
+            "text": "Genau, muss ich drüber nachdenken."
+        },
+        {
+            "start": 1620090,
+            "end": 1621690,
+            "speaker": "B",
+            "text": "Das erlaubt, habe ich gehört."
+        },
+        {
+            "start": 1621690,
+            "end": 1637040,
+            "speaker": "A",
+            "text": "Moment, du hast gesagt, Dirk, das fasziniert mich jetzt ganz besonders. Du sagst, du nimmst keine Telefonanrufe entgegen, sondern man soll dir Bescheid sagen. Ich weiß auch nicht, wie man das jetzt gerade macht, dass wir telefonieren sollen. Aber warum machst du den Inbox Zero? Weil ist das, Also du sagst ja gerade, es ist fast das Gleiche."
+        },
+        {
+            "start": 1637040,
+            "end": 1734730,
+            "speaker": "B",
+            "text": "Also erstmal, ein Mail Client muss per se nicht immer geöffnet sein. Ich kann meinen Mail Client, wenn ich Time Blocking mache, mit Time Blocking, mit bestimmten Phasen in meinen Kalender markieren, an denen ich sage, hier kümmere ich mich um Kommunikation und da kümmere ich mich um meine E Mails und da starte ich meinen E Mail Client und da bearbeite ich die E Mails. Es gibt aber Rollen oder Funktionen, die ich innehabe, wo ich halt schnell auf E Mail reagieren muss. Das klappt, wenn ich diese Rolle innehabe, nicht. Also zum Beispiel, also wenn man so will, wenn man an Betriebler denkt, die auch für Kundenanfragen offen sind, es gibt diesen Funktionen müssen erreichbar, sind Personen nicht. Das heißt, in dem Moment, wo ich die Funktion erfülle, dass ich der Ansprechpartner für den Betrieb bin, muss ich erreichbar sein. Da kann ich mir nicht leisten, den Mail Client auszumachen. In dem Moment, wo ich diese Funktion nicht mehr innehabe, kann ich den Mail Client auch ausmachen. Aber das muss man auch wollen, weil ich könnte ja auch Angst haben, was zu verpassen. Vielleicht kommt ja eine E Mail rein, die gerade wichtig war. Ich glaube, das ist das eigentliche Problem. Auch das Problem bei Wolfgang, wenn er sagt, dass er alle drei Minuten sein Handy aufmacht und eine Mail Client startet und synchronisiert und guckt, ob da neue Mails reingekommen sind. Wir haben Angst, dass wir verpassen, eine Mail verpassen, auf die wir wunderbar schnell reagieren müssen. Und wenn ich die ganzen Leute höre, die ja, E Mail ist tot und die kommen mir dann mit irgendwelchen Kommunikationsmedien, die synchrone Kommunikation eigentlich von dir erwarten, wie Messenger, wo dein Gegenüber sogar sehen kann, dass du die Mail gelesen oder die Nachricht gelesen hast und wo du die rechtfertigen musst, dass du nicht sofort geantwortet hast, da ist der Druck ja noch höher direkt zu reagieren. Aber ich kann das doch bestimmen, welche Apps ich zu welchem Zeitpunkt gestartet habe, wenn ich keine Funktion innehabe an dem bestimmten Tag."
+        },
+        {
+            "start": 1735450,
+            "end": 1742970,
+            "speaker": "A",
+            "text": "Ich mag deinen Funktionsspruch, aber ich bin mir dann. Also E Mail ist nicht tot, aber ich bin mir nicht sicher, ob der Funktionsspruch dann auf E Mail basieren sollte."
+        },
+        {
+            "start": 1743360,
+            "end": 1759680,
+            "speaker": "B",
+            "text": "Nein, das gilt aber für alle. Ich kann ja auch Teams ausmachen, ich kann Slack ausmachen, ich kann Matrix Client ausmachen, ich kann sickeres Rima ausmachen, ich kann ja alles andere an Clients ausmachen. Ich kann mein Handy in den Flugmodus stellen. Das ist ja eine generelle Einstellung von mir. Wenn ich wirklich konzentriert arbeiten möchte, muss ich alle störenden Sachen ausschalten."
+        },
+        {
+            "start": 1759840,
+            "end": 1767800,
+            "speaker": "A",
+            "text": "Aber Wolfgang, warum checkst du deine E Mails wie andere Instagram? Du kriegst so viele Newsletter, deine E Mails sind dein eigentliches Instagram."
+        },
+        {
+            "start": 1767800,
+            "end": 1821410,
+            "speaker": "C",
+            "text": "Richtig, Ich bekomme auch viele Newsletter, aber ich lese keinen einzigen. Klar wie ein psychologisches Problem, weil es kommt wenigstens weder was Relevantes, noch übersehe irgendwas. Oder auch es gibt eigentlich keine E Mails, wo man nicht mal länger warten könnte. Das ist so ein gewisser Automatismus, der am Handy funktioniert. Wenn man das Handy irgendwie entsperrt, muss man irgendwas machen. Früher war das ganze Instagram, dann habe ich mein Instagram Icon gelöscht. Nach kurzer Zeit habe ich mich intern so daran gewöhnt, nach unten zu swipen, i n einzugeben für Instagram und wieder das Instagram Icon zu klicken. Also da waren das die drei Klicks dann Superschnell. Also ist wirklich Muscle Memory. Das Ganze habe ich mir jetzt abgewöhnt und aktuell ist E Mail vielleicht so am ehesten noch, wo man oft reinschaut, aber ich öffne genauso Slack oder andere Dinge. Also es geht um diesen Automatismus an sich, weniger als E Mail. Also ich glaube gar nicht, dass es E Mail das Problem ist, sondern dieser Automatismus, dass man im Muscle Memory schnell auf irgendwas klickt."
+        },
+        {
+            "start": 1821410,
+            "end": 1836110,
+            "speaker": "B",
+            "text": "Ich rede da so altklug drüber. Das war bei mir ein Prozess, der mehrere Jahre gedauert hat. Das ist nicht von heute auf morgen gegangen. Ich habe mich nicht von heute auf morgen entschieden, keine E Mails mehr zu gucken, sondern das ist ein Prozess, der wirklich mehrere Jahre gedauert hat, bis ich mich dazu durchringen konnte, das zu tun."
+        },
+        {
+            "start": 1836350,
+            "end": 1917460,
+            "speaker": "C",
+            "text": "Und ich habe auch Instagram schon öfters wegbekommen und bin wieder rückfällig geworden teilweise. Also man fällt dann wieder so rein und ist dann, es ist wirklich wie eine Sucht. Du bist dann so ein paar Stunden wieder auf Instagram und es wird immer oder paar Minuten am Anfang, es wird immer mehr und irgendwann merkst du, du bist da irgendwie ein, zwei Stunden pro Tag auf Instagram und dann probierst du wieder wegzukommen. Und am besten funktioniert es, wenn man irgendwie viel Stress hat und andere Dinge, die man erledigen muss, weil dann hat man einfach keine Zeit und dann gewöhnt man sich das so ein bisschen ab. Und sobald man dann wieder mal irgendwie, gerade als Selbstständiger oder so, hast du mal längere Zeit, wo du irgendwie vielleicht nicht so viel zu tun hast und dann kommen wieder diese Beschäftigungs Patterns oder wenn du halt einfach irgendwie mal abschalten willst. Und ich glaube aber, dass es schon bessere Möglichkeiten gibt. Also da gehe ich dann doch lieber einfach in die Natur eine Stunde spazieren oder hör einen Podcast, ist glaube ich auch wesentlich besser, als man macht irgendwie Doomscroll, dass es diese Pausen braucht. Ich glaube, das ist klar, man kann auch gar nichts machen oder nur eine Runde spazieren gehen, macht ja auch Sinn. Aber ich glaube, es ist schon besser, eine Podcast Episode fokussiert eine Stunde ein Thema hören, als du machst wildes Doomscrolling, was ja wirklich auch von psychologischer Seite bewiesen ist, dass das ja gewisse Hormone ausschüttet und so Dinge und Glücksgefühle. Wir wissen ja alle, dass es ein Problem ist und es bestätigt ja irgendwie jeder. Trotzdem ist es gar nicht so leicht davon wegzukommen."
+        },
+        {
+            "start": 1917930,
+            "end": 1959119,
+            "speaker": "A",
+            "text": "Mein größter Productivity Hack, den ich seit einem halben Jahr mache und mich immer wieder neu zwingen muss, weil das vielleicht auch so ein bisschen Heroin ist, wie Wolfgang Instagram, was er gerade beschrieben hat, ist das Handy einfach in einem anderen Raum zu lassen. Also ich habe ein eigenes Büro und jetzt gerade, das ist schon wieder ein Fehler, bei der Podcast Aufnahme, habe ich das Handy so auf dem Schreibtisch liegen. Aber der beste Hack ist, wenn ich das Handy einfach in der Küche liegen habe, weil ich bin im Browser bei Instagram nicht angemeldet, weil wenn ich da drauf gehe auf Instagram im Browser, dann kommt mir so eine Login Seite, gehe nicht wieder weg. So viel Aufwand will ich ja gar nicht betreiben und Das klingt so einfach, aber ich habe echt lange gebraucht, um das zu verstehen. Und es ist mir fast schon peinlich, das zuzugeben."
+        },
+        {
+            "start": 1959119,
+            "end": 1965760,
+            "speaker": "B",
+            "text": "Nein, das geht jedem so. Also da bist du definitiv nicht alleine. Ich hatte mal drüber nachgedacht, mir so ein Handygefängnis zu kaufen."
+        },
+        {
+            "start": 1966640,
+            "end": 1968680,
+            "speaker": "A",
+            "text": "Das habe ich auch gesehen. So eine Box oder so."
+        },
+        {
+            "start": 1968680,
+            "end": 1982330,
+            "speaker": "B",
+            "text": "Faradayscher Käfig. Genau. Der hat vorne eine Zeitschaltuhr drauf. Da kannst du sagen, ich möchte jetzt die nächste Stunde nicht an mein Handy kommen. Und du kommst auch nicht an das Handy, weil erst wenn die Zeitschaltuhr durch ist, dann geht das Ding auf und dann kommst du an dein Handy. Das ist doch noch eine Nummer härter an der Stelle."
+        },
+        {
+            "start": 1982330,
+            "end": 1993930,
+            "speaker": "A",
+            "text": "Apropos Zeit, Dirk. Wie lange hast du gebraucht, bei deinem aktuellen Methoden Mix zwischen Kalender, To Do und Notizen nach deinem aktuellen, ich nenne es mal Produktivitäts Workflow anzukommen?"
+        },
+        {
+            "start": 1994730,
+            "end": 2054560,
+            "speaker": "B",
+            "text": "Mein ganzes Leben, das ändert sich auch immer. Also das ist eine Sache, die im Fluss ist. Ich merke, dass etwas nicht passt, dann passe ich das an. Ich würde auch gerne kurz dazu zu sprechen kommen. Wir denken ja, deswegen bin ich da so gegen. Wir könnten die Zeit managen. Können wir nicht alle. Wir alle haben genau vier und zwanzig Stunden am Tag. An einem Tag im Jahr haben wir fünf und zwanzig Stunden. An einem Tag im Jahr haben wir drei und zwanzig Stunden. Ansonsten haben wir alle vier und zwanzig Stunden am Tag. Und das können wir nicht managen. Wir können da nicht mehr ausmachen. Es geht nicht. Wenn jemand sagt, er hat keine Zeit, dann sagt Mir sind andere Sachen wichtiger. Andere Sachen, die mir andere aufgedrückt haben. Also ich werde fremdpriorisiert durch den Arbeitgeber, durch die Familie oder ich habe mich selbst entschieden, mir andere Sachen wichtiger zu nehmen. Zum Beispiel Instagram als Beispiel. Wenn ich sage, ich habe keine Zeit, heißt das, andere Sachen sind mir aus irgendwelchen Gründen wichtiger. Und ich beschäftige mich seit bestimmt fünf und zwanzig Jahren aktiv mit dem Thema Selbstmanagement. Und seit fünf und zwanzig Jahren ändere ich regelmäßig irgendwas an meinem System."
+        },
+        {
+            "start": 2055280,
+            "end": 2085330,
+            "speaker": "A",
+            "text": "Dieser Ich habe keine Zeit. Und dann die Das stimmt nicht. Du priorisiert nur etwas anderes. Der hat bei mir auch im Freundeskreis schon zu etwas Streit geführt. Das glaube ich sofort, Denn ich habe das auch gesagt, Denn ich denke auch, dass das Faktisch korrekt ist und dann fing es an, ja, aber ich habe ja Kinder und so weiter, sage ich, das verstehe ich ja. Und niemand hat gesagt, du musst jetzt Zeit fürs Angeln haben oder fürs Sport oder sowas, sondern du priorisierst deine Kinder und deine Familie höher, was auch gut ist."
+        },
+        {
+            "start": 2085490,
+            "end": 2087410,
+            "speaker": "B",
+            "text": "Also wollen wir gleich sagen."
+        },
+        {
+            "start": 2087890,
+            "end": 2104170,
+            "speaker": "A",
+            "text": "Ganz genau, was ja auch super ist. Aber genau dieser Punkt hat dann zu Konflikten geführt, weil die andere Person anscheinend dachte, ich mache einen Vorwurf oder so. Wie seht ihr das? Könnt ihr das nachvollziehen oder hattet ihr auch schon mal ähnliche Situationen?"
+        },
+        {
+            "start": 2104170,
+            "end": 2138920,
+            "speaker": "C",
+            "text": "Vor allem als Selbstständiger ist es ja immer ein Riesenproblem, was du priorisierst. Und gerade Privatleben ist da noch mal schwieriger, weil du bist ja irgendwie abhängig, du musst Geld reinbringen, du hast nicht diese geregelten Arbeitszeiten. Es gibt kein Arbeitsinspektorat, Arbeitsamt, die sich da irgendwie darum kümmern, dass du nur deine vierzig Stunden arbeitest oder sechzig oder was es auch immer sind maximal. Und daher kenne ich das sehr wohl und habe das auch in den letzten Jahrzehnten probiert, sehr stark zu ändern und das Private auch einfach dementsprechend zu priorisieren, was Schönes gehört."
+        },
+        {
+            "start": 2139000,
+            "end": 2171020,
+            "speaker": "A",
+            "text": "Und da muss ich mich auch immer und immer wieder dran erinnern und das hat jetzt wieder mit dem Job zu tun, auch mit Engineering Management und so weiter und so fort. Du kannst im Team dich nicht um andere kümmern oder auch nicht in deiner Familie. Du kannst dich auch in deiner Familie nicht um andere kümmern, wenn du dich nicht um dich kümmerst. Weil wenn du selbst nicht funktionierst, kannst du anderen auch nicht helfen. Und das klingt jetzt auf die eine Art egoistisch, aber so meine ich das gar nicht, sondern wenn du nicht mit dir glücklich bist, wie sollst du dann Glück in anderen hervorheben können?"
+        },
+        {
+            "start": 2171500,
+            "end": 2186460,
+            "speaker": "B",
+            "text": "Gibt ein wunderbares Bild dafür. Wenn du Flugzeug fliegst, sollst du immer dir zuerst die Sauerstoffmaske aufziehen, bevor du deinen Sitznachbarn hilfst. Es hilft keinem, wenn du keine Luft mehr bekommst und wenn du nicht mehr dazu kommst, anderen zu helfen, sondern du musst erst dir helfen, damit du anderen helfen kannst."
+        },
+        {
+            "start": 2186540,
+            "end": 2225250,
+            "speaker": "C",
+            "text": "Ich könnte auch noch ein Beispiel drauflegen, das ist die österreichische Variante von dem Ganzen. Wenn du in Weinkellern bist, dann hast du ja da dieses CO Problem und da gibt es wirklich, also früher hat es noch viel mehr Unfälle gegeben, aber es gibt sie immer noch, wo einfach jemand in den Weinkeller geht, umfällt, weil er das ganze CO drinnen hat und was macht die zweite Person? Sie probiert die erste Person zu retten, geht in den Keller, fällt auch um. Und da gibt es wirklich ganze Familiendramen, wo die ganze Familie ausgelöscht wurde, weil alle nachgegangen sind, anstatt sich selber irgendwie zu schützen. Also passiert natürlich nicht nur bei Weinkellern und bei der Feuerwehr ist auch so eine klassische Regel einfach, du musst dich selbst schützen, sonst kannst du die anderen nicht schützen."
+        },
+        {
+            "start": 2225250,
+            "end": 2231890,
+            "speaker": "A",
+            "text": "Ich habe Weinkeller, sorry, aber ich bin so verwirrt. Hör mal, du redest hier mit zwei Leuten aus dem Pott, weißt du was, wir haben einen Kanari und Vogel unter"
+        },
+        {
+            "start": 2231890,
+            "end": 2236210,
+            "speaker": "B",
+            "text": "Tage, womit wir keine Redeployments werden. Und damit sind wir wieder im Thema."
+        },
+        {
+            "start": 2237010,
+            "end": 2247940,
+            "speaker": "C",
+            "text": "Aber das ist ja zum Beispiel eine Kerze ist ja auch so ein Problem. Und ich glaube bei Vögel ist ja dasselbe Problem, dass die mit weniger Sauerstoff auskommen und eigentlich du krepierst, bevor der Vogel oder die Katze auskommt."
+        },
+        {
+            "start": 2248570,
+            "end": 2253890,
+            "speaker": "A",
+            "text": "Nee, nee, nee, nee, nee, Moment. Die Kanarienvogel kratzen eher ab vor der Mensch. So ist die Grundidee."
+        },
+        {
+            "start": 2253890,
+            "end": 2264410,
+            "speaker": "C",
+            "text": "Okay, vielleicht geht es bei den Vögeln, bei der Kerze geht es nicht, weil die Kerze hat glaube ich vierzehn Prozent oder zwölf Prozent Sauerstoff, wo sie noch brennt. Und du als Mensch brauchst halt, keine Ahnung, was es genau sind, sechzehn oder siebzehn oder so."
+        },
+        {
+            "start": 2264570,
+            "end": 2273450,
+            "speaker": "A",
+            "text": "Zugegeben, ich habe noch nie unter Tage gearbeitet, deswegen habe ich auch noch nie einen Kanarienvogel auf der Schulter gehabt, der mit mir unter Tage dann irgendwie angezeigt hat, du solltest hier mal gehen."
+        },
+        {
+            "start": 2273530,
+            "end": 2278030,
+            "speaker": "B",
+            "text": "Aber es ist schon so, du musst schon mit dir selbst im Reinen sein, um jemand anderem helfen zu können. Das geht sonst nicht."
+        },
+        {
+            "start": 2278030,
+            "end": 2311660,
+            "speaker": "A",
+            "text": "Und die beste Art und Weise, wie ich das zumindest für mich mache, ist, ich mache sehr viel Sport und ich denke, man nennt das ja auch im IT Umfeld Touching Grass. Also man geht raus und berührt mal richtiges Gras, nicht nur dieses Digitale, was wir hier alle tun. Und ich mache dann zum Beispiel auch ziemlich viel Sport und ich sage dann teilweise auch Meetings ab, weil wenn dein Hirn dann nicht mehr funktioniert, weil du gerade irgendwie acht Stunden gearbeitet hast oder sowas, dann bringt das ja nichts, weil dann, dann bist du wieder eine Dreiviertelstunde in dem Meeting, trägst mich bei und dann fragst du dich okay, was war das jetzt? Da kannst du auch okay, schick mir"
+        },
+        {
+            "start": 2311660,
+            "end": 2319420,
+            "speaker": "B",
+            "text": "eine Zusammenfassung, berührst gerade einen Punkt, den ich auch noch gerne besprochen wollte. Ich glaube, dass Work Life Balance für Kopfarbeiter ein Irrtum ist."
+        },
+        {
+            "start": 2319500,
+            "end": 2320460,
+            "speaker": "A",
+            "text": "Was meinst du damit?"
+        },
+        {
+            "start": 2320620,
+            "end": 2366870,
+            "speaker": "B",
+            "text": "Wenn ich ein Problem auf der Arbeit habe und der Gong geht und ich verlasse den Arbeitsplatz, nehmen wir mal an, wir würden nicht zu Hause arbeiten, sondern wir würden in irgendeinem Büro arbeiten. Das Problem nehme ich mit. Das Problem endet nicht, wenn ich aus dem Büro rausgehe oder wenn ich, ich habe ja jemanden, bin jetzt gerade im Homeoffice, wenn ich die Tür hinter mir zu mache, habe ich das Problem immer noch und das Problem beschäftigt mich immer noch. Wenn ich im Privatleben Stress habe und im Privatleben meinetwegen mit meiner Frau Ärger habe und wir giften uns an, was zum Glück selten passiert, aber wenn es passiert, dann ist das echt belastend. Es ist ein Irrtum zu glauben, dass in dem Moment, wo ich in mein Büro gehe und in den Arbeitskontext gebe, dass alles, dass mein Kopf rein ist und klar ist und dass ich sofort im Arbeitskontext bin und dass das vor der Tür lasse. Das ist ein kompletter Irrtum. Das kann nicht gehen. So sind wir nicht gebaut."
+        },
+        {
+            "start": 2366950,
+            "end": 2369110,
+            "speaker": "A",
+            "text": "Der Wolfgang nickt, ich meine selbstständig."
+        },
+        {
+            "start": 2370790,
+            "end": 2386950,
+            "speaker": "C",
+            "text": "Ja, es geht. Glaubt, dass es schon grundsätzlich nochmal einen Unterschied gibt zwischen Selbstständigkeit und Anstrengungsverhältnis. Aber es kommt auch immer auf den ganzen Kontext drauf an. Und wenn du ein großes Team hast, hast du vielleicht auch Möglichkeiten, es abzuschieben. Aber grundsätzlich stimmt es natürlich. Meine Frage wäre ja, wenn deine Annahme stimmt, was hat das für Auswirkungen?"
+        },
+        {
+            "start": 2387500,
+            "end": 2429640,
+            "speaker": "B",
+            "text": "Ich glaube, wir müssen uns dessen einfach bewusst sein. Wir müssen uns im Firmenkontext dessen bewusst sein, dass das so ist, dass das Privatleben da eine Rolle spielt. Und da kommen wir wieder zu den Sauerstoffmasken. Wir müssen gucken, dass das Privatleben im Reinen ist, damit wir auch in der Firma im Reinen arbeiten können. Und wir müssen uns umgekehrt auch genauso schaffen abzugrenzen. Wenn wir Probleme haben, müssen wir lernen, mit Problemen umzugehen, die wir nicht sofort lösen können. Das ist ein Lernprozess, der dauert Jahre. Oder dass wir lernen zu delegieren und zu Ja, ich habe es jetzt an den Kollegen übergeben, der kümmert sich schon drum. Wir müssen lernen, dass es dann für mich einen Freiraum im Kopf bedeutet, dass ich mich nicht mehr damit auseinandersetzen muss. Das muss man lernen. Das bekommt man nicht mit der Muttermilch und das ist wirklich nicht einfach."
+        },
+        {
+            "start": 2429960,
+            "end": 2457720,
+            "speaker": "C",
+            "text": "Und wie lernt man das? Ich habe mich das schon öfters gefragt und ich habe das auch schon öfters besprochen mit Leuten. Üblicherweise kommt es irgendwie mit dem Alter, habe ich so das Gefühl, dass einem gewisse Sachen dann einfach scheißegal sind. Oder wie der Andi dann schon mal in einer Episode erzählt hat, wenn halt irgendwelcher Server down ist, als erstes holt man sich mal einen Kaffee und setze ich dann ruhig an dieses Problem ran. Also diese in Österreich würde man sagen, diese Wurstigkeit muss man erstmal lernen. Aber wie lernt man die? Oder ist es einfach das Alter?"
+        },
+        {
+            "start": 2458600,
+            "end": 2506290,
+            "speaker": "B",
+            "text": "Ich bin ja jetzt in der Lage, dass ich älter bin als ihr beide. Ich glaube, das hat auch wirklich viel mit Erfahrung zu tun. Einfach zu merken, dass vielleicht Dinge nicht so heiß gegessen werden, wie sie gekocht werden. Das ist, glaube ich, eine Sache, die man auch lernen muss. Und wenn der Server down ist, dann ist er auch noch down, wenn ich den Kaffee geholt habe. Also das ist einfach so. Und es gibt einen schönen Satz Buch, was ich empfehlen kann. Ihr kennt es vielleicht, dass Wien wartet auf dich oder People im Englischen. Der Satz heiß Menschen unter Druck denken nicht schneller. Also wenn man so viel Stress hat, also Grundmaß am Stress gehört dazu, dass man produktiv ist. Das ist so. Das ist das Jörg Dodson Dodgen Gesetz. Aber wenn der Stress überhandnimmt, dann funktionieren wir nicht mehr so, wie wir sollen. Wir müssen lernen, mit solchen Situationen einfach umzugehen. Wir müssen Möglichkeiten der Stressbewältigung finden oder auch Ja, das geht nur über Erfahrung."
+        },
+        {
+            "start": 2506530,
+            "end": 2545090,
+            "speaker": "A",
+            "text": "Ich glaube, ich glaube, es gibt verschiedene Arten von Stress. Es gibt positiven Stress. Das bedeutet, positiver Stress kann dich sogar zu höherer Leistung befähigen. Dann gibt es negativen Stress. Ich verbinde negativen Stress oft durch Aufgaben, die ich nicht gerne mache, die mir aufgezwungen werden. Dann gibt es natürlich Stresssituationen. Server ist down und wenn du dann gerade aus einer Streit kommst oder negativen Stress hast, dann bringt es ja nichts. Also ich glaube. Und wenn du Wolfgang fragst, wenn du schon fragst, wie man das lernt, ich denke, ab und zu muss man auch im professionellen Umfeld Sachen brennen lassen."
+        },
+        {
+            "start": 2545090,
+            "end": 2578580,
+            "speaker": "C",
+            "text": "Ja, aber die Ruhe musst du ja erstmal haben. Und dieses Verständnis, dass vielleicht, wenn ich jetzt wieder von meiner Selbstständigkeit sprechen kann, von meiner Selbstständigkeit vor zwanzig Jahren, wenn da irgendein Kunde irgendwie gebrüllt hat, dann war ich schon, ich muss das lösen und sofort und schnell und ich muss alles liegen lassen. Und jetzt denke ich mir, ja klar, für den Kunden ist es das Wichtigste, was er gerade hat. Und natürlich macht er Druck. Aber im Endeffekt, wenn man dann ja okay, ich kann es erst morgen lösen oder erst übermorgen und dann sagt der Kunde, ja super, passt. Aber im ersten Moment, wenn man natürlich springt und sagt, ja, ich löse dir sofort, sagt der ja cool, auch cool."
+        },
+        {
+            "start": 2578740,
+            "end": 2581620,
+            "speaker": "A",
+            "text": "Wie hast du es gelernt, was hast du geändert für dich?"
+        },
+        {
+            "start": 2581620,
+            "end": 2639180,
+            "speaker": "C",
+            "text": "Das ist eben meine Frage, ob es wirklich nur das Alter ist oder man vielleicht ist es auch, dass man irgendwann mal eben nicht erreichbar war und dann hat man gemerkt, es funktioniert trotzdem. Oder der Kunde ist gar nicht sauer, wenn man erst zwei Tage später antwortet. Oder vielleicht ist es das, dass man es zufällig lernt oder vielleicht bei anderen sieht, dass es auch möglich ist. Natürlich spricht man mit Leuten, die einem das sagen, aber selber erleben ist natürlich noch mal eine andere Sache. Also es ist natürlich schon zu sehen, was alles möglich ist. Oder wenn ich wieder meinen Feuerwehrkontext mit reinnehmen kann, wenn man halt mal schon Feuer gesehen hat und sieht, was das in fünf Minuten macht oder in fünf Minuten ist vielleicht ein bisschen viel in zwei Minuten, dass da gar nicht so viel passiert, dass man die zwei Minuten sich mal hinsetzen kann, überlegen, nachdenken, vielleicht sogar ein Team Meeting kurz machen kann, einfach schnell wer macht was, wie machen wir es, wie löschen wir dieses Feuer, anstatt irgendwie loszuspringen, Weil in den zwei Minuten wird jetzt nichts passieren, Kritisches und dafür hast du dann eine gute Lösung. Also solche Sachen muss man vielleicht einfach mal erleben, sehen und dann kann man dementsprechend damit umgehen."
+        },
+        {
+            "start": 2639490,
+            "end": 2672150,
+            "speaker": "B",
+            "text": "Ich hatte so eine Frage tatsächlich schon in einem Bewerbungsgespräch, wo ich gefragt wurde, was passiert? Also das Produktionssystem steht, wir sind im Aktienhandel. Jede Minute, die das System nicht läuft, gehen eine Million Franken verloren, was tust du Und ich habe im Bewerbungsgespräch gesagt, ich setze mich hin und denke nach. Dann bin ich gefragt worden, warum. Und da habe ich gesagt, wenn ich über alte Aktionen mache, Kurzschlussreaktionen zeige, kann das sein, dass das System nicht nur fünf Minuten unten ist, sondern mehrere Stunden oder sogar Tage unten ist. Und dann gehen Milliardenbeträge über die Wupper, wird man im Ruhrgebiet sagen."
+        },
+        {
+            "start": 2673030,
+            "end": 2675990,
+            "speaker": "A",
+            "text": "Die Wupper ist ein Fluss, der fließt durch Wuppertal."
+        },
+        {
+            "start": 2676390,
+            "end": 2681110,
+            "speaker": "C",
+            "text": "Ich wollte gerade sagen, Wuppertal kenne ich natürlich mit der Schwebebahn und so kennt man natürlich."
+        },
+        {
+            "start": 2681270,
+            "end": 2704740,
+            "speaker": "B",
+            "text": "Genau, aber das ist wirklich Erfahrungssache. Also ich glaube, das ist wirklich eine Sache, die man lernen muss und genauso wie du das gerade vom Feuer beschrieben hast, das ist eine Sache, die man live miterlebt haben muss und wo man vielleicht auch, ich meine, Juniors sind ja mittlerweile out, die werden ja durch AI ersetzt, aber wo man vielleicht als Junior beim erfahrenen Senior daneben sitzt und sieht, wie der damit umgeht und von dem lernt, wie man mit solchen Situationen zurechtkommen kann."
+        },
+        {
+            "start": 2705220,
+            "end": 2797070,
+            "speaker": "A",
+            "text": "Die ganzen Beispiele, die ihr heranführt, haben aber auch noch einen anderen Zusammenhang, der glaube ich schon fast viel wertvoller ist. Und zwar ist das explizite Kommunikation, dass du der Gegenseite vielleicht ganz kurz übermittelst, jetzt in diesem Fall bei deinem Kunden, Wolfgang, ich habe deine Nachricht gelesen, ich kann mich morgen oder übermorgen drum kümmern. Damit sagst du, okay, ready, ich habe es gesehen, kümmere mich später darum. Aber du gibst der anderen Person auch irgendwie implizit noch mal die Chance gegenzusteuern. Vielleicht ist das doch sehr wichtig für den Kunden, dass das heute Abend gemacht werden muss, aber dann hast du dann hat die andere Person wenigstens, kann halt das noch mal wichtiger machen. Bei dir auf dem Zettel macht das Sinn, Weil ich habe das Gefühl, das ist irgendwie der Zusammenhang in der ganzen Thematik hier auch bei deinem Feuerwehreinsatz. Du stehst vor einem brennenden Haus, jetzt können alle Leute da reinrennen oder alle Leute können ganz kurz zwei Minuten sich besprechen, wer, wann, wie, wer macht das Wasser, wer rennt da rein? Ich weiß nicht, was man alles macht. Ich bin kein Feuerwehrmann, aber weil auf der Arbeit ist immer viel zu viel los. Immer kennt wer ein Team, was ein leeres Backlog hat. Ich glaube nicht. Und da ist die Frage, wenn alles wichtig ist, ist ja scheißegal woran wir arbeiten, da kann ich ja auch würfeln, weil alles ist ja wichtig. Aber es geht ja oft nur darum, dass irgendwer weiß, irgendwelches Team weiß, okay, das kriege ich dann zugeliefert und so weiter und so fort. Und oft sind ja Deadlines, muss ich auch leider zugeben, einfach nur Schall und Rauch, weil das sind dann irgendwelche fiktiven Daten."
+        },
+        {
+            "start": 2797380,
+            "end": 2863300,
+            "speaker": "B",
+            "text": "Also mit dem Backlog ist ein guter Hinweis. Bist du nicht als Teamleiter oder als Product Owner, wenn du in einem agilen Setup unterwegs bist, derjenige, der anfängt, die Sachen zu priorisieren und zwar die Sachen für das Team aufzubereiten, um zu sagen, was in welcher Reihenfolge von wem erledigt werden muss. Und genauso ist es. Also ich war auch mal bei der Feuerwehr, genauso ist bei der Feuerwehr halt auch. Und das ist jemand, der ist dafür verantwortlich, den Leuten zu sagen, was sie zu tun zu lassen haben im Moment. Da rennt keiner kopflos, ohne dass er das Kommando bekommen hat, was er zu tun hat. Und das ist im Firmenkontext genau das Gleiche. Und du bist ja in der Rolle als Teamleiter oder meinetwegen Product Owner, weil du etwas Erfahrung schon mitbringst mit solchen Sachen und weil du diese Kommunikation beherrscht und auch sagen kannst, ich gehe jetzt zu diesem Stakeholder und frage, hör mal zu, du hast mir gesagt, es ist dringend deine Deadline, sagt, ich muss das nächste Woche fertig haben, so wie ich die Sache einschätze, ist der Black Friday noch nicht nächste Woche und du brauchst das dringend für den Black Friday. Stehst du dazu, dass du wirklich den Termin halten musst oder reicht es, wenn wir eine Woche später damit sind? Das ist ja deine Aufgabe in dem Moment dafür zu sorgen, dass das Backlog auch sauber geführt wird."
+        },
+        {
+            "start": 2864020,
+            "end": 2892100,
+            "speaker": "A",
+            "text": "Wie sauber führt ihr denn eure persönlichen To Do Listen, weil das ist ja euer Backlog aus eurem privaten Leben. Wie sauber führt ihr die? Im Getting Things gibt es sowas? Da gibt es dann die Sunday Review oder so, heißt das, man geht da das durch, schmeißt das weg, räumt das auf, plant die nächste Woche und so weiter und so fort. Offen gesprochen, ist eine tolle Sache. Und das mache ich so einmal im Monat oder alle zwei Monate oder so, also jetzt nicht jeden Sonntag. Und da komme ich ab und zu mal ins Schludern, sagen wir es mal so. Kennst du das, Wolfgang Schludern?"
+        },
+        {
+            "start": 2892100,
+            "end": 2950860,
+            "speaker": "C",
+            "text": "Ja, Reviews mache ich eigentlich sehr oft. Was schon ein kleines Problem bei mir ist, ist, dass ich ganz viele todos in meiner Liste habe und das wird dir jetzt freuen, Andi, Ich sehe schon das Grinsen jetzt schon auf deinen Lippen, dass sie selbst nicht mehr weiß, was ich in dem Task gemeint habe, weil ich den so schlecht formuliert habe oder so gerade so am Weg, im Bus, so irgendwas erledigen und schreib so Martin anrufen und teilweise sogar paar Stunden später denke ich, welchen Martin, wen soll jetzt anrufen damit? Was war das jetzt noch mal? Also sowas passiert mir sehr oft, wenn es natürlich Wochen später ist, wo irgendein Task wieder aufpoppt und Martin nicht sauber erfasst, vor allem den Kontext. Das ist das Problem, wenn du ganz viele Kontexte hast, dass du dann den Kontext nicht hast, wenn du es nicht sauber in die Liste gesteckt hast von diesem Kontext. Solche Sachen passieren mir regelmäßig, muss ich zugeben. Und vor allem, wenn ich mobil unterwegs bin. Und das mache ich ganz, ganz oft in mein Remember the Milk. Einfach schnell was eintippen, was mir so kommt. Und das ist halt meistens kurz. Und wenn man das dann nicht extended irgendwann mal in einem Review, dann hat man ein Problem."
+        },
+        {
+            "start": 2950860,
+            "end": 2980040,
+            "speaker": "B",
+            "text": "Dirk Ich kenne die Geschichte mit den Reviews natürlich und ich habe gemerkt, wenn ich meinen Tag wirklich so plane, dass ich mir alle todos aufschreibe für den Tag, die ich an dem Tag erledigen möchte, dass mir die Realität einen Strich durch die Rechnung macht. Weil ein Tag sieht selten so aus, wie ich ihn vorher mir vorgestellt habe. Deswegen bin ich ganz froh, dass ich ein Tool einsetze, was Sachen einfach nicht vergisst. Das ist erstmal wichtig. Und wenn ich an den Punkt komme, Wolfgang, den gleichen Punkt wie du habe ich auch, dass ich einen Task erfasse und nicht sauber pflege und dann weiß ich nicht, was ich damit gemeint habe, dann lösche ich den sofort."
+        },
+        {
+            "start": 2980040,
+            "end": 2980680,
+            "speaker": "A",
+            "text": "Das ist hart."
+        },
+        {
+            "start": 2980840,
+            "end": 2989240,
+            "speaker": "B",
+            "text": "Ja, aber was soll ich damit anfangen? Der füllt nur die Aufgabenliste und ich weiß doch sowieso nicht, was ich da zu tun habe. Also warum soll ich den noch weiter mit mir rumtragen?"
+        },
+        {
+            "start": 2989400,
+            "end": 3062890,
+            "speaker": "C",
+            "text": "Also teilweise kommt mir das wieder, was ich gemeint habe und der Kontext, dann ist es okay. Aber ich mache das auch so, wenn mir das nicht einfällt, dann lösche ich das Ganze. Und da kommt ja eigentlich auch das von Getting things done wieder ins Spiel, dass man ja immer den Next Step definieren sollte. Also ganz genau nicht nur irgendwie in groben großen Tasks, sondern was ist der Next Step? Wo stehe ich? Was habe ich als nächstes zu tun, um das auch leichter konsumierbar zu machen. Dass man also startet mit dem Task, weil wenn es immer so ein großes Thema ist, dann schiebt man das ja immer vor sich hin. Wenn da was steht, der Next Step is einfach nur Person XY anrufen, dann weiß es dauert nur fünf Minuten, das kann ich schnell erledigen. Und so wird normalerweise der Task dann auch besser beschrieben. Aber das muss man natürlich irgendwann machen und das ist ja auch Teil der Review Phase normalerweise, dass man sich, wenn man das nicht hat, dass man dann so ein großes Projekt oder einen größeren Task einfach runterbricht und dann sich überlegt, was ist der nächste Step, den ich zu erledigen habe, wie lange dauert der? Ich weiß meine Tasks auch geschätzte Zeiten zu, dass sie meinen Tag bisschen einplanen kann und dann habe vielleicht ein Estimate von zehn Minuten XY anrufen, weil es sind halt nur zehn Minuten, obwohl es mir nur einen kleinen Teil natürlich weiterbringt, aber das ist dann ein leichter kleiner Happen, den ich leicht konsumieren kann und wegräumen kann sozusagen abhaken."
+        },
+        {
+            "start": 3062970,
+            "end": 3131930,
+            "speaker": "A",
+            "text": "Das Problem ist, was ich da habe, ist die Balance zwischen ich organisiere meine To Do Liste und abarbeite die einzelnen Items, weil du sagtest ja der nächste Schritt ist dann wieder zwei Minuten, fünf Minuten. Wir hatten gerade diese zwei Fünf Minuten Regel gefühlt, mach es sofort so nach dem Motto, wie groß sind deine Pakete da und so weiter. Da habe ich dann immer das Problem, okay, wie granular mache ich das jetzt? Ich verstehe, dass das kleinere Aufgaben einfacher sind anzufangen und dass man dann nicht vor diesem riesen Berg steht. Aber was ich auch habe und das ist jetzt mal was mich sehr sehr interessiert, besonders bei dir Dirk, ich plane meinen Tag und dann verläuft dieser anders und dann habe ich mich einfach overcomited. Ich habe mir zu viel für den Tag vorgenommen, dann werden die bei mir schon als rot markiert, weil die overdue sind, weil ich habe die ja für gestern geschult und dann schiebe ich die weiter und so weiter. Also und irgendwann habe ich auf dieser Liste halt einfach so viele Punkte, dass ich mir schon so ein bisschen Ich sehe diesen Berg an Arbeit, mach mir so ein innerlichen Stress scheiße, dann überlege ich, was habe ich denn gemacht? War ich produktiv oder ne, so. So. Man denkt dann, man kriegt so eine Art Selbstzweifel, man macht sich so selbst ein bisschen Stress. Also wie gehst du auch mental mit"
+        },
+        {
+            "start": 3131930,
+            "end": 3197910,
+            "speaker": "B",
+            "text": "dem Overcommitten, um zu sagen, jeder meiner Aufgaben hat eigentlich ein Due Date, also ein Fälligkeitsdatum und das Fälligkeitsdatum setze ich mir selber. Also es ist von mir selbst gewählt, dass ich zu einem bestimmten Zeitpunkt eine bestimmte Aufgabe gelöst haben möchte. Es sei denn, ich habe äußere Einflüsse, die mir das vorschreiben. Also Monatsendverarbeitung kann ich nicht Mitte des nächsten Monats machen. Also die muss dann schon in der Priorität so hoch sein, dass sie da auch erledigt wird. Und die Dinge, die ich selber priorisiere, die kann ich auch zu anderen Zeiten wieder priorisieren. Also wenn ich sage, ich möchte heute bis Ende des Tages Aufgabe A erledigt haben und ich merke, ich schaffe die Aufgabe A nicht, dann gibt es zwei Möglichkeiten. Ich lasse die einfach so und sehe einfach, wie viele Tage seit dem von mir gewollten Fertigkeitsdatum vergangen sind. Und meine Aufgabenverwaltung Taskwarrior eben, die sorgt dafür, dass die einen Dringlichkeitskoeffizienten bekommt, der dann immer weiter steigt im Laufe der Zeit. Oder ich gucke mir das Ganze an und sage, ich setze ein neues Fertigkeitsdatum. Ich bin ja nicht verpflichtet, wenn ich mir selber Zeiten mache, das auch wirklich zu machen. Das ist ja ein bisschen Selbstkasteiung, einfach zu sagen, eigentlich plane ich das zu dem Zeitpunkt zu machen. Wenn ich es nicht kann, ja dann halt nicht. Und ich glaube, man muss da ein bisschen easy mit sich sein. Also Leben passiert halt."
+        },
+        {
+            "start": 3197910,
+            "end": 3233160,
+            "speaker": "A",
+            "text": "Also ich habe einen sehr hohen Anspruch an mich, auch an meiner Arbeit und man könnte auch sagen, ich bin auch ein Workaholic. Deswegen macht man sich ja schon einen gewissen Druck, weil man verbringt ja die Zeit mit etwas, was man wahrscheinlich auch liebt, hier Podcasting und allem drum und dran. Und der Wolfgang und ich haben ja auch Ambitionen. Du ja auch, du hast zwei Podcast Chipst du ja auch regelmäßig. Und da macht man sich natürlich schon Druck, wenn man es nicht schafft und so weiter. Ich weiß jetzt nicht. Und das könnte man mal als Hörerfrage machen, was passiert eigentlich, wenn wir eine Episode einfach mal an einem Mittwoch oder an einem Donnerstag releasen und nicht an einem Dienstag seit vier Jahren. Wird das überhaupt Wer merkt? Man weiß es nicht."
+        },
+        {
+            "start": 3233160,
+            "end": 3245140,
+            "speaker": "C",
+            "text": "Nein, das geht überhaupt nicht. Da bricht die Welt zusammen. Hallo, da kommen die Unwetter und die Blitze werden dich heimsuchen, Andi. Und dein Haus wird abbrennen und alles. Also da wird die Welt untergehen. Das kann dir jetzt schon garantieren."
+        },
+        {
+            "start": 3245140,
+            "end": 3252060,
+            "speaker": "A",
+            "text": "Der Wolfgang hat recht, es wird nichts passieren. Ich Wolfgang, das lassen wir nicht zu. Das machen wir. Wir schippen am Dienstag."
+        },
+        {
+            "start": 3252540,
+            "end": 3303260,
+            "speaker": "B",
+            "text": "Wir haben ja immer genug zu tun. Also wir haben uns im Vorgespräch mal darüber unterhalten, dass wir viele Sachen auf die To Do Liste nehmen, die wir eigentlich irgendwann mal tun wollen. Und meine Aufgabenverwaltungs App hat sogar den Wait someday. Also ich will die irgendwann mal tun. Dann wird es halt auf Ende des Zeitstempels gesetzt. Dann kann ich dann irgendwann gucken, welche alle auf Ende des Zeitstempels sind. Dann kann ich die irgendwann mal machen. Aber ganz ehrlich, davon habe ich mich verabschiedet. Ich habe immer genug zu tun. Ich bin sogar so weit, dass ich meine Ich habe eine Bookmark Verwaltung, die ich selber hoste. LinkedIn heißt, die ist auch Open Source. Ich werde mich von der verabschieden, weil wenn ich irgendeine Webseite suche, suche ich auch wieder aufs Neue mit der Suchmaschine. Also ich guck ganz, ganz selten in diese Bookmap Verwaltung. Eigentlich frisst die nur Brot. Die brauche ich eigentlich nicht. Ich gucke da so selten rein. Entschuldigung bitte, ich hab dich gerade fast unterbrochen."
+        },
+        {
+            "start": 3303260,
+            "end": 3330370,
+            "speaker": "A",
+            "text": "Bedeutet das, du hast jetzt keinen Inspirationsspeicher oder sowas? Jeder hat von uns schnelle Ideen, Diese Man müsste mal Liste, Das wär doch mal toll, das auszuprobieren. Und natürlich ab und zu Du hast genug zu tun, Ich verstehe das. Aber ab und zu willst du auch einfach mal explizit was anderes machen. Du willst experimentieren. Du willst mal von mir aus Vibe Code, der Dirk jetzt mal was. Das ist ja dann diese Man müsste mal Liste, Inspiration, dieses Spaß haben, dieses auch ein bisschen dazulernen. Also wo packst du all diese Sachen hin?"
+        },
+        {
+            "start": 3330450,
+            "end": 3346210,
+            "speaker": "B",
+            "text": "Wenn ich Zeit habe, gehe ich mit den Hunden raus, gehe eine Runde. Und wenn ich von dem Spaziergang zurück bin, weiß ich zwanzig Sachen, die ich gerne machen möchte, Das brauche ich nicht auf einer Liste haben. Ehrlich, Was bringt dir das, auf einer Liste zu haben oder anders Was passiert, wenn du dich nie darum kümmerst, was auf der Liste ist."
+        },
+        {
+            "start": 3346290,
+            "end": 3393330,
+            "speaker": "A",
+            "text": "Genau, das Vorgespräch. Sollte man eine Irgendwann mal Liste haben oder wie haben wir es genannt? Ja, oder Someday Liste. Genau. Und der Dirk war dagegen und ich war dafür. Ich habe solche Listen. Jetzt muss ich leider ehrlich sein. Ich schreibe da was drauf und dann mache ich einmal im Monat oder anderthalb Monate irgendwann, wenn ich Lust und Zeit habe, mache ich mir einen Wein auf, setze mich in den Garten und dann mache ich da mal ein Review und dann gehe ich auch durch diese Irgendwann mal Liste und dann merke ich, wie lange ein einzelnes Ding da schon drauf steht und dann schmeiße ich es weg. Aber der Unterschied Ich schmeiße es explizit weg, nachdem ich realisiert habe, ich werde es eh nie machen. Und das habe ich so mehr der innere Frieden mit mir. Ich bin noch nicht so weit und noch nicht so erwachsen wie du, Dirk, dass ich das gar nicht erst darauf schreiben kann."
+        },
+        {
+            "start": 3393410,
+            "end": 3399010,
+            "speaker": "B",
+            "text": "Du, es gibt kein richtig oder falsch. Dein Weg ist vielleicht anderer als meiner und es gibt kein richtig oder falsch."
+        },
+        {
+            "start": 3399010,
+            "end": 3453370,
+            "speaker": "C",
+            "text": "Es gibt ja so diesen Wenn etwas wichtig ist, wird es mich schon wieder erreichen. Und das ist ja mit Ideen auch so. Wenn die Idee nicht automatisch wiederkommt, dann wird es keine gute Idee sein. Aber was schon oft der Fall ist, dass die Idee wieder aufpoppt und ich habe mir doch mal schon Gedanken gemacht zu dieser Idee, dann kann ich in meiner Ideenliste nachschauen, was habe ich dann schon alles runtergeschrieben zu dieser Idee, damit ich diesen Schritt nicht wiederholen muss. Das ist dann teilweise schon fein. Aber neun und neunzig Prozent von dieser Ideenliste werden nie wieder irgendwie verwendet. Das ist bei mir genauso. Aber wenigstens habe das irgendwo erfasst und ich fühle mich wieder an die da auch wohler, wenn das irgendwo steht. Aber sonst denke ich mir auch auch wenn ich irgendwelche Tasks zwanzigste Mal weiter verschoben habe, bin ich schon schwer am Überlegen, okay, kann ich es nicht einfach löschen? Und meistens kann man es auch einfach löschen, weil wenn man schon zwanzig Mal weiter verschoben hat und das monatelang rausgezögert hat, ist es wahrscheinlich einfach irrelevant."
+        },
+        {
+            "start": 3453370,
+            "end": 3484510,
+            "speaker": "B",
+            "text": "Möchte an der Stelle eine Brücke zu einem anderen Phänomen sagen. Und zwar machen wir ja viele Notizen. Wir wollen ja alles wiederfinden, was wir jemals notiert haben und was ich für mich bemerkt habe, ist, dass ich acht und neunzig neun und neunzig Prozent meiner Notizen nie wieder angucke, dass ich Sachen aufschreibe und nie wieder angucke. Ich habe eine Bookmark Liste, in der Bookmark Verwaltung sind vielleicht zwei tausend Bookmarks. Und wenn ich mal wirklich auf die Idee komme, dass ich einen Bookmark aus dieser Liste brauche, weil ich weiß, ich habe den irgendwann mal in dieses Bookmark Tool eingetragen, dann bekomme ich einen ER zurück, weil es die Seite nicht mehr gibt."
+        },
+        {
+            "start": 3484820,
+            "end": 3522980,
+            "speaker": "A",
+            "text": "Ich finde das so schön, dass ich nicht der Einzige bin. Ich habe mich auch lange damit auseinandergesetzt, wo packe ich denn meine Notizen hin? Denn ich hatte mal ganz viele Markdown Dateien auf meiner Festplatte, dann habe ich mal welche in Google Drive gehabt, dann habe ich mal hier so ein kleines Notizenbuch gehabt, also was physisches, diese kleinen Bücher halt. Dann habe ich irgendwo was noch in Word Dokumente auf meinem NAS, dann habe ich noch was in meiner Notiz. Also ich hatte fünf, sechs, acht Spots und irgendwann habe ich versucht, die ganzen Sachen zu konsolidieren und irgendwann habe ich gesagt, ich schau doch da eh nicht rein und da hilft mir auch keine gute Suchmaschine. Wolfgang, wie machst du das? Hast du überhaupt Notizen?"
+        },
+        {
+            "start": 3522980,
+            "end": 3571780,
+            "speaker": "C",
+            "text": "Ganz wenige. Ich habe natürlich Meeting Notizen, aber so diese Knowledge Base habe ich noch kein sinnvolles Tool gefunden. Teilweise Markdown Dateien, irgendwelche Google Docs Dateien, Obsidian. Es gibt ja so Tools, die man dann nutzen kann und wo man auch verlinken kann und irgendwelche Tagging Möglichkeiten habe ich aber auch in meiner Nextcloud irgendwie Ordner, wo ich so Material, Books, Papers, Whitepapers und so Zeug reinknalle, Schau mir das Zeug an. Zu neun und neunzig Prozent nicht. Und man muss ja auch dazu sagen, gerade jetzt, wenn man jetzt an LLMs und so denkt, man ist ja auch so schnell einfach eine Prompt rein zu sprechen meistens, dass das wahrscheinlich schneller ist und die besseren Ergebnisse bringt, als wenn ich irgendwas probiere rauszukramen, was ich nicht irgendwo mal vor zwei Jahren irgendwelche veralteten Daten oder so irgendwo gespeichert."
+        },
+        {
+            "start": 3571860,
+            "end": 3603920,
+            "speaker": "A",
+            "text": "Ich habe mal Notion ausprobiert und was ich da immer das Problem hatte, ich finde das super. Du kannst ja Tabellen machen und kannst du Dokumente mit Tags und dann Cross verweisen und pipapo, alles super. Nur ich habe nie die optimale Struktur für meine Notizen gefunden, weil ich habe immer das, was ich gesucht habe. Also ich habe was eingegeben, dann habe ich das getaggt und dann später einen Monat habe ich das wieder gesucht und habe ich das unter einem anderen Tag gesucht. Also ich habe nie die Struktur gefunden, die wirklich für mich funktioniert hat. Und im Endeffekt war es dann wie bei Dirk, ich schmeiß dann die Suchmaschine wieder an oder ähnlich. Also ich habe es einfach weggelassen."
+        },
+        {
+            "start": 3604160,
+            "end": 3688660,
+            "speaker": "C",
+            "text": "Aber ich kenne auch ganz viele Leute, die super viel Knowledge verwalten, Ob die das sinnvoll nutzen, müsste man sie fragen. Aber grundsätzlich gibt es schon Leute, die das machen. Es gibt, glaube ich, auch ganz viele Leute, so wie wir auch, aber die es noch viel, viel strukturierter machen und dann auch nie ansehen, aber ein gutes Gefühl dabei haben, ist ja auch nichts Schlechtes dabei. Und wie der Dirk sagt, ganz viele Notizen schaut er nie an. Es ist ja auch so dieses Runterschreiben und nochmal durchgehen, auch bei einem Meeting und so, ist ja auch relativ wertvoll, mal das Meeting nochmal Revue passieren zu lassen. Das sehe ich auch einen großen Nachteil bei diesen automatisch transkribierten Meeting Notes. Die sind zwar sehr cool, sind meistens zu detailliert, liest man dann gar nicht und man hat eigentlich nicht mehr diesen Merkeffekt, den man sonst hat, wenn man irgendwie Notes noch mal durchliest oder runterschreibt oder extended oder nochmal sauber formatiert, weil man ja dann wirklich auch viel aufnimmt und sich das ja dann merkt beim Durchgehen noch einmal. Und das hat ja auch große Qualität. Also die Leute, die einfach irgendwas immer schreiben, wirklich so mit Hand, Andi, kennst du vielleicht nicht mal, also so ohne Tastatur, so mit Stift und so, Stift und Block. Andy streckt gerade ganz viele Post its in die Kamera, wo er irgendwas handschriftlich aufgeschrieben hat. Das ist ja auch ein Prozess, wo man selber einfach noch mal was lernt, reflektiert, abspeichert. Und alleine für diesen Zweck macht es ja schon Sinn, irgendwas niederzuschreiben, auch wenn man das nie mehr ansieht. Man hat es mal niedergeschrieben und hat es gefestigt im Kopf, dann im Gehirn drin."
+        },
+        {
+            "start": 3688820,
+            "end": 3704180,
+            "speaker": "B",
+            "text": "Das ist vielleicht der gute Punkt, dass man Sachen, die man notiert hat, besser behält. Guter Punkt. Und wenn wir acht und neunzig oder neun und neunzig Prozent der Notizen nicht mehr angucken, ist ja die große Kunst zu sagen, welche zwei Prozent oder welches Prozent behalte ich dann noch. Und ich glaube, das ist die eigentliche Schwierigkeit, die man entscheiden muss."
+        },
+        {
+            "start": 3704260,
+            "end": 3705300,
+            "speaker": "A",
+            "text": "Wie entscheidest du das?"
+        },
+        {
+            "start": 3705460,
+            "end": 3712950,
+            "speaker": "B",
+            "text": "Gar nicht. Ich mache weiter Notizen und hoffe, dass ich das, was ich wirklich mal brauche, auch auch irgendwie schon mal notiert habe."
+        },
+        {
+            "start": 3713190,
+            "end": 3738530,
+            "speaker": "A",
+            "text": "Ich glaube, wir kommen zu einem Punkt, den wir fast noch gar nicht hatten, und zwar dem Warum des Ganzen. Warum investieren wir überhaupt Zeit in die Zeitverwaltung, in das Produktivitätsmanagement, in die Selbstverwaltung? Weil wir haben ja hoffentlich alle irgendwie Ziele und Gewohnheiten oder wollen neue Gewohnheiten haben. Also warum, Dirk, investierst du so viel Arbeitszeit, Lebenszeit in die Optimierung deiner Aufgaben?"
+        },
+        {
+            "start": 3738850,
+            "end": 3794390,
+            "speaker": "B",
+            "text": "Weil ich Zeit für das Wesentliche gewinnen möchte. Ich habe früher alles selbst gehostet, weil ich es kann, also auch Mail, weil ich es kann. Und dann irgendwann habe ich gesagt, ich möchte mich nicht wieder mit dem x ten Spam Blocker rumschlagen müssen, der meine IP Adresse auf irgendeine Spamliste genommen hat. Dann habe ich das outgesourcen, habe gesagt, das macht jetzt ein Provider für mich. Ich möchte Zeit für Inhalte haben und nicht Zeit für Verwaltung an sich. Aber um Zeit für Inhalte zu haben, muss ich mich mit der Verwaltung einmal auseinandergesetzt haben. Ich muss ja eine Methode finden, die mehr hilft, meinen Alltag zu bewältigen oder mehrere Methoden, Methoden Mix an der Stelle. Und wie wir gerade schon besprochen haben, ich schmeiße dann einfach mal eine Aufgabe weg. Das ist bei mir jetzt drin, wenn ich merke, dass ich nicht mehr weiß, dass ich Martin anrufen wollte, was ich mit dem besprechen wollte, um am Beispiel von Wolfgang zu bleiben. Ich schmeiß die Aufgabe dann einfach weg. Bis jetzt hat sich das noch nicht gerecht. Das ist meine Möglichkeit der Selbsthygiene an der Stelle und mich nicht überfordern zu lassen, was so im Alltag passiert."
+        },
+        {
+            "start": 3794470,
+            "end": 3797310,
+            "speaker": "A",
+            "text": "Wolfgang, was ist dein Treiber? Warum machst du die ganze Thematik?"
+        },
+        {
+            "start": 3797310,
+            "end": 3869240,
+            "speaker": "C",
+            "text": "Ich hoffe immer noch, dass ich mehr schaffe und mehr Zeit habe. Ob das funktioniert, bin ich mir nicht so sicher, Aber ich glaube, wenn ich es nicht machen würde, wäre es noch schlimmer. Also ich probiere das Beste daraus zu machen, aber glaube schon, dass gewisse Sachen natürlich schon Vorteil hat, wenn man einfach, ich sage jetzt mal, verlässlicher auftreten kann oder auch wenn man selbstständig ist, dass gewisse Sachen einfach funktionieren, dass man die nicht vergisst. Solche Dinge spielen da ja auch noch eine große Rolle. Es geht ja gar nicht darum, dass sie möglichst viel erledige oder mehr unterbringen, obwohl es immer mein Wunsch ist und gleiche mit AI und LLMs. Alles wird jetzt automatisiert. Aber das einzige Problem, was jetzt habe, ist, dass ihr ungefähr zwanzig Bull Requests oder zwanzig Ergebnisse kann ja von dem Prompt auch sein, die herumliegen und die eigentlich reviewen müsste. Also jetzt ist halt das der neue Bottleneck. Also ich versuche natürlich mehr Sachen unterzubekommen, aber es hat natürlich auch andere Qualitäten, wenn es um Außenwirkung geht oder dass gewisse Sachen einfach auch nicht vergessen werden. Und das ist mir persönlich einfach auch sehr wichtig, dass man dementsprechend auftritt und ein verlässlicher Partner ist. Und gerade in der Selbstständigkeit ist das glaube ich schon noch mal ein Ding, wo man sich hervorheben kann, weil die Handwerker, die man so kennt, denen man wochenlang hinterherläuft, sowas will ich halt einfach nicht sein."
+        },
+        {
+            "start": 3869320,
+            "end": 3872360,
+            "speaker": "A",
+            "text": "Dirk, hast du das Gefühl, du bekommst mehr geschafft als ohne?"
+        },
+        {
+            "start": 3872440,
+            "end": 3877510,
+            "speaker": "B",
+            "text": "Ja, ich glaube, ich könnte das, was ich auch neben der Arbeit alles mache, nicht machen, wenn ich nicht gut organisiert wäre."
+        },
+        {
+            "start": 3878140,
+            "end": 3888580,
+            "speaker": "A",
+            "text": "Wenn du dir eine wirklich nur eine Sache rauspicken würdest, was würdest du sagen hat den größten Impact in deinem Mix? Du darfst eine Sache behalten. Welche willst du nehmen?"
+        },
+        {
+            "start": 3888580,
+            "end": 3894380,
+            "speaker": "B",
+            "text": "Auf jeden Fall alles, was sich in drei Minuten erledigen lässt, sofort zu machen. Das war ein Gamechanger für mich."
+        },
+        {
+            "start": 3894380,
+            "end": 3894860,
+            "speaker": "A",
+            "text": "Warum?"
+        },
+        {
+            "start": 3895020,
+            "end": 3916930,
+            "speaker": "B",
+            "text": "Weil die Zeit, die ich brauche, eine Aufgabe so zu erfassen, dass ich später noch weiß, was ich da tun möchte. Ich bleibe gerne bei dem Martin anrufen und da einfach auch Kontext zuzugeben und zu sagen, was ich mit Martin besprechen möchte und in welchem Kontext das ganze Ganze passiert war, weil das Ganze und das Verwalten dieses To Do Items mich mehr Zeit kostet, als das eben schnell zu erledigen."
+        },
+        {
+            "start": 3917330,
+            "end": 3941120,
+            "speaker": "A",
+            "text": "Wie gehst du mit Energiemanagement um bei diesen Aufgaben? Denn ab und zu sind ja nicht alle Aufgaben Aufgaben, wo du wirklich Lust drauf hast. Und besonders bei diesen fünf, sechs Minuten Dingern, da habe ich einfach gar keine Energie, gar keinen Kopf zu, das zu machen. Und machst du dann so Eat the Frog Technik und einfach Abfahrt oder Also zwingst du dich durch Oder hast du da irgendwie ein anderes Mittel für?"
+        },
+        {
+            "start": 3941120,
+            "end": 3978530,
+            "speaker": "B",
+            "text": "Also ich bin ja ein typischer Sysadmin, von daher telefonieren wir alle nicht gerne, aber ich habe lernen müssen, dass das Telefon manchmal auch eine sinnvolle Möglichkeit ist, Kommunikation auch kurz zu halten, um solche Sachen zu machen. Ich nehme mir dann schon mal Zeit und sage, ich mache jetzt in der nächsten Stunde nur Telefonanrufe. Es gehört auch ein bisschen Disziplin dazu. Natürlich, natürlich. Also ich kann nicht nur das machen, was mir Spaß macht. Ich sag mal, ein Teil meines Gehaltes ist Schmerzensgeld, der Teil ist variabel. Auch im Arbeitskontext mache ich nicht nur Dinge, die mir Spaß machen, da mache ich auch Sachen, die ich machen muss. Und ehrlicherweise versuche ich die unangenehmen Sachen so schnell wie möglich zu machen, damit sie weg sind, damit ich mich auf das konzentrieren kann, was Spaß macht."
+        },
+        {
+            "start": 3978610,
+            "end": 4006100,
+            "speaker": "A",
+            "text": "Und da sprichst du einen Punkt an, wo ich auch ab und zu ein Problem mit habe, und zwar das Hinterfragen, ob dieser Task, den ich hier gerade noch mache, noch Sinn macht. Also ich sag mal, militärisches Abarbeiten. Ich habe ja eine To Do Liste und die habe ich mir ja irgendwann mal erstellt von teilweise wiederkehrenden Aufgaben. Also das ist kein Witz. Ich habe jetzt, ich habe da auch Müll rausbringen drauf und so, ich habe Katze füttern. Also ich habe da echt viel drauf,"
+        },
+        {
+            "start": 4006180,
+            "end": 4008340,
+            "speaker": "C",
+            "text": "so Zähneputzen oder so. Geht, geht."
+        },
+        {
+            "start": 4009060,
+            "end": 4024480,
+            "speaker": "A",
+            "text": "Das geht noch, das geht noch. Aber ich habe da zum Beispiel jeden Dienstagmorgen um sieben uhr Pop dann To Do auf Social Media von der neuen Engineering Kiosk Podcast Episode machen. Eigentlich brauche ich den Task nicht mehr, weil ich mache das seit vier Jahren."
+        },
+        {
+            "start": 4024640,
+            "end": 4046470,
+            "speaker": "C",
+            "text": "Aber du kannst ja dann einen Task abhaken und das gute Gefühl hast du ja nur, wenn du da einen Task erstellt hast und eigentlich mir schon klar du freust dich schon immer am Dienstag in der Früh zu sehen. Was hat der Wolf jetzt für einen Titel vergeben? Diese Podcast Episode hast du ja auch schon mal erzählt. Also du kannst wahrscheinlich sogar schlecht schlafen, weil du dich schon so freust, aber am Ende hast du diese, diesen Glücksmoment, den Task abzuhaken."
+        },
+        {
+            "start": 4046470,
+            "end": 4057870,
+            "speaker": "A",
+            "text": "Ja, ja, aber das kann halt dann so weit führen, dass es dann halt schon irgendwie ab und zu mal auch, zumindest habe ich das Problem, ich weiß nicht, ob ihr das auch so habt, dass ich zu stark in die Disziplin verfalle und militärisches Abarbeiten betreibe."
+        },
+        {
+            "start": 4058510,
+            "end": 4060430,
+            "speaker": "B",
+            "text": "Muss manchmal sein, ist halt so."
+        },
+        {
+            "start": 4060750,
+            "end": 4127720,
+            "speaker": "C",
+            "text": "Ich glaube, was aber da schon wichtig ist und darum finde ich dieses Review auch so wichtig, was ja auch von Getting Things Done kommt, dass du mal so raus zoomst aus deiner normalen Hamsterradwelt, dass du wirklich eben am Ende der Woche oder einmal pro Monat einfach auf eine andere Ebene gehst und sagst, okay, wo stehen meine Projekte, wo steht mein Leben? Klingt jetzt bisschen überspitzt, aber dass man einfach Bauebenen höher geht und einfach schaut, okay, wo stehe ich gerade, sollte ich mal was Kreativeres machen, wie gehe ich weiter? Vielleicht auch auf die Projekte, bin ich noch am richtigen, Fahrt überhaupt in dem Projekt, geh nur in die richtige Richtung in Richtung Vision. Solche Dinge, dass man die einfach regelmäßig macht, um eben aus dem Hamsterrad überhaupt mal rauszukommen, um die Notbremse zu ziehen im Falle, wenn man mal sagt, okay das ist einfach zu viel Hamsterrad, ich muss jetzt was automatisieren oder ich muss die Handbremse ziehen, ich muss zu meinem Chef gehen und sagen, das ist zu viel Hamsterrad, ich mache nur mal dasselbe. Also die Dinge sind glaube ich einfach wichtig und die kann man eigentlich nur, wenn man mal in einer ruhigen Phase irgendwie so eine Zoomstufe zumindest höher geht und das nennt sich für mich Review."
+        },
+        {
+            "start": 4127720,
+            "end": 4134280,
+            "speaker": "A",
+            "text": "Du sagst das so einfach, aber ich finde zwischen den Zoomstufen hin und her zu springen, das ist unglaublich schwierig."
+        },
+        {
+            "start": 4134440,
+            "end": 4137800,
+            "speaker": "C",
+            "text": "Ja, dass es leicht ist, habe ich nie behauptet. Ich hab nur gesagt, es ist wichtig"
+        },
+        {
+            "start": 4139000,
+            "end": 4140840,
+            "speaker": "B",
+            "text": "vielleicht an der Stelle ein Lösch doch"
+        },
+        {
+            "start": 4140840,
+            "end": 4144520,
+            "speaker": "A",
+            "text": "auch mal eine Aufgabe und dann schaue ich was passiert, was hinten runterfällt oder was."
+        },
+        {
+            "start": 4144600,
+            "end": 4161280,
+            "speaker": "B",
+            "text": "Nein, aber du hast ja die Aufgabe. Als du die Aufgaben erfasst hast, hast du ja bestimmte bestimmten Grund gehabt, weshalb du die Aufgabe erfasst hast und es könnte ja im Rahmen eines Reviews für dich selber herauskommen, wenn du dir morgens deinen Tag anguckst und was du davor hast, kann ja rauskommen, dass das, was zu der Aufgabe geführt hat, gar nicht mehr da ist."
+        },
+        {
+            "start": 4161600,
+            "end": 4170400,
+            "speaker": "A",
+            "text": "Achso, ne, das tue ich ab und zu. Nur da fällt es mir selbst auf die Füße, dass ich den Review halt nicht jeden Sonntag mache, wie Getting Things dann aus dem Lehrbuch, sondern jeden Monat."
+        },
+        {
+            "start": 4170880,
+            "end": 4181540,
+            "speaker": "C",
+            "text": "Ja, wobei bei deinem Projekt machst du es wahrscheinlich auch öfters oder jetzt im Firmenkontext, wenn du schaust, wo stehen wir im Projekt, was sind die wichtigsten Tasks, machst du es auch nicht irgendwie einmal pro Monat oder so Höchstwahrscheinlich, ne?"
+        },
+        {
+            "start": 4181780,
+            "end": 4184740,
+            "speaker": "A",
+            "text": "Da mache ich es natürlich schon wöchentlich und öfters und so weiter."
+        },
+        {
+            "start": 4184900,
+            "end": 4185780,
+            "speaker": "C",
+            "text": "Ist ja auch ein Review."
+        },
+        {
+            "start": 4185780,
+            "end": 4231920,
+            "speaker": "A",
+            "text": "Ja, das ist schon ein anderer Kontext, weil ich meine bei der Arbeit, ich bin Arbeitnehmer, ich helfe irgendwem einen anderen Traum zu verwirklichen, da kriege ich Geld für, um mein anderes Leben zu finanzieren, nämlich mein privates Leben. Also und obwohl Energie muss ich auch im Job managen. Also ja, stimmt schon, aber ich habe das Gefühl, im Job grinde ich mehr so nach dem Motto mit Energiemanagement und Eigendisziplin als in meinem privaten Leben, Denn im Job habe ich natürlich auch ziemlich viele Aufgaben, die sind für mich jetzt nicht so wichtig, aber für meinen Chef oder für die Führungsriege, dann ist das so, man müsste mal oder wir müssen das jetzt hier mal machen, das natürlich dann im privaten Leben nicht so. Im privaten Leben habe ich natürlich andere Gestaltungsspielräume, nenne ich es mal. Da bin ich ja mein eigener CEO, wenn du so möchtest."
+        },
+        {
+            "start": 4232000,
+            "end": 4258100,
+            "speaker": "C",
+            "text": "Aber umso wichtiger sind diese Reviews meiner Meinung nach. Also auch wenn du jetzt als CEO mit deinem Sea Level einmal pro Jahr da die Vision durchgehst und irgendwie einen Züricher Seefaster und irgendwie Fine Dining machst und dir überlegst, wie du die Firma weiterbringst, das solltest du ja im privaten Leben auch machen und irgendwas in diese Richtung. Und dann ist es halt vielleicht ein Sano Besuch oder ein Spa oder ein Spaziergang oder eine Bergtour oder was es dann auch immer ist."
+        },
+        {
+            "start": 4258500,
+            "end": 4281120,
+            "speaker": "A",
+            "text": "Ja, es ist auf jeden Fall immer hart. Also weil ich habe das Problem oder nicht das Problem, das Gefühl, wenn man Selbstverwaltung und Zeitplanung und Produktivitätsmanagement und Zeitmanagement macht, arbeitet man an sich selbst und an sich selbst zu arbeiten, dazu gehört halt auch, sich Sachen einzugestehen, das war eine tolle Sache, aber vielleicht wird es halt einfach nichts."
+        },
+        {
+            "start": 4282320,
+            "end": 4313370,
+            "speaker": "B",
+            "text": "Mir ist gerade noch eine Sache durch den Kopf gegangen. Du hast gesagt, dass du in deiner To Do Liste drinstehen hast, dass du jeden Dienstag morgens um sieben uhr das Social Media für Engineering Kiosk machst und dass du das eigentlich schon als Routine hast und dass du den Task eigentlich nicht mehr brauchst. Dann lösch ihn Doch worauf ich eigentlich raus wollte, ist die Tatsache, dass wenn du Sachen zur Routine werden lässt, also wenn du keinen Habit Tracker an der Stelle brauchst, keinen Gewohnheitstracker brauchst, dann ist es keine Aufgabe mehr und dann braucht ihr auch nicht in einem Aufgabenverwaltungstool zu sein."
+        },
+        {
+            "start": 4313610,
+            "end": 4316440,
+            "speaker": "A",
+            "text": "Splittest du das ein hundert Prozent? Also sagst du, bist du da ganz strikt?"
+        },
+        {
+            "start": 4316830,
+            "end": 4320750,
+            "speaker": "B",
+            "text": "Ja, wenn ich Sachen in Gewohnheit habe, dann schreibt mir die natürlich nicht mehr auf, klar."
+        },
+        {
+            "start": 4320830,
+            "end": 4329870,
+            "speaker": "A",
+            "text": "Aber nutzt du in irgendeiner Art und Weise so einen Habit Tracker, dass du dann zum Beispiel sagst, auch so Gamification Elemente wahrnimmst, so nach dem Du machst jeden Tag fünf Liegestütze und hast jetzt einen Streak von dreiig Tagen?"
+        },
+        {
+            "start": 4330270,
+            "end": 4348940,
+            "speaker": "B",
+            "text": "Nein, aber nehmen wir ein Beispiel. Ich mache immer eine Wochenplanung. Jeden Montagmorgen für die Arbeit gucke ich mir den Kalender an und überlege mir, was in der nächsten Woche ansteht, Überleg mir, mit welchen Leuten ich sprechen muss und wann ich mit den Leuten sprechen muss. Das ist mittlerweile so in Fleisch und Blut übergegangen, dass ich die Aufgabe jetzt mittlerweile gelöscht habe, weil ich das eh jeden Montag mache."
+        },
+        {
+            "start": 4348940,
+            "end": 4371740,
+            "speaker": "C",
+            "text": "Ich sehe das auch so, wenn es dann automatisch passiert, dann macht es überhaupt keinen Sinn und dann hat man auch gar nicht mehr dieses Glücksgefühl, dass man irgendwas erledigt hat, wenn es so absolute Routine ist. Und dann fliegen bei mir diese Dinge eigentlich auch raus. Also man könnte fast sagen, meine To Do Liste sind eher so die unangenehmen Dinge, wo man aufmerksam gemacht werden muss, dass man sie zu tun hat. Die Sachen, die automatisch gehen und an denen man Spaß hat, die sind selten in meiner To Do Liste."
+        },
+        {
+            "start": 4371740,
+            "end": 4397990,
+            "speaker": "A",
+            "text": "Aber da gibt es ja auch das Konzept von Eat the Frog. Ich weiß nicht, ob ihr das kennt. Und zwar, dass ihr am Tagesanfang die Aufgabe macht, auf die ihr am wenigsten Lust habt, bzw. Die am beschissensten ist, weil dann können keine beschissenen Aufgaben mehr am Tag kommen. Also da muss man sich dann einmal durchbeißen und ich hasse dieses Konzept, aber ich liebe dieses Konzept, so eine Hassliebe, weil das ist so einfach. Das ist so richtig. Ich muss mich jedes Mal erneut zwingen."
+        },
+        {
+            "start": 4397990,
+            "end": 4430850,
+            "speaker": "B",
+            "text": "Das Spannende ist, das kannst du nur tun, wenn du Kontrolle über deine Zeit hast, wenn du Meetings hast. Also wenn dein Arbeitstag schon mit Meetings beginnt, morgens um acht oder um sieben oder um sechs oder was, wann auch immer und dann isst du den Frog vielleicht nach dem Mittagessen und dann bekommt er die vielleicht sehr schlecht. Vielleicht muss man dann den Frosch auf den nächsten Tag schieben. Aber wir haben ja halt in unseren Firmenkontexten nicht oder als Selbstständiger erst recht nicht volle Kontrolle über unsere Zeit. Das heißt, wir müssen ja die Aufgaben rund um unsere Zeitinseln planen, die uns fremdbestimmt eingeschenkt werden, oder?"
+        },
+        {
+            "start": 4430930,
+            "end": 4455020,
+            "speaker": "A",
+            "text": "Ich glaube, da sprichst du was sehr, sehr Wichtiges an. Ich glaube, einen gewissen Gestaltungsspielraum braucht man schon, um irgendwie diese ganze Selbstverwaltung und Zeitmanagement zu machen. Gar keine Frage. Und wenn du jetzt ein Neugeborenes zu Hause hast und da kann ich jetzt nicht aus eigener Erfahrung sprechen, aber dann kann ich mir schon vorstellen, dass deine Zeit auch nicht von dir kontrolliert wird, sondern eher vom Neugeborenen. Und da sind wir wieder auf der Prioritäten Thematik. Vielleicht sollte Zeitmanagement oder Prioritätsmanagement oder To Do Listen gerade nicht deine Priorität sein, sondern das Neugeborene."
+        },
+        {
+            "start": 4456140,
+            "end": 4456780,
+            "speaker": "B",
+            "text": "Definitiv."
+        },
+        {
+            "start": 4457020,
+            "end": 4500910,
+            "speaker": "A",
+            "text": "Was ja, was ja völlig okay ist. Aber dann, wie gesagt, habe ich ja vorhin schon kurz erwähnt, dann gab es auch schon mal schwierige Gespräche mit Freunden, die dann sagen, ja, aber du erwartest ja, dass ich jetzt hiermit zum Sport komme. Nee, ich erwarte ja gar nicht, sondern du hast deine Priorität anders gelegt und das ist für mich völlig okay. Nur was jetzt hier gerade der Punkt ist, du denkst, es wäre nicht okay für mich, das ist dein Leben. Und deswegen, ich glaube, die Selbsterkenntnis ist gar nicht so einfach. Und jetzt drifte ich hier schon in so einem psychologischen Monolog ab, Aber ich glaube, dessen muss man sich bewusst sein. Und auch so wie du, Dirk, das vorhin gesagt hast, als ich gefragt habe, okay, wie geht ihr denn mit Overcommitment um und so weiter, dann hatte ich so das Gefühl, du machst das so Shoulderschruck, ja gut, dann ist das jetzt so, da können wir ja nichts dran ändern. Das finde ich sehr erwachsen."
+        },
+        {
+            "start": 4500910,
+            "end": 4534450,
+            "speaker": "B",
+            "text": "Ich weiß nicht, wie es bei euch geht. Also ich mache sehr viele Sachen sehr gerne und ich habe das große Glück, dass ich, wenn das Leben passiert ja so in Wellenbewegungen und ich übernehme viele Sachen, wenn so ein Wellental ist und wenn dann mit so einem Wellenberg kommt auch mit der Arbeit, dann schaffe ich das nicht alles, was ich, was ich tun möchte, weil dann halt alle Aufgaben auf einmal kommen und dann bricht das Privatleben auch noch zusammen. So funktioniert Leben halt. Ich muss mir vielleicht am Riemen reißen, nicht so viele Aufgaben zu übernehmen in Zeiten, wo ich nicht so viel zu tun habe. Das ist vielleicht eine Sache, die ich noch lernen müsste, aber dass ich overkommitte, das passiert regelmäßig natürlich."
+        },
+        {
+            "start": 4534610,
+            "end": 4538450,
+            "speaker": "A",
+            "text": "Ich finde das total toll. Ich habe immer gedacht, ich bin der Doofe hier und bin alleine."
+        },
+        {
+            "start": 4538690,
+            "end": 4610850,
+            "speaker": "C",
+            "text": "Ich glaube, man muss auch einfach lernen, dass man weniger schafft an einem Tag oder akzeptieren. Und es gibt eigentlich nichts frustrierenderes, als wenn man ständig overcomited und man nie dieses Glücksgefühl hat, dass man mal irgendwas geschafft hat am Tag. Weil wenn man immer doppelt so viele Tasks hat, dann wird man immer enttäuscht sein jeden Tag. Und das ist jetzt leichter gesagt als getan, weil ihr habt genau dasselbe Problem ständig. Aber ich schaffe es hin und wieder das so runter zu strippen, dass ich mal dieses Glücksgefühl habe. Ich habe jetzt meine ganze Taskliste abgearbeitet und das ist schon ein super Gefühl und das sollte man eigentlich viel öfters machen und eher ist es undercommitten, zumindest weniger einplanen, damit man es irgendwie schafft. Und der Klassiker ist ja auch sowas wie ich schaffe durchschnittlich sechs Stunden, das heißt, ich plane mir Tasks für sechs Stunden ein und vergesse aber, dass ich nur acht Meetings habe an diesem Tag und plane aber trotzdem diese sechs Stunden ein und am Ende vom Tag denkt man überhaupt nichts geschafft, vielleicht einen Task zwischendrin. Also diese Ehrlichkeit zu sich selber muss man irgendwie haben und ich persönlich für mich schaffe es auch selten, muss ich zugeben, aber ich versuche es immer öfter zumindest weniger einzuplanen, obwohl man sich immer denkt, wird schon mehr gehen und bin da eh schneller, als ich mir da geplant habe und so weiter. Also man belügt sich oft selber."
+        },
+        {
+            "start": 4611170,
+            "end": 4615490,
+            "speaker": "B",
+            "text": "Wolfgang eine würde es dir helfen, wenn du einfach die Meetings dann auch in deine Taskliste aufnimmst?"
+        },
+        {
+            "start": 4615490,
+            "end": 4634090,
+            "speaker": "C",
+            "text": "Das habe ich mir schon öfters überlegt, ist mir irgendwie zu viel Aufwand. Einfach vom Organisatorischen könnte man sich natürlich irgendwas schreiben, dass das automatisch macht, aber ja, vielleicht sollte man das mal machen. Remember the Milk hat eine API, könnte man eigentlich relativ easy machen, aber braucht auch wieder Zeit. Könnt ihr Task schreibe auf die Liste,"
+        },
+        {
+            "start": 4634250,
+            "end": 4636730,
+            "speaker": "B",
+            "text": "wäre irgendwann mal gut zu machen, Sunday. Ja genau."
+        },
+        {
+            "start": 4637610,
+            "end": 4647260,
+            "speaker": "A",
+            "text": "Aber um ehrlich zu sein, wenn der Wolfgang und ich teilweise Montagabends noch eine Episode aufnehmen müssen wir grinden auch. Wir haben beide keine Lust da."
+        },
+        {
+            "start": 4647890,
+            "end": 4656690,
+            "speaker": "C",
+            "text": "Wir zwingen uns, Willst du jetzt sagen, Moment, wir haben keine Lust mit Dirk deine Podcast Episode aufzunehmen, weil heute ist Montag. Es ist aktuell zwanzig uhr fünf und fünfzig übrigens."
+        },
+        {
+            "start": 4656690,
+            "end": 4675950,
+            "speaker": "A",
+            "text": "Ja, ja, aber das ist ja nicht die Episode für morgen, verstehst du? Also wir haben ja vorgearbeitet, Da war ja, da hat unsere Selbstverwaltung, Selbstmanagement ja funktioniert. Deswegen Dirk, letzte Frage, bevor wir langsam mal zum Ende kommen, gab es eine Methode, in die du richtig Zeit investiert hast, die sich am Ende einfach nicht gelohnt hat."
+        },
+        {
+            "start": 4676110,
+            "end": 4691070,
+            "speaker": "B",
+            "text": "Also der größte Fail ist, alle seine Ziele und eine seiner Aufgaben nach Smart zu planen. Also das kennt ihr spezifisch, messbar, erfordern, Aktionen sind relevant und terminiert das für viele Aufgaben der absolute Overkill und völliger Schwachsinn. Entschuldigung für die deutlichen Worte."
+        },
+        {
+            "start": 4691310,
+            "end": 4693950,
+            "speaker": "C",
+            "text": "Andi liebt ja diese Methode. Jetzt musst du das ausführen."
+        },
+        {
+            "start": 4694350,
+            "end": 4739330,
+            "speaker": "B",
+            "text": "Ich sag auch warum. Wir haben es im Vorgespräch schon mal besprochen. Ich habe mir mal als Aufgabe gestellt, in einem Jahr zwölf Bücher zu lesen. Das ist spezifisch. Ich will zwölf Bücher lesen. Es ist messbar. Es sind zwölf Bücher. Es erfordert Aktion. Ich muss sie wirklich lesen. Es ist relevant, weil es bringt mich nach vorne. Also wie soll ich sagen, Self improvement und es ist terminiert. Ende des Jahres muss ich die zwölf Bücher gelesen haben. Das funktioniert nicht. Also hat bei mir nicht funktioniert. Es hat nur damit funktioniert, dass ich den Fokus komplett gewechselt habe und gesagt habe, ich fange an, fünfzehn Minuten am Tag zu lesen. Ich habe einfach das große Problem, zwölf Bücher zu lesen, umgewandelt in ein, ich sage unendliches Ziel dazu, in ein unendliches Ziel, fünfzehn Minuten am Tag zu lesen. Und tatsächlich, als ich das gemacht habe, habe ich fünf und dreiig Bücher in"
+        },
+        {
+            "start": 4739330,
+            "end": 4781220,
+            "speaker": "C",
+            "text": "dem Jahr gelesen, Wobei ja Smart jetzt nicht definiert, wie groß dein Task an sich ist oder wie repetitiv das Ganze ist. Also das eine schließt das andere ja nicht unbedingt aus. Korrekt so micro habits. Ich persönlich tue mich wahnsinnig schwer mit diesen Dingen. Also auch wenn es ums Lesen geht, oder keine Ahnung, irgendwelche Physio Übungen zu machen, die man vielleicht nur drei Minuten am Tag machen sollte, fällt mir persönlich extrem schwer. Wer da einen super Tipp hat oder vielleicht Dirk, wenn du einen super Tipp hast, wie man das macht, Ich hab's mit To Do Listen versucht, mit irgendwelchen Belohnungssystemen, was es auch ist. Ich weiß nicht, wie man schafft, so was wie Zähneputzen irgendwie in den Alltag reinzubekommen, So eine kleine kleine Sache wie Zähneputzen, aber dass man das fix immer durchzieht."
+        },
+        {
+            "start": 4781220,
+            "end": 4787670,
+            "speaker": "B",
+            "text": "Du musst das an was anderes andocken. Du musst einfach sagen, wenn ich die Zähne geputzt habe, mache ich meine drei Minuten Physio."
+        },
+        {
+            "start": 4787830,
+            "end": 4807350,
+            "speaker": "C",
+            "text": "Das habe ich mir auch immer gedacht. Und dann ist es bei mir immer so, ich stehe, sagen wir mal, sehr zeitoptimiert auf vor einem Termin, dann habe ich sehr Angst, dass der Andi schimpft, weil ich mache eh schon einen Kaffee, während ich mit Andi dann das Meeting anfange und dann gehen sich diese drei Minuten natürlich nach dem Zähneputzen nicht mehr aus und dann vergisst man sie wieder."
+        },
+        {
+            "start": 4807350,
+            "end": 4813310,
+            "speaker": "A",
+            "text": "Aber Wolfgang, was war denn bei dir die eine Methode, in die du Zeit investiert hast, die sich am Ende einfach nicht gelohnt haben?"
+        },
+        {
+            "start": 4813310,
+            "end": 4820430,
+            "speaker": "C",
+            "text": "Glaube ich habe keinen Fail, mister Perfekt, also keinen großen zumindest hast du einen."
+        },
+        {
+            "start": 4820590,
+            "end": 4828790,
+            "speaker": "A",
+            "text": "Ja, ich habe versucht, meine Notizen zu organisieren und mir wirklich Notizen zu machen und die. Ich habe noch gedacht, ich lese sie."
+        },
+        {
+            "start": 4828790,
+            "end": 4832190,
+            "speaker": "C",
+            "text": "Ja, okay, wenn das für dich ein Fail ist, dann habe ich den natürlich auch."
+        },
+        {
+            "start": 4832430,
+            "end": 4853490,
+            "speaker": "A",
+            "text": "Ich habe da schon ordentlich Zeit investiert, von Notizen nach Notion zu schieben und dann aus Notion wieder raus und und diverse Systeme getestet und so. Also da ging schon ordentlich Zeit ins Land. Naja, auf jeden Fall, ich habe etliche Systeme ausprobiert und eben hin und her geschoben, also alles scheiße. Also es hat alles mal so Monat funktioniert und dann irgendwie wieder doch nicht."
+        },
+        {
+            "start": 4853490,
+            "end": 4905410,
+            "speaker": "C",
+            "text": "Aber grundsätzlich finde ich schon, dass so ein System zu haben, wo man irgendwas reinschmeisst, können ja auch mehrere Systeme haben. Und das ist für mich zumindest einer der wichtigsten Tipps und hat für mich auch am meisten verändert, dass man einfach ein System hat, wo man Sachen ablegen kann, sicher ablegen kann, egal ob ob das jetzt Notes sind oder To Dos. Ich will die aus meinem Kopf draußen haben, ich will die irgendwo sicher liegen. Haben, wo ich weiß, dieses System meldet sich bei mir wieder, da ist noch was zu tun und vielleicht mit einem Due Date in zwei Wochen, das poppt wieder auf, weil dann ist es aus meinem Kopf draußen. Ich kann mich hundertprozentig darauf verlassen, selber mit Notes, auch wenn ich die nie anschaue, ihr habt die sicher irgendwo verwahrt, dass man so ein grundsätzliches System hat, muss auch kein digitales sein, kann ja auch handschriftlich sein, aber dass man das einfach sicher irgendwo verwahren kann, das hat für mich am meisten positiv eigentlich verändert."
+        },
+        {
+            "start": 4905490,
+            "end": 4907090,
+            "speaker": "B",
+            "text": "Guter Punkt, sehr guter Punkt."
+        },
+        {
+            "start": 4907090,
+            "end": 4928460,
+            "speaker": "A",
+            "text": "Ja, ich glaube, das ist auch die Grundregel von David, Getting Things done. Habe ein System, dem du vertraust und wenn ich alles wegschmeißen würde und nur eine Sache wählen dürfte, dann habe ich die ganze Zeit in der Folge überlegt, ist das mein Kalender? Ne, ich glaube, es wäre diese Regel zu haben, alles aufzuschreiben, raus aus meinem Kopf."
+        },
+        {
+            "start": 4928940,
+            "end": 4943660,
+            "speaker": "C",
+            "text": "Der Kalender ist ja auch so ein System, du verwahrst sicher irgendwo deine Termine, dass du weißt, okay, du musst nicht ständig daran denken, morgen acht uhr, morgen acht uhr, morgen acht uhr, sondern du weißt einfach, du hast einen Kalender und um acht bekommst du eine Notification, jetzt gibt es Meeting, das war so ein"
+        },
+        {
+            "start": 4943660,
+            "end": 5034110,
+            "speaker": "A",
+            "text": "bisschen Selbsthilfegruppe hier oder ein Sammelsurium, an was funktioniert was nicht. Ich fand es dennoch sehr interessant, denn das ist immer so ein Thema, habe ich das Gefühl, wo gar nicht so viel drüber gesprochen wird. Also die Tage habe ich auch schon wieder eine Episode vom To Do Cast gehört, Grüße gehen raus, wenn die beiden uns auch hören, weiß ich nicht. Die haben sich primär um Applikationen unterhalten, ich nutze das, um irgendwas, das zu lesen und das zu synchronisieren und später haben sie sich dann natürlich über irgendwelche SaaS Kosten unterhalten, weil wenn man da zwanzig Tools im Monat zahlt, dann hat man natürlich auch ein paar SaaS Kosten und irgendwie habe ich das Gefühl, wir haben uns relativ weit von den Tools entkoppelt. Klar, Dirk, du hast mal taskwarrior genannt und Joplin gerade als auch als Notiz App, glaube ich, ist das dann, der Wolfi hat dann auch mal Getting Things done, das ist diese Paid App, die wir nutzen, aber im Endeffekt ist das ja alles gar keine Tool Thematik, sondern Methoden Thematik. Also was funktioniert für dich und dann mit welchen Grundregeln und ich habe jetzt auch nicht rausgehört, dass irgendjemand von uns drei eine Produktivitätsmethode religiös verfolgt, sondern wir haben so drei Regeln rausgenommen und die dann mit anderen gemixt und die irgendwie so hingebogen, wie sie für uns funktionieren. Das finde ich mal sehr, sehr interessant. Aber ich finde auch sehr interessant, dass ihr ähnliche Probleme habt wie ich, anders damit umgeht. Löscht einfach mal ein Task oder scheiß drauf, dann ist das halt so. So erwachsen bin ich noch nicht, aber ich bin ja auch jünger als ihr"
+        },
+        {
+            "start": 5034110,
+            "end": 5036790,
+            "speaker": "B",
+            "text": "bei ich könnte mein Vater sein. Ja egal."
+        },
+        {
+            "start": 5038630,
+            "end": 5040070,
+            "speaker": "A",
+            "text": "Luke, ich heiße aber nicht Luke."
+        },
+        {
+            "start": 5040070,
+            "end": 5045350,
+            "speaker": "C",
+            "text": "Luke, du wirst ja schon auch noch lernen. Andi, wenn du mal groß Komm mal in mein Alter."
+        },
+        {
+            "start": 5047830,
+            "end": 5106070,
+            "speaker": "A",
+            "text": "Dirk vielen lieben Dank, dass du dir Zeit genommen hast, um mit uns über einer deiner Lieblingsthemen zu sprechen. Ich hoffe, dass du diesen Workshop noch mal halten wirst, denn ich finde das unglaublich interessant, diesen Workshop. Zumindest diese Slides, die haben wir natürlich auch in die Show Notes verlinkt. Es ist viel Content, das sind gute Slides, die man auch verfolgen kann, ohne dass der Dirk vor einem steht und sich das Ganze erzählt. Also du hast eine sehr, sehr gute Balance getroffen zwischen okay, ich kann die Slides durchlesen, ich verstehe, was gemeint ist und es ist nicht dieses klassische Methode eins läuft so, Methode zwei läuft so, sondern du berührst da schon ziemlich viele Punkte. Unterschied Ziele, Gewohnheiten, endliche versus unendliche Ziele. Das hast du gerade mit dem mit dem Buch lesen. Ich möchte dreizehn Bücher lesen oder zwölf Bücher versus fünfzehn Minuten am Tag und so weiter. Auf all diese Thematiken gehst du ein und das fand ich so, so schön in deinem Workshop. Deswegen vielen lieben Dank auch für die Lebenszeit, die du bereits in diesen Workshop gepackt hast."
+        },
+        {
+            "start": 5106310,
+            "end": 5108630,
+            "speaker": "B",
+            "text": "Super gerne. Danke, dass ich da sein durfte."
+        },
+        {
+            "start": 5108630,
+            "end": 5111790,
+            "speaker": "A",
+            "text": "Dirk was ist die eine Sache, die du unseren Hörerinnen und Hörern noch mitgeben möchtest?"
+        },
+        {
+            "start": 5111790,
+            "end": 5121820,
+            "speaker": "B",
+            "text": "Probiert euch aus. Lasst euch nicht vorschreiben, wie ihr zu funktionieren habt. Probiert euch aus. Ihr werdet eure euren Methoden Mix finden, aber dazu müsst ihr verschiedene Methoden. Das geht leider nicht anders."
+        },
+        {
+            "start": 5121820,
+            "end": 5125740,
+            "speaker": "A",
+            "text": "Klingt so wie im Swingerclub. Alles kann, nix muss. Probiert euch aus."
+        },
+        {
+            "start": 5125740,
+            "end": 5128540,
+            "speaker": "C",
+            "text": "Man muss zuerst die Regel verstehen, um sie dann brechen zu können."
+        },
+        {
+            "start": 5128780,
+            "end": 5129500,
+            "speaker": "B",
+            "text": "Das ist korrekt."
+        },
+        {
+            "start": 5130140,
+            "end": 5144020,
+            "speaker": "A",
+            "text": "Und ich glaube, wenn man einmal Produktivitätsmethoden in seine AI seiner Wahl eingibt, dann findet man, glaube ich sechs Stück. Das ist mein Versuch, nicht alles auf einmal zu lösen, weil das funktioniert nicht. Wolfgang, welchen Tipp gibst du mit möglichst"
+        },
+        {
+            "start": 5144020,
+            "end": 5165520,
+            "speaker": "C",
+            "text": "wenig Technik fokussieren auf den eigenen Workflow, dass der irgendwie stimmt. Die Tools findet man dann schon dazu. Und wenn es nur irgendwelche Markdown Files sind, die man irgendwie synchronisiert. Am schlimmsten sind diese Tools, die einem immer einen ganz speziellen Workflow überstülpen. Das funktioniert meiner Meinung nach nie. Also einfach ausprobieren, selber einen guten Flow finden und die Tools finden sich dann schon."
+        },
+        {
+            "start": 5165680,
+            "end": 5181050,
+            "speaker": "A",
+            "text": "Wer mehr vom Dirk hören möchte, der kann einmal in den Things I Learned Podcast reinschalten. Den verlinken wir natürlich auch in den Shownotes und in den anderen in den Bass Zoom. Der Bass Zoom Podcast ist, jetzt korrigiere mich, falls ich falsch liege, da erklärst du immer ein Wort."
+        },
+        {
+            "start": 5181370,
+            "end": 5191210,
+            "speaker": "B",
+            "text": "Mario und ich, wir erklären genau ein Wort, was uns über den Weg gelaufen ist. Am Anfang waren das Basswörter, deswegen hieß der Bass Zoom und mittlerweile machen wir auch den Erklärbär für allgemeine IT Wörter,"
+        },
+        {
+            "start": 5192250,
+            "end": 5203340,
+            "speaker": "A",
+            "text": "sowas wie die letzten Episoden ging über den Hype Cycle, Projektmanagement, Monitoring oder und das möchte ich jetzt mit dem Abschlusswort von dir haben, was ist eine Badewannenkurve?"
+        },
+        {
+            "start": 5203500,
+            "end": 5225940,
+            "speaker": "B",
+            "text": "Das ist eine Ausfallkurve für technische Geräte, wenn du dir das vorstellst. Das gilt auch für deine Software, die du produzierst. Am Anfang hast du relativ viele Fehler, die werden behoben und die Anzahl der Ausfälle wird kleiner. Also du gehst auf den Grund der Badewanne und dann hast du relativ lange Zeit, wie du auf dem Grund der Badewanne bist und keine Ausfälle hast. Und gegen Ende des Lifecycles hast du wieder mehr Ausfälle, weil du irgendwie migrieren musst oder weil die Systeme sich verändert haben."
+        },
+        {
+            "start": 5226730,
+            "end": 5260840,
+            "speaker": "A",
+            "text": "Wer also neun und dreiig Minuten eine Erklärung haben möchte, was eine Baden Wandelkurve ist, der hört sich einfach Basszoom Episode ein hundert drei und dreiig an. Verlinken wir natürlich auch. Dirk, das war's von uns an alle, die uns jetzt noch zuhören. Vielen lieben Dank. Gebt uns doch mal Feedback, was ihr so in der Produktivität und Selbstmanagement Szene so alles macht oder ausprobiert habt. Discord könnt ihr einfach joinen, ist gratis. Der Dirk tummelt sich da auch rum und vielleicht machen wir mal einen Self Improvement Channel auf oder so und dann nerven wir ein bisschen rum. Das war's von uns, bis zur nächsten Episode und tschüss."
+        }
+    ]
+}
