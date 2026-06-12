@@ -11,7 +11,7 @@ talks:
     name: 'Matthias Endler'
     title: 'For the Love of Programming'
     language: 'en'
-    slides: ''
+    slides: '2606-matthias-endler.pdf'
     description: |
       In a world where everyone around you is using agents 24/7, what's the point of even trying to get good at coding? And even if you try, there are so many levels of abstraction. How do you go down to the root?
 
@@ -27,7 +27,7 @@ talks:
     name: 'Tobias Schlitt'
     title: 'Navigating Tech Decisions - A Startup Survival Guide'
     language: 'en'
-    slides: ''
+    slides: '2606-tobias-schlitt.pdf'
     description: |
       Software engineering in a tech startup is just the same as in any other company? I doubt it (and I was there). Join me in this session to see how we crafted tech at Frontastic and why we did it that way. I'll show you the hidden requirements your tech stack needs to fulfill and what "product market fit" actually has to do with your software architecture.
     bio: 'Tobias Schlitt has been engineering the web since 1996, home-based in the PHP/JS/TS ecosystem. As a co-founder of Qafoo, he spent a decade consulting on PHP software quality & architecture, sharpening client engineering teams - and his own skills with them. Later, he co-launched Frontastic, which was successfully sold to commercetools in 2021. Now you can rent his expertise at https://rent-the-toby.com.'
