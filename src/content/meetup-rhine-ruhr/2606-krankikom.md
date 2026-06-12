@@ -36,4 +36,14 @@ talks:
     github: 'tobyS'
     website: 'https://schlitt.info/'
 eventId: '3jmd7cuuvj8loqj7vdpboatbpp'
+participants:
+  registered: 59
+  present:
+    total: 33
+    male: 30
+    female: 3
+  newParticipants: 19
+speakers:
+  female: 0
+  male: 2
 ---
