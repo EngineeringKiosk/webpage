@@ -1,0 +1,621 @@
+{
+    "confidence": 0.96169347,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4447,
+    "utterances": [
+        {
+            "start": 3200,
+            "end": 84820,
+            "speaker": "A",
+            "text": "Herzlich willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Ich bin es mal wieder, Andi für euch und wir legen los, denn heute wird es unbequem, aber leider auch ziemlich relevant. Was machst du eigentlich, wenn nicht ein kaputtes Deployment dein größtes Problem ist, sondern dein Arbeitsumfeld? Genauer gesagt, wenn schwierige Kolleg innen, konfliktscheue Führungskräfte oder sogar toxisches Verhalten deinen Arbeitsalltag bestimmen. Aus unserer Community kamen dazu einige sehr direkte und teils sehr harte Praxisbeispiele. Aussagen wie Wir wissen doch, wie die Person ist oder völlig unpassende Kommentare in Gehaltsgesprächen zeigen, wie schnell aus einem normalen Arbeitskontext eine echte Belastung werden kann. Genau darüber sprechen wir heute. Wir schauen uns an, woran du schlechte oder destruktive Führungen erkennst, wie du zwischen einem Einzelproblem und einem strukturellen Problem in der Firma unterscheiden kannst und wann es sinnvoll ist, eine Sache zu eskalieren. Außerdem geht es darum, wie du professionell reagierst, ohne dich in emotionale Grabenkämpfe ziehen zu lassen, warum Dokumentation wirklich helfen kann und was Gaslighting im Job eigentlich bedeutet. Kurz Was tun, wenn das Management selbst Teil des Problems ist? Und wann ist Teamwechsel, Skip Level oder doch der Exit der richtige Schritt? Wenn du gerade in einer solchen Situation steckst oder einfach besser vorbereitet sein möchtest, dann ist diese Episode für dich. Wir legen los. Viel Spaß."
+        },
+        {
+            "start": 88100,
+            "end": 156370,
+            "speaker": "B",
+            "text": "Der Engineering Kiosk ist ja mittlerweile nicht mehr nur ein Podcast. Wir haben ja auch Meetups, aber wir haben vor allem auch eine sehr große Community und zwar eine Discord Community, zumindest wenn die Community online ist. Und da haben wir schon über sechs hundert Leute in unserer Discord Community. Und die Personen in dieser Community sind auch immer fleißig am Diskutieren, bringen ihre Probleme, teilweise auch sehr persönliche Probleme mit Teamleads, mit Kolleginnen. Also da war schon alles Mögliche drin und es gibt da auch sehr viel Hilfe. Und genau dafür haben wir auch die Community gegründet, dass es da abseits von unserem Einweg Podcast Kanal System eben auch etwas gibt, wo man wirklich diskutieren kann. Und es können ja auch alle ihre Erfahrungen dort mit reinbringen. Und das hat einen großen, großen Mehrwert. Und was wir natürlich auch bekommen, ist Feedback in dieser Community. Und wir, wir hatten nach der Episode zwei hundert ein und fünfzig ohne Frust ins Jahresgespräch einiges an Feedback Und vor allem kam da auch so eine kleine Kritik auf, dass wir sehr oft aus der Management Perspektive sprechen und weniger von der Perspektive von den Leuten, die in gewissen Problemsituationen stecken."
+        },
+        {
+            "start": 156530,
+            "end": 187310,
+            "speaker": "A",
+            "text": "Also zumindest haben wir darüber auch im Vorgespräch diskutiert. Und ich sagte zu Wolfgang, das hat mich schon irgendwie so ein bisschen getroffen. Und dann sagte der ja, aber ich weiß gar nicht, ob das immer so ist, ob wir immer Episoden aus der Männer Perspektive machen. Dann sagte ich so, du, also ich glaube halt schon oft und ich glaube schon, man kann halt Argumente für beide Seiten finden. Dann sagt der ja, aber wir bringen halt immer die Management Perspektive mit rein, aber machen auch viele Episoden aus der individuellen Contributor Sicht. Hat dann schon im Vorgespräch schon ein bisschen geknackst."
+        },
+        {
+            "start": 187390,
+            "end": 245170,
+            "speaker": "B",
+            "text": "Ich glaube, wir bringen vor allem eine Sichtweise hinein, die natürlich von uns kommt und wir sind irgendwo meistens irgendwo im Mittelmanagement angesiedelt oder haben halt auch Einblick in in die obere Management Ebene und relativieren vielleicht viele Sachen auch und man könnte sich da dann auch weniger angesprochen fühlen. Meiner Meinung nach ist es aber schon wichtig, das Big Picture zu sehen, weil umso weiter man nach oben kommt in dieser Hierarchie, umso mehr sieht man natürlich. Aber wir haben genauso als Engineering Managers, Directors genauso wieder Ebenen über uns. Also ich glaube grundsätzlich gilt es schon immer für alle. Aber heute wollen wir uns mal wirklich auf die ics konzentrieren und zwar auf ein paar konkrete Beispiele. Wir aus der Community haben, die unsere Community gebracht hat, die teilweise auch sehr hart sind, meiner Meinung nach. Also wirklich harte Szenarien, wenn man die erlebt in der Realität ist alles andere als fein und wir wollen uns mal denen widmen und unsere Sichtweise auf die Dinge präsentieren."
+        },
+        {
+            "start": 245250,
+            "end": 356280,
+            "speaker": "A",
+            "text": "Also ich glaube, das, was der Wolfgang sagen möchte, es fehlt irgendwie das Gegenstück. Was tun, wenn das Management das eigentliche Problem ist? Kurzum, wenn wir das mal richtig formulieren, was ist, wenn der Wolfgang das Problem ist? Und da kümmern wir uns mal drum. Und im Discord in unserer Community gibt es einen Themenwunsch Channel und da kommt die ganze Sache her. Und da kamen ein paar konkrete Beispiele aus der Praxis. Achtung, Disclaimer, es geht hier nicht um eine einzelne Person, sondern da hat eine Person das Feedback aus seinem bzw. Ihrem Freundeskreis mal zusammengefasst, was über verschiedene Firmen hinweggeht, um mal direkt hier die Bombe fallen zu lassen. Es geht um konkrete Beispiele aus der Praxis, wie ein Konflikt im Team mit einer auffälligen Kollegin und der Teamleiter Ja, was soll ich denn machen? Wir wissen doch alle, wie die Person ist. Oder ein Mitarbeiter spricht Frust im Team an. Achtung O Ton, ich habe jetzt nur Discord zitiert, da sagt die Ich glaube, der Frust ist nur in deinem Kopf. Vielleicht sollten wir in der Geschäftsführung mal darüber reden, dir einen Therapeuten zu bezahlen. OK, bringt mich schon zum Schlucken. Oder auch schön ein Quote aus dem Gehaltsgespräch. Warum möchtest du mehr Gehalt? Du wohnst doch noch zu Hause in der Wohnung deiner Mutter. Und in der Community gab es dazu natürlich auch schon ein paar Sichtweisen, muss ich zugeben, die sehr, sehr schön zu lesen waren. Auf der einen Seite natürlich auch sehr sachlich, ja, ist das ein strukturelles Problem? Ist das ein einzelnes Problem? Da gehen wir gleich auch noch drauf ein. Auf der anderen Seite natürlich auch das andere extrem toxisch Exit Strategie, schreibt mal Bewerbung. Also das war alles dabei und da gehen wir heute mal ein bisschen rein, um ein bisschen Kontext drumherum zu setzen, um vielleicht den einen oder anderen Tipp zu geben, wie man damit umgeht und vielleicht auch zu sagen, wann man die Reißleine ziehen sollte. Also zumindest wann wir die Reißleine ziehen würden. Also was ihr macht, ist jetzt hier keine Finanzberatung, keine juristische Beratung, keine Zieh die Reißleine Beratung, sondern vielleicht Meinung oder Erfahrung."
+        },
+        {
+            "start": 356360,
+            "end": 406840,
+            "speaker": "B",
+            "text": "Und es ist definitiv auch eine persönliche Meinung und basierend auf unseren Erfahrungen. Und wir haben bei uns im Vorgespräch auch schon gemerkt, der Andi hat auch teilweise andere Ansichten, also bin schon gespannt, was da rauskommt. Aber es sind immer persönliche Meinungen und vielleicht auch Empfehlungen. Aber es muss natürlich dann jeder entscheiden, was man wirklich schlussendlich damit macht, dass das Ganze wirklich ein Problem ist. Zeigen aber eben nicht nur diese Einzelfälle, sondern ich habe mal kurz recherchiert, also die Bundesanstalt für Arbeitsschutz und Arbeitsmedizin schätzt das Mobbing in Deutschland auf fünf bis sieben Prozent aller Mitarbeiterinnen. Also das ist dann schon relativ viel. Und umso politischer das Ganze natürlich ist, umso höher geht es auch wahrscheinlich nach oben. Also es ist definitiv ein Problem. Und wenn man das umbricht auf ein normales Team, dann hat man da halt meistens schon eine Person drin, die irgendwie unter Mobbing leidet."
+        },
+        {
+            "start": 406780,
+            "end": 466780,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 466840,
+            "end": 501400,
+            "speaker": "A",
+            "text": "Als ich diese Statements gesehen hab bzw. Gelesen habe, die ich gerade vorgelesen habe, kam mir die Wie relevant ist eigentlich die Rolle des Vorgesetzten der Vorgesetzten für dich bzw. Für deine Karriere bzw. Für deinen Erfolg in der jeweiligen Firma? Wolfgang, Wie würdest du das zusammenfassen? Was würdest du sagen? Welche Ich mag das Wort macht nicht, aber welche Relevanz spielt die Rolle deiner oberen Reporting Line mit einem Einfluss auf das Geld, deine Anerkennung, dein Impact vielleicht sogar in der Firma?"
+        },
+        {
+            "start": 501400,
+            "end": 553220,
+            "speaker": "B",
+            "text": "Ja, du hast die Punkte eigentlich schon erwähnt. Meistens hat man ja als Person nur die Möglichkeit, wenn es um Impact, Visibility, Anerkennung und so weiter geht, eigentlich nur über den eigenen Chef, über die Vorgesetzte zu gehen, weil das man woanders Kanäle hätte, wo man das zeigen kann. Klar gibt es hin und wieder Möglichkeiten und vielleicht hat man mal sogar irgendein Ziel Level Project und hat direkten Kontakt zum C Level. Aber klassischerweise ist die Person, die über einem sitzt, eigentlich die wichtigste Person, wenn es um irgendeine Außenwirkung geht. Und sogar innen entscheidet diese Person ja meistens auch über mein Gehalt. Und wenn es um irgendwelche Beförderungen geht, muss auch diese Person das entweder entscheiden oder zumindest nach oben tragen. Ist die Person, die für dich kämpft? Also ich würde fast sagen, ist eigentlich die Person wichtigste Person, wenn es um die Weiterentwicklung geht in deinem Job?"
+        },
+        {
+            "start": 553380,
+            "end": 643360,
+            "speaker": "A",
+            "text": "Das klingt so traurig, aber ich würde da zustimmen. Ich würde fast sagen, die Reporting Line ist verantwortlich und der Hebel für deine Karriere und Karriere setze ich jetzt mal in Anführungszeichen, weil was auch immer Karriere ist. Karriere muss ja nicht heißen, ich kletter immer die Karriereleiter hoch und kriege jedes Quartal eine Promotion, also eine Beförderung, sondern auch Anerkennung. Ich arbeite an größeren Projekten und Co. Und vielleicht kommt daher auch der Spruch Menschen verlassen keine Unternehmen, sie verlassen Chefs. Denn wenn sich die eigene Reporting Line nicht für einen einsetzt, dann ist das eine Blockade vielleicht sogar. Und als Disclaimer möchte ich jetzt auch noch mal sagen, ich rede jetzt hier nicht darüber, dass man mit seinem Chef oder mit seiner Chefin gut klarkommt, dass man da Best friend ist und dass man sie oder ihn vielleicht zum Grillen einlädt. Darüber rede ich nicht. Ich rede hier eigentlich von einer professionellen Ebene. Man muss nicht immer einer Meinung sein, man muss sich aber professionell schätzen und vielleicht auch nicht vielleicht auch, man muss sich auch respektieren und wissen, wo auch die Grenzen sind von beiden Seiten. Nicht nur immer fordern vom Chef runter zum IC oder vom IC, hey, ich will mehr Geld zum Chef, sondern man muss auch leisten auf beiden Ebenen. Aber ich glaube, man sollte auch bewusst sein, wenn man konstant gegen eine Wand rennt, dann sollte man darüber nachdenken, etwas zu ändern und etwas zu ändern. Ich meine nicht die Flucht, ich meine nicht immer den Chef oder die Chefin wechseln, sondern vielleicht auch etwas anzusprechen oder ähnlich. Das kann ja auch ändern sein."
+        },
+        {
+            "start": 643360,
+            "end": 678340,
+            "speaker": "B",
+            "text": "Wobei man da natürlich schon grundsätzlich unterscheiden muss, liegt das Problem jetzt wirklich bei dem Chef und nur bei dieser einen Person oder ist es vielleicht in der gesamten Firma ein strukturelles Problem, Weil dann hilft dir ja auch nicht, ich steig einfach zu der anderen Managerin in das andere Team um, sondern da hast du ja dieselben Probleme. Also ich glaube, das ist schon auch ganz wichtig zu identifizieren. Ist es nur ein Problem bei mir im Team, bei meiner Führungskraft oder ist es ein strukturelles Problem? Und dementsprechend muss man dann natürlich auch entscheiden, gibt es eine Exit Strategie oder soll ich eine Exit Strategie wählen oder kann ich noch intern in irgendeiner Form etwas verändern."
+        },
+        {
+            "start": 678340,
+            "end": 689380,
+            "speaker": "A",
+            "text": "Hast du vielleicht mal ein praktisches Beispiel, wo du sagst, das ist ein Problem mit der einzelnen Person versus es ist ein Problem, was ein Unternehmens oder ein strukturelles Problem ist. Hast du da vielleicht ein Beispiel für beide Szenarien?"
+        },
+        {
+            "start": 689380,
+            "end": 754070,
+            "speaker": "B",
+            "text": "Ich glaube, grundsätzlich kann es natürlich alles betreffen, aber wenn du jetzt in irgendeiner Form Beispiele haben willst, wie, keine Ahnung, kann Micromanagement sein, kann sein, wie geht man mit Frauen um, sexuelle Belästigung, was es auch immer ist, dann kann es natürlich jetzt nur an deinem Manager liegen und der hat eine toxische Vorgehensweise im Team, macht extremes Mikromanagement zum Beispiel, was aber grundsätzlich in der Firma nicht gewünscht wird. Es kann aber auch sein, dass der oder die CEO absolutes Micromanagement liebt und das von oben hin schon immer so gelebt wurde in der gesamten Company und überall hast du dieses absolute Überwachen und ständiges Prüfen. Dann kann es natürlich in der Firmenkultur wirklich drin sitzen und dann ist es wahrscheinlich schwierig, was zu ändern in dieser Firma. Wenn es aber nur in deinem Team so ist und du weißt, dass es da andere Manager innen gibt, die das sehr wohl nicht machen oder vielleicht sogar von oben von C Level nicht gewünscht ist, dann kann man natürlich vielleicht auch auf der Ebene schon noch einiges erreichen oder in ein anderes Team wechseln, dann macht es natürlich absolut Sinn."
+        },
+        {
+            "start": 754070,
+            "end": 771030,
+            "speaker": "A",
+            "text": "Es ist natürlich schon schwer, das zu erkennen, weil da muss man natürlich schon sehr gut vernetzt in der Firma sein, um, ich sag mal, ähnliche Vorfälle, die du selbst in deinem Team erlebst, ob diese auch so vorkommen oder nicht. Oder hast du einen Tipp, wie man sowas vielleicht erkennen könnte, wo man sagt okay, das ist ein Einzelproblem, das ist ein strukturelles Problem."
+        },
+        {
+            "start": 771110,
+            "end": 834620,
+            "speaker": "B",
+            "text": "Du kannst ja grundsätzlich schon mit anderen Personen auch sprechen. Da muss man natürlich aufpassen, nicht, dass man da so in das Haten reinfällt und dann fangen alle schimpfen an über ihre Manager. Aber wenn man natürlich gewisse Stories kennt und auch von anderen Personen hört oder vielleicht auch positiv hört, dass man sehr wohl in anderen Teams hört, okay, da gibt es kein Micromanagement, man hat eine super freie Hand, es funktioniert alles oder A C Level predigt bei jedem All hands, wie wichtig das ist, dass man frei agieren kann. Und dann hast du aber in deinem Team genau das Gegenteil. Gut, dann kann es sein, dass der CEO einfach das Falsche predigt und in der Realität wird es nicht umgesetzt Oder du hast im Team wirklich einen Manager, eine Managerin, die das eben nicht dementsprechend umsetzt. Aber ich glaube, es ist immer gut, mal die Ohren offen zu halten und die Augen und einfach auf andere Teams auch zu blicken und das herauszufinden. Und wenn es natürlich noch in die Extremen geht, wenn es jetzt um, keine Ahnung, sexuelle Belästigung geht und HR weigert sich einfach irgendwas zu tun, dann weißt du natürlich auch, dass es vielleicht irgendwo ein strukturelles Problem in der Firma ist."
+        },
+        {
+            "start": 834620,
+            "end": 853420,
+            "speaker": "A",
+            "text": "Lass uns mal zum ersten Punkt mit dem Umgang mit schwierigen Vorgesetzten Wolfgang, du kommst zu mir, ich bin dein Manager, das könnte lustig werden, denke ich. Aber du sagst zu mir, wir haben einen Konflikt mit dem Werner. Werner geht gar nicht in letzter Zeit, also total toxisch. Und ich sag zu Ja, was soll ich denn machen? Wir wissen doch beide, wie der Werner ist. Was macht das mit dir?"
+        },
+        {
+            "start": 853420,
+            "end": 913370,
+            "speaker": "B",
+            "text": "Wahrscheinlich macht es mich im ersten Moment wütend und im zweiten Moment wahrscheinlich immer noch wütend. Und vielleicht habe ich dann mal einen dritten Moment, dass ich drüber nachdenke und vielleicht könnte ich mir sogar denken, vielleicht hat der Andi recht würde man wahrscheinlich nicht denken. Grundsätzlich denke ich mir nie, ob der Andi recht hat, aber sogar wenn der Andi recht hätte, wäre jetzt mein Blick von außen gesehen immer noch so, dass das absolut schlechte Führung ist, weil es ist einfach nur ein Nicht Akzeptieren, ein Wegwischen. Also es hilft mir als Individual Contributor einfach überhaupt nichts. Also weder, es hilft mir weder irgendwas in Richtung, ich habe eine falsche Einschätzung, dass mir jemand Feedback gibt, okay, deine Einschätzung ist vielleicht falsch oder du siehst es anders noch irgendwie eine Bestätigung, ja, das ist so und wir machen was dagegen, sondern es ist einfach so, ja, es ist so, damit musst du leben, alles egal, mach einfach weiter so. Also es ist ein Nicht Akzeptieren eines Problems. Es kommt jemand auf mich zu als Manager, gib mir irgendein Problem und ich sage eigentlich, ja, ist halt so, that's it, weitermachen."
+        },
+        {
+            "start": 913370,
+            "end": 930570,
+            "speaker": "A",
+            "text": "Du hast gerade das Wort schlechte Führung in den Mund genommen. Das heißt ja oder bzw. Ich lese zwischen den Zeilen, dass du eine andere Erwartungshaltung hattest bzw. Eine andere Antwort erwartet hättest. Was hättest du denn als Antwort erwartet, wenn du mit so einem Statement von Werner zu mir kommst?"
+        },
+        {
+            "start": 930570,
+            "end": 1027450,
+            "speaker": "B",
+            "text": "Also ich würde mir in irgendeiner Form eine Hilfestellung erwarten, was auch immer Hilfestellung heißt, weil es kann ja wirklich sein, okay, der Werner ist halt so und wir brauchen den Werner unbedingt in der Firma und wir akzeptieren dieses Verhalten als Firma. Das kann ja sehr wohl Fakt sein. Dann kann ich aber trotzdem als Führungskraft das irgendwie in den Kontext setzen, in Relation setzen, warum das so ist Und ich muss ja dann mich, wenn ich mich jetzt beschwere bei meinem Manager, mir muss man ja irgendwas in die Hand geben, dass ich zufrieden bin und zufriedener weiterarbeiten kann, Aber in dem Fall gibt man mir gar nichts in die Hand, außer vielleicht sogar eine kleine Bestätigung, das ist wirklich ein Problem, aber man kann nichts machen und sei nicht so, Arbeit einfach weiter. Das heißt, es hilft ja mir als Individual Contributor nichts. Ich will irgendwas in die Hand bekommen. Entweder will ich ein hartes Feedback, hey, du bist falsch, das stimmt so nicht. Oder ich will irgendwie eine Unterstützung haben oder irgendwie eine Hilfestellung, wie ich weiterarbeiten kann sinnvoll, obwohl das so ist. Oder vielleicht, dass man was dagegen macht. Das wäre natürlich auch eine Möglichkeit, aber grundsätzlich, man muss es bestätigen und mir in irgendeiner Form weiterhelfen. Und dieses Kommentar hilft halt null weiter. Und in der Literatur wird es oft auch als destruktive Führung genannt oder Laissez faire Leadership als destruktive Führung. Also wenn man Laissez faire ist ja grundsätzlich nichts Schlechtes, dass ich eben kein Micromanagement mache und die Leute laufen lasse. Aber in dem Fall ist es dann destruktive Führung, weil ich eben, wenn es irgendwo ein Konfliktpotenzial gibt, mich zurückziehe, kein Feedback liefere, keine Hilfe liefere und einfach die Leute das selber lösen lasse. Und das ist natürlich absolut destruktiv."
+        },
+        {
+            "start": 1027530,
+            "end": 1035210,
+            "speaker": "A",
+            "text": "Ich wollte schon sagen, also jemanden laufen lassen und versus Nichtstun bei Problemen ist ja schon was anderes."
+        },
+        {
+            "start": 1035210,
+            "end": 1041850,
+            "speaker": "B",
+            "text": "Genau, also es ist laissez faire in Problemsituationen. Das heißt, ich helfe nicht, ich unterstütze nicht."
+        },
+        {
+            "start": 1041850,
+            "end": 1043530,
+            "speaker": "A",
+            "text": "Ich würde es eher als ignorant bezeichnen."
+        },
+        {
+            "start": 1043530,
+            "end": 1048760,
+            "speaker": "B",
+            "text": "Ja, kannst du auch so. Die Literatur nennt es nicht ignorant, aber"
+        },
+        {
+            "start": 1048760,
+            "end": 1075040,
+            "speaker": "A",
+            "text": "du hast das Wort zufrieden erwähnt und du hast auch gesagt, es ist auch eine mögliche Antwort von mir zu dir in unserer Manager Softwareentwickler Beziehung, dass wenn ich sage, das ist das Verhalten, was wir von der Firma akzeptieren, dass das eine zufriedenstellende Antwort für dich wäre, obwohl du ja dann nicht damit OK bist, weil sonst hättest du das Verhalten von Werner ja nicht gemeldet."
+        },
+        {
+            "start": 1075220,
+            "end": 1153870,
+            "speaker": "B",
+            "text": "Ja, es kommt darauf an, in was für einem Kontext das dann gerückt wird. Wenn die Person sagt, ja, wir tolerieren dieses Verhalten, weil es so eine wichtige Person für uns ist, dann wird mir das jetzt nicht zufriedenstellen, aber dann weiß ich auch, woran ich bin und dann kann man ja weitersprechen. Guter Manager kann ja sagen, okay, vielleicht versuchen wir dich irgendwie wegzubringen in ein anderes Team oder wir versuchen so irgendwie die Schnittstelle zwischen Werner und dir zu verringern, damit du eben nicht unter Anführungszeichen leiden musst oder auch ohne Anführungszeichen eigentlich leiden musst. Irgendeine Idee, Reaktion, Verbesserung in irgendeiner Form. Aber es kann ja durchaus sein und das sehen wir, glaube ich, relativ oft und kennen wahrscheinlich alle in größeren Firmen, dass es auch Personen gibt, die vielleicht nicht das beste Verhalten haben oder sogar ein toxisches Verhalten, wenn man es hart sieht und trotzdem aber irgendwie unter einem Schutzschirm stehen, weil sie aus irgendeinem Grund für die Firma wichtig sind, egal ob politisch oder sonst was. Und so was wird es in irgendeiner Form immer geben. Klar, in der idealen Welt und der idealen Firma gibt es diese Personen nicht oder die werden nach draußen befördert. Aber es gibt halt auch Personen, die unterm Schutzschirm vom C Level stehen. Und vielleicht gibt es dann andere Möglichkeiten, wie man reagieren kann, um trotzdem zufrieden zu sein und in irgendeiner Form sinnvoll weiterarbeiten zu können."
+        },
+        {
+            "start": 1153870,
+            "end": 1254820,
+            "speaker": "A",
+            "text": "Ich will jetzt hier keine Opferumkehr oder Ähnliches machen. Aber das, was ich auch beobachte, ist, dass sich natürlich die Art und Weise der Kommunikation zwischen den Generationen geändert hat, wo jetzt der jährige Werner vielleicht damals noch der Kellnerin auf den Popo geklatscht hat, obwohl das natürlich nicht in Ordnung ist, ganz und gar nicht, wurde es, glaube ich, in früheren Zeiten sehr oft akzeptiert oder hingenommen, nicht positiv akzeptiert. Und jetzt in neueren Generationen, in jüngeren Generationen sind wir natürlich deutlich spitzfindiger ist das falsche Wort, weil spitzfindig wird oft negativ behandelt. Sensibler ist auch das falsche Wort, achtsamer mit der Kommunikation geworden, würde ich sagen. Also wir versuchen inklusivere Sprache zu fördern, wir versuchen deutlich respektvolleres Verhalten an den Tag zu legen und so weiter und so fort. Und das wird natürlich, wenn du früher, also wenn du jetzt schon älter bist, dann bist du damit natürlich anders aufgewachsen. Das ist jetzt keine Entschuldigung für einen jährigen Werner oder sowas. Und deswegen sage ich ja, ich mache hier keine Opferumkehr. Doch ich glaube, da klatschen auch Generationen aufeinander, was dann wiederum das Wort toxisch gar nicht mehr objektiv macht. Also weil toxisch ja dann subjektiv aus anderen Generationen anders wahrgenommen wird. Also ich versuche das halt nicht zu entschuldigen, das Verhalten ganz und gar nicht. Ich denke auch ein jähriger Werner soll sich anpassen oder muss sich anpassen an die heutige Kultur. Und ich sage nicht, dass nur weil jemand etwas anders gelernt hat, dass das okay ist und akzeptiert werden soll. Doch ich glaube, dass unter anderem solche Konflikte doch heute schon öfter vorkommen. Wie siehst du das?"
+        },
+        {
+            "start": 1255060,
+            "end": 1331240,
+            "speaker": "B",
+            "text": "Also ganz hart muss ich dir widersprechen. Bei toxischen Verhalten kann nicht mehr objektiv festgestellt werden, weil es irgendwie unterschiedliche Generationen gibt und die das subjektiv vielleicht toxischer sehen. Also es gibt da ja schon irgendwo, ich weiß nicht, ob state of the art das richtige Wort ist, aber das, was so die Allgemeinheit eigentlich beschreibt als toxisch. Es gibt natürlich auch in der Literatur natürlich ganz klar Verhalten, was toxisch beschrieben wird von der Psychologie, aber es gibt natürlich auch eine gesellschaftliche Definition, was wir akzeptieren, was wir nicht akzeptieren. Gibt auch in der Firma natürlich die Kultur, was akzeptieren wir, was akzeptieren wir nicht. Und wie du richtig sagst, also auch die Jährigen müssen sich anpassen. Es gibt ja auch ganz viele, die sich anpassen. Und vielleicht das, was man vor sechzig Jahren noch oder vor dreiig Jahren oder vor zehn Jahren noch als normal empfunden hat, dass man es vielleicht jetzt nicht mehr so als normal empfindet und dass man so weit auf andere Personen eingeht, dass man ja auch versteht, okay, wenn es für diese Person nicht okay ist, dass sie dann dementsprechend auch agiere, weil es hat auch früher schon Personen gegeben, die unterschiedliches Verhalten unterschiedlich wahrgenommen haben. Also da geht es ja auch darum wieder, wie sehr gehe ich auf mein Gegenüber ein und wie reagiere ich dann dementsprechend."
+        },
+        {
+            "start": 1331240,
+            "end": 1357200,
+            "speaker": "A",
+            "text": "Ja, du hast einen sehr guten Punkt und vielleicht habe ich die falsche Wortwahl genutzt mit objektiv. Ich glaube, das, was ich sagen wollte, ist, wenn ich dich frage, was toxisch für dich ist. Wenn ich jemanden, der sechzig, siebzig, achtzig Jahre alt ist, frage, was toxisch ist und wenn ich, also wenn ich einfach fünf verschiedene Leute mit fünf verschiedenen Hintergründen frage, was toxisch, schwieriges Wort, was toxisch ist, bekomme ich glaube ich fünf oder sechs verschiedene Antworten. Ich glaube, das ist das, was ich sagen möchte."
+        },
+        {
+            "start": 1357200,
+            "end": 1382760,
+            "speaker": "B",
+            "text": "Aber auch da wieder, toxisch ist ja schon definiert auf eine gewisse Wirkung, die entfalten wird. Also eigentlich ist es egal, was es für Personen sind. Toxisches Verhalten ist ja, wenn ein Problem erzeugt wird im Team. Und wenn jetzt ein Team habe, was sehr empfindlich ist, dann können kleinere Sachen schon toxisch wirken. Trotzdem ist es ein toxisches Verhalten, wenn ich das bewusst eingehe."
+        },
+        {
+            "start": 1382760,
+            "end": 1428100,
+            "speaker": "A",
+            "text": "Aber da machst du ja schon eine Unterstellung. Du hast ja das Wort, wenn ich das bewusst eingehe, du unterstellst ja gerade jemanden, dass vielleicht ist der Werner, und ich nehme jetzt einfach mal den Werner als Beispiel, vielleicht ist dem Werner das ja gar nicht bewusst. Ich glaube, das, was ich sagen möchte, ist, vor fünfzehn Jahren haben die Witze von Axel Schröder noch funktioniert, die würden heute nicht mehr funktionieren, weil sie anders wahrgenommen werden, sagt er ja auch selber. Ja klar, aber das untermalt ja meinen Punkt, glaube ich. Und deswegen sagte ich ja, vielleicht ist objektiv, es gibt bestimmt eine Definition davon mit respektablem Umgang und so weiter. Und natürlich helfen Firmenwerte und so weiter. Und ich glaube, die sollten auch da sein, die sollten auch von dem Team akzeptiert werden. Ich glaube, und wie gesagt, ich mache hier keine Opferumkehr. Ich sage jetzt auch nicht, hey, nur weil der Werner das anders gelernt hat, ist das jetzt okay. Das sage ich ganz und gar nicht."
+        },
+        {
+            "start": 1428340,
+            "end": 1490690,
+            "speaker": "B",
+            "text": "Aber was ihr eben sagt, ist, dass man eben auf die anderen Personen eingehen muss in irgendeiner Form. Und toxisch ist ja schon definiert, als dass man wirklich manipulativ arbeitet, Grenzen überschreitet. Und die Grenzen setzen natürlich auch andere Leute im Team, klarerweise. Und du hast wahrscheinlich unterschiedliche Grenzen und unterschiedliche Wahrnehmungen. Aber wenn jemand auf das Gegenüber eingeht, dann wird er wahrscheinlich herausfinden, was Grenzen sind und was ein sinnvolles Verhalten ist. Und ich glaube, darum geht es ja auch, diese teilweise auch Empathie, aber dieses Verständnis für das Gegenüber einfach dementsprechend zu haben. Und ich glaube, das ist schon wichtig. Und wenn das fehlt und vor allem auf der Manager Seite fehlt, und das haben wir, glaube ich, auch schon oft erwähnt, wenn es darum geht, Lead zu werden und Leadership zu übernehmen, dass es genau um diese Empathie und das Verständnis von anderen geht. Und wenn du das nicht hast und eben nicht akzeptierst, dass diese Person gerade in einer Problemsituation sich befindet und du in irgendeiner Form unterstützen musst als Lead, dann ist es meiner Meinung nach schlechte Führung. Und das kann natürlich auch ganz große Implikationen haben."
+        },
+        {
+            "start": 1490690,
+            "end": 1549440,
+            "speaker": "A",
+            "text": "Ich glaube, da widerspricht dir gar keiner. Ich glaube, natürlich kennen wir jetzt aus diesem einen Satz nicht den kompletten Kontext. Wir haben den Satz, ja, was soll ich denn machen? Wir wissen doch, wie die Person ist. Da fehlt natürlich ganz viel Kontext drumherum. Ich glaube, was relativ klar wird und worauf wir uns gerade stürzen, ist, dass wenn ich dir mit einer solchen Antwort komme und du mir das Problem so reflektierst bzw. An den Tisch bringst, dass ich dich natürlich nicht ernst nehme. Also ich übermittel dir nicht das Gefühl, dass ich dich ernst nehme oder irgendeine Art Interesse habe, darüber zu sprechen. Ich sage aber auch, dass es glaube ich wichtig ist zu unterscheiden oder beziehungsweise man in diesem Gespräch mal herausfinden sollte, was für eine Art des Konflikts es ist. Ist es ein persönlicher Konflikt zwischen dir und dem Werner? Ist es ein professioneller Konflikt über eine objektive Richtung, die das Team einschlägt? Wurdest du persönlich von ihm angegriffen, beleidigt oder ähnliches? Hat Werner vielleicht einfach nur eine andere Meinung, wie man etwas umsetzt? Und du bist auch sehr engstirnig, was die Art der Umsetzung ist, gab es ja auch."
+        },
+        {
+            "start": 1550640,
+            "end": 1562220,
+            "speaker": "B",
+            "text": "Aber du verfällst jetzt schon wieder in diese Muster, dass du aus der Managerrolle sprichst. Aber was mache ich denn jetzt, wenn ich in der Individual Contributor Rolle bin und der Manager so antwortet? Was mache ich als IC?"
+        },
+        {
+            "start": 1562300,
+            "end": 1634550,
+            "speaker": "A",
+            "text": "Ja, Moment, aber lass mich doch mal ausreden. Der Punkt ist ganz einfach nur meine Frage ist eigentlich bist du dir als IC über die Art des Konfliktes bewusst? Das bedeutet, hast du als IC die ganze Sache auch objektiv beschrieben? Also hast du objektive Beispiele und konkrete Beispiele? Weil ich finde es immer zum Beispiel schwer, auch mit dir, wenn du sagst, wenn ich mit dir kommuniziere, fühle ich mich immer gestresst. Das erste, was du dann machst, kannst du mir ein Beispiel nennen. Und so läuft unsere Kommunikation ja auch ab. Du fragst nach konkreten Beispielen und ich denke, dass du als IC, wenn du eine Person meldest bzw. Wenn du ein Problem mit einem Teammitglied zum Thema machst, dass du folgendes durchdenken solltest. A zwei drei konkrete Beispiele aufführen, was getan wurde, also wie reagiert wurde, was Werner gemacht hat, wie du dich gefühlt hast und was du, was du zu erwarten gehabt hättest. Also aka was wäre deiner Meinung nach das richtige Verhalten gewesen? Weil das gibt mir als Manager ja auch deutlich mehr Kontext. Was hat dich verletzt oder was denkst du?"
+        },
+        {
+            "start": 1634550,
+            "end": 1668300,
+            "speaker": "B",
+            "text": "Aber genau davon spreche. Du sprichst jetzt wieder aus der Managerrolle. Was dir als Manager helfen würde, stimmt natürlich zu, Das hilft einem als Manager. Aber wenn wir jetzt noch mal auf diese Situation eingehen. Ich komme zu dir als Manager und sage dir das und das und dieses Problem und habe auch die Beispiele im Idealfall. Und du Ja, was soll ich machen? Wir wissen doch, wie die Person ist. Du stimmst mir ja zu, scheinbar weißt du ja auch, was ich meine, sonst würdest du ja gar nicht zustimmen. Ja, was soll ich machen? Die Person ist halt so. Das heißt, du bestätigst mir das. Das Feedback ist ich habe recht, du siehst es auch so, aber wir können halt nichts machen."
+        },
+        {
+            "start": 1668620,
+            "end": 1751560,
+            "speaker": "A",
+            "text": "Stimmt, tut mir leid, ich bin, ich war ja die Person. Ich habe vergessen, dass ich die Person bin, die diesen Satz gesagt habe. Tut mir leid, das ist alles so. Wir OK, ne, du hast recht. Ich glaube, und das meine ich jetzt nicht respektlos, ich glaube als IC würde ich fragen, was der Teamleiter mir denn empfiehlt, was ich tun kann, um die Sache zu verbessern. Denn das zeigt eigentlich auf, ob überhaupt ein Interesse daran besteht, die Situation zu ändern. Und der zweite wichtige Punkt ist, du als IC fragst erstmal, was du aktiv ändern kannst, ohne jemand anderen jetzt erstmal die Schuld zu geben, also proaktiv zu sein. Natürlich verstehe ich, dass man da über seinen Schatten springen muss und dass es vielleicht auch nicht deine Aufgabe ist als Teammitglied jetzt das familiäre Verhältnis im Team dauerhaft sicherzustellen, obwohl es ist meines Erachtens nach die Aufgabe eines jedes Teammitglied, die Harmonie zu versuchen herzustellen. Aber dass man OK, was gibst du mir für einen Tipp? Was kann ich tun, um die ganze Sache zum Besseren zu bewegen? Und wenn ich dann wiederum sage, das ist es, ich muss jetzt wirklich hart nachdenken in meinem Kopf, weil ich habe ja diesen diesen, wir wissen doch wie die Person ist das gesagt, Wenn ich dann sowas sage wie ja gar nichts, dann weißt du OK, hier sind verhärtete Grenzen meines Erachtens nach, weil es bringt auch nichts gegen Windmühlen zu kämpfen, kontinuierlich."
+        },
+        {
+            "start": 1751560,
+            "end": 1877650,
+            "speaker": "B",
+            "text": "Ich glaube, was auch noch ganz hilfreich ist, ist wenn man einfach den Impact probiert darzustellen. Also wenn ich dann sage, okay, du sagst, der Werner ist so mag es sein, aber in unserem Team von den fünf Personen sind vier Personen meiner Meinung, die kämpfen jeden Tag mit dem Problem und die leiden jeden Tag mit dem Problem. Ich hatte mal in einem Team das Problem, dass es jemanden gab, der sich in jede Diskussion eingemischt hat. Also wenn irgendwo in der Gruppe face to face irgendwo was diskutiert wurde, zwei Developer hatten irgendwie eine kurze Diskussion, soll man X oder Y als Methode wählen im Code, die dritte Person ist sofort reingesprungen und hat die in eine Diskussion verwickelt und hat angefangen zu diskutieren, zu diskutieren. Und am Ende, was passiert ist, alle Developer haben nur mehr bei Slack kommuniziert, obwohl sie nebeneinander gesessen sind, weil sie alle Angst gehabt haben, wenn sie das laut kommunizieren, springt diese dritte Person sofort wieder rein. Das heißt, die Kommunikation wurde verlangsamt, blockiert. Die Leute haben nicht mehr sinnvoll miteinander diskutieren wollen in der Öffentlichkeit, weil das einfach, also in der Öffentlichkeit, im Team, weil das ein Problem war. Und am Ende hat es eigentlich alle eingebremst, weil jedes Mal, wenn es irgendwo eine Diskussion gab, ist er reingesprungen, der hat es gut gemeint, aber am Ende war es ein Problem wirklich für das ganze Team. Das Team ist langsamer geworden, jeder hat schlechter arbeiten können. Und wenn ich so etwas einem Manager zeige und vorführe, dieses Problem und der Manager sagt immer, ja ist halt so, ist halt unser Team dreiig Prozent langsamer, sind halt alle unglücklich, dann bist du irgendwo angekommen, wo du weißt, okay, mit dem Manager kann man halt nicht mehr weitermachen. Aber es ist ein Unterschied, ob ich sage, ich bin unzufrieden und es stört mich hin und wieder oder wenn ich sage, okay, wie unzufrieden bin ich, gibt es andere Leute, die das auch stört, bremst es irgendwie unseren Prozess, macht es uns langsamer. Also wenn man wirklich ganz konkrete Beispiele, wie du auch richtig sagst, hat, aber auch in Bezug auf den Impact, weil dann müsste ein Manager oder Managerin schon irgendwann reagieren und wenn sie das nicht tut, dann bist du wahrscheinlich an einem Dead End angekommen."
+        },
+        {
+            "start": 1877650,
+            "end": 1907330,
+            "speaker": "A",
+            "text": "Ich möchte aber auch ein bisschen vorsichtig aussprechen, wenn man drei von vier Leute im Team sehen das auch so und du bist die einzige Person, die dann mit dem Vorgesetzten oder mit der Vorgesetzten spricht. Denn falls der Vorgesetzte, ich in unserem Beispiel jetzt hier, dann dieser Sache nachgehe und die Sache versuche zu fixen, zu beheben, dann bedeutet dies natürlich auch, dass ich dann auch mit diesen drei Leuten über diesen Fall spreche, denn aktuell habe ich ja nur deine Sichtweise, Aber das"
+        },
+        {
+            "start": 1907330,
+            "end": 1908690,
+            "speaker": "B",
+            "text": "ist ja vollkommen okay, oder?"
+        },
+        {
+            "start": 1908690,
+            "end": 1910690,
+            "speaker": "A",
+            "text": "Ja, natürlich ist das vollkommen okay."
+        },
+        {
+            "start": 1910690,
+            "end": 1922050,
+            "speaker": "B",
+            "text": "Im Idealfall komme ich sogar zu dritt zum Manager, aber üblicherweise fangt ihr das im Kleinen an. Guter Manager sagt Okay, hör mir das mal an, ich schaue mir das an, klären wir in zwei Wochen noch mal"
+        },
+        {
+            "start": 1922050,
+            "end": 1999900,
+            "speaker": "A",
+            "text": "oder so irgendwas, wenn dem denn so ist. Aber ich sage Vorsicht, wenn du einfach ins Gespräch gehst und sagst, drei von vier Leuten haben mir das im Gespräch gesagt und du sprichst dann die drei von vier Leuten ab und die sind dann davon nicht so angetan, dass du zu mir gekommen bist und diese Namen genannt hast, weil sie die haben nicht den Mut und wollten nie, dass das an die Öffentlichkeit kommt und haben dir das im Vertrauen gesagt. Das meinte ich eigentlich damit. Also wenn du mir als Manager sagst, drei von vier Leuten fühlen so und du hast vorher nicht abgeklärt, dass du dies im Gespräch nennen darfst, dann kannst du auch dein Vertrauen zu deinen Teammitgliedern zerstören. Das macht die ganze Sache nicht besser, weil das Problem nicht behobt wird. Gar keine Frage. Nur ich möchte sagen, nicht jeder hat den Mut, mit dem oder der Vorgesetzten darüber zu sprechen und dass ihr oder sein Name auf den Tisch kommt, Weil jetzt stell dir vor, du hast mich überzeugt. Stell dir mal vor, ich habe dir mit Ja, was soll ich machen? Wir kennen den Werner, wir wissen doch, wie der Werner ist geantwortet. Du erklärst mir den Impact und bist in der Lage, mich zu überzeugen, weil du die ganze Sache objektiv angehst und sagst dann drei von vier Leute und ich gehe der ganzen Sache nach und das wurde vorher zwischen dir und den anderen zwei Leuten nicht abgestimmt, dann kann das natürlich auch für dich backfiren auf persönlicher Ebene, weil dann vielleicht Vertrauen zerstört wird. Das möchte ich vielleicht auch noch mal sagen, dass das wichtig ist, zwischen euch abzuklären."
+        },
+        {
+            "start": 1999900,
+            "end": 2015660,
+            "speaker": "B",
+            "text": "Klar muss man das irgendwo abklären. Die Frage ist immer, wie konkret man das dann weitergibt dem Manager und hoffentlich dem Manager ja auch bisschen. Ja gut, so ein Manager vielleicht nicht, der ist dann weniger sensibel, wenn er dann die Leute Siehst du das auch so oder siehst du auch, dass der Werner ein Problem ist? Aber gut, nicht."
+        },
+        {
+            "start": 2015660,
+            "end": 2036760,
+            "speaker": "A",
+            "text": "Aber gut, ich finde das enorm wichtig, denn und Achtung, jetzt nehme ich wieder die Manager Sicht an. Ich finde es wichtig, solche Sachen von mehreren Leuten zu verifizieren, anstatt die Stimme eines Einzelnen zu nehmen, der die ganze Sache vielleicht auch einfach nur so sieht, dass andere Leute betroffen sind. Weißt du was ich meine, ja, ja,"
+        },
+        {
+            "start": 2036760,
+            "end": 2152130,
+            "speaker": "B",
+            "text": "aber guter Manager geht ja nicht hin und Hey, der Wolfi hat gesagt, du findest Werner auch scheiße, sondern der Hey, ihr habt gehört, es gibt Probleme mit Werner. Siehst du das auch so, oder Aber je nachdem, wie gut die Managerin der Manager ist. Aber auch da üblicherweise, wenn der Werner ein großes Problem ist und jeden Tag die Leute am Abend sowieso sich auslassen über den Werner und sagen, wie groß dieses Problem ist, dann hat wahrscheinlich auch niemand was dagegen, wenn man das in irgendeiner Form weiterträgt, würde ich mal so sagen. Aber klar, man muss sich dessen bewusst sein und es gibt ja auch heiklere Themen und keine Ahnung, wenn es jetzt in Richtung sexuelle Belästigung oder strafrechtliche Dinge, da muss man dann natürlich schon überall bisschen sensibler vorgehen, natürlich was man ausplaudert, unter Anführungszeichen ausplaudert. Aber ganz oft ist es ja auch so, dass es wirklich diese Kräfte, sage ich mal, im Team gibt, die das eben weitertragen. Und ich kenne das auch von den Teams. Es gibt halt ein, zwei, die sagen dir das ganz offen raus und der Rest ist meistens leise und du musst dann wirklich aktiv reingehen und als Manager nachfragen, ist es wirklich ein Problem, um ein besseres Gefühl zu kriegen? Also das passiert in der Realität meistens über genau solche Kanäle, über einzelne Personen, die eben lauter oder sich das trauen, einfach dementsprechend weiterzugehen. Umso wichtiger ist es, dass man als Manager zuhört und es halt auch dementsprechend akzeptiert. Aber es gibt halt auch ganz viele, vor allem wenn sie keine Ahnung, man muss das ja auch immer so sehen, Manager kann gerade gestresst sein, hat gerade keinen Kopf dafür, sollte nicht passieren, Aber dann rutschen halt auch so flapsige Dinge raus. Das heißt, man kann danach das natürlich schon noch mal mit Objektivität noch mal weiter treiben und das heißt nicht, dass jeder Manager, der so eine flapsige Antwort hat, automatisch nie was machen wird. Und drum ja auch meine Sicht, wenn man da einen Impact aufzeigt, was das wirklich für ein großes Problem ist, dass dann hoffentlich der Manager, auch wenn er gestresst ist, auch wenn er gerade keinen Kopf dafür hat, sagt okay, du hast recht, schreib mir das auf."
+        },
+        {
+            "start": 2152440,
+            "end": 2225180,
+            "speaker": "A",
+            "text": "Generell bin ich der Meinung, was immer schwer ist, weil Manager und Managerinnen sind auch nur Menschen. Als Führungskraft musst du deine Emotionen im Griff haben. Wenn so Sprüche kommen, wir wissen doch wie die Person ist, dann finde ich das schon okay, das einfach nur als faul bzw. Feige abzustempeln, wenn man der Meinung ist, dass man den Konflikt scheut. Du hast gerade einen Punkt angesprochen, dass die Führungskraft gegebenenfalls in dem aktuellen Moment überfordert ist oder gestresst und wie kann man sowas verifizieren als IC vielleicht, dass man die Person dann zu einem späteren Zeitpunkt, nicht am selben Tag, sondern nächste Woche oder ähnliches, noch mal darauf anspricht. Dann verifiziert man, war das eine One Off Situation mit dem Manager oder ist das eine wirkliche Konfliktscheue? Denn die eigentliche Aufgabe des Managers, der Teamleiter ist natürlich Konflikte zu lösen. Denn wenn das Team performant ist, ist der Manager natürlich, steht er auch gut da. Also das ist ja so die Ebene. Und vielleicht ist das auch noch mal ein Punkt, dass wenn so eine flachsige Antwort kommt, vielleicht einfach in der Woche noch mal nachhaken, um zu verifizieren, okay, ist das jetzt hier wirklich ein Problem, was einfach ignoriert wird oder habe ich die Person vielleicht einfach im falschen Moment abgepasst, was natürlich dann auch nicht gut ist, weil diese Antwort sollte nie kommen. Und wie gesagt, Emotionen sollte man im Griff haben, aber es sind leider auch nur Menschen."
+        },
+        {
+            "start": 2225180,
+            "end": 2238690,
+            "speaker": "B",
+            "text": "So, jetzt holen wir dich mal aus deiner Managerrolle da wieder raus und in die IC Rolle oder als guter Manager, der aber extern ist als Coach, wann würdest du eskalieren, also eine Stufe überspringen und an eine höhere Ebene gehen?"
+        },
+        {
+            "start": 2238690,
+            "end": 2267810,
+            "speaker": "A",
+            "text": "Ich hoffe, jeder von euch als ICE hat hier und da mal einmal im Quartal sogenannte Skip Level One on One. Das bedeutet Einzelgespräche mit eurem Chef Chef oder Chef Chefin und als ein Punkt im Bereich Managing ab hat man klassischerweise, man teilt zwei oder drei Wins mit dem Chef Chef zwei und drei Dinge, die nicht so gut laufen. Und genau in diesem Punkt würde ich auch diesen Konflikt mit meinem Manager ansprechen."
+        },
+        {
+            "start": 2267810,
+            "end": 2276410,
+            "speaker": "B",
+            "text": "Okay, also das würde die Frage beantworten, wie mache ich das dann? Aber meine Frage war, wann springst du? Also wann überspringst du dieses Kipp Level,"
+        },
+        {
+            "start": 2276410,
+            "end": 2288810,
+            "speaker": "A",
+            "text": "habe ich ja gesagt. Ich hoffe, ihr habt dies einmal pro Quartal, nachdem ich ein bisschen, nachdem ich zweimal das Thema bei meinem Chef angesprochen habe und abgeblockt wurde, dann würde ich aufs nächste Skip Level warten oder vielleicht sogar einfordern."
+        },
+        {
+            "start": 2289020,
+            "end": 2294060,
+            "speaker": "B",
+            "text": "OK, Also wenn du zweimal abgeblockt wurdest, dann gehst du weiter, weil ich zweimal"
+        },
+        {
+            "start": 2294060,
+            "end": 2299100,
+            "speaker": "A",
+            "text": "das Gefühl hatte, ich wurde auf keinen Fall ernst genommen und ich denke, es ist ernst genug, das nach oben weiterzutragen."
+        },
+        {
+            "start": 2299340,
+            "end": 2303900,
+            "speaker": "B",
+            "text": "Prüfst du davor, ob es ein strukturelles Problem in der Firma ist oder nur von deinem Manager?"
+        },
+        {
+            "start": 2303980,
+            "end": 2360190,
+            "speaker": "A",
+            "text": "Wenn das ein strukturelles Problem in der Firma ist, kriege ich die Bestätigung im Skip Level. Erstmal betrifft es ja nur mich und mein Team und ich habe das Problem. Zu diesem Zeitpunkt würde ich sagen, ist es noch gar nicht relevant. Also bevor der Erwähnung im Skip Level ist es ja noch gar nicht relevant, ob es ein strukturelles oder nicht ist. Denn wenn es nur ein Team Problem ist, dann löst mein Skip Level Chef das ja irgendwann. Oder wenn er mich ernst nimmt, wenn es ein strukturelles ist, kriege ich die Antwort in diesem Skip Level. Also ich glaube, was ich sagen möchte, das ist die erste Verifikationsstufe, ob es ein persönliches oder also ein Team oder ein strukturelles Problem. Denn wenn ich da die ähnliche Antwort kriege, angenommen, der Werner ist so ein high performing Team Member, wenn der Werner ein so high performing Team Member ist, dann hat der Skip, dann hat mein Chef Chef den Namen von Werner schon öfters gehört, dann ist er über die Teamgrenzen hinaus bekannt und wenn dieses Problem nicht angegangen werden möchte, dann erfahre ich es."
+        },
+        {
+            "start": 2360190,
+            "end": 2381740,
+            "speaker": "B",
+            "text": "Da ist ein sehr guter Punkt. Vor allem, was man natürlich nicht machen sollte, ist auf seinem Level zu bleiben und sagen, das ist ein strukturelles Problem in der Firma, ich gehe und dabei war es vielleicht wirklich nur ein Managerproblem. Da gebe ich dir vollkommen recht. Man sollte unbedingt diesen Weg über das Kipp Level machen, weil nur dann weiß man, ob es wirklich ein strukturelles Problem ist und mehrere Leute derselben Meinung sind."
+        },
+        {
+            "start": 2381740,
+            "end": 2419500,
+            "speaker": "A",
+            "text": "Ich würde auch nicht schuldzuweisend in das Skip Level gehen, deswegen hatte ich dir gerade diese Struktur von Managing Up erklärt, dass es vielleicht sehr gut zu verpacken wäre, als ich teile zwei, drei Wins, was gut gelaufen ist, und ich teile zwei, drei Sachen, die nicht so gut gut gelaufen sind mit meinem Chefchef und dass man da den Punkt reingibt, weil wenn du nämlich sofort mit der Tür ins Haus fällst, dann klingt das Der Werner ist schuld oder mein Chef ist schuld oder und das ist sofort immer so eine. Das eröffnet das ganze Gespräch in einem sehr negativen Licht, auch wenn es ein sehr negatives Thema ist und auch ein sehr ernstes Thema ist, aber Auch die Ernsthaftigkeit des Themas wird von einem guten Chefchen oder von einer guten Chefchefin auch erkannt."
+        },
+        {
+            "start": 2419660,
+            "end": 2457390,
+            "speaker": "B",
+            "text": "Es ist natürlich schon das Risiko da, dass sobald man Skip Level höher geht, dass man vielleicht das hört, was man eigentlich nicht hören will und dass es vielleicht wirklich ein strukturelles Problem ist und dass man dann höchstwahrscheinlich nicht mehr in dieser Firma glücklich wird sein kann oder vielleicht auch von der Firma aus nicht mehr glücklich sein kann in dieser Firma, weil man rausgeschmissen wird. Also mit dem muss man rechnen. Aber auf der anderen Seite, wenn das ein großes Problem für einen selber darstellt, will man dann in der Firma noch bleiben, wenn es wirklich nicht akzeptiert wird? Höchstwahrscheinlich nicht. Also sehe da jetzt wenig Gefahr oder wenig Risiko eigentlich an."
+        },
+        {
+            "start": 2457390,
+            "end": 2572300,
+            "speaker": "A",
+            "text": "Nehmen wir mal den Best Case und nehmen wir mal den Worst Case, den du gerade beschrieben hast. Der Best Case ist, es ist ein Teamproblem, es ist kein strukturelles Problem und das Problem wird angegangen. Dann wirst du als IC Du hast soeben etwas versucht zu ändern für ein ganzes Team und das ist ein Boost deiner positiven Karma Punkte bei deinem Chef Chef, weil du den Mut hattest, das Thema anzusprechen, weil du für die Firma gedacht hast, weil du die Performance des Teams versucht hast zu erhöhen. Das ist der Best Case. Der Worst Case ist, es ist ein strukturelles Problem, es findet keine Änderung statt. Dann weißt du Bescheid. Und was du dann damit machst mit dieser Information, das obliegt dir aber auch. Der Worst Case ist ja mehr oder weniger ein guter Case, denn du kennst den nächsten Schritt für dich, weil du hast es ja nicht ohne Grund bei mir als Manager angesprochen und ich habe dich abgeblockt. Du hast es angesprochen, weil es dich stört und dann gehst du eine Ebene höher, da wirst du wieder abgeblockt. OK, wenn die Firma jetzt etwas größer ist, kannst du vielleicht die Abteilung, das Department wechseln und kriegst einen anderen Chef und einen anderen Chef Chef. Wenn die Firma kleiner ist, weißt du, solche Probleme werden nicht angegangen. Dann stellst du die nächste Welche Probleme werden noch nicht angegangen? Und dann kannst du die Frage Ist das die Firma, in der ich arbeiten möchte? Also du kennst den nächsten Schritt, Denn hättest du es nicht angesprochen, hättest du das Problem einfach runtergeschluckt. Hättest du vielleicht als Mitarbeiter die ganze Sache akzeptiert und gesagt ich sitze hier nur und mache meinen Job. Das bedeutet, deine eigene Motivation, dein eigener Antrieb geht verloren. Und das ist jetzt meine persönliche Meinung, das kann jeder so machen, wie er möchte. Aber ich denke mir persönlich, ich sitze acht Stunden pro Tag bei dieser Firma hier. Das sind drei und dreiig Prozent meiner Zeit von Montag bis Freitag. Ich möchte nicht einfach nur da sitzen und hier meinen Job machen, weil das ist für mich verschwendete Lebenszeit. Aber das kannst du für dich entscheiden, hast du, ich sage mal, Klarheit in der Entscheidung. Und deswegen denke ich auch, der Worst Case ist für dich persönlich ein Win."
+        },
+        {
+            "start": 2572300,
+            "end": 2597150,
+            "speaker": "B",
+            "text": "Du kannst ja sogar noch weiter nach oben gehen. Du kannst ja bis zu einem Board gehen, theoretisch kann der C Level austauschen oder du gehst noch einen Schritt höher die Gesellschaft, was ja gerade bei sexueller Belästigung oft der Fall ist. Und und es gab ja auch den Fall zwei tausend siebzehn wo dann am Ende der Uber CEO gehen hat müssen wegen einer sexuellen Belästigung, die aber erst im Nachhinein dann eigentlich publik wurde."
+        },
+        {
+            "start": 2597470,
+            "end": 2650090,
+            "speaker": "A",
+            "text": "Die ganze Story wurde von einer Mitarbeiterin im Februar zwei tausend siebzehn mal in einem Blogpost verfasst. Der Blogpost heißt reflecting on a very, very strange year at Uber. Und zwar ging es da um folgendes. Eine weibliche Person hat in einem SRE Team bei Uber angefangen und direkt am ersten Tag machte ihr neuer Manager per Firmenchat unmissverständliche sexuelle, ich sag mal, Andeutungen. Sie hat ein paar Screenshots gemacht und hat das an die Personalabteilung gemeldet. Die Personalabteilung, das Management hat dann den ganzen Fall etwas heruntergespielt. Ja, die Person dieser Manager sei ein High Performer und das war das erste Vorgehen und hat dann eine Verwarnung ausgesprochen. Später hat die Mitarbeiterin aber festgestellt, als sie sich mit anderen Frauen im Unternehmen unterhalten hat, dass dies wohl nicht das erste Vergehen war und dass die anderen Frauen wohl ähnliche Nachrichten bekommen hatten und"
+        },
+        {
+            "start": 2650090,
+            "end": 2651610,
+            "speaker": "B",
+            "text": "auch an HR gemeldet hatten."
+        },
+        {
+            "start": 2651610,
+            "end": 2778450,
+            "speaker": "A",
+            "text": "Ganz genau, Also auch mit Screenshots und Pipapo. Parallel herrschte im Unternehmen wohl irgendwie ein bisschen Probleme im Management, öftere Reorgs, wechselnde Prioritäten, abgebrochene Projekte und so weiter und so fort. Und sie hat versucht innerhalb des Unternehmens in ein anderes Team zu wechseln. Und obwohl sie positive Performance Ratings hatte, wurde das abgeblockt von dem Team Manager und sogar ihre Performance Ratings wurden wohl später nach unten korrigiert, was dann natürlich auch einen Einfluss auf die Benefits hat, wie zum Beispiel manche Firmen bieten gesponserte Studienprogramme an anhand einer Performance und die Dame hatte wohl ein gesponsertes Stanford Studienprogramm auf Kosten von Uber auf Basis ihrer positiven Performance und die dann später korrigiert wurde nach unten und weswegen dann das Sponsoring für das Stanford Studienprogramm abgebrochen wurde. Die ganze Sache ging dann so weiter, das wurde dann auch noch ein bisschen weiter gemeldet und irgendwann hatte die Dame dann auch mal ein Meeting mit HR und da hat HR dann, ich sag mal auf gut Deutsch, den Spieß umgedreht und hat gefragt, ob der Dame aufgefallen sei, dass sie der gemeinsame Nenner all dieser sexuellen Meldungen bei der HR gewesen sei und ob nicht sie das Problem sei. Und da geht es natürlich dann in das Thema von Gaslighting, was das ist, erklären wir gleich noch mal ganz kurz. Und da hat die Dame dann die Reißleine gezogen, hat gekündigt und hat dann auch im Endeffekt die Firma verlassen. Während dieser ganzen Zeit ist der Frauenanteil in der Software Engineering Organisation auch drastisch gesunken, von über fünf und zwanzig Prozent bis zuletzt auf circa drei Prozent, was natürlich schon eine harte Zahl. Und da gab es noch so ein paar andere kleine symbolträchtige Aktionen, wie zum Beispiel, dass die Software Engineering Gruppe wohl Lederjacken bestellt hat für die sres und so weiter, wegen irgendeinem gelungenen Projekt und weil der Frauenanteil so gering war, gab es keine Lederjacken für die Frauen, da es so eine kleine Gruppe gewesen sei und sich deswegen der Mengenrabatt für die Lederjacken wohl nicht gelohnt hätte. Also ist natürlich auch, ich sag mal,"
+        },
+        {
+            "start": 2778450,
+            "end": 2781450,
+            "speaker": "B",
+            "text": "der Inbegriff eines strukturellen Problems, würde ich sagen."
+        },
+        {
+            "start": 2782890,
+            "end": 2827800,
+            "speaker": "A",
+            "text": "Ich glaube, du kannst es nicht besser zusammenfassen, Also ich lache jetzt darüber, aber es ist natürlich alles andere als lustig. Ende vom Lied ist, und jetzt sind wir ein bisschen weiter in der Zeit. Sie hat den Blogpost veröffentlicht, die ganze Sache hat sich wohl zwei tausend fünfzehn abgespielt. Der Blogpost wurde zwei tausend siebzehn veröffentlicht und dieser Blogpost hat wohl auch eine interne Untersuchung zur Folge gehabt, in der unter anderem dann der CEO zurückgetreten ist. Also es ist wohl ein seltener Fall, ich sag mal, wo ein einzelner dokumentierter Erfahrungsbericht reale Strukturkonsequenzen hat, aber ich glaube, das ist halt knallhart der Beweis zwischen ein Teamproblem und strukturelles Problem. Ich habe noch nie bei Uber gearbeitet. Dieser Blogpost, den verlinkt man natürlich auch in den Shownotes."
+        },
+        {
+            "start": 2827800,
+            "end": 2838400,
+            "speaker": "B",
+            "text": "Was da aber auch wieder ganz gut gezeigt wird, ist, weil du sagst, es ist ein seltener Fall, wo ein Fall dann das zum Kippen gebracht hat, das Licht erblickt hat."
+        },
+        {
+            "start": 2838480,
+            "end": 2846230,
+            "speaker": "A",
+            "text": "Also ich will nicht sagen, das ist ein seltener Fall in der Industrie, Ich will sagen, ist ein seltener Fall, der das Licht der Welt erblickt hat und wurde so publik und öffentlich besprochen."
+        },
+        {
+            "start": 2846230,
+            "end": 2901130,
+            "speaker": "B",
+            "text": "Genau, und das war wahrscheinlich nicht nur ein Fall, der Ihnen dann das Genick gebrochen hat, sondern natürlich mehrere. Aber es zeigt sich schon immer wieder das Muster, dass es irgendwen braucht, der an die Öffentlichkeit geht, der das alles dokumentiert aufzeichnet, um überhaupt den anderen dann vielleicht den Rückenwind zu geben, dass die auch ihre Fälle publik machen oder dass dann auch wirklich mehr passiert. Und ihr habt es gerade jetzt noch mal recherchiert im Vorfeld, es ist immer noch so, auch die aktuellsten Zahlen, also ich hab so Zahlen gefunden, die zehn Jahre alt sind und die aktuellen Zahlen. Es ist immer noch ungefähr so, dass nur zehn Prozent aller Fälle überhaupt reported werden, wenn es um sexuelle Belästigung geht, weil dann üblicherweise eben auch sehr wenig passiert. Ich hoffe, es wird immer immer besser, aber die Zahlen, wie viel reported wurde, haben sich kaum geändert. Und das zeigt ja auch, dass die Angst immer noch sehr groß ist, dass wenig passiert und dass das einfach nicht erkannt wird und auch eben keine Folgen hat. Ganz oft."
+        },
+        {
+            "start": 2901130,
+            "end": 3043710,
+            "speaker": "A",
+            "text": "Ich habe gerade das Wort Gaslighting angesprochen und das ist eigentlich das, was hier getan wurde, als ich gerade gesagt habe, die HR hat versucht, den Spieß umzudrehen in dem Meeting, hat gesagt, okay, ob der Dame nicht aufgefallen sei, dass sie der gemeinsame Nenner für all diese Meldung ist, ob sie nicht das Problem sei. Gaslighting beschreibt eine Manipulation, die dich an deiner eigenen Wahrnehmung zweifeln lässt. Und das Ziel ist relativ klar, die Macht zu behalten, die Verantwortung abzuwälzen und dich ruhig zu stellen, statt das eigentliche Problem zu lösen. Der ganze Begriff kommt aus einem Film von ein tausend neun hundert vier und vierzig wo ein Mann das Licht gedimmt hat und seiner Frau eingeredet hat, sie bilde sich das nur ein. Da kommt dieser Begriff wohl her, weil der Film wohl Gaslight heißt. Die typischen Muster sind relativ klar, man leugnet die Fakten und man versucht die Schuld umzudrehen. Und jetzt ist die Frage, okay, wie erkenne ich das denn? Denn ich sage mal, ein klassischer Erkennungsmerkmal ist, du gehst regelmäßig verwirrt oder schuldig aus Gesprächen raus, obwohl du mit einem klaren, berechtigten Anliegen reingegangen bist. Wie zum Beispiel auch der Satz, ich glaube, der Frust ist nur in deinem Kopf. Vielleicht zahlen wir dir mal einen Therapeuten, den ich initial genannt hatte. Das könnte gegebenenfalls auch eine Art von Gaslighting sein, so nach dem Motto, okay, vielleicht ist das Frust gar nicht im Team. Vielleicht hat der Werner gar nicht so eine Macht, dass die Frust im Team, ich bin schon wieder bei Werner, tut mir total leid, die Frust im Team so hochzuschrauben. Vielleicht ist die Frust wirklich nur in deinem Kopf. Vielleicht nimmst du die anders wahr. Vielleicht bist du das Problem und nicht der Werner. Ein anderer Klassiker wäre natürlich das mit dem Therapeuten, ist natürlich ein hartes Beispiel, ist, dass dein Chef irgendwie etwas jetzt zusagt, es aber später halt bestreitet. Ja, das habe ich nie gesagt. Und du fängst dann an, an deinem eigenen Gedächtnis zu zweifeln. Hattet bestimmt ihr alle schon mal so eine Situation. Jetzt muss man aber auch sagen, und das sage ich nicht als Manager, das sage ich als Mensch nicht, jede falsche oder unangenehme Aussage ist Gaslighting, Denn wer ehrlich eine andere Erinnerung hat oder halt vielleicht einfach im Unrecht ist, manipuliert halt nicht. Also Gaslighting hat ein Muster und eine Funktion und ab und zu vergesse ich auch einfach etwas, was gesagt wurde, ich habe es geträumt oder sowas. Oder vielleicht wurde ich auch gegessen, wenn ich geträumt habe, ich weiß es auch nicht. Naja, aber das ist dieser Begriff vielleicht auch sehr interessant, interessant das auch mal zu kennen."
+        },
+        {
+            "start": 3043790,
+            "end": 3102720,
+            "speaker": "B",
+            "text": "Aber um herauszufinden oder um es leichter zu machen, ob es wirklich Gaslighting ist, auch da hilft es natürlich, wenn man probiert, auf einer möglichst sachlichen Ebene Argumente zu haben und wenn man sich die aufgeschrieben hat und wirklich konkrete Beispiele hat, was wirklich passiert ist, was der Werner gesagt hat, was vielleicht der Manager gesagt hat, man kann sich sowas ja auch noch mal im Nachgang aufschreiben. Das hilft einem dann, das schon besser zu beurteilen, weil am nächsten Tag ist es teilweise schon wieder ganz anders. Aber wenn man da wirklich auch solche Sätze von dem Manager, von der Managerin mal aufschreibt oder wirklich mitnimmt, dann vergisst man die auch nicht. Dann stellt man sich die nicht irgendwie anders vor am nächsten Tag oder kommt noch in irgendeine Spirale hinein. Also auch da aufzeichnen, dokumentieren, aufschreiben. Alleine das Aufschreiben hilft einem schon, weiß man genau, was eine Person gesagt hat, was haben die Personen getan, sei es ein Gedächtnisprotokoll. Das ist alles sehr, sehr hilfreich und vor allem im Nachgang, weil eine Woche später kann man sich sowieso nicht mehr daran erinnern."
+        },
+        {
+            "start": 3102720,
+            "end": 3136730,
+            "speaker": "A",
+            "text": "Eines der besten Beispiele, und das klingt jetzt penibel, ist eigentlich die ein hundert eins Dokumentation oder nach jedem Meeting immer noch eine Meeting Zusammenfassung per Rundmail an die Gruppe zu schreiben. Das klingt so ein bisschen penibel und das klingt aber wenn alle einfach d' accord sind, das haben wir besprochen, dann sollte es ja auch eigentlich kein Problem geben. Und ich glaube, das gilt auch als Meeting Best Practice, dass man nach einem Meeting noch mal ein Protokoll rumsendet, denn wer schreibt, der bleibt, könnte man fast so sagen. Mach bitte aber keine heimlichen Tonaufnahmen oder sowas. Das kann natürlich alles ein bisschen schwierig werden. Ist vielleicht das andere Extrem der Dokumentation,"
+        },
+        {
+            "start": 3136730,
+            "end": 3201960,
+            "speaker": "B",
+            "text": "ist glaube ich sogar in recht vielen Firmen als fristloser Kündigungsgrund in Verträgen, wenn du Tonaufnahmen illegal machst. Also das kann sehr wohl zu Problemen führen. Wobei übrigens diese Aufzeichnungen oder auch die sachliche Vorbereitung noch sehr stark hilft, ist, wenn man in irgendwelchen Kommunikationssituationen kommt, wo man eben vielleicht irgendwas Flapsiges entgegengeworfen bekommt, dass man da auch richtig reagiert und nicht auch emotional wird. Also dass man eben, wenn man der Andi dann sagt, kann man halt nichts machen, dass sie dann irgendwie zynisch werde oder mich auf dieses Level einlasse. Also auch da, wenn ich sachlich vorbereitet bin oder wenn ich zumindest probiere auf einer sachlichen Ebene zu bleiben, dann hilft mir das auch in diesen schwierigen Situationen. Und es gibt nichts Schlechteres, als wenn ich auf einer sehr emotionalen Antwort von meiner Managerin, Manager auch wieder emotional reagiere, weil das hilft niemandem was und das bringt mich nicht weiter. Und ich habe ja üblicherweise ein Ziel, das sie verfolge, wenn ich in so ein Gespräch hineingehe."
+        },
+        {
+            "start": 3201960,
+            "end": 3281530,
+            "speaker": "A",
+            "text": "In der Discord Community, worauf diese Episode hier basiert, wurde gefragt Wie kann man denn nicht kampflos aus dem Gespräch gehen? Also ich gehe in eine Gehaltsverhandlung jetzt mal als Beispiel und mir wird entgegengeworfen, warum möchtest du mehr Gehalt? Du wohnst doch noch zu Hause in der Wohnung deiner Mutter. Wenn ich als IC oder auch als Manager, weil ich habe ja auch Gehaltsverhandlungen mit meinem Chef, weil ich möchte ja vielleicht auch mehr Geld. Sowas bekomme ich, dann mach das natürlich, was mit mir Es brodelt innerlich und es ist die Soll ich da nicht kampflos aus dem Gespräch gehen? Ich denke, da gibt es mehrere Arten, wie man reagiert. Erstens, der Chef bringt ein Argument, was mich halt völlig überrumpelt, weil ich habe jetzt nicht damit gerechnet, dass meine Wohnsituation wie oder wo ich wohne, irgendeine Relevanz zu meiner Gehaltsforderung hat. Das überrumpelt mich. Ich komme da jetzt gerade in Echtzeit Reaktion nicht mit klar, eine gute Antwort zu geben. Es ist völlig legitim zu Hey, ich brauche mal eine Pause oder können wir das in einem Folgetermin weiter besprechen? Und dass man einfach dann aus dem Meeting geht, das Meeting eigentlich auch abbricht und Hey, ich glaube, wir sollten das hier vertagen. Ich komme wegen dem Thema noch mal auf dich zu gehen noch mal zurück, atme mal ein bisschen raus. Und das ist keine Schande. Man flüchtet auch nicht. Man flüchtet auch nicht kampflos, sondern man gibt sich einfach Zeit, damit umzugehen, was völlig okay ist."
+        },
+        {
+            "start": 3281530,
+            "end": 3342220,
+            "speaker": "B",
+            "text": "Ich glaube, das ist auch super wichtig, wenn man auf einer emotionalen Ebene plötzlich unterwegs ist. Ich habe mal so eine Situation selbst miterlebt, wo jemand sehr cholerisch reagiert hat, Es war sogar in der Öffentlichkeit und los gebrüllt hat. Und das Schlechteste ist natürlich da jetzt in irgendeiner Form zurückzubrüllen oder in Streit zu verfallen. Und was diejenige Person gemacht hat. Das war zwar auch ein bisschen flapsig, aber er hat dann einfach so Hey Chef, wir reden wieder, wenn du dich beruhigt hast und ist einfach weggegangen. Und das war zwar auch Vielleicht muss man sich erst mal trauen und muss man auch wissen, ob das funktioniert in der Situation, Aber grundsätzlich, dass man eben nicht darauf eingeht und möglichst professionell reagiert, das nimmt halt auch den ganzen Wind aus den Segeln wenn jemand gerade in absoluter emotionalen Rage ist und auf einen einbrüllt und das passiert leider immer noch öfter als man denkt, obwohl hoffentlich dieser Führungsstil langsam weniger wird, aber es passiert noch. Und da einfach selber professionell zu bleiben, wenn der Chef schon nicht professionell ist, das zeigt halt auch die Größe dann."
+        },
+        {
+            "start": 3342220,
+            "end": 3371030,
+            "speaker": "A",
+            "text": "Ich meine, was passiert im worst case? Du steigst auf die Emotion ein, du antwortest emotional, denn das initiale Argument ist ja sehr wahrscheinlich in irgendeiner Art und Weise greift dich ja an, was du halt, was menschlich ist, versuchst, okay, ein ähnliches Argument zurückzuwerfen. Es tut mir leid, das hilft nicht. Die andere Person wird dann auch nur abblocken. Ihr verstrickt euch irgendwie in Argumente, die einfach überhaupt nichts mehr mit der initialen Sache zu tun haben. Und das ist so eine Abwärtsspirale fürs Gespräch."
+        },
+        {
+            "start": 3371430,
+            "end": 3385350,
+            "speaker": "B",
+            "text": "Sogar wenn man teilweise sachliche Argumente bringt. Wenn die andere Person gerade in absoluter Rage ist, wirst du sie trotzdem nicht auf die sachliche Ebene bringen. Also es bringt dann auch gar nichts, irgendwelche sachlichen Dinge einzuwerfen. Da ist die Pause eigentlich wirklich die beste Form."
+        },
+        {
+            "start": 3385430,
+            "end": 3477130,
+            "speaker": "A",
+            "text": "Und das, was wir jetzt hier sagen, nicht emotional zu werden, ist deutlichst einfacher gesagt als getan. Der beste Tipp ist, und das klingt jetzt total banal, kurze Pause, zwei bis drei Mal durchatmen, sich daran zu erinnern, hey, du selbst willst dich nicht auf diese Ebene herablassen, mit der dir begegnet wurde. Du möchtest, du erwartest ein professionelles Verhalten. Das wurde dir nicht entgegengebracht, das verstehen wir. Aber es gibt so einen schönen Be the change you want to see in the world. Versuch wenigstens, dass du professionell antwortest. Und wie kannst du das zum Beispiel machen? Mit klarer professioneller Kommunikation. Atme zwei dreimal durch. Versuch deine Emotionen zu kontrollieren und sag so was Ich möchte hier kurz das Gespräch pausieren. Ich denke, das Argument hat nichts mit der eigentlichen Sache an sich zu tun und ich fand das auch nicht als angebracht. Ich denke, wir sollten das Gespräch wieder auf eine Ebene heben, auf der wir professionelle Lösungen finden können. Wenn wir jetzt mal auf das Gehaltsthema eingehen, Ich denke, dass meine Wohnsituation nichts mit meiner Gehaltsforderung zu tun hat. Ich habe in den letzten dreiviertel Jahr folgende Großprojekte in time, in budget, in quality abgeliefert. Ich habe sehr positives Feedback auf Basis von meinen Peers bekommen etc. Etc. Die letzte Performance Rating war überdurchschnittlich, meine letzte Gehaltserhöhung ist zwei Jahre her etc. Also mit objektiven, mit objektiven Werten kommen und einfach sagen OK, klar und professionell zu bleiben, wenn man merkt, das wird nichts. Pause einfordern, vor Tagen, Nacht drüber schlafen oder zwei oder ein Wochenende drüber gehen lassen und noch mal versuchen."
+        },
+        {
+            "start": 3477210,
+            "end": 3550960,
+            "speaker": "B",
+            "text": "Man kann es ja dann auch dementsprechend vorbereiten, das nächste Meeting. Man kann jetzt gerade wenn es um Gehalt geht, könnte man natürlich auch sogar die vorbereiteten Punkte oder was man erreicht hat, so als Dossier vielleicht sogar vorab übermitteln. Vielleicht hat man dann schon weniger Emotionen im Gespräch selbst drin, als wenn man da so kampfgeladen irgendwie reingeht und beide Seiten schon irgendwie kampfgeladen sind. Wenn das Dokument am Tisch liegt, dann kann man ganz klar dann sich über das Dokument besprechen und dann eben das sachlich diskutieren. Das hilft vielleicht auch beiden Seiten. Was übrigens auch vielleicht noch als Nebensatz, weil die doch einige cholerische Personen schon erlebt habe in meinem Leben. Ganz oft sind diese Personen dann aber wenn sie normal sind, danach entschuldigen sie sich auch oft und man kann ganz normal weiterarbeiten. Also es ist jetzt keine große Entschuldigung für so ein Verhalten, aber man braucht da oft, zumindest hatte ich das Gefühl, keine Angst haben, dass da dann irgendwie extrem verbrannte Erde nach so einem, ich nenne es mal cholerischen Anfall da ist, sondern man kann dann teilweise sehr gut sachlich weiterarbeiten. Zumindest ist es meine Erfahrung von meinem ja nicht übermäßig großen Testset, aber doch einige Leute, die ich schon erlebt habe, die so ähnliche Charakterzüge aufweisen."
+        },
+        {
+            "start": 3551040,
+            "end": 3707500,
+            "speaker": "A",
+            "text": "Die Erfahrung teile ich und ich teile auch die Erfahrung, dass wenn ich das erste Mal so begegnet wurde, auch komplett überfordert war und auch nicht gut reagiert habe und man wird souveräner in solchen Situationen mit der Zeit. Ich lache jetzt, aber das ist eigentlich traurig, dass man souveräner in solchen Eskalationen wird. Es ist weiterhin ein nicht gutes Verhalten. Es sind auch Menschen, es soll keine Entschuldigung sein. Doch ich sage auch okay, runterschlucken und was ihr dann mit dieser Beziehung dann mittel bis langfristig macht, das obliegt euch, denn ich möchte auch ihr shaped eure Karriere, ihr shaped euer Work Environment. Wenn ihr euch nicht in eurem Arbeitsumfeld gehört fühlt, dann zieht Konsequenzen meines Erachtens nach. Ich aber auch sagen möchte, ich möchte jeden ermutigen, die Probleme anzusprechen, nicht nur bei seiner eigenen Vorgesetzten, weil das ist diese Episode geht ja mit dem Umgang mit schwierigen Vorgesetzten, vielleicht auch auf der nächst höheren Ebene. Und wenn das nicht funktioniert, vielleicht auch mit der Personalabteilung. Achtung, es gibt Firmen, oder eigentlich ist die Aufgabe der Personalabteilung natürlich auch die Firma zu beschützen, bin ich auch ehrlich. Wir hatten auch mal eine Episode, wie man mit der Personalabteilung sehr gut zusammenarbeiten kann. Ich habe aber auch inzwischen Firmen erlebt, wo die Personalabteilung vielleicht nicht der Freund des Mitarbeiters ist, sondern eher die Firma beschützt. Dafür gibt es dann aber in anderen Ebenen oder in anderen Firmen auch so was wie den Betriebsrat. Und der Betriebsrat ist für den Arbeitnehmer da. Er ist vielleicht nicht in jeder Firma da, aber Firmen ab fünf Mitarbeitern können einen Betriebsrat gründen. Kann man in Deutschland auch nicht verhindern. Und ob man dann sogar bis zur Geschäftsführung geht, das obliegt euch, wie viel Erfolgschancen ihr der ganzen Sache ausrechnet. Ich möchte nur jeden ermutigen, nicht einfach zu gehen, wenn man noch nicht versucht hat, das Arbeitsumfeld zu verbessern. Denn jeder, der im Arbeitsumfeld aktiv ist, ist auch für das Shapen der Arbeitsumgebung verantwortlich. Und das ist nicht nur die Aufgabe der Geschäftsführung. Ja auch, aber ihr seid auch Teil der ganzen Sache und ich gebe jetzt euch nicht nur die Aufgabe, ihr müsst das machen. Nur es wäre toll, wenn die Probleme wenigstens auf den Tisch kommen und man den Mut hat und gehen kann man immer noch. Ja, das meine ich ja. Also deswegen, ich denke, wenn man die Probleme anspricht, es kann nicht schlimmer werden, weil die Probleme sind da. Natürlich kann es, wenn ihr emotional reagiert oder wenn es negativ aufgefasst wird, es kann eure Reputation schaden, das verstehe ich."
+        },
+        {
+            "start": 3707500,
+            "end": 3740800,
+            "speaker": "B",
+            "text": "Aber es ist natürlich schon auch psychisch anspruchsvoll, muss man auch sagen. Also man muss sich das erst mal trauen, wenn jetzt ein Skip Level macht oder überhaupt Seelevel nach oben gehe oder vielleicht noch weiter an die Öffentlichkeit. Das sind natürlich dann schon extreme Schritte und nicht jeder will sowas machen, ist auch verständlich. Aber ich sollte natürlich schon das, was ich mir zutraue, zumindest versuchen und das geht ja relativ schnell und dieses Monat noch investieren, um mal zu schauen, ob da irgendwo Akzeptanz überhaupt stattfindet. Das kann ich immer machen und sonst gehe halt einen Monat später."
+        },
+        {
+            "start": 3740880,
+            "end": 3754680,
+            "speaker": "A",
+            "text": "Also wenn wir über das Thema Exit sprechen, ist natürlich je nach Größe der Firma vielleicht auch ein Teamwechsel oder ein Abteilungswechsel möglich. Hatten wir ja gerade schon mal gesagt. Wenn das eine Firma mit ein tausend Leuten ist oder zwei tausend oder fünf hundert, dann kann auch ein Wechsel in eine andere Produktsparte schon wunderbar und es"
+        },
+        {
+            "start": 3754680,
+            "end": 3776950,
+            "speaker": "B",
+            "text": "kein strukturelles Problem ist in der Firma oder kulturelles Problem, sondern halt nur im Team. Habe ich aber selber auch sehr oft erlebt, dass ein Teamwechsel einfach so viel verändert hat und auch bei Leuten, die kurz vor der Entlassung waren, wirklich von der Firma Teamwechsel und es hat alles plötzlich viel besser funktioniert und es waren die High Performer plötzlich. Also es geht in alle Richtungen und man glaubt gar nicht, was so was bewirken kann."
+        },
+        {
+            "start": 3777030,
+            "end": 3849770,
+            "speaker": "A",
+            "text": "So ein Teamwechsel ist natürlich auch nicht einfach, je nach Firmenpolitik, je nach Regeln innerhalb der Firma. Was ich aber sagen kann, dass ein größeres Netzwerk in der Firma immer hilft und ein anderes Team in anderer Abteilung kann auch sich anfühlen, wie ich arbeite in einer anderen Firma. Vielleicht arbeitet ihr sogar in einem Konzern und ihr habt etliche Subfirmen zum Beispiel ich weiß, dass innerhalb der Deutschen Bahn weiß ich nicht, wie viele IT Firmen existieren und vielleicht wechselt ihr einfach in eine andere Subfirma. Natürlich ändert das euren Arbeitsvertrag und pipapo. Da kommen natürlich dann noch so ein paar Änderungen dazu, aber im Großen und Ganzen seid ihr ja im selben Konzern. Aber was ich auch sagen möchte, wie gesagt, der Exit, und zwar die Firma zu verlassen, ist immer ein möglicher Weg. Dennoch spielt da die persönliche Situation, die persönliche Lebenslage natürlich die Hauptrolle. Und zusätzlich ist man dann abhängig auch von externen Faktoren, die man halt selbst nicht unter Kontrolle hat. Marktlage, remote, nicht remote. Wo wohnt ihr? Sind eure Skills gerade gefragt oder nicht? Und woran man selbst erkennt, ob dich es mehr kostet in einem. Ich weiß gar nicht, ob ich jetzt nach dieser Diskussion das Wort toxisch nutzen darf, denn der Wolfgang grinst gerade. Also Wolfgang hat mich ja belehrt."
+        },
+        {
+            "start": 3849770,
+            "end": 3852290,
+            "speaker": "B",
+            "text": "Was heißt du? Dürfen, darfst, du darfst immer."
+        },
+        {
+            "start": 3852530,
+            "end": 3972680,
+            "speaker": "A",
+            "text": "Ja, aber du hast mich ja belehrt, dass es wirklich eine Definition von toxisch gibt, die ich bisher so noch nicht kannte und die muss ich gleich noch mal recherchieren. Aber wenn es ein Environment ist, in dem du nicht arbeiten möchtest, dann fragst du dich natürlich irgendwann OK, kostet es mich mehr hier zu bleiben als zu gehen? Und wenn ich von Kosten spreche, rede ich jetzt nicht von Geld. Also ja natürlich schon irgendwie auch von Geld über Zeit. Wenn du die ganze Zeit nie eine Gehalts bekommst, nur weil du noch in einer Wohnung deiner Mutter wohnst, dann kostet ich natürlich auch essentiell Geld irgendwann. Aber da sage Man sollte auf sich selbst achten. Man sollte sich fragen, was macht die Situation denn mit einem? Denn acht Stunden auf der Arbeit, drei und dreiig Prozent eines Tages. Ich habe selbst gemerkt, Stress auf der Arbeit nimmst du mit ins private Leben. Und wenn du immer mit schlechter Laune deinen Arbeitstag beendest, dann überträgt sich das oft auf deine Familie, auf deine Beziehung. Du bist vielleicht geladen und erhebst, wirst vielleicht lauter oder stiftest eher einen Streit in deiner Beziehung mit deiner Partnerin oder Partner an. Und ich glaube, da sind wir uns einig, das will ja gar keiner, weil deine Partnerin oder Partner kann am wenigsten was für oder deine Kinder, wenn du gestresst aus dem Arbeitsalltag kommst. Und dann ist die Frage, man sollte auf sich selbst achten Und was macht die Situation mit einem? Oder ist es das wert? Offen gesprochen, auch wenn ich Mach keine innerlichen Kündigungen, sitzt nicht einfach nur da. Aber ich sage auch es ist nur ein Job. Wenn es hart auf hart kommt, seid ihr in der Regel eine Nummer Und wenn es Massenentlassungen gibt, dann werden oben irgendwo entschieden, wer geht. Also man muss das immer so von beiden Seiten sehen. Was ich aber an den Tag legen kann nie überstürzt kündigen, ohne etwas in der Hinterhand zu haben. Und Hinterhand heißt nicht unbedingt neuen Job. Hinterhand kann auch heißen, hey, ich habe so viel Geld auf der hohen Kante, dass ich auch sechs bis neun bis zwölf Monate ohne Job über die Runden komme und die Zeit möchte ich mir jetzt nehmen. Das ist auch etwas in der Hinterhand. Aber nie einfach sagen, okay, dann gehe ich ja Bewerbung schreiben, weil das ist eigentlich eine emotionale Handlung, wo du meines Erachtens nach nur verlieren kann."
+        },
+        {
+            "start": 3972680,
+            "end": 4010620,
+            "speaker": "B",
+            "text": "Und wir haben es ja auch schon öfters besprochen im Podcast professionelles Vorgehen heißt auch, ich springe nicht sofort weg, bin nicht stur und mach nichts mehr und kündige innerlich, sondern mach da einen geregelten Abgang, mach da eine saubere Übergabe. Ich werde auch mit anderen Leuten in der Firma vielleicht irgendwann wieder mal zu tun haben, nur weil die Führungskraft mir nicht passt oder vielleicht die Abteilung. Es gibt ja trotzdem nette Kollegen, Kolleginnen, die dann auch darunter leiden, die dann meine Sachen übernehmen müssen. Also da einfach einen sauberen Abgang machen. Und wie es so schön heiß Man trifft sich im Leben immer zweimal. Das kann ich bisher schon bestätigen. Ich habe schon ein längeres Leben hinter mir, mindestens zweimal."
+        },
+        {
+            "start": 4011010,
+            "end": 4069730,
+            "speaker": "A",
+            "text": "Das ist nämlich genau die Professionalität, die du an den Tisch bringen musst, wenn du diese auch erwartest. Und natürlich die Uber Story, die wir vorhin erzählt haben, gilt als Extrembeispiel in Bezug auf externe Konsequenzen. Ich hoffe, es kommt nie so weit. Aber ja, ich glaube, über das Thema kann man sehr, sehr lange sprechen und ich bin mir nicht sicher, ob wir das Thema getroffen haben. Ich glaube, wir haben deutlich gemacht, es ist generell nicht einfach mit schwierigeren Vorgesetzten umzugehen, aber wenn du eine Sache mitnimmst, ist es glaube ich nicht emotional reagieren. Ich glaube, das hilft am meisten für dich selbst. Und dann ich würde sagen, der Exit ist nicht immer der Ausweg, weil ich habe es auch schon positiv erlebt, dass wenn man was angesprochen hat, dass man auch vom Management aktiven Support bekommt, um das Problem zu lösen. Und ich habe Situationen auch schon erlebt, wo dann Leute nahegelegt wurde zu gehen und wo sich dann auch mehrere Monate später das ganze Environment und die ganze Umgebung gedreht hat, wieder zum Positiven."
+        },
+        {
+            "start": 4069730,
+            "end": 4177070,
+            "speaker": "B",
+            "text": "Ich wollte auch gerade sagen, jetzt kommt vielleicht wieder unsere Management Perspektive mit rein, aber in dem Fall wichtig für ics, weil man immer glaubt, die Manager halten alle so zusammen und das wird alles geschützt. Ich habe das sehr oft eigentlich erlebt, dass man sehr wohl weiß, dass da andere Managerinnen, Manager schlecht sind. Also ich verwende das jetzt bewusst subjektiv schlecht eben keine gute Leadership haben. Auch in den oberen Führungsebenen ist denen sehr oft bewusst, dass es da manche Problemfälle gibt. Und da kann es wirklich sein, wenn man sich dann noch meldet, dass man eben nicht der Erste ist, sondern der Zehnte schon und dann wird sich da was bewegen. Also man glaubt gar nicht, wie oft Leute gegangen werden oder zumindest wieder Andi sagt, denen nahegelegt werden, dass sie gehen sollen, auch die teilweise schon lange bei der Firma mit dabei sind. Darum macht man es dann vielleicht bisschen netter, dass man sagt okay bitte kündige jetzt oder such dir was Neues. Aber das passiert. Also es ist da mehr Bewegung drin, was man vielleicht glauben würde als IC, wenn man diese Dynamiken gar nicht mitbekommt. Auf der sexuellen Belästigungsfront hoffe ich auch, dass es besser wird, obwohl auch Reports zeigen, dass eigentlich die meisten, also ich hab jetzt Reports gefunden, da steht immer, dass nur dreiig bis vierzig Prozent zufrieden waren mit der Reaktion der Firma, aber auch das steigt ja hoffentlich und vielleicht ist man da auch der erste Fall, der etwas meldet und dann kommen wieder mehrere nach, egal auf was für einer Ebene es ist. Muss ja nicht immer nur sexuelle Belästigung sein. Also da kann man sich schon trauen und wie wir gesagt haben, man kann immer noch am Ende kündigen und rausspringen, wenn es nicht funktioniert, aber man kann mehr bewegen, als man so denkt als IC und auch ich habe als Manager schon andere Teammitglieder dann in irgendeiner Form entweder aus dem Team herausgenommen oder sie wurden gekündigt, weil einfach Leute unzufrieden waren und das auch gemeldet haben."
+        },
+        {
+            "start": 4177070,
+            "end": 4190710,
+            "speaker": "A",
+            "text": "Jetzt habe ich zwar natürlich gerade versucht Leute zu encouragen es anzusprechen, ich kann aber auch die andere Seite verstehen, wenn ihr sagt hey Andi, Wolfi, tut mir leid, ich habe mir die Podcast Episode angehört, dafür habe ich einfach keine Kraft mehr, ich bin raus."
+        },
+        {
+            "start": 4190710,
+            "end": 4210479,
+            "speaker": "B",
+            "text": "Was ja auch komplett fairer Punkt ist. Also wie gesagt, man muss viel aufwenden dafür, aber man sollte eben nicht emotional sofort aufgeben. Das ist glaube ich das Wichtigste, dass man so viel macht, wie man sich selber zutraut, was angemessen ist, dass man zumindest das versucht und nicht von heute auf morgen emotional jemanden die Kündigung ins Gesicht wirft."
+        },
+        {
+            "start": 4210559,
+            "end": 4256350,
+            "speaker": "A",
+            "text": "Was ich auch noch vielleicht als Tipp, als finalen Tipp und dann mache ich jetzt auch Schluss hier mit der Episode mitgeben möchte. Vertraut euch vielleicht auch einer Person an, die auf einem höheren Level oder mehr Erfahrung hat. Beispiel ihr seid Senior Engineer und ihr habt Staff oder Principal Leute bei euch in der Firma. Sprecht mit ihnen darüber vielleicht wenn die Person vielleicht auch nicht im Team mitarbeitet, eine andere Perspektive zu kriegen. Und diese Leute haben oft auch Skip Level mit anderen Leuten und können da vielleicht schon mal vorhorchen und so weiter. Also es ist keine Schande, sich da vielleicht irgendwie Hilfe zu holen. Hört sich jetzt komisch an, aber eine zweite Meinung oder Unterstützung. So keine Ahnung, ob ich mich jetzt mit dem Wort toxisch um Kopf und Kragen geredet habe, aber ich hoffe mein"
+        },
+        {
+            "start": 4256590,
+            "end": 4258800,
+            "speaker": "B",
+            "text": "wir werden es in der Community lesen."
+        },
+        {
+            "start": 4258800,
+            "end": 4287420,
+            "speaker": "A",
+            "text": "Hoffentlich werden wir. Ich hoffe, mein Vergleich mit den Witzen von Axel Schröder hat es ein bisschen gerettet. Das ist eigentlich das, was ich meine, dass die Zeiten sich vielleicht verändert haben. Ich habe möchte nur mal krassen ich habe ich unterstütze das natürlich nicht und ich versuche auch irgendwie in jeder Art und Weise toxisches Verhalten nicht nur in mein Team, sondern auch in meinem Arbeitsumfeld nicht zu dulden. Aber ich werde mich jetzt mal auch in Recherche begeben. Die Definition von dem suchen, die Wolfgang angesprochen hat, damit ich auch mal was lerne."
+        },
+        {
+            "start": 4287660,
+            "end": 4292460,
+            "speaker": "B",
+            "text": "Hast du jetzt Axel Schröder gesagt oder schon Atze Schröder? Muss ich dir jetzt deine Ruhrpott Leute da erklären?"
+        },
+        {
+            "start": 4292460,
+            "end": 4302139,
+            "speaker": "A",
+            "text": "Habe ich Axel Schröder gesagt? Ich meine Axel, Atze, Atze, ich komm doch aus Essen, also aus Essen Duisburg. Ne, aber Axel Schröder ist es nicht."
+        },
+        {
+            "start": 4302139,
+            "end": 4309660,
+            "speaker": "B",
+            "text": "Aber es ist auf jeden Fall ein schönes Beispiel von einem Comedian, der auch versteht, dass sich die Zeiten ändern und dass sich der Humor auch ändert. Manche haben es ja leider noch nicht verstanden."
+        },
+        {
+            "start": 4309900,
+            "end": 4363350,
+            "speaker": "A",
+            "text": "Da gibt es aber einige, die auf der Schiene inzwischen sind. Also dass sie Ingo Apelt ist glaube ich auch so einer, der schwimmt auf derselben Welle, der sagte, die Witze von früher funktionieren halt einfach nicht mehr oder sollten auch nicht mehr funktionieren. Ich glaube, das zweite sollten nicht mehr funktionieren, ist vielleicht sogar noch wichtiger. Also da gibt es schon ein paar, die haben das verstanden, aber es gibt auch etliche, wie du sagtest, die haben es nicht verstanden. Zum Beispiel, weiß ich nicht, so ein Stefan Raab hat es ja versucht. Ich glaube, der hat es nicht wirklich verstanden. Der Wolfgang hat sich natürlich mal wieder mit persönlicher Meinung zurückgehalten, so wie immer die Schweiz. Aber wir hoffen, wir konnten was mitnehmen zumindest. Und ich muss noch mal ganz kurz sagen, es ist für mich super schwierig, diese Podcast Episode mit dir zu machen, obwohl ich ja der beschissene Manager in diesem Fall war. Ich habe ja dir gesagt, ja, was soll ich machen? Wir wissen doch, wie die Person ist. Und dann etwas zu dem Thema zu sagen, das hat mein Gehirn verknotet, das habe ich nicht geschafft. Also der Wolfgang grinst gerade sehr. Kannst du dieses Rollenspiel verstehen, Wolfgang, dass das schwierig ist?"
+        },
+        {
+            "start": 4363350,
+            "end": 4371180,
+            "speaker": "B",
+            "text": "Ja, wir werden es das nächste Mal einfacher für dich machen, Andi, damit du das, damit du das dann auch kannst. Dann bist du der IC und dann wechseln wir keine Rollen."
+        },
+        {
+            "start": 4371420,
+            "end": 4381180,
+            "speaker": "A",
+            "text": "Gut, das war's von uns. Wir hoffen, ihr habt einen besseren Tag und nicht ein trauriges Thema, über das wir gesprochen haben. Deswegen bis zur nächsten Episode. Und wie heben wir jetzt einmal noch mal kurz die Energie zum Ende?"
+        },
+        {
+            "start": 4381340,
+            "end": 4390980,
+            "speaker": "B",
+            "text": "Kommt in unsere Community. Die ist sehr cool und sogar mit schwierigen Fällen. Da ist ganz viel Hilfe und sonst ganz viel Spaß, Memes und so, wie der Andi jetzt gerade drauf ist."
+        },
+        {
+            "start": 4390980,
+            "end": 4418570,
+            "speaker": "A",
+            "text": "Gut, ein Programmierer geht zum Metzger und kauft sich ein Kilo Rinderhack. Eine Stunde später kommt er wieder und meint, es fehlen noch vier und zwanzig Gramm. Ich merke schon, der ist nicht so gut, weil die Episode so traurig war. Wo geht ein Programmierer morgens hin auf die Arbeit? Das verstehe ich nicht Mal schreib mal Arbeit. Also A R B Y I T E. Arbeit. Okay, also das war, das waren Witze, die man erklären musste. Wir beenden die Episode bis später."
+        },
+        {
+            "start": 4418970,
+            "end": 4434120,
+            "speaker": "B",
+            "text": "Die kann man nur, die muss man lesen. Andi kann man nicht im Audio. Andi hat immer noch das Audioformat vom Podcast noch nicht verstanden. Andi, du kannst ja in die Community schreiben. Vielleicht finden sie da ein paar lustig. Bei sechs hundert Leuten wird schon zwei, drei geben, die sowas lustig finden."
+        },
+        {
+            "start": 4434120,
+            "end": 4439480,
+            "speaker": "A",
+            "text": "Der letzte Wunsch eines Programmierers. Bitte ein Bit. So, das war's von mir und tschüss, Bye bye."
+        }
+    ]
+}
