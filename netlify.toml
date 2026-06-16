@@ -3591,6 +3591,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/272"
+  to = "/podcast/episode/272-wenn-der-chef-das-problem-ist-destruktive-führung-gaslighting-exit-plan?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep272"
+  to = "/podcast/episode/272-wenn-der-chef-das-problem-ist-destruktive-führung-gaslighting-exit-plan?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
