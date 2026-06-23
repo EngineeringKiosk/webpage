@@ -3603,6 +3603,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/273"
+  to = "/podcast/episode/273-bäume-hashes-bitmaps-performance-ist-kein-zufall?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep273"
+  to = "/podcast/episode/273-bäume-hashes-bitmaps-performance-ist-kein-zufall?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
