@@ -1,0 +1,459 @@
+{
+    "confidence": 0.9549275,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3619,
+    "utterances": [
+        {
+            "start": 3040,
+            "end": 61840,
+            "speaker": "A",
+            "text": "Moin Moin und willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Kurz und knackig. Wir sprechen über Index und Datenstrukturen, denn die machen oft den Unterschied zwischen läuft schon und warum skaliert das hier eigentlich nicht? Wir schauen uns an, was Red Black Trees sind und wie diese in Nginx für Timeouts genutzt werden, weshalb B und B Bäume in Datenbanken so wichtig sind, wo Hashindizes glänzen und wo sie eben auch nicht helfen. Außerdem kennt gehen wir in die Richtung Try, redixtree, Bitmap, Index und Blumenfilter und auch wie klassische HTTP Router und Git diese implementieren. Los geht's, viel Spaß. Aus so einer Podcast Episode kriegt man relativ viele Daten raus und ein Datenpunkt, den wir immer automatisch mitgenerieren, ist der Redeanteil von Wolfgang und mir und oft kommt dann raus, dass ich mehr quatsche. Warum weiß ich jetzt auch nicht, aber das, damit ich diese Zahl verteidige, hole ich jetzt mal ein bisschen aus, warum dieses Thema für heute relevant ist. Wolfgang, bist du bereit?"
+        },
+        {
+            "start": 61840,
+            "end": 73040,
+            "speaker": "B",
+            "text": "Bin bereit und lausche dir gern. Warum du übrigens immer mehr Redeanteil hast. Das ist glaube ich selbsterklärend, das braucht niemand erklären, aber ich lasse das mal als wie man im Englischen sagt, Homework für unsere Listeners."
+        },
+        {
+            "start": 73040,
+            "end": 76760,
+            "speaker": "A",
+            "text": "Kennst du das? Hier ist ein langer Brief, ich entschuldige mich jetzt schon, ich hatte keine Zeit einen kurzen zu schreiben."
+        },
+        {
+            "start": 76760,
+            "end": 80120,
+            "speaker": "B",
+            "text": "Willst du dir jetzt rausreden? Achso, nein, das ist negativ für dich. Mach nur weiter."
+        },
+        {
+            "start": 80760,
+            "end": 94080,
+            "speaker": "A",
+            "text": "Sag ich hatte keine Zeit mich kurz zu fassen. Wie dem auch sei, fangen wir mit dem Thema an und zwar war vor kurzem das Engineering Kiosk Meetup Rhein Ruhr. Wer in der Gegend wohnt, im Pott, Düsseldorf, Köln und so weiter, kann da gerne mal vorbeischauen. Die nächsten Editions."
+        },
+        {
+            "start": 94080,
+            "end": 96200,
+            "speaker": "B",
+            "text": "Wunderschöne Gegend, wunderschöne Gegend."
+        },
+        {
+            "start": 96200,
+            "end": 208520,
+            "speaker": "A",
+            "text": "So, auf jeden Fall war das Meetup in Duisburg bei Crankycom und da ist ein Typ, der steht voll auf Retro Computing und der hatte auf dem Meetup, das wusste ich gar nicht ganz viel, alte Computer, da stehen so ein Commodore und so ein Amiga und ich glaube da war auch eine PlayStation eins noch dabei. Ich wusste gar nicht, dass eine PlayStation eins schon zu Retro Computing gehört. Wie dem auch sei, ein bisschen mit dem gequatscht und dann sagt er, dass es eine riesen Retro Computing Szene gibt und das heute noch neue Spiele für C und so weiter rauskam und dann fing er an zu erzählen, dass er die Dinger auch repariert und dass natürlich dann nicht nur immer die alte Hardware eingebaut wird, sondern dann auch neue Hardware. Stell dir mal vor, du hast einen alten Porsche und du willst neue Lichter haben, dann kannst du natürlich die originalen Lichter einbauen oder du kannst moderne LED Scheinwerfer einbauen. Also es verändert ja schon ein bisschen den Porsche. Auf jeden Fall hat er dann von so Hacks erzählt, ja, du hast dann irgendwie eine alte Grafikkarte und eine alte Prozessor und dann hast du eine neue Grafikkarte daneben, die nur fürs Bild Rendering genutzt wird. Und wenn du dann irgendwie einen Ordner auf dem Computer aufmachen möchtest, dann nutzt du halt die alte CP. So weit, so gut. Und dass immer noch Spiele für diese alten Rechner rauskommen, hat mich verwundert. Und das hat mich wiederum an unsere Doom Folge erinnert, weil das Spiel Doom ist ja bekannt dafür, revolutionär gewesen zu sein in Bezug auf die Algorithmen, das Grafik Rendering unter dem Kontext der, ich sag mal, heutzutage langsamen Hardware. Und jetzt kommen wir zum Thema, wir sprechen mal über Datenstrukturen und jetzt fragt sich jeder, wieso hängt die ganze Sache zusammen? Du musst intelligente Datenstrukturen haben, um schnelles Processing unter anderem auf alter Hardware laufen zu lassen. Doom war da super fürs Rendering. Wir erinnern uns, Binary Space Partitioning, wer da nochmal reinhören möchte, Episode ein hundert sechs und vierzigste Das heißt, jetzt wo"
+        },
+        {
+            "start": 208520,
+            "end": 212200,
+            "speaker": "B",
+            "text": "wir neue Computer haben, neue Architekturen, brauchen wir eigentlich nichts mehr machen."
+        },
+        {
+            "start": 212200,
+            "end": 258950,
+            "speaker": "A",
+            "text": "Das ist alles richtig. Theoretisch, oder in sehr vielen Fällen macht man den dritten Teil von Make it work, Make it beautiful, Make it fast eigentlich nicht mehr, weil die Hardware schon fast genug ist. Es kommt aber immer wieder vor. Denn eine Sache, und Leute, die uns schon sehr lange hören, wissen, dass ich das schon mehrfach erwähnt habe, eine Sache, die ich konstant in meiner Karriere höre, mindestens einmal im Jahr ist, du arbeitest an irgendeinem Software System, es bricht unter Last zusammen oder du hast ein hohes Datenvolumen, ganz viele Daten und deine Leseoperationen werden langsamer oder so weiter. Dann kommt irgendwer sagt, das skaliert nicht. Was macht der klassische Junior oder Midlevel Engineer, der geht nach Hacker, news, sagt mysql skaliert nicht und kommt dann mit, was ist das heutige mongodb, rocksdb, weil"
+        },
+        {
+            "start": 257001,
+            "end": 317001,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 318950,
+            "end": 321910,
+            "speaker": "B",
+            "text": "es macht auch Facebook. Nice, ist auch zu alt fast."
+        },
+        {
+            "start": 321910,
+            "end": 433680,
+            "speaker": "A",
+            "text": "Naja, kommt dann auf jeden Fall mit einer anderen Software und sagt dann, wir müssen Software A mit Software B austauschen. Was, was ich mir immer denke, wenn ich sowas lese, ist, du tauscht ein bekanntes Problemset A durch ein unbekanntes Problemset B. Denn die Root Cause ist sehr, sehr oft Datenstrukturen. Und was meine ich damit? Verhältnis von Lesen und Schreibzugriffen. Wie teuer ist ein Lesevorgang bzw. Wie teuer ist ein Schreibvorgang? Das dümmste Beispiel, was ich mir jetzt gerade ausgedacht habe, um die ganze Sache einfach mal zu verbildlichen, bei einem Schreibvorgang in eine sortierte Liste muss die Liste immer neu sortiert werden, weil man beim Schreiben des Wertes nicht die richtige Stelle in der Liste kennt. Das wäre zum Beispiel ein langsamer Schreibvorgang. Und wenn man das sehr oft macht, dann zieht man die ganze Applikation unter. Und Leute, die uns sehr, sehr lange hören, die wissen, dass das kein neues Thema bei uns ist. Ich meine, im Juli zwei tausend zwei und zwanzig das war vor knapp vier Jahren, haben wir eine Episode über die Landau Notation gemacht. Die Landau Notation, wir erinnern uns, ist die Big O Notation, das ist die Komplexität von Algorithmen. Und da haben wir uns die Frage gestellt, ist das im Entwickleralltag relevant? Und ich sage ja verdammt, es ist relevant. Deswegen habe ich mir heute noch mal den Wolfgang geschnappt. Der Wolfgang hat ja ein Doktor in Datenbanken, soviel ich weiß. Datenbanken sind ja unter anderem bekannt für ganz viele smarte Index Strukturen, aber sie kommen natürlich nicht nur in Datenbanken vor. Und deswegen gehen wir heute mal, ich sage mal so als zweite Episode zu den Performance Basics, die wir in Episode zwei hundert neun und sechzig gemacht haben, schauen uns noch mal ein paar Indexstrukturen an mit praktischen Beispielen. Wo wird der Kram eigentlich verwendet? Wie könnt ihr das eigentlich verwenden? Und das ist nicht alles over Engineering, denn wenn ihr auch schon mal den Spruch gehört, das skaliert nicht, dann hört genau zu, denn oft ist eine gute Indexstruktur kein Gebrutsche, sondern hilft euch, das Problem zu lösen. Jetzt bin ich mit der Intro fertig. Ich habe ein bisschen ausgeholt, um meinen Räderanteil nach oben zu schrauben."
+        },
+        {
+            "start": 433680,
+            "end": 555030,
+            "speaker": "B",
+            "text": "In dem Fall, wenn jemand sagt, das skaliert nicht, würde ich ja sogar argumentieren, wenn man dann sagt, okay, ich steig auf was anderes um, auf eine andere Indexstruktur, auf eine andere Library, die eine andere Indexstruktur hat, dann macht es ja vielleicht sogar Sinn, ob man gleich ein ganzes Datenbanksystem auswechseln muss, ist dann noch mal eine andere Sache. Aber wir sprechen ja heute auch viel über den Hauptspeicher und da kann man natürlich vielleicht eine Implementierung durchaus schneller austauschen und da macht es natürlich auch Sinn. Und es hilft dann in diesem Zusammenhang natürlich auch Indexstrukturen zu verstehen, grundsätzliche Herangehensweisen, was es denn an Indexstrukturen so da draußen gibt. Und da werden wir heute ja auch machen, die über den klassischen Baum hinausgehen. Aber vielleicht, weil du die letzte Episode erwähnt hast, die wir zu dem ganzen Thema gemacht haben, die Episode zwei hundert neun und sechzig, wo wir vor allem über so Grundlagen gesprochen haben, was ist eigentlich ein Index, was macht es aus? Ein Index ist ein Vertrag aus Datenstrukturen, Wie du schon richtig gesagt hast, ich brauche die richtige Datenstruktur, ich brauche irgendeinen coolen Algorithmus, möglichst niedriges O, also O von eins ist natürlich das Coolste, kann direkt darauf zugreifen, ich muss die Hardware mit einbeziehen, also deine PlayStation eins und Andi, du bist schon so alt, was kann meine Hardware? Und heutzutage kann die Hardware natürlich viel, viel mehr SIMD und paralleles Processing, natürlich die verschiedenen Cache Layer, das muss man alles mitdenken. Und das Aller, allerwichtigste, und das ist ja, was du auch immer predigst von deiner Kanzel da oben, von deiner Developer Kanzel, was ist der Workload? Was suchen wir eigentlich? Weil es ist ein Unterschied, will ich eine ID immer rausholen aus meiner Datenbank oder aus meinem Index oder brauche ich eine Range Query? Will ich alle Werte zwischen drei komma vier und drei komma acht? Und das sind aber Millionen von Werte, Also welche Anfragen habe ich, was speichere ich eigentlich ab? Und nur wenn ich dieses Quadrat, nenne ich es mal, also diese vier Punkte, Datenstrukturen, Algorithmus, Hardware und Workload verstehe, nur dann kann ich sinnvoll agieren und dann kann ich auch entscheiden, brauche ich eine neue Datenbank, skaliert es nicht oder habe ich halt vielleicht nur einen Punkt angeschaut von dem Ganzen und habe auf die Hardware geschaut und eskaliert halt für diese spezielle Hardware nicht."
+        },
+        {
+            "start": 555110,
+            "end": 617750,
+            "speaker": "A",
+            "text": "Wobei ich aber auch sagen muss, zerdenkt die ganze Sache nicht, baut das einfach mal, schmeißt das mal auf Produktion, schaut, wie sich das verhält und habt halt Sichtbarkeit drauf. Das bedeutet vielleicht ein paar Metriken, ein paar Perzentile über Requestzeiten, Datenbankzeiten und so weiter. Und da sieht man relativ schnell ein paar Ausreißer oder nicht, aber zerdenkt die ganze Sache nicht immer direkt von Anfang an, meines Erachtens nach, besonders heute in diesem KI Zeitalter, Baut lieber mal richtig schnell einen dreckig gewipe codeten Prototyp, evaluiert das schön. Machen kann man immer noch, gar keine Frage. Aber habt ihr nicht gar kein Verständnis von euren Datenstrukturen von Lese Schreib Patterns. Denn wenn man meines Erachtens nach das versteht, kann man solche Applikationen einfacher machen. Und was meine ich damit? Man kann den ganzen Cash Layer entfernen, denn Cashing ist immer ein Problem, Cash Invalidation hat immer Bugs und so weiter und so fort. Und ich weiß, viele Leute sagen, man wird nicht bezahlt für Simplifizierung des Decks. Die Leute, die on Call sind, und das bist du hoffentlich selbst für deinen Stack, werden dir wahrscheinlich danken."
+        },
+        {
+            "start": 617750,
+            "end": 694440,
+            "speaker": "B",
+            "text": "Ich möchte gar nicht zu sehr in dieses KI Thema jetzt eintauchen, aber du hast gerade zwei gute Punkte gesagt. AI Generated Code kann nämlich genau in diese zwei Kerben schlagen. Einerseits kann er von Anfang an schon sehr gut optimiert sein. Ich hatte gerade vor zwei Tagen eine SQL Query, da bin ich echt lang drüber gesessen und haben gedacht, what the fuck, was passiert da? Und sie war aber korrekt und sie war verdammt intelligent und verdammt gut gemacht habe. Okay, cool und die mach echt viel mit SQL. Aber auf der anderen Seite hat man dann wieder so Dinge, dass es absolut zugemüllt ist und wahnsinnig kompliziert irgendwas gemacht wurde, wo man dann vielleicht manuell eingreifen muss. Es gibt durchaus beide Varianten und darum ist es gut, auch da mal einen Blick drauf zu werfen und Metriken zu haben. Und wie du richtig gesagt hast, es macht keinen Sinn, da Premature Optimization zu machen. Aber wenn man saubere Metriken hat, dann findet man vielleicht auch schnell raus, okay, was ist denn bei mir langsam? Und wenn ich dann eine spezielle Funktion habe, zum Beispiel die langsam ist, dann kann ich da eintauchen und meistens kann ich da so viel Zeit wieder rausholen mit der einen Optimierung, dass mein ganzes System um neunzig Prozent vielleicht schneller wurde. Und da macht es dann natürlich auch Sinn, die Zeit zu investieren in diesen kleinen Teil, aber nicht überall automatisch immer alles mitdenken und im Vorhinein schon mitdenken, sondern im Nachhinein gezielt reagieren, da wo es Probleme gibt, achtzig zwanzig Regel, da tauche ich dann tief ein."
+        },
+        {
+            "start": 694440,
+            "end": 767560,
+            "speaker": "A",
+            "text": "Ich meine, das Geile jetzt, was du in dieser Episode auch lernen wirst und dann hoffentlich auch anwenden kannst, ist ja, wenn ich sage, gewipe coded, meine ich nicht, mach was schnell, liebe KI, sondern du hörst diese Episode, sagst, pass mal auf, Andi und Wolfgang, die haben doch über so ein Redix Tree gesprochen, wäre das vielleicht was, okay, schmeiß dann Claude oder irgendwie dein Open Code oder was du auch immer nutzt, halt einfach mal auf deine Daten und sag, pass mal auf, schau dir mal die Daten an, ich möchte das in dieser Form lesen. Wäre ein Redix Tree hier sinnvoll? Lass die KI einfach mal denken. Es ist ja, dass du die KI eigentlich mit den richtigen Quellen prompt und dann einfach die verschiedenen Indexstrukturen vielleicht einmal durchdenkst und mal vergleichen lässt, vielleicht sogar ein Benchmark von der KI eben bauen lässt, nur um Gefühl zu kriegen. Da bist du wahrscheinlich schon in einer halben Stunde, Dreiviertelstunde relativ weit und kannst es einschätzen, ob zum Beispiel eine Indexstruktur hilft oder nicht. Wer aber jetzt sagt, Indexstruktur, ich habe keine Ahnung, wovon die reden, warum das alles so wichtig ist, hört euch mal ganz kurz die Episode zwei hundert neun und sechzig nochmal an oder wenn ihr es noch gar nicht getan habt, hört ihr euch sie einfach an. Da haben wir relativ viele Basics gemacht, so wie Write, Amplifications, diese vier Sichtweisen, Datenstruktur, Algorithmus, Hardware, Workload und so weiter, das, was der Wolfgang erzählt hat. Aber lass uns mal ganz kurz in die verschiedenen Kategorien der Indexstrukturen einsteigen, wie"
+        },
+        {
+            "start": 767560,
+            "end": 922840,
+            "speaker": "B",
+            "text": "ich damals studiert habe in den ER Jahren, also sehr am Anfang von den ER Jahren, da hat es immer geheißen, ja, RAM ist schnell, Festplatte ist langsam, also brauchen wir spezielle Indexstrukturen für den RAM und für die Festplatte. Das war so die Hauptkategorisierung, die wir eigentlich damals hatten, weil es eben so starke Unterschiede gegeben hat. Die Festplatte hat sich gedreht, also für alle, die es nicht mehr wissen, das war früher kein Solid State Speicher, sondern wirklich so klassische Spinning Discs. Und der RAM war halt das Schnelle, wo man so gesagt hat, da hat man random Access Memory, also man kann überall schnell zugreifen. Jetzt, wie wir alle wissen, hat sich das stark geändert. Mittlerweile haben wir superschnelle Festplatten, die eigentlich sehr nahe an dem RAM dran sind. Wir haben auf der CPU Seite mittlerweile teilweise vier Cache Layer L bis L. Es gibt hunderte Optimierungsvarianten, also SIMD zum Beispiel, dass man mehrere Operationen parallel machen kann auf seinem Speicher oder auf dem Register eigentlich. Man hat Optimierungen, Branch Predictions, ähnliche Dinge am CPU. Also es ist super, super kompliziert geworden. Das heißt, von den vier Punkten ist diese Hardware Seite eigentlich wesentlich komplexer geworden und heute kann man viel mehr mit der Hardware machen und viel mehr optimieren auf eine spezielle Hardware. Auf der anderen Seite ist eben die Festplatte so mit dem RAM ziemlich zusammengewachsen und heute muss man eigentlich genau drauf schauen, was habe ich für Hardware eigentlich zur Verfügung, in welchem Bereich von dieser Hardware mache ich meine Berechnungen, sind es große Datenmengen, dann werde ich trotzdem auf der Festplatte sein. Es gibt immer noch Dinge, die auf der Festplatte gelten, die im Rahmen nicht gelten. Das heißt, ich habe schon Unterschiede an sich, aber es geht mehr darum, wie groß sind meine Datenmengen, wo speichere ich die ab, wo wird berechnet, durch welche Layer muss ich durch, muss ich das von der Festplatte bis in das Register bringen, habe ich was im RAM gespeichert, wie funktioniert es mit dem persistenten Speicher? Also solche Dinge muss ich mir überlegen und darauf bauend kann ich dann entscheiden überhaupt, was ich für Indexstruktur verwende. Früher war es easy Binär Baum hat mit dem Hauptspeicher, B Baum Sekundärspeicher und die Sache hat sich erledigt. Da hat man dann schon neunzig Prozent der Fälle eigentlich abgedeckt gehabt, weil sich übrigens mehr interessiert für das ganze Cash Thema. Wir haben eine Episode, der Andi hat es mir in die Vorbereitungsnotizen geschrieben, Episode drei und siebzig, ich kann mir ehrlich gesagt persönlich gar nicht mehr daran erinnern, aber scheinbar haben wir eine Episode gemacht über Caches, CPU Ersetzungsstrategien, Invalidierung und wie das alles im Inneren funktioniert. Aber es sei mir verziehen, wenn man über zwei hundert fünfzig Episoden hat, dass man auch mal die eine oder andere vergisst."
+        },
+        {
+            "start": 922840,
+            "end": 927920,
+            "speaker": "A",
+            "text": "Vielen lieben Dank, Opa, dass du mal wieder vom Krieg erzählt hast mit diesen RAM und mit diesem Spinning Disc und so weiter."
+        },
+        {
+            "start": 927920,
+            "end": 931120,
+            "speaker": "B",
+            "text": "Ja, und von der Episode drei und siebzig, aber die hast du mir da reingelegt."
+        },
+        {
+            "start": 931120,
+            "end": 939720,
+            "speaker": "A",
+            "text": "Ja, irgendwer muss ja diese Hausaufgaben hier machen. Jetzt hast du gesagt, früher war die RAM oder Disc. Ist die Frage noch existent? Wurde die Frage ersetzt oder ist die Frage einfach weggefallen?"
+        },
+        {
+            "start": 939720,
+            "end": 965270,
+            "speaker": "B",
+            "text": "Also ihr habt es ja schon ein bisschen angedeutet. Es geht im Prinzip wo läuft mein Algorithmus, die Hardware und wie viel Daten habe ich? Natürlich Zugriffsmuster und so weiter natürlich auch. Aber das sind so zwei Kernkomponenten, die einen großen Einfluss auf den Auswahlprozess haben. Wir haben immer noch ganz klassisch Bäume als Indexstrukturen. Also fast alle Indexstrukturen sind Bäume, weil die eignen sich sehr gut als Indexstruktur, weil sie eine Komplexität haben von Andi"
+        },
+        {
+            "start": 965270,
+            "end": 976770,
+            "speaker": "A",
+            "text": "O von logarithmisch und dann kommt es ja gut, ja doch, dann kommt es auf die Teilimplementierung, von welchem Baum wir sprechen und so weiter an. Aber ich würde sagen, wir fangen erst mal bei logarithmisch an, was schon mal ganz gut ist."
+        },
+        {
+            "start": 976770,
+            "end": 1093620,
+            "speaker": "B",
+            "text": "Ich habe die Frage mal in dem Google Bewerbungsprozess übrigens gehabt, bei dem ganz anfänglichen Test. Und logarithmisch ist richtig, Andi. Also du wärst schon einen Sprung weiter. Bäume sind immer logarithmisch. Genau, weil man bei jedem Knoten zwischendrin sich aufsplittet ums Hundertfache, zwei hundert fache, beim Binärbaum nur das Doppelte. Aber auch das ist logarithmisch, weil man den Suchraum eben immer teilt, im Idealfall mit einem möglichst hohen Faktor teilt. Es gibt natürlich schon irgendwelche Indexstrukturen wie Bitmaps, Bloomfilter, da kommen wir auch noch später darauf zu sprechen. Aber die Hauptkategorie sind sicher Bäume. Und dann ist die Wie optimiere ich den Baum auf meine Speicherstruktur? Das heißt, im RAM oder in meinen Caches habe ich unterschiedliche Größen. Und üblicherweise optimiert man den Baum auf dieses Zugriffsmuster im L Cache, L Cache, im Register, auf der Festplatte, je nachdem, wie viel ich gleichzeitig laden kann. Wir haben das ja auch bereits öfter schon besprochen. Die CPU versucht eigentlich mit dir mitzudenken und macht sogenanntes Prefetching. Das heißt, es werden schon Daten vorgeladen bzw. Du musst teilweise die Daten einfach, die rundherum liegen von diesem Datensatz, den du eigentlich haben willst, die musst du einfach immer mitfetchen, weil man kann halt keinen einzelnen Integer auf einer Festplatte lesen, sondern nur immer eine ganze Seite üblicherweise, die in der Memory geladen wird. Das heißt, es wird Prefetching betrieben, es wird etwas mitgeschickt und wenn der Index dieses Mitladen, würde ich es mal nennen, mitdenkt, dann kann er natürlich davon profitieren. Und Bäume optimieren genau ihre Größe, also wird es doppelt aufgesplittet, zwei hundert fach aufgesplittet pro Ast, wird dementsprechend auf die Größe von den Caches, von der Festplatte, von der Page dementsprechend optimiert. Und das ist eigentlich die Hauptoptimierung, die man mit so Bäumen machen kann. Und dann unterscheiden sie sich gar nicht mehr so viel, egal ob das auf der Festplatte ist im RAM oder vielleicht sonstige Optimierungen noch für die Cache Layer zum Beispiel oben drauf kommen."
+        },
+        {
+            "start": 1093780,
+            "end": 1129209,
+            "speaker": "A",
+            "text": "Aber eine Frage hast du mir noch nicht beantwortet. Wenn ich in einem Baum von der Wurzel parallel einen Fan Out mache auf all meine Kindsknoten auf dem ersten Level, und wir haben gesagt, es ist eine logarithmische Komplexität, ist es dann nicht besser, sehr viele Knoten auf dem ersten Level zu haben, weil dann der Algorithmus im Endresultat schneller wird, weil ich eine geringere Tiefe habe im Baum. Also warum gibt es verschiedene Implementierungen, wie man den Fan Out von der Wurzelknoten macht? Warum gibt es da nicht einen Standard?"
+        },
+        {
+            "start": 1129289,
+            "end": 1286500,
+            "speaker": "B",
+            "text": "Also üblicherweise hat man denselben Fan Out. Du hast vom Root Knoten zwei hundert Kindsknoten und bei jedem Kindsknoten wieder zwei hundert Kindsknoten. Drum hat man da an Lockdown von Basis zwei hundert zum Beispiel. Und du hast da bei einem klassischen B Baum, der jetzt in der normalen Datenbank verwendet wird, wenn du eine Fanart von zwei hundert hast, was üblich ist, dann hast du auf der Ebene drei schon acht Millionen Notes Platz. Das heißt, du musst nur drei Schritte springen, um acht Millionen Einträge überhaupt abzubilden in deinem Baum. Drum ist es ja so effizient. Jetzt deine Frage, warum gibt es da überhaupt unterschiedliche Verzweigungs Größen? Und vor allem, wenn man ja denkt an den B Baum. Ah sorry, jetzt bin ich auch schon verwirrt. Der Binärbaum, B Baum und Binärbaum ist ja immer sehr verwirrend. Der Binärbaum im Hauptspeicher hat ja nur zwei Kindknoten. Jetzt wäre die Frage immer, warum habe ich überhaupt so eine unter Anführungszeichen schlechte Indexstruktur für den Hauptspeicher Die Argumentation war natürlich früher, ich kann schnell springen in meinem Speicher, aber ich habe natürlich auch dort Cache Lines, die eine gewisse Größe haben und das verwenden viele Indexstrukturen mittlerweile, also dass man da auch im Hauptspeicher nicht nur zwei Kindsknoten hat, sondern eben auch mehrere, angepasst auf die Cashlines. Aber man muss immer mitdenken, dass da ein Trade off dahinter steckt, weil das Ändern, das Löschen, das Hinzufügen, das kostet alles viel mehr Zeit, wenn du so eine komplexe Indexstruktur hast, wo du eben einen Fanart von zwei hundert hast im Vergleich zu einem Binärbaum, wo man ganz einfach einfach einhängen kann. Superschnelle Operation. Wenn jetzt im Hauptspeicher ganz viele Inserts habe ich Updates, Änderungen in meiner Datenstruktur, dann macht es natürlich Sinn, da ein Trade off zu finden zwischen Komplexität meiner Indexstruktur und der Zeit, die benötige, um mit der Indexstruktur zu arbeiten. Und daher gibt es auch immer noch Use Cases, die den Binärbaum wirklich im Hauptspeicher verwenden, wobei man dazu sagen muss, der klassische Binärbaum wird eigentlich kaum mehr verwendet, weil der nicht balanciert ist. Und das übliche, was so verwendet wird, sind Red Black Trees, AVL Trees, das sind so die bisschen besseren Binärbäume, die balanciert sind. Paar Vorteile haben dieser Red Black Tree, da wird dann jeder Knoten eingefärbt und der rote Knoten darf keinen roten Kindsknoten haben. Also da wird einfach der Algorithmus noch bisschen optimiert, damit es besser funktioniert. Und das sind eigentlich heutzutage so die klassischen Implementierungen von einer Treemap in Java oder Map in C. Da steckt im Hintergrund eigentlich immer so ein ganz einfacher, ich nenne es mal Binärbaum dahinter, weil der einfach super einfach ist, im Normalfall schnell funktioniert und für die meisten Use Cases eigentlich ausreicht."
+        },
+        {
+            "start": 1286500,
+            "end": 1305630,
+            "speaker": "A",
+            "text": "Den Red Black Tree, den habe ich auch noch in Erinnerung, weil ich finde den, wie soll ich sagen, so prägnant vom Namen her. Das ist so die einzige Datenstruktur, die mit Farben in Verbindung steht und deswegen habe ich den schon irgendwie ist er irgendwie hängen geblieben aus dem Studium. Lass uns da noch mal reinspringen. Lasst doch mal wirklich gucken, okay, warum ist das Ding so knorke?"
+        },
+        {
+            "start": 1305630,
+            "end": 1377670,
+            "speaker": "B",
+            "text": "Lässt sich mit einem Satz der Trade off zwischen Komplexität und Geschwindigkeit. Er ist relativ schnell im Hauptspeicher und super einfach zu implementieren, ist zusätzlich noch balanciert. Also balanciert heißt, dass der Baum nicht in eine Richtung hängt, weil nur ein ausgeglichener Baum ermöglicht, dass du schnell Elemente findest. Weil stell dir mal einen Baum vor, der bei der Wurzel anfängt, links einen Knoten hat, einen Subkoten und eine Million Knoten hängen irgendwo rechts dran, Dann kann es im Worst Case sein, dass du eine Million Knoten durchwandern musst, um ein Element zu finden, weil der eben so rechtslastig ist und darunter hängt komplett auf der rechten Seite. Darum versucht man immer einen balancierten Baum zu machen, der ausgeglichen ist zwischen links und rechts von den Kinderknoten, damit man eben da dementsprechend auch schnell suchen kann. Der Nachteil an so balancierten Bäumen ist natürlich, dass sie balanciert werden müssen. Das heißt, wenn du irgendwie ein Ungleichgewicht hast, dann musst du diesen kompletten Baum adaptieren, umändern, Knoten umhängen und das kostet dann dementsprechend auch wieder. Und da verhält sich der Red Black Tree eigentlich im Trade off sehr gut und wird darum so als Standard Implementierung verwendet für alles, was irgendwie sortiert sein muss."
+        },
+        {
+            "start": 1377670,
+            "end": 1474750,
+            "speaker": "A",
+            "text": "Zur Vorbereitung dieser Episode habe ich mir gedacht, okay, der Wolfgang kommt wieder mit seinem Doktorwissen um die Ecke von irgendwelchen Professoren mit irgendwelchen Slides, erklärt mir einen von Trade Off und am Ende habe ich immer noch keine Ahnung, wo ich das implementiere. Deswegen habe ich mir einfach mal einen realen praktischen Use Case rausgesucht. Der Webserver nginx implementiert nämlich auch den Red Black Tree und zwar nur mal ganz kurz. Nginx selbst ist bzw. Läuft in einem großen Event Loop. Er kriegt natürlich Connections rein, eure HTTP Connections und eigentlich hat jede Connection ja einen Read Event und ein Write Event. Also man liest die Connection und nginx macht dann irgendwas oder der Upstream Proxy macht dann irgendwas und dann wird irgendwas auf die Connection wieder geschrieben. Und jedes dieser Schreib oder Lese Events hat selbst oder ist selbst ein Red Black Tree Knoten mit verschiedenen Timeouts und Unterknoten. Denn all diese Timeouts, Client Timeout, Server Timeout, TLS Timeout, Upstream Proxy Timeouts und so weiter und so fort müssen ja gemanagt werden. Da muss darauf reagiert werden, teilweise muss was blockiert werden, wenn man auf irgendwas wartet und so weiter. Und so fort und all diese Timeouts werden in Red Black Tree selbst gemanagt. Somit kann man eigentlich sagen, dass der Red Black Tree selbst bei Nginx so, also ein bunt gemischter Haufen von allen offenen Deadlines, von allen Verbindungen, von allen Read Write Events und so weiter des einzelnen Nginx Workers sind. Dann kannst du sagen, okay, der linkeste Knoten ist immer die nächstfällige Deadline und umso weiter nur nach rechts gehst du, erhöht sich das Delta zwischen dem nächsten Timeout und so weiter und so fort."
+        },
+        {
+            "start": 1474750,
+            "end": 1559620,
+            "speaker": "B",
+            "text": "Und da sieht man schon, dass es ein perfekter Use Case ist, weil du hast ganz viele Connections üblicherweise bei Nginx, also tausende, hunderttausende Connections dann multipliziert mit den Timeouts, also sehr viel, was sich auch schnell ändert, weil Connections sind ja meistens nicht so langlebig, Man muss warten, also ist extrem viel Traffic Ride Last auf diesem Baum und er muss sortiert sein. Und da eignet sich dann natürlich genau so ein Hauptspeicher Index perfekt. Wenn man das Ganze jetzt auf der klassischen Sekundärspeicher Seite betrachtet, da gibt es natürlich den klassischen B Baum, den man auch so immer lernt, wenn man irgendwann mal Datenbanken studiert oder so. Der B Baum ist oder Klassiker wird auch immer und überall noch verwendet, wobei man ja genau sagen muss, das ist auch kein klassischer B Baum mehr, sondern ein B Baum oder es gibt einen Cash sensitive B Tree in CSB Tree. Das sind eher so die Dinge, die heutzutage verwendet werden, aber die passieren natürlich alle auf dem klassischen B Baum. Und wenn man Fan Out von zwei hat im Hauptspeicher bei einem Binärbaum, dann hat man eben beim B Baum einen sehr viel höheren Fan Out pro Knoten. Das heißt, man hat da üblicherweise zwei hundert bis vier hundert Kinderknoten, um eben den Suchraum möglichst stark aufzuteilen. Und dann hat man eben auch einen Logarithmus zu Basis zwei hundert im Endeffekt und bekommt ganz viele Knoten pro Ebene unter. Und darum ist der B Baum eigentlich so stark."
+        },
+        {
+            "start": 1559620,
+            "end": 1567700,
+            "speaker": "A",
+            "text": "B Baum. Ist das Plus dann die Enterprise Version, für die ich dann mehr zahlen muss oder wofür ist das Plus? Ist Plus wirklich besser als der normale B Baum?"
+        },
+        {
+            "start": 1567700,
+            "end": 1719100,
+            "speaker": "B",
+            "text": "Ja, es ist einfach eine Weiterentwicklung der Baum und der B Baum, der heutzutage eben Anwendung findet, ist eigentlich nur ein kleiner Unterschied. Beim klassischen B Baum werden die Einträge selbst, also die Zeilen von der Datenbanktabelle zum Beispiel in den Knoten gespeichert. Jetzt nehmen die natürlich viel Platz weg, wenn du da diese ganze Zeile rein speicherst. Was der Baum macht, ist, er legt die ganzen Daten separat in den Blättern, also ganz unten im Baum ab, damit du in den Knoten nur das Feld hast, auf das dein Index basiert. Also die ID zum Beispiel. Du speicherst nur die ID, die Kundennummer zum Beispiel in den Knoten, aber wie dein Kunde heißt, ist dann ganz am Ende in den Blättern gespeichert Und so bekommst du noch mehr in einen Knoten unter. Und das ist ja die Idee, dass der Knoten möglichst deinen Suchraum separiert und dein Knoten sollte eigentlich so groß sein wie eine Festplattenseite. Also dieser Block, der immer von der Festplatte geladen wird, egal wie viel du brauchst, du musst immer diese ganze Festplattenseite laden. Jetzt probierst du deinen Knoten genauso groß zu machen wie die Festplattenseite und das macht der B Baum einfach noch mal effizienter. Und darum wird er heute eigentlich überall eingesetzt unter Cache Sensitive B Tree, also der CSB Tree, den ich ganz am Anfang auch erwähnt habe, der passt sich jetzt ganz speziell auf die Cache Größen nochmal an. Das heißt, meine Knoten werden so gewählt, wie groß meine Cache Lines sind, weil der dann auch wirklich im Hauptspeicher Anwendung findet, also nicht nur auf der Festplatte, sondern auch in meinem Hauptspeicher. Und da soll der Knoten dann genauso groß sein wie eine Cache Line oder ein Vielfaches von einer Cache Line. Möglichst viele Elemente, die in irgendeiner Form zusammengehören, wie eine Kundennummer. Da gibt es halt Blöcke, die zusammengehören. Eine Kundennummer elf sollte neben zehn liegen und nicht neben. Das heißt, man sortiert es richtig und probiert dann möglichst viel in eine Cashline reinzupacken. Also auch dieser Klassiker, wo man sagt, der klassische B Baum ist ja nicht geeignet für den Hauptspeicher, stimmt aber mit einem Cache Sensitive B Tree zum Beispiel schon. Und darum werden dann auch B Bäume im Hauptspeicher durchaus angewendet. Und heutzutage sind ja sehr viele Datenbanken überhaupt nur im Hauptspeicher. Diese klassischen Hauptspeicherdatenbanken wie eine HANA zum Beispiel von SAP, die ja sehr früh damit begonnen haben. Und die verwenden dann natürlich auch dementsprechend angepasste B Bäume, die auf den Hauptspeicher optimiert sind. Und das klingt immer so komplex, aber im Prinzip. Die Hauptoptimierung liegt einfach in der Größe von so einem Knoten, weil der Rest wird dann von der Hardware gemacht."
+        },
+        {
+            "start": 1719100,
+            "end": 1745900,
+            "speaker": "A",
+            "text": "Bäume, Bäume, Bäume, Bäume, Bäume. Ich weiß, Wolfgang kommst aus Innsbruck, du liebst die Berge, du liebst die Natur. Ich komme aus dem Pott. Wir haben eine ganze Menge Bäume inzwischen, aber wir lieben auch den Stahl, deswegen lass uns mal weg von der Natur. Und zwar habe ich immer, wenn ich Bäume höre, komplexe Datenstrukturen im Sinn, komplexe Implementierungen im Sinn. Und deswegen bin ich ja ein Freund der einfachen Sachen. Immer wenn ich nämlich an Indexstrukturen denke, denke ich an den hashindex."
+        },
+        {
+            "start": 1745900,
+            "end": 1746820,
+            "speaker": "B",
+            "text": "Wo verwendest du den?"
+        },
+        {
+            "start": 1746820,
+            "end": 1766090,
+            "speaker": "A",
+            "text": "Naja, generell hat jede Programmiersprache ja irgendwie eine Art von, ich sag mal, hashmap. Sogar ich meine, PHP ist es ein Array, hatte ich glaube ich schon mal irgendwann erwähnt hier, wo du eigentlich Key und dann eine Struktur drunter hast. Java wäre es dann die hashmap, in Go wäre es ebenfalls eine Map. Kenne den Typen gerade in Rust nicht, aber mich würde sehr wundern, wenn Rust keine hashmap hätte."
+        },
+        {
+            "start": 1766090,
+            "end": 1880960,
+            "speaker": "B",
+            "text": "Genau, auch da wieder ganz easy. Wird im Hauptspeicher ganz klassisch verwendet. Gibt es in allen Programmiersprachen, gibt es auch in Datenbanken. Mysql hatte immer einen hashindex, den man auch verwenden konnte. Keine Ahnung, ob der deprecated ist. In der Realität wird er kaum in Datenbanken eigentlich verwendet, weil er den großen Nachteil hat, dass dieses Ding eigentlich nur Punktabfragen gut behandeln kann. Das heißt, ich habe eine ID, will genau diesen einen Kunden haben, Kunden Nummer fünf, und dann will ich die Daten haben. Das heißt, ein Sprung im Hauptspeicher zu dem richtigen Datensatz gibt mir das Ganze jetzt ganz klassisch in Datenbanken. Oder wenn man viele Daten processen will, dann will man meistens nicht nur einen Datensatz haben, sondern ich mache eine Range Query. Gib mir alle Kunden in Deutschland, die weiblich sind, die von einem gewissen, die in einem gewissen Altersspektrum sind und da will ich irgendwas rausfinden. Und für solche Anfragen sind Hash Indizes einfach schlecht geeignet, weil das eben so ein klassischer Sprung ist. Das Ganze basiert ja auf einer Hash Funktion. Das heißt, eine Funktion bekommt irgendeine Kundennummer zum Beispiel und im Hintergrund wird es dann gemappt auf eine Speicheradresse. Die einfachste Form einer Implementierung, die man immer gern verwendet ist modulo. Das heißt, ich habe einen Speicherbereich von, keine Ahnung, ein hundert oder zwei hundert Einträgen, die Platz habe, dann mache ich eine Modulo Funktion. Modulo zwei hundert, nehme die Kunden ID, Modulo zwei hundert weiß ich, wo ich das Ganze hinsetzen soll in meinem Speicher. Wenn ich die Kundennummer zwei hundert fünfzig hab, Modulo zwei hundert landet es beim Index fünfzig, that's it. Super einfach. Gibt es natürlich auch komplexere Hash Funktionen, kann man teilweise auch selber festlegen, die Hash Funktionen, aber super einfach, super schnell zu berechnen, weil diese Funktion Modulo Berechnung ist superschnell und die bekommt direkt die Speicheradresse. Also ganz einfache Struktur, aber eben nur für Punktanfragen und keine Range Queries und drum eher so im Hauptspeicher oder im klassischen Coding anzutreffen."
+        },
+        {
+            "start": 1880960,
+            "end": 1905620,
+            "speaker": "A",
+            "text": "Ich meine, Modulo ist ein bekanntes Beispiel, hat schon erwähnt, MD auch sehr schnell, jetzt nicht für irgendwelche Passwörter zu nutzen bitte, aber für so eine hashmap und so weiter eigentlich total super. Oder ein Short MD mit sechzehn Characters anstatt zwei und dreiigste Aber immer wenn ich über Hashes spreche, kommen mir auch immer diese theoretisch oder vielleicht auch praktischen Angriffe von Hash Kollisionen in Sinn. Wie geht denn so eine hashmap mit Hash Kollisionen um?"
+        },
+        {
+            "start": 1905620,
+            "end": 2049890,
+            "speaker": "B",
+            "text": "Die Tücke liegt im Detail und besonders bei der Hashimplementierung, weil klassischerweise heißt es ja immer, der Hash hat O von erste Weil du eine Eingabewert hast, eine Speicheradresse rausbekommst, O von eins, super gute Komplexität, sollte ja superschnell sein. Da stellt sich übrigens auch die Frage, wenn das so schnell ist, warum kann ich das nicht dann für eine Range Query machen? Ich kann ja fünf ids anfragen, aber ich muss das Ganze halt fünfmal ausführen. Also rein von der O Notation. Fünf mal eins ist zwar immer noch konstanter Speed, aber in der Realität, wenn ich halt fünf tausend mal eine Anfrage mache, die auch sehr schnell ist, Punktabfrage, ist es halt trotzdem fünf tausend mal sehr schnell und das ist dann vielleicht schon wieder langsam. Nur weil etwas O von eins ist, heißt das nicht, dass es für jeden Anwendungszweck funktioniert. Und wie du sagst, das andere Problem ist, wenn mein Speicherbereich, in dem ich eigentlich die Dinge ablege oder berechne mit meiner Hash Funktion, wenn dieser wesentlich kleiner ist als die Anzahl der Elemente, die ich habe oder meine Hash Funktion einfach schlecht gewählt ist, dass sie ganz viele verschiedene Elemente immer auf denselben Speicherort legen will, weil dann bekomme ich diese Kollision und dann muss ich irgendwas mit dieser Kollision machen. Üblicherweise gibt es da verkettete Listen, die da drangehängt werden oder vielleicht eine Unterindexstruktur, dass sie, wenn ich auf die gleiche Speicheradresse mappe, dass sie da dann in irgendeiner Form einen neuen Index dranhängen, in dem ich dann wieder suchen muss. Aber das Problem besteht, dass im Worst Case bei der klassischen Implementierung natürlich sein kann, dass alle meine Elemente genau am selben Ort landen und ich dann einfach eine verkettete Liste dort habe und ich muss durch ein tausend Elemente durch, obwohl ich zuerst einen superschnellen Sprung habe, aber dort liegen halt ein tausend Elemente und ich muss wieder durch alle ein tausend Elemente durch und da degradiert dann mein Speed natürlich extrem und von dem muss ich mich immer fernhalten. Darum sagt man so üblicherweise, eine hashmap sollte nur drei, vier gefüllt sein und man sollte die Größe dann dementsprechend adaptieren. Meistens gibt es da auch ein Parameter, wenn man programmiert, ab wann soll die hashmap vergrößert werden, der Speicherbereich dahinter, weil da muss ja alles umorganisiert werden. Wenn ihr jetzt in Modulo habt zum Beispiel, muss das alles neu berechnet werden, wo liegen meine Elemente, kostet dementsprechend wieder Zeit, will ich natürlich verhindern. Also da gibt es dann Unterschiede in der Implementierung. Glücklicherweise, wenn man eine klassische Implementierung verwendet in der Programmiersprache der Wahl, dann wird es im Hintergrund meistens wegabstrahiert und gemanagt. Aber wenn da mal eine hashmap super langsam sein sollte, kann sowas durchaus der Grund sein."
+        },
+        {
+            "start": 2049970,
+            "end": 2059590,
+            "speaker": "A",
+            "text": "Und immer wenn man die hashmap selbst reorganisieren muss, wie der Wolfgang gerade gesagt hat, nennt man das Resizing, also vergrößern und so weiter, oder halt auch verkleinern bzw."
+        },
+        {
+            "start": 2059590,
+            "end": 2074110,
+            "speaker": "B",
+            "text": "Auch rehashing, je nachdem, was man für eine Hash Funktion hat, dass man wirklich alle Speicherorte noch mal neu berechnen muss. Also ich muss wirklich durch alle meine Elemente durchgehen, immer wieder ein Hash bilden, schauen, hat sich der verändert, muss ich irgendwas umspeichern. Super teuer natürlich, super teuer, vielleicht sogar"
+        },
+        {
+            "start": 2074110,
+            "end": 2086390,
+            "speaker": "A",
+            "text": "Stop of the World für deine Applikation, vielleicht machst du es irgendeinen Background Thread, aber dann ist der Zugriff auf diese Datenstruktur ja auch irgendwie gehindert. Redis hat dafür eine sehr schöne Implementierung und deswegen mag ich Redis ja, das"
+        },
+        {
+            "start": 2086390,
+            "end": 2088990,
+            "speaker": "B",
+            "text": "wissen wir ja schon. Eine Episode ohne Redis will ich mal"
+        },
+        {
+            "start": 2088990,
+            "end": 2219560,
+            "speaker": "A",
+            "text": "erleben, aber naja, Redis hat halt ein Detail implementiert, was im Lehrbuch oft erwähnt wird, aber in der Praxis oft fehlt und zwar nennt sich das Incremental Rehashing. Was die tun, ist untendrunter für jede hashmap maintain die eigentlich zwei Hashtabellen und wenn die erste Hashtabelle, ich sag mal, dem Resizing unterzogen werden muss, dann würde das eigentlich so Stop of the World bedeuten, die wird neu berechnet und so weiter. Was die eigentlich machen ist immer wenn auf die hashmap zugegriffen wird, also das bedeutet, wenn du ein Delete oder ein Feind von deinem Element machst, dann verschieben die ein Element oder ein Bucket in die zweite hashmap. Das bedeutet, die ziehen das Resizing eigentlich über die, stretchen das, die stretchen das Resizing eigentlich über eine gewisse Zeit und sind dann natürlich nicht einmal ganz teuer, sondern kontinuierlich immer so ein bisschen teurer, also mit einem minimal Overhead. Und das finde ich natürlich schon eine sehr schöne Lösung, weil ich sage mal, das versucht die Trade offs irgendwie so ein bisschen zu glätten. Einen anderen praktischen, schönen Use Case, den ich gefunden habe, ist, wo man eigentlich zum Beispiel eine hashmap einsetzen würde oder ein Hashindex einsetzen würde, ist, stell dir vor, du hast ein Alerting System, der kriegt natürlich dauerhaft Alerts und sollte ich dann anrufen oder pagen oder ähnliches. Und ab und zu ist man zum Beispiel an einem Server am Arbeiten. Das bedeutet, ich habe da jetzt irgendwie meine Datenbank und wir wissen, das Ops Team macht da gerade Datenbank Maintenance und da kann das mal sein, dass dann irgendwelche Alerts fliegen. Deswegen hat meist jeder Alert Manager oder jedes Alerting Tool irgendwie so eine Funktion, mach diesen Alert mal leise, also silence den mal und das ist natürlich perfekt für so eine, für so einen Hashindex. Du hast dann den Alert Namen, den packst du als Key in die hashmap und sagst als Value dann eins zum Beispiel. Und wenn der Alert reinkommt in das Alerting System, dann guckt das Alerting System, habe ich diesen Alert in meiner zu Silence Liste? Wenn ja, dann verwerfe den Alert und feuer den nicht raus. Page den Wolfgang nicht. Das ist zum Beispiel ein ganz einfacher Use Case mit einer ganz klassischen hashmap oder Hashindex."
+        },
+        {
+            "start": 2219560,
+            "end": 2243060,
+            "speaker": "B",
+            "text": "Jetzt weißt du, was das Schöne ist an Man kann nebenbei, während du sprichst, mal so Sachen überprüfen lassen. Ich habe es leider nicht hundertprozentig rausgefunden, ob Redis sehr früh dran war. Sie waren zumindest nicht spät mit der Implementierung, aber das wird dich vielleicht noch mehr freuen. So wie es aussieht, war das erst zwei tausend dreizehn und Go hatte schon zwei tausend zwölf Andi und Java kam dann überhaupt erst zwei tausend vierzehnte Ich"
+        },
+        {
+            "start": 2243060,
+            "end": 2267340,
+            "speaker": "A",
+            "text": "habe jetzt nicht geguckt, woher das kommt. Was ich aber weiß, ist, dass der Autor von Redis und auch die Köpfe hinter Go, Rob Pike und Co. Natürlich sehr, sehr, sehr viel Paper lesen und dass auf der anderen Seite auch die Köpfe hinter Go sehr viel im Competitive Programming unterwegs waren. Das bedeutet, die haben unglaublich gute Fundamente, was Algorithmen, Performance und Co. Angeht."
+        },
+        {
+            "start": 2267420,
+            "end": 2302960,
+            "speaker": "B",
+            "text": "Man muss sich das Ganze ja nur anschauen, wo das eigentlich ein Problem wird. Und zwar, wenn du ganz viele Daten hast, das hast du halt klassischerweise in der Datenbankwelt oder klar, Go, Google hat wahrscheinlich auch sehr viele Daten. Wenn du eine kleine hashmap hast mit zwei hundert Einträgen, ist es komplett egal. Aber wenn du natürlich Millionen von Einträgen hast, dann wird es schon Thema Muss ich meine Datenstruktur locken, um irgendwas zu ändern oder zu resizen? Und dann ist es natürlich ein ganz anderes Thema. Darum haben die Datenbankentwickler ihnen natürlich viel mehr ein Augenmerk auf solche Dinge natürlich auch geworfen. Und das ist ein klassisches Problem, wenn du einen Index updatest."
+        },
+        {
+            "start": 2303350,
+            "end": 2391270,
+            "speaker": "A",
+            "text": "Eine Gefahr, die ich euch noch mitgeben möchte, weil die wird oft übersehen. Wenn du eine Hash Funktion hast, um dein Index zu bauen, pass bitte auf, welche Hash Funktion du nutzt und welchen Content du hashen möchtest. Warum? Es gibt Hash Funktionen, die einen Komplexitäts Algorithmus von O, von N oder vielleicht sogar höher haben. Das bedeutet, dass die Länge des Contents, den du da hashen möchtest, teilweise auch auf die Dauer der Hash Funktion schlagen kann. Wenn du also einmal die Bibel durch eine Hash Funktion jagst, dann wird das in der Regel länger dauern, als wenn du den Namen Wolfgang hashen möchtest. Und wenn du jetzt nicht nur einmal die Bibel machst, sondern sehr oft die Bibel. Und wenn du nicht nur einen Request sendest, sondern so viele Requests, wie es Kirchen auf dieser Welt gibt, dann kann das sein, dass nur durch die Hash Funktion eine Denail of Service Attacke ausgeführt wird, weil die Hash Funktion so teuer ist, weil du einfach dauerhaft versuchst, einen sehr großen Content zu hashen. Das ist ein gängiger Angriffsfaktor bei Login Formularen. Du knallst einfach ein unglaublich langes Passwort da rein, also wirklich so fünf hundert mal die Bibel und auf einmal merkst du, der Server braucht enorm lange zum Antworten. Dann weißt du, du hast da was getroffen, das ist eine Timing Attacke und das funktioniert natürlich überall, wo du eine suboptimale Hash Funktion gewählt hast. Deswegen ein bisschen aufpassen, was ihr da als Key versucht zu hashen und welche Funktion ihr habt."
+        },
+        {
+            "start": 2391270,
+            "end": 2423910,
+            "speaker": "B",
+            "text": "Einen kleinen Baum Ausflug möchte ich noch machen, und zwar den sogenannten try geschrieben T rie, also tree, aber aussprechen tut man es üblicherweise. Try kommt von retrieval, information, retrieval, Text retrieval. Und jetzt befinden wir uns schon in dem ganzen Bereich von Textsuche, String Suche, weil der klassische B Baum, der wird ja üblicherweise mit Integers gefüllt. Man kann natürlich Text auch genauso reinstecken, aber es gibt natürlich Bäume, die optimiert sind für Text, weil was ist das größte Problem mit Text, Andy?"
+        },
+        {
+            "start": 2423910,
+            "end": 2425190,
+            "speaker": "A",
+            "text": "Die sind scheiße zu vergleichen."
+        },
+        {
+            "start": 2425430,
+            "end": 2561590,
+            "speaker": "B",
+            "text": "Ja, das auch. Und was damit zusammenhängt, dass sie scheiße zu vergleichen sind, ist die Größe Text hat einfach viel mehr Integerwerte im Hintergrund als eine Zahl, ist halt üblicherweise einfach lang. Und das ist eigentlich immer das Problem, wenn man Index baut, weil ein Index ist ja immer in irgendeiner Form eine Kopie oder ein View auf die Daten. Das heißt, man muss was duplizieren. Wenn man jetzt Text dupliziert, ist es üblicherweise ein Problem, weil es einfach viel Speicherplatz braucht und dann auch dementsprechend langsam wird. Der try ist in gewisser Weise vergleichbar mit einem B Baum, ist halt auch ein Baum. Der Unterschied ist, du hast jetzt keine Zahl auf den Knoten, sondern du hast einen Buchstaben und du trennst je nachdem ist es ein Buchstabe, der weiter vorne im Alphabet ist, weiter hinten im Alphabet und so werden deine Kinderknoten aufgeteilt. Also das ist die recht naive Herangehensweise. Ich mache einen klassischen Baum, verwende halt Buchstaben für meine Elemente. Jetzt werden diese Bäume natürlich sehr, sehr groß und darum hat man dann natürlich auch Optimierungen draufgelegt. Patricia try zum Beispiel ist so eine, wo man dann zum Beispiel Substrings, die gemeinsam in Wörtern vorkommen, dass man die in einen Knoten legt. Also wenn du jetzt zum Beispiel Engineering Kiosk hast, Engine engage, enlarge, whatever it is, dann hast du das en oder en hast du zum Beispiel als Entscheidungskriterium auf einem Knoten liegen und alles, was denselben Substring hat, wird da dann dementsprechend gemeinsam abgespeichert. So sparst du dir natürlich Buchstaben, weil sonst müsstest du bei E springen, bei N springen, bei G springen, bei I springen und hättest immer neun Knoten. Und so komprimierst du die Strings, die eben mehrfach vorkommen in verschiedenen Wörtern auf einen Knoten. Das ist so eine Optimierung, heißt eben auch Redix Tree, Adaptive Redix Tree gibt es noch mal, der dementsprechend noch mal mehr drauflegt und adaptiert. Also man sieht schon, die Bäume sind eigentlich alle sehr, sehr ähnlich aufgebaut. Es ist dann nur die Frage, was speichere ich in den Knoten ab, wie groß designe so ein Knoten, was sind meine Kriterien, um zu entscheiden, springe ich nach links, rechts, in der Mitte zu einem Kinderknoten. Und das sind eigentlich die einzigen Unterscheidungsmerkmale. Der klassische Baum mit logarithmischer Komplexität ist eigentlich immer vorhanden und ist eigentlich so Basis von fast jedem Index."
+        },
+        {
+            "start": 2561590,
+            "end": 2628200,
+            "speaker": "A",
+            "text": "Das Beispiel, was du gerade genannt hast, passt eigentlich sehr gut für mein praktisches Beispiel, denn wo wird ein try oder einen Red X Tree eigentlich verwendet? Und zwar findet der sich wirklich wirklich oft in Routing Libraries, also ich sage mal in HTTP Router oder ähnliches von Webapplikationen, denn die meisten Web Frameworks haben irgendwo eine Definitionsstelle, wo du deine Routen definierst. Engineering Podcasts, Engineering Kiosk Dev, Podcast, Episodentitel, Engineering Kiosk Dev, Impressum, Engineering Wolfgang und so weiter und so fort. Und ihr merkt schon, Host Wolfgang, Host Andy, das Wort host ist doppelt, kann ein Knoten sein. Also HTTP Routen, besonders dynamische HTTP Routen, wo du zum Beispiel dynamische Elemente hast, wie zum Beispiel Episodentitel, wie zum Beispiel irgendwelche GET Parameter vielleicht sogar, die damit einfließen können, können perfekt eigentlich in einem solchen Tree, in einem solchen try."
+        },
+        {
+            "start": 2628200,
+            "end": 2671050,
+            "speaker": "B",
+            "text": "Entschuldigung, es ist ja auch ein Tree, ist ja okay, ein Tri Tree Tree, oder? Da ist es wieder try. Es ist schwierig, aber am Ende ist es immer ein Tree. Du hast recht, ist gutes Beispiel, was du nennst. Jeder, der VS Code verwendet, kennt es auch, wenn man einen Ordner hat, wo nur ein anderer Ordner ist und keine anderen Ordner oder Dateien liegen, dann werden zwei Ordner zusammengefasst und auf eine Ebene gezogen. Das heißt, du siehst dann nur Ordner, Subordner und du kannst es gar nicht aufklappen, es wird zusammengezogen. Das ist eigentlich die Vorgehensweise, was ein Redix Tree auch macht. Also ist eigentlich logisch, würde ich fast sagen, wenn man auf solche Dinge blickt. Aber wenn man das natürlich dann dementsprechend implementiert und optimiert implementiert, steckt schon da mehr dahinter."
+        },
+        {
+            "start": 2671290,
+            "end": 2701000,
+            "speaker": "A",
+            "text": "Du kannst die ganze Sache natürlich auch in der hashmap fahren, dann hast du aber wieder die Duplikation von den URL Präfixen, dann hast du gegebenenfalls Probleme mit dynamischen Parametern und so weiter und so fort. Deswegen bei sehr, sehr vielen HTTP Routern wird das verwendet und ich habe euch mal einen eine HTTP Router Library in Go verlinkt, die sogar in der README da tiefer darauf eingeht, wie bzw. Warum dieser Try in der Implementierung verwendet wird."
+        },
+        {
+            "start": 2701000,
+            "end": 2729280,
+            "speaker": "B",
+            "text": "Und was ganz klassisch immer im Vergleich zu einer hashmap oder zu einem Hashindex ist, du kannst auch da wieder keine Range Queries fahren, weil so bekommst du natürlich total easy Gib mir alle Unterseiten vom Engineering Kiosk, das ist ein Knoten, der Engineering Kiosk Dev Knoten und alles was darunter liegt, sind die Webseiten. Eine superschnelle Anfrage, mach das mal. Mit einem Hashindex hast du gar keine Chance. Da musst du durch deinen kompletten Datenstamm durchgehen, weil der Hashindex eben nur punktuell funktioniert, wenn du genau weißt, was du suchst."
+        },
+        {
+            "start": 2729280,
+            "end": 2741600,
+            "speaker": "A",
+            "text": "OK, Bäume, Bäume, Bäume. Bäume sind super, gar keine Frage, aber mein fahrt nach Gärtner und was machen Gärtner? Gärtner züchten Blumen und was hast du vorhin erwähnt? Den Blumenfilter. Wo ist der Zusammenhang da?"
+        },
+        {
+            "start": 2741600,
+            "end": 3035080,
+            "speaker": "B",
+            "text": "Ich sehe schon, du hast ein Problem mit Bäumen. Du hast schon auf den Hashindex übergeleitet, jetzt leitest du auf den Blumenfilter über. Grundsätzlich. Es gibt natürlich auch ganz viele Indexstrukturen, die keine Bäume sind. Der Bitmap Index ist auch so einer und der Bitmap Index ist noch ein Index im Gegensatz zum Blumenfilter, darum heißt er ja auch nicht Blumenindex, sondern Blumenfilter. Aber starten wir mal kurz beim Bitmap Index. Der Bitmap Index ist eigentlich nichts anderes als eine große Bitmaske, kennt man ja, whatever. Und am besten funktioniert der, wie der Name schon sagt, bei binären Feldern zum Beispiel aktiv, nicht aktiv und ich speicher jetzt einfach, anstatt diese ganze Tabelle in irgendeiner Form abzuspeichern oder einen B Baum, speichere mir einfach eine lange Kette von Nullen und Einsen. Null ist inaktiv, eins ist aktiv und dadurch Bits ja superschnell verarbeitbar sind, kann ich da auch relativ schnell durchgehen und find mir alle aktive Zeilen einträge, die ich gespeichert habe. Also das ist ein Bitmap Index, hat gar nichts mit Bäumen zu tun, ist aber natürlich limitiert, weil im Idealfall ist es binär oder ich muss dann für jede Ausprägung einen eigenen Bitmap speichern. Also wenn ihr jetzt zum Beispiel einen Status von einem Ticketsystem hab offen, open, closed, abgelehnt oder nicht nachvollziehbar, da muss ich für alle, die offen sind, einen Bitmap Index machen, für alle, die geschlossen sind, einen Bitmap machen und für alle abgelehnten auch ein Bitmap abspeichern. Also da wird es dann schon komplizierter. Eignet sich aber natürlich super, um diese ganzen Performance Vorteile heutzutage von den cpus auszunü SIMD, Single Instruction Multiple Data. Zusätzlich ist es natürlich sehr platzsparend, das heißt es kann auch wieder schnell optimiert werden. Es liegt alles hintereinander, das heißt ich kann es so richtig schön einmal durch die CPU durch pipen. Und was man noch oben drauf knallen kann auf diese Bitmap Indexstrukturen ist eine Komprimierung, weil solche Bitabfolgen lassen sich auch super komprimieren. Lauflängen Codierung eignet sich zum Beispiel gut. Also wenn ihr ganz viele Tickets habt, die aktiv sind, da muss ich nicht alle Einsen von meinen aktiven Tickets speichern, sondern wenn die nächsten ein hundert ids alle aktiv sind, dann speichere ich das nur einmal und sage, die nächsten ein hundert sind aktiv, das heißt ich kann super komprimieren. Gibt es auch noch komplexere Komprimierungs Algorithmen, Roaring Bitmap heißt es zum Beispiel dann, das ist dann noch hierarchisch organisiert, also da gibt es meistens Optimierungen obendrauf, die das halt nochmal verbessern und dementsprechend nochmal den Speicherplatz mehr ausnützen. Und was den Speicherplatz richtig gut ausnützt, ist eben der sogenannte Bloomfilter. Und wie ich gesagt habe, es ist ein Filter, kein Index. Das heißt, ein Blumenfilter kann mir nicht sagen, wo liegt denn irgendwas. Was aber ein Blumenfilter sagen kann und das ist die Grundidee von einem Habe ich einen gewissen Wert, eine Kundennummer bei mir im Datensatz gespeichert oder nicht? Und zwar kann aber nur kommt dieser Datensatz nicht vor. Das heißt, ich habe den garantiert nicht gespeichert oder vielleicht ist er gespeichert. Das heißt, alles was der Blumenfilter fix sagen kann, ich habe etwas nicht gespeichert. Und das ist eigentlich die Idee des Blumenfilters. Dafür kann der super komprimiert das Ganze abspeichern und ich kann da wirklich lange Zeichenketten unter Umständen in ein paar Bit oder Byte abspeichern und diese Fragen beantworten. Und das ist eigentlich die große Stärke. Also er ist einerseits superschnell, weil er super klein ist und ich kann da plötzlich Komprimierungen machen, die sonst eigentlich nicht möglich sind. Weil wenn ich dich jetzt gefragt hätte, Andy, kann ich die Kundennummer irgendwie komprimieren? Dann hättest du wahrscheinlich gesagt nein, Integer. Wie soll ich den Integer komprimieren? Das ist das Kleinste, was sie haben kann. Ein Blumenfilter kann sogar Integer komprimieren. Ich verliere natürlich Informationen, weil er nur mehr Antworten Nein, diesen Kunden habe ich nicht. Aber dafür habe ich eine Komprimierungs Methode, die sonst eigentlich klassisch nicht möglich war in dieser Form. Wie funktioniert das Ganze? Es werden mehrere Hashing Funktionen verwendet, wie beim hashindex, aber multiple Hash Funktionen und das Ergebnis wird dann auf ein Bit zum Beispiel in meinem Index gelegt. Wenn ich zum Beispiel Andy jetzt in meinem Bloomfilter ablegen will und ich habe einen Bloomfilter mit zwanzig Bit, dann habe ich wahrscheinlich zwanzig Hash Funktionen und die zwanzig Hash Funktionen werden auf Andy aufgerufen und entscheiden jeweils ist es null oder eins und dann bekomme ich ein ganz individuelles Pattern heraus für Andy, wo ich einsetzen muss meinen Bloomfilter und wo eben nicht eins gesetzt wird. Und wenn ich jetzt später die Frage Ist der Andy in meinem Datensatz verfügbar? Dann kann ich Sind diese Einser von Andy alle eins gesetzt? Wenn das der Fall ist, dann ist die Chance zumindest gegeben, dass Andy verfügbar ist. Wenn der aber irgendwo null steht, dann kann ich mit hundertprozentiger Sicherheit sagen, der Andy ist nicht in meinem Datensatz, weil wenn ich den Andy mal gesehen hätte in meinem Datensatz, dann hätte ich ja diese Bits an den jeweiligen Stellen auf eins gesetzt."
+        },
+        {
+            "start": 3035080,
+            "end": 3044810,
+            "speaker": "A",
+            "text": "Perfekte Überleitung mit den Bits, muss ich dir wirklich sagen, denn mein Praxisbeispiel passt nämlich perfekt und zwar folgendermass Praxisbeispiel wie immer. Wo wird der Blumenfilter denn verwendet?"
+        },
+        {
+            "start": 3044810,
+            "end": 3050890,
+            "speaker": "B",
+            "text": "Ja, es wäre schlecht, wenn dein Beispiel nicht auf meine Erklärung passen würde, wie Bloomfilter funktioniert. Ich hoffe, dass er gleich funktioniert bei"
+        },
+        {
+            "start": 3050890,
+            "end": 3086100,
+            "speaker": "A",
+            "text": "dir Jetzt nur mal so als Sidetrack auch ein Blumenfilter. Die Datenstruktur ist im Red ist auch verfügbar. Wer das mal implementieren, wer damit mal rumspielt, natürlich, natürlich. Aber das lasse ich jetzt nur mal so als side Fact hier, denn es geht um git. Git implementiert einen Bloomfilter. Wenn du den Command gitlog ausführst und dort ein Argument übergibst, dann übergibst du in der Regel den Char eines einzelnen Git Commits oder Ja, das wird mit hoher Wahrscheinlichkeit unten drunter ein hashmap Lookout sein, weil der Char von einem Git Commit kannst ja so, ich sag mal so als Primary Key von deinen Commits ansehen, richtig?"
+        },
+        {
+            "start": 3086100,
+            "end": 3089780,
+            "speaker": "B",
+            "text": "Ja, als Primary Key. Wie man dann indiziert, ist noch mal eine andere Sache."
+        },
+        {
+            "start": 3089860,
+            "end": 3183190,
+            "speaker": "A",
+            "text": "Genau, aber jetzt mal so ganz simpel. Jetzt ist es aber so, du kannst auch einen Dateipfad an gitlog geben. Du kannst sagen gitlog und dann Pfad zu einer Datei. Diese Operation ist relativ teuer, denn was Git untendrunter machen muss, der muss für jeden Git Commit prüfen, ob sich die Datei, die du angegeben hast, gegenüber dem Parent in dem Baum in dem Git Baum geändert hat. Das heißt eigentlich untendrunter müssen verschiedene Bäume kontinuierlich für jeden Git Commit gedifft werden. Gibt es da eine Änderung und so weiter. Tada, du merkst schon, wo wir hingehen. Wir bauen eine Indexstruktur und zwar nehmen wir da einen Bloomfilter, denn immer wenn ein Commit gemacht wird, wird der Commit Graph pro Commit in ein Blumenfilter überführt, wo dann verschiedene Bits gesetzt werden für diesen einzelnen Commit. Und wenn du git log Pfad zu einer Datei machst, dann schaut der erst in dem Blumenfilter nach, oh, habe ich hier was? Und da hat er dann verschiedene Bits gesetzt und anhand der Bits, die gesetzt wurden, entscheidet er ja Diese Datei wurde geändert, nein, diese Datei wurde nicht geändert. Oder maybe, wenn alle Bits gesetzt sind und nur in dem Fall von maybe, das ist ja dann probabilistisches Ergebnis, dann macht er die teure Operation von den Bäume dürfen, die er sowieso gemacht hätte, ohne die Indexstruktur. Und das ist so eine schöne, so ein schönes Beispiel, dass man eigentlich diese Indexstrukturen, ja würde ich sagen, zumindest wöchentlich verwendet."
+        },
+        {
+            "start": 3183190,
+            "end": 3290770,
+            "speaker": "B",
+            "text": "Also ich muss dich korrigieren, wie gesagt, Indexstruktur kann man jetzt drüber streiten, ich würde es nicht Indexstruktur nennen, weil eine Indexstruktur kann dir noch mal etwas zurückliefern oder sagen, wo der eigentliche Wert liegt. Das kann ein Blue Filter nicht. Und ich bin ja der akademische Part in dem Podcast, darum probiere das jetzt wieder auf ein allgemeines Level zu heben, wo ein Blumenfilter sinnvoll ist. Und zwar macht ein Blumenfilter natürlich nur da Sinn, wo ich viele Anfragen bekomme und die Chance aber gering ist, dass eigentlich ein Wert in meiner Datenbank oder in meinem Datenset überhaupt verfügbar ist, weil sonst, wenn ich ständig die Info bekomme, ja, ist eh verfügbar, dann muss ich durch das ganze Datenset durch, Ist natürlich schlecht. Also es macht natürlich am ehesten Sinn, wenn die Antwort oft nö ist nicht bei mir im Datensatz ist oder wenn das Anschauen an sich extrem teuer ist. Das heißt, wenn ich jetzt zum Beispiel in einem Distributed System bin und ich will wissen, wo liegt denn der Wert auf Node eins, auf Node zwei, auf Node drei und ihr müsst da mit Netzwerk erstmal nachfragen, dann wäre das natürlich super langsam und Blumenfilter kann mir das natürlich im Vorhinein beantworten. Und um noch ein Beispiel zu nennen, was Andis Lieblingsthema ist, Tiered Storage, das heißt, ihr habt verschiedene Storage Layer, irgendwie Storage Layer, die ganz schnell sind, meine Festplatte, irgendwelche Remote Storage Layer, die super langsam sind, die cold sind, da kann ich natürlich einen Blumenfilter davor setzen, damit ich nicht in mein Bergwerk gehen muss und auf irgendeinem Band nachschauen muss, ist da irgendwie ein Datum, eine Datei vorhanden, sondern das kann der Blumenfilter beantworten, der ist super kompakt und im Falle muss ich dann natürlich im Detail noch mal nachschauen. Und aus dem Grund wird er übrigens auch bei LSM Trees, das ist die Indexstruktur von rocksdb unter anderem die Facebook hier auch verwendet, stark eingesetzt, weil das eben auch so ein Tiered Storage Modell verwendet."
+        },
+        {
+            "start": 3291030,
+            "end": 3370990,
+            "speaker": "A",
+            "text": "Und jetzt habe ich einfach mal ein perfektes Beispiel, wo ihr mal einfach hart, ganz dumpf Vibe coden könnt. Auch wenn ihr jetzt sagt, da rollen sich die Fingernägel hoch, aber der Wolfgang ist für die Theorie zuständig und ich bin der praktische Typ, deswegen pushe ich euch mal in die Richtung, springt doch einfach mal in eure KI, bau mir doch mal eine Blumenfilter Implementierung, interviewe mich dazu zu meinen Datensätzen und dann forciere doch einfach mal eine Blumenfilter Implementierung von Daten, die du kennst. Und dann lässt du dir das in deiner Sprache, deiner Wahl in einem Minimal Code Beispiel mal generieren und liest dir das durch, um einfach mal ein Verständnis zu kriegen. Denn zumindest für mich hören sich diese theoretischen Konstrukte immer super an. Und ja, ich klicke dann die Slides immer durch und dann sehe ich dann die Trade offs und die Pro und die Cons, alles gut. Aber richtig klick macht es halt, wenn die ganze Sache auf Daten läuft, die ich kenne, also die ich, wo ich Domänen Experte vielleicht bin. Und wenn ich mir per KI einfach drei, vier Projekte generieren lasse, unabhängig davon, ob die Struktur, auch wenn ich, ich bezeichne Bloomfilter jetzt auch als Indexstruktur, kann der Wolfgang, das Geile ist ja, wir leben ja remote auf, das bedeutet, Wolfgang kann mich gar nicht hauen, ist viel zu weit weg, aber dann habe ich auf jeden Fall ein deutlich höheres Verständnis, wo ich dann den Kram hoffentlich besser verstehe."
+        },
+        {
+            "start": 3371540,
+            "end": 3431400,
+            "speaker": "B",
+            "text": "Und Bloomfilter ist ja wirklich so der neue heiße Scheiß, zumindest seit, würde man sagen, fünfzehn Jahren, aber wenn man zurückblickt, erfunden ist das Ganze ein tausend neun hundert siebzig geworden, also lang, lang bevor das eigentlich alles ein Thema war. Da sieht man, wie lang sowas dann wirklich benötigt, bis es dann schlussendlich auch die Anwendung findet. Und Andy, du kannst gerne Indexstruktur nennen, ist vollkommen okay, es ist ja eine Datenstruktur. Also soweit können wir uns ja darauf einigen. Und vielleicht noch als kleine side Note, ich habe ziemlich lange gebraucht, bis ich Blumenfilter richtig verstanden habe. Also ich habe da einige Infos durchgelesen damals und bis es so richtig verstanden habe, hat es eine Zeit wirklich benötigt. Insofern finde ich deinen Approach super gut, weil früher war es natürlich nicht so einfach, da irgendwie ein Beispiel zu sehen oder welche Bits werden denn da belegt, wenn ihr da irgendein Wort eingibt. Da hat es ja keine Online Simulatoren gegeben, die dir das so einfach berechnet haben. Jetzt kannst du dir das einfach wipe coden oder wirklich mal ein persönliches Beispiel ausgeben lassen und du kannst gezielt Fragen stellen. Also es ist eigentlich ideal, um irgendwas zu lernen."
+        },
+        {
+            "start": 3431800,
+            "end": 3467080,
+            "speaker": "A",
+            "text": "Ich mache das gar nicht so oft, dass ich gezielt Fragen stelle. Ich sage dem oft initial, OK, kommentiere das für einen Junior Engineer oder ähnliches oder für einen Five Year Old. Natürlich ist das dann super exzessiv und da steht dann super viele Kommentare, alles gut. Aber ich habe es ja ganz kurz generiert, drei, vier Minuten, lese es mir durch und danach schmeiße ich es ja eh wieder weg. Ich will es ja nur verstehen. Von daher, da muss ich schon zugeben, jetzt mal unabhängig davon, ob das in Produktion geschippt wird oder nicht, das nenne ich mal reale Code Generation. Aber wer immer noch dran ist, nicht weggepennt ist und noch mehr von so einem Kram hören möchte, hört sich die"
+        },
+        {
+            "start": 3467080,
+            "end": 3509230,
+            "speaker": "B",
+            "text": "Episode ein hundert ein und fünfzig an, weil da haben wir über ganz viele Bäume gesprochen, andere Bäume, und zwar über Geo Indizes, also räumliche Datenstrukturen und Indexstrukturen. Und wer weniger auf Bäume steht, der hört sich Andis fast Lieblingsfolge, würde ich sagen, an, und zwar die ein hundert sechs und vierzig, wo der Andi über Doom, über das Computerspiel philosophiert und viel technologische Trivia auch erzählt, aber unter anderem auch, was hinter diesen ganzen räumlichen Indexstrukturen steht, damit man das Rendering verbessert und die Lichtstrahlen irgendwie richtig berechnen kann und so weiter. Also auch das sind Indexstrukturen. Die Doom Folge ist definitiv auch zu empfehlen. Ein hundert sechs und vierzig, wie ihr"
+        },
+        {
+            "start": 3509230,
+            "end": 3550180,
+            "speaker": "A",
+            "text": "es von uns gewohnt seid, alle Links in den Shownotes. Und jetzt erwarte ich eigentlich von jedem als Hausaufgabe, dass ihr mal in die Codebase springt, an der ihr professionell arbeitet, schmeißt die KI drauf und sagt, welche Indexstrukturen habe ich denn hier im Quellcode verwendet und lasst euch mal da die Codezeilen zeigen. Und wenn ihr dann in die Discord Community kommt und die Anzahl der verschiedenen Indexstrukturen einfach mal postet, der Gewinner mit der Codebase mit den meisten verschiedenen Indexstrukturen, kriegt einen Kaffee von uns. Wie wir den übermitteln, weiß ich Jetzt auch noch nicht, kriegen wir schon irgendwie hin auf irgendeiner Konferenz. Da bin ich mal gespannt. Am geilsten wäre mit so ein bisschen Kontext, wie viel Lines of Code hat denn die Codebase, was macht die Codebase denn und so weiter und so fort. Da bin ich mal gespannt."
+        },
+        {
+            "start": 3550340,
+            "end": 3555140,
+            "speaker": "B",
+            "text": "Zählen da dann die Datenbank Indexstrukturen schon mit, oder? Weil die sieht man ja in der Codebase nicht, ne?"
+        },
+        {
+            "start": 3555700,
+            "end": 3562620,
+            "speaker": "A",
+            "text": "Schon die im Quellcode. Ah, die im Code, ja, ja, ganz genau. Und wenn du jetzt zweimal einen Blumenfilter hast, zählt das eins, weil ich sage"
+        },
+        {
+            "start": 3562620,
+            "end": 3581860,
+            "speaker": "B",
+            "text": "ja verschiedene, dann gewinnen alle, die Node JS verwenden, oder? Weil da hat man garantiert so viele Packages eingebunden und die alle wieder irgendwelche anderen Indexstrukturen verwenden, oder muss das auf der ersten Ebene sein? Ich sehe schon, Andi haut da immer so diese Gewinnspiele raus und ich muss mich dann um diese rechtlichen Themen kümmern. Oder wir machen es einfach so, wir entscheiden das am Ende, wer gewinnt."
+        },
+        {
+            "start": 3581940,
+            "end": 3584100,
+            "speaker": "A",
+            "text": "Ja, irgendwo müssen wir die Power ja auch mal ausnutzen."
+        },
+        {
+            "start": 3584340,
+            "end": 3585780,
+            "speaker": "B",
+            "text": "Eben genau so machen wir das."
+        },
+        {
+            "start": 3585780,
+            "end": 3589380,
+            "speaker": "A",
+            "text": "Wem das nicht gefällt, der wird einfach wieder aus der Discord Community rausgeschmissen. Relativ einfach."
+        },
+        {
+            "start": 3590560,
+            "end": 3592880,
+            "speaker": "B",
+            "text": "Ist bisher noch nie passiert, aber schauen wir mal."
+        },
+        {
+            "start": 3592880,
+            "end": 3611920,
+            "speaker": "A",
+            "text": "Irgendwann ist immer das erste Mal. So, das war's von uns. Ich hoffe, ihr habt eine Sache mitgenommen. Wie immer hören wir uns nächste Woche. Und falls ihr noch nicht alte Episoden gehört habt, dann wählt einfach mal irgendeine andere Episode aus. Hört euch die an und empfiehlt die einfach mal einer Kollegin und einem Kollegen weiter. Das war's von uns. Wir sind weg und tschüss."
+        },
+        {
+            "start": 3611920,
+            "end": 3612400,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
