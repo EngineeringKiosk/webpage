@@ -1,0 +1,549 @@
+{
+    "confidence": 0.96262914,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4443,
+    "utterances": [
+        {
+            "start": 3040,
+            "end": 83970,
+            "speaker": "A",
+            "text": "Moin, herzlich willkommen. Es ist mal wieder Zeit für eine neue Episode vom Engineering Kiosk Podcast. Ich fall direkt mal mit der Tür ins Haus. Heute geht es um das Thema Openwashing. Denn nur weil irgendwo Open Source souverän und digital unabhängig draufsteht, heißt das noch lange nicht, dass am Ende auch wirklich freie Software drinsteckt. Also irgendwie Greenwashing für Software sozusagen, nur leider mit Folgen. Mit Folgen für öffentliche Verwaltungen, Beschaffung, digitale Souveränität und am Ende auch für uns als Entwickler innen. Dafür haben wir uns wieder Johannes Neder eingeladen, den kennt ihr vielleicht schon aus unserer Public Money Public Code Episode. Mit ihm schauen wir uns an, was freie Software eigentlich wirklich ausmacht, warum die berühmten vier Freiheiten so wichtig sind und woran du erkennst, ob ein Produkt tatsächlich Open Source ist oder nur so tut. Wir sprechen über opencore Source Available Community vs. Enterprise Edition, Digitale Souveränität, europäische Cloud Angebote und darüber, warum dieses Thema gerade für Behörden und öffentliche Beschaffung immer relevanter wird. Außerdem gibt es einige konkrete Beispiele, bei denen man wirklich zweimal hinschauen sollte. Darunter fällt zum Beispiel der Passwortmanager Bitwarden. Wenn du also wissen willst, wie Openwashing funktioniert und warum ein Lizenzpfeil manchmal politischer ist als gedacht, dann bleib dran, viel Spaß, wir legen los. Bis gleich."
+        },
+        {
+            "start": 88850,
+            "end": 157130,
+            "speaker": "B",
+            "text": "Wir sprechen im Podcast immer sehr viel über Open Source und in letzter Zeit hat man so bisschen das Gefühl, dass es auch so in den ganzen Regierungskreisen angekommen ist und sich manche Regierungen zumindest bisschen mehr committen und so langsam in die Richtung Open Source gehen und gewisse Commitments auch irgendwo niederschreiben. Wir hatten das ja auch diskutiert in der Episode zwei hundert zwei und dreiig zu Public Money Public Code und scheinbar wird jetzt Open Source interessanter im Allgemeinen und wir kennen das ja auch vielleicht aus einem anderen Bereich, sogenannte Greenwashing, wo Konzerne sich irgendwo ein grünes Blatt auf die Fahne schreiben und sagen, sie sind nachhaltig und hoffen einfach dann im Prinzip, dass niemand so genau reinschaut. Und dieses Phänomen taucht jetzt auch bei Software auf, weil nur wenn grün oder wenn Open draufsteht, heißt es eben noch lange nicht, dass es wirklich offen oder Open Source oder wirklich digital souverän am Ende wirklich ist. Und genau darüber wollen wir heute mal sprechen, über das Phänomen Open Washing und da haben wir einen absoluten Spezialisten in dem Bereich gefunden und er war bei uns schon mal im Podcast, also er ist jetzt zum zweiten Mal zu Gast. Und damit willkommen Johannes bei uns."
+        },
+        {
+            "start": 157290,
+            "end": 159690,
+            "speaker": "C",
+            "text": "Hallo, ich freue mich sehr, dass ich wieder bei euch sein darf."
+        },
+        {
+            "start": 159850,
+            "end": 256710,
+            "speaker": "A",
+            "text": "Aufmerksame Engineering Kiosk Hörer und Hörerinnen kennen dich bereits aus der besagten Folge zwei hundert zwei und dreiig Public Money Public Code. Da haben wir ein bisschen darüber gesprochen, warum eigentlich öffentliche Gelder, die zumindest in die Softwareentwicklung für Behörden und Co. Fließen, denn auch in freier Software enden sollten bzw. Die Software, die dort produziert wird durch öffentliche Gelder, dass die unter einer Open Source Lizenz zur Verfügung steht. Aber für die Leute, die diese Episode noch nicht gehört haben und nach dieser Episode dann noch mal nachhören, stellen wir dich trotzdem noch einmal ganz kurz vor. Du arbeitest bei der Free Software Foundation Europe als Senior Projektmanager im Bereich Policy und wie sich das für jemanden, der im Policy Bereich arbeitet, gehört, wohnst du entweder in Brüssel oder in Berlin. Bei dir ist es diesmal Berlin, die deutsche Hauptstadt. Deswegen machst du keine EU Politik, sondern deutsche Politik indirekt, wenn man so möchte, zumindest aus der deutschen Hauptstadt. Du bist auch nebenbei noch Koordinator der Initiative Public Money Public Code publiccode EU. Du tingelst über jegliche Arten von Konferenzen und sprichst über nachhaltige Beschaffung von freier Software. Du hast mal ein Resümee über ein hundert Tage Schwarz Rot zu unserer Bundesregierung in Bezug auf Digitalpolitik aus der Perspektive der Free Software Foundation Europe gesprochen. Du hast mehrmals über Open Washing, über das Thema, was wir heute sprechen, referiert. Ja, also was soll ich sagen, umso mehr ich dich google, habe ich das Gefühl, Freie Software ist nicht nur dein Beruf. Freie Software ist nicht nur dein Hobby. Freie Software ist, wie soll man sagen, dein Mantra fürs Leben."
+        },
+        {
+            "start": 257750,
+            "end": 311510,
+            "speaker": "C",
+            "text": "Das ist sehr hochgegriffen. Aber natürlich ist es schon ein wichtiges Thema für mich auch persönlich. Also ich benutze auch selber freie Software schon seit Jahr. Mittlerweile muss ich le, muss ich leider zu so hohen Zahlen greifen wie über zwanzig Jahre. Aber es ist natürlich auch schön so weit zurückblicken zu können und so lange bin ich selber mit Freisoftware unterwegs. Die Free Software Foundation Europe kenne ich schon fast genauso lang, bin jetzt eben seit ein paar Jahren auch hauptamtlich dort dabei. Vielleicht eine kleine Ergänzung oder Korrektur. Es ist nicht nur Politik in Deutschland, also Public Money Public Code, wofür ich verantwortlich bin, ist eben europaweite Initiative. Deswegen auch für ich weiß, dass es ja auch hier Hörerinnen und Hörer aus der Schweiz, aus Österreich gibt. Wir haben eben auch nicht nur einen engen Europabegriff, sondern sondern für uns zählen auch die Nicht EU Staaten natürlich zu Europa und die wollen wir mit Public Money Public Code erreichen. Dass man nicht in Brüssel wohnt, das ist manchmal ein Nachteil. Manchmal kann man aber auch von hier aus sehr gut was zu europäischer Politik in Brüssel sagen."
+        },
+        {
+            "start": 311510,
+            "end": 394760,
+            "speaker": "A",
+            "text": "Als der Wolfgang gerade das Intro durchgesprochen hat, nenne ich es mal, kam mir so der Ab wann ist eigentlich bei mir im Kopf die Verbindung zwischen Programmieren und Open Source und Politik entstanden? Weil natürlich über digitale Souveränität gesprochen und Behörden gehen jetzt mehr und mehr in die Richtung. Also München hat es ja schon mal vor etlichen Jahren versucht. Ich glaube, die haben jetzt gerade vor kurzem wieder einen Versuch gemacht, um auf irgendwie Freie Software oder libreoffice oder ähnliches umzustellen und gibt ja auch etliche andere Beispiele in Deutschland, auch in Österreich. Ich glaube, das österreichische Bundesheer hat auch umgestellt auf Freie Software, zumindest für den Mailverkehr und Office und so weiter und so fort. Und da habe ich mich gefragt, ich komme aus dieser ganzen Softwareentwicklungs Bubble. Das bedeutet für mich war früher einfach Coden, Programmieren, Spaß, ein bisschen relaxen und da habe ich natürlich auch gelernt, Open Source Arbeit zu machen und mit internationalen Leuten zusammenzuarbeiten. Aber ich bin nicht an die Open Source Thematik mit dem Hintergedanken rangekommen, ah, das hat was mit Politik zu tun. Du, Johannes, kommt natürlich irgendwie aus der anderen Extreme, aus der du bist, am anderen Ende des Spektrums. Du betrachtest Open Source natürlich sehr viel aus der Politik Brille. Meine Frage an dich wie viele Leute triffst du, die so sind wie der frühere Andy, die einfach nur ein bisschen am Code hacken wollen und die Verbindung von Open Source und Politik noch gar nicht im Kopf verknüpft haben?"
+        },
+        {
+            "start": 395000,
+            "end": 445220,
+            "speaker": "C",
+            "text": "Also ganz ehrlich, das passiert mir gar nicht so ganz häufig. Also zumindest ein kleiner Funke und bei eben vielen auch ein sehr viel größerer Funke Interesse an dem, was Freie Software Ich sage Freie Software, nicht Open Source, aber eigentlich meint es das Gleiche. Also was Freie Software für Politik bedeutet und wie wichtig Politik für Freie Software ist, das haben schon ganz viele, die allermeisten Menschen, mit denen ich spreche, entwickelt. Also auch in Konferenzen. Mag daran liegen, auch, dass natürlich vielleicht auch die Leute, die sich dafür interessieren, für das Politische, an unseren Stand kommen oder dann auf mich zukommen nach einem Talk. Aber in der Regel ist es eigentlich schon so, dass Leute, dass das Menschen mitbekommen haben, dass freie Software ein Thema ist, gerade auch in der in der heutigen Welt mit ihren geopolitischen Verschiebungen, Verwerfungen mit Abhängigkeiten, die plötzlich im Rampenlicht stehen, dass freie Software da ein Thema ist, was plötzlich ganz politisch ist und ganz wichtig ist."
+        },
+        {
+            "start": 445300,
+            "end": 465220,
+            "speaker": "B",
+            "text": "Also ich hätte das auch so eingeschätzt, alle, die ich kenne, die irgendwie wirklich auch eine Lizenz in ihrem Git Repo haben, also die nicht nur irgendwas publischen, sondern mindestens eine Lizenz haben, die sind eigentlich politisch auch sehr engagiert und haben politisch auch eine sehr starke Meinung diesbezüglich. Also ich würde fast sagen, dass das sehr stark zusammenhängt."
+        },
+        {
+            "start": 465380,
+            "end": 477680,
+            "speaker": "A",
+            "text": "Das verstehe ich, das verstehe ich. Aber Wolfgang, frag dich doch mal selber, als du mit Open Source angefangen hast, hast du mit dem politischen Gedanken angefangen oder war der kleine Wolfgang auch da? Ist ja Software, die ich gratis nutzen kann."
+        },
+        {
+            "start": 477920,
+            "end": 511920,
+            "speaker": "B",
+            "text": "Also müssen wir ganz selfish sein auf der Usage Seite. Also wie ich zum ersten Mal dann irgendwie Linux eingesetzt habe, damals noch SUSE auf cds irgendwie gekauft, irgendwie so mit einem Buch zusammen. Klar, da war das anders. Also als Anwender ist das natürlich dann noch mal ein anderes Thema. Das stimmt, ja. Und da sehen, glaube ich, auch ganz viele Firmen, das ist ja immer noch ein sehr großes Problem, eigentlich nur den Preis Tag, dass das kostenlos ist und verwenden es nur darum. Und dann schreiben sie sich groß auf die Fahnen, wir verwenden Open Source, wir leben Open Source, aber eigentlich heißt das Leben nur, wir verwenden Open Source."
+        },
+        {
+            "start": 511903,
+            "end": 571903,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 572000,
+            "end": 580240,
+            "speaker": "A",
+            "text": "Aber da kommen wir schon wieder in die Spitzfindigkeit. Ist Open Source kostenlos oder gratis? Viele sagen, es ist gratis, aber nicht kostenlos."
+        },
+        {
+            "start": 580800,
+            "end": 589020,
+            "speaker": "C",
+            "text": "Muss auch nicht unbedingt gratis sein. Also kann auch Geld kosten, soll auch Geld kosten. Ich meine, man soll ja auch, wenn man freie Software entwickelt, damit Geld verdienen können. Das ist also gar nicht ein Kriterium dafür."
+        },
+        {
+            "start": 589020,
+            "end": 591580,
+            "speaker": "A",
+            "text": "Lass uns mal ein paar Begriffe gerade ziehen."
+        },
+        {
+            "start": 591900,
+            "end": 592380,
+            "speaker": "C",
+            "text": "Gerne."
+        },
+        {
+            "start": 592380,
+            "end": 613550,
+            "speaker": "A",
+            "text": "Johannes, du hast gerade schon gesagt freie Software. Du sagst immer freie Software. Ich habe gerade Open Source gesagt. Man meint das Gleiche. Wenn man das Gleiche meint, heißt es nicht, dass es unbedingt das Gleiche ist. Leite uns doch mal vielleicht durch ein paar Grundbegriffe zur Definition. Also fangen wir mal mit dem Hauptthema an. Was ist eigentlich Open Washing? Der Wolfgang hat es gerade wie Greenwashing bezeichnet."
+        },
+        {
+            "start": 613860,
+            "end": 619060,
+            "speaker": "C",
+            "text": "Ja, wir können von der Seite anfangen, aber ich glaube, da müssen wir gleich unbedingt auch noch mal drüber reden. Was ist eigentlich freie Software?"
+        },
+        {
+            "start": 619140,
+            "end": 620100,
+            "speaker": "A",
+            "text": "Fangen wir an."
+        },
+        {
+            "start": 620100,
+            "end": 730110,
+            "speaker": "C",
+            "text": "Genau, ich glaube, das macht Sinn, weil, nimm mal die openwatching Definition jetzt nicht vorweg, wenn ich von freier Software rede. Andere sagen dazu Open Source. Ich sage, mir rutscht auch manchmal Open Source raus, gerade wenn ich in der politischen Diskussion bin. Das sind zwei Begriffe, die meinen eigentlich das Gleiche, so wie der Begriff Kleinwagen und PKW beide das Gleiche. Wichtig ist bei freier Software, schrägstrich Open Source, auch bekannt als Open Source, dass vier Freiheiten, vier grundlegende Freiheiten immer gegeben sein müssen, damit es Open Source oder freie Software ist, nämlich die Freiheiten, dass jeder den Code verwenden, verstehen, verbreiten und verbessern darf. Alle vier müssen gegeben sein. Side Note dieses Verbreiten, das darf sein, kostenlos. Das ist also total okay, wenn jemand seinen Code kostenlos weitergibt. Es darf aber auch gegen Geld sein. Also das ist kein Kriterium. Es muss nur wichtig sein, man darf ihn verbreiten dürfen. Das heißt, wenn ich eine Software bekomme, egal wie, ob ich sie kaufe, ob ich sie mir runterlade, die freie Software ist, dann bedeutet das, ich darf sie, ich darf mir den Code anschauen, ich darf sie selber verwenden zu jedem Zweck, ich darf sie verändern, ich darf sie weitergeben. Wenn ich denke, ich habe was Kostenloses bekommen und ich kann es dann für Geld weitergeben, dann ist auch sogar das erlaubt und umgekehrt. Genauso bei freie Software sind diese vier Freiheiten in Lizenzen festgehalten. Ich bekomme also immer eine Lizenz dazu, wenn ich eine Software, wenn ich eine freie Software bekomme. Und da steht drin, dass ich eben diese Freiheiten und diese Rechte habe. Es gibt eine Liste oder es gibt mehrere Listen von Lizenzen, die approved Freie Software Lizenzen sind. Die bekanntesten davon werden von unserer Schwester Organisation, der Free Software Foundation, von der Open Source Initiative und auch vom Debian Project geführt. Und so allgemein anerkannt ist es wenn eine Lizenz in diesen Listen vorkommt, dann ist es eine freie Software. Und vor allen Dingen, es genügt, dass eine von diesen Freiheiten nicht eingeräumt wird, dann ist es keine freie Software mehr. Dann sprechen wir von proprietärer Software."
+        },
+        {
+            "start": 730110,
+            "end": 743950,
+            "speaker": "B",
+            "text": "Ich weiß nicht, ob man das noch erwähnen muss, aber kannst du kurz beschreiben, warum das wichtig ist, dass wir Open Source Software haben oder freie Software und diese vier Freiheiten auch gegeben sind. Also was haben wir als Gesellschaft davon?"
+        },
+        {
+            "start": 743950,
+            "end": 906620,
+            "speaker": "C",
+            "text": "Ja, wir leben in einer Welt, in der Software all unsere Bereiche, alle Bereiche unseres Lebens durchzieht. Überall in unserem Leben haben wir mit Software zu tun. Auch da, wo wir es vielleicht gar nicht merken. Unsere Verwaltungen verwenden Software. Wir in unserem privaten Leben, sämtliche Firmen, mit denen wir zu tun haben, verwenden Software. Im Arbeitsumfeld haben wir damit zu tun. Wir glauben als Free Software Foundation Europe, dass diese Software uns unterstützen sollte als Menschen und nicht uns einschränken sollte. Und wir glauben, dass dafür freie Software geeignet ist, dass freie Software das leisten kann, während proprietäre Software das nicht leisten kann. Wir sagen das immer so, dass wir als FSFE, das ist die Abkürzung für Free Software Foundation Europe, dass wir als FSFE Menschen im selbstbestimmten Umgang mit Technik unterstützen wollen. Ein ganz besonderes Augenmerk liegt dabei für uns auf öffentlichen Verwaltungen, denn öffentlichen Verwaltungen, mit denen hat jeder Mensch im Alltag zu tun, immer wieder. Öffentliche Verwaltungen prägen unser Leben auf eine ganz besondere Art und Weise. Und wir denken das vor allem auch deswegen, weil sie mit öffentlichen Geldern finanziert werden, das, was sie an Software beschaffen oder selber entwickeln, dass das eben freie Software sein sollte. Überall da, wo öffentliches Geld ausgegeben wird für Software von öffentlichen Verwaltungen, sollte die Software unter einer freien Software Lizenz stehen. Das haben wir so mal vor ein paar Jahren angefangen zusammenzufassen unter dem Schlagwort Public Money Public Code, wo auch die letzte Episode, die wir gemeinsam gemacht haben, schon mal drum ging. Public Money Public Code. Ich glaube, vor neun Jahren etwa haben wir angefangen mit diesem Slogan zu arbeiten. Heute ist er sehr verbreitet, sehr bekannt. Viele Leute verstehen auch durch diesen Slogan, was es eigentlich bedeutet, also öffentliches Geld reingeht, sollte öffentlicher Code rauskommen. Gerade Beispiel, vorletzte Woche hat die Europäische Kommission eine Kommunikation mit einer neuen Open Source Strategie veröffentlicht in ihrem Tech Sovereignty Package. Und darin wird Public Money Public Code zitiert und auch zur Maxime erhoben. Das ist für uns natürlich ein großer Erfolg. Das ist etwas, wo wir sagen, schade, dass es so lange gedauert hat, neun Jahre. Aber es ist gut, dass wir endlich an dem Punkt sind, dass die Politik sieht, dass Entscheidungsträgerinnen sehen, dass auch viele Menschen in Verwaltungen sehen. Wir brauchen freie Software, damit öffentliche Verwaltungen digital souverän werden können. Vielleicht noch mal einen Schritt zurück zu deiner Frage die du Warum ist das wichtig? Öffentliche Verwaltungen sollten unabhängig agieren können und sollten ihren gesetzlichen Auftrag wahrnehmen können. Und für dieses unabhängige Agieren ist es wichtig, dass sie auch in ihrem Tech Stack, also in ihrem technologischen Stack unabhängig sind und dass dort keine Abhängigkeiten bestehen, die ihr Handeln eigentlich einschränken. Und das ist eigentlich momentan schon sehr stark so, dass es überall diese Abhängigkeiten gibt."
+        },
+        {
+            "start": 906620,
+            "end": 926980,
+            "speaker": "B",
+            "text": "Jetzt bevor wir in das Open Washing einsteigen, brennt mir noch eine Frage auf der Zunge. Heißt es so, liegt auf der Zunge. Egal, weil du jetzt auch gerade erwähnt hast, dass jetzt was weitergegangen ist. Kannst du mein Gefühl teilen, dass irgendwie so im letzten Jahr doch verhältnismäßig sehr viel weitergegangen ist, wenn man das vergleicht, was die letzten fünf Jahre passiert ist?"
+        },
+        {
+            "start": 926980,
+            "end": 990330,
+            "speaker": "C",
+            "text": "Ja, ich denke schon, dass im letzten Jahr, also speziell seit die neue amerikanische Regierung im Amt für viele noch mal deutlicher klar geworden ist, warum das Thema freie Software sehr wichtig ist, warum das Thema digitale Souveränität sehr wichtig ist. Glaube, da hat sich gerade in diesen letzten Jahren viel bewegt. Eigentlich auch schon in den Jahren seit der ersten Trump Administration ist glaube ich schon vielen klar geworden, dass es wichtig ist. Aber im letzten Jahr speziell hat sich viel bewegt. Was wir, glaube ich, beachten und sicherstellen müssen, ist, dass diese Erkenntnis auch tatsächlich jetzt in politisches Handeln führt und dass es nicht nur bei der Erkenntnis bleibt, dass also Papiere veröffentlicht werden, dass aber auch wie diese Kommunikation der Europäischen Kommission, dass aber auch das in politisches Handeln tatsächlich umgesetzt wird und dass am Ende unsere Verwaltungen digital souverän werden durch den Einsatz von freier Software. Dahin ist noch ein weiter Weg. Also es hat sich viel bewegt auf der einen Seite, aber bis zur Umsetzung liegen auch vielleicht noch viele Stolpersteine im Weg. Und ich glaube, Open Washing ist eins davon, was da problematisch werden könnte. Durchaus, Es gibt auch andere, aber Open Washing ist so ein Thema."
+        },
+        {
+            "start": 990490,
+            "end": 994210,
+            "speaker": "B",
+            "text": "Papier ist geduldig, wie man so schön sagt. Das wird weiterhin bleiben."
+        },
+        {
+            "start": 994210,
+            "end": 1034310,
+            "speaker": "A",
+            "text": "Wolfgang, du hast gerade gefragt, ob Johannes deiner Wahrnehmung zustimmt und ich frage mich gerade, ob das nicht nur eine Frequenzillusion ist oder das Medien Sommerloch oder dass es vielleicht einfach nur der Effekt ist, dass jeder versucht, alles mit Software zu lösen und dann das Thema automatisch mehr in den Vordergrund rückt. Also ich sage mal, kombiniert mit AI, mit der mit der Konsolidierung von nur amerikanischen oder nicht deutschen Diensten und allem drum und dran oder ob das Thema nicht schon immer genau in derselben Größe war und jetzt gerade schreien nur mehr darüber."
+        },
+        {
+            "start": 1034390,
+            "end": 1233640,
+            "speaker": "C",
+            "text": "Momentan geht die Diskussion, sie geht ja nicht wirklich in der Öffentlichkeit um Open Source, die Diskussion geht um Souveränität, um Abhängigkeit, um digitale Souveränität. Also eine Gefahr ist, dass auch dieses Thema schnell wieder abgelöst wird durch das nächste Beispiel AI, dass alle dann anfangen plötzlich nur noch über AI zu reden und ganz andere Perspektiven auf Technik plötzlich wichtig werden und wir darüber die Souveränitätsdebatte vergessen. Das andere Thema ist aber auch, wenn wir bei digitaler Souveränität bleiben noch und wenn das noch wichtig bleibt, ist, dass innerhalb dieser Themensetzung so ein Umframing eigentlich stattfindet und dass sich die Stimmen durchsetzen und die gibt es, die sagen, wir können ja ganz einfach digital souverän werden, wenn wir zum Beispiel einfach Software von europäischen Anbietern beschaffen, egal ob sie proprietär ist oder freie Software, Hauptsache der Hersteller kommt aus Deutschland oder Datenhoheit, also Software, die GDPR compliant ist, also der DSGVO, der Datenschutzgrundverordnung folgt, das genügt schon, dann sind wir schon digital souverän und das glauben wir eben nicht. Es gibt auch dann immer noch gravierende Probleme, wenn das eben proprietäre Software mit dem Standort Europa ist beispielsweise, dann kann es ja sein, dass der Hersteller Ausland ausgekauft wird, dass er sich entscheidet, auf die Cayman Islands abzuwandern, dass er bankrott geht. All das zeigt, wir sind auch dann nach wie vor in Abhängigkeiten und unsere Verwaltungen sind auch dann in Abhängigkeiten und können eben nicht einfach sagen, okay, sie nehmen den Tech Stack, den sie haben und machen ihn dann mit einem anderen Anbieter weiter, sondern sie stehen dann vor der Situation, okay, der ist jetzt ins Ausland abgewandelt, vielleicht in ein Land, was uns nicht als Europa freundlich gesonnen ist und anfängt das dann als Druckmittel zu nutzen, dann habe ich die gleiche Abhängigkeit, die ich davor auch hatte, obwohl ich mich ursprünglich entschieden hatte, nur noch Software aus Europa zu kaufen. Wir glauben, das ist nicht der richtige Weg, um digitale Souveränität zu erreichen, sondern wir glauben, digitale Souveränität geht eben nur mit freier Software. Freie Software ist nicht das einzige und nicht die einzige Voraussetzung für digitale Souveränität, aber sie ist eine notwendige. Das ist zum Beispiel auch so eine Richtung, in der wir, glaube ich, aufpassen müssen, dass die Debatte in die richtige Richtung weitergeht. Wir sagen deswegen, wenn digitale Souveränität erwähnt wird oder wenn wir das erwähnen, sagen wir immer dazu digitale Souveränität durch freie Software. Das ist für uns also ganz klar aneinander gekoppelt und uns ist trotzdem auch klar, dass es sein kann, dass dieses Thema wieder durch Konjunkturen, durch so Themenkonjunkturen weiter in den Hintergrund tritt. Also momentan jetzt die nächsten Wochen, mal sehen, was passiert, wenn die Fußball Weltmeisterschaft durch Europa und durch die Welt rollt. Da sind sowieso vielleicht ganz andere Themen, die vorne stehen. Aber auch in den nächsten Jahren kann es natürlich sein, dass andere Themen in den Vordergrund rücken. Wir wissen, das Thema Public Money, Public Code, schrägstrich auch das Thema technologische Souveränität durch freie Software ist eines, was sehr, sehr langen Atem braucht, bis wir wirklich da sind, dass wir in ganz Europa freie Software in öffentlicher Verwaltung haben, dass es überall so ein Prinzip Open Source first, Free Software first gibt, dass Public Money, Public Code zur Realität geworden ist. Das ist ein sehr langer Prozess und wir wissen, wir müssen dranbleiben. Wir sind auch diejenigen, als Fish Software Foundation Europe dieses Jahr seit fünf und zwanzig Jahren an diesem Thema DR auch die nächsten fünf und zwanzig Jahre da dranbleiben. Also mit uns kann man da glaube ich rechnen, auch über solche Themenkonjunkturen hinweg."
+        },
+        {
+            "start": 1233720,
+            "end": 1287150,
+            "speaker": "B",
+            "text": "Ich glaube auch, das ist euch zu verdanken natürlich der FSFE, dass da auch mehr passiert ist. Und Andi, um auf deine Frage noch kurz einzugehen, ich glaube schon, dass erstens mehr niedergeschrieben ist, weil jetzt steht zumindest schon irgendwo, ob dann die Aktionen folgen, ist noch mal ein anderes Thema, aber es steht zumindest schon irgendwo. Früher stand es gar nirgends. Oder auch so Dinge, wie du erwähnt hast, österreichisches Bundesheer auf libreoffice sind doch paar tausend Arbeitsplätze. Also man sieht schon, da gibt es ja mehrere Fälle, dass sich schon etwas bewegt. Aber klar, ich glaube, wir sind noch lange nicht angekommen und man muss das Ganze erst umsetzen, was die ganzen Regierungen dann auch wirklich planen oder sich mit irgendeinem Claim irgendwo hingeschrieben haben. Aber kommen wir mal zu dem Thema von der anderen Seite, und zwar Open Washing. Johannes, kannst du mal kurz erklären, was Open Washing ist, wie du es definierst und vielleicht dann auch, woher die ganze Motivation kommt, Open Washing eigentlich zu betreiben"
+        },
+        {
+            "start": 1287150,
+            "end": 1395760,
+            "speaker": "C",
+            "text": "von Firmen als ich den letzten Talk zu dem Thema gemacht habe, da habe ich davor am Morgen hat mich meine Tochter gefragt, kleine ja worüber redest du eigentlich? Und dann habe ich überlegt, wie kann ich ihr das so in möglichst einfachen Worten erklären? Naja, und sie weiß zwar nicht ganz, was freie Software ist, aber ich habe ihr dann gesagt, es geht eigentlich im Zweifelsfall geht es um Lügen. Also es geht um etwas vortäuschen, was nicht die Wahrheit ist. Und das ist was, das versteht jedes Kind. Also so einfach ist das Konzept, wenn man es ganz, ganz stark runterbricht, um Täuschen, um etwas vorgeben, was nicht der Wahrheit entspricht und zwar sagen, dass etwas freie Software ist, obwohl es eigentlich nicht freie Software ist, den Begriff Open Source in den Mund nehmen rund um eine Software und damit verschleiern wollen, dass es eigentlich Software ist, die nicht Open Source ist. Also diese beiden Kriterien müssen erfüllt sein. Das ist also eine Software, die eigentlich proprietär ist, die eigentlich nicht freie Software ist und es muss eine Kommunikation darum stattfinden, die suggeriert, es sei freie Software. Also diese Täuschungsabsicht, also eine Art Etikettenschwindel könnte man es vielleicht auch bezeichnen, warum das gemacht wird? Ja, da gibt es so glaube ich, schon verschiedene verschiedene Motive. Das stärkste ist, denke ich, dass Anbieter, die in so eine Richtung gehen oder ein starkes zumindest ist das Anbieter, die in diese Richtung Open Washing gehen, sehen, dass die Vorgabe in öffentlicher Beschaffung freie Software zu beschaffen, immer stärker wird. Also dass schon dieser Gedanke von Public Money, Public Code oder technologischer Souveränität durch freie Software sich immer weiter durchsetzt und das es als Kriterium oder zumindest einen Vorteil hat, wenn man freie Software anbietet oder es sogar ein hartes Kriterium ist, dass etwas freie Software sein soll. Naja, und damit man eben auch mit seiner proprietären Software ein Stück vom Kuchen abbekommt, dann fängt man eben an, so einen, so eine Kommunikation darum aufzubauen."
+        },
+        {
+            "start": 1395760,
+            "end": 1411480,
+            "speaker": "B",
+            "text": "Ist es eigentlich dann nicht genau eine Bestätigung, dass es mit Open Source vorangeht und dass eben viele jetzt auch Open Source fordern, wenn quasi die Gegenseite sich jetzt überlegt, wie können wir trotzdem noch irgendwie da reinkommen und mitspielen und ein Stück vom Kuchen abbekommen, wie du es erwähnt hast?"
+        },
+        {
+            "start": 1411720,
+            "end": 1533720,
+            "speaker": "C",
+            "text": "Ja, man könnte das so sehen und das ist sicherlich auch so. Auf der anderen Seite gibt es auch Unternehmen, die Open Source, die freie Software produziert haben, die irgendwann gesagt haben, wir stellen die freie Software unter eine andere Lizenz und machen das nicht richtig öffentlich, kommunizieren weiterhin, es ist Open Source. Und naja, das ist natürlich eine Bewegung, die jetzt auch nicht für Public Money, Public Code spricht in dem Moment und die dem gar nicht beiträgt. Aber auch das kann so in Richtung Open Washing gehen. Wir können ja gleich auch noch mal so auf verschiedene Methoden und Strategien zu sprechen kommen und auf mögliche, also so Hinweise, woran man das erkennen kann. Ja, ich glaube, es gibt schon noch was, was man erwähnen sollte. Wir haben jetzt auch gerade viel über digitale Souveränität gesprochen und es gibt ja auch diesen Begriff Souveränität Washing, der so in den letzten zwei Jahren durch die Welt wabert. Und das geht in eine sehr ähnliche Richtung. Es geht um extrem hohe Summen Geld. Es geht um, ich glaube, die Zahl, die die Europäische Kommission vor zwei, vor zwei Wochen publiziert hat, ist zwei hundert drei und sechzig Milliarden Euro. Nicht nur öffentliches Geld, sondern allgemein zwei hundert drei und sechzig Milliarden fließen pro Jahr in Softwareprodukte und zwar meistens proprietäre Softwareprodukte amerikanischer Hersteller. Es geht also um unglaubliche Summen Geldes. Davon ist auch ein großer Teil öffentliches Geld. Die Hersteller, die davon bisher profitiert haben, das sind jetzt nicht nur die ganz großen, auch kleinere Hersteller, die davon profitiert haben bisher, die haben vielleicht auch ein Interesse daran, so ein bisschen zu vernebeln einfach, was ist eigentlich Open Source und was soll das mit dieser Offenheit? Was ist freie Software? Was ist digitale Souveränität? Ist das wirklich alles so klar? Wir ja, es ist so klar. Freie Software ist das, was die vier Freiheiten bietet und digitale Souveränität braucht immer freie Software. Und es gibt eben Akteure, die sagen, nein, das ist überhaupt nicht so klar. Ein anderes Maß an Offenheit genügt uns auch. Es ist jetzt Zeit für eine neue Offenheit, neue Art von Offenheit. Und das sind so Versuche, diese Begriffe irgendwie zu diffus zu machen und Klarheit aus dem Bild rauszunehmen, was auch Open Washing ist. Klar."
+        },
+        {
+            "start": 1533720,
+            "end": 1589000,
+            "speaker": "A",
+            "text": "Du hast gerade einen Nachbarbegriff erwähnt, Souveränitätswashing finde ich, finde ich ein schöner Begriff, muss ich zugeben. Und da kam mir das Beispiel der aktuellen US European Souverän Cloud in den Sinn. Das soll wohl eine europäisch getriebene Infrastruktur sein, Daten DSGVO konform und pipapo. Ich glaube, da gibt es eine gmbh auch in Berlin von AWS und die Kritik sei wohl, dass die gar nicht komplett unabhängig sei, weil Amazon Web Services die amerikanische Mutter sei. Auch das BSI ist da irgendwie mit am Start und so weiter und so fort. Ist das ein Beispiel für Souveränitätswashing oder verwechsle ich da gerade was? Weil im Endeffekt vermarktet AWS eigentlich europäische Unabhängigkeit etc. Etc. Auf AWS Infrastruktur, obwohl dann der Mutterkonzern natürlich in Amerika."
+        },
+        {
+            "start": 1589160,
+            "end": 1666650,
+            "speaker": "C",
+            "text": "Also es gibt diverse Hersteller, die ganz genau diesen Pfad beschreiten, die ein proprietäres Produkt als souverän bezeichnen und dann sind eben doch Komponenten, die proprietär sind, mit drin, in Zweifelsfall sogar auch proprietäre Komponenten amerikanischer Hersteller. Ein Beispiel aus Deutschland ist diese Delos Cloud zum Beispiel, die doch sehr stark auf Azure und Microsoft drei hundert fünf und sechzig fußt. Das ist auf jeden Fall so war es der Versuch von Herstellern, in dieser Souveränitätsdebatte einen ganz großen Fuß in der Tür zu behalten und zu okay, es genügt, wenn wir sagen, wir stellen die Server nach Europa, wir errichten irgendwelche Datengrenzen, wo Daten dann nicht abfließen dürfen zum Beispiel. Und das genügt dann für digitale Souveränität. Das ist schon auch irreführend, weil ich bin dann nachher nach wie vor trotzdem in einer Abhängigkeit von einem Unternehmen, an das mich dann langjährige Verträge binden, in denen ich nicht die Möglichkeit, die Gestaltungsmöglichkeiten habe, die ich bei Freisoftware habe und wo es natürlich dann auch Pfadabhängigkeiten gibt, die es mir nicht ermöglichen, da einfach wieder rauszukommen und zu wechseln. Diese Wechselfähigkeit ist so ein ganz starker Marker für digitale Souveränität. Also da, wo die Wechselfähigkeit gegeben ist in allen Situationen oder umgekehrt, da, wo sie nicht gegeben ist, da ist auf jeden Fall klar, technologische Souveränität oder digitale Souveränität gibt es nicht."
+        },
+        {
+            "start": 1666730,
+            "end": 1706720,
+            "speaker": "A",
+            "text": "Lustig, ich kannte die Delos Cloud nicht, ich habe die einfach gerade bei Google eingegeben. Erste Delos Cloud, die souveräne Cloud für den öffentlichen Dienst. Zweites Suchergebnis. Delos Cloud und Microsoft schließen finale Verträge. Aber ich frage mich gerade, du hast gerade von Lügen gesprochen, wenn es um Washing geht, um Open Washing. Also man stellt etwas dar, was eigentlich nicht der Fall ist. Ist das eigentlich nicht auch Kundentäuschung? Und das führt mich jetzt zu der Ist das nicht eigentlich illegal? Also kann man das nicht strafrechtlich verfolgen, weil es wird ja eine Täuschung des Kunden, des Produkte vollzogen Also dieser Begriff"
+        },
+        {
+            "start": 1706720,
+            "end": 1829090,
+            "speaker": "C",
+            "text": "Lügen, der legt das natürlich nahe, dass das so wäre. Ich glaube, alle Akteure, die das machen, die sind schon so geschickt, dass sie das unterhalb, also dass sie das auf eine Art und Weise machen, die nicht justiziabel ist. Open Source, genau wie freie Software, sind halt auch keine eingetragenen und geschützten Markenbegriffe, sondern es ist so, jemand kann eben sein Produkt unter eine proprietäre Lizenz stellen und kann dann trotzdem super Open Source, freie Software. Und das ist nicht justiziabel. Da kommt man auf dem Weg wahrscheinlich nicht bei, ob es dann doch irgendwelche Wege gibt, tatsächlich dann Rechtsweg zu bestreiten, weil es am Ende eine Täuschung ist. Gerade wenn es um technologische Souveränität geht. Da kenne ich mich persönlich nicht aus, bin auch kein Rechtsexperte, das weiß ich nicht, das mögen andere beurteilen und wird vielleicht auch noch mal ein Thema werden. Aber der Versuch ist schon ganz klar von denen, die das betreiben, von den Open Washern, das auf eine Art und Weise zu machen, die sie nicht rechtlich angreifbar macht. Und umso wichtiger ist es aber, dass Zivilgesellschaft, wie wir herrschen, geht und sagt, wir brauchen Awareness für das Thema. Wir müssen das Thema in die Öffentlichkeit zerren und wir müssen klar und deutlich sagen, das ist falsch, das ist Irreführung, das ist Täuschung, damit es eben ein Agieren ist, was nicht einfach dann hingenommen wird, weil es ist ja auch rechtlich okay, das darf nicht sein, weil das Ergebnis davon ist, alle Bemühungen um Public Money Public Code oder viele Bemühungen um Public Money Public Code, viele Bemühungen um technische digitale Souveränität werden durch Open Washing unterlaufen und wir müssen uns dem ganz klar entgegenstellen und müssen Das geht so nicht als Zivilgesellschaft. Und in Zukunft wäre es auch gut, wenn das noch mehr andere Akteure in der Gesellschaft machen, also wenn auch Politiker innen das natürlich auf dem Schirm haben, wenn auch Menschen aus öffentlichen Verwaltungen, in Ausschreibungsabteilungen das auf dem Schirm haben, was ist Open Washing und sich da gut auskennen. Einige tun das schon, viele tun es aber auch nicht, weil es ist ja doch auch ein Thema, was jetzt bisher nicht so ganz ganz im Mittelpunkt stand. In Zukunft wäre es aber gut, wenn das, wenn dieses Wissen eigentlich überall stärker vorhanden ist und überall auch stärker, naja, es einfach als falsch gilt, Openwashing Produkte zu beschaffen."
+        },
+        {
+            "start": 1829250,
+            "end": 1852900,
+            "speaker": "B",
+            "text": "Wenn wir jetzt mal annehmen, dass das eine strategische Entscheidung ist und die Firmen ja sehr wohl wissen, was sie tun. Hast du trotzdem irgendwie erlebt, dass es auch oft einfach Unwissenheit ist, dass die das vielleicht schnell entscheiden und dann merken, okay, es war vielleicht doch nicht so schlau oder sich den Implikationen gar nicht bewusst sind. Kennst du solche Fälle auch oder würdest du sagen, im Normalfall ist es schon sehr gezielt, ganz klar, was sie wollen?"
+        },
+        {
+            "start": 1853220,
+            "end": 1928590,
+            "speaker": "C",
+            "text": "Also es gibt solche Fälle sicherlich auch, aber es gibt einen Freiwilligen, ich glaube aus UK, Dan Brown, der hat ein lange Zeit GitHub Repository, jetzt mittlerweile Codework Repository gepflegt mit Openwashing Fällen. Jetzt mittlerweile gibt es dazu auch eine Website, die können wir auch, glaube ich, gerne verlinken, das heißt Is it really foss? Und der hat eben Openwashing Fälle dort dokumentiert, auch mit den Verlinkungen. Und was er gemacht hat, ist er ist auch zu den Leuten, die das gemacht haben, hingegangen und hat Hey Leute, das, was ihr macht hier, das ist nicht okay, das ist Open Washing. Meint ihr das wirklich so? Sagt doch bitte einfach nicht, es ist Open Source, Sagt doch bitte einfach nicht so. Oder noch besser, stellt es doch wirklich unter eine freie Software Lizenz. Und bei einigen Fällen hat er da, glaube ich, auch Erfolg gehabt, bei anderen nicht so sehr. Aber ja, das kommt vor. Man muss aber sagen, auch wenn Firmen sowas machen, die haben ja normalerweise auch ihre Justizabteilung, ihre Rechtsabteilung und die wissen eigentlich, wie man mit Lizenzen umgeht und was es bedeutet und die wissen, was das für Geschäftsmodell bedeutet, wenn sie Freisoftware machen machen oder proprietäre Software machen. Und da kann man schon, also kann man schon Strategie in der Regel eigentlich unterstellen, zumindest aber ein gewisses Maß an Ignoranz, was zu viel ist, also was einfach zu viel Ignoranz ist. Wenn ich hergehe und sage, okay, ich bezeichne das als Open Source, obwohl es unter einer proprietären Lizenz ist. Naja, wenn jemand das aus Ignoranz macht, dann ist es schon sehr seltsam."
+        },
+        {
+            "start": 1928670,
+            "end": 1936990,
+            "speaker": "B",
+            "text": "Hast du ein Beispiel, also ein positives Beispiel, was dann irgendwie funktioniert hat und wieder richtiges Open Source wurde oder frei wurde, also zurückgerudert?"
+        },
+        {
+            "start": 1936990,
+            "end": 1943710,
+            "speaker": "C",
+            "text": "Das haben mehrere gemacht, da habe ich so ein paar Beispiele, Aber das heißt ja auch nicht, dass es jemand nicht intendiert hat und so aus Versehen gemacht hat."
+        },
+        {
+            "start": 1943710,
+            "end": 1949310,
+            "speaker": "B",
+            "text": "Ja klar. Aber wo das gewirkt hat, dass ihr quasi als Community eingeschritten seid."
+        },
+        {
+            "start": 1949310,
+            "end": 2171750,
+            "speaker": "C",
+            "text": "Das würde ich sagen. Genau. Also das gibt es schon, wenn wir als FSFE dann so Watchdoggen und als Watchdog daherkommen und das ist nicht in Ordnung. Es gibt auch andere Akteure aus der Zivilgesellschaft, die das machen und Journalisten, die das machen. Und dann kann das schon so einen öffentlichen Druck erzeugen, dass dann der Hersteller sagt, okay, der negative Impact ist für mich hier sehr viel größer. Also genau, ich glaube, ein Beispiel, was gerne genannt wird, ist Elasticsearch oder Elastic, die also irgendwann mal zu einer klammheimlich, zu einer proprietären Lizenz gewechselt waren und dann nach erheblichem öffentlichen Druck zu einem Dual Licensing Modell zumindest zurückgegangen sind. Wir hatten in Deutschland vor ein paar Jahren ein Fall, der relativ groß wurde, wo es auch um Open Washing ging. Das hatte ich, glaube ich auch in unserem letzten Podcast schon mal kurz angerissen. Da ging es um die norddeutsche Dataport, also eine Anstalt öffentlichen Rechts, IT Dienstleister für mehrere Bundesländer, vor allem im Norden von Deutschland, der sich angeschickt hat, einen sogenannten digital souveränen Arbeitsplatz zu entwickeln, was sie dann, ich glaube, als defoenix Suite bezeichnet haben, also ein Arbeitsplatz für Verwaltungen, sowas wie Groupware, wie Office Komponenten, Kalenderkomponenten, Meetingräume und solche Sachen umfassen sollte. Naja, und das haben sie als digital souverän verkauft oder auch angepriesen, meine ich jetzt damit, sehr stark als Open Source auch angepriesen. Und wenn man dann auf die Webseiten geschaut hat, dann gab es dort zwar Verweise auf diese Komponenten Repositories, aber das Ganze zusammengekleistert, so wie sie es eben auch als Arbeitsplatz verkauft haben oder verkaufen wollten, das hat man nirgends gefunden. Man konnte das nicht selber deployen. Das ist übrigens ein ganz guter Hinweis. Also wenn ich was nicht selber deployen kann, wenn das nicht geht, wenn dazu nicht alles da ist, dann ist das ein starker Hinweis dafür, dass etwas nicht wirklich freie Software ist. Und das ging dort nicht. Wir haben dann angefragt, ob wir so einen Test Account haben können, haben wir bekommen von Dataport. Und in dem Moment, in dem wir einen Test Account bekommen haben, waren wir berechtigt natürlich auch den Code zu bekommen. Und dann haben wir auch nach dem Code gefragt und den Code haben wir auch nicht bekommen. Da wurde uns dann gesagt, na, das wird noch veröffentlicht, nämlich dann vom Bundesinnenministerium die werden irgendwann das übernehmen und dann wird das Bundesministerium diesen Code dann veröffentlichen. Das ist nicht lizenzgerecht. Also wenn jemand sagt, das ist Open Source oder es unter einer freien Software Lizenz veröffentlicht, mir die Software gibt oder zugänglich macht, dann habe ich auf jeden Fall das Recht, auch den Code einsehen zu können und zu bekommen und auch verändern und zu verbreiten. Das war hier nicht erfüllt. Was wir dann gemacht haben, ist eine Liste von kritischen Fragen auch öffentlich an das Bundesinnenministerium zu schicken. Wie ist das eigentlich mit diesem souveränen Arbeitsplatz, der zukünftig auch hier von Bundesbehörden eingesetzt werden soll und von der Datenschutz entwickelt wird. Und das hat am Ende dann dazu geführt oder dazu beigetragen auf jeden Fall, dass die Phoenix nicht mehr weiterentwickelt hat. Die Komponenten daraus sind dann später an Zendes übergegangen, Zentrum für digitale Souveränität übergegangen und sind Teil von Open Desk geworden, also der Arbeitsplatzlösung, die Zendis dort als Freisoftware anbietet. Also so eine Art Zurückrudern, das gibt es schon ab und zu, andere tun das nicht. Also mongodb zum Beispiel ist sehr stark kritisiert worden dafür, dass sie auf eine neue Lizenz, die so eine Source Available Lizenz, also der Quellcode ist offen, aber man hat eben nicht diese ganzen Freiheiten, die ich eingangs erwähnt habe, die Freiheiten von freier Software, kann nur den Quellcode sehen. Diese Lizenz haben sie irgendwann eingeführt und haben dann angefangen darum zu kommunizieren. Das ist ein gutes Maß an Offenheit, das reicht aus, wir brauchen eine neue Open Source Lizenz, sowas sogar in diese Richtung. Und die Lizenz war aber eben nicht Open Source und ist auch nie anerkannt worden von der Free Software Foundation oder von der Open Source Initiative. Es gab sehr viel Kritik daran und sie sind dann eben auch nicht zurückgerudert."
+        },
+        {
+            "start": 2171830,
+            "end": 2193830,
+            "speaker": "A",
+            "text": "Wie sieht das denn mit Software aus, die zum Beispiel in der Community Edition frei verfügbar sind und wo es dann noch eine zweite Edition gibt, wie zum Beispiel die Enterprise Edition. Das ist ja auch ein übliches Modell, wie Vendoren dann Geld verdienen, weiß ich nicht, Authentifizierung oder Role Based Access Control, dass sowas dann halt in der Enterprise Edition verfügbar ist."
+        },
+        {
+            "start": 2193830,
+            "end": 2356150,
+            "speaker": "C",
+            "text": "Wir finden, es sollte alles freie Software sein, ganz grundsätzlich. Aber das alleine ist jetzt nicht Open Washing. Wenn jemand sagt, er macht eine Community Edition und eine Enterprise Edition, die dann proprietär ist und er sagt dazu, die Community Edition ist Open Source, ist freie Software, die Enterprise Edition ist das nicht, dafür bezahlt ihr Geld, dafür bekommt ihr ein paar andere Features. Das an sich ist okay. Wenn ich jetzt aber hergehe und das ganze Projekt, also von dem auch von, also vielleicht die Kernfeatures in die Enterprise Edition reinmache, sodass eigentlich die Community Edition gar nicht so interessant ist für viele. Also klar ist, man braucht schon die Enterprise Edition, aber gleichzeitig auch, sage ich mal, es ist Open Source. Ganz unten Kleintext, Community Edition ist Open Source oder ich lasse dieses Sternchen sogar weg und suggeriere einfach, alles ist freie Software, aber die Kernfeatures sind eigentlich in Enterprise Edition drin. Dann würde ich sagen, das ist Open Washing. Also dazu ein ganz gutes Beispiel habe ich vorhin auch gerade noch mal gecheckt, das hatte ich nämlich in einem Talk mal für den letzten Talk recherchiert und es ist jetzt tatsächlich immer noch so, ist Arango DB. In zwei tausend drei und zwanzig hatte Arango DB angekündigt, dass sie ihre Datenbank, die Arango DB Unternehmen einer proprietären Lizenz, jetzt umlizenzieren, dass die jetzt proprietär sein wird, haben aber die ganze Zeit gesagt, sie sind weiterhin so tief verwurzelt in Open Source und ihr Commitment zu Open Source Idealen bleibt das Gleiche. Und seit letztem Jahr haben sie dann angefangen anders zu kommunizieren, haben dann gesagt, also sie reden nicht mehr von Commitment zu Open Source, sondern Commitment zur Community. Also das ist dann ja okay, wenn das halt eine Open Source Community ist, dann kann man das schon auch sehr falsch verstehen, wenn sie davor immer so geredet haben. Also finde ich schon auch schwierig. Vielleicht jetzt nicht ganz klares Open Washing. Openwashing ist es aber dadurch, dass wenn man auf die Webseite geht, es kann jeder mal testen auf Arango AI Pricing, dann ein bisschen runterscrollen und dann kommen so drei Kacheln, Self managed und dann manage Cloud und OEM. Und bei dem self managed deploy anywhere, da stehen dann drei Häkchen. Erstens, run on your own infrastructure, also betreibst auf deiner eigenen Infrastruktur. Zweitens, Enterprise Edition, Doppelpunkt, Advanced Features, Governance, SLS, Lifecycle Support. Drittens, Community Edition, Open Source, free for evaluation and non commercial use. Also ich sage, die Community Edition ist Open Source, allerdings nur für Evaluation und nicht kommerzielle Nutzung. Und das ist ja schon ein Widerspruch in sich, denn wenn ich sage, es ist freie Software, dann schließt das immer auch die Möglichkeit zur kommerziellen Nutzung mit ein. Und das versuchen eben viele so ein bisschen umzudeuten oder auch sehr stark umzudeuten, was ist eigentlich freie Software? Ich sage, es ist nach wie vor frei für den Privatgebrauch oder für Vereine, aber bitte kommerzielle Nutzung müsst zahlen, ist trotzdem Open Source. Das ist Open Washington, würde ich sagen. Also wirklich ein schönes und unschönes Beispiel dafür."
+        },
+        {
+            "start": 2356310,
+            "end": 2377400,
+            "speaker": "B",
+            "text": "Das war ja damals auch in unserer Episode mit Frank Karliczek, wie er erzählt hat, dass das der Hauptgrund war für Nextcloud, um sein eigenes Projekt zu forken, weil einfach viel zu viele Tools auf der Enterprise Lizenz gesessen sind und er zum Beispiel in Schulen dann das Problem hatte, dass halt einfach ein Eltern Anbindung oder sowas nicht mehr möglich war, weil das war halt immer Enterprise Lizenz, was"
+        },
+        {
+            "start": 2377400,
+            "end": 2423670,
+            "speaker": "C",
+            "text": "wir auch erleben, neben diesem Open Source ringsrum kommunizieren und es ist aber keine freie Software drin. Was wir da erleben, ist auch so zu sagen, es ist based on Open Source. Also das ist jetzt ganz klar nicht justiziabel. Ich behaupte gar nicht, es ist Open Source. Ich sage nur, es ist based on Open Source, würden wir auch sagen, das ist Open Washing. Ganz klar war eben so der Eindruck entsteht, es ist schon offen genug. Diese Open Core Modelle haben wir gerade schon angesprochen, wo der Kern davon freie Software ist, aber die eigentlich wichtigen Features sind das dann nicht mehr. Was es auch ab und zu gibt, nicht so ganz oft, aber ab und zu gibt, ist, dass es nicht baubarer Code ist, also dass es irgendwie so Abhängigkeiten, Pflichtteile drin sind oder proprietäre Plops, die das eigentlich nicht ermöglichen zu bauen das Ganze."
+        },
+        {
+            "start": 2423670,
+            "end": 2435280,
+            "speaker": "A",
+            "text": "Da ist zum Beispiel das Spiel Doom fällt genau unter diese Kategorie, soviel ich weiß, gibt es nämlich, ich glaube die Sounds und deswegen musst du, glaube ich, andere Sounds da reinpacken, um das dann"
+        },
+        {
+            "start": 2435280,
+            "end": 2446600,
+            "speaker": "B",
+            "text": "bauen zu können, wobei das ja im Nachhinein dann passiert ist. Also das alte Doom ist dann, glaube ich mal irgendwie frei verfügbar worden, aber du kannst halt immer noch nicht jetzt irgendwie weiter kommerziell oder so in irgendeiner Form verwenden."
+        },
+        {
+            "start": 2446680,
+            "end": 2476530,
+            "speaker": "A",
+            "text": "Ich meine auch da gibt es dann auch Leute, die haben dann diese Sounds versucht nachzubauen und dann frei verfügbar zu machen etc. Etc. Aber wenn du das Doom genauso bauen möchtest wie früher, was zu Zoom fair gesagt nie als Open Source irgendwie vermarktet wurde oder so, also das muss man fairerweise auch dazu sagen, das ist jetzt kein Open Washing, wo schon Carmack und Co. Gesagt haben, Hey, erster Shooter hier ist Open Source, ne? Die haben es halt später durch den Hype einfach okay, irgendwie öffentlich gemacht."
+        },
+        {
+            "start": 2476530,
+            "end": 2515040,
+            "speaker": "B",
+            "text": "Ja, also die haben das ja nie so vermarktet, aber man merkt da auch schon, dass es durchaus schwierig ist, wenn man natürlich Fremdkomponenten irgendwie ins eigene System integriert. Und Matthias Kirschner, ein Kollege von dir, Johannes, hat ja auch gerade kürzlich in der Episode erklärt bei dem Buch Ada und Zangemann, wo es dann um die Illustrationen gegangen ist. Man muss natürlich dann alle Rechte auch abklären, wenn man die in irgendeiner Form verwendet. Da waren es Illustrationen, ihr habt es natürlich abgeklärt, bei Doom ist es Sound. Man muss natürlich immer alles checken und auch dementsprechend überprüfen, was man für Libraries einbindet, damit man da natürlich keine Probleme hat. Das ist natürlich schon auch in einem größeren Projekt durchaus eine Challenge."
+        },
+        {
+            "start": 2515040,
+            "end": 2651000,
+            "speaker": "C",
+            "text": "Es ist nicht ganz einfach, das ist schon richtig, gerade wenn man größere Projekte hat mit vielen externen Libraries und so weiter, die man einbindet, die man verwendet. Und es kann schon natürlich auch passieren, dass der Überblick da nicht da ist. Vollkommen. Er sollte natürlich da sein. Wir haben als Free Software Foundation Europe ein Projekt, das nennen wir Reuse. Ich weiß nicht, ob Matthias auch schon davon erzählt hat, das eigentlich die Lizenzierung von genau solchen Projekten vereinfachen soll. Also ein Standard für Menschen und Maschinen, lesbare Lizenzinformationen, die den Projekt, Projekt und allen Komponenten des Projekts beigefügt werden können. Und wenn man mit diesem Standard compliant ist, Reuse compliant, da gibt es auch Toolsets dafür, die das wirklich sehr einfach machen und auch diese Checks sehr einfach machen, dann kann man sich da ein bisschen zurücklehnen, Kann zumindest sicher sein, wenn ich die einzelnen Komponenten so gut recherchiert habe, mir ist da nichts durchgerutscht und auch in Zukunft werde ich das mit diesem Reuse gut auf die Reihe bekommen und auch meine Bill of Materials bauen können und so weiter. Aber was du gerade auch gesagt hast, ist das nicht bauen können. Und ein Beispiel, was ich ganz gerne bringe an der Stelle, ist Bitwarden. Kennen vielleicht auch viele als den Open Source Passwort Manager. Also so zumindest publizieren sie das auf ihrer Website. Wenn man sich das dann anschaut genauer und in das GitHub Repository reinschaut, dann gibt es zwei Lizenzen, Zum einen die GPL und zum anderen die Bitwarden License und die Bitwarden License ist eben keine freie Software Lizenz. Ja, es ist auch nicht so, dass die eine Lizenz für einige Komponenten, also zum Beispiel für den Server ist und die andere für die Clients, sondern tatsächlich diese Bitwarden License lizenzierten Elemente, die finden sich in mehreren ihrer Produkte am Ende. Und das bedeutet, ich kann die tatsächlich auch nicht einfach weglassen, die Elemente, die unter Bitwarden License lizenziert worden sind, oder es ist zumindest nicht so ganz einfach. Das Ganze ist proprietär. Deswegen muss man klar sagen, es gibt mittlerweile eine für den Server eine Open Source Implementierung, eine freie Software Implementierung namens Vaultwarden, aber auch um die zu nutzen nachher verwende ich den Bitwarden Client und die Bitwarden Browser Extension und auch die sind nach wie vor proprietär. Das ist also eigentlich so ein gutes Beispiel für verschiedene Lizenzen und es ist nicht klar getrennt. Ich brauche also auch die Komponenten, die proprietär sind, um das zu bauen."
+        },
+        {
+            "start": 2651080,
+            "end": 2667800,
+            "speaker": "A",
+            "text": "Das ist aber schon dann wirklich schon ein harter Effekt von Open Washing, denn zugegeben, ich benutze jetzt kein Bitwarden, aber hättest du mich gefragt, Andi, welchen Open Source Passwortmanager nutzt man da, dann wäre dieser wahrscheinlich recht weit oben auf der Liste gekommen."
+        },
+        {
+            "start": 2668360,
+            "end": 2671560,
+            "speaker": "B",
+            "text": "Ich habe mir genau das gleiche gedacht. Ich war bisher auch immer der Meinung,"
+        },
+        {
+            "start": 2671560,
+            "end": 2710570,
+            "speaker": "C",
+            "text": "das ist Open Source. Also sie schreiben auch da gerne mal auf die Webseite gucken, also Bitwarden com Open Source und dann steht da Open Source Passwort Manager built for transparency and security. Also ich will nicht sagen, dass es nicht möglich ist, dass sich sowas auch in Zukunft mal wieder ändert und dass da auch Projekte in andere Richtung wieder steuern, aber soweit ich jetzt gesehen habe, war das an der Stelle zumindest bisher nicht der Fall. Und gerade in so einem sensiblen Bereich, wo es für Nutzer und Nutzerinnen auch wirklich wichtig ist, hier möchte ich Kontrolle haben. Es geht um meine Passwörter, es geht um meine gesamte digitale Identität. Unter Umständen sich dann auf so ein Wort nicht verlassen zu können, das ist schon bitter."
+        },
+        {
+            "start": 2710650,
+            "end": 2727930,
+            "speaker": "B",
+            "text": "Vor allem, es ist ja dann schon eigentlich ein starker Claim zu sagen, jetzt Open Source, wirklich das Wort Open Source zu verwenden, weil es gibt ja auch Projekte wie OpenAI, wo zwar dieses Open vorkommt, aber es ist halt alles andere als Open. Aber da ist es ja noch mal stärker eigentlich Open Source."
+        },
+        {
+            "start": 2727930,
+            "end": 2861950,
+            "speaker": "C",
+            "text": "Ja, also hier ist es völlig klar, OpenAI habe ich auch auf meiner Liste so als Beispiel für dieses Buzzwording rund um Open Washing. Die gehören aber jetzt nicht zu denen. Also man kann OpenAI vieles vorwerfen, Sie gehören zumindest nicht zu denen, die groß behaupten, ihr LLM sei freie Software. Das nicht. Da gibt es andere. Also Meta hat das zum Beispiel eine ganze Weile gemacht, kam dann Zuckerberg und hat groß Blogartikel oder auch Elon Musk hat das, glaube ich, in Bezug auf Grog gemacht, hat dann gesagt, jetzt kommt das Open Source LLM und natürlich war es das dann nicht. Vielleicht muss man sagen, gerade bei AI Sachen ist das Ganze noch mal schwieriger, ein bisschen schwieriger, weil es noch nicht, oder es gibt eigentlich nicht eine abschließende Definition davon, was ist eigentlich eine Open Source AI. Da gibt es Versuche, das zu definieren, aber es gibt auf jeden Fall eine starke Richtung, dass es nicht genügt, wenn einfach die Tools unter freie Software Lizenz stehen. Es ist klar, dass auch die Gewichte offen sein müssen, dass auch die frei sein müssen. Also das, was ich jetzt habe bei Modellen, die ich im Zweifel auch selber runterladen und bei mir laufen lassen kann. Aber aber auch das genügt eigentlich ja nicht, denn ich kann ja das Modell nicht nachbauen. Also ich müsste eigentlich da auch wissen, welche Daten, zumindest wissen, welche Daten drin waren, am besten aber auch Zugriff auf diese Daten haben. Und da wird es natürlich ganz, ganz schwer, weil keine von diesen großen Firmen, die jetzt LLMs trainieren, die lassen sich da in die Karten gucken. Und oftmals sind das wahrscheinlich auch Daten, wo sie gar keinen legitimen Zugriff drauf haben, beziehungsweise die sogar möglicherweise gar nicht, gar nicht rechtlich zulässig sind oder die copyrightable sind, die sie gar nicht veröffentlichen dürften. Das ist also nicht etwas, wo man jetzt einfach sagen kann, das wird sehr schnell erreichbar sein. Es ist, glaube ich, trotzdem etwas, wo man sagen muss, damit diese Kontrolle, um die es uns geht, die auch in dem Begriff digitale Souveränität drinsteckt, damit man die wirklich erreicht, bräuchte es auch die Fähigkeit zu wissen, was sind die Daten und auch den Zugriff auf die Daten, um das selber nachtrainieren zu können. Und es gibt natürlich noch andere wirtschaftliche Kriterien, die das für einen Privatanwender jetzt keinen gangbaren Weg machen. Trotzdem müsste die Möglichkeit ganz grundsätzlich da sein, zumindest von dem Maß an Offenheit und dem, was alles offen liegt. Und das ist bisher eigentlich bei ganz, ganz wenigen Modellen nur der Fall."
+        },
+        {
+            "start": 2862110,
+            "end": 2870260,
+            "speaker": "B",
+            "text": "Was mich daran immer so stört aktuell ist, dass sich dieses Wort Open Source Modell jetzt so durchgesetzt hat. Alle sprechen nur mehr von Open Source Modellen."
+        },
+        {
+            "start": 2870260,
+            "end": 2871580,
+            "speaker": "C",
+            "text": "Open Wait ist das richtige, das wär"
+        },
+        {
+            "start": 2871580,
+            "end": 2900400,
+            "speaker": "B",
+            "text": "dasselbe, wenn ich sage, das ist ein Open Source Binary oder so, ist ein Open Source Binary von diesem Programm. Also das ist was ganz was anderes. Und das Problem ist ja auch, dass der Begriff Open Source dadurch verwässert wird, weil im normalen Sprachgebrauch, also jetzt unter Nicht Tech Leuten wird es ja auch schon verwendet, Open Source Modelle. Und irgendwie für mich heißt es dann auch am Ende, dass der Open Source Begriff einfach verwässert wird und nicht mehr so stark ist, wenn, wenn ihn alle falsch verwenden. Und das sehe ich halt auch als großen Nachteil."
+        },
+        {
+            "start": 2900400,
+            "end": 2930940,
+            "speaker": "C",
+            "text": "Also im LLMs, in dem ganzen KI Bereich ist der Trend besonders stark, dass eigentlich jeder von Open Source KI spricht, da wo eigentlich Open Weight gemeint ist. Und Open Weight ist ja schon fast ein Openwashing Begriff, weil wir würden sagen, eigentlich ist es schon proprietär. Also wenn ich am Ende nicht den ganzen Zugriff habe, das ist total schwierig. Und selbst Leuten, die sich wirklich gut auskennen, zum Teil ist es schwer klarzumachen, dass Open Source AI nicht der richtige Begriff für manche Sachen ist."
+        },
+        {
+            "start": 2931420,
+            "end": 3008450,
+            "speaker": "A",
+            "text": "Die Checklistenfrage, die du gerade mal erwähnt, kann ich das selbst bauen, also kompilieren und deployen und so weiter. Da ist die Antwort ja relativ einfach bei diesen ganzen AI Modellen, auch bei Open Weight Modellen. Und die Antwort ist nein, weil du hast die Daten nicht, du kannst nicht dasselbe Modell trainieren, weil du die Datenbasis nicht hast. Und somit fällt ja dann die Definition, so wie du sie genannt hast, ja eigentlich schon raus. Natürlich kann man sagen Open Weight und ja, du kannst die Gewichtung ein bisschen umstellen, aber das wäre dann das gleiche wie bei Doom. Ich habe gerade mal nachgeguckt und zwar bei Doom ist die Game Engine Open Source, aber aufgrund von Sound und Spielinhalten, die rechtlich lizenziert sind, kannst du es natürlich dann nicht so bauen, wie du das Doom damals auf CD gekauft hast, oder Diskette war es, glaube ich noch. Aber das ist eine andere Frage. Es ist, glaube ich, auch schwierig, wenn du sagst, okay, Open Washing an sich ist schon schwierig. Bitwarden als Beispiel, Arango DB hatten wir genannt, dann dieser öffentliche Arbeitsplatz. Und hey, wie gesagt, Wolfgang und ich sind die ganze Zeit im Open Source Bereich unterwegs und wir haben es nicht auf dem Zettel gehabt. Und es ist ja auch, wie du schon sagtest, guck mal auf die Pricing Page Scroll mal ganz nach unten. Also man könnte schon fast sagen, es ist im Kleingedruckten."
+        },
+        {
+            "start": 3008450,
+            "end": 3060720,
+            "speaker": "B",
+            "text": "Du musst teilweise sogar in den Source Code nachschauen und die einzelnen Lizenzen. Also ich hab mal sehr tief recherchiert bei so Chat Systemen auch was Nextcloud zum Beispiel anbietet und ganz oft ist es ja irgendwie ein Plugin oder ein Modul und dann haben Module in so größeren Software Suiten teilweise eigene Lizenzen und manche Module sind offen, manche nicht, manche haben spezielle Einschränkungen. Also du blickst da teilweise wirklich nicht durch und die beschreiben das auch nirgends, weil die wollen natürlich ihre gesamte Cloud Version einfach verkaufen. Und wenn du das dann mal selber auscheckst, dann hast du da achtzehn Lizenzen irgendwie in dem Reboot drinnen und musst sie da erstmal durchkämpfen. Es gibt ja dieses Security by Obfuscation. Ich sehe das so ähnlich, das ist so Open Source bei Obfuscation, dass man sich einfach nicht mehr auskennt und dann einfach nicht durchblickt und das nicht checkt am Ende."
+        },
+        {
+            "start": 3060720,
+            "end": 3120640,
+            "speaker": "C",
+            "text": "Ja, ja, ganz genau. Das ist auch ein guter Hinweis. Also dass die Informationen so stark verteile, dass es ganz schwer ist, das wirklich freie Software oder nicht. Also wenn man so über Marksteine, Prüfsteine reden will oder über Red Flags, dann also eine Sache, die ich immer mache, wenn ich erst mal so einen kleinen schnellen Check machen will, ich guck mal, gibt es ein Repo, also idealerweise natürlich nicht bei GitHub, sondern bei Quickwork oder einer anderen freien Plattform, aber auch ein zweierst GitHub Repo und hat dieses Repo eine Lizenzinformation? Ist die ganz klar ersichtlich oder gibt es das schon mal nicht? Dann ist schon mal die nächste Frage, wenn die da nicht ist, wo ist dann die Lizenzinformation vielleicht versteckt? Ist sie in irgendwelchen Verästelungen, wie du gerade gesagt hast, des Repositories versteckt? Wäre schlecht, aber für mich ist das schon mal so eine Sache. Dann kann man gerne mal genauer hinschauen bei gleichzeitiger Kommunikation hier das neue tolle Open Source Tool und dann finde ich Lizenz eben gar nicht oder ich finde sogar gar kein Repository."
+        },
+        {
+            "start": 3120640,
+            "end": 3181640,
+            "speaker": "A",
+            "text": "Jetzt hat man natürlich auch schon über die Schäden gesprochen und du hattest uns ja gerade so ein paar Fragen an die Hand gegeben. Okay, wie können wir die ganze Sache prüfen und etliche Schäden, wie zum Beispiel auch ein Imageschaden über Open Source weil es fällt ja irgendwie schon auf Open Source zurück bzw. Der Begriff wird missbraucht. Da frage ich mich natürlich, was können wir tun bzw. Was können wir Verwaltungen oder die Politik tun? Weil das Problem scheint ja sehr kompliziert zu sein oder vielleicht nicht kompliziert, sehr schwer zu durchschauen, wie dieser Podcast, wie diese Diskussion auch zeigt. Ich hatte gedacht, ich habe Ahnung davon. Mir fällt hier gerade auf, ich habe da gar keine Ahnung. Und deswegen, Johannes, wenn du sagst, Johannes, wenn ich sage zu dir, pass mal auf, ich möchte mich da jetzt mit beschäftigen, ich bin ein Aktivist, ich möchte jetzt mit erhobener Faust mich gegen Open Washington stellen. Was würdest du sagen, kann ich tun oder Verwaltungen oder die Politik? Wie kann ich die Politik vielleicht beeinflussen? Wie kann ich die Lobby sein?"
+        },
+        {
+            "start": 3181800,
+            "end": 3285160,
+            "speaker": "C",
+            "text": "Also erstmal würde ich sagen, du hast nicht gar keine Ahnung. Da würde ich dir deutlich widersprechen nach unserem Gespräch. Also ich glaube, der erste Schritt ist selber Awareness für das Thema haben. Das betrifft jetzt Privatpersonen und es betrifft auch die öffentlichen Verwaltungen. Menschen, die in die dort Entscheiderinnen in dem Bereich sind, Entscheider sind, die in Vergabestellen arbeiten, aber auch wir als Privatperson. Also einfach einen Blick dafür haben, so wie wir heute auch mittlerweile irgendwie alle so ein bisschen Blick für Greenwashing haben. Das hat sich halt so etabliert. Da kriegt man schon etwas besser mittlerweile mit, wenn da was einfach nur so Marketing ist. Und das sollte bei Freie Software ganz genauso sein. Wie kann man das machen? Also indem man zum Beispiel immer mal kurz checkt, wenn man sich ein neues Ich weiß, ich will eine freie Software haben für den und den Zweck, ich finde irgendetwas, dann checke ich kurz und mache so ganz basale Checks. Also ist es wirklich vollständig Freie Software? Ist es nur teilweise freie Software? Erweckt die Kommunikation ringsrum den Eindruck, es sei freie Software oder Open Source oder wie auch immer das dann genannt ist, Es ist es aber gar nicht. Die Lizenz, die darunter steht, taucht in diesen Listen vom Debian Project, von der Free Software Foundation, von der OSI auf. Gibt es eine Community? Gibt es eine Enterprise Edition? Wenn ja, sind die Komponenten, die ich brauche, auch in der Community Edition vorhanden? Zumindest das. Also solche Sachen kann ich mir einfach angewöhnen. Ich habe mal so testweise auch übrigens zu den Beispielen, die ich jetzt genannt habe, so recherchiert und da wurde mir Bitwarden als Open Source von der KI präsentiert, Also so Eine KI Recherche reicht dann manchmal nicht aus, sondern man sollte doch noch mal genauer hingucken und dann mit mehreren Checks kommt man dann eben drauf, okay, das was mir jetzt da die neue Google Suchfunktion mit KI Antwort ausspuckt, das stimmt, aber dann vielleicht doch nicht sofort. Da muss man mal genauer hin."
+        },
+        {
+            "start": 3285710,
+            "end": 3306350,
+            "speaker": "B",
+            "text": "Wobei glaube beim Checken an sich von den Lizenzen könnte ich mir vorstellen, dass es eigentlich sehr hilfreich ist. Also wenn ich da jetzt Repository auschecke und dann meinem lokalen Agent Geh mal die ganzen License Files durch und check mal wirklich, was da wirklich dahinter steckt, glaube ich mal, dass sie wahrscheinlich eine fundiertere Antwort bekommen, als wenn ich probiere, das irgendwie durchzustudieren."
+        },
+        {
+            "start": 3306350,
+            "end": 3313660,
+            "speaker": "C",
+            "text": "Ich glaube, da kommt es dann sehr auf den Prompt an. Also wenn du natürlich sagst, ist das Open Source oder nein, dann ist die Chance recht, dass du vielleicht auch eine falsche Antwort kriegst."
+        },
+        {
+            "start": 3313660,
+            "end": 3323300,
+            "speaker": "B",
+            "text": "Du musst auch die Lizenzfiles wirklich oder das Repository wirklich die Daten angeben, jetzt lokal in meiner IDE und dann mal hey, geh alle Lizenzfiles durch und erklär das mal genau."
+        },
+        {
+            "start": 3323300,
+            "end": 3601970,
+            "speaker": "C",
+            "text": "Was kann man machen? Also eigene Expertise aufbauen wäre so das eine. Also was können öffentliche Verwaltungen tun? Danach hast du auch gefragt. Ich glaube, was gut ist, ist, dass man diese Expertise institutionalisiert, dass also das einfach dazugehört, dieses Open Washing Wissen anzusammeln und zu institutionalisieren, dass das in Fortbildungen grundsätzlich dazugehört, dass W darüber vorhanden ist in öffentlichen Verwaltungen, dass ja ein nächster Punkt ist, Ausschreibungen sollten präzisiert werden. Es genügt eben nicht, wenn in der Ausschreibung drinsteht Kriterium Open Source, sondern es sollte klar drin sein, was das bedeutet. Also wir achten immer drauf, wenn in irgendwelchen politischen Papieren auch freie Software steht, dass dann noch verwenden, verstehen, verbreiten, verbessern oder die vier Freiheiten irgendwo referenziert sind, dass eine Erklärung davon da ist. Ja die Nachnutzung, die Nachnutzung absichern können. Öffentliche Verwaltung, also sie können in dem Prozess überprüfen, also auch schon in dem Vergabeprozess überprüfen als ein Kann die Software, die ich beschaffe, auf jeden Fall nachgenutzt werden oder komme ich irgendwie in ein proprietary Login damit rein? Ja, natürlich auch Verwaltung beauftragen. Ja, Software auch Sie schreiben Software und das ist natürlich ganz wichtig und veröffentlichen Software, da ist es wichtig, dass eigenes Open Washing vermieden werden wird und dass das nicht passiert. Entwicklerinnen und Entwickler und Teams, was können die tun? Also auch da ist es natürlich Wissen ansammeln ist wichtig, sich damit immer wieder beschäftigen, immer wieder diesen kritischen Blick haben ist wichtig. Auch auf den eigenen Stack, auf den eigenen Stack schauen, was ist da eigentlich drin? In Klammern. Wir freuen uns natürlich auch, wenn wir den einen oder anderen Hinweis bekommen, wo vielleicht Open Washing, wo man es gar nicht so, gar nicht so offen vermutet, wo das vielleicht vorkommt. Also Whistleblower können sich natürlich auch immer gerne an die an die Fähigkeit wenden und können uns auf sowas hinweisen, wo Openwashing in Projekten, die wichtig für Public Money, Public Quote, für die öffentliche Verwaltung sind, betrieben wird und das vielleicht nicht öffentlich ist. Was, glaube ich wichtig ist, ist, dass in Bezug darauf so einfach auch eine Gesprächskultur in Unternehmen in öffentlichen Verwaltungen existiert. Das ist also was ist, was grundsätzlich angesprochen Hey, wir haben hier Komponenten, die sind nicht freie Software, dann sollten wir das auch nicht so nennen. Das ganze Reuse habe ich vorhin schon erwähnt, also dieser Standard, um das zu dokumentieren. Damit kann man vermeiden, dass so was versehentlich passiert und man kann, wenn man das eben standardmäßig etabliert, Openwashing wirklich auch strategisch sehr gut eindämmen und die Öffentlichkeit und wir auch als Einzelpersonen. Also ich glaube, was ganz wichtig ist, dass wir wissen, was Openwashing ist und dass wir es von anderen Formen von problematischem Verhalten im Kontext von digitaler Souveränität im Kontext von freier Software unterscheiden können. Also nicht alles, was problematisch ist, ist Open Washing. Ich habe ja vorhin schon gesagt, diese Sache mit der Community und der Enterprise Edition, das finden wir eigentlich nicht so gut, wenn die Wicht Funktionen in der Enterprise Edition stecken. Es ist aber nur dann Open Washing, wenn suggeriert wird, das Ganze sei freie Software. Und das sollte man, glaube ich, schon auch diesen Open Washing Begriff sehr zielgenau und sehr prägnant einsetzen. Nicht für Sachen, die gar kein Open Washing sind, die kann man dann anders kritisieren, wenn sie nicht in Ordnung sind, also die Begrifflichkeiten sauber verwenden. Ich finde es gut, wenn Medien, was auch immer wieder vorkommt, also für Medien ist das, glaube ich, ein interessantes Thema, Open Washing weil man so auch unter Transparenzgesichtspunkten Behörden handeln, Handeln von IT Unternehmen kritisch bewerten kann und untersuchen kann. Und wir erleben das immer öfters, dass auch über Open Washing in den Medien berichtet wird. Ich glaube, dass es gut ist, wenn Einzelpersonen auch immer wieder an dem Thema dran sind. Ich hatte ja vorhin schon diesen Menschen aus UK, Dan Brown, der das ehrenamtlich gemacht hat in Repos oder auch macht so Open Washington Fälle zu dokumentieren, erwähnt. So was ist total wichtig. Also jeder, der auf Open Washington stößt und klar sagt, das ist Open Washington, das ist nicht gut, der sich an die Entwickler wendet, der sich an die Firma wendet, der sich an die Öffentlichkeit wendet, der sich an Dan Browns Is it really FOS Repository dort wendet und das dort beiträgt oder auch sich an uns als FSFE wendet, der tut was Gutes, um Open Washing einzudämmen. Wir haben übrigens seit zwei Jahren eine Dauerumfrage am Laufen, Community Umfrage, wo man, die könnt ihr auch gerne in den Shownotes verlinken, wo man in einer kleinen Form so ein paar Fragen zu Open Washing beantworten kann, was man selber denkt, was da besonders problematische Praktiken sind, ob man auch Beispiele kennt, also für alle Hörerinnen und Hörer, die Lust haben oder die vielleicht auch denken, sie haben da was beizusteuern oder auch Whistleblower innen können das gerne nutzen, um uns da ihre Perspektive beizusteuern."
+        },
+        {
+            "start": 3602370,
+            "end": 3622190,
+            "speaker": "A",
+            "text": "Während du gesprochen hast, habe ich noch mal auf die Webseite Is it really FOSS? Von Dan Brown geguckt und ich bin so ein bisschen versunken da drin, muss ich zugeben. Also da ist das Projekt Home Assistant, welches wir auch schon ein oder zweimal hier im Podcast hatten, aufgeführt. Und Wolfgang, ist Home Assistant really FOSS?"
+        },
+        {
+            "start": 3622430,
+            "end": 3637450,
+            "speaker": "B",
+            "text": "Wenn du mich jetzt so fragst, natürlich nicht, Aber ich hätte jetzt auch auf Anhieb gesagt, ja, ist eines der größten Open Source Projekte oder das größte Open Source Projekt, glaube ich, auf GitHub, wenn ich das richtig im Kopf habe. Also ich hätte auf Anhieb ja gesagt,"
+        },
+        {
+            "start": 3637450,
+            "end": 3650570,
+            "speaker": "A",
+            "text": "klar, jetzt nach diesem Gespräch mit Johannes. Und ja, ich habe dir natürlich jetzt diese Frage gestellt und du hast gesagt, OK, wahrscheinlich ist es nicht ein hundert Prozent Open Source. Was würdest du sagen, was würde jetzt in den Sinn kommen, warum nicht?"
+        },
+        {
+            "start": 3650570,
+            "end": 3673370,
+            "speaker": "B",
+            "text": "Ja, es gibt die eine Cloud Komponente, die ja kostenpflichtig ist, Vielleicht ist es da irgendwie die Anbindung an Alexa oder so. Das könnte natürlich ein Punkt sein an sich, aber aber der ist jetzt auch nicht so groß. Ich glaube, das größte Problem dort ist einfach, das sind tausende Leute, tausende Module. Ich vermute, dass da einfach absolutes Lizenz Chaos ist und manche Sachen wahrscheinlich Open Source sind und manche nicht und dass es von der Seite irgendwie kommt."
+        },
+        {
+            "start": 3673370,
+            "end": 3762440,
+            "speaker": "A",
+            "text": "Nein, dein erster Punkt ging schon in die Richtung. Also nur noch mal zum Verständnis. Home Assistant ist eine, ist eine Software zur Heimautomatisierung und die wird betrieben von der Open Home Foundation, was eine Schweizer Foundation ist. Das ist alles okay soweit. Jetzt ist es aber so, dass kommerzielle Partner mit der Open Home Foundation Brand als Lizenz arbeiten können. Das ist die eine Thematik. Und die zweite Thematik ist, Nabucasa ist eine Firma, die auf Basis von Home Assistant eine Home Assistant Cloud macht, die wiederum Closed Source Komponenten für ihre Serverseite einsetzt. Also ich verstehe es irgendwie, aber es ist ein erneutes Beispiel, wie komplex dieses Thema ist. Und die Webseite von Dan Brown Is it really force? Sagt, Home Assistant ist partiell really fast. Aber er sagt auch ein signifikanter Anteil ist sehr stark und sehr gut definiert. Also schon deutlich in die positive Richtung. Es gibt diese kleine Nuance von ich biete ein VPN an, ich habe da Closed Source Komponente auf Serverseite und und warum ich dieses Beispiel jetzt erwähne, ist aus zwei Gründen. Erstens, das zeigt eigentlich, dass dieses Thema Open Washing sehr tief gehen kann. Zweitens, dass diese Webseite auch unglaublich detailliert ist, also auf einem Detailgrad, den ich eigentlich so von vielen Webseiten nicht erwartet hätte. Wahnsinn."
+        },
+        {
+            "start": 3762440,
+            "end": 3816970,
+            "speaker": "B",
+            "text": "Da sieht man auf jeden Fall schon, wie komplex das Ganze ist. Und bei Home Assistant muss man dazu sagen, dass der Server nicht gebraucht wird für den Betrieb. Also das ist ja wirklich ein Add on, der klassische Home Assistant, den betreibst du ja selber, das funktioniert alles als Server. Und ich werde schon kurz erzählt, ich hatte mal einen tiefen Research in Chat Systeme und da kam mir Nextcloud auch unter und Nextcloud ist jetzt wirklich eine Software, da kann man eigentlich nicht viel vorwerfen, aber gewisse Komponenten hängen dann trotzdem wieder eigentlich an der Enterprise Lizenz, wenn man Notifications aussendet, was ja bei einem Chat fast immer nötig ist, weil das Ganze dann über den Server von Nextcloud läuft, weil du ja gar nicht anders irgendwelche Notifications an einen Android oder iOS Client senden kannst. Oder nicht so einfach. Also da merkt man schon wieder, es ist super komplex, wenn es um den wirklichen Betrieb geht und das hat man gar nicht am Schirm. Und wie gesagt, bei Nextcloud, denen man eigentlich wenig vorwerfen kann, die Webseite sagt"
+        },
+        {
+            "start": 3816970,
+            "end": 3833520,
+            "speaker": "A",
+            "text": "auf jeden Fall, das Projekt ist really foss. Also das ist die eine Thematik. Und die zweite Thematik, wenn du Notifications aussenden möchtest, wie zum Beispiel Notifications über iOS, dann musst du über die proprietären Server von Apple gehen. Also das kannst du ohne Apple Server nicht machen."
+        },
+        {
+            "start": 3833600,
+            "end": 3856570,
+            "speaker": "B",
+            "text": "Bei Android genau dasselbe. Das ist ja das Grundproblem an der ganzen Situation, dass du für den Betrieb gewisse Services brauchst, auch von Android oder iOS, die dann ganz schwer umgehbar sind. Für Android gibt es ein paar Möglichkeiten mittlerweile, aber es ist dann schon super komplex und da sieht man einfach, wie viele Ebenen da mit reinspielen, was dann einfach super schwierig ist am Ende."
+        },
+        {
+            "start": 3856570,
+            "end": 3862690,
+            "speaker": "A",
+            "text": "Aber ich lese die Webseite jetzt, weil sonst sonst verliere ich mich da in dieser. Also das ist super interessant. Ich verlinke das auch in den Shownotes."
+        },
+        {
+            "start": 3862690,
+            "end": 3952720,
+            "speaker": "C",
+            "text": "Ich würde aber auch sagen, da muss man klar unterscheiden, dass Abhängigkeiten, aus denen ein Unternehmen oder ein Hersteller oder ein Entwickler, egal wie sehr sie sich anstrengen, nur ganz, ganz schwer rauskommen. Also ist das, oder ist es so wie bei zum Beispiel Telegram, die schon auch lange Zeit gesagt haben, Open Source Messenger, weiß nicht, ob sie es immer noch sagen, aber es ist halt ein Open Source Client, ein freier Software Client und der Server ist das nicht. Das würde ich dann sagen, ist eher Open Washing, auch bei Nabucasa und Home Assistant ist, also ich glaube, hast du ja schon gesagt, Home Assistant kann ich auch so betreiben, ohne dass ich auf den Server angewiesen bin. Vielleicht als side Note zu diesem Is it really force? Weil du auch gesagt hast, ist super detailreich. Das ist cool. Also auch wenn ich mir das so anschaue, also ich lerne da auch viel, aber gleichzeitig ist dieses Ampelsystem ein klein bisschen schwierig, denn es ist ja kein Ampelsystem, aber sie haben da dieses grüne Kachel, yes, dann blaue Kachel, yes, but und dann kommt so gestrichelt, partially rot, Issues exist und schwarz, Nope. So ein bisschen aus FSF Sicht gibt es eigentlich nur grün und rot. Also entweder etwas ist freie Software oder es ist nicht freie Dinge werden komplizierter, je näher man rangeht. Das sehe ich schon so und ich finde es auch gut, dass es so was gibt hier, wo man das ein bisschen aufschlüsselt. Aber wir würden zum Beispiel jetzt sagen, ja, partially forced with an open core. Das ist nicht teilweise Openwashing, sondern das ist einfach klar Openwashing, wenn darum erzählt wird, das ist alles frei Software und ist es nicht."
+        },
+        {
+            "start": 3952720,
+            "end": 3964050,
+            "speaker": "A",
+            "text": "Fairerweise muss ich jetzt sagen, wenn die ganze Sache nicht juristisch geschützt ist, was wir, glaube ich, hier im Podcast auch erwähnt haben, dann ist es natürlich auch schwer dagegen zu argumentieren, weil dann sind es einfach nur zwei Sichtweisen."
+        },
+        {
+            "start": 3964530,
+            "end": 4007870,
+            "speaker": "C",
+            "text": "Richtig. Deswegen ist es für uns ja so wichtig als FSFE, weil wir ja wir kämpfen natürlich dafür, dass der Begriff freie Software die Definition behält und auch Open Source im Prinzip natürlich. Also dass diese Begriffe so nach wie vor verstanden werden in der Öffentlichkeit, im Verwaltungshandeln, wie wir denken, wie es der Kontrollierbarkeit technischer Infrastrukturen und der Freiheit der Menschen zuträglich ist, nämlich durch diese vier Freiheiten. Da setzen wir dafür ein. Es gibt andere, die versuchen es in eine andere Richtung zu ziehen. Da es nicht definiert ist, ist es eben so wichtig, dass wir immer wieder Nein, digitale Souveränität gibt es nur mit frei Software. Freie Software braucht die vier Freiheiten. Wenn eine Freiheit fehlt oder nur teilweise da ist, dann ist es schon keine freie Software und auch nicht mehr digital souverän."
+        },
+        {
+            "start": 4008030,
+            "end": 4045880,
+            "speaker": "A",
+            "text": "Aber wie gesagt, wegen den Nuancen nope, partially und so weiter und so fort und nicht dieser Simplifizierung zwischen Rot und Grün, wirft das, glaube ich, einen ganz guten Blick auf die Komplexität dieses Themas. Von daher kann ich wirklich nur ans Herz legen, die Webseite. Johannes, lass uns Richtung Ende kommen. Meine Frage Bist du optimistisch oder pessimistisch, was das Thema Open Washing in der Zukunft angeht? Natürlich, Voraussagen sind schwierig, besonders wenn sie die Zukunft betreffen, Aber wie siehst du der ganze, wie stehst du der ganzen Sache entgegen, besonders auf Basis deiner aktuellen und vergangenen Arbeit oder auf eurer Arbeit? Du bist ja nicht alleine."
+        },
+        {
+            "start": 4045960,
+            "end": 4221370,
+            "speaker": "C",
+            "text": "Richtig. Genau. Ich bin ganz grundsätzlich immer Optimist. Ich meine, mit dem, was wir sehen, wie sich die, das habe ich ja vorhin kurz gesagt, wie sich die Debatte um Public Money, Public Code in den letzten Jahren entwickelt hat, haben wir gesehen, wir können Sachen bewegen. Wir damit meine ich jetzt nicht nur wir als FSFE, sondern damit meine ich alle Menschen, die für freie Software sich irgendwo interessieren und dafür eintreten. Wir können Sachen bewegen, wenn wir in die richtige Richtung Richtung ziehen. Und das gilt natürlich ganz genauso auch für Open Washing. Also wenn genug Menschen dieses Thema auf dem Schirm haben, wenn genug Menschen da auch aufmerksam sind, wenn andere das machen und auch den Mut haben, darauf hinzuweisen, hier Leute, das ist gar nicht freie Software. Wenn ihr das so macht, dann ist das Open Washing, dann können wir uns da in eine gute Richtung bewegen. Es wird in der nächsten Zeit viel darum gehen, solche Sachen auch in tatsächlich gesetzlichen Regelungen, Leitlinien und so weiter zu implementieren. Also wenn zum Beispiel jetzt auf der europäischen Ebene ist gerade eine große Procurement Reform beginnt, gerade ist im Gange, Da soll also die Vergaberichtlinien für Europa sollen dort reformiert werden. Da geht es also auch um extrem viel Geld und zum ersten Mal soll dort strategische Beschaffung ermöglicht werden. Also nicht nur niedrigstes Gebot als Kriterium, sondern Beschaffung soll als strategisches Instrument nutzbar gemacht werden, indem man sagt, wir wollen durch Beschaffung auch Nachhaltigkeitsziele erreichen, erreichen und eben auch so was wie digitale Souveränität möglicherweise erreichen. Und wenn ich dann so einen Begriff wie digitale Souveränität im Gesetz stehen habe, dann müssen wir klarstellen, dass sich dahinter freie Software, also dass da möglichst muss auch freie Software drinstehen oder Open Source drinstehen und die vier Freiheiten. Aber wir müssen dann eben sicherstellen, dass es auch so implementiert wird und dass dann nicht Hersteller kommen können und sagen kö okay, das ist schon Open Source. Wir können gewinnen, weil wir einfach sagen, dass es Open Source, obwohl es das gar nicht ist. Und das bedeutet, wir müssen in diese Vergabeprozesse ran. Wir müssen ran, wie Vergabe stattfindet, was für Kriterien in Vergabeverfahren angewendet werden. Und das sind die Bereiche, in denen dieses ganze, ganze Kleinteilige. Es sind die Bereiche, in denen wird wirklich, glaube ich, auch um Begrifflichkeiten gekämpft werden. Und da ist es ganz wichtig, dass wir dranbleiben, damit am Ende eben Openwashing auf so einer Ebene auch bekämpft wird. Also Umsetzung statt bloßer Bekenntnisse. Das andere Thema, was wir immer sagen, ist, was dem auch gut beiträgt, ist digitale Souveränität und den Einsatz von freie Software in der Verwaltung messbar machen. Das gibt es bisher viel zu wenig. Also das ist, glaube ich, sehr wichtig, dass wir Fortschritte dort monitoren können, dass es Statistiken gibt, dass es klare Zielmarker natürlich gibt, aber auch so Fortschrittsreport Statistiken, wo wir stehen und dass die eben diese Statistiken auch mit tatsächlichen validen Zahlen arbeiten und nicht Zahlen, wo dann irgendwie Open Washing Sachen mit durchrutschen können. Aber ich bin optimistisch, dass wir da diesen sehr anstrengenden Weg doch auch erfolgreich gehen können."
+        },
+        {
+            "start": 4221530,
+            "end": 4347590,
+            "speaker": "A",
+            "text": "Das freut mich sehr zu hören. Und obwohl du nur in der deutschen Hauptstadt wohnst, hast du natürlich auch einen enormen Impact auf die europäische Politik. Und ich hoffe natürlich auch, dass sich da ein bisschen was bewegt, Besonders wenn man mal sieht, was zum Beispiel die amerikanischen Behörden gerade für eine Power haben, auch jetzt gerade hier mit diesem mit diesem Modell, was von einem von einer amerikanischen Firma veröffentlicht wurde und zwei Tage später kommt das amerikanische Government um die Ecke und sagt, hör mal, also für Leute außerhalb Amerika machen wir jetzt mal nicht. Schauen wir mal, wie weit das so geht. Besonders wir machen UFC Kämpfe im Vorgarten des Weißen Hauses veranstaltet. Na ja, so viel zur aktuellen Politik. Alles eine wilde Welt, aber auch eine sehr komplexe, wie wir heute gelernt haben. Und ich wiederhole es, aber ich habe gedacht, ich weiß, wovon wir hier reden, aber dieses Thema, du hast gerade so, ich will nicht sagen das Tor zur Hölle aufgemacht, aber du hast so ein Rabbit Hole aufgemacht und ich habe die Show Notes alle mitgeschrieben. Du hast mir unglaublich viele gute Links. Ich werde versuchen, nach dieser Podcast Aufnahme dieses Dokument mit den Shownotes sehr schnell zu schließen, in der Hoffnung, dass ich da nie wieder drauf gucke, weil sonst falle ich in dieses Rabbit Hole. Für alle Leute, die mehr von diesem Thema verstehen wollen und wirklich auch dieses Rabbit Hole mal interessant finden, schaut euch einfach mal die Show Notes an. Da gibt es eine ganze Menge Links, wie zum Beispiel auch den einen oder anderen Talk von Johannes zu dem Thema Open Washing, aber auch zum Beispiel einen Whitepaper vom Zendis zum Thema Souveränität zu Washing bei Cloud, Cloud Diensten erkennen. Wir haben noch mal die Repositories zu Bitwarden und Waltwarden narangodb geteilt. Wir haben natürlich auch diese Webseite Is it really FOS geteilt und so weiter und so fort. Und falls ihr jetzt noch mal ein bisschen tätig werden wollt und die Free Software Foundation Europe unterstützen wollt, könnt ihr natürlich da natürlich auch eine Spende geben oder ich glaube, man kann auch Mitglied werden und ihr habt eine Umfrage seit mehreren Jahren am Laufen, die haben wir auch in den Shownotes verlinkt zum Thema Open Washing. Nehmt euch mal zwei, drei, vier Minuten Zeit und gebt doch mal eure Stimme in die Umfrage."
+        },
+        {
+            "start": 4347590,
+            "end": 4382430,
+            "speaker": "C",
+            "text": "Das wäre wirklich total toll. Also wenn ihr das machen könntet, da freue ich mich total Und wir als FSF, du hast es gerade schon gesagt, ich kann das nur bestärken. Unsere ganze Arbeit hängt von unseren Supporterinnen und Supportern ab. Und wenn ihr uns unterstützen wollt und freie Software und Public Money Public Code und unsere Arbeit gegen Open Washington unterstützen wollt, dann könnt ihr das gerne machen, indem ihr FSF Supporter werdet. Schaut gerne da einfach in die Show Notes oder einmal auf FSFE Org Donate vorbei. Jede noch so kleine monatliche Unterstützung hilft uns wirklich sehr, diese Arbeit zu machen. Das ist das, wovon wir abhängen."
+        },
+        {
+            "start": 4382750,
+            "end": 4420680,
+            "speaker": "A",
+            "text": "Und wer nicht genug von Johannes bekommt, der kann sich auch noch mal die Episode Public Money Public Code von uns anhören. Die haben wir auch in den Shownotes verlinkt. Da geht es um die Komplexität oder eigentlich um die Warum ist das eigentlich so kompliziert? Das ganze Geld, was wir für die Erstellung von Software innerhalb von öffentlichen Häusern, Behörden und so weiter und so fort ausgeben? Warum kann man das nicht einfach auf GitHub schieben oder auf codework? Die Antwort auf diese doch sehr simple Frage hat mich auch sehr überrascht und etwas enttäuscht. Aber nun gut, so ist die Realität, so ist es komplex. Johannes, vielen lieben Dank. Wolfgang, natürlich auch danke an dich, dass du diese Zeit genommen hast und mit uns diesen Podcast aufgenommen hast."
+        },
+        {
+            "start": 4420680,
+            "end": 4425070,
+            "speaker": "B",
+            "text": "Es ist selten, dass ich Dank bekomme. Johannes, dein Positiv vereinflusst da zu sein."
+        },
+        {
+            "start": 4425070,
+            "end": 4428110,
+            "speaker": "C",
+            "text": "Ich danke euch. Also mir hat das wie immer riesen viel Spaß gemacht."
+        },
+        {
+            "start": 4428910,
+            "end": 4430630,
+            "speaker": "B",
+            "text": "Ja, mir auch. Vielen, vielen Dank."
+        },
+        {
+            "start": 4430630,
+            "end": 4434470,
+            "speaker": "A",
+            "text": "Der Pot grüßt die deutsche Hauptstadt und sagt bis bald. Tschüss."
+        },
+        {
+            "start": 4434470,
+            "end": 4436030,
+            "speaker": "C",
+            "text": "Tschüss, macht's gut, bis nächstes Mal."
+        },
+        {
+            "start": 4436110,
+            "end": 4436590,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
