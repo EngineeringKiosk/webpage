@@ -3615,6 +3615,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/274"
+  to = "/podcast/episode/274-openwashing-wenn-open-source-nicht-wirklich-offen-ist-mit-johannes-näder?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep274"
+  to = "/podcast/episode/274-openwashing-wenn-open-source-nicht-wirklich-offen-ist-mit-johannes-näder?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
