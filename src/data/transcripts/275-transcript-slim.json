@@ -1,0 +1,1047 @@
+{
+    "confidence": 0.9570503,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 4557,
+    "utterances": [
+        {
+            "start": 3200,
+            "end": 193560,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute geht es um ein Thema, das erst ein bisschen makaber klingt, dann aber sehr schnell sehr real wird. Wir sprechen über dein digitales Erbe, also die Frage, was eigentlich mit all deinen Accounts, Passwörtern, Fotos, Backups, Domains, Servern, Home Assistant Setups und Homelab Basteleien passiert, wenn du plötzlich nicht mehr da bist oder für eine längere Zeit ausfällst. Denn klar, an Facebook, Google und Apple Accounts denken noch viele. Aber was ist mit deiner Dokumentenverwaltung, Paperless, NGX, der Hetzner VM, den Passwortmanager, der Zwei Faktor Authentifizierung und deiner Heizung, die ohne dein Self Hosting vielleicht nur noch sehr unmotiviert arbeitet? Wir schauen uns an, was rechtlich in Deutschland, Österreich gilt, warum ein Passwortmanager allein das Problem nicht löst, welche Rolle Dokumentation spielt und und wie du deine private IT so designen kannst, dass deine Liebsten nicht erst Reverse Engineering auf dein Leben betreiben müssen. Das Ganze ist ein ernstes Thema, aber wie immer mit einer Prise schwarzen Humor, damit man es überhaupt anfassen kann. Somit eine kleine Triggerwarnung zum Wir sprechen in dieser Episode offen über Tod, Sterbefälle und auch mit humorvollen Formulierungen darüber Wenn sich das für dich gerade nicht gut anfühlt, dann überspring diese Folge lieber und hör später rein. Und jetzt lass uns über Offboarding sprechen, nur diesmal in echt viel Spaß. Diesen Podcast machen wir hier schon seit über viereinhalb Jahren und man sagt ja auch back to the roots und man soll sich treu bleiben. Das tun wir heute mal mit einem kleinen Twist und zwar einer unserer ersten Folgen, Episode zwanzig ging über das Thema Offboarding. Wie verlasse ich eine Firma richtig? Heute, Achtung, etwas makaber, geht es um das reale Offboarding. Wir sprechen nämlich um das digitale Erbe bzw. Des digitalen Nachlasses. Und dieses Thema stammt aus unserer Community. Deswegen initial erstmal ein dickes Danke an den Rudi, Marcel Frankie, an den Dirk, an den Jörg, an Nehrling, an X Circle und an den Martin. Denn die haben das Thema aufgebracht und diskutiert und zugegeben, wir klauen uns auch eine ganze Menge Content von denen, aber haben eine ganze Menge neuen Content dazu. Und zwar war die Keyfrage eigentlich wie gehe ich sinnvoll mit meinem digitalen Erbe um? Gibt es einen richtigen Weg damit umzugehen? Das Offensichtliche ist irgendwie mein Facebook, LinkedIn, Google und Apple Account, aber was die Diskussion eigentlich hatte, der eigentliche Scope waren eigentlich deine virtuellen Maschinen, die Webseiten, Heimautomatisierung, Backups, Passwort Safes, also all die Dinge, die man so als interessierter Mensch vom Fach vielleicht so im Schlepptau hat. Und das kann ja auch teilweise relevant für deine Familie und deine Verwandten sein. Wir reden hier über Fotos aus zig Jahren oder vielleicht einfach die Heizungssteuerung. Und das wird halt alles sehr, sehr wichtig, wenn es auf einmal nicht mehr funktioniert und du bist nicht mehr da. Deswegen die ganze Sache ist speziell für die weniger technischen Menschen wichtig. Aber weil das natürlich ein ernstes Thema ist und ich denke, man muss die Welt mit Humor sehen, folgen nun zehn Synonyme fürs Sterben. Achtung, das kann Spuren von Humor bzw. Schwarzem Humor enthalten und kann recht makaber sein. Wolfgang, bist du bereit?"
+        },
+        {
+            "start": 193560,
+            "end": 205800,
+            "speaker": "B",
+            "text": "Hast du jetzt aber schon hoffentlich die österreichischen Begrifflichkeiten auch reingenommen, weil gerade Wien ist ja super bekannt und Österreich ganz allgemein makaber zu sein und morbide. Aber lass mal hören, ich habe jetzt"
+        },
+        {
+            "start": 205800,
+            "end": 243170,
+            "speaker": "A",
+            "text": "keine speziellen österreichischen Synonyme da reingenommen, aber ich habe welche aus dem Pott dazu reingenommen und da kannst du vielleicht auch relaten, weil du hast ja in der Nähe mal gewohnt, in Düsseldorf ist jetzt nicht der Pott, ist ja Niederrhein, aber hoffentlich hast du dir mal das schöne Ruhrgebiet angesehen. Also Nummer eins, sich die Radieschen von unten anschauen, ich glaube, den kennt man, dem Sensenmann in die Arme laufen, Wurmfutter werden, sechs Fuß tief gehen, den Bestatter reich machen, vom Sauerstoffabo abgemeldet werden, endgültig offline gehen, sich unbefristet krankschreiben lassen, die Zeche endgültig dicht machen. Und jetzt kommt mein persönliches Highlight, da muss ich auch ein bisschen grinsen, dat"
+        },
+        {
+            "start": 243170,
+            "end": 249450,
+            "speaker": "B",
+            "text": "Grubenlicht ausknipsen, das kann jetzt nur von euch kommen. Bei uns ist der Klassiker die Batschen aufgestellt."
+        },
+        {
+            "start": 249710,
+            "end": 250670,
+            "speaker": "A",
+            "text": "Was ist denn Patschen?"
+        },
+        {
+            "start": 251390,
+            "end": 260910,
+            "speaker": "B",
+            "text": "Ja, die Patschen sind die Hausschuhe, die Patschen aufgestellt, weil die dann nach oben schauen. Die Hausschuhe, OK, verstehe ich ja, da"
+        },
+        {
+            "start": 260910,
+            "end": 322860,
+            "speaker": "A",
+            "text": "gab es auch noch so Sachen, ich schaue mir den Sarg von innen an und mache die Sargtür zu und so, aber das fand ich jetzt alles nicht so. Aber jetzt sagt man so, nachdem wir jetzt mal hoffentlich dir ein Grinsen ins Gesicht gezaubert haben, habe ich mir natürlich auch die Frage gestellt, ist dieses Thema überhaupt relevant oder haben wir nur irgendwie alte Säcke in unserer Community? Und da habe ich mir mal die Altersverteilung unserer Community und unserer Hörerschaft angesehen. Und was soll ich sagen, Wolfgang und ich reden uns immer ein, wir machen Content für Senior und Senior plus Leute, also Leute mit Erfahrung. Und ich glaube, das ist auch der Fall, denn vierzig Prozent unserer Hörerschaft ist fünf und dreiig bis vier und vierzig Jahre alt und vier und zwanzig Prozent ist sogar fünf und vierzig bis neun und fünfzig Jahre alt. Also kurz, man ist ja keine zwanzig mehr. Und vielleicht denkt man auch so ein bisschen weiter. Und da hat der Jörg aus unserer Community auch explizit gesagt, da ich gerade fünfzig geworden bin, habe ich mir genau darüber auch mal Gedanken gemacht und ebenfalls festgestellt, dass alles hier wahrscheinlich abgebaut und weggeworfen werden könnte, weil es niemand versteht. Natürlich habe ich auch nichts dokumentiert, wahrscheinlich"
+        },
+        {
+            "start": 322860,
+            "end": 323980,
+            "speaker": "B",
+            "text": "wie ganz viele von uns."
+        },
+        {
+            "start": 323980,
+            "end": 347990,
+            "speaker": "A",
+            "text": "Ja, richtig, richtig. Und man könnte sich jetzt die Frage stellen, okay, betrifft mich das überhaupt? Und da kann ich ein bzw. Zwei persönliche Storys aus meinem Leben erzählen, denn die kurze Antwort ist ja, das betrifft dich leider, denn das Leben ist ab und zu ein bisschen problematischer. Eine Story ist zum Mein Vater ist zum Beispiel sehr, sehr plötzlich von heute auf morgen verstorben, konnte man nichts gegen tun. Ich bin ins Bett gegangen und morgen war mein Vater nicht mehr da."
+        },
+        {
+            "start": 347990,
+            "end": 348909,
+            "speaker": "B",
+            "text": "Wie alt warst du damals?"
+        },
+        {
+            "start": 348909,
+            "end": 392620,
+            "speaker": "A",
+            "text": "Ich war zwei und zwanzigste Und mein Vater war selbstständig, hatte einen Gärtnereibetrieb, den habe ich dann runtergefahren, aber mit zwei und zwanzig Jahren Gärtnereibetrieb runterfahren ist gar nicht so einfach. Zumindest hatte ich dann ähnlich wie meine Frau, wenn ich jetzt versterben würde, wahrscheinlich auch keine Ahnung, was sie mit der Technik tue. Und das hatte ich damals natürlich auch nicht weiß sagen möchte. Das kann alles mal relativ schnell passieren. Oder eine andere Story vor kurzem eingetreten, ein sehr, sehr guter Freund hatte einen Unfall, Baff, der liegt seit zwölf Wochen im Krankenhaus, lebt noch, alles gut, aber ist erstmal nicht verfügbar. Also es muss nicht erstmal der Tod sein, sondern es kann auch einfach sein, dass du für eine ganze Weile einfach nicht verfügbar bist. Deswegen, die ganze Sache ist halt hart relevant. Ich wünsche es keinem, doch man kann es nicht ändern. Wolfgang, wenn du jetzt von heute auf"
+        },
+        {
+            "start": 392620,
+            "end": 395540,
+            "speaker": "B",
+            "text": "morgen die Patschen aufstellen würdest gut mitgelernt?"
+        },
+        {
+            "start": 395780,
+            "end": 426610,
+            "speaker": "A",
+            "text": "Wie wird die ganze Situation bei dir aussehen mit deiner Homelab Infrastruktur, mit deinen digitalen Zugängen? Ich glaube, du hast auch irgendwo eine dicke Kiste bei Hetzner mit keine Ahnung wie viel tausend Docker Containern, fünf und dreiig Domains noch laufen. Die Leute, die sich drum kümmern, wer wäre das? Wäre das Geschwister? Wären das deine Eltern? Ich meine, deine Eltern sind gleich auch keine zwanzig, vielleicht auch keine dreiig, vielleicht auch keine fünfzig mehr. Wer wird sich darum kümmern? Und würde die Person, die sich darum kümmern, würde da irgendeine Chance haben klarzukommen? Geh mal in dich, sei mal ehrlich, öffne dich mal für die Community."
+        },
+        {
+            "start": 426830,
+            "end": 486830,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 487010,
+            "end": 549710,
+            "speaker": "B",
+            "text": "Also was es sicher nicht gibt, ist irgendein Handbook, was man aufschlagen kann und da steht dann alles schön drin. Sowas gibt es auf keinen Fall. Was aber schon ist, bei allen meinen Projekten gibt es zumindest auch, weil du die Hetzner Kiste erwähnt hast und so weiter, da gibt es ja doch einige Server, die herumfliegen. Das Glück ist, dass ich ja die meisten Projekte nicht alleine mache, sondern mit anderen Leuten und es gibt immer zumindest eine zweite Person bei wichtigen Projekten, die in irgendeiner Form Zugriff auf diese Kisten, auf diese Server haben. Es gibt auch ein paar Passwort Manager Files, die geshared sind. Also alles, was so abseits des ganz Privaten ist, da gibt es eine Lösung. Alles was bisschen mehr ins Private geht, da gibt es gar nichts. Aber ich muss ja auch sagen, ich habe jetzt keine direkte Familie oder so, die da angewiesen ist drauf. Insofern ist man vielleicht auch ja egaler, würde ich sagen, oder nicht so schlimm, wenn die dann wochenlang jetzt keinen direkten Zugriff haben oder auch vielleicht gar kein Zugriff stattfindet. Also meine Accounts wären dann wahrscheinlich verloren, die meisten, muss man ganz klar so sagen."
+        },
+        {
+            "start": 549790,
+            "end": 566280,
+            "speaker": "A",
+            "text": "Wir machen dieses Projekt ja hier auch zusammen Und ich möchte ganz kurz sagen, ich habe keinen Zugriff auf die Hetzner Kiste, obwohl da unsere unglaublich wichtige Meetup Anmeldung drauf läuft. Das bedeutet, wenn du hops gehst, dann kann dich, dann gibt es keine Meetups in Innsbruck mehr und auch nicht im Reinen."
+        },
+        {
+            "start": 566840,
+            "end": 585080,
+            "speaker": "B",
+            "text": "Das stimmt natürlich nicht, Andi, weil wie du ja weißt, wir sind ja mittlerweile im Engineering Kiosk Space, jetzt muss ich gerade kurz nachrechnen, acht Leute und von den acht Leuten gibt es natürlich jemand in dem Fall der Tim. Und der Tim hat Zugriff auch auf meine ganze Infrastruktur, Hetzner Infrastruktur. Und da könnte dir dann weiterhelfen."
+        },
+        {
+            "start": 585080,
+            "end": 638490,
+            "speaker": "A",
+            "text": "Muss ich mal mit Tim connecten. Okay. Zur Vorbereitung dieses Podcast, also eigentlich wirklich von einer halben Stunde vor dieser Aufnahme habe ich meiner Frau erzählt, dass wir eine Podcast Aufnahme zu diesem Thema machen. Sie hat mich so ein bisschen komisch angeguckt und dann habe ich sie Hast du das Gefühl, wir haben das Thema geklärt? Also hast du das Gefühl, du könntest damit klarkommen mit all diesen Themen? Wenn ich jetzt das Grubenlicht ausknipse, die guckt mich einfach nur an, unglaubwürdig und sagt nie im Leben. Also ich lache das jetzt so, weil ich es mit Humor nehmen möchte. Aber das heißt eigentlich, was sie mir indirekt gesagt Kollege Schnürschuh, du hast da noch Arbeit zu tun, Bring mich mal hier auf Stand oder mach die ganze Sache einfach. Und das Lustige ist eigentlich, wir alle versuchen irgendwie im Job irgendwas nachhaltig und perfekt zu machen. Alles ist reliable und bugfree und dokumentiert. Doch irgendwie kriegen wir die Nachhaltigkeit im privaten digitalen Bereich irgendwie nicht so hin,"
+        },
+        {
+            "start": 638490,
+            "end": 683600,
+            "speaker": "B",
+            "text": "oder Wolfgang ist auf jeden Fall etwas, was man irgendwie nicht so am Schirm hat und wo man vielleicht auch gar nicht so nachdenkt und so ein bisschen mit dem ganzen Passwort Manager Dasein und diese Bewegung, dass jetzt doch jeder irgendwie einen Passwortmanager hat, hat man sich vielleicht mal so Gedanken gemacht und irgendwo so das Master Passwort hinterlegt und so. Aber irgendwie hatte ich das teilweise auch und dann habe ich mir so überlegt, aber diese ganze Two Factor Authentication, diese Welle, über die habe ich mir wieder keine Gedanken gemacht, weil die ist halt danach gekommen, die Jahre danach. Und da denkt man dann halt auch irgendwie nicht mehr drüber nach. Also auch wenn du jetzt Passwörter hättest, sie bringen dir halt meistens eh nichts, weil Two Factor und vielleicht hast du Two Factor noch im Passwortmanager drin, dann hättest du Glück. Aber ist halt auch nur bei manchen Accounts bei mir zum Beispiel, warum der"
+        },
+        {
+            "start": 683600,
+            "end": 724900,
+            "speaker": "A",
+            "text": "Passwortmanager oder die Übergabe des Passwortmanagers vielleicht nicht die perfekte Lösung ist, kommen wir gleich noch drauf. Aber lass uns mal einen Realitätscheck machen. Wir sprechen jetzt hier über digitaler Nachlass, digitales Erbe. Und da kam ein schöner Kommentar aus der kann man das ganze Thema einfach rein auf technische Themen runterbrechen? Ich glaube nicht. Und jetzt kommt's besonders zum Thema Realitätscheck. Der Kommentar ging weiter. Viele Hinterbliebene sind auch schon mit der nicht technischen Belange völlig überfordert. Der technische Kram wird nach Wochen, wenn nicht sogar nach Monaten überhaupt erst interessant und dann auch nur das, was für die Hinterbliebenen wichtig ist. Also nicht das, was für den oder die Verstorbene wichtig war."
+        },
+        {
+            "start": 724900,
+            "end": 763880,
+            "speaker": "B",
+            "text": "Das Problem ist ja auch, dass du es gar nicht weißt. Du hast ja keine Ahnung, was gibt es denn für Infrastruktur? Gibt es irgendeine Cloud? Hast du irgendwo alle Dokumente eingescannt und irgendwo liegen? Du kommst ja wahrscheinlich erst irgendwann drauf, wenn du an dem Punkt bist, hey, ich brauche dieses Dokument XY und es gibt es in der Realität nicht in der physischen Welt, sondern nur irgendwo digital. Und dann fängst du vielleicht mal denken an, OK, wo könnte denn das überhaupt liegen? Und das bestätigt ja genau diesen Punkt eigentlich, dass du am Anfang, wenn du es nicht weißt, warum soll es dich interessieren? Also wenn du keine Liste hast, was gibt es alles, dann interessiert es dich natürlich auch nicht und du kannst dich eigentlich gar nicht damit beschäftigen als Hinterbliebene."
+        },
+        {
+            "start": 763960,
+            "end": 879130,
+            "speaker": "A",
+            "text": "Aber auch wenn du weißt, ist ja die Ist das wichtig für die Hinterbliebenen? Jetzt stell dir vor, du hast ein Home Lab und du hast da ganz viele deine Projekte, die dein Leben vereinfachen. Weiß ich nicht. Du hast dein Open Claw installiert und der managt deinen Kalender und weißt du alle das, was für dich wichtig ist, das ist ja für den Hinterbliebenen überhaupt nicht wichtig. Und die Person sind mit hoher Wahrscheinlichkeit erst mal überfordert, mit dem Bestatter irgendwas alles klar zu machen, die Beerdigung zu bezahlen und dann vielleicht noch irgendwelche Versicherungen zu kündigen und so weiter. Und dann kommt ja dieses Subtile hoch, das was immer funktioniert hat. Ich rede hier von der Heimautomatisierung. Ich rede hier davon, ohne Home Assistant laufen die Jalousien nicht mehr. Und ich rede hier vielleicht auch von einer Paperless NGX Instanz, wo du eigentlich deine Briefe alle digitalisiert hast und eigentlich was die Frau oder die Partnerin oder der Partner eigentlich konstant jeden Tag nutzt und gar nicht merkt, dass das im Keller läuft auf dieser kleinen Kiste, weißt du, da wo eh der Mann immer dran war oder was auch immer der jetzt gerade hops gegangen ist und diese ganzen Dokumente brauchst du ja. Oder dass man sich vielleicht doch mal fragt, Moment, alle Dokumente sind im Google Drive, wie komme ich da noch mal dran, weil da wichtige Dokumente liegen. Besonders im Sterbefall braucht man diese wichtigen Dokumente. Also ist halt die Frage, was ist davon wirklich wichtig für die Hinterbliebenen und was eigentlich nicht. Und da ist es schon eine interessante Frage, die ich mir zumindest gestellt habe, wenn ich als Hobbes gehen würde, was hat eigentlich für meine Frau Relevanz? Ein anderer interessanter Aspekt ist, weil ich halt auch schon mal ein paar Beerdigungen organisiert habe und ein paar meiner Familienangehörigen halt schon verstorben sind, ist auch die Frage, was bleibt denn im Endeffekt über? Und das wurde auch in der Community angesprochen, weil die Hinterbliebenen entscheiden ja auch, was sie noch brauchen und was entsorgt wird. In der Regel wird einfach der Server genommen, wenn man Platz im Keller braucht und dann wird er auch Müll geschmissen. Und gerade wir itler, und das fand ich ein sehr schönes Kommentar, unterliegen gern dem Irrglauben, dass die ganzen technischen Spielereien, die wir gebaut haben, unerlässlich sind."
+        },
+        {
+            "start": 879210,
+            "end": 895200,
+            "speaker": "B",
+            "text": "Aber die Frage stellt sich, ist es ein Problem dann, wenn es nicht gebraucht wird, ist es halt weg. Bei der Home Automation ist natürlich was anderes, weil wenn du da den Server wegschmeißt und der ist essentiell für deine Home Automation, dann kannst du nichts mehr das Licht einschalten. Okay, das ist vielleicht dann essentiell, aber das merkst du dann auch, wenn du den Server absteckst."
+        },
+        {
+            "start": 895200,
+            "end": 905040,
+            "speaker": "A",
+            "text": "Ja, aber dann ist es ja vielleicht sogar schon zu spät, weil die Festplatte verschlüsselt ist und das Ding nicht mehr läuft und man das vielleicht irgendwie nicht mehr booten kann, weil da braucht ein Passwort sein, weißt du, so die ganze Kladderadatsche da hinten dran steckt."
+        },
+        {
+            "start": 905040,
+            "end": 909880,
+            "speaker": "B",
+            "text": "Aber ist es dir wichtig? Ist es dir wichtig, dass deine Home Automation deinen Server weiterlebt?"
+        },
+        {
+            "start": 909880,
+            "end": 914280,
+            "speaker": "A",
+            "text": "Mir ist schon wichtig, dass meine Partnerin und meine Frau nach meinem Ableben das Licht anschalten kann."
+        },
+        {
+            "start": 914350,
+            "end": 916350,
+            "speaker": "B",
+            "text": "Ja, aber das kannst du ja jetzt hoffentlich."
+        },
+        {
+            "start": 916350,
+            "end": 941530,
+            "speaker": "A",
+            "text": "Ja, weil der Server halt noch läuft. Also das ist halt schon so ein Punkt, Du entscheidest halt nicht mehr, was überbleibt. Und wenn man das ganze Wichtige geklärt hat, dann fällt es einem erst später ein und dann bricht halt eigentlich irgendwie so die Hölle über einem hinein. Weil man von dem ganzen irgendwie Technik Kram ja sowieso nichts versteht. Aber nun gut, im Endeffekt entscheiden das die Leute, die den Keller dann später auf."
+        },
+        {
+            "start": 941610,
+            "end": 957450,
+            "speaker": "B",
+            "text": "Aber wenn du jetzt sagst, okay, es entscheiden sowieso die Leute, die sich darum kümmern müssen, dann könnte man ja auch argumentieren, ich brauche mich nicht darum kümmern, ich bin nicht mehr da. Der rechtliche Rahmen steckt sowieso alles ab. Es gibt ein Erbe, ganz offiziell, es gibt einen Notar und da wird sich schon drum gekümmert."
+        },
+        {
+            "start": 957450,
+            "end": 984360,
+            "speaker": "A",
+            "text": "Ja, guter Gedankengang, wenn du so I don't give a fuck an den Tag legst, aber ich möchte ja hoffentlich, wenn mir irgendwas zustößt, dass meine Frau jetzt nicht ein halbes Jahr mit dem Aufholen Arbeiten beschäftigt ist, Ich möchte ja schon irgendwie meinen Lieben da ein einfaches Leben geben. Aber auch den rechtlichen Rahmen haben wir uns angesehen und da habe ich mir einfach mal die Frage gestellt, okay, was fällt eigentlich unter digitaler Nachlass? Sind eigentlich Daten im Erbe mit drin?"
+        },
+        {
+            "start": 984520,
+            "end": 988120,
+            "speaker": "B",
+            "text": "Und die Antwort, lass mich raten, it depends."
+        },
+        {
+            "start": 988760,
+            "end": 1054650,
+            "speaker": "A",
+            "text": "Sehr, sehr. Also im Endeffekt, ich kann jetzt nur für Deutschland sprechen, die österreichische Seite bringst du bitte mit rein. Im deutschen Erbrecht gibt es keine ausdrückliche Regelung für das digitale Erbe. Also der Begriff digitales Erbe existiert im Recht eigentlich bei uns jetzt hier in Deutschland nicht. Es ist wohl so, dass in diversen Gerichtsurteilen der Begriff digitaler Nachlass so recht breit aufgestellt wurde und dass da unter anderem nicht nur die Online Profile und die Cloud Konten dazugehören, sondern auch Offline Daten auf Geräten wie Fotos, Videos oder elektronische Dokumente. Das bedeutet, wenn du irgendwo noch einen alten ipod liegen hast, die mps, die da drauf sind, die gehören dann auch unter digitaler Nachlass. Was jedoch der Fall ist, dass online geschlossene Verträge Teil der Erbmasse sind und somit auf einen übergehen. Das bedeutet, dein Spotify Vertrag, Wolfgang, der wird vererbt, dein Netflix Vertrag wird vererbt und auch deine Hetzner VM oder deine Hetzner Server Thematik wird vererbt. Du kannst also deine Familie darauf vorbereiten, dass die ganz viele Docker Container, die"
+        },
+        {
+            "start": 1054650,
+            "end": 1079650,
+            "speaker": "B",
+            "text": "lassen sich zumindest virtuell schneller wegschmeißen als den Server bei dir im Keller, wenn man weiß wie. Zumindest in Österreich gibt es übrigens schon ein digitales Erbe, ist jetzt kein Sonderrecht oder sowas, aber grundsätzlich alles selber wie in Deutschland, alle Verträge, alles was digitale Güter sind, Domains, Guthaben, Kostenpflichtige, Accounts, alles was da dazugehört, wird einfach normal genauso vererbt wie alles andere auch."
+        },
+        {
+            "start": 1079650,
+            "end": 1086470,
+            "speaker": "A",
+            "text": "Und nochmal ein kleiner Zusatz zu diesen Verträgen. Die Verbraucherzentrale in Deutschland, habt ihr eigentlich sowas auch in Österreich, so eine Verbraucherzentrale,"
+        },
+        {
+            "start": 1086550,
+            "end": 1089190,
+            "speaker": "B",
+            "text": "Konsumentenschutz heißt das glaube ich bei uns,"
+        },
+        {
+            "start": 1089190,
+            "end": 1119750,
+            "speaker": "A",
+            "text": "Die weist in Deutschland auf jeden Fall ausdrücklich darauf hin, dass online abgeschlossene Abos in der Regel weiterlaufen, bis sie gekündigt werden. Denn viele Leute haben so die bequeme Haltung ach, die Online Sachen, die erledigen sich schon von selbst, je nach Abo. Wenn ich mir jetzt ein Anthropocks Abo für zwei hundert im Monat habe, was vielleicht ziemlich viele Programmierer haben, dann erledigt sich das leider nicht von alleine, sondern jeden Monat werden da zwei hundert gecharged, Auch wenn du die Hausschuhe nach oben"
+        },
+        {
+            "start": 1119750,
+            "end": 1150550,
+            "speaker": "B",
+            "text": "stellst, Batschen was Wort. Aber gerade wenn man das weiterspinnt, wenn wir bei meinen Hetzner Server bleiben, jetzt werden die Verträge zwar weitervererbt, aber den Zugang hast du ja nicht, weil den Zugang brauchst du mal. Passwort, E Mail Adresse, Two Factor Authentication, Vielleicht kannst du was resetten über die E Mail Adresse, Du brauchst aber Zugriff auf die E Mail Adresse. Also auch wenn die Verträge weiterlaufen, heißt es ja noch lange nicht, dass du Zugriff hast und kann mir vorstellen, bei Hetzner das Ganze auf einem rechtlichen sicheren Weg zu erreichen. Viel Spaß."
+        },
+        {
+            "start": 1150550,
+            "end": 1228190,
+            "speaker": "A",
+            "text": "Also vielleicht habe ich da eine juristische Tür, die offen steht. Ob die praktische Tür dann offen steht, schauen wir jetzt mal. Aber es gab ein ähnliches Urteil vom Bundesgerichtshof zwei tausend zwei und zwar ging es damals um die Ist ein Facebook Account grundsätzlich vererbbar? Too long, didn't read. Ja, das Bundesgerichtshof hat zwei tausend achtzehn entschieden, der Vertrag über ein Benutzerkonto bei einem sozialen Netzwerk ist grundsätzlich vererbbar. Kurze Backstory, warum hat das BGH so entschieden? Und zwar zwei tausend zwölf ist in Berlin ein jähriges Mädchen von einer U Bahn erfasst und dann gestorben und die Eltern wollten Zugang zum Facebook Account ihrer Tochter haben, um unter anderem zu klären, ob es sich dabei um einen Suizid gehandelt hatte, was dann auch relevant für die Schadensersatzforderung gegen des U Bahn Fahrers relevant wäre. Und Facebook hatte den Zugriff unter der Berufung des Persönlichkeitsrechts der Beteiligten verweigert und das Konto in einen sogenannten Gedenkzustand versetzt. Gedenkzustand ist bei Facebook eigentlich ein Zustand des Kontos, dass man sagt, okay, die Person ist verstorben und dann können Leute Kondolenz Posts machen. Und was Facebook dann auf Basis des Urteils gemacht hat, die haben den Eltern einen PDF Export zukommen lassen."
+        },
+        {
+            "start": 1228190,
+            "end": 1235230,
+            "speaker": "B",
+            "text": "Das klingt so wie diese Datenschutz Exports, wo man dann irgendwie fünf hundert Seiten zugesendet bekommt mit irgendwelchen Logs oder sowas."
+        },
+        {
+            "start": 1235230,
+            "end": 1301190,
+            "speaker": "A",
+            "text": "Ja, ganz genau so war das wohl. Und da hat das BGH gesagt, Jungs, so, das reicht jetzt aber nicht. Und deswegen hat das BGH die ganze Sache konkretisiert. Und zwar bekommen die Erben nicht nur ein PDF Export, sondern Zugang in einer Weise, die dem ursprünglichen Zugriff näher kommt, auch wenn eine aktive Weiternutzung des Accounts eingeschränkt sein kann. Und die Begründung finde ich auch recht interessant. Die Begründung sagt, die digitalen Inhalte seien insofern mit Tagebüchern oder persönlichen Briefen vergleichbar. Kommen wir jetzt also zu deinem Hetzner Server und dem Zugang. Klar, dein Hetzner Server ist ein bisschen was anderes, da geht es jetzt nicht nur um irgendwie Briefe oder Tagebücher, aber vielleicht sogar, weiß ich nicht, wenn es da dein self hosted Notizbuch ist, dann könnte das ja ein digitales Tagebuch sein, man weiß es ja nicht, oder? Und vielleicht könnte dann das Hetzen dazu gezwungen werden, dir Zugang oder deinen Erben Zugang zu dem Server zu geben, um dann dein digitales Tagebuch, dein Journaling zum Beispiel. Oder vielleicht bist du ja beim Klettern irgendeinen Berg runtergesprungen und es wird gecheckt, ob da das Suizid war."
+        },
+        {
+            "start": 1301190,
+            "end": 1327810,
+            "speaker": "B",
+            "text": "Ich glaube sowieso, dass es grundsätzlich bei Hetzner einfacher ist, weil das ja ein kostenpflichtiger Account ist, Der wird dann einfach übertragen, läuft dann weiter. Das sind ja eigentlich die Dienstleistungen, die da weiterlaufen und dann bekommst du wahrscheinlich schon irgendwie irgendwann Zugriff. Viel schwieriger ist es eben bei diese Social Media Accounts oder großen Firmen, weil die haben halt ihre eigenen Regeln und dort reicht halt nicht einfach das Passwort aus, das man anfordern kann oder einen zweiten Account, weil man sowieso dann Vertragspartner in dem Fall ist."
+        },
+        {
+            "start": 1327890,
+            "end": 1334050,
+            "speaker": "A",
+            "text": "Ein interessanter Aspekt, den ich auch bei der Recherche gefunden habe, ist der postmortale Persönlichkeitsschutz. Hast du davon schon mal gehört?"
+        },
+        {
+            "start": 1334670,
+            "end": 1341150,
+            "speaker": "B",
+            "text": "Persönlichkeitsschutz kenne ich ja Ich darf keine Fotos von dir machen. So einfach. Vielleicht ist das einfach nur postmodal."
+        },
+        {
+            "start": 1341150,
+            "end": 1463240,
+            "speaker": "A",
+            "text": "Du meinst, dass du keine Fotos von der Leiche machen kannst oder machen darfst zum Beispiel. Darum geht es jetzt nicht. Es geht eigentlich um deine Grundrechte. Und zwar die Grundrechte und der Datenschutz enden eigentlich mit dem Tod. Das bedeutet salopp, DSGVO ist nicht mehr für Verstorbene gültig. Jetzt ist es aber der Schutz der Persönlichkeit und Würde eines Menschen geht über den Tod hinaus. Also die Menschenwürde wirkt fort. Der Verstorbene soll nicht herabgewürdigt oder sein Leitbild grob verfälscht werden können. Und wenn du dir das jetzt in dem Kontext von dem BGH Urteil, dass man auch die Social Media Accounts vererben kann, dann ist die ganze Sache natürlich schon recht schwammig im digitalen Kontext, weil wenn der Bruder da jetzt Erbe ist, was ja sein kann im deutschen Erbrecht oder teilweise glaube ich zu fünfzig Prozent und so weiter und so fort, Bin da jetzt kein Anwalt. Schwierige Situation. So und wenn wir schon mal bei Facebook und Social Media sind, dann habe ich mich auch gefragt, okay, wenn ich jetzt hops gehe, sind meine Social Media Accounts überhaupt relevant? Wird das überbewertet? Man hat schon in letzter Zeit bei ein oder anderen Leuten, die in der Öffentlichkeit stehen, wie zum Beispiel bei Feve, schon irgendwie so ein bisschen Vibes im Internet gehabt, weil Fefe war auch auf einmal weg und da haben auf einmal dann nach einer ganzen Zeit Leute auf Social Media hey, was ist los mit Fefe und so weiter und so fort. Und ich meine, da gab es dann auch medizinischen Notfall, wo dann Fever erst mal für ein paar Wochen oder Monate außer Gefecht gesetzt wurde. Da stellt sich schon die Frage, okay, ist Social Media überbewertet? Ist das relevant? Hat das überhaupt irgendeinen Wert? Ich würde sagen, für mich glaube ich nicht. Obwohl mit dem Engineering Kiosk, gut, da sind wir zu zweit, also da wird der eine oder andere der Community vielleicht schon Bescheid sagen, aber vielleicht ist vielleicht nimmt man sich doch einfach nur zu wichtig, muss ich auch ehrlicherweise sagen. Vielleicht hat dieses ganze Social Media Kram eigentlich gar keine Relevanz, weil wir sind jetzt beide nicht Influencer, wir verdienen nicht unsere Brötchen mit. Aber auch wenn du Influencer Influencer wärst, dann bringt es ja nichts, weil ich kann deinen Account ja nicht übernehmen und dann einfach so weiterführen, weil die Influencerei geht halt ja auf die Person Wolfgang und nicht auf Andy, der dann das KI Avatar von Wolfgang steuert."
+        },
+        {
+            "start": 1463240,
+            "end": 1519310,
+            "speaker": "B",
+            "text": "Ja, wobei, wenn man natürlich gewisse Community hat und dieser Community vielleicht dann auch was mitteilen möchte als Hinterbliebener, dann macht es ja schon Sinn, auch nur eine Message oder was passiert ist oder irgendeine Trauermessage, was es auch immer ist, macht es ja durchaus Sinn und das ist vielleicht gar nicht so unbedeutend oder sind vielleicht ein paar tausend Leute auch viele Freunde. Und ich glaube, dass es schon vielen auch ein Anliegen ist, dass sie da in irgendeiner Form einen sinnvollen Abschluss machen. Und genau dafür braucht man dann natürlich auch dementsprechend Zugang. Und rein rechtlich ist es ja meistens schon so, dass du eigentlich Zugang bekommen solltest, aber es kommt halt dann wieder aufs Land drauf an, was für Firma ist, was die Social Media Firma sich ausgedacht hat und wie das funktioniert und auch die Persönlichkeitsrechte, wie du gesagt hast. Also es hängt da natürlich schon viel dran. Gibt übrigens auch kein Standardmodell oder einen Standardprozess, den irgendwie alle folgen müssen, vor allem, weil das ja internationale Firmen sind meistens."
+        },
+        {
+            "start": 1519310,
+            "end": 1721410,
+            "speaker": "A",
+            "text": "Ja, bei Facebook habe ich herausgefunden, dass man da einen Legacy Kontakt einstellen kann, der dann zumindest das Gedenkprofil in engen Grenzen verwalten kann. Also man kann sich da nicht einloggen, man kann da auch keine Nachrichten lesen oder so, aber man kann es ein bisschen verwalten. Und ich glaube, der rote Faden über alle Plattformen hinweg ist halt, wenn man was konfigurieren kann und wenn man da nichts zu Lebzeiten konfiguriert, dann zwingt man Hinterbliebene halt oft in manuelle Support Prozesse mit Dokumenten und dann, das ist natürlich bei internationalen Firmen eine schwierige Thematik. Du hast aber gerade einen schönen Punkt angesprochen und zwar, falls man mal eine Community oder ähnliches informieren möchte. Und da habe ich dir ein reales Beispiel mitgebracht von einem Projekt, was ich sogar nutze und das habe ich auch verfolgt. Und zwar gibt es ein Projekt, das nennt sich Proxmox Helper Scripts bzw. Inzwischen heißt es Proxmox Community Scripts. Das Projekt dreht sich eigentlich darum, dass du mit einem einzigen Befehl LX Container oder virtuelle Maschinen für hunderte Self Hosting Dienste auf Proxmox einrichten kannst. Und das ist halt für viele der Einstieg ins Home Lab. Proxmox ist sowas wie vmware, so eine Virtualisierung Software, die du dir dann zum Beispiel auf dem Raspberry Pi oder auf irgendeinem Laptop oder Server installieren kannst und dann zu Hause halt mit vms rumspielen kannst. Open Source, alles gut. Und wenn du dir jetzt einfach einen Home Assistant oder einen IMIC oder Paperless installieren möchtest oder von mir aus einfach Webserver, dann kannst du dir so ein Skript runterladen, einen Befehl, knallt so in die Shell und der installiert dir das und das Ding läuft. Also super gut, nutze ich auch. Wahnsinns Projekt. Auf jeden Fall wurde das ganze Projekt von einem Menschen namens tteg, so war zumindest der Username, gegründet und irgendwann hat T Tech selbst eine GitHub Discussion in seinem Projekt aufgemacht. Hey Jungs und Mädels, ich habe leider Blinddarmkrebs und Blinddarmkrebs ist soviel ich weiß, jetzt nicht heilbar. Er hat es dann selbst in der Community announced, dass er jetzt in eine Hospiz umzieht. Zur Erinnerung, ich habe auch noch mal nachgeguckt, ein Hospiz ist eher eine Einrichtung, wo man offen gesprochen hingeht, um zu sterben. Und er hat es schön mehr oder weniger formuliert, sagte, die Weiterentwicklung des Projektes wird deswegen verlangsamt. Wenige Wochen später ist dann T Tec selbst verstorben und nach einer gewissen Zeit hat seine Frau Angie, die nicht technikaffin ist, möchte man sagen, eine GitHub Discussion aufgemacht mit den Worten, ich weiß gar nicht, ob jemand diese Nachricht hier sehen wird, aber ich versuche es mal. Und hat dann über den Tod von T Tec informiert und das Ergebnis waren tausende Kondolenzsprüche und da hat jemand sogar ein Spendenkonto eingerichtet und dann Geld gesammelt für das, was T Tech gemacht hat und dann auch Angie zukommen lassen. Ende vom Lied war jetzt folgendes. Das Projekt wurde dann aus dem Namespace von T Tech in eine Community Organisation überführt und das Projekt lebt jetzt weiter und das Projekt selbst hält auch T Techs andenken irgendwie so praktisch am Leben, denn dreiig Prozent aller Spenden, die an das Projekt gehen, gehen jetzt direkt an eine Krebsforschung und die Hospiz. Und das ist natürlich eine sehr schöne Geschichte. Die ganze Story habe ich, glaube ich, auch schon mal in Episode ein hundert fünf und siebzig erzählt, Da ging es so von lustigen und traurigen Open Source Geschichten. Wer da vielleicht mehr von solchen Stories hören möchte, aber das ist jetzt zum Beispiel so eine Story. Okay, wenn man eine Community mal informiert, was das auch für einen Impact haben kann."
+        },
+        {
+            "start": 1721410,
+            "end": 1765290,
+            "speaker": "B",
+            "text": "Jetzt wenn wir schon bei Social Media Accounts sind und Facebook und Co. Was ja da auch sehr nahe liegt heutzutage, sind jetzt so klassisch diese, ich würde sie mal System Accounts nennen. Also ich rede jetzt nicht von irgendeinem Linux System, sondern diesen grundsätzlichen Systemen, die wir verwenden, sprich Android, Apple, Google, diese ganzen Ecosysteme, die man so verwendet, wo man Account hat. Und wenn man genau mal rein blickt, hängt da ja extrem viel dran. Also da können Daten dranhängen, natürlich das gesamte Handy, ganze Kommunikation, andere Dienste, die über diese Accounts authentifiziert werden. Wie sieht es denn mit diesen super Accounts eigentlich aus, die ihr dann noch dazu an diesen internationalen Firmenhänger, da muss"
+        },
+        {
+            "start": 1765290,
+            "end": 1777610,
+            "speaker": "A",
+            "text": "ich zugeben, wir reden jetzt nur mal im Scope von Google und Apple. Würdest du sagen, gibt es noch eine weitere große Firma von, ich sag mal, Accounts, die so weit connected sind, die so tief im digitalen Leben sind?"
+        },
+        {
+            "start": 1777690,
+            "end": 1795570,
+            "speaker": "B",
+            "text": "Ich glaube, dass viele auch Facebook Accounts verwenden, um zu authentifizieren. Also wenn da dann irgendwelche Third Party Apps dranhängen zum Authentifizieren, ist Facebook sicher auch noch ein großer wichtiger Player, aber natürlich weniger systemimmanent wie jetzt irgendwie Google oder Android und Apple."
+        },
+        {
+            "start": 1795570,
+            "end": 1910570,
+            "speaker": "A",
+            "text": "Du hast ja mit Google dein Android Handy und dann bist du bei Google Fotos und dein Google Kalender. Bei Apple hast du vielleicht noch ein Apple TV, verstehst du? Das geht halt wirklich ins Haus hinein. Vielleicht die Amis sind da auch noch mehr auf Amazon mit ihren Alexas und ihren Bestellungen und so weiter. Da habe ich aber mal grundsätzlich für Google und Apple nachgeschaut. Bei Google gibt es einen inactive Account Manager. Du kannst also nach einer definierten Inaktivität ausgewählte Daten mit bis zu zehn Personen teilen bzw. Diese benachrichtigen. Du kannst auch sogenannte Recovery Contacts definieren, die dann beim Account Logout helfen, ohne selbst Kontozugriff zu erhalten. Also ich kann jetzt sagen, wenn ich Zugriff auf meinen Google Account verliere und ich habe dich, Wolfgang, als Recovery Contact definiert, dann kann ich über dich wieder Zugriff auf meinen Account kriegen. Google behält sich aber auch vor, Accounts, die zwei Jahre inaktiv sind, zu löschen. Also das sollte man schon im Auge halten. Und es gibt auch etliche Open Source Tools, die sagen, okay, backup mein Google. Es gibt auch, ich glaube, so eine Google Self Service Daten Export Funktion vielleicht sogar, wer ziemlich viele E Mails hat oder ähnliches. Da gibt es so Open Source Projekte, die kannst du dir selbst hosten und dann kannst du dir deinen E Mail Dump runterziehen und dann sieht das auf deinem Self Hosting so ähnlich aus, als wäre das Google Mail so als Archiv. Ist vielleicht auch eine eine ganz interessante Sache. Apple und da gehöre ich zu, Ich bin kein Google, kein Android Mensch, ich bin eher der Apple Mensch. Und zwar kannst du da einen Legacy Kontakt hinterlegen. Der Legacy Kontakt bekommt dann einen Zugriffsschlüssel, wenn du die Sterbeurkunde da einreichst und dann bekommt der Legacy Kontakt, also zum Beispiel meine Partnerin oder meine Frau, Zugriff auf meinen Apple Account. Aber Achtung, da werden jetzt nicht alle Daten einfach freigegeben, zum Beispiel Inhalte aus der icloud Keychain wie Passwörter, Passkeys und Zahlungsinformationen werden nicht freigegeben, sowie gekaufte Medien und Abos. Also du merkst schon, da ist so"
+        },
+        {
+            "start": 1910570,
+            "end": 1922850,
+            "speaker": "B",
+            "text": "ein bisschen, das finde ich überhaupt schräg, wie ich das gelesen habe, warum keine gekauften Medien? Wenn ich mir so einen Film kauf, dann gehört ja der mir und eigentlich sollte das ja weitervererbt werden. Also ist das eigentlich nicht gegen das Recht?"
+        },
+        {
+            "start": 1923330,
+            "end": 1929250,
+            "speaker": "A",
+            "text": "Das weiß ich jetzt nicht. Das musst du dann mit Apple ins Gericht gehen. Ich weiß nicht, inwieweit du da Erfolg hast."
+        },
+        {
+            "start": 1929330,
+            "end": 1950970,
+            "speaker": "B",
+            "text": "Ich sehe schon, wir müssen auf jeden Fall mal noch diese Episode mit einem Juristen oder einer Juristin durchsprechen, weil ich glaube, da gibt es viele juristische Details auch, die durchaus wichtig sind. Und ja, ist ja gar nicht so ohne. Es gibt ja auch irgendwelche Nerds, die da fünf hundert Filme oder so haben. Also das ist ja auch ein ganz ordentliches Erbe, was du da weitergeben würdest."
+        },
+        {
+            "start": 1950970,
+            "end": 1959850,
+            "speaker": "A",
+            "text": "Bei den gekauften Medien bin ich da vielleicht bei dir, aber ich glaube, bei Passwörtern in der Keychain oder Zahlungsinformation finde ich schon okay, wenn die diskarded werden, um Missbrauch zu vermeiden."
+        },
+        {
+            "start": 1959850,
+            "end": 1972300,
+            "speaker": "B",
+            "text": "Was aber natürlich auch wieder grundsätzlich ein Problem darstellt, weil wenn du den als Passwortmanager verwendest, dann kannst du natürlich da nicht automatisch deine Passwörter weitergeben. Das muss dir dann natürlich dann auch im Klaren sein. Also wenn du das wirklich als Passwort"
+        },
+        {
+            "start": 1972300,
+            "end": 2005080,
+            "speaker": "A",
+            "text": "Store verwendest, ja, es geht sogar weiter. Jetzt stell dir mal vor, du hast Zugriff auf den Apple Account, aber die Person hat irgendwie nur ein iPhone dann. Also der geräteinterne Passcode kann nicht entfernt werden, ohne die Daten von dem Handy zu löschen. Und wenn die Fotos dann zum Beispiel nicht in die icloud synchronisiert sind, dann sind die auch hops. Also du merkst, da gibt es super viele Stolpersteine, wo man wirklich aufpassen muss. Es gibt nämlich auch ähnlich wie bei Google, neben diesem Legacy Kontakt, gibt auch einen Recovery Kontakt, wo du dann, wenn du noch lebst und dich ausgesperrt hast, dir dann halt Zugriff holen kannst."
+        },
+        {
+            "start": 2005080,
+            "end": 2017880,
+            "speaker": "B",
+            "text": "Aber wenn wir schon bei Passwortmanager sind, du verwendest Apple aber trotzdem einen anderen Passwortmanager, wenn ich dich richtig verstehe. Aber ist zum Beispiel in deinem Passwortmanager wäre da der PIN Code von Apple drin?"
+        },
+        {
+            "start": 2017880,
+            "end": 2019600,
+            "speaker": "A",
+            "text": "Du meinst jetzt von meinem Mobiltelefon."
+        },
+        {
+            "start": 2019920,
+            "end": 2033000,
+            "speaker": "B",
+            "text": "Ja genau, um eben genau dem entgegenzuwirken. Also bei dir ist es eh kein Problem, weil du synchronisierst ja dein ganzes Leben in die Cloud, bin ich mir ziemlich sicher. Aber jetzt grundsätzlich mal den BIN Code, um einfach pragmatisch, dass man ins Handy reinkommt."
+        },
+        {
+            "start": 2033000,
+            "end": 2040080,
+            "speaker": "A",
+            "text": "Also ich synchronisiere nicht mein ganz bestes Leben in die Cloud. Ganz und gar nicht, muss man zugeben. Apple gilt auch als sehr, sehr sicher. Also von daher."
+        },
+        {
+            "start": 2040080,
+            "end": 2042640,
+            "speaker": "B",
+            "text": "Ja, das heißt ja nicht, dass du trotzdem alles synchronisierst."
+        },
+        {
+            "start": 2042640,
+            "end": 2063400,
+            "speaker": "A",
+            "text": "Ja, ich tue nicht alles, aber sehr guter Punkt. Nein, mein Handy Code ist nicht im One Password, das muss ich mir jetzt gerade eben aufschreiben. Aber guter Reminder. Aber ich stelle die Frage zurück, wie sieht es mit deinem Android Code aus? Ist der in deinem Bitwarden keypass X, was du heutzutage auch nutzt?"
+        },
+        {
+            "start": 2063400,
+            "end": 2071040,
+            "speaker": "B",
+            "text": "Na, ziemlich sicher nicht. Und vor allem muss man es dann mal finden. Das sind irgendwie sechs hundert Einträge oder so in meinem keypass, aber ich bin mir auch ziemlich sicher, dass er da nicht drinsteckt."
+        },
+        {
+            "start": 2071040,
+            "end": 2080480,
+            "speaker": "A",
+            "text": "Aber gut, das Ding kannst du ja mit Benamung Handy oder Google oder so. Also das ist jetzt nicht das Problem. Ich würde dein Handy PIN jetzt nicht unter paypal suchen."
+        },
+        {
+            "start": 2080560,
+            "end": 2087860,
+            "speaker": "B",
+            "text": "Moment, Moment, Kommando zurück. Ich habe gerade kurz nachgeschaut. Ich habe einen Eintrag Handycode und da steht mein Handycode drin."
+        },
+        {
+            "start": 2087860,
+            "end": 2088940,
+            "speaker": "A",
+            "text": "Nein, von wann ist der?"
+        },
+        {
+            "start": 2089660,
+            "end": 2093500,
+            "speaker": "B",
+            "text": "Hätte ich selber nicht gedacht. Von elfter april zwei tausend fünf und"
+        },
+        {
+            "start": 2093500,
+            "end": 2105260,
+            "speaker": "A",
+            "text": "zwanzig, Das ist auch recht frisch. Ah, stopp. Ne, Moment, Moment, Moment, Moment. Das war der Punkt, wo dir dein Laptop geklaut wurde oder da, wo du danach alles neu aufsetzen musstest. Ist das richtig? War das nicht letztes Jahr irgendwann?"
+        },
+        {
+            "start": 2105580,
+            "end": 2117720,
+            "speaker": "B",
+            "text": "Ich glaube, es ist schon länger her. Keine Ahnung, warum ich das reingespeichert habe. Ich habe auch andere PIN Codes in diesem Zusammenhang reingespeichert. Vielleicht habe ich da mal so eine Eingebung gehabt und hab gespeichert."
+        },
+        {
+            "start": 2117720,
+            "end": 2148770,
+            "speaker": "A",
+            "text": "Stark, stark, stark. Aber kommen wir doch mal zu dem eigentlichen Thema. Wir reden jetzt die ganze Zeit über Passwörter, Zugänge und so weiter. Kann ich nicht einfach meinen Passwortmanager so wie er ist, das Master Passwort und Pipapo auf den Zettel schreiben und dann übergeben? Also Passwort Manager to the rescue, meinst du nicht? Das wäre die Lösung für alle Probleme? Also unter der Voraussetzung, dass du natürlich auch das RU Passwort hast und vielleicht sogar dein private SSH Key hast für Serverauthentifizierung. Den habe ich nämlich wirklich in meinem Passwort, gebe ich zu, weil dann müsste doch eigentlich alles gesetzt sein, oder?"
+        },
+        {
+            "start": 2148770,
+            "end": 2176460,
+            "speaker": "B",
+            "text": "Ich würde zumindest sagen, es ist mal ein guter Anfang. Also bei mir werden da zumindest sehr viele Passwörter schon mal drinnen. Wie gesagt, Two Factor Authentication ist eigentlich so das größte Problem. Bei den ganz moderneren Accounts ist auch Two Factor in meinem Passwortmanager. Aber natürlich die ganzen letzten zwei, drei Jahre Zwei Factor Authentication, die liegen bei mir am Handy. Wenn du den Handy Code hast, kommst du dann auch wieder dran. Wenn du weißt, wo nachschauen und so weiter, dann kannst du dir das vielleicht zusammen kopieren irgendwie."
+        },
+        {
+            "start": 2176620,
+            "end": 2205000,
+            "speaker": "A",
+            "text": "Aber das ist ein guter Punkt. Ich meine, im Endeffekt wäre das ja mal ein Call to Action für uns alle, wenn du dich dazu entscheidest, Two Factor Authentification in deinen Passwortmanager zu speichern oder auf ein anderes Device oder yubikey oder ähnliches, dass du das dann alles darüber machst und dass du nicht zwei, drei Two Factor Apps hast. Zum Beispiel, ich habe aktuell zwei oder drei Factor Apps. Einmal mein Passwort, dann eine auf dem Handy und dann die von Microsoft sogar noch, weil ich da so ein Office dort kommt."
+        },
+        {
+            "start": 2205000,
+            "end": 2210320,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen, Microsoft musst du eigentlich Microsoft haben. Ich glaube, die erlauben ja gar nichts anderes."
+        },
+        {
+            "start": 2210320,
+            "end": 2219680,
+            "speaker": "A",
+            "text": "Das ist natürlich doof. Aber dann ist die nächste Okay, jetzt stell dir vor, du hast Zugang zu dem zweiten Faktor. Ich bin mir nicht sicher, ob meine Frau weiß, was ein yubikey ist."
+        },
+        {
+            "start": 2219680,
+            "end": 2256540,
+            "speaker": "B",
+            "text": "Ja, oder überhaupt, wenn du kein Passwort Manager Mensch bist oder überhaupt wenig mit Computer zu tun hast, dass du keine Ahnung, wenn jetzt an mich denke an Keypass, wie du ein Keypass File öffnest und wie du da an ein TOTP Code dran kommst. Es sind schon viele Sachen, also brauchst du wieder eine andere Vertrauensperson, die sich vielleicht technisch auskennt und der Person schreibst du dann eine Anleitung oder so mit den wichtigsten Informationen, weil das ist das nächste. Wie gesagt, in meinem Keypass sind sechs hundert Einträge. Okay, vielleicht ist es unter dem richtigen Namen eingetragen, aber es kann halt auch sein, dass du es gar nicht findest oder irgendwie Probleme hast oder eben gar nicht weißt, was es für Services gibt."
+        },
+        {
+            "start": 2256540,
+            "end": 2336370,
+            "speaker": "A",
+            "text": "Die Zum Thema Passwortmanager hatte die Community auch eine Meinung. Und zwar sagte der Frankie, dass der Frankie einen kompletten Offboarding Vault hat. Da sind von ihm alle ihm bekannten nötigen Kündigungen vorgeschrieben und adressiert. Das nenne ich mal prepared. Also hätte ich gedacht, wow, wäre mir zu viel Arbeit oder vielleicht kann man das ja mit KI Auto generieren und da sind auch ein paar Readme für die wichtigsten Wallets und wie man da die Kohle rausbekommt. Sehr vorbildlich, muss ich zugeben. Besonders wenn man jetzt irgendwie so Krypto Kram oder sowas hat. Das hilft natürlich alles nur irgendwie bedingt, sagt er aber auch, Aber ist hoffentlich eine kleine organisatorische Entlastung. Der Marcel aus der Community hat es ähnlich gemacht. Der sagte okay, das Master Passwort für den Passwortmanager lager ich irgendwo zum Beispiel bei einem Freund oder in einem Tresor mit einem schönen Zusatz. Er Den Einschnitt in die Sicherheit nehme ich bislang bewusst in Kauf, denn du gibst ja dein Master Passwort, schreibst ja irgendwo auf. Klar, es hängt jetzt nicht im Post it an deinem Bildschirm, sondern ist vielleicht außer Haus. Wenn ich jetzt mein Master Passwort bei dir in Innsbruck lagern würde. Achtung Community, mein Master Passwort liegt nicht bei Wolfgang in der Wohnung. Also es lohnt sich nicht bei Wolfgang einzubrechen, um ein Passwort zu kriegen, Aber dann ist das natürlich ein kleines Sicherheitsrisiko. Gut, ich hoffe, das steht jetzt nicht vom Andi Grunwald und so weiter und so fort. Ist das das Masterpasswort für den Password Safe. Aber es ist ja auch der Worst Case, wer möchte."
+        },
+        {
+            "start": 2336370,
+            "end": 2383559,
+            "speaker": "B",
+            "text": "Wobei da gibt es ja auch grundsätzlich Möglichkeiten, weil du kannst es ja aufteilen auf mehrere Personen. Also wenn du jetzt ein Master Passwort nimmst oder irgendwie ein Certificate, dann kannst du das Certificate in drei Teile schnipseln. Eines liegt bei dir zu Hause, braucht dann gar kein Safe unbedingt sein. Und dann gibst du das noch zwei Vertrauenspersonen, dann hast du das auch irgendwie auf drei Orte aufgeteilt. Vielleicht schreibst du da auch noch drauf, wer die anderen Vertrauenspersonen sind, dass ich die auch irgendwie finde. Das größte Problem, was ich an diesem Approach immer sehe, wenn ich jetzt an zwei Vertrauenspersonen denke, dass die über Jahrzehnte oder so das richtig aufbewahren und dann im Falle finden. Das ist das größte Problem. Vielleicht musst du dann auch noch Backups machen, so dass du vier Vertrauenspersonen nimmst und dann kopierst du irgendwie die Teile noch auf Vertrauenspersonen oder so."
+        },
+        {
+            "start": 2383720,
+            "end": 2389960,
+            "speaker": "A",
+            "text": "Das hört sich jetzt an, so irgendwie so nach so einem RAID System, falls mal eine Festplatte wegkriegt, dass du es neu ausrechnen kannst."
+        },
+        {
+            "start": 2390120,
+            "end": 2393490,
+            "speaker": "B",
+            "text": "Ja, kannst du RAID zehn machen, RAID fünf, alles was du so willst."
+        },
+        {
+            "start": 2393730,
+            "end": 2426670,
+            "speaker": "A",
+            "text": "Aber ich finde die Lösung eigentlich ganz schön ist. Da geht es halt aber schon irgendwie ins Komplexe ran. Da kann man schon eher vielleicht die Funktionalitäten der Passwortmanager selbst nutzen. Und zwar gibt es nämlich jetzt bei Password, das nutze ich jetzt, gibt es ein sogenanntes Emergency Kit, das ist eigentlich ein PDF mit Account Details und wie die Person dann über einen zweiten Weg Zugriff auf dein Passwort Wallet bekommt. Das kannst du ja in deinem Familiensafe lagern oder von mir aus auch irgendwie vielleicht in das Testament mit reinpacken und dann beim Notar hinterlegen. Das ist ja dann sogar versiegelnd."
+        },
+        {
+            "start": 2426670,
+            "end": 2442190,
+            "speaker": "B",
+            "text": "Aber hast du natürlich Single Point of Failure, oder? Also du gibst dann das komplett weg, wenn jetzt die Person aus irgendeinem Grund irgendwie bösartig agiert, dann hast du, du hast das Vertrauen wirklich nur auf eine Person in dem Fall, oder gibt es da irgendwie Sicherheitsmechanismen?"
+        },
+        {
+            "start": 2442190,
+            "end": 2454360,
+            "speaker": "A",
+            "text": "Soviel ich weiß, gibt es da keine Sicherheitsmechanismen. Ja, das Vertrauen ist auf einer Person. Das das ist komplett richtig. Ich weiß jetzt nicht, ob wir dieses kryptographische Problem hier lösen sollten. Irgendwo muss man halt auch mal halt machen."
+        },
+        {
+            "start": 2454360,
+            "end": 2487630,
+            "speaker": "B",
+            "text": "Ja, es gibt ja schon grundsätzlich noch mal so eine Sicherheitsstufe. Keine Ahnung, ob das Passwort auch unterstützt, dass du quasi, wenn du das Security Zertifikat verwendest, dass du als Andi dann noch eine Anfrage geschickt bekommst, hey, da will jemand zugreifen und dann gibt es noch mal so eine Timeout Period oder so eine Period von vier und zwanzig Stunden und wenn du in dieser Zeit nicht antwortest, dann bekommt die Person wirklich alle Passwörter und sonst kannst du im Notfall innerhalb von den vier und zwanzig Stunden noch reagieren und nein, es ist irgendwie ein Fehler. Das bin nicht ich oder ich lebe noch."
+        },
+        {
+            "start": 2487950,
+            "end": 2525490,
+            "speaker": "A",
+            "text": "Sehr, sehr guter Punkt, offen gesprochen, weiß ich nicht. Denn Achtung, und mir fällt das jetzt gerade erst auf, während ich das jetzt hier gerade durchdenke und bespreche. Ich habe noch nie einen Disaster Recovery Drill gemacht. Also das bedeutet, ich habe dieses PDF ausgedruckt und ich habe es aber noch nie durchgespielt oder bzw. Durchspielen lassen von meiner Vertrauensperson. Und das ist natürlich eigentlich jetzt Schrödingers Backup, also das ist jetzt Schrödingers Emergency Kit, also keiner weiß, ob es funktioniert oder nicht. Der Passwortmanager Bitwarden hat so was ähnliches, der bietet auch Emergency Access mit View oder Takeover Modus samt Wartezeit. Das hört sich jetzt zumindestens Ich benutze"
+        },
+        {
+            "start": 2525490,
+            "end": 2529010,
+            "speaker": "B",
+            "text": "kein Bitwarden, ich habe es nur Das ist so eine Wartezeit, das hört sich"
+        },
+        {
+            "start": 2529010,
+            "end": 2626960,
+            "speaker": "A",
+            "text": "so an nach dem, was du da bereit bist. Der Jörg aus der Community hat aber was Schönes gesagt und zwar sagte Hör mal Jungs, alles schön und gut, aber Vault Zugriff allein löst das Problem ja nicht. Ein gemeinsamer Passwort. Vault sagte er hilft halt dann auch nichts, wenn keiner weiß, wie das zusammengehört oder wie die grundsätzlichen Funktionsweisen und hat der Jörg leider recht Context is King. Wenn du da zwar ein Passwort hast, aber du weißt nicht, dass der Passwortmanager auch zu Factor Authentification kann und pipapo. Also wenn das technische Wissen fehlt, wie das angewendet wird oder wenn die Einträge im Passwortmanager vielleicht auch einfach nicht ordentlich gepflegt sind, also wenn die URL nicht dabei ist oder ähnliches, da kann ja so viel schiefgehen. Eine Alternative haben wir gefunden und zwar hat der Dirk in der Community einen Link gepostet zu einem Blog, der nennt sich my itbrain. Und My itbrain hat sich auch zwei tausend vier und zwanzig und zwei tausend fünf und zwanzig mal um Dokumentation für den Notfall gekümmert. Und hat darüber gebloggt Und seine Lösungsart fand ich ein bisschen skurril, aber auch irgendwie praktikabel. Und zwar hat er sein Passwortmanager als CSV exportiert, ausgedruckt in Umschlag und einen sicheren Ort für ihn und seine Frau gelegt. Also das bedeutet, er hat einfach die Barriere deutlich reduziert und hat diese ganze Passwortmanager Thematik natürlich hops geworfen, indem man halt eine CSV File hat. Keine Ahnung, wie er da Two Factor Authentication jetzt funktioniert. Das wird da jetzt nicht besprochen. Ist vielleicht ein Shortcoming. Vielleicht muss man da mal auch einfach kommentieren und mal fragen. Aber wenn in dem CSV dann natürlich wieder der PIN Code drin steht und das Handy dann geladen werden kann mit dem PIN Code und das also ganz"
+        },
+        {
+            "start": 2626960,
+            "end": 2647320,
+            "speaker": "B",
+            "text": "interessant ist zumindest sehr pragmatischer Ansatz. Und je nachdem, wie sehr man in sicherheitsrelevanten Bereichen unterwegs ist, kann das durchaus ein gangbarer Weg sein. Aber weil so oft auch dieser Safe erwähnt wird, du hast ja scheinbar auch sowas irgendwo. Ich habe keinen, keine Ahnung, wie viele Leute noch ein Safe zu Hause haben,"
+        },
+        {
+            "start": 2647320,
+            "end": 2654900,
+            "speaker": "A",
+            "text": "ich habe keinen Safe zu Hause. Ich hatte mal ein Bankschließfach, das habe ich mal wirklich für wichtige Dokumente auch angemietet, Da habe ich monatlich Geld für gezahlt."
+        },
+        {
+            "start": 2654980,
+            "end": 2655980,
+            "speaker": "B",
+            "text": "Was kostet sowas?"
+        },
+        {
+            "start": 2655980,
+            "end": 2658660,
+            "speaker": "A",
+            "text": "Ich glaube, ich habe da sechzig oder achtzig Euro im Jahr für gezahlt."
+        },
+        {
+            "start": 2658740,
+            "end": 2659780,
+            "speaker": "B",
+            "text": "Okay, das geht."
+        },
+        {
+            "start": 2659780,
+            "end": 2666500,
+            "speaker": "A",
+            "text": "Oder ein hundert oder so, je nach Schliessfachgrösse. Also kannst ja große Schließfächer, kleine Schließfächer und so weiter."
+        },
+        {
+            "start": 2667060,
+            "end": 2669980,
+            "speaker": "B",
+            "text": "Ja, deine Goldbahn, oder? Die brauchen dann größere Schließfächer."
+        },
+        {
+            "start": 2669980,
+            "end": 2729700,
+            "speaker": "A",
+            "text": "Ja, ja, genau. Aber das geht ja dann noch. Also von dem Kostenpunkt, ich habe schon mehrere Leben, ich nenne es mal abgewickelt nach dem Tod. Und ich sage euch, jeden Brief, den man nicht an die Firma schreiben muss, ist Gold wert, weil du kannst alles mit der Sterbeurkunde und mit dem Erbschein mit diesen Unternehmen regeln. Das ist alles gar kein Problem. Es ist nur super zeitaufwendig. Du musst etliche Nachweise bringen und wenn jemand ablebt, hast du in der Regel anderes zu tun, als dich den ganzen Tag in deinem Word zu vergraben und irgendwelche Briefe zu schreiben und dann die Zugänge zu holen und die Informationsbeschaffung, was war das eigentlich? Und wenn die Dokumentenlage zu Hause vielleicht auch nicht gerade gut sortiert ist, nach A bis Z, welche Versicherung hast du das? Und dann gehst du irgendwie deine Bankkonten durch, mach den Kontoauszügen und das musst du über ein oder zwei Jahre machen, weil manche Abbuchungen sind nur jährlich und so. Also das ist ein riesen Hackmack und der zieht sich so lange. Jeden Brief, den du nicht schreiben muss, ist Gold wert."
+        },
+        {
+            "start": 2730250,
+            "end": 2767770,
+            "speaker": "B",
+            "text": "Man muss ja auch dazu sagen, dass das natürlich nicht sofort geht. Also weil du jetzt sagst, man kann alles machen, Klar kann man alles machen, aber die Verlassenschaft muss auch mal geklärt sein, weil ganz klassisch ist es so, Bankkonten zum Beispiel, Bankkonto wird von heute auf morgen geschlossen und du hast keinen Zugriff. Und zum Beispiel ein Freund von mir, dessen Vater gestorben ist, da hat die Verlassenschaft, also dieses Abklären von dem ganzen Erbe und so weiter, acht Jahre gedauert. Da hast du einfach acht Jahre keinen Zugriff auf irgendwelche Vermögenswerte. Und das wissen die wenigsten, dass wenn, auch wenn du jetzt verheiratet bist, du hast keinen Zugriff. Wenn das ein Einzelkonto ist, dann ist es einfach weggesperrt ab Todeszeitpunkt und du hast keinen Zugriff."
+        },
+        {
+            "start": 2767770,
+            "end": 2773650,
+            "speaker": "A",
+            "text": "Das stimmt. In Deutschland hast du glaube ich sechs Wochen Zeit, das Erbe anzunehmen und nicht. Und dann muss man natürlich gucken, okay,"
+        },
+        {
+            "start": 2773650,
+            "end": 2795610,
+            "speaker": "B",
+            "text": "ist der ja, aber wenn das Erbe nicht geklärt ist, wenn du, wenn du zum Beispiel eben, wenn der Erbe nicht gefunden werden kann, weil du viele Geschwister hast oder keine Ahnung, was es alles noch gibt oder du dich mit deinen Geschwistern nicht einig bist, ist ja egal, was ist, sowas kann sich herauszögern, dann hast du keinen Zugriff. Und das wissen immer noch wenige Leute, muss man dazu sagen."
+        },
+        {
+            "start": 2795610,
+            "end": 2806610,
+            "speaker": "A",
+            "text": "Das stimmt. Und jetzt hattest du schon Banken gesagt, da habe ich mich natürlich die Frage gestellt, okay, wie sieht das eigentlich mit diesem Online Geld aus, so Neobroker, Trade Republic, Scalable Capital und alle in Ruhe dran."
+        },
+        {
+            "start": 2806610,
+            "end": 2820540,
+            "speaker": "B",
+            "text": "Also meinst jetzt kein Krypto, wie der Franky schon gesagt hat, er hat da die Wallets irgendwie hinterlegt, sondern weil die sind ja wirklich weg. Also wenn du da nichts in der Hand hast, da kann dir der Notar halt auch nicht helfen, weil Krypto ist Krypto und Krypto ist einfach weg. Aber du sprichst jetzt von den klassischen"
+        },
+        {
+            "start": 2820540,
+            "end": 2883620,
+            "speaker": "A",
+            "text": "Banken, ich nenne es mal von den Neobrokern Trade Republic, da kann man euch erst mal den Wind aus den Segeln nehmen. Neobroker In Deutschland sind in der Regel ganz klassische Banken. Das bedeutet Trade Republic ist auch eine Bank in Deutschland und deren Support haben sie jetzt vor kurzem erst eingeführt, aber auch mit einem Brief dahin hätte man da Zugriff bekommen durch diesen normalen Rechtsweg. Aber wie der Bochum sagt, kann dauern. Dann gibt es natürlich diese ganze Krypto und Bitcoin Thematik und da begebe ich mich jetzt auf Eis. Ich habe kein Krypto, ich habe kein Bitcoin, deswegen kann ich da nichts zu sagen bzw. Sehr wenig zu sagen. Aber was ich weiß, da gibt es ja Wallets und Offline Wallets. Und Offline Wallets haben natürlich auch ein Passkey und allem drum und dran oder ein Passwort, nicht ein Passkey im Pass. Das kann man natürlich schon auch irgendwie regeln mit einem Zettel und dann den One Password Manager und allem drum und dran. Das kriegt man schon irgendwie hin. Aber ich weiß jetzt nicht, ob du deinen nicht technikaffinen Liebsten, hier hast du eine Offline Wall, such dir mal eine Krypto Exchange, um das jetzt mal irgendwie zu Geld zu machen. Auch sportlich würde ich sagen."
+        },
+        {
+            "start": 2883620,
+            "end": 2901340,
+            "speaker": "B",
+            "text": "Interessant war eigentlich zu wissen, ob du bei einer Online Wallet, ob das normal in der Verlassenschaft mit drin ist. Ist wahrscheinlich sogar, Kurze Frage, Verlassenschaft ist Erbe, Erbmasse. Ich kenne das Wort. Okay, ja, ist wahrscheinlich wieder eine österreichische."
+        },
+        {
+            "start": 2901500,
+            "end": 2905640,
+            "speaker": "A",
+            "text": "Ja, aber das müssen wir mal hier klären für die ganzen deutschen deutschen Hörerinnen und Hörer."
+        },
+        {
+            "start": 2905640,
+            "end": 2909840,
+            "speaker": "B",
+            "text": "Verlassenschaft, auch Nachlass genannt, gesamtes Vermögen, Schulden"
+        },
+        {
+            "start": 2910240,
+            "end": 2911880,
+            "speaker": "A",
+            "text": "und so weiter, Erdmasse nennt man das"
+        },
+        {
+            "start": 2911880,
+            "end": 2916640,
+            "speaker": "B",
+            "text": "in Deutschland und in Österreich gibt es dann das Verlassenschaftsverfahren und das ist eben das, was das alles abwickelt."
+        },
+        {
+            "start": 2916640,
+            "end": 2918000,
+            "speaker": "A",
+            "text": "Welches Gericht macht das bei euch?"
+        },
+        {
+            "start": 2918240,
+            "end": 2922280,
+            "speaker": "B",
+            "text": "Im Normalfall das örtliche Bezirksgericht zusammen mit dem Notar."
+        },
+        {
+            "start": 2922280,
+            "end": 2928880,
+            "speaker": "A",
+            "text": "Bezirksgericht, okay, aber in Deutschland ist es das unterste Gericht halt das Amtsgericht heißt das bei uns?"
+        },
+        {
+            "start": 2929120,
+            "end": 2933770,
+            "speaker": "B",
+            "text": "Ja, auf Bezirksebene bei uns, also Innsbruck gibt es halt das Innsbrucker Bezirksgericht."
+        },
+        {
+            "start": 2933930,
+            "end": 2956490,
+            "speaker": "A",
+            "text": "Aber zurück zu Krypto Online Wallets. Ja, keine Ahnung, habe ich nicht, kann ich relativ wenig zu sagen, aber auch ich würde, hätte ich Krypto, nachdem all das, was man so im Internet über Online Wallets liest, sowieso eine Offline Wallet, damit meine Bitcoins vielleicht irgendwann mal auf so einer Müllhalde sind, wo ich jahrelang danach suche, wenn die mal wieder steigen oder ähnlich. Du hast Krypto, Wolfgang, oder?"
+        },
+        {
+            "start": 2956810,
+            "end": 2958250,
+            "speaker": "B",
+            "text": "Na, schon lange nicht mehr."
+        },
+        {
+            "start": 2958560,
+            "end": 2958880,
+            "speaker": "A",
+            "text": "Okay."
+        },
+        {
+            "start": 2958880,
+            "end": 2967960,
+            "speaker": "B",
+            "text": "Übrigens gerade kurz gegoogelt Scheinbar ist natürlich ein Online Wallet, wird ganz normal vererbt. Der Zugriff sollte also passen, aber ich würde mich trotzdem drum kümmern."
+        },
+        {
+            "start": 2967960,
+            "end": 3013340,
+            "speaker": "A",
+            "text": "So, jetzt sind wir aber bei dir zu Hause und bei dir zu Hause hast du dir ein Raspberry Pi dahingestellt, da läuft ein Home Assistant und bei dir kann man in deinem Home Lab wahrscheinlich auch nicht mehr das Licht ohne Home Assistant anschalten. Jetzt bist du hops und jetzt komme ich in deine Bude, weil irgendwann muss ich auch die ausräumen und es ist Winter und ich kann nur nach der Arbeit, dann gehe ich da rein und kriege das Licht nicht angeschaltet, weil der Home Assistant irgendwie abgekackt ist. Kommen wir mal auf das ganze Thema Self Hosting, Home Lab, Heimautomatisierung, Serverfarm, doppelte Internetanbindung, all das, was du so als professioneller Spielerd so hast. Wie stellst du uns da auf? Wie gibst du deiner Mutter das Wissen, dass die deine Bude ausräumt, ohne das Licht anzumachen mit der Taschenlampe?"
+        },
+        {
+            "start": 3014240,
+            "end": 3051110,
+            "speaker": "B",
+            "text": "Meine Herangehensweise war ja schon immer, kam damals auch von außen, muss ich zugeben. Aber dieses, es muss immer physikalische Schalter geben bei meinem Home Assistant und es muss immer einen Kill Switch quasi geben oder einen Schalter, mit dem ich overrulen kann. Und bei mir war das immer nur Add on und meine Aufbauten waren auch immer so, dass Home Assistant Add on ist und wenn der mal ausfällt, nachdem der bei mir übrigens auch auf einem Raspberry Pi Zero läuft, was wirklich unterste, unterste Klasse ist und hin und wieder auch mal abschmiert, kann man bei mir trotzdem alles weiterhin bedienen. Wie schaut es bei dir aus?"
+        },
+        {
+            "start": 3051110,
+            "end": 3183100,
+            "speaker": "A",
+            "text": "Okay, gehen wir zuerst mal auf das Thema Heimautomatisierung. Wie schaut es bei mir aus? Ich will mehr mit Heimautomatisierung machen. Ich habe auch eine Box of Shame. Die Box of Shame hat ganz viele Home Devices, die noch verbaut werden möchten, aber ich habe aus genau dem Grund, den du da gerade gesagt hast, sehr wenig Heimautomatisierung. Und ich bin ebenfalls fest der Überzeugung, dass alles so aufgebaut werden muss, dass es noch physikalisch und ohne mich funktioniert. Weil der Grund ist ganz einfach. Wenn ich im Skiurlaub bin oder ähnliches und zu Hause der Server abschmiert, habe ich keine Lust, mit ihm auf der Piste am Handy zu hängen, meiner Frau zu erklären, wie der Server wieder hochfährt oder ähnliches. Ich sage aber, es ist eine Kunst, deine Heimautomatisierung so zu designen, dass sie digital und physisch bzw. Analog funktioniert. Das ist nicht einfach. Aber ich würde das mal in das Thema Design und Architektur deines Home Labs stecken. Denn wenn man das von der Perspektive betrachtet, dann geht es ja noch viel weiter. Du willst dein Papierkram digitalisieren. Buff, hast du ein Paper des NGX. Das sind ja all deine Briefe, das sind ja all deine Versicherungen, allem drum und dran. Das willst du ja in der Regel nicht auf einen Software as a Service abliefern. Dann hast du vielleicht einen lokalen imich. Imich ist das lokale Google Fotos, wenn du so möchtest, wo du deine Fotos von deinem Handy hin syncst. Das sind ja schon essentielle Daten, die du hast und die auch vielleicht dann sogar für die Familie oder besonders in deinem Ableben sehr wichtig sind. Die Dokumente brauchst du, um den ganzen Kram zu regeln. Paperless NGX ist nicht mehr verfügbar. Die Fotos brauchst du vielleicht für die Beerdigung, um einfach nur mal ein paar schöne Andenken von Wolfgang dahin zu stellen, wie der irgendwo in einem Seil an einem Berg hängt, weil du mal fotografiert wirst, kommst du ja nicht ran. Dann geht es weiter. Was ist denn, wenn das Internet mal ausfällt zu Hause, Wo geht das Kabel rein? Welcher Router muss neu gestartet werden? Welche Repeater sind da und so weiter. Oder du hast Fritzboxen und Fritzboxen hat, glaube ich, automatische Updates eingestellt. Es geht mal ein Update schief und die ganze Bude steht still und hat kein Internet mehr. Das sind diese Kleinigkeiten, die dann erst auffallen. Wie designst du das? Wie löst du das? Was ist dein Ansatz?"
+        },
+        {
+            "start": 3183100,
+            "end": 3192820,
+            "speaker": "B",
+            "text": "Ich würde ja sowieso wahrscheinlich einfach einen dummen Router irgendwo hinstellen, so ein Backup Router und dann wirf mal das ganze intelligente Zeug weg. Nimm einfach den dummen Router und du hast Internet."
+        },
+        {
+            "start": 3192820,
+            "end": 3197620,
+            "speaker": "A",
+            "text": "Du redest gerade von diesem Ding, was du von der Telekom zugeschickt bekommst, wenn du den Vertrag neu abschließt."
+        },
+        {
+            "start": 3198180,
+            "end": 3243770,
+            "speaker": "B",
+            "text": "Ja, so irgendwas ganz was, so ein Easy Router, vielleicht sogar mit einer SIM Karte drin Und dann hast du einfach mal Internet. So ein Notfallding kannst du ja auch selber gut verwenden, so als Notfallrouter an sich. Wobei man ja auch grundsätzlich dazu sagen muss, egal ob es jetzt Home Automation oder Netzwerk oder sonst was ist, im Idealfall läuft es ja mal weiter, ist immer die Frage, wie lang? Natürlich ohne Wartung, aber es sollte ja mal ein paar Wochen zumindest weiterlaufen. Und im Idealfall hast du dann irgendwas dokumentiert, aber wer hat denn sein Home Automation System dokumentiert? Oder vielleicht so wie Frankie eine Anleitung, wie du das zurückfahren kannst, zurückbauen kannst oder was relevant ist. Also das sind natürlich noch mal Sachen, die würde mal mir aus dem Fenster lehnen, die wenigsten irgendwie dokumentiert haben."
+        },
+        {
+            "start": 3243770,
+            "end": 3274990,
+            "speaker": "A",
+            "text": "Ja, und auch dein Home Lab kann ja, keine Ahnung, wenn dein Home Lab zwanzig virtuelle Maschinen hat, sind wir mal ehrlich, wie viel von diesen virtuellen Maschinen sind wirklich relevant und wie viel sind Spielereien? Also wenn du natürlich enorme Komplexität drin hast, dann hast du da vielleicht eine Firewall, dann hast du deinen eigenen DNS und deinen eigenen Mail. Und ja, da kommen auch sehr viele itler an die Grenzen. Es ist zwar schön, wenn du rumspielst, aber jetzt stell dir vor, du hast in deinen Notfallkontakt mich drin stehen und ich bin jetzt itler bei der Volksbank. Ich beleidige jetzt gerade alle itler bei der Volksbank, das tut mir total leid, aber ich muss jetzt irgendein Beispiel."
+        },
+        {
+            "start": 3274990,
+            "end": 3275829,
+            "speaker": "B",
+            "text": "Ich wollte gerade sagen."
+        },
+        {
+            "start": 3277590,
+            "end": 3305680,
+            "speaker": "A",
+            "text": "Naja, also was ich sagen möchte, ist glaube ich, dass nicht alle itler gleich itler sind und nicht alle itler haben Ahnung, wie man einen Mail Server einrichtet und DNS im Netzwerk konfiguriert und pipapo und jetzt kachelt da dein DNS ab aus irgendwelchen Gründen und ich bin der Notfallkontakt, weil dir was zugestoßen ist und ich sitze da irgendwie vor deinen vms. What the heck, Wie konfiguriere ich dir jetzt hier diesen Bind ordentlich fürs Netzwerk? Verstehst du, was ich meine? Also nicht jeder ist auf deinem Level, dass er das überhaupt fixen kann und allein einen Kontakt zu haben, der dann helfen kann, ist schon hart."
+        },
+        {
+            "start": 3305760,
+            "end": 3357310,
+            "speaker": "B",
+            "text": "Das Problem ist ja auch das, was wir am Anfang besprochen haben, dass die Hinterbliebenen eigentlich entscheiden, was wichtig ist. Aber gerade in diesem Setup ist immer die Was ist denn wichtig? Weil wenn du jetzt deine zwanzig vms hast, dann sind wahrscheinlich neunzehn komplett irrelevant. Die kannst du einfach wegkicken oder vielleicht den ganzen Server eigentlich wegkicken und einen einfachen Router verwenden. Aber diese eine VM, wo dein Paperless drauf läuft, da liegen alle Dokumente noch drauf. Und genau diese Dokumente brauchst du aber und die hast du eben nicht synchronisiert mit der Apple Cloud, sondern die liegen halt offline, weil du ja Datenschutz, Privacy und so weiter affin bist. Die liegen nur auf dieser einen VM oder vielleicht gebackupt auf einer anderen VM. Aber du brauchst genau diese eine VM und dann brauchst du eigentlich diese Info, dass diese eine VM wichtig ist. Alle anderen sind irrelevant, aber wer hat schon diese Info irgendwo aufgeschrieben und dann"
+        },
+        {
+            "start": 3357310,
+            "end": 3513990,
+            "speaker": "A",
+            "text": "geht deine VM hops und vielleicht hast du das Backup ja noch irgendwo noch hetzer synchronisiert auf dein Storage oder Amazon S Verstand verschlüsselt und so weiter. Ordentliches Offshore Backup oder vielleicht sogar auf eine andere Festplatte, was ja super ist. Aber auch dann muss ja irgendwo dokumentiert werden. Und dokumentiert hört sich so hochgestochen an. Ich rede von irgendeinem Dokument, wo drin steht, das Backup liegt da und so kriegt man Zugriff drauf. Und das hat auch wieder My itbrain gemacht. Ich habe ja vorhin von diesem Artikel gesprochen, Dokumentation für den Notfall bzw. Das digitale Erbe. Und was My IT Brain gemacht hat, den Artikel haben wir natürlich auch in den Shownotes verlinkt. Er hat eine Dokumentation erstellt in nicht itler verständlichen Sprache, aber für itler nutzbar. Allein das ist schon eine Herausforderung, würde ich sagen. Die hat er ausgedruckt und da ist so eine Struktur, wie kommt das Internet ins Haus, wie wird das Internet im Haus verteilt, wo finde ich unsere Fotos, Videos, Dokumente und digitalen Einkäufe und was kann ich tun, wenn das Internet nicht geht, das WLAN nicht geht, Das weiße Ding im Keller blinkt oder piept, finde ich auch schon das weiße Ding. Und er hat die Dokumentation nicht zu Schrödingers Dokumentation werden lassen. Er hat nämlich das ausgedruckte Dokument seiner Frau in die Hand gedrückt mit der Bitte korrigiere doch mal und sag mir deine Meinung. Und das war wohl erfolgreich. Und was er dann auch gemacht hat, er hat eine Trennung gemacht zwischen heimlab oder Home Lab und Heimnetzwerk. Also er darauf geachtet, dass sein Home Lab komplett abgeschaltet werden kann, ohne dass die Funktion des Heimnetzes und den Internetzugang negativ beeinflussen. Ist finde ich auch ein smarten Move eigentlich so nach dem Motto, meine Spielwiese von dem kritischen Kram mal zu trennen in dem Blogpost. Generell gibt er ein paar gute Sachen, wie zum Beispiel diese IT Notfall Dokumentation entsteht halt nicht von alleine. Und wenn du dir jetzt darüber nachdenkst, boah, ich müsste auch mal eine erstellen, aber ich habe keine zehn Stunden Zeit, dann sagt er auch immer zehn Minuten am Tag hat er dran gearbeitet und packt ein Diagramm der heimischen IT Infrastruktur hin. Du siehst schon, wohin das geht eigentlich eine Systemarchitektur mit einem Bild. Ein Bild sagt mehr als tausend Worte. Und dann sagte er ja, wie habe ich das Ganze aufgesetzt? Und da, das hat mich jetzt hart zum Lachen gebracht, weil ich denke mir, das kann doch nicht sein. Du denkst so weit nach vorne, druckst etwas aus in Nicht itler Sprache und so weiter und so fort. Und dann sagt ja, dann habe ich mal einen Git Repository erstellt in meinem Heimnetzwerk auf seinem lokalen GitLab und hat in einem latex Dokument angefangen zu schreiben. Und dann denke ich mir ich weiß nicht, soll das so sein? Du versuchst gerade eine Dokumentation für Nicht itler im Notfall zu machen, machst es aber das overinstr mit latex und allem drum und dran."
+        },
+        {
+            "start": 3513990,
+            "end": 3516230,
+            "speaker": "B",
+            "text": "Ja, latex kann man super ausdrucken, das"
+        },
+        {
+            "start": 3516230,
+            "end": 3521070,
+            "speaker": "A",
+            "text": "PDF, ja, das ist super, weil sie da nicht Ich meine, wir reden über den Notfall, das bedeutet, reicht ja nicht."
+        },
+        {
+            "start": 3521710,
+            "end": 3528090,
+            "speaker": "B",
+            "text": "Du brauchst ja nicht den Song Source Code, du brauchst nur das PDF, denn das Resultat latex eignet sich perfekt für ein schönes Buch."
+        },
+        {
+            "start": 3528090,
+            "end": 3578970,
+            "speaker": "A",
+            "text": "Ich hätte da wirklich da Simplicity first, so nach dem Motto einfach Libre Docs oder Office und was da nicht alles gibt. Von daher, das hat mich aber zum Grinsen gebracht. Aber seine Learnings fand ich auch schön. Und zwar sagte er, wenn du zehn Minuten am Tag daran arbeitest, ist der Aufwand geringer als gedacht. Er sagte auch, die Dokumentation ist niemals vollständig. Aber je länger er darüber nachgedacht hat, desto mehr Dinge fallen ihm ein. Aber es ist auch völlig in Ordnung, dass diese Dokumentation niemals vollständig ist, denn es soll ja nur ein Kickstart sein. Es soll ja initiale Sachen erleichtern. Und mit der Verfügbarkeit deines Home Labs, deines Internetanschlusses und so weiter steigt natürlich auch die Komplexität der Wartung und der Dokumentation. Er sagte, habe ich ein oder zwei Internetanschlüsse, also habe ich noch ein Glasfaser und vielleicht noch hier so ein und hier dieses Satellitennetzwerk vom Elon Musk. Wie heißt das nochmal? Sky."
+        },
+        {
+            "start": 3579370,
+            "end": 3580130,
+            "speaker": "B",
+            "text": "Skylink."
+        },
+        {
+            "start": 3580130,
+            "end": 3583130,
+            "speaker": "A",
+            "text": "Starlink. Starlink, nicht Starlink."
+        },
+        {
+            "start": 3583690,
+            "end": 3585490,
+            "speaker": "B",
+            "text": "Oder Starlink ist in irgendeinem Film."
+        },
+        {
+            "start": 3585490,
+            "end": 3612910,
+            "speaker": "A",
+            "text": "Ja, ja, oder eigene Firewall, eigener DNS und so weiter. Braucht man das denn eigentlich? Weil all das ist halt schon wirklich schwierig. Und sein Fazit war halt, okay, die nun existierende IT Dokumentation ist halt definitiv besser, als gar keine zu haben. Es ist halt keine Schritt für Schritt Anleitung, aber die wichtigsten Informationen sind halt da. Und wenn du die diese Anleitung einer IT affinen Person gibst, dann soll die Person damit wohl auch klarkommen. Was hältst du von diesem Dokumentationsansatz?"
+        },
+        {
+            "start": 3612910,
+            "end": 3673590,
+            "speaker": "B",
+            "text": "Also ganz grundsätzlich glaube ich, dass das eigentlich der Schlüssel Nummer eins ist, zu dokumentieren, egal um was es jetzt geht. Und wir kennen das ja alle aus der Businesswelt und du hast ja auch den Einstieg so gewählt, dass wir Offboarding im Business Umfeld sehr genau definieren, dokumentieren. Was musst du machen mit dem Account? Es ist alles dokumentiert. Du musst in irgendeiner Form niederschreiben, was dein Wissen ist und so weiter. Also das kennen wir alles aus der Businesswelt und wir alle wissen, wie wichtig Dokumentation ist. Warum sollten wir im privaten Leben nicht genauso diese Dokumentation anwenden und dasselbe vorgehen? Es ist ja genau dasselbe. Also finde ich, ist Dokumentation an sich key. Und man muss ja auch dazu noch sagen, im Gegensatz zur Businesswelt, wo du ja mit Leuten zusammenarbeitest, die das technische Verständnis haben müssen oder sollten, arbeitest du im privaten Leben halt sehr oft mit Personen zusammen oder vielleicht mehr als arbeiten. Aber du hast mit Personen zu tun, die weniger technisches Verständnis haben. Also du musst es translaten. Und das ist natürlich auch noch der wichtige Punkt, wie du richtig beschrieben hast."
+        },
+        {
+            "start": 3673590,
+            "end": 3681070,
+            "speaker": "A",
+            "text": "Ich stimme dir teils zu. Ich denke, eine Dokumentation zu haben ist super, aber ich denke auch sie allein wird es nicht bringen. Ich denke die Königs."
+        },
+        {
+            "start": 3681070,
+            "end": 3694200,
+            "speaker": "B",
+            "text": "Ja, wie bei jeder Dokumentation, oder? Du kannst zu viel dokumentieren, du kannst zu wenig dokumentieren. Die Dokumentation allein reicht nicht wie bei Code Dokumentation wie bei einer Architektur eigentlich machen genau dasselbe."
+        },
+        {
+            "start": 3694200,
+            "end": 3747190,
+            "speaker": "A",
+            "text": "Ja, das ist fair. Aber ich sage trotzdem, die Königsklasse ist, glaube ich, designe deine private IT so, dass sie ohne dich weniger kaputt geht. Und das Pendant ist jetzt nicht der Code, ist die Dokumentation das jetzt nicht. Ich glaube auch, wenn du eine Dokumentation hast, brauchst du eine zusätzliche Person, die die Dokumentation auch in Kontext setzen kann und auch anwenden kann. Wenn ich mir jetzt ein paar Sachen aufschreibe, ich schreibe jetzt hier, ich habe ein Proxmox da laufen ein paar vms drauf. Die wichtigsten vms ist Paperless, mein Foto Storage und mein Home Assistant. Die wichtigsten vms werden auf Amazon S verschlüsselt. Gebackup, hier ist der Bucket Name. Wie bekommt man Zugriff? SSH Key liegt immer, Password, Password Emergency Kit ist dann da und da auffindbar und so weiter. Wenn ich dir das jetzt geben würde oder meine Frau, wenn dir das geben würde, dann denke ich mal, würdest du damit klarkommen, um zumindest die Sachen wiederherzustellen, oder?"
+        },
+        {
+            "start": 3747750,
+            "end": 3749830,
+            "speaker": "B",
+            "text": "Genau so eine Anleitung."
+        },
+        {
+            "start": 3749830,
+            "end": 3756870,
+            "speaker": "A",
+            "text": "Ja, Anleitung ist ja jetzt keine Anleitung. Also da steht jetzt nicht OK, nutze diesen Befehl, um eine Proxmox VM wieder zu importieren oder ähnliches."
+        },
+        {
+            "start": 3757110,
+            "end": 3775380,
+            "speaker": "B",
+            "text": "Naja, weil es wäre eigentlich eine Anleitung. Die fünf wichtigsten Accounts oder halt die x wichtigsten Accounts. Wie komme ich dorthin? Was mache ich damit? Was muss ich beachten? Und vielleicht auch so eine Negativliste. Was kannst du einfach wegschmeißen? Was musst du nicht beachten?"
+        },
+        {
+            "start": 3775380,
+            "end": 3779620,
+            "speaker": "A",
+            "text": "Vielleicht die Negativliste, einfach alles, was nicht in der wichtigen WM Liste da ist"
+        },
+        {
+            "start": 3779620,
+            "end": 3781260,
+            "speaker": "B",
+            "text": "oder so oder so. Ja, genau."
+        },
+        {
+            "start": 3781260,
+            "end": 3829250,
+            "speaker": "A",
+            "text": "Aber der Dirk hat ebenfalls gesagt, okay, schreib auf, dass es eine Person brauchen würde, auf die deine Partnerin bei Problemen zugehen kann mit diesen Du hast es Anleitungen genannt. Ich habe einfach gesagt, okay, grobe Dokumentation, wo liegt was? Das bedeutet natürlich auch, dass du auch ein starkes Vertrauen in die Person haben musst in den Freunden und am besten vielleicht auch mal diese Freunde vorwarnen muss. Also ich hätte dann jetzt mit dir vorher gesprochen, Wolfgang, ich habe diese Notfallmappe erstellt, die drucke ich einmal im Quartal aus, kontrolliere die einmal, ob das noch einigermaßen stimmt und wenn mir irgendwas zustößt, dann weiß meine okay, ich schicke das dem Wolfgang. Wolfgang kommt mal in die schönste Stadt der Welt, Duisburg, und richtet die Infrastruktur mal hier wieder ein. Das wäre natürlich toll, wenn du dann vorgewarnt bist und nicht dann wie so ein Oxyphon backsteht, wie der hat mich jetzt hier als fähig benannt."
+        },
+        {
+            "start": 3829410,
+            "end": 3836970,
+            "speaker": "B",
+            "text": "Ja, das würdest du nie machen, mich als fähig benennen, aber danke in dem Fall, dass du mich schon als fähig bezeichnest zum ersten Mal im Podcast."
+        },
+        {
+            "start": 3836970,
+            "end": 3858400,
+            "speaker": "A",
+            "text": "Aber das finde ich ein ganz guter Ansatz, dass halt eine zusätzliche Person unerlässlich ist, weil da kommt wieder der Punkt Bassfactor, weil im Endeffekt bist du ja der Bassfactor für deine Home IT. Und Achtung, du wurdest ja gerade, du bist ja gerade gestorben und deswegen wurdest du ja gerade vom Bus erfasst. Und was passiert jetzt? Also warum sollte die Lösung in einer Firma anders sein als bei Privat?"
+        },
+        {
+            "start": 3858400,
+            "end": 3862360,
+            "speaker": "B",
+            "text": "Genau, du hast halt immer einen Passfaktor von eins üblicherweise, was auch in der"
+        },
+        {
+            "start": 3862360,
+            "end": 3909560,
+            "speaker": "A",
+            "text": "Community genannt wurde, wenn man jetzt keine Freunde hat. Oder kann man natürlich auch irgendwie eine Liste möglicher Systemhäuser da reingeben, die zum Beispiel auch Privatkunden betreuen. Die müssten ja auch sowas alle können. Klar, kostet alles eine Mark, blablabla. Je nachdem, was das halt für Daten sind, ist das vielleicht eine ganz gute Sache. Aber ich denke, eins der Hauptträgerpunkte, wo man wirklich drüber nachdenkt, was ist eigentlich das Essentielle in deinem Home Lab? Welchen Zugang muss eigentlich da sein? Also jetzt Zugang zu dem Amazon S, wo die Backups lieben, fände ich ganz sinnvoll, dass der dann auch im One Password ist und vielleicht sogar in einem eigenen Password Vault oder sowas. Du kannst ja da Unterkategorien erstellen oder in deinem Passwort Storage. Und auch die Wie simpel oder komplex soll eigentlich dein Home Lab sein? Ich glaube, du kannst ja im Homelab unendlich viele Sachen machen und rumspielen, aber wer kriegt das denn später noch gefixt?"
+        },
+        {
+            "start": 3909720,
+            "end": 3920880,
+            "speaker": "B",
+            "text": "Das Gute ist ja, dass man es nicht unbedingt fixen muss. Also ich glaube, ganz viele Sachen kann man wegwerfen, aber auch da hilft es halt, wenn man vorab eine sinnvolle Planung schon hat. Was kann man wegwerfen? Was ist essentiell? Was bleibt?"
+        },
+        {
+            "start": 3920880,
+            "end": 3959970,
+            "speaker": "A",
+            "text": "Mir kam noch eine Gedanke, als ich mir die Frage gestellt Zerstört das nicht alles hier gerade? Der eigentliche Spaß am Homelab? Der Spaß am Homelab ist ja zu experimentieren. Der Spaß am Homelab ist ja Blödsinn zu machen, Hacks zu machen, nicht so professionell zu arbeiten wie auf der Arbeit, nicht dokumentieren zu müssen, weil niemand schreibt gerne Dokumentation und einfach nur testen, rumspielen, was kaputt machen, neu aufbauen und jetzt kommen wir hier mit so einer Episode und lass deine Lieben nicht im Regen stehen, wenn du das Zeitliche segnest und schreib Dokumentation über deine Backup Strategien und wie man das alles wieder ans Fliegen kriegt und allem Pipapo steht halt nicht im Konflikt."
+        },
+        {
+            "start": 3959970,
+            "end": 3992420,
+            "speaker": "B",
+            "text": "Ich glaube grundsätzlich, dass man sich einfach überlegen muss, will ich wirklich die Heizung zu ein hundert Prozent selbst steuern mit meinem System oder kann ich das vielleicht anders lösen Und das muss man sich halt einfach im Klaren sein, weil es ist ja auch so, du bist jetzt vielleicht, keine Ahnung, weg im Winter drei Tage, Andy, du mit deinen Kegel Leuten da irgendwo auf Malle oder so, soll ja schon mal vorkommen im Winter. Ja, lass es mal in die Mitte sein. Malediven geht sich noch nicht aus, oder kostentechnisch, Malle und Malediven, du bist so"
+        },
+        {
+            "start": 3992420,
+            "end": 3999260,
+            "speaker": "A",
+            "text": "fern von Deutsch, es ist unglaublich. Mallorca siebzehnte Bundesland, Malle und Malediven."
+        },
+        {
+            "start": 3999260,
+            "end": 4066360,
+            "speaker": "B",
+            "text": "Ich sage Winter Malediven, aber vielleicht müsst ihr da noch mehr sparen. Egal, du bist mal nicht zu Hause, wir sprechen da jetzt gar nicht von sterben, sondern du bist einfach nicht zu Hause und dein komisches System fällt daheim aus, dann hast du nämlich auch ein Problem, weil du kannst vielleicht nicht bei SSH zugreifen von den Malediven, gerade weil irgendwie der Router ausgefallen ist und deine Heizung streikt. Viel Spaß. Also ich würde mir schon grundsätzlich überlegen, was will ich wirklich machen mit der Heizung, Wie weit gehe ich? Habe ich vielleicht ein anderes professionelles Steuersystem, was ich aber über API ansprechen kann. Also es gibt da ja schon Lösungen, wo dann auch, wenn mein ganzes Home Lab wegbricht, dieses Kernsystem funktioniert immer noch, das ich bei API anspreche, ein professionelles System, wo es auch eine Wartungsfirma zum Beispiel gibt oder die Firma, die vielleicht anrufen kann und sowas muss ich mir sowieso grundsätzlich überlegen. Und diese Trennung, sich auch im Hinblick zu überlegen, was passiert, wenn ich mal nicht da bin. Es gibt ja auch so Sachen wie, dass man sich zum Beispiel trennt. Es gibt ja viele solche Situationen und sich da mal grundsätzlich den Kopf rüber zu zerbrechen, macht glaube ich, absolut sinnvoll. Und da sprechen wir noch lange nicht von Staat."
+        },
+        {
+            "start": 4066360,
+            "end": 4076920,
+            "speaker": "A",
+            "text": "Nur um nochmal dein Heizungsbeispiel aufzugreifen. Der Heizungsmonteur kann dir da auch leider nicht helfen, weil die wenigsten Heizungsmonteure heutzutage in der digitalen Welt so versiert sind."
+        },
+        {
+            "start": 4076920,
+            "end": 4110620,
+            "speaker": "B",
+            "text": "Nein, aber der Unterschied ist, wenn mein Homelab nicht die Heizung direkt steuert, sondern da ein Heizungssystem dazwischen hängt und ich nur die API anspreche, dann funktioniert das Heizungssystem ja an sich auch weiterhin. Also ich würde es halt so designen, wenn mein Homelab wegbricht, Wenn das, was ich da zusammen code oder mein LLM und ich zusammen code, wenn der Teil wegbricht, muss alles noch funktionieren. Vielleicht weniger intelligent, vielleicht muss ich einen Schalter mehr drücken, vielleicht funktioniert eine Zeitschaltung weniger, aber es funktioniert noch. Und ich glaube, so muss man das designen."
+        },
+        {
+            "start": 4110620,
+            "end": 4117780,
+            "speaker": "A",
+            "text": "Das ist ja genau diese Architektur, von der ich vorhin gesprochen habe, dass alles auch ohne dann Homelay funktioniert und physikalisch aber was auch unglaublich schwierig ist."
+        },
+        {
+            "start": 4118450,
+            "end": 4133690,
+            "speaker": "B",
+            "text": "Aber genau dann musst du auch nichts dokumentieren, wenn du sowas erreichst. Und da ist halt die Frage, wie weit gehst du, was willst du machen? Aber wie gesagt, persönlich habe es immer so entschieden, Ich kann auch besser schlafen, wenn das einigermaßen funktioniert. Wenn mein Raspberry wegbricht."
+        },
+        {
+            "start": 4133690,
+            "end": 4160180,
+            "speaker": "A",
+            "text": "Ja, bei der Heimautomatisierung ist das vielleicht noch machbar, Aber wie funktioniert das zum Beispiel, wenn du deinen Schriftverkehr digitalisieren möchtest? Also die Alternative wäre, du kriegst einen Brief, scannst den ein, hast du den Paperless oder in deinem Google Drive oder wo auch immer du deine digitalen Scans organisierst und legst den dann in den Aktenordner. Das ist ja nicht Sinn der Thematik, sondern du schmeißt den Brief ja weg, damit du den Storage für die Aktenordner nicht mehr haben musst. Klar, da gibt es eine Unterscheidung, aber"
+        },
+        {
+            "start": 4160180,
+            "end": 4171990,
+            "speaker": "B",
+            "text": "du hast ja dann Google Drive und Google Drive kannst du ja relativ sinnvoll weitervererben, nenne ich es mal, oder den Schlüssel eben weitergeben und da ist nicht dein Homelab involviert."
+        },
+        {
+            "start": 4171990,
+            "end": 4192150,
+            "speaker": "A",
+            "text": "Bei Google Drive ist das jetzt ein SaaS Dienst. Aber würde das jetzt bedeuten oder würdest du vorschlagen, ich habe jetzt ein Paperless hier lokal laufen, weil die Dokumente, Privacy hätte ich gerne im Homelab, dass ich alle Dokumente in derselben Folderstruktur nochmal nach Google Drive dumpe, weil das wäre ja dann eigentlich deine Lösung, oder Wäre eine Option."
+        },
+        {
+            "start": 4192150,
+            "end": 4194310,
+            "speaker": "B",
+            "text": "Ja, kannst auch eine Nextcloud nehmen, die"
+        },
+        {
+            "start": 4194310,
+            "end": 4195790,
+            "speaker": "A",
+            "text": "dann auf Hetzer gehostet wird."
+        },
+        {
+            "start": 4196030,
+            "end": 4213350,
+            "speaker": "B",
+            "text": "Genau, die gemanagt gehostet ist, die funktioniert wenigstens noch so lange, dass man sich die Daten ziehen kann. Oder eine externe Festplatte, da liegt eine externe Festplatte, da wird es immer drauf gedumpt, dann kannst du schmeiß das Homelab weg, die externe Festplatte, die wichtigsten Daten kannst du jederzeit anstecken."
+        },
+        {
+            "start": 4213350,
+            "end": 4231690,
+            "speaker": "A",
+            "text": "Ist auf jeden Fall ein interessantes Gedankenspiel, wie sehr man die ganze Sache simplifizieren kann Und auch dann brauchst du ja eine kleine Anleitung, wie zum Beispiel alle Dokumente in meinem Sterbefall findest du auf dieser Festplatte. Aber auch das, ich glaube, jeder kriegt heutzutage es hin, eine externe Festplatte anzuschließen. War ja früher auch so, weil man noch nicht so viel Storage auf seinem Laptop."
+        },
+        {
+            "start": 4231690,
+            "end": 4245650,
+            "speaker": "B",
+            "text": "Okay, aber jetzt haben wir im Vorgespräch schon geklärt, dass wir beide nachgedacht haben und dieses Thema uns getriggert hat, darüber nachzudenken. Was sind denn jetzt deine drei nächsten Schritte, die du angehen willst oder wo du jetzt gesagt hast, okay, jetzt das muss ich mir wirklich gut überlegen."
+        },
+        {
+            "start": 4245650,
+            "end": 4326150,
+            "speaker": "A",
+            "text": "Viele Sachen von dem, was wir besprochen haben, habe ich ja schon in Place. Das bedeutet, dieses Emergency Kit habe ich bereits schon ausgedruckt, auch schon lange vor dieser Episode. Anscheinend hat meine Frau das vergessen, weil als ich sie gefragt habe, fühlst du dich vorbereitet? Sagte ne, überhaupt nicht. Also ich glaube, eine Call to Action ist, ich glaube, ich frage sie mal, was ist, wenn mir jetzt was passiert? Was denkst du bräuchtest du oder was muss sichergestellt sein? Ich glaube, ich frage einfach mal den Kunden meines Produktes. Ich versuche mal hier Product Market Fit zu kriegen, dann speichere ich, glaube ich, mal mein Handy Code in meinem Password. Das haben wir ja hier festgestellt und vielleicht schreibe ich mal so High Level auf, wo meine Backups liegen und wo man da wieder rankommt und wie man da rankommt. Und das lege ich dann, weiß ich nicht, zu meinem Familienstammbuch oder irgendwas. Und jetzt ist die, mache ich die Box mit den ganzen Freunden auf und dass man da auch noch mal irgendwie sein super Passwort Emergency Kit hinlegt und so. Das weiß ich jetzt alles noch nicht. Und ich glaube, ich überlege mir mal, was ist essentiell und was ist Spielerei? Also wie zum Beispiel mein Ölpreis Scanner, den hatten wir ja auch mal in einer Episode erwähnt. Ich halte den für essentiell, aber ich glaube, das ist Spielerei oder meine Grafana Instanz, keine Ahnung, ich habe ja auch ein Prometheus und Alert Manager laufen. Ich glaube, das braucht meine Frau. Was sind deine nächsten drei Schritte?"
+        },
+        {
+            "start": 4326150,
+            "end": 4381740,
+            "speaker": "B",
+            "text": "Ja, ich verwende ja keypass und ich habe mir das kurz überlegt oder auch länger überlegt in der Vorbereitung und was ich jetzt machen werde ist ich habe irgendwo in Nextclouds liegen mit Zertifikaten und Master Passwörtern, dass ich einen neuen keepass Store mache, der nur mit einem Zertifikat geschützt ist und dieses Zertifikat aufteile und vielleicht sogar mit Backup Leuten, dass ich denen ein Zertifikat gibt mit einer kurzen Info, wer die anderen Schlüsselteile hat und wo die wichtigsten Daten liegen und dann müsste man eigentlich recht gut an alles drankommen und dann habe ich diesen Store, den ich auch jederzeit updaten kann. Das heißt dieses Zertifikat bleibt gleich, was verteilt ist und ich kann aber da jederzeit was updaten. Ich kann da Anleitungen reinlegen, also so einen zentralen Anlaufpunkt, wo man dann einsteigen kann und dort ist dann verlinkt, wo liegen die Passwörter, was gibt es für relevante Dinge und so kann ich das irgendwie up to date halten."
+        },
+        {
+            "start": 4381740,
+            "end": 4406830,
+            "speaker": "A",
+            "text": "Ich würde sagen den Call to Action geben wir mal an alle Leute, die diese Podcast Episode hören weiter. Macht euch einfach mal Gedanken, was ihr so zu Hause habt. Sprecht vielleicht auch mal mit eurem Partner und Partnerin einfach darüber, weil das klingt zwar jetzt nach einem komischen Thema, aber ich glaube das ist besser mal kurz darüber gesprochen zu haben, als das zu komplett zu ignorieren. Und ja, die zwei Faktor Authentifizierung, die werde ich wohl noch mal irgendwie merchen oder sowas in ein oder zwei Apps."
+        },
+        {
+            "start": 4407070,
+            "end": 4441780,
+            "speaker": "B",
+            "text": "Was ich noch gerne hätte ist, dass man irgendwie zum Beispiel ich verwende den Google Authenticator üblicherweise als App und ich würde gerne diese Keys rausbekommen, dass sie wieder das schnelle meinen Passwortmanager anlegen kann, aber das lasst Google zumindest nicht zu meines Wissens. Das heißt ihr müsst in jedem Service mich einloggen, da neues Device anlegen und so weiter. Aber es gibt ja so eine Exportfunktion irgendwie Google kann das Ding exportieren, aber ich habe noch nicht rausgefunden, ob man das irgendwie rausziehen kann. Wer da Ideen hat oder Möglichkeiten kennt gerne, weil dann spare ich mir da in Dreiig Services Devices neu anzulegen."
+        },
+        {
+            "start": 4441780,
+            "end": 4448360,
+            "speaker": "A",
+            "text": "OK, Dreiig Services finde ich noch OK, mach einen Service pro Tag und du bist nach einem Monat du du bist"
+        },
+        {
+            "start": 4448360,
+            "end": 4451720,
+            "speaker": "B",
+            "text": "viel zu pragmatisch, Andi, ich will, dass das ein tolles Tool macht."
+        },
+        {
+            "start": 4451720,
+            "end": 4523200,
+            "speaker": "A",
+            "text": "Ja, das war's mit dieser Episode. Wir sind natürlich auch über eure Vorschläge gespannt. Springt einfach mal in die Discord Community, wie gesagt, diese Episode wurde in der Discord Community geboren. Im Vorgespräch haben Wolfgang und ich darüber mal kurz gesprochen. Ich habe die Diskussion durchgelesen, dachte okay, gut, können wir eine Episode draus machen. Dreiig Minuten, da ist das Thema durch Und habe ich mich da ein bisschen die Infos dann da alle durchgelesen, sortiert, ein bisschen selbst recherchiert, ein bisschen selbst Gedanken gemacht und auf einmal war das Vorbereitungsdokument irgendwie so acht, neun Seiten lang. Und dann habe ich den Wolfgang kurz Wolfgang, wie stehst du zu dem Thema? Als ich das gelesen habe, habe ich gedacht, total langweilig. Und dann habe ich mal recherchiert und dann war mir jetzt hart interessant. Also das ist ein schönes Beispiel, wie wir halt auch von der Community lernen können. Ich hatte dieses Thema gar nicht so explizit auf dem Zettel. Ich glaube, der große Dank geht an Rudi, der die ganze Sache einfach mal initiiert hat. Rudi, der Dank geht an dich. Vielen Dank. Und nächstes Mal, wenn wir uns beim nächsten Rein Ruhe Meetup sehen, geht das Bier auf mich. Gut. Bei Meetups geht es mehr oder weniger immer auf mich, zumindest auf die Firma, die wir ansprechen. Naja, lassen wir das. Irgendwann habe ich schon die Möglichkeit, dir ein Bier für diese Podcast Episode, zumindest für diesen Gedankenträger auszugeben."
+        },
+        {
+            "start": 4523200,
+            "end": 4547360,
+            "speaker": "B",
+            "text": "Lasst uns auf jeden Fall wissen, ob ihr dieses Thema grundsätzlich spannend findet, weil wir können auch noch mal versuchen, vielleicht mit irgendeinem professionellen Rechtsberater oder Beraterin mal über dieses Thema zu sprechen, um auch die rechtliche Seite mit reinzubringen, was zu beachten ist. Also springt einfach mal in unsere Discord Community, egal ob ihr Tipps habt oder Fragen. Wir versuchen das weiterhin auf jeden Fall am Schirm zu haben und weiter zu betreuen, dieses Thema."
+        },
+        {
+            "start": 4547360,
+            "end": 4550280,
+            "speaker": "A",
+            "text": "Das war's von uns. Wir hören uns nächste Woche wieder und tschüss."
+        },
+        {
+            "start": 4550280,
+            "end": 4550720,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
