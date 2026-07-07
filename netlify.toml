@@ -3627,6 +3627,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/275"
+  to = "/podcast/episode/275-digitales-erbe-was-bleibt-wenn-dein-homelab-ohne-dich-bootet?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep275"
+  to = "/podcast/episode/275-digitales-erbe-was-bleibt-wenn-dein-homelab-ohne-dich-bootet?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
