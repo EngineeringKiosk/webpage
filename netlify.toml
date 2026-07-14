@@ -3639,6 +3639,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/276"
+  to = "/podcast/episode/276-social-engineering-nicht-gehackt-nur-nett-gefragt?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep276"
+  to = "/podcast/episode/276-social-engineering-nicht-gehackt-nur-nett-gefragt?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
