@@ -1,0 +1,921 @@
+{
+    "confidence": 0.95701724,
+    "language_code": "de",
+    "speakers_expected": 2,
+    "status": "completed",
+    "audio_duration": 3863,
+    "utterances": [
+        {
+            "start": 10720,
+            "end": 15120,
+            "speaker": "A",
+            "text": "Guten Tag, hier ist Andi von der Raiffeisenmarktfiliale in Neukirchen Flün. Wie kann ich Ihnen helfen?"
+        },
+        {
+            "start": 15120,
+            "end": 21440,
+            "speaker": "B",
+            "text": "Ja, servus, da ist der Wolfgang aus der zentralen IT Abteilung aus München. Ich hätte eine kurze Hast du gerade geöffnet?"
+        },
+        {
+            "start": 21600,
+            "end": 23800,
+            "speaker": "A",
+            "text": "Ja, die Filiale ist gerade geöffnet."
+        },
+        {
+            "start": 23800,
+            "end": 35900,
+            "speaker": "B",
+            "text": "Okay, das ist eigenartig, weil ich habe da Warnmeldung bekommen, weil wir seit ungefähr zwei und vierzig Minuten keine Buchungsdaten mehr aus eurer Filiale bekommen. Sind bei euch Kunden im Geschäft oder funktioniert das Internet bei euch?"
+        },
+        {
+            "start": 35980,
+            "end": 43300,
+            "speaker": "A",
+            "text": "Einen Moment, ich schaue mal ganz kurz auf die Kameras. Ja, ich sehe jetzt gerade hier fünf Kunden auf den Videokameras und Internet. Einen Moment. Also Google funktioniert."
+        },
+        {
+            "start": 43300,
+            "end": 55340,
+            "speaker": "B",
+            "text": "OK, eigenartig. Ich sehe keine Buchungsdaten. Ich muss gleich aus dem Büro raus, meine Kinder abholen. In zehn Minuten können Sie mal ganz schnell helfen, dass wir rausfinden gemeinsam, was da das Problem ist."
+        },
+        {
+            "start": 55420,
+            "end": 58620,
+            "speaker": "A",
+            "text": "Ich kann versuchen zu helfen. Ich weiß nicht genau wie, was ich tun soll."
+        },
+        {
+            "start": 59020,
+            "end": 62220,
+            "speaker": "B",
+            "text": "Wir gehen da Schritt für Schritt durch, das ist überhaupt kein Problem. Du sitzt vorm Computer?"
+        },
+        {
+            "start": 62600,
+            "end": 63920,
+            "speaker": "A",
+            "text": "Ja, ich sitze gerade vorm Computer."
+        },
+        {
+            "start": 63920,
+            "end": 71520,
+            "speaker": "B",
+            "text": "Okay, dann checken wir als erstes mal, ob grundsätzlich eure Filiale Zugang zum Backend Server in München hat. Kannst du einfach mal einen Browser öffnen?"
+        },
+        {
+            "start": 71520,
+            "end": 76440,
+            "speaker": "A",
+            "text": "Also Internet Explorer, ist das dieses kleine E hier unten? Das ist blau."
+        },
+        {
+            "start": 76440,
+            "end": 79000,
+            "speaker": "B",
+            "text": "Ja, genau, das blaue Symbol Internet Explorer."
+        },
+        {
+            "start": 79000,
+            "end": 80960,
+            "speaker": "A",
+            "text": "Okay, einen Moment. Browser ist geöffnet."
+        },
+        {
+            "start": 80960,
+            "end": 89800,
+            "speaker": "B",
+            "text": "Okay, kannst du mal die Adresse eingeben? POS Corporate Raiffeisen Com. Da sollte dann so eine netweaver Anmeldeseite kommen."
+        },
+        {
+            "start": 90410,
+            "end": 94410,
+            "speaker": "A",
+            "text": "Einen Moment, es lädt, Es lädt. Ne, da erscheint nichts."
+        },
+        {
+            "start": 94490,
+            "end": 107690,
+            "speaker": "B",
+            "text": "Okay, dann könnte das das Problem sein, warum keine Buchungsdaten durchgehen? Kannst du mal andere Webseite bitte ausprobieren, um was zu prüfen? Kann irgendeine Webseite sein? Facebook zum Beispiel gerade, ob die zum Öffnen funktioniert."
+        },
+        {
+            "start": 107690,
+            "end": 112730,
+            "speaker": "A",
+            "text": "OK, Facebook dot com. Ja, Facebook funktioniert."
+        },
+        {
+            "start": 112730,
+            "end": 127530,
+            "speaker": "B",
+            "text": "Okay, dann scheint die Internetverbindung zu funktionieren. Ich würde gerne noch so Diagnose Werkzeug testen. Kannst du mal auf SEO RG Org, also seaorg Org gehen? So ein internes Testing Tool ist bisschen eigenartige Adresse."
+        },
+        {
+            "start": 127610,
+            "end": 136090,
+            "speaker": "A",
+            "text": "Okay, Moment. So, die Seite wird geladen. Dort steht jetzt Sicherheit durch Bildung und dann ist da irgendein seltsames Logo."
+        },
+        {
+            "start": 136890,
+            "end": 145050,
+            "speaker": "B",
+            "text": "Okay, dann haben sie da wahrscheinlich was geändert wegen der Adresse. Wir können eine alternative Seite verwenden. Kannst du mal bitte aufgehen?"
+        },
+        {
+            "start": 145170,
+            "end": 150610,
+            "speaker": "A",
+            "text": "Okay, auch die Seite ist nun offen. Da steht jetzt, dass ich Internet Explorer elf verwende."
+        },
+        {
+            "start": 150770,
+            "end": 162370,
+            "speaker": "B",
+            "text": "Perfekt unterhalb von der IP Adresse. Also diese Zahlen mit den Punkten dazwischen. Da steht nur so technische Informationen, dort müsste irgendwas mit Windows oder Mac stehen. Kannst du mir das bitte vorlesen?"
+        },
+        {
+            "start": 162450,
+            "end": 179000,
+            "speaker": "A",
+            "text": "Ja, da stehen jetzt einige Begriffe, die ich jetzt nicht so ganz verstehe. Mozilla Windows NT sechster erster, Windows Trident like Gecko."
+        },
+        {
+            "start": 179000,
+            "end": 186000,
+            "speaker": "B",
+            "text": "Okay, perfekt. Dann liegt es vermutlich an einem Routing Problem zu eurer Filiale. Bist du mit dem VPN aktuell verbunden?"
+        },
+        {
+            "start": 186160,
+            "end": 188720,
+            "speaker": "A",
+            "text": "Ich weiß nicht, was das ist. Wie kann ich das überprüfen?"
+        },
+        {
+            "start": 189120,
+            "end": 197280,
+            "speaker": "B",
+            "text": "Einfach unten im Startmenü links die Programmliste mal aufmachen. Gibt es da irgendeinen Ordner? Cisco oder Cisco anyconnect?"
+        },
+        {
+            "start": 197440,
+            "end": 198320,
+            "speaker": "A",
+            "text": "Ich sehe hier nichts."
+        },
+        {
+            "start": 198320,
+            "end": 204450,
+            "speaker": "B",
+            "text": "Das Airwatch vielleicht VM wäre so Ordner, wo dann Unterpunkte drin sind."
+        },
+        {
+            "start": 204530,
+            "end": 206130,
+            "speaker": "A",
+            "text": "Nö, sehe ich ebenfalls nicht."
+        },
+        {
+            "start": 206370,
+            "end": 208610,
+            "speaker": "B",
+            "text": "Bist du am Laptop oder am Desktop? PC"
+        },
+        {
+            "start": 210370,
+            "end": 211490,
+            "speaker": "A",
+            "text": "Desktop Dell."
+        },
+        {
+            "start": 211650,
+            "end": 235070,
+            "speaker": "B",
+            "text": "Ah OK, das ist klar. Also die VPN Software gibt es eigentlich nur auf Laptops bei uns. Ich sehe auch gerade, dieses Problem ist erst heute aufgetreten. Ihr habt ja gerade die letzte Stundenabrechnung gehabt vom letzten Monat mit den ganzen Anwesenheitszeiten der Mitarbeiter. Die haben bei euch funktioniert oder ihr habt auch die Gehaltsabrechnung und so korrekt alle bekommen. Das heißt, die Daten von vorgestern sind ordentlich durchgegangen."
+        },
+        {
+            "start": 235150,
+            "end": 243110,
+            "speaker": "A",
+            "text": "Ja, wir stempeln ganz normal, so wie immer und alle Stunden wurden auch korrekt bezahlt und abgerechnet. Also ich habe von meinen Kollegen jetzt von keinem Problem gehört."
+        },
+        {
+            "start": 243110,
+            "end": 246270,
+            "speaker": "B",
+            "text": "OK, perfekt. Wie lange arbeitest du eigentlich schon bei uns?"
+        },
+        {
+            "start": 246350,
+            "end": 251710,
+            "speaker": "A",
+            "text": "Ich bin seit ungefähr einem Jahr dabei. Ganz genau ein Jahr und drei Tage. Ich hatte gerade mein einjähriges."
+        },
+        {
+            "start": 251710,
+            "end": 256750,
+            "speaker": "B",
+            "text": "OK, Gratulation dazu. Muss gerade mal überlegen, was es sonst noch sein könnte für ein Problem."
+        },
+        {
+            "start": 257160,
+            "end": 265080,
+            "speaker": "A",
+            "text": "Also ich weiß jetzt nicht, ob das hilft, aber wir hatten vor ungefähr zwei Wochen Probleme mit Geschenk und Kreditkarten hier bei uns in der Filiale. Vielleicht hängt damit was zusammen."
+        },
+        {
+            "start": 266200,
+            "end": 282520,
+            "speaker": "B",
+            "text": "Sollte eigentlich eher nicht zusammenhängen, aber das Problem haben wir im Griff. Kein Problem. Jetzt Telefon sehe gerade, aber Telefon scheint ja zu funktionieren, weil wir gut miteinander telefonieren können. Ist es ein Voiceover IP System? Also was steht denn auf deinem Telefon oben?"
+        },
+        {
+            "start": 282890,
+            "end": 288810,
+            "speaker": "A",
+            "text": "Ich weiß nicht genau, ob das ein IP System ist. Schau mal, da steht Cisco IP Phone."
+        },
+        {
+            "start": 288890,
+            "end": 299690,
+            "speaker": "B",
+            "text": "OK, gut, ich habe vielleicht noch eine Idee. Das Zugangs Kartensystem hat heute funktioniert in der Früh oder gab es da irgendwelche Probleme beim Betreten vom Gebäude?"
+        },
+        {
+            "start": 299690,
+            "end": 305490,
+            "speaker": "A",
+            "text": "Nö, ich habe meine Karte heute ganz normal verwendet. Ich und alle anderen Mitarbeiter sind auch problemlos reingekommen."
+        },
+        {
+            "start": 305490,
+            "end": 313600,
+            "speaker": "B",
+            "text": "Habt ihr schon das neue System? Also sind es dicke oder dünne Karten? Also sind es so RFID Karten, die etwas dicker sind oder so dünn wie Kreditkarte?"
+        },
+        {
+            "start": 313680,
+            "end": 319560,
+            "speaker": "A",
+            "text": "Moment, da muss ich eben ganz kurz rausholen, um mal nachzuschauen. Die Karte ist ungefähr so dick wie eine Kreditkarte."
+        },
+        {
+            "start": 319560,
+            "end": 344780,
+            "speaker": "B",
+            "text": "Okay, perfekt. Ich habe jetzt gerade in der Zwischenzeit noch was anderes probiert, den Router neu gestartet. Das scheint jetzt das Problem schon behoben zu haben, weil ich sehe jetzt die Buchungsdaten eintreffen aus der letzten Stunde. Es ist noch bisschen langsamer, vielleicht hat auch der Router irgendwas. Wir würden einfach einen neuen Router aussenden zu euch. Ich würde gleich ein Rücksendeetikett beilegen, damit ihr einen alten Router zurückschicken könnt. Jetzt verwendet ihr üblicherweise DPD oder?"
+        },
+        {
+            "start": 344780,
+            "end": 346940,
+            "speaker": "A",
+            "text": "Ja, ja, DPD kommt jeden Tag bei uns vorbei."
+        },
+        {
+            "start": 346940,
+            "end": 357100,
+            "speaker": "B",
+            "text": "OK, dann würden wir den Router gleich so konfigurieren, dass ihr nur austauschen müsst. Das heißt eure WLAN Netze sind Raiffeisen intern und Raiffeisen POS vermute ich mal, oder?"
+        },
+        {
+            "start": 357340,
+            "end": 361020,
+            "speaker": "A",
+            "text": "Das weiß ich leider nicht, Ich mache den Computer nur an und der funktioniert immer."
+        },
+        {
+            "start": 361100,
+            "end": 375390,
+            "speaker": "B",
+            "text": "Okay, kein Problem. Das kann ich dann auch selber nochmal nachschauen. In der Dokumentation könnt ihr bitte noch ein Schild auf den Router draufkleben fürs Reinigungspersonal, dass der ja nicht ausgesteckt wird. Welche Reinigungsfirma habt ihr eigentlich?"
+        },
+        {
+            "start": 375630,
+            "end": 382269,
+            "speaker": "A",
+            "text": "Wir verwenden SLS, der Router steht aber in einem verschlossenen Schrank, also in der Regel kommt das Reinigungspersonal da gar nicht hin."
+        },
+        {
+            "start": 382350,
+            "end": 389150,
+            "speaker": "B",
+            "text": "Okay, dann sollte es eh kein Problem geben, wenn ich dich später noch mal kontaktieren muss, weil ich gleich weg muss. Wie lange habt ihr geöffnet?"
+        },
+        {
+            "start": 389150,
+            "end": 390590,
+            "speaker": "A",
+            "text": "Ich bin bis zwanzig uhr hier."
+        },
+        {
+            "start": 390590,
+            "end": 403230,
+            "speaker": "B",
+            "text": "Okay, ich muss jetzt weg aus dem Büro, um meine Kinder abzuholen, aber falls später noch Probleme auftreten, würde ich einfach gerne Anleitungen schicken zur Fehlerbehebung. Adobe Acrobat zum PDF Dateien öffnen hast"
+        },
+        {
+            "start": 403230,
+            "end": 406550,
+            "speaker": "A",
+            "text": "du ja das Symbol sehe ich hier ganz vor mir direkt auf dem Desktop,"
+        },
+        {
+            "start": 406550,
+            "end": 423580,
+            "speaker": "B",
+            "text": "nachdem das so eine interaktive PDF Datei ist. Durch die Problemführung kannst du mal nachschauen, was für Version du hast, weil es funktioniert mit den alten Versionen leider nicht. Einfach im Adobe Acrobat, wenn du es aufmachst unter über Adobe Acrobat, da sollte eine Versionsnummer stehen, startet gerade ein bisschen"
+        },
+        {
+            "start": 423580,
+            "end": 427780,
+            "speaker": "A",
+            "text": "langsam, da steht DC und in Klammern zwei tausend fünf und zwanzig,"
+        },
+        {
+            "start": 429860,
+            "end": 437300,
+            "speaker": "B",
+            "text": "okay, ja mit der Version funktioniert es dann schicke ich dann einfach das PDF per E Mail. Du verwendest Outlook zwei tausend sechzehn, oder?"
+        },
+        {
+            "start": 437300,
+            "end": 441860,
+            "speaker": "A",
+            "text": "Ja, wir sind immer noch auf dieser super alten Outlook Version, weil zu Hause sieht das irgendwie ganz anders aus."
+        },
+        {
+            "start": 442340,
+            "end": 459260,
+            "speaker": "B",
+            "text": "Klassiker. Ich muss wie gesagt gleich weg. Ganz kurz noch mal, bevor wir das Gespräch beenden. Ich muss immer zwei Standardfragen bei jedem Support Anruf abfragen. Sorry. Einerseits hast du ein mcafe Antivirus installiert, also unten rechts neben der Uhr sollte so ein Schild sein mit dem Buchstaben"
+        },
+        {
+            "start": 459260,
+            "end": 462980,
+            "speaker": "A",
+            "text": "M. Ja, ich sehe hier das M in einem Schild. Ist es das?"
+        },
+        {
+            "start": 462980,
+            "end": 469460,
+            "speaker": "B",
+            "text": "Ja, perfekt. Genau. Und letzte hast du mal an einer Security Awareness Schulung von uns teilgenommen?"
+        },
+        {
+            "start": 469620,
+            "end": 473460,
+            "speaker": "A",
+            "text": "Ja, in der ersten Woche, wo ich hier angefangen habe. Also das müsste dann jetzt ein Jahr her sein."
+        },
+        {
+            "start": 473460,
+            "end": 480990,
+            "speaker": "B",
+            "text": "Okay, perfekt. Das war es auch schon. Vielen Dank, Andi hat mir sehr weitergeholfen, dass wir das noch schnell erledigen haben können. Vielen, vielen Dank."
+        },
+        {
+            "start": 480990,
+            "end": 481670,
+            "speaker": "A",
+            "text": "Kein Problem."
+        },
+        {
+            "start": 481910,
+            "end": 482950,
+            "speaker": "B",
+            "text": "Super, Ciao."
+        },
+        {
+            "start": 482950,
+            "end": 488150,
+            "speaker": "A",
+            "text": "Tschüssikowski. Und das, meine Kinder war ein Social Engineering Anruf."
+        },
+        {
+            "start": 488150,
+            "end": 495430,
+            "speaker": "B",
+            "text": "Eure Kinder, ich hab gedacht, wir haben nur alte Zuhörerinnen, wie du in unserer letzten Episode ausgeplaudert hast aus unseren Statistiken."
+        },
+        {
+            "start": 495510,
+            "end": 531020,
+            "speaker": "A",
+            "text": "Also ich habe gesagt, unsere Hörerschaft besteht irgendwie drei und dreiig Jahre plus weiß ich jetzt nicht, ob man mit drei und dreiig Jahren alt ist oder einfach nur im guten Senior Level. Das bedeutet, ich würde es erfahren nennen Und weil diese Leute ja alle so erfahren sind, kennen sie ja auch die Sendung mit der Maus hoffentlich noch. Ich habe keine Kinder und ich muss zugeben, ich stehe auch nicht morgens um sieben uhr auf, um die Sendung mit der Maus auf ARD oder ZDF oder kika oder wo sie inzwischen läuft zu schauen. Deswegen werden diese Leute alle akzeptieren müssen, dass ich sie Kinder nenne, weil sie sich dann natürlich an die schöne Sendung mit der Mauszeit zurückerinnern."
+        },
+        {
+            "start": 531020,
+            "end": 566800,
+            "speaker": "B",
+            "text": "Okay, jetzt hast du den auch mal gut rausgeredet. Auf jeden Fall, was wir gerade gemacht haben, ist, dass wir Gesprächsprotokoll verlesen haben, was es in dieser Weise wirklich gegeben hat. Und zwar war das Teil von einem sehr großen Wettbewerb, der immer wieder stattfindet auf der DEFCON, der würde sagen fast der bekanntesten oder der größten wahrscheinlich auch Sicherheitskonferenz, die es so gibt. Und da gibt es einen Unterbereich, der nennt sich Social Engineering CTF wo es genau darum geht, eben Social Engineering zu machen und auch auf der Bühne dann wirklich zu machen. Also dieses Gespräch wurde wirklich auf der Bühne live durchgeführt mit einem echten Mitarbeiter."
+        },
+        {
+            "start": 566728,
+            "end": 626728,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 626800,
+            "end": 742870,
+            "speaker": "A",
+            "text": "Genau, CTF, sagte der Wolfgang, nennt sich Capture the Flag, ist eine Wettbewerbsart auf dieser Hackerkonferenz und wir haben gerade, ich sag mal, das Siegerprotokoll vorgelesen von Chris Kirsch. Chris Kirsch hat nämlich damit gewonnen. Worum geht es da eigentlich? Und zwar Social Engineering ist ein Teil der Hackerkultur, der Sicherheitskultur nennen wir es mal, oder ein Angriffsvektor. Und der Wettbewerb, der Capture the Flag Wettbewerb besteht eigentlich aus zwei Phasen, einer Research Phase und einer Live Telefon Phase. In der Research Phase, die nennt man auch eigentlich OSINT Phase, Open Source Intelligence Phase. Und warum, erklärt sich jetzt gleich, erhalten die Teilnehmer ein Zielunternehmen, jetzt in diesem Fall Raiffeisenmarkt, und dann haben sie ungefähr drei Wochen Zeit, öffentlich zugängliche Informationen über den Raiffeisenmarkt zu sammeln, Also Unternehmenswebseite, Suchmaschinen, Stellenanzeigen, soziale Netzwerke, Presseberichte, technische Dokumentation und all sowas. Also du darfst nicht in private Systeme eindringen und alle gefundenen Informationen müssen in den Google Doc gepackt werden, also jetzt nicht in Google Doc, sondern eigentlich in Bericht. Und dieser Bericht wird auch eingereicht. Dann fährst du zur Konferenz und da beginnt dann eigentlich der zweite Teil, und zwar die Live Telefonfarm. Und zwar könnt ihr es so vorstellen, da ist dann so ein Glaskasten, da gehst du rein, hast zwanzig Minuten Zeit und in dieser Zeit musst du das Zielunternehmen anrufen oder wen auch immer, ist mir eigentlich egal, wen du dann anrufst, denn Capture the Flag, Ziel des Wettbewerbs ist es, einen Katalog an Informationen herauszufinden. Jede Information ist eine Flag, Capture the Flag. Und diese Informationen, die dann angefragt werden, sind zum Beispiel, wenn welches Betriebssystem wird verwendet, welcher Browser wird verwendet, welche Browser Version existiert, eine Festplattenverschlüsselung, welcher Paket oder Kurierdienst wird genutzt, welcher Reinigungsdienst verwendet und so weiter und so fort. Das ist so eine Liste von zwanzig"
+        },
+        {
+            "start": 742870,
+            "end": 778130,
+            "speaker": "B",
+            "text": "fünf und zwanzig dreiig Fragen und eben auch so Dinge wie, lass die Person eine random Webseite eröffnen, so wie die Seorg Org, was ja nie jemand sonst eingeben würde. Aber das ist eben auch Teil von dem Ganzen, dass man die Person irgendwas machen lässt schlussendlich, dass da wirklich diese Webseite aufgerufen wird. Und daher kommt auch dieses sehr eigenartige Gesprächsprotokoll wo man irgendwie links rechts springt und sich irgendwelche Stories überlegt, wie kommt man an die Daten, warum muss man Acrobat aufmachen, warum braucht man die Versionsnummer und so weiter. Also dass man wirklich diese ganzen Flags dann schlussendlich sammeln kann."
+        },
+        {
+            "start": 778370,
+            "end": 828420,
+            "speaker": "A",
+            "text": "Auf der anderen Seite muss ich zugeben, ich habe mal Zivi in einem Krankenhaus gemacht und da war ich im Krankenhaus in der IT Abteilung und ich sage dir, wenn ich da zu Leuten musste, die dann ein Druckerproblem hatten, das hat sich nicht anders angehört, nur als dass ich daneben stand. Also ich weiß gar nicht, ob es so random war oder ob es wirklich so fern von irgendeinem IT Support ist, sondern je nachdem, wen du da hast. Auf jeden Fall haben wir, Wolfgang und ich, das gerade nachgesprochen, denn aus rechtlichen Gründen gibt es zu dem Turnier keine Aufzeichnung. Normalerweise kriegt man ja immer Konferenzbeiträge und Konferenzpräsentationen kannst du alle auf YouTube gucken, hier nicht. Und der Grund ist ganz einfach, Las Vegas ist ein US Staat, in dem beide Parteien eines Calls zustimmen müssen, dass dieser aufgenommen wird, werden darf. Und das war jetzt hier nicht der Fall. Deswegen gibt es ein Video vom Gewinner von Chris, von Chris Kirsch, der hat das dann mit dem einem DEFCON Organisator auch nachgesprochen, haben wir auch in den"
+        },
+        {
+            "start": 828420,
+            "end": 882740,
+            "speaker": "B",
+            "text": "Shownotes, das ist natürlich in Englisch, also das wäre dann das richtige Original. Wir haben das natürlich dementsprechend ins Deutsche auch nur übersetzt. Aber es ist eigentlich schon ein Idealbeispiel von Social Engineering, was man eigentlich mit einem einfachen Anruf erreichen kann, viele Informationen sammeln. Und genau darum geht es bei Social Engineering auch, dass man viele kleine Informationen sammelt, die vielleicht isoliert jede einzelne Verwendest du Acrobat, kannst du Facebook aufmachen, die sind alle super harmlos, da kann man noch keine Informationen ableiten. Aber wenn man natürlich ganz viele Mitarbeiterinnen anruft, verschiedene Informationen sich rausholt, eben zum Beispiel wie ist das Bezahlsystem, gibt es eine Zeiterfassung und so weiter, kann man die natürlich dann wiederverwenden, wenn man dann mit der Finanzabteilung telefoniert und so kann man sich eigentlich durchtelefonieren und ganz, ganz viele Informationen absagen, die man dann für einen ganz gezielten Angriff eben nutzen kann. Und genau das ist Social Engineering."
+        },
+        {
+            "start": 882740,
+            "end": 891700,
+            "speaker": "A",
+            "text": "Obwohl die Facebook Thematik, kannst du mal Facebook aufmachen? Ja eigentlich auch nur eine Nebelkerze war, so nach dem klar, also vertrauen so funktioniert das Internet denn gerade und so."
+        },
+        {
+            "start": 891780,
+            "end": 896260,
+            "speaker": "B",
+            "text": "Nein, in dem Fall war es wirklich sogar eine Flag. Ist Facebook im Unternehmensnetzwerk gesperrt?"
+        },
+        {
+            "start": 896340,
+            "end": 899220,
+            "speaker": "A",
+            "text": "Ah, spannend. Das ist ja super smart."
+        },
+        {
+            "start": 899300,
+            "end": 922370,
+            "speaker": "B",
+            "text": "Es waren fast alle Fragen eigentlich auf ganz gezielte Flags ausgerichtet. Also wenn man das YouTube Video anschaut, dann sieht man das auch noch ganz klar, welche Flags dann getroffen werden. Aber das sind schon ganz viele Flags, die der ganz gezielt rausholt mit den Fragen. Also ist wirklich extrem gut gemacht auch weil wir sprechen da ja von wirklich, ich glaube, fünf und zwanzig Flags oder sowas, was er erreicht hat. Das ist schon sehr viel in einem so Telefonat."
+        },
+        {
+            "start": 922370,
+            "end": 1066660,
+            "speaker": "A",
+            "text": "Aber wenn man sich das nochmal anhört, der Move, wie der herausfindet, welche Reinigungsfirma genutzt wird, über den Twist einen neuen Router zu schicken und den Router nicht auszustöpseln. Also das ist schon sehr, sehr smart gemacht. Eine andere Story, die sehr, sehr ähnlich ist, die ist mir letzte Woche passiert und das ist jetzt kein Scheiß, die habe ich mir nicht ausgedacht. Das ist wirklich so. Leute, die uns schon länger folgen, wissen, dass ich auch in meiner Freizeit ehrenamtlich tätig bin und ich wohne in einem kleinen Dorf und da engagiere ich mich in einem kleinen lokalen Verein. Und wie macht man das so? Ich mache da die IT, wenn man so möchte. Und dieser kleine Verein, dieser eingetragene Verein möchte weg von einer Excel Liste hin zu einer Vereinssoftware, um natürlich auch mal in Richtung Digitalisierung zu gehen. Und da hat ein ehemaliges Vereinsmitglied nämlich eine Vereinssoftware gekauft bei einem Anbieter, den kannte ich nicht. Und ein anderer Verein, die Karnevalsgesellschaft, nutzt halt, mein Verein von WISO ist halt irgendeine andere Vereinssoftware. Und da wurde ich gefragt, Andi, können wir nicht auch die Vereinssoftware von dem anderen Verein nutzen, denn wir kooperieren. Da macht das ja Sinn, wenn man da irgendwie dieselbe Vereinssoftware hat. Okay, jetzt ist die Person, die die originale Vereinssoftware aber gekauft hat, bereits aus dem Verein ausgeschieden und du weißt, wie das ist. Du kommst ja nicht an die Daten ran. Gibt es eine Rechnung, gibt es eine Kundennummer? Das, was ich hatte, ist den Vereinsnamen, der steht auf der Webseite, öffentlich zugängliche Informationen und den Firmenname der Vereinssoftware. Ich also Telefonhörer in Ja, guten Tag Andi hier vom Verein vier tausend sieben hundert elfte Wir haben ihre Vereinssoftware gekauft und der Kollege hatte ich den Namen, der war auch im Vorstand, das bedeutet, es war auch öffentlich zugängliche Information, ist ausgeschieden und so weiter und so fort. Und jetzt sind wir gerade dabei, wir versuchen gerade die letzte Rechnung irgendwie hinzukriegen und so weiter. Und auf einmal kam die Frau ins Gespräch, hat mir die Kundennummer gegeben, ja und wie kriegen wir jetzt Zugang zu der Software? Ja, da müssen Sie sagen Sie mir einfach dann, wie der Benutzername ist. Benutzername, Benutzername, ja, der Kollege hat auch irgendeine E Mail Adresse genommen, auf die ich keinen Zugriff habe. Ja, das ist gar kein Problem, da kann ich eben nur eine SQL Abfrage, hat die O Ton so gesagt, eine SQL Abfrage machen und da kann ich die Information rausholen. Die hat mir wirklich alles gegeben, welches Produkt wir haben, wann die nächste Abbuchung ist, wie wir es kündigen können, Kundennummer und so. Das Passwort hat sie, aber sagen wir"
+        },
+        {
+            "start": 1066660,
+            "end": 1069180,
+            "speaker": "B",
+            "text": "bitte, ich wollte gerade sagen, das Passwort hat sie dir wenigstens nicht gesagt."
+        },
+        {
+            "start": 1069180,
+            "end": 1094120,
+            "speaker": "A",
+            "text": "Nee, nee, nee, nee, aber es ging dann nur so weiter, fünf, sechs Minuten und ich hatte echt viele Informationen. Ich hatte catch how the flag, also wenn du so möchtest, jetzt keine zwanzig, fünf und zwanzig, aber ich habe auch aufgelegt, habe gedacht, was war das denn jetzt hier gerade? Das war gar nicht meine Absicht. Ich meine, ich hatte die Information war sinnvoll, aber da denke ich mir auch so, uh, ich habe jetzt nicht gefragt, wann die letzte Security Schulung gemacht hätte, aber ist schon ein bisschen weit her, kann ich dir sagen."
+        },
+        {
+            "start": 1094120,
+            "end": 1136260,
+            "speaker": "B",
+            "text": "Ihr habt ähnliche Geschichte gerade gehört von einem Freund, der nicht aus Österreich ist, aber mittlerweile hier wohnt und eben gefragt nach seinem Stromtarif und er hat gemeint, es wird über die Hausverwaltung abgerechnet und ich habe mich schon gewundert, hä, kann eigentlich nicht sein, du musst einen Stromvertrag haben. Und dann hat er sich halt erkundigt bei dem lokalen Stromanbieter und hat gesagt, ja, ich wohne dort und dort und bezahle keinen Strom, wer bezahlt meinen Strom? Die haben ihm die ganze Information gegeben, war das Immobilienbüro in dem Fall, die das noch, die haben das vergessen, ist ja egal, war auch okay, aber die haben ihm sofort alle Informationen gegeben, wer die Rechnung zahlt, was das für Immobilienbüro ist und so weiter. Also wenn du die Info brauchst irgendwie, wer bezahlt eine Stromrechnung zum Beispiel, wie heißt die Person?"
+        },
+        {
+            "start": 1136500,
+            "end": 1176560,
+            "speaker": "A",
+            "text": "Super einfach, aber auf der anderen Seite muss man ja auch mal sagen, dein Kollege oder ich mit meiner Vereinsstory, wir hatten ja wirklich einen legitimen Fall, also wir wollten die Informationen ja haben und dankensweise oder netterweise durch die Dame habe ich alle Informationen von sechs Minuten bekommen, weil sonst hätte ich wahrscheinlich irgendwie den Vorstand von dem Verein sagen müssen, schreib mal bitte einen Brief oder eine E Mail mit, keine Ahnung, Siegel, dass das der Vereinsvorstand ist und dann geht das in die Support Queue und dann vier Tage später und dann schreibe ich die E Mail nicht, sondern der Vereinsvorstand und dann fehlen da vielleicht ein paar technische Informationen, die ich brauche und so. Du kennst dieses Back and Force, nenne ich mal, und das gleiche bei deiner Stromthematik ja auch."
+        },
+        {
+            "start": 1176560,
+            "end": 1292750,
+            "speaker": "B",
+            "text": "Aber genau das ist eigentlich ein Kernpunkt, wie Social Engineering funktioniert, aber dazu kommen wir noch später im Detail. Eine andere Story, die super schön finde, ist einfach der größte Bankraub in der Geschichte der USA. Und zwar habe ich das schon mal in einem Buch gelesen von Mitnick. Mitnick war so eine sehr bekannte Person im Social Engineering Bereich, auch mal Hacker, dann White Hat Hacker geworden, also zu den Guten übergelaufen und der hat ein Buch geschrieben, ist schon ziemlich alt und dort wird es auch beschrieben, dieser größte Bankraub von ein tausend neun hundert acht und siebzig, damals in Banküberweisungen noch manuell durchgeführt worden, also von Menschen. Und was dieser Stanley Rifkin hat er geheißen gemacht hat, ist, dass er sich einfach Informationen organisiert hat in dieser Bank, wie denn das alles läuft. Also der war auch Berater, der hatte auch so einen Kontakt schon mit der Bank und hat sich dann ausgegeben als Berater. Er möchte den ganzen Prozess optimieren, eben diesen Überweisungsprozess, Da gab es irgendwie einen geheimen Raum, da sind die ganzen Überweisungen getätigt worden und man hat nur anrufen können und hat da Passwörter und so weiter gebraucht und er hat sich das einfach einmal alles angesehen und hat es gecheckt, wie sind da die Abläufe, was braucht man dazu und hat sich einfach nur mal Informationen organisiert. Und dann kam eigentlich der eigentliche Hack, weil diese geheimen Codes, die man da für eine Überweisung braucht, die werden täglich geändert und man braucht im Prinzip so eine berechtigte Person plus den Code. Also so eine berechtigte Person kann dann mit dem Code in diesem Raum anrufen und zum Beispiel Millionen überweisen, in dem Fall übrigens bei dem Raub zehn Millionen Dollar damals ein tausend neun hundert acht und siebzig, das war noch viel Geld und die haben so am Tag vier Milliarden Dollar durchüberwiesen. Also da fällt mal so ein Betrag von zehn Millionen gar nicht unbedingt auf. Auf jeden Fall, wie schlussendlich dieser Hack durchgeführt worden ist, hat er einfach sich diesen Code organisiert. Und was ist der Klassiker, wenn sich Codes jeden Tag ändern und die Leute sich Codes machen müssen."
+        },
+        {
+            "start": 1292750,
+            "end": 1294030,
+            "speaker": "A",
+            "text": "Die werden irgendwo aufgeschrieben."
+        },
+        {
+            "start": 1294190,
+            "end": 1341900,
+            "speaker": "B",
+            "text": "Genau, die werden irgendwo aufgeschrieben. Also ideal, wenn man da durch die Bank läuft, kann man einfach den Code aufschreiben. Die Identifikationsnummer von so einem Officer, Bank Officer kriegt man natürlich auch sehr leicht raus, wenn man da ein bisschen, ich sage es mal, monitort den ganzen Ablauf und weiß, wie das funktioniert. Ja und dann hat er einfach nichts anderes gemacht, als dass er auf die Straße rausgegangen ist und bei so einem Münztelefon diesen Raum angerufen hat, von extern sich ausgegeben hat, also ein Bank Officer den Code durchgesagt hat und gesagt hat, ich brauch zehn komma zwei Millionen, die auf Bankkonto XY überwiesen werden. Am selben Tag hat er das noch weiter überwiesen in die Schweiz und diese Millionen waren einfach weg. Und das Geniale war, dass die Bank das nicht mal mitbekommen hat. Die Bank hat es erst acht Tage später herausgefunden, wie das FBI dann auf die Bank zugegangen ist und gesagt hat, da ist was passiert."
+        },
+        {
+            "start": 1341980,
+            "end": 1345300,
+            "speaker": "A",
+            "text": "Aber weiß man denn, wie das FBI auf den Kollegen kam?"
+        },
+        {
+            "start": 1345300,
+            "end": 1375740,
+            "speaker": "B",
+            "text": "Ja, scheinbar ist schlussendlich eigentlich ein Tipp von einem ehemaligen Geschäftspartner von Rifkin gekommen, weil er hat sich um dieses Geld Diamanten gekauft, damit er eben dieses Geld irgendwie los wird. Und dann hat er aber die Diamanten loswerden müssen und er hat Leute gesucht, die ihm die Diamanten abkaufen. Und da hat er einen alten Geschäftspartner kontaktiert und irgendwie gemeint, er hat Diamanten und so weiter und der hat dann Tipp an die Polizei gegeben, ans FBI, weil ihm das komisch vorgekommen ist. Und so ist dieses Ganze dann erst ins Rollen gekommen und man hat ihn schlussendlich dann verhaftet."
+        },
+        {
+            "start": 1375820,
+            "end": 1402100,
+            "speaker": "A",
+            "text": "Gut, jetzt ist die Story von ein tausend neun hundert acht und siebzig, ich wollte gerade eigentlich sagen, Überweisungen werden ja jetzt eigentlich nicht mehr per Telefon gemacht, Doch ich glaube bei ganz reichen Leuten Die haben sehr wahrscheinlich dann auch ein Personal Assistant oder irgendwie den persönlichen Schweizer Bankmanager, den aus dem Hollywood Film, der in diesem tollen Büro sitzt. Und da wird, glaube ich, auch mal eben kurz angerufen, hey, überweist doch mal bitte zehn Millionen, wenn einfach zehn Millionen mal nichts ist für die Leute nach da und da."
+        },
+        {
+            "start": 1402100,
+            "end": 1436450,
+            "speaker": "B",
+            "text": "Da gab es ja auch schon Fälle, wo wirklich Firmen dann Millionen überwiesen haben für den Chef, der schnell irgendwo was, eben einen Deal machen wollte und dann irgendeine Mitarbeiterin oder Mitarbeiter dann das Geld überwiesen hat. Also es funktioniert natürlich immer noch und man sieht schon, dass das Ganze ein tausend neun hundert acht und siebzig passiert ist. Klar haben wir jetzt digitale Möglichkeiten und verbesserte Prozesse, aber dieses Problem, dass es immer noch Menschen machen oder dass du über Menschen irgendwie einen Hack durchführen kannst bei Social Engineering, das gibt es eigentlich immer noch, weil der Mensch ist halt gleich unsicher oder sicher wie früher eigentlich, muss man sagen."
+        },
+        {
+            "start": 1436450,
+            "end": 1535670,
+            "speaker": "A",
+            "text": "Also der Klassiker, den man in der Literatur immer liest, ist, du Wolfgang arbeitest jetzt in der Finanzabteilung und kriegst eine E Mail von dem Geschäftsführer von deiner Firma, unabhängig davon, ob du Kontakt mit dem Geschäftsführer hast oder nicht. Da steht drin, bitte überweise den und den Betrag auf dieses Konto, sonst wird das System abgeschaltet und das System ist dann ganz wichtig für die Firma. Und das kommt dann meist von der Spam E Mail Adresse. Das ist so der Klassiker, wirklich nur so ein Satz und dann der Name des Chefs darunter. Und natürlich willst du dann nicht den Chef enttäuschen. Das kenne ich als Klassiker. In meinem Wirtschaftsinformatikstudium hatte ich auch eine Security Vorlesung und der damalige Professor hatte auch eine Social Engineering Firma. Und was er gesagt hat, das war so zwei tausend zwölf, zwei tausend dreizehn, also auch schon ein paar Jährchen her, der Klassiker bei Bürogebäuden. Du weißt, dass der Chef des Unternehmens auf irgendeiner Konferenz spricht, da wurde er mit hoher Wahrscheinlichkeit hinfliegen, kurz bevor der Flieger geht, so eine Stunde oder sowas, rennst du in einem Anzug mit einem Koffer in das Bürogebäude zum Empfang und sagst oder schreist sehr, der Wolfgang, der fliegt gerade zur Konferenz, hol mir doch mal bitte kurz den Aktenordner auf seinem Schreibtisch. Natürlich, also natürlich hoffentlich nicht, aber oft sagte er, hat das geklappt, denn es war öffentliche Information, dass der Geschäftsführer oder die Geschäftsführerin irgendwo auf einer Konferenz spricht und so weiter und so fort. Man kommt mit so einem Handgepäcktrolli da reingerannt in einem Anzug, alles scheint plausibel und da will man den Geschäftsführer natürlich jetzt nicht enttäuschen, weil du kannst natürlich weiter Druck aufbauen. Möchtest du, dass die Gabi jetzt nicht den Deal closen kann oder deswegen Mitnick"
+        },
+        {
+            "start": 1535670,
+            "end": 1576210,
+            "speaker": "B",
+            "text": "hat in seinem Buch auch so Beispiele von Polizei zum Beispiel, dass du einfach bei Polizeirevieren anrufst und sagst, sorry, mein System ist gerade down, kannst du mir in der Blablabla Datenbank gerade nachschauen, wo der wohnt oder ob der, keine Ahnung, auf wen dieses Fahrzeug zugelassen ist oder solche Dinge. Also sogar innerhalb von der Polizei, wenn du einfach nur dieses Jargon sprichst, was die so miteinander sprechen. Du musst halt einfach wissen, wie sprechen die miteinander, wie heißen die Systeme, wo schauen die überall nach, Dann wird es vielleicht sogar heute noch funktionieren. Könnte mir vorstellen, wenn da irgendwer anruft von Befreundeten oder benachbarten Revier oder so und um den Gefallen bittet. Ja, ich würde es nicht ausschließen, dass es noch immer funktioniert, so was."
+        },
+        {
+            "start": 1576290,
+            "end": 1605230,
+            "speaker": "A",
+            "text": "Es gibt super viele öffentliche Kantinen und da kannst du hingehen und da musst du ja mit hoher Wahrscheinlichkeit noch niemals was kaufen, um dich an die Tische zu setzen und dann lauscht du ein bisschen was am Nachbartisch und dann kriegst du das Django über ein, zwei, drei Wochen mit. Was mich aber immer beeindruckt bei solchen Stories, weil das sind ja alles Szenarien im Real Life. Also du begegnest da ja Menschen und du musst ja mit Menschen interagieren. Du musst einen enormen Mut aufbringen, weil du fake ja eine Identität, die du nicht bist."
+        },
+        {
+            "start": 1605950,
+            "end": 1607790,
+            "speaker": "B",
+            "text": "Du musst sehr dreist sein vor allem."
+        },
+        {
+            "start": 1608110,
+            "end": 1633210,
+            "speaker": "A",
+            "text": "Dreist ist ein gutes Stichwort, denn bevor wir nämlich jetzt zu den anderen Deep Dives kommen, kommen wir zu einem Social Engineering Fall, der nicht von ein tausend neun hundert acht und siebzig ist, sondern von zwei tausend sechs und zwanzig und da muss ich sagen, Hut ab, gut gespielt. Und zwar geht es um diesen Axios Supply Chain Hack, der vor kurzem da war. Axios für die ganzen javascriptler unter uns ist eine Promise Based HTTP Client Library."
+        },
+        {
+            "start": 1633370,
+            "end": 1639290,
+            "speaker": "B",
+            "text": "Für die Nicht JavaScript Leute. Meinst du jetzt wir JavaScript Leute, ich zähle mich ja dazu, wir wissen ja, was Axios ist."
+        },
+        {
+            "start": 1639530,
+            "end": 1648690,
+            "speaker": "A",
+            "text": "Habe ich JavaScript für die Nicht JavaScript für die ganzen Goler und Rustler und allem drum und dran für die Leute, die halt, ich wollte gerade sagen, programmieren und nicht Skripten."
+        },
+        {
+            "start": 1648770,
+            "end": 1649970,
+            "speaker": "B",
+            "text": "Ja, jetzt reden wir weiter."
+        },
+        {
+            "start": 1650770,
+            "end": 1842220,
+            "speaker": "A",
+            "text": "Naja, auf jeden Fall ist das eine sehr, sehr große Library. Neunzig Millionen Weekly Downloads. Ich würde mal sagen, das ist ein Ziel, was man mal hacken sollte. Und zwar ist die Story, wie jeder kennt nur die Supply Chain Attacke, die da stattgefunden hat. Nicht so viele Leute kennen die Story dahinter, wie es möglich war, die Supply Chain Attacke in dieses Axios Paket einzu fehlen. Und zwar haben die Angreifer sich als Gründer eines real existierenden, bekannten Unternehmen ausgegeben. Also die haben das Erscheinungsbild der Firmengründer und die Unternehmen, Webseite und so weiter, haben die alles geklont. Und zwar wollten die den Axios Maintainer als Berater oder als Freelancer anstellen, damit er da ein bisschen was für die umsetzt. Die haben den dann in einen echten, sehr überzeugend gestalteten Slack Workspace eingeladen. Der Slack Workspace hatte alles. Der hatte Branded Channels, geteilte LinkedIn Posts, gefälschte Profile vom angeblichen Team und sowie andere Open Source Maintainer in dem Slack Workspace. Wenn man die Story bis hierhin hört, dann wirst du OK, Respekt. Das Unternehmen braucht wohl ein bisschen Hilfe im Open Source Bereich, holt sich ein paar Maintainer, die da ein bisschen contracten, Freelancer und so weiter. Also schon eine gute Sache. Dann geht es weiter. Die Angreifer haben dann den Axios Maintainer zu einem Microsoft Team Meeting eingeladen. Ich mein, okay, lass uns mal mieten, lass uns mal das Projekt besprechen und so weiter und so fort. Der hat eine Kalendereinladung bekommen, aber der Link zu den Microsoft Teams, der war modifiziert. Also der Axios Maintainer selbst hat sich dann auch in den Call eingewählt, hat sich über den Browser eingewählt, war dann auf einer modifizierten Webseite. In dem Call selbst waren reale Menschen zu sehen. Während des Calls erschien dann eine Fehlermeldung, dass auf seinem System irgendetwas veraltet sei. Er soll ein Update durchführen, Er installierte das vermeintliche Teams Update und da war ein Remote Access Trojaner drin. Dieser Remote Access Trojaner hat dann Zugriff auf die Maschine des Mainers gegeben und hat dann über die NPM Zugangsdaten, pipapo. Und dann hat die Supply Chain Attacke ihren Lauf genommen. Was aber spannend ist, der Angriff, also diese ganze Ich lade dich zu dem Slack ein, mach den Teams Call und so weiter und so fort. Der begann zwei Wochen vor dem eigentlichen Publish des neuen NPM Pakets. Also die Angreifer haben auch die Termine verschoben, oh, nächste Woche, dann übernächste Woche und so weiter. Also bewusst unauffällig und ohne jeden Zeitdruck. Und was man auch sagen kann, ist, dass diese Supply Chain Attacke über mehrere Wochen lief und nicht ganz gezielt auf ihn zugeschnitten war, aber doch schon sehr gezielt auf eine ganz kleine Gruppe an Maintainern, weil bei Axios hat es funktioniert. Es ist aber inzwischen auch bekannt, dass andere Open Source Maintainer von anderen sehr populären JavaScript Libraries ebenfalls betroffen waren und unter anderem Mokka. Mokka ist ein JavaScript Testing Framework. Bei denen hat es aber nicht funktioniert aus einem Grund, die waren auch in dem Teams Call, die haben einfach nicht auf das Update Ding geklickt. Also das war denen irgendwie so ein bisschen suspicious und das haben sie nicht durchgeführt und da haben sie natürlich den Remote Access Trojaner nicht gemacht."
+        },
+        {
+            "start": 1842220,
+            "end": 1845780,
+            "speaker": "B",
+            "text": "Da merkt man halt die Leute, die testen, die sind einfach kritischer."
+        },
+        {
+            "start": 1845860,
+            "end": 1857110,
+            "speaker": "A",
+            "text": "Aber auch das ist Social Engineering und das ist harter Tobak. Wolfgang, würdest du dich einschätzen, du bist ja Freelancer, du bist ja Consultant, würdest du dich einschätzen, dass du das erkannt hättest?"
+        },
+        {
+            "start": 1857110,
+            "end": 1894030,
+            "speaker": "B",
+            "text": "Ich glaube ja, dass sie bisschen mehr geschützt bin dadurch Linux verwende aber natürlich bei dem gezielten Angriff funktioniert es auch weniger. Aber es wäre komisch, wenn ich jetzt irgendwie ein Update für Teams angeboten bekomme, weil ich verwende es immer nur im Browser, Aber grundsätzlich, wenn das gut aufgezogen ist. Und vor allem ist ja auch wieder so ein Key Element von Social Engineering dieser Stress, du musst jetzt in diesen Call rein, die warten, ich muss jetzt schnell was updaten und da klickt man dann auch viel schneller auf irgendwas drauf, weil man muss ja da schnell in diesen Call hinein, weil sonst verpasst man ja da diesen Termin, Man will ja nicht unhöflich sein. Insofern ausschließen würde das sowieso auf keinen Fall für mich."
+        },
+        {
+            "start": 1894190,
+            "end": 1910820,
+            "speaker": "A",
+            "text": "Ja, ich glaube nämlich auch, dass das gar nicht so einfach ist, das zu erkennen und ich würde mich da auch gar nicht rausreden. Vielleicht wäre ich auch drauf reingefallen, denn man muss sagen, das Ergebnis dieser Attacke war dann die Supply Chain Attacke. Also technisch war das trivial, die Supply Chain Attacke mit einem NPM Publish."
+        },
+        {
+            "start": 1910900,
+            "end": 1914660,
+            "speaker": "B",
+            "text": "Ja, wenn du mal am Computer drin bist und die Rechte hast, dann ist es easy."
+        },
+        {
+            "start": 1914660,
+            "end": 1935400,
+            "speaker": "A",
+            "text": "Ja, Achtung, da muss man eine ganz kleine Unterscheidung machen. Die haben nicht die Credentials geklaut. Das bedeutet, die haben den Rechner vom Maintainer übernommen durch einen Remote Access Trojaner. Das bedeutet, Zwei Faktor Authentifizierung und so weiter. Alles sinnfrei, weil die auf der Kiste waren. Die haben nicht nur die NPM Login Daten gekriegt."
+        },
+        {
+            "start": 1935400,
+            "end": 1938320,
+            "speaker": "B",
+            "text": "Two Factor wird dir vielleicht noch weiterhelfen in dem Fall."
+        },
+        {
+            "start": 1938320,
+            "end": 1939800,
+            "speaker": "A",
+            "text": "Ja, aber die Session war ja valide."
+        },
+        {
+            "start": 1939800,
+            "end": 1944280,
+            "speaker": "B",
+            "text": "Aber wenn die Session eben, wenn die Session schon mal aufgebaut ist, dann kannst du die natürlich einfach verwenden."
+        },
+        {
+            "start": 1944600,
+            "end": 1983220,
+            "speaker": "A",
+            "text": "Also technisch war das trivial. Das war ein NPM Publish auf der Kiste. Der ganze Aufwand steckte im Aufbau der Täuschung. Und besonders bei sowas, wenn es sogar präzise personalisiert und nicht automatisiert ist, ist es natürlich noch schwieriger. Das bedeutet, dass Fake mit den gefälschten Profilen genau an die Personen, denen ein Open Source Maintainer vertrauen würde, zum Beispiel dann andere Open Source Hey, dich kenne ich ja besonders in dem Open Source Bereich von JavaScript, wo du so High Volume Packages hast. Ich glaube schon, dass die sich da alle irgendwie kennen. Man würde ja eigentlich erwarten, dass der Angriff schnell und automatisiert ist und nicht auf dich maßgeschneidert."
+        },
+        {
+            "start": 1983220,
+            "end": 2031200,
+            "speaker": "B",
+            "text": "Das wäre ja auch dann eigentlich die Phishing Attacke. Also das ist ja der klassische Unterschied. Phishing ist ja auch Social Engineering, aber ist halt automatisiert auf einem breiten Benutzerkreis üblicherweise. Ich sende an tausenden Leuten irgendwie eine gefakte E Mail und macht es nicht so personalisiert. Und umso personalisierter das Ganze ist, umso besser funktioniert es halt meistens auch. Ist natürlich auch mehr Aufwand. Wobei jetzt halt mit AI ist es schon wesentlich einfacher geworden. Und man sieht es ja auch bei den ganzen Phishing E Mails, wie gut die geworden sind. Also früher diese schlecht gemachten, schlecht übersetzten Bank E Mails, die hat man ja noch erkennt, aber mittlerweile sind die so gut und schauen genauso aus wie deine Bank E Mails und die gleichen Logos und die gleichen Informationen und die meisten Links funktionieren sogar. Also das ist schon wesentlich schwieriger zu"
+        },
+        {
+            "start": 2031200,
+            "end": 2085670,
+            "speaker": "A",
+            "text": "erkennen, sofern die Mail nicht im Spam landet. Ja, es gibt manche Mails, die kommen bei mir in die Inbox, da muss ich dreimal hinschauen. Das ist, das ist richtig. Aber ich glaube, weil diese maßgeschneidert war, weil das eine langsamere Variante war, war die so wirksam. Denn wenn man sich die Axios Thematik einmal ansieht, erinnerst du dich noch an den XZ Hack, den der Postgre Performance Kollege da gefunden hat? Da wurde auch über zwei Jahre Vertrauen aufgebaut und das war ja auch Social Engineering, da wurde ja auch Druck aufgebaut über zwei Jahre, es wird Montainer eingeführt und so weiter und so fort. Also vielleicht kann man sogar sagen, obwohl du gerade gesagt hast, dass Stress und Druck ein Trigger ist, war er vielleicht auch mit dem Zoom Call fair enough. Aber auf der anderen Seite, dass langsame Varianten auch sehr zielführend sind."
+        },
+        {
+            "start": 2085670,
+            "end": 2164940,
+            "speaker": "B",
+            "text": "Natürlich. Also wenn man ganz allgemein auf Social Engineering blickt und die Definition, dann geht es ja einfach darum, Menschen zu manipulieren, indem man Vertrauen aufbaut und indem man Informationen kennt, organisatorische Abläufe, die man dann in irgendeiner Form nutzt und dass man mit so viel Informationen dann am Ende an irgendeine Person kommt, dass man so ein Vertrauen aufgebaut hat und so viele Informationen hat, dass die Person dann einem freiwillig quasi den Zugang gibt oder freiwillig irgendetwas macht, wie zum Beispiel der Download von diesem Update oder eben die Überweisung oder was es dann auch immer ist. Aber eigentlich verwendest du eben das Vertrauen und die Menschen selbst, ohne wirklich irgendwie einen klassischen Hack zu machen. Und das funktioniert natürlich bei Telefon, schriftlich, persönlich. Du kannst ja auch Personen treffen im echten Leben, theoretisch bei einem ganz aufwendigen Hack. Und meistens passiert das alles über längere Zeit. Das heißt, du baust es auf, hast mehrere Personen vielleicht, du bekommst von der ersten Person paar harmlose Informationen, dann gehst du zur nächsten Person, da verwendest du diese Informationen wieder, dann kommst du schon vertrauenswürdiger rum, da kommst du wieder an Informationen und so baust du das Schritt für Schritt auf, bis du so ein Vertrauen aufgebaut hast, dass du quasi dann die letzte Person unter Anführungszeichen fernsteuern kannst oder die Person, die dann den Zugang gibt oder irgendetwas macht, was du willst."
+        },
+        {
+            "start": 2164940,
+            "end": 2188090,
+            "speaker": "A",
+            "text": "Bei der Vorbereitung habe ich mir überlegt, ist das nicht eigentlich genau die Arbeitsweise, die die Polizei oder das FBI oder so auch an den Tag legt? Die befragen Person eins, nehmen zwei, drei Informationen, fragen Person zwei, nehmen ein, zwei Informationen und haben dann ihre Wand mit ganz viel Fotos und mit diesen mit diesen Bändern und so ist ja eigentlich nichts anderes, oder? Die versuchen neue Rückschlüsse aus Einzelinformationen zu ziehen."
+        },
+        {
+            "start": 2188090,
+            "end": 2191250,
+            "speaker": "B",
+            "text": "Du meinst das, was man so aus Filmen kennt? Keine Ahnung, ob das in der Realität"
+        },
+        {
+            "start": 2191250,
+            "end": 2192450,
+            "speaker": "A",
+            "text": "wirklich so ein hundert pro."
+        },
+        {
+            "start": 2192450,
+            "end": 2218100,
+            "speaker": "B",
+            "text": "Genau das meine ich aber im Prinzip. Ja klar. Also du machst ja nichts anderes und die großen Hacks funktionieren eben genauso. Und Kevin Mitnick hat es in dem damaligen Buch Social Engineering eben sehr detailliert beschrieben, diesen Ablauf, wie man eben ganz abseits von den technischen Sachen Zutritt bekommt, indem man einfach nur mit Menschen spricht auf gut Deutsch. Und man bricht eben nicht das System, sondern die Menschen und den Prozess."
+        },
+        {
+            "start": 2218260,
+            "end": 2250560,
+            "speaker": "A",
+            "text": "Jetzt hatten wir in unseren Beispielen natürlich verschiedene Attacken, aber im Endeffekt ist das alles irgendwie das gleiche Muster. Wenn man sich mal fragt, wie so ein Social Engineering Angriff eigentlich typischerweise abläuft, dann kann man da eigentlich eine Checkliste draus machen. Also erst einmal suchst du dir irgendein Ziel aus. Das muss gar nicht immer der Geschäftsführer oder die Geschäftsführerin sein oder der Administrator. Das kann einfach irgendeine Person mit guten Schnittstellen sein, jemanden am Helpdesk Empfang, Finance, Personalabteilung, von mir aus auch ein externer Dienstleister, der da jetzt gerade im Contracting drin ist."
+        },
+        {
+            "start": 2250880,
+            "end": 2258320,
+            "speaker": "B",
+            "text": "Am besten freundliche Leute, darum nicht der CEO oder die CEO, sondern irgendwo anders ganz unbeteiligte Personen am besten."
+        },
+        {
+            "start": 2258400,
+            "end": 2269240,
+            "speaker": "A",
+            "text": "Also oder vielleicht sogar Entwickler mit Produktionszugriff und jeder, der uns hört. Wir predigen ja immer, you build it, you run it. Also eigentlich, weiß ich nicht, ist das ein Gegenargument für you build it, you run it."
+        },
+        {
+            "start": 2269390,
+            "end": 2276510,
+            "speaker": "B",
+            "text": "Ja, hoffentlich hast du ja noch Vier Augen Prinzip. Aber ob das durch die prs, durch die Code Reviews nicht sowieso durchschlüpfen kann, ist die andere Frage."
+        },
+        {
+            "start": 2276750,
+            "end": 2320420,
+            "speaker": "A",
+            "text": "Da hoffe ich einfach mal auf eine gute Security, auf Just in Time Access und Timebound Access und pipapo. Also eigentlich suchst du dir, ich sag mal, Ziele, ich sage mal, die Person mit Zugriff, die Person, die die eigentliche Aktion auch durchführen kann. Schritt zwei hol dir mal ein paar Informationen, also Open Source Intelligence O sind, wie wir das auch in dem Defcon Telefonat einmal dargestellt haben. Und was nutzt man da heute? Social Media, LinkedIn. LinkedIn hat eine super Funktion für, muss ich zugeben, nutze ich auch super oft für die Podcast Recherche. Ich suche mir einfach irgendeine Firma, die was Cooles baut, Dann gehe ich auf Personen, dann zeigen die mir einfach alle Mitarbeiter in Deutschland und dann kann ich sogar noch filtern und so weiter. Auch alles ohne Premium Account, also für Open Source Intelligence, LinkedIn, superb muss ich sagen."
+        },
+        {
+            "start": 2320820,
+            "end": 2337670,
+            "speaker": "B",
+            "text": "Darum haben wir übrigens ganz viele sicherheitsrelevante Firmen. Das interne Verbot, dass du auf Social Media bist oder auch im Militär, wird normal immer geraten, auch weil du dann irgendwie erpressbar bist, vor allem wenn du dann irgendwelche Familienbilder online hast. Aber rein die Information, dass du in so einer Firma arbeitest, macht dich eigentlich schon zum Angriffsziel."
+        },
+        {
+            "start": 2337670,
+            "end": 2356840,
+            "speaker": "A",
+            "text": "Ja, aber da gibt es noch viel mehr Stellenausschreibungen, kannst du Relationen hinzuführen, so nach dem hey, ihr sucht doch gerade für das Finance Team was oder so Konferenzvorträge. GitHub, GitHub habe ich auch mal die Witcharbeit drüber geschrieben. Git Mining, ich sage euch, da kriegt man Infos raus, das glaubt ihr gar nicht, welche E Mail Adressen die Person nutzt und so weiter. Also Wahnsinn."
+        },
+        {
+            "start": 2356920,
+            "end": 2374120,
+            "speaker": "B",
+            "text": "So Jobinterview Mining könnte man eigentlich machen, oder? Wenn man zu einem Jobinterview geht, da kannst du ja Informationen rausholen aus der Firma eigentlich. Da hast du unterschiedliche Interview womöglich und dann kannst du da viele, viele Fragen stellen und wo die Server sind und da kannst du ja mal grundlegend perfekt die Recherche betreiben."
+        },
+        {
+            "start": 2374120,
+            "end": 2378130,
+            "speaker": "A",
+            "text": "Ja, das würde ich auch als Öffentlichkeit zugänglich mehr oder weniger."
+        },
+        {
+            "start": 2378690,
+            "end": 2387570,
+            "speaker": "B",
+            "text": "Also ja, aber du bist dann in einem Kontext, du bist in einem Vertrauensverhältnis in gewisser Weise, du hast dich beworben, du wurdest eingeladen und dann erzählen dir natürlich die Developer auch Sachen."
+        },
+        {
+            "start": 2387570,
+            "end": 2501970,
+            "speaker": "A",
+            "text": "Okay, jetzt hast du da hier dein, wie im FBI Netflix Film, deine Wand mit den ganz vielen Fotos und mit den Wollknäueln und dann entwickelt sie dir einfach mal eine Story. Das bedeutet, denk dir eine Rolle aus. Du bist vom IT Support, du bist ein Kollege, du bist der Lieferant, von mir aus bist du der Bankmitarbeiter oder Auditorium. Und dann nimmst du dir noch einen Anlass dazu, eine Systemumstellung, Sicherheits eine Rechnungskorrektur, ein verlorenes Gerät. Passiert ja immer wieder. Scheiße, ich habe mein Mobiltelefon in der Bahn liegen lassen und muss das jetzt sperren. Kannst du mir neues schicken? Ich bin vor kurzem umgezogen, ich habe dir HR noch nicht meine neue Adresse gegeben, ihr wisst das schon. Und wenn ihr den Call habt oder wenn ihr auch von mir aus das Gespräch in der Kantine habt, dann stellt Vertrauen her, nennt echte Namen von Kollegen. Ich habe gesagt, ihr findet die ganze Finanzabteilung auf LinkedIn, interne Begriffe verwenden, vielleicht eine Ticketnummer oder so. Und danach in dem Gespräch triggert ihr kleine Handlungen, lasst euch eine Information bestätigen, schlüpft vielleicht mit jemandem ins Büro, weil ihr eure Keycard gerade verloren habt oder gerade die Hände voll habt mit einem Kaffee und drei Aktenordner, so der Klassiker. Und ihr steht vor und kommt nicht an eure Keycard, die ihr natürlich nicht in der Tasche habt. Und dann kommt jemand aus dem Aufzug und lässt euch irgendwie rein, halt all sowas. Später geht es dann an die Eskalation. Da triggert ihr weiter Informationen, wollt weitere Informationen haben, wollt vielleicht, dass ein Passwort zurückgesetzt wird oder dass ihr euch intern weiter bewegt, entweder durch die Systeme im Endeffekt, wenn ihr dieser Checkliste folgt, dann müsst ihr eigentlich gar nicht lügen, denn ihr habt ja wahre Informationen, die ja wirklich wahr sind vom Unternehmen und es sind häufig viele kleine plausible Schritte. Doch die Person gegenüber weiß halt nicht, dass ihr eigentlich wer Fremdes seid, weil ihr habt ja so viel Interner und da denkt man sich, okay, wenn die Person so viele Interne hat, dann muss die hier arbeiten. Also vielleicht ist das sogar der, ich sage mal, psychologische Hebel. Gibt es einen psychologischen Hebel bei der ganzen Thematik? Kann man das so nennen, Wolfgang?"
+        },
+        {
+            "start": 2501970,
+            "end": 2641520,
+            "speaker": "B",
+            "text": "Ja, ich würde gar nicht sagen, es gibt einen psychologischen Hebel auch, sondern Social Engineering ist eigentlich ein psychologischer Hebel. Und du verwendest ja diese ganzen psychologischen Muster, also dass du zum Beispiel die Autorität irgendwie ausspielst, du bist jetzt, keine Ahnung, der Assistent vom CTO und musst eben schnell diesen Aktenordner organisieren. Also du verwendest dann bewusst diese Hierarchie und baust einen Druck auf. Also so eine Dringlichkeit, es muss jetzt schnell passieren, der CEO wartet im Auto oder keine Ahnung, oder muss diesen Deal durchführen oder vielleicht auch der Kunde wartet oder mich hat gerade ein Kunde angerufen, der ist extrem grantig und ich muss das jetzt schnell lösen, weil der macht extreme Probleme. Also Autorität und Druck ist auf jeden Fall psychologisch natürlich ein guter Hebel. Das Vertrauen, das hast du jetzt schon ausführlich erwähnt, macht natürlich auch Sinn und das erreicht man ja dann über Informationen. Was auch ganz großer Punkt ist, den hast du ja in deiner Geschichte mit der Vereinssoftware erwähnt, diese Hilfsbereitschaft. Also ein Support ist ja da, um die Kunden glücklich zu machen und der will ja eigentlich den Kundinnen weiterhelfen. Also legt man sich da vielleicht auch mal aus dem Fenster raus und gibt irgendwas nach außen, was man vielleicht gar nicht darf. Und ja, man würde ja auch sagen, was will derjenige mit einer Vereinssoftware? Aber klar, es kann ja auch wieder jemand sein, der dann wieder die Informationen aus der Vereinssoftware verwendet, um andere Informationen rauszubekommen oder sich auszugeben oder über den Verein irgendwas zu machen. Also die Hilfsbereitschaft ist etwas Menschliches und das kann man halt natürlich auch ganz klar ausnützen. Und die Hilfsbereitschaft hat auch so einen Aspekt, wenn man zum Beispiel Informationen bereitstellt, also im Gegenzug nett ist, wenn man jetzt irgendwo anruft und Informationen, die man erhalten hat, weitergibt. Wenn man Hast du eigentlich schon gehört, dass es einen neuen Benefit gibt in der Firma XY, Du kriegst jetzt gratis Bananen bei irgendeinem Geschäft oder so, keine Ahnung, als Benefit hast du das schon gehört, der andere cool. Und dann hat man sofort ein Vertrauensverhältnis und die Person will ja dann auch irgendwie was zurückgeben, wenn sie Informationen erhalten hat, die wichtig sind Oder wie wir in unserem Gespräch gehabt haben, die Person ja, wir haben da ein Problem mit den Kreditkarten gehabt, dass man sagt ja, das wissen wir schon, wir kümmern uns schon drum. Das ist ja auch so eine Gegenleistung, die man dann einfordern kann. Jetzt habe ich dir weitergeholfen, wir sind da schon dran, du kannst beruhigt sein, aber jetzt hilf mir auch noch mal bei meinem Problem weiter. Also das hilft natürlich immer, wenn du"
+        },
+        {
+            "start": 2641520,
+            "end": 2648460,
+            "speaker": "A",
+            "text": "Bananen sagst, denke ich mir, okay, wenn wir über Software Engineering Firmen reden, finde ich es immer schwierig. Bananen für die ganzen Code Monkeys fällt"
+        },
+        {
+            "start": 2648460,
+            "end": 2732360,
+            "speaker": "B",
+            "text": "mir immer so ein, ja, gratis Bananen. Mir ist wirklich nichts Schlechteres aktuell eingefallen, Aber schau auf der Webseite nach, was es für Benefits gibt und sagt, es gibt diesen coolen Gutschein im Gym, hast du schon davon gehört oder so. Wenn du rausfindest, dass jemand wirklich Fitness mag, also ich hab das auch von einem anderen Call übrigens gehört von einer Hackerin, die da einfach beinhart ihre Erfahrung als Mutter ausgespielt hat. Also die andere Person war auch eine Mutter und die hat sich extra diese Person rausgesucht und hat dann halt wirklich Vertrauen aufgebaut über die Mutterschaft und hat über Kinder gesprochen und so weiter. Und sie hat im Nachhinein gesagt, sie hat sich so schlecht gefühlt, weil sie da ihre wirklich die Mutterschaft ausgenutzt hat von der anderen Person. Und so was ist dann schon hart natürlich. Aber ja, es funktioniert halt genauso. Eine andere Art, um Druck aufzubauen, ist natürlich auch, dass man irgendwie sagt, es muss jetzt schnell passieren, weil es ist die letzte Chance. Heute Abend wird sonst dein Konto deaktiviert oder eure ganze Filiale kann nicht abgerechnet werden, eure Filiale macht dann irgendwie keine Ahnung, es gehen Rechnungen verloren, das muss unbedingt jetzt gemacht werden, weil um sechs uhr ist diese Abrechnung und es gibt sonst irgendwie ein Problem. Also da kann man natürlich auch dementsprechend Druck aufbauen oder vielleicht auch auf die Person eben direkt Druck ausüben. Deine Lizenz läuft dann aus, dein Arbeitsplatz funktioniert nicht mehr in einer Stunde. Also da kann man natürlich dementsprechend auch Druck aufbauen oder Angst eigentlich aufbauen."
+        },
+        {
+            "start": 2732360,
+            "end": 2758610,
+            "speaker": "A",
+            "text": "Die klassischen Abrechnungs Runs morgens immer um sechs, die dann das Report in die Geschäftsleitung senden, hatte ich so oft, dass ich dann auch E Mails von der Geschäftsführung bekommen habe, weil irgendein Job in der Nacht fehlgeschlagen ist und deswegen der Report nicht pünktlich um sechs da war. Da kam sofort die E Mail, warum ist der Report nicht da? Also das geht halt genau in die Richtung, obwohl diese E Mails dann damals real waren. Aber wenn du diese Information hast, Gold wert, Gold wert."
+        },
+        {
+            "start": 2758690,
+            "end": 2812440,
+            "speaker": "B",
+            "text": "Eine andere Art von Druck ist natürlich auch dieser Social Proof, dass man ja, die anderen Kollegen haben das ja schon gemacht und du bist der Letzte oder hast du das doch nicht gehört, dieses Update, hast du es noch gar nicht eingespielt? Man kann dann sogar vielleicht mit der Angst spielen, dass man sagt, okay, hat ja eine Aussendung gegeben, du musst dieses Update installieren, da gibt es ja sonst rechtliche Konsequenzen oder es wird dann Sicherheitsvorfall eingegeben und es wird dann offiziell behandelt als Sicherheitsvorfall und kann vielleicht Konsequenzen haben. Also da kann man ja auch relativ schnell Druck aufbauen, um eben dann wieder einfach so Sachen schneller zu erreichen, dass die Leute einfach Angst bekommen und ich sage mal ihr Gehirn ausschalten oder es einfach weniger hinterfragen. Und genau bei diesen psychologischen Mustern merkt man eigentlich sehr schnell, weil du am Anfang gesagt hast, okay, dieser Banküberfall war in den ERN. Aber diese psychologischen Muster funktionieren halt heute genauso und zwar ein hundert Prozent genauso."
+        },
+        {
+            "start": 2812440,
+            "end": 2847270,
+            "speaker": "A",
+            "text": "Aber hat sich denn noch mehr geändert? Also dein Bankenüberweisungs Szenario, was du vorhin erzählt hast, da ging es ja um Tagescodes. Vielleicht gibt es Tagescodes in Hochsicherheitsumfeld immer noch. Ich hoffe, die werden jetzt anders irgendwie verteilt und nicht auf einem Post it wie einen Bildschirm geklebt. Und ich meine, früher gab es ja auch für OSINT, für die Recherchephase, fürs Open Source Intelligent, das gute alte Telefonbuch, wo einfach nur jeder Name drin war. Es gibt ja heutzutage auch nicht mehr einfach unvorstellbar. Ist das Telefonbuch eigentlich Datenschutz? Weiß ich gerade nicht. Naja, was hat sich denn noch geändert?"
+        },
+        {
+            "start": 2847350,
+            "end": 2917030,
+            "speaker": "B",
+            "text": "Ja, ich bin mir gar nicht sicher, ob sich das geändert hat, weil du die Codes erwähnt hast, weil heutzutage hast du vielleicht Two Factor Authentication, aber auch da gibt es ja mittlerweile genug Fälle, wo du am Telefon hängst mit irgendwem. Der Tipp deine Kontaktdaten ein, gibt dein Passwort ein, weil du es ihm vielleicht gegeben hast oder er es im Vorhinein rausbekommen hat und du rufst den jetzt an und Hey, wir machen da ein Update auf deinem Konto, aber das muss bestätigt werden über Two Factor und so weiter. Ich sende dir den Two Factor Code, kannst du mir den schnell am Telefon durchsagen und dann triggerst du einfach den Login durch den Login dieses Two Factor Authentication Code versenden und die Person gibt dir die per Telefon durch und dann hast du den Two Factor Code. Auch da gibt es hunderte von Fällen, die da bereits passiert sind und die funktionieren. Und das ist vielleicht kein physikalischer Code, der auf einem Post It steht, wobei das wahrscheinlich mit Passwörtern immer noch ein Problem ist heutzutage, sondern du gibst ihn halt einfach bei Telefon durch und es ist Two Factor im Prinzip. Diese Codes an sich gibt es natürlich immer noch. Es hat sich nur ein bisschen verlagert, wie das Ganze durchgeführt wird. Und vielleicht ist es heute halt eher das E Mail oder Social Media oder der Messenger, was halt früher Telefon oder Fax war."
+        },
+        {
+            "start": 2917030,
+            "end": 2962470,
+            "speaker": "A",
+            "text": "Naja, aber ich glaube schon, dass heutzutage mehr Möglichkeiten für Social Engineering gibt. Ich nenne nur mal dieses ganze Voice Cloning und diese Deepfakes Thematik. Also wenn ich jetzt einfach mal diesen Podcast nehme, ich schneide mir vierzig Beispiele raus, wahrscheinlich brauche ich noch nicht mal zu viele von deiner Stimme. Wolfgang, ich knall die bei Eleven Labs rein. Mit hoher Wahrscheinlichkeit trainieren die mir ein sehr, sehr gutes Modell anhand deiner Stimme und dann kann ich alles einsprechen, was in deiner Stimme wieder rausgeht für ein Telefonat mit einem deiner Freelancer Kunden, weil du das vielleicht auch in diesem Podcast mal erwähnt hast. Diese Möglichkeit gab es ja früher nicht. In den Hollywood Filmen gibt es diesen Stimmenverzerrer, den Batman auch immer hat."
+        },
+        {
+            "start": 2962470,
+            "end": 2988170,
+            "speaker": "B",
+            "text": "Aber nun gut, also früher gab es natürlich die Möglichkeit, du gibst dich einfach als jemand anderer aus am Telefon, aber du kannst natürlich nicht dieselbe Stimme natürlich machen, das ist ganz klar. War aber oft gerade in großen Organisationen auch gar nicht nötig. Das kannst du jetzt halt wirklich gezielt automatisiert mit AI wesentlich besser machen. Und das haben wir ja auch schon besprochen, diese ganzen Phishing Attacken, die werden einfach immer besser. Und der Next Step ist natürlich nicht nur die E Mail, sondern auch Voice Cloning. Ganz klar."
+        },
+        {
+            "start": 2988170,
+            "end": 3060190,
+            "speaker": "A",
+            "text": "Ja, aber nicht nur Voice Cloning. Du kannst ja auch, um weiteres Vertrauen zu bekommen, hey Wolfgang, lass uns doch mal kurz in den Call springen. Du kriegst ja inzwischen auf Instagram und YouTube, kriegst du ja Videos, wie ein, ich sag mal, ein Mann sich vor die Kamera stellt und auf dem Parallel Screen hast du eine Dame, die als Social Media Avatar genutzt wird, die wirklich aussieht wie eine reale Dame, natürlich komplett aufgehübscht und pipapo, dass da ganz viele Männer drauf anspringen. Und das wird dann als Social Media Reels genutzt. Es gibt ja Fälle davon, wo ganze KI Avatare so realistisch aussehen. Das ist ja eigentlich für die ganze Social Engineering Thematik fatal, weil wir müssen uns nicht mehr nur auf Telefon beschränken, sondern können auch in den Teams Call springen. Und ich bin mir gar nicht sicher, ob der Raiffeisenmarkt davor geschützt wäre oder John Deere oder Fendt. Du musst ja nicht immer die IT Bude angreifen, sondern einfach mal den guten alten deutschen Mittelstand oder von mir aus auch einfach irgendeinen Konzern. Es gibt ja etliche Konzerne in Deutschland oder auch in Österreich wahrscheinlich, die bei weitem nicht so fit sind in der IT. Es gibt ja immer noch die Statistik."
+        },
+        {
+            "start": 3060190,
+            "end": 3061030,
+            "speaker": "B",
+            "text": "Ich weiß nicht, vielleicht hast du die"
+        },
+        {
+            "start": 3061030,
+            "end": 3080050,
+            "speaker": "A",
+            "text": "Zahl gerade im Kopf, dass weltweit nur unter vier Prozent jemals mit KI schon mal was gemacht haben. Also irgendwie so eine super schrecklich niedrige Zahl auf jeden Fall. Und wir in unserem Umfeld denken ja jeder promptet jeden Tag zwanzig Mal und jetzt reden wir über Video Deepfakes und Voice Klone."
+        },
+        {
+            "start": 3080530,
+            "end": 3187070,
+            "speaker": "B",
+            "text": "Ich glaube, das ist auch das Problem. Man spricht immer vom Enkeltrick, glaube ich heißt es, oder wenn der Enkel quasi bei der Oma anruft und sagt, er braucht Geld und so weiter, was jetzt natürlich noch einfacher wird. Aber ich glaube, man muss sich schon bewusst sein, dass das auch eigentlich jeden treffen kann, auch uns. Ein Freund von mir, ich kann mich erinnern, ist sogar zehn Jahre schon her, ein Administrator an der Universität, super security orientiert, nur Linux User und so weiter und nur Open Source und hat da wirklich großes Augenmerk draufgelegt, was passiert. Er bekommt eine Phishing E Mail im Urlaub, nur mobil, schaut nicht direkt auf die Headers, klickt da drauf, gibt seine Logindaten ein und zwei Tage später hat ihn dann irgendwie der zentrale Informatikdienst angerufen, hat gesagt, hey, über deinen E Mail Account fliegen irgendwie E Mails pro Tag, irgendwas ist da, ist der krumm und du würdest es nie glauben bei so jemanden, dass man drauf reinfällt. Aber das ist einfach wieder der Stress. Er war im Urlaub schnell, schnell E Mail, was da wieder neues Problem, muss man sich schnell einloggen. Es hat relativ realistisch ausgesehen und das ist vor zehn Jahren gewesen. Man klickt halt dann einfach mal schnell irgendwo drauf und ich glaube, das sind auch wir als Experten einfach nicht immun dagegen. Das kann allen passieren und vor allem, wenn dann dieser ganze Stress, der Zeitdruck dazu kommt, vielleicht ist man gerade müde, man hat irgendwas anderes im Kopf, man hat die Hierarchie, die vielleicht noch Druck macht in irgendeiner Form in der Firma, man hat die Routine, man macht irgendwie hunderte Tasks den ganzen Tag, die gleich sind, dann kommt halt der hundert Erste rein und da macht man den halt auch noch mit oder so. Also sowas passiert eigentlich allen und davor ist man nicht gewappnet, glaube ich. Also zu sagen, dass man irgendwie intelligenter als diese ganzen Tricks ist, ja, vielleicht geht der Enkeltrick nicht, aber Wenn da was gröberes aufgefahren wird und was Personalisiertes vor allem, dann wird es wirklich schwer."
+        },
+        {
+            "start": 3187470,
+            "end": 3232510,
+            "speaker": "A",
+            "text": "Ich glaube, ich stimme dir zu, dass wir uns alle selbst überschätzen. Dieses mir würde es nie passieren, ist glaube ich ein alter Hut. Die bessere Frage wäre, unter welchen Bedingungen könnte es mir passieren? Die Login Thematik könnte mir zum Beispiel nicht passieren. Und ich hoffe, dass das machen alle unsere Hörerinnen und Hörer. Denn nutzt einen scheiß Passwortmanager, denn auch da habt ihr die URL drin. Und jetzt kommt meine Routine, nämlich ich gebe die gar nicht mehr ein. Das bedeutet, mein Passwortmanager schlägt mir das vor und er schlägt mir das natürlich nur unter der richtigen URL vor. Das bedeutet, wenn ihr in eurem Passwortmanager eine URL drin habt, wo der Service da ist und euer Login, dann seid ihr eigentlich schon neun und neunzig Prozent Phishing secure, wenn du deine Uni Admin Story da gerade rausgepackt hast."
+        },
+        {
+            "start": 3232820,
+            "end": 3267820,
+            "speaker": "B",
+            "text": "Wobei man muss natürlich dazu sagen, also bei mir zum Beispiel mit meinem Setup Linux keepass XC Connection zu Firefox, hin und wieder klappt diese Connection aus irgendeinem Grund nicht und dann denke ich mir, ah ja, OK, funktioniert gerade wieder nicht und ich hole das Passwort manuell. Es passiert mir immer wieder, ich probiere darauf zu achten, aber es passiert halt einfach, weil hin und wieder die Connection nicht läuft oder irgendwie eine URL nicht stimmt oder so alte Einträge. Man denkt sich da ja immer alles zurecht und denkt sich, ja, es wird schon so sein, es muss schon so stimmen. Man macht sich da seine eigene Realität oft. Und das ist halt auch der Fehler."
+        },
+        {
+            "start": 3267980,
+            "end": 3324000,
+            "speaker": "A",
+            "text": "Das solltest du auch mal debuggen, denn ich will jetzt nicht Password loben, kenne mich mit keepass X und deinem Setup nicht aus, deswegen. Aber da habe ich in allen Browsern, die ich nutze, keine Probleme. Und das würde ich wirklich debuggen, denn das ist eine Nummer eins Schutz. Denn du sagst ja selber, die Frage ist nicht, ob du attackiert wirst. Die Frage ist wann. Und jetzt kommt mal was zum Nachdenken. Bist du dir sicher, dass du nicht schon attackiert wurdest und dass es nicht erfolgreich war? Weil wir hatten gerade über die langsamen Attacken gesprochen. Was ist denn, wenn auf deiner Kiste irgendwas schläft und es wird einfach nur oder es läuft schon auf einem so low volume, dass du es einfach gar nicht merkst. Jeden Tag ein E Mail oder zwei E Mails aus deinem Postfach gesendet, das merkst du nie im Leben. Das mal vier tausend sind acht tausend Spam E Mails pro Tag, das über ein Jahr. Die machen einfach den Slow Volume durch, fertig und lassen einfach laufen."
+        },
+        {
+            "start": 3325280,
+            "end": 3349100,
+            "speaker": "B",
+            "text": "Kann ich natürlich nicht sicherstellen. Klar, ich probiere mal aufzupassen und das dann natürlich zu überprüfen, wenn ich es manuell mache. Aber klar, wenn man das schnell, schnell im Stress kann durchaus passieren. Ich probiere sowieso auf keine Links in E Mails zu klicken oder die Header sehr genau anzusehen, Aber ja, man ist wieder mobil oder so, dann hat man wieder dieses alte Leiden und auf mobil gibt es sowieso keine sinnvolle Connection bei mir zumindest. Macht durchaus Probleme."
+        },
+        {
+            "start": 3349260,
+            "end": 3460230,
+            "speaker": "A",
+            "text": "Aber das bringt uns zu den Schutzmaßnahmen, die jetzt natürlich auch nicht ganz so einfach sind, denn wir haben gerade gesagt, es trifft auch die Experten. Was würdest du sagen hilft bei der ganzen Thematik? Ein Tipp, den ich zum Beispiel immer mache, und zwar bekomme ich ab und zu auch Kaltakquise Anrufe. Irgendwelche Firmen wollen mir irgendwas verkaufen im Obstability Bereich, weil ich sehr beruflich unterwegs bin, wollen die mit mir immer sprechen, blablabla, ab und zu nehme ich an, weil ab und zu nicht, je nachdem wie, ob die Nummer legitim aussieht und so. Und dann sage ich, schicken sie mir eine E Mail mit den Informationen, ich melde mich, falls ich Interesse habe. Dann fragen die ist deine E Mail Adresse das und das? Dann sagen die immer was Aktives, dann sagen die auch was Falsches, Dann sage ich einfach, ja, dann weiß ich schon, okay, die Schutzmaßnahme ist hier, die Leute sollen dir eigentlich immer alles per E Mail schicken. Der Grund ist ganz einfach. Dann kann ich auf den E Mail Header schauen, kommt das aus meiner Firma, ist das zertifiziert über die Domain, ist das legitim und so weiter und so fort. Und du bist nicht in dieser Hektik, denn ich habe schon sehr, sehr viele Lizenzen erneuert und auch Verträge verhandelt und war da mit involviert. Wenn du eine Firma hast und du hast einen Vertrag mit Atlassian oder ähnliches, dann hast du auch in der Regel einen Key Account Manager. Und wenn du eine Gebühr für das nächste Jahr nicht überwiesen hast, da kommt es in der Regel nicht auf den einen oder anderen Tag drauf an. Die sperren den Account in der Regel nicht sofort, wenn ein anderes Unternehmen hinterhängt. Bei deinen privaten Dingern ist das was anderes. Dein Netflix Abo kann sein, dass das sofort down geht, wenn du nicht deine elf Euro überwiesen hast. Das ist fair. Aber wenn dann eine Firma hinterhängt mit ein hundert Mitarbeitern oder zwei hundert Zugängen, dann kommt es in der Regel auf den Tag nicht drauf an, ob das überwiesen wird oder nicht, sondern da hängt in der Regel noch ein Key Account Manager dazwischen und so weiter und so fort."
+        },
+        {
+            "start": 3460230,
+            "end": 3486430,
+            "speaker": "B",
+            "text": "Deswegen, aber Netflix ruft dich auch nicht an. Also die schicken vielleicht eine E Mail und wenn dein Netflix einen Tag off ist aus irgendeinem Grund, dann sei es so. Und bei einer E Mail hast du ja, wie du richtig sagst, immer mehr Zeit. Da kannst du die URL überprüfen. Du kannst statt auf den Link in der E Mail zu klicken, kannst du einfach so Netflix eingeben, weil du weißt, wo dein Konto ist, du weißt, wie du dich einloggen kannst, du weißt, wie du deine Bankdaten dort einsehen kannst. Also das Klassische funktioniert ja alles und"
+        },
+        {
+            "start": 3486430,
+            "end": 3507520,
+            "speaker": "A",
+            "text": "der ganze Druck ist ja nur gespielt. Angenommen, jemand setzt euch unter Druck, dass der Geschäftsführer gerade irgendeinen Deal abschließen möchte. Wenn die Gegenseite wirklich Interesse an dem Deal hat, kann man auch eine Stunde oder zwei oder drei noch warten, weil der Prozess ist dann sowieso schon wochenlang aktiv, um das meist ein bisschen überspitzt zu sagen."
+        },
+        {
+            "start": 3507760,
+            "end": 3562550,
+            "speaker": "B",
+            "text": "Ja, die Frage ist auch, warum sollten die zu dir kommen und warum kennst du die Person nicht? Also wenn wir jetzt mal Deepfakes weglassen, also irgendwas ist da dann ja auch faul. Also ist zwar immer leicht gesagt, man soll sich nicht unter Stress unter Druck setzen lassen, aber eigentlich ist es sicher das Beste, einfach mal einen Schritt zurück. Man kann ja noch mal sagen, sorry, ich hab gerade keine Zeit oder sonst was, ruf mal in einer halben Stunde noch mal an, dann hat man auch Zeit zum Überlegen Oder ich rufe zurück, dann hast du schon mal eine Nummer. Es hilft dir unter Umständen auch. Also einfach da ein bisschen Speed rausnehmen, ist wahrscheinlich grundsätzlich immer gut. Ich meine die ganzen Standard Advices, dass man keine Two Factor am Telefon durchgeben soll und solche Sachen, ich glaube, die sind bei uns in der Tech Szene jetzt sowieso weit verbreitet. Aber wie gesagt, man ist irgendwo im Stress im URLAUB keine Ahnung und wird aus irgendeinem Grund dumm getroffen, ist gerade müde, dann kann sowas natürlich auch passieren. Klar."
+        },
+        {
+            "start": 3562550,
+            "end": 3609300,
+            "speaker": "A",
+            "text": "Genau diese Standard Advice lassen wir jetzt einfach mal weg, Aber auch ein sehr guter Tipp ist in der Regel haben alle von euch irgendwie so einen Firmenchat Messenger, sei es, weiß ich nicht, Slack oder Metamos oder Microsoft Teams oder Skype for Business, wenn es das noch gibt. Naja, ihr wisst, was ich meine. Schreibt da einfach eure Geschäftsführerin an, Hey, hast du mir gerade eine SMS geschrieben, dass ich den Betrag vier tausend sieben hundert elf nach Atlassian überweisen soll? Immer wenn ich sowas gehört oder selbst gemacht habe, ich habe noch nie eine negative Response bekommen, sondern es war immer dankbar, dass man da nicht reingefallen ist, dass man sich kurz gegengecheckt hat. Und wenn es dann doch dringend ist, dann kann man immer noch den Gerd aus der Finanzabteilung anrufen, der dann die Überweisung macht, in der Hoffnung, dass der Gerd dann nicht dich als Social Engineering Opfer. Naja, ihr wisst schon."
+        },
+        {
+            "start": 3609860,
+            "end": 3683490,
+            "speaker": "B",
+            "text": "Was man natürlich schon auch von der Entwickler Innenseite sagen kann, ist, wenn man selber solche Systeme entwickelt, dass man halt auch immer damit rechnet, dass solche Menschen kompromittiert sind und vielleicht Fehler machen und vielleicht kann man dann ja auf der technischen Seite irgendwas lösen oder least privilege, dass die Rechte nicht zu hoch sind, dass man sinnvolle Two Factor hat, vielleicht keine SMS. Two Factor ist eigentlich ja sowieso veraltet und nicht sicher, dass man halt da einfach von der technischen Seite auch alles macht. Ich glaube, da könnte man wahrscheinlich ganze drei Episoden damit füllen, was man dort machen kann. Aber gerade wir auf der Entwicklerseite sind da natürlich auch dementsprechend verantwortlich. Und dann noch zusätzlich natürlich auf der Prozessseite, gerade in großen Firmen, wo das ja viel eher auftritt, gibt es Prozesse und darum gibt es ja vielleicht auch Prozesse, damit man da eben nicht so einfach aus diesem Prozess ausbrechen kann. Und so Prozess hilft ja auch, dass man dann vielleicht sagen kann, ja, aber das geht halt nicht so schnell, Wir haben diesen Prozess oder du kennst ja eh diesen Prozess, wir müssen das jetzt so machen und da braucht es irgendwie ein Approval und dann kommt man da vielleicht auch nicht zu unsympathisch rüber und es ist auch für einen selbst einfacher zu Der Prozess ist schuld und ich bin nicht der Unfreundliche hier, sondern wir müssen halt dem Prozess folgen. Sorry. Also Prozesse sind nicht immer schlecht, wollte ich damit sagen."
+        },
+        {
+            "start": 3683730,
+            "end": 3781610,
+            "speaker": "A",
+            "text": "Also ich glaube als Schlussgedanke oder das, was wir sagen wollen, ist Social Engineering ist kein Randthema. Ich glaube, es wird immer populärer und besonders jetzt, weil einfach jeder diese Möglichkeiten hat. Jeder bootet einfach mal so Nanobanana und macht drei Fakes vom Wolfgang. Und es betrifft einfach auch jede Abteilung in jeder Firma. Und der Wolfgang hatte mir einen schönen Satz im Vorgespräch gesagt. Die entscheidende Frage lautet nicht, kann jemand unser System hacken, sondern kann jemand eine berechtigte Person dazu bringen, das System für ihn zu öffnen? Und das fand ich eigentlich ganz schön, denn es fängt mit diesen kleinen Informationen an. Ihr wollt ins Büro, habt eure Zugangskarte und jemand steht mit einem Kaffee und drei Akten in der Hand, kommt nicht an seine Keycard. Ich glaube, eines der besten Gegenmaßnahmen bei sowas ist vielleicht auch einfach mal Nein zu sagen. Man kann auch net Nein sagen, auch wenn man Support angerufen hat. Kannst du mir mal eben helfen? Nein, ich kann dir nicht mal eben helfen. Bitte eröffne ein Ticket. Und die Person kann dann natürlich kein Ticket eröffnen, weil sie natürlich kein Zugriff auf das interne Ticketsystem hat und so weiter. Oder wenn ihr ins Büro Hey, tut mir leid, ich verfolge nur die Regeln des Sicherheitsinspektors. Ich würde dich bitten, dir zwei Minuten zu nehmen, den Kaffee auf den Boden zu stellen, die Ordner zur Seite zu legen und deine Keycard zu nehmen und dann selbst zu Das muss man sich immer unfreundlich machen. Das geht auch nett. Und wenn die Person wirklich ein Mitarbeiter ist, dann weiß diese Person, dass es auch eigentlich richtig. Und wenn man diese Person dann später trotzdem in der Kaffeeküche trifft, kann man Hey, das war jetzt nicht persönlich gemeint, es tut mir leid, aber letzte Woche habe ich die Security Schulung neu gemacht und da ist mir das nochmal aufgefallen."
+        },
+        {
+            "start": 3781610,
+            "end": 3800930,
+            "speaker": "B",
+            "text": "Internes Wissen ist eben nicht Identität. Ich glaube, auf das muss man einfach aufpassen. Also nur weil jemand irgendwas weiß und paar Infos hat, heißt es noch lange nicht, dass er alles darf und vertrauenswürdig ist. Egal ob bei E Mail, Telefon oder eben beim Eintritt in die Firma Und kennen wir alle. Wie oft halten wir irgendwelche Türen für andere Leute auf?"
+        },
+        {
+            "start": 3801170,
+            "end": 3862050,
+            "speaker": "A",
+            "text": "Sehr, sehr oft. Sehr, sehr oft. Also wenn du auch mal eine Social Engineering Attacke erlebt hast vielleicht warst du sogar Teil der ganzen Sache als Attacker oder als Opfer schreib uns doch mal eine Mail komm in unsere Discord Community ich bin wirklich gespannt denn dieses Feld finde ich richtig richtig spannend besonders was für einen Mut man aufbringen muss ich weiß gar nicht ob ich das könnte und diese Konfidenz und dieses dieses Selbstvertrauen naja ich bin auf deine Story gespannt Discord Community via E Mail du findest uns schon irgendwo auf Social Media dann machen wir wenn nicht ist das jetzt dein Ohr sind Rechercheauftrag uns zu finden so das war es von uns wir hören uns nächste Woche und tschüss ciao. Und da will man den Geschäftsführer natürlich jetzt nicht enttäuschen du kannst natürlich weiter Druck aufbauen ja möchtest du dass der dass der mess you oder Messi ist Dobername sollte man nicht machen möchtest du dass der Gerhard Gerhard ist auch ein scheiß Name möchtest du dass die Gabi jetzt nicht den Deal closen kann oder deswegen."
+        }
+    ]
+}
