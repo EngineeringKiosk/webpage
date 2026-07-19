@@ -233,12 +233,7 @@ bestPerformingEpisodes = bestPerformingEpisodes.slice(0, 6);
 				@reference "../styles/global.css";
 
 				.review-box {
-					@apply w-full px-4 mb-8 min-w-full;
-				}
-				@media screen(sm) {
-					.review-box {
-						min-width: 380px;
-					}
+					@apply w-full px-4 mb-8 min-w-full sm:min-w-[380px];
 				}
 			</style>
 
