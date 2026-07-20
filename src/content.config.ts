@@ -92,6 +92,12 @@ const meetupSchema = ({ image }) =>
 				// /meetup/<region>/slides/ at render time (Talk.astro); URLs are used as-is.
 				slides: z.string().optional(),
 				language: z.enum(['en', 'de']).optional(),
+				affiliation: z
+					.object({
+						role: z.string(),
+						organization: z.string(),
+					})
+					.optional(),
 			})
 		),
 		participants: z

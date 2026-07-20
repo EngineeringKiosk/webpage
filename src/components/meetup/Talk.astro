@@ -22,6 +22,10 @@ export interface Talk {
 	bio?: string;
 	slides?: string;
 	language?: string;
+	affiliation?: {
+		role: string;
+		organization: string;
+	};
 }
 
 export interface Props {
@@ -29,7 +33,7 @@ export interface Props {
 	meetupSlug: string;
 }
 
-const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language } = Astro.props.talk;
+const { avatar, name, title, description, github, x, linkedin, bluesky, mastodon, threads, instagram, youtube, website, bio, slides, language, affiliation } = Astro.props.talk;
 const meetupSlug = Astro.props.meetupSlug;
 
 const talkId = `talk-${name.toLowerCase()}-${title.toLowerCase()}`.replace(/[^a-z0-9-]/g, '-');
@@ -51,9 +55,12 @@ const avatarArray = avatar ? Array.isArray(avatar) ? avatar : [avatar] : [];
 			{title}
 		</h2>
 
-		<span class="inline-block mb-2 text-lg font-medium text-yellow-500">
-			{name}
-		</span>
+		<p class="mb-2">
+			<span class="text-lg font-medium text-yellow-500">{name}</span>
+			{affiliation && (
+				<span class="text-sm text-coolGray-500"> · {affiliation.role} @ {affiliation.organization}</span>
+			)}
+		</p>
 		{language && <div class="mb-6">
 			<TagBadge name={language === 'de' ? 'Vortrag in Deutsch' : 'Talk in English'} />
 		</div>}
