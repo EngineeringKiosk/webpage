@@ -3651,6 +3651,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/277"
+  to = "/podcast/episode/277-inklusive-sprache-verändert-tech-kultur-ki-nicht-mit-lukas-kahwe-smith?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep277"
+  to = "/podcast/episode/277-inklusive-sprache-verändert-tech-kultur-ki-nicht-mit-lukas-kahwe-smith?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
