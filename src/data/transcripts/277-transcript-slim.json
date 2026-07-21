@@ -1,0 +1,627 @@
+{
+    "confidence": 0.9584001,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 5331,
+    "utterances": [
+        {
+            "start": 3520,
+            "end": 77770,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute geht es um ein Thema, das uns in der Softwareentwicklung jeden Tag begegnet und trotzdem oft unter dem Radar lä Inklusive Kommunikation. Wie sprechen wir eigentlich miteinander in Teams, in Code Reviews, in Open Source Projekten und sogar in Stellenausschreibungen? Und warum ist Sprache eben nicht nur Deko, sondern sondern prägt? Wer sich angesprochen fühlt, wer mitmacht und wer vielleicht schon beim ersten Wort innerlich aussteigt. Dafür haben wir Lucas KB Smith zu Gast. Er hat sich intensiv mit inklusiver Sprache beschäftigt und mit wittyworks sogar ein Tool gebaut, das inklusive Kommunikation im Arbeitsalltag unterstützen sollte. Wir sprechen darüber, warum Gendern nur ein Teil der Debatte ist, was Wörter wie Main, Master, Whitelist oder Blacklist in der Tech Welt auslösen, warum LLMs beim Thema inklusive Sprache nicht automatisch die Lösung sind und wieso Kontext am Ende fast alles ist. Außerdem schauen wir auf konkrete Beispiele aus Jobanzeigen, Teamkommunikation und Leadership. Wenn du also glaubst, Sprache sei nur Verpackung, dann ist diese Folge vielleicht genau der kleine Reality Check, den dein Gehirn heute braucht. Wir legen los, viel Spaß."
+        },
+        {
+            "start": 82170,
+            "end": 179450,
+            "speaker": "B",
+            "text": "Wir sprechen im Engineering Kiosk sehr oft über Kommunikation und Kommunikation im Team und wie man sich im Team verhält und wie man da kommuniziert und vielleicht sogar wie man in prs kommuniziert in Code Reviews. Also es geht immer sehr viel um Kommunikation und Sprache ist ja sehr zentral, wenn man mit anderen Menschen in einem Team zusammenarbeitet oder in einem Projekt zusammenarbeitet. Und heute wollen wir mal über inklusive Kommunikation im weitesten Sinne sprechen. Gerade kürzlich hatte eine Diskussion bei unserem Meetup in Innsbruck vom Engineering Kiosk Alps Meetup, wo es auch darum gegangen Ja, es ist so schwierig, wenn ich in Open Source unterwegs bin. Ich arbeite in sehr viel Open Source Projekten und einmal heißt es Main Branch, einmal heißt es Master Branch und ich muss mich ständig umstellen und eigentlich ist es so lästig und immer noch ein Problem und ich hab gar nicht verstanden, dass das noch immer irgendwie so ein Problem ist mit dem Branch Namen zum Beispiel und dass das bei manchen Leuten wirklich noch ein Thema ist, dass man darüber diskutiert. Und darum finde ich es auch ganz abgesehen Davo natürlich ein spannendes Thema, über das man mal diskutieren kann und damit nicht nur Andi und ich immer über dieses Thema sprechen, haben wir einen Gast heute gefunden, der sich wirklich sehr tief mit dem ganzen Thema beschäftigt, der auch Developer ist, sich mit der inklusiven Kommunikation beschäftigt hat, sogar eine Firma rundherum gebaut hat, sich also auch damit beschäftigt hat, ob man da ein Business Modell außen herum bauen kann. Wie erfolgreich das war, wie es mit der Idee aktuell aussieht, hören wir dann gleich. Also jemand, der sich wirklich von vielen Seiten eigentlich mit diesem Thema beschäftigt, wenn es um inklusive Kommunikation geht. Und damit willkommen bei uns im Engineering Kiosk Studio, Lukas."
+        },
+        {
+            "start": 179770,
+            "end": 188410,
+            "speaker": "C",
+            "text": "Hallo, vielen Dank für die Einladung. Freut mich sehr, zu dem Thema ein bisschen was erzählen zu dürfen und im Austausch vielleicht auch ein paar Sachen wieder zu lernen."
+        },
+        {
+            "start": 188410,
+            "end": 284450,
+            "speaker": "A",
+            "text": "Lukas, meine Aufgabe in diesem Podcast ist in der Regel die Gäste vorzustellen und ich bin sehr glücklich, dass du unserer Einladung gefolgt bist. Du bist uns aus Windisch in der Schweiz zugeschaltet. Ich musste extra nachgucken auf der Google Maps Karte, wo ist es? Es ist zwischen Basel und Zürich eher näher an zür dran als in Basel, zumindest geografisch. Und du bist mir kein neuer Name, denn du bist für mich ein Open Source Urgestein. Ich bin sozusagen mit dir so ein bisschen aufgewachsen, denn ich kenne dich noch als PHP fünf drei Release Manager. Ich habe gerade noch mal nachgeschaut, das war zwei tausend neun zusammen mit Johannes Schlüter und ich kenne dich auch noch aus dem ganzen Symphony Doctrine Umfeld und so weiter, weil ich ja früher auch ziemlich viel im PHP Bereich unterwegs war. Passend zum Thema bist oder warst, und das musst du mir jetzt gleich sagen, immer noch Symphony Diversity Lead. Ich wusste bis zur Recherche zu diesem Podcast gar nicht, dass Symfony, das PHP Framework, eine Diversity Initiative im Governance Bereich gestartet hat. Und wie der Wolfgang schon in der Einleitung sagte, hast du ab zwei tausend neunzehn versucht, mit wittyworks die inklusive Sprache und inklusive Kommunikation, ich sag mal, weiter voranzutreiben. Du warst dort CTO. Euer Slogan war Scale Inclusion Faster with Language. Hat leider zumindest nicht finanziell ganz verfolgt, aber ich hoffe, wir können dieses Projekt hier in dem Podcast weitertragen. Und aktuell bist du Softwareentwickler an der Berner Fachhochschule an einem Produkt, das nennt sich intelliprokur, was eine Beschaffungsplattform für die öffentliche Hand ist. Habe ich das korrekt zusammengefasst?"
+        },
+        {
+            "start": 284450,
+            "end": 302500,
+            "speaker": "C",
+            "text": "Das hast du wunderbar zusammengefasst. Vielleicht um die Frage zu beantworten, Ich bin nicht mehr von der Software oder von der Diversity Initiative bei Symphony. Das ist so ein bisschen auch dem Startup zum Opfer gefallen. Da sind so diverse Open Source Rollen, die ich innehatte, einfach zeitlich nicht mehr machbar gewesen."
+        },
+        {
+            "start": 302500,
+            "end": 345930,
+            "speaker": "A",
+            "text": "Leider hat jeder nur zwei Hände und vier und zwanzig Stunden am Tag. Deswegen leider dann auch mal solche Projekte cutten. Inklusive Kommunikation, das ist ein Riesenbegriff, der ist auch, ich sag mal, seit etlichen Jahren in den Medien vertreten. Jetzt glaube ich, wenn wir raus auf die Straße gehen in die Innenstadt, ein Mikrofon vor die Leute halten und fragen, was ist inklusive Kommunikation? Ich stelle die Frage fünfmal. Ich glaube, ich kriege nicht sechs Meinungen, Ich glaube, ich kriege acht verschiedene Meinungen. Wenn ich dich fragen würde, was ist inklusive Kommunikation? Wie würdest du jetzt den ersten Satz oder den ersten Paragraph bei Wikipedia formulieren? Was ist deine Verständnis von inklusive Kommunikation und was ist es vielleicht auch nicht?"
+        },
+        {
+            "start": 346356,
+            "end": 406356,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 406650,
+            "end": 435930,
+            "speaker": "C",
+            "text": "Für mich ist inklusive Kommunikation Kommunikation, die alle Menschen versucht zu adressieren, aber insbesondere die Menschen, die ich gerade vor mir habe, mit denen ich direkt kommunizieren will. Und vielleicht nur kurz um diese Einschränkung, die ich gerade gemacht habe. Es gibt keine Art und Weise zu kommunizieren, die für jeden perfekt ist und genau ihren Träumen entspricht. Das heißt, es gibt nicht eine Silver Bullet, das Wort ja, das Wort nein, sondern es ist kontextabhängig."
+        },
+        {
+            "start": 436010,
+            "end": 441130,
+            "speaker": "A",
+            "text": "Aber heißt das dann im Umkehrschluss, dass das eigentlich mehr oder weniger nur ins Fettnäpfchen treten kann?"
+        },
+        {
+            "start": 441130,
+            "end": 501300,
+            "speaker": "C",
+            "text": "Das könnte man so sehen. Ich finde es ja immer spannend, wenn ich mit meinem Kind spreche, da kommen ja ab und zu auch Sachen raus, die vielleicht grammatikalisch nicht korrekt sind, Also gerade wenn es um Schreiben geht, Aber ich verstehe ja, was gemeint ist und darum geht es am Ende. Oder wenn wir kommunizieren, geht es darum, dass ich verstehe, was gemeint ist. Und da gibt es halt einfach sehr viel, was zwischen den Tonspuren läuft. Und wenn ich halt Formulierungen benutze, wo ich weiß, dass mein Gegenpartner oder Partnerin die nicht mag, sich selber da drin nicht sieht und ich die dann trotzdem benutze, dann kommuniziere mir ist das egal, was du willst und was dir wichtig ist. Und wenn ich aber so kommuniziere, wie es der Person ihren Wünschen entspricht, dann kommuniziere ich gehe auf dich ein, ich sehe dich, weiß nicht, Es gibt ja so, weiß nicht, wenn man so ein Sales Training macht, dann gibt es ja dieses Spiegeln am Tisch, oder? Das heißt, wenn derjenige sich zur Seite lehnt, dann lehne ich mich auch zur Seite, oder um Leute abzuholen. Sprache ist dasselbe natürlich auch, oder? Da kann ich auch entweder diejenigen Personen abholen oder nicht."
+        },
+        {
+            "start": 501700,
+            "end": 552450,
+            "speaker": "A",
+            "text": "Gut, Körpersprache ist natürlich was ganz anderes in Bezug auf, wenn ich mich zurücklehne und die Arme verschränke, dann habe ich mal gelernt, dass das negativ wahrgenommen wird. Aber ob das dann wirklich so ist, weiß ich nicht. Denn ich sehe es so, dass es eigentlich bequem ist, meine Arme so zu verschränken und ich will gar nicht negativ rüberkommen. Und das bringt mich zu dem nächsten Punkt, was du gerade gesagt hast. Wenn du deinem Kind zuhörst, dann ist es vielleicht nicht grammatikalisch korrekt, aber du weißt, was gemeint ist. Und da frage ich mich, weißt du wirklich, was gemeint ist? Oder denkst du, du weißt, was gemeint ist, Weil es gibt ja immer noch dieses Modell vier Seiten einer Nachricht oder das Vier Seiten Modell. Und das, was bei dir ankommt, das nimmst du ja so wahr. Du hast natürlich best intentions, du kannst es ja gar nicht bestimmen, wie deine Nachricht wahrgenommen wird, oder? Natürlich, du versuchst es, aber die Wahrnehmung kannst du ja nicht wirklich beeinflussen, weil die ja auf der empfangenden Seite ist."
+        },
+        {
+            "start": 552600,
+            "end": 605420,
+            "speaker": "C",
+            "text": "Genau, ich kann natürlich nicht jemanden sozusagen bestimmen, dass diejenige Person die Kommunikation schön fand oder verständlich oder wie auch immer. Alles, was ich tun kann, ist zu lernen, offene Augen zu haben, offene Ohren zu haben, wie die Person auf die Art und Weise, wie ich kommuniziere, reagiert. Und da finde ich, sollten wir, wenn möglich, feinfühlig sein. Da geht es natürlich auch darum, also ich habe eine bestimmte Art zu denken und mein Kind hat eine andere Art zu denken und ich muss in dem Moment nicht kommunizieren, wie es für mich läuft, logisch ist, sondern wie ich denke, dass es für mein Kind logisch ist. Und das ist sozusagen für mich die Kommunikation, oder dann funktioniert Kommunikation. Natürlich wird es dann auch Feedback von meinem Kind geben. Und dann sollten wir natürlich auch einen Umgangston haben, dass wir, selbst wenn es mal Missverständnisse gibt, die auflösen können, anstatt uns nur anzuschreien."
+        },
+        {
+            "start": 605420,
+            "end": 628280,
+            "speaker": "A",
+            "text": "Im Vorgespräch hast du mir erzählt, immer wenn du kommunizierst und dann von deinem Kind sprichst, dass sofort eine Gegenfrage Sohn oder Tochter und du erwähnst das jetzt auch wieder, dass du nicht von deinem Sohn oder von deiner Tochter sprichst, sondern ich sag mal geschlechterneutral oder von deinem Kind sprichst. Fällt das schon unter inklusive Kommunikation oder gelernter Bias?"
+        },
+        {
+            "start": 628360,
+            "end": 714100,
+            "speaker": "C",
+            "text": "Ja, es geht ein bisschen um die Stereotypen, weil die Information, ob mein neunjähriges Kind nun sich als Mädchen oder als Junge versteht oder weder noch, ist ja eigentlich ziemlich egal, weil eigentlich will ich nicht, dass du von meinem Kind im sexuellen Kontext nachdenkst. Also warum sollte ich dir diese Informationen geben? Ist ja eigentlich eher eine Ablenkung. Vor allen Dingen, weil, und das ist ganz wichtig beim Thema Kommunikation, das startet einfach Kopfkino. Sobald ich sage, ich habe einen Sohn oder eine Tochter, fängt die andere Seite an darüber nachzudenken, was macht denn wahrscheinlich ein Sohn, was macht denn wahrscheinlich eine Tochter? Das hilft vielleicht, um irgendwie im Gespräch zu bleiben. Aber eigentlich bedeutet das, dass wir einfach Vollgas auf die Stereotypen gehen. Wenn ich sage Sohn, dann sagen ah, der spielt bestimmt Fußball und hat ja eine Nerfgun. Und wenn ich Mädchen okay, kann sie schön malen oder macht sie Gymnastik oder reitet sie gerne? Das leitet quasi das Gespräch. Es macht es vielleicht einfacher. Aber ich habe mich entschieden, dass ich explizit eigentlich nur von Kind rede, wenn ich denke, es ist das Geschlecht gerade nicht relevant, habe mich aber selber dabei auch beobachtet. Ich fühle in dem Moment, dass ich weniger persönlich über mein Kind kommuniziere, wenn ich nicht das Geschlecht erwähne. Und ich finde das total spannend, dass das in meinem Kopf so tickt, weil wie gesagt, aus meiner Sicht ist das Geschlecht meines neunjährigen Kinds eigentlich für die meisten Gespräche irrelevant mit dem Geschlecht."
+        },
+        {
+            "start": 714100,
+            "end": 731790,
+            "speaker": "A",
+            "text": "Hast du mir schon das richtige Stichwort gegeben? Wenn ich über inklusive Kommunikation nachdenke, dann kommt immer ein Thema direkt auf den Tisch, so ich sag mal, der Elefant im Raum gendern. Und ich habe da jetzt seltenst auch im Freundeskreis eine neutrale Meinung zu gehört, sondern immer nur sollten wir tun oder"
+        },
+        {
+            "start": 731790,
+            "end": 736030,
+            "speaker": "B",
+            "text": "dann das andere Extrem, Was wäre denn eine neutrale Meinung? Gerade zum Verständnis?"
+        },
+        {
+            "start": 736350,
+            "end": 770320,
+            "speaker": "A",
+            "text": "Ich kann mich anpassen, mach's oder mach's nicht, hab da keine Seite für. Aber was ich immer höre, ist Okay, wir sollten das alle machen, um jeden oder jede mit einzuschließen. Und das verunglimpft die deutsche Sprache mit dem Gendersternchen oder Apostroph oder Bindestrich oder ich weiß schon gar nicht, was da jetzt die richtige Art und Weise ist. Meine Frage ist, wie stehst du dazu? Ist das sinnig für dich? Ist das unsinnig? Sagst du, ich bin diese Diskussion leid, weil das ist so das, was meistens irgendwie als erstes auf den Tisch kommt."
+        },
+        {
+            "start": 770320,
+            "end": 929890,
+            "speaker": "C",
+            "text": "Ja, ich bin vielleicht leicht neutral bei dem Thema, was vielleicht überraschend ist, aber vielleicht erstmal, warum beschäftigt man sich damit? Das liegt daran, dass wir Kommunikation in Bilder umwandeln. Ich hatte ja vorher schon von Bildern gesprochen. Das heißt, wenn wir die Augen schließen und ich das Wort Manager sage, dann sehen wir einfach bestimmten Typus Menschen in unserem Kopf und der ist wahrscheinlich männlich, wahrscheinlich hat er eine helle Hautfarbe, ist wahrscheinlich irgendwie dreiig bis fünfzig und so weiter. Und das heißt, sobald ich dieses Wort Manager gesagt habe, selbst wenn ich dann Managerin sage, dann kämpft unser Kopf schon, oder? Weil ich bin bei Manager, wir sind schon beim ersten Silbe. Vielleicht sind wir da so ein bisschen so wie Large Language Model. Wir fangen da wirklich sofort ganz früh an, die Bilder aufzubauen und das Managerin am Ende, dann müssen wir das wieder umbiegen, oder dann müssen wir das Bild von dem Mann, den wir schon gebaut haben, wieder in eine Frau umwandeln. Und dementsprechend ist das Gendern auch keine perfekte Lösung, weil alles, was es tut, ist wieder. Es ist einfach nur eine andere Variante, wie wir quasi noch mal Inklusion machen. Aber, und das ist vielleicht gerade, wenn man dann drüber redet, das verhunzt die Sprache. Genau, und das ist eigentlich das Notwendige, weil durch diesen Bruch, dass es sich halt so ein bisschen komisch ist, das hilft uns, es gibt uns die Zeit, dieses Bild umzuwandeln im Kopf. Das ist aber dementsprechend auch keine richtig gute Lösung. Aber einfach zu sagen, dass das generische Maskulin okay ist, ist auch keine gute Lösung und wir können das nicht einfach so auflösen und wir bleiben beim Status quo aus meiner Sicht, weil wir halt Stereotypen haben. Wenn wir in einer perfekten Gesellschaft leben, würden es keine Stereotypen gäbe und so weiter und so fort. Vielleicht ist das generische Maskulin kein Problem, aber das tun wir nicht. Und so gesehen geht es ein bisschen darum, Signale zu senden für Veränderungen vielleicht auch Signale zu entsenden, dass ich bereit bin, anders zu sein, dass ich meinem Stereotypen bewusst bin. Das heißt, es geht vielleicht auch nicht immer nur darum, wie die andere Person adressiert werden will, sondern dass ich dieser Person kommuniziere. Ich bin bereit, auf dich zuzugehen. Und das ist der Teil, der dann eigentlich das Gendern wichtig macht. Persönlich würde ich mir ehrlich gesagt hoffen, dass wir eine andere Grammatik entwickeln würden, weil das Gendern hat auch andere Probleme, zum Beispiel, wenn es darum geht, leichte Sprache. Das heißt, ich mache die Sprache komplizierter und das macht es dann wieder für Menschen, die vielleicht Lese Schwierigkeiten haben, das Leben schwerer oder Leute, die Deutsch als zweite Sprache lernen, denen macht man es dann schwerer durch das Gendern. Deswegen, ich sehe es als eine legitime Zwischenlösung."
+        },
+        {
+            "start": 929890,
+            "end": 935890,
+            "speaker": "B",
+            "text": "Aber wenn du jetzt sagst neutral, wie löst du den Konflikt dann für dich selber im Alltag? Also was verwendest du dann?"
+        },
+        {
+            "start": 936050,
+            "end": 967520,
+            "speaker": "C",
+            "text": "Ich würde das, da komme ich wieder zum Thema kontextsensitiv machen. Ich benutze das Gendern allgemein schon, versuche aber, wenn möglich, lieber einfach geschlechtsneutrale Begriffe zu benutzen. Also statt Kundin sage ich Kundschaft oder Studentenschaft. Aber wenn ich mit jemandem rede, wo ich weiß, dass die Person Schwierigkeiten im Verständnis hat oder halt zum Beispiel Deutsch nicht als erste Sprache macht, dann nutze ich solche Sachen nicht, sondern da versuche ich den Fokus lieber auf die Einfachkeit der Sprache zu legen."
+        },
+        {
+            "start": 967520,
+            "end": 987410,
+            "speaker": "A",
+            "text": "Du hattest gerade das Beispiel mit Manager und Managerin erwähnt und ohne dass wir darüber gesprochen haben, fühle ich mich nicht angegriffen, aber ertappt er tappt, würde ich sagen. Denn ich versuche mich öfters in diesem Podcast, weil wir natürlich oft über Vorgesetzte und Vorgesetzter und Vorgesetzte sprechen und Andi"
+        },
+        {
+            "start": 987410,
+            "end": 993690,
+            "speaker": "B",
+            "text": "hat ja was gelernt innerhalb dieser Zeit bei dem Podcast. Also du hast ja dich auch sehr stark verändert, muss man sagen."
+        },
+        {
+            "start": 993690,
+            "end": 1066530,
+            "speaker": "A",
+            "text": "Ja, aber ich sage auch, ich muss mich konstant daran erinnern, Vorgesetzte zu sagen. Jetzt ist es aber so, in meinem beruflichen Umfeld hatte ich noch nie eine direkte Vorgesetzte. Also ich hatte immer männliche Vorgesetzt Manager und ich zwinge mich immer mal wieder dann die weibliche Form auch zu integrieren, um, ich sage mal ein fünfzig fünfzig Modell hier in diesem Podcast zu fahren. Aber das ist, das ist interessant, dass du das erwähnst, denn ja, es ist ja in der Tat so, mit dem männlichen Vorgesetzten Manager inklusive Kommunikation ist aber auch, ich sage mal, eine Herausforderung in unserer täglichen Sprache, denn die Sprache hat ja auch ziemlich viele Sprichwörter oder Sätze, die wir einfach mal so raushauen. Raushauen fängt da fängt schon an. Ich weiß gar nicht, ob raushauen jetzt schon wieder aggressiv ist oder nicht, aber genau da kommt es ja her. Und besonders ich im Ruhrgebiet so ein bisschen direkter, ein bisschen auf die Mütze. Was sind so die Sprichwörter, kommunikativen Beispiele, die du immer in der Tasche hast, da wo jedem direkt klar wird, oh, habe ich noch gar nicht drüber nachgedacht, nutze ich aber auch in meiner täglichen Sprache ist vielleicht doch nicht eine so gute Formulierung."
+        },
+        {
+            "start": 1066610,
+            "end": 1166030,
+            "speaker": "C",
+            "text": "Ja, vielleicht zu dem Raushauen, weil du gesagt hast, je nach Kontext, wenn ich gerade mit einer Person spreche, die gerade häusliche Gewalt erfahren hat oder so, dann ist das vielleicht nicht so eine geschickte Formulierung. Und weil du gerade nach konkreten Beispielen, also ich fand der Einäugige unter den Blinden, finde ich immer eines der der besten Beispiele, weil es halt einfach, man nutzt quasi die Sehfähigkeiten von Menschen als Metapher für deren Kompetenz und den eigenäugigen Blinden. Den Spruch habe ich tausendmal in meinem Leben gemacht und mache ihn vielleicht auch heute noch immer mal wieder. Aber wenn ich mit einer Person spreche, die eine Sehbehinderung hat oder eine andere Behinderung hat, dann kommuniziere ich halt da schon irgendwas zwischen den Zeilen. Aber vor allem, was ich auch noch wichtig finde, ist, es signalisiert ein bisschen unsere Kultur. Also wo kommen wir her? Wie haben wir auf Menschen mit Behinderungen geschaut? Also Stephen Hawking ist irgendwie unser, wahrscheinlich einer der intelligentesten Menschen, die je gelebt hat, auf jeden Fall eine sehr prägende Figur der Wissenschaft Und vor paar hundert Jahren hätte man den halt einfach wahrscheinlich sterben lassen als Kind. Und da kommen wir aber her, oder? Und das hat unsere Sprache geprägt und deswegen haben wir solche Sprachmuster in unserer Sprache. Und daher finde ich das immer einen spannenden Lernmoment, wenn man sich ertappt, wie du vorhin das Wort gesagt hast, dass man so eine Formulierung benutzt, weil es sozusagen ein bisschen signalisiert, wo kommen wir her? Und wenn wir von dort herkommen, haben wir die Muster, die diesem Denken unterliegen, wirklich schon überwunden oder nicht? Und wenn nicht, ist es vielleicht an uns dann auch in anderen Kontexten, anderen Situationen unser Verhalten vielleicht zu verändern."
+        },
+        {
+            "start": 1166420,
+            "end": 1177620,
+            "speaker": "A",
+            "text": "Im Vorgespräch hattest du mir noch ein anderes Beispiel genannt, und zwar das Wort ausmerzen. Und wenn ich jetzt mal über Software Engineering nachdenke, dann ist völlig nicht negativ genannt. Lass uns mal die Bugs in der"
+        },
+        {
+            "start": 1177620,
+            "end": 1180220,
+            "speaker": "B",
+            "text": "Applikation ausmerzen hat nichts mit eurem Kanzler zu tun."
+        },
+        {
+            "start": 1180220,
+            "end": 1193170,
+            "speaker": "A",
+            "text": "Oder Friedrich Merz, lass uns mal, obwohl ich glaube, ich habe schon mal auf den Social Media Kanälen jetzt inzwischen Lass mal wieder ausmerzen. Das heißt dann lass den Friedrich Merz mal wieder absägen, aber ich glaube nicht."
+        },
+        {
+            "start": 1193490,
+            "end": 1276120,
+            "speaker": "C",
+            "text": "Der Begriff ausmerzen kam eigentlich als Begriff auf durch die Nazis. Das heißt, es ist einfach ein Wort, was die Nazis eigentlich in den Sprachgebrauch eingeführt haben und der einfach dort geblieben ist. Und auch da ist wieder die Frage so das Wort ausmerzen per se ist an sich nicht so das Drama, sondern die Frage ist so, wenn wir so ein Wort drin lassen, was quasi dann irgendwie in der Nazizeit gekommen ist, also sowas Schlimmes wie den Zweiten Weltkrieg hatten, den Holocaust etc. Und danach vermeintlich sozusagen diesem allem bewusst waren und sozusagen nein, das war schlecht, das war falsch, jetzt machen wir es anders, aber das Wort behalten wir trotzdem drin. Es stellt dann so ein bisschen die Wie viel haben wir uns damals wirklich damit auseinandergesetzt, was da gerade passiert ist und wie haben wir das einfach sozusagen ein bisschen verdeckt. Ähnliches Thema sind auch jiddische Wörter. Es gibt Wörter, die aus dem Jiddischen ins Deutsche eingedeutscht wurden, aber dabei eine negative Konnotation bekommen haben. Also zum Beispiel das Wort mischpoke hat eher neutral positive Konnotation im Jiddischen, aber mischpoke, wenn ich das im Hochdeutschen sage, dann hat es eine klar negative Konnotation. Also irgendwas ist vielleicht noch nicht ganz bei klaren, das ist wahrscheinlich noch negativer, aber es ist auf jeden Fall nicht positiv konnotiert, oder? Und auch das sind so Signale, wo wir sagen, ja, da ist quasi Antisemitismus in unsere Sprache integriert worden."
+        },
+        {
+            "start": 1276200,
+            "end": 1278920,
+            "speaker": "A",
+            "text": "Was heißt das Wort Mischpoke? Ich kenne das nicht."
+        },
+        {
+            "start": 1279320,
+            "end": 1285320,
+            "speaker": "C",
+            "text": "Poke, Das ist quasi so ein bisschen Familie oder meine Freunde. In dem Kontext wird das auch benutzt."
+        },
+        {
+            "start": 1285320,
+            "end": 1286440,
+            "speaker": "A",
+            "text": "So die Sippe."
+        },
+        {
+            "start": 1286600,
+            "end": 1293320,
+            "speaker": "C",
+            "text": "Genau, Sippe. Und auch Sippe ist wieder so ein ähnliches Begriff, der halt auch sehr negativ konnotiert ist, aber genau so in die"
+        },
+        {
+            "start": 1293320,
+            "end": 1312700,
+            "speaker": "A",
+            "text": "Richtung, aber zum Beispiel jetzt bei uns in der Gegend, im Ruhrgebiet mit Das ist meine Sippe. Das ist jetzt also in unserer Kultur, in unserem geografischen Bereich ist das jetzt nicht als negativ empfunden. Klar, wenn ich jetzt mit dir spreche, du kommst aus der Schweiz, vielleicht hast du ein anderes Verständnis dafür, kommt eigentlich"
+        },
+        {
+            "start": 1312700,
+            "end": 1390090,
+            "speaker": "C",
+            "text": "ursprünglich aus Berlin, Aber ist es natürlich auch wieder eine Kontextfrage. Also ist ja genau, wie weiß ich zum Beispiel das N Wort in den USA oder? Das ist ja natürlich ganz relevant, wer das N Wort benutzt, oder? Und das Wort Sippe, wenn ich das auf meine Freunde beziehe, die ich ganz klar positiv sehe und darstelle und die das auch wissen, dann ist das auch vollkommen okay. Die Frage ist halt immer nur, wenn wir über, weiß nicht, wenn ich zum Beispiel über eine Familie rede und ich die Sippe lalalala oder ich sage die Familie blablabla oder das ist schon was anderes, was ich dann in dem Moment aussage. Und da würde ich jetzt mal behaupten, dass über Familien mit dem Migrationshintergrund häufiger das Wort Sippe im negativen Kontext benutzt wird, wo vielleicht man eigentlich Familie verwenden sollte. Und damit macht man ja so ein Framing. Ist ja genauso wie weiß ich, wenn ich von einem Regime rede statt der Regierung. Also jetzt zurzeit wird ja vom Iran immer vom Mullah Regime geredet, ist eine Regierung. Natürlich will man damit klar sagen, wir finden sie nicht demokratisch legitimiert wie jetzt unsere und deswegen, das ist Kommunikation ist vielleicht sogar legitim nach Kontext, das dann die Mullah Regime zu nennen, aber es ist halt in der Theorie dasselbe wie Regierung, aber es ist halt nicht dasselbe."
+        },
+        {
+            "start": 1390090,
+            "end": 1438600,
+            "speaker": "A",
+            "text": "Bei so Sachen wie Regime bin ich ein hundert Prozent bei dir. Dieses dieses Framing. Aber jetzt zum Beispiel, jetzt weiß ich nicht, muss man denn die Herkunft von jedem einzelnen Wort kennen, Weil das ist, ich komme wieder auf meinen Punkt, kann man überhaupt gewinnen, kann man überhaupt inklusive Sprache und inklusive Kommunikation gut anwenden? Der Begriff jedem das Seine wird, glaube ich, auch von sehr vielen Leuten ganz normal im Alltagsgebrauch genutzt, Obwohl, wenn man das mal googelt, findet man, okay, das stand beim KZ Buchenwald über dem Eingangstor, wo jeder nur Arbeit macht frei kennt, weil das dann, ich glaube, in Auschwitz am Eingangstor stand. Also kann man überhaupt ohne ein Linguistik Studium gemacht zu haben, wo diese Wörter herkommen, gewinnen Und gewinnen meine ich jetzt nicht mit, also nicht verlieren meine ich eher nein."
+        },
+        {
+            "start": 1438600,
+            "end": 1657930,
+            "speaker": "C",
+            "text": "Ich glaube nicht, dass man gewinnen kann, weil es ja kein Spiel ist, wo es Gewinner und Verlierer eigentlich geben sollte, sondern also die Sachen, die ich jetzt erwähnt habe, sind für mich einfach nur Signale, eigentlich über dich selber zu lernen. Oder Das heißt, du benutzt ja die Sprache, die von Nazis geprägt wurden und dann ist die Was ist denn noch in deiner Kultur hängen geblieben, was die Nazis eigentlich geprägt haben? Und dafür meine ich, das ist jetzt nicht meine Meinung, dass wir alle Ethnologen und Linguisten werden müssen bei jedem Wort, was wir sagen. Was ich aber schon wichtig finde, ist, dass wenn ich von meinem Gegenüber Feedback bekomme, dass zum Beispiel das Raushauen vielleicht in dem Moment als Wort traumatisierend ist, weil der beste Freund gerade zusammengeschlagen wurde oder was auch immer. Oder dann sage ich einfach, dann sage ich Hey, jetzt bist du aber ein Sensibelchen, sondern ich OK, danke für die Information. Ich passe meine Sprache an. Und wenn es mir dann trotzdem noch mal rausrutscht, dann muss ich auch nicht ein riesen Fass aufmachen. Ich mache vielleicht, wenn ich es geschickt hinkriege, ein, zwei Sätze später irgendein Korrektiv. Also zum Beispiel, wie gesagt, beim Thema Gendern, wenn ich weiß, die Gegenüber Person möchte, dass ich gendere und ich habe falsch gegendert, dann schaue ich einfach, dass ich in den nächsten ein, zwei Sätzen ein korrektes Gendern einbaue. Oder ich muss nicht mein gesprochenes gerade unterbrechen, alles weird machen und awkward, sondern es geht am Ende ja nur darum, dass die andere Person weiß hey, ich werde gesehen, ich möchte kommunizieren in Art und Weise, dass wir zusammen an einer gemeinsamen Verständnis arbeiten, ohne dass dem einen vor den Schienbein getreten wird. Deswegen um Himmels Willen, die Beispiele, die wir jetzt gerade genannt haben, sollen jetzt nicht dazu führen, dass wir uns nicht mehr flüssig ausdrücken und wir müssen auch nicht ständig alles nachforschen. Aber wir sollten offen sein für Feedback und einfach best effort reingehen. Gleichzeitig würde ich aber auch sagen, so ein bisschen Grund sich damit beschäftigen ist auch wichtig, weil das war so eine meiner Lessons learned. Als ich angefangen habe, mich mit dem Thema zu beschäftigen, Vielleicht auch noch eine interessante Geschichte, war ja in der Symphony Community sehr aktiv. Symphony ist in Europa sehr, sehr verbreitet, aber in den USA war es noch so, gerade in den Anfängen. Und dann haben wir eine Konferenz in USA organisiert und wir hatten eine Speaker Lineup, die komplett aus weißen Männern bestand. Dann kam jemand auf Twitter und sagte Hey, What the fuck? Und ich war ja, aber wir sind ja noch so klein und wir haben halt einfach noch nicht so viele mit Expertise und lalala und habe tausend gute Gründe genannt. Und die Person sagte, wenn dem so ist, wie soll es dann jemals anders werden? Nach dem Motto, wenn wir sagen, es ist okay, dass wir eine All White Man Speaker Lineup haben, dann zementieren wir ein bisschen das DNA unserer Community in den USA. Statt das als Chance wahrzunehmen, dass wir noch nicht so groß sind, haben wir die Chance vertan. Und dann habe ich mich angefangen mit dem Thema wirklich aktiver zu beschäftigen, als mir das dann irgendwie ein bisschen klar. Und dann war meine nächste Aktion, alle Frauen in der IT, die ich kannte, habe ich gefragt, warum bist du hier? Okay, nicht ganz so, aber die waren was für eine Frage. Ich bin hier, weil ich gerne Code genau wie du, also was soll diese Frage? Und dementsprechend war es dann so ein bisschen auch so die nächste Lektion war ein Ja, ich habe auch ein bisschen Aufgabe, mich zu informieren und nicht einfach den Frauen an den Konferenzen, die ich begegnet bin, die natürlich in der Minderheit war, ihre wertvolle Zeit, die sie eigentlich da verbringen wollten, um über Tech zu lernen, damit zu verschwenden, mir Dinge zu erklären, die ich über Google Search auch selber herausfinden könnte."
+        },
+        {
+            "start": 1657930,
+            "end": 1724960,
+            "speaker": "B",
+            "text": "Also ich stimme dir grundsätzlich zu mit Google Search und so weiter, Aber ich hatte so ähnliche Erfahrungen, dass ich dann mit weiblichen Developern gesprochen habe und es war schon für mich, klingt jetzt vielleicht ein bisschen viel, aber es war für mich schon wichtig, die mit einzubeziehen und mal die Meinungen zu hören und da auch Informationen zu bekommen. Und ich glaube, es hat auch eine andere Qualität, als jetzt eine Google Search anzuwerfen oder so. Also mir hat es zumindest damals sehr geholfen, einfach mal andere Sichtweisen zu sehen und wie die auf die Developer blicken und auf die Developer Szene blicken. Und vielleicht, wenn dann der Outcome nur ist, ja, es ist auch nur Coding, was uns gemeinsam verbindet, dann ist es ja auch ein Outcome, aber den man halt irgendwie gemeinsam gefunden hat. Also ich finde, das ist grundsätzlich schon auch wichtig. Aber du hast das Ganze ja dann probiert zu automatisieren, würde ich fast sagen, mit deinem Tool und deinem Startup. Kannst du mal, war das eigentlich dann der Trigger, warum du mit so etwas begonnen hast, damit es dann irgendwie automatisch den Leuten zufließt, ohne dass sie sich selber mit einer Google Search oder mit einer Unterhaltung da einarbeiten müssen ein bisschen."
+        },
+        {
+            "start": 1724960,
+            "end": 1917160,
+            "speaker": "C",
+            "text": "Ja, vielleicht noch kurz zu dem, was du gesagt hast. Ich finde es wichtig, gerade dann, wenn sozusagen Frauen zum Beispiel in der IT über ihre Lebensrealitäten sprechen, das ist der Moment, da absolut zuhören und diesen Moment absolut nutzen, um diese Erfahrung zu machen, aber halt einfach nicht mit dieser Erwartungshaltung kommen. Das vielleicht nur zur Einordnung. Und genau wie ich da hingekommen bin mit wittyworks, das hat noch ein bisschen länger gedauert. Also ich hatte ja dann mich aktiv mit dem Thema angefangen zu beschäftigen und und daraufhin wurde dann die Symphony Diversity Initiative gegründet mit dem Ziel, die Diversität zu stärken. Und das war natürlich ein großer Lernprozess für mich selber, aber auch für die Community. Und da sind auch Sachen dabei, zum Beispiel den gibt es immer noch, das ist der Thank You Channel. Also das heißt, da wurde einfach ein bisschen die Kultur verändert und das ist super cool. Im Symphony Slack gibt es halt den Thank You Channel und da gibt es immer wieder Leute, die da reingehen und sagen, hey, ich bedanke mich bei Person XYZ oder und das hat eine Kultur verändert oder Und es waren teilweise auch Dinge in der Diversity Initiative, wo Maintainer über ihren Frust gesprochen haben, wie ihnen teilweise Feedback gegeben wurde, also wie aggressiv oder und es geht nicht immer nur in Anführungsstrichen um das Thema Männer, Frauen, Migrationshintergrund oder so, sondern es geht allgemein um Kommunikation und wie wir miteinander umgehen. Aber ja, es hat dann mittelfristig dazu geführt, dass ich mich mit dem Thema viel beschäftigt habe. Ich muss dazu sagen, ich habe zwar am Ende den Titel Co Founder gehabt, ich war aber nicht der ursprüngliche Gründer von wittyworks, sondern das war eine Arbeitskollegin von mir, Nadja Fischer und zwei andere Kolleginnen von ihr, die in der Schweizer IT Szene unterwegs waren und die hatten wittyworks gegründet, war auch mit dem Arbeitstitel Women in Tech, also Witty, weil sie einfach ein Problem festgestellt haben, dass die Schweizer IT Szene halt sehr männlich geprägt war. Und sie haben gesagt, sie gründen eine Firma mit dem Ziel, eine Lösung zu finden. Und dann sind sie auf eine Lösung gefunden oder gestoßen. Und zwar haben sie das Buch what Works von Iris Bonnet gelesen, in dem gerade über die Art und Weise, wie wir Stellenausschreibungen schreiben und wie das bestimmte Personengruppen abschreckt oder anzieht und was das dann für Implikationen auf den Arbeitsmarkt hat und das haben sie dann händisch umgesetzt. Und nach einem Jahr hat die Nadja Fischer mich dann gefragt, ob ich nicht jemanden kennen würde, um die CTO Rolle zu übernehmen, um das zu automatisieren. Und damals war ich in der Geschäftsleitung von LEAP, wobei ich glaube, wir waren dann schon self managed, wir sind ja bei Lieb ist die Agentur, wo ich war, hat quasi Management abgeschafft. Also zu dem Zeitpunkt war ich nicht mehr Management, aber ich war eigentlich ziemlich fest im Sattel. Ich war dreizehn Jahre da, aber als Nadja mich gefragt hat, aufgrund von den Erfahrungen, die ich in der Rolle bei Symphony gemacht habe, habe ich gesagt, hey, pick me, pick me. Und so ist dann eigentlich entstanden, dass ich zu wittyworks als CTO gekommen bin, habe dann auch ein bisschen Geld investiert und habe mir so die, obwohl ich ein Jahr zu spät gekommen bin, dann die Co Founder Titel bekommen. Also so ein bisschen so Elon Musk Style bin ich da zu wittyworks und der Co Founder Titel gekommen und kannst"
+        },
+        {
+            "start": 1917160,
+            "end": 1925820,
+            "speaker": "B",
+            "text": "du mal kurz erklären, was ihr dann eigentlich gemacht habt? Also die Vision ist klar, ihr wolltet mehr Frauen in die IT bringen, aber wie habt ihr das dann verfolgt?"
+        },
+        {
+            "start": 1925900,
+            "end": 2053880,
+            "speaker": "C",
+            "text": "Genau, also wir haben dann ziemlich schnell eigentlich den Scope auch erweitert und eigentlich gesagt, wir wollen grundsätzlich Diversität verbessern und die Idee war, Sprache als Hebel zu nutzen. Und konkret das erste Produkt, was wir hatten, war einfach ein Tool, mit dem man Stellenausschreibungen inklusiver formulieren konnte. Also das heißt, wir haben dann bei bestimmten Wörtern und Formulierungen, die genutzt wurden, die angestrichen und dann konkrete Alternativen angeboten und und damals, das war ja noch ein bisschen vor chatgpt und Große KI Move und dann haben wir noch Copywriter als Team auch noch angeboten. Das heißt, man konnte entweder unser Tool benutzen, um so die Initialereinigung zu machen und bei Bedarf konnte man auch Copywriter, ein Team aus Copywriter innen nutzen, um sozusagen die Formulierung final zu optimieren. Aber das war eigentlich nur unser Launch Produkt. Das eigentliche Produkt war dann ein Tool ähnlich wie Grammarly, das heißt eine Browser Extension, die man installiert, die einem direkt während man schreibt, Wörter, Phrasen unterstreicht und dann einem konkret Alternativen anbietet, die im Idealfall eigentlich dieselbe wörtliche Bedeutung hat, aber halt eine andere Konnotation oder Message zwischen Linien, aber auch ganz Wir haben auch noch eine kurze Erklärung angeboten, warum das vielleicht relevant ist Und dann auch wieder optional konnte man über mehrere Stufen Also wir haben dann so man konnte dann nochmal einen Button klicken, dann kam noch mal bisschen mehr Informationen. Teilweise haben wir da auch so Videos produziert, die so in dreiig Sekunden bisschen das Problem erklären und dann noch ein weiterführenden Link, der dann auch die ganze Wissenschaft dahinter auch noch versucht hat zu erklären. Mit der Idee, dass so ein bisschen Learning Nudges, Das heißt im täglichen Umgang mit dem Tool lerne ich so ein bisschen on the go nebenbei. Ich kann so tief einsteigen oder auch gar nicht, wie ich gerade will und kann also wie aufnahmebereit bin ich gerade im Moment? Will ich gerade einfach nur meine Shitstorm Risiko reduzieren, dann klicke ich vielleicht einfach nur auf die Alternativen oder habe ich gerade einen Moment und bin bereit und will jetzt eigentlich mal wissen, warum ist das jetzt ein Problem und schaue mir dann tatsächlich eine wissenschaftliche Studie an."
+        },
+        {
+            "start": 2054120,
+            "end": 2065240,
+            "speaker": "B",
+            "text": "Wenn wir jetzt ganz vorne anfangen bei den Jobausschreibungen, kannst du da mal ein Beispiel geben, Was wurde da dann so angeboten oder was sind da Phrasen, die man verbessern sollte?"
+        },
+        {
+            "start": 2065240,
+            "end": 2293720,
+            "speaker": "C",
+            "text": "Ja, es gibt schon paar Phrasen, die sind tatsächlich sogar juristisch relevant, so Phrasen wie jung und dynamisch. Dadurch ist es eigentlich ageist. Also das heißt, man grenzt ältere Menschen aus und da sind sogar schon Firmen erfolgreich verklagt worden, dass das Diskriminierung ist. Wir haben auch eigentlich empfohlen, dass man Ich hatte ja vorhin von diesem Bild geredet, wenn ich das Wort Manager benutze oder Managerin. Deswegen haben wir empfohlen, dass man zum Beispiel die Jobtitel lieber Management verwendet. Also wir suchen jemanden für Management und nicht Manager oder Managerin. Vor allen Dingen auch damit dieses schreckliche MWD weggeht, weil das MWD sagt ja im Prinzip eigentlich wollten wir immer Männer. Dann irgendwann wurde uns gesagt, wir sollen auch Frauen nehmen und schlimmstenfalls nehmen wir halt auch Leute, die weder Mann noch Frau in sich sehen, weil wie kommt man auf MFD oder das ist ein bisschen weird oder MWD ist noch weirder, weil dann ist es noch nicht mal mehr rückwärts alphabetisch. Was sehr viel wir uns auch angeschaut haben, ist die sogenannte agentische Sprache. Und agentische Sprache, da geht es darum ein bisschen, wie wir sozialisiert werden. Jungs werden meistens mit etwas mehr kompetitiverer Sprache sozialisiert. Also ich bin der stärkste, schnellste, größte. Mädchen hingegen werden eher mit kollaborativer Sprache sozialisiert. Das heiß Ich bin nett und solche Wörter. Und das führt dazu, dass wir unterbewusst anfangen, diese Sprache so wahrzunehmen, dass in bestimmten Situationen wir uns als Mädchen angesprochen werden oder als Jungen. Das heißt, weiß nicht, wir machen eine Schnitzeljagd und dann muss irgendjemand den Baum hochklettern, Dann wird Hey, ich suche jemanden starken. Und dann ist einfach schon klar, in dem Moment will man den Jungen, der da hochklettert. Oder das heißt, wir trainieren quasi gesamte Kindheit, dass diese codierte Sprache signalisiert, wer in dem Moment eigentlich wirklich gewünscht ist. Das führt dahin zu, dass eine Expertin für ein bestimmtes Fachgebiet, wenn sie eine Stellenausschreibung liest, wo ein Experte gesucht wird, sie weiß wahrscheinlich kann ich mich, wenn ich, selbst wenn ich mich da bewerbe, trotz dass ich das Studium abgeschlossen habe, wahrscheinlich suchen sie einen Mann und ich brauche mich gar nicht erst bewerben. Und das Interessante von dem Buch von Iris Bonnet war, dass sie Studien gemacht haben. Je nachdem, in welchem Gebiet man unterwegs ist, funktioniert auch andersrum. Zum Beispiel in Arbeitsgebieten, wo mehr Frauen arbeiten als Männer, ist das Spannende, dass wenn man diese Codierung tatsächlich nutzt, das heißt für eine Stellenausschreibung, wo weiß ich zum Beispiel jetzt in der Grundschule oder ich suche le reer, also in dem Fall will ich wirklich vielleicht Männer, weil es zu wenig gibt, Dann könnte es nützlich sein, eine kompetitive, also agentische Sprache zu nutzen, um codiert quasi die anzuziehen. Und andersrum, wenn ich halt nach Programmiererinnen suche, also explizit weibliche Programmiererinnen, dann würde ich vielleicht lieber eine kollaborativere Sprache wählen. Und dass das sozusagen als Tool zu benutzen, das ist ein bisschen subversiv, würde ich jetzt schon mal sagen, aber der Status quo ist halt subversiv ohne Struktur. Also das heißt, die meisten oder viele Stellenausschreibungen sind halt sehr agentisch codiert und dementsprechend grenzen sie unterbewusst sehr viel Frauen aus. Wobei es auch Studien gibt, die schon gezeigt haben, dass das auch ähnlich gilt für Menschen mit Migrationshintergrund, die halt auch als Kind darauf trainiert werden, dass sie sich niemals, ja niemals mit dieser kompetitiven Sprache identifizieren. Sollten, weil dann sind sie gleich wieder die wilden, was auch immer Kinder."
+        },
+        {
+            "start": 2293720,
+            "end": 2303160,
+            "speaker": "B",
+            "text": "Ihr habt dann aber vermutlich irgendeinen neutralen Begriff jeweils vorgeschlagen oder hatte irgendwie so einen Slider, dass sie sagen, okay, ich will jetzt unbedingt eine weibliche Person oder eine männliche Person."
+        },
+        {
+            "start": 2303240,
+            "end": 2370080,
+            "speaker": "C",
+            "text": "Also das mit dem Slider ist noch interessant. Die Firma Taxio in den USA, die machen das tatsächlich so. Da sagt man wirklich, hat man eigentlich Slider und was ist meine Zielgruppe? Und dann spuckt es einfach die Wörter nach Zielgruppe aus. Wir haben das anders gelöst. Wir haben grundsätzlich einfach nur informiert. Das heißt, wir haben hier ist ein agentischer Begriff, hier ist ein kollaborativer Begriff und haben entsprechende Inhalte geliefert, um zu erklären, warum das eine oder das andere je nach Kontext relevanter ist. Ich sage mal, der Textio Approach, der ist auch so ein bisschen ähnlich wie was man heute mit Large Language Models macht, das ist der Magic Pixie Dust Approach. Das heißt, ich möchte überhaupt nicht wissen, warum und weshalb. Ich möchte einfach nur, dass das zauberhaft so funktioniert. Und unser Ansatz war, wir wollten ein Lern Tool sein, weil wir wollten das Wissen auch in anderen Kontexten haben, weil was bringt mir, wenn meine Stellenausschreibung schön formuliert ist, wenn die Organisation danach all diese Stereotypen dann im täglichen Leben auslebt? Und deswegen, wir haben uns auch nicht als reines Sprachtool und noch viel weniger Sprachpolizei Tool gesehen, sondern wir wollten eigentlich ein Lerntool sein für Inklusion."
+        },
+        {
+            "start": 2370080,
+            "end": 2385040,
+            "speaker": "A",
+            "text": "Welches Feedback habt ihr bekommen, als ihr das Tool ausgerollt habt, als ihr vielleicht ein paar Kunden bekommen habt? Welchen Effekt habt ihr dann wirklich bei den späteren Einstellungen gesehen oder habt ihr diese Daten überhaupt bekommen?"
+        },
+        {
+            "start": 2385120,
+            "end": 2514260,
+            "speaker": "C",
+            "text": "Nein, die Daten, die bekommt man nicht so einfach. Das ist halt alles natürlich auch brisante HR Daten. Teilweise sind ja auch teilweise Daten, die die Unternehmung auch nicht so ohne weiteres erheben können. Das Interessante ist, in den USA müssen sie teilweise gesetzlich Daten über Demografie und so weiter und so fort erheben und in Europa dürfen sie es nicht. Verstehe auch jeweils die Gründe, warum das eine oder andere so gemacht wird. Grundsätzlich vielleicht die größte Herausforderung von unserem Startup war, ich glaube, es war fast unmöglich, ehrliches Feedback von unserer Kundschaft zu bekommen. Das ganze Tool hat so eine moralische Dimension, dass keiner dir eine ehrliche Meinung gibt. Also keiner sagt, finde ich eine schöne Idee, aber euer Tool ist Schrott, weil es nicht das tut, was es wird, sondern alle Hey, mega, das braucht die Welt. Und ich glaube, das war für uns wirklich. Also das ist vielleicht einfach ein Tipp für jeden, der ein Startup macht, was irgendeinen moralischen Kontext haben kann. Feedback einholen ist unfassbar schwer und ich habe leider keine Lösung wie aber glaub nicht dem Feedback, sondern ihr müsst da irgendwie tiefer graben. Aber wir hatten schon auch ein paar Tests gemacht. Also wir hatten eine unserer ersten Kundinnen war die Deutsche Bahn und die hat tatsächlich auch einen Test gemacht, Aber das war auch immer ein großes Politikum. Also die wollten unser Tool benutzen, weil sie ganz viele interne Bildungsmaßnahmen hatten und da einfach hauptsächlich Männer sich beworben haben und die Zielgruppen, die sie insbesondere auch fördern wollten, um zum Beispiel auch dann irgendwann mal in den oberen Etagen andere Demografien zu erschaffen, die sind da nicht angesprungen. Dann haben sie mit uns Tests gemacht und haben gesehen, ah, das hat tatsächlich was verändert. Die Bewerbungen auf diese Angebote, die gemacht wurden, haben sich demografisch verschoben, was natürlich noch viel cooler gewesen wäre, wenn wir sozusagen so A B Testing gemacht haben, Aber das hat sich nicht ein Kunde von uns getraut, einen A B Test zu machen, sondern es war dann immer nur man hat die Daten, die man vorher mal erhoben hatte, verglichen mit den Daten, die man danach hatte, aber einen A B Test hat sich keiner getraut, weil alle Angst, Angst davor hatten, wie das dann aussieht, weil dann könnte man ja tatsächlich mal rechts links vergleichen und dann wird es vielleicht brisant."
+        },
+        {
+            "start": 2514260,
+            "end": 2534260,
+            "speaker": "A",
+            "text": "Jetzt war der Slogan von Witty Works Scale Inclusion Faster with Language. Sind Stellenausschreibungen da wirklich der beste Use Case oder kann man da nicht, ich sag mal, in größere Töpfe reingehen, wie zum Beispiel der Firmenkommunikation oder der Inter Team Kommunikation?"
+        },
+        {
+            "start": 2534420,
+            "end": 2668760,
+            "speaker": "C",
+            "text": "Am Ende ist natürlich als Startup hast du natürlich immer finanzielle Realität und Thema Stellenausschreibung. Da konnte HR am Rest noch eine Entscheidung treffen und zwar komplett selbstständig. Also die haben da ihre Budgets und konnten diese Entscheidung treffen, wenn es darum geht um die Inter Team Kommunikation. Da hat HR meistens nicht ausreichend viel Einfluss, um zu sagen, wir benutzen das jetzt mal für die Interteam Kommunikation. Deswegen war die Realität, dass wir unser Tool hauptsächlich für Stellenausschreibungen verkauft bekommen haben, aber eigentlich für die Inter Team Kommunikation wäre es viel, viel interessanter, weil wie gesagt, es ging ja, unser Tool war nicht ein reines Kommunikationstool, sondern es war ja ein Kulturveränderungstool. Also deswegen, es geht nicht darum, dass die Person per se sich angesprochener fühlte, sondern dass sie wirklich angesprochen wird, weil die Leute sich ihrem stereotypischen Denken bewusst werden und das dann auch verändern. Also darum ging es ja mit unserem Tool und da hätte ich genau die Inter Team Kommunikation eigentlich den wichtigsten Hebe gefunden. Wo es aber auch schon ein super Hebel ist, ist sozusagen Leadership Kommunikation, also Abteilungsverantwortliche, die halt nicht weit genug oben sind, dass dann gleich ein ganzes Kommunikationsteam deren Kommunikation quer liest, aber die halt irgendwie gerade kommunizieren müssen. Wir müssen mal Überstunden machen und der Kommunikation, dass das dann vielleicht bisschen besser formuliert wird. Da hatten wir ein, zwei Unternehmungen, aber das wäre auch, glaube ich, ein sehr guter Hebel gewesen, weil das ist tatsächlich auch noch eine spannende Sache. Es gibt auch eine Studie zu Einfach, wie Mission Statements, also die Sprache von dem Mission Statement die Kultur eines Unternehmens prägt. Da hat eine Forscherin, ich glaube von der Cambridge Universität, eine Korrelation aufzeigen können zu wie häufig Unternehmen sich strafbar machen in Korrelation zu den Mission Statements. Das heißt, wenn das Mission Statement sehr edgy ist, sehr aggressiv etc. War es eine höhere Wahrscheinlichkeit, dass die Unternehmungen sich tatsächlich strafbar machen. Und genau, also wo quasi so die Kultur durch die Sprache geprägt wird. Und da wäre sozusagen Leadership Kommunikation natürlich auch ein super Hebel."
+        },
+        {
+            "start": 2668760,
+            "end": 2729940,
+            "speaker": "B",
+            "text": "Aber wie ist das jetzt? Ich kann mich erinnern, wir hatten das auch mal in einer großen Firma im Slack, ich glaube, das hat sogar irgendwas mit Polizei geheißen, dieser Bot, der dich dann irgendwie so informiert, Hey, willst du dieses Wort wirklich verwenden? Auf jeden Fall haben alle Leute irgendwie immer über die den Polizei Bot oder sonst irgendwas, haben ihn zumindest so genannt. Vielleicht war auch das Einführen oder das Wording von dem Bot nicht so gut, aber weil du auch gesagt hast, so ein Grammarly Plugin, was ständig mich kontrolliert. Also ich könnte mir vorstellen, gerade in Developer Kreisen, die da teilweise schon sehr vorsichtig sind mit so Überwachungssachen, wie funktioniert sowas, dass da nicht alle lautlos schreien und sagen, hey, wir werden überwacht und jetzt Sprachpolizei und Das ist ja jetzt schon so überall Sprachpolizei und wir dürfen nichts mehr sagen. Habt ihr da irgendwie eine Idee, wie man das einführt, dass da Akzeptanz grundsätzlich vorhanden ist oder dass das Leute eben auch verwenden und nicht nur die HR Leute für die Stellenausschreibungen, sondern eben das in breiterer Form in irgendeiner Form Anwendung findet."
+        },
+        {
+            "start": 2729940,
+            "end": 2735940,
+            "speaker": "C",
+            "text": "Das erste zu dem Slackbot, der hat wahrscheinlich ja nur dann etwas getan, nachdem die Message versendet wurde."
+        },
+        {
+            "start": 2736100,
+            "end": 2743650,
+            "speaker": "B",
+            "text": "Ich weiß es gar nicht mehr genau, ob es davor oder ob man noch was klicken musste, aber es war auf jeden Fall mühsam. Es hat ihn auch nicht sehr lang gegeben, wenn ich das richtig im Kopf habe."
+        },
+        {
+            "start": 2743650,
+            "end": 2963330,
+            "speaker": "C",
+            "text": "Also Slack Bots funktionieren ja immer nur auf den gesendeten Messages, nicht auf Messages, die ich gerade noch am Schreiben sind. Und das war tatsächlich auch ein Thema, mit dem wir uns beschäftigt haben, weil das halte ich für absolut schwierig. Das Problem ist ja immer, wenn ich solche Veränderungen mache, dann muss ich als Mensch die Kritik oder das Feedback annehmen können und dazu brauche ich ein Ego, was dann nicht zerbröselt, sondern ein Ego oder eine Situation, in der ich das Feedback annehmen kann. Und deswegen war die Idee vom auch von diesem Ansatz, das ist ja bin ich und die KI, das ist nicht peinlich, ich muss es nicht machen, ich kann es ignorieren. Und das war so ein bisschen die Idee, wie wir das leichter machen wollen. Die Slack Geschichte. Da haben wir auch über nachgedacht, wie wir so einen Slackbot machen können. Und da war die Idee eher, dass wir vielleicht Sprachmuster erkennen und dann quasi einmal die Woche vielleicht mal ein Feedback Hey, du benutzt zum Beispiel immer den Pronomen und die die Person hat gesagt, dass sie einen anderen Pronomen will oder sowas. Also dass man halt irgendwie einfach mal hin und wieder mal Feedback bekommt, aber du hast gerade eine Nachricht geschickt und was für ein Idiot hättest du niemals so schreiben dürfen. Ja, also dass das nicht gut ankommt, ist irgendwie klar. Das andere zum Thema Überwachung, das war auch ein Thema, mit dem wir uns sehr viel beschäftigt haben und ich kann total verstehen, also wir hatten am Ende, es war eine Serverlösung, das heißt tatsächlich den Text, den man schickt, wird zu dem Server geschickt, wird da analysiert und kommt dann eine Antwort zurück. Und wir haben tatsächlich auch Statistiken generiert. Also wir haben geschaut ein bisschen, ja, also wir haben ja so eine Klassifizierung von unseren Regeln gehabt. Das heißt, passiert mehr beim Thema Gendern, mehr beim Thema Migrationshintergrund, militärischer Sprache etc. Und um so vielleicht auch den Unternehmungen zu helfen, zu wissen, wo sie vielleicht Trainings oder solche Sachen anbieten sollten. Aber da haben wir von vornherein klar gesagt, dass wir aufpassen müssen, dass das kein Überwachungstool ist, weil das war dann ganz schnell Natürlich kamen dann Kunden ja, okay, und was ist, wenn einer offensive Sprache, also nicht nur einfach irgendwie so leicht problematische Sprache, sondern ganz offensichtlich weiß nicht, Fäkalsprache oder ich weiß nicht was benutzt. Dann haben wir ne, das machen wir nicht. Stattdessen haben wir die Analytics Data, die bieten wir nur in aggregierter Form. Also das heißt sozusagen, man kann nicht die Einzelpersonen betrachten, die Einzelperson kann sich selber betrachten und ihre Analytics, aber ich kann nur eine Team Kommunikation anschauen. Und das fand ich auch noch sehr spannend. Wir hatten auch einen Ethics Board bei uns, mit dem haben wir einen Ethics Prozess auch etabliert. Und Teil von unserem Ethics Prozess waren so ein paar Standardfragen, die wir uns stellen sollten. Und eine ging zum Beispiel gerade zum Thema Überwachung. Und dann ist uns klar geworden, ja, okay, wir haben gesagt, es ist nur aggregiert, aber wenn zum Beispiel über Weihnachten nur sozusagen ein, zwei Leute arbeiten und ich eine Team Statistik anschaue, dann ist es keine Teamstatistik mehr. Und das hat uns dann auch mal klar okay, krass, ja, da müssen wir aufpassen und haben halt dann quasi a, haben wir eine Opt out Feature eingebaut und b haben wir auch die Implementation so angepasst, dass man ich glaube, mindestens fünf Personen mussten in der Statistik in dem Zeitraum drin sein, damit wir das nicht machen. Und das haben wir versucht, sehr aktiv zu kommunizieren. Ich kann natürlich trotzdem verstehen, dass Leute sich da überwacht fühlen und wir haben auch sehr viel allgemein versucht, in unser Brand zu investieren, über unseren Ethikprozess zu kommunizieren, um sozusagen, selbst wenn ich quasi meiner eigenen Unternehmung nicht traue, dass man vielleicht wittyworks als Firma trauen kann und dass wir entsprechende Inhalte haben, die dieses Vertrauen begründen sozusagen. Also natürlich muss jeder dann für sich selber entscheiden, ob man vertraut. Und dafür hatten wir dieses Opt out Feature auch eingebaut."
+        },
+        {
+            "start": 2963490,
+            "end": 3046370,
+            "speaker": "A",
+            "text": "Ich kann mir schon vorstellen, dass das ganze Thema schwierig zu budgetieren ist in großen Firmen. Man sieht ja zum Beispiel auch das, was in Amerika passiert, dass irgendwie seit Trump oder durch Trump große Diversity Initiativen in den großen Tech Firmen irgendwie eingestampft werden, Entweder auf Druck von der Regierung oder halt nicht. Details kenne ich da jetzt nicht, aber ich kann mir schon vorstellen, dass das halt sehr schwierig ist, wenn man den Return on Invest vielleicht gar nicht so messen kann. Bei Marketing, bei Google Ads weiß ich ein hundert rein, wie viel Sales habe ich gemacht. Relativ einfach. Aber die Messbarkeit. Ich wechsel mal das Thema, wenn wir. Nein, ich wechsel nicht das Thema, ich drehe das Thema ein wenig. Und zwar ist die inklusive Sprache natürlich nicht nur in unserer klassischen normalen Kommunikation vertreten, sondern auch in der Tech Welt. Denn in den letzten paar Jahren, würde ich mal sagen, hat es auch da Einzug genommen. Ich nenne es mal mit Begriffen wie Master, Slave, Whitelist, Blacklist oder wie heißt aktuell der Default Branch in Git, Der heißt nicht mehr Master, der heißt jetzt in fast allen Tools Main, zumindest seit sechs Jahren, sieben Jahren, irgendwie sowas. Kennst du noch andere Beispiele oder wie siehst du die Verwendung von technisch relevanten Wörtern?"
+        },
+        {
+            "start": 3046530,
+            "end": 3212060,
+            "speaker": "C",
+            "text": "Ich fand die ganze Debatte damals kam ja so in der Black Lives Matter Zeit auf. Also teilweise gab es natürlich wieder große Debatten über die Ethnologie der einzelnen Wörter, also haben die überhaupt irgendeinen rassistischen oder wie auch immer Hintergrund oder nicht? Und teilweise wurde dann halt gesagt, so ja, es ist egal, für mich fühlt sich das einfach nicht gut an, sozusagen, wenn halt, weiß nicht, Blacklist und Whitelist fühlt sich für mich halt einfach irgendwie so an, irgendwie dunkel ist böse, weiß ist gut und deswegen will ich den Begriff nicht. Dann gab es einen entsprechenden Backlash sozusagen. Nein, komplett albern. Wenn du mir nicht nachweisen kannst, dass das ein rassistischen Hintergrund hat, dann ändere ich das nicht. Und das Spannende fand ich, dass bei vielen dieser Wörter die aktuellen Standardbegriffe einfach schlecht waren. Sie waren nämlich sehr, sehr schlecht gewählt. Also vielleicht Leute in der IT konnten die gut verstehen, weil sie sie gelernt haben, aber selbst schon bei Leute im Projektmanagement war es dann teilweise undeutlich. Also zum Beispiel so das Whitelist Blacklist Thema, das ist nicht einfach so zugänglich. Also man muss dann erklären, was das ist, wenn ich umgehend aber Begriffe wie allowlist oder blocklist benutze, die muss ich deutlich weniger erklären. Die sind einfach von sich selber viel klarer. Master Slave für Replikation vielleicht sinnvoller als Überbegriff, aber auch da gibt es Unterschiede. Also Primary Replica ist das, was ich eigentlich meistens mit Master Slave vielleicht gleichsetzen würde, aber Leader Follower ist was anderes, sondern da geht es eher um Consensus Protokolle und da wurde häufig Master Slave benutzt für Consensus Protokolle. Das ist einfach unsauber gesprochen. Und dann fand ich das Spannende, dass dann trotzdem die Leute, die dann hey, geht nur um objektive Fakten sich hingestellt haben und du bist ein dummer Ideologe, wenn du deine Sprache änderst und ich sage, du benutzt einfach schlechte Wörter, also schlechte Wörter im Sinne von faktisch schlecht Kommunikation und bist der Ideologe eigentlich, wenn du darauf kämpfst, dass da Master Slave benutzt wird für Dinge, die einfach Lieder, Follower viel präziser werden oder du bist der nicht technische, der lapidar über Technologie redet. Und mit welcher Vehemenz da Leute gekämpft haben, fand ich ziemlich entlarvend und hat gezeigt, dass diese ganze Debatte ja die immer ist, ich bin nicht politisch und können wir da das ganze woke Zeug aus der IT rauslassen? Da geht es doch nur um Nullen und Einsen gezeigt hat. Es ist anscheinend nicht so, sondern wir sind alle Menschen, wir haben alle Gefühle, wir haben auch irgendwo Ideologien und wenn ich mich sage, lass die Politik aus der IT raus, dann sage ich einfach nur, meine Politik ist der Status quo."
+        },
+        {
+            "start": 3212300,
+            "end": 3228460,
+            "speaker": "A",
+            "text": "Hast du in der ganzen Diskussion bei den Leuten, die sich gegen diese Art von Änderungen gewehrt haben oder zumindestens dagegen diskutiert haben, denn auch mal konstruktive Gründe, warum man es gegebenenfalls nicht ändern sollte,"
+        },
+        {
+            "start": 3228460,
+            "end": 3424750,
+            "speaker": "C",
+            "text": "hätte ich jetzt nicht unbedingt Beispiel, aber vielleicht, was ein bisschen in deine Richtung geht und das ist ein bisschen auch das Thema, was ich schon vorher angesprochen hatte mit dem je nach Kontext. Also zum Beispiel das Wort guys, also sozusagen für eine Mixed Gender Gruppe, macht aus meiner Sicht keinen Sinn, weil guy ist ganz klar ein Mann und dementsprechend kann ich einfach ein s ranhängen und meinen, das sei jetzt irgendwie geschlechts generisch, aber gleichzeitig gerade wenn jemand und in der IT kommunizieren wir viel auf Englisch und obwohl die meisten das nicht als erste Sprache haben. Da habe ich schon häufig Situationen gesehen, wo irgendwelchen Leuten der Kopf abgerissen wurde, für die ist es einfach die zweite Sprache. Und von denen dann zu erwarten, dass sie solche Nuancen und dann auch die Sprachtiefe haben, Alternativen gleich parat zu haben, finde ich absolut nicht OK. Muss aber auch sagen, es ist natürlich auch mal schwer, den Kontext zu haben. Es gibt schon auch viele Leute, die sich da vielleicht dann irgendwann auch ausruhen darauf. Aber ja, also solche Sachen, also wo ich sage so ja, ist das jetzt wirklich das, wo es jetzt so einen Riesenstreit braucht oder ist das nicht auch eine Form von Ausgrenzung in dieser Situation? Gleichzeitig würde ich auch trotzdem niemanden verurteilen, der das beklagt oder die das beklagt. Wir sind in einer imperfekten Welt und sozusagen einfach immer nur immer nach Gründen zu suchen, warum man gerade das akzeptieren sollte und nichts sagen sollte, das glaube ich, ist der Status quo, den wir jetzt über Jahrtausende aufgebaut haben. Und wenn wir den ändern wollen, dann müssen wir auch mal ein bisschen Reibung akzeptieren und die geht dann vielleicht auch mal über die Stränge. Vielleicht das Extrembeispiel. Und ich sage jetzt nicht, ich bin jetzt nicht für Terrorismus, aber das Frauenwahlrecht in England wurde deswegen schneller eingeführt, weil Frauen literally angefangen haben, Bomben zu legen oder und so haben sie auf ihre Bedürfnisse aufmerksam gemacht. Und deswegen, ich sage nicht, dass das cool ist, Bomben zu legen, aber sozusagen ab und zu, wenn man wirklich eine Veränderung will, dann nett fragen. Bestenfalls dauert es einfach sehr, sehr lange oder es passiert einfach gar nichts. Und deswegen finde ich, muss man schon auch ein bisschen akzeptieren, dass es auch mal einen Shitstorm gibt. Und ich kann mich erinnern, gerade bei Wittyworks, weil ich sage ja, es gibt keine perfekte Kommunikation, ich bin auch ein Produkt meiner Kindheit und so weiter und so fort. Ich habe mir immer gedacht, wenn ich irgendeinen Tweet rausschicke, damals habe ich ja noch Twitter genutzt und ich da einfach falsch liege, dann kann es einen Shitstorm geben und das ist das Ende von Wittiworks. Und ich habe mir dann immer schon klar wenn das passiert, dann war das mein Fehler oder andersrum. Ich würde der Person nicht böse sein, die der Grund ist, warum die Firma dann plattgeht, weil ich total verstehe, warum die Person das tut, weil man kann sich nicht immer nur damit beschäftigen, ob derjenige in dem Kontext legitimiert war, das oder das zu sagen, sondern ich bin eine öffentliche Person, bin exponiert mit meiner Firma und kann es halt auch mal schiefgehen. Und ich muss sagen, das finde ich als Gesellschaft, muss man es akzeptieren. Also genau wie die Statistiken über Vergewaltigung oder wo dann immer wieder gesagt aber das könnte ja vielleicht gelogen sein. Also wir wissen ziemlich genau, wie häufig so was gelogen wird und das ist fast nie. Und weil dem so ist, bin ich der Meinung, im Zweifelsfall glauben, wohl wissend, dass es vielleicht auch mal jemanden trifft, den es nicht treffen sollte."
+        },
+        {
+            "start": 3424830,
+            "end": 3542320,
+            "speaker": "B",
+            "text": "Was mich immer stört an der ganzen Diskussion oder überhaupt, wenn man so lang diskutiert, dass man eben über gewisse Dinge einfach immer noch diskutiert, wie zum Beispiel Main und Masterbranch, wo ich auch zu dem Kollegen da beim Meetup gesagt habe, in der Zeit, wo wir diskutieren, da kannst du heute mit einem LLM schon irgendeinen Shortcut schreiben, dass dein Git das automatisch macht, dann brauchst du dich gar nicht mehr drum kümmern, was da im Hintergrund in was für einem Repo, ob es Main oder Master ist. Wenn dir das so verwirrt, dann schreib ein kleines Programm, das macht automatisch für dich. Aber trotzdem wird irgendwie noch sehr lange immer diskutiert darüber, ob wir das wirklich brauchen, ob es Sinn macht. Klar, dieses Beispiel mit Guys. Ich kann mich auch erinnern an den Kollegen von uns, von Andi und mir, der auch schon im Podcast war, der vor zehn Jahren sich bei einer Konferenz auf der Bühne entschuldigen musste, weil er crazy gesagt hat. Er ist ein crazy guy. Und andere haben sich entschuldigen müssen, weil sie Geiß gesagt haben. Also es war vor zehn Jahren, da ist Amerika oder englischsprachige native Englisch Leute sicher vielleicht weiter, würde ich mal sagen, in gewissen Bereichen als wir, aber es ist natürlich auch unsere zweite Sprache. Aber auch wenn man ganz klassisch Programmiersprachen sich anschaut, da gibt es ja auch Sachen, die sich weiterentwickeln. Man ändert vielleicht Variablen, also irgendwelche Namings oder so. Das ist halt einfach Refactoring. Also warum sollte man nicht dann auch einfach Refactoring mit Main und Master machen in der CI Pipeline, Weil das ist ja auch oft so eine Ausrede. Ich muss da ganz viel ändern, Aber so ein Projekt Code lebt ja auch, wird weiterentwickelt wird geändert. Insofern kann man das ja dementsprechend dann auch damit ändern. Und meistens muss man sagen, in neunzig Prozent der Fälle ist es keine große Änderung, dass man da jetzt irgendwie mal einen Branch umstellt oder so. Aber ich war auch verwundert, wie viele Open Source Projekte eben noch nicht auf Main zum Beispiel umgestiegen sind. Also ich hab da jetzt auch mal geschaut, es sind schon sehr viele und vor allem von den großen Open Source Projekten noch ganz viele."
+        },
+        {
+            "start": 3542320,
+            "end": 3604340,
+            "speaker": "A",
+            "text": "Also mich nervt tierisch, dass wir immer noch Master und Main haben, weil ziemlich viele Leute betrachten das als Breaking Change und so weiter, weswegen sie es auch immer nicht geändert haben. Ist ja auch okay. Vielleicht ist es einfach nur ein Legacy Produkt, aber ich muss gefühlt in jeden meiner Shortcuts genau diese Abfrage einbauen. Ich finde es halt, ich finde es halt, ich finde es persönlich nervig. Die zweite Thematik ist natürlich, Wolfgang, um auf deinen Punkt zurückzukommen, es gibt auch einfach Leute, die kommen dahin und diskutieren des Diskutieren wegen. Das bedeutet, es ist völlig egal, welche Argumente du bringst, die haben Spaß und ziehen Energie daraus zu diskutieren und die änderst du nicht. Das ist ja okay. Und dann hast du jetzt für dich entschieden, so hat sich das zumindest angehört, dass du keine Energie aus einer Diskussion ziehst, unabhängig davon, wer gewinnt. Und die dritte Thematik ist, glaube ich, es ist ganz einfach zu meckern. Es ist unglaublich schwer etwas zu tun, auch wenn es nur zwei, drei Prompts auf eine LLM ist. Bau mir dieses Skript und Whatnot, völlig egal, das ist Action, was anderes meckern."
+        },
+        {
+            "start": 3604340,
+            "end": 3612380,
+            "speaker": "B",
+            "text": "Also ich möchte jetzt nur in Schutz nehmen, weil ich glaube, er hört auch unseren Podcast sinnvoll diskutieren. Ich würde jetzt nicht in dieses Lager"
+        },
+        {
+            "start": 3612380,
+            "end": 3648880,
+            "speaker": "A",
+            "text": "stecken, aber ich rede sehr allgemein. Aber Lukas, wenn wir über diese Begriffe sprechen, Master, Slave, Whitelist, Blacklist und so weiter und so fort, wie weit zieht sich die ganze Thematik runter? Spielen variablen Namen eine Rolle? Spielen Platzhalterwerte wie John Doe oder ähnliches eine Rolle, die ja vielleicht auch eine ganz andere Historie haben? Oder ich glaube, in Deutschland gibt es auf den Ausweisdokumenten Max Mustermann und es gibt, glaube ich, ein weibliches Pendat auch für dieses Ausweisdokument. Muss ich da jetzt auf alles achten oder habe ich dann auch Angst, ich sag mal, dass die Inklusionspolizei bei meinen variablen Namen kommt oder wie siehst du das?"
+        },
+        {
+            "start": 3649280,
+            "end": 3789330,
+            "speaker": "C",
+            "text": "Ich kenne noch keine Inklusionspolizei bzw. Ich kenne keine, die juristische Macht hätte. Aber natürlich, das zieht sich überall rein. Und auch da ist es teilweise ja auch ein bisschen was will ich erreichen? Also zum Beispiel gibt es ja immer wieder auch Probleme bei Validierung. Also zum Beispiel was passiert mit Nachnamen mit zwei Buchstaben? Und da hilft es wahrscheinlich nicht, wenn meine Standardnachnahmen halt immer mehr als zwei Buchstaben sind sozusagen, dann werde ich halt immer eine Validierung bauen, die sagen, zwei Buchstaben als Nachmachen ist ein Fehler. Aber es gibt halt durchaus Leute, die zwei Buchstaben als Nachnamen haben und dementsprechend kann ich das halt auch immer wieder auch benutzen, strategisch benutzen, vielleicht gerade eine andere Person sozusagen als Defo zu haben, um das zu denken, was nicht von alleine gedacht ist. Klassisches Beispiel, da ist der Racist Soap Dispenser, also sozusagen ein Seifenspender, der rassistisch ist. Und zwar war das halt ein Seifenspender, der halt auf dunkle Haut nicht reagiert hat. Das heißt, wenn du dunkle Haut hast, kriegst du keine Seife. Und ich glaube jetzt nicht, dass das Produktteam irgendwie böswillig das so gemacht hat, sondern die haben einfach nicht dran gedacht. Und dementsprechend kann man halt gerade vielleicht mit, wie gesagt, dass man anstelle von John Doe was anderes benutzt, vielleicht strategisch als Team sich dahin zu bringen, immer daran zu denken, was man selber nicht repräsentiert hat im Team oder vielleicht andersrum, vielleicht auch beim Hiring, nicht immer nur zu sagen, trinke ich mit der Person gerne abends ein Bier, sondern sage, hey, welche Denkweise wird hier neu in mein Team hinzugefügt? Und das ist ein Asset sozusagen. Natürlich wird das vielleicht zu Reibungen führen, aber es ist halt ein Asset, weil Anfang dann wird über Sachen gedacht, über die sonst nicht gedacht wird, die ich sonst irgendwie mit dem Prozess dann machen muss. Also dass ich dann noch mal einen Prozess habe, dass ich dann noch mal sowas überprüfe. Aber ja, also gleichzeitig, ich würde auch keine, also ich will keine variablen Namen mit Fäkalsprache zum Beispiel oder so, aber auch sowas, also gerade Variablennamen lassen sich ja relativ leicht ändern mit Suchen und Ersetzen und Refactoring Tools. Und vielleicht ist es ein guter Moment, sich vielleicht eh über eine Strategie nachzudenken. Wie variablen Namen benennt werden sollen. Vielleicht hilft das ja sowieso dem Team und dann kann man sozusagen das vielleicht gefühlt Unnötige oder weniger Nötige mit noch was zu kombinieren, was vielleicht noch ein bisschen nötiger oder hilfreicher wirkt für jeden."
+        },
+        {
+            "start": 3789410,
+            "end": 3811850,
+            "speaker": "A",
+            "text": "Jetzt hattet ihr bei Witty Tooling gebaut, was die ganze Sache supportet. Du sagtest gerade so was ähnliches wie Grammarly und so weiter und so fort. Und inzwischen haben wir LLMs Kann ich nicht einfach meinen Text bei Claude oder reinpacken? Und was habt ihr da gebaut bzw. Wie hat das funktioniert? Also unter der Haube, Also als Witti"
+        },
+        {
+            "start": 3811850,
+            "end": 3987960,
+            "speaker": "C",
+            "text": "gegründet wurde, war chatgpt noch nicht. Also natürlich gab es sozusagen die Technologie, die war natürlich schon bei Google und so weiter in der Entwicklung. Wir haben uns aber auch sehr bewusst entschieden für einen regelbasierten Ansatz, weil wir wollten deterministischer sein und wir wollten erklärbar sein. Also wir wollten auch wirklich die Möglichkeit haben zu erklären, warum das eine da drin ist und das andere nicht. Dementsprechend, wir haben eine NLP Library benutzt, die heißt spacy. Damit haben wir den Text tokenized. Damit kann man dann auch ein bisschen so erkennen, ob es ist es ein Verb, Adjektiv, Nomen etc. Und wir haben dann so eine eigene Rule Engine gebaut, die dann auf diesen Daten entsprechend dann entscheiden konnte, welche Regel jetzt in der Situation zur Anwendung kommen sollte. Wir haben dann aber als chatgpt angekommen sind, haben wir eigentlich zwei Sachen gemacht. Das erste war natürlich erstmal oh mein Gott, ja, wir sind jetzt out of business. War aber eigentlich gar nicht so. Nämlich das war interessante. Das eine war nämlich erstens, vorher hatten ganz viele Firmen gesagt, wir haben keine KI Policy und deswegen können wir euer Tool nicht kaufen. Durch chatgpt haben die dann alle sukzessive eine KI Policy gehabt und in den Fragen, die uns dann gestellt wurden, sind wir dann immer sehr gut durchgekommen, weil wir halt deterministisch sind und erklärbar. Und von daher war das so gesehen eigentlich ganz gut. Wir sind dadurch quasi eine weitere Gatekeeping Rolle weitergekommen im Sales Prozess. Aber dann war natürlich die Macht die Technologie Sinn? Und dann haben wir ziemlich schnell festgestellt, ja, ich kann, wenn ich explizit einer generative AI Modell sage, schreibe bitte inklusiv, dann werde ich bessere Ergebnisse haben Oder sagen wir so, definitiv bessere Ergebnisse als ein Durchschnittsmensch, der sich mit dem Thema nicht beschäftigt. Nicht besser als eine Fachperson, aber besser als ein Durchschnittsmensch. Und von daher könnte man Super Problem gelöst. Es gibt aber zwei Probleme. Das erste ist, die wenigsten Leute schreiben das ihre Prompts und häufig können sie es gar nicht, weil sie irgendwelche Magic Tools benutzen, die die Prompts für sie schreiben. Also wenn ich bei HubSpot sage, schreib schön, dann schreibe ich kein Prompt, sondern da macht HubSpot einfach sein Ding. Also das ist das eine Problem. Und das andere Problem, damit mache ich noch mal ein größeres Fass auf und zwar Generative AI ist immer die Sprache der Vergangenheit, weil die sind ja immer auf Daten von vor ein bis zwei Jahren trainiert. Und dementsprechend, wenn wir unsere Sprache weiterentwickeln wollen und verändern wollen, dann hilft uns ein Large Language Model nicht, weil es ja eigentlich quasi auf dem statistischen Modell der Vergangenheit basiert. Und das finde ich ein ziemlich großes Problem, weil sich unsere Sprache ja immer weiterentwickelt und wir aber ein statistisches Modell haben, was mehr Content generiert als Menschen oder ziemlich bald. Ich weiß gar nicht, ob das schon der Fall ist, aber ich bin mir ziemlich sicher, dass bald Generative AI mehr. Also wo kommt der statistisch relevante Content, den wir Menschen definiert haben, der unsere Sprache uns ermöglicht, unsere Sprache weiterzuentwickeln? Weil wir werden den ganzen Tag bombardiert mit Texten, die mit Generative AI geschrieben wurden, die die Sprache der Vergangenheit nutzen."
+        },
+        {
+            "start": 3987960,
+            "end": 4010540,
+            "speaker": "A",
+            "text": "Bedeutet das eigentlich, dass wenn wir jetzt versuchen, inklusive Sprache zu fördern, dass wir eigentlich mit der ganzen KI und Claude und chatgpt und so weiter einen sehr großen Gegner haben. Und mit Gegner meine ich jetzt nicht, dass die das wirklich absichtlich machen, sondern einfach nur auf Basis der Architektur, wie LLMs funktionieren haben. Also Kampf gegen Windräder bisschen."
+        },
+        {
+            "start": 4010540,
+            "end": 4221139,
+            "speaker": "C",
+            "text": "Also zum Beispiel, wir haben ja vorher über Whitelist, Blacklist versus allowlist und Denialist. Ich bin weit genug. Mir würde es niemals passieren, dass ich aus Versehen Whitelist oder Blacklist schreibe. Mir wird es aber definitiv aus Versehen passieren, dass ich einen Text, der mir Cloud geschrieben hat, akzeptiere, wo die Wörter drin vorkommen. Also von daher ja sozusagen, ich kann mich weiterentwickeln in der Art und Weise, dass sich Claude nicht weiterentwickeln kann. Oder ich habe zumindest, ich könnte natürlich jetzt meine Cloud File anfangen, die ganzen Regeln von wittyworks zu hinterlegen, aber das ist auch nicht wirklich ganghaft, weil dann verballere ich ganz schön viele Tokens. Also sagen wir so wie ich schon vorhin gesagt habe, wenn ich wirklich aktiv und prompt schreibe, schreib inklusiver, dann könnte das tatsächlich ein Tool sein, das uns zu einer inklusiveren Sprache führt, zumindest mal aufgrund von dem, was wir seit zwei Jahren für ein Verständnis von inklusive Sprache haben. Aber wie gesagt, das setzt voraus, dass wir das tun. Interessanterweise hat aber anscheinend Anthropic, die sich ja bei Ethik ganz weit vorne sehen, Microsoft, OpenAI etc. Die könnten ja sich mit diesem Thema beschäftigen, sie könnten ja irgendwie Feintuning machen oder so. Also natürlich Elon würde das niemals machen, aber die anderen, die könnten ja, das finden wir gut und wichtig oder wir wollen zumindest ein Feature anbieten, das geht, Haben sie aber alle nicht gemacht. Und das fand ich auch sehr spannend damals und da fing es an vielleicht, wo es für uns dann wiederum schädlich wurde, weil wir haben ganz häufig das Feedback, ja kann ich das nicht mit chatgpt machen, haben wir das gesagt, was wir beobachten haben, also wie gesagt, du musst es prompten und es passiert nicht von alleine und haben gesagt, naja, Microsoft wird schon lösen oder OpenAI wird es schon lösen und damit war für die Leute das Thema erledigt sozusagen nutzen jetzt generative AI und das Problem wird schon irgendwie technisch gelöst werden, weil könnte man ja naiverweise sagen, klar könnte man das lösen, das tut halt keiner. Wir haben es probiert technisch zu lösen oder wir haben glaube, das Konzept würde schon funktionieren. Und zwar, was wir gemacht haben, ist, wir haben eine Lösung gemacht, dass ich meine Prompts nicht direkt an die KI schicke, sondern der Prompt wird zu uns geschickt. Wir machen dann Prompt Injection, das heißt, wir fügen die Sachen zum Thema Inklusion hinzu, schicken es dann zu der eigenen KI und dann schauen wir mit unserem regelbasierten Ansatz die Antwort an und generieren optional einen Follower Prompt, der der ursprünglichen KI noch mal hey, schau dir die Sachen an, aus den und den Gründen, hier sind paar Alternativen, willst du es umschreiben? Und das ist so, da war so ein bisschen Idee, natürlich hat das ein bisschen Overhead, auch ein bisschen Tokenkosten, aber das war so ein bisschen unsere Idee, wie wir so ein bisschen Magic Pixie Dust reinbringen können und gleichzeitig ein bisschen mehr Deterministik und ja, vielleicht auch noch mit unserem regelbasierten Ansatz kann ich dann halt auch sehr effizient auch vielleicht sehr unternehmensspezifische Sachen. Ich hatte zum Beispiel eine Unternehmung, die haben Elternzeit hat sich irgendwie eingebürgert, immer Muttiurlaub zu sagen oder irgend so ein Begriff und das haben die dann irgendwann selber gemerkt, dass es vielleicht nicht so optimal ist, es so zu benennen, weil es halt für die betroffene Person, also die gerade Eltern geworden sind, blöd ist, aber auch in dem Team so eine schlechte Stimmung produziert hat, weil dann alle pissed off waren, dass die in den Mutti Urlaub gehen. Anyway, mit einem regelbasierten Ansatz kann man auch ganz einfach eine Regel machen und dann würde die halt automatisch immer getriggert werden und man kann das mit einem beliebigen LLM kombinieren, ohne dass man Feintuning und Wetraining macht. Aber genau, also das war unser Ansatz, wir haben das genannt, aber wie gesagt, all solche Produkte habe ich nicht gesehen von den großen Playern. Also die scheinen sich nicht wirklich mit dem Thema zu beschäftigen."
+        },
+        {
+            "start": 4221219,
+            "end": 4278310,
+            "speaker": "B",
+            "text": "Meine Argumentation wäre jetzt gewesen, dafür erreicht man diese Leute, die das gar nicht wollen, also die, die sich dieses Plugin nie installiert hätten, weil sie sagen sowieso alles Bullshit, aber ich habe es gerade getestet, ich hab grad Beispieltext in GPT und in Gemini reinkopiert und habe gesagt, optimiere und Blacklist ist dringen geblieben. Also von selbst, dass irgendwie Blacklist rausfällt oder dass er vorschlägt. Ja, das wäre die bessere Formulierung. Funktioniert so scheinbar nicht, wenn man nur sagt optimiere. Wenn man natürlich sagt, verwende inklusive Sprache, sieht es wahrscheinlich anders aus, aber ganz viele Leute machen das ja grundsätzlich nicht. Also wenn ich mal schon so weit bin, dass ich mich damit beschäftige, dann bin ich ja wahrscheinlich eh schon so sensibel, dass mir das auffällt, zumindest bei den Klassikern wie Blacklist. Aber bei euch geht es ja dann auch darum, diese Wörter, die mir jetzt vielleicht eben, wenn wir wieder bei Ausmerzen sind oder solche Dinge, die man eben nicht so am Schirm hat und die eben nicht so klar sind im tagtäglichen Gebrauch."
+        },
+        {
+            "start": 4278470,
+            "end": 4423690,
+            "speaker": "C",
+            "text": "Genau, wobei wieder ausmerzen wäre wieder das Beispiel, das Ersetzen dieses Wortes ist ja gar nicht so wichtig, sondern da wäre eigentlich der Lernmoment der interessante und der geht dann vielleicht wieder verloren. So wie wir chatgpt gebaut haben, haben wir dann tatsächlich dann auch ein bisschen, auch der Transparenz wegen, haben wir halt dann quasi den finalen Output angezeigt. Wir haben dann auch noch gezeigt, was quasi die Differenz von dem initialen Output und dem dann korrigierten Anführungsstrichen Output ist und dann auch nochmal die Erklärtexte haben auch noch drüber gestellt. Also die Idee war, dass wir dann diesen Lernprozess nicht ganz verlieren. Und wie gesagt, gerade auch bei dem Thema Blacklist, ich habe das halt immer wieder, dass mir Cloud dann sowas generiert und dann sage, das ist nicht inklusive Sprache und dann baut sich ab und zu Cloud dann so einen kleinen regulären Ausdruck mit irgendwie so fünf Wörtern ad hoc zusammen und räumt dann ein bisschen auf. Aber ja, natürlich funktioniert das nicht so wirklich gut und ist halt nicht zuverlässig. Und wie gesagt, das was ich mit witgpt beschrieben habe, das funktioniert dann halbwegs zuverlässig. Also würde ich schon sagen, weiß ich über neunzig bis fünf und neunzig Prozent der Fälle erkennt es dann und wird dann besser geschrieben. Aber es ist wie gesagt dann wiederum so ein Token Waste und von daher wäre es eigentlich viel besser, wenn es wirklich an der Quelle verbessert wird. Das ist halt wieder eine Frage. Also wenn der ganze Content von Reddit kommt, was nun wirklich nicht das Nonplusultra von inklusiver oder überhaupt nur freundlicher Sprache ist, dann muss man sich halt nicht wundern, wenn der Output standardmäßig halt so daherkommt. Und das ist halt das. Aber gleichzeitig, wie gesagt, ich finde es halt immer mit KI so spannend, gerade was Stereotypen angeht. KI kann dazu genutzt werden, die Stereotypen zu festigen oder genau das Gegenteil. Also wir haben versucht, ja das Gegenteil zu erreichen. Und genauso könnte natürlich auch, wenn KI auf solche Wörter trainiert wird, andere Wörter dafür zu benutzen, dann könnte es ganz elegant die Sprache ändern. Wir würden das in den Sprachgebrauch übernehmen und würden uns nie darüber aufregen müssen, sozusagen, weil wir würden einfach immer nirgendwo mehr Whitelist und Blacklist lesen und würden einfach komplett natürlich auf Lawlist und Denialist wechseln und müssten uns keine Sekunde darüber aufregen und würden das einfach quasi nebenbei einfach so aufnehmen. Aber ja, das ist halt so ein bisschen eine Sache. Die großen Player, finde ich, nutzen halt KI vielleicht nicht bewusst, aber Sie akzeptieren das, dass die Stereotypen zementiert werden, statt dass wir einen Schritt weitergehen und die Stereotypen hinter uns lassen."
+        },
+        {
+            "start": 4423690,
+            "end": 4450250,
+            "speaker": "B",
+            "text": "Ich hätte mir wirklich bei Gemina eigentlich gedacht, weil das wird ja immer so verrufen als die Wokeness AI, aber sogar da funktioniert es eben nicht. Aber um nochmal auf den regelbasierten Ansatz zurückzukommen, du hast ja gesagt, ihr habt es damals als Server aufgebaut, also dass die Inhalte an den Server geschickt werden, aber grundsätzlich wäre das ja schon möglich, wenn es ein regelbasierter Ansatz ist, das wirklich nur lokal, aber auszuführen, weil LLM lokal auszuführen ist schon ein bisschen schwieriger, Aber regelbasierter müsste ja eigentlich funktionieren, oder?"
+        },
+        {
+            "start": 4450250,
+            "end": 4519060,
+            "speaker": "C",
+            "text": "Grundsätzlich, ja, man könnte das schon machen. Also die Qualität ist halt schon deutlich besser mit den größeren Spacy Modellen und die braucht dann halt dann schon ein paar Gigabyte im Memory. Wie gesagt, ich bin mir auch immer bewusst, das Startup hat vielleicht nicht nur wegen Trump nicht gefruchtet, sondern vielleicht waren wir einfach technisch nicht gut. Also vielleicht kann man das besser machen, dann könnte man vielleicht einen lokalen Ansatz nutzen, spannenderweise. Also die Firma gibt es leider nicht mehr oder sie ist in Liquidation. Ich konnte aber den gesamten Source Code und Inhalte aus der Insolvenzmasse rauskaufen und habe es jetzt ein bisschen überarbeitet, auch als Open Source Release. Das einzige, von dem ich weiß, was jetzt wiederverwendet wurde, waren Teile unserer Browser Extension. Wir haben nämlich so eine Integration mit Google doch hingebastelt, was nicht so trivial ist, weil das ist nicht dokumentiert, wie man das macht. Das braucht viel Reverse Engineering und das wurde übernommen von einem Entwickler von Automatic, der einen lokalen Grammar Checker baut. Also genau, sozusagen von daher so lokaler Checker, da passiert was mit unserem Code, aber nicht mit inklusive Sprache, sondern nur mit Grammatik und Rechtschreibung."
+        },
+        {
+            "start": 4519060,
+            "end": 4532300,
+            "speaker": "A",
+            "text": "Wolfgang, ich hoffe, du hast nicht nur der KI optimiere gesagt, denn es tut mir leid. Also die KI kann ja jetzt auch nicht Gedanken lesen, weil optimieren kann auch heißen auf Grammatik, auf."
+        },
+        {
+            "start": 4533100,
+            "end": 4546020,
+            "speaker": "B",
+            "text": "Ja, ich wollte es ja mal bewusst testen und ehrlich gesagt, ich mache es sehr oft. Ich nehme irgendeinen Text und sage optimiere, weil dann die gröbsten Sachen rausfallen und der Text einigermaßen englisch wird. Also das ist, was ich tagtäglich auch oft mache, muss ich zugeben."
+        },
+        {
+            "start": 4546020,
+            "end": 4560440,
+            "speaker": "A",
+            "text": "Ja, ja, genau. Aber dann zu erwarten dass ein general trainiertes Modell auf all das achtet, was dir gerade im Kopf ist. Wie Lukas auch schon mehrmals sagte, der Kontext ist hier die Relevanz und diese Mathematik."
+        },
+        {
+            "start": 4560440,
+            "end": 4571440,
+            "speaker": "B",
+            "text": "Aber genau das ist dieser Bias eben, der dann schon drin sitzt. Also wenn du dann noch mal probiert inklusive Kommunikation oder inklusive Sprache dazu schreibst, dann kommt das natürlich sofort gar kein."
+        },
+        {
+            "start": 4571440,
+            "end": 4574640,
+            "speaker": "A",
+            "text": "Ja, aber genau darum geht es ja eigentlich."
+        },
+        {
+            "start": 4574720,
+            "end": 4587870,
+            "speaker": "B",
+            "text": "Im Idealfall sollte es ja bei einem klassischen Optimieren schon dabei sein, weil es einfach eben nicht als Standard anerkannt wird. Wenn du jetzt irgendein Nazijargon eingibst und Optimiere schreibst, sagt er sicher irgendwas. Also da ist schon nochmal ein Unterschied."
+        },
+        {
+            "start": 4587870,
+            "end": 4632820,
+            "speaker": "C",
+            "text": "Ich finde das finde ich ja das Spannende. Also je nach Situation, wenn ich ein Komma an die Falschen stelle, gibt es immer diese klassischen Beispiele. Ich glaube im Englischen halt so, wo der Satz sich komplett verändert, je nachdem, wo ich das Komma platziere. Aber die meisten Grammatikfehler führen ja nicht zu so dramatischen Veränderungen der Inhalte. Also von daher ist ein Grammatikfehler vielleicht hier und da sogar authentisch. Aber sozusagen jemanden wirklich mit irgendwie halt nicht inklusiver Sprache anzusprechen, kann ja viel fataler sein. Und dann, wie gesagt, bedeutet das Optimieren hat ein statistisches Modell, ein Konzept, was das bedeutet. Das bedeutet Grammatik rausbringen, nicht inklusiv schreiben. Also deswegen, das ist nicht statistisch relevant, inklusiv zu schreiben. Du musst es explizit fordern, obwohl die"
+        },
+        {
+            "start": 4632820,
+            "end": 4639880,
+            "speaker": "A",
+            "text": "deutsche Sprache natürlich sehr brutal ist. Jemand umfahren und jemanden umfahren. Also das hat schon sehr fatale Folgen teilweise."
+        },
+        {
+            "start": 4640600,
+            "end": 4653160,
+            "speaker": "C",
+            "text": "Es kommt natürlich auf den Case drauf an, aber ich sage einfach sozusagen das, was Wolfi da getestet hat, macht ja Sinn. Also er hat getestet, was bedeutet optimieren für die verschiedenen KI Modelle und das bedeutet offensichtlich nicht inklusive Sprache."
+        },
+        {
+            "start": 4653160,
+            "end": 4672540,
+            "speaker": "B",
+            "text": "Und es ist so, dass wenn du zum Beispiel englische Wörter verwendest, die nicht so üblich sind, dann bekommst du die Info, dass das irgendwie komisch nicht englisch ist oder deutsch englisch oder sonst irgendwas. Also da wird dann der Satsch sehr wohl umgeschrieben. Also man könnte schon argumentieren, dass das eigentlich auch mit dabei sein sollte. Aber Andi, du wolltest noch was anderes sagen ursprünglich, oder?"
+        },
+        {
+            "start": 4672700,
+            "end": 4703330,
+            "speaker": "A",
+            "text": "Ja, ich wollte dem Lukas danken, weil er der Held ist, den die Welt braucht und extra auch Geld in die Hand genommen hat, um die Software dann aus der Insolvenzmasse rauszukaufen, fand ich super und den ganzen Kram, über den wir gerade sprechen, ist natürlich auch in den Shownotes verlinkt und das liegt alles auf GitHub. Lukas, was muss ich tun, um das Ganze ans Fliegen zu bekommen? Kriege ich das lokal ans Laufen bei mir oder auf meinem Hetzner Server oder ähnliches?"
+        },
+        {
+            "start": 4703330,
+            "end": 4834710,
+            "speaker": "C",
+            "text": "Ich habe es herausgekauft, ich habe es veröffentlicht. Ich wollte, dass es nicht einfach nur so ein Code Dump ist. Ich habe schon ein bisschen Zeit investiert, die Dokumentation ein bisschen gerade zu rücken, den Source Code ein bisschen gerade zu rücken, hier und da auch noch ein paar Features anzupassen. Also zum Beispiel bis jetzt war halt die Browser Extension brauchte halt unser Single Sign On Setup und da habe ich jetzt gemacht, dass man auch einen API Key verwenden kann, hoffe, dass die Readme jetzt alle so sind, dass man die tatsächlich so einfach mit losstarten kann. Ich habe auch versucht, Leute dafür zu begeistern. Ich weiß aber ehrlich gesagt, habe ich nicht wirklich signifikantes Feedback bekommen, deswegen ich weiß nicht, wie gut die Readme sind, aber ich kann auf jeden Fall versprechen, dass wenn jemand es ausprobiert und irgendwo hängen bleibt, dann gebe ich mir auf jeden Fall die Zeit, um zu helfen. Genau, vom Setup ist Prinzip, das eine ist halt ein Python Server, dann nutze ich Gunicorn Thema, Man lernt immer, auch wenn man Fehlschläge hat. Also die Firma war nicht erfolgreich, aber Gunicorn mit Preload habe ich gelernt. Super toll, weil damit kann man, wenn ich NLP Modelle habe und ich mehrere Worker habe, die Modelle nur einmal laden. Genau, aber damit kann ich halt so ein gunicorn, das Deployment sollte relativ easy sein, kann ich lokal laufen lassen. Wir haben optional noch Language Tools integriert, das ist einfach ein Rechtschreibung Grammar Checker, weil brauche ich vielleicht auch gerade, das heißt es dann auch integriert, aber ist optional. Und dann muss ich halt überlegen, welches Tool ich benutzen will. Also für witigpt, ich glaube, dafür brauche ich faktisch nur den Python Server. Je nachdem will ich mir vielleicht noch kleines Frontend basteln. Ich habe da so ein ganz ultra billiges Frontend direkt im Python Server. Ein besseres Frontend ist in unserer Laravel Dashboard App, die ich aber eigentlich wirklich nur brauche, wenn ich anfange wirklich User Management zu machen. Und das andere, was wir haben, was ich dann auch nutzen kann, ist entweder unser Word Add In oder halt die Browser Extension. Die sollten eigentlich auch beide lokal bilden und entsprechend laufen können. Word adddin finde ich auch noch eine spannende Sache. Word Add In ist nichts anderes als ein XML File, den man zu Microsoft hochlädt und auf dem Server, der in dem XML File referenziert wird, kann man machen, was man will. Nur so zum Thema Sicherheit auch noch irgendwie spannend."
+        },
+        {
+            "start": 4835430,
+            "end": 4844150,
+            "speaker": "B",
+            "text": "Aber ihr habt jetzt nicht oder du hast jetzt nicht geplant, irgendwie das Service nochmal online zu bringen und wirklich zur Verfügung zu stellen, egal ob kostenpflichtig oder nicht."
+        },
+        {
+            "start": 4844150,
+            "end": 4922080,
+            "speaker": "C",
+            "text": "Ich habe noch immer so diese kleine Hoffnung, dass ich das vielleicht bei mir an der Fachhochschule irgendwie hinkriege, dass ich das da deployed bekomme. Wir fangen da an, gerade auch so Tests zu machen mit F, das ist, ich weiß gar nicht mehr aus welchem Bundesland, aber so ein Open Source LLM Frontend. Und meine Hoffnung ist, dass ich da vielleicht irgendwie es schaffe, da eine Checkbox einzubauen. Witty check und dann kann ich darauf klicken und dann macht es halt diesen Witi Zusatzschritt und dann könnte ich die Infrastruktur der Uni benutzen, um so einen Server zu betreiben und den könnte ich dann vielleicht der Allgemeinheit zugänglich machen. Genau, das weiß ich noch nicht. Ich habe auch immer mal wieder Leute, die anfragen wegen Witty, aber bis jetzt weiß ich zumindest nicht von irgendjemand, der es jetzt aktiv betreibt. Und genau, ich hab ich lasse auf jeden Fall die Domain, die bezahle ich weiter, bisschen Infrastruktur. Es ist so ein bisschen, wie viel muss ich investieren, damit was passiert und gleichzeitig sagen, ich bin jetzt nicht motiviert, so einen Server zu betreiben, weil das würde mich dann schon, wenn ich ein größeres, also das Memory von dem spacy ist halt schon intensiv, da würde ich dann schon ein paar hundert pro Monat hinlegen oder so oder zumindest ein hundert und die lege ich nicht hin, bevor ich nicht wirklich weiß, dass Leute es benutzen werden. Aber vielleicht benutzt es deswegen keiner, weil ich es nicht betreibe. Schauen wir mal, was an Feedback kommt nach dem Podcast eben."
+        },
+        {
+            "start": 4922160,
+            "end": 4940740,
+            "speaker": "B",
+            "text": "Wir haben eine große Community und vielleicht gibt es ja irgendjemanden, der oder die Ideen hat, wie man das irgendwie aufziehen könnte oder sinnvoller erreichen könnte. Jetzt abschließend, wenn du unserer Hörerschaft was mitteilen willst, was wäre das auf dem Weg, um irgendwie in die richtige Richtung zu gehen?"
+        },
+        {
+            "start": 4940980,
+            "end": 5004240,
+            "speaker": "C",
+            "text": "Grundsätzlich finde ich, würde der Welt es gut tun, wenn wir alle einfach großzügiger sind. Großzügigkeit wird häufig darauf bezogen heutzutage, dass sich Leute, die beim Status quo unterwegs sind, nicht ändern müssen. Ich finde, andersrum sollten die Leute, gerade die durch den Status quo gestützt werden, großzügig sein gegenüber den Leuten, die Bedürfnisse haben und dass wir einfach gewillt sind, soweit wir es können, darauf einzugehen. Das wäre so Grundmaxime vielleicht, um konkreter, praktischer zu sein, dass man vielleicht sich einfach mal eine Woche versucht, in seiner Sprache mal aktiv zu beobachten, je nachdem vielleicht auch jemand fragen, mit dem man viel Zeit verbringt, um einfach mal irgendwas zu entdecken, irgendwas, was vielleicht komisch ist, was man sagt, tut, wo man vielleicht kommuniziert, was man eigentlich gar nicht kommunizieren will und dann das vielleicht mal versuchen für ein paar Wochen zu ändern und mal schauen, ob man das schafft, wie anstrengend es ist, wie viel man über sich selber lernt auf dem Weg."
+        },
+        {
+            "start": 5004480,
+            "end": 5016040,
+            "speaker": "A",
+            "text": "Ich würde fast sagen, jede Änderung ist irgendwie anstrengend, auch wenn man sich eine neue Gewohnheit versucht drauf zu schaffen. Sei es jetzt genau auch das, die eigene Sprache zu beobachten oder abzuschaffen, wenn"
+        },
+        {
+            "start": 5016040,
+            "end": 5016670,
+            "speaker": "B",
+            "text": "es so Sprache gibt."
+        },
+        {
+            "start": 5017060,
+            "end": 5112260,
+            "speaker": "A",
+            "text": "Ja, genau. Oder abzuschaffen, weil bei vielen Sachen denkt man ja gar nicht nach. Beispiel, Lukas, du fragst mich jetzt, wie geht es dir? Die klassische Antwort ist ja gut und dir. Das ist so der Automatismus. Und da habe ich mal von einem Bekannten gelernt, dass du die Frage, wie geht es dir? Ein bisschen abwandelst. Wie geht es dir heute? Oder wie geht es dir heute? Eigentlich so nach dem Motto, weil dann triggerst du irgendwie andere Synapsen in deinem Gehirn und dann fällst du nicht in diesen Automatismus rein. Und das ist natürlich dann enorm schwierig, wenn du diese Art von Automatismus hast, deine eigene Sprache zu beobachten. Denn auf der einen Seite konzentrierst du dich auf das, was du gerade sagst, auf der anderen Seite musst du dich dann selbst beobachten, was unglaublich schwierig ist. Deswegen kann ich mir schon vorstellen, dass, ich weiß nicht, vielleicht, vielleicht kann man das genauso machen wie der Wolfgang vorhin. Ich habe einen Text Knall in der KI, analysiere mir den auf inklusive Sprache. Oder man bringt Wittig bitte einfach mal vielleicht ein Sligen Lokal, könnte vielleicht auch ein schönes Engineering Projekt fürs Wochenende sein. Und wenn ihr das tut, dann Gibt doch mal dem Lukas über die GitHub Repositories ein bisschen Feedback. Vielleicht kann man ja irgendwas noch an der Dokumentation verbessern. Lukas, das war's von mir zumindestens oder auch von uns dreien. Vielen lieben Dank, dass du dir Zeit genommen hast, mit uns über dieses Thema zu sprechen. Ich selbst bin betroffen. Das bedeutet, ich habe immer wieder diese Herausforderung, meine Sprache anzupassen. Ich nutze oft meine Herkunft aus dem Ruhrgebiet als Entschuldigung, was hoffentlich witzig rüberkommt und nicht ernst gemeint, denn auch Leute aus dem Ruhrgebiet sollten sich anpassen können."
+        },
+        {
+            "start": 5112340,
+            "end": 5114820,
+            "speaker": "B",
+            "text": "Du bist ja das beste Beispiel, dass man sich anpassen kann."
+        },
+        {
+            "start": 5114900,
+            "end": 5125770,
+            "speaker": "A",
+            "text": "Ja, ich versuche es. Gelingt mir nicht immer, das weiß ich selbst, aber ich versuche es. Aber deswegen kann ich ja aus der Praxis erzählen, wie schwer es eigentlich ist, seine eigene Sprache zu beobachten für alle"
+        },
+        {
+            "start": 5125770,
+            "end": 5133690,
+            "speaker": "B",
+            "text": "Hörer innen, die fleißig dabei sind. Vielleicht habt ihr ja schon mal gehört, wenn Andi immer sich bedankt bei den Hörern und Hörern."
+        },
+        {
+            "start": 5135450,
+            "end": 5143130,
+            "speaker": "A",
+            "text": "Das ist so ein Klassiker. Ich versuche es, aber es fällt. Und dann auch immer diese Pause mit Hörer innen, das kriege ich auch nicht richtig hin."
+        },
+        {
+            "start": 5144010,
+            "end": 5146330,
+            "speaker": "B",
+            "text": "Aber immerhin, du machst die Wolfi hat"
+        },
+        {
+            "start": 5146330,
+            "end": 5148650,
+            "speaker": "C",
+            "text": "sie ja eigentlich gerade super vorgemacht. Hörerschaft."
+        },
+        {
+            "start": 5148650,
+            "end": 5155170,
+            "speaker": "A",
+            "text": "Ja, Hörerschaft. Ich finde das Wort Hörerschaft, weiß ich nicht, das hört man im deutschen Sprachgebrauch super selten."
+        },
+        {
+            "start": 5155250,
+            "end": 5175370,
+            "speaker": "C",
+            "text": "Das stimmt. Aber ich kann mich erinnern, als ich mit der. Ich hatte ja erwähnt, dass wir mit der Deutschen Bahn zusammengearbeitet haben und die hatten dann so ein Projektteam, da haben wir alle zwei Wochen einen Call gehabt und zu dem Zeitpunkt habe ich noch nicht aktiv gegendert und alle in dem Call auch nicht. Aber wir haben entschieden, dass wir es tun. Und nach dem zweiten Call war schon komplett intus."
+        },
+        {
+            "start": 5175370,
+            "end": 5187640,
+            "speaker": "A",
+            "text": "Ich muss mich an Wörter gewöhnen, die ich in der deutschen Sprache nicht so oft höre, wie zum Beispiel Hörerschaft. Hörerschaft finde ich aber klingt auch so altparken irgendwie. Es klingt weit weg von modern irgendwie."
+        },
+        {
+            "start": 5187640,
+            "end": 5190480,
+            "speaker": "B",
+            "text": "Ja, aber im Pot muss man sich auch daran gewöhnen, Artikel zu verwenden."
+        },
+        {
+            "start": 5190480,
+            "end": 5194560,
+            "speaker": "A",
+            "text": "Also ist sowieso, du bist das Schnitzel und ich war die Pommes."
+        },
+        {
+            "start": 5195360,
+            "end": 5204660,
+            "speaker": "C",
+            "text": "Aber es ist halt auch so, man kann sich nicht verändern, ohne sich zu verändern. Also natürlich ändert sich was und dementsprechend ist es nicht gewohnt. Also ist ja irgendwie logisch, aber ist ja gut."
+        },
+        {
+            "start": 5204660,
+            "end": 5205740,
+            "speaker": "B",
+            "text": "Sprache lebt."
+        },
+        {
+            "start": 5206140,
+            "end": 5312790,
+            "speaker": "A",
+            "text": "Ich sag's Ja, ich nehme das nicht als Entschuldigung, ganz und gar nicht, Lukas. Ich habe sehr viel gelernt. Vielen lieben Dank, auch schon im Vorgespräch. Ich bin da rausgegangen mit so einem Rauchen und Kopf und das hat mich echt zum Nachdenken gebracht, auch beim Sport, beim Fahrradfahren und unter der Dusche. Und seit wir gesprochen haben, habe ich mehr und mehr Texte gelesen, wo mir dann so einzelne Wörter aufgefallen sind. Spannend, was ein einzelnes Gespräch oder eine einzelne Podcast Aufnahme mit zumindest meinem Gehirn machen kann. An unsere Hörerschaft. Wenden wir mal das neue Gelernte mal direkt an. Erzähl uns doch mal, wie ihr inklusive Sprache oder Sprache generell bei euch im Ecosystem oder bei euch in der Echokammer wahrnehmt. Ob ihr darauf achtet, ob ihr die ganze Sache unterstützt oder vielleicht, ob ihr einer der Leute seid, die sagt, okay, ich kann mich da echt nicht irgendwie zurechtfinden. Habt ihr noch mal ein paar Tipps oder vielleicht seid ihr auch Gegner. Also wir hören alle Stimmen, deswegen springt doch einfach mal in die Discord Community. Uns würde sehr freuen, wenn ihr ein bisschen Feedback für diese Episode da lasst. Wir leiten das natürlich weiter an den Lukas. Und wie immer, alle Links findet ihr in den Shownotes, wie zum Beispiel zu den Repositories, zu der Software von Wtworks, aber auch zu der Herkunft von Mischpoke, dem Wort, was ich auch nicht kannte oder auch diesem Racist Soap Dispender. Das Video habe ich auch in die Show Notes gepackt, falls wer da mal nachschauen möchte. Fun Fact, ich habe gerade nachgeguckt. F diese KI Assistenz Frontend kommt aus Baden Württemberg, ist auch auf Open Code DE, habe ich auch mit verlinkt, falls da wer mal reingeht. Das war's von uns. Vielen lieben Dank. Danke nochmal an dich, Lukas. Und wir machen nun Schluss. Bis bald und tschüss."
+        },
+        {
+            "start": 5312790,
+            "end": 5323870,
+            "speaker": "C",
+            "text": "Ja, vielen Dank. Super Gelegenheit, finde ich so ein Podcast und natürlich auch eine Plattform, die er mir hier gibt für ein Thema, was mir wichtig ist und hoffentlich euch auch allen wichtig ist."
+        }
+    ]
+}
