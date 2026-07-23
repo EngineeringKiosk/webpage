@@ -7,4 +7,6 @@ The main differences of the fork in comparision to its origin can be found in th
 
 ## Latest build
 
-Current integrated build is [git/sha:5134f68aebf627855b6b15e34aa4804c3434cbca](https://github.com/EngineeringKiosk/podigee-podcast-player/commit/5134f68aebf627855b6b15e34aa4804c3434cbca) of [EngineeringKiosk/podigee-podcast-player @ development](https://github.com/EngineeringKiosk/podigee-podcast-player/tree/development).
+Current integrated build is [git/sha:9931784910f188d90cd50a2ab77caddd7ebfc862](https://github.com/EngineeringKiosk/podigee-podcast-player/commit/9931784910f188d90cd50a2ab77caddd7ebfc862) of [EngineeringKiosk/podigee-podcast-player @ andygrunwald/migrate-yarn-1-to-yarn-4](https://github.com/EngineeringKiosk/podigee-podcast-player/tree/andygrunwald/migrate-yarn-1-to-yarn-4).
+
+For the upgrade procedure see [`docs/upgrade-podigee-podcast-player.md`](../../docs/upgrade-podigee-podcast-player.md).
