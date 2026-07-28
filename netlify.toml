@@ -3663,6 +3663,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/278"
+  to = "/podcast/episode/278-smart-home-auf-prod-niveau-6-regeln-mit-andrej-friesen?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep278"
+  to = "/podcast/episode/278-smart-home-auf-prod-niveau-6-regeln-mit-andrej-friesen?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
