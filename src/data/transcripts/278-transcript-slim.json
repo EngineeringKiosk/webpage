@@ -1,0 +1,1335 @@
+{
+    "confidence": 0.95675087,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4993,
+    "utterances": [
+        {
+            "start": 3360,
+            "end": 101010,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Wohnen müssen wir alle. Aber sobald Softwareentwickler innen ein Zuhause betreten, dauert es meist nicht lange bis zur entscheidenden Schalten wir noch oder automatisieren wir schon? Und genau da wird es spannend, denn Smart Home und Home Automation klingen erstmal nach Komfort, Effizienz und ein bisschen Nerdglück. In der Praxis gibt es aber oft erstmal Kabelsalat, Cloud Abhängigkeiten, Batteriefrust und die berühmte Box of Shame mit Hardware, die irgendwann mal verbaut werden sollte. In dieser Episode sprechen wir über die goldenen Regeln der Heimautomatisierung oder etwas ehrlicher über erfahrungsbasierte Richtungskorrekturen für alle, die mit Home Assistant, Meta, Zigbee, WLAN, lokalen Setups und Hersteller Clouds jonglieren. Mit dabei ist Andre Friesen, den du vielleicht schon aus früheren Episoden kennst. Er bringt nicht nur jede Menge Smart Home Erfahrung mit, sondern auch Praxiswissen aus Home Assistant, Meetups, Maker Projekten und dem Smarthütte Podcast. Wir klären unter anderem, wann lokale Steuerung wirklich wichtig ist, warum Protokoll Wildwuchs teuer werden kann, wie ausfallsicher dein Setup eigentlich sein sollte, ob eine App schon das Ende der Automatisierung ist und worauf du bei Backups, Plugins und Security achten solltest. Wenn du Smart Home nicht nur basteln, sondern mit etwas mehr Weitblick aufbauen möchtest, dann bleib dran, die Episode ist für dich. Los geht's. Wohnen müssen wir irgendwie alle. Da tun wir vielleicht irgendwie alle ein bisschen anders. Der eine in der Wohnung, der andere in einem eigenen Haus, der dritte in einem WG Zimmer."
+        },
+        {
+            "start": 101010,
+            "end": 106990,
+            "speaker": "B",
+            "text": "Wird das jetzt irgendwie so ein Werbespruch von so einem blauen Einrichtungshaus mit gelber Schrift oder was wird das jetzt?"
+        },
+        {
+            "start": 107380,
+            "end": 214920,
+            "speaker": "A",
+            "text": "Das heißt lebst du noch und wohnst du schon oder so irgendwie? Naja, Ikea Grüße gehen nach Schweden. Aber was die ganzen Leute, die sich mit Software beschäftigen, auch lieben, ist Automatisierung. Und wenn wir wohnen plus Automatisierung mal addieren, dann kommt als Summe Heimautomatisierung raus. Hahaha, was ein flacher Witz. Nun gut, naja, verbinden wir es. Und das ist nämlich auch schon irgendwie der Trend, der sich durch diesen Podcast zieht. Denn im Juni zwei und zwanzig haben wir mit Episode drei und zwanzig eine Episode gemacht, die nennt sich Schaltest du noch oder Autom thematisierst du schon. Dann hatten wir im Juli fünf und zwanzig mit der Episode zwei hundert drei einmal die Struktur hinter dem weltweit größten Open Source Projekt mit Pascal Vizeli von Home Assistant durchgesprochen. Ein paar Monate später kam dieser Smarthütte Podcast und hat ein Adventskalender Türchen gemacht, wie man mit Smart Home mit Home Assistant anfängt. Und vor kurzem haben wir eine Episode auch über das digitale Erbe gemacht. Was bleibt eigentlich, wenn dein Home Lab ohne dich bootet? Und da war Home Automation und die ganze Komplexität und Co. Auch ein Thema. Und wenn man über Home Automation spricht, dann habe ich so das Gefühl, zumindest in meiner Echo Kammer, dass jeder, der anfängt, irgendwie die gleichen Fehler macht oder positiv ausgedrückt, jeder sammelt ähnliche Erfahrungen. Also man fängt an experimentiert, man schaut, was funktioniert und was nicht. Dann braucht man Hardware, dann investiert man Geld, dann investiert man Zeit, dann verbaut man die Hardware, dann baut man es nach zwei Monaten wieder um, weil man die Hardware nicht gefällt oder sowas. Und so nach so drei, vier Monaten ist das zwar alles tolle Spielerei, aber irgendwie wünscht man sich, man würde das ganze Ding einfach noch mal komplett neu aufsetzen mit den Learnings, die man jetzt hat."
+        },
+        {
+            "start": 215240,
+            "end": 217880,
+            "speaker": "B",
+            "text": "Ist eigentlich wie wenn man so eine neue Datenbank verwendet."
+        },
+        {
+            "start": 218200,
+            "end": 307850,
+            "speaker": "A",
+            "text": "Das ist genau das Gleiche. Nur irgendwie habe ich das Gefühl, bei der Heimautomatisierung hat das einen größeren Impact mit der neuen Datenbank. Da bin ich auf meinem Computer und mache dann irgendwie, keine Ahnung, Docker ab und Docker down und so weiter und so fort. Aber bei Heimautomatisierung habe ich Sachen an der Fensterscheibe kleben, habe ich Sachen in die Wand gebohrt, habe etlich viel Kabel verlegt vielleicht sogar oder die Kabel hängen einfach noch vom Balkon runter, weil es ist ja nur provisorisch und ich will das ja einfach nur mal zwei Monate testen und die Frau hängt einem Ohr. Wollen wir das nicht mal schön machen, weil der Sommer jetzt kommt? Also ich habe das Gefühl, der Impact ist ein bisschen größer. Und da kam mir die Idee, lass doch mal eine Episode über die in Anführungszeichen fünf goldenen Regeln der Heimautomatisierung machen. Ob es dann fünf werden, wissen wir jetzt auch noch nicht. Und goldene Regeln ist jetzt auch so ein hohes Wort. Vielleicht sind es erfahrungsbasierte Richtungskorrekturen. Haben wir in einem Smart Home Community Forum gelesen, fand ich sehr schön und auch als Disclaimer, die ganze Sache ist hier fast systemunabhängig. Also wir reden zwar leicht viel über Home Assistant, aber viele Sachen sind nicht Home Assistant spezifisch. Also unabhängig davon, ob du später Iobroker nutzt oder openhab oder irgendwas Proprietäres an Heimautomatisierung. Das ist alles anwendbar. Und jetzt können der Wolfgang und ich zwar über unsere ganz kleinen Home Assistant Setups sprechen, aber wir haben uns gedacht, wir holen uns jemanden, der sich gefühlt vier und zwanzig sieben damit beschäftigt und deswegen begrüße ich zum dritten Mal. Hallo André."
+        },
+        {
+            "start": 307850,
+            "end": 310370,
+            "speaker": "C",
+            "text": "Moin. Aber sind wir nicht zum zweiten Mal?"
+        },
+        {
+            "start": 310370,
+            "end": 320110,
+            "speaker": "A",
+            "text": "Wir sind jetzt das dritte Mal, weil du ja mit pokepow hier bei uns warst, mit dem esphome, mit der Episode und mit dem Adventskalender."
+        },
+        {
+            "start": 320110,
+            "end": 326310,
+            "speaker": "B",
+            "text": "Ach so, wir begrüßen dich erst zum zweiten Mal, aber du warst schon bei uns im Podcast quasi in drei Episoden,"
+        },
+        {
+            "start": 326310,
+            "end": 329790,
+            "speaker": "C",
+            "text": "OK, der gute Off by One Error in der IT."
+        },
+        {
+            "start": 330750,
+            "end": 379510,
+            "speaker": "A",
+            "text": "Deswegen bist du für Stammhörer und Hörerinnen kein Unbekannter. Nochmal zur Erinnerung, du wohnst in Düren, das ist im schönen NRW in Deutschland zwischen Köln und den Niederlanden. Du Podcast ist ebenfalls in der Freizeit beim Smarthütte Podcast, da geht es um Smart Home, Self Hosting Technik und das ein oder andere Interview mit Makern. Du organisierst immer mal wieder ein Home Assistant Meetup in der Regel in Köln. Du bist Maker von pokepau, das haben wir in Episode zwei hundert acht und fünfzig drüber gesprochen mit dem schönen Titel Fuck around and Find out Hardware side Projects mit esphome und deine Brötchen verdienst du als Team Lead bei Gridscale, was ein Public und Private Cloud Anbieter ist, aber auch so Plattform Assessor Angebote wie Manage Datenbanken, Manage Kubernetes und Load Balance und weiter. Stimmt das alles?"
+        },
+        {
+            "start": 379910,
+            "end": 388150,
+            "speaker": "C",
+            "text": "Das ist richtig, ja, das passt. Vier und zwanzig sieben mache ich Smart Home aber nicht, weil ich schlafe ganz gerne und Zeit ist so ein neuer Faktor geworden, seitdem man Kinder hat."
+        },
+        {
+            "start": 388950,
+            "end": 403960,
+            "speaker": "B",
+            "text": "Da wäre jetzt gleich meine spannende Wie weit automatisierst du dein Kind? Aber die belasse ich mal. Ich habe viel eine spannendere Frage an euch beide. Was schätzt ihr denn, wie viele Leute in Deutschland Smart Homes in irgendeiner Form verwenden? Ihr habt da mal eine Recherche betrieben"
+        },
+        {
+            "start": 403960,
+            "end": 421560,
+            "speaker": "C",
+            "text": "für euch in Deutschland, Da brauche ich gar nicht schätzen. Also ich weiß zumindest Wie viele Leute nach den Opt in Daten Home Assistant benutzen in Deutschland und wie viele sind das? Ich meine, es wären eine Million, aber das muss ich noch mal nachgucken. Sehr offiziell von denen. Es hat mich sehr erstaunt auf jeden Fall."
+        },
+        {
+            "start": 405257,
+            "end": 465257,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 481560,
+            "end": 502290,
+            "speaker": "A",
+            "text": "Das wäre ja über ein Prozent der zehn Prozent, oder? Moment, wir haben nicht nur zehn Millionen Leute, wir sind etwas größer als Österreich, wir sind zwei und achtzig Millionen. Und wenn eine Million Home Assistant Instanzen, oder? Genau, nehmen wir an, dass viele Leute mehr als eine Home Assistance Instanz betreiben."
+        },
+        {
+            "start": 502690,
+            "end": 522020,
+            "speaker": "C",
+            "text": "Ich leider ja. Ich weiß nicht, wie es mit anderen Leuten ist, aber ich glaube, ich finde es doch nicht mit in Deutschland. Es gibt auf jeden Fall insgesamt offizielle Opt in, aber davon sagen die, dass das ungefähr ein Viertel ist von der Installationsmasse, die Optin macht. Also können wir extrapolieren ein bisschen über zwei Millionen insgesamt weltweit."
+        },
+        {
+            "start": 522020,
+            "end": 564300,
+            "speaker": "B",
+            "text": "Also es gibt eine repräsentative Umfrage von Bitkom, also diesen Branchenverband, der besagt, dass acht und vierzig Prozent der Menschen in Deutschland mindestens eine Smart Home Anwendung verwenden, was jetzt auch immer Smart Home Anwendung ist. Acht und dreiig Prozent davon zum Beispiel smarte Beleuchtung, fünf und dreiig Prozent smarte Heizkörperthermostate. Also wenn es stimmt, die Hälfte aller in Deutschland lebenden Personen finde ich extrem viel. Es gibt eine EU Statistik, die spricht von sechzehn, siebzehn Prozent in der ganzen EU. Auf jeden Fall sind es sehr, sehr viele Leute, meiner Meinung nach. Und wenn man das umlegt auf Developer, weil wir sind ja alle Bastler innen, ist es wahrscheinlich mehr oder weniger ein hundert Prozent."
+        },
+        {
+            "start": 565180,
+            "end": 573420,
+            "speaker": "A",
+            "text": "Aber diese Smart Home Statistik, die du gerade gesagt hast, wenn ich mir eine Zigbee Lampe von Ikea kaufe, bin ich da mit drin, richtig?"
+        },
+        {
+            "start": 573810,
+            "end": 576130,
+            "speaker": "B",
+            "text": "Natürlich, natürlich. Dann bist du auf jeden Fall drinnen."
+        },
+        {
+            "start": 576290,
+            "end": 583850,
+            "speaker": "C",
+            "text": "Dann sind auch viele Bei Ikea ist das ja so ein Grabbelobjekt mittlerweile geworden für einen guten Preis. Ein gutes Produkt auch tatsächlich."
+        },
+        {
+            "start": 583850,
+            "end": 584370,
+            "speaker": "A",
+            "text": "Ganz genau."
+        },
+        {
+            "start": 584370,
+            "end": 593490,
+            "speaker": "B",
+            "text": "Die Frage ist, ob die Leute das wissen, die die Bitcoin Studie ausgefüllt haben, dass sie eigentlich Smart Home verwenden. Aber klar, wenn du B hast, meiner Meinung nach, bist du auf jeden Fall Smart Home."
+        },
+        {
+            "start": 593650,
+            "end": 609770,
+            "speaker": "A",
+            "text": "Oder die Philips Hue Thematik, die war ja weit vor dem ganzen Ikea Hype mit den schönen bunten Lichtern. Also wie viele Leute sowas drin haben, nur um Ambient Light zu haben und ähnliches. Also da ist die Einstiegshürde ja schon sehr, sehr gering."
+        },
+        {
+            "start": 609850,
+            "end": 623530,
+            "speaker": "B",
+            "text": "Oder diese ganze Thuja China Cloud, die ja wirklich, wo man um ein paar Euro irgendwelche Lampen oder ähnliche Dinge bekommt oder Schalter, wo die wenigsten ja wissen, dass das dann ein Cloud Produkt ist. Aber da kommen wir später auch noch dazu."
+        },
+        {
+            "start": 623530,
+            "end": 635290,
+            "speaker": "C",
+            "text": "Ich habe doch was gefunden zu Deutschland von der offiziellen Home Assistant Analytics Seite. Installationen dann mal vier, weil ungefähr ein Viertel sich opt in. Also schon nicht wenig."
+        },
+        {
+            "start": 635610,
+            "end": 637530,
+            "speaker": "A",
+            "text": "Das wäre dann eine halbe Million. Richtig?"
+        },
+        {
+            "start": 637530,
+            "end": 638890,
+            "speaker": "C",
+            "text": "Genau, so um den Dreh."
+        },
+        {
+            "start": 639050,
+            "end": 643610,
+            "speaker": "A",
+            "text": "Eine halbe Million von zwei und achtzig Millionen ist ein bisschen unter ein Prozent. Richtig?"
+        },
+        {
+            "start": 643690,
+            "end": 646970,
+            "speaker": "C",
+            "text": "Ja. Was schon hart ist, hätte ich auch nicht erwartet, ehrlich gesagt."
+        },
+        {
+            "start": 647130,
+            "end": 656990,
+            "speaker": "A",
+            "text": "Aber jetzt hier nochmal zurück zu den Philips Hue Lampen und den Ikea Lampen und so. Das ist ja dann alles mehr oder weniger dezentral ohne Server, oder?"
+        },
+        {
+            "start": 656990,
+            "end": 662390,
+            "speaker": "C",
+            "text": "Naja, irgendwo musst du halt schon das steuern. Irgendwo gibt es einen Hub, oder was meinst du mit dezentral?"
+        },
+        {
+            "start": 662390,
+            "end": 681980,
+            "speaker": "A",
+            "text": "Naja, also wir drei jetzt in diesem Call haben einen Server zu Hause stehen und da läuft Home Assistant drauf, der ja die Zentrale ist. Und bei Ikea kann ich ja hingehen, wenn ich mich richtig erinnere, da kaufe ich mir eine Lampe, da kaufe ich mir einen Zigbee Gateway und dann habe ich, weiß ich nicht, die Ikea App."
+        },
+        {
+            "start": 682290,
+            "end": 682690,
+            "speaker": "C",
+            "text": "Genau."
+        },
+        {
+            "start": 682690,
+            "end": 686210,
+            "speaker": "A",
+            "text": "Und die Ikea App hängt dann an meinem Gateway."
+        },
+        {
+            "start": 686210,
+            "end": 690650,
+            "speaker": "C",
+            "text": "Genau, das gibt es einmal bei Ikea mit Zigbee und einmal mit Meta. Die sind ja umgestiegen jetzt vor kurzem."
+        },
+        {
+            "start": 690650,
+            "end": 700050,
+            "speaker": "A",
+            "text": "Okay, es ist nicht wirklich technisch dezentral, aber das meine ich mit, okay, wir haben keinen Server, sondern wir haben ein fertiges Hardware Gateway Device. Das meine ich mit dezentral eigentlich."
+        },
+        {
+            "start": 700690,
+            "end": 743260,
+            "speaker": "B",
+            "text": "Für Andy ist dezentral immer nur, wenn er seinen eigenen Server betreibt. Nur das ist dezentral, wobei das ja eigentlich zentral ist, weil du hast ein Single Point of Failure, aber es ist nochmal ein anderes Thema, in das wir gerade einsteigen. Vielleicht noch zur Einordnung. Ich hab gerade kurz mal gecheckt, wie viele Tech Leute es in Deutschland gibt und je nach Statistiken findet eins komma fünf bis zwei komma drei Millionen Menschen in Deutschland, die irgendwie IKT Arbeitskräfte oder ICT oder sowas sind. Insofern würde das eigentlich ganz gut zusammenpassen mit meiner Theorie, dass ein hundert Prozent dann eigentlich in irgendeiner Form Home Automation haben. Also das spricht. Das heißt, ein hundert Prozent unserer Hörerschaft wird jetzt betroffen sein und kann zuhören. Seht ihr es richtig?"
+        },
+        {
+            "start": 743420,
+            "end": 745860,
+            "speaker": "C",
+            "text": "Ja. Und es tut mir leid, dass ihr betroffen seid."
+        },
+        {
+            "start": 745860,
+            "end": 815180,
+            "speaker": "A",
+            "text": "Lass uns mal direkt reinspringen. Und zwar ist die erste Regel, die mir eingefallen ist, vielleicht keine Regel, sondern eine Grundentscheidung und die habe ich genannt alles lokal oder ist Cloud Abhängigkeit OK, Zum Kontext. Wenn du mit Heimautomatisierung anfängst, brauchst du in der Regel Hardware. Sei es deine Glühbirne, sei es deine Heizungssteuerung, sei es eine Videokamera oder von mir aus auch einfach nur meine bose Soundbox, die am Fernseher hängt oder mein Staubsaugerroboter. Und je nachdem, was du dir für Hardware kaufst, kommt dann eine App bei, die geht über die chinesische Cloud von dem Hersteller oder ich kann alles in meinem lokalen Netzwerk betreiben. Das bedeutet natürlich auch, ich kann das natürlich nur betreiben, wenn ich dann auch in diesem Netzwerk bin und nicht, wenn ich von draußen weg bin und so weiter. Und das ist so der Kontext zu dieser Grundentscheidung. Möchtest du nur Hardware haben, die lokal läuft oder lokal lauffähig ist? Ich glaube da gibt es auch noch Nuancen. Oder ist die Cloud Abhängigkeit zum Hersteller völlig okay für dich, André? Wie stehst du dazu?"
+        },
+        {
+            "start": 815260,
+            "end": 881430,
+            "speaker": "C",
+            "text": "Ich finde diese Frage muss jeder für sich selber beantworten. Ich persönlich beantworte sie mit lokal ist. Das Wichtigste aus dem Grund ist, weil man sieht es immer wieder, dass Hersteller irgendein Produkt auf den Markt bringen ist egal was es sei. Und dann merken die ich nenne das immer in dem Cloud Bereich Ewigkeitskosten. Der Server muss für ewig bezahlt werden, solange dieser Dienst dort läuft. Die Entwickler müssen das für immer patchen und so weiter und so fort. Diese Kosten, die sind monatlich immer da. Und wenn das Produkt von der Cloud anwesend ist und es gibt keine andere Möglichkeit das zu monetarisieren, dann wird es entweder irgendwann abgeschaltet oder monetarisiert für einen Fünfer Monat oder was auch immer für einen Schalter oder fünf Steckdosen. Und das finde ich nicht in Ordnung, weil gerade wenn es um Hardware für ein Haus geht, bei einem Haus reden wir ja nicht von zwei Jahre Lebenszyklus hoffentlich, sondern halt von zehn, fünfzehn, zwanzig, ich weiß nicht, wie die Technik da genau ist. So eine Heizungsanlage ist halt auch mal zehn, fünfzehn Jahre. Und dementsprechend muss man das in meinen Augen auch mit diesem Vergleich sehen."
+        },
+        {
+            "start": 881510,
+            "end": 896950,
+            "speaker": "B",
+            "text": "Wie stehst du denn jetzt zu einem Subscription Modell, was du von Anfang an bezahlst, auch im Hinblick, dass du da jemanden hast, der dann Service provided und vielleicht deine Heizung in irgendeiner Form updated Fernwartung macht und solche Dinge."
+        },
+        {
+            "start": 897680,
+            "end": 952460,
+            "speaker": "C",
+            "text": "Ja, das Problem ist ja, wie lange sind Unternehmen auf dem Markt? Und da gibt es ja auch so Statistiken, dass viele Unternehmen nicht älter als zehn Jahre werden. Da kann ja jederzeit ein Investor kommen, das kaufen und dann nee, da müssen wir jetzt die Kuh melken. Und dann wird die Subscription hochgetrieben, Features werden draus gemacht, Remote Bricking wird gemacht. Selbst große Firmen wie Spotify haben das ja auch mit ihren Geräten gemacht. Also ich bin da immer sehr, sehr skeptisch. Ich habe da immer so die Regel für mich persönlich lokal, wenn es geht. Cloud ist okay, wenn es einen wahnsinnigen Mehrwert im Alltag bringt. Und das ist ein bisschen auch so wie mit den KI Modellen aktuell. Das geht mit der Zeit kommen Dinge erstmal mit Cloud raus, wie mit den Staubsauger Robotern. Jetzt gibt es die ersten, die sind auch metafähig, das heißt, die können auch lokal gesteuert werden und das dauert ein bisschen, bis das runterkommt in den Bereich, wo es dann lokal gesteuert werden kann. Aber irgendwann wird das halt auch passieren. Und ich bin da persönlich immer der Meinung, ich war mit meinem Portemonnaie, bevor ich das dann kaufe."
+        },
+        {
+            "start": 952690,
+            "end": 1093089,
+            "speaker": "A",
+            "text": "Mit den Subscription ist es ja auch nicht getan. Man siehe Amazon, mein alter Kindle, wenn ich jetzt die ebook Flat hätte, habe ich nicht. Aber wenn ich die hätte, die gibt es ja da bei Amazon, dann haben die Hör mal, dein Kindle ist so alt, den schalte ich hier ab. Das bedeutet, ich bezahle ja Geld dafür, aber ich kann die alte Hardware gar nicht mehr nutzen, weil die halt irgendwelche APIs dann nicht mehr maintainen wollen oder ähnliches. Also es ist ja nicht nur ich zahle fünf für die Subscription. Der letzte Fall, von dem sogar ich selbst betroffen war, war Bose hat eine Cloud abgeschaltet von einer Soundbar. Das sind diese länglichen Boxen, die man oft unter dem Fernseher hat und so habe ich Und da war ich betroffen, dass man da irgendwas nicht mehr nutzen kann. Irgendeine Funktionalität, die habe ich nie benutzt. Aber da gab es auch einen riesen Aufschrei, weil die auch die APIs nicht veröffentlicht haben und so weiter und so fort. Und dann ging natürlich der riesen Aufschrei ins Internet, Ich werde nie wieder Bose kaufen und so weiter, dann schaust du dir aber die anderen mal an, Sonos und Teufel und wie sie alle haben. Die haben das alle in irgendeiner Art und Weise schon mal gemacht. Ende vom Lied war, dass die Community dann auf die Barrikaden gegangen ist. Bose hat dann die API Schnittstellen veröffentlicht, die Dokumentation dazu und hat dann gehofft, dass auf GitHub ziemlich viel entsteht. Und da ist auch eine ganze Menge jetzt entstanden mit Open Libraries und du kannst dann jetzt eigentlich die gleichen Funktionen aus deiner Box wieder haben mit so ein bisschen Open Source. Also meine Frau wird es wahrscheinlich nicht hinkriegen, weil die nicht weiß, wie die was von GitHub runterlädt und kapilt und pipapo. Aber für uns Nerds ist das dann schon da. Ist aber auch schade, dass erst diese Pitchforks und die Flammen hochgehalten werden müssen, dass Bose es macht. Und das bringt mich zu dem nächsten Thema, das ich gesagt habe, zu dieser Grundentscheidung. Das sind ja nicht nur die zwei Extreme, alles lokal oder alles Cloud. Es gibt ja auch diese Nuancen wie zum Du hast ein Stück Hardware in deinem Netzwerk, das möchte raus telefonieren, du blockst das auf deiner Firewall und proxies den Request wieder lokal. Also sowas gibt es ja auch. Oder du spielst sogar eine andere Firmware auf. Es gibt ja immer diese Nuance. Hast du das schon mal gemacht mit dem Proxy zum Beispiel, dass du halt so eine Shim, so eine, ja so wie bei Tschernobyl diesen Sarkophag drum baust, weil eigentlich ist es ja nichts anderes."
+        },
+        {
+            "start": 1093329,
+            "end": 1097889,
+            "speaker": "C",
+            "text": "Ich persönlich nicht. Andere Firmen wäre ohne Ende geflasht, aber noch kein Proxy rumgesetzt."
+        },
+        {
+            "start": 1098289,
+            "end": 1100609,
+            "speaker": "B",
+            "text": "Was hast du denn für einen Staubsauger, Andi?"
+        },
+        {
+            "start": 1100609,
+            "end": 1105249,
+            "speaker": "A",
+            "text": "Ich habe einen Staubsauger, der wahrscheinlich meinen Floorplan nach China sendet."
+        },
+        {
+            "start": 1105489,
+            "end": 1109809,
+            "speaker": "B",
+            "text": "Roborock wenigstens sendet er nicht in die USA. Ist vielleicht besser."
+        },
+        {
+            "start": 1110049,
+            "end": 1144930,
+            "speaker": "A",
+            "text": "Weiß ich nicht. Weiß ich nicht. Aber das ist ja jetzt der Staubsaugerroboter ist ja ein wunderbares Beispiel für Valetudo, heißt das glaube ich. Die Software, Ja, die habe ich auch im Einsatz und das ist eigentlich eine eins zu eins Kopie von der Roborock Software auf Open Source. Und dann muss er halt dein Staubsaugerroboter flashen. Habe ich jetzt auch noch nicht gemacht, aber meines Wissens nach haben die, ich glaube die oder irgendwer anders genau mit diesen Proxys erst angefangen, dass die die Kommunikation reverse Engineeren muss natürlich gucken, dass es dann nicht verschlüsselt ist und so weiter und so fort und haben dann halt so eine Schim drum gebaut, dann"
+        },
+        {
+            "start": 1144930,
+            "end": 1159330,
+            "speaker": "C",
+            "text": "nutzt es ja vielleicht doch. Ich weiß nicht, wie es intern funktioniert. Ich weiß nur, dass die rein lokal arbeiten und das auch bei so Dingen wie den KI Erkennungsbildchen, ob da jetzt ein Kabel liegt oder so, das können die dann auch. Das heißt, da nimmt man sich eventuell nicht mal eine Funktion weg, wobei man"
+        },
+        {
+            "start": 1159330,
+            "end": 1191400,
+            "speaker": "B",
+            "text": "natürlich auch unterscheiden muss, meiner Meinung nach. Aber da kommen wir später auch noch mal dazu bezüglich Ausfallsicherheit, Cloud und so weiter, weil geht es um die Sicherheit oder um eine Privatsphäre oder geht es um die Ausfallsicherheit und dementsprechend bei meinem Staubsauger zum Beispiel habe ich vielleicht Probleme mit der Privatsphäre, aber wenn der ausfällt, weil mein Internet ausfällt, ja dann kann ich halt jetzt aktuell nicht staubsaugen. Also das ist ja dann auch noch mal ein anderes Thema bzw. Zwei Zugänge, warum ich jetzt keine Cloud eigentlich will. Ist es die Privatsphäre oder ist es die Ausfallsicherheit?"
+        },
+        {
+            "start": 1191400,
+            "end": 1245350,
+            "speaker": "C",
+            "text": "Ich finde, da passt doch das Hybride ganz gut, weil ich hatte letztens einen Fall in der Family, die haben sich eine PV Anlage mit Wechselrichtern, allem Zap aufs Dach gestellt und der Anbieter ist pleite gegangen. So und die waren kurz davor sich eine zu holen. Dann habe ich, ich habe das zufällig mitbekommen irgendwie in den Nachrichten, dann haben die haben die Hersteller gesagt, ja der ist jetzt pleite und ich würde jetzt erst mal vorher nachprüfen, ob die eine lokale Schnittstelle haben. Also ist ja okay, dass sie eine Cloud Dienst anbieten, aber solange dort keine lokale Schnittstelle in was für einer Form auch immer vorhanden ist, ist das dann gibt es halt die App nicht mehr und ohne die App kann der Otto Normalverbraucher da erstmal nicht dran und ob dann der Elektriker oder der Heizungsmonteur Lust hat, sich das Protokoll anzugucken, das sei mal auf einem anderen Blatt geschrieben oder möchtest du das machen? Das ist halt und da finde ich, ist auch der Impact immer wichtig. So eine Anlage gerade gekauft, große Investition paar. Das ist nicht nur ärgerlich, wie so eine Soundbar, die mal nicht tut, das ist mehr als ärgerlich."
+        },
+        {
+            "start": 1245830,
+            "end": 1278300,
+            "speaker": "B",
+            "text": "Das wäre übrigens auch noch ein Punkt von mir. Kosten, wenn ich mal was schnell ausprobieren will und vielleicht eine Glühbirne kaufen, ist es egal, wenn die jetzt einfach mal zum Testen in der Cloud läuft oder wenn mir das egal ist und ich will da einfach mal rumspielen, um schnell irgendwas auszuprobieren. Aber wenn ich natürlich eine PV Anlage kaufe, einen Wechselrichter und ein paar tausend Euro ausgebe, dann will ich da vielleicht eine solidere Variante, die muss ja auch länger laufen. Oder bei einem Staubsaugerroboter kaufe, vielleicht ein teureres Modell, wo ich eine eigene Firmware flashen kann. Das kann ich dann eben in den Entscheidungsprozess, in den Kaufprozess mit reinnehmen, diese Entscheidung."
+        },
+        {
+            "start": 1278550,
+            "end": 1338800,
+            "speaker": "A",
+            "text": "Es muss ja noch nicht mal irgendwie diese fünf, sechs, acht tausend für die PV Anlage sein oder die sechs, sieben hundert für deinen Staubsaugerroboter. Das fängt schon relativ klein an. Mein bestes Beispiel sind immer Videokameras. Ich habe vier verschiedene Hersteller von Videokameras jetzt gerade hier mal aus. Klar, die kosten vierzig bis sechzig, aber in der Summe waren das auch wieder zwei hundert, bis ich mal irgendwie verstanden habe oder ordentlich recherchiert. Ich weiß auch nicht, das geht alles auf meine Kappe. Das halt eigentlich nur Reolink, der Hersteller ist von Kameras, die du lokal ordentlich laufen lassen kannst, mit den Stream abfangen, auf Festplatte schreiben, pipapo. In den anderen ist das so? Ja, du kannst hier so ein zwei kelvin Stream auf Festplatte schreiben, wenn du den K Stream lokal laufen haben möchtest, dann musst du eine Subscription machen und Geld dafür zahlen und nur so ein Stress. Also da geht es gar nicht immer nur um eine Glühbirne oder zwei tausend, sondern auch diese fünfzig hier, fünfzig da und am Ende bist du trotzdem fünf hundert los."
+        },
+        {
+            "start": 1338960,
+            "end": 1355280,
+            "speaker": "C",
+            "text": "Ja, es ist schwierig das rauszufinden, vor allem wenn man auch nicht so technisch affin ist und nicht weiß, dass da tatsächlich eine Cloud hinter steckt. Das kann ja auch, also jeder Staubsauger, klar, da ist eine Cloud hinter, aber es gibt, man kann nicht unbedingt sofort wissen, ob es auch ein Fallback gibt auf lokale Protokolle oder so."
+        },
+        {
+            "start": 1355360,
+            "end": 1379420,
+            "speaker": "B",
+            "text": "Ist die Frage, ob man das als Normal User überhaupt wissen muss oder will. Aber wir sprechen jetzt eigentlich unsere Tech Community an und da sollte ja das schon vorhanden sein, dieses Wissen, um eben irgendwas selber zu flashen, weil ich glaube, der Normal Enduser wird sich jetzt keinen Roborock selber flashen. Geh mal davon aus. Also da musst du ja schon irgendwie technisch interessiert sein."
+        },
+        {
+            "start": 1379420,
+            "end": 1396920,
+            "speaker": "C",
+            "text": "Ne, das ist schon echt nicht ohne. Also gibt da bei meinem Modell, ich hatte genau zwei Minuten Zeit, um meine Kommandos einzutippen und sonst wäre das Ding gebrickt gewesen. Das heißt, ich hätte es einfach in den Müll schmeißen können. Also das macht man nicht mal eben so. Die Doku habe ich auch drei hundert Mal gelesen, bevor ich das getan habe."
+        },
+        {
+            "start": 1396920,
+            "end": 1409400,
+            "speaker": "A",
+            "text": "Das bringt mich aber zu dem nächsten Punkt, weil wir hier gerade über Techies reden. André, hast du eigentlich schon mal einen Cut Test gemacht bei dir? Hast du Internet ausgemacht und wirklich geprüft, dass alles in deinem Home Assistant noch funktioniert?"
+        },
+        {
+            "start": 1409800,
+            "end": 1413400,
+            "speaker": "C",
+            "text": "Nein, leider nicht. Sollte ich vielleicht mal tun, weil das"
+        },
+        {
+            "start": 1413400,
+            "end": 1417480,
+            "speaker": "A",
+            "text": "ist ja der wirkliche Beweis dann dafür, dass etwas lokal läuft, oder?"
+        },
+        {
+            "start": 1417970,
+            "end": 1424770,
+            "speaker": "C",
+            "text": "Das stimmt. Vielleicht gibt es ja doch eine kleine Abhängigkeit irgendwo, die man gar nicht bedacht hat und zack hat man den Salat."
+        },
+        {
+            "start": 1424770,
+            "end": 1476910,
+            "speaker": "A",
+            "text": "Naja, im Endeffekt ist das ein klassischer Reliability Test, wie in deiner Produktionsinfrastruktur. Auch wenn du deine Heimautomatisierung weiterentwickelt, kann ja immer wieder eine sogenannte Cloud Regression reinkommen. Von daher aber vielleicht als Tipp, die Open Home Foundation baut eine Device Database auf und diese Device Database baut, soll sich darauf fokussieren, die Auswahl an Hardware, die man lokal betreiben kann, sichtbarer zu machen. Deswegen gibt es ja auch, ich glaube, dieses Siegel Works with Home Assistant und jeder Hersteller, der sagt, okay, ich lasse mich hier zertifizieren mit WORX with Home Assistant, das kann man ohne Cloud betreiben. Also wer zum Beispiel einen einfachen Einstieg haben möchte, geht da mal gucken. Soviel ich weiß, sind ziemlich viele Hersteller US driven und gar nicht so viele europäische Hersteller, habe ich mal reingeguckt, aber vielleicht wird es ja noch was."
+        },
+        {
+            "start": 1477070,
+            "end": 1509460,
+            "speaker": "C",
+            "text": "Auch das fängt gerade an. WAGO haben sich da eingelistet und zwei TACO auch, sind ja auch groß und noch einen anderen dritten, den ich jetzt nicht aus dem Kopf, aus dem Kopf weiß, weil das ja so ein, nicht so ein Heimmarkt ist, sondern eher so Baumarkt Materialien. Genau, aber da kommt ich, da kommt was. Die haben ja auch ein bisschen Marktmacht aktuell. Und da ist es halt so, da sage ich immer, warten ist auch eine Kunst, kann man auch mal machen. Dann haben die anderen die Fehler gemacht, dann spart man sich das Geld und die Zeit und kauft dann einfach das fertige Produkt und kann nachher nicht mehr meckern."
+        },
+        {
+            "start": 1509860,
+            "end": 1546820,
+            "speaker": "B",
+            "text": "Es ist übrigens auch, was ich oft empfehle irgendwelche Leute, die mich fragen jetzt gerade kürzlich auch wieder, was für ein Wechselrichter ich empfehlen würde oder ist die Firma gut und du hast da ja irgendwie hunderte Firmen mittlerweile am Markt und ich hab auch einfach gesagt, schau doch einfach bei Home Assistant, was die in den Foren schreiben und wenn du da einigermaßen siehst, dass der anschließbar ist, dann wird der Wechselrichter einigermaßen sinnvoll sein und offen sein und irgendwie zukunftssicher, weil den Überblick zu bewahren da und irgendwie alle Firmen zu verstehen und zu wissen, was die machen, ist einfach unmöglich. Da ist das, glaube ich, also wirklich sehr guter Anlaufpunkt dafür."
+        },
+        {
+            "start": 1547700,
+            "end": 1570780,
+            "speaker": "C",
+            "text": "Und ein Punkt, den ich auch sehr verwirrend finde für für den Kunden ist jetzt mit Meta kommen wir wahrscheinlich gerne noch mal drauf, aber es gibt auch Gateways von anderen Herstellern wie Samsung und so, die funktionieren lokal super, aber es gibt welche, da ist alles in der Cloud, das weiß man vorher nicht. Deswegen ist der Test von Andy einmal kurz das Kabel ziehen echt eine sinnvolle Nummer, weil dann funktioniert es einfach nicht."
+        },
+        {
+            "start": 1570780,
+            "end": 1572220,
+            "speaker": "A",
+            "text": "Und dann sieht man das Meta ist"
+        },
+        {
+            "start": 1572220,
+            "end": 1610900,
+            "speaker": "B",
+            "text": "schon der perfekte Punkt für unsere nächste goldene Regel. Und zwar gibt es ja diesen Wildwuchs an Protokollen und die goldene Regel man sollte sich vielleicht auf ein Protokoll einigen oder einen Standard und es gibt ja dieses bekannte XKCD irgendwie, es gibt dreiig Standards und man muss die vereinen und ich baue jetzt den ein und dreiigste Standard, der die anderen dreiig vereint und dann haben wir ein und dreiig Standards und so ähnlich kommt mir das bei Thread bzw. Meta auch vor. Wie blickst du auf die ganze Protokoll Wildwuchsthematik? Was verwendest du eigentlich für Protokoll oder für Technologie, für Funktechnologie?"
+        },
+        {
+            "start": 1611220,
+            "end": 1627060,
+            "speaker": "C",
+            "text": "Aktuell bin ich komplett auf Meta umgestiegen, bis auf ein oder zwei Geräte aus einem für mich technisch interessanten Hinblick, aber ich würde sagen, welches Protokoll du machst, das kommt darauf an, was du erledigen möchtest. Gibt es die Geräte für das Protokoll einfach noch nicht, dann hilft dir das Protokoll auch nicht. Also weil Meta ist ja noch recht neu."
+        },
+        {
+            "start": 1627060,
+            "end": 1631930,
+            "speaker": "B",
+            "text": "Kannst du mal erklären, was Meta ist? Weil ich glaube, die wenigsten haben das auch wirklich schon selber in Verwendung."
+        },
+        {
+            "start": 1632410,
+            "end": 1727880,
+            "speaker": "C",
+            "text": "Meta kann über wifi oder Thread laufen, das sind unterschiedliche Technologien, Funkstandards. Im Endeffekt versucht es ein bisschen stringenter zertifizierter Geräte zu definieren. Das heißt, dass alle Lichter sind in folgender Art und Weise definiert. Man kann es ausschalten, einschalten, dimmen, Farbe, dies, das. Die haben alle mehr oder weniger die gleichen Eigenschaften. Und das ist der Unterschied, glaube ich, zu zigbee. Zigbee ist da relativ offen. Du kannst diese Datenfelder, diese Metadaten, die ein Objekt hat, um Funktionen zu beschreiben, sind da komplett offen. Was dafür sorgt, dass man, dass der Hersteller wahnsinnig schnell viele Geräte mit unfassbar vielen Funktionen auf den Markt bringen kann, aber die Software, die mit dem Gerät interagiert, das interpretieren muss. Und dafür gibt es Projekte wie Zah oder Zigbee MQTT, die das vorher machen. Da gibt es eine große Community, die beschreiben diese Geräte, dann funktionieren die bei dir. Aber wenn du neues hast, dann hast du Pech. Und bei Meta ist einfach, es ist definiert, Punkt aus. Da ist keine Diskussion. Und das ist auch der Nachteil. Du hast manchmal das gleiche Gerät mit zigbee, kannst es umschalten auf Meta und hat es mit Meta auf einmal weniger Funktionen, dann ärgern sich die Menschen und dann denkst du, ja, das ist wirklich ärgerlich als Konsument, aber verständlich aus der technischen Perspektive, weil die Spec für, sagen wir mal, Rollladen, die sich, ich glaube, es war vor einem Jahr, Rollladen konnten hoch und runter, aber sie konnten sich nicht drehen. Es gibt ja so Rolleiden, so Lamellen, die sich dann im Winkel stellen können. Das ging mit Mettern lange Zeit nicht. Und da muss man einfach darauf achten, wenn es die Geräte einfach noch nicht gibt, bringt es dir auch nichts."
+        },
+        {
+            "start": 1728040,
+            "end": 1871800,
+            "speaker": "A",
+            "text": "Als Ikea mit den zigbee Lampen auf den Markt kam, haben die, soviel ich weiß, auch nicht alle Zigbee Protokoll Sachen implementiert. Und da gab es diverse Fehlverhalten auch bei den Lampen. Das nur mal als Zusatz für Zigbee ist, wie man es heute implementiert. Aber ich glaube, ich würde die Regel ein bisschen anders auslegen. Ich würde die Regel nicht sagen, okay, auf welchem Protokoll bin ich unterwegs, sondern eher, willst du einen Wildwuchs aller Protokolle oder also ist das okay für dich, dass du einfach etliche Protokolle im Haus hast oder zwingst du dich selber, dich auf wenige zu limitieren? Weil ob du nur mit einem klar kommst, weiß ich nicht. Allein deine Fernbedienung läuft auf Infrarot. Wer weiß, ob du vielleicht irgendwann Infrarotsensor mit esphome baust und dann bist du schon wieder was ganz anderes machen. Aber ich meine, da gibt es ja wie gesagt, Zigbee hat man schon angesprochen, Thread Matter, Z Wave, Z Wave, Long Range, Funkradio, Infrarot, wifi, dann hast du vielleicht noch Homematic, ist ja jetzt nicht ganz getrennt und die ganzen KNX und andere Bussysteme, die es dann noch so gibt. Also möchtest du dich auf irgendwas committen oder sagst du, ich kaufe einfach so das, was die Hardware gerade anbietet, denn manche Kombinationen sind auch echt dreckig. Zum Beispiel gibt es von Shelly Temperatursensoren, nennt sich H T, das sind so kleine Eier, wenn du so möchtest. Eigentlich super Dinger, die laufen über WLAN, gibt es inzwischen auch als Bluetooth und so weiter, aber die erste Version lief über WLAN, hatte ich zwei. Ich sag's dir, jede Woche kannst du die Batterien wechseln, weil WLAN einfach super Batteriefresser sind. Klar, wenn du die am Strom hast, ist das eine ganz andere Thematik, aber so diese Power Consumption von diesen Protokollen, auch wenn sie nur mal aufwachen, was senden und wieder einschlafen, das sind einfach Batteriefresser. Oder du hast von Aquara überall diese Vibrationssensoren und solche Thematiken gibt es für eine schmale Mark super gut. Wir laufen alle auf Knopfzellenbatterien, ich habe davon, weiß ich nicht, zwanzig dreiig im Haus verbaut. Ich sag mal so, die Batterien sind alle tot, weil ich die halt alle wechseln müsste, habe ich halt nie gemacht. Also das ist halt alles so eine. Und dann natürlich, ich habe jetzt keine Nachbarn oder meine Nachbarn sind sehr weit weg, ich weiß jetzt nicht, wie das bei dir wäre, Wolfgang, wie viel Smart Home Protokolle nutzen deine Nachbarn und hast du da irgendwelche Kollisionen auf irgendwelchen Funkkanälen?"
+        },
+        {
+            "start": 1871800,
+            "end": 1887060,
+            "speaker": "B",
+            "text": "Hatte ich bisher eigentlich noch nie, aber ich bin ja zigbee Verfechter und ich glaube, zigbee ist gar nicht so weit verbreitet eigentlich, außer man hat jetzt Ikea Lampen, aber die stören sich auch relativ wenig, muss man sagen. Wifi, da tummeln sich wesentlich mehr, natürlich vor allem auf dem zwei komma vier"
+        },
+        {
+            "start": 1887140,
+            "end": 1894300,
+            "speaker": "C",
+            "text": "GHz Band, aber Zigbee ist auch auf zwei komma vier, also es ist das gleiche Band. Du musst nur aufpassen, dass du einen unterschiedlichen Kanal nimmst."
+        },
+        {
+            "start": 1894300,
+            "end": 1921080,
+            "speaker": "B",
+            "text": "Genau, Band ist bei uns zumindest auf dem ähnlichen Band. Das stimmt natürlich, hatte aber eigentlich diesbezüglich wenig Probleme bisher. Und auf das, was du, Andi, gesagt hast, noch zurückzukommen. Also die Protokolle können jetzt aber nichts für deine Batterie Devices. Also nur weil du Batteriedevices ausgewählt hast. Das ist dann egal, ob du Meta Threat oder zigbee hast, außer dass zigbee natürlich wesentlich weniger Strom braucht. Thread ist, glaube ich, auch wesentlich besser als jetzt klassisches wifi natürlich."
+        },
+        {
+            "start": 1921080,
+            "end": 1925440,
+            "speaker": "A",
+            "text": "Naja, es gibt deswegen ja auch Bluetooth Low Energy, also das hat schon eine Relevanz."
+        },
+        {
+            "start": 1925440,
+            "end": 1936640,
+            "speaker": "B",
+            "text": "Ja, ja, genau. Aber es ist trotzdem Batterie. Du wirst trotzdem die Batterie wechseln müssen. Bei zigbee wechselst du halt einmal im Jahr oder so. Das reicht normal vollkommen oder alle zwei Jahre, je nach Device."
+        },
+        {
+            "start": 1936800,
+            "end": 1988810,
+            "speaker": "C",
+            "text": "Genau, alles mit WLAN kann man definitiv, definitiv einfach sagen, das verbraucht so viel Strom als mit WLAN, Was dann auch noch Batterie funktioniert das Quatsch. In meinen Augen gibt es viele Schlösser, die das noch machen, weil jeder hat WLAN zu Hause. Das ist halt easy. Ich glaube, Fritzbox hat mittlerweile auch eine Smart Home Zentrale bei sich integriert. In dem Router gibt es auch WLAN Steckdosen, kann man mit anfangen, ist alles okay. Und wenn man deine zwei, drei Geräte nur bleibt und mehr nicht möchtest auch, ist das auch völlig in Ordnung. Ist glaube ich, auch so eine Sache, die ich anbringen würde. Wenn du jetzt sagst, okay, ich möchte so zwei, drei Sachen smart in Klammern machen, sei es die Rollos oder deine Steckdose irgendwo im Keller oder so, dann okay. Aber wenn du dann anfängst, fünf und dreiig so WLAN Geräte da reinzupacken, dann wird das für so ein Heimnetz auch mal ein bisschen anstrengender und muss man vielleicht auch drüber überlegen, ob die Fritzbox das noch packt. Und dann generell der ganze Traffic im"
+        },
+        {
+            "start": 1988810,
+            "end": 2053170,
+            "speaker": "A",
+            "text": "Netzwerk, damit habe ich mich auch mal beschäftigt, nämlich nicht nur mit der Anzahl der Clients, sondern auch mit dem Durchsatz. Besonders wenn du anfängst mit Videokameras, die nicht über Kabel laufen, die haben ja auch eine gewisse das Bildmaterial muss transportiert werden. So, und dann fängst du an, okay, gibt es dann jetzt WLAN sechs und so weiter. Und dann schaust du dir mal die aktuelle Hardware bei Fritzbox zum Beispiel an. WLAN sechs ist nicht gleich WLAN sechs, das ist die eine Thematik. Die zweite Thematik ist, können deine Clients überhaupt WLAN sechs sprechen und wenn ja nur wie? Genau, Also das ist alles. Da gibt es zwar heiße, unglaublich gute Tests, wer sich damit mal beschäftigen möchte, das habe ich auch gemacht. Und die Fritzbox ist da noch sehr, sehr schlecht bei, zum Beispiel mit diesem Durchsatz, mit diesem hohen Durchsatz und Co. Wenn du dann natürlich diese andere WLAN Hardware nimmst, hier yubikiti oder wie das da heißt, alles top. Aber das ist nicht ganz so einfach, besonders wenn du halt dreiig, vierzig, fünfzig, sechzig Clients dann auf einmal hast. Also da muss man schon wirklich aufpassen. Und wenn man jetzt noch in einer WG wohnt, mitten in der Innenstadt in Berlin, da wird glaube ich jeder irgendwie sowas haben und dann hast du vielleicht auch noch mal irgendwelche Kanalkollisionen oder ähnliches."
+        },
+        {
+            "start": 2053170,
+            "end": 2101050,
+            "speaker": "C",
+            "text": "Ja und WLAN ist immer so, man kann sich das vorstellen wie ein Raum mit Menschen, sind wir drei da drin und wie jeder ist von uns ist in der Ecke, können wir miteinander sprechen. So jetzt kommen da sechzig Leute dazu, das sind die was auch immer Aktoren, dein Streaming Dienst, deine PlayStation, whatever, alles über Fehlern. Dann müssen wir ziemlich laut schreien, um uns zu verstehen und dadurch blockieren wir den Traffic der anderen. So stellt man sich, weil die Bandbreite, die ist limitiert und die ist einfach irgendwann voll. Wenn du dann auch Nachbarn hast, die das gleiche haben wie du und wie du sagst in der Wohnung, ich weiß noch bei mir in der alten Wohnung in Köln, links ein Nachbar rechts, Nachbar über mir Nachbar unter mir Nachbar, diagonalen Nachbarn, jede Seite, ich glaube ich hatte irgendwie sechs und fünfzig wlans oder so um mich herum, Also ich verstehe gar nicht warum, aber ist halt dann so. Das kannst du ja nicht ändern."
+        },
+        {
+            "start": 2101290,
+            "end": 2125710,
+            "speaker": "B",
+            "text": "Es gibt übrigens auch eine Beschränkung bei Zigbee, das vergisst man oft, aber die Koordinatoren haben auch ein Limit, wie viel Geräte damit verbunden werden können und gerade die billigeren Koordinatoren haben da niedrigeres Level. Also auch da gibt es dann gleich mal Probleme, wenn du wie gesagt jeden Lichtschalter oder sowas dann von dem Haus zum Beispiel einbindest und das kann schon Mesh sein, aber im Prinzip koordinieren muss man die ganzen Geräte trotzdem."
+        },
+        {
+            "start": 2126019,
+            "end": 2143059,
+            "speaker": "A",
+            "text": "Aber ich meine der Zigbee Stick von dcons, also Dresden Electronics, das wird halt oft irgendwie empfohlen der allein kann schon zwei hundert oder zwei hundert fünfzig Zigbee Clients also schon relativ hoch und ich würde sagen das dauert erstmal bis zu zwei hundert bis zwei hundert Zigbee kleinste"
+        },
+        {
+            "start": 2143059,
+            "end": 2156099,
+            "speaker": "C",
+            "text": "hast ja das hängt von den Chipsätzen ab die da drin verbaut sind es gibt so ältere Chipsätze die schaffen nur ich weiß nicht mehr vierzig fünfzig sechzig um den Dreh und wie du sagtest jetzt die neueren schaffen zwei hundert das schon eine ordentliche Nummer zwei hundert kleinste"
+        },
+        {
+            "start": 2156200,
+            "end": 2169360,
+            "speaker": "B",
+            "text": "also ich habe gerade nachgeschaut der Kombi zwei kann nur direkt vier und zwanzig Geräte ansprechen aber im gesamten Zigbee Netzwerk zwei hundert bis fünf hundert Geräte also ist ja immer ein Mesh und direkte Nachbarn sozusagen nur fünfzehn bis vier und"
+        },
+        {
+            "start": 2169360,
+            "end": 2227360,
+            "speaker": "C",
+            "text": "zwanzig zu dem Thema Mesh da wollte ich noch was zu sagen weil ich das ganz interessant bei Meta finde bei Zigbee ist es ja so jetzt letztens bei einem Freund der hat so fünf sechs Zigbee Lampen im Wohnzimmer und da auch sein Koordinator drin stehen jetzt hätte das gerne aber auch im ersten Stockwerk und auch im Dachboden oder nee nur im Dachboden aber das geht nicht so einfach denn du kannst das Zigbee Netzwerk ja nur erweitern durch Zigbee Geräte das heißt du müsstest ein Treppenhaus gehen du musst das Zigbee Signal deine Stufen hochgehen lassen damit es eine gute Verbindung hat und wenn du nicht überall solche Geräte hast für Zigbee dann ist das ein bisschen schwierig Bei Meta finde ich interessant, dass es auch über Ethernet laufen kann du kannst ein das ist ja grundlegend funktioniert das darunter mit IPV und dann kann man sagen okay ich habe jetzt hier mein Haus und einen halben Kilometer weiter in meinem riesen Anwesen Garten ist halt die Holzhütte und da kann ich dann einfach Ethernet oder WLAN nutzen um dort das Protokoll weiter nutzen zu können das geht mit Zigbee nicht da muss man eine Direktverbindung haben das ist stark"
+        },
+        {
+            "start": 2227360,
+            "end": 2228720,
+            "speaker": "A",
+            "text": "das wusste ich noch gar nicht ja"
+        },
+        {
+            "start": 2228720,
+            "end": 2257940,
+            "speaker": "B",
+            "text": "alles was IP based ist kann eigentlich matter insofern hat man da kein Problem und ich kenne konkret eine Kollegin von uns auch vom Andi die hat auch genau dieses Problem die schafft es nicht mal in den ersten Stock mit mit Zigbee also die kommt durch diese Betondecke nicht durch keine keine Chance und da hat man dann natürlich Probleme, wobei natürlich wenn du Thread verwendest und nur Funksignal, hast du wahrscheinlich dasselbe Problem grundsätzlich. Aber du kannst natürlich überbrücken, wenn du Kabel verlegt hast in deinem Haus, was sehr viele dann doch haben."
+        },
+        {
+            "start": 2258020,
+            "end": 2271260,
+            "speaker": "C",
+            "text": "Ja, oder wifi, dann kannst du einfach einen Lautsprecher nehmen. Mittlerweile haben sie ja alle die Alexas und Google Homes, haben wir alle Meta drin und zack hat man die Protokoll. Man hat das Threat Netzwerk dann nicht in dem Falle aber wifi und dadurch das Netzwerk dort erweitert."
+        },
+        {
+            "start": 2271580,
+            "end": 2300480,
+            "speaker": "A",
+            "text": "Obwohl wir highlighten jetzt natürlich nur die Probleme der Protokolle. Man muss ja auch mal sagen, gibt es ja auch sehr, sehr viele gute Sachen, die wir über die Protokolle zu reporten haben. Also WLAN, wissen wir alle, ist einfach unglaublich stabil, hat Wiederholungsraten, falls mal die Pakete nicht ankommen, pipapo. Die ganze Thematik von TCP IP, was bei zigbee jetzt nicht der Fall ist mit diesem Acknowledgement und so. Also da muss man schon ein bisschen gucken, welche Reliability Garantie, nenne ich es"
+        },
+        {
+            "start": 2300480,
+            "end": 2385120,
+            "speaker": "B",
+            "text": "mal, will man haben, hast du eigentlich bei zigbee auch. Aber gut, es kommt darauf an im Detail und auch wie die Devices es handhaben und das weiterleiten und so weiter. Aber es soll ja auch nicht Thema von der Episode sein, genau in die Details von den Protokollen reinzugehen. Man muss sich auf jeden Fall im Klaren sein, welches Protokoll man verwendet und vor allem wie viele Protokolle man verwendet. Und es gibt ja auch andere Themen wie Preise von Geräten, zum Beispiel Threat ist allgemein noch immer wesentlich teurer als zum Beispiel zigbee. Also da gibt es ja dementsprechend auch Unterschiede. Und wenn du natürlich fünfzig Schalter jetzt irgendwie einbauen willst oder vielleicht hast du schon zigbee Netz, aber kein Threat Netz und solche Dinge spielen da ja dann auch eine Rolle eigentlich. Aber ich bin auch der Meinung, dass möglichst wenig Protokolle natürlich definitiv Sinn machen. Und wenn das überschaubar bleibt, macht es ja auch Sinn, auch von den Herstellern an sich. Geringere Anzahl von Herstellern kann ja auch sinnvoll sein, weil auch wenn du jetzt Thread hast oder Meta, kann es ja trotzdem sein, dass du die speziellen Apps wieder von den Herstellern brauchst, um ein Update zu fahren, weil es geht teilweise über Meta nicht. Oder du musst irgendwas zum Konfigurieren, brauchst du wieder die Original App, dann hast du irgendwie fünf Apps von fünf verschiedenen Herstellern, obwohl sie alle Meta sprechen. Also Meta ist zwar darüber gelegt, aber im Endeffekt hast du dann trotzdem sehr viel unterschiedliche Protokolle oder Hersteller. Und auch da macht es natürlich Sinn, wenn du mit einem guten Erfahrung gemacht hast, dort zu bleiben."
+        },
+        {
+            "start": 2385120,
+            "end": 2396720,
+            "speaker": "C",
+            "text": "Das wollte ich auch noch anbringen. Meta ist zwar schön und gut, aber ich habe zum Beispiel mir ein Schloss geholt von Acara, weil mit Fingerabdruck ein Tür aufzumachen ist ein bisschen einfacher als mit dem Schlüssel rumzufummeln, wenn man ein Kind und Einkäufe auf dem Arm hat."
+        },
+        {
+            "start": 2396720,
+            "end": 2404880,
+            "speaker": "B",
+            "text": "Moment, wenn du Einkäufe am Arm hast und Kind, wie machst du dann den Fingerabdruck mit den Zehen oder sehr verrenkt."
+        },
+        {
+            "start": 2404880,
+            "end": 2423520,
+            "speaker": "C",
+            "text": "Auf jeden Fall besser als einen Schlüssel zu holen. Genau das hat mich dann auch ein bisschen gestört, dass man halt die Aqara App braucht, um dieses Schloss einzurichten. Danach funktioniert es ohne Mucken nur mit Meta. Aber das Einrichten kommt es nicht drumrum. Das musst du mit der App machen. Aktuell der Stand, aber da sind wir"
+        },
+        {
+            "start": 2423520,
+            "end": 2451100,
+            "speaker": "B",
+            "text": "jetzt schon perfekt in der Überleitung zur nächsten goldenen Regel, nä Funktioniert dein ganzes Smart Home auch noch ohne der Automatisierung oder wenn der Server ausfällt? Also funktioniert dein Schloss noch, wenn dein Server wegbricht? Weil stehst du sonst vor der Tür, hast du noch andere Möglichkeiten? Ist es die einzige Möglichkeit reinzukommen? Was machst du, wenn dein Schloss weg ist, weil gerade ein Stromausfall war und dein Server nicht hochgekommen ist oder dein Server einfach Probleme hat oder der WLAN Router einfach ausfällt?"
+        },
+        {
+            "start": 2451580,
+            "end": 2486700,
+            "speaker": "C",
+            "text": "Da habe ich mir tatsächlich Gedanken drüber gemacht um das spezielle Schloss, was ich jetzt habe. Das muss man ja jetzt vergessen. Aber da steckt im Endeffekt auf der anderen Seite einfach ein Schlüssel drin. Das heißt, ich kann meinen Schlüssel weiterhin benutzen. Ich habe so ein Sicherheitsschloss, wie viele Leute es haben in der Haustür. Man kann von beiden Seiten Schlüssel reintun und immer noch den Schlüssel drehen und ist das Keypad, wo dann der Fingerabdruck oder der Pin eingetippt wird, der kommuniziert über Bluetooth Low Engine mit dem Schloss aufdrehmechanismus Gerät. Ich weiß nicht, wie es heißt, Der braucht keinen Meta oder WLAN. Der funktioniert auch ohne. Das ist ganz nett. Aber ja, das wäre natürlich doof, wenn man es nicht anders gemacht hätte."
+        },
+        {
+            "start": 2486860,
+            "end": 2506980,
+            "speaker": "B",
+            "text": "Wobei das natürlich nur funktioniert, wenn du gleichzeitig von beiden Seiten den Schlüssel reinstecken kannst, weil das ist ja bei vielen Schlössern auch nicht der Fall. Freunde von mir hatten genau dieses Problem. Die haben sich auch immer gedacht, es funktioniert und dann ist ihnen der Schlüssel gesteckt. Am Schluss war es ein sehr teurer Einschlag in das Fenster, was sie dann zahlen haben müssen, um wieder in ihre Wohnung zu kommen."
+        },
+        {
+            "start": 2507300,
+            "end": 2511540,
+            "speaker": "A",
+            "text": "Aber das Schloss ist jetzt, glaube ich mal eher so der einfachere Case."
+        },
+        {
+            "start": 2511860,
+            "end": 2519100,
+            "speaker": "B",
+            "text": "Ich glaube, warum ist das der einfachere Case? Ich glaube, dass viele auch gar nicht daran denken, was passiert, wenn das mal ausfällt."
+        },
+        {
+            "start": 2519100,
+            "end": 2544640,
+            "speaker": "A",
+            "text": "Na, weil ich denke, dass viele Leute sehr stark mit Home Automatisierung mit den Lichtern erst anfangen, weil sie sind halt sehr günstig und sie sind halt in der Regel nicht sicherheitsrelevant. Also wenn ein automatisiertes Schloss an der Haustür, da hat man vielleicht noch ein bisschen Sicherheit Bedenken, besonders wenn man jetzt nicht so technisch versiert ist und so weiter, eine Ikea Lampe mal irgendwo reinzuschrauben und sich mal so einen Zigbee Schalter an die Wand zu kleben. Sorry, aber hat glaube ich meine Großmama gemacht."
+        },
+        {
+            "start": 2544640,
+            "end": 2575290,
+            "speaker": "B",
+            "text": "Also ich würde dir zustimmen, wenn wir jetzt von unserer Tech Bubble ausgehen, Wenn man aber von der allgemeinen Bubble Bubble ausgehen, die sich einfach so ein Schloss kaufen irgendwo, das dann mit der Cloud verbunden ist und die gar nicht wissen, dass das technisches Problem sein könnte, wenn der WLAN Router dann ausfällt und sich das einfach installieren. Also ich glaube, da gibt es schon auch viele Leute, das muss man dementsprechend auch abstufen. Aber ich hoffe natürlich, dass Leute wie wir in der Tech Bubble eher auf dieses Sicherheitsrisiko achtgeben und das auch im Vorhinein checken."
+        },
+        {
+            "start": 2575290,
+            "end": 2578000,
+            "speaker": "C",
+            "text": "Es steht ja auch in der Anleitung drin, aber wer liest die?"
+        },
+        {
+            "start": 2579280,
+            "end": 2639020,
+            "speaker": "A",
+            "text": "Pack mal die Sicherheit mal zur Seite, sondern eher, was passiert, wenn dein Server abkachelt, wenn die Fritzbox kaputt ist oder ist ja völlig egal, was passiert. Oder du einfach auf einer Geschäftsreise bist und der Server kachelt, aber dein VPN funktioniert nicht so, wie es halt immer ist. Murphy kommt halt immer dann, wenn niemand ihn braucht. Das war ja auch das Thema, was wir in dieser digitalen Nachlassfolge hatten. Was ist, wenn du auf einmal aus irgendwelchen Gründen nicht mehr da bist? Wie können nicht technische Leute, deine Partnerin, dein Kind oder wer auch immer sich gerade darum kümmert sich zu Hause, ich sag mal, wohlfühlen und ihr ganz normales Leben nachgehen, ist zum Beispiel auch echt doof, wenn die Heizungssteuerung im Winter nicht funktioniert, weil die über Home Assistant nur geht und nicht mehr an dem Heizungsregler oder ähnliches. Also welches Schwierigkeitslevel von eins bis zehn würdest du der ganzen Sache geben, deine Heimautomatisierung komplett so durchzudesignen, dass sie mit und ohne Server funktioniert? Also komplett analog und dann auch komplett digital."
+        },
+        {
+            "start": 2639340,
+            "end": 2668770,
+            "speaker": "C",
+            "text": "Meine persönliche würde mal sagen, da ich das Licht nicht automatisiert habe bei mir mit den Schaltern, das ist einfach analog, da fließt einfach Strom, fällt schon mal der Teil weg. Und wenn nicht, wenn eine Glühbirne habe ich, da kann man einfach nur den Schalter drücken, dann geht die wieder an auf den letzten Zustand. Also ich würde sagen, ist ganz gut. Es wäre nur ärgerlich, weil bestimmte Dinge würden nicht funktionieren, wie den Staubsauger jetzt automatisch über ein Tastenfeld zu steuern, aber das Haus wäre benutzbar von Leuten, die keine Ahnung von Smart Home haben."
+        },
+        {
+            "start": 2668770,
+            "end": 2738540,
+            "speaker": "B",
+            "text": "Ich glaube, der perfekte Test ist auch, wenn du Gäste zu Besuch hast oder nimm an, du hast Gäste in deiner Wohnung, während du auf Urlaub bist, können die dort leben Und sehr oft kommt man da sehr schnell zu dem Nein, das geht nicht, weil die brauchen irgendwie einen Account, die brauchen eine App. Man muss das Ganze verstehen. Kinder können das schon nicht mehr verwenden oder definieren. Es gibt keine physikalischen Knöpfe womöglich Türen lassen sich nicht mehr öffnen, der Klassiker oder eben Lichtschalter funktioniert nicht mehr. Also wenn man von der Richtung kommt und das mal testen will, versuch einfach dir eine fremde Person als Gast vorzustellen. Und ich hatte das selber mal rein Blumen gießen in einer Wohnung und es war dann wirklich, also die Person hatte dann schon Verfolgungswahn, weil sich irgendwelche Lichter eingeschalten haben ohne ihrem Zutun und solche Dinge. Also auch da merkt man sehr schnell, okay, man braucht die App, man muss wissen, was da passiert. Die Schalter werden nicht gefunden, es werden ein physikalische Schalter statt den Smart Schaltern verwendet und so weiter. Man merkt erst, wie groß diese Hürde eigentlich sein kann, wenn man von außen kommt und gar keine Ahnung hat."
+        },
+        {
+            "start": 2738700,
+            "end": 2771050,
+            "speaker": "C",
+            "text": "Ich finde, ein Smart Home darf keine Features entfernen, die dem Haus zutun Ich würde sagen, Staubsaugerroboter ist nicht ein Feature des Hauses per se, sondern einfach nur Gerät, was dir den Alltag erleichtert. Lichtschalter würde ich wiederum dazu sehen, dass die doch schon funktionieren sollten, optimalem Falle. Und das tun die ja auch meistens, die, die selbst wenn man da kein Relais hinter hat, welches dann den Status mitteilen kann und gar nicht Strom schaltet. Selbst ich glaube die meisten Lampen, wenn die, wenn man die ein und ausschaltet und wieder ein, dann sind die in dem vorherigen Zustand. Das heißt, irgendwie kriegen die Leute das dann hin."
+        },
+        {
+            "start": 2771370,
+            "end": 2789710,
+            "speaker": "B",
+            "text": "Setzt aber voraus, dass du in irgendeiner Form physikalische Schalter hast. Wenn du jetzt natürlich Schalter an der Wand hast, die was ja auch so ein Klassiker ist, du hast einen Schalter, wo vielleicht auch sechs Taster dann oben sind und die steuern alles und du hast keine physikalischen Schalter mehr, dann hast du natürlich ein Problem. Wenn der Strom weg ist, sind alle deine Schalter auch weg."
+        },
+        {
+            "start": 2789710,
+            "end": 2868680,
+            "speaker": "A",
+            "text": "Meiner Erfahrung nach ist das gar nicht so einfach, besonders wenn du ziemlich viel experimentierst. Du kaufst dir mal eine Lampe von Ikea, knallst die mal eben rein, findest total toll, wie schnell das aufgesetzt war und wie gut das auf einmal für dich funktioniert, mit was auch immer du gerade rum experimentierst. Und dann kommt diese letzten zwanzig Prozent, die achtzig Prozent deiner Zeit kosten, weil du musst es jetzt natürlich, ich sag mal, produktionsreif kriegen und du musst es so weit kriegen, dass es dann auch funktioniert ohne Server. Und allein dieser Gedankengang, der ist gar nicht so einfach, weil es kommt natürlich immer auf die Komponente an. Du hattest gerade von diesen Relais hinter diesen Lichtschaltern gesprochen, das sind ja zum Beispiel auch Shellys, super Lösung. Das bedeutet aber auch, du brauchst erst mal tiefe Einbaudosen, damit du genug Platz für ein Relais dahinten hast. Dann ist da so eine Kabelfummelei dahinter und pipapo, ich weiß nicht, geh doch einfach mal durch dein Haus, durch deine Wohnung oder ähnliches und zähl, wie viel Lichtschalter du hast theoretisch, wie viel Shellys du da halt verbauen müsstest. Und das ist ein Riesenaufwand. Also wer macht das denn? Klar, es gibt immer Leute, die das machen, aber das sollte man nicht unterschätzen. Deswegen ist das glaube ich auch bestätigt, dass wir das hier als goldene Regel haben, dass man sich zumindest darüber Gedanken machen muss und dass dann vielleicht explizit okay, weißt du was? Bei mir funktioniert das leider alles nur noch mit Server, dass man sich dessen bewusst ist und nicht überrascht wird."
+        },
+        {
+            "start": 2869080,
+            "end": 2888780,
+            "speaker": "C",
+            "text": "Ich finde das interessant, weil ich habe schon öfter so Threads im Englischen als auch im deutschen Forum gesehen, was man macht, wenn man ein Haus verkauft, lässt man das Smart Home drin oder nicht? Und ich würde definitiv sagen, nimm es mit. Also der danach wird dich nur noch anrufen, dass du hast IT Support bis an dein Lebensende."
+        },
+        {
+            "start": 2889340,
+            "end": 2899100,
+            "speaker": "A",
+            "text": "Das ist auch so eine Frage, die habe ich mir noch nie gestellt. Aber ja, ich habe einen Kumpel gehabt, der hatte eine Mietwohnung und der hatte überall Shellys dahinter und so weiter. Ich glaube, der hat drei Tage nur sein Zeug abgebaut."
+        },
+        {
+            "start": 2900220,
+            "end": 2912940,
+            "speaker": "B",
+            "text": "Du darfst es ja eigentlich gar nicht einbauen in eine Mietwohnung. Also du brauchst eigentlich die Zustimmung des Vermieters, der Vermieterin und dann darfst du das ja zusätzlich auch nicht, weil du keine Elektrofachkraft bist im Normalfall."
+        },
+        {
+            "start": 2912940,
+            "end": 2914300,
+            "speaker": "C",
+            "text": "Die haben wir natürlich immer bestellt."
+        },
+        {
+            "start": 2915580,
+            "end": 2929260,
+            "speaker": "A",
+            "text": "Wieso sagt der Österreicher in einem Podcast mit zwei Deutschen, wie Deutsche sich zu verhalten haben? Ich meine, wir sind Deutscher als Deutsch. Das bedeutet, theoretisch hätte ich das von André oder von mir erwartet, aber Österreicher, die lassen auch mal fünfe gerade sein, oder?"
+        },
+        {
+            "start": 2929340,
+            "end": 2939100,
+            "speaker": "B",
+            "text": "Ja, wir sind ja in einem Wissenspodcast. Also man muss das ja immer erwähnen. Es ist nicht erlaubt, dass es trotzdem jeder macht, ist noch mal eine andere Frage."
+        },
+        {
+            "start": 2939420,
+            "end": 2958420,
+            "speaker": "C",
+            "text": "Ja, ich glaube, da ist es auch teilweise grau zu Ich glaube, du darfst es machen, solange du es beim Auszug wieder rückläufig machst. Also du persönlich darfst es wahrscheinlich nicht machen, weil du kein Elektriker bist, aber solange du den Zustand der Wohnung wieder zurückstellst, ist das alles in Ordnung. Wo man natürlich dann die harte Grenze ziehen muss, an Schrank zu gehen, also an die Verteiler."
+        },
+        {
+            "start": 2958420,
+            "end": 2988140,
+            "speaker": "B",
+            "text": "Da musst du tatsächlich Fachpersonal, also meines Wissens, bei Deutschland bin ich mir jetzt nicht hundertprozentig sicher. In Österreich bin ich mir sicher, dass die gesamte Elektroverkabelung an sich nicht geändert werden darf in Mietwohnungen ohne Zustimmung natürlich. Wobei solche Dinge auch jetzt beim Schaltschrank, wenn du die Vermieterin fragst und keine Antwort bekommst nach einer gewissen Zeit ist dann das quasi ein implizites okay, Und dann darfst du es aber auch immer unter dem Punkt natürlich, dass du es rückbauen musst."
+        },
+        {
+            "start": 2989020,
+            "end": 2990620,
+            "speaker": "C",
+            "text": "Wir sind ja keine Rechtsbelehrung hier."
+        },
+        {
+            "start": 2991260,
+            "end": 2991740,
+            "speaker": "B",
+            "text": "Genau."
+        },
+        {
+            "start": 2992300,
+            "end": 3010590,
+            "speaker": "A",
+            "text": "Das bringt mich aber zu der, zu dem nächsten Vorschlag einer goldenen Regel bzw. Einer relevanten. Ist es eine Automatisierung, wenn ich eine App benötige? Andre, wie oft läufst du mit deinem Handy durchs Haus, um deine Heimautomatisierung zu steuern?"
+        },
+        {
+            "start": 3011230,
+            "end": 3082340,
+            "speaker": "C",
+            "text": "Ganz wenig, weil ich habe keinen Bock, mein Handy zu benutzen und die Personen in meinem Haushalt noch weniger. Da habe ich zwei Lösungen für gefunden. Die eine ist, ich habe einfach Taster. Ich bin großer Fan von physischen Tastern. Also ich habe jetzt ganz viele von den Ikea oder so und am Hauseingang, damit die Staubsauger genutzt werden können, sogar auch von Gästen, steht einfach für zweimal drücken werden oben und unten die Etagen gewischt und gesaugt. Oder ich habe ein kleines E Paper Display mit sechs Knöpfen. Das sind Symbole der einzelnen Räume. Einmal drücken ist für das Esszimmer Symbol ist das Esszimmer saugen, zweimal drücken ist halt wischen. Das ist ein bisschen implizit, aber ich bin immer Fan von physischen Aktivitäten. Das hilft, finde ich, sehr. Dann braucht man die App einfach nicht. Ich bin nicht so der mega Automatisierungstyp im Sinne von ich gehe jetzt überall rein, dann scheint das Licht auf den König und du gehst raus, dann geht das Licht automatisch aus. Das ist für mich diese Regel. Da steckt man so viel Zeit rein und für mich persönliches Licht jetzt nicht so ein interessantes Thema. Für den anderen mag das anders sein, aber mir ist persönlich immer sehr, sehr wichtig, eine physikalische Interaktion zu haben, weil das kann jeder."
+        },
+        {
+            "start": 3082420,
+            "end": 3167880,
+            "speaker": "A",
+            "text": "Es ist aber auch so, ich habe einen Use Case hier im Haus. Ich habe so ein, zwei Ambilights, wenn du so möchtest. Das sind so kleine Lampen, die stehen auf einem Schrank oder so und die werden von der Heimautomatisierung so gesteuert, die gehen eine halbe Stunde, bevor die Sonne untergeht an oder so. Ja, das Doofe ist, dann ist mal irgendwie eine Stunde vorher stark bewölkt. Also es ist draußen schon super dunkel eigentlich. Dann denkst du, wieso sind die Lichter jetzt noch nicht an und so. Dann nehme ich schon mein Handy in die Hand und drücke dann auf diesen Knopf, dass das angeht. Und das nervt dann halt schon. Und das meine ich ja damit, diese automatisierung so perfekt hinzukriegen, dass es dir wirklich hilft und nicht das manuell mit einer App triggern muss. Also es geht ja nicht darum, den physischen Schalter mit einem digitalen Schalter zu zu ersetzen. Es geht ja um eine Heimautomatisierung, die dir hoffentlich etwas im Leben abnimmt und etwas erleichtert. Sei es von mir aus auch jeden Dienstag um drei deinen Staubsaugerroboter fahren zu lassen oder irgendwie sowas. Und diese Automatisierung so perfekt hinzukriegen, frisst einfach unglaublich viel Zeit. Natürlich kann man sagen, hey Andy, warum nimmst du denn die Zeit des Sonnenuntergangs anhand eines Breitengrades und so weiter. Warum nimmst du denn nicht irgendeinen Licht Sensor, den du draußen hast oder klar, kann man alles machen, aber der Sonnenstand und so weiter, das ist irgendwie online abgefragt und relativ schnell Deswegen."
+        },
+        {
+            "start": 3168440,
+            "end": 3185760,
+            "speaker": "B",
+            "text": "Aber da bin ich auch der Meinung von André, Regel, wenn es dir achtzig Prozent in deinem Leben eine Erleichterung gibt, ist ja vollkommen okay. Und in den anderen zwanzig Prozent. Du hast ja noch physikalische Lichtschalter, Andi, oder? Also du hast ja auch keine Shellys hinter deinen Lichtschaltern, kannst ja ganz klassisch was einschalten."
+        },
+        {
+            "start": 3185760,
+            "end": 3231890,
+            "speaker": "A",
+            "text": "Ich habe ein paar Shellys hinter meinen Lichtschaltern, aber primär für das Außenlicht und das ist einfach Gold wert. Also so am Balkon und so ein paar Strahler möchte ich auch nicht mehr missen, weil früher habe ich sie mal abends angemacht und dann morgens war ich in der Hektik einfach den ganzen Tag gebrannt. Also das Licht, nicht das Haus, das Licht. Und der nächste Punkt ist natürlich, du lebst ja nicht allein. In der Regel hast du eine Familie, eine Partnerin oder ähnliches und dann hast du eine neue Automatisierung und dann deine Partnerin oder Partner erschreckt sich auf einmal, weil irgendein Licht angeht, weil du hast nicht mit ihr gesprochen. Das ist ja auch noch mal so eine Komplexität. André. Du hast gesagt, du hast so ein Tablet im Haus irgendwo hängen. Wenn du da rumbastelst, beziehst du deine Familie dann damit ein und Hey, ich habe jetzt hier einen neuen Knopf, schau mal da das könnt ihr das jetzt machen oder wie läuft sowas ab?"
+        },
+        {
+            "start": 3231890,
+            "end": 3306680,
+            "speaker": "C",
+            "text": "Ich spreche das dann an, weil kein Meeting oder so, aber einfach beim Abendessen mal angesprochen, was wir manchmal brauchen, ist halt die Bahn nach Köln und ich will Mehrwert schaffen und dann stehen da einfach die Abfahrtszeiten plus die Verspätung. Und dadurch habe ich schon mal Akzeptanz geschaffen. Und dann sind da die anderen Funktionen halt auch drin. Oder im Sommer, wenn wieder die Türen aufhaben und die Fliegen reinkommen, weil wir nicht so weit weg von hier einen Pferdehof haben, haben wir so eine, diese Lampen, die fliegen, elektrisieren, dann zu Staub verwandeln, die brauchen wir auch nur im Sommer. Und dafür haben wir dann auch ein Knöpfchen nur auf dem Tablet, weil wir es nicht so oft brauchen. Also das Tablet ist so, dadurch, dass wir so einen großen Wohn Ess Kochbereich haben, ist das schon praktisch, so in der Mitte zu haben. Kann ich sehr empfehlen. Und das kann man ja dynamisch gestalten. Das ist ja der Vorteil im Gegensatz zu einem physischen Schalter. Wenn man den physischen Schalter jedes Mal abändert, dann weiß man ja vor Releases gar nicht mehr, was macht denn dieser Knopf eigentlich. Und so ein Dashboard ist halt spannend, weil Symbole vermitteln ganz anders als reiner Schalter. Wenn du jetzt eine Schaltwippe hast mit vier oder sechs Knöpfen, dann musst du dir halt merken, was das ist. Und so ein Dashboard, wo du einfach sagst, Dashboard, ich habe zum Beispiel einfach ein Fliegensymbol und dann die Lichtentität. Man weiß ganz genau, das ist die Anti Fliegenlampe."
+        },
+        {
+            "start": 3306840,
+            "end": 3309880,
+            "speaker": "B",
+            "text": "Was kostet heutzutage sowas? So ein E Ink Display?"
+        },
+        {
+            "start": 3309880,
+            "end": 3321240,
+            "speaker": "C",
+            "text": "Das habe ich geschenkt gekriegt tatsächlich. Das war einfach ein altes Surface Tablet von einem Bekannten und das war eins dieser Tablets, die keinen Windows elf Support mehr haben. Also da kann man bei ebay mal ein bisschen rumschauen, da gibt es günstig Geräte."
+        },
+        {
+            "start": 3321320,
+            "end": 3324040,
+            "speaker": "B",
+            "text": "Aber du hast auch gesagt, du hast so ein E Ink Display, oder?"
+        },
+        {
+            "start": 3324440,
+            "end": 3330810,
+            "speaker": "C",
+            "text": "Das habe ich auch verstanden. Ich glaube, da habe ich damals vierzig, fünfzig Euro für ausgegeben. E Ink, sechs Buttons kann ich mal."
+        },
+        {
+            "start": 3330970,
+            "end": 3339210,
+            "speaker": "B",
+            "text": "Und das hat dann Prozessor schon mit drin. Also es ist nicht nur ein Display, sondern die fixfertige Lösung, die du dann schon verwenden kannst."
+        },
+        {
+            "start": 3339290,
+            "end": 3365320,
+            "speaker": "C",
+            "text": "Genau, die meldet sich einfach per MQTT bei Home Assistant an. Du kannst die Symbole dort definieren, kannst das sechsmal machen, du kannst bis zu sechsfach Tastendrücke belegen, Da steige ich aber dann aus. Mehr als zwei pro kann ich mir eh nicht merken. So ein Lied spielen muss quasi Morse Code eintippen. Ne, ich finde da gibt es gute Lösungen, auch übertriebene, aber ich bin ganz großer Fan von physisch, von haptisch."
+        },
+        {
+            "start": 3365400,
+            "end": 3378280,
+            "speaker": "A",
+            "text": "Aber ich habe auch so einen kleinen Taster, da kannst du einmal drauf drücken, zweimal, zweimal schnell, dann ist das eine andere Aktion, irgendwie lange drücken. Also weißt du, gefühlt gibt es da so zehn Kombinationen, die man belegen kann."
+        },
+        {
+            "start": 3378280,
+            "end": 3380320,
+            "speaker": "C",
+            "text": "Die sind dann nur für dich, nicht für alle anderen."
+        },
+        {
+            "start": 3380320,
+            "end": 3405480,
+            "speaker": "A",
+            "text": "Die habe ich natürlich auch alle belegt, weil du willst ja rumspielen und dann hatte ich das Ding halt neben dem Fernseher, neben der Couch liegen und das Ding hat alles gemacht, das Licht an die Boxen an und so. Irgendwie sowas halt, was man halt so rumspielt. Sorry, nach zwei Wochen hatte ich keine Ahnung mehr. Und dann musste ich dann, ich habe das alles in YAML geschrieben und dann bei Home Assistant bla bla bla und dann muss ich da reverse engineeren und für ein paar Tasten drücke. Also ich fasse mir jetzt gerade in den Kopf und denke, bist du eigentlich blöd?"
+        },
+        {
+            "start": 3405480,
+            "end": 3415410,
+            "speaker": "C",
+            "text": "Physische Taster sind cool, keine Frage, wenn man sich das merken kann, hey, aber so ein Dashboard, wo du einfach nur das Home Interface siehst, das ist halt auch super praktisch, weil das transportiert ganz anders Informationen."
+        },
+        {
+            "start": 3415810,
+            "end": 3448070,
+            "speaker": "B",
+            "text": "Jetzt haben wir die ganze Enduser Seite abgedeckt und auch klargemacht, okay, wir haben auch andere User bei unserem Smart Home und müssen sicherstellen, dass es funktioniert, auch wenn unser Smart Home nicht funktioniert. Also graceful degradation, dass alles noch funktioniert, wenn mal die Home Automation wegbricht oder der Server wegbricht. Aber jetzt gehen wir mal auf die andere Seite, auf die Nerd Seite, auf die Tag Seite. Was sind eure goldenen Regeln, wenn es darum geht, das Ganze stabiler zu machen, dass der Fall gar nie eintritt, dass der Server mal weg."
+        },
+        {
+            "start": 3448150,
+            "end": 3488520,
+            "speaker": "C",
+            "text": "Die Automatisierung weiß ich nicht so, aber ich behaupte, dass Komplexität im Infrastruktur Setup da auf jeden Fall nicht hilft. Nehmen wir mal virtualisiert auf Proxmox in einem HA Cluster mit einem HA Storage noch. Also da bin ich eher Fan, eine dedizierte Hardware zu haben, die nur für Smart Home da ist. Und dann hast du deine eigene Kiste, deinen Server zum Spielen, zum was weiß ich, dann ist der autark von dem Gespiel. Egal welches Gespiel du jetzt machst, du weißt ganz genau, entweder spielst du am Home Assistant, wenn der kaputt ist, dann weißt du es, oder du spielst an einem Server mit was weiß ich, dann hast du keinen Einfluss aufeinander. Da bin ich ein ganz großer Fan"
+        },
+        {
+            "start": 3488520,
+            "end": 3500180,
+            "speaker": "B",
+            "text": "von, finde ich auch sehr gut und freut mich vor allem, weil der Andi ein Setup hat mit acht und vierzig, vierzig Virtual Machines oder so oder irgendwie Docker Container auf seinem Nukta, das keine Ahnung, was alles steuert in seinem Haus."
+        },
+        {
+            "start": 3500260,
+            "end": 3504020,
+            "speaker": "A",
+            "text": "Ich verstehe, wo man herkommt. Auf der anderen Seite muss man Aber"
+        },
+        {
+            "start": 3504020,
+            "end": 3505380,
+            "speaker": "B",
+            "text": "du wirst es nicht akzeptieren."
+        },
+        {
+            "start": 3505380,
+            "end": 3526990,
+            "speaker": "A",
+            "text": "Nein, nein, nein. Der Clou ist ganz einfach nur, nehmen wir mal diese Virtualisierung, Proxmox und schieß mich tot. Das Tolle ist ja, du kannst da einfach eine zweite Kiste mit in den Cluster hängen und hast sogar so ein HA Setup. Das bedeutet, dass wenn die eine Kiste stirbt, das Image geht sofort auf die zweite Kiste. Das geht ja natürlich Theorie Kubernetes."
+        },
+        {
+            "start": 3526990,
+            "end": 3529950,
+            "speaker": "B",
+            "text": "Aber baust du dir da wirklich einen Cluster auf bei dir zu Hause?"
+        },
+        {
+            "start": 3529950,
+            "end": 3641450,
+            "speaker": "A",
+            "text": "Naja, ein Cluster wäre dann zwei Computer, das brauchst du ja so oder so. Das wäre ja eigentlich auch, wenn der andere jetzt dedizierte Hardware hat und seine Hardware geht hops, dann braucht er ja auch Ersatzhardware, die daneben stehen muss. Das bedeutet, er wird auch zwei Rechner haben, die müssen zwar nicht dauerhaft laufen, vielleicht wird er dann manuelle Arbeit investieren müssen, aber es ist doch unterm Strich genau das Gleiche. Worum es mir eigentlich nur geht ist, und das ist ja der Punkt dieser goldenen Regel, so nach dem hab halt einfach Ersatz im Haus, wie du es auch immer machst. Prinzipiell bin ich super bei dir, dass man es simpel hat. Man muss aber jetzt immer sagen, jetzt mal angenommen, du hast, keine Ahnung, einen großen Raspberry Pi und einen Intel Nuclear, das ist deine Hardware und dein Intel NUC hat gerade dein Home Assistant. Du hast ein Image gemacht, du ziehst da eine Kopie. Ich weiß nicht ganz, ob du dieses Image dann eins zu eins auf dem Raspberry Pi aufspielen kannst, weil vielleicht ist da nicht genug RAM, vielleicht ist das Image größer als die Festplatte oder als die SD Karte und so weiter und so fort. Also was ich sagen möchte, ist die Komplexität bei einem simplen dedizierten Hardware, das zu replizieren, benötigt dann eigentlich ja auch die gleiche Hardware, um es wirklich einfach zu haben. Ich sag mal wirklich um ein. Kann man für ein physisches Copy Paste machen, Ihr wisst, was ich meine. Wenn du eine andere Architektur hast, dann fängst du schon wieder an, setzt du manuell ein neues Home Assistant auf und spielst dann das letzte Home Assistant Backup auf und dann musst du den USB Stick für dein zigbee umhängen und dann hängt das in einem anderen Dev Random drin und so weiter und so fort. Weißt du, was ich meine? Also du kannst nicht einfach Copy Paste machen, dafür brauchst du dieselbe Hardware. Und wenn du das jetzt zum Beispiel bei sowas machst wie Proxmox, wobei ich da jetzt gerade auch einen Fehler in meiner Argumentation, auch eine zweite Hardware machst. Ja, ja, nee, die zweite Hardware ist nicht das Problem. Das Problem ist die Hardware."
+        },
+        {
+            "start": 3641450,
+            "end": 3644810,
+            "speaker": "B",
+            "text": "Wieso hättest du einen zweiten NUC da daneben stehen, der nichts macht, ne?"
+        },
+        {
+            "start": 3644810,
+            "end": 3649490,
+            "speaker": "C",
+            "text": "Wenn er einen Stick hat für sein zigbee, der USB angeschlossen ist, dann bringt dir das gar nichts."
+        },
+        {
+            "start": 3649490,
+            "end": 3651530,
+            "speaker": "A",
+            "text": "Genau, ich muss den Stick ja auch umschieben."
+        },
+        {
+            "start": 3651530,
+            "end": 3655690,
+            "speaker": "B",
+            "text": "Ja, du kannst ein manuelles Failover machen, aber hast du überhaupt zweite Hardware?"
+        },
+        {
+            "start": 3656160,
+            "end": 3665600,
+            "speaker": "A",
+            "text": "Nee, ich nicht. Aber habe ich mir, will ich mir kaufen, Ne? In der Tat. Also ich denke die ganze Zeit darüber nach, ob ich mir dieselbe Hardware, die ich da jetzt stehen habe, einfach noch mal kaufen und daneben setzen."
+        },
+        {
+            "start": 3665600,
+            "end": 3681720,
+            "speaker": "C",
+            "text": "Also ich glaube, es ist einfach super wichtig, sich darüber Gedanken zu machen und in meinen Augen, Komplexität ist ja auch sehr individuell, weil jeder hat, wenn du das jetzt beruflich machst, Proxmox, du bist der Server Administrator und ihr macht in der Firma Proxmox und du kennst das wie deine Westentasche. Fair enough, mach's."
+        },
+        {
+            "start": 3681870,
+            "end": 3683470,
+            "speaker": "A",
+            "text": "Nee, das würde ich gerade nicht machen."
+        },
+        {
+            "start": 3683630,
+            "end": 3702430,
+            "speaker": "C",
+            "text": "Ich auch nicht persönlich. Ich mache Kubernetes beruflich und würde das nie im Leben zu Hause machen, Aber es gibt Leute, die machen das. Wichtig ist einfach, man muss die Entscheidung treffen. Und meine persönliche Erfahrung ich habe vor ein paar Wochen, habe ich von meinem Home Assistant Blue, was eine armbasierte Architektur ist, auf ein Lenovo Ding, Center Moped gewechselt."
+        },
+        {
+            "start": 3702590,
+            "end": 3708120,
+            "speaker": "B",
+            "text": "Also gerade zur Einordnung, dieses Home Assistant Blue ist eine dedizierte Hardware für Home Assistant."
+        },
+        {
+            "start": 3708670,
+            "end": 3753280,
+            "speaker": "C",
+            "text": "Genau das haben die mal gemacht. Das ist ein Odroid N Standard ARM Ding und das war einfach mal eine Aktion von dem mit einem schönen Design und paar Sachen, aber generell Standard Hardware und ich habe das migriert und es hat mich insgesamt zwanzig Minuten gekostet. Davon war die meiste Zeit das Herunterladen des Backups selbst und das Hochladen und dann das Einzige, was man dann machen muss, ist halt im Router die IP, wahlweise die Mac Adresse abändern damit die IP wieder zu gleichen wird und das war entspannt und das hat mich einfach sicher jetzt schlafen lassen. Jetzt habe ich vor kurzem getestet, jetzt bin ich fair, wenn es jetzt ausfallen sollte, ich habe hier noch irgendwo einen anderen Rechner rumliegen, dann kriege ich das in zwanzig dreiig Minuten wieder hin. Und ob man schneller ist mit einem Proxmox Failover oder was auch immer für eine Technik, ist jetzt auch egal, man wird eh debuggen müssen."
+        },
+        {
+            "start": 3753360,
+            "end": 3783930,
+            "speaker": "A",
+            "text": "Also ich sage das jetzt einfach so, wenn ich das jetzt wirklich mit der zweiten Hardware mache, machen wir uns nichts vor, das Wochenende ist weg, das rede ich mir gar nicht schön. Aber ich glaube, worum es eigentlich geht. Hab irgendwas im Haus, wenn die Festplatte hops geht oder die CPU Kühler Thematik oder whatnot, wenn es halt kaputt ist, weil jetzt gerade auf Amazon was bestellen übers Wochenende dauert wieder fünf Tage oder du fährst zum Media Markt, kannst du"
+        },
+        {
+            "start": 3783930,
+            "end": 3816750,
+            "speaker": "B",
+            "text": "natürlich auch, aber es hängt natürlich davon ab, wie kritisch es für dich ist, wenn das jetzt nur eine nette Erweiterung ist. Ich würde sagen, bei meinen Dingen, die auf Home Assistant laufen, wenn die eine Woche weg sind, so what, kann ich auch damit umgehen und damit leben, ist kein Problem. Also je nachdem, wie tief die integriert sind in deinen Alltag, hast du natürlich auch andere Anforderungen, muss man ganz klar sagen. Und bei mir, ich habe einen Pi Zero, wo mein Home Assistant läuft, ich habe sogar einen zweiten Pi Zero irgendwo rumliegen, also der ist recht schnell gewechselt, gar kein Problem und kostet irgendwie neunzehn Dollar."
+        },
+        {
+            "start": 3816980,
+            "end": 3823700,
+            "speaker": "C",
+            "text": "Also ich müsste mir einen Staubsauger kaufen, weil seit zwei tausend siebzehn Saug und Staub wische ich nicht mehr selber. Das wird schwierig."
+        },
+        {
+            "start": 3824100,
+            "end": 3828260,
+            "speaker": "B",
+            "text": "Aber du wirst auch wahrscheinlich eine Woche aushalten ohne Staubsauger, das würde funktionieren."
+        },
+        {
+            "start": 3828340,
+            "end": 3829620,
+            "speaker": "C",
+            "text": "Und der Media Markt ist nicht so"
+        },
+        {
+            "start": 3829620,
+            "end": 3834060,
+            "speaker": "B",
+            "text": "weit weg und wahrscheinlich kann dein Staubsauger auch angesprochen werden ohne Home Assistant, vermute"
+        },
+        {
+            "start": 3834060,
+            "end": 3836340,
+            "speaker": "C",
+            "text": "ich mal, oder du hast recht, der hat einen Webserver."
+        },
+        {
+            "start": 3836340,
+            "end": 3841220,
+            "speaker": "A",
+            "text": "Moment mal, gehst du dann zu deinem Laptop, curlst dann deinen Staubsauger und sagst"
+        },
+        {
+            "start": 3841220,
+            "end": 3844890,
+            "speaker": "C",
+            "text": "saug mal oder ne, Handy geht auch, weil ich tudor ein Webinterface."
+        },
+        {
+            "start": 3845600,
+            "end": 3923650,
+            "speaker": "A",
+            "text": "Aber wenn wir von Komplexität sprechen, kommt jetzt auch noch mal ein Thema, wo ich mich selbst ein bisschen überwinden musste, als ich mit Home Assistant angefangen habe ich meine, ich komme aus der Softwareentwicklungsecke, da wird natürlich alles in Git versioniert. Home Assistant ist zumindest so gestartet, dass du auch alles einfach per YAML konfigurieren konntest, Deine Automatisierung, deine Devices, deine Telegramm Connection und so weiter und so fort. Und natürlich habe ich alles in YAML geschrieben und natürlich habe ich da zwanzig dreiig YAML Files gehabt und natürlich hatte ich das dann in Git versioniert, auf die Kiste automatisch aufgerollt und den ganzen Infrastructure Poren, den man sich so dachte. Und siehe da, ich sage alles ins Git. Home Assistant sagt, holt mal Bier und sagt, jaml, schaffen wir ab, weil Home Assistant ist seit, weiß ich nicht, zwei, drei, vier Jahren auf dem Track. Die schmeißen alles aufs YAML raus, wechseln alles zu UI. Inzwischen habe ich mich damit angefreundet, habe meine auch weggeschmissen. Ich glaube, was ich sagen möchte ist Home Automation as Code, Infrastructure as Code. Obwohl ich es auf der Arbeit hatte, habe ich es dann zu Hause gemacht. Deswegen habe ich, glaube ich, die Lehre gezogen, dass wenn ich jetzt Proxmox auf der Arbeit machen würde, dass ich es nicht zu Hause tun würde. Da würde ich vielleicht auch nehmt auf jeden Fall das, was die Heimautomatisierungssoftware, ich sag mal, favorisiert. Wenn die sagen UI only oder Code only, dann macht das, aber versuch nicht den anderen Weg zu gehen."
+        },
+        {
+            "start": 3923650,
+            "end": 3929970,
+            "speaker": "C",
+            "text": "Und da möchte ich immer mal, jammelt nicht so rum. Das habe ich mir schon lange aufgespannt."
+        },
+        {
+            "start": 3929970,
+            "end": 3931530,
+            "speaker": "A",
+            "text": "Boah, war der schlecht, ne?"
+        },
+        {
+            "start": 3931770,
+            "end": 3950780,
+            "speaker": "C",
+            "text": "Weil, also am Anfang war ich auch ein bisschen gekränkt in meinem Entwicklerinfrastruktur Stolz, aber ich bin großer Fan davon, weil nehmen wir mal an, du möchtest eine Kleinigkeit deiner Automatisierung ändern, dann ist das am Handy machbar mittlerweile auf dem Sofa und früher musstest du einen Laptop aufmachen, wie das Code öffnen, Git versionieren. Ach komm, das wollen wir nicht mehr."
+        },
+        {
+            "start": 3950860,
+            "end": 3977419,
+            "speaker": "B",
+            "text": "Aber was natürlich schon ein guter Punkt ist, ist ganz allgemein Backups. Wie geht ihr mit Backups um? Weil auch wenn du jetzt alles in Git hast und alles in YAML und meines Wissens, Home Assistant macht schon das meiste eigentlich mit YAML im Hintergrund, aber egal, anderes Thema, zum Beispiel die ganze Konfiguration von dem Zigbee Dongle und die ganzen Adressen und die Anmeldedaten und so weiter, die liegen ja woanders und die kannst du in deinem Infrastructure as Code gar nicht drin."
+        },
+        {
+            "start": 3977419,
+            "end": 4009780,
+            "speaker": "C",
+            "text": "Ja, das müsste halt dann die Datenbank, die du die sqlite, die da liegt, absichern. Ich bin großer Fan von dem Backup Feature, was die haben, habe es ja auch genutzt für die Migration. Ich habe das auch bei Cloudflare und auch bei Backplace extra bei zwei Cloud Anbietern. Für mich ist das sehr, sehr essentiell, dass das auch läuft. Gibt auch andere tolle Plugins mit Google Drive und was weiß ich nicht alles, aber auf jeden Fall packt die woanders hin, nicht nur auf eurer Kiste. Wenn die wegbrennt und die SSD geht flöten oder was auch immer dann oder die SD Karte beim Raspberry Pi und ihr habt nichts in der Cloud, sondern nur lokal. Ja, dann habt ihr gar nichts mehr."
+        },
+        {
+            "start": 4009780,
+            "end": 4046100,
+            "speaker": "A",
+            "text": "Ja, also ich bin auch mega Fan von dem Backup Feature. Wer Home Assistant nicht kennt, die haben so ein integriertes Backup Feature, wurde so Schedules definieren kannst und dann schiebst das halt wie André sagte nach Cloudflare oder nach Amazon oder wohin immer hin. Wie ich aber die Backups handhabe, relativ einfach wie Schrödingers Backup. Ich habe zwar Backups, aber ich weiß nicht, ob sie funktionieren, weil ich habe sie noch nie gesort und deswegen werden wir es herausfinden, wenn ich das wohl brauche. Gegebenenfalls müsste ich das mal testen, aber du weißt, wie es ist. Wer hat schon Zeit dafür? Ich habe aber zugegeben jetzt nicht nur das Home Assistant Backup, sondern ich backup auch die ganze VM."
+        },
+        {
+            "start": 4046490,
+            "end": 4048810,
+            "speaker": "C",
+            "text": "Achso, ja klar, das ist für dich natürlich auch noch mal einfacher."
+        },
+        {
+            "start": 4048970,
+            "end": 4084070,
+            "speaker": "A",
+            "text": "Also ich mach beides. Ich habe glaube ich zwei oder drei Layer und ich glaube nochmal das Home Assistant Directory oder was zippe ich mir und schiebe es noch mal irgendwo hin, weil Home Assistant ist ja auch nur eine Software, die können ja auch Bugs haben oder ich habe das Passwort nicht mehr von diesem Backup, das kann man ja auch verschlüsseln und so weiter und so fort. Also deswegen packe ich halt einfach das ganze Proxmox Image, was natürlich dann wiederum Komplexität führt. Das bedeutet, ich muss dann, wenn ich das Proxmox Image wiederherstelle, muss natürlich auch ein Proxmox haben, wo ich hingegen ich mit dem Home Assistant Backup natürlich nur zu irgendeiner Home Assistance Instanz gehen kann."
+        },
+        {
+            "start": 4084390,
+            "end": 4108190,
+            "speaker": "B",
+            "text": "Bugs sind schon sehr gutes Thema, weil nicht nur Home Assistant kann Bugs haben, auch irgendwelche Third Party Plugins können Bugs haben. Für mich als JavaScript Entwickler Für mich ist es ganz normal, weil ich habe irgendwie drei hundert Dependencies oder fünf hundert Dependencies. Aber wenn wir jetzt schon bei der goldenen Regel sind, professionell arbeiten, wie geht ihr mit Third Party Tools um? Plugins oder Module oder sonstige Dinge?"
+        },
+        {
+            "start": 4108190,
+            "end": 4111510,
+            "speaker": "A",
+            "text": "Ja, alles was auf GitHub das Home Assistant Tag hat, wird installiert."
+        },
+        {
+            "start": 4112470,
+            "end": 4122150,
+            "speaker": "C",
+            "text": "Ja, so fühlt sich das auf YouTube auf jeden Fall an, wenn man denen mal ein bisschen folgt, ne? Ich bin da sehr vorsichtig mit Hacks, also mit dem Home Assistant Community Store."
+        },
+        {
+            "start": 4122390,
+            "end": 4125910,
+            "speaker": "A",
+            "text": "Was ist auf YouTube los? Ich bin nicht in der Home Assistant YouTube Szene, tut mir leid."
+        },
+        {
+            "start": 4125910,
+            "end": 4151500,
+            "speaker": "C",
+            "text": "Ne, ich gucke auch nicht so mega viel, aber man muss ja einfach nur drüber nachdenken. Inhärent machen die Leute ja Videos über Home Assistant. So und wenn ein neues Tool auf GitHub kommt oder was auch immer, dann wird das natürlich ausprobiert und dadurch zu einer Audience vorgestellt. Das ist ja immer so, das hat nichts mit der Smart Home Blase zu tun. Das wird auch bei anderen Branchen Nischen so der Fall sein. Das heißt, youtuber wollen ja Content erstellen. Da muss man ein bisschen vorsichtig mit sein in meinen Augen."
+        },
+        {
+            "start": 4151500,
+            "end": 4160179,
+            "speaker": "B",
+            "text": "Aber wenn du jetzt so offen bist gegenüber Dependencies, Andi, warum bist du noch nicht lange JavaScript Entwickler und kämpfst immer so gegen mein JavaScript?"
+        },
+        {
+            "start": 4160259,
+            "end": 4169779,
+            "speaker": "A",
+            "text": "Also eigentlich hat ja jedes Heimautomatisierungssystem irgendeine Plugin Schnittstelle und wo es eine Plugin Schnittstelle gibt, wird erstmal darauf getestet, ob da Doom läuft."
+        },
+        {
+            "start": 4169779,
+            "end": 4173219,
+            "speaker": "C",
+            "text": "Aber läuft, by the way, ich hab"
+        },
+        {
+            "start": 4173219,
+            "end": 4178099,
+            "speaker": "A",
+            "text": "schon drauf gewartet, habe ich aber irgendwo gesehen. Ich glaube einer der Core Entwickler hat es mal gebaut, oder?"
+        },
+        {
+            "start": 4178179,
+            "end": 4183699,
+            "speaker": "C",
+            "text": "Ja, der war auf meinem Meetup, der Frank, und dann hatte einer ein Doom T Shirt und dann ein Wochenende später lief das."
+        },
+        {
+            "start": 4184440,
+            "end": 4279090,
+            "speaker": "A",
+            "text": "Aber natürlich bauen da etliche Leute ganz wilde Dinge. Besonders jetzt mit AI ist es natürlich ein bisschen fraglich. Also da bauen auch sehr viele Leute Dinge mit AI, die vielleicht auch keinen Softwareentwicklungs Background haben und die dann genau in deine JavaScript Falle tappen, Wolfi, die sich einfach Left und Even Ott Pakete reinholen, was natürlich dann zu möglichen Supply Chain Attacken führt. Und das finde ich jetzt mal interessant, wo ich gerade drüber spreche. Ich weiß gar nicht, ob es schon mal eine Supply Chain Attacke bei Home Assistant Plugins oder Heimat Automatisierungs Plugins gab, weil der Attack Vektor ist ja eigentlich schon spannend, oder? Weil du ja Zugriff auf dein Haus oder dein Heim bekommst, wenn das klappt. Also das ist natürlich schon spannend, aber ne, was ich sagen muss, ich bin mit dem Home Assistant Community Store, heißt das glaube ich, Hacks nicht auf Kriegsfuß, aber ich brauche auch nicht so viel. Ich finde es cool, da mal ein bisschen rumzusurfen, weil da gibt es echt viel coole Innovation, ziemlich viele coole, coole Experimente, coole Projekte, engagierte Entwickler. Aber du weißt doch, wie es ist. Da hat jemand so ein Plugin mal rausgehauen und zwei Home Assistant Versionen später wird das nicht mehr maintained und dann kannst du dein Home Assistant nicht mehr updaten, weil das eine Inkompatibilität hat und so weiter. Das ist ja eigentlich mit, das hat ja jetzt nichts mit Heimautomatisierung zu tun oder Home Assistant, sondern eigentlich mit jedem hast du mal Grafana installiert und bis mal einfach irgendwie durch die Grafana Plugins gegangen, nimmst inoffizielle Grafana Plugins, die auf einmal nach zwei Jahren nicht mehr maintained werden. Sorry, du schießt dich damit selbst in die Hölle. Und das geht eigentlich mit allem. Das geht mit WordPress so mit irgendeinem CMS so überall, was ein Plugin Interface hat, glaube ich, oder?"
+        },
+        {
+            "start": 4279490,
+            "end": 4354090,
+            "speaker": "C",
+            "text": "Und vielleicht noch zur Einordnung, warum nutzt man den Home Assistant Community Store? Da gibt es eigentlich in meinen Augen auch mehrere Wege, also viele und ich habe das auch schon gemacht, weil ich eine Integration entwickelt habe. Ich will einfach nicht teil. Also erstmal macht es manchmal keinen Sinn, die in den Core zu integrieren, so in den Home Assistant Core. Die wollen das nicht haben. Es ist alte Software, es ist alte Hardware, die ich einfach für mich nutzen möchte. Das hat ein Freund von mir gemacht, der will die nicht in offiziellen packen, weil er ist eine obsolete Hardware für sich einfach nur machen möchte. Fair enough. So, dann gibt es Leute, die sagen, ich möchte nicht abhängig sein von dem Entwicklungszyklus von Home Assistant, erst dann Patches reinzubringen, wenn die ihr Release reinbringen. Aber dann gibt es auch Leute, die einfach so da reinhauen ohne einen Grund und da ist es dann halt wiederum gefährlich, dieser sogenannte AI Slope oder auch einfach Supply Chain Attacken können jetzt probieren. Ich sehe jetzt hier gerade, es gibt viele Plugins, die haben jetzt, was haben die Downloads, Das ist schon interessant für jemanden, der Malware oder was auch immer verbreiten möchte. Das ist schon eine interessante Plattform. Wir haben ja gerade schon gesagt, wie viele Leute in Deutschland das nutzen, wie viel Installation es weltweit gibt. Das wird immer mehr. Wir reden jetzt zwei Millionen und mehr Häuschen. Und das Problem ist Hacks Integration, die haben voll Zugriff auf dein System. Die können alles in einem System sehen und dann können die potenziell auch ins Netzwerk."
+        },
+        {
+            "start": 4354170,
+            "end": 4380230,
+            "speaker": "B",
+            "text": "Und es ist ja auch die Wer prüft schon irgendwie so ein Modul oder Maintainer oder wie alt ist das Ding eigentlich? Release Frequenz? Also bei einem klassischen Coding Projekt macht man das vielleicht noch, aber im Home Assistant ist halt schnell drauf geklickt oder irgendwie kopiert aus einem Forum und dann probiert man das einfach mal aus und schon ist es drin. Und fünf Monate später hat man schon längst vergessen, dass man da dieses Ding irgendwie drin hat."
+        },
+        {
+            "start": 4380540,
+            "end": 4427590,
+            "speaker": "C",
+            "text": "Ich meine, wir hatten jetzt vor einiger Zeit die XXZ Lücke in SSH, da war es ja auch ein bekanntes Tool, ein bekannter Maintainer, Da hat einfach jemand übernommen über Social Engineering, der hat einfach denjenigen ausgenutzt mit Burnout. Das Gleiche kann ja hier auch passieren, kann ja ein namhaftes Repo sein. Und dann schleicht sich jemand erstmal langsam als Maintainer rein und dann wird halt eine Malware nachgeladen. Und das Gleiche ist ja auch bei dem Arch User Repository passiert. Das ist eine Linux Distro, wo dann Es gibt einen Core Teil, der ist von einem Kern Maintainer Team bepflegt und vertrauenswürdig. Und dann gibt es das User Repository, wo jeder Software hochladen kann. Da waren, ich glaube, Pakete mit Malware verbreitet. Das ist halt interessant geworden als Angriffsfläche. Und Home Assistant wird definitiv auch eine interessante Angriffsfläche werden, wenn es nicht jetzt schon eine ist."
+        },
+        {
+            "start": 4427830,
+            "end": 4435210,
+            "speaker": "A",
+            "text": "Aber das, was du gerade gesagt hast, das ist ja nicht unique für den Home Assistant Community. Das kann ja mit Home Assistant selbst ja auch passieren."
+        },
+        {
+            "start": 4435290,
+            "end": 4441210,
+            "speaker": "C",
+            "text": "Ja, die Maintainer, die gucken ja schon von Home Assistant, die Co Entwickler, was du da machst. Das wird ja schon von denen überprüft."
+        },
+        {
+            "start": 4441370,
+            "end": 4449010,
+            "speaker": "A",
+            "text": "Gut, würde ich mal sagen, war bei XZ auch der Fall. Also von daher, das weiß ich jetzt nicht, aber ich habe auch mal nachgedacht."
+        },
+        {
+            "start": 4449010,
+            "end": 4470660,
+            "speaker": "B",
+            "text": "Aber die Chance ist höher, dass wenn du einfach mehrere Augen hast, die darauf schauen, dass da eher irgendwas erkannt wird oder du auch mehrere Installationen hast. Du hast ja in einem Schlag dann irgendwie Millionen von Leuten, die das bekommen. Also du hast schon mehr Augen drauf als Wenn du jetzt irgendwie ein Community Plugin verwendest, wo keine Ahnung, das halt fünf User hat und einen Maintainer und niemand blickt drauf."
+        },
+        {
+            "start": 4470660,
+            "end": 4531040,
+            "speaker": "A",
+            "text": "Ich habe mal auch nachgeguckt, ich habe fünf Plugins aus dem Hacks Community Store. Eins von diesen fünf Plugins ist der Community Store selber, also eigentlich vier, wenn du so möchtest. Und da ist dann jetzt einmal mein Auto dabei, also die Integration zu Kia, Dann was von meiner Solaranlage, Huawei und eine Horizon Card. Das ist eine Karte, die dir den Sonnenstand sagt, also wann die untergeht. Das sind schon gar nicht so kleine Plattformen, die da nicht im Chor sind. Und auch wenn ich mal nachgucke, hier eine mit Downloads habe ich jetzt nicht installiert, aber Xiaomi Home. Xiaomi ist ein Riesenhersteller, also ab und zu kommt man da jetzt gar nicht drumherum. Oder ich gucke auch mal, hier gibt es was zu Anker Solix, das ist diese Batteriespeicher. Anker kennt ihr vielleicht von den Powerbanks, die machen ziemlich viel im Solar Game in letzter Zeit. Sowas ist halt nicht im Home Assistant Core. Und da kann ich schon verstehen, dass man sich das aus dem Community Store reinholt, weil das sind halt schon riesen Firmen eigentlich."
+        },
+        {
+            "start": 4531200,
+            "end": 4550400,
+            "speaker": "C",
+            "text": "Ja, oder einfach Probleme, die die Firmen nicht lösen. Es gibt, sehe ich gerade, Alexa Media Player mit Über Downloads. Also wer mir nicht sagt, dass das interessant ist als Angriffsfläche, dem glaube ich halt nicht. Das wird spannend. Und aktuell gibt es halt noch keinen guten Mechanismus. Und der Mensch, der kann auch Fehler machen, indem er einfach, ja, looks good to me, kennen wir alle den Pull Request."
+        },
+        {
+            "start": 4550400,
+            "end": 4556399,
+            "speaker": "B",
+            "text": "Also man bräuchte eigentlich noch so einen Security Advisor, wie man sonst aus Dependency Management kennt für Home Assistant."
+        },
+        {
+            "start": 4556800,
+            "end": 4560800,
+            "speaker": "C",
+            "text": "Ja, ich bin gespannt. Ich hätte keine Idee, das Problem zu lösen tatsächlich."
+        },
+        {
+            "start": 4560960,
+            "end": 4591680,
+            "speaker": "B",
+            "text": "Ja, ich glaube Community Based ist natürlich die beste Variante, kombiniert mit paar automatischen Checks in irgendeiner Form, aber könnte man natürlich als Service anbieten. Also wer ein neues Business aufbauen will, vielleicht so ein Home Assistant Security Check Plugin, dass das dann alles checkt, ob deine Permissions richtig gesetzt sind, ob das Backup verfügbar ist und so weiter, wie es ja auch bei Docker zum Beispiel gibt, dass dein Docker Container einfach oder dein Docker Image gecheckt wird, ob es irgendwo Schwachstellen gibt, könnte man bei Home Assistant natürlich auch machen, aber all das"
+        },
+        {
+            "start": 4591760,
+            "end": 4618640,
+            "speaker": "A",
+            "text": "bringt mich zu einer möglichen Bonusregel. Müssen wir uns Gedanken machen. Über eine eigene Staging Instanz für Spielereien. Also hat jetzt bald jeder eine zweite Home Assistant Instanz, wo man Das ist mein Spielbereich, das ist mein Staging. Und erst wenn ich das alles richtig konfiguriert habe und das für gut befunden habe, promote ich das zu Production, zu meiner Hauptinstanz. Oder ist das schon wieder ein bisschen zu viel des Guten?"
+        },
+        {
+            "start": 4618880,
+            "end": 4641490,
+            "speaker": "C",
+            "text": "Ich mache das für Projekte, wo ich eine eigene Home Assistance Installation habe. Da habe ich dann packe ich die auf den Server, mache das Backup und schließe danach auf die Hardware. Aber für meinen privaten Kampf auf gar keinen Fall habe ich gar keine Zeit zu. Also und der Nachteil ist natürlich, wenn du Sachen mit Hardware steuerst, irgendwo muss die Hardware ja hin. Du kannst ja nicht dann temporär aus deinem Netz nehmen oder das Licht mal eben abschrauben und bei dir im Büro rumspielen. Weiß nicht, finde ich schwierig."
+        },
+        {
+            "start": 4641490,
+            "end": 4656590,
+            "speaker": "B",
+            "text": "Genau, das ist ganz klassisch, wenn du mit Hardware arbeitest, wie weit gehst du? Weil dann müsstest du quasi zweite Wallbox kaufen, jedes Licht doppelt haben, also quasi zwei Glühbirnen überall haben, damit du das sinnvoll testen kannst zum Beispiel oder eben eine kleine Wallbox oder so."
+        },
+        {
+            "start": 4656590,
+            "end": 4658150,
+            "speaker": "A",
+            "text": "Kann man die nicht zweimal einbinden?"
+        },
+        {
+            "start": 4658230,
+            "end": 4659590,
+            "speaker": "C",
+            "text": "Manchmal geht das ja. Ja."
+        },
+        {
+            "start": 4659590,
+            "end": 4661310,
+            "speaker": "B",
+            "text": "Also bei Zigbee definitiv nicht."
+        },
+        {
+            "start": 4661310,
+            "end": 4668390,
+            "speaker": "A",
+            "text": "Zum Beispiel in meinem Proxmox Cluster könnte ich eine zweite VM machen und das Device doch ebenfalls durchrouten, oder?"
+        },
+        {
+            "start": 4668390,
+            "end": 4670470,
+            "speaker": "C",
+            "text": "Ne, das Exclusive, soweit ich weiß."
+        },
+        {
+            "start": 4670470,
+            "end": 4693310,
+            "speaker": "B",
+            "text": "Ja. Du könntest natürlich die eine VM runterfahren, eine andere hoch hochfahren, denselben Store verwenden von dem Dongle oder was es auch dann immer ist für Protokoll und die eine abschalten und andere wieder einschalten. Das habe ich auch mal gemacht. Das funktioniert an sich. Also wenn du zwei SD Karten hast bei deinem Raspi, kannst du zwei Versionen haben und das funktioniert grundsätzlich."
+        },
+        {
+            "start": 4693310,
+            "end": 4710910,
+            "speaker": "A",
+            "text": "Aber der Dongle ist ja auf dem Host System. Der Dongle ist ja auf dem Host System auch nur ein Filestream oder ein Stream an Daten. Kann ich auf dem Host System nicht dengleichen Dongle Stream duplizieren mit, weiß ich nicht, T oder ähnliches und dann auf der zweiten VM die Kopie des Dongle Streams nutzen."
+        },
+        {
+            "start": 4710910,
+            "end": 4718710,
+            "speaker": "B",
+            "text": "Aber du hast ja bidirektionale Kommunikation. Also ich glaube nicht, dass es sinnvoll funktioniert, dass du zwei Home Assistants gleichzeitig laufen lässt."
+        },
+        {
+            "start": 4718710,
+            "end": 4722750,
+            "speaker": "A",
+            "text": "Okay. Für Leute, die sich da jetzt besser auskennen, bitte einmal melden."
+        },
+        {
+            "start": 4722990,
+            "end": 4738120,
+            "speaker": "B",
+            "text": "Das wäre wirklich nerdig. Sowas aufzubauen. Also lasst uns da gerne die Info in unserer Discord Community da, wer so ein Setup aufgebaut hat mit einem Staging Prod Dev System und vielleicht noch irgendwie ein Kubernetes Cluster im Hintergrund."
+        },
+        {
+            "start": 4738120,
+            "end": 4739000,
+            "speaker": "C",
+            "text": "Das wäre krass."
+        },
+        {
+            "start": 4739160,
+            "end": 4749400,
+            "speaker": "A",
+            "text": "Das, was der André gerade sagte, wenn man eigene Hardware entwickelt, die integrieren möchte, ich glaube, das macht dann schon Sinn. Aber dann ist ja, weiß ich, dann ist es ja kein Staging System, dann ist es ja ein weiteres isoliertes Spielsystem."
+        },
+        {
+            "start": 4749880,
+            "end": 4765330,
+            "speaker": "C",
+            "text": "Also was ich mache, ist immer, ich mache ein Backup und dann mache ich danach die Änderung, Versioning, kein Git, aber das kann man ja auch pro Add on machen, wenn man da an den Addons rumspielt. Ist ja alles machbar mittlerweile."
+        },
+        {
+            "start": 4765410,
+            "end": 4837780,
+            "speaker": "A",
+            "text": "Ja, also wir sind am Ende der Podcast Episode und ich hatte fünf goldene Regeln für deine HM Automatisierung angesprochen. Ich habe gerade noch mal durchgezählt, es sind sechs geworden. Und zwar einmal die Grundentscheidung, ob wir alles lokal betreiben wollen oder ob wir mit Cloud Abhängigkeiten okay sind. Dann akzeptieren wir den Wildwuchs aller Protokolle oder limitieren wir uns auf ein paar wenige. Die dritte Regel ging um die Architektur. Funktioniert das Ganze eigentlich auch noch ohne Automatisierung bzw. Ohne Server, wenn du vielleicht mal nicht mehr da bist? Die vierte Regel ging Ist es eine Automatisierung, wenn ich eine App benötige? Da hat man so ein bisschen Hin und her. Ich glaube, diese Regel trifft da ganz gut Pareto. Dann haben wir ein bisschen über Hardware gesprochen. Wie baut man seinen Server nachhaltig auf oder wie gestaltet man das Ganze professionell? Also Backups, Kopie der Hardware, Komplexität, Virtualisierung, ja, nein. Und natürlich von der Softwareseite. Die sechste Third Party Plugins versus Official Plugins versus Stability, nenne ich es mal, mit dem Home Assistant, Community Store Security oder Supply Chain Attacken. Und natürlich bei sechs Regeln gibt es auch eine Bonusregel. Brauchen wir eine Staging Instanz."
+        },
+        {
+            "start": 4837780,
+            "end": 4853140,
+            "speaker": "B",
+            "text": "Die sechs Regeln waren jetzt weniger wirkliche Regeln, sondern mehr Diskussionspunkte. Aber ich glaube, darum geht es ja auch. Jeder oder jede hat andere Anforderungen und man muss sich darüber im Klaren sein, was man dann jeweils für sich selber will und daraus vielleicht für sich selber dann eine goldene Regel basteln."
+        },
+        {
+            "start": 4853140,
+            "end": 4866330,
+            "speaker": "C",
+            "text": "Ich finde, man muss sich einfach immer bewusst seiner Entscheidung sein und nicht einfach ein Versprechen eines Herstellers. Es kann auch das Home Assistant Versprechen sein, was auch immer das sein mag. Auch dort ist nicht alles Gold, was glänzt. Man muss sich einfach nur dem bewusst sein."
+        },
+        {
+            "start": 4866330,
+            "end": 4885610,
+            "speaker": "A",
+            "text": "Also ich habe schon eine dreistellige oder vierstellige Anzahl an Euros investiert für falsche Hardware, die ich jetzt auch nicht mehr haben möchte. Eine Sache findet euch damit ab, wenn ihr damit auch anfangt, dass ihr auch eine Box of Shame habt. Eine Box of Shame ist irgendwo eine Kiste, wo ihr unverbaute Hardware liegen habt, die ihr verbauen wollt."
+        },
+        {
+            "start": 4886090,
+            "end": 4896110,
+            "speaker": "B",
+            "text": "Jeder so wie du. Es gibt auch Leute, die verbauen ihre Hardware oder kaufen nur Hardware, die sie auch verbauen. Du machst es so als jede Person hat so eine Kiste."
+        },
+        {
+            "start": 4896110,
+            "end": 4897670,
+            "speaker": "A",
+            "text": "André hast du eine Box of Shame?"
+        },
+        {
+            "start": 4897750,
+            "end": 4903190,
+            "speaker": "C",
+            "text": "Ja, und eine Box. Ich hätte die schon längst verkaufen sollen. Sachen, weil ich die schon lange nicht mehr benutze. Ist das Gleiche."
+        },
+        {
+            "start": 4903190,
+            "end": 4907190,
+            "speaker": "A",
+            "text": "So, Wolfi, akzeptierst du vielleicht, dass du jetzt hier der Außenseiter willst?"
+        },
+        {
+            "start": 4907190,
+            "end": 4923920,
+            "speaker": "B",
+            "text": "Ja, ist ja okay, wenn ich der Außenseiter bin. Ich habe ja auch so eine Box, um das geht es ja jetzt gar nicht. Ich glaube immer an das Gute im Menschen. Ich hoffe, dass es da draußen irgendwen gibt, der oder die eben keine Box of Shame hat und trotzdem sehr gutes Home Automation System hat."
+        },
+        {
+            "start": 4923920,
+            "end": 4933040,
+            "speaker": "A",
+            "text": "Wenn ihr mehr zu diesem Thema hören wollt, schaltet doch mal beim André in die Smart Hütte rein. Und zwar der spricht da alle vierzehn"
+        },
+        {
+            "start": 4933040,
+            "end": 4936120,
+            "speaker": "C",
+            "text": "Tage, glaube ich, circa plus minus vierzehn"
+        },
+        {
+            "start": 4936120,
+            "end": 4977390,
+            "speaker": "A",
+            "text": "Tage über solche Themen. Nicht nur Heimautomatisierung, sondern auch letztes Mal war paypal und dann auch so ein bisschen Logging und Pipapo. Alles eigentlich das, was so zu Hause in deiner Smart Hütte so abgeht. Und falls ihr auch noch ein paar goldene Regeln für die Heimautomatisierung habt, kommt einfach mal in die Discord Community, schreibt sie rein. Ich bin gespannt. Ich glaube, das ist eine coole Diskussion, weil halt jeder irgendwie andere Erfahrungen gemacht hat. Und falls ihr auch über diese Fragen, die wir heute aufgeworfen haben, gestolpert seid, lasst uns das auch mal wissen. Ansonsten würde ich André, vielen lieben Dank, dass du noch mal zum dritten Mal bei uns in den Podcast gekommen bist und wir hören uns nächste Woche wieder und tschüss."
+        },
+        {
+            "start": 4977390,
+            "end": 4983470,
+            "speaker": "B",
+            "text": "Danke auch von meiner Seite und ich hoffe, wir lesen uns auch in der Discord Community mit ganz vielen Tipps zu Home Automation."
+        },
+        {
+            "start": 4983470,
+            "end": 4985350,
+            "speaker": "C",
+            "text": "Macht's gut und bis zum vier Mal."
+        },
+        {
+            "start": 4985350,
+            "end": 4985790,
+            "speaker": "B",
+            "text": "Ciao."
+        }
+    ]
+}
