@@ -61,7 +61,8 @@ Episode pages are generated under `src/pages/podcast/episode/`, blog posts under
 ### Podcast player
 
 Custom fork of Podigee's player at `EngineeringKiosk/podigee-podcast-player` plus a vendored minified `player.js` (embedly) under `public/js/`.
-Upgrade by replacing the file — see README "Podcast player" section.
+Upgrade the Podigee fork by following `docs/upgrade-podigee-podcast-player.md` (which files are vendored, what to skip, and how to validate).
+For the Embedly `player.js`, replace the file in place — see README "Podcast player" section.
 
 ### Netlify redirects
 
