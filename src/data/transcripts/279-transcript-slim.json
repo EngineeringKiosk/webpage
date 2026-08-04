@@ -1,0 +1,1323 @@
+{
+    "confidence": 0.94788253,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 5402,
+    "utterances": [
+        {
+            "start": 3280,
+            "end": 240060,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute machen wir einen Ausflug in eine Welt, die für viele von uns irgendwo zwischen Magie, Elektrotechnik und kontrolliertem Wahnsinn liegt. Zumindest geht es mir. Es geht um Real Time Operating Systems, Embedded Software und die Frage, wie moderne Softwareentwicklung eigentlich aussieht, wenn Speicher knapp ist, Timing alles ist und ein Breakpoint im schlimmsten Fall mehr kaputt macht als hilft. Zu Gast ist Roland Lezuo. Er entwickelt mit seinem Team Elektrotechnik und Firmware für industrielle Embedded Systems und bringt damit genau die Praxisperspektive mit, die man sich für ein solches Thema wünscht. Gemeinsam sprechen wir darüber, was Echtzeit eigentlich bedeutet, warum Linux inzwischen auch echtzeitfähig sein kann und wieso ein Fernglas plötzlich ziemlich viel über Softwarearchitektur, Interrupts und und harte Deadlines erzielt. Außerdem schauen wir uns an, wie Embedded Projekte heute wirklich entstehen. Von PCB Design über Mikrocontroller, C und Treiber bis hin zum Debugging mit Oszilloskop statt Printline. Dazu geht es um Testing, Continuous Integration, Update Fähigkeit, den Cyber Resilience Act und die Frage, warum ein Firmware Update auf so einem Gerät alles andere als trivial ist. Wenn du dich also schon mal gefragt hast, ob Embedded Entwicklung einfach Software Engineering in der Steinzeit ist oder oder vielleicht doch ziemlich modernes Engineering unter härteren Randbedingungen, dann bist du hier genau richtig. Wir legen los. Viel Spaß. Dieser Podcast läuft unter der Flagge deutschsprachiger Softwareentwicklungspodcast. In unserer Community kam öfter mal das Könnt ihr auch mal Hardware machen? Theoretisch könnten wir Geht nicht. Das Ding hier ist als Software Engineering Podcast gefleckt. Können wir nicht. Aber wir sind ja agil, flexibel und allem drum und dran. Deswegen hatten wir vor einiger Zeit eine Podcast Episode mit Andre Friesen zum Thema Wie bastelt man eigentlich irgendwie so Home Automation Kram mit esphome? Wie baut man seine eigene Hardware und wie schwierig ist das eigentlich mit der Software? Und dann hatten wir die Episode gemacht, grandiose Episode, wie man einfach so was mal nicht baut bzw. Wie man etwas baut, aber mit ganz vielen Failure Stories. Und nach der Episode kam der Wolfgang um die Ecke Wenn wir jetzt was zu esphome gemacht haben und Hardware, dann können wir das ganze Hardware Thema doch einfach mal weitermachen. Wie sieht es denn mal bei dir aus mit Echtzeitbetriebssystemen, also Real Time Operating System, kurz RTOS. Ich habe mir Schultern gezuckt, ich keine Ahnung, erstmal den Begriff RTOS bei Google eingegeben, bin dann irgendwie drauf gekommen, okay, das hat irgendwas mit Embedded Systems zu tun oder wird oft in dem Bereich Embedded Systems angewandt. Und dann habe ich immer gedacht, immer wenn ich von Embedded Systems spreche oder das lese, denke ich an meine Waschmaschine und dann frage ich mich, wie würde ich eigentlich meine Waschmaschine updaten? Denn als ich die Waschmaschine gekauft habe, ich glaube vor drei Jahren gab es da einen Zettel bei, diese Waschmaschine nutzt diese Open Source Projekte und da war Curl dabei und so weiter und frage mich, wie update ich das eigentlich? Und dann kam mir irgendwie so wieder in Erinnerung, Moment mal, diese ganzen Embedded Systems, ist das nicht irgendwie Softwareentwicklung in der Steinzeit? Ich meine, ich habe da einen Chip, gibt es da überhaupt Continuous Integration, Continuous Delivery? Tesla kam um die Ecke und hat Over the Air Updates revolutioniert. Keine Ahnung, haben sie wahrscheinlich nicht, haben sie wahrscheinlich einfach nur so verkauft. Und der Wolfgang ist ja ein smarter Jung, würde man hier im Pott sagen. Und zwar macht der Wolfgang ja das Engineering Kiosk Meetup Innsbruck und der schafft er sich so sein eigenes Ecosystem und rekrutet eigentlich Speaker für diesen Podcast. Und da hat er den Roland ausgegraben, denn der Roland hat nämlich zum Thema Real Time Operating Systems oder speziell zu einem Real Time Operating System im März zwei tausend fünf und zwanzig einen Vortrag gehalten. Da hat der Wolfgang gesagt, komm, den quatsche ich einfach mal an. Und irgendwie hat der Roland sich vertippt und hat aus einem Nein dann ein paar Buchstaben geändert und hat Jahr gemacht, Ich bin dabei und jetzt sitzen wir hier, Hallo Roland, Hallo Andi, danke für"
+        },
+        {
+            "start": 240060,
+            "end": 241820,
+            "speaker": "B",
+            "text": "die nette Einführung hier."
+        },
+        {
+            "start": 242380,
+            "end": 250220,
+            "speaker": "C",
+            "text": "Also Moment mal, also da muss jetzt schon einsteigen. Ausgegraben, das klingt so, als würden wir alle unterm Stein wohnen, irgendwie in Innsbruck oder so."
+        },
+        {
+            "start": 250220,
+            "end": 257420,
+            "speaker": "A",
+            "text": "Naja, ihr wohnt an einem Berg, Berg besteht aus Steinen. Ich würde sagen, irgendwie ist es nicht weit hergeholt."
+        },
+        {
+            "start": 257820,
+            "end": 259860,
+            "speaker": "B",
+            "text": "Ja, wir sind schon on the top."
+        },
+        {
+            "start": 259860,
+            "end": 262020,
+            "speaker": "C",
+            "text": "Ja, dann beweisen wir dir jetzt das Gegenteil."
+        },
+        {
+            "start": 262020,
+            "end": 293130,
+            "speaker": "A",
+            "text": "Aber Roland, ich habe die Aufgabe in diesem Podcast immer unsere Gäste vorzustellen. Und kommen wir zum Thema Innsbruck. Ihr seid sozusagen Nachbarn, also für mich, weil ihr wohnt beide in Innsbruck, somit seid ihr Nachbarn, weil Innsbruck ist nicht wirklich groß, meines Erachtens nach Weltstadt, daran habe ich keine Zweifel, aber ich glaube, Singapur ist auch ein Weltstaat und Singapur ist auch super klein, Also von daher. Aber wer bist du? Roland? Du trägst einen Doktortitel. Also ich bin sozusagen der Dümmste hier im Raum, denn ich habe nur einen Bachelor Titel. Ihr beide habt einen Doktorart."
+        },
+        {
+            "start": 293130,
+            "end": 307430,
+            "speaker": "B",
+            "text": "Ja, ich habe auf der TU Wien Technische Informatik studiert und mich hinbegeben, dass ich da zu einem Doktorat gekommen bin, war ein Interessensdoktorat, weil das Thema mich sehr interessiert hat. Es ist um Compiler gegangen und wie man Software tatsächlich auf Hardware."
+        },
+        {
+            "start": 307670,
+            "end": 317030,
+            "speaker": "C",
+            "text": "Moment, Moment, bevor du das erklärst, würde ich jetzt gerne wissen, wie der Andi das erklären würde, weil der Andi hat sich natürlich vorbereitet und ich würde jetzt wissen, was er aus deiner Doktorarbeit rausgelesen hat."
+        },
+        {
+            "start": 317030,
+            "end": 323350,
+            "speaker": "A",
+            "text": "Also bevor wir an das Thema der Doktorarbeit gehen, die wichtigste Frage, Roland, wie lange hast du für deinen Doktortitel gebraucht?"
+        },
+        {
+            "start": 323430,
+            "end": 324710,
+            "speaker": "B",
+            "text": "Ich glaube vier Jahre."
+        },
+        {
+            "start": 324950,
+            "end": 326840,
+            "speaker": "A",
+            "text": "Wolfgang, wie fühlt man sich dabei?"
+        },
+        {
+            "start": 327160,
+            "end": 330200,
+            "speaker": "C",
+            "text": "Ich glaube, wir sollten über die Doktorarbeit jetzt vom Brot sprechen."
+        },
+        {
+            "start": 330600,
+            "end": 335160,
+            "speaker": "A",
+            "text": "Für alle Neulinge. Der Wolfgang hat etwas über zehn Jahre für seinen Doktortitel gebraucht."
+        },
+        {
+            "start": 335400,
+            "end": 336280,
+            "speaker": "C",
+            "text": "Genau, zehn Jahre."
+        },
+        {
+            "start": 336600,
+            "end": 438060,
+            "speaker": "A",
+            "text": "Von daher, also vier Jahre sportlich. Gratulation noch mal, Ich weiß, das ist schon ein paar Jährchen her, aber trotzdem, ich denke, eine Wahnsinnsleistung. Und zwar hast du deine Doktorarbeit über Scalable Translation Validation Tools, Techniques und Frameworks geschrieben. So, und ich habe erst mal gedacht, what the heck ist das denn eigentlich? Niemand hat Zeit, eine Doktorarbeit heutzutage zu lesen. Also habe ich den Gemini gepackt, habe gefragt, pass mal auf, lies mal dieses Dokument und fass mir das mal für Fünfjährige zusammen. Und es war dann nicht eine Erklärung wirklich für Fünfjährige, sondern schon irgendwie in einfachen Worten. Aber ich fasse es jetzt einfach mal in einfachen Worten zusammen und du sagst, ob ich das jetzt richtig verstanden habe. Es ging um die Zuverlässigkeit von Compilern, denn das Problem ist eigentlich, dass du hast deinen Source Code und wenn ein Compiler seine Arbeit macht, dann übersetzt er natürlich die Hochsprache in irgendwie Assembly und Bit und Bytes und Pipapo. Und dabei können natürlich unbemerkt Fehler passieren oder und durch die Fehler auch das Verhalten des Programms verändert werden. Und wenn das passiert, waren natürlich alle Sicherheitsprüfungen, die man vorher in der Hochsprache gemacht hat, verifiziert hat für die Katz. Denn wenn der Compiler einfach unbemerkt was verändert, schwierig. Deswegen kann man sagen, gibt es mehrere Lösungsansätze. Einer ist zum Beispiel, man versucht den Compiler selbst fehlerfrei zu machen. Das hast du gesagt, weißt du was, das mache ich nicht. Bugs fixen mag ja keiner. Hast du gedacht. Wir setzen da einfach noch mal ein Tooling drauf. Und zwar kümmert sich die Doktorarbeit um eine sogenannte Übersetzungsvalidierung. Also es wird nicht der Compiler selbst geprüft, sondern das Ergebnis. Und das machst du mittels mathematischen Beweisen, was du dann später vollautomatisiert ausführen kannst, ob der fertige Maschinencode noch exakt dasselbe Verhalten aufweist, wie der ursprüngliche Quellcode in der Hochsprache. Habe ich das richtig verstanden?"
+        },
+        {
+            "start": 438140,
+            "end": 443580,
+            "speaker": "B",
+            "text": "Ich würde sagen, das ist eine sehr genaue und sehr akkurate Übersetzung von den Vielfilziten."
+        },
+        {
+            "start": 443660,
+            "end": 449900,
+            "speaker": "C",
+            "text": "Ob du das richtig verstanden hast, wage jetzt zu bezweifeln, aber die KI hat es zumindest richtig zusammengefasst."
+        },
+        {
+            "start": 449900,
+            "end": 460460,
+            "speaker": "A",
+            "text": "Das ist korrekt. Aber diese KI Zusammenfassung hat mein Interesse für die Doktorarbeit doch schon geweckt, diese zu lesen. Ob ich sie dann lesen werde, ist da jetzt eine zweite Frage."
+        },
+        {
+            "start": 460540,
+            "end": 464180,
+            "speaker": "C",
+            "text": "Vielleicht sollte es doch mal in die akademische Welt noch gehen, Andi und deinen Master machen."
+        },
+        {
+            "start": 464490,
+            "end": 502700,
+            "speaker": "A",
+            "text": "Also ich lese ja schon immer mal wieder irgendwie Hacker News Artikel, wo man Compiler Bugs irgendwie aus. Ich wollte gerade wieder sagen, ausmerzt. Das haben wir jetzt in der letzten Episode, die über inklusive Sprache ging, gelernt, dass ich das nicht sagen sollte. Deswegen entschuldige mich, dass man diese Bugs natürlich behebt und es ist schon sehr interessant. Aber zurück zu dir, Roland. Es geht nicht um Compiler Bugs, es geht um deine Arbeit. Und zwar, was machst du nach deiner Doktorarbeit? Inzwischen bist du CEO aka auf gut Deutsch Geschäftsführer der SILA Embedded Solutions Und jetzt habe ich gelernt, ihr sitzt in St. Pölten und in Innsbruck. Das ist einmal im Osten und im Westen, habe ich mir sagen lassen."
+        },
+        {
+            "start": 502700,
+            "end": 532310,
+            "speaker": "B",
+            "text": "Genau, Osten und Westen von Österreich, den USA würden wir sagen, wir sind worldweit vertreten. Wir packen etwas kleinere Brötchen. Genau, wir sind ein Entwicklungsdienstleister mit fünfzehn Ingenieuren und wir entwickeln für Industriekunden, Elektronik und Software Gewerke nach entsprechend ihren Vorgaben. Das ist unser Gewerk. Das heißt, man kann von uns keine Produkte kaufen. Wir haben keine. Man kauft allerdings oder verwendet unsere Produkte oder sie werden für einen verwendet in verschiedensten Industrien und Anwendungen."
+        },
+        {
+            "start": 532310,
+            "end": 539830,
+            "speaker": "A",
+            "text": "Allgemein ist das spezialisiert auf Embedded Systems. Das bedeutet, ihr schreibt die Firmware, ihr portiert Betriebssysteme und Treiber."
+        },
+        {
+            "start": 539830,
+            "end": 564680,
+            "speaker": "B",
+            "text": "Genau, viel allerdings auch Elektronik. Das ist eigentlich ein großer Teil, dass wir auch die Elektronik für den Kunden entwickeln, auf dem dann die Mikroprozessoren laufen, auf denen dann Teile unserer Software laufen. Wir treiben es meistens bis Integration von einem Echtzeitbetriebssystem oder Linux bei größeren Systemen. Die Applikationsentwicklung findet dann zumeistens beim Kunden selbst statt. Also das ist dann nicht mehr unser Ding."
+        },
+        {
+            "start": 564665,
+            "end": 624665,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 624680,
+            "end": 674680,
+            "speaker": "A",
+            "text": "Jetzt habe ich mich in der Intro nicht dumm gegeben, sondern ich habe einfach die Wahrheit erzählt. Ich habe einfach bis zur Vorbereitung dieser Episode keine Ahnung gehabt, was Realtime Operating Systems sind. Die erste Frage Warum ist Linux zum Beispiel keins? Dann haben wir uns in diesem Podcast natürlich schon öfters mit dem Thema auch Zeit beschäftigt, also Zeit Synchronisation und auch irgendwie Streaming und so weiter. Und ich sage mal, in der ganzen Cloud Software Engineering Welt redet man auch immer ja, das muss in Realtime passieren. Wie würdest du zusammenfassen, was ein Real Time Operating System eigentlich ist, warum Linux keins ist oder vielleicht auch Windows oder vielleicht sind die auch welche. Das erklärst du mir jetzt gleich. Und was ist eigentlich Real Time in unserem Verständnis?"
+        },
+        {
+            "start": 674840,
+            "end": 847780,
+            "speaker": "B",
+            "text": "Also das erste, was man in unseren ganzen Programmiersprachen tut, ist eigentlich der Begriff der Zeit kommt weg. Man hat die Schritte, die der Rechner ausführt und über Zeit macht man sich dabei keine Gedanken. Das dauert halt so lang wie es geht und desto mehr Geld in meine Hardware investiere, desto schneller geht es, was ja auch gut ist. Allerdings ist es also alles, was wir programmieren, von zeitlos gelöst in dem Sinn. Man hat dann allerdings, wenn man mit der Echtwelt kommuniziert, halt dann doch zeitliche Constraints. Also wenn man Ampelsteuerung denkt, sollte die Grünphase fünf und dreiig Sekunden lang sein und nicht, wenn die CPU da drinnen schneller wird, dann nur mit drei Sekunden Grünphasen oder so. Das ist ja nicht erwünscht. Das heißt, wenn man mit der Echtwelt interagiert, kommt dieser Zeitbegriff wieder in die Software dazu und man muss sich die zeitlichen Gegebenheiten der Anforderungen der Echtwelt anpassen. Das ist einmal der grobe Begriff Echtzeit. Hier gibt es dann noch Unterscheidungen zwischen etwas, was Soft Echtzeit heißt, Das heißt, man möchte probieren das möglichst gut zu machen. Es ist allerdings nicht katastrophal, wenn irgendwas schief geht. Das sind so typische Anwendungen bei Videostreaming. Wenn dort das Audiopaket zu spät kommt vom Server, dann habe ich einen kurzen Hacker im Audio und danach geht es weiter und man ärgert sich kurz, aber kann sein Fußballspiel weiterschauen, nichts Schlimmes passiert. Und dann gibt es noch harte Echtzeit. Bei harten Echtzeitanforderungen ist es so, dass wenn man die Zeit, die Deadlines verpasst, ist Mensch und Leben in Gefahr. Könnt zum Beispiel an den Airbag Controller denken, wenn der Signal kriegt zum Auslösen und der ist gerade dabei seine Festplatte zu defragmentieren, die er hoffentlich nicht hat und sieben Sekunden später den Airbag zündet, dann ist es ein Problem, weil er dann einfach die Funktion, die er tut, nämlich nicht mehr tut, nämlich die Sicherheit des Fahrgastes zu gewähren. Also das ist so dieses Echtzeitverhalten prinzipiell. Und ein Echtzeitbetriebssystem ist jetzt ein Software Framework, das hilft und unterstützt auf dem gegebenen Mikrocontroller oder Prozessor Software zu schreiben, die echtzeitfähig ist im Sinne von dieser soft und gegebenenfalls auch harten Echtzeitanforderungen, die man da hat. Linux ist tatsächlich ein Echtzeitbetriebsystem. Da hat Herr Gleixner jahrelang den Real Time Linux Patch gepflegt, der es letztes Jahr, glaube ich dann geschafft hat in Mainland integriert zu werden. Das heißt, Linux hat eine sehr fundierte und gut getestete Echtzeitfähigkeit. Was man da tut, das ist ein anderes Optimierungsziel wie generisches Desktop oder Serverbetriebssystem. Bei Desktop und Serverbetriebssystemen optimiert man primär auf Durchsatz. Man möchte möglichst viel Rechenleistung aus der CPU rausholen, man optimiert vielleicht noch auf Latenz. Ich möchte schnell auf Anfrage reagieren können. Und bei einem Echtzeitbetriebssystem optimiert man aber darauf, dass man in einer endlichen und messbaren endlichen und bekannten Zeit auf etwas reagieren kann. Das heißt, dort muss man möglichst schnell, wenn ein Interrupt auftritt, auf diesen Interrupt reagieren oder zumindest in einer gewissen abgeschränkten Zeit."
+        },
+        {
+            "start": 847860,
+            "end": 855460,
+            "speaker": "C",
+            "text": "Aber habe ich das jetzt beim klassischen Betriebssystem, reagiere ich ja auch möglichst schnell oder ich will ja nicht langsam reagieren jetzt auf irgendein Interrupt."
+        },
+        {
+            "start": 855860,
+            "end": 856340,
+            "speaker": "B",
+            "text": "Genau."
+        },
+        {
+            "start": 856580,
+            "end": 868580,
+            "speaker": "C",
+            "text": "Ist es dann einfach optimierter noch oder gibt es dann auch irgendwelche, weil du jetzt gesagt hast, in einer definierten Zeit, passiert dann auch was anderes bei so einer Reaktion auf einen Interrupt."
+        },
+        {
+            "start": 868580,
+            "end": 905120,
+            "speaker": "B",
+            "text": "Genau, bei so einem Echtzeitbetriebssystem passiert das. Wenn ein Interrupt sehr hoher Priorität kommt, auf den ich schnell reagieren muss, wird alles andere, kann dann eingehalten werden und wird geparkt. Jetzt das Serverbetriebssystem, das gerade eine Festplattentransaktion in flight hat, wird die auf jeden Fall fertig machen und vielleicht noch die nächsten zwei Sektoren, weil das gut ist für die Bandbreite und dann auf den Interrupt reagieren, weil da diese harte Echtzeitanforderung nicht da ist. Und ein hartes Echtzeit Betriebssystem parkt dann sofort, was es gerade tut und macht jetzt diesen Hochprion Interrupt. Das ist ein bisschen anderes Optimierungsziel. Und die Software oder die Kopaletten vom Betriebssystem müssen also alle unterbrechbar sein zu jedem Zeitpunkt."
+        },
+        {
+            "start": 905360,
+            "end": 919210,
+            "speaker": "A",
+            "text": "Okay, das bedeutet, so ein Interrupt ist nicht so ein klassischer Interrupt, wie wir ihn aus der Softwareentwicklung kennen, sondern so ein Interrupt hat Metadaten, wie zum Beispiel eine Priorität oder ähnliches, damit das Betriebssystem, ich sag mal, eine Ordered Queue dann irgendwie abarbeiten kann."
+        },
+        {
+            "start": 919210,
+            "end": 933970,
+            "speaker": "B",
+            "text": "Genau. Und ziemlich so ist dann auch die Implementierung. Es ist Ordered Q und die Priorität ist so das wichtigste Element. Also Prioritäten, das ist etwas, was man im Systemdesign schon festlegt, welche Prioritäten die verschiedenen Interrupts auf so einem System haben werden."
+        },
+        {
+            "start": 933970,
+            "end": 991610,
+            "speaker": "A",
+            "text": "Jetzt hast du von diesem Realtime Patch in Linux gesprochen, dass der gemerged wurde. Ich kann mich auch noch daran erinnern, dass da ziemlich viel News in der Industrie waren, aber wenn ich dir jetzt so zuhöre, dann sind die Verhaltensweisen von einem Real Time Operating System und einem, kann man sagen, nicht Real Time Operating System. Was ist das Gegenteil? Ja schon grundsätzlich anders. Und wenn ich mir heutzutage, weiß ich nicht, so ein Debian, Ubuntu oder Arc Linux oder irgendwas installiere, dann kann ich mich nicht daran erinnern, dass ich das Verhalten aktiv wähle. Also inwieweit sind denn diese zwei Modelle, nenne ich es mal, kompatibel miteinander oder haben explizite Konflikte? Also für mich ist schon wichtig, dass wenn irgendwas auf die Festplatte geschrieben wird, dass das zu Ende gemacht wird, bevor dann irgendwas anderes gemacht wird, Weil für mich jetzt in meinem Fall, weiß ich nicht, Datensicherheit oder ähnliches wichtiger ist als ich weiß jetzt nicht, was der Interrupt"
+        },
+        {
+            "start": 991610,
+            "end": 1023670,
+            "speaker": "B",
+            "text": "jetzt gerade macht, aber also auf deinem Linux Desktop System ist das verheiratet, das funktioniert gleichzeitig miteinander. Es sind jetzt die meisten Tasks, die du ausführst, sind nicht echtzeitkritisch, aber Audio zum Beispiel läuft jetzt in der Echtzeit Prioritätsdomäne, zumindest einige Audio Mixe unter Linux. Das ist eben, dass man diese Hacker verhindern kann. Hier ist allerdings mehr Soft Echtzeit, also wenn es jetzt mal passiert und Audioaussetzer ist, ist ja nicht tragisch, aber das ist miteinander verheiratebar und läuft auch nebenher."
+        },
+        {
+            "start": 1023750,
+            "end": 1048530,
+            "speaker": "C",
+            "text": "Aber ist jetzt der Unterschied zwischen Soft und Hard Limit oder wie du es genannt hast oder Deadlines? Ist es nur auf der Metaebene, dass ich jetzt entscheide, okay, es ist kritisch, ich habe da jetzt ein hartes Limit, weil eben die Ampelsteuerung dranhängt oder keine Ahnung, irgendeine Steuerung, wo sonst was kaputt ginge in meinem Prozess bei einer Maschine oder ist es wirklich auf Softwareebene dann auch irgendwie anders implementiert?"
+        },
+        {
+            "start": 1048530,
+            "end": 1093080,
+            "speaker": "B",
+            "text": "Es ist dann auf Software wieder anders implementiert, weil beim softecht System reicht es, dass ein von Interrupts innerhalb von einer gewissen Zeit passieren und schon gibt es einen kleinen Hacker. Das heißt, ich muss dort nicht jeden Corner Case vom Echtzeitbetriebssystem oder von dem Software Framework drauf anpassen, dass er sofort unterbrechbar ist. Hingegen beim harten Echtzeitbetriebssystem wie die Airbag Steuerung ist es auch nicht gut, wenn ein von mal der Airbag nicht auslöst, Da darf kein anderes Software Stück laufen, es darf nie die CPU blockiert sein. Das heißt, dort muss dieser hochbrüche Interrupt immer zeitgerecht abgearbeitet und dafür muss das gesamte Restsystem entsprechend mit Garantien so sein, dass diese Unterbrechung innerhalb von einer gewissen Zeit stattfindet."
+        },
+        {
+            "start": 1093709,
+            "end": 1126190,
+            "speaker": "C",
+            "text": "Wie sieht es denn grundsätzlich mit Startzeiten aus? Weil ich mache ja zum Beispiel in einem anderen Projekt eine Steuerung von einem Schalter und dieser Schalter, wenn man den resetten will, muss man den fünfmal hintereinander schnell vom Strom nehmen und ich denke mir immer, wie lang muss ich da zwischen dem vom Stromnehmen warten, damit er überhaupt realisiert, dass er gerade fünfmal hintereinander irgendwie vom Strom genommen worden ist Und das scheint irgendwie da Millisekunden zu funktionieren oder was ja jetzt mit der normalen Bootzeit von irgendeinem Linux ganz weit weg wäre."
+        },
+        {
+            "start": 1126430,
+            "end": 1193040,
+            "speaker": "B",
+            "text": "Das ist natürlich unvergleichlich. Unsere Embedded Systeme booten tatsächlich sehr stark, also es kommt jetzt ein bisschen darauf an, was man hat, aber Millisekunden ist die Größenordnung in der man die Bootzeit schon berechnen kann. Man hat dann oft, wenn der Software Stack komplex ist, noch eine gewisse Initialisierung. Warum ist es so viel schneller wie jetzt der Linux Dispute? Der Linux hat einmal die Firmware auf X, die die ganze Peripherie enumeriert und dann entweder eben UEFI oder wie auch immer Dinge noch tut, die man gar nicht kontrollieren kann als Entwickler. Und dann ist auch diese Reinitialisierung, die Linux Kernel vornimmt von der ganzen Peripherie, Das ist alles sehr zeitintensiv. Auf Embedded hat man einfachere Peripherie meistens, die schneller bereitsteht, weniger Quarze, die einschwingen müssen, weniger Verzögerungen, die man schon in der Hardware beim Power Up hat. Und es gibt Plattformen, die innerhalb von Mikrosekunden die ersten Instruktionen aus dem Flash ausführen. Also da ist die Start up Zeit wirklich in Mikrosekunden. Da legt man den Duct an, wartet fünf bis zehn Datzyklen, danach ist es soweit stabil und dann führt er schon die ersten Instruktionen aus. Also da instantan würde ich fast sagen."
+        },
+        {
+            "start": 1193040,
+            "end": 1195480,
+            "speaker": "A",
+            "text": "Hast du gerade DAC oder Taktzyklen genannt?"
+        },
+        {
+            "start": 1195480,
+            "end": 1196640,
+            "speaker": "B",
+            "text": "Taktzyklen."
+        },
+        {
+            "start": 1196640,
+            "end": 1199960,
+            "speaker": "A",
+            "text": "Achso, ich habe mich gerade gefragt, was ist eine Entenzykle, Andi?"
+        },
+        {
+            "start": 1199960,
+            "end": 1209530,
+            "speaker": "C",
+            "text": "Das ist dieses tirolerische D und T. Wir haben ja auch ein hartes T und ein weiches T. Diese Begriffe kennst du ja gar nicht. Bei uns ist es, muss man das dazu sagen, weil bei uns klingt alles gleich."
+        },
+        {
+            "start": 1209850,
+            "end": 1230970,
+            "speaker": "A",
+            "text": "Aber entschuldige jetzt meine dumme Frage, aber ich bin ein großer Fan von Es gibt keine dummen Fragen und ich habe seit Jahr und Tag hier so ein, zwei Arduino Bastelkits, mit denen ich mal was machen möchte. Hardware. Also ich bin kompletter Hardware Noob. Ich habe das mal damals in der Ausbildung gemacht. Wenn du jetzt von Plattformen sprichst, die nach etlichen Taktzyklen schon ready sind, irgendwas auszuführen, sprechen wir da von der Software oder von der Hardware?"
+        },
+        {
+            "start": 1230970,
+            "end": 1251990,
+            "speaker": "B",
+            "text": "Von der Hardware. Also das ist, wenn man so Embedded System oder so Mikroprozessor startet, dann gibt es eine gewisse Reihenfolge von Signalen, die high low, low high werden müssen. Man muss einen Takt anlegen, der muss dann ein bisschen stabil bleiben. Die Spannungsversorgung muss eine gewisse Zeit lang stabil sein. Und wenn das alles gegeben ist, dann beginnt die CPU mit der Ausführung der ersten Instruktionen."
+        },
+        {
+            "start": 1251990,
+            "end": 1255710,
+            "speaker": "A",
+            "text": "Von welchen Art Chips reden wir da? Wir reden da jetzt nicht von einem ESP."
+        },
+        {
+            "start": 1256830,
+            "end": 1273770,
+            "speaker": "B",
+            "text": "Ist eine komplexere Plattform geht schon auch in die Richtung. Allerdings, ich rede jetzt vor allem von Cortex M, also Arm Cores verschiedener Hersteller oder AVR hat auch ein paar sehr kleine acht Bit Mikrocontroller, die jetzt in der Hinsicht besonders schnell sind, weil sie besonders einfach sind vom Aufbau."
+        },
+        {
+            "start": 1273850,
+            "end": 1280530,
+            "speaker": "C",
+            "text": "Aber wenn wir da jetzt von einer Millisekunde oder so sprechen, da läuft dann wirklich schon die Firmware Software, die du gecodet hast."
+        },
+        {
+            "start": 1280530,
+            "end": 1337610,
+            "speaker": "B",
+            "text": "Genau, erste Instruktion läuft da innerhalb von wenigen Millisekunden los. Was kann man sich vorstellen als Startseite? Wir haben zum Beispiel ein Gerät mitentwickelt, das ist ein Fernrohr und da ist eine optische Stabilisierung drinnen, weil wenn man mit seiner Hand so ein Fernglas hält, wackelt der Mensch, der hat so eine gewisse Frequenz, wo die Muskeln wackeln und dieses Wackeln führt zu einer gewissen optischen Unschärfe und darum kann normaler Vergrößerung mehr wie zwanzig fach mit am Hand gehaltenen Gerät nicht erreicht werden. Und wenn man darüber hinaus möchte, braucht man Stativ, das heißt man stellt es am Boden, dann ist das Wackeln aus der Hand des Menschen geringer und damit kann man auch in weiterer Entfernung optisch gut sehen. Andere Möglichkeit ist aber, dass man dieses Wackeln mit IMU Sensoren misst, das heißt man misst, wie der Mensch wackelt, mit was für Sensoren. Also es ist eine Immersion Measurement Unit, das ist Sensorik, die Beschleunigung in den drei Raumrichtungen misst, ist es das klassische,"
+        },
+        {
+            "start": 1337610,
+            "end": 1339490,
+            "speaker": "C",
+            "text": "was in meinem Handy auch verbaut ist."
+        },
+        {
+            "start": 1343570,
+            "end": 1463750,
+            "speaker": "B",
+            "text": "Mit dieser EMU misst man das Wackeln des Menschen raus und steuert dann eine Linse mit vier Motoren an und die wackelt man links, rechts und so weiter, um somit das Wackeln der Hand auszugleichen. Damit können wir zur optische Auflösung von Faktor vierzig und mehr auch jetzt im Handbetrieb ermöglichen. Und das ist wirklich spannend. Also ich habe dadurch einen Prototypen durchgeschaut und bin dann im Tal im Büro gesessen und habe vom Berg hinauf geschaut und habe gesehen, ah ja, da ist ein Gipfelkreuz, ich sehe es und wir haben dann so einen Anschaltknopf gehabt, dann habe ich den gedrückt und dann ist diese Bildstabilisierung an und man merkt es gar nicht. Aber auf einmal erwischt man sich dabei, wie man jetzt nicht probiert das Gipfelkreuz an sich zu sehen, sondern wo Man probiert zu lesen, was da auf der Inschrift jetzt drauf steht. Also das ist wirklich stabilisiert, gewaltig, ist wirklich Riesensprung. Und auf jeden Fall, diese Mechanik ist sehr, sehr fein, weil diese Linse wird im Mikrometerbereich, muss die nachjustiert werden. Das ist jetzt etwas großes, sehr feine Mechanik, die natürlich auch sehr anfällig ist für Schlag oder Stoß, würde dort Schaden nehmen. Und darum gibt es auch eine Parkposition. Und eine der Anforderungen zum Beispiel an dieses Produkt war, wenn dieses Gerät jetzt am Tisch liegt und es ist an, das heißt die Linse ist nicht in Parkposition und die Stabilisierung ist an und es fällt hinunter, dann muss die IMU diesen Fall erkennen und die löst dann einen Interrupt aus. Also auf diesen imus kann man so Muster erkennen, hinterlegen, die sie automatisch autonom erkennen, da ist zum Beispiel Fallerkennung dabei, dann muss es während dem Fall diese Linse in die Parkposition bringen, in der Parkposition, wenn dann Klammern um diese Linse festgefahren, dass die bei Fall geschützt ist. Und das muss es schaffen von der Tischplatte hinunter. Also es ist so die Geschwindigkeit, über die wir da reden. Und das kann es aber auch aus dem Deep Sleep, das heißt auch wenn der Mikroprozessor schlaft und die EMU diesen Interrupt generiert, wacht die CPU schnell genug auf und führt diese Sequenz an Instruktionen aus, die da zu dieser sicheren Position führen, dass es keinen Schaden nimmt, wenn es dann am Boden aufknallt."
+        },
+        {
+            "start": 1464220,
+            "end": 1475580,
+            "speaker": "A",
+            "text": "Doofe, wenn ich was vom Tisch schmeiße, wie viel Zeit haben wir da in der Regel? Klar, kommt auf das Gewicht an und pipapo. Also ich will keine hochwissenschaftliche Rechnung, sondern ich habe jetzt ein Handy oder dein"
+        },
+        {
+            "start": 1475580,
+            "end": 1477740,
+            "speaker": "C",
+            "text": "Zoom Gerät, Fernglas heißt es auf Deutsch,"
+        },
+        {
+            "start": 1478060,
+            "end": 1488460,
+            "speaker": "A",
+            "text": "dein Zoom Gerät, Fernglas, weiß ich nicht, ein klassisches Fernglas hat bei mir jetzt noch keine Technik, aber ich bin auch nicht im Fernglas Business so zwei hundert"
+        },
+        {
+            "start": 1488460,
+            "end": 1504690,
+            "speaker": "B",
+            "text": "fünfzig bis fünf hundert Millisekunden eine Zeit lang braucht, bis der Fall erkannt wird, dann wird dieser Interrupt ausgelöst und dann muss diese ganze Sequenz oder muss auch die Mechanik sich schon bewegt haben, müssen Motoren bewegt werden, die Linse ist jetzt nicht schwer, das heißt die Trägheit ist nicht sehr hoch, aber doch muss sie dann bewegt werden."
+        },
+        {
+            "start": 1504850,
+            "end": 1513010,
+            "speaker": "A",
+            "text": "Bin mal hingefallen, hatte meine Apple Watch dabei, die hat dann auch gesagt, hey, du bist gerade hingefallen, soll ich einen Notruf rufen? Das müsste doch eigentlich genau dieselbe Funktion sein, oder?"
+        },
+        {
+            "start": 1513010,
+            "end": 1514210,
+            "speaker": "B",
+            "text": "Genau, ist genau diese Funktion."
+        },
+        {
+            "start": 1514530,
+            "end": 1525660,
+            "speaker": "A",
+            "text": "Oder ich habe auch mal irgendwo gesehen, da gibt es so so Helme für Fahrradfahrer und wenn die fallen, dann löst da irgendwie so ein Kopfkissen aus, was dann irgendwie den Kopf schützt. Das ist ja auch dann."
+        },
+        {
+            "start": 1525660,
+            "end": 1536980,
+            "speaker": "B",
+            "text": "Genau, das ist diese gleiche Anwendung, weil diese imus eben diese Fallerkennung als sozusagen Offload Produkt drinnen haben. Das heißt, wenn man so eine IMU hat, hat die meistens genug Logik, um Stürze zu erkennen."
+        },
+        {
+            "start": 1536980,
+            "end": 1544900,
+            "speaker": "C",
+            "text": "Und dieses Wackeln, was du ausgleichst, in was für einer Zeitspanne passiert sowas? Also damit es sinnvoll funktioniert."
+        },
+        {
+            "start": 1545140,
+            "end": 1553360,
+            "speaker": "B",
+            "text": "Die Frequenz vom menschlichen Wackeln, wenn ich mich recht entsinne, sowas einem Herz, also ungefähr. Das ist die Frequenz, mit der Mensch wackelt."
+        },
+        {
+            "start": 1553920,
+            "end": 1556840,
+            "speaker": "C",
+            "text": "Ein Hertz heißt einmal pro Sekunde oder ist es mehr?"
+        },
+        {
+            "start": 1556840,
+            "end": 1557600,
+            "speaker": "B",
+            "text": "Einmal pro Sekunde."
+        },
+        {
+            "start": 1557600,
+            "end": 1562200,
+            "speaker": "C",
+            "text": "Okay, das heißt aber, ich habe dann ein tausend Millisekunden Zeit, um irgendwas zu machen."
+        },
+        {
+            "start": 1562200,
+            "end": 1572720,
+            "speaker": "B",
+            "text": "Genau, das ist eigentlich sehr einfach für regelungstechnische Anwender. Also alles, was Mensch tut, ist eigentlich sehr langsam biochemische Prozesse. Das ist jetzt aber, ich meine ein"
+        },
+        {
+            "start": 1572720,
+            "end": 1579450,
+            "speaker": "A",
+            "text": "tausend Millisekunden für ein tausend Millisekunden, ich meine, das ist eine Sekunde, dafür brauche ich ja jetzt kein Real Time Operator System. Das ist ja, das ist ja, das sind ja Welten."
+        },
+        {
+            "start": 1579530,
+            "end": 1595010,
+            "speaker": "B",
+            "text": "Das ist die Frequenz des Wackelns. Was man allerdings schon tut, man muss das ja messen. Das heißt, man misst es dann mit einem Oversampling, man misst dann alle Millisekunden, zum Beispiel die EMU aus, um diese Schwingung, die man jetzt da macht, das Wackeln aufzulösen. Das muss man fein auflösen."
+        },
+        {
+            "start": 1595010,
+            "end": 1598810,
+            "speaker": "C",
+            "text": "Also der Mensch ändert quasi einmal pro Sekunde irgendwas, aber bewegen tut er sich,"
+        },
+        {
+            "start": 1598970,
+            "end": 1603850,
+            "speaker": "B",
+            "text": "er bewegt sich ständig natürlich. Ja, aber es ist so, die Grundfrequenz ist so im Herzbereich."
+        },
+        {
+            "start": 1604420,
+            "end": 1667740,
+            "speaker": "A",
+            "text": "Wie testet man sowas? Also ich erkläre dir jetzt mal, wie ich mir das bildlich gerade vorstelle. Du sitzt an deinem Schreibtisch, du hast da deinen Chip, da hast du ein paar Kabel dran, die vielleicht an Oszilloskop gehen oder vielleicht sogar an deinen Computer in irgendeiner Art und Weise irgendwas übersetzt das halt, damit du halt Software drauf löschen kannst. Diese Kabel sind hoffentlich anderthalb Meter lang oder ähnliches und dann schreibst du die Software für diese Chips und dass du halt packst die Schwellenwerte da rein, ab wann du denkst, es ist ein Sturz oder nicht. Also ich gehe stark davon aus, dass man da irgendwelche Werte sagen kann, wenn du sagst gerade zwei hundert fünfzig Millisekunden bis fünf hundert Millisekunden, je nach Höhe des Tisches wahrscheinlich. Und dann spielst du die dumme Katze und bewegst das Ding halt zum Tischrand, lässt das fallen und guckst, ob du einen, weiß ich nicht, FMT Printline auf dem Screen siehst und der richtig gefallen ist und dein Interrupt getriggert wurde oder völlig doof. Wie debuggt man das? Wie testet man das und wie viele Sensoren machst du während des Testens kaputt?"
+        },
+        {
+            "start": 1668540,
+            "end": 1714170,
+            "speaker": "B",
+            "text": "Ja, also die Sensorik haltet es schon aus, die Optik kaputt machen. Man testet natürlich als erster nicht gleich mit der Optik, aber ja, das ist natürlich Teil von diesem Entwicklungsprozess. Wie testet man das? Das ist eine sehr berechtigte Frage in dem Fall. Testet was mit Geräten, wo es egal ist, die sind wirklich mit der teuren Optik gebaut, sondern es sind halt Geräte, die man runterfallen lässt. Und letztlich schaut man, also die Software modifiziert man halt so, dass sie danach wieder auftut, diese Fangvorrichtung, sondern in der verharrt und schmeißt sie runter und misst mit, trackt mit, sobald ihr den Interrupt erhalten habt, der Sturz ist erkannt, schaue ich mir an, wie lange braucht es, bis es in dieser Phase ist, dass es das festgehalten hat und danach macht man Post Mortem Analyse, ob es schnell genug war."
+        },
+        {
+            "start": 1714490,
+            "end": 1742400,
+            "speaker": "A",
+            "text": "Wenn du sagst, du trackst das mit, du speicherst das mit, werden dann Daten auf dem Device selbst gespeichert oder hast du während des Fallens eine Kabelverbindung zu deinem Computer, also hast du da irgendeine Art von persistentem RAM oder ähnliches, wo die Daten hingeschrieben werden, dann wurde das ausgelöst, pipapo, und liest dann später die Debugging Informationen aus oder hast du konstant irgendeine Connection zu irgendeinem Screen Device, wo du die ganze Sache sofort auslesen kannst?"
+        },
+        {
+            "start": 1742630,
+            "end": 1784490,
+            "speaker": "B",
+            "text": "Ja, das ist eher gute Frage, oder Gute Frage in dem Sinn, weil das etwas ist, was im Prediction schwer ist, weil die Speicherbandbreiten meistens sehr gering sind. Das heißt wenn es jetzt nicht im RAM Platz hat, hat man eigentlich kaum einen Speicher, der schnell genug ist, um Echtzeitdaten mit zu tracken. Dann hat man eigentlich nur die Möglichkeit, über spezialisierte Debug Schnittstellen diese Information schnell nach außen zu bringen und dann muss man kabelgebunden arbeiten oder beides sind natürlich Ansätze. In dem Fall hat es im Rahmen Platz gehabt und dann macht man das, weil es einfacher ist und schließt danach in Debug an und liest es dann aus. Aber sonst muss man es kabelgebunden machen und diese Tracing Daten schnell genug mitschreiben."
+        },
+        {
+            "start": 1784650,
+            "end": 1806910,
+            "speaker": "A",
+            "text": "Von welchen Rechenleistungen sprechen wir denn bei diesen Chips? Also damals wurde ja gesagt, keiner braucht mehr als vier KB RAM, um zum Mond zu fliegen und so weiter und so fort. Ich meine, wir wissen alle, wenn wir heute in Google Chrome starten, dann sind wir weit von entfernt. Wovon reden wir? Wie viel RAM hat die CPU überhaupt? Rechnen wir da was in Megahertz oder rechnen wir drunter etc. Megahertz haben wir"
+        },
+        {
+            "start": 1806910,
+            "end": 1839230,
+            "speaker": "B",
+            "text": "schon doch, also wir haben so, also langsame Systeme sind zweistellige Megahertz und der schnellere sind schon drei sechshundert Megahertz. Ist jetzt alles nicht untypisch. Es gibt auch Gigahertz, da sind wir in hohen Leistungsklassen. Vom internen Speicher reden wir jetzt überschreckend kleine. Also wenn man da ein bis zwei Megabyte hat, hat man schon ein Riesensystem. Da gibt es auch Systeme mit zwei hundert sechs und fünfzig KB Flash, da musst du nicht unsere Firmware hineinpassen. Und RAM reden ähnliche Größenordnungen, so zwei hundert sechs und fünfzig KB ist so, fünf hundert zwölf KB sind so RAM Größen."
+        },
+        {
+            "start": 1839230,
+            "end": 1847070,
+            "speaker": "C",
+            "text": "Aber da reden wir jetzt von Setup für das Fernglas zum Beispiel. Also wenn jetzt ein ESP irgendwie sowas habt, dann das ist meistens schon wesentlich größer, oder?"
+        },
+        {
+            "start": 1847070,
+            "end": 1864130,
+            "speaker": "B",
+            "text": "Also der ESP ist auch nicht sehr viel größer, ist schon einer größeren Mikrocontroller, der hat halt vielleicht sowas wie zwei Megabyte RAM oder vier Megabyte Flash. Also das ist aber dann schon sehr üppig. Hier gibt es sicher auch kleinere Varianten, weil man nicht immer so viel Speicher und RAM braucht."
+        },
+        {
+            "start": 1864370,
+            "end": 1900590,
+            "speaker": "C",
+            "text": "Aber man sieht da jetzt schon, dass das wirklich eine andere Welt ist. Also sogar bei den Sachen bewegen wir uns doch im unteren Segment, obwohl man ja so sagt, eigentlich Cortex und Arm und die Dinger sind ja im Handy verbaut, die sind ja super stark mittlerweile. Aber wenn man dann in einem Fernglas unterwegs ist, scheinbar doch noch eine andere Welt. Und da kommt ja auch dieses ganze Klischee her, was der Andi jetzt in der Intro auch erwähnt hat, dass das von außen für uns Softwareentwickler und für uns Cloud Leute. Du bist ja bekanntlicherweise oder für mich bekanntlicherweise kein großer Cloud Fan. Du erklärst mir immer alles, was ich baue mit meinen Schalter. Das ist Cloud würdest du nie verwenden."
+        },
+        {
+            "start": 1900590,
+            "end": 1907350,
+            "speaker": "B",
+            "text": "Ich sage oft das deutschsprachige Mensch hat einen großen Vorteil oder icloud your data. Also man weiß ja, was da passiert."
+        },
+        {
+            "start": 1909270,
+            "end": 1917590,
+            "speaker": "A",
+            "text": "Das ist leider der beste Spruch, den ich seit langem gehört. I cloud your data. Wo hast du den denn her?"
+        },
+        {
+            "start": 1917670,
+            "end": 1977980,
+            "speaker": "C",
+            "text": "Wahnsinn, OK. Also andere Welt Und für mich ist es aus außenstehender immer so super schwierig. Hardware irgendwie alles ist super langsam, ich kann nichts testen, haben wir schon gehört. Es ist natürlich auch nicht leicht irgendwie sowas mit einer Linse zu testen, aber auch ganz klassische Software jetzt schon irgendwie schwierig zum Testen und alles ist so unhandlich, würde ich mal sagen. Kannst du uns mal aufklären, wie denn das jetzt aktuell eigentlich so aussieht? Wie entwickelt man denn heutzutage so ein Hardware Projekt? Wo fängt es an? Was für Elemente sind da überhaupt dabei, damit man mal so versteht, wie so ein Prozess aussieht und dann kann man später auch noch in die Detaile mit reintauchen, wie es dann konkret ausschaut. Testing haben wir jetzt schon ein bisschen angesprochen, aber wo fängt denn so ein Projekt an? Mit was fängt man an und wo hört man auf? Für mich als Cloud Mensch, wenn ich eine Idee habe, schreibe das in LLM heute rein, zehn Minuten später wie ein Test und dann braucht vielleicht nur fünfzehn Minuten bis es online ist, aber dann steht die ganze Sache. Wie schaut das im Vergleich zu einem Hardware Projekt aus?"
+        },
+        {
+            "start": 1977980,
+            "end": 2036660,
+            "speaker": "B",
+            "text": "Ja, also beim Hardware Projekt ist es ja so, wenn wir am Kunden Projekte starten, starten wir sehr oft in einer Anforderungsfindungsphase. Das ist, ich glaube, das kennt man auch jetzt aus ganz klassischen Softwarekunde eigentlich. Und hier haben wir dann diese knackige Aufgabe hier sowohl die Hardware als auch die Software für den Kunden dann festzulegen. Wobei ich sagen muss, Hardware ist feiner festzulegen mit Kunden, weil wenn sie dann Hardware Limitationen verstehen, Kunden, die akzeptieren sie Softwarelimitationen sind viel weniger verständlich intuitiv glaube ich, für Leute, die jetzt da nicht vom Fach sind, aber wenn man sagt, die CPU ist nicht schneller, weil wir haben halt die langsame gewählt, aha, okay, ist nicht schnell, das kann man verstehen. Hingegen der Algorithmus ist schneller, da musst du halt ein bisschen drüber nachdenken, da geht schon was oder ein bisschen optimieren und so. Also da ist viel weniger, wie soll ich sagen, Entgegenkommen des Kunden zu erwarten bei Softwarelimitation. Hardware Limitationen versteht er, wie entscheidet man"
+        },
+        {
+            "start": 2036660,
+            "end": 2042900,
+            "speaker": "C",
+            "text": "da, was in Software kommt und was in Hardware kommt? Oder ist die Hardware eigentlich nur die Steuerung und der Rest ist immer alles Software?"
+        },
+        {
+            "start": 2042900,
+            "end": 2071250,
+            "speaker": "B",
+            "text": "In den meisten Fällen machen wir Mikrocontroller Projekte, das heißt wir machen dann Firmware und lösen die Business Probleme in Software. Das funktioniert fast immer gut, außer es ist sehr zeitkritisch, dann braucht man oft FPGA oder ähnliches, wo man jetzt die Echtzeitanforderungen dann auslagert. Also wenn wir sehen, es ist sehr knackig von den zeitlichen Anforderungen, dann wird meistens FPGA noch dazu verwendet, den wir dann über den Mikrocontroller ansteuern und dann die Logik dort machen."
+        },
+        {
+            "start": 2071250,
+            "end": 2077780,
+            "speaker": "C",
+            "text": "Und wie schaut dann so ein Mikrocontroller Setup aus? Ist das dann, kann ich mir das vorstellen wie ein Raspberry Pi mehr oder weniger, nur dass ihr das halt kann."
+        },
+        {
+            "start": 2077850,
+            "end": 2087610,
+            "speaker": "B",
+            "text": "Customist, Na also wir kaufen schon die Chips vom Band, gehen Bestücktomaten drauf, wir machen das Ganze BCB designen wir."
+        },
+        {
+            "start": 2087690,
+            "end": 2091770,
+            "speaker": "C",
+            "text": "Also die BCB ist die Platine, die grüne Platine für mich als Laie."
+        },
+        {
+            "start": 2091850,
+            "end": 2149230,
+            "speaker": "B",
+            "text": "Genau, die grüne Platine, das grüne Zeug, wo das Ganze draufgeklebt wird. Also das machen wir meistens. Das hat sehr viele mechanische Anforderungen, weil möchte diese Produkte immer irgendwo hinein verbauen. Da ist aber mechanischer Teil, bei hoher Leistung der Komponenten gibt es Kühlungskomponente, das heißt, da muss man auch mit der Mechanik mit designen. Wie kühlt man das? Wo ist da Metall? Das ist dann Gehäusekühlripp, ableitet diese Wärme. Dann hat der Kunde immer Spannungsversorgungen, da gibt es verschiedene Welt, da gibt es vier und zwanzig Volt Gleichstromwelten, da gibt es zwei hundert dreiig Volt Wechselstrom, da gibt es dann auch für feinere Elektronik drei komma drei oder USB versorgt fünf Volt. Also das sind dann verschiedene Versorgungskonzepte oder man möchte Batterie, Solarpanel dann hat man wirklich ganz anderen Spannungen. Also das gilt es dann immer zu berücksichtigen. Und da gibt es erstaunlich viele Varianten an Anforderungen, die da zusammenkommen, warum sich halt dann custom designtes BCB rentiert für den Kunden."
+        },
+        {
+            "start": 2149310,
+            "end": 2158430,
+            "speaker": "C",
+            "text": "Aber was dann am Ende rauskommt, ist so etwas, wie man klassischen Computer aufbauen würde. Also man hat den Mikrocontroller, man hat dann irgendwo RAM außen drauf."
+        },
+        {
+            "start": 2158830,
+            "end": 2169870,
+            "speaker": "B",
+            "text": "Eigentlich nicht, dass man schaut, dass man das nicht tut. Kein RAM, kein Flash. Man schaut, dass man mit dem System oder Chip auskommt mit diesen eins Megabyte, zwei Megabyte Größenordnungen von."
+        },
+        {
+            "start": 2169870,
+            "end": 2179630,
+            "speaker": "C",
+            "text": "Okay, das ist das ist dann am Chip schon drauf und dann habe ich meine normalen Schnittstellen, UART Schnittstellen, wie bei so einem Raspberry und da baue ich dann Sachen dran."
+        },
+        {
+            "start": 2179630,
+            "end": 2180030,
+            "speaker": "B",
+            "text": "Genau."
+        },
+        {
+            "start": 2180190,
+            "end": 2217390,
+            "speaker": "A",
+            "text": "Ich möchte mal ganz kurz zu der PCB Erstellung zurückkommen. Ich habe damals auch Platinen geätzt und designt und allem drum und dran. Und wenn ich das jetzt alles immer richtig verstanden habe, dann geht es da ja immer um sehr hohe Stückzahlen, damit das überhaupt rentabel ist ist. Das ist aber bei euch völlig anders. Das bedeutet, da ihr ja Customer Entwicklung macht, ätzt ihr auch mit hoher Wahrscheinlichkeit eine unglaublich geringe Stückzahl an Platinen, weil weiß ich nicht, vielleicht nicht jeder Kunde den Chip oder das, was ihr da habt, mal braucht oder vielleicht doch jetzt mit dem Fernglas vielleicht doch, wenn es dann später ein Produkt wird, was dann an, weiß ich nicht, an wen verkauft man den Ferngläser? An Jäger, Wanderer oder ähnliches."
+        },
+        {
+            "start": 2217630,
+            "end": 2221630,
+            "speaker": "C",
+            "text": "Vögel beobachtet an Birdwatcher, großes großes Business."
+        },
+        {
+            "start": 2221920,
+            "end": 2251330,
+            "speaker": "A",
+            "text": "Okay, ich weiß jetzt nicht, wie viele Birdwatcher es weltweit gibt. Ich bin nicht in dem, ich bin nicht in dem Bird Watching Business. Aber das bedeutet, habt ihr eigentlich für jede Auftragsarbeit ebenfalls die Massenfertigung als Anforderung, wie jetzt in dem Birch Watching Business? Oder habt ihr auch Hey, ich habe eine Produktionsstraße, da ist mir irgendwie, die ist von ein tausend neun hundert siebzig, da ist mir der Controller hops gegangen, könnt ihr mal was Neues da bauen und dann macht ihr davon nur drei Platinen oder sowas?"
+        },
+        {
+            "start": 2251330,
+            "end": 2271450,
+            "speaker": "B",
+            "text": "Tatsächlich, diese Anfrage, die du gerade skizziert hast, haben wir gerade neulich gehabt, da haben wir dann drei Platinen gemacht. Völlig random, aber ist tatsächlich etwas, wo es sich rentiert oder auch für Custom Design Geld in die Hand zu nehmen, auch wenn es dann nur drei Stück ist, weil so Produktionsstraße in Summe sehr viel teurer ist wie diese Elektronikkomponenten dort."
+        },
+        {
+            "start": 2271450,
+            "end": 2280020,
+            "speaker": "C",
+            "text": "Dafür hast du da keine Platzprobleme, oder? Weil also bei so einem bei so einer Produktionsstraße ist wahrscheinlich egal, ob das, keine Ahnung, sogar Quadratmeter Platine wäre."
+        },
+        {
+            "start": 2280020,
+            "end": 2368810,
+            "speaker": "B",
+            "text": "Das stimmt, das wäre dann total egal. Also hier kann man dann mit Menschen, wie soll ich denn sagen, menschenwürdigen Größen der Bauteile arbeiten, also wo man die Widerstände noch sehen kann und so extrem große Dinge und vielleicht sogar selbst löten und sonst ist Massenfertigung. Also man braucht bei Gott nicht jetzt die Millionenstück im Jahr, dass sich das rentiert, sondern das rentiert sich schon ab oder kann sich schon notieren. Ab fünfzig Stück im Jahr sind Customs Design können schon wirtschaftlich tragfähig sein. Das kommt jetzt natürlich ein bisschen auf den Markt drauf an, also Computermaus, nein, braucht man nicht für fünfzig Stück im Jahr arbeiten, aber für Messgeräte zum Beispiel, da ist auch die Marge entsprechend dann natürlich pro Gerät groß, weil die Entwicklungskosten abgetragen werden müssen. Aber auch da rentieren sich aus vielen Gründen bcbs und da gibt es dann oft fünfzig Stück im Jahr Abnahmemenge von Custom Designs. Also es ist ganz üblich mit fünf hundert Stück im Jahr ist man schon gut dabei für Industrialisierung. Also da rentiert sich das schon sehr schnell aufgrund der reduzierten Ausfallwahrscheinlichkeiten, die ein BCB im Vergleich zu einer aus Komponenten zusammengesteckten Lösung hat. Lustigerweise, das, was am meisten ausfällt in der Elektronik sind die Stecker. Also das ist mit der Größenordnung ist das die Ursache Nummer eins. Das heißt, beim BCB hat man den Vorteil, dass man die Steckverbindungen minimiert hat, weil man die Sachen ja auflötet, damit die Produktlanglebigkeit gegeben ist, was dann natürlich Wartung und Reparaturkosten reduziert im Produkt Lifecycle."
+        },
+        {
+            "start": 2368810,
+            "end": 2373610,
+            "speaker": "C",
+            "text": "Aber du meinst jetzt mit Stecker, dass sie über die Zeit kaputt gehen oder schon bei der Lieferung?"
+        },
+        {
+            "start": 2373770,
+            "end": 2378569,
+            "speaker": "B",
+            "text": "Nein, über die Zeit, also über die Zeit Stecker gehen kaputt. Das ist das, was Stecker tun."
+        },
+        {
+            "start": 2378810,
+            "end": 2387690,
+            "speaker": "A",
+            "text": "Was ist, wenn du sagst, ein Ausfall bei einem Stecker? Also einen Stecker steckt man oder er steckt nicht. Also was ist ein Ausfall bei einem Stecker?"
+        },
+        {
+            "start": 2388010,
+            "end": 2391240,
+            "speaker": "C",
+            "text": "Hast du noch nie Wackel gehabt, Andi? Heißt das bei euch überhaupt Wackler?"
+        },
+        {
+            "start": 2391720,
+            "end": 2401000,
+            "speaker": "A",
+            "text": "Wackelkontakt? Ich meine jetzt nicht die Band hier mit ich bin alte Lampe aus den ERN oder wie der Song da heißt, sondern okay, also wir reden über Wackelkontakt,"
+        },
+        {
+            "start": 2401000,
+            "end": 2468100,
+            "speaker": "B",
+            "text": "wir reden verschieden, also nicht nur Wackelkontakte. Stecker müssen einmal hohe Federkraft haben, dass der Kontakt sauber stattfindet. Also Steckkontakt ist immer elektronisch gesprochen ein ohmscher Widerstand, da ist immer Widerstand und wenn der groß wird, gibt es ein Problem. Das heißt, es muss mit Kraft zusammengepresst werden. Diese Kraft kann nachlassen. Geräte können Vibrationen ausgesetzt sein, schütteln, das diesen Stecker löst. Man hat dann das Problem, dass das vielleicht alles aufgekratzt ist. Wenn da starke Kontakte sind, dann kommt vielleicht Feuchtigkeit oder Öl dazu, irgendwas Korrosives, dann entstehen da seltsame Effekte auf diesen Metallen, die da zusammenkommen. Schmutz kann reinkommen, der möglicherweise leitet ist, zwischen zwei Steckerkontakten in irgendeiner Art leitfähige Verbindung herstellt. Also gibt es viele Arten, wie dieser Stecker ausfallen kann. Er ist auf jeden Fall wesentlich anfälliger dafür, wie jede Art von Lötkontakten, vor allem Lötkontakt können auch Schutz isolieren. Das heißt, er ist dann gegen Umwelteinflüsse recht robust, während der Stecker in seiner Natur stecken muss, offene Kontakte braucht."
+        },
+        {
+            "start": 2468420,
+            "end": 2472100,
+            "speaker": "A",
+            "text": "Als Laie würde ich da sagen, gibt es dafür nicht die klassische Zugentlastung."
+        },
+        {
+            "start": 2473220,
+            "end": 2486680,
+            "speaker": "B",
+            "text": "Zugentlastung ist sehr wichtig, weil wenn man das nicht hat, ist der Steckerkontakt innerhalb von wenigen Wochen kaputt. Aber gegen die Vibrationen und verschiedene andere Arten von Umwelteinflüssen hilft auch die Zugentlastung nicht."
+        },
+        {
+            "start": 2486680,
+            "end": 2519900,
+            "speaker": "C",
+            "text": "Jetzt hast du schon gesagt, ihr designt es dann so oder man designt so, dass man möglichst wenig Stecker hat. Wie schaut denn so Design grundsätzlich aus? Habt ihr die Anforderungen vom Kunden oder dem irgendwie die Anforderungen entlockt und habt euch irgendwie so grob auf System geeinigt wahrscheinlich oder auf einen Preis, Größenordnung, was der braucht, Dann geht ihr vermutlich ins Hardware Design oder startet ihr da schon mit der Software? Gibt es da eine Reihenfolge? Kann die Software erst entwickelt werden, wenn die Hardware fertig designt ist, wenn man da wirklich einen Prototypen hat? Also wie ist denn da der Ablauf?"
+        },
+        {
+            "start": 2520540,
+            "end": 2552850,
+            "speaker": "B",
+            "text": "Also wir machen es meistens sequenziell, zuerst Hardware Design, danach Software Design. Man könnte das natürlich auch anders machen und parallelisieren. Hier tun wir schon auch in Projekten, wo das Sinn macht. Aber tatsächlich ist viel von der Treiberentwicklung oder der Plattformentwicklung kann man in der Software erst wacher, wenn die Hardware da ist. Und man muss das ja auch tun, um die Hardware zu validieren. Also Hardware besteht aus zumeist Iterationen, zwei bis drei Hardware Iterationen vom ersten Entwurf bis zum produktfähigen Design."
+        },
+        {
+            "start": 2552850,
+            "end": 2562950,
+            "speaker": "C",
+            "text": "Und wird es dann irgendwie getestet, also simuliert auch schon irgendwie, also jetzt rein in ein Programm oder geht man dann schon wirklich auf so ein Board, wo man irgendwas zusammensteckt?"
+        },
+        {
+            "start": 2563110,
+            "end": 2572670,
+            "speaker": "B",
+            "text": "Also wir gehen dann aufs Board oder wir warten meistens, bis die erste Hardware Entwurf da ist und testen dann dieses Design durch und machen die Softwareentwicklung auf diesem Design."
+        },
+        {
+            "start": 2572670,
+            "end": 2585510,
+            "speaker": "C",
+            "text": "Und von welchen Zeitgrössenordnungen sprechen wir da? Also weil du jetzt gesagt hast, zwei, drei Iterationen und wir warten aufs Hardware Design. Wie gesagt, wir sind jetzt wieder bei meiner Cloud Welt, wo es um fünfzehn Minuten geht oder so schnell sind wir"
+        },
+        {
+            "start": 2585510,
+            "end": 2623030,
+            "speaker": "B",
+            "text": "jetzt in Hardware nicht. Aber wenn wir Design starten bis zum ersten Prototyp, sind so drei Monate die erste Iteration. Die erste Iteration, genau. Und dann starten wir meistens auch mit der Softwareentwicklung auf dieser ersten Iteration. Man identifiziert dann gegebenenfalls Fehler in der Elektronik, die tut man dann noch durch Mitarbeiter, die besonders gut am Lötkolben sind und besonders feine Augen reparieren lassen. Das ist faszinierend, was da geht, was Mensch da noch löten kann, selbst von diesen kleinen Bauteilgrößen. Und damit lernt man ja auch die Verbesserungen, die fürs Hardware Design notwendig sind. Das sind so die Boards, auf denen die Softwareentwickler arbeiten."
+        },
+        {
+            "start": 2623030,
+            "end": 2628350,
+            "speaker": "C",
+            "text": "Nach der dritten Iteration ist das BCB Design fertig und man kann wirklich in die Fertigung gehen."
+        },
+        {
+            "start": 2628350,
+            "end": 2651650,
+            "speaker": "B",
+            "text": "Genau, oft auch schon nach dem zweiten. Und ganz selten kann es auch passieren, dass man beim ersten Design schon so zufrieden ist, dass man nichts mehr tut. Was man dann aber halt noch tut, wenn das Design einmal funktional fertig ist, das Hardware Design, dass man schaut, EMV, also elektromagnetische Verträglichkeitsprüfung, Einstrahlung, Abstrahlung, ob man da zufrieden ist. Da gibt es meistens noch irgendwo irgendwo einen kleinen Ferritperle oder irgendwas, was noch Platz finden muss."
+        },
+        {
+            "start": 2651810,
+            "end": 2655410,
+            "speaker": "C",
+            "text": "Und da geht ihr dann in externe Labors wieder, wo ihr das testen lasst."
+        },
+        {
+            "start": 2655490,
+            "end": 2665810,
+            "speaker": "B",
+            "text": "Wir können selbst testen Inhouse, das heißt, wir haben Equipment und können es selbst machen. Wir stellen keine Zertifikate aus. Das tun wir nicht, weil wir kein akkreditiertes Prüfhaus sind."
+        },
+        {
+            "start": 2665810,
+            "end": 2675850,
+            "speaker": "C",
+            "text": "Da war okay, ihr könnt mal grundsätzlich für die Entwicklung auch die ganzen Messungen und so weiter machen. Genau, das heißt, wir sprechen da dann von drei Monaten oder so, bis man"
+        },
+        {
+            "start": 2675850,
+            "end": 2690810,
+            "speaker": "B",
+            "text": "drei Monate bis zum ersten Entwurf, dann Softwareentwicklungsphase Testen, Zulassungsphase. Ich sage immer, ein Jahr ist ein guter Zeitrahmen, um zu sagen, okay, ich starte das Projekt bis ich starte jetzt mit der Serienentwicklung bei unseren Kunden."
+        },
+        {
+            "start": 2690970,
+            "end": 2704740,
+            "speaker": "C",
+            "text": "Das heißt aber, ihr habt es dann auf einem Developer Board zuerst zusammengesteckt, dann macht ihr die Software und erst wenn alles dann im Zusammenspiel funktioniert, bestellt ihr oder lasst ihr die pcbs fertigen oder Development Boards?"
+        },
+        {
+            "start": 2704740,
+            "end": 2721820,
+            "speaker": "B",
+            "text": "Genau testbar. Wenn es komplex ist, haben wir Evaluation Boards von Herstellern, wo man es probieren, aber man muss dann doch letztlich auf das Custom Design, weil es hat ja einen Grund, warum man das gemacht hat. Also die Validierung der Software, die Entwicklung kann dann eigentlich nur auf der tatsächlichen Zielhardware stattfinden."
+        },
+        {
+            "start": 2721820,
+            "end": 2739170,
+            "speaker": "C",
+            "text": "Okay, jetzt seid ihr da grundsätzlich fertig mit eurem Custom PCB und bestellt es. Es wird produziert, ihr bekommt es. Bestellt man da mal drei Stück oder ein Testboard oder wie läuft dieser Vorgang ab? Bestellt ihr da dann in China? Gibt es da lokale? Baut ihr das selber? Wie läuft das ab?"
+        },
+        {
+            "start": 2739490,
+            "end": 2777670,
+            "speaker": "B",
+            "text": "Genau, wir haben prinzipiell in St. Pölter, unserem Standort, Fertigung, das ist manuell bedienter Fertigungsautomat, das unterstützt, aber die Bestückung findet manuell statt und da können wir kleine Prototypen sehr flott selbst bestücken. Die Leiterplatten ätzen wir jetzt nicht, die sind über Zukaufprodukte, die können wir in China beziehen oder gibt es auch in Europa Leiterkartenfertiger. Das geht normalerweise sehr flott und ist auch recht unproblematisch. Da gibt es auch einen guten Industriestandard, wie man zu denen kommt, über diese Gerber Austausch Dateien, die kann man eigentlich jedem zur Verfügung stellen und man bekommt es dann. Das ist ein Prozess, der funktioniert erstaunlich gut."
+        },
+        {
+            "start": 2777750,
+            "end": 2782730,
+            "speaker": "C",
+            "text": "Das heißt, ihr lasst nur die Platten ätzen und bestücken, das macht ihr dann selber."
+        },
+        {
+            "start": 2782890,
+            "end": 2799850,
+            "speaker": "B",
+            "text": "Genau, bestücken tun wir dann selber. Korrekte Bestückung beim Hersteller hinzubekommen, ist ein bisschen komplexer wie jetzt Leiterplatte. Da ist auch die Beschaffung der Bauteile immer Thema und was jetzt der Fertiger kriegt, und wo der sitzt und ob der Kiddies jetzt alle Bauteile bekommt. Also das ist spannend."
+        },
+        {
+            "start": 2800490,
+            "end": 2818740,
+            "speaker": "C",
+            "text": "Du hast mir im Vorgespräch so eine Platine gezeigt, die so groß war, ungefähr wie ein Laptop oder so in der Größenordnung. Was kostet sowas, wenn man da jetzt zehn Stück bestellt? Sind es dann hunderte Euro oder? Also was für Größenordnungen bewegen wir uns denn da jetzt nur die Platine ohne die Bauteile, die da drauf kommen, kommt."
+        },
+        {
+            "start": 2818740,
+            "end": 2839200,
+            "speaker": "B",
+            "text": "Also tatsächlich hat so viele Internetwerte, dass das so Aussage ganz schwierig ist. Da mögen mich auch meine Kunden nie, wenn ich sage, ich kann es euch tatsächlich nicht sagen. Also diese Platinen schauen zwar alle grün aus und es kleben Bauteile drauf, aber es ist zum Beispiel der große Unterschied, ob sie ein oder zweiseitig bestückt sind, weil es jetzt im Fertigungsprozess für den Bestücker sehr viel komplexer ist."
+        },
+        {
+            "start": 2839200,
+            "end": 2845120,
+            "speaker": "C",
+            "text": "Aber wenn du mal die Bestückung weglasst, nur die Platine an sich, also die ihr dann später bestückt mit den ganzen"
+        },
+        {
+            "start": 2845440,
+            "end": 2848400,
+            "speaker": "B",
+            "text": "Mikrocontrollern, dann kommt es noch darauf an, wie viel Lagen die hat."
+        },
+        {
+            "start": 2850960,
+            "end": 2856160,
+            "speaker": "C",
+            "text": "Du wirst mir keine Antwort geben, aber ich schaffe es schon noch so eine Bandbreite irgendwo."
+        },
+        {
+            "start": 2856640,
+            "end": 2869240,
+            "speaker": "B",
+            "text": "Ja, also einfaches Material, Basismaterial, wo jetzt keine Hochsignalleitungen drauf sind und und und alles einfach ist. Kostet sowas vielleicht dreiig Euro, wenn das jetzt pro Stück, wenn es jetzt da"
+        },
+        {
+            "start": 2869240,
+            "end": 2872800,
+            "speaker": "C",
+            "text": "kann ich dann auch nur zehn bestellen, das ist okay. Oder muss ich da dann schon ein hundert bestellen?"
+        },
+        {
+            "start": 2872800,
+            "end": 2892860,
+            "speaker": "B",
+            "text": "Nein, nein, das kann man auch zehn bestellen. Okay, also das geht. Lieferkosten kommen halt dann zu und Handlingkosten, die machen dann in Summe die Rechnungswerte ist dann höher wie die dreiig pro Platine, aber das ist, was das Material kostet. Und größeres größere Leiterplatte kann auch drei bis fünf hundert Dollar kosten."
+        },
+        {
+            "start": 2893250,
+            "end": 2900370,
+            "speaker": "C",
+            "text": "Und jetzt baut ihr das dann alles zusammen, bestückt es selber und dann knallt ihr die Software drauf und alles geht oder so ähnlich."
+        },
+        {
+            "start": 2901410,
+            "end": 2954320,
+            "speaker": "B",
+            "text": "Wenn man es so tut, kommt der Rauch raus und nichts mehr geht. Was man bei so einem Design halt dann hat, ist, dass man es Stück für Stück und Baugruppen für Baugruppen in Betrieb nimmt. Also man beginnt dann einmal sehr vorsichtig bei der Spannungsversorgung und schaut, ob die tun und keine Kurzschlüsse haben. Das macht man, indem man mit einer Thermikkamera drauf schaut und schaut ob das Ding irgendwo heiß wird mit dem Labornetzteil Strombegrenzung erhöht man schrittweise den Strom, um irgendwelche Hotspots zu finden. Das ist einmal der erste Schritt, dass das nicht gleich in Hitze sich thermisch zerstört, dieses Design. Und wenn man da mal Konfidenz hat, dass es so weit geht, ist es nächst trickreich jetzt zu schauen, ob die ganzen Oszillatoren schwingen anfangen, das sind die ganzen Kristalle und Quarze. Und dann, wenn das soweit ist und die Versorgungsspannung und Quarze gegeben ist, dann fangen wir mal an mit der Mikrocontroller zu schauen, ob man den finden kann."
+        },
+        {
+            "start": 2954620,
+            "end": 2964500,
+            "speaker": "C",
+            "text": "Debug Schnittstelle, dieses Quarze einschwingen, du hast es am Anfang schon erwähnt, für mich als absoluten Laien, was bedeutet die Quarze müssen sich einschwingen oder sowas."
+        },
+        {
+            "start": 2964500,
+            "end": 3023340,
+            "speaker": "B",
+            "text": "Also Mikrocontroller ist ja synchrones Design, das heißt, wir haben diesen Takt, der mit einer gewissen zeitlichen Genauigkeit kommen muss und so ein Taktgenerator macht man klassischerweise über ein Quarz, das ist speziell geschnittene Stück Silizium, das sich verformt und dann über Kondensatoren und diese mechanische Verformung ein Schwingkreis bildet, der x mal pro Sekunde hin und her schwingt und pulsiert. Das ist ein physikalischer Prozess, der braucht Zeit. Das heißt, wenn ich den Start, dauert es zur Zeit, bis der stabil sich einschwingt zum Beispiel. Und Mikroprozessoren arbeiten dann abhängig von der internen Komplexität erst dann gut, wenn das eine gewisse Genauigkeit hat. Das heißt, wenn diese Schwingung einmal startet, dieser Takt gestartet ist, gibt es da normalerweise analoge Taktüberwachung, die einmal schaut, ob der gut genug ist und wenn der gut genug ist, kommt die CPU aus dem Reset und startet mit ihren das, was wir halt von der CPU erwarten mit diesen Operationen."
+        },
+        {
+            "start": 3023340,
+            "end": 3050320,
+            "speaker": "A",
+            "text": "Ich habe jetzt nicht nur die Quarze eingeschwungen, sondern auch mich und jetzt will ich die ganze Sache endlich mal mit Software bestücken. Wie sieht denn diese klassische Embedded Toolchain aus? Sind wir, so wie ich das gerade stereotypentechnisch eingeleitet habe, ein tausend neun hundert siebzig stehen geblieben? Bist du, bist du Roland, der an sie C Verfechter und klöppelst du die Assembler Instruktionen wie damals bei Rollercoaster Tycoon noch selbst."
+        },
+        {
+            "start": 3052320,
+            "end": 3206080,
+            "speaker": "B",
+            "text": "Jein. Die Antwort ist ein klares und beherztes Jein. Also es ist so, ich kann Assembler programmieren und unsere Ingenieure können das auch und wir müssen und tun das auch manchmal, allerdings nur, wenn es notwendig ist. Assembly ist beschränkt auf Startup von Mikrocontrollern. Das heißt, die ersten paar Instruktionen von einem Bootloader oder von einem Kernel sind Assembly. Das ist, weil halt Mikroprozessor so arbeiten, wie sie arbeiten. Wir haben auch ein sehr spannendes Projekt gehabt, wo es um Stromsparen gegangen ist. Da war unser Baubudget für die Ausführung von der Applikationslogik fünfzehn Instruktionen. Die haben wir dann auch per Hand ausgewählt in die Assembly geschrieben, weil uns der C Compiler hier schon mal, das heißt der Funktionsepilog schon mal mehr Instruktionen gekostet hätte, wie die ganze Applikation zur Verfügung gehabt hat. Aber das sind Ausnahmen. In den meisten Fällen benutzen wir C. Warum benutzen wir C? Wahrscheinlich, weil C eine Sprache ist, die adäquat ist für die Größe des Problems und für die Art und Weise, wie Mikrocontroller funktionieren, solange der Mikroprozessor in diesem Loop von Instruction Fetch, Decode, Calculation und Update funktioniert. Assembly Sprachen decken diesen Modus Operandi gut ab und C als im Wesentlichen portabler Assembler ebenso. Das heißt, die Sprache ist adäquat dem Problem, das sie löst. Darum gibt es wenig wirklichen Grund, hier von C weg zu migrieren. Es gibt schon Schwächen von C oder Sachen, die man heute anders machen würde oder Lessons learned in fünfzig Jahre Softwareentwicklung. Ja, natürlich, aber viele der Sachen, die halt die modernen Sprachen dazu bringen, hilft für die begrenzte Ressourcen, die man zur Verfügung hat am Mikrocontroller. Wir haben schon ein bisschen über die Größen geredet. Es ist zu teuer. Es ist zu teuer. Es bringt nicht im Produkt, was es jetzt vielleicht in Softwareentwicklung bringt, weil es andere Kosten an anderen Stellen verursacht. Was wir auch immer brauchen, sind so Sachen wie Linker Skripte. Das heißt, wir beschäftigen uns auch ganz fest damit, wo im Speicher liegen denn unsere Sachen, Weil verschiedene Speicheradressen verschiedene Eigenschaften in Hardware haben, weil die Hardware Peripherie Blöcke gewisse Speicherbereiche haben, wo sie Daten erwarten Das heißt, wir müssen das kontrollieren, wo im Speicher unsere Sachen liegen. Das heißt, wir brauchen eine Art mit Speicher zu rechnen und mit Adressen zu rechnen. Das ist ein großes Plus in der Embedded Entwicklung. Wenn ich das wegabstrahiere unter Safety und so weiter, nicht zugreifbar macht, dann fehlt was. Da geht was nicht."
+        },
+        {
+            "start": 3206080,
+            "end": 3218120,
+            "speaker": "A",
+            "text": "Bei modernen Betriebssystemen hast du oft diese Speicherverwürflung, diese Speicher Random Randomization. Ganz genau, damit du als Angreifer nicht forcasten kannst, wo etwas im Speicher liegt."
+        },
+        {
+            "start": 3218120,
+            "end": 3223160,
+            "speaker": "B",
+            "text": "Das mache ich allerdings nur im User Space. Also der Kernel weiß dann hoffentlich schon, wo seine Pages sind."
+        },
+        {
+            "start": 3224200,
+            "end": 3233980,
+            "speaker": "A",
+            "text": "Aber wenn ich ihr so zuhöre, dann klingt das ja so, als sind diese, ich nenne es mal Sicherheitsmechanismen, oft auf diesen Embedded Devices deaktiviert."
+        },
+        {
+            "start": 3234140,
+            "end": 3269800,
+            "speaker": "B",
+            "text": "Die meisten Embedded Devices haben eine MMU, das heißt, die könnten technisch, wären sie nicht einmal in der Lage, diese Speicherverwürfelung zu machen, in keinster Art und Weise. Also es ist jetzt schon modernere cpus haben so eine Art Memory Protection Unit und können zumindest, wenn ich gewisse Codeteile ausführe, kann ich sagen, nur in diesem Speicher bleiben, bitte danke. Und kriegt dann ein Interrupt, wenn jetzt innerhalb dieser Code Sequenz außerhalb zugegriffen wird. Das heißt, ich habe ganz primitiv Speicherschutzmechanismen, ist eher moderner, sage ich so. Also da war das auf Desktop und Servern schon lang state of the art."
+        },
+        {
+            "start": 3269800,
+            "end": 3297330,
+            "speaker": "C",
+            "text": "Jetzt hast du davor erwähnt, Linux ist mittlerweile auch real time fähig. Ist Linux dann das Klassische, was man dort verwendet? Gibt es da andere Betriebssysteme? Und vor allem ist es dann, wenn man so programmiert, merkst du da einen großen Unterschied, ob du jetzt C programmierst im Linux oder in irgendeinem anderen Operating System, also so im alltäglichen Coding, Gibt es da überhaupt Unterschiede oder programmiere da einfach C runter und was für Speicher da im Hintergrund liegt, ist mir eigentlich egal."
+        },
+        {
+            "start": 3297570,
+            "end": 3401130,
+            "speaker": "B",
+            "text": "Das Spannendste ist natürlich die Verfügbarkeit von Bibliotheken und APIs und Linux ist für viele unserer Projekte zu groß vom Ressourcenverbrauch, Start up Zeiten und es einfach mit Kanonen auf Spatzen schießen. Also es ist in den meisten Tasks, es ist nicht notwendig als hotdad potentes Betriebssystem wie Linux einzusetzen, um einen kleinen Event Loop zu schreiben. Was wir viel verwenden in unseren Projekten ist Sapphire. Das ist ein Echtzeitbetriebssystem, das auch unter dem Dach der Linux Foundation ist. Das teilt auch ein paar Technologien mit dem Linux Kernel, zum Beispiel den Device Tree, auch das K Config System teilt Linux Kernel. Das ist sehr für uns sehr geschicktes System und auch in dem Sinn modern wie es hat C Bibliothek, es hat Socket API für Netzwerke, also da ist man schon vertrauten Umfeld und das programmiert sich dann ähnlich, sage ich jetzt einmal, wie Low Level Linux Applikationen, was natürlich sehr fein ist, intellektuell, weil man nicht so viele verschiedene APIs schaukeln muss. Es gibt auch noch andere rtose. Sehr bekanntes ist freertos. Im Wesentlichen ist es ein Scheduler, das heißt Task Scheduler, das ist die Hauptaufgabe, die es macht, das heißt, der hochpriore Task kommt dran und tut seine Sachen. Es ist ein minimalistisches OS, es ist recht weit verbreitet. Teilweise ist die Codequalität so, naja, so genau will man nicht hinschauen, ist sehr robust, also sehr viele wifi Karten oder Netzwerkkarten, die Firmware haben, haben da freertos oder irgend sowas drinnen, also wahrscheinlich auch im Desktop System drei, vier Instanzen davon laufen oder so."
+        },
+        {
+            "start": 3401130,
+            "end": 3404690,
+            "speaker": "A",
+            "text": "Das WordPress der Real Time Operating Systems,"
+        },
+        {
+            "start": 3405410,
+            "end": 3408670,
+            "speaker": "B",
+            "text": "ja so gab es vielleicht, aber das"
+        },
+        {
+            "start": 3408670,
+            "end": 3410990,
+            "speaker": "C",
+            "text": "ist alles Open Source und Free, weil"
+        },
+        {
+            "start": 3410990,
+            "end": 3447640,
+            "speaker": "B",
+            "text": "Free Altos, genau, Free Atos ist frei Open Source, sehr oft MIT License auch Safire ist MIT License, das heißt, ich muss hier meine Anwendung nicht scheren, was auch im Embedded Markt sehr viel mehr Sinn macht wie GPL, weil ich ja letztlich ein Firmware Binary baue. Also ich linke alles zusammen. Ohne Linking Exception wäre es schwer mit GPL Lizenz, Echtzeitbetriebssystem da irgendwas zu tun und man greift auch für die Applikation sehr oft das Betriebssystem selbst an. Genau, also für kommerziell sind die MIT Lizenzen attraktiver, sage ich mal so."
+        },
+        {
+            "start": 3447640,
+            "end": 3452880,
+            "speaker": "C",
+            "text": "Und gibt es dann kommerzielle Operating Systems auch oder ist das dann alles Eigenentwicklung?"
+        },
+        {
+            "start": 3452880,
+            "end": 3501080,
+            "speaker": "B",
+            "text": "Nein, es gibt Echtzeitbetriebs Themen wahrscheinlich wie Thundermaer, weil sie in Wirklichkeit nicht sonderlich komplex sind, weil der Hauptfokus ist, Threads nach Priorität sortiert zu schedulen, auf Interrupts zu reagieren, unterbrechbar zu sein. Da gibt es sehr viele, also QX ist zum Beispiel eins oder vxworks. ARM hat Embed OS gemacht, hat es allerdings jetzt aufgelassen und verweist auf Sapphire als Open Source Alternative, als Nachfolgeprodukt, das möglich ist. Das heißt, es findet auch schon eine gewisse Konsolidierung statt, weil das Tooling rundherum um die Systeme ist eigentlich das, was sehr viel aufwendiger ist. Board Support, wie viele Mikroprozessoren werden unterstützt? Also hier ist eigentlich das Hauptaugenmerk zu legen. Technisch sind sie recht einfach, diese RTS."
+        },
+        {
+            "start": 3501640,
+            "end": 3540980,
+            "speaker": "C",
+            "text": "Jetzt für mich als Endkunden Laien, sage ich mal, funktioniert ja in so einem Linux einfach alles. Ich stecke da eine Maus an und das funktioniert. Ich bin ja auch alt genug, Andy, du verstehst das jetzt nicht, von was ich rede, Aber zu meinen Anfangszeiten, da hat man so einen Maus Treiber installiert und einen Tastaturtreiber in DOS und hat den dann geladen und nicht geladen irgendwie. Heutzutage geht es als Magic automatisch. Ich vermute, bei dir ist es anders. Wie funktioniert es mit Treibern? Wird es wegabstrahiert von so einem Operating System oder musst du das alles handeln oder braucht man das heutzutage gar nicht mehr? Ich weiß gar nicht, warum es bei mir eigentlich alles automatisch geht heutzutage."
+        },
+        {
+            "start": 3541060,
+            "end": 3560760,
+            "speaker": "B",
+            "text": "Jetzt sind wir ganz nah an dieser er Jahre Diskussion. Tatsächlich viele Embedded Projekte, wir haben da überhaupt keine klare Trennung zwischen Hardware und Applikationslogik. Das heißt, da hat man ein bisschen Businesslogik, wenn jetzt, weiß nicht, irgendein Messwert größer ist, irgendeinem Schwellenwert, dann und dann schreibt man hartgecodet irgendwelche Registeradressen irgendwas rein zum Beispiel."
+        },
+        {
+            "start": 3560840,
+            "end": 3566520,
+            "speaker": "C",
+            "text": "Also du brauchst gar keine Treiber, weil du direkt quasi selber direkt drauf. Direct Access."
+        },
+        {
+            "start": 3566840,
+            "end": 3630440,
+            "speaker": "B",
+            "text": "Direct Access, genau, ist natürlich für Softwarearchitektur, Portierbarkeit und Reasoning über den Code ist natürlich ein Katastrophen. Tatsächlich ist es bei vielen Projekten so, Hier ist zum Beispiel Sapphire als positives Beispiel zu erwähnen, das hat ein Treibermodell. Hier gibt es für leds und leuchtende Elemente eine API und der geneigte Softwareentwickler ist angehalten, diese API zu implementieren auf seiner Plattform und dann die API, um ein LED anzuschalten, zu verwenden, statt den direkt einfach aufs Register zu schreiben. Das Problem ist halt, wenn ihr die Registeradressen kennt und das Embedded Entwickler kennt man seine Datenblätter, ist es halt auch sehr einfach ein Bit irgendwo in einem Speicherbereich zu setzen, um es leuchten zu lassen. Softwaremäßig ist eine Katastrophe. Und die Dokumentation von solchen Code ist natürlich auch eine Kunst für sich, weil so ein direkter Speicherzugriff mit in der Applikationslogik natürlich mehr Kommentar braucht, wie du je irgendwo sparen könntest. Aber auch hier zieht moderne Softwareentwicklung ein und das geht schon in die richtige Richtung."
+        },
+        {
+            "start": 3630680,
+            "end": 3650360,
+            "speaker": "C",
+            "text": "Ich bin ein bisschen im Energiebereich unterwegs, da gibt es zum Beispiel auch den klassischen Modbus, der wird ganz oft verwendet, um so Wärmepumpen und so weiter anzusteuern. Gibt es für sowas ist es dann schon alles implementiert, Da gibt es eine Library und du kannst darauf zugreifen, um so mit Modbus zu kommunizieren zum Beispiel Oder programmiert man das dann wieder selbst?"
+        },
+        {
+            "start": 3650360,
+            "end": 3657200,
+            "speaker": "B",
+            "text": "Das hoffe ich nicht. Also allein deswegen, weil eine Tochterfirma von uns ein Modbus Stack als Produkt vermarktet, hoffe ich, dass okay, wird dann euer"
+        },
+        {
+            "start": 3657200,
+            "end": 3659560,
+            "speaker": "C",
+            "text": "Tool verwenden, also euren Stack verwenden, dass"
+        },
+        {
+            "start": 3659560,
+            "end": 3675839,
+            "speaker": "B",
+            "text": "man das sehr wohl lizenziert. Was natürlich die Herausforderung ist an so einem Tool ist die Portierbarkeit auf X verschiedene Operating Systeme und Y verschiedene Mikrocontroller. Gibt eine große Matrix X mal Y von möglichen Konstellationen, denen das eingesetzt wird."
+        },
+        {
+            "start": 3675840,
+            "end": 3684040,
+            "speaker": "C",
+            "text": "Aber ich habe jetzt nicht wie in Python einen Package Manager, wo ich sage install Modbus package, keine Ahnung und dann funktioniert alles out of the box oder"
+        },
+        {
+            "start": 3684040,
+            "end": 3720660,
+            "speaker": "B",
+            "text": "fast out of the box klassischerweise jetzt eher nicht. Jetzt schon. Dort ist es über West heißt dieses Tool so verwaltet Summe von Git Repositories und hier kann ich dann so Third Party Bibliotheken sehr einfach hinzufügen, die man sie manifest beschreibt. Das ist dann so eine Art Package Management, halt alles auf Source Ebene. Da gibt es das schon. Und der Trend geht natürlich schon zu dieser einfacheren Weiterbarkeit auch von Echtzeit Betriebssystemen à la App und Shop und Clickbait Komponente dazu und ist natürlich ein Wunsch, ist umgesetzt auf, aber ist noch nicht so leicht, wie man es gerne sehen würde."
+        },
+        {
+            "start": 3720660,
+            "end": 3727740,
+            "speaker": "C",
+            "text": "Also ihr seid in den ERN dann also nicht mehr in den ERN, sondern er oder in den ER ER."
+        },
+        {
+            "start": 3727980,
+            "end": 3781710,
+            "speaker": "B",
+            "text": "Teilweise sind wir schon weiter. Also wenn man sich jetzt ganz auf einen Hersteller nur seine Mikrocontroller, seine Serien und seine ides einlasst, dann ist man weiter. Dann hat man schon Eclipse mit Marktplace, wo alles verfügbar ist. Das sind tatsächlich sehr, sehr hochintegrierte Tools. Allerdings ist man dann, also es ist sehr appland oder man ist dann sehr schnell sehr begrenzt, was geht und was nicht geht. Viele Dinge gehen out of the box. Also für Team, das jetzt Produktentwicklung machen möchte, sagt wir kaufen uns jetzt irgendeinen Hersteller Texas Instruments ein, wir werden jetzt da Partner, Das ist unser Ding und wir schauen nicht links und nicht rechts, gibt es schon viele sehr gut ausgedrehte Wege für den mehr aus dem Open Source kommenden Entwickler. Wir verstehen unsere solche, unsere Tools, die wir verwenden, sind Embedded Linux oder Sapphires Open Source Betriebssystem. Sind da die Wege noch teilweise etwas ruppiger und weniger ausgetreten."
+        },
+        {
+            "start": 3782030,
+            "end": 3783710,
+            "speaker": "A",
+            "text": "Hast du gerade Eclipse gesagt?"
+        },
+        {
+            "start": 3784190,
+            "end": 3786430,
+            "speaker": "B",
+            "text": "Eclipse ist sehr beliebtes Tool."
+        },
+        {
+            "start": 3786430,
+            "end": 3789310,
+            "speaker": "C",
+            "text": "Ja, Moment, sprechen wir von der IDE?"
+        },
+        {
+            "start": 3789550,
+            "end": 3797670,
+            "speaker": "B",
+            "text": "Von der IDE? Ja, die IDE Eclipse ist in sehr vielen proprietären Systemen einfach adaptiert und angepasst worden für die Mikrokon Prozessor."
+        },
+        {
+            "start": 3797670,
+            "end": 3799850,
+            "speaker": "C",
+            "text": "Ich war mit meinen er Jahren gar nicht so weit."
+        },
+        {
+            "start": 3800320,
+            "end": 3804000,
+            "speaker": "A",
+            "text": "Herr Roland, ich wollte gerade sagen, die ER haben gerade angerufen, die wollen ihre IDE zurück."
+        },
+        {
+            "start": 3805360,
+            "end": 3808000,
+            "speaker": "B",
+            "text": "Ich wäre sehr gewillt, sie dir wiederzugeben, kein Problem."
+        },
+        {
+            "start": 3809200,
+            "end": 3895170,
+            "speaker": "A",
+            "text": "Jetzt ist es aber auch in der modernen Softwareentwicklung schon kompliziert genug, die ganze Software für verschiedene Plattformen zu bauen. Wir haben inzwischen auch in der Cloud ARM cpus und X cpus und dann haben wir in teilweise in den Mobile Apps, iOS Applikationen kannst du nur auf einem Mac bauen und natürlich manche Sprachen haben irgendwie so Cross Compilat Thematiken, dass man vielleicht etwas für webassembly baut und so weiter und so fort. Und jetzt kommst du um die Ecke und sagst mir, es gibt verschiedene Chips mit noch mehr verschiedenen Sensoren, die alle irgendwie Treiber benötigen. Wie funktioniert Continuous Integration, Continuous Deployment, Continuous Delivery für Embedded Systeme? A Gibt es sowas überhaupt? B Hofft ihr, dass eure Realtime Operating Systems fehlerfrei in einer neuen Version für die Target Chip Architektur funktionieren? Also ist bei euch Hoffnung eine Strategie? Oder habt ihr da irgendwo einen Server stehen, wo ihr, weiß ich nicht, per Kabel alle Chips gerade irgendwie connected habt und dann habt ihr noch, wenn ich jetzt schon über Eclipse rede, einen Jenkins laufen oder damals vielleicht noch einen Hudson für die ganz jungen Leute. Jenkins ist ein Continuous Integration Server. Hudson war das ursprüngliche Projekt von Jenkins, bevor es geforkt wurde oder was weiß ich, wie die älteren CD Produkte heißen,"
+        },
+        {
+            "start": 3895170,
+            "end": 3937670,
+            "speaker": "B",
+            "text": "also CI CD ist in Embedded kleingeschrieben, wenn überhaupt vorhanden. Also hier auch Sapphire als Betriebssystem sehr hervorzuheben und zu erwähnen. Die haben so etwas aufgebaut. Das heißt, die machen ihre Releases und ihre Contributions, werden da über einen Continuous Integration Server getestet und dort ist im Serverschrank ganz viele Kabel Es geht auf tatsächliche Hardware, das heißt, es wird dann ein Firmware Image gebaut, eingespielt und dann über den UART geschaut, ob das erwünschte Output dort rauskommt. Das heißt, die machen das, was natürlich der Qualität sehr entgegenkommt. Das ist natürlich schon was sehr Tolles, entsprechend aber aufwendig im Aufbau. Auch die Wartung und Pflege, das muss man alles hängen und pflegen."
+        },
+        {
+            "start": 3937670,
+            "end": 3963280,
+            "speaker": "C",
+            "text": "Ich könnte mir auch vorstellen, dass grundsätzlich bei deinen Projekten jetzt, du entwickelst es ja mehr oder weniger einmal und that's it und dann läuft es. Vielleicht gibt es noch ein, zwei Updates, aber Sapphire ist ja auch ein Produkt, was ständig Updates als Operating System bekommt und natürlich viel mehr getestet werden muss. Oder ihr könntet das wahrscheinlich einfach von den Kosten auch gar nicht irgendwie sicherstellen und es kommen wahrscheinlich gar nicht so viele Updates, dass es sich rentiert, es irgendwie automatisch zu updaten."
+        },
+        {
+            "start": 3963280,
+            "end": 3993810,
+            "speaker": "B",
+            "text": "Wir hätten den Benefit nicht. Also es ist so, wenn wir Produktentwicklung mit Sapphire starten, nehmen wir die Version, die gerade aktuell ist oder die letzte LTS oder wie auch immer, machen unser Produkt, entwickeln es auf dem und wir testen. Das Produktprodukt ist sehr oft tatsächlich vollständig testbar an den Schnittstellen. Also wenn man jetzt an dieses Fernglas denkt, das hat als User Schnittstelle einen Anschaltknopf, einen Ausschaltknopf, es hat dann tatsächlich irgendwo eine Update Schnittstelle, die lassen wir mal außen vor, aber das war es in Wirklichkeit."
+        },
+        {
+            "start": 3994840,
+            "end": 3995880,
+            "speaker": "C",
+            "text": "Also das Ding ist offline."
+        },
+        {
+            "start": 3996120,
+            "end": 4041770,
+            "speaker": "B",
+            "text": "Das Ding ist offline, ja. Das hat keinen Funk, es hat eine kabelgebundene Update Schnittstelle, aber es ist an und ausschaltbar. Das ist eigentlich die einzige Interaktion, die der User hat. Das sind die zwei sozusagen Events für Blackbox Testing, die zur Verfügung stehen und danach muss es halt seine Optik, Regeleigenschaft und Performance bringen. Die testet man natürlich dann schon noch bei einem Produkt durch, ob es das tut, was es tut im Sinne der Regelung, aber dann gibt es da nicht so viel. Und da dieses Testen, ob es die Regeleigenschaften bringt, da brauche ich einen Testaufbau, da muss ich jetzt irgendwie diese Optik vermessen, Das ist ein komplexer Aufbau, das kann ich jetzt in einem Continuous Integration Run gar nicht wirklich machen. Also da mache ich einen Release Kandidat, prüft und auf Herz und Nieren und release es dann und dazwischen bringt es nicht viel, dieses Testen direkt in Hardware."
+        },
+        {
+            "start": 4041930,
+            "end": 4085040,
+            "speaker": "A",
+            "text": "Jetzt bin ich beruflich im Observability Bereich unterwegs, das bedeutet Metriken, Logging, aber auch natürlich sowas wie Tracing, Continuous Profiling und Co. Und ich weiß gar nicht mehr, wie man ohne Tracing heutzutage überhaupt noch arbeiten soll bei der ganzen Komplexität von der Software. Jetzt kommen mir die C Leute um die Ecke, Andi, wir haben noch Breakpoints und jetzt reden wir über Real Time Operating Systems, über Interrupts, über Prioritäten von Events. Da passt so ein Breakpoint nicht wirklich ins Konzept, weil das ja das zeitliche Verhalten Verhalten ändert. Wie debuggt ihr? Habt ihr sowas wie Tracing? Habt ihr sowas wie, gibt es Echtzeit Debugging bei euch? Oder ja, wie holt ihr die Fehler daraus?"
+        },
+        {
+            "start": 4085040,
+            "end": 4112960,
+            "speaker": "B",
+            "text": "Die erste Qualität ist natürlich, die Fehler gar nicht erstmal reinzutun, man muss sie nicht rausholen. Nachdem dieser Ansatz seit Jahrzehnten scheitert, haben wir so etwas ähnliches wie Print F Debugging für arme Embedded Entwickler und das ist einen GPIO Pin wackeln lassen und Oszilloskop anschließend. Das heißt, eine Sache ist, wir haben ein paar Pins und können auf denen Pegel ausgeben und schauen damit, was passiert. Das ist schon einmal sehr, sehr, sehr viel nützlicher, wie nichts über System zu wissen."
+        },
+        {
+            "start": 4113200,
+            "end": 4126160,
+            "speaker": "C",
+            "text": "Aber um das zu verstehen, ihr habt ein if drinnen und wenn irgendwas so ist, dann geht der Pegel nach oben und am Oszilloskop seht ihr dann, dass der Pegel nach oben geht und diese if Schleife, also dieser if Block getroffen wurde."
+        },
+        {
+            "start": 4126240,
+            "end": 4137970,
+            "speaker": "B",
+            "text": "Genau. Und vor allem kann die dann auch messen im Vergleich zum anderen Signal, die zeitlichen Abstände dazwischen, die ja meistens ebenso interessant sind, wie nur, ob das if getroffen wird oder nicht."
+        },
+        {
+            "start": 4138370,
+            "end": 4153570,
+            "speaker": "A",
+            "text": "Also du hast das gerade bezeichnet als Print F fürs Oszilloskop und ich glaube, das trifft es ein hundert Prozent, weil wenn ich das richtig verstanden habe, diese if Abfragen, die packt ihr dann wirklich nur fürs Debugging da rein und die holt ihr später wieder raus."
+        },
+        {
+            "start": 4153570,
+            "end": 4186040,
+            "speaker": "B",
+            "text": "Richtig, genau, weil die machen minimale zeitliche Veränderung im Programm. Ein Breakpoint in einem Regelalgorithmus. Regelalgorithmus per Definition nimmt die Zeit zwischen Iterationen, um sein Regelding zu tun. Wenn da ein Breakpoint reinmacht, kann ich mir schon kurz die Arithmetik anschauen, ob die stimmt, aber das Regelverhalten ist natürlich nicht mehr gegeben, der Regler ist dann auch tot und das System ist gegen die Wand gefahren oder äquivalent, was halt, wenn die Regelung dort nicht mehr funktioniert, passiert. Also damit kann ich viele Sachen einfach gar nicht testen mit Breakpoints."
+        },
+        {
+            "start": 4186040,
+            "end": 4189760,
+            "speaker": "C",
+            "text": "Aber so Logging macht ihr dann überhaupt nicht aus Platzgründen."
+        },
+        {
+            "start": 4190000,
+            "end": 4211910,
+            "speaker": "B",
+            "text": "Logging hat vor allem das primäre Problem der Bandbreite. Ich habe eigentlich nicht die Schnittstelle um die Logging Information jetzt irgendwo über UART, was jetzt ja more advanced Printf ist, verwendet man schon auch, dass man dort was rausschreibt. Also das ist ein Printf Debugging für Softwareentwickler im Wesentlichen halt ein UART. Braucht man noch, kann man schon tun, aber die Bandbreite stimmt. Also es geht nicht."
+        },
+        {
+            "start": 4211910,
+            "end": 4213990,
+            "speaker": "C",
+            "text": "Wir könnten das ja lokal speichern oder"
+        },
+        {
+            "start": 4214790,
+            "end": 4287510,
+            "speaker": "B",
+            "text": "da stimmen die Speicherbandbreiten nicht. Flash ist viel zu langsam. Relevante Mengen, also entweder geht es ins RAM mit einem kleinen Puffer und das ganze Event hat überhaupt Platz oder man hat dahingehend verloren. Man hat keine Speicher, die schnell genug sind, nichts wie nvme oder irgend sowas. Wir müssen Flash Bereiche, bevor wir irgendwas tun, müssen wir sie löschen. Dann müssen wir auf Hardware Ebene ein Busy Bowling vom Controller machen, ob er schon gelöscht hat. Die Zeiten sind irgendwo zwischen bis irgendwas definiert und wenn der dann sagt, ich habe jetzt gelöscht, dann können wir schreiben, dann müssen wir wieder ein bisschen Pollen schon geschrieben hat. Also da kann man keine Log Daten so in dem klassischen Sinn loswerden. Was es schon gibt, sind Debug Units auf der Hardware am soc selbst. Da gibt es auch Tracing Units, die sind schon sehr, sehr, sehr mächtig, weil die tracen den Instructionstream in Echtzeit weg. Man braucht dann eine leistungsfähige PC in Nähe, in Kabelnähe, in kurzer Kabelnähe, um ganz klar zu sein, weil es hochfrequente Signale, parallele Leitungen, vier bis acht Signale. Aber das ist natürlich sehr mächtig, weil hier sieht man die Instruktionen Stream, also jede Einzelstruktion, die ausgeführt wurde am Mikrocontroller sieht man hier in zeitlicher Abfolge."
+        },
+        {
+            "start": 4287510,
+            "end": 4297710,
+            "speaker": "C",
+            "text": "Jetzt programmiert ihr C, wenn ihr da Memory Leak reinprogrammiert, weil das geht ja bei C, habe ich gehört. Und so ein Fernglas stürzt alle fünf Tage ab. Wie debuggt man das?"
+        },
+        {
+            "start": 4297870,
+            "end": 4335010,
+            "speaker": "B",
+            "text": "Na, Memory Leaks haben wir keine, weil wir statisch, statisch allok, Nein, weil wir kein Malloc Free oder sowas machen, braucht es auch nicht. Wir kennen eigentlich die Ressourcen vorab und pulen die Speicherbereiche entsprechend auf. Für zyklische Daten gibt es Ringbuffer oder ähnliche Strukturen, wo halt gewisse Zeit im Speicher Platz hat und danach wird überschrieben. Das heißt sowas wie Memory Leak ist eigentlich kein Thema. Was es schon gibt, sind eventuell Dead oder Live Logs. Das heißt, dass man in der vergisst zurückzugeben und Mutex nicht mehr freigibt oder sowas. Das könnte passieren."
+        },
+        {
+            "start": 4335410,
+            "end": 4338770,
+            "speaker": "C",
+            "text": "Und wie findet man das dann raus, wenn das irgendwann mal passiert?"
+        },
+        {
+            "start": 4339010,
+            "end": 4448040,
+            "speaker": "B",
+            "text": "Ich glaube da ist tatsächlich, ich meine auch die Größe des Flashes deutet es ja dann doch fest an. Die Komplexität von Embedded Software ist geringer. Ich deploy keine Megabyte großen Stacks, die irgendwo im Internet gefunden habe, Frameworks für irgendeine Funktion aufs Gerät. Es ist minimal, das reduziert natürlich auch die Anzahl der Fehler und letztlich muss das System irgendwie testbar sein. Wenn die Softwarekomplexität dann zu hoch wird, dann macht man was wie Embedded Linux, wo man dann auch die Tools hat für Softwareentwicklung, die man dann kennt. Ja und eine Sache natürlich auch bei Embedded Debugging und Tracing, also Tracing ist zwar cool, weil man alle Instruktionen sieht, aber oft einmal hat man dann so tolle Fehler wie nach circa zwei und siebzig Stunden kommt es zum Systemausfall und der Speicherchip liefert nur mehr Einsen statt der gewohnten Daten, die da drinnen waren. Das ist dann schon einmal zur Diagnose an sich schon aufregend genug zu dieser Diagnose zu kommen, weil einfach das System nach zwei und siebzig Stunden steht und man fahrt halt mit Debug Session drauf und macht dann Analyse, was halt noch Peripherie dran ist. Das ist sehr schwer zu debuggen, solche Fehler. Also da geht dann viel Arbeit oder Entwicklungszeit geht dann dort einfach hinein, Thesen aufstellen, Thesen testen, Code instrumentalisieren, das heißt zu schauen, gut, vielleicht passiert ja davor, dass man irgendwie den externen Speicher resetieren, dann wird man halt in der Reset Logik von dem Speicher einer dieser gpos zum Beispiel auf High schalten und wenn der Fehler aufgetreten ist, kann man schauen, OK, haben wir den Speicher resetiert, sind wir durch die Reset Funktion vom Speicher durchgelaufen, ja oder nein? Und so muss man dieses Problem dann nähern, weil vor allem wenn Hardwarefehler mit dabei sind, ist es halt, also wir debuggen nicht nur Softwarefehler in embedded."
+        },
+        {
+            "start": 4448680,
+            "end": 4453480,
+            "speaker": "C",
+            "text": "Ich wollte gerade sagen, woher weißt du, es könnte ja auch ein Hardwarefehler sein. Einfach kaputtes Bauteil, oder?"
+        },
+        {
+            "start": 4453800,
+            "end": 4534710,
+            "speaker": "B",
+            "text": "Genau, kaputtes Bauteil ist jetzt weniger oft der Fall, hat es auch schon gegeben. Es ist fast immer natürlich, dass unser Custom Design ist, dass irgendeine Bedingung, wie das Bauteil zu verwenden ist, falsch gemacht worden ist. Sei es, dass die Versorgungssparte Spannung null komma null eins Prozent unterhalb des Minimalwerts tippt in manchen Fällen. Das kann passieren. So Spannungsversorgung ist nicht immer stabil. Was wir da dann tut, ist, dass man Detektorschaltung die Spannungsversorgung des Bauteils anhängt und schaut, ob die in diesen zwei und siebzig Stunden irgendwo hinuntergeht. Könnte ein Drop in der Versorgungsspannung das Fehlverhalten auslösen. Oder man muss die Beim Speicherbaustein hat man viele Leitungen, zeitliche Constraints, haben wir die Signale, man muss die Mittraining, gibt es dort Verletzungen der zeitlichen Integrität? Also da ist man dann schon, das ist dann schon sehr spannendes Debugging und vor allem Spannungsdrops zum Beispiel kann sein, dass Leitung verbindet ja zwei Bausteine. Spannungsquelle mit dem Verbraucher kann zum Beispiel sein, dass man bei der Quelle den Spannungsdrop nicht sieht, allerdings beim Verbraucher schon. Die Spannung ändert sich über das Signal oder über die Leitung. Die ist ja nicht überall gleich. Also da kommt es auf, wo messe ich und wie gut ist die Messspitze, die ich einsetze. Da gibt es dann Messspitzen, die kosten mehrere tausend Euro. Nur die Messspitze, weil die besonders gute Qualitäten hat, um gewisse Signale messen zu können."
+        },
+        {
+            "start": 4535190,
+            "end": 4537110,
+            "speaker": "C",
+            "text": "Sie ist dann im wahrsten Sinne aus Gold."
+        },
+        {
+            "start": 4538470,
+            "end": 4569330,
+            "speaker": "B",
+            "text": "Ja, das ist diamantbeschichtete Messspitze, denn Diamant braucht sie, dass sie besonders gut in das Metall hineingesteckt werden kann und besonders hart ist. Die braucht man für hochfrequente Signale, zum Beispiel PCI Express Signale oder irgend sowas monitoren möchte, weil da ist die Messspitze in der Leitung von PCI Express, also ein sogenannter T Stich, was die Welleneigenschaften dieses Leiters ändert. Und damit hast du ganz anderes System, BCI Express mäßig, ob diese Messspitze drinnen steckt oder nicht."
+        },
+        {
+            "start": 4570050,
+            "end": 4575020,
+            "speaker": "C",
+            "text": "Also andi vergisst du Diamantränge nehmen, einfach Spitzen in Zukunft verschenkst."
+        },
+        {
+            "start": 4575020,
+            "end": 4582660,
+            "speaker": "A",
+            "text": "Das klingt für mich eher nach einem Bereich der Softwareentwicklung, was für den Hobbybereich eigentlich weniger zugänglich ist."
+        },
+        {
+            "start": 4583380,
+            "end": 4601990,
+            "speaker": "B",
+            "text": "Das ist für den Hobbybereich definitiv weniger zugänglich. Da wird dann auch das Equipment teuer oder nicht, um Hobbyisten auszuschließen. Aber es ist einfach die Physik ist die Physik, der müssen wir uns beugen, da können wir nichts viel machen. Und wenn sie sagt, Leiter haben Welleneigenschaften, dann gilt es das einfach zu akzeptieren und damit zu leben, dass das halt so ist."
+        },
+        {
+            "start": 4602540,
+            "end": 4659380,
+            "speaker": "A",
+            "text": "Jetzt haben wir ziemlich viel über Speicherlimitierungen gesprochen, über Bandbreitenlimitierungen und auch über Bugs, die sich leider nicht vermeiden lassen und auch über irgendwelche Ferngläser, die anscheinend jetzt eine Software haben. Das bringt mich zu der Updates und Wartbarkeit, denn klar, Hardware updaten ist ein bisschen schwierig, neue Platinen Ätzen etc. Aber vielleicht kriegt man ja irgendwie eine Software drauf und ich sag mal ein klassischer Update Prozess in meinem Kopf. Du hast die aktuelle Software da laufen, irgendwie kommt die neue Software da drauf, die wird daneben gelegt und irgendwann wird die halt geflippt. Jetzt sind die Speicherbereiche sehr limitiert und vielleicht kommt auch da der Begriff des Hardware Brickens irgendwie in den Sinn. Also wie läuft Updates? Was passiert, wenn Update schiefgeht? Wie sieht es mit Over the Air Updates aus oder muss ich das immer mit Pins an meinen Computer adden oder oder."
+        },
+        {
+            "start": 4660660,
+            "end": 4869050,
+            "speaker": "B",
+            "text": "Ja, das ist eine Frage, die der Industrie momentan sehr quer liegt, weil halt für viele dieser Embedded Geräte, die man hat, Updates einfach schlicht nicht vorgesehen waren, ohne dass man da jetzt sagt, ja, man ist hier grob fahrlässig am Weg, aber man hat das Gerät getestet, es bringt die Funktionalität. Und wozu soll jetzt dieses Fernglas, wenn es das tut, updaten? Ein Grund, warum ich auch dieses Fernglas updaten können muss, ist Cyber Resilience Act, der da vorschreibt, dass alles prinzipiell, was Software und Mikrokontrolle ist, updatebar sein muss. Somit auch mein Offline Fernglas, dessen Attack Surface jetzt wahrscheinlich schon sehr gering ist. Eben aus diesem Grund, da man viel einfach getestet hat und das dann ja auch funktioniert und Hersteller da jetzt nicht immer Updates geliefert haben. Jetzt soll jetzt sagen, okay, das ist alles gut, was da passiert ist, weil es sind ja auch Sachen nicht upgedatet worden die Attack Surface haben oder die im Netzwerk hängen, was natürlich no go ist, aber viele der Hardware unterstützt eigentlich kein gutes Update. Also wir haben oft Mikroprozessoren, die haben zwar in ROM und Bootloader drinnen, damit kann ich dann von was anderem booten wie vom Internet Flash oder die könnt ihr dann benutzen um Update einzuspielen ins Internet Flash, aber das Internet Flash ist sehr begrenzt. Wenn ich das halbiere, weil ihr AB Schema habe und Bootloader, dann schmerzt es, weil dann die Applikationen nicht mehr hineingehen. Das ist natürlich eine Koevolution, Softwarekomplexität und Größe der Speicher Mikrocontroller sind was man halt jetzt braucht und mit dem CA verdoppelt man hier plötzlich den Platz, den man braucht für die Firmware wegen dieser Update Funktionalität, die bis jetzt ja in dem Sinn nicht vorgesehen war und da sind wir jetzt mit einigen Kunden dran, dass man halt updatebare Embedded Systeme designen. Da braucht man externen Speicher in irgendeiner Art und Weise, da muss eine Art von SD Karte oder irgend sowas hinauf, man braucht eine Schnittstelle, man braucht einen Bootloader, man braucht Erkennung, ob das Update gut gegangen ist oder nicht, man braucht auf einmal Infrastruktur beim Kunden, die man davor nicht gebraucht hat, das muss ja dem Kunden zur Verfügung gestellt werden, man muss ausschließen, dass man irgendein Garbage drauf flasht und das Ganze möchte man auch noch sicher gestalten. Das heißt irgendwie vielleicht signierte Updates, das dann wieder schwierig ist so eine RSA Signatur zum Beispiel auf Mikroprozessor zu rechnen, der kein Hardware Krypto hat, das dauert, das ist einfach gar nicht so einfach möglich. Andere Verfahren sind ein bisschen besser als RSA, aber trotzdem ist es auch Aufwand und das ist auch die Frage, wenn der Kunde jetzt fünf Minuten sein Gerät beim Blinken anschauen darf, fragt er sich lebt es doch oder nicht? Man hat ja nicht wirklich die Möglichkeit Feedback zu geben im Embedded Gerät, das heißt man muss auch das noch mit einplanen, brauche jetzt noch ein LED, wo ich den Systemzustand kommuniziere, bedeutet auch in dem Gehäuse Loch, Loch bedeutet Dichtungsthemen, also das ist ja alles, da kommt ja sehr viel zusammen. Dann kann ich sagen okay, nimm sowas wie USB. USB ist für Embedded dann doch ein sehr komplexer Bus der braucht schon wieder eigene Schwingungen und eigene Taktdomänen und das ist auch ein eigenes Biest Und dann brauchen wir Hostsoftware vielleicht auch noch machen, die das auslesen kann. Also das ist schon eine große Herausforderung, diese Abdeckbarkeit zu machen. Einfach ist es nicht. Möglich ist es auf jeden Fall, aber wahrscheinlich nicht mit den klassischen Designs, die man gemacht hat. Das heißt, man wird die Hardware Design entsprechend für diesen CA auch anpassen müssen, dass das überhaupt machbar ist, diese Updates."
+        },
+        {
+            "start": 4869130,
+            "end": 4880060,
+            "speaker": "A",
+            "text": "Aber das ist ja dann schon, ich sag mal, Gold wert für jeden Security Researcher, der Och, die meisten Dinge haben keine Updates, dann kann ich die versuchen zu bricken, denn ich weiß, ein Fix"
+        },
+        {
+            "start": 4880060,
+            "end": 4891020,
+            "speaker": "B",
+            "text": "kommt nicht, Das schon, aber was außer Publikation, Webseite mit einem benannten Bug und ein paar Häme für den Hersteller bringt es das Fernglas Security zu attacken. Also was ist der Effekt?"
+        },
+        {
+            "start": 4891980,
+            "end": 4910240,
+            "speaker": "C",
+            "text": "Die Frage ist ja auch, wie viel von diesen klassischen Systemen sind überhaupt online? Also klar kann man offline auch natürlich angreifen, aber der klassische Angriffsvektor ist ja eher, wenn irgendwas online ist und ich vermute mal so irgendeine Prozesssteuerung wird gar nicht online sein oder von irgendeiner Produktionssteuer oder sind die online."
+        },
+        {
+            "start": 4911920,
+            "end": 4915280,
+            "speaker": "B",
+            "text": "Realität ist sie sind online, die Theorie, sie sollten nicht sein."
+        },
+        {
+            "start": 4917120,
+            "end": 4963160,
+            "speaker": "A",
+            "text": "Also ich sehe das gar nicht, dass der Attackvektor immer nur online sein muss. Online ist bequem und es skaliert und ja, pipapo, du musst nicht vor Ort sein, Aber ich sehe es viel interessanter, wenn es halt nicht online ist. Und mit so Sachen wie Stuxnet und pipapo wurde es glaube ich schon etliche Male bewiesen, dass man auch an Systeme kommt, die entkoppelt sind. Und wenn jetzt wir anders Fernglas Beispiel denken, ich kenne jetzt nicht den Impact für Birdwatcher, wenn ich das Ding hacke. Auf der anderen Seite hast du Roland gerade bestätigt, okay, das Ding ist vielleicht auch oft online und dann braucht nur irgendwo eine fehlende IP Tables Regel, um das Ding offen zu setzen. Ich meine, dafür gibt es Showdown, Showdown, da gehst du hin und findest irgendwelche Ölfelder in Texas, die online sind."
+        },
+        {
+            "start": 4963240,
+            "end": 5019230,
+            "speaker": "B",
+            "text": "Also definitiv Systeme, die online sind, brauchen Updatebarkeit. Also ich denke, da muss man ganz klar sagen, ist auf jeden Fall so. Systeme, die online sind, haben allerdings auch ein IP Stack, was komplexes Stück Software ist und sowas wie Ethernet FI und also hier ist dann sowieso, hier hat man auch Schnittstellen, wo man nach außen kann, um zu kommunizieren und hier zu sagen, Abdeckbarkeit ist nicht gegeben. Also da gilt es nicht. Die Systeme sind auch von Mikroprozessoren groß genug, die haben leicht externer Speicher anschließbar. Also da ist es sicher überhaupt kein Thema für viele andere Sachen, die rein offline sind. Mikrocontroller, die halt jetzt auch irgendein Stück Software haben, warum auch immer, Da ist es vielleicht nicht einfach und nicht gegeben und auch nicht möglich. Also ich denke auch, es werden auch gewisse Produkte einfach vom Markt verschwinden, weil das zum Beispiel ein Thema ist, diese Updatebarkeit, wo die Hersteller Na, das rentiert sich dann immer. Es gibt den Business Case."
+        },
+        {
+            "start": 5019550,
+            "end": 5072080,
+            "speaker": "A",
+            "text": "Roland, vielen lieben Dank, dass du mir mal einen Einblick in eine Welt gegeben hast, die ich, wo ich jetzt entschieden habe, meiden werde wahrscheinlich. Du hast mir natürlich jetzt die Komplexität gegeben, wie sehr ich eigentlich meine Waschmaschine updaten könnte. Jetzt weiß ich gar nicht, ob ich das überhaupt möchte. Falls es immer noch Leute da draußen gibt, die nach dieser Podcast Episode noch nicht abgeschreckt wurden. Was würdest du den Leuten mitgeben, wie sie als erfahrene Softwareentwickler innen, ich sag mal, einen Fuß in die Tür kriegen? Also was kann man als Privatmensch machen, ohne so eine Messspitze für einen vierstelligen Betrag zu kaufen? Welche Hardware ist günstig zu erwerben, wo ich mal dann ein C Betriebssystem draufpacken kann? Also wie ist so der Poor Man's Einstieg, würde ich mal sagen. Kann man Poor Man's Einstieg in inklusiver Sprache überhaupt noch sagen? Pur Humans Einstieg?"
+        },
+        {
+            "start": 5072880,
+            "end": 5161560,
+            "speaker": "B",
+            "text": "Pur Humans Einstieg. Also die Arduino und Raspberry Ebene ist jetzt persönlich für mich, die kommt mehr von der Software her, wenn man ein bisschen von der Art der reingehen möchte. Dann von stmicro, das ist europäischer Hersteller, die STM zwei und dreiig Evaluation Boards, die kann man sich eigentlich, damit kann man sich einen Einstieg verschaffen. Die sind auch ähnlich einfach zu bedienen wie Arduino. Man kann die über USB an sein PC anstecken. Man bekommt vom Hersteller kostenfrei eine Entwicklungsumgebung, wo auch sehr viel über so App Pakete, Shop Klick zusammengesteckt werden kann. Man bekommt ein paar Samples, sie haben Leuchttürm drauf und blinken schon. Damit kann man schon einen Fuß in die Richtung kriegen. Hier hat man jetzt die Hardware halt nicht selbst gemacht, allerdings ist sie schon sehr sehr hardwick, sehr embedded vom gesamten Workflow. Für gewisse Funktionen muss man auch einen Lötkolben in die Hand nehmen, mal einen Widerstand dort setzen oder mal einen Widerstand dort auslöten. Aber da kann man dann schon sehr viel machen mit diesen Boards in Richtung eigene Produkte. Die sind sogar mit, also die kommen mit dem Debugger integriert auf der Leiterkarte und diesen Teil mit dem Debugger ist so gestaltet, dass man abbrechen kann, wenn man so Art Produkt bauen möchte. Das heißt, da bricht man dann einen Teil von der Platine und ist die Debug Schnittstelle weg und man hat tatsächlich System auf einer Hardware Größenordnung. Also da kann man sicher sehr gut erste Schritte machen."
+        },
+        {
+            "start": 5161640,
+            "end": 5176360,
+            "speaker": "A",
+            "text": "Für alle gilt, wie immer, wer wirklich einsteigen möchte, wir haben natürlich etliche Links in den Shownotes verlinkt. Roland, vielen lieben Dank. Ich wünsche dir noch viel Erfolg mit der Erstellung von Birdwatch Software und Hardware für Ferngläser."
+        },
+        {
+            "start": 5176760,
+            "end": 5192440,
+            "speaker": "C",
+            "text": "Es ist ja schade, dass ihr da die alle jetzt den Podcast hören, nicht das Gesicht von Andi seht, aber es ist so, das ist wirklich nie, Andy sagt ja sonst gerne am Wochenende probiere ich das aus, aber es ist selten ein Thema, wo ich sage, es ist einfach no way. Es ist so weit weg von meiner Cloud Welt."
+        },
+        {
+            "start": 5192520,
+            "end": 5209220,
+            "speaker": "A",
+            "text": "Bitte nicht, es hat nichts mit Cloudwelt zu tun, sondern ich bin so froh über alle modernen Techniken, die wir haben. Denn ich komme auch noch aus einer Zeit, wo man schön Print F Debugging gemacht hat, sich durch den ganzen Flow geklickt hat Und wenn ich jetzt dran denke, hier noch eine Platine zu haben,"
+        },
+        {
+            "start": 5209380,
+            "end": 5212860,
+            "speaker": "C",
+            "text": "ja, Print F ist ja fast die einfache Variante, also das ist ja noch"
+        },
+        {
+            "start": 5212860,
+            "end": 5259640,
+            "speaker": "A",
+            "text": "mal eine Stufe tiefer, ja, und jetzt hier Oszilloskopen Debugging zu machen und pipapo, tut mir leid, aber es gibt Masochisten. Ich bin keiner. Also ich wirklich freue mich über moderne Techniken, weil sie machen ja mein Leben einfacher. Ich will ja Sachen schaffen, ich will mir nicht dauerhaft ins Knie schießen und ich bewundere Leute, die das können. Ich bin keiner. Und es ist auch okay, wenn ich es nicht können möchte. Aber es ist mal sehr, sehr interessant, mal einen Einblick darin zu bekommen, denn ich denke nicht nur die Open Source Welt, sondern Informatik ist einfach unglaublich groß. Ich habe mir gerade mal ein bisschen Free RTOS und C auf der Webseite rumgescrollt, da ist wieder so ein Bereich, es ist ja immer wieder, ich denke, ich habe ein bisschen Ahnung, was so abgeht."
+        },
+        {
+            "start": 5259720,
+            "end": 5271720,
+            "speaker": "B",
+            "text": "Ne, wir leben alle in unseren eigenen Bubbles. Es ist ganz faszinierend. Ich mache irgendwas mit Computern. Also früher wollte ich den Leuten erklären, was sie genau tun. Ich habe das einfach gelassen. Ich mache irgendwas mit Computern. Passt schon."
+        },
+        {
+            "start": 5271800,
+            "end": 5273760,
+            "speaker": "C",
+            "text": "Du sagst jetzt, du machst fein Gläser, oder?"
+        },
+        {
+            "start": 5273760,
+            "end": 5279000,
+            "speaker": "B",
+            "text": "Genau, jetzt sage ich, also der macht nur die Hardware. Mit Software kenne ich mich gar nicht aus."
+        },
+        {
+            "start": 5280040,
+            "end": 5290630,
+            "speaker": "A",
+            "text": "Also dieser Podcast hat mir wieder gezeigt, ich bin so fern und so weit von diesem Feld. Ich weiß, was abgeht oder ich kann irgendwo so ein bisschen mitreden. Ne, kann ich nicht."
+        },
+        {
+            "start": 5290870,
+            "end": 5327990,
+            "speaker": "B",
+            "text": "Also möchte auch vielleicht dazu sagen, es tut gar nicht so viel weh, wie du das jetzt hier vermutest. Ich habe auch klassische Softwareentwicklung gemacht und es sind ganz ähnliche Schmerzen. Also wenn du die reine Software Schmerzen aushaltest, sind diese Hard Software Schmerzen auch aushaltbar. Eines, was an Hardwareentwicklung sehr spannend ist, ist irgendwie irgendwann, und das ist das, was mir an reiner Softwareentwicklung immer gefehlt hat, irgendwann ist es so weit, dass man sagt, es ist Produkt worthy. Ich fertig das jetzt und ich stecke das in den Karton und verschick und das ist so ein Abschluss von diesem Ganzen. Es ist dann wirklich fertig. It is good enough, it's a produkt. Es geht jetzt raus."
+        },
+        {
+            "start": 5328310,
+            "end": 5393720,
+            "speaker": "A",
+            "text": "Also da möchte ich nur noch mal sagen, ich habe zufälligerweise gestern noch mal mit Andre Friesen gesprochen. André Friesen zur Erinnerung war die Person, mit der wir die Episode zwei hundert acht und fünfzig gemacht haben zum Thema Hardware side Project mit esphome. Er hat ebenfalls eine größere Stückzahl bestellt, irgendwo im Osten auf jeden Fall in China oder so. Und die haben irgendwie die falsche Antenne mitgeliefert oder die haben auf jeden Fall irgendwas bei dem Versand verfuckt und jetzt muss er wieder zweieinhalb Monate oder so warten, bis die ganze Klamotte da irgendwie kommt. Also eine super lange Zeit. So einfach wie du das gerade erzählst, scheint es dann doch nicht zu sein, dass man einfach diesen tollen Produktabschluss hat. Ich kann mir aber vorstellen, wenn du eine fertige Platine in der Hand hast, wo die LED leuchtet, dass man dann nackig durch die Wohnung rennt. Also das kann ich mir schon vorstellen. Roland, wirklich vielen lieben Dank für alle anderen, falls ihr Feedback habt für diese Episode auch an Roland oder falls ihr mehr wissen wollt, schreibt uns gerne. Wir verbinden da gerne die jeweiligen Leute miteinander. Ansonsten sage ich Dankeschön und bis zur nächsten Episode. Bye bye."
+        },
+        {
+            "start": 5393720,
+            "end": 5394440,
+            "speaker": "B",
+            "text": "Tschüss."
+        },
+        {
+            "start": 5394840,
+            "end": 5395400,
+            "speaker": "C",
+            "text": "Ciao."
+        }
+    ]
+}
