@@ -3687,6 +3687,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/280"
+  to = "/podcast/episode/280-container-microvms-mit-docker-co-founder-sebastien-pahl?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep280"
+  to = "/podcast/episode/280-container-microvms-mit-docker-co-founder-sebastien-pahl?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
