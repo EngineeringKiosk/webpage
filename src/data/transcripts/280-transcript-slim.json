@@ -1,0 +1,801 @@
+{
+    "confidence": 0.9573408,
+    "language_code": "de",
+    "speakers_expected": 3,
+    "status": "completed",
+    "audio_duration": 4403,
+    "utterances": [
+        {
+            "start": 3440,
+            "end": 182920,
+            "speaker": "A",
+            "text": "Willkommen zu einer neuen Episode vom Engineering Kiosk Podcast. Heute geht es um eine Technologie, die du ziemlich sicher ständig benutzt, auch wenn du vielleicht nicht jeden Tag darüber nachdenkst. Wir sprechen über Container, Micro vms und die Frage, was da technisch eigentlich wirklich passiert. Wie viel Isolation liefern Container tatsächlich? Wo hört ein Container auf und und wo fängt eine virtuelle Maschine an? Und warum reden alle plötzlich über Micro vms, Firecracker und ultrakurze Bootzeiten? Dafür haben wir einen Gast, der nicht nur irgendeine Meinung dazu hat, sondern das Thema seit Jahren mitbringt. Sebastian Pahl, Co Founder der Firma hinter Docker und arbeitet heute wieder bei Cloudflare an Container Plattformen. Mit ihm gehen wir einmal runter bis an die Betriebssystemschicht. Wir sprechen über Namespaces, cgroups, LXC, Run C, overlayfs, systemd und darüber, warum Docker damals viel mehr war als nur ein hübsches CLI für bestehende Linux Features. Außerdem wird es ziemlich praktisch. Sepp erzählt, wie er ein eigenes Init System in Rust gebaut hat, warum AI ihm dabei massiv geholfen hat und wie man Bootzeiten von mehreren Sekunden auf wenige hundert Millisekunden drücken kann. Wenn du also verstehen willst, warum Container nicht einfach nur Container sind, dann bist du hier genau richtig. Wir springen direkt rein, los geht's. Viel Spaß. Heute sprechen wir mal über eine Technologie, von der man behaupten kann, dass sie die halbe Cloud antreibt. Und wenn ich von Cloud spreche, meine ich jetzt nicht nur irgendwelche Server bei Amazon oder Google, sondern sehr wahrscheinlich auch in deinem Home Lab oder auf deiner On Premise Software, in deinem eigenen Datasetter Colocation oder von mir aus auch auf deinem Laptop selbst. Denn wir sprechen mal über Container und da ist der Platzhirsch eigentlich Docker, würde ich mal sagen, seit ein paar Jahren. Und darüber haben wir auch schon in vorherigen Episoden, wie zum Beispiel in sechs und vierzig Welches Problem löst eigentlich Docker gesprochen? Oder vielleicht ein Layer tiefer in Episode acht und vierzig der Layer unter Docker Container, die Kubernetes Container, Runtime Interface, Cryo und die Open Container Initiative. Das war alles Ende zwei tausend zwei und zwanzig und seitdem ist natürlich auch noch eine ganze Menge passiert, auch was neue Bereiche wie Micro vms und so weiter angeht. Und da ist halt oftmals die Frage, die ich mir so stelle, wer hat eigentlich tiefes Verständnis von der ganzen Thematik? Also wie viel Isolation geben Container und Micro eigentlich und ist ein Container eigentlich gleich ein Container? Das sind alles so Fragen, die kann man sich natürlich heutzutage mit der KI auch irgendwie durch Prompten und dann macht man da irgendwie Rechercheaufträge, aber auch dieses ganze Umfeld entwickelt sich so dermaßen schnell. Und ich bin durch Zufall, das war wirklich Zufall, durch meinen Arbeitgeber auf unseren heutigen Gast gekommen, denn in einem internen Channel wurde announced, dass er wieder bei Cloudflare ist. Deswegen begrüße ich mit großer Freude Sepp. Hallo."
+        },
+        {
+            "start": 183000,
+            "end": 184920,
+            "speaker": "B",
+            "text": "Hallo, danke, dass ich da bin."
+        },
+        {
+            "start": 185080,
+            "end": 210910,
+            "speaker": "A",
+            "text": "Jetzt habe ich dich mit Sepp vorgestellt und mein Job in diesem Podcast ist immer die Gäste vorzustellen. Du beschreibst dich auf LinkedIn als Founder, Hacker und Bilder finde ich schon mal schon mal sehr sympathisch und und Founder trifft es wohl und das Wort Docker auch, weil du warst nämlich zwei tausend acht Co Founder von der Firma, die hinter Docker steht, die das Docker Produkt zumindest rausgebracht hat. Meines Wissens nach hieß die damals Dot Cloud, ist das korrekt?"
+        },
+        {
+            "start": 210910,
+            "end": 213870,
+            "speaker": "B",
+            "text": "Ja, genau so hieß sie, als wir in Frankreich angefangen haben."
+        },
+        {
+            "start": 213870,
+            "end": 255410,
+            "speaker": "A",
+            "text": "Da hast du dann natürlich auch den ganzen Container Zyklus, nenne ich es mal, mitgemacht. Und wenn man sich mal deine LinkedIn, wie soll man sagen, professionelle Karriere, wie es da heißt, anschaut, dann habe ich so das Gefühl, du beschäftigst dich dein ganzes berufliches Leben bereits mit Containern und ähnliches. Denn du hast Docker mitgegründet, warst dann bei Cloudflare, später bei Mesos vier Mesos, damit habe ich auch schon noch eine ganze Menge gemacht damals dann bei Core OS Red Hat, Dann hast du Optrace, das war so ein bisschen die, ich sag mal, mit Options hast du dann ein bisschen Obsability gemacht, das wurde dann von GitLab aufgekauft und seit letztem Jahr bist du wieder bei Cloudflare und baust da am Container Produkt rum. Und da ist die erste Was reizt dich nach fünfzehn Jahren immer noch an diesem Container Thema?"
+        },
+        {
+            "start": 255410,
+            "end": 330640,
+            "speaker": "B",
+            "text": "Gute Frage. Ich habe eigentlich immer Entwickler Tools für Entwickler gerne gemocht, alles Mögliche, was das Leben der Entwickler vereinfacht. Mein eigenes Leben als Entwickler und Container selbst sind halt eine Technologie, die sehr interessant ist, weil ich mag es gerne, es zu vereinfachen, Software in Produktion gut laufen zu lassen und auch in einer Form zum Laufen lassen, die man auch so einfach wie möglich updaten kann, Verändern kann. Und dafür sind Container ganz praktisch natürlich auch. Ganz am Anfang war der Reiz natürlich auch das so zu machen, dass Software in Produktion genauso installiert wird wie auf dem Laptop des Entwicklers. Das war natürlich auch ein Reiz dafür. Aber ja, es ist eine Technologie, die sehr breit ist im Linux und anderen Unix Systemen. Ich mag sehr gerne, wenn ich selber an Sachen arbeite, so tief wie möglich ins Betriebssystem zu gehen und zu schauen, wie es funktioniert. Aber dann diese Sachen zu vereinfachen für Menschen, die nicht so tief ins System greifen wollen, das hat immer Bock gemacht. Es gab immer mal was Neues. Außerdem Container sind ja nur eine der Sachen, woran ich gearbeitet habe. Jetzt arbeite ich ein hundert Prozent der Zeit im Container und vms und so weiter und so fort. Es ist halt interessant."
+        },
+        {
+            "start": 330720,
+            "end": 352060,
+            "speaker": "C",
+            "text": "Du hast mir jetzt schon das richtige Stichwort gegeben. Am Ende hast du vms gesagt, davor hast du immer nur von Containern gesprochen. Kannst du uns mal eine Einordnung geben, was du jetzt überhaupt unter Containern verstehst? Ist es der klassische Docker Container? Ist eine VM auch ein Container? Was ist eigentlich ein Container, was man da irgendwo so hoch schießt? Sprechen wir da vom gleichen Container? Oder was gibt es eigentlich? Um einfach mal eine Einordnung zu haben."
+        },
+        {
+            "start": 352140,
+            "end": 441560,
+            "speaker": "B",
+            "text": "Das ist natürlich etwas, was sich auch über die Jahre sehr verändert vermischt hat. Aber sagen wir mal, eine virtuelle Maschine ist eine, wie es im Namen steht. Es ist eine Virtualisierung der Hardware. Man baut eine ganze Maschine auf, die RAM hat, die PCI und ein CPU oder mehrere hat. Das ist, was eine VM selbst ist. Und dann startet man den ganzen Linux Kernel von da. Das heißt, wenn das Betriebssystem startet, egal ob Linux oder was anderes, man startet das Betriebssystem in einer virtuellen Maschine, so wie auf einem Computer. Es gibt da natürlich ganz viele Details, die es machen, dass die Welt sich da auch vermischt, weil Sachen optimiert werden. Wie kann man eine VM so bauen, dass sie so wenig wie möglich Platz nimmt sozusagen. Aber ein Container ist da eine Abstraktion höher. In einem Container wird nicht ein ganzes OS gestartet. Der Linux Kernel oder der Kernel von Windows, was auch immer der Name ist, die starten da nicht. Man teilt sich den Kernel, wenn man in einem Container ist. Das heißt, ein Container ist einfach nur eine Art, das Betriebssystem so abzugrenzen, dass ein Prozess nicht die anderen sieht auf verschiedene Ebenen. Wir können da noch in die Details gehen. Das kann man alles ein und ausstellen. Aber das ist der Unterschied. Wenn man ein Programm startet, kann man das in einem Container starten oder nicht in einem Container starten. Aber eine virtuelle Maschine ist immer das Booten von einem ganzen Computer."
+        },
+        {
+            "start": 441640,
+            "end": 464040,
+            "speaker": "C",
+            "text": "Ich habe mir immer gemerkt, beim Container sieht man die Cores, zum Beispiel sechzehn Cores und bei der virtuellen Maschine sieht man die Cores unter Umständen nicht, wie man es einstellt. Jetzt wirst du mir wahrscheinlich gleich sagen, it depends. Das kann man vielleicht bei Containern mittlerweile auch machen, aber das war zumindest meine Eselsbrücke. Sehe ich die ganzen Cores, die CPU wirklich direkt oder eben nicht?"
+        },
+        {
+            "start": 464120,
+            "end": 497370,
+            "speaker": "B",
+            "text": "Das stimmt zum Teil. Bei der VM wird das viel früher alles zerschnitten. Der Computer wird viel früher in Arbeitsspeicher CPU zerschnitten. Bei Containern ist es so, dass man dann auch diese ganzen Ressourcen wie Arbeitsspeicher und CPU teilen und eingrenzen. Man kann einem Container nur ein bisschen von CPU. Das wird dann alles über den Scheduler von Kernel gemacht. Das wird nicht dadurch gemacht, dass der Container nur einen Teil der Maschine sieht. Natürlich gibt es allmögliche Tricks, um so zu machen, dass man das nicht sieht, aber das ist dann nicht so wichtig in der Containerwelt."
+        },
+        {
+            "start": 497300,
+            "end": 557300,
+            "speaker": "",
+            "text": "[Werbung]"
+        },
+        {
+            "start": 557370,
+            "end": 590550,
+            "speaker": "A",
+            "text": "Während du gerade gesprochen hast, habe ich die Frage Wie nennt man eigentlich den Kernel von Windows? Und ja, es heißt auch Windows NT Kernel. Das ist also immer noch der, der aktuell verwendet wird. Jetzt haben wir auf der einen Seite auf dem einen Extrem den Container, auf der anderen Seite das andere Extrem die klassische VM. Und ich habe es ja schon im Intro gesagt, es gibt auch den Begriff Micro VM, haben da einen Container und eine klassische VM geheiratet und ein Kind gezeugt und das ist die Micro VM oder was ist eine Micro VM? Und wie untersche unterscheidet eine Micro VM sich von einer klassischen VM und von einem Container? Also ist das wirklich die Mitte?"
+        },
+        {
+            "start": 591190,
+            "end": 688720,
+            "speaker": "B",
+            "text": "Also es ist nicht die Mitte. Es ist eigentlich nur ein Begriff, sozusagen ein Begriff der Ich mache eine virtuelle Maschine, um ein Programm zu starten. Container braucht da überhaupt nicht zu kommen. Container ist etwas, was man starten kann, aber die Mikrowm ist einfach nur ein Begriff, den die Industrie gefunden hat. Keine Ahnung wer, keine Ahnung warum. Um zu sagen, ich werde jetzt nicht das Betriebssystem mit allem drum und dran starten, sondern ich werde nur genau das starten, was ich brauche, um so schnell wie möglich mein Workload zum Laufen zu bringen. Und natürlich ist es gekommen parallel zu Containern, weil man dann okay, ich habe jetzt einen Docker Container, ich habe jetzt ein Image, was alles hat, um etwas zu starten, Also will ich drumrum nur so wenig wie möglich starten. Ein Beispiel von Microcontainern, den alle Menschen benutzen, die Mac OS zehn und Docker benutzen. Jedes Mal, wenn man auf macOS zehn, zehn heißt ja nicht mit, ist egal. Jedes Mal, wenn man diese da startet, startet es eigentlich eine ganze Linux VM und dann startet der Container drin. Deswegen fühlt es sich so anders an, Docker auf macOS oder sogar auf Windows zu benutzen, als auf Linux. Denn auf Linux wird einfach nur der Prozess, der im Container wird, direkt gestartet. Auf Windows und auf macOS wird eine sogenannte kleine VM drumherum gestartet und die hat dann nur ein Kernel, nur das, was sie braucht, um halt dieses Container Image zu starten und nicht den ganzen Rest, nicht den ganzen grafischen Interface oder was auch immer Prozesse noch laufen würden auf einem Server."
+        },
+        {
+            "start": 688720,
+            "end": 698930,
+            "speaker": "A",
+            "text": "Jetzt hattest du gesagt, bzw. Habe ich das so rausgehört, bei einer klassischen virtuellen Maschine hat die Virtual Maschine selbst ihren eigenen Kernel, deswegen bootest du ja den ganzen Kladderadatsch mit hoch und"
+        },
+        {
+            "start": 698930,
+            "end": 700170,
+            "speaker": "B",
+            "text": "in der Micro VM genauso."
+        },
+        {
+            "start": 700170,
+            "end": 716050,
+            "speaker": "A",
+            "text": "Okay, das war nämlich die nächste Frage, weil Container teilen ja den Host Kernel und bei einer Micro VM, die bringen ihren eigenen Kernel mit. Welche Sachen hat man denn dann weggelassen von der klassischen VM, dass die Boot Up Time zum Beispiel relevanter ist oder schneller ist?"
+        },
+        {
+            "start": 716050,
+            "end": 869720,
+            "speaker": "B",
+            "text": "Da ist es natürlich kompliziert, weil es ein tausend verschiedene, vielleicht nicht ein tausend, aber es gibt ganz viele verschiedene Implementationen davon. Die ganz berühmte ist die firecracker und Cloud. Hypervisor sind die zwei großen virtuellen Maschinen. Die bauen natürlich auch auf Codes auf, die es schon in Linux gibt, mit KVM und alles, aber für diese zwei Hypervisors sozusagen. Der Hypervisor ist das, was eine VM zum Laufen bringt, mit dem ganzen Hardware Tooling, was die Plattformen heute haben und was die Kernels auch haben. Ich glaube, das will ich jetzt nicht konkret sagen. Also nimmt das so, wie chatgpt es sagen würde, es könnte Fehler drin sein, aber firecracker wurde damals von Amazon gemacht, um Lambda so schnell wie möglich diese Funktion zu starten, die man dann im Cloud aufruft. Aber die Idee ist, so wenig wie möglich zu booten, um dann nur ein Stück Python zu starten. Stell dir vor, ein Linux Betriebssystem, was startet und du reißt alles raus, was nicht gebraucht wird, um eine spezifische Workload zu starten. Wenn das meiste im Container läuft, dann brauchst du eigentlich nur den Kernel zu starten. Den brauchst du ja. Du willst ja in einer virtuellen Maschine sein. Das ist für die Sicherheit, um das wirklich ganz vom anderen Betriebssystem zu trennen. Das nächste Ding ist systemd. Da kann man schon anfangen, schneller Sachen zu machen, indem man entweder nicht systemd benutzt oder was anderes oder systemd so konfiguriert, dass es nur das startet, was man braucht. Es geht darum, auch den Kernel so zu konfigurieren, dass er so wenig wie möglich drin hat. Er braucht ja die ganzen Treiber nicht. Der Kernel braucht ja nur das, was man braucht, um so schnell wie möglich zu starten. Viele Sachen neben Zeit, sogar ein Keyboard zu entdecken in fünf hundert Millisekunden oder sowas. Nicht für alle, aber jetzt ein Beispiel von einem Treiber. Und jedes Mal, wenn man da, wenn man die Boot Time von mehrere Sekunden oder eine Minute runterbringen will auf hunderte von Millisekunden oder weniger, muss man sich aussuchen, was brauche ich, was brauche ich nicht. Das ist genauso wie, keine Ahnung, ein Auto, was schnell fahren muss in der Formel eins, eine Formel eins hat ja auch tausend Sachen nicht, die für die Sicherheit da sind, zum Beispiel, weil sie das spezifisch getunt haben für eine Sache da um dem Rennen rumzufahren. Das war's. Das ist alles, was die Formel eins macht. Ich kenne mich gar nicht mit Formel eins aus. Ich suche das jetzt einfach so als Beispiel aus. Und so ist es auch mit Betriebssystemen und Workloads."
+        },
+        {
+            "start": 869720,
+            "end": 896580,
+            "speaker": "A",
+            "text": "Ich habe mir gerade überlegt, okay, wie würde ich denn eine Micro VM bauen? Und da kam mir dieses Projekt Linux from Scratch in den Sinn. Linux from Scratch ist eigentlich eine Step by Step Instruction, wie du deinen eigenen Custom Linux System baust, so nach dem Motto. Und dann ist es ja eigentlich sehr simpel gesagt, relativ viel Try and Error, oder? Ich meine, ich habe ein Kernel und versuche es ans Laufen zu kriegen und dann gucke ich, dann boote ich das Ding, guck, was fehlt, pack das da rein, repeat und mach so lang weiter, oder?"
+        },
+        {
+            "start": 896660,
+            "end": 953200,
+            "speaker": "B",
+            "text": "Ja, das ist genau das. Es ist sogar noch einfacher als Linux from scratch, weil wenn du den Container hast, hast du ja schon ein Image, was alles, was dieser Workload braucht, zum Beispiel wenn da C Libraries sind, wo alles zusammen gelinkt ist oder auch wenn es einfach nur ein statisches Programm ist, das ist alles erstmal im Container Image. Deswegen starten Micro vms oft einen Container, jedenfalls in dem Bereich wo ich arbeite, aber dazwischen muss man sich halt mit Linux auskennen. Das init bootet, Was braucht das init? Es muss ein paar Mount Points aufbauen, zu sagen, ey, hier ist Temp, hier ist ein paar Devices, die benutzt werden können und dann muss die Network Interfaces, also das Netzwerk konfigurieren, damit das Netzwerk so konfiguriert ist, wie man will. Vielleicht ein paar PCI Devices, vielleicht ein GPU, aber halt nur das, was dann dieser Workload dann braucht. Und das kann man relativ einfach zusammenbauen, wenn man Linux kennt und Linux from scratch ist da. Genau so habe ich es auch gelernt."
+        },
+        {
+            "start": 953720,
+            "end": 966440,
+            "speaker": "A",
+            "text": "Ich meine, besonders wenn du dann deine Umgebung ja auch kennst, du hast ja gerade Netzwerk angesprochen, also wenn du wirklich weißt, auf welche Hardware du läufst, auf wie deine Umgebung aussieht und so weiter und so fort, dann kannst du es ja richtig, Taylor."
+        },
+        {
+            "start": 966440,
+            "end": 1005560,
+            "speaker": "B",
+            "text": "Und die VM macht es ja noch einfacher, weil die VM sagt ja hier, das ist immer dasselbe, wenn Firecracker oder Cloud Hypervisor auf dieser Plattform läuft und du dann einen anderen vier und sechzig Bit OS starten kannst, da ist es ja immer dasselbe. Das heißt, du kannst einmal das Ding bauen für das, was du brauchst. Nicht alle brauchen Micro vms, es ist ein spannendes Thema und ich mag es und so, aber im Endeffekt brauchen das wirklich nur Sachen, die sehr viel Scale brauchen oder sehr viel auf eine Maschine packen wollen und so weiter und so fort. Es geht darum, halt weniger RAM schneller zu starten, weniger alles zu benutzen."
+        },
+        {
+            "start": 1005640,
+            "end": 1036660,
+            "speaker": "A",
+            "text": "Zum ganzen Workload Management kommen wir hoffentlich noch, wenn wir das überhaupt noch unterkriegen, weil wir haben irgendwie so viel Content für diese Episode. Zumindest bin ich sehr neugierig. Es tut mir leid, dass ich die ich jetzt mit Fragen löchern werde, Das ist alles okay. Jetzt gibt es in diesem ganzen Space, wenn ich Container oder ähnliches bei Wikipedia eingebe, kommen mir die zwei Buzzwords, Namespaces und cgroups auch relativ schnell auf mein Screen. Kannst du mir diese beiden Begriffe, Jetzt fokussieren wir uns einfach mal auf Linux und nicht irgendwie auf freebsd oder irgendähnliche Betriebssysteme."
+        },
+        {
+            "start": 1036660,
+            "end": 1041250,
+            "speaker": "B",
+            "text": "Die Series und Namespace gibt es sowieso nur auf Linux, keine Ahnung, wie sie woanders heißen."
+        },
+        {
+            "start": 1041720,
+            "end": 1046120,
+            "speaker": "A",
+            "text": "Wieder was gelernt. Kannst du mir diese beiden Begriffe einmal einordnen in diesem Ecosystem?"
+        },
+        {
+            "start": 1046200,
+            "end": 1234530,
+            "speaker": "B",
+            "text": "Ja, ich werde es auf Deutsch versuchen. Also Namespace und cgroups sind eine Art für den Kernel, den Linux Kernel, die Maschine so aufzuteilen, wie man will. Wenn man in Linux ist zum Beispiel, hat man zum Beispiel Mount Points. Was ist ein Mount Point in Linux? Man steckt irgendein Device rein und dann mountet man dieses Device in gewisse Verzeichnisse und dann sieht man das da, sein USB Schlüssel. Aber es gibt viel mehr Sachen, die Mounts sind in Linux. Slash ist auch ein Mount Point. Es ist der erste. Und dann gibt es dev, der ist besonders, und sys, der ist auch besonders. Mount Name Spaces sind ein Weg, ein Programm zu Du siehst nur diese Mounts, die ich will. Das heißt, ein Namespace ist für Sachen wie Netzwerk Mounts. Es gibt mehrere andere Namespaces, die jetzt plötzlich aus dem Kopf weg sind. Aber zum Beispiel Mount und Netzwerk sind ganz simpel zu verstehen. PID ist auch sehr einfach zu verstehen. PID. Was ist ein PID? Es ist die Nummer vom Prozess, der da läuft im Linux Betriebssystem. Das heißt, jedes Mal, wenn ein Programm startet, kriegt er eine neue PID. Die PID eins ist init und dann von da aus gibt es immer eine neue PID. Ein PID Namespace bedeutet, ich starte ein Programm und ich tue das in einem sogenannten PID Namespace. Das heißt, wenn er dann PS macht, um zu sehen, welche Programme da auf dem Computer laufen, sieht er nur das, was in seinem Namespace ist, nicht was draußen herum ist. Dasselbe gilt für Mounts, dasselbe gilt für Netzwerk. Das Netzwerk Namespace wird so gemacht, dass man ein Netzwerk baut nur für einen oder mehrere Container auf der Maschine und die sehen dann nicht den Rest, wenn man da nichts, außer man baut da etwas so auf, dass man da Routing hat zwischen diesen Netzwerken. Das heißt, jeder Container in seinem Netzwerk Namespace kann eine IP Adresse haben. Die können sogar dieselbe haben, es ist eigentlich egal. Und wie das in Linux aufgebaut ist. Die Nailspaces kann man entweder nur für einen Container bauen oder man kann sie teilen mit mehreren. Da wird es komplex. Da kann man sich halt wie Lego das so zusammenbauen, wie man will. Diese Hierarchie von wer sieht was auf dem Computer? Dann gibt es auch den Username space, um zu root. In diesem Container ist nicht root außerhalb vom Container. Der hat seine eigene User ID, die drin zwar null ist, aber draußen außerhalb des Containers nicht root ist. Das ist namespacing. Und dann cgroups ist ein bisschen wie Namespaces, nur da geht es darum, die Ressourcen der Maschine zu teilen. Wie viel Arbeitsspeicher, wie viel CPU, wie viel Network Quota und so weiter und so fort. Und wenn man das alles zusammenpackt, kann man Sachen wie Docker bauen oder LX oder was auch immer an Containersystem man will oder man benutzt gar nichts und man ruft diese ganzen Cgroups selber auf und baut sich selber sein System. Das machen weniger Menschen. Aber warum nicht?"
+        },
+        {
+            "start": 1234690,
+            "end": 1247600,
+            "speaker": "C",
+            "text": "Das heißt, es gibt auch ein Mapping, weil du gesagt hast, im Container gibt es andere Pits als draußen in der Welt. Das heißt, die werden umbenannt sozusagen oder so wie ein Symlink quasi auf was anderes gemappt."
+        },
+        {
+            "start": 1247600,
+            "end": 1302980,
+            "speaker": "B",
+            "text": "Genau, ungefähr so. Also der Kernel ist der, der das alles selber managt. Er weiß dann, in welchem Namespace was ist und was erlaubt ist, mit wem zu sprechen, Wer darf auf dieses Netzwerk zugreifen, welcher User ist wer, wenn man es ummappt. Man kann sogar viel mehr Mapping arbeiten. Man kann zum Beispiel einen Mount machen, der außerhalb einem User gehört und drinnen einem anderen User gehört. So kann man zum Beispiel sehr einfach lokal entwickeln, indem man zum Beispiel seinen Code und seinen Editor und seinen AI Agent in einem Verzeichnis hat, was dann geteilt ist mit einem anderen Container zum Beispiel oder andersrum. Man kann das Ganze in einem Container laufen lassen, aber es ist geteilt mit dem Post. Aber ja, das ist alles von Kernel gemanagt. Wir sind ja nicht in einer VM. Also es ist viel granularer. Sagt man das auf Deutsch?"
+        },
+        {
+            "start": 1304100,
+            "end": 1310420,
+            "speaker": "A",
+            "text": "Du kannst ruhig auch, Wir sind hier in der Technik. Also ich bin mir nicht sicher, ob es für manche Begriffe auch deutsche Übersetzung wirklich gibt."
+        },
+        {
+            "start": 1310820,
+            "end": 1315460,
+            "speaker": "B",
+            "text": "Ich versuche es. Ich habe immer Bock, die richtigen Begriffe zu benutzen."
+        },
+        {
+            "start": 1315700,
+            "end": 1319540,
+            "speaker": "A",
+            "text": "Wir müssen jetzt aber nicht alles eindeutschen des Eindeutschen wegen. Also von daher."
+        },
+        {
+            "start": 1319940,
+            "end": 1325140,
+            "speaker": "B",
+            "text": "Sonst hätte ich für Seagroupen Nameslease was gefunden. Das habe ich jetzt nicht versucht. Das wäre zu komisch."
+        },
+        {
+            "start": 1325220,
+            "end": 1328430,
+            "speaker": "C",
+            "text": "Namensräume, Namensträume."
+        },
+        {
+            "start": 1328430,
+            "end": 1335350,
+            "speaker": "B",
+            "text": "Ja genau, das wollen wir nicht. Genauso wie ich werde Segfold sagen und nicht Speicherzugriffsfehler. Der ist mir zu komisch."
+        },
+        {
+            "start": 1335670,
+            "end": 1341590,
+            "speaker": "A",
+            "text": "Mit Speicherzugriffsfehler müsste ich aber auch immer, also da müsste ich auch in meinem Gehirn wirklich Sachen verdrahten, um da rauszukommen auf Segfold."
+        },
+        {
+            "start": 1341590,
+            "end": 1347710,
+            "speaker": "B",
+            "text": "Okay, da bin ich aufgewachsen, bis ich meine Sachen auf Englisch getan habe."
+        },
+        {
+            "start": 1347710,
+            "end": 1361080,
+            "speaker": "A",
+            "text": "Aber wenn ich das jetzt alles richtig verstanden habe, sind die Namespaces also eigentlich die Isolierung, also was darf ich sehen oder wer darf was sehen? Und die Cgroups ist so das Ressourcenmanagement, also wie viel darf ich nutzen, wie viel CD, wie viel RAM und so weiter."
+        },
+        {
+            "start": 1361080,
+            "end": 1373480,
+            "speaker": "B",
+            "text": "Okay, man kann Namespaces in Namespaces bauen, man kann Cgroups in Cgroups, man kann eine ganze Hierarchie aufbauen von wer ist erlaubt zu was und dann ist es alles vom Kernel gemanagt."
+        },
+        {
+            "start": 1373480,
+            "end": 1420160,
+            "speaker": "A",
+            "text": "Ich mag dein Lego Beispiel, das fand ich sehr interessant, aber genau dieses Lego Beispiel. Und du hast mir auch schon das nächste Wort in den Mund gelegt und zwar lxc. Lxc steht meines Wissens nach kurz für Linux Container oder Container. Container, Singular Plural. Schwierige Thematik. Aber ich frage mich gerade diese ganze Technologie Namespaces, Cgroups, lxc, das war ja nicht neu. Und dann kam Docker. Meine Frage was hat Docker anders gemacht? Also hat Docker die ganze Sache einfacher gemacht? Provokativ könnte man fragen, war es eine CLI UI auf dieser ganzen komplexen Technologie initial? Also jetzt ist es wahrscheinlich was ganz anderes. Ich meine, wir sind aber auch schon ein paar Jährchen später. Wie siehst du das?"
+        },
+        {
+            "start": 1420320,
+            "end": 1616640,
+            "speaker": "B",
+            "text": "Die erste Version von Docker hat Alex benutzt, um Container zu starten. Nur erst danach wurden runc und containerd und die ganzen anderen Teile des Ecosystems aufgebaut, als Kubernetes auch in die Welt kam und so weiter und so fort. Am Anfang gab es Cgroups Namespaces und lx war ein Programm, was Cgroups und Namespaces benutzt hat, um etwas zu machen, was viel näher an freebsdjs ist. Und zwar ich starte jetzt eine init und starte ein ganzes Sub OS sozusagen. Da ist nur der Kernel derselbe, aber im Endeffekt waren es immer noch, wenn du reingehst, sah es aus wie eine VM sozusagen. Und du musstest dir dieses File System, wo das ganze OS drin ist, zusammenbauen. Du kannst einfach eine Debian Image runterladen und die da extrahieren und von da booten. Aber ein Update würde bedeuten, reinzugehen und apt update zu machen und apt upgrade. Docker hat zwar Alexei benutzt, aber was wirklich kam, ist nochmal das dockerfile Format und ein Format, um zu Hier ist ein Rezept, nicht die Endversion, sondern ein Rezept, was Docker benutzen kann, um diesen Container zu bauen. Natürlich kommt da auch noch die ganze docker Hub und Caching und runterladen. Das kam danach. Aber dieses Rezept ist das, was du eigentlich teilst. Wenn jemand ein Docker File hat und die ganzen Zugriff auf die ganzen Sachen, die diese Dockerfile benutzt, kannst du dann ganz einfach mit einem einfach nur Docker Bild dieses File System aufbauen. Und nicht nur aufbauen, sondern Docker hat es auch so gemacht, dass zu Hey, brauchen wir überhaupt ein ganzes init mit craw und was auch immer noch, was das startet? Oder brauchen wir einfach nur die Workload starten, die der Container will? Und das ist auch der Unterschied zu Sachen wie Alexey. Alexey wurde zwar am Anfang benutzt, aber es wurde benutzt, um dieses OS zu starten und um genau das zu starten, was man will. Das heißt, klar kannst du ein init starten in einem Docker Container, aber die meisten starten einen Python Server, eine Datenbank und starten dieses Programm direkt und wollen nur das zum Laufen haben und nicht den Rest und diese Datei und das so zu machen, dass du ganz einfach diese Sachen teilen kannst, mit jemand anders benutzen und dass du zum Beispiel, wenn du lokal entwickeln willst, eine Datenbank wie Postgres benutzen willst oder redis und dir nicht mehr Du musst nicht mehr nachdenken, wie installiere ich das erstmal jetzt? So war das ja vorher. Jetzt muss ich erstmal lesen, wie man das Ding zum Laufen bringt. Wie lasse ich das hier zum Laufen? Wie lasse ich das so zum Laufen, dass es mit dem Rest meines Sachen läuft. Heutzutage macht man das viel weniger mit Sachen wie Docker und Docker Compose. Man startet einfach den Post fürs Container und fängt an zu arbeiten. Ist er dann perfekt bereit für Produktion? Nicht unbedingt, aber das soll er ja in diesem Moment nicht. In diesem Moment soll er dem Entwickler helfen, sofort anfangen können zu arbeiten an dem, was er arbeiten will und nicht an dieser ganzen sidequest Geschichte, wo man nur plötzlich Ja, jetzt muss ich lernen über eine Datenbank und Ach, das ist die Config File, die meine Firma benutzt, Ach, es funktioniert nicht. Ja, weil lokal müssen wir das ändern und so weiter. Das ist eine der Beispiele, warum Docker anders ist."
+        },
+        {
+            "start": 1616640,
+            "end": 1657360,
+            "speaker": "C",
+            "text": "Es ist so schön, dass du das alles so automatisch erwähnst. LXC wurde ursprünglich verwendet und die C Groups, weil ich habe das immer so erlebt, besonders von den Gegnern von Docker, so von den klassischen Sysadmins, muss ich jetzt ganz ehrlich sagen, die das meistens so gebracht hat. Ja, weil Cgroups gibt es schon seit Jahrzehnten Und das Docker macht ja gar nichts besser und LXC ist eigentlich viel besser als Docker. Also das sind immer so die Streitgespräche schön, dass jetzt von dir einfach als schön zusammen in einen Pulk geworfen wird und doch hat man voneinander gelernt und verwendet einander und so weiter. Ist eigentlich ganz cool zu hören, wie das alles zusammenwächst eigentlich und dass es nicht entweder oder ist und das durchaus andere Sachen."
+        },
+        {
+            "start": 1657520,
+            "end": 1685220,
+            "speaker": "B",
+            "text": "Für jede Technologie gibt es immer Menschen, die ach, man muss ja nur das lernen, man muss ja nur das machen. Aber kann man das? Ja, ich habe es selber gemacht, weil ich Bock hatte, aber nicht alle. Der Frontend Entwickler will doch jetzt nicht diesen ganzen Zeugs machen. Und es gibt Frontend Entwickler, die es machen wollen, aber es gibt viele, die es nicht machen wollen. Also das ist der Unterschied. So ist das für alle Technologien. Oh, wieso sollte ich das benutzen? Einfach einen FTP Server aufbauen. Aha, einfach einen FTP Server. Geil."
+        },
+        {
+            "start": 1686260,
+            "end": 1710810,
+            "speaker": "C",
+            "text": "Aber wenn wir jetzt mal das Rabbit Hole, das Container Rabbit Hole ein bisschen weiter nach unten gehen. Du hast ja schon erwähnt Namespaces und da gibt es Filesystem wird da gemappt. Jetzt klassisch, wenn ihr zum Beispiel einen Docker Container oder so habt, ließ ich ganz oft dieses Overlay fs Filesystem. Warum brauche ich da dazwischen noch überhaupt irgendwas? Oder ist es nur ein anderer Name für sowieso meinen Namespace? Was ermöglicht mir so etwas dazwischen noch?"
+        },
+        {
+            "start": 1710810,
+            "end": 1799500,
+            "speaker": "B",
+            "text": "Overlay ist ein Copy and Write File System. Das ist eigentlich nur eine Optimierung. Docker funktioniert mit Overlay, betterfs, ZFS, devmapper, alles was so Copy Write Möglichkeiten haben. Da geht es nur darum, das so zu optimieren, dass dieses Docker Image, was alle immer runterladen, denn wir haben vom Docker File gesprochen, aber im Endeffekt benutzen viele Docker, indem sie nicht mal das Ding bauen, sondern sie ziehen ein ganzes Image runter. Und das Image, das Docker Image, das auch eine Sache, die Docker, sagen wir mal, verfeinert hat, ist es so aufzubauen, dass wenn man einen Docker Container im Filesystem baut, dann baut man eine Schicht nach der anderen auf. Das heißt, wenn man ein Dockerfile durchliest, um es zu vereinfachen, jede Linie drin ist eine neue Schicht und diese Schicht wird dann installiert und dann wird sie komprimiert und als tar gespeichert. Und diese ganzen File Systems sind dafür da, dass man nicht tausendmal die Sachen überschreibt und dass man einen Unterschied zwischen Read Write Layern und einfach nur Read Layern hat. Es ist einfach nur eine Optimierung, um alles schnell zu starten und wenig Platz zu verändern. Du könntest ohne overlayfs einfach so wie bei lx alles in ein Verzeichnis tun und dann würde es auch funktionieren. Aber im Fall von Docker will man ja diese Layer teilen und man will es so machen, dass man so viel wie möglich zwischen den Layern teilt, um weniger Platz zu benutzen und so weiter. Also das ist noch mal was anderes."
+        },
+        {
+            "start": 1799820,
+            "end": 1820890,
+            "speaker": "A",
+            "text": "Du hattest in dem ganzen Space auch mal init oder init und systemd angesprochen und das hört man natürlich immer wieder, klar, besonders wenn man im Linux Bereich unterwegs ist. Ich meine, systemd ist, glaube ich, das Management Tool des ganzen Betriebssystems inzwischen. Nach wie viel Jahren Streit. Ich glaube, da gab es zwischen systemd und was war das andere?"
+        },
+        {
+            "start": 1821050,
+            "end": 1828250,
+            "speaker": "B",
+            "text": "Weiß nicht, wir benutzen schon seit Jahrzehnten oder mehr systemd. Jetzt. Vorher gab es halt verschiedene Initiator."
+        },
+        {
+            "start": 1828250,
+            "end": 1857800,
+            "speaker": "A",
+            "text": "Ich frage mich halt, welche Rolle spielt systemdisco selbst im Ecosystem? Weil ich glaube, du hattest auch im Vorgespräch mal erwähnt, dass systemd besser funktioniert, wenn es auf der Prozess ID eins läuft oder dass man es halt vielleicht als ersten Prozess starten sollte, nenne ich es mal. Was steckt dahinter? Warum ist das wichtig? Warum ist systemd für ein Container Ecosystem wichtig versus das ganze Betriebssystem? Also wenn wir besonders sehr limitierte Ressourcen in dem Container laufen lassen, brauchen wir dann überhaupt ein Management System obendrauf?"
+        },
+        {
+            "start": 1857800,
+            "end": 1976680,
+            "speaker": "B",
+            "text": "Also systemd selbst ist ja mehr als nur ein Init System. Es ist ein ganzes Userland Management System für Linux selbst. Es macht alles Mögliche. Es hat sogar eine Implementierung von Containern mit systemd spawn, was so funktioniert wie lx. Hier ist ein Verzeichnis, starte das bitte. Das ist systemd spawn. Systemd macht auch sehr viel cgroup und Namespace Management. Du kannst jeden Prozess, den du mit systemd startest, auf einer auf einem Linux in verschiedenen Namespaces, verschiedene Cgroups, verschiedene, kannst du alles feintunen und mit systemd machen. Natürlich macht systemd noch alles Mögliche. Alles was halt Low Level DNS gibt es auch von systemd. Muss man nicht, aber gibt es die Zeit einstellen vom Computer Cron ersetzt wurde ersetzt durch systemd und so weiter und so fort. Systemd selbst hat angefangen als init System. Das heißt, es ist das erste Programm, was der Kernel startet. Wenn man ein Linux Kernel startet, startet er dann has been init oder was auch immer man dem sagt. Klar kann man das umbauen, aber so war das früher und init war immer pid. Init ist pit, weil init die ganzen anderen Prozesse von Linux so managed, dass wenn ein Signal kommt, wird es gemanagt durch initiative. Also inits und systemd managen halt alles, was da läuft, auch wenn sie jetzt, wenn sie zum Beispiel einen Prozess starten und ein Prozess dann stoppt und es neu gestartet werden muss. Das wird alles von systemd gemacht und systemd funktioniert eigentlich auch sehr gut, wenn es nicht PID ist. Man muss nur sehr viel einstellen, damit es auch nicht sozusagen den Rest der Maschine übernimmt. Aber man kann sehr gut so zusammenbauen, dass man auch systemd in einen Docker Container startet, wenn man will. Das geht. Das braucht nur Arbeit."
+        },
+        {
+            "start": 1976840,
+            "end": 1993640,
+            "speaker": "C",
+            "text": "Das wäre jetzt gleich meine Frage gewesen, weil du es gerade angesprochen hast. Wie blickst du auf diese Grundregel? Ein Prozess pro Docker Container, weil systemd würde ja dann mehrere irgendwie losstarten. Wie handhabst du das persönlich oder hast du da irgendwie Grundregel oder einfach wie man es halt will?"
+        },
+        {
+            "start": 1993640,
+            "end": 2024450,
+            "speaker": "B",
+            "text": "Ich habe wie man will, kommt drauf an, was man machen will. Manche wollen Mini vms bauen, also Mini Container bauen, die sich so wie vms verhalten, die meisten nicht. Wenn ich selber etwas zusammenbaue, dann versuche ich einen Container für eine Sache zu behalten. Manche Sachen sind komplex und brauchen mehr als nur das eine drin. Und dann sieht man oft kleine. Es gibt viele Docker Images, die einen kleinen, nicht System D, aber andere Protestmanager benutzen, um mehrere Prozesse zu starten."
+        },
+        {
+            "start": 2024610,
+            "end": 2056300,
+            "speaker": "A",
+            "text": "Jetzt habe ich mir die Frage gestellt, oder zumindest ist das immer so ein Battle in der Industrie, was man hier und da mal liest, und zwar die Kern kpis, Start up Time bei Container und bei Micro vms und so weiter. Also welche, besonders wenn du sagtest, oder du hast glaube ich auch erwähnt, Firecracker wurde damals für AWS Lambda entwickelt. Das glaube ich, ja, das ist auch zumindest auch meine Information, die ich über die Jahre gelesen habe. Ich habe zumindest nichts Gegenteiliges gelesen und auch meine Information. Gut, da sind wir uns schon mal einig."
+        },
+        {
+            "start": 2058700,
+            "end": 2059500,
+            "speaker": "C",
+            "text": "Konsens."
+        },
+        {
+            "start": 2059580,
+            "end": 2079730,
+            "speaker": "A",
+            "text": "Und natürlich, als AWS Lambda rauskam, gab es auch super viel Probleme mit Startup Times, mit kalten Startup Times und so weiter und so fort. Und ich habe irgendwie das Gefühl, dass die Bootzeit einer Micro VM und vielleicht sogar der Memory Footprint, ich sag mal so die Kern KPI da sind, würdest du dem zustimmen? Und wenn ja, was würdest du sagen? Warum ist das so?"
+        },
+        {
+            "start": 2079810,
+            "end": 2213970,
+            "speaker": "B",
+            "text": "Wann brauchst du eine Micro VM? Du willst etwas starten, du willst eine Workload starten. Du willst, dass die Workload komplett unabhängig und separat und den Rest der Maschine nicht sehen kann und dass du wirklich einen Hypervisor Bug haben musst, um da rauszukommen, nicht nur ein Kernel Bug. Also das ist, was du willst. Du willst halt Sicherheit, du willst Ressourcentrennung, die hart ist sozusagen. Nicht durch einen Scheduler oder sowas, sondern durch hier. Das ist die Maschine, die du hast. Punkt. Obwohl selbst da in der WM Welt wird es komplex und man kann softer Targets haben. In manchen Fällen will man so schnell starten wie möglich. Ich glaube nicht, dass eine Micro VM in sich selbst als KPI Du musst schnell starten haben muss. Es ist nur das ist oft, was die Menschen brauchen, wenn sie eine Micro VM machen. Ein Beispiel, der viel näher dran ist als alles andere, wenn man einen Docker Container auf macOS startet und es diese Micro VM startet, Es würde sich sehr schlecht anfühlen, wenn man jedes Mal sechzig Sekunden warten müsste oder sogar dreiig, bevor man diesen Container benutzen kann. Das würde bedeuten, dass wenn man es auf Linux benutzt, die Dinge einfach magisch sofort da sind. Aber auf macOS müsste man dann warten. Deswegen ist die KPI natürlich okay, ich starte so schnell wie möglich, denn was der Kernel da macht, ist uns eigentlich wurscht. Wir wollen nur eine Sache, den Container. Dasselbe würde ich mal sagen für etwas wie Lambda. Du willst so schnell wie möglich deine Function Call haben. Vergiss erstmal Caching und Boot und Warm. Das sind noch ganz andere Optimierungen, es noch schneller zu machen. Okay, mein Kernel startet in zwei hundert Millisekunden. Wie kriege ich es runter auf dreiig? Also muss ich sie schon mal vorstarten? Das wäre dann warm vs. Cold. Und für Sachen wie bei Wir, bei Cloudflare oder andere Sachen, so eine Sandbox, die du starten willst für AI Agents. Du willst auch, oder nicht nur Agents, da willst du auch, dass sie so schnell starten kannst und so wenig Ressourcen wie möglich. Deswegen ist das eine wichtige KPI. Aber es ist alles am Use Case gebunden."
+        },
+        {
+            "start": 2213970,
+            "end": 2250360,
+            "speaker": "A",
+            "text": "Use Case technisch frage ich mich natürlich gerade, wurden Micro vms und vielleicht auch Container auch so für die Multi Tenant Welt erschaffen, weil im Endeffekt, weil sie halt weniger Memory verbrauchen, Isolation bieten, könnten die natürlich sagen, okay, mit dem ganzen Cloud Movement und besonders vielleicht sogar jetzt, wo Server halt wirklich teuer sind bzw. Kaum noch verfügbar sind, weil die ganzen Firmen ja irgendwie gefühlt alles aufkaufen oder aufkaufen lassen von den Hyperscalern. Ist halt die Frage, ist Multitenant der Default Use Case dafür, dass man die Hardware ordentlich auslasten kann dadurch Also Container"
+        },
+        {
+            "start": 2250440,
+            "end": 2332220,
+            "speaker": "B",
+            "text": "selbst benutzen und auch selbst eine VM, die einen Container starten würden, benutzen so viel Speicher, wie das Workload einen Speicher benutzt. Wenn die Datenbank oder ein Python Programm drin richtig viel benutzt, wird es so viel benutzen. Die VM kann es dann, wenn man es in einer Micro VM startet, ist es natürlich sicherer für eine Multitenant WM. Ist doch klar. Da hast du das Beispiel mit Sachen wie Lambda oder wie andere Plattformen wie wir bei Cloudflare auch. Du willst, dass ein Benutzer jeden Container der Welt starten kann, ohne die Sicherheit von anderen Benutzern und der Maschinen, wo diese Container drauf laufen sollen, zu beeinflussen und zu verschlechtern. Deswegen ist die Micro VM da, wenn du nicht ein Multitenant System aufbaust. Wenn du nur alleine bist, kannst du das auch in Micro vms einbauen, aber brauchst du nicht unbedingt. Das kommt alles von, wie sicher du Sachen haben willst. Ich meine, Linux selbst für Container ist schon ziemlich sicher. Natürlich gibt es Kernelbox und was auch immer, wie man da aus dem Container. Man kann viel einfacher aus dem Container ausbrechen als aus einer VM. Das bedeutet aber nicht, dass es einfach ist, aus einem richtig gut konfigurierten Container auszubrechen. Man braucht da schon einen Bug. Ja, es ist wichtig, um sicher Multitenants und verschiedene Benutzer auf denselben Maschinen zum Laufen zu bringen."
+        },
+        {
+            "start": 2332220,
+            "end": 2378070,
+            "speaker": "A",
+            "text": "Jetzt hattest du Cloudflare schon erwähnt, nur noch mal für alle Hörerinnen. Das ist jetzt hier keine Cloudflare Werbung, sondern da wird einfach nur die Erfahrung, die Sepp gemacht hat, natürlich auch geteilt und angewandt und so weiter und so fort. Und zufälligerweise arbeiten wir beide für die gleiche Firma. Aber du arbeitest jetzt bei Cloudflare am Containerprodukt und im Vorgespräch hattest du mir ein bisschen was erzählt, dass du oder eins deiner letzten Projekte vielleicht sogar erstens, als du wieder da bist, war, dass du ein Custom Init System geschrieben hast, um halt auch diese besagte KPI von bootside, ich sag mal, etwas nach unten zu drücken. Kannst du mal erklären, was du da gemacht hast, bzw. Was das Initialproblem war und wie du es angegangen bist? Weil so ein Custom Init System, ich weiß nicht, ich habe zwar viel Software geschrieben, würde ich mir aber ehrlicherweise jetzt gerade nicht so zutrauen."
+        },
+        {
+            "start": 2378230,
+            "end": 2501550,
+            "speaker": "B",
+            "text": "Wir haben eine Container Plattform und wie alle Container Plattformen wollen wir, dass sie so schnell wie möglich starten und so wenig wie möglich rammen und auch Platz auf der Festplatte. Und eine der Sachen, die gemacht werden konnten, war zu Hey, lass uns nicht systemd benutzen. Lass uns mal. Jedenfalls das war mein Vorschlag. Das ist auch keine brandneue Idee von mir, das machen andere auch. Nur in diesem Fall gibt es wenig. Es gibt wenig Open Source Init Systeme, die nur an das angepasst sind, wie du die du willst. Ich hätte was anderes nehmen können, aber in diesem Fall auch mit der Hilfe von AI sozusagen. Du brauchst ein paar Sachen. Erstmal musst du Linux ziemlich gut kennen. Du musst wissen, was brauche ich, um Container, irgendein jeden Container der Welt zu starten. Zweitens, du brauchst dieses Verständnis, dann brauchst du Zeit und Hilfe. In meinem Fall Zeit hatte ich, aber die musste komprimiert werden. Und da ist da, wo AI mir ziemlich viel geholfen hat, denn ich wusste genau, was ich wollte. Ich wusste genau, was ich brauchte zum Booten. Ich habe es ein bisschen erwähnt am Anfang vom Podcast. Du willst deine Mounts, du willst dein Netzwerk, du willst. In unserem Fall haben wir noch ein paar andere Sachen, die wieder drin laufen haben wollen bei Cloudflare. Diese ganzen Custom Sachen will ich in einem Paket bauen, der ist so klein wie möglich und genau nur das macht, was wir brauchen. Und das habe ich in Rust geschrieben und ich konnte das Team dazu überzeugen, es zu machen, weil es halt nicht mehr ein Jahresprojekt ist, sondern mit AI viel einfacher. Das bedeutet nicht, dass die AI das einfach rauspumpt und es funktioniert einfach sofort. So funktioniert eigentlich gar nichts mit AI. Aber in meinem Fall ist es so, da ich mich da gut auskenne und andere Teile, die so low level sind, schon mal geschrieben hatte, wusste ich, was ich wollte, wusste ich, was ich lesen wollte im Code und ich wusste auch genau, was ich für eine Testsuite haben wollte, um sicher zu gehen. Das funktioniert. Es funktioniert jedes Mal, es ist nicht kaputt. Und so haben wir das gebaut."
+        },
+        {
+            "start": 2501630,
+            "end": 2512910,
+            "speaker": "C",
+            "text": "Vielleicht gerade noch mal zum Verständnis, Dieses init passiert dann im Container oder ist da auch ein Teil außerhalb, weil du erwähnt hast Namespaces und so. Also es ist wirklich innerhalb, Ja, es"
+        },
+        {
+            "start": 2512910,
+            "end": 2538880,
+            "speaker": "B",
+            "text": "ist innerhalb der VM. Es ist der Teil, der nach dem Kernel startet. Vorher hatten wir da systemd und das war ziemlich generisch. Ein hundert Prozent hätte systemd bestimmt noch ein tausend Mal getunt werden können, um zu Hey, mach das nicht, mach das so, mach das so effizienter und sowas. Aber ich wollte es dramatisch ändern. Und um es dramatisch zu ändern, das heißt, um wirklich auf hunderte von Millisekunden zu gehen, war es einfacher es zu schreiben."
+        },
+        {
+            "start": 2539840,
+            "end": 2547430,
+            "speaker": "C",
+            "text": "In unserem Fall, was war das davor? Die größten Ordnung der Zeit, wenn es jetzt bei ein hundert Millisekunden ist, naja,"
+        },
+        {
+            "start": 2547670,
+            "end": 2562190,
+            "speaker": "B",
+            "text": "das kommt alles darauf an, was warm oder kalt war bei uns in Cache, Aber von mehreren Sekunden runter zu unter drei hundert Millisekunden, so ein großer Faktor. Und wir reden auch von einer RAM Benutzung, die runtergeht auf weniger als zehn Megabyte."
+        },
+        {
+            "start": 2562190,
+            "end": 2568790,
+            "speaker": "C",
+            "text": "Also wenn jetzt systemd verwenden würde, da bin ich auf jeden Fall bei fünf Sekunden oder länger, so im Normalfall."
+        },
+        {
+            "start": 2570270,
+            "end": 2589710,
+            "speaker": "B",
+            "text": "Das bedeutet nicht, dass man systemd nicht tun kann, um viel schneller zu machen. Das war nur nicht etwas, was wir brauchten. Ich wollte etwas haben, was ganz einfach für uns zu managen ist. Und wir hatten auch andere Ansprüche, die intern sind an Cloudflare, die wir da reinbauen wollten, die systemd nicht macht. Das kommt natürlich alles zusammen."
+        },
+        {
+            "start": 2589950,
+            "end": 2595150,
+            "speaker": "C",
+            "text": "Und wie kommt man da hin? Also was hast du anders gemacht bei systemd oder was wirft man da alles weg?"
+        },
+        {
+            "start": 2595310,
+            "end": 2694830,
+            "speaker": "B",
+            "text": "Man fängt von Null an, macht man nur das, was man braucht. Anstatt zu Ich gucke nicht rein, sage das, ich schmeiß nicht Sachen raus, ich baue neu auf, aber ich baue neu auf mit nur das, was ich brauche. In unserem Fall ist es Wir wollen einen Container starten, wir wollen alles runtergehen, damit wir run c rufen können. Das heißt, man tut im Image nur das, was man braucht. Einen statisch kompilierten init, nicht ganz statisch kompiliert, es ist ein Rust geschrieben und hat ein paar C Libraries, die werden dann alles reingepackt. Es so zu machen, dass es ein Squash fs ist, das heißt so ein Read Only File System, wo nur drin ist, was man braucht. Das heiß okay, ich will etwas mit runc starten und so konfigurieren wir das Netzwerk. Das hatten wir ja schon. Ich wusste ja schon, wie das Netzwerk konfiguriert ist. Und dann habe ich okay, ich brauche einen Parser für die Netzwerkkonfiguration von systemd und ich brauche das und ich brauche ich muss die ich muss die Mounts, alles was den Host Name Set the host nehmen, Setup the mounts, alles was init macht für dich, um zu starten, einen User konfigurieren im Image selbst. Manche Sachen sind im init Code selbst, manche Sachen sind im Image für die VM. Aber die beste Analogie ist, was ich am Anfang gesagt hatte, man schmeißt nicht Sachen raus. In unserem Fall fängt man von null an und schreibt ich brauche das, ich brauche das, ich brauche das, indem man sich zurückarbeitet von dem, was man am Ende will. Am Ende will ich einen Container starten, muss er genauso sich benehmen wie vorher. Kein Unterschied zum Benutzer. So kannst du es auch einfach austauschen vom Benutzer."
+        },
+        {
+            "start": 2694910,
+            "end": 2709520,
+            "speaker": "A",
+            "text": "Du hattest die Testsuite erwähnt und ich frage mich gerade, von welcher Art von Test reden wir? Reden wir hier von Unit Tests? Reden hier von Integration Test also oder Also was sind so klassische Testfälle, wo du gesagt hast okay, die will ich haben."
+        },
+        {
+            "start": 2709680,
+            "end": 2783260,
+            "speaker": "B",
+            "text": "Testfälle selbst ist ein bisschen kompliziert, aber sagen wir mal, du willst diese VM schnell starten und du willst einen Container schnell starten. OK, dann machst du eine Integration Test, durch die Firecracker oder Cloud Hypervisor für jeden Test aufruft und einen Boot machst. Du kannst Basistests haben, Ich boote und steht das in den Bootlogs drin? Ich boote. Funktioniert das Netzwerk, ich boote mit einer falschen IP Adresse? Funktioniert es immer noch? Nein, es funktioniert nicht. Alles, was man da so einbaut, wird eingebaut und einfach automatisch getestet. Und das Coole ist, weil man da die ganze VM startet und die so schnell starten, kann man einfach richtig viele auf einmal gleichzeitig starten und dann die Tests sind nicht nur wie beim normalen entwickeln, sie sind da, damit du später nicht etwas kaputt machen machst, wenn du etwas veränderst, wenn du neue Funktionalitäten einbaust. Und dann willst du natürlich auch testen können, dass der Container selbst startet und dass der Container selbst gewisse Sachen machen kann. Die Testsuite ist natürlich wichtig, ob man das mit AI schreibt oder nicht. Für so ein Projekt braucht man eine ganze Testsuite ganz sicher braucht man für die meisten, für AI braucht man sie sowieso, denn ohne Testsuite kann AI gar nichts entwickeln."
+        },
+        {
+            "start": 2783420,
+            "end": 2815650,
+            "speaker": "C",
+            "text": "AI ist ja sehr spannendes Thema, weil du das angeschnitten hast und ist ja auch viel in Diskussionen aktuell. Hilft einem das wirklich weiter und wie viel hilft es weiter und ist es wert? Aber da möchte ich jetzt gar nicht hin in die Diskussion. Was du aber erwähnt hast, ist, du hättest dieses Projekt sonst gar nie machen können im Prinzip von Null starten und hast du so eine Abschätzung oder jetzt auch, nachdem du es gemacht hast, wie lange du gebraucht hättest sonst oder wie groß wäre so ein Projekt im klassischen Sinne und wie lange hast du jetzt ungefähr gebraucht? Also nur so größenordnungsmäßig?"
+        },
+        {
+            "start": 2816600,
+            "end": 2835200,
+            "speaker": "B",
+            "text": "Ich hätte definitiv über ein Jahr gebraucht, um sowas zu machen. Und in diesem Fall war das, ohne zu viele Details zu geben, erster Prototyp in zwei Wochen gemacht und dann vielleicht zwei, drei Monate, bis es dann fertig war. Fertig bedeutet, es läuft in Produktion gut,"
+        },
+        {
+            "start": 2835200,
+            "end": 2865580,
+            "speaker": "A",
+            "text": "aber von etwas Code, was man auf deiner Festplatte hat in Produktion, das sind ja viele Sachen, wo AI, ich sag mal, vielleicht sogar relativ wenig helfen kann. Ich sag mal, klassische Operations Tasks oder Systems Engineering und so weiter und so fort. War das dann wirklich, ich sag mal, diese Pareto Regel, dass du achtzig Prozent des Codes in zwanzig Prozent der Zeit geschrieben hast und dann die letzten zwanzig Prozent wirklich, ich sag mal, durchgrinden musstest und dann halt die Edge Cases rausholen und Co."
+        },
+        {
+            "start": 2865580,
+            "end": 2947760,
+            "speaker": "B",
+            "text": "Genau so funktioniert es für alles, was ich so mache generell. Aber in diesem Fall war es genau das ungefähr diese Größenordnung. Am Anfang geht es sehr schnell, oh, hier ist ein Prototyp, hier funktioniert das funktioniert, ist sogar eine Testsuite dabei, Benchmark und cool und dann ist es okay. Jetzt wollen wir es aber wirklich zum Laufen bringen und wir wollen, dass die ganze Testsuite, die wir schon haben, damit läuft. Und das muss man sich Stück für Stück durcharbeiten und findet man neue Probleme, dann packt man sie Produktion, dann muss man es auch Stück für Stück anmachen für die Kunden. Das dauert natürlich auch. Es ist jetzt nicht alles nur Codeschreiben, aber AI hat tierisch dafür geholfen. Du brauchst sehr viel Boilerplate für sowas. Du musst sehr viel schreiben und du musst es testen. Ehrlich gesagt, da wo die AI am meisten geholfen hat, ist, wenn ich etwas von der Testsuite brauchte, da habe ich gesagt, ich brauche das, ich brauche das, habe ich mir ein Code durchgelesen, sah gut aus, veränder das, veränder das. Aber so viele Tests zu schreiben, ehrlich gesagt, habe ich vor AI nicht gemacht. Ich habe ein paar Tests geschrieben vor der Welt mit AI, aber nicht so viele wie heute. Ich glaube, das hat nicht nur damit zu tun, dass ich jetzt endlich viele Tests haben kann. Es hat auch damit zu tun, was ich gesagt habe vorher wo die AI selbst braucht Tests, sonst zerstört sie alles. Erstmal weiß die ja gar nicht, wie sie fertig ist und zweitens zerstört sie alles auf dem Weg, wenn sie nicht einen Test hatten."
+        },
+        {
+            "start": 2947760,
+            "end": 2955840,
+            "speaker": "C",
+            "text": "Aber du hast jetzt keine Tests hand manuell geschrieben, sondern auch dann wieder AI verwendet, um Tests zu schreiben. Die meiste Zeit zumindest wenn ich richtig"
+        },
+        {
+            "start": 2955840,
+            "end": 3000400,
+            "speaker": "B",
+            "text": "verstehe, wie viele Menschen schreibe ich seit Dezember keine Linie Code selber mehr. Selbst wenn es Box doch für Advents of Code. Das mache ich immer noch oldschool selber im Dezember. Ich mache nicht den ganzen Monat durch, danach muss gekocht werden und so. Aber am Anfang fange ich da immer selber an, mache die ersten fünfzehn Tage oder so. Das ist natürlich etwas für sich selbst, aber sonst professionell mache ich alles mit AI. Ich mache es in sehr vielen Stücken und lese den ganzen Code, der gemacht wird und verbrauche viel Zeit, damit es zu korrigieren. Aber korrigieren wird auch mit der AI gemacht. Ein hundert Prozent. Für meine Sachen funktioniert das ziemlich gut. Baut viel Müll, man muss da viel lernen. Kein Müll damit zu schreiben, kein Thema."
+        },
+        {
+            "start": 3000400,
+            "end": 3011640,
+            "speaker": "A",
+            "text": "Ich bin sehr froh, dass du sagst, ohne AI hat man nicht so viele Tests geschrieben. Das finde ich total toll, weil jeder sagt immer, wir schreiben alle super viel Tests und dann bin ich da so ja, ja, tue ich ja auch so nicht."
+        },
+        {
+            "start": 3013400,
+            "end": 3019880,
+            "speaker": "B",
+            "text": "Naja, weil die so nervig zu schreiben sind Jetzt mal ehrlich echt langweilig jedenfalls für mich."
+        },
+        {
+            "start": 3020200,
+            "end": 3023820,
+            "speaker": "A",
+            "text": "Es ist langweilig, aber ich gebe auch immer zu, immer wenn ich mich überwunden habe, habe ich immer ein, zwei Bugs."
+        },
+        {
+            "start": 3024610,
+            "end": 3044450,
+            "speaker": "B",
+            "text": "Man braucht sie. Ich sage nicht, dass ich früher keine Tests brauchte. Ich sagte nur, dass mein Code jetzt besser getestet ist als früher. Das ist alles. Natürlich habe ich auch Sachen zerstört auf dem Weg, wenn da irgendwo auf dem Pfad keine Tests waren. Aber wir reden hier nicht von jemandem mit einem kleinen Hammer, der was kaputt macht. Mit der reden wir von Bulldozer, der da durchgeht."
+        },
+        {
+            "start": 3044610,
+            "end": 3051250,
+            "speaker": "A",
+            "text": "Und ich finde unglaublich schön, dass du die Engineering Ehre aufrecht hältst und sagst bei Advent of Code, das finde ich"
+        },
+        {
+            "start": 3051250,
+            "end": 3057730,
+            "speaker": "B",
+            "text": "schön, Ja, ist doch klar. Wieso sollte ich dir Klar, sonst kann ich copy paste und es funktioniert. Da habe ich doch nichts gelernt."
+        },
+        {
+            "start": 3058690,
+            "end": 3092650,
+            "speaker": "A",
+            "text": "Lass uns mal noch mal ganz kurz auf das Thema Sicherheit bzw. Trade offs eingehen. Und zwar hatten wir schon geklärt, okay, geteilter Kernel, hyperweise Grenze und so weiter und so fort. Inwieweit sagst du okay, sind Container bzw. Micro vms bzw. WMS von Sicherheits wie soll man sagen, Issues betroffen? Also muss es immer direkt eine Kernelücke sein oder gibt es da, ich sag mal, Level, wo es immer schwieriger wird, je nachdem wie viel Isolierung man hat?"
+        },
+        {
+            "start": 3093129,
+            "end": 3245050,
+            "speaker": "B",
+            "text": "Das ist eine sehr breite Frage. Aber sagen wir mal, wenn man anfängt, das erste ist, sagen wir mal, jemand hat mehrere Container am Laufen lassen und startet Container, die er nicht kennt. Der größte Fehler ist wie immer, irgendetwas falsch zu konfigurieren. Ganz besonders mit LLMs, die Hey, einfach diese Command, jetzt starte sie und dann funktioniert es Ja, aber fehlt da was. Es gibt Sachen, die du bei Docker konfigurieren kannst, um Sachen sicherer zu machen. Out of the box ist Docker ziemlich sicher, aber man kann natürlich alles Mögliches machen und Hey, mach mal diese Sicherheit da weg oder ich brauche das oder öffne mal das oder mach mal alle Ports auf. Kann man einfach sehr schnell einfach machen. Also natürlich sind die ersten Fehler immer Benutzer. Danach gibt es auch, sagen wir mal, wenn etwas richtig dicht konfiguriert ist im Docker selbst und du du kannst keine Root Processes starten und die Workload ist nur als User und sowas, dann brauchst du schon eine Kernelücke, um da rauszukommen. Wie gesagt, deswegen sind es schlechte Konfigurierungen oder schlechte Images, die schlecht gebaut sind, viel einfacher als Falle als diese Kernellücken. Aber Kernellücken, es gibt die, die man kennt und die, die man nicht kennt. Und wenn man dann einfach raus ist aus dem Container, dann ist man sozusagen rot auf der ganzen Maschine. Deswegen sind diese vms so wichtig, denn wenn man aus dem Container rausschlüpft aus einem Acryl VM, dann ist man erstmal in der VM. Und wenn man da in der VM ist, braucht man tatsächlich ein Hypervisor Bug, nicht mehr ein Kernelbo. Das heißt, man braucht einen Bogen Firecracker in Cloud Hypervisor oder natürlich der Linux Kernel selbst ist auch ein Hypervisor. Sehr viel von diesen Sachen wie Firecracker und Cloud Hypervisor benutzen, KVM benutzen. Da kann natürlich auch ja, ist es dann Hypervisor Bug oder ein Kernel Bug oder beides? Ist eigentlich wurscht. Es ist ein Bug, der dir dazu hilft, aus deiner VM rauszuschlüpfen, aber das ist dann noch eine ganze Klasse höher. Bei Sicherheit ist es genauso wie bei physischer Sicherheit. Man baut mehr und mehr aufeinander, je sicherer man etwas haben will. Die Burg hat eine Wand und hat einen Graben mit Wasser. Wer dann extra sicher will, packt noch mal Krokodile rein. Aber es kommt drauf an. Die Burg hat etwas zu verteidigen, weil da eine ganze Stadt drin ist. Das kleine Haus hat weniger zu verteidigen. Bedeutet nicht, dass man plötzlich die ganzen Türen auflassen muss. Aber das heißt, es sind alles Levels der Sicherheit, die man sich aussucht. Und manchmal ist es nicht einfach zu wissen, welches Level man Du hast gerade"
+        },
+        {
+            "start": 3245050,
+            "end": 3259570,
+            "speaker": "A",
+            "text": "einen wichtigen Punkt angesprochen, auch wie ich den Container laufen lasse. Ich überlege gerade, okay, was ist, wenn ich einfach mal irgendwas mounte mit Read Write Permissions und jemand ist im Container, Dann kann man natürlich durch den Mount natürlich auch Dateien auf den Host System schreiben und so weiter und so fort."
+        },
+        {
+            "start": 3259650,
+            "end": 3292000,
+            "speaker": "B",
+            "text": "Du kannst auch den Container mit zum Beispiel dash p und dann ist er dann ist er sozusagen einfach alles erlauben, dann bist du gut drin. Es hat auch einen Sinn. Manchmal ist es sehr praktisch, ich benutze Container mit Privileges selber zum Entwickeln von Systemen, wo Container in Container in Container laufen oder vms in vms in Container laufen. Dafür brauchst du halt mehr als Entwickler, aber das ist dann lokal für mich. Aber wenn du dann einfach deinen Workload Root gibst mit einem dash p, ist es klar, dass da ein Problem kommen kann."
+        },
+        {
+            "start": 3292000,
+            "end": 3294880,
+            "speaker": "A",
+            "text": "Was ist dein Use Case, um Container in Container laufen zu lassen?"
+        },
+        {
+            "start": 3294880,
+            "end": 3361510,
+            "speaker": "B",
+            "text": "Es ist einfach ganz simpel. Wir bauen ein Containersystem, was auf Cloudflare läuft. Diese Container laufen in einer VM. Diese vms müssen wir auch lokal irgendwie entwickeln. Das System, was diese ganzen VM managt und startet, das heißt, wir brauchen ein Developer Environment. Will ich das jedes Mal wieder aufbauen? Nein. Das Erste, was ich eigentlich gemacht habe, als ich zu Cloudflare gekommen bin dieses Jahr, ist zu Hey, diese VM, die wir benutzen, wir packen das alles in ein Docker Image. Deswegen bist du plötzlich mit Docker in der VM ist nicht Docker, aber mit einem Container in der VM, die selbst in ein paar Namespaces und Cgroups läuft, die dann selber in dieser Sandbox laufen. Und ganz besonders mit AI ist es jetzt so, okay, und dann habe ich nochmal einen AI Agent, der in diesen Docker Container läuft, damit der direkt Zugriff drauf hat. So wird es gestapelt und es wird auch sehr schnell gestapelt auf Linux. Denn auf Linux hast du systemd, der startet und dann sagt hey, ich starte Docker, Docker wird in seinem Cgroup und seinem Namespace gestartet und er selbst kreiert Namespaces und Cgroups und so weiter und so fort. Dieser Fall passiert oft, aber in meinem Fall ist es für Develop."
+        },
+        {
+            "start": 3361830,
+            "end": 3364150,
+            "speaker": "A",
+            "text": "Du musst schon zugeben, das klingt schon echt Meta, oder?"
+        },
+        {
+            "start": 3364150,
+            "end": 3368310,
+            "speaker": "B",
+            "text": "Es ist Meta ein hundert Prozent. Deswegen ist es ein kompliziertes Thema."
+        },
+        {
+            "start": 3368310,
+            "end": 3393520,
+            "speaker": "A",
+            "text": "Wenn ich jetzt weiter in das Rabbit Hole hier gehe, über das wir sprechen, dann ja, es geht immer tiefer, das weißt du doch. Dann gibt es auch, ich würde es mal hybride Ansätze nennen, wie zum Beispiel Kata Containers oder G Weißer, was meines Erachtens oder meines Verständnis nach ein User Space Kernel, also ein neuer Kernel im User Space ist. Hast du damit schon mal irgendwie Erfahrungen gehabt?"
+        },
+        {
+            "start": 3393520,
+            "end": 3469730,
+            "speaker": "B",
+            "text": "Also mit Kata Containern habe ich keine Erfahrung, aber von das, was ich gelesen habe, ist es eine Art mikrowm Plattform. Aber ich sage vielleicht was Falsches, weil ich wirklich sage, von was ich so gesehen habe. Ich bin da nie tief reingegangen. Vielleicht hätten wir Cutter Container benutzen können statt unseren eigenen. Das weiß ich alles nicht. Und gvis ist dann auch was anderes. Ich kenne mich da nicht super aus, Aber Google hat es gemacht, um genau das zu machen, was du sagtest, um zu Wir werden einen Linux Kernel starten, aber wir werden keine VM haben. Wir werden es alles mit User Space, syscalls Abstrahierung bauen, warum sie das so gemacht haben. Es hat alle mögliche Vorteile. Zum Beispiel am Anfang war es ganz einfach damit gpus zu teilen. Ich sage nicht, dass sie das dafür gebaut haben. Das ist ein Beispiel. Aber gvisor selbst ist Ich starte den Linux Kernel noch mal als User Space Programm. Und wie das gemacht wird, da will ich auch nichts Falsches sagen. Aber wie ich es verstanden habe, ist die ganzen syscalls, die gemacht werden, werden abstrahiert, aber ich könnte es falsch haben. Deswegen will ich da nicht tiefer reingehen, sonst labere ich hier nur wie eine LLM rum, was ich gerade mache."
+        },
+        {
+            "start": 3470290,
+            "end": 3504129,
+            "speaker": "C",
+            "text": "Jetzt sind wir schon voll in der Ecke. Was passiert denn rundherum und vielleicht auch in der Zukunft? Einen Teil, den wir jetzt noch nicht besprochen haben, ist so die Client Seite, weil wir waren jetzt mehr so auf der Serverseite zu Hause. Client webassembly ist ja immer so angetreten, um da in irgendeiner Form sowas im Browser zu ermöglichen. Meiner Meinung nach nie so richtig durchgestartet. Es kommt nicht so richtig durch. Siehst du in Zukunft irgendwie im Browser auch mal so Micro vms oder gibt es da irgendwas am Horizont, was uns in der Browserwelt irgendwas bringen will? Hast du da eine Sicht darauf?"
+        },
+        {
+            "start": 3504290,
+            "end": 3580680,
+            "speaker": "B",
+            "text": "Du bringst mich wieder zu einer Cloudflare Werbung? Das ist problematisch, denn wir machen sehr viel mit webassembly und im Browser, Die isolierts die Cloudflare hat, sind natürlich nicht die einzigen, die sowas haben, Aber es geht darum, so viel wie möglich nicht nur im Browser, sondern auch außerhalb des Browsers zum Laufen zu lassen, was noch kleineres Teil ist von einer Maschine sozusagen. In diesem Fall ist es ein Teil des Prozesses. Und wie mache ich das? Sehr sicher. Das wird sehr viel mit Sachen wie webassembly und JavaScript gemacht, also JavaScript Engines. Ich habe da keine große Sicht. Ich finde es richtig cool, was man da machen kann, wie alle Technologien. Ich glaube, alle haben von webassembly und sowas erwartet, dass es plötzlich überall ist, aber man sieht es eher da ankommen, wo es gebraucht wird und Stück für Stück. Es gab natürlich viel Hype, die Du kompilierst einfach dein Ding und dann läuft es einfach im Browser, brauchst ein bisschen mehr dafür, damit sie es darauf bringen. Aber diese Sachen kommen alle. Wir sind viel weiter heute als vor fünf Jahren sogar, wo diese Thematik angefangen hat. Ich habe da nicht viel Technisches zu sagen. Ich finde es cool und ich sehe immer mehr Sachen, die für sowas genutzt werden. Aber jetzt im Detail zu oh, in dieser Welt wird webassembly jetzt benutzt, wo sie vorher nicht benutzt wurde, Da weiß ich jetzt nicht."
+        },
+        {
+            "start": 3580680,
+            "end": 3605000,
+            "speaker": "A",
+            "text": "Es zahlt halt auch schon auf diese Isolierungsthematik ein, wie wir jetzt schon konstant durchgesprochen haben, Halt nur im Speicher, halt nur auf einer anderen Ebene, wenn er so möchte. Das ist halt schon ganz interessant und ich glaube, wenn ich jetzt noch weiter das Rabbit Hole runtergehe. Ich bin mir gar nicht sicher, ob wir jemals erreichen würden. Deswegen stelle ich einfach mal die Wie würdest du die Zukunft beschreiben? Und ich weiß Achtung, Achtung, Achtung."
+        },
+        {
+            "start": 3605400,
+            "end": 3608440,
+            "speaker": "C",
+            "text": "Eine leichte Frage zum Geile Frage, danke."
+        },
+        {
+            "start": 3608600,
+            "end": 3658830,
+            "speaker": "A",
+            "text": "Nein, nein. Was würdest du dir wünschen? Vielleicht für die Zukunft ist vielleicht besser. Bleibt das alles hier ein Zoo aus Container, Runtimes, Micro vms und Pipapo? Oder denkst du, okay, die ganze Sache konsolidiert sich irgendwann oder fängt jeder an, hey, ich habe eine neue Idee, dann baue ich was, weil es jetzt besonders so einfach ist. Also weil ich habe so ein bisschen das Gefühl, wenn man versucht, in dieses Rabbit Hole hier zu gehen, du bist erst mal auf Englisch, würde ich sagen, overwhelmed, überfordert. Du bist erst mal überfordert mit dem Lernen von Basistechnologien und dann kommen die Apps darauf, dann kommt Firecracker, dann kommt Chemo, dann kommt das, das, das, das, das und das geht ja nur so weiter. Hast du irgendwie das Gefühl oder zumindest den Wunsch, dass irgendwann einfacher wird? Oder sagst du nee, ich glaube, es geht eher dahin, dass wir weiter spezialisiertere Software bauen, die dann noch mehr narrow auf den Use Case geht."
+        },
+        {
+            "start": 3658830,
+            "end": 3756140,
+            "speaker": "B",
+            "text": "Erstmal die ganze Geschichte von Computer ist immer eine Abstraktion aufbauen auf die nächste, auf die nächste, auf die nächste. Man baut immer und es baut sich und weitet sich immer mehr aus wie ein Baum. Ich glaube nicht, dass es ein Weg zurückgeht, wo es plötzlich irgendwo ein System ist, was alle benutzen. Es gibt ein paar Fälle der Welt wie Linux und andere, die sowas geschafft haben. Sogar systemd hat sowas geschafft. Aber jetzt im Endeffekt ist es mir selbst persönlich wurscht, solange es genug Wege gibt, irgendwo in diesem Stapel von Abstrahierung. Wenn du irgendwo einsteigen willst, solltest du eine einfache Tür rein haben und es einfach benutzen können. Aber es wird meiner Meinung nach, wenn wir jetzt ein bisschen über die Zukunft denken, ich sehe keinen Weg, wo Sachen nicht noch spezialisierter werden, ganz besonders mit AI, wo sich dann jeder seine Sachen aufbaut. APIs sind dann noch wichtiger als vorher und so weiter und so fort. Das geht ja nicht weg. Aber Betriebssysteme sind nun mal komplex und werden Stück für Stück leider komplexer. Ganz Besonders diese ganzen Sachen, die wir gerade besprochen haben. Die meisten sind alle sehr generische Technologien, die dann benutzt werden, um andere Technologien zu bauen. Wir reden ja jetzt nicht von End User Technologien, wir reden von Developer Tools, Betriebssysteme, die ganze Basis, auf den andere Sachen gebaut werden. Also nein, ich sehe das nicht plötzlich zu oh, guck, wir haben eine Sache, die alles löst. Ne, glaube ich nicht."
+        },
+        {
+            "start": 3756620,
+            "end": 3759740,
+            "speaker": "A",
+            "text": "Ich weiß gar nicht, ob ich die ganzen Sachen als Developer Tools beschreiben würde."
+        },
+        {
+            "start": 3759820,
+            "end": 3771970,
+            "speaker": "B",
+            "text": "Nein, ich habe gesagt, es ist Developer Tools, Betriebsrats und alles sind Basisteile, auf denen aufgebaut werden, um andere zu machen. Docker ist ja ein Misch von Developer Tool und ganz andere Teile."
+        },
+        {
+            "start": 3771970,
+            "end": 3786490,
+            "speaker": "A",
+            "text": "Da stimme ich dir zu. Aber ich glaube auch Leute, die sich ziemlich viel mit Weiß ich nicht, keine Ahnung, nehmen wir mal Kubernetes. Ich glaube, ich bin der Erste, der das jetzt in diesem Podcast nennt, was mich auch überrascht, aber beschäftigt. Das ist ja schon für Außenstehende alles wirklich schwer zu konsumieren."
+        },
+        {
+            "start": 3787290,
+            "end": 3829820,
+            "speaker": "B",
+            "text": "Im Fall von Kubernetes auch. Ich würde es nicht unbedingt an Development Tool nennen, aber es ist schon ein Tool, der da ist, um Entwickler einen Service zu geben. Und dass du das dann tausend verschiedene Arten machen kannst, ist klar, weil es so generisch ist. Aber es ist da um Entwicklern. Es ist ja nicht für die Endbenutzer einer Plattform, die die da zum Beispiel irgendwie im Shop einkaufen, denen ist es ja egal, ob es Kubernetes oder ist. Aber für sehr viele Entwickler in einer Firma ist das wichtig und das ist dann eine Plattform, auf der sie aufbauen und Entscheidungen treffen für Technologien. So ist es für alles. Docker, Kubernetes und so weiter und so fort."
+        },
+        {
+            "start": 3829900,
+            "end": 3853330,
+            "speaker": "A",
+            "text": "Wir sind eigentlich jetzt am Ende des Podcasts und ich habe initial die ganze Sache großkotzig angekündigt als Technologie, die die halbe Cloud antreibt. Und du hast natürlich schon eine ganze Menge Container Use Cases gesehen. Was ist der wildeste Case von Containern, den du mal gesehen hast oder der dir erzählt wurde, den du nicht erwartet hast, Da wo du das glaubt dir doch eh keiner."
+        },
+        {
+            "start": 3853330,
+            "end": 3859090,
+            "speaker": "C",
+            "text": "Während du jetzt nachdenkst, hätte ich noch eine Frage an Andi. Warum nur die halbe Cloud? Treiben Container nicht die ganze Cloud an?"
+        },
+        {
+            "start": 3859090,
+            "end": 3864410,
+            "speaker": "A",
+            "text": "Ja, ich habe keine Zahlen. Ich habe noch nie bei einem Hyperscaler gearbeitet. Ich weiß es nicht. Ich bin nicht bei Amazon, Google und Co."
+        },
+        {
+            "start": 3865210,
+            "end": 3869450,
+            "speaker": "C",
+            "text": "Du arbeitest bei Cloudflare, ihr treibt ja schon die halbe Welt an."
+        },
+        {
+            "start": 3869850,
+            "end": 3872160,
+            "speaker": "A",
+            "text": "Ich weiß nicht, ob das ein Hyperscaler ist, keine Ahnung."
+        },
+        {
+            "start": 3872400,
+            "end": 3874800,
+            "speaker": "C",
+            "text": "Okay, aber was ist der wildeste Use Case?"
+        },
+        {
+            "start": 3874960,
+            "end": 3877680,
+            "speaker": "B",
+            "text": "Ich habe ehrlich gesagt nie viel Wildes gesehen."
+        },
+        {
+            "start": 3877680,
+            "end": 3884400,
+            "speaker": "C",
+            "text": "Meine Vermutung ist ja, dass du schon so viel gesehen hast, dass das alles für dich einfach normal ist, wo wir sagen würden, das ist cool eigentlich."
+        },
+        {
+            "start": 3884400,
+            "end": 3923700,
+            "speaker": "B",
+            "text": "Ja, es ist vielleicht meine Welt, aber es ist auch eine Technologie, die normal geworden. Es ist ja jetzt nicht etwas. Es war vorher was Besonderes zu sagen. Vorher konntest du gar nicht Docker Container wirklich gut in Produktion benutzen vor zehn Jahren. Und seitdem sind wir weit davon entfernt, was das Wildeste ist, einfach zu sehen, wie viele Menschen so arbeiten zu benutzen, Docker hub und nehmen die Container runter. Das funktioniert. Das ist wild, so was zu sehen. Zu sehen, dass so viele Menschen einfach aus jeder Industrie damit arbeitet wie der Rest. Das ist für mich das Wildeste."
+        },
+        {
+            "start": 3924180,
+            "end": 3932740,
+            "speaker": "A",
+            "text": "Bist du dir eigentlich, wenn du das jetzt gerade schon so sagst, bewusst, was ihr mit dem ganzen Docker Movement da für die Industrie losgetreten habt?"
+        },
+        {
+            "start": 3932740,
+            "end": 3999440,
+            "speaker": "B",
+            "text": "Es haben sehr viele Menschen an Docker gearbeitet, selbst wenn ich da angefangen habe. Ich war nicht der Einzige. Wir waren mehrere, Salomo und andere. Und am Anfang haben wir einfach nur rumgespielt, um zu Wir wollen nicht immer tausendmal dieselben Sachen installieren, tausendmal dieselben Pop it Scripts. Damals benutzte man etwas, das hieß Pop it. Es muss einen Weg geben, die Sachen einmal zu bauen und dann wieder bekommen nutzen zu können. Ja, es ist uns jetzt bewusst, wenn ich mit den ganzen anderen sprechen, die daran gearbeitet ist. Oh, geil. Es ist erstaunlich. Aber irgendjemand hätte es gemacht, würde ich mal sagen. Ich glaube jedenfalls, wir haben es so gemacht. Aber es ist schon erstaunlich. Was mich erstaunt ist, dass es einer dieser Sachen ist, wo nicht wirklich Ja, es gibt viele Alternativen, um Docker Container zu starten und so weiter und so fort, aber im Endeffekt starten die Menschen dieselben Sachen in derselben Art und arbeiten alle in einerselben Art. Wie gesagt, das Coolste für mich, was Docker gelöst hat, ist, ich kann lokal schnell etwas entwickeln. Ich brauche nicht ein tausend Sachen zu installieren. Ich installiere sie, schmeiß sie wieder raus."
+        },
+        {
+            "start": 3999440,
+            "end": 4042240,
+            "speaker": "A",
+            "text": "Ich glaube, ich spreche für sehr, sehr viele, wenn ich einfach mal Danke sage von der Engineering Community an dich, aber auch an das ganze Team, an alle Leute, die Andocker bearbeiten haben, weil Ich habe das Gefühl, ihr habt natürlich jetzt nicht nur hunderte von Menschen, deswegen, also ich sage deswegen extra, du darfst dir aber auch mal selbst auf die Schulter klopfen. Also das darfst du schon noch tun, so ist das nicht. Klar, Docker ist die eine Sache, aber ich glaube, dieses ganze Movement in der ganzen Industrie wurde dadurch noch mal ein bisschen getriggert. Besonders weil so was wie freebc, Jails, also die Idee von Containern ist ja jetzt gerade nicht so super neu, da gibt es ja schon ein paar Jährchen. Aber die ganze Sache, ich denn es mal massenkompatibel zu machen oder massenkompatib, das ist ja schon Movement. Sowas wie Woodstock damals würde ich mal sagen,"
+        },
+        {
+            "start": 4044320,
+            "end": 4078100,
+            "speaker": "B",
+            "text": "Woodstock da ist ein bisschen heftiger, ein bisschen geiler, aber nee, es ist schon cool, muss ich schon sagen. Und zu sehen, dass sich dadurch Sachen wie Kubernetes entwickelt haben. Natürlich gab es die Ideen für Kubernetes und sowas, aber es wurde dann möglich gemacht, weil plötzlich, oh, es gibt ein Format, alle Menschen benutzen dieses Format und wenn man die Sache so startet, können wir das machen. Ich bin nicht der größte Fan von Kubernetes, obwohl ich sehr viele Male benutzt habe. Ich war mal ein großer Fan. Ich bin nicht jemand, der sagt, oh nein, ich war mal ein großer Fan, jetzt finde ich das alles zu komplex. Aber allein, dass es das gibt und dass es möglich ist, finde ich richtig cool."
+        },
+        {
+            "start": 4078100,
+            "end": 4092050,
+            "speaker": "C",
+            "text": "Also ich kann mich auch erinnern, das war damals, bei mir war Stalker Swarm so zwei tausend fünfzehn oder so, wie ich zum ersten Mal gesehen habe, dass da dann so automatisch Instanzen hochbooten und parallel und so weiter. Das war schon, mir ist die Kinnlade runtergefallen. Cooles Erlebnis."
+        },
+        {
+            "start": 4092360,
+            "end": 4113080,
+            "speaker": "A",
+            "text": "Ich hab grad noch mal nachgeschaut, um noch mal auf meine wilde Frage, wo werden Container überall genutzt? Du sagst ja in selbstfahrenden Autos und so weiter. Curl fleckt sich damit, dass es bei der Mars Mission dabei war oder dass Curl selbst auf dem Mars schon gelandet ist. Das ist schon eine harte Nummer. Hätte ja sein können, dass es irgendwie, weiß ich nicht, auf der ISS, auf der Raumstation irgendwie vielleicht auch ein Container getrieben wird oder so. Ich weiß es nicht."
+        },
+        {
+            "start": 4113240,
+            "end": 4119480,
+            "speaker": "B",
+            "text": "Bestimmt müsste man checken, fragt der Lelen, die sagte, ja, wir haben ja eine"
+        },
+        {
+            "start": 4119480,
+            "end": 4129390,
+            "speaker": "C",
+            "text": "große Community, die kann sich jetzt da kümmern. Vielleicht kann jemand mal raussuchen, war Docker oder war ein Container schon am Mars? Oder zumindest am Mond am i."
+        },
+        {
+            "start": 4129630,
+            "end": 4131630,
+            "speaker": "B",
+            "text": "Ich meine, da kommt doch ein Laptop mit nach oben."
+        },
+        {
+            "start": 4131950,
+            "end": 4136430,
+            "speaker": "C",
+            "text": "Ja, das stimmt. Ja, Mond ist zu schwach eigentlich. Mars muss schon sein, ich kenne mich"
+        },
+        {
+            "start": 4136430,
+            "end": 4141630,
+            "speaker": "B",
+            "text": "da nicht aus, aber ich meine, diese ganzen Rover und so, die da so am Mars sind, die sind schon ziemlich low level."
+        },
+        {
+            "start": 4142190,
+            "end": 4144350,
+            "speaker": "A",
+            "text": "Ja, viel RAM ist da, glaube ich, nicht verfügbar."
+        },
+        {
+            "start": 4144910,
+            "end": 4147550,
+            "speaker": "C",
+            "text": "Ja, aber also SEA Groups werden da sicherlich verwendet."
+        },
+        {
+            "start": 4150070,
+            "end": 4151110,
+            "speaker": "B",
+            "text": "Bootet es Linux?"
+        },
+        {
+            "start": 4151190,
+            "end": 4180920,
+            "speaker": "A",
+            "text": "Bestimmt alles bootet Linux, Ich weiß es nicht. Aber zum Abschluss haben wir natürlich immer, ich sag mal, so eine kleine Hausaufgabe für die Hörerinnen und Hörer. Und deswegen würde ich dich gerne mal fragen, Sepp, wenn man mit dieser ganzen Thematik jetzt mal selbst anfangen wollen würde, sich in dieses Thema, ich sag mal, Firecracker, Micro VM und Co. Mal so ein bisschen einarbeiten möchte, vielleicht auch mal mit einem minimalen Init herumspielen möchte, was würdest du jemandem an die Hand legen, wo man startet ohne Use"
+        },
+        {
+            "start": 4180920,
+            "end": 4327580,
+            "speaker": "B",
+            "text": "Case ist natürlich schwierig, aber wenn man einfach Bock hat, das zu lernen, kann man es so machen, wie ich es gemacht habe, wie früher. Einfach erstmal Source Code lesen, den es schon gibt. Sachen starten, Sachen. Du kannst Firecracker runterladen, du kannst es starten, du kannst einfach folgen, was es macht. Der Source Code ist auch relativ interessant zu lesen. Dann würde ich etwas Neues sagen, was früher nicht so war, Aber ich würde tatsächlich versuchen, mit einem Agent lokal ein bisschen nicht unbedingt den ganzen Code zu schreiben, denn dann lernt man ja nicht viel drüber. Ich weiß immer noch nicht, wie man lernt mit einer LLM. Ich weiß nur, wie man macht, obwohl das sage ich so, ich lerne viel damit. Aber einfach zu Fragen stellen und hey, wie funktioniert das? Aber dann auch die Fragen so zu stellen, zu zeig mir im Code, wie das funktioniert. Deswegen nicht nur chatgpt, sondern lokal mit oh, ich will mal diesen Container in diesem Firecracker starten. Bau mir etwas Minimales auf, was ich dann lesen kann. Erklär es mir Stück für Stück. Das ist der Bonus, den wir heute haben. Du kannst so lange mit deinem Agent zusammen Fragen stellen, bis du etwas kapiert hast. Der Fehler ist zu Erklär mir mal, wie es funktioniert. Ja, ist für Sachen, die sie sehr gut kennen und schon lange da war sehr gut, aber so was Technisches wie hier ist, lass uns das mal zusammen workshoppen und wie sieht ein Workshop aus und wie lerne ich das? Du kannst dir dann da zusammenbauen Linux von Scratch. Warum nicht? Ich habe es nur einmal in meinem Leben gemacht und ich habe es dann auch nicht wirklich benutzt. Aber einfach diese Sachen zu benutzen und ausprobieren. Es muss ja nicht Linux von Scratch sein, aber jeder, der Computer lernt, alle, die ich getroffen habe, die Programmierer sind heutzutage, die mal jünger waren, als ich sie getroffen habe, habe ich immer oh, du willst anfangen, okay, installiere erstmal Linux. Warum? Nicht, weil es besser ist, sondern das ist meine Erfahrung. So habe ich gelernt und ich habe es einfach installiert, benutzt und dann einfach das benutzen Davon. Davon habe ich sehr viel gelernt. Heutzutage lernt man vielleicht nicht dieselben Sachen, wie ich damals. Deswegen sage okay, such dir vielleicht eine Distro aus, wo du mehr lernst. Aber das würde ich sagen, einfach wie für jedes Thema rummachen. Das einzig Neue ist, dass du halt diese LLM hat, mit der du das workshoppen kannst und du kannst hier hey, mach mal ein bisschen Stück Code, dass ich starten kann. Aber was nur das macht und nur das, nur das, das hilft."
+        },
+        {
+            "start": 4327740,
+            "end": 4367890,
+            "speaker": "A",
+            "text": "Sepp, vielen lieben Dank, dass du die letzte Stunde mit uns verbracht hast und auch die Zeit dafür geopfert hast. Wir sehen uns nicht als selbstverständlich. Ich hatte sehr viel Spaß, ich habe echt viel gelernt. Für alle Hörerinnen und Hörer, wir haben in den Shownotes etliche Links mitgeschrieben. Also wer mal da ein bisschen reinsteigen möchte, was Firecracker ist, Cloud Hypervisor hatten wir glaube ich genannt, Linux from Scratch, LXC, Run C, systemd spawn. Wer vielleicht mal Container mit systemd spawnen möchte oder aber auch nochmal Advent of Code, falls ihr nicht wisst, was das ist. Ich glaube, Advent of Code hat leider jetzt aufgehört bzw. Machst du noch alles zwei Jahre oder sowas? Da gab es eine Änderung jetzt gerade wirklich scheiße."
+        },
+        {
+            "start": 4367890,
+            "end": 4370530,
+            "speaker": "B",
+            "text": "Das ist doch, ich hoffe nicht Dezember"
+        },
+        {
+            "start": 4370530,
+            "end": 4378770,
+            "speaker": "A",
+            "text": "ist es sonst, aber ich glaube, ihm war es irgendwie zu stressig oder irgendwie sowas nach so viel Jahren. Irgendwas war da. Ich muss das noch mal raussuchen."
+        },
+        {
+            "start": 4378770,
+            "end": 4380449,
+            "speaker": "B",
+            "text": "Die LLM haben es zerstört."
+        },
+        {
+            "start": 4381410,
+            "end": 4382370,
+            "speaker": "C",
+            "text": "Das glaube ich auch."
+        },
+        {
+            "start": 4383090,
+            "end": 4393150,
+            "speaker": "A",
+            "text": "Sepp, noch mal vielen lieben Dank und ansonsten wünsche ich dir auch noch eine schöne Zeit und ja, an alle würde ich sagen, wir hören uns nächste Woche wieder. Bis bald. Tschüss."
+        },
+        {
+            "start": 4393230,
+            "end": 4395510,
+            "speaker": "B",
+            "text": "Vielen Dank. War richtig cool. Danke sehr."
+        },
+        {
+            "start": 4395510,
+            "end": 4396670,
+            "speaker": "C",
+            "text": "Ciao, ciao."
+        }
+    ]
+}
