@@ -3699,6 +3699,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/episodes/281"
+  to = "/podcast/episode/281-season-1-ist-vorbei-nach-282-episoden-macht-der-engineering-kiosk-pause?pkn=shortlink"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ep281"
+  to = "/podcast/episode/281-season-1-ist-vorbei-nach-282-episoden-macht-der-engineering-kiosk-pause?pkn=shortlink"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
