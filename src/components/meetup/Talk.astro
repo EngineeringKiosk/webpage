@@ -57,7 +57,7 @@ const avatarArray = avatar ? Array.isArray(avatar) ? avatar : [avatar] : [];
 
 		<p class="mb-2">
 			<span class="text-lg font-medium text-yellow-500">{name}</span>
-			{affiliation && (
+			{affiliation && affiliation.role && affiliation.organization && (
 				<span class="text-sm text-coolGray-500"> · {affiliation.role} @ {affiliation.organization}</span>
 			)}
 		</p>

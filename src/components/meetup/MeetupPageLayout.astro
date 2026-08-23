@@ -66,7 +66,7 @@ const { getNextMeetup, getPastMeetups } = await createMeetupHelpers(collectionNa
 const bufferDays = 1;
 const nextMeetup = getNextMeetup(bufferDays);
 const hasPastMeetups = getPastMeetups().length > 0;
-const dateString = nextMeetup ? formatDateWithoutWeekday(nextMeetup.date, 'en-US') : null;
+const dateString = nextMeetup ? formatDateWithoutWeekday(nextMeetup.date, 'en-GB') : null;
 const timeString = nextMeetup ? formatTime(nextMeetup.date) : null;
 const dateAndTime = nextMeetup ? `${dateString} - open doors at ${timeString} (talks start ${talkStartOffset} later)` : null;
 const registrationClosed = nextMeetup ? (nextMeetup.registrationClosed || false) : false;
@@ -131,10 +131,10 @@ const headTitle = (() => {
 									<>
 										<h2 class="text-lg md:text-2xl text-coolGray-500 font-medium">Next Meetup @ <div class="h-10 inline-block"><CompanyLogo name={nextMeetup.location.name} logo={nextMeetup.location.logo} url={nextMeetup.location.url} logoHeight="40" /></div></h2>
 										<p class="mt-2 text-sm md:text-base text-coolGray-500 font-medium">
-											📅 Date <span class="font-bold">{dateAndTime}</span>
+											📅 Date: <span class="font-bold">{dateAndTime}</span>
 										</p>
 										<div class="mb-8 text-sm md:text-base text-coolGray-500 font-medium">
-											📍 Location:
+											📍 Location:{' '}
 											{
 												nextMeetup.location.url && (
 													<a href={nextMeetup.location.url} target="_blank" rel="noopener noreferrer">

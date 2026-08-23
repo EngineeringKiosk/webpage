@@ -23,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Current Meetup
 const bufferDays = 1;
 const nextMeetup = getNextMeetup(bufferDays);
-const dateString = nextMeetup ? formatDate(nextMeetup.date, 'en-US') : null;
+const dateString = nextMeetup ? formatDate(nextMeetup.date, 'en-GB') : null;
 
 // Derive the city of the upcoming meetup from its address (e.g.
 // "Calaisplatz 5, 47051 Duisburg" → "Duisburg"). This auto-tracks
