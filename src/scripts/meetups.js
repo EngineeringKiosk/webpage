@@ -9,7 +9,7 @@ export async function createMeetupHelpers(collectionName) {
 			_announced: !!(talk.title && talk.name),
 			title: talk.title || 'To be announced',
 			name: talk.name || 'Here could be your name',
-			description: talk.description || 'The description will be available soon',
+			description: talk.description || 'The description will be available soon.',
 			bio: talk.bio || 'How awesome would it be to read your profile here?',
 		})),
 	}));
