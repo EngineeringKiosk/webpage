@@ -143,8 +143,10 @@ const headTitle = (() => {
 												)
 											}
 											{!nextMeetup.location.url && nextMeetup.location.name} (<a href={`http://maps.google.com/?q=${encodeURIComponent(nextMeetup.location.address)}`} target="_blank" class="underline">{nextMeetup.location.address}</a>
+											<!-- Location notes are trusted, repository-controlled content
+											and may contain intentional HTML structures. Therefore, we do not sanitize them (set:html). -->
 											{nextMeetup.location.note && (
-												<span class="text-xs">{nextMeetup.location.note}</span>
+												<span class="text-xs" set:html={nextMeetup.location.note} />
 											)})
 
 										</div>
