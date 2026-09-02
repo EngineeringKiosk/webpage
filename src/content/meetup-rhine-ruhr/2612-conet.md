@@ -6,36 +6,36 @@ location:
   url: 'https://www.conet.de/'
   logo: './images/location/conet.svg'
 talks:
-  - avatar: ""
-    name: ""
+  - avatar: ''
+    name: ''
     affiliation:
-      role: ""
-      organization: ""
-    title: ""
+      role: ''
+      organization: ''
+    title: ''
     #language: ""
     slides: ''
-    description: ""
-    bio: ""
-    github: ""
+    description: ''
+    bio: ''
+    github: ''
     x: ''
-    mastodon: ""
-    linkedin: ""
-    website: ""
-  - avatar: ""
-    name: ""
+    mastodon: ''
+    linkedin: ''
+    website: ''
+  - avatar: ''
+    name: ''
     affiliation:
-      role: ""
-      organization: ""
-    title: ""
+      role: ''
+      organization: ''
+    title: ''
     #language: ""
     slides: ''
-    description: ""
-    bio: ""
-    github: ""
+    description: ''
+    bio: ''
+    github: ''
     x: ''
-    mastodon: ""
-    linkedin: ""
-    website: ""
+    mastodon: ''
+    linkedin: ''
+    website: ''
 eventId: '5jacf53cc1ofo5f7u6d1tioicq'
 participants:
   registered: 0

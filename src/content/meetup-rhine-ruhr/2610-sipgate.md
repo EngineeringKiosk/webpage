@@ -6,36 +6,36 @@ location:
   url: 'https://www.sipgate.de/'
   logo: './images/location/sipgate.svg'
 talks:
-  - avatar: ""
-    name: ""
+  - avatar: ''
+    name: ''
     affiliation:
-      role: ""
-      organization: ""
-    title: ""
+      role: ''
+      organization: ''
+    title: ''
     #language: ""
     slides: ''
-    description: ""
-    bio: ""
-    github: ""
+    description: ''
+    bio: ''
+    github: ''
     x: ''
-    mastodon: ""
-    linkedin: ""
-    website: ""
-  - avatar: ""
-    name: ""
+    mastodon: ''
+    linkedin: ''
+    website: ''
+  - avatar: ''
+    name: ''
     affiliation:
-      role: ""
-      organization: ""
-    title: ""
+      role: ''
+      organization: ''
+    title: ''
     #language: ""
     slides: ''
-    description: ""
-    bio: ""
-    github: ""
+    description: ''
+    bio: ''
+    github: ''
     x: ''
-    mastodon: ""
-    linkedin: ""
-    website: ""
+    mastodon: ''
+    linkedin: ''
+    website: ''
 eventId: '11rnovu4m4ud4rblhb6335v0c2'
 participants:
   registered: 0
