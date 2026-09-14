@@ -70,6 +70,7 @@ update-german-tech-podcasts    Updates the German Tech Podcasts data from https:
 
 We are using our own fork of [podigee/podigee-podcast-player](https://github.com/podigee/podigee-podcast-player) which can be found at [EngineeringKiosk/podigee-podcast-player](https://github.com/EngineeringKiosk/podigee-podcast-player).
 The main differences of the fork in comparision to its origin can be found in the forks README.
+For upgrading the vendored Podigee player snapshot under `public/podcast-player/`, see [`docs/upgrade-podigee-podcast-player.md`](docs/upgrade-podigee-podcast-player.md).
 
 In combination, we downloaded a minified version of [https://github.com/embedly/player.js](https://github.com/embedly/player.js) into `public/js`.
 If we aim to upgrade _player.js_, download and replace the minified javascript file.
