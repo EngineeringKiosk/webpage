@@ -22,5 +22,15 @@ talks:
     bio: 'Everyone in tech is chasing whatever launched this week. New framework, new model, another "this changes everything." Almost none of it ever makes it into something real. Mate Kiss’s job is knowing which parts are worth it, and then actually shipping them. He is Chapter Owner for Frontend & UI/UX at Innerspace in Innsbruck, and has spent years building products end-to-end in international teams, from first prototype to production. He engineers with AI agents surgically: relies on them where it truly matters, and falls back to traditional techniques everywhere else. A prototype that wows in a demo is easy. A system a company can run its business on is the slow, quiet work. That’s the work he does.'
     linkedin: 'me-matekiss'
     github: 'matekissdev'
+speakers:
+  female: 1
+  male: 1
+participants:
+  registered: 49
+  present:
+    total: 29
+    male: 22
+    female: 7
+  newParticipants: 19
 eventId: '00u8lpff2oba8p8b3rs5oc0frd'
 ---
