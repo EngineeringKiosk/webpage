@@ -1,10 +1,10 @@
 ---
 date: 2026-12-10T18:30:00+01:00
 location:
-  name: '???'
-  address: '???, 6020 Innsbruck'
-  url: ''
-  logo: ''
+  name: 'Dynatrace'
+  address: 'Höttinger Au 74, 6020 Innsbruck'
+  url: 'https://careers.dynatrace.com/locations/innsbruck/'
+  logo: './images/location/dynatrace.svg'
 talks:
   - avatar: './images/speaker/avatar.png'
     name: ''
