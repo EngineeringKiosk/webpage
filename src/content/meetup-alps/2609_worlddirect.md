@@ -15,6 +15,7 @@ talks:
     website: 'https://romanamayr.com/'
     linkedin: 'romana-mayr-0ab1141b8'
     bluesky: 'https://bsky.app/profile/romanamayr.com'
+    slides: '2609-romana-FCKADOBE.pdf'
   - avatar: './images/speaker/2609-mate-kiss.jpg'
     name: 'Mate Kiss'
     title: 'The Model Is Not the Variable: Four Layers to Put Under Your Coding Agent'
