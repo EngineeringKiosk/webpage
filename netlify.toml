@@ -3711,6 +3711,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/survey"
+  to = "https://engineeringkiosk.github.io/german-tech-podcast-survey/"
+  status = 302
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.headers]
