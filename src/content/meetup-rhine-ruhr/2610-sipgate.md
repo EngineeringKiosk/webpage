@@ -20,7 +20,7 @@ talks:
       Martina Kraus secures frontend architecture and authentication flows. As an Application Security Engineer at Kraus IT Consulting, she focuses on integrating practical defenses into every phase of software development.
 
       As a Google Developer Expert in Angular and Identity, she frequently breaks down complex web vulnerabilities. Her talks demonstrate how to defend against persistent cross-site scripting attacks and show developers how to implement true phishing resistance using passkeys.
-      
+
       When she isn’t auditing web apps, Martina is writing a German book on authentication and organizing the local Angular Heidelberg Meetup.
     github: 'https://github.com/martinakraus'
     bluesky: 'https://bsky.app/profile/martinakraus11.bsky.social'
@@ -37,7 +37,7 @@ talks:
       Frontend developers know one golden rule: never render untrusted user input as HTML without properly sanitizing it. Every framework has its own APIs and escape hatches where this rule matters.
 
       Yet, as we're integrating Large Language Models (LLMs) into our applications, we often make a potentially dangerous mistake: we treat AI-generated output as a trusted source.
-      
+
       That should be fine, right? Well, not automatically…
     bio: |
       Ramona is a developer relations engineer with roots in quality assurance. She owns both views of the product - that of a tester and a developer. Ramona primarily uses this to strengthen trust in test automation and support the testers and developers alike, becoming a Google Developer Expert in Web Technologies, Women Techmaker Ambassador, and Cypress ambassador.
