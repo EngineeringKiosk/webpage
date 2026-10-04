@@ -11,7 +11,7 @@ on:
 jobs:
   update-podcast-episodes-from-rss:
     name: Update Podcast Episodes from RSS
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     defaults:
       run:
         working-directory: website-admin

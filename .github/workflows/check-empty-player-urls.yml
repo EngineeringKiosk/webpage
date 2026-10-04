@@ -8,7 +8,7 @@ on:
 jobs:
   check-empty-player-urls:
     name: Check if all detail links for Podcast platforms are set
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     defaults:
       run:
         working-directory: website-admin

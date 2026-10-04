@@ -8,7 +8,7 @@ on:
 jobs:
   sync-awesome-software-engineering-movies:
     name: Sync awesome-software-engineering-movies from external repository
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     defaults:
       run:
         working-directory: website-admin
