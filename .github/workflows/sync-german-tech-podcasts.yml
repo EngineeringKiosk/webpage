@@ -8,7 +8,7 @@ on:
 jobs:
   sync-german-tech-podcasts:
     name: Sync German Tech Podcasts from external repository
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     defaults:
       run:
         working-directory: website-admin
