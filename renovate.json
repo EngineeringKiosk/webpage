@@ -12,9 +12,10 @@
     {
       "customType": "regex",
       "managerFilePatterns": ["/^website\\-admin/Makefile$/"],
-      "matchStrings": ["honnef\\.co/go/tools/cmd/staticcheck@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "matchStrings": ["honnef\\.co/go/tools/cmd/staticcheck@(?<currentValue>\\d+\\.\\d+(?:\\.\\d+)?)"],
       "depNameTemplate": "dominikh/go-tools",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "loose"
     },
     {
       "customType": "regex",
