@@ -2,29 +2,10 @@
 date: 2026-10-15T18:00:00+02:00
 location:
   name: 'sipgate'
-  address: 'sipgate, Gladbacher Str. 74, 40219 Düsseldorf-Stadtbezirk 3'
+  address: 'sipgate, Gladbacher Str. 74, 40219 Düsseldorf'
   url: 'https://www.sipgate.de/'
   logo: './images/location/sipgate.svg'
 talks:
-  - avatar: './images/speaker/martina-kraus.jpeg'
-    name: 'Martina Kraus'
-    affiliation:
-      role: 'Application Security Engineer'
-      organization: 'Kraus IT Consulting'
-    title: 'Passkeys: Truly Phishing-Resistant? Implementation and Pitfalls'
-    language: en
-    slides: ''
-    description: |
-      Are passkeys truly phishing-resistant? Discover how flawed configurations undermine WebAuthn and learn to integrate secure identity providers without building everything from scratch.
-    bio: |
-      Martina Kraus secures frontend architecture and authentication flows. As an Application Security Engineer at Kraus IT Consulting, she focuses on integrating practical defenses into every phase of software development.
-
-      As a Google Developer Expert in Angular and Identity, she frequently breaks down complex web vulnerabilities. Her talks demonstrate how to defend against persistent cross-site scripting attacks and show developers how to implement true phishing resistance using passkeys.
-
-      When she isn’t auditing web apps, Martina is writing a German book on authentication and organizing the local Angular Heidelberg Meetup.
-    github: 'https://github.com/martinakraus'
-    bluesky: 'https://bsky.app/profile/martinakraus11.bsky.social'
-    linkedin: 'https://www.linkedin.com/in/martina-kraus-398493108/'
   - avatar: './images/speaker/ramona-schwering.jpeg'
     name: 'Ramona Schwering'
     affiliation:
@@ -46,6 +27,22 @@ talks:
     mastodon: ''
     linkedin: 'https://www.linkedin.com/in/ramona-schwering/'
     website: 'https://www.ramona.codes/'
+  - avatar: './images/speaker/alexander-turek.png'
+    name: 'Alexander M. Turek'
+    affiliation:
+      role: 'CTO'
+      organization: 'SensioLabs Deutschland'
+    title: 'Build Applications that Welcome Change'
+    language: en
+    slides: ''
+    description: |
+      Software changes. Dependencies evolve. New requirements appear. A Symfony application that can adapt without major disruption gains a powerful long-term advantage — this talk explores architectural choices that keep core business logic stable while technology evolves.
+    bio: |
+      Alexander likes open-source software and pushes the PHP ecosystem forward as a member of the Symfony and Doctrine core teams. He prefers codebases that have aged like a good whisky. At SensioLabs Deutschland, he helps clients that are stuck on legacy codebases and trains developers on the Symfony framework.
+    github: 'https://github.com/derrabus'
+    bluesky: 'https://bsky.app/profile/derrabus.bsky.social'
+    mastodon: 'https://phpc.social/@derrabus'
+    linkedin: 'https://www.linkedin.com/in/amturek/'
 eventId: '11rnovu4m4ud4rblhb6335v0c2'
 participants:
   registered: 0
