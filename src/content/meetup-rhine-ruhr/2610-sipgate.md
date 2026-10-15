@@ -52,6 +52,6 @@ participants:
     female: 0
   newParticipants: 0
 speakers:
-  female: 0
-  male: 0
+  female: 1
+  male: 1
 ---
