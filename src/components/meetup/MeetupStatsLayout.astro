@@ -91,6 +91,7 @@ speakerStats.nonbinaryPercentage = Math.round((speakerStats.nonbinary / speakerS
                             <th class="px-6 py-3 border-b text-left">Speakers</th>
                             <th class="px-6 py-3 border-b text-center">Registrations (New Email Addresses)</th>
                             <th class="px-6 py-3 border-b text-center">Attendees</th>
+                            <th class="px-6 py-3 border-b text-center">No-Show Rate</th>
                             <th class="px-6 py-3 border-b text-center">Attendees Read as Female</th>
                             <th class="px-6 py-3 border-b text-center">Attendees Read as Male</th>
                         </tr>
@@ -159,6 +160,13 @@ speakerStats.nonbinaryPercentage = Math.round((speakerStats.nonbinary / speakerS
                                 <td class="px-6 py-4 border-b text-center">
                                     {meetup.participants?.present?.total || "no data"}
                                     {meetup.participants?.present?.total ? ` (${((meetup.participants?.present?.total / meetup.participants?.registered) * 100).toFixed(2)}%)` : ''}
+                                </td>
+                                <td class="px-6 py-4 border-b text-center">
+                                    {/* Walk-ins can push attendees above registrations; clamp to 0 instead of showing a negative no-show count. */}
+                                    {meetup.participants?.registered && meetup.participants?.present?.total ? (() => {
+                                        const noShows = Math.max(0, meetup.participants.registered - meetup.participants.present.total);
+                                        return `${noShows} (${((noShows / meetup.participants.registered) * 100).toFixed(2)}%)`;
+                                    })() : "no data"}
                                 </td>
                                 <td class="px-6 py-4 border-b text-center">
                                     {meetup.participants?.present?.female || "no data"}
