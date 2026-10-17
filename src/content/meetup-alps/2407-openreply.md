@@ -17,12 +17,13 @@ talks:
   - avatar: './images/speaker/generic-you2.jpg'
     name: 'Lightning talks'
     title: 'Present your idea, topic, or project'
-    description: "We invite you to share any tech-related topic that you're passionate about or find interesting. Whether it's a new technology, your experience with a specific tool, an idea for an open-source project, or even seeking feedback on a potential side project, we want to hear from you. In case you want to give a lightning talk, please get in touch with us via email or on site at the meetup.<br><br>
-    Topics we discussed:<br>
-    Why Bootloader Security Matters by Richard Weinberger (slides below)<br>
-    Code Reviews & Nit-Picking Discussion by Nico Riedmann<br>
-    Crowdstrike Group Therapy by Romedius Weiss<br> 
-    What is the best Linux Distro for your parents?"
+    description:
+      "We invite you to share any tech-related topic that you're passionate about or find interesting. Whether it's a new technology, your experience with a specific tool, an idea for an open-source project, or even seeking feedback on a potential side project, we want to hear from you. In case you want to give a lightning talk, please get in touch with us via email or on site at the meetup.<br><br>
+      Topics we discussed:<br>
+      Why Bootloader Security Matters by Richard Weinberger (slides below)<br>
+      Code Reviews & Nit-Picking Discussion by Nico Riedmann<br>
+      Crowdstrike Group Therapy by Romedius Weiss<br>
+      What is the best Linux Distro for your parents?"
     slides: '2407-richard-bootloader_security.pdf'
 speakers:
   male: 4

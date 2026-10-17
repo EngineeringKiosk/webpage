@@ -18,12 +18,12 @@ talks:
   - avatar: './images/speaker/2605-leonardo.jpg'
     name: 'Leonardo Pedri'
     title: 'Revisiting Analytical Storage with DuckLake: A Simpler Take on the Lakehouse'
-    description: "Over the years, analytical data systems have evolved from data warehouses to data lakes and, eventually, lakehouses. Along the way, they gained powerful features, but also increasing complexity.
-    For many teams, this creates an awkward choice. You can keep things simple with Postgres, but miss out on features like snapshots, schema evolution, and time travel. Or you can adopt a modern lakehouse stack, only to discover that it comes with catalogs, metadata layers, and enough moving parts to feel like a platform project in its own right.
-    But what if there was a middle ground?
-    In this talk, we’ll take a look at DuckLake, a new format released in 2025 by the DuckDB team, that tries to simplify the lakehouse architecture by treating metadata as a database problem. The goal is to keep the useful parts of modern analytical systems while making them easier to understand, operate, and grow with from local development on a laptop all the way to large-scale cloud workloads.
-    We’ll explore how DuckLake works, what trade-offs come with adopting this new approach, and whether it can really provide a simpler path between “just use Postgres” and running a full-blown lakehouse platform."
-    bio: "Leonardo Pedri holds a Master’s degree in Chemistry and also studied Computer Science alongside his main field. He spent three years working in a computational chemistry research group, where he conducted research for pharmaceutical companies using high-performance computing systems and large-scale data analysis. He currently works at Innerspace as a data engineer, focusing on data systems for risk management in pharmaceutical manufacturing."
+    description: 'Over the years, analytical data systems have evolved from data warehouses to data lakes and, eventually, lakehouses. Along the way, they gained powerful features, but also increasing complexity.
+      For many teams, this creates an awkward choice. You can keep things simple with Postgres, but miss out on features like snapshots, schema evolution, and time travel. Or you can adopt a modern lakehouse stack, only to discover that it comes with catalogs, metadata layers, and enough moving parts to feel like a platform project in its own right.
+      But what if there was a middle ground?
+      In this talk, we’ll take a look at DuckLake, a new format released in 2025 by the DuckDB team, that tries to simplify the lakehouse architecture by treating metadata as a database problem. The goal is to keep the useful parts of modern analytical systems while making them easier to understand, operate, and grow with from local development on a laptop all the way to large-scale cloud workloads.
+      We’ll explore how DuckLake works, what trade-offs come with adopting this new approach, and whether it can really provide a simpler path between “just use Postgres” and running a full-blown lakehouse platform.'
+    bio: 'Leonardo Pedri holds a Master’s degree in Chemistry and also studied Computer Science alongside his main field. He spent three years working in a computational chemistry research group, where he conducted research for pharmaceutical companies using high-performance computing systems and large-scale data analysis. He currently works at Innerspace as a data engineer, focusing on data systems for risk management in pharmaceutical manufacturing.'
     linkedin: 'leonardo-pedri-910125286'
     slides: '2605-pedri.pdf'
 eventId: '7ua6nqejh1dv0q8termn6g3g11'

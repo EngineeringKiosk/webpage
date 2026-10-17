@@ -17,17 +17,17 @@ talks:
     name: 'Richard Weinberger, Peter Kandolf, Anand Raj Manickam, David Peer, Jacob Rief, Simon Legner'
     title: 'Lightning Talks'
     slides: '2401-richard-weinberger-procfs_gems.pdf'
-    description: "Hidden Gems in Linux’s /proc File System by Richard Weinberger (slides available below)
+    description: 'Hidden Gems in Linux’s /proc File System by Richard Weinberger (slides available below)
 
-    Keep the fun alive in your company chats by Peter Kandolf
+      Keep the fun alive in your company chats by Peter Kandolf
 
-    Autoscaling in Kubernetes with Custom Metrics and KEDA by Anand Raj Manickam
+      Autoscaling in Kubernetes with Custom Metrics and KEDA by Anand Raj Manickam
 
-    Avalanche Detection in Videos by David Peer
+      Avalanche Detection in Videos by David Peer
 
-    Playwright in Action by Jacob Rief
+      Playwright in Action by Jacob Rief
 
-    devdocs.io by Simon Legner"
+      devdocs.io by Simon Legner'
 eventId: '77tocfleahk4hcuepk7sqca5rm'
 participants:
   registered: 48
