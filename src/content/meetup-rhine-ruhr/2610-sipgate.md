@@ -45,12 +45,12 @@ talks:
     linkedin: 'https://www.linkedin.com/in/amturek/'
 eventId: '11rnovu4m4ud4rblhb6335v0c2'
 participants:
-  registered: 0
+  registered: 58
   present:
-    total: 0
-    male: 0
-    female: 0
-  newParticipants: 0
+    total: 33
+    male: 31
+    female: 2
+  newParticipants: null
 speakers:
   female: 1
   male: 1
