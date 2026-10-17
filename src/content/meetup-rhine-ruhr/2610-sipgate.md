@@ -47,9 +47,9 @@ eventId: '11rnovu4m4ud4rblhb6335v0c2'
 participants:
   registered: 58
   present:
-    total: 33
+    total: 32
     male: 31
-    female: 2
+    female: 1
   newParticipants: null
 speakers:
   female: 1
