@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import Footer from '../../components/Footer.astro';
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav.astro';
@@ -37,34 +35,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 							<div class="w-full md:w-1/2 px-4">
 								<h1>
 									<div>
-										<span class="inline-block w-auto py-px px-2 mb-4 mt-2 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">Karlsruhe & Berlin</span>
+										<span class="inline-block w-auto py-px px-2 mb-4 mt-2 text-xs leading-5 text-white bg-yellow-500 uppercase rounded-9xl">In eigener Sache</span>
 									</div>
-									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight">Frachtwerk sucht Unterstützung</span>
+									<span class="block mb-6 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl leading-tight font-bold tracking-tight">Umfrage zur deutschsprachigen Tech-Podcast-Landschaft</span>
 								</h1>
 								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
-									<a href="https://jump.engineeringkiosk.dev/frachtwerk" class="text-yellow-500 hover:text-yellow-600">Frachtwerk</a> ist ein IT-Unternehmen für Beratung und Softwareentwicklung mit Standorten in Berlin und Karlsruhe sowie Remote-Möglichkeiten.
+									Hilf uns, die deutschsprachige Tech-Podcast-Landschaft besser zu verstehen! Mit unserer <a href="https://engineeringkiosk.github.io/german-tech-podcast-survey/" class="text-yellow-500 hover:text-yellow-600">Umfrage</a> wollen wir herausfinden, welche Tech-Podcasts im DACH-Raum gehört werden, wer sie hört und was einen guten Podcast ausmacht.
 								</p>
 								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
-									Vier Entwickler- und Beraterteams arbeiten an Software-, Transformations- und Data-Analytics-Projekten und betreuen den automatisierten Betrieb von über 300 Systemen im Zero-Trust-Modell mit mehr als 1.000 Containern.
-								</p>
-								<p class="mb-6 text-base xl:text-xl text-coolGray-500 font-medium">
-									Als New-Work-Organisation setzt Frachtwerk auf innovative Arbeitsmodelle wie ein „New-Pay-Gremium" für Gehaltsverhandlungen und hat Weiterbildung fest in der Unternehmenskultur verankert. Open Source wird aktiv gelebt – das hauseigene <a href="https://github.com/Frachtwerk/essencium-backend" class="text-yellow-500 hover:text-yellow-600">Java-Start-Framework Essencium</a> auf Basis von Spring Boot ist unter der LGPL-Lizenz verfügbar.
+									Es geht um die Podcasts, die du in den letzten drei Monaten gehört hast, wann und wie du Podcasts hörst, welche Formate, Episodenlängen und Themen du bevorzugst, wie du zu Werbung und Spenden stehst und um ein paar Fragen zu deinem beruflichen Hintergrund.
 								</p>
 								<p class="mb-8 text-base xl:text-xl text-coolGray-500 font-medium">
-									Aktuell werden Software-Entwickler:innen (Schwerpunkt Java) und DevOps-Engineer:innen (Schwerpunkt Kubernetes) gesucht.
+									Die Umfrage ist vollständig anonym und speichert keine persönlichen Daten. Die Ergebnisse veröffentlichen wir anschließend, und wenn du möchtest, benachrichtigen wir dich per E-Mail, sobald sie verfügbar sind. Passend dazu findest du unsere <a href="/deutsche-tech-podcasts/" class="text-yellow-500 hover:text-yellow-600">Liste deutschsprachiger Tech-Podcasts</a>.
 								</p>
 								<div class="flex flex-wrap mb-8">
 									<div class="w-full md:w-auto py-1 md:py-0 md:mr-4">
-										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="https://jump.engineeringkiosk.dev/frachtwerk">
-											Mehr über Frachtwerk erfahren
+										<a class="inline-block py-5 px-7 w-full text-base xl:text-lg leading-4 text-yellow-50 font-medium text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 border border-yellow-500 rounded-md shadow-sm" href="https://engineeringkiosk.github.io/german-tech-podcast-survey/">
+											Jetzt an der Umfrage teilnehmen
 										</a>
 									</div>
 								</div>
 							</div>
 							<div class="w-full md:w-1/2 px-4 my-8 md:mb-0">
 								<div class="relative mx-auto md:ml-0 max-w-max">
-									<a href="https://jump.engineeringkiosk.dev/frachtwerk">
-										<Image class="relative rounded-7xl" src={(await import(`../../images/partners/frachtwerk.jpg`)).default} alt="Frachtwerk Büro in Berlin" title="Frachtwerk - IT-Beratung & Softwareentwicklung" loading="lazy" decoding="async" format="webp" quality={80} />
+									<a href="https://engineeringkiosk.github.io/german-tech-podcast-survey/">
+										<img class="relative rounded-7xl" src="/images/headers/german-tech-podcasts-head.jpeg" width="1280" height="640" alt="Umfrage zur deutschsprachigen Tech-Podcast-Landschaft" title="Umfrage zur deutschsprachigen Tech-Podcast-Landschaft" loading="lazy" decoding="async" />
 									</a>
 								</div>
 							</div>
