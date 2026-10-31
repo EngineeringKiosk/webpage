@@ -29,7 +29,7 @@ talks:
     github: 'https://github.com/kton-protocol/kton'
   - avatar: './images/speaker/2410-peter.jpg'
     name: 'Peter Kandolf'
-    title: 'Quatro'
+    title: 'Quarto'
     description: "TBD"
     bio: 'Peter did his PhD in Numerical Linear Algebra and started to use High Performance Computing (HPC) early in his studies. Later in his career he co-lead a project between 8 Universities that aimed to foster cooperation of Austrian Universities on HPC and Cloud Applications with a focus on usability and reduction of the „learning curve“. This is where he gained first hand experience on the topic at hand.'
 eventId: '7aeg74u8vetn06nsln3i3tq048'
