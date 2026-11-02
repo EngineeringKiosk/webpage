@@ -12,11 +12,11 @@ talks:
     title: 'Mislead Without Lying'
     description: |
       #### What happens when you let people fake science without faking data
-      
+
       Removing 1.62% of English oak from Vienna's Donaustadt district would raise its cultural funding from €0.54m to €2.03m — a 3.7-fold increase. R² = 0.906 across all 23 districts. Two real open datasets from the City of Vienna, seven analysis scripts, every step signed, every output hash-checkable. Nothing fabricated.
 
       It is also completely false. The search behind it evaluated 142,506 models against 23 data points, and the same search finds R² = 0.87 in randomly shuffled funding data.
-      
+
       This poster came out of the [As-If Science Jam](https://gitmick.github.io/asif-jam/) at Schmiede Hallein, where teams real data and argue for conclusions that are almost certainly true-looking and almost certainly wrong. The one rule: you may not fabricate. Every number from the data, every step reproducible, every figure exactly what the code produced. The challenge is to mislead without lying — which is what actually happens in published research, journalism and politics.
 
       Building that jam meant building the tooling for it: kton, an open standard for content-addressed provenance that keeps two things deliberately apart — whether a result is  reproducible (machine-checkable) and whether its conclusion is honest (not machine-checkable at all).
