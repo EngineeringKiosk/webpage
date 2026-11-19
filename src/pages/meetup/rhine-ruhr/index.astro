@@ -5,11 +5,10 @@ import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS, NEWSLETTER_LOCALES } from '../../
 // Dynamically import all images from the slider directory
 const imageModules = import.meta.glob('../../../images/meetup-rhine-ruhr/slider/*.{jpg,jpeg,png,webp,avif}', { eager: true });
 const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
-  src: (module as any).default,
-  alt: "",
-  title: ""
+	src: (module as any).default,
+	alt: '',
+	title: '',
 }));
-
 ---
 
 <MeetupPageLayout
@@ -17,7 +16,7 @@ const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
 	meetupName="Rhine-Ruhr"
 	cityName="the Rhine-Ruhr region"
 	pageTitle="Local Tech Meetup Rhine-Ruhr - Engineering Kiosk"
-	ogImage="/meetup/rhine-ruhr/images/rr.jpg"
+	ogImage="/images/logos/pocast-episode-logo-cover.jpg"
 	badgeText="Tech Meetup Rhine-Ruhr"
 	heroTitle="Engineering Kiosk Rhine-Ruhr Meetup Germany"
 	heroDescription="Join us at Engineering Kiosk Rhine-Ruhr, a dynamic tech meetup happening in the heart of the Rhine-Ruhr region, in Germany! This event brings together tech enthusiasts, engineers, and professionals from various fields to explore the intersection of engineering culture, open source, people and technology."
@@ -32,9 +31,5 @@ const sliderImages = Object.entries(imageModules).map(([path, module]) => ({
 	teamTitle="Team Engineering Kiosk Rhine-Ruhr"
 	teamDescription="The organizers of Engineering Kiosk Rhine-Ruhr."
 	teamEmail="rhine-ruhr@engineeringkiosk.dev"
-	teamMembers={[
-		{ memberKey: "andy-grunwald" },
-		{ memberKey: "schepp" },
-		{ memberKey: "dario-tilgner" },
-	]}
+	teamMembers={[{ memberKey: 'andy-grunwald' }, { memberKey: 'schepp' }, { memberKey: 'dario-tilgner' }]}
 />

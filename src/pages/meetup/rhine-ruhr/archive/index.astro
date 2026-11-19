@@ -2,7 +2,7 @@
 import MeetupArchiveLayout from '../../../../components/meetup/MeetupArchiveLayout.astro';
 import { NEWSLETTER_SOURCES, NEWSLETTER_LISTS, NEWSLETTER_LOCALES } from '../../../../scripts/newsletter-constants.js';
 
-const rhineRuhrImage = (await import('../../../../images/meetup-rhine-ruhr/slider/duesseldorf-skyline.jpg')).default;
+import rhineRuhrImage from '../../../../../public/images/logos/pocast-episode-logo-cover.jpg';
 ---
 
 <MeetupArchiveLayout
@@ -10,21 +10,17 @@ const rhineRuhrImage = (await import('../../../../images/meetup-rhine-ruhr/slide
 	meetupName="Rhine-Ruhr"
 	pageTitle="Talks Archive - Engineering Kiosk Rhine-Ruhr Meetup Germany"
 	pageDescription="Browse all past talks from the Engineering Kiosk Rhine-Ruhr meetup in Germany. A local community event for software engineers featuring talks on engineering culture, open source and technology."
-	ogImage="/meetup/rhine-ruhr/images/rr.jpg"
+	ogImage="/images/logos/pocast-episode-logo-cover.jpg"
 	badgeText="Tech Meetup Rhine-Ruhr"
 	archiveTitle="Engineering Kiosk Rhine-Ruhr<br />Meetup Germany<br />Talks Archive"
 	heroImage={rhineRuhrImage}
-	heroImageAlt="Düsseldorf Skyline"
-	heroImageTitle="Düsseldorf Skyline"
+	heroImageAlt="Engineering Kiosk Meetup Rhine-Ruhr"
+	heroImageTitle="Engineering Kiosk Meetup Rhine-Ruhr"
 	showNewsletterForm={true}
 	newsletterConfig={{ source: NEWSLETTER_SOURCES.MEETUP_ARCHIVE, locale: NEWSLETTER_LOCALES.EN, primaryNewsletter: NEWSLETTER_LISTS.MEETUP_RHINE_RUHR }}
 	teamBadge="The local team of Rhine-Ruhr"
 	teamTitle="Team Engineering Kiosk Rhine-Ruhr"
 	teamDescription="The organizers of Engineering Kiosk Rhine-Ruhr."
 	teamEmail="rhine-ruhr@engineeringkiosk.dev"
-	teamMembers={[
-		{ memberKey: "andy-grunwald" },
-		{ memberKey: "schepp" },
-		{ memberKey: "dario-tilgner" },
-	]}
+	teamMembers={[{ memberKey: 'andy-grunwald' }, { memberKey: 'schepp' }, { memberKey: 'dario-tilgner' }]}
 />

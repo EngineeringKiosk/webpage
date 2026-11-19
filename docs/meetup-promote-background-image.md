@@ -39,7 +39,7 @@ public/meetup/<region>/images/<your-file>.jpg
 
 Existing examples:
 
-- `public/meetup/rhine-ruhr/images/rr.jpg` — Rhine-Ruhr default
+- `public/images/logos/pocast-episode-logo-cover.jpg` — Rhine-Ruhr default (Engineering Kiosk artwork)
 - `public/meetup/alps/images/ibk.jpg` — Alps default
 
 A naming convention like `<event-id>-<short-slug>.jpg` (e.g. `2606-duisburg.jpg`) keeps per-event assets easy to find.
@@ -67,7 +67,7 @@ The schema field is defined on `meetupSchema` in [`src/content.config.ts`](../sr
 
 If you want to swap the default that's used **when no per-meetup override is set**, replace the file the page currently points to. The default path is wired in the region's promote page:
 
-- Rhine-Ruhr: [`src/pages/meetup/rhine-ruhr/promote/index.astro`](../src/pages/meetup/rhine-ruhr/promote/index.astro) → `ogImage="/meetup/rhine-ruhr/images/rr.jpg"`
+- Rhine-Ruhr: [`src/pages/meetup/rhine-ruhr/promote/index.astro`](../src/pages/meetup/rhine-ruhr/promote/index.astro) → `ogImage="/images/logos/pocast-episode-logo-cover.jpg"`
 - Alps: [`src/pages/meetup/alps/promote/index.astro`](../src/pages/meetup/alps/promote/index.astro) → `ogImage="/meetup/alps/images/ibk.jpg"`
 
 Either overwrite the file at that path with a new square asset, or change the path in the `.astro` file to point at a new asset.
