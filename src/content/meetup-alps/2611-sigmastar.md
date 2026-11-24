@@ -27,6 +27,7 @@ talks:
     linkedin: 'michael--hackl'
     website: 'https://michaelhackl.net'
     github: 'https://github.com/kton-protocol/kton'
+    slides: https://gitmick.github.io/asif-jam/alps/
   - avatar: './images/speaker/2410-peter.jpg'
     name: 'Peter Kandolf'
     title: 'Quarto'
@@ -34,6 +35,8 @@ talks:
       It is no easy task to create accessible, high quality, and dynamic lecture material (where embedded code produces figures, tables, or other content) that includes equations and syntax highlighted code. Especially, if the material should be consistent over multiple output formats like web-pages and PDF documents. With Quarto, I showcase a modern open-source scientific and technical publishing system that makes (collaborative) writing on scientific and technical documents more efficient and engaging. In this talk, I discuss the basics workflow, that enables you to automatically publish your notes/documentation on e.g. GitHub Pages as a static web-page and generate releases, complete with a DOI (Digital Object Identifier) from Zenodo.
     bio: |
       Peter started teaching at the university during his studies. Over the last 15+ years he taught various courses, in various formats, at various universities and technical colleges in multiple countries. In the beginning the material was usually in LaTeX but lately he started using Quarto. The main idea was to give the students better possibilities to reproduce the examples by having the code embedded and the content dynamically created from the code. Currently, Peter teaches at the University of Innsbruck.
+    github: kandolfp
+    slides: https://kandolfp.github.io/kiosk26/
 speakers:
   female: 0
   male: 2
