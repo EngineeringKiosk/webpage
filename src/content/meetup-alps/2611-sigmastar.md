@@ -34,5 +34,15 @@ talks:
       It is no easy task to create accessible, high quality, and dynamic lecture material (where embedded code produces figures, tables, or other content) that includes equations and syntax highlighted code. Especially, if the material should be consistent over multiple output formats like web-pages and PDF documents. With Quarto, I showcase a modern open-source scientific and technical publishing system that makes (collaborative) writing on scientific and technical documents more efficient and engaging. In this talk, I discuss the basics workflow, that enables you to automatically publish your notes/documentation on e.g. GitHub Pages as a static web-page and generate releases, complete with a DOI (Digital Object Identifier) from Zenodo.
     bio: |
       Peter started teaching at the university during his studies. Over the last 15+ years he taught various courses, in various formats, at various universities and technical colleges in multiple countries. In the beginning the material was usually in LaTeX but lately he started using Quarto. The main idea was to give the students better possibilities to reproduce the examples by having the code embedded and the content dynamically created from the code. Currently, Peter teaches at the University of Innsbruck.
+speakers:
+  female: 0
+  male: 2
+participants:
+  registered: 46
+  present:
+    total: 45
+    male: 34
+    female: 11
+  newParticipants: 3
 eventId: '7aeg74u8vetn06nsln3i3tq048'
 ---
