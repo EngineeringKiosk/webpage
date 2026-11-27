@@ -19,7 +19,9 @@ talks:
   - avatar: './images/speaker/2307-david.png'
     name: 'David Gstir'
     bio: "David Gstir is a security researcher and software engineer at sigma star gmbh with 15+ years of hands-on experience in designing, engineering and auditing software for various use cases. He obtained a master's degree in computer sciences from the University of Technology Graz, Austria where he specialized in IT security and cryptography."
-    title: 'tba'
+    title: 'How to Accidentally Backdoor Your Fleet: OTA Edition'
     description: ''
+    linkedin: 'david-g42'
+    website: 'https://sigma-star.at'
 eventId: '2q0omnpsuiq1u5dil1v17bf5f7'
 ---
